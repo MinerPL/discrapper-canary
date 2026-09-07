@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => e7 });
+n.r(t), n.d(t, { default: () => e5 });
 var i,
     l = n(477900),
     a = n(582128),
@@ -18,8 +18,8 @@ var i,
     j = n(857250),
     y = n(97483),
     v = n(866665),
-    C = n(408278),
-    w = n(92446),
+    w = n(408278),
+    C = n(92446),
     k = n(625903),
     A = n(297264),
     N = n(821609),
@@ -55,6 +55,11 @@ function J(e) {
 }
 var ee = n(58703);
 let et = [
+    {
+        date: "2026-09-07",
+        summary:
+            "A Priority toggle arrives in the model picker: on models that offer it, replies come back sooner for more runes, and the Speedrun stop now runs it by default.",
+    },
     {
         date: "2026-09-07",
         summary:
@@ -348,7 +353,7 @@ var eb = n(113491),
     ej = n(629584),
     ey = n(148853),
     ev = n(491920);
-function eC(e) {
+function ew(e) {
     let { modes: t, mode: n, onChange: i, className: s } = e,
         o = a.useMemo(() => t.map((e) => ({ value: e, name: (0, ey.kZ)(e), "aria-controls": (0, ey.z3)(e) })), [t]),
         d = a.useCallback(
@@ -369,7 +374,7 @@ function eC(e) {
               onChange: d,
           });
 }
-var ew = n(663417),
+var eC = n(663417),
     ek = n(70688),
     eA = n(173936),
     eN = n(473935),
@@ -400,11 +405,11 @@ function eV(e) {
             onRefresh: f,
             isRefreshing: x = !1,
             onClose: v,
-            refreshApplicationId: w,
+            refreshApplicationId: C,
             previewProjectId: A,
         } = e,
         N = a.useRef(null),
-        { pending: E, refresh: I } = (0, eI.A)(w ?? null),
+        { pending: E, refresh: I } = (0, eI.A)(C ?? null),
         { pending: S, connect: R } = (function (e) {
             let [t, n] = a.useState(ez),
                 i = a.useRef(ez),
@@ -463,7 +468,7 @@ function eV(e) {
                 );
             return a;
         })({
-            canRefresh: null != w,
+            canRefresh: null != C,
             refreshPending: E,
             offers: a.useMemo(() => (0, eP.Xl)(P), [P]),
             connectPending: S,
@@ -495,8 +500,8 @@ function eV(e) {
                                         null != f
                                             ? (0, l.jsx)(er.Dr, {
                                                   id: "refresh",
-                                                  icon: ew.RefreshIcon,
-                                                  leadingAccessory: { type: "icon", icon: ew.RefreshIcon },
+                                                  icon: eC.RefreshIcon,
+                                                  leadingAccessory: { type: "icon", icon: eC.RefreshIcon },
                                                   label: H.intl.string(Y.default.xKexN1),
                                                   disabled: x,
                                                   action: f,
@@ -641,7 +646,7 @@ function eV(e) {
               },
               children: (e, t) => {
                   let { isShown: n } = t;
-                  return (0, l.jsx)(C.K, {
+                  return (0, l.jsx)(w.K, {
                       ...e,
                       buttonRef: N,
                       icon: eE.MoreHorizontalIcon,
@@ -790,7 +795,7 @@ function e8(e) {
             }),
         h = o.preview_application_id ?? o.application_id,
         { data: v } = (0, D.YY)(h),
-        C =
+        w =
             null == o.updated_at
                 ? null
                 : H.intl.formatToPlainString(Y.default.oMDaqr, { time: d()(o.updated_at).fromNow() });
@@ -816,14 +821,14 @@ function e8(e) {
                                 className: e0.j1,
                                 children: o.name,
                             }),
-                            null == C
+                            null == w
                                 ? null
                                 : (0, l.jsx)("div", {
                                       className: e0.h3,
                                       children: (0, l.jsx)(x.E, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          children: C,
+                                          children: w,
                                       }),
                                   }),
                         ],
@@ -947,7 +952,7 @@ function e3(e) {
         ),
         ey = (0, c.bG)([Z.A], () => Z.A.isBuilderPreviewMobile()),
         ev = H.intl.string(ey ? Y.default["3uCc8U"] : Y.default["+nzCxZ"]),
-        ew = a.useCallback(() => (0, O.GG)(!ey), [ey]),
+        eC = a.useCallback(() => (0, O.GG)(!ey), [ey]),
         ek = (0, T.A)(t?.preview_application_id ?? null, eJ.sd),
         eA = (0, eJ.x1)(ek) && ek.data.proxyTicketRefreshing,
         eN = a.useCallback(() => {
@@ -1086,17 +1091,17 @@ function e3(e) {
                     : (0, l.jsxs)("div", {
                           className: e0.FO,
                           children: [
-                              en.showModeSwitch ? (0, l.jsx)(eC, { modes: en.modes, mode: ei, onChange: ea }) : null,
+                              en.showModeSwitch ? (0, l.jsx)(ew, { modes: en.modes, mode: ei, onChange: ea }) : null,
                               (0, l.jsx)(v.m, {
                                   text: ev,
                                   ariaHidden: !0,
-                                  children: (0, l.jsx)(C.K, {
+                                  children: (0, l.jsx)(w.K, {
                                       icon: ey ? e1 : e6,
                                       size: "sm",
                                       variant: "icon-only",
                                       "aria-label": ev,
                                       "aria-pressed": ey,
-                                      onClick: ew,
+                                      onClick: eC,
                                   }),
                               }),
                               (0, l.jsx)("div", { className: e0.YJ }),
@@ -1104,8 +1109,8 @@ function e3(e) {
                                   ? (0, l.jsx)(v.m, {
                                         text: H.intl.string(Y.default["8MLfBT"]),
                                         ariaHidden: !0,
-                                        children: (0, l.jsx)(C.K, {
-                                            icon: w.BugIcon,
+                                        children: (0, l.jsx)(w.K, {
+                                            icon: C.BugIcon,
                                             size: "sm",
                                             variant: "icon-only",
                                             "aria-label": H.intl.string(Y.default["8MLfBT"]),
@@ -1119,7 +1124,7 @@ function e3(e) {
                                   : (0, l.jsx)(v.m, {
                                         text: eg,
                                         ariaHidden: !0,
-                                        children: (0, l.jsx)(C.K, {
+                                        children: (0, l.jsx)(w.K, {
                                             icon: e2,
                                             size: "sm",
                                             variant: "icon-only",
@@ -1132,7 +1137,7 @@ function e3(e) {
                                   ? (0, l.jsx)(v.m, {
                                         text: H.intl.string(Y.default["xhcY+n"]),
                                         ariaHidden: !0,
-                                        children: (0, l.jsx)(C.K, {
+                                        children: (0, l.jsx)(w.K, {
                                             icon: k.SettingsIcon,
                                             size: "sm",
                                             variant: "icon-only",
@@ -1145,7 +1150,7 @@ function e3(e) {
                                   ? (0, l.jsx)(v.m, {
                                         text: ed,
                                         ariaHidden: !0,
-                                        children: (0, l.jsx)(C.K, {
+                                        children: (0, l.jsx)(w.K, {
                                             icon: e9,
                                             size: "sm",
                                             variant: "primary",
@@ -1260,7 +1265,7 @@ function e3(e) {
         ],
     });
 }
-function e5(e) {
+function e7(e) {
     let {
             projects: t,
             sharedProjects: n,
@@ -1278,8 +1283,8 @@ function e5(e) {
             onSelectProject: j,
             onIdeaChange: y,
             onCreate: v,
-            onImportNewProject: C,
-            importing: w,
+            onImportNewProject: w,
+            importing: C,
         } = e,
         k = a.useMemo(
             () =>
@@ -1558,7 +1563,7 @@ function e5(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(ex, { importing: w, onImport: C }),
+                                    (0, l.jsx)(ex, { importing: C, onImport: w }),
                                 ],
                             }),
                             (0, l.jsxs)(E.Ip, {
@@ -1664,7 +1669,7 @@ function e5(e) {
         ],
     });
 }
-function e7(e) {
+function e5(e) {
     let t,
         { guildId: n, projectId: i } = e,
         s = (0, c.yK)([Q.Ay], () => Q.Ay.getOwnedProjects()),
@@ -1679,7 +1684,7 @@ function e7(e) {
         g = i ?? null,
         [h, f] = a.useState(!1),
         [x, v] = a.useState(null),
-        [C, w] = a.useState("guild"),
+        [w, C] = a.useState("guild"),
         [k, A] = a.useState(null),
         [N, E] = a.useState(null);
     a.useEffect(() => {
@@ -1689,17 +1694,17 @@ function e7(e) {
             (0, O.dm)(n, g);
         }, [n, g]);
     let I = a.useCallback((e) => {
-            w(e), A(null);
+            C(e), A(null);
         }, []),
         S = a.useCallback(
             async (e) => {
                 let t = (e ?? p).trim(),
-                    i = J({ idea: t, installScope: C, submitting: h });
+                    i = J({ idea: t, installScope: w, submitting: h });
                 if ("idea" !== i && "submitting" !== i) {
-                    if (null == C) return void A(H.intl.string(Y.default.jQ3nQB));
+                    if (null == w) return void A(H.intl.string(Y.default.jQ3nQB));
                     null != e && m(e), f(!0), v(null);
                     try {
-                        let e = await (0, O.gA)({ guild_id: n, install_scope: C });
+                        let e = await (0, O.gA)({ guild_id: n, install_scope: w });
                         (0, $.Hc)(e),
                             (0, $.r2)(e, N ?? X.Cl),
                             (0, $.dv)(e, t),
@@ -1713,7 +1718,7 @@ function e7(e) {
                     }
                 }
             },
-            [C, n, p, N, h],
+            [w, n, p, N, h],
         ),
         [R, P] = a.useState(!1),
         _ = a.useCallback(
@@ -1758,7 +1763,7 @@ function e7(e) {
         B = (0, c.bG)([Q.Ay], () => Q.Ay.hasFetchedGuildProjects(n), [n]);
     return null != g
         ? (0, l.jsx)(e3, { project: V, projectsLoaded: B, onBack: z, guildId: n }, g)
-        : (0, l.jsx)(e5, {
+        : (0, l.jsx)(e7, {
               projects: s,
               sharedProjects: o,
               fetchState: r,
@@ -1768,13 +1773,13 @@ function e7(e) {
               guildId: n,
               submitting: h,
               createError: x,
-              createDisabled: "idea" === (t = J({ idea: p, installScope: C, submitting: h })) || "submitting" === t,
+              createDisabled: "idea" === (t = J({ idea: p, installScope: w, submitting: h })) || "submitting" === t,
               onSelectProject: D,
               onIdeaChange: T,
               onCreate: S,
               onImportNewProject: _,
               importing: R,
-              installScope: C,
+              installScope: w,
               onInstallScopeChange: I,
               installScopeError: k,
           });
