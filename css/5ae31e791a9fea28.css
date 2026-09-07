@@ -1147,13 +1147,22 @@
 }
 
 .tab__3ff54 {
-    display: flex;
     flex: 1;
-    flex-direction: column;
     gap: var(--space-12);
     min-height: 0;
     overflow-y: auto;
     padding: var(--space-12)
+}
+
+.forceCompaction__3ff54,
+.tab__3ff54 {
+    display: flex;
+    flex-direction: column
+}
+
+.forceCompaction__3ff54 {
+    align-items: flex-start;
+    gap: var(--space-4)
 }
 
 .callRow__3ff54 {
@@ -1173,4 +1182,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=5a2813b34bd53e11.css.map*/
+/*# sourceMappingURL=5ae31e791a9fea28.css.map*/
