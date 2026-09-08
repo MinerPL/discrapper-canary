@@ -1640,8 +1640,8 @@ let n5 = (0, nW.xI)(nV.A.FOLDER_ITEM_ANIMATION_DURATION),
                     T ? (0, a.jsx)(tY, { name: K, targetNode: l, onDragOverChanged: W }) : null,
                 ],
             }),
-            J = null != l.color ? l.color : n2.DO,
-            ee = J === n2.DO ? void 0 : (0, nF.Hl)(J);
+            J = (0, n2.rk)(l.color),
+            ee = null != J ? (0, nF.Hl)(J) : void 0;
         return (0, a.jsxs)("div", {
             ref: X,
             className: o()(nq.qc, { [nq.Av]: u, [nq.Lg]: V }),
