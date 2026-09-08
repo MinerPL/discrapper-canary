@@ -14,7 +14,7 @@ async function h(e, t) {
     (0, d.H1)([e.id]);
     let x = r.A.getChannel(f);
     try {
-        let t = await (0, d.VO)(e, { analyticsLocations: [...h, i.A.CLIPS_EXPORT_TO_SOUNDBOARD] });
+        let t = await (0, d.VO)(e, { analyticsLocations: [...h, i.A.CLIPS_EXPORT_TO_SOUNDBOARD], skipComposition: !0 });
         (0, a.openModalLazy)(
             async () => {
                 let { default: a } = await Promise.all([

@@ -941,18 +941,18 @@ async function eU(e) {
         : r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
 async function ew(e, t) {
-    let { analyticsLocations: n, isTemporaryEdit: i = !1 } = t,
-        r = performance.now();
+    let { analyticsLocations: n, isTemporaryEdit: i = !1, skipComposition: r = !1 } = t,
+        s = performance.now();
     try {
         ex([e.id]);
         let t = p.Ay.getMediaEngine();
         if (!(0, et.t_)() && (await (0, et.so)(), !(0, et.t_)())) throw Error("discord_clips module failed to load");
-        let { filepath: n, ...r } = e;
-        i || (await eI(e.id, r));
-        let s = (0, R._1)(e.editMetadata?.crop),
-            l = e.editMetadata?.start ?? 0,
-            o = e.editMetadata?.end ?? e.length / 1e3,
-            d = {
+        let { filepath: n, ...s } = e;
+        i || (await eI(e.id, s));
+        let l = r ? null : (0, R._1)(e.editMetadata?.crop),
+            o = e.editMetadata?.start ?? 0,
+            d = e.editMetadata?.end ?? e.length / 1e3,
+            c = {
                 ...(e.editMetadata ?? {
                     start: 0,
                     end: e.length / 1e3,
@@ -960,26 +960,26 @@ async function ew(e, t) {
                     voiceAudio: !0,
                     soundboardAudio: !0,
                 }),
-                crop: s ?? void 0,
-                tracks: await q(e.tracks ?? [], s, a.A.clips.getClipProtocolURLFromPath(e.filepath), l, o),
+                crop: l ?? void 0,
+                tracks: r ? [] : await q(e.tracks ?? [], l, a.A.clips.getClipProtocolURLFromPath(e.filepath), o, d),
             },
-            c = await a.A.app.getPath("temp"),
-            u = a.A.fileManager.join(c, "Discord Clips"),
-            _ = `${crypto.randomUUID()}-${Date.now()}.mp4`,
-            E = a.A.fileManager.join(u, _),
-            { filepath: A, formattedForUpload: h } = await t.exportClipToFile(e.filepath, E, d);
+            u = await a.A.app.getPath("temp"),
+            _ = a.A.fileManager.join(u, "Discord Clips"),
+            E = `${crypto.randomUUID()}-${Date.now()}.mp4`,
+            A = a.A.fileManager.join(_, E),
+            { filepath: h, formattedForUpload: I } = await t.exportClipToFile(e.filepath, A, c);
         try {
-            let t = await a.A.clips.loadClip(A),
+            let t = await a.A.clips.loadClip(h),
                 n = new Blob([t.data], { type: "video/mp4" });
-            if (e.type === R.nQ.SCREENSHOT || h) return n;
+            if (e.type === R.nQ.SCREENSHOT || I) return n;
             return Q(n);
         } finally {
-            await eG(A);
+            await eG(h);
         }
     } finally {
         ex(null);
         let t = performance.now();
-        m.default.track(d.HAw.CLIP_EXPORTED, { ...N.lc(), ...N.Zy(e), location_stack: n, export_duration: t - r });
+        m.default.track(d.HAw.CLIP_EXPORTED, { ...N.lc(), ...N.Zy(e), location_stack: n, export_duration: t - s });
     }
 }
 async function eG(e) {
