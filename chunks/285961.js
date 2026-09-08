@@ -24,20 +24,20 @@ class u {
     }
 }
 var c = r(803805),
-    d = r(661531),
-    h = r(939249),
+    h = r(661531),
+    d = r(939249),
     m = r(834730),
     p = r(825484),
     g = r(821609),
     f = r(27232),
     I = r(364522),
-    E = r(92008),
-    R = r(442433),
+    R = r(92008),
+    E = r(442433),
     _ = r(497685),
     y = r(25277),
     S = r(537652),
-    v = r(267102),
-    C = r(679164),
+    C = r(267102),
+    v = r(679164),
     A = r(439401),
     w = r(957565),
     x = r(998218),
@@ -45,7 +45,7 @@ var c = r(803805),
     T = r(652215),
     N = r(375708),
     G = r(801601);
-let D = [d.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
+let D = [h.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, h.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
     j = Array.from({ length: 16 }).map((e, t) => ({ id: `${t}`, height: Math.floor(100 * Math.random()) + 120 }));
 function P(e) {
     return e.id ?? e.src;
@@ -135,10 +135,10 @@ class U extends s.PureComponent {
                   src:
                       ((t =
                           null != (e = x.A.toURLSafe(r)) &&
-                          (C.BX(e) || C.i(e)) &&
+                          (v.BX(e) || v.i(e)) &&
                           e.pathname.toLowerCase().endsWith(".gif")),
                       null != e &&
-                      (((C.BX(e) || C.i(e)) &&
+                      (((v.BX(e) || v.i(e)) &&
                           (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
                           t)
                           ? (t && e.searchParams.set("format", "webp"),
@@ -155,7 +155,7 @@ class U extends s.PureComponent {
     render() {
         let { item: e, renderExtras: t, format: r, coords: s, focused: l, selected: i, "aria-label": a } = this.props,
             { color: o, loaded: u } = this.state;
-        return (0, n.jsxs)(h.D, {
+        return (0, n.jsxs)(d.D, {
             tabIndex: -1,
             "aria-label": a,
             innerRef: (e) => {
@@ -173,12 +173,26 @@ class U extends s.PureComponent {
 }
 class O extends s.PureComponent {
     _masonryRef = s.createRef();
+    _footerContent = null;
     prevResultQuery = null;
-    state = { focusedId: null };
+    state = { focusedId: null, footerHeight: 180 };
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === T.dD.FAVORITES && ((0, _.Qh)(T.dD.FAVORITES), (0, _.H9)(t, T.dD.FAVORITES, { limit: null }));
+        e === T.dD.FAVORITES && ((0, _.Qh)(T.dD.FAVORITES), (0, _.H9)(t, T.dD.FAVORITES, { limit: null })),
+            this.measureFooter();
     }
+    componentDidUpdate() {
+        this.measureFooter();
+    }
+    setFooterContent = (e) => {
+        (this._footerContent = e), this.measureFooter();
+    };
+    measureFooter = () => {
+        let e = this._footerContent;
+        if (null == e) return;
+        let t = e.offsetHeight;
+        t > 0 && t !== this.state.footerHeight && this.setState({ footerHeight: t });
+    };
     handleFocus = (e) => {
         let { current: t } = this._masonryRef;
         if (null == t) return;
@@ -211,7 +225,7 @@ class O extends s.PureComponent {
     };
     handleContextMenu = (e, t) => {
         w.p5 &&
-            (0, R.L3)(e, async () => {
+            (0, E.L3)(e, async () => {
                 let { default: e } = await r.e("22282").then(r.bind(r, 400017));
                 return (r) => (0, n.jsx)(e, { ...r, link: t.url });
             });
@@ -221,7 +235,7 @@ class O extends s.PureComponent {
             { current: t } = this._masonryRef;
         if (null == t) return;
         let { scrollTop: r, scrollHeight: n } = t.getScrollerState();
-        n - r <= 1220 && (e !== this.prevResultQuery && (0, _._E)(e), (this.prevResultQuery = e));
+        n - r <= 1180 && (e !== this.prevResultQuery && (0, _._E)(e), (this.prevResultQuery = e));
     };
     renderItem = (e, t, r, s) => {
         var l;
@@ -231,7 +245,7 @@ class O extends s.PureComponent {
             { selectedGIF: u } = this.props,
             c = this.props.data[t];
         if (null == c) return null;
-        let d = null != u && P(u) === P(c);
+        let h = null != u && P(u) === P(c);
         return (0, n.jsx)(
             U,
             {
@@ -246,7 +260,7 @@ class O extends s.PureComponent {
                 focused: P(c) === o,
                 imagePool: this.props.imagePool,
                 videoPool: this.props.videoPool,
-                selected: d,
+                selected: h,
                 "aria-label":
                     ((l = c.src),
                     (i = l.split("/").pop()),
@@ -272,47 +286,43 @@ class O extends s.PureComponent {
         let r = this.props.data[t];
         return null != r ? (r.id ?? r.src) : null;
     };
-    getSectionHeight(e) {
-        return 220 * (1 === e);
-    }
+    getSectionHeight = (e) => (1 === e ? this.state.footerHeight : 0);
     renderSection = (e, t, r) => {
-        let { onSelectSuggestion: l, suggestions: i } = this.props;
+        let { onSelectSuggestion: s, suggestions: l } = this.props;
         return 1 === e
             ? (0, n.jsx)(
                   "div",
                   {
                       className: G.jZ,
                       style: t,
-                      children:
-                          i.length > 0
-                              ? (0, n.jsxs)(s.Fragment, {
-                                    children: [
-                                        (0, n.jsx)(m.E, {
-                                            variant: "text-md/medium",
-                                            color: "text-feedback-warning",
-                                            className: G.Z4,
-                                            children: N.intl.string(N.t["3JGJo2"]),
-                                        }),
-                                        (0, n.jsx)(p.e, {
-                                            size: "sm",
-                                            className: G.yB,
-                                            children: i.map((e) =>
-                                                (0, n.jsx)(
-                                                    g.$,
-                                                    {
-                                                        variant: "secondary",
-                                                        onClick: () => {
-                                                            l(e);
-                                                        },
-                                                        text: e,
-                                                    },
-                                                    e,
-                                                ),
-                                            ),
-                                        }),
-                                    ],
-                                })
-                              : null,
+                      children: (0, n.jsxs)("div", {
+                          ref: this.setFooterContent,
+                          className: G.Xe,
+                          children: [
+                              (0, n.jsx)(m.E, {
+                                  variant: "text-md/medium",
+                                  color: "text-feedback-warning",
+                                  className: G.Z4,
+                                  children: N.intl.string(N.t["3JGJo2"]),
+                              }),
+                              (0, n.jsx)(p.e, {
+                                  size: "sm",
+                                  children: l.map((e) =>
+                                      (0, n.jsx)(
+                                          g.$,
+                                          {
+                                              variant: "secondary",
+                                              onClick: () => {
+                                                  s(e);
+                                              },
+                                              text: e,
+                                          },
+                                          e,
+                                      ),
+                                  ),
+                              }),
+                          ],
+                      }),
                   },
                   r,
               )
@@ -357,10 +367,11 @@ class O extends s.PureComponent {
         });
     }
     renderContent = (e, t, r) => {
-        let { className: s, data: l, resultQuery: a, query: o, resultType: u } = this.props;
+        let { className: s, data: l, resultQuery: a, query: o, resultType: u, suggestions: c } = this.props,
+            h = c.length > 0;
         return 0 === l.length && (a !== o || u === T.dD.TRENDING_GIFS)
             ? (0, n.jsx)(
-                  E.f,
+                  R.f,
                   {
                       fade: !0,
                       className: i()(G.Xv, s),
@@ -375,14 +386,14 @@ class O extends s.PureComponent {
                   a,
               )
             : (0, n.jsx)(
-                  E.f,
+                  R.f,
                   {
                       ref: this._masonryRef,
                       fade: !0,
                       itemGutter: 12,
                       className: i()(G.Xv, s),
                       columns: e,
-                      sections: [l.length, 0],
+                      sections: h ? [l.length, 0] : [l.length],
                       getItemKey: this.getItemKey,
                       getItemHeight: this.getItemHeight,
                       renderItem: this.renderItem,
@@ -425,7 +436,7 @@ class O extends s.PureComponent {
     }
 }
 function V() {
-    let { renderWindow: e } = s.useContext(v.Ay),
+    let { renderWindow: e } = s.useContext(C.Ay),
         t = e.document,
         [r] = s.useState(
             () =>
