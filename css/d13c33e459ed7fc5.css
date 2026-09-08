@@ -1036,7 +1036,8 @@
     font-family: var(--font-nitro);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.125
+    line-height: 1.125;
+    text-transform: uppercase
 }
 
 .experimental\/display-xs__9a9f9.fontScaling__9a9f9 {
@@ -1047,7 +1048,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 .experimental\/display-sm__9a9f9.fontScaling__9a9f9 {
@@ -1058,7 +1060,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 .experimental\/display-md__9a9f9.fontScaling__9a9f9 {
@@ -1069,7 +1072,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 .experimental\/display-lg__9a9f9.fontScaling__9a9f9 {
@@ -1901,7 +1905,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-sm__9a9f9.fontScaling__9a9f9 {
@@ -1912,7 +1917,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-md__9a9f9.fontScaling__9a9f9 {
@@ -1923,7 +1929,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-lg__9a9f9.fontScaling__9a9f9 {
@@ -2303,4 +2310,4 @@
     background-image: url(/assets/e3f8c28855880b34.svg)
 }
 
-/*# sourceMappingURL=1ab0e907fdb6c18d.css.map*/
+/*# sourceMappingURL=d13c33e459ed7fc5.css.map*/

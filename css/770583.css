@@ -1098,7 +1098,8 @@
     font-family: var(--font-nitro);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.125
+    line-height: 1.125;
+    text-transform: uppercase
 }
 
 .experimental\/display-xs_bfe55a.fontScaling_bfe55a {
@@ -1109,7 +1110,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 .experimental\/display-sm_bfe55a.fontScaling_bfe55a {
@@ -1120,7 +1122,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 .experimental\/display-md_bfe55a.fontScaling_bfe55a {
@@ -1131,7 +1134,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 .experimental\/display-lg_bfe55a.fontScaling_bfe55a {
@@ -1963,7 +1967,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-sm_bfe55a.fontScaling_bfe55a {
@@ -1974,7 +1979,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-md_bfe55a.fontScaling_bfe55a {
@@ -1985,7 +1991,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-lg_bfe55a.fontScaling_bfe55a {
@@ -2190,4 +2197,4 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
     color: var(--primary-300)
 }
 
-/*# sourceMappingURL=770583.f40278f24ce51072.css.map*/
+/*# sourceMappingURL=770583.f00fa6e2b62cb2c7.css.map*/

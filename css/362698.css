@@ -2792,7 +2792,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.125
+    line-height: 1.125;
+    text-transform: uppercase
 }
 
 .experimental\/display-xs_cf4812.fontScaling_cf4812 {
@@ -2803,7 +2804,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 .experimental\/display-sm_cf4812.fontScaling_cf4812 {
@@ -2814,7 +2816,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 .experimental\/display-md_cf4812.fontScaling_cf4812 {
@@ -2825,7 +2828,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 .experimental\/display-lg_cf4812.fontScaling_cf4812 {
@@ -3657,7 +3661,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-sm_cf4812.fontScaling_cf4812 {
@@ -3668,7 +3673,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-md_cf4812.fontScaling_cf4812 {
@@ -3679,7 +3685,8 @@ screen and (max-width:485px) {
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-lg_cf4812.fontScaling_cf4812 {
@@ -5150,4 +5157,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.e276b0ef131fccdb.css.map*/
+/*# sourceMappingURL=362698.184ab68c1315bd10.css.map*/

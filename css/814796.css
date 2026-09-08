@@ -1101,7 +1101,8 @@
     font-family: var(--font-nitro);
     font-size: 16px;
     font-weight: 700;
-    line-height: 1.125
+    line-height: 1.125;
+    text-transform: uppercase
 }
 
 .experimental\/display-xs__4ed1a.fontScaling__4ed1a {
@@ -1112,7 +1113,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 .experimental\/display-sm__4ed1a.fontScaling__4ed1a {
@@ -1123,7 +1125,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 .experimental\/display-md__4ed1a.fontScaling__4ed1a {
@@ -1134,7 +1137,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 .experimental\/display-lg__4ed1a.fontScaling__4ed1a {
@@ -1966,7 +1970,8 @@
     font-family: var(--font-nitro);
     font-size: 24px;
     font-weight: 700;
-    line-height: 1.0833333333333333
+    line-height: 1.0833333333333333;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-sm__4ed1a.fontScaling__4ed1a {
@@ -1977,7 +1982,8 @@
     font-family: var(--font-nitro);
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.0625
+    line-height: 1.0625;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-md__4ed1a.fontScaling__4ed1a {
@@ -1988,7 +1994,8 @@
     font-family: var(--font-nitro);
     font-size: 44px;
     font-weight: 700;
-    line-height: 1
+    line-height: 1;
+    text-transform: uppercase
 }
 
 :where(.mana-type-consolidation) .display-lg__4ed1a.fontScaling__4ed1a {
@@ -2115,4 +2122,4 @@
     margin-inline-end: 2px
 }
 
-/*# sourceMappingURL=814796.e0ed001ed640ecfb.css.map*/
+/*# sourceMappingURL=814796.53cfb8caa31b60fa.css.map*/
