@@ -45,8 +45,8 @@ var b = i(866665),
     _ = i(625180),
     N = i(91242),
     k = i(580954),
-    w = i(672929),
-    S = i(241696),
+    S = i(672929),
+    w = i(241696),
     M = i(574172),
     R = i(869146),
     T = i(976860),
@@ -63,7 +63,7 @@ var b = i(866665),
     K = i(625903),
     U = i(624479),
     Y = i(365199),
-    W = i(18739),
+    W = i(277977),
     X = i(976814),
     q = i(50617),
     Z = i(452394);
@@ -216,7 +216,7 @@ var ei = i(869369),
 function es(e) {
     let l,
         { applicationId: i, surface: r, guildId: c, channelId: s, project: d, chatOpen: o, onToggleChat: u } = e,
-        h = (0, w.A)(i, r),
+        h = (0, S.A)(i, r),
         { badge: g, mentionCount: p } = (0, a.cf)([et.Ay], () => {
             let e = et.Ay.getMentionCount(s);
             return e > 0
@@ -244,7 +244,7 @@ function es(e) {
             null == h || D || _.A.refreshProxyTicket(h.id);
         }, [h, D]),
         O = t.useCallback(() => {
-            null != h && (0, v.A)({ onConfirm: () => (0, S.A)(h.id) });
+            null != h && (0, v.A)({ onConfirm: () => (0, w.A)(h.id) });
         }, [h]),
         F = t.useCallback(() => {
             let e = h?.id;
@@ -331,7 +331,7 @@ function es(e) {
         ],
     });
 }
-var ed = i(59345),
+var ed = i(86303),
     eo = i(696451),
     eu = i(935208),
     eh = i(673724),
@@ -388,9 +388,9 @@ function ex(e) {
         }
         return (E.current = !1), r.h.subscribe("MESSAGE_CREATE", e), () => r.h.unsubscribe("MESSAGE_CREATE", e);
     }, [I.id]);
-    let w = t.useMemo(() => ({ channel: I, guild: C ?? void 0, open: v, onClose: k }), [I, C, v, k]),
+    let S = t.useMemo(() => ({ channel: I, guild: C ?? void 0, open: v, onClose: k }), [I, C, v, k]),
         {
-            availability: S,
+            availability: w,
             activeMode: M,
             widgetApplicationId: R,
         } = (0, ep.q)({
@@ -399,7 +399,7 @@ function ex(e) {
             declaredActivity: !1,
             installScope: y?.install_scope ?? null,
         }),
-        T = t.useMemo(() => ({ ...S, modes: null != M ? [M] : [], defaultMode: M, showModeSwitch: !1 }), [S, M]),
+        T = t.useMemo(() => ({ ...w, modes: null != M ? [M] : [], defaultMode: M, showModeSwitch: !1 }), [w, M]),
         G = t.useMemo(() => ({ type: ec.U4.APP_CHANNEL, channelId: I.id, guildId: I.guild_id ?? void 0 }), [I]);
     if (null == b) return null;
     let z = (0, n.jsx)(m, {
@@ -426,13 +426,14 @@ function ex(e) {
                 activeMode: M,
                 widgetApplicationId: R,
                 projectId: y?.id ?? null,
+                installScope: y?.install_scope ?? null,
                 previewApplicationId: y?.preview_application_id ?? null,
                 applicationId: b,
                 surface: G,
                 header: z,
                 chatOpen: !1,
                 previewReady: !0,
-                channelMessages: w,
+                channelMessages: S,
             }),
         ],
     });
