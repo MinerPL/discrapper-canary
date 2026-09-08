@@ -87,11 +87,11 @@
     background-color: var(--background-brand);
     border-radius: 50%;
     height: 8px;
-    inset-inline-end: -4.5px;
+    inset-inline-end: -1px;
     outline: 2px solid var(--background-base-lower);
     position: absolute;
-    top: -4px;
+    top: -1px;
     width: 8px
 }
 
-/*# sourceMappingURL=e59cab3ee8f11033.css.map*/
+/*# sourceMappingURL=9cc4a81fa1ce029c.css.map*/

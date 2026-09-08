@@ -117,35 +117,46 @@
 }
 
 .orbWalletHeader__81c60 {
+    align-items: center;
     -moz-column-gap: var(--space-12);
     column-gap: var(--space-12);
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     margin-bottom: var(--space-16)
 }
 
-.orbWalletHeader__81c60,
-.orbWalletHeaderTagInlineText__81c60 {
-    align-items: center;
+.orbWalletHeaderContent__81c60 {
+    align-items: flex-start;
     display: flex;
-    flex-direction: row
+    flex-direction: column;
+    justify-content: center;
+    row-gap: var(--space-4)
 }
 
 .orbWalletHeaderTagInlineText__81c60 {
+    align-items: center;
     -moz-column-gap: var(--space-4);
-    column-gap: var(--space-4)
+    column-gap: var(--space-4);
+    display: flex;
+    flex-direction: row
 }
 
 .assetContainer__81c60 {
     align-items: center;
     display: flex;
     flex-shrink: 0;
-    height: 46px;
+    height: 48px;
     justify-content: center;
-    width: 46px
+    width: 48px
 }
 
 .orbAsset__81c60 {
-    height: 60px
+    height: 68px
+}
+
+.cusorPointer__81c60 {
+    cursor: pointer
 }
 
 .nitroMultiplierPill__81c60 {
@@ -169,8 +180,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: 16px;
+    padding-bottom: var(--space-16);
     padding-top: 18px
+}
+
+.orbChallengesCardEmptyContainer__81c60 {
+    padding-bottom: var(--space-32);
+    padding-top: var(--space-32)
 }
 
 .orbChallengesCardTitleBlock__81c60 {
@@ -198,8 +214,7 @@
 .orbWalletFooter__81c60 {
     -moz-column-gap: var(--space-12);
     column-gap: var(--space-12);
-    flex-direction: row;
-    padding-bottom: 16px
+    flex-direction: row
 }
 
-/*# sourceMappingURL=40271.670b8a9684e8334c.css.map*/
+/*# sourceMappingURL=40271.fa64ac9fc734b920.css.map*/
