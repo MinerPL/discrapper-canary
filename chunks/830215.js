@@ -92,7 +92,8 @@ let D = {
                     let i = new c.Wl(e);
                     if (null != e.body && e.body?.suspended_user_token != null)
                         throw (
-                            (d.h.dispatch({
+                            (u && L({ isSwitchingAccount: !0 }),
+                            d.h.dispatch({
                                 type: "LOGIN_SUSPENDED_USER",
                                 suspendedUserToken: e.body?.suspended_user_token,
                             }),

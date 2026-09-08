@@ -306,7 +306,7 @@ let eu = new ec(
         },
         LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
-            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (q = !1);
+            (F = f.aUe.NONE), ei(t), en(), (H = ""), (j = !1), (W = null), (r = null), es(), (q = !1), (z = null);
         },
         LOGIN_FAILURE: function (e) {
             let { error: t } = e;
