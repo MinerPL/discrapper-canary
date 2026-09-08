@@ -133,18 +133,18 @@ function X(e) {
         x = a.find((e) => e?.interval === K.WT.YEAR),
         T = null != x ? (0, U.L_)({ planId: x.id, isGift: !0, priceOptions: p, subscriptionPlan: x }) : void 0,
         b = [
-            null != _
-                ? {
-                      plan: _,
-                      label: N.intl.formatToPlainString(Z.default["0nFw35"], { durationCount: 1 }),
-                      savingsPercent: void 0,
-                  }
-                : null,
             null != x
                 ? {
                       plan: x,
                       label: N.intl.formatToPlainString(Z.default.Aq6Jxd, { durationCount: 1 }),
                       savingsPercent: T,
+                  }
+                : null,
+            null != _
+                ? {
+                      plan: _,
+                      label: N.intl.formatToPlainString(Z.default["0nFw35"], { durationCount: 1 }),
+                      savingsPercent: void 0,
                   }
                 : null,
         ].filter((e) => null != e);
