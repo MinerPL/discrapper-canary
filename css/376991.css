@@ -782,22 +782,25 @@
 }
 
 .questRewardTileWrapper_e3f38d {
+    background-color: var(--background-base-lowest);
     border-radius: calc(var(--radius-xl) - 2px);
     height: 100%;
+    overflow: hidden;
+    position: relative;
     width: 100%
 }
 
-.questRewardTileWrapper_e3f38d,
-.questRewardTileWrapperUnenrolled_e3f38d {
-    background-color: var(--background-base-lowest);
-    overflow: hidden;
-    position: relative
+.questRewardTileClickable_e3f38d {
+    cursor: pointer
 }
 
 .questRewardTileWrapperUnenrolled_e3f38d {
+    background-color: var(--background-base-lowest);
     border-radius: calc(var(--radius-md) - 2px);
     height: 58px;
     margin-inline-end: var(--space-8);
+    overflow: hidden;
+    position: relative;
     width: 58px
 }
 
@@ -1098,4 +1101,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=376991.1e19c03e296c4edb.css.map*/
+/*# sourceMappingURL=376991.47795fa35b572967.css.map*/

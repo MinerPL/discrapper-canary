@@ -6,6 +6,7 @@ e.exports = {
     tE: "rewardTileContainer_e3f38d",
     cB: "rewardTileContainerHovered_e3f38d",
     n5: "questRewardTileWrapper_e3f38d",
+    q9: "questRewardTileClickable_e3f38d",
     fm: "questRewardTileWrapperUnenrolled_e3f38d",
     al: "questRewardTile_e3f38d",
     Kq: "orbsBalanceIcon_e3f38d",
