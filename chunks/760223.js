@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => e5 });
+n.r(t), n.d(t, { default: () => e7 });
 var i,
     l = n(477900),
     a = n(582128),
@@ -38,7 +38,7 @@ var i,
     G = n(71393),
     F = n(576705),
     B = n(486020),
-    Y = n(759967),
+    Y = n(50617),
     H = n(375708),
     K = n(673724),
     O = n(948230),
@@ -1270,7 +1270,7 @@ function e3(e) {
         ],
     });
 }
-function e7(e) {
+function e5(e) {
     let {
             projects: t,
             sharedProjects: n,
@@ -1674,7 +1674,7 @@ function e7(e) {
         ],
     });
 }
-function e5(e) {
+function e7(e) {
     let t,
         { guildId: n, projectId: i } = e,
         s = (0, c.yK)([Q.Ay], () => Q.Ay.getOwnedProjects()),
@@ -1768,7 +1768,7 @@ function e5(e) {
         B = (0, c.bG)([Q.Ay], () => Q.Ay.hasFetchedGuildProjects(n), [n]);
     return null != g
         ? (0, l.jsx)(e3, { project: V, projectsLoaded: B, onBack: T, guildId: n }, g)
-        : (0, l.jsx)(e7, {
+        : (0, l.jsx)(e5, {
               projects: s,
               sharedProjects: o,
               fetchState: r,
