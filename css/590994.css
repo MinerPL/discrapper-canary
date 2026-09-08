@@ -470,14 +470,24 @@
 }
 
 .quantityRow_a87199 {
-    align-items: center;
-    display: flex;
     gap: var(--space-12)
+}
+
+.quantityCopy_a87199,
+.quantityRow_a87199 {
+    align-items: center;
+    display: flex
 }
 
 .quantityCopy_a87199 {
     flex: 1;
+    gap: var(--space-8);
     min-width: 0
+}
+
+.badge_a87199 {
+    display: flex;
+    flex-shrink: 0
 }
 
 .stepper_a87199 {
@@ -795,4 +805,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=590994.7f4cdfcc8b7f151c.css.map*/
+/*# sourceMappingURL=590994.a28896b17b1736b7.css.map*/
