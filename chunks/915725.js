@@ -80,30 +80,33 @@ async function j() {
 }
 function W(e, t) {
     let n = !1;
-    for (let i of e) {
-        let e = (0, h.Vi)(i);
-        if (null != e)
-            for (let r of t) {
-                let t = (0, h.Vi)(r);
-                null != t && null != (0, h.hL)(e, t) && (x.set(i.id, [...(x.get(i.id) ?? []), r]), (n = !0));
-            }
-    }
+    for (let i of e)
+        for (let e of t)
+            null != (0, h.hL)(i, e) && (x.set(i.attachmentId, [...(x.get(i.attachmentId) ?? []), e]), (n = !0));
     return n;
 }
 function Y(e) {
     if (!A.A.getConfig({ location: "trackClipMessage" }).enableDistributedClips) return !1;
     let t = e.attachments?.filter((e) => (0, a.Lt)(e.flags ?? 0, p.sbO.IS_CLIP)) ?? [];
     if (0 === t.length || k.has(e.id)) return !1;
-    k.set(e.id, t);
-    let n = (function (e) {
+    let n = (function (e, t) {
+        let n = [];
+        for (let i of t) {
+            let t = (0, h.Vi)(i);
+            null != t && n.push({ ...t, messageId: e.id, channelId: e.channel_id, attachmentId: i.id });
+        }
+        return n;
+    })(e, t);
+    k.set(e.id, n);
+    let i = (function (e) {
             let { message_reference: t } = e;
             if (t?.message_id != null && (null == t.type || t.type === p.SH7.DEFAULT)) return t.message_id;
         })(e),
-        i = !(null == n || e.author?.id !== u.default.getId() || G.has(n)) && (G.add(n), !0),
-        r = !1;
+        r = !(null == i || e.author?.id !== u.default.getId() || G.has(i)) && (G.add(i), !0),
+        s = !1;
     return (
-        null != n && ((r = W(k.get(n) ?? [], t)), F.set(n, [...(F.get(n) ?? []), ...t])),
-        (r = W(t, F.get(e.id) ?? []) || r) || i
+        null != i && ((s = W(k.get(i) ?? [], n)), F.set(i, [...(F.get(i) ?? []), ...n])),
+        (s = W(n, F.get(e.id) ?? []) || s) || r
     );
 }
 class K extends s.Ay.DeviceSettingsStore {
@@ -294,7 +297,7 @@ class K extends s.Ay.DeviceSettingsStore {
     hasRepliedWithClip(e) {
         return G.has(e);
     }
-    getMatchingPOVAttachments(e) {
+    getMatchingPOVReferences(e) {
         return x.get(e) ?? V;
     }
 }
