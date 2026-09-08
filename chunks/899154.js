@@ -15,9 +15,9 @@ function c(e) {
             installScope: m,
             ownerAuthorizationRevoked: f,
         } = e,
-        [h, g] = n.useState(null),
-        [x, p] = n.useState(t);
-    x !== t && (p(t), g(null));
+        [h, x] = n.useState(null),
+        [g, p] = n.useState(t);
+    g !== t && (p(t), x(null));
     let v = null != l && l === t ? l : null,
         j = (0, r.bG)([u.default], () => u.default.getId()),
         { applicationWidgetConfig: b } = (0, i.A)(j, v ?? void 0),
@@ -39,7 +39,7 @@ function c(e) {
         availability: I,
         isResolving: C,
         activeMode: C ? null : (0, d.Qs)(h, I),
-        setMode: g,
+        setMode: x,
         widgetApplicationId: v,
     };
 }

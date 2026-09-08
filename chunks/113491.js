@@ -1,4 +1,4 @@
-l.d(t, { A: () => P });
+l.d(t, { A: () => _ });
 var n = l(477900),
     a = l(582128),
     r = l(503698),
@@ -11,8 +11,8 @@ var n = l(477900),
     m = l(922016),
     f = l(866665),
     h = l(939249),
-    g = l(783977),
-    x = l(976713),
+    x = l(783977),
+    g = l(976713),
     p = l(313265);
 l(321073), l(134528), l(947204);
 var v = l(224341),
@@ -46,8 +46,8 @@ function A() {
                 m = 0,
                 f = 0,
                 h = !1,
-                g = 0,
                 x = 0,
+                g = 0,
                 p = performance.now();
             function j() {
                 if (null == l) return;
@@ -85,48 +85,48 @@ function A() {
                         w = r.hasAttribute("data-effort-live"),
                         S = Number.isFinite(A) && Math.abs(A - i) > 16;
                     if (!h && (!w || S)) return;
-                    g = Math.min(1, Math.max(0, g + ((w ? 1 : -1) * j) / 260));
+                    x = Math.min(1, Math.max(0, x + ((w ? 1 : -1) * j) / 260));
                     let E = t.getBoundingClientRect(),
                         C = E.width > 0 ? E.width / o : 1,
                         I = r.getBoundingClientRect(),
                         T = (I.left - E.left) / C,
-                        M = (1 - Math.min(1, Math.abs(T + I.width / C / 2 - i) / 16)) * g;
+                        M = (1 - Math.min(1, Math.abs(T + I.width / C / 2 - i) / 16)) * x;
                     if (M < 0.01) {
                         h && l.clearRect(0, 0, o, u), (h = !1);
                         return;
                     }
-                    h || (x = a), (h = !0), l.clearRect(0, 0, o, u);
-                    let _ = T - 1 - (1 - M) * 16,
-                        P = (a - p) / 1e3,
-                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - x) / 1500))) ** 3),
-                        L = Math.ceil(_ / c);
+                    h || (g = a), (h = !0), l.clearRect(0, 0, o, u);
+                    let P = T - 1 - (1 - M) * 16,
+                        _ = (a - p) / 1e3,
+                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - g) / 1500))) ** 3),
+                        L = Math.ceil(P / c);
                     l.fillStyle = n;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * N(e, 11)),
-                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(P * k * 0.13 + N(e, 29) * k))) * R,
+                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * k * 0.13 + N(e, 29) * k))) * R,
                             a = 0;
                         for (let t of y) {
                             let l = (e * t.stagger + 0.07 * N(e, t.salt)) * k;
-                            a += t.weight * Math.sin(P * k * t.hz + l);
+                            a += t.weight * Math.sin(_ * k * t.hz + l);
                         }
                         let r = 0.30000000000000004 + 0.7 * (1 + a),
-                            i = Math.floor((P * t) / c),
+                            i = Math.floor((_ * t) / c),
                             o = 1 + e * c + d / 2,
                             m = d / 2 + 3,
                             f = Math.abs(o - u / 2) < m;
                         for (let t = 0; t < L; t++) {
                             let a,
-                                u = _ - (t * c + d / 2);
+                                u = P - (t * c + d / 2);
                             if (u < 0) break;
-                            let h = (_ - u) / n;
+                            let h = (P - u) / n;
                             if (h >= 1) break;
-                            let g = 1 - h ** r,
-                                x = Math.min(v.QI.length, Math.floor(g * (v.QI.length + 1)));
+                            let x = 1 - h ** r,
+                                g = Math.min(v.QI.length, Math.floor(x * (v.QI.length + 1)));
                             (a =
                                 0.07 > N(t - i, e + 613)
                                     ? v.QI.charAt(0)
-                                    : x < v.QI.length
-                                      ? v.QI.charAt(x)
+                                    : g < v.QI.length
+                                      ? v.QI.charAt(g)
                                       : v.vd.charAt(Math.floor(N(e, 977) * v.vd.length))),
                                 (f && s.some((e) => Math.abs(u - e) < m)) ||
                                     ((l.globalAlpha =
@@ -161,8 +161,8 @@ function S(e) {
         c = a.useRef(null),
         m = a.useRef(null),
         [f, h] = a.useState(-1),
-        g = a.useRef(!1),
-        x = a.useRef(t),
+        x = a.useRef(!1),
+        g = a.useRef(t),
         p = a.useRef({ activeIndex: t, disabled: s, onSelect: o, stopCount: l.length }),
         v = a.useRef(!1),
         j = t >= 0 ? t : f,
@@ -205,16 +205,16 @@ function S(e) {
     return (
         a.useLayoutEffect(() => {
             let e = j >= 0,
-                n = e && g.current;
-            (g.current = e),
-                (x.current = j),
+                n = e && x.current;
+            (x.current = e),
+                (g.current = j),
                 (p.current = { activeIndex: t, disabled: s, onSelect: o, stopCount: l.length }),
                 v.current || k(j, n ? "animate" : "arrive");
         }, [j, t, s, o, l.length, p, k]),
         a.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
-            let t = new ResizeObserver(() => k(x.current, "snap"));
+            let t = new ResizeObserver(() => k(g.current, "snap"));
             return t.observe(e), () => t.disconnect();
         }, [k]),
         a.useEffect(() => {
@@ -405,11 +405,11 @@ function M(e) {
         { mounted: t, entered: n }
     );
 }
-function _(e) {
-    let { settings: t, choices: l, disabled: r, onChange: m, placement: f, open: h, entered: g } = e,
+function P(e) {
+    let { settings: t, choices: l, disabled: r, onChange: m, placement: f, open: h, entered: x } = e,
         [v, j] = a.useState(!1),
         b = M(v),
-        y = (0, x.EF)(t, l.main),
+        y = (0, g.EF)(t, l.main),
         k = v ? s.t : o._,
         N = a.useMemo(
             () => l.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: p.o[e.provider] })),
@@ -419,18 +419,18 @@ function _(e) {
     function w(e) {
         return l.main.find((t) => t.id === e)?.supports_fast === !0;
     }
-    function _(e) {
+    function P(e) {
         let { fast: t, ...l } = e;
-        m((0, x.ko)(!0 === t && w(e.model) ? { ...l, fast: !0 } : l));
+        m((0, g.ko)(!0 === t && w(e.model) ? { ...l, fast: !0 } : l));
     }
-    let P = x.Q0.map((e) => e.summary()),
-        R = y >= 0 ? P[y] : (0, x.tg)(t, l.main),
-        { text: L, phase: F } = (0, E.Q)(R);
+    let _ = g.Q0.map((e) => e.summary()),
+        R = y >= 0 ? _[y] : (0, g.tg)(t, l.main),
+        { text: L, phase: D } = (0, E.Q)(R);
     return (0, n.jsx)("div", {
         className: T.qd,
         "data-placement": f ?? void 0,
         children: (0, n.jsxs)("div", {
-            className: i()(T.t$, { [T.Zr]: h && g, [T.GF]: !h }),
+            className: i()(T.t$, { [T.Zr]: h && x, [T.GF]: !h }),
             role: "dialog",
             "aria-label": I.intl.string(C.default["2NWMqY"]),
             children: [
@@ -442,7 +442,7 @@ function _(e) {
                                   label: I.intl.string(C.default["9FRudW"]),
                                   options: N,
                                   value: t.main.model,
-                                  onSelectionChange: (e) => _({ ...t.main, model: e }),
+                                  onSelectionChange: (e) => P({ ...t.main, model: e }),
                                   selectionMode: "single",
                                   disabled: r,
                                   fullWidth: !0,
@@ -451,7 +451,7 @@ function _(e) {
                                   label: I.intl.string(C.default["4AsQHS"]),
                                   options: A,
                                   value: t.main.thinking,
-                                  onSelectionChange: (e) => _({ ...t.main, thinking: e }),
+                                  onSelectionChange: (e) => P({ ...t.main, thinking: e }),
                                   selectionMode: "single",
                                   disabled: r,
                                   fullWidth: !0,
@@ -462,7 +462,7 @@ function _(e) {
                                         description: I.intl.string(C.default.HITWAI),
                                         checked: !0 === t.main.fast,
                                         disabled: r,
-                                        onChange: (e) => _({ ...t.main, fast: e }),
+                                        onChange: (e) => P({ ...t.main, fast: e }),
                                     })
                                   : null,
                           ],
@@ -500,7 +500,7 @@ function _(e) {
                                     tag: "span",
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    className: i()(T.Z, { [T.xQ]: "exit" === F, [T.lm]: "enter" === F }),
+                                    className: i()(T.Z, { [T.xQ]: "exit" === D, [T.lm]: "enter" === D }),
                                     children: L,
                                 }),
                             ],
@@ -527,12 +527,12 @@ function _(e) {
                                 }),
                                 (0, n.jsx)(S, {
                                     activeIndex: y,
-                                    stops: P,
+                                    stops: _,
                                     ariaLabel: I.intl.string(C.default.GDs9Vq),
                                     disabled: r,
                                     onSelect: function (e) {
-                                        let t = x.Q0[e];
-                                        null != t && _((0, x.lA)(t));
+                                        let t = g.Q0[e];
+                                        null != t && P((0, g.lA)(t));
                                     },
                                 }),
                             ],
@@ -543,12 +543,12 @@ function _(e) {
         }),
     });
 }
-function P(e) {
+function _(e) {
     let { settings: t, choices: l, disabled: r, onChange: i, className: s, icon: o } = e,
         u = a.useRef(null),
         [d, c] = a.useState(null),
-        [x, p] = a.useState(t);
-    t !== x && (p(t), c(null));
+        [g, p] = a.useState(t);
+    t !== g && (p(t), c(null));
     let v = d ?? t,
         j = a.useCallback(
             (e) => {
@@ -567,7 +567,7 @@ function P(e) {
         animation: m.Y.Animation.NONE,
         renderPopout: (e) => {
             let { position: t } = e;
-            return (0, n.jsx)(_, {
+            return (0, n.jsx)(P, {
                 settings: v,
                 choices: l,
                 disabled: r,
@@ -590,7 +590,7 @@ function P(e) {
                     ...e,
                     onClick: () => y((e) => !e),
                     "aria-expanded": b,
-                    children: o ?? (0, n.jsx)(g.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
+                    children: o ?? (0, n.jsx)(x.R, { size: "xxs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             });
         },
