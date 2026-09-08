@@ -3767,6 +3767,7 @@
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #2b2e33;
     --home-background: #29292e;
+    --icon-brand: #94a8ff;
     --icon-default: #f2f2f5;
     --icon-feedback-critical: #ffa19c;
     --icon-feedback-info: #8fbffa;
@@ -4008,6 +4009,8 @@
     --tablerow-background-default: hsla(240, 4%, 61%, .08);
     --tablerow-background-pressed: hsla(240, 4%, 61%, .16);
     --tablerow-icon-color-default: #fff;
+    --tabs-indicator-default: #94a8ff;
+    --tabs-indicator-overlay: #fff;
     --text-brand: #94a8ff;
     --text-code: #fff;
     --text-code-addition: #99e0ad;
@@ -4443,6 +4446,7 @@
     --guild-notifications-bottom-sheet-pill-background: #fff;
     --guild-profile-banner-background-default: #70707a;
     --home-background: #fafafa;
+    --icon-brand: #525ee0;
     --icon-default: #2e2e33;
     --icon-feedback-critical: #ba2633;
     --icon-feedback-info: #0361bd;
@@ -4684,6 +4688,8 @@
     --tablerow-background-default: hsla(240, 4%, 61%, .12);
     --tablerow-background-pressed: hsla(240, 4%, 61%, .24);
     --tablerow-icon-color-default: #29292e;
+    --tabs-indicator-default: #525ee0;
+    --tabs-indicator-overlay: #29292e;
     --text-brand: #525ee0;
     --text-code: #36383d;
     --text-code-addition: #005e30;
@@ -5119,6 +5125,7 @@
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #000;
     --home-background: #26262e;
+    --icon-brand: #6373f5;
     --icon-default: #d4d6d9;
     --icon-feedback-critical: #eb5e5e;
     --icon-feedback-info: #4591ed;
@@ -5360,6 +5367,8 @@
     --tablerow-background-default: hsla(240, 4%, 61%, .08);
     --tablerow-background-pressed: hsla(240, 4%, 61%, .2);
     --tablerow-icon-color-default: #dbdbde;
+    --tabs-indicator-default: #6373f5;
+    --tabs-indicator-overlay: #dbdbde;
     --text-brand: #6373f5;
     --text-code: #c9c9cf;
     --text-code-addition: #5cb378;
@@ -5795,6 +5804,7 @@
     --guild-notifications-bottom-sheet-pill-background: #1f1f21;
     --guild-profile-banner-background-default: #121214;
     --home-background: #26262e;
+    --icon-brand: #788cfa;
     --icon-default: #f0f0f2;
     --icon-feedback-critical: #f77d7a;
     --icon-feedback-info: #66a6f2;
@@ -6036,6 +6046,8 @@
     --tablerow-background-default: hsla(240, 4%, 61%, .08);
     --tablerow-background-pressed: hsla(240, 4%, 61%, .16);
     --tablerow-icon-color-default: #fafafa;
+    --tabs-indicator-default: #788cfa;
+    --tabs-indicator-overlay: #fafafa;
     --text-brand: #788cfa;
     --text-code: #e3e3e6;
     --text-code-addition: #7ac991;
@@ -6111,4 +6123,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=084b31a65ea3325f.css.map*/
+/*# sourceMappingURL=4c33df78410904c7.css.map*/

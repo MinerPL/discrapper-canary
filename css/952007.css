@@ -914,6 +914,7 @@
     --gradient-progress-pill-background: var(--neutral-46);
     --guild-profile-banner-background-default: var(--neutral-73);
     --home-background: var(--primary-645);
+    --icon-brand: var(--blurple-26);
     --icon-default: var(--neutral-4);
     --icon-feedback-critical: var(--red-new-18);
     --icon-feedback-info: var(--blue-new-21);
@@ -1087,6 +1088,8 @@
     --switch-thumb-background-selected-default: var(--neutral-1);
     --switch-thumb-icon-active: var(--blurple-50);
     --switch-thumb-icon-default: var(--neutral-71);
+    --tabs-indicator-default: var(--blurple-26);
+    --tabs-indicator-overlay: var(--neutral-1);
     --text-brand: var(--blurple-26);
     --text-code: var(--neutral-1);
     --text-code-addition: var(--green-new-14);
@@ -1293,6 +1296,7 @@
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--primary-645) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--blurple-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-4) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-18) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-21) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1411,6 +1415,8 @@
         --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-negative: color-mix(in oklab, var(--red-new-24) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-positive: color-mix(in oklab, var(--blue-new-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--blurple-26) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-14) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1809,6 +1815,7 @@
     --gradient-progress-pill-background: var(--neutral-18);
     --guild-profile-banner-background-default: var(--neutral-40);
     --home-background: var(--primary-100);
+    --icon-brand: var(--blurple-53);
     --icon-default: var(--neutral-72);
     --icon-feedback-critical: var(--red-new-56);
     --icon-feedback-info: var(--blue-new-58);
@@ -1982,6 +1989,8 @@
     --switch-thumb-background-selected-default: var(--neutral-1);
     --switch-thumb-icon-active: var(--blurple-50);
     --switch-thumb-icon-default: var(--neutral-1);
+    --tabs-indicator-default: var(--blurple-53);
+    --tabs-indicator-overlay: var(--neutral-76);
     --text-brand: var(--blurple-53);
     --text-code: var(--neutral-66);
     --text-code-addition: var(--green-new-65);
@@ -2188,6 +2197,7 @@
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--primary-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--blurple-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-72) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-56) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-58) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -2306,6 +2316,8 @@
         --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-75) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-negative: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-positive: color-mix(in oklab, var(--blue-new-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--blurple-53) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-66) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-65) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -2704,6 +2716,7 @@
     --gradient-progress-pill-background: var(--neutral-66);
     --guild-profile-banner-background-default: var(--neutral-100);
     --home-background: var(--plum-18);
+    --icon-brand: var(--blurple-45);
     --icon-default: var(--neutral-12);
     --icon-feedback-critical: var(--red-new-37);
     --icon-feedback-info: var(--blue-new-39);
@@ -2877,6 +2890,8 @@
     --switch-thumb-background-selected-default: var(--neutral-1);
     --switch-thumb-icon-active: var(--blurple-50);
     --switch-thumb-icon-default: var(--neutral-71);
+    --tabs-indicator-default: var(--blurple-45);
+    --tabs-indicator-overlay: var(--neutral-10);
     --text-brand: var(--blurple-45);
     --text-code: var(--neutral-15);
     --text-code-addition: var(--green-new-32);
@@ -3083,6 +3098,7 @@
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-66) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--blurple-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-39) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3201,6 +3217,8 @@
         --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-57) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-negative: color-mix(in oklab, var(--red-new-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-positive: color-mix(in oklab, var(--blue-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--blurple-45) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3599,6 +3617,7 @@
     --gradient-progress-pill-background: var(--neutral-56);
     --guild-profile-banner-background-default: var(--neutral-92);
     --home-background: var(--plum-18);
+    --icon-brand: var(--blurple-36);
     --icon-default: var(--neutral-5);
     --icon-feedback-critical: var(--red-new-28);
     --icon-feedback-info: var(--blue-new-31);
@@ -3772,6 +3791,8 @@
     --switch-thumb-background-selected-default: var(--neutral-1);
     --switch-thumb-icon-active: var(--blurple-50);
     --switch-thumb-icon-default: var(--neutral-71);
+    --tabs-indicator-default: var(--blurple-36);
+    --tabs-indicator-overlay: var(--neutral-2);
     --text-brand: var(--blurple-36);
     --text-code: var(--neutral-8);
     --text-code-addition: var(--green-new-23);
@@ -3978,6 +3999,7 @@
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-56) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --guild-profile-banner-background-default: color-mix(in oklab, var(--neutral-92) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --home-background: color-mix(in oklab, var(--plum-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--blurple-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-28) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-31) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4096,6 +4118,8 @@
         --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-51) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-negative: color-mix(in oklab, var(--red-new-34) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --steam-review-text-positive: color-mix(in oklab, var(--blue-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--blurple-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4273,6 +4297,7 @@
     --control-secondary-text-default: var(--neutral-1);
     --control-secondary-text-hover: var(--neutral-1);
     --gradient-progress-pill-background: var(--neutral-35);
+    --icon-brand: var(--brand-230);
     --icon-default: var(--neutral-1);
     --icon-feedback-critical: var(--red-new-5);
     --icon-feedback-info: var(--blue-new-8);
@@ -4338,6 +4363,8 @@
     --switch-border-hover: var(--neutral-12);
     --switch-border-selected-default: var(--neutral-12);
     --switch-border-selected-hover: var(--neutral-12);
+    --tabs-indicator-default: var(--brand-230);
+    --tabs-indicator-overlay: var(--neutral-1);
     --text-brand: var(--brand-230);
     --text-code: var(--neutral-1);
     --text-code-addition: var(--green-new-2);
@@ -4415,6 +4442,7 @@
         --control-secondary-border-active: color-mix(in oklab, var(--neutral-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --control-secondary-border-default: color-mix(in oklab, var(--neutral-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-35) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--brand-230) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4470,6 +4498,8 @@
         --redesign-button-tertiary-pressed-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--brand-230) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-230) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4598,6 +4628,7 @@
     --control-secondary-text-default: var(--neutral-100);
     --control-secondary-text-hover: var(--neutral-100);
     --gradient-progress-pill-background: var(--neutral-31);
+    --icon-brand: var(--brand-600);
     --icon-default: var(--neutral-80);
     --icon-feedback-critical: var(--red-new-66);
     --icon-feedback-info: var(--blue-new-68);
@@ -4663,6 +4694,8 @@
     --switch-border-hover: var(--neutral-50);
     --switch-border-selected-default: var(--neutral-50);
     --switch-border-selected-hover: var(--neutral-50);
+    --tabs-indicator-default: var(--brand-600);
+    --tabs-indicator-overlay: var(--neutral-100);
     --text-brand: var(--brand-600);
     --text-code: var(--neutral-71);
     --text-code-addition: var(--green-new-79);
@@ -4740,6 +4773,7 @@
         --control-secondary-border-active: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --control-secondary-border-default: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--brand-600) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-66) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-68) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4795,6 +4829,8 @@
         --redesign-button-tertiary-pressed-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spine-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--brand-600) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-600) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-79) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4923,6 +4959,7 @@
     --control-secondary-text-default: var(--neutral-1);
     --control-secondary-text-hover: var(--neutral-1);
     --gradient-progress-pill-background: var(--neutral-47);
+    --icon-brand: var(--brand-360);
     --icon-default: var(--neutral-8);
     --icon-feedback-critical: var(--red-new-26);
     --icon-feedback-info: var(--blue-new-28);
@@ -4988,6 +5025,8 @@
     --switch-border-hover: var(--neutral-25);
     --switch-border-selected-default: var(--neutral-25);
     --switch-border-selected-hover: var(--neutral-25);
+    --tabs-indicator-default: var(--brand-360);
+    --tabs-indicator-overlay: var(--neutral-1);
     --text-brand: var(--brand-360);
     --text-code: var(--neutral-15);
     --text-code-addition: var(--green-new-22);
@@ -5065,6 +5104,7 @@
         --control-secondary-border-active: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --control-secondary-border-default: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--brand-360) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-28) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5120,6 +5160,8 @@
         --redesign-button-tertiary-pressed-background: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spine-default: color-mix(in oklab, var(--neutral-43) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--brand-360) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-360) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5248,6 +5290,7 @@
     --control-secondary-text-default: var(--neutral-1);
     --control-secondary-text-hover: var(--neutral-1);
     --gradient-progress-pill-background: var(--neutral-42);
+    --icon-brand: var(--brand-330);
     --icon-default: var(--neutral-1);
     --icon-feedback-critical: var(--red-new-16);
     --icon-feedback-info: var(--blue-new-19);
@@ -5313,6 +5356,8 @@
     --switch-border-hover: var(--neutral-19);
     --switch-border-selected-default: var(--neutral-19);
     --switch-border-selected-hover: var(--neutral-19);
+    --tabs-indicator-default: var(--brand-330);
+    --tabs-indicator-overlay: var(--neutral-1);
     --text-brand: var(--brand-330);
     --text-code: var(--neutral-9);
     --text-code-addition: var(--green-new-14);
@@ -5390,6 +5435,7 @@
         --control-secondary-border-active: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --control-secondary-border-default: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --gradient-progress-pill-background: color-mix(in oklab, var(--neutral-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --icon-brand: color-mix(in oklab, var(--brand-330) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-critical: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-feedback-info: color-mix(in oklab, var(--blue-new-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5445,6 +5491,8 @@
         --redesign-button-tertiary-pressed-background: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --redesign-button-tertiary-text: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --spine-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --tabs-indicator-default: color-mix(in oklab, var(--brand-330) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --tabs-indicator-overlay: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--brand-330) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--neutral-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-14) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -9852,4 +9900,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.91eb11a1d9c6c59d.css.map*/
+/*# sourceMappingURL=952007.3c3307d6e285f557.css.map*/

@@ -335,18 +335,20 @@
 }
 
 .tabs_b292bc {
-    flex-direction: column
+    display: flex;
+    flex-direction: column;
+    width: 100%
 }
 
-.strip_b292bc,
-.tabs_b292bc {
-    display: flex;
-    width: 100%
+.tabs_b292bc[data-variant=overlay] .indicator_b292bc {
+    background-color: var(--tabs-indicator-overlay)
 }
 
 .strip_b292bc {
     align-items: center;
-    position: relative
+    display: flex;
+    position: relative;
+    width: 100%
 }
 
 .rail_b292bc {
@@ -420,7 +422,7 @@
 }
 
 .indicator_b292bc {
-    background-color: var(--text-brand);
+    background-color: var(--tabs-indicator-default);
     border-radius: var(--radius-round);
     bottom: 0;
     height: 2px;
@@ -486,4 +488,4 @@
     }
 }
 
-/*# sourceMappingURL=722514.57ada7109805a226.css.map*/
+/*# sourceMappingURL=722514.2b5a959508859c98.css.map*/
