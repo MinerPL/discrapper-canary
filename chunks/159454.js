@@ -878,8 +878,8 @@ function e2(e) {
           })
         : null;
 }
-var e7 = n(410453);
-function e5(e) {
+var e5 = n(410453);
+function e7(e) {
     let { buttonRef: t, isCoachmarkVisible: n, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: r } = (0, eX.NJ)(),
         a = l.useCallback(() => {
@@ -927,15 +927,15 @@ function e3(e) {
                 );
         }, [s, d, u]);
     return (0, i.jsxs)("div", {
-        className: r()(e7.w, t),
+        className: r()(e5.w, t),
         children: [
             (0, i.jsx)(c.E, {
-                className: e7.D,
+                className: e5.D,
                 variant: "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
             }),
-            g ? (0, i.jsx)(e5, { buttonRef: o, isCoachmarkVisible: d, markCoachmarkAsDismissed: u }) : null,
+            g ? (0, i.jsx)(e7, { buttonRef: o, isCoachmarkVisible: d, markCoachmarkAsDismissed: u }) : null,
             (0, i.jsx)(ez.$, {
                 icon: eY.j,
                 text: V.intl.string(V.t["lBG2s/"]),
@@ -1512,7 +1512,7 @@ function t1(e) {
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("459368"),
-                    n.e("251714"),
+                    n.e("189335"),
                     n.e("860350"),
                     n.e("180644"),
                     n.e("821717"),
@@ -1667,8 +1667,8 @@ function t1(e) {
 }
 var t8 = n(704824),
     t2 = n(382483),
-    t7 = n(385113),
-    t5 = n(334074),
+    t5 = n(385113),
+    t7 = n(334074),
     t3 = n(657718),
     t4 = n(478016);
 function t6(e) {
@@ -1730,7 +1730,7 @@ function t9() {
         eligibleApplications: n,
         markAsDismissed: s,
     } = (function () {
-        let e = (0, a.yK)([t7.A], () => t7.A.getFeaturedApplicationIds());
+        let e = (0, a.yK)([t5.A], () => t5.A.getFeaturedApplicationIds());
         l.useEffect(() => {
             (0, t2.Wq)();
         }, []);
@@ -1750,10 +1750,10 @@ function t9() {
                           ),
                 [o, n, i, r],
             ),
-            { eligibleToShow: u, markAsDismissed: g } = (0, t5.hj)({
+            { eligibleToShow: u, markAsDismissed: g } = (0, t7.hj)({
                 applications: c,
                 dismissibleContent: eJ.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
-                cooldownConfig: t5.SH,
+                cooldownConfig: t7.SH,
             }),
             m = l.useMemo(() => c.filter((e) => u.includes(e.id)), [c, u]);
         return o
