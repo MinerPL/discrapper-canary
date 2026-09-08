@@ -10,8 +10,8 @@ var i,
     u = n(314116),
     p = n(534890),
     m = n(646270),
-    g = n(31300),
-    h = n(794083),
+    h = n(31300),
+    g = n(794083),
     f = n(939249),
     x = n(834730),
     y = n(691540),
@@ -55,6 +55,10 @@ function J(e) {
 }
 var ee = n(58703);
 let et = [
+    {
+        date: "2026-09-08",
+        summary: "App settings that name a channel now offer a channel picker instead of asking you to paste an id.",
+    },
     {
         date: "2026-09-08",
         summary:
@@ -292,11 +296,11 @@ function em(e) {
         }),
     };
 }
-var eg = n(950305),
-    eh = n(664121);
+var eh = n(950305),
+    eg = n(664121);
 let ef = [
-    { value: "user", icon: eg.UserIcon, nameMessage: Y.default.iqXIRN },
-    { value: "guild", icon: eh.R, nameMessage: Y.default.LdgKdI },
+    { value: "user", icon: eh.UserIcon, nameMessage: Y.default.iqXIRN },
+    { value: "guild", icon: eg.R, nameMessage: Y.default.LdgKdI },
 ];
 function ex(e) {
     let { importing: t, onImport: n } = e,
@@ -410,8 +414,8 @@ function eV(e) {
             onExport: d,
             onImport: p,
             onRemix: m,
-            onConnectTool: g,
-            onVersionHistory: h,
+            onConnectTool: h,
+            onVersionHistory: g,
             onRestorePoints: f,
             onRefresh: x,
             isRefreshing: v = !1,
@@ -487,7 +491,7 @@ function eV(e) {
         T = l.useMemo(() => new Map(_.map((e) => [e.type, e])), [_]),
         z = null != m && o,
         M = r && null != p,
-        V = z || null != d || M || null != g || null != h || null != f,
+        V = z || null != d || M || null != h || null != g || null != f,
         L = eP.p5 && null != i,
         G = eP.p5;
     return null != x || null != C || V || G || r
@@ -575,18 +579,18 @@ function eV(e) {
                                                   action: p,
                                               })
                                             : null,
-                                        null != g
+                                        null != h
                                             ? (0, a.jsx)(er.Dr, {
                                                   id: "connect-tool",
                                                   label: H.intl.string(Y.default["3qelzD"]),
-                                                  action: g,
+                                                  action: h,
                                               })
                                             : null,
-                                        null != h
+                                        null != g
                                             ? (0, a.jsx)(er.Dr, {
                                                   id: "version-history",
                                                   label: H.intl.string(Y.default.jAWwzi),
-                                                  action: h,
+                                                  action: g,
                                               })
                                             : null,
                                         null != f
@@ -744,10 +748,10 @@ function e6(e) {
     return (0, a.jsx)(m.u, { ...e, size: "custom", width: 20, height: 20 });
 }
 function e1(e) {
-    return (0, a.jsx)(g.k, { ...e, size: "custom", width: 20, height: 20 });
+    return (0, a.jsx)(h.k, { ...e, size: "custom", width: 20, height: 20 });
 }
 function e9(e) {
-    return (0, a.jsx)(h.b, { ...e, size: "custom", width: 20, height: 20 });
+    return (0, a.jsx)(g.b, { ...e, size: "custom", width: 20, height: 20 });
 }
 function e8(e) {
     let t,
@@ -756,7 +760,7 @@ function e8(e) {
         s,
         r,
         { project: o, guildId: c, onSelect: p, onRemix: m } = e,
-        g =
+        h =
             ((t = o.id),
             (n = o.name),
             (i = l.useRef(!1)),
@@ -811,8 +815,8 @@ function e8(e) {
                 )).open,
                 importInput: r.input,
             }),
-        h = o.preview_application_id ?? o.application_id,
-        { data: v } = (0, D.YY)(h),
+        g = o.preview_application_id ?? o.application_id,
+        { data: v } = (0, D.YY)(g),
         w =
             null == o.updated_at
                 ? null
@@ -827,7 +831,7 @@ function e8(e) {
                 children: [
                     (0, a.jsx)("img", {
                         alt: "",
-                        src: B.Ay.getApplicationIconURL({ id: h, icon: v?.icon, size: 40 }),
+                        src: B.Ay.getApplicationIconURL({ id: g, icon: v?.icon, size: 40 }),
                         className: e0.VJ,
                     }),
                     (0, a.jsxs)("div", {
@@ -866,10 +870,10 @@ function e8(e) {
                             isOwner: (0, Q.PV)(o),
                             canRemix: (0, Q.H_)(o),
                             onRemix: m,
-                            onExport: g.onExport,
-                            onImport: g.onImport,
+                            onExport: h.onExport,
+                            onImport: h.onImport,
                         }),
-                        g.importInput,
+                        h.importInput,
                     ],
                 }),
             }),
@@ -880,7 +884,7 @@ function e3(e) {
     let { project: t, projectsLoaded: i, onBack: s, guildId: r } = e,
         [o, d] = l.useState(!1),
         [p, m] = l.useState(!0),
-        [g, h] = l.useState(!1),
+        [h, g] = l.useState(!1),
         [f, E] = l.useState(!1),
         [I, S] = l.useState(!1),
         P = V.Q_.useSetting(),
@@ -925,19 +929,19 @@ function e3(e) {
             botPermissionsChanged: W?.bot_permissions_changed === !0,
         }),
         ep = o || et || ee,
-        eg = H.intl.string(Y.default["5gU57O"]),
-        eh = p && !I && !g && !f,
-        ef = H.intl.string(eh ? Y.default.YdgE0j : Y.default.aWVf4j),
+        eh = H.intl.string(Y.default["5gU57O"]),
+        eg = p && !I && !h && !f,
+        ef = H.intl.string(eg ? Y.default.YdgE0j : Y.default.aWVf4j),
         ex = l.useCallback(() => {
-            if (I || g || f) {
-                S(!1), h(!1), E(!1), m(!0);
+            if (I || h || f) {
+                S(!1), g(!1), E(!1), m(!0);
                 return;
             }
             m((e) => !e);
-        }, [I, g, f]),
+        }, [I, h, f]),
         ey = l.useCallback(() => m(!1), []),
         eb = l.useCallback(() => {
-            S((e) => !e && (m(!0), h(!1), E(!1), !0));
+            S((e) => !e && (m(!0), g(!1), E(!1), !0));
         }, []),
         ej = l.useCallback(() => S(!1), []),
         ev = l.useCallback(
@@ -948,7 +952,7 @@ function e3(e) {
                     return O.current && B.current === n;
                 }
                 (X.current = !0),
-                    h(!1),
+                    g(!1),
                     m(!0),
                     _({ entry: e, status: "restoring" }),
                     (0, $.oB)(n, e.sha)
@@ -1144,7 +1148,7 @@ function e3(e) {
                                         }),
                                     })
                                   : null,
-                              eh
+                              eg
                                   ? null
                                   : (0, a.jsx)(v.m, {
                                         text: ef,
@@ -1154,7 +1158,7 @@ function e3(e) {
                                             size: "sm",
                                             variant: "icon-only",
                                             "aria-label": ef,
-                                            "aria-pressed": eh,
+                                            "aria-pressed": eg,
                                             onClick: ex,
                                         }),
                                     }),
@@ -1173,13 +1177,13 @@ function e3(e) {
                                   : null,
                               (0, Q.jf)(t)
                                   ? (0, a.jsx)(v.m, {
-                                        text: eg,
+                                        text: eh,
                                         ariaHidden: !0,
                                         children: (0, a.jsx)(w.K, {
                                             icon: e9,
                                             size: "sm",
                                             variant: "primary",
-                                            "aria-label": eg,
+                                            "aria-label": eh,
                                             loading: o,
                                             disabled: ep,
                                             onClick: e8,
@@ -1216,10 +1220,10 @@ function e3(e) {
                                       R?.status === "restoring"
                                           ? void 0
                                           : () => {
-                                                m(!0), S(!1), E(!1), h(!0);
+                                                m(!0), S(!1), E(!1), g(!0);
                                             },
                                   onRestorePoints: () => {
-                                      m(!0), S(!1), h(!1), E(!0);
+                                      m(!0), S(!1), g(!1), E(!0);
                                   },
                                   refreshApplicationId:
                                       el.modes.includes("widget") &&
@@ -1275,8 +1279,8 @@ function e3(e) {
                                   header: e3,
                                   chatOpen: p,
                                   onCloseChat: ey,
-                                  versionHistoryOpen: g,
-                                  onCloseVersionHistory: () => h(!1),
+                                  versionHistoryOpen: h,
+                                  onCloseVersionHistory: () => g(!1),
                                   restorePointsOpen: f,
                                   onCloseRestorePoints: () => E(!1),
                                   installScope: t.install_scope,
@@ -1308,8 +1312,8 @@ function e7(e) {
             createDisabled: u,
             installScope: p,
             onInstallScopeChange: m,
-            installScopeError: g,
-            modelSettings: h,
+            installScopeError: h,
+            modelSettings: g,
             onModelSettingsChange: y,
             onSelectProject: b,
             onIdeaChange: j,
@@ -1328,8 +1332,8 @@ function e7(e) {
         ),
         D = l.useRef(null);
     l.useEffect(() => {
-        null != g && D.current?.querySelector("button")?.focus();
-    }, [g]);
+        null != h && D.current?.querySelector("button")?.focus();
+    }, [h]);
     let T = l.useMemo(
             () =>
                 t
@@ -1542,11 +1546,11 @@ function e7(e) {
                                                         ],
                                                         value: p ?? void 0,
                                                         onSelectionChange: m,
-                                                        errorMessage: g,
+                                                        errorMessage: h,
                                                     }),
                                                 }),
                                                 (0, a.jsx)(ey.A, {
-                                                    settings: h ?? X.Cl,
+                                                    settings: g ?? X.Cl,
                                                     choices: (0, W.e)()
                                                         ? {
                                                               main: [...O.S8.main, ...O.wF.main],
@@ -1712,8 +1716,8 @@ function e5(e) {
             return null != e && F.A.can(e$.xBc.MANAGE_GUILD, e);
         }, [n]),
         [p, m] = l.useState(""),
-        g = i ?? null,
-        [h, f] = l.useState(!1),
+        h = i ?? null,
+        [g, f] = l.useState(!1),
         [x, v] = l.useState(null),
         [w, C] = l.useState("guild"),
         [k, A] = l.useState(null),
@@ -1722,15 +1726,15 @@ function e5(e) {
         (0, K.hF)(n);
     }, [n, d, u]),
         l.useEffect(() => {
-            (0, K.dm)(n, g);
-        }, [n, g]);
+            (0, K.dm)(n, h);
+        }, [n, h]);
     let I = l.useCallback((e) => {
             C(e), A(null);
         }, []),
         S = l.useCallback(
             async (e) => {
                 let t = (e ?? p).trim(),
-                    i = J({ idea: t, installScope: w, submitting: h });
+                    i = J({ idea: t, installScope: w, submitting: g });
                 if ("idea" !== i && "submitting" !== i) {
                     if (null == w) return void A(H.intl.string(Y.default.jQ3nQB));
                     null != e && m(e), f(!0), v(null);
@@ -1749,7 +1753,7 @@ function e5(e) {
                     }
                 }
             },
-            [w, n, p, N, h],
+            [w, n, p, N, g],
         ),
         [P, R] = l.useState(!1),
         _ = l.useCallback(
@@ -1787,13 +1791,13 @@ function e5(e) {
             m(e), v(null);
         }, []),
         V = (0, c.bG)([Q.Ay], () => {
-            if (null == g) return null;
-            let e = Q.Ay.getProject(g);
+            if (null == h) return null;
+            let e = Q.Ay.getProject(h);
             return null == e || (0, Q.PV)(e) || e.guild_id === n ? e : null;
-        }, [g, n]),
+        }, [h, n]),
         B = (0, c.bG)([Q.Ay], () => Q.Ay.hasFetchedGuildProjects(n), [n]);
-    return null != g
-        ? (0, a.jsx)(e3, { project: V, projectsLoaded: B, onBack: T, guildId: n }, g)
+    return null != h
+        ? (0, a.jsx)(e3, { project: V, projectsLoaded: B, onBack: T, guildId: n }, h)
         : (0, a.jsx)(e7, {
               projects: s,
               sharedProjects: o,
@@ -1802,9 +1806,9 @@ function e5(e) {
               onModelSettingsChange: E,
               idea: p,
               guildId: n,
-              submitting: h,
+              submitting: g,
               createError: x,
-              createDisabled: "idea" === (t = J({ idea: p, installScope: w, submitting: h })) || "submitting" === t,
+              createDisabled: "idea" === (t = J({ idea: p, installScope: w, submitting: g })) || "submitting" === t,
               onSelectProject: D,
               onIdeaChange: z,
               onCreate: S,

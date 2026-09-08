@@ -1,4 +1,4 @@
-n.d(t, { J6: () => l, ew: () => s });
+n.d(t, { J6: () => l, M6: () => o, ew: () => s });
 var i = n(945810),
     r = n(202541);
 let a = (0, i.mj)({
@@ -7,13 +7,17 @@ let a = (0, i.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function s(e) {
-    let { location: t } = e;
-    return l({ location: t }).enabled ? r.gb : r.f3;
+function s() {
+    let { location: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    return l({ location: e }).enabled ? r.gb : r.f3;
 }
-function l(e) {
-    let { location: t } = e;
-    return a.getConfig({ location: t });
+function l() {
+    let { location: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    return a.getConfig({ location: e ?? "NitroFileUploadRollout" });
+}
+function o(e) {
+    let { legacyCopy: t, rolloutCopy: n } = e;
+    return l().enabled ? n : t;
 }
 (0, i.mj)({
     name: "2026-09-non-nitro-file-upload-marketing",

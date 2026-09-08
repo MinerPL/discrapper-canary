@@ -1,4 +1,4 @@
-n.d(t, { OW: () => c, YK: () => o, dm: () => u, eM: () => l, jS: () => d, ly: () => _ });
+n.d(t, { OW: () => d, YK: () => l, dm: () => c, jS: () => o, ly: () => u });
 var i = n(565150),
     r = n(762555),
     a = n(219882);
@@ -18,13 +18,12 @@ let s = [
         { reName: /\.mp4$/i, name: (e) => `video${e}.mp4`, type: "video/mp4" },
         { reName: /\.webm$/i, name: (e) => `video${e}.webm`, type: "image/webm" },
     ],
-    l = 524288e3,
-    o = 500;
-function d(e) {
+    l = 500;
+function o(e) {
     let { location: t } = e;
-    return (0, a.J6)({ location: t }).enabled ? 0x40000000 : l;
+    return (0, a.J6)({ location: t }).enabled ? 0x40000000 : 524288e3;
 }
-function c(e) {
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
         a = { id: t?.toString() ?? e.id };
@@ -55,7 +54,7 @@ function c(e) {
         a
     );
 }
-function u(e) {
+function c(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, i) => {
         t.open("GET", e, !0),
@@ -67,7 +66,7 @@ function u(e) {
             t.send();
     });
 }
-function _(e) {
+function u(e) {
     let t,
         { uri: n, i, overrideFilename: r, overrideType: a } = e,
         l = n.split("/"),

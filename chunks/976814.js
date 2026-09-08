@@ -7,6 +7,13 @@ function r(e) {
     (0, a.openModalLazy)(async () => {
         let { default: a } = await Promise.all([l.e("668351"), l.e("700579")]).then(l.bind(l, 451310));
         return (l) =>
-            (0, n.jsx)(a, { ...l, projectId: e, scopeKeys: t.scopeKeys, note: t.note, notifyAgent: t.notifyAgent });
+            (0, n.jsx)(a, {
+                ...l,
+                projectId: e,
+                scopeKeys: t.scopeKeys,
+                note: t.note,
+                notifyAgent: t.notifyAgent,
+                isPreview: t.isPreview,
+            });
     });
 }
