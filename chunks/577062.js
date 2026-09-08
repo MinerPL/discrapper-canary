@@ -23,8 +23,8 @@ function A(e) {
         { parentAnalyticsLocation: f } = (0, r.Ay)(),
         x = n || t || A,
         I = m ? u.l : u.A,
-        T = (0, o.A)(n, t, A, h),
-        { events: v, play: _, Component: j } = (0, s.L)(x ? "unmute" : "mute"),
+        v = (0, o.A)(n, t, A, h),
+        { events: T, play: _, Component: j } = (0, s.L)(x ? "unmute" : "mute"),
         N = t || A ? a.O : j;
     return (
         i.useEffect(() => () => _(), [_, x]),
@@ -35,12 +35,12 @@ function A(e) {
             caretColor: x ? "red" : "primaryDark",
             caretAriaLabel: d.intl.string(d.t["+ybWO4"]),
             color: x ? "red" : void 0,
-            label: T,
+            label: v,
             onMouseEnter: (e) => {
-                C?.(e), v.onMouseEnter();
+                C?.(e), T.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                E?.(e), v.onMouseLeave();
+                E?.(e), T.onMouseLeave();
             },
             onClick: (e) => {
                 p?.(e), (0, c.X)(f, c.O.MIC, n);

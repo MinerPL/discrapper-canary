@@ -18,7 +18,7 @@ var l = t(477900),
     f = t(204651),
     x = t(652215),
     I = t(375708);
-function T(e) {
+function v(e) {
     let n = (0, o.bG)([C.A], () => !(0, r.isEmpty)(C.A.getTypingUsers(e)), [e]),
         t = (0, o.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === e, [e]),
         { unreadCount: l, mentionCount: i } = (0, o.cf)(
@@ -28,9 +28,9 @@ function T(e) {
         );
     return { unreadCount: l, mentionCount: i, voiceChannelIsSelected: t, isTyping: n };
 }
-function v(e) {
+function T(e) {
     let { className: n, channelId: t } = e,
-        { unreadCount: i, mentionCount: s, isTyping: a, voiceChannelIsSelected: r } = T(t);
+        { unreadCount: i, mentionCount: s, isTyping: a, voiceChannelIsSelected: r } = v(t);
     return (0, l.jsx)(g.A, { className: n, unreadCount: i, mentionCount: s, isTyping: a, canBadge: r });
 }
 function _(e) {
@@ -54,7 +54,7 @@ function _(e) {
             unreadCount: y,
             mentionCount: R,
         } = (function (e) {
-            let { unreadCount: n, mentionCount: t, isTyping: l } = T(e),
+            let { unreadCount: n, mentionCount: t, isTyping: l } = v(e),
                 [s, a] = i.useState(!1);
             return (
                 i.useEffect(() => {
@@ -75,7 +75,7 @@ function _(e) {
         L = i.useCallback(
             (e) => {
                 let { className: n } = e;
-                return (0, l.jsx)(v, { className: n, channelId: t });
+                return (0, l.jsx)(T, { className: n, channelId: t });
             },
             [t],
         ),

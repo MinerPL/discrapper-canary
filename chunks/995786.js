@@ -1,4 +1,4 @@
-n.d(t, { s6: () => y, W5: () => m, Vj: () => S, E5: () => g, nV: () => R, wu: () => D, H0: () => U, G6: () => N });
+n.d(t, { s6: () => p, W5: () => m, Vj: () => S, E5: () => g, nV: () => R, wu: () => D, H0: () => U, G6: () => y });
 var a = n(636537),
     r = n(228366),
     i = n(95561),
@@ -55,7 +55,7 @@ function T(e) {
 function M(e) {
     return { type: e.type, metadata: A(e.metadata) };
 }
-function p(e) {
+function N(e) {
     let t = {
         id: e.id ?? _.default.fromTimestamp(Date.now()),
         name: e.name,
@@ -72,23 +72,23 @@ function p(e) {
     };
     return null != t.triggerMetadata && delete t.triggerMetadata.keywordLists, t;
 }
-async function y(e) {
+async function p(e) {
     let t = T(e);
     return A(
         (await a.Bo.post({ url: O.Rsh.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId), body: t, rejectWithError: (0, a.fT)() }))
             .body,
     );
 }
-async function N(e) {
+async function y(e) {
     let t = T(e);
     return (
         delete t.id,
-        p((await a.Bo.post({ url: O.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: (0, a.fT)() })).body)
+        N((await a.Bo.post({ url: O.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: (0, a.fT)() })).body)
     );
 }
 async function S(e) {
     let t = T(e);
-    return p(
+    return N(
         (await a.Bo.patch({ url: O.Rsh.GUILD_AUTOMOD_RULE(e.guildId, e.id), body: t, rejectWithError: (0, a.fT)() }))
             .body,
     );
@@ -98,7 +98,7 @@ async function R(e, t) {
 }
 async function U(e) {
     let t = await a.Bo.get({ url: O.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: (0, a.fT)() });
-    return Array.isArray(t.body) ? t.body.map(p) : [];
+    return Array.isArray(t.body) ? t.body.map(N) : [];
 }
 async function g(e, t, n) {
     d.A.can(O.xBc.MANAGE_MESSAGES, t) &&

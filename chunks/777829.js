@@ -1,32 +1,32 @@
-r.d(t, { f: () => d });
-var n = r(582128),
-    i = r(174459),
-    s = r(440938),
-    l = r(298072),
-    a = r(993408),
-    o = r(623373),
-    u = r(331884),
-    c = r(652215);
+n.d(t, { f: () => d });
+var r = n(582128),
+    i = n(174459),
+    s = n(440938),
+    l = n(298072),
+    a = n(993408),
+    o = n(623373),
+    u = n(331884),
+    c = n(652215);
 function d(e) {
-    let { product: t, analyticsLocations: r } = e,
-        { cardId: d, sessionId: p, tilePosition: g } = (0, s.uM)() ?? {},
-        f = (0, l.Q)(t),
-        I = (0, u.o)(),
-        _ = (0, a.xM)(I);
-    return n.useCallback(
-        (e, n) => {
-            let s = (0, o.B1)(t) ? (t.variants[n ?? f]?.skuId ?? t.skuId) : t.skuId;
+    let { product: t, analyticsLocations: n } = e,
+        { cardId: d, sessionId: f, tilePosition: I } = (0, s.uM)() ?? {},
+        p = (0, l.Q)(t),
+        g = (0, u.o)(),
+        A = (0, a.xM)(g);
+    return r.useCallback(
+        (e, r) => {
+            let s = (0, o.B1)(t) ? (t.variants[r ?? p]?.skuId ?? t.skuId) : t.skuId;
             i.default.track(c.HAw.SHOP_CARD_CLICKED, {
                 sku_id: s,
                 cta: e,
-                shop_session_id: p,
+                shop_session_id: f,
                 card_id: d,
                 product_sku_ids: (0, o.v8)(t),
-                location_stack: r,
-                position_in_section: g,
-                discount_source: (0, a.b_)(_),
+                location_stack: n,
+                position_in_section: I,
+                discount_source: (0, a.b_)(A),
             });
         },
-        [t, f, p, d, r, g, _],
+        [t, p, f, d, n, I, A],
     );
 }

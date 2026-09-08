@@ -1,4 +1,4 @@
-n.d(t, { E: () => M });
+n.d(t, { E: () => N });
 var i = n(477900),
     r = n(582128),
     l = n(17928),
@@ -27,11 +27,11 @@ var i = n(477900),
     j = n(753070),
     R = n(731854),
     I = n(375708),
-    N = n(818348);
-function M(e) {
+    M = n(818348);
+function N(e) {
     let {
             stream: t,
-            handleGoLive: M,
+            handleGoLive: N,
             showReportOption: L = !1,
             disableChangeWindows: D = !1,
             minimal: k = !1,
@@ -51,8 +51,8 @@ function M(e) {
                 A = (0, l.bG)([m.Ay], () => m.Ay.getGoLiveSource()),
                 g = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
                 f = (0, l.bG)([O.A], () => O.A.getGuild(e?.guildId)?.premiumTier),
-                { location: N } = (0, p.p)(),
-                M = (0, l.bG)([T.Ay, _.A], () => _.A.getChannel(T.Ay.getVoiceChannelId())),
+                { location: M } = (0, p.p)(),
+                N = (0, l.bG)([T.Ay, _.A], () => _.A.getChannel(T.Ay.getVoiceChannelId())),
                 L = r.useCallback(
                     (e, r, l, s) => {
                         if (e) {
@@ -73,7 +73,7 @@ function M(e) {
                             }
                         } else {
                             var a;
-                            (a = { ...N, object: y.ZSU.RADIO_ITEM, objectType: s }),
+                            (a = { ...M, object: y.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, E.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
@@ -100,20 +100,20 @@ function M(e) {
                                 );
                         }
                     },
-                    [t, N, d, A],
+                    [t, M, d, A],
                 );
             if (null == e) return null;
             let D = a === j.jQ.PRESET_DOCUMENTS ? j.kn.FPS_30 : c,
                 k = (0, S.A)("useStreamSettingsItems", g, e.guildId),
                 P = o === k?.maxResolution && c === k?.maxFPS;
             function U(e) {
-                return P ? ((0, v.A)(e, g, f, M) ?? o) : o;
+                return P ? ((0, v.A)(e, g, f, N) ?? o) : o;
             }
             let w = U(c),
                 z = j.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
                         l = U(t),
-                        a = (0, C.A)(j.jQ.PRESET_CUSTOM, l, t, g, f, M);
+                        a = (0, C.A)(j.jQ.PRESET_CUSTOM, l, t, g, f, N);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -131,7 +131,7 @@ function M(e) {
                 }),
                 G = j.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        l = (0, C.A)(j.jQ.PRESET_CUSTOM, t, D, g, f, M);
+                        l = (0, C.A)(j.jQ.PRESET_CUSTOM, t, D, g, f, N);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -154,7 +154,7 @@ function M(e) {
                 ],
             });
         })(t, P),
-        B = (0, f.A)(t, P, N.FX),
+        B = (0, f.A)(t, P, M.FX),
         H = null != U && V && (!U.startsWith("screen") || F),
         W = (0, l.bG)([m.Ay], () => m.Ay.getUseSystemScreensharePicker() && (0, g.isLinux)()),
         J = r.useCallback(() => {
@@ -162,8 +162,8 @@ function M(e) {
                 ? m.Ay.getMediaEngine().eachConnection((e) => {
                       e.context === R.x.STREAM && e.presentDesktopSourcePicker("window");
                   })
-                : M();
-        }, [U, M]),
+                : N();
+        }, [U, N]),
         q = U?.startsWith("prepicked:") ?? !1,
         Y = (0, g.isMac)() && g.isPlatformEmbedded && q && (w?.windows.length ?? 0) > 0,
         X = (0, g.isMac)() && g.isPlatformEmbedded && q && (w?.applications.length ?? 0) > 0,
@@ -187,7 +187,7 @@ function M(e) {
             label: I.intl.string(I.t.fjBNo1),
             icon: a.F,
             leadingAccessory: { type: "icon", icon: a.F },
-            action: M,
+            action: N,
         });
     let $ = g.isPlatformEmbedded
             ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: I.intl.string(I.t.ytAD9d), children: K })

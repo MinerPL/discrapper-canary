@@ -18,8 +18,8 @@ var l = t(477900),
     f = t(308334),
     x = t(516287),
     I = t(68935),
-    T = t(148355),
-    v = t(232835),
+    v = t(148355),
+    T = t(232835),
     _ = t(994500),
     j = t(486020),
     N = t(927813),
@@ -47,17 +47,17 @@ function L(e) {
             },
             [n.channel_id, n.id],
         ),
-        v = (0, S.uJ)(n.content) ? null : (0, p.Ay)(n, { allowGameMentions: !0 }).content,
+        T = (0, S.uJ)(n.content) ? null : (0, p.Ay)(n, { allowGameMentions: !0 }).content,
         {
             contentPlaceholder: N,
             renderedContent: b,
             trailingIcon: O,
             leadingIcon: M,
-        } = (0, f.o)(n, v, t, s, R.BK, { trailingIconClass: R.sl, leadingIconClass: R.aG, iconSize: y.eJ }),
+        } = (0, f.o)(n, T, t, s, R.BK, { trailingIconClass: R.sl, leadingIconClass: R.aG, iconSize: y.eJ }),
         L = (0, I.o6)(n),
         D =
             L.length > 0
-                ? L.map((e) => (0, l.jsx)(T.A, { className: R.yI, size: 128, sticker: e, isInteracting: d }, e.id))
+                ? L.map((e) => (0, l.jsx)(v.A, { className: R.yI, size: 128, sticker: e, isInteracting: d }, e.id))
                 : null;
     return (0, l.jsx)(x.x, {
         value: d,
@@ -139,7 +139,7 @@ function D(e) {
             let C = d.current ?? a;
             return {
                 toastsHidden: o,
-                toastMessages: (0, c.yK)([v.A], () => C.map((e) => v.A.getMessage(n, e)), [n, C]).filter(b.Vq),
+                toastMessages: (0, c.yK)([T.A], () => C.map((e) => T.A.getMessage(n, e)), [n, C]).filter(b.Vq),
             };
         })({ channelId: n, isFrozen: s, count: 3, lingerMs: M }),
         E = i.useRef({}),
@@ -161,7 +161,7 @@ function D(e) {
             (0, r.isEqual)(e, x.current) || g(e);
         }, [C]);
     let I = C.map((e) => ({ message: e, height: E.current[e.id], y: p[e.id] })),
-        T = (0, d.p)(I, {
+        v = (0, d.p)(I, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -188,7 +188,7 @@ function D(e) {
                 onMouseLeave: () => {
                     u(!1);
                 },
-                children: T((e, n) =>
+                children: v((e, n) =>
                     (0, l.jsx)(o.animated.div, {
                         ref: (e) => f(n.message.id, null != e ? e.offsetHeight : null),
                         className: R.T_,

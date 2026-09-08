@@ -1,4 +1,4 @@
-n.d(t, { $: () => y, A: () => N });
+n.d(t, { $: () => y, A: () => M });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -50,8 +50,8 @@ let y = r.memo(function (e) {
             cancelText: j,
             confirmText: R,
             icon: I,
-            body: N,
-            title: M,
+            body: M,
+            title: N,
             renderFooter: L,
             contentOpacity: D,
             status: k,
@@ -124,20 +124,20 @@ let y = r.memo(function (e) {
                                             (0, i.jsxs)("div", {
                                                 className: T.zH,
                                                 children: [
-                                                    null != M
+                                                    null != N
                                                         ? (0, i.jsx)(u.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/semibold",
                                                               lineClamp: 2,
-                                                              children: M,
+                                                              children: N,
                                                           })
                                                         : null,
-                                                    null != N
+                                                    null != M
                                                         ? (0, i.jsx)(u.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/normal",
                                                               lineClamp: null != l ? l * (F ? 2 : 1) : void 0,
-                                                              children: N,
+                                                              children: M,
                                                           })
                                                         : null,
                                                     ((n = "function" == typeof y ? y(F, K) : y),
@@ -227,7 +227,7 @@ function R(e) {
     return t ? (0, i.jsx)(p.A, { className: s()(T.VC, n), children: r }) : r;
 }
 let I = { mass: 1, friction: 8, tension: 300 };
-function N(e) {
+function M(e) {
     let { notification: t, index: n, locked: l, pinned: s, transitionState: a, cleanUp: o } = e,
         {
             id: u,
@@ -288,10 +288,10 @@ function N(e) {
             },
             [f, u],
         ),
-        N = r.useCallback((e, t) => E?.(e, u, t), [E, u]),
+        M = r.useCallback((e, t) => E?.(e, u, t), [E, u]),
         {
             props: {
-                onNotificationShow: M,
+                onNotificationShow: N,
                 onDismissClick: L,
                 renderFooter: D,
                 onNotificationClick: k,
@@ -326,7 +326,7 @@ function N(e) {
                 onNotificationClick: O,
                 onConfirmClick: null != h ? T : void 0,
                 onCancelClick: null != f ? x : void 0,
-                renderFooter: N,
+                renderFooter: M,
                 expand: !1,
                 index: n,
                 locked: l,

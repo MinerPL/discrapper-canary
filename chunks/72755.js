@@ -48,7 +48,7 @@ let C = function (e) {
             primaryColor: y?.themeColors?.[0] ?? null,
             secondaryColor: y?.themeColors?.[1] ?? null,
         }),
-        N = y?.themeColors?.[0] != null && y?.themeColors?.[1] != null;
+        M = y?.themeColors?.[0] != null && y?.themeColors?.[1] != null;
     if (
         (r.useEffect(() => {
             null != c && x && (0, g.A)(c, void 0, { guildId: C, dispatchWait: !0 });
@@ -56,11 +56,11 @@ let C = function (e) {
         null == n)
     )
         return null;
-    let M = (0, i.jsx)(o.eu, { className: p.R, src: n, ..._ }),
+    let N = (0, i.jsx)(o.eu, { className: p.R, src: n, ..._ }),
         L = { ...t, backgroundColor: T };
     return (0, i.jsx)("div", {
-        style: N ? { ...t, ...R } : { ...L },
-        className: s()(p.T, { [I]: N }),
-        children: S ? (0, i.jsx)(d, { shouldAnimate: v, children: M }) : M,
+        style: M ? { ...t, ...R } : { ...L },
+        className: s()(p.T, { [I]: M }),
+        children: S ? (0, i.jsx)(d, { shouldAnimate: v, children: N }) : N,
     });
 };

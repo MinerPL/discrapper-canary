@@ -17,10 +17,10 @@ var b = t(320080),
 function p(e) {
     let { children: n, popoutPosition: t, popoutAlign: b, targetElementRef: E, spacing: p = 0 } = e,
         { isOpen: A, setIsOpen: f } = h(),
-        x = s.useCallback(() => {
+        N = s.useCallback(() => {
             f(!1);
         }, [f]),
-        L = s.useCallback(() => {
+        x = s.useCallback(() => {
             A || c.A.loadMoreInbox({ loadingTrigger: g.VA.ON_OPEN }), f(!A);
         }, [A, f]);
     (0, l.Ay)(() => {
@@ -31,27 +31,27 @@ function p(e) {
     }),
         s.useEffect(
             () => (
-                u._.subscribe(T.jej.TOGGLE_INBOX, L),
+                u._.subscribe(T.jej.TOGGLE_INBOX, x),
                 () => {
-                    u._.unsubscribe(T.jej.TOGGLE_INBOX, L);
+                    u._.unsubscribe(T.jej.TOGGLE_INBOX, x);
                 }
             ),
-            [L],
+            [x],
         );
-    let { entrypoint: N } = (0, d.X8)({ location: "NotificationsInboxPopout" });
+    let { entrypoint: L } = (0, d.X8)({ location: "NotificationsInboxPopout" });
     return (0, i.jsx)(a.Y, {
         targetElementRef: E,
         shouldShow: A,
         align: b,
-        animation: N === d.RK.TITLE_BAR_LEFT ? a.Y.Animation.TRANSLATE : a.Y.Animation.FADE,
-        animationPosition: N === d.RK.TITLE_BAR_LEFT ? "bottom" : "left",
+        animation: L === d.RK.TITLE_BAR_LEFT ? a.Y.Animation.TRANSLATE : a.Y.Animation.FADE,
+        animationPosition: L === d.RK.TITLE_BAR_LEFT ? "bottom" : "left",
         position: t,
-        onRequestClose: x,
+        onRequestClose: N,
         spacing: p,
         renderPopout: () => (0, i.jsx)(o.l, { "aria-label": m.intl.string(m.t.GSmTKJ), children: (0, i.jsx)(_, {}) }),
         children: (e, t) => {
             let { isShown: i } = t;
-            return n(L, i, e);
+            return n(x, i, e);
         },
     });
 }

@@ -434,14 +434,14 @@ let e2 = (0, n(945810).mj)({
     defaultConfig: { isEnabled: !1 },
     variations: { 1: { isEnabled: !0 } },
 });
-var e5 = n(724834),
-    e7 = n(451395),
+var e7 = n(724834),
+    e5 = n(451395),
     e3 = n(823016),
     e4 = n(100741);
 function e6(e) {
     let { item: t, index: n, wishlistId: l, onReorder: s, children: r } = e,
         { manageFocusOnReorder: a } = (0, e3.r)();
-    return (0, i.jsx)(e7.mG, {
+    return (0, i.jsx)(e5.mG, {
         index: n,
         itemId: String(t.skuId),
         listType: String(l),
@@ -473,7 +473,7 @@ let e9 = l.memo(function (e) {
         m = l.useMemo(
             () =>
                 a
-                    ? (0, i.jsx)(e7.jV, {
+                    ? (0, i.jsx)(e5.jV, {
                           buttonRef: g(String(t.skuId)),
                           className: e4.BU,
                           onFocus: (e) => e.stopPropagation(),
@@ -483,7 +483,7 @@ let e9 = l.memo(function (e) {
         ),
         x = l.useMemo(
             () =>
-                (0, i.jsx)(e5.A, {
+                (0, i.jsx)(e7.A, {
                     item: t,
                     wishlistOwner: s,
                     guildId: r,
@@ -1177,7 +1177,7 @@ function t2(e) {
         ],
     });
 }
-function t5(e) {
+function t7(e) {
     let {
             isOwner: t,
             showEditingControls: n,
@@ -1271,7 +1271,7 @@ function t5(e) {
         ],
     });
 }
-function t7(e) {
+function t5(e) {
     let { profileOwner: t, guildId: n } = e,
         s = l.useRef(null);
     (0, eX.i)({ containerRef: s, itemType: "WISHLIST_ITEM" });
@@ -1353,7 +1353,7 @@ function t7(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(eJ.A, { scrollerRef: s }),
-                          (0, i.jsx)(t5, {
+                          (0, i.jsx)(t7, {
                               isOwner: o?.id === t.id,
                               showEditingControls: u,
                               profileOwner: t,
@@ -1401,7 +1401,7 @@ function t6(e) {
             : l === en.RP.WIDGETS
               ? (0, i.jsx)(ep.A, { user: t, guildId: r, channelId: a })
               : l === en.RP.WISHLIST
-                ? (0, i.jsx)(t7, { profileOwner: t, guildId: r })
+                ? (0, i.jsx)(t5, { profileOwner: t, guildId: r })
                 : null;
 }
 function t9(e) {

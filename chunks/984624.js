@@ -20,13 +20,13 @@ function x(e) {
     let { channelId: n, onClick: t } = e,
         x = (0, u.Us)(),
         I = (0, g.Qs)(n),
-        T = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
-        { canManageGuildEvent: v } = (0, d.nr)(T),
-        _ = v(I),
+        v = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
+        { canManageGuildEvent: T } = (0, d.nr)(v),
+        _ = T(I),
         j = i.useRef(null);
     if (null == I) return null;
     function N() {
-        null != T && (0, p.A)(T) ? (0, C.Py)(T, x) : t();
+        null != v && (0, p.A)(v) ? (0, C.Py)(v, x) : t();
     }
     function b() {
         null != I && E.default.endEvent(I.id, I.guild_id);

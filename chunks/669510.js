@@ -21,18 +21,18 @@ function d(e) {
             defaultExpanded: f = !1,
         } = e,
         [j, g] = r.useState(f),
-        b = r.useMemo(() => {
+        N = r.useMemo(() => {
             let e = x.reduce((e, t) => e + t.amount, 0),
                 t = (0, u.$g)(e, v);
             return (0, u.CE)(t, h, p);
         }, [x, v, h, p]),
-        N = (0, n.jsxs)(c.h, {
+        b = (0, n.jsxs)(c.h, {
             label: t,
             defaultExpanded: f,
             isDisabled: x.length <= 0,
             onExpandedChange: g,
             collapsedContent: m
-                ? (0, n.jsx)(a.E, { variant: "text-md/normal", color: "text-subtle", children: b })
+                ? (0, n.jsx)(a.E, { variant: "text-md/normal", color: "text-subtle", children: N })
                 : null,
             children: [
                 x.map((e) => {
@@ -45,12 +45,12 @@ function d(e) {
                 (0, n.jsx)(c.i, {
                     label: l ?? t,
                     labelSubText: i,
-                    value: b,
+                    value: N,
                     subText: d,
                     color: "text-strong",
                     valueColor: "text-strong",
                 }),
             ],
         });
-    return (0, n.jsx)("div", { className: s()({ [o.k]: j }), children: N });
+    return (0, n.jsx)("div", { className: s()({ [o.k]: j }), children: b });
 }

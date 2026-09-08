@@ -21,8 +21,8 @@ var i = n(477900),
     h = n(590202),
     S = n(652215),
     x = n(375708),
-    v = n(299592);
-let T = "/assets/1929535a8397f7f0.png";
+    T = n(299592);
+let v = "/assets/1929535a8397f7f0.png";
 function w(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: p } = e,
         C = (0, I.C5)(t),
@@ -46,7 +46,7 @@ function w(e) {
             "data-migration-pending": !0,
             transitionState: a,
             size: r.rI.DYNAMIC,
-            className: v.modalRoot,
+            className: T.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, i.jsxs)(c.t, {
                 activeSlide: E,
@@ -60,10 +60,10 @@ function w(e) {
                                 "data-migration-pending": !0,
                                 direction: g.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: v.Hc,
+                                className: T.Hc,
                                 children: [
-                                    (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: v.PV, onClick: s }),
-                                    (0, i.jsx)("img", { src: T, alt: "", className: v.LY }),
+                                    (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: T.PV, onClick: s }),
+                                    (0, i.jsx)("img", { src: v, alt: "", className: T.LY }),
                                     (0, i.jsx)(d.D, { variant: "heading-lg/semibold", children: n.title }),
                                     (0, i.jsx)(m.E, {
                                         variant: "text-md/normal",
@@ -75,7 +75,7 @@ function w(e) {
                             (0, i.jsx)(r.$m, {
                                 "data-migration-pending": !0,
                                 scrollbarGutter: !1,
-                                className: v.jE,
+                                className: T.jE,
                                 children: n.choices.map((e) => (0, i.jsx)(L, { choice: e, onClick: N }, e.key)),
                             }),
                         ],
@@ -85,9 +85,9 @@ function w(e) {
                         children: [
                             (0, i.jsxs)(r.$m, {
                                 "data-migration-pending": !0,
-                                className: v.wD,
+                                className: T.wD,
                                 children: [
-                                    (0, i.jsx)("img", { src: T, alt: "", className: v.LY }),
+                                    (0, i.jsx)("img", { src: v, alt: "", className: T.LY }),
                                     (0, i.jsx)(d.D, {
                                         variant: "heading-lg/semibold",
                                         children: x.intl.string(x.t.KTjjrG),
@@ -102,14 +102,14 @@ function w(e) {
                             (0, i.jsx)(r.jl, {
                                 "data-migration-pending": !0,
                                 children: (0, i.jsxs)("div", {
-                                    className: v.cG,
+                                    className: T.cG,
                                     children: [
                                         (0, i.jsx)(f.$, {
                                             variant: "primary",
                                             text: x.intl.string(x.t.cpT0Cq),
                                             onClick: s,
                                         }),
-                                        (0, i.jsx)(l.animated.div, { className: v.ce, style: h }),
+                                        (0, i.jsx)(l.animated.div, { className: T.ce, style: h }),
                                     ],
                                 }),
                             }),
@@ -123,7 +123,7 @@ function w(e) {
 function L(e) {
     let { className: t, choice: n, onClick: o } = e;
     return (0, i.jsxs)(p.D, {
-        className: s()(v.z5, t),
+        className: s()(T.z5, t),
         onClick: () => o(n),
         children: [(0, i.jsx)(m.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(C._, {})],
     });

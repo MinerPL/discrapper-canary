@@ -1,4 +1,4 @@
-l.d(t, { a: () => b, v: () => N }), l(321073);
+l.d(t, { a: () => N, v: () => b }), l(321073);
 var n = l(477900),
     r = l(582128),
     i = l(355522),
@@ -16,12 +16,12 @@ var n = l(477900),
     f = l(583741),
     j = l(375708),
     g = l(381909);
-let b = "new_payment_source_id";
-function N(e) {
+let N = "new_payment_source_id";
+function b(e) {
     let {
             value: t,
             options: l,
-            onChange: N,
+            onChange: b,
             onNew: E,
             noticeMessage: T,
             newPaymentMethodOptionLabel: S,
@@ -65,8 +65,8 @@ function N(e) {
             });
             return (
                 e.push({
-                    id: b,
-                    value: b,
+                    id: N,
+                    value: N,
                     label: S ?? j.intl.string(f.default.rNF29q),
                     leading: void 0,
                     description: void 0,
@@ -76,9 +76,9 @@ function N(e) {
         }, [l, S]),
         D = r.useCallback(
             (e) => {
-                e === b ? E() : null != e && N(e);
+                e === N ? E() : null != e && b(e);
             },
-            [E, N],
+            [E, b],
         ),
         I = (0, n.jsxs)(n.Fragment, {
             children: [

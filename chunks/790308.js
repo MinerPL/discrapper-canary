@@ -1,14 +1,14 @@
-s.d(t, { q: () => o });
-var i = s(362684),
-    l = s(241453),
-    r = s(184093);
-function o(e, t, s) {
-    let { isSelected: o } = t,
-        { isPressed: a, buttonProps: d } = (0, i.s)({ ...e, onPress: (0, l.c)(t.toggle, e.onPress) }, s);
+t.d(s, { q: () => o });
+var i = t(362684),
+    d = t(241453),
+    l = t(184093);
+function o(e, s, t) {
+    let { isSelected: o } = s,
+        { isPressed: a, buttonProps: r } = (0, i.s)({ ...e, onPress: (0, d.c)(s.toggle, e.onPress) }, t);
     return {
         isPressed: a,
         isSelected: o,
         isDisabled: e.isDisabled || !1,
-        buttonProps: (0, r.v)(d, { "aria-pressed": o }),
+        buttonProps: (0, l.v)(r, { "aria-pressed": o }),
     };
 }

@@ -27,7 +27,7 @@ function N(e, t) {
     let l = Math.imul(e, 0x165667b1) + Math.imul(t, 0x27d4eb2f);
     return (((l = Math.imul(l ^ (l >>> 13), 0x4bf19f61)) ^ (l >>> 16)) >>> 0) / 0xffffffff;
 }
-function A() {
+function w() {
     let e = a.useRef(null);
     return (
         a.useEffect(() => {
@@ -62,7 +62,7 @@ function A() {
                 let t = e > 0 ? Math.max(4, (d * d) / e) : d;
                 l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function A() {
+            function w() {
                 if (null == t || null == l) return;
                 let e = t.clientWidth,
                     n = t.clientHeight;
@@ -76,16 +76,16 @@ function A() {
                     h = Number.isFinite(f) && f > 0 ? f : 1;
                 (t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), j();
             }
-            A(),
+            w(),
                 (m = requestAnimationFrame(function e(a) {
                     if (((m = requestAnimationFrame(e)), a - f < b)) return;
                     let j = a - f;
                     if (((f = a), null == t || null == l || 0 === o || null == r)) return;
-                    let A = Number(r.dataset.effortCentre),
-                        w = r.hasAttribute("data-effort-live"),
-                        S = Number.isFinite(A) && Math.abs(A - i) > 16;
-                    if (!h && (!w || S)) return;
-                    x = Math.min(1, Math.max(0, x + ((w ? 1 : -1) * j) / 260));
+                    let w = Number(r.dataset.effortCentre),
+                        A = r.hasAttribute("data-effort-live"),
+                        S = Number.isFinite(w) && Math.abs(w - i) > 16;
+                    if (!h && (!A || S)) return;
+                    x = Math.min(1, Math.max(0, x + ((A ? 1 : -1) * j) / 260));
                     let E = t.getBoundingClientRect(),
                         C = E.width > 0 ? E.width / o : 1,
                         I = r.getBoundingClientRect(),
@@ -141,9 +141,9 @@ function A() {
                     }
                     l.globalAlpha = 1;
                 }));
-            let w = document.fonts;
-            null != w && w.load(`${d}px 'AI Visual Identity Glyphs'`, v.QI + v.vd).then(j, () => void 0);
-            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(A);
+            let A = document.fonts;
+            null != A && A.load(`${d}px 'AI Visual Identity Glyphs'`, v.QI + v.vd).then(j, () => void 0);
+            let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(w);
             return (
                 S?.observe(t),
                 () => {
@@ -154,7 +154,7 @@ function A() {
         (0, n.jsx)("canvas", { ref: e, className: j.Z, "aria-hidden": "true" })
     );
 }
-var w = l(757713);
+var A = l(757713);
 function S(e) {
     let { activeIndex: t, stops: l, ariaLabel: r, disabled: s, onSelect: o, className: u } = e,
         d = a.useRef(null),
@@ -331,23 +331,23 @@ function S(e) {
             );
         }, [p, v, y]),
         (0, n.jsx)("div", {
-            className: i()(w.u4, u),
+            className: i()(A.u4, u),
             role: "group",
             "aria-label": r,
             children: (0, n.jsxs)("div", {
                 ref: d,
-                className: w.Gb,
+                className: A.Gb,
                 children: [
                     (0, n.jsx)("span", {
-                        className: w.Ek,
+                        className: A.Ek,
                         "aria-hidden": "true",
-                        children: (0, n.jsx)("span", { ref: m, className: i()(w.GS, { [w.eG]: t < 0 }) }),
+                        children: (0, n.jsx)("span", { ref: m, className: i()(A.GS, { [A.eG]: t < 0 }) }),
                     }),
                     (0, n.jsx)("span", {
                         ref: c,
                         "data-vibegrations-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: i()(w.p$, { [w.Jb]: j < 0, [w.jz]: b, [w.al]: t >= 0 && !s }),
+                        className: i()(A.p$, { [A.Jb]: j < 0, [A.jz]: b, [A.al]: t >= 0 && !s }),
                         "aria-hidden": "true",
                     }),
                     l.map((e, l) =>
@@ -359,19 +359,19 @@ function S(e) {
                                 "aria-pressed": l === t,
                                 "aria-label": e,
                                 disabled: s,
-                                className: w.ds,
+                                className: A.ds,
                                 onKeyDown: N,
                                 onPointerEnter: () => h(l),
                                 onPointerLeave: () => h((e) => (e === l ? -1 : e)),
                                 onFocus: () => h(l),
                                 onBlur: () => h((e) => (e === l ? -1 : e)),
                                 onClick: () => o(l),
-                                children: (0, n.jsx)("span", { className: w.Om, "aria-hidden": "true" }),
+                                children: (0, n.jsx)("span", { className: A.Om, "aria-hidden": "true" }),
                             },
                             e,
                         ),
                     ),
-                    (0, n.jsx)("span", { className: w.jN, "aria-hidden": "true", children: (0, n.jsx)(A, {}) }),
+                    (0, n.jsx)("span", { className: A.jN, "aria-hidden": "true", children: (0, n.jsx)(w, {}) }),
                 ],
             }),
         })
@@ -415,13 +415,13 @@ function P(e) {
             () => l.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: p.o[e.provider] })),
             [l.main],
         ),
-        A = a.useMemo(() => l.thinking.map((e) => ({ id: e, label: p.h[e] ?? e, value: e })), [l.thinking]);
-    function w(e) {
+        w = a.useMemo(() => l.thinking.map((e) => ({ id: e, label: p.h[e] ?? e, value: e })), [l.thinking]);
+    function A(e) {
         return l.main.find((t) => t.id === e)?.supports_fast === !0;
     }
     function P(e) {
         let { fast: t, ...l } = e;
-        m((0, g.ko)(!0 === t && w(e.model) ? { ...l, fast: !0 } : l));
+        m((0, g.ko)(!0 === t && A(e.model) ? { ...l, fast: !0 } : l));
     }
     let _ = g.Q0.map((e) => e.summary()),
         R = y >= 0 ? _[y] : (0, g.tg)(t, l.main),
@@ -449,14 +449,14 @@ function P(e) {
                               }),
                               (0, n.jsx)(u.l, {
                                   label: I.intl.string(C.default["4AsQHS"]),
-                                  options: A,
+                                  options: w,
                                   value: t.main.thinking,
                                   onSelectionChange: (e) => P({ ...t.main, thinking: e }),
                                   selectionMode: "single",
                                   disabled: r,
                                   fullWidth: !0,
                               }),
-                              w(t.main.model)
+                              A(t.main.model)
                                   ? (0, n.jsx)(d.d, {
                                         label: I.intl.string(C.default.SYLSgx),
                                         description: I.intl.string(C.default.HITWAI),

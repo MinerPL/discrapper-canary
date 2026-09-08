@@ -1,4 +1,4 @@
-t.d(n, { A: () => v });
+t.d(n, { A: () => T });
 var l = t(477900),
     i = t(582128),
     s = t(554146),
@@ -18,9 +18,9 @@ var l = t(477900),
     f = t(652215),
     x = t(49999),
     I = t(375708),
-    T = t(62502);
-let v = function (e) {
-    let { channel: n, guild: t, maxWidth: v } = e,
+    v = t(62502);
+let T = function (e) {
+    let { channel: n, guild: t, maxWidth: T } = e,
         _ = (0, u.Ay)(n);
     i.useEffect(() => {
         (0, h.Dr)(s.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.i.AUTO });
@@ -31,7 +31,7 @@ let v = function (e) {
         N = (0, l.jsx)(C.Ay.Icon, { icon: a.P, tooltip: I.intl.string(I.t.cpT0Cq), onClick: j });
     return (0, l.jsxs)(A.A, {
         sidebarType: A.X.CallChatSidebar,
-        maxWidth: v,
+        maxWidth: T,
         floatingLayer: g.Ay,
         children: [
             (0, l.jsx)(c.A, { channel: n, draftType: E.C.ChannelMessage }),
@@ -44,7 +44,7 @@ let v = function (e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: T.T,
+                className: v.T,
                 children: (0, l.jsx)(d.A, { channel: n, guild: t, chatInputType: m.oU.SIDEBAR }, n.id),
             }),
         ],

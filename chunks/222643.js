@@ -21,15 +21,15 @@ function d(e) {
         [g, f] = i.useState(!1),
         x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
         I = i.useRef(null),
-        T = i.useRef(0);
+        v = i.useRef(0);
     i.useEffect(() => {
         let e = n.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
     }),
         i.useEffect(() => {
-            h || (p(String(T.current)), f(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (T.current += 1));
+            h || (p(String(v.current)), f(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
         }, [x, I, h]);
-    let { preventIdle: v, allowIdle: _ } = (0, u.o)("popup");
+    let { preventIdle: T, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
         ? null
         : (0, l.jsx)(r.Ay, {
@@ -43,8 +43,8 @@ function d(e) {
                   children: () =>
                       (0, l.jsx)("div", {
                           ref: I,
-                          onMouseOver: v,
-                          onFocus: v,
+                          onMouseOver: T,
+                          onFocus: T,
                           onBlur: _,
                           onMouseLeave: _,
                           children: A({ hidden: g || C || t, onDismiss: d }),

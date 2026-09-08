@@ -1,4 +1,4 @@
-l.d(t, { I: () => b, _: () => N });
+l.d(t, { I: () => N, _: () => b });
 var n,
     r = l(477900);
 l(582128);
@@ -65,7 +65,7 @@ function g(e) {
         subscriptionsFaqUrl: g,
     };
 }
-var b =
+var N =
     (((n = {})[(n.Subscription = 0)] = "Subscription"),
     (n[(n.SubscriptionTrial = 1)] = "SubscriptionTrial"),
     (n[(n.SubscriptionApplication = 2)] = "SubscriptionApplication"),
@@ -78,7 +78,7 @@ var b =
     (n[(n.GiftGameShop = 9)] = "GiftGameShop"),
     (n[(n.OrbsGameShop = 10)] = "OrbsGameShop"),
     n);
-function N(e) {
+function b(e) {
     return (0, r.jsxs)("div", {
         className: v.k,
         children: [

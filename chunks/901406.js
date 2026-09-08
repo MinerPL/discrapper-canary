@@ -3,13 +3,13 @@ n.d(t, {
     IG: () => L,
     Ps: () => G,
     UR: () => O,
-    W1: () => y,
-    WU: () => N,
+    W1: () => N,
+    WU: () => y,
     _Q: () => D,
-    b6: () => q,
+    b6: () => U,
     bg: () => b,
-    pu: () => Q,
-    se: () => U,
+    pu: () => k,
+    se: () => q,
     v0: () => w,
 }),
     n(321073),
@@ -59,12 +59,12 @@ function b(e) {
         }
     return n;
 }
-function y(e) {
+function N(e) {
     let t = (0, _.vv)(e),
         n = (0, _.vl)(e);
     return t || n;
 }
-var N = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
+var y = (((i = {}).DESKTOP = "desktop"), (i.XBOX = "xbox"), (i.PLAYSTATION = "playstation"), i);
 function P(e) {
     return "xbox" === e.connected_account_type ? g.fg2.XBOX : g.fg2.PLAYSTATION;
 }
@@ -115,7 +115,7 @@ function M(e) {
     }
     return null;
 }
-function k(e) {
+function Q(e) {
     let {
         link: t,
         directLink: n,
@@ -126,7 +126,7 @@ function k(e) {
     } = e;
     return T.OO.getConfig({ location: "quest_open_game_link" }).enabled, o && (0, l.A)(t), Promise.resolve(!1);
 }
-function Q(e, t) {
+function k(e, t) {
     let n,
         i,
         o,
@@ -172,7 +172,7 @@ function Q(e, t) {
     let { impressionId: f } = t,
         E = null != f ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
-        k({
+        Q({
             link: a,
             directLink: l,
             inlineStoreParams:
@@ -227,7 +227,7 @@ function D(e, t) {
             h = null != A && null != E ? () => (0, C.FW)({ impressionId: E }) : void 0;
         o && null == h
             ? (0, l.A)(a)
-            : k({
+            : Q({
                   link: a,
                   directLink: f,
                   inlineStoreParams: T,
@@ -246,7 +246,7 @@ function D(e, t) {
               });
     })({ adContentId: n, adCreativeType: i, cta: r }, t, { preferExternalAppStore: !1 });
 }
-function q(e, t) {
+function U(e, t) {
     let { quest: i } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, u.r)({
@@ -274,7 +274,7 @@ function q(e, t) {
             }
         })();
 }
-function U(e, t) {
+function q(e, t) {
     let { quest: n } = e;
     (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, u.r)({

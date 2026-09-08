@@ -80,7 +80,7 @@ let v = (e) => {
         let A = t ?? 0,
             v = E.current ?? A,
             { duration: p, delay: S } = (0, m.v)(A - v, { targetTime: c, isRenderedWithoutLottieAnimation: h }),
-            { number: b } = (0, o.z)({
+            { number: N } = (0, o.z)({
                 from: { number: E.current ?? A },
                 number: A,
                 config: { mass: 1, tension: 20, friction: 10, duration: p },
@@ -99,10 +99,10 @@ let v = (e) => {
                     n(_(A)), (E.current = A);
                 },
             }),
-            N = _(Math.max(t ?? 0, b.get()));
+            b = _(Math.max(t ?? 0, N.get()));
         return (0, a.jsx)(i.animated.div, {
-            style: { width: `calc(${N}ch)` },
-            children: b.to((e) => `${e.toFixed(0)}`),
+            style: { width: `calc(${b}ch)` },
+            children: N.to((e) => `${e.toFixed(0)}`),
         });
     },
     p = A;

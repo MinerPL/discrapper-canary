@@ -18,8 +18,8 @@ var l,
     f = t(652215),
     x = t(375708),
     I = t(441386);
-let T = ["embedded_cover"],
-    v = { tension: 800, friction: 24 };
+let v = ["embedded_cover"],
+    T = { tension: 800, friction: 24 };
 var _ =
     (((l = _ || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
@@ -38,7 +38,7 @@ function j(e) {
             locationObject: {},
             onActivityItemSelected: l,
             embeddedActivitiesManager: g.A,
-            assetNames: T,
+            assetNames: v,
             commandOrigin: j,
         }),
         [y, R] = s.useState(!1),
@@ -95,7 +95,7 @@ function j(e) {
         onMouseLeave: L,
         className: I.XA,
         children: (0, i.jsx)(A.c, {
-            config: v,
+            config: T,
             from: { value: 0 },
             to: { value: +!!y },
             children: (e) => {

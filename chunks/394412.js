@@ -20,13 +20,13 @@ function f(e) {
     let { channelId: n, showDismiss: f = !0 } = e,
         x = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
         I = (0, h.RO)(n),
-        T = null != (0, h.Qs)(n),
-        { canManageGuildEvent: v } = (0, o.nr)(x),
+        v = null != (0, h.Qs)(n),
+        { canManageGuildEvent: T } = (0, o.nr)(x),
         _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
         j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             _,
         ]);
-    return _.length < 1 || T
+    return _.length < 1 || v
         ? null
         : (0, l.jsx)(l.Fragment, {
               children: _.map((e) =>
@@ -40,12 +40,12 @@ function f(e) {
                               width: 20,
                           }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: p.intl.formatToPlainString(v(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
+                          title: p.intl.formatToPlainString(T(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
                           description: p.intl.formatToPlainString(p.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              v(e)
+                              T(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
                                             t.e("931937"),

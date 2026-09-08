@@ -1,4 +1,4 @@
-n.d(t, { n0: () => M, xs: () => k });
+n.d(t, { n0: () => M, xs: () => Q });
 var i = n(477900),
     r = n(582128),
     s = n(132500),
@@ -23,8 +23,8 @@ var i = n(477900),
     v = n(851936),
     O = n(561844),
     b = n(590202),
-    y = n(910463),
-    N = n(971649),
+    N = n(910463),
+    y = n(971649),
     P = n(823784);
 n(23766);
 var w = n(652215);
@@ -126,7 +126,7 @@ class R {
                 apple_advertising_id: null != e && (0, I.isIOS)() ? e.advertisingId : null,
                 android_advertising_id: null != e && (0, I.isAndroid)() ? e.advertisingId : null,
                 ...(0, T.A)(),
-                ...(0, y.X)(this.questContent),
+                ...(0, N.X)(this.questContent),
             };
         this.entity.adContentIds.forEach((i, r) => {
             let s = (0, g.L4)(this.sourceQuestContent, i),
@@ -382,9 +382,9 @@ class R {
     })();
 }
 let M = r.createContext(void 0);
-function k(e) {
+function Q(e) {
     let { visible: t, visibleChanged: n, focused: s, reference: a, focusedChanged: d, sourceQuestContent: c } = e,
-        C = (0, N.iY)(e),
+        C = (0, y.iY)(e),
         f = e.adCreativeType === o.p.QUEST ? void 0 : e.relatedQuestId,
         E = r.useRef(null),
         m = (0, l.bG)([_.A], () => null != _.A.questEnrollmentBlockedUntil, []);

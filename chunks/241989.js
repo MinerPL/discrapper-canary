@@ -16,8 +16,8 @@ var n = l(477900),
     f = l(323384),
     j = l(966327),
     g = l(14702),
-    b = l(575926),
-    N = l(548118),
+    N = l(575926),
+    b = l(548118),
     E = l(319820),
     T = l(576243),
     S = l(328968),
@@ -44,12 +44,12 @@ function G(e) {
             priceTooltip: f,
             priceSubText: j,
             priceSubTextHasStrikethrough: g = !0,
-            omitDefaultIconBackground: b,
-            target: N,
+            omitDefaultIconBackground: N,
+            target: b,
             onClick: E,
             className: T,
         } = e,
-        S = (0, n.jsx)(L, { target: N }),
+        S = (0, n.jsx)(L, { target: b }),
         y = r.useMemo(() => {
             let e = (0, n.jsxs)(o.E, {
                 variant: "text-md/medium",
@@ -83,7 +83,7 @@ function G(e) {
         ),
         C = (0, n.jsxs)(n.Fragment, {
             children: [
-                null != x && (0, n.jsx)("div", { className: s()(_.Kk, { [_.H9]: !b }), children: x }),
+                null != x && (0, n.jsx)("div", { className: s()(_.Kk, { [_.H9]: !N }), children: x }),
                 (0, n.jsxs)("div", {
                     className: _.Qs,
                     children: [
@@ -164,13 +164,13 @@ function L(e) {
         case "guildSubscription":
             return k.intl.format(P.default.mXvZt2, {
                 guildName: t.guild.name,
-                icon: (0, n.jsx)(N.Ay, { guild: t.guild, size: N.Ay.Sizes.SMOL, className: _.RG }),
+                icon: (0, n.jsx)(b.Ay, { guild: t.guild, size: b.Ay.Sizes.SMOL, className: _.RG }),
             });
         case "boost":
             return k.intl.format(P.default["8imbq5"], {
                 guildName: t.guild.name,
                 guildIcon: () =>
-                    (0, n.jsx)(N.Ay, { guild: t.guild, size: N.Ay.Sizes.SMOL, className: _.RG, active: !0 }),
+                    (0, n.jsx)(b.Ay, { guild: t.guild, size: b.Ay.Sizes.SMOL, className: _.RG, active: !0 }),
             });
         case void 0:
             return null;
@@ -227,7 +227,7 @@ function B(e) {
         : l === D.EZt.APPLICATION
           ? (0, n.jsx)(M, {})
           : l === D.EZt.GUILD_ROLE
-            ? (0, n.jsx)(b.h, { width: 48, height: 48 })
+            ? (0, n.jsx)(N.h, { width: 48, height: 48 })
             : null;
 }
 function $(e) {
