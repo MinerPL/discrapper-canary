@@ -1461,7 +1461,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 609171, Version Hash: 9e076c92dc9db97099dd0a0d3e72c0581fcb1946`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 609173, Version Hash: 2acb2bda61338050243b451ac64a0dfcd528d8c6`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -20019,8 +20019,18 @@ function Sm(e) {
     });
 }
 var Sg = n(52416),
-    SS = n(796878),
-    SN = n(704508);
+    SS = n(796878);
+function SN(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: i, role: r, width: a = 144, height: s = 144 } = e;
+    return (0, O.jsx)("img", {
+        style: { width: a, height: s },
+        src: "https://cdn.discordapp.com/assets/content/bac22a874c62a75c0d4beda200bdc601db724a2dac4537edc971833d752af047.svg",
+        alt: t,
+        "aria-label": n,
+        "aria-hidden": i,
+        role: r ?? "img",
+    });
+}
 function SC(e) {
     let { children: t, endsAt: n, variant: i = "initial" } = e,
         r = (0, gE.Zb)(n),
@@ -20031,7 +20041,7 @@ function SC(e) {
     return (0, O.jsx)(ca.u, {
         title: o,
         body: l,
-        asset: (0, O.jsx)(SN.y, { alt: "", width: 48, height: 48 }),
+        asset: (0, O.jsx)(SN, { alt: "", width: 48, height: 48 }),
         assetSize: 48,
         position: "right",
         asContainer: !0,
@@ -21098,7 +21108,7 @@ let Nf = "isHideDevBanner",
                     className: ta()(NI.Wz, NI.mr),
                     children: [
                         (0, O.jsx)(Nh, { className: NI.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "609171" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "609173" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -47147,7 +47157,7 @@ let kn = (0, tV.Fe)({
             n.e("918024"),
             n.e("26001"),
             n.e("736926"),
-            n.e("697336"),
+            n.e("459247"),
             n.e("414591"),
             n.e("652111"),
             n.e("474907"),
