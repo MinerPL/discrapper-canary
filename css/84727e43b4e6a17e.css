@@ -1068,33 +1068,39 @@
 
 .marker__97796 {
     background: transparent;
-    border: 1px solid transparent;
+    border: 1px solid var(--border-muted);
     border-radius: var(--radius-xs);
     box-sizing: border-box;
     display: grid;
     flex-shrink: 0;
+    place-content: center;
+    place-items: center
+}
+
+.marker__97796,
+.markerSpinner__97796 {
     height: var(--space-20);
-    place-items: center;
     width: var(--space-20)
 }
 
-.marker__97796:not(.markerInProgress__97796) {
-    border-color: var(--border-muted)
-}
-
-.markerCheck__97796,
 .markerSpinner__97796 {
-    grid-area: 1/1
-}
-
-.markerSpinner__97796 {
-    height: 20px;
-    transform: scale(.625);
-    width: 20px
+    grid-area: 1/1;
+    opacity: 0;
+    transform: scale(.5)
 }
 
 .marker__97796 .markerSpinnerPath__97796 {
     stroke: var(--checkbox-icon-active)
+}
+
+.marker__97796.markerInProgress__97796 {
+    background: color-mix(in oklab, var(--background-brand) 30%, transparent);
+    border-color: var(--checkbox-border-selected-default)
+}
+
+.marker__97796.markerInProgress__97796 .markerSpinner__97796 {
+    opacity: 1;
+    transform: scale(.625)
 }
 
 .marker__97796.markerCompleted__97796 {
@@ -1103,6 +1109,7 @@
 }
 
 .markerCheck__97796 {
+    grid-area: 1/1;
     height: 10px;
     overflow: visible;
     width: 10px
@@ -1186,6 +1193,10 @@
     transition: background-color .2s ease-out, border-color .2s ease-out
 }
 
+.full-motion .markerSpinner__97796 {
+    transition: opacity .2s ease-out, transform .2s ease-out
+}
+
 .full-motion .text__97796 {
     transition: background-size .3s ease-out
 }
@@ -1202,4 +1213,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=6d2d06cf5d8ffb9f.css.map*/
+/*# sourceMappingURL=84727e43b4e6a17e.css.map*/

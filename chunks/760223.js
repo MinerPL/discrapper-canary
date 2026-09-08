@@ -30,8 +30,8 @@ var i,
     P = n(152367),
     _ = n(661531),
     D = n(627363),
-    z = n(625180),
-    T = n(672929),
+    T = n(625180),
+    z = n(672929),
     M = n(976860),
     V = n(885386),
     L = n(696451),
@@ -55,6 +55,11 @@ function J(e) {
 }
 var ee = n(58703);
 let et = [
+    {
+        date: "2026-09-08",
+        summary:
+            "The checklist step being worked on gets its box back: the spinner turns inside the same frame the finished tick fills in.",
+    },
     {
         date: "2026-09-07",
         summary:
@@ -385,9 +390,9 @@ var eC = n(663417),
     eP = n(557875),
     e_ = n(869369),
     eD = n(123917);
-let ez = new Set();
+let eT = new Set();
 n(321073);
-var eT = n(746080);
+var ez = n(746080);
 let eM = [];
 function eV(e) {
     let {
@@ -411,8 +416,8 @@ function eV(e) {
         N = a.useRef(null),
         { pending: E, refresh: I } = (0, eI.A)(C ?? null),
         { pending: S, connect: R } = (function (e) {
-            let [t, n] = a.useState(ez),
-                i = a.useRef(ez),
+            let [t, n] = a.useState(eT),
+                i = a.useRef(eT),
                 l = a.useCallback((e) => {
                     (i.current = (0, eP.Q6)(i.current, e)), n(i.current);
                 }, []);
@@ -474,9 +479,9 @@ function eV(e) {
             connectPending: S,
         }),
         D = a.useMemo(() => new Map(P.map((e) => [e.type, e])), [P]),
-        z = null != m && o,
-        T = r && null != p,
-        M = z || null != d || T || null != g || null != h,
+        T = null != m && o,
+        z = r && null != p,
+        M = T || null != d || z || null != g || null != h,
         V = eR.p5 && null != i,
         L = eR.p5;
     return null != f || null != v || M || L || r
@@ -543,7 +548,7 @@ function eV(e) {
                           M
                               ? (0, l.jsxs)(er.rX, {
                                     children: [
-                                        z
+                                        T
                                             ? (0, l.jsx)(er.Dr, {
                                                   id: "remix",
                                                   label: H.intl.string(Y.default.vPI794),
@@ -557,7 +562,7 @@ function eV(e) {
                                                   action: d,
                                               })
                                             : null,
-                                        T
+                                        z
                                             ? (0, l.jsx)(er.Dr, {
                                                   id: "import",
                                                   label: H.intl.string(Y.default.lf8HqE),
@@ -591,7 +596,7 @@ function eV(e) {
                                                   icon: eA.LinkIcon,
                                                   leadingAccessory: { type: "icon", icon: eA.LinkIcon },
                                                   action: () =>
-                                                      (0, eR.C)((0, eS.n)(i, eT.VV.VIBEGRATIONS, t), () =>
+                                                      (0, eR.C)((0, eS.n)(i, ez.VV.VIBEGRATIONS, t), () =>
                                                           (0, b.P0)(
                                                               (0, j.o)(H.intl.string(H.t["L/PwZf"]), y.Ck.SUCCESS),
                                                           ),
@@ -779,7 +784,7 @@ function e8(e) {
                                       confirmText: H.intl.string(Y.default.pgFuyr),
                                       variant: "critical",
                                       onConfirm: async () => {
-                                          (0, M.pX)(e$.BVt.CHANNEL(c, eT.VV.VIBEGRATIONS, t));
+                                          (0, M.pX)(e$.BVt.CHANNEL(c, ez.VV.VIBEGRATIONS, t));
                                           try {
                                               await ec(t, e, H.intl.string(Y.default.C7GU2r));
                                           } catch {
@@ -953,10 +958,10 @@ function e3(e) {
         ey = (0, c.bG)([Z.A], () => Z.A.isBuilderPreviewMobile()),
         ev = H.intl.string(ey ? Y.default["3uCc8U"] : Y.default["+nzCxZ"]),
         eC = a.useCallback(() => (0, O.GG)(!ey), [ey]),
-        ek = (0, T.A)(t?.preview_application_id ?? null, eJ.sd),
+        ek = (0, z.A)(t?.preview_application_id ?? null, eJ.sd),
         eA = (0, eJ.x1)(ek) && ek.data.proxyTicketRefreshing,
         eN = a.useCallback(() => {
-            null == ek || eA || z.A.refreshProxyTicket(ek.id);
+            null == ek || eA || T.A.refreshProxyTicket(ek.id);
         }, [ek, eA]),
         eE = a.useCallback(() => {
             var e, n;
@@ -1016,17 +1021,17 @@ function e3(e) {
         [eP],
     );
     let eD = X?.integration_installed === !0 && t?.guild_id != null ? t.guild_id : r,
-        ez = a.useCallback(async () => {
+        eT = a.useCallback(async () => {
             null == t ||
                 (t.guild_id === eD && t.preview_guild_id === eD) ||
                 (await (0, O.M7)(t.id, { guild_id: eD, preview_guild_id: eD }));
         }, [eD, t]),
         eM = a.useCallback(async () => {
             try {
-                await ez();
+                await eT();
             } catch {}
             await eP();
-        }, [eP, ez]),
+        }, [eP, eT]),
         eL = a.useCallback(() => {
             let e = t?.preview_application_id;
             null != t &&
@@ -1046,7 +1051,7 @@ function e3(e) {
               ? { type: "checking" }
               : void 0;
     a.useEffect(() => {
-        null == t && i && (0, M.pX)(e$.BVt.CHANNEL(r, eT.VV.VIBEGRATIONS));
+        null == t && i && (0, M.pX)(e$.BVt.CHANNEL(r, ez.VV.VIBEGRATIONS));
     }, [r, t, i]);
     let eB = a.useCallback((e) => {
             d(!0);
@@ -1299,7 +1304,7 @@ function e7(e) {
     a.useEffect(() => {
         null != g && D.current?.querySelector("button")?.focus();
     }, [g]);
-    let z = a.useMemo(
+    let T = a.useMemo(
             () =>
                 t
                     .filter((e) => (0, q.X0)(e, o))
@@ -1309,7 +1314,7 @@ function e7(e) {
                     ),
             [t, o],
         ),
-        T = H.intl.string(Y.default.TU9IGR),
+        z = H.intl.string(Y.default.TU9IGR),
         M = [
             H.intl.string(Y.default["E+Q26x"]),
             H.intl.string(Y.default["06/jqP"]),
@@ -1478,11 +1483,11 @@ function e7(e) {
                                     className: r()(e0.Qs, e0.DA),
                                     children: [
                                         (0, l.jsx)(I.f, {
-                                            label: T,
+                                            label: z,
                                             hideLabel: !0,
                                             rows: 3,
                                             value: s,
-                                            placeholder: T,
+                                            placeholder: z,
                                             error: c,
                                             onChange: y,
                                             onKeyDown: F,
@@ -1569,9 +1574,9 @@ function e7(e) {
                             (0, l.jsxs)(E.Ip, {
                                 className: e0.xe,
                                 children: [
-                                    (null == i || "loading" === i.type) && 0 === z.length
+                                    (null == i || "loading" === i.type) && 0 === T.length
                                         ? (0, l.jsx)("div", { className: e0.E8, children: (0, l.jsx)(R.y, {}) })
-                                        : i?.type === "error" && 0 === z.length
+                                        : i?.type === "error" && 0 === T.length
                                           ? (0, l.jsxs)("div", {
                                                 className: e0.E8,
                                                 children: [
@@ -1589,7 +1594,7 @@ function e7(e) {
                                                     }),
                                                 ],
                                             })
-                                          : 0 === z.length
+                                          : 0 === T.length
                                             ? (0, l.jsx)("div", {
                                                   className: e0.D1,
                                                   children: (0, l.jsxs)("div", {
@@ -1610,7 +1615,7 @@ function e7(e) {
                                               })
                                             : (0, l.jsx)("div", {
                                                   className: e0.Dq,
-                                                  children: z.map((e) =>
+                                                  children: T.map((e) =>
                                                       (0, l.jsx)(
                                                           e8,
                                                           {
@@ -1708,7 +1713,7 @@ function e5(e) {
                         (0, $.Hc)(e),
                             (0, $.r2)(e, N ?? X.Cl),
                             (0, $.dv)(e, t),
-                            (0, M.pX)(e$.BVt.CHANNEL(n, eT.VV.VIBEGRATIONS, e)),
+                            (0, M.pX)(e$.BVt.CHANNEL(n, ez.VV.VIBEGRATIONS, e)),
                             m(""),
                             E(null);
                     } catch (e) {
@@ -1732,7 +1737,7 @@ function e5(e) {
                         (0, $.Hc)(l),
                         (0, $.r2)(l, N ?? X.Cl),
                         await ec(l, e, H.intl.string(Y.default.KjEtrZ)),
-                        (0, M.pX)(e$.BVt.CHANNEL(n, eT.VV.VIBEGRATIONS, l)),
+                        (0, M.pX)(e$.BVt.CHANNEL(n, ez.VV.VIBEGRATIONS, l)),
                         E(null);
                 } catch {
                     null != l && (await (0, O.xx)(l).catch(() => void 0)),
@@ -1745,14 +1750,14 @@ function e5(e) {
         ),
         D = a.useCallback(
             (e) => {
-                (0, M.pX)(e$.BVt.CHANNEL(n, eT.VV.VIBEGRATIONS, e));
+                (0, M.pX)(e$.BVt.CHANNEL(n, ez.VV.VIBEGRATIONS, e));
             },
             [n],
         ),
-        z = a.useCallback(() => {
-            (0, M.pX)(e$.BVt.CHANNEL(n, eT.VV.VIBEGRATIONS));
+        T = a.useCallback(() => {
+            (0, M.pX)(e$.BVt.CHANNEL(n, ez.VV.VIBEGRATIONS));
         }, [n]),
-        T = a.useCallback((e) => {
+        z = a.useCallback((e) => {
             m(e), v(null);
         }, []),
         V = (0, c.bG)([Q.Ay], () => {
@@ -1762,7 +1767,7 @@ function e5(e) {
         }, [g, n]),
         B = (0, c.bG)([Q.Ay], () => Q.Ay.hasFetchedGuildProjects(n), [n]);
     return null != g
-        ? (0, l.jsx)(e3, { project: V, projectsLoaded: B, onBack: z, guildId: n }, g)
+        ? (0, l.jsx)(e3, { project: V, projectsLoaded: B, onBack: T, guildId: n }, g)
         : (0, l.jsx)(e7, {
               projects: s,
               sharedProjects: o,
@@ -1775,7 +1780,7 @@ function e5(e) {
               createError: x,
               createDisabled: "idea" === (t = J({ idea: p, installScope: w, submitting: h })) || "submitting" === t,
               onSelectProject: D,
-              onIdeaChange: T,
+              onIdeaChange: z,
               onCreate: S,
               onImportNewProject: _,
               importing: R,

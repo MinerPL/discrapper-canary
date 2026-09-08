@@ -1121,14 +1121,12 @@ function tc(e) {
             }
         })(t),
         children: [
-            "in_progress" === t
-                ? (0, n.jsx)(m.y, {
-                      type: m.y.Type.SPINNING_CIRCLE_SIMPLE,
-                      className: tu.Qd,
-                      itemClassName: tu.xB,
-                      "aria-hidden": !0,
-                  })
-                : null,
+            (0, n.jsx)(m.y, {
+                type: m.y.Type.SPINNING_CIRCLE_SIMPLE,
+                className: tu.Qd,
+                itemClassName: tu.xB,
+                "aria-hidden": !0,
+            }),
             (0, n.jsx)("svg", {
                 className: tu.L5,
                 viewBox: "0 0 10.1668 10.1668",
