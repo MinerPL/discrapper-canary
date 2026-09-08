@@ -1,10 +1,11 @@
-i.d(r, { v: () => p });
+i.d(r, { v: () => t });
 var l = i(477900),
     a = i(503698),
     d = i.n(a),
-    u = i(834730),
-    g = i(727960);
-let n = {
+    u = i(85463),
+    g = i(834730),
+    n = i(727960);
+let p = {
     blurpleLight: "blurple-light",
     blurpleMedium: "blurple-medium",
     blurpleDark: "blurple-dark",
@@ -30,16 +31,17 @@ let n = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
-function p(e) {
-    let { text: r, variant: i = "grayLight", icon: a, iconColor: p } = e,
-        t = n[i],
-        h =
+function t(e) {
+    let { text: r, variant: i = "grayLight", icon: a, iconColor: t } = e,
+        h = p[i],
+        k = (0, u.N)(),
+        m =
             null != a
-                ? (0, l.jsx)(a, { color: p ?? "currentColor", size: "xxs", "aria-hidden": !0, className: g.icon })
+                ? (0, l.jsx)(a, { color: t ?? "currentColor", size: "xxs", "aria-hidden": !0, className: n.icon })
                 : null;
-    return (0, l.jsxs)(u.E, {
-        variant: "eyebrow",
-        className: d()(g.chip, g[t], { [g["with-icon"]]: null != a }),
-        children: [h, r],
+    return (0, l.jsxs)(g.E, {
+        variant: k,
+        className: d()(n.chip, n[h], { [n["with-icon"]]: null != a }),
+        children: [m, r],
     });
 }

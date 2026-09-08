@@ -1484,15 +1484,15 @@
 
 :where(.mana-type-consolidation) .eyebrow_b39acb {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow_b39acb.fontScaling_b39acb {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal_b39acb {
@@ -3650,15 +3650,15 @@
 
 :where(.mana-type-consolidation) .eyebrow__390b6 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow__390b6.fontScaling__390b6 {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal__390b6 {
@@ -4340,4 +4340,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=765208.a63333ced4721104.css.map*/
+/*# sourceMappingURL=765208.b360a421578626d6.css.map*/

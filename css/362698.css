@@ -3250,15 +3250,15 @@ screen and (max-width:485px) {
 
 :where(.mana-type-consolidation) .eyebrow_cf4812 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow_cf4812.fontScaling_cf4812 {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal_cf4812 {
@@ -5157,4 +5157,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.c7d6a7a662361606.css.map*/
+/*# sourceMappingURL=362698.9e9039679aef5390.css.map*/

@@ -1556,15 +1556,15 @@
 
 :where(.mana-type-consolidation) .eyebrow_bfe55a {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow_bfe55a.fontScaling_bfe55a {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal_bfe55a {
@@ -2197,4 +2197,4 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
     color: var(--primary-300)
 }
 
-/*# sourceMappingURL=770583.f00fa6e2b62cb2c7.css.map*/
+/*# sourceMappingURL=770583.318f605a3de45c19.css.map*/

@@ -1,60 +1,56 @@
-l.d(t, { m: () => d });
+l.d(t, { m: () => m });
 var n = l(477900),
     r = l(582128),
     i = l(503698),
     s = l.n(i),
     a = l(785007),
-    u = l(834730),
-    c = l(517837);
-function o(e) {
-    let { text: t } = e;
-    return (0, n.jsx)(u.E, {
-        tag: "span",
-        variant: "eyebrow",
-        color: "text-overlay-light",
-        className: c.Fi,
-        children: t,
-    });
-}
+    u = l(85463),
+    c = l(834730),
+    o = l(517837);
 function d(e) {
-    let { headingComponent: t, headingSubText: l, value: i, planRadioOptions: d, ...m } = e,
+    let { text: t } = e,
+        l = (0, u.N)();
+    return (0, n.jsx)(c.E, { tag: "span", variant: l, color: "text-overlay-light", className: o.Fi, children: t });
+}
+function m(e) {
+    let { headingComponent: t, headingSubText: l, value: i, planRadioOptions: u, ...m } = e,
         x = r.useMemo(
             () =>
-                null == d
+                null == u
                     ? []
-                    : d.map((e) => {
+                    : u.map((e) => {
                           let t = e.value === i,
                               l = t ? "text-strong" : "text-subtle";
                           return {
                               name: (0, n.jsxs)("div", {
-                                  className: c.VH,
+                                  className: o.VH,
                                   children: [
                                       (0, n.jsxs)("div", {
-                                          className: c.C2,
+                                          className: o.C2,
                                           children: [
-                                              (0, n.jsx)(u.E, {
+                                              (0, n.jsx)(c.E, {
                                                   variant: "text-md/medium",
                                                   color: l,
                                                   children: e.primaryText,
                                               }),
-                                              null != e.badgeText && (0, n.jsx)(o, { text: e.badgeText }),
+                                              null != e.badgeText && (0, n.jsx)(d, { text: e.badgeText }),
                                           ],
                                       }),
                                       (0, n.jsxs)("div", {
-                                          className: c.Cq,
+                                          className: o.Cq,
                                           children: [
                                               (0, n.jsxs)("div", {
-                                                  className: c.SS,
+                                                  className: o.SS,
                                                   children: [
                                                       null != e.subTextStrikethrough &&
-                                                          (0, n.jsx)(u.E, {
+                                                          (0, n.jsx)(c.E, {
                                                               tag: "span",
                                                               variant: "text-md/medium",
                                                               color: "text-subtle",
-                                                              className: c.fF,
+                                                              className: o.fF,
                                                               children: e.subTextStrikethrough,
                                                           }),
-                                                      (0, n.jsx)(u.E, {
+                                                      (0, n.jsx)(c.E, {
                                                           tag: "span",
                                                           variant: "text-md/medium",
                                                           color: l,
@@ -63,7 +59,7 @@ function d(e) {
                                                   ],
                                               }),
                                               null != e.secondarySubText &&
-                                                  (0, n.jsx)(u.E, {
+                                                  (0, n.jsx)(c.E, {
                                                       variant: "text-md/medium",
                                                       color: "text-subtle",
                                                       children: e.secondarySubText,
@@ -74,17 +70,17 @@ function d(e) {
                               }),
                               value: e.value,
                               disabled: e.isDisabled,
-                              radioBarClassName: s()(c.tG, { [c.uA]: t }),
+                              radioBarClassName: s()(o.tG, { [o.uA]: t }),
                           };
                       }),
-            [d, i],
+            [u, i],
         );
     return (0, n.jsxs)("div", {
         children: [
             t,
             null != l &&
-                (0, n.jsx)(u.E, { variant: "text-sm/medium", color: "text-muted", className: c.cm, children: l }),
-            (0, n.jsx)(a.$d, { ...m, options: x, value: i, className: c.ul }),
+                (0, n.jsx)(c.E, { variant: "text-sm/medium", color: "text-muted", className: o.cm, children: l }),
+            (0, n.jsx)(a.$d, { ...m, options: x, value: i, className: o.ul }),
         ],
     });
 }

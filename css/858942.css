@@ -3993,15 +3993,15 @@
 
 :where(.mana-type-consolidation) .eyebrow_c1e9c4 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow_c1e9c4.fontScaling_c1e9c4 {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal_c1e9c4 {
@@ -6130,4 +6130,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.5960bed2a0096b02.css.map*/
+/*# sourceMappingURL=858942.3a29066561c69de6.css.map*/

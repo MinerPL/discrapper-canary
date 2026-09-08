@@ -2628,15 +2628,15 @@
 
 :where(.mana-type-consolidation) .eyebrow__463b7 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow__463b7.fontScaling__463b7 {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal__463b7 {
@@ -4603,4 +4603,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=773326.e31a850320a77b99.css.map*/
+/*# sourceMappingURL=773326.54d5349877c24ba4.css.map*/

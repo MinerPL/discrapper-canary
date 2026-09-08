@@ -1,36 +1,37 @@
-t.d(n, { HN: () => m, ux: () => E });
+t.d(n, { HN: () => E, ux: () => p });
 var i = t(477900),
     s = t(582128),
     a = t(503698),
     o = t.n(a),
     r = t(17928),
     l = t(812993),
-    u = t(834730),
-    d = t(409686),
-    c = t(851109),
-    h = t(599486),
-    b = t(394953),
-    g = t(849077);
+    u = t(85463),
+    d = t(834730),
+    c = t(409686),
+    h = t(851109),
+    b = t(599486),
+    g = t(394953),
+    T = t(849077);
 t(445368);
-var T = t(445382);
-function m() {
-    let { setSelectedFilter: e } = (0, h.A)();
+var m = t(445382);
+function E() {
+    let { setSelectedFilter: e } = (0, b.A)();
     return () => {
-        e(g.Io.ALL);
+        e(T.Io.ALL);
     };
 }
-function E(e) {
+function p(e) {
     let n,
         t,
         a,
-        { isSelected: h } = e,
-        { unreadRecentMentionsCount: g, unreadChannelIds: m } = (0, b.U4)(),
-        E =
+        { isSelected: b } = e,
+        { unreadRecentMentionsCount: T, unreadChannelIds: E } = (0, g.U4)(),
+        p =
             ((n = (function () {
-                let { unreadRecentMentionsCount: e } = (0, b.U4)(),
-                    { hasMoreMentions: n, mentionsLoading: t } = (0, r.cf)([d.Ay], () => ({
-                        hasMoreMentions: d.Ay.hasMore,
-                        mentionsLoading: d.Ay.loading,
+                let { unreadRecentMentionsCount: e } = (0, g.U4)(),
+                    { hasMoreMentions: n, mentionsLoading: t } = (0, r.cf)([c.Ay], () => ({
+                        hasMoreMentions: c.Ay.hasMore,
+                        mentionsLoading: c.Ay.loading,
                     })),
                     i = Math.min(e, 25),
                     s = e > i || n || t,
@@ -46,7 +47,7 @@ function E(e) {
                             count: t,
                             renderBadgeCount: n,
                             style: { width: s },
-                            className: T.xF,
+                            className: m.xF,
                         });
                     })(n, t),
                 [n, t],
@@ -55,12 +56,13 @@ function E(e) {
                 () => ({ badge: a, badgeType: "mentions", dimensions: { height: 16, width: n.width } }),
                 [a, n.width],
             )),
-        { entrypoint: p } = (0, c.X8)({ location: "useInboxBadgeInfo" });
+        { entrypoint: _ } = (0, h.X8)({ location: "useInboxBadgeInfo" }),
+        A = (0, u.N)();
     return s.useMemo(() => {
-        if (g > 0) return E;
-        let e = m.length;
+        if (T > 0) return p;
+        let e = E.length;
         if (0 === e) return { badge: null, badgeType: null };
-        if (p === c.RK.SERVER_RAIL_TOP) {
+        if (_ === h.RK.SERVER_RAIL_TOP) {
             let n,
                 t = (0, l.o6)(e) - 3;
             return {
@@ -69,14 +71,14 @@ function E(e) {
                     (0, i.jsx)(l.hV, {
                         count: e,
                         style: { width: n, lineHeight: 13, height: 13, minHeight: 13, minWidth: 13 },
-                        className: o()(T.xF, T.pw, { [T.wH]: h }),
+                        className: o()(m.xF, m.pw, { [m.wH]: b }),
                     })),
                 badgeType: "unread",
                 dimensions: { height: 13, width: t },
             };
         }
-        return p === c.RK.TITLE_BAR_LEFT
-            ? { badge: (0, i.jsx)(u.E, { variant: "eyebrow", children: (0, l.Gu)(e) }), badgeType: "unread" }
+        return _ === h.RK.TITLE_BAR_LEFT
+            ? { badge: (0, i.jsx)(d.E, { variant: A, children: (0, l.Gu)(e) }), badgeType: "unread" }
             : { badge: null, badgeType: null };
-    }, [g, E, m.length, p, h]);
+    }, [T, p, E.length, _, b, A]);
 }

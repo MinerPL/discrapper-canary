@@ -1496,15 +1496,15 @@
 
 :where(.mana-type-consolidation) .eyebrow_abb9ad {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow_abb9ad.fontScaling_abb9ad {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal_abb9ad {
@@ -2388,4 +2388,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=a585640e82f65e5f.css.map*/
+/*# sourceMappingURL=9f90d3656e093ae3.css.map*/

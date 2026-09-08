@@ -1474,15 +1474,15 @@
 
 :where(.mana-type-consolidation) .eyebrow__20a53 {
     font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     letter-spacing: normal;
-    line-height: 1.3333333333333333;
+    line-height: 1.2857142857142858;
     text-transform: none
 }
 
 :where(.mana-type-consolidation) .eyebrow__20a53.fontScaling__20a53 {
-    font-size: .75rem
+    font-size: .875rem
 }
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal__20a53 {
@@ -2082,4 +2082,4 @@
     white-space: normal
 }
 
-/*# sourceMappingURL=121046.78ccc4a62486201a.css.map*/
+/*# sourceMappingURL=121046.c4f797e83a8e727e.css.map*/

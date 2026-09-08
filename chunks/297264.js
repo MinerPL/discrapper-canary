@@ -35,7 +35,7 @@ let d = new Map([
                 ["heading-xxl/semibold", "experimental/heading-xxl/semibold"],
                 ["heading-xxl/bold", "experimental/heading-xxl/semibold"],
                 ["heading-xxl/extrabold", "experimental/heading-xxl/semibold"],
-                ["eyebrow", "experimental/body-xs/semibold"],
+                ["eyebrow", "experimental/body-sm/medium"],
                 ["heading-deprecated-12/normal", "experimental/body-xs/normal"],
                 ["heading-deprecated-12/medium", "experimental/body-xs/medium"],
                 ["heading-deprecated-12/semibold", "experimental/body-xs/semibold"],
