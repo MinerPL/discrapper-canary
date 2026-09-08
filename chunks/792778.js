@@ -2287,7 +2287,7 @@ function ip(e) {
 }
 function ix(e) {
     let { user: l, guildId: n, disabled: i } = e,
-        r = (0, l$.sk)("UserProfileModalV2EditingPanel");
+        r = (0, l$.s)("UserProfileModalV2EditingPanel");
     return (0, t.jsxs)(nP, {
         heading: eY.intl.string(r ? eY.t["Vfbar/"] : eY.t.wR5wOo),
         disabled: i,
@@ -3498,7 +3498,7 @@ function rH(e) {
                 u = (0, eg.N2)({ user: l, guildId: n ?? void 0 }),
                 c = (0, eg.Xf)({ user: l, guildId: n ?? void 0 }),
                 g = (0, eg.Xf)({ user: l, guildId: void 0 }),
-                m = (0, l$.sk)("UserProfileModalV2EditableBanner"),
+                m = (0, l$.s)("UserProfileModalV2EditableBanner"),
                 f = W.Ay.canUsePremiumProfileCustomization(l),
                 p = null == n,
                 x = p || f,

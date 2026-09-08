@@ -14569,7 +14569,7 @@ var TV = n(13875),
 function TF(e) {
     let { user: t, guild: n, sectionTitle: i } = e,
         { analyticsLocations: l } = (0, eP.Ay)(),
-        s = (0, TV.sk)("ProfileFrameSection"),
+        s = (0, TV.s)("ProfileFrameSection"),
         r = (0, S5.Xf)({ user: t, guildId: n?.id }),
         { pendingProfileFrame: a, errors: o } = (0, S5.Tu)(n?.id),
         [u, d] = (0, cS.kn)([eu.M.PROFILE_FRAME_USER_PROFILE_NEW_BADGE]),

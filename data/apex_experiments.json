@@ -2226,25 +2226,6 @@
     }
   },
   {
-    "name": "2026-04-collectibles-profile-frames-purchase",
-    "kind": "user",
-    "defaultConfig": {
-      "bucket": 0
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "bucket": 1
-      },
-      "2": {
-        "bucket": 2
-      }
-    }
-  },
-  {
     "name": "2026-04-composed-quest-player",
     "kind": "user",
     "defaultConfig": {

@@ -20,24 +20,9 @@
 }
 
 .iconTextBadge_b8a6bd {
-    gap: 4px
-}
-
-.earlyAccessBadge_b8a6bd,
-.iconTextBadge_b8a6bd {
     align-items: center;
-    display: inline-flex
-}
-
-.earlyAccessBadge_b8a6bd {
-    border-radius: var(--radius-round);
-    box-sizing: border-box;
-    flex: 1;
-    height: 20px;
-    justify-content: center;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    padding: 2px 8px
+    display: inline-flex;
+    gap: 4px
 }
 
 .theme-dark .productCardBadge_b8a6bd {
@@ -45,19 +30,9 @@
     color: #000
 }
 
-.theme-dark .earlyAccessBadge_b8a6bd {
-    background-color: var(--white);
-    color: var(--black)
-}
-
 .theme-light .productCardBadge_b8a6bd {
     background-color: #000;
     color: #fff
 }
 
-.theme-light .earlyAccessBadge_b8a6bd {
-    background-color: var(--badge-background-brand);
-    color: var(--badge-text-brand)
-}
-
-/*# sourceMappingURL=696490.204e6e73801be283.css.map*/
+/*# sourceMappingURL=696490.fdde7197d0580584.css.map*/

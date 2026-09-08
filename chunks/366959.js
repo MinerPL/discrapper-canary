@@ -1,20 +1,13 @@
-n.d(t, { ix: () => o, z$: () => l });
+n.d(t, { ix: () => l, z$: () => s });
 var i = n(32206),
-    r = n(482947),
-    a = n(13875);
+    r = n(13875);
+function a(e) {
+    let { canViewProfileFramesInCollectiblesShop: t } = e;
+    return { isAnnouncementEligible: t, showGiftingMarketing: t };
+}
 function s(e) {
-    let { canViewProfileFramesInCollectiblesShop: t, isEarlyAccess: n } = e,
-        i = t && !n;
-    return { isAnnouncementEligible: i, isEarlyAccess: n, showGiftingMarketing: i };
+    return a({ canViewProfileFramesInCollectiblesShop: (0, r.s)(e) });
 }
 function l(e) {
-    return s({ canViewProfileFramesInCollectiblesShop: (0, a.sk)(e), isEarlyAccess: (0, a.Do)(e) });
-}
-function o(e) {
-    let t = i.A.getConfig({ location: e }).enableProfileFrames,
-        { bucket: n } = r.A.getConfig({ location: e });
-    return s({
-        canViewProfileFramesInCollectiblesShop: t && n !== r.H.CONTROL,
-        isEarlyAccess: t && n === r.H.PAID_PREMIUM_SUBSCRIBERS_ONLY,
-    });
+    return a({ canViewProfileFramesInCollectiblesShop: i.A.getConfig({ location: e }).enableProfileFrames });
 }
