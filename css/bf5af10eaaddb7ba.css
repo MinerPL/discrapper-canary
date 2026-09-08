@@ -4065,7 +4065,21 @@
     --togglebutton-critical-background-selected: rgba(209, 46, 56, .12);
     --togglebutton-critical-background-selected-hover: rgba(209, 46, 56, .16);
     --togglebutton-critical-border-active: rgba(209, 46, 56, .32);
+    --togglebutton-critical-icon-active: #d93d45;
+    --togglebutton-critical-icon-default: #f2f2f5;
+    --togglebutton-critical-icon-hover: #f2f2f5;
     --togglebutton-critical-icon-selected: #d93d45;
+    --togglebutton-critical-icon-selected-hover: #d93d45;
+    --togglebutton-icon-active: #f2f2f5;
+    --togglebutton-icon-default: #f2f2f5;
+    --togglebutton-icon-hover: #f2f2f5;
+    --togglebutton-icon-only-icon-active: #fff;
+    --togglebutton-icon-only-icon-default: #f2f2f5;
+    --togglebutton-icon-only-icon-hover: #fff;
+    --togglebutton-icon-only-icon-selected: #fff;
+    --togglebutton-icon-only-icon-selected-hover: #fff;
+    --togglebutton-icon-selected: #fff;
+    --togglebutton-icon-selected-hover: #fff;
     --user-profile-about-me-heading-text: #fff;
     --user-profile-activity-toolbar-background: #404047;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -4744,7 +4758,21 @@
     --togglebutton-critical-background-selected: rgba(209, 46, 56, .12);
     --togglebutton-critical-background-selected-hover: rgba(209, 46, 56, .16);
     --togglebutton-critical-border-active: rgba(209, 46, 56, .32);
+    --togglebutton-critical-icon-active: #d12e38;
+    --togglebutton-critical-icon-default: #2e2e33;
+    --togglebutton-critical-icon-hover: #2e2e33;
     --togglebutton-critical-icon-selected: #d12e38;
+    --togglebutton-critical-icon-selected-hover: #d12e38;
+    --togglebutton-icon-active: #2e2e33;
+    --togglebutton-icon-default: #2e2e33;
+    --togglebutton-icon-hover: #2e2e33;
+    --togglebutton-icon-only-icon-active: #29292e;
+    --togglebutton-icon-only-icon-default: #2e2e33;
+    --togglebutton-icon-only-icon-hover: #29292e;
+    --togglebutton-icon-only-icon-selected: #29292e;
+    --togglebutton-icon-only-icon-selected-hover: #29292e;
+    --togglebutton-icon-selected: #29292e;
+    --togglebutton-icon-selected-hover: #29292e;
     --user-profile-about-me-heading-text: #29292e;
     --user-profile-activity-toolbar-background: #fff;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -5423,7 +5451,21 @@
     --togglebutton-critical-background-selected: rgba(209, 46, 56, .12);
     --togglebutton-critical-background-selected-hover: rgba(209, 46, 56, .16);
     --togglebutton-critical-border-active: rgba(209, 46, 56, .32);
+    --togglebutton-critical-icon-active: #d93d45;
+    --togglebutton-critical-icon-default: #d4d6d9;
+    --togglebutton-critical-icon-hover: #d4d6d9;
     --togglebutton-critical-icon-selected: #d93d45;
+    --togglebutton-critical-icon-selected-hover: #d93d45;
+    --togglebutton-icon-active: #d4d6d9;
+    --togglebutton-icon-default: #d4d6d9;
+    --togglebutton-icon-hover: #d4d6d9;
+    --togglebutton-icon-only-icon-active: #dbdbde;
+    --togglebutton-icon-only-icon-default: #d4d6d9;
+    --togglebutton-icon-only-icon-hover: #dbdbde;
+    --togglebutton-icon-only-icon-selected: #dbdbde;
+    --togglebutton-icon-only-icon-selected-hover: #dbdbde;
+    --togglebutton-icon-selected: #dbdbde;
+    --togglebutton-icon-selected-hover: #dbdbde;
     --user-profile-about-me-heading-text: #dbdbde;
     --user-profile-activity-toolbar-background: #17181c;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -6102,7 +6144,21 @@
     --togglebutton-critical-background-selected: rgba(209, 46, 56, .12);
     --togglebutton-critical-background-selected-hover: rgba(209, 46, 56, .16);
     --togglebutton-critical-border-active: rgba(209, 46, 56, .32);
+    --togglebutton-critical-icon-active: #d93d45;
+    --togglebutton-critical-icon-default: #f0f0f2;
+    --togglebutton-critical-icon-hover: #f0f0f2;
     --togglebutton-critical-icon-selected: #d93d45;
+    --togglebutton-critical-icon-selected-hover: #d93d45;
+    --togglebutton-icon-active: #f0f0f2;
+    --togglebutton-icon-default: #f0f0f2;
+    --togglebutton-icon-hover: #f0f0f2;
+    --togglebutton-icon-only-icon-active: #fafafa;
+    --togglebutton-icon-only-icon-default: #f0f0f2;
+    --togglebutton-icon-only-icon-hover: #fafafa;
+    --togglebutton-icon-only-icon-selected: #fafafa;
+    --togglebutton-icon-only-icon-selected-hover: #fafafa;
+    --togglebutton-icon-selected: #fafafa;
+    --togglebutton-icon-selected-hover: #fafafa;
     --user-profile-about-me-heading-text: #fafafa;
     --user-profile-activity-toolbar-background: #2b2e33;
     --user-profile-background-hover: hsla(240, 4%, 61%, .12);
@@ -6123,4 +6179,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=4c33df78410904c7.css.map*/
+/*# sourceMappingURL=bf5af10eaaddb7ba.css.map*/
