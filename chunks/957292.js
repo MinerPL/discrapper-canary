@@ -1,5 +1,5 @@
 let i;
-n.d(t, { iG: () => eA, Ay: () => eh, Pd: () => e_, DV: () => eE });
+n.d(t, { ms: () => eh, iG: () => eI, Ay: () => ef, Pd: () => eE, DV: () => eA });
 var r = n(132500),
     a = n(344351),
     s = n(636537),
@@ -221,7 +221,7 @@ function eu(e) {
         inviterUserId: d,
     } = e;
     if ((!0 !== s.renderInFramePool && I.A.clearMainFrameSlot(), (0, ee.y)({ applicationId: t })))
-        return void (0, J.j$)(t, {
+        return void (0, J.j)(t, {
             isStart: i,
             inviterUserId: d,
             channelId: (0, q.H)(l),
@@ -302,89 +302,120 @@ function eu(e) {
         });
 }
 function e_(e, t) {
-    let n = (0, J.Sr)(e),
+    let n = (0, J.S)(e),
         i = t ?? n;
     if (null == i) return;
-    let {
-            isStart: s,
-            inviterUserId: l,
-            channelId: o,
-            launchId: d,
-            compositeInstanceId: c,
-            activitiesInfraVersion: u,
-        } = i,
-        E = S.default.getCurrentUser();
-    if (null == E) return;
-    let I = null != o ? T.A.getChannel(o) : null,
-        f = i.guildId ?? I?.getGuildId() ?? null,
-        p = i.locationKind ?? (null == I ? void 0 : null != f ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
-        g = m.A.getMediaSessionId(),
-        C = null != g ? [g] : [],
-        O = (0, r.A)();
-    en[e] = {
-        activitySessionId: c,
-        activityUserSessionId: O,
-        launchId: d,
-        mediaSessionIds: C,
-        activitiesInfraVersion: u,
-        connectedSince: Date.now(),
-        frameChannelId: o,
-        frameGuildId: f,
-        frameLocationKind: p,
+    let r = ei[e];
+    return {
+        ...i,
+        analyticsLocations: i.analyticsLocations ?? r?.locations,
+        source: i.source ?? r?.source,
+        interactionId: i.interactionId ?? r?.interactionId,
     };
-    let R = P.Ay.getShelfActivities(f),
-        L = b.getState().shelfOrder,
-        y = (0, U.A)({ applicationId: e, activityConfigs: R }),
-        D = 1 + L.findIndex((t) => t === e),
-        { releasePhase: v } = ea(y),
-        M = h.A.getRawThermalState(),
-        w = ei[e],
-        G = i.analyticsLocations ?? w?.locations,
-        x = i.source ?? w?.source,
-        k = i.interactionId ?? w?.interactionId;
+}
+function eE(e, t) {
+    let n = e_(e, t);
+    if (null == n) return;
+    let {
+            isStart: i,
+            inviterUserId: s,
+            channelId: l,
+            launchId: o,
+            compositeInstanceId: d,
+            activitiesInfraVersion: c,
+            analyticsLocations: u,
+            source: E,
+            interactionId: I,
+        } = n,
+        f = S.default.getCurrentUser();
+    if (null == f) return;
+    let p = null != l ? T.A.getChannel(l) : null,
+        g = n.guildId ?? p?.getGuildId() ?? null,
+        C = n.locationKind ?? (null == p ? void 0 : null != g ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
+        O = m.A.getMediaSessionId(),
+        R = null != O ? [O] : [],
+        L = (0, r.A)();
+    en[e] = {
+        activitySessionId: d,
+        activityUserSessionId: L,
+        launchId: o,
+        mediaSessionIds: R,
+        activitiesInfraVersion: c,
+        connectedSince: Date.now(),
+        frameChannelId: l,
+        frameGuildId: g,
+        frameLocationKind: C,
+    };
+    let y = P.Ay.getShelfActivities(g),
+        D = b.getState().shelfOrder,
+        v = (0, U.A)({ applicationId: e, activityConfigs: y }),
+        M = 1 + D.findIndex((t) => t === e),
+        { releasePhase: w } = ea(v),
+        G = h.A.getRawThermalState();
     N.default.track(et.HAw.ACTIVITY_SESSION_JOINED, {
-        channel_id: o,
-        guild_id: f,
-        media_session_id: C[0],
-        activity_session_id: c,
+        channel_id: l,
+        guild_id: g,
+        media_session_id: R[0],
+        activity_session_id: d,
         application_id: e,
-        location_stack: G,
-        user_premium_tier: E.premiumType,
-        raw_thermal_state: M,
-        n_participants: null != I ? A.A.getUserParticipantCount(I.id) : null,
-        is_activity_start: s,
-        release_phase: v,
-        shelf_rank: y?.activity?.shelf_rank,
-        shelf_sorted_rank: D > 0 ? D : null,
-        activity_user_session_id: O,
-        channel_type: I?.type,
-        source: x,
-        command_context_type: null != I ? (0, _.ud)(I, e) : null,
-        invite_inviter_id: l,
-        interaction_id: k,
-        embedded_activity_location_kind: p,
+        location_stack: u,
+        user_premium_tier: f.premiumType,
+        raw_thermal_state: G,
+        n_participants: null != p ? A.A.getUserParticipantCount(p.id) : null,
+        is_activity_start: i,
+        release_phase: w,
+        shelf_rank: v?.activity?.shelf_rank,
+        shelf_sorted_rank: M > 0 ? M : null,
+        activity_user_session_id: L,
+        channel_type: p?.type,
+        source: E,
+        command_context_type: null != p ? (0, _.ud)(p, e) : null,
+        invite_inviter_id: s,
+        interaction_id: I,
+        embedded_activity_location_kind: C,
     }),
         N.default.track(et.HAw.ACTIVITY_IFRAME_MOUNT, {
-            location_stack: G,
-            channel_id: o,
-            channel_type: I?.type,
-            guild_id: f,
+            location_stack: u,
+            channel_id: l,
+            channel_type: p?.type,
+            guild_id: g,
             application_id: e,
-            instance_id: d,
-            initial_media_session_id: C[0],
-            activity_user_session_id: O,
-            raw_thermal_state: M,
-            is_activity_start: s,
-            shelf_rank: y?.activity?.shelf_rank,
-            shelf_sorted_rank: D > 0 ? D : null,
-            activities_infra_version: u,
-            embedded_activity_location_kind: p,
+            instance_id: o,
+            initial_media_session_id: R[0],
+            activity_user_session_id: L,
+            raw_thermal_state: G,
+            is_activity_start: i,
+            shelf_rank: v?.activity?.shelf_rank,
+            shelf_sorted_rank: M > 0 ? M : null,
+            activities_infra_version: c,
+            embedded_activity_location_kind: C,
         });
 }
-function eE(e) {
+function eA(e) {
     return en[e];
 }
-function eA(e) {
+async function eh(e, t, n) {
+    let i = e_(e, n);
+    if (null == i) return;
+    let { isStart: r, channelId: a, guildId: s, locationKind: l, analyticsLocations: o, source: d } = i,
+        c = null != a ? T.A.getChannel(a) : null,
+        u = await (0, z.f)(t, e);
+    N.default.track(et.HAw.ACTIVITY_SESSION_JOIN_FAILED, {
+        channel_id: a,
+        guild_id: s ?? c?.getGuildId(),
+        application_id: e,
+        raw_thermal_state: h.A.getRawThermalState(),
+        is_activity_start: r,
+        channel_type: c?.type,
+        location_stack: o,
+        error_type: u.errorType,
+        error_status: u.errorStatus,
+        error_code: u.errorCode,
+        source: d,
+        embedded_activity_location_kind: l,
+    });
+}
+function eI(e) {
     let t = en[e],
         n = S.default.getCurrentUser();
     if (null == t || null == n) return;
@@ -425,7 +456,7 @@ function eA(e) {
         }),
         delete en[e];
 }
-class eh extends c.A {
+class ef extends c.A {
     _initialize() {
         g.Ay.addChangeListener(this.handleSelectedChannelUpdate),
             C._.subscribe(et.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),

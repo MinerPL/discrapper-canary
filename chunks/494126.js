@@ -52,7 +52,7 @@ async function E(e) {
             n = await (0, a.f)(r, t);
         throw (
             (e.showLaunchErrorModal(n.message),
-            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: E, error: r }),
+            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: E, error: r, analyticsContext: _ }),
             r)
         );
     }

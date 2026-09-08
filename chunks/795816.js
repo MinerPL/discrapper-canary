@@ -108,7 +108,7 @@ async function el(e) {
         }
         if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i, customId: f, referrerId: I })))
             return (
-                (0, q.j$)(i, {
+                (0, q.j)(i, {
                     isStart: a,
                     inviterUserId: T,
                     channelId: t ?? null,
