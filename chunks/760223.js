@@ -26,8 +26,8 @@ var i,
     E = n(364522),
     I = n(103557),
     S = n(691885),
-    R = n(289873),
-    P = n(152367),
+    P = n(289873),
+    R = n(152367),
     _ = n(661531),
     D = n(627363),
     T = n(625180),
@@ -391,8 +391,8 @@ var eC = n(663417),
     eE = n(365199),
     eI = n(770818),
     eS = n(147036),
-    eR = n(957565),
-    eP = n(557875),
+    eP = n(957565),
+    eR = n(557875),
     e_ = n(869369),
     eD = n(123917);
 let eT = new Set();
@@ -421,23 +421,23 @@ function eV(e) {
         } = e,
         E = l.useRef(null),
         { pending: I, refresh: S } = (0, eI.A)(A ?? null),
-        { pending: R, connect: P } = (function (e) {
+        { pending: P, connect: R } = (function (e) {
             let [t, n] = l.useState(eT),
                 i = l.useRef(eT),
                 a = l.useCallback((e) => {
-                    (i.current = (0, eP.Q6)(i.current, e)), n(i.current);
+                    (i.current = (0, eR.Q6)(i.current, e)), n(i.current);
                 }, []);
             return {
                 pending: t,
                 connect: l.useCallback(
                     (t) => {
                         if (null == e) return;
-                        let l = (0, eP.K9)(i.current, t.type);
+                        let l = (0, eR.K9)(i.current, t.type);
                         async function s() {
                             let n = await (0, $.JI)(e, t.type);
                             if ((a(t.type), "url" === n.type)) return void (0, eD.h)({ href: n.url, trusted: !1 });
                             let i =
-                                "setup" === (0, eP.rq)(n.error)
+                                "setup" === (0, eR.rq)(n.error)
                                     ? H.intl.string(Y.default.avu1u4)
                                     : H.intl.string(Y.default["5fwOcF"]);
                             (0, y.P0)((0, b.o)(i, j.Ck.FAILURE));
@@ -481,15 +481,15 @@ function eV(e) {
         })({
             canRefresh: null != A,
             refreshPending: I,
-            offers: l.useMemo(() => (0, eP.Xl)(_), [_]),
-            connectPending: R,
+            offers: l.useMemo(() => (0, eR.Xl)(_), [_]),
+            connectPending: P,
         }),
         T = l.useMemo(() => new Map(_.map((e) => [e.type, e])), [_]),
         z = null != m && o,
         M = r && null != p,
         V = z || null != d || M || null != g || null != h || null != f,
-        L = eR.p5 && null != i,
-        G = eR.p5;
+        L = eP.p5 && null != i,
+        G = eP.p5;
     return null != x || null != C || V || G || r
         ? (0, a.jsx)(el.Y, {
               targetElementRef: E,
@@ -543,7 +543,7 @@ function eV(e) {
                                                 action: () => {
                                                     if ("refresh" === e.kind) return void S();
                                                     let t = null == e.connectionType ? null : T.get(e.connectionType);
-                                                    null != t && P(t);
+                                                    null != t && R(t);
                                                 },
                                             },
                                             e.id,
@@ -609,7 +609,7 @@ function eV(e) {
                                                   icon: eA.LinkIcon,
                                                   leadingAccessory: { type: "icon", icon: eA.LinkIcon },
                                                   action: () =>
-                                                      (0, eR.C)((0, eS.n)(i, ez.VV.VIBEGRATIONS, t), () =>
+                                                      (0, eP.C)((0, eS.n)(i, ez.VV.VIBEGRATIONS, t), () =>
                                                           (0, y.P0)(
                                                               (0, b.o)(H.intl.string(H.t["L/PwZf"]), j.Ck.SUCCESS),
                                                           ),
@@ -622,7 +622,7 @@ function eV(e) {
                                             icon: eN.L,
                                             leadingAccessory: { type: "icon", icon: eN.L },
                                             action: () =>
-                                                (0, eR.C)(t, () =>
+                                                (0, eP.C)(t, () =>
                                                     (0, y.P0)((0, b.o)(H.intl.string(Y.default.WOKsTg), j.Ck.SUCCESS)),
                                                 ),
                                         }),
@@ -690,7 +690,7 @@ function eF(e) {
         children: (0, a.jsxs)("div", {
             className: eG.QF,
             children: [
-                (0, a.jsx)(P.D, {
+                (0, a.jsx)(R.D, {
                     size: "custom",
                     width: 20,
                     height: 20,
@@ -883,8 +883,8 @@ function e3(e) {
         [g, h] = l.useState(!1),
         [f, E] = l.useState(!1),
         [I, S] = l.useState(!1),
-        R = V.Q_.useSetting(),
-        [P, _] = l.useState(null),
+        P = V.Q_.useSetting(),
+        [R, _] = l.useState(null),
         [L, G] = l.useState(null),
         F = t?.id ?? null,
         B = l.useRef(F),
@@ -981,10 +981,10 @@ function e3(e) {
             var e, n;
             null != t && ((e = t.id), (n = eN?.id), (0, $.Bn)(e), (0, eY.A)().leaveFrame(n)), s();
         }, [t, eN?.id, s]),
-        eR = l.useCallback(() => {
+        eP = l.useCallback(() => {
             null != t && (m(!0), (0, $.dv)(t.id, H.intl.string(Y.default["2ejwtJ"])));
         }, [t]),
-        eP = em(
+        eR = em(
             l.useCallback(
                 (e) => {
                     if (null == t) return;
@@ -1090,6 +1090,12 @@ function e3(e) {
             if (null == t) return;
             if (!en) return void eU(eK.NO_PREVIEW);
             if (ed) return void eU(eK.PERMISSIONS);
+            if ("user" === t.install_scope)
+                return void eX(t.id)
+                    .then(() => {
+                        (0, y.P0)((0, b.o)(H.intl.string(Y.default.wA0o0L), j.Ck.SUCCESS));
+                    })
+                    .catch(() => {});
             let e = (0, $.$C)(t.id);
             e.catch(() => {}),
                 (0, eq.A)({
@@ -1124,7 +1130,7 @@ function e3(e) {
                                   }),
                               }),
                               (0, a.jsx)("div", { className: e0.YJ }),
-                              R
+                              P
                                   ? (0, a.jsx)(v.m, {
                                         text: H.intl.string(Y.default["8MLfBT"]),
                                         ariaHidden: !0,
@@ -1190,8 +1196,8 @@ function e3(e) {
                                   onRefresh: (0, eJ.x1)(eN) ? eI : void 0,
                                   isRefreshing: eE,
                                   onClose: eS,
-                                  onExport: eR,
-                                  onImport: eP.open,
+                                  onExport: eP,
+                                  onImport: eR.open,
                                   onRemix: eD,
                                   onConnectTool: () => {
                                       var e;
@@ -1207,7 +1213,7 @@ function e3(e) {
                                       );
                                   },
                                   onVersionHistory:
-                                      P?.status === "restoring"
+                                      R?.status === "restoring"
                                           ? void 0
                                           : () => {
                                                 m(!0), S(!1), E(!1), h(!0);
@@ -1228,7 +1234,7 @@ function e3(e) {
     return (0, a.jsxs)("div", {
         className: e0.nj,
         children: [
-            eP.input,
+            eR.input,
             (0, a.jsx)("main", {
                 className: e0.JX,
                 children:
@@ -1274,10 +1280,10 @@ function e3(e) {
                                   restorePointsOpen: f,
                                   onCloseRestorePoints: () => E(!1),
                                   installScope: t.install_scope,
-                                  debugOpen: R && I,
+                                  debugOpen: P && I,
                                   onCloseDebug: ej,
                                   onRestoreVersion: ev,
-                                  restoreState: P,
+                                  restoreState: R,
                                   previewReady: en,
                                   previewGate: eO,
                                   availability: el,
@@ -1595,7 +1601,7 @@ function e7(e) {
                                 className: e0.xe,
                                 children: [
                                     (null == i || "loading" === i.type) && 0 === T.length
-                                        ? (0, a.jsx)("div", { className: e0.E8, children: (0, a.jsx)(R.y, {}) })
+                                        ? (0, a.jsx)("div", { className: e0.E8, children: (0, a.jsx)(P.y, {}) })
                                         : i?.type === "error" && 0 === T.length
                                           ? (0, a.jsxs)("div", {
                                                 className: e0.E8,
@@ -1620,7 +1626,7 @@ function e7(e) {
                                                   children: (0, a.jsxs)("div", {
                                                       className: e0.ST,
                                                       children: [
-                                                          (0, a.jsx)(P.D, {
+                                                          (0, a.jsx)(R.D, {
                                                               size: "lg",
                                                               color: _.A.colors.TEXT_SUBTLE,
                                                           }),
@@ -1745,12 +1751,12 @@ function e5(e) {
             },
             [w, n, p, N, h],
         ),
-        [R, P] = l.useState(!1),
+        [P, R] = l.useState(!1),
         _ = l.useCallback(
             async (e, t) => {
                 let i = eu(e);
                 if (null != i) return void (0, y.P0)((0, b.o)(i, j.Ck.FAILURE));
-                P(!0);
+                R(!0);
                 let a = null;
                 try {
                     (a = await (0, K.gA)({ guild_id: n, install_scope: t })),
@@ -1763,7 +1769,7 @@ function e5(e) {
                     null != a && (await (0, K.xx)(a).catch(() => void 0)),
                         (0, y.P0)((0, b.o)(H.intl.string(Y.default["02GpNr"]), j.Ck.FAILURE));
                 } finally {
-                    P(!1);
+                    R(!1);
                 }
             },
             [n, N],
@@ -1803,7 +1809,7 @@ function e5(e) {
               onIdeaChange: z,
               onCreate: S,
               onImportNewProject: _,
-              importing: R,
+              importing: P,
               installScope: w,
               onInstallScopeChange: I,
               installScopeError: k,
