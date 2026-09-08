@@ -1,87 +1,88 @@
-l.d(t, { A: () => v, Z: () => g });
+l.d(t, { A: () => S, Z: () => b });
 var n = l(477900),
-    a = l(582128),
-    i = l(503698),
-    s = l.n(i),
-    c = l(43990),
-    o = l(834730),
+    i = l(582128),
+    a = l(503698),
+    s = l.n(a),
+    o = l(43990),
+    c = l(834730),
     r = l(28863),
     p = l(821609),
     d = l(417098),
     _ = l(793574),
     u = l(688810),
     A = l(812095),
-    h = l(288106),
-    C = l(174459),
-    m = l(975571),
-    E = l(440938),
-    x = l(80151),
-    I = l(151115),
-    k = l(758836),
-    L = l(652215),
-    N = l(375708),
-    T = l(899737);
-let b = { [h.Pz.DEFAULT]: T.Hk, [h.Pz.NITRO]: T.O5 };
-function g(e) {
+    h = l(604913),
+    C = l(65238),
+    m = l(174459),
+    E = l(975571),
+    x = l(440938),
+    I = l(80151),
+    k = l(151115),
+    L = l(758836),
+    N = l(652215),
+    T = l(375708),
+    g = l(899737);
+let v = { [h.Pz.DEFAULT]: g.Hk, [h.Pz.NITRO]: g.O5 };
+function b(e) {
     let {
             tab: t,
             promotionFlavor: l = h.Pz.DEFAULT,
-            icon: i,
-            headerText: x,
-            helpCenterId: k,
-            helpCenterLinkText: g,
-            ctaText: v,
+            icon: a,
+            headerText: C,
+            helpCenterId: I,
+            helpCenterLinkText: L,
+            ctaText: b,
             ctaIcon: S,
             onCtaClick: O,
             hideCta: R,
             onDismiss: j,
         } = e,
         { analyticsLocations: y } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
-        M = a.useMemo(() => (null == k ? null : m.A.getArticleURL(k)), [k]),
-        f = (0, I.sj)(i),
-        B = b[l] ?? T.Hk,
-        P = (0, E.uM)(),
-        G = a.useCallback(() => {
-            C.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: P?.sessionId,
+        f = i.useMemo(() => (null == I ? null : E.A.getArticleURL(I)), [I]),
+        B = (0, k.sj)(a),
+        P = v[l] ?? g.Hk,
+        M = (0, x.uM)(),
+        G = i.useCallback(() => {
+            m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: M?.sessionId,
                 page_type: t,
-                page_section: P?.pageSection,
-                page_category: P?.pageCategory,
+                page_section: M?.pageSection,
+                page_category: M?.pageCategory,
                 tile_type: "NAGBAR",
                 cta_name: "help center article link",
             });
-        }, [t, P]);
+        }, [t, M]);
     return (0, n.jsx)(u.f5, {
         value: y,
-        children: (0, n.jsx)(c.N, {
-            theme: L.NJ8.DARKER,
+        children: (0, n.jsx)(o.N, {
+            theme: N.NJ8.DARKER,
             children: (e) =>
                 (0, n.jsxs)("div", {
-                    className: s()(T.kL, e),
+                    className: s()(g.kL, e),
                     children: [
-                        (0, n.jsx)("div", { className: s()(T.D7, B) }),
+                        (0, n.jsx)("div", { className: s()(g.D7, P) }),
                         (0, n.jsxs)("div", {
-                            className: T.Qs,
+                            className: g.Qs,
                             children: [
                                 (0, n.jsxs)("div", {
-                                    className: T.hu,
+                                    className: g.hu,
                                     children: [
-                                        null != f && (0, n.jsx)(f, { size: "sm", colorClass: T.d7, className: T.Kk }),
-                                        (0, n.jsxs)(o.E, {
+                                        null != B && (0, n.jsx)(B, { size: "sm", colorClass: g.d7, className: g.Kk }),
+                                        (0, n.jsxs)(c.E, {
                                             variant: "text-sm/normal",
                                             color: "text-overlay-light",
                                             children: [
-                                                null != x ? (0, A.U)(x) : null,
-                                                null != M &&
+                                                null != C ? (0, A.U)(C) : null,
+                                                null != f &&
                                                     (0, n.jsxs)(n.Fragment, {
                                                         children: [
                                                             " ",
                                                             (0, n.jsx)(r.Anchor, {
-                                                                href: M,
+                                                                href: f,
                                                                 target: "_blank",
-                                                                className: T.nf,
+                                                                className: g.nf,
                                                                 onClick: G,
-                                                                children: g ?? N.intl.string(N.t.WQdkbb),
+                                                                children: L ?? T.intl.string(T.t.WQdkbb),
                                                             }),
                                                         ],
                                                     }),
@@ -90,22 +91,22 @@ function g(e) {
                                     ],
                                 }),
                                 (0, n.jsxs)("div", {
-                                    className: T.uJ,
+                                    className: g.uJ,
                                     children: [
                                         !R &&
-                                            null != v &&
+                                            null != b &&
                                             (0, n.jsx)(p.$, {
                                                 variant: "overlay-primary",
                                                 size: "sm",
-                                                text: v,
+                                                text: b,
                                                 icon: S,
                                                 onClick: O,
                                             }),
                                         null != j &&
                                             (0, n.jsx)(d.PM, {
                                                 onClick: j,
-                                                noticeType: L.kqX.COLLECTIBLES_SHOP_NAGBAR,
-                                                className: T.r,
+                                                noticeType: N.kqX.COLLECTIBLES_SHOP_NAGBAR,
+                                                className: g.r,
                                             }),
                                     ],
                                 }),
@@ -116,35 +117,36 @@ function g(e) {
         }),
     });
 }
-let v =
+let S =
     221552 == l.j
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
-                  i = (0, E.uM)(),
-                  s = (0, x.A)(),
-                  c = s?.tenantMetadata?.collectibles?.reward?.storefront?.nagbar,
-                  o = s?.tenantMetadata?.collectibles?.reward?.flavor,
-                  r = a.useCallback(() => {
-                      C.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                          collectibles_shop_session_id: i?.sessionId,
+                  a = (0, x.uM)(),
+                  s = (0, I.A)(),
+                  o = (0, C.ml)(s)?.reward,
+                  c = o?.storefront?.nagbar,
+                  r = o?.flavor,
+                  p = i.useCallback(() => {
+                      m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                          collectibles_shop_session_id: a?.sessionId,
                           page_type: t,
-                          page_section: i?.pageSection,
-                          page_category: i?.pageCategory,
+                          page_section: a?.pageSection,
+                          page_category: a?.pageCategory,
                           tile_type: "NAGBAR",
                           cta_name: "view eligible items button",
                       }),
-                          l(k.G2.OFFER_ELIGIBLE);
-                  }, [l, t, i]);
-              return t === k.G2.ORBS || null == c
+                          l(L.G2.OFFER_ELIGIBLE);
+                  }, [l, t, a]);
+              return t === L.G2.ORBS || null == c
                   ? null
-                  : (0, n.jsx)(g, {
+                  : (0, n.jsx)(b, {
                         tab: t,
-                        promotionFlavor: o,
+                        promotionFlavor: r,
                         icon: c.icon,
                         headerText: c.headerText,
                         ctaText: c.cta?.text,
                         helpCenterId: c.helpCenterId,
-                        onCtaClick: r,
+                        onCtaClick: p,
                     });
           }
         : null;
