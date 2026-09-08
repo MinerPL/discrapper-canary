@@ -51,20 +51,20 @@ function p(e, t) {
     let n = e?.id,
         i = t?.guild_id,
         r = (0, a.bG)([o.Ay], () => (null == i || null == n ? null : o.Ay.getMember(i, n))),
-        s = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
-        l = r?.colorRoleId,
-        _ = (0, a.bG)([d.A], () => (null != i && null != l ? d.A.getRole(i, l) : void 0), [i, l]),
-        A = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
-        h = E.Ay.useName(e);
+        l = (0, a.bG)([c.A], () => c.A.getGuild(i), [i]),
+        _ = r?.colorRoleId,
+        A = (0, a.bG)([d.A], () => (null != i && null != _ ? d.A.getRole(i, _) : void 0), [i, _]),
+        h = (0, a.bG)([u.A], () => (null != n && t?.isPrivate() ? u.A.getNickname(n) : null)),
+        I = E.Ay.useName(e);
     return m({
         user: e,
         channel: t,
-        guild: s,
-        memberColorRole: _,
+        guild: l,
+        memberColorRole: A,
         member: r,
-        userName: h,
-        friendNickname: A,
-        displayNameStyles: e?.displayNameStyles,
+        userName: I,
+        friendNickname: h,
+        displayNameStyles: (0, s.A)({ userId: n, guildId: i }),
     });
 }
 function T(e, t) {
