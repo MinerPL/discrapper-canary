@@ -27,12 +27,12 @@ function R(e) {
         { emojiId: o, emojiName: A } = t,
         { text: h, icon: I } = (function (e) {
             switch (e) {
-                case m.p.FAVORITE:
+                case m.p0.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case m.p.FREQUENTLY_USED:
+                case m.p0.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),

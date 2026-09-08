@@ -29,6 +29,27 @@
     padding-top: var(--space-sm)
 }
 
+.loadingSoundItem_b2dcc1 {
+    animation: soundboard-loading-animation_b2dcc1 1.5s ease-in-out infinite;
+    background-image: linear-gradient(to right, var(--background-mod-muted) 0, var(--background-mod-subtle) 50%, var(--background-mod-muted) 100%);
+    background-size: 200% 100%;
+    border-radius: var(--radius-sm);
+    height: 40px;
+    width: 148px
+}
+
+@keyframes soundboard-loading-animation_b2dcc1 {
+
+    0%,
+    to {
+        background-position: 100% 0
+    }
+
+    50% {
+        background-position: 0 0
+    }
+}
+
 .upsellBanner_b2dcc1 {
     align-items: center;
     background-color: var(--modal-background);
@@ -124,4 +145,4 @@
     transform: scale(1.025)
 }
 
-/*# sourceMappingURL=740705.5fa57ce7a9db4950.css.map*/
+/*# sourceMappingURL=740705.8a6d96dd5d4ea084.css.map*/

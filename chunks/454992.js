@@ -4,5 +4,7 @@ a.exports = {
     N1: "headerContainer_b2dcc1",
     TK: "headerText_b2dcc1",
     G2: "soundList_b2dcc1",
+    bP: "loadingSoundItem_b2dcc1",
+    GJ: "soundboard-loading-animation_b2dcc1",
     Sp: "upsellBanner_b2dcc1",
 };
