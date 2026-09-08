@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"BLKD4B":["Nem siker\xfclt friss\xedt\xe9st k\xe9rni. Pr\xf3b\xe1ld \xfajra egy kis id\u0151 eltelt\xe9vel."],"1UFWet":["Enn\xe9l az alkalmaz\xe1sn\xe1l m\xe9g nincs profilk\xe1rtya be\xe1ll\xedtva."],"T1n7hc":["Nemr\xe9g friss\xedtetted. V\xe1rj egy percet az \xfajrapr\xf3b\xe1lkoz\xe1ssal."],"um/5Kc":["Friss\xedt\xe9s k\xe9relmezve. A k\xe1rty\xe1d hamarosan friss\xfclni fog."],"30UxZU":["Ez az alkalmaz\xe1s nem tudja friss\xedteni a k\xe1rty\xe1dat, am\xedg nem enged\xe9lyezed \xfajra az Enged\xe9lyezett alkalmaz\xe1sok ter\xfcleten."],"ypKX9A":["Nem siker\xfclt el\xe9rni az alkalmaz\xe1st friss\xedt\xe9s k\xe9r\xe9se c\xe9lj\xe1b\xf3l. Pr\xf3b\xe1ld \xfajra egy kis id\u0151 eltelt\xe9vel."]}',
+);

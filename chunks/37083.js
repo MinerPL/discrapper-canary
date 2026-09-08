@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["Nu s-a putut solicita re\xeemprosp\u0103tarea. \xcencearc\u0103 din nou peste pu\u021Bin timp."],"1UFWet":["Aceast\u0103 aplica\u021Bie nu are \xeenc\u0103 un card de profil configurat."],"T1n7hc":["Tocmai ai re\xeemprosp\u0103tat asta. \xcencearc\u0103 din nou \xeentr-un minut."],"um/5Kc":["S-a solicitat re\xeemprosp\u0103tarea. Cardul t\u0103u se va actualiza \xeen scurt timp."],"30UxZU":["Aceast\u0103 aplica\u021Bie nu \xee\u021Bi poate actualiza cardul p\xe2n\u0103 nu o autorizezi din nou din Aplica\u021Bii autorizate."],"ypKX9A":["Nu am putut contacta aceast\u0103 aplica\u021Bie pentru a solicita o re\xeemprosp\u0103tare. \xcencearc\u0103 din nou peste pu\u021Bin timp."]}',
+);

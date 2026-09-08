@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["Nepavyko pateikti pra\u0161ymo atnaujinti. Pabandyk dar kart\u0105 kiek v\u0117liau."],"1UFWet":["\u0160i program\u0117l\u0117 dar neturi sukonfig\u016Bruotos profilio kortel\u0117s."],"T1n7hc":["K\u0105 tik atnaujinai. Pabandyk kiek v\u0117liau."],"um/5Kc":["Pra\u0161ymas atnaujinti pateiktas. Tavo kortel\u0117 netrukus atsinaujins."],"30UxZU":["\u0160i program\u0117l\u0117 negali atnaujinti tavo kortel\u0117s, kol jos i\u0161 naujo nepatvirtinsi autorizuot\u0173 program\u0117li\u0173 s\u0105ra\u0161e."],"ypKX9A":["Nepavyko susisiekti su \u0161ia programa ir pateikti pra\u0161ymo atnaujinti. Pabandyk dar kart\u0105 kiek v\u0117liau."]}',
+);

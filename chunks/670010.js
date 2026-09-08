@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"BLKD4B":["Nepoda\u0159ilo se po\u017E\xe1dat o\xa0obnoven\xed. Zkus to za chv\xedli znovu."],"1UFWet":["Tato aplikace je\u0161t\u011B nem\xe1 nastavenou profilovou kartu."],"T1n7hc":["Tohle bylo pr\xe1v\u011B obnoveno. Zkus to znovu za minutu."],"um/5Kc":["Bylo po\u017E\xe1d\xe1no o\xa0obnoven\xed. Tvoje karta se brzy aktualizuje."],"30UxZU":["Tato aplikace nem\u016F\u017Ee aktualizovat tvou kartu, dokud ji znovu neschv\xe1l\xed\u0161 v\xa0\u010D\xe1sti Autorizovan\xe9 aplikace."],"ypKX9A":["Nepoda\u0159ilo se spojit s\xa0touto aplikac\xed a\xa0po\u017E\xe1dat o\xa0obnoven\xed. Zkus to znovu za chv\xedli."]}',
+);

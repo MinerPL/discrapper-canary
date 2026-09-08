@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"BLKD4B":["Nije mogu\u0107e zatra\u017Eiti osvje\u017Eavanje. Poku\u0161aj ponovno za koji trenutak."],"1UFWet":["Ova aplikacija jo\u0161 nema postavljenu karticu profila."],"T1n7hc":["Upravo si ovo osvje\u017Eio/la. Poku\u0161aj ponovno za koji trenutak."],"um/5Kc":["Zatra\u017Eeno je osvje\u017Eavanje. Tvoja \u0107e se kartica uskoro a\u017Eurirati."],"30UxZU":["Ova aplikacija ne mo\u017Ee a\u017Eurirati tvoju karticu dok je ponovno ne autorizira\u0161 u podru\u010Dju Autorizirane aplikacije."],"ypKX9A":["Nije mogu\u0107e povezati se s ovom aplikacijom radi osvje\u017Eavanja. Poku\u0161aj ponovno za koji trenutak."]}',
+);

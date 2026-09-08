@@ -1,0 +1,3 @@
+t.exports = JSON.parse(
+    '{"BLKD4B":["P\xe4ivityst\xe4 ei voitu pyyt\xe4\xe4. Yrit\xe4 hetken kuluttua uudelleen."],"1UFWet":["T\xe4lle sovellukselle ei ole viel\xe4 m\xe4\xe4ritetty profiilikorttia."],"T1n7hc":["P\xe4ivitit t\xe4m\xe4n juuri. Yrit\xe4 uudelleen hetken kuluttua."],"um/5Kc":["P\xe4ivityst\xe4 pyydetty. Korttisi p\xe4ivittyy pian."],"30UxZU":["T\xe4m\xe4 sovellus ei voi p\xe4ivitt\xe4\xe4 korttiasi ennen kuin valtuutat sen uudelleen Valtuutetut sovellukset \u2011osiossa."],"ypKX9A":["T\xe4h\xe4n sovellukseen ei saatu yhteytt\xe4 p\xe4ivityspyynt\xf6\xe4 varten. Yrit\xe4 hetken kuluttua uudelleen."]}',
+);
