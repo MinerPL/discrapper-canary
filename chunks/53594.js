@@ -1,4 +1,4 @@
-n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => M, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
+n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => T, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
     n(938796);
 var r,
     i,
@@ -72,6 +72,13 @@ let S = {
         flags: new Set(["alpha"]),
         defaultActionTypes: new Set(),
     },
+    [E.uh.APPLICATION]: {
+        type: E.uh.APPLICATION,
+        perGuildMaxCount: 0,
+        availableActionTypes: new Set(),
+        flags: new Set(),
+        defaultActionTypes: new Set(),
+    },
 };
 var o = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
 let c = {
@@ -120,7 +127,7 @@ function p(e) {
         [t],
     );
 }
-function M(e, t) {
+function T(e, t) {
     let n = (0, a.p)(t);
     switch (e) {
         case E.uh.DEFAULT_KEYWORD_LIST:
