@@ -312,7 +312,7 @@ var ee = n(554146),
     et = n(508770),
     en = n(408278),
     el = n(834040),
-    ei = n(499373),
+    ei = n(663341),
     er = n(131607),
     ea = n(503698),
     es = n.n(ea),
@@ -428,7 +428,7 @@ function ep(e) {
                             (0, l.jsx)(en.K, {
                                 variant: "secondary",
                                 size: "md",
-                                icon: ei.T,
+                                icon: ei.PlusLargeIcon,
                                 onClick: () => {
                                     m || p(a + 1);
                                 },
