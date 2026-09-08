@@ -173,6 +173,7 @@ function C(e) {
     return S(e);
 }
 function O(e) {
+    if (null == e) return null;
     if (e.startsWith("blob:")) {
         let t = l.A.toURLSafe(e)?.searchParams.get("mimetype") ?? void 0;
         return null != t ? decodeURIComponent(t) : null;
