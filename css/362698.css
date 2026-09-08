@@ -4720,6 +4720,11 @@ screen and (max-width:485px) {
     display: none
 }
 
+.toggleButton__79243:disabled:disabled {
+    cursor: not-allowed;
+    pointer-events: auto
+}
+
 .toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]) {
     background-color: var(--__toggle-control-background-default);
     border-color: var(--__toggle-control-border-default);
@@ -4727,7 +4732,7 @@ screen and (max-width:485px) {
     transition: background-color 50ms ease-in, color 50ms ease-in, border-color 50ms ease-in, opacity 50ms ease-in
 }
 
-.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is(:hover, [data-hovered]):not([data-disabled]) {
+.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is(:hover, [data-hovered]):not(:disabled):not([data-disabled]) {
     background-color: var(--__toggle-control-background-hover);
     border-color: var(--__toggle-control-border-hover);
     color: var(--__toggle-control-color-hover);
@@ -4740,13 +4745,13 @@ screen and (max-width:485px) {
     color: var(--__toggle-control-color-selected)
 }
 
-.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is([aria-pressed=true], [data-selected]):is(:hover, [data-hovered]):not(:active):not([data-pressed]):not([data-disabled]) {
+.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is([aria-pressed=true], [data-selected]):is(:hover, [data-hovered]):not(:active):not([data-pressed]):not(:disabled):not([data-disabled]) {
     background-color: var(--__toggle-control-background-selected-hover);
     border-color: var(--__toggle-control-border-selected-hover);
     color: var(--__toggle-control-color-selected-hover)
 }
 
-.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is(:active, [data-pressed]):not([data-disabled]) {
+.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is(:active, [data-pressed]):not(:disabled):not([data-disabled]) {
     background-color: var(--__toggle-control-background-active);
     border-color: var(--__toggle-control-border-active);
     color: var(--__toggle-control-color-active)
@@ -5157,4 +5162,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.9e9039679aef5390.css.map*/
+/*# sourceMappingURL=362698.08b78562ec2f647d.css.map*/

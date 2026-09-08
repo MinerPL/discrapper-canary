@@ -1,4 +1,4 @@
-a.r(l), a.d(l, { manaCollection: () => aZ, playgroundConfig: () => aK });
+a.r(l), a.d(l, { manaCollection: () => aJ, playgroundConfig: () => a0 });
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -346,7 +346,7 @@ let L = [
     "experimental/mono-md/bold",
 ];
 var N = a(512950);
-let P = {
+let R = {
     Default: void 0,
     Bell: w.BellIcon,
     Lock: M.LockIcon,
@@ -354,7 +354,7 @@ let P = {
     Sparkles: I.SparklesIcon,
     Wrench: D.WrenchIcon,
 };
-function R(e, l) {
+function P(e, l) {
     return e ? (0, t.jsx)(h.$, { text: l, variant: "secondary", size: "sm" }) : void 0;
 }
 let O = {
@@ -374,11 +374,11 @@ let O = {
         } = e;
         return (0, t.jsx)(N.p, {
             messageType: a,
-            icon: P[o],
+            icon: R[o],
             iconAlign: n,
             textColor: i,
             textVariant: s,
-            action: R(r, d),
+            action: P(r, d),
             hidden: u,
             children: l,
         });
@@ -398,7 +398,7 @@ let O = {
             label: "Icon",
             type: "select",
             defaultValue: "Default",
-            options: Object.keys(P).map((e) => ({ label: e, value: e })),
+            options: Object.keys(R).map((e) => ({ label: e, value: e })),
         },
         iconAlign: {
             label: "Icon Align",
@@ -1174,7 +1174,7 @@ let eg = [
                                                 children: Object.values(N.Y).map((o) =>
                                                     (0, t.jsx)(
                                                         N.p,
-                                                        { messageType: o, action: R(e, a), children: l },
+                                                        { messageType: o, action: P(e, a), children: l },
                                                         o,
                                                     ),
                                                 ),
@@ -1386,8 +1386,8 @@ var eE = a(408278),
     eA = a(111159),
     eL = a(876798),
     eN = a(831544),
-    eP = a(83107),
-    eR = a(123292),
+    eR = a(83107),
+    eP = a(123292),
     eO = a(825484),
     eB = a(657718);
 function ez(e) {
@@ -1471,6 +1471,28 @@ let e$ = {
             },
         },
         {
+            id: "toggle-button",
+            name: "ToggleButton",
+            component: function (e) {
+                let { disabled: l, size: a, text: n } = e,
+                    [i, s] = o.useState(!1);
+                return (0, t.jsx)(ez, { text: n, size: a, disabled: l, pressed: i, onClick: () => s(!i) });
+            },
+            controls: {
+                text: { type: "text", label: "Text", defaultValue: "Toggle me" },
+                size: {
+                    type: "select",
+                    label: "Size",
+                    defaultValue: "md",
+                    options: [
+                        { label: "Small", value: "sm" },
+                        { label: "Medium", value: "md" },
+                    ],
+                },
+                disabled: { type: "boolean", label: "Disabled", defaultValue: !1 },
+            },
+        },
+        {
             name: "ToggleIconButton",
             id: "toggle-icon-button",
             component: function (e) {
@@ -1478,7 +1500,7 @@ let e$ = {
                 return (0, t.jsx)(eL.k, {
                     ...e,
                     icon: eN.MicrophoneIcon,
-                    selectedIcon: eP.z,
+                    selectedIcon: eR.z,
                     pressed: l,
                     "aria-label": l ? "Unmute microphone" : "Mute microphone",
                     onClick: () => a((e) => !e),
@@ -1511,7 +1533,7 @@ let e$ = {
             name: "TextButton",
             id: "text-button",
             docs: "https://design.discord.tools/components/web/buttons/text-button",
-            component: eR.Q,
+            component: eP.Q,
             controls: {
                 text: { label: "Text", type: "text", defaultValue: "Link Button" },
                 variant: {
@@ -1561,28 +1583,6 @@ let e$ = {
                     ],
                 },
                 fullWidth: { label: "Full Width", type: "boolean", defaultValue: !1 },
-            },
-        },
-        {
-            id: "toggle-button",
-            name: "ToggleButton",
-            component: function (e) {
-                let { disabled: l, size: a, text: n } = e,
-                    [i, s] = o.useState(!1);
-                return (0, t.jsx)(ez, { text: n, size: a, disabled: l, pressed: i, onClick: () => s(!i) });
-            },
-            controls: {
-                text: { type: "text", label: "Text", defaultValue: "Toggle me" },
-                size: {
-                    type: "select",
-                    label: "Size",
-                    defaultValue: "md",
-                    options: [
-                        { label: "Small", value: "sm" },
-                        { label: "Medium", value: "md" },
-                    ],
-                },
-                disabled: { type: "boolean", label: "Disabled", defaultValue: !1 },
             },
         },
     ],
@@ -2566,7 +2566,7 @@ function lN(e) {
         children: a,
     });
 }
-function lP(e) {
+function lR(e) {
     let { auxiliaryContentPosition: l } = e;
     return (0, t.jsxs)(E.B, {
         direction: "vertical",
@@ -2583,7 +2583,7 @@ function lP(e) {
                 title: "TextButton",
                 auxiliaryContentPosition: l,
                 children: (0, t.jsx)("div", {
-                    children: (0, t.jsx)(eR.Q, { text: "View details", variant: "primary", disabled: !0 }),
+                    children: (0, t.jsx)(eP.Q, { text: "View details", variant: "primary", disabled: !0 }),
                 }),
             }),
             (0, t.jsx)(lN, {
@@ -2669,7 +2669,7 @@ function lP(e) {
         ],
     });
 }
-let lR = {
+let lP = {
         title: "Forms",
         stories: [
             {
@@ -2753,7 +2753,7 @@ let lR = {
             {
                 name: "Field (Disabled, under-control)",
                 id: "field-disabled-under-control",
-                component: lP,
+                component: lR,
                 controls: {
                     auxiliaryContentPosition: {
                         type: "select",
@@ -2770,7 +2770,7 @@ let lR = {
                 name: "Field (Disabled, under-label)",
                 id: "field-disabled-under-label",
                 component: function () {
-                    return (0, t.jsx)(lP, { auxiliaryContentPosition: "under-label" });
+                    return (0, t.jsx)(lR, { auxiliaryContentPosition: "under-label" });
                 },
             },
         ],
@@ -4801,14 +4801,15 @@ let aL = {
         },
     ],
 };
-var aN = a(11779),
-    aP = a(866711),
-    aR = a(953091);
-function aO(e) {
-    return (0, t.jsx)(aR.n, { ...e, selectionMode: "multiple", variant: "filter" });
+var aN = a(953091);
+function aR(e) {
+    let { size: l = "md", ...a } = e;
+    return (0, t.jsx)(aN.n, { ...a, size: l, selectionMode: "multiple", variant: "filter" });
 }
+var aP = a(11779),
+    aO = a(866711);
 let aB = [
-        { id: "strength", label: "Strength", icon: aN.r },
+        { id: "strength", label: "Strength", icon: aP.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
@@ -4820,45 +4821,46 @@ let aB = [
                 name: "TagGroup",
                 id: "tag-group",
                 component: function (e) {
-                    let { selectionMode: l, removeable: a, layout: s } = e,
-                        r = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
-                        d = o.useMemo(
+                    let { selectionMode: l, removeable: a, layout: s, size: r } = e,
+                        d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
+                        u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: aN.r },
+                                { id: "strength", label: "Strength", icon: aP.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
                                     label: "Wisdom",
-                                    icon: { type: "avatar", src: r?.getAvatarURL(void 0, 16) ?? "" },
+                                    icon: { type: "avatar", src: d?.getAvatarURL(void 0, 16) ?? "" },
                                 },
                                 { id: "charisma", label: "Charisma" },
                             ],
-                            [r],
+                            [d],
                         ),
-                        [u, c] = o.useState(d),
-                        b = o.useCallback(
+                        [c, b] = o.useState(u),
+                        p = o.useCallback(
                             (e) => {
-                                c(u.filter((l) => !e.has(l.id)));
+                                b(c.filter((l) => !e.has(l.id)));
                             },
-                            [u],
+                            [c],
                         ),
-                        p = o.useCallback(() => {
-                            c(d);
-                        }, [d]),
-                        m = (0, t.jsx)(aP.C, {
+                        m = o.useCallback(() => {
+                            b(u);
+                        }, [u]),
+                        x = (0, t.jsx)(aO.C, {
                             label: "Categories",
                             selectionMode: l,
                             layout: s,
-                            items: u,
-                            onRemove: a ? b : void 0,
+                            size: r,
+                            items: c,
+                            onRemove: a ? p : void 0,
                         }),
-                        x = a && (0, t.jsx)(h.$, { disabled: u.length === d.length, text: "Reset", onClick: p });
+                        y = a && (0, t.jsx)(h.$, { disabled: c.length === u.length, text: "Reset", onClick: m });
                     return "inline" === s
                         ? (0, t.jsxs)(E.B, {
                               gap: 24,
-                              children: [(0, t.jsx)("div", { style: { display: "flex", gap: 4 }, children: m }), x],
+                              children: [(0, t.jsx)("div", { style: { display: "flex", gap: 4 }, children: x }), y],
                           })
-                        : (0, t.jsxs)(E.B, { gap: 24, children: [m, x] });
+                        : (0, t.jsxs)(E.B, { gap: 24, children: [x, y] });
                 },
                 controls: {
                     selectionMode: {
@@ -4881,32 +4883,52 @@ let aB = [
                             { label: "Inline", value: "inline" },
                         ],
                     },
+                    size: {
+                        label: "Size",
+                        type: "select",
+                        defaultValue: void 0,
+                        options: [
+                            { label: "Automatic", value: void 0 },
+                            { label: "Small", value: "sm" },
+                            { label: "Medium", value: "md" },
+                        ],
+                    },
                 },
             },
             {
                 name: "FilterTagGroup",
                 id: "filter-tag-group",
                 component: function (e) {
-                    let { disallowEmptySelection: l } = e,
-                        [a, n] = o.useState(() => new Set(["strength", "wisdom"])),
-                        i = o.useMemo(() => new Set(["charisma"]), []),
-                        s = o.useCallback((e) => {
-                            "all" !== e && n(new Set(e));
+                    let { disallowEmptySelection: l, size: a } = e,
+                        [n, i] = o.useState(() => new Set(["strength", "wisdom"])),
+                        s = o.useMemo(() => new Set(["charisma"]), []),
+                        r = o.useCallback((e) => {
+                            "all" !== e && i(new Set(e));
                         }, []);
                     return (0, t.jsx)(E.B, {
                         gap: 24,
-                        children: (0, t.jsx)(aO, {
+                        children: (0, t.jsx)(aR, {
                             label: "Character attributes",
                             items: aB,
-                            selectedKeys: a,
-                            onSelectionChange: s,
-                            disabledKeys: i,
+                            selectedKeys: n,
+                            onSelectionChange: r,
+                            disabledKeys: s,
                             disallowEmptySelection: l,
+                            size: a,
                         }),
                     });
                 },
                 controls: {
                     disallowEmptySelection: { label: "Disallow Empty Selection", type: "boolean", defaultValue: !1 },
+                    size: {
+                        label: "Size",
+                        type: "select",
+                        defaultValue: "md",
+                        options: [
+                            { label: "Small", value: "sm" },
+                            { label: "Medium", value: "md" },
+                        ],
+                    },
                 },
             },
         ],
@@ -4945,10 +4967,74 @@ let aG = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var a_ = a(866665),
-    aH = a(683063),
-    aq = a(557464);
-let aU = {
+var a_ = a(782641),
+    aH = a(381275);
+function aq(e) {
+    let { orientation: l = "horizontal", children: a, "aria-label": o, "aria-labelledby": n } = e;
+    return (0, t.jsx)(a_.M, {
+        "data-mana-component": "toolbar",
+        orientation: l,
+        "aria-label": o,
+        "aria-labelledby": n,
+        className: aH.K,
+        children: a,
+    });
+}
+var aU = a(866665);
+let aW = {
+    title: "Toolbar",
+    stories: [
+        {
+            name: "Toolbar",
+            id: "toolbar",
+            component: function (e) {
+                let [l, a] = o.useState(!1),
+                    [n, i] = o.useState(!1),
+                    s = l ? "Unmute microphone" : "Mute microphone";
+                return (0, t.jsxs)(aq, {
+                    ...e,
+                    "aria-label": "Message actions",
+                    children: [
+                        (0, t.jsx)(h.$, { variant: "secondary", text: "Reply" }),
+                        (0, t.jsx)(aU.m, {
+                            text: "More options",
+                            children: (0, t.jsx)(eE.K, {
+                                variant: "secondary",
+                                icon: eA.p,
+                                "aria-label": "More options",
+                            }),
+                        }),
+                        (0, t.jsx)(aU.m, {
+                            text: s,
+                            children: (0, t.jsx)(eL.k, {
+                                icon: eN.MicrophoneIcon,
+                                selectedIcon: eR.z,
+                                pressed: l,
+                                "aria-label": s,
+                                onClick: () => a((e) => !e),
+                            }),
+                        }),
+                        (0, t.jsx)(ll.S, { label: "Include attachments", checked: n, onChange: i }),
+                    ],
+                });
+            },
+            controls: {
+                orientation: {
+                    label: "Orientation",
+                    type: "select",
+                    defaultValue: "horizontal",
+                    options: [
+                        { label: "Horizontal", value: "horizontal" },
+                        { label: "Vertical", value: "vertical" },
+                    ],
+                },
+            },
+        },
+    ],
+};
+var aX = a(683063),
+    aZ = a(557464);
+let aK = {
     title: "Tooltip",
     stories: [
         {
@@ -4971,7 +5057,7 @@ let aU = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(a_.m, {
+                return (0, t.jsx)(aU.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5050,8 +5136,8 @@ let aU = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (n ? { type: "image", src: aq.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(aH.u, {
+                    v = o.useMemo(() => (n ? { type: "image", src: aZ.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(aX.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5135,9 +5221,9 @@ let aU = {
         },
     ],
 };
-var aW = a(508382),
-    aX = a(393743);
-let aZ = {
+var aY = a(508382),
+    aQ = a(393743);
+let aJ = {
         id: "mana",
         name: "Mana",
         groups: [
@@ -5176,6 +5262,7 @@ let aZ = {
             },
             eD,
             e$,
+            aW,
             e9,
             la,
             lo,
@@ -5207,10 +5294,10 @@ let aZ = {
             aE,
             ax,
             ah,
-            aU,
+            aK,
             e1,
             az,
-            lR,
+            lP,
             {
                 title: "FloatingLayer",
                 stories: [
@@ -5228,7 +5315,7 @@ let aZ = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(aW.Ow, {
+                            return (0, t.jsx)(aY.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -5240,7 +5327,7 @@ let aZ = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: aX.q,
+                                        className: aQ.q,
                                         children: (0, t.jsx)(eH.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -5365,4 +5452,4 @@ let aZ = {
             },
         ],
     },
-    aK = { collections: [aZ, ef] };
+    a0 = { collections: [aJ, ef] };

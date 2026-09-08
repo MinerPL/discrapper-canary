@@ -44,6 +44,24 @@
     padding: var(--space-12)
 }
 
+.toolbar__8a9ed {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.toolbar__8a9ed[data-orientation=horizontal] {
+    flex-direction: row
+}
+
+.toolbar__8a9ed[data-orientation=vertical] {
+    align-items: flex-start;
+    flex-direction: column
+}
+
 .richTooltipContent__9038b {
     align-items: center;
     box-sizing: border-box;
@@ -90,4 +108,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=490978.babc9caab547afcf.css.map*/
+/*# sourceMappingURL=265708.5f622162704e4557.css.map*/

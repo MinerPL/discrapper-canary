@@ -1596,6 +1596,12 @@
     width: 16px
 }
 
+.avatar_f0960a[data-size=sm],
+.image_f0960a[data-size=sm] {
+    height: 12px;
+    width: 12px
+}
+
 .avatar_f0960a {
     background-color: #000;
     -o-object-fit: cover;
@@ -1614,6 +1620,11 @@
     display: block;
     height: 16px;
     width: 16px
+}
+
+.roleDot_f0960a[data-size=sm] {
+    height: 12px;
+    width: 12px
 }
 
 .tagGroup_cfee8f {
@@ -1699,22 +1710,22 @@
     display: contents
 }
 
-.tagGroup_cfee8f[data-layout=inline] .tag_cfee8f {
+.tagGroup_cfee8f[data-size=sm] .tag_cfee8f {
     border-radius: var(--radius-xs);
     gap: var(--space-4);
     min-height: 30px;
     padding: var(--space-4) var(--space-8)
 }
 
-.tagGroup_cfee8f[data-layout=inline] .tag_cfee8f[data-variant=filter] {
+.tagGroup_cfee8f[data-size=sm] .tag_cfee8f[data-variant=filter] {
     border-radius: var(--radius-round)
 }
 
-.tagGroup_cfee8f[data-layout=inline] .tag_cfee8f:has([slot=remove]) {
+.tagGroup_cfee8f[data-size=sm] .tag_cfee8f:has([slot=remove]) {
     padding-right: var(--space-4)
 }
 
-.tagGroup_cfee8f[data-layout=inline] [slot=remove] {
+.tagGroup_cfee8f[data-size=sm] [slot=remove] {
     height: 100%
 }
 
@@ -1826,4 +1837,4 @@
     margin: 0
 }
 
-/*# sourceMappingURL=584159.bd3cdf14511837e3.css.map*/
+/*# sourceMappingURL=584159.6c100d5a6d91c68d.css.map*/
