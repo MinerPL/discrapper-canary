@@ -426,7 +426,9 @@
     color: var(--text-default);
     cursor: text;
     flex: 0 0 44px;
+    font-size: 16px;
     height: 44px;
+    line-height: 20px;
     padding: 0 var(--space-4);
     text-align: center;
     width: 44px
@@ -805,4 +807,4 @@
     justify-content: center
 }
 
-/*# sourceMappingURL=590994.a28896b17b1736b7.css.map*/
+/*# sourceMappingURL=590994.c9ad5cc6b3250745.css.map*/
