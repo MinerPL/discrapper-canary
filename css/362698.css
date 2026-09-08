@@ -4753,19 +4753,19 @@ screen and (max-width:485px) {
 }
 
 .standard__79243 {
-    --__toggle-control-color-default: var(--icon-default);
+    --__toggle-control-color-default: var(--togglebutton-icon-default);
     --__toggle-control-background-default: transparent;
     --__toggle-control-border-default: transparent;
-    --__toggle-control-color-hover: var(--icon-default);
+    --__toggle-control-color-hover: var(--togglebutton-icon-hover);
     --__toggle-control-background-hover: var(--control-secondary-background-hover);
     --__toggle-control-border-hover: var(--control-secondary-border-hover);
-    --__toggle-control-color-selected: var(--icon-strong);
+    --__toggle-control-color-selected: var(--togglebutton-icon-selected);
     --__toggle-control-background-selected: var(--togglebutton-background-selected);
     --__toggle-control-border-selected: var(--togglebutton-border-selected);
-    --__toggle-control-color-selected-hover: var(--icon-strong);
+    --__toggle-control-color-selected-hover: var(--togglebutton-icon-selected-hover);
     --__toggle-control-background-selected-hover: var(--togglebutton-background-selected-hover);
     --__toggle-control-border-selected-hover: var(--togglebutton-border-selected);
-    --__toggle-control-color-active: var(--icon-default);
+    --__toggle-control-color-active: var(--togglebutton-icon-active);
     --__toggle-control-background-active: var(--control-secondary-background-active);
     --__toggle-control-border-active: var(--togglebutton-border-active)
 }
@@ -4792,19 +4792,19 @@ screen and (max-width:485px) {
 }
 
 .critical__79243 {
-    --__toggle-control-color-default: var(--icon-default);
+    --__toggle-control-color-default: var(--togglebutton-critical-icon-default);
     --__toggle-control-background-default: transparent;
     --__toggle-control-border-default: transparent;
-    --__toggle-control-color-hover: var(--icon-default);
+    --__toggle-control-color-hover: var(--togglebutton-critical-icon-hover);
     --__toggle-control-background-hover: var(--control-secondary-background-hover);
     --__toggle-control-border-hover: var(--control-secondary-border-hover);
     --__toggle-control-color-selected: var(--togglebutton-critical-icon-selected);
     --__toggle-control-background-selected: var(--togglebutton-critical-background-selected);
     --__toggle-control-border-selected: transparent;
-    --__toggle-control-color-selected-hover: var(--togglebutton-critical-icon-selected);
+    --__toggle-control-color-selected-hover: var(--togglebutton-critical-icon-selected-hover);
     --__toggle-control-background-selected-hover: var(--togglebutton-critical-background-selected-hover);
     --__toggle-control-border-selected-hover: transparent;
-    --__toggle-control-color-active: var(--togglebutton-critical-icon-selected);
+    --__toggle-control-color-active: var(--togglebutton-critical-icon-active);
     --__toggle-control-background-active: var(--control-secondary-background-active);
     --__toggle-control-border-active: var(--togglebutton-critical-border-active)
 }
@@ -4813,19 +4813,19 @@ screen and (max-width:485px) {
 .iconOnly__79243 {}
 
 .iconOnly__79243 {
-    --__toggle-control-color-default: var(--icon-default);
+    --__toggle-control-color-default: var(--togglebutton-icon-only-icon-default);
     --__toggle-control-background-default: transparent;
     --__toggle-control-border-default: transparent;
-    --__toggle-control-color-hover: var(--control-icon-only-icon-hover);
+    --__toggle-control-color-hover: var(--togglebutton-icon-only-icon-hover);
     --__toggle-control-background-hover: var(--control-icon-only-background-hover);
     --__toggle-control-border-hover: var(--control-icon-only-border-hover);
-    --__toggle-control-color-selected: var(--control-icon-only-icon-active);
+    --__toggle-control-color-selected: var(--togglebutton-icon-only-icon-selected);
     --__toggle-control-background-selected: transparent;
     --__toggle-control-border-selected: transparent;
-    --__toggle-control-color-selected-hover: var(--control-icon-only-icon-hover);
+    --__toggle-control-color-selected-hover: var(--togglebutton-icon-only-icon-selected-hover);
     --__toggle-control-background-selected-hover: var(--control-icon-only-background-hover);
     --__toggle-control-border-selected-hover: var(--control-icon-only-border-hover);
-    --__toggle-control-color-active: var(--control-icon-only-icon-active);
+    --__toggle-control-color-active: var(--togglebutton-icon-only-icon-active);
     --__toggle-control-background-active: var(--control-icon-only-background-active);
     --__toggle-control-border-active: var(--control-icon-only-border-active)
 }
@@ -5157,4 +5157,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.184ab68c1315bd10.css.map*/
+/*# sourceMappingURL=362698.c7d6a7a662361606.css.map*/

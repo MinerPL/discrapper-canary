@@ -302,24 +302,8 @@
     min-width: 0
 }
 
-.timeInput_c8240d {
-    background: var(--background-base-low);
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-sm);
-    color: var(--text-default);
-    color-scheme: light dark;
-    inline-size: 100%;
-    min-height: 32px;
-    padding: 0 var(--space-8)
-}
-
-.timeInput_c8240d:focus {
-    border-color: var(--border-strong);
-    outline: none
-}
-
-.timeInput_c8240d:disabled {
-    opacity: .5
+.timeField_c8240d input[type=datetime-local] {
+    color-scheme: light dark
 }
 
 .panel_c5030f {
@@ -394,4 +378,4 @@
     overflow-wrap: anywhere
 }
 
-/*# sourceMappingURL=5fdcbe47e3cb084c.css.map*/
+/*# sourceMappingURL=70c9f001d64594f5.css.map*/
