@@ -67,15 +67,16 @@ function b(e) {
             profileFrameClassName: o,
             profileFrameStyle: h,
             className: m,
+            isPreview: f,
         } = e,
-        f = r.useRef(null),
-        [b, y] = r.useState(null),
-        [j, k] = r.useState(null),
-        x = r.useCallback((e) => {
-            y(Math.round(e.contentRect.width)), k(Math.round(e.contentRect.height));
+        b = r.useRef(null),
+        [y, j] = r.useState(null),
+        [k, x] = r.useState(null),
+        I = r.useCallback((e) => {
+            j(Math.round(e.contentRect.width)), x(Math.round(e.contentRect.height));
         }, []);
     return (
-        (0, d.g)(f, x, [], {
+        (0, d.g)(b, I, [], {
             fireOnMount: !0,
             enabled: s.some((e) => {
                 let { type: a } = e;
@@ -83,17 +84,17 @@ function b(e) {
             }),
         }),
         (0, t.jsx)("div", {
-            className: n()(g.uF, c, o, m),
+            className: n()(g.uF, c, o, m, { [g.VH]: f }),
             style: h,
             "aria-label": l,
             role: "img",
             children: (0, t.jsx)("div", {
-                ref: f,
+                ref: b,
                 className: g.hH,
                 children: s.map((e) =>
                     (0, t.jsx)(
                         p,
-                        { skuId: a, layer: e, data: i[e.id], fadeIn: u, containerWidth: b, containerHeight: j },
+                        { skuId: a, layer: e, data: i[e.id], fadeIn: u, containerWidth: y, containerHeight: k },
                         e.id,
                     ),
                 ),
@@ -102,37 +103,38 @@ function b(e) {
     );
 }
 function y(e) {
-    let { frame: a, className: l, filterLayer: s, fadeIn: n = !0 } = e,
-        d = (0, u.bG)([c.A], () => c.A.theme),
-        o = (0, m.eo)(),
-        g = (0, f.i)(a),
-        { profileFrameStyle: p, profileFrameClassName: y } = o?.css ?? g,
-        j = o?.layers ?? a.layers,
-        k = null == s ? j : j.filter(s),
-        x = k
+    let { frame: a, className: l, filterLayer: s, fadeIn: n = !0, isPreview: d } = e,
+        o = (0, u.bG)([c.A], () => c.A.theme),
+        g = (0, m.eo)(),
+        p = (0, f.i)(a),
+        { profileFrameStyle: y, profileFrameClassName: j } = g?.css ?? p,
+        k = g?.layers ?? a.layers,
+        x = null == s ? k : k.filter(s),
+        I = x
             .map((e) => {
                 let { id: a } = e;
                 return a;
             })
             .join("\0"),
-        I = r.useMemo(() => k, [x]),
-        { layerData: N, settled: v } = (0, h.A)({ skuId: a.skuId, layers: null != o ? void 0 : I }),
-        A = o?.layerData ?? N,
-        C = null != o || v;
-    return 0 !== I.length && C
+        v = r.useMemo(() => x, [I]),
+        { layerData: N, settled: A } = (0, h.A)({ skuId: a.skuId, layers: null != g ? void 0 : v }),
+        C = g?.layerData ?? N,
+        M = null != g || A;
+    return 0 !== v.length && M
         ? (0, t.jsx)(i.N, {
-              theme: d,
+              theme: o,
               children: (e) =>
                   (0, t.jsx)(b, {
                       skuId: a.skuId,
                       label: a.label,
-                      layers: I,
-                      layerData: A,
+                      layers: v,
+                      layerData: C,
                       fadeIn: n,
                       themeClass: e,
-                      profileFrameClassName: y,
-                      profileFrameStyle: p,
+                      profileFrameClassName: j,
+                      profileFrameStyle: y,
                       className: l,
+                      isPreview: d,
                   }),
           })
         : null;

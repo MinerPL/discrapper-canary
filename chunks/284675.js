@@ -1831,7 +1831,7 @@ function ty() {
                                         className: tv.ME,
                                         children: [
                                             (0, r.jsx)("img", { src: e1.A, alt: "" }),
-                                            null != m && (0, r.jsx)(tg.A, { frame: m }),
+                                            null != m && (0, r.jsx)(tg.A, { frame: m, isPreview: !0 }),
                                         ],
                                     }),
                                 ],

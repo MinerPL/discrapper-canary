@@ -1,5 +1,6 @@
 _.exports = {
     uF: "profileFrameContainer__7d80f",
+    VH: "preview__7d80f",
     hH: "profileFrame__7d80f",
     zu: "profileFrameMask__7d80f",
     Mn: "top__7d80f",

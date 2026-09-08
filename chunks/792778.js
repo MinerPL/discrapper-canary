@@ -1123,7 +1123,7 @@ function n0(e) {
                 (0, t.jsx)("div", {
                     className: a()(nJ.hm, x, { [nW.O]: m }),
                     style: p,
-                    children: (0, t.jsx)(k.A, { frame: f, filterLayer: nQ }),
+                    children: (0, t.jsx)(k.A, { frame: f, filterLayer: nQ, isPreview: !0 }),
                 }),
             (0, t.jsx)("div", {
                 className: a()(nJ.ti, { [nJ.yT]: null == f }),

@@ -1,17 +1,17 @@
-r.d(a, { A: () => m });
-var s = r(477900);
-r(582128);
-var t = r(503698),
-    i = r.n(t),
-    n = r(754474),
-    c = r(744808),
-    d = r(875741),
-    l = r(375708),
-    o = r(70040),
-    u = r(423393);
+s.d(r, { A: () => m });
+var a = s(477900);
+s(582128);
+var i = s(503698),
+    t = s.n(i),
+    n = s(754474),
+    c = s(744808),
+    d = s(875741),
+    l = s(375708),
+    o = s(70040),
+    u = s(423393);
 function f(e) {
-    let { responsive: a } = e;
-    return !0 !== a;
+    let { responsive: r } = e;
+    return !0 !== r;
 }
 function p(e) {
     return e.order === n.u.BACK && !0 !== e.responsive;
@@ -20,33 +20,33 @@ function h(e) {
     return e.order === n.u.FRONT && !0 !== e.responsive;
 }
 function m(e) {
-    let { frame: a, transparentBackground: r = !1, ...t } = e,
-        { profileFrameStyle: n, profileFrameClassName: m } = (0, d.A)(a);
-    return (0, s.jsxs)("div", {
-        className: i()(o.i1, m),
+    let { frame: r, transparentBackground: s = !1, ...i } = e,
+        { profileFrameStyle: n, profileFrameClassName: m } = (0, d.A)(r);
+    return (0, a.jsxs)("div", {
+        className: t()(o.i1, m),
         style: n,
         role: "img",
-        "aria-label": l.intl.formatToPlainString(l.t["DT/PwH"], { a11y_text: a.label }),
+        "aria-label": l.intl.formatToPlainString(l.t["DT/PwH"], { a11y_text: r.label }),
         children: [
-            r &&
-                (0, s.jsx)("div", {
+            s &&
+                (0, a.jsx)("div", {
                     className: o.tL,
-                    children: (0, s.jsx)("div", {
+                    children: (0, a.jsx)("div", {
                         className: o.HX,
-                        children: (0, s.jsx)(c.A, { frame: a, filterLayer: p, ...t }),
+                        children: (0, a.jsx)(c.A, { frame: r, filterLayer: p, ...i, isPreview: !0 }),
                     }),
                 }),
-            (0, s.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: o.HX,
                 children: [
-                    (0, s.jsx)("img", {
+                    (0, a.jsx)("img", {
                         src: u.A,
                         alt: "",
-                        className: i()(o.wt, o.EX, { [o.GA]: r }),
+                        className: t()(o.wt, o.EX, { [o.GA]: s }),
                         "aria-hidden": !0,
                         draggable: !1,
                     }),
-                    (0, s.jsx)(c.A, { frame: a, filterLayer: r ? h : f, ...t }),
+                    (0, a.jsx)(c.A, { frame: r, filterLayer: s ? h : f, ...i, isPreview: !0 }),
                 ],
             }),
         ],
