@@ -113,16 +113,19 @@ function G(e) {
         G = a.useCallback(
             (e, t) => {
                 let n = !x.has(e);
-                if (!n || !(x.size >= 1e3)) {
-                    if (null != t) {
-                        let e = n ? z.default["SsUZo/"] : z.default.x03WqE;
-                        o.O.announce(N.intl.formatToPlainString(e, { name: t, count: n ? y + 1 : y - 1 }), "polite");
-                    }
+                (n && x.size >= 1e3) ||
+                    (null != t &&
+                        o.O.announce(
+                            N.intl.formatToPlainString(n ? z.default["SsUZo/"] : z.default.x03WqE, {
+                                name: t,
+                                count: n ? y + 1 : y - 1,
+                            }),
+                            "polite",
+                        ),
                     S((t) => {
                         let n = new Set(t);
                         return n.has(e) ? n.delete(e) : n.size < 1e3 && n.add(e), n;
-                    });
-                }
+                    }));
             },
             [x, y],
         ),

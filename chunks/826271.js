@@ -1,112 +1,123 @@
-l.d(e, { default: () => I });
+l.d(e, { default: () => A });
 var n = l(477900),
     a = l(582128),
-    r = l(837381),
-    i = l(189213),
-    s = l(691540),
-    u = l(857250),
-    o = l(97483),
-    c = l(683438),
-    d = l(821609),
-    h = l(834730),
-    f = l(928039),
+    i = l(837381),
+    r = l(189213),
+    s = l(765178),
+    u = l(691540),
+    o = l(857250),
+    c = l(97483),
+    d = l(683438),
+    h = l(821609),
+    f = l(834730),
+    p = l(928039),
     g = l(115718),
-    p = l(61916),
-    m = l(223863),
-    x = l(151054),
-    k = l(403362),
-    C = l(16236),
+    m = l(61916),
+    x = l(223863),
+    k = l(151054),
+    C = l(403362),
+    S = l(16236),
     R = l(174459),
     b = l(652215),
-    D = l(462617),
-    S = l(22277),
-    j = l(375708),
-    A = l(349828),
-    E = l(548654);
-function I(t) {
-    let { transitionState: e, onClose: l, parentId: h, source: I } = t;
+    j = l(462617),
+    D = l(22277),
+    P = l(375708),
+    I = l(349828),
+    v = l(548654);
+function A(t) {
+    let { transitionState: e, onClose: l, parentId: f, source: A } = t;
     a.useEffect(() => {
-        R.default.track(b.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: I });
-    }, [I]);
-    let [v, w] = a.useState(""),
-        [_, M] = a.useState([]),
-        [L, O] = a.useState(!1),
-        y = (0, D.A)(),
-        { results: F, updateSearchText: H } = (0, x.R)({
+        R.default.track(b.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: A });
+    }, [A]);
+    let [w, _] = a.useState(""),
+        [M, O] = a.useState([]),
+        [L, N] = a.useState(!1),
+        y = (0, j.A)(),
+        { results: F, updateSearchText: H } = (0, k.R)({
             includeMissingDMs: !0,
             channelFilter: y,
-            selectedDestinations: _,
+            selectedDestinations: M,
         }),
-        N = _.length,
-        Q = N >= A.dh,
-        U = a.useCallback(
+        U = M.length,
+        Q = U >= I.dh,
+        T = a.useCallback(
             (t) => {
-                w(t), H(t);
+                _(t), H(t);
             },
             [H],
         ),
-        q = a.useCallback((t) => {
-            M((e) => {
-                let l = (0, m.I)(t),
-                    n = e.filter((t) => (0, m.I)(t) !== l);
-                return n.length < e.length ? n : e.length >= A.dh ? e : [...e, t];
-            });
-        }, []),
-        T = a.useCallback(async () => {
-            O(!0);
-            let t = (await Promise.all(_.map(m.pk))).filter(k.Vq);
+        q = a.useCallback(
+            (t, e) => {
+                let l = (0, x.I)(t),
+                    n = !M.some((t) => (0, x.I)(t) === l);
+                (n && Q) ||
+                    (null != e &&
+                        s.O.announce(
+                            P.intl.formatToPlainString(n ? D.default.mvPjcC : D.default.SgkNaU, {
+                                name: e,
+                                count: n ? U + 1 : U - 1,
+                            }),
+                            "polite",
+                        ),
+                    O(n ? [...M, t] : M.filter((t) => (0, x.I)(t) !== l)));
+            },
+            [U, M, Q],
+        ),
+        V = a.useCallback(async () => {
+            N(!0);
+            let t = (await Promise.all(M.map(x.pk))).filter(C.Vq);
             if (0 === t.length) {
-                (0, s.P0)((0, u.o)(j.intl.string(j.t.R0RpRX), o.Ck.FAILURE)), O(!1);
+                (0, u.P0)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1);
                 return;
             }
-            (0, C.S_)({ channelIds: t, parentId: h ?? null, source: "modal" }), l();
-        }, [l, h, _]),
-        V = a.useMemo(() => F.filter((t) => t.type !== g.rD.HEADER), [F]),
-        X = (0, p.s)({ rowData: V, selectedDestinations: _, handleToggleDestination: q, disableSelection: Q }),
-        z = a.useRef(null),
-        B = (0, f.A)("favorites-add-channel-modal", z),
-        G = a.useMemo(
-            () => ({ sections: [1], sectionHeight: 0, rowHeight: 72, renderRow: () => (0, n.jsx)(P, {}) }),
+            (0, S.S_)({ channelIds: t, parentId: f ?? null, source: "modal" }), l();
+        }, [l, f, M]),
+        X = a.useMemo(() => F.filter((t) => t.type !== g.rD.HEADER), [F]),
+        z = (0, m.s)({ rowData: X, selectedDestinations: M, handleToggleDestination: q, disableSelection: Q }),
+        B = a.useRef(null),
+        G = (0, p.A)("favorites-add-channel-modal", B),
+        K = a.useMemo(
+            () => ({ sections: [1], sectionHeight: 0, rowHeight: 72, renderRow: () => (0, n.jsx)(E, {}) }),
             [],
         );
-    return (0, n.jsx)(r.hD, {
-        navigator: B,
-        children: (0, n.jsx)(r.PR, {
+    return (0, n.jsx)(i.hD, {
+        navigator: G,
+        children: (0, n.jsx)(i.PR, {
             children: (t) => {
-                let { ref: a, ...r } = t;
-                return (0, n.jsx)(i.Modal, {
-                    title: j.intl.string(S.default.Rp35U1),
+                let { ref: a, ...i } = t;
+                return (0, n.jsx)(r.Modal, {
+                    title: P.intl.string(D.default.Rp35U1),
                     actions: [],
                     transitionState: e,
                     onClose: l,
-                    input: (0, n.jsx)(c.I, {
-                        query: v,
-                        onChange: U,
-                        onClear: () => U(""),
-                        placeholder: j.intl.string(j.t["5h0QOP"]),
-                        "aria-label": j.intl.string(j.t["5h0QOP"]),
+                    input: (0, n.jsx)(d.I, {
+                        query: w,
+                        onChange: T,
+                        onClear: () => T(""),
+                        placeholder: P.intl.string(P.t["5h0QOP"]),
+                        "aria-label": P.intl.string(P.t["5h0QOP"]),
                         autoFocus: !0,
                     }),
                     actionBarInput: (0, n.jsx)("div", {
-                        className: E.c,
-                        children: (0, n.jsx)(d.$, {
+                        className: v.c,
+                        children: (0, n.jsx)(h.$, {
                             variant: "primary",
                             size: "md",
                             fullWidth: !0,
                             text:
-                                N >= 2
-                                    ? j.intl.formatToPlainString(S.default.LbCa8x, { count: N })
-                                    : j.intl.string(S.default.xKXcSu),
-                            onClick: T,
-                            disabled: 0 === N,
+                                U >= 2
+                                    ? P.intl.formatToPlainString(D.default.LbCa8x, { count: U })
+                                    : P.intl.string(D.default.xKXcSu),
+                            onClick: V,
+                            disabled: 0 === U,
                             loading: L,
                         }),
                     }),
                     listProps: {
-                        ...(0 === V.length ? G : X),
-                        ...r,
+                        ...(0 === X.length ? K : z),
+                        ...i,
                         ref: (t) => {
-                            (z.current = t), (a.current = t?.getScrollerNode() ?? null);
+                            (B.current = t), (a.current = t?.getScrollerNode() ?? null);
                         },
                     },
                 });
@@ -114,13 +125,13 @@ function I(t) {
         }),
     });
 }
-function P() {
+function E() {
     return (0, n.jsx)("div", {
-        className: E.p,
-        children: (0, n.jsx)(h.E, {
+        className: v.p,
+        children: (0, n.jsx)(f.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: j.intl.string(S.default.kQL9be),
+            children: P.intl.string(D.default.kQL9be),
         }),
     });
 }
