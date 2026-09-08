@@ -17,13 +17,13 @@ function s(e, t) {
     let n = new Set(e);
     return n.add(t), n;
 }
-function i(e, t) {
+function o(e, t) {
     if (!e.has(t)) return e;
     let n = new Set(e);
     return n.delete(t), n;
 }
-n.d(t, { K9: () => s, Q6: () => i, Xl: () => r, ls: () => l, rG: () => a, rq: () => c }), n(321073);
-let o = new Set([
+n.d(t, { K9: () => s, Q6: () => o, Xl: () => r, ls: () => c, rG: () => a, rq: () => l }), n(321073);
+let i = new Set([
     "bad_request",
     "bad_connection_type",
     "unknown_project",
@@ -35,9 +35,9 @@ let o = new Set([
     "child_unavailable",
 ]);
 function a(e) {
-    return "string" == typeof e && o.has(e) ? e : null;
+    return "string" == typeof e && i.has(e) ? e : null;
 }
-function l(e, t) {
+function c(e, t) {
     switch (t) {
         case "not_configured":
             return "not_configured";
@@ -56,6 +56,6 @@ function l(e, t) {
     }
     return 404 === e ? "not_declared" : e >= 500 ? "unavailable" : "unknown";
 }
-function c(e) {
+function l(e) {
     return "not_configured" === e ? "setup" : "generic";
 }

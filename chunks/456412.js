@@ -8,21 +8,21 @@ let a = { width: "100%", height: "100%", display: "flex" },
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return s.forwardRef(function (r, u) {
-        let [c, d] = s.useState({ width: 0, height: 0 }),
-            h = (0, i.A)((e) => {
+        let [c, h] = s.useState({ width: 0, height: 0 }),
+            d = (0, i.A)((e) => {
                 if (null != e) {
                     let { width: t, height: r } = e;
-                    d({ width: t, height: r });
+                    h({ width: t, height: r });
                 }
             }),
             m = (0, i.A)((e) => {
-                h(e.contentRect);
+                d(e.contentRect);
             }),
             p = (0, l.w)(m, [], t);
         return (
             s.useImperativeHandle(u, () => ({
                 triggerResize: () => {
-                    h(p.current?.getBoundingClientRect());
+                    d(p.current?.getBoundingClientRect());
                 },
             })),
             (0, n.jsx)("div", {

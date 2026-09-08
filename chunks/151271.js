@@ -1,4 +1,4 @@
-r.d(t, { RQ: () => I, Ri: () => f, U: () => g, bf: () => d, ed: () => m, r$: () => p, v8: () => h });
+r.d(t, { RQ: () => I, Ri: () => f, U: () => g, bf: () => h, ed: () => m, r$: () => p, v8: () => d });
 var n = r(277057),
     s = r.n(n),
     l = r(537812),
@@ -25,12 +25,12 @@ let u = Object.freeze({
             partialize: (e) => ({ lastActiveView: e.lastActiveView }),
         }),
     );
-function d(e, t, r) {
+function h(e, t, r) {
     (0, a.r)(() =>
         c.setState({ activeView: e, activeViewType: t, activeChannelId: r, lastActiveView: c.getState().activeView }),
     );
 }
-function h(e, t) {
+function d(e, t) {
     let r = c.getState();
     (void 0 !== e && e !== r.activeViewType) ||
         (void 0 !== t && t !== r.activeChannelId) ||
@@ -47,14 +47,14 @@ function h(e, t) {
 function m(e, t) {
     let r = c.getState();
     null == r.activeView
-        ? d(r.lastActiveView ?? o.kx.EMOJI, e, t)
+        ? h(r.lastActiveView ?? o.kx.EMOJI, e, t)
         : r.activeViewType !== e || r.activeChannelId !== t
-          ? d(r.activeView, e, t)
-          : h();
+          ? h(r.activeView, e, t)
+          : d();
 }
 function p(e, t, r) {
     let n = c.getState();
-    n.activeView === e && n.activeViewType === t && n.activeChannelId === r ? h() : d(e, t, r);
+    n.activeView === e && n.activeViewType === t && n.activeChannelId === r ? d() : h(e, t, r);
 }
 function g(e) {
     (0, a.r)(() => c.setState({ activeView: e, lastActiveView: c.getState().activeView }));

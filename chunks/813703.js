@@ -7,20 +7,20 @@ var n = r(477900),
     o = r(297264),
     u = r(683438),
     c = r(939249),
-    d = r(477155),
-    h = r(228366),
+    h = r(477155),
+    d = r(228366),
     m = r(497685),
     p = r(235986),
     g = r(151271),
     f = r(821102),
     I = r(996566),
-    E = r(336807),
-    R = r(435558),
-    _ = r.n(R),
+    R = r(336807),
+    E = r(435558),
+    _ = r.n(E),
     y = r(803805),
     S = r(661531),
-    v = r(27232),
-    C = r(555704),
+    C = r(27232),
+    v = r(555704),
     A = r(92008),
     w = r(25277),
     x = r(583613),
@@ -116,7 +116,7 @@ class V extends s.PureComponent {
             return {
                 type: b.dD.FAVORITES,
                 name: M.intl.string(M.t.y3LQCG),
-                icon: v.StarIcon,
+                icon: C.StarIcon,
                 src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
                 format: t?.format ?? y.TL.IMAGE,
             };
@@ -159,7 +159,7 @@ class V extends s.PureComponent {
                 (0, n.jsxs)("div", {
                     className: U.O1,
                     children: [
-                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(C.U, { className: U.Yl, color: "currentColor" }) : null,
+                        r === b.dD.TRENDING_GIFS ? (0, n.jsx)(v.U, { className: U.Yl, color: "currentColor" }) : null,
                         (0, n.jsx)("span", { className: U.yb, children: t }),
                     ],
                 }),
@@ -256,7 +256,7 @@ class B extends s.PureComponent {
                 this.setState({ resultType: null });
     }
     componentWillUnmount() {
-        h.h.wait(() => m.Se()), document.removeEventListener("keydown", this.backToFrontPage);
+        d.h.wait(() => m.Se()), document.removeEventListener("keydown", this.backToFrontPage);
     }
     search(e, t, r) {
         m.$P(e, t, r),
@@ -331,7 +331,7 @@ class B extends s.PureComponent {
                     children: M.intl.string(M.t.H6zNFz),
                 });
             default: {
-                let t = (0, E.wT)();
+                let t = (0, R.wT)();
                 return (0, n.jsx)(u.I, {
                     query: e,
                     onChange: this.handleChangeQuery,
@@ -353,7 +353,7 @@ class B extends s.PureComponent {
                     onClick: this.handleClearQuery,
                     className: K.Gv,
                     "aria-label": M.intl.string(M.t["13/7kX"]),
-                    children: (0, n.jsx)(d.r, { size: "md", color: "currentColor" }),
+                    children: (0, n.jsx)(h.r, { size: "md", color: "currentColor" }),
                 })),
             (0, n.jsxs)(p.A, { align: p.A.Align.CENTER, children: [t, this.renderHeaderContent()] })
         );
@@ -371,13 +371,13 @@ class B extends s.PureComponent {
                 suggestions: u,
                 hideFavorites: c,
             } = this.props,
-            { resultType: d } = this.state;
-        return null == d
+            { resultType: h } = this.state;
+        return null == h
             ? (0, n.jsx)(H, { className: e, hideFavoritesTile: c, onSelectItem: this.handleSelectItem })
             : (0, n.jsx)(L.Ay, {
                   className: e,
                   data:
-                      d === b.dD.FAVORITES
+                      h === b.dD.FAVORITES
                           ? (function (e, t) {
                                 if ("" === t) return e;
                                 let r = t.toLowerCase().replace(/[-_ ]/g, "");
@@ -388,7 +388,7 @@ class B extends s.PureComponent {
                             })(l, s)
                           : t,
                   onSelectGIF: this.handleSelectGIF,
-                  resultType: d,
+                  resultType: h,
                   resultQuery: r,
                   query: s,
                   searchOffset: i,
@@ -438,7 +438,7 @@ let $ = s.forwardRef((e, t) => {
         })),
         u = (0, g.RQ)((e) => e.searchQuery),
         c = (0, I.IE)(),
-        d = s.useRef(null);
+        h = s.useRef(null);
     return (0, n.jsx)(B, {
         ...e,
         forwardedRef: t,
@@ -450,7 +450,7 @@ let $ = s.forwardRef((e, t) => {
         searchOffset: 0,
         searchTotalResults: f.A.getResultItems().length,
         searchLimit: null,
-        searchBarRef: d,
+        searchBarRef: h,
         selectedGIF: e.selectedGIF,
     });
 });
