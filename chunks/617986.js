@@ -48,8 +48,8 @@ var r = n(192308),
     h = n(280450),
     S = n(299091),
     x = n(711014),
-    v = n(174459),
-    T = n(998218),
+    T = n(174459),
+    v = n(998218),
     w = n(877062),
     L = n(396813),
     N = n(859703),
@@ -91,7 +91,7 @@ async function B(e) {
 }
 async function W(e) {
     try {
-        if (T.A.isDiscordUrl(e)) return !0;
+        if (v.A.isDiscordUrl(e)) return !0;
         return await B(e);
     } catch (e) {
         return !1;
@@ -672,7 +672,7 @@ function el(e) {
         null != e &&
             e.timestampSec > 1 &&
             ((0, L.QG)(t.id),
-            v.default.track(Y.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            T.default.track(Y.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
                 source_quest_content: (0, O.jO)(a),
                 source_quest_content_cta: s,
@@ -721,7 +721,7 @@ function er(e) {
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        v.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -743,7 +743,7 @@ function eu(e) {
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        v.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -765,7 +765,7 @@ function ec(e) {
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        v.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -833,9 +833,7 @@ async function ef(e, t) {
     }
 }
 function ep(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if ((0, H.vA)(e))
-        return e.config.features.includes(F.Li.CLOUD_GAMING_ACTIVITY) ? (t ? void 0 : c.h) : d.GameControllerIcon;
+    if ((0, H.vA)(e)) return e.config.features.includes(F.Li.CLOUD_GAMING_ACTIVITY) ? c.h : d.GameControllerIcon;
 }
 function eC(e) {
     let t = (0, z.bg)(e);

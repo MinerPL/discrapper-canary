@@ -4929,28 +4929,6 @@
     }
   },
   {
-    "name": "2026-07-quest-bar-secondary-cta",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "showPlayInstantlyLabel": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "showPlayInstantlyLabel": false
-      },
-      "2": {
-        "enabled": true,
-        "showPlayInstantlyLabel": true
-      }
-    }
-  },
-  {
     "name": "2026-07-quest-home-default-banner-removal",
     "kind": "user",
     "defaultConfig": null,

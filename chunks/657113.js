@@ -828,27 +828,26 @@ let ty = function (t) {
                 taskType: r,
                 size: a = "sm",
                 surface: u,
-                showPlayInstantlyLabel: x = !1,
-                preClickCallback: O,
-                isQuestAccessSuspended: _ = !1,
-                analyticsCtxQuestContent: L,
-                analyticsCtxSourceQuestContent: y,
-                analyticsCtxQuestContentPosition: S,
-                analyticsCtxQuestContentRowIndex: m,
+                preClickCallback: x,
+                isQuestAccessSuspended: O = !1,
+                analyticsCtxQuestContent: _,
+                analyticsCtxSourceQuestContent: L,
+                analyticsCtxQuestContentPosition: y,
+                analyticsCtxQuestContentRowIndex: S,
             } = t,
-            R = {
-                questContent: L,
+            m = {
+                questContent: _,
                 questContentCTA: tL(r),
-                sourceQuestContent: y,
-                questContentPosition: S,
-                questContentRowIndex: m,
+                sourceQuestContent: L,
+                questContentPosition: y,
+                questContentRowIndex: S,
             },
-            p = n.id,
-            v = u === c.V3.QUEST_HOME_TILE_V2_FOOTER,
-            { isEnrolling: P } = (0, N.cf)([g.A], () => ({ isEnrolling: g.A.isEnrolling(p) }), [p]),
-            { icon: h, iconPosition: D } = v ? (0, I.Q_)(n) : { icon: (0, I.Oz)(n, x) },
-            j = (0, U.Ut)(),
-            M = (function (t, e, n, s, i) {
+            R = n.id,
+            p = u === c.V3.QUEST_HOME_TILE_V2_FOOTER,
+            { isEnrolling: v } = (0, N.cf)([g.A], () => ({ isEnrolling: g.A.isEnrolling(R) }), [R]),
+            { icon: P, iconPosition: h } = p ? (0, I.Q_)(n) : { icon: (0, I.Oz)(n) },
+            D = (0, U.Ut)(),
+            j = (function (t, e, n, s, i) {
                 let { launchInGameActivity: r } = (0, o.zW)(e),
                     a = (0, q.wW)(),
                     l = Q.useContext(tn.q),
@@ -889,12 +888,11 @@ let ty = function (t) {
                     default:
                         return null;
                 }
-            })(r, n, L, y, u),
-            w = v
+            })(r, n, _, L, u),
+            M = p
                 ? (0, l.C0)(n)
                 : (function (t, e) {
-                      let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                          { features: s } = e.config;
+                      let { features: n } = e.config;
                       switch (t) {
                           case C.n.WATCH_VIDEO:
                           case C.n.WATCH_VIDEO_ON_MOBILE:
@@ -902,61 +900,60 @@ let ty = function (t) {
                           case C.n.ACHIEVEMENT_IN_ACTIVITY:
                               return f.intl.string(f.t.CkUzLd);
                           case C.n.PLAY_ACTIVITY:
-                              if (s.includes(T.Li.CLOUD_GAMING_ACTIVITY))
-                                  return f.intl.string(n ? f.t.V5Qt9D : f.t["+qoymD"]);
+                              if (n.includes(T.Li.CLOUD_GAMING_ACTIVITY)) return f.intl.string(f.t["+qoymD"]);
                               return f.intl.string(f.t.E4kW5O);
                           default:
                               return f.intl.string(f.t.kUQLMJ);
                       }
-                  })(r, n, x),
-            k =
-                ((e = M ?? void 0),
+                  })(r, n),
+            w =
+                ((e = j ?? void 0),
                 r === C.n.WATCH_VIDEO
                     ? async () => {
                           await (0, I.e0)(n, {
-                              questContent: R.questContent,
-                              questContentCTA: R.questContentCTA,
-                              sourceQuestContent: R.sourceQuestContent,
+                              questContent: m.questContent,
+                              questContentCTA: m.questContentCTA,
+                              sourceQuestContent: m.sourceQuestContent,
                               sourceQuestContentCTA: tL(r),
-                              questContentPosition: R.questContentPosition,
-                              questContentRowIndex: R.questContentRowIndex,
+                              questContentPosition: m.questContentPosition,
+                              questContentRowIndex: m.questContentRowIndex,
                           });
                       }
                     : async () => {
                           (
                               await (0, t_.Oy)(n.id, {
-                                  questContent: R.questContent,
-                                  questContentCTA: R.questContentCTA,
-                                  sourceQuestContent: R.sourceQuestContent,
-                                  questContentPosition: R.questContentPosition,
-                                  questContentRowIndex: R.questContentRowIndex,
+                                  questContent: m.questContent,
+                                  questContentCTA: m.questContentCTA,
+                                  sourceQuestContent: m.sourceQuestContent,
+                                  questContentPosition: m.questContentPosition,
+                                  questContentRowIndex: m.questContentRowIndex,
                               })
                           ).type === t_.WM.SUCCESS && e?.();
                       });
         return (0, s.jsx)(i.$, {
             size: a,
-            loading: P,
+            loading: v,
             variant: (0, c.wX)(u, "primary"),
             onClick: () => {
-                if (_) {
-                    j({
-                        questId: p,
-                        questContent: L,
+                if (O) {
+                    D({
+                        questId: R,
+                        questContent: _,
                         questContentCTA: d.Cy.QUEST_ACCESS_SUSPENDED,
-                        questContentPosition: S,
-                        questContentRowIndex: m,
-                        sourceQuestContent: y,
+                        questContentPosition: y,
+                        questContentRowIndex: S,
+                        sourceQuestContent: L,
                     }),
                         (0, I.FS)();
                     return;
                 }
-                O?.(), k();
+                x?.(), w();
             },
-            text: w,
-            icon: h,
-            iconPosition: D,
+            text: M,
+            icon: P,
+            iconPosition: h,
             fullWidth: !0,
-            "aria-disabled": _ || void 0,
+            "aria-disabled": O || void 0,
         });
     },
     tN = function (t) {
@@ -969,24 +966,22 @@ let ty = function (t) {
                 analyticsCtxQuestContentPosition: C,
                 analyticsCtxQuestContentRowIndex: d,
                 size: E = "md",
-                showPlayInstantlyLabel: x,
             } = t,
-            A = (0, c.Pd)(e),
-            I = (0, o.Hv)();
+            x = (0, c.Pd)(e),
+            A = (0, o.Hv)();
         if (0 === Object.keys(e.config.taskConfigV2.tasks).length)
             return (0, s.jsx)(i.$, { variant: "primary", fullWidth: !0, size: "sm", text: f.intl.string(f.t.P84bAD) });
-        let T = Object.values(e.config.taskConfigV2.tasks)[0],
-            O = (function () {
-                switch (A) {
+        let I = Object.values(e.config.taskConfigV2.tasks)[0],
+            T = (function () {
+                switch (x) {
                     case c.UA.UNENROLLED:
                         return (0, s.jsx)(ty, {
                             quest: e,
-                            taskType: T.type,
+                            taskType: I.type,
                             size: E,
                             surface: n,
-                            showPlayInstantlyLabel: x,
                             preClickCallback: a,
-                            isQuestAccessSuspended: I,
+                            isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
                             analyticsCtxSourceQuestContent: u,
                             analyticsCtxQuestContentPosition: C,
@@ -995,9 +990,9 @@ let ty = function (t) {
                     case c.UA.ENROLLED:
                         return (0, s.jsx)(tT, {
                             quest: e,
-                            taskType: T.type,
+                            taskType: I.type,
                             size: E,
-                            isQuestAccessSuspended: I,
+                            isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
                             analyticsCtxSourceQuestContent: u,
                             analyticsCtxQuestContentPosition: C,
@@ -1007,9 +1002,9 @@ let ty = function (t) {
                     case c.UA.INCOMPLETE:
                         return (0, s.jsx)(tO, {
                             quest: e,
-                            taskType: T.type,
+                            taskType: I.type,
                             size: E,
-                            isQuestAccessSuspended: I,
+                            isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
                             analyticsCtxSourceQuestContent: u,
                             analyticsCtxQuestContentPosition: C,
@@ -1022,7 +1017,7 @@ let ty = function (t) {
                             quest: e,
                             size: E,
                             surface: n,
-                            isQuestAccessSuspended: I,
+                            isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
                             analyticsCtxSourceQuestContent: u,
                             analyticsCtxQuestContentPosition: C,
@@ -1031,7 +1026,7 @@ let ty = function (t) {
                     case c.UA.CLAIMED:
                         return (0, s.jsx)(y, {
                             quest: e,
-                            taskType: T.type,
+                            taskType: I.type,
                             size: E,
                             surface: n,
                             analyticsCtxQuestContent: l,
@@ -1042,7 +1037,7 @@ let ty = function (t) {
                     case c.UA.EXPIRED:
                         return (0, s.jsx)(tf, {
                             quest: e,
-                            taskType: T.type,
+                            taskType: I.type,
                             surface: n,
                             size: E,
                             analyticsCtxQuestContent: l,
@@ -1059,5 +1054,5 @@ let ty = function (t) {
                         });
                 }
             })();
-        return I && A !== c.UA.CLAIMED && A !== c.UA.EXPIRED ? (0, s.jsx)(r.A, { children: O }) : O;
+        return A && x !== c.UA.CLAIMED && x !== c.UA.EXPIRED ? (0, s.jsx)(r.A, { children: T }) : T;
     };

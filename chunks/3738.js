@@ -594,8 +594,8 @@ function Q(e, t) {
           : P.intl.string(P.t["7e5k7L"]);
 }
 function b(e) {
-    let { quest: t, application: n, shortText: r = !1, showPlayInstantlyLabel: l = !1 } = e,
-        s = i.useMemo(
+    let { quest: t, application: n, shortText: r = !1 } = e,
+        l = i.useMemo(
             () =>
                 (function (e) {
                     return (0, L.g5)(e) || (0, L.vl)(e)
@@ -608,17 +608,16 @@ function b(e) {
                 })(t),
             [t],
         ),
-        a = (0, v.fc)(t);
-    switch (s) {
+        s = (0, v.fc)(t);
+    switch (l) {
         case 0:
-            if (t.config.features.includes(G.Li.CLOUD_GAMING_ACTIVITY))
-                return P.intl.string(l ? P.t.V5Qt9D : P.t["+qoymD"]);
+            if (t.config.features.includes(G.Li.CLOUD_GAMING_ACTIVITY)) return P.intl.string(P.t["+qoymD"]);
             if ((0, R.vA)(t)) return P.intl.string(r ? P.t.E4kW5O : P.t["Ie9++s"]);
             return P.intl.string(P.t.l7E81v);
         case 1:
             return P.intl.string(P.t.l7E81v);
         case 2:
-            return (0, I.WM)(a);
+            return (0, I.WM)(s);
         case 3:
             return (0, R.vA)(t) && 1 ? P.intl.string(r ? P.t.CkUzLd : P.t["hRIVy+"]) : P.intl.string(P.t.l7E81v);
     }

@@ -1,5 +1,4 @@
 n.d(t, {
-    Bm: () => _,
     n6: () => T,
     OO: () => c,
     Ig: () => E,
@@ -121,24 +120,14 @@ var I =
           s)
         : null;
 let h = (0, a.mj)({
-        name: "2026-06-quest-home-layout-visual-tweaks",
-        kind: "user",
-        defaultConfig: { enabled: !1, variant: 0 },
-        variations: {
-            0: { enabled: !1, variant: 0 },
-            1: { enabled: !0, variant: 1 },
-            2: { enabled: !0, variant: 2 },
-            3: { enabled: !0, variant: 3 },
-            4: { enabled: !0, variant: 4 },
-        },
-    }),
-    _ = (0, a.mj)({
-        name: "2026-07-quest-bar-secondary-cta",
-        kind: "user",
-        defaultConfig: { enabled: !1, showPlayInstantlyLabel: !1 },
-        variations: {
-            0: { enabled: !1, showPlayInstantlyLabel: !1 },
-            1: { enabled: !0, showPlayInstantlyLabel: !1 },
-            2: { enabled: !0, showPlayInstantlyLabel: !0 },
-        },
-    });
+    name: "2026-06-quest-home-layout-visual-tweaks",
+    kind: "user",
+    defaultConfig: { enabled: !1, variant: 0 },
+    variations: {
+        0: { enabled: !1, variant: 0 },
+        1: { enabled: !0, variant: 1 },
+        2: { enabled: !0, variant: 2 },
+        3: { enabled: !0, variant: 3 },
+        4: { enabled: !0, variant: 4 },
+    },
+});
