@@ -531,6 +531,7 @@ var eX =
         (c.BADGE_REORDERING_UPSELL = "badge_reordering_upsell"),
         (c.EMOJI_EVERYWHERE_INLINE_UPSELL = "emoji_everywhere_inline_upsell"),
         (c.EMOJI_EVERYWHERE_UPSELL = "emoji_everywhere_upsell"),
+        (c.STICKERS_EVERYWHERE_INLINE_UPSELL = "stickers_everywhere_inline_upsell"),
         (c.STICKERS_EVERYWHERE_UPSELL = "stickers_everywhere_upsell"),
         (c.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = "soundboard_everywhere_inline_upsell"),
         (c.SOUNDBOARD_EVERYWHERE_UPSELL = "soundboard_everywhere_upsell"),
