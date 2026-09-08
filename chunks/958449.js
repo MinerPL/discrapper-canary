@@ -1,49 +1,54 @@
-t.d(n, { h: () => o });
+t.d(n, { h: () => c });
 var l = t(477900),
     i = t(582128),
     s = t(416696),
-    a = t(204651),
-    r = t(375708);
-function o(e) {
+    a = t(797394),
+    r = t(204651),
+    o = t(375708);
+function c(e) {
     let n,
         t,
         {
-            hasPermission: o,
-            streamActive: c,
-            isSelfStream: u,
-            centerButton: d,
-            onMouseEnter: A,
-            onMouseLeave: m,
-            renderNUXHighlight: h,
-            buttonRef: C,
-            ...E
+            hasPermission: c,
+            streamActive: u,
+            isSelfStream: d,
+            videoBlocked: A = !1,
+            centerButton: m,
+            onMouseEnter: h,
+            onMouseLeave: C,
+            renderNUXHighlight: E,
+            buttonRef: p,
+            ...g
         } = e,
-        p = d ? a.l : a.A;
-    t = c
-        ? u
-            ? r.intl.string(r.t.S5anIc)
-            : r.intl.string(r.t.q3O3J8)
-        : o
-          ? r.intl.string(r.t.fjBNo1)
-          : r.intl.string(r.t.uQn9B8);
-    let { Component: g, events: f, play: x } = (0, s.c)(c ? "disable" : "enable");
+        f = m ? r.l : r.A;
+    t = A
+        ? o.intl.string(o.t.GFr0GR)
+        : u
+          ? d
+              ? o.intl.string(o.t.S5anIc)
+              : o.intl.string(o.t.q3O3J8)
+          : c
+            ? o.intl.string(o.t.fjBNo1)
+            : o.intl.string(o.t.uQn9B8);
+    let { Component: x, events: I, play: v } = (0, s.c)(u ? "disable" : "enable"),
+        T = A ? a.i : x;
     return (
-        i.useEffect(() => () => x(), [c, x]),
-        (0, l.jsx)(p, {
-            buttonRef: C,
+        i.useEffect(() => () => v(), [u, v]),
+        (0, l.jsx)(f, {
+            buttonRef: p,
             isTrayButton: !0,
             label: t,
-            disabled: !o,
-            iconComponent: g,
-            isActive: c,
-            color: (h ? (n = "premiumGradient") : c && (n = "green"), n),
+            disabled: !c,
+            iconComponent: T,
+            isActive: u,
+            color: (E ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {
-                A?.(e), f.onMouseEnter();
+                h?.(e), I.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                m?.(e), f.onMouseLeave();
+                C?.(e), I.onMouseLeave();
             },
-            ...E,
+            ...g,
         })
     );
 }
