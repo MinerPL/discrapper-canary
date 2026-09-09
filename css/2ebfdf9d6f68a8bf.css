@@ -4058,7 +4058,7 @@
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4f4f59;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
-    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-active: hsla(240, 4%, 61%, .2);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
     --togglebutton-border-active: rgba(89, 102, 242, .84);
     --togglebutton-border-selected: #5966f2;
@@ -4751,7 +4751,7 @@
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #c4c9cf;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
-    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-active: hsla(240, 4%, 61%, .24);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
     --togglebutton-border-active: rgba(89, 102, 242, .84);
     --togglebutton-border-selected: #5966f2;
@@ -5444,7 +5444,7 @@
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
-    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-active: hsla(240, 4%, 61%, .24);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
     --togglebutton-border-active: rgba(89, 102, 242, .84);
     --togglebutton-border-selected: #5966f2;
@@ -6137,7 +6137,7 @@
     --theme-locked-blur-fallback: rgba(31, 31, 33, .96);
     --thread-channel-spine: #4d4f5c;
     --togglebutton-background-selected: rgba(89, 102, 242, .16);
-    --togglebutton-background-selected-active: rgba(89, 102, 242, .24);
+    --togglebutton-background-selected-active: hsla(240, 4%, 61%, .2);
     --togglebutton-background-selected-hover: rgba(89, 102, 242, .24);
     --togglebutton-border-active: rgba(89, 102, 242, .84);
     --togglebutton-border-selected: #5966f2;
@@ -6179,4 +6179,4 @@
     --white: #fff
 }
 
-/*# sourceMappingURL=bf5af10eaaddb7ba.css.map*/
+/*# sourceMappingURL=2ebfdf9d6f68a8bf.css.map*/

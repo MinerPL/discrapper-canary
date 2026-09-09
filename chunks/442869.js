@@ -1392,7 +1392,13 @@ var eE = a(408278),
     eB = a(657718);
 function ez(e) {
     let { pressed: l, ...a } = e;
-    return (0, t.jsx)(eB.S, { ...a, role: "button", "aria-pressed": l, variant: "togglebutton" });
+    return (0, t.jsx)(eB.S, {
+        ...a,
+        "data-mana-component": "toggle-button",
+        role: "button",
+        "aria-pressed": l,
+        variant: "togglebutton",
+    });
 }
 let e$ = {
     title: "Buttons",
@@ -1617,7 +1623,7 @@ function eU(e) {
         },
         keyboardActivation: d,
         isDisabled: r,
-        "data-mana-component": "Tabs",
+        "data-mana-component": "tabs",
         "data-variant": s,
         children: [
             (0, t.jsxs)("div", {

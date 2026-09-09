@@ -1639,11 +1639,11 @@
 
 .tag_cfee8f {
     align-items: center;
-    background-color: var(--background-mod-subtle);
-    border: 1px solid var(--border-subtle);
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    color: var(--text-default);
+    color: var(--control-secondary-text-default);
     cursor: default;
     display: inline-flex;
     gap: var(--space-8);
@@ -1837,4 +1837,4 @@
     margin: 0
 }
 
-/*# sourceMappingURL=584159.6c100d5a6d91c68d.css.map*/
+/*# sourceMappingURL=584159.8b55c6d9ab0a575c.css.map*/

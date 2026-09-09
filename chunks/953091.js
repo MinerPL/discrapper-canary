@@ -36,6 +36,7 @@ function f(e) {
         p = [t, E].filter(Boolean).join(", ");
     return (0, i.jsx)(a.vw, {
         ...f,
+        "data-mana-component": "tag",
         className: o()(I.Tc, h.GA),
         "data-variant": r,
         textValue: p,
@@ -84,6 +85,7 @@ function p(e) {
     return (0, i.jsxs)(a.CR, {
         "aria-label": n,
         id: g?.controlId,
+        "data-mana-component": "filter" === _ ? "filter-tag-group" : "tag-group",
         "aria-describedby": g?.describedById,
         "data-layout": c,
         "data-size": u,

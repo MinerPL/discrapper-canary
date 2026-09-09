@@ -1136,7 +1136,7 @@
     --textbox-markdown-syntax: var(--primary-360);
     --thread-channel-spine: var(--primary-500);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
-    --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-background-selected-active: hsl(var(--opacity-20-hsl)/0.2);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
@@ -1475,7 +1475,7 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--primary-360) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--primary-500) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -2065,7 +2065,7 @@
     --textbox-markdown-syntax: var(--primary-530);
     --thread-channel-spine: var(--primary-300);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
-    --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
@@ -2404,7 +2404,7 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--primary-530) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--primary-300) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -2994,7 +2994,7 @@
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
-    --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
@@ -3333,7 +3333,7 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--plum-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--plum-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -3923,7 +3923,7 @@
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
     --togglebutton-background-selected: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
-    --togglebutton-background-selected-active: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
+    --togglebutton-background-selected-active: hsl(var(--opacity-20-hsl)/0.2);
     --togglebutton-background-selected-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --togglebutton-border-active: hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098);
     --togglebutton-border-selected: var(--blurple-50);
@@ -4262,7 +4262,7 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--plum-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--plum-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-background-selected: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-background-selected-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-border-active: color-mix(in oklab, hsl(var(--opacity-blurple-84-hsl)/0.8392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.8392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --togglebutton-border-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
@@ -4512,6 +4512,7 @@
     --text-subtle: var(--neutral-2);
     --text-voice-disconnected: var(--red-new-5);
     --thread-channel-spine: var(--neutral-27);
+    --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-critical-icon-default: var(--neutral-1);
     --togglebutton-critical-icon-hover: var(--neutral-1);
     --togglebutton-icon-active: var(--neutral-1);
@@ -4659,6 +4660,7 @@
         --text-subtle: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-critical-icon-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-critical-icon-hover: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -4867,6 +4869,7 @@
     --text-subtle: var(--neutral-64);
     --text-voice-disconnected: var(--red-new-66);
     --thread-channel-spine: var(--neutral-40);
+    --togglebutton-background-selected-active: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --togglebutton-critical-icon-default: var(--neutral-80);
     --togglebutton-critical-icon-hover: var(--neutral-80);
     --togglebutton-icon-active: var(--neutral-80);
@@ -5014,6 +5017,7 @@
         --text-subtle: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-66) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-critical-icon-default: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-critical-icon-hover: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-icon-active: color-mix(in oklab, var(--neutral-80) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5222,6 +5226,7 @@
     --text-subtle: var(--neutral-17);
     --text-voice-disconnected: var(--red-new-26);
     --thread-channel-spine: var(--neutral-39);
+    --togglebutton-background-selected-active: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --togglebutton-critical-icon-default: var(--neutral-8);
     --togglebutton-critical-icon-hover: var(--neutral-8);
     --togglebutton-icon-active: var(--neutral-8);
@@ -5369,6 +5374,7 @@
         --text-subtle: color-mix(in oklab, var(--neutral-17) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-critical-icon-default: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-critical-icon-hover: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-icon-active: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -5577,6 +5583,7 @@
     --text-subtle: var(--neutral-10);
     --text-voice-disconnected: var(--red-new-16);
     --thread-channel-spine: var(--neutral-35);
+    --togglebutton-background-selected-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --togglebutton-critical-icon-default: var(--neutral-1);
     --togglebutton-critical-icon-hover: var(--neutral-1);
     --togglebutton-icon-active: var(--neutral-1);
@@ -5724,6 +5731,7 @@
         --text-subtle: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-voice-disconnected: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--neutral-35) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --togglebutton-background-selected-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --togglebutton-critical-icon-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-critical-icon-hover: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --togglebutton-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -10108,4 +10116,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.84c75adf91e597e4.css.map*/
+/*# sourceMappingURL=952007.89634b7e12e51af7.css.map*/

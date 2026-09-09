@@ -4757,6 +4757,10 @@ screen and (max-width:485px) {
     color: var(--__toggle-control-color-active)
 }
 
+.toggleButton__79243:is([aria-pressed], [data-selection-mode=single], [data-selection-mode=multiple]):is([aria-pressed=true], [data-selected]):is(:active, [data-pressed]):not(:disabled):not([data-disabled]) {
+    background-color: var(--__toggle-control-background-selected-active)
+}
+
 .standard__79243 {
     --__toggle-control-color-default: var(--togglebutton-icon-default);
     --__toggle-control-background-default: transparent;
@@ -4772,7 +4776,8 @@ screen and (max-width:485px) {
     --__toggle-control-border-selected-hover: var(--togglebutton-border-selected);
     --__toggle-control-color-active: var(--togglebutton-icon-active);
     --__toggle-control-background-active: var(--control-secondary-background-active);
-    --__toggle-control-border-active: var(--togglebutton-border-active)
+    --__toggle-control-border-active: var(--togglebutton-border-active);
+    --__toggle-control-background-selected-active: var(--togglebutton-background-selected-active)
 }
 
 .labeled__79243,
@@ -4793,7 +4798,8 @@ screen and (max-width:485px) {
     --__toggle-control-border-selected-hover: var(--togglebutton-border-selected);
     --__toggle-control-color-active: var(--control-secondary-text-active);
     --__toggle-control-background-active: var(--control-secondary-background-active);
-    --__toggle-control-border-active: var(--togglebutton-border-selected)
+    --__toggle-control-border-active: var(--togglebutton-border-selected);
+    --__toggle-control-background-selected-active: var(--togglebutton-background-selected-active)
 }
 
 .critical__79243 {
@@ -4811,7 +4817,8 @@ screen and (max-width:485px) {
     --__toggle-control-border-selected-hover: transparent;
     --__toggle-control-color-active: var(--togglebutton-critical-icon-active);
     --__toggle-control-background-active: var(--control-secondary-background-active);
-    --__toggle-control-border-active: var(--togglebutton-critical-border-active)
+    --__toggle-control-border-active: var(--togglebutton-critical-border-active);
+    --__toggle-control-background-selected-active: var(--togglebutton-background-selected-active)
 }
 
 .critical__79243,
@@ -4832,7 +4839,8 @@ screen and (max-width:485px) {
     --__toggle-control-border-selected-hover: var(--control-icon-only-border-hover);
     --__toggle-control-color-active: var(--togglebutton-icon-only-icon-active);
     --__toggle-control-background-active: var(--control-icon-only-background-active);
-    --__toggle-control-border-active: var(--control-icon-only-border-active)
+    --__toggle-control-border-active: var(--control-icon-only-border-active);
+    --__toggle-control-background-selected-active: var(--control-icon-only-background-active)
 }
 
 @keyframes dotGrow__714a9 {
@@ -5162,4 +5170,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.08b78562ec2f647d.css.map*/
+/*# sourceMappingURL=362698.e1dc56823499cf53.css.map*/
