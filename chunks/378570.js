@@ -1,4 +1,4 @@
-n.d(t, { N9: () => _, ci: () => E, iN: () => u });
+n.d(t, { N9: () => _, ci: () => E, iN: () => u, vn: () => A });
 var i = n(284009),
     r = n.n(i),
     a = n(308528),
@@ -25,4 +25,7 @@ function E(e, t, n) {
     if (null == i) return;
     let r = (0, d.j)(i);
     (0, o.pX)(c.BVt.CHANNEL(r, i.id, t), { openChannel: !0, ...n });
+}
+function A(e, t, n) {
+    (0, o.pX)(c.BVt.CHANNEL(e, t), { openChannel: !0, ...n });
 }

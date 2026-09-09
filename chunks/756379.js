@@ -5,8 +5,8 @@ var l = i(477900),
     r = i.n(a),
     s = i(17928),
     d = i(834730),
-    c = i(289873),
-    u = i(689175),
+    u = i(289873),
+    c = i(689175),
     o = i(250527),
     _ = i(868652),
     E = i(645619),
@@ -20,9 +20,9 @@ function p(e) {
     return !(e instanceof h.oh) || e.status < 400 || e.status >= 500 || 429 === e.status;
 }
 var S = i(652215);
-let x = 0;
-async function D(e) {
-    let t = x++;
+let D = 0;
+async function C(e) {
+    let t = D++;
     m.h.dispatch({ type: "GUILD_SPACE_FETCH_START", guildId: e, requestId: t });
     try {
         let { body: i } = await A.A.get({
@@ -35,14 +35,14 @@ async function D(e) {
         m.h.dispatch({ type: "GUILD_SPACE_FETCH_FAILURE", guildId: e, requestId: t, retryable: p(i) });
     }
 }
-async function C(e) {
+async function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = I.A.getFetchStatus(e),
         l = t && "error" === i && !I.A.isInBackoff(e);
-    ("idle" === i || l) && (await D(e));
+    ("idle" === i || l) && (await C(e));
 }
 async function v(e) {
-    await D(e);
+    await C(e);
 }
 async function T(e, t) {
     let { body: i } = await h.Bo.patch({ url: S.Rsh.GUILD_SPACE_SETTINGS(e), body: t, rejectWithError: !0 });
@@ -65,7 +65,7 @@ function b(e) {
     let t = U[e];
     return t?.saveStatus === "saving" ? void 0 : t;
 }
-class N extends s.Ay.Store {
+class P extends s.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(e) {
         return U[e]?.draft;
@@ -77,7 +77,7 @@ class N extends s.Ay.Store {
         return U[e]?.saveStatus ?? "idle";
     }
 }
-let P = new N(m.h, {
+let N = new P(m.h, {
     GUILD_SPACE_EDIT_START: function (e) {
         let { guildId: t, space: i } = e;
         U[t] = { draft: { header: i.header, widgets: (0, L.W$)(i.widgets) }, saveStatus: "idle" };
@@ -168,8 +168,8 @@ function H(e, t) {
     m.h.dispatch({ type: "GUILD_SPACE_EDIT_UPDATE_HEADER", guildId: e, customBanner: t });
 }
 async function B(e) {
-    let t = P.getDraft(e);
-    if (null == t || "saving" === P.getSaveStatus(e)) return;
+    let t = N.getDraft(e);
+    if (null == t || "saving" === N.getSaveStatus(e)) return;
     let i = {};
     void 0 !== t.header.custom_banner && (i.custom_banner = t.header.custom_banner);
     let l = {
@@ -236,25 +236,25 @@ var q = i(470452),
     er = i(192308),
     es = i(775602),
     ed = i(61567),
-    ec = i(375708),
-    eu = i(517228);
+    eu = i(375708),
+    ec = i(517228);
 function eo(e) {
     let { widget: t, onClick: i } = e,
         n = (0, s.bG)([es.Ay], () => es.Ay.useReducedMotion),
         { catalog_image_static_url: a, catalog_image_animated_url: r } = t.assets,
-        c = (n ? null : r) ?? a,
-        u = t.boost_price;
+        u = (n ? null : r) ?? a,
+        c = t.boost_price;
     return (0, l.jsxs)(ei.D, {
-        className: eu.HL,
+        className: ec.HL,
         onClick: i,
         children: [
             (0, l.jsxs)("div", {
-                className: eu.b3,
+                className: ec.b3,
                 children: [
-                    null != c && (0, l.jsx)("img", { className: eu.YI, src: c, alt: "" }),
+                    null != u && (0, l.jsx)("img", { className: ec.YI, src: u, alt: "" }),
                     t.locked &&
                         (0, l.jsx)("div", {
-                            className: eu.AA,
+                            className: ec.AA,
                             "aria-hidden": !0,
                             children: (0, l.jsx)(el._, {
                                 size: "sm",
@@ -262,12 +262,12 @@ function eo(e) {
                             }),
                         }),
                     (0, l.jsxs)("div", {
-                        className: eu.Nt,
+                        className: ec.Nt,
                         "aria-hidden": !0,
                         children: [
-                            (0, l.jsx)("div", { className: eu.Ti, children: (0, l.jsx)("div", { className: eu.dK }) }),
+                            (0, l.jsx)("div", { className: ec.Ti, children: (0, l.jsx)("div", { className: ec.dK }) }),
                             (0, l.jsxs)(Q.B, {
-                                className: eu.Cq,
+                                className: ec.Cq,
                                 align: "center",
                                 justify: "center",
                                 gap: 4,
@@ -276,7 +276,7 @@ function eo(e) {
                                     (0, l.jsx)(d.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
-                                        children: ec.intl.string(ed.default.IuT87w),
+                                        children: eu.intl.string(ed.default.IuT87w),
                                     }),
                                 ],
                             }),
@@ -288,7 +288,7 @@ function eo(e) {
                 gap: 4,
                 children: [
                     (0, l.jsx)(d.E, { variant: "text-sm/semibold", color: "text-default", children: t.name }),
-                    null != u && u > 0
+                    null != c && c > 0
                         ? (0, l.jsxs)(Q.B, {
                               direction: "horizontal",
                               align: "center",
@@ -299,7 +299,7 @@ function eo(e) {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       lineClamp: 1,
-                                      children: ec.intl.format(ed.default["8wD0Un"], { boostPrice: u }),
+                                      children: eu.intl.format(ed.default["8wD0Un"], { boostPrice: c }),
                                   }),
                               ],
                           })
@@ -307,7 +307,7 @@ function eo(e) {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               lineClamp: 1,
-                              children: ec.intl.string(ed.default.Lx0P8k),
+                              children: eu.intl.string(ed.default.Lx0P8k),
                           }),
                 ],
             }),
@@ -316,8 +316,8 @@ function eo(e) {
 }
 function e_(e) {
     let { guildId: t, ...i } = e,
-        a = (0, s.yK)([G.A, P], () => {
-            let e = P.getDraft(t)?.widgets ?? [];
+        a = (0, s.yK)([G.A, N], () => {
+            let e = N.getDraft(t)?.widgets ?? [];
             var i = G.A.getWidgets(t) ?? [];
             let l = new Map();
             for (let t of e) l.set(t.type, (l.get(t.type) ?? 0) + 1);
@@ -328,12 +328,12 @@ function e_(e) {
             y(t);
         }, [t]),
         (0, l.jsx)(et.Modal, {
-            title: ec.intl.string(ed.default.L8Xfoo),
-            subtitle: ec.intl.string(ed.default["N8nJ+T"]),
+            title: eu.intl.string(ed.default.L8Xfoo),
+            subtitle: eu.intl.string(ed.default["N8nJ+T"]),
             actions: [],
             ...i,
             children: (0, l.jsx)("div", {
-                className: eu.Vg,
+                className: ec.Vg,
                 children: a.map((e) =>
                     (0, l.jsx)(
                         eo,
@@ -383,10 +383,10 @@ function e_(e) {
 var eE = i(992303);
 function ef(e) {
     let { guildId: t, isEditing: i } = e,
-        a = (0, s.bG)([P], () => P.getSaveStatus(t), [t]),
-        r = (0, s.bG)([P], () => P.getDraft(t)?.widgets.length ?? 0, [t]),
-        c = "saving" === a,
-        u = n.useCallback(() => {
+        a = (0, s.bG)([N], () => N.getSaveStatus(t), [t]),
+        r = (0, s.bG)([N], () => N.getDraft(t)?.widgets.length ?? 0, [t]),
+        u = "saving" === a,
+        c = n.useCallback(() => {
             B(t);
         }, [t]),
         o = n.useCallback(() => {
@@ -399,10 +399,10 @@ function ef(e) {
             (0, l.jsx)(J.F, {
                 className: eE.K,
                 children: (0, l.jsx)(X.A, {
-                    submitting: c,
-                    disabled: c,
-                    onSave: u,
-                    onReset: c ? void 0 : o,
+                    submitting: u,
+                    disabled: u,
+                    onSave: c,
+                    onReset: u ? void 0 : o,
                     message: (0, l.jsxs)(Q.B, {
                         direction: "horizontal",
                         align: "center",
@@ -412,8 +412,8 @@ function ef(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: ee.T,
-                                text: ec.intl.string(ed.default.L8Xfoo),
-                                disabled: c,
+                                text: eu.intl.string(ed.default.L8Xfoo),
+                                disabled: u,
                                 onClick: () => {
                                     let e;
                                     return (
@@ -429,12 +429,12 @@ function ef(e) {
                                       variant: "text-sm/medium",
                                       color: "text-feedback-critical",
                                       role: "alert",
-                                      children: ec.intl.string(ed.default.HmFYc5),
+                                      children: eu.intl.string(ed.default.HmFYc5),
                                   })
                                 : (0, l.jsx)(d.E, {
                                       variant: "text-sm/medium",
                                       color: "text-subtle",
-                                      children: ec.intl.format(ed.default.hpAg80, { panelCount: r }),
+                                      children: eu.intl.format(ed.default.hpAg80, { panelCount: r }),
                                   }),
                         ],
                     }),
@@ -447,19 +447,19 @@ var eg = i(686246),
     em = i(451395),
     eA = i(42499),
     eI = i(539888),
-    ep = i(179105),
+    ep = i(977756),
     eS = i(294918);
-let ex = "GUILD_SPACE_WIDGET",
-    eD = "GUILD_SPACE_WIDGETS",
-    eC = `${ex}_${eD}`;
+let eD = "GUILD_SPACE_WIDGET",
+    eC = "GUILD_SPACE_WIDGETS",
+    ex = `${eD}_${eC}`;
 function ev(e) {
     let {
             guildId: t,
             widget: i,
             column: a,
             positionNumber: d,
-            columnWidgetCount: c,
-            flatIndex: u,
+            columnWidgetCount: u,
+            flatIndex: c,
             leftColumnCount: o,
             onReorder: _,
             isSaving: E,
@@ -475,21 +475,21 @@ function ev(e) {
         { isDragging: I, dragSourcePosition: p } = (0, em.gY)({
             dragRef: f,
             dropRef: g,
-            index: u,
-            listType: eD,
-            itemType: ex,
+            index: c,
+            listType: eC,
+            itemType: eD,
             itemId: i.id,
             onReorder: _,
             canDrag: !E,
         }),
         S = null == p ? null : p < o ? L.FT : L.yM,
-        x = null != S && S !== a;
+        D = null != S && S !== a;
     return (0, l.jsx)("div", {
         ref: g,
-        className: r()(eS.NI, { [eS.cB]: I, [eS.ne]: null != p && (x || p > u), [eS.O3]: null != p && !x && p < u }),
-        "data-dnd-name": ec.intl.formatToPlainString(a === L.yM ? ed.default.O9RvHQ : ed.default["+cSvS8"], {
+        className: r()(eS.NI, { [eS.cB]: I, [eS.ne]: null != p && (D || p > c), [eS.O3]: null != p && !D && p < c }),
+        "data-dnd-name": eu.intl.formatToPlainString(a === L.yM ? ed.default.O9RvHQ : ed.default["+cSvS8"], {
             positionNumber: d,
-            positionCount: c,
+            positionCount: u,
         }),
         children: (0, l.jsx)(eI.P, {
             guildId: t,
@@ -524,7 +524,7 @@ function eT(e) {
     let { column: t, onDropAtEnd: i } = e,
         a = n.useRef(null),
         [{ isOver: s }, d] = (0, eh.H)({
-            accept: eC,
+            accept: ex,
             drop: (e) => i(e.id, t),
             collect: (e) => ({ isOver: e.isOver({ shallow: !0 }) && e.canDrop() }),
         });
@@ -541,7 +541,7 @@ function eT(e) {
         (0, l.jsx)("div", {
             ref: a,
             className: r()(eS.wr, { [eS.SX]: s }),
-            "data-dnd-name": ec.intl.string(t === L.yM ? ed.default.fWef0G : ed.default.KcdDyT),
+            "data-dnd-name": eu.intl.string(t === L.yM ? ed.default.fWef0G : ed.default.KcdDyT),
         })
     );
 }
@@ -559,8 +559,8 @@ function ey(e) {
             [a],
         ),
         d = n.useMemo(() => [...r[L.FT], ...r[L.yM]], [r]),
-        c = (0, eg.V)((e) => e.isDragging() && e.getItemType() === eC),
-        u = (0, s.bG)([P], () => "saving" === P.getSaveStatus(t), [t]),
+        u = (0, eg.V)((e) => e.isDragging() && e.getItemType() === ex),
+        c = (0, s.bG)([N], () => "saving" === N.getSaveStatus(t), [t]),
         o = n.useCallback(
             (e, i) => {
                 let l = d[e],
@@ -595,12 +595,12 @@ function ey(e) {
                                     flatIndex: i === L.yM ? r[L.FT].length + a : a,
                                     leftColumnCount: r[L.FT].length,
                                     onReorder: o,
-                                    isSaving: u,
+                                    isSaving: c,
                                 },
                                 n.id,
                             ),
                         ),
-                        c && !u && (0, l.jsx)(eT, { column: i, onDropAtEnd: _ }),
+                        u && !c && (0, l.jsx)(eT, { column: i, onDropAtEnd: _ }),
                     ],
                 },
                 i,
@@ -613,8 +613,8 @@ var eG = i(529609),
     eL = i(408278),
     eU = i(241326),
     eb = i(297264),
-    eN = i(22231),
-    eP = i(654107),
+    eP = i(22231),
+    eN = i(654107),
     ew = i(548118),
     eR = i(837011),
     eF = i(649640),
@@ -626,19 +626,19 @@ var eG = i(529609),
     eB = i(776231),
     eK = i(986898);
 function ez(e) {
-    let { guildId: t, header: i, canEdit: a, isEditing: r, isSaving: c } = e,
-        u = (0, s.bG)([f.A], () => f.A.getGuild(t), [t]),
+    let { guildId: t, header: i, canEdit: a, isEditing: r, isSaving: u } = e,
+        c = (0, s.bG)([f.A], () => f.A.getGuild(t), [t]),
         o = (0, s.bG)([eM.A], () => eM.A.getOnlineCount(t), [t]),
         _ = (0, s.bG)([eM.A], () => eM.A.getMemberCount(t), [t]),
         E = i.custom_banner,
         g = (0, s.bG)([eR.A], () => eR.A.getProfile(t), [t]),
         h = (0, eF.b2)().hex(),
-        A = null == u ? null : eO.Ay.getGuildIconURL({ id: u.id, icon: u.icon, size: 64 }),
-        p = (0, eP.Ay)(A, h),
-        x = (0, eF.n6)(g?.brandColorPrimary ?? p),
-        D = n.useMemo(
+        A = null == c ? null : eO.Ay.getGuildIconURL({ id: c.id, icon: c.icon, size: 64 }),
+        p = (0, eN.Ay)(A, h),
+        D = (0, eF.n6)(g?.brandColorPrimary ?? p),
+        C = n.useMemo(
             () =>
-                null == u
+                null == c
                     ? null
                     : "string" == typeof E
                       ? E
@@ -650,19 +650,19 @@ function ez(e) {
                                   r = null != l ? `https://${l}${a}` : location.protocol + n + a,
                                   s = { size: (0, eB.kr)(1200 * (0, eB.mZ)()) };
                               return "jpg" === i && (s.quality = "lossless"), (r += `?${eH.stringify(s)}`);
-                          })(u.id, i.custom_banner_hash)
-                        : eO.Ay.getGuildBannerURL({ id: u.id, banner: u.banner }),
-            [u, E, i.custom_banner_hash],
+                          })(c.id, i.custom_banner_hash)
+                        : eO.Ay.getGuildBannerURL({ id: c.id, banner: c.banner }),
+            [c, E, i.custom_banner_hash],
         ),
-        C = "string" == typeof E || (void 0 === E && null != i.custom_banner_hash);
-    return null == u
+        x = "string" == typeof E || (void 0 === E && null != i.custom_banner_hash);
+    return null == c
         ? null
         : (0, l.jsxs)("div", {
               className: eK.wx,
               children: [
-                  null != D
-                      ? (0, l.jsx)("img", { className: eK.vK, src: D, alt: "" })
-                      : (0, l.jsx)("div", { className: eK.vK, style: { background: x }, "aria-hidden": !0 }),
+                  null != C
+                      ? (0, l.jsx)("img", { className: eK.vK, src: C, alt: "" })
+                      : (0, l.jsx)("div", { className: eK.vK, style: { background: D }, "aria-hidden": !0 }),
                   (0, l.jsx)("div", { className: eK.f5, "aria-hidden": !0 }),
                   r
                       ? (0, l.jsxs)("div", {
@@ -671,22 +671,22 @@ function ez(e) {
                                 (0, l.jsx)(eW.A, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: ec.intl.string(ed.default["EN+0gW"]),
+                                    text: eu.intl.string(ed.default["EN+0gW"]),
                                     onChange: (e) => H(t, e),
                                     maxFileSizeBytes: 0xa00000,
                                     onFileSizeError: () => (0, ek.A)(0xa00000),
-                                    disabled: c,
+                                    disabled: u,
                                 }),
-                                C
+                                x
                                     ? (0, l.jsx)(ej.m, {
-                                          text: ec.intl.string(ed.default["CunK+J"]),
+                                          text: eu.intl.string(ed.default["CunK+J"]),
                                           ariaHidden: !0,
                                           children: (0, l.jsx)(eL.K, {
                                               variant: "critical-secondary",
                                               icon: eU.TrashIcon,
-                                              "aria-label": ec.intl.string(ed.default["CunK+J"]),
+                                              "aria-label": eu.intl.string(ed.default["CunK+J"]),
                                               onClick: () => H(t, null),
-                                              disabled: c,
+                                              disabled: u,
                                           }),
                                       })
                                     : null,
@@ -698,7 +698,7 @@ function ez(e) {
                       children: [
                           (0, l.jsx)(ew.Ay, {
                               className: eK.Kk,
-                              guild: u,
+                              guild: c,
                               size: ew.Ay.Sizes.XLARGE,
                               active: !0,
                               "aria-hidden": !0,
@@ -710,7 +710,7 @@ function ez(e) {
                                       variant: "heading-xl/bold",
                                       color: "currentColor",
                                       lineClamp: 1,
-                                      children: u.name,
+                                      children: c.name,
                                   }),
                                   (0, l.jsxs)("div", {
                                       className: eK.M1,
@@ -723,7 +723,7 @@ function ez(e) {
                                                         (0, l.jsx)(d.E, {
                                                             variant: "text-sm/medium",
                                                             color: "currentColor",
-                                                            children: ec.intl.format(ed.default.G08ClG, { count: o }),
+                                                            children: eu.intl.format(ed.default.G08ClG, { count: o }),
                                                         }),
                                                     ],
                                                 })
@@ -736,7 +736,7 @@ function ez(e) {
                                                         (0, l.jsx)(d.E, {
                                                             variant: "text-sm/medium",
                                                             color: "currentColor",
-                                                            children: ec.intl.format(ed.default["rp7bx+"], {
+                                                            children: eu.intl.format(ed.default["rp7bx+"], {
                                                                 count: _,
                                                             }),
                                                         }),
@@ -754,8 +754,8 @@ function ez(e) {
                                                   (0, l.jsx)(d.E, {
                                                       variant: "text-sm/medium",
                                                       color: "currentColor",
-                                                      children: ec.intl.format(ed.default.DwFqrb, {
-                                                          count: u.premiumSubscriberCount,
+                                                      children: eu.intl.format(ed.default.DwFqrb, {
+                                                          count: c.premiumSubscriberCount,
                                                       }),
                                                   }),
                                               ],
@@ -769,8 +769,8 @@ function ez(e) {
                   a &&
                       !r &&
                       (0, l.jsx)(Z.$, {
-                          icon: eN.PencilIcon,
-                          text: ec.intl.string(ed.default.KcOpCm),
+                          icon: eP.PencilIcon,
+                          text: eu.intl.string(ed.default.KcOpCm),
                           onClick: () => {
                               let e;
                               null != (e = I.A.getSpace(t)) &&
@@ -787,7 +787,7 @@ function eq(e) {
         [a, g, h] = (0, s.yK)([I.A], () => [I.A.getSpace(t), I.A.getFetchStatus(t), I.A.isInBackoff(t)], [t]);
     n.useEffect(() => {
         let e = i.current !== t;
-        (i.current = t), C(t, e);
+        (i.current = t), x(t, e);
     }, [g, t]),
         n.useEffect(() => {
             (0, o.L4)(t, !1, { respectBackoff: !0 });
@@ -799,15 +799,15 @@ function eq(e) {
         A && "idle" === p && y(t);
     }, [A, p, t]);
     let S = m?.guildSpaceSettings?.publish_status !== w.B.PUBLISHED,
-        x = n.useCallback(() => T(t, { publish_status: w.B.PUBLISHED }), [t]),
-        [D, j] = (0, s.yK)([P], () => [P.getDraft(t), P.getSaveStatus(t)], [t]),
-        L = A && null != D,
-        U = L ? D.widgets : a?.widgets,
+        D = n.useCallback(() => T(t, { publish_status: w.B.PUBLISHED }), [t]),
+        [C, j] = (0, s.yK)([N], () => [N.getDraft(t), N.getSaveStatus(t)], [t]),
+        L = A && null != C,
+        U = L ? C.widgets : a?.widgets,
         b = n.useMemo(() => U?.some((e) => e.locked) ?? !1, [U]);
     n.useEffect(() => {
         A && b && ((0, _.AK)(t), (0, _.Xd)(t));
     }, [A, t, b]);
-    let N = (0, s.bG)(
+    let P = (0, s.bG)(
         [E.A, G.A],
         () =>
             a?.widgets.some((e) => {
@@ -817,11 +817,11 @@ function eq(e) {
         [t, a],
     );
     n.useEffect(() => {
-        N && v(t);
-    }, [t, N]),
+        P && v(t);
+    }, [t, P]),
         n.useEffect(() => {
-            A || null == D || "saving" === j || M(t);
-        }, [A, D, j, t]);
+            A || null == C || "saving" === j || M(t);
+        }, [A, C, j, t]);
     let R = n.useMemo(
             () =>
                 (U ?? [])
@@ -851,30 +851,30 @@ function eq(e) {
                   className: eV.F,
                   children:
                       "error" !== g || h
-                          ? (0, l.jsx)(c.y, {
-                                type: c.y.Type.SPINNING_CIRCLE,
-                                "aria-label": ec.intl.string(ec.t.ZTNur7),
+                          ? (0, l.jsx)(u.y, {
+                                type: u.y.Type.SPINNING_CIRCLE,
+                                "aria-label": eu.intl.string(eu.t.ZTNur7),
                             })
                           : (0, l.jsx)(d.E, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
                                 role: "alert",
-                                children: ec.intl.string(ec.t.F8FvUy),
+                                children: eu.intl.string(eu.t.F8FvUy),
                             }),
               }),
           })
         : (0, l.jsxs)("div", {
               className: eV.MY,
               children: [
-                  (0, l.jsx)(u.Gt, {
+                  (0, l.jsx)(c.Gt, {
                       className: eV.XG,
                       children: (0, l.jsxs)("div", {
                           className: r()(eV.Qs, { [eV.Dy]: L }),
                           children: [
-                              A && S ? (0, l.jsx)(Y.A, { onPublish: x }) : null,
+                              A && S ? (0, l.jsx)(Y.A, { onPublish: D }) : null,
                               (0, l.jsx)(ez, {
                                   guildId: t,
-                                  header: L ? D.header : a.header,
+                                  header: L ? C.header : a.header,
                                   isEditing: L,
                                   canEdit: A,
                                   isSaving: "saving" === j,

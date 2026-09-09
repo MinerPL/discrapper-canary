@@ -487,7 +487,7 @@ function e0(e) {
 var e1 = t(538303);
 let e2 = eV.DN.SIZE_32,
     e5 = { [eZ.E8.NO_CHAT]: e1.Oo, [eZ.E8.RESIZABLE]: e1.Ig };
-function e9(e) {
+function e6(e) {
     let { maxHeight: n, connectedLocation: t, renderExternalHeader: i } = e,
         a = (0, eH.A)(),
         d = (0, A.yK)([eb.Ay], () => eb.Ay.getEmbeddedActivitiesForLocationIncludingHidden(t), [t]),
@@ -696,7 +696,7 @@ function e9(e) {
         })
     );
 }
-function e6(e) {
+function e9(e) {
     let { maxHeight: n, renderExternalHeader: t } = e,
         {
             connectedChannelId: i,
@@ -716,7 +716,7 @@ function e6(e) {
     let d = s?.applicationId;
     return a !== eZ.Gd.PANEL || null == d || r || null == i || null == s || (0, ev.A)(i)
         ? null
-        : (0, l.jsx)(e9, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
+        : (0, l.jsx)(e6, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
 }
 var e3 = t(90804),
     e7 = t(748975),
@@ -1227,8 +1227,8 @@ var nq = t(683438),
     n1 = t(573435),
     n2 = t(101555),
     n5 = t(548118),
-    n9 = t(714991),
-    n6 = t(776231),
+    n6 = t(714991),
+    n9 = t(776231),
     n3 = t(345942),
     n7 = t(71393),
     n4 = t(486020),
@@ -1323,7 +1323,7 @@ let tl = s.memo(function (e) {
             a(!1);
         }
     }
-    let o = n4.Ay.getGuildSplashURL({ id: n.guildId, splash: n.splash, size: 300 * (0, n6.mZ)() }),
+    let o = n4.Ay.getGuildSplashURL({ id: n.guildId, splash: n.splash, size: 300 * (0, n9.mZ)() }),
         c = n4.Ay.getGuildIconURL({ id: n.guildId, icon: n.icon, size: 40 }) ?? void 0,
         u = z.intl.string(z.t.VJlc0S);
     return (
@@ -1370,7 +1370,7 @@ let tl = s.memo(function (e) {
                         (0, l.jsxs)("div", {
                             className: tn.DD,
                             children: [
-                                (0, l.jsx)(n9.A, { className: tn.n2, guild: n }),
+                                (0, l.jsx)(n6.A, { className: tn.n2, guild: n }),
                                 (0, l.jsx)(y.E, {
                                     className: tn.J5,
                                     variant: "heading-md/semibold",
@@ -1864,16 +1864,16 @@ function t1(e) {
 }
 var t2 = t(780338),
     t5 = t(782603),
-    t9 = t(857071),
-    t6 = t(607508),
+    t6 = t(857071),
+    t9 = t(607508),
     t3 = t(914703),
     t7 = t(37411);
 function t4(e) {
     let { channel: n } = e,
-        t = (0, t6.X)(n),
+        t = (0, t9.X)(n),
         [i, a] = s.useState(!1),
         r = s.useRef(null),
-        d = (0, A.bG)([t9.A], () => null != n.guild_id && t9.A.isLurking(n.guild_id));
+        d = (0, A.bG)([t6.A], () => null != n.guild_id && t6.A.isLurking(n.guild_id));
     if (
         (s.useEffect(() => {
             function e() {
@@ -2409,7 +2409,7 @@ function i0(e) {
 var i1 = t(290136),
     i2 = t(975571),
     i5 = t(490094);
-function i9() {
+function i6() {
     let e = z.intl.string(i5.default.pdipXI);
     return (0, l.jsx)(ns.In, {
         tooltip: e,
@@ -2419,7 +2419,7 @@ function i9() {
         },
     });
 }
-var i6 = t(742589),
+var i9 = t(742589),
     i3 = t(43105),
     i7 = t(428689),
     i4 = t(978940),
@@ -3027,7 +3027,7 @@ function l0(e) {
 var l1 = t(322338),
     l2 = t(898029),
     l5 = t(36537);
-function l9() {
+function l6() {
     return (0, l.jsx)("div", {
         className: l5.zt,
         children: (0, l.jsx)("header", {
@@ -3054,7 +3054,7 @@ function l9() {
         }),
     });
 }
-var l6 = t(790535),
+var l9 = t(790535),
     l3 = t(163328),
     l7 = t(425557),
     l4 = t(270003),
@@ -3777,8 +3777,8 @@ var sJ = t(210714),
     s1 = t(707554),
     s2 = t(140735),
     s5 = t(590180),
-    s9 = t(32206),
-    s6 = t(372320),
+    s6 = t(32206),
+    s9 = t(372320),
     s3 = t(562153),
     s7 = t(945810);
 let s4 = (0, s7.mj)({
@@ -4103,8 +4103,8 @@ var ak = t(74445),
     a1 = t(383199),
     a2 = t(559506),
     a5 = t(361311),
-    a9 = t(931481),
-    a6 = t(791556),
+    a6 = t(931481),
+    a9 = t(791556),
     a3 = t(501193),
     a7 = t(383448),
     a4 = t(646986),
@@ -4505,18 +4505,18 @@ function rk(e) {
                             isRedesignEnabled: d,
                         }),
                     }),
-                    d && (0, l.jsx)(a6.A, { user: n, onOpenProfile: (e) => o?.({ tabSection: e }) }),
+                    d && (0, l.jsx)(a9.A, { user: n, onOpenProfile: (e) => o?.({ tabSection: e }) }),
                 ],
             }),
             c === er.eA$.PENDING_INCOMING &&
                 (0, l.jsx)(am.A.Overlay, {
-                    children: (0, l.jsx)(a9.A, { user: n, channelId: a.id, applicationId: u }),
+                    children: (0, l.jsx)(a6.A, { user: n, channelId: a.id, applicationId: u }),
                 }),
             h.map((e) =>
                 (0, l.jsx)(
                     am.A.Overlay,
                     {
-                        children: (0, l.jsx)(a9.A, {
+                        children: (0, l.jsx)(a6.A, {
                             user: n,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -4759,7 +4759,7 @@ function rX(e) {
     let x = s.useRef(null),
         { isHoveringOrFocusing: p, isHovering: f } = (0, as.A)(x),
         I = (0, aB.fC)(),
-        b = (0, s6.A)(o?.profileFrame?.skuId, "UserProfileSidebar");
+        b = (0, s9.A)(o?.profileFrame?.skuId, "UserProfileSidebar");
     (0, aG.A)({ skuId: o?.profileFrame?.skuId, openedAt: u.current, context: g, analyticsLocations: m });
     let j = (0, aU.z)({ opacity: +(null != I.interactionType), config: { duration: 150 } });
     function C(e) {
@@ -4893,8 +4893,8 @@ function r$(e) {
         [c, u] = s.useState(!1),
         h = s8("UserProfileSidebarRenderer"),
         m = (0, lM.Ay)(t),
-        g = (0, s9.c)("UserProfileSidebarRenderer") ? m?.profileFrame?.skuId : void 0,
-        x = (0, s6.A)(g, "UserProfileSidebarRenderer"),
+        g = (0, s6.c)("UserProfileSidebarRenderer") ? m?.profileFrame?.skuId : void 0,
+        x = (0, s9.A)(g, "UserProfileSidebarRenderer"),
         p = (0, A.bG)([s5.A], () => s5.A.getProductFetch(g));
     if (
         (s.useEffect(() => {
@@ -4941,8 +4941,8 @@ var rZ = t(522556),
     r1 = t(95701),
     r2 = t(919638),
     r5 = t(763827),
-    r9 = t(812771),
-    r6 = t(946228),
+    r6 = t(812771),
+    r9 = t(946228),
     r3 = t(462887),
     r7 = t(276293),
     r4 = t(888904),
@@ -4956,11 +4956,11 @@ let de = () => {
     return (0, l.jsxs)("div", {
         className: r4.kL,
         children: [
-            (0, l.jsxs)(i6.A, {
+            (0, l.jsxs)(i9.A, {
                 toolbar: (0, l.jsx)(s.Fragment, {}),
                 children: [
-                    (0, l.jsx)(i6.A.Icon, { icon: r7.N, "aria-hidden": !0 }),
-                    (0, l.jsx)(i6.A.Title, { children: z.intl.string(z.t["8LKchl"]) }),
+                    (0, l.jsx)(i9.A.Icon, { icon: r7.N, "aria-hidden": !0 }),
+                    (0, l.jsx)(i9.A.Title, { children: z.intl.string(z.t["8LKchl"]) }),
                 ],
             }),
             (0, l.jsxs)("div", {
@@ -5027,7 +5027,7 @@ let du = (0, nU.Fe)({
     });
 function dA() {
     return Promise.all([
-        t.e("651299"),
+        t.e("606926"),
         t.e("280574"),
         t.e("113561"),
         t.e("368991"),
@@ -5179,7 +5179,7 @@ let dx = (0, nU.Fe)({ createPromise: dg, webpackId: 67319, name: "StageChannelCa
         webpackId: 392,
         name: "SearchResults",
         renderLoader: function () {
-            return (0, l.jsx)(l9, {});
+            return (0, l.jsx)(l6, {});
         },
     }),
     df = (0, nU.Fe)({
@@ -5432,7 +5432,7 @@ class db extends s.PureComponent {
                 break;
             case er.rbe.GUILD_FORUM:
             case er.rbe.GUILD_MEDIA:
-                e.isGameInvitesChannel() && r.push((0, l.jsx)(i9, {}, "game-invite-channel-learn-more")),
+                e.isGameInvitesChannel() && r.push((0, l.jsx)(i6, {}, "game-invite-channel-learn-more")),
                     t ||
                         (r.push((0, l.jsx)(i0, { channel: e }, "forum-onboarding")),
                         r.push((0, l.jsx)(iU.A, { channel: e }, "notifications"))),
@@ -5516,7 +5516,7 @@ class db extends s.PureComponent {
                     theme: u && a ? er.NJ8.DARK : void 0,
                     children: (a) =>
                         (0, l.jsxs)(
-                            i6.A,
+                            i9.A,
                             {
                                 guildId: s,
                                 channelId: e.id,
@@ -5597,7 +5597,7 @@ class db extends s.PureComponent {
             n = this.shouldRenderCall();
         if ((o()(null != e, "Missing channel in Channel.renderEmbeddedActivityPanel"), n)) return null;
         let t = this.props.height - 200;
-        return (0, l.jsx)(e6, { maxHeight: t, renderExternalHeader: this.renderHeaderBar });
+        return (0, l.jsx)(e9, { maxHeight: t, renderExternalHeader: this.renderHeaderBar });
     }
     renderChat() {
         let {
@@ -5657,9 +5657,9 @@ class db extends s.PureComponent {
                 case er.rbe.GUILD_TEXT:
                 case er.rbe.GUILD_APP:
                     let c = !0 === er.kvI.GUILD_THREADS_ONLY.has(e.type) ? e.id : (e.guild_id ?? e.id);
-                    return (0, l.jsx)(r6.A, { channel: e }, `channel-members-${c}`);
+                    return (0, l.jsx)(r9.A, { channel: e }, `channel-members-${c}`);
                 case er.rbe.ANNOUNCEMENT_THREAD:
-                    if (null != n) return (0, l.jsx)(r6.A, { channel: n }, `channel-members-${n.id}`);
+                    if (null != n) return (0, l.jsx)(r9.A, { channel: n }, `channel-members-${n.id}`);
                     break;
                 case er.rbe.PUBLIC_THREAD:
                 case er.rbe.PRIVATE_THREAD:
@@ -5775,9 +5775,9 @@ class db extends s.PureComponent {
             c = a - er.MdR - o;
         return (
             (c += 375),
-            (0, l.jsx)(r9.A, {
+            (0, l.jsx)(r6.A, {
                 sidebarType:
-                    n?.type != null && er.kvI.GUILD_THREADS_ONLY.has(n.type) ? r9.X.PostSidebar : r9.X.ThreadSidebar,
+                    n?.type != null && er.kvI.GUILD_THREADS_ONLY.has(n.type) ? r6.X.PostSidebar : r6.X.ThreadSidebar,
                 maxWidth: c,
                 capturePointer: n?.type === er.rbe.GUILD_APP,
                 onWidthChange: this.handleThreadSidebarResize,
@@ -5903,7 +5903,7 @@ let dj = (0, ep.A)(db),
                 return e?.data.layoutMode === nr.y0.FOCUSED && e.intent === nr.sV.MAIN;
             }),
             { welcomeModalChannelId: H } = (0, h.zy)(),
-            B = (0, A.bG)([t9.A], () => null != f && t9.A.isLurking(f.guild_id), [f]),
+            B = (0, A.bG)([t6.A], () => null != f && t6.A.isLurking(f.guild_id), [f]),
             V = (0, A.bG)([r0.A], () => r0.A.hasSeen(f?.guild_id, B), [f, B]),
             W = (0, A.bG)(
                 [nc.A, eb.Ay],
@@ -6002,7 +6002,7 @@ let dj = (0, ep.A)(db),
         }),
             s.useEffect(() => {
                 let { channel: e, inCurrentVoiceChannel: n } = eh.current;
-                null != r && null != e && eo && e.id === r && !n && ((0, l6.av)(e), d(null));
+                null != r && null != e && eo && e.id === r && !n && ((0, l9.av)(e), d(null));
             }, [r, eo]);
         let eA = (0, ef.cI)(f),
             em = null != f && f.isPrivate(),
