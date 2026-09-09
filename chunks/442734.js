@@ -21,7 +21,7 @@ function I(t) {
         L = (0, o.r)(i.A.colors.BACKGROUND_BRAND).hex(),
         y = (0, u.cb)(f, 0.5),
         N = (0, u.cb)(O, 0.5),
-        g = I === C.MA.CREPE,
+        g = I === C.MA.XBOX_GAME_PASS,
         S = (0, C.B9)(I);
     if (null == T) return null;
     let m = S

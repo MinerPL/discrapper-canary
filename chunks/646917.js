@@ -10,8 +10,8 @@ function o(e) {
     return null == e
         ? s.MA.INELIGIBLE
         : a.Ay.canUseMoreQuestOrbs(e)
-          ? (0, s._z)(e) === s.Et.CREPE
-              ? s.MA.CREPE
+          ? (0, s._z)(e) === s.Et.XBOX_GAME_PASS
+              ? s.MA.XBOX_GAME_PASS
               : s.MA.NITRO
           : e?.isFractionalPremiumWithNoStandardSub()
             ? s.MA.INELIGIBLE

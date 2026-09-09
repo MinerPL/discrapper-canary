@@ -76,7 +76,7 @@ function A(e) {
     let { enabled: t } = m.useConfig({ location: e }),
         n = (0, l.z)();
     return {
-        shouldShowBonusOrbsUX: n !== u.MA.INELIGIBLE && n !== u.MA.CREPE && t,
+        shouldShowBonusOrbsUX: n !== u.MA.INELIGIBLE && n !== u.MA.XBOX_GAME_PASS && t,
         multiplier: o.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
