@@ -7886,8 +7886,10 @@ function c9(e) {
             analyticsLocations: n,
             analyticsLocation: tL.A.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE,
         }),
-        l = (0, h.bG)([oU.A], () => oU.A.hasFetchedPaymentSources);
-    return null != i && l ? (0, A.jsx)(cq.A, { subscription: t, currentInvoicePreview: i }) : (0, A.jsx)(a8.y, {});
+        [l, s] = (0, h.yK)([oU.A], () => [oU.A.hasFetchedPaymentSources, oU.A.paymentSourceFetchError]);
+    return null != i && (l || s)
+        ? (0, A.jsx)(cq.A, { subscription: t, currentInvoicePreview: i })
+        : (0, A.jsx)(a8.y, {});
 }
 function ge(e) {
     let {
