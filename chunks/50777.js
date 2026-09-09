@@ -187,10 +187,10 @@ function z(l) {
           ? (0, t.jsxs)("div", {
                 className: M.kL,
                 children: [
-                    (0, t.jsx)(B.A, {
+                    (0, t.jsx)(B.Ay, {
                         className: M.Nr,
                         skuId: n,
-                        variant: B.s.EMBEDDED,
+                        variant: B.s6.EMBEDDED,
                         onClick: la,
                         analyticsLocations: q,
                     }),

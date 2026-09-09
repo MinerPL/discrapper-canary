@@ -1,8 +1,12 @@
-_.exports = {
+e.exports = {
     uW: "section__04bc3",
     Gf: "sectionTitle__04bc3",
     kL: "container__04bc3",
+    nV: "skeletonContainer__04bc3",
+    _C: "guildIconContainer__04bc3",
+    QV: "skeletonGuildIcon__04bc3",
     $f: "guildIcon__04bc3",
+    EQ: "guildIconPlaceholder__04bc3",
     hQ: "contentContainer__04bc3",
     To: "iconTextContainerCondensed__04bc3",
     yj: "textContainerCondensed__04bc3",
@@ -12,5 +16,14 @@ _.exports = {
     jk: "pillIconTotal__04bc3 pillIcon__04bc3",
     _o: "pillIconOnline__04bc3 pillIcon__04bc3",
     iR: "memberContainer__04bc3",
+    P2: "skeletonMemberContainer__04bc3",
     Tb: "memberCountContainer__04bc3",
+    xf: "skeletonMemberCount__04bc3",
+    dU: "skeletonSectionTitle__04bc3",
+    Yv: "skeletonTextContainer__04bc3",
+    Ag: "skeletonGuildName__04bc3",
+    bL: "skeletonVerifiedBadge__04bc3",
+    zl: "skeletonGuildInfo__04bc3",
+    bA: "skeletonTextLine__04bc3",
+    Pg: "skeletonMemberDot__04bc3",
 };

@@ -1,3 +1,59 @@
+.placeholder_ca96ab {
+    background-color: var(--background-mod-strong)
+}
+
+.text_ca96ab {
+    border-radius: var(--radius-xs)
+}
+
+.subtleText_ca96ab {
+    background-color: var(--icon-muted);
+    opacity: .1
+}
+
+.textSm_ca96ab {
+    height: var(--size-12)
+}
+
+.textMd_ca96ab {
+    height: var(--size-16)
+}
+
+.textLg_ca96ab {
+    height: var(--size-20)
+}
+
+.button_ca96ab {
+    border-radius: var(--radius-sm)
+}
+
+.buttonSm_ca96ab {
+    flex-shrink: 0;
+    height: var(--size-32);
+    width: 92px
+}
+
+.buttonMd_ca96ab {
+    height: 40px;
+    width: 100%
+}
+
+.full-motion .placeholder_ca96ab {
+    animation: game-profile-skeleton-pulse_ca96ab 1.4s ease-in-out infinite alternate;
+    animation-delay: var(--custom-game-profile-skeleton-animation-delay, 0s);
+    animation-fill-mode: backwards
+}
+
+@keyframes game-profile-skeleton-pulse_ca96ab {
+    0% {
+        opacity: .5
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .container__7b1c2 {
     display: flex;
     flex-direction: column;
@@ -7,9 +63,39 @@
 .headingContainer__7b1c2 {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    gap: var(--space-8);
     height: var(--size-32);
     justify-content: space-between
+}
+
+.skeletonTitle__7b1c2 {
+    border-radius: var(--radius-xs);
+    height: var(--size-24);
+    max-width: 100%;
+    min-width: 0
+}
+
+.row_c7fff3 {
+    display: flex;
+    gap: var(--space-md);
+    overflow: hidden;
+    width: 100%
+}
+
+.row_c7fff3>:nth-child(2) {
+    --custom-game-profile-skeleton-animation-delay: 150ms
+}
+
+.row_c7fff3>:nth-child(3) {
+    --custom-game-profile-skeleton-animation-delay: 300ms
+}
+
+.row_c7fff3>:nth-child(4) {
+    --custom-game-profile-skeleton-animation-delay: 450ms
+}
+
+.gap16_c7fff3 {
+    gap: var(--space-16)
 }
 
 .heading-sm\/normal__250d5 {
@@ -2060,41 +2146,121 @@
 }
 
 .mainCardBody__250d5 {
-    display: flex;
     flex: 1;
     flex-direction: column;
     gap: var(--space-4);
-    min-width: 0;
-    overflow: hidden;
     padding-block: 0;
     padding-inline-end: var(--space-sm);
     padding-inline-start: 0
 }
 
-.loadingContainer__250d5 {
-    align-items: center;
+.mainCardBody__250d5,
+.skeletonCard__250d5,
+.smallCard__250d5 {
     display: flex;
-    height: 200px;
-    justify-content: center
+    min-width: 0;
+    overflow: hidden
 }
 
+.skeletonCard__250d5,
 .smallCard__250d5 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
     flex-direction: column;
     flex-shrink: 0;
     gap: var(--space-xs);
     margin-block: var(--space-8);
-    max-height: 328px;
-    min-width: 0;
-    overflow: hidden;
     padding: var(--space-sm);
-    position: relative;
     width: calc(44% - var(--space-sm)/2)
+}
+
+.skeletonCard__250d5 {
+    --custom-announcement-skeleton-title-width: 84%;
+    --custom-announcement-skeleton-description-width: 64%;
+    --custom-announcement-skeleton-secondary-description-width: 76%;
+    height: 328px
+}
+
+.skeletonCard__250d5:nth-child(2) {
+    --custom-announcement-skeleton-title-width: 72%;
+    --custom-announcement-skeleton-description-width: 88%;
+    --custom-announcement-skeleton-secondary-description-width: 60%
+}
+
+.skeletonCard__250d5:nth-child(3) {
+    --custom-announcement-skeleton-title-width: 92%;
+    --custom-announcement-skeleton-description-width: 72%;
+    --custom-announcement-skeleton-secondary-description-width: 52%
+}
+
+.skeletonCardImage__250d5,
+.smallCardImageContainer__250d5 {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0
+}
+
+.skeletonCardImage__250d5 {
+    width: 100%
+}
+
+.skeletonCardBody__250d5,
+.smallCardBody__250d5 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.skeletonCardTitle__250d5 {
+    width: var(--custom-announcement-skeleton-title-width)
+}
+
+.skeletonCardDescription__250d5 {
+    width: var(--custom-announcement-skeleton-description-width)
+}
+
+.skeletonCardDescriptionSecondary__250d5 {
+    width: var(--custom-announcement-skeleton-secondary-description-width)
+}
+
+.metadataRow__250d5,
+.skeletonCardMetadata__250d5 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    margin-top: auto
+}
+
+.skeletonCardMetadata__250d5 {
+    overflow: hidden
+}
+
+.skeletonCardDate__250d5 {
+    flex-shrink: 0
+}
+
+.skeletonCardReaction__250d5 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: var(--space-6)
+}
+
+.skeletonCardReactionCircle__250d5 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: var(--size-16);
+    width: var(--size-16)
+}
+
+.smallCard__250d5 {
+    cursor: pointer;
+    max-height: 328px;
+    position: relative
 }
 
 .full-motion .smallCard__250d5 {
@@ -2116,20 +2282,12 @@
 }
 
 .smallCardImageContainer__250d5 {
-    aspect-ratio: 16/9;
     background: var(--background-base-lower);
-    border-radius: var(--radius-sm);
-    flex-shrink: 0;
     overflow: hidden;
     position: relative
 }
 
 .smallCardBody__250d5 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0;
     overflow: hidden
 }
 
@@ -2234,19 +2392,13 @@
 }
 
 .metadataRow__250d5 {
-    flex-shrink: 0;
-    gap: var(--space-8);
-    margin-top: auto
+    flex-shrink: 0
 }
 
-.metadataRow__250d5,
 .reactionInfo__250d5 {
     align-items: center;
-    display: flex
-}
-
-.reactionInfo__250d5 {
     color: var(--text-muted);
+    display: flex;
     gap: var(--space-4)
 }
 
@@ -2494,31 +2646,52 @@
     padding-inline: var(--space-8)
 }
 
-.container__04bc3 {
+.container__04bc3,
+.skeletonContainer__04bc3 {
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg)
 }
 
-.guildIcon__04bc3 {
-    border: var(--size-4) solid var(--background-surface-high);
-    border-radius: var(--radius-md);
+.guildIconContainer__04bc3,
+.skeletonGuildIcon__04bc3 {
+    flex-shrink: 0;
     height: var(--size-48);
     width: var(--size-48)
 }
 
-.contentContainer__04bc3 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16);
-    padding-inline: var(--space-16);
-    padding-bottom: var(--space-16);
-    padding-top: var(--space-16)
+.guildIcon__04bc3,
+.skeletonGuildIcon__04bc3 {
+    border: var(--size-4) solid var(--background-surface-high);
+    border-radius: var(--radius-md);
+    box-sizing: border-box
 }
 
+.guildIconContainer__04bc3 {
+    position: relative
+}
+
+.guildIconPlaceholder__04bc3 {
+    border-radius: var(--radius-md);
+    inset: 0;
+    position: absolute
+}
+
+.guildIcon__04bc3 {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.contentContainer__04bc3 {
+    flex-direction: column;
+    padding: var(--space-16)
+}
+
+.contentContainer__04bc3,
 .iconTextContainerCondensed__04bc3 {
     display: flex;
-    flex-direction: row;
     gap: var(--space-16)
 }
 
@@ -2531,7 +2704,6 @@
 .guildNameContainer__04bc3 {
     align-items: center;
     display: flex;
-    flex-direction: row;
     gap: var(--space-4)
 }
 
@@ -2557,19 +2729,64 @@
     background-color: var(--icon-feedback-positive)
 }
 
-.memberContainer__04bc3 {
+.memberContainer__04bc3,
+.skeletonMemberContainer__04bc3 {
+    align-items: center;
+    display: flex;
     gap: var(--space-16)
 }
 
-.memberContainer__04bc3,
-.memberCountContainer__04bc3 {
+.memberCountContainer__04bc3,
+.skeletonMemberCount__04bc3 {
     align-items: center;
     display: flex;
-    flex-direction: row
-}
-
-.memberCountContainer__04bc3 {
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=8bff072f3eef98c8.css.map*/
+.skeletonSectionTitle__04bc3 {
+    margin-inline: var(--space-8);
+    max-width: var(--size-80);
+    padding-block-end: 2px
+}
+
+.skeletonTextContainer__04bc3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.skeletonGuildName__04bc3 {
+    margin-block-end: 2px
+}
+
+.skeletonVerifiedBadge__04bc3 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: var(--size-16);
+    width: var(--size-16)
+}
+
+.skeletonGuildInfo__04bc3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs)
+}
+
+.skeletonTextLine__04bc3 {
+    margin-block: 2px
+}
+
+.skeletonMemberContainer__04bc3 {
+    margin-top: 2px
+}
+
+.skeletonMemberDot__04bc3 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 10px;
+    width: 10px
+}
+
+/*# sourceMappingURL=348af08e4c082bbf.css.map*/

@@ -201,10 +201,10 @@ function ea(e) {
                       null != t &&
                           (0, n.jsx)("div", {
                               className: es.Ui,
-                              children: (0, n.jsx)(en.A, {
+                              children: (0, n.jsx)(en.Ay, {
                                   positionInSection: 0,
                                   skuId: t,
-                                  variant: en.s.MEDIUM,
+                                  variant: en.s6.MEDIUM,
                                   analyticsLocations: a,
                               }),
                           }),
@@ -224,19 +224,19 @@ function er(e) {
 var eo = t(259745),
     ed = t(504082);
 function ec(e) {
-    let { className: l, skuIds: t, variant: s = en.s.SMALL, analyticsLocations: a } = e;
+    let { className: l, skuIds: t, variant: s = en.s6.SMALL, analyticsLocations: a } = e;
     return null == t || 0 === t.length
         ? null
         : (0, n.jsx)("div", {
-              className: i()(l, ed.kL, ed.$2, { [ed.Wc]: s === en.s.MEDIUM }),
+              className: i()(l, ed.kL, ed.$2, { [ed.Wc]: s === en.s6.MEDIUM }),
               children: t.map((e, l) =>
-                  (0, n.jsx)(en.A, { positionInSection: l, skuId: e, variant: s, analyticsLocations: a }, `${e}-${l}`),
+                  (0, n.jsx)(en.Ay, { positionInSection: l, skuId: e, variant: s, analyticsLocations: a }, `${e}-${l}`),
               ),
           });
 }
 var eu = t(534125);
 function ef(e) {
-    let { analyticsSectionId: l, sectionTitle: t, skuIds: a, variant: i = en.s.SMALL } = e,
+    let { analyticsSectionId: l, sectionTitle: t, skuIds: a, variant: i = en.s6.SMALL } = e,
         r = s.useMemo(() => ({ pageSection: l, pageSectionTitle: t }), [l, t]);
     if (null == a || 0 === a.length) return null;
     let o = null != t && t.length > 0;
@@ -373,7 +373,7 @@ function ex(e) {
                           (0, n.jsx)(ef, {
                               analyticsSectionId: "featured-top-section",
                               skuIds: h ? void 0 : m,
-                              variant: en.s.MEDIUM,
+                              variant: en.s6.MEDIUM,
                           }),
                           (0, n.jsx)(ef, { analyticsSectionId: "non-featured-top-section", skuIds: x }),
                           i.sections?.map((e, l) =>

@@ -319,25 +319,25 @@ let U = {
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === L.s.EMBEDDED
+        return t === L.s6.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
                   children: (0, o.jsx)(w.A, { applicationId: x, guildId: A, skuId: v, channel: O }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === L.s.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(L.A, { skuId: v, variant: t, onClick: f }),
+                  style: { maxWidth: t === L.s6.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(L.Ay, { skuId: v, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: L.s.SMALL,
+            defaultValue: L.s6.SMALL,
             options: [
-                { label: "Small", value: L.s.SMALL },
-                { label: "Medium", value: L.s.MEDIUM },
-                { label: "Embedded", value: L.s.EMBEDDED },
+                { label: "Small", value: L.s6.SMALL },
+                { label: "Medium", value: L.s6.MEDIUM },
+                { label: "Embedded", value: L.s6.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -1089,7 +1089,7 @@ let en = {
                             }, []);
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 300, padding: 16 },
-                                children: (0, o.jsx)(L.A, { skuId: v, variant: L.s.MEDIUM, onClick: r }),
+                                children: (0, o.jsx)(L.Ay, { skuId: v, variant: L.s6.MEDIUM, onClick: r }),
                             });
                         },
                         controls: {

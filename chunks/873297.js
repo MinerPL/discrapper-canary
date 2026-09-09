@@ -21,8 +21,8 @@ var t = l(477900),
     v = l(317560),
     A = l(467884),
     E = l(435658),
-    b = l(67480),
-    y = l(174459),
+    y = l(67480),
+    b = l(174459),
     I = l(371794),
     N = l(440938),
     S = l(652215),
@@ -59,15 +59,15 @@ let R = function (e) {
             n.useEffect(() => {
                 for (let e of M) (0, _.Pp)(O, e);
             }, [M, O]),
-            (l = (0, h.bG)([b.A], () => !M.some((e) => b.A.isFetching(e)) && M.some((e) => b.A.didFetchingSkuFail(e)), [
+            (l = (0, h.bG)([y.A], () => !M.some((e) => y.A.isFetching(e)) && M.some((e) => y.A.didFetchingSkuFail(e)), [
                 M,
             ])),
             n.useEffect(() => {
                 l && (0, _.ap)(O);
             }, [l, O]),
-            (a = (0, h.yK)([b.A, j.A], () => {
-                if (M.some((e) => b.A.isFetching(e))) return s.current;
-                let e = M.filter((e) => null != b.A.get(e));
+            (a = (0, h.yK)([y.A, j.A], () => {
+                if (M.some((e) => y.A.isFetching(e))) return s.current;
+                let e = M.filter((e) => null != y.A.get(e));
                 if (e.length >= M.length) return M;
                 let l = j.A.getStorefrontDataForApplicationId(O);
                 if (null == l || "loading" === l.state) return e;
@@ -75,7 +75,7 @@ let R = function (e) {
                 return [
                     ...e,
                     ...(null != l.storefront
-                        ? (0, k.jd)(l.storefront).filter((e) => !t.has(e) && null != b.A.get(e))
+                        ? (0, k.jd)(l.storefront).filter((e) => !t.has(e) && null != y.A.get(e))
                         : []),
                 ].slice(0, M.length);
             }, [O, M])),
@@ -92,7 +92,7 @@ let R = function (e) {
         X = n.useMemo(() => ({ pageSection: z }), [z]),
         Z = n.useCallback(
             (e, s) => {
-                y.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                b.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: Y?.sessionId,
                     page_type: D,
                     page_category: Y?.pageCategory,
@@ -129,7 +129,7 @@ let R = function (e) {
                         ? (W.current = setTimeout(() => {
                               (Q.current = !0),
                                   (W.current = null),
-                                  y.default.track(S.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                                  b.default.track(S.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: Y?.sessionId,
                                       page_type: D,
                                       page_category: Y?.pageCategory,
@@ -222,7 +222,7 @@ let R = function (e) {
                                                       "div",
                                                       {
                                                           className: w.Ko,
-                                                          children: (0, t.jsx)(A.A, {
+                                                          children: (0, t.jsx)(A.Ay, {
                                                               skuId: e,
                                                               positionInSection: s,
                                                               onClick: en,

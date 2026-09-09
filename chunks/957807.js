@@ -1,4 +1,4 @@
-n.d(t, { A: () => I, U: () => h });
+n.d(t, { Ay: () => p, UT: () => f, rG: () => A });
 var i = n(582128),
     r = n(505779),
     a = n(17928),
@@ -17,44 +17,56 @@ function E(e) {
         n = t?.url.split("/").pop();
     return null != n && "" !== n ? n : null;
 }
-let A = (0, a.UT)(c.A, {
+function A(e) {
+    return (
+        e?.websites?.some((e) => {
+            let { category: t } = e;
+            return t === r.V.DISCORD;
+        }) ?? !1
+    );
+}
+function h(e) {
+    return !(
+        null == e ||
+        e.state === _.elq.RESOLVING ||
+        e.state === _.elq.EXPIRED ||
+        e.state === _.elq.BANNED ||
+        (null != e.expires_at && new Date(e.expires_at).getTime() <= Date.now())
+    );
+}
+let I = (0, a.UT)(c.A, {
     getQueryId: _.fic.GAME_PROFILE_INVITE,
     staleAfter: 5 * u.A.Seconds.MINUTE,
     failureStaleAfter: 5 * u.A.Seconds.MINUTE,
     get: (e) => {
         if (null == e) return null;
         let t = c.A.getInvite(e);
-        return null == t ||
-            t.state === _.elq.RESOLVING ||
-            t.state === _.elq.EXPIRED ||
-            t.state === _.elq.BANNED ||
-            (null != t.expires_at && new Date(t.expires_at).getTime() <= Date.now())
-            ? null
-            : t;
+        return h(t) ? t : null;
     },
     load: async (e) => {
-        if (null == e) return;
-        let { invite: t } = await s.Ay.resolveInvite(e, "game_profile");
-        if (null == t) throw Error(`Failed to resolve game profile invite: ${e}`);
+        if (null != e && (await s.Ay.resolveInvite(e, "game_profile"), !h(c.A.getInvite(e))))
+            throw Error(`Failed to resolve game profile invite: ${e}`);
     },
 });
-function h(e) {
+function f(e) {
     o.I.fetchMany([e]).then(() => {
         let t = E(l.A.getGame(e));
-        null != t && A.fetchMany([t]);
+        null != t && I.fetchMany([t]);
     });
 }
-let I = function (e, t) {
+let p = function (e, t) {
     let n = i.useRef(t);
     i.useEffect(() => {
         n.current = t;
     }, [t]);
-    let { data: r } = A(E(e)),
-        s = (0, a.bG)([d.A], () => r?.guild?.id != null && d.A.isMember(r?.guild?.id));
+    let r = E(e),
+        { data: s, error: l, isLoading: o } = I(r),
+        c = null != r && null == s && (o || null == l),
+        u = (0, a.bG)([d.A], () => s?.guild?.id != null && d.A.isMember(s?.guild?.id));
     return (
         i.useEffect(() => {
-            null != r && n.current?.(r);
-        }, [r]),
-        { invite: r, isMember: s }
+            null != s && n.current?.(s);
+        }, [s]),
+        { invite: s, isMember: u, isResolving: c }
     );
 };

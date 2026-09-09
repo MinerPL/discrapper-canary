@@ -23,7 +23,7 @@ let _ = {
                 r.gameId === t,
                 "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
             ),
-            (0, o.U)(t),
+            (0, o.UT)(t),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -130,7 +130,7 @@ let _ = {
                         n.e("996907"),
                         n.e("960175"),
                         n.e("377989"),
-                        n.e("708005"),
+                        n.e("102165"),
                         n.e("102075"),
                         n.e("724042"),
                         n.e("106623"),
@@ -395,7 +395,7 @@ let _ = {
                         n.e("53374"),
                         n.e("710638"),
                         n.e("956191"),
-                        n.e("128534"),
+                        n.e("548974"),
                         n.e("631825"),
                         n.e("536200"),
                         n.e("696443"),
@@ -467,7 +467,7 @@ let _ = {
                         n.e("455924"),
                         n.e("237834"),
                         n.e("88160"),
-                        n.e("813528"),
+                        n.e("336483"),
                         n.e("948720"),
                         n.e("177104"),
                         n.e("729963"),
@@ -558,10 +558,10 @@ let _ = {
                         n.e("631951"),
                         n.e("921041"),
                         n.e("238672"),
-                        n.e("795732"),
+                        n.e("576375"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 92287));
+                    ]).then(n.bind(n, 233450));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
@@ -676,7 +676,7 @@ let _ = {
                         n.e("996907"),
                         n.e("960175"),
                         n.e("377989"),
-                        n.e("708005"),
+                        n.e("102165"),
                         n.e("102075"),
                         n.e("724042"),
                         n.e("106623"),
@@ -941,7 +941,7 @@ let _ = {
                         n.e("53374"),
                         n.e("710638"),
                         n.e("956191"),
-                        n.e("128534"),
+                        n.e("548974"),
                         n.e("631825"),
                         n.e("536200"),
                         n.e("696443"),
@@ -1013,7 +1013,7 @@ let _ = {
                         n.e("455924"),
                         n.e("237834"),
                         n.e("88160"),
-                        n.e("813528"),
+                        n.e("336483"),
                         n.e("948720"),
                         n.e("177104"),
                         n.e("729963"),
@@ -1104,10 +1104,10 @@ let _ = {
                         n.e("631951"),
                         n.e("921041"),
                         n.e("238672"),
-                        n.e("795732"),
+                        n.e("576375"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 92287));
+                    ]).then(n.bind(n, 233450));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n }, t);
                 },
                 { modalKey: d },

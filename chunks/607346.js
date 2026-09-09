@@ -1,7 +1,8 @@
-_.exports = {
+e.exports = {
     XG: "scroller_a02225",
     Nr: "card_a02225",
+    aZ: "skeletonArtwork_a02225",
     xe: "coverArt_a02225",
-    nn: "loadingArtwork_a02225",
-    U6: "pulse_a02225",
+    uz: "skeletonArtworkOverlay_a02225",
+    Lg: "skeletonArtworkForeground_a02225",
 };

@@ -377,15 +377,20 @@
     --custom-cover-width: calc((100% - (var(--custom-similar-games-per-page, 5) - 1)*var(--space-md))/var(--custom-similar-games-per-page, 5))
 }
 
-.card_a02225 {
+.card_a02225,
+.skeletonArtwork_a02225 {
     aspect-ratio: 3/4;
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-low);
-    cursor: pointer;
     flex-shrink: 0;
     min-width: var(--custom-cover-min-width, 0);
-    overflow: hidden;
     width: var(--custom-cover-width)
+}
+
+.card_a02225 {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative
 }
 
 .coverArt_a02225 {
@@ -406,28 +411,18 @@
     transform: scale(1.1)
 }
 
-.loadingArtwork_a02225 {
-    aspect-ratio: 3/4;
-    background-color: var(--background-mod-strong);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-low);
-    flex-shrink: 0;
-    min-width: var(--custom-cover-min-width, 0);
-    width: var(--custom-cover-width)
+.skeletonArtworkOverlay_a02225 {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
 }
 
-.full-motion .loadingArtwork_a02225 {
-    animation: pulse_a02225 1.4s ease-in-out infinite alternate
-}
-
-@keyframes pulse_a02225 {
-    0% {
-        opacity: 1
-    }
-
-    to {
-        opacity: .5
-    }
+.skeletonArtworkForeground_a02225 {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%
 }
 
 .container_d7f600 {
@@ -608,4 +603,4 @@
     padding: var(--space-24)
 }
 
-/*# sourceMappingURL=226956.5c460e03242b8888.css.map*/
+/*# sourceMappingURL=226956.027f23b71c1690e1.css.map*/

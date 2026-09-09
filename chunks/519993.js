@@ -8,4 +8,9 @@ e.exports = {
     my: "avatar_f5cf99",
     Vi: "orbAssetContainer_f5cf99",
     LG: "orbAssetBackdropVideo_f5cf99",
+    J9: "skeletonPlaceholder_f5cf99",
+    u0: "account-link-prompt-skeleton-pulse_f5cf99",
+    Js: "skeletonGameIcon_f5cf99",
+    zw: "skeletonAvatar_f5cf99",
+    uq: "skeletonEllipse_f5cf99",
 };
