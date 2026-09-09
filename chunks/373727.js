@@ -74,6 +74,9 @@ class C extends a.Ay.Store {
     isBusy() {
         return I.size > 0 || p;
     }
+    isInCheckout() {
+        return !1;
+    }
     isPurchasingProduct(e) {
         return I.has(e);
     }
