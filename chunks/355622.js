@@ -119,7 +119,7 @@ let c = {
         permissions: { requireSendMessages: !1 },
         submit: { useDisabledStylesOnSubmit: !0, allowEmptyMessage: !0 },
         autocomplete: { alwaysUseLayer: !0, small: !0 },
-        markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0 },
+        markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0, disableMentions: !0, disableLinks: !0 },
         showCharacterCount: !0,
         layout: 1,
     },

@@ -1,4 +1,4 @@
-n.d(t, { A: () => ex });
+n.d(t, { A: () => eA });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -176,33 +176,34 @@ var eo = n(891031),
     eu = n(106972),
     ec = n(881013);
 let ed = {
-    strong: eo.bold,
-    em: eo.italics,
-    u: eo.underline,
-    s: eo.strikethrough,
-    inlineCode: eo.inlineCode,
-    link: eo.fakeLink,
-    url: eo.fakeLink,
-    autolink: eo.fakeLink,
-    silentPrefix: eo.silentPrefix,
-    spoiler: r()(ec.ur, ec.F0, ec.kx, eo.spoiler),
-    staticRouteLink: eo.fakeLink,
-    syntaxBefore: eo.syntaxBefore,
-    syntaxAfter: eo.syntaxAfter,
-    codeBlockText: eo.codeBlockText,
-    codeBlockSyntax: eo.codeBlockSyntax,
-    codeBlockLang: eo.codeBlockLang,
-    subtext: eo.subtext,
-};
-var eh = n(165648);
-function em(e) {
+        strong: eo.bold,
+        em: eo.italics,
+        u: eo.underline,
+        s: eo.strikethrough,
+        inlineCode: eo.inlineCode,
+        link: eo.fakeLink,
+        url: eo.fakeLink,
+        autolink: eo.fakeLink,
+        silentPrefix: eo.silentPrefix,
+        spoiler: r()(ec.ur, ec.F0, ec.kx, eo.spoiler),
+        staticRouteLink: eo.fakeLink,
+        syntaxBefore: eo.syntaxBefore,
+        syntaxAfter: eo.syntaxAfter,
+        codeBlockText: eo.codeBlockText,
+        codeBlockSyntax: eo.codeBlockSyntax,
+        codeBlockLang: eo.codeBlockLang,
+        subtext: eo.subtext,
+    },
+    eh = new Set(["link", "url", "autolink"]);
+var em = n(165648);
+function ef(e) {
     let { className: t, attributes: n, children: i } = e,
         s = r()(eu.S0, eu.Cj, t);
     return (0, l.jsx)("span", { ...n, className: s, contentEditable: !1, children: i });
 }
-var ef = n(652215),
-    ep = n(809067);
-class eg extends i.PureComponent {
+var ep = n(652215),
+    eg = n(809067);
+class ex extends i.PureComponent {
     containerRef = i.createRef();
     state;
     constructor(e) {
@@ -267,78 +268,78 @@ class eg extends i.PureComponent {
                             });
                         return (0, l.jsx)("div", { ...s, children: a });
                     case "blockQuote": {
-                        let e = r()(eh.h, eh.MN);
+                        let e = r()(em.h, em.MN);
                         return (0, l.jsxs)("div", {
                             ...s,
                             className: e,
                             children: [
-                                (0, l.jsx)("span", { contentEditable: !1, className: eh.r }),
+                                (0, l.jsx)("span", { contentEditable: !1, className: em.r }),
                                 (0, l.jsx)("blockquote", { children: a }),
                             ],
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(X, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(Q, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(C.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(es, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(er, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(em, {
+                        return (0, l.jsxs)(ef, {
                             attributes: s,
                             className: c,
                             children: [(0, l.jsx)(ea, { id: o.gameId }), a],
@@ -357,12 +358,13 @@ class eg extends i.PureComponent {
                 (function (e, t) {
                     let n,
                         { attributes: i, children: s, leaf: a, text: o } = t,
-                        u = !1,
-                        [c] = A.VW.node(e, A.PW.parent(A.VW.findPath(e, o)));
-                    switch (A.VW.isEditor(c) ? "editor" : c.type) {
+                        u = e.chatInputType.markdown?.disableLinks === !0,
+                        c = !1,
+                        [d] = A.VW.node(e, A.PW.parent(A.VW.findPath(e, o)));
+                    switch (A.VW.isEditor(d) ? "editor" : d.type) {
                         case "line":
                         case "blockQuote": {
-                            u = void 0;
+                            c = void 0;
                             let e = Object.entries(a)
                                 .filter((e) => {
                                     let [t] = e;
@@ -373,10 +375,11 @@ class eg extends i.PureComponent {
                                     if ("hljsTypes" === t) return n;
                                     if (!0 === n) {
                                         if (
-                                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (u = !1),
+                                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (c = !1),
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
                                             return [eo[t]];
+                                        if (u && eh.has(t)) return [];
                                         if (t in ed) return [ed[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
@@ -388,7 +391,7 @@ class eg extends i.PureComponent {
                     }
                     return (
                         (n = r()(n, { [eu.BI]: "" === o.text })),
-                        (0, l.jsx)("span", { ...i, className: n, spellCheck: u, children: s })
+                        (0, l.jsx)("span", { ...i, className: n, spellCheck: c, children: s })
                     );
                 })(t, e);
         return null != a ? a : (0, l.jsx)("span", { ...i, children: s });
@@ -577,7 +580,7 @@ class eg extends i.PureComponent {
                 },
                 {
                     align: null != i && null != s && i < s / 2 ? "top" : "bottom",
-                    enableSpellCheck: r === ef.BRT.APP,
+                    enableSpellCheck: r === ep.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -618,7 +621,7 @@ class eg extends i.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, l.jsx)("div", {
-                          className: r()(ep.q, t),
+                          className: r()(eg.q, t),
                           "aria-hidden": !0,
                           "data-slate-placeholder": "true",
                           children: o,
@@ -629,7 +632,7 @@ class eg extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, l.jsx)(a.Fo, {
                         ...E,
-                        className: r()(eh.PT, ep.E, t),
+                        className: r()(em.PT, eg.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -653,4 +656,4 @@ class eg extends i.PureComponent {
         });
     }
 }
-let ex = eg;
+let eA = ex;
