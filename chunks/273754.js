@@ -46,7 +46,7 @@ let R = { width: 500, height: j.$V },
             Promise.all([
                 n.e("324732"),
                 n.e("665115"),
-                n.e("585461"),
+                n.e("403382"),
                 n.e("207322"),
                 n.e("622936"),
                 n.e("216947"),
@@ -514,8 +514,8 @@ var eL = n(931664),
     e1 = n(176781),
     e2 = n(463930),
     e3 = n(935063),
-    e5 = n(73392),
-    e8 = n(650019),
+    e8 = n(73392),
+    e5 = n(650019),
     e6 = n(763754),
     e7 = n(967144),
     e4 = n(118517),
@@ -588,8 +588,8 @@ function to(e) {
             displayNameStyles: E,
         } = (0, e6.Ay)(u),
         I = (0, e7.gn)(f, C, x),
-        y = (0, e5.a)({ displayNameStyles: E }),
-        S = (0, e8.A)(h, u.attachments),
+        y = (0, e8.a)({ displayNameStyles: E }),
+        S = (0, e5.A)(h, u.attachments),
         v =
             ((t = o.id),
             (n = u.id),
@@ -1067,8 +1067,8 @@ var t0 = n(575293),
     t1 = n(536637),
     t2 = n.n(t1),
     t3 = n(31717),
-    t5 = n(551640),
-    t8 = n(970244),
+    t8 = n(551640),
+    t5 = n(970244),
     t6 = n(29621);
 function t7(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
@@ -1084,10 +1084,10 @@ function t7(e) {
                         className: t6.a3,
                         "aria-label": T.intl.string(T.t.SBcdAN),
                         onClick: function () {
-                            (0, t8.e0)({
+                            (0, t5.e0)({
                                 channel: t,
                                 defaultValue: t2()(i),
-                                entryPoint: t5.t.COMPOSER_BAR,
+                                entryPoint: t8.t.COMPOSER_BAR,
                                 isEditing: !0,
                             });
                         },
@@ -1619,8 +1619,8 @@ let nP = i.memo(
             e1 = b.toolbarType === e$.O1.STATIC,
             e2 = !eP.D_.useSetting() && !(0, eq.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !b.commands?.enabled || !R || "/" !== a,
-            e5 = (0, ey.A)(),
-            { fontSize: e8 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
+            e8 = (0, ey.A)(),
+            { fontSize: e5 } = (0, m.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
             e6 = (0, m.bG)([eF.A], () => eF.A.isEnabled());
         nT(b, ez, T.id);
         let { eventEmitter: e7, handleEditorSelectionChanged: e4 } = nb(eE, a, o),
@@ -1816,8 +1816,8 @@ let nP = i.memo(
             t1 = b.layout === e$.wt.INLINE,
             t2 = b.layout === e$.wt.FLUSH,
             t3 = (0, l.jsx)("div", { ref: eC, className: t4.BW }),
-            t5 = tk ? (0, l.jsx)(M, { align: "right", positionTargetRef: eC, channel: T }) : null,
-            t8 =
+            t8 = tk ? (0, l.jsx)(M, { align: "right", positionTargetRef: eC, channel: T }) : null,
+            t5 =
                 null != P
                     ? P()
                     : (0, l.jsx)(ne.A, {
@@ -1887,7 +1887,7 @@ let nP = i.memo(
                                             }),
                                             onMouseDown: tR,
                                             children: [
-                                                t5,
+                                                t8,
                                                 tG,
                                                 (0, l.jsx)(p.vN, {
                                                     ringTarget: ec,
@@ -1908,7 +1908,7 @@ let nP = i.memo(
                                                         type: b,
                                                         canPasteFiles: eY,
                                                         uploadPromptCharacterCount: ea.CS1,
-                                                        maxCharacterCount: Y ?? e5,
+                                                        maxCharacterCount: Y ?? e8,
                                                         allowNewLines: J,
                                                         "aria-describedby": tX,
                                                         onChange: te,
@@ -1926,7 +1926,7 @@ let nP = i.memo(
                                                         onMaybeShowAutocomplete: ts,
                                                         onHideAutocomplete: ta,
                                                         promptToUpload: W,
-                                                        fontSize: e8,
+                                                        fontSize: e5,
                                                         spellcheckEnabled: e6,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
@@ -1941,7 +1941,7 @@ let nP = i.memo(
                                                         showValueWhenDisabled: eo,
                                                     }),
                                                 }),
-                                                t8,
+                                                t5,
                                                 t3,
                                             ],
                                         }),

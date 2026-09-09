@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y, Ce: () => I, c$: () => v, n2: () => R });
+n.d(t, { Ay: () => y, Ce: () => j, c$: () => v, gU: () => A, n2: () => R });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -9,8 +9,8 @@ var l = n(503698),
     d = n(866665),
     c = n(297413),
     u = n(296948),
-    f = n(709066),
-    m = n(609425),
+    m = n(709066),
+    f = n(609425),
     g = n(922301),
     E = n(660184),
     p = n(534400),
@@ -30,15 +30,15 @@ function v(e) {
             displayNameTrailing: c,
             className: u,
         } = e,
-        f = (0, m.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
+        m = (0, f.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
         p = A[i];
-    return null != f
+    return null != m
         ? (0, a.jsx)(s.E, {
               variant: p,
               className: u,
               children: (0, a.jsx)(E.A, {
                   userName: l,
-                  displayNameStyles: f,
+                  displayNameStyles: m,
                   effectDisplayType: g.G.ANIMATED,
                   textClassName: _.QC,
                   shouldWrap: !0,
@@ -60,8 +60,8 @@ function N(e) {
             pendingDisplayNameStyles: d,
             onClickDisplayName: c,
         } = e,
-        m = (0, u.r)(t),
-        g = null != m ? (0, a.jsx)(f.A, { type: m, verified: t.isVerifiedBot(), className: _.AO }) : null,
+        f = (0, u.r)(t),
+        g = null != f ? (0, a.jsx)(m.A, { type: f, verified: t.isVerifiedBot(), className: _.AO }) : null,
         E = (0, a.jsx)(v, {
             user: t,
             guildId: n,
@@ -91,18 +91,18 @@ function R(e) {
         ],
     });
 }
-function I() {
+function j() {
     return (0, a.jsx)("div", { "aria-hidden": "true", className: _.SC });
 }
-function j(e) {
+function I(e) {
     let {
             user: t,
             usernameIcon: n,
             onClickUsername: l,
             pronouns: s,
             primaryGuild: o,
-            contextGuildId: f,
-            trailing: m,
+            contextGuildId: m,
+            trailing: f,
             onClose: g,
         } = e,
         E = (0, b.j)({ location: "UserProfileUserInfo" }),
@@ -126,7 +126,7 @@ function j(e) {
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(I, {}),
+                        (0, a.jsx)(j, {}),
                         (0, a.jsx)(d.m, {
                             text: x.intl.string(x.t.GI2A8C),
                             delay: h.In,
@@ -138,12 +138,12 @@ function j(e) {
             (0, a.jsx)(p.Ay, {
                 primaryGuild: o,
                 userId: t.id,
-                contextGuildId: f,
+                contextGuildId: m,
                 onClose: g,
                 textVariant: E ? "text-xs/normal" : "text-xs/semibold",
                 className: E ? _.Bb : _.Mp,
             }),
-            m,
+            f,
         ],
     });
 }
@@ -159,8 +159,8 @@ function y(e) {
         displayNameTrailing: d,
         usernameIcon: c,
         pronouns: u,
-        primaryGuild: f,
-        contextGuildId: m,
+        primaryGuild: m,
+        contextGuildId: f,
         trailing: g,
         onClose: E,
     } = e;
@@ -176,12 +176,12 @@ function y(e) {
                 onClickDisplayName: r,
                 trailing: d,
             }),
-            (0, a.jsx)(j, {
+            (0, a.jsx)(I, {
                 user: t,
                 usernameIcon: c,
                 pronouns: u,
-                primaryGuild: f,
-                contextGuildId: m,
+                primaryGuild: m,
+                contextGuildId: f,
                 onClickUsername: r,
                 onClose: E,
                 trailing: g,

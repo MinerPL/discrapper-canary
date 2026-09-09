@@ -63,6 +63,7 @@
 
 .contentContainer__70feb {
     --custom-cover-gap: calc(var(--space-4)*2 + 1px);
+    --custom-inline-field-ring-padding: var(--space-4);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -161,11 +162,16 @@
 }
 
 .entryContent_fca8d7 {
+    --custom-inline-field-ring-padding: var(--space-4);
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     gap: calc(var(--space-4)*2 + 1px);
     min-width: 0
+}
+
+.entryContent_fca8d7:has(:is(input, textarea):focus) {
+    flex-grow: 1
 }
 
 .entryButtonContainer_fca8d7.entryButtonContainer_fca8d7 {
@@ -279,4 +285,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=a0fae4db8cd18971.css.map*/
+/*# sourceMappingURL=ae217bd920a99087.css.map*/
