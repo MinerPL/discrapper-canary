@@ -706,8 +706,8 @@ var eY = n(97808),
     eq = n(950305),
     e$ = n(297413),
     eJ = n(376304),
-    eZ = n(201275),
-    eQ = n(386784),
+    eZ = n(386784),
+    eQ = n(69282),
     e0 = n(657048),
     e1 = n(290863);
 function e5(e) {
@@ -715,7 +715,7 @@ function e5(e) {
         n = t?.channelId,
         l = W.A.getChannel(n),
         r = X.A.getGuild(l?.getGuildId()),
-        a = (0, eQ.A)(r?.id, 1e3),
+        a = (0, eZ.A)(r?.id, 1e3),
         o = s.useMemo(() => er(e.defaultValues, r?.id), [e.defaultValues, r]);
     return (0, i.jsx)(ep, {
         selectActionComponent: e,
@@ -761,7 +761,7 @@ function e5(e) {
             if (e?.type === B.iw.ROLE) {
                 let n = null != r ? Z.A.getRole(r.id, e.value) : void 0;
                 if (null == n || null == r) return;
-                let l = (0, eJ.fm)(r, n) ? (0, eZ.ox)(n, t) : null;
+                let l = (0, eJ.fm)(r, n) ? (0, eQ.ox)(n, t) : null;
                 return null != l
                     ? (0, i.jsx)(e0.A, { ...l })
                     : (0, i.jsx)(eX.i, { size: "custom", color: n.colorString ?? U.TpD, height: t, width: t });

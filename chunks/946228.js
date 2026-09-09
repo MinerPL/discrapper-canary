@@ -137,7 +137,7 @@ let ep = new Set([
     eg = 221552 == n.j ? 3e3 : null;
 var ex = n(915089),
     eA = n(878678),
-    eC = n(201275),
+    eC = n(69282),
     eE = n(657048),
     eI = n(728321),
     ey = n(342296),
@@ -340,7 +340,7 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
     }),
     eG = i.memo(function (e) {
         let { id: t, title: s, count: r, guildId: a, className: o } = e,
-            u = (0, eC.$7)({ roleId: t, guildId: a, size: 16 }),
+            u = (0, eC.Xx)({ roleId: t, guildId: a, size: 16 }),
             c = (0, h.bG)([eS.default], () => (null == r ? null : new Intl.NumberFormat(eS.default.locale).format(r)), [
                 r,
             ]),

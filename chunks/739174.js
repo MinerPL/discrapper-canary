@@ -18,7 +18,7 @@ var i = n(477900),
     b = n(168186),
     j = n(47167),
     N = n(713654),
-    E = n(201275),
+    E = n(69282),
     C = n(657048),
     v = n(734057),
     T = n(696451),
@@ -99,7 +99,7 @@ function _(e) {
 function P(e) {
     let { guild: t, id: s, isLocked: r, lockTooltipText: o } = e,
         d = (0, c.bG)([I.A], () => I.A.getRole(t.id, s)),
-        g = (0, E.$7)({ guildId: t.id, roleId: s, size: 24 }),
+        g = (0, E.Xx)({ guildId: t.id, roleId: s, size: 24 }),
         h = l.useCallback(
             (e) => {
                 null != t &&

@@ -25,7 +25,7 @@ var i = n(477900),
     A = n(713654),
     I = n(915089),
     k = n(236285),
-    y = n(201275),
+    y = n(69282),
     M = n(657048),
     T = n(95701),
     w = n(34457),
@@ -48,19 +48,19 @@ function Q(e, t) {
         return e.isGuildVocal() && (i = J.WQ(i, P.xBc.CONNECT)), J.zy(t, i) && !K.MJ(i, e);
     });
 }
-var $ = n(417360),
-    q = n(898612),
-    H = n(375708),
+var q = n(417360),
+    H = n(898612),
+    $ = n(375708),
     V = n(397515);
 let W = (0, I.Ld)(),
     Z = (0, I.Ld)(),
     U = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
-function Y(e) {
+function X(e) {
     let { emojiId: t, emojiName: n, className: l } = e,
         s = (0, o.bG)([k.Ay], () => (null != t ? k.Ay.getCustomEmojiById(t) : void 0));
     return (0, i.jsx)(_.A, { emojiId: t, emojiName: n, animated: s?.animated ?? !1, className: l });
 }
-function X(e) {
+function Y(e) {
     let { icon: t, children: n, checked: l, disabled: s = !1, onChange: a } = e,
         o = l || s;
     return (0, i.jsxs)("label", {
@@ -107,7 +107,7 @@ function ee(e) {
                   l.length - s.size > 1 &&
                       (0, i.jsx)("div", {
                           className: V.p_,
-                          children: (0, i.jsx)(X, {
+                          children: (0, i.jsx)(Y, {
                               icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor", className: V.aL }),
                               checked: o,
                               onChange: function (e) {
@@ -124,9 +124,9 @@ function ee(e) {
                       className: V.p_,
                       children: l.map((e) =>
                           (0, i.jsxs)(
-                              X,
+                              Y,
                               {
-                                  icon: (0, i.jsx)(Y, {
+                                  icon: (0, i.jsx)(X, {
                                       emojiId: e.emoji_id,
                                       emojiName: e.emoji_name,
                                       className: V.aL,
@@ -138,7 +138,7 @@ function ee(e) {
                                       (0, i.jsx)(j.E, {
                                           color: "text-strong",
                                           variant: "text-md/semibold",
-                                          children: (0, q.A)(e),
+                                          children: (0, H.A)(e),
                                       }),
                                       (0, i.jsx)(j.E, {
                                           color: "interactive-text-default",
@@ -167,7 +167,7 @@ function et(e) {
         m = n.role_benefits.benefits,
         [h, x] = l.useState(() => new Set(m)),
         u = l.useMemo(() => m.filter(F.B1), [m]),
-        g = (0, $.A)(u),
+        g = (0, q.A)(u),
         f = l.useMemo(() => m.filter(F.b1), [m]),
         p = l.useMemo(() => new Set(g.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [g, s]),
         v = l.useMemo(() => new Set(f.filter((e) => r.some((t) => (0, d.A)(e, t)))), [r, f]);
@@ -191,26 +191,26 @@ function et(e) {
         children: (0, i.jsxs)(a.Modal, {
             transitionState: t,
             onClose: c,
-            title: H.intl.format(H.t["7zpiYL"], { tierName: n.name }).toString(),
+            title: $.intl.format($.t["7zpiYL"], { tierName: n.name }).toString(),
             actions: [
-                { variant: "secondary", text: H.intl.string(H.t["ETE/oC"]), onClick: c },
-                { variant: "primary", text: H.intl.string(H.t["27a21y"]), disabled: 0 === h.size, onClick: C },
+                { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: c },
+                { variant: "primary", text: $.intl.string($.t["27a21y"]), disabled: 0 === h.size, onClick: C },
             ],
             children: [
                 0 === g.length &&
                     0 === f.length &&
-                    (0, i.jsx)(j.E, { variant: "text-md/normal", children: H.intl.string(H.t["I+16xv"]) }),
+                    (0, i.jsx)(j.E, { variant: "text-md/normal", children: $.intl.string($.t["I+16xv"]) }),
                 (0, i.jsx)(ee, {
-                    title: H.intl.string(H.t.S2kKzP),
-                    selectAllText: H.intl.string(H.t["5Q/fLO"]),
+                    title: $.intl.string($.t.S2kKzP),
+                    selectAllText: $.intl.string($.t["5Q/fLO"]),
                     benefits: g,
                     dupeBenefits: p,
                     selectedBenefits: h,
                     onToggleBenefit: N,
                 }),
                 (0, i.jsx)(ee, {
-                    title: H.intl.string(H.t.RdwKw7),
-                    selectAllText: H.intl.string(H.t.aJPLVE),
+                    title: $.intl.string($.t.RdwKw7),
+                    selectAllText: $.intl.string($.t.aJPLVE),
                     benefits: f,
                     dupeBenefits: v,
                     selectedBenefits: h,
@@ -222,7 +222,7 @@ function et(e) {
 }
 function en(e) {
     let { guildId: t, role: n, channelCount: l, onSelect: s } = e,
-        r = (0, y.$7)({ guildId: t, roleId: n.id, size: U });
+        r = (0, y.Xx)({ guildId: t, roleId: n.id, size: U });
     return (0, i.jsxs)(f.D, {
         className: V.xf,
         onClick: s,
@@ -252,7 +252,7 @@ function en(e) {
                     (0, i.jsx)(j.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: H.intl.format(H.t["2KzH89"], { num: l }),
+                        children: $.intl.format($.t["2KzH89"], { num: l }),
                     }),
                 ],
             }),
@@ -299,7 +299,7 @@ function ei(e) {
                   ),
               ),
           })
-        : (0, i.jsx)(j.E, { variant: "text-md/normal", children: H.intl.string(H.t.u09gKk) });
+        : (0, i.jsx)(j.E, { variant: "text-md/normal", children: $.intl.string($.t.u09gKk) });
 }
 function el(e) {
     let { onClose: t, guildId: n, onSelect: l } = e,
@@ -314,7 +314,7 @@ function el(e) {
                           (0, i.jsx)(u.D, {
                               id: W,
                               variant: "heading-md/semibold",
-                              children: H.intl.string(H.t["3JrZ/P"]),
+                              children: $.intl.string($.t["3JrZ/P"]),
                           }),
                           (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
                       ],
@@ -366,7 +366,7 @@ function es(e) {
                     (0, i.jsx)(u.D, {
                         id: Z,
                         variant: "heading-md/semibold",
-                        children: H.intl.format(H.t.iuPodG, { roleName: d.name }),
+                        children: $.intl.format($.t.iuPodG, { roleName: d.name }),
                     }),
                     (0, i.jsx)(m.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
                 ],
@@ -378,7 +378,7 @@ function es(e) {
                     h.length > 1 &&
                         (0, i.jsx)("div", {
                             className: V.p_,
-                            children: (0, i.jsx)(X, {
+                            children: (0, i.jsx)(Y, {
                                 icon: (0, i.jsx)(g.f, { size: "md", color: "currentColor" }),
                                 checked: x.size === h.length,
                                 onChange: function (e) {
@@ -387,7 +387,7 @@ function es(e) {
                                 children: (0, i.jsx)(j.E, {
                                     color: "text-strong",
                                     variant: "text-md/normal",
-                                    children: H.intl.string(H.t["5Q/fLO"]),
+                                    children: $.intl.string($.t["5Q/fLO"]),
                                 }),
                             }),
                         }),
@@ -396,7 +396,7 @@ function es(e) {
                         children: h.map((e) => {
                             let t = (0, A._U)(e.type) ?? v.N;
                             return (0, i.jsx)(
-                                X,
+                                Y,
                                 {
                                     icon: (0, i.jsx)("div", {
                                         className: V.aL,
@@ -427,8 +427,8 @@ function es(e) {
                 children: (0, i.jsxs)(N.e, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, i.jsx)(C.$, { variant: "primary", text: H.intl.string(H.t["1j8Sow"]), type: "submit" }),
-                        (0, i.jsx)(C.$, { variant: "secondary", text: H.intl.string(H.t["ETE/oC"]), onClick: r }),
+                        (0, i.jsx)(C.$, { variant: "primary", text: $.intl.string($.t["1j8Sow"]), type: "submit" }),
+                        (0, i.jsx)(C.$, { variant: "secondary", text: $.intl.string($.t["ETE/oC"]), onClick: r }),
                     ],
                 }),
             }),

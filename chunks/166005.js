@@ -1,4 +1,4 @@
-n.d(l, { Ql: () => q, YR: () => F, g1: () => W }), n(321073);
+n.d(l, { Ql: () => q, YR: () => F, g1: () => J }), n(321073);
 var t = n(477900),
     i = n(582128),
     r = n(503698),
@@ -23,9 +23,9 @@ var t = n(477900),
     y = n(66834),
     N = n(775602),
     M = n(915089),
-    S = n(201275),
-    w = n(468689),
-    k = n(967144),
+    S = n(468689),
+    w = n(967144),
+    k = n(69282),
     I = n(657048),
     E = n(885386),
     L = n(34457),
@@ -37,14 +37,14 @@ var t = n(477900),
     D = n(652215),
     H = n(375708),
     O = n(434367);
-let J = c.A.unsafe_rawColors.PRIMARY_300;
-function W(e) {
+let X = c.A.unsafe_rawColors.PRIMARY_300;
+function J(e) {
     let { role: l, guildId: n, trailing: i, itemRef: r, labelId: o, className: a, style: d } = e,
-        c = (0, S.$7)({ roleId: l.id, size: 12, guildId: n }),
+        c = (0, k.Xx)({ roleId: l.id, size: 12, guildId: n }),
         j = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
-        b = (0, k.X_)(n, l, l.colorStrings),
+        b = (0, w.X_)(n, l, l.colorStrings),
         R = l.tags?.guild_connections === null,
-        C = (0, x.r)(J).hex(),
+        C = (0, x.r)(X).hex(),
         v = l.colorString ?? C;
     return (0, t.jsxs)("div", {
         ref: r,
@@ -81,7 +81,7 @@ function W(e) {
         ],
     });
 }
-function X(e) {
+function W(e) {
     let { role: l, canRemove: n, onRemoveRole: r, onContextMenu: s, ...o } = e,
         { tabIndex: d, ...u } = (0, a.rm)(l.id),
         c = (0, M.GV)(),
@@ -112,7 +112,7 @@ function X(e) {
             onContextMenu: s,
             className: O.b6,
             "aria-labelledby": c,
-            children: (0, t.jsx)(W, { role: l, className: n ? O.nO : void 0, trailing: g, labelId: c, ...o }),
+            children: (0, t.jsx)(J, { role: l, className: n ? O.nO : void 0, trailing: g, labelId: c, ...o }),
         }),
     });
 }
@@ -145,7 +145,7 @@ function $(e) {
                 o?.();
                 let t = P.Ay.getMember(n.id, l),
                     i = t?.roles ?? [];
-                i.includes(e) || (i = [...i, e]), w.A.updateMemberRoles(n.id, l, i, [e], []);
+                i.includes(e) || (i = [...i, e]), S.A.updateMemberRoles(n.id, l, i, [e], []);
             },
             [n.id, l, o],
         );
@@ -218,7 +218,7 @@ function Q(e, l, n) {
                 r = (i?.roles ?? []).filter((e) => e !== t.id);
             t.tags?.guild_connections === null
                 ? y.A.unassignGuildRoleConnection(l, t.id)
-                : w.A.updateMemberRoles(l, e, r, [], [t.id]);
+                : S.A.updateMemberRoles(l, e, r, [], [t.id]);
         },
         [n, l, e],
     );
@@ -266,7 +266,7 @@ function F(e) {
                             children: [
                                 i.map((e) =>
                                     (0, t.jsx)(
-                                        X,
+                                        W,
                                         {
                                             role: e,
                                             guildId: n.id,
@@ -284,7 +284,7 @@ function F(e) {
                             className: O.nt,
                             "aria-label": H.intl.string(H.t["LPJmL/"]),
                             children: i.map((e) =>
-                                (0, t.jsx)("li", { children: (0, t.jsx)(W, { role: e, guildId: n.id }) }, e.id),
+                                (0, t.jsx)("li", { children: (0, t.jsx)(J, { role: e, guildId: n.id }) }, e.id),
                             ),
                         }),
           });
@@ -393,7 +393,7 @@ function q(e) {
                             children: [
                                 E.map((e, l) =>
                                     (0, t.jsx)(
-                                        X,
+                                        W,
                                         {
                                             role: e,
                                             guildId: n.id,
@@ -419,7 +419,7 @@ function q(e) {
                                         (0, t.jsx)(
                                             "li",
                                             {
-                                                children: (0, t.jsx)(W, {
+                                                children: (0, t.jsx)(J, {
                                                     itemRef: (l) => v(e.id, l),
                                                     role: e,
                                                     guildId: n.id,

@@ -5,10 +5,10 @@ var n = i(477900),
     o = i.n(r),
     s = i(17928),
     a = i(43990),
-    u = i(201275),
-    c = i(320095),
-    d = i(963852),
-    m = i(20851),
+    u = i(320095),
+    c = i(963852),
+    d = i(20851),
+    m = i(69282),
     f = i(287809),
     g = i(562153),
     p = i(652215),
@@ -18,11 +18,11 @@ function v(e) {
     let { guildId: t, role: i, theme: r, content: v = _.intl.string(_.t["6OSasb"]), className: A } = e,
         y = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
         E = g.Ay.useName(t, null, y),
-        b = (0, u.ox)(i),
+        b = (0, m.ox)(i),
         C = l.useMemo(
             () =>
-                (0, c.rh)({
-                    ...(0, d.Ay)({
+                (0, u.rh)({
+                    ...(0, c.Ay)({
                         channelId: "0",
                         content: v,
                         tts: void 0,
@@ -42,7 +42,7 @@ function v(e) {
         children: (e) =>
             (0, n.jsx)("div", {
                 className: o()(e, S.k, A),
-                children: (0, n.jsx)(m.A, {
+                children: (0, n.jsx)(d.A, {
                     hideTimestamp: !0,
                     author: h,
                     roleIcon: b,

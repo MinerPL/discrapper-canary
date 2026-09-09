@@ -19,8 +19,8 @@ var i = n(477900),
     p = n(47167),
     A = n(713654),
     I = n(915089),
-    S = n(201275),
-    C = n(967144),
+    S = n(967144),
+    C = n(69282),
     v = n(657048),
     _ = n(963307),
     T = n(734057),
@@ -48,12 +48,12 @@ function P(e) {
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
         { id: s, name: a } = t.record,
-        o = (0, S.$7)({ guildId: n, roleId: s, size: 16 }),
+        o = (0, C.Xx)({ guildId: n, roleId: s, size: 16 }),
         d = (0, c.bG)([b.A], () => b.A.getRole(n, s)),
         h = a.includes(_.QP) ? "" : "@",
         E = (0, u.r)(m.A.unsafe_rawColors.PRIMARY_300).hsl(),
         j = d?.colorString ?? E,
-        f = (0, C.X_)(n, d, d?.colorStrings);
+        f = (0, S.X_)(n, d, d?.colorStrings);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.ex, l),
         children: [

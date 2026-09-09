@@ -1,4 +1,4 @@
-s.d(l, { Ay: () => ee, b_: () => K });
+s.d(l, { Ay: () => ee, b_: () => B });
 var n = s(477900),
     r = s(582128),
     o = s(503698),
@@ -28,23 +28,23 @@ var n = s(477900),
     P = s(63104),
     E = s(235986),
     S = s(915089),
-    k = s(201275),
-    I = s(468689),
-    T = s(967144),
+    k = s(468689),
+    I = s(967144),
+    T = s(69282),
     G = s(657048),
     H = s(1659),
     L = s(465738),
     z = s(34457),
     Y = s(696451),
-    $ = s(317525),
-    O = s(576705),
-    U = s(287809),
+    O = s(317525),
+    U = s(576705),
+    $ = s(287809),
     D = s(488926),
     V = s(652215),
     W = s(375708),
     F = s(371418);
 let J = () => Promise.resolve();
-function B(e) {
+function X(e) {
     let { userRoleIds: l, position: s, ...r } = e,
         o = (0, S.GV)();
     return (0, n.jsxs)(h.l, {
@@ -74,7 +74,7 @@ function B(e) {
         ],
     });
 }
-let K = r.forwardRef(function (e, l) {
+let B = r.forwardRef(function (e, l) {
     let o,
         {
             canRemove: i,
@@ -87,9 +87,9 @@ let K = r.forwardRef(function (e, l) {
             guild: y,
         } = e,
         { tabIndex: w, ...M } = (0, c.rm)(d.id),
-        E = (0, k.$7)({ roleId: d.id, size: 16, guildId: h, role: d, guild: y }),
+        E = (0, T.Xx)({ roleId: d.id, size: 16, guildId: h, role: d, guild: y }),
         S = (0, x.bG)([_.Ay], () => _.Ay.roleStyle),
-        I = (0, T.X_)(h, void 0, d.colorStrings),
+        k = (0, I.X_)(h, void 0, d.colorStrings),
         H = d.tags?.guild_connections === null,
         L = r.useCallback(
             (e) => {
@@ -102,16 +102,16 @@ let K = r.forwardRef(function (e, l) {
         ),
         z = (0, b.r)(f.A.unsafe_rawColors.PRIMARY_300).hsl(),
         Y = d.colorString ?? z,
-        $ = (0, m.xp)(Y, 0.6) ?? void 0,
-        O = f.A.unsafe_rawColors.WHITE.css,
-        U = (0, m.LX)(Y);
-    null != U && 0.3 > (0, m.OK)(U) && (O = f.A.unsafe_rawColors.PRIMARY_630.css),
+        O = (0, m.xp)(Y, 0.6) ?? void 0,
+        U = f.A.unsafe_rawColors.WHITE.css,
+        $ = (0, m.LX)(Y);
+    null != $ && 0.3 > (0, m.OK)($) && (U = f.A.unsafe_rawColors.PRIMARY_630.css),
         (o = H
             ? (0, n.jsx)(P.A, { className: F.U4, iconClassName: i ? F.gD : void 0, color: Y, size: 14 })
             : "dot" === S
-              ? (0, n.jsx)(A.W, { className: F.m4, color: Y, colors: I, background: !1, tooltip: !1 })
-              : (0, n.jsx)(A.R, { color: Y, colors: I }));
-    let D = r.useMemo(() => ({ borderColor: g ? void 0 : $, ...(e.style ?? {}) }), [$, g, e.style]);
+              ? (0, n.jsx)(A.W, { className: F.m4, color: Y, colors: k, background: !1, tooltip: !1 })
+              : (0, n.jsx)(A.R, { color: Y, colors: k }));
+    let D = r.useMemo(() => ({ borderColor: g ? void 0 : O, ...(e.style ?? {}) }), [O, g, e.style]);
     return (0, n.jsx)(R.vN, {
         children: (0, n.jsxs)("div", {
             ref: l,
@@ -132,7 +132,7 @@ let K = r.forwardRef(function (e, l) {
                     "aria-label": W.intl.formatToPlainString(W.t.QrxwhY, { roleName: d.name }),
                     children: [
                         o,
-                        i ? (0, n.jsx)(v.P, { size: "md", color: O, className: F.s$, "aria-hidden": !0 }) : null,
+                        i ? (0, n.jsx)(v.P, { size: "md", color: U, className: F.s$, "aria-hidden": !0 }) : null,
                     ],
                 }),
                 null != E ? (0, n.jsx)(G.A, { className: F.UT, ...E, enableTooltip: !1 }) : null,
@@ -145,7 +145,7 @@ let K = r.forwardRef(function (e, l) {
         }),
     });
 });
-function Q(e) {
+function K(e) {
     let { user: l, numRolesHidden: s, roleClassName: o } = e,
         i = (0, c.rm)(`overflow-more-roles-${l.id}`),
         a = r.useRef(null);
@@ -153,7 +153,7 @@ function Q(e) {
         targetElementRef: a,
         renderPopout: (l) => {
             let { position: s } = l;
-            return (0, n.jsx)(B, { ...e, position: s ?? "top" });
+            return (0, n.jsx)(X, { ...e, position: s ?? "top" });
         },
         position: "top",
         align: "center",
@@ -163,15 +163,15 @@ function Q(e) {
             }),
     });
 }
-function X(e) {
+function Q(e) {
     let l = r.useRef(null),
         { guild: s, user: o, handleAddRole: i, roleClassName: a, addButtonClassName: d, addButtonIconClassName: u } = e,
         m = (0, c.rm)(`overflow-add-roles-${o.id}`),
         f = (0, x.bG)([_.Ay], () => _.Ay.roleStyle),
-        h = O.A.getHighestRole(s),
+        h = U.A.getHighestRole(s),
         g = Y.Ay.getMember(s.id, o.id);
     function j(e) {
-        return !(0, z.Oy)(e) && !e.managed && O.A.isRoleHigher(s, h, e) && (null == g || -1 === g.roles.indexOf(e.id));
+        return !(0, z.Oy)(e) && !e.managed && U.A.isRoleHigher(s, h, e) && (null == g || -1 === g.roles.indexOf(e.id));
     }
     return (0, n.jsx)(N.Y, {
         targetElementRef: l,
@@ -219,19 +219,19 @@ function q(e) {
                 let l = i.filter((l) => l !== e.id);
                 e.tags?.guild_connections === null
                     ? w.A.unassignGuildRoleConnection(o.id, e.id)
-                    : I.A.updateMemberRoles(o.id, s.id, l, [], [e.id]);
+                    : k.A.updateMemberRoles(o.id, s.id, l, [], [e.id]);
             },
             [i, o.id, s.id],
         ),
         p = r.useCallback(
             (e) => {
                 let l = i;
-                l.includes(e) || (l = [...l, e]), I.A.updateMemberRoles(o.id, s.id, l, [e], []);
+                l.includes(e) || (l = [...l, e]), k.A.updateMemberRoles(o.id, s.id, l, [e], []);
             },
             [i, o.id, s.id],
         ),
         [v, N] = r.useState(null),
-        y = (0, x.yK)([$.A], () => $.A.getManyRoles(o.id, i).sort(H.m)),
+        y = (0, x.yK)([O.A], () => O.A.getManyRoles(o.id, i).sort(H.m)),
         C = r.useMemo(() => (null != v ? y.slice(0, v) : y), [y, v]),
         M = i.length - C.length;
     r.useLayoutEffect(() => {
@@ -251,15 +251,15 @@ function q(e) {
         }
         N((l) => (e < C.length ? e : l));
     }, [m, f, C]);
-    let _ = U.default.getCurrentUser();
+    let _ = $.default.getCurrentUser();
     a()(null != _, "MemberRolesList: currentUser cannot be undefined");
-    let P = !g && O.A.can(V.xBc.MANAGE_ROLES, o),
+    let P = !g && U.A.can(V.xBc.MANAGE_ROLES, o),
         E = D.HJ(o, _.id),
         S = r.useMemo(() => `roles-${(0, d.A)()}`, []),
-        k = (0, u.Ay)({ id: S, isEnabled: !0, scrollToStart: J, scrollToEnd: J, wrap: !0 }),
+        I = (0, u.Ay)({ id: S, isEnabled: !0, scrollToStart: J, scrollToEnd: J, wrap: !0 }),
         T = C.map((e) =>
             (0, n.jsx)(
-                K,
+                B,
                 {
                     className: j,
                     role: e,
@@ -277,10 +277,10 @@ function q(e) {
         );
     return (
         null != v && 0 !== M
-            ? (l = (0, n.jsx)(Q, { ...e, numRolesHidden: M }))
-            : P && (l = (0, n.jsx)(X, { ...e, handleAddRole: p })),
+            ? (l = (0, n.jsx)(K, { ...e, numRolesHidden: M }))
+            : P && (l = (0, n.jsx)(Q, { ...e, handleAddRole: p })),
         (0, n.jsx)(c.hD, {
-            navigator: k,
+            navigator: I,
             children: (0, n.jsx)(c.PR, {
                 children: (e) => {
                     let { ref: s, ...r } = e;
@@ -299,7 +299,7 @@ function q(e) {
 let Z = (0, M.A)(q);
 function ee(e) {
     return (
-        (0, x.bG)([O.A], () => O.A.getGuildVersion(e.guild?.id)),
+        (0, x.bG)([U.A], () => U.A.getGuildVersion(e.guild?.id)),
         !1 === e.wrap ? (0, n.jsx)(Z, { ...e }) : (0, n.jsx)(q, { ...e })
     );
 }

@@ -6961,7 +6961,7 @@ function aA(e) {
     );
 }
 var aI = n(750943),
-    aS = n(201275),
+    aS = n(69282),
     aC = n(657048),
     av = n(560658);
 let a_ = (0, i0.xI)(iz.A.ROLE_ICON_UPLOADER_ICON_SIZE);
@@ -17996,7 +17996,7 @@ var xY = n(742158),
     xK = n(921383);
 let xX = function (e) {
     let { guild: t, disabled: i, role: l } = e,
-        s = (0, aS.qE)(t.id, l),
+        s = (0, aS.Ib)(t.id, l),
         { analyticsLocations: r } = (0, a5.Ay)(),
         a = t.features.has(ei.GuildFeatures.ROLE_ICONS);
     function o(e) {
@@ -18189,7 +18189,7 @@ function ht(e) {
     }
     let a = xz(el.intl.string(el.t.Mi9Kbe)),
         o = (0, ov.Ay)(),
-        d = (0, aS.qE)(n, t),
+        d = (0, aS.Ib)(n, t),
         c = { dark: { src: x4, name: t.name }, light: { src: x9, name: t.name } };
     function u() {
         (0, xP.A)(n, aJ.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, _.jH)();
@@ -18339,7 +18339,7 @@ function hl(e) {
         },
         a = { src: x4, name: t.name },
         o = { src: x9, name: t.name },
-        d = (0, aS.qE)(n, t),
+        d = (0, aS.Ib)(n, t),
         c = [ei.NJ8.DARK, ei.NJ8.DARKER, ei.NJ8.MIDNIGHT, ei.NJ8.LIGHT];
     return (0, p.jsx)(ad.M, {
         children: (0, p.jsx)("div", {
@@ -19729,7 +19729,7 @@ function h4(e) {
             gradientId: d,
         } = (0, xG.RM)(n.colorStrings?.primaryColor, n.colorStrings?.secondaryColor, n.colorStrings?.tertiaryColor),
         c = (0, xU.jV)(t, n),
-        u = (0, aS.$7)({ guildId: t, roleId: n.id, size: i });
+        u = (0, aS.Xx)({ guildId: t, roleId: n.id, size: i });
     if (null != u) return (0, p.jsx)(aC.A, { ...u, className: s, enableTooltip: l });
     let m = n.colorString ?? ei.TpD;
     return (

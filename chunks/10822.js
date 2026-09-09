@@ -445,11 +445,11 @@ var eB = n(284009),
     eK = n.n(eB),
     eV = n(807884),
     ez = n(93474),
-    eW = n(201275),
-    e$ = n(384231),
-    eJ = n(959698),
-    eq = n(853145),
-    eZ = n(9842),
+    eW = n(384231),
+    e$ = n(959698),
+    eJ = n(853145),
+    eq = n(9842),
+    eZ = n(69282),
     eY = n(976860),
     eX = n(885386),
     eQ = n(734057),
@@ -1440,10 +1440,10 @@ let nY = r.memo(function (e) {
             isReplySpineClickable: d,
             showReplySpine: u,
         } = e,
-        m = n.state === eZ.a.LOADED ? n.message : void 0,
+        m = n.state === eq.a.LOADED ? n.message : void 0,
         g = (0, e7.X4)(m),
-        A = (0, e$.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        p = (0, eJ.U)(),
+        A = (0, eW.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        p = (0, e$.U)(),
         f = r.useMemo(() => {
             if (null == m) return null;
             let e = (0, nz.A)(m);
@@ -1564,7 +1564,7 @@ let nQ = r.memo(function (e) {
             }),
             [t],
         ),
-        A = (0, h.bG)([eZ.A], () => eZ.A.getMessageByReference(t?.messageReference)),
+        A = (0, h.bG)([eq.A], () => eq.A.getMessageByReference(t?.messageReference)),
         p = (0, tt.r4)(t.interaction?.user.id, n.id),
         f = (0, tt.T0)(t.interaction, n, i, u),
         C = (0, tt.Yq)(s, u),
@@ -1633,22 +1633,22 @@ function n2(e) {
     } = e;
     eK()(n.type === eu.lAJ.THREAD_STARTER_MESSAGE, "Message must be a thread starter message");
     let { ...r } = (0, u.rm)(e.id ?? ""),
-        o = (0, h.bG)([eZ.A], () => eZ.A.getMessageByReference(l)),
+        o = (0, h.bG)([eq.A], () => eq.A.getMessageByReference(l)),
         { popouts: d, setPopout: m } = (0, tE.A)(n.id, n1.Fd),
         g = (0, e7.Ay)(n),
         A = (0, e9.fF)(n),
         p = (0, e9.ZD)(n);
     if (null != o)
         switch (o.state) {
-            case eZ.a.LOADED:
+            case eq.a.LOADED:
                 return (0, a.jsx)(n3, {
                     ...e,
                     viewingChannelId: n.channel_id,
                     message: o.message,
                     groupId: o.message.id,
                 });
-            case eZ.a.NOT_LOADED:
-            case eZ.a.DELETED:
+            case eq.a.NOT_LOADED:
+            case eq.a.DELETED:
         }
     return (0, a.jsx)(e6.A, {
         ...r,
@@ -1681,8 +1681,8 @@ function n3(e) {
         { popouts: S, selected: I, setPopout: _ } = (0, tE.A)(n.id, n1.Fd),
         j = eX.hD.useSetting(),
         y = eX.rs.useSetting(),
-        b = (0, h.bG)([eZ.A], () => eZ.A.getMessageByReference(A)),
-        T = (0, e$.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
+        b = (0, h.bG)([eq.A], () => eq.A.getMessageByReference(A)),
+        T = (0, eW.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
         {
             handleMouseEnter: v,
             handleMouseLeave: M,
@@ -1712,7 +1712,7 @@ function n3(e) {
         B = (0, e9.ZD)(n),
         K = (0, a.jsx)(tn.x, { value: k, children: (0, nw.Ay)(e, O, !1) }),
         V = r.useCallback(() => (0, eY.uh)(s, i, l), [s, i, l]),
-        z = (0, eW.$7)({ guildId: s, roleId: F.iconRoleId });
+        z = (0, eZ.Xx)({ guildId: s, roleId: F.iconRoleId });
     return (0, a.jsxs)("div", {
         className: nL.m5,
         children: [
@@ -1803,7 +1803,7 @@ let n4 = r.memo(function (e) {
         { onFocus: I, ..._ } = (0, u.rm)(e.id ?? ""),
         j = eX.hD.useSetting(),
         y = eX.rs.useSetting(),
-        b = (0, h.bG)([eZ.A], () => eZ.A.getMessageByReference(S)),
+        b = (0, h.bG)([eq.A], () => eq.A.getMessageByReference(S)),
         { popouts: T, selected: v, setPopout: M } = (0, tE.A)(i.id, n1.Fd),
         R = (0, tt.VL)(i, o, M),
         D = (0, tt.ri)(i, o),
@@ -1835,9 +1835,9 @@ let n4 = r.memo(function (e) {
             () => i.hasFlag(eu.pr7.HAS_THREAD) && eQ.A.getChannel(en.default.castMessageIdAsChannelId(i.id)),
         ),
         J = i.isFirstMessageInForumPost(o),
-        q = (0, e$.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
+        q = (0, eW.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
         Z = (0, h.bG)([e0.A], () => e0.A.isDeveloper),
-        Y = (0, eJ.U)(),
+        Y = (0, e$.U)(),
         {
             content: X,
             hasSpoilerEmbeds: Q,
@@ -1854,14 +1854,14 @@ let n4 = r.memo(function (e) {
         }),
         et = tx(s, d, V),
         el = (0, e7.Ay)(i),
-        ei = (0, h.bG)([eq.A], () => eq.A.getPendingReply(d)),
+        ei = (0, h.bG)([eJ.A], () => eJ.A.getPendingReply(d)),
         es =
             ((t = r.useRef(p)),
             r.useEffect(() => {
                 t.current = p ?? t.current;
             }),
             p ?? t.current),
-        er = (0, eW.$7)({ guildId: o.guild_id, roleId: el.iconRoleId }),
+        er = (0, eZ.Xx)({ guildId: o.guild_id, roleId: el.iconRoleId }),
         eo = (0, eV.A)(d, s)?.color ?? null,
         ed = (0, e9.fF)(i, f),
         eh = (0, e9.ZD)(i),
@@ -4821,7 +4821,7 @@ function ax(e) {
         c = n.id === s,
         d = !0 === l.bot,
         u = l.isNonUserBot(),
-        m = (0, eJ.U)(),
+        m = (0, e$.U)(),
         g = aC.n;
     return (
         u
