@@ -141,6 +141,8 @@
 }
 
 .mana-type-consolidation .tableHeader_f0dcaf {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -183,4 +185,4 @@
     gap: 4px
 }
 
-/*# sourceMappingURL=0c153bec496fdd41.css.map*/
+/*# sourceMappingURL=5a3ab5415381000c.css.map*/

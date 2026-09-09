@@ -25,6 +25,8 @@
 }
 
 .mana-type-consolidation .label_eeaef9 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -204,6 +206,8 @@
 }
 
 .mana-type-consolidation .header__16462 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -608,4 +612,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=e2365e3c1134f64a.css.map*/
+/*# sourceMappingURL=464c40b2c3ef9798.css.map*/

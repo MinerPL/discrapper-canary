@@ -121,6 +121,8 @@
 }
 
 .mana-type-consolidation .selectAllTitle_e6fa8e {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -131,4 +133,4 @@
     gap: 4px
 }
 
-/*# sourceMappingURL=fee7466e0c204707.css.map*/
+/*# sourceMappingURL=fcfd45356aadc0ab.css.map*/

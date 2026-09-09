@@ -71,6 +71,8 @@
 }
 
 .mana-type-consolidation .exampleRulesTitle_f7c056 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -112,6 +114,8 @@
 }
 
 .mana-type-consolidation .rulesHeader__92677 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -144,6 +148,8 @@
 }
 
 .mana-type-consolidation .subHeader__17efa {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -256,4 +262,4 @@
     margin-bottom: 0
 }
 
-/*# sourceMappingURL=ac48ae6b7921eabc.css.map*/
+/*# sourceMappingURL=81eccb6921055b9c.css.map*/

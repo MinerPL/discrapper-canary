@@ -44,6 +44,8 @@
 }
 
 .mana-type-consolidation .optionHeader__3847f {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -310,4 +312,4 @@
     margin: 0 var(--space-40)
 }
 
-/*# sourceMappingURL=c1fd73de77830954.css.map*/
+/*# sourceMappingURL=025ae8589f6adaff.css.map*/

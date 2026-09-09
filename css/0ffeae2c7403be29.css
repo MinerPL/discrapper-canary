@@ -463,6 +463,8 @@
 }
 
 .mana-type-consolidation .statusText__28e57 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -575,4 +577,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=ac4f34586809d3a6.css.map*/
+/*# sourceMappingURL=0ffeae2c7403be29.css.map*/

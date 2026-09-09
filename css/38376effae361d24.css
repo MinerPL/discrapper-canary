@@ -12,7 +12,8 @@
 }
 
 .mana-type-consolidation .errorLabel_f3e49b {
-    font-weight: var(--font-weight-semibold);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -55,4 +56,4 @@
     color: var(--text-default)
 }
 
-/*# sourceMappingURL=343f351772389303.css.map*/
+/*# sourceMappingURL=38376effae361d24.css.map*/

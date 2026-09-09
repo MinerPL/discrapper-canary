@@ -305,6 +305,8 @@
 }
 
 .mana-type-consolidation .customColorsHeader_a912c3 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -339,4 +341,4 @@
     width: 150px
 }
 
-/*# sourceMappingURL=58a936ed2901db3b.css.map*/
+/*# sourceMappingURL=cbbc431ea9ee4e1c.css.map*/

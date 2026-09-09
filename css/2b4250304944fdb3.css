@@ -51,7 +51,8 @@
 }
 
 .mana-type-consolidation .title__3c20e {
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -174,7 +175,8 @@
 }
 
 .mana-type-consolidation .groupLabel__3c20e {
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -396,4 +398,4 @@
     font-variant-numeric: tabular-nums
 }
 
-/*# sourceMappingURL=1118405440b09f0e.css.map*/
+/*# sourceMappingURL=2b4250304944fdb3.css.map*/

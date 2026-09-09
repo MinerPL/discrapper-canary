@@ -231,6 +231,8 @@
 }
 
 .mana-type-consolidation .tableHeader__50e4e {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -264,4 +266,4 @@
     margin-inline-start: 16px
 }
 
-/*# sourceMappingURL=1df54f61f3208a8c.css.map*/
+/*# sourceMappingURL=e68bd082df20c76f.css.map*/

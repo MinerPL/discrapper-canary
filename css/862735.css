@@ -2098,6 +2098,8 @@
 }
 
 .mana-type-consolidation .contentTitle__13533 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -2338,6 +2340,8 @@
 }
 
 .mana-type-consolidation .optionalHeader__920ab {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -2445,4 +2449,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=862735.50c37a7913fec3bd.css.map*/
+/*# sourceMappingURL=862735.ed906603e9565d00.css.map*/

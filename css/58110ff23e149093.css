@@ -157,6 +157,8 @@
 }
 
 .mana-type-consolidation .previewHeading__7fffd {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -220,4 +222,4 @@
     gap: 16px
 }
 
-/*# sourceMappingURL=b1e9ef88b3cc6d69.css.map*/
+/*# sourceMappingURL=58110ff23e149093.css.map*/

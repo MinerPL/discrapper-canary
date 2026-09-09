@@ -48,6 +48,8 @@
 }
 
 .mana-type-consolidation .title_d520fc {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -58,6 +60,8 @@
 }
 
 .mana-type-consolidation .examplesHeader_d520fc {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -197,4 +201,4 @@
     margin-inline-start: 16px
 }
 
-/*# sourceMappingURL=e16d7b6112403412.css.map*/
+/*# sourceMappingURL=2105c5339c0a7d3c.css.map*/

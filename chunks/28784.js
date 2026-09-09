@@ -1461,7 +1461,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eB.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 610138, Version Hash: 6f6aa1b4b60d44327fb2519c50590a5c11dd5f0b`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 610142, Version Hash: 962bba719108bd0c5b1f4ce62ec818479417bb5f`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21091,7 +21091,7 @@ let Np = "isHideDevBanner",
                     className: ta()(Nf.Wz, Nf.mr),
                     children: [
                         (0, O.jsx)(NI, { className: Nf.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "610138" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "610142" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -32098,7 +32098,7 @@ class yS extends eu.PureComponent {
                                             ? null
                                             : (0, O.jsx)(ru.E, {
                                                   variant: "text-xs/semibold",
-                                                  color: "text-strong",
+                                                  color: "none",
                                                   className: yg.mu,
                                                   children: tT.intl.string(tT.t.v0R1Lh),
                                               }),

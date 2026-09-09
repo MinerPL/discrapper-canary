@@ -86,6 +86,8 @@
 }
 
 .mana-type-consolidation .infoCardLabel__0ab43 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -160,4 +162,4 @@
     gap: 16px
 }
 
-/*# sourceMappingURL=d6114a2dad6d42ef.css.map*/
+/*# sourceMappingURL=b25122d0b36c9fef.css.map*/

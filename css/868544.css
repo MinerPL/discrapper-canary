@@ -133,12 +133,16 @@
 }
 
 .tipTitle_a2f514 {
+    color: var(--text-strong);
     margin-bottom: 8px;
     max-width: 300px;
     text-transform: uppercase
 }
 
 .mana-type-consolidation .tipTitle_a2f514 {
+    color: var(--text-subtle);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -172,4 +176,4 @@
     text-transform: none
 }
 
-/*# sourceMappingURL=868544.dfd9676deddad660.css.map*/
+/*# sourceMappingURL=868544.7894605fc02e9657.css.map*/

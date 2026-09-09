@@ -313,6 +313,8 @@
 }
 
 .mana-type-consolidation .refundSubHeader_e9cb00 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -434,6 +436,8 @@
 }
 
 .mana-type-consolidation .guildProductBenefitLabel_e9cb00 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -443,4 +447,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=311992.6e690c585d23b46a.css.map*/
+/*# sourceMappingURL=311992.54361ac2e9c04088.css.map*/

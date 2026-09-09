@@ -56,6 +56,8 @@ h6.title_feb59c {
 .mana-type-consolidation h4.title_feb59c,
 .mana-type-consolidation h5.title_feb59c,
 .mana-type-consolidation h6.title_feb59c {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -81,4 +83,4 @@ h2.title_feb59c {
     color: var(--text-default)
 }
 
-/*# sourceMappingURL=33400ca8669ac8bf.css.map*/
+/*# sourceMappingURL=7a10ddc18f930d74.css.map*/

@@ -2456,6 +2456,8 @@
 }
 
 .mana-type-consolidation .streamGame__2ef49 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -2703,4 +2705,4 @@
     background: hsl(var(--primary-500-hsl)/.6)
 }
 
-/*# sourceMappingURL=459397.69f264d85bd292a1.css.map*/
+/*# sourceMappingURL=459397.3aa11c39c0444199.css.map*/

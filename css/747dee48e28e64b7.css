@@ -72,6 +72,8 @@
 }
 
 .mana-type-consolidation .stepHeader_caee69 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -582,4 +584,4 @@ input::-webkit-outer-spin-button {
     box-shadow: var(--elevation-low)
 }
 
-/*# sourceMappingURL=1db179e4b2efb006.css.map*/
+/*# sourceMappingURL=747dee48e28e64b7.css.map*/

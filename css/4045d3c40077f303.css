@@ -539,6 +539,8 @@
 }
 
 .mana-type-consolidation .premiumEmojisTitle__2485e {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -789,4 +791,4 @@
     padding: var(--space-4)
 }
 
-/*# sourceMappingURL=c3ca48bb6ddc0cc6.css.map*/
+/*# sourceMappingURL=4045d3c40077f303.css.map*/

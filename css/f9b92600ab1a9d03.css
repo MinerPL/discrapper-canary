@@ -12,6 +12,8 @@
 }
 
 .mana-type-consolidation .private__7641b {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -33,6 +35,8 @@
 }
 
 .mana-type-consolidation .emptyStateHeader__7641b {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -75,4 +79,4 @@
     border-inline-start-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=015aeccade52bc27.css.map*/
+/*# sourceMappingURL=f9b92600ab1a9d03.css.map*/

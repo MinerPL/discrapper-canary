@@ -2080,6 +2080,8 @@
 }
 
 .mana-type-consolidation .transferGuildCardHeader__2cbe8 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
     text-transform: none
 }
 
@@ -2126,4 +2128,4 @@
     padding: 16px 24px
 }
 
-/*# sourceMappingURL=27dfcf4977a7e0e4.css.map*/
+/*# sourceMappingURL=17fc7154ce7a3422.css.map*/
