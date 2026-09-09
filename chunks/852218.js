@@ -1,4 +1,14 @@
-n.d(t, { Bt: () => u, CD: () => l, Cs: () => d, KS: () => o, XY: () => c, km: () => _, pt: () => s, qn: () => a });
+n.d(t, {
+    Bt: () => u,
+    CD: () => l,
+    Cs: () => d,
+    KS: () => o,
+    NC: () => _,
+    XY: () => c,
+    km: () => E,
+    pt: () => s,
+    qn: () => a,
+});
 var i,
     r,
     a = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
@@ -21,4 +31,5 @@ let l = {
     d = "kontrolfreek",
     c = "logitech",
     u = "call_of_duty",
-    _ = new Set([c, u]);
+    _ = "youtube",
+    E = new Set([c, u, _]);
