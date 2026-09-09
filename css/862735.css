@@ -2097,6 +2097,10 @@
     text-transform: none
 }
 
+.mana-type-consolidation .contentTitle__13533 {
+    text-transform: none
+}
+
 .icon__13533 {
     color: var(--interactive-text-default);
     height: 16px;
@@ -2329,11 +2333,15 @@
 
 .optionalHeader__920ab {
     color: var(--text-muted);
+    padding-inline-start: 8px;
     text-transform: uppercase
 }
 
-.optionalCount__920ab,
-.optionalHeader__920ab {
+.mana-type-consolidation .optionalHeader__920ab {
+    text-transform: none
+}
+
+.optionalCount__920ab {
     padding-inline-start: 8px
 }
 
@@ -2437,4 +2445,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=862735.7b4fce0da76dd8d5.css.map*/
+/*# sourceMappingURL=862735.50c37a7913fec3bd.css.map*/

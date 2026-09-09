@@ -18,6 +18,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .header_d529e9 {
+    text-transform: none
+}
+
 .scroller_d529e9 {
     padding: var(--custom-channel-call-participants-popout-padding-value);
     padding-inline-start: 8px;
@@ -279,4 +283,4 @@
     visibility: hidden
 }
 
-/*# sourceMappingURL=546813.00d8eea21df19d59.css.map*/
+/*# sourceMappingURL=546813.aefbb9bf12d579a1.css.map*/

@@ -141,6 +141,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .confirmationSectionLabel__4dd8e {
+    text-transform: none
+}
+
 .confirmationBenefits__4dd8e {
     display: flex;
     flex-direction: column;
@@ -167,4 +171,4 @@
     margin-bottom: 2px
 }
 
-/*# sourceMappingURL=750370.e32b57d7cb6b4f58.css.map*/
+/*# sourceMappingURL=750370.9184941247a228d9.css.map*/

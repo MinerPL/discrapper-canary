@@ -134,18 +134,19 @@
 
 .tipTitle_a2f514 {
     margin-bottom: 8px;
+    max-width: 300px;
     text-transform: uppercase
 }
 
-.tip_a2f514,
-.tipTitle_a2f514 {
-    max-width: 300px
+.mana-type-consolidation .tipTitle_a2f514 {
+    text-transform: none
 }
 
 .tip_a2f514 {
     color: var(--text-default);
     font-size: 16px;
-    line-height: 20px
+    line-height: 20px;
+    max-width: 300px
 }
 
 .keybind_a2f514 {
@@ -167,4 +168,8 @@
     text-transform: uppercase
 }
 
-/*# sourceMappingURL=868544.e0b068f57d95d09e.css.map*/
+.mana-type-consolidation .title_a2f514 {
+    text-transform: none
+}
+
+/*# sourceMappingURL=868544.dfd9676deddad660.css.map*/

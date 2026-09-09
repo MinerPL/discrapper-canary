@@ -318,6 +318,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .sectionTitle__6ae25 {
+    text-transform: none
+}
+
 .selectableSearchRow__6ae25 {
     cursor: pointer;
     display: block;
@@ -869,4 +873,4 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=766811.0fd6ee15e1023fc1.css.map*/
+/*# sourceMappingURL=766811.40d9aa5c7d83f1ff.css.map*/

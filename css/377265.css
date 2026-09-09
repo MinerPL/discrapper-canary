@@ -2746,6 +2746,10 @@
     background-color: var(--interactive-background-hover)
 }
 
+.mana-type-consolidation .hasMore__0f481 {
+    text-transform: none
+}
+
 .messageGroupBlocked__0f481 {
     background-color: var(--opacity-black-4);
     color: var(--text-muted);
@@ -2772,6 +2776,10 @@
 
 .messageGroupBlockedBtn__0f481:hover {
     background-color: var(--opacity-black-4)
+}
+
+.mana-type-consolidation .messageGroupBlockedBtn__0f481 {
+    text-transform: none
 }
 
 .revealed__0f481 .messageGroupBlockedBtn__0f481 {
@@ -2873,6 +2881,10 @@
 .mediaMosaicAltTextPopoutTitle__0f481 {
     margin-bottom: 9.5px;
     text-transform: uppercase
+}
+
+.mana-type-consolidation .mediaMosaicAltTextPopoutTitle__0f481 {
+    text-transform: none
 }
 
 .mediaMosaicAltTextPopoutDescription__0f481 {
@@ -3458,4 +3470,4 @@
     top: -4px
 }
 
-/*# sourceMappingURL=377265.b233fd7e05274dac.css.map*/
+/*# sourceMappingURL=377265.2097c4f8b5572a06.css.map*/

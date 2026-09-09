@@ -95,6 +95,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .ctaText_e9ca56 {
+    text-transform: none
+}
+
 .powerContainer_e9ca56 {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
     display: flex;
@@ -299,4 +303,4 @@
     pointer-events: none
 }
 
-/*# sourceMappingURL=812793.eec6bb6e2fb4b918.css.map*/
+/*# sourceMappingURL=812793.3b09655f7e9153e7.css.map*/

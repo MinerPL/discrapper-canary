@@ -130,6 +130,10 @@
     white-space: nowrap
 }
 
+.mana-type-consolidation .note__71961 {
+    text-transform: none
+}
+
 .username__71961 {
     font-weight: var(--font-weight-normal);
     opacity: .6
@@ -143,6 +147,10 @@
     line-height: 30px;
     margin-top: 4px;
     text-transform: uppercase
+}
+
+.mana-type-consolidation .header__71961 {
+    text-transform: none
 }
 
 .dmIconContainer__71961 .guildIcon__71961,
@@ -180,4 +188,4 @@
     outline-offset: -2px
 }
 
-/*# sourceMappingURL=343264.3157ebd5aa185629.css.map*/
+/*# sourceMappingURL=343264.cab5167ae56b90b8.css.map*/

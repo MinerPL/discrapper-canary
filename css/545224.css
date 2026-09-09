@@ -10,6 +10,11 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .title_b0f4cc {
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
 .inputs_b0f4cc {
     display: flex;
     justify-content: space-between;
@@ -35,4 +40,4 @@
     color: var(--text-feedback-critical)
 }
 
-/*# sourceMappingURL=545224.cdd5ba6bd071424b.css.map*/
+/*# sourceMappingURL=545224.e1c762149c8b8966.css.map*/

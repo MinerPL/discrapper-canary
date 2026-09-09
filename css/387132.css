@@ -154,6 +154,11 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .title__47998 {
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
 .buttonBody__47998 {
     color: var(--text-default);
     font-size: 16px;
@@ -252,4 +257,4 @@
     background-image: url(/assets/49e200b52c0a66ab.svg)
 }
 
-/*# sourceMappingURL=387132.91abdc275c4bc4f2.css.map*/
+/*# sourceMappingURL=387132.97d03e3bffdbcde7.css.map*/

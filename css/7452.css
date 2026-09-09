@@ -2022,6 +2022,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .titleRegion__124c8 {
+    text-transform: none
+}
+
 .infoIcon__124c8,
 .title__124c8 {
     display: block;
@@ -2193,4 +2197,4 @@
     color: var(--icon-strong)
 }
 
-/*# sourceMappingURL=7452.3b09fe701a1f9760.css.map*/
+/*# sourceMappingURL=7452.3c19b426f276e9e7.css.map*/

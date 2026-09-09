@@ -57,13 +57,17 @@
 }
 
 .memberListHeader_d6b206 {
+    color: var(--text-default);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 12px;
     margin-top: 8px;
     text-transform: uppercase
 }
 
-.memberListHeader_d6b206,
+.mana-type-consolidation .memberListHeader_d6b206 {
+    text-transform: none
+}
+
 .memberListItemText_d6b206 {
     color: var(--text-default)
 }
@@ -371,4 +375,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=454313.89f08b255d087331.css.map*/
+/*# sourceMappingURL=454313.d329e41342ff5dc1.css.map*/

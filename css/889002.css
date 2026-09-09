@@ -197,6 +197,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .sectionHeader__9fe74 {
+    text-transform: none
+}
+
 .fromGuildCard__9fe74 {
     margin-top: 8px
 }
@@ -290,4 +294,4 @@
     color: var(--text-default)
 }
 
-/*# sourceMappingURL=889002.c0b4b19427456458.css.map*/
+/*# sourceMappingURL=889002.35b8f3e0405194d3.css.map*/

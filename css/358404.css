@@ -20,6 +20,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .text__13cf1 {
+    text-transform: none
+}
+
 .title__1472a {
     color: var(--text-default);
     margin-block: 16px;
@@ -40,4 +44,4 @@
     margin-inline-start: auto
 }
 
-/*# sourceMappingURL=358404.fb2bf952f161d693.css.map*/
+/*# sourceMappingURL=358404.ec5a09851385552b.css.map*/

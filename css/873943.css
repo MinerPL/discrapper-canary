@@ -517,6 +517,11 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .header_d2eed6 {
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
 .body_d2eed6 {
     color: var(--text-muted);
     display: flex;
@@ -555,6 +560,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .buttonHint_d2eed6 strong {
+    text-transform: none
+}
+
 .content_d2eed6 {
     display: flex;
     flex-direction: column;
@@ -590,4 +599,4 @@
     border-radius: 0 0 5px 5px
 }
 
-/*# sourceMappingURL=873943.8130ed4568345b09.css.map*/
+/*# sourceMappingURL=873943.08f0fd3e2913cf37.css.map*/

@@ -28,6 +28,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .benefitLabel_f0fc41 {
+    text-transform: none
+}
+
 .viewContents__6eb1d {
     align-items: center;
     background-color: var(--interactive-background-selected);
@@ -327,4 +331,4 @@
     gap: 10px
 }
 
-/*# sourceMappingURL=24774.aecd7efd2ca9436f.css.map*/
+/*# sourceMappingURL=24774.9c1c63ab3a3c0eef.css.map*/

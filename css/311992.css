@@ -312,6 +312,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .refundSubHeader_e9cb00 {
+    text-transform: none
+}
+
 .refundSelect_e9cb00 {
     flex: 1;
     margin-inline-end: 12px
@@ -429,10 +433,14 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .guildProductBenefitLabel_e9cb00 {
+    text-transform: none
+}
+
 .warningBlock_e9cb00 {
     align-items: center;
     overflow: auto;
     width: 100%
 }
 
-/*# sourceMappingURL=311992.0e05e35b29e8a092.css.map*/
+/*# sourceMappingURL=311992.6e690c585d23b46a.css.map*/

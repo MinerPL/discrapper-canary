@@ -156,6 +156,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .overflowRolesPopoutHeaderText__48c1c {
+    text-transform: none
+}
+
 .theme-dark .overflowRolesPopout__48c1c {
     color: var(--opacity-white-80)
 }
@@ -188,4 +192,4 @@
     fill: ButtonText !important
 }
 
-/*# sourceMappingURL=458855.e9e0e3619a140196.css.map*/
+/*# sourceMappingURL=458855.8ed3ac12836a0915.css.map*/

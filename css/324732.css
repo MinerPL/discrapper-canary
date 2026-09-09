@@ -189,6 +189,10 @@ screen and (max-width:485px) {
     text-transform: uppercase
 }
 
+.mana-type-consolidation .stepHeader_ffde51 {
+    text-transform: none
+}
+
 .title_ffde51 {
     text-align: center
 }
@@ -312,4 +316,4 @@ screen and (max-width:485px) {
     width: 20px
 }
 
-/*# sourceMappingURL=324732.218bef44c4029878.css.map*/
+/*# sourceMappingURL=324732.9ca825ce271bf501.css.map*/

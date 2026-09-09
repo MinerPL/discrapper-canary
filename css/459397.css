@@ -2131,6 +2131,11 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .headerText__2ef49 {
+    font-weight: var(--font-weight-semibold);
+    text-transform: none
+}
+
 .headerText__2ef49+div {
     margin-inline-start: 8px
 }
@@ -2450,6 +2455,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .streamGame__2ef49 {
+    text-transform: none
+}
+
 .activityVoiceChannel__2ef49 .headerText__2ef49 {
     color: var(--interactive-text-default)
 }
@@ -2694,4 +2703,4 @@
     background: hsl(var(--primary-500-hsl)/.6)
 }
 
-/*# sourceMappingURL=459397.1aa5875143f62093.css.map*/
+/*# sourceMappingURL=459397.69f264d85bd292a1.css.map*/

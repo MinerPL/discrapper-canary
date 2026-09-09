@@ -2146,17 +2146,18 @@
 
 .header_f0c729 {
     color: var(--text-default);
+    margin-bottom: 8px;
     text-transform: uppercase
 }
 
-.header_f0c729,
-.hubInfo_f0c729 {
-    margin-bottom: 8px
+.mana-type-consolidation .header_f0c729 {
+    text-transform: none
 }
 
 .hubInfo_f0c729 {
     align-items: center;
-    display: flex
+    display: flex;
+    margin-bottom: 8px
 }
 
 .hubIcon_f0c729 {
@@ -2177,6 +2178,10 @@
     color: var(--text-default);
     margin-bottom: 8px;
     text-transform: uppercase
+}
+
+.mana-type-consolidation .header__14de9 {
+    text-transform: none
 }
 
 .guildInfo__14de9 {
@@ -2259,4 +2264,4 @@
     margin-top: 16px
 }
 
-/*# sourceMappingURL=142753.d9bbd4d1ff90ef23.css.map*/
+/*# sourceMappingURL=142753.800613dadee3744b.css.map*/

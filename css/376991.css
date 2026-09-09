@@ -103,6 +103,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .optionHeader_c04f35 {
+    text-transform: none
+}
+
 .footer_c04f35 {
     align-items: center;
     flex-direction: column
@@ -1101,4 +1105,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=376991.47795fa35b572967.css.map*/
+/*# sourceMappingURL=376991.24ea2971f2e7fc62.css.map*/

@@ -103,6 +103,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .serverShopLabelText__86fa6 {
+    text-transform: none
+}
+
 .guildShopEmbedFooter__86fa6 {
     align-items: center;
     display: flex;
@@ -147,4 +151,4 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=533781.96498ce7f4ad51ea.css.map*/
+/*# sourceMappingURL=533781.6e4bf03a96d39564.css.map*/

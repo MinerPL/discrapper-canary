@@ -1098,6 +1098,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .mentionButton__841c8 {
+    text-transform: none
+}
+
 .mentionIcon__841c8 {
     height: 16px;
     margin-inline-end: 4px;
@@ -1115,4 +1119,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=434168.60cfc551d233fcd2.css.map*/
+/*# sourceMappingURL=434168.da5bf4130d0a4ae5.css.map*/

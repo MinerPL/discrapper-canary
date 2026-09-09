@@ -178,6 +178,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .header_c3fe25 {
+    text-transform: none
+}
+
 .headerWithoutSeparators_c3fe25 {
     margin-bottom: 8px
 }
@@ -333,4 +337,4 @@
     color: var(--hypesquad-house-3)
 }
 
-/*# sourceMappingURL=906470.df0bc2edd4395909.css.map*/
+/*# sourceMappingURL=906470.5e7e94b25b0491ac.css.map*/

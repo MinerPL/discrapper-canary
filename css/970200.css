@@ -121,6 +121,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .verificationBlock_dede4b .body_dede4b {
+    text-transform: none
+}
+
 .verificationBlock_dede4b:hover {
     background-color: var(--background-base-lower)
 }
@@ -133,4 +137,4 @@
     border: 1px solid var(--primary-700)
 }
 
-/*# sourceMappingURL=970200.113f7cc89d9c428e.css.map*/
+/*# sourceMappingURL=970200.17c3095f727de8ea.css.map*/

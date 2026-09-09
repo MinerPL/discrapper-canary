@@ -27,6 +27,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .replyHeader__5ba62 {
+    text-transform: none
+}
+
 .replyInput__5ba62 {
     background: var(--input-background-default)
 }
@@ -52,4 +56,4 @@
     cursor: pointer
 }
 
-/*# sourceMappingURL=98857.7bd6a5f2161d04d3.css.map*/
+/*# sourceMappingURL=98857.0704cde05ccb28fa.css.map*/

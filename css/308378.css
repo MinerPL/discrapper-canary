@@ -360,6 +360,10 @@
     text-transform: uppercase
 }
 
+.mana-type-consolidation .subsectionLabel_edf95e {
+    text-transform: none
+}
+
 .rowId_edf95e {
     flex: 1;
     font-size: 13px;
@@ -433,4 +437,4 @@
     color: var(--text-feedback-critical)
 }
 
-/*# sourceMappingURL=308378.353263f45351904c.css.map*/
+/*# sourceMappingURL=308378.cf2a46889d4ef7cf.css.map*/
