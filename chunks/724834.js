@@ -174,8 +174,8 @@ function H(e) {
         [e],
     );
 }
-var V = n(460442),
-    B = n(662349),
+var B = n(460442),
+    V = n(662349),
     z = n(479026),
     K = n(636374),
     Y = n(699976),
@@ -280,8 +280,8 @@ function $(e) {
                 children: [
                     !0 === y && (0, i.jsx)(A.A, { className: Z.Pf }),
                     N,
-                    F && (0, i.jsx)(B.A, { spec: Q, onClick: U, isHoveringOrFocusing: p, label: z, icon: Y }),
-                    k && (0, i.jsx)(V.gS, { isHoveringOrFocusing: p }),
+                    F && (0, i.jsx)(V.A, { spec: Q, onClick: U, isHoveringOrFocusing: p, label: z, icon: Y }),
+                    k && (0, i.jsx)(B.gS, { isHoveringOrFocusing: p }),
                     a.id === d.id &&
                         null != T &&
                         (0, i.jsx)(W, {

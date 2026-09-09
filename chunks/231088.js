@@ -150,8 +150,8 @@ function v(e) {
     F || t === U || W(!0);
     let H = [];
     L && H.push(R), G && "compact" !== g && H.push(_);
-    let V = H.length > 0 ? H.join(" ") : void 0;
-    function B() {
+    let B = H.length > 0 ? H.join(" ") : void 0;
+    function V() {
         let { activeElement: e } = w.current?.ownerDocument ?? document;
         (0, a.vq)(e, HTMLElement) && e.blur(), u();
     }
@@ -163,7 +163,7 @@ function v(e) {
             : function (e) {
                   e.preventDefault();
               },
-        onClick: k ? void 0 : B,
+        onClick: k ? void 0 : V,
         children: [
             L
                 ? (0, i.jsx)(m.E, {
@@ -178,10 +178,10 @@ function v(e) {
                 (0, i.jsx)(x.D, {
                     innerRef: c,
                     "aria-label": d,
-                    "aria-describedby": V,
+                    "aria-describedby": B,
                     "aria-expanded": !1,
                     onClick: (e) => {
-                        e.stopPropagation(), B();
+                        e.stopPropagation(), V();
                     },
                     focusProps: { ringTarget: w },
                 }),

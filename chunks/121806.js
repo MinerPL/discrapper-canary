@@ -4,7 +4,7 @@ l.d(t, {
     Ht: () => z,
     KD: () => Q,
     Ky: () => K,
-    TT: () => H,
+    TT: () => B,
     _2: () => J,
     dY: () => ee,
     ps: () => $,
@@ -163,7 +163,7 @@ function $(e, t) {
         handleBlurFilter: E,
     };
 }
-function B(e) {
+function H(e) {
     let t,
         { channel: l } = e;
     if (l.isDM()) {
@@ -176,7 +176,7 @@ function B(e) {
             : (0, S.gU)(l);
     return { value: l.id, label: (0, v.E3)(l), key: l.id, id: l.id, leading: t };
 }
-function H(e) {
+function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [l, r] = n.useState(t),
         [a, u] = n.useState(""),
@@ -191,7 +191,7 @@ function H(e) {
             if (s.length > 0)
                 s.forEach((e) => {
                     let l = e.channel,
-                        n = B({ channel: l });
+                        n = H({ channel: l });
                     r.add(l.id), t.push(n);
                 });
             else {
@@ -204,7 +204,7 @@ function H(e) {
                         e.forEach((e) => {
                             let l = y.A.getChannel(e);
                             if (null != l) {
-                                let e = B({ channel: l });
+                                let e = H({ channel: l });
                                 r.add(l.id), t.push(e);
                             }
                         });
@@ -216,7 +216,7 @@ function H(e) {
                         if (r.has(e)) return;
                         let l = y.A.getChannel(e);
                         if (null == l) return;
-                        let n = B({ channel: l });
+                        let n = H({ channel: l });
                         r.add(e), t.unshift(n);
                     }),
                 t

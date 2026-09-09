@@ -212,11 +212,11 @@ function H(e) {
         ? (0, i.jsx)(a.D, { ...s, children: l })
         : (0, i.jsx)(a.D, { ...s, children: (0, i.jsx)(o.D, { onClick: r, className: F.sd, children: l }) });
 }
-function V(e) {
+function B(e) {
     let { user: t, guildId: n, channelId: l, id: s } = e;
     return (0, i.jsx)(c.A, { id: s, children: R.intl.format(R.t.TM0XDY, { name: j.Ay.getName(n, l, t) }) });
 }
-function B(e) {
+function V(e) {
     let { text: t, className: n } = e;
     return (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-muted", className: n, children: t });
 }
@@ -230,8 +230,8 @@ function z(e) {
               "aria-labelledby": r,
               children: [
                   (0, i.jsx)(u.c, { size: "xxs", color: g.A.colors.ICON_MUTED, className: F.Ls }),
-                  (0, i.jsx)(V, { user: n, guildId: l, channelId: s, id: r }),
-                  (0, i.jsx)(B, { text: t }),
+                  (0, i.jsx)(B, { user: n, guildId: l, channelId: s, id: r }),
+                  (0, i.jsx)(V, { text: t }),
               ],
           });
 }
@@ -294,8 +294,8 @@ function K(e) {
                   className: F.Vg,
                   children: [
                       (0, i.jsx)(x.PencilIcon, { size: "xxs", color: g.A.colors.ICON_MUTED, className: F.Ls }),
-                      (0, i.jsx)(V, { user: n, guildId: s, channelId: a, id: p }),
-                      (0, i.jsx)(B, { text: t ?? k, className: r()(F.qC, !N && F.qf) }),
+                      (0, i.jsx)(B, { user: n, guildId: s, channelId: a, id: p }),
+                      (0, i.jsx)(V, { text: t ?? k, className: r()(F.qC, !N && F.qf) }),
                       (0, i.jsx)(o.D, {
                           innerRef: b,
                           "aria-label": R.intl.string(R.t.ppb9MJ),

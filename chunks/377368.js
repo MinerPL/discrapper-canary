@@ -1,17 +1,17 @@
-a.d(s, { Hx: () => x, NB: () => c, Xj: () => d, wX: () => o, yW: () => m });
+a.d(s, { Hx: () => x, NB: () => d, Xj: () => c, wX: () => o, yW: () => m });
 var t,
     i,
-    n = a(582128),
-    l = a(174459),
+    l = a(582128),
+    n = a(174459),
     r = a(652215);
-let c = "xbox",
-    d = "xbox_perks_modal";
+let d = "xbox",
+    c = "xbox_perks_modal";
 var o = (((t = {}).CONNECTION_FOOTER = "xbox_perks_connection_footer"), t),
     x = (((i = {}).CONNECT = "connect"), i);
 function m(e) {
-    return n.useCallback(
+    return l.useCallback(
         (s) => {
-            l.default.track(r.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, { partner: c, cta_type: s, location_stack: e });
+            n.default.track(r.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, { partner: d, cta_type: s, location_stack: e });
         },
         [e],
     );

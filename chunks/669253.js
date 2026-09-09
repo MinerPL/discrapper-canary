@@ -71,8 +71,8 @@ var y = n(234e3),
     F = n(61881),
     W = n(624826),
     H = n(384377),
-    V = n(518477);
-function B(e) {
+    B = n(518477);
+function V(e) {
     let { guildId: t } = e,
         { trackUserProfileEditSaved: n } = (0, D.NJ)(),
         [s, r] = l.useState(!1),
@@ -105,7 +105,7 @@ function B(e) {
         })),
         b = p && I,
         T = x || b || C,
-        B = !(x && !f) && (!p || A),
+        V = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
             U.A.clearPendingWidgets(), p ? (0, P.XQ)() : C && (0, y.Jp)();
         }, [p, C]),
@@ -193,7 +193,7 @@ function B(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, v.x8)() : (0, H.XA)(V.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
+            e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
         }, [p, b, C, x, d, g, m, n, t]);
     return (
         l.useEffect(() => {
@@ -220,7 +220,7 @@ function B(e) {
             isEmphasized: s,
             a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
             secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !T || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !B || !T },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !V || !T },
         })
     );
 }
@@ -252,7 +252,7 @@ function q(e) {
                       : "premium-try-it-out" === g
                         ? (0, i.jsx)(A, {})
                         : "save" === g
-                          ? (0, i.jsx)(B, { guildId: n })
+                          ? (0, i.jsx)(V, { guildId: n })
                           : null,
           })
         : null;

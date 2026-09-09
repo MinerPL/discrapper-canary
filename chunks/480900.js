@@ -10,8 +10,8 @@ var n = l(477900),
     u = l(331322),
     f = l(939249),
     p = l(478016),
-    m = l(834730),
-    x = l(442433),
+    x = l(834730),
+    m = l(442433),
     g = l(66834),
     A = l(736653),
     h = l(573648),
@@ -124,7 +124,7 @@ let L = function (e) {
                                   var s;
                                   return (
                                       (s = e.id),
-                                      void (0, x.L3)(i, async () => {
+                                      void (0, m.L3)(i, async () => {
                                           let { default: e } = await l.e("868001").then(l.bind(l, 699896));
                                           return (l) =>
                                               (0, n.jsx)(e, {
@@ -147,14 +147,14 @@ let L = function (e) {
                             (0, n.jsxs)("div", {
                                 className: R.fk,
                                 children: [
-                                    (0, n.jsx)(m.E, {
+                                    (0, n.jsx)(x.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
                                         className: R.CF,
                                         children: e.name,
                                     }),
                                     void 0 !== e.description
-                                        ? (0, n.jsx)(m.E, {
+                                        ? (0, n.jsx)(x.E, {
                                               variant: "text-xs/normal",
                                               color: "text-default",
                                               className: R.Xr,

@@ -47,8 +47,8 @@ function w(t) {
         F = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
         X = (0, D.YL)(e),
         K = (0, u.bG)([N.A], () => N.A.getState().theme),
-        Y = (0, c.M)(K) ? q.NJ.DARK : q.NJ.LIGHT,
-        { startConsoleQuest: B, startingConsoleQuest: G } = (0, Q.Wj)({
+        B = (0, c.M)(K) ? q.NJ.DARK : q.NJ.LIGHT,
+        { startConsoleQuest: Y, startingConsoleQuest: G } = (0, Q.Wj)({
             questId: e.id,
             beforeRequest: () => {
                 V.startAnimation(),
@@ -75,8 +75,8 @@ function w(t) {
         });
     return (
         (0, i.useEffect)(() => {
-            T && !O.current && (B(), (O.current = !0));
-        }, [T, B]),
+            T && !O.current && (Y(), (O.current = !0));
+        }, [T, Y]),
         (0, s.jsx)(l.Modal, {
             transitionState: n,
             onClose: o,
@@ -112,7 +112,7 @@ function w(t) {
                             }),
                             (0, s.jsxs)(E.D, {
                                 className: r()(b.Tm, { [b.r9]: G }),
-                                onClick: B,
+                                onClick: Y,
                                 children: [
                                     V.render(),
                                     (0, s.jsx)(d.E, {
@@ -153,7 +153,7 @@ function w(t) {
                                           children: (0, s.jsx)("img", {
                                               className: b.rC,
                                               alt: e.config.messages.gameTitle,
-                                              src: (0, R.tW)(e, R.fY.GAME_TILE, Y).url,
+                                              src: (0, R.tW)(e, R.fY.GAME_TILE, B).url,
                                           }),
                                       })
                                     : null,

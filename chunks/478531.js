@@ -9,8 +9,8 @@ var i = n(503698),
     u = n(176781),
     c = n(834730),
     d = n(939249),
-    m = n(429913),
-    p = n(769015),
+    p = n(429913),
+    m = n(769015),
     h = n(409626),
     f = n(692969),
     g = n(202163),
@@ -23,14 +23,14 @@ var i = n(503698),
     w = n(447177);
 function j(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
-        i = (0, m.h)(t),
+        i = (0, p.h)(t),
         { gameRecord: a } = (0, g.A)(t),
         s = (0, f.A)({ applicationId: t, location: "ClipEmbed", source: h.GameProfileSources.ClipEmbed }),
         o = a?.name ?? i?.name;
     if (null == o) return null;
     let u = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(p.A, { game: a ?? i, size: p.M.XXSMALL, className: w.Gt, allowUnknownGameIcon: !1 }),
+                (0, l.jsx)(m.A, { game: a ?? i, size: m.M.XXSMALL, className: w.Gt, allowUnknownGameIcon: !1 }),
                 (0, l.jsx)(c.E, {
                     className: w.mO,
                     variant: "text-sm/normal",
@@ -56,8 +56,8 @@ let O = function (e) {
             participantIds: n,
             applicationId: i,
             title: d,
-            guildId: m,
-            className: p,
+            guildId: p,
+            className: m,
             activeLayer: h,
             playerState: f = s.Q6.PAUSED,
             isControlBarExpanded: g = !0,
@@ -67,7 +67,7 @@ let O = function (e) {
         S = (0, a.yK)([x.default], () => n.map((e) => x.default.getUser(e)).filter(v.Vq) ?? []),
         V = null != t ? (0, y.Fe)(new Date(t)) : null;
     return (0, l.jsxs)("div", {
-        className: r()(w.oK, { [w.pd]: f === s.Q6.PLAYING && !g, [w.aS]: O }, p),
+        className: r()(w.oK, { [w.pd]: f === s.Q6.PLAYING && !g, [w.aS]: O }, m),
         children: [
             (0, l.jsx)("div", { className: w.Lu }),
             (0, l.jsxs)("div", {
@@ -117,14 +117,14 @@ let O = function (e) {
                             "aria-label": A.intl.string(A.t.WTozwe),
                             children: [
                                 S.slice(0, 4).map((e) =>
-                                    (0, l.jsx)(E.A, { layerContext: h, user: e, guildId: m }, e.id),
+                                    (0, l.jsx)(E.A, { layerContext: h, user: e, guildId: p }, e.id),
                                 ),
                                 S.length > 4 &&
                                     (0, l.jsx)(N.w, {
                                         layerContext: h,
                                         participants: S,
                                         maxVisibleParticipants: 4,
-                                        guildId: m,
+                                        guildId: p,
                                     }),
                             ],
                         }),

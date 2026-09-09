@@ -425,7 +425,7 @@ function P(e) {
     }
     let _ = g.Q0.map((e) => e.summary()),
         R = y >= 0 ? _[y] : (0, g.tg)(t, l.main),
-        { text: L, phase: D } = (0, E.Q)(R);
+        { text: L, phase: F } = (0, E.Q)(R);
     return (0, n.jsx)("div", {
         className: T.qd,
         "data-placement": f ?? void 0,
@@ -500,7 +500,7 @@ function P(e) {
                                     tag: "span",
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    className: i()(T.Z, { [T.xQ]: "exit" === D, [T.lm]: "enter" === D }),
+                                    className: i()(T.Z, { [T.xQ]: "exit" === F, [T.lm]: "enter" === F }),
                                     children: L,
                                 }),
                             ],
