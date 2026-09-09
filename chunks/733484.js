@@ -14,4 +14,5 @@ e.exports = {
     SW: "longText__73abe",
     ot: "extraLongText__73abe",
     F5: "suggestedSkuPreview__73abe",
+    Pf: "newContentDot__73abe",
 };
