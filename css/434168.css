@@ -185,9 +185,9 @@
 }
 
 .videoFooterContGradient_b824c5 {
-    background: linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, .5) 27.95%, #070709 64.57%);
+    background: linear-gradient(180deg, rgba(7, 7, 9, 0), rgba(7, 7, 9, .5) 27.95%, #070709 60.57%);
     bottom: 0;
-    height: var(--custom-footer-scrim-height, 113px);
+    height: var(--custom-footer-scrim-height, 121px);
     padding: 0;
     pointer-events: none
 }
@@ -1119,4 +1119,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=434168.da5bf4130d0a4ae5.css.map*/
+/*# sourceMappingURL=434168.4173c98904e6eb01.css.map*/
