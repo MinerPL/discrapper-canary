@@ -1,26 +1,26 @@
-n.d(l, { A: () => x });
-var t = n(477900);
-n(582128);
-var i = n(17928),
-    r = n(696451),
-    a = n(317525),
-    s = n(71393),
-    o = n(576705),
-    d = n(183555),
-    u = n(1659),
-    c = n(166005),
-    g = n(900179),
-    m = n(518477),
-    f = n(652215),
-    p = n(375708);
+l.d(n, { A: () => x });
+var t = l(477900);
+l(582128);
+var i = l(17928),
+    r = l(696451),
+    a = l(317525),
+    s = l(71393),
+    o = l(576705),
+    d = l(183555),
+    u = l(1659),
+    c = l(166005),
+    g = l(900179),
+    m = l(518477),
+    f = l(652215),
+    p = l(375708);
 function x(e) {
-    let { userId: l, guildId: n, ...x } = e,
+    let { userId: n, guildId: l, ...x } = e,
         { trackUserProfileAction: h } = (0, d.NJ)(),
-        v = (0, i.bG)([s.A], () => s.A.getGuild(n)),
-        A = (0, i.bG)([r.Ay], () => r.Ay.getMember(n, l)),
+        v = (0, i.bG)([s.A], () => s.A.getGuild(l)),
+        A = (0, i.bG)([r.Ay], () => r.Ay.getMember(l, n)),
         b = A?.roles,
-        j = (0, i.yK)([a.A], () => a.A.getManyRoles(n, b ?? []).sort(u.m), [b, n]),
-        [I] = (0, i.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(n)]);
+        j = (0, i.yK)([a.A], () => a.A.getManyRoles(l, b ?? []).sort(u.m), [b, l]),
+        [I] = (0, i.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(l)]);
     if (null == v) return null;
     let y = I && null != A;
     return 0 !== j.length || y
@@ -29,7 +29,7 @@ function x(e) {
               scrollTargetId: m.bk.ROLES,
               ...x,
               children: (0, t.jsx)(c.YR, {
-                  userId: l,
+                  userId: n,
                   guild: v,
                   roles: j,
                   onAddRole: () => {

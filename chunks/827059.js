@@ -605,8 +605,8 @@ var ez = n(554146),
     e1 = n(826673),
     e2 = n(182922),
     e3 = n(532624),
-    e5 = n(531685),
-    e8 = n(723702),
+    e8 = n(531685),
+    e5 = n(723702),
     e6 = n(350535),
     e7 = n(115023);
 function e4(e) {
@@ -615,7 +615,7 @@ function e4(e) {
         r = (0, h.bG)([p.A], () => null != t && p.A.isFavoriteSound(t.soundId)),
         a = (0, h.bG)([em.A], () => em.A.getGuild(t?.guildId)),
         o = (0, h.bG)([e0.Ay], () => e0.Ay.useReducedMotion, []),
-        u = (0, h.bG)([e5.A], () => e5.A.isFocused()),
+        u = (0, h.bG)([e8.A], () => e8.A.isFocused()),
         c = (0, h.bG)([e3.Ay], () => e3.Ay.getKeybindForAction(eS.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
         return (0, l.jsx)(e2.A, {
@@ -642,7 +642,7 @@ function e4(e) {
     }
     let f = (0, e1.k8)(ez.M.SOUNDBOARD_KEYBIND_TIP),
         g =
-            null != c && (0, e8.isWindows)() && !f
+            null != c && (0, e5.isWindows)() && !f
                 ? eD.intl.format(eD.t.udMTth, {
                       keybind: (0, e6.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, l.jsx)(eq.Anchor, { onClick: m, children: e }, t),
@@ -1248,8 +1248,8 @@ function tp(e) {
             },
             [eU, eG, eV, ew.length],
         ),
-        e5 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
-        e8 = i.useCallback(
+        e8 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
+        e5 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1271,11 +1271,11 @@ function tp(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: to.Jm,
-                          onClick: e8,
+                          onClick: e5,
                           "aria-label": eD.intl.string(eD.t.kbFsAD),
                           children: (0, l.jsx)(tf, { className: to.By }),
                       }),
-            [N, e8],
+            [N, e5],
         ),
         e7 = i.useCallback(
             (e) =>
@@ -1357,7 +1357,7 @@ function tp(e) {
                     containerWidth: a,
                     store: M.LW,
                     onSelectItem: eY,
-                    onSearchExpressions: e5,
+                    onSearchExpressions: e8,
                     hasSearchResults: eI.length > 0,
                     defaultSearchPlaceholder: eD.intl.string(eD.t.sKt3xS),
                     renderRow: eq,

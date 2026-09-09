@@ -1,49 +1,49 @@
-l.d(a, { R: () => h });
-var o = l(582128),
-    r = l(435558),
-    t = l.n(r),
-    n = l(929396),
-    i = l(471677),
-    m = l(321108),
-    s = l(735321),
-    u = l(403362),
-    c = l(282435);
+l.d(t, { R: () => f });
+var n = l(582128),
+    a = l(435558),
+    r = l.n(a),
+    u = l(929396),
+    o = l(471677),
+    s = l(321108),
+    c = l(735321),
+    i = l(403362),
+    m = l(282435);
 let d = [];
-function p(e) {
-    return c.jN.get(e) ?? 0;
+function h(e) {
+    return m.jN.get(e) ?? 0;
 }
-function h() {
-    let { query: e, selectedGameIds: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        l = o.useMemo(() => [...new Set([...c.sx, ...(a ?? d)])], [a]),
-        r = (0, m.A)(l),
-        h = o.useMemo(() => new Map(r.map((e) => [e.id, e])), [r]),
-        f = o.useMemo(
+function f() {
+    let { query: e, selectedGameIds: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        l = n.useMemo(() => [...new Set([...m.sx, ...(t ?? d)])], [t]),
+        a = (0, s.A)(l),
+        f = n.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
+        p = n.useMemo(
             () =>
-                t()(c.sx)
-                    .map((e) => h.get(e))
-                    .filter(u.Vq)
-                    .filter((e) => (0, s.XX)(e))
+                r()(m.sx)
+                    .map((e) => f.get(e))
+                    .filter(i.Vq)
+                    .filter((e) => (0, c.XX)(e))
                     .map((e) => ({ id: e.id, value: e.id, label: e.name }))
                     .sortBy((e) => {
-                        let { value: a } = e;
-                        return p(a);
+                        let { value: t } = e;
+                        return h(t);
                     })
                     .reverse()
                     .value(),
-            [h],
+            [f],
         ),
-        v = o.useCallback((e, a) => p(a.item.value) - p(e.item.value), []),
-        M = o.useMemo(() => ({ baseSort: v, keys: ["label"] }), [v]),
-        b = (e?.trim().length ?? 0) > 0,
-        { results: g } = (0, i.J$)(e ?? null),
-        k = o.useMemo(() => new Set((g ?? []).filter((e) => (0, n.qS)(e)).map((e) => e.id)), [g]),
-        w = o.useMemo(
+        v = n.useCallback((e, t) => h(t.item.value) - h(e.item.value), []),
+        b = n.useMemo(() => ({ baseSort: v, keys: ["label"] }), [v]),
+        g = (e?.trim().length ?? 0) > 0,
+        { results: x } = (0, o.J$)(e ?? null),
+        k = n.useMemo(() => new Set((x ?? []).filter((e) => (0, u.qS)(e)).map((e) => e.id)), [x]),
+        y = n.useMemo(
             () => [
-                ...(g ?? []).filter((e) => k.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
-                ...(a ?? d).filter((e) => !k.has(e)).map((e) => ({ id: e, value: e, label: h.get(e)?.name ?? "" })),
+                ...(x ?? []).filter((e) => k.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
+                ...(t ?? d).filter((e) => !k.has(e)).map((e) => ({ id: e, value: e, label: f.get(e)?.name ?? "" })),
             ],
-            [g, k, a, h],
+            [x, k, t, f],
         ),
-        C = o.useCallback((e) => e.filter((e) => k.has(e.value)), [k]);
-    return { options: b ? w : f, matchSorterOptions: M, customMatchSorter: b ? C : void 0 };
+        M = n.useCallback((e) => e.filter((e) => k.has(e.value)), [k]);
+    return { options: g ? y : p, matchSorterOptions: b, customMatchSorter: g ? M : void 0 };
 }

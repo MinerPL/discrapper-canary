@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     y7: "emptyStateContainer__5ec2f",
     e3: "peopleList__5ec2f",
     ON: "searchBar__5ec2f",

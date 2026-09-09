@@ -268,8 +268,8 @@ var eB = n(636585),
     e1 = n(20805),
     e2 = n(22869),
     e3 = n(623671),
-    e5 = n(428249),
-    e8 = n(327098),
+    e8 = n(428249),
+    e5 = n(327098),
     e6 = n(576757),
     e7 = n(202195),
     e4 = n(140651),
@@ -790,7 +790,7 @@ function ty(e) {
                       }),
             };
         })({ channel: o, entry: m, onVoiceChannelPreview: x }),
-        { embeddedActivity: R } = (0, e8.A)(m),
+        { embeddedActivity: R } = (0, e5.A)(m),
         O =
             ((t = R),
             (n = (0, u.bG)([eK.A], () => eK.A.getGuild((0, es.D)(t?.location)))),
@@ -914,7 +914,7 @@ function ty(e) {
     async function ea(e) {
         let { reply: t, sendToChannel: n, onComplete: l, interactionType: i, requiresChannelReadiness: s } = e;
         I?.focus(),
-            await (0, e5.d)({
+            await (0, e8.d)({
                 channel: n,
                 content: t,
                 entry: m,
@@ -1260,7 +1260,7 @@ function tj(e) {
             { onOpened: () => m?.(tm.PA.OPENED_GAME_PROFILE) },
         ),
         y = A ? I : void 0,
-        { activity: S, activityApplication: v, fallbackApplication: N } = (0, e8.A)(x),
+        { activity: S, activityApplication: v, fallbackApplication: N } = (0, e5.A)(x),
         { largeImage: _, smallImage: j } = (0, e0.D8)(S, v ?? N),
         { largeImage: T } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, eM.w)({ location: "content_inventory" }),
@@ -1666,8 +1666,8 @@ var t1 = n(363670);
 n(321073);
 var t2 = n(205327),
     t3 = n(52133),
-    t5 = n(835723),
-    t8 = n(172710),
+    t8 = n(835723),
+    t5 = n(172710),
     t6 = n(655116),
     t7 = n(763758),
     t4 = n(286617),
@@ -1725,20 +1725,20 @@ function na(e) {
         C = [];
     h.media.provider === t2.X.SPOTIFY &&
         ((n = () => {
-            (0, t8.Mp)(d);
+            (0, t5.Mp)(d);
         }),
         (i = () => {
-            (0, t8.QX)(d, p.id);
+            (0, t5.QX)(d, p.id);
         }),
         (t = () => {
-            null != g ? g() : (0, t8.Mp)(d);
+            null != g ? g() : (0, t5.Mp)(d);
         }),
         (A = (0, l.jsx)(t7.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tg.zA,
             onOpenSpotifyArtist: function (e) {
-                null != d && null != p && (0, t8.mN)(d, p.id, e);
+                null != d && null != p && (0, t5.mN)(d, p.id, e);
             },
         })),
         x?.syncDisabled === !1 &&
@@ -1750,7 +1750,7 @@ function na(e) {
                         size: "md",
                         fullWidth: !0,
                         text: ef.intl.string(ef.t.eU3inB),
-                        icon: t5.J,
+                        icon: t8.J,
                         onClick: function () {
                             null != x && ((0, t9.A)(x, ni.Qp.USER_ACTIVITY_SYNC), a());
                         },

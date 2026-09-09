@@ -1,12 +1,12 @@
-n.d(l, { A: () => s });
-var t = n(582128),
-    i = n(17928),
-    r = n(321191);
+l.d(n, { A: () => s });
+var t = l(582128),
+    i = l(17928),
+    r = l(321191);
 let a = [];
 function s(e) {
-    let l = (0, i.bG)([r.A], () => r.A.getUserProfile(e));
+    let n = (0, i.bG)([r.A], () => r.A.getUserProfile(e));
     return (0, t.useMemo)(
-        () => (l?.applicationRoleConnections == null ? a : l.applicationRoleConnections),
-        [l?.applicationRoleConnections],
+        () => (n?.applicationRoleConnections == null ? a : n.applicationRoleConnections),
+        [n?.applicationRoleConnections],
     );
 }

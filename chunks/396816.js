@@ -1,5 +1,5 @@
 let i, l, s;
-n.d(t, { A: () => ee, y: () => _ }), n(321073);
+n.d(t, { A: () => ee, y: () => v }), n(321073);
 var r,
     a = n(435558),
     o = n.n(a),
@@ -19,8 +19,8 @@ var r,
     I = n(555337),
     S = n(927573),
     C = n(652215),
-    v = n(178758),
-    _ = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
+    _ = n(178758),
+    v = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
 let T = {
         [S.T$.DISPLAY]: [
             "name",
@@ -100,14 +100,14 @@ function z(e, t) {
         let l = {
             solid: { primary_color: C.TGz, secondary_color: null, tertiary_color: null },
             gradient: {
-                primary_color: v.lO.primary_color,
-                secondary_color: v.lO.secondary_color,
+                primary_color: _.lO.primary_color,
+                secondary_color: _.lO.secondary_color,
                 tertiary_color: null,
             },
             holographic: {
-                primary_color: v.jl.primary_color,
-                secondary_color: v.jl.secondary_color,
-                tertiary_color: v.jl.tertiary_color,
+                primary_color: _.jl.primary_color,
+                secondary_color: _.jl.secondary_color,
+                tertiary_color: _.jl.tertiary_color,
             },
         };
         null != t.colors &&

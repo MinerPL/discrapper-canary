@@ -1,4 +1,4 @@
-n.d(t, { default: () => M, u: () => T });
+n.d(t, { default: () => M, u: () => p });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -15,58 +15,58 @@ var i = n(477900),
 function I() {
     return g.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
-async function _(e, t) {
+async function m(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
     await (0, h.JM)(n), await (0, h.Sh)(e);
 }
-var N = n(244696),
-    m = n(49999),
-    C = n(375708),
+var _ = n(244696),
+    C = n(49999),
+    N = n(375708),
     S = n(975366);
-let T = "GUILD_THEME_NUX_MODAL",
-    p = new A.A("GuildThemeNuxModal");
+let p = "GUILD_THEME_NUX_MODAL",
+    T = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
-        [g, T] = s.useState(I),
+        [g, p] = s.useState(I),
         [M, f] = s.useState(null),
-        [O, L] = s.useState("init"),
+        [L, O] = s.useState("init"),
         R = g === c.tI.PERSONAL,
-        x = (0, l.bG)([E.A], () => E.A.getGuildId()),
-        G = (0, l.bG)([N.A], () => {
-            let e = N.A.getGuildThemeSnapshot(t);
+        D = (0, l.bG)([E.A], () => E.A.getGuildId()),
+        x = (0, l.bG)([_.A], () => {
+            let e = _.A.getGuildThemeSnapshot(t);
             return null != e && e.enabled ? (e.themeSettings ?? null) : null;
         }, [t]),
-        D = R ? null : G;
+        G = R ? null : x;
     s.useEffect(() => {
-        x !== t && h();
-    }, [t, h, x]);
+        D !== t && h();
+    }, [t, h, D]);
     let U = s.useCallback((e) => {
-            f(null), T(e);
+            f(null), p(e);
         }, []),
         b = s.useCallback(async () => {
-            if ("init" === O) {
-                if (x !== t) return void (await h());
-                L("submitting"), f(null);
+            if ("init" === L) {
+                if (D !== t) return void (await h());
+                O("submitting"), f(null);
                 try {
-                    await _(t, R);
+                    await m(t, R);
                 } catch (e) {
-                    p.error("Failed to save guild theme NUX preference", e), f(C.intl.string(C.t.fEptJP)), L("init");
+                    T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), O("init");
                     return;
                 }
-                L("submitted"), n(m.i.TAKE_ACTION), await h();
+                O("submitted"), n(C.i.TAKE_ACTION), await h();
             }
-        }, [t, R, n, h, x, O]),
+        }, [t, R, n, h, D, L]),
         y = s.useCallback(async () => {
-            "submitted" !== O && n(m.i.USER_DISMISS), await h();
-        }, [n, h, O]),
-        P = s.useMemo(
+            "submitted" !== L && n(C.i.USER_DISMISS), await h();
+        }, [n, h, L]),
+        H = s.useMemo(
             () => [
-                { value: c.tI.GUILD, id: "guild", label: C.intl.string(C.t.aN3RNQ) },
-                { value: c.tI.PERSONAL, id: "personal", label: C.intl.string(C.t.js8y7t) },
+                { value: c.tI.GUILD, id: "guild", label: N.intl.string(N.t.aN3RNQ) },
+                { value: c.tI.PERSONAL, id: "personal", label: N.intl.string(N.t.js8y7t) },
             ],
             [],
         ),
-        H = R ? C.intl.string(C.t.cvoikF) : C.intl.string(C.t["cY+Oob"]);
+        P = R ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
     return (0, i.jsx)(a.k, {
         size: "md",
         transitionState: A,
@@ -76,16 +76,16 @@ function M(e) {
             type: "dynamic",
             component: r.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
             aspectRatio: "16/9",
-            props: { themeSettings: D },
+            props: { themeSettings: G },
         },
-        title: C.intl.string(C.t.Q9zFy9),
-        subtitle: C.intl.string(C.t.XLpBLj),
+        title: N.intl.string(N.t.Q9zFy9),
+        subtitle: N.intl.string(N.t.XLpBLj),
         actions: [
             {
-                text: H,
+                text: P,
                 variant: R ? "secondary" : "primary",
-                loading: "submitting" === O,
-                disabled: "submitting" === O,
+                loading: "submitting" === L,
+                disabled: "submitting" === L,
                 onClick: b,
             },
         ],
@@ -96,14 +96,14 @@ function M(e) {
             children: [
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
-                    options: P,
+                    options: H,
                     value: g,
                     onSelectionChange: U,
                     fullWidth: !0,
-                    label: C.intl.string(C.t.Q7mm4g),
+                    label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                R && (0, i.jsx)(u.w, { type: "warning", children: C.intl.string(C.t.tTHQAy) }),
+                R && (0, i.jsx)(u.w, { type: "warning", children: N.intl.string(N.t.tTHQAy) }),
                 null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
             ],
         }),

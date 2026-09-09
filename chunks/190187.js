@@ -1,4 +1,4 @@
-n.d(t, { i: () => T });
+n.d(t, { i: () => A });
 var i = n(582128),
     l = n(17928),
     c = n(531260),
@@ -7,20 +7,20 @@ var i = n(582128),
     a = n(526292),
     o = n(89366),
     _ = n(851746),
-    A = n(202541);
-function T() {
+    T = n(202541);
+function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, l.bG)([r.default], () => r.default.getCurrentUser()),
         n = (0, a.k5)(),
-        T = (0, o.QQ)(),
+        A = (0, o.QQ)(),
         E = (0, c.A)(),
         u =
             t?.verified === !0 &&
-            (0, s.YE)(t, A.PremiumTypes.TIER_2) &&
+            (0, s.YE)(t, T.PremiumTypes.TIER_2) &&
             E.fetched &&
-            E.fractionalState !== A.xc.FP_ONLY &&
+            E.fractionalState !== T.xc.FP_ONLY &&
             !n &&
-            !T;
+            !A;
     i.useEffect(() => {
         u && !e && _.A.checkAndFetchReferralsRemaining();
     }, [u, e]);

@@ -811,8 +811,8 @@ let e2 = s.forwardRef(function (e, t) {
     );
 });
 var e3 = n(20504),
-    e5 = n(625494),
-    e8 = n(927813),
+    e8 = n(625494),
+    e5 = n(927813),
     e6 = n(824744);
 n(508300);
 var e7 = n(661531),
@@ -1237,7 +1237,7 @@ let tx = s.memo(function (e) {
                     !M &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
-                    }, e8.A.Millis.SECOND)),
+                    }, e5.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1246,7 +1246,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e8.A.Millis.SECOND);
+                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e5.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1268,10 +1268,10 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             if (O)
                 return (
-                    e5._.dispatch(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
-                    e5._.subscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
+                    e8._.dispatch(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, { src: n }),
+                    e8._.subscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e),
                     () => {
-                        e5._.unsubscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
+                        e8._.unsubscribe(eK.jej.VOICE_MESSAGE_PLAYBACK_STARTED, e);
                     }
                 );
             function e(e) {

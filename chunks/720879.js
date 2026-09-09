@@ -12,8 +12,8 @@ function c(e) {
             targetElementRef: n,
             estimatedTooltipHeight: c,
             delay: u = 300,
-            onShow: f,
-            title: m,
+            onShow: m,
+            title: f,
             body: g,
             graphic: E,
             size: p = "md",
@@ -25,9 +25,9 @@ function c(e) {
         v = l.useRef(null),
         N = l.useRef(!1),
         R = "opening-mouse" === _ || "open-mouse" === _,
-        I = "opening-keyboard" === _ || "open-keyboard" === _,
-        j = "open-mouse" === _ || "open-keyboard" === _,
-        y = (x.keyboardModeEnabled || I) && null != b,
+        j = "opening-keyboard" === _ || "open-keyboard" === _,
+        I = "open-mouse" === _ || "open-keyboard" === _,
+        y = (x.keyboardModeEnabled || j) && null != b,
         [C, T] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
@@ -77,20 +77,20 @@ function c(e) {
         if ("opening-mouse" === _)
             return (
                 (v.current = window.setTimeout(() => {
-                    (v.current = null), A("open-mouse"), f?.();
+                    (v.current = null), A("open-mouse"), m?.();
                 }, u)),
                 D
             );
-    }, [_, u, f, D]),
+    }, [_, u, m, D]),
         l.useEffect(() => {
             if ("opening-keyboard" === _)
                 return (
                     (v.current = window.setTimeout(() => {
-                        (v.current = null), A("open-keyboard"), f?.();
+                        (v.current = null), A("open-keyboard"), m?.();
                     }, u)),
                     D
                 );
-        }, [_, u, f, D]),
+        }, [_, u, m, D]),
         l.useEffect(() => {
             if ("closing" === _)
                 return (
@@ -101,7 +101,7 @@ function c(e) {
                 );
         }, [_, D]),
         l.useEffect(() => {
-            if (j)
+            if (I)
                 return (
                     document.addEventListener("keydown", e, !0),
                     () => {
@@ -111,7 +111,7 @@ function c(e) {
             function e(e) {
                 e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), P(!0));
             }
-        }, [j, P]);
+        }, [I, P]);
     let k = l.useMemo(
             () =>
                 null == b
@@ -136,10 +136,10 @@ function c(e) {
             t,
             (0, a.jsx)(o.j, {
                 targetElementRef: n,
-                shouldShow: j,
+                shouldShow: I,
                 position: S,
                 align: "center",
-                title: m,
+                title: f,
                 body: g,
                 graphic: E,
                 size: p,

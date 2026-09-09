@@ -41,20 +41,20 @@ function A() {
 }
 var E = n(803306),
     v = n(631670),
-    S = n(682618),
-    C = n(636537),
+    C = n(682618),
+    S = n(636537),
     b = n(228366),
-    T = n(38405),
-    k = n(652215);
+    k = n(38405),
+    T = n(652215);
 async function N(e) {
     let { displayOrder: t, hiddenBadges: n } = e,
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
     try {
-        let e = await C.Bo.patch({ url: k.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
+        let e = await S.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
         return b.h.dispatch({ type: "BADGE_SETTINGS_UPDATE", settings: e.body }), !0;
     } catch (e) {
-        return T.A.captureException(e), !1;
+        return k.A.captureException(e), !1;
     }
 }
 var y = n(234e3),
@@ -97,28 +97,28 @@ function V(e) {
         {
             hasUnsavedProfileChanges: I,
             canSubmitProfileChanges: A,
-            hasBadgeChangesToSave: C,
+            hasBadgeChangesToSave: S,
         } = (0, a.cf)([G.A], () => ({
             hasUnsavedProfileChanges: G.A.hasUnsavedChanges(),
             canSubmitProfileChanges: G.A.canSubmit(),
             hasBadgeChangesToSave: (0, y.gz)(G.A.getPendingChanges()),
         })),
         b = p && I,
-        T = x || b || C,
+        k = x || b || S,
         V = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
-            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : C && (0, y.Jp)();
-        }, [p, C]),
-        K = l.useCallback(async () => {
+            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : S && (0, y.Jp)();
+        }, [p, S]),
+        Y = l.useCallback(async () => {
             if (p && !G.A.canSubmit()) return;
             c(!0);
             let e = !0;
-            if (C) {
+            if (S) {
                 let t = G.A.getPendingChanges(),
                     n = await N({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = _.default.getCurrentUser()?.id;
-                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, y.Jp)();
+                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, y.Jp)();
                 }
                 e = n;
             }
@@ -194,7 +194,7 @@ function V(e) {
                     e = !1;
                 }
             e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
-        }, [p, b, C, x, d, g, m, n, t]);
+        }, [p, b, S, x, d, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -206,27 +206,27 @@ function V(e) {
                     }, 2500));
             }
             return (
-                L._.subscribe(k.jej.EMPHASIZE_NOTICE, t),
+                L._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    L._.unsubscribe(k.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
+                    L._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null != e && clearTimeout(e);
                 }
             );
         }, []),
         (0, i.jsx)(h.$, {
             preventsPopoutDismiss: !0,
-            isVisible: T,
+            isVisible: k,
             labelId: "user-profile-save-reset-toolbar-label",
             noticeText: j.intl.string(j.t["/lQiX/"]),
             isEmphasized: s,
             a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
-            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !T || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !V || !T },
+            secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !k || o },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: Y, loading: o, disabled: !V || !k },
         })
     );
 }
 var z = n(485745),
-    K = n(893757);
-function Y() {
+    Y = n(893757);
+function K() {
     let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, z.A)(e),
@@ -235,20 +235,20 @@ function Y() {
 }
 function X(e) {
     let t = (0, a.bG)([d.default], () => d.default.getId() === e),
-        n = Y();
+        n = K();
     return t && null != n;
 }
 function q(e) {
     let { userId: t, guildId: n, className: s } = e,
         o = (0, a.bG)([d.default], () => d.default.getId() === t),
-        u = Y(),
+        u = K(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
         ? (0, i.jsx)("div", {
-              className: r()(K.k, s),
+              className: r()(Y.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(c.S, { className: K.W })
+                      ? (0, i.jsx)(c.S, { className: Y.W })
                       : "premium-try-it-out" === g
                         ? (0, i.jsx)(A, {})
                         : "save" === g

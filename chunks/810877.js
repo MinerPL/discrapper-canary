@@ -22,8 +22,8 @@ function N(e, t, n, i) {
     );
 }
 async function p(e) {
-    let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: S, hideErrorModal: C, analyticsLocation: v } = e,
-        _ = d.A.fromBlob(c.f.EMOJI, n),
+    let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: S, hideErrorModal: C, analyticsLocation: _ } = e,
+        v = d.A.fromBlob(c.f.EMOJI, n),
         T = g.Ay.sanitizeEmojiName(n.name.split(".")[0]);
     if (g.Ay.isFileTooBig(n)) {
         if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
@@ -53,8 +53,8 @@ async function p(e) {
         }
     }
     try {
-        let e = await _.getOriginalMd5(),
-            n = await (0, o.Gf)({ guildId: p, image: t, name: T, roles: I, analyticsLocation: v, originalMd5: e });
+        let e = await v.getOriginalMd5(),
+            n = await (0, o.Gf)({ guildId: p, image: t, name: T, roles: I, analyticsLocation: _, originalMd5: e });
         return (
             m.default.track(E.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: p, upload_id: A }),
             (0, l.P0)((0, s.o)(j.intl.string(j.t["r0w9m/"]), r.Ck.SUCCESS)),

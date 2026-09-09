@@ -466,7 +466,7 @@ var eQ = n(307301),
     e1 = n(683522);
 let e2 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     e3 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    e5 = i.memo(function (e) {
+    e8 = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = U.bM.useStore((e) => e.inspectedExpressionPosition),
             s = i.useMemo(() => {
@@ -512,7 +512,7 @@ let e2 = (0, z.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
             titleSecondary: (0, ec.FD)(s) || (0, ec.Xw)(s) ? a : null,
         });
     });
-var e8 = n(140735),
+var e5 = n(140735),
     e6 = n(442433),
     e7 = n(304072),
     e4 = n(194261),
@@ -662,7 +662,7 @@ let tn = i.memo(function (e) {
                             "data-name": e.sticker.name,
                             "data-format-type": e.sticker.format_type,
                             children: [
-                                (0, l.jsx)(e8.A, { children: (0, ed.h)(e.sticker) }),
+                                (0, l.jsx)(e5.A, { children: (0, ed.h)(e.sticker) }),
                                 (0, l.jsxs)("div", {
                                     "aria-hidden": !0,
                                     children: [
@@ -1099,7 +1099,7 @@ let tI = i.forwardRef(function (e, t) {
                                   stickyHeaders: !0,
                                   ref: I,
                               }),
-                        (0, l.jsx)(e5, { stickersGrid: x }),
+                        (0, l.jsx)(e8, { stickersGrid: x }),
                     ],
                 }),
             })

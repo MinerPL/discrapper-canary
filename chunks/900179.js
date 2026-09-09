@@ -8,8 +8,8 @@ var a = n(477900),
     d = n(661531),
     c = n(866665),
     u = n(140735),
-    f = n(707554),
-    m = n(297264),
+    m = n(707554),
+    f = n(297264),
     g = n(834730),
     E = n(915089),
     p = n(94343),
@@ -34,19 +34,19 @@ function A(e) {
             className: N,
             scrollTargetId: R,
         } = e,
-        I = (0, E.GV)(),
-        j = l.useRef(null),
+        j = (0, E.GV)(),
+        I = l.useRef(null),
         y = (0, b.g)(),
         C = null != R && y === R;
-    (0, p.A)(j, C);
+    (0, p.A)(I, C);
     let T = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: C ? j : void 0,
+        ref: C ? I : void 0,
         className: s()(h.uW, N),
-        "aria-labelledby": I,
+        "aria-labelledby": j,
         children: [
             A
-                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(f.H, { id: I, children: n }) })
+                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: j, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
                       children: [
@@ -54,11 +54,11 @@ function A(e) {
                               className: h.wx,
                               style: { color: d.A.colors[x[o]]?.css },
                               children: [
-                                  (0, a.jsx)(m.D, {
+                                  (0, a.jsx)(f.D, {
                                       variant: i,
                                       color: "currentColor",
                                       className: r,
-                                      id: I,
+                                      id: j,
                                       children: n,
                                   }),
                                   null != T && (0, a.jsx)(_, { ...T }),
@@ -67,7 +67,7 @@ function A(e) {
                           null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),
                       ],
                   }),
-            (0, a.jsx)(f.F, { children: t }),
+            (0, a.jsx)(m.F, { children: t }),
         ],
     });
 }

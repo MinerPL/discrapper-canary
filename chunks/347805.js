@@ -1,29 +1,29 @@
-n.d(l, { A: () => f });
-var t = n(477900),
-    i = n(582128),
-    r = n(17928),
-    a = n(826745),
-    s = n(629403),
-    o = n(612630),
-    d = n(351906),
-    u = n(652215),
-    c = n(650583),
-    g = n(375708),
-    m = n(759847);
+l.d(n, { A: () => f });
+var t = l(477900),
+    i = l(582128),
+    r = l(17928),
+    a = l(826745),
+    s = l(629403),
+    o = l(612630),
+    d = l(351906),
+    u = l(652215),
+    c = l(650583),
+    g = l(375708),
+    m = l(759847);
 function f(e) {
-    let { autoFocus: l = !1, className: n, userId: f, onUpdate: p } = e,
+    let { autoFocus: n = !1, className: l, userId: f, onUpdate: p } = e,
         x = (0, r.bG)([d.A], () => d.A.hidePersonalInformation),
         { loading: h, note: v } = (0, o.A)(f),
         A = i.useRef(null);
     return (i.useEffect(() => {
-        if (!l || x) return;
+        if (!n || x) return;
         let e = A.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [l, x]),
+    }, [n, x]),
     x)
         ? null
         : (0, t.jsx)("div", {
-              className: n,
+              className: l,
               children: (0, t.jsx)(a.y, {
                   ref: A,
                   className: m.P,
@@ -31,8 +31,8 @@ function f(e) {
                   placeholder: h ? g.intl.string(g.t["WLKx/9"]) : g.intl.string(g.t.VBhOe2),
                   "aria-label": g.intl.string(g.t.PbMNh2),
                   onBlur: function (e) {
-                      let l = e.currentTarget.value;
-                      (v ?? "") !== l && (p?.(), s.A.updateNote(f, l));
+                      let n = e.currentTarget.value;
+                      (v ?? "") !== n && (p?.(), s.A.updateNote(f, n));
                   },
                   onKeyPress: function (e) {
                       e.key === c.dh.ENTER
