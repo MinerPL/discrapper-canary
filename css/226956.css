@@ -461,7 +461,10 @@
     border-bottom-color: var(--brand-500)
 }
 
-.tabItemSelected__3932d,
+.tabItemSelected__3932d {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
 .tabItemSelected__3932d:hover {
     border-bottom-color: var(--control-brand-foreground)
 }
@@ -603,4 +606,4 @@
     padding: var(--space-24)
 }
 
-/*# sourceMappingURL=226956.027f23b71c1690e1.css.map*/
+/*# sourceMappingURL=226956.f045a07a10d5dfaf.css.map*/

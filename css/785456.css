@@ -11,8 +11,7 @@
     z-index: 100
 }
 
-.overlay__8a7fc,
-.overlay__8a7fc:after {
+.overlay__8a7fc {
     position: absolute
 }
 
@@ -22,6 +21,7 @@
     content: "";
     height: 1px;
     inset-inline-start: 0;
+    position: absolute;
     width: 100%;
     z-index: 0
 }
@@ -753,4 +753,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=785456.a2571f3897da0437.css.map*/
+/*# sourceMappingURL=785456.81ac7312e17fac8f.css.map*/
