@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => a, ml: () => s });
+n.d(t, { Ay: () => a, XF: () => l, ml: () => s });
 var i = n(315069),
     r = n(604913);
 class a extends i.A {
@@ -16,7 +16,7 @@ class a extends i.A {
     endsAt;
     tenantMetadata;
     static createFromServer(e) {
-        var t, n, i, s, o;
+        var t, n, i, s, l;
         let d, c, u, _, E;
         return new a({
             id: e.id,
@@ -66,7 +66,7 @@ class a extends i.A {
                                             shopHome: {
                                                 title: s.shop_home.title,
                                                 description: s.shop_home.description,
-                                                rewardStates: l(s.shop_home.reward_states),
+                                                rewardStates: o(s.shop_home.reward_states),
                                                 style:
                                                     null != s.shop_home.style
                                                         ? { contentTheme: s.shop_home.style.content_theme }
@@ -74,7 +74,7 @@ class a extends i.A {
                                             },
                                             indexPage: {
                                                 description: s.index_page.description,
-                                                rewardStates: l(s.index_page.reward_states),
+                                                rewardStates: o(s.index_page.reward_states),
                                                 style:
                                                     null != s.index_page.style
                                                         ? { contentTheme: s.index_page.style.content_theme }
@@ -112,11 +112,11 @@ class a extends i.A {
                                             })(s.shared),
                                         })
                                       : i.type === r.hE.TARGETED_OFFER
-                                        ? ((o = i.reward),
-                                          (d = o?.storefront?.nagbar),
-                                          (c = o?.checkout?.offer_notice),
-                                          (_ = null == (u = o?.collected?.override_title) || "" === u ? void 0 : u),
-                                          (E = o?.flavor),
+                                        ? ((l = i.reward),
+                                          (d = l?.storefront?.nagbar),
+                                          (c = l?.checkout?.offer_notice),
+                                          (_ = null == (u = l?.collected?.override_title) || "" === u ? void 0 : u),
+                                          (E = l?.flavor),
                                           null == d && null == c && null == _ && null == E
                                               ? { type: r.hE.TARGETED_OFFER }
                                               : {
@@ -177,6 +177,10 @@ function s(e) {
     return t?.type === r.hE.TARGETED_OFFER ? t : void 0;
 }
 function l(e) {
+    let t = e?.tenantMetadata?.collectibles;
+    return t?.type === r.hE.COLLECT_AND_CLAIM ? t : void 0;
+}
+function o(e) {
     return {
         inProgress: { progressSteps: e.in_progress.progress_steps.map((e) => ({ heroAssetPath: e.hero_asset_path })) },
         earned: { heroAssetPath: e.earned.hero_asset_path },
