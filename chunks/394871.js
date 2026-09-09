@@ -100,7 +100,7 @@ function R(e) {
     return (0, l.jsx)(T.A, {
         icon: a ? void 0 : (0, l.jsx)(j.A, { icon: v.U, className: r }),
         text: A,
-        tooltipText: c ? void 0 : x,
+        tooltipText: c ? void 0 : o ? x : h ? void 0 : (f ?? void 0),
         textVariant: i,
         className: s,
         canTruncate: d,
@@ -163,23 +163,23 @@ function U(e) {
         } = e,
         d = (0, w.S3)(P.clD.ONLINE),
         h = (0, N.Ay)(t),
-        m =
-            t.isDM() || t.isGroupDM()
-                ? b.intl.string(b.t["9FaEzi"])
-                : t.isGuildStageVoice()
-                  ? b.intl.string(b.t.QygGCN)
-                  : b.intl.string(b.t.msxteM),
-        f = null != h ? `${m} (${h})` : m,
-        p = c ? f : m;
+        m = t.isDM() || t.isGroupDM(),
+        f = m
+            ? b.intl.string(b.t["9FaEzi"])
+            : t.isGuildStageVoice()
+              ? b.intl.string(b.t.QygGCN)
+              : b.intl.string(b.t.msxteM),
+        p = null != h ? `${f} (${h})` : f,
+        g = c ? p : f;
     return (0, l.jsx)(T.A, {
         icon: (0, l.jsx)(D.A, { size: "custom", color: d, channel: t, className: r()(A.Kk, s) }),
-        text: p,
-        tooltipText: o ? void 0 : f,
+        text: g,
+        tooltipText: o ? void 0 : a ? p : m || c ? void 0 : (h ?? void 0),
         textVariant: n,
         textClassName: i,
         hideTooltip: o,
         canTruncate: u,
-        "aria-label": f,
+        "aria-label": p,
         hideText: a,
     });
 }
