@@ -177,27 +177,6 @@
     margin-top: var(--space-12)
 }
 
-.container_cc66e9 {
-    justify-content: space-between;
-    text-align: start;
-    width: 100%
-}
-
-.container_cc66e9,
-.textContainer_cc66e9 {
-    align-items: center;
-    display: flex;
-    flex-direction: row
-}
-
-.textContainer_cc66e9 {
-    gap: 8px
-}
-
-.badgeContainer_cc66e9 {
-    flex-shrink: 0
-}
-
 .container__9c1cb {
     margin: 0 auto;
     max-width: 1056px;
@@ -260,4 +239,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=d1ceb07e0e419ae7.css.map*/
+/*# sourceMappingURL=c2619210172198a0.css.map*/

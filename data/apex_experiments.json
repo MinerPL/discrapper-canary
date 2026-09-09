@@ -2678,28 +2678,6 @@
     }
   },
   {
-    "name": "2026-04-slayer-storefront-orbs",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      },
-      "3": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-04-topical-navigation-staff-control",
     "defaultConfig": {
@@ -4981,22 +4959,6 @@
       },
       "1": {
         "isEnabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-07-social-layer-storefront-spend-orbs-banner-copy",
-    "kind": "user",
-    "defaultConfig": {
-      "whileSuppliesLast": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "whileSuppliesLast": true
       }
     }
   },

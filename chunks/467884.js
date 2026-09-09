@@ -19,9 +19,9 @@ var r,
     b = l(269115),
     j = l(834730),
     v = l(890856),
-    y = l(812993),
-    A = l(866665),
-    N = l(442433),
+    A = l(812993),
+    N = l(866665),
+    y = l(442433),
     k = l(775602),
     E = l(793574),
     T = l(688810),
@@ -144,8 +144,8 @@ function e_(e) {
         { isHoveringOrFocusing: eb } = (0, I.A)(P),
         ej = (0, U.jM)(),
         { analyticsLocations: ev } = (0, T.Ay)(p ?? []),
-        ey = a.useRef({ positionInSection: t, analyticsLocations: ev }),
-        [eA, eN] = a.useState(!1),
+        eA = a.useRef({ positionInSection: t, analyticsLocations: ev }),
+        [eN, ey] = a.useState(!1),
         ek = (0, C.bG)([z.A], () => (null != r ? z.A.getNormalizedSKUEligibility(r) : void 0), [r]),
         eE = (function (e, t) {
             let l = (0, C.bG)([O.A], () => O.A.get(e)),
@@ -186,10 +186,10 @@ function e_(e) {
                 }, [i, s, t, l?.id]),
                 a.useMemo(() => r && i, [r, i])
             );
-        })(r, eA),
+        })(r, eN),
         eT = (0, D.JL)({ sku: ei }),
         eR = eT?.amount,
-        eI = (0, Y.oG)({ orbPriceAmount: eR, applicationId: e_, location: "social_layer_storefront_card" }),
+        eI = (0, Y.oG)({ orbPriceAmount: eR }),
         eP = (0, R.h)(ei?.applicationId),
         {
             priceComponent: eM,
@@ -323,7 +323,7 @@ function e_(e) {
         }),
         eL = 2 !== i && eE ? eH : ex,
         ew = a.useCallback((e) => {
-            eN(e);
+            ey(e);
         }, []),
         eO = a.useMemo(() => c()(et.Nr, { [et.ax]: 0 === i, [et.GW]: 1 === i, [et.jz]: 2 === i }), [i]),
         { handleCardHover: eB, handleCardUnhover: eG } = (function (e) {
@@ -477,11 +477,11 @@ function e_(e) {
             shownPriceDetails: eL,
         });
     a.useEffect(() => {
-        eF(eA);
-    }, [eA]);
+        eF(eN);
+    }, [eN]);
     let eU = a.useCallback(
             (e) => {
-                let { analyticsLocations: t, positionInSection: l } = ey.current,
+                let { analyticsLocations: t, positionInSection: l } = eA.current,
                     {
                         sessionId: n,
                         guildId: a,
@@ -564,7 +564,7 @@ function e_(e) {
         e1 = a.useCallback(
             (e) => {
                 eC &&
-                    (0, N.L3)(e, async () => {
+                    (0, y.L3)(e, async () => {
                         let { default: e } = await l.e("897249").then(l.bind(l, 10680));
                         return (t) => (0, n.jsx)(e, { ...t, skuId: r });
                     });
@@ -641,7 +641,7 @@ function e_(e) {
                 children: [
                     ei.exclusive
                         ? (0, n.jsx)("div", { className: et.fC, children: (0, n.jsx)(Q.I, {}) })
-                        : null != e$ && (0, n.jsx)(y.Lp, { text: e$, disableColor: !0, className: et.qS }),
+                        : null != e$ && (0, n.jsx)(A.Lp, { text: e$, disableColor: !0, className: et.qS }),
                     (0, n.jsx)(ef, {
                         sku: ei,
                         guildId: ep,
@@ -729,7 +729,7 @@ function e_(e) {
                                           children: [
                                               ek
                                                   ? e7
-                                                  : (0, n.jsx)(A.m, {
+                                                  : (0, n.jsx)(N.m, {
                                                         text: ec.intl.string(ec.t.IqlPbQ),
                                                         children: (0, n.jsx)(f.$, {
                                                             variant: "primary",
