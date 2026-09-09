@@ -147,7 +147,8 @@ function ec(e) {
     let { componentId: t, promotionId: l, banner: i, onDismiss: s } = e,
         r = (0, er.T)(i.asset),
         { countdownText: o, terms: a } = (0, eu.A)(l),
-        u = (0, eo.C)(i.helpArticle, "");
+        u = (0, eo.C)(i.helpArticle, ""),
+        d = [i.body, a].filter((e) => "" !== e).join(" ");
     return (0, n.jsxs)("div", {
         className: ed.kL,
         children: [
@@ -190,12 +191,11 @@ function ec(e) {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         children: [
-                            "" !== i.body && (0, n.jsxs)(n.Fragment, { children: [i.body, (0, n.jsx)("br", {})] }),
-                            a,
+                            d,
                             null != u &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        "" !== a && " ",
+                                        "" !== d && " ",
                                         (0, n.jsx)(es.Anchor, { className: ed.nf, href: u.url, children: u.linkText }),
                                     ],
                                 }),

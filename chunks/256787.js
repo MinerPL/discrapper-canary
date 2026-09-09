@@ -83,6 +83,7 @@ let r = [
         i.M.PREMIUM_SHOP_NAGBAR_NOTICE,
         i.M.GUILD_HEADER_COACHMARK,
         i.M.GUILD_BOOST_TAB_BANNER,
+        i.M.GUILD_BOOST_TAB_HIGHLIGHT,
     ],
     l = [i.M.GAME_SHOP_NEW_BADGE, i.M.GAME_SHOP_NEW_DROP_POPOVER],
     o = [
