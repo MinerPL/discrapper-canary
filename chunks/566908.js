@@ -1,18 +1,19 @@
 n.d(t, {
-    Lg: () => k,
-    Sc: () => D,
-    UF: () => R,
-    US: () => b,
-    Vf: () => M,
-    Y8: () => F,
-    ZG: () => w,
-    _O: () => P,
-    dx: () => N,
-    f8: () => v,
-    q8: () => y,
-    yp: () => U,
-    yz: () => G,
-    zs: () => L,
+    Lg: () => V,
+    Sc: () => v,
+    UF: () => L,
+    US: () => P,
+    Vf: () => U,
+    Y8: () => B,
+    ZG: () => x,
+    _O: () => w,
+    dx: () => C,
+    kJ: () => M,
+    q8: () => D,
+    vK: () => b,
+    yp: () => G,
+    yz: () => k,
+    zs: () => y,
 }),
     n(938796);
 var i = n(284009),
@@ -25,83 +26,89 @@ var i = n(284009),
     c = n(945810),
     u = n(320095),
     _ = n(677413),
-    E = n(287809),
-    A = n(174459),
-    h = n(403362),
-    I = n(474090),
-    f = n(935208),
-    p = n(551640),
-    T = n(652215),
-    m = n(202541),
-    g = n(853297),
-    S = n(375708);
-let N = new d.A("Scheduled Messages");
-class C {
+    E = n(576705),
+    A = n(287809),
+    h = n(174459),
+    I = n(403362),
+    f = n(474090),
+    p = n(935208),
+    T = n(551640),
+    m = n(652215),
+    g = n(202541),
+    S = n(853297),
+    N = n(375708);
+let C = new d.A("Scheduled Messages");
+class O {
     enabled = !1;
     limit = 0;
     constructor(e, t) {
         r()(null != t.limit, "Config is missing scheduled message limit"), (this.enabled = e), (this.limit = t.limit);
     }
 }
-let O = (0, c.mj)({
+let R = (0, c.mj)({
     name: "2026-08-scheduled-messages",
     kind: "user",
-    defaultConfig: new C(!1, { limit: 0 }),
-    variations: { 1: (e) => new C(!0, JSON.parse(e)), 2: (e) => new C(!0, JSON.parse(e)) },
+    defaultConfig: new O(!1, { limit: 0 }),
+    variations: { 1: (e) => new O(!0, JSON.parse(e)), 2: (e) => new O(!0, JSON.parse(e)) },
 });
-function R(e) {
+function L(e) {
     let { content: t, flags: n } = e,
         [i, r] = (0, _.Ay)(t);
-    return i ? [r, (0, l.UI)(n ?? 0, T.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
-}
-function L(e) {
-    let { content: t, flags: n } = e;
-    return (0, l.Lt)(n ?? 0, T.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+    return i ? [r, (0, l.UI)(n ?? 0, m.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
 }
 function y(e) {
+    let { content: t, flags: n } = e;
+    return (0, l.Lt)(n ?? 0, m.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+}
+function D(e) {
     let { entryPoint: t, isEditing: n, channelId: i } = e;
-    A.default.track(T.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: t, is_editing: n, channel_id: i });
+    h.default.track(m.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: t, is_editing: n, channel_id: i });
 }
-function D() {
-    return O.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
+function v() {
+    return R.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
 }
-function v(e) {
-    return O.getConfig({ location: e }).enabled;
-}
-function b() {
-    let e = s()().startOf("hour").add(1, "hour");
-    return e.isBefore(P()) ? e.add(1, "hour") : e;
+function b(e) {
+    let t = v(),
+        n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e)));
+    return t && n;
 }
 function M(e, t) {
-    return e.isBefore(P()) ? S.intl.string(S.t["w/fgvh"]) : e.isAfter(U(t)) ? S.intl.string(S.t.Nt0tz7) : null;
+    return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e));
 }
 function P() {
+    let e = s()().startOf("hour").add(1, "hour");
+    return e.isBefore(w()) ? e.add(1, "hour") : e;
+}
+function U(e, t) {
+    return e.isBefore(w()) ? N.intl.string(N.t["w/fgvh"]) : e.isAfter(G(t)) ? N.intl.string(N.t.Nt0tz7) : null;
+}
+function w() {
     return s()().add(600, "seconds");
 }
-function U(e) {
+function G(e) {
     let t = s()().add(691200, "seconds");
     if (null == e) return t;
-    let n = s()(f.default.extractTimestamp(e));
-    return s().min(t, n.add(g.a, "seconds"));
+    let n = s()(p.default.extractTimestamp(e));
+    return s().min(t, n.add(S.a, "seconds"));
 }
-function w(e) {
-    let t = (0, I.ki)(E.default.getCurrentUser(), m.PremiumTypes.TIER_2);
-    return x(O.getConfig({ location: e }), t);
+function x(e) {
+    let t = (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2);
+    return F(R.getConfig({ location: e }), t);
 }
-function G(e) {
-    return x(
-        O.useConfig({ location: e }),
-        (0, o.bG)([E.default], () => (0, I.ki)(E.default.getCurrentUser(), m.PremiumTypes.TIER_2)),
+function k(e) {
+    return F(
+        R.useConfig({ location: e }),
+        (0, o.bG)([A.default], () => (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2)),
     );
 }
-function x(e, t) {
+function F(e, t) {
     return e.enabled
         ? t
             ? { limit: 25, isUpgradable: !1 }
             : { limit: e.limit, isUpgradable: !0 }
         : { limit: 0, isUpgradable: !1 };
 }
-function k(e) {
+function V(e) {
     var t;
     return {
         userId: e.user_id,
@@ -124,21 +131,21 @@ function k(e) {
         record: (0, u.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
     };
 }
-function F(e) {
+function B(e) {
     switch (e) {
-        case p.A.SCHEDULED:
-            return { isError: !1, stateMessage: S.intl.string(S.t.Fn6Odn) };
-        case p.A.ERROR_CHANNEL_NOT_FOUND:
-            return { isError: !0, stateMessage: S.intl.string(S.t.v5O2dK) };
-        case p.A.ERROR_USER_NOT_FOUND:
-            return { isError: !0, stateMessage: S.intl.string(S.t.j8uIfG) };
-        case p.A.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
-            return { isError: !0, stateMessage: S.intl.string(S.t["w6zHX/"]) };
-        case p.A.ERROR_SEND_FAILED:
-            return { isError: !0, stateMessage: S.intl.string(S.t.pflV7z) };
-        case p.A.ERROR_SCHEDULED_MESSAGES_DISABLED:
-            return { isError: !0, stateMessage: S.intl.string(S.t.j8uIfG) };
+        case T.A.SCHEDULED:
+            return { isError: !1, stateMessage: N.intl.string(N.t.Fn6Odn) };
+        case T.A.ERROR_CHANNEL_NOT_FOUND:
+            return { isError: !0, stateMessage: N.intl.string(N.t.v5O2dK) };
+        case T.A.ERROR_USER_NOT_FOUND:
+            return { isError: !0, stateMessage: N.intl.string(N.t.j8uIfG) };
+        case T.A.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
+            return { isError: !0, stateMessage: N.intl.string(N.t["w6zHX/"]) };
+        case T.A.ERROR_SEND_FAILED:
+            return { isError: !0, stateMessage: N.intl.string(N.t.pflV7z) };
+        case T.A.ERROR_SCHEDULED_MESSAGES_DISABLED:
+            return { isError: !0, stateMessage: N.intl.string(N.t.j8uIfG) };
         default:
-            (0, h.xb)(e);
+            (0, I.xb)(e);
     }
 }

@@ -485,7 +485,7 @@ let eT = s.memo(function (e) {
         eT = (0, k.Tb)(l),
         ev = !P.D_.useSetting() && !(0, H.isAndroidWeb)() && null != window.ResizeObserver,
         eM = (0, S.I7)(l ?? void 0),
-        eR = (0, v.Sc)(),
+        eR = (0, v.vK)(l),
         eD = (0, g.b)(),
         eL = (function (e) {
             let {
