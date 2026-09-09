@@ -64,11 +64,11 @@ function w(e) {
 function $(e) {
     return (0, r.jsx)(N.A, { ...e });
 }
-function B(e) {
+function H(e) {
     let { children: t, attributes: l } = e;
     return (0, r.jsx)("span", { ...l, style: { ...l.style, opacity: 1 }, children: t });
 }
-let H = n.memo(function (e) {
+let B = n.memo(function (e) {
     let {
         editor: t,
         initialValue: l,
@@ -90,7 +90,7 @@ let H = n.memo(function (e) {
             placeholder: n,
             decorate: w,
             renderLeaf: $,
-            renderPlaceholder: B,
+            renderPlaceholder: H,
             onKeyDown: o,
             onFocus: c,
             onBlur: f,
@@ -118,7 +118,7 @@ function Q(e) {
             placeholder: w,
         } = e,
         $ = (0, A.bS)(l),
-        B = x($),
+        H = x($),
         [Q] = n.useState(() => {
             let e = (function (e) {
                 let { insertText: t, deleteBackward: l, deleteForward: r } = e;
@@ -145,11 +145,11 @@ function Q(e) {
                     e
                 );
             })((0, i.o$)((0, s.ie)()));
-            return (e.children = [{ type: "line", children: [{ text: B }] }]), (e.selection = null), e;
+            return (e.children = [{ type: "line", children: [{ text: H }] }]), (e.selection = null), e;
         }),
         [q] = n.useState(() => [...Q.children]),
         [Y, K] = n.useState(!1),
-        [z, Z] = n.useState(() => B.length > 0),
+        [z, Z] = n.useState(() => H.length > 0),
         X = n.useRef(null),
         G = n.useRef(null),
         V = n.useRef(null),
@@ -393,15 +393,6 @@ function Q(e) {
         ),
         eT = n.useCallback(() => {
             i.rL.toDOMNode(Q, Q).removeAttribute("aria-activedescendant"),
-                (function (e) {
-                    if (null != e.selection) return;
-                    let t = i.rL.findDocumentOrShadowRoot(e);
-                    if (!("getSelection" in t)) return;
-                    let l = t.getSelection();
-                    if (null == l || 0 === l.rangeCount) return;
-                    let r = i.rL.toSlateRange(e, l, { exactMatch: !1, suppressThrow: !0 });
-                    null != r && s.gB.select(e, r);
-                })(Q),
                 K(!0),
                 _.A.setFocused(l, !0),
                 c.O.announce(m.intl.string(m.t["5h0QOP"]));
@@ -429,7 +420,7 @@ function Q(e) {
                                 className: u()(v.ON, O.O),
                                 ref: G,
                                 children: [
-                                    (0, r.jsx)(H, {
+                                    (0, r.jsx)(B, {
                                         editor: Q,
                                         initialValue: q,
                                         placeholder: eA,
