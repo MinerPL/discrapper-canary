@@ -5211,8 +5211,8 @@ let dx = (0, nU.Fe)({ createPromise: dg, webpackId: 67319, name: "StageChannelCa
         name: "GuildMemberModViewSidebar",
     }),
     dI = (0, nU.Fe)({
-        createPromise: () => Promise.all([t.e("226291"), t.e("208927"), t.e("796778")]).then(t.bind(t, 173489)),
-        webpackId: 173489,
+        createPromise: () => Promise.all([t.e("933754"), t.e("208927"), t.e("84097")]).then(t.bind(t, 643928)),
+        webpackId: 643928,
         name: "FriendsSidebar",
     });
 class db extends s.PureComponent {
