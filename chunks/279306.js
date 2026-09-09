@@ -1615,30 +1615,30 @@ function i_(e) {
     return n.enabled && null != i ? (0, l.jsx)(i, { className: iE.yl, size: "xs", color: "currentColor" }) : null;
 }
 function iv(e) {
-    let { message: t, snapshot: n, index: i, disableComponentInteractivity: a } = e,
-        r = s.useMemo(() => (0, ix.A)(t, n), [t, n]),
-        o = ir.hD.useSetting(),
-        c = ir.rs.useSetting(),
-        u = (0, d.bG)([io.A], () => io.A.isDeveloper),
-        m = (0, ie.U)(),
-        h = (0, n8.S)((r.editedTimestamp ?? r.timestamp).valueOf()),
+    let { message: t, snapshot: n, index: i, disableComponentInteractivity: a, onMediaItemContextMenu: r } = e,
+        o = s.useMemo(() => (0, ix.A)(t, n), [t, n]),
+        c = ir.hD.useSetting(),
+        u = ir.rs.useSetting(),
+        m = (0, d.bG)([io.A], () => io.A.isDeveloper),
+        h = (0, ie.U)(),
+        g = (0, n8.S)((o.editedTimestamp ?? o.timestamp).valueOf()),
         {
-            content: g,
-            hasSpoilerEmbeds: p,
-            hasBailedAst: A,
-        } = (0, ii.A)(r, {
-            hideSimpleEmbedContent: o && c,
+            content: p,
+            hasSpoilerEmbeds: A,
+            hasBailedAst: x,
+        } = (0, ii.A)(o, {
+            hideSimpleEmbedContent: c && u,
             formatInline: !1,
-            allowList: h,
-            allowHeading: h,
+            allowList: g,
+            allowHeading: g,
             allowLinks: !0,
-            allowDevLinks: u,
+            allowDevLinks: m,
             previewLinkTarget: !0,
-            postProcessor: m ? il.A : void 0,
+            postProcessor: h ? il.A : void 0,
         }),
-        x = (0, d.bG)([P.A], () => P.A.getChannel(t.channel_id)),
-        f = ir.hH.useSetting();
-    return null == x
+        f = (0, d.bG)([P.A], () => P.A.getChannel(t.channel_id)),
+        E = ir.hH.useSetting();
+    return null == f
         ? null
         : (0, l.jsxs)(
               "div",
@@ -1650,17 +1650,18 @@ function iv(e) {
                           className: iE.Qs,
                           children: [
                               (0, l.jsx)(iI, {}),
-                              (0, l.jsx)(it.Ay, { message: r, content: g, compact: f }),
+                              (0, l.jsx)(it.Ay, { message: o, content: p, compact: E }),
                               (0, is.A)({
-                                  channelMessageProps: { message: r, channel: x, compact: f },
-                                  hasSpoilerEmbeds: p,
-                                  hasBailedAst: A,
+                                  channelMessageProps: { message: o, channel: f, compact: E },
+                                  hasSpoilerEmbeds: A,
+                                  hasBailedAst: x,
+                                  handleContextMenu: r,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1,
                                   disableComponentInteractivity: a,
                               }),
-                              !m && (0, l.jsx)(iC, { message: t, snapshot: n, index: i }),
+                              !h && (0, l.jsx)(iC, { message: t, snapshot: n, index: i }),
                           ],
                       }),
                   ],
@@ -1669,10 +1670,14 @@ function iv(e) {
           );
 }
 function iN(e) {
-    let { message: t, disableComponentInteractivity: n } = e;
+    let { message: t, disableComponentInteractivity: n, onMediaItemContextMenu: i } = e;
     return (0, l.jsx)(l.Fragment, {
-        children: t.messageSnapshots.map((e, i) =>
-            (0, l.jsx)(iv, { message: t, snapshot: e, index: i, disableComponentInteractivity: n }, i),
+        children: t.messageSnapshots.map((e, s) =>
+            (0, l.jsx)(
+                iv,
+                { message: t, snapshot: e, index: s, disableComponentInteractivity: n, onMediaItemContextMenu: i },
+                s,
+            ),
         ),
     });
 }
@@ -7629,6 +7634,7 @@ class cW extends s.Component {
             return (0, l.jsx)(iN, {
                 message: e,
                 disableComponentInteractivity: this.props.disableComponentInteractivity,
+                onMediaItemContextMenu: this.props.onMediaItemContextMenu,
             });
     }
     renderEditedTag(e, t) {
