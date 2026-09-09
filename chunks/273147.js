@@ -11,8 +11,8 @@ var i = n(477900),
     m = n(402860),
     h = n(718019),
     g = n(461116),
-    A = n(791556),
-    p = n(465829),
+    p = n(791556),
+    A = n(465829),
     x = n(582128),
     f = n(317097),
     E = n(661531),
@@ -32,18 +32,18 @@ function R(e) {
         m = (0, l.bG)([N.A], () => N.A.isFocused()),
         h = v.kt.getSetting(),
         g = (0, T.Nx)(),
-        { bannerSrc: A, status: p } = (0, S.A)({ displayProfile: n ?? null, size: 480, canAnimate: h ? m : d }),
-        R = g ? null : (A ?? null),
+        { bannerSrc: p, status: A } = (0, S.A)({ displayProfile: n ?? null, size: 480, canAnimate: h ? m : d }),
+        R = g ? null : (p ?? null),
         M = (0, I.r)(E.A.unsafe_rawColors.PRIMARY_800).hex(),
-        L = null != n ? n.guildId : s,
-        k = t.getAvatarURL(L ?? void 0, (0, a.FT)(o)),
-        O = (0, f.LX)((0, C.Ay)(k, M, !1)),
+        k = null != n ? n.guildId : s,
+        L = t.getAvatarURL(k ?? void 0, (0, a.FT)(o)),
+        O = (0, f.LX)((0, C.Ay)(L, M, !1)),
         P = (0, _.A)(n?.primaryColor ?? O).hex,
         D = (0, b.A)(o),
         U = c + (0, a.Kj)(o).size / 2;
     return (0, i.jsx)(y.A, {
         bannerSrc: R,
-        backgroundColor: p === S.D.COMPLETE || g ? P : E.A.unsafe_rawColors.PRIMARY_800.css,
+        backgroundColor: A === S.D.COMPLETE || g ? P : E.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !h && (0, j.o4)(R),
         height: r,
         cutout: { align: "start", insetStart: U - D, insetBottom: 0, radius: D },
@@ -52,8 +52,8 @@ function R(e) {
     });
 }
 var M = n(280450),
-    L = n(984545),
-    k = n(35241),
+    k = n(984545),
+    L = n(35241),
     O = n(587168),
     P = n(193738),
     D = n(133385),
@@ -61,9 +61,9 @@ var M = n(280450),
 function G(e) {
     let { user: t, guildId: n } = e;
     return t.isNonUserBot()
-        ? (0, i.jsx)(k.A, { user: t })
+        ? (0, i.jsx)(L.A, { user: t })
         : t.bot
-          ? (0, i.jsx)(L.A, { user: t, guildId: n })
+          ? (0, i.jsx)(k.A, { user: t, guildId: n })
           : (0, i.jsx)(D.yo, { user: t, guildId: n });
 }
 function w(e) {
@@ -78,18 +78,18 @@ function w(e) {
           });
 }
 var H = n(213994),
-    V = n(821609),
-    F = n(375708),
+    F = n(821609),
+    V = n(375708),
     B = n(820555);
 function z(e) {
     let { userId: t, guildId: n, channelId: l } = e;
     return (0, i.jsx)("div", {
         className: B.k,
-        children: (0, i.jsx)(V.$, {
+        children: (0, i.jsx)(F.$, {
             variant: "primary",
             size: "md",
             fullWidth: !0,
-            text: F.intl.string(F.t.iXAna6),
+            text: V.intl.string(V.t.iXAna6),
             onClick: function () {
                 (0, m.openUserProfileModal)({ userId: t, guildId: n, channelId: l, hideRestrictedProfile: !0 });
             },
@@ -118,7 +118,7 @@ function X(e) {
 function Z(e) {
     let { user: t, guildId: n, channelId: l } = e;
     return (0, u.A)(t)
-        ? (0, i.jsx)(A.A, {
+        ? (0, i.jsx)(p.A, {
               user: t,
               className: J.I0,
               onOpenProfile: (e) =>
@@ -146,7 +146,7 @@ function q(e) {
               size: "sm",
               style: W,
               headingRef: a,
-              headingText: F.intl.formatToPlainString(F.t["8yRya1"], { name: h }),
+              headingText: V.intl.formatToPlainString(V.t["8yRya1"], { name: h }),
               children: [
                   (0, i.jsx)(R, {
                       user: c,
@@ -158,7 +158,7 @@ function q(e) {
                   }),
                   (0, i.jsx)(w, { user: c, guildId: n }),
                   (0, i.jsx)(X, { user: c, displayProfile: u, guildId: n, channelId: s }),
-                  (0, i.jsx)(p.Ay, {
+                  (0, i.jsx)(A.Ay, {
                       user: c,
                       guildId: m ?? void 0,
                       contextGuildId: n ?? void 0,

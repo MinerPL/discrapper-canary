@@ -11,16 +11,16 @@ var i = n(477900),
     h = n(661531),
     m = n(565645),
     p = n(287809),
-    f = n(562153),
-    g = n(401381);
+    g = n(562153),
+    f = n(401381);
 function A(e) {
     let { avatarURL: t, avatarLabel: n, text: l, leading: a } = e;
     return (0, i.jsxs)("div", {
-        className: g.AB,
+        className: f.AB,
         children: [
             (0, i.jsx)(o.eu, { "aria-label": n, size: d._3.SIZE_24, src: t }),
             (0, i.jsxs)(c.E, {
-                className: g.PW,
+                className: f.PW,
                 color: "text-overlay-light",
                 variant: "text-sm/normal",
                 children: [a, l],
@@ -30,7 +30,7 @@ function A(e) {
 }
 function x(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        a = (0, f.tx)(n, l, t);
+        a = (0, g.tx)(n, l, t);
     return null == t ? null : (0, i.jsx)(A, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
 }
 function v(e) {
@@ -52,7 +52,7 @@ let E = l.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
         d = (0, r.cf)([p.default], () => s().pick(p.default.getUsers(), l));
     return (0, i.jsxs)("div", {
-        className: g.zr,
+        className: f.zr,
         children: [
             t.map((e) => {
                 let t = d[e];

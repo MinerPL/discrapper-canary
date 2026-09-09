@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(475743),
     m = n(775121),
     p = n(139286),
-    f = n(80556),
-    g = n(557722),
+    g = n(80556),
+    f = n(557722),
     A = n(363195),
     x = n(870570),
     v = n(446868),
@@ -132,8 +132,8 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var O = n(87404),
-    P = n(53516);
+var P = n(87404),
+    O = n(53516);
 function L() {
     let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = v.A.getVerificationTypes(e),
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: O.H1, Layer: f.Ay },
+                { modalKey: P.H1, Layer: g.Ay },
             );
     }
     return (
@@ -184,7 +184,7 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: O.Pr, Layer: f.Ay, onCloseCallback: S },
+                    { modalKey: P.Pr, Layer: g.Ay, onCloseCallback: S },
                 );
         }, [E, _]),
         (0, i.jsx)(k, {
@@ -216,9 +216,9 @@ function L() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: g.OH, reason: f.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: f.Ay },
+                          { modalKey: O.V, Layer: g.Ay },
                       );
             },
             onLogout: function () {
@@ -235,7 +235,7 @@ function L() {
                                 ...t,
                             });
                     },
-                    { Layer: f.Ay },
+                    { Layer: g.Ay },
                 );
             },
         })

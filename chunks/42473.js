@@ -20,8 +20,8 @@ function h(e) {
             iconForeground: h,
             innerClassName: m,
             className: p,
-            redGlow: f,
-            onMouseEnter: g,
+            redGlow: g,
+            onMouseEnter: f,
             onMouseLeave: A,
             "aria-label": x,
             "aria-checked": v,
@@ -42,12 +42,12 @@ function h(e) {
         disabled: o,
         innerClassName: m,
         wrapperClassName: a()(u.x6, p),
-        className: a()(u.x6, p, { [u.Xr]: f, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: C, [u.OH]: f && C }),
+        className: a()(u.x6, p, { [u.Xr]: g, [u.r9]: o, [u.Sn]: !o, [u.ZQ]: C, [u.OH]: g && C }),
         onClick: (e) => {
             null != l && l(e);
         },
         onMouseDown: s,
-        onMouseEnter: g,
+        onMouseEnter: f,
         onMouseLeave: A,
         onContextMenu: n,
         role: E,
@@ -92,14 +92,14 @@ let m = function (e) {
             onContextMenu: c,
             onFocus: m,
             onBlur: p,
-            "aria-label": f,
-            ...g
+            "aria-label": g,
+            ...f
         } = e;
         return (0, i.jsx)(d.ST, {
             "data-migration-pending": !0,
             tooltipClassName: u.RF,
             tooltipContentClassName: u.In,
-            "aria-label": f,
+            "aria-label": g,
             forceOpen: n,
             shouldShow: l,
             color: d.oM.GREEN,
@@ -113,7 +113,7 @@ let m = function (e) {
                     onContextMenu: a,
                     onFocus: d,
                     onBlur: u,
-                    "aria-label": f,
+                    "aria-label": g,
                 } = e;
                 return (0, i.jsx)(h, {
                     onClick: (e) => {
@@ -134,8 +134,8 @@ let m = function (e) {
                     onBlur: () => {
                         u?.(), p?.();
                     },
-                    "aria-label": f,
-                    ...g,
+                    "aria-label": g,
+                    ...f,
                 });
             },
         });

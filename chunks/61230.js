@@ -19,19 +19,19 @@ var t = l(477900),
     f = l(790535),
     N = l(575731),
     I = l(616356),
-    C = l(977997),
-    b = l(47167),
-    E = l(475889),
-    y = l(262763),
-    _ = l(402216),
-    M = l(375708),
+    b = l(977997),
+    C = l(47167),
+    y = l(475889),
+    E = l(262763),
+    M = l(402216),
+    _ = l(375708),
     S = l(971718);
 let R = function (e) {
     let { channel: n } = e,
-        l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
+        l = (0, a.bG)([b.A], () => b.A.isInChannel(n.id)),
         i = (0, N.A)(n),
-        s = (0, b.Ay)(n),
-        r = (0, E.H)(n),
+        s = (0, C.Ay)(n),
+        r = (0, y.H)(n),
         o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
     return (0, t.jsxs)(v.Uq, {
         className: S.jC,
@@ -76,7 +76,7 @@ let R = function (e) {
                             className: S.yt,
                             children: [
                                 (0, t.jsx)(p.A, { stream: o, className: S.Rh, noText: !0 }),
-                                (0, t.jsx)(_.Ay, { size: _.Ay.Sizes.SMALL, className: S.wI }),
+                                (0, t.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: S.wI }),
                             ],
                         }),
                     (0, t.jsx)(h.A, {
@@ -85,17 +85,17 @@ let R = function (e) {
                         channelId: n.id,
                         size: x._3.SIZE_24,
                         maxUsers: 8,
-                        "aria-label": M.intl.string(M.t["jNqDh/"]),
+                        "aria-label": _.intl.string(_.t["jNqDh/"]),
                     }),
                     (0, t.jsx)(A.$, {
                         variant: l ? "secondary" : "active",
                         size: "sm",
-                        text: l ? M.intl.string(M.t["3xjX0U"]) : M.intl.string(M.t.VJlc0S),
+                        text: l ? _.intl.string(_.t["3xjX0U"]) : _.intl.string(_.t.VJlc0S),
                         fullWidth: !0,
                         onClick: function () {
                             n.isGuildStageVoice()
                                 ? (0, f.av)(n)
-                                : y.A.handleVoiceConnect({
+                                : E.A.handleVoiceConnect({
                                       channel: n,
                                       connected: l,
                                       needSubscriptionToAccess: !1,
