@@ -393,16 +393,16 @@
     animation: step-row-enter__30c5c .2s ease-out
 }
 
-.stepDiffAdded__30c5c {
+.stepStat__30c5c {
+    color: var(--text-default)
+}
+
+.stepStatPositive__30c5c {
     color: var(--text-feedback-positive)
 }
 
-.stepDiffRemoved__30c5c {
+.stepStatNegative__30c5c {
     color: var(--text-feedback-critical)
-}
-
-.stepCount__30c5c {
-    color: var(--text-default)
 }
 
 .stepItem__30c5c {
@@ -488,4 +488,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=3e84e015a130ee33.css.map*/
+/*# sourceMappingURL=91d62363cfa86229.css.map*/
