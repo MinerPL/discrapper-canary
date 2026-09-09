@@ -2202,15 +2202,26 @@
     position: relative
 }
 
+.emptyState__8061a {
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 2px
+}
+
+.emptyState__8061a,
 .overflowSlot__8061a {
     align-items: center;
-    box-sizing: border-box;
     color: var(--text-default);
     display: flex;
     height: 20px;
+    padding: 0 2px
+}
+
+.overflowSlot__8061a {
+    box-sizing: border-box;
     justify-content: center;
     min-width: 20px;
-    padding: 0 2px;
     position: relative
 }
 
@@ -2286,4 +2297,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=641877.509eef94d3ca18c5.css.map*/
+/*# sourceMappingURL=641877.a0b91883a89701cf.css.map*/

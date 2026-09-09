@@ -18,13 +18,19 @@
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     box-shadow: var(--elevation-low);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
     outline: none;
     padding: calc(var(--space-md) - 1px);
     width: var(--custom-badge-grid-width)
 }
 
-.content_f18413,
-.popout_f18413 {
+.popoutEmpty_f18413 {
+    width: 300px
+}
+
+.content_f18413 {
     display: flex;
     flex-direction: column;
     gap: var(--space-md)
@@ -50,6 +56,10 @@
 
 .nitroIcon_f18413 {
     color: var(--icon-default)
+}
+
+.emptyState_f18413 {
+    padding-block: var(--space-20)
 }
 
 .badgeGrid_f18413 {
@@ -213,4 +223,4 @@
     width: 20px
 }
 
-/*# sourceMappingURL=363189.5f6484e6ff1c1e8c.css.map*/
+/*# sourceMappingURL=363189.23495d7370fb86ec.css.map*/

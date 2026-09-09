@@ -1,10 +1,12 @@
 e.exports = {
     SW: "popout_f18413",
+    B2: "popoutEmpty_f18413",
     Qs: "content_f18413",
     bY: "contentWithUpsell_f18413",
     wx: "header_f18413",
     $: "titleRow_f18413",
     oU: "nitroIcon_f18413",
+    p$: "emptyState_f18413",
     yq: "badgeGrid_f18413",
     oE: "dragTarget_f18413",
     BU: "dragHandle_f18413",
