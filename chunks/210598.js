@@ -77,7 +77,7 @@ function N(e) {
 function C(e) {
     if (null != e)
         return "localDataUri" in e
-            ? { filename: e.filename }
+            ? { filename: e.filename, original_hash: e.originalHash }
             : { file_id: e.fileId, width: e.width, height: e.height, is_animated: e.isAnimated };
 }
 function O(e) {
