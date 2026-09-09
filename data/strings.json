@@ -4736,7 +4736,7 @@
   "ZbeITS": "Bans",
   "bW+JJw": "{bans, plural,=0 {No Bans}one {# Ban}other {# Bans}",
   "7OY0gJ": "Server Ban List",
-  "JcZ36i": "Bans by default are by account and IP.\\nA user can circumvent an IP ban by using a proxy.\\nBan circumvention can be made very hard by enabling phone verification in [Moderation](Moderation).",
+  "JcZ36i": "Bans by default are by account and IP.\\nA user can circumvent an IP ban by using a proxy.\\nBan circumvention can be made very hard by enabling phone verification in [Safety Setup](Safety Setup).",
   "z3cK5j": "We looked as hard as we could, but no banned users were found matching that search.",
   "zfCsAw": "You haven't banned anybody...\\nbut if and when you must, do not hesitate!",
   "rTL1RF": "Search Bans",
