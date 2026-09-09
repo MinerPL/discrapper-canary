@@ -22,7 +22,17 @@ var r,
     v = n(178758),
     _ = (((r = {}).SOLID = "solid"), (r.GRADIENT = "gradient"), (r.HOLOGRAPHIC = "holographic"), r);
 let T = {
-        [S.T$.DISPLAY]: ["name", "hoist", "mentionable", "color", "colors", "colorString", "colorStrings"],
+        [S.T$.DISPLAY]: [
+            "name",
+            "hoist",
+            "mentionable",
+            "color",
+            "colors",
+            "colorString",
+            "colorStrings",
+            "icon",
+            "unicodeEmoji",
+        ],
         [S.T$.PERMISSIONS]: ["permissions"],
         [S.T$.MEMBERS]: [],
         [S.T$.VERIFICATIONS]: [],

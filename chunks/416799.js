@@ -6995,7 +6995,7 @@ function ay() {
         r = re.It(e, t);
     function a() {
         (0, C.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("491183"), n.e("17449")]).then(n.bind(n, 182510));
+            let { default: e } = await Promise.all([n.e("491183"), n.e("646773")]).then(n.bind(n, 568658));
             return (n) =>
                 (0, p.jsx)(e, {
                     ...n,
@@ -18053,8 +18053,8 @@ let xX = function (e) {
                         onClick: () =>
                             t.features.has(ei.GuildFeatures.ROLE_ICONS)
                                 ? void (0, C.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([n.e("491183"), n.e("17449")]).then(
-                                          n.bind(n, 182510),
+                                      let { default: e } = await Promise.all([n.e("491183"), n.e("646773")]).then(
+                                          n.bind(n, 568658),
                                       );
                                       return (n) =>
                                           (0, p.jsx)(e, {
