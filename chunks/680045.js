@@ -18149,7 +18149,7 @@ let _K = { [eB.tR.REAL_MONEY_GAMING]: _H.default.pmIitA },
                 },
                 label: R.intl.string(_H.default.foQaI1),
                 description: R.intl.format(_H.default["z/MfaY"], {
-                    helpdeskArticle: ex.A.getArticleURL(S.MVz.QUESTS_PRIVACY_CONTROLS),
+                    helpdeskArticle: ex.A.getArticleURL(S.MVz.MANAGE_SPONSORED_CONTENT),
                 }),
                 layout: "vertical",
                 placeholder: R.intl.string(_H.default.bnxyEL),
