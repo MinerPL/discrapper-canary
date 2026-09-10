@@ -58,6 +58,11 @@ let et = [
     {
         date: "2026-09-09",
         summary:
+            "On phones, an app channel now has a chat button: read and post in the channel as usual, then tap back to the app.",
+    },
+    {
+        date: "2026-09-09",
+        summary:
             "The app frame can go fullscreen: a new header control fills your whole screen with the running app, and Escape brings the view back.",
     },
     {
