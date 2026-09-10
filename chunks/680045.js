@@ -9164,15 +9164,16 @@ function me(e) {
     if (null == o || r9.Ay.getInterval(i).intervalType !== tX.WT.MONTH) return null;
     let d = null != u ? u.skuId : null,
         c = o.skuId === d,
-        g = r9.Ay.getDisplayName(i);
+        g = (0, r9.z4)(i),
+        m = r9.Ay.getDisplayName(i);
     if (a) t = R.intl.string(g5.default["5asczk"]);
     else if (c && null != s) {
         let e;
         e = new Date(s.status === S.Dmq.PAUSED && null != s.pauseEndsAt ? s.pauseEndsAt : s.currentPeriodEnd);
         let n = (0, r9._e)(e, r);
         t = R.intl.formatToPlainString(R.t["5CNRRA"], { date: n ?? 0 });
-    } else t = R.intl.formatToPlainString(R.t.eNXZ5O, { planName: g });
-    let m = n.hasFreePremium() || (null != s && s.isPurchasedExternally);
+    } else t = R.intl.formatToPlainString(R.t.eNXZ5O, { planName: m });
+    let E = g || n.hasFreePremium() || (null != s && s.isPurchasedExternally);
     return (0, A.jsxs)("div", {
         className: g4.Bh,
         children: [
@@ -9189,9 +9190,9 @@ function me(e) {
                 children: [
                     (0, A.jsx)(p.D, {
                         variant: "heading-md/semibold",
-                        children: R.intl.format(R.t.LzobT9, { planName: g }),
+                        children: R.intl.format(R.t.LzobT9, { planName: m }),
                     }),
-                    !m &&
+                    !E &&
                         (0, A.jsx)(p.D, {
                             className: g4.gj,
                             variant: "heading-sm/semibold",
@@ -9340,7 +9341,7 @@ function md() {
         }, []),
         (0, A.jsx)(n$.n, {
             label: R.intl.string(R.t["2GKrvn"]),
-            description: R.intl.string(R.t.kNEjGm),
+            description: R.intl.string(R.t.Z5b2Gf),
             children:
                 null != e && r9.Ay.hasAccountCredit(e)
                     ? (0, A.jsx)(mt, { className: mr.fX, entitlements: e })
