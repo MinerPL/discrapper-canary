@@ -53,10 +53,10 @@ class Y extends r.PureComponent {
     rootRef = r.createRef();
     focusTimeout = new F.Ep();
     componentDidMount() {
-        this.setState({ shown: !0 }), w._.subscribe(B.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        (this.setState({ shown: !0 }), w._.subscribe(B.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus));
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), w._.unsubscribe(B.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        (this.focusTimeout.stop(), w._.unsubscribe(B.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus));
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -214,10 +214,10 @@ class et extends r.PureComponent {
     _listId = (0, O.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
-        g.A.disable(), g.A.enableTemp(m.w);
+        (g.A.disable(), g.A.enableTemp(m.w));
     }
     componentWillUnmount() {
-        g.A.disableTemp(), g.A.enable();
+        (g.A.disableTemp(), g.A.enable());
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: i } = this.state,
@@ -232,7 +232,7 @@ class et extends r.PureComponent {
         (0, o.jD)();
     }
     search(e) {
-        this.setState({ query: e }), (0, o.$P)(e);
+        (this.setState({ query: e }), (0, o.$P)(e));
     }
     handleInputChange = () => {
         let { current: e } = this.inputRef;
@@ -276,7 +276,6 @@ class et extends r.PureComponent {
                         n.e("906470"),
                         n.e("860350"),
                         n.e("774550"),
-                        n.e("376991"),
                         n.e("923981"),
                         n.e("618416"),
                         n.e("706073"),
@@ -576,7 +575,6 @@ class et extends r.PureComponent {
                         n.e("393336"),
                         n.e("481647"),
                         n.e("776273"),
-                        n.e("428367"),
                         n.e("776602"),
                         n.e("811133"),
                         n.e("407170"),
@@ -1055,7 +1053,7 @@ class et extends r.PureComponent {
             { selectedIndex: a } = this.props;
         switch (r) {
             case "escape":
-                e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, o.jD)();
+                (e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, o.jD)());
                 return;
             case "k":
             case "t":
@@ -1087,7 +1085,7 @@ class et extends r.PureComponent {
             default:
                 return;
         }
-        e.preventDefault(), (0, o.wf)(a);
+        (e.preventDefault(), (0, o.wf)(a));
     };
     handleGlobalPaste = (e) => {
         let { event: t } = e,
@@ -1349,10 +1347,11 @@ function en(e) {
 let ei = "QUICK_SWITCHER_MODAL_KEY";
 class er extends l.A {
     _initialize() {
-        s.h.subscribe("QUICKSWITCHER_SHOW", this.handleShow), s.h.subscribe("QUICKSWITCHER_HIDE", this.handleHide);
+        (s.h.subscribe("QUICKSWITCHER_SHOW", this.handleShow), s.h.subscribe("QUICKSWITCHER_HIDE", this.handleHide));
     }
     _terminate() {
-        s.h.unsubscribe("QUICKSWITCHER_SHOW", this.handleShow), s.h.unsubscribe("QUICKSWITCHER_HIDE", this.handleHide);
+        (s.h.unsubscribe("QUICKSWITCHER_SHOW", this.handleShow),
+            s.h.unsubscribe("QUICKSWITCHER_HIDE", this.handleHide));
     }
     handleShow() {
         d.A.isOpen() &&

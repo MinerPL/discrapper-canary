@@ -31,7 +31,7 @@ let E = [
                 (0, a.openModalLazy)(async () => {
                     let { default: i } = await Promise.all([
                         n.e("122326"),
-                        n.e("376991"),
+                        n.e("533651"),
                         n.e("554970"),
                         n.e("140606"),
                         n.e("993103"),
@@ -72,15 +72,19 @@ let E = [
     x = function (e) {
         let { guild: t, channel: n } = e,
             s = (0, i.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
-            r = (0, i.bG)([A.A, m.Ay], () => {
-                if (null == n) return 0;
-                let e = m.Ay.ackMessageId(n.id);
-                if (null == e) return 0;
-                let t = Object.values(A.A.getDirectoryEntries(n.id) ?? {}).filter(
-                    (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
-                );
-                return Math.min(g.zP, t.length);
-            }, [n]);
+            r = (0, i.bG)(
+                [A.A, m.Ay],
+                () => {
+                    if (null == n) return 0;
+                    let e = m.Ay.ackMessageId(n.id);
+                    if (null == e) return 0;
+                    let t = Object.values(A.A.getDirectoryEntries(n.id) ?? {}).filter(
+                        (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
+                    );
+                    return Math.min(g.zP, t.length);
+                },
+                [n],
+            );
         return (0, l.jsx)(l.Fragment, {
             children: E.map((e) => {
                 let { key: i, getName: a, handler: o, renderIcon: u } = e,

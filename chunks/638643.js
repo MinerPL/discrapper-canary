@@ -1,4 +1,4 @@
-e.d(n, { k: () => I, w: () => p }), e(938796);
+(e.d(n, { k: () => I, w: () => p }), e(938796));
 var i = e(477900),
     l = e(192308),
     r = e(342098),
@@ -22,10 +22,10 @@ async function p(t) {
         { promise: m, resolve: g } = Promise.withResolvers();
     if ((0, c.PJ)(s.flags) && !1 === h) {
         let { promise: t, resolve: n } = Promise.withResolvers();
-        (0, l.openModalLazy)(
+        ((0, l.openModalLazy)(
             async () => {
                 let { GuildSubscriptionSelectionModal: t } = await Promise.all([
-                    e.e("376991"),
+                    e.e("775417"),
                     e.e("970062"),
                     e.e("308555"),
                     e.e("220287"),
@@ -42,7 +42,7 @@ async function p(t) {
             },
             { stackingBehavior: "stack" },
         ),
-            (I = await t);
+            (I = await t));
     }
     let v = o.A.getParentSKU(s.id),
         x = null;

@@ -72,10 +72,10 @@ let eu = t.memo(function (e) {
         eu,
         { guild: eg, onClose: ey, onSelect: ep } = e,
         eA = (0, c.bG)([ed.default], () => ed.default.getCurrentUser());
-    o()(null != eA, "GuildHeaderPopout: user cannot be undefined"),
+    (o()(null != eA, "GuildHeaderPopout: user cannot be undefined"),
         t.useEffect(() => {
             ec.default.track(es.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: eg.id });
-        });
+        }));
     let eI = (0, c.bG)([eo.Ay], () => eo.Ay.isGuildCollapsed(eg.id), [eg.id]),
         {
             canAccessSettings: eb,
@@ -471,13 +471,11 @@ let eu = t.memo(function (e) {
                                         (0, u.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
                                                 n.e("339072"),
-                                                n.e("376991"),
                                                 n.e("207998"),
                                                 n.e("386655"),
                                                 n.e("860350"),
                                                 n.e("249169"),
                                                 n.e("352032"),
-                                                n.e("428367"),
                                                 n.e("308555"),
                                                 n.e("535321"),
                                                 n.e("883952"),

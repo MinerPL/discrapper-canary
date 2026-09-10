@@ -136,7 +136,6 @@ let T = (0, c.Fe)({
             n.e("942571"),
             n.e("464759"),
             n.e("763343"),
-            n.e("376991"),
             n.e("194704"),
             n.e("3942"),
             n.e("403643"),
@@ -267,7 +266,6 @@ let T = (0, c.Fe)({
             n.e("393336"),
             n.e("481647"),
             n.e("776273"),
-            n.e("428367"),
             n.e("776602"),
             n.e("811133"),
             n.e("407170"),
@@ -493,11 +491,11 @@ function m(e) {
             }, [])),
             { showTutorial: !t && D === s.Y2.UNREADS, setSeenTutorial: n }),
         P = r.useCallback(() => {
-            y(!1), L && u?.();
+            (y(!1), L && u?.());
         }, [u, L]),
         U = r.useCallback(
             (e) => {
-                y(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.();
+                (y(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.());
             },
             [u, c, L, v],
         );
@@ -513,8 +511,8 @@ function m(e) {
     let w = (0, _.jv)("RecentsPopout"),
         G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {
-        (D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
-            (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
+        ((D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
+            (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS));
     });
     let x = r.useCallback(
             (e) => {

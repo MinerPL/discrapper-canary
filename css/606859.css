@@ -440,29 +440,4 @@
     text-decoration: underline
 }
 
-.banner__174a1 {
-    border-bottom: 1px solid var(--border-muted);
-    container-name: device-detected-banner;
-    container-type: inline-size
-}
-
-.buttonRow__174a1 {
-    align-items: center;
-    display: grid;
-    gap: var(--space-8);
-    grid-template-areas: "switch more";
-    grid-template-columns: 1fr auto
-}
-
-.switchSlot__174a1 {
-    grid-area: switch
-}
-
-.moreActions__174a1 {
-    align-items: center;
-    display: flex;
-    grid-area: more;
-    justify-content: center
-}
-
-/*# sourceMappingURL=33091.3f45d0a56ff1736c.css.map*/
+/*# sourceMappingURL=606859.5042351066c47522.css.map*/

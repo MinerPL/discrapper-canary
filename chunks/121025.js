@@ -5,7 +5,7 @@ var a = n(477900),
     o = n(123292),
     r = n(144228),
     d = n(174459),
-    m = n(457394),
+    m = n(286980),
     s = n(792205),
     c = n(652215),
     u = n(375708);
@@ -57,21 +57,21 @@ function N(e) {
                 text: u.intl.string(u.t.vPBgq7),
                 variant: "secondary",
                 onClick: () => {
-                    U(), p();
+                    (U(), p());
                 },
             },
             {
                 text: u.intl.string(u.t.ydkoDT),
                 variant: "primary",
                 onClick: () => {
-                    D(y), p();
+                    (D(y), p());
                 },
             },
         ],
         actionBarInput: (0, a.jsx)(o.Q, {
             text: u.intl.format(u.t.cwS3E6, { device: n.displayName }),
             onClick: () => {
-                _(), p();
+                (_(), p());
             },
         }),
         onClose: p,

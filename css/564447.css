@@ -1,3 +1,32 @@
+.banner__174a1 {
+    border-bottom: 1px solid var(--border-muted);
+    container-name: device-detected-banner;
+    container-type: inline-size
+}
+
+.deviceSelect__174a1 {
+    margin-bottom: var(--space-12)
+}
+
+.buttonRow__174a1 {
+    align-items: center;
+    display: grid;
+    gap: var(--space-8);
+    grid-template-areas: "switch more";
+    grid-template-columns: 1fr auto
+}
+
+.switchSlot__174a1 {
+    grid-area: switch
+}
+
+.moreActions__174a1 {
+    align-items: center;
+    display: flex;
+    grid-area: more;
+    justify-content: center
+}
+
 .container_d79086 {
     box-sizing: border-box;
     contain: paint;
@@ -68,4 +97,4 @@
     transform: translate3d(0, 107%, 0)
 }
 
-/*# sourceMappingURL=917349.ccc49293b3486e06.css.map*/
+/*# sourceMappingURL=564447.ffe2ea4d3bf4210b.css.map*/

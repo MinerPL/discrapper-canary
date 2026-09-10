@@ -1,4 +1,4 @@
-i.d(t, { Py: () => O, d: () => x, d4: () => T, tR: () => m, x5: () => U });
+i.d(t, { Py: () => O, d: () => T, d4: () => x, tR: () => m, x5: () => U });
 var s = i(582128),
     c = i(435558),
     n = i(17928),
@@ -14,45 +14,45 @@ var s = i(582128),
     h = i(403362),
     A = i(723702),
     D = i(835498),
-    f = i(731854),
-    p = i(375708);
+    p = i(731854),
+    f = i(375708);
 function y(e) {
     return {
-        [f.oh.AUDIO_INPUT]: {
+        [p.oh.AUDIO_INPUT]: {
             getRawDevices: (e) => e.getInputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.oh.AUDIO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.oh.AUDIO_INPUT),
             getCurrentDeviceId: (e) => e.getInputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().inputDeviceId,
-            getNoDevicesMessage: () => p.intl.string(p.t["/QIjDA"]),
+            getNoDevicesMessage: () => f.intl.string(f.t["/QIjDA"]),
         },
-        [f.oh.AUDIO_OUTPUT]: {
+        [p.oh.AUDIO_OUTPUT]: {
             getRawDevices: (e) => e.getOutputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.oh.AUDIO_OUTPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.oh.AUDIO_OUTPUT),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().outputDeviceId,
-            getNoDevicesMessage: () => p.intl.string(p.t.xlUg0v),
+            getNoDevicesMessage: () => f.intl.string(f.t.xlUg0v),
         },
-        [f.oh.VIDEO_INPUT]: {
+        [p.oh.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(f.oh.VIDEO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(p.oh.VIDEO_INPUT),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().videoDeviceId,
-            getNoDevicesMessage: () => p.intl.string(p.t.WKWARY),
+            getNoDevicesMessage: () => f.intl.string(f.t.WKWARY),
         },
     }[e];
 }
 function w() {
     return (0, A.isWindows)()
-        ? p.intl.string(p.t.n4dQ2c)
+        ? f.intl.string(f.t.n4dQ2c)
         : (0, A.isMac)()
-          ? p.intl.string(p.t.aYrsiB)
-          : p.intl.string(p.t.Q3YKwS);
+          ? f.intl.string(f.t.aYrsiB)
+          : f.intl.string(f.t.Q3YKwS);
 }
-function x(e) {
+function T(e) {
     let t = RegExp(`^(?<prefix>${w()}) \\((?<subName>.+)\\)$`);
     return t.exec(e)?.groups;
 }
-function T(e, t) {
+function x(e) {
     switch (e.formFactor) {
         case I.yz.AIRPLAY:
             return r.K;
@@ -63,12 +63,12 @@ function T(e, t) {
         case I.yz.WEBCAM:
             return a.x;
     }
-    switch (t) {
-        case f.oh.AUDIO_INPUT:
+    switch (e.deviceType) {
+        case p.oh.AUDIO_INPUT:
             return o.MicrophoneIcon;
-        case f.oh.AUDIO_OUTPUT:
+        case p.oh.AUDIO_OUTPUT:
             return g.L;
-        case f.oh.VIDEO_INPUT:
+        case p.oh.VIDEO_INPUT:
             return a.x;
         default:
             return g.L;
@@ -79,14 +79,14 @@ function N(e) {
         i = (0, n.bG)([I.Ay], () => t(I.Ay));
     return (0, s.useMemo)(() => {
         let t = { ...i },
-            s = t[f.dx];
+            s = t[p.dx];
         return (
             null != s &&
-                (t[f.dx] = {
+                (t[p.dx] = {
                     ...s,
                     name: (function (e, t) {
                         let { getNoDevicesMessage: i } = y(e);
-                        return t.disabled ? i() : t.name.replace(f.vt, w());
+                        return t.disabled ? i() : t.name.replace(p.vt, w());
                     })(e, s),
                 }),
             t
@@ -104,7 +104,7 @@ function m(e) {
         n = (0, u.A)(() => i(D.A));
     return (0, s.useMemo)(() => {
         let i = Object.keys(t),
-            s = e !== f.oh.VIDEO_INPUT ? [f.dx] : [],
+            s = e !== p.oh.VIDEO_INPUT ? [p.dx] : [],
             r = (0, c.intersection)(n, i),
             l = (0, c.difference)(i, n);
         return (0, c.union)(s, r, l)

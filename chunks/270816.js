@@ -42,8 +42,8 @@ function o(e) {
             null != a && ((c = a.prefix), (d = a.subName));
             let r = {};
             if ($) {
-                let t = (0, l.d4)(e, i);
-                r = { leadingAccessory: { type: "icon", icon: t }, leftIcon: t };
+                let i = (0, l.d4)(e);
+                r = { leadingAccessory: { type: "icon", icon: i }, leftIcon: i };
             }
             return (0, s.jsx)(
                 n.iD,

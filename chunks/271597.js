@@ -8,7 +8,7 @@ function r() {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { resetAll: r, setGameFacet: o } = a.P.getState();
-    r(),
+    (r(),
         null != t && o(t),
         (0, l.openModalLazy)(
             async () => {
@@ -21,7 +21,7 @@ function r() {
                     n.e("269714"),
                     n.e("19385"),
                     n.e("398104"),
-                    n.e("33091"),
+                    n.e("606859"),
                     n.e("318196"),
                     n.e("323079"),
                     n.e("437655"),
@@ -48,5 +48,5 @@ function r() {
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: s.nm },
-        );
+        ));
 }

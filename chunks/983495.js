@@ -128,7 +128,7 @@ ${a}`;
             closePopout: F.tE,
             onSelectEmoji: async (e) => {
                 let { emoji: t, willClose: n } = e;
-                await g(t), n && (f(), d?.());
+                (await g(t), n && (f(), d?.()));
             },
             pickerIntention: D.EmojiIntention.PROFILE,
         })
@@ -262,7 +262,7 @@ ${t}`;
                         n = t.trim();
                     if (0 === n.length) return { shouldClear: !1, shouldRefocus: !1 };
                     try {
-                        return await v(n), m(), f?.(), { shouldClear: !0, shouldRefocus: !1 };
+                        return (await v(n), m(), f?.(), { shouldClear: !0, shouldRefocus: !1 });
                     } catch {
                         return { shouldClear: !1, shouldRefocus: !1 };
                     }
@@ -301,7 +301,7 @@ function en(e) {
             });
         },
         onRequestClose: () => {
-            d(), i?.();
+            (d(), i?.());
         },
         shouldShow: S,
         ...(function (e) {
@@ -335,21 +335,21 @@ function eo(e) {
                 tooltipText: G.intl.string(G.t.bt75uw),
                 shouldDelayTooltip: a,
                 onClick: function () {
-                    d({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
+                    (d({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
                         (function (e) {
                             let { analyticsLocations: t, stackingBehavior: r, returnRef: a } = e;
                             (0, c.openModalLazy)(
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("376991"),
+                                        n.e("775417"),
                                         n.e("456506"),
                                         n.e("25300"),
                                         n.e("291103"),
                                         n.e("875762"),
                                         n.e("526807"),
-                                        n.e("428367"),
                                         n.e("348900"),
                                         n.e("220287"),
+                                        n.e("428367"),
                                         n.e("655552"),
                                         n.e("420491"),
                                         n.e("772163"),
@@ -364,7 +364,7 @@ function eo(e) {
                             stackingBehavior: h === et.d.MODAL_V2 ? "stack" : void 0,
                             returnRef: o,
                         }),
-                        s?.();
+                        s?.());
                 },
                 "aria-label": G.intl.string(G.t.QdHxos),
                 "aria-haspopup": "dialog",
@@ -376,9 +376,9 @@ function eo(e) {
                 tooltipText: G.intl.string(G.t.VkKicb),
                 shouldDelayTooltip: a,
                 onClick: function () {
-                    d({ action: "PRESS_CLEAR_CUSTOM_STATUS" }),
+                    (d({ action: "PRESS_CLEAR_CUSTOM_STATUS" }),
                         ea.G2.updateSetting(void 0),
-                        requestAnimationFrame(() => o.current?.focus());
+                        requestAnimationFrame(() => o.current?.focus()));
                 },
                 "aria-label": G.intl.string(G.t.wfYTHe),
                 icon: er.TrashIcon,
@@ -427,20 +427,20 @@ let ed = r.forwardRef(function (e, t) {
                         "aria-label": G.intl.string(G.t["zrpF/b"]),
                         "aria-describedby": o,
                         onClick: function () {
-                            A({ action: "PRESS_ADD_CUSTOM_STATUS" }),
+                            (A({ action: "PRESS_ADD_CUSTOM_STATUS" }),
                                 r?.(),
                                 (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("376991"),
+                                            n.e("775417"),
                                             n.e("456506"),
                                             n.e("25300"),
                                             n.e("291103"),
                                             n.e("875762"),
                                             n.e("526807"),
-                                            n.e("428367"),
                                             n.e("348900"),
                                             n.e("220287"),
+                                            n.e("428367"),
                                             n.e("655552"),
                                             n.e("420491"),
                                             n.e("772163"),
@@ -455,7 +455,7 @@ let ed = r.forwardRef(function (e, t) {
                                             });
                                     },
                                     T === et.d.MODAL_V2 ? { stackingBehavior: "stack" } : void 0,
-                                );
+                                ));
                         },
                         focusProps: { ringClassName: eu.hN },
                         children: (0, l.jsxs)("span", {
@@ -510,10 +510,10 @@ let ed = r.forwardRef(function (e, t) {
             J = r.useCallback((e) => (X ? e : Math.min(e, _)), [_, X]),
             Z = (0, o.bG)([S.Ay], () => S.Ay.useReducedMotion),
             [ee] = r.useState(() => new u.Ep());
-        r.useEffect(() => () => ee.stop(), [ee]),
+        (r.useEffect(() => () => ee.stop(), [ee]),
             r.useEffect(() => {
                 j?.onInteractionPopoutTargetRefChange(I);
-            }, [j]);
+            }, [j]));
         let [en, el] = (0, A.z)(() => ({ maxHeight: `${U.current}px`, config: { clamp: !0, duration: 150 } }));
         function er(e) {
             Q &&
@@ -528,7 +528,7 @@ let ed = r.forwardRef(function (e, t) {
             let e = w.current.getBoundingClientRect().height,
                 t = O.current.getBoundingClientRect().height,
                 n = J(t);
-            z(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${H ? Math.min(U.current, M) : n}px` });
+            (z(n > e), (U.current = e), (V.current = t), el({ maxHeight: `${H ? Math.min(U.current, M) : n}px` }));
         }, [W, a, n, el, H, M, J]);
         let ea =
                 null != n
@@ -592,7 +592,7 @@ let ed = r.forwardRef(function (e, t) {
                           ref: I,
                           className: i()(eu.kL, p),
                           onMouseEnter: () => {
-                              L({ action: "HOVER_CUSTOM_STATUS" }), er(!0);
+                              (L({ action: "HOVER_CUSTOM_STATUS" }), er(!0));
                           },
                           onMouseLeave: () => {
                               er(!1);
@@ -614,10 +614,10 @@ let ed = r.forwardRef(function (e, t) {
                               I.current?.contains(e.relatedTarget) || y(!1);
                           },
                           onMouseEnter: () => {
-                              L({ action: "HOVER_CUSTOM_STATUS" }), y(!0), er(!0);
+                              (L({ action: "HOVER_CUSTOM_STATUS" }), y(!0), er(!0));
                           },
                           onMouseLeave: () => {
-                              y(!1), er(!1);
+                              (y(!1), er(!1));
                           },
                           children: [eT, R?.(Q), eA],
                       }),

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => iN }), n(321073);
+(n.r(t), n.d(t, { default: () => iN }), n(321073));
 var i,
     s,
     l = n(477900),
@@ -108,7 +108,7 @@ let K = "publicUpsellChannelNoticeGuilds",
 class W extends d.Ay.Store {
     static displayName = "EnablePublicGuildUpsellNoticeStore";
     initialize() {
-        this.waitFor(O.A, X.A, k.A), this.syncWith([O.A, X.A, k.A], H.tEg), (F = new Set(w.w.get(K)) ?? new Set());
+        (this.waitFor(O.A, X.A, k.A), this.syncWith([O.A, X.A, k.A], H.tEg), (F = new Set(w.w.get(K)) ?? new Set()));
     }
     isVisible(e) {
         if (null == e) return;
@@ -125,7 +125,7 @@ class W extends d.Ay.Store {
 let Y = new W(m.h, {
     PUBLIC_UPSELL_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
-        if (!F.has(t)) return F.add(t), w.w.set(K, F), !0;
+        if (!F.has(t)) return (F.add(t), w.w.set(K, F), !0);
     },
 });
 var z = n(992250);
@@ -133,11 +133,11 @@ let Q = { MAX_MEMBER_COUNT: new Set() };
 class q extends d.Ay.Store {
     static displayName = "MaxMemberCountChannelNoticeStore";
     initialize() {
-        this.waitFor(O.A, X.A, k.A),
+        (this.waitFor(O.A, X.A, k.A),
             this.syncWith([O.A, X.A, k.A], H.tEg),
             w.w.remove(H.n5X.MAX_MEMBER_COUNT_100),
             w.w.remove(H.n5X.MAX_MEMBER_COUNT_250),
-            (Q[H.n5X.MAX_MEMBER_COUNT] = new Set(w.w.get(H.n5X.MAX_MEMBER_COUNT)) ?? new Set());
+            (Q[H.n5X.MAX_MEMBER_COUNT] = new Set(w.w.get(H.n5X.MAX_MEMBER_COUNT)) ?? new Set()));
     }
     isVisible(e) {
         if (null == e) return !1;
@@ -150,7 +150,7 @@ let Z = new q(m.h, {
     MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
         if (!Q[H.n5X.MAX_MEMBER_COUNT].has(t))
-            return Q[H.n5X.MAX_MEMBER_COUNT].add(t), w.w.set(H.n5X.MAX_MEMBER_COUNT, Q[H.n5X.MAX_MEMBER_COUNT]), !0;
+            return (Q[H.n5X.MAX_MEMBER_COUNT].add(t), w.w.set(H.n5X.MAX_MEMBER_COUNT, Q[H.n5X.MAX_MEMBER_COUNT]), !0);
     },
 });
 var $ =
@@ -253,7 +253,7 @@ let eD = new eR(m.h, {
         ef = { ...ef, [t.source_guild_id]: t.is_dirty || !1 };
     },
     GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function () {
-        w.w.set(eM, !0), (eL = !0);
+        (w.w.set(eM, !0), (eL = !0));
     },
     GUILD_TEMPLATE_SYNC_SUCCESS: function (e) {
         ef = { ...ef, [e.guildTemplate.source_guild_id]: !1 };
@@ -304,7 +304,7 @@ function te(e) {
             o(eE.i.DISMISS);
         }, [o]),
         h = r.useCallback(() => {
-            (0, e5.h)({
+            ((0, e5.h)({
                 buttonAction: s.button?.buttonAction,
                 deeplinkSection: s.button?.deeplinkSection,
                 applicationId: s.button?.navigableStorefrontApplicationId?.value,
@@ -312,7 +312,7 @@ function te(e) {
                 analyticsLocation: { page: H.liQ.GUILD_CHANNEL, section: H.JJy.GUILD_HEADER },
                 analyticsLocations: d,
             })(),
-                o(eE.i.TAKE_ACTION);
+                o(eE.i.TAKE_ACTION));
         }, [s.button, t, d, o]),
         g = (0, e2.C)(s.helpArticle, ""),
         I = [s.body, A].filter((e) => "" !== e).join(" "),
@@ -606,13 +606,13 @@ let tf = t_().debounce(tT.Ay.trackWithMetadata, 500),
                   className: tM.HM,
                   size: tC.$n.Sizes.SMALL,
                   onClick: function () {
-                      null != a &&
+                      (null != a &&
                           eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: u,
                               guild_id: t.id,
                               notice_type: a,
                           }),
-                          E?.();
+                          E?.());
                   },
                   fullWidth: !0,
                   color: g,
@@ -626,7 +626,7 @@ let tf = t_().debounce(tT.Ay.trackWithMetadata, 500),
                     ? null
                     : (0, l.jsx)(tN.D, {
                           onClick: function () {
-                              tT.Ay.trackWithMetadata(H.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: a }), A?.();
+                              (tT.Ay.trackWithMetadata(H.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: a }), A?.());
                           },
                           className: tM.VN,
                           "aria-label": tl.intl.string(tl.t.WAI6xu),
@@ -659,7 +659,7 @@ function tR(e) {
         guild: t,
         onDismissed: () => n(eE.i.UNKNOWN),
         onClick: () => {
-            open(tO.A.getArticleURL(H.MVz.CONNECTION_DETAILS)), n(eE.i.UNKNOWN);
+            (open(tO.A.getArticleURL(H.MVz.CONNECTION_DETAILS)), n(eE.i.UNKNOWN));
         },
         title: tl.intl.string(tl.t.YMgaJt),
         message: tl.intl.string(tl.t["AV/9eW"]),
@@ -945,8 +945,8 @@ function nT(e) {
         s || null != r || (0, nE.pE)(t.id),
         (0, l.jsx)(tu.$, {
             onClick: function () {
-                (0, nC.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, nE.Lx)(t.id), 1e3)),
-                    eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n });
+                ((0, nC.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, nE.Lx)(t.id), 1e3)),
+                    eg.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n }));
             },
             text: tl.intl.string(tl.t.DlcqlU),
             icon: s ? t5.CheckmarkLargeIcon : t7.BellIcon,
@@ -992,8 +992,11 @@ function nM(e) {
                         }),
                         (0, l.jsx)(tN.D, {
                             onClick: () => {
-                                eg.default.track(H.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: n, guild_id: t.guild_id }),
-                                    (0, nE.Lx)(t.id);
+                                (eg.default.track(H.HAw.CHANNEL_NOTICE_CLOSED, {
+                                    notice_type: n,
+                                    guild_id: t.guild_id,
+                                }),
+                                    (0, nE.Lx)(t.id));
                             },
                             className: nN.ut,
                             "aria-label": tl.intl.string(tl.t.cpT0Cq),
@@ -1137,18 +1140,22 @@ function nx(e) {
         u = (0, d.bG)([O.A], () => O.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([na.default, no.Ay, nd.Ay], () => {
-                let e = na.default.getId();
-                return no.Ay.getVoiceChannelId() === t ? nd.Ay.getPermissionsForUser(e, t) : null;
-            }, [t])),
+            (0, d.bG)(
+                [na.default, no.Ay, nd.Ay],
+                () => {
+                    let e = na.default.getId();
+                    return no.Ay.getVoiceChannelId() === t ? nd.Ay.getPermissionsForUser(e, t) : null;
+                },
+                [t],
+            )),
         A = tl.intl.string(tl.t.VJlc0S);
     switch (s) {
         case 1:
             A = tl.intl.string(tl.t.VJlc0S);
             break;
         case 2:
-            (A = tl.intl.string(tl.t.ZYO5OK)),
-                c?.speaker ? (A = tl.intl.string(tl.t["/cnSFc"])) : null != c && (A = tl.intl.string(tl.t.btSGOj));
+            ((A = tl.intl.string(tl.t.ZYO5OK)),
+                c?.speaker ? (A = tl.intl.string(tl.t["/cnSFc"])) : null != c && (A = tl.intl.string(tl.t.btSGOj)));
             break;
         case 3:
             A = tl.intl.string(tl.t.wBoE6L);
@@ -1246,8 +1253,8 @@ let nH = function (e) {
             (0, ny.sF)(ny._2.HUB_STUDY_ROOM_NOTICE);
         },
         onClick: function () {
-            (0, ny.sF)(ny._2.HUB_STUDY_ROOM_NOTICE),
-                null != t && null != t.getGuildId() && ((0, nl.av)(t), (0, ns.uh)(t.getGuildId(), t.id));
+            ((0, ny.sF)(ny._2.HUB_STUDY_ROOM_NOTICE),
+                null != t && null != t.getGuildId() && ((0, nl.av)(t), (0, ns.uh)(t.getGuildId(), t.id)));
         },
         title: tl.intl.string(tl.t["4Y2AS7"]),
         message: tl.intl.string(tl.t.wTsxTS),
@@ -1312,7 +1319,7 @@ function nk(e) {
         type: H.n5X.COMMANDS_MIGRATION,
         image: "/assets/ab63b30e9bc8855c.svg",
         onClick: () => {
-            n(), ts.A.open(t.id, H.BEX.INTEGRATIONS);
+            (n(), ts.A.open(t.id, H.BEX.INTEGRATIONS));
         },
         imageMarginTop: 15,
         imageMarginX: 22,
@@ -1328,14 +1335,18 @@ function nK(e) {
         return (0, nV.Hc)(n.id);
     }
     let a = r.useMemo(() => new Set(i.map((e) => e.applicationId)), [i]),
-        o = (0, d.yK)([nX.A], () => {
-            let e = [];
-            for (let t of a) {
-                let n = nX.A.getApplication(t);
-                null != n && e.push(n);
-            }
-            return e;
-        }, [a]);
+        o = (0, d.yK)(
+            [nX.A],
+            () => {
+                let e = [];
+                for (let t of a) {
+                    let n = nX.A.getApplication(t);
+                    null != n && e.push(n);
+                }
+                return e;
+            },
+            [a],
+        );
     return 0 === o.length
         ? null
         : ((t =
@@ -1353,7 +1364,7 @@ function nK(e) {
               type: H.n5X.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: "/assets/eaaec668caed688e.svg",
               onClick: () => {
-                  s(), ts.A.open(n.id, H.BEX.INTEGRATIONS);
+                  (s(), ts.A.open(n.id, H.BEX.INTEGRATIONS));
               },
               imageMarginTop: 6,
               imageMarginX: 46,
@@ -1365,7 +1376,7 @@ let nW = function (e) {
     let { guild: t } = e,
         n = r.useCallback(() => {
             var e;
-            (e = t.id), m.h.dispatch({ type: "PUBLIC_UPSELL_NOTICE_DISMISS", guildId: e });
+            ((e = t.id), m.h.dispatch({ type: "PUBLIC_UPSELL_NOTICE_DISMISS", guildId: e }));
         }, [t.id]);
     return (0, l.jsx)(tL, {
         guild: t,
@@ -1415,7 +1426,7 @@ class n$ extends r.PureComponent {
     handleClose = () => {
         let e = no.Ay.getChannelId(),
             t = tl.intl.formatToPlainString(tl.t.DEn7nu, { invitePeople: tl.intl.string(tl.t.Sd8Ixw) });
-        this.props.markAsDismissed(eE.i.UNKNOWN), null != e && nZ.A.sendBotMessage(e, t);
+        (this.props.markAsDismissed(eE.i.UNKNOWN), null != e && nZ.A.sendBotMessage(e, t));
     };
     render() {
         let e = `${tl.intl.string(tl.t.VWqWZQ)}
@@ -1437,7 +1448,7 @@ let nJ = function (e) {
     let { guild: t } = e,
         n = r.useCallback(() => {
             var e;
-            (e = t.id), m.h.dispatch({ type: "MAX_MEMBER_COUNT_NOTICE_DISMISS", guildId: e });
+            ((e = t.id), m.h.dispatch({ type: "MAX_MEMBER_COUNT_NOTICE_DISMISS", guildId: e }));
         }, [t.id]);
     return (0, l.jsx)(tL, {
         guild: t,
@@ -1472,7 +1483,7 @@ var n8 = n(174768);
 class n5 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
-        this.waitFor(X.A), this.syncWith([X.A], H.tEg);
+        (this.waitFor(X.A), this.syncWith([X.A], H.tEg));
     }
     channelNoticePredicate(e, t) {
         return !e.features.has(H.GuildFeatures.BANNER) && Date.now() - t >= H.D2K;
@@ -1482,7 +1493,7 @@ let n7 = new n5(m.h);
 class n2 extends d.Ay.Store {
     static displayName = "GuildBoostingNoticeStore";
     initialize() {
-        this.waitFor(O.A), this.syncWith([O.A], H.tEg);
+        (this.waitFor(O.A), this.syncWith([O.A], H.tEg));
     }
     channelNoticePredicate(e, t) {
         return Date.now() - t >= H.D2K && O.A.can(H.xBc.MANAGE_GUILD, e);
@@ -1496,7 +1507,7 @@ function ie() {
 class it extends d.Ay.Store {
     static displayName = "InviteNoticeStore";
     initialize() {
-        this.waitFor(O.A), this.syncWith([O.A], ie);
+        (this.waitFor(O.A), this.syncWith([O.A], ie));
     }
     channelNoticePredicate(e, t) {
         return Date.now() - t >= H.D2K && O.A.can(H.xBc.ADMINISTRATOR, e);
@@ -1547,7 +1558,7 @@ function iu(e) {
             (c = a && o),
             r.useMemo(() => {
                 let e = [];
-                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : id;
+                return (c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : id);
             }, [c])),
         [I, m] = (0, en.ww)(g, A.id, eE.m.CHANNEL_NOTICES, !0),
         _ = null != I,
@@ -1569,7 +1580,7 @@ function iu(e) {
         T = null != I ? m : S,
         M = r.useCallback(() => {
             var e;
-            (e = Date.now()), w.w.set(is, e), h(e), T(eE.i.UNKNOWN);
+            ((e = Date.now()), w.w.set(is, e), h(e), T(eE.i.UNKNOWN));
         }, [T]),
         f = (() => {
             switch (p) {
@@ -1649,18 +1660,18 @@ class iC extends r.PureComponent {
         hasGuildSubheader: !1,
     };
     componentDidMount() {
-        this.setAnimatedValue(0),
+        (this.setAnimatedValue(0),
             m.h.subscribe("LAYER_PUSH", this.closeAllHeaderNotices),
-            (this.historyUnlisten = eF.A.addRouteChangeListener(this.handleHistoryChange));
+            (this.historyUnlisten = eF.A.addRouteChangeListener(this.handleHistoryChange)));
         let { location: e } = eF.A.getHistory();
         e.state?.shouldShowSubscribeTooltip &&
             this.showTimeout.start(1e3, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
     }
     componentWillUnmount() {
-        this.showTimeout.stop(),
+        (this.showTimeout.stop(),
             this.state.controller.dispose(),
             this.historyUnlisten(),
-            m.h.unsubscribe("LAYER_PUSH", this.closeAllHeaderNotices);
+            m.h.unsubscribe("LAYER_PUSH", this.closeAllHeaderNotices));
     }
     getGuildBannerHash() {
         let { guild: e, hasChannelNotice: t } = this.props;
@@ -1673,7 +1684,7 @@ class iC extends r.PureComponent {
     };
     handleHeaderMenuToggle = (e) => {
         let { isHeaderPopoutOpen: t } = this.props;
-        e.stopPropagation(), (0, eu.Z)(!t), this.closeAllHeaderNotices();
+        (e.stopPropagation(), (0, eu.Z)(!t), this.closeAllHeaderNotices());
     };
     handleContextMenu = (e) => {
         let { guild: t, hasFavoritesAccess: i } = this.props;
@@ -1725,7 +1736,6 @@ class iC extends r.PureComponent {
                     n.e("906470"),
                     n.e("860350"),
                     n.e("774550"),
-                    n.e("376991"),
                     n.e("923981"),
                     n.e("618416"),
                     n.e("706073"),
@@ -2014,7 +2024,6 @@ class iC extends r.PureComponent {
                     n.e("393336"),
                     n.e("481647"),
                     n.e("776273"),
-                    n.e("428367"),
                     n.e("776602"),
                     n.e("811133"),
                     n.e("407170"),
@@ -2275,9 +2284,9 @@ class iC extends r.PureComponent {
         }
     };
     closeAllHeaderNotices = () => {
-        this.handleCloseSubscribeTooltip(),
+        (this.handleCloseSubscribeTooltip(),
             this.handleCloseTemplateDirtyTooltip(),
-            this.handleCloseStudentHubPrivacySettingsTooltip();
+            this.handleCloseStudentHubPrivacySettingsTooltip());
     };
     handleCloseStudentHubPrivacySettingsTooltip = () => {
         let e = (0, et.k8)(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
@@ -2285,8 +2294,8 @@ class iC extends r.PureComponent {
         !e && t && (0, et.Dr)(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eE.i.AUTO });
     };
     handleCloseSubscribeTooltip = () => {
-        this.showTimeout.stop(),
-            this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
+        (this.showTimeout.stop(),
+            this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 }));
     };
     handleCloseTemplateDirtyTooltip = () => {
         let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
@@ -2441,7 +2450,7 @@ class iC extends r.PureComponent {
             bannerVisibleHeight: s,
             controller: l,
         } = this.state;
-        ((e >= 88 && i) || (e < 88 && !i)) && (i = !i),
+        (((e >= 88 && i) || (e < 88 && !i)) && (i = !i),
             ((e >= 88 && !t) || (e < 88 && t)) && (t = !t),
             (s = Math.max(88 - e, 0)),
             (n = i),
@@ -2450,13 +2459,13 @@ class iC extends r.PureComponent {
                 s !== this.state.bannerVisibleHeight ||
                 n !== this.state.communityInfoVisible) &&
                 this.setState({ renderBanner: t, bannerVisible: i, bannerVisibleHeight: s, communityInfoVisible: n }),
-            l.update({ value: Math.min(1, Math.max(0, 1 - e / 88)), immediate: !0 }).start();
+            l.update({ value: Math.min(1, Math.max(0, 1 - e / 88)), immediate: !0 }).start());
     };
     setAnimatedValueForGuildInfo(e) {
         let { communityInfoVisible: t, controller: n } = this.state;
-        ((e >= 20 && t) || (e < 20 && !t)) && (t = !t),
+        (((e >= 20 && t) || (e < 20 && !t)) && (t = !t),
             t !== this.state.communityInfoVisible && this.setState({ communityInfoVisible: t }),
-            n.update({ value: Math.min(1, Math.max(0, 1 - e / 20)), immediate: !0 }).start();
+            n.update({ value: Math.min(1, Math.max(0, 1 - e / 20)), immediate: !0 }).start());
     }
     pinBannerOrGuildInfo = (e) => {
         let { scrollTop: t } = e;
@@ -2587,7 +2596,7 @@ function iN(e) {
         e6 = b?.features.has(H.GuildFeatures.COMMUNITY) ?? !1,
         e3 = e0.Ay.isNewUser(k),
         e8 = W && !e3;
-    (c = (0, eh.TZ)(b)),
+    ((c = (0, eh.TZ)(b)),
         (A = V.dR.some((e) => !(0, es.ai)(b?.id) && eI.Ib(e, b))),
         (E = b?.defaultMessageNotifications === H.orn.ALL_MESSAGES),
         (h = (0, em.G$)(u.V.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, b?.id ?? H.dJq)),
@@ -2619,7 +2628,7 @@ function iN(e) {
                     guild_id: b?.id ?? H.dJq,
                 }),
                 (_.current = !0));
-        }, [A, b, m, E, g]);
+        }, [A, b, m, E, g]));
     let e5 = (0, et.HX)(u.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         e7 =
             ((S = (0, d.bG)([X.A], () => X.A.getGuild(f))),
@@ -2635,7 +2644,7 @@ function iN(e) {
             [l, a] = (0, en.kn)(null != s ? [u.M.GUILD_THEME_NUX] : [], eE.m.GUILD_THEME_NUX),
             o = l === u.M.GUILD_THEME_NUX,
             d = r.useRef(!1);
-        r.useEffect(() => {
+        (r.useEffect(() => {
             d.current = !1;
         }, [e]),
             r.useEffect(() => {
@@ -2655,7 +2664,7 @@ function iN(e) {
                     });
                 }, 2e3);
                 return () => clearTimeout(t);
-            }, [o, n, e, a, i]);
+            }, [o, n, e, a, i]));
     })(f, {
         isNuxOpen: (0, I.useHasModalOpen)(eG.u),
         openNux: r.useCallback((e) => {
@@ -2703,14 +2712,14 @@ function iN(e) {
         tc = (0, ev.A)(f),
         tA = !1 === te && to && null != tc,
         tE = [];
-    eU && tE.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+    (eU && tE.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eR && tE.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eF && tE.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === te && tE.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
         tt && tE.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
         ts && tE.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         ta && tE.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
-        e7 && tE.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+        e7 && tE.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let [th, tg] = (0, en.kn)(tE, eE.m.GUILD_HEADER_TOOLTIPS),
         [tI, tm] = (0, eH.vB)(tl && tn && !1 === te && !(0, es.ai)(f), eE.m.GUILD_HEADER_TOOLTIPS),
         [t_, tC] = (0, en.D8)(

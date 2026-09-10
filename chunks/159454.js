@@ -1,4 +1,4 @@
-n.d(t, { A: () => n2, u: () => n$ });
+n.d(t, { A: () => n8, u: () => n$ });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -48,7 +48,7 @@ let T = (0, S.sampleSize)(k.sx, k.sx.length),
             let i = n === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack,
                 l = i.slice(0, e),
                 s = i.slice(e);
-            return t()._setStack(n, s), l;
+            return (t()._setStack(n, s), l);
         },
         peekNext: (e, n) => (n === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).slice(0, e),
         bump: (e, n) => {
@@ -59,17 +59,17 @@ let T = (0, S.sampleSize)(k.sx, k.sx.length),
             s.splice(l, 1);
             let r = t().getNext(1, n),
                 a = t().peekNext(7, n);
-            t()._setGameIds(n, [...s, ...r]), t()._setPeekedGameIds(n, [...a, ...r]);
+            (t()._setGameIds(n, [...s, ...r]), t()._setPeekedGameIds(n, [...a, ...r]));
         },
         bumpMultiple: (e, n) => {
             let i = (t().gameIds[n] ?? []).filter((t) => !e.includes(t)),
                 l = t().getNext(6 - i.length, n),
                 s = t().peekNext(7, n);
-            t()._setGameIds(n, [...i, ...l]), t()._setPeekedGameIds(n, [...s, ...l]);
+            (t()._setGameIds(n, [...i, ...l]), t()._setPeekedGameIds(n, [...s, ...l]));
         },
         remove: (e, n) => {
             let i = (n === b.x.WANT_TO_PLAY_GAMES ? t().wishlistStack : t().stack).filter((t) => t !== e);
-            t()._setStack(n, i), t()._setPeekedGameIds(n, t().peekNext(7, n));
+            (t()._setStack(n, i), t()._setPeekedGameIds(n, t().peekNext(7, n)));
         },
         _setGameIds: (t, n) => {
             e((e) => ({ gameIds: { ...e.gameIds, [t]: n } }));
@@ -185,7 +185,7 @@ function ei(e) {
         [o] = l.useState(() => new Set()),
         d = l.useCallback(
             (e, t) => {
-                t ? o.add(e) : o.delete(e), a(o.size > 0);
+                (t ? o.add(e) : o.delete(e), a(o.size > 0));
             },
             [o],
         ),
@@ -336,7 +336,7 @@ function ek(e) {
         [u, g] = l.useState(null),
         m = (0, eA.A)(a),
         x = l.useCallback(() => {
-            (o.current = o.current + 1), c(null), g(null);
+            ((o.current = o.current + 1), c(null), g(null));
         }, []),
         f = l.useCallback(
             async (e, t, n, i) => {
@@ -349,12 +349,14 @@ function ek(e) {
                         eE.default.fromBlob(n).catch(() => void 0),
                     ]);
                     if (o.current !== l) return;
-                    c(null),
+                    (c(null),
                         g({ filename: s, unprocessedFile: n, transform: i }),
-                        m({ filename: s, localDataUri: e, originalHash: r });
+                        m({ filename: s, localDataUri: e, originalHash: r }));
                 } catch (e) {
                     if (o.current !== l) return;
-                    c(null), (0, eh.P0)((0, ep.o)(B.intl.string(B.t.F4Neqh), eI.Ck.FAILURE)), eb.A.captureException(e);
+                    (c(null),
+                        (0, eh.P0)((0, ep.o)(B.intl.string(B.t.F4Neqh), eI.Ck.FAILURE)),
+                        eb.A.captureException(e));
                 }
             },
             [m],
@@ -457,7 +459,7 @@ function eR(e) {
             let n = t.sections[s];
             if (n?.type !== O.K.COVER) return t;
             let i = [...t.sections];
-            return (i[s] = e(n)), new I.Tu({ ...t, sections: i });
+            return ((i[s] = e(n)), new I.Tu({ ...t, sections: i }));
         });
     }
     function g(e) {
@@ -482,7 +484,7 @@ function eR(e) {
             onUploadSuccess: (e) => u((t) => ({ ...t, image: e })),
         });
     function A() {
-        p(), u((e) => ({ ...e, image: void 0 }));
+        (p(), u((e) => ({ ...e, image: void 0 })));
     }
     function E() {
         o.current?.activateUploadDialogue();
@@ -622,12 +624,12 @@ function eP(e) {
                                         variant: "overlay-secondary",
                                         tooltipText: B.intl.string(B.t.RyK5Ww),
                                         onClick: function () {
-                                            u(),
+                                            (u(),
                                                 a(l.key, (e) =>
                                                     null != e.image
                                                         ? { ...e, image: void 0 }
                                                         : { ...e, image: void 0, hideImage: !0 },
-                                                );
+                                                ));
                                         },
                                         icon: K.TrashIcon,
                                     }),
@@ -700,7 +702,7 @@ function eD(e) {
             let n = t.sections[l];
             if (n?.type !== O.K.FIELDS) return t;
             let i = [...t.sections];
-            return (i[l] = { ...n, fields: e(n.fields) }), new I.Tu({ ...t, sections: i });
+            return ((i[l] = { ...n, fields: e(n.fields) }), new I.Tu({ ...t, sections: i }));
         });
     }
     function o(e, t) {
@@ -709,7 +711,7 @@ function eD(e) {
                 l = n[i];
             if (null == l) return n;
             let s = [...n];
-            return (s[i] = t(l)), s;
+            return ((s[i] = t(l)), s);
         });
     }
     function d(e) {
@@ -852,15 +854,15 @@ var eY = n(702841),
     e$ = n(554146),
     e0 = n(43105),
     e1 = n(131607),
-    e2 = n(518477),
-    e8 = n(49999);
-function e7() {
+    e8 = n(518477),
+    e2 = n(49999);
+function e5() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = eJ.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
         [n, i] = (0, e1.kn)(e && t ? [e$.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [n === e$.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, i];
 }
-function e5(e) {
+function e7(e) {
     let { targetElementRef: t, isVisible: n, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eZ.NJ)();
     return n
@@ -878,16 +880,16 @@ function e5(e) {
               gradientColor: "nitro-pink",
               title: B.intl.string(B.t.KKGxNt),
               body: B.intl.string(B.t["IS+QTV"]),
-              onRequestClose: () => l(e8.i.USER_DISMISS),
+              onRequestClose: () => l(e2.i.USER_DISMISS),
               actions: [
                   {
                       text: B.intl.string(B.t.RCy7Px),
                       icon: eX.t,
                       onClick: function () {
                           let e = (0, I.g0)();
-                          (0, F.Y5)(e),
+                          ((0, F.Y5)(e),
                               s({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                              (0, eQ.XA)(e2.jM.WIDGET_ADDED);
+                              (0, eQ.XA)(e8.jM.WIDGET_ADDED));
                       },
                   },
               ],
@@ -899,11 +901,11 @@ function e6(e) {
     let { buttonRef: t, isCoachmarkVisible: n, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: r } = (0, eZ.NJ)(),
         a = l.useCallback(() => {
-            n && s(e8.i.TAKE_ACTION);
+            n && s(e2.i.TAKE_ACTION);
             let e = (0, I.g0)();
-            (0, F.Y5)(e),
+            ((0, F.Y5)(e),
                 r({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, eQ.XA)(e2.jM.WIDGET_ADDED);
+                (0, eQ.XA)(e8.jM.WIDGET_ADDED));
         }, [r, n, s]);
     return (0, i.jsx)(eK.$, {
         icon: eX.t,
@@ -919,7 +921,7 @@ function e4(e) {
         { trackUserProfileEditAction: s } = (0, eZ.NJ)(),
         a = l.useRef(null),
         o = l.useRef(null),
-        [c, u] = e7(),
+        [c, u] = e5(),
         g = (function () {
             let e = (0, eY.bG)([G.default], () => G.default.getCurrentUser()?.id),
                 t = (0, R.A)(e),
@@ -930,7 +932,7 @@ function e4(e) {
             return n && i && !l;
         })(),
         m = l.useCallback(() => {
-            c && u(e8.i.TAKE_ACTION),
+            (c && u(e2.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -940,7 +942,7 @@ function e4(e) {
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
-                );
+                ));
         }, [s, c, u]);
     return (0, i.jsxs)("div", {
         className: r()(e3.w, t),
@@ -960,7 +962,7 @@ function e4(e) {
                 onClick: m,
                 buttonRef: a,
             }),
-            (0, i.jsx)(e5, { targetElementRef: g ? o : a, isVisible: c, markAsDismissed: u }),
+            (0, i.jsx)(e7, { targetElementRef: g ? o : a, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1005,24 +1007,24 @@ function tp(e) {
         [E, v] = l.useState(!1),
         [S, C] = l.useState(!1),
         k = E || S;
-    l.useEffect(() => {
+    (l.useEffect(() => {
         a(k);
     }, [k, a]),
-        l.useEffect(() => () => a(!1), [a]);
+        l.useEffect(() => () => a(!1), [a]));
     let T = l.useCallback(
             (e, n) => {
-                (0, F.$6)(t, e),
-                    m({ action: "added" === n ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: b.x.CLIPS_GALLERY });
+                ((0, F.$6)(t, e),
+                    m({ action: "added" === n ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: b.x.CLIPS_GALLERY }));
             },
             [t, m],
         ),
         N = l.useCallback(() => {
-            C(!0), m({ action: "PRESS_ADD_TAG", widgetEdited: b.x.CLIPS_GALLERY });
+            (C(!0), m({ action: "PRESS_ADD_TAG", widgetEdited: b.x.CLIPS_GALLERY }));
         }, [m]),
         y = l.useCallback(() => C(!1), []),
         w = l.useCallback(
             (e) => {
-                (0, F.Fo)(t, e), m({ action: "TAG_REMOVED", widgetEdited: b.x.CLIPS_GALLERY });
+                ((0, F.Fo)(t, e), m({ action: "TAG_REMOVED", widgetEdited: b.x.CLIPS_GALLERY }));
             },
             [t, m],
         ),
@@ -1042,7 +1044,7 @@ function tp(e) {
             if (s(c.length, i)) return void A(c.length);
             let r = i - (n + 4),
                 a = 0;
-            for (; a < c.length && s(a + 1, r); ) a++;
+            for (; a < c.length && s(a + 1, r);) a++;
             A(a);
         }, [c, E]);
     (0, et.g)(x, R);
@@ -1050,7 +1052,7 @@ function tp(e) {
         L = _ > 0,
         O = l.useCallback(
             (e) => {
-                1 === _ && v(!1), w(e);
+                (1 === _ && v(!1), w(e));
             },
             [w, _],
         );
@@ -1232,10 +1234,10 @@ function ty(e) {
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    (0, F.mC)(t),
+                    ((0, F.mC)(t),
                         null != n && (0, tN.UE)(n),
                         tT.O.announce(B.intl.string(B.t.zyPNb3)),
-                        s({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY });
+                        s({ action: "CLIP_REMOVED", widgetEdited: b.x.CLIPS_GALLERY }));
                 },
             }),
         }),
@@ -1452,7 +1454,7 @@ function t1(e) {
         children: (0, i.jsx)(tt.K, { variant: "secondary", size: "sm", icon: tn.T, "aria-label": n, onClick: t }),
     });
 }
-function t2() {
+function t8() {
     return (0, i.jsx)("div", {
         className: t0.p$,
         children: (0, i.jsx)(d.E, {
@@ -1462,7 +1464,7 @@ function t2() {
         }),
     });
 }
-function t8(e) {
+function t2(e) {
     let t,
         s,
         r,
@@ -1520,7 +1522,7 @@ function t8(e) {
             T.current = window.setTimeout(() => h(!0), 150);
         }, []),
         ee = l.useCallback(() => {
-            window.clearTimeout(T.current), h(!1);
+            (window.clearTimeout(T.current), h(!1));
         }, []);
     l.useEffect(() => () => window.clearTimeout(T.current), []);
     let et = l.useCallback(() => {
@@ -1536,7 +1538,7 @@ function t8(e) {
                     n.e("19385"),
                     n.e("398104"),
                     n.e("553829"),
-                    n.e("33091"),
+                    n.e("606859"),
                     n.e("865257"),
                     n.e("318196"),
                     n.e("323079"),
@@ -1584,7 +1586,7 @@ function t8(e) {
                         ...t,
                         initialMainLink: tr.oH.ALL_CLIPS,
                         onClipClick: (e) => {
-                            ((e) => (0, tN._A)(e, [tl.A.USER_PROFILE_MODAL_V2]))(e), t.onClose();
+                            (((e) => (0, tN._A)(e, [tl.A.USER_PROFILE_MODAL_V2]))(e), t.onClose());
                         },
                     });
             },
@@ -1678,11 +1680,11 @@ function t8(e) {
                               }),
                       ],
                   })
-                : (0, i.jsx)(t2, {}),
+                : (0, i.jsx)(t8, {}),
     });
 }
-var t7 = n(704824),
-    t5 = n(382483),
+var t5 = n(704824),
+    t7 = n(382483),
     t3 = n(385113),
     t6 = n(334074),
     t4 = n(657718),
@@ -1695,7 +1697,7 @@ function ne(e) {
             null != a &&
                 ((0, F.Y5)(a),
                 r({ action: "WIDGET_ADDED", ...a.getProfileEditAnalyticsOptions() }),
-                (0, eQ.XA)(e2.jM.WIDGET_ADDED));
+                (0, eQ.XA)(e8.jM.WIDGET_ADDED));
         }, [a, r]);
     return (0, i.jsx)(L.A, {
         user: t,
@@ -1717,7 +1719,7 @@ function ne(e) {
                             icon: tG.P,
                             "aria-label": B.intl.string(B.t.WAI6xu),
                             onClick: () => {
-                                s(e8.i.USER_DISMISS);
+                                s(e2.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1730,7 +1732,7 @@ function ne(e) {
                             icon: t9.U,
                             "aria-label": B.intl.formatToPlainString(B.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                s(e8.i.TAKE_ACTION), o();
+                                (s(e2.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -1748,11 +1750,11 @@ function nt() {
     } = (function () {
         let e = (0, a.yK)([t3.A], () => t3.A.getFeaturedApplicationIds());
         l.useEffect(() => {
-            (0, t5.Wq)();
+            (0, t7.Wq)();
         }, []);
         let t = (0, a.bG)([G.default], () => G.default.getCurrentUser()),
             n = (0, c.A)(e),
-            { tokens: i, fetched: s } = (0, t7.j)(e),
+            { tokens: i, fetched: s } = (0, t5.j)(e),
             r = (0, R.A)(t?.id),
             o = null == t || null == e || null == i || !s,
             d = l.useMemo(
@@ -1798,11 +1800,11 @@ function no(e) {
         I = (0, ns.A)(h),
         j = l.useCallback(
             (e) => {
-                (0, F.ew)({ widgetType: t, game: { gameId: e } }),
+                ((0, F.ew)({ widgetType: t, game: { gameId: e } }),
                     tT.O.announce(B.intl.string(B.t.q0U3DE)),
                     d({ action: "GAME_ADDED", gameId: e, widgetEdited: t }),
                     h.includes(e) && p(e),
-                    s?.();
+                    s?.());
             },
             [t, d, s, h, p],
         ),
@@ -1829,7 +1831,7 @@ function no(e) {
         C = l.useCallback(
             (e) => {
                 let n = e.target.value;
-                "" === c.trim() &&
+                ("" === c.trim() &&
                     "" !== n.trim() &&
                     d({
                         action: "GAME_SEARCH_SESSION_STARTED",
@@ -1838,14 +1840,14 @@ function no(e) {
                         numResults: S(n),
                     }),
                     u(n),
-                    (g.current = n);
+                    (g.current = n));
             },
             [c, d, t, S],
         );
     return (0, i.jsx)(ec.Y, {
         ...a,
         onRequestOpen: () => {
-            d({ action: "PRESS_ADD_GAME", widgetEdited: t }), u(""), (g.current = "");
+            (d({ action: "PRESS_ADD_GAME", widgetEdited: t }), u(""), (g.current = ""));
         },
         onRequestClose: () => {
             d({
@@ -2263,10 +2265,10 @@ function nW(e) {
         { trackUserProfileEditAction: d } = (0, eZ.NJ)(),
         c = l.useCallback(
             (e) => {
-                a(e),
+                (a(e),
                     o(!0),
                     (0, F.ew)({ widgetType: n, game: { gameId: e } }),
-                    d({ action: "GAME_ADDED", gameId: e, widgetEdited: n });
+                    d({ action: "GAME_ADDED", gameId: e, widgetEdited: n }));
             },
             [a, n, d, o],
         );
@@ -2353,7 +2355,7 @@ function nJ(e) {
         r = l.useRef(!1),
         o = l.useRef(null),
         c = (0, a.bG)([to.A], () => to.A.getUserProfile(t)?.fetchError != null, [t]),
-        [u, g] = e7(!c),
+        [u, g] = e5(!c),
         m = (0, nX.A)();
     return (
         l.useEffect(() => {
@@ -2396,7 +2398,7 @@ function nJ(e) {
                             ),
                         ),
                     }),
-                !c && (0, i.jsx)(e5, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                !c && (0, i.jsx)(e7, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
             ],
         })
     );
@@ -2411,7 +2413,7 @@ function n$(e) {
           : (0, p.fu)(t)
             ? (0, i.jsx)(nz, { widget: t, ...n })
             : t instanceof h.k
-              ? (0, i.jsx)(t8, { widget: t, ...n })
+              ? (0, i.jsx)(t2, { widget: t, ...n })
               : null;
 }
 function n0() {
@@ -2490,7 +2492,7 @@ function n1(e) {
           ? (0, i.jsx)(e9.D, { children: A() })
           : A();
 }
-function n2(e) {
+function n8(e) {
     let { user: t, ...n } = e,
         s = l.useRef(null);
     (0, w.i)({ containerRef: s });

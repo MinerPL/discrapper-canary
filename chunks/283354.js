@@ -22,7 +22,7 @@ function D(t) {
         h.ZM(e.channelId, e.guildId);
     }
     function f() {
-        (0, _.Z_)(), A?.();
+        ((0, _.Z_)(), A?.());
     }
     return (
         i.useEffect(() => {
@@ -42,13 +42,13 @@ function D(t) {
                                   id: "update-entry",
                                   label: I.intl.string(I.t.XnuOvN),
                                   action: function () {
-                                      (0, a.openModalLazy)(async () => {
-                                          let { default: t } = await Promise.all([n.e("376991"), n.e("988869")]).then(
+                                      ((0, a.openModalLazy)(async () => {
+                                          let { default: t } = await Promise.all([n.e("533651"), n.e("988869")]).then(
                                               n.bind(n, 201700),
                                           );
                                           return (n) => (0, r.jsx)(t, { ...n, entry: e });
                                       }),
-                                          f();
+                                          f());
                                   },
                                   leadingAccessory: { type: "icon", icon: E.PencilIcon },
                               })
@@ -58,13 +58,13 @@ function D(t) {
                                   id: "remove-from-hub",
                                   label: I.intl.string(I.t.KUxYWH),
                                   action: function () {
-                                      (0, c.A)({
+                                      ((0, c.A)({
                                           title: I.intl.string(I.t.KUxYWH),
                                           subtitle: I.intl.format(I.t["/5y0uV"], { guildName: e.name }),
                                           confirmText: I.intl.string(I.t.N86XcP),
                                           onConfirm: Y,
                                       }),
-                                          f();
+                                          f());
                                   },
                                   color: "danger",
                                   leadingAccessory: { type: "icon", icon: R.TrashIcon },

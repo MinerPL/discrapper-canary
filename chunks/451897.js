@@ -108,11 +108,11 @@ function G(i) {
                       action: function () {
                           if (null == R) return;
                           let i = (0, N.PQ)(R.getFlags(), y.hM6.PRIVATE);
-                          x.V(R.id, R.branchId, i),
+                          (x.V(R.id, R.branchId, i),
                               C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
                                   private_enabled: (0, N.Lt)(i, y.hM6.PRIVATE),
                                   ...R.getAnalyticsData(),
-                              });
+                              }));
                       },
                       checked: R.hasFlag(y.hM6.PRIVATE),
                   }),
@@ -125,21 +125,25 @@ function G(i) {
                       action: function () {
                           if (null == R) return;
                           let i = (0, N.PQ)(R.getFlags(), y.hM6.OVERLAY_DISABLED);
-                          x.V(R.id, R.branchId, i),
+                          (x.V(R.id, R.branchId, i),
                               C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
                                   overlay_disabled: (0, N.Lt)(i, y.hM6.OVERLAY_DISABLED),
                                   ...R.getAnalyticsData(),
-                              });
+                              }));
                       },
                       checked: R.hasFlag(y.hM6.OVERLAY_DISABLED),
                   }),
         Q =
             ((M = R.getBranchedName(H)),
             null !=
-                (V = (0, a.bG)([I.A], () => {
-                    let i = I.A.getState(R.id, R.branchId);
-                    return i?.installPath;
-                }, [R.branchId, R.id])) && (0, T.isDesktop)()
+                (V = (0, a.bG)(
+                    [I.A],
+                    () => {
+                        let i = I.A.getState(R.id, R.branchId);
+                        return i?.installPath;
+                    },
+                    [R.branchId, R.id],
+                )) && (0, T.isDesktop)()
                 ? (0, l.jsx)(r.Dr, {
                       id: "create-shortcut",
                       label: b.intl.string(b.t.T4tecH),
@@ -152,11 +156,11 @@ function G(i) {
             if (t && !i.isHidden()) return null;
             function d() {
                 let n = (0, N.PQ)(i.getFlags(), y.hM6.HIDDEN);
-                x.V(i.id, i.branchId, n),
+                (x.V(i.id, i.branchId, n),
                     C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
                         hidden_enabled: (0, N.Lt)(n, y.hM6.HIDDEN),
                         ...i.getAnalyticsData(),
-                    });
+                    }));
             }
             return (0, l.jsx)(r.Dr, {
                 id: "in-library",
@@ -215,10 +219,6 @@ function G(i) {
                       (0, h.openModalLazy)(async () => {
                           let { default: i } = await Promise.all([
                               t.e("161411"),
-                              t.e("376991"),
-                              t.e("932696"),
-                              t.e("428367"),
-                              t.e("597162"),
                               t.e("846327"),
                               t.e("725246"),
                               t.e("796531"),

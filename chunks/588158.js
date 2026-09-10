@@ -126,33 +126,33 @@ function ey(e) {
         (0, en.Tv)(t, void 0, "Plus Button");
     }
     function E() {
-        el.default.track(eS.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, es.x7)("/"));
+        (el.default.track(eS.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, es.x7)("/")));
     }
     function S() {
-        el.default.track(eS.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), Z.R(Y.s4.TEXT, A, void 0, t.id);
+        (el.default.track(eS.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), Z.R(Y.s4.TEXT, A, void 0, t.id));
     }
     function j() {
         g();
     }
     function y() {
-        (0, _.Dr)(I.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.i.TAKE_ACTION }),
+        ((0, _.Dr)(I.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("669706"), n.e("842322")]).then(n.bind(n, 143657));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
                 { modalKey: e_.sm },
-            );
+            ));
     }
     function b() {
         let e = h,
             n = "txt",
             l = "",
             i = h.match(ej);
-        null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
+        (null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
             (0, B.R)([(0, ei.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
             F._.dispatchToLastSubscribed(eS.jej.CLEAR_TEXT),
-            "" !== l && F._.dispatchToLastSubscribed(eS.jej.INSERT_TEXT, { plainText: l });
+            "" !== l && F._.dispatchToLastSubscribed(eS.jej.INSERT_TEXT, { plainText: l }));
     }
     return (
         s.useEffect(() => {
@@ -415,7 +415,7 @@ let eT = s.memo(function (e) {
         es = l.isPrivate(),
         eI = (0, o.bG)([U.A], () => es || (U.A.can(eS.xBc.ATTACH_FILES, l) && U.A.can(eS.xBc.SEND_MESSAGES, l)));
     function e_() {
-        (0, c.openModalLazy)(
+        ((0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("440065"),
@@ -426,7 +426,7 @@ let eT = s.memo(function (e) {
                     n.e("19385"),
                     n.e("398104"),
                     n.e("553829"),
-                    n.e("33091"),
+                    n.e("606859"),
                     n.e("865257"),
                     n.e("318196"),
                     n.e("323079"),
@@ -467,7 +467,7 @@ let eT = s.memo(function (e) {
             },
             { modalKey: eb.nm },
         ),
-            el(null);
+            el(null));
     }
     s.useEffect(() => {
         let e = (e) => {
@@ -592,15 +592,15 @@ let eT = s.memo(function (e) {
                 [d, u] = s.useState(!1),
                 h = d && c,
                 [m, g] = s.useState("0");
-            m !== t.id && (g(t.id), u(c && !i)),
+            (m !== t.id && (g(t.id), u(c && !i)),
                 s.useEffect(() => {
                     if (!c || i || d) return;
                     let e = setTimeout(() => u(!0), 6e4);
                     return () => clearTimeout(e);
                 }, [c, i, d, n]),
-                !c && d && u(!1);
+                !c && d && u(!1));
             let A = s.useCallback((e) => {
-                u(!1), (0, _.Dr)(T, { dismissAction: e });
+                (u(!1), (0, _.Dr)(T, { dismissAction: e }));
             }, []);
             return (
                 s.useEffect(() => {
@@ -619,7 +619,7 @@ let eT = s.memo(function (e) {
             position: "top",
             positionKey: en ?? "null",
             onRequestOpen: () => {
-                el("attachMenu"), ek && eP(N.i.TAKE_ACTION);
+                (el("attachMenu"), ek && eP(N.i.TAKE_ACTION));
             },
             onRequestClose: () => {
                 (0, c.hasAnyModalOpen)() || el(null);
@@ -661,12 +661,12 @@ let eT = s.memo(function (e) {
                     ref: J,
                     onChange: function (e) {
                         var t, n;
-                        (t = e.currentTarget.files),
+                        ((t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, B.V)(l, [])
                                 : (0, B.R)(t, l, a, { requireConfirm: !0, origin: "file_picker" }),
                             F._.dispatchToLastSubscribed(eS.jej.TEXTAREA_FOCUS),
-                            (e.currentTarget.value = "");
+                            (e.currentTarget.value = ""));
                     },
                     multiple: l.rateLimitPerUser <= 0,
                     tabIndex: -1,

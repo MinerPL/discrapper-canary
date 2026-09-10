@@ -37,7 +37,7 @@ class C extends a.Ay.DeviceSettingsStore {
     static persistKey = "ConnectedDeviceStore";
     static migrations = [(e) => (null == e.ignoredDevices ? { ...e, ignoredDevices: {} } : e)];
     initialize(e) {
-        this.waitFor(d.Ay, o.A), (A = e ?? E);
+        (this.waitFor(d.Ay, o.A), (A = e ?? E));
     }
     getUserAgnosticState() {
         return A;
@@ -65,29 +65,29 @@ let O = new C(s.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
-        (T.justChanged = !1),
+        ((T.justChanged = !1),
             t.forEach((e) => {
                 if (e.id === _.dx) {
                     let t = e.originalId ?? e.originalName;
-                    t !== T.id && (T.justChanged = !0), (T.id = t);
+                    (t !== T.id && (T.justChanged = !0), (T.id = t));
                     return;
                 }
                 i[S(e)] = e.id;
-            });
+            }));
         let a = {};
         if (
             ((m.justChanged = !1),
             n.forEach((e) => {
                 if (e.id === _.dx) {
                     let t = e.originalId ?? e.originalName;
-                    t !== m.id && (m.justChanged = !0), (m.id = t);
+                    (t !== m.id && (m.justChanged = !0), (m.id = t));
                     return;
                 }
                 a[S(e)] = e.id;
             }),
             !h)
         ) {
-            (I = i), (f = a), (h = !0);
+            ((I = i), (f = a), (h = !0));
             return;
         }
         let s = Object.keys(I),
@@ -119,17 +119,16 @@ let O = new C(s.h, {
             let e = f[t];
             s.h.wait(() => l.A.setOutputDevice(e, { location: i }));
         }
-        delete p[t];
+        p = {};
     },
-    CONNECTED_DEVICE_DONT_SWITCH: function (e) {
-        let { displayName: t } = e;
-        delete p[t];
+    CONNECTED_DEVICE_DONT_SWITCH: function () {
+        p = {};
     },
     CONNECTED_DEVICE_IGNORE: function (e) {
         let { displayName: t } = e;
-        (A.ignoredDevices[t] = !0), delete p[t];
+        ((A.ignoredDevices[t] = !0), (p = {}));
     },
     CONNECTED_DEVICE_NEVER_SHOW_MODAL: function () {
-        (p = {}), (A.neverShowModal = !0);
+        ((p = {}), (A.neverShowModal = !0));
     },
 });
