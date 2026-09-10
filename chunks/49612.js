@@ -191,30 +191,11 @@ let ed = (0, W.mj)({
         defaultConfig: { consecutiveFailures: 1 },
         variations: { 1: { consecutiveFailures: 3 }, 2: { consecutiveFailures: 5 }, 3: { consecutiveFailures: 10 } },
     }),
-    ec = (0, W.mj)({
-        kind: "user",
-        name: "2026-04-krisp-v9-ios",
-        defaultConfig: {
-            models: [
-                { name: "small_NC_8k", maxSampleRate: 8e3, filename: "krisp-nc-o-nb-v2.kef" },
-                { name: "small_NC", maxSampleRate: 16e3, filename: "krisp-nc-o-lite-v1.kef" },
-                { name: "full_NC", maxSampleRate: 96e3, filename: "krisp-nc-o-med-v7-fp16.kef" },
-            ],
-        },
-        variations: {
-            1: {
-                models: [
-                    { name: "small_NC_8k", maxSampleRate: 8e3, filename: "krisp-nc-o-nb-v2.kef" },
-                    {
-                        name: "small_NC_non_optimized",
-                        maxSampleRate: 16e3,
-                        filename: "c6.f.s.laughter.da1785_non_optimized.kef",
-                    },
-                    { name: "full_NC_non_optimized", maxSampleRate: 96e3, filename: "krisp-nc-o-med-v7.kef" },
-                ],
-            },
-        },
-    }),
+    ec = [
+        { name: "small_NC_8k", maxSampleRate: 8e3, filename: "krisp-nc-o-nb-v2.kef" },
+        { name: "small_NC", maxSampleRate: 16e3, filename: "krisp-nc-o-lite-v1.kef" },
+        { name: "full_NC", maxSampleRate: 96e3, filename: "krisp-nc-o-med-v7-fp16.kef" },
+    ],
     eu = (0, ee.Ay)({
         kind: "user",
         name: "2025-10-low-latency-rate-control",
@@ -2082,7 +2063,7 @@ let n2 = (i = new n0(b.h, {
             (0, f.isIOS)() &&
                 ei.getConfig({ location: "handleConnectionOpen" }).enabled &&
                 to.updateFieldTrial("WebRTC-Audio-iOS-Holding", "Enabled"),
-            (0, f.isIOS)() && (to.setNcModels?.(ec.getConfig({ location: "setupKrisp" }).models), i.emitChange()),
+            (0, f.isIOS)() && (to.setNcModels?.(ec), i.emitChange()),
             nx(t.inputDeviceId),
             nV();
     },

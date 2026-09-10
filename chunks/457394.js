@@ -5,7 +5,7 @@ var i = n(582128),
     s = n(17928),
     l = n(765548),
     o = n(347481),
-    d = n(303277),
+    d = n(49612),
     c = n(228366);
 function u(e) {
     c.h.dispatch({ type: "CONNECTED_DEVICE_DONT_SWITCH", displayName: e });
