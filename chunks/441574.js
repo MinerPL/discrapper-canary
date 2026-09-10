@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ob: () => j,
     pR: () => K,
     gm: () => $,
@@ -10,7 +10,7 @@ n.d(t, {
     fE: () => ee,
 }),
     n(938796),
-    n(321073);
+    n(321073));
 var i,
     r,
     a,
@@ -228,6 +228,9 @@ var i,
             "CHILD_SEXUAL_EXPLOITATION_MATERIAL_SAFETY_DISPATCH"),
         (i[(i.CHILD_SEXUAL_EXPLOITATION_MATERIAL_NON_DEDICATED_GUILD_SAFETY_DISPATCH = 1016)] =
             "CHILD_SEXUAL_EXPLOITATION_MATERIAL_NON_DEDICATED_GUILD_SAFETY_DISPATCH"),
+        (i[(i.CSAM_CONDUCT_SAFETY_DISPATCH = 1020)] = "CSAM_CONDUCT_SAFETY_DISPATCH"),
+        (i[(i.CSAM_CONDUCT_NON_DEDICATED_GUILD_SAFETY_DISPATCH = 1026)] =
+            "CSAM_CONDUCT_NON_DEDICATED_GUILD_SAFETY_DISPATCH"),
         (i[(i.CSAM_SMITE = 3e3)] = "CSAM_SMITE"),
         (i[(i.CSAM_SOLICITATION_OR_ADMISSION_SMITE = 3001)] = "CSAM_SOLICITATION_OR_ADMISSION_SMITE"),
         (i[(i.CSAM_SOLICITATION_OR_ADMISSION_GUILD_SMITE = 3002)] = "CSAM_SOLICITATION_OR_ADMISSION_GUILD_SMITE"),
@@ -645,6 +648,9 @@ var i,
             "CHILD_SEXUAL_EXPLOITATION_MATERIAL_GUILD_ADMIN"),
         (i[(i.CHILD_SEXUAL_EXPLOITATION_MATERIAL_NON_DEDICATED_GUILD_ADMIN = 6136)] =
             "CHILD_SEXUAL_EXPLOITATION_MATERIAL_NON_DEDICATED_GUILD_ADMIN"),
+        (i[(i.CSAM_CONDUCT_ADMIN = 6140)] = "CSAM_CONDUCT_ADMIN"),
+        (i[(i.CSAM_CONDUCT_GUILD_ADMIN = 6145)] = "CSAM_CONDUCT_GUILD_ADMIN"),
+        (i[(i.CSAM_CONDUCT_NON_DEDICATED_GUILD_ADMIN = 6146)] = "CSAM_CONDUCT_NON_DEDICATED_GUILD_ADMIN"),
         (i[(i.HIGH_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL = 7005)] =
             "HIGH_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL"),
         (i[(i.MEDIUM_RISK_DANGEROUS_AND_REGULATED_GOODS_GUILD_RETOOL = 7015)] =
@@ -905,7 +911,7 @@ class b extends O.G {
     }
     internalBinaryWrite(e, t, n) {
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let M = new b();
@@ -926,7 +932,7 @@ class P extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.restrictedUntil = L.D.internalBinaryRead(e, e.uint32(), n, r.restrictedUntil);
             else {
@@ -943,7 +949,7 @@ class P extends O.G {
         e.restrictedUntil &&
             L.D.internalBinaryWrite(e.restrictedUntil, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let U = new P();
@@ -964,7 +970,7 @@ class w extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.actionDeferredUntil = L.D.internalBinaryRead(e, e.uint32(), n, r.actionDeferredUntil);
             else {
@@ -981,7 +987,7 @@ class w extends O.G {
         e.actionDeferredUntil &&
             L.D.internalBinaryWrite(e.actionDeferredUntil, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let G = new w();
@@ -1010,7 +1016,7 @@ class x extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1018,7 +1024,7 @@ class x extends O.G {
                     break;
                 case 2:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.classificationTypes.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.classificationTypes.push(e.int32());
                     else r.classificationTypes.push(e.int32());
                     break;
                 case 3:
@@ -1045,7 +1051,7 @@ class x extends O.G {
         }
         e.bannedAt && L.D.internalBinaryWrite(e.bannedAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let k = new x();
@@ -1073,12 +1079,12 @@ class F extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.classificationTypes.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.classificationTypes.push(e.int32());
                     else r.classificationTypes.push(e.int32());
                     break;
                 case 2:
@@ -1102,7 +1108,7 @@ class F extends O.G {
         }
         e.bannedAt && L.D.internalBinaryWrite(e.bannedAt, t.tag(2, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let V = new F();
@@ -1136,7 +1142,7 @@ class B extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 101:
@@ -1168,7 +1174,7 @@ class B extends O.G {
                     break;
                 case 2:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.annotations.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.annotations.push(e.int32());
                     else r.annotations.push(e.int32());
                     break;
                 case 3:
@@ -1205,7 +1211,7 @@ class B extends O.G {
         }
         e.lastMutationId && R.ol.internalBinaryWrite(e.lastMutationId, t.tag(3, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let H = new B();
@@ -1406,7 +1412,7 @@ class ea extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1432,12 +1438,12 @@ class ea extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.hours && t.tag(1, S.O0.Varint).int32(e.hours),
+        (0 !== e.hours && t.tag(1, S.O0.Varint).int32(e.hours),
             0 !== e.minutes && t.tag(2, S.O0.Varint).int32(e.minutes),
             0 !== e.seconds && t.tag(3, S.O0.Varint).int32(e.seconds),
-            0 !== e.nanos && t.tag(4, S.O0.Varint).int32(e.nanos);
+            0 !== e.nanos && t.tag(4, S.O0.Varint).int32(e.nanos));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let es = new ea();
@@ -1470,7 +1476,7 @@ class el extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1523,7 +1529,7 @@ class el extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.id && t.tag(1, S.O0.Varint).uint64(e.id),
+        ("0" !== e.id && t.tag(1, S.O0.Varint).uint64(e.id),
             "" !== e.username && t.tag(2, S.O0.LengthDelimited).string(e.username),
             "" !== e.discriminator && t.tag(3, S.O0.LengthDelimited).string(e.discriminator),
             e.avatar && R.hU.internalBinaryWrite(e.avatar, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
@@ -1537,9 +1543,9 @@ class el extends O.G {
             e.safetyState && H.internalBinaryWrite(e.safetyState, t.tag(12, S.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
                 eA.internalBinaryWrite(e.displayNameStyles, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
-            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(14, S.O0.LengthDelimited).fork(), n).join();
+            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(14, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new el();
@@ -1567,7 +1573,7 @@ class eo extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1605,16 +1611,16 @@ class eo extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.id && t.tag(1, S.O0.Bit64).fixed64(e.id),
+        ("0" !== e.id && t.tag(1, S.O0.Bit64).fixed64(e.id),
             "" !== e.username && t.tag(2, S.O0.LengthDelimited).string(e.username),
             0 !== e.discriminator && t.tag(3, S.O0.Varint).uint32(e.discriminator),
             e.avatarHash && R.hU.internalBinaryWrite(e.avatarHash, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.bot && t.tag(5, S.O0.Varint).bool(e.bot),
             "0" !== e.flags && t.tag(6, S.O0.Varint).uint64(e.flags),
             e.email && R.hU.internalBinaryWrite(e.email, t.tag(7, S.O0.LengthDelimited).fork(), n).join(),
-            e.phone && R.hU.internalBinaryWrite(e.phone, t.tag(8, S.O0.LengthDelimited).fork(), n).join();
+            e.phone && R.hU.internalBinaryWrite(e.phone, t.tag(8, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new eo();
@@ -1637,7 +1643,7 @@ class ed extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1660,11 +1666,11 @@ class ed extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.asset && t.tag(1, S.O0.LengthDelimited).string(e.asset),
+        ("" !== e.asset && t.tag(1, S.O0.LengthDelimited).string(e.asset),
             e.skuId && R.ol.internalBinaryWrite(e.skuId, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
-            e.expiresAt && R.ZQ.internalBinaryWrite(e.expiresAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join();
+            e.expiresAt && R.ZQ.internalBinaryWrite(e.expiresAt, t.tag(3, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ec = new ed();
@@ -1689,7 +1695,7 @@ class eu extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1718,13 +1724,13 @@ class eu extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.asset && t.tag(1, S.O0.LengthDelimited).string(e.asset),
+        ("" !== e.asset && t.tag(1, S.O0.LengthDelimited).string(e.asset),
             "" !== e.palette && t.tag(2, S.O0.LengthDelimited).string(e.palette),
             e.skuId && R.ol.internalBinaryWrite(e.skuId, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
             e.expiresAt && L.D.internalBinaryWrite(e.expiresAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
-            "" !== e.label && t.tag(5, S.O0.LengthDelimited).string(e.label);
+            "" !== e.label && t.tag(5, S.O0.LengthDelimited).string(e.label));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e_ = new eu();
@@ -1758,7 +1764,7 @@ class eE extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1769,7 +1775,7 @@ class eE extends O.G {
                     break;
                 case 3:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.colors.push(e.uint32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.colors.push(e.uint32());
                     else r.colors.push(e.uint32());
                     break;
                 case 4:
@@ -1797,7 +1803,7 @@ class eE extends O.G {
         }
         e.animated && R._t.internalBinaryWrite(e.animated, t.tag(4, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eA = new eE();
@@ -1830,7 +1836,7 @@ class eh extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1855,10 +1861,10 @@ class eh extends O.G {
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.emojis.length; i++)
             ep.internalBinaryWrite(e.emojis[i], t.tag(1, S.O0.LengthDelimited).fork(), n).join();
-        0 !== e.animation && t.tag(2, S.O0.Varint).int32(e.animation),
-            0 !== e.typingSuggestion && t.tag(3, S.O0.Varint).int32(e.typingSuggestion);
+        (0 !== e.animation && t.tag(2, S.O0.Varint).int32(e.animation),
+            0 !== e.typingSuggestion && t.tag(3, S.O0.Varint).int32(e.typingSuggestion));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eI = new eh();
@@ -1881,7 +1887,7 @@ class ef extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1904,11 +1910,11 @@ class ef extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "customEmojiId" === e.emoji.oneofKind && t.tag(1, S.O0.Bit64).fixed64(e.emoji.customEmojiId),
+        ("customEmojiId" === e.emoji.oneofKind && t.tag(1, S.O0.Bit64).fixed64(e.emoji.customEmojiId),
             "unicodeEmoji" === e.emoji.oneofKind && t.tag(2, S.O0.LengthDelimited).string(e.emoji.unicodeEmoji),
-            !1 !== e.animated && t.tag(3, S.O0.Varint).bool(e.animated);
+            !1 !== e.animated && t.tag(3, S.O0.Varint).bool(e.animated));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ep = new ef();
@@ -1927,7 +1933,7 @@ class eT extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.nameplate = e_.internalBinaryRead(e, e.uint32(), n, r.nameplate);
             else {
@@ -1943,7 +1949,7 @@ class eT extends O.G {
     internalBinaryWrite(e, t, n) {
         e.nameplate && e_.internalBinaryWrite(e.nameplate, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let em = new eT();
@@ -1967,7 +1973,7 @@ class eg extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -1993,14 +1999,14 @@ class eg extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.identityGuildId &&
+        (e.identityGuildId &&
             R.ol.internalBinaryWrite(e.identityGuildId, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
             e.identityEnabled &&
                 R._t.internalBinaryWrite(e.identityEnabled, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             e.tag && R.hU.internalBinaryWrite(e.tag, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
-            e.badge && R.hU.internalBinaryWrite(e.badge, t.tag(4, S.O0.LengthDelimited).fork(), n).join();
+            e.badge && R.hU.internalBinaryWrite(e.badge, t.tag(4, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eS = new eg();
@@ -2026,7 +2032,7 @@ class eN extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2042,7 +2048,7 @@ class eN extends O.G {
                     r.endTime = es.internalBinaryRead(e, e.uint32(), n, r.endTime);
                     break;
                 case 5:
-                    if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) r.days.push(e.int32());
+                    if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t;) r.days.push(e.int32());
                     else r.days.push(e.int32());
                     break;
                 case 6:
@@ -2072,7 +2078,7 @@ class eN extends O.G {
         }
         !1 !== e.enabled && t.tag(6, S.O0.Varint).bool(e.enabled);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eC = new eN();
@@ -2093,7 +2099,7 @@ class eO extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.rules.push(eC.internalBinaryRead(e, e.uint32(), n));
             else {
@@ -2110,7 +2116,7 @@ class eO extends O.G {
         for (let i = 0; i < e.rules.length; i++)
             eC.internalBinaryWrite(e.rules[i], t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eR = new eO();
@@ -2132,7 +2138,7 @@ class eL extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2152,11 +2158,11 @@ class eL extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.restrictionExpiry &&
+        (e.restrictionExpiry &&
             L.D.internalBinaryWrite(e.restrictionExpiry, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
-            "0" !== e.applicationId && t.tag(2, S.O0.Bit64).fixed64(e.applicationId);
+            "0" !== e.applicationId && t.tag(2, S.O0.Bit64).fixed64(e.applicationId));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ey = new eL();
@@ -2175,7 +2181,7 @@ class eD extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.obtainedAt = L.D.internalBinaryRead(e, e.uint32(), n, r.obtainedAt);
             else {
@@ -2191,7 +2197,7 @@ class eD extends O.G {
     internalBinaryWrite(e, t, n) {
         e.obtainedAt && L.D.internalBinaryWrite(e.obtainedAt, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ev = new eD();
@@ -2214,7 +2220,7 @@ class eb extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2237,11 +2243,11 @@ class eb extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.common && ev.internalBinaryWrite(e.common, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+        (e.common && ev.internalBinaryWrite(e.common, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
             0 !== e.level && t.tag(2, S.O0.Varint).int32(e.level),
-            "" !== e.combatClass && t.tag(3, S.O0.LengthDelimited).string(e.combatClass);
+            "" !== e.combatClass && t.tag(3, S.O0.LengthDelimited).string(e.combatClass));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eM = new eb();
@@ -2262,7 +2268,7 @@ class eP extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
                 r.badge = {
@@ -2283,7 +2289,7 @@ class eP extends O.G {
         "aprilFools2026" === e.badge.oneofKind &&
             eM.internalBinaryWrite(e.badge.aprilFools2026, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eU = new eP();
@@ -2304,7 +2310,7 @@ class ew extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.badges.push(eU.internalBinaryRead(e, e.uint32(), n));
             else {
@@ -2321,7 +2327,7 @@ class ew extends O.G {
         for (let i = 0; i < e.badges.length; i++)
             eU.internalBinaryWrite(e.badges[i], t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eG = new ew();
@@ -2348,7 +2354,7 @@ class ex extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2368,10 +2374,10 @@ class ex extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.status && t.tag(1, S.O0.Varint).int32(e.status),
-            e.anonUserId && R.ol.internalBinaryWrite(e.anonUserId, t.tag(2, S.O0.LengthDelimited).fork(), n).join();
+        (0 !== e.status && t.tag(1, S.O0.Varint).int32(e.status),
+            e.anonUserId && R.ol.internalBinaryWrite(e.anonUserId, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ek = new ex();
@@ -2418,7 +2424,7 @@ class eF extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2499,7 +2505,7 @@ class eF extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -2521,7 +2527,7 @@ class eF extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -2543,7 +2549,7 @@ class eF extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -2562,21 +2568,21 @@ class eF extends O.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.linkedUsers))
-            t.tag(1, S.O0.LengthDelimited).fork().tag(1, S.O0.Bit64).fixed64(i),
+            (t.tag(1, S.O0.LengthDelimited).fork().tag(1, S.O0.Bit64).fixed64(i),
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 ej.internalBinaryWrite(e.linkedUsers[i], t, n),
-                t.join().join();
+                t.join().join());
         for (let i of Object.keys(e.safetyFeatureLimits))
-            t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
+            (t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 e$.internalBinaryWrite(e.safetyFeatureLimits[i], t, n),
-                t.join().join();
+                t.join().join());
         for (let i of Object.keys(e.safetyFlags))
-            t.tag(3, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
+            (t.tag(3, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 eq.internalBinaryWrite(e.safetyFlags[i], t, n),
-                t.join().join();
-        e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
+                t.join().join());
+        (e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
                 ey.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, S.O0.LengthDelimited).fork(), n).join(),
@@ -2599,9 +2605,9 @@ class eF extends O.G {
             e.typingIndicatorStyle &&
                 eI.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount),
-            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join();
+            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new eF();
@@ -2645,7 +2651,7 @@ class eV extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2691,7 +2697,7 @@ class eV extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.estimatedDateOfBirth &&
+        (e.estimatedDateOfBirth &&
             L.D.internalBinaryWrite(e.estimatedDateOfBirth, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
             0 !== e.method && t.tag(2, S.O0.Varint).int32(e.method),
             0 !== e.methodVersion && t.tag(3, S.O0.Varint).int32(e.methodVersion),
@@ -2702,9 +2708,13 @@ class eV extends O.G {
             e.cooldownResetAt &&
                 L.D.internalBinaryWrite(e.cooldownResetAt, t.tag(8, S.O0.LengthDelimited).fork(), n).join(),
             e.excludedFromPredictionSince &&
-                L.D.internalBinaryWrite(e.excludedFromPredictionSince, t.tag(9, S.O0.LengthDelimited).fork(), n).join();
+                L.D.internalBinaryWrite(
+                    e.excludedFromPredictionSince,
+                    t.tag(9, S.O0.LengthDelimited).fork(),
+                    n,
+                ).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eB = new eV();
@@ -2730,7 +2740,7 @@ class eH extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2762,14 +2772,14 @@ class eH extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.userId && t.tag(1, S.O0.Bit64).fixed64(e.userId),
+        ("0" !== e.userId && t.tag(1, S.O0.Bit64).fixed64(e.userId),
             0 !== e.linkType && t.tag(2, S.O0.Varint).int32(e.linkType),
             0 !== e.linkStatus && t.tag(3, S.O0.Varint).int32(e.linkStatus),
             "0" !== e.requestorId && t.tag(4, S.O0.Bit64).fixed64(e.requestorId),
             e.createdAt && L.D.internalBinaryWrite(e.createdAt, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
-            e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(6, S.O0.LengthDelimited).fork(), n).join();
+            e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(6, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ej = new eH();
@@ -2790,7 +2800,7 @@ class eW extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.limitExpiry = L.D.internalBinaryRead(e, e.uint32(), n, r.limitExpiry);
             else {
@@ -2806,7 +2816,7 @@ class eW extends O.G {
     internalBinaryWrite(e, t, n) {
         e.limitExpiry && L.D.internalBinaryWrite(e.limitExpiry, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eY = new eW();
@@ -2827,7 +2837,7 @@ class eK extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(r.map, e, n);
             else {
@@ -2845,7 +2855,7 @@ class eK extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -2864,12 +2874,12 @@ class eK extends O.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.map))
-            t.tag(1, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
+            (t.tag(1, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 eY.internalBinaryWrite(e.map[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e$ = new eK();
@@ -2888,7 +2898,7 @@ class ez extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.flagExpiry = L.D.internalBinaryRead(e, e.uint32(), n, r.flagExpiry);
             else {
@@ -2904,7 +2914,7 @@ class ez extends O.G {
     internalBinaryWrite(e, t, n) {
         e.flagExpiry && L.D.internalBinaryWrite(e.flagExpiry, t.tag(1, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eq = new ez();
@@ -2925,10 +2935,10 @@ class eZ extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) r.shards.push(e.int32());
+                if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t;) r.shards.push(e.int32());
                 else r.shards.push(e.int32());
             else {
                 let a = n.readUnknownField;
@@ -2947,7 +2957,7 @@ class eZ extends O.G {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new eZ();
@@ -2966,7 +2976,7 @@ class eX extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.questsCompleted = e.uint32();
             else {
@@ -2982,7 +2992,7 @@ class eX extends O.G {
     internalBinaryWrite(e, t, n) {
         0 !== e.questsCompleted && t.tag(1, S.O0.Varint).uint32(e.questsCompleted);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eQ = new eX();
@@ -3024,7 +3034,7 @@ class eJ extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3047,11 +3057,11 @@ class eJ extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.premiumSource && t.tag(1, S.O0.Varint).int32(e.premiumSource),
+        (0 !== e.premiumSource && t.tag(1, S.O0.Varint).int32(e.premiumSource),
             0 !== e.premiumSubscriptionType && t.tag(2, S.O0.Varint).int32(e.premiumSubscriptionType),
-            0 !== e.premiumSubscriptionGroupRole && t.tag(3, S.O0.Varint).int32(e.premiumSubscriptionGroupRole);
+            0 !== e.premiumSubscriptionGroupRole && t.tag(3, S.O0.Varint).int32(e.premiumSubscriptionGroupRole));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e0 = new eJ();
@@ -3073,7 +3083,7 @@ class e1 extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3093,10 +3103,10 @@ class e1 extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.country && t.tag(1, S.O0.LengthDelimited).string(e.country),
-            e.setAt && L.D.internalBinaryWrite(e.setAt, t.tag(2, S.O0.LengthDelimited).fork(), n).join();
+        ("" !== e.country && t.tag(1, S.O0.LengthDelimited).string(e.country),
+            e.setAt && L.D.internalBinaryWrite(e.setAt, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e2 = new e1();
@@ -3122,12 +3132,12 @@ class e3 extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.source.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.source.push(e.int32());
                     else r.source.push(e.int32());
                     break;
                 case 2:
@@ -3181,7 +3191,7 @@ class e3 extends O.G {
             for (let n = 0; n < e.source.length; n++) t.int32(e.source[n]);
             t.join();
         }
-        "increasedFileUploadSize" === e.kind.oneofKind &&
+        ("increasedFileUploadSize" === e.kind.oneofKind &&
             e4.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, S.O0.LengthDelimited).fork(), n).join(),
             "increasedGuildLimit" === e.kind.oneofKind &&
                 e8.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, S.O0.LengthDelimited).fork(), n).join(),
@@ -3190,9 +3200,9 @@ class e3 extends O.G {
             "clientThemes" === e.kind.oneofKind &&
                 tn.internalBinaryWrite(e.kind.clientThemes, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
             "appIcons" === e.kind.oneofKind &&
-                tr.internalBinaryWrite(e.kind.appIcons, t.tag(6, S.O0.LengthDelimited).fork(), n).join();
+                tr.internalBinaryWrite(e.kind.appIcons, t.tag(6, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e5 = new e3();
@@ -3213,7 +3223,7 @@ class e6 extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.maxSize = e.uint64().toString();
             else {
@@ -3229,7 +3239,7 @@ class e6 extends O.G {
     internalBinaryWrite(e, t, n) {
         "0" !== e.maxSize && t.tag(1, S.O0.Varint).uint64(e.maxSize);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e4 = new e6();
@@ -3250,7 +3260,7 @@ class e7 extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.maxGuilds = e.uint32();
             else {
@@ -3266,7 +3276,7 @@ class e7 extends O.G {
     internalBinaryWrite(e, t, n) {
         0 !== e.maxGuilds && t.tag(1, S.O0.Varint).uint32(e.maxGuilds);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e8 = new e7();
@@ -3288,7 +3298,7 @@ class e9 extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3312,7 +3322,7 @@ class e9 extends O.G {
         for (let i = 0; i < e.allowedStyles.length; i++)
             eA.internalBinaryWrite(e.allowedStyles[i], t.tag(2, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let te = new e9();
@@ -3334,7 +3344,7 @@ class tt extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3342,7 +3352,7 @@ class tt extends O.G {
                     break;
                 case 2:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.allowedPresetIds.push(e.uint32());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.allowedPresetIds.push(e.uint32());
                     else r.allowedPresetIds.push(e.uint32());
                     break;
                 default:
@@ -3365,7 +3375,7 @@ class tt extends O.G {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tn = new tt();
@@ -3387,7 +3397,7 @@ class ti extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3410,7 +3420,7 @@ class ti extends O.G {
         !1 !== e.isRestrictedToAllowedOptions && t.tag(1, S.O0.Varint).bool(e.isRestrictedToAllowedOptions);
         for (let n = 0; n < e.allowedIconIds.length; n++) t.tag(2, S.O0.LengthDelimited).string(e.allowedIconIds[n]);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tr = new ti();
@@ -3434,12 +3444,12 @@ class ta extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
                     if (i === S.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) r.activePerksBitmask.push(e.uint64().toString());
+                        for (let t = e.int32() + e.pos; e.pos < t;) r.activePerksBitmask.push(e.uint64().toString());
                     else r.activePerksBitmask.push(e.uint64().toString());
                     break;
                 case 2:
@@ -3466,7 +3476,7 @@ class ta extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -3490,14 +3500,14 @@ class ta extends O.G {
             t.join();
         }
         for (let i of Object.keys(e.configByPerk))
-            t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
+            (t.tag(2, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
                 e5.internalBinaryWrite(e.configByPerk[i], t, n),
-                t.join().join();
-        0 !== e.rulesVersion && t.tag(3, S.O0.Varint).uint32(e.rulesVersion),
-            e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join();
+                t.join().join());
+        (0 !== e.rulesVersion && t.tag(3, S.O0.Varint).uint32(e.rulesVersion),
+            e.updatedAt && L.D.internalBinaryWrite(e.updatedAt, t.tag(4, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ts = new ta();
@@ -3522,7 +3532,7 @@ class tl extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3555,7 +3565,7 @@ class tl extends O.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -3588,7 +3598,7 @@ class tl extends O.G {
                 .float(e.countryScores[i])
                 .join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let to = new tl();
@@ -3607,10 +3617,10 @@ class td extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) r.colors.push(e.uint32());
+                if (i === S.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t;) r.colors.push(e.uint32());
                 else r.colors.push(e.uint32());
             else {
                 let a = n.readUnknownField;
@@ -3629,7 +3639,7 @@ class td extends O.G {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tc = new td();
@@ -3651,7 +3661,7 @@ class tu extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3671,10 +3681,10 @@ class tu extends O.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.acceptedAt && L.D.internalBinaryWrite(e.acceptedAt, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
-            e.version && R.hU.internalBinaryWrite(e.version, t.tag(2, S.O0.LengthDelimited).fork(), n).join();
+        (e.acceptedAt && L.D.internalBinaryWrite(e.acceptedAt, t.tag(1, S.O0.LengthDelimited).fork(), n).join(),
+            e.version && R.hU.internalBinaryWrite(e.version, t.tag(2, S.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let t_ = new tu();
@@ -3696,7 +3706,7 @@ class tE extends O.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -3721,7 +3731,7 @@ class tE extends O.G {
         for (let i = 0; i < e.privacy.length; i++)
             t_.internalBinaryWrite(e.privacy[i], t.tag(2, S.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new tE();
