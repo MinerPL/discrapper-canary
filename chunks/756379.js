@@ -1,9 +1,9 @@
-i.r(t), i.d(t, { default: () => eq });
+(i.r(t), i.d(t, { default: () => eq }));
 var l = i(477900),
     n = i(582128),
     a = i(503698),
-    r = i.n(a),
-    s = i(17928),
+    s = i.n(a),
+    r = i(17928),
     d = i(834730),
     u = i(289873),
     c = i(689175),
@@ -65,7 +65,7 @@ function b(e) {
     let t = U[e];
     return t?.saveStatus === "saving" ? void 0 : t;
 }
-class P extends s.Ay.Store {
+class P extends r.Ay.Store {
     static displayName = "GuildSpaceEditorStore";
     getDraft(e) {
         return U[e]?.draft;
@@ -92,9 +92,9 @@ let N = new P(m.h, {
         let { guildId: t, widgetId: i, targetColumn: l, targetIndex: n } = e,
             a = b(t);
         if (null == a) return !1;
-        let r = (0, L.Gm)(a.draft.widgets, i, l, n);
-        if (null == r) return !1;
-        a.draft = { ...a.draft, widgets: r };
+        let s = (0, L.Gm)(a.draft.widgets, i, l, n);
+        if (null == s) return !1;
+        a.draft = { ...a.draft, widgets: s };
     },
     GUILD_SPACE_EDIT_REMOVE_WIDGET: function (e) {
         let { guildId: t, widgetId: i } = e,
@@ -124,13 +124,13 @@ let N = new P(m.h, {
         let { guildId: t, requestId: i } = e,
             l = U[t];
         if (null == l) return !1;
-        (l.saveStatus = "saving"), (l.activeSaveRequestId = i);
+        ((l.saveStatus = "saving"), (l.activeSaveRequestId = i));
     },
     GUILD_SPACE_EDIT_SAVE_FAILURE: function (e) {
         let { guildId: t, requestId: i } = e,
             l = U[t];
         if (l?.activeSaveRequestId !== i) return !1;
-        delete l.activeSaveRequestId, (l.saveStatus = "error");
+        (delete l.activeSaveRequestId, (l.saveStatus = "error"));
     },
     GUILD_SPACE_EDIT_CANCEL: function (e) {
         let { guildId: t } = e;
@@ -182,12 +182,12 @@ async function B(e) {
                         config: (function (e) {
                             if (e.type === w.a.IMAGE_TEXT) {
                                 let t = { type: e.type, text: e.text, title: e.title };
-                                return void 0 !== e.image && (t.image = e.image), t;
+                                return (void 0 !== e.image && (t.image = e.image), t);
                             }
                             return e;
                         })(n),
                     };
-                return t.startsWith(R) || (a.id = t), a;
+                return (t.startsWith(R) || (a.id = t), a);
             }),
         },
         n = W++;
@@ -196,8 +196,8 @@ async function B(e) {
         let { body: t } = await h.Bo.put({ url: S.Rsh.GUILD_SPACE(e), body: l, rejectWithError: !0 });
         m.h.dispatch({ type: "GUILD_SPACE_UPDATE_SUCCESS", guildId: e, space: t });
     } catch (t) {
-        k.error("Failed to save guild space", { guildId: e, error: t }),
-            m.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: n });
+        (k.error("Failed to save guild space", { guildId: e, error: t }),
+            m.h.dispatch({ type: "GUILD_SPACE_EDIT_SAVE_FAILURE", guildId: e, requestId: n }));
     }
 }
 var K = i(363957);
@@ -233,16 +233,16 @@ var q = i(470452),
     el = i(104510),
     en = i(661531),
     ea = i(245604),
-    er = i(192308),
-    es = i(775602),
+    es = i(192308),
+    er = i(775602),
     ed = i(61567),
     eu = i(375708),
     ec = i(517228);
 function eo(e) {
     let { widget: t, onClick: i } = e,
-        n = (0, s.bG)([es.Ay], () => es.Ay.useReducedMotion),
-        { catalog_image_static_url: a, catalog_image_animated_url: r } = t.assets,
-        u = (n ? null : r) ?? a,
+        n = (0, r.bG)([er.Ay], () => er.Ay.useReducedMotion),
+        { catalog_image_static_url: a, catalog_image_animated_url: s } = t.assets,
+        u = (n ? null : s) ?? a,
         c = t.boost_price;
     return (0, l.jsxs)(ei.D, {
         className: ec.HL,
@@ -316,13 +316,17 @@ function eo(e) {
 }
 function e_(e) {
     let { guildId: t, ...i } = e,
-        a = (0, s.yK)([G.A, N], () => {
-            let e = N.getDraft(t)?.widgets ?? [];
-            var i = G.A.getWidgets(t) ?? [];
-            let l = new Map();
-            for (let t of e) l.set(t.type, (l.get(t.type) ?? 0) + 1);
-            return i.filter((e) => (l.get(e.type) ?? 0) < e.max_instances);
-        }, [t]);
+        a = (0, r.yK)(
+            [G.A, N],
+            () => {
+                let e = N.getDraft(t)?.widgets ?? [];
+                var i = G.A.getWidgets(t) ?? [];
+                let l = new Map();
+                for (let t of e) l.set(t.type, (l.get(t.type) ?? 0) + 1);
+                return i.filter((e) => (l.get(e.type) ?? 0) < e.max_instances);
+            },
+            [t],
+        );
     return (
         n.useEffect(() => {
             y(t);
@@ -341,7 +345,7 @@ function e_(e) {
                             widget: e,
                             onClick: () => {
                                 var l, n, a;
-                                (l = e.type),
+                                ((l = e.type),
                                     (n = e.name),
                                     (a = e.locked),
                                     m.h.dispatch({
@@ -370,7 +374,7 @@ function e_(e) {
                                             }
                                         })(l, n, a),
                                     }),
-                                    i.onClose();
+                                    i.onClose());
                             },
                         },
                         e.type,
@@ -383,8 +387,8 @@ function e_(e) {
 var eE = i(992303);
 function ef(e) {
     let { guildId: t, isEditing: i } = e,
-        a = (0, s.bG)([N], () => N.getSaveStatus(t), [t]),
-        r = (0, s.bG)([N], () => N.getDraft(t)?.widgets.length ?? 0, [t]),
+        a = (0, r.bG)([N], () => N.getSaveStatus(t), [t]),
+        s = (0, r.bG)([N], () => N.getDraft(t)?.widgets.length ?? 0, [t]),
         u = "saving" === a,
         c = n.useCallback(() => {
             B(t);
@@ -418,7 +422,7 @@ function ef(e) {
                                     let e;
                                     return (
                                         (e = (e) => (0, l.jsx)(e_, { guildId: t, ...e })),
-                                        void (0, er.openModalLazy)(() => Promise.resolve(e), {
+                                        void (0, es.openModalLazy)(() => Promise.resolve(e), {
                                             modalKey: "guild-space-add-widget",
                                         })
                                     );
@@ -434,7 +438,7 @@ function ef(e) {
                                 : (0, l.jsx)(d.E, {
                                       variant: "text-sm/medium",
                                       color: "text-subtle",
-                                      children: eu.intl.format(ed.default.hpAg80, { panelCount: r }),
+                                      children: eu.intl.format(ed.default.hpAg80, { panelCount: s }),
                                   }),
                         ],
                     }),
@@ -466,7 +470,7 @@ function ev(e) {
         } = e,
         f = n.useRef(null),
         g = n.useRef(null),
-        h = (0, s.bG)([K.A], () => (i.requires_hydration ? K.A.getHydration(t, i.id) : void 0), [
+        h = (0, r.bG)([K.A], () => (i.requires_hydration ? K.A.getHydration(t, i.id) : void 0), [
             t,
             i.id,
             i.requires_hydration,
@@ -486,7 +490,7 @@ function ev(e) {
         D = null != S && S !== a;
     return (0, l.jsx)("div", {
         ref: g,
-        className: r()(eS.NI, { [eS.cB]: I, [eS.ne]: null != p && (D || p > c), [eS.O3]: null != p && !D && p < c }),
+        className: s()(eS.NI, { [eS.cB]: I, [eS.ne]: null != p && (D || p > c), [eS.O3]: null != p && !D && p < c }),
         "data-dnd-name": eu.intl.formatToPlainString(a === L.yM ? ed.default.O9RvHQ : ed.default["+cSvS8"], {
             positionNumber: d,
             positionCount: u,
@@ -523,7 +527,7 @@ function ev(e) {
 function eT(e) {
     let { column: t, onDropAtEnd: i } = e,
         a = n.useRef(null),
-        [{ isOver: s }, d] = (0, eh.H)({
+        [{ isOver: r }, d] = (0, eh.H)({
             accept: ex,
             drop: (e) => i(e.id, t),
             collect: (e) => ({ isOver: e.isOver({ shallow: !0 }) && e.canDrop() }),
@@ -540,7 +544,7 @@ function eT(e) {
         ),
         (0, l.jsx)("div", {
             ref: a,
-            className: r()(eS.wr, { [eS.SX]: s }),
+            className: s()(eS.wr, { [eS.SX]: r }),
             "data-dnd-name": eu.intl.string(t === L.yM ? ed.default.fWef0G : ed.default.KcdDyT),
         })
     );
@@ -548,7 +552,7 @@ function eT(e) {
 function ey(e) {
     let { guildId: t, widgets: i } = e,
         a = n.useMemo(() => (0, L.Rl)(i), [i]),
-        r = n.useMemo(
+        s = n.useMemo(
             () =>
                 a.map((e) =>
                     e.filter((e) => {
@@ -558,9 +562,9 @@ function ey(e) {
                 ),
             [a],
         ),
-        d = n.useMemo(() => [...r[L.FT], ...r[L.yM]], [r]),
+        d = n.useMemo(() => [...s[L.FT], ...s[L.yM]], [s]),
         u = (0, eg.V)((e) => e.isDragging() && e.getItemType() === ex),
-        c = (0, s.bG)([N], () => "saving" === N.getSaveStatus(t), [t]),
+        c = (0, r.bG)([N], () => "saving" === N.getSaveStatus(t), [t]),
         o = n.useCallback(
             (e, i) => {
                 let l = d[e],
@@ -577,7 +581,7 @@ function ey(e) {
         );
     return (0, l.jsx)("div", {
         className: eS.Vg,
-        children: r.map((e, i) =>
+        children: s.map((e, i) =>
             (0, l.jsxs)(
                 "div",
                 {
@@ -592,8 +596,8 @@ function ey(e) {
                                     column: i,
                                     positionNumber: a + 1,
                                     columnWidgetCount: e.length,
-                                    flatIndex: i === L.yM ? r[L.FT].length + a : a,
-                                    leftColumnCount: r[L.FT].length,
+                                    flatIndex: i === L.yM ? s[L.FT].length + a : a,
+                                    leftColumnCount: s[L.FT].length,
                                     onReorder: o,
                                     isSaving: c,
                                 },
@@ -626,12 +630,12 @@ var eG = i(529609),
     eB = i(776231),
     eK = i(986898);
 function ez(e) {
-    let { guildId: t, header: i, canEdit: a, isEditing: r, isSaving: u } = e,
-        c = (0, s.bG)([f.A], () => f.A.getGuild(t), [t]),
-        o = (0, s.bG)([eM.A], () => eM.A.getOnlineCount(t), [t]),
-        _ = (0, s.bG)([eM.A], () => eM.A.getMemberCount(t), [t]),
+    let { guildId: t, header: i, canEdit: a, isEditing: s, isSaving: u } = e,
+        c = (0, r.bG)([f.A], () => f.A.getGuild(t), [t]),
+        o = (0, r.bG)([eM.A], () => eM.A.getOnlineCount(t), [t]),
+        _ = (0, r.bG)([eM.A], () => eM.A.getMemberCount(t), [t]),
         E = i.custom_banner,
-        g = (0, s.bG)([eR.A], () => eR.A.getProfile(t), [t]),
+        g = (0, r.bG)([eR.A], () => eR.A.getProfile(t), [t]),
         h = (0, eF.b2)().hex(),
         A = null == c ? null : eO.Ay.getGuildIconURL({ id: c.id, icon: c.icon, size: 64 }),
         p = (0, eN.Ay)(A, h),
@@ -647,9 +651,9 @@ function ez(e) {
                               let i = eO.QB ? "webp" : "jpg",
                                   { CDN_HOST: l, API_ENDPOINT: n } = window.GLOBAL_ENV,
                                   a = S.Rsh.GUILD_SPACE_BANNER(e, t, i),
-                                  r = null != l ? `https://${l}${a}` : location.protocol + n + a,
-                                  s = { size: (0, eB.kr)(1200 * (0, eB.mZ)()) };
-                              return "jpg" === i && (s.quality = "lossless"), (r += `?${eH.stringify(s)}`);
+                                  s = null != l ? `https://${l}${a}` : location.protocol + n + a,
+                                  r = { size: (0, eB.kr)(1200 * (0, eB.mZ)()) };
+                              return ("jpg" === i && (r.quality = "lossless"), (s += `?${eH.stringify(r)}`));
                           })(c.id, i.custom_banner_hash)
                         : eO.Ay.getGuildBannerURL({ id: c.id, banner: c.banner }),
             [c, E, i.custom_banner_hash],
@@ -664,7 +668,7 @@ function ez(e) {
                       ? (0, l.jsx)("img", { className: eK.vK, src: C, alt: "" })
                       : (0, l.jsx)("div", { className: eK.vK, style: { background: D }, "aria-hidden": !0 }),
                   (0, l.jsx)("div", { className: eK.f5, "aria-hidden": !0 }),
-                  r
+                  s
                       ? (0, l.jsxs)("div", {
                             className: eK.j0,
                             children: [
@@ -767,10 +771,11 @@ function ez(e) {
                       ],
                   }),
                   a &&
-                      !r &&
+                      !s &&
                       (0, l.jsx)(Z.$, {
                           icon: eP.PencilIcon,
                           text: eu.intl.string(ed.default.KcOpCm),
+                          size: "sm",
                           onClick: () => {
                               let e;
                               null != (e = I.A.getSpace(t)) &&
@@ -784,30 +789,30 @@ var eV = i(312152);
 function eq(e) {
     let { guildId: t } = e,
         i = n.useRef(null),
-        [a, g, h] = (0, s.yK)([I.A], () => [I.A.getSpace(t), I.A.getFetchStatus(t), I.A.isInBackoff(t)], [t]);
-    n.useEffect(() => {
+        [a, g, h] = (0, r.yK)([I.A], () => [I.A.getSpace(t), I.A.getFetchStatus(t), I.A.isInBackoff(t)], [t]);
+    (n.useEffect(() => {
         let e = i.current !== t;
-        (i.current = t), x(t, e);
+        ((i.current = t), x(t, e));
     }, [g, t]),
         n.useEffect(() => {
             (0, o.L4)(t, !1, { respectBackoff: !0 });
-        }, [t]);
-    let m = (0, s.bG)([f.A], () => f.A.getGuild(t), [t]),
+        }, [t]));
+    let m = (0, r.bG)([f.A], () => f.A.getGuild(t), [t]),
         A = (0, q.mN)(m),
-        p = (0, s.bG)([G.A], () => G.A.getFetchStatus(t), [t]);
+        p = (0, r.bG)([G.A], () => G.A.getFetchStatus(t), [t]);
     n.useEffect(() => {
         A && "idle" === p && y(t);
     }, [A, p, t]);
     let S = m?.guildSpaceSettings?.publish_status !== w.B.PUBLISHED,
         D = n.useCallback(() => T(t, { publish_status: w.B.PUBLISHED }), [t]),
-        [C, j] = (0, s.yK)([N], () => [N.getDraft(t), N.getSaveStatus(t)], [t]),
+        [C, j] = (0, r.yK)([N], () => [N.getDraft(t), N.getSaveStatus(t)], [t]),
         L = A && null != C,
         U = L ? C.widgets : a?.widgets,
         b = n.useMemo(() => U?.some((e) => e.locked) ?? !1, [U]);
     n.useEffect(() => {
         A && b && ((0, _.AK)(t), (0, _.Xd)(t));
     }, [A, t, b]);
-    let P = (0, s.bG)(
+    let P = (0, r.bG)(
         [E.A, G.A],
         () =>
             a?.widgets.some((e) => {
@@ -816,12 +821,12 @@ function eq(e) {
             }) ?? !1,
         [t, a],
     );
-    n.useEffect(() => {
+    (n.useEffect(() => {
         P && v(t);
     }, [t, P]),
         n.useEffect(() => {
             A || null == C || "saving" === j || M(t);
-        }, [A, C, j, t]);
+        }, [A, C, j, t]));
     let R = n.useMemo(
             () =>
                 (U ?? [])
@@ -835,11 +840,11 @@ function eq(e) {
                     }),
             [U],
         ),
-        F = (0, s.yK)([K.A], () => K.A.getWidgetIdsToHydrate(t, R), [t, R]),
+        F = (0, r.yK)([K.A], () => K.A.getWidgetIdsToHydrate(t, R), [t, R]),
         k = n.useRef(null);
     return (n.useEffect(() => {
         if (k.current !== t && null != a) {
-            (k.current = t), V(t, R, !0);
+            ((k.current = t), V(t, R, !0));
             return;
         }
         V(t, F);
@@ -869,7 +874,7 @@ function eq(e) {
                   (0, l.jsx)(c.Gt, {
                       className: eV.XG,
                       children: (0, l.jsxs)("div", {
-                          className: r()(eV.Qs, { [eV.Dy]: L }),
+                          className: s()(eV.Qs, { [eV.Dy]: L }),
                           children: [
                               A && S ? (0, l.jsx)(Y.A, { onPublish: D }) : null,
                               (0, l.jsx)(ez, {

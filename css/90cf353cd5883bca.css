@@ -90,13 +90,12 @@
 
 .header__06fdb {
     align-items: flex-end;
-    aspect-ratio: 4/1;
     background-color: var(--background-base-lowest);
     border-radius: var(--radius-lg);
     box-sizing: border-box;
     display: flex;
+    height: 180px;
     justify-content: space-between;
-    min-height: 160px;
     overflow: hidden;
     padding: var(--space-16);
     position: relative
@@ -201,9 +200,9 @@
     container: guild-space-page/inline-size;
     display: flex;
     flex-direction: column;
-    gap: var(--space-24);
+    gap: var(--space-16);
     margin-inline: auto;
-    max-width: 1200px;
+    max-width: 1280px;
     padding: var(--space-16)
 }
 
@@ -258,4 +257,4 @@
     width: 685px
 }
 
-/*# sourceMappingURL=4909cf5c167e5b94.css.map*/
+/*# sourceMappingURL=90cf353cd5883bca.css.map*/
