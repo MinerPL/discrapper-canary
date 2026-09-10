@@ -1,4 +1,4 @@
-n.d(t, { Jp: () => _, RC: () => u, Rr: () => h, S0: () => A, gz: () => E, hB: () => c, i1: () => f }), n(321073);
+(n.d(t, { Jp: () => _, RC: () => u, Rr: () => h, S0: () => A, gz: () => E, hB: () => c, i1: () => f }), n(321073));
 var i = n(70283),
     r = n(228366),
     a = n(287809),
@@ -31,13 +31,13 @@ function u(e) {
     let i,
         a,
         { badgeId: s, hidden: l, reorderableBadgeIds: o, hiddenBadgeIds: u, canReorder: _ } = e;
-    _ && c(l ? o.filter((e) => e !== s) : [...o, s]),
+    (_ && c(l ? o.filter((e) => e !== s) : [...o, s]),
         (t = l ? [...u, s] : u.filter((e) => e !== s)),
         (a = null != (i = d()) && ((n = i.hiddenBadges), t.length === n.size && t.every((e) => n.has(e)))),
         r.h.dispatch({
             type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
             pendingBadgeHiddenBadges: a ? void 0 : [...t],
-        });
+        }));
 }
 function _() {
     r.h.dispatch({
@@ -85,7 +85,7 @@ function h(e, t, n) {
                 )
                 .map((e) => {
                     let t = (0, l.I)(e.badge_id);
-                    return { id: t, icon: t, iconSrc: e.simple_icon_url, description: e.name };
+                    return { id: t, icon: t, iconSrc: e.simple_icon_raster_url, description: e.name };
                 }),
         ],
         n,
@@ -120,5 +120,5 @@ function f(e, t, n) {
     if (t === n || t < 0 || t >= e.length) return e;
     let i = [...e],
         [r] = i.splice(t, 1);
-    return i.splice(Math.min(Math.max(n, 0), i.length), 0, r), i;
+    return (i.splice(Math.min(Math.max(n, 0), i.length), 0, r), i);
 }
