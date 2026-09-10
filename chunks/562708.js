@@ -1,5 +1,5 @@
 let i, r, a, s, l, o, d, c;
-n.r(t),
+(n.r(t),
     n.d(t, {
         encodeProperties: () => I,
         isThrottled: () => em,
@@ -17,7 +17,7 @@ n.r(t),
         getSuperProperties: () => eI,
         ImpressionTypes: () => X.z,
         extendSuperProperties: () => eh,
-    });
+    }));
 var u = n(812729),
     _ = n.n(u),
     E = n(284009),
@@ -30,7 +30,7 @@ function I(e) {
         return null;
     }
 }
-n(142703), n(667532), n(321073);
+(n(142703), n(667532), n(321073));
 var f = n(132500);
 n(423034);
 var p = n(80703),
@@ -98,20 +98,20 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         function I() {
             if ((($ = null), !A())) return Promise.resolve();
             let e = K.slice();
-            (K = []), (U = H(U));
+            ((K = []), (U = H(U)));
             let t = e.length;
-            (w = Math.min(w, t)), (G = Math.max(G, t)), (x = H(x, t));
+            ((w = Math.min(w, t)), (G = Math.max(G, t)), (x = H(x, t)));
             let n = g(e);
             return (
                 n.then(
                     () => {
-                        e.forEach((e) => {
+                        (e.forEach((e) => {
                             e.resolve?.();
                         }),
-                            (v = H(v));
+                            (v = H(v)));
                     },
                     (t) => {
-                        K.unshift(...e), (b = H(b));
+                        (K.unshift(...e), (b = H(b)));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -181,7 +181,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 })
             );
         }
-        (L = o ?? 1500),
+        ((L = o ?? 1500),
             !z &&
                 "u" > typeof document &&
                 ((z = !0),
@@ -201,7 +201,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 type: "timeout",
                                 id: setTimeout(
                                     () => {
-                                        Z(), e();
+                                        (Z(), e());
                                     },
                                     Math.max(36e5 + (Math.floor(36e4 * Math.random() * 2) - 36e4), 6e4),
                                 ),
@@ -211,7 +211,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             type: "timeout",
                             id: setTimeout(
                                 () => {
-                                    Z(), e();
+                                    (Z(), e());
                                 },
                                 Math.floor(354e4 * Math.random() + 6e4),
                             ),
@@ -244,7 +244,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             (Y.handleFingerprint = function () {
-                return I(), !1;
+                return (I(), !1);
             }),
             (Y.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
@@ -269,7 +269,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             })(d);
                         if ((null != c && (d.properties.client_uuid = W.generate(c)), K.push(d), K.length > 1e4)) {
                             let e = K.length - 1e4;
-                            (D = H(D, e)), (K = K.slice(-1e4));
+                            ((D = H(D, e)), (K = K.slice(-1e4)));
                         }
                         i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
                     }),
@@ -278,8 +278,8 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }),
             (Y.handleSetAnalyticsToken = function (e) {
                 let { analyticsToken: t, userId: n } = e;
-                return null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1;
-            });
+                return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
+            }));
         class X extends T.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
@@ -348,10 +348,10 @@ if (null != eo) {
         "linux" === n)
     ) {
         let e = eo.crashReporter.getMetadata();
-        (a.window_manager = e.wm),
+        ((a.window_manager = e.wm),
             (a.distro = e.distro),
             (a.runtime_environment = e.runtime_environment),
-            (a.display_server = e.display_server);
+            (a.display_server = e.display_server));
     } else
         "darwin" === n ? (a.os_sdk_version = i?.split(".")[0]) : "win32" === n && (a.os_sdk_version = i?.split(".")[2]);
 }
@@ -431,7 +431,7 @@ if (null == a)
             let e = ei.w.get(es);
             if (null == e) {
                 let t;
-                ((t = {}).os = ed()),
+                (((t = {}).os = ed()),
                     (t.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
                             { opera: n } = window;
@@ -457,7 +457,7 @@ if (null == a)
                     (t.system_locale = (0, en.c)()),
                     (t.has_client_mods = (0, et.b)()),
                     (e = t),
-                    ei.w.set(es, e);
+                    ei.w.set(es, e));
             }
             let t = ei.w.get(el);
             null == t && ((t = eA()), ei.w.set(el, t));
@@ -465,7 +465,7 @@ if (null == a)
             if (null == n) {
                 var i;
                 let e;
-                (i = eA()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), er.u.set(el, n);
+                ((i = eA()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), er.u.set(el, n));
             }
             return {
                 ...e,
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("610528", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("610542", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
@@ -544,6 +544,6 @@ let eg = (e) => {
             } else if ("throttlePercent" in o) {
                 if (Math.random() > o.throttlePercent) return Promise.resolve();
             } else A()(!1, `Unsupported analytics event config: ${o}`);
-        return t?.(e), s(e, r, a);
+        return (t?.(e), s(e, r, a));
     };
 };

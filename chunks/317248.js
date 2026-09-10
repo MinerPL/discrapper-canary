@@ -1,4 +1,4 @@
-n.d(t, { default: () => F }), n(134528), n(947204);
+(n.d(t, { default: () => F }), n(134528), n(947204));
 var i = n(477900),
     a = n(582128),
     l = n(132500),
@@ -55,18 +55,18 @@ async function U(e, t, n) {
         { name: "override_platform_information", value: `${t.overridePlatformInformation}` },
         { name: "theme", value: D.A.theme },
     ];
-    "" !== e.description && i.push({ name: "description", value: e.description }),
+    ("" !== e.description && i.push({ name: "description", value: e.description }),
         "" !== e.url && i.push({ name: "external_url", value: e.url }),
         null != e.buildOverride && i.push({ name: "build_override", value: e.buildOverride }),
         null != e.experimentOverrides &&
             i.push({
                 name: "experiment_overrides",
                 value: e.experimentOverrides.map((e) => `${e.experimentId}:${e.variantId}`).join(", "),
-            });
+            }));
     let a = e.feature?.asana_inbox_id;
     null != a && "" !== a && i.push({ name: "asana_inbox_id", value: `${a}` });
     let l = e.feature?.name;
-    null != l && "" !== l && i.push({ name: "feature_name", value: l }),
+    (null != l && "" !== l && i.push({ name: "feature_name", value: l }),
         t.overridePlatformInformation &&
             (i.push({ name: "device", value: t.device }),
             i.push({ name: "os", value: t.operatingSystem }),
@@ -75,7 +75,7 @@ async function U(e, t, n) {
             i.push({ name: "client_build_number", value: t.clientBuildNumber }),
             i.push({ name: "release_channel", value: window.GLOBAL_ENV.RELEASE_CHANNEL }),
             i.push({ name: "locale", value: t.locale })),
-        (0, z.a)(W.Umv.WEB_APP);
+        (0, z.a)(W.Umv.WEB_APP));
     try {
         return await V.A.post({
             url: W.Rsh.BUG_REPORTS,
@@ -139,8 +139,8 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "f357164f229aaaefc5baaf2429f09fb20d29ff55" !== e.body.hash) {
-                let e = new Date("1789058338371"),
+            if (null != e.body && "91087d677fe156f7bb498fff1d61c7a901c31972" !== e.body.hash) {
+                let e = new Date("1789059170766"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eA(n.hours);
@@ -161,7 +161,7 @@ function F(e) {
     async function eP() {
         if ((e_(!1), "" === F || "" === X || null == Q)) return void ek(!0);
         let e = ea?.features?.find((e) => H(e) === er);
-        eE(!0), ek(!1);
+        (eE(!0), ek(!1));
         let t = en
                 .map((e) => {
                     let { item: t } = e;
@@ -191,7 +191,7 @@ function F(e) {
                     : { overridePlatformInformation: eo },
                 t,
             ).catch(() => e_(!0));
-        eE(!1),
+        (eE(!1),
             null != a && a.ok
                 ? (eL && window.open(a.body.permalink_url, "_blank"),
                   T(),
@@ -199,7 +199,7 @@ function F(e) {
                       let { default: e } = await Promise.all([n.e("89514"), n.e("876587")]).then(n.bind(n, 369323));
                       return (t) => (0, i.jsx)(e, { ...t, asanaTask: a.body });
                   }))
-                : e_(!0);
+                : e_(!0));
     }
     return (
         a.useEffect(() => {

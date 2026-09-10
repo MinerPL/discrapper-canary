@@ -39,8 +39,8 @@ async function _(e, t, n) {
                             r = n.join("."),
                             a = `${r}.${i}`,
                             s = 1;
-                        for (; e.has(a); ) (a = `${r}_${s}.${i}`), (s += 1);
-                        return e.add(a), a;
+                        for (; e.has(a);) ((a = `${r}_${s}.${i}`), (s += 1));
+                        return (e.add(a), a);
                     })(A, e.name);
                     return { name: t, file: e.file, filename: t };
                 }),
@@ -53,7 +53,7 @@ async function _(e, t, n) {
     }
     if ("success_count" in r.body && r.body.success_count !== E.length)
         throw (
-            (u.error(`Debug log upload: stored files ${r.body.success_count} !== ${E.length}`), new a._(a.ct.GENERAL))
+            u.error(`Debug log upload: stored files ${r.body.success_count} !== ${E.length}`), new a._(a.ct.GENERAL)
         );
     if (
         ("store_success" in r.body && !r.body.store_success) ||
@@ -61,14 +61,14 @@ async function _(e, t, n) {
         ("all_success" in r.body && !r.body.all_success)
     )
         throw (
-            (u.error(
+            u.error(
                 `Debug log upload: store_success: ${r.body.store_success} / id_match: ${r.body.id_match} / all_success: ${r.body.all_success}`,
             ),
-            new a._(a.ct.GENERAL))
+            new a._(a.ct.GENERAL)
         );
 }
 var E = n(487329);
-n(477900), n(582128);
+(n(477900), n(582128));
 let A = {};
 function h(e, t) {
     let n = e.length > t ? t : e.length;
@@ -105,7 +105,7 @@ async function R(e, t) {
     } catch (t) {
         let e;
         throw (
-            (t instanceof a._ &&
+            t instanceof a._ &&
                 (e = (function (e) {
                     switch (e.code) {
                         case a.ct.GENERAL:
@@ -123,7 +123,7 @@ async function R(e, t) {
                     }
                 })(t)),
             (0, E.QW)({ type: E.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
-            t)
+            t
         );
     }
 }
@@ -172,10 +172,10 @@ ${s}`;
         let l = t.length + n.length + a.length + s.length;
         if (l > 9437184) {
             let e = 1 - 9437184 / l;
-            (t = t.slice(t.length - Math.floor(t.length * e))),
+            ((t = t.slice(t.length - Math.floor(t.length * e))),
                 (n = n.slice(n.length - Math.floor(n.length * e))),
                 (a = a.slice(a.length - Math.floor(a.length * e))),
-                (s = s.slice(s.length - Math.floor(s.length * e)));
+                (s = s.slice(s.length - Math.floor(s.length * e))));
         }
         let o = `
     ${(function (e) {
@@ -236,7 +236,7 @@ ${s}`;
                                     log: t,
                                     shouldKeep: i,
                                 };
-                                (function (e, t) {
+                                ((function (e, t) {
                                     let n = 0;
                                     for (; n < e.length; n++) {
                                         let { timestamp: i } = e[n];
@@ -244,7 +244,7 @@ ${s}`;
                                     }
                                     e.splice(n, 0, t);
                                 })(r, o),
-                                    a && ((u += "| "), _.push(o));
+                                    a && ((u += "| "), _.push(o)));
                             }),
                             (E = !1),
                             r.filter(
@@ -305,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "610528", versionHash: "f357164f229aaaefc5baaf2429f09fb20d29ff55" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "610542", versionHash: "91087d677fe156f7bb498fff1d61c7a901c31972" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}

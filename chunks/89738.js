@@ -1,4 +1,4 @@
-(e = r.nmd(e)),
+((e = r.nmd(e)),
     (function (n) {
         var i = t && !t.nodeType && t,
             o = e && !e.nodeType && e,
@@ -20,7 +20,7 @@
             throw RangeError(d[e]);
         }
         function v(e, t) {
-            for (var r = e.length, n = []; r--; ) n[r] = t(e[r]);
+            for (var r = e.length, n = []; r--;) n[r] = t(e[r]);
             return n;
         }
         function y(e, t) {
@@ -31,7 +31,7 @@
             );
         }
         function g(e) {
-            for (var t, r, n = [], i = 0, o = e.length; i < o; )
+            for (var t, r, n = [], i = 0, o = e.length; i < o;)
                 (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < o
                     ? (64512 & (r = e.charCodeAt(i++))) == 56320
                         ? n.push(((1023 & t) << 10) + (1023 & r) + 65536)
@@ -74,8 +74,8 @@
                 y = 128,
                 g = 72;
             for ((n = e.lastIndexOf("-")) < 0 && (n = 0), i = 0; i < n; ++i)
-                e.charCodeAt(i) >= 128 && m("not-basic"), d.push(e.charCodeAt(i));
-            for (o = n > 0 ? n + 1 : 0; o < h; ) {
+                (e.charCodeAt(i) >= 128 && m("not-basic"), d.push(e.charCodeAt(i)));
+            for (o = n > 0 ? n + 1 : 0; o < h;) {
                 for (
                     a = v, s = 1, l = 36;
                     o >= h && m("invalid-input"),
@@ -93,13 +93,13 @@
                         !(u < (c = l <= g ? 1 : l >= g + 26 ? 26 : l - g));
                     l += 36
                 ) {
-                    s > p(0x7fffffff / (f = 36 - c)) && m("overflow"), (s *= f);
+                    (s > p(0x7fffffff / (f = 36 - c)) && m("overflow"), (s *= f));
                 }
-                (g = _(v - a, (r = d.length + 1), 0 == a)),
+                ((g = _(v - a, (r = d.length + 1), 0 == a)),
                     p(v / r) > 0x7fffffff - y && m("overflow"),
                     (y += p(v / r)),
                     (v %= r),
-                    d.splice(v++, 0, y);
+                    d.splice(v++, 0, y));
             }
             return b(d);
         }
@@ -121,7 +121,7 @@
                 b,
                 S = [];
             for (a = 0, d = (e = g(e)).length, t = 128, r = 0, o = 72; a < d; ++a) (f = e[a]) < 128 && S.push(h(f));
-            for (n = i = S.length, i && S.push("-"); n < d; ) {
+            for (n = i = S.length, i && S.push("-"); n < d;) {
                 for (s = 0x7fffffff, a = 0; a < d; ++a) (f = e[a]) >= t && f < s && (s = f);
                 for (
                     s - t > p((0x7fffffff - r) / (v = n + 1)) && m("overflow"), r += (s - t) * v, t = s, a = 0;
@@ -130,10 +130,10 @@
                 )
                     if (((f = e[a]) < t && ++r > 0x7fffffff && m("overflow"), f == t)) {
                         for (l = r, u = 36; !(l < (c = u <= o ? 1 : u >= o + 26 ? 26 : u - o)); u += 36)
-                            (b = l - c), (y = 36 - c), S.push(h(w(c + (b % y), 0))), (l = p(b / y));
-                        S.push(h(w(l, 0))), (o = _(r, v, n == i)), (r = 0), ++n;
+                            ((b = l - c), (y = 36 - c), S.push(h(w(c + (b % y), 0))), (l = p(b / y)));
+                        (S.push(h(w(l, 0))), (o = _(r, v, n == i)), (r = 0), ++n);
                     }
-                ++r, ++t;
+                (++r, ++t);
             }
             return S.join("");
         }
@@ -163,4 +163,4 @@
             if (e.exports == i) o.exports = s;
             else for (l in s) s.hasOwnProperty(l) && (i[l] = s[l]);
         else n.punycode = s;
-    })(this);
+    })(this));

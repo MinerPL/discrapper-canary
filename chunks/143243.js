@@ -4,17 +4,17 @@ var o = r(90860),
     a = r(378261),
     u = r(71255);
 function s(t, e) {
-    (this.typeNumber = t),
+    ((this.typeNumber = t),
         (this.errorCorrectLevel = e),
         (this.modules = null),
         (this.moduleCount = 0),
         (this.dataCache = null),
-        (this.dataList = []);
+        (this.dataList = []));
 }
 var l = s.prototype;
-(l.addData = function (t) {
+((l.addData = function (t) {
     var e = new o(t);
-    this.dataList.push(e), (this.dataCache = null);
+    (this.dataList.push(e), (this.dataCache = null));
 }),
     (l.isDark = function (t, e) {
         if (t < 0 || this.moduleCount <= t || e < 0 || this.moduleCount <= e) throw Error(t + "," + e);
@@ -31,7 +31,7 @@ var l = s.prototype;
                     o += e[u].dataCount;
                 for (var u = 0; u < this.dataList.length; u++) {
                     var s = this.dataList[u];
-                    r.put(s.mode, 4), r.put(s.getLength(), a.getLengthInBits(s.mode, t)), s.write(r);
+                    (r.put(s.mode, 4), r.put(s.getLength(), a.getLengthInBits(s.mode, t)), s.write(r));
                 }
                 if (r.getLengthInBits() <= 8 * o) break;
             }
@@ -40,12 +40,12 @@ var l = s.prototype;
         this.makeImpl(!1, this.getBestMaskPattern());
     }),
     (l.makeImpl = function (t, e) {
-        (this.moduleCount = 4 * this.typeNumber + 17), (this.modules = Array(this.moduleCount));
+        ((this.moduleCount = 4 * this.typeNumber + 17), (this.modules = Array(this.moduleCount)));
         for (var r = 0; r < this.moduleCount; r++) {
             this.modules[r] = Array(this.moduleCount);
             for (var o = 0; o < this.moduleCount; o++) this.modules[r][o] = null;
         }
-        this.setupPositionProbePattern(0, 0),
+        (this.setupPositionProbePattern(0, 0),
             this.setupPositionProbePattern(this.moduleCount - 7, 0),
             this.setupPositionProbePattern(0, this.moduleCount - 7),
             this.setupPositionAdjustPattern(),
@@ -54,7 +54,7 @@ var l = s.prototype;
             this.typeNumber >= 7 && this.setupTypeNumber(t),
             null == this.dataCache &&
                 (this.dataCache = s.createData(this.typeNumber, this.errorCorrectLevel, this.dataList)),
-            this.mapData(this.dataCache, e);
+            this.mapData(this.dataCache, e));
     }),
     (l.setupPositionProbePattern = function (t, e) {
         for (var r = -1; r <= 7; r++)
@@ -140,17 +140,17 @@ var l = s.prototype;
     }),
     (l.mapData = function (t, e) {
         for (var r = -1, o = this.moduleCount - 1, n = 7, i = 0, u = this.moduleCount - 1; u > 0; u -= 2)
-            for (6 == u && u--; ; ) {
+            for (6 == u && u--; ;) {
                 for (var s = 0; s < 2; s++)
                     if (null == this.modules[o][u - s]) {
                         var l = !1;
-                        i < t.length && (l = ((t[i] >>> n) & 1) == 1),
+                        (i < t.length && (l = ((t[i] >>> n) & 1) == 1),
                             a.getMask(e, o, u - s) && (l = !l),
                             (this.modules[o][u - s] = l),
-                            -1 == --n && (i++, (n = 7));
+                            -1 == --n && (i++, (n = 7)));
                     }
                 if ((o += r) < 0 || this.moduleCount <= o) {
-                    (o -= r), (r = -r);
+                    ((o -= r), (r = -r));
                     break;
                 }
             }
@@ -160,13 +160,13 @@ var l = s.prototype;
     (s.createData = function (t, e, r) {
         for (var o = n.getRSBlocks(t, e), u = new i(), l = 0; l < r.length; l++) {
             var f = r[l];
-            u.put(f.mode, 4), u.put(f.getLength(), a.getLengthInBits(f.mode, t)), f.write(u);
+            (u.put(f.mode, 4), u.put(f.getLength(), a.getLengthInBits(f.mode, t)), f.write(u));
         }
         for (var h = 0, l = 0; l < o.length; l++) h += o[l].dataCount;
         if (u.getLengthInBits() > 8 * h)
             throw Error("code length overflow. (" + u.getLengthInBits() + ">" + 8 * h + ")");
-        for (u.getLengthInBits() + 4 <= 8 * h && u.put(0, 4); u.getLengthInBits() % 8 != 0; ) u.putBit(!1);
-        for (; !(u.getLengthInBits() >= 8 * h) && (u.put(s.PAD0, 8), !(u.getLengthInBits() >= 8 * h)); ) {
+        for (u.getLengthInBits() + 4 <= 8 * h && u.put(0, 4); u.getLengthInBits() % 8 != 0;) u.putBit(!1);
+        for (; !(u.getLengthInBits() >= 8 * h) && (u.put(s.PAD0, 8), !(u.getLengthInBits() >= 8 * h));) {
             u.put(s.PAD1, 8);
         }
         return s.createBytes(u, o);
@@ -175,7 +175,7 @@ var l = s.prototype;
         for (var r = 0, o = 0, n = 0, i = Array(e.length), s = Array(e.length), l = 0; l < e.length; l++) {
             var f = e[l].dataCount,
                 h = e[l].totalCount - f;
-            (o = Math.max(o, f)), (n = Math.max(n, h)), (i[l] = Array(f));
+            ((o = Math.max(o, f)), (n = Math.max(n, h)), (i[l] = Array(f)));
             for (var g = 0; g < i[l].length; g++) i[l][g] = 255 & t.buffer[g + r];
             r += f;
             var d = a.getErrorCorrectPolynomial(h),
@@ -192,4 +192,4 @@ var l = s.prototype;
         for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (p[C++] = s[l][g]);
         return p;
     }),
-    (t.exports = s);
+    (t.exports = s));

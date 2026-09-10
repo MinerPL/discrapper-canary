@@ -12,11 +12,11 @@ var a = n(228366),
     A = n(613057);
 let h = new l.A("NativeDispatchUtils");
 function I() {
-    return null == r && h.warn("Tried getting Dispatch instance before instantiated"), r;
+    return (null == r && h.warn("Tried getting Dispatch instance before instantiated"), r);
 }
 function f(e) {
     let t = JSON.parse(e);
-    return h.log("Native Dispatch error", t), new s.A(t);
+    return (h.log("Native Dispatch error", t), new s.A(t));
 }
 function p(e, t) {
     "" !== e && f(e);
@@ -37,7 +37,7 @@ let T = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "610528" },
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "610542" },
                     u = o.default.getCurrentUser();
                 null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {
@@ -192,12 +192,12 @@ let T = {
                                 if ("" !== e) {
                                     a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" });
                                     let t = f(e);
-                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_ERROR", error: t }),
-                                        null != t.code && t.code === A.Hi.POST_INSTALL_CANCELLED ? i(t) : n();
+                                    (a.h.dispatch({ type: "DISPATCH_APPLICATION_ERROR", error: t }),
+                                        null != t.code && t.code === A.Hi.POST_INSTALL_CANCELLED ? i(t) : n());
                                     return;
                                 }
                                 if ("" !== t) {
-                                    a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" }), n();
+                                    (a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" }), n());
                                     return;
                                 }
                                 if ("" !== r) {

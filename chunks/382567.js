@@ -19,7 +19,7 @@ var i = n(477900),
     y = n(297264),
     b = n(707554),
     S = n(964486);
-n(667532), n(134528), n(947204);
+(n(667532), n(134528), n(947204));
 var j = n(503698),
     I = n.n(j),
     N = n(607399),
@@ -260,7 +260,7 @@ function ex(e) {
         (r = s.useRef(!1)),
         (l = s.useMemo(() => {
             let e = new Set();
-            return o.forEach((t) => e.add(t.key)), e;
+            return (o.forEach((t) => e.add(t.key)), e);
         }, [o])),
         s.useEffect(() => {
             if (!c) return;
@@ -313,10 +313,10 @@ function ex(e) {
                 a.forEach((e) => t.current?.observe(e)),
                 null != s && t.current?.observe(s),
                 () => {
-                    a.forEach((e) => t.current?.unobserve(e)),
+                    (a.forEach((e) => t.current?.unobserve(e)),
                         null != s && t.current?.unobserve(s),
                         t.current?.disconnect(),
-                        (t.current = null);
+                        (t.current = null));
                 }
             );
         }, [l, c]),
@@ -338,8 +338,8 @@ function ex(e) {
                             ((e.style.height = `${e.scrollHeight}px`),
                             Promise.all(e.getAnimations().map((e) => e.finished))
                                 .then(() => {
-                                    (e.style.height = "auto"),
-                                        ee.A.scrollSidebarNodeIntoView(e, { animate: !0, block: "nearest" });
+                                    ((e.style.height = "auto"),
+                                        ee.A.scrollSidebarNodeIntoView(e, { animate: !0, block: "nearest" }));
                                 })
                                 .catch(() => {}));
                     },
@@ -372,18 +372,18 @@ function ef(e) {
                             h = d.width / 2,
                             g = (m.y - d.y) / h,
                             x = m.height / h;
-                        l.current || s || f.Ay.useReducedMotion || -1 === c.current
+                        (l.current || s || f.Ay.useReducedMotion || -1 === c.current
                             ? (o.y.set(g), o.height.set(x))
                             : u({ y: g, height: x }),
                             (l.current = !1),
                             (a.current = t),
-                            (c.current = e);
+                            (c.current = e));
                     }
                     let m = null;
                     return (
                         s
                             ? (m = requestAnimationFrame(() => {
-                                  (m = null), d();
+                                  ((m = null), d());
                               }))
                             : d(),
                         () => {
@@ -424,7 +424,7 @@ function ef(e) {
                         {
                             onClick: () => {
                                 var t;
-                                return (t = e.key), void _.A.navigate(t, { showNavigationMobile: !1 });
+                                return ((t = e.key), void _.A.navigate(t, { showNavigationMobile: !1 }));
                             },
                             active: e.key === n,
                             category: e,
@@ -597,11 +597,11 @@ function eS(e) {
                     r.forEach((s) =>
                         (function (s, r) {
                             let { dismissibleContent: l } = s;
-                            e.push(l), t.set(l, r), i.set(l, s);
+                            (e.push(l), t.set(l, r), i.set(l, s));
                             let a = n.get(r.sidebarItemKey) ?? new Set();
                             if ((a.add(l), n.set(r.sidebarItemKey, a), null != r.categoryKey)) {
                                 let e = n.get(r.categoryKey) ?? new Set();
-                                e.add(l), n.set(r.categoryKey, e);
+                                (e.add(l), n.set(r.categoryKey, e));
                             }
                         })(s, c),
                     );
@@ -689,7 +689,7 @@ function eS(e) {
                                             let { ref: t, ...n } = e;
                                             return (0, i.jsxs)(Z.Ch, {
                                                 ref: (e) => {
-                                                    (u.current = e), ee.A.setSidebarScrollerRef(e), C();
+                                                    ((u.current = e), ee.A.setSidebarScrollerRef(e), C());
                                                 },
                                                 className: eb.Mt,
                                                 fade: !0,
@@ -791,7 +791,7 @@ function eT(e) {
             accessibleDirectory: f,
             onViewChange: o,
             navigateWithValidation: (e, t) => {
-                null == x.entry(e) && m?.(), j(t);
+                (null == x.entry(e) && m?.(), j(t));
             },
             closeWithValidation: I,
         });
@@ -802,7 +802,7 @@ function eT(e) {
             _.A.navigate(p, { animatePanelScroll: !1, animateSidebarScroll: !1, showNavigationMobile: null == n }),
             E(!1),
             () => {
-                J.A.reset(), _.A.reset(), ee.A.reset(), L.A.resetState();
+                (J.A.reset(), _.A.reset(), ee.A.reset(), L.A.resetState());
             }
         ),
     );
@@ -866,7 +866,7 @@ function eR(e) {
             return (
                 A._.subscribe(ew.jej.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    A._.unsubscribe(ew.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(j.current);
+                    (A._.unsubscribe(ew.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(j.current));
                 }
             );
         }, [I, N]),
@@ -915,13 +915,13 @@ var ek = n(280450),
 function eJ() {
     let e = (0, eY.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "610528",
-        s = "f357164f229aaaefc5baaf2429f09fb20d29ff55".substring(0, 7),
+        n = "610542",
+        s = "91087d677fe156f7bb498fff1d61c7a901c31972".substring(0, 7),
         r = eV.A?.app.getVersion(),
         l = eV.A?.app.getBuildNumber(),
         c = eV.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1789058338371", !1) : null,
+        u = null != o ? (0, eq.A)("1789059170766", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1096,7 +1096,7 @@ function e6(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
-            eL.A.setState({ query: "" }), m.A.terminate();
+            (eL.A.setState({ query: "" }), m.A.terminate());
         }, []),
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
@@ -1106,7 +1106,7 @@ function e6(e) {
         return (
             ek.default.addChangeListener(e),
             () => {
-                ek.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)();
+                (ek.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
@@ -1120,13 +1120,13 @@ function e6(e) {
               onViewChange: function (e) {
                   e4.has(e) || (0, e7._)(e);
                   let t = e3.get(e);
-                  null != t &&
+                  (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
                           properties: { source: e5.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 });
+                      e5.A.setState({ source: void 0 }));
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,
@@ -1138,7 +1138,7 @@ function e6(e) {
 function te() {
     let e = eL.A.useField("query"),
         t = s.useCallback((e) => {
-            eL.A.setState({ query: e }), m.A.maybeTrackQueryEntered();
+            (eL.A.setState({ query: e }), m.A.maybeTrackQueryEntered());
         }, []),
         n = s.useCallback(() => {
             m.A.isSessionActive() || m.A.initialize();
@@ -1147,12 +1147,12 @@ function te() {
             0 === eL.A.getField("query").trim().length && m.A.terminate();
         }, []),
         a = s.useCallback(() => {
-            eL.A.setState({ query: "" }), m.A.terminate();
+            (eL.A.setState({ query: "" }), m.A.terminate());
         }, []);
     return (
         s.useEffect(
             () => () => {
-                eL.A.resetState(), m.A.terminate();
+                (eL.A.resetState(), m.A.terminate());
             },
             [],
         ),

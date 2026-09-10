@@ -124,7 +124,7 @@ var n,
 r(886347);
 var es = r(646613),
     eu = r(154676);
-r(280366), r(693160);
+(r(280366), r(693160));
 var ec = r(97669),
     ef = r(974916);
 r(118464);
@@ -146,7 +146,7 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            n(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (n(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     el = (function (t) {
         function e(e, r) {
@@ -165,7 +165,7 @@ var eh =
                 u
             );
         }
-        return eh(e, t), e;
+        return (eh(e, t), e);
     })(Error),
     ed =
         ((o = function (t, e) {
@@ -183,13 +183,13 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            o(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (o(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ep = (function (t) {
         function e(e) {
             void 0 === e && (e = void 0);
             var r = t.call(this, e) || this;
-            return (r.message = e), r;
+            return ((r.message = e), r);
         }
         return (
             ed(e, t),
@@ -216,13 +216,13 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            i(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (i(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ey = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return eg(e, t), (e.kind = "ArgumentException"), e;
+        return (eg(e, t), (e.kind = "ArgumentException"), e);
     })(ep),
     ew =
         ((a = function (t, e) {
@@ -240,13 +240,13 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            a(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (a(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ev = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return ew(e, t), (e.kind = "IllegalArgumentException"), e;
+        return (ew(e, t), (e.kind = "IllegalArgumentException"), e);
     })(ep),
     e_ = (function () {
         function t(t) {
@@ -312,7 +312,7 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            s(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (s(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eC = (function (t) {
         function e() {
@@ -348,7 +348,7 @@ var eh =
         function t() {}
         return (
             (t.arraycopy = function (t, e, r, n, o) {
-                for (; o--; ) r[n++] = t[e++];
+                for (; o--;) r[n++] = t[e++];
             }),
             (t.currentTimeMillis = function () {
                 return Date.now();
@@ -372,13 +372,13 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            u(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (u(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eS = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return eI(e, t), (e.kind = "IndexOutOfBoundsException"), e;
+        return (eI(e, t), (e.kind = "IndexOutOfBoundsException"), e);
     })(ep),
     eT =
         ((c = function (t, e) {
@@ -396,15 +396,15 @@ var eh =
             function r() {
                 this.constructor = t;
             }
-            c(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (c(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eb = (function (t) {
         function e(e, r) {
-            void 0 === e && (e = void 0), void 0 === r && (r = void 0);
+            (void 0 === e && (e = void 0), void 0 === r && (r = void 0));
             var n = t.call(this, r) || this;
-            return (n.index = e), (n.message = r), n;
+            return ((n.index = e), (n.message = r), n);
         }
-        return eT(e, t), (e.kind = "ArrayIndexOutOfBoundsException"), e;
+        return (eT(e, t), (e.kind = "ArrayIndexOutOfBoundsException"), e);
     })(eS),
     eO = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -414,7 +414,7 @@ var eh =
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -483,18 +483,18 @@ var eh =
             (t.copyOfUint8Array = function (t, e) {
                 if (t.length <= e) {
                     var r = new Uint8Array(e);
-                    return r.set(t), r;
+                    return (r.set(t), r);
                 }
                 return t.slice(0, e);
             }),
             (t.copyOfRange = function (t, e, r) {
                 var n = r - e,
                     o = new Int32Array(n);
-                return eE.arraycopy(t, e, o, 0, n), o;
+                return (eE.arraycopy(t, e, o, 0, n), o);
             }),
             (t.binarySearch = function (e, r, n) {
                 void 0 === n && (n = t.numberComparator);
-                for (var o = 0, i = e.length - 1; o <= i; ) {
+                for (var o = 0, i = e.length - 1; o <= i;) {
                     var a = (i + o) >> 1,
                         s = n(r, e[a]);
                     if (s > 0) o = a + 1;
@@ -555,7 +555,7 @@ var eh =
                 return Math.trunc(t / e);
             }),
             (t.parseInt = function (t, e) {
-                return void 0 === e && (e = void 0), parseInt(t, e);
+                return (void 0 === e && (e = void 0), parseInt(t, e));
             }),
             (t.MIN_VALUE_32_BITS = -0x80000000),
             (t.MAX_VALUE = Number.MAX_SAFE_INTEGER),
@@ -578,7 +578,7 @@ var eh =
             (t.prototype.ensureCapacity = function (e) {
                 if (e > 32 * this.bits.length) {
                     var r = t.makeArray(e);
-                    eE.arraycopy(this.bits, 0, r, 0, this.bits.length), (this.bits = r);
+                    (eE.arraycopy(this.bits, 0, r, 0, this.bits.length), (this.bits = r));
                 }
             }),
             (t.prototype.get = function (t) {
@@ -597,7 +597,7 @@ var eh =
                     n = Math.floor(t / 32),
                     o = r[n];
                 o &= ~((1 << (31 & t)) - 1);
-                for (var i = r.length; 0 === o; ) {
+                for (var i = r.length; 0 === o;) {
                     if (++n === i) return e;
                     o = r[n];
                 }
@@ -611,7 +611,7 @@ var eh =
                     n = Math.floor(t / 32),
                     o = ~r[n];
                 o &= ~((1 << (31 & t)) - 1);
-                for (var i = r.length; 0 === o; ) {
+                for (var i = r.length; 0 === o;) {
                     if (++n === i) return e;
                     o = ~r[n];
                 }
@@ -644,9 +644,9 @@ var eh =
                 return !0;
             }),
             (t.prototype.appendBit = function (t) {
-                this.ensureCapacity(this.size + 1),
+                (this.ensureCapacity(this.size + 1),
                     t && (this.bits[Math.floor(this.size / 32)] |= 1 << (31 & this.size)),
-                    this.size++;
+                    this.size++);
             }),
             (t.prototype.appendBits = function (t, e) {
                 if (e < 0 || e > 32) throw new ev("Num bits must be between 0 and 32");
@@ -664,7 +664,7 @@ var eh =
             }),
             (t.prototype.toBytes = function (t, e, r, n) {
                 for (var o = 0; o < n; o++) {
-                    for (var i = 0, a = 0; a < 8; a++) this.get(t) && (i |= 1 << (7 - a)), t++;
+                    for (var i = 0, a = 0; a < 8; a++) (this.get(t) && (i |= 1 << (7 - a)), t++);
                     e[r + o] = i;
                 }
             }),
@@ -682,7 +682,7 @@ var eh =
                     o++
                 ) {
                     var i = n[o];
-                    (i =
+                    ((i =
                         (((i =
                             (((i =
                                 (((i =
@@ -697,12 +697,12 @@ var eh =
                             16) &
                             65535) |
                         ((65535 & i) << 16)),
-                        (t[e - o] = i);
+                        (t[e - o] = i));
                 }
                 if (this.size !== 32 * r) {
                     for (var a = 32 * r - this.size, s = t[0] >>> a, o = 1; o < r; o++) {
                         var u = t[o];
-                        (s |= u << (32 - a)), (t[o - 1] = s), (s = u >>> a);
+                        ((s |= u << (32 - a)), (t[o - 1] = s), (s = u >>> a));
                     }
                     t[r - 1] = s;
                 }
@@ -719,7 +719,7 @@ var eh =
             }),
             (t.prototype.toString = function () {
                 for (var t = "", e = 0, r = this.size; e < r; e++)
-                    (7 & e) == 0 && (t += " "), (t += this.get(e) ? "X" : ".");
+                    ((7 & e) == 0 && (t += " "), (t += this.get(e) ? "X" : "."));
                 return t;
             }),
             (t.prototype.clone = function () {
@@ -732,7 +732,7 @@ var eh =
             t
         );
     })();
-((f = tJ || (tJ = {}))[(f.OTHER = 0)] = "OTHER"),
+(((f = tJ || (tJ = {}))[(f.OTHER = 0)] = "OTHER"),
     (f[(f.PURE_BARCODE = 1)] = "PURE_BARCODE"),
     (f[(f.POSSIBLE_FORMATS = 2)] = "POSSIBLE_FORMATS"),
     (f[(f.TRY_HARDER = 3)] = "TRY_HARDER"),
@@ -743,7 +743,7 @@ var eh =
     (f[(f.ASSUME_GS1 = 8)] = "ASSUME_GS1"),
     (f[(f.RETURN_CODABAR_START_END = 9)] = "RETURN_CODABAR_START_END"),
     (f[(f.NEED_RESULT_POINT_CALLBACK = 10)] = "NEED_RESULT_POINT_CALLBACK"),
-    (f[(f.ALLOWED_EAN_EXTENSIONS = 11)] = "ALLOWED_EAN_EXTENSIONS");
+    (f[(f.ALLOWED_EAN_EXTENSIONS = 11)] = "ALLOWED_EAN_EXTENSIONS"));
 let eM = tJ;
 var eP =
         ((h = function (t, e) {
@@ -761,7 +761,7 @@ var eP =
             function r() {
                 this.constructor = t;
             }
-            h(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (h(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eB = (function (t) {
         function e() {
@@ -784,12 +784,12 @@ var eP =
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     };
-((l = t$ || (t$ = {}))[(l.Cp437 = 0)] = "Cp437"),
+(((l = t$ || (t$ = {}))[(l.Cp437 = 0)] = "Cp437"),
     (l[(l.ISO8859_1 = 1)] = "ISO8859_1"),
     (l[(l.ISO8859_2 = 2)] = "ISO8859_2"),
     (l[(l.ISO8859_3 = 3)] = "ISO8859_3"),
@@ -815,16 +815,16 @@ var eP =
     (l[(l.ASCII = 23)] = "ASCII"),
     (l[(l.Big5 = 24)] = "Big5"),
     (l[(l.GB18030 = 25)] = "GB18030"),
-    (l[(l.EUC_KR = 26)] = "EUC_KR");
+    (l[(l.EUC_KR = 26)] = "EUC_KR"));
 var ex = (function () {
         function t(e, r, n) {
             for (var o, i, a = [], s = 3; s < arguments.length; s++) a[s - 3] = arguments[s];
-            (this.valueIdentifier = e),
+            ((this.valueIdentifier = e),
                 (this.name = n),
                 "number" == typeof r ? (this.values = Int32Array.from([r])) : (this.values = r),
                 (this.otherEncodingNames = a),
                 t.VALUE_IDENTIFIER_TO_ECI.set(e, this),
-                t.NAME_TO_ECI.set(n, this);
+                t.NAME_TO_ECI.set(n, this));
             for (var u = this.values, c = 0, f = u.length; c !== f; c++) {
                 var h = u[c];
                 t.VALUES_TO_ECI.set(h, this);
@@ -917,13 +917,13 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            d(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (d(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ek = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return eF(e, t), (e.kind = "UnsupportedOperationException"), e;
+        return (eF(e, t), (e.kind = "UnsupportedOperationException"), e);
     })(ep),
     eV = (function () {
         function t() {}
@@ -961,7 +961,7 @@ var ex = (function () {
                 if (t.isDecodeFallbackSupported(n)) {
                     for (var o = "", i = 0, a = e.length; i < a; i++) {
                         var s = e[i].toString(16);
-                        s.length < 2 && (s = "0" + s), (o += "%" + s);
+                        (s.length < 2 && (s = "0" + s), (o += "%" + s));
                     }
                     return decodeURIComponent(o);
                 }
@@ -1011,7 +1011,7 @@ var ex = (function () {
                     _++
                 ) {
                     var m = 255 & e[_];
-                    a &&
+                    (a &&
                         (s > 0
                             ? (128 & m) == 0
                                 ? (a = !1)
@@ -1035,7 +1035,7 @@ var ex = (function () {
                                     ? (l++, (p = 0), ++d > g && (g = d))
                                     : m > 127
                                       ? (h++, (d = 0), ++p > y && (y = p))
-                                      : ((d = 0), (p = 0)));
+                                      : ((d = 0), (p = 0))));
                 }
                 return (a && s > 0 && (a = !1), i && h > 0 && (i = !1), a && (v || u + c + f > 0))
                     ? t.UTF8
@@ -1085,7 +1085,7 @@ var ex = (function () {
                                 u = parseFloat(parseInt(e[n], c || 10).toPrecision(t)).toFixed(0);
                         }
                         u = "object" == typeof u ? JSON.stringify(u) : (+u).toString(c);
-                        for (var f = parseInt(o), h = o && o[0] + "" == "0" ? "0" : " "; u.length < f; )
+                        for (var f = parseInt(o), h = o && o[0] + "" == "0" ? "0" : " "; u.length < f;)
                             u = void 0 !== r ? u + h : h + u;
                         return u;
                     }
@@ -1095,7 +1095,7 @@ var ex = (function () {
                 return eV.encode(t, e);
             }),
             (t.getCharCode = function (t, e) {
-                return void 0 === e && (e = 0), t.charCodeAt(e);
+                return (void 0 === e && (e = 0), t.charCodeAt(e));
             }),
             (t.getCharAt = function (t) {
                 return String.fromCharCode(t);
@@ -1112,11 +1112,11 @@ var ex = (function () {
     })(),
     eU = (function () {
         function t(t) {
-            void 0 === t && (t = ""), (this.value = t);
+            (void 0 === t && (t = ""), (this.value = t));
         }
         return (
             (t.prototype.enableDecoding = function (t) {
-                return (this.encoding = t), this;
+                return ((this.encoding = t), this);
             }),
             (t.prototype.append = function (t) {
                 return (
@@ -1171,9 +1171,9 @@ var ex = (function () {
                 t < 1 || e < 1)
             )
                 throw new ev("Both dimensions must be greater than 0");
-            null == r && (r = Math.floor((t + 31) / 32)),
+            (null == r && (r = Math.floor((t + 31) / 32)),
                 (this.rowSize = r),
-                null == n && (this.bits = new Int32Array(this.rowSize * this.height));
+                null == n && (this.bits = new Int32Array(this.rowSize * this.height)));
         }
         return (
             (t.parseFromBooleanArray = function (e) {
@@ -1183,16 +1183,16 @@ var ex = (function () {
             }),
             (t.parseFromString = function (e, r, n) {
                 if (null === e) throw new ev("stringRepresentation cannot be null");
-                for (var o = Array(e.length), i = 0, a = 0, s = -1, u = 0, c = 0; c < e.length; )
+                for (var o = Array(e.length), i = 0, a = 0, s = -1, u = 0, c = 0; c < e.length;)
                     if ("\n" === e.charAt(c) || "\r" === e.charAt(c)) {
                         if (i > a) {
                             if (-1 === s) s = i - a;
                             else if (i - a !== s) throw new ev("row lengths do not match");
-                            (a = i), u++;
+                            ((a = i), u++);
                         }
                         c++;
-                    } else if (e.substring(c, c + r.length) === r) (c += r.length), (o[i] = !0), i++;
-                    else if (e.substring(c, c + n.length) === n) (c += n.length), (o[i] = !1), i++;
+                    } else if (e.substring(c, c + r.length) === r) ((c += r.length), (o[i] = !0), i++);
+                    else if (e.substring(c, c + n.length) === n) ((c += n.length), (o[i] = !1), i++);
                     else throw new ev("illegal character encountered: " + e.substring(c));
                 if (i > a) {
                     if (-1 === s) s = i - a;
@@ -1263,12 +1263,12 @@ var ex = (function () {
                     o < i;
                     o++
                 )
-                    (r = this.getRow(o, r)),
+                    ((r = this.getRow(o, r)),
                         (n = this.getRow(e - 1 - o, n)),
                         r.reverse(),
                         n.reverse(),
                         this.setRow(o, n),
-                        this.setRow(e - 1 - o, r);
+                        this.setRow(e - 1 - o, r));
             }),
             (t.prototype.getEnclosingRectangle = function () {
                 for (
@@ -1288,11 +1288,11 @@ var ex = (function () {
                         var f = n[u * r + c];
                         if (0 !== f) {
                             if ((u < i && (i = u), u > s && (s = u), 32 * c < o)) {
-                                for (var h = 0; f << (31 - h) == 0; ) h++;
+                                for (var h = 0; f << (31 - h) == 0;) h++;
                                 32 * c + h < o && (o = 32 * c + h);
                             }
                             if (32 * c + 31 > a) {
-                                for (var h = 31; f >>> h == 0; ) h--;
+                                for (var h = 31; f >>> h == 0;) h--;
                                 32 * c + h > a && (a = 32 * c + h);
                             }
                         }
@@ -1300,16 +1300,16 @@ var ex = (function () {
                 return a < o || s < i ? null : Int32Array.from([o, i, a - o + 1, s - i + 1]);
             }),
             (t.prototype.getTopLeftOnBit = function () {
-                for (var t = this.rowSize, e = this.bits, r = 0; r < e.length && 0 === e[r]; ) r++;
+                for (var t = this.rowSize, e = this.bits, r = 0; r < e.length && 0 === e[r];) r++;
                 if (r === e.length) return null;
-                for (var n = r / t, o = (r % t) * 32, i = e[r], a = 0; i << (31 - a) == 0; ) a++;
-                return (o += a), Int32Array.from([o, n]);
+                for (var n = r / t, o = (r % t) * 32, i = e[r], a = 0; i << (31 - a) == 0;) a++;
+                return ((o += a), Int32Array.from([o, n]));
             }),
             (t.prototype.getBottomRightOnBit = function () {
-                for (var t = this.rowSize, e = this.bits, r = e.length - 1; r >= 0 && 0 === e[r]; ) r--;
+                for (var t = this.rowSize, e = this.bits, r = e.length - 1; r >= 0 && 0 === e[r];) r--;
                 if (r < 0) return null;
-                for (var n = Math.floor(r / t), o = 32 * Math.floor(r % t), i = e[r], a = 31; i >>> a == 0; ) a--;
-                return (o += a), Int32Array.from([o, n]);
+                for (var n = Math.floor(r / t), o = 32 * Math.floor(r % t), i = e[r], a = 31; i >>> a == 0;) a--;
+                return ((o += a), Int32Array.from([o, n]));
             }),
             (t.prototype.getWidth = function () {
                 return this.width;
@@ -1373,7 +1373,7 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            p(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (p(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eW = (function (t) {
         function e() {
@@ -1404,19 +1404,19 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            g(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (g(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ej = (function (t) {
         function e(r) {
             var n = t.call(this, r) || this;
-            return (n.luminances = e.EMPTY), (n.buckets = new Int32Array(e.LUMINANCE_BUCKETS)), n;
+            return ((n.luminances = e.EMPTY), (n.buckets = new Int32Array(e.LUMINANCE_BUCKETS)), n);
         }
         return (
             ez(e, t),
             (e.prototype.getBlackRow = function (t, r) {
                 var n = this.getLuminanceSource(),
                     o = n.getWidth();
-                null == r || r.getSize() < o ? (r = new eD(o)) : r.clear(), this.initArrays(o);
+                (null == r || r.getSize() < o ? (r = new eD(o)) : r.clear(), this.initArrays(o));
                 for (var i = n.getRow(t, this.luminances), a = this.buckets, s = 0; s < o; s++)
                     a[(255 & i[s]) >> e.LUMINANCE_SHIFT]++;
                 var u = e.estimateBlackPoint(a);
@@ -1424,7 +1424,7 @@ var ex = (function () {
                 else
                     for (var c = 255 & i[0], f = 255 & i[1], s = 1; s < o - 1; s++) {
                         var h = 255 & i[s + 1];
-                        (4 * f - c - h) / 2 < u && r.set(s), (c = f), (f = h);
+                        ((4 * f - c - h) / 2 < u && r.set(s), (c = f), (f = h));
                     }
                 return r;
             }),
@@ -1462,7 +1462,7 @@ var ex = (function () {
             }),
             (e.estimateBlackPoint = function (t) {
                 for (var r = t.length, n = 0, o = 0, i = 0, a = 0; a < r; a++)
-                    t[a] > i && ((o = a), (i = t[a])), t[a] > n && (n = t[a]);
+                    (t[a] > i && ((o = a), (i = t[a])), t[a] > n && (n = t[a]));
                 for (var s = 0, u = 0, a = 0; a < r; a++) {
                     var c = a - o,
                         f = t[a] * c * c;
@@ -1470,7 +1470,7 @@ var ex = (function () {
                 }
                 if (o > s) {
                     var h = o;
-                    (o = s), (s = h);
+                    ((o = s), (s = h));
                 }
                 if (s - o <= r / 16) throw new eW();
                 for (var l = s - 1, d = -1, a = s - 1; a > o; a--) {
@@ -1503,12 +1503,12 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            y(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (y(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eZ = (function (t) {
         function e(e) {
             var r = t.call(this, e) || this;
-            return (r.matrix = null), r;
+            return ((r.matrix = null), r);
         }
         return (
             eY(e, t),
@@ -1525,7 +1525,7 @@ var ex = (function () {
                     (o & e.BLOCK_SIZE_MASK) != 0 && s++;
                     var u = e.calculateBlackPoints(i, a, s, n, o),
                         c = new eX(n, o);
-                    e.calculateThresholdForBlock(i, a, s, n, o, u, c), (this.matrix = c);
+                    (e.calculateThresholdForBlock(i, a, s, n, o, u, c), (this.matrix = c));
                 } else this.matrix = t.prototype.getBlackMatrix.call(this);
                 return this.matrix;
             }),
@@ -1566,7 +1566,7 @@ var ex = (function () {
                         for (var d = 0, p = 255, g = 0, y = 0, w = f * o + l; y < e.BLOCK_SIZE; y++, w += o) {
                             for (var v = 0; v < e.BLOCK_SIZE; v++) {
                                 var _ = 255 & t[w + v];
-                                (d += _), _ < p && (p = _), _ > g && (g = _);
+                                ((d += _), _ < p && (p = _), _ > g && (g = _));
                             }
                             if (g - p > e.MIN_DYNAMIC_RANGE)
                                 for (y++, w += o; y < e.BLOCK_SIZE; y++, w += o)
@@ -1592,7 +1592,7 @@ var ex = (function () {
     })(ej),
     eK = (function () {
         function t(t, e) {
-            (this.width = t), (this.height = e);
+            ((this.width = t), (this.height = e));
         }
         return (
             (t.prototype.getWidth = function () {
@@ -1621,7 +1621,7 @@ var ex = (function () {
                     for (var n = this.getRow(r, t), o = 0; o < this.width; o++) {
                         var i = 255 & n[o],
                             a = void 0;
-                        (a = i < 64 ? "#" : i < 128 ? "+" : i < 192 ? "." : " "), e.append(a);
+                        ((a = i < 64 ? "#" : i < 128 ? "+" : i < 192 ? "." : " "), e.append(a));
                     }
                     e.append("\n");
                 }
@@ -1646,12 +1646,12 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            w(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (w(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     eQ = (function (t) {
         function e(e) {
             var r = t.call(this, e.getWidth(), e.getHeight()) || this;
-            return (r.delegate = e), r;
+            return ((r.delegate = e), r);
         }
         return (
             eq(e, t),
@@ -1709,13 +1709,15 @@ var ex = (function () {
             function r() {
                 this.constructor = t;
             }
-            v(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (v(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     e$ = (function (t) {
         function e(r, n) {
             void 0 === n && (n = !1);
             var o = t.call(this, r.width, r.height) || this;
-            return (o.canvas = r), (o.tempCanvasElement = null), (o.buffer = e.makeBufferFromCanvasImageData(r, n)), o;
+            return (
+                (o.canvas = r), (o.tempCanvasElement = null), (o.buffer = e.makeBufferFromCanvasImageData(r, n)), o
+            );
         }
         return (
             eJ(e, t),
@@ -1773,21 +1775,21 @@ var ex = (function () {
                 return !0;
             }),
             (e.prototype.crop = function (e, r, n, o) {
-                return t.prototype.crop.call(this, e, r, n, o), this;
+                return (t.prototype.crop.call(this, e, r, n, o), this);
             }),
             (e.prototype.isRotateSupported = function () {
                 return !0;
             }),
             (e.prototype.rotateCounterClockwise = function () {
-                return this.rotate(-90), this;
+                return (this.rotate(-90), this);
             }),
             (e.prototype.rotateCounterClockwise45 = function () {
-                return this.rotate(-45), this;
+                return (this.rotate(-45), this);
             }),
             (e.prototype.getTempCanvasElement = function () {
                 if (null === this.tempCanvasElement) {
                     var t = this.canvas.ownerDocument.createElement("canvas");
-                    (t.width = this.canvas.width), (t.height = this.canvas.height), (this.tempCanvasElement = t);
+                    ((t.width = this.canvas.width), (t.height = this.canvas.height), (this.tempCanvasElement = t));
                 }
                 return this.tempCanvasElement;
             }),
@@ -1819,7 +1821,7 @@ var ex = (function () {
     })(eK),
     e1 = (function () {
         function t(t, e, r) {
-            (this.deviceId = t), (this.label = e), (this.kind = "videoinput"), (this.groupId = r || void 0);
+            ((this.deviceId = t), (this.label = e), (this.kind = "videoinput"), (this.groupId = r || void 0));
         }
         return (
             (t.prototype.toJSON = function () {
@@ -1884,7 +1886,7 @@ var ex = (function () {
             return function (s) {
                 var u = [i, s];
                 if (r) throw TypeError("Generator is already executing.");
-                for (; a; )
+                for (; a;)
                     try {
                         if (
                             ((r = 1),
@@ -1904,12 +1906,12 @@ var ex = (function () {
                                 o = u;
                                 break;
                             case 4:
-                                return a.label++, { value: u[1], done: !1 };
+                                return (a.label++, { value: u[1], done: !1 });
                             case 5:
-                                a.label++, (n = u[1]), (u = [0]);
+                                (a.label++, (n = u[1]), (u = [0]));
                                 continue;
                             case 7:
-                                (u = a.ops.pop()), a.trys.pop();
+                                ((u = a.ops.pop()), a.trys.pop());
                                 continue;
                             default:
                                 if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === u[0] || 2 === u[0])) {
@@ -1921,19 +1923,19 @@ var ex = (function () {
                                     break;
                                 }
                                 if (6 === u[0] && a.label < o[1]) {
-                                    (a.label = o[1]), (o = u);
+                                    ((a.label = o[1]), (o = u));
                                     break;
                                 }
                                 if (o && a.label < o[2]) {
-                                    (a.label = o[2]), a.ops.push(u);
+                                    ((a.label = o[2]), a.ops.push(u));
                                     break;
                                 }
-                                o[2] && a.ops.pop(), a.trys.pop();
+                                (o[2] && a.ops.pop(), a.trys.pop());
                                 continue;
                         }
                         u = e.call(t, a);
                     } catch (t) {
-                        (u = [6, t]), (n = 0);
+                        ((u = [6, t]), (n = 0));
                     } finally {
                         r = o = 0;
                     }
@@ -1950,20 +1952,20 @@ var ex = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     e4 = (function () {
         function t(t, e, r) {
-            void 0 === e && (e = 500),
+            (void 0 === e && (e = 500),
                 (this.reader = t),
                 (this.timeBetweenScansMillis = e),
                 (this._hints = r),
                 (this._stopContinuousDecode = !1),
                 (this._stopAsyncDecode = !1),
-                (this._timeBetweenDecodingAttempts = 0);
+                (this._timeBetweenDecodingAttempts = 0));
         }
         return (
             Object.defineProperty(t.prototype, "hasNavigator", {
@@ -2019,17 +2021,17 @@ var ex = (function () {
                                     throw Error("Can't enumerate devices, method not supported.");
                                 return [4, navigator.mediaDevices.enumerateDevices()];
                             case 1:
-                                (t = l.sent()), (e = []);
+                                ((t = l.sent()), (e = []));
                                 try {
                                     for (n = (r = e3(t)).next(); !n.done; n = r.next())
-                                        (o = n.value),
+                                        ((o = n.value),
                                             (i = "video" === o.kind ? "videoinput" : o.kind),
                                             "videoinput" === i &&
                                                 ((a = o.deviceId || o.id),
                                                 (s = o.label || "Video device " + (e.length + 1)),
                                                 (u = o.groupId),
                                                 (c = { deviceId: a, label: s, kind: i, groupId: u }),
-                                                e.push(c));
+                                                e.push(c)));
                                 } catch (t) {
                                     f = { error: t };
                                 } finally {
@@ -2117,7 +2119,7 @@ var ex = (function () {
                             case 0:
                                 return [4, navigator.mediaDevices.getUserMedia(t)];
                             case 1:
-                                return (r = n.sent()), [4, this.decodeOnceFromStream(r, e)];
+                                return ((r = n.sent()), [4, this.decodeOnceFromStream(r, e)]);
                             case 2:
                                 return [2, n.sent()];
                         }
@@ -2130,9 +2132,9 @@ var ex = (function () {
                     return e0(this, function (n) {
                         switch (n.label) {
                             case 0:
-                                return this.reset(), [4, this.attachStreamToVideo(t, e)];
+                                return (this.reset(), [4, this.attachStreamToVideo(t, e)]);
                             case 1:
-                                return (r = n.sent()), [4, this.decodeOnce(r)];
+                                return ((r = n.sent()), [4, this.decodeOnce(r)]);
                             case 2:
                                 return [2, n.sent()];
                         }
@@ -2175,7 +2177,7 @@ var ex = (function () {
                             case 0:
                                 return [4, navigator.mediaDevices.getUserMedia(t)];
                             case 1:
-                                return (n = o.sent()), [4, this.decodeFromStream(n, e, r)];
+                                return ((n = o.sent()), [4, this.decodeFromStream(n, e, r)]);
                             case 2:
                                 return [2, o.sent()];
                         }
@@ -2188,9 +2190,9 @@ var ex = (function () {
                     return e0(this, function (o) {
                         switch (o.label) {
                             case 0:
-                                return this.reset(), [4, this.attachStreamToVideo(t, e)];
+                                return (this.reset(), [4, this.attachStreamToVideo(t, e)]);
                             case 1:
-                                return (n = o.sent()), [4, this.decodeContinuously(n, r)];
+                                return ((n = o.sent()), [4, this.decodeContinuously(n, r)]);
                             case 2:
                                 return [2, o.sent()];
                         }
@@ -2217,7 +2219,7 @@ var ex = (function () {
                                     [4, this.playVideoOnLoadAsync(r)]
                                 );
                             case 1:
-                                return n.sent(), [2, r];
+                                return (n.sent(), [2, r]);
                         }
                     });
                 });
@@ -2232,7 +2234,7 @@ var ex = (function () {
             }),
             (t.prototype.playVideoOnLoad = function (t, e) {
                 var r = this;
-                (this.videoEndedListener = function () {
+                ((this.videoEndedListener = function () {
                     return r.stopStreams();
                 }),
                     (this.videoCanPlayListener = function () {
@@ -2241,7 +2243,7 @@ var ex = (function () {
                     t.addEventListener("ended", this.videoEndedListener),
                     t.addEventListener("canplay", this.videoCanPlayListener),
                     t.addEventListener("playing", e),
-                    this.tryPlayVideo(t);
+                    this.tryPlayVideo(t));
             }),
             (t.prototype.isVideoPlaying = function (t) {
                 return t.currentTime > 0 && !t.paused && !t.ended && t.readyState > 2;
@@ -2252,14 +2254,14 @@ var ex = (function () {
                         switch (e.label) {
                             case 0:
                                 if (this.isVideoPlaying(t))
-                                    return console.warn("Trying to play video that is already playing."), [2];
+                                    return (console.warn("Trying to play video that is already playing."), [2]);
                                 e.label = 1;
                             case 1:
-                                return e.trys.push([1, 3, , 4]), [4, t.play()];
+                                return (e.trys.push([1, 3, , 4]), [4, t.play()]);
                             case 2:
-                                return e.sent(), [3, 4];
+                                return (e.sent(), [3, 4]);
                             case 3:
-                                return e.sent(), console.warn("It was not possible to play the video."), [3, 4];
+                                return (e.sent(), console.warn("It was not possible to play the video."), [3, 4]);
                             case 4:
                                 return [2];
                         }
@@ -2309,7 +2311,7 @@ var ex = (function () {
                 if (!t) throw new ey("A video element must be provided.");
                 this.reset();
                 var e = this.prepareVideoElement(t);
-                return (this.videoElement = e), e;
+                return ((this.videoElement = e), e);
             }),
             (t.prototype.decodeFromImageUrl = function (t) {
                 if (!t) throw new ey("An URL must be provided.");
@@ -2317,29 +2319,29 @@ var ex = (function () {
                 var e = this.prepareImageElement();
                 this.imageElement = e;
                 var r = this._decodeOnLoadImage(e);
-                return (e.src = t), r;
+                return ((e.src = t), r);
             }),
             (t.prototype.decodeFromVideoUrl = function (t) {
                 if (!t) throw new ey("An URL must be provided.");
                 this.reset();
                 var e = this.prepareVideoElement(),
                     r = this.decodeFromVideoElement(e);
-                return (e.src = t), r;
+                return ((e.src = t), r);
             }),
             (t.prototype.decodeFromVideoUrlContinuously = function (t, e) {
                 if (!t) throw new ey("An URL must be provided.");
                 this.reset();
                 var r = this.prepareVideoElement(),
                     n = this.decodeFromVideoElementContinuously(r, e);
-                return (r.src = t), n;
+                return ((r.src = t), n);
             }),
             (t.prototype._decodeOnLoadImage = function (t) {
                 var e = this;
                 return new Promise(function (r, n) {
-                    (e.imageLoadedListener = function () {
+                    ((e.imageLoadedListener = function () {
                         return e.decodeOnce(t, !1, !0).then(r, n);
                     }),
-                        t.addEventListener("load", e.imageLoadedListener);
+                        t.addEventListener("load", e.imageLoadedListener));
                 });
             }),
             (t.prototype._decodeOnLoadVideo = function (t) {
@@ -2349,7 +2351,7 @@ var ex = (function () {
                             case 0:
                                 return [4, this.playVideoOnLoadAsync(t)];
                             case 1:
-                                return e.sent(), [4, this.decodeOnce(t)];
+                                return (e.sent(), [4, this.decodeOnce(t)]);
                             case 2:
                                 return [2, e.sent()];
                         }
@@ -2363,7 +2365,7 @@ var ex = (function () {
                             case 0:
                                 return [4, this.playVideoOnLoadAsync(t)];
                             case 1:
-                                return r.sent(), this.decodeContinuously(t, e), [2];
+                                return (r.sent(), this.decodeContinuously(t, e), [2]);
                         }
                     });
                 });
@@ -2396,11 +2398,11 @@ var ex = (function () {
             }),
             (t.prototype.decodeOnce = function (t, e, r) {
                 var n = this;
-                void 0 === e && (e = !0), void 0 === r && (r = !0), (this._stopAsyncDecode = !1);
+                (void 0 === e && (e = !0), void 0 === r && (r = !0), (this._stopAsyncDecode = !1));
                 var o = function (i, a) {
                     if (n._stopAsyncDecode) {
-                        a(new eW("Video stream has ended before any code could be detected.")),
-                            (n._stopAsyncDecode = void 0);
+                        (a(new eW("Video stream has ended before any code could be detected.")),
+                            (n._stopAsyncDecode = void 0));
                         return;
                     }
                     try {
@@ -2427,7 +2429,7 @@ var ex = (function () {
                     }
                     try {
                         var o = r.decode(t);
-                        e(o, null), setTimeout(n, r.timeBetweenScansMillis);
+                        (e(o, null), setTimeout(n, r.timeBetweenScansMillis));
                     } catch (t) {
                         e(null, t);
                         var i = t instanceof eC || t instanceof eB,
@@ -2470,7 +2472,7 @@ var ex = (function () {
                 return this.captureCanvas;
             }),
             (t.prototype.drawFrameOnCanvas = function (t, e, r) {
-                void 0 === e &&
+                (void 0 === e &&
                     (e = {
                         sx: 0,
                         sy: 0,
@@ -2482,10 +2484,10 @@ var ex = (function () {
                         dHeight: t.videoHeight,
                     }),
                     void 0 === r && (r = this.captureCanvasContext),
-                    r.drawImage(t, e.sx, e.sy, e.sWidth, e.sHeight, e.dx, e.dy, e.dWidth, e.dHeight);
+                    r.drawImage(t, e.sx, e.sy, e.sWidth, e.sHeight, e.dx, e.dy, e.dWidth, e.dHeight));
             }),
             (t.prototype.drawImageOnCanvas = function (t, e, r) {
-                void 0 === e &&
+                (void 0 === e &&
                     (e = {
                         sx: 0,
                         sy: 0,
@@ -2497,13 +2499,13 @@ var ex = (function () {
                         dHeight: t.naturalHeight,
                     }),
                     void 0 === r && (r = this.captureCanvasContext),
-                    r.drawImage(t, e.sx, e.sy, e.sWidth, e.sHeight, e.dx, e.dy, e.dWidth, e.dHeight);
+                    r.drawImage(t, e.sx, e.sy, e.sWidth, e.sHeight, e.dx, e.dy, e.dWidth, e.dHeight));
             }),
             (t.prototype.decodeBitmap = function (t) {
                 return this.reader.decode(t, this._hints);
             }),
             (t.prototype.createCaptureCanvas = function (t) {
-                if ("u" < typeof document) return this._destroyCaptureCanvas(), null;
+                if ("u" < typeof document) return (this._destroyCaptureCanvas(), null);
                 var e,
                     r,
                     n = document.createElement("canvas");
@@ -2521,19 +2523,19 @@ var ex = (function () {
                 );
             }),
             (t.prototype.stopStreams = function () {
-                this.stream &&
+                (this.stream &&
                     (this.stream.getVideoTracks().forEach(function (t) {
                         return t.stop();
                     }),
                     (this.stream = void 0)),
                     !1 === this._stopAsyncDecode && this.stopAsyncDecode(),
-                    !1 === this._stopContinuousDecode && this.stopContinuousDecode();
+                    !1 === this._stopContinuousDecode && this.stopContinuousDecode());
             }),
             (t.prototype.reset = function () {
-                this.stopStreams(),
+                (this.stopStreams(),
                     this._destroyVideoElement(),
                     this._destroyImageElement(),
-                    this._destroyCaptureCanvas();
+                    this._destroyCaptureCanvas());
             }),
             (t.prototype._destroyVideoElement = function () {
                 this.videoElement &&
@@ -2555,7 +2557,7 @@ var ex = (function () {
                     (this.imageElement = void 0));
             }),
             (t.prototype._destroyCaptureCanvas = function () {
-                (this.captureCanvasContext = void 0), (this.captureCanvas = void 0);
+                ((this.captureCanvasContext = void 0), (this.captureCanvas = void 0));
             }),
             (t.prototype.addVideoSource = function (t, e) {
                 try {
@@ -2577,7 +2579,7 @@ var ex = (function () {
     })(),
     e8 = (function () {
         function t(t, e, r, n, o, i) {
-            void 0 === r && (r = null == e ? 0 : 8 * e.length),
+            (void 0 === r && (r = null == e ? 0 : 8 * e.length),
                 void 0 === i && (i = eE.currentTimeMillis()),
                 (this.text = t),
                 (this.rawBytes = e),
@@ -2591,7 +2593,7 @@ var ex = (function () {
                 (this.resultPoints = n),
                 (this.format = o),
                 (this.resultMetadata = null),
-                null == i ? (this.timestamp = eE.currentTimeMillis()) : (this.timestamp = i);
+                null == i ? (this.timestamp = eE.currentTimeMillis()) : (this.timestamp = i));
         }
         return (
             (t.prototype.getText = function () {
@@ -2613,7 +2615,7 @@ var ex = (function () {
                 return this.resultMetadata;
             }),
             (t.prototype.putMetadata = function (t, e) {
-                null === this.resultMetadata && (this.resultMetadata = new Map()), this.resultMetadata.set(t, e);
+                (null === this.resultMetadata && (this.resultMetadata = new Map()), this.resultMetadata.set(t, e));
             }),
             (t.prototype.putAllMetadata = function (t) {
                 null !== t &&
@@ -2624,9 +2626,9 @@ var ex = (function () {
                 if (null === e) this.resultPoints = t;
                 else if (null !== t && t.length > 0) {
                     var r = Array(e.length + t.length);
-                    eE.arraycopy(e, 0, r, 0, e.length),
+                    (eE.arraycopy(e, 0, r, 0, e.length),
                         eE.arraycopy(t, 0, r, e.length, t.length),
-                        (this.resultPoints = r);
+                        (this.resultPoints = r));
                 }
             }),
             (t.prototype.getTimestamp = function () {
@@ -2638,7 +2640,7 @@ var ex = (function () {
             t
         );
     })();
-((_ = t1 || (t1 = {}))[(_.AZTEC = 0)] = "AZTEC"),
+(((_ = t1 || (t1 = {}))[(_.AZTEC = 0)] = "AZTEC"),
     (_[(_.CODABAR = 1)] = "CODABAR"),
     (_[(_.CODE_39 = 2)] = "CODE_39"),
     (_[(_.CODE_93 = 3)] = "CODE_93"),
@@ -2654,9 +2656,9 @@ var ex = (function () {
     (_[(_.RSS_EXPANDED = 13)] = "RSS_EXPANDED"),
     (_[(_.UPC_A = 14)] = "UPC_A"),
     (_[(_.UPC_E = 15)] = "UPC_E"),
-    (_[(_.UPC_EAN_EXTENSION = 16)] = "UPC_EAN_EXTENSION");
+    (_[(_.UPC_EAN_EXTENSION = 16)] = "UPC_EAN_EXTENSION"));
 let e6 = t1;
-((m = t2 || (t2 = {}))[(m.OTHER = 0)] = "OTHER"),
+(((m = t2 || (t2 = {}))[(m.OTHER = 0)] = "OTHER"),
     (m[(m.ORIENTATION = 1)] = "ORIENTATION"),
     (m[(m.BYTE_SEGMENTS = 2)] = "BYTE_SEGMENTS"),
     (m[(m.ERROR_CORRECTION_LEVEL = 3)] = "ERROR_CORRECTION_LEVEL"),
@@ -2666,11 +2668,11 @@ let e6 = t1;
     (m[(m.UPC_EAN_EXTENSION = 7)] = "UPC_EAN_EXTENSION"),
     (m[(m.PDF417_EXTRA_METADATA = 8)] = "PDF417_EXTRA_METADATA"),
     (m[(m.STRUCTURED_APPEND_SEQUENCE = 9)] = "STRUCTURED_APPEND_SEQUENCE"),
-    (m[(m.STRUCTURED_APPEND_PARITY = 10)] = "STRUCTURED_APPEND_PARITY");
+    (m[(m.STRUCTURED_APPEND_PARITY = 10)] = "STRUCTURED_APPEND_PARITY"));
 let e5 = t2;
 var e7 = (function () {
         function t(t, e, r, n, o, i) {
-            void 0 === o && (o = -1),
+            (void 0 === o && (o = -1),
                 void 0 === i && (i = -1),
                 (this.rawBytes = t),
                 (this.text = e),
@@ -2678,7 +2680,7 @@ var e7 = (function () {
                 (this.ecLevel = n),
                 (this.structuredAppendSequenceNumber = o),
                 (this.structuredAppendParity = i),
-                (this.numBits = null == t ? 0 : 8 * t.length);
+                (this.numBits = null == t ? 0 : 8 * t.length));
         }
         return (
             (t.prototype.getRawBytes = function () {
@@ -2751,7 +2753,7 @@ var e7 = (function () {
             this.field = t;
             var r = e.length;
             if (r > 1 && 0 === e[0]) {
-                for (var n = 1; n < r && 0 === e[n]; ) n++;
+                for (var n = 1; n < r && 0 === e[n];) n++;
                 n === r
                     ? (this.coefficients = Int32Array.from([0]))
                     : ((this.coefficients = new Int32Array(r - n)),
@@ -2795,7 +2797,7 @@ var e7 = (function () {
                     n = e.coefficients;
                 if (r.length > n.length) {
                     var o = r;
-                    (r = n), (n = o);
+                    ((r = n), (n = o));
                 }
                 var i = new Int32Array(n.length),
                     a = n.length - r.length;
@@ -2861,7 +2863,7 @@ var e7 = (function () {
                         s = e.multiply(n.getCoefficient(n.getDegree()), i),
                         u = t.multiplyByMonomial(a, s),
                         c = e.buildMonomial(a, s);
-                    (r = r.addOrSubtract(c)), (n = n.addOrSubtract(u));
+                    ((r = r.addOrSubtract(c)), (n = n.addOrSubtract(u)));
                 }
                 return [r, n];
             }),
@@ -2897,13 +2899,13 @@ var e7 = (function () {
             function r() {
                 this.constructor = t;
             }
-            C(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (C(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rr = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return re(e, t), (e.kind = "ArithmeticException"), e;
+        return (re(e, t), (e.kind = "ArithmeticException"), e);
     })(ep),
     rn =
         ((A = function (t, e) {
@@ -2921,14 +2923,14 @@ var e7 = (function () {
             function r() {
                 this.constructor = t;
             }
-            A(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (A(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ro = (function (t) {
         function e(e, r, n) {
             var o = t.call(this) || this;
-            (o.primitive = e), (o.size = r), (o.generatorBase = n);
+            ((o.primitive = e), (o.size = r), (o.generatorBase = n));
             for (var i = new Int32Array(r), a = 1, s = 0; s < r; s++)
-                (i[s] = a), (a *= 2) >= r && ((a ^= e), (a &= r - 1));
+                ((i[s] = a), (a *= 2) >= r && ((a ^= e), (a &= r - 1)));
             o.expTable = i;
             for (var u = new Int32Array(r), s = 0; s < r - 1; s++) u[i[s]] = s;
             return (
@@ -2950,7 +2952,7 @@ var e7 = (function () {
                 if (t < 0) throw new ev();
                 if (0 === e) return this.zero;
                 var r = new Int32Array(t + 1);
-                return (r[0] = e), new rt(this, r);
+                return ((r[0] = e), new rt(this, r));
             }),
             (e.prototype.inverse = function (t) {
                 if (0 === t) throw new rr();
@@ -2998,13 +3000,13 @@ var e7 = (function () {
             function r() {
                 this.constructor = t;
             }
-            E(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (E(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ra = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return ri(e, t), (e.kind = "ReedSolomonException"), e;
+        return (ri(e, t), (e.kind = "ReedSolomonException"), e);
     })(ep),
     rs =
         ((I = function (t, e) {
@@ -3022,13 +3024,13 @@ var e7 = (function () {
             function r() {
                 this.constructor = t;
             }
-            I(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (I(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ru = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return rs(e, t), (e.kind = "IllegalStateException"), e;
+        return (rs(e, t), (e.kind = "IllegalStateException"), e);
     })(ep),
     rc = (function () {
         function t(t) {
@@ -3038,7 +3040,7 @@ var e7 = (function () {
             (t.prototype.decode = function (t, e) {
                 for (var r = this.field, n = new rt(r, t), o = new Int32Array(e), i = !0, a = 0; a < e; a++) {
                     var s = n.evaluateAt(r.exp(a + r.getGeneratorBase()));
-                    (o[o.length - 1 - a] = s), 0 !== s && (i = !1);
+                    ((o[o.length - 1 - a] = s), 0 !== s && (i = !1));
                 }
                 if (!i)
                     for (
@@ -3060,7 +3062,7 @@ var e7 = (function () {
             (t.prototype.runEuclideanAlgorithm = function (t, e, r) {
                 if (t.getDegree() < e.getDegree()) {
                     var n = t;
-                    (t = e), (e = n);
+                    ((t = e), (e = n));
                 }
                 for (
                     var o = this.field, i = t, a = e, s = o.getZero(), u = o.getOne();
@@ -3076,7 +3078,8 @@ var e7 = (function () {
                     ) {
                         var p = a.getDegree() - i.getDegree(),
                             g = o.multiply(a.getCoefficient(a.getDegree()), d);
-                        (h = h.addOrSubtract(o.buildMonomial(p, g))), (a = a.addOrSubtract(i.multiplyByMonomial(p, g)));
+                        ((h = h.addOrSubtract(o.buildMonomial(p, g))),
+                            (a = a.addOrSubtract(i.multiplyByMonomial(p, g))));
                     }
                     if (((u = h.multiply(s).addOrSubtract(f)), a.getDegree() >= i.getDegree()))
                         throw new ru("Division algorithm failed to reduce polynomial?");
@@ -3102,20 +3105,20 @@ var e7 = (function () {
                                 f = (1 & c) == 0 ? 1 | c : -2 & c;
                             s = o.multiply(s, f);
                         }
-                    (n[i] = o.multiply(t.evaluateAt(a), o.inverse(s))),
-                        0 !== o.getGeneratorBase() && (n[i] = o.multiply(n[i], a));
+                    ((n[i] = o.multiply(t.evaluateAt(a), o.inverse(s))),
+                        0 !== o.getGeneratorBase() && (n[i] = o.multiply(n[i], a)));
                 }
                 return n;
             }),
             t
         );
     })();
-((S = t0 || (t0 = {}))[(S.UPPER = 0)] = "UPPER"),
+(((S = t0 || (t0 = {}))[(S.UPPER = 0)] = "UPPER"),
     (S[(S.LOWER = 1)] = "LOWER"),
     (S[(S.MIXED = 2)] = "MIXED"),
     (S[(S.DIGIT = 3)] = "DIGIT"),
     (S[(S.PUNCT = 4)] = "PUNCT"),
-    (S[(S.BINARY = 5)] = "BINARY");
+    (S[(S.BINARY = 5)] = "BINARY"));
 var rf = (function () {
         function t() {}
         return (
@@ -3125,19 +3128,19 @@ var rf = (function () {
                     n = this.extractBits(r),
                     o = this.correctBits(n),
                     i = new e7(t.convertBoolArrayToByteArray(o), t.getEncodedData(o), null, null);
-                return i.setNumBits(o.length), i;
+                return (i.setNumBits(o.length), i);
             }),
             (t.highLevelDecode = function (t) {
                 return this.getEncodedData(t);
             }),
             (t.getEncodedData = function (e) {
-                for (var r = e.length, n = t0.UPPER, o = t0.UPPER, i = "", a = 0; a < r; )
+                for (var r = e.length, n = t0.UPPER, o = t0.UPPER, i = "", a = 0; a < r;)
                     if (o === t0.BINARY) {
                         if (r - a < 5) break;
                         var s = t.readCode(e, a, 5);
                         if (((a += 5), 0 === s)) {
                             if (r - a < 11) break;
-                            (s = t.readCode(e, a, 11) + 31), (a += 11);
+                            ((s = t.readCode(e, a, 11) + 31), (a += 11));
                         }
                         for (var u = 0; u < s; u++) {
                             if (r - a < 8) {
@@ -3145,7 +3148,7 @@ var rf = (function () {
                                 break;
                             }
                             var c = t.readCode(e, a, 8);
-                            (i += eH.castAsNonUtf8Char(c)), (a += 8);
+                            ((i += eH.castAsNonUtf8Char(c)), (a += 8));
                         }
                         o = n;
                     } else {
@@ -3218,7 +3221,7 @@ var rf = (function () {
                 }
                 for (var l = Array(o * n - f), d = 0, u = 0; u < o; u++) {
                     var h = s[u];
-                    if (1 === h || h === c - 1) l.fill(h > 1, d, d + n - 1), (d += n - 1);
+                    if (1 === h || h === c - 1) (l.fill(h > 1, d, d + n - 1), (d += n - 1));
                     else for (var p = n - 1; p >= 0; --p) l[d++] = (h & (1 << p)) != 0;
                 }
                 return l;
@@ -3240,21 +3243,21 @@ var rf = (function () {
                         a++
                     ) {
                         var f = a + eN.truncDivision(a, 15);
-                        (o[u - a - 1] = c - f - 1), (o[u + a] = c + f + 1);
+                        ((o[u - a - 1] = c - f - 1), (o[u + a] = c + f + 1));
                     }
                 for (var a = 0, h = 0; a < r; a++) {
                     for (var l = (r - a) * 4 + (e ? 9 : 12), d = 2 * a, p = n - 1 - d, g = 0; g < l; g++)
                         for (var y = 2 * g, w = 0; w < 2; w++)
-                            (i[h + y + w] = t.get(o[d + w], o[d + g])),
+                            ((i[h + y + w] = t.get(o[d + w], o[d + g])),
                                 (i[h + 2 * l + y + w] = t.get(o[d + g], o[p - w])),
                                 (i[h + 4 * l + y + w] = t.get(o[p - w], o[p - g])),
-                                (i[h + 6 * l + y + w] = t.get(o[p - g], o[d + w]));
+                                (i[h + 6 * l + y + w] = t.get(o[p - g], o[d + w])));
                     h += 8 * l;
                 }
                 return i;
             }),
             (t.readCode = function (t, e, r) {
-                for (var n = 0, o = e; o < e + r; o++) (n <<= 1), t[o] && (n |= 1);
+                for (var n = 0, o = e; o < e + r; o++) ((n <<= 1), t[o] && (n |= 1));
                 return n;
             }),
             (t.readByte = function (e, r) {
@@ -3461,7 +3464,7 @@ var rf = (function () {
     })(),
     rd = (function () {
         function t(t, e) {
-            (this.x = t), (this.y = e);
+            ((this.x = t), (this.y = e));
         }
         return (
             (t.prototype.getX = function () {
@@ -3495,9 +3498,9 @@ var rf = (function () {
                     0 > this.crossProductZ(e, r, n))
                 ) {
                     var s = e;
-                    (e = n), (n = s);
+                    ((e = n), (n = s));
                 }
-                (t[0] = e), (t[1] = r), (t[2] = n);
+                ((t[0] = e), (t[1] = r), (t[2] = n));
             }),
             (t.distance = function (t, e) {
                 return rh.distance(t.x, t.y, e.x, e.y);
@@ -3512,7 +3515,7 @@ var rf = (function () {
     })(),
     rp = (function () {
         function t(t, e) {
-            (this.bits = t), (this.points = e);
+            ((this.bits = t), (this.points = e));
         }
         return (
             (t.prototype.getBits = function () {
@@ -3540,12 +3543,12 @@ var rf = (function () {
             function r() {
                 this.constructor = t;
             }
-            T(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (T(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ry = (function (t) {
         function e(e, r, n, o, i) {
             var a = t.call(this, e, r) || this;
-            return (a.compact = n), (a.nbDatablocks = o), (a.nbLayers = i), a;
+            return ((a.compact = n), (a.nbDatablocks = o), (a.nbLayers = i), a);
         }
         return (
             rg(e, t),
@@ -3563,12 +3566,12 @@ var rf = (function () {
     })(rp),
     rw = (function () {
         function t(e, r, n, o) {
-            (this.image = e),
+            ((this.image = e),
                 (this.height = e.getHeight()),
                 (this.width = e.getWidth()),
                 null == r && (r = t.INIT_SIZE),
                 null == n && (n = (e.getWidth() / 2) | 0),
-                null == o && (o = (e.getHeight() / 2) | 0);
+                null == o && (o = (e.getHeight() / 2) | 0));
             var i = (r / 2) | 0;
             if (
                 ((this.leftInit = n - i),
@@ -3598,25 +3601,25 @@ var rf = (function () {
                     i;
                 ) {
                     i = !1;
-                    for (var d = !0; (d || !s) && e < h; )
+                    for (var d = !0; (d || !s) && e < h;)
                         (d = this.containsBlackPoint(r, n, e, !1)) ? (e++, (i = !0), (s = !0)) : !s && e++;
                     if (e >= h) {
                         o = !0;
                         break;
                     }
-                    for (var p = !0; (p || !u) && n < l; )
+                    for (var p = !0; (p || !u) && n < l;)
                         (p = this.containsBlackPoint(t, e, n, !0)) ? (n++, (i = !0), (u = !0)) : !u && n++;
                     if (n >= l) {
                         o = !0;
                         break;
                     }
-                    for (var g = !0; (g || !c) && t >= 0; )
+                    for (var g = !0; (g || !c) && t >= 0;)
                         (g = this.containsBlackPoint(r, n, t, !1)) ? (t--, (i = !0), (c = !0)) : !c && t--;
                     if (t < 0) {
                         o = !0;
                         break;
                     }
-                    for (var y = !0; (y || !f) && r >= 0; )
+                    for (var y = !0; (y || !f) && r >= 0;)
                         (y = this.containsBlackPoint(t, e, r, !0)) ? (r--, (i = !0), (f = !0)) : !f && r--;
                     if (r < 0) {
                         o = !0;
@@ -3687,18 +3690,18 @@ var rf = (function () {
                     var a = Math.floor(e[i]),
                         s = Math.floor(e[i + 1]);
                     if (a < -1 || a > r || s < -1 || s > n) throw new eW();
-                    (o = !1),
+                    ((o = !1),
                         -1 === a ? ((e[i] = 0), (o = !0)) : a === r && ((e[i] = r - 1), (o = !0)),
-                        -1 === s ? ((e[i + 1] = 0), (o = !0)) : s === n && ((e[i + 1] = n - 1), (o = !0));
+                        -1 === s ? ((e[i + 1] = 0), (o = !0)) : s === n && ((e[i + 1] = n - 1), (o = !0)));
                 }
                 o = !0;
                 for (var i = e.length - 2; i >= 0 && o; i -= 2) {
                     var a = Math.floor(e[i]),
                         s = Math.floor(e[i + 1]);
                     if (a < -1 || a > r || s < -1 || s > n) throw new eW();
-                    (o = !1),
+                    ((o = !1),
                         -1 === a ? ((e[i] = 0), (o = !0)) : a === r && ((e[i] = r - 1), (o = !0)),
-                        -1 === s ? ((e[i + 1] = 0), (o = !0)) : s === n && ((e[i + 1] = n - 1), (o = !0));
+                        -1 === s ? ((e[i + 1] = 0), (o = !0)) : s === n && ((e[i + 1] = n - 1), (o = !0)));
                 }
             }),
             t
@@ -3706,7 +3709,7 @@ var rf = (function () {
     })(),
     r_ = (function () {
         function t(t, e, r, n, o, i, a, s, u) {
-            (this.a11 = t),
+            ((this.a11 = t),
                 (this.a21 = e),
                 (this.a31 = r),
                 (this.a12 = n),
@@ -3714,7 +3717,7 @@ var rf = (function () {
                 (this.a32 = i),
                 (this.a13 = a),
                 (this.a23 = s),
-                (this.a33 = u);
+                (this.a33 = u));
         }
         return (
             (t.quadrilateralToQuadrilateral = function (e, r, n, o, i, a, s, u, c, f, h, l, d, p, g, y) {
@@ -3740,7 +3743,7 @@ var rf = (function () {
                     var l = t[h],
                         d = t[h + 1],
                         p = o * l + s * d + f;
-                    (t[h] = (r * l + i * d + u) / p), (t[h + 1] = (n * l + a * d + c) / p);
+                    ((t[h] = (r * l + i * d + u) / p), (t[h + 1] = (n * l + a * d + c) / p));
                 }
             }),
             (t.prototype.transformPointsWithValues = function (t, e) {
@@ -3762,7 +3765,7 @@ var rf = (function () {
                     var d = t[l],
                         p = e[l],
                         g = o * d + s * p + f;
-                    (t[l] = (r * d + i * p + u) / g), (e[l] = (n * d + a * p + c) / g);
+                    ((t[l] = (r * d + i * p + u) / g), (e[l] = (n * d + a * p + c) / g));
                 }
             }),
             (t.squareToQuadrilateral = function (e, r, n, o, i, a, s, u) {
@@ -3826,7 +3829,7 @@ var rf = (function () {
             function r() {
                 this.constructor = t;
             }
-            b(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (b(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rC = (function (t) {
         function e() {
@@ -3841,8 +3844,8 @@ var rf = (function () {
             (e.prototype.sampleGridWithTransform = function (t, e, r, n) {
                 if (e <= 0 || r <= 0) throw new eW();
                 for (var o = new eX(e, r), i = new Float32Array(2 * e), a = 0; a < r; a++) {
-                    for (var s = i.length, u = a + 0.5, c = 0; c < s; c += 2) (i[c] = c / 2 + 0.5), (i[c + 1] = u);
-                    n.transformPoints(i), rv.checkAndNudgePoints(t, i);
+                    for (var s = i.length, u = a + 0.5, c = 0; c < s; c += 2) ((i[c] = c / 2 + 0.5), (i[c + 1] = u));
+                    (n.transformPoints(i), rv.checkAndNudgePoints(t, i));
                     try {
                         for (var c = 0; c < s; c += 2) t.get(Math.floor(i[c]), Math.floor(i[c + 1])) && o.set(c / 2, a);
                     } catch (t) {
@@ -3869,7 +3872,7 @@ var rf = (function () {
     })(),
     rE = (function () {
         function t(t, e) {
-            (this.x = t), (this.y = e);
+            ((this.x = t), (this.y = e));
         }
         return (
             (t.prototype.toResultPoint = function () {
@@ -3886,7 +3889,7 @@ var rf = (function () {
     })(),
     rI = (function () {
         function t(t) {
-            (this.EXPECTED_CORNER_BITS = new Int32Array([3808, 476, 2107, 1799])), (this.image = t);
+            ((this.EXPECTED_CORNER_BITS = new Int32Array([3808, 476, 2107, 1799])), (this.image = t));
         }
         return (
             (t.prototype.detect = function () {
@@ -3897,7 +3900,7 @@ var rf = (function () {
                     r = this.getBullsEyeCorners(e);
                 if (t) {
                     var n = r[0];
-                    (r[0] = r[2]), (r[2] = n);
+                    ((r[0] = r[2]), (r[2] = n));
                 }
                 return (
                     this.extractParameters(r),
@@ -3945,16 +3948,16 @@ var rf = (function () {
             }),
             (t.prototype.getRotation = function (t, e) {
                 var r = 0;
-                t.forEach(function (t, n, o) {
+                (t.forEach(function (t, n, o) {
                     r = (r << 3) + (((t >> (e - 2)) << 1) + (1 & t));
                 }),
-                    (r = ((1 & r) << 11) + (r >> 1));
+                    (r = ((1 & r) << 11) + (r >> 1)));
                 for (var n = 0; n < 4; n++) if (2 >= eN.bitCount(r ^ this.EXPECTED_CORNER_BITS[n])) return n;
                 throw new eW();
             }),
             (t.prototype.getCorrectedParameterData = function (t, e) {
                 e ? ((r = 7), (n = 2)) : ((r = 10), (n = 4));
-                for (var r, n, o = r - n, i = new Int32Array(r), a = r - 1; a >= 0; --a) (i[a] = 15 & t), (t >>= 4);
+                for (var r, n, o = r - n, i = new Int32Array(r), a = r - 1; a >= 0; --a) ((i[a] = 15 & t), (t >>= 4));
                 try {
                     new rc(ro.AZTEC_PARAM).decode(i, o);
                 } catch (t) {
@@ -3980,7 +3983,7 @@ var rf = (function () {
                             (this.distancePoint(o, e) * (this.nbCenterLayers + 2));
                         if (f < 0.75 || f > 1.25 || !this.isWhiteOrBlackRectangle(a, s, u, c)) break;
                     }
-                    (e = a), (r = s), (n = u), (o = c), (i = !i);
+                    ((e = a), (r = s), (n = u), (o = c), (i = !i));
                 }
                 if (5 !== this.nbCenterLayers && 7 !== this.nbCenterLayers) throw new eW();
                 this.compact = 5 === this.nbCenterLayers;
@@ -3997,25 +4000,25 @@ var rf = (function () {
                         r,
                         n,
                         o = new rw(this.image).detect();
-                    (t = o[0]), (e = o[1]), (r = o[2]), (n = o[3]);
+                    ((t = o[0]), (e = o[1]), (r = o[2]), (n = o[3]));
                 } catch (o) {
                     var i = this.image.getWidth() / 2,
                         a = this.image.getHeight() / 2;
-                    (t = this.getFirstDifferent(new rE(i + 7, a - 7), !1, 1, -1).toResultPoint()),
+                    ((t = this.getFirstDifferent(new rE(i + 7, a - 7), !1, 1, -1).toResultPoint()),
                         (e = this.getFirstDifferent(new rE(i + 7, a + 7), !1, 1, 1).toResultPoint()),
                         (r = this.getFirstDifferent(new rE(i - 7, a + 7), !1, -1, 1).toResultPoint()),
-                        (n = this.getFirstDifferent(new rE(i - 7, a - 7), !1, -1, -1).toResultPoint());
+                        (n = this.getFirstDifferent(new rE(i - 7, a - 7), !1, -1, -1).toResultPoint()));
                 }
                 var s = rh.round((t.getX() + n.getX() + e.getX() + r.getX()) / 4),
                     u = rh.round((t.getY() + n.getY() + e.getY() + r.getY()) / 4);
                 try {
                     var o = new rw(this.image, 15, s, u).detect();
-                    (t = o[0]), (e = o[1]), (r = o[2]), (n = o[3]);
+                    ((t = o[0]), (e = o[1]), (r = o[2]), (n = o[3]));
                 } catch (o) {
-                    (t = this.getFirstDifferent(new rE(s + 7, u - 7), !1, 1, -1).toResultPoint()),
+                    ((t = this.getFirstDifferent(new rE(s + 7, u - 7), !1, 1, -1).toResultPoint()),
                         (e = this.getFirstDifferent(new rE(s + 7, u + 7), !1, 1, 1).toResultPoint()),
                         (r = this.getFirstDifferent(new rE(s - 7, u + 7), !1, -1, 1).toResultPoint()),
-                        (n = this.getFirstDifferent(new rE(s - 7, u - 7), !1, -1, -1).toResultPoint());
+                        (n = this.getFirstDifferent(new rE(s - 7, u - 7), !1, -1, -1).toResultPoint()));
                 }
                 return new rE(
                     (s = rh.round((t.getX() + n.getX() + e.getX() + r.getX()) / 4)),
@@ -4069,10 +4072,10 @@ var rf = (function () {
                 return n;
             }),
             (t.prototype.isWhiteOrBlackRectangle = function (t, e, r, n) {
-                (t = new rE(t.getX() - 3, t.getY() + 3)),
+                ((t = new rE(t.getX() - 3, t.getY() + 3)),
                     (e = new rE(e.getX() - 3, e.getY() - 3)),
                     (r = new rE(r.getX() + 3, r.getY() - 3)),
-                    (n = new rE(n.getX() + 3, n.getY() + 3));
+                    (n = new rE(n.getX() + 3, n.getY() + 3)));
                 var o = this.getColor(n, t);
                 if (0 === o) return !1;
                 var i = this.getColor(t, e);
@@ -4092,15 +4095,15 @@ var rf = (function () {
                     f < c;
                     f++
                 )
-                    (a += n), (s += o), this.image.get(rh.round(a), rh.round(s)) !== u && i++;
+                    ((a += n), (s += o), this.image.get(rh.round(a), rh.round(s)) !== u && i++);
                 var h = i / r;
                 return h > 0.1 && h < 0.9 ? 0 : h <= 0.1 === u ? 1 : -1;
             }),
             (t.prototype.getFirstDifferent = function (t, e, r, n) {
-                for (var o = t.getX() + r, i = t.getY() + n; this.isValid(o, i) && this.image.get(o, i) === e; )
-                    (o += r), (i += n);
-                for (o -= r, i -= n; this.isValid(o, i) && this.image.get(o, i) === e; ) o += r;
-                for (o -= r; this.isValid(o, i) && this.image.get(o, i) === e; ) i += n;
+                for (var o = t.getX() + r, i = t.getY() + n; this.isValid(o, i) && this.image.get(o, i) === e;)
+                    ((o += r), (i += n));
+                for (o -= r, i -= n; this.isValid(o, i) && this.image.get(o, i) === e;) o += r;
+                for (o -= r; this.isValid(o, i) && this.image.get(o, i) === e;) i += n;
                 return new rE(o, (i -= n));
             }),
             (t.prototype.expandSquare = function (t, e, r) {
@@ -4160,14 +4163,14 @@ var rf = (function () {
                     i = null;
                 try {
                     var a = n.detectMirror(!1);
-                    (o = a.getPoints()), this.reportFoundResultPoints(e, o), (i = new rf().decode(a));
+                    ((o = a.getPoints()), this.reportFoundResultPoints(e, o), (i = new rf().decode(a)));
                 } catch (t) {
                     r = t;
                 }
                 if (null == i)
                     try {
                         var a = n.detectMirror(!0);
-                        (o = a.getPoints()), this.reportFoundResultPoints(e, o), (i = new rf().decode(a));
+                        ((o = a.getPoints()), this.reportFoundResultPoints(e, o), (i = new rf().decode(a)));
                     } catch (t) {
                         if (null != r) throw r;
                         throw t;
@@ -4176,7 +4179,7 @@ var rf = (function () {
                     u = i.getByteSegments();
                 null != u && s.putMetadata(e5.BYTE_SEGMENTS, u);
                 var c = i.getECLevel();
-                return null != c && s.putMetadata(e5.ERROR_CORRECTION_LEVEL, c), s;
+                return (null != c && s.putMetadata(e5.ERROR_CORRECTION_LEVEL, c), s);
             }),
             (t.prototype.reportFoundResultPoints = function (t, e) {
                 if (null != t) {
@@ -4206,10 +4209,10 @@ function (t, e) {
     function r() {
         this.constructor = t;
     }
-    O(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+    (O(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
 })(
     function (t) {
-        return void 0 === t && (t = 500), R.call(this, new rS(), t) || this;
+        return (void 0 === t && (t = 500), R.call(this, new rS(), t) || this);
     },
     (R = e4),
 );
@@ -4225,8 +4228,8 @@ var rT = (function () {
                             n = this.doDecode(r, e),
                             o = n.getResultMetadata(),
                             i = 270;
-                        null !== o && !0 === o.get(e5.ORIENTATION) && (i += o.get(e5.ORIENTATION) % 360),
-                            n.putMetadata(e5.ORIENTATION, i);
+                        (null !== o && !0 === o.get(e5.ORIENTATION) && (i += o.get(e5.ORIENTATION) % 360),
+                            n.putMetadata(e5.ORIENTATION, i));
                         var a = n.getResultPoints();
                         if (null !== a)
                             for (var s = r.getHeight(), u = 0; u < a.length; u++)
@@ -4258,11 +4261,11 @@ var rT = (function () {
                         var p = (function (t) {
                             if (1 === t && (i.reverse(), e && !0 === e.get(eM.NEED_RESULT_POINT_CALLBACK))) {
                                 var r = new Map();
-                                e.forEach(function (t, e) {
+                                (e.forEach(function (t, e) {
                                     return r.set(e, t);
                                 }),
                                     r.delete(eM.NEED_RESULT_POINT_CALLBACK),
-                                    (e = r);
+                                    (e = r));
                             }
                             try {
                                 var o = l.decodeRow(h, i, e);
@@ -4285,21 +4288,21 @@ var rT = (function () {
                 for (var n = r.length, o = 0; o < n; o++) r[o] = 0;
                 var i = t.getSize();
                 if (e >= i) throw new eW();
-                for (var a = !t.get(e), s = 0, u = e; u < i; ) {
+                for (var a = !t.get(e), s = 0, u = e; u < i;) {
                     if (t.get(u) !== a) r[s]++;
                     else if (++s === n) break;
-                    else (r[s] = 1), (a = !a);
+                    else ((r[s] = 1), (a = !a));
                     u++;
                 }
                 if (s !== n && (s !== n - 1 || u !== i)) throw new eW();
             }),
             (t.recordPatternInReverse = function (e, r, n) {
-                for (var o = n.length, i = e.get(r); r > 0 && o >= 0; ) e.get(--r) !== i && (o--, (i = !i));
+                for (var o = n.length, i = e.get(r); r > 0 && o >= 0;) e.get(--r) !== i && (o--, (i = !i));
                 if (o >= 0) throw new eW();
                 t.recordPattern(e, r + 1, n);
             }),
             (t.patternMatchVariance = function (t, e, r) {
-                for (var n = t.length, o = 0, i = 0, a = 0; a < n; a++) (o += t[a]), (i += e[a]);
+                for (var n = t.length, o = 0, i = 0, a = 0; a < n; a++) ((o += t[a]), (i += e[a]));
                 if (o < i) return 1 / 0;
                 var s = o / i;
                 r *= s;
@@ -4331,7 +4334,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            N(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (N(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rO = (function (t) {
         function e() {
@@ -4360,9 +4363,9 @@ var rT = (function () {
                             }
                             if (f >= 0 && t.isRange(Math.max(0, a - (u - a) / 2), a, !1))
                                 return Int32Array.from([a, u, f]);
-                            (a += i[0] + i[1]), ((i = i.slice(2, i.length))[o - 1] = 0), (i[o] = 0), o--;
+                            ((a += i[0] + i[1]), ((i = i.slice(2, i.length))[o - 1] = 0), (i[o] = 0), o--);
                         } else o++;
-                        (i[o] = 1), (s = !s);
+                        ((i[o] = 1), (s = !s));
                     }
                 throw new eW();
             }),
@@ -4434,11 +4437,13 @@ var rT = (function () {
                     switch (o) {
                         case e.CODE_CODE_A:
                             if (w < 64)
-                                A === C ? (l += String.fromCharCode(32 + w)) : (l += String.fromCharCode(32 + w + 128)),
-                                    (A = !1);
+                                (A === C
+                                    ? (l += String.fromCharCode(32 + w))
+                                    : (l += String.fromCharCode(32 + w + 128)),
+                                    (A = !1));
                             else if (w < 96)
-                                A === C ? (l += String.fromCharCode(w - 64)) : (l += String.fromCharCode(w + 64)),
-                                    (A = !1);
+                                (A === C ? (l += String.fromCharCode(w - 64)) : (l += String.fromCharCode(w + 64)),
+                                    (A = !1));
                             else
                                 switch ((w !== e.CODE_STOP && (m = !1), w)) {
                                     case e.CODE_FNC_1:
@@ -4451,7 +4456,7 @@ var rT = (function () {
                                         !C && A ? ((C = !0), (A = !1)) : C && A ? ((C = !1), (A = !1)) : (A = !0);
                                         break;
                                     case e.CODE_SHIFT:
-                                        (h = !0), (o = e.CODE_CODE_B);
+                                        ((h = !0), (o = e.CODE_CODE_B));
                                         break;
                                     case e.CODE_CODE_B:
                                         o = e.CODE_CODE_B;
@@ -4465,8 +4470,10 @@ var rT = (function () {
                             break;
                         case e.CODE_CODE_B:
                             if (w < 96)
-                                A === C ? (l += String.fromCharCode(32 + w)) : (l += String.fromCharCode(32 + w + 128)),
-                                    (A = !1);
+                                (A === C
+                                    ? (l += String.fromCharCode(32 + w))
+                                    : (l += String.fromCharCode(32 + w + 128)),
+                                    (A = !1));
                             else
                                 switch ((w !== e.CODE_STOP && (m = !1), w)) {
                                     case e.CODE_FNC_1:
@@ -4479,7 +4486,7 @@ var rT = (function () {
                                         !C && A ? ((C = !0), (A = !1)) : C && A ? ((C = !1), (A = !1)) : (A = !0);
                                         break;
                                     case e.CODE_SHIFT:
-                                        (h = !0), (o = e.CODE_CODE_A);
+                                        ((h = !0), (o = e.CODE_CODE_A));
                                         break;
                                     case e.CODE_CODE_A:
                                         o = e.CODE_CODE_A;
@@ -4492,7 +4499,7 @@ var rT = (function () {
                                 }
                             break;
                         case e.CODE_CODE_C:
-                            if (w < 100) w < 10 && (l += "0"), (l += w);
+                            if (w < 100) (w < 10 && (l += "0"), (l += w));
                             else
                                 switch ((w !== e.CODE_STOP && (m = !1), w)) {
                                     case e.CODE_FNC_1:
@@ -4664,7 +4671,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            D(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (D(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rN = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -4674,14 +4681,14 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     rD = (function (t) {
         function e(e, r) {
-            void 0 === e && (e = !1), void 0 === r && (r = !1);
+            (void 0 === e && (e = !1), void 0 === r && (r = !1));
             var n = t.call(this) || this;
             return (
                 (n.usingCheckDigit = e),
@@ -4702,7 +4709,7 @@ var rT = (function () {
                     c,
                     f,
                     h = this.counters;
-                h.fill(0), (this.decodeRowResult = "");
+                (h.fill(0), (this.decodeRowResult = ""));
                 var l = e.findAsteriskPattern(r, h),
                     d = r.getNextSet(l[1]),
                     p = r.getSize();
@@ -4710,7 +4717,7 @@ var rT = (function () {
                     e.recordPattern(r, d, h);
                     var g = e.toNarrowWidePattern(h);
                     if (g < 0) throw new eW();
-                    (u = e.patternToChar(g)), (this.decodeRowResult += u), (c = d);
+                    ((u = e.patternToChar(g)), (this.decodeRowResult += u), (c = d));
                     try {
                         for (var y = ((o = void 0), rN(h)), w = y.next(); !w.done; w = y.next()) {
                             var v = w.value;
@@ -4767,9 +4774,9 @@ var rT = (function () {
                                 t.isRange(Math.max(0, a - Math.floor((c - a) / 2)), a, !1)
                             )
                                 return [a, c];
-                            (a += r[0] + r[1]), r.copyWithin(0, 2, 2 + i - 1), (r[i - 1] = 0), (r[i] = 0), i--;
+                            ((a += r[0] + r[1]), r.copyWithin(0, 2, 2 + i - 1), (r[i - 1] = 0), (r[i] = 0), i--);
                         } else i++;
-                        (r[i] = 1), (s = !s);
+                        ((r[i] = 1), (s = !s));
                     }
                 throw new eW();
             }),
@@ -4795,7 +4802,7 @@ var rT = (function () {
                             if (e) throw e.error;
                         }
                     }
-                    (i = a), (n = 0);
+                    ((i = a), (n = 0));
                     for (var f = 0, h = 0, l = 0; l < o; l++) {
                         var c = t[l];
                         c > i && ((h |= 1 << (o - 1 - l)), n++, (f += c));
@@ -4847,7 +4854,7 @@ var rT = (function () {
                                 else if ("Z" === i) a = ":";
                                 else throw new eB();
                         }
-                        (r += a), n++;
+                        ((r += a), n++);
                     } else r += o;
                 }
                 return r;
@@ -4877,7 +4884,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            M(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (M(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rP = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -4887,7 +4894,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -4895,7 +4902,7 @@ var rT = (function () {
     rB = (function (t) {
         function e() {
             var e = t.call(this) || this;
-            return (e.decodeRowResult = ""), (e.counters = new Int32Array(6)), e;
+            return ((e.decodeRowResult = ""), (e.counters = new Int32Array(6)), e);
         }
         return (
             rM(e, t),
@@ -4910,12 +4917,12 @@ var rT = (function () {
                     h = r.getNextSet(f[1]),
                     l = r.getSize(),
                     d = this.counters;
-                d.fill(0), (this.decodeRowResult = "");
+                (d.fill(0), (this.decodeRowResult = ""));
                 do {
                     e.recordPattern(r, h, d);
                     var p = this.toPattern(d);
                     if (p < 0) throw new eW();
-                    (u = this.patternToChar(p)), (this.decodeRowResult += u), (c = h);
+                    ((u = this.patternToChar(p)), (this.decodeRowResult += u), (c = h));
                     try {
                         for (var g = ((o = void 0), rP(d)), y = g.next(); !y.done; y = g.next()) {
                             var w = y.value;
@@ -4949,8 +4956,8 @@ var rT = (function () {
                     }
                 }
                 if (h === l || !r.get(h) || this.decodeRowResult.length < 2) throw new eW();
-                this.checkChecksums(this.decodeRowResult),
-                    (this.decodeRowResult = this.decodeRowResult.substring(0, this.decodeRowResult.length - 2));
+                (this.checkChecksums(this.decodeRowResult),
+                    (this.decodeRowResult = this.decodeRowResult.substring(0, this.decodeRowResult.length - 2)));
                 var C = this.decodeExtended(this.decodeRowResult),
                     A = (f[1] + f[0]) / 2,
                     E = c + v / 2;
@@ -4965,9 +4972,9 @@ var rT = (function () {
                     else {
                         if (u === s - 1) {
                             if (this.toPattern(o) === e.ASTERISK_ENCODING) return new Int32Array([i, c]);
-                            (i += o[0] + o[1]), o.copyWithin(0, 2, 2 + u - 1), (o[u - 1] = 0), (o[u] = 0), u--;
+                            ((i += o[0] + o[1]), o.copyWithin(0, 2, 2 + u - 1), (o[u - 1] = 0), (o[u] = 0), u--);
                         } else u++;
-                        (o[u] = 1), (a = !a);
+                        ((o[u] = 1), (a = !a));
                     }
                 throw new eW();
             }),
@@ -5034,18 +5041,18 @@ var rT = (function () {
                                 else if ("Z" === i) a = ":";
                                 else throw new eB();
                         }
-                        (r += a), n++;
+                        ((r += a), n++);
                     } else r += o;
                 }
                 return r;
             }),
             (e.prototype.checkChecksums = function (t) {
                 var e = t.length;
-                this.checkOneChecksum(t, e - 2, 20), this.checkOneChecksum(t, e - 1, 15);
+                (this.checkOneChecksum(t, e - 2, 20), this.checkOneChecksum(t, e - 1, 15));
             }),
             (e.prototype.checkOneChecksum = function (t, r, n) {
                 for (var o = 1, i = 0, a = r - 1; a >= 0; a--)
-                    (i += o * e.ALPHABET_STRING.indexOf(t.charAt(a))), ++o > n && (o = 1);
+                    ((i += o * e.ALPHABET_STRING.indexOf(t.charAt(a))), ++o > n && (o = 1));
                 if (t.charAt(r) !== e.ALPHABET_STRING[i % 47]) throw new eC();
             }),
             (e.ALPHABET_STRING = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*"),
@@ -5074,7 +5081,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            P(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (P(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rx = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -5084,7 +5091,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -5092,7 +5099,7 @@ var rT = (function () {
     rF = (function (t) {
         function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.narrowLineWidth = -1), e;
+            return ((e.narrowLineWidth = -1), e);
         }
         return (
             rL(e, t),
@@ -5105,7 +5112,7 @@ var rT = (function () {
                 e.decodeMiddle(r, a[1], s[0], u);
                 var c = u.toString(),
                     f = null;
-                null != n && (f = n.get(eM.ALLOWED_LENGTHS)), null == f && (f = e.DEFAULT_ALLOWED_LENGTHS);
+                (null != n && (f = n.get(eM.ALLOWED_LENGTHS)), null == f && (f = e.DEFAULT_ALLOWED_LENGTHS));
                 var h = c.length,
                     l = !1,
                     d = 0;
@@ -5134,25 +5141,25 @@ var rT = (function () {
                 var i = new Int32Array(10),
                     a = new Int32Array(5),
                     s = new Int32Array(5);
-                for (i.fill(0), a.fill(0), s.fill(0); r < n; ) {
+                for (i.fill(0), a.fill(0), s.fill(0); r < n;) {
                     rT.recordPattern(t, r, i);
                     for (var u = 0; u < 5; u++) {
                         var c = 2 * u;
-                        (a[u] = i[c]), (s[u] = i[c + 1]);
+                        ((a[u] = i[c]), (s[u] = i[c + 1]));
                     }
                     var f = e.decodeDigit(a);
-                    o.append(f.toString()),
+                    (o.append(f.toString()),
                         (f = this.decodeDigit(s)),
                         o.append(f.toString()),
                         i.forEach(function (t) {
                             r += t;
-                        });
+                        }));
                 }
             }),
             (e.prototype.decodeStart = function (t) {
                 var r = e.skipWhiteSpace(t),
                     n = e.findGuardPattern(t, r, e.START_PATTERN);
-                return (this.narrowLineWidth = (n[1] - n[0]) / 4), this.validateQuietZone(t, n[0]), n;
+                return ((this.narrowLineWidth = (n[1] - n[0]) / 4), this.validateQuietZone(t, n[0]), n);
             }),
             (e.prototype.validateQuietZone = function (t, e) {
                 var r = 10 * this.narrowLineWidth;
@@ -5178,7 +5185,7 @@ var rT = (function () {
                     }
                     this.validateQuietZone(t, n[0]);
                     var o = n[0];
-                    return (n[0] = t.getSize() - n[1]), (n[1] = t.getSize() - o), n;
+                    return ((n[0] = t.getSize() - n[1]), (n[1] = t.getSize() - o), n);
                 } finally {
                     t.reverse();
                 }
@@ -5197,9 +5204,9 @@ var rT = (function () {
                         if (u === o - 1) {
                             if (rT.patternMatchVariance(i, n, e.MAX_INDIVIDUAL_VARIANCE) < e.MAX_AVG_VARIANCE)
                                 return [c, f];
-                            (c += i[0] + i[1]), eE.arraycopy(i, 2, i, 0, u - 1), (i[u - 1] = 0), (i[u] = 0), u--;
+                            ((c += i[0] + i[1]), eE.arraycopy(i, 2, i, 0, u - 1), (i[u - 1] = 0), (i[u] = 0), u--);
                         } else u++;
-                        (i[u] = 1), (s = !s);
+                        ((i[u] = 1), (s = !s));
                     }
                 throw new eW();
             }),
@@ -5258,17 +5265,17 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            B(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (B(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rV = (function (t) {
         function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.decodeRowStringBuffer = ""), e;
+            return ((e.decodeRowStringBuffer = ""), e);
         }
         return (
             rk(e, t),
             (e.findStartGuardPattern = function (t) {
-                for (var r, n = !1, o = 0, i = Int32Array.from([0, 0, 0]); !n; ) {
+                for (var r, n = !1, o = 0, i = Int32Array.from([0, 0, 0]); !n;) {
                     i = Int32Array.from([0, 0, 0]);
                     var a = (r = e.findGuardPattern(t, o, !1, this.START_END_PATTERN, i))[0],
                         s = a - ((o = r[1]) - a);
@@ -5322,9 +5329,9 @@ var rT = (function () {
                                 return Int32Array.from([u, h]);
                             u += i[0] + i[1];
                             for (var l = i.slice(2, i.length), d = 0; d < s - 1; d++) i[d] = l[d];
-                            (i[s - 1] = 0), (i[s] = 0), s--;
+                            ((i[s - 1] = 0), (i[s] = 0), s--);
                         } else s++;
-                        (i[s] = 1), (f = !f);
+                        ((i[s] = 1), (f = !f));
                     }
                 throw new eW();
             }),
@@ -5366,16 +5373,16 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     rU = (function () {
         function t() {
-            (this.CHECK_DIGIT_ENCODINGS = [24, 20, 18, 17, 12, 6, 3, 10, 9, 5]),
+            ((this.CHECK_DIGIT_ENCODINGS = [24, 20, 18, 17, 12, 6, 3, 10, 9, 5]),
                 (this.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])),
-                (this.decodeRowStringBuffer = "");
+                (this.decodeRowStringBuffer = ""));
         }
         return (
             (t.prototype.decodeRow = function (e, r, n) {
@@ -5391,13 +5398,13 @@ var rT = (function () {
                         e6.UPC_EAN_EXTENSION,
                         new Date().getTime(),
                     );
-                return null != s && u.putAllMetadata(s), u;
+                return (null != s && u.putAllMetadata(s), u);
             }),
             (t.prototype.decodeMiddle = function (e, r, n) {
                 var o,
                     i,
                     a = this.decodeMiddleCounters;
-                (a[0] = 0), (a[1] = 0), (a[2] = 0), (a[3] = 0);
+                ((a[0] = 0), (a[1] = 0), (a[2] = 0), (a[3] = 0));
                 for (var s = e.getSize(), u = r[1], c = 0, f = 0; f < 5 && u < s; f++) {
                     var h = rV.decodeDigit(e, a, u, rV.L_AND_G_PATTERNS);
                     n += String.fromCharCode(48 + (h % 10));
@@ -5415,7 +5422,7 @@ var rT = (function () {
                             if (o) throw o.error;
                         }
                     }
-                    h >= 10 && (c |= 1 << (4 - f)), 4 !== f && ((u = e.getNextSet(u)), (u = e.getNextUnset(u)));
+                    (h >= 10 && (c |= 1 << (4 - f)), 4 !== f && ((u = e.getNextSet(u)), (u = e.getNextUnset(u))));
                 }
                 if (5 !== n.length) throw new eW();
                 var g = this.determineCheckDigit(c);
@@ -5476,14 +5483,14 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     rG = (function () {
         function t() {
-            (this.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), (this.decodeRowStringBuffer = "");
+            ((this.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), (this.decodeRowStringBuffer = ""));
         }
         return (
             (t.prototype.decodeRow = function (e, r, n) {
@@ -5499,13 +5506,13 @@ var rT = (function () {
                         e6.UPC_EAN_EXTENSION,
                         new Date().getTime(),
                     );
-                return null != s && u.putAllMetadata(s), u;
+                return (null != s && u.putAllMetadata(s), u);
             }),
             (t.prototype.decodeMiddle = function (t, e, r) {
                 var n,
                     o,
                     i = this.decodeMiddleCounters;
-                (i[0] = 0), (i[1] = 0), (i[2] = 0), (i[3] = 0);
+                ((i[0] = 0), (i[1] = 0), (i[2] = 0), (i[3] = 0));
                 for (var a = t.getSize(), s = e[1], u = 0, c = 0; c < 2 && s < a; c++) {
                     var f = rV.decodeDigit(t, i, s, rV.L_AND_G_PATTERNS);
                     r += String.fromCharCode(48 + (f % 10));
@@ -5523,7 +5530,7 @@ var rT = (function () {
                             if (n) throw n.error;
                         }
                     }
-                    f >= 10 && (u |= 1 << (1 - c)), 1 !== c && ((s = t.getNextSet(s)), (s = t.getNextUnset(s)));
+                    (f >= 10 && (u |= 1 << (1 - c)), 1 !== c && ((s = t.getNextSet(s)), (s = t.getNextUnset(s))));
                 }
                 if (2 !== r.length || parseInt(r.toString()) % 4 !== u) throw new eW();
                 return s;
@@ -5571,15 +5578,15 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            L(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (L(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rj = (function (t) {
         function e() {
             var r = t.call(this) || this;
-            (r.decodeRowStringBuffer = ""),
+            ((r.decodeRowStringBuffer = ""),
                 (e.L_AND_G_PATTERNS = e.L_PATTERNS.map(function (t) {
                     return Int32Array.from(t);
-                }));
+                })));
             for (var n = 10; n < 20; n++) {
                 for (var o = e.L_PATTERNS[n - 10], i = new Int32Array(o.length), a = 0; a < o.length; a++)
                     i[a] = o[o.length - a - 1];
@@ -5621,10 +5628,10 @@ var rT = (function () {
                     m = 0;
                 try {
                     var C = rW.decodeRow(t, r, h[1]);
-                    _.putMetadata(e5.UPC_EAN_EXTENSION, C.getText()),
+                    (_.putMetadata(e5.UPC_EAN_EXTENSION, C.getText()),
                         _.putAllMetadata(C.getResultMetadata()),
                         _.addResultPoints(C.getResultPoints()),
-                        (m = C.getText().length);
+                        (m = C.getText().length));
                 } catch (t) {}
                 var A = null == n ? null : n.get(eM.ALLOWED_EAN_EXTENSIONS);
                 if (null != A) {
@@ -5636,7 +5643,7 @@ var rT = (function () {
                         }
                     if (!E) throw new eW();
                 }
-                return v === e6.EAN_13 || e6.UPC_A, _;
+                return (v === e6.EAN_13 || e6.UPC_A, _);
             }),
             (e.checkChecksum = function (t) {
                 return e.checkStandardUPCEANChecksum(t);
@@ -5689,7 +5696,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            x(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (x(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rZ = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -5699,7 +5706,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -5707,7 +5714,7 @@ var rT = (function () {
     rK = (function (t) {
         function e() {
             var e = t.call(this) || this;
-            return (e.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), e;
+            return ((e.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), e);
         }
         return (
             rY(e, t),
@@ -5717,7 +5724,7 @@ var rT = (function () {
                     a,
                     s,
                     u = this.decodeMiddleCounters;
-                (u[0] = 0), (u[1] = 0), (u[2] = 0), (u[3] = 0);
+                ((u[0] = 0), (u[1] = 0), (u[2] = 0), (u[3] = 0));
                 for (var c = t.getSize(), f = r[1], h = 0, l = 0; l < 6 && f < c; l++) {
                     var d = rj.decodeDigit(t, u, f, rj.L_AND_G_PATTERNS);
                     n += String.fromCharCode(48 + (d % 10));
@@ -5737,14 +5744,14 @@ var rT = (function () {
                     }
                     d >= 10 && (h |= 1 << (5 - l));
                 }
-                (n = e.determineFirstDigit(n, h)),
+                ((n = e.determineFirstDigit(n, h)),
                     (f = rj.findGuardPattern(
                         t,
                         f,
                         !0,
                         rj.MIDDLE_PATTERN,
                         new Int32Array(rj.MIDDLE_PATTERN.length).fill(0),
-                    )[1]);
+                    )[1]));
                 for (var l = 0; l < 6 && f < c; l++) {
                     var d = rj.decodeDigit(t, u, f, rj.L_PATTERNS);
                     n += String.fromCharCode(48 + d);
@@ -5793,7 +5800,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            F(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (F(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     rQ = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -5803,7 +5810,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -5811,7 +5818,7 @@ var rT = (function () {
     rJ = (function (t) {
         function e() {
             var e = t.call(this) || this;
-            return (e.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), e;
+            return ((e.decodeMiddleCounters = Int32Array.from([0, 0, 0, 0])), e);
         }
         return (
             rq(e, t),
@@ -5821,7 +5828,7 @@ var rT = (function () {
                     i,
                     a,
                     s = this.decodeMiddleCounters;
-                (s[0] = 0), (s[1] = 0), (s[2] = 0), (s[3] = 0);
+                ((s[0] = 0), (s[1] = 0), (s[2] = 0), (s[3] = 0));
                 for (var u = t.getSize(), c = e[1], f = 0; f < 4 && c < u; f++) {
                     var h = rj.decodeDigit(t, s, c, rj.L_PATTERNS);
                     r += String.fromCharCode(48 + h);
@@ -5889,12 +5896,12 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            k(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (k(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     r1 = (function (t) {
         function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.ean13Reader = new rK()), e;
+            return ((e.ean13Reader = new rK()), e);
         }
         return (
             r$(e, t),
@@ -5914,7 +5921,7 @@ var rT = (function () {
                 var e = t.getText();
                 if ("0" === e.charAt(0)) {
                     var r = new e8(e.substring(1), null, null, t.getResultPoints(), e6.UPC_A);
-                    return null != t.getResultMetadata() && r.putAllMetadata(t.getResultMetadata()), r;
+                    return (null != t.getResultMetadata() && r.putAllMetadata(t.getResultMetadata()), r);
                 }
                 throw new eW();
             }),
@@ -5940,7 +5947,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            V(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (V(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     r0 = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -5950,7 +5957,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -5958,7 +5965,7 @@ var rT = (function () {
     r3 = (function (t) {
         function e() {
             var e = t.call(this) || this;
-            return (e.decodeMiddleCounters = new Int32Array(4)), e;
+            return ((e.decodeMiddleCounters = new Int32Array(4)), e);
         }
         return (
             r2(e, t),
@@ -5968,7 +5975,7 @@ var rT = (function () {
                     a = this.decodeMiddleCounters.map(function (t) {
                         return t;
                     });
-                (a[0] = 0), (a[1] = 0), (a[2] = 0), (a[3] = 0);
+                ((a[0] = 0), (a[1] = 0), (a[2] = 0), (a[3] = 0));
                 for (var s = t.getSize(), u = r[1], c = 0, f = 0; f < 6 && u < s; f++) {
                     var h = e.decodeDigit(t, a, u, e.L_AND_G_PATTERNS);
                     n += String.fromCharCode(48 + (h % 10));
@@ -5988,7 +5995,7 @@ var rT = (function () {
                     }
                     h >= 10 && (c |= 1 << (5 - f));
                 }
-                return e.determineNumSysAndCheckDigit(new eU(n), c), u;
+                return (e.determineNumSysAndCheckDigit(new eU(n), c), u);
             }),
             (e.prototype.decodeEnd = function (t, r) {
                 return e.findGuardPatternWithoutCounters(t, r, !0, e.MIDDLE_END_PATTERN);
@@ -6000,7 +6007,7 @@ var rT = (function () {
                 for (var r = 0; r <= 1; r++)
                     for (var n = 0; n < 10; n++)
                         if (e === this.NUMSYS_AND_CHECK_DIGIT_PATTERNS[r][n]) {
-                            t.insert(0, "0" + r), t.append("0" + n);
+                            (t.insert(0, "0" + r), t.append("0" + n));
                             return;
                         }
                 throw eW.getNotFoundInstance();
@@ -6022,18 +6029,18 @@ var rT = (function () {
                     case 0:
                     case 1:
                     case 2:
-                        r.appendChars(e, 0, 2), r.append(n), r.append("0000"), r.appendChars(e, 2, 3);
+                        (r.appendChars(e, 0, 2), r.append(n), r.append("0000"), r.appendChars(e, 2, 3));
                         break;
                     case 3:
-                        r.appendChars(e, 0, 3), r.append("00000"), r.appendChars(e, 3, 2);
+                        (r.appendChars(e, 0, 3), r.append("00000"), r.appendChars(e, 3, 2));
                         break;
                     case 4:
-                        r.appendChars(e, 0, 4), r.append("00000"), r.append(e[4]);
+                        (r.appendChars(e, 0, 4), r.append("00000"), r.append(e[4]));
                         break;
                     default:
-                        r.appendChars(e, 0, 5), r.append("0000"), r.append(n);
+                        (r.appendChars(e, 0, 5), r.append("0000"), r.append(n));
                 }
-                return t.length >= 8 && r.append(t.charAt(7)), r.toString();
+                return (t.length >= 8 && r.append(t.charAt(7)), r.toString());
             }),
             (e.MIDDLE_END_PATTERN = Int32Array.from([1, 1, 1, 1, 1, 1])),
             (e.NUMSYS_AND_CHECK_DIGIT_PATTERNS = [
@@ -6059,7 +6066,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            H(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (H(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     r8 = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -6069,7 +6076,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -6111,7 +6118,7 @@ var rT = (function () {
                                         u.getResultPoints(),
                                         e6.UPC_A,
                                     );
-                                return d.putAllMetadata(u.getResultMetadata()), d;
+                                return (d.putAllMetadata(u.getResultMetadata()), d);
                             }
                             return u;
                         } catch (t) {}
@@ -6160,7 +6167,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            U(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (U(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     r7 = (function (t) {
         function e() {
@@ -6256,7 +6263,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            X(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (X(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nt = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -6266,7 +6273,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -6332,7 +6339,7 @@ var rT = (function () {
                     try {
                         for (var c = nt(t), f = c.next(); !f.done; f = c.next()) {
                             var h = f.value;
-                            h > u && (u = h), h < s && (s = h);
+                            (h > u && (u = h), h < s && (s = h));
                         }
                     } catch (t) {
                         r = { error: t };
@@ -6356,7 +6363,7 @@ var rT = (function () {
     })(rT),
     nr = (function () {
         function t(t, e) {
-            (this.value = t), (this.checksumPortion = e);
+            ((this.value = t), (this.checksumPortion = e));
         }
         return (
             (t.prototype.getValue = function () {
@@ -6379,13 +6386,13 @@ var rT = (function () {
     })(),
     nn = (function () {
         function t(t, e, r, n, o) {
-            (this.value = t),
+            ((this.value = t),
                 (this.startEnd = e),
                 (this.value = t),
                 (this.startEnd = e),
                 (this.resultPoints = []),
                 this.resultPoints.push(new rd(r, o)),
-                this.resultPoints.push(new rd(n, o));
+                this.resultPoints.push(new rd(n, o)));
         }
         return (
             (t.prototype.getValue = function () {
@@ -6414,7 +6421,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -6463,8 +6470,8 @@ var rT = (function () {
             }),
             (t.combins = function (t, e) {
                 t - e > e ? ((n = e), (r = t - e)) : ((n = t - e), (r = e));
-                for (var r, n, o = 1, i = 1, a = t; a > r; a--) (o *= a), i <= n && ((o /= i), i++);
-                for (; i <= n; ) (o /= i), i++;
+                for (var r, n, o = 1, i = 1, a = t; a > r; a--) ((o *= a), i <= n && ((o /= i), i++));
+                for (; i <= n;) ((o /= i), i++);
                 return o;
             }),
             t
@@ -6477,13 +6484,13 @@ var rT = (function () {
                 var e = 2 * t.length - 1;
                 null == t[t.length - 1].getRightChar() && (e -= 1);
                 for (var r = new eD(12 * e), n = 0, o = t[0].getRightChar().getValue(), i = 11; i >= 0; --i)
-                    (o & (1 << i)) != 0 && r.set(n), n++;
+                    ((o & (1 << i)) != 0 && r.set(n), n++);
                 for (var i = 1; i < t.length; ++i) {
                     for (var a = t[i], s = a.getLeftChar().getValue(), u = 11; u >= 0; --u)
-                        (s & (1 << u)) != 0 && r.set(n), n++;
+                        ((s & (1 << u)) != 0 && r.set(n), n++);
                     if (null !== a.getRightChar())
                         for (var c = a.getRightChar().getValue(), u = 11; u >= 0; --u)
-                            (c & (1 << u)) != 0 && r.set(n), n++;
+                            ((c & (1 << u)) != 0 && r.set(n), n++);
                 }
                 return r;
             }),
@@ -6531,12 +6538,12 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            G(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (G(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nf = (function (t) {
         function e(e, r) {
             var n = t.call(this, e) || this;
-            return (n.value = r), n;
+            return ((n.value = r), n);
         }
         return (
             nc(e, t),
@@ -6566,7 +6573,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            W(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (W(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nl = (function (t) {
         function e(e, r, n) {
@@ -6609,13 +6616,13 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            z(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (z(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     np = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e) || this;
             if (r < 0 || r > 10 || n < 0 || n > 10) throw new eB();
-            return (o.firstDigit = r), (o.secondDigit = n), o;
+            return ((o.firstDigit = r), (o.secondDigit = n), o);
         }
         return (
             nd(e, t),
@@ -6649,7 +6656,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -6899,11 +6906,11 @@ var rT = (function () {
     })(),
     nw = (function () {
         function t(t) {
-            (this.buffer = new eU()), (this.information = t);
+            ((this.buffer = new eU()), (this.information = t));
         }
         return (
             (t.prototype.decodeAllCodes = function (t, e) {
-                for (var r = e, n = null; ; ) {
+                for (var r = e, n = null; ;) {
                     var o = this.decodeGeneralPurposeField(r, n),
                         i = ny.parseFieldsInGeneralPurpose(o.getNewString());
                     if (
@@ -6939,7 +6946,7 @@ var rT = (function () {
                 return n;
             }),
             (t.prototype.decodeGeneralPurposeField = function (t, e) {
-                this.buffer.setLengthToZero(), null != e && this.buffer.append(e), this.current.setPosition(t);
+                (this.buffer.setLengthToZero(), null != e && this.buffer.append(e), this.current.setPosition(t));
                 var r = this.parseBlocks();
                 return null != r && r.isRemaining()
                     ? new nl(this.current.getPosition(), this.buffer.toString(), r.getRemainingValue())
@@ -6963,7 +6970,7 @@ var rT = (function () {
                 return e.getDecodedInformation();
             }),
             (t.prototype.parseNumericBlock = function () {
-                for (; this.isStillNumeric(this.current.getPosition()); ) {
+                for (; this.isStillNumeric(this.current.getPosition());) {
                     var t = this.decodeNumeric(this.current.getPosition());
                     if ((this.current.setPosition(t.getNewPosition()), t.isFirstDigitFNC1())) {
                         var e = void 0;
@@ -6987,7 +6994,7 @@ var rT = (function () {
                 );
             }),
             (t.prototype.parseIsoIec646Block = function () {
-                for (; this.isStillIsoIec646(this.current.getPosition()); ) {
+                for (; this.isStillIsoIec646(this.current.getPosition());) {
                     var t = this.decodeIsoIec646(this.current.getPosition());
                     if ((this.current.setPosition(t.getNewPosition()), t.isFNC1()))
                         return new ns(!0, new nl(this.current.getPosition(), this.buffer.toString()));
@@ -7005,7 +7012,7 @@ var rT = (function () {
                 );
             }),
             (t.prototype.parseAlphaBlock = function () {
-                for (; this.isStillAlpha(this.current.getPosition()); ) {
+                for (; this.isStillAlpha(this.current.getPosition());) {
                     var t = this.decodeAlphanumeric(this.current.getPosition());
                     if ((this.current.setPosition(t.getNewPosition()), t.isFNC1()))
                         return new ns(!0, new nl(this.current.getPosition(), this.buffer.toString()));
@@ -7170,7 +7177,7 @@ var rT = (function () {
     })(),
     nv = (function () {
         function t(t) {
-            (this.information = t), (this.generalDecoder = new nw(t));
+            ((this.information = t), (this.generalDecoder = new nw(t)));
         }
         return (
             (t.prototype.getInformation = function () {
@@ -7198,7 +7205,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            j(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (j(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nm = (function (t) {
         function e(e) {
@@ -7209,12 +7216,12 @@ var rT = (function () {
             (e.prototype.encodeCompressedGtin = function (t, e) {
                 t.append("(01)");
                 var r = t.length();
-                t.append("9"), this.encodeCompressedGtinWithoutAI(t, e, r);
+                (t.append("9"), this.encodeCompressedGtinWithoutAI(t, e, r));
             }),
             (e.prototype.encodeCompressedGtinWithoutAI = function (t, r, n) {
                 for (var o = 0; o < 4; ++o) {
                     var i = this.getGeneralDecoder().extractNumericValueFromBitArray(r + 10 * o, 10);
-                    i / 100 == 0 && t.append("0"), i / 10 == 0 && t.append("0"), t.append(i);
+                    (i / 100 == 0 && t.append("0"), i / 10 == 0 && t.append("0"), t.append(i));
                 }
                 e.appendCheckDigit(t, n);
             }),
@@ -7223,7 +7230,7 @@ var rT = (function () {
                     var o = t.charAt(n + e).charCodeAt(0) - 48;
                     r += (1 & n) == 0 ? 3 * o : o;
                 }
-                10 == (r = 10 - (r % 10)) && (r = 0), t.append(r);
+                (10 == (r = 10 - (r % 10)) && (r = 0), t.append(r));
             }),
             (e.GTIN_SIZE = 40),
             e
@@ -7245,7 +7252,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            Y(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (Y(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nA = (function (t) {
         function e(e) {
@@ -7284,7 +7291,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            Z(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (Z(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nI = (function (t) {
         function e(e) {
@@ -7316,7 +7323,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            K(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (K(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nT = (function (t) {
         function e(e) {
@@ -7327,7 +7334,7 @@ var rT = (function () {
             (e.prototype.encodeCompressedWeight = function (t, e, r) {
                 var n = this.getGeneralDecoder().extractNumericValueFromBitArray(e, r);
                 this.addWeightCode(t, n);
-                for (var o = this.checkWeight(n), i = 1e5, a = 0; a < 5; ++a) o / i == 0 && t.append("0"), (i /= 10);
+                for (var o = this.checkWeight(n), i = 1e5, a = 0; a < 5; ++a) (o / i == 0 && t.append("0"), (i /= 10));
                 t.append(o);
             }),
             e
@@ -7349,7 +7356,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            q(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (q(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nO = (function (t) {
         function e(e) {
@@ -7387,7 +7394,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            Q(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (Q(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nN = (function (t) {
         function e(e) {
@@ -7420,7 +7427,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            J(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (J(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nM = (function (t) {
         function e(e) {
@@ -7453,7 +7460,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            $(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            ($(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nB = (function (t) {
         function e(e) {
@@ -7469,12 +7476,12 @@ var rT = (function () {
                     e.HEADER_SIZE + nm.GTIN_SIZE,
                     e.LAST_DIGIT_SIZE,
                 );
-                t.append("(392"), t.append(r), t.append(")");
+                (t.append("(392"), t.append(r), t.append(")"));
                 var n = this.getGeneralDecoder().decodeGeneralPurposeField(
                     e.HEADER_SIZE + nm.GTIN_SIZE + e.LAST_DIGIT_SIZE,
                     null,
                 );
-                return t.append(n.getNewString()), t.toString();
+                return (t.append(n.getNewString()), t.toString());
             }),
             (e.HEADER_SIZE = 8),
             (e.LAST_DIGIT_SIZE = 2),
@@ -7497,7 +7504,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            tt(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tt(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nx = (function (t) {
         function e(e) {
@@ -7513,17 +7520,17 @@ var rT = (function () {
                     e.HEADER_SIZE + nm.GTIN_SIZE,
                     e.LAST_DIGIT_SIZE,
                 );
-                t.append("(393"), t.append(r), t.append(")");
+                (t.append("(393"), t.append(r), t.append(")"));
                 var n = this.getGeneralDecoder().extractNumericValueFromBitArray(
                     e.HEADER_SIZE + nm.GTIN_SIZE + e.LAST_DIGIT_SIZE,
                     e.FIRST_THREE_DIGITS_SIZE,
                 );
-                n / 100 == 0 && t.append("0"), n / 10 == 0 && t.append("0"), t.append(n);
+                (n / 100 == 0 && t.append("0"), n / 10 == 0 && t.append("0"), t.append(n));
                 var o = this.getGeneralDecoder().decodeGeneralPurposeField(
                     e.HEADER_SIZE + nm.GTIN_SIZE + e.LAST_DIGIT_SIZE + e.FIRST_THREE_DIGITS_SIZE,
                     null,
                 );
-                return t.append(o.getNewString()), t.toString();
+                return (t.append(o.getNewString()), t.toString());
             }),
             (e.HEADER_SIZE = 8),
             (e.LAST_DIGIT_SIZE = 2),
@@ -7547,12 +7554,12 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            te(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (te(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nk = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e) || this;
-            return (o.dateCode = n), (o.firstAIdigits = r), o;
+            return ((o.dateCode = n), (o.firstAIdigits = r), o);
         }
         return (
             nF(e, t),
@@ -7570,20 +7577,20 @@ var rT = (function () {
             (e.prototype.encodeCompressedDate = function (t, r) {
                 var n = this.getGeneralDecoder().extractNumericValueFromBitArray(r, e.DATE_SIZE);
                 if (38400 !== n) {
-                    t.append("("), t.append(this.dateCode), t.append(")");
+                    (t.append("("), t.append(this.dateCode), t.append(")"));
                     var o = n % 32,
                         i = ((n /= 32) % 12) + 1,
                         a = (n /= 12);
-                    a / 10 == 0 && t.append("0"),
+                    (a / 10 == 0 && t.append("0"),
                         t.append(a),
                         i / 10 == 0 && t.append("0"),
                         t.append(i),
                         o / 10 == 0 && t.append("0"),
-                        t.append(o);
+                        t.append(o));
                 }
             }),
             (e.prototype.addWeightCode = function (t, e) {
-                t.append("("), t.append(this.firstAIdigits), t.append(e / 1e5), t.append(")");
+                (t.append("("), t.append(this.firstAIdigits), t.append(e / 1e5), t.append(")"));
             }),
             (e.prototype.checkWeight = function (t) {
                 return t % 1e5;
@@ -7596,7 +7603,7 @@ var rT = (function () {
     })(nT),
     nV = (function () {
         function t(t, e, r, n) {
-            (this.leftchar = t), (this.rightchar = e), (this.finderpattern = r), (this.maybeLast = n);
+            ((this.leftchar = t), (this.rightchar = e), (this.finderpattern = r), (this.maybeLast = n));
         }
         return (
             (t.prototype.mayBeLast = function () {
@@ -7644,7 +7651,7 @@ var rT = (function () {
     })(),
     nH = (function () {
         function t(t, e, r) {
-            (this.pairs = t), (this.rowNumber = e), (this.wasReversed = r);
+            ((this.pairs = t), (this.rowNumber = e), (this.wasReversed = r));
         }
         return (
             (t.prototype.getPairs = function () {
@@ -7699,7 +7706,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            tr(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tr(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nX = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -7709,7 +7716,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -7717,12 +7724,12 @@ var rT = (function () {
     nG = (function (t) {
         function e() {
             var r = (null !== t && t.apply(this, arguments)) || this;
-            return (r.pairs = Array(e.MAX_PAIRS)), (r.rows = []), (r.startEnd = [2]), r;
+            return ((r.pairs = Array(e.MAX_PAIRS)), (r.rows = []), (r.startEnd = [2]), r);
         }
         return (
             nU(e, t),
             (e.prototype.decodeRow = function (t, r, n) {
-                (this.pairs.length = 0), (this.startFromEven = !1);
+                ((this.pairs.length = 0), (this.startFromEven = !1));
                 try {
                     return e.constructResult(this.decodeRow2pairs(t, r));
                 } catch (t) {}
@@ -7731,10 +7738,10 @@ var rT = (function () {
                 );
             }),
             (e.prototype.reset = function () {
-                (this.pairs.length = 0), (this.rows.length = 0);
+                ((this.pairs.length = 0), (this.rows.length = 0));
             }),
             (e.prototype.decodeRow2pairs = function (t, e) {
-                for (var r, n = !1; !n; )
+                for (var r, n = !1; !n;)
                     try {
                         this.pairs.push(this.retrieveNextPair(e, this.pairs, t));
                     } catch (t) {
@@ -7751,15 +7758,15 @@ var rT = (function () {
                 throw new eW();
             }),
             (e.prototype.checkRowsBoolean = function (t) {
-                if (this.rows.length > 25) return (this.rows.length = 0), null;
-                (this.pairs.length = 0), t && (this.rows = this.rows.reverse());
+                if (this.rows.length > 25) return ((this.rows.length = 0), null);
+                ((this.pairs.length = 0), t && (this.rows = this.rows.reverse()));
                 var e = null;
                 try {
                     e = this.checkRows([], 0);
                 } catch (t) {
                     console.log(t);
                 }
-                return t && (this.rows = this.rows.reverse()), e;
+                return (t && (this.rows = this.rows.reverse()), e);
             }),
             (e.prototype.checkRows = function (t, r) {
                 for (var n, o, i = r; i < this.rows.length; i++) {
@@ -7818,13 +7825,13 @@ var rT = (function () {
                 return !1;
             }),
             (e.prototype.storeRow = function (t, r) {
-                for (var n = 0, o = !1, i = !1; n < this.rows.length; ) {
+                for (var n = 0, o = !1, i = !1; n < this.rows.length;) {
                     var a = this.rows[n];
                     if (a.getRowNumber() > t) {
                         i = a.isEquivalent(this.pairs);
                         break;
                     }
-                    (o = a.isEquivalent(this.pairs)), n++;
+                    ((o = a.isEquivalent(this.pairs)), n++);
                 }
                 i ||
                     o ||
@@ -7986,7 +7993,7 @@ var rT = (function () {
                 if (null === r) return !1;
                 for (var n = r.getChecksumPortion(), o = 2, i = 1; i < this.pairs.size(); ++i) {
                     var a = this.pairs.get(i);
-                    (n += a.getLeftChar().getChecksumPortion()), o++;
+                    ((n += a.getLeftChar().getChecksumPortion()), o++);
                     var s = a.getRightChar();
                     null != s && ((n += s.getChecksumPortion()), o++);
                 }
@@ -8009,17 +8016,17 @@ var rT = (function () {
                 var s = !0,
                     u = -1;
                 do
-                    this.findNextPair(t, r, u),
+                    (this.findNextPair(t, r, u),
                         null === (o = this.parseFoundFinderPattern(t, n, a))
                             ? (u = e.getNextSecondBar(t, this.startEnd[0]))
-                            : (s = !1);
+                            : (s = !1));
                 while (s);
                 var c = this.decodeDataCharacter(t, o, a, !0);
                 if (!this.isEmptyPair(r) && r[r.length - 1].mustBeLast()) throw new eW();
                 try {
                     i = this.decodeDataCharacter(t, o, a, !1);
                 } catch (t) {
-                    (i = null), console.log(t);
+                    ((i = null), console.log(t));
                 }
                 return new nV(c, i, o, !0);
             }),
@@ -8029,45 +8036,45 @@ var rT = (function () {
             (e.prototype.findNextPair = function (t, r, n) {
                 var o,
                     i = this.getDecodeFinderCounters();
-                (i[0] = 0), (i[1] = 0), (i[2] = 0), (i[3] = 0);
+                ((i[0] = 0), (i[1] = 0), (i[2] = 0), (i[3] = 0));
                 var a = t.getSize();
                 o = n >= 0 ? n : this.isEmptyPair(r) ? 0 : r[r.length - 1].getFinderPattern().getStartEnd()[1];
                 var s = r.length % 2 != 0;
                 this.startFromEven && (s = !s);
-                for (var u = !1; o < a && (u = !t.get(o)); ) o++;
+                for (var u = !1; o < a && (u = !t.get(o));) o++;
                 for (var c = 0, f = o, h = o; h < a; h++)
                     if (t.get(h) !== u) i[c]++;
                     else {
                         if (3 === c) {
                             if ((s && e.reverseCounters(i), e.isFinderPattern(i))) {
-                                (this.startEnd[0] = f), (this.startEnd[1] = h);
+                                ((this.startEnd[0] = f), (this.startEnd[1] = h));
                                 return;
                             }
-                            s && e.reverseCounters(i),
+                            (s && e.reverseCounters(i),
                                 (f += i[0] + i[1]),
                                 (i[0] = i[2]),
                                 (i[1] = i[3]),
                                 (i[2] = 0),
                                 (i[3] = 0),
-                                c--;
+                                c--);
                         } else c++;
-                        (i[c] = 1), (u = !u);
+                        ((i[c] = 1), (u = !u));
                     }
                 throw new eW();
             }),
             (e.reverseCounters = function (t) {
                 for (var e = t.length, r = 0; r < e / 2; ++r) {
                     var n = t[r];
-                    (t[r] = t[e - r - 1]), (t[e - r - 1] = n);
+                    ((t[r] = t[e - r - 1]), (t[e - r - 1] = n));
                 }
             }),
             (e.prototype.parseFoundFinderPattern = function (t, r, n) {
                 if (n) {
-                    for (var o, i, a, s, u = this.startEnd[0] - 1; u >= 0 && !t.get(u); ) u--;
-                    u++, (o = this.startEnd[0] - u), (i = u), (a = this.startEnd[1]);
-                } else (i = this.startEnd[0]), (o = (a = t.getNextUnset(this.startEnd[1] + 1)) - this.startEnd[1]);
+                    for (var o, i, a, s, u = this.startEnd[0] - 1; u >= 0 && !t.get(u);) u--;
+                    (u++, (o = this.startEnd[0] - u), (i = u), (a = this.startEnd[1]));
+                } else ((i = this.startEnd[0]), (o = (a = t.getNextUnset(this.startEnd[1] + 1)) - this.startEnd[1]));
                 var c = this.getDecodeFinderCounters();
-                eE.arraycopy(c, 0, c, 1, c.length - 1), (c[0] = o);
+                (eE.arraycopy(c, 0, c, 1, c.length - 1), (c[0] = o));
                 try {
                     s = this.parseFinderValue(c, e.FINDER_PATTERNS);
                 } catch (t) {
@@ -8082,7 +8089,7 @@ var rT = (function () {
                     e.recordPattern(t, r.getStartEnd()[1], i);
                     for (var s = 0, u = i.length - 1; s < u; s++, u--) {
                         var c = i[s];
-                        (i[s] = i[u]), (i[u] = c);
+                        ((i[s] = i[u]), (i[u] = c));
                     }
                 }
                 var f = rh.sum(new Int32Array(i)) / 17,
@@ -8301,12 +8308,12 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            tn(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tn(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nz = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e, r) || this;
-            return (o.count = 0), (o.finderPattern = n), o;
+            return ((o.count = 0), (o.finderPattern = n), o);
         }
         return (
             nW(e, t),
@@ -8338,7 +8345,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            to(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (to(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nY = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -8348,7 +8355,7 @@ var rT = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -8356,7 +8363,7 @@ var rT = (function () {
     nZ = (function (t) {
         function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.possibleLeftPairs = []), (e.possibleRightPairs = []), e;
+            return ((e.possibleLeftPairs = []), (e.possibleRightPairs = []), e);
         }
         return (
             nj(e, t),
@@ -8366,9 +8373,9 @@ var rT = (function () {
                     a,
                     s,
                     u = this.decodePair(r, !1, t, n);
-                e.addOrTally(this.possibleLeftPairs, u), r.reverse();
+                (e.addOrTally(this.possibleLeftPairs, u), r.reverse());
                 var c = this.decodePair(r, !0, t, n);
-                e.addOrTally(this.possibleRightPairs, c), r.reverse();
+                (e.addOrTally(this.possibleRightPairs, c), r.reverse());
                 try {
                     for (var f = nY(this.possibleLeftPairs), h = f.next(); !h.done; h = f.next()) {
                         var l = h.value;
@@ -8412,7 +8419,7 @@ var rT = (function () {
                         for (var i = nY(t), a = i.next(); !a.done; a = i.next()) {
                             var s = a.value;
                             if (s.getValue() === e.getValue()) {
-                                s.incrementCount(), (o = !0);
+                                (s.incrementCount(), (o = !0));
                                 break;
                             }
                         }
@@ -8429,7 +8436,7 @@ var rT = (function () {
                 }
             }),
             (e.prototype.reset = function () {
-                (this.possibleLeftPairs.length = 0), (this.possibleRightPairs.length = 0);
+                ((this.possibleLeftPairs.length = 0), (this.possibleRightPairs.length = 0));
             }),
             (e.constructResult = function (t, e) {
                 for (
@@ -8445,7 +8452,7 @@ var rT = (function () {
                     var a = n.charAt(o).charCodeAt(0) - 48;
                     i += (1 & o) == 0 ? 3 * a : a;
                 }
-                10 == (i = 10 - (i % 10)) && (i = 0), n.append(i.toString());
+                (10 == (i = 10 - (i % 10)) && (i = 0), n.append(i.toString()));
                 var s = t.getFinderPattern().getResultPoints(),
                     u = e.getFinderPattern().getResultPoints();
                 return new e8(n.toString(), null, 0, [s[0], s[1], u[0], u[1]], e6.RSS_14, new Date().getTime());
@@ -8453,7 +8460,7 @@ var rT = (function () {
             (e.checkChecksum = function (t, e) {
                 var r = (t.getChecksumPortion() + 16 * e.getChecksumPortion()) % 79,
                     n = 9 * t.getFinderPattern().getValue() + e.getFinderPattern().getValue();
-                return n > 72 && n--, n > 8 && n--, r === n;
+                return (n > 72 && n--, n > 8 && n--, r === n);
             }),
             (e.prototype.decodePair = function (t, e, r, n) {
                 try {
@@ -8462,7 +8469,7 @@ var rT = (function () {
                         a = null == n ? null : n.get(eM.NEED_RESULT_POINT_CALLBACK);
                     if (null != a) {
                         var s = (o[0] + o[1]) / 2;
-                        e && (s = t.getSize() - 1 - s), a.foundPossibleResultPoint(new rd(s, r));
+                        (e && (s = t.getSize() - 1 - s), a.foundPossibleResultPoint(new rd(s, r)));
                     }
                     var u = this.decodeDataCharacter(t, i, !0),
                         c = this.decodeDataCharacter(t, i, !1);
@@ -8482,7 +8489,7 @@ var rT = (function () {
                     rT.recordPattern(t, r.getStartEnd()[1] + 1, o);
                     for (var a = 0, s = o.length - 1; a < s; a++, s--) {
                         var u = o[a];
-                        (o[a] = o[s]), (o[s] = u);
+                        ((o[a] = o[s]), (o[s] = u));
                     }
                 }
                 for (
@@ -8503,8 +8510,8 @@ var rT = (function () {
                     (1 & a) == 0 ? ((h[w] = y), (d[w] = g - y)) : ((l[w] = y), (p[w] = g - y));
                 }
                 this.adjustOddEvenCounts(n, c);
-                for (var v = 0, _ = 0, a = h.length - 1; a >= 0; a--) (_ *= 9), (_ += h[a]), (v += h[a]);
-                for (var m = 0, C = 0, a = l.length - 1; a >= 0; a--) (m *= 9), (m += l[a]), (C += l[a]);
+                for (var v = 0, _ = 0, a = h.length - 1; a >= 0; a--) ((_ *= 9), (_ += h[a]), (v += h[a]));
+                for (var m = 0, C = 0, a = l.length - 1; a >= 0; a--) ((m *= 9), (m += l[a]), (C += l[a]));
                 var A = _ + 3 * m;
                 if (n) {
                     if ((1 & v) != 0 || v > 12 || v < 4) throw new eW();
@@ -8529,30 +8536,30 @@ var rT = (function () {
             }),
             (e.prototype.findFinderPattern = function (t, e) {
                 var r = this.getDecodeFinderCounters();
-                (r[0] = 0), (r[1] = 0), (r[2] = 0), (r[3] = 0);
-                for (var n = t.getSize(), o = !1, i = 0; i < n && e !== (o = !t.get(i)); ) i++;
+                ((r[0] = 0), (r[1] = 0), (r[2] = 0), (r[3] = 0));
+                for (var n = t.getSize(), o = !1, i = 0; i < n && e !== (o = !t.get(i));) i++;
                 for (var a = 0, s = i, u = i; u < n; u++)
                     if (t.get(u) !== o) r[a]++;
                     else {
                         if (3 === a) {
                             if (ne.isFinderPattern(r)) return [s, u];
-                            (s += r[0] + r[1]), (r[0] = r[2]), (r[1] = r[3]), (r[2] = 0), (r[3] = 0), a--;
+                            ((s += r[0] + r[1]), (r[0] = r[2]), (r[1] = r[3]), (r[2] = 0), (r[3] = 0), a--);
                         } else a++;
-                        (r[a] = 1), (o = !o);
+                        ((r[a] = 1), (o = !o));
                     }
                 throw new eW();
             }),
             (e.prototype.parseFoundFinderPattern = function (t, r, n, o) {
-                for (var i = t.get(o[0]), a = o[0] - 1; a >= 0 && i !== t.get(a); ) a--;
+                for (var i = t.get(o[0]), a = o[0] - 1; a >= 0 && i !== t.get(a);) a--;
                 a++;
                 var s = o[0] - a,
                     u = this.getDecodeFinderCounters(),
                     c = new Int32Array(u.length);
-                eE.arraycopy(u, 0, c, 1, u.length - 1), (c[0] = s);
+                (eE.arraycopy(u, 0, c, 1, u.length - 1), (c[0] = s));
                 var f = this.parseFinderValue(c, e.FINDER_PATTERNS),
                     h = a,
                     l = o[1];
-                return n && ((h = t.getSize() - 1 - h), (l = t.getSize() - 1 - l)), new nn(f, [a, o[1]], h, l, r);
+                return (n && ((h = t.getSize() - 1 - h), (l = t.getSize() - 1 - l)), new nn(f, [a, o[1]], h, l, r));
             }),
             (e.prototype.adjustOddEvenCounts = function (t, e) {
                 var r = rh.sum(new Int32Array(this.getOddCounts())),
@@ -8635,7 +8642,7 @@ var rT = (function () {
             function r() {
                 this.constructor = t;
             }
-            ti(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (ti(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     nq = (function (t) {
         function e(e) {
@@ -8700,10 +8707,10 @@ function (t, e) {
     function r() {
         this.constructor = t;
     }
-    ta(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+    (ta(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
 })(
     function (t, e) {
-        return void 0 === t && (t = 500), ts.call(this, new nq(e), t, e) || this;
+        return (void 0 === t && (t = 500), ts.call(this, new nq(e), t, e) || this);
     },
     (ts = e4),
 );
@@ -8715,14 +8722,14 @@ var nQ = function (t) {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     nJ = (function () {
         function t(t, e, r) {
-            (this.ecCodewords = t), (this.ecBlocks = [e]), r && this.ecBlocks.push(r);
+            ((this.ecCodewords = t), (this.ecBlocks = [e]), r && this.ecBlocks.push(r));
         }
         return (
             (t.prototype.getECCodewords = function () {
@@ -8736,7 +8743,7 @@ var nQ = function (t) {
     })(),
     n$ = (function () {
         function t(t, e) {
-            (this.count = t), (this.dataCodewords = e);
+            ((this.count = t), (this.dataCodewords = e));
         }
         return (
             (t.prototype.getCount = function () {
@@ -8750,12 +8757,12 @@ var nQ = function (t) {
     })(),
     n1 = (function () {
         function t(t, e, r, n, o, i) {
-            (this.versionNumber = t),
+            ((this.versionNumber = t),
                 (this.symbolSizeRows = e),
                 (this.symbolSizeColumns = r),
                 (this.dataRegionSizeRows = n),
                 (this.dataRegionSizeColumns = o),
-                (this.ecBlocks = i);
+                (this.ecBlocks = i));
             var a,
                 s,
                 u = 0,
@@ -8863,9 +8870,9 @@ var nQ = function (t) {
         function t(e) {
             var r = e.getHeight();
             if (r < 8 || r > 144 || (1 & r) != 0) throw new eB();
-            (this.version = t.readVersion(e)),
+            ((this.version = t.readVersion(e)),
                 (this.mappingBitMatrix = this.extractDataRegion(e)),
-                (this.readMappingMatrix = new eX(this.mappingBitMatrix.getWidth(), this.mappingBitMatrix.getHeight()));
+                (this.readMappingMatrix = new eX(this.mappingBitMatrix.getWidth(), this.mappingBitMatrix.getHeight())));
         }
         return (
             (t.prototype.getVersion = function () {
@@ -8893,27 +8900,27 @@ var nQ = function (t) {
                             if (r !== o + 4 || 2 !== n || (7 & i) != 0 || u)
                                 if (r !== o - 2 || 0 !== n || (7 & i) != 4 || c) {
                                     do
-                                        r < o &&
+                                        (r < o &&
                                             n >= 0 &&
                                             !this.readMappingMatrix.get(n, r) &&
                                             (t[e++] = 255 & this.readUtah(r, n, o, i)),
                                             (r -= 2),
-                                            (n += 2);
+                                            (n += 2));
                                     while (r >= 0 && n < i);
-                                    (r += 1), (n += 3);
+                                    ((r += 1), (n += 3));
                                     do
-                                        r >= 0 &&
+                                        (r >= 0 &&
                                             n < i &&
                                             !this.readMappingMatrix.get(n, r) &&
                                             (t[e++] = 255 & this.readUtah(r, n, o, i)),
                                             (r += 2),
-                                            (n -= 2);
+                                            (n -= 2));
                                     while (r < o && n >= 0);
-                                    (r += 3), (n += 1);
-                                } else (t[e++] = 255 & this.readCorner4(o, i)), (r -= 2), (n += 2), (c = !0);
-                            else (t[e++] = 255 & this.readCorner3(o, i)), (r -= 2), (n += 2), (u = !0);
-                        else (t[e++] = 255 & this.readCorner2(o, i)), (r -= 2), (n += 2), (s = !0);
-                    else (t[e++] = 255 & this.readCorner1(o, i)), (r -= 2), (n += 2), (a = !0);
+                                    ((r += 3), (n += 1));
+                                } else ((t[e++] = 255 & this.readCorner4(o, i)), (r -= 2), (n += 2), (c = !0));
+                            else ((t[e++] = 255 & this.readCorner3(o, i)), (r -= 2), (n += 2), (u = !0));
+                        else ((t[e++] = 255 & this.readCorner2(o, i)), (r -= 2), (n += 2), (s = !0));
+                    else ((t[e++] = 255 & this.readCorner1(o, i)), (r -= 2), (n += 2), (a = !0));
                 while (r < o || n < i);
                 if (e !== this.version.getTotalCodewords()) throw new eB();
                 return t;
@@ -9067,14 +9074,14 @@ var nQ = function (t) {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     n3 = (function () {
         function t(t, e) {
-            (this.numDataCodewords = t), (this.codewords = e);
+            ((this.numDataCodewords = t), (this.codewords = e));
         }
         return (
             (t.getDataBlocks = function (e, r) {
@@ -9141,7 +9148,7 @@ var nQ = function (t) {
     })(),
     n4 = (function () {
         function t(t) {
-            (this.bytes = t), (this.byteOffset = 0), (this.bitOffset = 0);
+            ((this.bytes = t), (this.byteOffset = 0), (this.bitOffset = 0));
         }
         return (
             (t.prototype.getBitOffset = function () {
@@ -9161,17 +9168,17 @@ var nQ = function (t) {
                         a = t < i ? t : i,
                         s = i - a,
                         u = (255 >> (8 - a)) << s;
-                    (e = (o[n] & u) >> s), (t -= a), 8 === (r += a) && ((r = 0), n++);
+                    ((e = (o[n] & u) >> s), (t -= a), 8 === (r += a) && ((r = 0), n++));
                 }
                 if (t > 0) {
-                    for (; t >= 8; ) (e = (e << 8) | (255 & o[n])), n++, (t -= 8);
+                    for (; t >= 8;) ((e = (e << 8) | (255 & o[n])), n++, (t -= 8));
                     if (t > 0) {
                         var s = 8 - t,
                             u = (255 >> s) << s;
-                        (e = (e << t) | ((o[n] & u) >> s)), (r += t);
+                        ((e = (e << t) | ((o[n] & u) >> s)), (r += t));
                     }
                 }
-                return (this.bitOffset = r), (this.byteOffset = n), e;
+                return ((this.bitOffset = r), (this.byteOffset = n), e);
             }),
             (t.prototype.available = function () {
                 return 8 * (this.bytes.length - this.byteOffset) - this.bitOffset;
@@ -9179,13 +9186,13 @@ var nQ = function (t) {
             t
         );
     })();
-((tu = t3 || (t3 = {}))[(tu.PAD_ENCODE = 0)] = "PAD_ENCODE"),
+(((tu = t3 || (t3 = {}))[(tu.PAD_ENCODE = 0)] = "PAD_ENCODE"),
     (tu[(tu.ASCII_ENCODE = 1)] = "ASCII_ENCODE"),
     (tu[(tu.C40_ENCODE = 2)] = "C40_ENCODE"),
     (tu[(tu.TEXT_ENCODE = 3)] = "TEXT_ENCODE"),
     (tu[(tu.ANSIX12_ENCODE = 4)] = "ANSIX12_ENCODE"),
     (tu[(tu.EDIFACT_ENCODE = 5)] = "EDIFACT_ENCODE"),
-    (tu[(tu.BASE256_ENCODE = 6)] = "BASE256_ENCODE");
+    (tu[(tu.BASE256_ENCODE = 6)] = "BASE256_ENCODE"));
 var n8 = (function () {
         function t() {}
         return (
@@ -9230,13 +9237,13 @@ var n8 = (function () {
                     var o = t.readBits(8);
                     if (0 === o) throw new eB();
                     if (o <= 128) {
-                        n && (o += 128), e.append(String.fromCharCode(o - 1));
+                        (n && (o += 128), e.append(String.fromCharCode(o - 1)));
                         break;
                     }
                     if (129 === o) return t3.PAD_ENCODE;
                     else if (o <= 229) {
                         var i = o - 130;
-                        i < 10 && e.append("0"), e.append("" + i);
+                        (i < 10 && e.append("0"), e.append("" + i));
                     } else
                         switch (o) {
                             case 230:
@@ -9254,10 +9261,10 @@ var n8 = (function () {
                                 n = !0;
                                 break;
                             case 236:
-                                e.append("[)>\x1e05\x1d"), r.insert(0, "\x1e\x04");
+                                (e.append("[)>\x1e05\x1d"), r.insert(0, "\x1e\x04"));
                                 break;
                             case 237:
-                                e.append("[)>\x1e06\x1d"), r.insert(0, "\x1e\x04");
+                                (e.append("[)>\x1e06\x1d"), r.insert(0, "\x1e\x04"));
                                 break;
                             case 238:
                                 return t3.ANSIX12_ENCODE;
@@ -9291,10 +9298,10 @@ var n8 = (function () {
                                 } else throw new eB();
                                 break;
                             case 1:
-                                r
+                                (r
                                     ? (e.append(String.fromCharCode(s + 128)), (r = !1))
                                     : e.append(String.fromCharCode(s)),
-                                    (o = 0);
+                                    (o = 0));
                                 break;
                             case 2:
                                 if (s < this.C40_SHIFT2_SET_CHARS.length) {
@@ -9314,10 +9321,10 @@ var n8 = (function () {
                                 o = 0;
                                 break;
                             case 3:
-                                r
+                                (r
                                     ? (e.append(String.fromCharCode(s + 224)), (r = !1))
                                     : e.append(String.fromCharCode(s + 96)),
-                                    (o = 0);
+                                    (o = 0));
                                 break;
                             default:
                                 throw new eB();
@@ -9345,10 +9352,10 @@ var n8 = (function () {
                                 } else throw new eB();
                                 break;
                             case 1:
-                                r
+                                (r
                                     ? (e.append(String.fromCharCode(s + 128)), (r = !1))
                                     : e.append(String.fromCharCode(s)),
-                                    (o = 0);
+                                    (o = 0));
                                 break;
                             case 2:
                                 if (s < this.TEXT_SHIFT2_SET_CHARS.length) {
@@ -9370,8 +9377,8 @@ var n8 = (function () {
                             case 3:
                                 if (s < this.TEXT_SHIFT3_SET_CHARS.length) {
                                     var u = this.TEXT_SHIFT3_SET_CHARS[s];
-                                    r ? (e.append(String.fromCharCode(u.charCodeAt(0) + 128)), (r = !1)) : e.append(u),
-                                        (o = 0);
+                                    (r ? (e.append(String.fromCharCode(u.charCodeAt(0) + 128)), (r = !1)) : e.append(u),
+                                        (o = 0));
                                 } else throw new eB();
                                 break;
                             default:
@@ -9413,7 +9420,7 @@ var n8 = (function () {
             (t.parseTwoBytes = function (t, e, r) {
                 var n = (t << 8) + e - 1,
                     o = Math.floor(n / 1600);
-                (r[0] = o), (n -= 1600 * o), (o = Math.floor(n / 40)), (r[1] = o), (r[2] = n - 40 * o);
+                ((r[0] = o), (n -= 1600 * o), (o = Math.floor(n / 40)), (r[1] = o), (r[2] = n - 40 * o));
             }),
             (t.decodeEdifactSegment = function (t, e) {
                 do {
@@ -9425,7 +9432,7 @@ var n8 = (function () {
                             8 !== o && t.readBits(o);
                             return;
                         }
-                        (32 & n) == 0 && (n |= 64), e.append(String.fromCharCode(n));
+                        ((32 & n) == 0 && (n |= 64), e.append(String.fromCharCode(n)));
                     }
                 } while (t.available() > 0);
             }),
@@ -9616,7 +9623,7 @@ var n8 = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -9671,7 +9678,7 @@ var n8 = (function () {
     })(),
     n7 = (function () {
         function t(t) {
-            (this.image = t), (this.rectangleDetector = new rw(this.image));
+            ((this.image = t), (this.rectangleDetector = new rw(this.image)));
         }
         return (
             (t.prototype.detect = function () {
@@ -9699,7 +9706,7 @@ var n8 = (function () {
             (t.moveAway = function (t, e, r) {
                 var n = t.getX(),
                     o = t.getY();
-                return n < e ? (n -= 1) : (n += 1), o < r ? (o -= 1) : (o += 1), new rd(n, o);
+                return (n < e ? (n -= 1) : (n += 1), o < r ? (o -= 1) : (o += 1), new rd(n, o));
             }),
             (t.prototype.detectSolid1 = function (t) {
                 var e = t[0],
@@ -9743,7 +9750,7 @@ var n8 = (function () {
                     s = this.transitionsBetween(n, i),
                     u = t.shiftPoint(r, n, (s + 1) * 4),
                     c = t.shiftPoint(o, n, (a + 1) * 4);
-                (a = this.transitionsBetween(u, i)), (s = this.transitionsBetween(c, i));
+                ((a = this.transitionsBetween(u, i)), (s = this.transitionsBetween(c, i)));
                 var f = new rd(i.getX() + (o.getX() - n.getX()) / (a + 1), i.getY() + (o.getY() - n.getY()) / (a + 1)),
                     h = new rd(i.getX() + (r.getX() - n.getX()) / (s + 1), i.getY() + (r.getY() - n.getY()) / (s + 1));
                 return this.isValid(f)
@@ -9768,10 +9775,10 @@ var n8 = (function () {
                     c = this.transitionsBetween(a, s) + 1,
                     f = t.shiftPoint(o, i, 4 * c),
                     h = t.shiftPoint(a, i, 4 * u);
-                (u = this.transitionsBetween(f, s) + 1),
+                ((u = this.transitionsBetween(f, s) + 1),
                     (c = this.transitionsBetween(h, s) + 1),
                     (1 & u) == 1 && (u += 1),
-                    (1 & c) == 1 && (c += 1);
+                    (1 & c) == 1 && (c += 1));
                 var l = (o.getX() + i.getX() + a.getX() + s.getX()) / 4,
                     d = (o.getY() + i.getY() + a.getY() + s.getY()) / 4;
                 return (
@@ -9830,7 +9837,7 @@ var n8 = (function () {
                     a = Math.abs(i - n) > Math.abs(o - r);
                 if (a) {
                     var s = r;
-                    (r = n), (n = s), (s = o), (o = i), (i = s);
+                    ((r = n), (n = s), (s = o), (o = i), (i = s));
                 }
                 for (
                     var u = Math.abs(o - r),
@@ -9848,7 +9855,7 @@ var n8 = (function () {
                     var w = this.image.get(a ? y : g, a ? g : y);
                     if ((w !== p && (d++, (p = w)), (f += c) > 0)) {
                         if (y === i) break;
-                        (y += h), (f -= u);
+                        ((y += h), (f -= u));
                     }
                 }
                 return d;
@@ -9866,17 +9873,17 @@ var n8 = (function () {
                     var n,
                         o,
                         i = t.extractPureBits(e.getBlackMatrix());
-                    (n = this.decoder.decode(i)), (o = t.NO_POINTS);
+                    ((n = this.decoder.decode(i)), (o = t.NO_POINTS));
                 } else {
                     var a = new n7(e.getBlackMatrix()).detect();
-                    (n = this.decoder.decode(a.getBits())), (o = a.getPoints());
+                    ((n = this.decoder.decode(a.getBits())), (o = a.getPoints()));
                 }
                 var s = n.getRawBytes(),
                     u = new e8(n.getText(), s, 8 * s.length, o, e6.DATA_MATRIX, eE.currentTimeMillis()),
                     c = n.getByteSegments();
                 null != c && u.putMetadata(e5.BYTE_SEGMENTS, c);
                 var f = n.getECLevel();
-                return null != f && u.putMetadata(e5.ERROR_CORRECTION_LEVEL, f), u;
+                return (null != f && u.putMetadata(e5.ERROR_CORRECTION_LEVEL, f), u);
             }),
             (t.prototype.reset = function () {}),
             (t.extractPureBits = function (t) {
@@ -9891,13 +9898,13 @@ var n8 = (function () {
                     u = (i - o + 1) / n;
                 if (s <= 0 || u <= 0) throw new eW();
                 var c = n / 2;
-                (o += c), (a += c);
+                ((o += c), (a += c));
                 for (var f = new eX(s, u), h = 0; h < u; h++)
                     for (var l = o + h * n, d = 0; d < s; d++) t.get(a + d * n, l) && f.set(d, h);
                 return f;
             }),
             (t.moduleSize = function (t, e) {
-                for (var r = e.getWidth(), n = t[0], o = t[1]; n < r && e.get(n, o); ) n++;
+                for (var r = e.getWidth(), n = t[0], o = t[1]; n < r && e.get(n, o);) n++;
                 if (n === r) throw new eW();
                 var i = n - t[0];
                 if (0 === i) throw new eW();
@@ -9907,7 +9914,7 @@ var n8 = (function () {
             t
         );
     })();
-((tc = function (t, e) {
+(((tc = function (t, e) {
     return (tc =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
@@ -9922,24 +9929,24 @@ function (t, e) {
     function r() {
         this.constructor = t;
     }
-    tc(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+    (tc(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
 })(
     function (t) {
-        return void 0 === t && (t = 500), tf.call(this, new n9(), t) || this;
+        return (void 0 === t && (t = 500), tf.call(this, new n9(), t) || this);
     },
     (tf = e4),
 ),
     ((th = t4 || (t4 = {}))[(th.L = 0)] = "L"),
     (th[(th.M = 1)] = "M"),
     (th[(th.Q = 2)] = "Q"),
-    (th[(th.H = 3)] = "H");
+    (th[(th.H = 3)] = "H"));
 var ot = (function () {
         function t(e, r, n) {
-            (this.value = e),
+            ((this.value = e),
                 (this.stringValue = r),
                 (this.bits = n),
                 t.FOR_BITS.set(n, this),
-                t.FOR_VALUE.set(e, this);
+                t.FOR_VALUE.set(e, this));
         }
         return (
             (t.prototype.getValue = function () {
@@ -9989,14 +9996,14 @@ var ot = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     or = (function () {
         function t(t) {
-            (this.errorCorrectionLevel = ot.forBits((t >> 3) & 3)), (this.dataMask = 7 & t);
+            ((this.errorCorrectionLevel = ot.forBits((t >> 3) & 3)), (this.dataMask = 7 & t));
         }
         return (
             (t.numBitsDiffering = function (t, e) {
@@ -10019,8 +10026,8 @@ var ot = (function () {
                             f = c[0];
                         if (f === e || f === r) return new t(c[1]);
                         var h = t.numBitsDiffering(e, f);
-                        h < i && ((a = c[1]), (i = h)),
-                            e !== r && (h = t.numBitsDiffering(r, f)) < i && ((a = c[1]), (i = h));
+                        (h < i && ((a = c[1]), (i = h)),
+                            e !== r && (h = t.numBitsDiffering(r, f)) < i && ((a = c[1]), (i = h)));
                     }
                 } catch (t) {
                     n = { error: t };
@@ -10095,7 +10102,7 @@ var ot = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -10103,7 +10110,7 @@ var ot = (function () {
     oo = (function () {
         function t(t) {
             for (var e = [], r = 1; r < arguments.length; r++) e[r - 1] = arguments[r];
-            (this.ecCodewordsPerBlock = t), (this.ecBlocks = e);
+            ((this.ecCodewordsPerBlock = t), (this.ecBlocks = e));
         }
         return (
             (t.prototype.getECCodewordsPerBlock = function () {
@@ -10141,7 +10148,7 @@ var ot = (function () {
     })(),
     oi = (function () {
         function t(t, e) {
-            (this.count = t), (this.dataCodewords = e);
+            ((this.count = t), (this.dataCodewords = e));
         }
         return (
             (t.prototype.getCount = function () {
@@ -10161,7 +10168,7 @@ var ot = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -10169,7 +10176,7 @@ var ot = (function () {
     os = (function () {
         function t(t, e) {
             for (var r, n, o = [], i = 2; i < arguments.length; i++) o[i - 2] = arguments[i];
-            (this.versionNumber = t), (this.alignmentPatternCenters = e), (this.ecBlocks = o);
+            ((this.versionNumber = t), (this.alignmentPatternCenters = e), (this.ecBlocks = o));
             var a = 0,
                 s = o[0].getECCodewordsPerBlock(),
                 u = o[0].getECBlocks();
@@ -10229,7 +10236,7 @@ var ot = (function () {
             (t.prototype.buildFunctionPattern = function () {
                 var t = this.getDimensionForVersion(),
                     e = new eX(t);
-                e.setRegion(0, 0, 9, 9), e.setRegion(t - 8, 0, 8, 9), e.setRegion(0, t - 8, 9, 8);
+                (e.setRegion(0, 0, 9, 9), e.setRegion(t - 8, 0, 8, 9), e.setRegion(0, t - 8, 9, 8));
                 for (var r = this.alignmentPatternCenters.length, n = 0; n < r; n++)
                     for (var o = this.alignmentPatternCenters[n] - 2, i = 0; i < r; i++)
                         (0 !== n || (0 !== i && i !== r - 1)) &&
@@ -10575,17 +10582,17 @@ var ot = (function () {
             t
         );
     })();
-((tl = t8 || (t8 = {}))[(tl.DATA_MASK_000 = 0)] = "DATA_MASK_000"),
+(((tl = t8 || (t8 = {}))[(tl.DATA_MASK_000 = 0)] = "DATA_MASK_000"),
     (tl[(tl.DATA_MASK_001 = 1)] = "DATA_MASK_001"),
     (tl[(tl.DATA_MASK_010 = 2)] = "DATA_MASK_010"),
     (tl[(tl.DATA_MASK_011 = 3)] = "DATA_MASK_011"),
     (tl[(tl.DATA_MASK_100 = 4)] = "DATA_MASK_100"),
     (tl[(tl.DATA_MASK_101 = 5)] = "DATA_MASK_101"),
     (tl[(tl.DATA_MASK_110 = 6)] = "DATA_MASK_110"),
-    (tl[(tl.DATA_MASK_111 = 7)] = "DATA_MASK_111");
+    (tl[(tl.DATA_MASK_111 = 7)] = "DATA_MASK_111"));
 var ou = (function () {
         function t(t, e) {
-            (this.value = t), (this.isMasked = e);
+            ((this.value = t), (this.isMasked = e));
         }
         return (
             (t.prototype.unmaskBitMatrix = function (t, e) {
@@ -10654,7 +10661,7 @@ var ou = (function () {
             (t.prototype.readFormatInformation = function () {
                 if (null !== this.parsedFormatInfo && void 0 !== this.parsedFormatInfo) return this.parsedFormatInfo;
                 for (var t = 0, e = 0; e < 6; e++) t = this.copyBit(e, 8, t);
-                (t = this.copyBit(7, 8, t)), (t = this.copyBit(8, 8, t)), (t = this.copyBit(8, 7, t));
+                ((t = this.copyBit(7, 8, t)), (t = this.copyBit(8, 8, t)), (t = this.copyBit(8, 7, t)));
                 for (var r = 5; r >= 0; r--) t = this.copyBit(8, r, t);
                 for (var n = this.bitMatrix.getHeight(), o = 0, i = n - 7, r = n - 1; r >= i; r--)
                     o = this.copyBit(8, r, o);
@@ -10671,11 +10678,11 @@ var ou = (function () {
                 for (var r = 0, n = t - 11, o = 5; o >= 0; o--)
                     for (var i = t - 9; i >= n; i--) r = this.copyBit(i, o, r);
                 var a = os.decodeVersionInformation(r);
-                if (null !== a && a.getDimensionForVersion() === t) return (this.parsedVersion = a), a;
+                if (null !== a && a.getDimensionForVersion() === t) return ((this.parsedVersion = a), a);
                 r = 0;
                 for (var i = 5; i >= 0; i--) for (var o = t - 9; o >= n; o--) r = this.copyBit(i, o, r);
                 if (null !== (a = os.decodeVersionInformation(r)) && a.getDimensionForVersion() === t)
-                    return (this.parsedVersion = a), a;
+                    return ((this.parsedVersion = a), a);
                 throw new eB();
             }),
             (t.prototype.copyBit = function (t, e, r) {
@@ -10719,7 +10726,7 @@ var ou = (function () {
                 }
             }),
             (t.prototype.setMirror = function (t) {
-                (this.parsedVersion = null), (this.parsedFormatInfo = null), (this.isMirror = t);
+                ((this.parsedVersion = null), (this.parsedFormatInfo = null), (this.isMirror = t));
             }),
             (t.prototype.mirror = function () {
                 for (var t = this.bitMatrix, e = 0, r = t.getWidth(); e < r; e++)
@@ -10737,14 +10744,14 @@ var ou = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     oh = (function () {
         function t(t, e) {
-            (this.numDataCodewords = t), (this.codewords = e);
+            ((this.numDataCodewords = t), (this.codewords = e));
         }
         return (
             (t.getDataBlocks = function (e, r, n) {
@@ -10788,7 +10795,7 @@ var ou = (function () {
                         if (a) throw a.error;
                     }
                 }
-                for (var C = p[0].codewords.length, A = p.length - 1; A >= 0 && p[A].codewords.length !== C; ) A--;
+                for (var C = p[0].codewords.length, A = p.length - 1; A >= 0 && p[A].codewords.length !== C;) A--;
                 A++;
                 for (var E = C - u.getECCodewordsPerBlock(), I = 0, v = 0; v < E; v++)
                     for (var S = 0; S < g; S++) p[S].codewords[v] = e[I++];
@@ -10809,7 +10816,7 @@ var ou = (function () {
             t
         );
     })();
-((td = t6 || (t6 = {}))[(td.TERMINATOR = 0)] = "TERMINATOR"),
+(((td = t6 || (t6 = {}))[(td.TERMINATOR = 0)] = "TERMINATOR"),
     (td[(td.NUMERIC = 1)] = "NUMERIC"),
     (td[(td.ALPHANUMERIC = 2)] = "ALPHANUMERIC"),
     (td[(td.STRUCTURED_APPEND = 3)] = "STRUCTURED_APPEND"),
@@ -10818,15 +10825,15 @@ var ou = (function () {
     (td[(td.KANJI = 6)] = "KANJI"),
     (td[(td.FNC1_FIRST_POSITION = 7)] = "FNC1_FIRST_POSITION"),
     (td[(td.FNC1_SECOND_POSITION = 8)] = "FNC1_SECOND_POSITION"),
-    (td[(td.HANZI = 9)] = "HANZI");
+    (td[(td.HANZI = 9)] = "HANZI"));
 var ol = (function () {
         function t(e, r, n, o) {
-            (this.value = e),
+            ((this.value = e),
                 (this.stringValue = r),
                 (this.characterCountBitsForVersions = n),
                 (this.bits = o),
                 t.FOR_BITS.set(o, this),
-                t.FOR_VALUE.set(e, this);
+                t.FOR_VALUE.set(e, this));
         }
         return (
             (t.forBits = function (e) {
@@ -10837,7 +10844,7 @@ var ol = (function () {
             (t.prototype.getCharacterCountBits = function (t) {
                 var e,
                     r = t.getVersionNumber();
-                return (e = r <= 9 ? 0 : r <= 26 ? 1 : 2), this.characterCountBitsForVersions[e];
+                return ((e = r <= 9 ? 0 : r <= 26 ? 1 : 2), this.characterCountBitsForVersions[e]);
             }),
             (t.prototype.getValue = function () {
                 return this.value;
@@ -10904,7 +10911,7 @@ var ol = (function () {
                                 break;
                             case ol.STRUCTURED_APPEND:
                                 if (16 > i.available()) throw new eB();
-                                (u = i.readBits(8)), (c = i.readBits(8));
+                                ((u = i.readBits(8)), (c = i.readBits(8)));
                                 break;
                             case ol.ECI:
                                 var p = t.parseECIValue(i);
@@ -10942,10 +10949,14 @@ var ol = (function () {
             }),
             (t.decodeHanziSegment = function (t, e, r) {
                 if (13 * r > t.available()) throw new eB();
-                for (var n = new Uint8Array(2 * r), o = 0; r > 0; ) {
+                for (var n = new Uint8Array(2 * r), o = 0; r > 0;) {
                     var i = t.readBits(13),
                         a = ((i / 96) << 8) | (i % 96);
-                    a < 959 ? (a += 41377) : (a += 42657), (n[o] = (a >> 8) & 255), (n[o + 1] = 255 & a), (o += 2), r--;
+                    (a < 959 ? (a += 41377) : (a += 42657),
+                        (n[o] = (a >> 8) & 255),
+                        (n[o + 1] = 255 & a),
+                        (o += 2),
+                        r--);
                 }
                 try {
                     e.append(eV.decode(n, eH.GB2312));
@@ -10955,10 +10966,10 @@ var ol = (function () {
             }),
             (t.decodeKanjiSegment = function (t, e, r) {
                 if (13 * r > t.available()) throw new eB();
-                for (var n = new Uint8Array(2 * r), o = 0; r > 0; ) {
+                for (var n = new Uint8Array(2 * r), o = 0; r > 0;) {
                     var i = t.readBits(13),
                         a = ((i / 192) << 8) | (i % 192);
-                    a < 7936 ? (a += 33088) : (a += 49472), (n[o] = a >> 8), (n[o + 1] = a), (o += 2), r--;
+                    (a < 7936 ? (a += 33088) : (a += 49472), (n[o] = a >> 8), (n[o + 1] = a), (o += 2), r--);
                 }
                 try {
                     e.append(eV.decode(n, eH.SHIFT_JIS));
@@ -10982,12 +10993,12 @@ var ol = (function () {
                 return t.ALPHANUMERIC_CHARS[e];
             }),
             (t.decodeAlphanumericSegment = function (e, r, n, o) {
-                for (var i = r.length(); n > 1; ) {
+                for (var i = r.length(); n > 1;) {
                     if (11 > e.available()) throw new eB();
                     var a = e.readBits(11);
-                    r.append(t.toAlphaNumericChar(Math.floor(a / 45))),
+                    (r.append(t.toAlphaNumericChar(Math.floor(a / 45))),
                         r.append(t.toAlphaNumericChar(a % 45)),
-                        (n -= 2);
+                        (n -= 2));
                 }
                 if (1 === n) {
                     if (6 > e.available()) throw new eB();
@@ -11001,20 +11012,20 @@ var ol = (function () {
                                 : r.setCharAt(s, "\x1d"));
             }),
             (t.decodeNumericSegment = function (e, r, n) {
-                for (; n >= 3; ) {
+                for (; n >= 3;) {
                     if (10 > e.available()) throw new eB();
                     var o = e.readBits(10);
                     if (o >= 1e3) throw new eB();
-                    r.append(t.toAlphaNumericChar(Math.floor(o / 100))),
+                    (r.append(t.toAlphaNumericChar(Math.floor(o / 100))),
                         r.append(t.toAlphaNumericChar(Math.floor(o / 10) % 10)),
                         r.append(t.toAlphaNumericChar(o % 10)),
-                        (n -= 3);
+                        (n -= 3));
                 }
                 if (2 === n) {
                     if (7 > e.available()) throw new eB();
                     var i = e.readBits(7);
                     if (i >= 100) throw new eB();
-                    r.append(t.toAlphaNumericChar(Math.floor(i / 10))), r.append(t.toAlphaNumericChar(i % 10));
+                    (r.append(t.toAlphaNumericChar(Math.floor(i / 10))), r.append(t.toAlphaNumericChar(i % 10)));
                 } else if (1 === n) {
                     if (4 > e.available()) throw new eB();
                     var a = e.readBits(4);
@@ -11045,7 +11056,7 @@ var ol = (function () {
             (t.prototype.applyMirroredCorrection = function (t) {
                 if (this.mirrored && null !== t && !(t.length < 3)) {
                     var e = t[0];
-                    (t[0] = t[2]), (t[2] = e);
+                    ((t[0] = t[2]), (t[2] = e));
                 }
             }),
             t
@@ -11059,7 +11070,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -11081,9 +11092,9 @@ var ol = (function () {
                     n = t;
                 }
                 try {
-                    r.remask(), r.setMirror(!0), r.readVersion(), r.readFormatInformation(), r.mirror();
+                    (r.remask(), r.setMirror(!0), r.readVersion(), r.readFormatInformation(), r.mirror());
                     var o = this.decodeBitMatrixParser(r, e);
-                    return o.setOther(new op(!0)), o;
+                    return (o.setOther(new op(!0)), o);
                 } catch (t) {
                     if (null !== n) throw n;
                     throw t;
@@ -11162,12 +11173,12 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            tp(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tp(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ov = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e, r) || this;
-            return (o.estimatedModuleSize = n), o;
+            return ((o.estimatedModuleSize = n), o);
         }
         return (
             ow(e, t),
@@ -11192,14 +11203,14 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     om = (function () {
         function t(t, e, r, n, o, i, a) {
-            (this.image = t),
+            ((this.image = t),
                 (this.startX = e),
                 (this.startY = r),
                 (this.width = n),
@@ -11207,7 +11218,7 @@ var ol = (function () {
                 (this.moduleSize = i),
                 (this.resultPointCallback = a),
                 (this.possibleCenters = []),
-                (this.crossCheckStateCount = new Int32Array(3));
+                (this.crossCheckStateCount = new Int32Array(3)));
         }
         return (
             (t.prototype.find = function () {
@@ -11223,9 +11234,9 @@ var ol = (function () {
                     a++
                 ) {
                     var s = n + ((1 & a) == 0 ? Math.floor((a + 1) / 2) : -Math.floor((a + 1) / 2));
-                    (o[0] = 0), (o[1] = 0), (o[2] = 0);
-                    for (var u = t; u < r && !i.get(u, s); ) u++;
-                    for (var c = 0; u < r; ) {
+                    ((o[0] = 0), (o[1] = 0), (o[2] = 0));
+                    for (var u = t; u < r && !i.get(u, s);) u++;
+                    for (var c = 0; u < r;) {
                         if (i.get(u, s))
                             if (1 === c) o[1]++;
                             else if (2 === c) {
@@ -11233,9 +11244,9 @@ var ol = (function () {
                                     var f = this.handlePossibleCenter(o, s, u);
                                     if (null !== f) return f;
                                 }
-                                (o[0] = o[2]), (o[1] = 1), (o[2] = 0), (c = 1);
+                                ((o[0] = o[2]), (o[1] = 1), (o[2] = 0), (c = 1));
                             } else o[++c]++;
-                        else 1 === c && c++, o[c]++;
+                        else (1 === c && c++, o[c]++);
                         u++;
                     }
                     if (this.foundPatternCross(o)) {
@@ -11257,14 +11268,14 @@ var ol = (function () {
                 var i = this.image,
                     a = i.getHeight(),
                     s = this.crossCheckStateCount;
-                (s[0] = 0), (s[1] = 0), (s[2] = 0);
-                for (var u = e; u >= 0 && i.get(r, u) && s[1] <= n; ) s[1]++, u--;
+                ((s[0] = 0), (s[1] = 0), (s[2] = 0));
+                for (var u = e; u >= 0 && i.get(r, u) && s[1] <= n;) (s[1]++, u--);
                 if (u < 0 || s[1] > n) return NaN;
-                for (; u >= 0 && !i.get(r, u) && s[0] <= n; ) s[0]++, u--;
+                for (; u >= 0 && !i.get(r, u) && s[0] <= n;) (s[0]++, u--);
                 if (s[0] > n) return NaN;
-                for (u = e + 1; u < a && i.get(r, u) && s[1] <= n; ) s[1]++, u++;
+                for (u = e + 1; u < a && i.get(r, u) && s[1] <= n;) (s[1]++, u++);
                 if (u === a || s[1] > n) return NaN;
-                for (; u < a && !i.get(r, u) && s[2] <= n; ) s[2]++, u++;
+                for (; u < a && !i.get(r, u) && s[2] <= n;) (s[2]++, u++);
                 return s[2] > n || 5 * Math.abs(s[0] + s[1] + s[2] - o) >= 2 * o
                     ? NaN
                     : this.foundPatternCross(s)
@@ -11294,10 +11305,10 @@ var ol = (function () {
                         }
                     }
                     var d = new ov(s, u, c);
-                    this.possibleCenters.push(d),
+                    (this.possibleCenters.push(d),
                         null !== this.resultPointCallback &&
                             void 0 !== this.resultPointCallback &&
-                            this.resultPointCallback.foundPossibleResultPoint(d);
+                            this.resultPointCallback.foundPossibleResultPoint(d));
                 }
                 return null;
             }),
@@ -11320,12 +11331,12 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            tg(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tg(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     oA = (function (t) {
         function e(e, r, n, o) {
             var i = t.call(this, e, r) || this;
-            return (i.estimatedModuleSize = n), (i.count = o), void 0 === o && (i.count = 1), i;
+            return ((i.estimatedModuleSize = n), (i.count = o), void 0 === o && (i.count = 1), i);
         }
         return (
             oC(e, t),
@@ -11356,7 +11367,7 @@ var ol = (function () {
     })(rd),
     oE = (function () {
         function t(t) {
-            (this.bottomLeft = t[0]), (this.topLeft = t[1]), (this.topRight = t[2]);
+            ((this.bottomLeft = t[0]), (this.topLeft = t[1]), (this.topRight = t[2]));
         }
         return (
             (t.prototype.getBottomLeft = function () {
@@ -11379,18 +11390,18 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     oS = (function () {
         function t(t, e) {
-            (this.image = t),
+            ((this.image = t),
                 (this.resultPointCallback = e),
                 (this.possibleCenters = []),
                 (this.crossCheckStateCount = new Int32Array(5)),
-                (this.resultPointCallback = e);
+                (this.resultPointCallback = e));
         }
         return (
             (t.prototype.getImage = function () {
@@ -11408,9 +11419,9 @@ var ol = (function () {
                     s = Math.floor((3 * i) / (4 * t.MAX_MODULES));
                 (s < t.MIN_SKIP || r) && (s = t.MIN_SKIP);
                 for (var u = !1, c = new Int32Array(5), f = s - 1; f < i && !u; f += s) {
-                    (c[0] = 0), (c[1] = 0), (c[2] = 0), (c[3] = 0), (c[4] = 0);
+                    ((c[0] = 0), (c[1] = 0), (c[2] = 0), (c[3] = 0), (c[4] = 0));
                     for (var h = 0, l = 0; l < a; l++)
-                        if (o.get(l, f)) (1 & h) == 1 && h++, c[h]++;
+                        if (o.get(l, f)) ((1 & h) == 1 && h++, c[h]++);
                         else if ((1 & h) == 0)
                             if (4 === h)
                                 if (t.foundPatternCross(c)) {
@@ -11422,11 +11433,11 @@ var ol = (function () {
                                             p > c[2] && ((f += p - c[2] - s), (l = a - 1));
                                         }
                                     else {
-                                        (c[0] = c[2]), (c[1] = c[3]), (c[2] = c[4]), (c[3] = 1), (c[4] = 0), (h = 3);
+                                        ((c[0] = c[2]), (c[1] = c[3]), (c[2] = c[4]), (c[3] = 1), (c[4] = 0), (h = 3));
                                         continue;
                                     }
-                                    (h = 0), (c[0] = 0), (c[1] = 0), (c[2] = 0), (c[3] = 0), (c[4] = 0);
-                                } else (c[0] = c[2]), (c[1] = c[3]), (c[2] = c[4]), (c[3] = 1), (c[4] = 0), (h = 3);
+                                    ((h = 0), (c[0] = 0), (c[1] = 0), (c[2] = 0), (c[3] = 0), (c[4] = 0));
+                                } else ((c[0] = c[2]), (c[1] = c[3]), (c[2] = c[4]), (c[3] = 1), (c[4] = 0), (h = 3));
                             else c[++h]++;
                         else c[h]++;
                     if (t.foundPatternCross(c)) {
@@ -11435,7 +11446,7 @@ var ol = (function () {
                     }
                 }
                 var g = this.selectBestPatterns();
-                return rd.orderBestPatterns(g), new oE(g);
+                return (rd.orderBestPatterns(g), new oE(g));
             }),
             (t.centerFromEnd = function (t, e) {
                 return e - t[4] - t[3] - t[2] / 2;
@@ -11459,26 +11470,26 @@ var ol = (function () {
             }),
             (t.prototype.getCrossCheckStateCount = function () {
                 var t = this.crossCheckStateCount;
-                return (t[0] = 0), (t[1] = 0), (t[2] = 0), (t[3] = 0), (t[4] = 0), t;
+                return ((t[0] = 0), (t[1] = 0), (t[2] = 0), (t[3] = 0), (t[4] = 0), t);
             }),
             (t.prototype.crossCheckDiagonal = function (e, r, n, o) {
                 for (
                     var i = this.getCrossCheckStateCount(), a = 0, s = this.image;
                     e >= a && r >= a && s.get(r - a, e - a);
                 )
-                    i[2]++, a++;
+                    (i[2]++, a++);
                 if (e < a || r < a) return !1;
-                for (; e >= a && r >= a && !s.get(r - a, e - a) && i[1] <= n; ) i[1]++, a++;
+                for (; e >= a && r >= a && !s.get(r - a, e - a) && i[1] <= n;) (i[1]++, a++);
                 if (e < a || r < a || i[1] > n) return !1;
-                for (; e >= a && r >= a && s.get(r - a, e - a) && i[0] <= n; ) i[0]++, a++;
+                for (; e >= a && r >= a && s.get(r - a, e - a) && i[0] <= n;) (i[0]++, a++);
                 if (i[0] > n) return !1;
                 var u = s.getHeight(),
                     c = s.getWidth();
-                for (a = 1; e + a < u && r + a < c && s.get(r + a, e + a); ) i[2]++, a++;
+                for (a = 1; e + a < u && r + a < c && s.get(r + a, e + a);) (i[2]++, a++);
                 if (e + a >= u || r + a >= c) return !1;
-                for (; e + a < u && r + a < c && !s.get(r + a, e + a) && i[3] < n; ) i[3]++, a++;
+                for (; e + a < u && r + a < c && !s.get(r + a, e + a) && i[3] < n;) (i[3]++, a++);
                 if (e + a >= u || r + a >= c || i[3] >= n) return !1;
-                for (; e + a < u && r + a < c && s.get(r + a, e + a) && i[4] < n; ) i[4]++, a++;
+                for (; e + a < u && r + a < c && s.get(r + a, e + a) && i[4] < n;) (i[4]++, a++);
                 return !(i[4] >= n) && Math.abs(i[0] + i[1] + i[2] + i[3] + i[4] - o) < 2 * o && t.foundPatternCross(i);
             }),
             (t.prototype.crossCheckVertical = function (e, r, n, o) {
@@ -11486,17 +11497,17 @@ var ol = (function () {
                     var i = this.image, a = i.getHeight(), s = this.getCrossCheckStateCount(), u = e;
                     u >= 0 && i.get(r, u);
                 )
-                    s[2]++, u--;
+                    (s[2]++, u--);
                 if (u < 0) return NaN;
-                for (; u >= 0 && !i.get(r, u) && s[1] <= n; ) s[1]++, u--;
+                for (; u >= 0 && !i.get(r, u) && s[1] <= n;) (s[1]++, u--);
                 if (u < 0 || s[1] > n) return NaN;
-                for (; u >= 0 && i.get(r, u) && s[0] <= n; ) s[0]++, u--;
+                for (; u >= 0 && i.get(r, u) && s[0] <= n;) (s[0]++, u--);
                 if (s[0] > n) return NaN;
-                for (u = e + 1; u < a && i.get(r, u); ) s[2]++, u++;
+                for (u = e + 1; u < a && i.get(r, u);) (s[2]++, u++);
                 if (u === a) return NaN;
-                for (; u < a && !i.get(r, u) && s[3] < n; ) s[3]++, u++;
+                for (; u < a && !i.get(r, u) && s[3] < n;) (s[3]++, u++);
                 if (u === a || s[3] >= n) return NaN;
-                for (; u < a && i.get(r, u) && s[4] < n; ) s[4]++, u++;
+                for (; u < a && i.get(r, u) && s[4] < n;) (s[4]++, u++);
                 return s[4] >= n || 5 * Math.abs(s[0] + s[1] + s[2] + s[3] + s[4] - o) >= 2 * o
                     ? NaN
                     : t.foundPatternCross(s)
@@ -11508,17 +11519,17 @@ var ol = (function () {
                     var i = this.image, a = i.getWidth(), s = this.getCrossCheckStateCount(), u = e;
                     u >= 0 && i.get(u, r);
                 )
-                    s[2]++, u--;
+                    (s[2]++, u--);
                 if (u < 0) return NaN;
-                for (; u >= 0 && !i.get(u, r) && s[1] <= n; ) s[1]++, u--;
+                for (; u >= 0 && !i.get(u, r) && s[1] <= n;) (s[1]++, u--);
                 if (u < 0 || s[1] > n) return NaN;
-                for (; u >= 0 && i.get(u, r) && s[0] <= n; ) s[0]++, u--;
+                for (; u >= 0 && i.get(u, r) && s[0] <= n;) (s[0]++, u--);
                 if (s[0] > n) return NaN;
-                for (u = e + 1; u < a && i.get(u, r); ) s[2]++, u++;
+                for (u = e + 1; u < a && i.get(u, r);) (s[2]++, u++);
                 if (u === a) return NaN;
-                for (; u < a && !i.get(u, r) && s[3] < n; ) s[3]++, u++;
+                for (; u < a && !i.get(u, r) && s[3] < n;) (s[3]++, u++);
                 if (u === a || s[3] >= n) return NaN;
-                for (; u < a && i.get(u, r) && s[4] < n; ) s[4]++, u++;
+                for (; u < a && i.get(u, r) && s[4] < n;) (s[4]++, u++);
                 return s[4] >= n || 5 * Math.abs(s[0] + s[1] + s[2] + s[3] + s[4] - o) >= o
                     ? NaN
                     : t.foundPatternCross(s)
@@ -11537,16 +11548,16 @@ var ol = (function () {
                     for (var u = i / 7, c = !1, f = this.possibleCenters, h = 0, l = f.length; h < l; h++) {
                         var d = f[h];
                         if (d.aboutEquals(u, s, a)) {
-                            (f[h] = d.combineEstimate(s, a, u)), (c = !0);
+                            ((f[h] = d.combineEstimate(s, a, u)), (c = !0));
                             break;
                         }
                     }
                     if (!c) {
                         var p = new oA(a, s, u);
-                        f.push(p),
+                        (f.push(p),
                             null !== this.resultPointCallback &&
                                 void 0 !== this.resultPointCallback &&
-                                this.resultPointCallback.foundPossibleResultPoint(p);
+                                this.resultPointCallback.foundPossibleResultPoint(p));
                     }
                     return !0;
                 }
@@ -11635,7 +11646,7 @@ var ol = (function () {
                     try {
                         for (var c = oI(this.possibleCenters), f = c.next(); !f.done; f = c.next()) {
                             var h = f.value.getEstimatedModuleSize();
-                            (s += h), (u += h * h);
+                            ((s += h), (u += h * h));
                         }
                     } catch (e) {
                         t = { error: e };
@@ -11672,14 +11683,14 @@ var ol = (function () {
                             if (r) throw r.error;
                         }
                     }
-                    (o = s / a.length),
+                    ((o = s / a.length),
                         a.sort(function (t, e) {
                             if (e.getCount() !== t.getCount()) return e.getCount() - t.getCount();
                             var r = Math.abs(e.getEstimatedModuleSize() - o),
                                 n = Math.abs(t.getEstimatedModuleSize() - o);
                             return r < n ? 1 : r > n ? -1 : 0;
                         }),
-                        a.splice(3);
+                        a.splice(3));
                 }
                 return [a[0], a[1], a[2]];
             }),
@@ -11826,7 +11837,7 @@ var ol = (function () {
                 var o = Math.abs(n - e) > Math.abs(r - t);
                 if (o) {
                     var i = t;
-                    (t = e), (e = i), (i = r), (r = n), (n = i);
+                    ((t = e), (e = i), (i = r), (r = n), (n = i));
                 }
                 for (
                     var a = Math.abs(r - t),
@@ -11849,7 +11860,7 @@ var ol = (function () {
                     }
                     if ((u += s) > 0) {
                         if (p === n) break;
-                        (p += f), (u -= a);
+                        ((p += f), (u -= a));
                     }
                 }
                 return 2 === h ? rh.distance(r + c, n, t, e) : NaN;
@@ -11880,10 +11891,10 @@ var ol = (function () {
                     var n,
                         o,
                         i = t.extractPureBits(e.getBlackMatrix());
-                    (n = this.decoder.decodeBitMatrix(i, r)), (o = t.NO_POINTS);
+                    ((n = this.decoder.decodeBitMatrix(i, r)), (o = t.NO_POINTS));
                 } else {
                     var a = new oT(e.getBlackMatrix()).detect(r);
-                    (n = this.decoder.decodeBitMatrix(a.getBits(), r)), (o = a.getPoints());
+                    ((n = this.decoder.decodeBitMatrix(a.getBits(), r)), (o = a.getPoints()));
                 }
                 n.getOther() instanceof op && n.getOther().applyMirroredCorrection(o);
                 var s = new e8(n.getText(), n.getRawBytes(), void 0, o, e6.QR_CODE, void 0),
@@ -11930,12 +11941,12 @@ var ol = (function () {
                 return d;
             }),
             (t.moduleSize = function (t, e) {
-                for (var r = e.getHeight(), n = e.getWidth(), o = t[0], i = t[1], a = !0, s = 0; o < n && i < r; ) {
+                for (var r = e.getHeight(), n = e.getWidth(), o = t[0], i = t[1], a = !0, s = 0; o < n && i < r;) {
                     if (a !== e.get(o, i)) {
                         if (5 == ++s) break;
                         a = !a;
                     }
-                    o++, i++;
+                    (o++, i++);
                 }
                 if (o === n || i === r) throw new eW();
                 return (o - t[0]) / 7;
@@ -11952,7 +11963,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -12362,7 +12373,7 @@ var ol = (function () {
     })(),
     oN = (function () {
         function t(t, e) {
-            (this.bits = t), (this.points = e);
+            ((this.bits = t), (this.points = e));
         }
         return (
             (t.prototype.getBits = function () {
@@ -12382,7 +12393,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -12393,19 +12404,19 @@ var ol = (function () {
             (t.detectMultiple = function (e, r, n) {
                 var o = e.getBlackMatrix(),
                     i = t.detect(n, o);
-                return i.length || ((o = o.clone()).rotate180(), (i = t.detect(n, o))), new oN(o, i);
+                return (i.length || ((o = o.clone()).rotate180(), (i = t.detect(n, o))), new oN(o, i));
             }),
             (t.detect = function (e, r) {
-                for (var n, o, i = [], a = 0, s = 0, u = !1; a < r.getHeight(); ) {
+                for (var n, o, i = [], a = 0, s = 0, u = !1; a < r.getHeight();) {
                     var c = t.findVertices(r, a, s);
                     if (null == c[0] && null == c[3]) {
                         if (!u) break;
-                        (u = !1), (s = 0);
+                        ((u = !1), (s = 0));
                         try {
                             for (var f = ((n = void 0), oD(i)), h = f.next(); !h.done; h = f.next()) {
                                 var l = h.value;
-                                null != l[1] && (a = Math.trunc(Math.max(a, l[1].getY()))),
-                                    null != l[3] && (a = Math.max(a, Math.trunc(l[3].getY())));
+                                (null != l[1] && (a = Math.trunc(Math.max(a, l[1].getY()))),
+                                    null != l[3] && (a = Math.max(a, Math.trunc(l[3].getY()))));
                             }
                         } catch (t) {
                             n = { error: t };
@@ -12444,7 +12455,7 @@ var ol = (function () {
                 for (var s = [, , , ,], u = !1, c = new Int32Array(a.length); o < r; o += t.ROW_STEP) {
                     var f = t.findGuardPattern(e, i, o, n, !1, a, c);
                     if (null != f) {
-                        for (; o > 0; ) {
+                        for (; o > 0;) {
                             var h = t.findGuardPattern(e, i, --o, n, !1, a, c);
                             if (null != h) f = h;
                             else {
@@ -12452,7 +12463,7 @@ var ol = (function () {
                                 break;
                             }
                         }
-                        (s[0] = new rd(f[0], o)), (s[1] = new rd(f[1], o)), (u = !0);
+                        ((s[0] = new rd(f[0], o)), (s[1] = new rd(f[1], o)), (u = !0));
                         break;
                     }
                 }
@@ -12469,33 +12480,33 @@ var ol = (function () {
                             Math.abs(h[0] - f[0]) < t.MAX_PATTERN_DRIFT &&
                             Math.abs(h[1] - f[1]) < t.MAX_PATTERN_DRIFT
                         )
-                            (h = f), (d = 0);
+                            ((h = f), (d = 0));
                         else if (d > t.SKIPPED_ROW_COUNT_MAX) break;
                         else d++;
                     }
-                    (l -= d + 1), (s[2] = new rd(h[0], l)), (s[3] = new rd(h[1], l));
+                    ((l -= d + 1), (s[2] = new rd(h[0], l)), (s[3] = new rd(h[1], l)));
                 }
-                return l - o < t.BARCODE_MIN_HEIGHT && eR.fill(s, null), s;
+                return (l - o < t.BARCODE_MIN_HEIGHT && eR.fill(s, null), s);
             }),
             (t.findGuardPattern = function (e, r, n, o, i, a, s) {
                 eR.fillWithin(s, 0, s.length, 0);
-                for (var u = r, c = 0; e.get(u, n) && u > 0 && c++ < t.MAX_PIXEL_DRIFT; ) u--;
+                for (var u = r, c = 0; e.get(u, n) && u > 0 && c++ < t.MAX_PIXEL_DRIFT;) u--;
                 for (var f = u, h = 0, l = a.length, d = i; f < o; f++)
                     if (e.get(f, n) !== d) s[h]++;
                     else {
                         if (h === l - 1) {
                             if (t.patternMatchVariance(s, a, t.MAX_INDIVIDUAL_VARIANCE) < t.MAX_AVG_VARIANCE)
                                 return new Int32Array([u, f]);
-                            (u += s[0] + s[1]), eE.arraycopy(s, 2, s, 0, h - 1), (s[h - 1] = 0), (s[h] = 0), h--;
+                            ((u += s[0] + s[1]), eE.arraycopy(s, 2, s, 0, h - 1), (s[h - 1] = 0), (s[h] = 0), h--);
                         } else h++;
-                        (s[h] = 1), (d = !d);
+                        ((s[h] = 1), (d = !d));
                     }
                 return h === l - 1 && t.patternMatchVariance(s, a, t.MAX_INDIVIDUAL_VARIANCE) < t.MAX_AVG_VARIANCE
                     ? new Int32Array([u, f - 1])
                     : null;
             }),
             (t.patternMatchVariance = function (t, e, r) {
-                for (var n = t.length, o = 0, i = 0, a = 0; a < n; a++) (o += t[a]), (i += e[a]);
+                for (var n = t.length, o = 0, i = 0, a = 0; a < n; a++) ((o += t[a]), (i += e[a]));
                 if (o < i) return 1 / 0;
                 var s = o / i;
                 r *= s;
@@ -12530,7 +12541,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -12541,7 +12552,7 @@ var ol = (function () {
             this.field = t;
             var r = e.length;
             if (r > 1 && 0 === e[0]) {
-                for (var n = 1; n < r && 0 === e[n]; ) n++;
+                for (var n = 1; n < r && 0 === e[n];) n++;
                 n === r
                     ? (this.coefficients = new Int32Array([0]))
                     : ((this.coefficients = new Int32Array(r - n)),
@@ -12595,7 +12606,7 @@ var ol = (function () {
                     n = e.coefficients;
                 if (r.length > n.length) {
                     var o = r;
-                    (r = n), (n = o);
+                    ((r = n), (n = o));
                 }
                 var i = new Int32Array(n.length),
                     a = n.length - r.length;
@@ -12709,15 +12720,15 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            ty(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (ty(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     oF = (function (t) {
         function e(e, r) {
             var n = t.call(this) || this;
-            (n.modulus = e), (n.expTable = new Int32Array(e)), (n.logTable = new Int32Array(e));
-            for (var o = 1, i = 0; i < e; i++) (n.expTable[i] = o), (o = (o * r) % e);
+            ((n.modulus = e), (n.expTable = new Int32Array(e)), (n.logTable = new Int32Array(e)));
+            for (var o = 1, i = 0; i < e; i++) ((n.expTable[i] = o), (o = (o * r) % e));
             for (var i = 0; i < e - 1; i++) n.logTable[n.expTable[i]] = i;
-            return (n.zero = new oB(n, new Int32Array([0]))), (n.one = new oB(n, new Int32Array([1]))), n;
+            return ((n.zero = new oB(n, new Int32Array([0]))), (n.one = new oB(n, new Int32Array([1]))), n);
         }
         return (
             ox(e, t),
@@ -12731,7 +12742,7 @@ var ol = (function () {
                 if (t < 0) throw new ev();
                 if (0 === e) return this.zero;
                 var r = new Int32Array(t + 1);
-                return (r[0] = e), new oB(this, r);
+                return ((r[0] = e), new oB(this, r));
             }),
             (e.PDF417_GF = new e(oR.NUMBER_OF_CODEWORDS, 3)),
             e
@@ -12745,7 +12756,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -12758,7 +12769,7 @@ var ol = (function () {
             (t.prototype.decode = function (t, e, r) {
                 for (var n, o, i = new oB(this.field, t), a = new Int32Array(e), s = !1, u = e; u > 0; u--) {
                     var c = i.evaluateAt(this.field.exp(u));
-                    (a[e - u] = c), 0 !== c && (s = !0);
+                    ((a[e - u] = c), 0 !== c && (s = !0));
                 }
                 if (!s) return 0;
                 var f = this.field.getOne();
@@ -12799,7 +12810,7 @@ var ol = (function () {
             (t.prototype.runEuclideanAlgorithm = function (t, e, r) {
                 if (t.getDegree() < e.getDegree()) {
                     var n = t;
-                    (t = e), (e = n);
+                    ((t = e), (e = n));
                 }
                 for (
                     var o = t, i = e, a = this.field.getZero(), s = this.field.getOne();
@@ -12815,7 +12826,7 @@ var ol = (function () {
                     ) {
                         var d = i.getDegree() - o.getDegree(),
                             p = this.field.multiply(i.getCoefficient(i.getDegree()), l);
-                        (f = f.add(this.field.buildMonomial(d, p))), (i = i.subtract(o.multiplyByMonomial(d, p)));
+                        ((f = f.add(this.field.buildMonomial(d, p))), (i = i.subtract(o.multiplyByMonomial(d, p))));
                     }
                     s = f.multiply(a).subtract(c).negative();
                 }
@@ -12853,7 +12864,7 @@ var ol = (function () {
                 var i = null == e || null == r,
                     a = null == n || null == o;
                 if (i && a) throw new eW();
-                i
+                (i
                     ? ((e = new rd(0, n.getY())), (r = new rd(0, o.getY())))
                     : a && ((n = new rd(t.getWidth() - 1, e.getY())), (o = new rd(t.getWidth() - 1, r.getY()))),
                     (this.image = t),
@@ -12864,10 +12875,10 @@ var ol = (function () {
                     (this.minX = Math.trunc(Math.min(e.getX(), r.getX()))),
                     (this.maxX = Math.trunc(Math.max(n.getX(), o.getX()))),
                     (this.minY = Math.trunc(Math.min(e.getY(), n.getY()))),
-                    (this.maxY = Math.trunc(Math.max(r.getY(), o.getY())));
+                    (this.maxY = Math.trunc(Math.max(r.getY(), o.getY()))));
             }),
             (t.prototype.constructor_2 = function (t) {
-                (this.image = t.image),
+                ((this.image = t.image),
                     (this.topLeft = t.getTopLeft()),
                     (this.bottomLeft = t.getBottomLeft()),
                     (this.topRight = t.getTopRight()),
@@ -12875,7 +12886,7 @@ var ol = (function () {
                     (this.minX = t.getMinX()),
                     (this.maxX = t.getMaxX()),
                     (this.minY = t.getMinY()),
-                    (this.maxY = t.getMaxY());
+                    (this.maxY = t.getMaxY()));
             }),
             (t.merge = function (e, r) {
                 return null == e
@@ -12934,11 +12945,11 @@ var ol = (function () {
     })(),
     oU = (function () {
         function t(t, e, r, n) {
-            (this.columnCount = t),
+            ((this.columnCount = t),
                 (this.errorCorrectionLevel = n),
                 (this.rowCountUpperPart = e),
                 (this.rowCountLowerPart = r),
-                (this.rowCount = e + r);
+                (this.rowCount = e + r));
         }
         return (
             (t.prototype.getColumnCount = function () {
@@ -12995,7 +13006,7 @@ var ol = (function () {
                                 u = parseFloat(parseInt(e[r], c || 10).toPrecision(t)).toFixed(0);
                         }
                         u = "object" == typeof u ? JSON.stringify(u) : (+u).toString(c);
-                        for (var f = parseInt(o), h = o && o[0] + "" == "0" ? "0" : " "; u.length < f; )
+                        for (var f = parseInt(o), h = o && o[0] + "" == "0" ? "0" : " "; u.length < f;)
                             u = void 0 !== n ? u + h : h + u;
                         return u;
                     }
@@ -13019,14 +13030,14 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     oW = (function () {
         function t(t) {
-            (this.boundingBox = new oH(t)), (this.codewords = Array(t.getMaxY() - t.getMinY() + 1));
+            ((this.boundingBox = new oH(t)), (this.codewords = Array(t.getMaxY() - t.getMinY() + 1)));
         }
         return (
             (t.prototype.getCodewordNearby = function (e) {
@@ -13095,7 +13106,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -13108,7 +13119,7 @@ var ol = (function () {
             i = r.call(t),
             a = [];
         try {
-            for (; (void 0 === e || e-- > 0) && !(n = i.next()).done; ) a.push(n.value);
+            for (; (void 0 === e || e-- > 0) && !(n = i.next()).done;) a.push(n.value);
         } catch (t) {
             o = { error: t };
         } finally {
@@ -13128,7 +13139,7 @@ var ol = (function () {
             (t.prototype.setValue = function (t) {
                 t = Math.trunc(t);
                 var e = this.values.get(t);
-                null == e && (e = 0), e++, this.values.set(t, e);
+                (null == e && (e = 0), e++, this.values.set(t, e));
             }),
             (t.prototype.getValue = function () {
                 var t,
@@ -13184,7 +13195,7 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            tw(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tw(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     oK = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -13194,7 +13205,7 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -13202,7 +13213,7 @@ var ol = (function () {
     oq = (function (t) {
         function e(e, r) {
             var n = t.call(this, e) || this;
-            return (n._isLeft = r), n;
+            return ((n._isLeft = r), n);
         }
         return (
             oZ(e, t),
@@ -13225,7 +13236,7 @@ var ol = (function () {
             }),
             (e.prototype.adjustCompleteIndicatorColumnRowNumbers = function (t) {
                 var e = this.getCodewords();
-                this.setRowNumbers(), this.removeIncorrectCodewords(e, t);
+                (this.setRowNumbers(), this.removeIncorrectCodewords(e, t));
                 for (
                     var r = this.getBoundingBox(),
                         n = this._isLeft ? r.getTopLeft() : r.getTopRight(),
@@ -13243,7 +13254,7 @@ var ol = (function () {
                         var h = e[f],
                             l = h.getRowNumber() - s;
                         if (0 === l) c++;
-                        else if (1 === l) (u = Math.max(u, c)), (c = 1), (s = h.getRowNumber());
+                        else if (1 === l) ((u = Math.max(u, c)), (c = 1), (s = h.getRowNumber()));
                         else if (l < 0 || h.getRowNumber() >= t.getRowCount() || l > f) e[f] = null;
                         else {
                             for (var d = void 0, p = (d = u > 2 ? (u - 2) * l : l) >= f, g = 1; g <= d && !p; g++)
@@ -13327,7 +13338,7 @@ var ol = (function () {
                                     o.setValue(3 * f + 1);
                                     break;
                                 case 1:
-                                    a.setValue(f / 3), i.setValue(f % 3);
+                                    (a.setValue(f / 3), i.setValue(f % 3));
                                     break;
                                 case 2:
                                     n.setValue(f + 1);
@@ -13354,7 +13365,7 @@ var ol = (function () {
                 )
                     return null;
                 var l = new oU(n.getValue()[0], o.getValue()[0], i.getValue()[0], a.getValue()[0]);
-                return this.removeIncorrectCodewords(r, l), l;
+                return (this.removeIncorrectCodewords(r, l), l);
             }),
             (e.prototype.removeIncorrectCodewords = function (t, e) {
                 for (var r = 0; r < t.length; r++) {
@@ -13398,26 +13409,26 @@ var ol = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     oJ = (function () {
         function t(t, e) {
-            (this.ADJUST_ROW_NUMBER_SKIP = 2),
+            ((this.ADJUST_ROW_NUMBER_SKIP = 2),
                 (this.barcodeMetadata = t),
                 (this.barcodeColumnCount = t.getColumnCount()),
                 (this.boundingBox = e),
-                (this.detectionResultColumns = Array(this.barcodeColumnCount + 2));
+                (this.detectionResultColumns = Array(this.barcodeColumnCount + 2)));
         }
         return (
             (t.prototype.getDetectionResultColumns = function () {
-                this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[0]),
-                    this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[this.barcodeColumnCount + 1]);
+                (this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[0]),
+                    this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[this.barcodeColumnCount + 1]));
                 var t,
                     e = oR.MAX_CODEWORDS_IN_BARCODE;
-                do (t = e), (e = this.adjustRowNumbersAndGetCount());
+                do ((t = e), (e = this.adjustRowNumbersAndGetCount()));
                 while (e > 0 && e < t);
                 return this.detectionResultColumns;
             }),
@@ -13507,12 +13518,12 @@ var ol = (function () {
                     null != this.detectionResultColumns[e + 1] &&
                         (u = this.detectionResultColumns[e + 1].getCodewords());
                     var c = Array(14);
-                    (c[2] = s[r]),
+                    ((c[2] = s[r]),
                         (c[3] = u[r]),
                         r > 0 && ((c[0] = n[r - 1]), (c[4] = s[r - 1]), (c[5] = u[r - 1])),
                         r > 1 && ((c[8] = n[r - 2]), (c[10] = s[r - 2]), (c[11] = u[r - 2])),
                         r < n.length - 1 && ((c[1] = n[r + 1]), (c[6] = s[r + 1]), (c[7] = u[r + 1])),
-                        r < n.length - 2 && ((c[9] = n[r + 2]), (c[12] = s[r + 2]), (c[13] = u[r + 2]));
+                        r < n.length - 2 && ((c[9] = n[r + 2]), (c[12] = s[r + 2]), (c[13] = u[r + 2])));
                     try {
                         for (var f = oQ(c), h = f.next(); !h.done; h = f.next()) {
                             var l = h.value;
@@ -13584,11 +13595,11 @@ var ol = (function () {
     })(),
     o$ = (function () {
         function t(e, r, n, o) {
-            (this.rowNumber = t.BARCODE_ROW_UNKNOWN),
+            ((this.rowNumber = t.BARCODE_ROW_UNKNOWN),
                 (this.startX = Math.trunc(e)),
                 (this.endX = Math.trunc(r)),
                 (this.bucket = Math.trunc(n)),
-                (this.value = Math.trunc(o));
+                (this.value = Math.trunc(o)));
         }
         return (
             (t.prototype.hasValidRowNumber = function () {
@@ -13634,10 +13645,10 @@ var ol = (function () {
             (t.initialize = function () {
                 for (var e = 0; e < oR.SYMBOL_TABLE.length; e++)
                     for (var r = oR.SYMBOL_TABLE[e], n = 1 & r, o = 0; o < oR.BARS_IN_MODULE; o++) {
-                        for (var i = 0; (1 & r) === n; ) (i += 1), (r >>= 1);
-                        (n = 1 & r),
+                        for (var i = 0; (1 & r) === n;) ((i += 1), (r >>= 1));
+                        ((n = 1 & r),
                             t.RATIOS_TABLE[e] || (t.RATIOS_TABLE[e] = Array(oR.BARS_IN_MODULE)),
-                            (t.RATIOS_TABLE[e][oR.BARS_IN_MODULE - o - 1] = Math.fround(i / oR.MODULES_IN_CODEWORD));
+                            (t.RATIOS_TABLE[e][oR.BARS_IN_MODULE - o - 1] = Math.fround(i / oR.MODULES_IN_CODEWORD)));
                     }
                 this.bSymbolTableReady = !0;
             }),
@@ -13652,7 +13663,7 @@ var ol = (function () {
                     i++
                 ) {
                     var a = e / (2 * oR.MODULES_IN_CODEWORD) + (i * e) / oR.MODULES_IN_CODEWORD;
-                    o + t[n] <= a && ((o += t[n]), n++), r[n]++;
+                    (o + t[n] <= a && ((o += t[n]), n++), r[n]++);
                 }
                 return r;
             }),
@@ -13689,7 +13700,7 @@ var ol = (function () {
     })(),
     o2 = (function () {
         function t() {
-            (this.segmentCount = -1), (this.fileSize = -1), (this.timestamp = -1), (this.checksum = -1);
+            ((this.segmentCount = -1), (this.fileSize = -1), (this.timestamp = -1), (this.checksum = -1));
         }
         return (
             (t.prototype.getSegmentIndex = function () {
@@ -13765,7 +13776,7 @@ var ol = (function () {
         function t() {}
         return (
             (t.parseLong = function (t, e) {
-                return void 0 === e && (e = void 0), parseInt(t, e);
+                return (void 0 === e && (e = void 0), parseInt(t, e));
             }),
             t
         );
@@ -13786,13 +13797,13 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            tv(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tv(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     o4 = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return o3(e, t), (e.kind = "NullPointerException"), e;
+        return (o3(e, t), (e.kind = "NullPointerException"), e);
     })(ep),
     o8 = (function () {
         function t() {}
@@ -13826,13 +13837,13 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            t_(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (t_(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     o5 = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return o6(e, t), e;
+        return (o6(e, t), e);
     })(ep),
     o7 =
         ((tm = function (t, e) {
@@ -13850,14 +13861,14 @@ var ol = (function () {
             function r() {
                 this.constructor = t;
             }
-            tm(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tm(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     o9 = (function (t) {
         function e(e) {
             void 0 === e && (e = 32);
             var r = t.call(this) || this;
             if (((r.count = 0), e < 0)) throw new ev("Negative initial size: " + e);
-            return (r.buf = new Uint8Array(e)), r;
+            return ((r.buf = new Uint8Array(e)), r);
         }
         return (
             o7(e, t),
@@ -13873,11 +13884,11 @@ var ol = (function () {
                 this.buf = eR.copyOfUint8Array(this.buf, e);
             }),
             (e.prototype.write = function (t) {
-                this.ensureCapacity(this.count + 1), (this.buf[this.count] = t), (this.count += 1);
+                (this.ensureCapacity(this.count + 1), (this.buf[this.count] = t), (this.count += 1));
             }),
             (e.prototype.writeBytesOffset = function (t, e, r) {
                 if (e < 0 || e > t.length || r < 0 || e + r - t.length > 0) throw new eS();
-                this.ensureCapacity(this.count + r), eE.arraycopy(t, e, this.buf, this.count, r), (this.count += r);
+                (this.ensureCapacity(this.count + r), eE.arraycopy(t, e, this.buf, this.count, r), (this.count += r));
             }),
             (e.prototype.writeTo = function (t) {
                 t.writeBytesOffset(this.buf, 0, this.count);
@@ -13921,12 +13932,12 @@ function ie(t) {
     if ((void 0 === t7 && (t7 = it()), null === t7)) throw Error("BigInt is not supported!");
     return t7(t);
 }
-((tC = t5 || (t5 = {}))[(tC.ALPHA = 0)] = "ALPHA"),
+(((tC = t5 || (t5 = {}))[(tC.ALPHA = 0)] = "ALPHA"),
     (tC[(tC.LOWER = 1)] = "LOWER"),
     (tC[(tC.MIXED = 2)] = "MIXED"),
     (tC[(tC.PUNCT = 3)] = "PUNCT"),
     (tC[(tC.ALPHA_SHIFT = 4)] = "ALPHA_SHIFT"),
-    (tC[(tC.PUNCT_SHIFT = 5)] = "PUNCT_SHIFT");
+    (tC[(tC.PUNCT_SHIFT = 5)] = "PUNCT_SHIFT"));
 var ir = (function () {
         function t() {}
         return (
@@ -13934,7 +13945,7 @@ var ir = (function () {
                 var n = new eU(""),
                     o = ex.ISO8859_1;
                 n.enableDecoding(o);
-                for (var i = 1, a = e[i++], s = new o2(); i < e[0]; ) {
+                for (var i = 1, a = e[i++], s = new o2(); i < e[0];) {
                     switch (a) {
                         case t.TEXT_COMPACTION_MODE_LATCH:
                             i = t.textCompaction(e, i, n);
@@ -13965,14 +13976,14 @@ var ir = (function () {
                         case t.MACRO_PDF417_TERMINATOR:
                             throw new eB();
                         default:
-                            i--, (i = t.textCompaction(e, i, n));
+                            (i--, (i = t.textCompaction(e, i, n)));
                     }
                     if (i < e.length) a = e[i++];
                     else throw eB.getFormatInstance();
                 }
                 if (0 === n.length()) throw eB.getFormatInstance();
                 var u = new e7(null, n.toString(), null, r);
-                return u.setOther(s), u;
+                return (u.setOther(s), u);
             }),
             (t.decodeMacroBlock = function (e, r, n) {
                 if (r + t.NUMBER_OF_SEQUENCE_CODEWORDS > e[0]) throw eB.getFormatInstance();
@@ -13984,54 +13995,55 @@ var ir = (function () {
                     o[i] = e[r];
                 n.setSegmentIndex(eN.parseInt(t.decodeBase900toBase10(o, t.NUMBER_OF_SEQUENCE_CODEWORDS)));
                 var a = new eU();
-                (r = t.textCompaction(e, r, a)), n.setFileId(a.toString());
+                ((r = t.textCompaction(e, r, a)), n.setFileId(a.toString()));
                 var s = -1;
-                for (e[r] === t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD && (s = r + 1); r < e[0]; )
+                for (e[r] === t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD && (s = r + 1); r < e[0];)
                     switch (e[r]) {
                         case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                             switch (e[++r]) {
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_FILE_NAME:
                                     var u = new eU();
-                                    (r = t.textCompaction(e, r + 1, u)), n.setFileName(u.toString());
+                                    ((r = t.textCompaction(e, r + 1, u)), n.setFileName(u.toString()));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_SENDER:
                                     var c = new eU();
-                                    (r = t.textCompaction(e, r + 1, c)), n.setSender(c.toString());
+                                    ((r = t.textCompaction(e, r + 1, c)), n.setSender(c.toString()));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_ADDRESSEE:
                                     var f = new eU();
-                                    (r = t.textCompaction(e, r + 1, f)), n.setAddressee(f.toString());
+                                    ((r = t.textCompaction(e, r + 1, f)), n.setAddressee(f.toString()));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_SEGMENT_COUNT:
                                     var h = new eU();
-                                    (r = t.numericCompaction(e, r + 1, h)),
-                                        n.setSegmentCount(eN.parseInt(h.toString()));
+                                    ((r = t.numericCompaction(e, r + 1, h)),
+                                        n.setSegmentCount(eN.parseInt(h.toString())));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_TIME_STAMP:
                                     var l = new eU();
-                                    (r = t.numericCompaction(e, r + 1, l)), n.setTimestamp(o0.parseLong(l.toString()));
+                                    ((r = t.numericCompaction(e, r + 1, l)),
+                                        n.setTimestamp(o0.parseLong(l.toString())));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_CHECKSUM:
                                     var d = new eU();
-                                    (r = t.numericCompaction(e, r + 1, d)), n.setChecksum(eN.parseInt(d.toString()));
+                                    ((r = t.numericCompaction(e, r + 1, d)), n.setChecksum(eN.parseInt(d.toString())));
                                     break;
                                 case t.MACRO_PDF417_OPTIONAL_FIELD_FILE_SIZE:
                                     var p = new eU();
-                                    (r = t.numericCompaction(e, r + 1, p)), n.setFileSize(o0.parseLong(p.toString()));
+                                    ((r = t.numericCompaction(e, r + 1, p)), n.setFileSize(o0.parseLong(p.toString())));
                                     break;
                                 default:
                                     throw eB.getFormatInstance();
                             }
                             break;
                         case t.MACRO_PDF417_TERMINATOR:
-                            r++, n.setLastSegment(!0);
+                            (r++, n.setLastSegment(!0));
                             break;
                         default:
                             throw eB.getFormatInstance();
                     }
                 if (-1 !== s) {
                     var g = r - s;
-                    n.isLastSegment() && g--, n.setOptionalData(eR.copyOfRange(e, s, s + g));
+                    (n.isLastSegment() && g--, n.setOptionalData(eR.copyOfRange(e, s, s + g)));
                 }
                 return r;
             }),
@@ -14041,7 +14053,7 @@ var ir = (function () {
                     r < e[0] && !s;
                 ) {
                     var u = e[r++];
-                    if (u < t.TEXT_COMPACTION_MODE_LATCH) (o[a] = u / 30), (o[a + 1] = u % 30), (a += 2);
+                    if (u < t.TEXT_COMPACTION_MODE_LATCH) ((o[a] = u / 30), (o[a + 1] = u % 30), (a += 2));
                     else
                         switch (u) {
                             case t.TEXT_COMPACTION_MODE_LATCH:
@@ -14053,16 +14065,16 @@ var ir = (function () {
                             case t.BEGIN_MACRO_PDF417_CONTROL_BLOCK:
                             case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                             case t.MACRO_PDF417_TERMINATOR:
-                                r--, (s = !0);
+                                (r--, (s = !0));
                                 break;
                             case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
-                                (o[a] = t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE), (u = e[r++]), (i[a] = u), a++;
+                                ((o[a] = t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE), (u = e[r++]), (i[a] = u), a++);
                         }
                 }
-                return t.decodeTextCompaction(o, i, a, n), r;
+                return (t.decodeTextCompaction(o, i, a, n), r);
             }),
             (t.decodeTextCompaction = function (e, r, n, o) {
-                for (var i = t5.ALPHA, a = t5.ALPHA, s = 0; s < n; ) {
+                for (var i = t5.ALPHA, a = t5.ALPHA, s = 0; s < n;) {
                     var u = e[s],
                         c = "";
                     switch (i) {
@@ -14080,7 +14092,7 @@ var ir = (function () {
                                         i = t5.MIXED;
                                         break;
                                     case t.PS:
-                                        (a = i), (i = t5.PUNCT_SHIFT);
+                                        ((a = i), (i = t5.PUNCT_SHIFT));
                                         break;
                                     case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
                                         o.append(r[s]);
@@ -14097,13 +14109,13 @@ var ir = (function () {
                                         c = " ";
                                         break;
                                     case t.AS:
-                                        (a = i), (i = t5.ALPHA_SHIFT);
+                                        ((a = i), (i = t5.ALPHA_SHIFT));
                                         break;
                                     case t.ML:
                                         i = t5.MIXED;
                                         break;
                                     case t.PS:
-                                        (a = i), (i = t5.PUNCT_SHIFT);
+                                        ((a = i), (i = t5.PUNCT_SHIFT));
                                         break;
                                     case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
                                         o.append(r[s]);
@@ -14129,7 +14141,7 @@ var ir = (function () {
                                         i = t5.ALPHA;
                                         break;
                                     case t.PS:
-                                        (a = i), (i = t5.PUNCT_SHIFT);
+                                        ((a = i), (i = t5.PUNCT_SHIFT));
                                         break;
                                     case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
                                         o.append(r[s]);
@@ -14177,7 +14189,7 @@ var ir = (function () {
                                         i = t5.ALPHA;
                                 }
                     }
-                    "" !== c && o.append(c), s++;
+                    ("" !== c && o.append(c), s++);
                 }
             }),
             (t.byteCompaction = function (e, r, n, o, i) {
@@ -14187,7 +14199,7 @@ var ir = (function () {
                     c = !1;
                 switch (e) {
                     case t.BYTE_COMPACTION_MODE_LATCH:
-                        for (var f = new Int32Array(6), h = r[o++]; o < r[0] && !c; )
+                        for (var f = new Int32Array(6), h = r[o++]; o < r[0] && !c;)
                             switch (((f[s++] = h), (u = 900 * u + h), (h = r[o++]))) {
                                 case t.TEXT_COMPACTION_MODE_LATCH:
                                 case t.BYTE_COMPACTION_MODE_LATCH:
@@ -14196,21 +14208,21 @@ var ir = (function () {
                                 case t.BEGIN_MACRO_PDF417_CONTROL_BLOCK:
                                 case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                                 case t.MACRO_PDF417_TERMINATOR:
-                                    o--, (c = !0);
+                                    (o--, (c = !0));
                                     break;
                                 default:
                                     if (s % 5 == 0 && s > 0) {
                                         for (var l = 0; l < 6; ++l) a.write(Number(ie(u) >> ie(8 * (5 - l))));
-                                        (u = 0), (s = 0);
+                                        ((u = 0), (s = 0));
                                     }
                             }
                         o === r[0] && h < t.TEXT_COMPACTION_MODE_LATCH && (f[s++] = h);
                         for (var d = 0; d < s; d++) a.write(f[d]);
                         break;
                     case t.BYTE_COMPACTION_MODE_LATCH_6:
-                        for (; o < r[0] && !c; ) {
+                        for (; o < r[0] && !c;) {
                             var p = r[o++];
-                            if (p < t.TEXT_COMPACTION_MODE_LATCH) s++, (u = 900 * u + p);
+                            if (p < t.TEXT_COMPACTION_MODE_LATCH) (s++, (u = 900 * u + p));
                             else
                                 switch (p) {
                                     case t.TEXT_COMPACTION_MODE_LATCH:
@@ -14220,20 +14232,20 @@ var ir = (function () {
                                     case t.BEGIN_MACRO_PDF417_CONTROL_BLOCK:
                                     case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                                     case t.MACRO_PDF417_TERMINATOR:
-                                        o--, (c = !0);
+                                        (o--, (c = !0));
                                 }
                             if (s % 5 == 0 && s > 0) {
                                 for (var l = 0; l < 6; ++l) a.write(Number(ie(u) >> ie(8 * (5 - l))));
-                                (u = 0), (s = 0);
+                                ((u = 0), (s = 0));
                             }
                         }
                 }
-                return i.append(eV.decode(a.toByteArray(), n)), o;
+                return (i.append(eV.decode(a.toByteArray(), n)), o);
             }),
             (t.numericCompaction = function (e, r, n) {
-                for (var o = 0, i = !1, a = new Int32Array(t.MAX_NUMERIC_CODEWORDS); r < e[0] && !i; ) {
+                for (var o = 0, i = !1, a = new Int32Array(t.MAX_NUMERIC_CODEWORDS); r < e[0] && !i;) {
                     var s = e[r++];
-                    if ((r === e[0] && (i = !0), s < t.TEXT_COMPACTION_MODE_LATCH)) (a[o] = s), o++;
+                    if ((r === e[0] && (i = !0), s < t.TEXT_COMPACTION_MODE_LATCH)) ((a[o] = s), o++);
                     else
                         switch (s) {
                             case t.TEXT_COMPACTION_MODE_LATCH:
@@ -14242,7 +14254,7 @@ var ir = (function () {
                             case t.BEGIN_MACRO_PDF417_CONTROL_BLOCK:
                             case t.BEGIN_MACRO_PDF417_OPTIONAL_FIELD:
                             case t.MACRO_PDF417_TERMINATOR:
-                                r--, (i = !0);
+                                (r--, (i = !0));
                         }
                     (o % t.MAX_NUMERIC_CODEWORDS == 0 || s === t.NUMERIC_COMPACTION_MODE_LATCH || i) &&
                         o > 0 &&
@@ -14306,7 +14318,7 @@ var ir = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -14328,12 +14340,12 @@ var ir = (function () {
                 }
                 u.setBoundingBox(c);
                 var p = u.getBarcodeColumnCount() + 1;
-                u.setDetectionResultColumn(0, f), u.setDetectionResultColumn(p, h);
+                (u.setDetectionResultColumn(0, f), u.setDetectionResultColumn(p, h));
                 for (var g = null != f, y = 1; y <= p; y++) {
                     var w = g ? y : p - y;
                     if (void 0 === u.getDetectionResultColumn(w)) {
                         var v = void 0;
-                        (v = 0 === w || w === p ? new oq(c, 0 === w) : new oW(c)), u.setDetectionResultColumn(w, v);
+                        ((v = 0 === w || w === p ? new oq(c, 0 === w) : new oW(c)), u.setDetectionResultColumn(w, v));
                         for (var _ = -1, m = -1, C = c.getMinY(); C <= c.getMaxY(); C++) {
                             if ((_ = t.getStartColumn(u, w, C, g)) < 0 || _ > c.getMaxX()) {
                                 if (-1 === m) continue;
@@ -14468,7 +14480,7 @@ var ir = (function () {
                 );
             }),
             (t.createDecoderResultFromAmbiguousValues = function (e, r, n, o, i) {
-                for (var a = new Int32Array(o.length), s = 100; s-- > 0; ) {
+                for (var a = new Int32Array(o.length), s = 100; s-- > 0;) {
                     for (var u = 0; u < a.length; u++) r[o[u]] = i[u][a[u]];
                     try {
                         return t.decodeCodewords(r, e, n);
@@ -14560,7 +14572,7 @@ var ir = (function () {
                     null != u)
                 )
                     return o ? u.getEndX() : u.getStartX();
-                for (var c = 0; t.isValidBarcodeColumn(e, r - s); ) {
+                for (var c = 0; t.isValidBarcodeColumn(e, r - s);) {
                     r -= s;
                     try {
                         for (
@@ -14595,7 +14607,7 @@ var ir = (function () {
                 else {
                     for (var l = 0; l < f.length / 2; l++) {
                         var d = f[l];
-                        (f[l] = f[f.length - 1 - l]), (f[f.length - 1 - l] = d);
+                        ((f[l] = f[f.length - 1 - l]), (f[f.length - 1 - l] = d));
                     }
                     i = (c = i) - h;
                 }
@@ -14617,11 +14629,11 @@ var ir = (function () {
             }),
             (t.adjustCodewordStartColumn = function (e, r, n, o, i, a) {
                 for (var s = i, u = o ? -1 : 1, c = 0; c < 2; c++) {
-                    for (; (o ? s >= r : s < n) && o === e.get(s, a); ) {
+                    for (; (o ? s >= r : s < n) && o === e.get(s, a);) {
                         if (Math.abs(i - s) > t.CODEWORD_SKEW_SIZE) return i;
                         s += u;
                     }
-                    (u = -u), (o = !o);
+                    ((u = -u), (o = !o));
                 }
                 return s;
             }),
@@ -14634,7 +14646,7 @@ var ir = (function () {
                     i = t.correctErrors(e, n, o);
                 t.verifyCodewordCount(e, o);
                 var a = ir.decode(e, "" + r);
-                return a.setErrorsCorrected(i), a.setErasures(n.length), a;
+                return (a.setErrorsCorrected(i), a.setErasures(n.length), a);
             }),
             (t.correctErrors = function (e, r, n) {
                 if ((null != r && r.length > n / 2 + t.MAX_ERRORS) || n < 0 || n > t.MAX_EC_CODEWORDS)
@@ -14650,8 +14662,8 @@ var ir = (function () {
                     else throw eB.getFormatInstance();
             }),
             (t.getBitCountForCodeword = function (t) {
-                for (var e = new Int32Array(8), r = 0, n = e.length - 1; !((1 & t) !== r && ((r = 1 & t), --n < 0)); )
-                    e[n]++, (t >>= 1);
+                for (var e = new Int32Array(8), r = 0, n = e.length - 1; !((1 & t) !== r && ((r = 1 & t), --n < 0));)
+                    (e[n]++, (t >>= 1));
                 return e;
             }),
             (t.getCodewordBucketNumber = function (t) {
@@ -14693,7 +14705,7 @@ var ir = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -14736,7 +14748,7 @@ var ir = (function () {
                             l = new e8(h.getText(), h.getRawBytes(), void 0, f, e6.PDF_417);
                         l.putMetadata(e5.ERROR_CORRECTION_LEVEL, h.getECLevel());
                         var d = h.getOther();
-                        null != d && l.putMetadata(e5.PDF417_EXTRA_METADATA, d), a.push(l);
+                        (null != d && l.putMetadata(e5.PDF417_EXTRA_METADATA, d), a.push(l));
                     }
                 } catch (t) {
                     o = { error: t };
@@ -14805,13 +14817,13 @@ var ir = (function () {
             function r() {
                 this.constructor = t;
             }
-            tA(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tA(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ic = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return iu(e, t), (e.kind = "ReaderException"), e;
+        return (iu(e, t), (e.kind = "ReaderException"), e);
     })(ep),
     ih = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -14821,7 +14833,7 @@ var ir = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -14830,7 +14842,7 @@ var ir = (function () {
         function t() {}
         return (
             (t.prototype.decode = function (t, e) {
-                return this.setHints(e), this.decodeInternal(t);
+                return (this.setHints(e), this.decodeInternal(t));
             }),
             (t.prototype.decodeWithState = function (t) {
                 return (
@@ -14858,21 +14870,21 @@ var ir = (function () {
                             t === e6.RSS_EXPANDED
                         );
                     });
-                    o && !e && n.push(new nq(t)),
+                    (o && !e && n.push(new nq(t)),
                         r.includes(e6.QR_CODE) && n.push(new ob()),
                         r.includes(e6.DATA_MATRIX) && n.push(new n9()),
                         r.includes(e6.AZTEC) && n.push(new rS()),
                         r.includes(e6.PDF_417) && n.push(new is()),
-                        o && e && n.push(new nq(t));
+                        o && e && n.push(new nq(t)));
                 }
-                0 === n.length &&
+                (0 === n.length &&
                     (e || n.push(new nq(t)),
                     n.push(new ob()),
                     n.push(new n9()),
                     n.push(new rS()),
                     n.push(new is()),
                     e && n.push(new nq(t))),
-                    (this.readers = n);
+                    (this.readers = n));
             }),
             (t.prototype.reset = function () {
                 var t, e;
@@ -14916,11 +14928,11 @@ var ir = (function () {
         );
     })();
 function id(t, e) {
-    void 0 === t && (t = null), void 0 === e && (e = 500);
+    (void 0 === t && (t = null), void 0 === e && (e = 500));
     var r = new il();
-    return r.setHints(t), e4.call(this, r, e) || this;
+    return (r.setHints(t), e4.call(this, r, e) || this);
 }
-((tE = function (t, e) {
+(((tE = function (t, e) {
     return (tE =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
@@ -14935,7 +14947,7 @@ function (t, e) {
     function r() {
         this.constructor = t;
     }
-    tE(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+    (tE(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
 })(id, e4),
     (id.prototype.decodeBitmap = function (t) {
         return this.reader.decodeWithState(t);
@@ -14955,10 +14967,10 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tI(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tI(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(
         function (t) {
-            return void 0 === t && (t = 500), tS.call(this, new is(), t) || this;
+            return (void 0 === t && (t = 500), tS.call(this, new is(), t) || this);
         },
         (tS = e4),
     ),
@@ -14977,10 +14989,10 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tT(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tT(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(
         function (t) {
-            return void 0 === t && (t = 500), tb.call(this, new ob(), t) || this;
+            return (void 0 === t && (t = 500), tb.call(this, new ob(), t) || this);
         },
         (tb = e4),
     ),
@@ -14997,11 +15009,13 @@ function (t, e) {
     (tO[(tO.AZTEC_LAYERS = 10)] = "AZTEC_LAYERS"),
     (tO[(tO.QR_VERSION = 11)] = "QR_VERSION"),
     (tO[(tO.GS1_FORMAT = 12)] = "GS1_FORMAT"),
-    (tO[(tO.FORCE_C40 = 13)] = "FORCE_C40");
+    (tO[(tO.FORCE_C40 = 13)] = "FORCE_C40"));
 let ip = t9;
 var ig = (function () {
         function t(t) {
-            (this.field = t), (this.cachedGenerators = []), this.cachedGenerators.push(new rt(t, Int32Array.from([1])));
+            ((this.field = t),
+                (this.cachedGenerators = []),
+                this.cachedGenerators.push(new rt(t, Int32Array.from([1]))));
         }
         return (
             (t.prototype.buildGenerator = function (t) {
@@ -15009,7 +15023,7 @@ var ig = (function () {
                 if (t >= e.length)
                     for (var r = e[e.length - 1], n = this.field, o = e.length; o <= t; o++) {
                         var i = r.multiply(new rt(n, Int32Array.from([1, n.exp(o - 1 + n.getGeneratorBase())])));
-                        e.push(i), (r = i);
+                        (e.push(i), (r = i));
                     }
                 return e[t];
             }),
@@ -15052,7 +15066,7 @@ var ig = (function () {
                 for (var r = 0, n = e.getArray(), o = e.getWidth(), i = e.getHeight(), a = 0; a < i; a++)
                     for (var s = 0; s < o; s++) {
                         var u = n[a];
-                        s + 6 < o &&
+                        (s + 6 < o &&
                             1 === u[s] &&
                             0 === u[s + 1] &&
                             1 === u[s + 2] &&
@@ -15071,17 +15085,17 @@ var ig = (function () {
                                 0 === n[a + 5][s] &&
                                 1 === n[a + 6][s] &&
                                 (t.isWhiteVertical(n, s, a - 4, a) || t.isWhiteVertical(n, s, a + 7, a + 11)) &&
-                                r++;
+                                r++);
                     }
                 return r * t.N3;
             }),
             (t.isWhiteHorizontal = function (t, e, r) {
-                (e = Math.max(e, 0)), (r = Math.min(r, t.length));
+                ((e = Math.max(e, 0)), (r = Math.min(r, t.length)));
                 for (var n = e; n < r; n++) if (1 === t[n]) return !1;
                 return !0;
             }),
             (t.isWhiteVertical = function (t, e, r, n) {
-                (r = Math.max(r, 0)), (n = Math.min(n, t.length));
+                ((r = Math.max(r, 0)), (n = Math.min(n, t.length)));
                 for (var o = r; o < n; o++) if (1 === t[o][e]) return !1;
                 return !0;
             }),
@@ -15156,14 +15170,14 @@ var ig = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     iv = (function () {
         function t(t, e) {
-            (this.width = t), (this.height = e);
+            ((this.width = t), (this.height = e));
             for (var r = Array(e), n = 0; n !== e; n++) r[n] = new Uint8Array(t);
             this.bytes = r;
         }
@@ -15307,13 +15321,13 @@ var ig = (function () {
             function r() {
                 this.constructor = t;
             }
-            tR(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tR(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     iC = (function (t) {
         function e() {
             return (null !== t && t.apply(this, arguments)) || this;
         }
-        return im(e, t), (e.kind = "WriterException"), e;
+        return (im(e, t), (e.kind = "WriterException"), e);
     })(ep),
     iA = (function () {
         function t() {}
@@ -15322,17 +15336,17 @@ var ig = (function () {
                 t.clear(255);
             }),
             (t.buildMatrix = function (e, r, n, o, i) {
-                t.clearMatrix(i),
+                (t.clearMatrix(i),
                     t.embedBasicPatterns(n, i),
                     t.embedTypeInfo(r, o, i),
                     t.maybeEmbedVersionInfo(n, i),
-                    t.embedDataBits(e, o, i);
+                    t.embedDataBits(e, o, i));
             }),
             (t.embedBasicPatterns = function (e, r) {
-                t.embedPositionDetectionPatternsAndSeparators(r),
+                (t.embedPositionDetectionPatternsAndSeparators(r),
                     t.embedDarkDotAtLeftBottomCorner(r),
                     t.maybeEmbedPositionAdjustmentPatterns(e, r),
-                    t.embedTimingPatterns(r);
+                    t.embedTimingPatterns(r));
             }),
             (t.embedTypeInfo = function (e, r, n) {
                 var o = new eD();
@@ -15360,25 +15374,27 @@ var ig = (function () {
                     for (var o = 17, i = 0; i < 6; ++i)
                         for (var a = 0; a < 3; ++a) {
                             var s = n.get(o);
-                            o--, r.setBoolean(i, r.getHeight() - 11 + a, s), r.setBoolean(r.getHeight() - 11 + a, i, s);
+                            (o--,
+                                r.setBoolean(i, r.getHeight() - 11 + a, s),
+                                r.setBoolean(r.getHeight() - 11 + a, i, s));
                         }
                 }
             }),
             (t.embedDataBits = function (e, r, n) {
-                for (var o = 0, i = -1, a = n.getWidth() - 1, s = n.getHeight() - 1; a > 0; ) {
-                    for (6 === a && (a -= 1); s >= 0 && s < n.getHeight(); ) {
+                for (var o = 0, i = -1, a = n.getWidth() - 1, s = n.getHeight() - 1; a > 0;) {
+                    for (6 === a && (a -= 1); s >= 0 && s < n.getHeight();) {
                         for (var u = 0; u < 2; ++u) {
                             var c = a - u;
                             if (t.isEmpty(n.get(c, s))) {
                                 var f = void 0;
-                                o < e.getSize() ? ((f = e.get(o)), ++o) : (f = !1),
+                                (o < e.getSize() ? ((f = e.get(o)), ++o) : (f = !1),
                                     255 !== r && iy.getDataMaskBit(r, c, s) && (f = !f),
-                                    n.setBoolean(c, s, f);
+                                    n.setBoolean(c, s, f));
                             }
                         }
                         s += i;
                     }
-                    (s += i = -i), (a -= 2);
+                    ((s += i = -i), (a -= 2));
                 }
                 if (o !== e.getSize()) throw new iC("Not all bits consumed: " + o + "/" + e.getSize());
             }),
@@ -15388,7 +15404,7 @@ var ig = (function () {
             (t.calculateBCHCode = function (e, r) {
                 if (0 === r) throw new ev("0 polynomial");
                 var n = t.findMSBSet(r);
-                for (e <<= n - 1; t.findMSBSet(e) >= n; ) e ^= r << (t.findMSBSet(e) - n);
+                for (e <<= n - 1; t.findMSBSet(e) >= n;) e ^= r << (t.findMSBSet(e) - n);
                 return e;
             }),
             (t.makeTypeInfoBits = function (e, r, n) {
@@ -15413,7 +15429,7 @@ var ig = (function () {
             (t.embedTimingPatterns = function (e) {
                 for (var r = 8; r < e.getWidth() - 8; ++r) {
                     var n = (r + 1) % 2;
-                    t.isEmpty(e.get(r, 6)) && e.setNumber(r, 6, n), t.isEmpty(e.get(6, r)) && e.setNumber(6, r, n);
+                    (t.isEmpty(e.get(r, 6)) && e.setNumber(r, 6, n), t.isEmpty(e.get(6, r)) && e.setNumber(6, r, n));
                 }
             }),
             (t.embedDarkDotAtLeftBottomCorner = function (t) {
@@ -15442,7 +15458,7 @@ var ig = (function () {
             }),
             (t.embedPositionDetectionPatternsAndSeparators = function (e) {
                 var r = t.POSITION_DETECTION_PATTERN[0].length;
-                t.embedPositionDetectionPattern(0, 0, e),
+                (t.embedPositionDetectionPattern(0, 0, e),
                     t.embedPositionDetectionPattern(e.getWidth() - r, 0, e),
                     t.embedPositionDetectionPattern(0, e.getWidth() - r, e),
                     t.embedHorizontalSeparationPattern(0, 7, e),
@@ -15450,7 +15466,7 @@ var ig = (function () {
                     t.embedHorizontalSeparationPattern(0, e.getWidth() - 8, e),
                     t.embedVerticalSeparationPattern(7, 0, e),
                     t.embedVerticalSeparationPattern(e.getHeight() - 7 - 1, 0, e),
-                    t.embedVerticalSeparationPattern(7, e.getHeight() - 7, e);
+                    t.embedVerticalSeparationPattern(7, e.getHeight() - 7, e));
             }),
             (t.maybeEmbedPositionAdjustmentPatterns = function (e, r) {
                 if (!(2 > e.getVersionNumber()))
@@ -15553,7 +15569,7 @@ var ig = (function () {
     })(),
     iE = (function () {
         function t(t, e) {
-            (this.dataBytes = t), (this.errorCorrectionBytes = e);
+            ((this.dataBytes = t), (this.errorCorrectionBytes = e));
         }
         return (
             (t.prototype.getDataBytes = function () {
@@ -15573,7 +15589,7 @@ var ig = (function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -15612,17 +15628,17 @@ var ig = (function () {
                 var d = new eD();
                 d.appendBitArray(u);
                 var p = s === ol.BYTE ? f.getSizeInBytes() : e.length;
-                this.appendLengthInfo(p, o, s, d), d.appendBitArray(f);
+                (this.appendLengthInfo(p, o, s, d), d.appendBitArray(f));
                 var g = o.getECBlocksForLevel(r),
                     y = o.getTotalCodewords() - g.getTotalECCodewords();
                 this.terminateBits(y, d);
                 var w = this.interleaveWithECBytes(d, o.getTotalCodewords(), y, g.getNumBlocks()),
                     v = new i_();
-                v.setECLevel(r), v.setMode(s), v.setVersion(o);
+                (v.setECLevel(r), v.setMode(s), v.setVersion(o));
                 var _ = o.getDimensionForVersion(),
                     m = new iv(_, _),
                     C = this.chooseMaskPattern(w, r, o, m);
-                return v.setMaskPattern(C), iA.buildMatrix(w, r, o, C, m), v.setMatrix(m), v;
+                return (v.setMaskPattern(C), iA.buildMatrix(w, r, o, C, m), v.setMatrix(m), v);
             }),
             (t.recommendVersion = function (t, e, r, n) {
                 var o = this.calculateBitsNeeded(e, r, n, os.getVersionForNumber(1)),
@@ -15715,7 +15731,7 @@ var ig = (function () {
                         w = new Uint8Array(y);
                     e.toBytes(8 * c, w, 0, y);
                     var v = t.generateECBytes(w, g[0]);
-                    l.push(new iE(w, v)), (f = Math.max(f, y)), (h = Math.max(h, v.length)), (c += p[0]);
+                    (l.push(new iE(w, v)), (f = Math.max(f, y)), (h = Math.max(h, v.length)), (c += p[0]));
                 }
                 if (n !== c) throw new iC("Data bytes does not match offset");
                 for (var _ = new eD(), d = 0; d < f; ++d)
@@ -15794,27 +15810,27 @@ var ig = (function () {
                 return r >= 0 && r <= 9;
             }),
             (t.appendNumericBytes = function (e, r) {
-                for (var n = e.length, o = 0; o < n; ) {
+                for (var n = e.length, o = 0; o < n;) {
                     var i = t.getDigit(e.charAt(o));
                     if (o + 2 < n) {
                         var a = t.getDigit(e.charAt(o + 1)),
                             s = t.getDigit(e.charAt(o + 2));
-                        r.appendBits(100 * i + 10 * a + s, 10), (o += 3);
+                        (r.appendBits(100 * i + 10 * a + s, 10), (o += 3));
                     } else if (o + 1 < n) {
                         var a = t.getDigit(e.charAt(o + 1));
-                        r.appendBits(10 * i + a, 7), (o += 2);
-                    } else r.appendBits(i, 4), o++;
+                        (r.appendBits(10 * i + a, 7), (o += 2));
+                    } else (r.appendBits(i, 4), o++);
                 }
             }),
             (t.appendAlphanumericBytes = function (e, r) {
-                for (var n = e.length, o = 0; o < n; ) {
+                for (var n = e.length, o = 0; o < n;) {
                     var i = t.getAlphanumericCode(e.charCodeAt(o));
                     if (-1 === i) throw new iC();
                     if (o + 1 < n) {
                         var a = t.getAlphanumericCode(e.charCodeAt(o + 1));
                         if (-1 === a) throw new iC();
-                        r.appendBits(45 * i + a, 11), (o += 2);
-                    } else r.appendBits(i, 6), o++;
+                        (r.appendBits(45 * i + a, 11), (o += 2));
+                    } else (r.appendBits(i, 6), o++);
                 }
             }),
             (t.append8BitBytes = function (t, e, r) {
@@ -15848,7 +15864,7 @@ var ig = (function () {
                 }
             }),
             (t.appendECI = function (t, e) {
-                e.appendBits(ol.ECI.getBits(), 4), e.appendBits(t.getValue(), 8);
+                (e.appendBits(ol.ECI.getBits(), 4), e.appendBits(t.getValue(), 8));
             }),
             (t.ALPHANUMERIC_TABLE = Int32Array.from([
                 -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
@@ -15861,7 +15877,7 @@ var ig = (function () {
         );
     })();
 function iT() {}
-(iT.prototype.write = function (t, e, r, n) {
+((iT.prototype.write = function (t, e, r, n) {
     if ((void 0 === n && (n = null), 0 === t.length)) throw new ev("Found empty contents");
     if (e < 0 || r < 0) throw new ev("Requested dimensions are too small: " + e + "x" + r);
     var o = ot.L,
@@ -15873,7 +15889,7 @@ function iT() {}
     return this.renderResult(a, e, r, i);
 }),
     (iT.prototype.writeToDom = function (t, e, r, n, o) {
-        void 0 === o && (o = null), "string" == typeof t && (t = document.querySelector(t));
+        (void 0 === o && (o = null), "string" == typeof t && (t = document.querySelector(t)));
         var i = this.write(e, r, n, o);
         t && t.appendChild(i);
     }),
@@ -15905,7 +15921,7 @@ function iT() {}
     }),
     (iT.prototype.createSVGElement = function (t, e) {
         var r = document.createElementNS(iT.SVG_NS, "svg");
-        return r.setAttributeNS(null, "height", t.toString()), r.setAttributeNS(null, "width", e.toString()), r;
+        return (r.setAttributeNS(null, "height", t.toString()), r.setAttributeNS(null, "width", e.toString()), r);
     }),
     (iT.prototype.createSvgRectElement = function (t, e, r, n) {
         var o = document.createElementNS(iT.SVG_NS, "rect");
@@ -15921,7 +15937,7 @@ function iT() {}
     (iT.QUIET_ZONE_SIZE = 4),
     (iT.SVG_NS = "http://www.w3.org/2000/svg"),
     r(778459),
-    r(90623);
+    r(90623));
 var ib = (function () {
     function t() {}
     return (
@@ -15967,7 +15983,7 @@ function iO(t, e, r, n, o, i, a, s) {
     var u = eK.call(this, i, a) || this;
     if (((u.yuvData = t), (u.dataWidth = e), (u.dataHeight = r), (u.left = n), (u.top = o), n + i > e || o + a > r))
         throw new ev("Crop rectangle does not fit within image data.");
-    return s && u.reverseHorizontal(i, a), u;
+    return (s && u.reverseHorizontal(i, a), u);
 }
 function iR(t, e, r, n, o, i, a) {
     var s = eK.call(this, e, r) || this;
@@ -15991,7 +16007,7 @@ function iR(t, e, r, n, o, i, a) {
         throw new ev("Crop rectangle does not fit within image data.");
     return s;
 }
-((function () {}).prototype.encode = function (t, e, r, n, o) {
+(((function () {}).prototype.encode = function (t, e, r, n, o) {
     var i;
     if (e === e6.QR_CODE) i = new ib();
     else throw new ev("No encoder available for format " + e);
@@ -16012,14 +16028,14 @@ function iR(t, e, r, n, o, i, a) {
         function r() {
             this.constructor = t;
         }
-        tN(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tN(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(iO, eK),
     (iO.prototype.getRow = function (t, e) {
         if (t < 0 || t >= this.getHeight()) throw new ev("Requested row is outside the image: " + t);
         var r = this.getWidth();
         (null == e || e.length < r) && (e = new Uint8ClampedArray(r));
         var n = (t + this.top) * this.dataWidth + this.left;
-        return eE.arraycopy(this.yuvData, n, e, 0, r), e;
+        return (eE.arraycopy(this.yuvData, n, e, 0, r), e);
     }),
     (iO.prototype.getMatrix = function () {
         var t = this.getWidth(),
@@ -16028,10 +16044,10 @@ function iR(t, e, r, n, o, i, a) {
         var r = t * e,
             n = new Uint8ClampedArray(r),
             o = this.top * this.dataWidth + this.left;
-        if (t === this.dataWidth) return eE.arraycopy(this.yuvData, o, n, 0, r), n;
+        if (t === this.dataWidth) return (eE.arraycopy(this.yuvData, o, n, 0, r), n);
         for (var i = 0; i < e; i++) {
             var a = i * t;
-            eE.arraycopy(this.yuvData, o, n, a, t), (o += this.dataWidth);
+            (eE.arraycopy(this.yuvData, o, n, a, t), (o += this.dataWidth));
         }
         return n;
     }),
@@ -16070,7 +16086,7 @@ function iR(t, e, r, n, o, i, a) {
         for (var r = this.yuvData, n = 0, o = this.top * this.dataWidth + this.left; n < e; n++, o += this.dataWidth)
             for (var i = o + t / 2, a = o, s = o + t - 1; a < i; a++, s--) {
                 var u = r[a];
-                (r[a] = r[s]), (r[s] = u);
+                ((r[a] = r[s]), (r[s] = u));
             }
     }),
     (iO.prototype.invert = function () {
@@ -16092,14 +16108,14 @@ function iR(t, e, r, n, o, i, a) {
         function r() {
             this.constructor = t;
         }
-        tD(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tD(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(iR, eK),
     (iR.prototype.getRow = function (t, e) {
         if (t < 0 || t >= this.getHeight()) throw new ev("Requested row is outside the image: " + t);
         var r = this.getWidth();
         (null == e || e.length < r) && (e = new Uint8ClampedArray(r));
         var n = (t + this.top) * this.dataWidth + this.left;
-        return eE.arraycopy(this.luminances, n, e, 0, r), e;
+        return (eE.arraycopy(this.luminances, n, e, 0, r), e);
     }),
     (iR.prototype.getMatrix = function () {
         var t = this.getWidth(),
@@ -16108,10 +16124,10 @@ function iR(t, e, r, n, o, i, a) {
         var r = t * e,
             n = new Uint8ClampedArray(r),
             o = this.top * this.dataWidth + this.left;
-        if (t === this.dataWidth) return eE.arraycopy(this.luminances, o, n, 0, r), n;
+        if (t === this.dataWidth) return (eE.arraycopy(this.luminances, o, n, 0, r), n);
         for (var i = 0; i < e; i++) {
             var a = i * t;
-            eE.arraycopy(this.luminances, o, n, a, t), (o += this.dataWidth);
+            (eE.arraycopy(this.luminances, o, n, a, t), (o += this.dataWidth));
         }
         return n;
     }),
@@ -16123,7 +16139,7 @@ function iR(t, e, r, n, o, i, a) {
     }),
     (iR.prototype.invert = function () {
         return new eQ(this);
-    });
+    }));
 var iN =
         ((tM = function (t, e) {
             return (tM =
@@ -16140,7 +16156,7 @@ var iN =
             function r() {
                 this.constructor = t;
             }
-            tM(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tM(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     iD = (function (t) {
         function e() {
@@ -16156,15 +16172,15 @@ var iN =
     })(ex),
     iM = (function () {
         function t() {}
-        return (t.ISO_8859_1 = ex.ISO8859_1), t;
+        return ((t.ISO_8859_1 = ex.ISO8859_1), t);
     })(),
     iP = (function () {
         function t(t, e, r) {
-            (this.codewords = t),
+            ((this.codewords = t),
                 (this.numcols = e),
                 (this.numrows = r),
                 (this.bits = new Uint8Array(e * r)),
-                eR.fill(this.bits, 2);
+                eR.fill(this.bits, 2));
         }
         return (
             (t.prototype.getNumrows = function () {
@@ -16190,76 +16206,76 @@ var iN =
                     e = 4,
                     r = 0;
                 do {
-                    e === this.numrows && 0 === r && this.corner1(t++),
+                    (e === this.numrows && 0 === r && this.corner1(t++),
                         e === this.numrows - 2 && 0 === r && this.numcols % 4 != 0 && this.corner2(t++),
                         e === this.numrows - 2 && 0 === r && this.numcols % 8 == 4 && this.corner3(t++),
-                        e === this.numrows + 4 && 2 === r && this.numcols % 8 == 0 && this.corner4(t++);
-                    do e < this.numrows && r >= 0 && this.noBit(r, e) && this.utah(e, r, t++), (e -= 2), (r += 2);
+                        e === this.numrows + 4 && 2 === r && this.numcols % 8 == 0 && this.corner4(t++));
+                    do (e < this.numrows && r >= 0 && this.noBit(r, e) && this.utah(e, r, t++), (e -= 2), (r += 2));
                     while (e >= 0 && r < this.numcols);
-                    e++, (r += 3);
-                    do e >= 0 && r < this.numcols && this.noBit(r, e) && this.utah(e, r, t++), (e += 2), (r -= 2);
+                    (e++, (r += 3));
+                    do (e >= 0 && r < this.numcols && this.noBit(r, e) && this.utah(e, r, t++), (e += 2), (r -= 2));
                     while (e < this.numrows && r >= 0);
-                    (e += 3), r++;
+                    ((e += 3), r++);
                 } while (e < this.numrows || r < this.numcols);
                 this.noBit(this.numcols - 1, this.numrows - 1) &&
                     (this.setBit(this.numcols - 1, this.numrows - 1, !0),
                     this.setBit(this.numcols - 2, this.numrows - 2, !0));
             }),
             (t.prototype.module = function (t, e, r, n) {
-                t < 0 && ((t += this.numrows), (e += 4 - ((this.numrows + 4) % 8))),
-                    e < 0 && ((e += this.numcols), (t += 4 - ((this.numcols + 4) % 8)));
+                (t < 0 && ((t += this.numrows), (e += 4 - ((this.numrows + 4) % 8))),
+                    e < 0 && ((e += this.numcols), (t += 4 - ((this.numcols + 4) % 8))));
                 var o = this.codewords.charCodeAt(r);
-                (o &= 1 << (8 - n)), this.setBit(e, t, 0 !== o);
+                ((o &= 1 << (8 - n)), this.setBit(e, t, 0 !== o));
             }),
             (t.prototype.utah = function (t, e, r) {
-                this.module(t - 2, e - 2, r, 1),
+                (this.module(t - 2, e - 2, r, 1),
                     this.module(t - 2, e - 1, r, 2),
                     this.module(t - 1, e - 2, r, 3),
                     this.module(t - 1, e - 1, r, 4),
                     this.module(t - 1, e, r, 5),
                     this.module(t, e - 2, r, 6),
                     this.module(t, e - 1, r, 7),
-                    this.module(t, e, r, 8);
+                    this.module(t, e, r, 8));
             }),
             (t.prototype.corner1 = function (t) {
-                this.module(this.numrows - 1, 0, t, 1),
+                (this.module(this.numrows - 1, 0, t, 1),
                     this.module(this.numrows - 1, 1, t, 2),
                     this.module(this.numrows - 1, 2, t, 3),
                     this.module(0, this.numcols - 2, t, 4),
                     this.module(0, this.numcols - 1, t, 5),
                     this.module(1, this.numcols - 1, t, 6),
                     this.module(2, this.numcols - 1, t, 7),
-                    this.module(3, this.numcols - 1, t, 8);
+                    this.module(3, this.numcols - 1, t, 8));
             }),
             (t.prototype.corner2 = function (t) {
-                this.module(this.numrows - 3, 0, t, 1),
+                (this.module(this.numrows - 3, 0, t, 1),
                     this.module(this.numrows - 2, 0, t, 2),
                     this.module(this.numrows - 1, 0, t, 3),
                     this.module(0, this.numcols - 4, t, 4),
                     this.module(0, this.numcols - 3, t, 5),
                     this.module(0, this.numcols - 2, t, 6),
                     this.module(0, this.numcols - 1, t, 7),
-                    this.module(1, this.numcols - 1, t, 8);
+                    this.module(1, this.numcols - 1, t, 8));
             }),
             (t.prototype.corner3 = function (t) {
-                this.module(this.numrows - 3, 0, t, 1),
+                (this.module(this.numrows - 3, 0, t, 1),
                     this.module(this.numrows - 2, 0, t, 2),
                     this.module(this.numrows - 1, 0, t, 3),
                     this.module(0, this.numcols - 2, t, 4),
                     this.module(0, this.numcols - 1, t, 5),
                     this.module(1, this.numcols - 1, t, 6),
                     this.module(2, this.numcols - 1, t, 7),
-                    this.module(3, this.numcols - 1, t, 8);
+                    this.module(3, this.numcols - 1, t, 8));
             }),
             (t.prototype.corner4 = function (t) {
-                this.module(this.numrows - 1, 0, t, 1),
+                (this.module(this.numrows - 1, 0, t, 1),
                     this.module(this.numrows - 1, this.numcols - 1, t, 2),
                     this.module(0, this.numcols - 3, t, 3),
                     this.module(0, this.numcols - 2, t, 4),
                     this.module(0, this.numcols - 1, t, 5),
                     this.module(1, this.numcols - 3, t, 6),
                     this.module(1, this.numcols - 2, t, 7),
-                    this.module(1, this.numcols - 1, t, 8);
+                    this.module(1, this.numcols - 1, t, 8));
             }),
             t
         );
@@ -16309,13 +16325,13 @@ var iN =
         ],
     ],
     ix = (et = (function (t, e) {
-        for (var r = 1, n = 0; n < 255; n++) (e[n] = r), (t[r] = n), (r *= 2) >= 256 && (r ^= 301);
+        for (var r = 1, n = 0; n < 255; n++) ((e[n] = r), (t[r] = n), (r *= 2) >= 256 && (r ^= 301));
         return { LOG: t, ALOG: e };
     })([], [])).LOG,
     iF = et.ALOG;
-((tP = ee || (ee = {}))[(tP.FORCE_NONE = 0)] = "FORCE_NONE"),
+(((tP = ee || (ee = {}))[(tP.FORCE_NONE = 0)] = "FORCE_NONE"),
     (tP[(tP.FORCE_SQUARE = 1)] = "FORCE_SQUARE"),
-    (tP[(tP.FORCE_RECTANGLE = 2)] = "FORCE_RECTANGLE");
+    (tP[(tP.FORCE_RECTANGLE = 2)] = "FORCE_RECTANGLE"));
 var ik = "[)>\x1e05\x1d",
     iV = "[)>\x1e06\x1d",
     iH = (function () {
@@ -16332,8 +16348,8 @@ var ik = "[)>\x1e05\x1d",
                     r.append(o);
                 } else {
                     for (var i = [], a = [], s = 0; s < n; s++)
-                        (i[s] = e.getDataLengthForInterleavedBlock(s + 1)),
-                            (a[s] = e.getErrorLengthForInterleavedBlock(s + 1));
+                        ((i[s] = e.getDataLengthForInterleavedBlock(s + 1)),
+                            (a[s] = e.getErrorLengthForInterleavedBlock(s + 1)));
                     for (var u = 0; u < n; u++) {
                         for (var c = new eU(), f = u; f < e.getDataCapacity(); f += n) c.append(t.charAt(f));
                         for (var o = this.createECCBlock(c.toString(), a[u]), h = 0, l = u; l < a[u] * n; l += n)
@@ -16373,38 +16389,38 @@ var ik = "[)>\x1e05\x1d",
             }),
             (t.prototype.encode = function (t) {
                 if (i2.determineConsecutiveDigitCount(t.getMessage(), t.pos) >= 2)
-                    t.writeCodeword(
+                    (t.writeCodeword(
                         this.encodeASCIIDigits(t.getMessage().charCodeAt(t.pos), t.getMessage().charCodeAt(t.pos + 1)),
                     ),
-                        (t.pos += 2);
+                        (t.pos += 2));
                 else {
                     var e = t.getCurrentChar(),
                         r = i2.lookAheadTest(t.getMessage(), t.pos, this.getEncodingMode());
                     if (r !== this.getEncodingMode())
                         switch (r) {
                             case 5:
-                                t.writeCodeword(231), t.signalEncoderChange(5);
+                                (t.writeCodeword(231), t.signalEncoderChange(5));
                                 return;
                             case 1:
-                                t.writeCodeword(230), t.signalEncoderChange(1);
+                                (t.writeCodeword(230), t.signalEncoderChange(1));
                                 return;
                             case 3:
-                                t.writeCodeword(238), t.signalEncoderChange(3);
+                                (t.writeCodeword(238), t.signalEncoderChange(3));
                                 break;
                             case 2:
-                                t.writeCodeword(239), t.signalEncoderChange(2);
+                                (t.writeCodeword(239), t.signalEncoderChange(2));
                                 break;
                             case 4:
-                                t.writeCodeword(240), t.signalEncoderChange(4);
+                                (t.writeCodeword(240), t.signalEncoderChange(4));
                                 break;
                             default:
                                 throw Error("Illegal mode: " + r);
                         }
                     else
-                        i2.isExtendedASCII(e)
+                        (i2.isExtendedASCII(e)
                             ? (t.writeCodeword(235), t.writeCodeword(e - 128 + 1))
                             : t.writeCodeword(e + 1),
-                            t.pos++;
+                            t.pos++);
                 }
             }),
             (t.prototype.encodeASCIIDigits = function (t, e) {
@@ -16422,7 +16438,7 @@ var ik = "[)>\x1e05\x1d",
             }),
             (t.prototype.encode = function (t) {
                 var e = new eU();
-                for (e.append(0); t.hasMoreCharacters(); ) {
+                for (e.append(0); t.hasMoreCharacters();) {
                     var r = t.getCurrentChar();
                     if (
                         (e.append(r),
@@ -16440,7 +16456,7 @@ var ik = "[)>\x1e05\x1d",
                 if (t.hasMoreCharacters() || i)
                     if (n <= 249) e.setCharAt(0, eH.getCharAt(n));
                     else if (n <= 1555)
-                        e.setCharAt(0, eH.getCharAt(Math.floor(n / 250) + 249)), e.insert(1, eH.getCharAt(n % 250));
+                        (e.setCharAt(0, eH.getCharAt(Math.floor(n / 250) + 249)), e.insert(1, eH.getCharAt(n % 250)));
                     else throw Error("Message length not in valid ranges: " + n);
                 for (var a = 0, r = e.length(); a < r; a++)
                     t.writeCodeword(this.randomize255State(e.charAt(a).charCodeAt(0), t.getCodewordCount() + 1));
@@ -16459,9 +16475,9 @@ var ik = "[)>\x1e05\x1d",
                 return 1;
             }),
             (t.prototype.encodeMaximal = function (t) {
-                for (var e = new eU(), r = 0, n = t.pos, o = 0; t.hasMoreCharacters(); ) {
+                for (var e = new eU(), r = 0, n = t.pos, o = 0; t.hasMoreCharacters();) {
                     var i = t.getCurrentChar();
-                    t.pos++, (r = this.encodeChar(i, e)), e.length() % 3 == 0 && ((n = t.pos), (o = e.length()));
+                    (t.pos++, (r = this.encodeChar(i, e)), e.length() % 3 == 0 && ((n = t.pos), (o = e.length())));
                 }
                 if (o !== e.length()) {
                     var a = Math.floor((e.length() / 3) * 2),
@@ -16471,10 +16487,10 @@ var ik = "[)>\x1e05\x1d",
                         c = Math.floor(e.length() % 3);
                     ((2 === c && 2 !== u) || (1 === c && (r > 3 || 1 !== u))) && (t.pos = n);
                 }
-                e.length() > 0 && t.writeCodeword(230), this.handleEOD(t, e);
+                (e.length() > 0 && t.writeCodeword(230), this.handleEOD(t, e));
             }),
             (t.prototype.encode = function (t) {
-                for (var e = new eU(); t.hasMoreCharacters(); ) {
+                for (var e = new eU(); t.hasMoreCharacters();) {
                     var r = t.getCurrentChar();
                     t.pos++;
                     var n = this.encodeChar(r, e),
@@ -16504,14 +16520,14 @@ var ik = "[)>\x1e05\x1d",
             (t.prototype.backtrackOneCharacter = function (t, e, r, n) {
                 var o = e.length(),
                     i = e.toString().substring(0, o - n);
-                e.setLengthToZero(), e.append(i), t.pos--;
+                (e.setLengthToZero(), e.append(i), t.pos--);
                 var a = t.getCurrentChar();
-                return (n = this.encodeChar(a, r)), t.resetSymbolInfo(), n;
+                return ((n = this.encodeChar(a, r)), t.resetSymbolInfo(), n);
             }),
             (t.prototype.writeNextTriplet = function (t, e) {
                 t.writeCodewords(this.encodeToCodewords(e.toString()));
                 var r = e.toString().substring(3);
-                e.setLengthToZero(), e.append(r);
+                (e.setLengthToZero(), e.append(r));
             }),
             (t.prototype.handleEOD = function (t, e) {
                 var r = Math.floor((e.length() / 3) * 2),
@@ -16520,13 +16536,13 @@ var ik = "[)>\x1e05\x1d",
                 t.updateSymbolInfo(o);
                 var i = t.getSymbolInfo().getDataCapacity() - o;
                 if (2 === n) {
-                    for (e.append("\0"); e.length() >= 3; ) this.writeNextTriplet(t, e);
+                    for (e.append("\0"); e.length() >= 3;) this.writeNextTriplet(t, e);
                     t.hasMoreCharacters() && t.writeCodeword(254);
                 } else if (1 === i && 1 === n) {
-                    for (; e.length() >= 3; ) this.writeNextTriplet(t, e);
-                    t.hasMoreCharacters() && t.writeCodeword(254), t.pos--;
+                    for (; e.length() >= 3;) this.writeNextTriplet(t, e);
+                    (t.hasMoreCharacters() && t.writeCodeword(254), t.pos--);
                 } else if (0 === n) {
-                    for (; e.length() >= 3; ) this.writeNextTriplet(t, e);
+                    for (; e.length() >= 3;) this.writeNextTriplet(t, e);
                     (i > 0 || t.hasMoreCharacters()) && t.writeCodeword(254);
                 } else throw Error("Unexpected case. Please report!");
                 t.signalEncoderChange(0);
@@ -16553,7 +16569,7 @@ var ik = "[)>\x1e05\x1d",
             (t.prototype.encodeToCodewords = function (t) {
                 var e = 1600 * t.charCodeAt(0) + 40 * t.charCodeAt(1) + t.charCodeAt(2) + 1,
                     r = new eU();
-                return r.append(e / 256), r.append(e % 256), r.toString();
+                return (r.append(e / 256), r.append(e % 256), r.toString());
             }),
             t
         );
@@ -16565,7 +16581,7 @@ var ik = "[)>\x1e05\x1d",
                 return 4;
             }),
             (t.prototype.encode = function (t) {
-                for (var e = new eU(); t.hasMoreCharacters(); ) {
+                for (var e = new eU(); t.hasMoreCharacters();) {
                     var r = t.getCurrentChar();
                     if ((this.encodeChar(r, e), t.pos++, e.length() >= 4)) {
                         t.writeCodewords(this.encodeToCodewords(e.toString()));
@@ -16580,7 +16596,7 @@ var ik = "[)>\x1e05\x1d",
                         }
                     }
                 }
-                e.append(eH.getCharAt(31)), this.handleEOD(t, e);
+                (e.append(eH.getCharAt(31)), this.handleEOD(t, e));
             }),
             (t.prototype.handleEOD = function (t, e) {
                 try {
@@ -16654,7 +16670,7 @@ var ik = "[)>\x1e05\x1d",
             function r() {
                 this.constructor = t;
             }
-            tB(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tB(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ij = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -16664,14 +16680,14 @@ var ik = "[)>\x1e05\x1d",
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     iY = (function () {
         function t(t, e, r, n, o, i, a, s) {
-            void 0 === a && (a = 0),
+            (void 0 === a && (a = 0),
                 void 0 === s && (s = 0),
                 (this.rectangular = t),
                 (this.dataCapacity = e),
@@ -16680,15 +16696,15 @@ var ik = "[)>\x1e05\x1d",
                 (this.matrixHeight = o),
                 (this.dataRegions = i),
                 (this.rsBlockData = a),
-                (this.rsBlockError = s);
+                (this.rsBlockError = s));
         }
         return (
             (t.lookup = function (t, e, r, n, o) {
                 var i, a;
-                void 0 === e && (e = 0),
+                (void 0 === e && (e = 0),
                     void 0 === r && (r = null),
                     void 0 === n && (n = null),
-                    void 0 === o && (o = !0);
+                    void 0 === o && (o = !0));
                 try {
                     for (var s = ij(iK), u = s.next(); !u.done; u = s.next()) {
                         var c = u.value;
@@ -16831,7 +16847,7 @@ var ik = "[)>\x1e05\x1d",
     ],
     iq = (function () {
         function t(t) {
-            (this.msg = t), (this.pos = 0), (this.skipAtEnd = 0);
+            ((this.msg = t), (this.pos = 0), (this.skipAtEnd = 0));
             for (
                 var e = t.split("").map(function (t) {
                         return t.charCodeAt(0);
@@ -16847,14 +16863,14 @@ var ik = "[)>\x1e05\x1d",
                     throw Error("Message contains characters outside ISO-8859-1 encoding.");
                 r.append(i);
             }
-            (this.msg = r.toString()), (this.shape = 0), (this.codewords = new eU()), (this.newEncoding = -1);
+            ((this.msg = r.toString()), (this.shape = 0), (this.codewords = new eU()), (this.newEncoding = -1));
         }
         return (
             (t.prototype.setSymbolShape = function (t) {
                 this.shape = t;
             }),
             (t.prototype.setSizeConstraints = function (t, e) {
-                (this.minSize = t), (this.maxSize = e);
+                ((this.minSize = t), (this.maxSize = e));
             }),
             (t.prototype.getMessage = function () {
                 return this.msg;
@@ -16902,9 +16918,9 @@ var ik = "[)>\x1e05\x1d",
                 return this.symbolInfo;
             }),
             (t.prototype.updateSymbolInfo = function (t) {
-                void 0 === t && (t = this.getCodewordCount()),
+                (void 0 === t && (t = this.getCodewordCount()),
                     (null == this.symbolInfo || t > this.symbolInfo.getDataCapacity()) &&
-                        (this.symbolInfo = iY.lookup(t, this.shape, this.minSize, this.maxSize, !0));
+                        (this.symbolInfo = iY.lookup(t, this.shape, this.minSize, this.maxSize, !0)));
             }),
             (t.prototype.resetSymbolInfo = function () {
                 this.symbolInfo = null;
@@ -16928,7 +16944,7 @@ var ik = "[)>\x1e05\x1d",
             function r() {
                 this.constructor = t;
             }
-            tL(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tL(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     iJ = (function (t) {
         function e() {
@@ -16940,7 +16956,7 @@ var ik = "[)>\x1e05\x1d",
                 return 3;
             }),
             (e.prototype.encode = function (t) {
-                for (var e = new eU(); t.hasMoreCharacters(); ) {
+                for (var e = new eU(); t.hasMoreCharacters();) {
                     var r = t.getCurrentChar();
                     if (
                         (t.pos++,
@@ -16982,10 +16998,10 @@ var ik = "[)>\x1e05\x1d",
                 t.updateSymbolInfo();
                 var r = t.getSymbolInfo().getDataCapacity() - t.getCodewordCount(),
                     n = e.length();
-                (t.pos -= n),
+                ((t.pos -= n),
                     (t.getRemainingCharacters() > 1 || r > 1 || t.getRemainingCharacters() !== r) &&
                         t.writeCodeword(254),
-                    0 > t.getNewEncoding() && t.signalEncoderChange(0);
+                    0 > t.getNewEncoding() && t.signalEncoderChange(0));
             }),
             e
         );
@@ -17006,7 +17022,7 @@ var ik = "[)>\x1e05\x1d",
             function r() {
                 this.constructor = t;
             }
-            tx(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tx(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     i1 = (function (t) {
         function e() {
@@ -17051,26 +17067,26 @@ let i2 = (function () {
             return e <= 254 ? e : e - 254;
         }),
         (t.encodeHighLevel = function (t, e, r, n, o) {
-            void 0 === e && (e = 0), void 0 === r && (r = null), void 0 === n && (n = null), void 0 === o && (o = !1);
+            (void 0 === e && (e = 0), void 0 === r && (r = null), void 0 === n && (n = null), void 0 === o && (o = !1));
             var i = new iG(),
                 a = [new iU(), i, new i1(), new iJ(), new iW(), new iX()],
                 s = new iq(t);
-            s.setSymbolShape(e),
+            (s.setSymbolShape(e),
                 s.setSizeConstraints(r, n),
                 t.startsWith(ik) && t.endsWith("\x1e\x04")
                     ? (s.writeCodeword(236), s.setSkipAtEnd(2), (s.pos += ik.length))
                     : t.startsWith(iV) &&
                       t.endsWith("\x1e\x04") &&
-                      (s.writeCodeword(237), s.setSkipAtEnd(2), (s.pos += iV.length));
+                      (s.writeCodeword(237), s.setSkipAtEnd(2), (s.pos += iV.length)));
             var u = 0;
-            for (o && (i.encodeMaximal(s), (u = s.getNewEncoding()), s.resetEncoderSignal()); s.hasMoreCharacters(); )
-                a[u].encode(s), s.getNewEncoding() >= 0 && ((u = s.getNewEncoding()), s.resetEncoderSignal());
+            for (o && (i.encodeMaximal(s), (u = s.getNewEncoding()), s.resetEncoderSignal()); s.hasMoreCharacters();)
+                (a[u].encode(s), s.getNewEncoding() >= 0 && ((u = s.getNewEncoding()), s.resetEncoderSignal()));
             var c = s.getCodewordCount();
             s.updateSymbolInfo();
             var f = s.getSymbolInfo().getDataCapacity();
             c < f && 0 !== u && 5 !== u && 4 !== u && s.writeCodeword("\xfe");
             var h = s.getCodewords();
-            for (h.length() < f && h.append(129); h.length() < f; ) h.append(this.randomize253State(h.length() + 1));
+            for (h.length() < f && h.append(129); h.length() < f;) h.append(this.randomize253State(h.length() + 1));
             return s.getCodewords().toString();
         }),
         (t.lookAheadTest = function (t, e, r) {
@@ -17087,9 +17103,9 @@ let i2 = (function () {
         (t.lookAheadTestIntern = function (t, e, r) {
             if (e >= t.length) return r;
             0 === r ? (n = [0, 1, 1, 1, 1, 1.25]) : ((n = [1, 2, 2, 2, 2, 2.25])[r] = 0);
-            for (var n, o = 0, i = new Uint8Array(6), a = []; ; ) {
+            for (var n, o = 0, i = new Uint8Array(6), a = []; ;) {
                 if (e + o === t.length) {
-                    eR.fill(i, 0), eR.fill(a, 0);
+                    (eR.fill(i, 0), eR.fill(a, 0));
                     var s = this.findMinimums(n, a, eN.MAX_VALUE, i),
                         u = this.getMinimumCount(i);
                     if (a[0] === s) return 0;
@@ -17142,7 +17158,7 @@ let i2 = (function () {
                     if (a[1] + 1 < this.min(a[0], a[5], a[4], a[2])) {
                         if (a[1] < a[3]) return 1;
                         if (a[1] === a[3]) {
-                            for (var f = e + o + 1; f < t.length; ) {
+                            for (var f = e + o + 1; f < t.length;) {
                                 var h = t.charCodeAt(f);
                                 if (this.isX12TermSep(h)) return 3;
                                 if (!this.isNativeX12(h)) break;
@@ -17161,7 +17177,7 @@ let i2 = (function () {
         (t.findMinimums = function (t, e, r, n) {
             for (var o = 0; o < 6; o++) {
                 var i = (e[o] = Math.ceil(t[o]));
-                r > i && ((r = i), eR.fill(n, 0)), r === i && (n[o] = n[o] + 1);
+                (r > i && ((r = i), eR.fill(n, 0)), r === i && (n[o] = n[o] + 1));
             }
             return r;
         }),
@@ -17195,7 +17211,7 @@ let i2 = (function () {
         }),
         (t.determineConsecutiveDigitCount = function (t, e) {
             void 0 === e && (e = 0);
-            for (var r = t.length, n = e; n < r && this.isDigit(t.charCodeAt(n)); ) n++;
+            for (var r = t.length, n = e; n < r && this.isDigit(t.charCodeAt(n));) n++;
             return n - e;
         }),
         (t.illegalCharacter = function (t) {
@@ -17213,14 +17229,14 @@ var i0 = function (t) {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     i3 = (function () {
         function t(t) {
-            (this.charset = t), (this.name = t.name);
+            ((this.charset = t), (this.name = t.name));
         }
         return (
             (t.prototype.canEncode = function (t) {
@@ -17235,7 +17251,7 @@ var i0 = function (t) {
     })(),
     i4 = (function () {
         function t(t, e, r) {
-            (this.ENCODERS = [
+            ((this.ENCODERS = [
                 "IBM437",
                 "ISO-8859-2",
                 "ISO-8859-3",
@@ -17259,7 +17275,7 @@ var i0 = function (t) {
             ].map(function (t) {
                 return new i3(iD.forName(t));
             })),
-                (this.encoders = []);
+                (this.encoders = []));
             var n,
                 o,
                 i,
@@ -17293,7 +17309,7 @@ var i0 = function (t) {
                         for (var w = ((i = void 0), i0(this.ENCODERS)), v = w.next(); !v.done; v = w.next()) {
                             var g = v.value;
                             if (g.canEncode(t.charAt(h))) {
-                                c.push(g), (l = !0);
+                                (c.push(g), (l = !0));
                                 break;
                             }
                         }
@@ -17443,14 +17459,14 @@ var i0 = function (t) {
                         c.cachedTotalSize < u && ((u = c.cachedTotalSize), (s = a));
                     }
                 if (s < 0) throw Error('Failed to encode "' + t + '"');
-                for (var f = [], h = o[n][s]; null != h; ) {
+                for (var f = [], h = o[n][s]; null != h;) {
                     if (h.isFNC1()) f.unshift(1e3);
                     else
                         for (var l = e.encode(h.c, h.encoderIndex), i = l.length - 1; i >= 0; i--)
                             f.unshift(255 & l[i]);
-                    (null === h.previous ? 0 : h.previous.encoderIndex) !== h.encoderIndex &&
+                    ((null === h.previous ? 0 : h.previous.encoderIndex) !== h.encoderIndex &&
                         f.unshift(256 + e.getECIValue(h.encoderIndex)),
-                        (h = h.previous);
+                        (h = h.previous));
                 }
                 for (var d = [], i = 0; i < d.length; i++) d[i] = f[i];
                 return d;
@@ -17460,16 +17476,16 @@ var i0 = function (t) {
     })(),
     i6 = (function () {
         function t(t, e, r, n, o) {
-            (this.c = t),
+            ((this.c = t),
                 (this.encoderSet = e),
                 (this.encoderIndex = r),
                 (this.previous = n),
                 (this.fnc1 = o),
-                (this.c = t === o ? 1e3 : t);
+                (this.c = t === o ? 1e3 : t));
             var i = this.isFNC1() ? 1 : e.encode(t, r).length;
-            (null === n ? 0 : n.encoderIndex) !== r && (i += 3),
+            ((null === n ? 0 : n.encoderIndex) !== r && (i += 3),
                 null != n && (i += n.cachedTotalSize),
-                (this.cachedTotalSize = i);
+                (this.cachedTotalSize = i));
         }
         return (
             (t.prototype.isFNC1 = function () {
@@ -17494,7 +17510,7 @@ var i0 = function (t) {
             function r() {
                 this.constructor = t;
             }
-            tF(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tF(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     i7 = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -17504,7 +17520,7 @@ var i0 = function (t) {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -17517,7 +17533,7 @@ var i0 = function (t) {
             i = r.call(t),
             a = [];
         try {
-            for (; (void 0 === e || e-- > 0) && !(n = i.next()).done; ) a.push(n.value);
+            for (; (void 0 === e || e-- > 0) && !(n = i.next()).done;) a.push(n.value);
         } catch (t) {
             o = { error: t };
         } finally {
@@ -17533,12 +17549,12 @@ var i0 = function (t) {
         for (var t = [], e = 0; e < arguments.length; e++) t = t.concat(i9(arguments[e]));
         return t;
     };
-((tk = er || (er = {}))[(tk.ASCII = 0)] = "ASCII"),
+(((tk = er || (er = {}))[(tk.ASCII = 0)] = "ASCII"),
     (tk[(tk.C40 = 1)] = "C40"),
     (tk[(tk.TEXT = 2)] = "TEXT"),
     (tk[(tk.X12 = 3)] = "X12"),
     (tk[(tk.EDF = 4)] = "EDF"),
-    (tk[(tk.B256 = 5)] = "B256");
+    (tk[(tk.B256 = 5)] = "B256"));
 var ae = [
         "!",
         '"',
@@ -17600,7 +17616,7 @@ var ae = [
                 return this.isInC40Shift2Set(t, e);
             }),
             (t.encodeHighLevel = function (t, e, r, n) {
-                void 0 === e && (e = null), void 0 === r && (r = -1), void 0 === n && (n = 0);
+                (void 0 === e && (e = null), void 0 === r && (r = -1), void 0 === n && (n = 0));
                 var o = 0;
                 return (
                     t.startsWith(ik) && t.endsWith("\x1e\x04")
@@ -17630,9 +17646,9 @@ var ae = [
                             : (i += 4);
                     } else i += 2;
                     if (i % 3 == 0 || ((i - 2) % 3 == 0 && a + 1 === e.length()))
-                        return (o[0] = a - r + 1), Math.ceil(i / 3);
+                        return ((o[0] = a - r + 1), Math.ceil(i / 3));
                 }
-                return (o[0] = 0), 0;
+                return ((o[0] = 0), 0);
             }),
             (t.addEdges = function (e, r, n, o) {
                 if (e.isECI(n)) return void this.addEdge(r, new ao(e, er.ASCII, n, 1, o));
@@ -17661,12 +17677,12 @@ var ae = [
                             if (i) throw i.error;
                         }
                     }
-                    e.haveNCharacters(n, 3) &&
+                    (e.haveNCharacters(n, 3) &&
                         i2.isNativeX12(e.charAt(n)) &&
                         i2.isNativeX12(e.charAt(n + 1)) &&
                         i2.isNativeX12(e.charAt(n + 2)) &&
                         this.addEdge(r, new ao(e, er.X12, n, 3, o)),
-                        this.addEdge(r, new ao(e, er.B256, n, 1, o));
+                        this.addEdge(r, new ao(e, er.B256, n, 1, o)));
                 }
                 for (s = 0; s < 3; s++) {
                     var p = n + s;
@@ -17713,8 +17729,8 @@ var ae = [
             (t.mode === er.C40 || t.mode === er.TEXT || t.mode === er.X12) &&
                 t.getEndMode() !== er.ASCII &&
                 (r += this.prepend(ao.getBytes(254), n));
-            for (var a = t; null !== a; )
-                (r += this.prepend(a.getDataBytes(), n)),
+            for (var a = t; null !== a;)
+                ((r += this.prepend(a.getDataBytes(), n)),
                     (null === a.previous || a.getPreviousStartMode() !== a.getMode()) &&
                         (a.getMode() === er.B256 &&
                             (r <= 249 ? (n.unshift(r), r++) : (n.unshift(r % 250), n.unshift(r / 250 + 249), (r += 2)),
@@ -17722,14 +17738,14 @@ var ae = [
                             i.push(r)),
                         this.prepend(a.getLatchBytes(), n),
                         (r = 0)),
-                    (a = a.previous);
-            5 === e.getMacroId()
+                    (a = a.previous));
+            (5 === e.getMacroId()
                 ? (r += this.prepend(ao.getBytes(236), n))
                 : 6 === e.getMacroId() && (r += this.prepend(ao.getBytes(237), n)),
-                e.getFNC1Character() > 0 && (r += this.prepend(ao.getBytes(232), n));
+                e.getFNC1Character() > 0 && (r += this.prepend(ao.getBytes(232), n)));
             for (var s = 0; s < o.length; s++) this.applyRandomPattern(n, n.length - o[s], i[s]);
             var u = t.getMinSymbolSize(n.length);
-            for (n.length < u && n.push(129); n.length < u; ) n.push(this.randomize253State(n.length + 1));
+            for (n.length < u && n.push(129); n.length < u;) n.push(this.randomize253State(n.length + 1));
             this.bytes = new Uint8Array(n.length);
             for (var s = 0; s < this.bytes.length; s++) this.bytes[s] = n[s];
         }
@@ -17779,34 +17795,34 @@ var ae = [
                 a = this.getPreviousMode();
             switch (e) {
                 case er.ASCII:
-                    i++,
+                    (i++,
                         (t.isECI(r) || ar.isExtendedASCII(t.charAt(r), t.getFNC1Character())) && i++,
-                        (a === er.C40 || a === er.TEXT || a === er.X12) && i++;
+                        (a === er.C40 || a === er.TEXT || a === er.X12) && i++);
                     break;
                 case er.B256:
-                    i++,
+                    (i++,
                         a !== er.B256 ? i++ : 250 === this.getB256Size() && i++,
-                        a === er.ASCII ? i++ : (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2);
+                        a === er.ASCII ? i++ : (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2));
                     break;
                 case er.C40:
                 case er.TEXT:
                 case er.X12:
-                    e === er.X12 ? (i += 2) : (i += 2 * ar.getNumberOfC40Words(t, r, e === er.C40, [])),
+                    (e === er.X12 ? (i += 2) : (i += 2 * ar.getNumberOfC40Words(t, r, e === er.C40, [])),
                         a === er.ASCII || a === er.B256
                             ? i++
-                            : a !== e && (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2);
+                            : a !== e && (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2));
                     break;
                 case er.EDF:
-                    (i += 3),
+                    ((i += 3),
                         a === er.ASCII || a === er.B256
                             ? i++
-                            : (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2);
+                            : (a === er.C40 || a === er.TEXT || a === er.X12) && (i += 2));
             }
             this.cachedTotalSize = i;
         }
         return (
             (t.prototype.getB256Size = function () {
-                for (var t = 0, e = this; null !== e && e.mode === er.B256 && t <= 250; ) t++, (e = e.previous);
+                for (var t = 0, e = this; null !== e && e.mode === er.B256 && t <= 250;) (t++, (e = e.previous));
                 return t;
             }),
             (t.prototype.getPreviousStartMode = function () {
@@ -17921,11 +17937,11 @@ var ae = [
             }),
             (t.getBytes = function (t, e) {
                 var r = new Uint8Array(e ? 2 : 1);
-                return (r[0] = t), e && (r[1] = e), r;
+                return ((r[0] = t), e && (r[1] = e), r);
             }),
             (t.prototype.setC40Word = function (t, e, r, n, o) {
                 var i = 1600 * (255 & r) + 40 * (255 & n) + (255 & o) + 1;
-                (t[e] = i / 256), (t[e + 1] = i % 256);
+                ((t[e] = i / 256), (t[e + 1] = i % 256));
             }),
             (t.prototype.getX12Value = function (t) {
                 return 13 === t
@@ -18017,15 +18033,15 @@ var ae = [
                     else if (ar.isExtendedASCII(o, e)) {
                         var i = (255 & o) - 128;
                         if ((t && i2.isNativeC40(i)) || (!t && i2.isNativeText(i)))
-                            r.push(1), r.push(30), r.push(this.getC40Value(t, 0, i, e));
+                            (r.push(1), r.push(30), r.push(this.getC40Value(t, 0, i, e)));
                         else {
-                            r.push(1), r.push(30);
+                            (r.push(1), r.push(30));
                             var a = this.getShiftValue(i, t, e);
-                            r.push(a), r.push(this.getC40Value(t, a, i, e));
+                            (r.push(a), r.push(this.getC40Value(t, a, i, e)));
                         }
                     } else {
                         var a = this.getShiftValue(o, t, e);
-                        r.push(a), r.push(this.getC40Value(t, a, o, e));
+                        (r.push(a), r.push(this.getC40Value(t, a, o, e)));
                     }
                 }
                 if (r.length % 3 != 0) {
@@ -18034,7 +18050,7 @@ var ae = [
                     r.push(0);
                 }
                 for (var s = new Uint8Array((r.length / 3) * 2), u = 0, n = 0; n < r.length; n += 3)
-                    this.setC40Word(s, u, 255 & r[n], 255 & r[n + 1], 255 & r[n + 2]), (u += 2);
+                    (this.setC40Word(s, u, 255 & r[n], 255 & r[n + 1], 255 & r[n + 2]), (u += 2));
                 return s;
             }),
             (t.prototype.getEDFBytes = function () {
@@ -18050,12 +18066,12 @@ var ae = [
                     for (var i = [], a = 0; a < 4; a++)
                         r <= n ? (i[a] = 63 & this.input.charAt(r++)) : (i[a] = 31 * (r === n + 1));
                     var s = i[0] << 18;
-                    (s |= i[1] << 12),
+                    ((s |= i[1] << 12),
                         (s |= i[2] << 6),
                         (s |= i[3]),
                         (e[o] = (s >> 16) & 255),
                         (e[o + 1] = (s >> 8) & 255),
-                        (e[o + 2] = 255 & s);
+                        (e[o + 2] = 255 & s));
                 }
                 return e;
             }),
@@ -18133,7 +18149,7 @@ var ae = [
     ai = (function (t) {
         function e(e, r, n, o, i) {
             var a = t.call(this, e, r, n) || this;
-            return (a.shape = o), (a.macroId = i), a;
+            return ((a.shape = o), (a.macroId = i), a);
         }
         return (
             i5(e, t),
@@ -18147,7 +18163,7 @@ var ae = [
         );
     })(i8);
 function aa() {}
-(aa.prototype.encode = function (t, e, r, n, o) {
+((aa.prototype.encode = function (t, e, r, n, o) {
     if ((void 0 === o && (o = null), "" === t.trim())) throw Error("Found empty contents");
     if (e !== e6.DATA_MATRIX) throw Error("Can only encode DATA_MATRIX, but got " + e);
     if (r < 0 || n < 0) throw Error("Requested dimensions can't be negative: " + r + "x" + n);
@@ -18166,15 +18182,15 @@ function aa() {}
     if (null != o && o.has(ip.DATA_MATRIX_COMPACT) && o.get(ip.DATA_MATRIX_COMPACT).toString()) {
         var l = o.has(ip.GS1_FORMAT) && !!o.get(ip.GS1_FORMAT).toString(),
             d = null;
-        o.has(ip.CHARACTER_SET) && (d = iD.forName(o.get(ip.CHARACTER_SET).toString())),
-            (i = ar.encodeHighLevel(t, d, l ? 29 : -1, a));
+        (o.has(ip.CHARACTER_SET) && (d = iD.forName(o.get(ip.CHARACTER_SET).toString())),
+            (i = ar.encodeHighLevel(t, d, l ? 29 : -1, a)));
     } else {
         var p = null != o && o.has(ip.FORCE_C40) && !!o.get(ip.FORCE_C40).toString();
         i = i2.encodeHighLevel(t, a, s, u, p);
     }
     var g = iY.lookup(i.length, a, s, u, !0),
         y = new iP(iH.encodeECC200(i, g), g.getSymbolDataWidth(), g.getSymbolDataHeight());
-    return y.place(), this.encodeLowLevel(y, g, r, n);
+    return (y.place(), this.encodeLowLevel(y, g, r, n));
 }),
     (aa.prototype.encodeLowLevel = function (t, e, r, n) {
         for (
@@ -18189,18 +18205,18 @@ function aa() {}
             var c = void 0;
             if (u % e.matrixHeight == 0) {
                 c = 0;
-                for (var f = 0; f < e.getSymbolWidth(); f++) a.setBoolean(c, s, f % 2 == 0), c++;
+                for (var f = 0; f < e.getSymbolWidth(); f++) (a.setBoolean(c, s, f % 2 == 0), c++);
                 s++;
             }
             c = 0;
             for (var f = 0; f < o; f++)
-                f % e.matrixWidth == 0 && (a.setBoolean(c, s, !0), c++),
+                (f % e.matrixWidth == 0 && (a.setBoolean(c, s, !0), c++),
                     a.setBoolean(c, s, t.getBit(f, u)),
                     c++,
-                    f % e.matrixWidth == e.matrixWidth - 1 && (a.setBoolean(c, s, u % 2 == 0), c++);
+                    f % e.matrixWidth == e.matrixWidth - 1 && (a.setBoolean(c, s, u % 2 == 0), c++));
             if ((s++, u % e.matrixHeight == e.matrixHeight - 1)) {
                 c = 0;
-                for (var f = 0; f < e.getSymbolWidth(); f++) a.setBoolean(c, s, !0), c++;
+                for (var f = 0; f < e.getSymbolWidth(); f++) (a.setBoolean(c, s, !0), c++);
                 s++;
             }
         }
@@ -18215,11 +18231,11 @@ function aa() {}
             u = Math.min(a / o, s / i),
             c = (a - o * u) / 2,
             f = (s - i * u) / 2;
-        r < i || e < o ? ((c = 0), (f = 0), (n = new eX(o, i))) : (n = new eX(e, r)), n.clear();
+        (r < i || e < o ? ((c = 0), (f = 0), (n = new eX(o, i))) : (n = new eX(e, r)), n.clear());
         for (var h = 0, l = f; h < i; h++, l += u)
             for (var d = 0, p = c; d < o; d++, p += u) 1 === t.get(d, h) && n.setRegion(p, l, u, u);
         return n;
-    });
+    }));
 var as = (function () {
         function t() {}
         return (
@@ -18295,12 +18311,12 @@ var as = (function () {
             function r() {
                 this.constructor = t;
             }
-            tV(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tV(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ah = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e) || this;
-            return (o.value = r), (o.bitCount = n), o;
+            return ((o.value = r), (o.bitCount = n), o);
         }
         return (
             af(e, t),
@@ -18318,7 +18334,9 @@ var as = (function () {
             }),
             (e.prototype.toString = function () {
                 var t = this.value & ((1 << this.bitCount) - 1);
-                return (t |= 1 << this.bitCount), "<" + eN.toBinaryString(t | (1 << this.bitCount)).substring(1) + ">";
+                return (
+                    (t |= 1 << this.bitCount), "<" + eN.toBinaryString(t | (1 << this.bitCount)).substring(1) + ">"
+                );
             }),
             e
         );
@@ -18339,25 +18357,25 @@ var as = (function () {
             function r() {
                 this.constructor = t;
             }
-            tH(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tH(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     ad = (function (t) {
         function e(e, r, n) {
             var o = t.call(this, e, 0, 0) || this;
-            return (o.binaryShiftStart = r), (o.binaryShiftByteCount = n), o;
+            return ((o.binaryShiftStart = r), (o.binaryShiftByteCount = n), o);
         }
         return (
             al(e, t),
             (e.prototype.appendTo = function (t, e) {
                 for (var r = 0; r < this.binaryShiftByteCount; r++)
-                    (0 === r || (31 === r && this.binaryShiftByteCount <= 62)) &&
+                    ((0 === r || (31 === r && this.binaryShiftByteCount <= 62)) &&
                         (t.appendBits(31, 5),
                         this.binaryShiftByteCount > 62
                             ? t.appendBits(this.binaryShiftByteCount - 31, 16)
                             : 0 === r
                               ? t.appendBits(Math.min(this.binaryShiftByteCount, 31), 5)
                               : t.appendBits(this.binaryShiftByteCount - 31, 5)),
-                        t.appendBits(e[this.binaryShiftStart + r], 8);
+                        t.appendBits(e[this.binaryShiftStart + r], 8));
             }),
             (e.prototype.addBinaryShift = function (t, r) {
                 return new e(this, t, r);
@@ -18390,7 +18408,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -18411,7 +18429,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                 if (e) throw e.error;
             }
         }
-        return (t[0][4] = 0), (t[1][4] = 0), (t[1][0] = 28), (t[3][4] = 0), (t[2][4] = 0), (t[2][0] = 15), t;
+        return ((t[0][4] = 0), (t[1][4] = 0), (t[1][0] = 28), (t[3][4] = 0), (t[2][4] = 0), (t[2][0] = 15), t);
     })(eR.createInt32Array(6, 6)),
     am = function (t) {
         var e = "function" == typeof Symbol && Symbol.iterator,
@@ -18421,14 +18439,14 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
     },
     aC = (function () {
         function t(t, e, r, n) {
-            (this.token = t), (this.mode = e), (this.binaryShiftByteCount = r), (this.bitCount = n);
+            ((this.token = t), (this.mode = e), (this.binaryShiftByteCount = r), (this.bitCount = n));
         }
         return (
             (t.prototype.getMode = function () {
@@ -18448,7 +18466,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                     o = this.token;
                 if (e !== this.mode) {
                     var i = aw[this.mode][e];
-                    (o = ap(o, 65535 & i, i >> 16)), (n += i >> 16);
+                    ((o = ap(o, 65535 & i, i >> 16)), (n += i >> 16));
                 }
                 var a = 2 === e ? 4 : 5;
                 return new t((o = ap(o, r, a)), e, 0, n + a);
@@ -18456,7 +18474,9 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
             (t.prototype.shiftAndAppend = function (e, r) {
                 var n = this.token,
                     o = 2 === this.mode ? 4 : 5;
-                return (n = ap(n, a_[this.mode][e], o)), new t((n = ap(n, r, 5)), this.mode, 0, this.bitCount + o + 5);
+                return (
+                    (n = ap(n, a_[this.mode][e], o)), new t((n = ap(n, r, 5)), this.mode, 0, this.bitCount + o + 5)
+                );
             }),
             (t.prototype.addBinaryShiftChar = function (e) {
                 var r = this.token,
@@ -18464,7 +18484,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                     o = this.bitCount;
                 if (4 === this.mode || 2 === this.mode) {
                     var i = aw[n][0];
-                    (r = ap(r, 65535 & i, i >> 16)), (o += i >> 16), (n = 0);
+                    ((r = ap(r, 65535 & i, i >> 16)), (o += i >> 16), (n = 0));
                 }
                 var a =
                         0 === this.binaryShiftByteCount || 31 === this.binaryShiftByteCount
@@ -18473,7 +18493,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                               ? 9
                               : 8,
                     s = new t(r, n, this.binaryShiftByteCount + 1, o + a);
-                return 2078 === s.binaryShiftByteCount && (s = s.endBinaryShift(e + 1)), s;
+                return (2078 === s.binaryShiftByteCount && (s = s.endBinaryShift(e + 1)), s);
             }),
             (t.prototype.endBinaryShift = function (e) {
                 if (0 === this.binaryShiftByteCount) return this;
@@ -18535,7 +18555,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         for (var s = eH.getCharCode("z"), u = eH.getCharCode("a"), a = u; a <= s; a++) t[1][a] = a - u + 2;
         t[2][e] = 1;
         for (var c = eH.getCharCode("9"), f = eH.getCharCode("0"), a = f; a <= c; a++) t[2][a] = a - f + 2;
-        (t[2][n] = 12), (t[2][r] = 13);
+        ((t[2][n] = 12), (t[2][r] = 13));
         for (
             var h = [
                     "\0",
@@ -18621,7 +18641,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -18751,7 +18771,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                         var u = s.value,
                             c = !0,
                             f = function (t) {
-                                if (t.isBetterThanOrEqualTo(u)) return (c = !1), "break";
+                                if (t.isBetterThanOrEqualTo(u)) return ((c = !1), "break");
                                 u.isBetterThanOrEqualTo(t) &&
                                     (i = i.filter(function (e) {
                                         return e !== t;
@@ -18796,7 +18816,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -18824,7 +18844,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                     if ((u = t.stuffBits(f, s)).getSize() + h > d || (o && u.getSize() > 64 * s))
                         throw new ev("Data to large for user specified layer");
                 } else {
-                    (s = 0), (u = null);
+                    ((s = 0), (u = null));
                     for (var p = 0; ; p++) {
                         if (p > t.MAX_NB_BITS) throw new ev("Data too large for an Aztec code");
                         if (((i = (o = p <= 3) ? p + 1 : p), !(l > (a = t.totalBitsInLayer(i, o))))) {
@@ -18846,16 +18866,16 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                     c = v + 1 + 2 * eN.truncDivision(eN.truncDivision(v, 2) - 1, 15);
                     for (var m = eN.truncDivision(v, 2), C = eN.truncDivision(c, 2), p = 0; p < m; p++) {
                         var A = p + eN.truncDivision(p, 15);
-                        (_[m - p - 1] = C - A - 1), (_[m + p] = C + A + 1);
+                        ((_[m - p - 1] = C - A - 1), (_[m + p] = C + A + 1));
                     }
                 }
                 for (var E = new eX(c), p = 0, I = 0; p < i; p++) {
                     for (var S = (i - p) * 4 + (o ? 9 : 12), T = 0; T < S; T++)
                         for (var b = 2 * T, O = 0; O < 2; O++)
-                            g.get(I + b + O) && E.set(_[2 * p + O], _[2 * p + T]),
+                            (g.get(I + b + O) && E.set(_[2 * p + O], _[2 * p + T]),
                                 g.get(I + 2 * S + b + O) && E.set(_[2 * p + T], _[v - 1 - 2 * p - O]),
                                 g.get(I + 4 * S + b + O) && E.set(_[v - 1 - 2 * p - O], _[v - 1 - 2 * p - T]),
-                                g.get(I + 6 * S + b + O) && E.set(_[v - 1 - 2 * p - T], _[2 * p + O]);
+                                g.get(I + 6 * S + b + O) && E.set(_[v - 1 - 2 * p - T], _[2 * p + O]));
                     I += 8 * S;
                 }
                 if ((t.drawModeMessage(E, o, c, w), o)) t.drawBullsEye(E, eN.truncDivision(c, 2), 5);
@@ -18863,24 +18883,24 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                     t.drawBullsEye(E, eN.truncDivision(c, 2), 7);
                     for (var p = 0, T = 0; p < eN.truncDivision(v, 2) - 1; p += 15, T += 16)
                         for (var O = 1 & eN.truncDivision(c, 2); O < c; O += 2)
-                            E.set(eN.truncDivision(c, 2) - T, O),
+                            (E.set(eN.truncDivision(c, 2) - T, O),
                                 E.set(eN.truncDivision(c, 2) + T, O),
                                 E.set(O, eN.truncDivision(c, 2) - T),
-                                E.set(O, eN.truncDivision(c, 2) + T);
+                                E.set(O, eN.truncDivision(c, 2) + T));
                 }
                 var R = new as();
-                return R.setCompact(o), R.setSize(c), R.setLayers(i), R.setCodeWords(y), R.setMatrix(E), R;
+                return (R.setCompact(o), R.setSize(c), R.setLayers(i), R.setCodeWords(y), R.setMatrix(E), R);
             }),
             (t.drawBullsEye = function (t, e, r) {
                 for (var n = 0; n < r; n += 2)
                     for (var o = e - n; o <= e + n; o++)
-                        t.set(o, e - n), t.set(o, e + n), t.set(e - n, o), t.set(e + n, o);
-                t.set(e - r, e - r),
+                        (t.set(o, e - n), t.set(o, e + n), t.set(e - n, o), t.set(e + n, o));
+                (t.set(e - r, e - r),
                     t.set(e - r + 1, e - r),
                     t.set(e - r, e - r + 1),
                     t.set(e + r, e - r),
                     t.set(e + r, e - r + 1),
-                    t.set(e + r, e + r - 1);
+                    t.set(e + r, e + r - 1));
             }),
             (t.generateModeMessage = function (e, r, n) {
                 var o = new eD();
@@ -18896,18 +18916,18 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
                 if (e)
                     for (var i = 0; i < 7; i++) {
                         var a = o - 3 + i;
-                        n.get(i) && t.set(a, o - 5),
+                        (n.get(i) && t.set(a, o - 5),
                             n.get(i + 7) && t.set(o + 5, a),
                             n.get(20 - i) && t.set(a, o + 5),
-                            n.get(27 - i) && t.set(o - 5, a);
+                            n.get(27 - i) && t.set(o - 5, a));
                     }
                 else
                     for (var i = 0; i < 10; i++) {
                         var a = o - 5 + i + eN.truncDivision(i, 5);
-                        n.get(i) && t.set(a, o - 7),
+                        (n.get(i) && t.set(a, o - 7),
                             n.get(i + 10) && t.set(o + 7, a),
                             n.get(29 - i) && t.set(a, o + 7),
-                            n.get(39 - i) && t.set(o - 7, a);
+                            n.get(39 - i) && t.set(o - 7, a));
                     }
             }),
             (t.generateCheckWords = function (e, r, n) {
@@ -18989,7 +19009,7 @@ var ag = ["UPPER", "LOWER", "DIGIT", "MIXED", "PUNCT"],
         );
     })();
 function ab() {}
-(ab.prototype.encode = function (t, e, r, n) {
+((ab.prototype.encode = function (t, e, r, n) {
     return this.encodeWithHints(t, e, r, n, null);
 }),
     (ab.prototype.encodeWithHints = function (t, e, r, n, o) {
@@ -19028,7 +19048,7 @@ function ab() {}
         )
             for (var p = 0, g = c; p < o; p++, g += u) n.get(p, l) && h.setRegion(g, d, u, u);
         return h;
-    });
+    }));
 var aO =
         ((tU = function (t, e) {
             return (tU =
@@ -19047,12 +19067,12 @@ var aO =
             function r() {
                 this.constructor = t;
             }
-            tU(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tU(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     aR = (function (t) {
         function e(r) {
             var n = t.call(this, r.width, r.height) || this;
-            return (n.canvas = r), (n.tempCanvasElement = null), (n.buffer = e.makeBufferFromCanvasImageData(r)), n;
+            return ((n.canvas = r), (n.tempCanvasElement = null), (n.buffer = e.makeBufferFromCanvasImageData(r)), n);
         }
         return (
             aO(e, t),
@@ -19070,7 +19090,8 @@ var aO =
             (e.toGrayscaleBuffer = function (t, e, r) {
                 for (var n = new Uint8ClampedArray(e * r), o = 0, i = 0, a = t.length; o < a; o += 4, i++) {
                     var s = void 0;
-                    (s = 0 === t[o + 3] ? 255 : (306 * t[o] + 601 * t[o + 1] + 117 * t[o + 2] + 512) >> 10), (n[i] = s);
+                    ((s = 0 === t[o + 3] ? 255 : (306 * t[o] + 601 * t[o + 1] + 117 * t[o + 2] + 512) >> 10),
+                        (n[i] = s));
                 }
                 return n;
             }),
@@ -19092,16 +19113,16 @@ var aO =
                 return !0;
             }),
             (e.prototype.crop = function (e, r, n, o) {
-                return t.prototype.crop.call(this, e, r, n, o), this;
+                return (t.prototype.crop.call(this, e, r, n, o), this);
             }),
             (e.prototype.isRotateSupported = function () {
                 return !0;
             }),
             (e.prototype.rotateCounterClockwise = function () {
-                return this.rotate(-90), this;
+                return (this.rotate(-90), this);
             }),
             (e.prototype.rotateCounterClockwise45 = function () {
-                return this.rotate(-45), this;
+                return (this.rotate(-45), this);
             }),
             (e.prototype.invert = function () {
                 return new eQ(this);
@@ -19109,7 +19130,7 @@ var aO =
             (e.prototype.getTempCanvasElement = function () {
                 if (null === this.tempCanvasElement) {
                     var t = this.canvas.ownerDocument.createElement("canvas");
-                    (t.width = this.canvas.width), (t.height = this.canvas.height), (this.tempCanvasElement = t);
+                    ((t.width = this.canvas.width), (t.height = this.canvas.height), (this.tempCanvasElement = t));
                 }
                 return this.tempCanvasElement;
             }),
@@ -19121,7 +19142,7 @@ var aO =
                     i = this.canvas.height,
                     a = Math.ceil(Math.abs(Math.cos(n)) * o + Math.abs(Math.sin(n)) * i),
                     s = Math.ceil(Math.abs(Math.sin(n)) * o + Math.abs(Math.cos(n)) * i);
-                (r.width = a), (r.height = s);
+                ((r.width = a), (r.height = s));
                 var u = r.getContext("2d");
                 if (!u) throw Error("Could not create a Canvas Context element.");
                 return (
@@ -19204,7 +19225,7 @@ var aD = function () {
             return function (s) {
                 var u = [i, s];
                 if (r) throw TypeError("Generator is already executing.");
-                for (; a; )
+                for (; a;)
                     try {
                         if (
                             ((r = 1),
@@ -19224,12 +19245,12 @@ var aD = function () {
                                 o = u;
                                 break;
                             case 4:
-                                return a.label++, { value: u[1], done: !1 };
+                                return (a.label++, { value: u[1], done: !1 });
                             case 5:
-                                a.label++, (n = u[1]), (u = [0]);
+                                (a.label++, (n = u[1]), (u = [0]));
                                 continue;
                             case 7:
-                                (u = a.ops.pop()), a.trys.pop();
+                                ((u = a.ops.pop()), a.trys.pop());
                                 continue;
                             default:
                                 if (!(o = (o = a.trys).length > 0 && o[o.length - 1]) && (6 === u[0] || 2 === u[0])) {
@@ -19241,19 +19262,19 @@ var aD = function () {
                                     break;
                                 }
                                 if (6 === u[0] && a.label < o[1]) {
-                                    (a.label = o[1]), (o = u);
+                                    ((a.label = o[1]), (o = u));
                                     break;
                                 }
                                 if (o && a.label < o[2]) {
-                                    (a.label = o[2]), a.ops.push(u);
+                                    ((a.label = o[2]), a.ops.push(u));
                                     break;
                                 }
-                                o[2] && a.ops.pop(), a.trys.pop();
+                                (o[2] && a.ops.pop(), a.trys.pop());
                                 continue;
                         }
                         u = e.call(t, a);
                     } catch (t) {
-                        (u = [6, t]), (n = 0);
+                        ((u = [6, t]), (n = 0));
                     } finally {
                         r = o = 0;
                     }
@@ -19270,7 +19291,7 @@ var aD = function () {
         if (t && "number" == typeof t.length)
             return {
                 next: function () {
-                    return t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t };
+                    return (t && n >= t.length && (t = void 0), { value: t && t[n++], done: !t });
                 },
             };
         throw TypeError(e ? "Object is not iterable." : "Symbol.iterator is not defined.");
@@ -19278,11 +19299,11 @@ var aD = function () {
     aL = { delayBetweenScanAttempts: 500, delayBetweenScanSuccess: 500, tryPlayVideoTimeout: 5e3 },
     ax = (function () {
         function t(t, e, r) {
-            void 0 === e && (e = new Map()),
+            (void 0 === e && (e = new Map()),
                 void 0 === r && (r = {}),
                 (this.reader = t),
                 (this.hints = e),
-                (this.options = aD(aD({}, aL), r));
+                (this.options = aD(aD({}, aL), r)));
         }
         return (
             Object.defineProperty(t.prototype, "possibleFormats", {
@@ -19311,7 +19332,7 @@ var aD = function () {
                                     }),
                                 ];
                             case 1:
-                                return r.sent(), [2];
+                                return (r.sent(), [2]);
                         }
                     });
                 });
@@ -19365,7 +19386,7 @@ var aD = function () {
                 if ("string" == typeof e) return t.getMediaElement(e, "video");
                 if (!e && "u" > typeof document) {
                     var r = document.createElement("video");
-                    return (r.width = 200), (r.height = 200), r;
+                    return ((r.width = 200), (r.height = 200), r);
                 }
                 throw Error("Couldn't get videoElement from videoSource!");
             }),
@@ -19374,7 +19395,7 @@ var aD = function () {
                 if ("string" == typeof e) return t.getMediaElement(e, "img");
                 if (void 0 === e) {
                     var r = document.createElement("img");
-                    return (r.width = 200), (r.height = 200), r;
+                    return ((r.width = 200), (r.height = 200), r);
                 }
                 throw Error("Couldn't get imageElement from imageSource!");
             }),
@@ -19410,7 +19431,7 @@ var aD = function () {
                     n = t.getMediaElementDimensions(e),
                     o = n.width,
                     i = n.height;
-                return (r.style.width = o + "px"), (r.style.height = i + "px"), (r.width = o), (r.height = i), r;
+                return ((r.style.width = o + "px"), (r.style.height = i + "px"), (r.width = o), (r.height = i), r);
             }),
             (t.tryPlayVideo = function (e) {
                 return aM(this, void 0, void 0, function () {
@@ -19418,16 +19439,16 @@ var aD = function () {
                         switch (r.label) {
                             case 0:
                                 if (null == e ? void 0 : e.ended)
-                                    return console.error("Trying to play video that has ended."), [2, !1];
+                                    return (console.error("Trying to play video that has ended."), [2, !1]);
                                 if (t.isVideoPlaying(e))
-                                    return console.warn("Trying to play video that is already playing."), [2, !0];
+                                    return (console.warn("Trying to play video that is already playing."), [2, !0]);
                                 r.label = 1;
                             case 1:
-                                return r.trys.push([1, 3, , 4]), [4, e.play()];
+                                return (r.trys.push([1, 3, , 4]), [4, e.play()]);
                             case 2:
-                                return r.sent(), [2, !0];
+                                return (r.sent(), [2, !0]);
                             case 3:
-                                return console.warn("It was not possible to play the video.", r.sent()), [2, !1];
+                                return (console.warn("It was not possible to play the video.", r.sent()), [2, !1]);
                             case 4:
                                 return [2];
                         }
@@ -19438,14 +19459,14 @@ var aD = function () {
                 var r = t.createCaptureCanvas(e),
                     n = r.getContext("2d");
                 if (!n) throw Error("Couldn't find Canvas 2D Context.");
-                return t.drawImageOnCanvas(n, e), r;
+                return (t.drawImageOnCanvas(n, e), r);
             }),
             (t.createBinaryBitmapFromMediaElem = function (e) {
                 var r = t.createCanvasFromMediaElement(e);
                 return t.createBinaryBitmapFromCanvas(r);
             }),
             (t.destroyImageElement = function (t) {
-                (t.src = ""), t.removeAttribute("src");
+                ((t.src = ""), t.removeAttribute("src"));
             }),
             (t.listVideoInputDevices = function () {
                 return aM(this, void 0, void 0, function () {
@@ -19458,17 +19479,17 @@ var aD = function () {
                                     throw Error("Can't enumerate devices, method not supported.");
                                 return [4, navigator.mediaDevices.enumerateDevices()];
                             case 1:
-                                (t = l.sent()), (e = []);
+                                ((t = l.sent()), (e = []));
                                 try {
                                     for (n = (r = aB(t)).next(); !n.done; n = r.next())
-                                        (o = n.value),
+                                        ((o = n.value),
                                             (i = "video" === o.kind ? "videoinput" : o.kind),
                                             "videoinput" === i &&
                                                 ((a = o.deviceId || o.id),
                                                 (s = o.label || "Video device ".concat(e.length + 1)),
                                                 (u = o.groupId),
                                                 (c = { deviceId: a, label: s, kind: i, groupId: u }),
-                                                e.push(c));
+                                                e.push(c)));
                                 } catch (t) {
                                     f = { error: t };
                                 } finally {
@@ -19513,13 +19534,13 @@ var aD = function () {
                 }
             }),
             (t.releaseAllStreams = function () {
-                0 !== t.streamTracker.length &&
+                (0 !== t.streamTracker.length &&
                     t.streamTracker.forEach(function (t) {
                         t.getTracks().forEach(function (t) {
                             return t.stop();
                         });
                     }),
-                    (t.streamTracker = []);
+                    (t.streamTracker = []));
             }),
             (t.playVideoOnLoadAsync = function (e, r) {
                 return aM(this, void 0, void 0, function () {
@@ -19537,7 +19558,7 @@ var aD = function () {
                                             }, r),
                                             a = function () {
                                                 t.tryPlayVideo(e).then(function (t) {
-                                                    clearTimeout(i), e.removeEventListener("canplay", a), n(t);
+                                                    (clearTimeout(i), e.removeEventListener("canplay", a), n(t));
                                                 });
                                             };
                                         e.addEventListener("canplay", a);
@@ -19561,7 +19582,7 @@ var aD = function () {
                                         [4, t.playVideoOnLoadAsync(o, n)]
                                     );
                                 case 1:
-                                    return i.sent(), [2, o];
+                                    return (i.sent(), [2, o]);
                             }
                         });
                     })
@@ -19573,7 +19594,7 @@ var aD = function () {
                             t.isImageLoaded(e) || (e.removeEventListener("load", i), n());
                         }, 1e4),
                         i = function () {
-                            clearTimeout(o), e.removeEventListener("load", i), r();
+                            (clearTimeout(o), e.removeEventListener("load", i), r());
                         };
                     e.addEventListener("load", i);
                 });
@@ -19604,7 +19625,7 @@ var aD = function () {
                         switch (n.label) {
                             case 0:
                                 if (!e) throw new ey("An image element must be provided.");
-                                return (r = t.prepareImageElement(e)), [4, this._decodeOnLoadImage(r)];
+                                return ((r = t.prepareImageElement(e)), [4, this._decodeOnLoadImage(r)]);
                             case 1:
                                 return [2, n.sent()];
                         }
@@ -19618,13 +19639,13 @@ var aD = function () {
                         switch (n.label) {
                             case 0:
                                 if (!e) throw new ey("An URL must be provided.");
-                                ((r = t.prepareImageElement()).src = e), (n.label = 1);
+                                (((r = t.prepareImageElement()).src = e), (n.label = 1));
                             case 1:
-                                return n.trys.push([1, , 3, 4]), [4, this.decodeFromImageElement(r)];
+                                return (n.trys.push([1, , 3, 4]), [4, this.decodeFromImageElement(r)]);
                             case 2:
                                 return [2, n.sent()];
                             case 3:
-                                return t.destroyImageElement(r), [7];
+                                return (t.destroyImageElement(r), [7]);
                             case 4:
                                 return [2];
                         }
@@ -19637,11 +19658,11 @@ var aD = function () {
                     return aP(this, function (a) {
                         switch (a.label) {
                             case 0:
-                                return t.checkCallbackFnOrThrow(n), [4, this.getUserMedia(e)];
+                                return (t.checkCallbackFnOrThrow(n), [4, this.getUserMedia(e)]);
                             case 1:
-                                (o = a.sent()), (a.label = 2);
+                                ((o = a.sent()), (a.label = 2));
                             case 2:
-                                return a.trys.push([2, 4, , 5]), [4, this.decodeFromStream(o, r, n)];
+                                return (a.trys.push([2, 4, , 5]), [4, this.decodeFromStream(o, r, n)]);
                             case 3:
                                 return [2, a.sent()];
                             case 4:
@@ -19675,7 +19696,7 @@ var aD = function () {
                                 return (
                                     (i = d.sent()),
                                     (a = function () {
-                                        t.disposeMediaStream(e), t.cleanVideoSource(i);
+                                        (t.disposeMediaStream(e), t.cleanVideoSource(i));
                                     }),
                                     (s = this.scan(i, n, a)),
                                     (u = e.getVideoTracks()),
@@ -19689,22 +19710,22 @@ var aD = function () {
                                                 return aP(this, function (s) {
                                                     switch (s.label) {
                                                         case 0:
-                                                            (r = e ? u.filter(e) : u), (s.label = 1);
+                                                            ((r = e ? u.filter(e) : u), (s.label = 1));
                                                         case 1:
-                                                            s.trys.push([1, 6, 7, 8]),
+                                                            (s.trys.push([1, 6, 7, 8]),
                                                                 (o = (n = aB(r)).next()),
-                                                                (s.label = 2);
+                                                                (s.label = 2));
                                                         case 2:
                                                             if (o.done) return [3, 5];
                                                             return [4, o.value.applyConstraints(t)];
                                                         case 3:
-                                                            s.sent(), (s.label = 4);
+                                                            (s.sent(), (s.label = 4));
                                                         case 4:
-                                                            return (o = n.next()), [3, 2];
+                                                            return ((o = n.next()), [3, 2]);
                                                         case 5:
                                                             return [3, 8];
                                                         case 6:
-                                                            return (i = { error: s.sent() }), [3, 8];
+                                                            return ((i = { error: s.sent() }), [3, 8]);
                                                         case 7:
                                                             try {
                                                                 o && !o.done && (a = n.return) && a.call(n);
@@ -19743,7 +19764,7 @@ var aD = function () {
                                                             case 0:
                                                                 return [4, t.mediaStreamSetTorch(f, e)];
                                                             case 1:
-                                                                return r.sent(), [2];
+                                                                return (r.sent(), [2]);
                                                         }
                                                     });
                                                 });
@@ -19753,9 +19774,9 @@ var aD = function () {
                                                 return aP(this, function (t) {
                                                     switch (t.label) {
                                                         case 0:
-                                                            return s.stop(), [4, h(!1)];
+                                                            return (s.stop(), [4, h(!1)]);
                                                         case 1:
-                                                            return t.sent(), [2];
+                                                            return (t.sent(), [2]);
                                                     }
                                                 });
                                             });
@@ -19797,7 +19818,7 @@ var aD = function () {
                                     [4, t.playVideoOnLoadAsync(n, o)]
                                 );
                             case 1:
-                                return i.sent(), [2, this.scan(n, r)];
+                                return (i.sent(), [2, this.scan(n, r)]);
                         }
                     });
                 });
@@ -19818,7 +19839,7 @@ var aD = function () {
                                     [4, t.playVideoOnLoadAsync(n, i)]
                                 );
                             case 1:
-                                return a.sent(), [2, this.scan(n, r, o)];
+                                return (a.sent(), [2, this.scan(n, r, o)]);
                         }
                     });
                 });
@@ -19831,7 +19852,7 @@ var aD = function () {
                             case 0:
                                 return [4, this.getUserMedia(t)];
                             case 1:
-                                return (r = n.sent()), [4, this.decodeOnceFromStream(r, e)];
+                                return ((r = n.sent()), [4, this.decodeOnceFromStream(r, e)]);
                             case 2:
                                 return [2, n.sent()];
                         }
@@ -19844,15 +19865,15 @@ var aD = function () {
                     return aP(this, function (i) {
                         switch (i.label) {
                             case 0:
-                                return (n = !!r), [4, t.attachStreamToVideo(e, r)];
+                                return ((n = !!r), [4, t.attachStreamToVideo(e, r)]);
                             case 1:
-                                (o = i.sent()), (i.label = 2);
+                                ((o = i.sent()), (i.label = 2));
                             case 2:
-                                return i.trys.push([2, , 4, 5]), [4, this.scanOneResult(o)];
+                                return (i.trys.push([2, , 4, 5]), [4, this.scanOneResult(o)]);
                             case 3:
                                 return [2, i.sent()];
                             case 4:
-                                return n || t.cleanVideoSource(o), [7];
+                                return (n || t.cleanVideoSource(o), [7]);
                             case 5:
                                 return [2];
                         }
@@ -19888,7 +19909,7 @@ var aD = function () {
                                     [4, t.playVideoOnLoadAsync(r, n)]
                                 );
                             case 1:
-                                return o.sent(), [4, this.scanOneResult(r)];
+                                return (o.sent(), [4, this.scanOneResult(r)]);
                             case 2:
                                 return [2, o.sent()];
                         }
@@ -19902,15 +19923,15 @@ var aD = function () {
                         switch (o.label) {
                             case 0:
                                 if (!e) throw new ey("An URL must be provided.");
-                                ((r = t.prepareVideoElement()).src = e),
+                                (((r = t.prepareVideoElement()).src = e),
                                     (n = this.decodeOnceFromVideoElement(r)),
-                                    (o.label = 1);
+                                    (o.label = 1));
                             case 1:
-                                return o.trys.push([1, , 3, 4]), [4, n];
+                                return (o.trys.push([1, , 3, 4]), [4, n]);
                             case 2:
                                 return [2, o.sent()];
                             case 3:
-                                return t.cleanVideoSource(r), [7];
+                                return (t.cleanVideoSource(r), [7]);
                             case 4:
                                 return [2];
                         }
@@ -19926,12 +19947,12 @@ var aD = function () {
                     new Promise(function (i, a) {
                         o.scan(t, function (t, o, s) {
                             if (t) {
-                                i(t), s.stop();
+                                (i(t), s.stop());
                                 return;
                             }
                             if (o) {
                                 if ((o instanceof eW && e) || (o instanceof eC && r) || (o instanceof eB && n)) return;
-                                s.stop(), a(o);
+                                (s.stop(), a(o));
                             }
                         });
                     })
@@ -19950,12 +19971,12 @@ var aD = function () {
                 }
                 if (!o) throw Error("Couldn't create canvas for visual element scan.");
                 var u = function () {
-                        (o = void 0), (s = void 0);
+                        ((o = void 0), (s = void 0));
                     },
                     c = !1,
                     f = {
                         stop: function () {
-                            (c = !0), clearTimeout(i), u(), n && n();
+                            ((c = !0), clearTimeout(i), u(), n && n());
                         },
                     },
                     h = function () {
@@ -19963,7 +19984,7 @@ var aD = function () {
                             try {
                                 t.drawImageOnCanvas(o, e);
                                 var l = a.decodeFromCanvas(s);
-                                r(l, void 0, f), (i = setTimeout(h, a.options.delayBetweenScanSuccess));
+                                (r(l, void 0, f), (i = setTimeout(h, a.options.delayBetweenScanSuccess)));
                             } catch (t) {
                                 r(void 0, t, f);
                                 var d = t instanceof eC,
@@ -19973,10 +19994,10 @@ var aD = function () {
                                     i = setTimeout(h, a.options.delayBetweenScanAttempts);
                                     return;
                                 }
-                                u(), n && n(t);
+                                (u(), n && n(t));
                             }
                     };
-                return h(), f;
+                return (h(), f);
             }),
             (t.prototype._decodeOnLoadImage = function (e) {
                 return aM(this, void 0, void 0, function () {
@@ -19986,7 +20007,7 @@ var aD = function () {
                                 if (t.isImageLoaded(e)) return [3, 2];
                                 return [4, t._waitImageLoad(e)];
                             case 1:
-                                r.sent(), (r.label = 2);
+                                (r.sent(), (r.label = 2));
                             case 2:
                                 return [2, this.decode(e)];
                         }
@@ -20001,7 +20022,7 @@ var aD = function () {
                             case 0:
                                 return [4, navigator.mediaDevices.getUserMedia(e)];
                             case 1:
-                                return (r = n.sent()), t.streamTracker.push(r), [2, r];
+                                return ((r = n.sent()), t.streamTracker.push(r), [2, r]);
                         }
                     });
                 });
@@ -20013,9 +20034,9 @@ var aD = function () {
 function aF(t, e) {
     var r = this,
         n = new il();
-    return n.setHints(t), ((r = ax.call(this, n, t, e) || this).reader = n), r;
+    return (n.setHints(t), ((r = ax.call(this, n, t, e) || this).reader = n), r);
 }
-((tX = function (t, e) {
+(((tX = function (t, e) {
     return (tX =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
@@ -20032,7 +20053,7 @@ function (t, e) {
     function r() {
         this.constructor = t;
     }
-    tX(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+    (tX(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
 })(
     function (t, e) {
         return tG.call(this, new rS(), t, e) || this;
@@ -20056,7 +20077,7 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tW(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tW(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(
         function (t, e) {
             return tz.call(this, new nq(t), t, e) || this;
@@ -20080,7 +20101,7 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tj(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tj(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(
         function (t, e) {
             return tY.call(this, new n9(), t, e) || this;
@@ -20104,11 +20125,11 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tZ(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tZ(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(aF, ax),
     Object.defineProperty(aF.prototype, "possibleFormats", {
         set: function (t) {
-            this.hints.set(eM.POSSIBLE_FORMATS, t), this.reader.setHints(this.hints);
+            (this.hints.set(eM.POSSIBLE_FORMATS, t), this.reader.setHints(this.hints));
         },
         enumerable: !1,
         configurable: !0,
@@ -20117,7 +20138,7 @@ function (t, e) {
         return this.reader.decodeWithState(t);
     }),
     (aF.prototype.setHints = function (t) {
-        (this.hints = t), this.reader.setHints(this.hints);
+        ((this.hints = t), this.reader.setHints(this.hints));
     }),
     ((tK = function (t, e) {
         return (tK =
@@ -20136,13 +20157,13 @@ function (t, e) {
         function r() {
             this.constructor = t;
         }
-        tK(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+        (tK(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
     })(
         function (t, e) {
             return tq.call(this, new is(), t, e) || this;
         },
         (tq = ax),
-    );
+    ));
 var ak =
         ((tQ = function (t, e) {
             return (tQ =
@@ -20161,13 +20182,13 @@ var ak =
             function r() {
                 this.constructor = t;
             }
-            tQ(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r()));
+            (tQ(t, e), (t.prototype = null === e ? Object.create(e) : ((r.prototype = e.prototype), new r())));
         }),
     aV = (function (t) {
         function e(e, r) {
             return t.call(this, new ob(), e, r) || this;
         }
-        return ak(e, t), e;
+        return (ak(e, t), e);
     })(ax),
     aH = "http://www.w3.org/2000/svg";
 function aU(t) {
@@ -20177,7 +20198,7 @@ function aU(t) {
         this.containerElement = e;
     } else this.containerElement = t;
 }
-(aU.prototype.write = function (t, e, r, n) {
+((aU.prototype.write = function (t, e, r, n) {
     if (0 === t.length) throw new ev("Found empty contents");
     if (e < 0 || r < 0) throw new ev("Requested dimensions are too small: " + e + "x" + r);
     var o = n && void 0 !== n.get(ip.MARGIN) ? Number.parseInt(n.get(ip.MARGIN).toString(), 10) : aU.QUIET_ZONE_SIZE,
@@ -20186,7 +20207,7 @@ function aU(t) {
 }),
     (aU.prototype.createSVGElement = function (t, e) {
         var r = document.createElementNS(aU.SVG_NS, "svg");
-        return r.setAttributeNS(aH, "width", e.toString()), r.setAttributeNS(aH, "height", t.toString()), r;
+        return (r.setAttributeNS(aH, "width", e.toString()), r.setAttributeNS(aH, "height", t.toString()), r);
     }),
     (aU.prototype.createSvgPathPlaceholderElement = function (t, e) {
         var r = document.createElementNS(aU.SVG_NS, "path");
@@ -20227,7 +20248,7 @@ function aU(t) {
             d = Math.floor((f - a * h) / 2),
             p = this.createSVGElement(c, f),
             g = this.createSvgPathPlaceholderElement(e, r);
-        p.appendChild(g), this.containerElement.appendChild(p);
+        (p.appendChild(g), this.containerElement.appendChild(p));
         for (var y = 0, w = d; y < a; y++, w += h)
             for (var v = 0, _ = l; v < i; v++, _ += h)
                 if (1 === o.get(v, y)) {
@@ -20237,7 +20258,7 @@ function aU(t) {
         return p;
     }),
     (aU.QUIET_ZONE_SIZE = 4),
-    (aU.SVG_NS = "http://www.w3.org/2000/svg");
+    (aU.SVG_NS = "http://www.w3.org/2000/svg"));
 var aX = "http://www.w3.org/2000/svg";
 function aG() {}
 async function aW(t, e) {
@@ -20246,7 +20267,7 @@ async function aW(t, e) {
     if (r.data?.success !== !0) throw Error("Fiscal QR link was not accepted");
     return r.data;
 }
-(aG.prototype.write = function (t, e, r, n) {
+((aG.prototype.write = function (t, e, r, n) {
     if (0 === t.length) throw new ev("Found empty contents");
     if (e < 0 || r < 0) throw new ev("Requested dimensions are too small: " + e + "x" + r);
     var o = ot.L,
@@ -20315,7 +20336,7 @@ async function aW(t, e) {
             o
         );
     }),
-    (aG.QUIET_ZONE_SIZE = 4);
+    (aG.QUIET_ZONE_SIZE = 4));
 let az = (0, es.t)({
     types: { context: {}, events: {}, input: {} },
     actors: {
@@ -20359,12 +20380,12 @@ let az = (0, es.t)({
                                   }
                           },
                           h = () => {
-                              f(), (n = s.setInterval(f, 500));
+                              (f(), (n = s.setInterval(f, 500)));
                           };
                       return (
                           r ? (o = s.setTimeout(h, 800)) : h(),
                           () => {
-                              (u = !0), void 0 !== o && s.clearTimeout(o), void 0 !== n && s.clearInterval(n);
+                              ((u = !0), void 0 !== o && s.clearTimeout(o), void 0 !== n && s.clearInterval(n));
                           }
                       );
                   })(
@@ -20386,7 +20407,9 @@ let az = (0, es.t)({
         }),
         stopStream: (0, es.r)(
             ({ context: t }) => (
-                t.frameCapturer?.dispose(), t.stream && (0, eu.a)(t.stream), { stream: void 0, frameCapturer: void 0 }
+                t.frameCapturer?.dispose(),
+                t.stream && (0, eu.a)(t.stream),
+                { stream: void 0, frameCapturer: void 0 }
             ),
         ),
         incrementAttempts: (0, es.r)(({ context: t }) => ({ attempts: t.attempts + 1 })),
@@ -20466,10 +20489,10 @@ function aY({ actor: t, trackElementClicked: e }) {
             t.send({ type: "LOAD" });
         },
         continue() {
-            e?.("continue"), t.send({ type: "CONTINUE" });
+            (e?.("continue"), t.send({ type: "CONTINUE" }));
         },
         skip() {
-            e?.("skip"), t.send({ type: "SKIP" });
+            (e?.("skip"), t.send({ type: "SKIP" }));
         },
         reset() {
             t.send({ type: "RESET" });

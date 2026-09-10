@@ -66,14 +66,14 @@ class p {
     dispatchCounter = 0;
     pendingDispatches = new Map();
     start(e, t) {
-        (this.mode = e),
+        ((this.mode = e),
             (this.sessionStartTime = t),
             this.setupDispatcherSubscription(),
             this.setupPerformanceObserver(),
-            this.startFlushInterval();
+            this.startFlushInterval());
     }
     stop() {
-        null != this.flushIntervalId && (clearInterval(this.flushIntervalId), (this.flushIntervalId = null)),
+        (null != this.flushIntervalId && (clearInterval(this.flushIntervalId), (this.flushIntervalId = null)),
             null != this.observer && (this.observer.disconnect(), (this.observer = null)),
             this.actionHandlers.forEach((e, t) => {
                 i.h.unsubscribe(t, e);
@@ -81,7 +81,7 @@ class p {
             this.actionHandlers.clear(),
             this.pendingDispatches.clear(),
             (this.collectedEntries = []),
-            (this.mode = null);
+            (this.mode = null));
     }
     async flush() {
         if (null == this.mode || 0 === this.collectedEntries.length) return;
@@ -91,7 +91,7 @@ class p {
     }
     collectEntries() {
         let e = [...this.collectedEntries];
-        return (this.collectedEntries = []), e;
+        return ((this.collectedEntries = []), e);
     }
     getTags() {
         if (null == this.mode) throw Error("Cannot get tags without mode");
@@ -110,8 +110,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "610528",
-            built_at: "1789058338371",
+            build_number: "610542",
+            built_at: "1789059170766",
             release_channel: n.y ?? "unknown",
             meticulous_perf_version: 6,
             browser_version: this.mode.browserVersion,
@@ -138,9 +138,9 @@ class p {
                         let t = ++this.dispatchCounter,
                             s = this.mode.getMemory(),
                             r = this.pendingDispatches.get(e.type) ?? [];
-                        r.push(t),
+                        (r.push(t),
                             this.pendingDispatches.set(e.type, r),
-                            this.mode.mark(`${h}-${e.type}-${t}`, { detail: { memory: s } });
+                            this.mode.mark(`${h}-${e.type}-${t}`, { detail: { memory: s } }));
                     }
                     return !1;
                 }),
@@ -159,18 +159,18 @@ class p {
                         requestAnimationFrame(r);
                     });
                 };
-                i.h.subscribe(e, t), this.actionHandlers.set(e, t);
+                (i.h.subscribe(e, t), this.actionHandlers.set(e, t));
             }));
     }
     setupPerformanceObserver() {
         if (null != this.mode)
             try {
-                (this.observer = new this.mode.PerformanceObserver((e) => {
+                ((this.observer = new this.mode.PerformanceObserver((e) => {
                     for (let t of e.getEntries())
                         "mark" === t.entryType && -1 !== t.name.indexOf(d) && this.collectEntry(t);
                     this.collectedEntries.length >= 100 && this.flush();
                 })),
-                    this.observer.observe({ type: "mark", buffered: !0 });
+                    this.observer.observe({ type: "mark", buffered: !0 }));
             } catch (e) {
                 u.warn("Failed to set up PerformanceObserver:", e);
             }
@@ -180,13 +180,13 @@ class p {
             let t = e.detail?.actionType,
                 s = e.detail?.dispatchId;
             if (null == t || null == s) {
-                u.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name);
+                (u.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name));
                 return;
             }
             let r = `${h}-${t}-${s}`,
                 i = performance.getEntriesByName(r);
             if (0 === i.length) {
-                u.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name);
+                (u.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name));
                 return;
             }
             let a = i[0],
@@ -195,7 +195,7 @@ class p {
                 m = this.mode?.baselineUsedMemory,
                 d = l?.usedJSHeapSize != null && null != m ? l.usedJSHeapSize - m : void 0,
                 c = null != this.mode ? this.mode.performanceNow() : 0;
-            this.collectedEntries.push({
+            (this.collectedEntries.push({
                 name: t,
                 start_time: a.startTime,
                 end_time: e.startTime,
@@ -205,7 +205,7 @@ class p {
                 memory_delta_from_baseline: d,
             }),
                 performance.clearMarks(r),
-                performance.clearMarks(e.name);
+                performance.clearMarks(e.name));
         } catch (e) {
             u.warn("Failed to collect performance entry information:", e);
         }
@@ -220,18 +220,18 @@ class y {
     peakMemory = 0;
     getPressureMetrics = null;
     start(e, t, s) {
-        (this.mode = e),
+        ((this.mode = e),
             (this.sessionStartTime = t),
             (this.peakMemory = e.getMemory()?.usedJSHeapSize ?? 0),
             (this.getPressureMetrics = s ?? null),
             this.sampleAndSend(),
             (this.sampleIntervalId = window.setInterval(() => {
                 this.sampleAndSend();
-            }, _));
+            }, _)));
     }
     stop() {
-        null != this.sampleIntervalId && (clearInterval(this.sampleIntervalId), (this.sampleIntervalId = null)),
-            (this.mode = null);
+        (null != this.sampleIntervalId && (clearInterval(this.sampleIntervalId), (this.sampleIntervalId = null)),
+            (this.mode = null));
     }
     getPeakMemory() {
         return this.peakMemory;
@@ -264,8 +264,8 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "610528",
-                built_at: "1789058338371",
+                build_number: "610542",
+                built_at: "1789059170766",
                 release_channel: n.y ?? "unknown",
                 meticulous_perf_version: 6,
                 browser_version: e.browserVersion,
@@ -302,9 +302,9 @@ class b {
     totalSamples = 0;
     start(e) {
         if (null != e) {
-            (this.currentState = "nominal"),
+            ((this.currentState = "nominal"),
                 (this.stateCounts = { nominal: 0, fair: 0, serious: 0, critical: 0 }),
-                (this.totalSamples = 0);
+                (this.totalSamples = 0));
             try {
                 let t = new e((e) => {
                     for (let t of e)
@@ -312,10 +312,10 @@ class b {
                             f.includes(t.state) &&
                             ((this.currentState = t.state), this.stateCounts[this.currentState]++, this.totalSamples++);
                 });
-                (this.observer = t),
+                ((this.observer = t),
                     t.observe("cpu", { sampleInterval: 1e3 }).catch(() => {
                         this.observer === t && (this.observer = null);
-                    });
+                    }));
             } catch {
                 this.observer = null;
             }
@@ -403,8 +403,8 @@ class v {
                     sendToIngest: async (e) => {
                         let t = JSON.stringify(e),
                             { metrics: s, ...r } = e;
-                        g.log("QP payload metadata", JSON.stringify(r, null, 2)),
-                            g.log("QP payload metrics", JSON.stringify(s, null, 2));
+                        (g.log("QP payload metadata", JSON.stringify(r, null, 2)),
+                            g.log("QP payload metrics", JSON.stringify(s, null, 2)));
                         try {
                             let e = await fetch("https://meticulous-ingest.discord.tools/webhook", {
                                 method: "POST",
@@ -413,10 +413,10 @@ class v {
                                 keepalive: !0,
                             });
                             if (!e.ok)
-                                return g.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1;
+                                return (g.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1);
                             return !0;
                         } catch (e) {
-                            return g.warn("Error sending performance data:", e), !1;
+                            return (g.warn("Error sending performance data:", e), !1);
                         }
                     },
                 })),
@@ -449,7 +449,8 @@ class v {
                         };
                 },
                 sendToIngest: async (e) => (
-                    g.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)), await Promise.resolve(!0)
+                    g.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)),
+                    await Promise.resolve(!0)
                 ),
             }),
             this.start(),
@@ -468,13 +469,13 @@ class v {
                 null != t && (e.baselineAgentMemoryBytes = t.bytes);
             });
         }
-        this.pressureTracker.start(e),
+        (this.pressureTracker.start(e),
             this.actionTracker.start(this.mode, t),
             this.heapSampler.start(this.mode, t, () => this.pressureTracker.collect()),
             (this.boundBeforeUnload = () => {
                 this.terminate();
             }),
-            window.addEventListener("beforeunload", this.boundBeforeUnload);
+            window.addEventListener("beforeunload", this.boundBeforeUnload));
     }
     async terminate() {
         this.isInitialized &&

@@ -33,7 +33,7 @@ function P() {
         ""
     );
 }
-(n = E(973117).n), (r = E(28967).n);
+((n = E(973117).n), (r = E(28967).n));
 let M = (0, E(132500).A)();
 var G = E(264572).Buffer;
 let f = "deviceProperties",
@@ -79,10 +79,10 @@ if (null != U) {
         "linux" === E)
     ) {
         let e = U.crashReporter.getMetadata();
-        (i.window_manager = e.wm),
+        ((i.window_manager = e.wm),
             (i.distro = e.distro),
             (i.runtime_environment = e.runtime_environment),
-            (i.display_server = e.display_server);
+            (i.display_server = e.display_server));
     } else
         "darwin" === E ? (i.os_sdk_version = n?.split(".")[0]) : "win32" === E && (i.os_sdk_version = n?.split(".")[2]);
 }
@@ -140,7 +140,7 @@ if (null == i)
             let e = n.get(f);
             if (null == e) {
                 let t;
-                ((t = {}).os = (function () {
+                (((t = {}).os = (function () {
                     let { userAgent: e } = window.navigator;
                     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
                     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -186,7 +186,7 @@ if (null == i)
                     (t.system_locale = P()),
                     (t.has_client_mods = p()),
                     (e = t),
-                    n.set(f, e);
+                    n.set(f, e));
             }
             let t = n.get(m);
             null == t && ((t = $()), n.set(m, t));
@@ -194,7 +194,7 @@ if (null == i)
             if (null == E) {
                 var i;
                 let e;
-                (i = $()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (E = e), r.set(m, E);
+                ((i = $()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (E = e), r.set(m, E));
             }
             return {
                 ...e,
@@ -209,11 +209,11 @@ if (null == i)
     } catch (e) {
         i = {};
     }
-(I = {}),
+((I = {}),
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("610528", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("610542", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -229,14 +229,14 @@ if (null == i)
         } catch (e) {
             return null;
         }
-    })((i = { ...i, ...I }));
+    })((i = { ...i, ...I })));
 var B = E(824120),
     H = E.n(B);
 function v(e) {
     let t = [];
     for (let E = 0; E < e.length; E++) {
         let n = Number(e[E]);
-        for (let e = 0; n || e < t.length; e++) (n += 10 * (t[e] || 0)), (t[e] = n % 16), (n = (n - t[e]) / 16);
+        for (let e = 0; n || e < t.length; e++) ((n += 10 * (t[e] || 0)), (t[e] = n % 16), (n = (n - t[e]) / 16));
     }
     return t;
 }
@@ -273,16 +273,16 @@ class y {
         let { parts: E } = t,
             n = 0,
             r = 0;
-        for (; r < e && r < 16 * E.length; ) {
+        for (; r < e && r < 16 * E.length;) {
             let t = Math.min(e - r, 16),
                 i = (1 << t) - 1,
                 _ = E.length - Math.floor(r / 16) - 1;
-            (n |= (E[_] & i) << r), (r += t);
+            ((n |= (E[_] & i) << r), (r += t));
         }
         return n;
     }
     constructor(e, t) {
-        (this.parts = e), (this.str = t);
+        ((this.parts = e), (this.str = t));
     }
     and(e) {
         let { parts: t } = e;
@@ -401,7 +401,7 @@ function K(e, t) {
 }
 let j = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     Q = location.protocol + "//discord.gg";
-Object.freeze({
+(Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
     MODAL_GREY: "#EFEFF4",
@@ -442,7 +442,7 @@ Object.freeze({
         ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     }),
     Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
-    Object.freeze({ 0: "subscription", 1: "sku" });
+    Object.freeze({ 0: "subscription", 1: "sku" }));
 let x = Object.freeze({
     CREATE_INSTANT_INVITE: W(0),
     KICK_MEMBERS: W(1),
@@ -498,7 +498,7 @@ let x = Object.freeze({
     MANAGE_EVENTS: W(33),
     CREATE_EVENTS: W(44),
 });
-!(function () {
+(!(function () {
     for (var e = arguments.length, t = Array(e), E = 0; E < e; E++) t[E] = arguments[E];
     let n = t[0];
     for (let e = 1; e < t.length; e++) n = V(n, t[e]);
@@ -515,7 +515,7 @@ let x = Object.freeze({
 ),
     Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
-    });
+    }));
 let X = Object.freeze({
     WELCOME: `${j}/welcome/`,
     ME: `${j}/channels/@me`,
@@ -627,14 +627,14 @@ var q =
     (A.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
     (A.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
     A);
-K(X),
+(K(X),
     K(q),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
-    });
+    }));
 let z = "dQw4w9WgXcQ:",
     J = null,
     Z = window.DiscordNative;
@@ -722,7 +722,7 @@ var er =
         (c.GAME_SHOPS = "game-shops"),
         (c.GAME_SERVERS = "game-servers"),
         c);
-Object.values({
+(Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",
     FRACTIONAL_PREMIUM: es.PREMIUM_TIER_2_3_DAY,
     FRACTIONAL_PREMIUM_1_DAY: es.PREMIUM_TIER_2_1_DAY,
@@ -741,7 +741,7 @@ Object.values({
     el.PRICE,
     eI.DESC,
     el.POPULARITY,
-    eI.DESC;
+    eI.DESC);
 var eA = (((u = {}).ABOUT = "about"), (u.STORE = "store"), u),
     eS =
         (((L = {}).GENERAL = "general"),
@@ -829,7 +829,7 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             SNOWSGIVING: "/snowsgiving",
             PLAYGROUND: (e, t) => {
                 let E = "/playground";
-                return null != e && ((E += `/${e}`), null != t && (E += `/${t}`)), E;
+                return (null != e && ((E += `/${e}`), null != t && (E += `/${t}`)), E);
             },
             CHANGELOGS: (e) => `/settings/changelogs${null != e ? `/${e}` : ""}`,
             USERS: (e) => `/users/${e}`,
@@ -900,11 +900,11 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             SERVER_SHOP: (e) => `/channels/${e}/shop`,
             CHANNELS_GAME_SHOP: (e, t, E, n) => {
                 let r = `/channels/${e}/game-shop`;
-                return (r += `/${t ?? 0}`), null != E && ((r += `/${E}`), null != n && (r += `/${n}`)), r;
+                return ((r += `/${t ?? 0}`), null != E && ((r += `/${E}`), null != n && (r += `/${n}`)), r);
             },
             GAME_SHOP: (e, t, E) => {
                 let n = `/game-shop/${e}`;
-                return null != t && ((n += `/${t}`), null != E && (n += `/${E}`)), n;
+                return (null != t && ((n += `/${t}`), null != E && (n += `/${E}`)), n);
             },
             GUILD_PRODUCT: (e, t) => `/channels/${e}/shop/${t}`,
             REPORT: "/report",
@@ -965,7 +965,7 @@ function eN(e, t) {
     let { optional: E = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return new k(`:${e_()(e)}(${t})${E ? "?" : ""}`);
 }
-Object.freeze({
+(Object.freeze({
     GUILD_FEED_REMOVED: 1,
     PINNED: 2,
     ACTIVE_CHANNELS_REMOVED: 4,
@@ -993,7 +993,7 @@ Object.freeze({
         (d.CUSTOMIZE_COMMUNITY = "customize"),
         (d.LINKED_ROLES = "linked-roles"),
         d),
-    );
+    ));
 let ec = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
@@ -1052,16 +1052,16 @@ let eL = new Set([
     let e =
         ((function () {
             if (eE) return;
-            (o = n.get("token")), (et = n.get("tokens") || {});
+            ((o = n.get("token")), (et = n.get("tokens") || {}));
             let { decryptedToken: e, wasEncrypted: t } = en(o);
-            (ee = t),
+            ((ee = t),
                 (_ = e),
                 [
                     ...Object.entries(et)
                         .map((e) => {
                             let [t, E] = e,
                                 { decryptedToken: n, wasEncrypted: r } = en(E);
-                            return (ee = r || ee), [t, n];
+                            return ((ee = r || ee), [t, n]);
                         })
                         .filter((e) => {
                             let [t, E] = e;
@@ -1069,9 +1069,9 @@ let eL = new Set([
                         }),
                 ].reduce((e, t) => {
                     let [E, n] = t;
-                    return (e[E] = n), e;
+                    return ((e[E] = n), e);
                 }, {}),
-                (eE = !0);
+                (eE = !0));
         })(),
         _);
     if (null == e || __OVERLAY__) return;
@@ -1116,7 +1116,7 @@ let eL = new Set([
                 client_state: { guild_versions: {} },
             },
         });
-        performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0);
+        (performance.mark("FastConnect-identify-sent"), t.send(o), (E.identify = !0));
     };
     r ? I() : (t.onopen = I);
 })();

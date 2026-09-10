@@ -43,7 +43,7 @@ function y(e, t) {
 }
 function D(e) {
     let t = C.get(e);
-    return null == t && ((t = new Map()), C.set(e, t)), t;
+    return (null == t && ((t = new Map()), C.set(e, t)), t);
 }
 function R(e) {
     return Array.from(D(e).values());
@@ -193,7 +193,7 @@ function b(e) {
                     l = I.delete(o) || l;
                     break;
                 case "INVALID":
-                    r.delete(s), (l = !0), (l = I.delete(o) || l);
+                    (r.delete(s), (l = !0), (l = I.delete(o) || l));
                     break;
                 default:
                     return u;
@@ -230,7 +230,7 @@ function F(e) {
         case "NOT_READY_YET":
             return I.delete(a);
         case "INVALID":
-            return i && r.delete(n), I.delete(a);
+            return (i && r.delete(n), I.delete(a));
         default:
             return o;
     }
@@ -243,7 +243,7 @@ function j(e, t) {
         r = !1,
         s = new Set();
     for (let t of i.keys())
-        s.add(y(e, t)), (r = F({ tab: e, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r);
+        (s.add(y(e, t)), (r = F({ tab: e, targetId: t, pruneInvalid: n, guildAffinityNormalizationMax: l }) || r));
     for (let t of I.values(e)) s.has(t.rowId) || (r = I.delete(t.rowId) || r);
     return r;
 }
@@ -269,15 +269,15 @@ function k(e) {
     );
 }
 function H() {
-    return (_ = !0), b({ pruneInvalid: !0 });
+    return ((_ = !0), b({ pruneInvalid: !0 }));
 }
 class B extends i.Ay.PersistedStore {
     static displayName = "OverlayFriendsWidgetFavoritesStore";
     static persistKey = "OverlayFriendsWidgetFavoritesStore";
     initialize(e) {
-        this.waitFor(o.A, u.A, d.A, c.A, h.Ay, g.A, s.A, f.default),
+        (this.waitFor(o.A, u.A, d.A, c.A, h.Ay, g.A, s.A, f.default),
             (function (e) {
-                (C = new Map()), I.clear();
+                ((C = new Map()), I.clear());
                 for (let t of S)
                     (function (e, t) {
                         let n = (function (e, t) {
@@ -304,7 +304,7 @@ class B extends i.Ay.PersistedStore {
                         }
                     })(e, t);
             })(e),
-            b({ pruneInvalid: !1 });
+            b({ pruneInvalid: !1 }));
     }
     getState() {
         return {
@@ -357,7 +357,7 @@ let W = new B(
                           I.delete(t);
                           break;
                       case "INVALID":
-                          i.delete(e.targetId), I.delete(t);
+                          (i.delete(e.targetId), I.delete(t));
                           break;
                       default:
                           return r;
@@ -458,7 +458,7 @@ let W = new B(
               }),
               LOGOUT: Y(function () {
                   let e = I.size() > 0 || C.size > 0;
-                  return I.clear(), (C = new Map()), (_ = !1), e;
+                  return (I.clear(), (C = new Map()), (_ = !1), e);
               }),
           },
 );
