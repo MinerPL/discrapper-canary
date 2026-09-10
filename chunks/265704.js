@@ -1,12 +1,19 @@
 let i, r, a, s, l, o;
-n.d(t, { A: () => E });
-var d = n(17928),
-    c = n(228366);
-function u() {
-    (i = !1), (r = []), (a = new Set()), (s = new Set()), (l = new Map()), (o = new Map());
+n.d(t, { A: () => h });
+var d = n(323889),
+    c = n(17928),
+    u = n(228366);
+function _() {
+    ((i = !1), (r = []), (a = new Set()), (s = new Set()), (l = new Map()), (o = new Map()));
 }
-u();
-class _ extends d.Ay.Store {
+function E(e) {
+    let t = new Set(a),
+        n = new Map(o);
+    for (let i of e) t.delete(i) && n.delete(i);
+    ((a = t), (o = n));
+}
+_();
+class A extends c.Ay.Store {
     static displayName = "BountyStore";
     get isFetchingQuestHomeBounties() {
         return i;
@@ -35,42 +42,47 @@ class _ extends d.Ay.Store {
         return o.get(e) ?? null;
     }
 }
-let E = new _(c.h, {
+let h = new A(u.h, {
     LOGOUT: function () {
-        u();
+        _();
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_BEGIN: function () {
         i = !0;
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: function (e) {
-        let { bounties: t, placement: n, adDecisionsByAdCreativeId: s } = e;
-        (i = !1), (r = t), (a = new Set()), (o = new Map()), (l = new Map(l)).set(n, s);
+        let { bounties: t, placement: n, adDecisionsByAdCreativeId: a } = e;
+        ((i = !1), (r = t), E(t.map((e) => e.id)), (l = new Map(l)).set(n, a));
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function (e) {
         let { placement: t } = e;
-        (i = !1), (r = []), (a = new Set()), (l = new Map(l)).delete(t);
+        ((i = !1), (r = []), (l = new Map(l)).delete(t));
+    },
+    QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function (e) {
+        let { creative: t } = e;
+        if (t?.type !== d.p.BOUNTY) return !1;
+        E([t.bounty.id]);
     },
     BOUNTIES_CLAIM_REWARD_BEGIN: function (e) {
         let { bountyId: t } = e,
             n = new Set(s);
-        n.add(t), (s = n);
+        (n.add(t), (s = n));
     },
     BOUNTIES_CLAIM_REWARD_SUCCESS: function (e) {
         let { bountyId: t } = e,
             n = new Set(s);
-        n.delete(t), (s = n);
+        (n.delete(t), (s = n));
         let i = new Set(a);
-        i.add(t), (a = i);
+        (i.add(t), (a = i));
     },
     BOUNTIES_CLAIM_REWARD_FAILURE: function (e) {
         let { bountyId: t } = e,
             n = new Set(s);
-        n.delete(t), (s = n);
+        (n.delete(t), (s = n));
     },
     BOUNTIES_VIDEO_PROGRESS_UPDATE: function (e) {
         let { bountyId: t, timestampSec: n, maxTimestampSec: i, duration: r } = e,
             a = new Map(o);
-        a.set(t, { timestampSec: n, maxTimestampSec: i, duration: r }), (o = a);
+        (a.set(t, { timestampSec: n, maxTimestampSec: i, duration: r }), (o = a));
     },
     AD_SESSION_RESET: function () {
         o = new Map();
