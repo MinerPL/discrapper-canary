@@ -7,35 +7,42 @@ var s = i(17928),
 let c = { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A },
     o = Object.freeze({ voiceState: void 0, voiceChannel: void 0 });
 function d(e) {
-    let { userId: t, guildId: i } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c,
-        n = (function (e) {
-            let { userId: t, guildId: i } = e,
-                s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c,
+        i = (function (e) {
+            let { userId: t, guildId: i, includeNonDiscoverable: s = !1 } = e,
+                n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
             return null != i && null != t
-                ? s.VoiceStateStore.getDiscoverableVoiceState(i, t)
+                ? s
+                    ? n.VoiceStateStore.getVoiceState(i, t)
+                    : n.VoiceStateStore.getDiscoverableVoiceState(i, t)
                 : null != t
-                  ? s.VoiceStateStore.getDiscoverableVoiceStateForUser(t)
+                  ? s
+                      ? n.VoiceStateStore.getVoiceStateForUser(t)
+                      : n.VoiceStateStore.getDiscoverableVoiceStateForUser(t)
                   : void 0;
-        })({ userId: t, guildId: i }, s),
-        r = (function (e) {
+        })(e, t),
+        s = (function (e) {
             let { voiceState: t } = e,
                 i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
             if (t?.channelId != null) return i.ChannelStore.getChannel(t.channelId);
-        })({ voiceState: n }, s);
+        })({ voiceState: i }, t);
     return !(function (e) {
         let { voiceState: t, voiceChannel: i } = e,
             s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
         return null != t && (i?.isPrivate() || s.PermissionStore.can(l.xB.VIEW_CHANNEL, i));
-    })({ voiceState: n, voiceChannel: r }, s)
+    })({ voiceState: i, voiceChannel: s }, t)
         ? o
-        : { voiceState: n, voiceChannel: r };
+        : { voiceState: i, voiceChannel: s };
 }
 function h(e) {
-    let { userId: t, guildId: i } = e;
+    let { userId: t, guildId: i, includeNonDiscoverable: l } = e;
     return (0, s.cf)(
         [n.A, r.A, a.A],
-        () => d({ userId: t, guildId: i }, { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A }),
-        [i, t],
+        () =>
+            d(
+                { userId: t, guildId: i, includeNonDiscoverable: l },
+                { ChannelStore: n.A, PermissionStore: r.A, VoiceStateStore: a.A },
+            ),
+        [i, t, l],
     );
 }
