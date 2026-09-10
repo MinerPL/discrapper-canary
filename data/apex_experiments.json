@@ -4824,6 +4824,36 @@
     }
   },
   {
+    "name": "2026-07-premium-referral-incentives",
+    "kind": "user",
+    "defaultConfig": {
+      "referralRewardType": null,
+      "useAltReferralCardArt": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "referralRewardType": "orbs",
+        "useAltReferralCardArt": false
+      },
+      "2": {
+        "referralRewardType": "discount",
+        "useAltReferralCardArt": false
+      },
+      "3": {
+        "referralRewardType": "orbs",
+        "useAltReferralCardArt": true
+      },
+      "4": {
+        "referralRewardType": "discount",
+        "useAltReferralCardArt": true
+      }
+    }
+  },
+  {
     "name": "2026-07-quest-home-default-banner-removal",
     "kind": "user",
     "defaultConfig": null,

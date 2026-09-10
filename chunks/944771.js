@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         ComponentPlayground: () => o,
         default: () => d,
         getComponentPlaygroundConfigs: () => s,
         useComponentPlaygroundConfigs: () => l,
-    });
+    }));
 var i = n(477900),
     r = n(582128),
     a = n(764451);
@@ -1041,7 +1041,7 @@ async function s() {
                 n.e("936001"),
                 n.e("203163"),
                 n.e("541312"),
-                n.e("109024"),
+                n.e("900504"),
                 n.e("240406"),
                 n.e("152253"),
                 n.e("226827"),

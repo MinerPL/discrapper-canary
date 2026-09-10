@@ -628,7 +628,7 @@ let ev = function () {
         l = i.useMemo(() => t.map((e) => new ei.A(e)), [t]),
         r = { redeemed: 0, converted: 0, sent: e.size };
     e.forEach((e) => {
-        e === er.aK.REDEEMED && r.redeemed++, e === er.aK.CONVERTED && (r.redeemed++, r.converted++);
+        (e === er.aK.REDEEMED && r.redeemed++, e === er.aK.CONVERTED && (r.redeemed++, r.converted++));
     });
     let o = r.sent === eo.Z,
         c = k.A.getArticleURL(eC.MVz.REFERRAL_PROGRAM),
@@ -672,7 +672,7 @@ let ev = function () {
                                 onClick: () =>
                                     (function (e) {
                                         let { analyticsLocations: t } = e;
-                                        B.default.track(eC.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                                        (B.default.track(eC.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                                             location_stack: t,
                                         }),
                                             (0, es.openModalLazy)(async () => {
@@ -680,10 +680,11 @@ let ev = function () {
                                                     s.e("647658"),
                                                     s.e("174630"),
                                                     s.e("963244"),
-                                                    s.e("135432"),
-                                                ]).then(s.bind(s, 121002));
+                                                    s.e("143883"),
+                                                    s.e("618589"),
+                                                ]).then(s.bind(s, 168457));
                                                 return (s) => (0, n.jsx)(e, { ...s, sourceAnalyticsLocations: t });
-                                            });
+                                            }));
                                     })({ analyticsLocations: d }),
                                 onlyShineOnHover: !0,
                                 children: (0, n.jsxs)("div", {
@@ -879,12 +880,12 @@ function eV() {
                                   }),
                                   (0, n.jsx)(h.$, {
                                       onClick: () => {
-                                          B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                          (B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: eU,
                                               target: eF,
                                           }),
                                               (0, w.default)(),
-                                              (0, P.pX)(eC.BVt.APPLICATION_STORE);
+                                              (0, P.pX)(eC.BVt.APPLICATION_STORE));
                                       },
                                       variant: "overlay-secondary",
                                       fullWidth: !0,
@@ -902,12 +903,12 @@ function eV() {
                                       variant: "overlay-primary",
                                       fullWidth: !0,
                                       onClick: () => {
-                                          B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                          (B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: eU,
                                               target: eF,
                                           }),
                                               (0, w.default)(),
-                                              (0, P.pX)(eC.BVt.APPLICATION_STORE);
+                                              (0, P.pX)(eC.BVt.APPLICATION_STORE));
                                       },
                                       text: eA.intl.string(eA.t.VR2iVB),
                                       size: "md",
@@ -915,11 +916,11 @@ function eV() {
                                   (0, n.jsx)(h.$, {
                                       variant: "overlay-secondary",
                                       onClick: () => {
-                                          B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
+                                          (B.default.track(eC.HAw.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: "to_subscriptions_button",
                                               target: "subscriptions settings",
                                           }),
-                                              (0, D.openUserSettings)(S.X.SUBSCRIPTIONS_PANEL);
+                                              (0, D.openUserSettings)(S.X.SUBSCRIPTIONS_PANEL));
                                       },
                                       text: eA.intl.string(eA.t["9uDy6C"]),
                                       fullWidth: !0,
@@ -1076,7 +1077,7 @@ let eY = function () {
     let f = (0, J.m)();
     i.useEffect(() => {
         C.h.wait(async () => {
-            e || (await Promise.all([v.hP(), v.$o(), (0, T.zS)(null, null, eC.tF5.DISCOVERY)])), c(!1);
+            (e || (await Promise.all([v.hP(), v.$o(), (0, T.zS)(null, null, eC.tF5.DISCOVERY)])), c(!1));
         });
     }, [e]);
     let [E, N] = i.useState(!1);

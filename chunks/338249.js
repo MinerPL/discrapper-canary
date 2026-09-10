@@ -1,4 +1,4 @@
-s.r(e), s.d(e, { default: () => H });
+(s.r(e), s.d(e, { default: () => H }));
 var n = s(477900),
     i = s(582128),
     r = s(806163),
@@ -24,7 +24,7 @@ var T = s(775121),
     j = s(793574),
     L = s(688810),
     N = s(235986),
-    R = s(279694),
+    R = s(578850),
     S = s(287809),
     g = s(107834),
     m = s(202541),
@@ -82,7 +82,7 @@ o.Ay.initialize();
 class G extends i.PureComponent {
     stopListeningToHistory;
     componentDidMount() {
-        l(this.props.location),
+        (l(this.props.location),
             (this.stopListeningToHistory = (0, O.JK)().listen((t) => {
                 t.pathname.startsWith(c.BVt.APPLICATION_STORE) && l(t);
             })),
@@ -90,13 +90,13 @@ class G extends i.PureComponent {
             T.A.disable(),
             T.A.setLayout(u),
             T.A.enable(),
-            (0, C.d0)("application_store");
+            (0, C.d0)("application_store"));
     }
     componentWillUnmount() {
-        null != this.stopListeningToHistory && this.stopListeningToHistory(),
+        (null != this.stopListeningToHistory && this.stopListeningToHistory(),
             T.A.disable(),
             T.A.setLayout(I.zR),
-            T.A.enable();
+            T.A.enable());
     }
     renderContent = () =>
         (0, n.jsxs)(r.dO, {

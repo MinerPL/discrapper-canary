@@ -207,7 +207,7 @@ function z(e) {
                                 onChange: (e, s) => {
                                     C((t) => {
                                         let i = new Set(t);
-                                        return s ? i.add(e) : i.delete(e), i;
+                                        return (s ? i.add(e) : i.delete(e), i);
                                     });
                                 },
                             },
@@ -225,7 +225,7 @@ function z(e) {
                             variant: "primary",
                             disabled: o,
                             onClick: async () => {
-                                x(!0), await s([...n.values()]), x(!1);
+                                (x(!0), await s([...n.values()]), x(!1));
                             },
                         }),
                     }),
@@ -276,10 +276,10 @@ let K = function (e) {
                         onSelectionChange: (e) => {
                             let s = Array.isArray(e) ? e : [e],
                                 t = new Map();
-                            s.forEach((e) => {
+                            (s.forEach((e) => {
                                 null != e && t.set(e.id, e);
                             }),
-                                o(t);
+                                o(t));
                         },
                         children: (0, i.jsx)("div", {
                             className: Z.c,
@@ -311,7 +311,7 @@ let K = function (e) {
                                       onChange: (e, s) => {
                                           o((t) => {
                                               let i = new Map(t);
-                                              return s ? i.set(e.id, e) : i.delete(e.id), i;
+                                              return (s ? i.set(e.id, e) : i.delete(e.id), i);
                                           });
                                       },
                                   },
@@ -844,6 +844,7 @@ let es = (e) => {
             ],
         });
     };
+t(232198);
 var ei = t(652215),
     el = t(647571);
 function ea(e) {
@@ -952,7 +953,7 @@ let er = function (e) {
                         try {
                             C.default.track(ei.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: _ });
                             let s = await (0, d.xm)(e.map((e) => e.id));
-                            h(2), f(new Set(e)), j(s);
+                            (h(2), f(new Set(e)), j(s));
                         } catch {}
                     },
                     onClose: o,
