@@ -2122,19 +2122,16 @@ let tZ = {
             name: "Example Orb Wallet",
             id: "orb-wallet-stateless",
             component: function (e) {
-                let { userHasPremium: t, orbBalance: l } = e;
                 return (0, s.jsxs)("div", {
                     className: tX.B,
-                    children: [
-                        (0, s.jsx)(tJ.FT, { userHasPremium: t, orbBalance: l }),
-                        (0, s.jsx)(tJ.Yc, { userHasPremium: t, orbBalance: l }),
-                        ";",
-                    ],
+                    children: [(0, s.jsx)(tJ.FT, { ...e }), (0, s.jsx)(tJ.Yc, { ...e }), ";"],
                 });
             },
             controls: {
                 userHasPremium: { label: "User Has Nitro", type: "boolean", defaultValue: !0 },
                 orbBalance: { label: "Balance", type: "number", defaultValue: 4240 },
+                hasErrorMessage: { label: "Has Error Message", type: "boolean", defaultValue: !1 },
+                isLoading: { label: "Is Loading", type: "boolean", defaultValue: !1 },
             },
         },
         { name: "User (Stateful) Orb Wallet", id: "orb-wallet-stateful", component: () => (0, s.jsx)(tJ.vG, {}) },

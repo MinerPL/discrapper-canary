@@ -849,7 +849,7 @@ var ns = n(983495),
 function nx(e) {
     let { popoutContainerRef: t } = e,
         { balance: n } = (0, nm.W)(),
-        a = (0, c.bG)([np.A], () => np.A.clientUnreadNotificationType),
+        a = (0, c.bG)([np.Ay], () => np.Ay.clientUnreadNotificationType),
         { isHovered: r, onMouseEnter: o, onMouseLeave: d } = (0, nh.A)(0, 200),
         u = l.useCallback(() => {
             (0, v.hasAnyModalOpen)() || d();
@@ -864,9 +864,9 @@ function nx(e) {
         ),
         p = l.useMemo(
             () =>
-                a === np.Y.NEW_ACHIEVEMENT
+                a === np.Y0.NEW_ACHIEVEMENT
                     ? (0, i.jsx)(nu.E, { type: "new", variant: "brand" })
-                    : a === np.Y.UNCLAIMED_ACHIEVEMENT
+                    : a === np.Y0.UNCLAIMED_ACHIEVEMENT
                       ? (0, i.jsx)(nu.E, { type: { text: V.intl.string(V.t.O13yhz) }, variant: "brand" })
                       : null,
             [a],
@@ -2675,7 +2675,7 @@ function ly(e) {
         (p(!1), s());
     }, [s]);
     if (null != a) {
-        let e = (0, lN.A)("1789076277655", !0);
+        let e = (0, lN.A)("1789076337526", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
