@@ -1,4 +1,4 @@
-l.d(t, { m: () => eI });
+l.d(t, { m: () => ej });
 var i = l(477900),
     n = l(582128),
     a = l(593673),
@@ -213,56 +213,50 @@ var X = l(61567),
     Q = l(734057),
     Z = l(317525),
     J = l(576705),
-    ee = l(935208);
+    ee = l(935208),
+    et = l(44167);
 l(321073);
-var et = l(485845),
-    el = l(136722),
-    ei = l(435183),
-    en = l(155718),
-    ea = l(795816),
-    es = l(933958),
-    er = l(574152),
-    ed = l(627363),
-    ec = l(587895),
-    eu = l(712440),
-    eo = l(733110),
-    ef = l(488926),
-    eh = l(716357),
+var el = l(485845),
+    ei = l(136722),
+    en = l(435183),
+    ea = l(155718),
+    es = l(795816),
+    er = l(933958),
+    ed = l(574152),
+    ec = l(627363),
+    eu = l(587895),
+    eo = l(712440),
+    ef = l(733110),
+    eh = l(488926),
     em = l(360469);
-function eg() {
-    return (0, c.bG)([F.A, eh.A], () => {
-        let e = F.A.getGuildId();
-        return null != e ? eh.A.getSpace(e)?.channel_id : void 0;
-    });
-}
-async function ex(e) {
-    null == ec.A.getApplication(em.NW) && (await (0, ed.TA)(em.NW));
-    let t = es.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== em.NW);
-    return await (0, ea.su)({
+async function eg(e) {
+    null == eu.A.getApplication(em.NW) && (await (0, ec.TA)(em.NW));
+    let t = er.Ay.getEmbeddedActivitiesForChannel(e).every((e) => e.applicationId !== em.NW);
+    return await (0, es.su)({
         channelId: e,
         applicationId: em.NW,
         isStart: t,
-        embeddedActivitiesManager: (0, er.A)(),
+        embeddedActivitiesManager: (0, ed.A)(),
         renderInFramePool: !0,
     });
 }
-async function eE(e) {
+async function ex(e) {
     let { channel: t, selectedRoleIds: l } = e,
         i = [];
     if (l.length > 0)
-        for (let e of (i.push({ id: t.guild_id, type: en.r2.ROLE, allow: ef.x3, deny: Y.xBc.USE_EMBEDDED_ACTIVITIES }),
+        for (let e of (i.push({ id: t.guild_id, type: ea.r2.ROLE, allow: eh.x3, deny: Y.xBc.USE_EMBEDDED_ACTIVITIES }),
         l))
-            i.push({ id: e, type: en.r2.ROLE, allow: Y.xBc.USE_EMBEDDED_ACTIVITIES, deny: ef.x3 });
-    let n = await (0, ei.RT)(t.id, { permissionOverwrites: i });
+            i.push({ id: e, type: ea.r2.ROLE, allow: Y.xBc.USE_EMBEDDED_ACTIVITIES, deny: eh.x3 });
+    let n = await (0, en.RT)(t.id, { permissionOverwrites: i });
     if (!n.ok) throw n;
 }
-let eA = [];
-var ep = l(344351),
-    e_ = l(256693),
-    ev = l(812901),
-    eS = l(317608),
-    ej = l(953538);
-let eI = {
+let eE = [];
+var eA = l(344351),
+    ep = l(256693),
+    e_ = l(812901),
+    ev = l(317608),
+    eS = l(953538);
+let ej = {
     [a.a.IMAGE_TEXT]: {
         View: function (e) {
             let { widget: t, guildSpaceMode: l, guildId: n } = e,
@@ -401,7 +395,7 @@ let eI = {
         View: function (e) {
             let t,
                 l,
-                a = eg(),
+                a = (0, et.n)(),
                 s = (0, c.bG)(
                     [Q.A, J.A],
                     () => {
@@ -411,32 +405,32 @@ let eI = {
                     [a],
                 ),
                 r = (0, c.bG)(
-                    [es.Ay],
+                    [er.Ay],
                     () => {
-                        let e = es.Ay.getCurrentEmbeddedActivity();
+                        let e = er.Ay.getCurrentEmbeddedActivity();
                         return null == e ||
                             e.applicationId !== em.NW ||
-                            e.location.kind !== ep.T.GUILD_CHANNEL ||
+                            e.location.kind !== eA.T.GUILD_CHANNEL ||
                             e.location.channel_id !== a
                             ? null
                             : e;
                     },
                     [a],
                 ),
-                d = (0, c.bG)([es.Ay], () => es.Ay.isLaunchingActivity(), []),
+                d = (0, c.bG)([er.Ay], () => er.Ay.isLaunchingActivity(), []),
                 { authResolved: u, isAuthorized: o } =
                     ((t = (0, c.bG)(
-                        [eo.default],
-                        () => eo.default.getFetchStateForApplication(em.NW) === eo.FetchState.FETCHED,
+                        [ef.default],
+                        () => ef.default.getFetchStateForApplication(em.NW) === ef.FetchState.FETCHED,
                         [],
                     )),
                     (l = (0, c.bG)(
-                        [eo.default, ec.A],
+                        [ef.default, eu.A],
                         () => {
-                            let e = eo.default.getNewestTokenForApplication(em.NW);
+                            let e = ef.default.getNewestTokenForApplication(em.NW);
                             if (null == e) return !1;
-                            let t = ec.A.getApplication(em.NW),
-                                l = t?.integrationTypesConfig?.[et.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
+                            let t = eu.A.getApplication(em.NW),
+                                l = t?.integrationTypesConfig?.[el.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
                             if (null == l) return !0;
                             let i = new Set(e.scopes);
                             return l.every((e) => i.has(e));
@@ -444,33 +438,33 @@ let eI = {
                         [],
                     )),
                     n.useEffect(() => {
-                        (eo.default.getFetchStateForApplication(em.NW) === eo.FetchState.NOT_FETCHED &&
-                            eu.A.fetch([em.NW]),
-                            null == ec.A.getApplication(em.NW) && (0, ed.TA)(em.NW));
+                        (ef.default.getFetchStateForApplication(em.NW) === ef.FetchState.NOT_FETCHED &&
+                            eo.A.fetch([em.NW]),
+                            null == eu.A.getApplication(em.NW) && (0, ec.TA)(em.NW));
                     }, []),
                     { authResolved: t, isAuthorized: l }),
                 h = n.useRef(!1);
             n.useEffect(() => {
-                null == r && null != a && s && u && o && !h.current && ((h.current = !0), ex(a));
+                null == r && null != a && s && u && o && !h.current && ((h.current = !0), eg(a));
             }, [s, a, r, u, o]);
             let m = n.useCallback(() => {
-                    null != a && ((h.current = !0), ex(a));
+                    null != a && ((h.current = !0), eg(a));
                 }, [a]),
                 g = null != a && u && !o;
             return s
                 ? (0, i.jsxs)("div", {
-                      className: ej.kL,
+                      className: eS.kL,
                       children: [
                           null != r &&
-                              (0, i.jsx)(eS.A, {
-                                  frameId: (0, e_.Ri)(r),
-                                  level: ev.A.WithinAppContent,
-                                  className: ej.t$,
+                              (0, i.jsx)(ev.A, {
+                                  frameId: (0, ep.Ri)(r),
+                                  level: e_.A.WithinAppContent,
+                                  className: eS.t$,
                               }),
                           null == r &&
                               g &&
                               (0, i.jsx)("div", {
-                                  className: ej.P5,
+                                  className: eS.P5,
                                   children: (0, i.jsx)(L.$, {
                                       variant: "secondary",
                                       text: j.intl.string(X.default.PSuly6),
@@ -481,9 +475,9 @@ let eI = {
                       ],
                   })
                 : (0, i.jsx)("div", {
-                      className: ej.kL,
+                      className: eS.kL,
                       children: (0, i.jsx)("div", {
-                          className: ej.m0,
+                          className: eS.m0,
                           children: (0, i.jsx)(f.E, {
                               variant: "text-sm/normal",
                               color: "text-muted",
@@ -496,19 +490,19 @@ let eI = {
             let { cancel: t } = e,
                 l = (0, c.bG)([F.A], () => F.A.getGuildId()),
                 a = ee.default.castGuildIdAsEveryoneGuildRoleId(l),
-                s = eg(),
+                s = (0, et.n)(),
                 r = (0, c.bG)([Q.A], () => (null != s ? Q.A.getChannel(s) : void 0), [s]),
                 d = (0, c.bG)([J.A], () => null != r && J.A.can(Y.xBc.MANAGE_ROLES, r), [r]),
-                u = (0, c.bG)([Z.A], () => (null == l ? eA : Z.A.getSortedRoles(l).filter((e) => e.id !== a)), [l, a]),
+                u = (0, c.bG)([Z.A], () => (null == l ? eE : Z.A.getSortedRoles(l).filter((e) => e.id !== a)), [l, a]),
                 o = n.useMemo(() => {
                     let e;
                     return null != r
                         ? null != (e = r.permissionOverwrites[r.guild_id]) &&
-                          el.zy(e.deny, Y.xBc.USE_EMBEDDED_ACTIVITIES)
+                          ei.zy(e.deny, Y.xBc.USE_EMBEDDED_ACTIVITIES)
                             ? u
                                   .filter((e) => {
                                       let t = r.permissionOverwrites[e.id];
-                                      return null != t && el.zy(t.allow, Y.xBc.USE_EMBEDDED_ACTIVITIES);
+                                      return null != t && ei.zy(t.allow, Y.xBc.USE_EMBEDDED_ACTIVITIES);
                                   })
                                   .map((e) => e.id)
                             : []
@@ -523,7 +517,7 @@ let eI = {
                 if (null != r) {
                     (E(!1), g(!0));
                     try {
-                        (await eE({ channel: r, selectedRoleIds: A }), t());
+                        (await ex({ channel: r, selectedRoleIds: A }), t());
                     } catch {
                         (g(!1), E(!0));
                     }

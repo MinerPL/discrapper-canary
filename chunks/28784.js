@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611044, Version Hash: 16d1fa17a7a40c2984e910ed122fe07613b6a757`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611045, Version Hash: 94beeae393de213b9ed5c9e9658134e038f172ae`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21177,7 +21177,7 @@ let Np = "isHideDevBanner",
                     className: ta()(Nf.Wz, Nf.mr),
                     children: [
                         (0, O.jsx)(NI, { className: Nf.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611044" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611045" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -25204,8 +25204,8 @@ let Ra = (0, tB.Fe)({
                 n.e("503853"),
                 n.e("263651"),
                 n.e("493756"),
-            ]).then(n.bind(n, 756379)),
-        webpackId: 756379,
+            ]).then(n.bind(n, 279575)),
+        webpackId: 279575,
         name: "GuildSpacePage",
     }),
     RE = (0, tB.Fe)({
@@ -30115,7 +30115,8 @@ function Ls() {
                     d = rA.A.getMainFrame(),
                     c = (0, rT.h)(d?.surface),
                     u = null == c && R5.Ay.isVibegrationsProjectApplication(d?.applicationId),
-                    _ = (null != c && (0, r2.kg)(rf.A.getChannel(c), "ActivitySounds")) || u;
+                    _ = (null != c && (0, r2.kg)(rf.A.getChannel(c), "ActivitySounds")) || u,
+                    E = null != i && rf.A.getChannel(i)?.type === G.rbe.GUILD_SPACE;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
@@ -30126,6 +30127,7 @@ function Ls() {
                     voiceChannelActivities: s,
                     hasFrame: (0, rT.x1)(d),
                     inVibegrationsChannel: _,
+                    isGuildSpaceActivity: E,
                 };
             },
             (e, t) => {
@@ -30140,8 +30142,10 @@ function Ls() {
                         voiceChannelActivities: d,
                         hasFrame: c,
                         inVibegrationsChannel: u,
+                        isGuildSpaceActivity: _,
                     } = t,
-                    _ = d.some((e) => e.applicationId === o?.applicationId && e.launchId === o.launchId);
+                    E = d.some((e) => e.applicationId === o?.applicationId && e.launchId === o.launchId),
+                    A = _ || e.isGuildSpaceActivity;
                 if ((0, lh.Vq)(r)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(a)),
                         i = d.find((e) => e.userIds.has(a));
@@ -30155,7 +30159,7 @@ function Ls() {
                             (i.userIds.size > t.userIds.size && (n = "activity_user_join"),
                             i.userIds.size < t.userIds.size && (n = "activity_user_left")));
                 }
-                if (!_) {
+                if (!E && !A) {
                     e.connectedChannelActivities.length < l.length &&
                         e.channelActivities.length < s.length &&
                         (n = "activity_launch");
@@ -30168,6 +30172,7 @@ function Ls() {
                 }
                 return (
                     null == n &&
+                        !A &&
                         (null != e.connectedActivityLocation || null != i) &&
                         (null == e.connectedActivityLocation && null != i
                             ? (n = "activity_launch")
