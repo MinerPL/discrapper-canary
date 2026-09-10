@@ -109,7 +109,7 @@ function S(e) {
             let { default: t } = await Promise.all([n.e("387132"), n.e("918024"), n.e("324947")]).then(
                 n.bind(n, 662558),
             );
-            return (n) => (0, i.jsx)(t, { webviewUrl: o, isExpressiveModalV2: e, ...u, ...n });
+            return (n) => (0, i.jsx)(t, { webviewUrl: o, isExpressiveModalV2: e, entryPoint: r, ...u, ...n });
         }, _);
     } else
         (0, a.openModalLazy)(async () => {
@@ -142,15 +142,15 @@ let C = {
             function c() {
                 s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
             }
-            s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
+            (s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
                 g({
                     entryPoint: r,
                     onClose: () => {
-                        c(), t?.();
+                        (c(), t?.());
                     },
                     onComplete: () => {},
                     onCancel: c,
-                });
+                }));
             return;
         }
         (0, f.d)(r)
