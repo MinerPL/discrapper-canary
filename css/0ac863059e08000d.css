@@ -233,6 +233,14 @@
     color: var(--interactive-text-hover)
 }
 
+.inviteRowMember__67dba .inviteRowInfo__67dba {
+    color: var(--text-muted)
+}
+
+.inviteRowMember__67dba:hover {
+    background-color: transparent
+}
+
 .footer__67dba {
     background-color: var(--background-base-lower)
 }
@@ -311,4 +319,4 @@
     justify-content: space-between
 }
 
-/*# sourceMappingURL=a0f64fedb1069663.css.map*/
+/*# sourceMappingURL=0ac863059e08000d.css.map*/

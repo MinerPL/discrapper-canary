@@ -16,6 +16,7 @@ _.exports = {
     UW: "warningContainer__67dba",
     QW: "warningIcon__67dba",
     Sv: "subText__67dba",
+    E2: "inviteRowMember__67dba",
     PJ: "footerText__67dba",
     gJ: "errorMessage__67dba",
     P5: "errorLink__67dba",
