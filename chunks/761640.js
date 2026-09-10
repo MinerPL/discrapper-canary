@@ -194,7 +194,7 @@ let V = new F(a.h, {
     },
     SIDEBAR_CLOSE_GUILD: function (e) {
         let { guildId: t } = e;
-        return null != v[t] && (delete v[t], !0);
+        return null != v[t] && (delete v[t], k(), !0);
     },
     FRIENDS_SIDEBAR_SET_COLLAPSED: function (e) {
         let { collapsed: t } = e;
