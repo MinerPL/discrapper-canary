@@ -1,9 +1,7 @@
 f.exports = {
     I0: "blurb_cd2ff7",
     _c: "giftSentMessage_cd2ff7",
-    Ik: "giftRecipientTag_cd2ff7",
     jx: "giftRecipientContainer_cd2ff7",
-    gn: "giftRecipientTextContainer_cd2ff7",
     yF: "divider_cd2ff7",
     W$: "subtext_cd2ff7",
     Sc: "subtextError_cd2ff7 subtext_cd2ff7",
@@ -16,4 +14,5 @@ f.exports = {
     L1: "seasonalConfirmationPadding_cd2ff7",
     PN: "giftCodeSection_cd2ff7",
     pP: "giftingBadgeFooter_cd2ff7",
+    Km: "giftingRewardBanner_cd2ff7",
 };

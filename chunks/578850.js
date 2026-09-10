@@ -353,8 +353,8 @@ function e6() {
         useAltReferralCardArt: o,
     };
 }
-var e8 = s(212737),
-    e5 = s(162907);
+var e5 = s(212737),
+    e8 = s(162907);
 let e9 =
         "https://cdn.discordapp.com/assets/content/7932c6a6c499ae3ae7d3c3bc398778b62517d38df2c179320dc872062c73d5e9.png",
     e4 =
@@ -374,18 +374,18 @@ function ts(e) {
         { avatarSrc: s, eventHandlers: i } = (0, eQ.A)({ userId: t.id, size: eK._3.SIZE_24 });
     return (0, o.jsx)(
         eX.eu,
-        { className: e5.bj, src: s, "aria-label": (0, eq.mG)(t), size: eK._3.SIZE_24, ...i },
+        { className: e8.bj, src: s, "aria-label": (0, eq.mG)(t), size: eK._3.SIZE_24, ...i },
         t.id,
     );
 }
 function ti(e) {
     let { slotIndex: t } = e;
-    return (0, o.jsx)("div", { className: e5.p, children: t });
+    return (0, o.jsx)("div", { className: e8.p, children: t });
 }
 function tn(e) {
     let { referralSentUsers: t, className: s } = e;
     return (0, o.jsx)("div", {
-        className: m()(e5.L$, s),
+        className: m()(e8.L$, s),
         children: (function () {
             let e = [];
             for (let s = 0; s < e3.Z; s++)
@@ -435,10 +435,10 @@ function tl(e) {
     return (0, o.jsx)(eZ.a, {
         percent: 33.3 * t,
         colorOverride: "#53ac66",
-        background: i ?? e5.cq,
+        background: i ?? e8.cq,
         strokeSize: 0.8,
-        ringColorOverrideClassName: n ?? e5.e0,
-        overlayClassName: t === e3.Z ? e5.ys : void 0,
+        ringColorOverrideClassName: n ?? e8.e0,
+        overlayClassName: t === e3.Z ? e8.ys : void 0,
         children:
             null != c
                 ? (0, o.jsx)("img", { src: l, srcSet: c, alt: "", role: "presentation", width: u, height: m })
@@ -449,15 +449,15 @@ function tc(e) {
     let { className: t } = e,
         { referralSentUsers: s, nReferralsSent: i, hasEligibleFriends: n, allSent: a, bodyText: r } = e6();
     return (0, o.jsxs)("div", {
-        className: m()(e5.kL, t),
+        className: m()(e8.kL, t),
         children: [
-            (0, o.jsx)("div", { className: e5.G3, children: (0, o.jsx)(tl, { nReferralsSent: i }) }),
+            (0, o.jsx)("div", { className: e8.G3, children: (0, o.jsx)(tl, { nReferralsSent: i }) }),
             (0, o.jsxs)("div", {
-                className: e5.IH,
+                className: e8.IH,
                 children: [
-                    (0, o.jsx)(tn, { referralSentUsers: s, className: e5.GV }),
+                    (0, o.jsx)(tn, { referralSentUsers: s, className: e8.GV }),
                     (0, o.jsxs)("div", {
-                        className: e5.n4,
+                        className: e8.n4,
                         children: [
                             (0, o.jsx)(ec.D, {
                                 variant: "heading-lg/semibold",
@@ -472,7 +472,7 @@ function tc(e) {
                         disabled: !1 === n || !0 === a,
                         text: ef.intl.string(ef.t.Lm2nFc),
                         onClick: () =>
-                            tt({ startingScreen: e8.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
+                            tt({ startingScreen: e5.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
                     }),
                 ],
             }),
@@ -753,7 +753,7 @@ function tD(e) {
                 disabled: !1 === n || !0 === a,
                 text: ef.intl.string(ef.t.Lm2nFc),
                 onClick: () =>
-                    tt({ startingScreen: e8.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
+                    tt({ startingScreen: e5.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
             }),
         ],
     });
@@ -1267,12 +1267,9 @@ function t6(e, t, i) {
             s.e("489361"),
             s.e("227853"),
             s.e("470126"),
-            s.e("162775"),
             s.e("128804"),
-            s.e("60882"),
             s.e("71151"),
             s.e("286615"),
-            s.e("70866"),
             s.e("311541"),
             s.e("472847"),
             s.e("870088"),
@@ -1294,20 +1291,15 @@ function t6(e, t, i) {
             s.e("907167"),
             s.e("861060"),
             s.e("952372"),
-            s.e("959880"),
             s.e("910486"),
             s.e("56366"),
             s.e("797595"),
             s.e("641248"),
             s.e("544571"),
             s.e("40291"),
-            s.e("523276"),
-            s.e("948720"),
             s.e("729963"),
-            s.e("830938"),
             s.e("392075"),
             s.e("102328"),
-            s.e("174016"),
             s.e("790417"),
             s.e("50097"),
             s.e("76027"),
@@ -1319,7 +1311,7 @@ function t6(e, t, i) {
         return (s) => (0, o.jsx)(n, { ...s, analyticsLocations: e, initialStep: i, premiumSubscription: t });
     });
 }
-function t8(e) {
+function t5(e) {
     let { fpEndsAt: t, className: s, buttonVisibilityRef: i } = e,
         n = (0, G.Zb)(t);
     return (0, o.jsx)("div", {
@@ -1375,7 +1367,7 @@ function t8(e) {
         }),
     });
 }
-function t5(e) {
+function t8(e) {
     let { fpEndsAt: t, className: s, buttonVisibilityRef: i } = e,
         n = (0, G.Zb)(t),
         { visibilityPercentageRef: a, visibilityPercentage: r } = eF(!(0, g.bG)([e_.Ay], () => e_.Ay.useReducedMotion));
@@ -1552,8 +1544,8 @@ function t4(e) {
         { visibilityPercentageRef: D, visibilityPercentage: O } = eF(!(0, g.bG)([e_.Ay], () => e_.Ay.useReducedMotion));
     if (s)
         return p
-            ? (0, o.jsx)(t5, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: x })
-            : (0, o.jsx)(t8, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: x });
+            ? (0, o.jsx)(t8, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: x })
+            : (0, o.jsx)(t5, { fpEndsAt: P.currentEntitlementEndsAt, className: t, buttonVisibilityRef: x });
     if (E) {
         let e = y
             ? (0, o.jsxs)("div", {
@@ -2217,12 +2209,9 @@ let s$ = function (e) {
                                 s.e("489361"),
                                 s.e("227853"),
                                 s.e("470126"),
-                                s.e("162775"),
                                 s.e("128804"),
-                                s.e("60882"),
                                 s.e("71151"),
                                 s.e("286615"),
-                                s.e("70866"),
                                 s.e("311541"),
                                 s.e("472847"),
                                 s.e("870088"),
@@ -2244,20 +2233,15 @@ let s$ = function (e) {
                                 s.e("907167"),
                                 s.e("861060"),
                                 s.e("952372"),
-                                s.e("959880"),
                                 s.e("910486"),
                                 s.e("56366"),
                                 s.e("797595"),
                                 s.e("641248"),
                                 s.e("544571"),
                                 s.e("40291"),
-                                s.e("523276"),
-                                s.e("948720"),
                                 s.e("729963"),
-                                s.e("830938"),
                                 s.e("392075"),
                                 s.e("102328"),
-                                s.e("174016"),
                                 s.e("790417"),
                                 s.e("50097"),
                                 s.e("76027"),
@@ -2315,7 +2299,7 @@ function s7(e) {
     });
 }
 var s6 = s(345394);
-function s8(e) {
+function s5(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: r = 192 } = e;
     return (0, o.jsx)("img", {
         style: { width: a, height: r },
@@ -2326,7 +2310,7 @@ function s8(e) {
         role: n ?? "img",
     });
 }
-function s5(e) {
+function s8(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: r = 192 } = e;
     return (0, o.jsx)("img", {
         style: { width: a, height: r },
@@ -2902,7 +2886,7 @@ function i6(e) {
                             id: sh.MORE_EMOJIS_CARD_ID,
                             title: ef.intl.string(ef.t.D8vIDT),
                             description: ef.intl.string(ef.t.DRMecB),
-                            primaryAsset: (0, o.jsx)(s8, { alt: "", ariaHidden: !0 }),
+                            primaryAsset: (0, o.jsx)(s5, { alt: "", ariaHidden: !0 }),
                             categories: ["bestof", "upgrades"],
                         },
                         {
@@ -2914,7 +2898,7 @@ function i6(e) {
                                     maxFileSize: (0, ek.EJ)(t7.PremiumTypes.TIER_2, { useSpace: !1 }),
                                 }),
                             }),
-                            primaryAsset: (0, o.jsx)(s5, { alt: "", ariaHidden: !0 }),
+                            primaryAsset: (0, o.jsx)(s8, { alt: "", ariaHidden: !0 }),
                             categories: ["bestof", "upgrades"],
                         },
                         {
@@ -3054,12 +3038,12 @@ function i6(e) {
         ],
     });
 }
-var i8 = s(72979);
-let i5 = function (e) {
+var i5 = s(72979);
+let i8 = function (e) {
     let { className: t } = e,
         s = (0, io.DP)();
     return (0, o.jsx)("img", {
-        className: m()(i8.D, t),
+        className: m()(i5.D, t),
         src: (0, ic.M)(s) ? "/assets/3ebfa123a3805f56.svg" : "/assets/2ee0f277372e56e4.svg",
         alt: "",
     });
@@ -3075,7 +3059,7 @@ let i4 = function (e) {
     return t || s
         ? (0, o.jsxs)("div", {
               className: m()(i9.kL, i9.Gd, i9.Eg),
-              children: [(0, o.jsx)(i5, {}), (0, o.jsx)(so, {}), n],
+              children: [(0, o.jsx)(i8, {}), (0, o.jsx)(so, {}), n],
           })
         : (0, o.jsx)(eA.h, { color: "nitro-pink", className: m()(i9.kL, i9.Gd), offsetBottom: i, children: n });
 };
@@ -4132,8 +4116,8 @@ function n3() {
 }
 var n7 = s(750338),
     n6 = s(19290),
-    n8 = s(505051);
-function n5(e) {
+    n5 = s(505051);
+function n8(e) {
     let {
         className: t,
         boxLayout: s,
@@ -4144,17 +4128,17 @@ function n5(e) {
         highlightBento: l,
     } = e;
     return (0, o.jsxs)("div", {
-        className: m()(n8.boxBackdrop, t),
+        className: m()(n5.boxBackdrop, t),
         children: [
             (0, o.jsx)(ec.D, {
-                className: n8.bentoSectionHeader,
+                className: n5.bentoSectionHeader,
                 variant: "nitro-md",
                 color: "text-strong",
                 children: i,
             }),
-            null != l && (0, o.jsx)("div", { className: n8.highlightBento, children: l }),
+            null != l && (0, o.jsx)("div", { className: n5.highlightBento, children: l }),
             (0, o.jsx)("div", {
-                className: n8.bentoBoxesGrid,
+                className: n5.bentoBoxesGrid,
                 children: s.map((e, t) => {
                     let s;
                     switch (e.length) {
@@ -4184,7 +4168,7 @@ function n5(e) {
 let n9 = d.memo(function (e) {
         let t = (0, sd.b)("premium_marketing_bento"),
             { whatsNewBoxes: s } = (0, n6.Ay)(t);
-        return (0, o.jsx)(n5, {
+        return (0, o.jsx)(n8, {
             boxLayout: s,
             title: ef.intl.string(ef.t.LRmNAl),
             startLeftAligned: !0,
@@ -4194,7 +4178,7 @@ let n9 = d.memo(function (e) {
     }),
     n4 = d.memo(function (e) {
         let { bestOfBoxes: t } = (0, n6.Ay)();
-        return (0, o.jsx)(n5, { boxLayout: t, title: ef.intl.string(ef.t.EnzW2H), startLeftAligned: !0, ...e });
+        return (0, o.jsx)(n8, { boxLayout: t, title: ef.intl.string(ef.t.EnzW2H), startLeftAligned: !0, ...e });
     }),
     ae = (0, B.mj)({
         kind: "user",
@@ -5316,7 +5300,7 @@ let a7 = function (e) {
     });
 };
 var a6 = s(386564);
-function a8(e) {
+function a5(e) {
     let {
             inOfferExperience: t,
             subscriptionTier: s,
@@ -5342,7 +5326,7 @@ function a8(e) {
         d = t && a ? null : (0, o.jsx)(a2.A, { className: m()(a6.x6, n), color: a ? void 0 : aD.XD.WHITE });
     return (0, o.jsxs)("div", { className: m()(a6.UD, i), children: [c, " ", d] });
 }
-function a5() {
+function a8() {
     return (0, o.jsxs)(o.Fragment, {
         children: [
             (0, o.jsx)(aK.p, { className: a6.zd }),
@@ -5399,7 +5383,7 @@ let a4 = d.forwardRef(function (e, t) {
                                   className: a6.UD,
                                   children: (0, o.jsx)(a2.A, { className: m()(a6.x6, i), color: aD.XD.WHITE }),
                               })
-                            : (0, o.jsx)(a8, {
+                            : (0, o.jsx)(a5, {
                                   subscriptionTier: n,
                                   inOfferExperience: c,
                                   buttonClassName: i,
@@ -5408,7 +5392,7 @@ let a4 = d.forwardRef(function (e, t) {
                         u && (0, o.jsx)(a9, { variant: "text-md/normal", withBottomMargin: !1 }),
                     ],
                 }),
-                !c && (0, o.jsx)(a5, {}),
+                !c && (0, o.jsx)(a8, {}),
             ],
         }),
     });

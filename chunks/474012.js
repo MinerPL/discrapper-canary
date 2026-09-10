@@ -1,6 +1,6 @@
 (n.d(t, {
-    K: () => c,
-    T: () =>
+    Kh: () => c,
+    T7: () =>
         function e(t) {
             if (t.productLine !== d.EZt.COLLECTIBLES) return;
             if (t.type === d.Puh.BUNDLE) {
@@ -66,6 +66,7 @@
                         return;
                 }
         },
+    tP: () => u,
 }),
     n(321073));
 var i = n(575593),
@@ -97,4 +98,10 @@ function c(e) {
               }
               return e;
           }, []);
+}
+function u(e) {
+    if (null != e && 0 !== e.items.length)
+        return e.type === i.R.BUNDLE
+            ? { type: "bundle", items: e.items, previewAssets: e.previewAssets }
+            : { type: "single", item: e.items[0] };
 }

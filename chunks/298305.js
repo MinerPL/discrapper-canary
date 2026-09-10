@@ -36,7 +36,7 @@ function f(e) {
         u = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),
         d = (0, s.FT)(i);
     return n.length > 0
-        ? (0, r.jsx)("img", { alt: "", src: t, style: { height: d * a } })
+        ? (0, r.jsx)("img", { className: g.Sl, alt: "", src: t, style: { height: d * a } })
         : (0, r.jsxs)("div", {
               className: g.kL,
               children: [

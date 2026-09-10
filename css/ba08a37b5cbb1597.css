@@ -147,4 +147,51 @@
     white-space: pre
 }
 
-/*# sourceMappingURL=24d87b79f11336a0.css.map*/
+.avatarPreviewContainer__349b1 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.pfxPreviewContainer__349b1 {
+    align-self: center;
+    border-radius: var(--radius-md);
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    width: 113px
+}
+
+.pfxPreviewContainerSolo__349b1 {
+    height: 246px;
+    width: 127px
+}
+
+.profileFramePreviewContainer__349b1 {
+    align-self: center;
+    height: 220px;
+    position: relative;
+    width: 118px
+}
+
+.profileFramePreviewContainerSolo__349b1 {
+    height: 246px;
+    width: 132px
+}
+
+.nameplatePreviewContainer__349b1 {
+    align-self: center;
+    display: flex;
+    width: 260px
+}
+
+.nameplatePreview__349b1 {
+    width: 100%
+}
+
+.nameplatePreview__349b1>div:first-child img,
+.nameplatePreview__349b1>div:first-child video {
+    inset-inline-end: -1px
+}
+
+/*# sourceMappingURL=ba08a37b5cbb1597.css.map*/

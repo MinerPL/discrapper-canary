@@ -1,9 +1,1 @@
-a.exports = {
-    kL: "container__72cd3",
-    KE: "panelContainer__72cd3",
-    L8: "rewardImage__72cd3",
-    V_: "textSection__72cd3",
-    R3: "avatarWrapper__72cd3",
-    my: "avatar__72cd3",
-    R_: "avatarLargeTilted__72cd3",
-};
+p.exports = { KE: "panelContainer__72cd3", L8: "rewardImage__72cd3" };

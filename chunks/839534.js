@@ -278,7 +278,7 @@ class w {
                 return t === n;
             }),
             prices: (0, v.A)(s),
-            items: (0, M.K)(I.items),
+            items: (0, M.Kh)(I.items),
             bundledProducts: l?.map(b.A.fromServer),
             variants: o?.map(D.x.fromServer),
             googleSkuIds: I.google_sku_ids,

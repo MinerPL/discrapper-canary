@@ -22,4 +22,48 @@
     align-self: flex-start
 }
 
-/*# sourceMappingURL=82937.59bd87b8cbaf0e7a.css.map*/
+.collectiblesPreview__3e00d {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: var(--size-48);
+    overflow: hidden;
+    width: var(--size-48)
+}
+
+.collectiblesPreview__3e00d,
+.scaledSkuPreview__3e00d {
+    align-items: center;
+    justify-content: center
+}
+
+.scaledSkuPreview__3e00d {
+    height: 100%;
+    transform: scale(.42);
+    transform-origin: center;
+    width: 100%
+}
+
+.scaledSkuPreview__3e00d.avatarDecoration__3e00d {
+    height: auto;
+    width: auto
+}
+
+.scaledSkuPreview__3e00d.bundle__3e00d,
+.scaledSkuPreview__3e00d.nameplate__3e00d,
+.scaledSkuPreview__3e00d.profileEffect__3e00d,
+.scaledSkuPreview__3e00d.profileFrame__3e00d {
+    transform: scale(1)
+}
+
+.nameplatePreview__3e00d {
+    margin: 0
+}
+
+.nameplatePreviewRescaler__3e00d {
+    inset: -65%;
+    transform: scale(.42)
+}
+
+/*# sourceMappingURL=82937.570752f3b53cb194.css.map*/

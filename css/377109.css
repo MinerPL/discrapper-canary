@@ -1,3 +1,23 @@
+.button__0f074 {
+    color: var(--icon-subtle);
+    cursor: pointer;
+    height: 16px;
+    opacity: 0;
+    transition: color 50ms ease-in;
+    width: 16px
+}
+
+.button__0f074:focus-visible,
+.button__0f074:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.button__0f074.visible__0f074,
+.button__0f074:focus-visible {
+    opacity: 1
+}
+
 .itemIcon_a647f7 {
     align-items: center;
     display: flex;
@@ -32,4 +52,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=232960.f371ed76bf9dd161.css.map*/
+/*# sourceMappingURL=377109.7f631dfe07230a6c.css.map*/

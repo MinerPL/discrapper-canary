@@ -68,7 +68,7 @@ class c extends l.A {
                 return t === p.sku_id;
             }),
             prices: (0, r.A)(l),
-            items: (0, s.K)(p.items),
+            items: (0, s.Kh)(p.items),
             bundledProducts: _?.map(a.A.fromServer),
             previewAssets:
                 null != E
@@ -96,7 +96,7 @@ class c extends l.A {
         if (null == l) return;
         let _ = null != n && e.skus.length > 1,
             E = e.skus.length > 1 && !_ ? i.R.VARIANTS_GROUP : l.type,
-            { items: A, item: h } = (0, s.T)(r) ?? {},
+            { items: A, item: h } = (0, s.T7)(r) ?? {},
             [I] = r.selectedOptions;
         return new c({
             storeListingId: r.id,
@@ -124,7 +124,7 @@ class c extends l.A {
                           .map((t) => {
                               let n = t.tenantMetadata?.collectibles;
                               if (null == n) return null;
-                              let { items: i, item: a } = (0, s.T)(t) ?? {},
+                              let { items: i, item: a } = (0, s.T7)(t) ?? {},
                                   [l] = t.selectedOptions;
                               return new u({
                                   baseVariantName: e.name,

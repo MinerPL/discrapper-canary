@@ -1,4 +1,4 @@
-(n.d(t, { EQ: () => d, H6: () => _, Ov: () => A, WK: () => o, nI: () => E, wT: () => c }),
+(n.d(t, { EQ: () => d, Ov: () => E, WK: () => o, nI: () => _, wT: () => c }),
     n(393431),
     n(532706),
     n(42231),
@@ -13,7 +13,10 @@ var i = n(115943),
 n(818348);
 var l = n(375708);
 function o(e) {
-    return null == e ? null : { skuId: e.skuId, src: e.asset, imgAlt: e.label, palette: _(e.palette) };
+    var t;
+    return null == e
+        ? null
+        : { skuId: e.skuId, src: e.asset, imgAlt: e.label, palette: ((t = e.palette), s.fc[t] ?? s.Wj) };
 }
 function d(e) {
     if (0 === e.items.length) return null;
@@ -27,9 +30,6 @@ function u(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
 function _(e) {
-    return s.fc[e] ?? s.Wj;
-}
-function E(e) {
     let t = r().decode(e),
         n = r().toRGBA8(t)[0],
         i = document.createElement("canvas");
@@ -38,7 +38,7 @@ function E(e) {
         s = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
     return (a.putImageData(s, 0, 0), i.toDataURL("image/png"));
 }
-function A() {
+function E() {
     return {
         mallow: {
             name: l.intl.string(l.t.SbKDHi),

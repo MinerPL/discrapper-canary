@@ -45,7 +45,7 @@ class h extends d.A {
         return new h({ ...t, sku: null != t.sku ? o.A.createFromServer(t.sku) : void 0 });
     }
     static fromSKU(t) {
-        let e = (0, l.T)(t);
+        let e = (0, l.T7)(t);
         if (null == e) return null;
         let r = new h({
             sku_id: t.id,

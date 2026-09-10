@@ -1,4 +1,4 @@
-l.d(e, { a: () => w, A: () => G });
+l.d(e, { A: () => w });
 var s = l(477900),
     i = l(582128),
     t = l(503698),
@@ -146,5 +146,4 @@ let D = { xlarge: u._3.SIZE_48, large: u._3.SIZE_40, small: u._3.SIZE_24, xsmall
                 ],
             }),
         });
-    }),
-    G = w;
+    });

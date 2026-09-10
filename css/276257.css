@@ -13,6 +13,13 @@
     gap: var(--space-16)
 }
 
+.giftingRewardBanner__6f0cc {
+    align-self: stretch;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-8)
+}
+
 .blurb_cd2ff7 {
     color: var(--text-default);
     margin-top: 10px
@@ -28,8 +35,7 @@
 
 .giftSentMessage_cd2ff7 {
     color: var(--text-strong);
-    margin-bottom: 8px;
-    margin-top: 16px
+    margin-top: 20px
 }
 
 .giftRecipientTag_cd2ff7 {
@@ -39,15 +45,9 @@
 
 .giftRecipientContainer_cd2ff7 {
     align-items: flex-start;
-    background-color: var(--background-mod-muted);
-    border-color: var(--border-subtle);
-    border-radius: var(--radius-sm);
-    border-style: solid;
-    border-width: 1px;
     display: flex;
-    gap: 12px;
-    margin-top: 16px;
-    padding: var(--space-12)
+    gap: var(--space-8);
+    margin-top: var(--space-4)
 }
 
 .giftRecipientTextContainer_cd2ff7 {
@@ -142,4 +142,12 @@
     padding-bottom: var(--space-8)
 }
 
-/*# sourceMappingURL=276257.06b3f8aa659df324.css.map*/
+.giftingRewardBanner_cd2ff7 {
+    align-self: stretch;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    margin-top: var(--space-24);
+    padding: var(--space-8)
+}
+
+/*# sourceMappingURL=276257.ebce7b6e7eeb3d6b.css.map*/
