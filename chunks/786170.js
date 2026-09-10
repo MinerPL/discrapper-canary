@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611195, Version Hash: 0bb4f8576a15e1442e80bc8202797584a9499dcb`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611198, Version Hash: 03177780e971a51ccb6ec960916b305c01f25d31`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21307,7 +21307,7 @@ let NC = "isHideDevBanner",
                     className: ta()(NN.Wz, NN.mr),
                     children: [
                         (0, O.jsx)(NS, { className: NN.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611195" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611198" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -24800,12 +24800,12 @@ let Ru = (0, tB.Fe)({
                 n.e("704374"),
                 n.e("701485"),
                 n.e("769476"),
+                n.e("87729"),
                 n.e("571586"),
                 n.e("136738"),
                 n.e("736410"),
                 n.e("148620"),
                 n.e("871434"),
-                n.e("815852"),
                 n.e("256769"),
                 n.e("229505"),
                 n.e("530615"),
@@ -26463,7 +26463,7 @@ let Ru = (0, tB.Fe)({
                 n.e("51967"),
                 n.e("444113"),
                 n.e("381673"),
-                n.e("947633"),
+                n.e("355761"),
                 n.e("880186"),
                 n.e("401425"),
                 n.e("120561"),
@@ -27815,7 +27815,7 @@ let Ru = (0, tB.Fe)({
             Promise.all([
                 n.e("924399"),
                 n.e("456506"),
-                n.e("234052"),
+                n.e("784573"),
                 n.e("45646"),
                 n.e("289209"),
                 n.e("847499"),
@@ -28881,11 +28881,11 @@ let Ru = (0, tB.Fe)({
                 n.e("701485"),
                 n.e("380469"),
                 n.e("769476"),
+                n.e("87729"),
                 n.e("571586"),
                 n.e("736410"),
                 n.e("148620"),
                 n.e("871434"),
-                n.e("815852"),
                 n.e("256769"),
                 n.e("407845"),
                 n.e("979513"),
@@ -33329,7 +33329,7 @@ let vl = (0, nZ.Fe)({
                 n.e("524434"),
                 n.e("849162"),
                 n.e("770583"),
-                n.e("842442"),
+                n.e("452651"),
                 n.e("132839"),
                 n.e("873943"),
                 n.e("152263"),
@@ -33450,12 +33450,11 @@ let vl = (0, nZ.Fe)({
                 n.e("602023"),
                 n.e("847499"),
                 n.e("45646"),
-                n.e("947633"),
+                n.e("355761"),
                 n.e("459397"),
                 n.e("847810"),
                 n.e("546813"),
-                n.e("234052"),
-                n.e("686047"),
+                n.e("784573"),
                 n.e("150183"),
                 n.e("203112"),
                 n.e("876364"),
@@ -33771,6 +33770,7 @@ let vl = (0, nZ.Fe)({
                 n.e("322094"),
                 n.e("45916"),
                 n.e("726223"),
+                n.e("87729"),
                 n.e("606913"),
                 n.e("291553"),
                 n.e("61924"),
@@ -33781,7 +33781,10 @@ let vl = (0, nZ.Fe)({
                 n.e("736793"),
                 n.e("677602"),
                 n.e("59228"),
+                n.e("530707"),
+                n.e("932011"),
                 n.e("997934"),
+                n.e("112733"),
                 n.e("792461"),
                 n.e("471138"),
             ]).then(n.bind(n, 140539)),
@@ -34634,7 +34637,7 @@ let vl = (0, nZ.Fe)({
                 n.e("524434"),
                 n.e("849162"),
                 n.e("770583"),
-                n.e("842442"),
+                n.e("452651"),
                 n.e("132839"),
                 n.e("873943"),
                 n.e("152263"),
@@ -34755,12 +34758,11 @@ let vl = (0, nZ.Fe)({
                 n.e("602023"),
                 n.e("847499"),
                 n.e("45646"),
-                n.e("947633"),
+                n.e("355761"),
                 n.e("459397"),
                 n.e("847810"),
                 n.e("546813"),
-                n.e("234052"),
-                n.e("686047"),
+                n.e("784573"),
                 n.e("150183"),
                 n.e("203112"),
                 n.e("876364"),
@@ -35076,6 +35078,7 @@ let vl = (0, nZ.Fe)({
                 n.e("322094"),
                 n.e("45916"),
                 n.e("726223"),
+                n.e("87729"),
                 n.e("606913"),
                 n.e("291553"),
                 n.e("61924"),
@@ -35086,7 +35089,10 @@ let vl = (0, nZ.Fe)({
                 n.e("736793"),
                 n.e("677602"),
                 n.e("59228"),
+                n.e("530707"),
+                n.e("932011"),
                 n.e("997934"),
+                n.e("112733"),
                 n.e("792461"),
                 n.e("471138"),
             ]).then(n.bind(n, 767675)),
@@ -35101,15 +35107,18 @@ let vl = (0, nZ.Fe)({
     v_ = (0, nZ.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("665115"),
+                n.e("452651"),
+                n.e("747067"),
+                n.e("920099"),
                 n.e("993103"),
                 n.e("474610"),
                 n.e("230761"),
                 n.e("556385"),
+                n.e("932011"),
                 n.e("832986"),
                 n.e("113492"),
-            ]).then(n.bind(n, 481477)),
-        webpackId: 481477,
+            ]).then(n.bind(n, 241941)),
+        webpackId: 241941,
         name: "PopoutWindowActivity",
     });
 class vE extends t8.A {
@@ -35434,14 +35443,16 @@ function v0(e) {
         if (null == t) return null;
         switch (t.surface.type) {
             case rT.U4.APP_CHANNEL:
+            case rT.U4.VOICE_CHANNEL:
                 return { channelId: t.surface.channelId, guildId: t.surface.guildId };
             case rT.U4.MAIN:
                 return t.applicationId === r3.A.getBuilderPreviewApplicationId() ||
                     t.data.prefersPictureInPictureOnNavigateAway
                     ? { channelId: void 0, guildId: void 0 }
                     : null;
+            default:
+                return (t.surface, null);
         }
-        return null;
     })(e.source);
     if (null == n)
         throw new vZ.A({ errorCode: G.Lw6.UNAUTHORIZED_FOR_APPLICATION }, "Command not available for this application");
@@ -36805,6 +36816,7 @@ function bw(e) {
             case rT.U4.MAIN:
                 return { frame: t, channel: void 0, guild: void 0 };
             case rT.U4.APP_CHANNEL:
+            case rT.U4.VOICE_CHANNEL:
                 return { frame: t, channel: rf.A.getChannel(e.channelId), guild: ez.A.getGuild(e.guildId) };
             default:
                 throw new vZ.A({ errorCode: G.Lw6.INVALID_CHANNEL }, "Invalid channel");
@@ -46459,7 +46471,7 @@ let k_ = (0, tB.Fe)({
             n.e("64769"),
             n.e("992956"),
             n.e("490743"),
-            n.e("606633"),
+            n.e("633196"),
             n.e("7452"),
             n.e("529787"),
             n.e("309499"),
@@ -47751,8 +47763,8 @@ let k_ = (0, tB.Fe)({
             n.e("632482"),
             n.e("162883"),
             n.e("895099"),
-            n.e("540976"),
             n.e("950847"),
+            n.e("540976"),
             n.e("414501"),
             n.e("85216"),
             n.e("392310"),
@@ -47928,8 +47940,8 @@ var kA = n(670735),
     kf = n(162802),
     kp = n(256693),
     kT = n(51250),
-    km = n(37042),
-    kg = n(649248);
+    km = n(649248),
+    kg = n(580015);
 function kS(e) {
     let [t] = eu.useState(() => {
             let t = document.createElement("div");
@@ -47939,8 +47951,8 @@ function kS(e) {
         r = eu.useCallback(
             (n) => {
                 null != n
-                    ? (kg.A.registerPoolEntry(e, { container: t, overlay: n }), i(!0))
-                    : (kg.A.removePoolEntry(e), i(!1));
+                    ? (km.A.registerPoolEntry(e, { container: t, overlay: n }), i(!0))
+                    : (km.A.removePoolEntry(e), i(!1));
             },
             [t, e],
         );
@@ -47953,19 +47965,30 @@ function kC() {
         i = (0, el.bG)([nN.A, rA.A], () =>
             nN.A.getWindowOpen(G.MLl.ACTIVITY_POPOUT) ? (rA.A.getMainFrame()?.id ?? null) : null,
         ),
-        r = (0, el.bG)([lz.Ay], () => {
+        r = (0, el.yK)([nN.A, rA.A], () =>
+            rA.A.getAllFrames()
+                .filter(
+                    (e) => (0, rT.x1)(e) && null != e.data.hostWindowKey && nN.A.getWindowOpen(e.data.hostWindowKey),
+                )
+                .map((e) => e.id),
+        ),
+        a = (0, el.bG)([lz.Ay], () => {
             let e = lz.Ay.getCurrentEmbeddedActivity();
             return e?.renderInFramePool === !0 ? e : null;
         }),
-        a = eu.useCallback((e) => {
-            (null != e && kg.A.setPool(e), t(null != e));
+        s = eu.useCallback((e) => {
+            (null != e && km.A.setPool(e), t(null != e));
         }, []);
     return (0, O.jsxs)("div", {
-        ref: a,
+        ref: s,
         className: kN.d,
         children: [
-            e ? n.map((e) => ((0, rT.x1)(e) && e.id !== i ? (0, O.jsx)(kO, { frame: e }, e.id) : null)) : null,
-            e && null != r ? (0, O.jsx)(kR, { embeddedActivity: r }, (0, kp.Ri)(r)) : null,
+            e
+                ? n.map((e) =>
+                      !(0, rT.x1)(e) || e.id === i || r.includes(e.id) ? null : (0, O.jsx)(kO, { frame: e }, e.id),
+                  )
+                : null,
+            e && null != a ? (0, O.jsx)(kR, { embeddedActivity: a }, (0, kp.Ri)(a)) : null,
         ],
     });
 }
@@ -47977,15 +48000,9 @@ function kO(e) {
         l = (0, el.bG)([rA.A], () => rA.A.getMainFrame()?.id === t.id, [t.id]) && t.data.layoutMode === rT.y0.PIP && !s,
         o = null;
     if (null != a) {
-        let { url: e, proxyTicket: n, proxyTicketRefreshing: i } = t.data,
-            r = {
-                instance_id: "example-cl-instance",
-                platform: bi.vu.DESKTOP,
-                discord_proxy_ticket: n,
-                ...(0, km.A)(t.data),
-                ...(0, Mw._n)(),
-            };
-        o = i
+        let { url: e, proxyTicketRefreshing: n } = t.data,
+            i = (0, kg.A)(t);
+        o = n
             ? (0, O.jsx)("div", { className: kN.p, children: (0, O.jsx)(nz.y, {}) })
             : (0, O.jsx)(kf.o, {
                   allowPopups: (0, kI.b)(a),
@@ -47995,7 +48012,7 @@ function kO(e) {
                   onIframeMount: (e) => r8.A.attachFrameIframe(t.id, e),
                   onIframeUnmount: (e) => r8.A.detachFrameIframe(t.id, e),
                   onGuestReload: () => r8.A.setFramePrefersPictureInPictureOnNavigateAway(t.id, !1),
-                  queryParams: r,
+                  queryParams: i,
                   className: kN.p,
                   shouldRefocus: !l,
               });
@@ -49005,7 +49022,7 @@ let Fv = (0, nZ.Fe)({
                 n.e("265708"),
                 n.e("992956"),
                 n.e("880150"),
-                n.e("606633"),
+                n.e("633196"),
                 n.e("7452"),
                 n.e("529787"),
                 n.e("309499"),
@@ -49318,7 +49335,7 @@ let Fv = (0, nZ.Fe)({
                 n.e("51967"),
                 n.e("444113"),
                 n.e("381673"),
-                n.e("947633"),
+                n.e("355761"),
                 n.e("880186"),
                 n.e("401425"),
                 n.e("120561"),
@@ -49338,7 +49355,7 @@ let Fv = (0, nZ.Fe)({
                 n.e("132839"),
                 n.e("924399"),
                 n.e("456506"),
-                n.e("234052"),
+                n.e("784573"),
                 n.e("45646"),
                 n.e("289209"),
                 n.e("847499"),

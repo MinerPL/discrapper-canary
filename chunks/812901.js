@@ -1,11 +1,12 @@
-i.d(t, { A: () => s, G: () => c });
+i.d(t, { A: () => l, G: () => c });
 var n,
-    s =
+    l =
         (((n = {}).Backstage = "backstage"),
         (n.WithinAppContent = "within-app-content"),
+        (n.WithinCallContent = "within-call-content"),
         (n.AboveAppContent = "above-app-content"),
         n);
-let l = { backstage: 0, "within-app-content": 1, "above-app-content": 1002 };
+let s = { backstage: 0, "within-app-content": 1, "within-call-content": 3, "above-app-content": 1002 };
 class r {
     _pool = null;
     setPool(e) {
@@ -39,7 +40,7 @@ class a extends r {
     position(e, t, i) {
         let n = t.getBoundingClientRect();
         ((e.style.display = "block"),
-            (e.style.zIndex = String(l[i])),
+            (e.style.zIndex = String(s[i])),
             (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
             (e.style.width = `${n.width}px`),
             (e.style.height = `${n.height}px`));

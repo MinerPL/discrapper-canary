@@ -58,6 +58,11 @@ let et = [
     {
         date: "2026-09-09",
         summary:
+            "Pick which app a voice channel runs from the call itself, and switch between it and the participants.",
+    },
+    {
+        date: "2026-09-09",
+        summary:
             "On phones, an app channel now has a chat button: read and post in the channel as usual, then tap back to the app.",
     },
     {

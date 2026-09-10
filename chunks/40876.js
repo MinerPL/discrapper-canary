@@ -865,7 +865,15 @@ let r = {
         hasStoreChangeListeners: !0,
     },
     FramesWebManager: {
-        actions: ["RPC_APP_DISCONNECTED", "FRAME_LAUNCH", "FRAME_LAUNCH_FAIL", "FRAME_STOP"],
+        actions: [
+            "RPC_APP_DISCONNECTED",
+            "FRAME_LAUNCH",
+            "FRAME_LAUNCH_FAIL",
+            "FRAME_STOP",
+            "VOICE_CHANNEL_SELECT",
+            "CHANNEL_DELETE",
+            "CHANNEL_UPDATES",
+        ],
         inlineRequire: () => n(809871).A,
     },
     NotificationsInboxAutoLoadManager: {

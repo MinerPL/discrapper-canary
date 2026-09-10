@@ -32,6 +32,12 @@ class E extends i.Ay.Store {
     getFrameBySurface(e, t) {
         return d.get((0, s.VA)(e, t));
     }
+    getFramesForSurface(e) {
+        return Array.from(d.values()).filter((t) => (0, s.VA)(t.applicationId, e) === t.id);
+    }
+    getFramesForChannel(e) {
+        return Array.from(d.values()).filter((t) => (0, s.h)(t.surface) === e);
+    }
 }
 let A = new E(r.h, {
     FRAME_LAUNCH_START: function (e) {
@@ -41,19 +47,19 @@ let A = new E(r.h, {
             r === s.sV.MAIN && (c = n));
     },
     FRAME_LAUNCH: function (e) {
-        let { frameId: t, proxyTicket: n, customId: i, referrerId: r } = e,
-            o = d.get(t);
-        if (null == o) return;
-        let u = (0, a.Ay)(o.applicationId);
-        if (null == u) {
+        let { frameId: t, proxyTicket: n, customId: i, referrerId: r, hostWindowKey: o } = e,
+            u = d.get(t);
+        if (null == u) return;
+        let _ = (0, a.Ay)(u.applicationId);
+        if (null == _) {
             (d.delete(t), c === t && (c = null));
             return;
         }
         d.set(t, {
-            ...o,
+            ...u,
             state: "launched",
             data: {
-                url: u,
+                url: _,
                 connectedSince: Date.now(),
                 layoutMode: s.y0.FOCUSED,
                 activityPanelMode: l.Gd.PANEL,
@@ -63,6 +69,7 @@ let A = new E(r.h, {
                 pipOrientationLock: null,
                 prefersPictureInPictureOnNavigateAway: !1,
                 iframeId: null,
+                hostWindowKey: o ?? null,
                 customId: i,
                 referrerId: r,
             },
@@ -128,6 +135,18 @@ let A = new E(r.h, {
             t,
             (e) => e.iframeId === n,
             (e) => ({ ...e, iframeId: null, prefersPictureInPictureOnNavigateAway: !1 }),
+        );
+    },
+    FRAME_HOST_WINDOW_MOUNT: function (e) {
+        let { frameId: t, windowKey: n } = e;
+        return u(t, (e) => ({ ...e, hostWindowKey: n }));
+    },
+    FRAME_HOST_WINDOW_UNMOUNT: function (e) {
+        let { frameId: t, windowKey: n } = e;
+        return _(
+            t,
+            (e) => e.hostWindowKey === n,
+            (e) => ({ ...e, hostWindowKey: null }),
         );
     },
     CHANNEL_SELECT: function (e) {

@@ -1,49 +1,69 @@
 n.d(t, {
-    U4: () => l,
-    VA: () => u,
-    Yf: () => c,
-    h: () => _,
-    ny: () => A,
-    sV: () => d,
-    sd: () => o,
-    x1: () => E,
-    y0: () => s,
+    HD: () => E,
+    U4: () => o,
+    VA: () => _,
+    Yf: () => u,
+    h: () => A,
+    ny: () => I,
+    sV: () => c,
+    sd: () => d,
+    x1: () => h,
+    y0: () => l,
 });
 var i,
     r,
     a,
-    s = (((i = {})[(i.FOCUSED = 0)] = "FOCUSED"), (i[(i.PIP = 1)] = "PIP"), i),
-    l = (((r = {})[(r.MAIN = 0)] = "MAIN"), (r[(r.APP_CHANNEL = 1)] = "APP_CHANNEL"), r);
-let o = { type: 0 };
-var d = (((a = {})[(a.MAIN = 0)] = "MAIN"), (a[(a.INLINE = 1)] = "INLINE"), a);
-function c(e) {
+    s = n(652215),
+    l = (((i = {})[(i.FOCUSED = 0)] = "FOCUSED"), (i[(i.PIP = 1)] = "PIP"), i),
+    o =
+        (((r = {})[(r.MAIN = 0)] = "MAIN"),
+        (r[(r.APP_CHANNEL = 1)] = "APP_CHANNEL"),
+        (r[(r.VOICE_CHANNEL = 2)] = "VOICE_CHANNEL"),
+        r);
+let d = { type: 0 };
+var c = (((a = {})[(a.MAIN = 0)] = "MAIN"), (a[(a.INLINE = 1)] = "INLINE"), a);
+function u(e) {
     switch (e.type) {
         case 0:
             return 0;
         case 1:
+        case 2:
             return 1;
     }
 }
-function u(e, t) {
+function _(e, t) {
     switch (t.type) {
         case 0:
             return `main:${e}`;
         case 1:
             return `app-channel:${e}:${t.channelId}`;
+        case 2:
+            return `voice-channel:${e}:${t.channelId}`;
     }
 }
-function _(e) {
+function E(e) {
+    switch (e.type) {
+        case s.rbe.GUILD_APP:
+            return { type: 1, channelId: e.id, guildId: e.guild_id };
+        case s.rbe.GUILD_VOICE:
+            return { type: 2, channelId: e.id, guildId: e.guild_id };
+        default:
+            return null;
+    }
+}
+function A(e) {
     if (null != e)
         switch (e.type) {
             case 0:
                 return;
             case 1:
+            case 2:
                 return e.channelId;
         }
 }
-function E(e) {
+function h(e) {
     return e?.state === "launched";
 }
-function A(e) {
-    return E(e) ? e : null;
+function I(e) {
+    return h(e) ? e : null;
 }

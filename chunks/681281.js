@@ -1,4 +1,4 @@
-n.d(t, { A: () => J });
+n.d(t, { A: () => et });
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -38,107 +38,110 @@ var i = n(477900),
     k = n(322338),
     G = n(665691),
     B = n(241756),
-    F = n(198052),
-    z = n(532622),
-    H = n(416528),
-    W = n(136523),
-    Y = n(806931),
-    $ = n(375708),
-    K = n(270103),
-    X = n(776811),
-    q = n(165648);
-function Z(e) {
+    F = n(488947),
+    z = n(637443),
+    H = n(198052),
+    W = n(532622),
+    Y = n(416528),
+    $ = n(136523),
+    K = n(806931),
+    X = n(375708),
+    q = n(270103),
+    Z = n(776811),
+    Q = n(165648);
+function J(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, B.A)(n, t, l);
     return null == t || null == l
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(x.A, { className: X.my, size: o._3.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(x.A, { className: Z.my, size: o._3.SIZE_24, user: t, animate: !1 }),
                   (0, i.jsx)(c.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
 }
-function Q(e) {
+function ee(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
         s = (0, L.Qs)(a.id),
         r = null != s ? (0, O.G3)(s) : null,
         o = null != s;
-    if (l?.type === Y.lp.ACTIVITY)
+    if (l?.type === K.lp.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(M.Ay.Divider, { className: X.yF }),
-                    (0, i.jsx)(E.A, { game: n, className: X.RI }),
+                    (0, i.jsx)(M.Ay.Divider, { className: Z.yF }),
+                    (0, i.jsx)(E.A, { game: n, className: Z.RI }),
                     (0, i.jsx)(c.E, {
-                        className: X.W$,
+                        className: Z.W$,
                         variant: "text-md/normal",
                         color: "none",
                         children: (0, g.A)(n.name),
                     }),
                 ],
             }));
-    else if (l?.type === Y.lp.STREAM) {
+    else if (l?.type === K.lp.STREAM) {
         let e = l.user,
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(M.Ay.Divider, { className: X.yF }),
-                (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
+                (0, i.jsx)(M.Ay.Divider, { className: Z.yF }),
+                (0, i.jsx)(J, { user: e, channel: a, stream: n, color: "text-strong" }),
                 (0, i.jsx)(U.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(P.A, { guildEvent: s, recurrenceId: r }));
-    return (0, i.jsx)("div", { className: X.kL, children: t });
+    return (0, i.jsx)("div", { className: Z.kL, children: t });
 }
-function J(e) {
+function et(e) {
     let { channel: t, guild: a, appContext: o, inCall: x, isChatOpen: g, exitFullScreen: E, guildRoomVisible: L } = e,
-        O = (0, r.bG)([F.A], () => F.A.getSelectedParticipant(t.id), [t.id]),
+        O = (0, r.bG)([H.A], () => H.A.getSelectedParticipant(t.id), [t.id]),
         { enabled: P } = (0, R.mf)({ guildId: a?.id, location: "ChannelCallHeader" }),
         U = (0, r.bG)([S.A], () => S.A.getVideoOverlayVisibility()),
-        B = P && !L,
-        Z = (0, j.Ay)(t),
-        J = B ? $.intl.string(K.default.f7g0DK) : L ? `${Z} \xb7 ${$.intl.string(K.default.wRLmM0)}` : Z,
-        ee = B ? d.Z : (0, N.gU)(t),
-        [et] = (0, y.A)(O?.type === Y.lp.ACTIVITY ? [O.applicationId] : []),
-        en = $.intl.string($.t.BVZqJl);
-    t.isDM() ? (en = $.intl.string($.t.jN2DfZ)) : t.isGroupDM() && (en = $.intl.string($.t["e5y+gm"]));
-    let ei = (0, b.G)((0, I.l)(t)),
-        el = t.isGuildVoice() && x && null != ei && ei.length > 0,
-        ea = (0, z.Ay)(t),
-        es = el
+        B = (0, z.kM)(t) && (0, F.F)(o),
+        J = P && !L && !B,
+        et = (0, j.Ay)(t),
+        en = J ? X.intl.string(q.default.f7g0DK) : L ? `${et} \xb7 ${X.intl.string(q.default.wRLmM0)}` : et,
+        ei = J ? d.Z : (0, N.gU)(t),
+        [el] = (0, y.A)(O?.type === K.lp.ACTIVITY ? [O.applicationId] : []),
+        ea = X.intl.string(X.t.BVZqJl);
+    t.isDM() ? (ea = X.intl.string(X.t.jN2DfZ)) : t.isGroupDM() && (ea = X.intl.string(X.t["e5y+gm"]));
+    let es = (0, b.G)((0, I.l)(t)),
+        er = t.isGuildVoice() && x && null != es && es.length > 0,
+        eo = (0, W.Ay)(t),
+        ec = er
             ? (0, i.jsx)("div", {
-                  className: X.Ke,
+                  className: Z.Ke,
                   children: (0, i.jsx)(u.m, {
-                      text: $.intl.string($.t.Mgpxiw),
+                      text: X.intl.string(X.t.Mgpxiw),
                       delay: 500,
                       position: "bottom",
-                      shouldShow: ea,
+                      shouldShow: eo,
                       children: (0, i.jsxs)(h.D, {
-                          className: s()(X.WH, { [X.BI]: ea }),
-                          onClick: ea
+                          className: s()(Z.WH, { [Z.BI]: eo }),
+                          onClick: eo
                               ? function () {
                                     (0, m.openModalLazy)(
                                         async () => {
                                             let { default: e } = await Promise.resolve().then(n.bind(n, 136523));
                                             return (n) => (0, i.jsx)(e, { channel: t, ...n });
                                         },
-                                        { modalKey: W.m },
+                                        { modalKey: $.m },
                                     );
                                 }
                               : void 0,
                           children: [
                               (0, i.jsx)(c.E, {
                                   variant: "text-xs/normal",
-                                  className: s()(X.Gh, q.PT, { [X.BI]: ea }),
-                                  children: V.A.parseVoiceChannelStatus(ei, !0, { channelId: t.id }),
+                                  className: s()(Z.Gh, Q.PT, { [Z.BI]: eo }),
+                                  children: V.A.parseVoiceChannelStatus(es, !0, { channelId: t.id }),
                               }),
-                              ea &&
+                              eo &&
                                   (0, i.jsx)(p.PencilIcon, {
                                       size: "custom",
                                       color: "currentColor",
-                                      className: s()(X.rD, X.BI),
+                                      className: s()(Z.rD, Z.BI),
                                       width: 14,
                                       height: 14,
                                   }),
@@ -147,9 +150,9 @@ function J(e) {
                   }),
               })
             : null,
-        er = (0, G.bG)({ channelId: t.id }),
-        eo = l.useCallback(() => {
-            B &&
+        ed = (0, G.bG)({ channelId: t.id }),
+        eu = l.useCallback(() => {
+            J &&
                 (U
                     ? (0, _.UV)(!1, t.id)
                     : ((0, _.zD)(t.id),
@@ -159,58 +162,58 @@ function J(e) {
                           location: C.A.CHANNEL_CALL,
                           guildRoomOpen: !0,
                       })));
-        }, [B, t.id, t.guild_id, U]);
+        }, [J, t.id, t.guild_id, U]);
     return (0, i.jsxs)("div", {
-        className: X.SC,
+        className: Z.SC,
         children: [
             (0, i.jsxs)(M.Ay, {
                 onDoubleClick: w.I,
                 transparent: !0,
-                className: X.jr,
-                innerClassName: X.gi,
-                toolbarClassName: X.KE,
-                childrenBottom: es,
-                toolbar: (0, i.jsx)(H.A, {
+                className: Z.jr,
+                innerClassName: Z.gi,
+                toolbarClassName: Z.KE,
+                childrenBottom: ec,
+                toolbar: (0, i.jsx)(Y.A, {
                     channel: t,
                     appContext: o,
                     inCall: x,
                     isChatOpen: g,
                     exitFullScreen: E,
-                    focusedApplication: et,
+                    focusedApplication: el,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: L,
                     guildRoomVideoOverlayVisible: U,
                 }),
                 children: [
                     (0, i.jsx)(M.Ay.Title, {
-                        wrapperClassName: X.DD,
-                        onClick: B ? eo : void 0,
+                        wrapperClassName: Z.DD,
+                        onClick: J ? eu : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                null != ee
+                                null != ei
                                     ? (0, i.jsx)(M.Ay.ChannelIcon, {
-                                          icon: ee,
-                                          "aria-label": en,
-                                          color: B ? "white" : void 0,
+                                          icon: ei,
+                                          "aria-label": ea,
+                                          color: J ? "white" : void 0,
                                       })
                                     : null,
-                                J,
-                                P && (0, i.jsx)(v.A, { className: X.vW }),
-                                er &&
+                                en,
+                                P && (0, i.jsx)(v.A, { className: Z.vW }),
+                                ed &&
                                     (0, i.jsx)(u.m, {
-                                        text: $.intl.string($.t.QyZ4Td),
+                                        text: X.intl.string(X.t.QyZ4Td),
                                         children: (0, i.jsx)(A.m, {
                                             size: "xs",
-                                            "aria-label": $.intl.string($.t.VHXh8a),
+                                            "aria-label": X.intl.string(X.t.VHXh8a),
                                             color: f.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                            className: X.vW,
+                                            className: Z.vW,
                                         }),
                                     }),
                             ],
                         }),
                     }),
                     (0, i.jsx)(D.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(Q, { focusedApplication: et, focusedParticipant: O, channel: t }),
+                    (0, i.jsx)(ee, { focusedApplication: el, focusedParticipant: O, channel: t }),
                 ],
             }),
             (0, i.jsx)(k.A, { channelId: t.id }),

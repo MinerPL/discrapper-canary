@@ -1,6 +1,6 @@
 n.d(e, {
     CW: () => y,
-    Eo: () => I,
+    Eo: () => T,
     GG: () => L,
     HV: () => G,
     I$: () => B,
@@ -9,12 +9,12 @@ n.d(e, {
     Ru: () => C,
     U1: () => h,
     Zq: () => m,
-    dm: () => P,
+    dm: () => k,
     gA: () => S,
     hF: () => R,
     oB: () => O,
     tZ: () => N,
-    xx: () => k,
+    xx: () => P,
 });
 var l = n(636537),
     r = n(228366),
@@ -24,8 +24,8 @@ var l = n(636537),
     a = n(91242),
     s = n(673724),
     _ = n(927899),
-    c = n(972786),
-    d = n(652215),
+    d = n(972786),
+    c = n(652215),
     E = n(165610);
 function p(t, e, n) {
     (0, _.Z0)(t, {
@@ -36,39 +36,39 @@ function p(t, e, n) {
         isPreview: n,
     });
 }
-function T(t) {
+function I(t) {
     if (null != t)
         for (let e of a.A.getAllFrames())
             (0, E.x1)(e) && e.applicationId === t && !e.data.proxyTicketRefreshing && u.A.refreshProxyTicket(e.id);
 }
-function I(t) {
-    let e = c.Ay.getProject(t);
-    null != e && (T(e.application_id), T(e.preview_application_id ?? null));
+function T(t) {
+    let e = d.Ay.getProject(t);
+    null != e && (I(e.application_id), I(e.preview_application_id ?? null));
 }
 let f = null,
     A = null;
 async function R(t) {
     let e = t ?? null;
-    if (c.Ay.getProjectsFetchState()?.type === "loading") {
+    if (d.Ay.getProjectsFetchState()?.type === "loading") {
         null != e && e !== f && (A = e);
         return;
     }
-    ((f = e), r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START" }));
+    ((f = e), r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: e }));
     try {
         let { body: n } = await l.Bo.get({
-            url: d.Rsh.VIBEGRATIONS_PROJECTS,
+            url: c.Rsh.VIBEGRATIONS_PROJECTS,
             query: null != t ? { guild_id: t } : void 0,
             rejectWithError: !0,
         });
         r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: n, guildId: e });
     } catch {
-        r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL" });
+        r.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: e });
     }
     let n = A;
     ((A = null), null != n && n !== e && R(n));
 }
 async function h(t, e) {
-    let n = await l.Bo.get({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
+    let n = await l.Bo.get({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1, signal: e });
     if (e?.aborted !== !0 && n.ok) {
         var i;
         (r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body.project }),
@@ -89,14 +89,14 @@ async function h(t, e) {
 }
 async function S(t) {
     let { body: e } = await l.Bo.post({
-        url: d.Rsh.VIBEGRATIONS_PROJECTS,
+        url: c.Rsh.VIBEGRATIONS_PROJECTS,
         body: { flags: s.A2.PUBLIC, ...t },
         rejectWithError: !1,
     });
     return (r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: e }), e.id);
 }
 async function g(t, e) {
-    let n = await l.Bo.patch({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
+    let n = await l.Bo.patch({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), body: e, rejectWithError: !1 });
     return (n.ok && r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
 function O(t, e) {
@@ -119,18 +119,18 @@ async function C(t, e) {
 function w(t, e) {
     return g(t, e);
 }
-async function k(t) {
-    let e = await l.Bo.del({ url: d.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
+async function P(t) {
+    let e = await l.Bo.del({ url: c.Rsh.VIBEGRATIONS_PROJECT(t), rejectWithError: !1 });
     return (r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: t }), e);
 }
-function P(t, e) {
+function k(t, e) {
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: t, projectId: e });
 }
 async function N(t, e) {
     let { isPreview: n } = e,
         { bot_permissions_changed: l, integration_installed: r, project: u } = (await h(t)).body,
         a = n ? u.preview_application_id : u.application_id;
-    (null != a && (await (0, o.TA)(a), await (0, i.un)(a, { force: !0 }).catch(() => {}), (n && (!r || l)) || T(a)),
+    (null != a && (await (0, o.TA)(a), await (0, i.un)(a, { force: !0 }).catch(() => {}), (n && (!r || l)) || I(a)),
         (0, _.qs)(t, { isPreview: n }));
 }
 function B(t, e) {
