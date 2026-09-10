@@ -1,4 +1,4 @@
-l.d(t, { A: () => Q, E: () => P }), l(321073);
+l.d(t, { A: () => Q, E: () => M }), l(321073);
 var r = l(477900),
     n = l(582128),
     a = l(503698),
@@ -23,15 +23,15 @@ var r = l(477900),
     S = l(753806),
     y = l(65600),
     k = l(145331),
-    F = l(618989),
-    N = l(494606),
+    N = l(618989),
+    F = l(494606),
     C = l(768570),
     W = l(652215),
     m = l(375708),
     v = l(935675),
     O = l(372492);
-let P = 512,
-    M = (0, E.Ld)();
+let M = 512,
+    P = (0, E.Ld)();
 function D(e, t) {
     return { path: [0, 0], offset: Math.min(Math.max(t, 0), s.bP.string(e).length) };
 }
@@ -57,18 +57,18 @@ function w(e) {
     for (let e of (0, A._o)(t.text)) {
         let t = b.Ay[e.type];
         null != t &&
-            r.push({ anchor: { path: l, offset: e.start }, focus: { path: l, offset: e.end }, [N.Q]: t.componentType });
+            r.push({ anchor: { path: l, offset: e.start }, focus: { path: l, offset: e.end }, [F.Q]: t.componentType });
     }
     return r;
 }
 function $(e) {
-    return (0, r.jsx)(N.A, { ...e });
+    return (0, r.jsx)(F.A, { ...e });
 }
-function H(e) {
+function B(e) {
     let { children: t, attributes: l } = e;
     return (0, r.jsx)("span", { ...l, style: { ...l.style, opacity: 1 }, children: t });
 }
-let B = n.memo(function (e) {
+let H = n.memo(function (e) {
     let {
         editor: t,
         initialValue: l,
@@ -90,7 +90,7 @@ let B = n.memo(function (e) {
             placeholder: n,
             decorate: w,
             renderLeaf: $,
-            renderPlaceholder: H,
+            renderPlaceholder: B,
             onKeyDown: o,
             onFocus: c,
             onBlur: f,
@@ -113,12 +113,12 @@ function Q(e) {
             searchContext: l,
             isSearching: a,
             hasResults: E,
-            keyboardModeEnabled: N,
+            keyboardModeEnabled: F,
             onSearch: U,
             placeholder: w,
         } = e,
         $ = (0, A.bS)(l),
-        H = x($),
+        B = x($),
         [Q] = n.useState(() => {
             let e = (function (e) {
                 let { insertText: t, deleteBackward: l, deleteForward: r } = e;
@@ -133,7 +133,7 @@ function Q(e) {
                     (e.insertText = (l) => {
                         let { selection: r } = e,
                             n = null != r ? s.KE.string(e, r).length : 0,
-                            a = P - (s.bP.string(e).length - n);
+                            a = M - (s.bP.string(e).length - n);
                         if (a <= 0) return;
                         let u = l.replace(/\n/g, "");
                         t(u.length > a ? u.slice(0, a) : u);
@@ -145,11 +145,11 @@ function Q(e) {
                     e
                 );
             })((0, i.o$)((0, s.ie)()));
-            return (e.children = [{ type: "line", children: [{ text: H }] }]), (e.selection = null), e;
+            return (e.children = [{ type: "line", children: [{ text: B }] }]), (e.selection = null), e;
         }),
         [q] = n.useState(() => [...Q.children]),
         [Y, K] = n.useState(!1),
-        [z, Z] = n.useState(() => H.length > 0),
+        [z, Z] = n.useState(() => B.length > 0),
         X = n.useRef(null),
         G = n.useRef(null),
         V = n.useRef(null),
@@ -177,7 +177,7 @@ function Q(e) {
             (e) => {
                 if (!J.current) return;
                 let t = e?.relatedTarget,
-                    r = document.getElementById(M);
+                    r = document.getElementById(P);
                 (null != t && null != r && r.contains(t)) ||
                     (_.A.setFocused(l, !1), K(!1), 0 === et().length && 0 === x($).length && en());
             },
@@ -188,7 +188,7 @@ function Q(e) {
                 s.KE.withoutNormalizing(Q, () => {
                     s.gB.select(Q, { anchor: s.KE.start(Q, []), focus: s.KE.end(Q, []) }),
                         s.gB.delete(Q),
-                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, P));
+                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, M));
                 }),
                     s.gB.select(Q, s.KE.end(Q, []));
             },
@@ -272,12 +272,12 @@ function Q(e) {
                         e.preventDefault(), e.stopPropagation(), V.current?.focusNextOption();
                         return;
                     case "Tab":
-                        if (N) return;
+                        if (F) return;
                         e.stopPropagation(), (0, d.uS)();
                         return;
                 }
             },
-            [er, et, eo, N, eu],
+            [er, et, eo, F, eu],
         ),
         ef = n.useCallback(
             (e) => {
@@ -293,7 +293,7 @@ function Q(e) {
                             ? eu(t)
                             : null != l
                               ? (s.gB.select(Q, { anchor: D(Q, l), focus: D(Q, r ?? l) }),
-                                s.gB.insertText(Q, t.slice(0, P)))
+                                s.gB.insertText(Q, t.slice(0, M)))
                               : s.gB.insertText(Q, t),
                         !0 !== n && K(!0),
                         !0 === n && es({ queryString: et(), searchQuerySource: u });
@@ -367,7 +367,7 @@ function Q(e) {
             (e) => {
                 let t = i.rL.toDOMNode(Q, Q);
                 null != e
-                    ? t.setAttribute("aria-activedescendant", `${M}-${e}`)
+                    ? t.setAttribute("aria-activedescendant", `${P}-${e}`)
                     : t.removeAttribute("aria-activedescendant");
             },
             [Q],
@@ -376,7 +376,7 @@ function Q(e) {
             (e) => {
                 let t = e.relatedTarget;
                 if (null != t) {
-                    let e = document.getElementById(M);
+                    let e = document.getElementById(P);
                     if ((null != e && e.contains(t)) || (null != G.current && G.current.contains(t))) return;
                 }
                 ea();
@@ -387,12 +387,27 @@ function Q(e) {
             () =>
                 (0, r.jsx)("div", {
                     onBlur: eR,
-                    children: (0, r.jsx)(F.A, { ref: V, searchContext: l, navId: M, onSelectedIndexChanged: eL }),
+                    children: (0, r.jsx)(N.A, { ref: V, searchContext: l, navId: P, onSelectedIndexChanged: eL }),
                 }),
             [eR, eL, l],
         ),
         eT = n.useCallback(() => {
             i.rL.toDOMNode(Q, Q).removeAttribute("aria-activedescendant"),
+                (function (e) {
+                    if (null != e.selection) return;
+                    let t = i.rL.findDocumentOrShadowRoot(e),
+                        l = "getSelection" in t ? t.getSelection() : null,
+                        r = null;
+                    if (null != l && l.rangeCount > 0) {
+                        let { anchorNode: t, focusNode: n } = l;
+                        null != t &&
+                            null != n &&
+                            i.rL.hasDOMNode(e, t) &&
+                            i.rL.hasDOMNode(e, n) &&
+                            (r = i.rL.toSlateRange(e, l, { exactMatch: !1, suppressThrow: !0 }));
+                    }
+                    s.gB.select(e, r ?? s.KE.end(e, []));
+                })(Q),
                 K(!0),
                 _.A.setFocused(l, !0),
                 c.O.announce(m.intl.string(m.t["5h0QOP"]));
@@ -420,11 +435,11 @@ function Q(e) {
                                 className: u()(v.ON, O.O),
                                 ref: G,
                                 children: [
-                                    (0, r.jsx)(B, {
+                                    (0, r.jsx)(H, {
                                         editor: Q,
                                         initialValue: q,
                                         placeholder: eA,
-                                        navId: M,
+                                        navId: P,
                                         isShown: a,
                                         onChange: ei,
                                         onKeyDown: ec,
