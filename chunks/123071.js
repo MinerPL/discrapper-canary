@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { default: () => ec });
+(n.r(t), n.d(t, { default: () => ec }));
 var i = n(477900),
     s = n(582128),
     l = n(503698),
     r = n.n(l),
-    a = n(3900),
+    a = n(207119),
     o = n(17928),
     d = n(866323),
     c = n(297264),
@@ -69,7 +69,7 @@ function M(e) {
         if (a || m || 0 === u.length || d.current) return;
         let e = (0, D.H_)(u),
             n = (0, D.OG)(u);
-        R.default.track($.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
+        (R.default.track($.HAw.GUILD_ONBOARDING_STEP_VIEWED, {
             ...(0, y.H$)(t),
             step: w.l8,
             required: !1,
@@ -78,7 +78,7 @@ function M(e) {
             application_connections_connected: n.connected,
             application_connections_not_connected: n.notConnected,
         }),
-            (d.current = !0);
+            (d.current = !0));
     }, [t, m, u, a]);
     let g = s.useCallback(() => {
         if (!a) {
@@ -494,7 +494,7 @@ function el(e) {
         x = (0, B.bG)([p.A], () => p.A.getRulesPrompt(t.id)),
         g = (0, B.bG)([C.A], () => C.A.getOnboardingConnections(t.id)),
         h = s.useCallback(() => {
-            m(!0), a();
+            (m(!0), a());
         }, [a]);
     s.useEffect(() => {
         t.features.has($.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
@@ -505,7 +505,7 @@ function el(e) {
         A = l + 1 >= n.length && !(0, D.L1)(t, x),
         N = n[0].required;
     function f(e) {
-        !c &&
+        (!c &&
             (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, y.H$)(t.id),
                 step: l,
@@ -521,10 +521,10 @@ function el(e) {
                     step: l,
                     required: n[l + 1].required,
                 })),
-            l + 1 < n.length ? o(l + 1) : (0, D.L1)(t, x) && o("rules");
+            l + 1 < n.length ? o(l + 1) : (0, D.L1)(t, x) && o("rules"));
     }
     function j(e) {
-        !c &&
+        (!c &&
             (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, y.H$)(t.id),
                 step: l,
@@ -540,7 +540,7 @@ function el(e) {
                     step: l - 1,
                     required: n[l - 1].required,
                 })),
-            0 === l && g.length > 0 ? o("connections") : o(Math.max(0, l - 1));
+            0 === l && g.length > 0 ? o("connections") : o(Math.max(0, l - 1)));
     }
     if (
         (s.useEffect(() => {
@@ -686,7 +686,7 @@ function eo(e) {
                                           size: "md",
                                           text: q.intl.string(q.t["13/7kX"]),
                                           onClick: function () {
-                                              !a &&
+                                              (!a &&
                                                   (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                                                       ...(0, y.H$)(t.id),
                                                       step: -1,
@@ -703,7 +703,7 @@ function eo(e) {
                                                           step: o,
                                                           required: n[o].required,
                                                       })),
-                                                  r(o);
+                                                  r(o));
                                           },
                                           icon: W.Z,
                                           iconPosition: "start",
@@ -771,7 +771,7 @@ function ec(e) {
         [X, z] = s.useState(!1),
         J = s.useCallback(
             (e) => {
-                W(B), b.A.setUserOnboardingStep(t, e);
+                (W(B), b.A.setUserOnboardingStep(t, e));
             },
             [t, B],
         ),

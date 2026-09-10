@@ -1,10 +1,10 @@
-i.r(t), i.d(t, { default: () => eH });
+(i.r(t), i.d(t, { default: () => eH }));
 var n,
     l = i(477900),
     s = i(582128),
     a = i(503698),
     o = i.n(a),
-    r = i(3900),
+    r = i(207119),
     d = i(17928),
     c = i(289873),
     u = i(789645),
@@ -88,7 +88,7 @@ class D extends s.PureComponent {
     constructor(e) {
         super(e);
         const [t, i] = b(e.initialPosition);
-        (this.position = (function (e) {
+        ((this.position = (function (e) {
             let { top: t, left: i, bottom: n, right: l } = e;
             return (
                 null == i && null == l && (i = 0),
@@ -103,10 +103,10 @@ class D extends s.PureComponent {
                 verticalOrientation: t,
                 horizontalOrientation: i,
                 atTopEdge: 0 === this.position.top,
-            });
+            }));
     }
     componentDidMount() {
-        this.checkBounds(), this.setDOMPositions(this.position);
+        (this.checkBounds(), this.setDOMPositions(this.position));
     }
     componentDidUpdate(e, t) {
         let {
@@ -123,16 +123,17 @@ class D extends s.PureComponent {
             this.checkBounds();
     }
     componentWillUnmount() {
-        window.removeEventListener("mousemove", this.handleMouseMove),
-            window.removeEventListener("mouseup", this.handleMouseUp);
+        (window.removeEventListener("mousemove", this.handleMouseMove),
+            window.removeEventListener("mouseup", this.handleMouseUp));
     }
     setDOMPositions(e) {
         let { top: t, left: i, bottom: n, right: l } = e,
             {
                 draggableRef: { current: s },
             } = this;
-        (this.position = { top: t, left: i, bottom: n, right: l }),
-            null != s && ((s.style.top = w(t)), (s.style.bottom = w(n)), (s.style.left = w(i)), (s.style.right = w(l)));
+        ((this.position = { top: t, left: i, bottom: n, right: l }),
+            null != s &&
+                ((s.style.top = w(t)), (s.style.bottom = w(n)), (s.style.left = w(i)), (s.style.right = w(l))));
     }
     handleMouseDown = (e) => {
         let { top: t, left: i, bottom: n, right: l } = this.position,
@@ -148,11 +149,11 @@ class D extends s.PureComponent {
                 let { top: t, left: i } = e;
                 return { x: i, y: t };
             })(N({ top: t, left: i, bottom: n, right: l }, o, r, c.clientWidth, c.clientHeight));
-            (this._dragStart = { x: e.clientX, y: e.clientY }),
+            ((this._dragStart = { x: e.clientX, y: e.clientY }),
                 (this._offsetX = e.clientX - s),
                 (this._offsetY = e.clientY - a),
                 window.addEventListener("mousemove", this.handleMouseMove),
-                window.addEventListener("mouseup", this.handleMouseUp);
+                window.addEventListener("mouseup", this.handleMouseUp));
         }
     };
     handleMouseMove = (e) => {
@@ -187,30 +188,30 @@ class D extends s.PureComponent {
             v = I(N({ top: i - this._offsetY, left: t - this._offsetX }, l, s, x, A));
         if (u) {
             let e = b((v = y(v)));
-            (g = e[0]), (f = e[1]);
+            ((g = e[0]), (f = e[1]));
         } else v = { top: v.top, left: v.left };
-        2 === o && f !== this.state.horizontalOrientation && ((this._offsetX = x - this._offsetX), (p = !0)),
+        (2 === o && f !== this.state.horizontalOrientation && ((this._offsetX = x - this._offsetX), (p = !0)),
             2 === a && g !== this.state.verticalOrientation && ((this._offsetY = A - this._offsetY), (p = !0)),
             this.setDOMPositions(v),
             m || r?.(v, n),
             d?.(v, n),
             p && c?.([g, f]),
-            this.setState({ dragging: h, verticalOrientation: g, horizontalOrientation: f, atTopEdge: 0 === v.top });
+            this.setState({ dragging: h, verticalOrientation: g, horizontalOrientation: f, atTopEdge: 0 === v.top }));
     };
     handleMouseUp = () => {
-        window.removeEventListener("mousemove", this.handleMouseMove),
+        (window.removeEventListener("mousemove", this.handleMouseMove),
             window.removeEventListener("mouseup", this.handleMouseUp),
             this.state.dragging &&
                 this.setState({ dragging: !1 }, () => {
                     let { onDragEnd: e } = this.props,
                         { current: t } = this.draggableRef;
                     null != t && null != e && e(this.position, t);
-                });
+                }));
     };
     _checkBoundsRAF = null;
     checkBounds = () => {
-        null != this._checkBoundsRAF && cancelAnimationFrame(this._checkBoundsRAF),
-            (this._checkBoundsRAF = requestAnimationFrame(this._performCheckBounds));
+        (null != this._checkBoundsRAF && cancelAnimationFrame(this._checkBoundsRAF),
+            (this._checkBoundsRAF = requestAnimationFrame(this._performCheckBounds)));
     };
     _performCheckBounds = () => {
         let e,
@@ -226,10 +227,10 @@ class D extends s.PureComponent {
             h = N(t, l, s, u, c);
         if (((h = I(h)), o)) {
             let t = b((e = y(h)));
-            (r = t[0]), (d = t[1]);
+            ((r = t[0]), (d = t[1]));
         } else e = { top: h.top, left: h.left, right: null, bottom: null };
         if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom) return;
-        a?.(e, n), this.setDOMPositions(e);
+        (a?.(e, n), this.setDOMPositions(e));
         let m = 0 === e.top;
         (r !== i.verticalOrientation || d !== i.horizontalOrientation || m !== i.atTopEdge) &&
             this.setState({ verticalOrientation: r, horizontalOrientation: d, atTopEdge: m });
@@ -307,11 +308,11 @@ function eN(e) {
         o = (0, ex.H)({ deviceType: eC.oh.VIDEO_INPUT, analyticsLocations: n, asSubmenu: !0 }),
         r = (0, ev.A)(a),
         c = (0, s.useCallback)(() => {
-            (0, eE.X)(n[0], eE.O.JOIN_VIDEO_CALL),
+            ((0, eE.X)(n[0], eE.O.JOIN_VIDEO_CALL),
                 Z.default.track(C.HAw.RING_CALL_ACCEPTED, { location: n[0], guild_id: i.guild_id, ...(0, O.dI)(i) }),
                 j.default.selectVoiceChannel(i.id, !0),
                 (0, G.uh)(i.guild_id ?? C.ME, i.id),
-                t();
+                t());
         }, [t, n, i]);
     return (0, l.jsx)(eg.W, {
         navId: "join-call-context",
@@ -432,20 +433,20 @@ function eT(e) {
             null != e.top && null != e.left && E.move(e.left, e.top);
         }, []),
         X = s.useCallback(() => {
-            (0, eE.X)(u[0], eE.O.DISCONNECT),
+            ((0, eE.X)(u[0], eE.O.DISCONNECT),
                 Z.default.track(C.HAw.RING_CALL_DECLINED, { location: u[0], guild_id: a.guild_id, ...(0, O.dI)(a) }),
-                A.A.stopRinging(a.id);
+                A.A.stopRinging(a.id));
         }, [a, u]),
         z = s.useCallback(() => {
-            (0, eE.X)(u[0], eE.O.JOIN_CALL),
+            ((0, eE.X)(u[0], eE.O.JOIN_CALL),
                 Z.default.track(C.HAw.RING_CALL_ACCEPTED, { location: u[0], guild_id: a.guild_id, ...(0, O.dI)(a) }),
-                j.default.selectVoiceChannel(a.id);
+                j.default.selectVoiceChannel(a.id));
         }, [a, u]);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         function e(e) {
             e.key === eO.dh.ESCAPE && A.A.stopRinging(a.id);
         }
-        return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
+        return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
     }, [a]),
         s.useEffect(
             () => (
@@ -458,7 +459,7 @@ function eT(e) {
         ),
         s.useEffect(() => {
             null == V && (0, ea.getUser)(c);
-        }, [c, V]);
+        }, [c, V]));
     let B = (0, eo.gU)(a);
     return (0, l.jsx)(k.f5, {
         value: u,
@@ -666,13 +667,13 @@ function eB(e) {
                 label: e_.intl.string(e_.t.WAI6xu),
                 className: eS.hP,
                 onClick: () => {
-                    (0, eE.X)(a, eE.O.DISCONNECT),
+                    ((0, eE.X)(a, eE.O.DISCONNECT),
                         Z.default.track(C.HAw.RING_CALL_DECLINED, {
                             location: a,
                             guild_id: i.guild_id,
                             ...(0, O.dI)(i),
                         }),
-                        A.A.stopRinging(i.id);
+                        A.A.stopRinging(i.id));
                 },
             }),
             t &&
@@ -705,14 +706,14 @@ function eB(e) {
                             popoutOpen: s,
                             onCameraUnavailable: X.A,
                             onChange: () => {
-                                (0, eE.X)(a, eE.O.JOIN_VIDEO_CALL),
+                                ((0, eE.X)(a, eE.O.JOIN_VIDEO_CALL),
                                     Z.default.track(C.HAw.RING_CALL_ACCEPTED, {
                                         location: a,
                                         guild_id: i.guild_id,
                                         ...(0, O.dI)(i),
                                     }),
                                     j.default.selectVoiceChannel(i.id, !0),
-                                    (0, G.uh)(i.guild_id ?? C.ME, i.id);
+                                    (0, G.uh)(i.guild_id ?? C.ME, i.id));
                             },
                         });
                     },
@@ -748,7 +749,7 @@ function eY(e) {
         function e(e) {
             e.key === eO.dh.ESCAPE && A.A.stopRinging(a.id);
         }
-        return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
+        return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
     }, [a]);
     let V = O === C._Of.VIDEO && b && y > 0,
         { enabled: U } = H.A.useExperiment({ guildId: a?.guild_id, location: "IncomingCallModal" }),

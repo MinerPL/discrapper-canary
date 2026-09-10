@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { videoQuestCollection: () => et, playgroundConfig: () => ea });
+(a.r(t), a.d(t, { videoQuestCollection: () => et, playgroundConfig: () => ea }));
 var l = a(782134),
     o = a(477900),
     i = a(582128),
@@ -105,7 +105,7 @@ let m = {
     clipBStartSec: { label: "Clip B start (sec)", type: "number", defaultValue: 18 },
     clipBDurationSec: { label: "Clip B length (sec)", type: "number", defaultValue: 8 },
 };
-var x = a(3900),
+var x = a(207119),
     h = a(831544),
     g = a(717421),
     b = a(834730),
@@ -302,7 +302,7 @@ let V = {
                         })),
                         u = i.useCallback(
                             (e) => {
-                                (r.current = e), null != e ? (n(e), d({ expansion: 4 })) : d({ expansion: 0 }), a(e);
+                                ((r.current = e), null != e ? (n(e), d({ expansion: 4 })) : d({ expansion: 0 }), a(e));
                             },
                             [d],
                         ),
@@ -506,8 +506,8 @@ function q(e) {
         }),
         x = W(m),
         h = i.useRef(!1);
-    h.current || ((h.current = !0), C.Kr.getState().clearState()),
-        n && (x.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]);
+    (h.current || ((h.current = !0), C.Kr.getState().clearState()),
+        n && (x.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
     let g = l
         ? {
               ...x,
@@ -621,7 +621,7 @@ function X(e) {
         }),
         m = W(c),
         x = i.useRef(!1);
-    x.current || ((x.current = !0), C.Kr.getState().clearState()),
+    (x.current || ((x.current = !0), C.Kr.getState().clearState()),
         i.useEffect(() => {
             let e = document.querySelector('[data-testid="discord-web-video-player-video"]');
             if (null != e)
@@ -635,7 +635,7 @@ function X(e) {
                 null != e && (e.currentTime = 0);
             }
         }, []),
-        n && (m.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]);
+        n && (m.config.features = [M.Li.FULL_EPISODE_VIDEO_QUEST]));
     let h = l
         ? {
               ...m,

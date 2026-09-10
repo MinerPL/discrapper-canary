@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => y }), n(321073);
+(n.d(t, { Ay: () => y }), n(321073));
 var r = n(477900),
     l = n(582128),
     a = n(503698),
@@ -13,7 +13,7 @@ var r = n(477900),
     h = n(765548),
     p = n(650583),
     v = n(565164),
-    x = n(3900),
+    x = n(207119),
     g = n(494154);
 let E = l.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: l } = e;
@@ -214,7 +214,7 @@ function y(e) {
                     let t = j.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         l = null != r ? (r / i) * t.width : null;
-                    P(null != l && n > l), E(n);
+                    (P(null != l && n > l), E(n));
                 }
             }
             let k = l.useRef(!1),
@@ -237,7 +237,7 @@ function y(e) {
             return (
                 l.useEffect(
                     () => () => {
-                        (k.current = !1), I.current?.(), (I.current = null);
+                        ((k.current = !1), I.current?.(), (I.current = null));
                     },
                     [],
                 ),
@@ -264,11 +264,11 @@ function y(e) {
                                     n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
                                     l = null != r ? (r / i) * t.width : null,
                                     a = null != l ? Math.min(n, l) : n;
-                                P(null != l && n > l), E(n), A(a), B(e.clientX, t);
+                                (P(null != l && n > l), E(n), A(a), B(e.clientX, t));
                             } else B(e.clientX, t);
                         }
                         function o(e) {
-                            (k.current = !1),
+                            ((k.current = !1),
                                 (I.current = null),
                                 y(!1),
                                 A(null),
@@ -277,7 +277,7 @@ function y(e) {
                                 null != j.current &&
                                     (((0, d.vq)(e.target, Node) && j.current.contains(e.target)) || (S(!1), E(null))),
                                 window.removeEventListener("mousemove", l),
-                                window.removeEventListener("mouseup", o);
+                                window.removeEventListener("mouseup", o));
                         }
                         (null != r && n > r) ||
                             ((k.current = !0),
@@ -288,7 +288,7 @@ function y(e) {
                             window.addEventListener("mousemove", l),
                             window.addEventListener("mouseup", o),
                             (I.current = () => {
-                                window.removeEventListener("mousemove", l), window.removeEventListener("mouseup", o);
+                                (window.removeEventListener("mousemove", l), window.removeEventListener("mouseup", o));
                             }));
                     },
                     handleKeyDown: F,
@@ -323,14 +323,14 @@ function y(e) {
         ec = l.useRef(W);
     l.useLayoutEffect(() => {
         let e = ec.current;
-        (ec.current = W), e && !W && eo({ playbackPxSpring: null == ei || Number.isNaN(ei) ? 0 : ei, immediate: !0 });
+        ((ec.current = W), e && !W && eo({ playbackPxSpring: null == ei || Number.isNaN(ei) ? 0 : ei, immediate: !0 }));
     }, [W, ei, eo]);
     let ed = l.useRef(null),
         em = l.useRef(null),
         ef = l.useRef(null);
     l.useEffect(() => {
         if (!a || null == K || A <= 0 || eu <= 0) return;
-        (em.current = ed.current ?? K()), (ef.current = performance.now());
+        ((em.current = ed.current ?? K()), (ef.current = performance.now()));
         let e = 0;
         return (
             (e = requestAnimationFrame(function t() {
@@ -347,15 +347,15 @@ function y(e) {
                         l = Math.abs(t) > 0.5 ? e : l + 0.1 * t;
                     }
                 } else l = K() ?? null;
-                null != l &&
+                (null != l &&
                     Number.isFinite(l) &&
                     ((em.current = l),
                     (ed.current = l),
                     eo({ playbackPxSpring: Math.min(Math.max(0, (l / A) * eu), eu), immediate: !0 })),
-                    (e = requestAnimationFrame(t));
+                    (e = requestAnimationFrame(t)));
             })),
             () => {
-                cancelAnimationFrame(e), (em.current = null), (ef.current = null);
+                (cancelAnimationFrame(e), (em.current = null), (ef.current = null));
             }
         );
     }, [a, K, A, eu, eo]);
@@ -367,7 +367,7 @@ function y(e) {
                 let t = K();
                 null != t && Number.isFinite(t) && ((ed.current = t), (e = Math.min(Math.max(0, (t / A) * eu), eu)));
             }
-            null == e && (e = null == ei || Number.isNaN(ei) ? 0 : ei), eo({ playbackPxSpring: e, immediate: !0 });
+            (null == e && (e = null == ei || Number.isNaN(ei) ? 0 : ei), eo({ playbackPxSpring: e, immediate: !0 }));
         }
     }, [ei, eh, eo, K, A, eu]);
     let ep = A > 1,
@@ -398,7 +398,7 @@ function y(e) {
                         let l = Math.max(0, t[r].leftPx - t[r].gapPx),
                             a = Math.min(e, t[r].rightPx + t[r].gapPx),
                             i = n[n.length - 1];
-                        null != i && ((i.endPx = l), (i.rightIndicatorIndex = t[r].index)),
+                        (null != i && ((i.endPx = l), (i.rightIndicatorIndex = t[r].index)),
                             null != i && i.endPx <= i.startPx && n.pop(),
                             a < e &&
                                 n.push({
@@ -406,7 +406,7 @@ function y(e) {
                                     endPx: e,
                                     leftIndicatorIndex: t[r].index,
                                     rightIndicatorIndex: null,
-                                });
+                                }));
                     }
                     return n;
                 })(eu, ex),

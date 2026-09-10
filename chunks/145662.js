@@ -27,8 +27,8 @@ function g(e) {
             [],
         );
     n.useEffect(() => {
-        N.default.track(S.HAw.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, { surface_type: b, days_remaining: t }),
-            c.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_MODAL_SHOWN" });
+        (N.default.track(S.HAw.PARENTAL_CONSENT_WARNING_SURFACE_SHOWN, { surface_type: b, days_remaining: t }),
+            c.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_MODAL_SHOWN" }));
     }, []);
     let m = n.useCallback(
             () => (
@@ -49,7 +49,7 @@ function g(e) {
                     (e) => e.link_status === A.Ef.PENDING && e.link_type === A.QM.PARENT,
                 ))
             ) {
-                _.Ay.selectTab(A.u9.REQUESTS), (0, o.openUserSettings)(d.X.FAMILY_CENTER_PANEL);
+                (_.Ay.selectTab(A.u9.REQUESTS), (0, o.openUserSettings)(d.X.FAMILY_CENTER_PANEL));
                 return;
             }
             (0, r.openModalLazy)(async () => {
@@ -57,7 +57,7 @@ function g(e) {
                     a.e("262546"),
                     a.e("776915"),
                     a.e("595429"),
-                    a.e("532347"),
+                    a.e("869544"),
                     a.e("170653"),
                     a.e("143549"),
                     a.e("154630"),

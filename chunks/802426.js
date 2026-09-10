@@ -1,4 +1,4 @@
-n.d(t, { A: () => n6 }), n(938796);
+(n.d(t, { A: () => n6 }), n(938796));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -36,8 +36,8 @@ var l = n(477900),
     G = n(972995),
     U = n(355622),
     w = n(408018);
-n(321073), n(323874), n(14289), n(35956);
-var F = n(3900),
+(n(321073), n(323874), n(14289), n(35956));
+var F = n(207119),
     H = n(132500),
     B = n(661531),
     K = n(717421),
@@ -124,12 +124,12 @@ function eL(e) {
                     previewMarkdown: !0,
                     updateState: (e, t, n) => {
                         let { value: l, selection: i } = n;
-                        void 0 !== l && (e.children = l), null != i && (e.selection = i), e.onChange();
+                        (void 0 !== l && (e.children = l), null != i && (e.selection = i), e.onChange());
                     },
                 }),
                 !(function (e) {
                     let { insertText: t } = e;
-                    (e.insertBreak = () => {}),
+                    ((e.insertBreak = () => {}),
                         (e.insertSoftBreak = () => {}),
                         (e.insertText = (n) => {
                             let l = n.replace(/\r\n|\r|\n/g, " ");
@@ -139,12 +139,12 @@ function eL(e) {
                                     : 0) +
                                 l.length <=
                                 eV && t(l);
-                        });
+                        }));
                 })(e),
                 e
             );
         });
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         g.onChange();
     }, [g]),
         i.useEffect(() => {
@@ -153,13 +153,13 @@ function eL(e) {
                 (g.children = (0, w.x7)(o)),
                 (g.selection = { anchor: eR.K, focus: eR.K }),
                 g.onChange());
-        }, [g, o]);
+        }, [g, o]));
     let A = i.useCallback(
             (e) => {
                 let t = (0, eT.WO)(e, { mode: "raw" }),
                     n = (0, eT.WO)(e, { mode: "plain" }),
                     l = t !== m.current;
-                (m.current = t), d(n), l && c(t);
+                ((m.current = t), d(n), l && c(t));
             },
             [c, d],
         ),
@@ -188,7 +188,7 @@ var ek = n(392553),
     eG = n(851023),
     eU = n(822610),
     ew = n(652215);
-n(827669), n(294920);
+(n(827669), n(294920));
 var eF = n(478644),
     eH = n(375708),
     eB = n(806686),
@@ -308,8 +308,12 @@ let eW = i.memo(
                             value: l,
                             announcementSendOptions: { createThread: eX && Q, threadName: i, publish: X },
                         }).then(t);
-                    n.push({ type: en.I5.MEDIA_GALLERY, items: [ez(`attachment://${Y.name}`, null, !1)], id: "82733" }),
-                        l.length > 0 && n.push({ type: en.I5.TEXT_DISPLAY, content: l, id: "82744" });
+                    (n.push({
+                        type: en.I5.MEDIA_GALLERY,
+                        items: [ez(`attachment://${Y.name}`, null, !1)],
+                        id: "82733",
+                    }),
+                        l.length > 0 && n.push({ type: en.I5.TEXT_DISPLAY, content: l, id: "82744" }));
                     let s = eE.A.getUploads(f.id, eC.C.ChannelMessage),
                         a = s.filter((e) => (e.isImage || e.isVideo) && e.filename !== Y?.name),
                         r = s.filter((e) => !e.isImage && !e.isVideo && e.filename !== Y?.name),
@@ -381,7 +385,7 @@ let eW = i.memo(
         (0, ej.R)(eQ, f.guild_id, f.id);
         let [tu, th] = i.useState(!1),
             tm = i.useCallback(() => {
-                ta(), th(!0);
+                (ta(), th(!0));
             }, [ta]),
             tg = tu || r.length > 0 || null != Y || Z.length > 0,
             { editorHeaderHeight: tA, paddingTop: tp } = (0, K.z)({
@@ -410,7 +414,7 @@ let eW = i.memo(
                 if (null == Y) return;
                 let e = eE.A.getUploads(f.id, C.drafts.type),
                     t = e.find((e) => e.filename === Y.name)?.id;
-                null != t && S.A.remove(f.id, t, eC.C.ChannelMessage), eo(f.id, { heroFile: null });
+                (null != t && S.A.remove(f.id, t, eC.C.ChannelMessage), eo(f.id, { heroFile: null }));
             }, [f.id, Y, C.drafts.type]);
         return (0, l.jsx)(ec.Sv, {
             value: eQ,
@@ -692,7 +696,7 @@ function eJ(e) {
         return (
             a(e),
             () => {
-                a(void 0), URL.revokeObjectURL(e);
+                (a(void 0), URL.revokeObjectURL(e));
             }
         );
     }, [t]);
@@ -735,8 +739,8 @@ function eq(e) {
         color: "transparent",
         look: "blank",
         onChange: function (e) {
-            (0, e_.R)(e.currentTarget.files, t, eC.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
-                (e.currentTarget.value = null);
+            ((0, e_.R)(e.currentTarget.files, t, eC.C.ChannelMessage, { requireConfirm: !0, origin: "file_picker" }),
+                (e.currentTarget.value = null));
         },
         children: (0, l.jsx)(X.H, {
             size: "custom",
@@ -752,7 +756,7 @@ function eZ(e) {
     async function r(e, l) {
         let i = await (0, eS.bX)(e, l.name, l.type),
             s = { id: (0, H.A)(), file: i, platform: el.xz.WEB, isThumbnail: !1, origin: "file_picker" };
-        S.A.addFile({ file: s, channelId: t.id, draftType: eC.C.ChannelMessage }), n(i);
+        (S.A.addFile({ file: s, channelId: t.id, draftType: eC.C.ChannelMessage }), n(i));
     }
     let [o, c] = i.useState(!1),
         d = i.useCallback(() => {
@@ -904,11 +908,15 @@ function to(e) {
 }
 function tc(e) {
     let { guild: t } = e,
-        n = (0, h.bG)([tt.default, tn.Ay], () => {
-            if (null == t) return new Set();
-            let e = tt.default.getId();
-            return (0, tl.wj)(tn.Ay.getMember(t.id, e));
-        }, [t]);
+        n = (0, h.bG)(
+            [tt.default, tn.Ay],
+            () => {
+                if (null == t) return new Set();
+                let e = tt.default.getId();
+                return (0, tl.wj)(tn.Ay.getMember(t.id, e));
+            },
+            [t],
+        );
     return n.has(ti.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(ti.D.AUTOMOD_QUARANTINED_BIO)
         ? (0, l.jsx)(to, { guild: t })
         : n.has(ti.D.AUTOMOD_QUARANTINED_SERVER_TAG)
@@ -1073,12 +1081,12 @@ let nt = i.memo(function (e) {
             [r, o] = i.useState(!1);
         i.useEffect(() => {
             if (a?.displayed) return;
-            o(!1),
+            (o(!1),
                 setImmediate(() => {
                     o((null != a ? (0, t6.RL)(a.combo) : 0) > 0);
-                });
+                }));
             let e = setTimeout(() => {
-                o(!1), null != a && (0, t2.Nu)(a);
+                (o(!1), null != a && (0, t2.Nu)(a));
             }, 2e3);
             return () => clearTimeout(e);
         }, [a]);
@@ -1300,7 +1308,7 @@ function nY(e) {
             nq.A.closeChannelSidebar(nv.fe);
         }, []),
         o = i.useCallback(() => {
-            nq.A.closeChannelSidebar(nv.fe), n && (0, nJ.iN)(t.id);
+            (nq.A.closeChannelSidebar(nv.fe), n && (0, nJ.iN)(t.id));
         }, [t.id, n]),
         {
             acceptMessageRequest: c,
@@ -1437,7 +1445,7 @@ class n7 extends i.PureComponent {
     };
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
-        x.A.startEditMessageRecord(t.id, e), b.Ay.trackWithMetadata(ew.HAw.MESSAGE_EDIT_UP_ARROW);
+        (x.A.startEditMessageRecord(t.id, e), b.Ay.trackWithMetadata(ew.HAw.MESSAGE_EDIT_UP_ARROW));
     }
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
@@ -1483,11 +1491,11 @@ class n7 extends i.PureComponent {
         C.A.changeDraft(s, t, eC.C.ChannelMessage);
         let a = "" !== t && n !== this.state.richValue,
             r = a && !n2.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
-        (this.isFirstChange = !1),
+        ((this.isFirstChange = !1),
             r && this.state.textValue.length < t.length && this.handleIncrementCombo(),
             r ? E.A.startTyping(s) : "" === t && E.A.stopTyping(s),
             a && l && (0, j.Bm)(),
-            this.setState({ textValue: t, richValue: n });
+            this.setState({ textValue: t, richValue: n }));
     };
     handleSendMessage = async (e) => {
         let {
@@ -1555,7 +1563,7 @@ class n7 extends i.PureComponent {
             let E = (0, t$.S)(t, { channel: h, isEdit: !1 });
             null != E && (null != E.content && (t = E.content), null != E.tts && (p = E.tts));
             let I = tJ.Ay.parse(h, t);
-            (I.tts = I.tts || p), null != o && ((I.content = ""), (I.components = o));
+            ((I.tts = I.tts || p), null != o && ((I.content = ""), (I.components = o)));
             let _ = {
                 ...x.A.getSendMessageOptions({
                     content: t,
@@ -1585,24 +1593,24 @@ class n7 extends i.PureComponent {
                     { shouldClear: !1, shouldRefocus: !0 }
                 );
             function j() {
-                "" !== t &&
+                ("" !== t &&
                     "" === eC.A.getDraft(h.id, eC.C.ChannelMessage) &&
                     C.A.saveDraft(h.id, t, eC.C.ChannelMessage),
                     null != n &&
                         n.length > 0 &&
                         0 === eE.A.getUploadCount(h.id, eC.C.ChannelMessage) &&
-                        S.A.setUploads({ channelId: h.id, uploads: n, draftType: eC.C.ChannelMessage });
+                        S.A.setUploads({ channelId: h.id, uploads: n, draftType: eC.C.ChannelMessage }));
             }
             if (null != n && n.length > 0) {
                 let e = (0, nG.LJ)(n);
-                if ((0, nG.fJ)(e, d?.id)) return (0, e_.V)(h, e), { shouldClear: !1, shouldRefocus: !1 };
-                (_.eagerDispatch = !1),
+                if ((0, nG.fJ)(e, d?.id)) return ((0, e_.V)(h, e), { shouldClear: !1, shouldRefocus: !1 });
+                ((_.eagerDispatch = !1),
                     (_.attachmentsToUpload = n),
                     (_.onAttachmentUploadError = (e, t, n) => {
                         (0, tV.k)({ file: e, guildId: h.getGuildId(), analyticsLocations: [], code: t, reason: n }) &&
                             j();
                     }),
-                    S.A.clearAll(h.id, eC.C.ChannelMessage);
+                    S.A.clearAll(h.id, eC.C.ChannelMessage));
             }
             return (
                 x.A.sendMessage(h.id, I, void 0, _)
@@ -1707,7 +1715,7 @@ class n7 extends i.PureComponent {
             targetElementRef: this.props.refInstance,
             position: "top",
             onRequestClose: () => {
-                C?.onCancel?.(), this.setState({ contentWarningProps: null });
+                (C?.onCancel?.(), this.setState({ contentWarningProps: null }));
             },
             shouldShow: null != C,
             renderPopout: (e) => {
@@ -1752,19 +1760,19 @@ class n8 extends i.PureComponent {
                 : this.setState({ textAreaFocused: !0 }));
     };
     handleInputFocus = (e) => {
-        this.dispatchGroupRef.current?.bumpDispatchPriority(),
+        (this.dispatchGroupRef.current?.bumpDispatchPriority(),
             e?.highlight != null
                 ? this.setState({ textAreaFocused: !0, textAreaHighlighted: e?.highlight })
                 : this.setState({ textAreaFocused: !0 }),
             e?.wasEnterPressed &&
-                (e?.event?.preventDefault(), this.refToChannelTextAreaFormComponent.current?.submit());
+                (e?.event?.preventDefault(), this.refToChannelTextAreaFormComponent.current?.submit()));
     };
     handleInputBlur = () => {
         (document.hasFocus() || this.props.hasModalOpen) &&
             this.setState({ textAreaFocused: !1, textAreaHighlighted: !1 });
     };
     handleInputKeyDown = (e, t) => {
-        this.state.textAreaHighlighted && this.setState({ textAreaHighlighted: !1 }), t || this._handleMoveToPane(e);
+        (this.state.textAreaHighlighted && this.setState({ textAreaHighlighted: !1 }), t || this._handleMoveToPane(e));
     };
     handleKeyDown = (e) => {
         this.inputFormRef.current?.contains(e.target) || this._handleMoveToPane(e);

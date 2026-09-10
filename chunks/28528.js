@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(582128),
     l = n(503698),
     s = n.n(l),
-    a = n(3900),
+    a = n(207119),
     o = n(17928),
     u = n(834730),
     c = n(821609),
@@ -68,19 +68,19 @@ let y = r.memo(function (e) {
     }, [g]);
     let B = r.useCallback(
             (e) => {
-                e.stopPropagation(), f?.(e);
+                (e.stopPropagation(), f?.(e));
             },
             [f],
         ),
         H = r.useCallback(
             (e) => {
-                e.stopPropagation(), E?.(e);
+                (e.stopPropagation(), E?.(e));
             },
             [E],
         ),
         W = r.useCallback(
             (e) => {
-                e.stopPropagation(), p?.(e);
+                (e.stopPropagation(), p?.(e));
             },
             [p],
         ),
@@ -246,7 +246,7 @@ function M(e) {
         }, [c, u]),
         C = r.useCallback(
             (e) => {
-                g.A.updateNotificationStatus(u), d?.(e, u);
+                (g.A.updateNotificationStatus(u), d?.(e, u));
             },
             [u, d],
         ),
@@ -257,22 +257,22 @@ function M(e) {
                     scale: e ? 0.975 : 1,
                     config: I,
                     onRest: () => {
-                        t(!1),
+                        (t(!1),
                             setTimeout(() => {
                                 i(!1);
-                            }, 300);
+                            }, 300));
                     },
                 });
             return {
                 clickSpring: n ? l : void 0,
                 handleMouseClick: r.useCallback(() => {
-                    i(!0), t(!0);
+                    (i(!0), t(!0));
                 }, []),
             };
         })(),
         O = r.useCallback(
             (e) => {
-                A?.(e, u), _();
+                (A?.(e, u), _());
             },
             [A, u, _],
         ),

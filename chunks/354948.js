@@ -7,7 +7,7 @@ var s = n(477900),
     o = n(452027),
     c = n(915089),
     d = n(628387),
-    u = n(3900),
+    u = n(207119),
     h = n(717421),
     p = n(922016),
     m = n(939249),
@@ -113,7 +113,7 @@ var M = n(364522),
     U = n(969426);
 class $ extends r.PureComponent {
     constructor(e) {
-        super(e), (this.state = { query: "" });
+        (super(e), (this.state = { query: "" }));
     }
     renderItems() {
         let { query: e } = this.state,
@@ -189,7 +189,7 @@ function z(e) {
         function e() {
             d(t ? (o.current?.getBoundingClientRect().width ?? 0) : 0);
         }
-        return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+        return (e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
     }, [t, n, a]);
     let g = (0, h.z)({
         width: `${c}px`,
@@ -207,7 +207,7 @@ function z(e) {
             (0, s.jsx)($, {
                 className: H.SW,
                 onClick: (t) => {
-                    N.A.setCountryCode(t), e.closePopout();
+                    (N.A.setCountryCode(t), e.closePopout());
                 },
             }),
         children: (e) =>

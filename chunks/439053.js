@@ -3,7 +3,7 @@ var n = s(477900);
 s(582128);
 var i = s(503698),
     a = s.n(i),
-    r = s(3900),
+    r = s(207119),
     l = s(17928),
     o = s(866323),
     c = s(857250),
@@ -35,9 +35,9 @@ function y(t) {
                         variant: "text-sm/semibold",
                         children: g.intl.format(g.t.QEW8Mq, {
                             onClick: () => {
-                                r({ action: "PRESS_REACT_REPLY_TOAST" }),
+                                (r({ action: "PRESS_REACT_REPLY_TOAST" }),
                                     i?.(),
-                                    j.A.openPrivateChannel({ recipientIds: s });
+                                    j.A.openPrivateChannel({ recipientIds: s }));
                             },
                         }),
                     }),

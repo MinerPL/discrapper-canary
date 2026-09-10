@@ -3,7 +3,7 @@ var n = t(477900),
     l = t(582128),
     s = t(503698),
     a = t.n(s),
-    r = t(3900),
+    r = t(207119),
     d = t(562708),
     o = t(17928),
     u = t(192308),
@@ -57,14 +57,14 @@ function k(e) {
         Q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                (C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: i.id,
                     guild_id: i.guild_id,
                     location_stack: U,
                 }),
                     D(!1),
-                    s?.();
+                    s?.());
             },
             [i.id, i.guild_id, s, U],
         ),
@@ -89,7 +89,7 @@ function k(e) {
         })),
         en = l.useCallback(
             (e) => {
-                K(!0), et({ to: { height: "0px" }, onRest: () => Q(e) });
+                (K(!0), et({ to: { height: "0px" }, onRest: () => Q(e) }));
             },
             [et, Q],
         );
@@ -123,7 +123,7 @@ function k(e) {
             D(!0);
         }, []),
         ea = l.useCallback(() => {
-            D(!1), H(!1), Z && (J(!1), k.current?.focus());
+            (D(!1), H(!1), Z && (J(!1), k.current?.focus()));
         }, [Z]);
     return L
         ? (0, n.jsx)(m.Y, {
@@ -199,7 +199,7 @@ function k(e) {
                                           ? (0, n.jsx)(A.D, {
                                                 className: G.VN,
                                                 onClick: (e) => {
-                                                    e.stopPropagation(), en("user_explicit");
+                                                    (e.stopPropagation(), en("user_explicit"));
                                                 },
                                                 "aria-label": T.intl.string(T.t.cpT0Cq),
                                                 children: (0, n.jsx)(f.P, {
@@ -210,7 +210,7 @@ function k(e) {
                                             })
                                           : (0, n.jsx)(A.D, {
                                                 onClick: (e) => {
-                                                    e.stopPropagation(), J(!0);
+                                                    (e.stopPropagation(), J(!0));
                                                 },
                                                 children: (0, n.jsx)(I._, {
                                                     size: "xs",

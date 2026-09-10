@@ -7,7 +7,7 @@ var a,
     l = n(582128),
     E = n(503698),
     c = n.n(E),
-    _ = n(3900),
+    _ = n(207119),
     u = n(615300),
     d = n(544048),
     I = n(844222),
@@ -225,7 +225,7 @@ class f extends l.PureComponent {
         this.animateEntry(R.ERROR);
     }
     animateIdleLoop() {
-        this.animateIdleLoopBackground(), this.animateIdleLoopForeground();
+        (this.animateIdleLoopBackground(), this.animateIdleLoopForeground());
     }
     animateIdleLoopBackground = () => {
         this.didUnmount ||
@@ -262,7 +262,7 @@ class f extends l.PureComponent {
     handleScenePlay = (e) => {
         switch (e) {
             case "idle_entry":
-                this.animateIdleEntry(), this.animateIdleLoop();
+                (this.animateIdleEntry(), this.animateIdleLoop());
                 break;
             case "error":
                 this.animateError();

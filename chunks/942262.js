@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => tA });
+(l.r(t), l.d(t, { default: () => tA }));
 var s = l(477900),
     a = l(582128),
     r = l(806163),
@@ -23,7 +23,7 @@ class S {
         this.categoryId = e;
     }
     markAsSeen(e, t, l) {
-        this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(l)), this.guildIds.add(t);
+        (this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(l)), this.guildIds.add(t));
     }
     flushSeenGuilds(e) {
         this.guildIds.size > 0 && (y.PU(e, Array.from(this.guildIds)), this.guildIds.clear());
@@ -62,11 +62,11 @@ async function L(e, t) {
             c = t.body.total_count;
         if (i) {
             let l = [];
-            t.body.categories?.slice(0, 8).forEach((e) => {
+            (t.body.categories?.slice(0, 8).forEach((e) => {
                 let { id: t, count: s } = e;
                 l.push([Number(t), s]);
             }),
-                G.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS", query: e, categoryCounts: l });
+                G.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS", query: e, categoryCounts: l }));
         }
         G.h.dispatch({
             type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS",
@@ -78,7 +78,7 @@ async function L(e, t) {
         });
     } catch (a) {
         let t = new k.LG(a);
-        y.jb({ categoryId: l, error: t, willRequestRetry: !1, isRequestRetry: !1 }),
+        (y.jb({ categoryId: l, error: t, willRequestRetry: !1, isRequestRetry: !1 }),
             i && G.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS", query: e, categoryCounts: [] }),
             G.h.dispatch({
                 type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE",
@@ -86,7 +86,7 @@ async function L(e, t) {
                 categoryId: l,
                 languageCode: s,
                 error: a,
-            });
+            }));
     }
 }
 let w = function (e) {
@@ -154,7 +154,7 @@ let ei = a.memo(function (e) {
     let { className: t } = e;
     return (0, s.jsx)("div", { className: Z()(t, er.En) });
 });
-var en = l(3900),
+var en = l(207119),
     ec = l(717421),
     eo = l(775602);
 let ed = { mass: 1, tension: 600, friction: 60, clamp: !0 },
@@ -191,7 +191,7 @@ let ey = function (e) {
     let { className: t, guildId: l } = e,
         r = a.useRef(null),
         i = a.useCallback((e, t) => {
-            e.stopPropagation(), t.onClick(e);
+            (e.stopPropagation(), t.onClick(e));
         }, []);
     return (0, s.jsx)(eC.A, {
         guildId: l,
@@ -652,7 +652,7 @@ function e$() {
         if (null == t) return n;
         let e = [],
             l = new Set();
-        for (let [t, s] of n) l.add(t), e.push([t, s]);
+        for (let [t, s] of n) (l.add(t), e.push([t, s]));
         let a = !1;
         return (
             l.has(F.Iq) || (l.add(F.Iq), e.unshift([F.Iq, r]), (a = !0)),
@@ -664,13 +664,13 @@ function e$() {
 var e0 = l(166976);
 function e1(e) {
     let { categoryId: t, loadId: l } = e;
-    x.A.setState({ categoryId: t }),
+    (x.A.setState({ categoryId: t }),
         q.loadCategoryResults({
             loadId: l,
             categoryId: t,
             query: x.A.getField("fetchedQuery"),
             languageCode: x.A.getField("languageCode"),
-        });
+        }));
 }
 function e2(e) {
     let { loadId: t, categoryId: l, count: r } = e,
@@ -689,7 +689,7 @@ function e2(e) {
         ],
     });
 }
-let e3 = function (e) {
+let e6 = function (e) {
     let { loadId: t } = e,
         l = e$();
     return null == l
@@ -702,8 +702,8 @@ let e3 = function (e) {
               }),
           });
 };
-var e6 = l(191711),
-    e7 = l(226658);
+var e7 = l(191711),
+    e3 = l(226658);
 function e4(e) {
     let { loadId: t } = e,
         l = x.A.useField("categoryId"),
@@ -751,20 +751,20 @@ function e4(e) {
     return null == r
         ? null
         : (0, s.jsxs)("div", {
-              className: e7.k,
+              className: e3.k,
               children: [
                   (0, s.jsx)($.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
                       children: N.intl.string(N.t.f09BQJ),
                   }),
-                  (0, s.jsx)(e6.A, {
+                  (0, s.jsx)(e7.A, {
                       items: d,
                       title: n,
                       onSelect: c,
                       selected: `${l}`,
                       "aria-label": N.intl.string(N.t.Ng5cTK),
-                      variant: e6.H.FILLED,
+                      variant: e7.H.FILLED,
                   }),
               ],
           });
@@ -776,13 +776,13 @@ let e8 = function (e) {
         l = x.A.useField("categoryId"),
         r = (0, i.bG)([eZ.A], () => eZ.A.getCategoryName(l)),
         n = a.useCallback(() => {
-            x.A.setState({ categoryId: F.Iq }),
+            (x.A.setState({ categoryId: F.Iq }),
                 q.loadCategoryResults({
                     loadId: t,
                     categoryId: F.Iq,
                     query: x.A.getField("fetchedQuery"),
                     languageCode: x.A.getField("languageCode"),
-                });
+                }));
         }, [t]),
         c = l === F.Iq ? N.intl.string(N.t.Ivw1Is) : N.intl.formatToPlainString(N.t["+1WAFb"], { categoryName: r }),
         o = l === F.Iq ? N.intl.string(N.t.aXvEjd) : N.intl.format(N.t.XLioqn, { onClick: n });
@@ -805,13 +805,13 @@ function tl(e) {
             (e) => {
                 x.A.setState({ languageCode: e });
                 let l = x.A.getField("fetchedQuery");
-                w({ ignoreQueries: [l] }),
+                (w({ ignoreQueries: [l] }),
                     q.loadCategoryResults({
                         loadId: t,
                         categoryId: x.A.getField("categoryId"),
                         query: l,
                         languageCode: e,
-                    });
+                    }));
             },
             [t],
         ),
@@ -894,13 +894,13 @@ function tc(e) {
                 let l = t.width;
                 l < 1024 && y.current ? ((y.current = !1), C(!1)) : l > 1024 && !y.current && ((y.current = !0), C(!0));
                 let s = 1;
-                for (l -= 450 * !!A, l -= 280; l > 0; ) (l -= 264), (s += 1);
-                s !== b.current && ((b.current = s), j(s)), v(t);
+                for (l -= 450 * !!A, l -= 280; l > 0;) ((l -= 264), (s += 1));
+                (s !== b.current && ((b.current = s), j(s)), v(t));
             },
             [A, v],
         ),
         N = (0, ez.w)(R, [A, v]);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         f((0, I.YP)());
     }, [o]),
         a.useEffect(() => {
@@ -912,7 +912,7 @@ function tc(e) {
                 analyticsContext: h,
                 categoryId: u,
             });
-        }, [h, n, t, u, m, o]);
+        }, [h, n, t, u, m, o]));
     let p = a.useCallback((e) => l(e, u), [l, u]),
         k = a.useMemo(() => (c ? [n.length, 0] : [n.length]), [n.length, c]),
         G = a.useCallback(
@@ -1007,7 +1007,7 @@ function tc(e) {
             },
             [n, _, p, u],
         );
-    a.useEffect(() => {
+    (a.useEffect(() => {
         let e = E.current;
         return () => {
             let t = e?.getScrollerState()?.scrollTop;
@@ -1026,7 +1026,7 @@ function tc(e) {
                         },
                     });
                 });
-        }, []);
+        }, []));
     let V = a.useMemo(
             () =>
                 (0, eH.debounce)(
@@ -1068,7 +1068,7 @@ function tc(e) {
                               className: ts.wp,
                               children: [
                                   (0, s.jsx)("div", { className: ts.jp, children: (0, s.jsx)(tl, { loadId: t }) }),
-                                  (0, s.jsx)(e3, { loadId: t }),
+                                  (0, s.jsx)(e6, { loadId: t }),
                               ],
                           }),
                       })
@@ -1125,7 +1125,7 @@ function tu() {
                 searchQuery: s,
                 onSearchTextChange: r,
                 onClearSearch: a.useCallback(() => {
-                    y.gp(t),
+                    (y.gp(t),
                         w(),
                         T(),
                         x.A.setState({
@@ -1136,7 +1136,7 @@ function tu() {
                             resultsInitialCategoryId: null,
                             scrollPosition: null,
                         }),
-                        j.A.setState({ isSearchVisible: !1 });
+                        j.A.setState({ isSearchVisible: !1 }));
                 }, [t]),
                 onSearchSubmit: a.useCallback(() => {
                     let e = x.A.getField("query"),
@@ -1145,9 +1145,9 @@ function tu() {
                     w();
                     let s = x.A.getField("languageCode"),
                         a = x.A.getField("categoryId");
-                    x.A.setState({ resultsInitialCategoryId: a }),
+                    (x.A.setState({ resultsInitialCategoryId: a }),
                         j.A.setState({ isSearchVisible: !0 }),
-                        q.loadCategoryResultsAndCounts({ loadId: t, categoryId: a, query: e, languageCode: s });
+                        q.loadCategoryResultsAndCounts({ loadId: t, categoryId: a, query: e, languageCode: s }));
                 }, [t]),
                 isSearchVisible: l,
             };
@@ -1167,7 +1167,7 @@ function tu() {
         Y = x.A.useField("fetchedQuery"),
         K = a.useCallback(
             (e) => {
-                k(e), O && U();
+                (k(e), O && U());
             },
             [O, U, k],
         ),

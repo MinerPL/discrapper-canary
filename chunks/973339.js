@@ -12,7 +12,7 @@ var o =
     a = f(r(223108)),
     u = r(582128),
     s = f(u),
-    l = f(r(91617));
+    l = f(r(23136));
 function f(t) {
     return t && t.__esModule ? t : { default: t };
 }
@@ -35,7 +35,7 @@ var h = {
                 return r;
             })(t, ["bgColor", "fgColor", "level", "size", "value"]),
             d = new n.default(-1, i.default[u]);
-        d.addData(h), d.make();
+        (d.addData(h), d.make());
         var c = d.modules;
         return s.default.createElement(
             l.default,
@@ -66,7 +66,7 @@ var h = {
             }),
         );
     });
-(g.displayName = "QRCode"),
+((g.displayName = "QRCode"),
     (g.propTypes = h),
     (g.defaultProps = { bgColor: "#FFFFFF", fgColor: "#000000", level: "L", size: 256 }),
-    (e.default = g);
+    (e.default = g));

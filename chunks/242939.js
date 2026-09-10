@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { QuestBar: () => tW, default: () => t$ });
+(n.r(t), n.d(t, { QuestBar: () => tW, default: () => t$ }));
 var s = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    a = n(3900),
+    a = n(207119),
     o = n(323889),
     u = n(17928),
     c = n(475743),
@@ -60,7 +60,7 @@ let L = "#00000000",
             C = r.useRef(null),
             p = r.useRef(null),
             f = r.useRef(void 0);
-        r.useEffect(() => {
+        (r.useEffect(() => {
             u();
         }, [u]),
             r.useLayoutEffect(() => {
@@ -71,7 +71,7 @@ let L = "#00000000",
                         null != e && d(l, i);
                     }
                 );
-            }, [l, i, c, d]);
+            }, [l, i, c, d]));
         let E = r.useCallback(
             (e) => {
                 let { height: t } = e;
@@ -126,26 +126,26 @@ let L = "#00000000",
             [u, c] = r.useState([]),
             [d, x] = r.useState(() => new Map()),
             m = r.useCallback((e, t, n) => {
-                o((s) => {
+                (o((s) => {
                     let r = s[t] ?? { expanded: null, collapsed: null };
                     return { ...s, [t]: { ...r, [n]: e } };
                 }),
                     x((e) => {
                         let n = new Map(e);
-                        return n.set(t, r.createRef()), n;
-                    });
+                        return (n.set(t, r.createRef()), n);
+                    }));
             }, []),
             C = r.useCallback((e, t) => {
                 let n = !1;
-                o((s) => {
+                (o((s) => {
                     let r = s[e] ?? { expanded: null, collapsed: null };
-                    return (r[t] = null), (n = null == r.expanded && null == r.collapsed), { ...s, [e]: r };
+                    return ((r[t] = null), (n = null == r.expanded && null == r.collapsed), { ...s, [e]: r });
                 }),
                     n &&
                         x((t) => {
                             let n = new Map(t);
-                            return n.delete(e), n;
-                        });
+                            return (n.delete(e), n);
+                        }));
             }, []),
             p = r.useCallback(() => {
                 let e = [];
@@ -446,13 +446,13 @@ function e_(e) {
             fullWidth: !0,
             onClick: function () {
                 if (l) {
-                    (0, eu.Y5)({
+                    ((0, eu.Y5)({
                         questId: t.id,
                         questContent: f.uF.QUEST_BAR_V2,
                         questContentCTA: U.Cy.QUEST_ACCESS_SUSPENDED,
                         sourceQuestContent: n,
                     }),
-                        (0, R.FS)();
+                        (0, R.FS)());
                     return;
                 }
                 let e = t.userStatus?.enrolledAt == null ? U.Cy.ACCEPT_QUEST : U.Cy.WATCH_VIDEO;
@@ -612,7 +612,7 @@ let eU = (e) => {
             return {
                 completionSpring: e,
                 startCompletionAnimation: r.useCallback(() => {
-                    t({ spring: 1 }), t({ spring: 0, delay: 2e3 });
+                    (t({ spring: 1 }), t({ spring: 0, delay: 2e3 }));
                 }, [t]),
             };
         })(),
@@ -661,7 +661,7 @@ let eU = (e) => {
             !g &&
             A &&
             setTimeout(() => {
-                p(), N();
+                (p(), N());
             }, 200);
     }, [f, A, g, p, N]),
     r.useEffect(() => {
@@ -892,8 +892,8 @@ var eL = n(889137),
     e1 = n(139384),
     e2 = n(114046),
     e3 = n(695366),
-    e6 = n(274670),
-    e7 = n(144779),
+    e7 = n(274670),
+    e6 = n(144779),
     e9 = n(30370),
     e8 = n(178540),
     e5 = n(104886),
@@ -909,9 +909,9 @@ function tr(e) {
     return (0, s.jsx)(v.D, {
         className: ts.Z0,
         onClick: () => {
-            (0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
-                ? (0, e6.r)({
-                      type: e7.F.CLICK_INTERNAL,
+            ((0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
+                ? (0, e7.r)({
+                      type: e6.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -925,7 +925,7 @@ function tr(e) {
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                       sourceQuestContent: r,
                   }),
-                (0, tt.openUserSettings)(te.X.CONNECTIONS_CATEGORY);
+                (0, tt.openUserSettings)(te.X.CONNECTIONS_CATEGORY));
         },
         children: (0, s.jsx)(T.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
     });
@@ -955,9 +955,9 @@ function tu(e) {
         { startingConsoleQuest: x, startConsoleQuest: m } = (0, E.Wj)({
             questId: t.id,
             beforeRequest: () => {
-                (0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
-                    ? (0, e6.r)({
-                          type: e7.F.CLICK_INTERNAL,
+                ((0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
+                    ? (0, e7.r)({
+                          type: e6.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -971,7 +971,7 @@ function tu(e) {
                           questContentCTA: U.Cy.DEFIBRILLATOR,
                           sourceQuestContent: f.uF.QUEST_BAR_V2,
                       }),
-                    a.startAnimation();
+                    a.startAnimation());
             },
             afterRequest: a.stopAnimation,
         }),
@@ -1132,7 +1132,7 @@ function tm(e) {
         })
     );
 }
-n(134528), n(947204);
+(n(134528), n(947204));
 var tC = n(934225);
 function tp(e) {
     let { header: t, children: n } = e;
@@ -1208,7 +1208,7 @@ let tS = r.forwardRef(function (e, t) {
         (0, e1.A)(x),
         (0, s.jsx)(eH.A, {
             ref: (e) => {
-                (x.current = e), null != t && ("function" == typeof t ? t(e) : (t.current = e));
+                ((x.current = e), null != t && ("function" == typeof t ? t(e) : (t.current = e)));
             },
             autoPlay: o,
             poster: i,
@@ -1447,13 +1447,13 @@ function tN(e) {
         o = (0, E.Hv)() && n.userStatus?.completedAt == null,
         u = r.useCallback(() => {
             if (o) {
-                (0, eu.Y5)({
+                ((0, eu.Y5)({
                     questId: n.id,
                     questContent: f.uF.QUEST_BAR_V2,
                     questContentCTA: U.Cy.QUEST_ACCESS_SUSPENDED,
                     sourceQuestContent: f.uF.QUEST_BAR_V2,
                 }),
-                    (0, R.FS)();
+                    (0, R.FS)());
                 return;
             }
             (0, R.d5)({
@@ -1520,7 +1520,7 @@ function tB(e) {
             (0, s.jsxs)("div", {
                 className: tA.Fe,
                 ref: (e) => {
-                    "function" == typeof n ? n(e) : null != n && (n.current = e), null != e && (d.current = e);
+                    ("function" == typeof n ? n(e) : null != n && (n.current = e), null != e && (d.current = e));
                 },
                 children: [
                     (0, s.jsx)(eO, {}),
@@ -1558,7 +1558,7 @@ let tb = r.forwardRef(function (e, t) {
         p = (0, ed.vA)(x),
         h = r.useCallback(async () => {
             let e = p ? U.Cy.START_QUEST : U.Cy.ACCEPT_QUEST;
-            await tI(x, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), p && C();
+            (await tI(x, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), p && C());
         }, [x, C, p]),
         _ = x.userStatus?.enrolledAt != null;
     return (0, s.jsxs)(a.animated.div, {
@@ -1728,7 +1728,7 @@ function tW(e) {
             });
             return (
                 r.useLayoutEffect(() => {
-                    s !== m.current && x(!1), (m.current = s);
+                    (s !== m.current && x(!1), (m.current = s));
                 }, [s]),
                 {
                     isExpanded: i,
@@ -1772,16 +1772,16 @@ function tW(e) {
                     m(!0);
                 }, []),
                 h = r.useCallback(() => {
-                    m(!1), d.current || i || s(!1);
+                    (m(!1), d.current || i || s(!1));
                 }, [i, s]),
                 _ = r.useCallback(() => {
-                    m(!1), i || s(!1), (d.current = !1);
+                    (m(!1), i || s(!1), (d.current = !1));
                 }, [i, s]),
                 g = r.useCallback(() => {
                     p(!0);
                 }, []),
                 A = r.useCallback(() => {
-                    p(!1), s(!1);
+                    (p(!1), s(!1));
                 }, [s]),
                 S = r.useCallback(
                     function () {
@@ -1797,17 +1797,17 @@ function tW(e) {
                 }, [S]),
                 R = r.useCallback(
                     (e) => {
-                        window.clearTimeout(c.current),
+                        (window.clearTimeout(c.current),
                             ((0, tq.vq)(e?.relatedTarget, Node) && e.currentTarget.contains(e.relatedTarget)) ||
                                 x ||
                                 C ||
                                 d.current ||
-                                s(!1);
+                                s(!1));
                     },
                     [x, C, s],
                 ),
                 v = r.useCallback(() => {
-                    (0, eu.av)({
+                    ((0, eu.av)({
                         questId: t.id,
                         event: tk.HAw.QUEST_HOVER,
                         properties: {
@@ -1819,10 +1819,10 @@ function tW(e) {
                         sourceQuestContent: f.uF.QUEST_BAR_V2,
                     }),
                         (d.current = !0),
-                        S({ withDelay: !0 });
+                        S({ withDelay: !0 }));
                 }, [S, u, t.id]),
                 T = r.useCallback(() => {
-                    (0, eu.av)({
+                    ((0, eu.av)({
                         questId: t.id,
                         event: tk.HAw.QUEST_HOVER_OFF,
                         properties: {
@@ -1833,9 +1833,9 @@ function tW(e) {
                         sourceQuestContent: f.uF.QUEST_BAR_V2,
                     }),
                         (d.current = !1),
-                        R();
+                        R());
                 }, [R, u, t.id]);
-            r.useEffect(() => {
+            (r.useEffect(() => {
                 C && d.current && T();
             }, [C, T]),
                 r.useLayoutEffect(() => {
@@ -1843,7 +1843,7 @@ function tW(e) {
                 }, [l, a, o]),
                 r.useLayoutEffect(() => {
                     i || !a || o || d.current || s(!1);
-                }, [a, i, o, s]);
+                }, [a, i, o, s]));
             let y = (0, tL.useHasAnyModalOpen)();
             return (
                 r.useEffect(() => {
@@ -1887,7 +1887,7 @@ function tW(e) {
             isQuestEnrollmentBlocked: c,
             impressionRef: d,
         } = e;
-        r.useEffect(() => {
+        (r.useEffect(() => {
             n &&
                 ((0, eu.av)({
                     questId: t.id,
@@ -1940,8 +1940,8 @@ function tW(e) {
                     });
             }, [l, i, a, t.id, o, d]),
             r.useEffect(() => {
-                (!u || c) && tP.A.clearTracking(), l && i && !a && !n && s && tP.A.stopTracking(t.id);
-            }, [u, c, l, i, a, n, s, t.id]);
+                ((!u || c) && tP.A.clearTracking(), l && i && !a && !n && s && tP.A.stopTracking(t.id));
+            }, [u, c, l, i, a, n, s, t.id]));
     })({
         quest: t,
         hasAssetsError: B,

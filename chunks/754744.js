@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => nm });
+(n.r(t), n.d(t, { default: () => nm }));
 var l,
     r,
     a = n(477900),
@@ -18,7 +18,7 @@ var l,
     G = n(946356),
     O = n(287809),
     S = n(985925),
-    m = n(3900),
+    m = n(207119),
     R = n(66455),
     D = n(844222),
     h = n(866323),
@@ -57,7 +57,7 @@ function X(e) {
                     l,
                     (0, a.jsx)(f.D, {
                         onClick: (e) => {
-                            e.stopPropagation(), t?.(n);
+                            (e.stopPropagation(), t?.(n));
                         },
                         children: (0, a.jsx)(F.e, { shortcut: "esc", keyClassName: v.Wb, className: v.ti }),
                     }),
@@ -66,7 +66,7 @@ function X(e) {
         ],
     });
 }
-n(321073), n(667532);
+(n(321073), n(667532));
 var y = n(435558),
     B = n.n(y),
     V = n(636537),
@@ -127,7 +127,7 @@ function el(e, t) {
         s = i.useCallback(
             async (n) => {
                 let i = a.current + 1;
-                (a.current = i),
+                ((a.current = i),
                     l((l) => {
                         let r = n && en(l, e, t);
                         return {
@@ -139,7 +139,7 @@ function el(e, t) {
                             isLoading: !0,
                             hasError: !1,
                         };
-                    });
+                    }));
                 try {
                     let n = await V.Bo.get({
                         url: Q.Rsh.GUILD_AUDIT_LOG(e),
@@ -238,14 +238,14 @@ function el(e, t) {
                                                 return l && r && a && i && B().isEqual(e.options, t.options);
                                             })(o, u, l)
                                         ) {
-                                            (t[0] = o.merge({
+                                            ((t[0] = o.merge({
                                                 changes: [...o.changes, ...u.changes],
                                                 timestampEnd: u.timestampStart,
                                             })),
-                                                l++;
+                                                l++);
                                             return;
                                         }
-                                        u.actionType === Q.RWi.DELETE &&
+                                        (u.actionType === Q.RWi.DELETE &&
                                             ((a = u.changes.find((e) => e.key === Q.gGk.NAME)),
                                             (i = u.changes.find((e) => e.key === Q.gGk.TITLE)),
                                             (s = u.changes.find((e) => e.key === Q.gGk.TYPE)),
@@ -257,7 +257,7 @@ function el(e, t) {
                                                 (E = `#${E}`),
                                             null != E && (n[u.targetType] = { ...n[u.targetType], [u.targetId]: E })),
                                             (l = 0),
-                                            t.unshift(u);
+                                            t.unshift(u));
                                     }),
                                 { logs: t, deletedTargets: n });
                         return {
@@ -308,7 +308,7 @@ function el(e, t) {
             s(!1);
         });
         return () => {
-            (r.current = !1), clearTimeout(e);
+            ((r.current = !1), clearTimeout(e));
         };
     }, [s]),
     n.guildId !== e || n.userId !== t)
@@ -392,7 +392,7 @@ function ef(e) {
         I = (0, eD.gn)(T?.guildId, T?.userId, T?.colorStrings ?? null),
         N = i.useCallback(
             (e) => (t) => {
-                t.preventDefault(), t.stopPropagation(), null != e && (0, eS.Ko)(e, u);
+                (t.preventDefault(), t.stopPropagation(), null != e && (0, eS.Ko)(e, u));
             },
             [u],
         ),
@@ -732,7 +732,7 @@ function eJ(e, t) {
     (0, eB.r)(() => {
         ez.setState((n) => {
             let l = n.get(e);
-            return null == l ? n.set(e, { ...eK, ...t }) : n.set(e, { ...l, ...t }), n;
+            return (null == l ? n.set(e, { ...eK, ...t }) : n.set(e, { ...l, ...t }), n);
         });
     });
 }
@@ -1049,26 +1049,30 @@ let tT = Object.keys(Q.xBc),
     tN = new Set(Q.nfo);
 function tG(e, t, n) {
     let l = (0, ei.bG)([eA.A], () => eA.A.getGuild(t), [t]);
-    return (0, ei.bG)([ed.Ay, O.default, tl.A], () => {
-        let r = {},
-            a = ed.Ay.getMember(t, e),
-            i = O.default.getUser(e);
-        if (null == l || null == a || null == i) return r;
-        let s = tl.A.getEveryoneRole(l),
-            E = tA.cc({ user: i, context: l });
-        for (let e of n) {
-            let t = Q.xBc[e];
-            if (tc.zy(E, t)) {
-                for (let n of ((r[e] = []), a.roles)) {
-                    let a = tl.A.getRole(l.id, n);
-                    null != a && ((0, td._m)(a, Q.xBc.ADMINISTRATOR) || (0, td.sx)(a, t)) && r[e].push(a.id);
+    return (0, ei.bG)(
+        [ed.Ay, O.default, tl.A],
+        () => {
+            let r = {},
+                a = ed.Ay.getMember(t, e),
+                i = O.default.getUser(e);
+            if (null == l || null == a || null == i) return r;
+            let s = tl.A.getEveryoneRole(l),
+                E = tA.cc({ user: i, context: l });
+            for (let e of n) {
+                let t = Q.xBc[e];
+                if (tc.zy(E, t)) {
+                    for (let n of ((r[e] = []), a.roles)) {
+                        let a = tl.A.getRole(l.id, n);
+                        null != a && ((0, td._m)(a, Q.xBc.ADMINISTRATOR) || (0, td.sx)(a, t)) && r[e].push(a.id);
+                    }
+                    (((0, td._m)(s, Q.xBc.ADMINISTRATOR) || (0, td.sx)(s, t)) && r[e].push(s.id),
+                        (0, t_.bM)(l, i) && r[e].push(i.id));
                 }
-                ((0, td._m)(s, Q.xBc.ADMINISTRATOR) || (0, td.sx)(s, t)) && r[e].push(s.id),
-                    (0, t_.bM)(l, i) && r[e].push(i.id);
             }
-        }
-        return r;
-    }, [l, t, n, e]);
+            return r;
+        },
+        [l, t, n, e],
+    );
 }
 var tO = n(441782);
 function tS(e) {
@@ -1343,7 +1347,7 @@ function tk(e) {
                     n,
                     (0, a.jsx)(f.D, {
                         onClick: (e) => {
-                            e.stopPropagation(), t();
+                            (e.stopPropagation(), t());
                         },
                         children: (0, a.jsx)(F.e, { shortcut: "esc", keyClassName: b.Wb, className: b.ti }),
                     }),
@@ -1377,7 +1381,7 @@ function tF(e) {
                         let t = e.messages,
                             l = e.links,
                             a = e.media;
-                        eJ(n, t), eJ(r, l), eJ(s, a);
+                        (eJ(n, t), eJ(r, l), eJ(s, a));
                     },
                     [r, s, n],
                 ),
@@ -1389,9 +1393,9 @@ function tF(e) {
                 ),
                 I = i.useCallback(async () => {
                     let e = _.current + 1;
-                    (_.current = e), c.current?.cancel();
+                    ((_.current = e), c.current?.cancel());
                     let n = new eH.DX(t, Q.I4_.GUILD, u, o);
-                    (c.current = n), T({ searchTabFetcher: n, messageCount: -1, lastMessage: null });
+                    ((c.current = n), T({ searchTabFetcher: n, messageCount: -1, lastMessage: null }));
                     let l = null;
                     try {
                         let e = await n.makeRequest({ rejectWithError: !1 });
@@ -1419,7 +1423,7 @@ function tF(e) {
                     I();
                 });
                 return () => {
-                    c.current?.cancel(), clearTimeout(e);
+                    (c.current?.cancel(), clearTimeout(e));
                 };
             }, [I]);
             let N = l?.messageCount ?? -1,
@@ -1453,7 +1457,7 @@ function tF(e) {
             ]);
         }, [n, t]),
         m = i.useCallback(() => {
-            I(!0),
+            (I(!0),
                 Promise.all([
                     S(),
                     d.refresh(),
@@ -1463,7 +1467,7 @@ function tF(e) {
                     }),
                 ]).finally(() => {
                     G.current && I(!1);
-                });
+                }));
         }, [A, S, d]),
         R = (0, a.jsx)(f.D, {
             className: E()(b.F3, { [b.r9]: g }),
@@ -1543,13 +1547,13 @@ function tY(e) {
                     if (u !== s) {
                         let l = eZ(e, n, r),
                             i = new eH.MS(t, Q.I4_.GUILD, l);
-                        eJ(s, { searchFetcher: i, messageCount: -1, lastMessage: null }),
+                        (eJ(s, { searchFetcher: i, messageCount: -1, lastMessage: null }),
                             setTimeout(() => {
                                 i.fetch(
                                     (e) => {
                                         let n = e.body,
                                             l = n.messages[0];
-                                        eJ(s, {
+                                        (eJ(s, {
                                             searchFetcher: i,
                                             result: n,
                                             messageCount: n.total_results,
@@ -1574,14 +1578,14 @@ function tY(e) {
                                                             cursor: null,
                                                         },
                                                     ],
-                                                });
+                                                }));
                                     },
                                     (e) => {},
                                     (e) => {
-                                        eJ(s, { messageCount: 0, lastMessage: null }), c({});
+                                        (eJ(s, { messageCount: 0, lastMessage: null }), c({}));
                                     },
                                 );
-                            });
+                            }));
                     }
                     return () => {};
                 }, [e, t, E, s, n, r, u, a]),
@@ -1633,26 +1637,30 @@ function tY(e) {
             [n, t, c, d],
         ),
         [C, U] = i.useState(!1),
-        f = (0, u.bG)([tb.A], () => {
-            if (null == A.result) return [];
-            let e = (0, tv.wG)("");
-            return A.result.messages
-                .map((e) => {
-                    let [t] = e;
-                    return (0, tX.rh)(t);
-                })
-                .map((t) => {
-                    let n = tb.A.getMessage(t.id, t.channel_id),
-                        l = new tH.Ay(t);
-                    return (
-                        null != n && (l = l.merge({ attachments: n.attachments, embeds: n.embeds })),
-                        (l = l.set(
-                            "customRenderedContent",
-                            (0, ty.Ay)(l, { postProcessor: e, allowHeading: !0, allowList: !0 }),
-                        ))
-                    );
-                });
-        }, [A.result]),
+        f = (0, u.bG)(
+            [tb.A],
+            () => {
+                if (null == A.result) return [];
+                let e = (0, tv.wG)("");
+                return A.result.messages
+                    .map((e) => {
+                        let [t] = e;
+                        return (0, tX.rh)(t);
+                    })
+                    .map((t) => {
+                        let n = tb.A.getMessage(t.id, t.channel_id),
+                            l = new tH.Ay(t);
+                        return (
+                            null != n && (l = l.merge({ attachments: n.attachments, embeds: n.embeds })),
+                            (l = l.set(
+                                "customRenderedContent",
+                                (0, ty.Ay)(l, { postProcessor: e, allowHeading: !0, allowList: !0 }),
+                            ))
+                        );
+                    });
+            },
+            [A.result],
+        ),
         { blockCount: p, ignoreCount: k } = (0, u.cf)([J.A], () => {
             let e = 0,
                 t = 0;
@@ -1877,12 +1885,12 @@ function t6(e) {
         S = i.useMemo(() => tz()(G, 300), []),
         m = i.useCallback(
             (e) => {
-                I(e), S(e);
+                (I(e), S(e));
             },
             [S],
         ),
         R = i.useCallback(() => {
-            I(""), G("");
+            (I(""), G(""));
         }, []),
         D = i.useMemo(() => {
             if (null == o || null == A || null == c) return null;
@@ -2213,7 +2221,7 @@ function nG(e) {
                 disabled: I,
                 text: j.intl.string(j.t["g33r/P"]),
                 onClick: () => {
-                    i?.(), nE.A.isOpen() && (0, nl.jH)(), nn.A.openPrivateChannel({ recipientIds: t.id });
+                    (i?.(), nE.A.isOpen() && (0, nl.jH)(), nn.A.openPrivateChannel({ recipientIds: t.id }));
                 },
                 children: (0, a.jsx)(tx.ChatIcon, { size: "custom", color: "currentColor", width: 24, height: 24 }),
             }),
@@ -2276,7 +2284,7 @@ function nG(e) {
             (0, a.jsx)(nN, {
                 text: j.intl.string(j.t.IHTjzA),
                 onClick: () => {
-                    T(ns.Nj.COPY_ID), (0, nd.C)(t.id);
+                    (T(ns.Nj.COPY_ID), (0, nd.C)(t.id));
                 },
                 disabled: !nd.p5,
                 children: (0, a.jsx)(nt.L, {
@@ -2328,7 +2336,7 @@ function nm(e) {
                     (0, T.jo)(n, [t]),
                     (0, N.A)(t, void 0, { guildId: n, dispatchWait: !0 }),
                 ];
-                await Promise.all(r), e || (null == O.default.getUser(t) && l(), C(!1));
+                (await Promise.all(r), e || (null == O.default.getUser(t) && l(), C(!1)));
             })(),
             () => {
                 e = !0;

@@ -3,7 +3,7 @@ var l = n(477900),
     i = n(582128),
     a = n(503698),
     r = n.n(a),
-    o = n(3900),
+    o = n(207119),
     s = n(702841),
     c = n(661531),
     u = n(462887),
@@ -63,7 +63,7 @@ function E(e) {
         if (R)
             return (
                 (D.current = setTimeout(() => {
-                    b(!1), (D.current = null);
+                    (b(!1), (D.current = null));
                 }, 3e3)),
                 () => {
                     null != D.current && clearTimeout(D.current);
@@ -78,7 +78,7 @@ function E(e) {
         children: (0, l.jsxs)(g.D, {
             className: y.AP,
             onClick: function () {
-                b(!a), E(!a);
+                (b(!a), E(!a));
             },
             onMouseDown: () => S(!0),
             onMouseUp: () => S(!1),

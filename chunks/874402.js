@@ -3,7 +3,7 @@ var a = n(477900),
     l = n(582128),
     r = n(503698),
     s = n.n(r),
-    i = n(3900),
+    i = n(207119),
     o = n(17928),
     d = n(866323),
     c = n(765178),
@@ -24,28 +24,28 @@ function p(e) {
             a11yAnnounceOnShow: _,
             a11yAnnounceOnHide: A,
         } = e,
-        v = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-        N = l.useRef(null);
+        N = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        v = l.useRef(null);
     return (
         l.useEffect(
             () => () => {
-                null != N.current && clearTimeout(N.current);
+                null != v.current && clearTimeout(v.current);
             },
             [],
         ),
         (0, d.p)(n, {
-            from: { opacity: 0, y: 80 * !v },
+            from: { opacity: 0, y: 80 * !N },
             enter: { opacity: 1, y: 0 },
-            leave: { opacity: 0, y: 80 * !v },
+            leave: { opacity: 0, y: 80 * !N },
             onRest: (e, t) => {
                 if (!e.finished) return;
                 let n = t.item ? _ : A;
-                null != N.current && clearTimeout(N.current),
+                (null != v.current && clearTimeout(v.current),
                     null != n
-                        ? (N.current = setTimeout(() => {
-                              (N.current = null), c.O.announce(n);
+                        ? (v.current = setTimeout(() => {
+                              ((v.current = null), c.O.announce(n));
                           }, 300))
-                        : (N.current = null);
+                        : (v.current = null));
             },
         })((e, n) =>
             n

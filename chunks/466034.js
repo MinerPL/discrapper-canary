@@ -23,13 +23,13 @@ function i() {
 }
 let o = {
     enableMFA: async function () {
-        await new Promise((e) => {
+        (await new Promise((e) => {
             (0, s.openModalLazy)(async () => {
                 let { default: a } = await Promise.all([
                     n.e("262546"),
                     n.e("679928"),
                     n.e("595429"),
-                    n.e("532347"),
+                    n.e("869544"),
                     n.e("748370"),
                     n.e("524084"),
                     n.e("676237"),
@@ -38,6 +38,6 @@ let o = {
                 return (n) => (0, t.jsx)(a, { ...n, handleEnableMFASuccess: e });
             });
         }),
-            await i();
+            await i());
     },
 };

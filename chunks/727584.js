@@ -1,7 +1,7 @@
-l.r(i), l.d(i, { default: () => eF });
+(l.r(i), l.d(i, { default: () => eF }));
 var s = l(477900),
     n = l(582128),
-    r = l(3900),
+    r = l(207119),
     o = l(17928),
     d = l(717421),
     t = l(477782),
@@ -63,12 +63,12 @@ function Z(e) {
               icon: W.q,
               tooltipText: Q.intl.string(Q.t.kj3tz2),
               onClick: () => {
-                  q.A.close(),
+                  (q.A.close(),
                       null != p && (0, B.iN)(p),
                       (0, z.A)(d),
                       a.dispatch(Y.jej.POPOUT_CLOSE),
                       (0, V.z)(l, i.id, p ?? X.VV.MEMBER_SAFETY, { modViewPanel: $.g.INFO, sourceLocation: t }),
-                      r?.();
+                      r?.());
               },
           });
 }
@@ -114,7 +114,7 @@ function e_(e) {
         u && !c.current && ((c.current = !0), r({ action: "VIEW_NEW_CONTENT_NOTICE" }));
     }, [u, r]);
     let p = n.useCallback(() => {
-        r({ action: "PRESS_NEW_CONTENT_WISHLIST", section: eS.RP.WISHLIST }), l?.({ tabSection: eS.RP.WISHLIST });
+        (r({ action: "PRESS_NEW_CONTENT_WISHLIST", section: eS.RP.WISHLIST }), l?.({ tabSection: eS.RP.WISHLIST }));
     }, [r, l]);
     return a
         ? (0, s.jsxs)(s.Fragment, {
@@ -261,7 +261,7 @@ function eF(e) {
         ej = (0, S.g)("UserProfilePopout"),
         eh = n.useMemo(() => (0, g.A)(), []);
     function eO(e) {
-        B?.(),
+        (B?.(),
             en.dispatch(Y.jej.POPOUT_CLOSE),
             (0, k.openUserProfileModal)({
                 sourceAnalyticsLocations: es,
@@ -270,7 +270,7 @@ function eF(e) {
                 ...er,
                 ...e,
                 appContext: X,
-            });
+            }));
     }
     let em = $ ? "div" : a.l,
         eg = (0, O.GV)(),
@@ -327,12 +327,12 @@ function eF(e) {
                                                                 id: "view-profile",
                                                                 label: Q.intl.string(Q.t["+Xp3hq"]),
                                                                 action: () => {
-                                                                    eO(),
+                                                                    (eO(),
                                                                         (0, C.Wn)({
                                                                             action: "PRESS_VIEW_PROFILE",
                                                                             analyticsLocations: es,
                                                                             ...er,
-                                                                        });
+                                                                        }));
                                                                 },
                                                             }),
                                                     appContext: X,

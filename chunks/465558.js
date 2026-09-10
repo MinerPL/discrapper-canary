@@ -39,7 +39,7 @@ let R = {
         return {
             selectedTab: (0, d.bG)([y.A], () => y.A.getSelectedTab()),
             handleTabChange: function (e) {
-                I.Ay.selectTab(e), C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.TabChange, tab: e });
+                (I.Ay.selectTab(e), C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.TabChange, tab: e }));
             },
         };
     };
@@ -119,7 +119,7 @@ function ev(e, t) {
         l,
         i = null != t;
     if (null != e)
-        (n = e.name),
+        ((n = e.name),
             (l = (function (e) {
                 switch (e) {
                     case em.R.AVATAR_DECORATION:
@@ -135,7 +135,7 @@ function ev(e, t) {
                     default:
                         return "";
                 }
-            })(e.type));
+            })(e.type)));
     else if (i && null != t) {
         let e = eg.hd[t];
         n = e?.name;
@@ -529,7 +529,7 @@ function te(e) {
         h = (0, el.kN)().get(t),
         [f, j] = i.useState(b.PH),
         g = i.useCallback(() => {
-            j((e) => e + b.PH), x(t);
+            (j((e) => e + b.PH), x(t));
         }, [t, x]);
     B()(null != h, `No text for action type: ${t}`);
     let v = (t === b.NV.PURCHASES || t === b.NV.GIFTS) && null != o ? h.sectionHeader(o) : h.sectionHeader(c),
@@ -698,7 +698,7 @@ function tl() {
         },
         serialize: (e) => e,
         select: function (e) {
-            n(e), C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.SelectTeen });
+            (n(e), C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.SelectTeen }));
         },
         isSelected: (e) => e === t,
         options: r,
@@ -1159,7 +1159,7 @@ function t$() {
         { getLinkCode: r } = (0, w.A)(),
         s = (0, U.VE)(),
         a = (0, tq.bG)([y.A], () => y.A.getLinkCodeExpiresAt());
-    (0, tK.Ay)(() => {
+    ((0, tK.Ay)(() => {
         r();
     }),
         (e = (0, tX.A)(r)),
@@ -1169,14 +1169,14 @@ function t$() {
             if (t <= 0) return void e();
             let n = setTimeout(e, t);
             return () => clearTimeout(n);
-        }, [a, e]);
+        }, [a, e]));
     let d = i.useCallback(() => {
-            (0, Y.openModalLazy)(async () => {
+            ((0, Y.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("262546"),
                     n.e("776915"),
                     n.e("595429"),
-                    n.e("532347"),
+                    n.e("869544"),
                     n.e("748370"),
                     n.e("689419"),
                     n.e("94570"),
@@ -1191,7 +1191,7 @@ function t$() {
                         }),
                     });
             }),
-                C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.ShowQRCodeModal });
+                C.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: b.qb.ShowQRCodeModal }));
         }, [t]),
         c = i.useCallback(() => {
             null != s &&
@@ -1445,7 +1445,7 @@ function nS(e) {
                                     "aria-label": et.intl.string(et.t["UKOtz+"]),
                                     "aria-haspopup": "menu",
                                     onClick: (e) => {
-                                        e.stopPropagation(), t(e);
+                                        (e.stopPropagation(), t(e));
                                     },
                                 });
                             },
@@ -1690,7 +1690,7 @@ function nR() {
                     (0, l.jsx)(tY.$, {
                         text: et.intl.formatToPlainString(ee.default.ggcjPR, { count: e.length }),
                         onClick: function () {
-                            (0, nr.default)(), nn.A.openPrivateChannel({ recipientIds: e });
+                            ((0, nr.default)(), nn.A.openPrivateChannel({ recipientIds: e }));
                         },
                         variant: "secondary",
                         size: "sm",
@@ -1830,7 +1830,7 @@ function nY(e) {
         children: (0, l.jsx)(M.D, {
             "aria-label": n,
             onClick: function (e) {
-                e.preventDefault(), e.stopPropagation(), i(e);
+                (e.preventDefault(), e.stopPropagation(), i(e));
             },
             className: s()(nB.hP, r),
             children: (0, l.jsx)(t, { className: nB.Kk, color: "currentColor" }),
@@ -1876,11 +1876,11 @@ function nJ(e) {
     let { user: t } = e,
         r = (0, d.bG)([eK.default], () => eK.default.getCurrentUser()),
         s = i.useCallback(() => {
-            B()(void 0 !== r, "User must be logged in to accept a link request"),
+            (B()(void 0 !== r, "User must be logged in to accept a link request"),
                 (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e("321855"), n.e("943139")]).then(n.bind(n, 179950));
                     return (n) => (0, l.jsx)(e, { ...n, currentUser: r, otherUser: t });
-                });
+                }));
         }, [r, t]);
     return (0, l.jsxs)("div", {
         className: nQ.kL,
@@ -1900,31 +1900,31 @@ function n0(e) {
         s = (0, U.xr)(),
         a = (0, d.bG)([eK.default], () => eK.default.getCurrentUser()),
         c = i.useCallback(() => {
-            B()(void 0 !== a, "User must be logged in to accept a link request"),
+            (B()(void 0 !== a, "User must be logged in to accept a link request"),
                 (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e("916131"), n.e("155738"), n.e("331385")]).then(
                         n.bind(n, 58144),
                     );
                     return (n) => (0, l.jsx)(e, { ...n, currentUser: a, otherUser: t });
-                });
+                }));
         }, [a, t]),
         u = i.useCallback(() => {
-            B()(void 0 !== a, "User must be logged in to decline a link request"),
+            (B()(void 0 !== a, "User must be logged in to decline a link request"),
                 (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e("916131"), n.e("155738"), n.e("384811")]).then(
                         n.bind(n, 389094),
                     );
                     return (n) => (0, l.jsx)(e, { ...n, currentUser: a, otherUser: t });
-                });
+                }));
         }, [a, t]),
         o = i.useCallback(() => {
-            B()(void 0 !== a, "User must be logged in to decline a link request"),
+            (B()(void 0 !== a, "User must be logged in to decline a link request"),
                 (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e("916131"), n.e("155738"), n.e("817219")]).then(
                         n.bind(n, 187278),
                     );
                     return (n) => (0, l.jsx)(e, { ...n, currentUser: a, otherUser: t });
-                });
+                }));
         }, [a, t]);
     return (0, l.jsxs)("div", {
         className: nQ.kL,
@@ -2137,7 +2137,7 @@ function ln(e) {
                             innerRole: i,
                             innerAriaLabel: n,
                             ref: (e) => {
-                                (s.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                ((s.current = e), (t.current = e?.getScrollerNode() ?? null));
                             },
                             sectionHeight: b.h4,
                             rowHeight: b.Gg,
@@ -2323,7 +2323,7 @@ function lS(e) {
         m = null != l,
         h = s && null != x && !m;
     (0, tK.Ay)(() => {
-        (0, lp.d0)("family-center"), null != n && n();
+        ((0, lp.d0)("family-center"), null != n && n());
     });
     let f = { isConsideredAdult: "adult" === l, numOfAcceptedRequests: r, selectedTab: u, selectedTeenId: c },
         j = i.useRef(f);
@@ -2334,14 +2334,14 @@ function lS(e) {
         i.useEffect(() => {
             if (s && m) {
                 let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: l, selectedTeenId: i } = j.current;
-                C.default.track(L.HAw.FAMILY_CENTER_VIEWED, {
+                (C.default.track(L.HAw.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: n,
                     selected_teen_id: i,
                     initial_page: b.zu[l],
                     source: b.iN[t],
                 }),
-                    lE.A.increment({ name: lv.K.FAMILY_CENTER_VIEW });
+                    lE.A.increment({ name: lv.K.FAMILY_CENTER_VIEW }));
             }
         }, [s, m, t]),
         i.useEffect(() => {
@@ -2499,7 +2499,7 @@ function lk() {
         } = lS({
             location: b.MH.SIDENAV,
             onMountEffect: () => {
-                j.I(L.BVt.FAMILY_CENTER), !y.A.isLoading() && y.A.canRefetch() && I.Ay.initialPageLoad();
+                (j.I(L.BVt.FAMILY_CENTER), !y.A.isLoading() && y.A.canRefetch() && I.Ay.initialPageLoad());
             },
         });
     if (

@@ -17,7 +17,7 @@ var i = n(477900),
     E = n(114166),
     N = n(95561),
     I = n(776310),
-    x = n(3900),
+    x = n(207119),
     j = n(615300),
     v = n(717421),
     T = n(21161),
@@ -234,7 +234,7 @@ function eA(e) {
                             h(e.guild);
                     }
                 else h(null);
-                I(!1), j(!0);
+                (I(!1), j(!0));
             }
         }, [n, s, x]),
         v)
@@ -591,7 +591,7 @@ let eD = 12,
                             ? eN.e.EMOJI_IN_BURST_REACTION_HOVER
                             : eN.e.EMOJI_IN_BURST_REACTION_HOVER_UPSELL
                         : eN.e.EMOJI_IN_REACTION_HOVER;
-                N.Ay.trackWithMetadata(ew.HAw.EXPRESSION_TOOLTIP_VIEWED, {
+                (N.Ay.trackWithMetadata(ew.HAw.EXPRESSION_TOOLTIP_VIEWED, {
                     type: t,
                     expression_id: x.id,
                     expression_name: x.name,
@@ -610,7 +610,7 @@ let eD = 12,
                                 object: ew.ZSU.EMOJI_REACTION_TOOLTIP_UPSELL,
                             },
                         }),
-                        (0, F.sq)(ew.U7l.PREMIUM_UPSELL_VIEWED, null, () => (0, J.uq)(eN.e.BURST_REACTION_UPSELL)));
+                        (0, F.sq)(ew.U7l.PREMIUM_UPSELL_VIEWED, null, () => (0, J.uq)(eN.e.BURST_REACTION_UPSELL))));
             }, [D, x, G, Q, eA]);
         function eI(e) {
             let { closePopout: t } = e,
@@ -651,14 +651,14 @@ let eD = 12,
         let eC = (0, f.A)(() => {
                 let e = eO(j, x, w),
                     t = eg.current ? e : eO(j, x, w, ew.tEg);
-                s()("string" == typeof e, "tooltipTextAria is not a string"), er(t), es(e);
+                (s()("string" == typeof e, "tooltipTextAria is not a string"), er(t), es(e));
             }),
             ey = l.useCallback(() => {
-                er(null),
+                (er(null),
                     es(null),
                     ec(!1),
                     eT.A.removeChangeListener(eC),
-                    ef.current && eR.default.track(ew.HAw.CLOSE_POPOUT, { nonce: eA });
+                    ef.current && eR.default.track(ew.HAw.CLOSE_POPOUT, { nonce: eA }));
             }, [eA, eC]),
             eL = l.useRef(null);
         l.useEffect(
@@ -668,27 +668,27 @@ let eD = 12,
             [],
         );
         let ek = l.useCallback(() => {
-            (ef.current = !0), clearTimeout(eL.current), eC(), eT.A.addChangeListener(eC);
+            ((ef.current = !0), clearTimeout(eL.current), eC(), eT.A.addChangeListener(eC));
         }, [eC]);
         function eM(e) {
             let t = w === ee.v.BURST;
-            t && !W && Z && (0, Y.on)({ channelId: j.getChannelId(), messageId: j.id, emoji: x, key: eb.W.HOVER }),
+            (t && !W && Z && (0, Y.on)({ channelId: j.getChannelId(), messageId: j.id, emoji: x, key: eb.W.HOVER }),
                 (eg.current = "focus" === e.type),
                 clearTimeout(eL.current),
                 I ||
                     (eL.current = setTimeout(
                         () => {
-                            ek(), eE();
+                            (ek(), eE());
                         },
                         t ? 750 : 500,
-                    ));
+                    )));
         }
         function eP() {
-            (eg.current = !1),
+            ((eg.current = !1),
                 clearTimeout(eL.current),
                 (eL.current = setTimeout(() => {
                     ey();
-                }, 200));
+                }, 200)));
         }
         (0, c.l0)(() => {
             ey();
@@ -699,7 +699,7 @@ let eD = 12,
         if (G && null != H) {
             let { accentColor: e, backgroundColor: i, opacity: l } = H,
                 a = (0, d.xp)(i ?? "", l) ?? "";
-            B && (eH.borderColor = i), (eH.background = a), (t = e), (n = e);
+            (B && (eH.borderColor = i), (eH.background = a), (t = e), (n = e));
         }
         let eW = ep.current?.getBoundingClientRect(),
             ez = null != et && null != eW,

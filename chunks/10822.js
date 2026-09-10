@@ -5,7 +5,7 @@ var s,
     r = n(582128),
     o = n(503698),
     c = n.n(o),
-    d = n(3900),
+    d = n(207119),
     u = n(837381),
     h = n(17928),
     m = n(446837),
@@ -58,11 +58,11 @@ let E = "u" < typeof window ? m.t : (window.ResizeObserver ?? m.t),
             );
             let R = r.useCallback(
                 (e) => {
-                    null == j.current ? N(!0) : clearTimeout(j.current),
+                    (null == j.current ? N(!0) : clearTimeout(j.current),
                         (j.current = setTimeout(() => {
-                            (j.current = null), N(!1);
+                            ((j.current = null), N(!1));
                         }, 200)),
-                        null != h && h(e);
+                        null != h && h(e));
                 },
                 [h],
             );
@@ -121,9 +121,9 @@ function K(e) {
                     ((s.current = e),
                     await new Promise((l) => {
                         let i = () => {
-                            n.removeScrollCompleteCallback(i), l();
+                            (n.removeScrollCompleteCallback(i), l());
                         };
-                        n.addScrollCompleteCallback(i), (0, w.xI)(t.id, t.guild_id, e);
+                        (n.addScrollCompleteCallback(i), (0, w.xI)(t.id, t.guild_id, e));
                     }),
                     s.current === e && (s.current = null),
                     e === U.A.getSelectedConversationId(t.id) &&
@@ -192,7 +192,7 @@ function em(e, t) {
             state: eu.cmJ.SENT,
         }),
         l = (0, ec.rh)(n);
-    return (l.applicationId = e.applicationId), (l.timestamp = e.timestamp), l;
+    return ((l.applicationId = e.applicationId), (l.timestamp = e.timestamp), l);
 }
 function eg(e, t, n) {
     if (Q.M.NON_COLLAPSIBLE.has(t.type));
@@ -242,11 +242,11 @@ function eO(e) {
         g = r.useCallback((e) => {
             o((t) => {
                 let n = new Set(t);
-                return n.has(e) ? n.delete(e) : n.add(e), n;
+                return (n.has(e) ? n.delete(e) : n.add(e), n);
             });
         }, []),
         A = r.useCallback(() => {
-            F.X.trackThumbsDownReasonSelected({
+            (F.X.trackThumbsDownReasonSelected({
                 channelId: t.id,
                 conversationId: n.id,
                 isFocusMode: l,
@@ -254,7 +254,7 @@ function eO(e) {
                 otherText: m && d.length > 0 ? d : null,
             }),
                 (0, eN.P0)((0, eT.o)(eL.intl.string(eD.default.xrEgG0), ev.Ck.SUCCESS)),
-                i();
+                i());
         }, [t.id, n.id, l, s, d, m, i]);
     return (0, a.jsxs)("div", {
         className: ek.oO,
@@ -357,13 +357,13 @@ function ew(e) {
         { isFocused: g } = (0, H.D7)(),
         A = r.useCallback(() => d(!1), []),
         p = r.useCallback(() => {
-            (0, w.oq)(t.id, n.id, "up"),
-                F.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !0, isFocusMode: g });
+            ((0, w.oq)(t.id, n.id, "up"),
+                F.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !0, isFocusMode: g }));
         }, [t.id, n.id, g]),
         f = r.useCallback(() => {
-            (0, w.oq)(t.id, n.id, "down"),
+            ((0, w.oq)(t.id, n.id, "down"),
                 d(!0),
-                F.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !1, isFocusMode: g });
+                F.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !1, isFocusMode: g }));
         }, [t.id, n.id, g]),
         C = r.useCallback(
             () => (0, a.jsx)(eO, { channel: t, conversation: n, isFocusMode: g, onClose: A }),
@@ -566,7 +566,7 @@ let tx = function (e, t, n) {
                             td.A.isSpeakingMessage(t, e) ? (0, tc.pr)() : (0, tc.kP)(d, c));
                         break;
                     case "t":
-                        if (i && (0, tr.D1)(d, c)) n.preventDefault(), (0, to.Tv)(d, c, "Message Shortcut");
+                        if (i && (0, tr.D1)(d, c)) (n.preventDefault(), (0, to.Tv)(d, c, "Message Shortcut"));
                         else if (c.hasFlag(eu.pr7.HAS_THREAD)) {
                             let e = eQ.A.getChannel(en.default.castMessageIdAsChannelId(c.id));
                             null != e && (i || o) && (n.preventDefault(), (0, to.JA)(e, o));
@@ -651,7 +651,7 @@ let tO = r.memo(function (e) {
             g = r.useCallback(() => {
                 if (m?.isBlockedEdit) {
                     var e;
-                    (e = l.id), T.h.dispatch({ type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: e });
+                    ((e = l.id), T.h.dispatch({ type: "REMOVE_AUTOMOD_MESSAGE_NOTICE", messageId: e }));
                 } else j.A.deleteMessage(l.channel_id, l.id, !0);
             }, [l, m]);
         return (
@@ -968,8 +968,8 @@ function nT(e) {
                 b = (0, h.bG)([ts.A], () => null != t.guild_id && ts.A.isLurking(t.guild_id), [t]),
                 T = c.id === u,
                 v = (x || n.canDeleteOwnMessage(u)) && m && !eu.MRS.UNDELETABLE.has(n.type);
-            n.type === eu.lAJ.AUTO_MODERATION_ACTION && (v = v && x),
-                t.isModeratorReportChannel() && (v = v && n.id !== A?.id && !(0, e4.A)(n));
+            (n.type === eu.lAJ.AUTO_MODERATION_ACTION && (v = v && x),
+                t.isModeratorReportChannel() && (v = v && n.id !== A?.id && !(0, e4.A)(n)));
             let M = (0, nh.ul)(n),
                 R = (0, tp.A)(n, t),
                 D = !t.isSystemDM() && (0, tA.A)(n, u) && m && !g,
@@ -1030,13 +1030,13 @@ function nT(e) {
         })(e),
         M = r.useRef(null),
         R = r.useCallback(() => {
-            S ||
+            (S ||
                 nc.default.track(eu.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                     location: "expanding_buttons",
                 }),
-                b({ moreUtilities: !S });
+                b({ moreUtilities: !S }));
         }, [S, b, n]),
         D = r.useCallback(() => {
             b({ emojiPicker: !I });
@@ -1305,8 +1305,8 @@ function nR(e, t, n) {
         closePopout: n,
         onSelectEmoji: (l) => {
             let { emoji: i, willClose: s, isBurst: a } = l;
-            nM({ type: "add", emoji: i, channel: e, message: t, location: nn.qN.MESSAGE_REACTION_PICKER, isBurst: a }),
-                s && (a ? tw()(n, 150)() : n());
+            (nM({ type: "add", emoji: i, channel: e, message: t, location: nn.qN.MESSAGE_REACTION_PICKER, isBurst: a }),
+                s && (a ? tw()(n, 150)() : n()));
         },
         analyticsOverride: i,
         messageId: t.id,
@@ -1816,13 +1816,13 @@ let n4 = r.memo(function (e) {
         { isFocused: G, hasFocused: U, handleFocus: w, handleBlur: F } = (0, tt.G8)(I),
         H = r.useCallback(
             (e) => {
-                w(e), L(e);
+                (w(e), L(e));
             },
             [w, L],
         ),
         B = r.useCallback(
             (e) => {
-                F(e), k();
+                (F(e), k());
             },
             [F, k],
         ),
@@ -1871,7 +1871,7 @@ let n4 = r.memo(function (e) {
         ep = (0, tI.A)({ message: i, channel: o, officialMessagesEnabled: eg }),
         ef = r.useRef(window),
         eC = null != em;
-    (n =
+    ((n =
         i.type === eu.lAJ.CUSTOM_GIFT
             ? ""
             : !K && eC
@@ -1880,7 +1880,7 @@ let n4 = r.memo(function (e) {
                     return (0, a.jsx)(tG, { message: n, content: t, compact: l ?? !1 });
                 })(e, X)
               : (0, nw.Ay)(e, X, K)),
-        (n = (0, a.jsx)(tn.x, { value: W, children: n }));
+        (n = (0, a.jsx)(tn.x, { value: W, children: n })));
     let ex = i.id === f,
         eE = (0, a.jsx)(g.vN, {
             offset: { left: 4, right: 4 },
@@ -2002,7 +2002,7 @@ let n4 = r.memo(function (e) {
                     isSystemMessage: (0, e4.A)(i),
                     hasReply: i.type === eu.lAJ.REPLY,
                     messageRef: (e) => {
-                        (ep.current = e), (ef.current = e?.ownerDocument?.defaultView ?? window);
+                        ((ep.current = e), (ef.current = e?.ownerDocument?.defaultView ?? window));
                     },
                     author: el,
                 }),
@@ -2241,11 +2241,15 @@ function lj(e) {
             null != e && (E(e.getDistanceFromTop() > 5), I(e.getDistanceFromBottom() > 5));
         }, [i]),
         j = (0, h.bG)([eA.A], () => eA.A.getMessages(n.id), [n.id]),
-        y = (0, h.bG)([U.A], () => {
-            if (l?.id == null) return null;
-            let e = U.A.getConversationMetadata(n.id, l.id);
-            return e?.fullyHydrated === !0 ? e.hydratedMessages : null;
-        }, [n.id, l]),
+        y = (0, h.bG)(
+            [U.A],
+            () => {
+                if (l?.id == null) return null;
+                let e = U.A.getConversationMetadata(n.id, l.id);
+                return e?.fullyHydrated === !0 ? e.hydratedMessages : null;
+            },
+            [n.id, l],
+        ),
         b = r.useMemo(
             () =>
                 null != l
@@ -2268,7 +2272,7 @@ function lj(e) {
                                   )
                                       for (let e of n)
                                           s.has(e.id) || (i.push({ record: e, isOnTopic: !0 }), s.add(e.id));
-                                  return i.sort((e, t) => en.default.compare(e.record.id, t.record.id)), i;
+                                  return (i.sort((e, t) => en.default.compare(e.record.id, t.record.id)), i);
                               })(t, n, l),
                               s = [],
                               a = null,
@@ -2284,7 +2288,7 @@ function lj(e) {
                                       : ((e = { group: { type: n, content: [], key: t.record.id }, isOnTopic: !1 }),
                                         s.push(e));
                                   let i = { type: eu.TZK.MESSAGE, content: t.record, groupId: r };
-                                  e.group.content.push(i), t.isOnTopic && (e.isOnTopic = !0);
+                                  (e.group.content.push(i), t.isOnTopic && (e.isOnTopic = !0));
                               } else s.push({ record: t.record, isOnTopic: t.isOnTopic, groupId: r });
                               a = t.record;
                           }
@@ -2364,19 +2368,23 @@ function ly(e) {
                             } catch (e) {}
                         await l_(m);
                     }
-                    l(e), d(!1), (u.current = !1);
+                    (l(e), d(!1), (u.current = !1));
                 }
             },
             [t.id, o, d, l, m, g],
         );
-    !(function (e, t) {
+    (!(function (e, t) {
         let { isFocused: n } = (0, H.D7)(),
-            l = (0, h.cf)([eA.A], () => {
-                let t = eA.A.getMessages(e.id);
-                return { jumpTargetId: t.jumpTargetId ?? null, jumpSequenceId: t.jumpSequenceId };
-            }, [e.id]),
+            l = (0, h.cf)(
+                [eA.A],
+                () => {
+                    let t = eA.A.getMessages(e.id);
+                    return { jumpTargetId: t.jumpTargetId ?? null, jumpSequenceId: t.jumpSequenceId };
+                },
+                [e.id],
+            ),
             i = r.useRef(l);
-        r.useEffect(() => {
+        (r.useEffect(() => {
             if (!n) return;
             let t = eA.A.getMessages(e.id);
             i.current = { jumpTargetId: t.jumpTargetId ?? null, jumpSequenceId: t.jumpSequenceId };
@@ -2385,7 +2393,7 @@ function ly(e) {
                 if (!n) return;
                 let { jumpTargetId: e, jumpSequenceId: s } = i.current;
                 (l.jumpTargetId !== e || l.jumpSequenceId !== s) && t("navigation");
-            }, [n, l, t]);
+            }, [n, l, t]));
     })(t, A),
         r.useEffect(() => {
             if (s)
@@ -2398,7 +2406,7 @@ function ly(e) {
             function e() {
                 A("return");
             }
-        }, [s, A]);
+        }, [s, A]));
     let p = r.useCallback(() => {
             A("return");
         }, [A]),
@@ -2776,7 +2784,7 @@ function lz(e) {
                     function t(e) {
                         return n(e?.id ?? null);
                     }
-                    return e.addAutomaticAnchorCallback(t, !0), () => e.removeAutomaticAnchorCallback(t);
+                    return (e.addAutomaticAnchorCallback(t, !0), () => e.removeAutomaticAnchorCallback(t));
                 }, [e]),
                 t
             );
@@ -2849,20 +2857,20 @@ function lz(e) {
     }, [t.id]);
     let v = r.useCallback(
             (e) => {
-                null != e &&
+                (null != e &&
                     e !== i &&
                     F.X.trackPreviewImpression({ channelId: t.id, conversationId: e, isFocusMode: o }),
                     N(e),
-                    null != e && e !== i && (0, w.qC)(t.id, t.guild_id, e, { previewLimit: 4 });
+                    null != e && e !== i && (0, w.qC)(t.id, t.guild_id, e, { previewLimit: 4 }));
             },
             [t.id, t.guild_id, o, i],
         ),
         M = r.useCallback(() => {
-            N(null), E();
+            (N(null), E());
         }, [E]),
         R = r.useCallback(
             (e) => {
-                F.X.trackTopicsUnitClicked({ channelId: t.id, conversationId: e, isFocusMode: o }), s(e), E();
+                (F.X.trackTopicsUnitClicked({ channelId: t.id, conversationId: e, isFocusMode: o }), s(e), E());
             },
             [t.id, E, o, s],
         ),
@@ -2870,14 +2878,18 @@ function lz(e) {
         L = r.useCallback(
             (e) => {
                 let t;
-                null != (t = n.ref.current?.getScrollerNode?.()) && 0 === e.deltaMode && (t.scrollTop += e.deltaY),
-                    C && (N(null), E());
+                (null != (t = n.ref.current?.getScrollerNode?.()) && 0 === e.deltaMode && (t.scrollTop += e.deltaY),
+                    C && (N(null), E()));
             },
             [n, C, E],
         ),
         k = r.useCallback(() => {
-            x(!0),
-                F.X.trackTopicsUnitImpression({ channelId: t.id, conversationIds: I.map((e) => e.id), isFocusMode: o });
+            (x(!0),
+                F.X.trackTopicsUnitImpression({
+                    channelId: t.id,
+                    conversationIds: I.map((e) => e.id),
+                    isFocusMode: o,
+                }));
         }, [t.id, I, o]);
     return 0 === l.length
         ? null
@@ -2976,7 +2988,7 @@ var ie = n(830178),
 function id(e, t) {
     let n = e.offsetTop,
         l = e.offsetParent;
-    for (; null != l && l !== t && (0, il.vq)(l, HTMLElement); ) (n += l.offsetTop ?? 0), (l = l.offsetParent);
+    for (; null != l && l !== t && (0, il.vq)(l, HTMLElement);) ((n += l.offsetTop ?? 0), (l = l.offsetParent));
     return n;
 }
 function iu(e) {
@@ -3028,8 +3040,8 @@ class im {
             this.pinned = !1;
         else {
             const t = l1.A.isAtBottom(e.channel.id);
-            (this.pinned = t ?? !0),
-                (this.initialScrollTop = t ? null : (l1.A.getChannelDimensions(e.channel.id)?.scrollTop ?? null));
+            ((this.pinned = t ?? !0),
+                (this.initialScrollTop = t ? null : (l1.A.getChannelDimensions(e.channel.id)?.scrollTop ?? null)));
         }
     }
     isReady() {
@@ -3082,7 +3094,7 @@ class im {
         return e >= t - n - 2 && !this.props.messages.hasMoreAfter;
     }
     mergePropsAndUpdate(e) {
-        this.mergePropsAndUpdate_(e), this.props.messages.ready && this.enableAutomaticAck();
+        (this.mergePropsAndUpdate_(e), this.props.messages.ready && this.enableAutomaticAck());
     }
     mergePropsAndUpdate_(e) {
         let t = this.props.messages,
@@ -3118,7 +3130,7 @@ class im {
             } else {
                 let l,
                     i = t.first();
-                null != i &&
+                (null != i &&
                     e.messages.last() !== t.last() &&
                     e.messages.first() !== t.first() &&
                     (l = en.default.extractTimestamp(i.id)),
@@ -3127,12 +3139,12 @@ class im {
                         animate: !0,
                         fromTimestamp: l,
                         onJumpComplete: e.messages.onJumpComplete,
-                    });
+                    }));
                 return;
             }
         }
         if (e.messages.jumpedToPresent && t.jumpSequenceId !== e.messages.jumpSequenceId) {
-            (this.jumping = !0), this.scrollTo(0), this.setScrollToBottom(!0);
+            ((this.jumping = !0), this.scrollTo(0), this.setScrollToBottom(!0));
             return;
         }
         let a = e.messages.last(),
@@ -3188,7 +3200,7 @@ class im {
                 r++;
                 continue;
             }
-            null != d && (d.offsetTop >= i + s || r === e.length - 1) && ((a = d), (o = !0)), r++;
+            (null != d && (d.offsetTop >= i + s || r === e.length - 1) && ((a = d), (o = !0)), r++);
         }
         return a;
     }
@@ -3222,7 +3234,7 @@ class im {
         let e = this.getAnchorFixData();
         if (null == e) return void this.handleScroll();
         let { node: t, fixedScrollTop: n } = e;
-        null != this.focusAnchor
+        (null != this.focusAnchor
             ? (this.isPinned()
                   ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll)
                   : this.mergeTo(n, this.handleScroll),
@@ -3233,7 +3245,7 @@ class im {
               }))
             : this.mergeTo(n, this.handleScroll),
             this.isActivelyScrolling() ? this.setAutomaticAnchor(null) : this.setAutomaticAnchor(this.findAnchor()),
-            this.isLoading() || (this.messageFetchAnchor = null);
+            this.isLoading() || (this.messageFetchAnchor = null));
     }
     hasAnchor() {
         return null != this.focusAnchor || null != this.messageFetchAnchor || null != this.automaticAnchor;
@@ -3260,14 +3272,14 @@ class im {
             n = this.ref.current?.getScrollerNode();
         if (null == this.automaticAnchor || null == n) return;
         let l = this.getAnchorData(this.automaticAnchor.id, e);
-        t && null != l && null != this.automaticAnchor && (l.offsetFromTop = this.automaticAnchor.offsetFromTop),
-            this.setAutomaticAnchor(l);
+        (t && null != l && null != this.automaticAnchor && (l.offsetFromTop = this.automaticAnchor.offsetFromTop),
+            this.setAutomaticAnchor(l));
     }
     updateVisibleMessagesDebounced = lm().debounce(io.s_, 300);
     setAutomaticAnchor(e) {
-        (this.automaticAnchor = e),
+        ((this.automaticAnchor = e),
             this._automaticAnchorCallbacks?.forEach((e) => e(this.automaticAnchor, this._bottomAnchor)),
-            this.updateVisibleMessagesDebounced(e?.id, this._bottomAnchor?.id);
+            this.updateVisibleMessagesDebounced(e?.id, this._bottomAnchor?.id));
     }
     getScrollerState() {
         return this.ref.current?.getScrollerState() ?? ih;
@@ -3283,7 +3295,7 @@ class im {
                     : ((this.isAtBottom = !1), this.props.handleScrollFromBottom())),
             t.offsetHeight !== this.offsetHeightCache || t.scrollHeight !== this.scrollHeightCache)
         )
-            (this.scrollCounter = 0),
+            ((this.scrollCounter = 0),
                 clearTimeout(this.anchorTimeout),
                 this.isPinned() ||
                     (null == this.automaticAnchor
@@ -3291,7 +3303,7 @@ class im {
                         : this.updateAutomaticAnchor(t.scrollTop, !0)),
                 clearTimeout(this.anchorTimeout),
                 this.fixScrollPosition(t.offsetHeight, t.scrollHeight),
-                (this.scrollTopCache = t.scrollTop);
+                (this.scrollTopCache = t.scrollTop));
         else {
             if (null != e && e.target !== this.ref.current?.getScrollerNode()) return;
             this.scrollTopCache !== t.scrollTop &&
@@ -3309,7 +3321,7 @@ class im {
                 (this.scrollTopCache = t.scrollTop),
                 clearTimeout(this.anchorTimeout),
                 (this.anchorTimeout = setTimeout(() => {
-                    (this.scrollCounter = 0), (this.anchorTimeout = null), (this.prevScrollTop = null);
+                    ((this.scrollCounter = 0), (this.anchorTimeout = null), (this.prevScrollTop = null));
                     let { scrollHeight: e, offsetHeight: t } = this.getScrollerState();
                     this.isHeightChange(t, e)
                         ? this.handleScroll()
@@ -3321,20 +3333,21 @@ class im {
             this.updateStoreDimensionsDebounced(),
             this.isScrollLoadingDisabled())
         )
-            return this.props.canLoadMore || this.enableAutomaticAck(), this.handleScrollSpeed(t);
+            return (this.props.canLoadMore || this.enableAutomaticAck(), this.handleScrollSpeed(t));
         let l = this.isInScrollTriggerLoadingRegion(t);
-        1 === l ? this.loadMore() : 2 === l ? this.loadMore(!0) : this.enableAutomaticAck(), this.handleScrollSpeed(t);
+        (1 === l ? this.loadMore() : 2 === l ? this.loadMore(!0) : this.enableAutomaticAck(),
+            this.handleScrollSpeed(t));
     };
     handleResize = (e, t) => {
         let { offsetHeightCache: n, scrollHeightCache: l } = this;
-        "container" === t ? (n = e.contentRect.height) : "content" === t && (l = e.contentRect.height),
-            this.isHeightChange(n, l) && this.fixScrollPosition(n, l);
+        ("container" === t ? (n = e.contentRect.height) : "content" === t && (l = e.contentRect.height),
+            this.isHeightChange(n, l) && this.fixScrollPosition(n, l));
     };
     handleMouseDown = (e) => {
         e.target === e.currentTarget && (this.dragging = !0);
     };
     handleMouseUp = () => {
-        (this.dragging = !1), this.handleScroll();
+        ((this.dragging = !1), this.handleScroll());
     };
     isHeightChange(e, t) {
         return e !== this.offsetHeightCache || t !== this.scrollHeightCache;
@@ -3378,12 +3391,12 @@ class im {
             }));
     }
     fixScrollPosition(e, t) {
-        (this.offsetHeightCache = e),
+        ((this.offsetHeightCache = e),
             (this.scrollHeightCache = t),
             this.fixJumpTarget(),
             this.isPinned() && null == this.messageFetchAnchor && null == this.focusAnchor
                 ? this.scrollTo(Number.MAX_SAFE_INTEGER, !1, this.handleScroll)
-                : this.fixAnchorScrollPosition();
+                : this.fixAnchorScrollPosition());
     }
     fixJumpTarget() {
         if (!this.isJumping()) return;
@@ -3406,13 +3419,16 @@ class im {
             n = arguments.length > 2 ? arguments[2] : void 0,
             l = this.getDocument()?.getElementById(n1.q4),
             i = () => {
-                (this.jumping = !1), this.setAutomaticAnchor(this.findAnchor()), null != n && n(), this.handleScroll();
+                ((this.jumping = !1),
+                    this.setAutomaticAnchor(this.findAnchor()),
+                    null != n && n(),
+                    this.handleScroll());
             };
-        (this.pinned = !1),
+        ((this.pinned = !1),
             (this.jumping = e),
             null != l
                 ? this.scrollTo(this.getOffsetOrientationFromNode(l, t, this.newMessageBarBuffer()), e, i)
-                : this.scrollTo(this.getOffsetToPreventLoading("top"), e, i);
+                : this.scrollTo(this.getOffsetToPreventLoading("top"), e, i));
     }
     getOffsetOrientationFromNode(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
@@ -3452,7 +3468,7 @@ class im {
                 let e = s.first();
                 null != e && (t = e.id);
             }
-            i?.pauseUntilUserScroll === !0 && (e.loadMorePausedUntilUserScroll = !0),
+            (i?.pauseUntilUserScroll === !0 && (e.loadMorePausedUntilUserScroll = !0),
                 (e.messageFetchAnchor = e.findFetchAnchor(l)),
                 (e.scrollHeightBeforeLoad = e.scrollHeightCache),
                 (e.loading = !0),
@@ -3462,28 +3478,28 @@ class im {
                     after: n,
                     limit: Math.min(eu.EMb, 2 * (0, l5.h)("scrollManager.loadMore")),
                     ...(i?.truncate === !1 ? null : { truncate: !0 }),
-                });
+                }));
         };
     })();
     scrollTo(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0;
-        this.ref.current?.scrollTo({ to: e, animate: !N.Ay.useReducedMotion && t, callback: n }),
-            this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced();
+        (this.ref.current?.scrollTo({ to: e, animate: !N.Ay.useReducedMotion && t, callback: n }),
+            this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced());
     }
     mergeTo(e, t) {
-        this.ref.current?.mergeTo({ to: e, callback: t }),
-            this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced();
+        (this.ref.current?.mergeTo({ to: e, callback: t }),
+            this.isPinned() ? this.updateStoreDimensions() : this.updateStoreDimensionsDebounced());
     }
     setScrollToBottom() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             { messages: t, channel: n } = this.props;
         if (t.hasMoreAfter)
-            j.A.jumpToPresent(n.id, (0, l5.h)("scrollManager.jumpToPresent")),
-                (0, eY.uh)(n.getGuildId() ?? eu.ME, n.id);
+            (j.A.jumpToPresent(n.id, (0, l5.h)("scrollManager.jumpToPresent")),
+                (0, eY.uh)(n.getGuildId() ?? eu.ME, n.id));
         else
             this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
-                (this.jumping = !1), this.handleScroll();
+                ((this.jumping = !1), this.handleScroll());
             });
     }
     updateStoreDimensionsDebounced = lm().debounce(this.updateStoreDimensions, 200);
@@ -3511,20 +3527,20 @@ class im {
         if (null == this.ref.current) return;
         if (t === this.props.channel.id) return void this.scrollTo(0);
         let s = this.getElementFromMessageId(t);
-        this.isJumping() ||
+        (this.isJumping() ||
             !n ||
             null == l ||
             N.Ay.useReducedMotion ||
             (en.default.extractTimestamp(t) > l ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)),
             (this.pinned = !1),
-            (this.jumping = !0);
+            (this.jumping = !0));
         let a = () => {
-            (this.jumping = !1),
+            ((this.jumping = !1),
                 (0, il.vq)(s) && ((s.tabIndex = -1), (0, ii.se)() || s.focus({ preventScroll: !0 })),
                 (this.scrollCounter = 0),
                 this.handleScroll(),
                 i?.(),
-                this._scrollCompleteCallbacks.forEach((e) => e());
+                this._scrollCompleteCallbacks.forEach((e) => e()));
         };
         (0, il.vq)(s)
             ? this.scrollTo(
@@ -3557,30 +3573,30 @@ class im {
     getSnapshotBeforeUpdate(e) {
         if (this.hasAnchor() || null != e) {
             let { scrollTop: t, offsetHeight: n, scrollHeight: l } = this.getScrollerState();
-            this.updateFocusAnchor(e, t, n), this.updateFetchAnchor(t, n, l), this.updateAutomaticAnchor(t);
+            (this.updateFocusAnchor(e, t, n), this.updateFetchAnchor(t, n, l), this.updateAutomaticAnchor(t));
         }
     }
     addAutomaticAnchorCallback(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        this._automaticAnchorCallbacks.push(e),
+        (this._automaticAnchorCallbacks.push(e),
             (this._automaticAnchorCallbacks = lm().uniq(this._automaticAnchorCallbacks)),
-            !0 === t && this.setAutomaticAnchor(this.findAnchor());
+            !0 === t && this.setAutomaticAnchor(this.findAnchor()));
     }
     removeAutomaticAnchorCallback(e) {
         this._automaticAnchorCallbacks = lm().without(this._automaticAnchorCallbacks, e);
     }
     addScrollCompleteCallback(e) {
-        this._scrollCompleteCallbacks.push(e),
-            (this._scrollCompleteCallbacks = lm().uniq(this._scrollCompleteCallbacks));
+        (this._scrollCompleteCallbacks.push(e),
+            (this._scrollCompleteCallbacks = lm().uniq(this._scrollCompleteCallbacks)));
     }
     removeScrollCompleteCallback(e) {
         this._scrollCompleteCallbacks = lm().without(this._scrollCompleteCallbacks, e);
     }
     cleanup() {
-        (this.acking = !1),
+        ((this.acking = !1),
             this.updateStoreDimensionsDebounced.cancel(),
             this._automaticAnchorCallbacks.forEach((e) => this.removeAutomaticAnchorCallback(e)),
-            (0, ia.Z5)(this.props.channel.id, this.props.windowId);
+            (0, ia.Z5)(this.props.channel.id, this.props.windowId));
     }
 }
 n(667532);
@@ -3665,7 +3681,8 @@ function iM(e) {
         iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW });
     }, []);
     let u = r.useCallback(() => {
-        c?.(), (0, ib._$)({ channelId: t, warningId: n, senderId: l, warningType: i, cta: ib.Wm.USER_BANNER_DISMISS });
+        (c?.(),
+            (0, ib._$)({ channelId: t, warningId: n, senderId: l, warningType: i, cta: ib.Wm.USER_BANNER_DISMISS }));
     }, [c, t, n, l, i]);
     return (0, a.jsx)(iv, { buttons: d, description: o, header: s, onDismiss: u });
 }
@@ -3681,20 +3698,20 @@ function iD(e) {
             (0, ij.xi)(t, [l]);
         }, [t, l]);
     function c(e) {
-        ix.A.updateChannelOverrideSettings(null, t, { muted: !0 }, iR.fd.Muted),
+        (ix.A.updateChannelOverrideSettings(null, t, { muted: !0 }, iR.fd.Muted),
             iS.A.showMuteSuccessToast(i, t),
             (0, ib._$)({ channelId: t, warningId: l, senderId: i, warningType: iy._j.LIKELY_ATO, cta: e }),
-            o();
+            o());
     }
     return (
         r.useEffect(() => {
-            (0, ib.mO)(eu.HAw.SAFETY_WARNING_VIEWED, {
+            ((0, ib.mO)(eu.HAw.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: l,
                 senderId: i,
                 warningType: iy._j.LIKELY_ATO,
             }),
-                iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW });
+                iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW }));
         }, [t, l, i]),
         (0, a.jsx)(iM, {
             channelId: t,
@@ -3709,7 +3726,7 @@ function iD(e) {
                     text: eL.intl.string(eL.t.tC1pvL),
                     variant: "primary",
                     onClick: function () {
-                        (0, iC.openModalLazy)(async () => {
+                        ((0, iC.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e("532648"), n.e("482911"), n.e("547894")]).then(
                                 n.bind(n, 129493),
                             );
@@ -3742,7 +3759,7 @@ function iD(e) {
                                                 description: eL.intl.string(eL.t.w2ve0t),
                                                 buttonText: eL.intl.string(eL.t.ftIK2A),
                                                 onButtonPress: () => {
-                                                    c(ib.Wm.USER_MODAL_MUTE), o();
+                                                    (c(ib.Wm.USER_MODAL_MUTE), o());
                                                 },
                                             },
                                             "likely-ato-mute",
@@ -3775,7 +3792,7 @@ function iD(e) {
                                 senderId: i,
                                 warningType: iy._j.LIKELY_ATO,
                                 cta: ib.Wm.OPEN_MORE_TIPS,
-                            });
+                            }));
                     },
                 },
                 { text: eL.intl.string(eL.t.ftIK2A), onClick: () => c(ib.Wm.USER_BANNER_MUTE) },
@@ -3810,7 +3827,7 @@ function iP(e) {
                         return (
                             e.addEventListener("scroll", i, { passive: !0 }),
                             () => {
-                                e.removeEventListener("scroll", i), (s.current = null), (u.current = !1), d(!1);
+                                (e.removeEventListener("scroll", i), (s.current = null), (u.current = !1), d(!1));
                             }
                         );
                     function i() {
@@ -4115,10 +4132,10 @@ function sE(e) {
         } = (0, lG.A)({ userId: i?.id, size: lP._3.SIZE_80, animateOnHover: !0 }),
         [m, g] = r.useState(!1),
         A = r.useCallback(() => {
-            d.onMouseEnter(), g(!0);
+            (d.onMouseEnter(), g(!0));
         }, [d]),
         p = r.useCallback(() => {
-            d.onMouseLeave(), g(!1);
+            (d.onMouseLeave(), g(!1));
         }, [d]),
         f = !n.isMultiUserDM() && i?.displayNameStyles != null;
     return (0, a.jsxs)(iw.Ay, {
@@ -4245,22 +4262,26 @@ function sU(e) {
                     .value(),
             [t, s, u],
         ),
-        g = (0, h.yK)([l4.default], () => {
-            let e = {};
-            for (let n of (null != d && (e[d.id] = d), Object.values(t.permissionOverwrites))) {
-                if (n.type !== nF.r2.MEMBER || null != e[n.id]) continue;
-                let t = l4.default.getUser(n.id);
-                null != t && (e[t.id] = t);
-            }
-            return lm()(e)
-                .filter((e) => {
-                    let n = sk.$3({ permission: eu.xBc.ADMINISTRATOR, user: e, context: t }),
-                        l = t.permissionOverwrites[e.id] ?? sk.x3,
-                        i = sS.zy(l.allow, eu.xBc.VIEW_CHANNEL);
-                    return n || i;
-                })
-                .value();
-        }, [t, d]),
+        g = (0, h.yK)(
+            [l4.default],
+            () => {
+                let e = {};
+                for (let n of (null != d && (e[d.id] = d), Object.values(t.permissionOverwrites))) {
+                    if (n.type !== nF.r2.MEMBER || null != e[n.id]) continue;
+                    let t = l4.default.getUser(n.id);
+                    null != t && (e[t.id] = t);
+                }
+                return lm()(e)
+                    .filter((e) => {
+                        let n = sk.$3({ permission: eu.xBc.ADMINISTRATOR, user: e, context: t }),
+                            l = t.permissionOverwrites[e.id] ?? sk.x3,
+                            i = sS.zy(l.allow, eu.xBc.VIEW_CHANNEL);
+                        return n || i;
+                    })
+                    .value();
+            },
+            [t, d],
+        ),
         A = th.A.can(eu.xBc.MANAGE_CHANNELS, t) || th.A.can(eu.xBc.MANAGE_ROLES, t),
         p = r.useCallback(() => l(!1), []);
     return (0, a.jsxs)(iw.Ay, {
@@ -4343,7 +4364,7 @@ function sU(e) {
                                       disabled: !A,
                                       verified: i,
                                       onClick: () => {
-                                          sM.A.open(t.guild_id, eu.BEX.MEMBERS), sM.A.selectRole(e.id);
+                                          (sM.A.open(t.guild_id, eu.BEX.MEMBERS), sM.A.selectRole(e.id));
                                       },
                                   },
                                   e.id,
@@ -4536,7 +4557,7 @@ function s8(e) {
         variant: "secondary",
         text: eL.intl.string(eL.t["5S3sQF"]),
         onClick: () => {
-            (0, iC.openModal)((e) =>
+            ((0, iC.openModal)((e) =>
                 (0, a.jsx)(s$.Modal, {
                     title: eL.intl.string(eL.t["DT39A+"]),
                     subtitle: eL.intl.formatToPlainString(eL.t.QWGvxA, { applicationName: n.name }),
@@ -4546,7 +4567,7 @@ function s8(e) {
                             text: eL.intl.string(eL.t.xUqheM),
                             variant: "critical-primary",
                             onClick: () => {
-                                s(), e.onClose();
+                                (s(), e.onClose());
                             },
                         },
                     ],
@@ -4557,7 +4578,7 @@ function s8(e) {
                     application_id: n.id,
                     channel_id: t.id,
                     channel_type: t.type,
-                });
+                }));
         },
     });
 }
@@ -5273,10 +5294,10 @@ function rg(e) {
         i = (0, aY.uW)(t),
         [s, o] = r.useState(!1);
     function c() {
-        o(!0),
+        (o(!0),
             aZ.A.resolveFlag(t.id).then(() => {
                 o(!1);
-            });
+            }));
     }
     return i
         ? (0, a.jsx)(eR.$, {
@@ -5649,7 +5670,8 @@ function rO(e) {
             [t, l, i],
         );
     r.useEffect(() => {
-        (0, ib.QF)({ ...c, viewName: ib.gN.SAFETY_WARNING_BANNER }), iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW });
+        ((0, ib.QF)({ ...c, viewName: ib.gN.SAFETY_WARNING_BANNER }),
+            iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW }));
     }, [c]);
     let d = r.useCallback(
             (e) => {
@@ -5658,7 +5680,7 @@ function rO(e) {
             [c],
         ),
         u = r.useCallback(() => {
-            (0, iC.openModalLazy)(
+            ((0, iC.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("456510"),
@@ -5683,13 +5705,13 @@ function rO(e) {
                 },
                 { modalKey: rP.V },
             ),
-                d(ib.Wm.USER_BANNER_OPEN_SAFETY_TOOLS);
+                d(ib.Wm.USER_BANNER_OPEN_SAFETY_TOOLS));
         }, [t, i, l, d]),
         m = r.useCallback(() => {
-            s(), d(ib.Wm.USER_BANNER_BLOCK_CONFIRM);
+            (s(), d(ib.Wm.USER_BANNER_BLOCK_CONFIRM));
         }, [s, d]),
         g = r.useCallback(() => {
-            s(), d(ib.Wm.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+            (s(), d(ib.Wm.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
         }, [s, d]),
         A = r.useCallback(() => {
             (0, iC.openModalLazy)(async () => {
@@ -5701,7 +5723,7 @@ function rO(e) {
                         onBlock: m,
                         onBlockAndReport: g,
                         onCancel: () => {
-                            s?.(), d(ib.Wm.USER_BANNER_BLOCK_CANCEL);
+                            (s?.(), d(ib.Wm.USER_BANNER_BLOCK_CANCEL));
                         },
                         onClose: s,
                         userId: i,
@@ -5729,24 +5751,24 @@ function rU(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: i } = (0, h.cf)([nB.A], () => ({ isIgnored: nB.A.isIgnored(t) }), [t]),
         s = r.useCallback(() => {
-            (0, ib._$)({
+            ((0, ib._$)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
                 warningType: iy._j.STRANGER_DANGER,
                 cta: ib.Wm.USER_MODAL_IGNORE,
             }),
-                ai.A.ignoreUser(t, "web_stranger_danger_more", n);
+                ai.A.ignoreUser(t, "web_stranger_danger_more", n));
         }, [n, l, t]),
         o = r.useCallback(() => {
-            (0, ib._$)({
+            ((0, ib._$)({
                 channelId: n,
                 warningId: l,
                 senderId: t,
                 warningType: iy._j.STRANGER_DANGER,
                 cta: ib.Wm.USER_MODAL_UNIGNORE,
             }),
-                ai.A.unignoreUser(t, "web_stranger_danger_more", n);
+                ai.A.unignoreUser(t, "web_stranger_danger_more", n));
         }, [n, l, t]);
     return (0, a.jsx)(i_.PQ, {
         title: eL.intl.string(eL.t.avyV7P),
@@ -5764,10 +5786,16 @@ function rw(e) {
         c = (0, rP.eT)(),
         d = r.useCallback(
             (e) => () => {
-                ai.A.blockUser(i, { location: rP.Rx }).then(() => {
+                (ai.A.blockUser(i, { location: rP.Rx }).then(() => {
                     o();
                 }),
-                    (0, ib._$)({ channelId: t, warningId: l, senderId: i, warningType: iy._j.STRANGER_DANGER, cta: e });
+                    (0, ib._$)({
+                        channelId: t,
+                        warningId: l,
+                        senderId: i,
+                        warningType: iy._j.STRANGER_DANGER,
+                        cta: e,
+                    }));
             },
             [o, t, l, i],
         );
@@ -5782,27 +5810,27 @@ function rw(e) {
                     userId: i,
                     confirmBlock: d(e),
                     onCancel: () => {
-                        r?.(),
+                        (r?.(),
                             (0, ib._$)({
                                 channelId: t,
                                 warningId: l,
                                 senderId: i,
                                 warningType: iy._j.STRANGER_DANGER,
                                 cta: s,
-                            });
+                            }));
                     },
                 });
         });
     }
     return (
         r.useEffect(() => {
-            (0, ib.mO)(eu.HAw.SAFETY_WARNING_VIEWED, {
+            ((0, ib.mO)(eu.HAw.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: l,
                 senderId: i,
                 warningType: iy._j.STRANGER_DANGER,
             }),
-                iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW });
+                iE.A.increment({ name: ip.K.SAFETY_WARNING_VIEW }));
         }, [t, l, i]),
         (0, a.jsx)(iM, {
             channelId: t,
@@ -5817,7 +5845,7 @@ function rw(e) {
                     text: eL.intl.string(eL.t["Qk/c48"]),
                     variant: "primary",
                     onClick: function () {
-                        (function e() {
+                        ((function e() {
                             (0, iC.openModalLazy)(async () => {
                                 let { default: s } = await Promise.all([
                                     n.e("532648"),
@@ -5851,12 +5879,12 @@ function rw(e) {
                                                         buttonText: eL.intl.string(eL.t["5QYPO2"]),
                                                         buttonVariant: "critical-primary",
                                                         onButtonPress: () => {
-                                                            o(),
+                                                            (o(),
                                                                 u(
                                                                     ib.Wm.USER_MODAL_BLOCK_CONFIRM,
                                                                     ib.Wm.USER_MODAL_BLOCK_CANCEL,
                                                                     e,
-                                                                );
+                                                                ));
                                                         },
                                                     },
                                                     "block-button",
@@ -5873,7 +5901,7 @@ function rw(e) {
                                 senderId: i,
                                 warningType: iy._j.STRANGER_DANGER,
                                 cta: ib.Wm.OPEN_MORE_TIPS,
-                            });
+                            }));
                     },
                 },
                 ...(s
@@ -5899,7 +5927,7 @@ function rW(e) {
     let { summary: t, channel: n } = e,
         l = (0, aL.bG)([lQ.A], () => lQ.A.summaryFeedback(t));
     function i(e, l) {
-        e.stopPropagation(), (0, rK.A)({ summary: t, channel: n, rating: l });
+        (e.stopPropagation(), (0, rK.A)({ summary: t, channel: n, rating: l }));
     }
     let s = (0, X.p)(
         null == l,
@@ -6020,7 +6048,7 @@ function r9(e) {
         d = r.useCallback(async () => {
             if (null == n || "" === n)
                 try {
-                    (0, r3.W)({ channelId: t.id, source: "In-channel greet" }), await j.A.sendGreetMessage(t.id, r6);
+                    ((0, r3.W)({ channelId: t.id, source: "In-channel greet" }), await j.A.sendGreetMessage(t.id, r6));
                 } catch (e) {
                     e.ok || 429 !== e.status || l(eL.intl.string(eL.t.Whhv4w));
                 }
@@ -6156,13 +6184,13 @@ function oo(e) {
                             .fill(null)
                             .map(() => {
                                 let e = lm().random(1, l);
-                                return (d += a * r), (d += o * r), (d += (e - 1) * c * r), e;
+                                return ((d += a * r), (d += o * r), (d += (e - 1) * c * r), e);
                             }),
                         h = u.map((e, t) => t),
                         m = [];
-                    for (; m.length < i; ) {
+                    for (; m.length < i;) {
                         let e = { width: lm().random(140, 400), height: lm().random(100, 320) };
-                        m.push([h.splice(lm().random(0, h.length - 1), 1)[0], e]), (d += e.height + li.VF * r);
+                        (m.push([h.splice(lm().random(0, h.length - 1), 1)[0], e]), (d += e.height + li.VF * r));
                     }
                     return { messages: u, attachmentSpecs: m, totalHeight: d, groupSpacing: a };
                 })({ compact: f, messageGroups: z, groupRange: 4, attachments: W, fontSize: v, groupSpacing: o }),
@@ -6278,7 +6306,7 @@ function oo(e) {
                     },
                     [o],
                 );
-            return (0, l7.Vo)({ event: eu.jej.FOCUS_MESSAGES, handler: c }), o;
+            return ((0, l7.Vo)({ event: eu.jej.FOCUS_MESSAGES, handler: c }), o);
         })({ scrollerRef: J.ref, isEditing: null != S, keyboardModeEnabled: M, hasMoreAfter: g.hasMoreAfter }),
         Y = (0, h.bG)([lY.A], () =>
             th.A.can(eu.xBc.READ_MESSAGE_HISTORY, m) ? null : lY.A.getViewingRolesTimestamp(m.getGuildId()),
@@ -6350,7 +6378,7 @@ function oo(e) {
                         : null,
                 B = (0, iG.A)(s.id),
                 K = (0, aX.W1)(s);
-            (t = eX.Sf.useSetting()),
+            ((t = eX.Sf.useSetting()),
                 (n = (0, aL.bG)([N.Ay], () => N.Ay.useReducedMotion)),
                 r.useEffect(() => {
                     function e(e) {
@@ -6367,7 +6395,7 @@ function oo(e) {
                             T.h.unsubscribe("MESSAGE_REACTION_ADD", e);
                         }
                     );
-                }, [t, n]);
+                }, [t, n]));
             let V = null,
                 z = [],
                 W = m.map((e, t) => {
@@ -6682,20 +6710,20 @@ function oo(e) {
             jumpBarClassName: k,
             isGameInvitesPost: w,
         });
-    (t = J.ref),
+    ((t = J.ref),
         (n = r.useCallback(() => t.current?.scrollToBottom(), [t])),
         (l = r.useCallback(() => t.current?.scrollPageUp({ animate: !N.Ay.useReducedMotion }), [t])),
         (i = r.useCallback(() => t.current?.scrollPageDown({ animate: !N.Ay.useReducedMotion }), [t])),
         (0, l7.Vo)({ event: eu.jej.SCROLLTO_PRESENT, handler: n }),
         (0, l7.Vo)({ event: eu.jej.SCROLL_PAGE_UP, handler: l }),
-        (0, l7.Vo)({ event: eu.jej.SCROLL_PAGE_DOWN, handler: i });
+        (0, l7.Vo)({ event: eu.jej.SCROLL_PAGE_DOWN, handler: i }));
     let er = (0, I.R7)(),
         { ref: eo, ...ec } = (0, u.LT)(Z),
         ed = r.useRef(null),
         eh = r.useMemo(() => ({ ref: ed, padding: oa }), []),
         em = (0, b.A)((e) => {
             let t = e?.getScrollerNode() ?? null;
-            (J.ref.current = e), (eo.current = t), (ed.current = t);
+            ((J.ref.current = e), (eo.current = t), (ed.current = t));
         }),
         eg = (0, h.bG)([O.A], () => O.A.gradientPreset),
         eA = eX.eh.useSetting().customUserThemeSettings,
@@ -6868,23 +6896,27 @@ let oc = r.memo(function (e) {
                                 })(e, t),
                             [e, t],
                         ),
-                        i = (0, h.yK)([M.A], () => {
-                            let e = [];
-                            return (
-                                n.forEach((t) => {
-                                    null !=
-                                        M.A.findActivity(
-                                            t.author.id,
-                                            (e) =>
-                                                e.application_id === t.application?.id &&
-                                                e.party?.id === t.activity?.party_id,
-                                            null,
-                                            !0,
-                                        ) && e.push(t.id);
-                                }),
-                                e
-                            );
-                        }, [n]);
+                        i = (0, h.yK)(
+                            [M.A],
+                            () => {
+                                let e = [];
+                                return (
+                                    n.forEach((t) => {
+                                        null !=
+                                            M.A.findActivity(
+                                                t.author.id,
+                                                (e) =>
+                                                    e.application_id === t.application?.id &&
+                                                    e.party?.id === t.activity?.party_id,
+                                                null,
+                                                !0,
+                                            ) && e.push(t.id);
+                                    }),
+                                    e
+                                );
+                            },
+                            [n],
+                        );
                     return [
                         l,
                         r.useMemo(
@@ -6960,12 +6992,12 @@ let oc = r.memo(function (e) {
                                                 l = en.default.extractTimestamp(o[e].endId);
                                             if (t >= n && t <= l) {
                                                 if (p === o[e].id) break;
-                                                m.push({
+                                                (m.push({
                                                     type: eu.TZK.DIVIDER,
                                                     content: o[e].topic,
                                                     contentKey: o[e].id,
                                                 }),
-                                                    (p = o[e].id);
+                                                    (p = o[e].id));
                                                 break;
                                             }
                                         }
@@ -7023,7 +7055,7 @@ let oc = r.memo(function (e) {
                                                 es.o.DISMISSED_IN_GAME_MESSAGE_NUX,
                                                 !0,
                                             );
-                                            return er.A.updatePrivateChannelRecipientFlags(t.id, l), n;
+                                            return (er.A.updatePrivateChannelRecipientFlags(t.id, l), n);
                                         })(e, i))
                                             ? { message: S, position: "before" }
                                             : null;
@@ -7042,7 +7074,7 @@ let oc = r.memo(function (e) {
                                     };
                                     n === e.id && (l = v);
                                     let { jumpSequenceId: M, jumpFlash: R, jumpTargetId: D } = s;
-                                    R && e.id === D && null != M && (v.flashKey = M),
+                                    (R && e.id === D && null != M && (v.flashKey = M),
                                         s.jumpTargetId === e.id && (v.jumpTarget = !0),
                                         null != c &&
                                             e.id === c.startId &&
@@ -7074,7 +7106,11 @@ let oc = r.memo(function (e) {
                                         null != c &&
                                             e.id === c.endId &&
                                             c.count > 1 &&
-                                            m.push({ type: eu.TZK.DIVIDER, contentKey: c.endId, isSummaryDivider: !0 });
+                                            m.push({
+                                                type: eu.TZK.DIVIDER,
+                                                contentKey: c.endId,
+                                                isSummaryDivider: !0,
+                                            }));
                                 }),
                                 g && (0, ei.iJ)(i) && ee.trackExposure({ location: "416cc9_1" }),
                                 m

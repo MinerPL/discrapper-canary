@@ -119,7 +119,7 @@ function ei(e) {
                       ? R.intl.formatToPlainString(R.t.YvNhsd, { date: l })
                       : null,
         p = C.useCallback(() => {
-            f(!0), m();
+            (f(!0), m());
         }, [m]),
         v = C.useCallback(
             (e) => {
@@ -134,7 +134,7 @@ function ei(e) {
             [x],
         ),
         A = C.useCallback(() => {
-            null == s && null == n && u(0, null), f(!1);
+            (null == s && null == n && u(0, null), f(!1));
         }, [n, s, u]);
     return (0, i.jsx)(Y.W, {
         "data-menu-needs-migration": !0,
@@ -344,20 +344,20 @@ function em(e) {
         n = (0, o.bG)([p.A], () => p.A.getSearchStateByGuildId(t), [t], Z()),
         s = (0, j.Tj)(t),
         a = C.useCallback(() => {
-            n.requireUnusualDmActivity || s(j.Zp.UNUSUAL_DM_ACTIVITY),
-                (0, v.Ld)(t, { ...n, requireUnusualDmActivity: !n.requireUnusualDmActivity });
+            (n.requireUnusualDmActivity || s(j.Zp.UNUSUAL_DM_ACTIVITY),
+                (0, v.Ld)(t, { ...n, requireUnusualDmActivity: !n.requireUnusualDmActivity }));
         }, [t, n, s]),
         r = C.useCallback(() => {
-            n.requireCommunicationDisabled || s(j.Zp.COMMUNICATION_DISABLED),
-                (0, v.Ld)(t, { ...n, requireCommunicationDisabled: !n.requireCommunicationDisabled });
+            (n.requireCommunicationDisabled || s(j.Zp.COMMUNICATION_DISABLED),
+                (0, v.Ld)(t, { ...n, requireCommunicationDisabled: !n.requireCommunicationDisabled }));
         }, [t, n, s]),
         d = C.useCallback(() => {
-            n.requireUnusualAccountActivity || s(j.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, v.Ld)(t, { ...n, requireUnusualAccountActivity: !n.requireUnusualAccountActivity });
+            (n.requireUnusualAccountActivity || s(j.Zp.UNUSUAL_ACCOUNT_ACTIVITY),
+                (0, v.Ld)(t, { ...n, requireUnusualAccountActivity: !n.requireUnusualAccountActivity }));
         }, [t, n, s]),
         c = C.useCallback(() => {
-            n.requireUsernameQuarantined || s(j.Zp.USERNAME_QUARANTINED),
-                (0, v.Ld)(t, { ...n, requireUsernameQuarantined: !n.requireUsernameQuarantined });
+            (n.requireUsernameQuarantined || s(j.Zp.USERNAME_QUARANTINED),
+                (0, v.Ld)(t, { ...n, requireUsernameQuarantined: !n.requireUsernameQuarantined }));
         }, [t, n, s]);
     return (0, i.jsx)(Y.W, {
         "data-menu-migrated": !0,
@@ -471,7 +471,7 @@ function eM(e) {
         h = C.useCallback(
             (e) => {
                 let l = new Set(r.selectedRoleIds);
-                l.has(e) ? l.delete(e) : l.add(e), (0, v.Ld)(t, { selectedRoleIds: l }), n(l);
+                (l.has(e) ? l.delete(e) : l.add(e), (0, v.Ld)(t, { selectedRoleIds: l }), n(l));
             },
             [t, r.selectedRoleIds, n],
         );
@@ -759,7 +759,7 @@ var eE = l(435558),
     eK = l(935208),
     e$ = l(427262),
     eQ = l(157347),
-    eX = l(3900),
+    eX = l(207119),
     eW = l(615300),
     eJ = l(717421),
     e1 = l(475743);
@@ -772,7 +772,7 @@ function e4(e) {
         c = (0, ej.r)(_.A.colors.BACKGROUND_BASE_LOW).hex(),
         u = (0, ej.r)(_.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
         m = C.useCallback(() => {
-            o({ spring: 1, config: e3 }), o({ spring: 0, config: e8, delay: 300 });
+            (o({ spring: 1, config: e3 }), o({ spring: 0, config: e8, delay: 300 }));
         }, [o]);
     C.useEffect(() => {
         null == t || null == r || n(t, r) || m();
@@ -942,12 +942,12 @@ function tt(e) {
 function tl(e) {
     let { member: t, showLongDate: l, isSortedBy: n } = e,
         [s, a] = C.useState(null);
-    C.useEffect(() => {
+    (C.useEffect(() => {
         a(tt(t.joinedAtTimestamp));
     }, [t.joinedAtTimestamp]),
         (0, e_.A)(() => {
             a(tt(t.joinedAtTimestamp));
-        }, 1e4);
+        }, 1e4));
     let r = n ? "text-brand" : "text-default";
     return s?.short == null
         ? null
@@ -1006,9 +1006,9 @@ let tn = C.memo(function (e) {
             ),
             v = C.useCallback(
                 (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         e.preventDefault(),
-                        null != t && f && (H.has(t.userId) ? h(t.userId) : x([t.userId]));
+                        null != t && f && (H.has(t.userId) ? h(t.userId) : x([t.userId])));
                 },
                 [x, f, t, h, H],
             ),
@@ -1113,24 +1113,24 @@ let tn = C.memo(function (e) {
             v = (0, b.UY)(h ?? void 0),
             V = C.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), v(e);
+                    (e.stopPropagation(), e.preventDefault(), v(e));
                 },
                 [v],
             ),
             A = C.useCallback(
                 (e) => {
-                    e.stopPropagation(), e.preventDefault(), null != h && (0, b.Ko)(h, u);
+                    (e.stopPropagation(), e.preventDefault(), null != h && (0, b.Ko)(h, u));
                 },
                 [h, u],
             ),
             M = C.useCallback(
                 (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         e.preventDefault(),
                         null != h &&
                             (j
                                 ? (0, ek.z)(h.guildId, h.userId, e9.VV.MEMBER_SAFETY, { modViewPanel: e7.g.INFO })
-                                : (0, b.Ko)(h, u));
+                                : (0, b.Ko)(h, u)));
                 },
                 [h, u, j],
             ),
@@ -1162,13 +1162,17 @@ var tr = l(551816),
 function to(e) {
     let { guild: t, onSubmit: n } = e,
         s = (0, o.bG)([p.A], () => p.A.getMembersCountByGuildId(t.id, tr.Tu.NEW_GUILD_MEMBER), [t.id]),
-        a = (0, o.bG)([p.A], () => {
-            let e = p.A.getNewMemberTimestamp(t.id);
-            return q()(e).format("h:mm A");
-        }, [t.id]),
+        a = (0, o.bG)(
+            [p.A],
+            () => {
+                let e = p.A.getNewMemberTimestamp(t.id);
+                return q()(e).format("h:mm A");
+            },
+            [t.id],
+        ),
         r = (0, o.bG)([p.A], () => p.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
         d = C.useCallback(() => {
-            (0, v.UD)(t.id), n?.();
+            ((0, v.UD)(t.id), n?.());
         }, [t.id, n]),
         u = C.useCallback(() => {
             r
@@ -1257,27 +1261,27 @@ let tj = C.memo(
                 [E, N] = C.useState(!1),
                 [Z, I] = C.useState(!1),
                 y = !L && E && Z;
-            C.useEffect(() => {
+            (C.useEffect(() => {
                 D || (N(!1), I(!1));
             }, [D]),
                 C.useLayoutEffect(() => {
                     function e(e) {
-                        tg(e) && N(!0), tf(e) && I(!0);
+                        (tg(e) && N(!0), tf(e) && I(!0));
                     }
                     function t(e) {
-                        tg(e) && N(!1), tf(e) && I(!1);
+                        (tg(e) && N(!1), tf(e) && I(!1));
                     }
                     return (
                         window.addEventListener("keydown", e),
                         window.addEventListener("keyup", t),
                         () => {
-                            window.removeEventListener("keydown", e), window.removeEventListener("keyup", t);
+                            (window.removeEventListener("keydown", e), window.removeEventListener("keyup", t));
                         }
                     );
                 }, []),
                 C.useEffect(() => {
                     (0, v.jo)(l.id, t);
-                }, [l.id, t]);
+                }, [l.id, t]));
             let _ = t.length > 30,
                 w = (0, u.p)(t, {
                     key: (e) => e,
@@ -1358,7 +1362,7 @@ let tj = C.memo(
         let { guild: l, className: n, searchState: s, compact: a, onSelectRow: r, onResetForNewMembers: d } = e,
             c = (0, o.cf)([p.A], () => p.A.getPaginationStateByGuildId(l.id), [l.id]),
             [u] = (0, o.bG)([p.A], () => p.A.getPagedMembersByGuildId(l.id), [l.id], h.D);
-        (t = l.id),
+        ((t = l.id),
             C.useEffect(
                 () => (
                     V.Cf(t),
@@ -1370,7 +1374,7 @@ let tj = C.memo(
             ),
             C.useEffect(() => {
                 (0, v.uO)(l.id);
-            }, [l.id]);
+            }, [l.id]));
         let m = C.useDeferredValue(u[c.currentPage] ?? []),
             { analyticsLocations: H } = (0, x.Ay)(),
             g = H?.[0] ?? null;

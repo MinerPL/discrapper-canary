@@ -54,7 +54,7 @@ function w(e) {
               id: "handoff",
               action: () => {
                   let e, t;
-                  (e = p.sessionId ?? ""),
+                  ((e = p.sessionId ?? ""),
                       (0, S.Fc)(e),
                       (0, S.ZG)(),
                       (t = void 0 ?? p.channelId),
@@ -62,7 +62,7 @@ function w(e) {
                       p.selfMute !== I.Ay.isSelfMute() && h.A.toggleSelfMute(),
                       p.selfDeaf !== I.Ay.isSelfDeaf() && h.A.toggleSelfDeaf(),
                       (0, b.A)(t, "discord_client", e),
-                      T.default.selectVoiceChannel(t, !1);
+                      T.default.selectVoiceChannel(t, !1));
               },
               icon: w,
               leadingAccessory: { type: "icon", icon: w },
@@ -100,7 +100,7 @@ function w(e) {
                                           n.e("262546"),
                                           n.e("648241"),
                                           n.e("595429"),
-                                          n.e("532347"),
+                                          n.e("869544"),
                                           n.e("748370"),
                                           n.e("924227"),
                                       ]).then(n.bind(n, 832910));

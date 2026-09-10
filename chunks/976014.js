@@ -9,8 +9,8 @@ var s = n(477900),
     c = n(309593),
     d = n(73473),
     x = n(321503);
-n(134528), n(947204);
-var m = n(3900),
+(n(134528), n(947204));
+var m = n(207119),
     C = n(462887),
     h = n(717421),
     E = n(695366),
@@ -122,13 +122,13 @@ function $(t) {
         J = i.useCallback(() => {
             if (h) {
                 if (Y) {
-                    (0, L.Y5)({
+                    ((0, L.Y5)({
                         questId: e.id,
                         questContent: u.uF.QUEST_HOME_DESKTOP,
                         questContentCTA: _.Cy.QUEST_ACCESS_SUSPENDED,
                         sourceQuestContent: m,
                     }),
-                        (0, z.FS)();
+                        (0, z.FS)());
                     return;
                 }
                 (0, z.d5)({
@@ -349,10 +349,10 @@ function ty(t) {
         { value: i } = t;
     switch (i) {
         case tS.fO.DESKTOP:
-            (n = (0, s.jsx)(th.k, {})), (e = V.intl.string(V.t["QXc01+"]));
+            ((n = (0, s.jsx)(th.k, {})), (e = V.intl.string(V.t["QXc01+"])));
             break;
         case tS.fO.CONSOLE:
-            (n = (0, s.jsx)(tE.GameControllerIcon, {})), (e = V.intl.string(V.t["8lAfuB"]));
+            ((n = (0, s.jsx)(tE.GameControllerIcon, {})), (e = V.intl.string(V.t["8lAfuB"])));
             break;
         default:
             return null;
@@ -364,10 +364,10 @@ function tQ(t) {
     if (0 === t.length) return null;
     switch (t[0].value) {
         case tS.fO.DESKTOP:
-            (n = (0, s.jsx)(th.k, {})), (e = V.intl.string(V.t.g6Dr44));
+            ((n = (0, s.jsx)(th.k, {})), (e = V.intl.string(V.t.g6Dr44)));
             break;
         case tS.fO.CONSOLE:
-            (n = (0, s.jsx)(tE.GameControllerIcon, {})), (e = V.intl.string(V.t.iyNbj5));
+            ((n = (0, s.jsx)(tE.GameControllerIcon, {})), (e = V.intl.string(V.t.iyNbj5)));
             break;
         default:
             return null;
@@ -513,7 +513,7 @@ function tb(t) {
         [x, m, C] = (0, c.Qo)(e, o),
         h = i.useCallback(
             (t) => {
-                C(t), t === tS.fO.DESKTOP && d(e.id);
+                (C(t), t === tS.fO.DESKTOP && d(e.id));
             },
             [C, d, e.id],
         );
@@ -882,15 +882,15 @@ function tF(t) {
     return (0, s.jsxs)("article", {
         id: tK(e.id, l),
         ref: (t) => {
-            (C.current = t), (S.current = t);
+            ((C.current = t), (S.current = t));
         },
         "aria-labelledby": E,
         className: a()(tz.k, n),
         onMouseEnter: () => {
-            j(!0), v();
+            (j(!0), v());
         },
         onMouseLeave: () => {
-            j(!1), N();
+            (j(!1), N());
         },
         onFocus: (t) => {
             A(t) || (j(!0), v());

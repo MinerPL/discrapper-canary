@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => sZ });
+(n.r(t), n.d(t, { default: () => sZ }));
 var s,
     l,
     a = n(477900),
@@ -82,7 +82,7 @@ function ed(e) {
                     "data-recents-channel": t.id,
                     onKeyDown: function (e) {
                         if ((e.key === el.dh.ENTER || e.key === el.dh.SPACE) && e.target === e.currentTarget) {
-                            e.preventDefault(), l(e);
+                            (e.preventDefault(), l(e));
                             return;
                         }
                         null != c && ((e.key === el.dh.ARROW_RIGHT && i) || (e.key === el.dh.ARROW_LEFT && !i)) && c();
@@ -372,7 +372,7 @@ function eZ(e) {
                             state: ez.cmJ.SENT,
                             id: "31338" + s,
                         });
-                        return (l.author = t ?? e), l;
+                        return ((l.author = t ?? e), l);
                     },
                 )
             );
@@ -443,7 +443,7 @@ var eQ = n(294002),
 let e1 = "ForLaterPopout",
     e3 = "Bookmarks",
     e2 = "Reminders";
-function e8(e) {
+function e7(e) {
     let { closePopout: t, type: n } = e,
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yf.ALL,
@@ -456,7 +456,7 @@ function e8(e) {
                         let l = ey.A.getLastChanged();
                         if (t !== l) {
                             if (((t = l), s.current && !ey.A.getIsStale())) {
-                                (s.current = !1), n(eE(e));
+                                ((s.current = !1), n(eE(e)));
                                 return;
                             }
                             n((t) => {
@@ -504,7 +504,7 @@ function e8(e) {
     );
     let h = i.useRef(null),
         g = (0, T.A)("for-later", h);
-    (0, eg.xN)(h), (0, eg.yW)(n === m.Yf.BOOKMARK ? e3 : e2);
+    ((0, eg.xN)(h), (0, eg.yW)(n === m.Yf.BOOKMARK ? e3 : e2));
     let [x, p] = i.useState(new Date());
     return (i.useEffect(() => {
         let e = setInterval(() => p(new Date()), ej.A.Millis.MINUTE);
@@ -526,13 +526,13 @@ function e8(e) {
                                   let { ref: n, ...l } = e;
                                   return (0, a.jsx)(N.Ch, {
                                       ref: (e) => {
-                                          (h.current = e), (n.current = e?.getScrollerNode() ?? null);
+                                          ((h.current = e), (n.current = e?.getScrollerNode() ?? null));
                                       },
                                       className: e0.XG,
                                       ...l,
                                       children: s.map((e) =>
                                           (0, a.jsx)(
-                                              e7,
+                                              e8,
                                               { savedMessage: e, closePopout: t, throttledNow: x },
                                               e.saveData.messageId,
                                           ),
@@ -551,14 +551,14 @@ function e8(e) {
               }),
           });
 }
-function e7(e) {
+function e8(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         l = (0, ev.vr)(t),
         r = i.useCallback(
             async (e) => {
-                await (0, ev.le)(t, l),
+                (await (0, ev.le)(t, l),
                     e.shiftKey || n(),
-                    L.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? e2 : e3);
+                    L.A.trackJump(t.saveData.channelId, t.saveData.messageId, null != t.saveData.dueAt ? e2 : e3));
             },
             [n, t, l],
         ),
@@ -574,7 +574,7 @@ function e7(e) {
                       itemId: `header-${t.message.id}`,
                       channel: l,
                       onClick: (e) => {
-                          r(e), n();
+                          (r(e), n());
                       },
                       collapsed: !1,
                       status: null != t.saveData.dueAt ? (0, a.jsx)(eq, { reminder: t, throttledNow: s }) : null,
@@ -713,11 +713,11 @@ function td(e) {
             "aria-label": `${ea.intl.string(ea.t["lMR96+"])}, ${n}`,
             className: tr.b,
             onClick: () => {
-                ti.default.track(ez.HAw.NOTIFICATION_CENTER_ACTION, {
+                (ti.default.track(ez.HAw.NOTIFICATION_CENTER_ACTION, {
                     action_type: tl.e1.FRIEND_REQUESTS_BUTTON_CLICK,
                 }),
                     ts.A.transitionToSection(ez.m3P.PENDING, { explicit: !0 }),
-                    t();
+                    t());
             },
             children: [
                 (0, a.jsx)(tn.$, { size: "xs", color: "currentColor" }),
@@ -860,11 +860,11 @@ function tD(e) {
     let { onClick: t } = e,
         [n, s] = i.useState(!1);
     function l() {
-        t(),
+        (t(),
             ti.default.track(ez.HAw.INBOX_CHANNEL_ACKED, {
                 marked_all_channels_as_read: !0,
                 num_unread_channels_remaining: 0,
-            });
+            }));
     }
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -904,7 +904,7 @@ function tO(e) {
 var tF = n(435558),
     tG = n.n(tF),
     tP = n(749314),
-    tw = n(3900),
+    tw = n(207119),
     tK = n(311283),
     tU = n(717421),
     tH = n(933832),
@@ -1009,8 +1009,8 @@ function t3(e) {
     });
 }
 var t2 = n(350527),
-    t8 = n(218152),
-    t7 = n(970278),
+    t7 = n(218152),
+    t8 = n(970278),
     t6 = n(747926),
     t4 = n(935208),
     t5 = n(37411),
@@ -1018,9 +1018,9 @@ var t2 = n(350527),
 function ne(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, j.yK)(
-            [t7.A, Q.A],
+            [t8.A, Q.A],
             () =>
-                tG()(t7.A.getThreadsForParent(n.guild_id, n.id))
+                tG()(t8.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -1046,7 +1046,7 @@ function ne(e) {
                 t.collapsed ||
                 0 !== l.length ||
                 tC.h.wait(() => {
-                    (0, tz.ack)(
+                    ((0, tz.ack)(
                         t.channelId,
                         {
                             section: ez.JJy.INBOX,
@@ -1055,14 +1055,14 @@ function ne(e) {
                         },
                         !0,
                     ),
-                        s(t.channelId);
+                        s(t.channelId));
                 });
         }),
         (0, a.jsx)("div", {
             className: t9.k,
             children: l.map((e) =>
                 (0, a.jsx)(
-                    t8.Cp,
+                    t7.Cp,
                     { channel: n, children: (0, a.jsx)(t2.Ay, { className: t9.u, threadId: e.id, goToThread: r }) },
                     e.id,
                 ),
@@ -1222,7 +1222,7 @@ function nO(e) {
     return (0, a.jsx)(G.D, {
         className: d()(nD.n, t),
         onClick: function (e) {
-            l(!0), n(e);
+            (l(!0), n(e));
         },
         children: s
             ? (0, a.jsx)(tv.y, { type: tv.y.Type.PULSING_ELLIPSIS })
@@ -1262,7 +1262,7 @@ class n0 extends nF.EventEmitter {
     scrollerRef;
     undoStack = [];
     constructor(e, t) {
-        super(), (this.state = e), (this.scrollerRef = t);
+        (super(), (this.state = e), (this.scrollerRef = t));
         for (let t = 0; t < e.channels.length; t++) e.channels[t].order = t;
     }
     maybeLoadMore = () => {
@@ -1292,13 +1292,13 @@ class n0 extends nF.EventEmitter {
         switch (e.type) {
             case "messages": {
                 let t = n1(e, !1);
-                if (t.messages.some(nK.$r)) return L.A.clearChannel(e.channelId), { ...e, messages: [] };
+                if (t.messages.some(nK.$r)) return (L.A.clearChannel(e.channelId), { ...e, messages: [] });
                 return t;
             }
             case "nsfw":
                 return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
             case "forum": {
-                let t = t7.A.hasLoaded(e.guildId);
+                let t = t8.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
             default:
@@ -1348,23 +1348,23 @@ class n0 extends nF.EventEmitter {
         );
         let t = this.state.channels.findIndex((t) => t.order > e.order),
             n = [...this.state.channels];
-        t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n });
+        (t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n }));
     };
     markGuildRead = (e) => {
-        tC.h.wait(() => (0, nw.A)([e], ez.JJy.INBOX)),
+        (tC.h.wait(() => (0, nw.A)([e], ez.JJy.INBOX)),
             this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
-            this.maybeLoadMore();
+            this.maybeLoadMore());
     };
     deleteChannel = (e) => {
-        this.setState({
+        (this.setState({
             scrollToChannelIndex: tG().findIndex(this.state.channels, (t) => t.channelId === e),
             channels: this.state.channels.filter((t) => t.channelId !== e),
         }),
-            this.maybeLoadMore();
+            this.maybeLoadMore());
     };
     markAllRead = () => {
-        tz.Uq(this.state.channels.map((e) => ({ channelId: e.channelId, messageId: e.newestUnreadMessageId }))),
-            this.setState({ channels: [] });
+        (tz.Uq(this.state.channels.map((e) => ({ channelId: e.channelId, messageId: e.newestUnreadMessageId }))),
+            this.setState({ channels: [] }));
     };
     toggle = (e) => {
         let { channelId: t, guildId: n } = e,
@@ -1372,7 +1372,7 @@ class n0 extends nF.EventEmitter {
             i = tG().findIndex(s, (e) => e.channelId === t),
             r = s[i],
             d = !r.collapsed;
-        (l[t] = d),
+        ((l[t] = d),
             (0, nJ.ji)(
                 n,
                 t,
@@ -1387,7 +1387,7 @@ class n0 extends nF.EventEmitter {
                 loadState: "done" !== a || d || r.isFullyLoaded ? a : "loaded",
                 channels: this.updateChannel(t, (e) => ({ ...e, collapsed: d })),
             }),
-            r.collapsed ? r.isFullyLoaded || this.loadMore() : this.maybeLoadMore();
+            r.collapsed ? r.isFullyLoaded || this.loadMore() : this.maybeLoadMore());
     };
     clearScrollToChannelIndex() {
         this.setState({ scrollToChannelIndex: null });
@@ -1405,7 +1405,7 @@ class n0 extends nF.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = t7.A.hasLoaded(e.guildId);
+                let t = t8.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -1465,7 +1465,7 @@ class n0 extends nF.EventEmitter {
     setState(e) {
         for (let t in e)
             if (e[t] !== this.state[t]) {
-                (this.state = { ...this.state, ...e }), this.emit("change", this.state);
+                ((this.state = { ...this.state, ...e }), this.emit("change", this.state));
                 return;
             }
     }
@@ -1567,8 +1567,8 @@ function n2(e, t, n, s) {
             if (en.Ay.getMentionCount(t) > 0) return en.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = t4.default.extractTimestamp(n);
-                if (Date.now() - e > n7) return 8;
-                if (Date.now() - e > n8) return 6;
+                if (Date.now() - e > n8) return 8;
+                if (Date.now() - e > n7) return 6;
             }
             if (s.isThread()) {
                 let e = (0, nB.l)(s);
@@ -1588,8 +1588,8 @@ function n2(e, t, n, s) {
           ? t.push({ ...o, type: "forum" })
           : t.push({ ...o, type: "messages", messages: [] });
 }
-let n8 = 2 * ej.A.Millis.DAY,
-    n7 = 10 * ej.A.Millis.DAY;
+let n7 = 2 * ej.A.Millis.DAY,
+    n8 = 10 * ej.A.Millis.DAY;
 var n6 = n(743373);
 let n4 = { left: 4, right: -12 },
     n5 = [ez.lAJ.THREAD_CREATED];
@@ -1599,7 +1599,7 @@ function n9(e) {
         c = i.useCallback(
             (e) => {
                 if (("Enter" === e.key || " " === e.key) && e.target === e.currentTarget) {
-                    e.preventDefault(), r(e, n.id);
+                    (e.preventDefault(), r(e, n.id));
                     return;
                 }
                 "ArrowLeft" === e.key && document.querySelector(`[data-recents-channel="${t.id}"]`)?.focus();
@@ -1639,10 +1639,11 @@ function se(e) {
     o.forEach((e) => {
         if (!i && (null == d || !d.isSame(e.timestamp, "day"))) {
             let t = (0, nk.i$)(e.timestamp, "LL");
-            r.push((0, a.jsx)(tP.A, { className: n6.yF, children: t }, t)), (d = nn()(e.timestamp));
+            (r.push((0, a.jsx)(tP.A, { className: n6.yF, children: t }, t)), (d = nn()(e.timestamp)));
         }
         let t = null == c || (0, nl.A)(n, c, e);
-        (c = e), r.push((0, a.jsx)(n9, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id));
+        ((c = e),
+            r.push((0, a.jsx)(n9, { channel: n, message: e, compact: l, isGroupStart: t, gotoChannel: s }, e.id)));
     });
     let u = o[o.length - 1];
     return (
@@ -1718,7 +1719,7 @@ let st = i.memo(function (e) {
                     "messages" !== t.type ||
                     0 !== t.messages.length ||
                     tC.h.wait(() => {
-                        (0, tz.ack)(
+                        ((0, tz.ack)(
                             t.channelId,
                             {
                                 section: ez.JJy.INBOX,
@@ -1727,7 +1728,7 @@ let st = i.memo(function (e) {
                             },
                             !0,
                         ),
-                            s(t.channelId);
+                            s(t.channelId));
                     });
             }),
             null == r || !t.hasLoadedAnything)
@@ -1737,17 +1738,17 @@ let st = i.memo(function (e) {
             if ("forum" === t.type) (0, eg.n4)(t.channelId, t.guildId, si, () => n(e));
             else {
                 let l = s ?? t.oldestUnreadMessageId;
-                L.A.trackJump(t.channelId, l, si), (0, tJ.pX)(ez.BVt.CHANNEL(t.guildId, t.channelId, l)), n(e);
+                (L.A.trackJump(t.channelId, l, si), (0, tJ.pX)(ez.BVt.CHANNEL(t.guildId, t.channelId, l)), n(e));
             }
         }
         function c() {
-            l(t),
+            (l(t),
                 (0, tB.zV)(ez.HAw.INBOX_CHANNEL_COLLAPSED, {
                     channel_id: t.channelId,
                     guild_id: t.guildId,
                     num_unread_channels_remaining: e.getNumUnreadChannels() ?? 0,
                     is_now_collapsed: !t.collapsed,
-                });
+                }));
         }
         return (0, a.jsx)("div", {
             className: e0.aP,
@@ -1794,13 +1795,13 @@ function ss(e) {
             size: "sm",
             icon: i ? tT.i : tH.CheckmarkLargeIcon,
             onClick: function () {
-                i && null != t.guildId ? s(t.guildId) : n(t),
+                (i && null != t.guildId ? s(t.guildId) : n(t),
                     (0, tB.zV)(ez.HAw.INBOX_CHANNEL_ACKED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         marked_all_channels_as_read: !1,
                         num_unread_channels_remaining: l() - 1,
-                    });
+                    }));
             },
         }),
     });
@@ -1813,13 +1814,13 @@ function sr(e) {
     let { onJump: o, showTutorial: u, setSeenTutorial: h, closePopout: m } = e,
         g = i.useRef(null),
         x = (0, T.A)("unreads", g);
-    (0, eg.xN)(g), (0, eg.yW)(si);
+    ((0, eg.xN)(g), (0, eg.yW)(si));
     let [A, p] = (function (e) {
             let [t, n] = i.useState(() => new n0(n3(), e)),
                 [s, l] = i.useState(!1),
                 a = i.useRef(Date.now()),
                 [r, d] = i.useState(() => n3());
-            i.useEffect(() => {
+            (i.useEffect(() => {
                 function e(e) {
                     return d(e);
                 }
@@ -1838,14 +1839,14 @@ function sr(e) {
                     0 === i.channels.length || t - a.current < 10 * ej.A.Millis.SECOND
                         ? l(!0)
                         : ((a.current = Date.now()), n(new n0(i, e)));
-                }, [r, s, e]);
+                }, [r, s, e]));
             let c = i.useRef(t);
             return (
                 i.useLayoutEffect(() => {
                     c.current = t;
                 }),
                 i.useLayoutEffect(() => {
-                    r?.channels, r?.loadState, c.current.maybeLoadMore();
+                    (r?.channels, r?.loadState, c.current.maybeLoadMore());
                 }, [r?.channels, r?.loadState]),
                 i.useEffect(
                     () => (nW.A.addChangeListener(t.reloadMessages), () => nW.A.removeChangeListener(t.reloadMessages)),
@@ -1867,8 +1868,8 @@ function sr(e) {
                 ),
                 i.useEffect(
                     () => (
-                        t7.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                        () => t7.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                        t8.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                        () => t8.A.removeChangeListener(t.handleActiveThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -1956,7 +1957,7 @@ function sr(e) {
                       let { ref: t, ...n } = e;
                       return (0, a.jsxs)(N.Ch, {
                           ref: (e) => {
-                              (g.current = e), (t.current = e?.getScrollerNode() ?? null);
+                              ((g.current = e), (t.current = e?.getScrollerNode() ?? null));
                           },
                           ...n,
                           onScroll: v === nQ.Done ? void 0 : C,
@@ -2190,7 +2191,7 @@ function sv(e) {
     let { onJump: t } = e,
         n = i.useRef(null),
         s = (0, T.A)("recents", n);
-    (0, eg.xN)(n), (0, eg.yW)(sp);
+    ((0, eg.xN)(n), (0, eg.yW)(sp));
     let l = (0, j.bG)([Q.A, tg.Ay], () => Q.A.getChannel(tg.Ay.getChannelId())),
         {
             messages: r,
@@ -2210,7 +2211,7 @@ function sv(e) {
         m = (0, sx.Ay)(o),
         g = (0, sx.Ay)(u),
         x = (0, sx.Ay)(h);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         tx.Ay.hasLoadedEver
             ? ((null != m && o !== m) || (null != g && u !== g) || (null != x && h !== x)) && sN(l)
             : sN(l);
@@ -2220,7 +2221,7 @@ function sv(e) {
         }),
         (0, tI.l0)(() => {
             tm.A.truncateMentions(ez.Ue3);
-        });
+        }));
     let A = i.useCallback(() => {
         let e = n.current?.getScrollerState();
         null != e &&
@@ -2240,7 +2241,7 @@ function sv(e) {
                         let { ref: s, ...i } = e;
                         return (0, a.jsxs)(N.Ch, {
                             ref: (e) => {
-                                (n.current = e), (s.current = e?.getScrollerNode() ?? null);
+                                ((n.current = e), (s.current = e?.getScrollerNode() ?? null));
                             },
                             className: e0.XG,
                             onScroll: d ? A : void 0,
@@ -2486,7 +2487,7 @@ function sJ(e) {
                                 return (0, a.jsx)(N.Ch, {
                                     className: e0.XG,
                                     ref: (e) => {
-                                        (u.current = e), (n.current = e?.getScrollerNode() ?? null);
+                                        ((u.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
                                     ...s,
                                     children: r.map((e) =>
@@ -2719,9 +2720,9 @@ function sZ(e) {
                         s === o.Y2.MENTIONS
                             ? (0, a.jsx)(sv, { onJump: r })
                             : A && s === o.Y2.BOOKMARKS
-                              ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
+                              ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
                               : A && s === o.Y2.REMINDERS
-                                ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
+                                ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
                                 : s === o.Y2.SCHEDULED
                                   ? (0, a.jsx)(sJ, { onJump: r })
                                   : (0, a.jsx)(sr, { onJump: r, showTutorial: g, setSeenTutorial: x, closePopout: i }),

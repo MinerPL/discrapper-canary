@@ -3,7 +3,7 @@ var s = n(477900),
     i = n(582128),
     a = n(503698),
     l = n.n(a),
-    r = n(3900),
+    r = n(207119),
     o = n(607399),
     c = n(17928),
     d = n(866665),
@@ -118,7 +118,7 @@ function $() {
             "aria-label": l,
             onClick: function () {
                 let t = a ? K.Io.ALL : K.Io.BOOKMARKS;
-                i(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e });
+                (i(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e }));
             },
         }),
     });
@@ -140,7 +140,7 @@ function H() {
             "aria-label": a,
             onClick: function () {
                 let t = i ? K.Io.ALL : K.Io.MENTIONS;
-                n(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e });
+                (n(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e }));
             },
         }),
     });
@@ -417,7 +417,7 @@ let er = i.memo(function (e) {
                             ? (0, s.jsx)("div", {
                                   className: et.rt,
                                   onMouseEnter: () => {
-                                      R(!0), clearTimeout(F.current);
+                                      (R(!0), clearTimeout(F.current));
                                   },
                                   onMouseLeave: () => R(!1),
                                   style: { height: b },

@@ -1,4 +1,4 @@
-n.d(t, { DH: () => eb, Ay: () => ew }), n(321073);
+(n.d(t, { DH: () => eb, Ay: () => ew }), n(321073));
 var i = n(477900),
     s = n(582128),
     r = n(503698),
@@ -31,7 +31,7 @@ var i = n(477900),
     O = n(412477),
     M = n(489277),
     k = n(243612),
-    D = n(3900),
+    D = n(207119),
     z = n(778712),
     P = n(604121),
     L = n(97808),
@@ -156,10 +156,10 @@ function eA(e, t) {
         }),
         (0, X.Ay)(() => {
             let e = setTimeout(() => {
-                i(!1),
+                (i(!1),
                     setTimeout(() => {
                         l(!1);
-                    }, 16);
+                    }, 16));
             }, 2600);
             return () => clearTimeout(e);
         }),
@@ -281,10 +281,14 @@ let eE = s.memo(function (e) {
                         : [!ed.Ay.isSupported() || ed.Ay.isLocalMute(d.id), !1, ed.Ay.isLocalVideoDisabled(d.id)],
                 [O, d.id],
             ),
-            B = (0, a.bG)([E.A], () => {
-                let e = E.A.getCurrentUserActiveStream();
-                return null != e && e.ownerId !== d.id && E.A.getViewerIds(e).filter((e) => e === d.id).length > 0;
-            }, [d.id]),
+            B = (0, a.bG)(
+                [E.A],
+                () => {
+                    let e = E.A.getCurrentUserActiveStream();
+                    return null != e && e.ownerId !== d.id && E.A.getViewerIds(e).filter((e) => e === d.id).length > 0;
+                },
+                [d.id],
+            ),
             K = I && v?.discoverable,
             Q = (0, u.A)({ userId: d.id, context: x }) || K,
             J = (0, a.bG)([E.A], () => E.A.getStreamForUser(d.id, A)),
@@ -549,17 +553,17 @@ let eE = s.memo(function (e) {
                     );
                 });
         }
-        s.useEffect(() => {
+        (s.useEffect(() => {
             d && j(null);
         }, [d]),
             s.useEffect(() => {
                 null != S && (0, R.YX)(et.uss.VOICE_V3, { type: R.Z5.GO_LIVE, value: R.IP.STREAM_PREVIEWED });
-            }, [S]);
+            }, [S]));
         let y = s.useCallback(
             (e) => {
                 let n = eo.A.getWidget(t)?.layoutId,
                     i = null != n ? eo.A.getWidgetsForLayout(n)?.find((e) => e.type === et.uss.GO_LIVE) : null;
-                null == i ||
+                (null == i ||
                     i.pinned ||
                     ((0, F.v0)(i.id),
                     H.A.track(et.HAw.OVERLAY_PIN_TOGGLED, {
@@ -571,7 +575,7 @@ let eE = s.memo(function (e) {
                     })),
                     null != e &&
                         null != i &&
-                        (0, R.YX)(et.uss.VOICE_V3, { type: R.Z5.GO_LIVE, value: R.IP.ENABLED, userId: e.ownerId });
+                        (0, R.YX)(et.uss.VOICE_V3, { type: R.Z5.GO_LIVE, value: R.IP.ENABLED, userId: e.ownerId }));
             },
             [r, t],
         );
@@ -784,46 +788,50 @@ function ew(e) {
                 o = (0, a.bG)([S.default], () => S.default.getId());
             return [
                 l,
-                (0, a.yK)([C.A, v.Ay, j.A, p.A], () => {
-                    let n = Array.from(
-                        new Set(
-                            r.map((e) => {
-                                let { user: t } = e;
-                                return t.id;
-                            }),
-                        ),
-                    );
-                    if (-1 === t || n.length <= t) return n;
-                    let i = new Map();
-                    for (let t of n) {
-                        let n = (0, u.R)(
-                                {
-                                    userId: t,
-                                    checkSoundSharing: !0,
-                                    checkSoundboardSounds: !1,
-                                    checkIsMuted: !0,
-                                    context: e,
-                                },
-                                [C.A, v.Ay, j.A, p.A],
+                (0, a.yK)(
+                    [C.A, v.Ay, j.A, p.A],
+                    () => {
+                        let n = Array.from(
+                            new Set(
+                                r.map((e) => {
+                                    let { user: t } = e;
+                                    return t.id;
+                                }),
                             ),
-                            s = t === o;
-                        (n || s) && i.set(t, { isSpeaking: n, isCurrentUser: s });
-                    }
-                    let s = [],
-                        l = [],
-                        a = [];
-                    for (let e = 0; e < n.length; e++) {
-                        let r = n[e],
-                            o = i.get(r);
-                        e < t ? s.push(r) : o && (o.isSpeaking || o.isCurrentUser) ? a.push(r) : l.push(r);
-                    }
-                    if (a.length > 0) {
-                        let e = s.slice(0, t - a.length),
-                            n = s.slice(t - a.length);
-                        return [...e, ...a, ...n, ...l];
-                    }
-                    return n;
-                }, [r, e, o, t]),
+                        );
+                        if (-1 === t || n.length <= t) return n;
+                        let i = new Map();
+                        for (let t of n) {
+                            let n = (0, u.R)(
+                                    {
+                                        userId: t,
+                                        checkSoundSharing: !0,
+                                        checkSoundboardSounds: !1,
+                                        checkIsMuted: !0,
+                                        context: e,
+                                    },
+                                    [C.A, v.Ay, j.A, p.A],
+                                ),
+                                s = t === o;
+                            (n || s) && i.set(t, { isSpeaking: n, isCurrentUser: s });
+                        }
+                        let s = [],
+                            l = [],
+                            a = [];
+                        for (let e = 0; e < n.length; e++) {
+                            let r = n[e],
+                                o = i.get(r);
+                            e < t ? s.push(r) : o && (o.isSpeaking || o.isCurrentUser) ? a.push(r) : l.push(r);
+                        }
+                        if (a.length > 0) {
+                            let e = s.slice(0, t - a.length),
+                                n = s.slice(t - a.length);
+                            return [...e, ...a, ...n, ...l];
+                        }
+                        return n;
+                    },
+                    [r, e, o, t],
+                ),
             ];
         })(eT.x.DEFAULT, e.maxDisplayedVoiceStates),
         o = (0, a.bG)([E.A], () => E.A.getStreamerActiveStreamMetadata()),

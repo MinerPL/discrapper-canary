@@ -1,9 +1,9 @@
-n.d(t, { A: () => en }), n(321073);
+(n.d(t, { A: () => en }), n(321073));
 var r = n(477900),
     l = n(582128),
     a = n(503698),
     i = n.n(a),
-    u = n(3900),
+    u = n(207119),
     s = n(621466),
     o = n(17928),
     c = n(661531),
@@ -62,9 +62,9 @@ function Q(e) {
                 e.addEventListener("loadedmetadata", t),
                 e.addEventListener("durationchange", t),
                 () => {
-                    e.removeEventListener("timeupdate", t),
+                    (e.removeEventListener("timeupdate", t),
                         e.removeEventListener("loadedmetadata", t),
-                        e.removeEventListener("durationchange", t);
+                        e.removeEventListener("durationchange", t));
                 }
             );
     }, [d]);
@@ -198,18 +198,18 @@ function en(e) {
     (B !== eP || F !== eT) && (eR(B), eM(F), ex(F ? 0 : B));
     let eL = l.useCallback(
             (e) => {
-                eN(e), null != ep.current && (ep.current.playbackRate = e);
+                (eN(e), null != ep.current && (ep.current.playbackRate = e));
             },
             [ep],
         ),
         ej = l.useCallback(() => {
             if (null == L) return;
             let e = j?.split("/");
-            T.default.track(X.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+            (T.default.track(X.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
-                window.open(L, "_blank");
+                window.open(L, "_blank"));
         }, [L, j]),
         eD = l.useCallback(
             (e) => {
@@ -221,46 +221,46 @@ function en(e) {
             if (null != ep.current)
                 if (0 === ev) {
                     let e = 0 === B ? 0.3 : B;
-                    eD(e), ec(!1), eo(e);
-                } else eo(ev), eD(0), ec(!0);
+                    (eD(e), ec(!1), eo(e));
+                } else (eo(ev), eD(0), ec(!0));
         }, [ep, ev, eD, B, ec, eo]);
     function eI() {
-        eE(!0), ed(!0);
+        (eE(!0), ed(!0));
     }
     function eB() {
-        eE(!1), ed(!1);
+        (eE(!1), ed(!1));
     }
     let eF = l.useCallback(
         (e) => {
             if (!(e.metaKey || ((0, s.vq)(e.target) && (0, s.Cw)(e.target))))
                 switch (e.key) {
                     case d.TJ.PLAYBACK:
-                        e.stopPropagation(), G();
+                        (e.stopPropagation(), G());
                         break;
                     case d.TJ.SPACE:
-                        e.stopPropagation(), ef || (e.preventDefault(), G());
+                        (e.stopPropagation(), ef || (e.preventDefault(), G()));
                         break;
                     case d.TJ.SEEK_BACK:
                     case d.TJ.SEEK_BACK_ALT:
-                        e.stopPropagation(), en();
+                        (e.stopPropagation(), en());
                         break;
                     case d.TJ.SEEK_FORWARD:
                     case d.TJ.SEEK_FORWARD_ALT:
-                        e.stopPropagation(), el();
+                        (e.stopPropagation(), el());
                         break;
                     case d.TJ.CAPTION:
-                        e.stopPropagation(), C || ee();
+                        (e.stopPropagation(), C || ee());
                         break;
                     case d.TJ.FULLSCREEN:
-                        e.stopPropagation(), A || et();
+                        (e.stopPropagation(), A || et());
                         break;
                     case d.TJ.MUTE:
-                        e.stopPropagation(), ek();
+                        (e.stopPropagation(), ek());
                 }
         },
         [ee, et, G, en, el, ek, C, A, ef],
     );
-    l.useEffect(() => {
+    (l.useEffect(() => {
         k && null != ew.current && ew.current.focus();
     }, [k]),
         l.useEffect(
@@ -280,7 +280,7 @@ function en(e) {
                 }
             ),
             [ei, eb, eg, ey, em, eC],
-        );
+        ));
     let e_ = 0 === ev ? h._ : ev < 0.5 ? p.S : v.H,
         eU = _.intl.string(0 === ev ? _.t.YqAjXy : _.t.w4m945),
         { icon: eK, label: eO } = O[t];
@@ -374,13 +374,13 @@ function en(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: function (e) {
-                                        eD(e),
+                                        (eD(e),
                                             eo(e),
                                             eb && (eS(!1), es(!1)),
-                                            F && e > 0 ? ec(!1) : F || 0 !== e || ec(!0);
+                                            F && e > 0 ? ec(!1) : F || 0 !== e || ec(!0));
                                     },
                                     asValueChanges: function (e) {
-                                        eD(e), eb || (eS(!0), es(!0));
+                                        (eD(e), eb || (eS(!0), es(!0)));
                                     },
                                     fillStyles: { backgroundColor: c.A.colors.WHITE.css },
                                     orientation: "horizontal",
@@ -598,7 +598,7 @@ function ea(e) {
         align: "right",
         onRequestOpen: () => s(!0),
         onRequestClose: () => {
-            s(!1), o.current?.focus();
+            (s(!1), o.current?.focus());
         },
         renderPopout: () => (0, r.jsx)(ei, { playbackRate: t, onPlaybackRateChange: n, label: c }),
         children: (e) =>

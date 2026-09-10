@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(3900),
+    r = n(207119),
     o = n(17928),
     c = n(866323),
     d = n(97808),
@@ -54,26 +54,26 @@ function U(e) {
         ),
         H = t[z],
         W = t[(z + 1) % t.length],
-        $ = t.length > 1,
-        Y = U.includes((0, x._z)(H)),
+        Y = t.length > 1,
+        $ = U.includes((0, x._z)(H)),
         K = B ? W : H,
-        q = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
-        X = j.Ay.useName(K.guildId, K.channelId, q),
+        X = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
+        q = j.Ay.useName(K.guildId, K.channelId, X),
         Z = (0, I.j)(),
         Q = y / 225,
-        J = Y ? S.intl.string(T.default.zW6Hyu) : S.intl.string(S.t["7Xq/nV"]),
+        J = $ ? S.intl.string(T.default.zW6Hyu) : S.intl.string(S.t["7Xq/nV"]),
         ee = S.intl.string(T.default["t+GPi4"]),
         et = l.useCallback(() => {
             let e = (0, x._z)(W);
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [W]);
     l.useEffect(() => {
-        if (!$ || !Z || k || Y) return;
+        if (!Y || !Z || k || $) return;
         let e = setTimeout(et, L);
         return () => clearTimeout(e);
-    }, [$, Z, k, Y, et]);
+    }, [Y, Z, k, $, et]);
     let en = l.useCallback(() => {
-            (0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H);
+            ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
         }, [H]),
         ei = { left: `${n.originX}%`, top: `${n.originY}%`, transform: n.matrix },
         el = (0, c.p)(H, {
@@ -88,10 +88,10 @@ function U(e) {
         G(!0);
     }
     function es() {
-        G(!1), F(!1);
+        (G(!1), F(!1));
     }
     return (0, i.jsxs)("div", {
-        className: s()(R.VH, { [R.ke]: Y }),
+        className: s()(R.VH, { [R.ke]: $ }),
         style: ei,
         onMouseEnter: ea,
         onMouseLeave: es,
@@ -99,8 +99,8 @@ function U(e) {
         onBlur: es,
         children: [
             (0, i.jsx)(E.A, {
-                title: X,
-                image: (0, i.jsx)(d.eu, { src: q?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
+                title: q,
+                image: (0, i.jsx)(d.eu, { src: X?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: B,
                 spacing: a,
                 children: (0, i.jsxs)(h.D, {
@@ -144,7 +144,7 @@ function U(e) {
                                 "aria-hidden": !0,
                             }),
                         }),
-                        $
+                        Y
                             ? (0, i.jsx)("div", {
                                   className: R.ch,
                                   children: (0, i.jsx)("div", {

@@ -3,7 +3,7 @@ var i = n(477900),
     o = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(3900),
+    l = n(207119),
     r = n(935462),
     u = n(717421),
     c = n(430690),
@@ -29,10 +29,10 @@ function w(e) {
         [E, _] = o.useState(0),
         [h, w] = (0, u.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
     function N(e) {
-        p(),
+        (p(),
             _(1),
             null != C &&
-                A.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(C, n), choice: e.text, choice_id: e.key });
+                A.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(C, n), choice: e.text, choice_id: e.key }));
     }
     async function q(e) {
         1 === e && (await w({ width: "100%" }), s());

@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(3900),
+    l = n(207119),
     o = n(717421),
     d = n(866323),
     c = n(597619),
@@ -36,7 +36,7 @@ let h = r.memo(function (e) {
                     ...E,
                     to: async (e) => {
                         let t = 2.8;
-                        for (; u.current; )
+                        for (; u.current;)
                             d
                                 ? ((t += 4), await e({ dotCycle: t, immediate: !1 }))
                                 : 2.8 !== t

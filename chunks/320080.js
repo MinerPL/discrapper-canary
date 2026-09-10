@@ -1,9 +1,9 @@
-t.r(n), t.d(n, { SettingsButton: () => nA, default: () => nh }), t(321073);
+(t.r(n), t.d(n, { SettingsButton: () => nA, default: () => nh }), t(321073));
 var s = t(477900),
     i = t(582128),
     a = t(503698),
     l = t.n(a),
-    r = t(3900),
+    r = t(207119),
     o = t(17928),
     c = t(661531),
     d = t(707554),
@@ -115,14 +115,14 @@ let eA = (0, L.v)((e, n) => ({
         let s = `${n}:${t}`;
         e((e) => {
             let n = new Set(e.openMenus);
-            return n.add(s), { openMenus: n };
+            return (n.add(s), { openMenus: n });
         });
     },
     closeMenu: (n, t) => {
         let s = `${n}:${t}`;
         e((e) => {
             let n = new Set(e.openMenus);
-            return n.delete(s), { openMenus: n };
+            return (n.delete(s), { openMenus: n });
         });
     },
 }));
@@ -161,7 +161,7 @@ function ew(e) {
         children: (0, s.jsx)(m.D, {
             className: eL.XI,
             onClick: (e) => {
-                (0, M.Ml)({ message: i, interactionType: l, viewId: r }), e.stopPropagation(), t(i);
+                ((0, M.Ml)({ message: i, interactionType: l, viewId: r }), e.stopPropagation(), t(i));
             },
             children: (0, s.jsx)(a, { size: "xs", color: "currentColor", className: eL.gE }),
         }),
@@ -181,7 +181,7 @@ function eD(e) {
         autoInvert: !1,
         targetElementRef: x,
         onRequestClose: function () {
-            h(!1), A(t.id, c);
+            (h(!1), A(t.id, c));
         },
         renderPopout: (e) =>
             (0, s.jsx)(eN.l, {
@@ -200,10 +200,10 @@ function eD(e) {
                     className: eL.XI,
                     onClick: (e) => {
                         let n;
-                        (0, M.Ml)({ message: t, interactionType: o, viewId: d }),
+                        ((0, M.Ml)({ message: t, interactionType: o, viewId: d }),
                             e.stopPropagation(),
                             h((n = !u)),
-                            n ? p(t.id, c) : A(t.id, c);
+                            n ? p(t.id, c) : A(t.id, c));
                     },
                     children: (0, s.jsx)(l, {
                         ...e,
@@ -223,14 +223,14 @@ let eB = {
         Icon: ef.CheckmarkLargeIcon,
         label: ek.intl.string(ek.t.e6RscS),
         onClick: (e) => {
-            p.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
+            (p.h.dispatch({ type: "NOTIFICATIONS_INBOX_ITEM_ACK", messageId: e.id, channelId: e.channel_id }),
                 A.ack(
                     e.channel_id,
                     { object: eR.ZSU.MARK_MESSAGE_AS_READ_BUTTON, objectType: eR.AnalyticsObjectTypes.ACK_MANUAL },
                     !0,
                     void 0,
                     e.id,
-                );
+                ));
         },
         interactionType: M.X8.ACK,
     },
@@ -314,7 +314,9 @@ function eG(e) {
             (0, i.useMemo)(() => {
                 let e = eC.Th.MENTION,
                     t = new Set();
-                return l && t.add(eC.kR.ACK), n && t.add(eC.kR.BOOKMARK), e_[e].forEach((e) => t.add(e)), Array.from(t);
+                return (
+                    l && t.add(eC.kR.ACK), n && t.add(eC.kR.BOOKMARK), e_[e].forEach((e) => t.add(e)), Array.from(t)
+                );
             }, [t, l, n]));
     return (0, s.jsx)(w.B, {
         direction: "horizontal",
@@ -853,7 +855,7 @@ let eq = (0, i.memo)(
                       });
                   },
                   onContextMenu: (e) => {
-                      e.preventDefault(),
+                      (e.preventDefault(),
                           (0, M.Ml)({ interactionType: M.X8.CONTEXT_MENU, message: c, viewId: d }),
                           (0, en.L3)(
                               e,
@@ -866,7 +868,7 @@ let eq = (0, i.memo)(
                                   return (n) => (0, s.jsx)(e, { ...n, channel: h, message: c, isUnread: a });
                               },
                               { disableClickTrap: !0 },
-                          );
+                          ));
                   },
                   children: (0, s.jsx)(eV, {
                       message: c,
@@ -887,8 +889,8 @@ var eQ = t(435558),
     e4 = t(821609),
     e8 = t(475825),
     e6 = t(928039),
-    e9 = t(625494);
-let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
+    e7 = t(625494);
+let e9 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     e5 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !1, [eC.Ur.YESTERDAY]: !1, [eC.Ur.OLDER]: !1 },
     ne = (0, L.v)((e, n) => ({
         messageCategoryOpenStates: e5,
@@ -905,7 +907,7 @@ let e7 = { [eC.Ur.UNREAD]: !0, [eC.Ur.TODAY]: !0, [eC.Ur.YESTERDAY]: !1, [eC.Ur.
             let s = n();
             s.hasUserToggledSection ||
                 (s.lastInitializedWithUnreads !== t &&
-                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e7 }));
+                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e5 : e9 }));
         },
     }));
 var nn = t(871423),
@@ -1001,14 +1003,18 @@ function nr(e) {
         { messageCategoryOpenStates: S, toggleOpenState: O } = ne(),
         v =
             ((n = (0, o.yK)([R.A], () => R.A.getNotifyingChannelIds() ?? [])),
-            (0, o.bG)([R.A, T.Ay], () => {
-                let e = R.A.getChannelInfoMap();
-                for (let t of n) {
-                    let n = e[t];
-                    if ((null == n || n.loadState === eC.Ve.UNLOADED) && T.Ay.hasUnread(t)) return !0;
-                }
-                return !1;
-            }, [n]));
+            (0, o.bG)(
+                [R.A, T.Ay],
+                () => {
+                    let e = R.A.getChannelInfoMap();
+                    for (let t of n) {
+                        let n = e[t];
+                        if ((null == n || n.loadState === eC.Ve.UNLOADED) && T.Ay.hasUnread(t)) return !0;
+                    }
+                    return !1;
+                },
+                [n],
+            ));
     i.useEffect(() => {
         function e() {
             p.current?.scrollPageUp({ animate: !0 });
@@ -1017,10 +1023,10 @@ function nr(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e9._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
-            e9._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_DOWN, n),
+            e7._.subscribe(eR.jej.SCROLL_PAGE_UP, e),
             () => {
-                e9._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e9._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e);
+                (e7._.unsubscribe(eR.jej.SCROLL_PAGE_DOWN, n), e7._.unsubscribe(eR.jej.SCROLL_PAGE_UP, e));
             }
         );
     }, []);
@@ -1088,7 +1094,7 @@ function nr(e) {
                               isOpen: S[t.category],
                               toggleOpenedState: () => {
                                   let e = S[t.category];
-                                  O(t.category), (0, M.Ut)({ section: t.category, enabled: !e, viewId: x });
+                                  (O(t.category), (0, M.Ut)({ section: t.category, enabled: !e, viewId: x }));
                               },
                           },
                           t.category,
@@ -1101,7 +1107,7 @@ function nr(e) {
         H = P?.type === "section-header",
         $ = _((e) => e.setInboxReadState),
         { selectedFilter: F } = (0, C.A)();
-    i.useEffect(() => {
+    (i.useEffect(() => {
         B || F !== eC.Io.ALL || $(0 === w.UNREAD.length);
     }, [w, B, $, F]),
         (function (e) {
@@ -1116,7 +1122,7 @@ function nr(e) {
         })({ messagesByCategory: w }),
         i.useEffect(() => {
             A.current = 0;
-        }, [F]);
+        }, [F]));
     let W = i.useCallback(() => {
         let e = na.filter((e) => S[e]).reduce((e, n) => e + w[n].length, 0),
             n = p.current?.getScrollerState();
@@ -1150,7 +1156,7 @@ function nr(e) {
                                 let { ref: n, ...t } = e;
                                 return (0, s.jsx)(e8.OZ, {
                                     ref: (e) => {
-                                        (p.current = e), (n.current = e?.getScrollerNode() ?? null);
+                                        ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
                                     className: l()(nt.m4, u, { [nt.xc]: m }),
                                     onScroll: L,
@@ -1210,7 +1216,7 @@ function nu(e) {
             hasLoadedEver: R.A.hasLoadedEver,
             canLoadMore: R.A.canLoadMore({}),
         }));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         g && !h && u(eC.VA.ON_OPEN);
     }, [g, h, u]),
         (function (e) {
@@ -1237,7 +1243,7 @@ function nu(e) {
                             );
                     });
             }, [e, n]);
-        })(h ? c : null);
+        })(h ? c : null));
     let m = (0, o.yK)([E.A], () => E.A.getSavedMessages()),
         x = i.useMemo(
             () =>
@@ -1259,7 +1265,7 @@ function nu(e) {
         ),
         N = ng(r, a),
         f = ng(c, a);
-    (0, I.Ay)(() => {
+    ((0, I.Ay)(() => {
         p.h.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
         let e = (0, U.GE)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = R.A.getDevOverrides().navOnClick ?? !0;
@@ -1290,7 +1296,7 @@ function nu(e) {
     }),
         (0, I.l0)(() => {
             p.h.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
-        });
+        }));
     let L = (0, eC.Yw)(a);
     return (0, s.jsx)("nav", {
         className: l()(no.kL, { [no.Yu]: n }),

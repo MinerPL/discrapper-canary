@@ -1,4 +1,4 @@
-n.d(t, { VZ: () => M, Ay: () => N, FX: () => C }), n(938796);
+(n.d(t, { VZ: () => M, Ay: () => N, FX: () => C }), n(938796));
 var i = n(477900),
     r = n(582128),
     l = n(665260),
@@ -12,7 +12,7 @@ var i = n(477900),
     m = n(587481),
     g = n(998218),
     p = n(454290),
-    x = n(3900),
+    x = n(207119),
     f = n(765671),
     y = n(267102),
     A = n(700331);
@@ -56,7 +56,7 @@ let I = r.memo(function (e) {
         onMouseUp: function (e) {
             if (!o) {
                 if (0 === e.button) {
-                    A.l.markActionPerformed(A.N.ZOOM_IN_IMAGE_PRESSED), u(!0);
+                    (A.l.markActionPerformed(A.N.ZOOM_IN_IMAGE_PRESSED), u(!0));
                     let t = e.clientX - I.innerWidth / 2,
                         i = e.clientY - I.innerHeight / 2,
                         r = E({
@@ -71,9 +71,9 @@ let I = r.memo(function (e) {
                 }
                 return;
             }
-            (e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < 400 &&
+            ((e.clientX - v.x) ** 2 + (e.clientY - v.y) ** 2 < 400 &&
                 (A.l.markActionPerformed(A.N.ZOOM_OUT_IMAGE_PRESSED), u(!1)),
-                (j.current = !1);
+                (j.current = !1));
         },
         onMouseMove: (e) => j.current && M(e.movementX, e.movementY),
         onWheel: (e) => !e.ctrlKey && M(-e.deltaX, -e.deltaY),

@@ -14,7 +14,7 @@ n.d(t, {
 });
 var i = n(477900),
     l = n(582128),
-    r = n(3900),
+    r = n(207119),
     s = n(323889),
     u = n(17928),
     a = n(717421),
@@ -115,14 +115,14 @@ function X(e) {
     return {
         render: () => (0, i.jsx)(d, { className: n, style: t ? void 0 : s, color: "currentColor", size: "xs" }),
         startAnimation: function (e) {
-            (c.current = !0),
+            ((c.current = !0),
                 u({
                     from: { rotate: "0deg" },
                     to: { rotate: "360deg" },
                     config: { tension: 750, mass: 5, friction: 100 },
                     loop: () => e ?? c.current,
                     immediate: t,
-                });
+                }));
         },
         stopAnimation: () => {
             c.current = !1;
@@ -193,17 +193,17 @@ function J(e) {
                         tooltipText: null,
                         onClick: async () => {
                             if ((0, H.K$)(t)) {
-                                await (0, h.Oy)(t.id, {
+                                (await (0, h.Oy)(t.id, {
                                     questContent: i,
                                     questContentCTA: l,
                                     questContentPosition: r,
                                     questContentRowIndex: s,
                                     sourceQuestContent: c,
                                 }),
-                                    (0, j.Fy)(t);
+                                    (0, j.Fy)(t));
                                 return;
                             }
-                            a ||
+                            (a ||
                                 _ ||
                                 (0, h.Oy)(t.id, {
                                     questContent: i,
@@ -229,7 +229,7 @@ function J(e) {
                                           questContentRowIndex: s,
                                           sourceQuestContent: c,
                                       }),
-                                      E());
+                                      E()));
                         },
                     }
                 );
@@ -374,7 +374,7 @@ function es(e) {
         [a, o] = l.useState(!1),
         c = (0, u.bG)([C.A], () => C.A.isFetchingQuestHomeHero()),
         d = er();
-    l.useEffect(() => {
+    (l.useEffect(() => {
         !(async function () {
             try {
                 null != e ? await (0, h.IV)(e) : await (0, h.Yf)();
@@ -391,10 +391,10 @@ function es(e) {
                     if (null == d) return;
                     if (null == d.heroImage) {
                         let e = Error("Hero image is missing");
-                        !(function (e) {
+                        (!(function (e) {
                             let { questHomeHero: t, assetId: n, error: i } = e,
                                 l = i instanceof Error ? i.message : null;
-                            v.default.track(K.HAw.AD_ASSET_LOADING_FAILURE, {
+                            (v.default.track(K.HAw.AD_ASSET_LOADING_FAILURE, {
                                 source: G.rE.QUEST_HOME_DESKTOP,
                                 ad_creative_id: t.id,
                                 ad_creative_type: s.p.QUEST_HOME_HERO,
@@ -405,9 +405,9 @@ function es(e) {
                                         `Error loading asset: ${null != l ? `${l}, ` : ""}${n}, QuestHomeHeroPreload`,
                                     ),
                                     { tags: { source: G.rE.QUEST_HOME_DESKTOP } },
-                                );
+                                ));
                         })({ questHomeHero: d, assetId: "QuestHomeHeroBackground_heroImage", error: e }),
-                            r(!0);
+                            r(!0));
                         return;
                     }
                     let e = [null != d.heroVideo ? (0, N.WV)(d.heroVideo) : null, d.heroImage, d.sponsorImage].filter(
@@ -416,7 +416,7 @@ function es(e) {
                     await Promise.all(e.map(I.NN));
                 } catch (e) {}
             })();
-        }, [d]);
+        }, [d]));
     let f = !t && !c && !a && !i && null == e && null == d;
     return { questHomeHero: a || i ? null : d, isLoading: t || c, confirmedEmpty: f };
 }

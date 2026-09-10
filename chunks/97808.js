@@ -3,7 +3,7 @@ var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(3900),
+    l = n(207119),
     o = n(939249),
     d = n(866665),
     c = n(717421),
@@ -314,7 +314,7 @@ function v(e) {
         x = null != w ? Math.ceil((2.5 * G.status - G.status) / 2) : 0,
         k = G.size + x,
         F = (0, _.S3)(w, a),
-        V = (function (e, t, n, i) {
+        B = (function (e, t, n, i) {
             let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             if (null == e) return A.hW.AVATAR_DEFAULT;
             if (i)
@@ -426,10 +426,10 @@ function v(e) {
             }
             throw Error(`getMaskId(): Unsupported type, size: ${t}, status: ${e}, isMobile: ${n ? "true" : "false"}`);
         })(w, r, l, c, o),
-        B = null != w ? (0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o }) : null;
+        V = null != w ? (0, _.p8)(w, { isMobile: l, isTyping: c, isVR: o }) : null;
     return (
-        (0, h.HZ)(V),
         (0, h.HZ)(B),
+        (0, h.HZ)(V),
         (0, i.jsx)(y, {
             ...e,
             ariaLabel: M,
@@ -450,7 +450,7 @@ function v(e) {
                         y: 0,
                         width: G.size,
                         height: G.size,
-                        mask: `url(#${V})`,
+                        mask: `url(#${B})`,
                         children: (0, i.jsx)(D, {
                             ref: p,
                             src: t,
@@ -518,8 +518,8 @@ function b(e) {
             pulseStatusIcon: k,
         } = e,
         F = (0, _.S3)(v, b),
-        V = r.useId(),
         B = r.useId(),
+        V = r.useId(),
         [H] = r.useState(() => ({ fill: a, ...L({ size: m, status: n, isMobile: t, isTyping: !1 }) })),
         j = r.useMemo(() => ({ fill: F, ...L({ size: m, status: v, isMobile: o, isTyping: E }) }), [F, m, v, o, E]),
         {
@@ -528,10 +528,10 @@ function b(e) {
             avatarCutoutWidth: K,
             avatarCutoutHeight: $,
             avatarCutoutRadius: z,
-            fill: q,
-            ...Z
+            fill: X,
+            ...q
         } = (0, c.z)({ config: S, from: H, to: j }, N() ? "animate-always" : "animate-never"),
-        X = (0, T.FT)(m),
+        Z = (0, T.FT)(m),
         Q = (0, T.Kj)(m),
         J = 2.5 * Q.status,
         ee = 1.5 * Q.status,
@@ -560,11 +560,11 @@ function b(e) {
             "aria-hidden": !0,
             children: [
                 (0, i.jsxs)("mask", {
-                    id: V,
-                    width: X,
-                    height: X,
+                    id: B,
+                    width: Z,
+                    height: Z,
                     children: [
-                        (0, i.jsx)("circle", { cx: X / 2, cy: X / 2, r: X / 2, fill: "white" }),
+                        (0, i.jsx)("circle", { cx: Z / 2, cy: Z / 2, r: Z / 2, fill: "white" }),
                         (0, i.jsx)(l.animated.rect, { color: "black", x: W, y: Y, width: K, height: $, rx: z, ry: z }),
                     ],
                 }),
@@ -572,9 +572,9 @@ function b(e) {
                     className: g.__invalid_foreignObject,
                     x: 0,
                     y: 0,
-                    width: X,
-                    height: X,
-                    mask: `url(#${V})`,
+                    width: Z,
+                    height: Z,
+                    mask: `url(#${B})`,
                     children: (0, i.jsx)(D, {
                         src: O,
                         isSpeaking: h,
@@ -605,8 +605,8 @@ function b(e) {
                                 viewBox: `0 0 ${J} ${ee}`,
                                 className: M ? g.Oi : void 0,
                                 children: [
-                                    (0, _.pF)(Z, Q.status, B),
-                                    (0, i.jsx)(l.animated.rect, { fill: q, width: J, height: ee, mask: `url(#${B})` }),
+                                    (0, _.pF)(q, Q.status, V),
+                                    (0, i.jsx)(l.animated.rect, { fill: X, width: J, height: ee, mask: `url(#${V})` }),
                                     (0, i.jsx)(u.C, {
                                         ref: A,
                                         location: "Avatar",
@@ -642,7 +642,7 @@ let M = r.memo(function (e) {
             null != t && null != s && (!!d || s !== t || (s === f.clD.ONLINE && o !== n)));
     return (
         r.useLayoutEffect(() => {
-            (I.current = p), (u.current = s), (E.current = o), (h.current = A);
+            ((I.current = p), (u.current = s), (E.current = o), (h.current = A));
         }, [s, o, A, p]),
         !c && null != s && null != u.current && p
             ? (0, i.jsx)(b, {

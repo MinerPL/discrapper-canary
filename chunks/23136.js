@@ -45,7 +45,7 @@ var s = {
             a.default.createElement("path", { d: i, fill: u }),
         );
     });
-(l.displayName = "QRCodeSvg"),
+((l.displayName = "QRCodeSvg"),
     (l.propTypes = s),
     (l.defaultProps = { title: void 0, xmlns: "http://www.w3.org/2000/svg" }),
-    (e.default = l);
+    (e.default = l));

@@ -1,7 +1,7 @@
-n.r(t), n.d(t, { default: () => Y });
+(n.r(t), n.d(t, { default: () => Y }));
 var s = n(477900),
     a = n(582128),
-    i = n(3900),
+    i = n(207119),
     u = n(837381),
     r = n(323889),
     l = n(17928),
@@ -66,7 +66,7 @@ function z(e) {
         [ed, ec] = a.useState(eu),
         eo = (0, f.aL)(),
         eC = (0, u.KF)();
-    a.useEffect(() => {
+    (a.useEffect(() => {
         let e = eC.current;
         return (
             e?.addEventListener("scroll", V),
@@ -86,7 +86,7 @@ function z(e) {
                     n.disconnect();
                 }
             );
-        }, [b, eC, X]);
+        }, [b, eC, X]));
     let eE = (0, o.z)({
             from: { height: 0 },
             height: el ?? 0,
@@ -99,7 +99,7 @@ function z(e) {
     }
     let eM = "top" === Y ? "8px 8px 0 0" : "0 0 8px 8px";
     function eI() {
-        (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
+        ((0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
             ? (0, p.r)({
                   type: R.F.CLICK_INTERNAL,
                   adCreativeType: r.p.QUEST,
@@ -116,7 +116,7 @@ function z(e) {
                   trackGuildAndChannelMetadata: !0,
                   sourceQuestContent: g.uF.MEMBERS_LIST,
               }),
-            (0, G.mA)({ fromContent: g.uF.MEMBERS_LIST, questId: t.id });
+            (0, G.mA)({ fromContent: g.uF.MEMBERS_LIST, questId: t.id }));
     }
     function e_() {
         (0, j.Ll)(z, $) && null != $
@@ -231,7 +231,7 @@ function z(e) {
                                 (0, s.jsxs)(S.D, {
                                     className: U.yj,
                                     onClick: (e) => {
-                                        eS(),
+                                        (eS(),
                                             e.stopPropagation(),
                                             (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                                                 ? (0, p.r)({
@@ -254,7 +254,7 @@ function z(e) {
                                                 content: g.uF.MEMBERS_LIST,
                                                 ctaContent: v.Cy.OPEN_DISCLOSURE,
                                                 sourceQuestContent: g.uF.MEMBERS_LIST,
-                                            });
+                                            }));
                                     },
                                     children: [
                                         (0, s.jsx)(M.E, {
@@ -316,7 +316,7 @@ function z(e) {
                     variant: "secondary",
                     text: eL.ctaText,
                     onClick: () => {
-                        eS(), eL.handleClickCta();
+                        (eS(), eL.handleClickCta());
                     },
                     fullWidth: !0,
                 }),

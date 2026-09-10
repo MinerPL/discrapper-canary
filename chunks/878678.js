@@ -132,7 +132,7 @@ let ee = function (e) {
         ),
         A = (0, K.A)(e.guild.id).total;
     async function f() {
-        h(!0),
+        (h(!0),
             await (0, Z.g)({
                 analyticsLocations: _,
                 analyticsLocation: {
@@ -144,7 +144,7 @@ let ee = function (e) {
                 guild: l,
                 closeLayer: i,
             }),
-            h(!1);
+            h(!1));
     }
     return (0, s.jsxs)("div", {
         className: V()(X.kL, t),
@@ -430,7 +430,7 @@ function eh(e) {
         children: em.t.map((e) => (0, s.jsx)(eE, { guild: t, definition: e }, e.tier)),
     });
 }
-var ep = i(3900),
+var ep = i(207119),
     eA = i(172218),
     ef = i(717421),
     eI = i(289704),
@@ -490,7 +490,7 @@ function eD(e) {
                 });
         }, [t, p]),
         O = n.useCallback(() => {
-            h(), (0, ey.A)(t, a.A.GUILD_POWERUPS_MARKETING, _.skuId);
+            (h(), (0, ey.A)(t, a.A.GUILD_POWERUPS_MARKETING, _.skuId));
         }, [t, _.skuId, h]),
         P = { tension: 400, friction: 30 },
         U = (0, ef.z)({ scale: G ? 0.85 : 1, y: G ? -32 : 0, config: P }),
@@ -641,8 +641,8 @@ let eB = new Map([[ej.W5, "+"]]),
             a,
             { guild: o, onClose: c } = e;
         n.useEffect(() => {
-            N.A.shouldFetchCatalogForGuild(o.id) && (0, ev.AK)(o.id),
-                N.A.shouldFetchPowerupsForGuild(o.id) && (0, ev.Xd)(o.id);
+            (N.A.shouldFetchCatalogForGuild(o.id) && (0, ev.AK)(o.id),
+                N.A.shouldFetchPowerupsForGuild(o.id) && (0, ev.Xd)(o.id));
         }, [o.id]);
         let d = (function (e) {
             let t = [...e].reverse(),
@@ -683,7 +683,7 @@ let eB = new Map([[ej.W5, "+"]]),
             })(i)),
             n.useMemo(() => {
                 let e = [...(l ?? [])];
-                return null != a && e.push(a), e.filter((e) => !eP.has(e.skuId));
+                return (null != a && e.push(a), e.filter((e) => !eP.has(e.skuId)));
             }, [l, a]) ?? []),
         ).slice(0, 6);
         return 0 === d.length
@@ -958,7 +958,7 @@ function e0(e) {
         { analyticsLocations: p } = (0, o.Ay)(a.A.BOOSTED_GUILD_PERKS_MODAL),
         A = E?.id,
         f = n.useCallback(() => {
-            i(),
+            (i(),
                 null != A &&
                     m.default.track(J.HAw.MODAL_DISMISSED, {
                         type: J.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -967,7 +967,7 @@ function e0(e) {
                         location_object: c.object,
                         guild_id: A,
                         duration_open_ms: Date.now() - h,
-                    });
+                    }));
         }, [p, h, c.object, c.section, i, A]);
     return (n.useLayoutEffect(() => {
         T?.(f);

@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { default: () => lu });
+(t.r(l), t.d(l, { default: () => lu }));
 var s,
     n = t(477900),
     i = t(582128),
@@ -520,13 +520,13 @@ function eP(e) {
         { status: s } = e;
     switch (s) {
         case A.B5.REJECTED:
-            (l = Y.t["7YSJ6f"]), (t = Y.t.i05OUR);
+            ((l = Y.t["7YSJ6f"]), (t = Y.t.i05OUR));
             break;
         case A.B5.APPROVED:
-            (l = Y.t.bv82GS), (t = Y.t.D4OUHT);
+            ((l = Y.t.bv82GS), (t = Y.t.D4OUHT));
             break;
         default:
-            (l = Y.t["/wqiSv"]), (t = Y.t.o47YZs);
+            ((l = Y.t["/wqiSv"]), (t = Y.t.o47YZs));
     }
     return (0, n.jsxs)("div", {
         className: eD.do,
@@ -587,9 +587,9 @@ let ek = i.memo(function (e) {
             { analyticsLocations: a } = (0, x.Ay)(),
             d = i.useCallback(
                 (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         e.preventDefault(),
-                        (0, el.openUserProfileModal)({ userId: t.id, joinRequestId: s, sourceAnalyticsLocations: a });
+                        (0, el.openUserProfileModal)({ userId: t.id, joinRequestId: s, sourceAnalyticsLocations: a }));
                 },
                 [t, s, a],
             );
@@ -727,7 +727,7 @@ function eq(e) {
         { fetchNextPage: x } = (0, g.K)({ guildId: l, guildJoinRequests: u }),
         m = i.useCallback(async () => {
             let e = a === A._e.TIMESTAMP_ASC ? A._e.TIMESTAMP_DESC : A._e.TIMESTAMP_ASC;
-            h.A.setSelectedSortOrder(l, e, t), await x(e, t);
+            (h.A.setSelectedSortOrder(l, e, t), await x(e, t));
         }, [a, l, x, t]);
     return null == r
         ? null
@@ -971,7 +971,7 @@ function e2(e) {
         : null;
 }
 var e3 = t(856768),
-    e6 = t(3900),
+    e6 = t(207119),
     e9 = t(702841),
     e1 = t(717421),
     le = t(144073),

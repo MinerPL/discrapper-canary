@@ -3,7 +3,7 @@ var l = n(477900),
     i = n(582128),
     s = n(503698),
     r = n.n(s),
-    a = n(3900),
+    a = n(207119),
     o = n(17928),
     u = n(554146),
     c = n(939249),
@@ -50,7 +50,7 @@ function N(e) {
         L = i.useCallback(() => {
             if (b) return;
             let e = Math.floor(77 * Math.random());
-            _(!0), T(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered);
+            (_(!0), T(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered));
         }, [b, _, T]),
         M = i.useCallback(() => {
             _(!1);
@@ -62,14 +62,14 @@ function N(e) {
         className: r()(R, t),
         "aria-expanded": s,
         onMouseEnter: () => {
-            L(), u?.();
+            (L(), u?.());
         },
         onMouseOver: L,
         onMouseLeave: () => {
-            M(), h?.();
+            (M(), h?.());
         },
         onFocus: () => {
-            k(), f?.();
+            (k(), f?.());
         },
         onContextMenu: m,
         ...y,

@@ -5,7 +5,7 @@ var l = n(477900),
     r = n.n(s),
     a = n(284009),
     o = n.n(a),
-    u = n(3900),
+    u = n(207119),
     c = n(17928),
     d = n(269115),
     h = n(395899),
@@ -95,7 +95,7 @@ function O(e) {
     i.useEffect(() => {
         if (null == g.current || null == j) return;
         let e = Math.min(2, (0, x.mZ)());
-        (g.current.width = s * e), (g.current.height = s * e);
+        ((g.current.width = s * e), (g.current.height = s * e));
         let t = !1;
         return (
             (async function () {
@@ -117,13 +117,13 @@ function O(e) {
                     _.current && A.current.setState(!0));
             })(),
             () => {
-                A.current?.drop(), (A.current = null), (t = !0);
+                (A.current?.drop(), (A.current = null), (t = !0));
             }
         );
     }, [j, s, r.id, u, p]),
     i.useEffect(() => {
         let e;
-        t || (e = 0), A.current?.setState(t && c, e);
+        (t || (e = 0), A.current?.setState(t && c, e));
     }, [r, t, c]),
     null == j)
         ? null

@@ -35,13 +35,13 @@ var r = n(477900),
     R = n(267102),
     M = n(435558),
     U = n.n(M),
-    K = n(3900),
+    K = n(207119),
     G = n(258873),
     F = n(622242),
     B = n(731738),
     V = n(834730),
-    H = n(780907),
-    W = n(684013),
+    W = n(780907),
+    H = n(684013),
     Y = n(964486),
     z = n(807393),
     J = n(976860),
@@ -78,7 +78,7 @@ function ec(e) {
     (0, Y.Ay)(
         () => (
             (c.current = setTimeout(A, ea)),
-            W.A.track(ei.HAw.NOTIFICATION_VIEWED, { notif_type: er.KS.OverlayCrashed }),
+            H.A.track(ei.HAw.NOTIFICATION_VIEWED, { notif_type: er.KS.OverlayCrashed }),
             () => {
                 null != c.current && clearTimeout(c.current);
             }
@@ -86,14 +86,14 @@ function ec(e) {
     );
     let m = (p?.isStaff() ?? !1) || (p?.isStaffPersonal() ?? !1),
         A = i.useCallback(() => {
-            a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), o?.();
+            (a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), o?.());
         }, [a, n, o]),
         v = i.useCallback(
             (e) => {
                 h ||
                     (f(!0),
                     n?.(),
-                    W.A.track(
+                    H.A.track(
                         ei.HAw.NOTIFICATION_CLICKED,
                         { notif_type: er.KS.OverlayCrashed, action_type: "reload" },
                         !0,
@@ -105,13 +105,13 @@ function ec(e) {
         ),
         y = i.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1);
+                (e.stopPropagation(), e.shiftKey ? (u(!0), null != c.current && clearTimeout(c.current)) : u(!1));
             },
             [u],
         ),
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(), n?.(), l?.();
+                (e.stopPropagation(), n?.(), l?.());
             },
             [l, n],
         ),
@@ -171,9 +171,9 @@ class ed extends i.PureComponent {
         let n = (0, J.JK)().location;
         this.setState({ error: e, info: t });
         let r = et.A.getTargetPID();
-        W.A.setOverlayCrashed(r, e), W.A.setInputLocked(!0, r);
+        (H.A.setOverlayCrashed(r, e), H.A.setInputLocked(!0, r));
         let i = (0, q.St)(e, Q.Ue.OutOfProcess, { extra: { info: t, location: n } });
-        W.A.track(ei.HAw.APP_CRASHED, {
+        (H.A.track(ei.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -182,7 +182,7 @@ class ed extends i.PureComponent {
             error_level: "fatal",
         }),
             eo(),
-            (this.pid = r);
+            (this.pid = r));
     }
     render() {
         let { children: e, className: t } = this.props,
@@ -195,19 +195,19 @@ class ed extends i.PureComponent {
                           error: n,
                           onLock: () => {
                               let e = this.pid ?? et.A.getTargetPID();
-                              W.A.setInputLocked(!0, e), this.setState({ showError: !1 });
+                              (H.A.setInputLocked(!0, e), this.setState({ showError: !1 }));
                           },
                           onDisable: () => {
                               let e = et.A.getFocusedRunningGame();
-                              null != e && H.Ay.toggleOverlay(e, !1, !1);
+                              null != e && W.Ay.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               let e = this.pid ?? et.A.getTargetPID();
-                              W.A.updateOverlayState(e, Q.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
-                                  this.setState({ showError: !1 });
+                              (H.A.updateOverlayState(e, Q.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
+                                  this.setState({ showError: !1 }));
                           },
                           onReload: () => {
-                              W.A.setReloadOverlay(et.A.getTargetPID()), this.setState({ showError: !1 });
+                              (H.A.setReloadOverlay(et.A.getTargetPID()), this.setState({ showError: !1 }));
                           },
                       }),
                   })
@@ -238,7 +238,7 @@ class eC extends i.Component {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
+        (null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
             (0, ev.M)(e),
@@ -247,29 +247,29 @@ class eC extends i.Component {
                 ? t.addEventListener("contextmenu", em.contextMenuCallbackNative, !1)
                 : t.addEventListener("contextmenu", em.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
-            this.registerPopoutGlobalKeybinds();
+            this.registerPopoutGlobalKeybinds());
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                ey.A.unmountWindow(this.props.windowKey), ep.isPlatformEmbedded && eA.Ay.close(this.props.windowKey);
+                (ey.A.unmountWindow(this.props.windowKey), ep.isPlatformEmbedded && eA.Ay.close(this.props.windowKey));
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
     componentDidUpdate(e) {
         let { title: t, clientThemesCSS: n } = this.props;
-        e.title !== t && this.updateTitle(), e.clientThemesCSS !== n && this.updateClientTheme();
+        (e.title !== t && this.updateTitle(), e.clientThemesCSS !== n && this.updateClientTheme());
     }
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        this.unregisterPopoutGlobalKeybinds(),
+        (this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
             ep.isPlatformEmbedded
                 ? t.removeEventListener("contextmenu", em.contextMenuCallbackNative)
                 : t.removeEventListener("contextmenu", em.contextMenuCallbackWeb),
             (0, d.r)(() => p.useModalsStore.setState((e) => ({ ...e, [m.KX]: [] }))),
-            e.removeEventListener("beforeunload", this.beforeUnload);
+            e.removeEventListener("beforeunload", this.beforeUnload));
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -287,7 +287,7 @@ class eC extends i.Component {
             return;
         }
         let s = n.createElement("style");
-        s.setAttribute(D.Vg, "true"), (s.textContent = e), r.appendChild(s);
+        (s.setAttribute(D.Vg, "true"), (s.textContent = e), r.appendChild(s));
     }
     handleBlur = () => {
         this.props.onBlur?.();
@@ -386,20 +386,20 @@ class eC extends i.Component {
 let eb = i.forwardRef(function (e, t) {
         let { guestWindow: n, className: s, children: o } = e,
             { lang: c, style: d, className: u } = (0, ef.xb)();
-        i.useEffect(() => {
+        (i.useEffect(() => {
             let e = n.document.documentElement;
-            a()(null != e, "Window document element was null"), e.setAttribute("style", d);
+            (a()(null != e, "Window document element was null"), e.setAttribute("style", d));
         }, [n, d]),
             i.useEffect(() => {
                 let e = n.document.documentElement;
-                a()(null != e, "Window document element was null"), e.setAttribute("lang", c);
+                (a()(null != e, "Window document element was null"), e.setAttribute("lang", c));
             }, [n, c]),
-            (0, eg.A)(n.document.documentElement);
+            (0, eg.A)(n.document.documentElement));
         let h = l()(u, s, "in-popout");
         return (
             i.useLayoutEffect(() => {
                 let e = n.document.documentElement;
-                a()(null != e, "Window document element was null"), e.setAttribute("class", h);
+                (a()(null != e, "Window document element was null"), e.setAttribute("class", h));
             }, [n, h]),
             (0, r.jsx)("div", { "data-popout-root": !0, ref: t, children: o })
         );

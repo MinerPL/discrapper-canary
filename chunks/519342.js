@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     a = n(503698),
     s = n.n(a),
-    r = n(3900),
+    r = n(207119),
     o = n(821578),
     c = n(750459),
     d = n(17928),
@@ -42,11 +42,11 @@ var i = n(477900),
     z = n(856660),
     H = n(544299),
     W = n(996752),
-    $ = n(610274),
-    Y = n(655413),
+    Y = n(610274),
+    $ = n(655413),
     K = n(360627),
-    q = n(884863),
-    X = n(739820),
+    X = n(884863),
+    q = n(739820),
     Z = n(806931),
     Q = n(190460),
     J = n(270103),
@@ -118,7 +118,7 @@ function el(e) {
         ep = (0, d.bG)([U.A], () => U.A.isFocused()),
         em = (0, D.tx)(ec, n, el),
         eA = (0, d.bG)([B.A], () => B.A.getRoom(n)?.background ?? o.I.DEFAULT),
-        { seats: ef } = X.iX[eA],
+        { seats: ef } = q.iX[eA],
         ex =
             null != K && K !== c.x.UNSET
                 ? ef[K]
@@ -157,7 +157,7 @@ function el(e) {
             null != ec && (0, k.EB)({ guildId: ec, channelId: n, interactionType: "hovered" });
         }, [ec, n]),
         eT = (ea && W) || ev,
-        eS = W ? $.x.find((e) => e.id === E) : null,
+        eS = W ? Y.x.find((e) => e.id === E) : null,
         eR =
             null != ex
                 ? ee.intl.formatToPlainString(eS?.userLabel ?? J.default["4bL+KW"], {
@@ -270,12 +270,12 @@ function el(e) {
         className: s()(et.f1, { [et.hY]: eT }),
         style: eG,
         children: ea
-            ? (0, i.jsxs)(q.O, {
+            ? (0, i.jsxs)(X.O, {
                   isOpen: eo,
                   onOpenChange: er,
                   placement: a > 50 ? "left" : "right",
                   children: [
-                      (0, i.jsx)(q.O.Trigger, {
+                      (0, i.jsx)(X.O.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e,
                                   a = (0, i.jsx)(x.D, {
@@ -285,7 +285,7 @@ function el(e) {
                                       innerRef: t,
                                       onMouseEnter: e_,
                                       onClick: () => {
-                                          n(), eE();
+                                          (n(), eE());
                                       },
                                       onContextMenu: eb,
                                       ...eO,
@@ -293,15 +293,15 @@ function el(e) {
                                   });
                               return null != eu
                                   ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eo && !eP, children: a })
-                                  : (0, i.jsx)(Y.A, { name: em, shouldShow: !eo && !eP, delay: ez, children: a });
+                                  : (0, i.jsx)($.A, { name: em, shouldShow: !eo && !eP, delay: ez, children: a });
                           },
                       }),
-                      (0, i.jsx)(q.O.Popup, {
+                      (0, i.jsx)(X.O.Popup, {
                           "aria-label": ee.intl.string(J.default.LTAf2V),
-                          children: $.x.map((e) => {
+                          children: Y.x.map((e) => {
                               let t = e.icon;
                               return (0, i.jsx)(
-                                  q.O.Item,
+                                  X.O.Item,
                                   {
                                       text: ee.intl.string(e.label),
                                       icon: t,
@@ -323,14 +323,14 @@ function el(e) {
               })
             : null != eu
               ? (0, i.jsx)(ei, { title: em, stream: eu, shouldShow: !eP, children: eF })
-              : (0, i.jsx)(Y.A, { name: em, shouldShow: !eP, delay: ez, children: eF }),
+              : (0, i.jsx)($.A, { name: em, shouldShow: !eP, delay: ez, children: eF }),
     });
 }
 function ea(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
         { posturesEnabled: r } = (0, F.mf)({ guildId: n, location: "GuildRoomUserList" }),
         u = (0, d.bG)([B.A], () => B.A.getRoom(t)?.background ?? o.I.DEFAULT),
-        { seats: h } = X.iX[u];
+        { seats: h } = q.iX[u];
     return (0, i.jsx)("div", {
         role: "list",
         "aria-label": ee.intl.string(J.default.xn1EI9),

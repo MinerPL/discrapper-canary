@@ -5,7 +5,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(435558),
     o = n.n(l),
-    d = n(3900),
+    d = n(207119),
     c = n(621466),
     u = n(452027),
     _ = n(259678),
@@ -120,11 +120,11 @@ class T extends r.PureComponent {
                 "aria-labelledby": k,
                 "aria-describedby": F,
             } = this.props,
-            { fieldProps: V } = (0, u.n)(this.props),
-            B = 0;
-        (p ? null != a && (null != o ? (B = a[o]) : null != l && (B = a[l])) : (B = this.scaleValue(e)),
-            (B = Math.min(Math.max(B, 0), 100)));
-        let H = `${B}%`,
+            { fieldProps: B } = (0, u.n)(this.props),
+            V = 0;
+        (p ? null != a && (null != o ? (V = a[o]) : null != l && (V = a[l])) : (V = this.scaleValue(e)),
+            (V = Math.min(Math.max(V, 0), 100)));
+        let H = `${V}%`,
             j =
                 null != a && null != r
                     ? a.map((e, t) => {
@@ -156,10 +156,10 @@ class T extends r.PureComponent {
                           );
                       })
                     : null,
-            W = null != y ? y(e) : `${B.toFixed(0)}%`,
+            W = null != y ? y(e) : `${V.toFixed(0)}%`,
             Y = v?.(e) ?? void 0;
         return (0, i.jsx)(u.D, {
-            ...V,
+            ...B,
             children: (r) =>
                 (0, i.jsx)(m, {
                     active: t,

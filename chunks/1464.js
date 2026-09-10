@@ -1,11 +1,11 @@
 let c;
-a.r(t), a.d(t, { WowMomentTypes: () => A, default: () => W }), a(323874), a(14289), a(35956);
+(a.r(t), a.d(t, { WowMomentTypes: () => A, default: () => W }), a(323874), a(14289), a(35956));
 var i,
     s = a(477900),
     n = a(582128),
     d = a(503698),
     o = a.n(d),
-    m = a(3900),
+    m = a(207119),
     h = a(17928),
     l = a(636537),
     u = a(717421),
@@ -38,9 +38,9 @@ async function S(e, t) {
                   : "https://cdn.discordapp.com/assets/content/255e915caadab258cf5ad40cfa8f81ca17227502e691370f3aaf604816da0509.webm");
         let c = await l.Bo.get({ url: a, binary: !0, rejectWithError: !0 }),
             i = window.URL.createObjectURL(c.body);
-        t(i), p.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS", wumpusMedia: i });
+        (t(i), p.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS", wumpusMedia: i }));
     } catch (e) {
-        M.A.captureException(e), p.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE" });
+        (M.A.captureException(e), p.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE" }));
     }
 }
 function x() {
@@ -56,7 +56,7 @@ function x() {
         x = M > 52 || -1 === M || A,
         W = A ? "video/mp4" : "video/webm",
         g = x && !e && d && null === t && !1 === i;
-    n.useEffect(() => {
+    (n.useEffect(() => {
         g && S(A, a);
     }, [g, A, a]),
         n.useEffect(() => {
@@ -65,10 +65,10 @@ function x() {
                     T.A.canPlayWowMoment &&
                     (p(!0),
                     (c = setTimeout(() => {
-                        p(!1),
+                        (p(!1),
                             U(!0),
                             f.default.track(I.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "gradient_highlight" }),
-                            (0, b.o)(!1);
+                            (0, b.o)(!1));
                     }, 2e3)));
             }
             return (
@@ -77,7 +77,7 @@ function x() {
                     E._.unsubscribe(I.jej.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, x]);
+        }, [e, x]));
     let [R, U] = n.useState(!1),
         [j, H] = n.useState(!1),
         P = (0, u.z)({ opacity: 0.2 * !!R, config: { duration: 100 } }),
@@ -85,7 +85,7 @@ function x() {
             { x: j ? "100%" : "-100%", config: { duration: 500 } },
             j ? "respect-motion-settings" : "animate-never",
         );
-    n.useEffect(() => {
+    (n.useEffect(() => {
         let e = -1;
         return (
             R &&
@@ -102,13 +102,13 @@ function x() {
             return (
                 j &&
                     (e = window.setTimeout(() => {
-                        H(!1), U(!1);
+                        (H(!1), U(!1));
                     }, 1e3)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [j]);
+        }, [j]));
     let C = l && null !== t,
         O = C || R;
     return (0, s.jsxs)("div", {
@@ -119,11 +119,11 @@ function x() {
                     autoPlay: !0,
                     className: y.tN,
                     onPlay: () => {
-                        clearTimeout(c),
-                            f.default.track(I.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" });
+                        (clearTimeout(c),
+                            f.default.track(I.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" }));
                     },
                     onEnded: () => {
-                        p(!1), (0, b.o)(!1), window.URL.revokeObjectURL(t), a(null);
+                        (p(!1), (0, b.o)(!1), window.URL.revokeObjectURL(t), a(null));
                     },
                     children: (0, s.jsx)("source", { src: t, type: W }),
                 }),

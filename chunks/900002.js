@@ -5,7 +5,7 @@ var i,
     s = n(503698),
     l = n.n(s),
     o = n(333007),
-    d = n(3900),
+    d = n(207119),
     c = n(607399),
     u = n(621466),
     _ = n(844222),
@@ -147,11 +147,11 @@ class y extends a.Component {
                 if (null == (e = this.props.targetElementRef.current)) return;
             } else if (((e = this.siblingDomRef.current?.previousElementSibling), !(0, u.vq)(e)))
                 throw Error("VoidTooltip cannot find DOM node");
-            (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
+            ((this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate());
         }
     }
     componentWillUnmount() {
-        this.showTimeout.stop(), (this.domElementRef.current = null);
+        (this.showTimeout.stop(), (this.domElementRef.current = null));
     }
     render() {
         let e,
@@ -235,7 +235,7 @@ class y extends a.Component {
         null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0);
     }
     hide() {
-        this.showTimeout.stop(), this.toggleShow(!1);
+        (this.showTimeout.stop(), this.toggleShow(!1));
     }
     toggleShow(e) {
         this.state.shouldShowTooltip !== e &&

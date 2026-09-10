@@ -3,7 +3,7 @@ var a = n(477900),
     r = n(582128),
     l = n(503698),
     i = n.n(l),
-    s = n(3900),
+    s = n(207119),
     o = n(113325),
     c = n(315629),
     d = n(17928),
@@ -60,12 +60,12 @@ function S(e) {
             () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === Q,
             [n, Q],
         );
-    r.useEffect(() => {
+    (r.useEffect(() => {
         V ? W(!1) : Y && l ? W(!0) : Y || W(!1);
     }, [Y, l, V]),
         r.useEffect(() => {
             J(S);
-        }, [S, J]);
+        }, [S, J]));
     let X = (function (e) {
             let { shouldShow: t, caretPosition: n, onExitComplete: a } = e,
                 { reducedMotion: l } = r.useContext(_.C),
@@ -81,16 +81,16 @@ function S(e) {
                         };
                     switch (e) {
                         case "top":
-                            (n.transform = "translate3d(0, -10px, 0)"), (a.transform = "translate3d(0, -10px, 0)");
+                            ((n.transform = "translate3d(0, -10px, 0)"), (a.transform = "translate3d(0, -10px, 0)"));
                             break;
                         case "bottom":
-                            (n.transform = "translate3d(0, 10px, 0)"), (a.transform = "translate3d(0, 10px, 0)");
+                            ((n.transform = "translate3d(0, 10px, 0)"), (a.transform = "translate3d(0, 10px, 0)"));
                             break;
                         case "left":
-                            (n.transform = "translate3d(-10px, 0, 0)"), (a.transform = "translate3d(-10px, 0, 0)");
+                            ((n.transform = "translate3d(-10px, 0, 0)"), (a.transform = "translate3d(-10px, 0, 0)"));
                             break;
                         case "right":
-                            (n.transform = "translate3d(10px, 0, 0)"), (a.transform = "translate3d(10px, 0, 0)");
+                            ((n.transform = "translate3d(10px, 0, 0)"), (a.transform = "translate3d(10px, 0, 0)"));
                     }
                     return {
                         from: n,
