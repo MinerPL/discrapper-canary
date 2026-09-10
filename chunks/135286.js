@@ -74,8 +74,8 @@ function h(e, t) {
     let n = e.length > t ? t : e.length;
     return e.substring(0, n).padEnd(t, " ");
 }
-var f = n(734057);
-let I = (0, n(945810).mj)({
+var I = n(734057);
+let f = (0, n(945810).mj)({
     kind: "user",
     name: "2026-08-compress-logs",
     defaultConfig: { enabled: !1 },
@@ -100,7 +100,7 @@ let O = new s.A("DebugUploadManager");
 async function R(e, t) {
     try {
         await L(e);
-        let { enabled: n } = I.getConfig({ location: "uploadDebugLogFiles" });
+        let { enabled: n } = f.getConfig({ location: "uploadDebugLogFiles" });
         await _(0xe00000, n, t);
     } catch (t) {
         let e;
@@ -190,9 +190,9 @@ ${s}`;
                     E,
                     A,
                     h,
-                    f,
-                    { index: I, timestamp: p, logs: T, nativeLogs: g, serverTrace: C } = i,
-                    O = 0 === I ? (m().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    I,
+                    { index: f, timestamp: p, logs: T, nativeLogs: g, serverTrace: C } = i,
+                    O = 0 === f ? (m().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
                     R =
                         ((o =
                             ((r = T),
@@ -270,17 +270,17 @@ ${s}`;
 `,
                         }))),
                         (h = m().max(A.map((e) => e.totalTime.length)) ?? 0),
-                        (f = m().max(A.map((e) => e.deltaTime.length)) ?? 0),
+                        (I = m().max(A.map((e) => e.deltaTime.length)) ?? 0),
                         A.map((e) => {
                             let { totalTime: t, deltaTime: n, log: i } = e;
-                            return `${m().padStart(t, h)} ${m().padStart(n, f)} ${i}`;
+                            return `${m().padStart(t, h)} ${m().padStart(n, I)} ${i}`;
                         }).join("")),
-                    L = `Trace #${I + 1} started ${(0, S.aK)(p)}
+                    L = `Trace #${f + 1} started ${(0, S.aK)(p)}
 ${R}`;
                 return (
                     null != C &&
                         (L += `
- Server trace for trace #${I + 1}${C}`),
+ Server trace for trace #${f + 1}${C}`),
                     L
                 );
             })
@@ -305,10 +305,10 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "610737", versionHash: "3a03c473cd7866ed1dbba685724eb971410e8d79" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "610830", versionHash: "6e6ccf62db16bcee241b2f2a294214ee7fe017b2" }, void 0, 2)}
 
     ChannelStore:
-    ${JSON.stringify(f.A.getDebugInfo(), void 0, 2)}
+    ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
 
     Logs:
     ${t}

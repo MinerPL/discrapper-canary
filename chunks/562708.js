@@ -1,7 +1,7 @@
 let i, r, a, s, l, o, d, c;
 (n.r(t),
     n.d(t, {
-        encodeProperties: () => f,
+        encodeProperties: () => I,
         isThrottled: () => em,
         analyticsTrackingStoreMaker: () => q,
         getOS: () => ed,
@@ -10,11 +10,11 @@ let i, r, a, s, l, o, d, c;
         getCampaignParams: () => eE,
         ImpressionNames: () => Q.IJ,
         ImpressionGroups: () => Z.q,
-        getSuperPropertiesBase64: () => eI,
+        getSuperPropertiesBase64: () => ef,
         trackMaker: () => eg,
         AnalyticsActionHandlers: () => Y,
         NetworkActionNames: () => Q.D3,
-        getSuperProperties: () => ef,
+        getSuperProperties: () => eI,
         ImpressionTypes: () => Z.z,
         extendSuperProperties: () => eh,
     }));
@@ -23,7 +23,7 @@ var u = n(812729),
     E = n(284009),
     A = n.n(E),
     h = n(264572).Buffer;
-function f(e) {
+function I(e) {
     try {
         return h.from(JSON.stringify(e)).toString("base64");
     } catch (e) {
@@ -31,7 +31,7 @@ function f(e) {
     }
 }
 (n(142703), n(667532), n(321073));
-var I = n(132500);
+var f = n(132500);
 n(423034);
 var p = n(80703),
     T = n(17928),
@@ -55,8 +55,8 @@ let C = "x-science-test",
     x = 0,
     k = null,
     F = !1,
-    V = null,
-    B = null;
+    B = null,
+    V = null;
 function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
@@ -93,9 +93,9 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         }
         function h(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == $ && A() && ($ = t ? setTimeout(f, 0) : c(f, { timeout: L }));
+            null == $ && A() && ($ = t ? setTimeout(I, 0) : c(I, { timeout: L }));
         }
-        function f() {
+        function I() {
             if ((($ = null), !A())) return Promise.resolve();
             let e = K.slice();
             ((K = []), (U = H(U)));
@@ -125,14 +125,14 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             if (null != _) return _(r, i);
             let a = {};
             return (
-                F || ((B = (0, I.A)()), (a[C] = B), (F = !0)),
+                F || ((V = (0, f.A)()), (a[C] = V), (F = !0)),
                 m.Bo.post({
                     url: t ?? l,
                     headers: a,
                     body: { token: i, events: r },
                     retries: 3,
                     rejectWithError: !1,
-                }).then((e) => (a[C] && (V = e?.headers?.[C] ?? null), e))
+                }).then((e) => (a[C] && (B = e?.headers?.[C] ?? null), e))
             );
         }
         function S() {
@@ -161,8 +161,8 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                     event_queue_batch_min_size: w === Number.MAX_SAFE_INTEGER ? 0 : w,
                     event_queue_batch_max_size: G,
                     event_queue_batch_avg_size: U > 0 ? x / U : 0,
-                    science_request_id: B,
-                    science_response: V,
+                    science_request_id: V,
+                    science_response: B,
                     launch_signature: u(),
                 },
             };
@@ -223,7 +223,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }),
             (Y.handleConnectionClosed = function () {
                 return (
-                    f(),
+                    I(),
                     (function () {
                         if (null == k) return;
                         switch (k.type) {
@@ -244,7 +244,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             (Y.handleFingerprint = function () {
-                return (f(), !1);
+                return (I(), !1);
             }),
             (Y.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
@@ -287,9 +287,9 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }
             submitEventsImmediately = g;
             requestDrain = () => {
-                for (let e of (f(), R))
+                for (let e of (I(), R))
                     setTimeout(() => {
-                        f();
+                        I();
                     }, e);
             };
         }
@@ -481,12 +481,12 @@ if (null == a)
         a = {};
     }
 function eh(e) {
-    s = f((a = { ...a, ...e }));
-}
-function ef() {
-    return a;
+    s = I((a = { ...a, ...e }));
 }
 function eI() {
+    return a;
+}
+function ef() {
     return s;
 }
 eh(
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("610737", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("610830", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

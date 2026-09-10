@@ -1,6 +1,6 @@
 let i;
 (n.r(t),
-    n.d(t, { ACTION_DENYLIST: () => ee, getOverlayURL: () => ef, default: () => eD, OverlayPIDStatus: () => B }),
+    n.d(t, { ACTION_DENYLIST: () => ee, getOverlayURL: () => eI, default: () => eD, OverlayPIDStatus: () => V }),
     n(393431),
     n(532706),
     n(42231),
@@ -26,8 +26,8 @@ var r,
     E = n(77729),
     A = n(719129),
     h = n(996308),
-    f = n(626584),
-    I = n(736056),
+    I = n(626584),
+    f = n(736056),
     p = n(952818);
 let T = [],
     m = null;
@@ -55,9 +55,9 @@ var S = n(777334),
     x = n(19575),
     k = n(9302),
     F = n(899699),
-    V = n(652215);
+    B = n(652215);
 n(644434);
-var B =
+var V =
     (((r = {}).ATTACHING = "ATTACHING"),
     (r.CONNECTING = "CONNECTING"),
     (r.CONNECTED = "CONNECTED"),
@@ -104,7 +104,7 @@ class Q {
             (cancelIdleCallback(this.requestIdleCallback), (this.requestIdleCallback = null)),
         Y())
             ? (this.actionsToFlush.size > 0 &&
-                  (h.tN({ type: V.kGV.DISPATCH, pid: null, token: null, payloads: Array.from(this.actionsToFlush) }),
+                  (h.tN({ type: B.kGV.DISPATCH, pid: null, token: null, payloads: Array.from(this.actionsToFlush) }),
                   this.actionsToFlush.clear()),
               this.waitingActionsToFlush.size > 0 && this.enqueueWaitingActions())
             : this.actionsToFlush.clear();
@@ -261,7 +261,7 @@ let J = new Q(),
         "UPLOAD_ATTACHMENT_SET_UPLOADS",
     ]),
     et = new Set(),
-    en = new f.A("OverlayBridgeStore"),
+    en = new I.A("OverlayBridgeStore"),
     ei = {};
 function er(e) {
     return ei[e] ?? {};
@@ -297,7 +297,7 @@ let es = "none",
             en.error(n);
             let i = er((0, k.getPID)());
             (ea((0, k.getPID)(), { ...i, error_description: n, success: !1 }),
-                w.default.track(V.HAw.OVERLAY_HOOK_RESULT, er((0, k.getPID)())));
+                w.default.track(B.HAw.OVERLAY_HOOK_RESULT, er((0, k.getPID)())));
         },
         timeoutMs: 18e4,
     });
@@ -324,7 +324,7 @@ function ed(e, t) {
                             for (let t of (en.log("transitionOverlayPIDStatus: Uploaded minidumps", e), e)) {
                                 if (null == t) continue;
                                 let e = null != t.processName ? P.A.getGameByExecutable(t.processName) : null;
-                                w.default.track(V.HAw.OVERLAY_HOOK_CRASHED, {
+                                w.default.track(B.HAw.OVERLAY_HOOK_CRASHED, {
                                     process_name: t?.processName,
                                     game_name: e?.name ?? null,
                                     game_id: e?.id ?? null,
@@ -345,14 +345,14 @@ function ed(e, t) {
 }
 async function ec(e) {
     try {
-        if (x.Ay.supportsFeature(V.BYE.CREATE_HOST_ON_ATTACH))
+        if (x.Ay.supportsFeature(B.BYE.CREATE_HOST_ON_ATTACH))
             if (W.size > 0) {
                 es = "reconcile.getOverlayURL";
-                let t = await ef();
+                let t = await eI();
                 ((es = "reconcile.createHostProcess"), e.createHostProcess(t, eT, ep));
             } else ((es = "reconcile.destroyHostProcess"), e.destroyHostProcess(), eh((0, k.getPID)()));
         else if (K) {
-            let t = await ef();
+            let t = await eI();
             e.createHostProcess(t, eT, ep);
         } else (e.destroyHostProcess(), eh((0, k.getPID)()));
     } catch (t) {
@@ -500,14 +500,14 @@ let eA = eo("updateIntendedOverlayPIDs", (e) => (en.info("updateIntendedOverlayP
         if (null == e) return (0, k.setPID)(k.UNSET_PID);
         y.A.isOverlayV3EnabledForPID(e) || (0, k.setPID)(k.UNSET_PID);
     });
-function ef() {
+function eI() {
     return new Promise((e) => {
         ey.addConditionalChangeListener(() => {
             if (null != i) return (e(i), !1);
         });
     });
 }
-let eI = eo("setOverlayEnabled", async (e) => {
+let ef = eo("setOverlayEnabled", async (e) => {
     if (!(0, k.supportsLegacy)()) return;
     if (K === e) return void en.verbose("setOverlayEnabled: no change", { newOverlayEnabled: e });
     ((K = e), ey.emitChange());
@@ -530,7 +530,7 @@ function eT(e, t, n) {
             height: n.graphics_height,
         }));
     let a = er(e);
-    (w.default.track(V.HAw.OVERLAY_HOOK_RESULT, a),
+    (w.default.track(B.HAw.OVERLAY_HOOK_RESULT, a),
         en.info(`Overlay connection to ${e} ${t ? "succeeded" : "failed"}`, a),
         t
             ? (u.A.updateOverlayState(e, C.AR.OVERLAY_RENDERING, "onConnectComplete"), ed(e, "CONNECTED", "CONNECTING"))
@@ -542,7 +542,7 @@ function em() {
         t = M.default.getId();
     null != e &&
         h.tN({
-            type: V.kGV.DISPATCH,
+            type: B.kGV.DISPATCH,
             pid: null,
             token: null,
             payloads: [{ type: "UPDATE_TOKEN", token: e, userId: t }],
@@ -561,7 +561,7 @@ function eg(e) {
 }
 function eS(e) {
     switch (e.type) {
-        case V.kGV.CONNECT:
+        case B.kGV.CONNECT:
             let t = M.default.getToken();
             if (null == t) break;
             ((0, c.Vz)(k.OVERLAY_LAYOUT_ID, U.A.getDefaultLayout(k.OVERLAY_LAYOUT_ID), 0),
@@ -579,8 +579,8 @@ function eS(e) {
                 ]).then((t) => {
                     let [n, i] = t,
                         { pid: r, token: a } = e;
-                    (h.tN({ type: V.kGV.STORAGE_SYNC, pid: r, token: a, states: i }),
-                        h.tN({ type: V.kGV.DISPATCH, pid: r, token: a, payloads: [n] }),
+                    (h.tN({ type: B.kGV.STORAGE_SYNC, pid: r, token: a, states: i }),
+                        h.tN({ type: B.kGV.DISPATCH, pid: r, token: a, payloads: [n] }),
                         ed(r, "READY"),
                         (0, k.setPID)(r),
                         u.A.overlayReady(r));
@@ -592,10 +592,10 @@ function eS(e) {
                     });
                 }));
             break;
-        case V.kGV.DISPATCH:
+        case B.kGV.DISPATCH:
             null != e.payloads && J.dispatchPayloads(e.payloads);
             break;
-        case V.kGV.LOG_MESSAGES:
+        case B.kGV.LOG_MESSAGES:
             var i;
             ((i = e.payload),
                 T.push(i),
@@ -624,15 +624,15 @@ function eC(e, t) {
 }
 let eO = null;
 function eR() {
-    I.A.hasLoadedExperiments && !j && ((j = !0), eI(N.x.legacyEnabled));
+    f.A.hasLoadedExperiments && !j && ((j = !0), ef(N.x.legacyEnabled));
 }
 class eL extends a.Ay.Store {
     static displayName = "OverlayBridgeStore";
     initialize() {
         !(0, k.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(M.default, I.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
-            this.syncWith([I.A], eR),
+            (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
+            this.syncWith([f.A], eR),
             h.Le(eS, eg),
             M.default.addChangeListener(em),
             l.h.addInterceptor(J.queueDispatch));
@@ -722,7 +722,7 @@ let ey = new eL(
                   },
                   OVERLAY_SET_ENABLED: function (e) {
                       let { legacyEnabled: t } = e;
-                      return (eI(t), !1);
+                      return (ef(t), !1);
                   },
                   OVERLAY_FOCUSED: function (e) {
                       let { pid: t } = e;
@@ -757,7 +757,7 @@ let ey = new eL(
                       let { port: t } = e;
                       q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "3a03c473cd7866ed1dbba685724eb971410e8d79"),
+                      (n.append("build_id", "6e6ccf62db16bcee241b2f2a294214ee7fe017b2"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", q),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
