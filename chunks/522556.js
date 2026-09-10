@@ -1,4 +1,4 @@
-l.d(n, { A: () => j });
+l.d(n, { A: () => x });
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -7,42 +7,39 @@ var t = l(477900),
     c = l(66834),
     u = l(379257),
     d = l(847599),
-    o = l(36149),
-    A = l(323073),
-    h = l(506164),
-    g = l(204925),
-    m = l(375708),
-    x = l(814316);
-function f(e) {
+    o = l(323073),
+    A = l(506164),
+    h = l(375708),
+    g = l(814316);
+function m(e) {
     let { guild: n, channelId: l } = e,
-        { modalType: a, emphasiseDisagree: s, ...r } = (0, A.k$)(n),
-        x = i.useCallback(() => {
+        { modalType: a, emphasiseDisagree: s, ...r } = (0, o.k$)(n),
+        g = i.useCallback(() => {
             null != n && c.A.nsfwReturnToSafety(n.id);
         }, [n]),
-        f = i.useCallback(() => {
+        m = i.useCallback(() => {
             null != n && c.A.nsfwAgree(n.id);
         }, [n]),
-        j = i.useCallback(() => {
+        x = i.useCallback(() => {
             u.A.showAgeVerificationGetStartedModal({ entryPoint: d.q1.NSFW_GUILD });
-        }, []);
-    (0, o.I7)(g.w_.NSFW_SERVER);
-    let N = { ...r, guildId: n?.id, channelId: l, disagreement: m.intl.string(m.t["/g10LC"]) };
+        }, []),
+        f = { ...r, guildId: n?.id, channelId: l, disagreement: h.intl.string(h.t["/g10LC"]) };
     switch (a) {
         case d.A5.NSFW_CHANNEL_AGE_VERIFY:
         case d.A5.GUILD_LARGE_SERVER:
-            return (0, t.jsx)(h.A, {
-                onAgree: j,
-                onDisagree: x,
+            return (0, t.jsx)(A.A, {
+                onAgree: x,
+                onDisagree: g,
                 modalType: a,
                 agreementButtonVariant: !0 === s ? "secondary" : "primary",
                 disagreementButtonVariant: !0 === s ? "primary" : "secondary",
-                ...N,
+                ...f,
             });
         default:
-            return (0, t.jsx)(h.A, { onAgree: f, onDisagree: x, modalType: a, ...N });
+            return (0, t.jsx)(A.A, { onAgree: m, onDisagree: g, modalType: a, ...f });
     }
 }
-let j = function (e) {
+let x = function (e) {
     let { guild: n, channelId: l, className: a } = e,
         c = i.useRef(null);
     return (
@@ -52,10 +49,10 @@ let j = function (e) {
         }, []),
         (0, t.jsx)(r.Ch, {
             ref: c,
-            className: x.X,
+            className: g.X,
             children: (0, t.jsx)("div", {
-                className: s()(a, x.i),
-                children: (0, t.jsx)(f, { guild: n, channelId: l }),
+                className: s()(a, g.i),
+                children: (0, t.jsx)(m, { guild: n, channelId: l }),
             }),
         })
     );

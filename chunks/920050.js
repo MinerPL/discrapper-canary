@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         BADGE_CARD_ID: () => i,
         CALL_OF_DUTY_3PP_CARD_ID: () => h,
@@ -28,7 +28,8 @@ n.r(t),
         VIDEO_BACKGROUNDS_CARD_ID: () => D,
         XBOX_PREMIUM_PERK_CARD_ID: () => g,
         XBOX_PREMIUM_PERK_HERO_ID: () => M,
-    });
+        YOUTUBE_3PP_CARD_ID: () => L,
+    }));
 let i = "badge",
     l = "clientThemes",
     r = "customAppIcons",
@@ -56,4 +57,5 @@ let i = "badge",
     M = "xgppHero",
     g = "xgppPerk",
     h = "callOfDuty3PP",
-    U = "callOfDuty3PPExpired";
+    U = "callOfDuty3PPExpired",
+    L = "youtube3PP";
