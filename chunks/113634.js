@@ -993,7 +993,6 @@ class eE extends S.A {
         ((this.selfMute = e), this.input.setMute(e), this.emit(N.yq.Mute, e));
     };
     setNoiseCancellationDuringProcessing(e) {}
-    setNoiseCancellationCpuDisablement(e) {}
     setSkipNoiseCancellationIfMuted(e) {}
     setEchoReferenceMode(e) {}
     getSelfMute() {
@@ -3067,7 +3066,6 @@ class tt extends p.A {
     }
     setNoiseCancellationEnableStats(e) {}
     setNoiseCancellationDuringProcessing(e) {}
-    setNoiseCancellationCpuDisablement(e) {}
     getAudioInputDevices() {
         return G();
     }
