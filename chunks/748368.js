@@ -50,7 +50,7 @@ let c = Object.freeze({
         GENERIC_CONSUMABLE: o.GENERIC_CONSUMABLE,
     }),
     u = [o.GENERIC_SUBSCRIPTION, o.GENERIC_CONSUMABLE];
-Object.freeze({
+(Object.freeze({
     [d.gD.PREMIUM_MONTH_TIER_0]: c.PREMIUM_TIER_0_MONTHLY,
     [d.gD.PREMIUM_MONTH_TIER_1]: c.PREMIUM_TIER_1_MONTHLY,
     [d.gD.PREMIUM_MONTH_TIER_2]: c.PREMIUM_TIER_2_MONTHLY,
@@ -236,13 +236,13 @@ Object.freeze({
     d.HF,
     c.PREMIUM_TIER_2_MONTHLY,
     d.V2,
-    c.PREMIUM_TIER_2_MONTHLY;
+    c.PREMIUM_TIER_2_MONTHLY);
 let _ = null,
     E = !1,
     A = null;
 class h extends s.Ay.Store {
     static displayName = "GenericIAPStore";
-    isGenericIapConnected() {
+    canMakePurchase() {
         return E;
     }
     genericProductsLoaded() {
@@ -258,17 +258,11 @@ class h extends s.Ay.Store {
 let I = new h(l.h, {
     IAP_LOAD_GENERIC_PRODUCTS: function (e) {
         let { products: t, storeFront: n } = e;
-        (_ = t), (A = n);
+        ((_ = t), (A = n));
     },
     GENERIC_IAP_INIT_CONNECTION: function (e) {
-        let { connected: t } = e;
+        let { canMakePayments: t } = e;
         E = t;
-    },
-    GENERIC_IAP_INIT_CONNECTION_FAILED: function () {
-        E = !1;
-    },
-    GENERIC_IAP_END_CONNECTION: function () {
-        E = !1;
     },
     GENERIC_IAP_SET_STORE_FRONT: function (e) {
         let { storeFront: t } = e;
