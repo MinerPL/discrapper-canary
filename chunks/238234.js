@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => e$ });
+(n.r(t), n.d(t, { default: () => e$ }));
 var s,
     l = n(477900),
     i = n(582128),
@@ -51,14 +51,14 @@ function X(e) {
             null != t.backgroundGradientPresetId &&
             t.backgroundGradientPresetId in w.ag &&
             w.ag[t.backgroundGradientPresetId].theme !== e;
-    (0, I.GQ)(e), n && (0, U.S8)();
+    ((0, I.GQ)(e), n && (0, U.S8)());
 }
 function z() {
     let e = F(R.A.theme);
     e !== R.A.theme && X(e);
 }
 function Q(e, t, n) {
-    0 === e.length && n([t]), z();
+    (0 === e.length && n([t]), z());
 }
 function Y(e, t) {
     let n = V.eh.getSetting().customUserThemeSettings,
@@ -146,7 +146,7 @@ function eg(e) {
             s = (t = e.trim()).startsWith("#") ? t : t.length > 0 ? `#${t}` : t;
         if ((x(s), (0, et.qt)(s) && ((0, B.CE)(), n(s), a.length > 0))) {
             let e = [...a];
-            (e[u] = s), o(e);
+            ((e[u] = s), o(e));
         }
     }
     i.useEffect(() => {
@@ -163,7 +163,7 @@ function eg(e) {
         if (null != c)
             try {
                 let { sRGBHex: e } = await c.open();
-                (0, B.AL)(), g(e);
+                ((0, B.AL)(), g(e));
             } catch {}
     }
     let E = a.length > 1;
@@ -175,7 +175,7 @@ function eg(e) {
                     colors: a,
                     selectedIndex: u,
                     onColorSelect: function (e) {
-                        m(e), (0, B.mx)();
+                        (m(e), (0, B.mx)());
                     },
                 }),
             (0, l.jsx)(em, {
@@ -183,7 +183,7 @@ function eg(e) {
                 onChangeComplete: function (e) {
                     if (((0, B.VE)(), n(e.hex), a.length > 0)) {
                         let t = [...a];
-                        (t[u] = e.hex), o(t);
+                        ((t[u] = e.hex), o(t));
                     }
                 },
                 color: h,
@@ -225,7 +225,7 @@ function eg(e) {
                                                 if (a.length > 1) {
                                                     (0, B.f1)();
                                                     let t = a.filter((t, n) => n !== e);
-                                                    o(t), u >= t.length ? m(t.length - 1) : u > e && m(u - 1);
+                                                    (o(t), u >= t.length ? m(t.length - 1) : u > e && m(u - 1));
                                                 }
                                             })(u),
                                         icon: ea.MinusIcon,
@@ -242,7 +242,7 @@ function eg(e) {
                     size: "md",
                     onClick: function () {
                         if (5 === a.length) return;
-                        0 === a.length && z(), (0, B.HU)();
+                        (0 === a.length && z(), (0, B.HU)());
                         let e = a.length > 0 ? a[a.length - 1] : h,
                             t =
                                 a.length > 0
@@ -253,7 +253,7 @@ function eg(e) {
                                       })(e)
                                     : e,
                             n = [...a, t];
-                        o(n), m(n.length - 1);
+                        (o(n), m(n.length - 1));
                     },
                     icon: er.T,
                     text: eu.intl.string(ec.default.JUQcdT),
@@ -303,11 +303,11 @@ function ej() {
                             n.e("64769"),
                             n.e("992956"),
                             n.e("880150"),
+                            n.e("490743"),
                             n.e("7452"),
                             n.e("529787"),
-                            n.e("60002"),
+                            n.e("309499"),
                             n.e("186856"),
-                            n.e("189423"),
                             n.e("591114"),
                             n.e("691398"),
                             n.e("266201"),
@@ -343,7 +343,8 @@ function ej() {
                             n.e("797845"),
                             n.e("867721"),
                             n.e("567999"),
-                            n.e("397244"),
+                            n.e("156032"),
+                            n.e("267526"),
                             n.e("441674"),
                             n.e("554669"),
                             n.e("281342"),
@@ -359,7 +360,8 @@ function ej() {
                             n.e("291847"),
                             n.e("678906"),
                             n.e("358931"),
-                            n.e("684031"),
+                            n.e("168248"),
+                            n.e("533240"),
                             n.e("962953"),
                             n.e("434168"),
                             n.e("59565"),
@@ -452,12 +454,11 @@ function ej() {
                             n.e("858821"),
                             n.e("511527"),
                             n.e("478476"),
+                            n.e("103730"),
                             n.e("763070"),
-                            n.e("564615"),
                             n.e("193158"),
                             n.e("502018"),
                             n.e("757598"),
-                            n.e("955184"),
                             n.e("400954"),
                             n.e("787079"),
                             n.e("728633"),
@@ -537,7 +538,7 @@ function eM() {
         value: t,
         onChange: (e) => {
             let { value: t } = e;
-            (0, B.dR)(), X(t);
+            ((0, B.dR)(), X(t));
         },
         look: "pill",
     });
@@ -552,7 +553,7 @@ function eI(e) {
         a = i.useRef(e);
     return (
         i.useEffect(() => {
-            e === a.current || s || n((e) => e + 1), (a.current = e), l(!1);
+            (e === a.current || s || n((e) => e + 1), (a.current = e), l(!1));
         }, [e, s]),
         { key: t, handleInternalChange: i.useCallback((e) => (l(!0), e), []) }
     );
@@ -564,7 +565,7 @@ function eR(e) {
         children: (0, l.jsx)(u.J, {
             size: "sm",
             onClick: () => {
-                t?.(eb.i.USER_DISMISS), (0, N.Jp)(), (0, U.S8)();
+                (t?.(eb.i.USER_DISMISS), (0, N.Jp)(), (0, U.S8)());
             },
         }),
     });
@@ -637,7 +638,7 @@ function eJ(e) {
                                     let s = parseInt(t, 10);
                                     if (isNaN(s)) return;
                                     let l = Math.max(0, Math.min(360, s));
-                                    c(`${l}\xb0`), (0, B.l6)(), n(l);
+                                    (c(`${l}\xb0`), (0, B.l6)(), n(l));
                                 })(e.target.value),
                             placeholder: "0\xb0",
                             className: ey.A9,
@@ -671,7 +672,7 @@ function eJ(e) {
                                         for (let t of [90, 180, 270]) if (10 >= Math.abs(e - t)) return t;
                                         return e;
                                     })(e);
-                                    t !== e || a(e), n(t);
+                                    (t !== e || a(e), n(t));
                                 },
                                 onValueRender: () => null,
                                 keyboardStep: 1,
@@ -709,7 +710,7 @@ function eL(e) {
                                     let s = parseInt(t, 10);
                                     if (isNaN(s)) return;
                                     let l = Math.max(0, Math.min(100, s));
-                                    o(`${l}%`), (0, B.Cq)(), n(l);
+                                    (o(`${l}%`), (0, B.Cq)(), n(l));
                                 })(e.target.value),
                             placeholder: `${L.kJ}%`,
                             className: ey.A9,
@@ -724,7 +725,7 @@ function eL(e) {
                         minValue: 0,
                         maxValue: 100,
                         onValueChange: (e) => {
-                            (0, B.QJ)(), a(e), n(e);
+                            ((0, B.QJ)(), a(e), n(e));
                         },
                         onValueRender: () => null,
                         keyboardStep: 1,
@@ -844,14 +845,14 @@ function eV(e) {
         i = (0, b.L)(ek.PremiumTypes.TIER_2),
         a = s?.from === N.xv.SHARE_MESSAGE;
     function o() {
-        (0, U.S8)(),
+        ((0, U.S8)(),
             (0, B.uk)(),
             (0, M.Dr)(c.M.CUSTOM_THEME_COACHMARK),
             s?.from === N.xv.SETTING
                 ? ((0, D.openUserSettings)(O.X.APPEARANCE_THEME_CATEGORY), (0, N.Jp)())
                 : s?.from === N.xv.CLIENT_THEMES_EDITOR
                   ? (0, N.nf)(N.HP.CLIENT_THEMES)
-                  : (0, N.Jp)();
+                  : (0, N.Jp)());
     }
     (0, B.wb)(i, C.A.CUSTOM_THEMES_EDITOR);
     let u = r()(ey.xQ, { [ey.NI]: !i }),
@@ -874,7 +875,7 @@ function eV(e) {
                       (0, l.jsx)(eP, {
                           disabled: !n,
                           onApply: () => {
-                              a && J.default.track(e_.HAw.CUSTOM_THEME_SHARE_APPLIED, {}), t();
+                              (a && J.default.track(e_.HAw.CUSTOM_THEME_SHARE_APPLIED, {}), t());
                           },
                       }),
                   ],
@@ -914,8 +915,8 @@ function e$(e) {
                         resetChassisMixAmount: l,
                         resetBaseTheme: i,
                     } = Y(t, e);
-                    L.ko.getState().setAll({ colors: n, gradientAngle: s, chassisMixAmount: l }),
-                        "reset_button" === t ? X(F(i ?? R.A.theme)) : (0, I.XG)();
+                    (L.ko.getState().setAll({ colors: n, gradientAngle: s, chassisMixAmount: l }),
+                        "reset_button" === t ? X(F(i ?? R.A.theme)) : (0, I.XG)());
                     let a = V.eh.getSetting().backgroundGradientPresetId;
                     null != a && (0, U.bc)(a);
                 },
@@ -949,7 +950,7 @@ function e$(e) {
         { analyticsLocations: O } = (0, v.Ay)(C.A.CUSTOM_THEMES_EDITOR),
         D = (0, o.bG)([$.A], () => $.A.getSavedCustomTheme());
     async function J() {
-        (h.current = !0),
+        ((h.current = !0),
             await (0, A.u_)({
                 theme: F(k),
                 customUserThemeSettings: { colors: x, gradientColorStops: [], gradientAngle: f, baseMix: g },
@@ -958,7 +959,7 @@ function e$(e) {
             n?.(eb.i.TAKE_ACTION),
             y || (0, M.Dr)(c.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
             (0, N.Jp)(),
-            (0, I.XG)();
+            (0, I.XG)());
     }
     let P = x.length > 0;
     i.useEffect(
@@ -1015,7 +1016,7 @@ function e$(e) {
                                     }),
                                     (0, l.jsx)(eg, {
                                         onChange: (e) => {
-                                            b(e), 0 === x.length && Q(x, e, T);
+                                            (b(e), 0 === x.length && Q(x, e, T));
                                         },
                                         value: _,
                                         colors: x,
@@ -1035,7 +1036,7 @@ function e$(e) {
                                     (0, l.jsx)(eL, {
                                         chassisMixAmount: g,
                                         setChassisMixAmount: (e) => {
-                                            E(e), 0 === x.length && Q(x, _, T);
+                                            (E(e), 0 === x.length && Q(x, _, T));
                                         },
                                     }),
                                 ],
@@ -1047,7 +1048,7 @@ function e$(e) {
                                     (0, l.jsx)(d.$, {
                                         variant: "secondary",
                                         onClick: function () {
-                                            r(W.RESET_BUTTON), (0, B.G_)();
+                                            (r(W.RESET_BUTTON), (0, B.G_)());
                                         },
                                         disabled: u,
                                         text: eu.intl.string(eu.t.yBZMsQ),

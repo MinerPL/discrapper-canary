@@ -7,7 +7,7 @@ let s = "Media Viewer Modal";
 function o(e, t) {
     let { location: o, contextKey: c, onClose: d, ...u } = e,
         m = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
-    i.l.markSessionStarted({
+    (i.l.markSessionStarted({
         channelId: m?.channel_id,
         numMediaItems: u.items.length,
         source: o,
@@ -36,11 +36,11 @@ function o(e, t) {
                     n.e("334324"),
                     n.e("64769"),
                     n.e("992956"),
+                    n.e("490743"),
                     n.e("606633"),
                     n.e("7452"),
                     n.e("529787"),
-                    n.e("60002"),
-                    n.e("189423"),
+                    n.e("309499"),
                     n.e("591114"),
                     n.e("691398"),
                     n.e("266201"),
@@ -68,7 +68,8 @@ function o(e, t) {
                     n.e("195719"),
                     n.e("678906"),
                     n.e("358931"),
-                    n.e("684031"),
+                    n.e("168248"),
+                    n.e("533240"),
                     n.e("962953"),
                     n.e("434168"),
                     n.e("59565"),
@@ -100,7 +101,8 @@ function o(e, t) {
                     n.e("491899"),
                     n.e("867721"),
                     n.e("567999"),
-                    n.e("397244"),
+                    n.e("156032"),
+                    n.e("267526"),
                     n.e("441674"),
                     n.e("554669"),
                     n.e("281342"),
@@ -199,11 +201,10 @@ function o(e, t) {
                     n.e("133902"),
                     n.e("511527"),
                     n.e("478476"),
+                    n.e("103730"),
                     n.e("763070"),
-                    n.e("564615"),
                     n.e("193158"),
                     n.e("502018"),
-                    n.e("955184"),
                     n.e("400954"),
                     n.e("787079"),
                     n.e("728633"),
@@ -265,7 +266,7 @@ function o(e, t) {
                         ...t,
                         ...u,
                         onClose: function () {
-                            d?.(), t.onClose();
+                            (d?.(), t.onClose());
                         },
                     });
                 };
@@ -277,5 +278,5 @@ function o(e, t) {
                 backdropStyle: l.F.LIGHTBOX,
                 stackingBehavior: t,
             },
-        );
+        ));
 }

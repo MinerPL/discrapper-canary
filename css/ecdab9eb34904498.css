@@ -128,6 +128,20 @@
     color: var(--text-code-deletion)
 }
 
+.arboriumHighlightReveal_d285a6 {
+    animation: arborium-highlight-saturate_d285a6 .4s ease-out
+}
+
+@keyframes arborium-highlight-saturate_d285a6 {
+    0% {
+        filter: saturate(0)
+    }
+
+    to {
+        filter: saturate(1)
+    }
+}
+
 .markdown_d285a6 {
     font-size: 16px;
     -webkit-user-select: text;
@@ -267,4 +281,4 @@
     color: var(--primary-200)
 }
 
-/*# sourceMappingURL=709c04ba38b7515c.css.map*/
+/*# sourceMappingURL=ecdab9eb34904498.css.map*/

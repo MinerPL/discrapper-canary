@@ -74,7 +74,7 @@ class O extends s.PureComponent {
             contentType: g,
             originalContentType: x,
         } = this.props;
-        (0, c.vq)(e.currentTarget) && e.currentTarget.blur(),
+        ((0, c.vq)(e.currentTarget) && e.currentTarget.blur(),
             (0, T.R)({
                 onClose: this.onCloseImage,
                 items: [
@@ -98,7 +98,7 @@ class O extends s.PureComponent {
                 shouldHideMediaOptions: m,
                 location: p ?? "LazyImageZoomable",
                 contextKey: this.modalContext,
-            });
+            }));
     };
     render() {
         let { appContext: e, isWindowFocused: t, ...n } = this.props;
@@ -175,7 +175,7 @@ var B = n(248643),
     ei = n(224640),
     es = n(417964),
     er = n(639169),
-    ea = n(157941),
+    ea = n(586172),
     eo = n(768947),
     eu = n(255438),
     ec = n(375708),
@@ -267,7 +267,7 @@ function eg(e) {
                     children: (0, i.jsxs)(J.iS, {
                         selectionMode: "single",
                         onSelectionChange: (e) => {
-                            n(e), l();
+                            (n(e), l());
                         },
                         options: Array.from(a).map((e) => ({ value: e, label: e, id: e })),
                         value: t,
@@ -317,7 +317,7 @@ function ex(e) {
                                     label: ec.intl.string(ec.t["1WjMbC"]),
                                     icon: ee.DownloadIcon,
                                     action: () => {
-                                        o.current?.click(), l();
+                                        (o.current?.click(), l());
                                     },
                                 }),
                                 (0, i.jsx)(Q.sL, {
@@ -387,11 +387,11 @@ function eC(e) {
         A = r ? 100 : 6,
         C = 0 === m,
         E = "";
-    C && r && x > A ? (E = "\n...") : C || (E = "..."),
+    (C && r && x > A ? (E = "\n...") : C || (E = "..."),
         "" !== E &&
             (C
                 ? (E += " " + ec.intl.formatToPlainString(ec.t.DQnFp2, { lines: x - A }))
-                : (E += " " + ec.intl.formatToPlainString(ec.t["1+gGcK"], { formattedBytes: (0, eu.up)(m) })));
+                : (E += " " + ec.intl.formatToPlainString(ec.t["1+gGcK"], { formattedBytes: (0, eu.up)(m) }))));
     let I = p?.slice(0, A).join("\n") + E,
         S = (0, es.sJ)(I),
         v = r || A < x;
@@ -458,11 +458,11 @@ function eE(e) {
                     let n = window.getSelection();
                     if (null != n) {
                         let e = document.createRange();
-                        e.selectNodeContents(C.current), n.removeAllRanges(), n.addRange(e);
+                        (e.selectNodeContents(C.current), n.removeAllRanges(), n.addRange(e));
                     }
                 }
             }
-            return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+            return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         }, []),
         (0, i.jsx)(ei.d, {
             transitionState: r,
@@ -535,9 +535,9 @@ let eI = s.memo(
                                     s = n.headers.get("content-range") ?? "0",
                                     a = n.headers.get("content-length") ?? "1",
                                     u = parseInt(s.split("/")[1]) - parseInt(a);
-                                r(0 === u ? i : i.slice(0, -1)), o(u), l(!1);
+                                (r(0 === u ? i : i.slice(0, -1)), o(u), l(!1));
                             } catch (e) {
-                                o(0), l(!0);
+                                (o(0), l(!0));
                             }
                         })();
                     }, [e, t]),
@@ -666,7 +666,7 @@ function eY(e) {
         f = (0, eT.aK)(eM.default.extractTimestamp(t.startId)),
         p = (0, d.bG)([eS.A], () => eS.A.summaryFeedback(t));
     function g(e, n) {
-        e.stopPropagation(), (0, ek.A)({ summary: t, channel: l, rating: n });
+        (e.stopPropagation(), (0, ek.A)({ summary: t, channel: l, rating: n }));
     }
     let A = eb.A.can(eK.xBc.MANAGE_MESSAGES, l);
     return (0, i.jsxs)(x.D, {
@@ -747,7 +747,7 @@ function eq(e) {
         o = (0, d.bG)([eR.Ay], () => eR.Ay.getOldestUnreadMessageId(l.id)),
         u = s.useCallback(
             (e) => {
-                r(e), a(!1);
+                (r(e), a(!1));
             },
             [r, a],
         );
@@ -831,7 +831,7 @@ class ts {
     animationDetails;
     isReset;
     constructor(e) {
-        (this.value = e), (this.animationDetails = null), (this.isReset = !1);
+        ((this.value = e), (this.animationDetails = null), (this.isReset = !1));
     }
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
@@ -844,16 +844,16 @@ class ts {
               : ti.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {
-        (this.isReset = !1),
+        ((this.isReset = !1),
             this.value !== e &&
                 ((this.animationDetails = { lastValue: this.value, animationStart: performance.now() }),
-                (this.value = e));
+                (this.value = e)));
     }
     isAnimating() {
         return null != this.animationDetails;
     }
     reset() {
-        this.animateTo(0), (this.isReset = !0);
+        (this.animateTo(0), (this.isReset = !0));
     }
 }
 let tr = [0.75, 1, 1.5, 2];
@@ -888,7 +888,7 @@ function td(e, t, n) {
             o.current = r;
         }),
         s.useLayoutEffect(() => {
-            i(o.current), a(e);
+            (i(o.current), a(e));
         }, [e, t, n]),
         [l, r]
     );
@@ -960,12 +960,12 @@ function tm(e) {
                                 let n = e.length / t,
                                     l = [],
                                     i = 0;
-                                for (; l.length < t; ) {
+                                for (; l.length < t;) {
                                     let t = Math.round((l.length + 1) * n),
                                         s = 0,
                                         r = 0;
-                                    for (let n = i; n < t && n < e.length; n++) (s += e[n]), r++;
-                                    (l[l.length] = s / r), (i = t);
+                                    for (let n = i; n < t && n < e.length; n++) ((s += e[n]), r++);
+                                    ((l[l.length] = s / r), (i = t));
                                 }
                                 return l;
                             })(e, t);
@@ -1005,7 +1005,7 @@ function tm(e) {
         })(c, d),
         R = { currentTime: o, duration: u, played: c },
         O = s.useRef(R);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         O.current = R;
     }),
         s.useEffect(() => {
@@ -1035,12 +1035,12 @@ function tm(e) {
                         s = A.current;
                     if (null == l || null == i || null == s) return;
                     let r = !1;
-                    (E.current !== c || I.current !== d) && ((E.current = c), (I.current = d), (y.current = n)),
-                        null != y.current && n > y.current + 200 && (y.current = null);
+                    ((E.current !== c || I.current !== d) && ((E.current = c), (I.current = d), (y.current = n)),
+                        null != y.current && n > y.current + 200 && (y.current = null));
                     let a = l.height / S;
-                    i.clearRect(0, 0, l.width, l.height), i.beginPath();
+                    (i.clearRect(0, 0, l.width, l.height), i.beginPath());
                     let [o, u] = th(v, N, n, y.current);
-                    (r = r || u), (i.fillStyle = o);
+                    ((r = r || u), (i.fillStyle = o));
                     for (let e = 0; e < C.length; e++)
                         tc({
                             context: i,
@@ -1058,7 +1058,7 @@ function tm(e) {
                     for (let e = 0; e < s.length; e++) {
                         let t = s[e],
                             n = Math.max(t.getCurrentValue(), C[e] - 0.1);
-                        i.beginPath(),
+                        (i.beginPath(),
                             (i.fillStyle = t.isReset ? h : f),
                             tc({
                                 context: i,
@@ -1069,7 +1069,7 @@ function tm(e) {
                                 constrainMin: !t.isReset,
                             }),
                             (r = r || t.isAnimating()),
-                            i.fill();
+                            i.fill());
                     }
                     r && (e = requestAnimationFrame(t));
                 })),
@@ -1077,7 +1077,7 @@ function tm(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [p, S, C, g, o, u, c, d, v, N, _, j, T, b]);
+        }, [p, S, C, g, o, u, c, d, v, N, _, j, T, b]));
     let [, L] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: l, onDragEnd: i } = e,
             [r, a] = s.useState(!1);
@@ -1088,11 +1088,11 @@ function tm(e) {
                         window.addEventListener("mouseup", e),
                         window.addEventListener("mousemove", l),
                         () => {
-                            window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", l);
+                            (window.removeEventListener("mouseup", e), window.removeEventListener("mousemove", l));
                         }
                     );
                 function e() {
-                    i?.(), a(!1);
+                    (i?.(), a(!1));
                 }
                 function l(e) {
                     let l = t.current;
@@ -1158,7 +1158,7 @@ let tx = s.memo(function (e) {
         [G, V] = s.useState(() => ("function" == typeof l ? l() : l)),
         F = s.useRef(void 0),
         H = s.useCallback(() => {
-            L((e) => !e), P(!0);
+            (L((e) => !e), P(!0));
         }, []),
         B = s.useCallback(() => {
             U("metadata");
@@ -1176,11 +1176,11 @@ let tx = s.memo(function (e) {
             [C, c],
         ),
         z = s.useCallback(() => {
-            L(!1),
+            (L(!1),
                 null == F.current &&
                     (F.current = setTimeout(() => {
-                        v(!1), P(!1), (F.current = void 0);
-                    }, 500));
+                        (v(!1), P(!1), (F.current = void 0));
+                    }, 500)));
         }, []),
         Z = s.useCallback(() => {
             M || (K(0), z());
@@ -1198,18 +1198,18 @@ let tx = s.memo(function (e) {
         J = s.useCallback(
             (e) => {
                 let t = (0, e6.w)(e, 1);
-                R(0 === t), V(t), r?.(t);
+                (R(0 === t), V(t), r?.(t));
             },
             [r],
         ),
         $ = s.useCallback(() => {
-            R(!b), o?.(!b);
+            (R(!b), o?.(!b));
         }, [b, o]),
         X = s.useCallback(() => {
             k(!0);
         }, []),
         Q = s.useCallback(() => {
-            k(!1), N === j && z(), K(N);
+            (k(!1), N === j && z(), K(N));
         }, [N, j, z, K]),
         ee = s.useCallback(
             (e) => {
@@ -1224,7 +1224,7 @@ let tx = s.memo(function (e) {
     let et = s.useRef(null),
         en = { played: w, currentTime: N, onPause: g, onPlay: p },
         el = s.useRef(en);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         el.current = en;
     }),
         s.useEffect(() => {
@@ -1246,11 +1246,11 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) (et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e5.A.Millis.SECOND);
+                if (O) ((et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e5.A.Millis.SECOND));
                 else {
                     let e = performance.now(),
                         l = et.current;
-                    n?.(t, null != l ? (e - l) / 1e3 : 0), K(t), (et.current = null);
+                    (n?.(t, null != l ? (e - l) / 1e3 : 0), K(t), (et.current = null));
                 }
         }, [O, n, j, K]),
         s.useEffect(() => {
@@ -1278,7 +1278,7 @@ let tx = s.memo(function (e) {
                 let { src: t } = e;
                 n !== t && L(!1);
             }
-        }, [n, O, L]);
+        }, [n, O, L]));
     let ei = O ? e$.PauseIcon : eX.PlayIcon,
         es = O ? ec.intl.string(ec.t["3XohGn"]) : ec.intl.string(ec.t.AlHqHT),
         er = ec.intl.formatToPlainString(ec.t.LgCPMt, { playbackRate: y }),
@@ -1388,12 +1388,12 @@ var tA = n(287809),
 let t_ = { delay: 300, position: "top" };
 function tj(e) {
     return (t) => {
-        e?.(t), (0, tI.ls)(t);
+        (e?.(t), (0, tI.ls)(t));
     };
 }
 function tT(e) {
     return (t) => {
-        e?.(t), (0, tI.y5)(t);
+        (e?.(t), (0, tI.y5)(t));
     };
 }
 function tb(e) {
@@ -1471,7 +1471,7 @@ function tO(e) {
         } = e,
         x = tj(t),
         A = tT(n);
-    (l = null == l ? tI.v1 : l), (r = null == r ? tI.uj : r);
+    ((l = null == l ? tI.v1 : l), (r = null == r ? tI.uj : r));
     let [C, E] = s.useState(!0),
         I = f === ty.dG.MOSAIC || !0 === m,
         y = C && !c && eJ._z.getSetting() && null != a && "" !== a && !0 !== d;
@@ -1551,7 +1551,7 @@ function tk(e) {
     let { onVolumeChange: t, volume: n, onMute: l, ...s } = e,
         r = tj(t),
         a = tT(l);
-    return (n = null == n ? tI.v1 : n), (0, i.jsx)(tx, { ...s, onVolumeChange: r, onMute: a, volume: n });
+    return ((n = null == n ? tI.v1 : n), (0, i.jsx)(tx, { ...s, onVolumeChange: r, onMute: a, volume: n }));
 }
 function tw(e) {
     let {
@@ -1806,13 +1806,13 @@ function tB(e) {
         ),
         M = s.useCallback(
             (e) => {
-                L(), O(e);
+                (L(), O(e));
             },
             [O, L],
         ),
         [P, U] = s.useState(!1),
         V = s.useCallback(() => {
-            tE.default.track(eK.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            (tE.default.track(eK.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !P,
                 num_summaries: _.length,
                 message_counts: _.map((e) => e.count),
@@ -1823,7 +1823,7 @@ function tB(e) {
                 channel_id: t.id,
                 channel_type: t.type,
             }),
-                U(!P);
+                U(!P));
         }, [P, _, U, t]),
         F = s.useCallback(
             function (e) {
@@ -1834,10 +1834,10 @@ function tB(e) {
                     (0, ey.C6)(t.id, i.id),
                     l.removeAutomaticAnchorCallback(M),
                     l.addScrollCompleteCallback(function e() {
-                        l.removeScrollCompleteCallback(e),
+                        (l.removeScrollCompleteCallback(e),
                             setTimeout(() => {
                                 l.addAutomaticAnchorCallback(M, !1);
-                            }, 100);
+                            }, 100));
                     }),
                     tE.default.track(eK.HAw.SUMMARIES_TOPIC_CLICKED, {
                         source: n,
@@ -1884,7 +1884,7 @@ function tB(e) {
         },
         [P, _, t, H],
     );
-    s.useEffect(
+    (s.useEffect(
         () => (
             l.addAutomaticAnchorCallback(M),
             () => {
@@ -1904,7 +1904,7 @@ function tB(e) {
                 }
             ),
             [B],
-        );
+        ));
     let W = s.useMemo(
             () => (0, i.jsx)(eq, { channel: t, summaries: _, summariesMembers: T, selectTopic: F, setOpen: H }),
             [_, T, F, H, t],
@@ -2074,13 +2074,13 @@ function tK(e) {
         ),
         L = s.useCallback(
             (e) => {
-                O(), R(e);
+                (O(), R(e));
             },
             [R, O],
         ),
         [M, P] = s.useState(!1),
         U = s.useCallback(() => {
-            tE.default.track(eK.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            (tE.default.track(eK.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !M,
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
@@ -2091,7 +2091,7 @@ function tK(e) {
                 channel_id: t.id,
                 channel_type: t.type,
             }),
-                P(!M);
+                P(!M));
         }, [M, A, P, t]),
         V = s.useCallback(
             function (e) {
@@ -2102,10 +2102,10 @@ function tK(e) {
                     (0, ey.C6)(t.id, i.id),
                     n.removeAutomaticAnchorCallback(L),
                     n.addScrollCompleteCallback(function e() {
-                        n.removeScrollCompleteCallback(e),
+                        (n.removeScrollCompleteCallback(e),
                             setTimeout(() => {
                                 n.addAutomaticAnchorCallback(L, !1);
-                            }, 100);
+                            }, 100));
                     }),
                     tE.default.track(eK.HAw.SUMMARIES_TOPIC_CLICKED, {
                         source: l,
@@ -2158,7 +2158,7 @@ function tK(e) {
         },
         [M, A, t, B],
     );
-    s.useEffect(
+    (s.useEffect(
         () => (
             n.addAutomaticAnchorCallback(L),
             () => {
@@ -2178,7 +2178,7 @@ function tK(e) {
                 }
             ),
             [W],
-        );
+        ));
     let K = s.useMemo(
         () => (0, i.jsx)(eq, { channel: t, summaries: A, summariesMembers: N, selectTopic: V, setOpen: B }),
         [A, N, V, B, t],

@@ -26,7 +26,7 @@ let f = new d.A("GuildSettingsActionCreators"),
             o.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: r, subsection: n, location: t });
         },
         async open(e, r, n, i) {
-            await Promise.all([
+            (await Promise.all([
                 t.e("609417"),
                 t.e("462408"),
                 t.e("923068"),
@@ -82,11 +82,11 @@ let f = new d.A("GuildSettingsActionCreators"),
                 t.e("64769"),
                 t.e("992956"),
                 t.e("880150"),
+                t.e("490743"),
                 t.e("606633"),
                 t.e("7452"),
                 t.e("529787"),
-                t.e("60002"),
-                t.e("189423"),
+                t.e("309499"),
                 t.e("591114"),
                 t.e("691398"),
                 t.e("266201"),
@@ -119,7 +119,8 @@ let f = new d.A("GuildSettingsActionCreators"),
                 t.e("195719"),
                 t.e("678906"),
                 t.e("358931"),
-                t.e("684031"),
+                t.e("168248"),
+                t.e("533240"),
                 t.e("962953"),
                 t.e("434168"),
                 t.e("59565"),
@@ -149,7 +150,8 @@ let f = new d.A("GuildSettingsActionCreators"),
                 t.e("491899"),
                 t.e("867721"),
                 t.e("567999"),
-                t.e("397244"),
+                t.e("156032"),
+                t.e("267526"),
                 t.e("441674"),
                 t.e("554669"),
                 t.e("281342"),
@@ -658,13 +660,12 @@ let f = new d.A("GuildSettingsActionCreators"),
                 t.e("691671"),
                 t.e("511527"),
                 t.e("478476"),
+                t.e("103730"),
                 t.e("763070"),
-                t.e("564615"),
                 t.e("147626"),
                 t.e("193158"),
                 t.e("502018"),
                 t.e("757598"),
-                t.e("955184"),
                 t.e("268582"),
                 t.e("400954"),
                 t.e("123353"),
@@ -1109,7 +1110,7 @@ let f = new d.A("GuildSettingsActionCreators"),
                     r === p.BEX.MEMBER_VERIFICATION && ((r = p.BEX.SAFETY), (i = p.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
                 N.init(e, r, n, i),
                 T.A.closeGuildSidebar(e),
-                (0, a.id)(p.zgK.GUILD_SETTINGS);
+                (0, a.id)(p.zgK.GUILD_SETTINGS));
         },
         close() {
             o.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
@@ -1160,7 +1161,7 @@ let f = new d.A("GuildSettingsActionCreators"),
                 rejectWithError: (0, l.fT)(),
             }).then(
                 () => {
-                    o.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: r }), u.A.checkGuildTemplateDirty(e);
+                    (o.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: r }), u.A.checkGuildTemplateDirty(e));
                 },
                 (e) => o.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
             );
@@ -1171,9 +1172,9 @@ let f = new d.A("GuildSettingsActionCreators"),
         updateGuild(e) {
             let { safetyAlertsChannelId: r, profile: t, ...n } = e,
                 i = { ...n };
-            null != t && (i.profile = { ...(i.profile ?? {}), ...t }),
+            (null != t && (i.profile = { ...(i.profile ?? {}), ...t }),
                 null != L.A.getGuildId() && null != r && (i.safetyAlertsChannelId = r),
-                o.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", ...i });
+                o.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", ...i }));
         },
         updateGuildProfile(e, r) {
             o.h.dispatch({ type: "GUILD_SETTINGS_PROFILE_UPDATE", guildId: e, ...r });
@@ -1251,8 +1252,8 @@ let f = new d.A("GuildSettingsActionCreators"),
                 rejectWithError: (0, l.fT)(),
             }).then(
                 (r) => {
-                    o.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: r.body }),
-                        u.A.checkGuildTemplateDirty(e);
+                    (o.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: r.body }),
+                        u.A.checkGuildTemplateDirty(e));
                 },
                 (e) => {
                     if (
@@ -1304,7 +1305,7 @@ let f = new d.A("GuildSettingsActionCreators"),
         async leaveGuild(e) {
             let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 t = c.A.isLurking(e);
-            await l.Bo.del({
+            (await l.Bo.del({
                 url: p.Rsh.GUILD_LEAVE(e),
                 body: { lurking: t || h.Ay.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
@@ -1313,7 +1314,7 @@ let f = new d.A("GuildSettingsActionCreators"),
                 i.O.announce(U.intl.string(U.t["7iPyVW"]));
             }),
                 N.close(),
-                r && t && (0, S.pX)(p.BVt.GUILD_DISCOVERY);
+                r && t && (0, S.pX)(p.BVt.GUILD_DISCOVERY));
         },
         async updateMemberRoles(e, r, t, n, i) {
             I.A.isFullServerPreview(e) && r === G.default.getId()
@@ -1368,7 +1369,7 @@ let f = new d.A("GuildSettingsActionCreators"),
         },
         async migratePermissions(e, r) {
             let { migratePin: t, migrateSlowmode: n } = r;
-            t && (await N.migratePinPermission(e)), n && (await N.migrateSlowmodePermission(e));
+            (t && (await N.migratePinPermission(e)), n && (await N.migrateSlowmodePermission(e)));
         },
     },
     R = N;

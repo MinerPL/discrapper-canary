@@ -41,7 +41,9 @@ async function I(e) {
                     n.e("491899"),
                     n.e("867721"),
                     n.e("567999"),
-                    n.e("397244"),
+                    n.e("156032"),
+                    n.e("490743"),
+                    n.e("267526"),
                     n.e("186856"),
                     n.e("441674"),
                     n.e("554669"),
@@ -56,8 +58,7 @@ async function I(e) {
                     n.e("606633"),
                     n.e("7452"),
                     n.e("529787"),
-                    n.e("60002"),
-                    n.e("189423"),
+                    n.e("309499"),
                     n.e("591114"),
                     n.e("691398"),
                     n.e("266201"),
@@ -104,7 +105,8 @@ async function I(e) {
                     n.e("291847"),
                     n.e("678906"),
                     n.e("358931"),
-                    n.e("684031"),
+                    n.e("168248"),
+                    n.e("533240"),
                     n.e("962953"),
                     n.e("434168"),
                     n.e("59565"),
@@ -232,12 +234,11 @@ async function I(e) {
                     n.e("133902"),
                     n.e("511527"),
                     n.e("478476"),
+                    n.e("103730"),
                     n.e("763070"),
-                    n.e("564615"),
                     n.e("193158"),
                     n.e("502018"),
                     n.e("757598"),
-                    n.e("955184"),
                     n.e("400954"),
                     n.e("123353"),
                     n.e("787079"),
@@ -295,10 +296,10 @@ async function I(e) {
         await _);
 }
 function f(e, t) {
-    e.setHeader("Connection", "close"), e.writeHead(t), e.end();
+    (e.setHeader("Connection", "close"), e.writeHead(t), e.end());
 }
 function p(e) {
-    (c = e), (u = 0);
+    ((c = e), (u = 0));
 }
 function T() {
     c = null;
@@ -314,11 +315,11 @@ function m(e, t) {
     let a = "",
         s = 0,
         _ = !1;
-    e.on("data", (e) => {
+    (e.on("data", (e) => {
         if (_) return;
         let n = String(e);
         if ((s += l.byteLength(n)) > 524288) {
-            (_ = !0), f(t, 413);
+            ((_ = !0), f(t, 413));
             return;
         }
         a += n;
@@ -334,17 +335,17 @@ function m(e, t) {
                     return;
                 }
                 if ("string" != typeof e?.auth?.token || e.auth.token !== d) {
-                    ++u >= 5 &&
+                    (++u >= 5 &&
                         (o.warn("Too many bad GSI requests; unregistering handler for this session"), (c = null)),
-                        f(t, 401);
+                        f(t, 401));
                     return;
                 }
-                t.writeHead(200), t.end();
+                (t.writeHead(200), t.end());
                 try {
                     n(e);
                 } catch (e) {
                     o.warn("GSI payload handler threw", e);
                 }
             }
-        });
+        }));
 }

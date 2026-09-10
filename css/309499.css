@@ -1,3 +1,16 @@
+.icon__1bb46 {}
+
+.iconWrapper__1bb46 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.name__1bb46 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
 .hljs {
     border-radius: 4px;
     display: block;
@@ -128,4 +141,18 @@
     color: var(--text-code-deletion)
 }
 
-/*# sourceMappingURL=189423.2456c3a3f78abe6b.css.map*/
+.arboriumHighlightReveal_cc310a {
+    animation: arborium-highlight-saturate_cc310a .4s ease-out
+}
+
+@keyframes arborium-highlight-saturate_cc310a {
+    0% {
+        filter: saturate(0)
+    }
+
+    to {
+        filter: saturate(1)
+    }
+}
+
+/*# sourceMappingURL=309499.7bc5396055664036.css.map*/

@@ -1,10 +1,10 @@
-n.d(t, { Ay: () => v, Q9: () => w, W: () => k }), n(321073);
+(n.d(t, { Ay: () => v, Q9: () => w, W: () => k }), n(321073));
 var l = n(635377),
     i = n.n(l),
     s = n(181370),
     r = n.n(s),
     a = n(941426),
-    o = n(157941),
+    o = n(586172),
     u = n(938855),
     c = n(768947),
     d = n(927813),
@@ -34,10 +34,10 @@ function v(e) {
                         queueMicrotask(() => {
                             s = !1;
                             try {
-                                m.o.withoutSaving(e, () => {
+                                (m.o.withoutSaving(e, () => {
                                     g.VW.withoutNormalizing(e, () => N(e, r));
                                 }),
-                                    (l = g.VW.richValue(e));
+                                    (l = g.VW.richValue(e)));
                             } catch (e) {
                                 C.warn("error applying arborium highlighting to editor", e);
                             }
@@ -47,7 +47,7 @@ function v(e) {
     }
     return (
         (e.onChange = () => {
-            g.VW.richValue(e) !== l &&
+            (g.VW.richValue(e) !== l &&
                 (m.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
                         N(e, r) &&
@@ -65,11 +65,11 @@ function v(e) {
                                     })),
                             S)
                                 .then(() => {
-                                    (l = null),
+                                    ((l = null),
                                         m.o.withoutSaving(e, () => {
                                             g.VW.withoutNormalizing(e, () => N(e));
                                         }),
-                                        (l = g.VW.richValue(e));
+                                        (l = g.VW.richValue(e)));
                                 })
                                 .catch(() => {})
                                 .finally(() => {
@@ -78,7 +78,7 @@ function v(e) {
                     });
                 }),
                 (l = g.VW.richValue(e))),
-                t();
+                t());
         }),
         e
     );
@@ -88,7 +88,7 @@ function N(e, t) {
         let n = [],
             l = null;
         for (let t of g.VW.blocks(e))
-            (l = (function (e, t, n, l, i) {
+            ((l = (function (e, t, n, l, i) {
                 let s = (function (e) {
                         let t,
                             [n, l] = e;
@@ -98,7 +98,7 @@ function N(e, t) {
                         for (let e = 0; e < n.children.length; e++) {
                             let r = n.children[e];
                             if (g.l5.isText(r))
-                                for (s.lastIndex = 0; null != (t = s.exec(r.text)); ) {
+                                for (s.lastIndex = 0; null != (t = s.exec(r.text));) {
                                     if ("\\" === t[0]) {
                                         s.lastIndex += 1;
                                         continue;
@@ -139,7 +139,7 @@ function N(e, t) {
                 null != l && (l.isStyledCodeBlockLine || l.opensCodeBlockOnOwnLine),
                 null != l && (l.opensCodeBlock || !l.closesCodeBlock) ? l.lang : null,
             )),
-                n.push(l);
+                n.push(l));
         return (
             (function (e, t) {
                 let { enabled: n } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" }),
@@ -160,7 +160,7 @@ function N(e, t) {
                                         s = (0, c.py)(t);
                                     if (null == s) return null;
                                     let a = (0, u.F)(s);
-                                    if (null == a) return l?.(s), null;
+                                    if (null == a) return (l?.(s), null);
                                     let o = r()(`${s}\0${e}`),
                                         d = O.get(o);
                                     if (null != d && d.length === n) return d;
@@ -194,7 +194,7 @@ function N(e, t) {
                                                     l = [],
                                                     i = 0,
                                                     s = 0;
-                                                for (j.lastIndex = 0; null != (t = j.exec(e)); ) {
+                                                for (j.lastIndex = 0; null != (t = j.exec(e));) {
                                                     let r = t.index + t[0].length,
                                                         a = M(e.substring(s, t.index)).length,
                                                         o = l.filter((e) => null != e);
@@ -218,7 +218,7 @@ function N(e, t) {
                                                 );
                                             })(f[e]),
                                         );
-                                    return O.set(o, p), p;
+                                    return (O.set(o, p), p);
                                 })(e, t, n.length, l);
                                 if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -233,7 +233,7 @@ function N(e, t) {
                                     let i = y.highlight(t, e, !1);
                                     if (null == i || i.illegal) return null;
                                     let s = i.value.split("\n");
-                                    return R.set(n, s), s;
+                                    return (R.set(n, s), s);
                                 })(e, i);
                                 if (null != t && t.length === l.length) {
                                     let e = [];
@@ -248,14 +248,14 @@ function N(e, t) {
                                             r = [],
                                             a = 0,
                                             o = 0;
-                                        for (; null != (i = _.exec(s)); ) {
+                                        for (; null != (i = _.exec(s));) {
                                             let t = i.index + i[0].length,
                                                 n = i.index - o;
-                                            i.index > o &&
+                                            (i.index > o &&
                                                 (e.length > 0 && r.push({ types: [...e], start: a, end: a + n }),
                                                 (a += n)),
                                                 "</span>" === i[0] ? e.pop() : e.push(i[1]),
-                                                (o = t);
+                                                (o = t));
                                         }
                                         if (e.length > 0) {
                                             let t = s.length - o;
@@ -268,7 +268,7 @@ function N(e, t) {
                         } else for (let e = 0; e < l.length; e++) l[e].hljsTypes = [];
                         l = [];
                     }
-                    i && l.push(s), s.opensCodeBlock && (i = !0);
+                    (i && l.push(s), s.opensCodeBlock && (i = !0));
                 }
             })(n, t),
             n

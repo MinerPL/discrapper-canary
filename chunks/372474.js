@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { layoutSystemCollection: () => eT, layoutSystemConfig: () => eL });
+(a.r(t), a.d(t, { layoutSystemCollection: () => eT, layoutSystemConfig: () => eL }));
 var l = a(477900),
     n = a(582128),
     r = a(834730),
@@ -968,7 +968,7 @@ var J = a(619835),
     $ = a(817934),
     q = a(503698),
     Z = a.n(q),
-    X = a(157941),
+    X = a(586172),
     ee = a(160862);
 function et(e) {
     let { value: t, onChange: r } = e,
@@ -1051,11 +1051,11 @@ function et(e) {
                                         }
                                     }, 0));
                             } else
-                                r(t.substring(0, l) + "  " + t.substring(n)),
+                                (r(t.substring(0, l) + "  " + t.substring(n)),
                                     setTimeout(() => {
                                         null != o.current &&
                                             (o.current.selectionStart = o.current.selectionEnd = l + 2);
-                                    }, 0);
+                                    }, 0));
                         }
                     },
                     spellCheck: !1,

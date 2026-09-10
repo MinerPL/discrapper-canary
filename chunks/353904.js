@@ -91,21 +91,23 @@ class j extends a.Component {
                                 label: T.intl.format(T.t.IodJKT, {
                                     applicationName: e,
                                     onClick: (e) => {
-                                        (0, v.openModalLazy)(async () => {
+                                        ((0, v.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
                                                 s.e("895909"),
+                                                s.e("490743"),
                                                 s.e("7452"),
                                                 s.e("738098"),
                                                 s.e("186856"),
                                                 s.e("770105"),
-                                                s.e("564615"),
+                                                s.e("726391"),
+                                                s.e("103730"),
                                                 s.e("869546"),
                                                 s.e("92064"),
                                                 s.e("787297"),
                                             ]).then(s.bind(s, 294264));
                                             return (s) => (0, l.jsx)(e, { eulaId: t, ...s });
                                         }),
-                                            e.preventDefault();
+                                            e.preventDefault());
                                     },
                                 }),
                             })
@@ -208,10 +210,10 @@ class W extends a.PureComponent {
         this.fetchAllDirectoryMetadata();
     }
     componentDidUpdate(t) {
-        this.fetchAllDirectoryMetadata(),
+        (this.fetchAllDirectoryMetadata(),
             (this.props.requiredDiskKB !== t.requiredDiskKB ||
                 this.props.installationPathsMetadata !== t.installationPathsMetadata) &&
-                this.sendChange(this.props.value);
+                this.sendChange(this.props.value));
     }
     getOptions() {
         let { installationPaths: t } = this.props,
@@ -241,7 +243,7 @@ class W extends a.PureComponent {
             ? R.Ay.showOpenDialog(["openDirectory"]).then((t) => {
                   if (null != t && t.length > 0) {
                       let e = t[0];
-                      this.setState({
+                      (this.setState({
                           newInstallationPath:
                               null !=
                               this.props.installationPaths.find((t) => {
@@ -251,7 +253,7 @@ class W extends a.PureComponent {
                                   ? null
                                   : e,
                       }),
-                          this.sendChange(e);
+                          this.sendChange(e));
                   }
               })
             : this.sendChange(t);
@@ -341,7 +343,7 @@ class Z extends a.Component {
     install = (t, e) => {
         let { application: s, branchId: l, analyticsLocation: a } = this.props;
         if (null == s) return null;
-        (0, m.oc)({
+        ((0, m.oc)({
             application: s,
             branchId: l,
             buildId: t,
@@ -350,17 +352,17 @@ class Z extends a.Component {
             analyticsLocation: a,
         }),
             (0, U.pX)(p.BVt.APPLICATION_LIBRARY),
-            this.close();
+            this.close());
     };
     handleInstall = () => {
         let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
         if (null != e && null != s) {
             var a;
-            l || o.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_STORE_TERMS" }),
+            (l || o.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_STORE_TERMS" }),
                 null != t &&
                     null != t.eulaId &&
                     ((a = t.eulaId), o.h.dispatch({ type: "APPLICATION_STORE_ACCEPT_EULA", eulaId: a })),
-                this.install(e, s);
+                this.install(e, s));
         } else throw Error("Unexpected missing build info for non-premium product");
     };
     handlePurchaseTermsChange = (t) => {

@@ -1,35 +1,3 @@
-.editor__1b31f {
-    caret-color: var(--text-default);
-    text-align: start;
-    white-space: break-spaces !important;
-    word-break: break-word
-}
-
-.editor__1b31f pre {
-    max-width: none
-}
-
-.placeholder__1b31f {
-    color: var(--channel-text-area-placeholder);
-    inset-inline: 0;
-    overflow: hidden;
-    pointer-events: none;
-    position: absolute;
-    text-overflow: ellipsis;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    white-space: nowrap
-}
-
-.enable-forced-colors .placeholder__1b31f {
-    color: GrayText
-}
-
-.theme-dark.custom-theme-background.custom-client-theme .placeholder__1b31f {
-    color: color-mix(in oklab, var(--text-default) 40%, transparent)
-}
-
 .a-k__65132,
 .a-kd__65132,
 .a-ke__65132,
@@ -263,20 +231,4 @@ a-rp {
     --custom-ansi-color-15: var(--ansi-bright-white)
 }
 
-.slateContainer_ec4baf {
-    position: relative
-}
-
-.slateTextArea_ec4baf {
-    box-sizing: border-box;
-    inset-inline: 0 10px;
-    min-height: var(--custom-channel-textarea-editor-min-height, var(--custom-channel-textarea-text-area-height));
-    padding: calc((var(--custom-channel-textarea-text-area-height) - var(--chat-markup-line-height))/2) 0;
-    position: absolute
-}
-
-.enable-forced-colors .placeholder_ec4baf {
-    color: GrayText
-}
-
-/*# sourceMappingURL=684031.41112a0b7e3f6efe.css.map*/
+/*# sourceMappingURL=490743.a66fbbb403248f75.css.map*/

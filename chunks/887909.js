@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         OAuth2AuthorizeModal: () => e3,
         getOAuth2AuthorizeProps: () => tt,
@@ -10,7 +10,7 @@ n.r(t),
     n(323874),
     n(14289),
     n(35956),
-    n(321073);
+    n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -560,7 +560,7 @@ function eQ(e) {
                 t === e &&
                     (n.sort((e, t) => e.name.localeCompare(t.name)), o({ guildId: e, channels: n }), (d.current = !0));
             }
-            o(null), null == t ? a(null) : e(t);
+            (o(null), null == t ? a(null) : e(t));
         }, [a, t]),
         r.useEffect(() => {
             !d.current || (null == l ? null != n && a(null) : l.channels.some((e) => e.id === n) || a(null));
@@ -650,7 +650,9 @@ let e1 = (0, F.Fe)({
             n.e("529787"),
             n.e("358931"),
             n.e("880150"),
-            n.e("684031"),
+            n.e("168248"),
+            n.e("490743"),
+            n.e("533240"),
             n.e("962953"),
             n.e("434168"),
             n.e("59565"),
@@ -682,7 +684,8 @@ let e1 = (0, F.Fe)({
             n.e("491899"),
             n.e("867721"),
             n.e("567999"),
-            n.e("397244"),
+            n.e("156032"),
+            n.e("267526"),
             n.e("441674"),
             n.e("554669"),
             n.e("281342"),
@@ -690,8 +693,7 @@ let e1 = (0, F.Fe)({
             n.e("64769"),
             n.e("992956"),
             n.e("7452"),
-            n.e("60002"),
-            n.e("189423"),
+            n.e("309499"),
             n.e("424199"),
             n.e("342551"),
             n.e("726391"),
@@ -793,12 +795,11 @@ let e1 = (0, F.Fe)({
             n.e("133902"),
             n.e("511527"),
             n.e("478476"),
+            n.e("103730"),
             n.e("763070"),
-            n.e("564615"),
             n.e("193158"),
             n.e("502018"),
             n.e("757598"),
-            n.e("955184"),
             n.e("400954"),
             n.e("123353"),
             n.e("787079"),
@@ -862,7 +863,7 @@ function e2() {
         (r.useEffect(() => {
             if (c.Ct && a) {
                 let t = new URL("discord://action/oauth2/authorize");
-                (t.search = e.search), window.open(t.toString(), "_self");
+                ((t.search = e.search), window.open(t.toString(), "_self"));
             } else
                 c.Fr ||
                     (!a && $.default.isAuthenticated()) ||
@@ -1169,7 +1170,7 @@ function e7(e) {
         e7 = r.useRef(!1),
         [e8, e9] = r.useState(ed ?? []),
         [te, tt] = r.useState(null != ed && ed.length > 0);
-    (0, d.Ay)(() => {
+    ((0, d.Ay)(() => {
         let e = $.default.getAnalyticsToken();
         null != e
             ? R.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: $.default.getId() })
@@ -1184,7 +1185,7 @@ function e7(e) {
                 e7.current = !0;
                 try {
                     let { disclosures: e, allAcked: t } = await (0, w.vG)(A);
-                    tt(!t), e9(e);
+                    (tt(!t), e9(e));
                 } catch (n) {
                     let { status: e, body: t } = n;
                     if (401 === e) return void (0, er.Vh)(eA, "oauth2_error_failed_disclosures");
@@ -1193,13 +1194,13 @@ function e7(e) {
                     e7.current = !1;
                 }
             }
-        }, [A, eA, ed, e9, eS, tt, em]);
+        }, [A, eA, ed, e9, eS, tt, em]));
     let tn = ei(eI?.application.content_classification ?? e$?.contentClassification, eV),
         ti = r.useCallback(
             async function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null != ee) {
-                    eC(!0), ee(e);
+                    (eC(!0), ee(e));
                     return;
                 }
                 if (null == eW) return void eS(Error("No integration type was selected."));
@@ -1222,8 +1223,8 @@ function e7(e) {
                         channelId: eW === u.b.GUILD_INSTALL && null != eb ? eb : void 0,
                     });
                     if ((e && (await (0, w.Yx)(A, e8)), null != Z))
-                        Z({ application: eI?.application, location: n.location, guild: ej, scopes: eJ, canceled: t }),
-                            eo?.();
+                        (Z({ application: eI?.application, location: n.location, guild: ej, scopes: eJ, canceled: t }),
+                            eo?.());
                     else if (null != n.location) {
                         let e = Q.A.toURLSafe(n.location)?.pathname;
                         Q.A.isDiscordUrl(n.location) && e === et.BVt.OAUTH2_AUTHORIZED
@@ -1234,9 +1235,9 @@ function e7(e) {
                     } else eC(!1);
                 } catch (t) {
                     let e = t.body;
-                    e?.message != null && "" !== e.message ? eS(Error(e.message)) : eS(e),
+                    (e?.message != null && "" !== e.message ? eS(Error(e.message)) : eS(e),
                         em("AUTHORIZE_SCOPES"),
-                        eC(!1);
+                        eC(!1));
                 }
             },
             [ee, Z, eI?.application, ej, eo, A, eJ, h, f, p, T, m, S, e3, eP, eD, eW, e_, eb, e8],
@@ -1264,14 +1265,14 @@ function e7(e) {
                                       connectedAccountProvider: e_,
                                   }),
                         n = ei(t.application.content_classification, eV);
-                    ef(
+                    (ef(
                         ((e = t),
                         null == e.guilds
                             ? e
                             : { ...e, guilds: e.guilds.map((e) => ({ ...e, permissions: E.iu(e.permissions) })) }),
                     ),
                         N !== el.l.NONE || !t.authorized || te || n || ti(!0),
-                        (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_VIEWED, { application_id: t.application.id });
+                        (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_VIEWED, { application_id: t.application.id }));
                 } catch (n) {
                     let { status: e, body: t } = n;
                     if (401 === e) return void (0, er.Vh)(eA, "oauth2_error_unauthorized");
@@ -1297,7 +1298,7 @@ function e7(e) {
             [e$, eK],
         ),
         tl = r.useRef(null);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         ep !== tl.current &&
             ((tl.current = ep),
             (0, b.zV)(et.HAw.OAUTH2_AUTHORIZE_STEP_VIEWED, {
@@ -1335,7 +1336,7 @@ function e7(e) {
                   : (0, ea.F7)(e3)
                     ? eS(Error("Invalid permission(s) provided."))
                     : ta();
-        }, [te, ta, eJ, e3, eW, eI, eg]);
+        }, [te, ta, eJ, e3, eW, eI, eg]));
     let to = r.useCallback((e) => {
             e && eR(!0);
         }, []),
@@ -1371,24 +1372,24 @@ function e7(e) {
         case null:
             return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
         case "CONNECT_ACCOUNT":
-            (t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
+            ((t = (0, i.jsx)(e5, { clientId: A, platformType: e_, platformName: tc })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
-                (tu = !0);
+                (tu = !0));
             break;
         case "SELECT_INSTALL_TYPE":
             if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
-            (t = (0, i.jsx)(e1, {
+            ((t = (0, i.jsx)(e1, {
                 application: e$,
                 onSelect: function (e) {
-                    eY(e), ef(null), em("AUTHORIZE_SCOPES");
+                    (eY(e), ef(null), em("AUTHORIZE_SCOPES"));
                 },
             })),
                 (tE = !1),
                 (tA = !1),
                 (th = !1),
-                (tI = !0);
+                (tI = !0));
             break;
         case "AUTHORIZE_SCOPES":
             if (null == eI || null == eF || null == eW)
@@ -1399,7 +1400,7 @@ function e7(e) {
                 tm =
                     tT ||
                     (eW === u.b.GUILD_INSTALL && (eJ.includes(_.F.BOT) || eJ.includes(_.F.APPLICATIONS_COMMANDS)));
-            (t = (0, i.jsxs)(i.Fragment, {
+            ((t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     null != eG &&
                         ex &&
@@ -1441,11 +1442,11 @@ function e7(e) {
                 eJ.includes(_.F.BOT) && !E.aI(e3, X.x3) && (a = "AUTHORIZE_BOT_PERMISSIONS"),
                 ts.length > 1 && (n = "SELECT_INSTALL_TYPE"),
                 (t_ = (tm && null == ej) || (tT && null == eb)),
-                (tu = !0);
+                (tu = !0));
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
             if (null == eI) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e4, {}) };
-            (t = (0, i.jsx)(ek, {
+            ((t = (0, i.jsx)(ek, {
                 application: eI.application,
                 permissions: e3,
                 deniedPermissions: eP,
@@ -1455,7 +1456,7 @@ function e7(e) {
                 guild: ej,
             })),
                 (n = "AUTHORIZE_SCOPES"),
-                (tu = !0);
+                (tu = !0));
     }
     let tg = [];
     if (tE && null != eI) {

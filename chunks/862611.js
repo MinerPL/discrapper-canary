@@ -150,7 +150,9 @@ function Q(e) {
                         n.e("491899"),
                         n.e("867721"),
                         n.e("567999"),
-                        n.e("397244"),
+                        n.e("156032"),
+                        n.e("490743"),
+                        n.e("267526"),
                         n.e("186856"),
                         n.e("441674"),
                         n.e("554669"),
@@ -164,8 +166,7 @@ function Q(e) {
                         n.e("606633"),
                         n.e("7452"),
                         n.e("529787"),
-                        n.e("60002"),
-                        n.e("189423"),
+                        n.e("309499"),
                         n.e("591114"),
                         n.e("691398"),
                         n.e("266201"),
@@ -212,7 +213,8 @@ function Q(e) {
                         n.e("291847"),
                         n.e("678906"),
                         n.e("358931"),
-                        n.e("684031"),
+                        n.e("168248"),
+                        n.e("533240"),
                         n.e("962953"),
                         n.e("434168"),
                         n.e("59565"),
@@ -520,12 +522,11 @@ function Q(e) {
                         n.e("133902"),
                         n.e("511527"),
                         n.e("478476"),
+                        n.e("103730"),
                         n.e("763070"),
-                        n.e("564615"),
                         n.e("193158"),
                         n.e("502018"),
                         n.e("757598"),
-                        n.e("955184"),
                         n.e("400954"),
                         n.e("123353"),
                         n.e("787079"),
@@ -765,12 +766,12 @@ function F(e) {
         (l.useEffect(() => {
             if (N) {
                 let e = E ? y.FETCH_FAILED : y.NO_GAMES_AVAILABLE;
-                R.default.track(q.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+                (R.default.track(q.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     s(),
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("791646").then(n.bind(n, 659309));
                         return (t) => (0, r.jsx)(e, { ...t });
-                    });
+                    }));
             }
         }, [N, E, t.id, s]),
         g && !N)
@@ -857,7 +858,7 @@ function X(e) {
             });
         },
         onRequestOpen: function () {
-            a?.(),
+            (a?.(),
                 (0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_popout")
                     ? (0, C.r)({
                           type: _.F.CLICK_INTERNAL,
@@ -873,7 +874,7 @@ function X(e) {
                           questContent: d,
                           questContentCTA: P.Cy.SPONSORED_QUEST_SHEET,
                           sourceQuestContent: d,
-                      });
+                      }));
         },
         onRequestClose: function () {
             if (m) return u.o;

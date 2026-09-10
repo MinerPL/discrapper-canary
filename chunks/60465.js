@@ -15,7 +15,7 @@ function u(e) {
 let _ = {
     openGameProfileModal: function (e) {
         let { gameId: t, gameProfileModalChecks: r, source: l, sourceUserId: c, appContext: u } = e;
-        a()(
+        (a()(
             r.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
         ),
@@ -39,7 +39,9 @@ let _ = {
                         n.e("491899"),
                         n.e("867721"),
                         n.e("567999"),
-                        n.e("397244"),
+                        n.e("156032"),
+                        n.e("490743"),
+                        n.e("267526"),
                         n.e("186856"),
                         n.e("441674"),
                         n.e("554669"),
@@ -54,8 +56,7 @@ let _ = {
                         n.e("606633"),
                         n.e("7452"),
                         n.e("529787"),
-                        n.e("60002"),
-                        n.e("189423"),
+                        n.e("309499"),
                         n.e("591114"),
                         n.e("691398"),
                         n.e("266201"),
@@ -102,7 +103,8 @@ let _ = {
                         n.e("291847"),
                         n.e("678906"),
                         n.e("358931"),
-                        n.e("684031"),
+                        n.e("168248"),
+                        n.e("533240"),
                         n.e("962953"),
                         n.e("434168"),
                         n.e("59565"),
@@ -419,12 +421,11 @@ let _ = {
                         n.e("133902"),
                         n.e("511527"),
                         n.e("478476"),
+                        n.e("103730"),
                         n.e("763070"),
-                        n.e("564615"),
                         n.e("193158"),
                         n.e("502018"),
                         n.e("757598"),
-                        n.e("955184"),
                         n.e("400954"),
                         n.e("123353"),
                         n.e("787079"),
@@ -565,11 +566,11 @@ let _ = {
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
-            );
+            ));
     },
     returnToGameProfile: function (e) {
         let { gameId: t, source: r, initialScrollOffset: a } = e;
-        u(t),
+        (u(t),
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -585,7 +586,9 @@ let _ = {
                         n.e("491899"),
                         n.e("867721"),
                         n.e("567999"),
-                        n.e("397244"),
+                        n.e("156032"),
+                        n.e("490743"),
+                        n.e("267526"),
                         n.e("186856"),
                         n.e("441674"),
                         n.e("554669"),
@@ -600,8 +603,7 @@ let _ = {
                         n.e("606633"),
                         n.e("7452"),
                         n.e("529787"),
-                        n.e("60002"),
-                        n.e("189423"),
+                        n.e("309499"),
                         n.e("591114"),
                         n.e("691398"),
                         n.e("266201"),
@@ -648,7 +650,8 @@ let _ = {
                         n.e("291847"),
                         n.e("678906"),
                         n.e("358931"),
-                        n.e("684031"),
+                        n.e("168248"),
+                        n.e("533240"),
                         n.e("962953"),
                         n.e("434168"),
                         n.e("59565"),
@@ -965,12 +968,11 @@ let _ = {
                         n.e("133902"),
                         n.e("511527"),
                         n.e("478476"),
+                        n.e("103730"),
                         n.e("763070"),
-                        n.e("564615"),
                         n.e("193158"),
                         n.e("502018"),
                         n.e("757598"),
-                        n.e("955184"),
                         n.e("400954"),
                         n.e("123353"),
                         n.e("787079"),
@@ -1111,7 +1113,7 @@ let _ = {
                     return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n }, t);
                 },
                 { modalKey: d },
-            );
+            ));
     },
     setGameProfilePendingReturn: function (e) {
         let { gameId: t, channelId: n, initialScrollOffset: i } = e;
