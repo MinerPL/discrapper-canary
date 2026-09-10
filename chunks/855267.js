@@ -56,7 +56,7 @@ function L() {
     i.useEffect(() => {
         l();
         let t = (0, g.debounce)(l, 100);
-        return window.addEventListener("resize", t), () => window.removeEventListener("resize", t);
+        return (window.addEventListener("resize", t), () => window.removeEventListener("resize", t));
     }, [l]);
     let o = (0, v.QB)(),
         { title: c, description: d, color: u, Icon: E } = o[t.state],
@@ -280,6 +280,7 @@ function J(t) {
                         s.e("803434"),
                         s.e("553984"),
                         s.e("179745"),
+                        s.e("164776"),
                         s.e("146844"),
                         s.e("67878"),
                         s.e("102698"),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => k });
 var i = n(962929),
     r = n.n(i),
     a = n(17928),
@@ -19,42 +19,43 @@ let d = {},
     m = !1,
     g = !1,
     S = !1,
-    N = null,
-    C = o.Iv.DIDNT_VIOLATE_POLICY,
-    O = "",
+    N = !1,
+    C = null,
+    O = o.Iv.DIDNT_VIOLATE_POLICY,
     R = "",
     L = "",
-    y = 0,
-    D = null,
-    v = !1,
-    b = o.qN.NONE,
-    M = null;
-function P(e) {
+    y = "",
+    D = 0,
+    v = null,
+    b = !1,
+    M = o.qN.NONE,
+    P = null;
+function U(e) {
     let {} = e;
-    (L = ""), (D = null), (v = !1);
+    ((y = ""), (v = null), (b = !1));
 }
-let U = {
+let w = {
     [o.aC.PENDING]: o.qN.LOADING,
     [o.aC.UNBANNED]: o.qN.VERIFIED,
     [o.aC.VERIFIED_OTHER_VIOLATIONS_REMAIN]: o.qN.VERIFIED_OTHER_VIOLATIONS_REMAIN,
     [o.aC.UNDERAGE]: o.qN.UNDERAGE,
     [o.aC.UNDERAGE_MANUAL_REVIEW]: o.qN.UNDERAGE_MANUAL_REVIEW,
 };
-function w() {
-    (_ = !1),
+function G() {
+    ((_ = !1),
         (d = {}),
         (u = { state: l.PN.ALL_GOOD }),
         (h = null),
-        (C = o.Iv.DIDNT_VIOLATE_POLICY),
-        (O = ""),
+        (O = o.Iv.DIDNT_VIOLATE_POLICY),
+        (R = ""),
         (p = []),
         (m = !1),
         (g = !1),
-        (b = o.qN.NONE),
-        (y = 0),
-        (M = null);
+        (M = o.qN.NONE),
+        (D = 0),
+        (P = null));
 }
-class G extends a.Ay.Store {
+class x extends a.Ay.Store {
     static displayName = "SafetyHubStore";
     isFetching() {
         return _;
@@ -98,41 +99,44 @@ class G extends a.Ay.Store {
     getIsManualReviewFallbackEnabled() {
         return g;
     }
-    getAppealSignal() {
-        return C;
-    }
-    getFreeTextAppealReason() {
-        return O;
-    }
-    getIsSubmitting() {
+    getIsManualReviewDecidedUnderage() {
         return S;
     }
-    getSubmitError() {
-        return N;
+    getAppealSignal() {
+        return O;
     }
-    getUsername() {
+    getFreeTextAppealReason() {
         return R;
     }
-    getAgeVerificationWebviewUrl() {
+    getIsSubmitting() {
+        return N;
+    }
+    getSubmitError() {
+        return C;
+    }
+    getUsername() {
         return L;
     }
-    getAgeVerificationError() {
-        return D;
-    }
-    getIsLoadingAgeVerification() {
-        return v;
-    }
-    getAgeCheckStatus() {
-        return b;
-    }
-    getAgeCheckError() {
-        return M;
-    }
-    getAgeCheckAttempts() {
+    getAgeVerificationWebviewUrl() {
         return y;
     }
+    getAgeVerificationError() {
+        return v;
+    }
+    getIsLoadingAgeVerification() {
+        return b;
+    }
+    getAgeCheckStatus() {
+        return M;
+    }
+    getAgeCheckError() {
+        return P;
+    }
+    getAgeCheckAttempts() {
+        return D;
+    }
 }
-let x = new G(s.h, {
+let k = new x(s.h, {
     SAFETY_HUB_FETCH_START: function (e) {
         _ = !0;
     },
@@ -147,108 +151,110 @@ let x = new G(s.h, {
             expressiveModalV2Enabled: o,
             showExpressiveModalSubtitleAlt: c,
             manualReviewFallbackEnabled: h,
+            manualReviewDecidedUnderage: N,
         } = e;
-        (d = r()(t, "id")),
+        ((d = r()(t, "id")),
             (u = n),
             (I = i),
             (f = a),
             (_ = !1),
             (E = !0),
             (A = null),
-            (R = s),
+            (L = s),
             (p = l),
             (T = o),
             (m = c),
-            (g = h);
+            (g = h),
+            (S = N));
     },
     SAFETY_HUB_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (_ = !1), (E = !1), (A = t);
+        ((_ = !1), (E = !1), (A = t));
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_START: function (e) {
-        (c[e.classificationId] = l.nU.PENDING), (_ = !0);
+        ((c[e.classificationId] = l.nU.PENDING), (_ = !0));
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (e) {
         let { classification: t, accountStanding: n, isDsaEligible: i, username: r, isAppealEligible: a } = e;
-        (d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (I = i), (f = a), (E = !0), (R = r);
+        ((d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (I = i), (f = a), (E = !0), (L = r));
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (e) {
         let { error: t, classificationId: n } = e;
-        (_ = !1), (A = t), (c[n] = l.nU.FAILED), (E = !1);
+        ((_ = !1), (A = t), (c[n] = l.nU.FAILED), (E = !1));
     },
     SAFETY_HUB_APPEAL_OPEN: function (e) {
         let { classificationId: t } = e;
         h = t;
     },
     SAFETY_HUB_APPEAL_CLOSE: function () {
-        (h = null), (C = o.Iv.DIDNT_VIOLATE_POLICY), (O = "");
+        ((h = null), (O = o.Iv.DIDNT_VIOLATE_POLICY), (R = ""));
     },
     SAFETY_HUB_APPEAL_SIGNAL_SELECT: function (e) {
         let { signal: t } = e;
-        C = t;
+        O = t;
     },
     SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: function (e) {
         let { userInput: t } = e;
-        O = t;
+        R = t;
     },
     SAFETY_HUB_REQUEST_REVIEW_START: function (e) {
         let {} = e;
-        (S = !0), (N = null);
+        ((N = !0), (C = null));
     },
     SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function (e) {
         let { classificationId: t } = e;
-        (S = !1), (N = null), (d[t].appeal_status = { status: l.Wi.REVIEW_PENDING });
+        ((N = !1), (C = null), (d[t].appeal_status = { status: l.Wi.REVIEW_PENDING }));
     },
     SAFETY_HUB_REQUEST_REVIEW_FAILURE: function (e) {
         let { error: t } = e;
-        (S = !1), (N = t);
+        ((N = !1), (C = t));
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function (e) {
         let {} = e;
-        (L = ""), (D = null), (v = !0);
+        ((y = ""), (v = null), (b = !0));
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
         let { verificationWebviewUrl: t } = e;
-        (L = t), (D = null), (v = !1);
+        ((y = t), (v = null), (b = !1));
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
         let { error: t } = e;
-        (L = ""), (D = t), (v = !1);
+        ((y = ""), (v = t), (b = !1));
     },
-    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: P,
-    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: P,
+    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: U,
+    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: U,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS: function (e) {
         let {} = e;
-        for (let e in ((b = o.qN.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.Wi.REVIEW_PENDING });
+        for (let e in ((M = o.qN.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.Wi.REVIEW_PENDING });
     },
     SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED: function (e) {
         let {} = e;
-        b = o.qN.LOADING;
+        M = o.qN.LOADING;
     },
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: function (e) {
         let {} = e;
-        (b = o.qN.LOADING), (M = null);
+        ((M = o.qN.LOADING), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: function (e) {
         let {} = e;
-        (b = o.qN.LOADING), (M = null), (y += 1);
+        ((M = o.qN.LOADING), (P = null), (D += 1));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
         let { success: t } = e;
-        (b = t ? o.qN.SUCCESS : y < o.ti ? o.qN.LOADING : o.qN.FAILURE), (M = null);
+        ((M = t ? o.qN.SUCCESS : D < o.ti ? o.qN.LOADING : o.qN.FAILURE), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2: function (e) {
         let { status: t } = e;
-        (b = U[t]), (M = null);
+        ((M = w[t]), (P = null));
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
         let { error: t } = e;
-        (b = o.qN.ERROR), (M = t);
+        ((M = o.qN.ERROR), (P = t));
     },
     SAFETY_HUB_RESET_AGE_CHECK_STATUS: function (e) {
         let {} = e;
-        (b = o.qN.NONE), (y = 0), (M = null);
+        ((M = o.qN.NONE), (D = 0), (P = null));
     },
-    LOGOUT: w,
-    LOGIN_SUSPENDED_USER: w,
+    LOGOUT: G,
+    LOGIN_SUSPENDED_USER: G,
 });

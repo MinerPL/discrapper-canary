@@ -1,4 +1,4 @@
-_.d(t, { Gf: () => S, Yn: () => o, d: () => U, hH: () => c, hn: () => u, k9: () => d, vN: () => p });
+_.d(t, { Gf: () => d, Yn: () => o, d: () => U, hH: () => c, hn: () => p, k9: () => S, vN: () => u });
 var E = _(636537),
     i = _(228366),
     a = _(59318),
@@ -28,6 +28,7 @@ async function o() {
                 expressive_modal_v2_enabled: l,
                 show_expressive_modal_subtitle_alt: o,
                 manual_review_fallback_enabled: c,
+                manual_review_decided_underage: d,
             } = t,
             S = _.map((e) => (T(e), e));
         i.h.dispatch({
@@ -41,6 +42,7 @@ async function o() {
             expressiveModalV2Enabled: l ?? !1,
             showExpressiveModalSubtitleAlt: o ?? !1,
             manualReviewFallbackEnabled: c ?? !1,
+            manualReviewDecidedUnderage: d ?? !1,
         });
     }).catch((e) => {
         i.h.dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: e?.body?.message ?? "Unknown error" });
@@ -86,36 +88,36 @@ async function c(e) {
 function T(e) {
     if (null != e.flagged_content && e.flagged_content.length > 0) {
         let t = e.flagged_content[0];
-        (t.attachments = t.attachments.filter((e) => {
+        ((t.attachments = t.attachments.filter((e) => {
             let { filename: t } = e;
             return (0, a.u)(t) || (0, a.AE)(t);
         })),
-            (e.flagged_content = (0, s.Jn)(t) ? [] : [t]);
+            (e.flagged_content = (0, s.Jn)(t) ? [] : [t]));
     }
 }
-async function S(e, t, _) {
+async function d(e, t, _) {
     let a = n.default.getSuspendedUserToken(),
         r = null != a ? l.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(e) : l.Rsh.SAFETY_HUB_REQUEST_REVIEW(e),
         s =
             null != a
                 ? E.Bo.put({ url: r, body: { signal: t, user_input: _, token: a }, rejectWithError: (0, E.fT)() })
                 : E.Bo.put({ url: r, body: { signal: t, user_input: _ }, rejectWithError: (0, E.fT)() });
-    i.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
+    (i.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
         await s
             .then(() => {
                 i.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS", classificationId: e });
             })
             .catch((e) => {
                 throw (
-                    (i.h.dispatch({
+                    i.h.dispatch({
                         type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE",
                         error: e?.body?.message ?? "Unknown error",
                     }),
-                    e)
+                    e
                 );
-            });
+            }));
 }
-async function d(e) {
+async function S(e) {
     i.h.dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
     let t = n.default.getSuspendedUserToken(),
         _ = l.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
@@ -147,8 +149,8 @@ async function U() {
         .then((e) => {
             let { body: _ } = e,
                 { success: E } = _;
-            !E && t < A.ti && setTimeout(() => U(), A.Eb),
-                i.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success: E });
+            (!E && t < A.ti && setTimeout(() => U(), A.Eb),
+                i.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS", success: E }));
         })
         .catch((e) => {
             i.h.dispatch({
@@ -157,7 +159,7 @@ async function U() {
             });
         });
 }
-async function p(e) {
+async function u(e) {
     i.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
     let t = n.default.getSuspendedUserToken(),
         _ = r.A.getAgeCheckAttempts(),
@@ -169,8 +171,8 @@ async function p(e) {
                 { status: a } = E;
             a === A.aC.PENDING
                 ? _ < A.ti
-                    ? setTimeout(() => p(e), A.Eb)
-                    : u()
+                    ? setTimeout(() => u(e), A.Eb)
+                    : p()
                 : ((a === A.aC.UNBANNED || a === A.aC.VERIFIED_OTHER_VIOLATIONS_REMAIN) && o(),
                   i.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS_V2", status: a }));
         })
@@ -181,6 +183,6 @@ async function p(e) {
             });
         });
 }
-function u() {
+function p() {
     i.h.dispatch({ type: "SAFETY_HUB_RESET_AGE_CHECK_STATUS" });
 }

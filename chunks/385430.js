@@ -1,74 +1,75 @@
-n.d(i, { default: () => z });
-var t = n(477900),
-    l = n(582128),
-    a = n(935462),
-    s = n(289873),
-    o = n(780964),
-    c = n(766075),
-    r = n(393033),
-    d = n(257110),
-    u = n(503698),
-    m = n.n(u),
-    p = n(731738),
-    x = n(661531),
-    h = n(297264),
-    E = n(834730),
-    f = n(28863),
-    _ = n(231483),
-    j = n(320448),
-    g = n(17928),
-    A = n(847599),
-    N = n(462924),
-    C = n(807393),
-    v = n(773669),
-    L = n(174459),
-    k = n(67521),
-    I = n(739010),
-    U = n(207913),
-    T = n(335891),
-    y = n(985481),
-    w = n(259960),
-    D = n(26095),
-    b = n(607739),
-    S = n(239093),
-    O = n(652215),
-    G = n(375708),
-    K = n(52111);
-function H(e) {
-    let { classificationTypeText: i, guildMetadata: n } = e,
+i.d(e, { default: () => nn });
+var t = i(477900),
+    l = i(582128),
+    a = i(935462),
+    s = i(289873),
+    r = i(780964),
+    c = i(766075),
+    o = i(393033),
+    d = i(257110),
+    u = i(503698),
+    m = i.n(u),
+    x = i(731738),
+    p = i(661531),
+    h = i(297264),
+    j = i(834730),
+    f = i(28863),
+    E = i(231483),
+    g = i(320448),
+    _ = i(17928),
+    A = i(847599),
+    N = i(462924),
+    v = i(807393),
+    C = i(773669),
+    L = i(174459),
+    k = i(67521),
+    I = i(739010),
+    U = i(207913),
+    T = i(335891),
+    y = i(985481),
+    w = i(259960),
+    D = i(26095),
+    b = i(607739),
+    G = i(239093),
+    O = i(652215),
+    S = i(375708),
+    K = i(876891),
+    R = i(52111);
+function F(n) {
+    let { classificationTypeText: e, guildMetadata: i } = n,
         a = l.useMemo(() => {
-            let e = { classification_type: i, classificationHook: (e, i) => (0, t.jsx)("strong", { children: e }, i) };
-            return null == n
-                ? G.intl.format(G.t.HpvELh, e)
-                : n?.member_type === I.Z9.OWNER
-                  ? G.intl.format(G.t.X1ngSd, { ...e, guildName: n?.name })
-                  : G.intl.format(G.t.rmpEPD, { ...e, guildName: n?.name });
-        }, [i, n]);
+            let n = { classification_type: e, classificationHook: (n, e) => (0, t.jsx)("strong", { children: n }, e) };
+            return null == i
+                ? S.intl.format(S.t.HpvELh, n)
+                : i?.member_type === I.Z9.OWNER
+                  ? S.intl.format(S.t.X1ngSd, { ...n, guildName: i?.name })
+                  : S.intl.format(S.t.rmpEPD, { ...n, guildName: i?.name });
+        }, [e, i]);
     return (0, t.jsx)(h.D, { variant: "heading-xl/normal", children: a });
 }
-function R(e) {
-    let { actions: i, classificationExpiration: n } = e,
-        l = (0, g.bG)([v.default], () => v.default.locale);
-    return 0 === i.filter((e) => e.descriptions.length > 0).length && null == n
+function H(n) {
+    let { actions: e, classificationExpiration: i } = n,
+        l = (0, _.bG)([C.default], () => C.default.locale);
+    return 0 === e.filter((n) => n.descriptions.length > 0).length && null == i
         ? null
         : (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)(E.E, { variant: "eyebrow", color: "text-muted", children: G.intl.string(G.t["O2nYk+"]) }),
+                  (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["O2nYk+"]) }),
                   (0, t.jsxs)("ul", {
-                      className: K.nq,
+                      className: R.nq,
                       children: [
-                          i.map((e) => (0, t.jsx)(F, { action: e }, e.id)),
-                          null != n
+                          e.map((n) => (0, t.jsx)(B, { action: n }, n.id)),
+                          null != i
                               ? (0, t.jsx)(
                                     "li",
                                     {
-                                        className: K.DJ,
-                                        children: (0, t.jsx)(E.E, {
+                                        className: R.DJ,
+                                        children: (0, t.jsx)(j.E, {
                                             tag: "span",
                                             variant: "heading-md/normal",
                                             color: "text-default",
-                                            children: G.intl.format(G.t.TByIjT, {
-                                                expirationDate: n.toLocaleDateString(l, { dateStyle: "medium" }),
+                                            children: S.intl.format(S.t.TByIjT, {
+                                                expirationDate: i.toLocaleDateString(l, { dateStyle: "medium" }),
                                             }),
                                         }),
                                     },
@@ -80,242 +81,302 @@ function R(e) {
               ],
           });
 }
-function F(e) {
-    let { action: i } = e;
-    return (0, t.jsx)(t.Fragment, {
-        children: i.descriptions.map((e, i) =>
-            (0, t.jsx)(
-                "li",
-                {
-                    className: K.DJ,
-                    children: (0, t.jsx)(E.E, {
+function M() {
+    return (0, t.jsxs)("div", {
+        children: [
+            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["O2nYk+"]) }),
+            (0, t.jsx)("ul", {
+                className: R.nq,
+                children: (0, t.jsx)("li", {
+                    className: R.DJ,
+                    children: (0, t.jsx)(j.E, {
                         tag: "span",
                         variant: "heading-md/normal",
                         color: "text-default",
-                        children: e,
+                        children: S.intl.string(K.default.rn3Gto),
+                    }),
+                }),
+            }),
+        ],
+    });
+}
+function B(n) {
+    let { action: e } = n;
+    return (0, t.jsx)(t.Fragment, {
+        children: e.descriptions.map((n, e) =>
+            (0, t.jsx)(
+                "li",
+                {
+                    className: R.DJ,
+                    children: (0, t.jsx)(j.E, {
+                        tag: "span",
+                        variant: "heading-md/normal",
+                        color: "text-default",
+                        children: n,
                     }),
                 },
-                i,
+                e,
             ),
         ),
     });
 }
-function B(e) {
-    let { classificationTypeText: i, policyExplainerLink: n } = e;
+function P(n) {
+    let { classificationTypeText: e, policyExplainerLink: i } = n;
     return (0, t.jsxs)(f.Anchor, {
-        href: n,
-        className: K.F8,
+        href: i,
+        className: R.F8,
         useDefaultUnderlineStyles: !1,
         children: [
             (0, t.jsx)("div", {
-                className: K.yi,
-                children: (0, t.jsx)(_.ShieldIcon, { size: "md", color: x.A.colors.BORDER_FOCUS }),
+                className: R.yi,
+                children: (0, t.jsx)(E.ShieldIcon, { size: "md", color: p.A.colors.BORDER_FOCUS }),
             }),
             (0, t.jsx)("div", {
-                className: K.wC,
-                children: (0, t.jsx)(E.E, {
+                className: R.wC,
+                children: (0, t.jsx)(j.E, {
                     variant: "text-md/normal",
-                    children: G.intl.format(G.t.zxUdpj, { classificationDescription: i }),
+                    children: S.intl.format(S.t.zxUdpj, { classificationDescription: e }),
                 }),
             }),
             (0, t.jsx)("div", {
-                className: K.g_,
-                children: (0, t.jsx)(j._, { size: "md", color: x.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                className: R.g_,
+                children: (0, t.jsx)(g._, { size: "md", color: p.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             }),
         ],
     });
 }
-function P() {
-    return (0, t.jsx)(E.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t["I2H0/E"]) });
+function V() {
+    return (0, t.jsx)(j.E, { variant: "text-md/normal", color: "text-muted", children: S.intl.string(S.t["I2H0/E"]) });
 }
-function M(e) {
-    return (0, t.jsx)(E.E, {
+function Y(n) {
+    return (0, t.jsx)(j.E, {
         variant: "text-md/normal",
         color: "text-muted",
-        children: G.intl.format(G.t.IFxUaT, {
-            letUsKnowHook: (i, n) =>
+        children: S.intl.format(S.t.IFxUaT, {
+            letUsKnowHook: (e, i) =>
                 (0, t.jsx)(
                     f.Anchor,
-                    { href: e.isAppealEligible ? void 0 : e.appealLink, onClick: e.letUsKnowClick, children: i },
-                    n,
+                    { href: n.isAppealEligible ? void 0 : n.appealLink, onClick: n.letUsKnowClick, children: e },
+                    i,
                 ),
         }),
     });
 }
-function V(e) {
+function $(n) {
     return (0, t.jsx)("div", {
-        className: K.CC,
-        children: e.hasBeenAppealed
-            ? (0, t.jsx)(P, {})
-            : (0, t.jsx)(M, {
-                  appealLink: S.d$.APPEALS_LINK,
-                  letUsKnowClick: e.onLetUsKnowClick,
-                  isAppealEligible: e.isAppealEligible,
+        className: R.CC,
+        children: n.hasBeenAppealed
+            ? (0, t.jsx)(V, {})
+            : (0, t.jsx)(Y, {
+                  appealLink: G.d$.APPEALS_LINK,
+                  letUsKnowClick: n.onLetUsKnowClick,
+                  isAppealEligible: n.isAppealEligible,
               }),
     });
 }
-function Y(e) {
+function W(n) {
     return (0, t.jsx)("div", {
-        className: K.CC,
-        children: (0, t.jsx)(E.E, {
+        className: R.CC,
+        children: (0, t.jsx)(j.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            className: K.IC,
-            children: G.intl.format(G.t.LeAhOQ, {
-                letUsKnowHook: (i, n) => (0, t.jsx)(f.Anchor, { onClick: e.onLetUsKnowClick, children: i }, n),
+            className: R.IC,
+            children: S.intl.format(S.t.LeAhOQ, {
+                letUsKnowHook: (e, i) => (0, t.jsx)(f.Anchor, { onClick: n.onLetUsKnowClick, children: e }, i),
             }),
         }),
     });
 }
-function W(e) {
+function J() {
+    return (0, t.jsx)("div", {
+        className: R.CC,
+        children: (0, t.jsx)(j.E, {
+            variant: "text-md/normal",
+            color: "text-strong",
+            className: R.IC,
+            children: S.intl.string(K.default["yV/t/V"]),
+        }),
+    });
+}
+function Z(n) {
+    let { tosLink: e, communityGuidelinesLink: i } = n;
+    return (0, t.jsxs)("div", {
+        children: [
+            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["977iei"]) }),
+            (0, t.jsx)(j.E, {
+                className: R.t8,
+                variant: "text-sm/normal",
+                children: S.intl.format(K.default.vPOpia, { tosLink: e, communityGuidelinesLink: i }),
+            }),
+        ],
+    });
+}
+function q(n) {
     let {
-        tosLink: i,
-        communityGuidelinesLink: n,
+        tosLink: e,
+        communityGuidelinesLink: i,
         classificationTypeText: l,
         policyExplainerLink: a,
         appealComponent: s,
-        hidePolicyCard: o = !1,
-    } = e;
+        hidePolicyCard: r = !1,
+    } = n;
     return (0, t.jsxs)("div", {
         children: [
-            (0, t.jsx)(E.E, { variant: "eyebrow", color: "text-muted", children: G.intl.string(G.t["977iei"]) }),
-            (0, t.jsx)(E.E, {
-                className: K.t8,
+            (0, t.jsx)(j.E, { variant: "eyebrow", color: "text-muted", children: S.intl.string(S.t["977iei"]) }),
+            (0, t.jsx)(j.E, {
+                className: R.t8,
                 variant: "text-sm/normal",
-                children: G.intl.format(G.t["1Z/+aA"], { tosLink: i, communityGuidelinesLink: n }),
+                children: S.intl.format(S.t["1Z/+aA"], { tosLink: e, communityGuidelinesLink: i }),
             }),
-            !o && (0, t.jsx)(B, { classificationTypeText: l, policyExplainerLink: a }),
+            !r && (0, t.jsx)(P, { classificationTypeText: l, policyExplainerLink: a }),
             s,
         ],
     });
 }
-let $ = (e) => {
-    let { classificationId: i, source: n, onError: a, onClose: s } = e,
+function z() {
+    return (0, t.jsxs)(t.Fragment, {
+        children: [
+            (0, t.jsx)(M, {}),
+            (0, t.jsx)(Z, { tosLink: G.d$.TOS_LINK, communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES }),
+            (0, t.jsx)(J, {}),
+        ],
+    });
+}
+let X = (n) => {
+    let { classificationId: e, source: i, onError: a, onClose: s } = n,
         {
-            classification: o,
+            classification: r,
             classificationRequestState: c,
             isAppealEligible: d,
             isDsaEligible: u,
-            violationType: x,
-        } = (0, y.LJ)(i),
-        h = (0, g.bG)([U.A], () => U.A.getAppealEligibility()),
-        E = (0, T.K)(),
-        f = null != o && null != o.flagged_content && o.flagged_content.length > 0,
-        _ = (0, w.v)(),
-        j = !!o?.is_coppa && h.includes(I.RH.AGE_VERIFY_ELIGIBLE),
-        v = !!o?.is_coppa && h.includes(I.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
-        G = (0, N.M)(A.q1.AUTOMATED_UNDERAGE_APPEALS),
-        F = v && G,
-        B = {
-            accountStanding: E,
-            classificationId: i,
+            violationType: p,
+        } = (0, y.LJ)(e),
+        h = (0, _.bG)([U.A], () => U.A.getAppealEligibility()),
+        j = (0, T.K)(),
+        f = null != r && null != r.flagged_content && r.flagged_content.length > 0,
+        E = (0, w.v)(),
+        g = !!r?.is_coppa && h.includes(I.RH.AGE_VERIFY_ELIGIBLE),
+        C = !!r?.is_coppa && h.includes(I.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
+        S = (0, N.M)(A.q1.AUTOMATED_UNDERAGE_APPEALS),
+        K = C && S,
+        M = (0, _.bG)([U.A], () => U.A.getIsManualReviewDecidedUnderage()),
+        B = !!r?.is_coppa && M,
+        P = {
+            accountStanding: j,
+            classificationId: e,
             hasFlaggedContent: f,
             isDsaEligible: u,
-            source: n,
-            violationType: x,
+            source: i,
+            violationType: p,
         },
-        P = l.useRef(B);
-    function M() {
-        L.default.track(O.HAw.SAFETY_HUB_ACTION, {
-            action: S.ZU.ClickLetUsKnow,
-            account_standing: E.state,
-            classification_ids: [Number(i)],
-            source: n,
+        V = l.useRef(P);
+    function Y() {
+        (L.default.track(O.HAw.SAFETY_HUB_ACTION, {
+            action: G.ZU.ClickLetUsKnow,
+            account_standing: j.state,
+            classification_ids: [Number(e)],
+            source: i,
             is_violative_content_shown: f,
             is_dsa_eligible: u,
-            violation_type: x,
+            violation_type: p,
         }),
-            v
-                ? k.A.openV2(i, s)
-                : j
-                  ? k.A.open(i, s)
-                  : d && (C.A.increment({ name: p.K.APPEAL_INGESTION_VIEW }), D.A.open(i));
+            C
+                ? k.A.openV2(e, s)
+                : g
+                  ? k.A.open(e, s)
+                  : d && (v.A.increment({ name: x.K.APPEAL_INGESTION_VIEW }), D.A.open(e)));
     }
     return (l.useEffect(() => {
-        P.current = B;
+        V.current = P;
     }),
     l.useEffect(() => {
         let {
-            accountStanding: e,
-            classificationId: i,
-            hasFlaggedContent: n,
+            accountStanding: n,
+            classificationId: e,
+            hasFlaggedContent: i,
             isDsaEligible: t,
             source: l,
             violationType: a,
-        } = P.current;
-        _ &&
+        } = V.current;
+        E &&
             L.default.track(O.HAw.SAFETY_HUB_ACTION, {
-                action: S.ZU.ViewViolationDetail,
-                account_standing: e.state,
-                classification_ids: [Number(i)],
+                action: G.ZU.ViewViolationDetail,
+                account_standing: n.state,
+                classification_ids: [Number(e)],
                 source: l,
-                is_violative_content_shown: n,
+                is_violative_content_shown: i,
                 is_dsa_eligible: t,
                 violation_type: a,
             });
-    }, [_]),
-    null == o && c === I.nU.FAILED)
+    }, [E]),
+    null == r && c === I.nU.FAILED)
         ? (a(), null)
-        : null == o
+        : null == r
           ? null
           : (0, t.jsxs)("div", {
-                className: K.ch,
+                className: R.ch,
                 children: [
                     (0, t.jsx)("div", {
-                        className: K.uW,
-                        children: (0, t.jsx)(H, {
-                            classificationTypeText: o.description,
-                            guildMetadata: o?.guild_metadata,
+                        className: R.uW,
+                        children: (0, t.jsx)(F, {
+                            classificationTypeText: r.description,
+                            guildMetadata: r?.guild_metadata,
                         }),
                     }),
                     (0, t.jsxs)("div", {
-                        className: m()(K.rf, K.uW),
+                        className: m()(R.rf, R.uW),
                         children: [
-                            (0, t.jsx)(b.U, { flaggedContent: o.flagged_content ?? [] }),
-                            (0, t.jsx)(R, { actions: o.actions, classificationExpiration: (0, r.UI)(o) }),
-                            (0, t.jsx)(W, {
-                                classificationTypeText: o.description,
-                                tosLink: S.d$.TOS_LINK,
-                                communityGuidelinesLink: S.d$.COMMUNITY_GUIDELINES,
-                                policyExplainerLink: o.explainer_link,
-                                hidePolicyCard: F,
-                                appealComponent: F
-                                    ? (0, t.jsx)(Y, { onLetUsKnowClick: M })
-                                    : (0, t.jsx)(V, {
-                                          hasBeenAppealed: null != o.appeal_status,
-                                          onLetUsKnowClick: M,
-                                          isAppealEligible: d || j,
-                                      }),
-                            }),
+                            (0, t.jsx)(b.U, { flaggedContent: r.flagged_content ?? [] }),
+                            B
+                                ? (0, t.jsx)(z, {})
+                                : (0, t.jsxs)(t.Fragment, {
+                                      children: [
+                                          (0, t.jsx)(H, { actions: r.actions, classificationExpiration: (0, o.UI)(r) }),
+                                          (0, t.jsx)(q, {
+                                              classificationTypeText: r.description,
+                                              tosLink: G.d$.TOS_LINK,
+                                              communityGuidelinesLink: G.d$.COMMUNITY_GUIDELINES,
+                                              policyExplainerLink: r.explainer_link,
+                                              hidePolicyCard: K,
+                                              appealComponent: K
+                                                  ? (0, t.jsx)(W, { onLetUsKnowClick: Y })
+                                                  : (0, t.jsx)($, {
+                                                        hasBeenAppealed: null != r.appeal_status,
+                                                        onLetUsKnowClick: Y,
+                                                        isAppealEligible: d || g,
+                                                    }),
+                                          }),
+                                      ],
+                                  }),
                         ],
                     }),
                 ],
             });
 };
-var Z = n(987926);
-let z = function (e) {
-    let { transitionState: i, onClose: n, classificationId: l, source: u } = e,
+var Q = i(987926);
+let nn = function (n) {
+    let { transitionState: e, onClose: i, classificationId: l, source: u } = n,
         m = (0, d.A)(),
-        p = (0, r.W$)();
-    function x() {
-        n(), p || (0, c.openUserSettings)(o.X.ACCOUNT_STANDING_CATEGORY);
+        x = (0, o.W$)();
+    function p() {
+        (i(), x || (0, c.openUserSettings)(r.X.ACCOUNT_STANDING_CATEGORY));
     }
     return (0, t.jsxs)(a.EO, {
-        className: Z.CR,
-        transitionState: i,
+        className: Q.CR,
+        transitionState: e,
         parentComponent: "ClassificationDetailModal",
         "data-migration-pending": !0,
         children: [
             (0, t.jsx)("div", {
-                className: Z.Hc,
-                children: (0, t.jsx)(a.s_, { "data-migration-pending": !0, className: Z.g8, onClick: n }),
+                className: Q.Hc,
+                children: (0, t.jsx)(a.s_, { "data-migration-pending": !0, className: Q.g8, onClick: i }),
             }),
             (0, t.jsx)(a.$m, {
                 "data-migration-pending": !0,
-                className: Z.jE,
+                className: Q.jE,
                 children: m
                     ? (0, t.jsx)(s.y, {})
-                    : (0, t.jsx)($, { classificationId: l, source: u, onError: x, onClose: x }),
+                    : (0, t.jsx)(X, { classificationId: l, source: u, onError: p, onClose: p }),
             }),
         ],
     });
