@@ -233,10 +233,10 @@
 
 .emptyState_b40158 {
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-8);
     overflow: hidden;
-    padding: 16px;
+    padding: var(--space-16);
     text-align: center
 }
 
-/*# sourceMappingURL=c2619210172198a0.css.map*/
+/*# sourceMappingURL=d1974d5213c2ac60.css.map*/

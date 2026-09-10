@@ -1,19 +1,17 @@
-.error__71b12 {
+.emptyState__759cf {
     align-items: center;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    gap: 25px;
-    height: 100%;
+    gap: var(--space-16);
     justify-content: center;
-    padding-top: 40px;
-    width: 100%
+    overflow: hidden;
+    padding: var(--space-16);
+    text-align: center
 }
 
-.errorImage__71b12 {
-    height: 150px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 150px
+.illustration__759cf {
+    margin-bottom: var(--space-16)
 }
 
 .heading-sm\/normal__58471 {
@@ -2085,4 +2083,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=27e37dd89794cab7.css.map*/
+/*# sourceMappingURL=cfc7dbbedcbeb0bd.css.map*/
