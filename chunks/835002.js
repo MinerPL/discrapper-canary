@@ -28,6 +28,7 @@ var i,
         (r.RESTRICTED_ACCOUNTS_SETTING_NOTICE = "restricted_accounts_setting_notice"),
         (r.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE = "content_and_social_parental_controls_notice"),
         (r.AGE_CONFIRMATION_NOTICE = "age_confirmation_notice"),
+        (r.CONTENT_AND_SOCIAL_NOTICE = "content_and_social_notice"),
         r),
     o =
         (((a = {}).DISMISS = "dismiss"),
