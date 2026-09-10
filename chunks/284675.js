@@ -10649,14 +10649,7 @@ function oC(e) {
                     (0, r.jsx)(x.$, { variant: "secondary", size: "sm", text: l ? "Copied!" : "Copy ID", onClick: c }),
                 ],
             }),
-            (0, r.jsx)(oj.C, {
-                items: d,
-                label: "Order info",
-                layout: "inline",
-                selectionMode: "none",
-                selectionBehavior: "replace",
-                disabledKeys: new Set(),
-            }),
+            (0, r.jsx)(oj.C, { items: d, label: "Order information", layout: "inline" }),
             (0, r.jsxs)(W.B, {
                 direction: "vertical",
                 gap: 4,
@@ -17554,13 +17547,7 @@ function hU(e) {
                 label: `Type: ${null == (a = n.planIdFromItems) ? "No plan id" : a in tD.hd ? tD.hd[a].name : `Unknown plan id ${a}`}`,
                 className: ob.lI,
                 children: [
-                    (0, r.jsx)(oj.C, {
-                        items: k,
-                        label: "Tags",
-                        selectionMode: "none",
-                        selectionBehavior: "replace",
-                        disabledKeys: new Set(),
-                    }),
+                    (0, r.jsx)(oj.C, { items: k, label: "Subscription details" }),
                     I &&
                         (0, r.jsxs)("div", {
                             className: ob.VK,

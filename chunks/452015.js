@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => tg, NE: () => tf, Jz: () => th, YW: () => te }), n(321073);
+(n.d(t, { Ay: () => tg, NE: () => tf, Jz: () => th, YW: () => te }), n(321073));
 var i = n(477900),
     l = n(582128),
     r = n(435558),
@@ -89,11 +89,11 @@ function eo(e) {
         [f, A] = (0, Z.kn)(g && !o ? [d.M.NITRO_GDM_CAP_COACHMARK] : []),
         E = f === d.M.NITRO_GDM_CAP_COACHMARK,
         p = l.useCallback(() => {
-            en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: r, location_object: el.ZSU.BUTTON_CTA }),
-                A(er.i.TAKE_ACTION);
+            (en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: r, location_object: el.ZSU.BUTTON_CTA }),
+                A(er.i.TAKE_ACTION));
         }, [r, A]),
         m = l.useCallback(() => {
-            s(), A(er.i.TAKE_ACTION);
+            (s(), A(er.i.TAKE_ACTION));
         }, [s, A]);
     return E
         ? (0, i.jsx)(ee.A, {
@@ -134,9 +134,9 @@ var eu = n(87719);
 function ed(e) {
     let { location: t, nitroAudience: n, transitionState: r, onClose: s } = e,
         a = l.useCallback(async () => {
-            en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: t, location_object: el.ZSU.BUTTON_CTA }),
+            (en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: t, location_object: el.ZSU.BUTTON_CTA }),
                 await s(),
-                (0, eu.e)();
+                (0, eu.e)());
         }, [t, s]);
     return (0, i.jsx)(ee.A, {
         subscriptionTier: es.pe.TIER_2,
@@ -154,7 +154,7 @@ function ed(e) {
                         variant: "expressive",
                         icon: Q.t,
                         onClick: async (e) => {
-                            t(e), await s();
+                            (t(e), await s());
                         },
                     },
                 ],
@@ -184,29 +184,29 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             C = l.useRef(null),
             _ = (0, ei.yh)(a) && r >= s && o,
             N = l.useCallback(() => {
-                E(p.current),
+                (E(p.current),
                     (p.current = Math.min(p.current + 2, 15)),
                     h(!0),
                     f(!0),
                     null != S.current && clearTimeout(S.current),
                     (S.current = setTimeout(() => {
-                        h(!1), (S.current = null);
+                        (h(!1), (S.current = null));
                     }, 300)),
                     null != C.current && clearTimeout(C.current),
                     (C.current = setTimeout(() => {
-                        f(!1), (C.current = null);
-                    }, 1e3));
+                        (f(!1), (C.current = null));
+                    }, 1e3)));
             }, []);
-        l.useImperativeHandle(t, () => ({ shake: N }), [N]),
+        (l.useImperativeHandle(t, () => ({ shake: N }), [N]),
             l.useEffect(() => {
                 _ || (p.current = 1.4);
             }, [_]),
             l.useEffect(
                 () => () => {
-                    null != S.current && clearTimeout(S.current), null != C.current && clearTimeout(C.current);
+                    (null != S.current && clearTimeout(S.current), null != C.current && clearTimeout(C.current));
                 },
                 [],
-            );
+            ));
         let T = l.useCallback(() => {
             en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: n });
         }, [n]);
@@ -253,7 +253,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                                             text: ea.intl.string((0, ei.o9)(a)),
                                             icon: Q.t,
                                             onClick: (e) => {
-                                                T(), t(e);
+                                                (T(), t(e));
                                             },
                                         });
                                     },
@@ -362,7 +362,7 @@ async function eD(e, t) {
             for (let { user: e, success: t } of i) t ? l.push(e) : r.push(e);
             if (r.length > 0) {
                 let e, t;
-                (t =
+                ((t =
                     (e = r.map((e) => ey.Ay.getName(e))).length > 0
                         ? ea.intl.formatToPlainString(ea.t["wWp/+6"], {
                               inviteCount: e.length,
@@ -371,7 +371,7 @@ async function eD(e, t) {
                               remaining: Math.max(0, e.length - 2),
                           })
                         : ea.intl.string(ea.t.iRntUl)),
-                    (0, h.P0)((0, g.o)(t, f.Ck.FAILURE));
+                    (0, h.P0)((0, g.o)(t, f.Ck.FAILURE)));
             } else
                 l.length > 0 &&
                     (function (e) {
@@ -565,7 +565,7 @@ function tr(e) {
         r = (0, u.bG)([eV.Ay], () => eV.Ay.lastMessageId(t.id) ?? t.id);
     return (0, i.jsx)(A.D, {
         onClick: () => {
-            (0, eO.uh)(el.ME, t.id), n();
+            ((0, eO.uh)(el.ME, t.id), n());
         },
         children: (0, i.jsxs)("div", {
             className: e8.us,
@@ -595,7 +595,7 @@ function ts(e) {
                 variant: "primary",
                 text: ea.intl.string(ea.t.KCNNJu),
                 onClick: () => {
-                    t(), l.onClose();
+                    (t(), l.onClose());
                 },
             },
         ],
@@ -647,7 +647,7 @@ class to extends l.PureComponent {
             });
         });
         let t = (0, B.dI)(e);
-        en.default.track(el.HAw.OPEN_POPOUT, {
+        (en.default.track(el.HAw.OPEN_POPOUT, {
             ...t,
             type: this._getAnalyticsEntryPoint().entryPointType,
             source: this._getAnalyticsEntryPoint().entryPointSource,
@@ -658,7 +658,7 @@ class to extends l.PureComponent {
             this.createInvite(),
             setTimeout(() => {
                 this.forceFocus();
-            }, 0);
+            }, 0));
     }
     trackModalOpened = () => {
         let { channel: e } = this.props,
@@ -675,10 +675,10 @@ class to extends l.PureComponent {
         });
     };
     componentWillUnmount() {
-        eY._.unsubscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
+        (eY._.unsubscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             eY._.unsubscribe(el.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
-            w.h.wait(() => F.close());
+            w.h.wait(() => F.close()));
     }
     scrollPageUp = () => {
         this.scrollerRef.current?.scrollPageUp({ animate: !0 });
@@ -821,13 +821,13 @@ class to extends l.PureComponent {
                     (e.preventDefault(), e.stopPropagation(), this.handleRemoveTag(n.size - 1));
                 break;
             case e3.dh.ARROW_DOWN:
-                e.preventDefault(), e.stopPropagation(), ++s >= r.length && (s = 0), this.handleSelectionChange(s);
+                (e.preventDefault(), e.stopPropagation(), ++s >= r.length && (s = 0), this.handleSelectionChange(s));
                 break;
             case e3.dh.ARROW_UP:
-                e.preventDefault(), e.stopPropagation(), --s < 0 && (s = r.length - 1), this.handleSelectionChange(s);
+                (e.preventDefault(), e.stopPropagation(), --s < 0 && (s = r.length - 1), this.handleSelectionChange(s));
                 break;
             case e3.dh.ENTER:
-                e.preventDefault(), e.stopPropagation(), r.length > s && this.handleSelect(s);
+                (e.preventDefault(), e.stopPropagation(), r.length > s && this.handleSelect(s));
         }
     }
     renderSearchBar() {
@@ -861,7 +861,12 @@ class to extends l.PureComponent {
                     placeholder: 0 === n.size ? ea.intl.string(ea.t["5h0QOP"]) : "",
                     disabled: this.isPartyFull(),
                     value: e,
-                    leading: { type: "tags", items: l, onRemove: this.handleRemoveUser },
+                    leading: {
+                        type: "tags",
+                        label: ea.intl.string(ea.t.kHyiXs),
+                        items: l,
+                        onRemove: this.handleRemoveUser,
+                    },
                     onChange: this.handleQueryChange,
                     onKeyDown: this.handleKeyDown.bind(this),
                     role: "combobox",
@@ -1043,7 +1048,7 @@ class to extends l.PureComponent {
             (t) => {
                 let { collapsedSections: n } = t,
                     i = new Set(n);
-                return i.has(e) ? i.delete(e) : i.add(e), { collapsedSections: i };
+                return (i.has(e) ? i.delete(e) : i.add(e), { collapsedSections: i });
             },
             () => {
                 let e = this.getDisplayedResults();
@@ -1191,11 +1196,11 @@ class to extends l.PureComponent {
         });
     }
     handleAddFriend(e) {
-        this.props.onClose(),
+        (this.props.onClose(),
             j.A.sendRequest({
                 discordTag: ey.Ay.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
-            });
+            }));
     }
     forceFocus = () => {
         let e = this.searchBarRef.current;
@@ -1227,30 +1232,30 @@ class to extends l.PureComponent {
     handleQueryChange = (e) => {
         let { channel: t } = this.props,
             n = (0, B.dI)(t);
-        F.search(e, t?.id),
+        (F.search(e, t?.id),
             null != this._existingTimeout && clearTimeout(this._existingTimeout),
             (this._existingTimeout = setTimeout(() => {
-                en.default.track(el.HAw.SEARCH_USER_LIST_STARTED, {
+                (en.default.track(el.HAw.SEARCH_USER_LIST_STARTED, {
                     ...n,
                     entry_point_type: this._getAnalyticsEntryPoint().entryPointType,
                     entry_point_source: this._getAnalyticsEntryPoint().entryPointSource,
                     search_query_length: e.length,
                 }),
-                    this._searchCounter++;
-            }, 500));
+                    this._searchCounter++);
+            }, 500)));
     };
     handleRemoveTag = (e) => {
         let t = Array.from(this.props.selectedUsers);
         F.removeUser(t[e]);
     };
     handleRemoveUser = (e) => {
-        e.forEach((e) => {
+        (e.forEach((e) => {
             let t = eM.default.getUser(e);
-            null != t &&
+            (null != t &&
                 R.O.announce(ea.intl.formatToPlainString(ea.t.JL1QSg, { username: ey.Ay.getName(t) }), "polite"),
-                F.removeUser(e);
+                F.removeUser(e));
         }),
-            this.forceFocus();
+            this.forceFocus());
     };
     handleClick = (() => {
         var e = this;
@@ -1297,7 +1302,7 @@ class to extends l.PureComponent {
                         ),
                     l.length > 0 && (F.clear(r?.id), e.forceFocus()));
             } else
-                en.default.track(el.HAw.CREATE_DM_USER_ROW_INTERACTED, {
+                (en.default.track(el.HAw.CREATE_DM_USER_ROW_INTERACTED, {
                     ...(0, B.dI)(r),
                     section: o,
                     row: u,
@@ -1309,11 +1314,11 @@ class to extends l.PureComponent {
                         R.O.announce(
                             ea.intl.formatToPlainString(ea.t.JL1QSg, { username: ey.Ay.getName(d) }),
                             "polite",
-                        );
+                        ));
         };
     })();
     handleAddFriendNavigation = () => {
-        b.A.transitionToSection(el.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
+        (b.A.transitionToSection(el.m3P.ADD_FRIEND, { explicit: !0 }), this.props.onClose());
     };
     handleScroll = () => {
         let e = this.scrollerRef.current;
@@ -1339,7 +1344,7 @@ class to extends l.PureComponent {
     };
     updateGDM = (e, t) => {
         let n = {};
-        "" !== this.state.newChannelName && (n.name = this.state.newChannelName),
+        ("" !== this.state.newChannelName && (n.name = this.state.newChannelName),
             null != this.state.previewIcon && (n.icon = this.state.previewIcon),
             (null != n.name || null != n.icon) && L.A.updateChannel(e, n, t),
             en.default.track(el.HAw.GDM_EDIT_INTERACTED, {
@@ -1348,7 +1353,7 @@ class to extends l.PureComponent {
                 location: t,
                 new_name_set: "" !== this.state.newChannelName,
                 new_icon_set: null != this.state.previewIcon,
-            });
+            }));
     };
     createNewDM = (e) => {
         let t = this._searchCounter,
@@ -1374,7 +1379,7 @@ class to extends l.PureComponent {
             e.length > 1 ? tn(e) : { channelRecipientIds: e, inviteLinkOnlyUserIds: [] };
         ti({ recipientIds: s, location: "New Group DM", useGroupDmShell: a.length > 0 })
             .then((e) => {
-                this.props.onComplete?.(e), this.updateGDM(e, H.A.NEW_GROUP_DM_INVITE_MODAL), eD(e, a);
+                (this.props.onComplete?.(e), this.updateGDM(e, H.A.NEW_GROUP_DM_INVITE_MODAL), eD(e, a));
             })
             .catch(tl);
     };
@@ -1401,7 +1406,7 @@ class to extends l.PureComponent {
         let i = ej.A.getChannelId() === e;
         (t.length > 0 ? L.A.addRecipients(e, t, el.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
             .then((e) => {
-                this.props.onComplete?.(e), eD(e, n), i && t.length > 0 && P.A.ring(e, t, "dm_invite");
+                (this.props.onComplete?.(e), eD(e, n), i && t.length > 0 && P.A.ring(e, t, "dm_invite"));
             })
             .catch(tl);
     };
@@ -1450,7 +1455,7 @@ class to extends l.PureComponent {
     };
     handleCopyInvite = (e) => {
         let { channel: t, invite: n } = this.props;
-        null != n && (0, eB.C)(e),
+        (null != n && (0, eB.C)(e),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
             this.setState({ copied: !0 }),
             (this.copyTimeout = setTimeout(() => {
@@ -1462,7 +1467,7 @@ class to extends l.PureComponent {
                 channel_type: null != t ? t.type : null,
                 location: el.ThZ.ADD_FRIENDS_TO_DM,
                 code: null != n ? n.code : null,
-            });
+            }));
     };
     scrollToCounterSearchBarHeightChange = (e) => {
         let t = this.scrollerRef.current?.getScrollerNode?.();
@@ -1625,7 +1630,7 @@ function tf(e) {
         f = l.useMemo(() => (o ? [d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK] : []), [o]),
         [A, E] = (0, Z.kn)(f),
         p = l.useCallback(() => {
-            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && E(er.i.TAKE_ACTION), g();
+            (A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && E(er.i.TAKE_ACTION), g());
         }, [g, A, E]);
     return (0, i.jsxs)(i.Fragment, {
         children: [

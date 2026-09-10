@@ -28,8 +28,8 @@ var n = e(477900),
     N = e(915089),
     X = e(722888),
     T = e(132500),
-    W = e(668639),
-    P = e(140735),
+    P = e(668639),
+    W = e(140735),
     Q = e(408018),
     z = e(273754),
     Z = e(95701),
@@ -71,13 +71,13 @@ function E(A) {
             label: p,
             errorMessage: f,
         } = A,
-        h = (0, W.xW)(),
+        h = (0, P.xW)(),
         [U, V] = r.useState(() => (0, Q.x7)(c)),
         v = r.useRef(!0 === i),
         x = t ?? h?.titleId,
         b = h?.errorId ?? B;
     function F(A, t, e) {
-        o(t), V(e);
+        (o(t), V(e));
     }
     let I = r.useMemo(
         () => ({
@@ -131,7 +131,7 @@ function E(A) {
                             text: c,
                             maxLength: s,
                         }),
-                    null != s && (0, n.jsx)(P.A, { id: B, children: O.intl.format(O.t["+DFxLc"], { maxLength: s }) }),
+                    null != s && (0, n.jsx)(W.A, { id: B, children: O.intl.format(O.t["+DFxLc"], { maxLength: s }) }),
                 ],
             }),
     });
@@ -166,7 +166,7 @@ class Am {
     existingAttachmentIds = new Set();
     uploads = [];
     constructor({ guildId: A, editSkuId: t, onFileSizeError: e }) {
-        (this.editSkuId = t), (this.guildId = A), (this.onFileSizeError = e);
+        ((this.editSkuId = t), (this.guildId = A), (this.onFileSizeError = e));
         const n = Ag.A.getGuildProduct(t ?? "")?.attachments;
         null != n &&
             (this.uploads = n.map((t) => {
@@ -180,7 +180,7 @@ class Am {
                     },
                     A,
                 );
-                return (e.status = Ar.jP.COMPLETED), e;
+                return ((e.status = Ar.jP.COMPLETED), e);
             }));
     }
     generateInitialProgresses = () => {
@@ -192,26 +192,26 @@ class Am {
         let e = this.target.getMaxAttachmentsCount();
         if (this.uploads.length >= e)
             throw (
-                (At.O.announce(O.intl.formatToPlainString(O.t["0QDZ4J"], { maxAttachmentsCount: e })),
-                Error("Too many attachments"))
+                At.O.announce(O.intl.formatToPlainString(O.t["0QDZ4J"], { maxAttachmentsCount: e })),
+                Error("Too many attachments")
             );
         A.target = Aa.m.GUILD_PRODUCT_ATTACHMENT;
         let n = new Ar.bK(A, this.guildId);
-        n.upload(),
+        (n.upload(),
             n.on("error", (e) => {
                 e === S.t02.ENTITY_TOO_LARGE && this.onFileSizeError();
                 let r = "number" == typeof e && e > 0 ? -e : -1,
                     l = (0, Aq.kt)(r),
                     a = A.file?.name;
-                null != a
+                (null != a
                     ? At.O.announce(O.intl.formatToPlainString(O.t["+YVkfX"], { filename: a, reason: l }))
                     : At.O.announce(O.intl.formatToPlainString(O.t.mBkf6Z, { reason: l })),
-                    t((A) => ({ ...A, [n.id]: r }));
+                    t((A) => ({ ...A, [n.id]: r })));
             }),
             n.on("progress", (A, e) => {
                 t((t) => ({ ...t, [n.id]: A / e }));
             }),
-            (this.uploads = [...this.uploads, n]);
+            (this.uploads = [...this.uploads, n]));
     }
     deleteAttachment(A) {
         let t = this.uploads.findIndex((t) => t.id === A);
@@ -290,16 +290,16 @@ function Af(A) {
                 ),
                 f = r.useCallback(
                     (A) => {
-                        s.addAttachment(A, u), g({});
+                        (s.addAttachment(A, u), g({}));
                     },
                     [s],
                 ),
                 h = r.useCallback(
                     async (A) => {
                         try {
-                            c(A), C(void 0);
+                            (c(A), C(void 0));
                             let t = await s.saveProductWithAttachments(A);
-                            return null != t && i({ editSkuId: t.id, onFileSizeError: n }), g({}), t;
+                            return (null != t && i({ editSkuId: t.id, onFileSizeError: n }), g({}), t);
                         } catch (A) {
                             C(A instanceof An.LG ? A : new An.LG(A));
                         } finally {
@@ -309,7 +309,7 @@ function Af(A) {
                     [s, n],
                 ),
                 U = r.useCallback(() => {
-                    s.cancelUnusedUploads(), g({});
+                    (s.cancelUnusedUploads(), g({}));
                 }, [s]);
             r.useEffect(
                 () => () => {
@@ -361,7 +361,7 @@ var AU = e(500770),
 e(634654);
 var AX = e(111970);
 let AT = (0, N.Ld)();
-function AW(A) {
+function AP(A) {
     let { upload: t, progress: e = 0, onDeleteAttachment: l } = A,
         i = r.useCallback(() => {
             l?.(t.id);
@@ -398,7 +398,7 @@ function AW(A) {
         }),
     });
 }
-function AP(A) {
+function AW(A) {
     let { onFileAdded: t } = A,
         {
             uploads: e,
@@ -468,7 +468,7 @@ function AP(A) {
                                     (0, n.jsx)(
                                         "li",
                                         {
-                                            children: (0, n.jsx)(AW, {
+                                            children: (0, n.jsx)(AP, {
                                                 upload: A,
                                                 onDeleteAttachment: s,
                                                 progress: o[A.id],
@@ -615,7 +615,7 @@ function AY(A) {
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
                                     onClick: function () {
-                                        l === Ay && s(t[0].data, t[0].name), c(null), p(null);
+                                        (l === Ay && s(t[0].data, t[0].name), c(null), p(null));
                                     },
                                     "aria-label": O.intl.formatToPlainString(O.t.Z43V9S, { filename: C }),
                                     children: (0, n.jsx)(AG.TrashIcon, {
@@ -737,7 +737,7 @@ function A4(A) {
             (0, n.jsxs)("div", {
                 className: A5.P4,
                 children: [
-                    (0, n.jsx)(P.A, { children: O.intl.format(O.t["Vlq/pH"], { color: (0, AM.Hl)(i) }) }),
+                    (0, n.jsx)(W.A, { children: O.intl.format(O.t["Vlq/pH"], { color: (0, AM.Hl)(i) }) }),
                     (0, n.jsx)(A9.Y, {
                         targetElementRef: l,
                         renderPopout: (A) => (0, n.jsx)(A6.VN, { ...A, value: i, onChange: o }),
@@ -759,11 +759,12 @@ function A4(A) {
 var tA = e(698437);
 function tt(A) {
     let t,
-        { onRemove: e, role: r } = A;
-    return null != r
+        { label: e, onRemove: r, role: l } = A;
+    return null != l
         ? (0, n.jsx)(AJ.C, {
-              items: [{ id: r.id, label: r.name, icon: { type: "role", color: (0, AM.Hl)(r.color) } }],
-              onRemove: e,
+              label: e,
+              items: [{ id: l.id, label: l.name, icon: { type: "role", color: (0, AM.Hl)(l.color) } }],
+              onRemove: r,
           })
         : ((t = (0, n.jsx)(Ax.y, { type: Ax.y.Type.PULSING_ELLIPSIS })),
           (0, n.jsx)("div", { className: tA.qo, children: t }));
@@ -824,7 +825,7 @@ function tr(A) {
               description: O.intl.string(O.t["H7coX+"]),
               children: (0, n.jsxs)(A0.M, {
                   children: [
-                      (0, n.jsx)(tt, { role: u, onRemove: void 0 }),
+                      (0, n.jsx)(tt, { label: O.intl.string(O.t.ovXIrP), role: u, onRemove: void 0 }),
                       (0, n.jsx)(F.$, {
                           text: O.intl.string(O.t.KkRpFi),
                           icon: A1.e,
@@ -843,9 +844,10 @@ function tr(A) {
                 description: O.intl.string(O.t.OfuEkP),
                 errorMessage: d,
                 children: (0, n.jsx)(tt, {
+                    label: O.intl.string(O.t.zIg9tw),
                     role: u,
                     onRemove: function () {
-                        s()(null != a, "productId cannot be null"),
+                        (s()(null != a, "productId cannot be null"),
                             s()(null != u, "no role attached"),
                             (function (A) {
                                 let { onConfirm: t, roleName: r } = A;
@@ -861,7 +863,7 @@ function tr(A) {
                                             ...e,
                                         });
                                 });
-                            })({ roleName: u.name, onConfirm: () => r(null) });
+                            })({ roleName: u.name, onConfirm: () => r(null) }));
                     },
                 }),
             })
@@ -930,16 +932,16 @@ function tc(A) {
         N = (0, o.bG)([Ag.A], () => (null == p ? null : Ag.A.getGuildProduct(p)), [p]),
         X = (0, o.bG)([Ag.A], () => Ag.A.getGuildProductsForGuild(t, { publishedOnly: !0 }).length, [t]),
         T = N?.published === !0,
-        { application: W } = (0, j.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
-        P = Ah["0"],
+        { application: P } = (0, j.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
+        W = Ah["0"],
         Q = w.kt.useSetting(),
         z = (0, $.j)(),
         Z = r.useCallback(
             () =>
                 N?.image_asset?.application_id == null
-                    ? P.data
+                    ? W.data
                     : (0, _.YE)(N.image_asset.application_id, N.image_asset, 600, z && Q ? void 0 : "webp"),
-            [P, N, z, Q],
+            [W, N, z, Q],
         ),
         { shouldRestrictUpdatingCreatorMonetizationSettings: L } = (0, D.nq)(t);
     r.useEffect(() => {
@@ -949,7 +951,7 @@ function tc(A) {
         [B, y] = r.useState(N?.description ?? ""),
         [k, Y] = r.useState(N?.price_tier ?? void 0),
         [H, AA] = r.useState(Z),
-        [At, Ae] = r.useState(N?.image_asset?.filename ?? P.name),
+        [At, Ae] = r.useState(N?.image_asset?.filename ?? W.name),
         [An, Ar] = r.useState(!1),
         [Al, Aa] = r.useState(),
         Ai = r.useMemo(() => (null != k ? (0, J.$g)(k, S.Yri.USD) : void 0), [k]),
@@ -971,14 +973,14 @@ function tc(A) {
         Aj = (0, o.bG)([M.A], () => (null != Ab && null !== AK ? M.A.getRole(t, Ab) : (AK ?? void 0)), [AK, Ab, t]),
         AN = "";
     function AX() {
-        Ao(!1), AC();
+        (Ao(!1), AC());
     }
     AI && As
         ? (AN = O.intl.string(O.t.ih4QMU))
         : AI
           ? (AN = O.intl.string(O.t.o9xphc))
           : As && (AN = O.intl.string(O.t.DWYJua));
-    let [AT, AW] = r.useState(),
+    let [AT, AP] = r.useState(),
         {
             changes: AZ,
             hasUnsavedChanges: AL,
@@ -1027,7 +1029,7 @@ function tc(A) {
                                       }),
                                   ],
                               }),
-                              onReset: () => AW(void 0),
+                              onReset: () => AP(void 0),
                               onResetText: O.intl.string(O.t.T6QuWe),
                           }),
                       }),
@@ -1053,12 +1055,12 @@ function tc(A) {
         if ((Ar(!1), null != n)) {
             if ((null != A.name && R(n.name), null != A.description && y(n.description), null != AK)) {
                 let A = n.role_id;
-                s()(null != A, "Cannot update role without role ID"), await I.A.updateRole(t, A, AK);
+                (s()(null != A, "Cannot update role without role ID"), await I.A.updateRole(t, A, AK));
             }
-            AF(void 0), f(n.id), "published" in A && !0 === A.published && i();
+            (AF(void 0), f(n.id), "published" in A && !0 === A.published && i());
         }
     }
-    r.useEffect(() => {
+    (r.useEffect(() => {
         (0, V.updateModal)(tl.DG, (A) => (0, n.jsx)(tm, { guildId: t, productId: p, ...A }), AB);
     }, [t, AB, p]),
         r.useEffect(() => {
@@ -1090,10 +1092,10 @@ function tc(A) {
                             break;
                         case S.t02.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
                             let l, a;
-                            null != r
+                            (null != r
                                 ? ((l = O.t.j2VMk6), (a = { url: S.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(r) }))
                                 : (l = O.t.ZVV1gg),
-                                Az(O.intl.string(O.t["+CT/gV"]), l, a);
+                                Az(O.intl.string(O.t["+CT/gV"]), l, a));
                             break;
                         default:
                             let i =
@@ -1101,11 +1103,11 @@ function tc(A) {
                                 (A.hasFieldErrors?.() ? void 0 : A.message);
                             null != i && Az(O.intl.string(O.t.bvWf8T), i);
                     }
-                })(AV, t, W?.team?.id);
-        }, [AV, t, W]),
+                })(AV, t, P?.team?.id);
+        }, [AV, t, P]),
         r.useEffect(() => {
-            AL && AW(void 0);
-        }, [AL]);
+            AL && AP(void 0);
+        }, [AL]));
     let Ak = r.useRef(null);
     return (0, n.jsxs)(c.EO, {
         transitionState: a,
@@ -1205,7 +1207,7 @@ function tc(A) {
                                     ? (0, n.jsx)(K.D, {
                                           label: O.intl.string(O.t.zLrtkN),
                                           errorMessage: AV?.getFirstFieldErrorMessage("attachments") ?? void 0,
-                                          children: (0, n.jsx)(AP, {
+                                          children: (0, n.jsx)(AW, {
                                               onFileAdded: function () {
                                                   Ak.current?.scrollIntoView({ behavior: "smooth", block: "end" });
                                               },
@@ -1239,9 +1241,9 @@ function tc(A) {
                                           : O.intl.string(O.t["Ax89/c"]),
                                     published: T,
                                     onClick: function () {
-                                        s()(AG, "Attempting to publish/unpublish when not allowed"),
-                                            AW(T ? "unpublish" : "publish"),
-                                            Ay({ ...AZ, published: !T });
+                                        (s()(AG, "Attempting to publish/unpublish when not allowed"),
+                                            AP(T ? "unpublish" : "publish"),
+                                            Ay({ ...AZ, published: !T }));
                                     },
                                     submitting: Av,
                                 }),
@@ -1320,12 +1322,12 @@ function tc(A) {
                                       disabled: !AO,
                                       loading: Ax,
                                       onClick: function () {
-                                          s()(
+                                          (s()(
                                               AO,
                                               "cannot save changes for published product without adding all fields",
                                           ),
-                                              AW("update_publish"),
-                                              Ay(AZ);
+                                              AP("update_publish"),
+                                              Ay(AZ));
                                       },
                                   })
                                 : (0, n.jsx)(F.$, {
@@ -1334,9 +1336,9 @@ function tc(A) {
                                       disabled: !AS,
                                       loading: Ax,
                                       onClick: function () {
-                                          s()(AS, "cannot save changes without name or price tier"),
-                                              AW("draft"),
-                                              Ay(AZ);
+                                          (s()(AS, "cannot save changes without name or price tier"),
+                                              AP("draft"),
+                                              Ay(AZ));
                                       },
                                   }),
                         }),

@@ -391,6 +391,9 @@
     outline: 0;
     padding: 0 0 var(--space-16);
     position: relative;
+    transition-duration: var(--motion-spring-subtle-duration);
+    transition-property: color;
+    transition-timing-function: var(--motion-spring-subtle);
     white-space: nowrap
 }
 
@@ -409,9 +412,10 @@
     outline-offset: 2px
 }
 
-.strip_b292bc[data-full-width=true] .item_b292bc {
-    flex: 1 1 0;
-    min-width: 0
+@media (prefers-reduced-motion:reduce) {
+    .item_b292bc {
+        transition: none
+    }
 }
 
 .contents_b292bc {
@@ -488,4 +492,4 @@
     }
 }
 
-/*# sourceMappingURL=722514.2b5a959508859c98.css.map*/
+/*# sourceMappingURL=722514.fe131ad92ce9dc9d.css.map*/
