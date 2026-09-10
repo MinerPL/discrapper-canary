@@ -209,8 +209,9 @@
     height: 100%
 }
 
-.trailingBadge__354ec {
-    background-color: var(--brand-500)
+.tabWithTrailingBadge__354ec .trailingBadge__354ec {
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
 }
 
 .nav__96f2d {
@@ -753,4 +754,4 @@
     position: relative
 }
 
-/*# sourceMappingURL=785456.a2571f3897da0437.css.map*/
+/*# sourceMappingURL=785456.d23b3fbe5a467783.css.map*/
