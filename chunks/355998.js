@@ -1798,8 +1798,7 @@ let nS = {
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eW.intl.string(eW.t.uXA573) },
                       })
-                    : (e.isGameInvitesChannel() && (g = void 0),
-                      (0, d.RT)(e.id, {
+                    : (0, d.RT)(e.id, {
                           name: t,
                           type: n,
                           topic: l,
@@ -1822,7 +1821,7 @@ let nS = {
                           defaultForumLayout: j,
                           defaultTagSetting: b,
                           applicationId: N,
-                      }));
+                      });
             },
         };
     })(eg.A);
