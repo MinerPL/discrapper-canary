@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => D });
+(r.r(t), r.d(t, { default: () => D }));
 var n = r(477900),
     l = r(582128),
     u = r(189213),
@@ -19,12 +19,12 @@ var h = r(763827),
     E = r(116956),
     b = r(665691),
     x = r(998759);
-r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+(r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 var C = r(827762),
     N = r(284009),
     R = r.n(N),
     k = r(280450),
-    w = r(49612),
+    w = r(719975),
     S = r(277515);
 let T = new Map();
 async function F(e) {
@@ -43,7 +43,7 @@ async function F(e) {
                       let e = T.keys().next().value;
                       null != e && T.delete(e);
                   }
-                  return T.set(l, s), s.catch(() => T.delete(l)), s;
+                  return (T.set(l, s), s.catch(() => T.delete(l)), s);
               })(t, n, e, r),
               fingerprintUserKey: r,
           };
@@ -96,10 +96,10 @@ function D(e) {
                     y.current = !0;
                     let e = ++m.current;
                     d.current = setTimeout(() => {
-                        c(!0),
+                        (c(!0),
                             A().then((t) => {
                                 e === m.current && (null != t && a(t), c(!1));
-                            });
+                            }));
                     }, 0);
                 }, [r, A, o, f]),
                 l.useEffect(
@@ -133,7 +133,7 @@ function D(e) {
         l.useEffect(() => {
             a && null == i.current
                 ? (i.current = setTimeout(() => {
-                      u(), (0, p.Vw)({ userId: r, channelId: t, nickname: n });
+                      (u(), (0, p.Vw)({ userId: r, channelId: t, nickname: n }));
                   }, 1e3))
                 : (clearTimeout(i.current), (i.current = null));
             let e = i.current;
@@ -156,9 +156,9 @@ function D(e) {
                     try {
                         let r = await (0, p.A5)(1),
                             n = await (0, p.iO)(e, t, 1);
-                        a(r), c(n);
+                        (a(r), c(n));
                     } catch (e) {
-                        a(!1), c(!1);
+                        (a(!1), c(!1));
                     } finally {
                         u(!1);
                     }
@@ -194,10 +194,14 @@ function D(e) {
                     let e = new Uint8Array(r);
                     return (0, S.uo)(e);
                 }, [r]);
-            return (0, s.bG)([j.A], () => {
-                let e = j.A.getUserVerifiedKeys(t);
-                return null == e ? 0 : Object.keys(e).filter((e) => e !== n).length;
-            }, [n, t]);
+            return (0, s.bG)(
+                [j.A],
+                () => {
+                    let e = j.A.getUserVerifiedKeys(t);
+                    return null == e ? 0 : Object.keys(e).filter((e) => e !== n).length;
+                },
+                [n, t],
+            );
         })({ userId: r, keyToOmit: P });
     l.useEffect(() => {
         (0, g.HJ)({ userId: r, channelId: a });

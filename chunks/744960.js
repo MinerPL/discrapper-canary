@@ -30,7 +30,7 @@ var i = t(17928),
     _ = t(616356),
     M = t(280450),
     U = t(734057),
-    z = t(49612),
+    z = t(719975),
     R = t(287809),
     T = t(652896),
     k = t(652215),
@@ -85,7 +85,7 @@ function O(e) {
                                 (0, h.vN)((0, T._z)(H));
                             }
                           : function () {
-                                u.default.selectVoiceChannel(H.channelId), (0, h.A9)(H);
+                                (u.default.selectVoiceChannel(H.channelId), (0, h.A9)(H));
                             },
                       icon: ee && W && a.G,
                       leadingAccessory: ee && W ? { type: "icon", icon: a.G } : void 0,

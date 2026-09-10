@@ -115,7 +115,7 @@ function eS() {
 class eO extends s.Ay.Store {
     static displayName = "DetectedOffPlatformPremiumPerksStore";
     initialize() {
-        this.waitFor(d.A, eA.A, D.Ay, ed.A, v.default), (eC = E.w.get(eI) ?? eC);
+        (this.waitFor(d.A, eA.A, D.Ay, ed.A, v.default), (eC = E.w.get(eI) ?? eC));
     }
     getDetectedOffPlatformPremiumPerks() {
         return eE().values(eN);
@@ -123,7 +123,7 @@ class eO extends s.Ay.Store {
 }
 let eD = new eO(c.h, {
     LOGOUT: function () {
-        (eN = {}), (eR = {});
+        ((eN = {}), (eR = {}));
     },
     SKU_FETCH_SUCCESS: eS,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: eS,
@@ -132,7 +132,7 @@ let eD = new eO(c.h, {
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
         if ((delete eN[t], eC.includes(t))) return !1;
-        eC.push(t), E.w.set(eI, eC);
+        (eC.push(t), E.w.set(eI, eC));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -148,13 +148,13 @@ let eD = new eO(c.h, {
                                 ec.LM(i),
                             (eR[n] = { skuId: n, applicationId: i }),
                             (e = !0)));
-        return e && eS(), e;
+        return (e && eS(), e);
     },
 });
 var em = n(696451),
     eP = n(317525),
     ep = n(71393),
-    ef = n(49612),
+    ef = n(719975),
     eM = n(803224),
     eg = n(576705),
     eh = n(362790),
@@ -259,7 +259,7 @@ function te() {
             t = "\uE700\uE701\uE702\uE703\uE704\uE705\uE706\uE707";
         e.font = "16px monospace";
         let n = e.measureText(t).width;
-        (e.font = '16px "Segoe MDL2 Assets", monospace'), (e4 = e.measureText(t).width !== n);
+        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e4 = e.measureText(t).width !== n));
     } catch (e) {
         e4 = !1;
     }
@@ -348,7 +348,7 @@ let tn = [
     eT.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
     eT.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
 ];
-eT.kqX.QUARANTINED,
+(eT.kqX.QUARANTINED,
     eT.kqX.PARENTAL_CONSENT_WARNING,
     eT.kqX.AUTOMOD_QUARANTINED_USER_PROFILE,
     eT.kqX.VIEWING_ROLES,
@@ -364,7 +364,7 @@ eT.kqX.QUARANTINED,
     eT.kqX.VOICE_CONNECTED_LAST_SESSION,
     eT.kqX.PENDING_MEMBER,
     eT.kqX.STREAMER_MODE,
-    eT.kqX.SCHEDULED_MAINTENANCE;
+    eT.kqX.SCHEDULED_MAINTENANCE);
 let ti = {
     [eT.kqX.GIFTING_PROMOTION_REMINDER]: { predicate: () => (0, F.MD)() },
     [eT.kqX.GUILD_RAID_NOTIFICATION]: {
@@ -896,12 +896,12 @@ function tl() {
     }
 }
 function tr() {
-    return ex.A.enabled || delete e5[eT.kqX.STREAMER_MODE], tl();
+    return (ex.A.enabled || delete e5[eT.kqX.STREAMER_MODE], tl());
 }
 class ts extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
-        this.syncWith(
+        (this.syncWith(
             [S.A, eG.Ay, eh.A, eD, ey.A, V.A, eX.A, y.default, ea.A, J.A, f.A, Y.A, ei.A, D.Ay, en.A, S.A, T.A, k.A],
             tl,
         ),
@@ -957,7 +957,7 @@ class ts extends s.Ay.Store {
                 ee.A,
                 ev.A,
                 en.A,
-            );
+            ));
     }
     hasNotice() {
         return null != e9 && null != e9.type;
@@ -1027,10 +1027,10 @@ let ta = new ts(c.h, {
     STREAMER_MODE_UPDATE: tr,
     RUNNING_STREAMER_TOOLS_CHANGE: tr,
     DISPATCH_APPLICATION_ERROR: function () {
-        return delete e5[eT.kqX.DISPATCH_ERROR], tl();
+        return (delete e5[eT.kqX.DISPATCH_ERROR], tl());
     },
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
-        return delete e5[eT.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS], tl();
+        return (delete e5[eT.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS], tl());
     },
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: function () {
         return tl();
@@ -1046,10 +1046,10 @@ let ta = new ts(c.h, {
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
-        return e6(t), tl();
+        return (e6(t), tl());
     },
     LOGOUT: function () {
-        (e5 = {}), (e3 = {}), (e9 = null);
+        ((e5 = {}), (e3 = {}), (e9 = null));
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: tl,
     AUTO_MODERATION_MENTION_RAID_DETECTION: tl,

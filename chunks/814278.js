@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A5: () => G,
     Dh: () => b,
     Lu: () => F,
@@ -21,7 +21,7 @@ n.d(t, {
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var r = n(827762),
     i = n(284009),
     a = n.n(i),
@@ -31,7 +31,7 @@ var r = n(827762),
     c = n(277515),
     E = n(157559),
     s = n(280450),
-    d = n(49612),
+    d = n(719975),
     _ = n(763827),
     f = n(116956),
     A = n(287809),
@@ -57,8 +57,8 @@ function N() {
     return h.A.getArticleURL(C.MVz.END_TO_END_ENCRYPTION);
 }
 function L(e, t, n, r, i) {
-    n ? R.A.createSecureFramesVerifiedKey(e, t) : R.A.createSecureFramesTransientKey(e, t),
-        (0, U.cw)({ channelId: r, userId: e, analyticsLocation: i });
+    (n ? R.A.createSecureFramesVerifiedKey(e, t) : R.A.createSecureFramesTransientKey(e, t),
+        (0, U.cw)({ channelId: r, userId: e, analyticsLocation: i }));
 }
 function b(e, t, n) {
     if (n) {
@@ -71,7 +71,7 @@ function V(e, t) {
         title: w.intl.string(w.t.hdL152),
         subtitle: w.intl.string(w.t["8VGYKg"]),
         onConfirm: () => {
-            R.A.deleteSecureFramesVerifiedKey(e, t), (0, U.Jk)();
+            (R.A.deleteSecureFramesVerifiedKey(e, t), (0, U.Jk)());
         },
     });
 }
@@ -82,7 +82,7 @@ function M(e) {
         title: w.intl.formatToPlainString(w.t.K6NGBy, { username: n }),
         subtitle: w.intl.string(w.t.F1BQK3),
         onConfirm: () => {
-            R.A.deleteSecureFramesUserVerifiedKeys(e), (0, U.YT)();
+            (R.A.deleteSecureFramesUserVerifiedKeys(e), (0, U.YT)());
         },
     });
 }
@@ -126,7 +126,9 @@ function K(e) {
 }
 async function k(e) {
     let t = s.default.getStaticAuthSessionId();
-    return a()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await d.Ay.getMLSSigningKey(t, e);
+    return (
+        a()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await d.Ay.getMLSSigningKey(t, e)
+    );
 }
 function P(e) {
     let t = r.fromByteArray(new Uint8Array(e));
@@ -148,12 +150,12 @@ async function Y(e, t, n) {
 async function H(e) {
     let { key: t, signature: n } = await k(e);
     try {
-        await u.Bo.put({
+        (await u.Bo.put({
             url: C.Rsh.VOICE_PUBLIC_KEYS(),
             body: { public_key: P(t), signature: P(n), key_version: e },
             rejectWithError: !1,
         }),
-            R.A.addUploadedKeyVersion(e);
+            R.A.addUploadedKeyVersion(e));
     } catch (e) {
         throw (g.A.captureException(e), e);
     }
@@ -165,11 +167,11 @@ async function B(e) {
     v(e) || (await H(e));
 }
 async function G(e) {
-    if (!v(e)) return await H(e), !0;
+    if (!v(e)) return (await H(e), !0);
     let t = s.default.getId(),
         { key: n } = await k(e),
         r = await Y(t, n, e);
-    return r || (0, U.XS)(e), r;
+    return (r || (0, U.XS)(e), r);
 }
 function W(e, t) {
     let [n, r] = t;
@@ -188,8 +190,8 @@ function W(e, t) {
 }
 function z(e) {
     let { userId: t, channelId: n, nickname: r } = e;
-    (0, U.kF)({ userId: t, channelId: n, keyVersion: 1, reason: m.m4.OTHER_USER_INCONSISTENT_KEYS }),
-        E.A.show({ title: w.intl.string(w.t.mznLyR), body: w.intl.format(w.t.WY6IKb, { username: r }) });
+    ((0, U.kF)({ userId: t, channelId: n, keyVersion: 1, reason: m.m4.OTHER_USER_INCONSISTENT_KEYS }),
+        E.A.show({ title: w.intl.string(w.t.mznLyR), body: w.intl.format(w.t.WY6IKb, { username: r }) }));
 }
 function x(e) {
     let { userId: t, guildId: n, channelId: r } = e;
@@ -197,6 +199,6 @@ function x(e) {
     {
         let e = A.default.getUser(t),
             i = y.Ay.getName(n, r, e);
-        return z({ userId: t, channelId: r, nickname: i }), !1;
+        return (z({ userId: t, channelId: r, nickname: i }), !1);
     }
 }

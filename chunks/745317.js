@@ -16,7 +16,7 @@ var n = s(477900),
     E = s(885386),
     _ = s(912630),
     N = s(382003),
-    j = s(49612),
+    j = s(719975),
     f = s(174459),
     I = s(204050),
     h = s(652215),
@@ -91,8 +91,8 @@ function y(e) {
                       description: v.intl.string(v.t.WNbX4O),
                       checked: T,
                       onChange: (e) => {
-                          E.bm.updateSetting(e),
-                              f.default.track(h.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          (E.bm.updateSetting(e),
+                              f.default.track(h.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e }));
                       },
                   }),
             !t &&
@@ -102,9 +102,9 @@ function y(e) {
                         !l && (0, I.p)()
                             ? v.intl.format(v.t.aJYgRt, {
                                   onCameraSettingsClick: () => {
-                                      S?.(),
+                                      (S?.(),
                                           window.open((0, I.i)(y)),
-                                          f.default.track(h.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: U });
+                                          f.default.track(h.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: U }));
                                   },
                               })
                             : void 0,

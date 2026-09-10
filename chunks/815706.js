@@ -5,7 +5,7 @@ var i = n(77729),
     s = n(296027),
     l = n(243612),
     o = n(929921),
-    d = n(49612),
+    d = n(719975),
     c = n(763827),
     u = n(157257),
     _ = n(174459),
@@ -22,7 +22,7 @@ function h() {
     if (null != s && ((e = s.quality.resolution), (t = s.quality.frameRate), null != s.desktopSource)) {
         n = s.desktopSource.soundshareSession;
         let e = null != s.desktopSource.sourcePid ? r.Ay.getGameForPID(s.desktopSource.sourcePid) : null;
-        (i = e?.name ?? null), (a = e?.id ?? null);
+        ((i = e?.name ?? null), (a = e?.id ?? null));
     }
     return {
         video_input_resolution: e,

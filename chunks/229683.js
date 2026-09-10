@@ -7,7 +7,7 @@ var i = n(284009),
     o = n(439372),
     d = n(626584),
     c = n(280450),
-    u = n(49612),
+    u = n(719975),
     _ = n(763827),
     E = n(528767),
     A = n(977997),
@@ -23,9 +23,9 @@ var i = n(284009),
 let C = new d.A("GameConsoleManager");
 async function O(e) {
     let t = _.A.getChannelId();
-    r()(null == t, "Syncing to remote while in voice!"),
+    (r()(null == t, "Syncing to remote while in voice!"),
         e.selfMute !== u.Ay.isSelfMute() && (await l.A.toggleSelfMute({ syncRemote: !1 })),
-        e.selfDeaf !== u.Ay.isSelfDeaf() && l.A.toggleSelfDeaf({ syncRemote: !1 });
+        e.selfDeaf !== u.Ay.isSelfDeaf() && l.A.toggleSelfDeaf({ syncRemote: !1 }));
 }
 class R extends o.A {
     rollbackCommandTimeout = new a.Ep();
@@ -52,7 +52,7 @@ class R extends o.A {
                     return n && r && i;
                 }));
         if (null == n) return null;
-        this.awaitRemoteTimeout.stop(), (0, I.m9)(n.sessionId);
+        (this.awaitRemoteTimeout.stop(), (0, I.m9)(n.sessionId));
         let i = A.A.getVoiceStateForSession(c.default.getId(), n.sessionId);
         null != i && O(i);
     };
@@ -92,12 +92,12 @@ class R extends o.A {
     };
     handleSessionsChanged = () => {
         let e = p.default.getRemoteSessionId();
-        null != e && null == E.A.getSessionById(e) && (0, I.ZG)(),
-            null == e && this.maybeConnect(Object.values(E.A.getSessions()));
+        (null != e && null == E.A.getSessionById(e) && (0, I.ZG)(),
+            null == e && this.maybeConnect(Object.values(E.A.getSessions())));
     };
     handleWaitForRemoteSession = () => {
         this.awaitRemoteTimeout.start(6e4, () => {
-            (0, I.ZG)(), s.A.show({ title: S.intl.string(S.t.wGMxr3), body: S.intl.string(S.t.i5k8b5) });
+            ((0, I.ZG)(), s.A.show({ title: S.intl.string(S.t.wGMxr3), body: S.intl.string(S.t.i5k8b5) }));
         });
     };
     handleConsoleCommandUpdate = (e) => {
@@ -170,7 +170,7 @@ class R extends o.A {
             n,
             i,
         );
-        null != a &&
+        (null != a &&
             f.A.showSelfDismissableAlert({
                 title: a.title,
                 body: a.body,
@@ -179,7 +179,7 @@ class R extends o.A {
             }),
             g.v_.has(i.code) && this.awaitRemoteTimeout.isStarted()
                 ? this.awaitRemoteTimeout.start(18e4, () => (0, I.ZG)(), !0)
-                : "failed" === n && (0, I.ZG)();
+                : "failed" === n && (0, I.ZG)());
     };
     handleRemoteSessionDisconnect = () => {
         this.awaitRemoteTimeout.stop();

@@ -89,7 +89,7 @@ function y(e) {
         ],
     });
 }
-var D = n(49612),
+var D = n(719975),
     R = n(763827),
     x = n(174459),
     O = n(652215),
@@ -108,22 +108,22 @@ class P extends r.PureComponent {
         D.Ay.getMediaEngine().on(c.bg.VoiceActivity, this.handleVoiceActivity);
     };
     componentWillUnmount() {
-        this._initTimeout.stop(),
+        (this._initTimeout.stop(),
             this._silenceTimeout.stop(),
             this._micTestStop(),
-            D.Ay.getMediaEngine().removeListener(c.bg.VoiceActivity, this.handleVoiceActivity);
+            D.Ay.getMediaEngine().removeListener(c.bg.VoiceActivity, this.handleVoiceActivity));
     }
     handleVoiceActivity = (e) => {
         let { isMicTesting: t } = this.state;
         if (t && e <= -100) {
-            this._silenceTimeout.isStarted() ||
+            (this._silenceTimeout.isStarted() ||
                 this._silenceTimeout.start(2e3, () => {
                     this.setState({ isDetectingInput: !1 });
                 }),
-                this.setState({ volume: -100 });
+                this.setState({ volume: -100 }));
             return;
         }
-        this._silenceTimeout.stop(), this.setState({ volume: e, isDetectingInput: !0 });
+        (this._silenceTimeout.stop(), this.setState({ volume: e, isDetectingInput: !0 }));
     };
     _micTestStart() {
         let {
@@ -139,7 +139,7 @@ class P extends r.PureComponent {
                 isDeafened: u,
             } = this.props,
             d = !1;
-        e && !u && (p.A.toggleSelfDeaf(), (d = !0)),
+        (e && !u && (p.A.toggleSelfDeaf(), (d = !0)),
             p.A.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
             this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: d }),
@@ -152,7 +152,7 @@ class P extends r.PureComponent {
                 input_sensitivity_is_automatic: s,
                 input_sensitivity_threshold: Math.round(a),
                 location: o,
-            });
+            }));
     }
     _micTestStop() {
         let { didDeafenUser: e, isMicTesting: t } = this.state,

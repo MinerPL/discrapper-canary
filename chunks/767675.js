@@ -1,8 +1,8 @@
-r.r(t), r.d(t, { default: () => eG });
+(r.r(t), r.d(t, { default: () => eG }));
 var n = r(477900),
     i = r(582128),
     a = r(979186);
-r(321073), r(667532);
+(r(321073), r(667532));
 var s = r(435558),
     l = r.n(s),
     o = r(17928),
@@ -32,8 +32,8 @@ var s = r(435558),
     k = r(761508),
     B = r(684339),
     w = r(51092),
-    T = r(49612);
-r(134528), r(947204);
+    T = r(719975);
+(r(134528), r(947204));
 var G = r(796873),
     L = r.n(G),
     M = r(229659),
@@ -292,7 +292,7 @@ let er = {
         bytesSent: J,
         codec: function (e) {
             let { id: t, name: r } = e;
-            return (r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`;
+            return ((r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`);
         },
         cpuLimitedResolution: Y,
         currentDelay: Q,
@@ -383,7 +383,7 @@ let eu = { [eo.r8.NO_OVERRIDE]: "None", [eo.r8.LOW]: "Low Quality Stream", [eo.r
 function ec(e) {
     let t = [],
         r = 0;
-    for (e.length % 2 != 0 && e.push((0, n.jsx)(f.A, { basis: "50%", grow: 0 }, r++)); e.length > 0; )
+    for (e.length % 2 != 0 && e.push((0, n.jsx)(f.A, { basis: "50%", grow: 0 }, r++)); e.length > 0;)
         t.push((0, n.jsx)(f.A, { basis: "50%", grow: 0, children: e.splice(0, 2) }, r++));
     return t;
 }
@@ -851,7 +851,7 @@ function ew(e, t, r, i, a) {
         null != c && !l().isEmpty(c))
     ) {
         let t = [];
-        Object.keys(c).forEach((s) => {
+        (Object.keys(c).forEach((s) => {
             var l;
             let o = C.default.getUser(s),
                 p = b.Ay.getNick(a, s),
@@ -897,7 +897,7 @@ function ew(e, t, r, i, a) {
                     elementProps: { context: e, index: r, videoStreams: i },
                 });
         }),
-            t.length > 0 && (s.push({ section: h.Fq.HEADER, label: eh.intl.string(eh.t.SJmZaq) }), s.push(...t));
+            t.length > 0 && (s.push({ section: h.Fq.HEADER, label: eh.intl.string(eh.t.SJmZaq) }), s.push(...t)));
     }
     return s;
 }

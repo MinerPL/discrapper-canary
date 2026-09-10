@@ -14,7 +14,7 @@ var d = t(91777),
     l = t(929921),
     c = t(734057),
     p = t(71393),
-    g = t(49612),
+    g = t(719975),
     h = t(309010),
     m = t(287809),
     S = t(723702),
@@ -62,7 +62,7 @@ async function b(e, n) {
                 var n, t;
                 let r;
                 if (e.hasOwnProperty("pid"))
-                    return v.info(`Starting stream for running game source pid ${e.pid}`), { pid: e.pid };
+                    return (v.info(`Starting stream for running game source pid ${e.pid}`), { pid: e.pid });
                 let a =
                         ((n = void 0),
                         (t = o.Ay.getRunningGames()),

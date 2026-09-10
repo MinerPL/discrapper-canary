@@ -9,7 +9,7 @@ var i = n(649852),
     c = n(712711),
     u = n(347481),
     _ = n(734057),
-    E = n(49612),
+    E = n(719975),
     A = n(763827),
     h = n(309010),
     I = n(287809),
@@ -131,7 +131,7 @@ let R = r()((e, t, n) => {
         setLocalVolume(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.x.DEFAULT,
                 i = (0, o.z)(t, n);
-            a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), R(e, n, i);
+            (a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), R(e, n, i));
         },
         setAudioMixerSettings(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT;
@@ -140,12 +140,12 @@ let R = r()((e, t, n) => {
         setSpatialAudio(e, t) {
             if (D()) return;
             let n = E.Ay.getAudioMixerSettings();
-            (0, d.A)("spatial_audio_enabled", e, n.enabled, t),
+            ((0, d.A)("spatial_audio_enabled", e, n.enabled, t),
                 a.h.dispatch({
                     type: "AUDIO_SET_AUDIO_MIXER_SETTINGS",
                     context: g.x.DEFAULT,
                     settings: { ...n, enabled: e },
-                });
+                }));
         },
         setLocalPan(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.x.DEFAULT;
@@ -223,29 +223,29 @@ let R = r()((e, t, n) => {
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (D()) return;
             let i = E.Ay.getInputDeviceId();
-            (null != t || null != n) &&
+            ((null != t || null != n) &&
                 O(E.Ay.getInputDevices(), i, e, "Audio Input", { location: t, analyticsLocations: n }),
                 a.h.dispatch({ type: "AUDIO_SET_INPUT_DEVICE", id: e, oldId: i }),
-                N();
+                N());
         },
         setOutputDevice(e) {
             let { location: t, analyticsLocations: n } =
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (D()) return;
             let i = E.Ay.getOutputDeviceId();
-            (null != t || null != n) &&
+            ((null != t || null != n) &&
                 O(E.Ay.getOutputDevices(), i, e, "Audio Output", { location: t, analyticsLocations: n }),
                 a.h.dispatch({ type: "AUDIO_SET_OUTPUT_DEVICE", id: e, oldId: i }),
-                N();
+                N());
         },
         setVideoDevice(e) {
             let { location: t, analyticsLocations: n } =
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (D()) return;
             let i = E.Ay.getVideoDeviceId();
-            (null != t || null != n) &&
+            ((null != t || null != n) &&
                 O(E.Ay.getVideoDevices(), i, e, "Video", { location: t, analyticsLocations: n }),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: i });
+                a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: e, oldId: i }));
         },
         setActiveInputProfile(e) {
             let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -285,7 +285,7 @@ let R = r()((e, t, n) => {
         setAttenuation(e, t, n) {
             if (!D()) {
                 let i, r, s;
-                (i = E.Ay.getAttenuation()),
+                ((i = E.Ay.getAttenuation()),
                     (r = E.Ay.getAttenuateWhileSpeakingSelf()),
                     (s = E.Ay.getAttenuateWhileSpeakingOthers()),
                     i !== e
@@ -298,7 +298,7 @@ let R = r()((e, t, n) => {
                         attenuation: e,
                         attenuateWhileSpeakingSelf: t,
                         attenuateWhileSpeakingOthers: n,
-                    });
+                    }));
             }
         },
         setQoS(e) {
@@ -340,17 +340,17 @@ let R = r()((e, t, n) => {
                 a.h.dispatch({ type: "AUDIO_SET_SUBSYSTEM", subsystem: e }));
         },
         setVideoEnabled(e) {
-            (0, c.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e });
+            ((0, c.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e }));
         },
         setGoLiveSource(e) {
-            e?.qualityOptions != null &&
+            (e?.qualityOptions != null &&
                 (0, p.K2)(
                     e.qualityOptions.preset,
                     e.qualityOptions.resolution,
                     e.qualityOptions.frameRate,
                     e.desktopSettings?.sound,
                 ),
-                a.h.dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: e });
+                a.h.dispatch({ type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: e }));
         },
         setAecDump(e) {
             D() ||

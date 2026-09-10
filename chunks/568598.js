@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => v, KU: () => y, Qt: () => L, r4: () => D }), n(321073);
+(n.d(t, { Ay: () => v, KU: () => y, Qt: () => L, r4: () => D }), n(321073));
 var i,
     r = n(435558),
     a = n(713402),
@@ -12,7 +12,7 @@ var i,
     E = n(280450),
     A = n(470710),
     h = n(734057),
-    I = n(49612),
+    I = n(719975),
     f = n(485296),
     p = n(287809),
     T = n(803301),
@@ -230,7 +230,7 @@ class v {
                               maxFrameRate: s.maxFrameRate,
                           }
                         : null;
-            (n = {
+            ((n = {
                 ...T.A.getUserStreamData(e, c, O.x.STREAM),
                 ...o,
                 type: l ? N.lp.HIDDEN_STREAM : N.lp.STREAM,
@@ -241,7 +241,7 @@ class v {
                 stream: S,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             }),
-                i.push(n);
+                i.push(n));
         }
         return i;
     }

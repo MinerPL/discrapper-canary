@@ -1,11 +1,11 @@
-n.d(t, { A: () => D }), n(321073), n(134528), n(947204);
+(n.d(t, { A: () => D }), n(321073), n(134528), n(947204));
 var i = n(141931),
     r = n(506774),
     a = n(439372),
     s = n(77729),
     l = n(31717),
     o = n(885576),
-    d = n(49612),
+    d = n(719975),
     c = n(763827),
     u = n(174459),
     _ = n(927813),
@@ -57,7 +57,7 @@ class y extends a.A {
     handlePostConnectionOpen() {
         if (!L()) return;
         let e = s.A.app.getReleaseChannel();
-        "development" !== e && "canary" !== e && (this._supportedNativeChannel = !1),
+        ("development" !== e && "canary" !== e && (this._supportedNativeChannel = !1),
             clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = setInterval(async () => {
                 await this.trackNativeHeapPerformanceStats();
@@ -74,19 +74,19 @@ class y extends a.A {
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
-                }, O)));
+                }, O))));
     }
     async trackNativeHeapPerformanceStats() {
         let e = A.A.getMemoryUsageElectronProcessTypeDetails();
         if (null == e) return;
         let t = e.renderer?.wss_priv_kb ?? 0;
-        !this._nativeHeapHooksInstalled &&
+        (!this._nativeHeapHooksInstalled &&
             this._supportedNativeChannel &&
             t > 2097152 &&
             A.A.enablePerfMemoryHooks({ allocationThresholdKB: 12, enableCallStackTracking: !0 }) &&
             (this._nativeHeapHooksInstalled = !0),
             this._nativeHeapHooksInstalled && (await this.trackNativeHeapHookStats(t)),
-            this.doRestartIfNeeded(t);
+            this.doRestartIfNeeded(t));
     }
     async trackNativeHeapHookStats(e) {
         if (e < 3145728) return;
@@ -143,7 +143,7 @@ class y extends a.A {
                 n = t?.usedHeapSize ?? -1,
                 i = t?.totalAvailableSize ?? -1,
                 r = t?.peakMallocedMemory ?? -1;
-            await I.Ay.submitLiveCrashReport({
+            (await I.Ay.submitLiveCrashReport({
                 message: "Desktop Memory Thread State",
                 extra: {
                     renderer_memory_kb: e,
@@ -153,7 +153,7 @@ class y extends a.A {
                     peak_malloc_kb: r,
                 },
             }),
-                (this._pushedNativeDeadlockMinidumpCount += 1);
+                (this._pushedNativeDeadlockMinidumpCount += 1));
         }
     }
     doRestartIfNeeded(e) {
@@ -293,7 +293,7 @@ class y extends a.A {
                 for (let i = 0; i < e.fg_module_name.length; i++) {
                     let r = e.fg_module_name[i],
                         a = t.indexOf(r);
-                    -1 === a && ((a = t.length), t.push(r)), n.set(i, a);
+                    (-1 === a && ((a = t.length), t.push(r)), n.set(i, a));
                 }
                 let i = [],
                     r = new Map();
@@ -301,7 +301,7 @@ class y extends a.A {
                     for (let t = 0; t < e.fg_code_id.length; t++) {
                         let n = e.fg_code_id[t],
                             a = i.indexOf(n);
-                        -1 === a && ((a = i.length), i.push(n)), r.set(t, a);
+                        (-1 === a && ((a = i.length), i.push(n)), r.set(t, a));
                     }
                 let a = e.fg_sample_data.split("\n"),
                     s = [];
@@ -332,10 +332,10 @@ class y extends a.A {
                         fg_instr_rel_addr_high: e.fg_instr_rel_addr_high,
                         fg_instr_rel_addr_low: e.fg_instr_rel_addr_low,
                     };
-                u.default.track(f.HAw.DESKTOP_PERF_CPU_PROFILE, c),
+                (u.default.track(f.HAw.DESKTOP_PERF_CPU_PROFILE, c),
                     (this._checkIntervalCPUProfiler = setTimeout(() => {
                         this.trackCPUProfiling();
-                    }, R));
+                    }, R)));
             }, 11e3));
     }
 }

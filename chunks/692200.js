@@ -7,15 +7,15 @@ var i = n(485845),
     a = n(803224),
     u = n(531685),
     d = n(479975);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var c = n(141931),
     f = n(941426),
     h = n(475735),
-    p = n(49612),
+    p = n(719975),
     g = n(731854);
 let w = new f.Vy("VibegrationsNativeCapture");
 function m(e, t) {
-    return w.verbose(`native capture not used: ${e}`, t ?? {}), null;
+    return (w.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
 function _(e) {
     let t = e.getBoundingClientRect();
@@ -85,7 +85,7 @@ async function A(e, t, n) {
                 if (
                     (function (e, t, n) {
                         let i = document.createElement("canvas");
-                        (i.width = 1), (i.height = 1);
+                        ((i.width = 1), (i.height = 1));
                         let r = i.getContext("2d");
                         if (null == r) return !1;
                         r.drawImage(e, t, n, 1, 1, 0, 0, 1, 1);
@@ -106,7 +106,7 @@ async function A(e, t, n) {
         f = Math.max(1, Math.round(u * c)),
         h = Math.max(1, Math.round(d * c)),
         p = document.createElement("canvas");
-    (p.width = f), (p.height = h);
+    ((p.width = f), (p.height = h));
     let g = p.getContext("2d");
     if (null == g) return m("no 2d context");
     g.drawImage(i, o, a, u, d, 0, 0, f, h);
@@ -218,8 +218,8 @@ async function I(e, t) {
                 "x-vibegrations-capture-id": t.captureId,
                 "x-vibegrations-capture-meta": encodeURIComponent(JSON.stringify(f)),
             };
-        null != t.build && (h["x-vibegrations-build"] = t.build),
-            null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken);
+        (null != t.build && (h["x-vibegrations-build"] = t.build),
+            null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
         let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
         if (!p.ok) return m("upload refused", { status: p.status });
         return (
@@ -234,7 +234,7 @@ var T = n(120426),
     y = n(940107),
     S = n(985451),
     E = n(171936);
-n(321073), n(667532);
+(n(321073), n(667532));
 var M = n(809685),
     k = n(777977),
     O = n(112420),
@@ -254,7 +254,7 @@ let P = {
                           if (n.length >= 40) break;
                           if (null == i || "object" != typeof i) continue;
                           let t = R(i.id);
-                          null != t && n.push(t), e(i.items, n);
+                          (null != t && n.push(t), e(i.items, n));
                       }
                       return n;
                   })(e.args.items)
@@ -407,7 +407,7 @@ async function U(e) {
             callback: () => !0,
         },
         () => {
-            o?.(), d(t, { withMutualGuilds: !0 });
+            (o?.(), d(t, { withMutualGuilds: !0 }));
         },
     );
 }
@@ -479,7 +479,7 @@ function X(e, t) {
 }
 function Y(e) {
     let t = J.get(e);
-    null != t && (J.delete(e), X("closing the operation session", () => t.end())), (0, S.Rh)(e);
+    (null != t && (J.delete(e), X("closing the operation session", () => t.end())), (0, S.Rh)(e));
 }
 let Q = {
     openVibegrationsAppInstallModal: U,
@@ -516,9 +516,9 @@ let Q = {
             i = J.get(e);
         if (null != i) {
             if (null != i.iframeId && i.iframeId === n) return;
-            J.delete(e), X("replacing a stale operation session", () => i.end());
+            (J.delete(e), X("replacing a stale operation session", () => i.end()));
         }
-        X("dismissing what was left standing", () =>
+        (X("dismissing what was left standing", () =>
             (function (e) {
                 let t = e.contentWindow;
                 if (null == t) return;
@@ -535,10 +535,10 @@ let Q = {
                     iframeId: n.iframeId,
                     drain: () => n.drain(),
                     end: () => {
-                        i(), n.end();
+                        (i(), n.end());
                     },
                 });
-            });
+            }));
     },
     endPreviewOperation: Y,
     releasePreviewControl: function (e) {

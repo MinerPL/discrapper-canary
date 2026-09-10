@@ -6,7 +6,7 @@ var i = n(477900),
     l = n(192308),
     o = n(968309),
     d = n(826673),
-    c = n(49612),
+    c = n(719975),
     u = n(174459),
     _ = n(17928),
     E = n(643501),
@@ -39,7 +39,7 @@ let T = "game_console_alert_modal",
                 ? Promise.resolve()
                 : new Promise((e) => {
                       function n() {
-                          (0, d.Dr)(s.M.CONSOLE_PTT_DISABLE_ALERT), e();
+                          ((0, d.Dr)(s.M.CONSOLE_PTT_DISABLE_ALERT), e());
                       }
                       function r(e) {
                           return (0, i.jsx)(a.Modal, {

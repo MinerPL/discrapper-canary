@@ -1,10 +1,10 @@
-n.d(t, { A: () => N }), n(938796);
+(n.d(t, { A: () => N }), n(938796));
 var i = n(17928),
     r = n(228366),
     a = n(124838),
     s = n(488926),
     l = n(734057),
-    o = n(49612),
+    o = n(719975),
     d = n(763827),
     c = n(309010),
     u = n(652215),
@@ -18,7 +18,7 @@ function p(e, t) {
     let n = E.get(e);
     if (null == n) return !1;
     let i = n.delete(t);
-    return 0 === n.size && E.delete(e), i;
+    return (0 === n.size && E.delete(e), i);
 }
 function T(e, t, n) {
     return ((E.get(e)?.get(t)?.flags ?? _.ME.NONE) & n) === n;
@@ -32,13 +32,13 @@ function m(e, t) {
 }
 function g(e) {
     let { user: t, sessionId: n } = e;
-    (A = t.id), (h = n), (I = null);
+    ((A = t.id), (h = n), (I = null));
 }
 class S extends i.Ay.Store {
     static displayName = "SpeakingStore";
     initialize() {
-        this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(l.A, o.Ay, d.A, c.Ay);
+        (this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
+            this.waitFor(l.A, o.Ay, d.A, c.Ay));
     }
     getSpeakingDuration(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.x.DEFAULT,
@@ -108,17 +108,17 @@ let N = new S(r.h, {
                     r = (function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT,
                             t = E.get(e);
-                        return null == t && ((t = new Map()), E.set(e, t)), t;
+                        return (null == t && ((t = new Map()), E.set(e, t)), t);
                     })(e),
                     a = r.get(t),
                     s = a?.flags ?? 0;
                 if (0 === s && 0 === n) return !1;
-                if (0 === n) r.delete(t), 0 === r.size && E.delete(e);
+                if (0 === n) (r.delete(t), 0 === r.size && E.delete(e));
                 else {
                     let e = a?.since ?? null,
                         l = (s & _.ME.VOICE) === _.ME.VOICE,
                         o = (n & _.ME.VOICE) === _.ME.VOICE;
-                    l !== o && (e = o ? Date.now() : null), r.set(t, { flags: n, since: e, voiceDb: i });
+                    (l !== o && (e = o ? Date.now() : null), r.set(t, { flags: n, since: e, voiceDb: i }));
                 }
                 return !0;
             })(t, n, i, r)

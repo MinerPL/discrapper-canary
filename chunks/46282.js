@@ -13,7 +13,7 @@ var n = i(477900),
     p = i(929921),
     y = i(734057),
     g = i(71393),
-    m = i(49612),
+    m = i(719975),
     I = i(576705),
     E = i(309010),
     _ = i(287809),
@@ -100,7 +100,7 @@ async function v(t) {
         }
         if (null == a)
             return void (0, r.P0)((0, s.o)(C.intl.string(C.t.OKnWyb), o.Ck.FAILURE, { appContext: N.BRT.OVERLAY }));
-        g?.(),
+        (g?.(),
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -128,6 +128,6 @@ async function v(t) {
                     return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: !1 });
                 },
                 { contextKey: null != I ? (0, u.modalContextFromAppContext)(I) : void 0 },
-            );
+            ));
     }
 }

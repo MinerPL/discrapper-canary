@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(471993),
     f = n(734057),
     x = n(71393),
-    g = n(49612),
+    g = n(719975),
     C = n(576705),
     y = n(309010),
     j = n(920639),
@@ -37,7 +37,7 @@ function _(e) {
         U = l.useCallback(() => {
             if (null != T) {
                 if (!R) return void (0, m.A)();
-                (0, A.A)(T, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" });
+                ((0, A.A)(T, t, O), (0, j.n0)({ channelId: t, interactionType: "tv_clicked_empty_screen" }));
             }
         }, [T, R, t, O]);
     return null != _ && null != T && L && S && M

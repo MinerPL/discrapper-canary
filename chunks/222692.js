@@ -4,7 +4,7 @@ n(582128);
 var r = n(192308),
     l = n(834730),
     s = n(625075),
-    a = n(49612),
+    a = n(719975),
     o = n(731854),
     u = n(375708);
 function c(e) {
@@ -30,7 +30,7 @@ function c(e) {
                           body: u.intl.string(u.t.wVjKGi),
                           confirmText: u.intl.string(u.t["BK8LK+"]),
                           onConfirm: () => {
-                              e?.(),
+                              (e?.(),
                                   (0, r.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("915082"),
@@ -38,7 +38,7 @@ function c(e) {
                                           n.e("825280"),
                                       ]).then(n.bind(n, 987482));
                                       return (t) => (0, i.jsx)(e, { source: "Video unsupported browser", ...t });
-                                  });
+                                  }));
                           },
                       });
               })

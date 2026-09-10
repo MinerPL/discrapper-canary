@@ -7,7 +7,7 @@ var l = i(17928),
     n = i(157559),
     a = i(827343),
     c = i(209932),
-    u = i(49612),
+    u = i(719975),
     r = i(763827),
     A = i(967198),
     b = i(287809),
@@ -84,14 +84,14 @@ function _(e) {
                       label: f.intl.string(f.t.LxhEuG),
                       action: () => {
                           let i = r.A.getRTCConnection();
-                          g.default.track(L.HAw.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
+                          (g.default.track(L.HAw.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
                               guild_id: A.A.getGuildId(),
                               target_user_id: e,
                               media_session_id: i?.getMediaSessionId(),
                               parent_media_session_id: i?.parentMediaSessionId,
                               mute_soundboard: !_,
                           }),
-                              a.A.toggleLocalSoundboardMute(e, t);
+                              a.A.toggleLocalSoundboardMute(e, t));
                       },
                       checked: _,
                   },

@@ -3,7 +3,7 @@ var i = n(621466),
     l = n(557361),
     r = n(775602),
     s = n(186111),
-    a = n(49612),
+    a = n(719975),
     o = n(763827),
     d = n(625494),
     c = n(350535),
@@ -101,7 +101,7 @@ let h = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
                 d._.hasSubscribers(u.jej.TEXTAREA_FOCUS) &&
                 null != document.querySelector('[data-can-focus="true"]')
             )
-                return e.repeat || (e.preventDefault(), d._.dispatch(u.jej.TEXTAREA_FOCUS)), !1;
+                return (e.repeat || (e.preventDefault(), d._.dispatch(u.jej.TEXTAREA_FOCUS)), !1);
             if (
                 (o.A.isConnected() &&
                     a.Ay.getMode() === u.TBI.PUSH_TO_TALK &&

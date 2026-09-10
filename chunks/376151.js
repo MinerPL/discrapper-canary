@@ -4,7 +4,7 @@ var i = n(451988),
     a = n(855511),
     s = n(952818),
     l = n(871633),
-    o = n(49612),
+    o = n(719975),
     d = n(763827),
     c = n(461213),
     u = n(485296),
@@ -33,7 +33,7 @@ class f extends r.A {
             null == this._reportInterval &&
                 ((this._reportInterval = new i.IX()),
                 this._reportInterval.start(I, () => {
-                    this._trackStartSpeaking(), this._trackStartListening();
+                    (this._trackStartSpeaking(), this._trackStartListening());
                 }));
         }
     };
@@ -44,9 +44,9 @@ class f extends r.A {
         this._anyoneElseSpeaking !== t && ((this._anyoneElseSpeaking = t), this._trackStartListening());
     };
     _reset() {
-        (this._currentUserSpeaking = !1),
+        ((this._currentUserSpeaking = !1),
             (this._anyoneElseSpeaking = !1),
-            null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
+            null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null)));
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
@@ -85,9 +85,9 @@ class f extends r.A {
         });
     }
     _terminate() {
-        this._reset(),
+        (this._reset(),
             u.A.removeChangeListener(this._handleSpeakingStoreChanged),
-            d.A.removeChangeListener(this._handleRTCConnectionStoreChanged);
+            d.A.removeChangeListener(this._handleRTCConnectionStoreChanged));
     }
     getGameMetadata() {
         let e = c.A.findActivity((e) => e.type === h.$pd.PLAYING),

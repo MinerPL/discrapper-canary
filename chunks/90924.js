@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     BB: () => K,
     B_: () => B,
     D2: () => ee,
@@ -19,7 +19,7 @@ n.d(t, {
 }),
     n(321073),
     n(938796),
-    n(435558);
+    n(435558));
 var o = n(567243),
     i = n(179771),
     r = n(636537),
@@ -34,7 +34,7 @@ var o = n(567243),
     _ = n(889227),
     A = n(734057),
     m = n(71393),
-    f = n(49612),
+    f = n(719975),
     g = n(232835),
     I = n(290863),
     v = n(287809),
@@ -80,7 +80,7 @@ function G(e, t) {
         [T.rbe.GUILD_CATEGORY, ...p.OU].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    g.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: T.EMb });
+                    (g.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: T.EMb }));
                 }),
             ),
         Promise.all(n).then(() => {

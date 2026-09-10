@@ -1,4 +1,4 @@
-i.r(e), i.d(e, { default: () => eS }), i(321073), i(667532);
+(i.r(e), i.d(e, { default: () => eS }), i(321073), i(667532));
 var n = i(284009),
     l = i.n(n),
     a = i(132500),
@@ -195,7 +195,7 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t9 = i(49612),
+    t9 = i(719975),
     t8 = i(308726),
     t5 = i(46282),
     t7 = i(360469),
@@ -223,7 +223,7 @@ let ee = 5 * k.A.Millis.SECOND,
     eo = [],
     eu = {};
 function ec(t, e, i) {
-    null == eu[t] && (eu[t] = {}), (eu[t][e] = i);
+    (null == eu[t] && (eu[t] = {}), (eu[t][e] = i));
 }
 let ed = 30 * k.A.Millis.MINUTE,
     eA = 2 * k.A.Millis.MINUTE;
@@ -256,10 +256,10 @@ function eg(t) {
     let n = er[i];
     if ((n.timer.stop(), (er = [...er]), e === $.yFH.FOCUSED)) {
         let [t] = er.splice(i, 1);
-        (t = { ...t, status: e }), er.unshift(t), (es = !0);
+        ((t = { ...t, status: e }), er.unshift(t), (es = !0));
         return;
     }
-    e === $.yFH.DISMISSED ? er.splice(i, 1) : (er[i] = { ...n, status: e }), ef();
+    (e === $.yFH.DISMISSED ? er.splice(i, 1) : (er[i] = { ...n, status: e }), ef());
 }
 function em(t) {
     let e = er.find((e) => e.type === K.zb.INCOMING_CALL && e.channelId === t);
@@ -283,7 +283,7 @@ function eI(t, e) {
                         -1 === n && (n = setTimeout(() => o.A.updateNotificationStatus(t, a), null != i ? i : ee));
                     },
                     stop() {
-                        clearTimeout(n), (n = -1);
+                        (clearTimeout(n), (n = -1));
                     },
                 };
             })(n, i.expirationExternallyManaged, i.duration),
@@ -301,7 +301,7 @@ function eI(t, e) {
         let t = s.pop();
         es || t.timer.stop();
     }
-    return es || ((er = s), r.timer.start()), n;
+    return (es || ((er = s), r.timer.start()), n);
 }
 function eE() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
@@ -314,7 +314,7 @@ function eE() {
         })(),
         n = !1;
     for (let [i, l] of Object.entries(t))
-        (n =
+        ((n =
             n ||
             (function (t, e) {
                 let i, n, l;
@@ -425,10 +425,10 @@ function eE() {
                                                           widgetType: $.uss.NOTIFICATIONS,
                                                       });
                                                       let t = w.A.getTargetPID();
-                                                      tE.A.isInputLocked(t)
+                                                      (tE.A.isInputLocked(t)
                                                           ? (y("unlock"), o.A.setInputLocked(!1, t))
                                                           : y("jump"),
-                                                          o.A.updateNotificationStatus(e, $.yFH.DISMISSED);
+                                                          o.A.updateNotificationStatus(e, $.yFH.DISMISSED));
                                                   } catch {}
                                               })();
                                       },
@@ -443,7 +443,7 @@ function eE() {
                         : (ec(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }), !1))
                 );
             })(i, l)),
-            e.add(i);
+            e.add(i));
     let l = new Set();
     for (let t of i) e.has(t) || l.add(t);
     let a = w.A.isOverlayV3EnabledForPID(w.A.getTargetPID()) || null != w.A.getFocusedPID();
@@ -481,7 +481,7 @@ function e_(t) {
     )
         return !1;
     let a = er.find((t) => t.type === K.zb.TEXT && t.channelId === e && t.messageType === $.lAJ.CALL);
-    null != a && eg(a.id),
+    (null != a && eg(a.id),
         eI(
             (function (t) {
                 let e = (0, td.m1)(t, L.default, T.A),
@@ -510,16 +510,16 @@ function e_(t) {
                             if (t.type !== $.rbe.GUILD_VOICE) return;
                             tu.default.selectVoiceChannel(t.id);
                         }
-                        o.A.updateNotificationStatus(i),
+                        (o.A.updateNotificationStatus(i),
                             o.A.track($.HAw.VOICE_CHANNEL_SELECTED, {
                                 location: "Overlay Notificaiton",
                                 guild_id: t.guild_id,
                                 channel_id: t.id,
                                 video_enabled: !1,
-                            });
+                            }));
                     },
                     onCancelClick: () => {
-                        r("decline"), to.A.stopRinging(t.id);
+                        (r("decline"), to.A.stopRinging(t.id));
                     },
                     onDismissClick: () => {
                         r("dismiss");
@@ -527,12 +527,12 @@ function e_(t) {
                 };
             })(l),
             { priority: K.In.HIGH, expirationExternallyManaged: !0, type: K.zb.INCOMING_CALL, channelId: l.id },
-        );
+        ));
 }
 class eN extends r.Ay.Store {
     static displayName = "OverlayNotificationsStore";
     initialize() {
-        this.waitFor(
+        (this.waitFor(
             u.A,
             m.A,
             I.default,
@@ -556,7 +556,7 @@ class eN extends r.Ay.Store {
             L.default,
             x.A,
         ),
-            this.syncWith([S.A], eE);
+            this.syncWith([S.A], eE));
     }
     getNotifications() {
         return er;
@@ -598,24 +598,24 @@ let eS = new eN(s.h, {
                         null != e &&
                             ((a.cancelText = J.intl.string(J.t["6F9ivu"])),
                             (a.onCancelClick = (t, i) => {
-                                l("unlock"),
+                                (l("unlock"),
                                     o.A.updateNotificationStatus(i),
                                     o.A.setInputLocked(!1, w.A.getTargetPID()),
-                                    (0, tZ.qf)(e, !1, $.BRT.POPOUT);
+                                    (0, tZ.qf)(e, !1, $.BRT.POPOUT));
                             }));
                         break;
                     }
                     case H.Jr.GO_LIVE_VOICE:
                     case H.Jr.GO_LIVE_NON_VOICE:
-                        (a.confirmText = J.intl.string(J.t.U76Ft2)),
+                        ((a.confirmText = J.intl.string(J.t.U76Ft2)),
                             (a.onConfirmClick = (t, e) => {
                                 function i() {
-                                    l("go-live-modal"), o.A.setInputLocked(!1, w.A.getTargetPID());
+                                    (l("go-live-modal"), o.A.setInputLocked(!1, w.A.getTargetPID()));
                                 }
                                 function n() {
                                     l("one-click-go-live");
                                 }
-                                o.A.updateNotificationStatus(e),
+                                (o.A.updateNotificationStatus(e),
                                     (0, t5.H)({
                                         pid: w.A.getTargetPID(),
                                         analyticsLocation: $.ThZ.OVERLAY_NUDGE,
@@ -623,11 +623,11 @@ let eS = new eN(s.h, {
                                         onBeforeShowModal: i,
                                         onOneClickGoLive: n,
                                         appContext: $.BRT.POPOUT,
-                                    });
-                            });
+                                    }));
+                            }));
                         break;
                     case H.Jr.CONTENT_INVENTORY:
-                        (a.onNotificationShow = () => {
+                        ((a.onNotificationShow = () => {
                             o.A.track($.HAw.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                                 user_ids: i.entries.map((t) => t.author_id),
                                 entry_ids: i.entries.map((t) => t.id),
@@ -639,7 +639,7 @@ let eS = new eN(s.h, {
                                     maxUserShowCount: 5,
                                     variant: "default",
                                     className: t6.kL,
-                                }));
+                                })));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
                 s = J.intl.string(J.t.KWDIrh);
@@ -654,16 +654,16 @@ let eS = new eN(s.h, {
                 },
                 ...a,
                 onNotificationShow: (t) => {
-                    n(), r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t);
+                    (n(), r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t));
                 },
                 onNotificationClick: (t, e) => {
-                    l("unlock"),
+                    (l("unlock"),
                         o.A.setInputLocked(!1, w.A.getTargetPID()),
                         r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
-                        a.onNotificationClick?.(t, e);
+                        a.onNotificationClick?.(t, e));
                 },
                 onDismissClick: (t, e) => {
-                    l("dismiss"), r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e);
+                    (l("dismiss"), r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onDismissClick?.(t, e));
                 },
             };
         })((0, G.qv)(), e);
@@ -701,18 +701,19 @@ let eS = new eN(s.h, {
                 if (null == d || null == d.id) return !1;
                 let A = u.A.getApplication(d.id),
                     f = [d.id];
-                null != d.altId && f.push(d.altId), A?.linkedGames != null && f.push(...A.linkedGames.map((t) => t.id));
+                (null != d.altId && f.push(d.altId),
+                    A?.linkedGames != null && f.push(...A.linkedGames.map((t) => t.id)));
                 let y = e.activity.party_id;
                 switch (e.activity.type) {
                     case $.xL.JOIN:
-                        (n = (t) => C.A.getApplicationActivity(i.id, t)),
-                            (a = (t) => null != t.party && t.party.id === y);
+                        ((n = (t) => C.A.getApplicationActivity(i.id, t)),
+                            (a = (t) => null != t.party && t.party.id === y));
                         break;
                     case $.xL.JOIN_REQUEST:
-                        (n = (t) => O.A.getApplicationActivity(t)), (a = (t) => null != t.party && t.party.id === y);
+                        ((n = (t) => O.A.getApplicationActivity(t)), (a = (t) => null != t.party && t.party.id === y));
                         break;
                     case $.xL.STREAM_REQUEST:
-                        (n = (t) => O.A.getApplicationActivity(t)), (a = (t, e) => t.application_id === e);
+                        ((n = (t) => O.A.getApplicationActivity(t)), (a = (t, e) => t.application_id === e));
                         break;
                     default:
                         return !1;
@@ -753,7 +754,7 @@ let eS = new eN(s.h, {
                                 },
                                 confirmText: J.intl.string(J.t.VJlc0S),
                                 onConfirmClick: (n, a) => {
-                                    F.Ay.join({
+                                    (F.Ay.join({
                                         userId: i.id,
                                         sessionId: r,
                                         applicationId: l,
@@ -761,7 +762,7 @@ let eS = new eN(s.h, {
                                         messageId: e.id,
                                     }),
                                         o.A.updateNotificationStatus(a),
-                                        A("join");
+                                        A("join"));
                                 },
                                 onDismissClick: () => {
                                     A("dismiss");
@@ -791,17 +792,17 @@ let eS = new eN(s.h, {
                                     s();
                                 },
                                 onConfirmClick: (e, i) => {
-                                    tS.A.sendActivityInvite({
+                                    (tS.A.sendActivityInvite({
                                         channelId: t.id,
                                         type: $.xL.JOIN,
                                         activity: n,
                                         location: (0, th.y)() ? $.ThZ.LOCKED_OVERLAY : $.ThZ.UNLOCKED_OVERLAY,
                                     }),
                                         u("join"),
-                                        o.A.updateNotificationStatus(i);
+                                        o.A.updateNotificationStatus(i));
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tC.ack)(
+                                    ((0, tC.ack)(
                                         t.id,
                                         {
                                             section: $.JJy.OVERLAY,
@@ -812,7 +813,7 @@ let eS = new eN(s.h, {
                                         !0,
                                     ),
                                         o.A.updateNotificationStatus(i),
-                                        u("decline");
+                                        u("decline"));
                                 },
                                 onDismissClick: () => {
                                     u("dismiss");
@@ -853,12 +854,12 @@ let eS = new eN(s.h, {
                                         });
                                         i = t ? tb.jQ.PRESET_AUTO : tb.jQ.PRESET_VIDEO;
                                     }
-                                    (0, tv.A)(w.A.getTargetPID(), { preset: i }),
+                                    ((0, tv.A)(w.A.getTargetPID(), { preset: i }),
                                         u("request-to-stream"),
-                                        o.A.updateNotificationStatus(e);
+                                        o.A.updateNotificationStatus(e));
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tC.ack)(
+                                    ((0, tC.ack)(
                                         t.id,
                                         {
                                             section: $.JJy.OVERLAY,
@@ -869,7 +870,7 @@ let eS = new eN(s.h, {
                                         !0,
                                     ),
                                         o.A.updateNotificationStatus(i),
-                                        u("decline");
+                                        u("decline"));
                                 },
                                 onDismissClick: () => {
                                     u("dismiss");
@@ -896,7 +897,7 @@ let eS = new eN(s.h, {
         let r = !N.A.isSoundDisabled(R.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
-                if (P.A.isNotificationDisabled(H.KS.TextChat)) return tq(!0), null;
+                if (P.A.isNotificationDisabled(H.KS.TextChat)) return (tq(!0), null);
                 let { icon: a, title: r, body: s } = (0, p.TB)(t, e, i),
                     { trackView: u, trackClick: c } = (0, Y.Y9)(H.KS.TextChat, {
                         notif_type: H.KS.TextChat,
@@ -928,7 +929,7 @@ let eS = new eN(s.h, {
                               ? (0, z.jsx)(tz, { id: n, replyToMessageId: e.id, channel: t, onSend: () => c("send") })
                               : null,
                     onNotificationShow: () => {
-                        tq(n), u();
+                        (tq(n), u());
                     },
                     onNotificationClick: (i, n) => {
                         let a = w.A.getTargetPID();
@@ -946,7 +947,7 @@ let eS = new eN(s.h, {
                             ),
                             l)
                         ) {
-                            (0, t_.D$)({
+                            ((0, t_.D$)({
                                 target: {
                                     kind: t_.bB.CHANNEL,
                                     channelId: t.id,
@@ -960,7 +961,7 @@ let eS = new eN(s.h, {
                                 requestAnimationFrame(() => {
                                     tU._.dispatchToLastSubscribed($.jej.TEXTAREA_FOCUS, { channelId: t.id });
                                 }),
-                                o.A.updateNotificationStatus(n, $.yFH.DISMISSED);
+                                o.A.updateNotificationStatus(n, $.yFH.DISMISSED));
                             return;
                         }
                         tE.A.isInputLocked(a) && !(0, tj.$)()
@@ -975,7 +976,7 @@ let eS = new eN(s.h, {
                 };
             })(n, _.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
         if (null == s) return !1;
-        eI(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), ep();
+        (eI(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), ep());
     },
     CHANNEL_SELECT: function (t) {
         let e,
@@ -1094,7 +1095,7 @@ let eS = new eN(s.h, {
         if ("manual" === t.clipMethod) {
             var e, i;
             let n;
-            eI(ts(J.intl.string(J.t["1ZbZuh"]))),
+            (eI(ts(J.intl.string(J.t["1ZbZuh"]))),
                 tl() &&
                     null != t.errorMessage &&
                     eI(
@@ -1104,7 +1105,7 @@ let eS = new eN(s.h, {
                             if (null != e) return null != i ? `[${i}] ${e}` : e;
                         })()),
                         { ...ti(H.KS.ClipsDebugSaveError), title: "Clip save failed", body: n, maxBodyLines: 4 }),
-                    );
+                    ));
         }
     },
     CLIPS_SAVE_CLIP_NO_OP: function (t) {
@@ -1175,7 +1176,7 @@ let eS = new eN(s.h, {
                     let e = ["laughter"];
                     e.length > 0 && t.push(`Auto (${e.join(", ")})`);
                 }
-                return n && e.clipSignals.enableDistributedSignals && t.push("Distributed"), t;
+                return (n && e.clipSignals.enableDistributedSignals && t.push("Distributed"), t);
             })()).length
                 ? null
                 : {

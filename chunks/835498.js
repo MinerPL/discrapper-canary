@@ -5,7 +5,7 @@ var i = n(435558),
     s = n(499979),
     l = n(228366),
     o = n(283047),
-    d = n(49612),
+    d = n(719975),
     c = n(287809),
     u = n(731854);
 let _ = {
@@ -23,7 +23,7 @@ let _ = {
 function A(e, t) {
     let { oldId: n } = t;
     if (!T.isSampling(e)) return !1;
-    T.stopSampling(e, n), T.startSampling(e);
+    (T.stopSampling(e, n), T.startSampling(e));
 }
 let h = { [u.oh.AUDIO_INPUT]: new s.W0(), [u.oh.AUDIO_OUTPUT]: new s.W0(), [u.oh.VIDEO_INPUT]: new s.W0() },
     I = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
@@ -33,18 +33,18 @@ class p extends a.Ay.PersistedStore {
     static persistKey = "DeviceFrecencyStore";
     static migrations = [(e) => r().mapKeys(e, (e, t) => _[t])];
     initialize(e) {
-        this.waitFor(d.Ay, c.default),
+        (this.waitFor(d.Ay, c.default),
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((t) => {
-                e?.[t] != null && f[t].overwriteHistory(e[t]), h[t].reset();
-            });
+                (e?.[t] != null && f[t].overwriteHistory(e[t]), h[t].reset());
+            }));
     }
     reset() {
         [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((e) => {
-            h[e].reset(), (I[e] = {});
+            (h[e].reset(), (I[e] = {}));
         });
     }
     track(e, t, n) {
-        null == I[e][t] && (I[e][t] = 0), (I[e][t] += n), f[e].track(t, { usesSinceLastTrack: n });
+        (null == I[e][t] && (I[e][t] = 0), (I[e][t] += n), f[e].track(t, { usesSinceLastTrack: n }));
     }
     isSampling(e) {
         return h[e].isRunning();
@@ -82,7 +82,7 @@ class p extends a.Ay.PersistedStore {
         let e = { [u.oh.AUDIO_INPUT]: [], [u.oh.AUDIO_OUTPUT]: [], [u.oh.VIDEO_INPUT]: [] };
         return (
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT].forEach((t) => {
-                this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(I[t]));
+                (this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(I[t])));
             }),
             {
                 duration_input_device_used_ids: e[u.oh.AUDIO_INPUT].map((e) => {

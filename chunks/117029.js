@@ -13,13 +13,13 @@ var l = n(477900),
     g = n(218429),
     f = n(964486),
     x = n(461782),
-    h = n(49612),
+    h = n(719975),
     A = n(40056),
     v = n(375708),
     E = n(950183),
     C = n(507199);
 function j(e) {
-    e.preventDefault(), e.stopPropagation();
+    (e.preventDefault(), e.stopPropagation());
 }
 function I(e) {
     return (1 & e.buttons) == 1;
@@ -30,9 +30,9 @@ let S = i.memo(function (e) {
         {
             enabled: b,
             zoomLevel: y,
-            minZoom: R,
-            maxZoom: k,
-            isDragging: D,
+            minZoom: k,
+            maxZoom: D,
+            isDragging: R,
             isWheeling: T,
             isSlidering: w,
             setIsSlidering: L,
@@ -46,12 +46,12 @@ let S = i.memo(function (e) {
         } = i.useContext(A.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
-        $ = y > R,
+        $ = y > k,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
         Y = i.useCallback(() => {
-            z(!1), N("interact");
+            (z(!1), N("interact"));
         }, [N]),
         Z = i.useMemo(() => {
             let e = 120 * Math.min(V, 32 / 9);
@@ -96,38 +96,38 @@ let S = i.memo(function (e) {
                 i = 0.5 - P.x / (e * y),
                 s = 0.5 - P.y / (t * y);
             return {
-                "--custom-zoom-indicator-left": `${100 * ((0, a.clamp))(i - n / 2, 0, 1 - n)}%`,
-                "--custom-zoom-indicator-top": `${100 * ((0, a.clamp))(s - l / 2, 0, 1 - l)}%`,
+                "--custom-zoom-indicator-left": `${100 * (0, a.clamp)(i - n / 2, 0, 1 - n)}%`,
+                "--custom-zoom-indicator-top": `${100 * (0, a.clamp)(s - l / 2, 0, 1 - l)}%`,
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * l}%`,
                 "--custom-zoom-indicator-transition":
-                    D || U || T || w
+                    R || U || T || w
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [D, U, T, w, P, y, G]),
+        }, [R, U, T, w, P, y, G]),
         et = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button");
+                (e.preventDefault(), e.stopPropagation(), M(y - 0.25, A.qd, "button"));
             },
             [M, y],
         ),
         en = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(y + 0.25, A.qd, "button");
+                (e.preventDefault(), e.stopPropagation(), M(y + 0.25, A.qd, "button"));
             },
             [M, y],
         ),
         el = i.useRef(null),
         ei = i.useCallback(
             (e) => {
-                L(!0),
+                (L(!0),
                     M(e, A.qd, "slider"),
                     S(),
                     null == el.current && (el.current = new o.Ep()),
                     el.current.start(100, () => {
                         L(!1);
-                    });
+                    }));
             },
             [M, S, L],
         );
@@ -179,15 +179,15 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.V,
                                               onClick: et,
-                                              disabled: y <= R,
+                                              disabled: y <= k,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: R,
-                                          maxValue: k,
+                                          minValue: k,
+                                          maxValue: D,
                                           initialValue: y,
                                           value: y,
                                           asValueChanges: ei,
@@ -202,7 +202,7 @@ let S = i.memo(function (e) {
                               children: (0, l.jsx)(d.K, {
                                   icon: g.r,
                                   onClick: en,
-                                  disabled: y >= k,
+                                  disabled: y >= D,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

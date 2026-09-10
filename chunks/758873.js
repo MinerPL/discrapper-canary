@@ -6,7 +6,7 @@ var s = i(582128),
     l = i(616356),
     c = i(280450),
     o = i(734057),
-    d = i(49612),
+    d = i(719975),
     h = i(576705),
     u = i(290863),
     j = i(994500),
@@ -26,9 +26,9 @@ let p = Object.freeze([]),
         SelfPresenceStore: x.A,
         UserProfileStore: f.A,
     },
-    E = { ChannelStore: o.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
-    I = { ...C, ...E },
-    S = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
+    S = { ChannelStore: o.A, PermissionStore: h.A, PresenceStore: u.A, VoiceStateStore: v.A },
+    E = { ...C, ...S },
+    I = Object.freeze({ voiceActivity: void 0, voiceChannel: void 0, voiceState: void 0 });
 function _(e) {
     let { userId: t, currentUserId: i, guildId: s } = e,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C,
@@ -53,14 +53,14 @@ function _(e) {
 }
 function T(e) {
     let { userId: t, guildId: i } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E,
+        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S,
         n = (0, r.t$)({ userId: t, guildId: i }, s);
     return null == n.voiceChannel
-        ? S
+        ? I
         : {
               ...n,
               voiceActivity: (function (e, t) {
-                  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E;
+                  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S;
                   if (null != e && null != t)
                       return (
                           i.PresenceStore.findActivity(e, (s) =>
@@ -91,7 +91,7 @@ function w(e, t) {
 }
 function F(e) {
     let { userId: t, currentUserId: i, guildId: s } = e,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
+        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
     return w(_({ userId: t, currentUserId: i ?? c.default.getId(), guildId: s }, n), T({ userId: t, guildId: s }, n));
 }
 function P(e) {

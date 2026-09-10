@@ -1,9 +1,9 @@
-n.d(t, { Ay: () => D, Bz: () => C, EM: () => u, Xi: () => N, iA: () => h }), n(134528), n(947204), n(321073);
+(n.d(t, { Ay: () => D, Bz: () => C, EM: () => u, Xi: () => N, iA: () => h }), n(134528), n(947204), n(321073));
 var i = n(17928),
     r = n(459838),
     a = n(228366),
     s = n(233545),
-    l = n(49612),
+    l = n(719975),
     o = n(287809),
     d = n(652215),
     c = n(731854);
@@ -55,7 +55,7 @@ class p {
     put(e, t, n, i) {
         if ("" === i) {
             let i = { ...this.state };
-            return delete i[I(e, t, n)], new p(i);
+            return (delete i[I(e, t, n)], new p(i));
         }
         return new p({ [I(e, t, n)]: i, ...this.state });
     }
@@ -272,7 +272,7 @@ let D = new y(a.h, {
                                     r[a] = e(s, n, i);
                                 } else if (a in h && "number" == typeof s) {
                                     let e = (r[a] = Array.isArray(t) ? t : []);
-                                    e.push({ value: s, time: i }), e.length > 600 && e.shift();
+                                    (e.push({ value: s, time: i }), e.length > 600 && e.shift());
                                 } else r[a] = s;
                             }
                             return r;

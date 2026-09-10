@@ -3,7 +3,7 @@ var i = n(17928),
     r = n(459838),
     a = n(228366),
     s = n(617617),
-    l = n(49612),
+    l = n(719975),
     o = n(309010),
     d = n(287809),
     c = n(965162);
@@ -20,12 +20,12 @@ function f(e) {
     return null != o.Ay.getVoiceChannelId() && l.Ay.isVideoEnabled() && null != n;
 }
 function p() {
-    _ !== o.Ay.getVoiceChannelId() && ((E = !1), (h = !1), (I = !1)), f() && (E = !0), (_ = o.Ay.getVoiceChannelId());
+    (_ !== o.Ay.getVoiceChannelId() && ((E = !1), (h = !1), (I = !1)), f() && (E = !0), (_ = o.Ay.getVoiceChannelId()));
 }
 class T extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
-        this.waitFor(l.Ay, o.Ay, s.A, d.default), this.syncWith([o.Ay, l.Ay], p);
+        (this.waitFor(l.Ay, o.Ay, s.A, d.default), this.syncWith([o.Ay, l.Ay], p));
     }
     get videoFilterAssets() {
         return A;
@@ -47,7 +47,7 @@ let m = new T(a.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};
-        t.forEach((e) => (n[e.id] = e)), (A = n);
+        (t.forEach((e) => (n[e.id] = e)), (A = n));
     },
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function (e) {
         let { videoFilterAsset: t } = e;
@@ -55,7 +55,7 @@ let m = new T(a.h, {
     },
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: function (e) {
         let { videoFilterAsset: t } = e;
-        (A = { ...A }), delete A[t.id];
+        ((A = { ...A }), delete A[t.id]);
     },
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function (e) {
         let { backgroundOption: t } = e;
@@ -63,13 +63,13 @@ let m = new T(a.h, {
     },
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
         let { settings: t } = e;
-        r.Tr.CAMERA_BACKGROUND_LIVE in t && ((u = !0), (h = !1)), r.Tr.CAMERA_BACKGROUND_PREVIEW in t && (I = !1);
+        (r.Tr.CAMERA_BACKGROUND_LIVE in t && ((u = !0), (h = !1)), r.Tr.CAMERA_BACKGROUND_PREVIEW in t && (I = !1));
     },
     MEDIA_ENGINE_VIDEO_FILTER_ERROR: function (e) {
         let { target: t } = e;
         "live" === t ? (h = !0) : (I = !0);
     },
     LOGOUT: function () {
-        (u = !1), (E = !1), (_ = null), (A = {}), (h = !1), (I = !1);
+        ((u = !1), (E = !1), (_ = null), (A = {}), (h = !1), (I = !1));
     },
 });

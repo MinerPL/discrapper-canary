@@ -7,7 +7,7 @@ var i = n(941426),
     o = n(929921),
     d = n(616356),
     c = n(71393),
-    u = n(49612),
+    u = n(719975),
     _ = n(116956),
     E = n(287809),
     A = n(927813),
@@ -64,7 +64,7 @@ class g extends s.A {
                     sound: i.soundshareEnabled,
                 };
             }
-            t.autoQualityChange(), a.A.setGoLiveSource(L);
+            (t.autoQualityChange(), a.A.setGoLiveSource(L));
         }
     }
     handlePostConnectionOpen() {

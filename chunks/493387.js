@@ -1,4 +1,4 @@
-n.d(t, { A: () => v }), n(321073);
+(n.d(t, { A: () => v }), n(321073));
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(778712),
     h = n(890856),
     p = n(736653),
-    m = n(49612),
+    m = n(719975),
     A = n(531685),
     f = n(85448),
     x = n(806931),
@@ -36,20 +36,20 @@ class N extends l.PureComponent {
     }
     componentDidAppear() {
         let { scaleAnimation: e, widthAnimation: t } = this;
-        e.setValue(1), t.setValue(1);
+        (e.setValue(1), t.setValue(1));
     }
     componentWillEnter(e) {
         let { scaleAnimation: t, widthAnimation: n } = this;
-        t.setValue(0),
+        (t.setValue(0),
             n.setValue(0),
             r.A.parallel([
                 r.A.timing(t, { toValue: 1, duration: I.DURATION_IN, easing: I.EASING_IN }),
                 r.A.timing(n, { toValue: 1, duration: 200 }),
-            ]).start(e);
+            ]).start(e));
     }
     componentWillLeave(e) {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: l } = this;
-        i.setValue(1), n.setValue(0);
+        (i.setValue(1), n.setValue(0));
         let a = [];
         for (let e = 0; e < 23; e++) a.push(r.A.timing(n, { toValue: -26 * e, duration: 17 }));
         r.A.sequence([

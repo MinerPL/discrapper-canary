@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { StageChannelInviteButton: () => iu, default: () => iA });
+(n.r(t), n.d(t, { StageChannelInviteButton: () => iu, default: () => iA }));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -475,7 +475,7 @@ function e6(e) {
             ...o
         } = e,
         c = l.useCallback(() => {
-            r?.(), t();
+            (r?.(), t());
         }, [r, t]);
     return (0, i.jsx)(e2.A, {
         onClick: c,
@@ -514,7 +514,7 @@ function tn(e) {
                       className: a()(tt.x6, { [tt.vc]: c }),
                       children: (0, i.jsx)(e6, {
                           toggleRequestToSpeakSidebar: function () {
-                              c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
+                              (c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n());
                           },
                           showRequestToSpeakSidebar: l,
                           numRequestToSpeak: u,
@@ -549,17 +549,17 @@ function ti(e) {
         g = e8(t),
         m = (0, o.bG)([w.A], () => w.A.can(e0.QY, t));
     function f() {
-        eY.A.updateStageVideoLimitBoostUpsellDismissed(t.id, !0),
+        (eY.A.updateStageVideoLimitBoostUpsellDismissed(t.id, !0),
             e$.default.track(eE.HAw.BOOSTING_UPSELL_CLICKED, {
                 guild_id: t.guild_id,
                 type: te.e.VIDEO_STAGE_LIMIT,
                 is_moderator: m,
                 action: te.pd.DISMISS,
-            });
+            }));
     }
     let E = { canModerate: m, audienceCount: h, channel: t, speakerCount: d },
         C = l.useRef(E);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         C.current = E;
     }),
         l.useEffect(() => {
@@ -571,7 +571,7 @@ function ti(e) {
                     is_moderator: e,
                     listener_count: i + t,
                 });
-        }, [g]);
+        }, [g]));
     let j = (0, i.jsx)(u.N, {
         theme: eE.NJ8.DARK,
         children: (e) =>
@@ -648,7 +648,7 @@ function ti(e) {
                                             (0, i.jsx)(eL.$, {
                                                 variant: "expressive",
                                                 onClick: function () {
-                                                    (0, eQ.K4)({
+                                                    ((0, eQ.K4)({
                                                         guildId: t.guild_id,
                                                         location: { section: eE.JJy.STAGE_VIDEO_LIMIT },
                                                     }),
@@ -657,7 +657,7 @@ function ti(e) {
                                                             type: te.e.VIDEO_STAGE_LIMIT,
                                                             is_moderator: m,
                                                             action: te.pd.BOOST,
-                                                        });
+                                                        }));
                                                 },
                                                 size: "sm",
                                                 text: ep.intl.string(ep.t.Uj0md3),
@@ -798,7 +798,7 @@ let tj = l.memo(function (e) {
     H()(null != d, "Channel cannot be guildless");
     let f = l.useCallback(
         (e) => {
-            (0, tA.x)({
+            ((0, tA.x)({
                 type: tc.ImpressionTypes.MENU,
                 name: tc.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                 properties: { location: "AudienceTile", is_tile_owner: r.id === u, tile_type: tg.qs.USER },
@@ -849,7 +849,7 @@ let tj = l.memo(function (e) {
                             });
                     },
                     { context: A },
-                );
+                ));
         },
         [r, u, A, d, s, h],
     );
@@ -895,7 +895,7 @@ var tv = n(844222),
     tw = n(616356),
     tM = n(977997),
     tk = n(312006),
-    tG = n(49612),
+    tG = n(719975),
     tD = n(756872);
 function tV(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,
@@ -1064,7 +1064,7 @@ let tQ = l.memo(function (e) {
             switch (e.type) {
                 case tg.lp.HIDDEN_STREAM:
                 case tg.lp.STREAM:
-                    f(tg.qs.STREAM),
+                    (f(tg.qs.STREAM),
                         (0, ei.L3)(
                             t,
                             async () => {
@@ -1089,7 +1089,7 @@ let tQ = l.memo(function (e) {
                                     });
                             },
                             { context: c },
-                        );
+                        ));
                     return;
                 case tg.lp.USER:
                 default:
@@ -1263,7 +1263,7 @@ function t3(e) {
                     ...e,
                     innerRef: o,
                     onClick: (t) => {
-                        t.stopPropagation(), e.onClick(t);
+                        (t.stopPropagation(), e.onClick(t));
                     },
                     onContextMenu: p,
                     children: (0, i.jsx)(t0.eu, {
@@ -1390,12 +1390,12 @@ let nt = (0, ts.A)(function (e) {
                             c = [];
                         if (a)
                             for (let t of ta.A.getMutableParticipants(e, z.ip.SPEAKER))
-                                if (t.type === z.wY.STREAM) t.id !== s && c.push(t), o++;
+                                if (t.type === z.wY.STREAM) (t.id !== s && c.push(t), o++);
                                 else break;
                         function d(e, t, i) {
                             let a = i ? e.filter((e, t) => e.id !== s && t > o) : e,
                                 c = (0, r.chunk)(a, t);
-                            l.push(c), n.push(c.length);
+                            (l.push(c), n.push(c.length));
                         }
                         let u = null != s ? ta.A.getParticipant(e, s) : null;
                         return (
@@ -1632,11 +1632,11 @@ function nY(e) {
                 })(a, c, d, u, A),
                 iconComponent: d ? ni._ : Y.E,
                 onClick: () => {
-                    (0, j.X)(n, j.O.REQUEST_TO_SPEAK, !a),
+                    ((0, j.X)(n, j.O.REQUEST_TO_SPEAK, !a),
                         p(!0),
                         d
                             ? nA.A.showAgeVerificationGetStartedModal({ entryPoint: np.q1.STAGE_CHANNEL_RAISE_HAND })
-                            : r();
+                            : r());
                 },
                 color: a ? "green" : void 0,
                 disabled: !c && !a,
@@ -1653,10 +1653,10 @@ function nY(e) {
                         {
                             text: ep.intl.string(ep.t.KXVgjt),
                             onClick: () => {
-                                nA.A.showAgeVerificationGetStartedModal({
+                                (nA.A.showAgeVerificationGetStartedModal({
                                     entryPoint: np.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
                                 }),
-                                    p(!0);
+                                    p(!0));
                             },
                         },
                     ],
@@ -1772,7 +1772,7 @@ function nZ(e) {
         iconComponent: nc.U,
         label: ep.intl.string(ep.t.ezLpY6),
         onClick: function () {
-            (0, j.X)(n, j.O.MOVE_TO_AUDIENCE), (0, eu.Tf)(t);
+            ((0, j.X)(n, j.O.MOVE_TO_AUDIENCE), (0, eu.Tf)(t));
         },
     });
 }
@@ -1790,7 +1790,7 @@ function n$(e) {
               iconComponent: l ? nd.C : nu.T,
               color: l ? void 0 : "green",
               onClick: () => {
-                  (0, j.X)(n, j.O.STAGE_MUSIC, l), (0, nG.k)(!l);
+                  ((0, j.X)(n, j.O.STAGE_MUSIC, l), (0, nG.k)(!l));
               },
           })
         : (0, i.jsx)(e2.l, {
@@ -1800,7 +1800,7 @@ function n$(e) {
               iconComponent: a ? nu.T : nd.C,
               color: a ? "green" : void 0,
               onClick: () => {
-                  (0, j.X)(n, j.O.STAGE_MUSIC, !a), (0, nG.C)(!a);
+                  ((0, j.X)(n, j.O.STAGE_MUSIC, !a), (0, nG.C)(!a));
               },
           });
 }
@@ -1997,7 +1997,7 @@ function n2(e) {
                 variant: "secondary",
                 text: x,
                 onClick: () => {
-                    H()(null != A, "guild cannot be null"),
+                    (H()(null != A, "guild cannot be null"),
                         H()(null != l, "channel cannot be null"),
                         (0, n9.X)({
                             guild: A,
@@ -2009,7 +2009,7 @@ function n2(e) {
                             analyticsLocation: r,
                             guildScheduledEvent: p,
                             source: eE.PE1.STAGE_CHANNEL,
-                        });
+                        }));
                 },
             }),
         })
@@ -2171,7 +2171,7 @@ var ii = n(95561),
     ir = n(44540);
 let io = "HasBeenInStageChannel";
 function ic(e) {
-    (0, j.X)(x.A.VOICE_CONTROL_TRAY, j.O.STAY_ON_TOP, e), S.setAlwaysOnTop(eE.MLl.CHANNEL_CALL_POPOUT, e);
+    ((0, j.X)(x.A.VOICE_CONTROL_TRAY, j.O.STAY_ON_TOP, e), S.setAlwaysOnTop(eE.MLl.CHANNEL_CALL_POPOUT, e));
 }
 function id(e) {
     let {
@@ -2196,13 +2196,17 @@ function id(e) {
                 { parentAnalyticsLocation: c } = (0, g.Ay)(),
                 d = n === eE.BRT.POPOUT,
                 u = l.useRef(null),
-                { currentLayout: A, mode: p } = (0, o.cf)([m.A], () => {
-                    let e = m.A.getMode(t.id),
-                        i = n === eE.BRT.POPOUT;
-                    i && (e = eE._Of.VIDEO);
-                    let l = e === eE._Of.VIDEO ? m.A.getLayout(t.id, n) : eE.DUB.MINIMUM;
-                    return i && l !== eE.DUB.FULL_SCREEN && (l = eE.DUB.NO_CHAT), { currentLayout: l, mode: e };
-                }, [t, n]),
+                { currentLayout: A, mode: p } = (0, o.cf)(
+                    [m.A],
+                    () => {
+                        let e = m.A.getMode(t.id),
+                            i = n === eE.BRT.POPOUT;
+                        i && (e = eE._Of.VIDEO);
+                        let l = e === eE._Of.VIDEO ? m.A.getLayout(t.id, n) : eE.DUB.MINIMUM;
+                        return (i && l !== eE.DUB.FULL_SCREEN && (l = eE.DUB.NO_CHAT), { currentLayout: l, mode: e });
+                    },
+                    [t, n],
+                ),
                 x = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === t.id, [t.id]);
             l.useEffect(() => {
                 u.current = p;
@@ -2299,14 +2303,14 @@ function id(e) {
                 ? (0, i.jsx)(b.A, {
                       popoutOpen: s,
                       onOpenPopout: () => {
-                          (0, j.X)(d, j.O.POPOUT, !0),
+                          ((0, j.X)(d, j.O.POPOUT, !0),
                               (() => {
                                   let e = t.getGuildId();
-                                  null != e && null != A && (0, _.uh)(e, A), S.openChannelCallPopout(t);
-                              })();
+                                  (null != e && null != A && (0, _.uh)(e, A), S.openChannelCallPopout(t));
+                              })());
                       },
                       onClosePopout: () => {
-                          (0, j.X)(d, j.O.POPOUT, !1), h.h.wait(() => S.close(eE.MLl.CHANNEL_CALL_POPOUT));
+                          ((0, j.X)(d, j.O.POPOUT, !1), h.h.wait(() => S.close(eE.MLl.CHANNEL_CALL_POPOUT)));
                       },
                   })
                 : null,
@@ -2368,7 +2372,7 @@ function ih(e) {
             ? (0, i.jsx)(it, {
                   channel: n,
                   onContinueClick: () => {
-                      (0, q.ek)(!1), S || (0, D.cy)(n);
+                      ((0, q.ek)(!1), S || (0, D.cy)(n));
                   },
               })
             : S

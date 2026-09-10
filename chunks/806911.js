@@ -36,18 +36,18 @@ var i = n(477900),
     x = n(905216),
     k = n(128286),
     F = n(528057),
-    V = n(352018),
-    B = n(616356),
+    B = n(352018),
+    V = n(616356),
     H = n(280450),
-    j = n(49612),
+    j = n(719975),
     W = n(994500),
     Y = n(287809),
     K = n(803301),
     $ = n(531685),
     z = n(174459),
-    q = n(562153),
-    Z = n(427262),
-    X = n(712577),
+    X = n(562153),
+    q = n(427262),
+    Z = n(712577),
     Q = n(566331),
     J = n(768088),
     ee = n(256195),
@@ -108,19 +108,19 @@ class eo extends r.PureComponent {
         let { channel: e } = this.props;
         (0, I.bz)();
         let t = e.getGuildId() ?? er.ME;
-        (0, P.uh)(t, e.id), h.A.channelListScrollTo(t, e.id);
+        ((0, P.uh)(t, e.id), h.A.channelListScrollTo(t, e.id));
         let n = this.activeStreamForSelectedParticipant;
         null != n && A.A.selectParticipant(n.channelId, (0, L._z)(n));
     };
     handleStopStream = () => {
         let { participantOnScreen: e } = this.props;
-        s()((0, ea.Ay)(e), "cannot stop stream for non streamer"),
+        (s()((0, ea.Ay)(e), "cannot stop stream for non streamer"),
             (0, N.X)(f.A.VIDEO_PIP, N.O.STREAM, !1),
-            (0, v.A)(e.stream);
+            (0, v.A)(e.stream));
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
-        (0, N.X)(f.A.VIDEO_PIP, N.O.POPOUT, !0), M.openChannelCallPopout(e);
+        ((0, N.X)(f.A.VIDEO_PIP, N.O.POPOUT, !0), M.openChannelCallPopout(e));
     };
     renderBottomLeftControls = () => {
         let { canSeeParticipantName: e } = this.viewProperties;
@@ -181,7 +181,7 @@ class eo extends r.PureComponent {
         let n = t.find((t) => (0, L._z)(t) === e.id);
         return null == n || n.state === er.XYD.ENDED
             ? null
-            : (0, i.jsx)(V.A, { stream: n, className: es.iq, appContext: er.BRT.APP, location: f.A.VIDEO_PIP });
+            : (0, i.jsx)(B.A, { stream: n, className: es.iq, appContext: er.BRT.APP, location: f.A.VIDEO_PIP });
     };
     renderStreamState() {
         let e = this.activeStreamForSelectedParticipant,
@@ -211,7 +211,7 @@ class eo extends r.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === ea.lp.STREAM || t?.type === ea.lp.USER) {
-            let n = q.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Z.Ay.getName(t.user);
+            let n = X.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? q.Ay.getName(t.user);
             return (0, i.jsx)(u.E, {
                 variant: "text-md/normal",
                 color: "text-overlay-light",
@@ -234,7 +234,7 @@ class eo extends r.PureComponent {
                 (null != o
                     ? (c = o)
                     : (n?.type === ea.lp.USER || n?.type === ea.lp.STREAM) &&
-                      (c = (0, i.jsx)(X.A, {
+                      (c = (0, i.jsx)(Z.A, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: j.Ay.getVideoComponent(),
@@ -286,11 +286,11 @@ function ed(e) {
         E = (0, d.bG)([j.Ay], () => !u && j.Ay.isVideoEnabled(), [u]),
         A = (0, d.bG)([j.Ay], () => (0, y.A)(j.Ay)),
         h = (0, d.bG)([H.default], () => H.default.getId()),
-        I = (0, d.bG)([B.A], () => B.A.getCurrentUserActiveStream()),
+        I = (0, d.bG)([V.A], () => V.A.getCurrentUserActiveStream()),
         f = null != a && "user" in a ? a.user.id : "",
         p = (0, R.A)(a?.type === ea.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, f),
         S = (0, O.A)(f),
-        N = (0, d.yK)([B.A], () => B.A.getAllActiveStreams()),
+        N = (0, d.yK)([V.A], () => V.A.getAllActiveStreams()),
         C = (0, d.bG)([$.A], () => $.A.isFocused());
     return (0, i.jsx)(eo, {
         channel: t,

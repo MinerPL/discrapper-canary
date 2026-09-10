@@ -3,7 +3,7 @@ var i = n(17928),
     r = n(439372),
     a = n(400492),
     s = n(734057),
-    l = n(49612),
+    l = n(719975),
     o = n(309010),
     d = n(977997),
     c = n(63995),
@@ -16,24 +16,24 @@ let h = !1,
 function f() {
     let e = o.Ay.getVoiceChannelId();
     if (null == e) {
-        I.stop(), (h = !1);
+        (I.stop(), (h = !1));
         return;
     }
     let t = s.A.getChannel(e);
     if (!t?.isGuildStageVoice() || l.Ay.isSelfDeaf()) {
-        I.stop(), (h = !1);
+        (I.stop(), (h = !1));
         return;
     }
     if (A.A.shouldPlay()) {
-        (I.volume = l.Ay.getOutputVolume() / 400), I.loop(), (h = !0);
+        ((I.volume = l.Ay.getOutputVolume() / 400), I.loop(), (h = !0));
         return;
     }
     if (E.A.isLive(e)) {
-        I.stop(), (h = !1);
+        (I.stop(), (h = !1));
         return;
     }
     if (A.A.isMuted()) {
-        I.pause(), (h = !1);
+        (I.pause(), (h = !1));
         return;
     }
     let n = null != Object.values(d.A.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
@@ -66,10 +66,10 @@ class m extends r.A {
         if (null != t) {
             let e = s.A.getChannel(t);
             e?.isGuildStageVoice() ? f() : (I.stop(), (h = !1));
-        } else I.stop(), (h = !1);
+        } else (I.stop(), (h = !1));
     }
     handleLogout() {
-        I.stop(), (h = !1);
+        (I.stop(), (h = !1));
     }
     handlePlay(e) {
         let { play: t } = e;

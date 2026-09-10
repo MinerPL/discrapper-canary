@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => f, voiceSinkId: () => I });
+(n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => f, voiceSinkId: () => I }));
 var i = n(435558),
     r = n.n(i),
     a = n(72978),
@@ -6,7 +6,7 @@ var i = n(435558),
     l = n(807393),
     o = n(102597),
     d = n(904054),
-    c = n(49612),
+    c = n(719975),
     u = n(723702),
     _ = n(38405),
     E = n(257645);
@@ -15,7 +15,7 @@ let A = "default",
     I = A;
 function f(e, t) {
     let n = new Audio((0, o.A)(e));
-    (n.volume = (0, d.A)(t)), n.play();
+    ((n.volume = (0, d.A)(t)), n.play());
 }
 async function p() {
     if (null != window.navigator.mediaDevices)
@@ -50,8 +50,8 @@ async function p() {
         }
 }
 function T(e, t) {
-    l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
-        _.A.captureException(t, { tags: { source: "notification_sound_playback" } });
+    (l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
+        _.A.captureException(t, { tags: { source: "notification_sound_playback" } }));
 }
 function m(e) {
     T("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
@@ -64,28 +64,28 @@ let g = class {
     outputChannel;
     trackNotificationFailure;
     constructor(e, t, n, i, r = !1) {
-        (this.name = e), (this._volume = n), (this.outputChannel = i), (this.trackNotificationFailure = r);
+        ((this.name = e), (this._volume = n), (this.outputChannel = i), (this.trackNotificationFailure = r));
     }
     get volume() {
         return this._volume;
     }
     set volume(e) {
-        (this._volume = e), this.ensureAudio().then((t) => (t.volume = e));
+        ((this._volume = e), this.ensureAudio().then((t) => (t.volume = e)));
     }
     loop() {
         this.ensureAudio().then((e) => {
-            (e.loop = !0),
+            ((e.loop = !0),
                 e.play().catch((e) => {
                     this.trackNotificationFailure && m(e);
-                });
+                }));
         });
     }
     play() {
         this.ensureAudio().then((e) => {
-            (e.loop = !1),
+            ((e.loop = !1),
                 e.play().catch((e) => {
                     this.trackNotificationFailure && m(e);
-                });
+                }));
         });
     }
     pause() {
@@ -97,18 +97,18 @@ let g = class {
     playWithListener() {
         return new Promise((e, t) => {
             this.ensureAudio().then((n) => {
-                (null == n.duration || 0 === n.duration) && t("sound has no duration"),
+                ((null == n.duration || 0 === n.duration) && t("sound has no duration"),
                     n.play(),
                     setTimeout(() => {
                         e(!0);
-                    }, n.duration);
+                    }, n.duration));
             });
         });
     }
     destroyAudio() {
         null != this._audio &&
             (this._audio.then((e) => {
-                (e.onerror = null), e.pause(), (e.src = "");
+                ((e.onerror = null), e.pause(), (e.src = ""));
             }),
             (this._audio = null));
     }
@@ -118,11 +118,11 @@ let g = class {
                 this._audio ??
                 new Promise((e, t) => {
                     let i = new Audio();
-                    (i.src = n(696354)(`./${this.name}.mp3`)),
+                    ((i.src = n(696354)(`./${this.name}.mp3`)),
                         (i.onloadeddata = () => {
-                            (i.volume = Math.min((c.Ay.getOutputVolume() / 100) * this._volume, 1)),
+                            ((i.volume = Math.min((c.Ay.getOutputVolume() / 100) * this._volume, 1)),
                                 u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : I),
-                                e(i);
+                                e(i));
                         }),
                         (i.onerror = () => {
                             let e =
@@ -132,10 +132,10 @@ let g = class {
                                           ? "decode_error"
                                           : "generic",
                                 n = Error(`could not play audio: ${e}`);
-                            this.trackNotificationFailure && T(e, n), t(n);
+                            (this.trackNotificationFailure && T(e, n), t(n));
                         }),
                         (i.onended = () => this.destroyAudio()),
-                        i.load();
+                        i.load());
                 })),
             this._audio
         );

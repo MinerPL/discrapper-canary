@@ -15,7 +15,7 @@ var a = i(477900),
     p = i(285918),
     k = i(912630),
     v = i(712711),
-    E = i(49612),
+    E = i(719975),
     b = i(287809),
     w = i(174459),
     _ = i(745317),
@@ -38,10 +38,10 @@ function y(e) {
             try {
                 await (0, v.gB)(P, { location: { page: m.liQ.PREVIEW_CAMERA_MODAL, ...L.location } });
             } catch (e) {}
-            await M(), (0, p._C)(P);
+            (await M(), (0, p._C)(P));
         }, [P, L.location, M]),
         N = n.useCallback(async () => {
-            await B(), d.A.setVideoEnabled(!0), y?.();
+            (await B(), d.A.setVideoEnabled(!0), y?.());
         }, [B, y]),
         T = n.useMemo(
             () => [
@@ -67,8 +67,8 @@ function y(e) {
                           labelType: "secondary",
                           checked: f,
                           onChange: () => {
-                              A.bm.updateSetting(!f),
-                                  w.default.track(m.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !f });
+                              (A.bm.updateSetting(!f),
+                                  w.default.track(m.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !f }));
                           },
                       }),
                       actions: T,

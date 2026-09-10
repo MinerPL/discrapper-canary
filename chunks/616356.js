@@ -1,5 +1,5 @@
 let i, r, a, s, l, o, d;
-n.d(t, { A: () => B }), n(321073);
+(n.d(t, { A: () => V }), n(321073));
 var c = n(17928),
     u = n(228366),
     _ = n(643501),
@@ -13,7 +13,7 @@ var c = n(17928),
     m = n(280450),
     g = n(734057),
     S = n(71393),
-    N = n(49612),
+    N = n(719975),
     C = n(576705),
     O = n(763827),
     R = n(309010),
@@ -25,7 +25,7 @@ let v = null,
     M = null,
     P = 10 * T.A.Millis.SECOND;
 function U() {
-    (i = new Map()), (r = {}), (a = {}), (s = {}), (l = new Map());
+    ((i = new Map()), (r = {}), (a = {}), (s = {}), (l = new Map()));
 }
 function w(e) {
     i.delete(e);
@@ -41,9 +41,9 @@ function G() {
 function x(e) {
     let t,
         { streamKey: n, region: r, viewerIds: s, paused: o } = e;
-    null == (t = l.get(n)) || Date.now() - t < P || l.delete(n),
+    (null == (t = l.get(n)) || Date.now() - t < P || l.delete(n),
         i.set(n, { ...(0, A.Iy)(n), state: o ? y.XYD.PAUSED : y.XYD.ACTIVE }),
-        (a[n] = { streamKey: n, region: r, viewerIds: s });
+        (a[n] = { streamKey: n, region: r, viewerIds: s }));
 }
 function k(e, t) {
     let n = g.A.getBasicChannel(t);
@@ -55,13 +55,13 @@ function F(e) {
     return null != t && (0, h.eo)(t, L.A, S.A, C.A, _.default)[0];
 }
 U();
-class V extends c.Ay.PersistedStore {
+class B extends c.Ay.PersistedStore {
     static displayName = "ApplicationStreamingStore";
     static persistKey = "ApplicationStreamingStore";
     initialize(e) {
-        this.syncWith([C.A], () => !0),
+        (this.syncWith([C.A], () => !0),
             this.waitFor(m.default, g.A, C.A, O.A, E.Ay, R.Ay),
-            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(b, e?.selfStreamParticipantsHidden);
+            e?.selfStreamParticipantsHidden !== void 0 && Object.assign(b, e?.selfStreamParticipantsHidden));
     }
     getState() {
         return { selfStreamParticipantsHidden: b };
@@ -158,7 +158,7 @@ class V extends c.Ay.PersistedStore {
             : { activeStreams: [], streamsByUserAndGuild: {}, rtcStreams: {}, streamerActiveStreamMetadatas: {} };
     }
 }
-let B = new V(u.h, {
+let V = new B(u.h, {
     MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function (e) {
         let { settings: t, endReason: n, errorCode: r } = e;
         if (t?.desktopSettings != null || t?.cameraSettings != null || null == r) return !1;
@@ -197,11 +197,11 @@ let B = new V(u.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { applicationStreamState: t } = e;
-        (r = t.streamsByUserAndGuild),
+        ((r = t.streamsByUserAndGuild),
             (i = new Map(t.activeStreams)),
             (a = t.rtcStreams),
             (s = t.streamerActiveStreamMetadatas),
-            (l = new Map());
+            (l = new Map()));
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
@@ -236,16 +236,16 @@ let B = new V(u.h, {
                         r.ownerId === i && (r.guildId ?? null) === (a ?? null) && (t = l.delete(n) || t);
                     }),
                     t);
-                return (n = a ?? y.eGj), (r[i]?.[n] != null && (delete r[i][n], !0)) || c || e;
+                return ((n = a ?? y.eGj), (r[i]?.[n] != null && (delete r[i][n], !0)) || c || e);
             }
         }, !1);
     },
     STREAM_WATCH: function (e) {
         let { streamKey: t } = e,
             n = (0, A.Iy)(t);
-        i.delete(t),
+        (i.delete(t),
             i.set(t, { ...n, state: y.XYD.CONNECTING }),
-            n.ownerId === m.default.getId() && (b[n.channelId] = !1);
+            n.ownerId === m.default.getId() && (b[n.channelId] = !1));
     },
     STREAM_START: function (e) {
         let {
@@ -268,9 +268,9 @@ let B = new V(u.h, {
                   : null != c
                     ? E.Ay.getRunningGames().find((e) => (0, p.A)(c, e.windowHandle))
                     : null) ?? null;
-        (s[h] = { id: I?.id, pid: a, sourceName: l, previewDisabled: _, sourceIcon: u, sourceId: c }),
+        ((s[h] = { id: I?.id, pid: a, sourceName: l, previewDisabled: _, sourceIcon: u, sourceId: c }),
             i.delete(h),
-            i.set(h, { streamType: t, guildId: n, channelId: r, ownerId: m.default.getId(), state: y.XYD.CONNECTING });
+            i.set(h, { streamType: t, guildId: n, channelId: r, ownerId: m.default.getId(), state: y.XYD.CONNECTING }));
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
@@ -297,16 +297,16 @@ let B = new V(u.h, {
         else if (o === y.H2B.UNAUTHORIZED) u = y.XYD.FAILED;
         else if (o === y.H2B.SAFETY_GUILD_RATE_LIMITED) {
             let { guildId: e } = (0, A.Iy)(r);
-            n
+            (n
                 .e("452729")
                 .then(n.bind(n, 116960))
                 .then((t) => {
                     let { default: n } = t;
                     n(e);
                 }),
-                (u = y.XYD.ENDED);
+                (u = y.XYD.ENDED));
         } else c.state === y.XYD.FAILED && o === y.H2B.USER_REQUESTED && (u = y.XYD.FAILED);
-        i.set(r, { ...c, state: u }), u === y.XYD.ENDED && v !== r && w(r);
+        (i.set(r, { ...c, state: u }), u === y.XYD.ENDED && v !== r && w(r));
     },
     STREAM_CLOSE: function (e) {
         let { streamKey: t } = e;
@@ -314,7 +314,7 @@ let B = new V(u.h, {
     },
     STREAM_UPDATE_SELF_HIDDEN: function (e) {
         let { channelId: t, selfStreamHidden: n } = e;
-        (0, A.wL)(v) && v?.includes(m.default.getId()) && !1 === b[t] && !0 === n && (v = null), (b[t] = n);
+        ((0, A.wL)(v) && v?.includes(m.default.getId()) && !1 === b[t] && !0 === n && (v = null), (b[t] = n));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -350,11 +350,11 @@ let B = new V(u.h, {
     },
     CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
         let { id: t, channelId: n } = e;
-        (v = t),
+        ((v = t),
             Array.from(i.values()).forEach((e) => {
                 (0, A._z)(e) !== v && e.state === y.XYD.ENDED && w((0, A._z)(e));
             }),
-            null == t || ((0, A.wL)(t) && t.includes(m.default.getId()) && (b[n] = !1));
+            null == t || ((0, A.wL)(t) && t.includes(m.default.getId()) && (b[n] = !1)));
     },
     CONNECTION_OPEN: U,
     CONNECTION_CLOSED: U,

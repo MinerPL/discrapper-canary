@@ -1,5 +1,5 @@
-n.r(t),
-    n.d(t, { enable: () => O, isNotSupported: () => N, trackToggleSelfDeaf: () => L, trackToggleSelfMute: () => R });
+(n.r(t),
+    n.d(t, { enable: () => O, isNotSupported: () => N, trackToggleSelfDeaf: () => L, trackToggleSelfMute: () => R }));
 var i = n(477900);
 n(582128);
 var r = n(862482),
@@ -9,7 +9,7 @@ var r = n(862482),
     o = n(228366),
     d = n(626584),
     c = n(734057),
-    u = n(49612),
+    u = n(719975),
     _ = n(309010),
     E = n(532624),
     A = n(531685),
@@ -55,8 +55,8 @@ function O() {
               .enable()
               .then(
                   () => {
-                      o.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: e }),
-                          C(T.hL.ACCEPTED);
+                      (o.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: e }),
+                          C(T.hL.ACCEPTED));
                   },
                   (e) => {
                       switch (e) {
@@ -70,7 +70,7 @@ function O() {
                               C(T.hL.DISMISSED);
                               break;
                           default:
-                              C(T.hL.ERROR), g.warn(`unknown getUserMedia error: ${e}`);
+                              (C(T.hL.ERROR), g.warn(`unknown getUserMedia error: ${e}`));
                       }
                   },
               )

@@ -2,7 +2,7 @@ n.d(t, { pW: () => h, F9: () => A, Mj: () => T, HR: () => E, wq: () => f, _C: ()
 var i = n(636537),
     r = n(228366),
     a = n(594061),
-    s = n(49612),
+    s = n(719975),
     l = n(287809),
     o = n(329551),
     d = n(965162),
@@ -18,7 +18,7 @@ var _ = n(652215);
 async function E() {
     try {
         let e = await i.Bo.get({ url: _.Rsh.VIDEO_FILTER_ASSETS, rejectWithError: !1 });
-        return r.h.dispatch({ type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: e.body }), e;
+        return (r.h.dispatch({ type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS", assets: e.body }), e);
     } catch (e) {
         throw (r.h.dispatch({ type: "VIDEO_FILTER_ASSETS_FETCH_FAILURE", error: e }), e);
     }
@@ -30,7 +30,7 @@ async function A(e, t, n) {
             body: { type: t, asset: e, last_used: n?.toISOString() },
             rejectWithError: !1,
         });
-        return r.h.dispatch({ type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: a.body }), a.body;
+        return (r.h.dispatch({ type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS", videoFilterAsset: a.body }), a.body);
     } catch (e) {
         throw new u(e);
     }
@@ -38,8 +38,8 @@ async function A(e, t, n) {
 async function h(e) {
     await i.Bo.del({ url: _.Rsh.VIDEO_FILTER_ASSET(e.id), rejectWithError: !1 });
     let t = (0, o.i)(l.default.getCurrentUser());
-    (0, d.d1)(t) && t.id === e.id && I(null),
-        r.h.dispatch({ type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: e });
+    ((0, d.d1)(t) && t.id === e.id && I(null),
+        r.h.dispatch({ type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: e }));
 }
 async function I(e) {
     if (

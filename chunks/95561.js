@@ -4,9 +4,9 @@ n.d(t, {
     JK: () => W,
     g4: () => j,
     Ay: () => K,
-    QS: () => V,
+    QS: () => B,
     H$: () => x,
-    zV: () => B,
+    zV: () => V,
     dL: () => Y,
     Ou: () => k,
 });
@@ -29,7 +29,7 @@ var s = n(665260),
     p = n(808728),
     T = n(498642),
     m = n(317525),
-    g = n(49612),
+    g = n(719975),
     S = n(576705),
     N = n(290863),
     C = n(763827),
@@ -99,7 +99,7 @@ function F(e) {
         channel_hidden: t,
     };
 }
-function V(e) {
+function B(e) {
     let t;
     if (null == e) return null;
     let n = l.A.getChannel(e);
@@ -118,7 +118,7 @@ function V(e) {
         },
     };
 }
-function B(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (M.default.isThrottled(e)) return;
@@ -201,7 +201,7 @@ function W(e, t, n) {
             .filter((e) => e.channelId === t)
             .filter((e) => e.userId !== f.default.getId())
             .forEach((e) => {
-                i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++;
+                (i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++);
             }),
         i
     );
@@ -217,4 +217,4 @@ function Y(e, t) {
         n
     );
 }
-let K = { trackWithMetadata: B, getVoiceStateMetadata: W };
+let K = { trackWithMetadata: V, getVoiceStateMetadata: W };

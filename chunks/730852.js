@@ -7,7 +7,7 @@ var i = n(228366),
     o = n(976860),
     d = n(288254),
     c = n(734057),
-    u = n(49612),
+    u = n(719975),
     _ = n(132500),
     E = n(192308),
     A = n(890615),
@@ -117,7 +117,7 @@ let U = {
                               });
                           if (!(0, A.A)(o, D.A)) return;
                       }
-                      r && (0, p.PX)(),
+                      (r && (0, p.PX)(),
                           (function (e, t, n) {
                               let r = C.Ay.getVoiceChannelId(),
                                   a = c.A.getChannel(r);
@@ -171,12 +171,12 @@ let U = {
                               },
                               e,
                               r,
-                          );
+                          ));
                   }
               })(e, M, t, a, s));
     },
     disconnect() {
         let e = s.default.getRemoteSessionId();
-        null != e && a.Fc(e), this.selectVoiceChannel(null), l.close(P.MLl.CHANNEL_CALL_POPOUT);
+        (null != e && a.Fc(e), this.selectVoiceChannel(null), l.close(P.MLl.CHANNEL_CALL_POPOUT));
     },
 };

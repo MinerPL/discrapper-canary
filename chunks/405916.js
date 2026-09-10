@@ -10,7 +10,7 @@ var i = n(477900),
     d = n(725792),
     A = n(338771),
     h = n(929921),
-    m = n(49612),
+    m = n(719975),
     g = n(723702),
     f = n(74329),
     E = n(192308),
@@ -61,7 +61,7 @@ function N(e) {
                                     qualityOptions: { preset: j.jQ.PRESET_CUSTOM, resolution: r, frameRate: l },
                                     context: R.x.STREAM,
                                 };
-                                null != A.desktopSource
+                                (null != A.desktopSource
                                     ? (e.desktopSettings = { sourceId: A.desktopSource.id, sound: d })
                                     : null != A.cameraSource &&
                                       (e.cameraSettings = {
@@ -69,11 +69,11 @@ function N(e) {
                                           audioDeviceGuid: A.cameraSource.audioDeviceGuid,
                                           sound: d,
                                       }),
-                                    u.A.setGoLiveSource(e);
+                                    u.A.setGoLiveSource(e));
                             }
                         } else {
                             var a;
-                            (a = { ...M, object: y.ZSU.RADIO_ITEM, objectType: s }),
+                            ((a = { ...M, object: y.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, E.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
@@ -97,7 +97,7 @@ function N(e) {
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: a });
                                     },
                                     { contextKey: t === y.BRT.POPOUT ? b.KX : b.SY },
-                                );
+                                ));
                         }
                     },
                     [t, M, d, A],
@@ -177,9 +177,9 @@ function N(e) {
         Z = r.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = h.A.getState(),
                 i = { qualityOptions: { preset: e, resolution: t, frameRate: n }, context: R.x.STREAM };
-            null != U && (i.desktopSettings = { sourceId: U, sound: !z }),
+            (null != U && (i.desktopSettings = { sourceId: U, sound: !z }),
                 (0, c.Xd)({ preset: e, resolution: t, frameRate: n, soundshareEnabled: !z }),
-                u.A.setGoLiveSource(i);
+                u.A.setGoLiveSource(i));
         }, [U, z]);
     if (null == t)
         return (0, i.jsx)(s.Dr, {

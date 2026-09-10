@@ -18,7 +18,7 @@ var l = t(477900),
     f = t(662080),
     I = t(827059),
     x = t(173660),
-    v = t(49612),
+    v = t(719975),
     T = t(607567),
     _ = t(246356),
     j = t(204651);
@@ -65,10 +65,10 @@ function b(e) {
             });
     }
     function el() {
-        D(), null != O && Z(), z && q(), y?.(N.P.SOUNDBOARD);
+        (D(), null != O && Z(), z && q(), y?.(N.P.SOUNDBOARD));
     }
     function ei() {
-        (0, d.X)(M, d.O.SOUNDBOARD), O === N.P.SOUNDBOARD ? (y?.(void 0), ee()) : el();
+        ((0, d.X)(M, d.O.SOUNDBOARD), O === N.P.SOUNDBOARD ? (y?.(void 0), ee()) : el());
     }
     i.useEffect(() => {
         en || z || W(!0);
@@ -99,7 +99,7 @@ function b(e) {
                     align: "center",
                     spacing: 16,
                     onRequestClose: () => {
-                        $(!1), y?.(void 0);
+                        ($(!1), y?.(void 0));
                     },
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
@@ -147,7 +147,7 @@ function b(e) {
                             onContextMenu: et,
                             onClick: ei,
                             onMouseEnter: (e) => {
-                                P(), "focus" !== e.type && Z();
+                                (P(), "focus" !== e.type && Z());
                             },
                             onMouseLeave: () => {
                                 null == O && (ee(), k());

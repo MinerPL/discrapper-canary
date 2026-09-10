@@ -11,7 +11,7 @@ var i = n(691540),
     _ = n(324029),
     E = n(616356),
     A = n(280450),
-    h = n(49612),
+    h = n(719975),
     I = n(741394),
     f = n(459838),
     p = n(439372),
@@ -51,7 +51,7 @@ class M extends p.A {
         let r = A.default.getId();
         switch (t) {
             case f.x.DEFAULT:
-                this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r);
+                (this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r));
                 break;
             case f.x.STREAM: {
                 if (null == i) return;
@@ -67,12 +67,12 @@ class M extends p.A {
         let { userIds: t, context: n } = e;
         n === f.x.DEFAULT &&
             t.forEach((e) => {
-                this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e);
+                (this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e));
             });
     }
     handleRTCConnectionFlags(e) {
         let { userId: t, channelId: n, guildId: i } = e;
-        this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t);
+        (this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t));
         let r = S.A.getRTCConnection(
             u._z({ streamType: null != i ? b.U4.GUILD : b.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
@@ -175,7 +175,7 @@ class M extends p.A {
     applyStreamRecording(e, t) {
         if ((0, L.A)(h.Ay) && A.default.getId() === e) {
             let n = (0, y.T)();
-            t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
+            (t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n));
             return;
         }
     }
@@ -193,9 +193,9 @@ var w = n(201538),
     x = n(227628),
     k = n(468550),
     F = n(375708);
-class V extends M {
+class B extends M {
     constructor() {
-        super(),
+        (super(),
             Object.assign(this.actions, {
                 CLIPS_SAVE_CLIP: (e) => {
                     let { clip: t } = e;
@@ -213,10 +213,10 @@ class V extends M {
                 RPC_SERVER_READY: () => {
                     (0, _.se)(R.Ay.getEnableAutoclipping());
                 },
-            });
+            }));
     }
     handlePostConnectionOpen() {
-        super.handlePostConnectionOpen(), (0, _.se)(R.Ay.getEnableAutoclipping());
+        (super.handlePostConnectionOpen(), (0, _.se)(R.Ay.getEnableAutoclipping()));
     }
     stores = new Map().set(o.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
@@ -274,16 +274,16 @@ class V extends M {
     }
     handleClipsInitOnGamesChange(e) {
         let t = d.Ay.getVisibleGame();
-        (0, x.yj)(),
+        ((0, x.yj)(),
             null == t ||
                 (this.prefetchRichPresenceData(t.id),
                 e.added.find((e) => e.pid === t.pid)
                     ? setTimeout(() => this.fireClipsInitEvent(), D.dV)
                     : this.fireClipsInitEvent(),
-                this.maybeOpenQuickBar());
+                this.maybeOpenQuickBar()));
     }
     prefetchRichPresenceData(e) {
-        c.I.fetchMany([e]), l.YY.fetchMany([e]);
+        (c.I.fetchMany([e]), l.YY.fetchMany([e]));
     }
     handleStreamEnded(e) {
         if (!(0, y.T)()) return;
@@ -312,7 +312,7 @@ class V extends M {
         "" !== e &&
             e !== R.he &&
             U.Fb(e)
-                .then(() => B())
+                .then(() => V())
                 .catch((e) => {
                     D.nx.error("Failed to load clips directory on connection open", e);
                 });
@@ -322,7 +322,7 @@ class V extends M {
         e && s.A.ntpClock?.start().catch(() => {});
     }
 }
-async function B() {
+async function V() {
     if (R.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
@@ -333,4 +333,4 @@ async function B() {
             D.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let H = new V();
+let H = new B();

@@ -5,7 +5,7 @@ var n = i(17928),
     a = i(477782),
     r = i(964355),
     s = i(827343),
-    d = i(49612),
+    d = i(719975),
     o = i(287809),
     u = i(824744),
     c = i(723702),
@@ -30,7 +30,7 @@ function h(t) {
                       value: (0, u.M)(h),
                       maxValue: c.isPlatformEmbedded ? g.Rv : g.HE,
                       onChange: (l) => {
-                          s.A.setLocalVolume(t, (0, u.w)(l), e), i?.(l);
+                          (s.A.setLocalVolume(t, (0, u.w)(l), e), i?.(l));
                       },
                       "aria-label": p ? v.intl.string(v.t.t4JBnI) : v.intl.string(v.t.m7TNdF),
                   }),

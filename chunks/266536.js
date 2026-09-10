@@ -23,7 +23,7 @@ var i = s(477900),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    I = s(49612),
+    I = s(719975),
     N = s(763827),
     O = s(287809),
     R = s(157257),
@@ -33,7 +33,7 @@ var i = s(477900),
     U = s(725792),
     G = s(905552),
     b = s(560595);
-s(321073), s(839272);
+(s(321073), s(839272));
 var D = s(342952),
     P = s(939249),
     F = s(834730),
@@ -194,7 +194,7 @@ function ef() {
 var eh = s(289873),
     ex = s(475735),
     ep = s(830012);
-s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
+(s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300));
 var em = s(344390),
     ej = s(742459),
     eg = s(780907);
@@ -391,7 +391,7 @@ function eP() {
                     return;
                 }
                 if ("url" in e && "" !== e.url) {
-                    s(e.url), n(!1);
+                    (s(e.url), n(!1));
                     return;
                 }
                 let t = "windowHandle" in e ? e.windowHandle : void 0;
@@ -401,7 +401,7 @@ function eP() {
                             i = ex.O.getConfig({ location: "GoLiveModalConfirmContent" }).enabled,
                             l = await e.getSingleWindowPreview(t, 960, 540, i);
                         if (null != l) {
-                            s(l.url), n(!1);
+                            (s(l.url), n(!1));
                             return;
                         }
                     } catch {}
@@ -1327,21 +1327,21 @@ function ez(e) {
 }
 function eq(e) {
     let { onSourceSelect: t } = e;
-    (0, U.jd)(),
+    ((0, U.jd)(),
         (function (e, t) {
             let { lastPickerAction: s, lastPickerError: i } = (0, u.bG)([U.Ay], () => U.Ay.getPickerState()),
                 [r, n] = l.useState(!1),
                 a = (0, ek.A)(e),
                 c = (0, ek.A)(t);
-            (0, U.XA)(),
+            ((0, U.XA)(),
                 l.useEffect(() => {
                     r
                         ? s === U.JA.Update
                             ? a.current()
                             : s === U.JA.Cancel && ((0, L.E)(), c.current())
                         : (null == s || s === U.JA.Present) && n(!0);
-                }, [r, s, a, c]);
-        })(t, eQ.FX);
+                }, [r, s, a, c]));
+        })(t, eQ.FX));
     let [{ nativeSourceType: s }, r] = eb(),
         n = (0, M.isMac)() && c().satisfies(C.A?.os.release, eV.WZ),
         a = I.Ay.getUseGamescopeCapture(),
@@ -1692,14 +1692,18 @@ function tA(e) {
             x,
         ] = eb(),
         p = (0, u.bG)([tr.Ay], () => tr.Ay.getVoiceChannelId()),
-        m = (0, u.bG)([$.A, tl.A], () => {
-            if (null == p) return !0;
-            let e = $.A.getChannel(p),
-                t = e?.guild_id;
-            if (null == t) return !0;
-            let s = tl.A.getMemberCount(t);
-            return null == s || (s > eV.oe && s <= eV.G1);
-        }, [p]),
+        m = (0, u.bG)(
+            [$.A, tl.A],
+            () => {
+                if (null == p) return !0;
+                let e = $.A.getChannel(p),
+                    t = e?.guild_id;
+                if (null == t) return !0;
+                let s = tl.A.getMemberCount(t);
+                return null == s || (s > eV.oe && s <= eV.G1);
+            },
+            [p],
+        ),
         j = to(),
         [g, v] = tp(eO.jQ.PRESET_VIDEO) ?? [eO.on.RESOLUTION_720, eO.kn.FPS_30],
         [S, C] = tp(eO.jQ.PRESET_DOCUMENTS) ?? [eO.on.RESOLUTION_SOURCE, eO.kn.FPS_15],
@@ -2132,8 +2136,8 @@ function tJ(e) {
             let d = (0, u.bG)([I.Ay], () => I.Ay.getInputDeviceId()),
                 f = w.uh.useSetting() ?? !1,
                 h = w.wv.useSetting() ?? !1;
-            (n in eO.jQ && (n !== eO.jQ.PRESET_AUTO || r)) || (n = eO.jQ.PRESET_VIDEO),
-                (0, eN.A)(eO.jQ.PRESET_CUSTOM, a, c, t, s) || ((a = eO.on.RESOLUTION_720), (c = eO.kn.FPS_30));
+            ((n in eO.jQ && (n !== eO.jQ.PRESET_AUTO || r)) || (n = eO.jQ.PRESET_VIDEO),
+                (0, eN.A)(eO.jQ.PRESET_CUSTOM, a, c, t, s) || ((a = eO.on.RESOLUTION_720), (c = eO.kn.FPS_30)));
             let [x, p] = l.useReducer(eU, {
                 ...eM,
                 muteStreamAudio: !o,
@@ -2148,12 +2152,12 @@ function tJ(e) {
             });
             return (
                 l.useEffect(() => {
-                    e_.A.hasPermission(eR.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
+                    (e_.A.hasPermission(eR.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
                         p({ type: "set_has_permission", value: e }),
                     ),
                         C.A.window.getMediaSourceId?.().then((e) => {
                             p({ type: "set_discord_source_id", sourceId: e ?? "" });
-                        });
+                        }));
                 }, []),
                 { state: x, dispatch: p }
             );
@@ -2179,7 +2183,7 @@ function tJ(e) {
             return (
                 o(),
                 () => {
-                    (r.current += 1), i.stop();
+                    ((r.current += 1), i.stop());
                 }
             );
         }, [t, n, e, s]);
@@ -2195,12 +2199,12 @@ function tJ(e) {
                 { name: ec.intl.string(ec.t.tHoi7u), value: d.fS.WINDOW, icon: h.W },
                 { name: ec.intl.string(ec.t.MhJ43A), value: d.fS.CAMERA, icon: x.VideoIcon },
             ];
-            return k || e.splice(1, 0, { name: ec.intl.string(ec.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e;
+            return (k || e.splice(1, 0, { name: ec.intl.string(ec.t.slM8rG), value: d.fS.SCREEN, icon: p.k }), e);
         }, [k]),
         { sourceType: K } = B,
         ee = l.useCallback(
             async (e) => {
-                w.wv.updateSetting(B.notifyFriends), w.uh.updateSetting(B.hidePreview);
+                (w.wv.updateSetting(B.notifyFriends), w.uh.updateSetting(B.hidePreview));
                 let [s, i] = await (0, b.A)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: B.preset,
                     fps: B.fps,
@@ -2212,9 +2216,9 @@ function tJ(e) {
                     analyticsLocations: H,
                 });
                 if (s) return t();
-                "no permission" === i &&
+                ("no permission" === i &&
                     v.A.show({ title: ec.intl.string(ec.t["X+mXeq"]), body: ec.intl.string(ec.t.MIJCzr) }),
-                    t();
+                    t());
             },
             [t, B, H],
         );

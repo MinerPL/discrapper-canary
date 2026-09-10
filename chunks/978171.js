@@ -21,7 +21,7 @@ var i = n(477900),
     _ = n(135286),
     N = n(229659),
     T = n(885386),
-    v = n(49612),
+    v = n(719975),
     M = n(174459),
     y = n(975571),
     D = n(917592),
@@ -37,7 +37,7 @@ let P = function (e) {
     }, []);
     let r = (0, l.useCallback)(() => {
             let { closePopout: t } = e;
-            null != t && t(), C.ho();
+            (null != t && t(), C.ho());
         }, [e]),
         s = (0, l.useCallback)(() => {
             "idle" === t &&
@@ -48,7 +48,7 @@ let P = function (e) {
                     rtc_connection_id: o.A.getRTCConnectionId() ?? null,
                 }),
                 setTimeout(() => {
-                    n("success"), setTimeout(() => n("idle"), 2e3);
+                    (n("success"), setTimeout(() => n("idle"), 2e3));
                 }, 2e3));
         }, [t]),
         a = y.A.getArticleURL(R.MVz.VOICE_VIDEO_TROUBLESHOOTING),
@@ -192,7 +192,7 @@ function Y(e) {
         h = l.useCallback(() => {
             null != c &&
                 (0, F.C)(c, () => {
-                    u(!0), (0, d.k0)({ channelId: t }), setTimeout(() => u(!1), 2e3);
+                    (u(!0), (0, d.k0)({ channelId: t }), setTimeout(() => u(!1), 2e3));
                 });
         }, [t, c]);
     return (0, i.jsxs)("div", {

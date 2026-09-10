@@ -9,7 +9,7 @@ var i = n(435558),
     c = n(643501),
     u = n(209932),
     _ = n(280450),
-    E = n(49612),
+    E = n(719975),
     A = n(935208),
     h = n(594061),
     I = n(125325),
@@ -39,7 +39,7 @@ function g() {
                         null == a[n] && ((t = !0), (a[n] = i));
                     }
                 }
-                return l.w.set(T(_.default.getId()), !0), t;
+                return (l.w.set(T(_.default.getId()), !0), t);
             },
             h.Sb.AUTOMATED,
         );
@@ -97,20 +97,20 @@ function O(e) {
     let { context: t, userId: n, volume: i } = e;
     if (n === _.default.getId()) return;
     let r = c.default.getRemoteSessionId();
-    null != r && N(r, n, t, { muted: E.Ay.isLocalMute(n, t), volume: i }), (0, I.gq)(t, n, { volume: i }), S();
+    (null != r && N(r, n, t, { muted: E.Ay.isLocalMute(n, t), volume: i }), (0, I.gq)(t, n, { volume: i }), S());
 }
 function R(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var i;
-        (i = E.Ay.isLocalMute(n, t)), (0, I.gq)(t, n, { muted: i }), S.cancel(), C();
+        ((i = E.Ay.isLocalMute(n, t)), (0, I.gq)(t, n, { muted: i }), S.cancel(), C());
     }
 }
 function L(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var i;
-        (i = u.A.isLocalSoundboardMuted(n)), (0, I.gq)(t, n, { soundboardMuted: i }), S.cancel(), C();
+        ((i = u.A.isLocalSoundboardMuted(n)), (0, I.gq)(t, n, { soundboardMuted: i }), S.cancel(), C());
     }
 }
 function y(e) {
@@ -118,7 +118,7 @@ function y(e) {
     h.wc.updateAsync(
         "audioContextSettings",
         (e) => {
-            (e.user = {}), (e.stream = {});
+            ((e.user = {}), (e.stream = {}));
         },
         h.Sb.INFREQUENT_USER_ACTION,
     );

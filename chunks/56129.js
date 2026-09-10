@@ -1,4 +1,4 @@
-n.d(t, { Mp: () => V, gE: () => F, ll: () => B, tM: () => H });
+n.d(t, { Mp: () => B, gE: () => F, ll: () => V, tM: () => H });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -25,7 +25,7 @@ var r = n(503698),
     O = n(128286),
     R = n(80051),
     L = n(970636),
-    y = n(49612),
+    y = n(719975),
     D = n(646865),
     v = n(795816),
     b = n(104171),
@@ -60,12 +60,12 @@ function F(e) {
         w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
         k = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
         F = !1 === (k?.disabled ?? !0),
-        V = (0, _.A)([n])[0],
-        B = (0, h.Ay)(t),
+        B = (0, _.A)([n])[0],
+        V = (0, h.Ay)(t),
         H = (0, T.A)(t),
         { parentAnalyticsLocation: j } = (0, u.Ay)();
     function W(e) {
-        (0, A.X)(j, A.O.CAMERA, e), c.A.setVideoEnabled(e);
+        ((0, A.X)(j, A.O.CAMERA, e), c.A.setVideoEnabled(e));
     }
     return (0, i.jsxs)("div", {
         className: x._v,
@@ -77,7 +77,7 @@ function F(e) {
                 className: x.K1,
                 children: (0, i.jsx)(S.X, {
                     idle: d,
-                    title: V?.name ?? B ?? "",
+                    title: B?.name ?? V ?? "",
                     onJumpToChannel: o,
                     preventIdleComponent: g.A,
                 }),
@@ -126,13 +126,13 @@ function F(e) {
                                       className: G.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: function () {
-                                          (0, A.X)(j, A.O.POPOUT, !0),
+                                          ((0, A.X)(j, A.O.POPOUT, !0),
                                               null != t &&
                                                   (0, M.A)({
                                                       onConfirm: async () => {
-                                                          await (0, v.od)(n, t.id), p.openChannelCallPopout(t);
+                                                          (await (0, v.od)(n, t.id), p.openChannelCallPopout(t));
                                                       },
-                                                  });
+                                                  }));
                                       },
                                       onClosePopout: U.FX,
                                   }),
@@ -144,7 +144,7 @@ function F(e) {
         ],
     });
 }
-function V(e) {
+function B(e) {
     let {
             channel: t,
             applicationId: n,
@@ -190,7 +190,7 @@ function V(e) {
         ],
     });
 }
-function B(e) {
+function V(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: r } = e;
     return r ? (0, i.jsx)(R.A, { channelId: t, isParticipantsOpen: n, className: G.N9 }) : null;
 }

@@ -22,7 +22,7 @@ var l = t(477900),
     b = t(616356),
     G = t(280450),
     _ = t(734057),
-    j = t(49612),
+    j = t(719975),
     w = t(287809),
     O = t(810412),
     V = t(761661),
@@ -79,21 +79,21 @@ function y(e) {
                       label: y,
                       action: M
                           ? function () {
-                                (0, h.vN)((0, m._z)(B)),
+                                ((0, h.vN)((0, m._z)(B)),
                                     (0, O.YX)(T.uss.GO_LIVE, {
                                         type: O.Z5.GO_LIVE,
                                         value: O.IP.DISABLED,
                                         userId: B.ownerId,
-                                    });
+                                    }));
                             }
                           : function () {
-                                I.default.selectVoiceChannel(B.channelId),
+                                (I.default.selectVoiceChannel(B.channelId),
                                     (0, h.A9)(B),
                                     (0, O.YX)(T.uss.GO_LIVE, {
                                         type: O.Z5.GO_LIVE,
                                         value: O.IP.ENABLED,
                                         userId: B.ownerId,
-                                    });
+                                    }));
                             },
                   })),
         F =
@@ -161,7 +161,7 @@ function y(e) {
                 [e.ownerId],
             );
             function t(t) {
-                (0, V.Qp)(e, t), n();
+                ((0, V.Qp)(e, t), n());
             }
             let s = (0, V.f4)(e);
             return (0, l.jsx)(a.aK, {
@@ -185,12 +185,12 @@ function y(e) {
                 id: "fit",
                 label: D.intl.string(D.t.mpnvrV),
                 action: function () {
-                    (0, V.CZ)(B, Y === x.$.CONTAIN ? x.$.COVER : x.$.CONTAIN),
+                    ((0, V.CZ)(B, Y === x.$.CONTAIN ? x.$.COVER : x.$.CONTAIN),
                         (0, O.YX)(T.uss.GO_LIVE, {
                             type: O.Z5.GO_LIVE,
                             value: O.IP.SETTING_ADJUSTED,
                             userId: B.ownerId,
-                        });
+                        }));
                 },
                 checked: Y === x.$.COVER,
             }));

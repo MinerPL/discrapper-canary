@@ -16,7 +16,7 @@ class I {
     _report;
     _pids;
     constructor() {
-        (this._report = {
+        ((this._report = {
             soundshare_attach_requested_count: 0,
             soundshare_capturing_count: 0,
             soundshare_capture_stopped_count: 0,
@@ -45,12 +45,12 @@ class I {
             soundshare_first_session: null,
             soundshare_last_session: null,
         }),
-            (this._pids = new Set());
+            (this._pids = new Set()));
     }
     traceEvent(e, t) {
         let n,
             i = this._report;
-        void 0 !==
+        (void 0 !==
         i[
             (n =
                 "soundshare_state_transition" === t.type
@@ -65,7 +65,7 @@ class I {
                 this._pids.add(t.pid)),
             null != e &&
                 (null == i.soundshare_first_session && (i.soundshare_first_session = e),
-                (i.soundshare_last_session = e));
+                (i.soundshare_last_session = e)));
     }
     getStats() {
         return { ...this._report, soundshare_unique_pids: this._pids.size };
@@ -80,7 +80,7 @@ var f = n(915725),
     N = n(280450),
     C = n(734057),
     O = n(877717),
-    R = n(49612),
+    R = n(719975),
     L = n(544180),
     y = n(763827),
     D = n(873985),
@@ -105,19 +105,19 @@ class w {
     _layoutBuckets;
     _automaticQualityChanges = 0;
     constructor(e, t) {
-        (this._isSender = t), (this._statInterval = new E.IX()), (this._lastLayout = e), (this._layoutBuckets = {});
+        ((this._isSender = t), (this._statInterval = new E.IX()), (this._lastLayout = e), (this._layoutBuckets = {}));
     }
     start() {
         let { resolution: e, fps: t } = S.A.getState();
-        (this._targetResolution = e),
+        ((this._targetResolution = e),
             (this._targetFPS = t),
             this._statInterval.start(1e3, this._sampleStats),
-            (this._lastLayoutChanged = (0, _.tB)());
+            (this._lastLayoutChanged = (0, _.tB)()));
     }
     stop() {
-        this._statInterval.stop(),
+        (this._statInterval.stop(),
             (this._streamEnd = (0, _.tB)()),
-            this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3);
+            this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3));
     }
     autoQualityChange() {
         this._automaticQualityChanges += 1;
@@ -125,13 +125,13 @@ class w {
     layoutChange(e) {
         if (e === this._lastLayout || null != this._streamEnd) return;
         let t = (0, _.tB)();
-        this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1e3),
+        (this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1e3),
             this._layoutChanges++,
             (this._lastLayout = e),
-            (this._lastLayoutChanged = t);
+            (this._lastLayoutChanged = t));
     }
     _incrementLayout = (e, t) => {
-        null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += t);
+        (null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += t));
     };
     getLayout() {
         return this._lastLayout;
@@ -166,8 +166,8 @@ var G = n(652896),
     x = n(965025),
     k = n(540305);
 let F = n(815706).p;
-var V = n(731854);
-let B = 5 * M.A.Millis.SECOND;
+var B = n(731854);
+let V = 5 * M.A.Millis.SECOND;
 class H {
     streamRegion;
     streamApplication;
@@ -190,7 +190,7 @@ class H {
         goLiveModalDurationMs: a,
         analyticsLocations: s,
     }) {
-        (this.streamRegion = e),
+        ((this.streamRegion = e),
             (this.streamApplication = t),
             (this.streamApplicationHistory = [t]),
             (this.streamSourceType = n),
@@ -198,19 +198,19 @@ class H {
             (this.maxViewers = r),
             (this.goLiveModalDurationMs = a),
             (this.numViewers = r),
-            (this.analyticsLocations = s ?? []);
+            (this.analyticsLocations = s ?? []));
     }
     setActionContext(e) {
         this.actionContext = e;
     }
     updateStreamApplication(e) {
-        (this.streamApplication = e), (this.streamApplicationHistory = [...this.streamApplicationHistory, e]);
+        ((this.streamApplication = e), (this.streamApplicationHistory = [...this.streamApplicationHistory, e]));
     }
     setAnalyticsLocations(e) {
         this.analyticsLocations = e;
     }
     trackViewerCount(e) {
-        (this.maxViewers = Math.max(e, this.maxViewers)), (this.numViewers = e);
+        ((this.maxViewers = Math.max(e, this.maxViewers)), (this.numViewers = e));
     }
     setNativePickerStyleUsed(e) {
         this.nativePickerStyleUsed = e;
@@ -252,12 +252,12 @@ class j extends A.A {
     }) {
         const o = (0, G.Iy)(t),
             { guildId: d, channelId: u } = o;
-        super({
+        (super({
             userId: N.default.getId(),
             sessionId: e,
             guildId: d,
             channelId: u,
-            context: V.x.STREAM,
+            context: B.x.STREAM,
             streamServerId: n,
             streamChannelId: s,
             parentMediaSessionId: a,
@@ -277,24 +277,24 @@ class j extends A.A {
                     streamId: e,
                     rtcServerId: t,
                     mediaEngineConnectionId: this.getMediaEngineConnectionId(),
-                    context: V.x.STREAM,
+                    context: B.x.STREAM,
                 });
             }, 200)),
             this.videoStreamStats.start(),
-            this.initializeEvents();
+            this.initializeEvents());
     }
     get isOwner() {
         let { ownerId: e } = this.streamContext;
         return N.default.getId() === e;
     }
     destroy(e) {
-        this.videoStreamStats.stop(),
+        (this.videoStreamStats.stop(),
             this.trackVideoEndStats(e),
             this.updateVideoStreamId.cancel(),
             this.updateVideoStreamId(null, null),
             this.updateVideoStreamId.flush(),
             this.errorTimer.stop(),
-            super.destroy();
+            super.destroy());
     }
     streamUpdate(e) {
         let t = this._videoQuality;
@@ -338,8 +338,8 @@ class j extends A.A {
     }
     initializeEvents() {
         let e = !1;
-        this.on(h.q.State, (e, t, n) => {
-            c.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
+        (this.on(h.q.State, (e, t, n) => {
+            (c.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
                 e === P.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         d.yq.ScreenshareFinish,
@@ -399,7 +399,7 @@ class j extends A.A {
                                     desktop_capturer_type: I,
                                     media_session_id: G,
                                     rtc_connection_id: x,
-                                    context: V.x.STREAM,
+                                    context: B.x.STREAM,
                                     activity: f,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
@@ -448,7 +448,7 @@ class j extends A.A {
                         let t = R.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
-                                this.errorTimer.start(B, () => {
+                                this.errorTimer.start(V, () => {
                                     c.h.dispatch({
                                         type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                         errorMessage: "Sound Hook Failed",
@@ -557,7 +557,7 @@ class j extends A.A {
                     }),
                     this._connection?.on(d.yq.Destroy, () => {
                         this.errorTimer.stop();
-                    }));
+                    })));
         }),
             this.on(h.q.Video, (t, n, i, r, a) => {
                 let s = (0, G.Iy)(this.streamKey);
@@ -584,13 +584,13 @@ class j extends A.A {
             }),
             this.on(h.q.RosterMapUpdate, (e) => {
                 c.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
-            });
+            }));
     }
     reportSoundshareFailure(e, t, n, i) {
         let r = e?.soundshareSession ?? "";
         null == this.soundshareFailuresReported[r] && (this.soundshareFailuresReported[r] = new Set());
         let a = null != t && !this.soundshareFailuresReported[r].has(t);
-        a && this.soundshareFailuresReported[r].add(t),
+        (a && this.soundshareFailuresReported[r].add(t),
             (null == t || a) &&
                 v.default.track(P.HAw.SOUNDSHARE_FAILED, {
                     soundshare_failure_code: t,
@@ -598,7 +598,7 @@ class j extends A.A {
                     soundshare_failure_will_retry: i,
                     ...(0, k.A)(e),
                     ...this.getSoundshareAnalyticsProperties(),
-                });
+                }));
     }
     getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
@@ -611,7 +611,7 @@ class j extends A.A {
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
             sender_user_id: r,
-            context: V.x.STREAM,
+            context: B.x.STREAM,
             guild_id: a,
             stream_region: e,
             stream_source_type: n,
@@ -655,12 +655,12 @@ class j extends A.A {
             a = null,
             s = this._videoQuality;
         if (null == s) return;
-        (r = s.getNetworkStats()),
-            (a = this.isOwner ? s.getCodecUsageStats("streamer", this.userId) : s.getCodecUsageStats("receiver", i));
+        ((r = s.getNetworkStats()),
+            (a = this.isOwner ? s.getCodecUsageStats("streamer", this.userId) : s.getCodecUsageStats("receiver", i)));
         let l = f.Ay.getSettings(),
             o = this.isOwner ? { clips_enabled: (0, p.T)(), clips_buffer_length: l.clipsLength } : {},
             d = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
-        s.getOutboundStats().forEach((t) => {
+        (s.getOutboundStats().forEach((t) => {
             (t.num_frames ?? 0) > 0 &&
                 v.default.track(P.HAw.VIDEO_STREAM_ENDED, {
                     ...a,
@@ -705,7 +705,7 @@ class j extends A.A {
                         hardware_enabled: R.Ay.getHardwareEncoding(),
                         device_performance_class: this.isOwner ? (0, T.A)() : null,
                     });
-            });
+            }));
     }
     getExtraConnectionOptions() {
         return { streamUserId: (0, G.Iy)(this.streamKey).ownerId };
@@ -734,9 +734,9 @@ var W = n(834757),
     K = n(723702),
     $ = n(290863),
     z = n(325278);
-let q = {},
+let X = {},
+    q = {},
     Z = {},
-    X = {},
     Q = {},
     J = {},
     ee = {},
@@ -744,7 +744,7 @@ let q = {},
     en = {};
 function ei() {
     l().forEach(en, (e, t) => {
-        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete en[t], delete ee[t];
+        (e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete en[t], delete ee[t]);
     });
 }
 function er() {
@@ -827,10 +827,10 @@ let es = new ea(
         ? {}
         : {
               CONNECTION_OPEN: function (e) {
-                  (i = e.sessionId), ei();
+                  ((i = e.sessionId), ei());
               },
               CONNECTION_CLOSED: function () {
-                  (i = null), ei();
+                  ((i = null), ei());
               },
               RTC_CONNECTION_STATE: er,
               RTC_CONNECTION_PING: er,
@@ -873,19 +873,19 @@ let es = new ea(
                       } = e,
                       E = (0, G._z)({ streamType: t, guildId: n, channelId: i, ownerId: N.default.getId() });
                   if (
-                      ((q[E] = { appContext: r, analyticsLocations: _ }),
+                      ((X[E] = { appContext: r, analyticsLocations: _ }),
                       l().forEach(en, (e) => {
                           let { analyticsContext: t, isOwner: n } = e;
-                          t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart();
+                          (t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart());
                       }),
                       null == a && (a = o),
                       (Q[E] = s),
-                      (X[E] = a),
+                      (Z[E] = a),
                       null != a)
                   ) {
                       let e = u.Ay.getGameForPID(a);
-                      null != e &&
-                          (Z[E] = {
+                      (null != e &&
+                          (q[E] = {
                               name: e.name,
                               id: e.id,
                               exe: e.exeName,
@@ -893,30 +893,30 @@ let es = new ea(
                               sku: e.sku,
                               gameMetadata: e.gameMetadata,
                           }),
-                          en[E]?.analyticsContext.updateStreamApplication(Z[E]);
+                          en[E]?.analyticsContext.updateStreamApplication(q[E]));
                   } else en[E]?.analyticsContext.updateStreamApplication(null);
                   null != c ? (J[E] = c) : delete J[E];
               },
               STREAM_STOP: function (e) {
                   let { appContext: t, streamKey: n } = e;
-                  (q[n] = { appContext: t, analyticsLocations: void 0 }),
+                  ((X[n] = { appContext: t, analyticsLocations: void 0 }),
                       l().forEach(en, (e) => {
                           let { analyticsContext: n, isOwner: i } = e;
-                          n.setActionContext(t), i && n.trackEnd();
+                          (n.setActionContext(t), i && n.trackEnd());
                       }),
                       (Q[n] = null),
-                      (X[n] = null),
-                      delete J[n];
+                      (Z[n] = null),
+                      delete J[n]);
               },
               STREAM_CREATE: function (e) {
                   let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: s, viewerIds: l } = e,
                       o = en[t],
                       d = (0, G.Iy)(t);
                   if (null == o && null != n) {
-                      null == X[t] && (Z[t] = null), null == Z[t] && null == Q[t] && (Z[t] = (0, W.Ee)(d, $.A));
+                      (null == Z[t] && (q[t] = null), null == q[t] && null == Q[t] && (q[t] = (0, W.Ee)(d, $.A)));
                       let e = new H({
                           streamRegion: s,
-                          streamApplication: Z[t],
+                          streamApplication: q[t],
                           streamSourceType: (function (e) {
                               if (null == e) return "unknown";
                               if (K.isPlatformEmbedded || platform?.name === "Chrome") {
@@ -929,12 +929,12 @@ let es = new ea(
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
                           })(Q[t]),
-                          actionContext: q[t]?.appContext,
+                          actionContext: X[t]?.appContext,
                           numViewers: null != l ? l.length : 0,
                           goLiveModalDurationMs: J[t],
-                          analyticsLocations: q[t]?.analyticsLocations,
+                          analyticsLocations: X[t]?.analyticsLocations,
                       });
-                      a()(null != i, "Creating RTCConnection without session."),
+                      (a()(null != i, "Creating RTCConnection without session."),
                           (o = new j({
                               sessionId: i,
                               streamKey: t,
@@ -944,13 +944,13 @@ let es = new ea(
                               analyticsContext: e,
                               parentMediaSessionId: y.A.getMediaSessionId(),
                           })),
-                          (en[t] = o);
+                          (en[t] = o));
                   }
-                  delete ee[t],
+                  (delete ee[t],
                       c.h.dispatch({
                           type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                           mediaEngineConnectionId: o.getMediaEngineConnectionId(),
-                      });
+                      }));
               },
               STREAM_SERVER_UPDATE: function (e) {
                   let t = en[e.streamKey];
@@ -961,22 +961,22 @@ let es = new ea(
                   let { streamKey: t, viewerIds: n, paused: i } = e,
                       r = en[t];
                   if (null == r) return !1;
-                  null != n && r.analyticsContext.trackViewerCount(n.length), r.streamUpdate(i);
+                  (null != n && r.analyticsContext.trackViewerCount(n.length), r.streamUpdate(i));
               },
               STREAM_DELETE: function (e) {
                   let { streamKey: t } = e,
                       n = en[t];
                   if (null == n) return !1;
-                  c.h.dispatch({
+                  (c.h.dispatch({
                       type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                       mediaEngineConnectionId: n.getMediaEngineConnectionId(),
                   }),
                       n.destroy("stream-end"),
-                      delete en[t];
+                      delete en[t]);
               },
               STREAM_LAYOUT_UPDATE: function (e) {
                   let { layout: t } = e;
-                  (et = t), Object.values(en).forEach((e) => e.layoutChange(t));
+                  ((et = t), Object.values(en).forEach((e) => e.layoutChange(t)));
               },
               VIDEO_SIZE_UPDATE: function (e) {
                   let { streamId: t, dimensions: n, zoom: i } = e;

@@ -6,7 +6,7 @@ var r = n(192308),
     s = n(327649),
     l = n(734057),
     o = n(71393),
-    d = n(49612),
+    d = n(719975),
     c = n(287809),
     u = n(723702),
     _ = n(753070);
@@ -65,11 +65,11 @@ function E(e, t, E) {
             )
                 ? { width: 1920, height: 1080 }
                 : { width: 1280, height: 720 };
-        (0, a.Xd)({ preset: _.jQ.PRESET_CUSTOM, resolution: i.height, frameRate: _.kn.FPS_30, soundshareEnabled: !0 }),
+        ((0, a.Xd)({ preset: _.jQ.PRESET_CUSTOM, resolution: i.height, frameRate: _.kn.FPS_30, soundshareEnabled: !0 }),
             d.Ay.getMediaEngine()
                 .getDesktopSource(i, !0)
                 .then((n) => {
                     (0, a.XI)(e, t, { pid: null, sourceId: n, sourceName: null, analyticsLocations: E });
-                });
+                }));
     }
 }
