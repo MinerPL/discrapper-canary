@@ -18,7 +18,6 @@
 .overlayHeader__0a5bd {
     border-radius: 3px;
     overflow: hidden;
-    pointer-events: none;
     position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -26,6 +25,7 @@
     width: 100%
 }
 
+.overlayHeader__0a5bd,
 .overlayHeader__0a5bd.isFullscreen__0a5bd>* {
     pointer-events: none
 }
@@ -596,4 +596,4 @@
     border-inline-start: 1px solid var(--border-subtle)
 }
 
-/*# sourceMappingURL=911680.eab086ca3ea96bd8.css.map*/
+/*# sourceMappingURL=911680.cea30151b4319535.css.map*/

@@ -443,7 +443,7 @@ var eQ = n(294002),
 let e1 = "ForLaterPopout",
     e3 = "Bookmarks",
     e2 = "Reminders";
-function e7(e) {
+function e8(e) {
     let { closePopout: t, type: n } = e,
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yf.ALL,
@@ -532,7 +532,7 @@ function e7(e) {
                                       ...l,
                                       children: s.map((e) =>
                                           (0, a.jsx)(
-                                              e8,
+                                              e7,
                                               { savedMessage: e, closePopout: t, throttledNow: x },
                                               e.saveData.messageId,
                                           ),
@@ -551,7 +551,7 @@ function e7(e) {
               }),
           });
 }
-function e8(e) {
+function e7(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         l = (0, ev.vr)(t),
         r = i.useCallback(
@@ -904,7 +904,7 @@ function tO(e) {
 var tF = n(435558),
     tG = n.n(tF),
     tP = n(749314),
-    tw = n(74445),
+    tw = n(3900),
     tK = n(311283),
     tU = n(717421),
     tH = n(933832),
@@ -1009,8 +1009,8 @@ function t3(e) {
     });
 }
 var t2 = n(350527),
-    t7 = n(218152),
-    t8 = n(970278),
+    t8 = n(218152),
+    t7 = n(970278),
     t6 = n(747926),
     t4 = n(935208),
     t5 = n(37411),
@@ -1018,9 +1018,9 @@ var t2 = n(350527),
 function ne(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, j.yK)(
-            [t8.A, Q.A],
+            [t7.A, Q.A],
             () =>
-                tG()(t8.A.getThreadsForParent(n.guild_id, n.id))
+                tG()(t7.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -1062,7 +1062,7 @@ function ne(e) {
             className: t9.k,
             children: l.map((e) =>
                 (0, a.jsx)(
-                    t7.Cp,
+                    t8.Cp,
                     { channel: n, children: (0, a.jsx)(t2.Ay, { className: t9.u, threadId: e.id, goToThread: r }) },
                     e.id,
                 ),
@@ -1298,7 +1298,7 @@ class n0 extends nF.EventEmitter {
             case "nsfw":
                 return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
             case "forum": {
-                let t = t8.A.hasLoaded(e.guildId);
+                let t = t7.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
             default:
@@ -1405,7 +1405,7 @@ class n0 extends nF.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = t8.A.hasLoaded(e.guildId);
+                let t = t7.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -1567,8 +1567,8 @@ function n2(e, t, n, s) {
             if (en.Ay.getMentionCount(t) > 0) return en.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = t4.default.extractTimestamp(n);
-                if (Date.now() - e > n8) return 8;
-                if (Date.now() - e > n7) return 6;
+                if (Date.now() - e > n7) return 8;
+                if (Date.now() - e > n8) return 6;
             }
             if (s.isThread()) {
                 let e = (0, nB.l)(s);
@@ -1588,8 +1588,8 @@ function n2(e, t, n, s) {
           ? t.push({ ...o, type: "forum" })
           : t.push({ ...o, type: "messages", messages: [] });
 }
-let n7 = 2 * ej.A.Millis.DAY,
-    n8 = 10 * ej.A.Millis.DAY;
+let n8 = 2 * ej.A.Millis.DAY,
+    n7 = 10 * ej.A.Millis.DAY;
 var n6 = n(743373);
 let n4 = { left: 4, right: -12 },
     n5 = [ez.lAJ.THREAD_CREATED];
@@ -1867,8 +1867,8 @@ function sr(e) {
                 ),
                 i.useEffect(
                     () => (
-                        t8.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                        () => t8.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                        t7.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                        () => t7.A.removeChangeListener(t.handleActiveThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -2719,9 +2719,9 @@ function sZ(e) {
                         s === o.Y2.MENTIONS
                             ? (0, a.jsx)(sv, { onJump: r })
                             : A && s === o.Y2.BOOKMARKS
-                              ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
+                              ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
                               : A && s === o.Y2.REMINDERS
-                                ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
+                                ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
                                 : s === o.Y2.SCHEDULED
                                   ? (0, a.jsx)(sJ, { onJump: r })
                                   : (0, a.jsx)(sr, { onJump: r, showTutorial: g, setSeenTutorial: x, closePopout: i }),

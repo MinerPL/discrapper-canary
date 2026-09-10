@@ -4,6 +4,7 @@
     overflow-x: auto;
     padding: .5em;
     -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
     text-size-adjust: none;
     background: var(--background-base-lower);
     color: var(--text-code)
@@ -127,4 +128,4 @@
     color: var(--text-code-deletion)
 }
 
-/*# sourceMappingURL=189423.af2f7f677928e0a3.css.map*/
+/*# sourceMappingURL=189423.2456c3a3f78abe6b.css.map*/

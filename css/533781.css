@@ -142,10 +142,7 @@
     justify-content: flex-start
 }
 
-.accessory__09bc1:hover {
-    color: var(--interactive-text-hover)
-}
-
+.accessory__09bc1:hover,
 .accessory__09bc1:hover .accessoryText__09bc1 {
     color: var(--interactive-text-hover)
 }
@@ -154,4 +151,4 @@
     color: var(--interactive-text-default)
 }
 
-/*# sourceMappingURL=533781.08a86a6a051991ee.css.map*/
+/*# sourceMappingURL=533781.6e4bf03a96d39564.css.map*/

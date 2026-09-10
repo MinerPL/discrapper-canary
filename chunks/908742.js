@@ -428,7 +428,7 @@ let eZ = i.memo(function (e) {
         ],
     });
 });
-var e0 = s(74445);
+var e0 = s(3900);
 function e1(e, t, s) {
     if (null != s) {
         if (e) {
@@ -443,9 +443,9 @@ function e1(e, t, s) {
     }
 }
 var e8 = s(440703),
-    e4 = s(731355),
-    e2 = s(621466),
-    e3 = s(717421),
+    e2 = s(731355),
+    e3 = s(621466),
+    e4 = s(717421),
     e7 = s(939249),
     e6 = s(259678),
     e5 = s(508770),
@@ -502,9 +502,9 @@ function tj(e) {
         );
     i.useEffect(() => {
         let e = l.current;
-        (0, e2.vq)(e, HTMLVideoElement) && (a ? ((e.currentTime = 0), e.play().catch(tg.tE)) : e.pause());
+        (0, e3.vq)(e, HTMLVideoElement) && (a ? ((e.currentTime = 0), e.play().catch(tg.tE)) : e.pause());
     }, [a]);
-    let { hoverSpring: c } = (0, e3.z)({ hoverSpring: +!!a, config: e0.config.gentle }),
+    let { hoverSpring: c } = (0, e4.z)({ hoverSpring: +!!a, config: e0.config.gentle }),
         d = i.useCallback(() => {
             (0, eo._Q)(
                 { adContentId: t.id, adCreativeType: m.p.QUEST_HOME_HERO, cta: t.cta },
@@ -585,7 +585,7 @@ function tS(e) {
         );
     i.useEffect(() => {
         let e = u.current;
-        (0, e2.vq)(e, HTMLVideoElement) && (c ? ((e.currentTime = 0), e.play().catch(tg.tE)) : e.pause());
+        (0, e3.vq)(e, HTMLVideoElement) && (c ? ((e.currentTime = 0), e.play().catch(tg.tE)) : e.pause());
     }, [c]);
     let E = i.useCallback(() => {
             (0, eo._Q)(
@@ -611,7 +611,7 @@ function tS(e) {
     i.useLayoutEffect(() => {
         v();
     }, [v]);
-    let { topFade: _, bottomFade: j } = (0, e3.z)({
+    let { topFade: _, bottomFade: j } = (0, e4.z)({
             topFade: +!!x.top,
             bottomFade: +!!x.bottom,
             config: { ...e0.config.gentle, duration: 100 },
@@ -783,7 +783,7 @@ function tC(e) {
                 [t, T, l, s.id],
             ),
         ),
-        { hoverSpring: R } = (0, e3.z)({ hoverSpring: +!!O, config: e0.config.gentle }),
+        { hoverSpring: R } = (0, e4.z)({ hoverSpring: +!!O, config: e0.config.gentle }),
         b = i.useCallback(() => {
             n(s.id),
                 (0, en.E5)(en.kI.STEP_2_CLICKED_INTERNAL, "quest_home_hero_shelf_cards")
@@ -883,7 +883,7 @@ function tC(e) {
                                     gap: 4,
                                     fullWidth: !1,
                                     children: [
-                                        (0, tE.pv)(s.config) === e4.Z.VIDEO
+                                        (0, tE.pv)(s.config) === e2.Z.VIDEO
                                             ? (0, r.jsx)(tt.S, { size: "xs", color: ek.A.colors.ICON_MUTED.css })
                                             : (0, r.jsx)(ts.GameControllerIcon, {
                                                   size: "xs",
@@ -1545,20 +1545,20 @@ let tZ = function (e) {
 var t0 = s(364522),
     t1 = s(761508),
     t8 = s(425069);
-function t4() {
+function t2() {
     return (0, r.jsx)("div", { className: t8.y });
 }
-var t2 = s(834615),
-    t3 = s(34665);
+var t3 = s(834615),
+    t4 = s(34665);
 let t7 = function (e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
-            className: t3.B0,
+            className: t4.B0,
             children: [
                 (0, r.jsx)(eE.D, {
-                    className: t3.R_,
+                    className: t4.R_,
                     variant: "heading-md/semibold",
                     children: ew.intl.string(ew.t.L2mlUb),
                 }),
@@ -1571,7 +1571,7 @@ let t7 = function (e) {
                             ref: (t) => {
                                 e.current = t;
                             },
-                            children: (0, r.jsx)(t2.default, { quest: t }),
+                            children: (0, r.jsx)(t3.default, { quest: t }),
                         }),
                 }),
             ],
@@ -1585,7 +1585,7 @@ var t6 = s(242939),
 let st = function (e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
             className: t9.wp,
             children: [
@@ -1619,17 +1619,17 @@ var ss = s(322338);
 function sn(e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
-            className: t3.B0,
+            className: t4.B0,
             children: [
                 (0, r.jsx)(eE.D, {
-                    className: t3.R_,
+                    className: t4.R_,
                     variant: "heading-md/semibold",
                     children: ew.intl.string(ew.t.gWinpQ),
                 }),
                 (0, r.jsx)("div", {
-                    className: t3.YT,
+                    className: t4.YT,
                     children: (0, r.jsx)(ss.A, {
                         channelId: "preview-channel-id",
                         previewQuest: t,
@@ -1645,9 +1645,9 @@ var sl = s(711038),
 let si = function (e) {
     let { questId: t } = e;
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
-            className: t3.B0,
+            className: t4.B0,
             children: [
                 (0, r.jsx)(eE.D, { variant: "heading-md/semibold", children: ew.intl.string(ew.t.IcljUu) }),
                 (0, r.jsx)("div", {
@@ -2346,23 +2346,23 @@ let s8 = i.memo(function (e) {
               children: (t) => (0, r.jsx)(s1, { ...e, quest: s, impressionRef: t }),
           });
 });
-function s4(e) {
+function s2(e) {
     let { quest: t } = e,
         { useNewTile: s } = G.aD.useConfig({ location: tN.rE.QUEST_HOME_DESKTOP });
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
-            className: t3.B0,
+            className: t4.B0,
             children: [
                 (0, r.jsx)(eE.D, {
-                    className: t3.R_,
+                    className: t4.R_,
                     variant: "heading-md/semibold",
                     children: ew.intl.string(ew.t["5wnpF3"]),
                 }),
                 s
                     ? (0, r.jsx)(su, {
                           children: (0, r.jsx)(s8, {
-                              className: t3.d,
+                              className: t4.d,
                               quest: t,
                               questContent: es.uF.QUEST_HOME_DESKTOP,
                               contentPosition: 0,
@@ -2371,7 +2371,7 @@ function s4(e) {
                           }),
                       })
                     : (0, r.jsx)(sa.Ay, {
-                          className: t3.d,
+                          className: t4.d,
                           quest: t,
                           questContent: es.uF.QUEST_HOME_DESKTOP,
                           contentPosition: 0,
@@ -2382,8 +2382,8 @@ function s4(e) {
         }),
     });
 }
-var s2 = s(97808),
-    s3 = s(778712),
+var s3 = s(97808),
+    s4 = s(778712),
     s7 = s(87664),
     s6 = s(427262),
     s5 = s(198525),
@@ -2410,9 +2410,9 @@ let ne = function (e) {
             [t, c, u],
         );
     return (0, r.jsx)("div", {
-        className: t3.x3,
+        className: t4.x3,
         children: (0, r.jsxs)("div", {
-            className: t3.B0,
+            className: t4.B0,
             children: [
                 (0, r.jsx)(eE.D, {
                     className: s9.R_,
@@ -2444,8 +2444,8 @@ let ne = function (e) {
                                     children: (0, r.jsxs)("div", {
                                         className: s9.lm,
                                         children: [
-                                            (0, r.jsx)(s2.eu, {
-                                                size: s3._3.SIZE_32,
+                                            (0, r.jsx)(s3.eu, {
+                                                size: s4._3.SIZE_32,
                                                 src: a?.getAvatarURL(void 0, 32),
                                                 status: ex.clD.ONLINE,
                                                 "aria-label": a?.username,
@@ -2484,16 +2484,16 @@ function nt(e) {
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            l("quest_bar") && (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(st, { quest: n }), (0, r.jsx)(t4, {})] }),
-            l("home_card") && (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(s4, { quest: n }), (0, r.jsx)(t4, {})] }),
+            l("quest_bar") && (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(st, { quest: n }), (0, r.jsx)(t2, {})] }),
+            l("home_card") && (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(s2, { quest: n }), (0, r.jsx)(t2, {})] }),
             l("share_embed") &&
-                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(si, { questId: n.id }), (0, r.jsx)(t4, {})] }),
+                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(si, { questId: n.id }), (0, r.jsx)(t2, {})] }),
             l("channel_call_header") &&
-                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(sn, { quest: n }), (0, r.jsx)(t4, {})] }),
+                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(sn, { quest: n }), (0, r.jsx)(t2, {})] }),
             l("members_list") &&
-                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(ne, { quest: n }), (0, r.jsx)(t4, {})] }),
+                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(ne, { quest: n }), (0, r.jsx)(t2, {})] }),
             l("activity_panel") &&
-                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(t7, { quest: n }), (0, r.jsx)(t4, {})] }),
+                (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(t7, { quest: n }), (0, r.jsx)(t2, {})] }),
         ],
     });
 }
@@ -2778,7 +2778,7 @@ let nI = i.forwardRef(function (e, t) {
         [x, f] = i.useState(null),
         [g, v] = i.useState(0),
         { useNewTile: _ } = G.aD.useConfig({ location: tN.rE.QUEST_HOME_DESKTOP }),
-        [{ highlightAnimationProgress: j }, S] = (0, e3.z)(() => ({
+        [{ highlightAnimationProgress: j }, S] = (0, e4.z)(() => ({
             highlightAnimationProgress: 1,
             config: { duration: nA },
         })),
@@ -3291,7 +3291,7 @@ function n1(e) {
     );
 }
 var n8 = s(915655);
-function n4(e) {
+function n2(e) {
     let { className: t, ...s } = e;
     return (0, r.jsxs)("div", {
         className: o()(n8.kL, t),
@@ -3308,8 +3308,8 @@ function n4(e) {
         ],
     });
 }
-var n2 = s(384343);
-function n3(e) {
+var n3 = s(384343);
+function n4(e) {
     let { questContent: t, questIds: s, rowIndex: n, sectionIdentifier: l } = e,
         { targetSectionIdentifier: a } = i.useContext(nX),
         { useNewTile: o } = G.aD.useConfig({ location: tN.rE.QUEST_HOME_DESKTOP }),
@@ -3349,7 +3349,7 @@ function n3(e) {
                 "--custom-extra-spacing-placeholder-size": "5px",
                 "--custom-quest-tile-border-radius": `${o ? "var(--radius-xl)" : "10px"}`,
             },
-            className: n2.FO,
+            className: n3.FO,
             children: [
                 s.map((e, s) =>
                     (0, r.jsx)(
@@ -3363,7 +3363,7 @@ function n3(e) {
                                       questContent: t,
                                       contentPosition: s,
                                       rowIndex: n,
-                                      className: n2.d,
+                                      className: n3.d,
                                       sourceQuestContent: t,
                                       sectionIdentifier: l,
                                   })
@@ -3373,7 +3373,7 @@ function n3(e) {
                                       questContent: t,
                                       contentPosition: s,
                                       rowIndex: n,
-                                      className: n2.d,
+                                      className: n3.d,
                                       sourceQuestContent: t,
                                       sectionIdentifier: l,
                                   }),
@@ -3381,7 +3381,7 @@ function n3(e) {
                         `animated-wrapper-${e}-${l}`,
                     ),
                 ),
-                (0, r.jsx)("div", { className: n2.fu }),
+                (0, r.jsx)("div", { className: n3.fu }),
             ],
         }),
     });
@@ -3597,7 +3597,7 @@ let ll = {
                 [C],
             );
         (0, eU.g)(E, A, [A], { fireOnMount: !0 });
-        let [{ highlightAnimationProgress: O }, I] = (0, e3.z)(() => ({
+        let [{ highlightAnimationProgress: O }, I] = (0, e4.z)(() => ({
                 highlightAnimationProgress: 1,
                 config: { duration: lr },
             })),
@@ -3659,7 +3659,7 @@ let ll = {
                 className: o()(ln.kL, l),
                 ref: E,
                 children: d
-                    ? (0, r.jsx)(n4, { role: "status", "aria-label": ew.intl.string(ew.t.ZTNur7) })
+                    ? (0, r.jsx)(n2, { role: "status", "aria-label": ew.intl.string(ew.t.ZTNur7) })
                     : c.length > 0
                       ? c.map((e, t) => {
                             let { identifier: s, questIds: n, title: l } = e;
@@ -3680,7 +3680,7 @@ let ll = {
                                                   containerWidth: S,
                                                   sectionIdentifier: s,
                                               })
-                                            : (0, r.jsx)(n3, {
+                                            : (0, r.jsx)(n4, {
                                                   questIds: n,
                                                   rowIndex: t < M ? t : t + N,
                                                   sectionIdentifier: s,

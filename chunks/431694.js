@@ -105,7 +105,7 @@ let m = {
     clipBStartSec: { label: "Clip B start (sec)", type: "number", defaultValue: 18 },
     clipBDurationSec: { label: "Clip B length (sec)", type: "number", defaultValue: 8 },
 };
-var x = a(74445),
+var x = a(3900),
     h = a(831544),
     g = a(717421),
     b = a(834730),

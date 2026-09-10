@@ -36,10 +36,7 @@
     gap: var(--space-8)
 }
 
-.buttons_effb26>:first-child {
-    flex: 1
-}
-
+.buttons_effb26>:first-child,
 .copyButtonWrapper_effb26 {
     flex: 1
 }
@@ -199,4 +196,4 @@
     border: 1px solid var(--border-strong)
 }
 
-/*# sourceMappingURL=907230.0fc2da259f8c8854.css.map*/
+/*# sourceMappingURL=907230.c7dbf97abc38594f.css.map*/
