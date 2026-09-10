@@ -23,16 +23,33 @@
     min-height: var(--control-input-height-sm)
 }
 
+.container__62663.hasError__62663,
+.container__62663.hasWarning__62663,
 .container__62663:has(.field__62663:focus),
 .container__62663:hover {
-    background-color: var(--input-background-default);
-    outline: 1px solid var(--input-border-hover);
+    background-color: var(--custom-editable-text-feedback-background, var(--input-background-default));
+    outline: 1px solid var(--custom-editable-text-feedback-border, var(--input-border-hover));
     outline-offset: -1px
 }
 
-.container__62663:has(.field__62663:focus) {
-    outline: 2px solid var(--input-border-active);
+.container__62663:has(.field__62663:focus),
+.container__62663:is(.hasError__62663, .hasWarning__62663):hover {
+    outline: 2px solid var(--custom-editable-text-feedback-border, var(--input-border-active));
     outline-offset: -2px
+}
+
+.container__62663.hasError__62663 {
+    --custom-editable-text-feedback-background: var(--input-background-error-default);
+    --custom-editable-text-feedback-border: var(--input-border-error-default)
+}
+
+.container__62663.hasError__62663 .input__62663 {
+    color: var(--input-text-error-default)
+}
+
+.container__62663.hasWarning__62663 {
+    --custom-editable-text-feedback-background: var(--background-feedback-warning);
+    --custom-editable-text-feedback-border: var(--border-feedback-warning)
 }
 
 .input__62663 {
@@ -148,10 +165,10 @@
     z-index: 1
 }
 
-.container__62663:has(.field__62663:focus) .trailing__62663,
+.container__62663:focus-within .trailing__62663,
 .container__62663:hover .trailing__62663 {
     opacity: 1;
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=aa3315d9d0324fc3.css.map*/
+/*# sourceMappingURL=082cf7e3bdf3568a.css.map*/

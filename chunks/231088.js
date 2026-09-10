@@ -1,4 +1,4 @@
-n.d(t, { RY: () => A, Ww: () => I, ZL: () => v, Zf: () => E, n4: () => j }), n(321073);
+(n.d(t, { RY: () => A, Ww: () => I, ZL: () => v, Zf: () => E, n4: () => j }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -27,7 +27,7 @@ function I(e) {
         I = l.useRef(!0),
         j = l.useRef(!1),
         A = l.useCallback(() => {
-            (I.current = !1), c(t), r("editing");
+            ((I.current = !1), c(t), r("editing"));
         }, [t]),
         E = l.useRef(o);
     l.useLayoutEffect(() => {
@@ -39,16 +39,16 @@ function I(e) {
         S = l.useCallback(() => {
             I.current || ((I.current = !0), r("done"));
         }, []);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         "done" === s && (p.current && m.current?.focus({ preventScroll: !0 }), (p.current = !1));
     }, [s]),
         l.useEffect(() => {
             let e = j.current;
-            (j.current = !1),
+            ((j.current = !1),
                 u &&
                     (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
-                    e || h.current?.focus({ preventScroll: !0 }));
-        }, [u, g]);
+                    e || h.current?.focus({ preventScroll: !0 })));
+        }, [u, g]));
     let C = l.useCallback(
             (e) => {
                 !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
@@ -62,10 +62,10 @@ function I(e) {
             [u, S],
         ),
         k = l.useCallback(() => {
-            (p.current = !0), v(), h.current?.blur();
+            ((p.current = !0), v(), h.current?.blur());
         }, [v]),
         T = l.useCallback(() => {
-            (p.current = !0), S(), h.current?.blur();
+            ((p.current = !0), S(), h.current?.blur());
         }, [S]),
         N = l.useCallback(() => {
             u || ((j.current = !0), A());
@@ -115,6 +115,7 @@ function E(e) {
         r = s ? u.E : g.WarningIcon;
     return (0, i.jsxs)(m.E, {
         id: t,
+        role: s ? "alert" : void 0,
         variant: "text-xs/normal",
         color: s ? "text-feedback-critical" : "text-feedback-warning",
         className: p.VP,
@@ -157,11 +158,11 @@ function v(e) {
         [F, W] = l.useState(!1);
     F || t === U || W(!0);
     let H = [];
-    L && H.push(R), G && "compact" !== g && H.push(_);
+    (L && H.push(R), G && "compact" !== g && H.push(_));
     let B = H.length > 0 ? H.join(" ") : void 0;
     function V() {
         let { activeElement: e } = w.current?.ownerDocument ?? document;
-        (0, a.vq)(e, HTMLElement) && e.blur(), u();
+        ((0, a.vq)(e, HTMLElement) && e.blur(), u());
     }
     let z = (0, i.jsxs)("div", {
         ref: w,
@@ -189,7 +190,7 @@ function v(e) {
                     "aria-describedby": B,
                     "aria-expanded": !1,
                     onClick: (e) => {
-                        e.stopPropagation(), V();
+                        (e.stopPropagation(), V());
                     },
                     focusProps: { ringTarget: w },
                 }),

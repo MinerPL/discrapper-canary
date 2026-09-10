@@ -14,8 +14,8 @@ function m(e) {
         { enabled: s } = c.A.useConfig({ location: "EditableTextField" });
     return (
         l.useEffect(() => {
-            t && null != n.current && n.current.setSelectionRange(n.current.value.length, n.current.value.length);
-        }, [t, n]),
+            !s && t && null != n.current && n.current.setSelectionRange(n.current.value.length, n.current.value.length);
+        }, [t, n, s]),
         { isEditing: t, inputRef: n, isInlineSurface: s, ...i }
     );
 }
@@ -82,12 +82,16 @@ function x(e) {
                   children: [
                       (0, i.jsx)(d.A, {
                           className: r()(g.u, W, { [g.N]: F }),
+                          inputRef: A,
                           value: n,
                           preview: v,
                           trailing: null != _ ? (0, i.jsx)(u.RY, { ..._ }) : void 0,
                           placeholder: S,
                           "aria-label": b,
-                          "aria-describedby": null != q ? X : void 0,
+                          error: null != z,
+                          warning: null != R,
+                          "aria-errormessage": null != z ? X : void 0,
+                          "aria-describedby": null == z && null != R ? X : void 0,
                           variant: M ?? "text-sm/normal",
                           maxLength: y,
                           multiline: Y,

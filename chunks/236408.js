@@ -1,80 +1,103 @@
-t.d(l, { A: () => d });
-var n = t(477900),
-    a = t(582128),
-    r = t(503698),
-    u = t.n(r),
-    o = t(650583),
-    s = t(523600),
-    c = t(465410),
-    i = t(736541);
-function m(e, l, t) {
-    let { length: n } = e ?? "";
-    return (null == l || n >= l) && (null == t || n <= t);
+t.d(n, { A: () => f });
+var l = t(477900),
+    r = t(582128),
+    a = t(503698),
+    u = t.n(a),
+    o = t(259678),
+    s = t(650583),
+    c = t(523600),
+    i = t(465410),
+    d = t(736541);
+function m(e, n, t) {
+    let { length: l } = e ?? "";
+    return (null == n || l >= n) && (null == t || l <= t);
 }
-function d(e) {
+function f(e) {
     let {
-            value: l,
-            onChange: t,
-            onFocus: r,
-            onBlur: d,
-            onCommit: h,
-            variant: f,
-            preview: p,
-            trailing: v,
-            multiline: b = !1,
-            matchControlHeight: g,
-            maxRows: x,
-            minLength: k,
-            className: y,
-            ...M
+            inputRef: n,
+            value: t,
+            onChange: a,
+            onFocus: f,
+            onBlur: h,
+            onCommit: v,
+            variant: p,
+            preview: g,
+            trailing: x,
+            error: b = !1,
+            warning: M = !1,
+            multiline: S = !1,
+            matchControlHeight: k,
+            maxRows: w,
+            minLength: y,
+            className: j,
+            ...C
         } = e,
-        { placeholder: S, maxLength: w } = M,
-        j = a.useRef(null),
-        [C, N] = a.useState(l),
-        [R, E] = a.useState(!1),
-        [T, A] = a.useState(l),
-        F = a.useRef(""),
-        Z = a.useRef(!1);
-    l !== T && (A(l), m(l, k, w) && N(l));
-    let B = "function" == typeof p ? p((R ? C : l) ?? "", { focused: R }) : R ? null : p,
-        V = null != B,
-        $ = u()(s.hF, { [s.c1]: b }),
-        q = {
-            ...M,
-            ref: j,
-            className: u()($, s.ZZ, { [c.yL]: b }),
-            value: C,
+        { placeholder: N, maxLength: R } = C,
+        T = r.useRef(null),
+        [E, A] = r.useState(t),
+        [F, Z] = r.useState(!1),
+        [B, D] = r.useState(t),
+        V = r.useRef(""),
+        $ = r.useRef(!1),
+        q = r.useRef(!1);
+    t !== B && (D(t), m(t, y, R) && A(t));
+    let J = "function" == typeof g ? g((F ? E : t) ?? "", { focused: F }) : F ? null : g,
+        L = null != J,
+        P = u()(c.hF, { [c.c1]: S }),
+        X = {
+            ...C,
+            ref: n,
+            "aria-invalid": b,
+            className: u()(P, c.ZZ, { [i.yL]: S }),
+            value: E,
             onKeyDown: function (e) {
-                b || e.key !== o.dh.ENTER
-                    ? e.key === o.dh.ESCAPE && (e.stopPropagation(), (Z.current = !0), j.current?.blur())
-                    : j.current?.blur();
+                S || e.key !== s.dh.ENTER
+                    ? e.key === s.dh.ESCAPE && (e.stopPropagation(), ($.current = !0), e.currentTarget.blur())
+                    : e.currentTarget.blur();
             },
             onChange: function (e) {
-                N(e.currentTarget.value), t?.(e.currentTarget.value);
+                (A(e.currentTarget.value), a?.(e.currentTarget.value));
             },
             onFocus: function (e) {
-                (F.current = e.currentTarget.value), E(!0), r?.(e);
+                let n = e.currentTarget;
+                ((V.current = n.value),
+                    Z(!0),
+                    q.current || n.setSelectionRange(n.value.length, n.value.length),
+                    f?.(e));
             },
             onBlur: function (e) {
-                E(!1),
-                    Z.current || !m(C, k, w) ? ((Z.current = !1), N(F.current), t?.(F.current)) : h?.(C ?? ""),
-                    d?.(e);
+                (Z(!1),
+                    (q.current = !1),
+                    $.current || !m(E, y, R) ? (($.current = !1), A(V.current), a?.(V.current)) : v?.(E ?? ""),
+                    h?.(e));
+            },
+            onMouseDown: function () {
+                q.current = !0;
             },
         },
-        L = null == C || "" === C,
-        P = (L ? S : C) ?? "",
-        X = V ? B : `${P}\u200b`;
-    return (0, n.jsxs)("div", {
-        className: u()(s.kL, i[f], { [s.V4]: V, [s.j9]: null != x, [s.tY]: null != g, [s.$7]: "sm" === g }, y),
+        Y = null == E || "" === E,
+        _ = (Y ? N : E) ?? "",
+        K = L ? J : `${_}\u200b`;
+    return (0, l.jsxs)("div", {
+        ref: T,
+        className: u()(
+            c.kL,
+            d[p],
+            { [c.V4]: L, [c.JD]: b, [c.xe]: M && !b, [c.j9]: null != w, [c.tY]: null != k, [c.$7]: "sm" === k },
+            j,
+        ),
         children: [
-            b ? (0, n.jsx)("textarea", { ...q, rows: 1 }) : (0, n.jsx)("input", { ...q, type: "text" }),
-            (0, n.jsx)("div", {
-                className: u()($, s.St, { [s.tb]: !V && L, [s.gO]: null != x }),
-                style: null != x ? { "--custom-editable-text-max-rows": x } : void 0,
-                "aria-hidden": "true",
-                children: X,
+            (0, l.jsx)(o.vN, {
+                ringTarget: T,
+                children: S ? (0, l.jsx)("textarea", { ...X, rows: 1 }) : (0, l.jsx)("input", { ...X, type: "text" }),
             }),
-            null != v && (0, n.jsx)("div", { className: s.ZY, children: v }),
+            (0, l.jsx)("div", {
+                className: u()(P, c.St, { [c.tb]: !L && Y, [c.gO]: null != w }),
+                style: null != w ? { "--custom-editable-text-max-rows": w } : void 0,
+                "aria-hidden": "true",
+                children: K,
+            }),
+            null != x && (0, l.jsx)("div", { className: c.ZY, children: x }),
         ],
     });
 }

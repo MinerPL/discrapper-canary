@@ -85,7 +85,7 @@
     height: auto;
     overflow-y: visible;
     padding-block: calc(var(--space-4) - 2px);
-    padding-inline: var(--space-6) calc(var(--space-32) + var(--space-6))
+    padding-inline: var(--space-6) calc(var(--space-32) + var(--space-12))
 }
 
 .editorContainer_f08f8d {
@@ -128,7 +128,7 @@
 
 .floatingEmojiButtonContainer_f08f8d.inlineEmojiButton_f08f8d {
     bottom: 0;
-    inset-inline-end: var(--space-4);
+    inset-inline-end: var(--space-6);
     max-height: calc(var(--chat-markup-line-height) + var(--space-4)*2 + 4px);
     opacity: 0;
     top: 0;
@@ -175,4 +175,4 @@
     border-color: Highlight
 }
 
-/*# sourceMappingURL=6f450fc94889a6b5.css.map*/
+/*# sourceMappingURL=986496acc77e2aa6.css.map*/
