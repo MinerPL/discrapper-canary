@@ -314,6 +314,10 @@
     background-image: linear-gradient(0deg, var(--guild-boosting-blue), var(--guild-boosting-purple))
 }
 
+.iconBackgroundBoost__94f72 {
+    background-image: linear-gradient(0deg, var(--guild-boosting-pink), var(--guild-boosting-purple))
+}
+
 .icon__94f72 {
     color: var(--white)
 }
@@ -406,4 +410,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=b7a8aff9c0aafcec.css.map*/
+/*# sourceMappingURL=dea598a83d7fae00.css.map*/

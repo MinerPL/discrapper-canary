@@ -8,6 +8,7 @@ _.exports = {
     lP: "iconBackgroundTier1__94f72 iconBackground__94f72",
     eb: "iconBackgroundTier2__94f72 iconBackground__94f72",
     xt: "iconBackgroundFractional__94f72 iconBackground__94f72",
+    bY: "iconBackgroundBoost__94f72 iconBackground__94f72",
     Kk: "icon__94f72",
     T8: "iconFractional__94f72",
     pt: "rowDetails__94f72",

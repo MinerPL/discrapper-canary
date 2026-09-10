@@ -9193,11 +9193,14 @@ function me(e) {
         children: [
             (0, A.jsx)("div", {
                 className: is()({
+                    [g4.bY]: g,
                     [g4.sr]: o.skuId === tX.pe.TIER_0,
                     [g4.lP]: o.skuId === tX.pe.TIER_1,
                     [g4.eb]: o.skuId === tX.pe.TIER_2,
                 }),
-                children: (0, A.jsx)(rQ.t, { size: "md", color: "currentColor", className: g4.Kk }),
+                children: g
+                    ? (0, A.jsx)(dl._, { size: "md", color: "currentColor", className: g4.Kk })
+                    : (0, A.jsx)(rQ.t, { size: "md", color: "currentColor", className: g4.Kk }),
             }),
             (0, A.jsxs)("div", {
                 className: g4.pt,
