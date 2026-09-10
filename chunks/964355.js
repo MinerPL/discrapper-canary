@@ -14,37 +14,39 @@ let u = r.forwardRef(function (e, t) {
             value: n,
             minValue: a = 0,
             maxValue: u = 100,
-            onChange: _,
-            onInteraction: E,
-            renderValue: A = c,
-            "aria-label": h,
+            tabIndex: _,
+            onChange: E,
+            onInteraction: A,
+            renderValue: h = c,
+            "aria-label": I,
         } = e,
-        I = r.useRef(null),
-        f = r.useMemo(() => s().debounce(() => E?.(l.Q.SLIDER), 100), [E]);
+        f = r.useRef(null),
+        p = r.useMemo(() => s().debounce(() => A?.(l.Q.SLIDER), 100), [A]);
     return (
         r.useImperativeHandle(
             t,
-            () => ({ focus: () => I.current?.focus(), blur: () => I.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
             [],
         ),
         (0, i.jsx)("div", {
             className: d.x,
             children: (0, i.jsx)(o.A, {
-                ref: I,
+                ref: f,
                 mini: !0,
                 handleSize: 16,
                 className: d.a,
                 initialValue: n,
                 minValue: a,
                 maxValue: u,
+                tabIndex: _,
                 onValueChange: function (e) {
-                    _(e), f();
+                    (E(e), p());
                 },
-                asValueChanges: _,
-                onValueRender: A,
+                asValueChanges: E,
+                onValueRender: h,
                 orientation: "horizontal",
                 consumeAxisOnly: !0,
-                "aria-label": h,
+                "aria-label": I,
             }),
         })
     );
