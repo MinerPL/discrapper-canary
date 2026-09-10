@@ -1,7 +1,7 @@
 _.exports = {
     Up: "view__90a68",
-    wx: "header__90a68",
     f$: "timeLeft__90a68",
+    qr: "footer__90a68",
     CZ: "tableContainer__90a68",
     tp: "table__90a68",
     e4: "headerCell__90a68",

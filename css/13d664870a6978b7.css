@@ -78,16 +78,31 @@
 }
 
 .header__535da {
-    align-items: center;
     border-bottom: 1px solid var(--border-subtle);
-    display: flex;
     gap: var(--space-8);
     height: 50px;
     padding: 0 var(--space-16)
 }
 
-.title__535da {
+.header__535da,
+.titleGroup__535da {
+    align-items: center;
+    display: flex
+}
+
+.titleGroup__535da {
     flex: 1;
+    gap: var(--space-6);
+    min-width: 0
+}
+
+.titleIcon__535da {
+    display: flex;
+    flex-shrink: 0
+}
+
+.title__535da {
+    flex: 0 1 auto;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -120,4 +135,4 @@
     padding: var(--space-24) var(--space-16)
 }
 
-/*# sourceMappingURL=2a866940b3f80e09.css.map*/
+/*# sourceMappingURL=13d664870a6978b7.css.map*/

@@ -24,8 +24,8 @@ var l,
     N = n(235986),
     _ = n(141504),
     j = (((l = j || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
-let T = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
-class b extends s.Component {
+let b = { [x._3.SIZE_32]: _.dT, [x._3.SIZE_40]: _.Jb };
+class T extends s.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
     static Types = j;
@@ -37,9 +37,9 @@ class b extends s.Component {
                   children: [
                       (0, i.jsxs)(N.A, {
                           children: [
-                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, T[t], _.hC) }),
-                              (0, i.jsx)("div", { className: a()(_.RH, T[t]) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, b[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, b[t], _.hC) }),
+                              (0, i.jsx)("div", { className: a()(_.RH, b[t]) }),
                           ],
                       }),
                       (0, i.jsx)(N.A, { grow: 1, className: _.eC, style: { maxWidth: this.placeholderMaxWidth } }),
@@ -48,7 +48,7 @@ class b extends s.Component {
             : (0, i.jsxs)(N.A, {
                   className: a()(_.qf, !s && _.lN, n),
                   children: [
-                      (0, i.jsx)("div", { className: a()(_.RH, T[t], l) }),
+                      (0, i.jsx)("div", { className: a()(_.RH, b[t], l) }),
                       (0, i.jsx)(N.A, {
                           grow: 1,
                           className: a()(_.gM, l),
@@ -65,7 +65,7 @@ var R = n(268218),
     k = n(922301),
     w = n(660184),
     P = n(73392),
-    D = n(92825),
+    D = n(241387),
     U = n(534400),
     G = n(531685),
     V = n(620141),
@@ -339,7 +339,7 @@ let el = s.memo(function (e) {
                 isVR: N,
                 premiumSince: _,
                 channel: j,
-                guildId: T,
+                guildId: b,
                 className: R,
                 nameplate: L,
                 hideClanTag: M = !1,
@@ -366,24 +366,24 @@ let el = s.memo(function (e) {
             [eh, em] = s.useState(!1),
             [ef, ep] = s.useState(!1),
             [eg, ex] = s.useState(null),
-            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: T }),
+            { voiceChannel: eA } = (0, I.Ay)({ userId: ei, guildId: b }),
             {
                 avatarDecorationSrc: eC,
                 avatarSrc: eE,
                 eventHandlers: eI,
-            } = (0, q.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: T }),
+            } = (0, q.A)({ userId: ei, size: x._3.SIZE_32, animateOnHover: !(t || eh), guildId: b }),
             { onFocus: ey, ...eS } = ee ?? {},
-            ev = (0, K.gn)(T, ei, l ?? null),
+            ev = (0, K.gn)(b, ei, l ?? null),
             [eN, e_] = s.useState(!1);
         s.useEffect(() => {
             t && e_(!1);
         }, [t]);
         let ej = (0, Y.YW)(C),
-            eT = (0, o.bG)([z.A], () => z.A.getQuestPreviewOverride(Z.uF.MEMBERS_LIST), []),
-            eb = null != eT,
-            eR = eb ? eT : ej,
+            eb = (0, o.bG)([z.A], () => z.A.getQuestPreviewOverride(Z.uF.MEMBERS_LIST), []),
+            eT = null != eb,
+            eR = eT ? eb : ej,
             eO = (0, Y.Yl)(ej, E, ei),
-            eL = (eb || eO) && t && !eN,
+            eL = (eT || eO) && t && !eN,
             eM = s.useCallback(() => {
                 em(!0);
             }, []),
@@ -414,7 +414,7 @@ let el = s.memo(function (e) {
                 [eR, ed, E, f, es],
             );
         return null == p
-            ? (0, i.jsx)(b, { avatarSize: x._3.SIZE_32, className: et.qf })
+            ? (0, i.jsx)(T, { avatarSize: x._3.SIZE_32, className: et.qf })
             : (0, i.jsx)(A.Y, {
                   targetElementRef: ed,
                   renderPopout: eU,
@@ -449,7 +449,7 @@ let el = s.memo(function (e) {
                                             colorStrings: ev,
                                             hideClanTag: M,
                                             user: p,
-                                            guildId: T,
+                                            guildId: b,
                                             isHovering: eh,
                                         }),
                                     })
@@ -464,7 +464,7 @@ let el = s.memo(function (e) {
                                                 colorStrings: ev,
                                                 hideClanTag: M,
                                                 user: p,
-                                                guildId: T,
+                                                guildId: b,
                                                 isHovering: eh,
                                             }),
                                         }),
