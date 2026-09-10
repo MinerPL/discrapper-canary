@@ -1,11 +1,11 @@
-n.d(t, { G$: () => u, Jm: () => A, Qm: () => c, ag: () => h, f5: () => d, iA: () => E, ni: () => I });
+n.d(t, { G$: () => u, Jm: () => A, Qm: () => c, ag: () => h, f5: () => d, iA: () => E, ni: () => f });
 var i,
     r = n(435558),
     a = n(873298),
     s = n(335542),
     l = n(818348),
     o = n(375708);
-let d = [l.NJ.DARK, l.NJ.DARKER, l.NJ.MIDNIGHT];
+let d = [l.NJ.ASH, l.NJ.DARK, l.NJ.ONYX];
 function c(e) {
     return e.id !== a.ju.EASTER_EGG;
 }
@@ -115,7 +115,7 @@ let u = [
             midpointPercentage: 50,
         },
     ],
-    _ = l.NJ.DARKER,
+    _ = l.NJ.DARK,
     E = [
         {
             type: s.F.BACKGROUND_GRADIENT_PRESET,
@@ -316,21 +316,21 @@ let u = [
             midpointPercentage: 50,
         },
     ];
-[...E, ...u],
+([...E, ...u],
     s.F.STANDARD_BACKGROUND_THEME,
     s.F.STANDARD_BACKGROUND_THEME,
     l.NJ.LIGHT,
     s.F.STANDARD_BACKGROUND_THEME,
-    l.NJ.MIDNIGHT,
+    l.NJ.ONYX,
     s.F.STANDARD_BACKGROUND_THEME,
     s.F.STANDARD_BACKGROUND_THEME,
     l.NJ.LIGHT,
+    s.F.STANDARD_BACKGROUND_THEME,
+    l.NJ.ASH,
     s.F.STANDARD_BACKGROUND_THEME,
     l.NJ.DARK,
     s.F.STANDARD_BACKGROUND_THEME,
-    l.NJ.DARKER,
-    s.F.STANDARD_BACKGROUND_THEME,
-    l.NJ.MIDNIGHT,
-    s.F.STANDARD_BACKGROUND_THEME;
+    l.NJ.ONYX,
+    s.F.STANDARD_BACKGROUND_THEME);
 let h = (0, r.keyBy)(A, "id");
-var I = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);
+var f = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { marketingCollection: () => tl, playgroundConfig: () => ta });
+(n.r(t), n.d(t, { marketingCollection: () => tl, playgroundConfig: () => ta }));
 var o,
     l,
     a,
@@ -257,7 +257,7 @@ function L(e) {
                     value: i ?? P,
                     onSelectionChange: (e) => {
                         var t;
-                        return (t = e === P ? null : e), void h.setState({ localeOverride: t });
+                        return ((t = e === P ? null : e), void h.setState({ localeOverride: t }));
                     },
                     options: c,
                     formatOption: B,
@@ -356,7 +356,6 @@ let F = "playground-announcement-modal",
                                     n.e("127272"),
                                     n.e("136149"),
                                     n.e("451778"),
-                                    n.e("621573"),
                                     n.e("783403"),
                                     n.e("24914"),
                                     n.e("68532"),
@@ -572,11 +571,11 @@ var ed = n(365990),
 function ep(e) {
     let { id: t, component_type: n, promotion_id: o, properties: l } = e;
     r.useEffect(() => {
-        (0, d.Ak)(),
+        ((0, d.Ak)(),
             X.h.dispatch({
                 type: "PREMIUM_MARKETING_PREVIEW",
                 data: { id: t, component_type: n, promotion_id: o, properties: l },
-            });
+            }));
     }, [t, n, o, l]);
 }
 var eu = n(652215);
@@ -879,7 +878,7 @@ async function e8(e) {
     for (let e of t.body) {
         let t = (0, G.ii)(U.m, e.properties),
             o = n.get(e.component_type) ?? [];
-        o.push({
+        (o.push({
             premiumType: e.premium_type,
             premiumSource: e.premium_source,
             premiumSubscriptionType: e.premium_subscription_type,
@@ -887,7 +886,7 @@ async function e8(e) {
             isDefaultBase: t.isDefaultBase,
             properties: t,
         }),
-            n.set(e.component_type, o);
+            n.set(e.component_type, o));
     }
     return n;
 }
@@ -1389,7 +1388,7 @@ let tl = {
                                 text: "Open Gift Payment Modal",
                                 onClick: () => {
                                     let n, l, a, r, i;
-                                    (r = {
+                                    ((r = {
                                         id: ea,
                                         component_type: p.C.GIFT_CUSTOMIZATION_BANNER,
                                         promotion_id: er,
@@ -1442,7 +1441,7 @@ let tl = {
                                             isGift: !0,
                                             subscriptionTier: el.pe.TIER_2,
                                             analyticsLocations: t,
-                                        });
+                                        }));
                                 },
                             }),
                         });
@@ -1611,7 +1610,7 @@ let tl = {
                                 text: "Open Gift Payment Modal",
                                 onClick: () => {
                                     let n, l, a, r, i;
-                                    (r = {
+                                    ((r = {
                                         id: ey,
                                         component_type: p.C.GIFT_PLAN_SELECTION_CARD_BANNER,
                                         promotion_id: eN,
@@ -1662,7 +1661,7 @@ let tl = {
                                             consumedInboundPromotionId: null,
                                         }),
                                         X.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
-                                        (0, en.A)({ isGift: !0, analyticsLocations: t });
+                                        (0, en.A)({ isGift: !0, analyticsLocations: t }));
                                 },
                             }),
                         });
@@ -1761,7 +1760,7 @@ let tl = {
             return (
                 r.useEffect(
                     () => () => {
-                        (0, d.Ak)(), (0, d.b8)();
+                        ((0, d.Ak)(), (0, d.b8)());
                     },
                     [],
                 ),

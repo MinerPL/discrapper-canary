@@ -1,4 +1,4 @@
-h.d(i, { NJ: () => s });
-let p = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
-    s = p;
-p.MIDNIGHT, p.DARK, p.DARKER, p.DARK;
+n.d(t, { NJ: () => r });
+let i = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" },
+    r = i;
+(i.ASH, i.DARK, i.ONYX, i.DARK);

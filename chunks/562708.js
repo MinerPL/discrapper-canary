@@ -1,21 +1,21 @@
 let i, r, a, s, l, o, d, c;
 (n.r(t),
     n.d(t, {
-        encodeProperties: () => I,
+        encodeProperties: () => f,
         isThrottled: () => em,
-        analyticsTrackingStoreMaker: () => Z,
+        analyticsTrackingStoreMaker: () => q,
         getOS: () => ed,
         SpanTtiNames: () => Q.wJ,
         getDevice: () => eu,
         getCampaignParams: () => eE,
         ImpressionNames: () => Q.IJ,
-        ImpressionGroups: () => X.q,
-        getSuperPropertiesBase64: () => ef,
+        ImpressionGroups: () => Z.q,
+        getSuperPropertiesBase64: () => eI,
         trackMaker: () => eg,
         AnalyticsActionHandlers: () => Y,
         NetworkActionNames: () => Q.D3,
-        getSuperProperties: () => eI,
-        ImpressionTypes: () => X.z,
+        getSuperProperties: () => ef,
+        ImpressionTypes: () => Z.z,
         extendSuperProperties: () => eh,
     }));
 var u = n(812729),
@@ -23,7 +23,7 @@ var u = n(812729),
     E = n(284009),
     A = n.n(E),
     h = n(264572).Buffer;
-function I(e) {
+function f(e) {
     try {
         return h.from(JSON.stringify(e)).toString("base64");
     } catch (e) {
@@ -31,7 +31,7 @@ function I(e) {
     }
 }
 (n(142703), n(667532), n(321073));
-var f = n(132500);
+var I = n(132500);
 n(423034);
 var p = n(80703),
     T = n(17928),
@@ -73,13 +73,13 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
     K = [],
     $ = null,
     z = !1,
-    q = () => Promise.resolve({ sessionId: void 0 }),
-    Z = (e) => {
+    X = () => Promise.resolve({ sessionId: void 0 }),
+    q = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: a,
-            getSessionId: s = q,
+            getSessionId: s = X,
             TRACKING_URL: l,
             drainTimeoutOverride: o,
             waitFor: d,
@@ -93,9 +93,9 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         }
         function h(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == $ && A() && ($ = t ? setTimeout(I, 0) : c(I, { timeout: L }));
+            null == $ && A() && ($ = t ? setTimeout(f, 0) : c(f, { timeout: L }));
         }
-        function I() {
+        function f() {
             if ((($ = null), !A())) return Promise.resolve();
             let e = K.slice();
             ((K = []), (U = H(U)));
@@ -125,7 +125,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             if (null != _) return _(r, i);
             let a = {};
             return (
-                F || ((B = (0, f.A)()), (a[C] = B), (F = !0)),
+                F || ((B = (0, I.A)()), (a[C] = B), (F = !0)),
                 m.Bo.post({
                     url: t ?? l,
                     headers: a,
@@ -145,7 +145,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 ((K = []), ($ = null), e.forEach((e) => e.resolve?.()), !0)
             );
         }
-        function Z() {
+        function q() {
             let e = {
                 type: N.bZ.CLIENT_TELEMETRY,
                 properties: {
@@ -201,7 +201,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 type: "timeout",
                                 id: setTimeout(
                                     () => {
-                                        (Z(), e());
+                                        (q(), e());
                                     },
                                     Math.max(36e5 + (Math.floor(36e4 * Math.random() * 2) - 36e4), 6e4),
                                 ),
@@ -211,7 +211,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             type: "timeout",
                             id: setTimeout(
                                 () => {
-                                    (Z(), e());
+                                    (q(), e());
                                 },
                                 Math.floor(354e4 * Math.random() + 6e4),
                             ),
@@ -223,7 +223,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }),
             (Y.handleConnectionClosed = function () {
                 return (
-                    I(),
+                    f(),
                     (function () {
                         if (null == k) return;
                         switch (k.type) {
@@ -244,7 +244,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             (Y.handleFingerprint = function () {
-                return (I(), !1);
+                return (f(), !1);
             }),
             (Y.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
@@ -280,22 +280,22 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 let { analyticsToken: t, userId: n } = e;
                 return (null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1);
             }));
-        class X extends T.Ay.Store {
+        class Z extends T.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
                 null != d && this.waitFor(...d);
             }
             submitEventsImmediately = g;
             requestDrain = () => {
-                for (let e of (I(), R))
+                for (let e of (f(), R))
                     setTimeout(() => {
-                        I();
+                        f();
                     }, e);
             };
         }
-        return new X(t, n);
+        return new Z(t, n);
     };
-var X = n(412728),
+var Z = n(412728),
     Q = n(239947),
     J = n(214958),
     ee = n.n(J);
@@ -481,12 +481,12 @@ if (null == a)
         a = {};
     }
 function eh(e) {
-    s = I((a = { ...a, ...e }));
-}
-function eI() {
-    return a;
+    s = f((a = { ...a, ...e }));
 }
 function ef() {
+    return a;
+}
+function eI() {
     return s;
 }
 eh(
@@ -494,7 +494,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("610724", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("610726", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

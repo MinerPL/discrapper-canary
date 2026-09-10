@@ -128,7 +128,7 @@ function V(e) {
         value: c,
         children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
-            theme: O.NJ8.MIDNIGHT,
+            theme: O.NJ8.ONYX,
             children: (e) =>
                 (0, i.jsxs)(L.A, {
                     className: s()(M.zr, M.co, e),
@@ -200,12 +200,12 @@ function k(e) {
                 (0, i.jsxs)(d.D, {
                     className: M.HI,
                     onClick: function () {
-                        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
                         (0, i.jsx)(S.A, {}),
@@ -215,12 +215,12 @@ function k(e) {
                 (0, i.jsx)(d.D, {
                     className: M.cG,
                     onClick: function () {
-                        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,
                         }),
-                            a();
+                            a());
                     },
                     children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),

@@ -1,7 +1,11 @@
-n.d(t, { m: () => r });
+n.d(t, { m: () => a });
 var i = n(818348);
-function r(e) {
+let r = new Map([
+    [i.NJ.DARK, i.NJ.ASH],
+    [i.NJ.ONYX, i.NJ.ASH],
+]);
+function a(e) {
     if (null == e) return;
-    let t = i.rE.get(e);
+    let t = r.get(e);
     return null != t ? `theme-${t} theme-${e} images-${t}` : `theme-${e} images-${e}`;
 }

@@ -5,7 +5,7 @@ n(385803);
 var a = n(185928),
     s = n(818348);
 function l(e) {
-    return (0, r.M)(e) ? s.NJ.DARKER : s.NJ.LIGHT;
+    return (0, r.M)(e) ? s.NJ.DARK : s.NJ.LIGHT;
 }
 function o(e, t) {
     return null != t && t.colors.length > 0 ? l(e) : e;

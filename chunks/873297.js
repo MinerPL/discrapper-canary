@@ -49,10 +49,14 @@ let R = function (e) {
     n.useEffect(() => {
         (0, _.ap)(O);
     }, [O]);
-    let J = (0, h.bG)([j.A], () => {
-            let e = j.A.getStorefrontMetadata(O);
-            return e?.logoAssetId != null ? (0, I.YE)(O, e.logoAssetId, 256) : void 0;
-        }, [O]),
+    let J = (0, h.bG)(
+            [j.A],
+            () => {
+                let e = j.A.getStorefrontMetadata(O);
+                return e?.logoAssetId != null ? (0, I.YE)(O, e.logoAssetId, 256) : void 0;
+            },
+            [O],
+        ),
         U = F ?? J,
         V =
             ((s = n.useRef([])),
@@ -65,20 +69,24 @@ let R = function (e) {
             n.useEffect(() => {
                 l && (0, _.ap)(O);
             }, [l, O]),
-            (a = (0, h.yK)([y.A, j.A], () => {
-                if (M.some((e) => y.A.isFetching(e))) return s.current;
-                let e = M.filter((e) => null != y.A.get(e));
-                if (e.length >= M.length) return M;
-                let l = j.A.getStorefrontDataForApplicationId(O);
-                if (null == l || "loading" === l.state) return e;
-                let t = new Set(M);
-                return [
-                    ...e,
-                    ...(null != l.storefront
-                        ? (0, k.jd)(l.storefront).filter((e) => !t.has(e) && null != y.A.get(e))
-                        : []),
-                ].slice(0, M.length);
-            }, [O, M])),
+            (a = (0, h.yK)(
+                [y.A, j.A],
+                () => {
+                    if (M.some((e) => y.A.isFetching(e))) return s.current;
+                    let e = M.filter((e) => null != y.A.get(e));
+                    if (e.length >= M.length) return M;
+                    let l = j.A.getStorefrontDataForApplicationId(O);
+                    if (null == l || "loading" === l.state) return e;
+                    let t = new Set(M);
+                    return [
+                        ...e,
+                        ...(null != l.storefront
+                            ? (0, k.jd)(l.storefront).filter((e) => !t.has(e) && null != y.A.get(e))
+                            : []),
+                    ].slice(0, M.length);
+                },
+                [O, M],
+            )),
             n.useEffect(() => {
                 a.length > 0 && (s.current = a);
             }, [a]),
@@ -110,24 +118,24 @@ let R = function (e) {
             es?.();
         }, [es]),
         et = n.useCallback(() => {
-            Z("go_to_game_shop"), ee?.();
+            (Z("go_to_game_shop"), ee?.());
         }, [Z, ee]),
         en = n.useCallback(
             (e, s) => {
                 let { skuId: l, applicationId: t } = s;
-                Z("card_click", l), (0, v.R)({ skuId: l, applicationId: t, isStorefront: !1, analyticsLocations: $ });
+                (Z("card_click", l), (0, v.R)({ skuId: l, applicationId: t, isStorefront: !1, analyticsLocations: $ }));
             },
             [Z, $],
         ),
         ea = n.useCallback(() => {
-            Z("dismiss"), R?.();
+            (Z("dismiss"), R?.());
         }, [Z, R]),
         er = n.useCallback(
             (e) => {
                 !Q.current &&
                     (e && null === W.current
                         ? (W.current = setTimeout(() => {
-                              (Q.current = !0),
+                              ((Q.current = !0),
                                   (W.current = null),
                                   b.default.track(S.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: Y?.sessionId,
@@ -135,7 +143,7 @@ let R = function (e) {
                                       page_category: Y?.pageCategory,
                                       page_section: Y?.pageSection,
                                       type: P,
-                                  });
+                                  }));
                           }, 1e3))
                         : e || null === W.current || (clearTimeout(W.current), (W.current = null)));
             },
@@ -150,7 +158,7 @@ let R = function (e) {
     0 === V.length)
         ? null
         : (0, t.jsx)(i.N, {
-              theme: S.NJ8.DARKER,
+              theme: S.NJ8.DARK,
               children: (e) =>
                   (0, t.jsx)(p.L, {
                       innerRef: q,

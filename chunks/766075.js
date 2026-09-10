@@ -15,13 +15,13 @@ async function A(e) {
             path: t,
             stackingBehavior: A = "replaceAll",
             searchParams: h,
-            analyticsLocations: I,
+            analyticsLocations: f,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        f = arguments.length > 2 ? arguments[2] : void 0;
+        I = arguments.length > 2 ? arguments[2] : void 0;
     if (d.default.isAuthenticated()) {
         if (
             (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: _.nR }),
-            u.A.setState({ source: h?.source, analyticsLocations: I ?? [] }),
+            u.A.setState({ source: h?.source, analyticsLocations: f ?? [] }),
             s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
             (0, c.f)())
         ) {
@@ -1043,7 +1043,6 @@ async function A(e) {
                         n.e("21106"),
                         n.e("781949"),
                         n.e("522261"),
-                        n.e("621573"),
                         n.e("321455"),
                         n.e("98972"),
                         n.e("967279"),
@@ -1354,6 +1353,6 @@ async function A(e) {
                     },
                 },
             );
-        f?.();
+        I?.();
     }
 }

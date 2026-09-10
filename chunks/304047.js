@@ -64,7 +64,7 @@ function S(e) {
         onRequestClose: v,
         renderPopout: () =>
             (0, l.jsx)(d.N, {
-                theme: E.NJ.DARKER,
+                theme: E.NJ.DARK,
                 children: (e) => (0, l.jsx)(h.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
             }),
         children: () =>
@@ -79,7 +79,7 @@ function S(e) {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
-                                e.stopPropagation(), A();
+                                (e.stopPropagation(), A());
                             },
                             "aria-label": I,
                             icon: p.GiftIcon,

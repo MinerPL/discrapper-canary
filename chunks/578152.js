@@ -12,8 +12,8 @@ var i = n(636537),
 let E = +d.A.Millis.HOUR,
     A = 7 * d.A.Millis.DAY,
     h = +d.A.Millis.DAY,
-    I = r.w.get("lastNonRequiredUpdateShown", Date.now()),
-    f = ["win", "osx"],
+    f = r.w.get("lastNonRequiredUpdateShown", Date.now()),
+    I = ["win", "osx"],
     p = new o.A("AutoUpdateManager");
 class T extends s.A {
     _checkInterval = null;
@@ -48,7 +48,7 @@ class T extends s.A {
                 : location.reload(!0));
     }
     isNewUpdater() {
-        return f.includes((0, c.getNewUpdaterPlatformName)() ?? "");
+        return I.includes((0, c.getNewUpdaterPlatformName)() ?? "");
     }
     canBootstrapNewUpdater() {
         return "win32" === (0, c.getPlatformName)();
@@ -114,11 +114,11 @@ class T extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "3f4fb357629e93804d4cda8d98dc1a41f27b999c" === e.body.hash)
+                    if (null == e.body || "00b61785eebb6f1ce1fa199c555a66609c70877e" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, l.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? A : h;
-                    if (Date.now() - I > t)
+                    if (Date.now() - f > t)
                         return (r.w.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1));
                 },
                 () => this._handleUpdateError(),

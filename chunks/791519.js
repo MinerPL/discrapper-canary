@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => n5 });
+(n.r(t), n.d(t, { default: () => n5 }));
 var s,
     l,
     a,
@@ -27,7 +27,7 @@ var s,
     L = n(841702),
     O = n(983545),
     T = n(365491);
-n(323874), n(14289), n(35956), n(321073);
+(n(323874), n(14289), n(35956), n(321073));
 var R = n(806163),
     M = (((s = {}).HOME = "home"), (s.CATALOG = "catalog"), (s.ORBS = "orbs"), s),
     k = n(17928),
@@ -61,7 +61,7 @@ function ea() {
         (0, J.A)({ subscriptionTier: ee.pe.TIER_2, analyticsLocations: [X.A.GAME_SERVER_PAGE] });
     }, []);
     return (0, i.jsx)(W.N, {
-        theme: et.NJ.DARKER,
+        theme: et.NJ.DARK,
         children: (t) =>
             (0, i.jsxs)("div", {
                 className: o()(el.vK, t),
@@ -141,7 +141,7 @@ function ex(e) {
         g = m ? l : s,
         h = r.useCallback(
             (e) => {
-                e.stopPropagation(), c?.();
+                (e.stopPropagation(), c?.());
             },
             [c],
         );
@@ -467,10 +467,10 @@ function te(e) {
 function tt() {
     let [e, t] = r.useState(!1),
         n = r.useCallback(() => {
-            t(!0),
+            (t(!0),
                 (0, eZ.hU)()
                     .catch(() => {})
-                    .finally(() => t(!1));
+                    .finally(() => t(!1)));
         }, []);
     return (0, i.jsx)("div", {
         className: e3.y7,
@@ -509,7 +509,7 @@ let tn = r.memo(function (e) {
             (0, eX.A)({
                 provider: x,
                 onAccept: () => {
-                    h(e6.i.TAKE_ACTION), p();
+                    (h(e6.i.TAKE_ACTION), p());
                 },
             });
         }, [x, h, p]),
@@ -519,7 +519,7 @@ let tn = r.memo(function (e) {
                 : (0, eX.A)({
                       provider: x,
                       onAccept: () => {
-                          h(e6.i.TAKE_ACTION), s(t);
+                          (h(e6.i.TAKE_ACTION), s(t));
                       },
                   });
         }, [E, x, h, s, t]),
@@ -884,7 +884,7 @@ function tl(e) {
             let e = u.current;
             null != e && (h(e.scrollLeft > 1), x(e.scrollLeft + e.clientWidth < e.scrollWidth - 1));
         }, []);
-    r.useLayoutEffect(() => {
+    (r.useLayoutEffect(() => {
         C();
     }, [C, t]),
         r.useEffect(() => {
@@ -899,7 +899,7 @@ function tl(e) {
                     t.disconnect();
                 }
             );
-        }, [C]);
+        }, [C]));
     let v = r.useCallback(() => {
             u.current?.scrollBy({ left: -408, behavior: "smooth" });
         }, []),
@@ -913,10 +913,10 @@ function tl(e) {
             e?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
             let t = 0,
                 n = requestAnimationFrame(() => {
-                    p(null), (t = requestAnimationFrame(() => p(c)));
+                    (p(null), (t = requestAnimationFrame(() => p(c))));
                 });
             return () => {
-                cancelAnimationFrame(n), cancelAnimationFrame(t);
+                (cancelAnimationFrame(n), cancelAnimationFrame(t));
             };
         }, [d, c]),
         r.useEffect(() => {
@@ -937,7 +937,7 @@ function tl(e) {
                             children: es.intl.string(en.default.BOWmmT),
                         }),
                         (0, i.jsx)(W.N, {
-                            theme: et.NJ.DARKER,
+                            theme: et.NJ.DARK,
                             children: (e) =>
                                 (0, i.jsxs)("div", {
                                     className: o()(ts.$s, e),
@@ -1026,7 +1026,7 @@ function tg(e) {
         d.length > 0 && (E.current = d);
     }, [d]);
     let x = r.useCallback(() => {
-            h(), a();
+            (h(), a());
         }, [h, a]),
         f = (0, ta.VJ)(),
         [p, C] = r.useState({ serverId: null, nonce: 0 }),
@@ -1057,14 +1057,14 @@ function tg(e) {
     let b = r.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ta.cl.SHOP_CARD;
-                f(ta.L5.OPEN_PLAN_MODAL, t),
+                (f(ta.L5.OPEN_PLAN_MODAL, t),
                     (0, ti.S)({
                         gameName: e.name,
                         gameId: e.gameId,
                         coverUrl: e.coverUrl,
                         plans: e.plans,
                         onViewServer: () => v({ gameId: e.gameId }),
-                    });
+                    }));
             },
             [f, v],
         ),
@@ -1078,10 +1078,10 @@ function tg(e) {
         if (null == e) return;
         b(e, ta.cl.ACTIVITY_PANEL_DEEP_LINK);
         let l = new URLSearchParams(n.search);
-        l.delete(td.tD), s.replace(`${n.pathname}?${l.toString()}`);
+        (l.delete(td.tD), s.replace(`${n.pathname}?${l.toString()}`));
     }, [t, I, d, g, b, s, n.pathname, n.search]);
     let N = r.useCallback(() => {
-            w.A.setState({ scrollToGameServers: !0 }), (0, H.openUserSettings)(F.X.SUBSCRIPTIONS_PANEL);
+            (w.A.setState({ scrollToGameServers: !0 }), (0, H.openUserSettings)(F.X.SUBSCRIPTIONS_PANEL));
         }, []),
         L = r.useCallback((e) => {
             let t = z.default.getId() ?? "0";
@@ -1258,7 +1258,7 @@ function tq(e) {
         d = (0, S.uM)(),
         u = r.useCallback(() => {
             var e;
-            tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: d?.sessionId,
                 sku_id: t.skuId,
                 page_type: td.G2.CATALOG,
@@ -1271,7 +1271,7 @@ function tq(e) {
                 (e = t.skuId),
                 (t$ = e),
                 null != e && null != n && tW.set(e, n),
-                c.push(e8.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId));
+                c.push(e8.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId)));
         }, [d?.pageIndex, d?.pageSection, d?.pageSize, d?.sessionId, t.name, t.skuId, n, c]);
     return (0, i.jsxs)("div", {
         className: tG.EF,
@@ -1324,11 +1324,15 @@ function tQ(e) {
                 ),
                 g = d ?? [],
                 h = g.join(","),
-                E = (0, k.cf)([tU.A], () => {
-                    let e = {};
-                    for (let t of g) e[t] = tU.A.getCollection(t);
-                    return e;
-                }, [g]);
+                E = (0, k.cf)(
+                    [tU.A],
+                    () => {
+                        let e = {};
+                        for (let t of g) e[t] = tU.A.getCollection(t);
+                        return e;
+                    },
+                    [g],
+                );
             return {
                 categories: r.useMemo(
                     () =>
@@ -1468,7 +1472,7 @@ let t8 = function () {
         m = r.useCallback(
             (e) => {
                 let n = d(u(e));
-                tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: s?.sessionId,
                     page_section: s?.pageSection,
                     page_category: s?.pageCategory,
@@ -1477,7 +1481,7 @@ let t8 = function () {
                     cta_name: `sort by ${n.label.toLowerCase()}`,
                     page_type: "catalog",
                 }),
-                    t(u(e));
+                    t(u(e)));
             },
             [s, d, u, t],
         ),
@@ -1570,7 +1574,7 @@ function nx() {
             [g],
         ),
         p = r.useCallback(() => {
-            f(`filter 3p only ${!1 === s ? "on" : "off"}`), n();
+            (f(`filter 3p only ${!1 === s ? "on" : "off"}`), n());
         }, [n, s, f]);
     return (0, i.jsxs)("div", {
         className: nE.kT,
@@ -1594,7 +1598,7 @@ function nx() {
                                 (0, i.jsx)(t3.S, {
                                     checked: a,
                                     onChange: () => {
-                                        f(`filter offer eligible ${!1 === a ? "on" : "off"}`), l();
+                                        (f(`filter offer eligible ${!1 === a ? "on" : "off"}`), l());
                                     },
                                     label: es.intl.string(es.t.hY8Ft1),
                                 }),
@@ -1605,7 +1609,7 @@ function nx() {
                     (0, i.jsx)(t3.S, {
                         checked: t,
                         onChange: () => {
-                            f(`filter orb eligible ${!1 === t ? "on" : "off"}`), e();
+                            (f(`filter orb eligible ${!1 === t ? "on" : "off"}`), e());
                         },
                         label: es.intl.string(es.t.AHHHgG),
                     }),
@@ -1618,7 +1622,7 @@ function nx() {
                 (0, i.jsx)(Q.$, {
                     variant: "secondary",
                     onClick: () => {
-                        f("filter reset"), c(), requestAnimationFrame(() => h.current?.focus());
+                        (f("filter reset"), c(), requestAnimationFrame(() => h.current?.focus()));
                     },
                     text: es.intl.string(es.t.jwH6KZ),
                     fullWidth: !0,
@@ -1640,7 +1644,7 @@ function nf(e) {
             checked: l.has(t),
             onChange: () => {
                 let e = s[t]?.toLowerCase() != null ? s[t].toLowerCase() : t;
-                n(`filter item type ${e} ${!1 === l.has(t) ? "on" : "off"}`), a(t);
+                (n(`filter item type ${e} ${!1 === l.has(t) ? "on" : "off"}`), a(t));
             },
             label: s[t] ?? "",
         });
@@ -1712,7 +1716,7 @@ function nv(e) {
                     "aria-label": n,
                     "aria-pressed": l,
                     onClick: () => {
-                        r(`filter color ${n.toLowerCase()} ${!l ? "on" : "off"}`), a(s);
+                        (r(`filter color ${n.toLowerCase()} ${!l ? "on" : "off"}`), a(s));
                     },
                     children:
                         l &&
@@ -1812,7 +1816,7 @@ function nj(e) {
                             "aria-pressed": n.has(c),
                             onClick: () => {
                                 let e = n.has(c);
-                                t(`filter theme ${l.toLowerCase()} ${!e ? "on" : "off"}`), s(c);
+                                (t(`filter theme ${l.toLowerCase()} ${!e ? "on" : "off"}`), s(c));
                             },
                             children: [r, (0, i.jsx)(q.E, { color: a(c), variant: "text-md/medium", children: l })],
                         },
@@ -1882,11 +1886,11 @@ function nN(e) {
         let e = new ResizeObserver(() => {
             null == L.current || O(Math.floor(5 * getComputedStyle(L.current).gridTemplateColumns.split(/\s+/).length));
         });
-        if (null != L.current) return e.observe(L.current), () => e.disconnect();
+        if (null != L.current) return (e.observe(L.current), () => e.disconnect());
     }, [O]);
     let B = r.useCallback(
         (e) => {
-            tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: l?.sessionId,
                 page_section: l?.pageSection,
                 page_category: l?.pageCategory,
@@ -1895,7 +1899,7 @@ function nN(e) {
                 cta_name: `filter results page ${e}`,
                 page_type: "catalog",
             }),
-                R((e - 1) * M);
+                R((e - 1) * M));
         },
         [l, M, R],
     );
@@ -1968,7 +1972,7 @@ var nL = n(578364);
 function nO(e) {
     let { tab: t, categories: n, initialCategoryId: s, showFilterInitially: l = !0, onUnmount: a } = e,
         c = (0, t_.A)("shop_include_unpublished");
-    !(function () {
+    (!(function () {
         let e = (0, k.bG)([tI.A], () => "success" === tI.A.getFetchState(e8.FYj)),
             t = null != (0, tN.A)(),
             { offerEligible: n, clearFilters: s } = (0, T.v)();
@@ -1976,7 +1980,7 @@ function nO(e) {
             n && e && !t && s();
         }, [n, e, t, s]);
     })(),
-        (0, T.S)(c);
+        (0, T.S)(c));
     let o = r.useRef(null),
         { handleScroll: d } = (0, tj.X)(o, t),
         u = (0, th.U)("Shop Browse"),
@@ -1997,7 +2001,7 @@ function nO(e) {
             function e() {
                 f(window.innerWidth < 1400);
             }
-            return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+            return (e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, []),
         (0, i.jsx)("div", {
             className: nL.VM,
@@ -2055,7 +2059,7 @@ function nT(e) {
                 currentPage: t,
                 handlePageChange: r.useCallback(
                     (t) => {
-                        n(t), e.current?.scrollTo({ to: 0 });
+                        (n(t), e.current?.scrollTo({ to: 0 }));
                     },
                     [e, n],
                 ),
@@ -2063,7 +2067,7 @@ function nT(e) {
         })(a),
         f = r.useCallback(
             (e) => {
-                tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: h?.sessionId,
                     page_section: h?.pageSection,
                     page_category: h?.pageCategory,
@@ -2072,7 +2076,7 @@ function nT(e) {
                     cta_name: `catalog page ${e}`,
                     page_type: "catalog",
                 }),
-                    E(e);
+                    E(e));
             },
             [h, E],
         ),
@@ -2080,7 +2084,7 @@ function nT(e) {
     return (
         r.useEffect(() => {
             if (t && n)
-                return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
+                return (document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e));
             function e(e) {
                 let t = e.target;
                 null === m.current ||
@@ -2126,7 +2130,7 @@ function nT(e) {
                                         children: (0, i.jsx)(Q.$, {
                                             onClick: function () {
                                                 let e = !n;
-                                                tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                (tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                     collectibles_shop_session_id: h?.sessionId,
                                                     page_section: h?.pageSection,
                                                     page_category: h?.pageCategory,
@@ -2135,7 +2139,7 @@ function nT(e) {
                                                     cta_name: `filter bar ${e ? "show" : "hide"}`,
                                                     page_type: "catalog",
                                                 }),
-                                                    s(e);
+                                                    s(e));
                                             },
                                             variant: "secondary",
                                             text: es.intl.string(n ? es.t.fYtm6f : es.t["TeTYE+"]),
@@ -2214,7 +2218,7 @@ function nK(e) {
         c = (0, k.bG)([A.A], () => A.A.skipNumCategories),
         o = r.useMemo(() => {
             let e = {};
-            return !0 === a && (e.include_unpublished = !0), null != c && c > 0 && (e.skip_num_categories = c), e;
+            return (!0 === a && (e.include_unpublished = !0), null != c && c > 0 && (e.skip_num_categories = c), e);
         }, [a, c]),
         d = null == n && !s && l?.status !== 404 && l?.status !== 429;
     if (
@@ -2306,13 +2310,13 @@ let nY = function (e) {
                                             variant: "primary",
                                             text: es.intl.string(es.t.AfrvRD),
                                             onClick: () => {
-                                                t({ sourceButton: "shop all button", shouldAnimate: !0 }),
+                                                (t({ sourceButton: "shop all button", shouldAnimate: !0 }),
                                                     tA.default.track(e8.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: l?.sessionId,
                                                         page_type: n,
                                                         page_category: n === M.HOME ? void 0 : l?.pageCategory,
                                                         cta_name: "browse the shop button",
-                                                    });
+                                                    }));
                                             },
                                             fullWidth: !0,
                                         }),
@@ -2381,7 +2385,7 @@ function nq(e) {
         [h] = r.useState(() => {
             if ("POP" === m.action) {
                 let e;
-                return (e = t$), (t$ = null), e ?? void 0;
+                return ((e = t$), (t$ = null), e ?? void 0);
             }
         }),
         [E, x] = r.useState(h),
@@ -2416,7 +2420,7 @@ function nq(e) {
                     return void m.push(e8.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
                 let c = l && !u,
                     o = r ? td.G2.ORBS : td.G2.CATALOG;
-                x(n), p(!i), s(o, c);
+                (x(n), p(!i), s(o, c));
             },
             [u, s, a, S, m],
         ),
@@ -2441,7 +2445,7 @@ function nq(e) {
                         initialCategoryId: E ?? C,
                         showFilterInitially: f && null == C,
                         onUnmount: () => {
-                            x(void 0), p(!0);
+                            (x(void 0), p(!0));
                         },
                     });
 }
@@ -2455,7 +2459,7 @@ function n4(e) {
         l = (0, m.useHasAnyModalOpen)();
     return (
         r.useEffect(() => {
-            if (n && !l) return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
+            if (n && !l) return (window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e));
             function e(e) {
                 e.key === n1.N$.Escape && s();
             }
@@ -2478,7 +2482,7 @@ let n5 = function (e) {
             return {
                 onClose: r.useCallback(() => {
                     if (0 === s) {
-                        (0, nJ.aX)(), (0, H.openUserSettings)();
+                        ((0, nJ.aX)(), (0, H.openUserSettings)());
                         return;
                     }
                     (0, nJ.EL)() ? (0, nJ.aX)() : (0, nJ.pX)(e8.BVt.APP);
@@ -2498,25 +2502,25 @@ let n5 = function (e) {
         [z, U] = r.useState();
     (0, tX.XU)(n);
     let K = r.useCallback((e, t) => {
-            U(e), w(t);
+            (U(e), w(t));
         }, []),
         { selectedTab: V, transitionState: Y, transitionToTab: $ } = (0, O.o)(k);
-    (0, f.HU)({ location: es.intl.string(es.t.pWG4ze) }), (0, N.uS)(n, V, F, Y, z), (0, N.N0)(V, s);
+    ((0, f.HU)({ location: es.intl.string(es.t.pWG4ze) }), (0, N.uS)(n, V, F, Y, z), (0, N.N0)(V, s));
     let { dismissShopButtonDC: W } = (0, n0.A)();
-    r.useEffect(() => {
+    (r.useEffect(() => {
         W();
     }, [W]),
         r.useEffect(() => {
             (0, h.I)(e8.BVt.COLLECTIBLES_SHOP);
-        }, []);
+        }, []));
     let Z = r.useRef(null),
         q = r.useRef(null);
     (0, g.tj)(Z);
     let Q = (0, m.useHasAnyModalOpen)();
-    r.useEffect(() => {
+    (r.useEffect(() => {
         q.current?.focus();
     }, []),
-        (0, t4.gB)();
+        (0, t4.gB)());
     let { analyticsLocations: X } = (0, N.lC)(V);
     return (0, i.jsx)(x.f5, {
         value: X,

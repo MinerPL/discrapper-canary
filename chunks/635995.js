@@ -23,7 +23,7 @@ function d(e) {
 function N(e) {
     let { className: t, ref: n, children: l, onClick: r } = e;
     return (0, i.jsx)(o.N, {
-        theme: A.NJ.DARKER,
+        theme: A.NJ.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
                 ref: n,

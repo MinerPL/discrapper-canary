@@ -30,21 +30,21 @@ function h(e) {
         _.Sb.FREQUENT_USER_ACTION,
     );
 }
-function I(e) {
+function f(e) {
     switch (e) {
-        case E.NJ8.DARK:
+        case E.NJ8.ASH:
             return i.Sx.DARK;
         case E.NJ8.LIGHT:
             return i.Sx.LIGHT;
-        case E.NJ8.DARKER:
+        case E.NJ8.DARK:
             return i.Sx.DARKER;
-        case E.NJ8.MIDNIGHT:
+        case E.NJ8.ONYX:
             return i.Sx.MIDNIGHT;
         default:
             return i.Sx.DARK;
     }
 }
-function f(e) {
+function I(e) {
     return {
         backgroundGradientPresetId:
             null != e.backgroundGradientPresetId ? r.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
@@ -62,7 +62,7 @@ function f(e) {
 function p(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: i, useSystemTheme: r } = e,
         l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION;
-    null == t && "system" !== i && (0, a.M)(i) && (0, d.NA)({ [A.Fc.DARK]: i }),
+    (null == t && "system" !== i && (0, a.M)(i) && (0, d.NA)({ [A.Fc.DARK]: i }),
         s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -73,7 +73,7 @@ function p(e) {
                     },
                 },
             },
-        });
+        }));
     let u = "system" === i ? A.Q_.ON : A.Q_.OFF;
     if (
         (s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != r ? r : u } }),
@@ -83,8 +83,8 @@ function p(e) {
         return _.wc.updateAsync(
             "appearance",
             (e) => {
-                (e.theme = I(i)),
-                    (e.clientThemeSettings = f({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
+                ((e.theme = f(i)),
+                    (e.clientThemeSettings = I({ backgroundGradientPresetId: t, customUserThemeSettings: n })));
             },
             l,
         );
@@ -123,11 +123,11 @@ let T = {
                 await _.wc.updateAsync(
                     "appearance",
                     (e) => {
-                        (e.theme = I(c.A.theme)),
-                            (e.clientThemeSettings = f({
+                        ((e.theme = f(c.A.theme)),
+                            (e.clientThemeSettings = I({
                                 backgroundGradientPresetId: l.A.gradientPreset?.id,
                                 customUserThemeSettings: u.eh.getSetting()?.customUserThemeSettings,
-                            }));
+                            })));
                     },
                     _.Sb.INFREQUENT_USER_ACTION,
                 );
@@ -169,7 +169,7 @@ let T = {
             _.Sb.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
-        s.h.dispatch({
+        (s.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: { appearance: { settings: { theme: e } } },
         }),
@@ -177,9 +177,9 @@ let T = {
                 _.wc.updateAsync(
                     "appearance",
                     (t) => {
-                        t.theme = I(e);
+                        t.theme = f(e);
                     },
                     _.Sb.INFREQUENT_USER_ACTION,
-                );
+                ));
     },
 };

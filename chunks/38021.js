@@ -11,7 +11,7 @@ function s() {
     return e;
 }
 let l = a({
-        theme: "light",
+        theme: n(818348).NJ.LIGHT,
         primaryColor: null,
         secondaryColor: null,
         gradient: null,

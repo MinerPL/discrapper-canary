@@ -5,9 +5,9 @@ function r(e) {
 }
 function a(e) {
     switch (e) {
+        case i.NJ.ASH:
+        case i.NJ.ONYX:
         case i.NJ.DARK:
-        case i.NJ.MIDNIGHT:
-        case i.NJ.DARKER:
             return !0;
         default:
             return !1;

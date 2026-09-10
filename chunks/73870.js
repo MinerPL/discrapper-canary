@@ -44,7 +44,7 @@ function D(e) {
                 return `${e.toString().padStart(2, "0")}`;
             }
             let r = [i(e), i(t), i(n)];
-            return s && r.push(i(l)), r.join(":");
+            return (s && r.push(i(l)), r.join(":"));
         })(r, a, c, d, s);
     return (0, i.jsxs)("div", {
         className: o()(M.kL, l),
@@ -302,7 +302,7 @@ let ek = [],
                     g = (0, eE.p)(),
                     [x, f] = r.useState([]),
                     p = r.useCallback(() => {
-                        d(K.RANDOM), f(ef().shuffle(m));
+                        (d(K.RANDOM), f(ef().shuffle(m)));
                     }, [m]);
                 r.useEffect(() => {
                     f(ef().shuffle(m));
@@ -343,7 +343,7 @@ let ek = [],
                             { value: K.RECENT, label: O.intl.string(O.t["51Bhiz"]) },
                             { value: K.PRICE_LOW_TO_HIGH, label: O.intl.string(O.t.m8RVU2) },
                         ];
-                        return o && e.unshift({ value: K.RECOMMENDED, label: O.intl.string(O.t.zPWgFG) }), e;
+                        return (o && e.unshift({ value: K.RECOMMENDED, label: O.intl.string(O.t.zPWgFG) }), e);
                     }, [o]),
                     showRecommendationOption: o,
                     shuffleProducts: p,
@@ -463,7 +463,7 @@ let ek = [],
                     s = r.useRef(null),
                     i = r.useRef(!1),
                     a = r.useRef(null);
-                r.useEffect(() => {
+                (r.useEffect(() => {
                     if (n && "finished" === e) {
                         if (null !== s.current) {
                             let e = s.current;
@@ -491,32 +491,32 @@ let ek = [],
                             null != a.current && clearTimeout(a.current);
                         },
                         [],
-                    );
+                    ));
                 let o = r.useCallback((e) => {
-                    (i.current = !1),
+                    ((i.current = !1),
                         null != a.current && (clearTimeout(a.current), (a.current = null)),
                         t(e ? "shuffle-in" : "sort-in"),
-                        setTimeout(() => t("finished"), e ? 200 : 300);
+                        setTimeout(() => t("finished"), e ? 200 : 300));
                 }, []);
                 return {
                     animationPhase: e,
                     startAnimation: r.useCallback(
                         (e) => {
                             let { isShuffling: n, onOutroComplete: r, returnRef: c, holdIntroUntilReady: d = !1 } = e;
-                            c?.current != null && ((s.current = c.current), l(!0)),
+                            (c?.current != null && ((s.current = c.current), l(!0)),
                                 (i.current = !1),
                                 null != a.current && (clearTimeout(a.current), (a.current = null)),
                                 t(n ? "shuffle-out" : "sort-out"),
                                 setTimeout(
                                     () => {
                                         if ((r(), n && d)) {
-                                            (i.current = !0), (a.current = setTimeout(() => o(!0), 1e3));
+                                            ((i.current = !0), (a.current = setTimeout(() => o(!0), 1e3)));
                                             return;
                                         }
                                         o(n);
                                     },
                                     n ? 250 : 300,
-                                );
+                                ));
                         },
                         [o],
                     ),
@@ -536,12 +536,12 @@ let ek = [],
             [eB, eU] = r.useState(!1),
             ew = r.useCallback(
                 (e) => {
-                    eU(!1),
+                    (eU(!1),
                         eT({ isShuffling: !1, onOutroComplete: () => b(e), returnRef: eH }),
                         p.default.track(eS.HAw.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                             page_session_id: eM,
                             sort_type: e,
-                        });
+                        }));
                 },
                 [eT, b, eM],
             );
@@ -617,18 +617,18 @@ let ek = [],
                                             text: O.intl.string(O.t.X3tnc4),
                                             buttonRef: eP,
                                             onClick: function () {
-                                                eU(!0),
+                                                (eU(!0),
                                                     eT({
                                                         isShuffling: !0,
                                                         onOutroComplete: () => {
-                                                            C(), N((e) => e + 1);
+                                                            (C(), N((e) => e + 1));
                                                         },
                                                         returnRef: eP,
                                                         holdIntroUntilReady: A,
                                                     }),
                                                     p.default.track(eS.HAw.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                         page_session_id: eM,
-                                                    });
+                                                    }));
                                             },
                                             disabled: eR !== ec.MOUNTED && eR !== ec.FINISHED,
                                         }),
@@ -708,21 +708,21 @@ function eU(e) {
         ),
         b = r.useCallback(
             (e) => {
-                e?.stopPropagation(),
+                (e?.stopPropagation(),
                     f("go_to_game_server_hosting"),
-                    (0, eL.pX)(eS.BVt.COLLECTIBLES_SHOP_WITH_TAB(eO.G2.GAME_SERVERS));
+                    (0, eL.pX)(eS.BVt.COLLECTIBLES_SHOP_WITH_TAB(eO.G2.GAME_SERVERS)));
             },
             [f],
         ),
         v = r.useCallback(
             (e) => {
-                e?.stopPropagation(),
+                (e?.stopPropagation(),
                     f("dismiss"),
                     g(!0),
                     !0 === t.isDismissible &&
                         (0, x.d6)(d.M.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER, {
                             dismissAction: eM.i.USER_DISMISS,
-                        });
+                        }));
             },
             [f, t.isDismissible],
         ),
@@ -731,7 +731,7 @@ function eU(e) {
                 !a.current &&
                     (e && null === c.current
                         ? (c.current = setTimeout(() => {
-                              (a.current = !0),
+                              ((a.current = !0),
                                   (c.current = null),
                                   p.default.track(eS.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: l?.sessionId,
@@ -739,7 +739,7 @@ function eU(e) {
                                       page_category: l?.pageCategory,
                                       page_section: l?.pageSection,
                                       type: eB,
-                                  });
+                                  }));
                           }, 1e3))
                         : e || null === c.current || (clearTimeout(c.current), (c.current = null)));
             },
@@ -754,7 +754,7 @@ function eU(e) {
     u)
         ? null
         : (0, i.jsx)(eN.N, {
-              theme: eD.NJ.DARKER,
+              theme: eD.NJ.DARK,
               children: (e) =>
                   (0, i.jsx)(eI.L, {
                       innerRef: s,
@@ -1018,7 +1018,7 @@ let te = r.memo(function (e) {
                                         children: (0, i.jsx)(h.$, {
                                             variant: "primary",
                                             onClick: function (e) {
-                                                e.stopPropagation(),
+                                                (e.stopPropagation(),
                                                     c &&
                                                         (0, e4.BX)(t.skuId, n)
                                                             .then(() => {
@@ -1059,7 +1059,7 @@ let te = r.memo(function (e) {
                                                                         }),
                                                                     ),
                                                                 );
-                                                            });
+                                                            }));
                                             },
                                             text: O.intl.string(O.t.VnVTNc),
                                             fullWidth: !0,
@@ -1434,7 +1434,7 @@ let tp = function (e) {
                             children: (0, i.jsx)(tg.J, {
                                 size: "sm",
                                 onClick: (e) => {
-                                    e.stopPropagation(), I();
+                                    (e.stopPropagation(), I());
                                 },
                                 "aria-label": O.intl.string(O.t.WAI6xu),
                             }),
@@ -1478,7 +1478,7 @@ let tp = function (e) {
                                             (0, i.jsx)(h.$, {
                                                 variant: "overlay-primary",
                                                 onClick: (e) => {
-                                                    e.stopPropagation(), y(t.ctaText ?? O.intl.string(O.t.jVcuVY));
+                                                    (e.stopPropagation(), y(t.ctaText ?? O.intl.string(O.t.jVcuVY)));
                                                 },
                                                 text: t.ctaText ?? O.intl.string(O.t.jVcuVY),
                                                 "aria-label":
@@ -1610,7 +1610,7 @@ let tp = function (e) {
                                     u = (0, i.jsx)(ti, { handleTransition: t, shelf: e, tab: s }, a);
                                     break;
                                 case c.g.COUNTDOWN_TIMER:
-                                    (u = (0, i.jsx)(H, { countdownTimerBlock: e, isVisible: m }, a)), (g = !0);
+                                    ((u = (0, i.jsx)(H, { countdownTimerBlock: e, isVisible: m }, a)), (g = !0));
                                     break;
                                 case c.g.IMMERSIVE_BANNER:
                                     u = (0, i.jsx)(
@@ -1728,13 +1728,13 @@ let tp = function (e) {
                                                 variant: "primary",
                                                 text: O.intl.string(O.t.AfrvRD),
                                                 onClick: () => {
-                                                    t({ sourceButton: "shop all button", shouldAnimate: !0 }),
+                                                    (t({ sourceButton: "shop all button", shouldAnimate: !0 }),
                                                         p.default.track(eS.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: c?.sessionId,
                                                             page_type: n,
                                                             page_category: n === eO.G2.HOME ? void 0 : c?.pageCategory,
                                                             cta_name: "browse the shop button",
-                                                        });
+                                                        }));
                                                 },
                                                 fullWidth: !0,
                                             }),

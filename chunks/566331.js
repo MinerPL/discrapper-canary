@@ -23,7 +23,7 @@ function E(e) {
     let E = n < 550 ? "small" : n < 1e3 ? "medium" : "large";
     return (0, i.jsx)(a.N, {
         disableAdaptiveTheme: !0,
-        theme: m.NJ.MIDNIGHT,
+        theme: m.NJ.ONYX,
         children: (e) =>
             (0, i.jsx)("div", {
                 className: l()(f.container, e),
@@ -47,7 +47,7 @@ function E(e) {
                                     variant: "secondary",
                                     size: "small" === E ? "sm" : "md",
                                     onClick: (e) => {
-                                        e.stopPropagation(), (0, c.Xi)((0, A._z)(t));
+                                        (e.stopPropagation(), (0, c.Xi)((0, A._z)(t)));
                                     },
                                     text: g.intl.string(g.t["4EGMWL"]),
                                 }),

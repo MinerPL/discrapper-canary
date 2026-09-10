@@ -1850,7 +1850,7 @@ function sR(e) {
             });
         }, [i]);
     return (0, o.jsx)(sx.N, {
-        theme: e7.NJ8.DARKER,
+        theme: e7.NJ8.DARK,
         children: (e) =>
             (0, o.jsx)(b.f5, {
                 value: i,
@@ -4888,7 +4888,7 @@ let aI = () => {
             ],
         });
     return (0, o.jsx)(sx.N, {
-        theme: aT.NJ.DARKER,
+        theme: aT.NJ.DARK,
         children: (e) => (0, o.jsx)(K.Gt, { className: m()(aR.XG, e), ref: t, children: X }),
     });
 };

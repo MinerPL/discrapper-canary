@@ -28,11 +28,11 @@ var s,
     k = n(285373),
     y = n(450232),
     I = n(973654),
-    R = n(363195),
-    O = n(780964),
+    O = n(363195),
+    R = n(780964),
     H = n(843010),
-    D = n(766075),
-    J = n(174459),
+    J = n(766075),
+    D = n(174459),
     L = n(467135),
     U = n(823459),
     P = n(935444),
@@ -40,12 +40,12 @@ var s,
     V = n(885386),
     $ = n(74396),
     w = n(385803),
-    K = n(818348),
-    W = (((s = {}).RESET_BUTTON = "reset_button"), (s.EDITOR_CLOSE = "editor_close"), s);
-function F(e) {
-    return (0, G.M)(e) ? K.NJ.DARK : K.NJ.LIGHT;
-}
+    W = n(818348),
+    F = (((s = {}).RESET_BUTTON = "reset_button"), (s.EDITOR_CLOSE = "editor_close"), s);
 function X(e) {
+    return (0, G.M)(e) ? W.NJ.DARK : W.NJ.LIGHT;
+}
+function K(e) {
     let t = V.eh.getSetting(),
         n =
             null != t.backgroundGradientPresetId &&
@@ -54,8 +54,8 @@ function X(e) {
     ((0, I.GQ)(e), n && (0, U.S8)());
 }
 function z() {
-    let e = F(R.A.theme);
-    e !== R.A.theme && X(e);
+    let e = X(O.A.theme);
+    e !== O.A.theme && K(e);
 }
 function Q(e, t, n) {
     (0 === e.length && n([t]), z());
@@ -511,22 +511,22 @@ function eN(e, t) {
     return e === t ? ev.HE : void 0;
 }
 function eM() {
-    let e = (0, o.bG)([R.A], () => R.A.theme),
-        t = (0, ep.M)(e) ? K.NJ.DARK : K.NJ.LIGHT,
+    let e = (0, o.bG)([O.A], () => O.A.theme),
+        t = (0, ep.M)(e) ? W.NJ.ASH : W.NJ.LIGHT,
         n = [
             {
                 name: "",
-                value: K.NJ.DARK,
+                value: W.NJ.ASH,
                 icon: eS.Z,
-                className: eN(t, K.NJ.DARK),
+                className: eN(t, W.NJ.ASH),
                 tooltip: eu.intl.string(ec.default["Dk+OWY"]),
                 tooltipAriaLabel: eu.intl.string(ec.default["Dk+OWY"]),
             },
             {
                 name: "",
-                value: K.NJ.LIGHT,
+                value: W.NJ.LIGHT,
                 icon: eA.F,
-                className: eN(t, K.NJ.LIGHT),
+                className: eN(t, W.NJ.LIGHT),
                 tooltip: eu.intl.string(ec.default["5vlJkY"]),
                 tooltipAriaLabel: eu.intl.string(ec.default["5vlJkY"]),
             },
@@ -538,7 +538,7 @@ function eM() {
         value: t,
         onChange: (e) => {
             let { value: t } = e;
-            ((0, B.dR)(), X(t));
+            ((0, B.dR)(), K(t));
         },
         look: "pill",
     });
@@ -558,7 +558,7 @@ function eI(e) {
         { key: t, handleInternalChange: i.useCallback((e) => (l(!0), e), []) }
     );
 }
-function eR(e) {
+function eO(e) {
     let { markAsDismissed: t } = e;
     return (0, l.jsx)("div", {
         className: ey.b,
@@ -570,13 +570,13 @@ function eR(e) {
         }),
     });
 }
-function eO() {
+function eR() {
     return (0, l.jsxs)("div", {
         className: ey.N1,
         children: [
             (0, l.jsx)(m.E, { variant: "text-md/bold", children: eu.intl.string(ec.default.AsmU85) }),
             (0, l.jsx)(y.A, { size: "refresh_sm", color: "strong" }),
-            (0, l.jsx)(eR, {}),
+            (0, l.jsx)(eO, {}),
         ],
     });
 }
@@ -584,11 +584,11 @@ function eH(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
     return (0, M.HX)(c.M.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, l.jsx)(eD, { markAsDismissed: t })
-            : (0, l.jsx)(eO, {})
-        : (0, l.jsx)(eD, { markAsDismissed: () => (0, M.Dr)(c.M.CUSTOM_THEME_COACHMARK) });
+            ? (0, l.jsx)(eJ, { markAsDismissed: t })
+            : (0, l.jsx)(eR, {})
+        : (0, l.jsx)(eJ, { markAsDismissed: () => (0, M.Dr)(c.M.CUSTOM_THEME_COACHMARK) });
 }
-function eD(e) {
+function eJ(e) {
     let { markAsDismissed: t } = e,
         n = (0, b.L)(ek.PremiumTypes.TIER_2);
     return (0, l.jsxs)("div", {
@@ -601,7 +601,7 @@ function eD(e) {
                         variant: "heading-lg/extrabold",
                         children: eu.intl.string(ec.default["23QUzv"]),
                     }),
-                    (0, l.jsx)(eR, { markAsDismissed: t }),
+                    (0, l.jsx)(eO, { markAsDismissed: t }),
                 ],
             }),
             (0, l.jsx)(m.E, {
@@ -613,7 +613,7 @@ function eD(e) {
         ],
     });
 }
-function eJ(e) {
+function eD(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: s, handleInternalChange: a } = eI(t),
         [o, c] = i.useState(`${Math.round(t)}\xb0`);
@@ -849,7 +849,7 @@ function eV(e) {
             (0, B.uk)(),
             (0, M.Dr)(c.M.CUSTOM_THEME_COACHMARK),
             s?.from === N.xv.SETTING
-                ? ((0, D.openUserSettings)(O.X.APPEARANCE_THEME_CATEGORY), (0, N.Jp)())
+                ? ((0, J.openUserSettings)(R.X.APPEARANCE_THEME_CATEGORY), (0, N.Jp)())
                 : s?.from === N.xv.CLIENT_THEMES_EDITOR
                   ? (0, N.nf)(N.HP.CLIENT_THEMES)
                   : (0, N.Jp)());
@@ -875,7 +875,7 @@ function eV(e) {
                       (0, l.jsx)(eP, {
                           disabled: !n,
                           onApply: () => {
-                              (a && J.default.track(e_.HAw.CUSTOM_THEME_SHARE_APPLIED, {}), t());
+                              (a && D.default.track(e_.HAw.CUSTOM_THEME_SHARE_APPLIED, {}), t());
                           },
                       }),
                   ],
@@ -906,7 +906,7 @@ function eV(e) {
 function e$(e) {
     let { metadata: t, markAsDismissed: n, isCoachmark: s, isMobile: a } = e,
         r = (function () {
-            let [e] = i.useState(() => R.A.theme);
+            let [e] = i.useState(() => O.A.theme);
             return i.useCallback(
                 (t) => {
                     let {
@@ -916,7 +916,7 @@ function e$(e) {
                         resetBaseTheme: i,
                     } = Y(t, e);
                     (L.ko.getState().setAll({ colors: n, gradientAngle: s, chassisMixAmount: l }),
-                        "reset_button" === t ? X(F(i ?? R.A.theme)) : (0, I.XG)());
+                        "reset_button" === t ? K(X(i ?? O.A.theme)) : (0, I.XG)());
                     let a = V.eh.getSetting().backgroundGradientPresetId;
                     null != a && (0, U.bc)(a);
                 },
@@ -925,8 +925,8 @@ function e$(e) {
         })(),
         u = (function () {
             let { colors: e, chassisMixAmount: t, gradientAngle: n } = (0, L.ko)(),
-                s = (0, o.bG)([R.A], () => R.A.theme),
-                [l] = i.useState(() => R.A.theme),
+                s = (0, o.bG)([O.A], () => O.A.theme),
+                [l] = i.useState(() => O.A.theme),
                 {
                     resetColors: a,
                     resetGradientAngle: r,
@@ -945,17 +945,17 @@ function e$(e) {
             setGradientAngle: j,
         } = (0, L.ko)(),
         [_, b] = i.useState(x[0] ?? L.OT),
-        k = (0, o.bG)([R.A], () => R.A.theme),
+        k = (0, o.bG)([O.A], () => O.A.theme),
         y = (0, M.HX)(c.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: O } = (0, v.Ay)(C.A.CUSTOM_THEMES_EDITOR),
-        D = (0, o.bG)([$.A], () => $.A.getSavedCustomTheme());
-    async function J() {
+        { analyticsLocations: R } = (0, v.Ay)(C.A.CUSTOM_THEMES_EDITOR),
+        J = (0, o.bG)([$.A], () => $.A.getSavedCustomTheme());
+    async function D() {
         ((h.current = !0),
             await (0, A.u_)({
-                theme: F(k),
+                theme: X(k),
                 customUserThemeSettings: { colors: x, gradientColorStops: [], gradientAngle: f, baseMix: g },
             }),
-            (0, B.Yl)(x, g, f, k, O),
+            (0, B.Yl)(x, g, f, k, R),
             n?.(eb.i.TAKE_ACTION),
             y || (0, M.Dr)(c.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
             (0, N.Jp)(),
@@ -964,25 +964,25 @@ function e$(e) {
     let P = x.length > 0;
     i.useEffect(
         () => () => {
-            h.current || r(W.EDITOR_CLOSE);
+            h.current || r(F.EDITOR_CLOSE);
         },
         [r],
     );
     let G = (0, H.G)(),
-        w = F(k);
+        w = X(k);
     return (
         i.useEffect(() => {
-            G ? (0, I.XG)() : k !== w && X(w);
+            G ? (0, I.XG)() : k !== w && K(w);
         }, [G, k, w]),
         (0, p.Ay)(() => {
             if (!s) {
                 let e = (x?.length ?? 0) > 0,
-                    t = null != D;
+                    t = null != J;
                 !e && t
                     ? (L.ko
                           .getState()
-                          .setAll({ colors: D.colors, gradientAngle: D.gradient_angle, chassisMixAmount: D.base_mix }),
-                      X(D.base_theme))
+                          .setAll({ colors: J.colors, gradientAngle: J.gradient_angle, chassisMixAmount: J.base_mix }),
+                      K(J.base_theme))
                     : Q(x, _, T);
             }
         }),
@@ -1032,7 +1032,7 @@ function e$(e) {
                                         color: "text-subtle",
                                         children: eu.intl.string(ec.default.F1t0c8),
                                     }),
-                                    x.length > 1 && (0, l.jsx)(eJ, { gradientAngle: f, setGradientAngle: j }),
+                                    x.length > 1 && (0, l.jsx)(eD, { gradientAngle: f, setGradientAngle: j }),
                                     (0, l.jsx)(eL, {
                                         chassisMixAmount: g,
                                         setChassisMixAmount: (e) => {
@@ -1048,7 +1048,7 @@ function e$(e) {
                                     (0, l.jsx)(d.$, {
                                         variant: "secondary",
                                         onClick: function () {
-                                            (r(W.RESET_BUTTON), (0, B.G_)());
+                                            (r(F.RESET_BUTTON), (0, B.G_)());
                                         },
                                         disabled: u,
                                         text: eu.intl.string(eu.t.yBZMsQ),
@@ -1060,8 +1060,8 @@ function e$(e) {
                     }),
                 }),
                 s
-                    ? (0, l.jsx)(eG, { onSaveTheme: J, canApply: P })
-                    : (0, l.jsx)(eV, { onSaveTheme: J, canApply: P, metadata: t }),
+                    ? (0, l.jsx)(eG, { onSaveTheme: D, canApply: P })
+                    : (0, l.jsx)(eV, { onSaveTheme: D, canApply: P, metadata: t }),
             ],
         })
     );

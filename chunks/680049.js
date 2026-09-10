@@ -1,5 +1,5 @@
 n.d(t, { NJ: () => r, zv: () => a });
-let i = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
+let i = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" },
     r = i;
-i.MIDNIGHT, i.DARK, i.DARKER, i.DARK;
+(i.ASH, i.DARK, i.ONYX, i.DARK);
 let a = { Themes: i };

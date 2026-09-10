@@ -14,8 +14,8 @@ var n = l(477900),
     h = l(604913),
     C = l(65238),
     m = l(174459),
-    E = l(975571),
-    x = l(440938),
+    x = l(975571),
+    E = l(440938),
     I = l(80151),
     k = l(151115),
     L = l(758836),
@@ -34,14 +34,14 @@ function b(e) {
             ctaText: b,
             ctaIcon: S,
             onCtaClick: O,
-            hideCta: R,
-            onDismiss: j,
+            hideCta: j,
+            onDismiss: y,
         } = e,
-        { analyticsLocations: y } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
-        f = i.useMemo(() => (null == I ? null : E.A.getArticleURL(I)), [I]),
+        { analyticsLocations: R } = (0, u.Ay)(_.A.COLLECTIBLES_SHOP_NAGBAR),
+        f = i.useMemo(() => (null == I ? null : x.A.getArticleURL(I)), [I]),
         B = (0, k.sj)(a),
         P = v[l] ?? g.Hk,
-        M = (0, x.uM)(),
+        M = (0, E.uM)(),
         G = i.useCallback(() => {
             m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: M?.sessionId,
@@ -53,9 +53,9 @@ function b(e) {
             });
         }, [t, M]);
     return (0, n.jsx)(u.f5, {
-        value: y,
+        value: R,
         children: (0, n.jsx)(o.N, {
-            theme: N.NJ8.DARKER,
+            theme: N.NJ8.DARK,
             children: (e) =>
                 (0, n.jsxs)("div", {
                     className: s()(g.kL, e),
@@ -93,7 +93,7 @@ function b(e) {
                                 (0, n.jsxs)("div", {
                                     className: g.uJ,
                                     children: [
-                                        !R &&
+                                        !j &&
                                             null != b &&
                                             (0, n.jsx)(p.$, {
                                                 variant: "overlay-primary",
@@ -102,9 +102,9 @@ function b(e) {
                                                 icon: S,
                                                 onClick: O,
                                             }),
-                                        null != j &&
+                                        null != y &&
                                             (0, n.jsx)(d.PM, {
-                                                onClick: j,
+                                                onClick: y,
                                                 noticeType: N.kqX.COLLECTIBLES_SHOP_NAGBAR,
                                                 className: g.r,
                                             }),
@@ -121,13 +121,13 @@ let S =
     221552 == l.j
         ? function (e) {
               let { tab: t, handleTransition: l } = e,
-                  a = (0, x.uM)(),
+                  a = (0, E.uM)(),
                   s = (0, I.A)(),
                   o = (0, C.ml)(s)?.reward,
                   c = o?.storefront?.nagbar,
                   r = o?.flavor,
                   p = i.useCallback(() => {
-                      m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                      (m.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: a?.sessionId,
                           page_type: t,
                           page_section: a?.pageSection,
@@ -135,7 +135,7 @@ let S =
                           tile_type: "NAGBAR",
                           cta_name: "view eligible items button",
                       }),
-                          l(L.G2.OFFER_ELIGIBLE);
+                          l(L.G2.OFFER_ELIGIBLE));
                   }, [l, t, a]);
               return t === L.G2.ORBS || null == c
                   ? null

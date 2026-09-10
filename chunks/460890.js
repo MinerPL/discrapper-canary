@@ -64,7 +64,7 @@ let s = {
             MINIMUM_VALUE_ERROR: (e) => `Must be ${e} or more.`,
             MAXIMUM_VALUE_ERROR: (e) => `Must be ${e} or less.`,
         },
-        theme: "light",
+        theme: n(505124).NJ.LIGHT,
         locale: "en-US",
         saturation: 0.5,
         defaultLayerContext: void 0,
@@ -76,7 +76,7 @@ let s = {
     l = r.createContext(s);
 function o() {
     let e = r.useContext(l);
-    return e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
+    return (e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e);
 }
 function d(e) {
     let { children: t, value: n } = e;

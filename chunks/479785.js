@@ -1,4 +1,4 @@
-a.d(s, { A: () => k, n: () => A });
+a.d(s, { A: () => R, n: () => A });
 var t = a(477900);
 a(582128);
 var i = a(562708),
@@ -10,8 +10,8 @@ var i = a(562708),
     o = a(820081),
     x = a(241524),
     m = a(793574),
-    u = a(688810),
-    N = a(139286),
+    N = a(688810),
+    u = a(139286),
     h = a(792656),
     _ = a(377368),
     p = a(757036),
@@ -37,31 +37,31 @@ function A() {
         return (s) => (0, t.jsx)(e, { ...s });
     });
 }
-function k(e) {
+function R(e) {
     let s,
         a,
         { partner: n } = e,
-        k =
+        R =
             ((s = (0, p.L)(T.PremiumTypes.TIER_2)),
             (a = (0, v.G)({ location: "useShouldShowXboxGamePassPerksConnectionBanner" })),
             n === j.fg2.XBOX && !1 === s && a),
-        R = (0, x.A)("(max-width: 485px)"),
-        { analyticsLocations: y } = (0, u.Ay)(m.A.XBOX_PERKS_CONNECTION_FOOTER);
-    return ((0, N.A)(
+        k = (0, x.A)("(max-width: 485px)"),
+        { analyticsLocations: y } = (0, N.Ay)(m.A.XBOX_PERKS_CONNECTION_FOOTER);
+    return ((0, u.A)(
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.THIRD_PARTY_PARTNER_PERK,
             properties: { type: _.wX.CONNECTION_FOOTER, third_party_partner: _.NB },
         },
-        { disableTrack: !k },
+        { disableTrack: !R },
     ),
-    k)
-        ? (0, t.jsx)(u.f5, {
+    R)
+        ? (0, t.jsx)(N.f5, {
               value: y,
               children: (0, t.jsx)("div", {
                   className: C.cy,
                   children: (0, t.jsx)(d.N, {
-                      theme: "dark",
+                      theme: j.NJ8.DARK,
                       children: (e) =>
                           (0, t.jsxs)("div", {
                               className: `${e} ${C.vK}`,
@@ -127,7 +127,7 @@ function k(e) {
                                                       children: (0, t.jsx)(h.A, {
                                                           defaultTextOverride: O.intl.string(f.default.oBYFF3),
                                                           size: "sm",
-                                                          fullWidth: R,
+                                                          fullWidth: k,
                                                           subscriptionTier: T.pe.TIER_2,
                                                       }),
                                                   }),

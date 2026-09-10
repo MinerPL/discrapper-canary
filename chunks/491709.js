@@ -11683,7 +11683,7 @@ function EQ() {
                 ],
             }),
             (0, A.jsx)(EF.N, {
-                theme: "dark",
+                theme: S.NJ8.DARK,
                 children: (e) =>
                     (0, A.jsx)("div", {
                         className: e,
@@ -13571,7 +13571,7 @@ let ST = (0, d.E2)(c.X.OVERLAY_VOICE_WIDGET_PREVIEW, {
                 o = [null != t ? (((e = SS(t.username)).user = t), e) : null, ...s].filter(it.Vq),
                 u = [new Map(o.map((e) => [e.user.id, e])), o.map((e) => e.user.id)],
                 d = (0, A.jsx)(EF.N, {
-                    theme: S.NJ8.MIDNIGHT,
+                    theme: S.NJ8.ONYX,
                     children: (e) =>
                         (0, A.jsxs)("div", {
                             className: is()(hb.Y5, e),
@@ -14875,9 +14875,9 @@ function T4(e) {
                               alt: R.intl.string(R.t.LHFZQy),
                               src: (function (e) {
                                   switch (e) {
+                                      case S.NJ8.ASH:
                                       case S.NJ8.DARK:
-                                      case S.NJ8.DARKER:
-                                      case S.NJ8.MIDNIGHT:
+                                      case S.NJ8.ONYX:
                                           return T5;
                                       case S.NJ8.LIGHT:
                                           return "/assets/a98f1410707fafea.png";

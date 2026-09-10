@@ -1,56 +1,73 @@
-t.d(a, { Ay: () => g, fh: () => m, qP: () => c });
-var s,
-    r,
-    n = t(477900),
-    i = t(582128),
-    d = t(503698),
-    l = t.n(d);
-t(284009);
-var u = t(736653),
-    o = t(894726),
-    c = (((s = {}).UNSET = "unset"), (s.BLUE = "blue"), (s.ORANGE = "orange"), s),
-    m = (((r = {}).LIGHT = "light"), (r.MEDIUM = "medium"), r);
-let g = function (e) {
+r.d(a, { Ay: () => h, fh: () => m, qP: () => g });
+var t,
+    s,
+    n = r(477900),
+    i = r(582128),
+    d = r(503698),
+    u = r.n(d);
+r(284009);
+var l = r(736653),
+    c = r(652215),
+    o = r(894726),
+    g = (((t = {}).UNSET = "unset"), (t.BLUE = "blue"), (t.ORANGE = "orange"), t),
+    m = (((s = {}).LIGHT = "light"), (s.MEDIUM = "medium"), s);
+let h = function (e) {
     let {
             progress: a,
-            minimum: t = 0,
-            maximum: s = 100,
-            weight: r = "light",
+            minimum: r = 0,
+            maximum: t = 100,
+            weight: s = "light",
             variant: d,
-            override: c,
+            override: g,
             glowing: m = !0,
-            labelledBy: g,
+            labelledBy: h,
         } = e,
-        p = null != c && "unset" === d,
-        h = (0, u.Ay)(),
-        v = c?.[h] ?? c?.default,
-        b = i.useMemo(() => ((a - t) / (s - t)) * 100, [a, t, s]),
-        y = a === t,
+        p = null != g && "unset" === d,
+        N = (0, l.Ay)(),
+        k =
+            g?.[
+                (function (e) {
+                    switch (e) {
+                        case c.NJ8.LIGHT:
+                            return "light";
+                        case c.NJ8.ASH:
+                            return "dark";
+                        case c.NJ8.DARK:
+                            return "darker";
+                        case c.NJ8.ONYX:
+                            return "midnight";
+                        default:
+                            return "dark";
+                    }
+                })(N)
+            ] ?? g?.default,
+        v = i.useMemo(() => ((a - r) / (t - r)) * 100, [a, r, t]),
+        b = a === r,
         w = {
             ...(p
                 ? {
-                      "--custom-background": v?.background,
-                      "--custom-gradient-start": v?.gradientStart,
-                      "--custom-gradient-end": v?.gradientEnd,
-                      "--custom-gradient-glow": v?.gradientEnd,
+                      "--custom-background": k?.background,
+                      "--custom-gradient-start": k?.gradientStart,
+                      "--custom-gradient-end": k?.gradientEnd,
+                      "--custom-gradient-glow": k?.gradientEnd,
                   }
                 : {}),
             ...(!m && { "--custom-gradient-glow": "transparent" }),
         };
     return (0, n.jsx)("div", {
-        className: l()(o.progressContainer, o[r], o[d]),
+        className: u()(o.progressContainer, o[s], o[d]),
         style: w,
         children: (0, n.jsxs)("div", {
-            className: l()(o.progress, { [o.empty]: y }),
-            style: { width: `${b}%` },
+            className: u()(o.progress, { [o.empty]: b }),
+            style: { width: `${v}%` },
             role: "meter",
             "aria-valuenow": a,
-            "aria-valuemin": t,
-            "aria-valuemax": s,
-            "aria-labelledby": g,
+            "aria-valuemin": r,
+            "aria-valuemax": t,
+            "aria-labelledby": h,
             children: [
-                (0, n.jsx)("div", { className: l()(o.glow, { [o.empty]: y }) }),
-                (0, n.jsx)("div", { className: l()(o.bar, o[d], { [o.empty]: y }) }),
+                (0, n.jsx)("div", { className: u()(o.glow, { [o.empty]: b }) }),
+                (0, n.jsx)("div", { className: u()(o.bar, o[d], { [o.empty]: b }) }),
             ],
         }),
     });

@@ -9,17 +9,17 @@ var n = i(477900),
     c = i(963852),
     d = i(20851),
     m = i(69282),
-    f = i(287809),
-    g = i(562153),
+    g = i(287809),
+    f = i(562153),
     p = i(652215),
     _ = i(375708),
     S = i(241123);
 function v(e) {
     let { guildId: t, role: i, theme: r, content: v = _.intl.string(_.t["6OSasb"]), className: A } = e,
-        y = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
-        E = g.Ay.useName(t, null, y),
+        y = (0, s.bG)([g.default], () => g.default.getCurrentUser()),
+        E = f.Ay.useName(t, null, y),
         b = (0, m.ox)(i),
-        C = l.useMemo(
+        h = l.useMemo(
             () =>
                 (0, u.rh)({
                     ...(0, c.Ay)({
@@ -36,17 +36,17 @@ function v(e) {
                 }),
             [y, v],
         ),
-        h = { nick: E, colorString: i.colorString, colorStrings: i.colorStrings };
+        C = { nick: E, colorString: i.colorString, colorStrings: i.colorStrings };
     return (0, n.jsx)(a.N, {
-        theme: r,
+        theme: "light" === r ? p.NJ8.LIGHT : "dark" === r ? p.NJ8.DARK : r,
         children: (e) =>
             (0, n.jsx)("div", {
                 className: o()(e, S.k, A),
                 children: (0, n.jsx)(d.A, {
                     hideTimestamp: !0,
-                    author: h,
+                    author: C,
                     roleIcon: b,
-                    message: C,
+                    message: h,
                     isGroupStart: !0,
                     disableInteraction: !0,
                 }),

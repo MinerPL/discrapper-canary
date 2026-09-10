@@ -12,13 +12,13 @@ var i = n(17928),
     E = n(652215),
     A = n(185928),
     h = n(661531),
-    I = n(353835),
-    f = n(723702);
+    f = n(353835),
+    I = n(723702);
 function p(e) {
-    if (!__OVERLAY__ && f.isPlatformEmbedded)
+    if (!__OVERLAY__ && I.isPlatformEmbedded)
         try {
             let t = h.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: o.Ay.saturation }).hex();
-            I.A.setApplicationBackgroundColor(t);
+            f.A.setApplicationBackgroundColor(t);
         } catch {}
 }
 var T = n(594061),
@@ -38,7 +38,7 @@ function y() {
                   if (__OVERLAY__) return E.NJ8.DARK;
                   let i = A.dP;
                   if (o.Ay.syncForcedColors && "active" === o.Ay.systemForcedColors && e !== A.Fc.NO_PREFERENCE)
-                      return e;
+                      return t[e];
                   let r = c.A.getAppearanceSettings(),
                       a = r?.theme,
                       s = _.A.settings.appearance,
@@ -63,19 +63,19 @@ class D extends i.Ay.PersistedStore {
     static migrations = [
         (e) => {
             let t = e.theme;
-            return "amoled" === t && (t = "midnight"), { ...e, theme: t };
+            return ("amoled" === t && (t = E.NJ8.ONYX), { ...e, theme: t });
         },
         (e) => e,
     ];
     initialize(e) {
-        e?.theme != null &&
+        (e?.theme != null &&
             ((g = 1),
             p((C = e.theme)),
             null != e.preferences && (S = e.preferences),
             null != e.syncedClientThemes && (R = e.syncedClientThemes),
             null != e.syncedThemesEnabled && (L = e.syncedThemesEnabled),
             (0, r.M)(C) && (S[A.Fc.DARK] = C)),
-            this.waitFor(u.Ay, c.A, _.A);
+            this.waitFor(u.Ay, c.A, _.A));
     }
     getState() {
         return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: g };
@@ -100,7 +100,7 @@ let v = new D(a.h, {
     CACHE_LOADED: y,
     CONNECTION_OPEN: function () {
         return (
-            0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARKER }), (g = 1)),
+            0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (g = 1)),
             u.Ay.darkSidebar &&
                 (_.A.settings.appearance?.darkSidebar ||
                     T.wc.updateAsync(
@@ -117,37 +117,39 @@ let v = new D(a.h, {
         );
     },
     LOGOUT: function (e) {
-        return (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), y());
+        return (
+            (O = null), (R = {}), (L = !1), !e.isSwitchingAccount && C !== E.NJ8.DARK && (p((C = E.NJ8.DARK)), y())
+        );
     },
     OVERLAY_INITIALIZE: y,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
-        return null != e.changes.appearance && (O = null), y();
+        return (null != e.changes.appearance && (O = null), y());
     },
     UNSYNCED_USER_SETTINGS_UPDATE: y,
     USER_SETTINGS_PROTO_UPDATE: y,
     RESET_PREVIEW_CLIENT_THEME: y,
     SYSTEM_THEME_CHANGE: function (e) {
         let { systemTheme: t } = e;
-        return (N = t), y();
+        return ((N = t), y());
     },
     UPDATE_THEME_PREFERENCES: function (e) {
-        return (S = { ...S, ...e.preferences }), y();
+        return ((S = { ...S, ...e.preferences }), y());
     },
     UPDATE_SYNCED_CLIENT_THEME: function (e) {
-        return (R = { ...R, [e.systemTheme]: e.clientTheme }), !0;
+        return ((R = { ...R, [e.systemTheme]: e.clientTheme }), !0);
     },
     SET_SAME_AS_DEVICE_THEME_ENABLED: function (e) {
         return L !== e.enabled && ((L = e.enabled), !0);
     },
     CLEAR_SYNCED_CLIENT_THEMES: function () {
         let e = L || null != R[A.Fc.LIGHT] || null != R[A.Fc.DARK];
-        return (R = {}), (L = !1), e;
+        return ((R = {}), (L = !1), e);
     },
     SET_THEME_OVERRIDE: function (e) {
-        return (O = e.theme), y();
+        return ((O = e.theme), y());
     },
     CLEAR_THEME_OVERRIDE: function () {
-        return (O = null), y();
+        return ((O = null), y());
     },
     REFRESH_THEME: function () {
         return y();

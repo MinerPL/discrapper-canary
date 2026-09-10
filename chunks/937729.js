@@ -13,8 +13,8 @@ e.exports = {
     P0: "iconWrapper__36dee",
     Xu: "darkOverlay__36dee",
     VO: "lightOverlay__36dee",
+    ce: "ashIcon__36dee",
     eQ: "darkIcon__36dee",
-    xl: "darkerIcon__36dee",
-    k$: "midnightIcon__36dee",
+    Ih: "onyxIcon__36dee",
     mT: "lightIcon__36dee",
 };

@@ -16,15 +16,15 @@ function h(e) {
         p = (0, l.bG)([o.Ay], () => o.Ay.syncProfileThemeWithUserTheme),
         x = f ?? r?.getAvatarURL(n?.guildId, 80),
         N = (0, i.nt)("PRIMARY_530", { saturation: 1 }),
-        [R, b] = (0, u.rh)(x, N, !1);
+        [b, j] = (0, u.rh)(x, N, !1);
     if (null != y) return y;
     if (!n?.canEditThemes && !v) return { theme: C, primaryColor: null, secondaryColor: null };
-    let j = n?.getPreviewThemeColors(h),
-        T = j?.[0] ?? (0, t.LX)(R),
-        g = j?.[1] ?? (0, t.LX)(b),
-        w = p || A ? C : ((0, d.tM)(T) ?? C);
+    let T = n?.getPreviewThemeColors(h),
+        R = T?.[0] ?? (0, t.LX)(b),
+        g = T?.[1] ?? (0, t.LX)(j),
+        w = p || A ? C : ((0, d.tM)(R) ?? C);
     return (
-        w === m.NJ8.DARK && (0, a.M)(C) ? (w = C) : w === m.NJ8.DARK && (0, a.q)(C) && (w = m.NJ8.DARKER),
-        { theme: w, primaryColor: T, secondaryColor: g }
+        w === m.NJ8.ASH && (0, a.M)(C) ? (w = C) : w === m.NJ8.ASH && (0, a.q)(C) && (w = m.NJ8.DARK),
+        { theme: w, primaryColor: R, secondaryColor: g }
     );
 }

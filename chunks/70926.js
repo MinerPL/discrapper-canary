@@ -18,10 +18,10 @@ var a = n(477900),
     g = n(976860),
     A = n(309954),
     C = n(287809),
-    R = n(975571),
-    N = n(474090),
-    E = n(920050),
-    b = n(94264),
+    N = n(975571),
+    R = n(474090),
+    b = n(920050),
+    E = n(94264),
     p = n(549384),
     y = n(566119),
     O = n(202541),
@@ -40,24 +40,24 @@ function P() {
     });
 }
 function U() {
-    (0, y.RQ)(), (0, g.pX)(T.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: E.NITRO_ORBS_REWARDS_CARD_ID }) });
+    ((0, y.RQ)(), (0, g.pX)(T.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
 }
 function F() {
-    (0, y.gP)(), (0, g.pX)(T.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) });
+    ((0, y.gP)(), (0, g.pX)(T.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) }));
 }
 function I() {
-    (0, y.b)(), window.open(R.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank");
+    ((0, y.b)(), window.open(N.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank"));
 }
 function W(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: s, ctaText: i, ctaOnClick: u } = e,
         { passesGeneralUIInvariant: o, programReward: g } = (0, v.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        R = (0, d.bG)([C.default], () => C.default.getCurrentUser()),
-        { balance: E } = (0, A.W)(),
-        p = !(0, N.ki)(R),
+        N = (0, d.bG)([C.default], () => C.default.getCurrentUser()),
+        { balance: b } = (0, A.W)(),
+        p = !(0, R.ki)(N),
         y = l.useMemo(() => {
-            let e = (0, N.YE)(R, O.PremiumTypes.TIER_2);
+            let e = (0, R.YE)(N, O.PremiumTypes.TIER_2);
             if (!o || p) return null;
             if (e && null != g) {
                 let e = (0, c.default)(new Date(g.next_reward_date), new Date());
@@ -71,13 +71,13 @@ function W(e) {
                                 deepLinkToNitroOrbs: U,
                             }),
                         }),
-                        (0, a.jsx)(b.A, {}),
+                        (0, a.jsx)(E.A, {}),
                     ],
                 });
             }
             return null;
-        }, [R, p, g, o]),
-        T = (E ?? 0) >= 4100;
+        }, [N, p, g, o]),
+        T = (b ?? 0) >= 4100;
     return (0, a.jsx)(m.x, {
         targetElementRef: t,
         shouldShow: n,
@@ -87,7 +87,7 @@ function W(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: (0, a.jsx)(h.N, {
-            theme: T ? S.NJ8.DARKER : void 0,
+            theme: T ? S.NJ8.DARK : void 0,
             children: (e) =>
                 (0, a.jsxs)("div", {
                     className: r()(e, M.j),
@@ -104,14 +104,14 @@ function W(e) {
                                         (0, a.jsxs)("div", {
                                             className: M.y$,
                                             children: [
-                                                (E ?? 0) > 0 &&
+                                                (b ?? 0) > 0 &&
                                                     (0, a.jsxs)("div", {
                                                         className: M.E2,
                                                         children: [
                                                             (0, a.jsx)(x.E, {
                                                                 variant: "display-lg",
                                                                 className: M.K,
-                                                                children: E ?? 0,
+                                                                children: b ?? 0,
                                                             }),
                                                             (0, a.jsx)(x.E, {
                                                                 variant: "text-xs/normal",
@@ -155,7 +155,7 @@ var z = n(440005),
     G = n(305003),
     H = n(162097),
     J = n(922016);
-n(964486), n(786953);
+(n(964486), n(786953));
 var Q = n(505274),
     X = n(37402);
 function Y(e) {
@@ -196,11 +196,11 @@ function en(e) {
         [h, j] = l.useState(G.k.DEFAULT),
         [k, v] = l.useState(!1),
         [g, C] = l.useState(!1),
-        R = l.useRef(null);
+        N = l.useRef(null);
     (0, u.j)(!k);
-    let N = l.useCallback(() => {
+    let R = l.useCallback(() => {
             let e = !k;
-            e &&
+            (e &&
                 null != c &&
                 (0, V.Y)({
                     pageType: c,
@@ -208,23 +208,23 @@ function en(e) {
                     ctaObject: S.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
                 j(e ? G.k.SELECTED : G.k.DEFAULT),
-                v(e);
+                v(e));
         }, [k, c]),
-        E = l.useCallback(() => {
-            k && N();
-        }, [k, N]),
-        b = (0, i.A)(null, E),
+        b = l.useCallback(() => {
+            k && R();
+        }, [k, R]),
+        E = (0, i.A)(null, b),
         p = l.useMemo(
             () =>
                 (0, a.jsx)(H.b, {
                     analyticsPage: c,
                     ctaText: n,
                     ctaOnClick: () => {
-                        N(), s();
+                        (R(), s());
                     },
                     linkText: o,
                 }),
-            [c, n, o, N, s],
+            [c, n, o, R, s],
         ),
         y = (0, q.H)({ location: "BalanceWidgetMenu" }),
         { hasUnreadUpdate: O } = (0, $.I)({ enabled: y }),
@@ -232,41 +232,41 @@ function en(e) {
         _ = l.useMemo(
             () =>
                 (0, a.jsx)(Y, {
-                    pillRef: R,
+                    pillRef: N,
                     balance: f,
                     balanceWidgetMode: h,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: N,
+                    onClick: R,
                     showNotificationBadge: T,
                 }),
-            [f, h, T, N],
+            [f, h, T, R],
         ),
         M = l.useCallback(
             (e, t) =>
                 y
                     ? e
-                        ? (0, a.jsx)(Z.EA, { cardRef: b, targetElementRef: R, shouldShow: e })
+                        ? (0, a.jsx)(Z.EA, { cardRef: E, targetElementRef: N, shouldShow: e })
                         : null
                     : x
                       ? (0, a.jsx)(W, {
-                            targetElementRef: R,
+                            targetElementRef: N,
                             shouldShow: e,
-                            onRequestClose: N,
+                            onRequestClose: R,
                             ctaText: n,
                             ctaOnClick: () => {
-                                N(), s();
+                                (R(), s());
                             },
                         })
                       : e
                         ? (0, a.jsx)("div", {
                               className: r()(ee.Ui, d, { [ee.R]: t, [ee.RK]: !t }),
-                              ref: b,
+                              ref: E,
                               children: p,
                           })
                         : null,
-            [y, p, d, b, R, N, n, s, x],
+            [y, p, d, E, N, R, n, s, x],
         );
     return (0, a.jsxs)("div", { className: r()(ee.kL, m, { [ee.R]: g, [ee.RK]: !g }), children: [_, M(k, g)] });
 }

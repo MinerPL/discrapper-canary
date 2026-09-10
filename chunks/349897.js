@@ -1,4 +1,4 @@
-n.d(t, { T: () => b });
+n.d(t, { T: () => j });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -32,7 +32,7 @@ function A(e) {
         delay: 300,
         text: p,
         children: (0, r.jsx)(c.N, {
-            theme: u.NJ.MIDNIGHT,
+            theme: u.NJ.ONYX,
             children: (e) =>
                 (0, r.jsx)(s.animated.div, {
                     className: a()(S.z, e),
@@ -55,20 +55,20 @@ function A(e) {
     });
 }
 let C = 12,
-    I = { tension: 500, friction: 30, clamp: !0 };
-function b(e) {
+    b = { tension: 500, friction: 30, clamp: !0 };
+function j(e) {
     let [t, n] = l.useState(null),
         i = l.useRef(null),
         [{ expansion: a }, s] = (0, d.z)(() => ({
             expansion: 0,
-            config: I,
+            config: b,
             onRest: () => {
                 null == i.current && n(null);
             },
         })),
         u = l.useCallback(
             (e) => {
-                (i.current = e), null != e ? (n(e), s({ expansion: 4 })) : s({ expansion: 0 });
+                ((i.current = e), null != e ? (n(e), s({ expansion: 4 })) : s({ expansion: 0 }));
             },
             [s],
         ),
@@ -85,13 +85,13 @@ function b(e) {
                 let d = n > e.leftPx;
                 switch (o.game.type) {
                     case p.Q_.MULTIKILL:
-                        (i = v.intl.string(x.default.PMLPER)), (l = m.q);
+                        ((i = v.intl.string(x.default.PMLPER)), (l = m.q));
                         break;
                     case p.Q_.KILL:
-                        (l = m.q), (i = v.intl.string(x.default.fYdqnM));
+                        ((l = m.q), (i = v.intl.string(x.default.fYdqnM)));
                         break;
                     case p.Q_.DEATH:
-                        (l = f.V), (i = v.intl.string(x.default.MhIx41));
+                        ((l = f.V), (i = v.intl.string(x.default.MhIx41)));
                 }
                 return null == l || null == i
                     ? null

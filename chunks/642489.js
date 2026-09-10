@@ -47,7 +47,7 @@ async function E(e) {
 n(582128);
 var A = n(652215);
 let h = "interaction_iframe_modal";
-async function I(e) {
+async function f(e) {
     let { openInteractionModal: t } = await Promise.all([
         n.e("552653"),
         n.e("978898"),
@@ -571,7 +571,6 @@ async function I(e) {
         n.e("136149"),
         n.e("451778"),
         n.e("24922"),
-        n.e("621573"),
         n.e("783403"),
         n.e("24914"),
         n.e("68532"),
@@ -619,11 +618,11 @@ async function I(e) {
         d.A.addBreadcrumb({ category: "interaction_modal", message: "Interaction modal opened", data: l });
     }
 }
-class f extends r.A {
+class I extends r.A {
     iframeModalOpenTimeMs = void 0;
     actions = {
         INTERACTION_MODAL_CREATE: (e) => {
-            I(e);
+            f(e);
         },
         INTERACTION_IFRAME_MODAL_CREATE: (e) => {
             ((this.iframeModalOpenTimeMs = Date.now()),
@@ -654,4 +653,4 @@ class f extends r.A {
         },
     };
 }
-let p = new f();
+let p = new I();

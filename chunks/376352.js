@@ -103,17 +103,17 @@ function k(e) {
         } = (0, g.A)(n.id, L),
         H = (0, r.bG)([R.default], () => R.default.getId()),
         W = l.useRef(null),
-        [$, Y] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
-        [K, q] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: X, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? k : null),
+        [Y, $] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
+        [K, X] = U(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
+        { hasAlreadyLinked: q, canStartAuthorization: Z, fetched: Q } = (0, x.RD)(H === n.id ? k : null),
         J = H === n.id && Z && !Q,
         ee = l.useCallback(() => {
             d(!1);
         }, []),
         et = l.useCallback(() => {
-            q(O.i.USER_DISMISS);
-        }, [q]),
-        en = K && null != B && (X || Z),
+            X(O.i.USER_DISMISS);
+        }, [X]),
+        en = K && null != B && (q || Z),
         ei = null != F || en,
         { rankIconUrl: el, rankText: ea } =
             ((t = z?.profile),
@@ -177,7 +177,7 @@ function k(e) {
     return G || J || (null == ec && !E)
         ? null
         : (0, i.jsx)(A.N, {
-              theme: P.NJ.DARKER,
+              theme: P.NJ.DARK,
               children: (e) =>
                   null == ec
                       ? (0, i.jsx)(V, { className: e, applicationId: y })
@@ -198,9 +198,9 @@ function k(e) {
                                     icon: er,
                                     isAppIcon: es,
                                     text: eo,
-                                    showBadge: $,
+                                    showBadge: Y,
                                     onClick: () => {
-                                        Y(O.i.TAKE_ACTION), d((e) => !e);
+                                        ($(O.i.TAKE_ACTION), d((e) => !e));
                                     },
                                     "aria-expanded": c,
                                     "aria-haspopup": "dialog",

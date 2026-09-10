@@ -1,7 +1,4 @@
-n.d(t, { NJ: () => r, rE: () => a });
-let i = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
-    r = i,
-    a = new Map([
-        [i.MIDNIGHT, i.DARK],
-        [i.DARKER, i.DARK],
-    ]);
+n.d(t, { NJ: () => r });
+let i = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" },
+    r = i;
+(i.ASH, i.DARK, i.ONYX, i.DARK);

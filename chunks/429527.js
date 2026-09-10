@@ -1,4 +1,4 @@
-t.d(s, { default: () => K });
+t.d(s, { default: () => z });
 var a = t(477900),
     c = t(582128),
     l = t(503698),
@@ -14,8 +14,8 @@ var a = t(477900),
     h = t(111159),
     p = t(364522),
     j = t(318254),
-    b = t(577473),
-    N = t(278416),
+    N = t(577473),
+    b = t(278416),
     g = t(793574),
     A = t(688810),
     v = t(839534),
@@ -23,18 +23,18 @@ var a = t(477900),
     O = t(914410),
     k = t(961250),
     w = t(532309),
-    S = t(440005),
-    C = t(26508),
-    E = t(555837),
-    R = t(174459),
+    R = t(440005),
+    S = t(26508),
+    C = t(555837),
+    E = t(174459),
     y = t(975571),
-    X = t(377368),
-    D = t(652215),
+    D = t(377368),
+    X = t(652215),
     M = t(202541),
     I = t(181666),
     P = t(375708),
     T = t(521857);
-function z(e) {
+function K(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;
     return (0, a.jsxs)("div", {
         className: T.nK,
@@ -64,26 +64,26 @@ function z(e) {
         ],
     });
 }
-function K(e) {
+function z(e) {
     let { transitionState: s, onClose: t } = e,
         { analyticsLocations: l } = (0, A.Ay)(g.A.XBOX_PERKS_MODAL),
-        { programReward: u, totalDays: K } = (0, o.cf)([w.A], () => ({
-            programReward: w.A.getRewardForProgram(S.W.XBOX),
-            totalDays: w.A.getTotalDaysInDuration(S.W.XBOX),
+        { programReward: u, totalDays: z } = (0, o.cf)([w.A], () => ({
+            programReward: w.A.getRewardForProgram(R.W.XBOX),
+            totalDays: w.A.getTotalDaysInDuration(R.W.XBOX),
         })),
-        L = (0, C.J8)(u),
-        G = (0, E.G)({ location: "xboxPerksModal" });
+        L = (0, S.J8)(u),
+        G = (0, C.G)({ location: "xboxPerksModal" });
     c.useEffect(() => {
         G && (L ? (0, k.uM)() : (0, k.Ay)());
     }, [L, G]);
     let B = c.useRef(!1);
     c.useEffect(() => {
-        B.current || ((B.current = !0), R.default.track(D.HAw.OPEN_MODAL, { type: X.Xj, location_stack: l }));
+        B.current || ((B.current = !0), E.default.track(X.HAw.OPEN_MODAL, { type: D.Xj, location_stack: l }));
     }, [l]);
     let W = u?.reward_amount ?? 250,
-        U = K ?? 30,
-        V = u?.next_reward_date != null ? Math.max(0, (0, r.default)(new Date(u.next_reward_date), new Date())) : U,
-        q = V > U ? 0 : U - V;
+        U = z ?? 30,
+        J = u?.next_reward_date != null ? Math.max(0, (0, r.default)(new Date(u.next_reward_date), new Date())) : U,
+        V = J > U ? 0 : U - J;
     return (0, a.jsx)(A.f5, {
         value: l,
         children: (0, a.jsx)(n.d, {
@@ -92,7 +92,7 @@ function K(e) {
             size: "md",
             "aria-label": P.intl.string(I.default.cRLw2a),
             children: (0, a.jsx)(f.N, {
-                theme: "dark",
+                theme: X.NJ8.DARK,
                 children: (e) =>
                     (0, a.jsxs)("div", {
                         className: i()(e, T.yl),
@@ -126,17 +126,17 @@ function K(e) {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
                                     children: P.intl.format(I.default["70kyQr"], {
-                                        learnMoreLink: y.A.getArticleURL(D.MVz.XBOX_GAME_PASS_PERKS),
+                                        learnMoreLink: y.A.getArticleURL(X.MVz.XBOX_GAME_PASS_PERKS),
                                     }),
                                 }),
                             }),
                             (0, a.jsxs)(p.Ar, {
                                 className: T.rN,
                                 children: [
-                                    (0, a.jsx)(z, {
+                                    (0, a.jsx)(K, {
                                         icon: (0, a.jsx)(j.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["+tdDeK"]),
-                                        description: P.intl.format(I.default.ZYc6Hv, { orbAmount: W, days: V }),
+                                        description: P.intl.format(I.default.ZYc6Hv, { orbAmount: W, days: J }),
                                         footer:
                                             null != u
                                                 ? (0, a.jsx)("div", {
@@ -144,7 +144,7 @@ function K(e) {
                                                       children: (0, a.jsx)(O.Ay, {
                                                           variant: O.qP.BLUE,
                                                           weight: O.fh.MEDIUM,
-                                                          progress: q,
+                                                          progress: V,
                                                           maximum: U,
                                                           glowing: !1,
                                                       }),
@@ -153,24 +153,24 @@ function K(e) {
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/2733509d1c8c361c1a0125888c4a8c32d63471b71a304fe6aa37619f137d6d1a.png",
                                     }),
-                                    (0, a.jsx)(z, {
-                                        icon: (0, a.jsx)(b.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                    (0, a.jsx)(K, {
+                                        icon: (0, a.jsx)(N.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["++kzl5"]),
                                         description: P.intl.format(I.default.kc3Kvs, { multiplier: "1.2" }),
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/023eccf9a31b5e91537568fd5cf492e2e86beb668c90ffd86b013a674ae61f99.png",
                                         thumbnailImageClassName: T.$T,
                                     }),
-                                    (0, a.jsx)(z, {
-                                        icon: (0, a.jsx)(N.TagIcon, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                    (0, a.jsx)(K, {
+                                        icon: (0, a.jsx)(b.TagIcon, { size: "sm", color: m.A.colors.ICON_STRONG }),
                                         title: P.intl.string(I.default["a+PtZt"]),
                                         description: P.intl.format(I.default.WgkpKK, {
                                             onClick: () => {
-                                                (0, v.Cz)({
+                                                ((0, v.Cz)({
                                                     analyticsLocations: l,
                                                     analyticsSource: g.A.XBOX_PERKS_MODAL,
                                                 }),
-                                                    t();
+                                                    t());
                                             },
                                         }),
                                         thumbnailSrc:

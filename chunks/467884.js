@@ -94,7 +94,7 @@ function e_(e) {
         } = e,
         d = a.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     null != r &&
                         (i(es.bB.FORWARD_BUTTON),
                         (0, K.d)({
@@ -103,7 +103,7 @@ function e_(e) {
                             analyticsContext: u,
                             analyticsLocations: s,
                             source: "social-layer-storefront-embed",
-                        }));
+                        })));
             },
             [r, t, i, u, s],
         ),
@@ -174,7 +174,7 @@ function eh(e) {
                             n(!0);
                         }),
                         () => {
-                            (e.onerror = null), (e.onload = null), (e.src = "");
+                            ((e.onerror = null), (e.onload = null), (e.src = ""));
                         }
                     );
                 }, [c, t, l, r?.id]),
@@ -368,7 +368,7 @@ function eh(e) {
                                     pageHasLeaderboard: p,
                                 } = u.current,
                                 { positionInSection: f, analyticsLocations: _, shownPriceDetails: h } = d.current;
-                            B.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_HOVERED, {
+                            (B.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_HOVERED, {
                                 slayer_storefront_session_id: e,
                                 sku_id: t,
                                 guild_id: l ?? n,
@@ -386,7 +386,7 @@ function eh(e) {
                                 orbs_amount: h.orbsAmount,
                                 location_stack: _,
                             }),
-                                (c.current = !0);
+                                (c.current = !0));
                         }
                     }, [t, r, l]),
                     handleCardUnhover: a.useCallback(() => {
@@ -416,12 +416,12 @@ function eh(e) {
                 c = a.useRef(null),
                 u = a.useRef(n),
                 d = a.useRef({ positionInSection: i, analyticsLocations: o, shownPriceDetails: s });
-            a.useEffect(() => {
+            (a.useEffect(() => {
                 u.current = n;
             }, [n]),
                 a.useEffect(() => {
                     d.current = { positionInSection: i, analyticsLocations: o, shownPriceDetails: s };
-                }, [i, o, s]);
+                }, [i, o, s]));
             let m = a.useCallback(() => {
                     let {
                             sessionId: e,
@@ -459,7 +459,7 @@ function eh(e) {
                         e
                             ? null === c.current &&
                               (c.current = window.setTimeout(() => {
-                                  m(), (c.current = null);
+                                  (m(), (c.current = null));
                               }, 1e3))
                             : null !== c.current && (clearTimeout(c.current), (c.current = null));
                     },
@@ -541,14 +541,14 @@ function eh(e) {
             null != ef && (0, F.iR)(ef, l);
         }, [ef, l]),
         eJ = a.useCallback(() => {
-            eB(),
+            (eB(),
                 null != ef &&
                     (K.current = setTimeout(() => {
                         (0, F.iR)(ef, l);
-                    }, 1e3));
+                    }, 1e3)));
         }, [ef, l, eB]),
         eQ = a.useCallback(() => {
-            eG(), null != K.current && (clearTimeout(K.current), (K.current = null));
+            (eG(), null != K.current && (clearTimeout(K.current), (K.current = null)));
         }, [eG]);
     a.useEffect(
         () => () => {
@@ -581,7 +581,7 @@ function eh(e) {
         e3 = a.useMemo(() => [...ev, E.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON], [ev]),
         e8 = a.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     null != eP &&
                         (eU(es.bB.BUY_WITH_ORBS_BUTTON),
                         (0, w.B4)({
@@ -593,15 +593,15 @@ function eh(e) {
                                     (0, V.n)({ sku: ei, application: eP, analyticsLocations: e3 });
                             },
                             analyticsLocations: e3,
-                        }));
+                        })));
             },
             [ei, eP, l, eU, e3],
         ),
         e2 = a.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     null != ei &&
-                        (eU(es.bB.BUY_BUTTON), (0, J.a)(ei, { isGift: !1 }, { analyticsLocations: e3, guildId: ex }));
+                        (eU(es.bB.BUY_BUTTON), (0, J.a)(ei, { isGift: !1 }, { analyticsLocations: e3, guildId: ex })));
             },
             [ei, ex, eU, e3],
         ),
@@ -686,7 +686,7 @@ function eh(e) {
                               children: [
                                   (0, n.jsx)("div", { className: et.iZ, style: { background: eK } }),
                                   (0, n.jsx)(h.N, {
-                                      theme: eo.NJ8.DARKER,
+                                      theme: eo.NJ8.DARK,
                                       children: (e) =>
                                           (0, n.jsxs)("div", {
                                               className: c()(et.zH, e),
@@ -741,9 +741,9 @@ function eh(e) {
                                                         children: (0, n.jsx)(f.$, {
                                                             variant: "primary",
                                                             onClick: (e) => {
-                                                                e.stopPropagation(),
+                                                                (e.stopPropagation(),
                                                                     eU(es.bB.VIEW_DETAILS_BUTTON),
-                                                                    eX();
+                                                                    eX());
                                                             },
                                                             text: ec.intl.string(ec.t.KLBTgF),
                                                             fullWidth: !0,
@@ -751,7 +751,7 @@ function eh(e) {
                                                     }),
                                               (0, n.jsx)(ee.A, {
                                                   onGift: (e) => {
-                                                      e.stopPropagation(),
+                                                      (e.stopPropagation(),
                                                           eU(es.bB.GIFT_BUTTON),
                                                           (0, J.a)(
                                                               ei,
@@ -762,7 +762,7 @@ function eh(e) {
                                                                       E.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
                                                                   ],
                                                               },
-                                                          );
+                                                          ));
                                                   },
                                               }),
                                           ],

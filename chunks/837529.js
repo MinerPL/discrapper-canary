@@ -23,7 +23,7 @@ function u() {
               (u = r.themeColors?.[1] ?? null),
               (e = null != t && null != u ? ((0, a.tM)(t) ?? n) : n))
             : (e = r.themeType ?? n),
-        e === s.NJ8.DARK && (0, l.M)(n) ? (e = n) : e === s.NJ8.DARK && (0, l.q)(n) && (e = s.NJ8.DARKER),
+        e === s.NJ8.ASH && (0, l.M)(n) ? (e = n) : e === s.NJ8.ASH && (0, l.q)(n) && (e = s.NJ8.DARK),
         { theme: e, primaryColor: t, secondaryColor: u }
     );
 }
