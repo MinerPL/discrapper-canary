@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     BK: "text-sm/medium__250d5",
     zI: "cardBody__250d5",
     cG: "mainCard__250d5",
@@ -12,13 +12,8 @@ e.exports = {
     UF: "skeletonCardBody__250d5",
     s4: "smallCardBody__250d5 cardBody__250d5",
     iX: "skeletonCardTitle__250d5",
-    E_: "skeletonCardDescription__250d5",
-    sj: "skeletonCardDescriptionSecondary__250d5",
     ov: "metadataRow__250d5",
     jt: "skeletonCardMetadata__250d5",
-    g7: "skeletonCardDate__250d5",
-    FH: "skeletonCardReaction__250d5",
-    Pg: "skeletonCardReactionCircle__250d5",
     KX: "mainTitle__250d5",
     _N: "smallTitle__250d5",
     h_: "description__250d5 text-sm/medium__250d5",

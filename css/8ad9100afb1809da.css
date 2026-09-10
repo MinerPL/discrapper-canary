@@ -1,26 +1,6 @@
 .placeholder_ca96ab {
-    background-color: var(--background-mod-strong)
-}
-
-.text_ca96ab {
-    border-radius: var(--radius-xs)
-}
-
-.subtleText_ca96ab {
     background-color: var(--icon-muted);
     opacity: .1
-}
-
-.textSm_ca96ab {
-    height: var(--size-12)
-}
-
-.textMd_ca96ab {
-    height: var(--size-16)
-}
-
-.textLg_ca96ab {
-    height: var(--size-20)
 }
 
 .button_ca96ab {
@@ -44,13 +24,19 @@
     animation-fill-mode: backwards
 }
 
+@media (prefers-reduced-motion:reduce) {
+    .full-motion .placeholder_ca96ab {
+        animation: none
+    }
+}
+
 @keyframes game-profile-skeleton-pulse_ca96ab {
     0% {
-        opacity: .5
+        opacity: .05
     }
 
     to {
-        opacity: 1
+        opacity: .1
     }
 }
 
@@ -2177,22 +2163,16 @@
 }
 
 .skeletonCard__250d5 {
-    --custom-announcement-skeleton-title-width: 84%;
-    --custom-announcement-skeleton-description-width: 64%;
-    --custom-announcement-skeleton-secondary-description-width: 76%;
+    --custom-announcement-skeleton-content-width: 84%;
     height: 328px
 }
 
 .skeletonCard__250d5:nth-child(2) {
-    --custom-announcement-skeleton-title-width: 72%;
-    --custom-announcement-skeleton-description-width: 88%;
-    --custom-announcement-skeleton-secondary-description-width: 60%
+    --custom-announcement-skeleton-content-width: 88%
 }
 
 .skeletonCard__250d5:nth-child(3) {
-    --custom-announcement-skeleton-title-width: 92%;
-    --custom-announcement-skeleton-description-width: 72%;
-    --custom-announcement-skeleton-secondary-description-width: 52%
+    --custom-announcement-skeleton-content-width: 92%
 }
 
 .skeletonCardImage__250d5,
@@ -2216,15 +2196,9 @@
 }
 
 .skeletonCardTitle__250d5 {
-    width: var(--custom-announcement-skeleton-title-width)
-}
-
-.skeletonCardDescription__250d5 {
-    width: var(--custom-announcement-skeleton-description-width)
-}
-
-.skeletonCardDescriptionSecondary__250d5 {
-    width: var(--custom-announcement-skeleton-secondary-description-width)
+    border-radius: var(--radius-xs);
+    height: var(--size-48);
+    width: var(--custom-announcement-skeleton-content-width)
 }
 
 .metadataRow__250d5,
@@ -2236,25 +2210,9 @@
 }
 
 .skeletonCardMetadata__250d5 {
-    overflow: hidden
-}
-
-.skeletonCardDate__250d5 {
-    flex-shrink: 0
-}
-
-.skeletonCardReaction__250d5 {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: var(--space-6)
-}
-
-.skeletonCardReactionCircle__250d5 {
-    border-radius: 50%;
-    flex-shrink: 0;
-    height: var(--size-16);
-    width: var(--size-16)
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
+    width: 60%
 }
 
 .smallCard__250d5 {
@@ -2729,21 +2687,21 @@
     background-color: var(--icon-feedback-positive)
 }
 
-.memberContainer__04bc3,
-.skeletonMemberContainer__04bc3 {
+.memberContainer__04bc3 {
     align-items: center;
     display: flex;
     gap: var(--space-16)
 }
 
-.memberCountContainer__04bc3,
-.skeletonMemberCount__04bc3 {
+.memberCountContainer__04bc3 {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
 .skeletonSectionTitle__04bc3 {
+    border-radius: var(--radius-xs);
+    height: var(--size-16);
     margin-inline: var(--space-8);
     max-width: var(--size-80);
     padding-block-end: 2px
@@ -2753,40 +2711,33 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--space-8);
+    height: calc(var(--size-80) + var(--space-6));
+    justify-content: space-between;
+    margin-block-end: 2px;
     min-width: 0
 }
 
 .skeletonGuildName__04bc3 {
-    margin-block-end: 2px
-}
-
-.skeletonVerifiedBadge__04bc3 {
-    border-radius: 50%;
-    flex-shrink: 0;
-    height: var(--size-16);
-    width: var(--size-16)
+    border-radius: var(--radius-xs);
+    height: var(--size-20);
+    margin-block-end: 2px;
+    width: 60%
 }
 
 .skeletonGuildInfo__04bc3 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xxs)
+    margin-block: 2px;
+    width: 90%
 }
 
-.skeletonTextLine__04bc3 {
-    margin-block: 2px
+.skeletonGuildInfo__04bc3,
+.skeletonMemberContainer__04bc3 {
+    border-radius: var(--radius-xs);
+    height: var(--size-12)
 }
 
 .skeletonMemberContainer__04bc3 {
-    margin-top: 2px
+    margin-top: 2px;
+    width: 55%
 }
 
-.skeletonMemberDot__04bc3 {
-    border-radius: 50%;
-    flex-shrink: 0;
-    height: 10px;
-    width: 10px
-}
-
-/*# sourceMappingURL=348af08e4c082bbf.css.map*/
+/*# sourceMappingURL=8ad9100afb1809da.css.map*/

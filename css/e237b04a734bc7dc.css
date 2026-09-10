@@ -127,9 +127,23 @@
 }
 
 .skeletonSectionTitle__3ae56 {
+    height: var(--size-16);
     margin-inline: var(--space-8);
     max-width: var(--size-80);
     padding-block-end: 2px
+}
+
+.skeletonSectionTitle__3ae56,
+.skeletonTextContainer__3ae56>div {
+    border-radius: var(--radius-xs)
+}
+
+.skeletonTextContainer__3ae56>div:first-child {
+    height: var(--size-20)
+}
+
+.skeletonTextContainer__3ae56>div:last-child {
+    height: var(--size-12)
 }
 
 .container_a1cc72 {
@@ -407,4 +421,4 @@
     background-color: var(--background-surface-higher)
 }
 
-/*# sourceMappingURL=5d37bcfa0f2f5551.css.map*/
+/*# sourceMappingURL=e237b04a734bc7dc.css.map*/
