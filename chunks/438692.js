@@ -94,7 +94,7 @@ function ex(e) {
         maxCharacterCount: 200,
         channel: c ?? eg,
         onChange: (e, t, n) => {
-            m(t), p(n);
+            (m(t), p(n));
         },
         type: r ? { ...g, emojis: { button: !0 } } : g,
         textValue: h,
@@ -140,7 +140,7 @@ function eA(e) {
                 document.addEventListener("keydown", e),
                 document.addEventListener("mousedown", n),
                 () => {
-                    document.removeEventListener("keydown", e), document.removeEventListener("mousedown", n);
+                    (document.removeEventListener("keydown", e), document.removeEventListener("mousedown", n));
                 }
             );
         }, [t, u]),
@@ -180,7 +180,7 @@ function eA(e) {
                             active: !1,
                             tabIndex: 0,
                             onClick: () => {
-                                s?.(), o(!0);
+                                (s?.(), o(!0));
                             },
                         }),
                     }),
@@ -211,7 +211,7 @@ n(915089);
 var eU = n(713517);
 n(267889);
 var eG = n(7584);
-n(850992), n(690521), n(806931);
+(n(850992), n(690521), n(806931));
 var eV = n(307731);
 n(650583);
 var eF = n(866780);
@@ -244,7 +244,7 @@ function eH(e) {
         }),
     });
 }
-eV.EmojiIntention.CHAT,
+(eV.EmojiIntention.CHAT,
     [
         eG.Ay.getByName("thumbsup"),
         eG.Ay.getByName("eyes"),
@@ -252,7 +252,7 @@ eV.EmojiIntention.CHAT,
         eG.Ay.getByName("watermelon"),
         eG.Ay.getByName("fork_and_knife"),
         eG.Ay.getByName("yum"),
-    ].filter(R.Vq);
+    ].filter(R.Vq));
 var eB = n(636585),
     eW = n(734057),
     eK = n(71393),
@@ -548,11 +548,11 @@ let tx = (0, ey.Fe)({
                 n.e("729963"),
                 n.e("830938"),
                 n.e("392075"),
+                n.e("102328"),
                 n.e("174016"),
                 n.e("896137"),
-                n.e("852557"),
                 n.e("790417"),
-                n.e("160920"),
+                n.e("896359"),
                 n.e("837687"),
                 n.e("699292"),
                 n.e("50097"),
@@ -877,7 +877,7 @@ function ty(e) {
                 j(!1),
                 A)
             )
-                P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
+                (P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o));
             else {
                 let e = await et.A.getOrEnsurePrivateChannel(c.id);
                 t = eW.A.getChannel(e) ?? null;
@@ -888,10 +888,10 @@ function ty(e) {
                     reply: `:${n.name}:`,
                     sendToChannel: t,
                     onComplete: (e, t) => {
-                        j(!0),
+                        (j(!0),
                             setTimeout(() => {
-                                N(!1), h(e, t);
-                            }, 600);
+                                (N(!1), h(e, t));
+                            }, 600));
                     },
                     interactionType: tm.PA.REACTION_EMOJI_REACT_SENT,
                     requiresChannelReadiness: !1,
@@ -902,18 +902,18 @@ function ty(e) {
     async function er(e) {
         let t;
         if (((0, eS.Dr)(D.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), A))
-            P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
+            (P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o));
         else {
             let e = await et.A.openPrivateChannel({ recipientIds: c.id }),
                 n = eW.A.getChannel(e);
-            P()(null != n, "DM channel must be defined"), (t = n);
+            (P()(null != n, "DM channel must be defined"), (t = n));
         }
         let n = t.type === em.rbe.DM ? tm.PA.DM_REACTION_MESSAGE_SENT : tm.PA.CHANNEL_REACTION_MESSAGE_SENT;
         return ea({ reply: e, sendToChannel: t, interactionType: n, onComplete: h, requiresChannelReadiness: !0 });
     }
     async function ea(e) {
         let { reply: t, sendToChannel: n, onComplete: l, interactionType: i, requiresChannelReadiness: s } = e;
-        I?.focus(),
+        (I?.focus(),
             await (0, e8.d)({
                 channel: n,
                 content: t,
@@ -922,14 +922,14 @@ function ty(e) {
                 doNotNotifyOnError: !1,
                 location: tf.Hx.CONTENT_INVENTORY_MEMBERLIST,
             }),
-            l?.(i, n);
+            l?.(i, n));
     }
     let eo = p ?? T ?? O;
     function eu() {
-        C((e) => !e), w && I?.focus();
+        (C((e) => !e), w && I?.focus());
     }
     function ec(e) {
-        G(e), e && I?.focus();
+        (G(e), e && I?.focus());
     }
     return (0, l.jsxs)("div", {
         style: { pointerEvents: v ? "none" : "all" },
@@ -1277,7 +1277,7 @@ function tj(e) {
                     (0, l.jsx)(tN, {
                         onClick: g
                             ? () => {
-                                  el.default.selectVoiceChannel(a.channelId), (0, ei.Nl)(a);
+                                  (el.default.selectVoiceChannel(a.channelId), (0, ei.Nl)(a));
                               }
                             : void 0,
                         children: (0, l.jsxs)("div", {
@@ -1610,7 +1610,7 @@ function tQ(e) {
         f = c && m ? [D.M.CLOUD_PLAY_POPOVER] : [],
         [p, g] = (0, te.kn)(f),
         x = p === D.M.CLOUD_PLAY_POPOVER;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         c && null === d && h(t.id);
     }, [d, c, t.id, h]),
         i.useEffect(
@@ -1618,7 +1618,7 @@ function tQ(e) {
                 x && (g(tt.i.USER_DISMISS), h(null));
             },
             [x, g, h],
-        );
+        ));
     let [A, C] = i.useState(!1);
     return (
         x && !A && C(!0),
@@ -1653,7 +1653,7 @@ function tQ(e) {
                 },
             ],
             onRequestClose: function () {
-                g(tt.i.USER_DISMISS), h(null);
+                (g(tt.i.USER_DISMISS), h(null));
             },
         })
     );
@@ -1984,7 +1984,7 @@ function nT(e) {
     let { closePopout: t, ...n } = e;
     return (0, l.jsx)(nb, {
         onReaction: (e, l) => {
-            n.trackRankingItemInteraction(e, { destinationChannelId: l.id, destinationGuildId: l.guild_id }), t();
+            (n.trackRankingItemInteraction(e, { destinationChannelId: l.id, destinationGuildId: l.guild_id }), t());
         },
         closePopout: t,
         onVoiceChannelPreview: (e) => {
@@ -2039,12 +2039,12 @@ let nR = i.createContext(void 0),
             [T, b] = i.useState(!1),
             [R, O] = i.useState(!1),
             L = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             T && L && O(!0);
         }, [T, L]),
             i.useLayoutEffect(() => {
                 null != p.current && I(!0);
-            }, []);
+            }, []));
         let M = i.useCallback(
                 (e) => {
                     S &&
@@ -2079,10 +2079,10 @@ let nR = i.createContext(void 0),
                 [],
             );
         function D() {
-            (j.current = !1),
+            ((j.current = !1),
                 setTimeout(() => {
                     j.current || (b(!1), O(L));
-                }, 100);
+                }, 100));
         }
         return (0, l.jsxs)(l.Fragment, {
             children: [
@@ -2090,10 +2090,10 @@ let nR = i.createContext(void 0),
                 (0, l.jsx)("div", {
                     ref: s,
                     onMouseEnter: () => {
-                        (j.current = !0),
+                        ((j.current = !0),
                             setTimeout(() => {
-                                j.current && b(!0), P(_);
-                            }, 100);
+                                (j.current && b(!0), P(_));
+                            }, 100));
                     },
                     onMouseLeave: D,
                     children: (0, l.jsx)(c.Y, {

@@ -81,8 +81,11 @@
 .divider_ad82d8 {
     background-color: var(--border-muted);
     height: 1px;
-    margin-bottom: var(--space-16);
     width: 100%
+}
+
+.dividerWithMargin_ad82d8 {
+    margin-bottom: var(--space-16)
 }
 
 .totalDue_ad82d8 {
@@ -90,6 +93,10 @@
     gap: var(--space-12);
     justify-content: space-between;
     margin-top: var(--space-12)
+}
+
+.footerLineItemSpacing_ad82d8 {
+    margin-bottom: var(--space-8)
 }
 
 .cardGroup__02e50 {
@@ -264,4 +271,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=470126.72cdd0ca0d75b4cf.css.map*/
+/*# sourceMappingURL=470126.ec54a348a2ca486a.css.map*/

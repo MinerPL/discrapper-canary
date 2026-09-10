@@ -79,7 +79,7 @@ function ea(e) {
             (0, Q.A)(ei.BVt.NITRO_HOME, { search: (0, W.stringify)({ perk: z.CALL_OF_DUTY_3PP_CARD_ID }) });
         }, []),
         o = l.useCallback(() => {
-            $.default.track(ei.HAw.APP_NOTICE_CLOSED, { notice_type: ei.kqX.COD_3PP_NAGBAR }), t(el.i.USER_DISMISS);
+            ($.default.track(ei.HAw.APP_NOTICE_CLOSED, { notice_type: ei.kqX.COD_3PP_NAGBAR }), t(el.i.USER_DISMISS));
         }, [t]),
         E = l.useCallback(() => {
             ($.default.track(ei.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: ei.kqX.COD_3PP_NAGBAR }),
@@ -150,7 +150,7 @@ function eN(e) {
                             (0, i.jsx)(d.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (0, V.A)(ei.AMi.META_QUEST), r(el.i.TAKE_ACTION);
+                                    ((0, V.A)(ei.AMi.META_QUEST), r(el.i.TAKE_ACTION));
                                 },
                                 children: es.intl.string(es.t["1WjMbC"]),
                             }),
@@ -236,17 +236,17 @@ function eN(e) {
                                 className: eI.CO,
                                 noticeType: l,
                                 onClick: () => {
-                                    $.default.track(ei.HAw.PREMIUM_PROMOTION_OPENED, {
+                                    ($.default.track(ei.HAw.PREMIUM_PROMOTION_OPENED, {
                                         location_section: ei.JJy.NOTIFICATION_BAR,
                                         location_object: ei.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, e_.openUserSettings)(ec.X.NITRO_PANEL);
+                                        (0, e_.openUserSettings)(ec.X.NITRO_PANEL));
                                 },
                                 children: es.intl.string(es.t["8JC5e/"]),
                             }),
                             (0, i.jsx)(d.PM, {
                                 onClick: () => {
-                                    r(el.i.UNKNOWN), (0, H.setFlag)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0);
+                                    (r(el.i.UNKNOWN), (0, H.setFlag)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0));
                                 },
                                 noticeType: l,
                             }),
@@ -271,7 +271,7 @@ function eN(e) {
                             (0, i.jsx)(d.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    r(el.i.UNKNOWN), (0, e_.openUserSettings)(ec.X.NITRO_PANEL);
+                                    (r(el.i.UNKNOWN), (0, e_.openUserSettings)(ec.X.NITRO_PANEL));
                                 },
                                 children: es.intl.string(es.t.pyYSiO),
                             }),
@@ -348,9 +348,9 @@ function eM(e) {
         n = (0, em.Cp)(),
         r = (0, c.bG)([Z.default], () => !ep.Ay.isPremium(Z.default.getCurrentUser())),
         s = l.useCallback(() => {
-            $.default.track(ei.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
+            ($.default.track(ei.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, e_.openUserSettings)(ec.X.GIFT_PANEL),
-                eP.Ay.dismissOutboundPromotionNotice();
+                eP.Ay.dismissOutboundPromotionNotice());
         }, []);
     return null == n
         ? null
@@ -369,7 +369,7 @@ function eM(e) {
                               (0, i.jsx)(d.PM, {
                                   noticeType: ei.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      eP.Ay.dismissOutboundPromotionNotice(), null !== n && n(el.i.USER_DISMISS);
+                                      (eP.Ay.dismissOutboundPromotionNotice(), null !== n && n(el.i.USER_DISMISS));
                                   },
                               }),
                               (0, i.jsx)(I.t, { size: "md", color: "currentColor", className: ef.P }),
@@ -377,7 +377,7 @@ function eM(e) {
                               (0, i.jsx)(d.Z_, {
                                   noticeType: ei.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      s(), null !== n && n(el.i.TAKE_ACTION);
+                                      (s(), null !== n && n(el.i.TAKE_ACTION));
                                   },
                                   children: es.intl.string(es.t.jVcuVY),
                               }),
@@ -508,11 +508,15 @@ function eJ() {
 function e0(e) {
     let { analyticsLocations: t, ...n } = e,
         { analyticsLocations: l } = (0, G.Ay)(t, x.A.AUTOMOD_NAGBAR_NOTICE),
-        r = (0, c.bG)([eY.default, eW.Ay], () => {
-            if (null == n.guildId) return new Set();
-            let e = eY.default.getId();
-            return (0, eQ.wj)(eW.Ay.getMember(n.guildId, e));
-        }, [n.guildId]);
+        r = (0, c.bG)(
+            [eY.default, eW.Ay],
+            () => {
+                if (null == n.guildId) return new Set();
+                let e = eY.default.getId();
+                return (0, eQ.wj)(eW.Ay.getMember(n.guildId, e));
+            },
+            [n.guildId],
+        );
     return r.has(e$.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || r.has(e$.D.AUTOMOD_QUARANTINED_BIO)
         ? (0, i.jsx)(ez, { ...n, analyticsLocations: l })
         : r.has(e$.D.AUTOMOD_QUARANTINED_SERVER_TAG)
@@ -550,7 +554,7 @@ let tr =
                   A = [ti.lm, tl.lm];
               switch (a) {
                   case te.B5.SUBMITTED:
-                      (o = es.intl.string(es.t["5iLvSx"])),
+                      ((o = es.intl.string(es.t["5iLvSx"])),
                           (E = es.intl.string(es.t.mqtdmQ)),
                           (u = function () {
                               null != t &&
@@ -561,10 +565,10 @@ let tr =
                                       confirmText: es.intl.string(es.t["cY+Oob"]),
                                       onConfirm: () => e4.A.removeGuildJoinRequest(t.id),
                                   });
-                          });
+                          }));
                       break;
                   case te.B5.REJECTED:
-                      (o = es.intl.string(es.t.lk30cY)),
+                      ((o = es.intl.string(es.t.lk30cY)),
                           (E = es.intl.string(es.t["8RrsHr"])),
                           (u = function () {
                               null != t &&
@@ -575,14 +579,14 @@ let tr =
                                       return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                                   });
                           }),
-                          A.push(ti.z3);
+                          A.push(ti.z3));
                       break;
                   default:
-                      (o = es.intl.string(es.t.G5YKXP)),
+                      ((o = es.intl.string(es.t.G5YKXP)),
                           (E = es.intl.string(es.t["r8/DT+"])),
                           (u = function () {
                               null != t && (0, e1.Ze)(t.id);
-                          });
+                          }));
               }
               return (0, i.jsxs)("div", {
                   className: e3()(...A),
@@ -622,7 +626,7 @@ let tT =
                   if (null != t) {
                       r(!0);
                       try {
-                          tA.cf(t.id), await t_.A.joinGuild(t.id, { source: ei.Q4z.NOTICE_BAR });
+                          (tA.cf(t.id), await t_.A.joinGuild(t.id, { source: ei.Q4z.NOTICE_BAR }));
                       } catch {
                           r(!1);
                       }
@@ -680,9 +684,9 @@ function tm(e) {
     let { daysRemaining: t } = e;
     (0, es.useSyncMessages)(tS.messagesLoader);
     let n = l.useCallback(() => {
-        $.default.track(ei.HAw.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, { days_remaining: t }),
+        ($.default.track(ei.HAw.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, { days_remaining: t }),
             tR.Ay.selectTab(tC.u9.REQUESTS),
-            (0, e_.openUserSettings)(ec.X.FAMILY_CENTER_PANEL);
+            (0, e_.openUserSettings)(ec.X.FAMILY_CENTER_PANEL));
     }, [t]);
     return (0, i.jsx)(d.$T, {
         color: d.Hv.CUSTOM,
@@ -749,7 +753,7 @@ function tk() {
                   es.intl.string(es.t.XkeW9N),
                   (0, i.jsx)(d.Z_, {
                       onClick: () => {
-                          (0, N.openModalLazy)(async () => {
+                          ((0, N.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   n.e("312513"),
                                   n.e("36395"),
@@ -761,7 +765,7 @@ function tk() {
                               ]).then(n.bind(n, 976627));
                               return (t) => (0, i.jsx)(e, { ...t });
                           }),
-                              t(el.i.TAKE_ACTION);
+                              t(el.i.TAKE_ACTION));
                       },
                       noticeType: ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
                       children: es.intl.string(es.t.vcdNKv),
@@ -884,7 +888,7 @@ function tJ(e) {
             {
                 text: es.intl.string(es.t.BddRzS),
                 onClick: () => {
-                    t && S.A.setSilenceWarning(!1), e.onClose();
+                    (t && S.A.setSilenceWarning(!1), e.onClose());
                 },
                 variant: "primary",
             },
@@ -1015,7 +1019,7 @@ function nr(e) {
                 (0, i.jsx)(d.PM, {
                     noticeType: l,
                     onClick: () => {
-                        ns(), (0, N.openModal)((e) => (0, i.jsx)(tJ, { ...e }));
+                        (ns(), (0, N.openModal)((e) => (0, i.jsx)(tJ, { ...e })));
                     },
                 }),
                 t,
@@ -1049,20 +1053,20 @@ let na =
                           )
                               return;
                           let n = {};
-                          null != t && (n.guild_id = t),
+                          (null != t && (n.guild_id = t),
                               _?.trialId != null && (n.trial_id = _.trialId),
                               (e = { notice_type: r.type, ...n }),
-                              $.default.track(ei.HAw.APP_NOTICE_VIEWED, e);
+                              $.default.track(ei.HAw.APP_NOTICE_VIEWED, e));
                       }
                   }, [r?.type, t, _]),
                   l.useEffect(() => {
                       if (null != r && r.type === ei.kqX.SURVEY && null != r.metadata) {
                           let { metadata: e } = r,
                               t = eL.A.getUserExperimentDescriptor(e.id);
-                          null != t && (0, eU.LQ)(e.id, t),
+                          (null != t && (0, eU.LQ)(e.id, t),
                               (async function () {
                                   null != r && r.metadata?.id != null && (await (0, h.oX)(r.metadata?.id));
-                              })();
+                              })());
                       }
                   }, [r]),
                   null == r)
@@ -1195,7 +1199,7 @@ let na =
                           children: [
                               (0, i.jsx)(d.PM, {
                                   onClick: () => {
-                                      p.clearRemoteDisconnectVoiceChannelId(), ns();
+                                      (p.clearRemoteDisconnectVoiceChannelId(), ns());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1216,7 +1220,7 @@ let na =
                           children: [
                               (0, i.jsx)(d.PM, {
                                   onClick: () => {
-                                      p.clearLastSessionVoiceChannelId(), ns();
+                                      (p.clearLastSessionVoiceChannelId(), ns());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1276,13 +1280,13 @@ let na =
                               (0, i.jsx)(d.Z_, {
                                   noticeType: r.type,
                                   onClick: () => {
-                                      O.A.verifyResend(),
+                                      (O.A.verifyResend(),
                                           C.A.show({
                                               title: es.intl.string(es.t.LykQYk),
                                               body: es.intl.format(es.t.azKEPy, { email: e?.email }),
                                               cancelText: es.intl.string(es.t.Vm8akB),
                                               onCancel: v.R,
-                                          });
+                                          }));
                                   },
                                   children: es.intl.string(es.t.WnX4J2),
                               }),
@@ -1318,7 +1322,7 @@ let na =
                                   (0, i.jsx)(d.PM, {
                                       noticeType: r.type,
                                       onClick: () => {
-                                          S.A.setEnableHardwareMuteNotice(!1), ns();
+                                          (S.A.setEnableHardwareMuteNotice(!1), ns());
                                       },
                                   }),
                                   (0, i.jsx)(d.eC, {
@@ -1342,7 +1346,7 @@ let na =
                                   (0, i.jsx)(d.PM, {
                                       noticeType: r.type,
                                       onClick: () => {
-                                          S.A.setEnableHardwareMuteNotice(!1), ns();
+                                          (S.A.setEnableHardwareMuteNotice(!1), ns());
                                       },
                                   }),
                               ],
@@ -1518,10 +1522,10 @@ let na =
                                               n.e("729963"),
                                               n.e("830938"),
                                               n.e("392075"),
+                                              n.e("102328"),
                                               n.e("174016"),
-                                              n.e("852557"),
                                               n.e("790417"),
-                                              n.e("160920"),
+                                              n.e("896359"),
                                               n.e("699292"),
                                               n.e("50097"),
                                               n.e("754982"),
@@ -1530,7 +1534,7 @@ let na =
                                               n.e("791824"),
                                               n.e("562075"),
                                           ]).then(n.bind(n, 4630));
-                                          await e({
+                                          (await e({
                                               applicationId: et.id,
                                               skuId: ee.id,
                                               openPremiumPaymentModal: () => {
@@ -1545,7 +1549,7 @@ let na =
                                               analyticsLocationObject: el,
                                               context: __OVERLAY__ ? ei.BRT.OVERLAY : ei.BRT.APP,
                                           }),
-                                              m(ee.id);
+                                              m(ee.id));
                                       } catch (e) {
                                           null != e && ne.error("Failed to open off-platform premium perk modal", e);
                                       }
@@ -1599,7 +1603,7 @@ let na =
                               (0, i.jsx)(d.Z_, {
                                   noticeType: ei.kqX.SURVEY,
                                   onClick: () => {
-                                      a ? (0, tU.K)(o) : window.open(s, "_blank"), (0, h.pX)(t, !1);
+                                      (a ? (0, tU.K)(o) : window.open(s, "_blank"), (0, h.pX)(t, !1));
                                   },
                                   children: l,
                               }),
@@ -1746,7 +1750,7 @@ let na =
                               (0, i.jsx)(d.Z_, {
                                   noticeType: ei.kqX.PREMIUM_UNCANCEL,
                                   onClick: () => {
-                                      ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                      (ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
                                           (0, N.openModalLazy)(async () => {
                                               let { default: e } = await Promise.all([
                                                   n.e("586662"),
@@ -1884,10 +1888,10 @@ let na =
                                                   n.e("729963"),
                                                   n.e("830938"),
                                                   n.e("392075"),
+                                                  n.e("102328"),
                                                   n.e("174016"),
-                                                  n.e("852557"),
                                                   n.e("790417"),
-                                                  n.e("160920"),
+                                                  n.e("896359"),
                                                   n.e("699292"),
                                                   n.e("50097"),
                                                   n.e("754982"),
@@ -1904,7 +1908,7 @@ let na =
                                                       analyticsSource: "Nag Bar",
                                                       premiumSubscription: r.metadata.premiumSubscription,
                                                   });
-                                          });
+                                          }));
                                   },
                                   children:
                                       X === en.PremiumTypes.TIER_1
@@ -1931,7 +1935,7 @@ let na =
                                   noticeType: ei.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   analyticsLocation: x.A.PAST_DUE_ONE_TIME_PAYMENT_NOTICE,
                                   onFallback: () => {
-                                      ns(eA), (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL);
+                                      (ns(eA), (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: es.intl.string(es.t.q8rxeS),
                               }),
@@ -1952,8 +1956,8 @@ let na =
                                   noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   analyticsLocation: x.A.PAST_DUE_INVALID_PAYMENT_NOTICE,
                                   onFallback: () => {
-                                      ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL);
+                                      (ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: es.intl.string(es.t["Zpd+Yq"]),
                               }),
@@ -1974,8 +1978,8 @@ let na =
                                   noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   analyticsLocation: x.A.PAST_DUE_MISSING_PAYMENT_NOTICE,
                                   onFallback: () => {
-                                      ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL);
+                                      (ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: es.intl.string(es.t.U5pKWA),
                               }),
@@ -1999,8 +2003,8 @@ let na =
                               (0, i.jsx)(d.Z_, {
                                   noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
-                                      ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL);
+                                      (ns(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                          (0, e_.openUserSettings)(ec.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children:
                                       X === en.PremiumTypes.TIER_1
@@ -2049,7 +2053,7 @@ let na =
                               (0, i.jsx)(d.PM, {
                                   noticeType: ei.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION,
                                   onClick: () => {
-                                      null != t && (0, eV.wu)(t), ns(ed);
+                                      (null != t && (0, eV.wu)(t), ns(ed));
                                   },
                               }),
                               es.intl.string(es.t.B8ruyY),
@@ -2057,7 +2061,7 @@ let na =
                                   onClick: () => {
                                       null != t &&
                                           (0, eV.W5)(t, eT, () => {
-                                              ns(ed), (0, eV.wu)(t);
+                                              (ns(ed), (0, eV.wu)(t));
                                           });
                                   },
                                   children: es.intl.string(es.t.oX14El),
@@ -2097,7 +2101,7 @@ let na =
                               es.intl.string(es.t["0klLS7"]),
                               (0, i.jsx)(d.Z_, {
                                   onClick: () => {
-                                      (0, N.openModalLazy)(async () => {
+                                      ((0, N.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
                                               n.e("312513"),
                                               n.e("36395"),
@@ -2109,7 +2113,7 @@ let na =
                                           ]).then(n.bind(n, 307750));
                                           return (t) => (0, i.jsx)(e, { ...t });
                                       }),
-                                          ns(r.metadata?.dismissUntil);
+                                          ns(r.metadata?.dismissUntil));
                                   },
                                   noticeType: ei.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                                   children: es.intl.string(es.t.e4y2VM),

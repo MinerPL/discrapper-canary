@@ -1,4 +1,4 @@
-a.d(t, { g: () => S }), a(321073);
+(a.d(t, { g: () => S }), a(321073));
 var l = a(477900);
 a(582128);
 var o = a(231723),
@@ -51,17 +51,17 @@ async function S(e) {
             { contextKey: _ },
         );
     let O = [];
-    c.A.isLoadedForPremiumSKUs() || O.push((0, s.zS)()),
+    (c.A.isLoadedForPremiumSKUs() || O.push((0, s.zS)()),
         d.A.hasFetched || (O.push(r.hP()), O.push((0, i.CD)())),
-        O.length > 0 && (M?.(!0), await Promise.allSettled(O), M?.(!1));
+        O.length > 0 && (M?.(!0), await Promise.allSettled(O), M?.(!1)));
     let E = (0, p.D$)(d.A.boostSlots),
         v = E.length;
     function T(e) {
-        f?.(), k?.(e);
+        (f?.(), k?.(e));
     }
     if (v > 0 && (null == P || v >= P)) {
         let e;
-        1 === v ? (e = E.slice(0, 1)) : null != P && (e = E.slice(0, P)),
+        (1 === v ? (e = E.slice(0, 1)) : null != P && (e = E.slice(0, P)),
             await (0, n.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -90,8 +90,8 @@ async function S(e) {
                         a.e("894747"),
                         a.e("747017"),
                         a.e("225990"),
-                        a.e("852557"),
-                        a.e("160920"),
+                        a.e("102328"),
+                        a.e("896359"),
                         a.e("228843"),
                         a.e("423532"),
                         a.e("509793"),
@@ -109,7 +109,7 @@ async function S(e) {
                         return (0, l.jsx)(t, {
                             ...n,
                             onClose: (e) => {
-                                o(), T(e);
+                                (o(), T(e));
                             },
                             selectedGuild: g,
                             locationSection: y.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -121,11 +121,11 @@ async function S(e) {
                 {
                     modalKey: h,
                     onCloseRequest: () => {
-                        (0, n.closeModal)(h), T(!1);
+                        ((0, n.closeModal)(h), T(!1));
                     },
                     contextKey: _,
                 },
-            );
+            ));
     } else
         (0, m.A)({
             analyticsLocations: t,
@@ -133,7 +133,7 @@ async function S(e) {
             analyticsSourceLocation: C,
             guildId: g.id,
             closeLayer: function () {
-                f?.(), A?.();
+                (f?.(), A?.());
             },
             totalNumberOfSlotsToAssign: P ?? 1,
             onCloseModal: T,

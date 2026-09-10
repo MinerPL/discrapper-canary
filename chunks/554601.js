@@ -1,4 +1,4 @@
-n.d(t, { A: () => lD }), n(775443);
+(n.d(t, { A: () => lD }), n(775443));
 var l,
     i,
     s,
@@ -80,7 +80,7 @@ function el(e) {
                         group: "sort-by",
                         label: et.intl.string(et.t.SzxiqK),
                         action: () => {
-                            n(K.Ug.POPULAR), l();
+                            (n(K.Ug.POPULAR), l());
                         },
                         checked: t === K.Ug.POPULAR,
                     }),
@@ -89,7 +89,7 @@ function el(e) {
                         group: "sort-by",
                         label: et.intl.string(et.t.m8xsti),
                         action: () => {
-                            n(K.Ug.ALPHABETICAL), l();
+                            (n(K.Ug.ALPHABETICAL), l());
                         },
                         checked: t === K.Ug.ALPHABETICAL,
                     }),
@@ -139,7 +139,7 @@ function eu(e) {
     let { context: t, command: n, section: l, sectionName: i } = e,
         s = o.useCallback(() => {
             let e = p.A.entrypoint();
-            B.k(_.Se.COMMAND),
+            (B.k(_.Se.COMMAND),
                 (0, W.Mv)({ command: n, location: D.Oh.APP_LAUNCHER_APPLICATION_VIEW, sectionName: i }),
                 "channel" === t.type &&
                     (U.Gf({
@@ -151,7 +151,7 @@ function eu(e) {
                         source: e,
                         commandOrigin: D.iw.APPLICATION_LAUNCHER,
                     }),
-                    V._.dispatch(es.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id }));
+                    V._.dispatch(es.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id })));
         }, [t, n, l, i]),
         a = (n.options?.length ?? 0) > 0,
         c = o.useMemo(() => (0, q.SD)(n.displayDescription, void 0), [n.displayDescription]),
@@ -219,7 +219,7 @@ function em() {
 }
 function ep(e) {
     let { context: t, command: n, sectionName: l } = e;
-    (0, g.A4)(!0, !0), (0, g.SD)(t, !0, !0);
+    ((0, g.A4)(!0, !0), (0, g.SD)(t, !0, !0));
     let i = G(t),
         [s, a] = o.useState(!1),
         c = o.useCallback(
@@ -348,12 +348,12 @@ function eA(e) {
                             : { popularSortedCommands: t, canSort: !1 };
                     }, [t]);
                 })({ alphabeticalSortedCommands: s });
-            o.useEffect(() => {
+            (o.useEffect(() => {
                 Y.Di(t, { dontRefetchMs: X.A.Millis.DAY });
             }, [t]),
                 o.useLayoutEffect(() => {
                     r && i(K.Ug.POPULAR);
-                }, [r]);
+                }, [r]));
             let c = s;
             switch (l) {
                 case K.Ug.POPULAR:
@@ -464,7 +464,7 @@ function eq(e) {
         application: t,
         guildId: n,
         onItemClick: function () {
-            (0, eO.closeModal)(K.gS), (0, B.k)(_.Se.DISMISSED);
+            ((0, eO.closeModal)(K.gS), (0, B.k)(_.Se.DISMISSED));
         },
     });
 }
@@ -511,11 +511,11 @@ function eJ(e) {
             (0, r.jsx)(b.D, {
                 onClick: () => {
                     let e = C ? (0, eU.W)({ applicationId: t.id, referrerId: N?.id }) : (0, eU.V)({ id: t.id, ...d });
-                    (0, ez.C)(e, () => (0, eT.P0)((0, eb.o)(et.intl.string(et.t["L/PwZf"]), eL.Ck.SUCCESS))),
+                    ((0, ez.C)(e, () => (0, eT.P0)((0, eb.o)(et.intl.string(et.t["L/PwZf"]), eL.Ck.SUCCESS))),
                         eG.default.track(es.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
                             source: c,
-                        });
+                        }));
                 },
                 className: v()(eZ.v, i),
                 "aria-label": et.intl.string(et.t.WqhZss),
@@ -711,11 +711,11 @@ function eJ(e) {
                                                         n.e("729963"),
                                                         n.e("830938"),
                                                         n.e("392075"),
+                                                        n.e("102328"),
                                                         n.e("174016"),
                                                         n.e("896137"),
-                                                        n.e("852557"),
                                                         n.e("790417"),
-                                                        n.e("160920"),
+                                                        n.e("896359"),
                                                         n.e("837687"),
                                                         n.e("699292"),
                                                         n.e("50097"),
@@ -786,7 +786,7 @@ function eJ(e) {
                                               id: "add-app",
                                               label: et.intl.string(et.t.NgXl3C),
                                               action: () => {
-                                                  null == d.customInstallUrl &&
+                                                  (null == d.customInstallUrl &&
                                                       (0, u.zV)(es.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, x),
                                                       (0, e$.o)({
                                                           ...d,
@@ -799,7 +799,7 @@ function eJ(e) {
                                                                   );
                                                           },
                                                           source: "app_launcher_app_details",
-                                                      });
+                                                      }));
                                               },
                                           })
                                         : null,
@@ -892,11 +892,11 @@ function e2(e) {
                     u = a - i,
                     m = (0, eN.clamp)(o - d, u + 1, a + 20),
                     p = u === m ? 1 : (0, eN.clamp)((s - u) / (m - u), 0, 1);
-                (t.style.filter = `brightness(${1 + ((c ? 1.4 : 0.6) - 1) * p})`),
+                ((t.style.filter = `brightness(${1 + ((c ? 1.4 : 0.6) - 1) * p})`),
                     (t.style.backgroundColor = `color-mix(in oklab,${A} ${(1 - p) * 100}%, ${f})`),
                     (n.style.opacity = `${0 + +p}`),
                     (n.style.transform = `translateY(${(r = i / 4) + (0 - r) * p}px)`),
-                    null != l && (l.style.opacity = `${1 + -1 * p}`);
+                    null != l && (l.style.opacity = `${1 + -1 * p}`));
             }
         }, [f, A, N?.height, c, s, x?.height]);
     return (
@@ -1081,7 +1081,7 @@ function tI(e) {
                     ? s?.isThread() && ((o = !0), (t = et.intl.string(et.t.ddSR3v)))
                     : ((o = !1), (t = et.intl.string(et.t.z2YTgJ)));
             }
-            return o && null == t && (t = et.intl.string(et.t.f41E1g)), { disabled: o, reason: t };
+            return (o && null == t && (t = et.intl.string(et.t.f41E1g)), { disabled: o, reason: t });
         })({ context: t, application: n, activityAction: f });
     return (0, r.jsx)(th.m, {
         shouldShow: null != j,
@@ -1093,12 +1093,12 @@ function tI(e) {
             disabled: C,
             loading: m,
             onClick: () => {
-                h(!0),
+                (h(!0),
                     N(),
                     eG.default.track(es.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                         application_id: n.id,
                         button_action: _.F5.USE_APP_COMMAND,
-                    });
+                    }));
             },
             "aria-label": et.intl.formatToPlainString(et.t["XjP/R+"], { buttonText: g, applicationName: n.name }),
             text: g,
@@ -1111,15 +1111,15 @@ function ty(e) {
         [i, s] = o.useState(!1),
         a = o.useRef(null),
         c = o.useCallback(async () => {
-            eG.default.track(es.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+            (eG.default.track(es.HAw.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: _.F5.OPEN_APP_DM,
             }),
-                s(!0);
+                s(!0));
             try {
                 await (0, tj.Q)({ appId: n, botId: t, analyticsLocations: l });
             } catch (e) {}
-            clearTimeout(a.current), s(!1);
+            (clearTimeout(a.current), s(!1));
         }, [t, n, l]);
     return (0, r.jsx)(R.$, {
         type: "submit",
@@ -1469,7 +1469,7 @@ function tD(e) {
         hasCommands: i,
     });
 }
-n(321073), n(938796);
+(n(321073), n(938796));
 var tw = n(724002),
     tW =
         (((l = {})[(l.APPENDS_REMAINING_ACTIVITIES = 1)] = "APPENDS_REMAINING_ACTIVITIES"),
@@ -1528,11 +1528,11 @@ function t4(e, t) {
         ),
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
-            i?.forEach((e) => {
+            (i?.forEach((e) => {
                 let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
-                n.compute();
+                n.compute());
             let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
@@ -1546,14 +1546,14 @@ function t4(e, t) {
         }, [l, n, i]);
     return o.useMemo(() => {
         let e, i;
-        t?.forEach((t) => {
+        (t?.forEach((t) => {
             let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
                 let l = Math.max(...(n.getEntry(t.id)?.recentUses ?? []));
                 (null == i || l > i) && ((e = t), (i = l));
-            });
+            }));
         let a = e?.application?.id ?? "";
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
@@ -1584,7 +1584,7 @@ class ni extends A.Ay.PersistedStore {
 new ni(nt.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
-        (nl.lastUsedCommandId = t.id), (nl.lastUsedTimeMs = Date.now());
+        ((nl.lastUsedCommandId = t.id), (nl.lastUsedTimeMs = Date.now()));
     },
 });
 var ns = n(360469);
@@ -1968,7 +1968,7 @@ function nV(e) {
     return {
         onClickAppCard: o.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     (0, u.zV)(es.HAw.APPLICATION_COMMAND_SECTION_SELECTED, {
                         application_id: t.id,
                         section_name: n,
@@ -1979,7 +1979,7 @@ function nV(e) {
                         query: i,
                         num_friends_who_play: c.length,
                     }),
-                    r({ type: h.Wy.APPLICATION, application: t, installOnDemand: s, sectionName: n });
+                    r({ type: h.Wy.APPLICATION, application: t, installOnDemand: s, sectionName: n }));
             },
             [t, s, a, r, i, l, n, c],
         ),
@@ -2155,7 +2155,7 @@ function nQ(e) {
         ],
     });
 }
-(nQ.buttonTypes = nq),
+((nQ.buttonTypes = nq),
     (nQ.Loading = function () {
         let e = o.useMemo(() => ({ width: `${10 + 20 * Math.random()}%` }), []);
         return (0, r.jsx)("div", {
@@ -2168,7 +2168,7 @@ function nQ(e) {
                 children: "_",
             }),
         });
-    });
+    }));
 var nZ = n(984516),
     nJ = n(935573),
     n0 = n(651753),
@@ -2410,10 +2410,10 @@ function lm(e) {
                         for (let e of a) {
                             let n = (0, g.Sx)(t, e),
                                 l = n.sectionCommands ?? [];
-                            r.push(...l),
+                            (r.push(...l),
                                 l.forEach((e) => {
                                     null != n.descriptor && (o[e.id] = n.descriptor);
-                                });
+                                }));
                         }
                         return {
                             commands: r,
@@ -2596,7 +2596,7 @@ function lm(e) {
                                 return t;
                             }),
                         );
-                        u.push(...m),
+                        (u.push(...m),
                             u.push(
                                 ...p
                                     .filter((t) => {
@@ -2609,7 +2609,7 @@ function lm(e) {
                                         let { application: t } = e;
                                         return t;
                                     }),
-                            );
+                            ));
                     } else a && (u = m);
                     return n5(u, {
                         limit: i,
@@ -2871,7 +2871,7 @@ function lp(e) {
                             searchResultsPosition: n,
                             onClick: () => {
                                 let e = p.A.entrypoint();
-                                B.k(_.Se.DISMISSED),
+                                (B.k(_.Se.DISMISSED),
                                     (0, W.Mv)({
                                         command: i,
                                         location: D.Oh.APP_LAUNCHER_HOME_SEARCH,
@@ -2890,7 +2890,7 @@ function lp(e) {
                                             searchResultsPosition: n,
                                             source: e,
                                         }),
-                                        V._.dispatch(es.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id }));
+                                        V._.dispatch(es.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id })));
                             },
                         },
                         i.id,
@@ -3015,13 +3015,13 @@ function lI(e) {
         v = h && N && g && j,
         P = (u || d) && !v,
         S = m && c;
-    o.useEffect(() => {
+    (o.useEffect(() => {
         let e = "channel" === t.type ? t.channel?.guild_id : void 0;
         (0, t$.LV)({ guildId: e, force: !0 });
     }, [t]),
         o.useEffect(() => {
             n === _.s4.VOICE && t$.LK();
-        }, [n]);
+        }, [n]));
     let T = l.length > 0;
     return (0, r.jsxs)("div", {
         className: lN.kL,
@@ -3087,18 +3087,18 @@ function ly(e) {
         ),
         d = o.useCallback(() => n(""), [n]),
         m = o.useCallback(() => {
-            a(!0),
+            (a(!0),
                 (0, u.zV)(es.HAw.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: p.A.entrypoint(),
                     location: D.Oh.APP_LAUNCHER_HOME,
-                });
+                }));
         }, []),
         h = o.useCallback(() => {
             a(!1);
         }, []),
         A = o.useCallback(
             (e) => {
-                s || m(), n(e), c(e);
+                (s || m(), n(e), c(e));
             },
             [s, n, m, c],
         );
@@ -3160,7 +3160,7 @@ function lv(e) {
                         c = "contextless" === n.type,
                         d = o.useMemo(() => {
                             let e = [];
-                            return c && e.push(ns.gq), e;
+                            return (c && e.push(ns.gq), e);
                         }, [c]),
                         u = t4(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
@@ -3337,7 +3337,7 @@ function lS(e) {
                     () =>
                         s.reduce((e, t) => {
                             let { section: n, data: l } = t;
-                            return l.length > 0 && e.add(n.id), e;
+                            return (l.length > 0 && e.add(n.id), e);
                         }, new Set()),
                     [s],
                 ),
@@ -3642,7 +3642,7 @@ function lR(e) {
                 : {
                       items: l.slice(0, i),
                       handleViewMore: () => {
-                          (0, u.zV)(es.HAw.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                          ((0, u.zV)(es.HAw.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: s,
                               source: p.A.entrypoint(),
                               num: l.length,
@@ -3654,7 +3654,7 @@ function lR(e) {
                                   items: l,
                                   sectionName: s,
                                   sectionOverallPosition: a,
-                              });
+                              }));
                       },
                   },
         [l, i, s, r, t, n, a],
@@ -3753,8 +3753,8 @@ function lw(e) {
         }, []),
         p = o.useCallback(() => {
             let e = null;
-            i((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                a((t) => (null == e ? t : { ...t, [e.type]: e }));
+            (i((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
+                a((t) => (null == e ? t : { ...t, [e.type]: e })));
         }, []),
         A = o.useCallback((e) => l.findLast((t) => t.type === e) ?? s[e], [l, s]);
     return (0, r.jsx)(h.L8.Provider, {

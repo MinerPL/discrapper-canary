@@ -1,8 +1,8 @@
 n.d(t, { T_: () => A, Ed: () => E });
 var r = n(477900),
     l = n(582128),
-    o = n(503698),
-    i = n.n(o),
+    i = n(503698),
+    o = n.n(i),
     a = n(683071),
     s = n(725836);
 n(321073);
@@ -21,7 +21,7 @@ function E(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n ? (0, r.jsx)(s.UY, { children: (0, r.jsx)(h.f, { headerBadgeConfig: l }) }) : null,
-            (0, r.jsx)(C.DJ, { className: i()(g.g4, t) }),
+            (0, r.jsx)(C.DJ, { className: o()(g.g4, t) }),
         ],
     });
 }
@@ -35,7 +35,7 @@ function y(e) {
 }
 function x(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
-        { errorMessage: o, richNotices: i } = (function () {
+        { errorMessage: i, richNotices: o } = (function () {
             let { errorMessage: e } = (0, u.j)({}),
                 t = (function () {
                     let { paymentSourceId: e, checkoutPaymentSources: t } = (0, d.t4)((e) => ({
@@ -44,8 +44,8 @@ function x(e) {
                         })),
                         {
                             relocationCountry: n,
-                            relocationCurrencyCode: o,
-                            willForfeitGiftCardBalance: i,
+                            relocationCurrencyCode: i,
+                            willForfeitGiftCardBalance: o,
                         } = l.useMemo(() => {
                             let n = null != e ? t.find((t) => t.id === e) : null;
                             return {
@@ -61,31 +61,31 @@ function x(e) {
                                 : {
                                       directContent: (0, r.jsx)(c.c, {
                                           relocationCountry: n,
-                                          relocationCurrencyCode: o,
-                                          willForfeitGiftCardBalance: i,
+                                          relocationCurrencyCode: i,
+                                          willForfeitGiftCardBalance: o,
                                       }),
                                       key: "store-relocation-notice",
                                   },
-                        [n, o, i],
+                        [n, i, o],
                     );
                 })();
             return {
                 errorMessage: e,
                 richNotices: l.useMemo(() => {
                     let e = [];
-                    return null != t && e.push(t), e;
+                    return (null != t && e.push(t), e);
                 }, [t]),
             };
         })(),
         s = l.useRef(null);
     return (
         l.useEffect(() => {
-            y(o) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
-        }, [o]),
+            y(i) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
+        }, [i]),
         l.useMemo(() => {
-            if (!(!y(o) || i.length > 0 || null != t)) return null;
+            if (!(!y(i) || o.length > 0 || null != t)) return null;
             let e = (0, r.jsxs)(r.Fragment, {
-                children: [y(o) ? null : (0, r.jsx)(a.w, { type: "critical", children: o }), i.map(S)],
+                children: [y(i) ? null : (0, r.jsx)(a.w, { type: "critical", children: i }), o.map(S)],
             });
             return (0, r.jsx)("div", {
                 ref: s,
@@ -94,7 +94,7 @@ function x(e) {
                     ? (0, r.jsxs)(r.Fragment, { children: [t, e] })
                     : (0, r.jsxs)(r.Fragment, { children: [e, t] }),
             });
-        }, [o, i, t, n])
+        }, [i, o, t, n])
     );
 }
 function _(e) {
@@ -113,18 +113,18 @@ function _(e) {
     );
 }
 function I(e) {
-    let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: o } = e,
-        i = _(t);
+    let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: i } = e,
+        o = _(t);
     return l.useMemo(
         () =>
-            null != i || n
+            null != o || n
                 ? n
-                    ? null != i
-                        ? (0, r.jsx)(x, { showUpperNoticesAboveGlobalNotices: o, children: i })
+                    ? null != o
+                        ? (0, r.jsx)(x, { showUpperNoticesAboveGlobalNotices: i, children: o })
                         : (0, r.jsx)(x, {})
-                    : (0, r.jsx)("div", { className: g.dD, children: i })
+                    : (0, r.jsx)("div", { className: g.dD, children: o })
                 : null,
-        [n, i, o],
+        [n, o, i],
     );
 }
 function A(e) {
@@ -132,7 +132,7 @@ function A(e) {
             upperInlineNoticeProps: t,
             planSelectContent: n,
             purchaseItemContent: l,
-            subscriptionDetailsContent: o,
+            subscriptionDetailsContent: i,
             isStepLoading: a,
             paymentMethodContent: u,
             invoiceSummaryContent: c,
@@ -146,13 +146,14 @@ function A(e) {
             headerBadgeConfig: v,
             className: N,
         } = e,
-        j = _(k);
+        j = _(k),
+        { setCheckoutFooterLineItemNode: w } = (0, s.ck)();
     return a
         ? (0, r.jsx)(E, { className: N, shouldShowUnifiedHeader: !0 })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: i()(N, { [g.pg]: null == c }),
+                      className: o()(N, { [g.pg]: null == c }),
                       children: [
                           (0, r.jsx)(I, {
                               upperInlineNoticeProps: t,
@@ -162,7 +163,7 @@ function A(e) {
                           n,
                           null != n && null != l && (0, r.jsx)("div", { className: g.ls }),
                           l,
-                          null != o && (0, r.jsx)("div", { className: g.P3, children: o }),
+                          null != i && (0, r.jsx)("div", { className: g.P3, children: i }),
                           (0, r.jsx)("div", { className: g.Jv, children: u }),
                           null != c && (0, r.jsx)("div", { className: g.ZF, children: c }),
                       ],
@@ -170,6 +171,7 @@ function A(e) {
                   (0, r.jsx)(s.UY, { children: (0, r.jsx)(h.f, { headerBadgeConfig: v }) }),
                   (0, r.jsxs)(s.bx, {
                       children: [
+                          (0, r.jsx)("div", { ref: w }),
                           null != S && null != y && (0, r.jsx)(m.Qf, { className: g.NR, label: S, value: y }),
                           null != d ? (0, r.jsx)("div", { className: g.uh, children: d }) : null,
                           C,

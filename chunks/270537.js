@@ -1,26 +1,59 @@
-l.d(t, { Qf: () => g, Vm: () => p });
+l.d(t, { Qf: () => N, Vm: () => v });
 var n = l(477900),
     r = l(582128),
-    i = l(503698),
-    s = l.n(i),
+    s = l(503698),
+    i = l.n(s),
     a = l(338209),
     u = l.n(a),
     c = l(834730),
     o = l(580630);
 l(717201);
-var d = l(777485),
-    m = l(583741),
-    x = l(375708),
-    h = l(801067);
-function p(e) {
-    return (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)("div", { className: h.y }), (0, n.jsx)(f, { ...e })] });
-}
+var d = l(725836),
+    m = l(777485),
+    x = l(583741),
+    h = l(375708),
+    p = l(801067);
 function v(e) {
+    let t = (0, d.I6)(),
+        { lineItems: l } = e,
+        r = (function (e) {
+            let t = e.filter((e) => !(j(e) && 0 === e.amount)),
+                { tax: l = 0, other: n = 0 } = u()(t, (e) => (j(e) ? "tax" : "other"));
+            if (1 === n) {
+                if (0 === l) return [];
+                if (1 === l) return [t.find(j)];
+            }
+            return t;
+        })(l);
+    return 1 === r.length && null != t
+        ? (0, n.jsxs)(n.Fragment, {
+              children: [
+                  (0, n.jsx)("div", { className: p.yF }),
+                  (0, n.jsx)(d.gw, {
+                      children: (0, n.jsx)("div", {
+                          className: p.sR,
+                          children: (0, n.jsx)(f, { ...e, displayItems: r }),
+                      }),
+                  }),
+              ],
+          })
+        : (0, n.jsxs)(n.Fragment, {
+              children: [(0, n.jsx)("div", { className: i()(p.yF, p.s3) }), (0, n.jsx)(f, { ...e, displayItems: r })],
+          });
+}
+function j(e) {
     return "tax" === e.id;
 }
 function f(e) {
-    let { label: t, lineItems: l, currency: i, collapsedContentLabelOverride: s, defaultExpanded: a = !1 } = e,
-        m = l.length > 0,
+    let {
+            label: t,
+            lineItems: l,
+            displayItems: s,
+            currency: i,
+            collapsedContentLabelOverride: a,
+            defaultExpanded: u = !1,
+        } = e,
+        d = l.length > 0,
         { hasAdjustments: x, totalAdjustmentsOrSavings: h } = r.useMemo(
             () => ({
                 hasAdjustments: l.some(
@@ -37,63 +70,54 @@ function f(e) {
                 ),
             }),
             [l],
-        ),
-        p = (function (e) {
-            let t = e.filter((e) => !(v(e) && 0 === e.amount)),
-                { tax: l = 0, other: n = 0 } = u()(t, (e) => (v(e) ? "tax" : "other"));
-            if (1 === n) {
-                if (0 === l) return [];
-                if (1 === l) return [t.find(v)];
-            }
-            return t;
-        })(l);
-    if (0 === p.length) return null;
-    if (1 === p.length) {
-        let { amount: e, ...t } = p[0],
+        );
+    if (0 === s.length) return null;
+    if (1 === s.length) {
+        let { amount: e, ...t } = s[0],
             l = (0, o.$g)(e, i);
-        return (0, n.jsx)(d.i, { value: l, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
+        return (0, n.jsx)(m.i, { value: l, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
     }
-    return (0, n.jsx)(d.h, {
+    return (0, n.jsx)(m.h, {
         label: t,
-        defaultExpanded: a,
-        isDisabled: !m,
+        defaultExpanded: u,
+        isDisabled: !d,
         collapsedContent:
-            null != s
-                ? (0, n.jsx)(c.E, { variant: "text-md/medium", color: "text-feedback-positive", children: s })
-                : (0, n.jsx)(j, {
+            null != a
+                ? (0, n.jsx)(c.E, { variant: "text-md/medium", color: "text-feedback-positive", children: a })
+                : (0, n.jsx)(g, {
                       amount: h < 0 ? Math.abs(h) : null,
                       currency: i,
                       labelType: x ? "adjustments" : "savings",
                   }),
-        children: p.map((e) => {
+        children: s.map((e) => {
             let { id: t, label: l, amount: r, ...s } = e,
                 a = (0, o.$g)(r, i);
             return (0, n.jsx)(
-                d.i,
+                m.i,
                 { label: l, value: a, valueColor: r < 0 ? "text-feedback-positive" : "text-muted", ...s },
                 t,
             );
         }),
     });
 }
-function j(e) {
+function g(e) {
     let { amount: t, currency: l, labelType: r } = e;
     if (0 === t || null == t) return null;
-    let i = (0, o.$g)(t, l);
+    let s = (0, o.$g)(t, l);
     return (0, n.jsx)(c.E, {
         variant: "text-md/medium",
         color: "text-feedback-positive",
-        children: x.intl.format("adjustments" === r ? m.default["i3Q/6S"] : m.default.pDVleg, { amount: i }),
+        children: h.intl.format("adjustments" === r ? x.default["i3Q/6S"] : x.default.pDVleg, { amount: s }),
     });
 }
-function g(e) {
+function N(e) {
     let { label: t, value: l, className: r } = e;
     return (0, n.jsxs)(c.E, {
         variant: "text-lg/semibold",
         color: "text-strong",
-        className: s()(h.p, r),
+        className: i()(p.p8, r),
         children: [
-            (0, n.jsx)("span", { children: t ?? x.intl.string(m.default.Zxav97) }),
+            (0, n.jsx)("span", { children: t ?? h.intl.string(x.default.Zxav97) }),
             (0, n.jsx)("span", { children: l }),
         ],
     });
