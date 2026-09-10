@@ -3,6 +3,11 @@
     margin-top: -1px
 }
 
+.mana-type-consolidation .availabilityIndicator__40463 {
+    align-items: center;
+    margin-top: 0
+}
+
 .icon__40463 {
     flex: 0 0 auto;
     height: 14px;
@@ -10,6 +15,10 @@
     position: relative;
     top: 1px;
     width: 14px
+}
+
+.mana-type-consolidation .icon__40463 {
+    top: 0
 }
 
 .lockedIcon__40463 {
@@ -73,4 +82,4 @@
     background-image: none
 }
 
-/*# sourceMappingURL=51eb9c03cf7c087f.css.map*/
+/*# sourceMappingURL=e4ac5373948d7597.css.map*/

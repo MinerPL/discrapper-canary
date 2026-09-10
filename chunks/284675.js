@@ -3750,7 +3750,7 @@ function nV(e) {
 var nW = a(412966);
 let nz = [
     {
-        key: "event",
+        key: "Event",
         cellClassName: nW.Hz,
         render(e) {
             let { event: t } = e;
@@ -3758,7 +3758,7 @@ let nz = [
         },
     },
     {
-        key: "location",
+        key: "Location",
         cellClassName: nW.QN,
         render(e) {
             let { properties: t } = e;
@@ -4301,7 +4301,7 @@ var le = a(513520),
     la = a(468747);
 let ln = [
     {
-        key: "channel",
+        key: "Channel",
         cellClassName: la._w,
         render(e) {
             let { channelName: t } = e;
@@ -4972,7 +4972,7 @@ function l3(e) {
 }
 let l6 = [
     {
-        key: "store",
+        key: "Store",
         cellClassName: l2.lA,
         render(e) {
             let { trace: t } = e;
@@ -4980,7 +4980,7 @@ let l6 = [
         },
     },
     {
-        key: "time",
+        key: "Time",
         cellClassName: l2.i7,
         render(e) {
             let { trace: t } = e;
@@ -5119,7 +5119,7 @@ function l4(e) {
 }
 let l9 = [
         {
-            key: "action",
+            key: "Action",
             cellClassName: l2.lA,
             render(e) {
                 let { actionLog: t } = e;
@@ -5129,7 +5129,7 @@ let l9 = [
             },
         },
         {
-            key: "total time",
+            key: "Total Time",
             cellClassName: l2.i7,
             render(e) {
                 let { actionLog: t } = e;
@@ -5137,7 +5137,7 @@ let l9 = [
             },
         },
         {
-            key: "timestamp",
+            key: "Timestamp",
             cellClassName: l2.i7,
             render(e) {
                 let { actionLog: t } = e;
@@ -11643,7 +11643,7 @@ let du = [
         },
     },
     {
-        key: "name",
+        key: "Name",
         cellClassName: o0.Cm,
         render(e) {
             let { name: t, type: a, logType: n } = e;
@@ -11671,7 +11671,7 @@ let du = [
         },
     },
     {
-        key: "timestamp",
+        key: "Timestamp",
         cellClassName: o0.DK,
         render(e) {
             let { timestamp: t } = e;
@@ -16335,7 +16335,7 @@ function mB(e) {
 }
 let mF = [
     {
-        key: "name",
+        key: "Name",
         cellClassName: mP.__invalid_eventColumn,
         render(e) {
             let { store: t } = e;
@@ -16456,7 +16456,7 @@ var mW = a(91871),
     mz = a.n(mW);
 let mH = [
         {
-            key: "id",
+            key: "ID",
             cellClassName: nW.Hz,
             render(e) {
                 let { experimentId: t } = e;
@@ -16464,7 +16464,7 @@ let mH = [
             },
         },
         {
-            key: "bucket",
+            key: "Bucket",
             cellClassName: nW.QN,
             render(e) {
                 let { descriptor: t } = e;
@@ -16472,7 +16472,7 @@ let mH = [
             },
         },
         {
-            key: "timestamp",
+            key: "Timestamp",
             cellClassName: nW.QN,
             render(e) {
                 let { timestamp: t } = e;
