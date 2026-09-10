@@ -18838,7 +18838,6 @@ let N2 = (0, d.zD)(c.X.FRIEND_REQUESTS_NOTES_SETTING, {
         setValue: function (e) {
             L.Zd.updateSetting(!e);
         },
-        usePersistentBadge: () => ({ badgeType: m.Xi.BETA }),
     }),
     N3 = (0, d.zZ)(c.X.FRIEND_REQUESTS_CATEGORY, {
         useTitle: () => R.intl.string(R.t["5gxWrt"]),
