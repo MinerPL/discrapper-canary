@@ -294,8 +294,8 @@ function ez(e) {
         eZ = (eK || e$ || eq) && !(l || L),
         e0 = (0, g.bG)([eI.Ay], () => eI.Ay.getMentionCount(t.id) > 0),
         e2 = (0, V.Ay)(t),
-        e8 = r.useRef(null),
-        e5 = null != E && (l || L || ef);
+        e5 = r.useRef(null),
+        e8 = null != E && (l || L || ef);
     function e1() {
         $(!0);
     }
@@ -343,7 +343,7 @@ function ez(e) {
                               n.e("965789"),
                               n.e("214461"),
                               n.e("21106"),
-                              n.e("187048"),
+                              n.e("537796"),
                               n.e("699011"),
                               n.e("836150"),
                               n.e("146149"),
@@ -417,7 +417,7 @@ function ez(e) {
                               n.e("678195"),
                               n.e("21106"),
                               n.e("522261"),
-                              n.e("187048"),
+                              n.e("537796"),
                               n.e("713708"),
                               n.e("699011"),
                               n.e("836150"),
@@ -550,7 +550,7 @@ function ez(e) {
                         selected: l,
                         children: [
                             (0, i.jsx)(ed.A, {
-                                nameplate: e5 ? E : void 0,
+                                nameplate: e8 ? E : void 0,
                                 selected: l,
                                 hovered: L,
                                 content: ts,
@@ -650,11 +650,11 @@ function ez(e) {
                                 }),
                             }),
                             (0, i.jsxs)("div", {
-                                className: s()(eM._q, { [eM.EY]: e5 }),
+                                className: s()(eM._q, { [eM.EY]: e8 }),
                                 children: [
                                     eq ? (0, i.jsx)(ek, {}) : e$ ? (0, i.jsx)(eO, {}) : eQ ? (0, i.jsx)(eL, {}) : null,
                                     tf && null != e2
-                                        ? (0, i.jsx)(eU, { channelName: e2, onClick: tA, showNameplate: e5 })
+                                        ? (0, i.jsx)(eU, { channelName: e2, onClick: tA, showNameplate: e8 })
                                         : null,
                                     tf
                                         ? null
@@ -667,7 +667,7 @@ function ez(e) {
                                               onMouseDown: te,
                                               nameplate: E,
                                               reducedClickTarget: !0,
-                                              visibleElementRef: e8,
+                                              visibleElementRef: e5,
                                           }),
                                 ],
                             }),
