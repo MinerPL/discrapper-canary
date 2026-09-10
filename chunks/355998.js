@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => nD });
+(n.r(t), n.d(t, { default: () => nD }));
 var l = n(477900),
     i = n(582128),
     s = n(17928),
@@ -114,11 +114,11 @@ class eT extends i.PureComponent {
     getMode = () => (null != this.props.srcHover ? "static" : "default");
     handleHover = (e) => {
         let { onMouseEnter: t } = this.props;
-        t?.(e), this.state.hovered || this.setState({ hovered: !0 });
+        (t?.(e), this.state.hovered || this.setState({ hovered: !0 }));
     };
     handleBlur = (e) => {
         let { onMouseLeave: t } = this.props;
-        t?.(e), this.state.hovered && this.setState({ hovered: !1 });
+        (t?.(e), this.state.hovered && this.setState({ hovered: !1 }));
     };
     render() {
         let { size: e, src: t, srcHover: n, className: i, ...s } = this.props,
@@ -144,7 +144,7 @@ function eL(e) {
     return (0, ev.x)(s, t)
         ? (0, l.jsx)(N.D, {
               onClick: function (e) {
-                  r(!0),
+                  (r(!0),
                       (0, ej.L3)(
                           e,
                           async () => {
@@ -152,7 +152,7 @@ function eL(e) {
                               return (n) => (0, l.jsx)(e, { ...n, role: t, guild: s });
                           },
                           { onClose: () => r(!1) },
-                      );
+                      ));
               },
               className: A()(eM.X2, { [eM.ho]: a }),
               children: (0, l.jsx)(eb.MoreHorizontalIcon, {
@@ -248,7 +248,7 @@ let e$ = s.Ay.connectStores([X.A, eP.A], () => {
             if (null == e) return;
             let t = X.A.editedPermissionIds.reduce((e, t) => {
                 let n = X.A.getPermissionOverwrite(t);
-                return null != n && e.push(n), e;
+                return (null != n && e.push(n), e);
             }, []);
             (0, D.R$)(e.id, t);
         },
@@ -302,7 +302,7 @@ function eK(e) {
                 default:
                     t.type;
             }
-            (a = e),
+            ((a = e),
                 _.A.show({
                     title: eW.intl.string(eW.t.vElC9b),
                     body: eW.intl.format(eW.t.yslqFM, { name: a }),
@@ -310,7 +310,7 @@ function eK(e) {
                     onCancel() {
                         window.open(eB.A.getArticleURL(eZ.MVz.PERMISSIONS_LOCKOUT));
                     },
-                });
+                }));
         }
     }
     function m(e) {
@@ -491,11 +491,15 @@ function e1() {
         t = i.useRef(null),
         { channel: r, permissionOverwrites: o, selectedOverwriteId: d } = (0, s.cf)([X.A], () => X.A),
         c = r?.getGuildId(),
-        { guild: u, sortedGuildRoles: h } = (0, s.cf)([$.A, q.A], () => {
-            let e = null != c ? $.A.getGuild(c) : void 0,
-                t = null != e ? q.A.getSortedRoles(e.id) : void 0;
-            return { guild: e, sortedGuildRoles: t };
-        }, [c]),
+        { guild: u, sortedGuildRoles: h } = (0, s.cf)(
+            [$.A, q.A],
+            () => {
+                let e = null != c ? $.A.getGuild(c) : void 0,
+                    t = null != e ? q.A.getSortedRoles(e.id) : void 0;
+                return { guild: e, sortedGuildRoles: t };
+            },
+            [c],
+        ),
         g = (function (e, t) {
             let n = (0, s.yK)([Q.Ay], () => Q.Ay.getMemberIds(e), [e]),
                 [l, a] = i.useMemo(
@@ -779,7 +783,7 @@ function to(e) {
                 g = !1;
             switch (u) {
                 case ts.oO.ROLES:
-                    (c =
+                    ((c =
                         (d = n[h]).rowType === ts.T6.ROLE && d.tags?.guild_connections === null
                             ? (0, l.jsx)(H.A, { className: tr.a, color: d.colorString, size: 20 })
                             : (0, l.jsx)(f.i, { size: "custom", className: tr.a, color: d.colorString, height: 20 })),
@@ -793,10 +797,10 @@ function to(e) {
                                 }),
                             ],
                         })),
-                        (g = d.disabled);
+                        (g = d.disabled));
                     break;
                 case ts.oO.MEMBERS:
-                    (d = i[h]),
+                    ((d = i[h]),
                         (o = (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)(C.eu, { src: d.avatarURL, size: j._3.SIZE_20, "aria-hidden": !0 }),
@@ -810,7 +814,7 @@ function to(e) {
                                 }),
                             ],
                         })),
-                        (g = d.disabled);
+                        (g = d.disabled));
                     break;
                 default:
                     d = null;
@@ -982,7 +986,7 @@ function tc(e) {
                           title: eW.intl.string(eW.t.ZzdgUm),
                           subtitle: eW.intl.format(eW.t.DwY2vN, {
                               onClick: () => {
-                                  Z.A.open(t.id, eZ.BEX.ONBOARDING), n.onClose();
+                                  (Z.A.open(t.id, eZ.BEX.ONBOARDING), n.onClose());
                               },
                           }),
                           actions: [{ text: eW.intl.string(eW.t.BddRzS), onClick: n.onClose }],
@@ -1103,16 +1107,16 @@ let th = s.Ay.connectStores([X.A, $.A, Q.Ay, K.A, q.A, V.A], () => {
         let n = Q.Ay.getMemberIds(e?.id);
         if (null != e) {
             let r = q.A.getSortedRoles(e.id);
-            (s = X.A.editedPermissionIds.reduce((e, t) => {
+            ((s = X.A.editedPermissionIds.reduce((e, t) => {
                 let n = X.A.getPermissionOverwrite(t);
-                return null != n && (e[t] = n), e;
+                return (null != n && (e[t] = n), e);
             }, {})),
                 (l = el.uX(e, r, t, t.accessPermissions, s)),
                 (i = el.Wi(n, t, e, t.accessPermissions, {
                     permissionUpdates: s,
                     appChannelBotUserId: (0, P.yT)(t, V.A.getApplication(t.application_id)),
                 })),
-                (a = el.Ae(t, s));
+                (a = el.Ae(t, s)));
         }
     }
     return {
@@ -1242,16 +1246,20 @@ var tT = n(886235),
     tI = n(351906);
 function tM() {
     let e = (0, s.bG)([tI.A], () => tI.A.hideInstantInvites),
-        { channel: t, guild: n } = (0, s.cf)([eP.A, $.A], () => {
-            let { channel: e } = eP.A.getProps(),
-                t = null != e ? $.A.getGuild(e.getGuildId()) : null;
-            return { channel: e, guild: t };
-        }, []),
+        { channel: t, guild: n } = (0, s.cf)(
+            [eP.A, $.A],
+            () => {
+                let { channel: e } = eP.A.getProps(),
+                    t = null != e ? $.A.getGuild(e.getGuildId()) : null;
+                return { channel: e, guild: t };
+            },
+            [],
+        ),
         i = (0, s.bG)([K.A], () => null != t && K.A.can(eZ.xBc.CREATE_INSTANT_INVITE, t), [t]),
         { invites: a, loading: r } = (0, s.cf)([eP.A], () => eP.A.getInvites(), []);
     return (0, l.jsx)(tT.A, { invites: a, loading: r, guild: n, channel: t, canCreateInvites: i, hide: e });
 }
-n(938796), n(667532);
+(n(938796), n(667532));
 var tL = n(371444),
     tR = n(392421),
     tw = n(602137),
@@ -1449,7 +1457,7 @@ function nf(e) {
         }, [d, r]),
         h = i.useCallback(
             (e) => {
-                o(e), c(null);
+                (o(e), c(null));
             },
             [o],
         ),
@@ -1462,7 +1470,7 @@ function nf(e) {
             let l = n * nx.A.Seconds.MINUTE;
             l <= eZ.WA1 && t.push(l);
             let i = n * nx.A.Seconds.HOUR;
-            i <= eZ.WA1 && t.push(i), c(t);
+            (i <= eZ.WA1 && t.push(i), c(t));
         }, []),
         m = i.useCallback(() => {
             c(null);
@@ -1790,7 +1798,8 @@ let nS = {
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eW.intl.string(eW.t.uXA573) },
                       })
-                    : (0, d.RT)(e.id, {
+                    : (e.isGameInvitesChannel() && (g = void 0),
+                      (0, d.RT)(e.id, {
                           name: t,
                           type: n,
                           topic: l,
@@ -1813,7 +1822,7 @@ let nS = {
                           defaultForumLayout: j,
                           defaultTagSetting: b,
                           applicationId: N,
-                      });
+                      }));
             },
         };
     })(eg.A);
@@ -1831,7 +1840,7 @@ function nL(e) {
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: l } = e;
-                        null != n && n.type === t3.i.UNICODE && t(n.surrogates), l && i();
+                        (null != n && n.type === t3.i.UNICODE && t(n.surrogates), l && i());
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: nT,
@@ -2471,7 +2480,7 @@ class nR extends i.PureComponent {
             closePopout: t,
             onSelectEmoji: (e) => {
                 let { emoji: n, willClose: l } = e;
-                this.handleChangeDefaultReactionEmoji(n), l && t();
+                (this.handleChangeDefaultReactionEmoji(n), l && t());
             },
             pickerIntention: nv.EmojiIntention.COMMUNITY_CONTENT,
             channel: n,
@@ -2489,10 +2498,10 @@ class nR extends i.PureComponent {
         if (null == t) return;
         e = (0, tK.A)(e, t.type);
         let n = this.nameInputRef.current?.selectionStart ?? 0;
-        (0, d.fy)({ name: e }),
+        ((0, d.fy)({ name: e }),
             setTimeout(() => {
                 this.nameInputRef.current?.setSelectionRange(n, n);
-            }, 0);
+            }, 0));
     };
     handleBlurName = () => {
         let { channel: e, channelName: t } = this.props,
@@ -2511,17 +2520,17 @@ class nR extends i.PureComponent {
             i = n ? (t.selectionStart ?? l.length) : this.cursorPosition,
             s = n ? (t.selectionEnd ?? l.length) : this.cursorPosition,
             a = l.substring(0, i) + e + l.substring(s);
-        (0, d.fy)({ name: a }),
+        ((0, d.fy)({ name: a }),
             setTimeout(() => {
                 let n = i + e.length;
-                (this.cursorPosition = n), t?.focus(), t?.setSelectionRange(n, n);
-            }, 0);
+                ((this.cursorPosition = n), t?.focus(), t?.setSelectionRange(n, n));
+            }, 0));
     };
     handleChangeTopic = (e) => {
         (0, d.fy)({ topic: t4.Ay.translateInlineEmojiToSurrogates(e) });
     };
     handleChangeRichTopic = (e, t, n) => {
-        this.setState({ textTopicValue: t, richTopicValue: n }), this.handleChangeTopic(t);
+        (this.setState({ textTopicValue: t, richTopicValue: n }), this.handleChangeTopic(t));
     };
     handleSubmit() {
         return new Promise((e) => {
@@ -2543,7 +2552,7 @@ class nR extends i.PureComponent {
     handleChangeDefaultForumLayout = (e) => {
         let { channel: t } = this.props;
         if (null == t) return null;
-        (0, d.fy)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e);
+        ((0, d.fy)({ defaultForumLayout: e }), this.props.handleSetDefaultLayout(e));
     };
     handleChangeDefaultSortOrder = (e) => {
         let { channel: t } = this.props;
@@ -2808,10 +2817,10 @@ class nG extends i.PureComponent {
                               section: eZ.p_A.DELETE,
                               onClick() {
                                   (0, tN.O)(t, function () {
-                                      tb._.subscribeOnce(eZ.jej.LAYER_POP_COMPLETE, () => {
+                                      (tb._.subscribeOnce(eZ.jej.LAYER_POP_COMPLETE, () => {
                                           (0, d.D3)(t.id);
                                       }),
-                                          (0, c.jH)();
+                                          (0, c.jH)());
                                   });
                               },
                               label: C,
