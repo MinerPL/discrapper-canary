@@ -29,7 +29,7 @@ var s = t(477900),
     S = t(652165),
     y = t(561794),
     R = t(280450),
-    D = t(328968),
+    D = t(67480),
     L = t(174459),
     P = t(371794),
     U = t(871123),
@@ -40,8 +40,8 @@ var s = t(477900),
     B = t(31969),
     M = t(44724);
 t(321073);
-var F = t(345938),
-    q = t(510022),
+var q = t(345938),
+    F = t(510022),
     z = t(317560),
     J = t(99161),
     $ = t(375708),
@@ -95,7 +95,7 @@ var X = t(263911),
 function el(e) {
     let { orbsGate: l, orbPrice: t, onCheckout: i, onTrackEarnMoreOrbs: r, variant: a = "secondary" } = e,
         o = n.useCallback(() => {
-            r(), (0, Z.mA)({ fromContent: Q.u.SOCIAL_LAYER_STOREFRONT }), (0, z.j)();
+            (r(), (0, Z.mA)({ fromContent: Q.u.SOCIAL_LAYER_STOREFRONT }), (0, z.j)());
         }, [r]);
     return "HIDDEN" === l || null == t
         ? null
@@ -210,7 +210,7 @@ function eC(e) {
     let { orbsGate: l, onTrackClickNitroUpsell: t, applicationId: i, analyticsLocations: r } = e,
         o = (0, a.bG)([G.A], () => G.A.getConfigForApplicationId(i)),
         c = n.useCallback(() => {
-            t(), (0, ep.A)({ subscriptionTier: e_.pe.TIER_2, analyticsLocations: r, applicationId: i });
+            (t(), (0, ep.A)({ subscriptionTier: e_.pe.TIER_2, analyticsLocations: r, applicationId: i }));
         }, [r, i, t]);
     return "HIDDEN" === l
         ? null
@@ -333,7 +333,7 @@ function eR(e) {
         N = _ && "CAN_CHECKOUT" === b,
         g = p.discountedPrice ?? p.normalPrice,
         C = n.useCallback(() => {
-            o(eA.Jq.BUY_BUTTON),
+            (o(eA.Jq.BUY_BUTTON),
                 (0, J.a)(
                     l,
                     { isGift: !1 },
@@ -341,15 +341,15 @@ function eR(e) {
                         analyticsLocations: [...c, A.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON],
                         guildId: t,
                     },
-                );
+                ));
         }, [l, o, t, c]),
         f = n.useCallback(() => {
-            o(eA.Jq.GIFT_BUTTON),
+            (o(eA.Jq.GIFT_BUTTON),
                 (0, J.a)(
                     l,
                     { isGift: !0, giftRecipient: i, giftingOrigin: r },
                     { analyticsLocations: [...c, A.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
-                );
+                ));
         }, [l, o, i, r, c]),
         I = (0, k.h)(l.applicationId),
         E = n.useMemo(() => [...c, A.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON], [c]),
@@ -360,7 +360,7 @@ function eR(e) {
                     skuId: l.id,
                     applicationId: l.applicationId,
                     onComplete: () => {
-                        (0, z.j)(), (0, q.n)({ sku: l, application: I, analyticsLocations: E });
+                        ((0, z.j)(), (0, F.n)({ sku: l, application: I, analyticsLocations: E }));
                     },
                     analyticsLocations: E,
                 }));
@@ -458,7 +458,7 @@ function eU(e) {
             analyticsContext: k,
             onClose: S,
         } = e,
-        { analyticsLocations: q } = (0, E.Ay)(A ?? []),
+        { analyticsLocations: F } = (0, E.Ay)(A ?? []),
         { guildId: z } = (0, U.nG)(u),
         J = (0, a.bG)([R.default], () => R.default.getId());
     n.useEffect(() => {
@@ -466,7 +466,7 @@ function eU(e) {
     }, [u, c]);
     let W = (0, Y.A)({ applicationId: u }),
         K = (0, a.bG)([G.A], () => G.A.getSkuAssets()),
-        Q = (0, a.bG)([D.A], () => D.A.isFetchingForSKU(c)),
+        Q = (0, a.bG)([D.A], () => D.A.isFetching(c)),
         Z = (0, b.M)((0, I.Ay)()),
         [ee, el] = n.useState(!0),
         et = (0, O.A)({ skuId: c }),
@@ -523,17 +523,17 @@ function eU(e) {
         let e = new ResizeObserver(() => {
             eb(eu.scrollHeight > eu.clientHeight);
         });
-        return e.observe(eu), () => e.disconnect();
+        return (e.observe(eu), () => e.disconnect());
     }, [eu]);
     let ep = ea < ed.length ? ea : 0,
         ej = ec[ep] ?? null,
         e_ = ed.length > 1,
         eN = ed.some((e) => "video" === e.type);
-    (0, y.pE)(),
+    ((0, y.pE)(),
         (0, f.Ay)(() => {
-            L.default.track(ek.HAw.OPEN_MODAL, { location_stack: q, type: eE.Nh, sku_id: c, application_id: u }),
-                (0, H.Xw)();
-        });
+            (L.default.track(ek.HAw.OPEN_MODAL, { location_stack: F, type: eE.Nh, sku_id: c, application_id: u }),
+                (0, H.Xw)());
+        }));
     let eg = n.useCallback(
             (e) => {
                 L.default.track(ek.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
@@ -542,10 +542,10 @@ function eU(e) {
                     guild_id: k?.guildId,
                     application_id: u,
                     cta_type: e,
-                    location_stack: q,
+                    location_stack: F,
                 });
             },
-            [k, c, u, q],
+            [k, c, u, F],
         ),
         eO = n.useCallback(() => {
             eg(eA.Jq.NITRO_UPSELL_BUTTON);
@@ -563,29 +563,29 @@ function eU(e) {
                 application_id: u,
                 orbs_purchase_gate_state: en,
                 orb_price: es?.amount,
-                location_stack: q,
+                location_stack: F,
             }));
-    }, [en, ei, k, c, u, es, q]);
+    }, [en, ei, k, c, u, es, F]);
     let eD = n.useCallback(
         (e) => {
-            eo(e), eg(eA.Jq.CAROUSEL_ITEM);
+            (eo(e), eg(eA.Jq.CAROUSEL_ITEM));
         },
         [eg],
     );
     n.useEffect(() => {
-        null == c || D.A.isFetchingForSKU(c) || (0, H.Pp)(u, c);
+        null == c || D.A.isFetching(c) || (0, H.Pp)(u, c);
     }, [u, c]);
     let eU = n.useCallback(() => {
             null != et &&
                 (eg(eA.Jq.FORWARD_BUTTON),
-                (0, F.d)({
+                (0, q.d)({
                     sku: et,
                     guildId: z,
                     source: "social-layer-storefront-pdp",
-                    analyticsLocations: q,
+                    analyticsLocations: F,
                     analyticsContext: k,
                 }));
-        }, [et, z, eg, q, k]),
+        }, [et, z, eg, F, k]),
         eH = n.useCallback(() => {
             eg(eA.Jq.WISHLIST_BUTTON);
         }, [eg]),
@@ -593,20 +593,20 @@ function eU(e) {
             (0, M.G)({ applicationId: u });
         }, [u]),
         eY = n.useCallback(() => {
-            eg(eA.Jq.VISIT_SHOP), (0, p.closeAllModals)(), null != l ? l() : (0, M.default)({ applicationId: u });
+            (eg(eA.Jq.VISIT_SHOP), (0, p.closeAllModals)(), null != l ? l() : (0, M.default)({ applicationId: u }));
         }, [u, eg, l]),
         ew = n.useCallback(() => {
-            el(!ee), eg(eA.Jq.MUTE_BUTTON);
+            (el(!ee), eg(eA.Jq.MUTE_BUTTON));
         }, [ee, eg]),
         eB = (0, B.F)("pdp", { applicationId: u, skuId: c }),
         eM = et?.tenantMetadata?.socialLayer;
     if (null == et || null == eM) return Q ? (0, s.jsx)(j.y, {}) : null;
-    let eF = W?.storefront,
-        eq = eF?.logoAssetId != null ? (0, P.YE)(eF.applicationId, eF.logoAssetId, 256) : null,
-        ez = eF?.lightThemeLogoAssetId != null ? (0, P.YE)(eF.applicationId, eF.lightThemeLogoAssetId, 256) : null,
+    let eq = W?.storefront,
+        eF = eq?.logoAssetId != null ? (0, P.YE)(eq.applicationId, eq.logoAssetId, 256) : null,
+        ez = eq?.lightThemeLogoAssetId != null ? (0, P.YE)(eq.applicationId, eq.lightThemeLogoAssetId, 256) : null,
         eJ = null;
     return (
-        (eJ = Z ? (eq ?? ez) : (ez ?? eq)),
+        (eJ = Z ? (eF ?? ez) : (ez ?? eF)),
         (0, s.jsx)(o.EO, {
             transitionState: t,
             "hide-shadow": !0,
@@ -627,7 +627,7 @@ function eU(e) {
                                     className: ev.r$,
                                     children:
                                         null != eJ
-                                            ? (0, s.jsx)("img", { className: ev.wm, src: eJ, alt: eF?.title ?? "" })
+                                            ? (0, s.jsx)("img", { className: ev.wm, src: eJ, alt: eq?.title ?? "" })
                                             : null,
                                 }),
                                 (0, s.jsxs)("div", {
@@ -678,7 +678,7 @@ function eU(e) {
                                         }),
                                         "HIDDEN" !== en &&
                                             (0, s.jsx)(eC, {
-                                                analyticsLocations: q,
+                                                analyticsLocations: F,
                                                 applicationId: u,
                                                 onTrackClickNitroUpsell: eO,
                                                 orbsGate: en,
@@ -687,7 +687,7 @@ function eU(e) {
                                             (0, s.jsx)(ef.e, {
                                                 promotion: eB,
                                                 applicationId: u,
-                                                analyticsLocations: q,
+                                                analyticsLocations: F,
                                                 onUpsellClick: () => eg(eA.Jq.NITRO_UPSELL_BUTTON),
                                             }),
                                         (0, s.jsx)(eR, {
@@ -696,7 +696,7 @@ function eU(e) {
                                             giftRecipient: x?.id !== J ? x : void 0,
                                             giftingOrigin: x?.id !== J ? h : void 0,
                                             trackPDPClick: eg,
-                                            analyticsLocations: q,
+                                            analyticsLocations: F,
                                             orbPrice: es,
                                             orbsGate: en,
                                             formattedPrice: er,

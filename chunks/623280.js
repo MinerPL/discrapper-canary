@@ -94,9 +94,9 @@ function O(e) {
         { trackUserProfileEditAction: s } = (0, c.NJ)();
     function o(e) {
         if (e.shiftKey) {
-            (0, d.qA)(r),
+            ((0, d.qA)(r),
                 s({ action: "WIDGET_REMOVED", ...r.getProfileEditAnalyticsOptions() }),
-                (0, w.XA)(_.jM.WIDGET_REMOVED);
+                (0, w.XA)(_.jM.WIDGET_REMOVED));
             return;
         }
         (0, y.openModalLazy)(
@@ -141,8 +141,8 @@ function O(e) {
                     n.e("724303"),
                     n.e("521930"),
                     n.e("979483"),
-                    n.e("36877"),
                     n.e("93461"),
+                    n.e("36877"),
                     n.e("627323"),
                     n.e("190779"),
                     n.e("513992"),
@@ -191,7 +191,7 @@ function O(e) {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, D.Z_)(), t();
+                    ((0, D.Z_)(), t());
                 },
                 onSelect: () => {},
                 "aria-label": S.intl.string(S.t.xpSHSk),
@@ -236,7 +236,7 @@ function H(e) {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, D.Z_)(), t();
+                    ((0, D.Z_)(), t());
                 },
                 onSelect: () => {},
                 "aria-label": S.intl.string(S.t.xpSHSk),
@@ -324,7 +324,7 @@ function J(e) {
         { registerManageWidgetButtonRef: f, manageFocusOnReorder: h } = (0, q.r)();
     r.useLayoutEffect(() => {
         let e = f(n.type);
-        return e(u.current), () => e(null);
+        return (e(u.current), () => e(null));
     }, [f, n.type]);
     let x = r.useMemo(() => n.id ?? (0, o.Ld)(), [n.id]),
         { isDragging: p, dragSourcePosition: I } = (0, m.gY)({

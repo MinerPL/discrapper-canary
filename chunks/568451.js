@@ -22,7 +22,7 @@ function C(e) {
         } = e,
         d = c.useMemo(() => {
             let e = {};
-            return "" !== t && (e.game_server_name = t), "" !== n && (e.game_server_region = n), e;
+            return ("" !== t && (e.game_server_name = t), "" !== n && (e.game_server_region = n), e);
         }, [t, n]),
         p = c.useMemo(
             () => ({
@@ -225,12 +225,12 @@ function J(e) {
                     [E, a, s, I],
                 ),
                 g = c.useMemo(() => ({ type: "subscription_renewal_invoice", params: y }), [y]);
-            c.useEffect(() => {
+            (c.useEffect(() => {
                 o(A);
             }, [A, o]),
                 c.useEffect(() => {
                     u(g);
-                }, [g, u]);
+                }, [g, u]));
             let { discriminatedInvoicePreview: P } = (0, x.KY)({
                 invoiceError: d,
                 subscriptionPlan: p,
@@ -376,7 +376,7 @@ let X = (e, t) => {
                         [a, s, o],
                     ),
                     I = c.useCallback(() => {
-                        e.handleClose(), i?.();
+                        (e.handleClose(), i?.());
                     }, [e, i]);
                 return (0, r.jsx)(h.Y, {
                     ...e,
@@ -836,7 +836,7 @@ function tY(e) {
             };
         })(e),
         o = [];
-    0 !== n &&
+    (0 !== n &&
         o.push({
             id: "base-plan-adjustment",
             label: H.intl.formatToPlainString(H.t.ZSVged, { planName: (0, k.RH)(l[0].subscriptionPlanId) }),
@@ -852,7 +852,7 @@ function tY(e) {
                 amount: i,
                 lineItemType: "adjustment",
             }),
-        0 !== a.tax && o.push({ id: "tax", label: H.intl.string(H.t.jiRvC7), amount: a.tax, lineItemType: "tax" });
+        0 !== a.tax && o.push({ id: "tax", label: H.intl.string(H.t.jiRvC7), amount: a.tax, lineItemType: "tax" }));
     let { lineItems: u, currency: c } = (0, M.EA)({ id: "main-line-item", amount: t, ...s }),
         d = [...u, ...o];
     return (0, r.jsx)(tk.Vm, {
@@ -889,10 +889,14 @@ function tK(e) {
                     premiumSubscriptionPlan: i,
                     newAdditionalPlans: r,
                 } = e,
-                s = (0, U.bG)([eC.A, ec.A], () => {
-                    let e = eC.A.getGuild(t);
-                    return null != e ? e : ec.A.isGuildFetching(t) ? null : ec.A.getGuild(t);
-                }, [t]),
+                s = (0, U.bG)(
+                    [eC.A, ec.A],
+                    () => {
+                        let e = eC.A.getGuild(t);
+                        return null != e ? e : ec.A.isGuildFetching(t) ? null : ec.A.getGuild(t);
+                    },
+                    [t],
+                ),
                 o = i.interval,
                 u = i.intervalCount,
                 d = (0, U.bG)([eU.A], () => eU.A.getForSkuAndInterval((0, k.mH)(eG.pe.GUILD), o, u));
@@ -945,7 +949,7 @@ function tK(e) {
                 }, [A, C, n.paymentSourceId, h]);
             return (
                 c.useEffect(() => {
-                    f(g), E(P);
+                    (f(g), E(P));
                 }, [f, E, g, P]),
                 {
                     guild: s ?? null,
@@ -1134,7 +1138,7 @@ function tz(e) {
     }, [t]);
     let u = "number" == typeof s;
     function d(e) {
-        o(e), tq(e) || n(e);
+        (o(e), tq(e) || n(e));
     }
     return (0, r.jsxs)("div", {
         className: tZ.U$,
@@ -1550,13 +1554,13 @@ function t1(e) {
                     },
                     "hrk-warning",
                 );
-                ee.push(e), et.push(e);
+                (ee.push(e), et.push(e));
             }
             let en = (0, tm.p)("GuildBoostPurchaseModalPlanSelect")
                 ? H.intl.string(H.t["+nPHMl"])
                 : H.intl.format(H.t.Om31w8, { documentationLink: tA.A.getArticleURL(eB.MVz.LOCALIZED_PRICING) });
-            ee.push((0, r.jsx)(tr.A, { message: en }, "localized-pricing")),
-                et.push((0, r.jsx)(tQ, { message: en }, "localized-pricing"));
+            (ee.push((0, r.jsx)(tr.A, { message: en }, "localized-pricing")),
+                et.push((0, r.jsx)(tQ, { message: en }, "localized-pricing")));
             let el =
                     "reverse_trial" === G.upsellVariant
                         ? (0, r.jsx)(tS, {})
@@ -1661,7 +1665,7 @@ function t4(e) {
                 window.location.href = "discord://app/settings/nitro";
                 return;
             }
-            t(), null != i && i(), (0, e0.e)();
+            (t(), null != i && i(), (0, e0.e)());
         },
         priceOptions:
             null != p ? { paymentSourceId: p, currency: null != E ? E : void 0 } : { currency: null != E ? E : void 0 },
@@ -1803,11 +1807,11 @@ function nu(e) {
         I = E?.subscriptionTrial?.skuId === eG.pe.TIER_2;
     return (
         c.useEffect(() => {
-            eN.default.track(eB.HAw.PREMIUM_UPSELL_VIEWED, {
+            (eN.default.track(eB.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: eG.e.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: p,
             }),
-                (0, nn.sq)(eB.U7l.PREMIUM_UPSELL_VIEWED, p, () => (0, nl.uq)(eG.e.GUILD_PREMIUM_UPSELL_MODAL));
+                (0, nn.sq)(eB.U7l.PREMIUM_UPSELL_VIEWED, p, () => (0, nl.uq)(eG.e.GUILD_PREMIUM_UPSELL_MODAL)));
         }, [p]),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -1850,7 +1854,7 @@ function nu(e) {
                                         text: null != S ? H.intl.string(H.t["Gd/XHF"]) : H.intl.string(H.t.p2moip),
                                         type: "submit",
                                         onClick: () => {
-                                            n(),
+                                            (n(),
                                                 (0, nt.A)({
                                                     initialPlanId: null,
                                                     subscriptionTier: eG.pe.TIER_2,
@@ -1862,7 +1866,7 @@ function nu(e) {
                                                     analyticsSourceLocation: u,
                                                     onSubscriptionConfirmation: s,
                                                     trialId: S,
-                                                });
+                                                }));
                                         },
                                     }),
                                 ],
@@ -1884,7 +1888,7 @@ function nc(e) {
         { displayCurrency: m } = (0, e_.Jn)(),
         p = (0, U.bG)([eU.A], () => (null != d ? (0, eD.c9)(d.planId) : null)),
         C = (0, U.bG)([eU.A], () => (null == p ? eU.A.get(t2) : p));
-    ez()(null != C, "Missing nextPremiumSubscriptionPlan"), ez()(null != m && "" !== m, "Currency not defined");
+    (ez()(null != C, "Missing nextPremiumSubscriptionPlan"), ez()(null != m && "" !== m, "Currency not defined"));
     let { paymentSources: h } = i,
         f = null != d ? d.paymentSourceId : null,
         E = Object.keys(h).length > 0,
@@ -1930,9 +1934,9 @@ function nC() {
             async function l() {
                 if (null != e)
                     try {
-                        await np(e, null != t), n?.();
+                        (await np(e, null != t), n?.());
                     } catch (e) {
-                        a(ed.h.FAIL), s(e);
+                        (a(ed.h.FAIL), s(e));
                     }
             }
             o.current && ((o.current = !1), i(!1), r === ep.oc.NONE && null != e && l());
@@ -2043,10 +2047,10 @@ let nh = [
                             g(null);
                             let r = !1;
                             try {
-                                v(ed.h.PURCHASING),
+                                (v(ed.h.PURCHASING),
                                     E(!0),
                                     ez()(null != A, "Missing paymentSourceId"),
-                                    ez()(null != T, "Missing invoicePreview");
+                                    ez()(null != T, "Missing invoicePreview"));
                                 let s = { amount: T.total, currency: T.currency },
                                     u = U.currency ?? T.currency,
                                     c = (0, k.U8)(I, N, u.toLowerCase(), U.paymentSourceId);
@@ -2074,12 +2078,12 @@ let nh = [
                                     if (t.pendingCustomerAction) return;
                                 } else {
                                     let t = { items: (0, k.aE)(I, N) };
-                                    (t.currency = I.currency ?? u),
+                                    ((t.currency = I.currency ?? u),
                                         (t.paymentSource = null != a ? f[a] : void 0),
                                         null == t.paymentSource &&
                                             (ez()(null != e, "Missing paymentSource"),
                                             (t.paymentSource = e),
-                                            (t.currency = u));
+                                            (t.currency = u)));
                                     let n = await (0, nd.nV)(I, t, s, c, l.location_stack);
                                     if (n.redirectConfirmation) {
                                         r = !0;
@@ -2087,13 +2091,13 @@ let nh = [
                                     }
                                     if (n.pendingCustomerAction) return;
                                 }
-                                null == p && t(o.pn.CONFIRM),
+                                (null == p && t(o.pn.CONFIRM),
                                     v(ed.h.COMPLETED),
                                     null != i && (await np(i, null != p)),
                                     null != p && n(),
-                                    C?.();
+                                    C?.());
                             } catch (t) {
-                                v(ed.h.FAIL),
+                                (v(ed.h.FAIL),
                                     g(t),
                                     eN.default.track(eB.HAw.PAYMENT_FLOW_FAILED, {
                                         ...w,
@@ -2106,7 +2110,7 @@ let nh = [
                                                 : null,
                                         payment_source_id: A,
                                         duration_ms: Date.now() - d,
-                                    });
+                                    }));
                             } finally {
                                 r || E(!1);
                             }
@@ -2120,7 +2124,7 @@ let nh = [
                         };
                     })({ handleStepChange: t, handleClose: n, analyticsData: l }),
                     g = c.useCallback(() => {
-                        t(o.pn.ADD_PAYMENT_STEPS), p(null);
+                        (t(o.pn.ADD_PAYMENT_STEPS), p(null));
                     }, [t, p]);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -2253,7 +2257,7 @@ var nE = n(773882),
 let nI = c.createContext(void 0);
 function nA() {
     let e = c.useContext(nI);
-    return ez()(null != e, "GuildProductPurchaseContext not found"), e;
+    return (ez()(null != e, "GuildProductPurchaseContext not found"), e);
 }
 function ng(e) {
     let { children: t, skuId: n, ...l } = e,
@@ -2270,7 +2274,7 @@ function nP(e) {
     return (
         (0, en.Ay)(() => {
             var e;
-            ez()(null != a, "invoicePreview cannot be null"),
+            (ez()(null != a, "invoicePreview cannot be null"),
                 (e = { guildId: i, guildProductListingId: l.id, invoicePreview: a }),
                 (0, nS.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
@@ -2283,7 +2287,7 @@ function nP(e) {
                     ]).then(n.bind(n, 779457));
                     return (n) => (0, r.jsx)(t, { ...e, ...n });
                 }),
-                t();
+                t());
         }),
         null
     );
@@ -2386,7 +2390,7 @@ function n1(e) {
         p = (0, nZ.gU)(),
         C = (0, nY.bG)([nq.A], () => nq.A.getProduct(a)),
         h = c.useRef(!1);
-    ez()(null != a, "Expected selectedSkuId"), ez()(null != m, "Expected application");
+    (ez()(null != a, "Expected selectedSkuId"), ez()(null != m, "Expected application"));
     let f = p[a];
     ez()(null != f, "Expected sku");
     let E = null != d || null != s || null != o,
@@ -2539,7 +2543,7 @@ function lm(e) {
                                         className: ld.Nx,
                                         innerRef: C,
                                         onClick: (e) => {
-                                            f((e) => !e), t?.(e);
+                                            (f((e) => !e), t?.(e));
                                         },
                                         onMouseDown: (e) => {
                                             h ? e.stopPropagation() : n?.(e);
@@ -2749,7 +2753,7 @@ function lT() {
         () =>
             n.reduce((e, t) => {
                 let n = F.default.getUser(t);
-                return null == n || n.bot || e.push(n), e;
+                return (null == n || n.bot || e.push(n), e);
             }, []),
         [n],
     );
@@ -2767,11 +2771,11 @@ function lk(e) {
     return (0, r.jsx)(eX.Q, {
         text: H.intl.string(H.t.J82mpK),
         onClick: function () {
-            t(),
+            (t(),
                 (0, nS.closeAllModals)(),
                 null == n
                     ? (0, n7.Cz)({ analyticsLocations: l, analyticsSource: a.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
-                    : (0, lO.pX)(`${eB.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
+                    : (0, lO.pX)(`${eB.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`));
         },
         textVariant: "text-sm/medium",
     });
@@ -2841,7 +2845,10 @@ let lG = {
                         })),
                         P = I && null != A;
                     async function v(e, t) {
-                        m(!0), null != s && o(), (await (0, n7.JJ)(e.id, t)) || o(H.intl.string(H.t["4kgVqQ"])), m(!1);
+                        (m(!0),
+                            null != s && o(),
+                            (await (0, n7.JJ)(e.id, t)) || o(H.intl.string(H.t["4kgVqQ"])),
+                            m(!1));
                     }
                     function _() {
                         return (0, r.jsx)(lj.A, {
@@ -3019,13 +3026,13 @@ let lG = {
                     let { skuIDs: t, onClose: n, onComplete: l, setCustomConfettiVisible: i } = e,
                         r = t[0] ?? null,
                         a = c.useCallback(() => {
-                            i(!0), l?.();
+                            (i(!0), l?.());
                         }, [l, i]);
                     return {
                         paymentModalSkuId: r,
                         paymentModalOnClose: c.useCallback(
                             (e) => {
-                                i(!1), n(e), nU.h.dispatch({ type: "SKU_PURCHASE_MODAL_CLOSE", error: null });
+                                (i(!1), n(e), nU.h.dispatch({ type: "SKU_PURCHASE_MODAL_CLOSE", error: null }));
                             },
                             [n, i],
                         ),
@@ -3229,7 +3236,7 @@ function ii(e) {
     if (null == h) throw new f.v({ message: "Expected selectedSkuId", extraSentryInformation: $ });
     if (null == T) throw new f.v({ message: "Step should be set", extraSentryInformation: $ });
     let J = c.useCallback(() => {
-        l(), a?.();
+        (l(), a?.());
     }, [l, a]);
     (0, en.Ay)(() => {
         A &&
@@ -3240,7 +3247,7 @@ function ii(e) {
             });
     });
     let X = (0, lW.A)();
-    c.useEffect(() => {
+    (c.useEffect(() => {
         function e() {
             if (A)
                 if (null != y && y.hasAnyPremiumGroup) {
@@ -3263,23 +3270,24 @@ function ii(e) {
                                     subscription: y,
                                     isFromPurchaseFlow: !0,
                                     onClose: async () => {
-                                        l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), await t.onClose();
+                                        (l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
+                                            await t.onClose());
                                     },
                                 });
                         },
                         {
                             onCloseRequest: () => {
-                                l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, nS.closeModal)(e);
+                                (l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, nS.closeModal)(e));
                             },
                             modalKey: e,
                         },
                     );
                 } else
-                    eN.default.track(eB.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
+                    (eN.default.track(eB.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
                         has_updated_subscription: null != y,
                         has_any_premium_group: y?.hasAnyPremiumGroup ?? !1,
                     }),
-                        l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
+                        l2._.dispatch(eB.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED));
             else
                 null != q && q > 0
                     ? (0, lz.$)({ orbsAmount: q, openGiftingBadgePostPurchaseModal: N && G ? D : void 0 })
@@ -3300,7 +3308,7 @@ function ii(e) {
                 null != K &&
                 null != V &&
                 (0, lV.qr)(lH.M.GIFTING_PROMOTION_REMINDER, V, { dismissAction: il.i.INDIRECT_ACTION });
-        }, [K, V, B]);
+        }, [K, V, B]));
     let ee = null != m ? l1.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != s) t = s(x, J, y);
     else if (N) t = (0, r.jsx)(l1.fw, { planId: x.id, onClose: J, shouldUsePostPurchaseRecipientDelivery: W });
@@ -3380,7 +3388,7 @@ function iA(e) {
                     return e;
                 },
                 set current(value) {
-                    (e = value), m(value);
+                    ((e = value), m(value));
                 },
             };
         }, []),
@@ -3539,11 +3547,11 @@ function ix(e) {
     let g = c.useMemo(() => null != C && (u ?? []).includes(C), [C, u]),
         P = c.useMemo(() => 0 === m.length || null == C || !g, [m, C, g]);
     function v(e) {
-        s([e]), h(e), I(!0);
+        (s([e]), h(e), I(!0));
     }
     c.useEffect(() => {
         if (0 === m.length) {
-            h(void 0), s([]);
+            (h(void 0), s([]));
             return;
         }
         (null != C && g && m.includes(C)) || null == C || (h(void 0), s([]));
@@ -4422,7 +4430,7 @@ function rt(e) {
             paymentSourceId: u.paymentSourceId,
             currency: u.currency,
         });
-    c.useEffect(() => {
+    (c.useEffect(() => {
         B && z(Q?.subscriptionPeriodEnd == null);
     }, [Q, B]),
         (0, ib.A)(
@@ -4431,7 +4439,7 @@ function rt(e) {
             5,
             { proratedInvoicePreview: Q, proratedInvoiceError: $, isEligibleForOffer: B },
             { tags: { app_context: "billing" } },
-        );
+        ));
     let J = $?.message ?? H.intl.string(H.t.R0RpRX),
         X = B && null == $,
         ee = B && null != $,
@@ -4458,7 +4466,7 @@ function rt(e) {
             [m, A?.id, l, Q?.subscriptionPeriodEnd, M, s],
         );
     if (et) return (0, r.jsx)(v.Ed, { className: re.QW });
-    ez()(null != g, "Step should be set"), ez()(m.length > 0, "Premium plan options should be set");
+    (ez()(null != g, "Step should be set"), ez()(m.length > 0, "Premium plan options should be set"));
     let eo = P
         ? (0, r.jsx)(iQ.$p, { ...es })
         : (0, r.jsx)(iJ.X, { ...es, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
@@ -4550,8 +4558,8 @@ function rs(e) {
                     m = (0, k.aZ)(t);
                 (m !== eG.pe.TIER_1 && m !== eG.pe.TIER_2) || n !== eG.pe.TIER_0 || r || (d = o.pn.WHAT_YOU_LOSE);
                 let p = c({ isTrial: (0, rr.t)({ userTrialOffer: a, isGift: r, skuId: n }), selectedSkuId: n });
-                d !== o.pn.WHAT_YOU_LOSE && p && ((d = o.pn.REVIEW), s((0, ri.x)(n, t, u))),
-                    i(d, { analyticsDataOverride: { sku_id: n } });
+                (d !== o.pn.WHAT_YOU_LOSE && p && ((d = o.pn.REVIEW), s((0, ri.x)(n, t, u))),
+                    i(d, { analyticsDataOverride: { sku_id: n } }));
             })({
                 getIsInOneStepSubscriptionCheckout: c,
                 activeSubscription: a,
@@ -4566,9 +4574,9 @@ function rs(e) {
         onSelectPremiumGroup: () =>
             (function (e) {
                 let { setSelectedPlanId: t, handleStepChange: n, hasPaymentSources: l, setSelectedSkuId: i } = e;
-                i((0, k.mH)(eG.pe.TIER_2)),
+                (i((0, k.mH)(eG.pe.TIER_2)),
                     t(eG.gD.PREMIUM_GROUP_MONTH),
-                    n(l ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: eG.pe.TIER_2 } });
+                    n(l ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: eG.pe.TIER_2 } }));
             })({ setSelectedPlanId: l, handleStepChange: t, hasPaymentSources: d, setSelectedSkuId: n }),
         isGift: m,
         priceOptions: i,
@@ -5034,7 +5042,7 @@ function rU(e) {
         { createMultipleConfettiAt: C } = c.useContext(rw.x),
         h = m?.name ?? "";
     function f() {
-        l(), i?.();
+        (l(), i?.());
     }
     let E = u === o.pn.CONFIRM,
         y = (0, rj.bg)(m?.flags ?? 0),
@@ -5258,13 +5266,13 @@ let rH = (e) => {
                     a = t.onComplete,
                     s = c.useCallback(
                         (e) => {
-                            r(e),
+                            (r(e),
                                 e &&
                                     null != i &&
                                     (nd.hP(),
                                     (0, rh.f5)(i),
                                     null != a && a(),
-                                    null != i && (l || r_.A.getGuildId() !== i) && (0, lO.pX)(eB.BVt.CHANNEL(i)));
+                                    null != i && (l || r_.A.getGuildId() !== i) && (0, lO.pX)(eB.BVt.CHANNEL(i))));
                         },
                         [r, a, l, i],
                     );
@@ -5291,16 +5299,16 @@ function r$(e) {
         [f, E] = c.useState(!1),
         [y, I] = c.useState(!1);
     c.useEffect(() => {
-        u ||
+        (u ||
             (0, l3.GM)(t, !1, !0)
                 .then((e) => {
                     let t = rZ.A.createFromServer(e);
-                    p(t), d(!0), E(t.promotion?.promotionType === rK.pt.THIRD_PARTY_DIRECT_FULFILLMENT);
+                    (p(t), d(!0), E(t.promotion?.promotionType === rK.pt.THIRD_PARTY_DIRECT_FULFILLMENT));
                 })
                 .catch((e) => {
-                    h(e), d(!0);
+                    (h(e), d(!0));
                 }),
-            a || (0, nd.I8)();
+            a || (0, nd.I8)());
     }, [t, a, u]);
     let A = (0, eb._)(),
         { paymentSources: g, paymentSourceId: P, paymentAuthenticationState: v, setIsSubmittingCurrentStep: _ } = A,
@@ -5344,7 +5352,7 @@ function r$(e) {
         Y = c.useCallback(async () => {
             let e = (0, O.W)(g, P);
             if (null == e) return !1;
-            _(!0), b(null), N(ed.h.PURCHASING);
+            (_(!0), b(null), N(ed.h.PURCHASING));
             try {
                 return (
                     await rV.Ay.redeemGiftCode({ code: t, options: { paymentSource: e } }),
@@ -5806,7 +5814,7 @@ let aa = [...eG.oz],
                                   }
                                   return (0, r.jsx)(r8.ConfirmModal, {
                                       onConfirm: async () => {
-                                          p(!0), (await d()) && e();
+                                          (p(!0), (await d()) && e());
                                       },
                                       title: H.intl.string(H.t.MaZ28z),
                                       cancelText: H.intl.string(H.t["ETE/oC"]),
@@ -5963,7 +5971,7 @@ function ac(e) {
         { application: l } = (0, nK.V)(),
         i = (0, nZ.gU)(),
         { isGift: a, giftRecipient: s } = (0, nL.Pv)();
-    ez()(null != n, "Expected selectedSkuId"), ez()(null != l, "Expected application");
+    (ez()(null != n, "Expected selectedSkuId"), ez()(null != l, "Expected application"));
     let o = i[n];
     ez()(null != o, "Expected sku");
     let u = a
@@ -6079,7 +6087,7 @@ function a_(e) {
         { application: a } = (0, nK.V)(),
         s = (0, nZ.gU)(),
         { isGift: o, giftRecipient: u } = (0, nL.Pv)();
-    ez()(null != l, "Expected selectedSkuId"), ez()(null != a, "Expected application");
+    (ez()(null != l, "Expected selectedSkuId"), ez()(null != a, "Expected application"));
     let d = s[l];
     ez()(null != d, "Expected sku");
     let m = i.find((e) => e.sku_id === l),
@@ -6221,14 +6229,14 @@ let aH = {
                                                 t.user.id === e ||
                                                 r.has(t.user.id) ||
                                                 (r.add(t.user.id), i.push(t));
-                                        i.sort((e, t) =>
+                                        (i.sort((e, t) =>
                                             (0, aG.Ay)(e) && !(0, aG.Ay)(t)
                                                 ? -1
                                                 : (0, aG.Ay)(t) && !(0, aG.Ay)(e)
                                                   ? 1
                                                   : 0,
                                         ),
-                                            l(i.map((e) => e.user));
+                                            l(i.map((e) => e.user)));
                                     }, [t, e]),
                                     n
                                 );
@@ -6376,11 +6384,7 @@ let aH = {
                     let { applicationId: t, skuId: n } = e,
                         l = (0, af.h)(t);
                     c.useEffect(() => {
-                        null == l ||
-                            null == n ||
-                            am.A.isFetchingForSKU(n) ||
-                            null != ad.A.get(n) ||
-                            (0, aE.Pp)(l.id, n);
+                        null == l || null == n || ad.A.isFetching(n) || null != ad.A.get(n) || (0, aE.Pp)(l.id, n);
                     }, [l, n]);
                 })({ applicationId: i, skuId: s }),
                 (0, r.jsx)(ei.M, {
@@ -6627,12 +6631,12 @@ let sl = { payment_gateway: tG.kM.VIRTUAL_CURRENCY, currency: eB.Yri.DISCORD_ORB
                                         (f(eB.HAw.PAYMENT_FLOW_FAILED, l), (h.current = null));
                                 }, [l, f]);
                                 let E = (0, c.useCallback)(() => {
-                                        (h.current = C),
+                                        ((h.current = C),
                                             f(eB.HAw.PAYMENT_FLOW_COMPLETED),
                                             i((e) => {
-                                                m(ed.h.COMPLETED),
-                                                    t(o.pn.CONFIRM, { fulfillment: { entitlements: e } });
-                                            });
+                                                (m(ed.h.COMPLETED),
+                                                    t(o.pn.CONFIRM, { fulfillment: { entitlements: e } }));
+                                            }));
                                     }, [i, m, C, f, t]),
                                     y = h.current ?? C,
                                     I = null != n ? n.orbPriceAmount : null;
@@ -6737,7 +6741,7 @@ let sl = { payment_gateway: tG.kM.VIRTUAL_CURRENCY, currency: eB.Yri.DISCORD_ORB
                             E = (0, c.useCallback)(
                                 (e) => {
                                     C(t, n, (n) => {
-                                        l?.({ entitlements: n, skuId: t }), e(n);
+                                        (l?.({ entitlements: n, skuId: t }), e(n));
                                     });
                                 },
                                 [t, n, C, l],
