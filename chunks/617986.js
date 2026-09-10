@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     QA: () => er,
     Df: () => ee,
     FS: () => ei,
@@ -23,7 +23,7 @@ n.d(t, {
 }),
     n(323874),
     n(14289),
-    n(35956);
+    n(35956));
 var i = n(477900);
 n(582128);
 var o = n(132500),
@@ -371,8 +371,8 @@ function X(e) {
             n.e("285350"),
             n.e("297735"),
             n.e("806295"),
-            n.e("271217"),
             n.e("993616"),
+            n.e("271217"),
             n.e("212466"),
             n.e("307865"),
             n.e("536037"),
@@ -411,8 +411,8 @@ function Z(e) {
             n.e("297735"),
             n.e("672877"),
             n.e("806295"),
-            n.e("689393"),
             n.e("993616"),
+            n.e("689393"),
             n.e("506286"),
             n.e("212466"),
             n.e("394704"),
@@ -440,8 +440,8 @@ function J(e, t, o) {
             n.e("932606"),
             n.e("285350"),
             n.e("297735"),
-            n.e("271217"),
             n.e("993616"),
+            n.e("271217"),
             n.e("212466"),
             n.e("307865"),
             n.e("826747"),
@@ -470,8 +470,8 @@ function ee(e, t, o) {
             n.e("752511"),
             n.e("254103"),
             n.e("942724"),
-            n.e("271217"),
             n.e("993616"),
+            n.e("271217"),
             n.e("212466"),
             n.e("177298"),
             n.e("307865"),
@@ -511,8 +511,8 @@ function et(e, t, o, a) {
             n.e("285350"),
             n.e("627323"),
             n.e("297735"),
-            n.e("271217"),
             n.e("993616"),
+            n.e("271217"),
             n.e("212466"),
             n.e("307865"),
             n.e("190948"),
@@ -534,7 +534,7 @@ function ei() {
 }
 function eo(e, t, o) {
     let { ctaContent: s } = t;
-    (0, P.E5)(P.kI.STEP_2_CLICKED_INTERNAL, "open_disclosure_modal")
+    ((0, P.E5)(P.kI.STEP_2_CLICKED_INTERNAL, "open_disclosure_modal")
         ? (0, y.r)({
               type: g.F.CLICK_INTERNAL,
               adCreativeType: a.p.QUEST,
@@ -586,7 +586,7 @@ function eo(e, t, o) {
                     });
                 },
             },
-        );
+        ));
 }
 function ea(e) {
     let t,
@@ -611,7 +611,7 @@ function ea(e) {
             subtitle: U.intl.string(U.t.FIYcpC),
             choices: k()(t.slice(0, 4)).concat(t[4]),
         });
-    n.log(`Showing survey ${i.id}`), (0, $.m)({ questId: e.id, survey: i });
+    (n.log(`Showing survey ${i.id}`), (0, $.m)({ questId: e.id, survey: i }));
 }
 function es() {
     return Promise.all([
@@ -722,7 +722,7 @@ function er(e) {
             return "discord://";
         })(e),
         n = (0, s.X7)(t);
-    null != n &&
+    (null != n &&
         T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
@@ -730,7 +730,7 @@ function er(e) {
         }),
         w.A.launch(t, (t) => {
             t || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME, hash: e });
-        });
+        }));
 }
 function eu(e) {
     let t = (function (e) {
@@ -744,7 +744,7 @@ function eu(e) {
             return "discord://";
         })(e),
         n = (0, s.X7)(t);
-    null != n &&
+    (null != n &&
         T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
@@ -752,7 +752,7 @@ function eu(e) {
         }),
         w.A.launch(t, (t) => {
             t || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME, hash: e });
-        });
+        }));
 }
 function ec(e) {
     let t = (function (e) {
@@ -766,7 +766,7 @@ function ec(e) {
             return (0, s.Ay)(a, { utmSource: "quest-home-preview", fingerprint: i, attemptId: o });
         })(e),
         n = (0, s.X7)(t);
-    null != n &&
+    (null != n &&
         T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
@@ -774,7 +774,7 @@ function ec(e) {
         }),
         w.A.launch(t, (e) => {
             e || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME });
-        });
+        }));
 }
 function ed(e, t) {
     (0, r.openModalLazy)(async () => {

@@ -1,6 +1,5 @@
 e.exports = {
     kL: "container_e99fef",
-    Ps: "progressHeader_e99fef",
     G9: "progressBarContainer_e99fef",
     kT: "monthlyCodeCountdownLabel_e99fef",
     kR: "cards_e99fef",

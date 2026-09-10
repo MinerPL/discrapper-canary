@@ -1,11 +1,11 @@
 n.d(t, {
-    Bt: () => u,
+    Bt: () => c,
     CD: () => l,
-    Cs: () => d,
     KS: () => o,
-    NC: () => _,
-    XY: () => c,
-    km: () => E,
+    NC: () => u,
+    XY: () => d,
+    km: () => _,
+    mY: () => E,
     pt: () => s,
     qn: () => a,
 });
@@ -22,14 +22,10 @@ var i,
         (r[(r.GIFT_PROMOTION = 6)] = "GIFT_PROMOTION"),
         (r[(r.THIRD_PARTY_OUTBOUND_RECURRING = 7)] = "THIRD_PARTY_OUTBOUND_RECURRING"),
         r);
-let l = {
-        steelseries: { id: "steelseries", label: "SteelSeries" },
-        kontrolfreek: { id: "kontrolfreek", label: "KontrolFreek" },
-        logitech: { id: "logitech", label: "Logitech" },
-    },
+let l = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { id: "logitech", label: "Logitech" } },
     o = "steelseries",
-    d = "kontrolfreek",
-    c = "logitech",
-    u = "call_of_duty",
-    _ = "youtube",
-    E = new Set([c, u, _]);
+    d = "logitech",
+    c = "call_of_duty",
+    u = "youtube",
+    _ = new Set([d, c, u]),
+    E = [d, o];

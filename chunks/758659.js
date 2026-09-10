@@ -1,4 +1,4 @@
-l.r(t),
+(l.r(t),
     l.d(t, {
         nitroCollection: () => ap,
         virtualCurrencyCollection: () => ac,
@@ -6,7 +6,7 @@ l.r(t),
         identityCollection: () => am,
         RevenuePlaygroundCollectionId: () => as,
         paymentsCollection: () => ad,
-    });
+    }));
 var a,
     n = l(700623),
     i = l(318254),
@@ -230,10 +230,10 @@ let $ = {
                         (0, s.jsx)(H.Gy, { ...a, balance: n, className: l ? U.jG : void 0 }),
                         (0, s.jsx)(G.$, {
                             onClick: () => {
-                                i(null),
+                                (i(null),
                                     setTimeout(() => {
                                         i(a.balance);
-                                    }, t);
+                                    }, t));
                             },
                             text: "Simulate Loading State",
                         }),
@@ -1114,7 +1114,7 @@ let e9 = {
             d = u.useCallback((e, t) => {
                 o((l) => {
                     let a = new Set(l);
-                    return t ? a.add(e) : a.delete(e), a;
+                    return (t ? a.add(e) : a.delete(e), a);
                 });
             }, []),
             c = u.useMemo(() => Array.from(r), [r]),
@@ -1805,7 +1805,7 @@ var tj = l(691540),
     tA = l(857250),
     tI = l(97483),
     tP = l(750338),
-    t_ = l(387640),
+    t_ = l(19290),
     tk = l(576765),
     tR = l(88433);
 let tM = { none: void 0, nitroWheel: r.t },
@@ -2019,7 +2019,7 @@ function tU() {
                 variant: "primary",
                 size: "sm",
                 onClick: () => {
-                    (0, tD.jH)(), (0, tL.pX)(N.BVt.ME), setTimeout(() => (0, tL.pX)(l), 200);
+                    ((0, tD.jH)(), (0, tL.pX)(N.BVt.ME), setTimeout(() => (0, tL.pX)(l), 200));
                 },
             }),
             (0, s.jsxs)(f.E, {
@@ -2161,10 +2161,10 @@ let t0 = {
                             size: "sm",
                             text: "Test Deeplink",
                             onClick: function () {
-                                console.log("Opening deep link... ", t),
+                                (console.log("Opening deep link... ", t),
                                     tQ.A.launch(t, (e) => {
                                         console.log("onDone response: ", e);
-                                    });
+                                    }));
                             },
                         }),
                     }),
@@ -2230,12 +2230,12 @@ function lt() {
         b = (0, ee.bG)([t3.A], () => t3.A.paymentSources),
         h = (0, ee.bG)([t3.A], () => t3.A.hasFetchedPaymentSources),
         x = (0, ee.bG)([t3.A], () => t3.A.defaultPaymentSourceId);
-    u.useEffect(() => {
+    (u.useEffect(() => {
         h || (0, ep.$o)();
     }, [h]),
         u.useEffect(() => {
             null != x && null == p && m(x);
-        }, [x, p]);
+        }, [x, p]));
     let y = u.useRef(null);
     u.useEffect(() => {
         if (null == r || "" === r) {
@@ -2247,7 +2247,7 @@ function lt() {
                 y.current = p;
                 return;
             }
-            le(r, p)
+            (le(r, p)
                 .then(() => {
                     i(`Order updated successfully!
 Order ID: ${r}
@@ -2257,7 +2257,7 @@ Payment source changed.`);
                     let t = e instanceof Error ? e.message : String(e);
                     i(`Failed to update order: ${t}`);
                 }),
-                (y.current = p);
+                (y.current = p));
         }
     }, [r, p]);
     let g = u.useMemo(
@@ -2278,7 +2278,7 @@ Payment source changed.`);
     async function v() {
         if (null == p || "" === p) return void i("Please select a payment source first.");
         if (null == d || "" === d || d === N.dJq) return void i("Please select a SKU ID.");
-        t(!0), i(null), o(null);
+        (t(!0), i(null), o(null));
         try {
             let e = await (0, E.Aj)(d, p, "US", !1, {
                 gift_style: null,
@@ -2289,7 +2289,7 @@ Payment source changed.`);
                 sound_id: void 0,
                 reward_sku_ids: void 0,
             });
-            o(e), i(`Order created successfully! Order ID: ${e}`);
+            (o(e), i(`Order created successfully! Order ID: ${e}`));
         } catch (t) {
             let e = t instanceof Error ? t.message : String(t);
             i(`Failed to create order: ${e}`);
@@ -2303,12 +2303,12 @@ Payment source changed.`);
         try {
             let e = await t9(r);
             if (null == e.errors) {
-                i(`Order signed successfully! Order ID: ${r}`), o(null);
+                (i(`Order signed successfully! Order ID: ${r}`), o(null));
                 return;
             }
             let t = e.errors[0];
             if (1e3 === t)
-                i(`Order signing in progress!
+                (i(`Order signing in progress!
 Order ID: ${r}
 This order requires additional authentication (3DS).`),
                     (async () => {
@@ -2329,9 +2329,9 @@ This order requires additional authentication (3DS).`),
                             if (null != u) throw Error(`3DS authentication failed: ${u.message}`);
                             if (null == d) throw Error("No payment intent returned from 3DS authentication");
                             let c = e.id ?? r ?? "Unknown";
-                            o(null),
+                            (o(null),
                                 i(`3DS authentication completed successfully!
-Order ID: ${c}`);
+Order ID: ${c}`));
                         } catch (a) {
                             let t = a instanceof Error ? a.message : String(a),
                                 l = e.id ?? r ?? "Unknown";
@@ -2339,7 +2339,7 @@ Order ID: ${c}`);
 Order ID: ${l}
 Error: ${t}`);
                         }
-                    })();
+                    })());
             else
                 1001 === t
                     ? (i(`Order signing in progress!
@@ -2374,35 +2374,35 @@ Error: ${a}`);
                               if (e >= 3e4) {
                                   try {
                                       var n;
-                                      (n = (await t5(t)).status),
+                                      ((n = (await t5(t)).status),
                                           l(`Order signing timed out.
 Order ID: ${t}
 Status: ${n ?? "unknown"}
 Please check the order status manually.`),
-                                          d();
+                                          d());
                                   } catch (a) {
                                       let e = a instanceof Error ? a.message : String(a);
-                                      l(`Order signing timed out.
+                                      (l(`Order signing timed out.
 Order ID: ${t}
 Error: ${e}`),
-                                          d();
+                                          d());
                                   }
                                   return;
                               }
                               try {
                                   let e = (await t5(t)).status;
                                   if (2 === e) {
-                                      l(`Order signed successfully!
+                                      (l(`Order signed successfully!
 Order ID: ${t}
 Payment redirect completed.`),
                                           a(null),
-                                          d();
+                                          d());
                                       return;
                                   }
                                   if (1 === e) {
-                                      l(`Order signed unsuccessfully
+                                      (l(`Order signed unsuccessfully
 Order ID: ${t}`),
-                                          d();
+                                          d());
                                       return;
                                   }
                                   u();
@@ -2550,7 +2550,7 @@ function lr() {
         handleSuccess: u.useCallback((e, l) => {
             l.searchParams.append("handoff_token", e.body.handoff_token);
             let a = l.href;
-            t(null), window.open(a, "_blank");
+            (t(null), window.open(a, "_blank"));
         }, []),
         handleFailure: u.useCallback((e, l) => {
             t(`Failed to generate handoff for ${l}`);
@@ -2763,7 +2763,7 @@ function ly() {
                         try {
                             let t = JSON.parse(e),
                                 l = JSON.parse(n);
-                            m(null),
+                            (m(null),
                                 m(
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
@@ -2787,10 +2787,10 @@ function ly() {
                                 ),
                                 a(t),
                                 o(l),
-                                c(null);
+                                c(null));
                         } catch (e) {
-                            console.error("ConfigurableStripeExpressCheckoutElement - error parsing JSON: ", e),
-                                c("Error parsing JSON. Check console for more information.");
+                            (console.error("ConfigurableStripeExpressCheckoutElement - error parsing JSON: ", e),
+                                c("Error parsing JSON. Check console for more information."));
                         }
                     },
                 }),
@@ -4505,7 +4505,9 @@ let au = ["Revenue Storybook", "Revenue Playground"],
                                         () =>
                                             l.reduce((e, t) => {
                                                 let l = e_.A.getGuild(t);
-                                                return null != l && e.push({ id: l.id, label: l.name, value: l.id }), e;
+                                                return (
+                                                    null != l && e.push({ id: l.id, label: l.name, value: l.id }), e
+                                                );
                                             }, []),
                                         [l],
                                     )),

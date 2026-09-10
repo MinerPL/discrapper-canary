@@ -3187,22 +3187,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-05-kontrolfreek-deprecated-ff",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-mana-type-consolidation",
     "kind": "user",
     "defaultConfig": {
@@ -3347,22 +3331,6 @@
   {
     "name": "2026-05-spatial-audio-for-voice",
     "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "kind": "user",
-    "name": "2026-05-steelseries-higher-discount-ff",
     "defaultConfig": {
       "enabled": false
     },
