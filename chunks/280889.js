@@ -33,7 +33,7 @@ var I = n(550642),
     O = n(565150),
     R = n(787458),
     L = n(972711),
-    y = n(201115),
+    y = n(452661),
     D = n(652215);
 let v = new c.A("CloudUpload.tsx"),
     b = new Set([429]);
@@ -166,9 +166,9 @@ class w extends O.Ay {
                 ((this.mimeType = e.compressionMetadata.originalContentType),
                 (this.preCompressionSize = e.compressionMetadata.preCompressionSize)),
             e.platform === O.xz.WEB && null != e.originalMd5 && (this._originalMd5 = e.originalMd5),
-            e.platform === O.xz.WEB && null != e.heicConversionAnalytics)
+            e.platform === O.xz.WEB && null != e.imageConversionAnalytics)
         ) {
-            const { convertedMimeType: t, conversionFailureReason: n, compressTimeMs: i } = e.heicConversionAnalytics;
+            const { convertedMimeType: t, conversionFailureReason: n, compressTimeMs: i } = e.imageConversionAnalytics;
             null != t && (this.uploadAnalytics.convertedMimeType = t),
                 null != n && (this.uploadAnalytics.conversionFailureReason = n),
                 (this.uploadAnalytics.timing.compressTimeMs = i);
@@ -346,7 +346,7 @@ class w extends O.Ay {
         if (
             this.allowOptimization &&
             this.item.platform === O.xz.WEB &&
-            !0 !== this.item.heicConversionEvaluated &&
+            !0 !== this.item.imageConversionEvaluated &&
             null != this.item.file &&
             (0, y.E5)(this.item.file)
         ) {
@@ -381,7 +381,7 @@ class w extends O.Ay {
             this.allowOptimization &&
             this.item.platform === O.xz.WEB &&
             !e &&
-            !0 !== this.item.heicConversionEvaluated
+            !0 !== this.item.imageConversionEvaluated
         ) {
             let e = await w.tryConvertToWebP(this.item.file, () => this._aborted, this.id);
             null != e &&
@@ -565,9 +565,9 @@ class w extends O.Ay {
     static async tryConvertHeicToJpeg(e, t, i, r, a) {
         if (null == e || t()) return null;
         try {
-            let { maybeConvertHeicToJpeg: s, HeicConversionFailureReason: l } = await n
-                    .e("422405")
-                    .then(n.bind(n, 158948)),
+            let { maybeConvertHeicToJpeg: s, ImageConversionFailureReason: l } = await n
+                    .e("86851")
+                    .then(n.bind(n, 85582)),
                 o = await s(e, r, a);
             if (t() || null == o) return null;
             if (o.success && null != o.convertedBlob)

@@ -5871,6 +5871,25 @@
     }
   },
   {
+    "name": "2026-09-jxr-upload-conversion",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "quality": 85
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "quality": 85,
+        "maxFileSizeBytes": 52428800
+      }
+    }
+  },
+  {
     "name": "2026-09-nitro-file-upload-rollout",
     "kind": "user",
     "defaultConfig": {

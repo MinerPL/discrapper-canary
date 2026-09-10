@@ -5,7 +5,7 @@ var r = i(367513),
     o = i(494921),
     a = i(280889),
     s = i(565150),
-    d = i(658612),
+    d = i(111542),
     p = i(95561),
     m = i(198052),
     u = i(795129),
@@ -97,7 +97,7 @@ async function P(e, t, i) {
             compressionMetadata: T[t],
             ...p?.[t],
         })),
-        P = await Promise.all(U.map(d.z)),
+        P = await Promise.all(U.map(d.N)),
         b = P.map((e) => e.file);
     if ((0, _.fJ)(b, S)) return void C(t, b);
     if (E.A.getUploadCount(t.id, i) + P.length > I.XgB) {

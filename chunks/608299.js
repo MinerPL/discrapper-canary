@@ -1,6 +1,6 @@
 n.d(t, { A: () => a });
 var i = n(228366),
-    r = n(658612);
+    r = n(111542);
 let a = {
     popFirstFile(e) {
         i.h.dispatch({ type: "UPLOAD_ATTACHMENT_POP_FILE", channelId: e });
@@ -10,7 +10,7 @@ let a = {
         function s(e) {
             i.h.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: n, files: e, draftType: a });
         }
-        t.some(r.d) ? Promise.all(t.map(r.z)).then(s) : s(t);
+        t.some(r.t) ? Promise.all(t.map(r.N)).then(s) : s(t);
     },
     addFile(e) {
         let { file: t, channelId: n, draftType: a, allowOptimization: s } = e;
@@ -23,7 +23,7 @@ let a = {
                 allowOptimization: s,
             });
         }
-        (0, r.d)(t) ? (0, r.z)(t).then(l) : l(t);
+        (0, r.t)(t) ? (0, r.N)(t).then(l) : l(t);
     },
     remove(e, t, n) {
         i.h.dispatch({ type: "UPLOAD_ATTACHMENT_REMOVE_FILE", channelId: e, id: t, draftType: n });
