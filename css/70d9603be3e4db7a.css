@@ -1,3 +1,17 @@
+.demo_ae73d9 {
+    padding: var(--space-128)
+}
+
+.surface_ae73d9 {
+    background: var(--background-surface-higher);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    height: 180px;
+    position: relative;
+    width: var(--__demo-area)
+}
+
 .loader__8cd1f {
     color: currentcolor;
     display: flex;
@@ -109,6 +123,43 @@
 
 .stop-animation .track__8cd1f {
     animation-name: none
+}
+
+.matrix__7d0da {
+    gap: var(--space-24)
+}
+
+.matrix__7d0da,
+.section__7d0da {
+    display: flex;
+    flex-direction: column
+}
+
+.section__7d0da {
+    gap: var(--space-8)
+}
+
+.row__7d0da {
+    flex-wrap: wrap;
+    gap: var(--space-24)
+}
+
+.cell__7d0da,
+.row__7d0da {
+    align-items: center;
+    display: flex
+}
+
+.cell__7d0da {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.bounds__7d0da {
+    outline: 1px dashed var(--border-subtle)
 }
 
 .thinkingPanel__17f67 {
@@ -1182,4 +1233,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=5ae31e791a9fea28.css.map*/
+/*# sourceMappingURL=70d9603be3e4db7a.css.map*/

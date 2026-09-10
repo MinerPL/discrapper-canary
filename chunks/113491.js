@@ -14,8 +14,8 @@ var n = l(477900),
     x = l(783977),
     g = l(976713),
     p = l(313265);
-l(321073), l(134528), l(947204);
-var v = l(224341),
+(l(321073), l(134528), l(947204));
+var v = l(504290),
     j = l(947936);
 let b = 1e3 / 30,
     y = [
@@ -51,9 +51,9 @@ function w() {
                 p = performance.now();
             function j() {
                 if (null == l) return;
-                (l.textAlign = "center"),
+                ((l.textAlign = "center"),
                     (l.textBaseline = "middle"),
-                    (l.font = `${d}px 'AI Visual Identity Glyphs', monospace`);
+                    (l.font = `${d}px 'AI Visual Identity Glyphs', monospace`));
                 let e = 0;
                 for (let t of v.QI + v.vd) {
                     let n = l.measureText(t);
@@ -67,16 +67,16 @@ function w() {
                 let e = t.clientWidth,
                     n = t.clientHeight;
                 if (e === o && n === u) return;
-                (o = e), (c = (d = ((u = n) - 2 - 2) / 3) + 1);
+                ((o = e), (c = (d = ((u = n) - 2 - 2) / 3) + 1));
                 let r = a?.querySelectorAll("[data-stop]"),
                     m = r?.[r.length - 1];
-                null != m && (i = m.offsetLeft + m.offsetWidth / 2),
-                    (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2));
+                (null != m && (i = m.offsetLeft + m.offsetWidth / 2),
+                    (s = null == r ? [] : Array.from(r, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let f = window.devicePixelRatio,
                     h = Number.isFinite(f) && f > 0 ? f : 1;
-                (t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), j();
+                ((t.width = Math.round(o * h)), (t.height = Math.round(u * h)), l.setTransform(h, 0, 0, h, 0, 0), j());
             }
-            w(),
+            (w(),
                 (m = requestAnimationFrame(function e(a) {
                     if (((m = requestAnimationFrame(e)), a - f < b)) return;
                     let j = a - f;
@@ -92,10 +92,10 @@ function w() {
                         T = (I.left - E.left) / C,
                         M = (1 - Math.min(1, Math.abs(T + I.width / C / 2 - i) / 16)) * x;
                     if (M < 0.01) {
-                        h && l.clearRect(0, 0, o, u), (h = !1);
+                        (h && l.clearRect(0, 0, o, u), (h = !1));
                         return;
                     }
-                    h || (g = a), (h = !0), l.clearRect(0, 0, o, u);
+                    (h || (g = a), (h = !0), l.clearRect(0, 0, o, u));
                     let P = T - 1 - (1 - M) * 16,
                         _ = (a - p) / 1e3,
                         R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - g) / 1500))) ** 3),
@@ -122,7 +122,7 @@ function w() {
                             if (h >= 1) break;
                             let x = 1 - h ** r,
                                 g = Math.min(v.QI.length, Math.floor(x * (v.QI.length + 1)));
-                            (a =
+                            ((a =
                                 0.07 > N(t - i, e + 613)
                                     ? v.QI.charAt(0)
                                     : g < v.QI.length
@@ -136,18 +136,18 @@ function w() {
                                             return t * t * (3 - 2 * t);
                                         })((1 - h) / 0.34) *
                                         M),
-                                    l.fillText(a, u, o));
+                                    l.fillText(a, u, o)));
                         }
                     }
                     l.globalAlpha = 1;
-                }));
+                })));
             let A = document.fonts;
             null != A && A.load(`${d}px 'AI Visual Identity Glyphs'`, v.QI + v.vd).then(j, () => void 0);
             let S = "u" < typeof ResizeObserver ? null : new ResizeObserver(w);
             return (
                 S?.observe(t),
                 () => {
-                    cancelAnimationFrame(m), S?.disconnect();
+                    (cancelAnimationFrame(m), S?.disconnect());
                 }
             );
         }, []),
@@ -206,16 +206,16 @@ function S(e) {
         a.useLayoutEffect(() => {
             let e = j >= 0,
                 n = e && x.current;
-            (x.current = e),
+            ((x.current = e),
                 (g.current = j),
                 (p.current = { activeIndex: t, disabled: s, onSelect: o, stopCount: l.length }),
-                v.current || k(j, n ? "animate" : "arrive");
+                v.current || k(j, n ? "animate" : "arrive"));
         }, [j, t, s, o, l.length, p, k]),
         a.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
             let t = new ResizeObserver(() => k(g.current, "snap"));
-            return t.observe(e), () => t.disconnect();
+            return (t.observe(e), () => t.disconnect());
         }, [k]),
         a.useEffect(() => {
             let e = d.current,
@@ -259,7 +259,7 @@ function S(e) {
                     );
                     return;
                 }
-                null != l.snapped && (l.releasedAt = l.at), (l.snapped = null);
+                (null != l.snapped && (l.releasedAt = l.at), (l.snapped = null));
                 let s = l.at - l.releasedAt < 300;
                 y(t, e.handleWidth, e.rowWidth, s ? "animate" : "drag");
             }
@@ -291,14 +291,14 @@ function S(e) {
             function s(e) {
                 if (null != l) {
                     if (0 === e.buttons) return void o(e.clientX);
-                    (l.x = e.clientX), (l.at = e.timeStamp), 0 === l.frame && (l.frame = requestAnimationFrame(r));
+                    ((l.x = e.clientX), (l.at = e.timeStamp), 0 === l.frame && (l.frame = requestAnimationFrame(r)));
                 }
             }
             function o(e) {
                 let r = l;
                 if (((l = null), (v.current = !1), null == r)) return;
-                0 !== r.frame && cancelAnimationFrame(r.frame),
-                    null != t && t.hasPointerCapture(r.pointerId) && t.releasePointerCapture(r.pointerId);
+                (0 !== r.frame && cancelAnimationFrame(r.frame),
+                    null != t && t.hasPointerCapture(r.pointerId) && t.releasePointerCapture(r.pointerId));
                 let i = a(r.metrics, n(r.metrics, e ?? r.x));
                 null != i &&
                     (y(i.left, r.metrics.handleWidth, r.metrics.rowWidth, "animate"),
@@ -319,14 +319,14 @@ function S(e) {
                 window.addEventListener("pointerup", u),
                 window.addEventListener("blur", m),
                 () => {
-                    null != l && 0 !== l.frame && cancelAnimationFrame(l.frame),
+                    (null != l && 0 !== l.frame && cancelAnimationFrame(l.frame),
                         t.removeEventListener("pointerdown", i),
                         t.removeEventListener("pointermove", s),
                         t.removeEventListener("pointerup", u),
                         t.removeEventListener("pointercancel", u),
                         t.removeEventListener("lostpointercapture", m),
                         window.removeEventListener("pointerup", u),
-                        window.removeEventListener("blur", m);
+                        window.removeEventListener("blur", m));
                 }
             );
         }, [p, v, y]),
@@ -399,7 +399,7 @@ function M(e) {
                     l = requestAnimationFrame(() => r(!0));
                 });
             return () => {
-                cancelAnimationFrame(n), cancelAnimationFrame(l);
+                (cancelAnimationFrame(n), cancelAnimationFrame(l));
             };
         }, [t, e]),
         { mounted: t, entered: n }
@@ -552,7 +552,7 @@ function _(e) {
     let v = d ?? t,
         j = a.useCallback(
             (e) => {
-                c(e), i(e);
+                (c(e), i(e));
             },
             [i],
         ),
