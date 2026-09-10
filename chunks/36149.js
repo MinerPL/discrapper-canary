@@ -1,29 +1,27 @@
 n.d(t, {
     $8: () => F,
-    AN: () => j,
     Dn: () => B,
-    H: () => W,
-    I7: () => es,
+    I7: () => ei,
     NI: () => x,
-    Ny: () => et,
-    Q9: () => X,
-    ST: () => er,
-    Sr: () => ei,
-    Wv: () => $,
-    Y2: () => Y,
-    YU: () => z,
-    b8: () => Q,
-    cc: () => q,
-    dZ: () => en,
+    Ny: () => Q,
+    Q9: () => z,
+    ST: () => et,
+    Sr: () => ee,
+    Wv: () => W,
+    Y2: () => H,
+    YU: () => Y,
+    b8: () => q,
+    cc: () => K,
+    dZ: () => J,
     i2: () => w,
     lU: () => P,
-    lW: () => Z,
-    mK: () => ea,
-    nn: () => ee,
+    lW: () => $,
+    mK: () => en,
+    nn: () => X,
     p9: () => U,
-    tC: () => el,
+    tC: () => er,
     uE: () => V,
-    uN: () => K,
+    uN: () => j,
     yM: () => k,
 });
 var i,
@@ -94,21 +92,17 @@ function B() {
     let e = (0, l.bG)([p.default], () => p.default.getCurrentUser());
     return e?.ageVerificationStatus === d.Tk.VERIFIED_ADULT;
 }
-function H(e) {
-    return e === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN;
-}
-function j() {
-    return H(p.default.getCurrentUser()?.ageVerificationStatus);
-}
-function W() {
-    return (0, l.bG)([p.default], () => H(p.default.getCurrentUser()?.ageVerificationStatus));
-}
-function Y() {
-    let e = W();
+function H() {
+    let e = (0, l.bG)([p.default], () => {
+        var e;
+        return (
+            (e = p.default.getCurrentUser()?.ageVerificationStatus) === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN
+        );
+    });
     return (0, A.aX)(s.t.REACTIVE_CHECK) && e;
 }
-var K = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
-    $ =
+var j = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
+    W =
         (((r = {}).VERIFIED_ADULT = "verified_adult"),
         (r.VERIFIED_TEEN = "verified_teen"),
         (r.ERROR = "error"),
@@ -116,7 +110,7 @@ var K = (((i = {}).CTAS = "ctas"), (i.CONTENT_TYPE = "content_type"), i),
         (r.ID_FAILED = "id_failed"),
         (r.UNDERAGE = "underage"),
         r);
-function z(e, t) {
+function Y(e, t) {
     let n = f.A.getMessage(e, t);
     if (
         null == n ||
@@ -129,7 +123,7 @@ function z(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return i?.rawValue.split(",").includes("retry");
 }
-function q(e, t) {
+function K(e, t) {
     let n = f.A.getMessage(e, t);
     if (
         null == n ||
@@ -145,7 +139,7 @@ function q(e, t) {
         (0, N._)("isAgeVerificationMessageWithManualReviewCta")
     );
 }
-function Z(e, t) {
+function $(e, t) {
     if (null == _.A.getPendingConnection()) return !1;
     let n = f.A.getMessage(e, t);
     if (
@@ -162,15 +156,15 @@ function Z(e, t) {
         u.q.getConfig({ location: "isAgeVerificationMessageWithConnectToTeenCta" }).enabled
     );
 }
-function X() {
+function z() {
     let e = p.default.getCurrentUser();
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
-function Q() {
+function q() {
     let e = (0, l.bG)([p.default], () => p.default.getCurrentUser());
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
-function J(e) {
+function Z(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, onMethodUnavailable: r } = e,
         [s, d] = a.useState(!1),
         c = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
@@ -201,10 +195,10 @@ function J(e) {
                         });
                     !1 === s && (h.A.showFailedToast(y.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
-                    _(),
+                    (_(),
                         null != r && e?.body?.code === R.t02.AGE_VERIFICATION_METHOD_UNAVAILABLE
                             ? (h.A.showFailedToast(y.OB.AGE_VERIFICATION_METHOD_UNAVAILABLE), r())
-                            : h.A.showFailedToast(y.OB.TIGGER_PAWTECT_ERROR);
+                            : h.A.showFailedToast(y.OB.TIGGER_PAWTECT_ERROR));
                 } finally {
                     d(!1);
                 }
@@ -213,9 +207,9 @@ function J(e) {
         ),
     };
 }
-function ee(e) {
+function X(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, classificationId: r = null } = e,
-        { loading: s, startVerification: l } = J({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
+        { loading: s, startVerification: l } = Z({ onComplete: t, entryPoint: n, shouldShowExpressiveModal: i });
     return {
         loading: s,
         initiateAgeVerification: a.useCallback(
@@ -224,9 +218,9 @@ function ee(e) {
         ),
     };
 }
-function et(e) {
+function Q(e) {
     let { onComplete: t, entryPoint: n, onMethodUnavailable: i } = e,
-        { loading: r, startVerification: s } = J({
+        { loading: r, startVerification: s } = Z({
             onComplete: t,
             entryPoint: n,
             shouldShowExpressiveModal: !0,
@@ -237,7 +231,7 @@ function et(e) {
         initiateAgeVerificationV2: a.useCallback((e) => s(() => (0, S.en)(e.method, e.vendor), e), [s]),
     };
 }
-function en(e) {
+function J(e) {
     let t = (0, l.bG)([p.default], () => p.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, c.Ay)(t),
         i = (0, l.bG)([I.default], () => null != I.default.getSuspendedUserToken()),
@@ -248,14 +242,14 @@ function en(e) {
         (s || o) && e();
     }, [e, s, o]);
 }
-function ei(e) {
+function ee(e) {
     return null != e && O.zn.has(e);
 }
-function er(e) {
+function et(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return b.has(e) ? v.intl.string(v.t.lSWVTM) : t ? v.intl.string(D.default["/kgWIg"]) : v.intl.string(v.t.xYXsr6);
 }
-function ea(e, t) {
+function en(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -271,17 +265,17 @@ function ea(e, t) {
                 ? v.intl.format(D.default.RpMIT0, { handleOnHelpUrlHook: t })
                 : v.intl.string(v.t.HxS3oQ);
 }
-function es(e) {
+function ei(e) {
     let t,
         n,
         i =
-            ((t = Q()),
+            ((t = q()),
             (n = (0, A.aX)(s.t.REACTIVE_CHECK)),
             (0, l.bG)([g.A], () => !t && n && g.A.shouldCallReactiveCheck(), [t, n]));
     a.useEffect(() => {
         i && L.Qx.has(e) && (0, C.z)();
     }, [i, e]);
 }
-async function el() {
-    return !X() && E.A.isFeatureAgeGated(s.t.REACTIVE_CHECK) && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
+async function er() {
+    return !z() && E.A.isFeatureAgeGated(s.t.REACTIVE_CHECK) && g.A.shouldCallReactiveCheck() ? await (0, C.z)() : null;
 }

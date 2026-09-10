@@ -7,7 +7,7 @@ var r = l(477900),
     o = l(793574),
     a = l(581298),
     s = l(766075),
-    u = l(680045),
+    u = l(435595),
     v = l(17928),
     b = l(406810),
     p = l(848847),
@@ -31,9 +31,9 @@ let T = (0, c.A)(
                 async function o(i) {
                     if (null == i || i.id !== e?.id)
                         try {
-                            c(!0),
+                            (c(!0),
                                 (null != i ? await (0, h.oA)(i.payload) : await (0, h.iD)()).ok &&
-                                    window.location.reload(!0);
+                                    window.location.reload(!0));
                         } finally {
                             c(!1);
                         }
