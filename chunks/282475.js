@@ -1,4 +1,4 @@
-n.d(t, { A: () => tR, m: () => tT }), n(323874), n(14289), n(35956), n(321073), n(142703);
+(n.d(t, { A: () => tR, m: () => tT }), n(323874), n(14289), n(35956), n(321073), n(142703));
 var i,
     r,
     a,
@@ -52,11 +52,11 @@ class U {
         this.shouldUseAltGateway() && ((this.failures += 1), this.failures >= 3 && (this.fallbackTripped = !0));
     }
     reset() {
-        (this.failures = 0), (this.fallbackTripped = !1);
+        ((this.failures = 0), (this.fallbackTripped = !1));
     }
 }
 var w = n(175306);
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var G = n(536194),
     x = n(19575);
 let k = null;
@@ -72,15 +72,15 @@ function F() {
                     return !0;
                 } catch (e) {
                     if (e.message.includes("Cannot find"))
-                        return x.Ay.ensureModule("discord_zstd").catch((e) => {}), !1;
+                        return (x.Ay.ensureModule("discord_zstd").catch((e) => {}), !1);
                     throw e;
                 }
             })()),
         k
     );
 }
-let { NativeModules: V } = {},
-    B = {},
+let { NativeModules: B } = {},
+    V = {},
     H = [];
 class j {
     _onDataReady;
@@ -89,7 +89,7 @@ class j {
         return !1;
     }
     constructor(e) {
-        (this._onDataReady = null), (this._gatewayEncoding = e);
+        ((this._onDataReady = null), (this._gatewayEncoding = e));
     }
     bindWebSocket(e) {}
     feed(e) {}
@@ -97,7 +97,7 @@ class j {
         this._onDataReady = e;
     }
 }
-H.push(
+(H.push(
     class extends j {
         _decoder = null;
         _stream;
@@ -111,7 +111,7 @@ H.push(
             return !1;
         }
         constructor(e) {
-            super(e),
+            (super(e),
                 this._gatewayEncoding.wantsString()
                     ? (this._decoder = new TextDecoder("utf-8"))
                     : (this._decoder = null),
@@ -119,15 +119,15 @@ H.push(
                     if (!F()) return;
                     let { createContext: e } = x.Ay.requireModule("discord_zstd");
                     return e();
-                })());
+                })()));
         }
         feed(e) {
             let t;
             if (null == this._stream) throw Error("Trying to decompress with zstd but did not initialize with it");
             if (!(e instanceof ArrayBuffer)) throw Error("Expected array buffer, but got " + typeof e);
-            (t = this._stream.decompress(e)),
+            ((t = this._stream.decompress(e)),
                 null != this._decoder && (t = this._decoder.decode(t)),
-                null != this._onDataReady && this._onDataReady(t);
+                null != this._onDataReady && this._onDataReady(t));
         }
         close() {}
     },
@@ -149,12 +149,12 @@ H.push(
                 return !1;
             }
             constructor(e) {
-                super(e),
+                (super(e),
                     (this._inflate = new this._pako.Inflate({
                         chunkSize: 65536,
                         to: this._gatewayEncoding.wantsString() ? "string" : "",
                     })),
-                    (this._inflate.onEnd = this.handleFlushEnd.bind(this));
+                    (this._inflate.onEnd = this.handleFlushEnd.bind(this)));
             }
             feed(e) {
                 if (null == this._inflate) throw Error("Trying to feed to closed compression adapter");
@@ -165,8 +165,8 @@ H.push(
                 this._inflate.push(e, !!n && this._pako.Z_SYNC_FLUSH);
             }
             close() {
-                null != this._inflate && ((this._inflate.onEnd = null), (this._inflate.chunks = [])),
-                    (this._inflate = null);
+                (null != this._inflate && ((this._inflate.onEnd = null), (this._inflate.chunks = [])),
+                    (this._inflate = null));
             }
             handleFlushEnd(e) {
                 let t,
@@ -187,11 +187,11 @@ H.push(
                         i = 0;
                     for (let e = 0; e < a; e++) {
                         let t = r[e];
-                        n.set(t, i), (i += t.length);
+                        (n.set(t, i), (i += t.length));
                     }
                     t = n;
                 } else t = r[0];
-                (r.length = 0), null != this._onDataReady && this._onDataReady(t);
+                ((r.length = 0), null != this._onDataReady && this._onDataReady(t));
             }
         },
     ),
@@ -228,18 +228,18 @@ H.push(
                 return !1;
             }
             constructor(e) {
-                super(e), (this._socketId = null);
+                (super(e), (this._socketId = null));
             }
             bindWebSocket(e) {
-                this.close(),
+                (this.close(),
                     (this._socketId = e._socketId),
                     F()
                         ? (0, y.isAndroid)()
-                            ? B?.enableZstdStreamSupport(this._socketId)
-                            : V.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
+                            ? V?.enableZstdStreamSupport(this._socketId)
+                            : B.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
                         : (0, y.isAndroid)()
-                          ? B?.enableZlibStreamSupport(this._socketId)
-                          : V.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                          ? V?.enableZlibStreamSupport(this._socketId)
+                          : B.DCDCompressionManager.enableZlibStreamSupport(this._socketId));
             }
             getAlgorithm() {
                 return F() ? "zstd-stream" : "zlib-stream";
@@ -253,14 +253,14 @@ H.push(
             }
             close() {
                 let e = this._socketId;
-                (this._socketId = null),
+                ((this._socketId = null),
                     null !== e &&
                         ((0, y.isAndroid)()
-                            ? B?.disableZlibStreamSupport(e)
-                            : V.DCDCompressionManager.disableZlibStreamSupport(e));
+                            ? V?.disableZlibStreamSupport(e)
+                            : B.DCDCompressionManager.disableZlibStreamSupport(e)));
             }
         },
-    );
+    ));
 class W extends j {
     static canUse() {
         return !0;
@@ -286,9 +286,9 @@ H.push(W);
 let K = BigInt(0),
     $ = BigInt(8),
     z = BigInt(16),
-    q = BigInt(32),
-    Z = BigInt(64),
-    X = BigInt(128),
+    X = BigInt(32),
+    q = BigInt(64),
+    Z = BigInt(128),
     Q = BigInt(256),
     J = BigInt(65536),
     ee = BigInt(0x1000000),
@@ -377,17 +377,17 @@ let eI = new (class {
             );
         }
         packToArrayBuffer(e) {
-            (this._i = 0), (this._o = 0), (this._r = 0);
+            ((this._i = 0), (this._o = 0), (this._r = 0));
             try {
-                return this._expand(10), (this._u[this._i++] = 131), this._loop(e), this._u.buffer.slice(0, this._i);
+                return (this._expand(10), (this._u[this._i++] = 131), this._loop(e), this._u.buffer.slice(0, this._i));
             } finally {
-                (this._i = 0),
+                ((this._i = 0),
                     (this._o = 0),
                     (this._r = 0),
                     this._poolSize !== this._initialPoolSize &&
                         ((this._poolSize = this._initialPoolSize),
                         (this._u = new Uint8Array(this._poolSize)),
-                        (this._v = new DataView(this._u.buffer)));
+                        (this._v = new DataView(this._u.buffer))));
             }
         }
         _loop(e) {
@@ -395,39 +395,39 @@ let eI = new (class {
             switch (t) {
                 case "undefined":
                     if (3 === this._undefinedEncoding) break;
-                    this._expand(11),
+                    (this._expand(11),
                         (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
                         (this._u[this._i + 1] = 9),
                         (this._u[this._i + 2] = 117),
                         this._v.setUint32(this._i + 3, 0x6e646566),
                         this._v.setUint32(this._i + 7, 0x696e6564),
-                        (this._i += 11);
+                        (this._i += 11));
                     break;
                 case "boolean":
-                    this._expand(7),
+                    (this._expand(7),
                         (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
                         !0 === e
                             ? ((this._u[this._i + 1] = 4), this._v.setUint32(this._i + 2, 0x74727565), (this._i += 6))
                             : ((this._u[this._i + 1] = 5),
                               (this._u[this._i + 2] = 102),
                               this._v.setUint32(this._i + 3, 0x616c7365),
-                              (this._i += 7));
+                              (this._i += 7)));
                     break;
                 case "string":
                 case "symbol": {
                     let n = "symbol" === t ? e.toString() : e;
                     if (2 === this._stringEncoding) {
-                        this._expand(3 * n.length + 5), (this._u[this._i++] = 109);
+                        (this._expand(3 * n.length + 5), (this._u[this._i++] = 109));
                         let e = this._i;
                         this._i += 4;
                         let t = this._utf(n);
                         this._v.setUint32(e, t);
                     } else {
-                        this._expand(3 * n.length + 3), (this._u[this._i++] = 107);
+                        (this._expand(3 * n.length + 3), (this._u[this._i++] = 107));
                         let e = this._i;
                         this._i += 2;
                         let t = this._utf(n);
-                        (this._u[e] = t >> 8), (this._u[e + 1] = 255 & t);
+                        ((this._u[e] = t >> 8), (this._u[e + 1] = 255 & t));
                     }
                     break;
                 }
@@ -436,15 +436,15 @@ let eI = new (class {
                         if ((this._expand(11), Number.isInteger(e))) {
                             let t = Math.abs(e),
                                 n = e < 0;
-                            if (e < 256 && !n) (this._u[this._i++] = 97), (this._u[this._i++] = e);
+                            if (e < 256 && !n) ((this._u[this._i++] = 97), (this._u[this._i++] = e));
                             else if (t < 0x80000000)
-                                (this._u[this._i] = 98), this._v.setInt32(this._i + 1, e), (this._i += 5);
+                                ((this._u[this._i] = 98), this._v.setInt32(this._i + 1, e), (this._i += 5));
                             else if (t <= Number.MAX_SAFE_INTEGER && 1 === this._safeIntEncoding)
                                 if (((this._u[this._i] = 110), (this._u[this._i + 2] = +!!n), t < 0x100000000))
-                                    this._v.setUint32(this._i + 3, t, !0), (this._u[this._i + 1] = 4), (this._i += 7);
+                                    (this._v.setUint32(this._i + 3, t, !0), (this._u[this._i + 1] = 4), (this._i += 7));
                                 else {
                                     let e = Math.floor(t / 0x100000000);
-                                    this._v.setUint32(this._i + 3, t >>> 0, !0),
+                                    (this._v.setUint32(this._i + 3, t >>> 0, !0),
                                         e < 256
                                             ? ((this._u[this._i + 1] = 5), (this._u[this._i + 7] = e), (this._i += 8))
                                             : e < 65536
@@ -456,21 +456,21 @@ let eI = new (class {
                                                 (this._u[this._i + 7] = 255 & e),
                                                 (this._u[this._i + 8] = (e >> 8) & 255),
                                                 (this._u[this._i + 9] = e >> 16),
-                                                (this._i += 10));
+                                                (this._i += 10)));
                                 }
-                            else (this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8);
-                        } else (this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8);
+                            else ((this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8));
+                        } else ((this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8));
                     else if (Number.isNaN(e)) {
                         if (3 === this._nanEncoding) break;
-                        this._expand(4),
+                        (this._expand(4),
                             (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
                             (this._u[this._i + 1] = 110),
                             (this._u[this._i + 2] = 97),
                             (this._u[this._i + 3] = 110),
-                            (this._i += 4);
+                            (this._i += 4));
                     } else {
                         if (3 === this._infinityEncoding) break;
-                        this._expand(18),
+                        (this._expand(18),
                             (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
                             e < 0
                                 ? this._v.setUint32(this._i + 1, 0x6e656761)
@@ -479,16 +479,16 @@ let eI = new (class {
                             this._v.setUint32(this._i + 6, 0x6976655f),
                             this._v.setUint32(this._i + 10, 0x696e6669),
                             this._v.setUint32(this._i + 14, 0x6e697479),
-                            (this._i += 18);
+                            (this._i += 18));
                     }
                     break;
                 case "bigint": {
                     if (e === K) {
-                        this._expand(3),
+                        (this._expand(3),
                             2 === this._safeBigIntEncoding
                                 ? ((this._u[this._i++] = 110), (this._u[this._i++] = 0))
                                 : (this._u[this._i++] = 97),
-                            (this._u[this._i++] = 0);
+                            (this._u[this._i++] = 0));
                         break;
                     }
                     let t = e < K,
@@ -506,53 +506,53 @@ let eI = new (class {
                                   t && (this._u[this._i] = 128 | this._u[this._i]),
                                   (this._i += 4));
                         else {
-                            (this._u[this._i] = 110),
+                            ((this._u[this._i] = 110),
                                 (this._u[this._i + 2] = +!!t),
-                                this._v.setBigUint64(this._i + 3, n, !0);
+                                this._v.setBigUint64(this._i + 3, n, !0));
                             for (let e = 10; e > 3; e--)
                                 if (0 !== this._u[this._i + e]) {
-                                    (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                    ((this._u[this._i + 1] = e - 2), (this._i += e + 1));
                                     break;
                                 }
                         }
                     else if (n < ed) {
-                        this._expand(19),
+                        (this._expand(19),
                             (this._u[this._i] = 110),
                             (this._u[this._i + 2] = +!!t),
                             this._v.setBigUint64(this._i + 3, n & es, !0),
-                            this._v.setBigUint64(this._i + 11, n >> Z, !0);
+                            this._v.setBigUint64(this._i + 11, n >> q, !0));
                         for (let e = 18; e > 10; e--)
                             if (0 !== this._u[this._i + e]) {
-                                (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                ((this._u[this._i + 1] = e - 2), (this._i += e + 1));
                                 break;
                             }
                     } else if (n < eu) {
-                        this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t);
-                        let e = n >> X,
+                        (this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t));
+                        let e = n >> Z,
                             i = n & eo;
-                        this._v.setBigUint64(this._i + 3, i & es, !0),
-                            this._v.setBigUint64(this._i + 11, i >> Z, !0),
+                        (this._v.setBigUint64(this._i + 3, i & es, !0),
+                            this._v.setBigUint64(this._i + 11, i >> q, !0),
                             this._v.setBigUint64(this._i + 19, e & es, !0),
-                            this._v.setBigUint64(this._i + 27, e >> Z, !0);
+                            this._v.setBigUint64(this._i + 27, e >> q, !0));
                         for (let e = 34; e > 18; e--)
                             if (0 !== this._u[this._i + e]) {
-                                (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                ((this._u[this._i + 1] = e - 2), (this._i += e + 1));
                                 break;
                             }
                     } else {
                         let e = n,
                             i = [];
-                        for (; e > ec; ) {
+                        for (; e > ec;) {
                             let t = e & ec,
-                                n = t >> X,
+                                n = t >> Z,
                                 r = t & eo;
-                            i.push(r & es, r >> Z, n & es, n >> Z), (e >>= Q);
+                            (i.push(r & es, r >> q, n & es, n >> q), (e >>= Q));
                         }
                         if (e > eo) {
-                            let t = e >> X,
+                            let t = e >> Z,
                                 n = e & eo;
-                            i.push(n & es, n >> Z, t & es, t >> Z);
-                        } else e > es ? i.push(e & es, e >> Z) : e > K && i.push(e);
+                            i.push(n & es, n >> q, t & es, t >> q);
+                        } else e > es ? i.push(e & es, e >> q) : e > K && i.push(e);
                         let r = i[i.length - 1],
                             a =
                                 8 * i.length -
@@ -569,7 +569,7 @@ let eI = new (class {
                                           ? 3
                                           : 2
                                       : +(r < ea));
-                        this._expand(a + 6),
+                        (this._expand(a + 6),
                             a < 256
                                 ? ((this._u[this._i] = 110),
                                   (this._u[this._i + 1] = a),
@@ -578,7 +578,7 @@ let eI = new (class {
                                 : ((this._u[this._i] = 111),
                                   this._v.setUint32(this._i + 1, a),
                                   (this._u[this._i + 5] = +!!t),
-                                  (this._i += 6));
+                                  (this._i += 6)));
                         for (let e = 0; e < i.length; e++) this._v.setBigUint64(this._i + 8 * e, i[e], !0);
                         this._i += a;
                     }
@@ -586,12 +586,12 @@ let eI = new (class {
                 }
                 case "object":
                     if (null === e)
-                        this._expand(5),
+                        (this._expand(5),
                             2 === this._nullEncoding
                                 ? (this._u[this._i++] = 106)
                                 : ((this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
                                   this._v.setUint32(this._i + 1, 0x36e696c),
-                                  (this._i += 5));
+                                  (this._i += 5)));
                     else if (Array.isArray(e))
                         if ((this._expand(5), 0 === e.length))
                             3 === this._arrayEncoding
@@ -629,7 +629,7 @@ let eI = new (class {
                                     this._v.setUint32(n, t);
                                     break;
                                 case 4:
-                                    this._v.setUint32(n, t), (this._u[this._i++] = 106);
+                                    (this._v.setUint32(n, t), (this._u[this._i++] = 106));
                             }
                         }
                     else if (ArrayBuffer.isView(e)) {
@@ -658,11 +658,11 @@ let eI = new (class {
                         ) {
                             let e = this._u[this._i + n - 1],
                                 t = Math.floor(Math.log2(e) + 1);
-                            (this._u[this._i + n - 1] = e << (8 - t)), (this._u[this._i - 1] = t);
+                            ((this._u[this._i + n - 1] = e << (8 - t)), (this._u[this._i - 1] = t));
                         }
                         this._i += n;
                     } else {
-                        this._expand(6), (this._u[this._i++] = 116);
+                        (this._expand(6), (this._u[this._i++] = 116));
                         let t = Object.keys(e),
                             n = t.length,
                             i = this._i,
@@ -690,14 +690,14 @@ let eI = new (class {
                             } else {
                                 let e = 2 * l,
                                     t = 0;
-                                this._expand(3 * l + 5),
+                                (this._expand(3 * l + 5),
                                     2 === this._keyEncoding
                                         ? ((this._u[this._i] = 109), (t = 4))
                                         : 3 === this._keyEncoding
                                           ? ((this._u[this._i] = 107), (t = 2))
                                           : e < 256
                                             ? ((this._u[this._i] = 119), (t = 1))
-                                            : ((this._u[this._i] = 118), (t = 2));
+                                            : ((this._u[this._i] = 118), (t = 2)));
                                 let n = this._i + 1;
                                 this._i += t + 1;
                                 let i = this._utf(r);
@@ -734,14 +734,14 @@ let eI = new (class {
             let t = this._u.subarray(this._o, this._i),
                 n = t.length + e,
                 i = this._poolSize;
-            for (; i < n; ) i *= 2;
-            (this._poolSize = i),
+            for (; i < n;) i *= 2;
+            ((this._poolSize = i),
                 (this._u = new Uint8Array(this._poolSize)),
                 (this._v = new DataView(this._u.buffer)),
                 this._u.set(t),
                 (this._i = t.length),
                 (this._r += this._o),
-                (this._o = 0);
+                (this._o = 0));
         }
         _utf(e) {
             let t = e.length;
@@ -750,23 +750,23 @@ let eI = new (class {
                 for (let n = 0; n < t; n++) {
                     let t = e.charCodeAt(n);
                     if (t < 128) this._u[this._i++] = t;
-                    else if (t < 2048) (this._u[this._i++] = 192 + (t >> 6)), (this._u[this._i++] = 128 + (63 & t));
+                    else if (t < 2048) ((this._u[this._i++] = 192 + (t >> 6)), (this._u[this._i++] = 128 + (63 & t)));
                     else if (t < 55296 || t > 57343)
-                        (this._u[this._i++] = 224 + (t >> 12)),
+                        ((this._u[this._i++] = 224 + (t >> 12)),
                             (this._u[this._i++] = 128 + ((t >> 6) & 63)),
-                            (this._u[this._i++] = 128 + (63 & t));
+                            (this._u[this._i++] = 128 + (63 & t)));
                     else {
                         let i = 65536 + ((1023 & t) << 10) + (1023 & e.charCodeAt(++n));
-                        (this._u[this._i++] = 240 + (i >> 18)),
+                        ((this._u[this._i++] = 240 + (i >> 18)),
                             (this._u[this._i++] = 128 + ((i >> 12) & 63)),
                             (this._u[this._i++] = 128 + ((i >> 6) & 63)),
-                            (this._u[this._i++] = 128 + (63 & i));
+                            (this._u[this._i++] = 128 + (63 & i)));
                     }
                 }
                 return this._i - n;
             }
             let n = this._encoder.encodeInto(e, this._u.subarray(this._i)).written ?? 0;
-            return (this._i += n), n;
+            return ((this._i += n), n);
         }
     })({
         poolSize: 65536,
@@ -792,7 +792,7 @@ let eI = new (class {
         _atomTableUtf;
         constructor(e = {}) {
             let t;
-            (this._nilDecoding = e_(["null", "array"], e.decoding?.nil) ?? 1),
+            ((this._nilDecoding = e_(["null", "array"], e.decoding?.nil) ?? 1),
                 (this._stringDecoding =
                     e_(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.string) ?? 1),
                 (this._binaryDecoding =
@@ -804,7 +804,7 @@ let eI = new (class {
                 (this._v = new DataView(this._d.buffer, this._d.byteOffset, this._d.length)),
                 (this._sd = new Uint8Array(12e3)),
                 (this._sv = new DataView(this._sd.buffer, this._sd.byteOffset, this._sd.length)),
-                (this._i = 0);
+                (this._i = 0));
             const n = new TextDecoder("utf8");
             if (
                 ((this._u = n.decode.bind(n)),
@@ -815,7 +815,7 @@ let eI = new (class {
                 const e = navigator.userAgent;
                 e.includes("Firefox") ? (this._T = 4) : e.includes("Chrome") && (this._T = 16);
             }
-            (this._atoms = e.atomTable ?? {
+            ((this._atoms = e.atomTable ?? {
                 true: !0,
                 false: !1,
                 undefined: void 0,
@@ -827,7 +827,7 @@ let eI = new (class {
                 negative_infinity: -1 / 0,
             }),
                 (this._atomTableLatin = []),
-                (this._atomTableUtf = []);
+                (this._atomTableUtf = []));
             const i = new TextEncoder();
             for (const [e, t] of Object.entries(this._atoms)) {
                 const n = i.encode(e);
@@ -845,14 +845,14 @@ let eI = new (class {
         }
         unpack(e) {
             let t = +(131 === e[0]);
-            (this._i = t),
+            ((this._i = t),
                 e.length <= this._sd.length
                     ? (this._sd.set(e), (this._d = this._sd), (this._v = this._sv))
-                    : ((this._d = e), (this._v = new DataView(e.buffer, e.byteOffset, e.length)));
+                    : ((this._d = e), (this._v = new DataView(e.buffer, e.byteOffset, e.length))));
             try {
                 return this._loop();
             } finally {
-                (this._d = this._sd), (this._v = this._sv);
+                ((this._d = this._sd), (this._v = this._sv));
             }
         }
         _loop() {
@@ -860,13 +860,13 @@ let eI = new (class {
             switch (e) {
                 case 70: {
                     let e = this._v.getFloat64(this._i);
-                    return (this._i += 8), e;
+                    return ((this._i += 8), e);
                 }
                 case 97:
                     return this._d[this._i++];
                 case 98: {
                     let e = this._v.getInt32(this._i);
-                    return (this._i += 4), e;
+                    return ((this._i += 4), e);
                 }
                 case 100:
                 case 115:
@@ -883,7 +883,7 @@ let eI = new (class {
                     104 === e ? (t = this._d[this._i++]) : ((t = this._v.getUint32(this._i)), (this._i += 4));
                     let n = [];
                     for (let e = 0; e < t; e++) n.push(this._loop());
-                    return 108 === e && (106 === this._d[this._i] ? this._i++ : n.push(this._loop())), n;
+                    return (108 === e && (106 === this._d[this._i] ? this._i++ : n.push(this._loop())), n);
                 }
                 case 106:
                     return 2 === this._nilDecoding ? [] : null;
@@ -891,24 +891,24 @@ let eI = new (class {
                 case 109:
                 case 77: {
                     let t, n;
-                    if (107 === e) (t = (this._d[this._i++] << 8) + this._d[this._i++]), (n = this._stringDecoding);
-                    else if (109 === e) (t = this._v.getUint32(this._i)), (n = this._binaryDecoding), (this._i += 4);
+                    if (107 === e) ((t = (this._d[this._i++] << 8) + this._d[this._i++]), (n = this._stringDecoding));
+                    else if (109 === e) ((t = this._v.getUint32(this._i)), (n = this._binaryDecoding), (this._i += 4));
                     else {
-                        (t = this._v.getUint32(this._i)), (n = this._bitbinaryDecoding);
+                        ((t = this._v.getUint32(this._i)), (n = this._bitbinaryDecoding));
                         let e = this._d[this._i + 4],
                             i = this._d[this._i + t - 1];
-                        (this._d[this._i + t - 1] = i >> (8 - e)), (this._i += 5);
+                        ((this._d[this._i + t - 1] = i >> (8 - e)), (this._i += 5));
                     }
                     if (5 === n) {
                         let e = [];
                         for (let n = 0; n < t; n++) e.push(this._d[this._i + n]);
-                        return (this._i += t), e;
+                        return ((this._i += t), e);
                     }
                     if (n >= 4) {
                         let e = this._d.subarray(this._i, this._i + t);
                         this._i += t;
                         let n = new Uint8Array(t);
-                        return n.set(e), n;
+                        return (n.set(e), n);
                     }
                     return 2 === n ? this._latin(t) : this._utf(t);
                 }
@@ -919,8 +919,8 @@ let eI = new (class {
                         (110 === e ? (t = this._d[this._i++]) : ((t = this._v.getUint32(this._i)), (this._i += 4)),
                         0 === t)
                     )
-                        return (this._i += 1), 0;
-                    if (1 === t && 0 === this._d[this._i + 1]) return (this._i += 2), 0;
+                        return ((this._i += 1), 0);
+                    if (1 === t && 0 === this._d[this._i + 1]) return ((this._i += 2), 0);
                     let i = this._d[this._i++];
                     if (t <= 4) {
                         let e = 0;
@@ -962,16 +962,16 @@ let eI = new (class {
                     if (8 === t) n = this._v.getBigUint64(this._i, !0);
                     else {
                         let e = t;
-                        for (n = K; e > 0; )
+                        for (n = K; e > 0;)
                             e >= 8
-                                ? ((n <<= Z), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
+                                ? ((n <<= q), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
                                 : e >= 4
-                                  ? ((n <<= q), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
+                                  ? ((n <<= X), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
                                   : e >= 2
                                     ? ((n <<= z), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
                                     : ((n <<= $), (n += BigInt(this._d[this._i])), e--);
                     }
-                    return (this._i += t), 1 === i && (n = -n), n.toString();
+                    return ((this._i += t), 1 === i && (n = -n), n.toString());
                 }
                 case 116: {
                     let e = {},
@@ -991,7 +991,7 @@ let eI = new (class {
                 for (let n = 0; n < e; n++) {
                     let r = this._d[i++];
                     if (r in t) {
-                        if (n === e - 1) return (this._i += e), t[r];
+                        if (n === e - 1) return ((this._i += e), t[r]);
                         t = t[r];
                     } else break;
                 }
@@ -1008,7 +1008,7 @@ let eI = new (class {
                 let s = this._d[a++];
                 if (s in i) i = i[s];
                 else if (n === e - 1) {
-                    (r = t ? this._utf(e) : this._latin(e)), (i[s] = r);
+                    ((r = t ? this._utf(e) : this._latin(e)), (i[s] = r));
                     break;
                 } else i = i[s] = [];
             }
@@ -1020,7 +1020,7 @@ let eI = new (class {
                 i = this._d;
             if (e < this._T) {
                 let r = n + e;
-                for (; n < r; ) {
+                for (; n < r;) {
                     let e = i[n++];
                     if (e < 128) t += String.fromCharCode(e);
                     else if (e < 224) t += String.fromCharCode(((31 & e) << 6) + (63 & i[n++]));
@@ -1031,7 +1031,7 @@ let eI = new (class {
                     }
                 }
             } else t = this._u(i.subarray(this._i, this._i + e));
-            return (this._i += e), t;
+            return ((this._i += e), t);
         }
         _latin(e) {
             let t = "",
@@ -1039,7 +1039,7 @@ let eI = new (class {
                 i = this._d;
             if (e < this._T) for (let r = n; r < n + e; r++) t += String.fromCharCode(i[r]);
             else t = this._l(i.subarray(n, n + e));
-            return (this._i += e), t;
+            return ((this._i += e), t);
         }
     })({
         decoding: { binary: "utf8", string: "array", nil: "array" },
@@ -1076,13 +1076,13 @@ let eI = new (class {
                                 return ef.unpack(e);
                             } catch (n) {
                                 throw (
-                                    (D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
+                                    D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
                                     new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
                                     }),
-                                    n)
+                                    n
                                 );
                             }
                         }
@@ -1091,12 +1091,12 @@ let eI = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                (new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
                                 }),
-                                e)
+                                e
                             );
                         }
                     }
@@ -1142,9 +1142,9 @@ function eC(e) {
                       if (null == t) return "";
                       let i = "";
                       for (let r = 0; r < t.length; r += 2)
-                          (i += `
+                          ((i += `
 ${n}${t[r]}: ${t[r + 1].micros / 1e3}`),
-                              (i += e(t[r + 1].calls, n + "|  "));
+                              (i += e(t[r + 1].calls, n + "|  ")));
                       return i;
                   })(JSON.parse(t), ""));
         if (null != n) return n;
@@ -1215,10 +1215,10 @@ class ex {
     _eventCounts = (0, eD.cloneDeep)(eG);
     _enabled = !1;
     reset() {
-        (this._timeTracking = (0, eD.cloneDeep)(eP)),
+        ((this._timeTracking = (0, eD.cloneDeep)(eP)),
             (this._timingStats = (0, eD.cloneDeep)(eU)),
             (this._measurements = (0, eD.cloneDeep)(ew)),
-            (this._eventCounts = (0, eD.cloneDeep)(eG));
+            (this._eventCounts = (0, eD.cloneDeep)(eG)));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -1235,7 +1235,7 @@ class ex {
         let t = this._timeTracking[e];
         if (null == t) return;
         let n = performance.now() - t;
-        this._storeTimeValue(e, n), (this._timeTracking[e] = null);
+        (this._storeTimeValue(e, n), (this._timeTracking[e] = null));
     }
     timeTrack(e, t) {
         this._enabled && this._storeTimeValue(e, t);
@@ -1257,16 +1257,16 @@ class ex {
     generateTelemetry() {
         let e = Object.entries(this._timingStats).reduce((e, t) => {
                 let [n, [i]] = t;
-                return (e[`avg_${n}`] = `${i.toFixed(2)}ms`), e;
+                return ((e[`avg_${n}`] = `${i.toFixed(2)}ms`), e);
             }, {}),
             t = Object.entries(this._measurements).reduce((e, t) => {
                 let [n, [i]] = t;
-                return (e[`avg_${n}`] = `${i.toFixed(2)}`), e;
+                return ((e[`avg_${n}`] = `${i.toFixed(2)}`), e);
             }, {});
         return {
             ...Object.entries(this._eventCounts).reduce((e, t) => {
                 let [n, i] = t;
-                return (e[`count_${n}`] = `${i}`), e;
+                return ((e[`count_${n}`] = `${i}`), e);
             }, {}),
             ...e,
             ...t,
@@ -1275,18 +1275,18 @@ class ex {
 }
 let ek = (1e3 / 60) * 3,
     eF = (1e3 / 60) * 3,
-    eV = 1e3 / 60 / 8,
-    eB = (1e3 / 60) * 12;
+    eB = 1e3 / 60 / 8,
+    eV = (1e3 / 60) * 12;
 class eH {
     _browserDeadlineMs;
     _deadlineMs;
     _startMs;
     _firedDueToMaxTimeout;
     constructor(e, t = !1) {
-        (this._deadlineMs = Math.max(eV, e)),
+        ((this._deadlineMs = Math.max(eB, e)),
             (this._browserDeadlineMs = e),
             (this._firedDueToMaxTimeout = t),
-            (this._startMs = performance.now());
+            (this._startMs = performance.now()));
     }
     timeRemaining() {
         let e = performance.now() - this._startMs;
@@ -1300,7 +1300,7 @@ class eH {
     }
     generateDeadlineMetrics() {
         return {
-            isDeadlineNotIdeal: this._browserDeadlineMs < eV,
+            isDeadlineNotIdeal: this._browserDeadlineMs < eB,
             deadlineMs: this._deadlineMs.toFixed(2),
             timeSinceStartMs: (performance.now() - this._startMs).toFixed(2),
         };
@@ -1337,20 +1337,20 @@ class eW {
     _processWorkCallback(e) {
         if (null == this._workCallbackFn) return;
         if (this._hasExceededMaxConsecutiveFlushes) {
-            ej.log("Unable to fully flush work queue after max retries, skipping future deadline."),
+            (ej.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
                 this.telemetry.measure(eM.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
                 this.telemetry.track(ev.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
-                (this._nextDispatchTimeout = eB);
+                (this._nextDispatchTimeout = eV));
             return;
         }
         let t = performance.now(),
             n = this._workCallbackFn(e),
             i = performance.now();
-        this.clearWorkTimeout(),
-            i - t > eF ? (this._nextDispatchTimeout = eB) : (this._nextDispatchTimeout = ek),
+        (this.clearWorkTimeout(),
+            i - t > eF ? (this._nextDispatchTimeout = eV) : (this._nextDispatchTimeout = ek),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
@@ -1359,15 +1359,15 @@ class eW {
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
                   (this._criticalWorkScheduled = !1))
-                : (this._consecutiveFlushesBeforeQueueEmpty += 1);
+                : (this._consecutiveFlushesBeforeQueueEmpty += 1));
     }
     markCriticalWorkScheduled() {
-        (this._criticalWorkScheduled = !0),
-            null != this._flushIdleHandler && (this._clearIdleCallback(), this._processWorkCallback());
+        ((this._criticalWorkScheduled = !0),
+            null != this._flushIdleHandler && (this._clearIdleCallback(), this._processWorkCallback()));
     }
     toggleRequestIdleCallback(e) {
-        (this._enableRequestIdleCallback = e),
-            !e && this.hasWorkScheduled && (this._clearIdleCallback(), this._processWorkCallback());
+        ((this._enableRequestIdleCallback = e),
+            !e && this.hasWorkScheduled && (this._clearIdleCallback(), this._processWorkCallback()));
     }
     get isBackgrounded() {
         return this._isBackgrounded;
@@ -1379,24 +1379,26 @@ class eW {
         return this._enableRequestIdleCallback;
     }
     clearWorkTimeout() {
-        null != this._flushTimeoutHandler &&
+        (null != this._flushTimeoutHandler &&
             (clearTimeout(this._flushTimeoutHandler), (this._flushTimeoutHandler = null)),
             this._clearIdleCallback(),
             (this._nextDispatchTimeout = ek),
-            (this._workCallbackFn = null);
+            (this._workCallbackFn = null));
     }
     requestWorkTimeout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eb.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eB && this.telemetry.track(ev.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eV && this.telemetry.track(ev.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((o()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
-                    return this.telemetry.track(ev.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                    return (
+                        this.telemetry.track(ev.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()
+                    );
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
@@ -1412,77 +1414,77 @@ let eY =
         }),
     eK = window.cancelIdleCallback ?? clearTimeout;
 function e$(e) {
-    return null == e ? new eH(eV, !0) : new eH(e.timeRemaining(), e.didTimeout);
+    return null == e ? new eH(eB, !0) : new eH(e.timeRemaining(), e.didTimeout);
 }
 class ez extends eW {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
-        super(),
+        (super(),
             I.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
                 n === (0, ey.Xg)() && this._trackAppBackgrounded(!t);
-            });
+            }));
     }
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
-        this.telemetry.time(eb.TIME_TO_FIRE_IDLE_CALLBACK),
+        (this.telemetry.time(eb.TIME_TO_FIRE_IDLE_CALLBACK),
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        this.telemetry.track(ev.FIRED_DUE_TO_MAX_TIMEOUT),
+                        (this.telemetry.track(ev.FIRED_DUE_TO_MAX_TIMEOUT),
                             this.telemetry.clearTime(eb.TIME_TO_FIRE_IDLE_CALLBACK),
-                            this._processWorkCallback();
+                            this._processWorkCallback());
                         return;
                     }
-                    if ((this.telemetry.timeEnd(eb.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eV) < eV))
-                        this.telemetry.time(eb.TIME_TO_FIRE_IDLE_CALLBACK),
+                    if ((this.telemetry.timeEnd(eb.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eB) < eB))
+                        (this.telemetry.time(eb.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
                                     this.telemetry.timeEnd(eb.TIME_TO_FIRE_IDLE_CALLBACK);
                                     let t = e$(e),
                                         n = t?.timeRemaining();
-                                    null != n && this.telemetry.timeTrack(eb.DEADLINE_INITIAL_TIME_REMAINING, n),
-                                        this._processWorkCallback(t);
+                                    (null != n && this.telemetry.timeTrack(eb.DEADLINE_INITIAL_TIME_REMAINING, n),
+                                        this._processWorkCallback(t));
                                 },
                                 { timeout: 200 },
-                            );
+                            ));
                     else {
                         this.telemetry.timeEnd(eb.TIME_TO_FIRE_IDLE_CALLBACK);
                         let t = e$(e),
                             n = t?.timeRemaining();
-                        null != n && this.telemetry.timeTrack(eb.DEADLINE_INITIAL_TIME_REMAINING, n),
-                            this._processWorkCallback(t);
+                        (null != n && this.telemetry.timeTrack(eb.DEADLINE_INITIAL_TIME_REMAINING, n),
+                            this._processWorkCallback(t));
                     }
                 },
                 { timeout: 1e3 },
-            );
+            ));
     }
     _scheduleRequestIdleCallback(e, t) {
-        (this._flushIdleHandler = eY((t) => {
-            this._clearIdleCallback(), e(t);
+        ((this._flushIdleHandler = eY((t) => {
+            (this._clearIdleCallback(), e(t));
         })),
-            t?.timeout != null && this._scheduleMaxIdleCallback(t.timeout);
+            t?.timeout != null && this._scheduleMaxIdleCallback(t.timeout));
     }
     _scheduleMaxIdleCallback(e) {
-        null != this._flushIdleMaxTimeoutHandler && clearTimeout(this._flushIdleMaxTimeoutHandler),
+        (null != this._flushIdleMaxTimeoutHandler && clearTimeout(this._flushIdleMaxTimeoutHandler),
             (this._flushIdleMaxTimeoutHandler = setTimeout(() => {
-                this._clearIdleCallback(), this._processWorkCallback();
-            }, e));
+                (this._clearIdleCallback(), this._processWorkCallback());
+            }, e)));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (eK(this._flushIdleHandler), (this._flushIdleHandler = null)),
+        (null != this._flushIdleHandler && (eK(this._flushIdleHandler), (this._flushIdleHandler = null)),
             null != this._flushIdleMaxTimeoutHandler &&
-                (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
+                (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null)));
     }
 }
-let eq = (0, eE.mj)({
+let eX = (0, eE.mj)({
         name: "2026-08-voice-server-update-immediate",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eZ = new g.A("GatewaySocket"),
-    eX = new Set(["INITIAL_GUILD", "READY"]),
+    eq = new g.A("GatewaySocket"),
+    eZ = new Set(["INITIAL_GUILD", "READY"]),
     eQ = new Set(["READY", "INITIAL_GUILD"]),
     eJ = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
     e0 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
@@ -1522,7 +1524,7 @@ class e3 {
     }
     processFirstQueuedDispatch(e) {
         let t = [];
-        for (; this.queue.length > 0 && e.has(this.queue[0].type) && 2 === this.queue[0].status; )
+        for (; this.queue.length > 0 && e.has(this.queue[0].type) && 2 === this.queue[0].status;)
             t.push(this.queue.shift());
         this.dispatchMultiple(t);
     }
@@ -1541,17 +1543,17 @@ class e3 {
             preloadedData: null,
             receivedAt: (0, eR.tB)(),
         };
-        this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t);
+        (this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t));
     }
     maybePreload(e) {
-        if (this.paused && !eX.has(e.type)) return !1;
+        if (this.paused && !eZ.has(e.type)) return !1;
         if (0 === e.status) {
             let t = this.getDispatchHandler(e.type)?.preload(e.data);
             if (((e.status = null == t ? 2 : 1), (e.preloadPromise = t), null != t))
                 return (
                     t
                         .then((t) => {
-                            (e.preloadedData = t), (e.status = 2), this.scheduleFlush(e.type);
+                            ((e.preloadedData = t), (e.status = 2), this.scheduleFlush(e.type));
                         })
                         .catch((t) => this.socket.resetSocketOnDispatchError({ error: t, action: e.type })),
                     !0
@@ -1560,7 +1562,7 @@ class e3 {
         return !1;
     }
     shouldFlushImmediately(e) {
-        return !!eQ.has(e) || (!!eJ.has(e) && (eq?.getConfig({ location: "GatewaySocketDispatcher" }).enabled ?? !1));
+        return !!eQ.has(e) || (!!eJ.has(e) && (eX?.getConfig({ location: "GatewaySocketDispatcher" }).enabled ?? !1));
     }
     scheduleFlush(e) {
         !this.paused &&
@@ -1579,7 +1581,7 @@ class e3 {
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eb.TIME_TO_QUEUE_EMPTY);
         let a = performance.now() - t;
-        return a > eF && !r && eZ.log(`Dispatched ${i.length} messages in ${a}ms`), r;
+        return (a > eF && !r && eq.log(`Dispatched ${i.length} messages in ${a}ms`), r);
     };
     getDispatchTimings() {
         return e2;
@@ -1609,7 +1611,7 @@ class e3 {
                 (A.Ay.Emitter.batched(() => {
                     for (let s = 0; s < e.length; s++) {
                         let l = e[s];
-                        (n = l.type), (i = i || e0.has(l.type));
+                        ((n = l.type), (i = i || e0.has(l.type)));
                         let o = performance.now();
                         if (
                             (this.dispatchOne(l),
@@ -1629,10 +1631,10 @@ class e3 {
                                 return !!l && !o && t !== r;
                             })(e, s, t))
                         ) {
-                            (r = e.slice(s + 1)),
+                            ((r = e.slice(s + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&
-                                    this.scheduler.telemetry.timeTrack(eb.TIME_OVER_DEADLINE, t.timeSinceExpiration);
+                                    this.scheduler.telemetry.timeTrack(eb.TIME_OVER_DEADLINE, t.timeSinceExpiration));
                             break;
                         }
                     }
@@ -1658,12 +1660,12 @@ class e3 {
             o = performance.now();
         if (this.socket.connectionState === w.A.RESUMING) {
             let e = o - this.resumeAnalytics.lastUpdateTime;
-            0 === this.resumeAnalytics.numEvents
+            (0 === this.resumeAnalytics.numEvents
                 ? (this.resumeAnalytics.initialWaitTime = e)
                 : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e),
                 (this.resumeAnalytics.totalWaitTime += e),
                 (this.resumeAnalytics.lastUpdateTime = o),
-                (this.resumeAnalytics.numEvents += 1);
+                (this.resumeAnalytics.numEvents += 1));
         }
         if ((eL.A.flush(r, i), "READY" === r)) {
             let e,
@@ -1698,14 +1700,14 @@ class e3 {
                             if (e.unavailable) return;
                             let { features: t, ...n } = e.properties ?? {},
                                 { threads: i, guild_scheduled_events: r, ...a } = e;
-                            h.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
+                            (h.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
                                 I.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
                                 f.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
                                 m.push(t),
                                 g.push(r),
-                                S.push(a, n);
+                                S.push(a, n));
                         }),
                         {
                             presences_size: JSON.stringify(i?.friends ?? []).length,
@@ -1731,14 +1733,14 @@ class e3 {
                         }
                     );
                 })(i);
-            this.getDispatchHandler(r)?.dispatch(i, r, s, l),
+            (this.getDispatchHandler(r)?.dispatch(i, r, s, l),
                 (t = this.socket),
                 (e = (function (e) {
                     let { _trace: t } = e,
                         n = {};
                     try {
                         let e = JSON.parse(t);
-                        null != e[0] &&
+                        (null != e[0] &&
                             "" !== e[0] &&
                             "string" == typeof e[0] &&
                             e[0].startsWith("gateway-") &&
@@ -1749,13 +1751,13 @@ class e3 {
                                     for (let i = 0; i < t.length; i += 2) {
                                         let r = t[i],
                                             a = t[i + 1];
-                                        n(r, a.micros), e(a.calls, n);
+                                        (n(r, a.micros), e(a.calls, n));
                                     }
                             })(e, (e, t) => {
                                 "start_session" === e
                                     ? (n.identify_api_duration_ms = Math.floor(t / 1e3))
                                     : "guilds_connect" === e && (n.identify_guilds_duration_ms = Math.floor(t / 1e3));
-                            });
+                            }));
                     } catch (e) {}
                     return n;
                 })(i)),
@@ -1775,7 +1777,7 @@ class e3 {
                                 null != t &&
                                     null != t.forEach &&
                                     t.forEach((e) => {
-                                        i++, e.type === eN.rbe.GUILD_CATEGORY && n++;
+                                        (i++, e.type === eN.rbe.GUILD_CATEGORY && n++);
                                     });
                             }),
                             { num_guilds: t.length, num_guild_channels: i, num_guild_category_channels: n }
@@ -1794,7 +1796,7 @@ class e3 {
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
                 N.A.attachReadyPayloadProperties(n),
-                O.default.track(eN.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                O.default.track(eN.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 }));
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, s, l),
@@ -1819,7 +1821,7 @@ class e3 {
         this.socket.connectionState === w.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
     clear() {
-        (this.paused = !1), (this.queue.length = 0);
+        ((this.paused = !1), (this.queue.length = 0));
     }
 }
 n(938796);
@@ -1877,9 +1879,9 @@ class e8 extends e5.EventEmitter {
                 flags: d = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
-        null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+        (null != n && e6.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
             null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
-            this.send(e7.VOICE_STATE_UPDATE, c);
+            this.send(e7.VOICE_STATE_UPDATE, c));
     }
     voiceServerPing() {
         this.send(e7.VOICE_SERVER_PING, null);
@@ -1895,14 +1897,14 @@ class e8 extends e5.EventEmitter {
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        e4.default.keys(e).forEach((i) => {
+        (e4.default.keys(e).forEach((i) => {
             let r = e[i],
                 a = JSON.stringify([i, r]).length;
-            n + a > 15360 && (this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+            (n + a > 15360 && (this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
                 (t[i] = r),
-                (n += a);
+                (n += a));
         }),
-            n > 0 && this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t });
+            n > 0 && this.send(e7.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }));
     }
     callConnect(e) {
         this.send(e7.CALL_CONNECT, { channel_id: e });
@@ -1983,7 +1985,7 @@ class ts extends ta.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2003,10 +2005,10 @@ class ts extends ta.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        e.clientProvided && td.internalBinaryWrite(e.clientProvided, t.tag(1, tn.O0.LengthDelimited).fork(), n).join(),
-            e.derived && tu.internalBinaryWrite(e.derived, t.tag(2, tn.O0.LengthDelimited).fork(), n).join();
+        (e.clientProvided && td.internalBinaryWrite(e.clientProvided, t.tag(1, tn.O0.LengthDelimited).fork(), n).join(),
+            e.derived && tu.internalBinaryWrite(e.derived, t.tag(2, tn.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tl = new ts();
@@ -2027,7 +2029,7 @@ class to extends ta.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.isActive = e.bool();
             else {
@@ -2043,7 +2045,7 @@ class to extends ta.G {
     internalBinaryWrite(e, t, n) {
         !1 !== e.isActive && t.tag(1, tn.O0.Varint).bool(e.isActive);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let td = new to();
@@ -2062,7 +2064,7 @@ class tc extends ta.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t) r.claims = e.bytes();
             else {
@@ -2078,7 +2080,7 @@ class tc extends ta.G {
     internalBinaryWrite(e, t, n) {
         e.claims.length && t.tag(1, tn.O0.LengthDelimited).bytes(e.claims);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tu = new tc();
@@ -2101,7 +2103,7 @@ class t_ extends ta.G {
     internalBinaryRead(e, t, n, i) {
         let r = i ?? this.create(),
             a = e.pos + t;
-        for (; e.pos < a; ) {
+        for (; e.pos < a;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -2124,11 +2126,11 @@ class t_ extends ta.G {
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.userId && t.tag(1, tn.O0.Bit64).fixed64(e.userId),
+        ("0" !== e.userId && t.tag(1, tn.O0.Bit64).fixed64(e.userId),
             "0" !== e.issuedAt && t.tag(2, tn.O0.Bit64).fixed64(e.issuedAt),
-            !1 !== e.isStaff && t.tag(3, tn.O0.Varint).bool(e.isStaff);
+            !1 !== e.isStaff && t.tag(3, tn.O0.Varint).bool(e.isStaff));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? tn.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new t_();
@@ -2190,10 +2192,10 @@ class tR extends e8 {
         return this.connectionState_;
     }
     set connectionState(e) {
-        tI.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e);
+        (tI.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e));
     }
     constructor() {
-        super(),
+        (super(),
             (this.dispatcher = new e3(this)),
             (this.gatewayBackoff = new u.A(1e3, 6e4)),
             (this.connectionState_ = w.A.CLOSED),
@@ -2219,25 +2221,25 @@ class tR extends e8 {
             (this.identifyCount = 0),
             (this.iosGoingAwayEventCount = 0),
             (this.failedConnectAttempts = 0),
-            (this.receivedHelloThisAttempt = !1);
+            (this.receivedHelloThisAttempt = !1));
     }
     addAnalytics(e) {
         this.analytics = { ...this.analytics, ...e };
     }
     setResumeUrl(e) {
-        null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)),
+        (null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)),
             null !== e && tI.verbose(`Updating resume url to ${e}`),
-            (this.resumeUrl = e);
+            (this.resumeUrl = e));
     }
     handleActiveStateChange(e) {
         let t = !this.heartbeatQOSState.currentPayload?.active;
         null == this.heartbeatQOSState.currentPayload && (this.heartbeatQOSState.currentPayload = e);
         let n = this.heartbeatQOSState.currentPayload;
-        e.active &&
+        (e.active &&
             ((n.active = !0),
             (n.reasons = [...new Set([...n.reasons, ...e.reasons])].sort()),
             t && this.isSessionEstablished() && this._sendHeartbeat()),
-            (this.heartbeatQOSState.upcomingState = e);
+            (this.heartbeatQOSState.upcomingState = e));
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
         this.connectionState_ === w.A.SESSION_ESTABLISHED &&
@@ -2253,12 +2255,12 @@ class tR extends e8 {
         let i, r;
         if (!this.willReconnect()) return void tI.verbose("Skipping _connect because willReconnect is false");
         if (e9.j()) return void tI.info("Skipping _connect because socket is paused");
-        (this.connectionState = w.A.CONNECTING), (this.nextReconnectIsImmediate = !1);
+        ((this.connectionState = w.A.CONNECTING), (this.nextReconnectIsImmediate = !1));
         let a = this.compressionHandler.getAlgorithm(),
             s = tf.getName(),
             l = this._getGatewayUrl(),
             o = window.GLOBAL_ENV.API_VERSION;
-        (this.receivedHelloThisAttempt = !1),
+        ((this.receivedHelloThisAttempt = !1),
             c.A.mark("\uD83C\uDF10", "Socket._connect"),
             tI.info(`[CONNECT] ${l}, encoding: ${s}, version: ${o}, compression: ${a ?? "none"}`),
             null !== this.webSocket &&
@@ -2267,11 +2269,11 @@ class tR extends e8 {
             0 === this.firstConnectAttemptStartTime && (this.firstConnectAttemptStartTime = this.connectionStartTime),
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
-                this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
-                    this.setResumeUrl(null);
-            }, tg));
+                (this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
+                    this.setResumeUrl(null));
+            }, tg)));
         let d = new URL(l);
-        d.searchParams.append("encoding", s),
+        (d.searchParams.append("encoding", s),
             d.searchParams.append("v", o.toString()),
             null != a && d.searchParams.append("compress", a),
             !(function (e) {
@@ -2288,18 +2290,18 @@ class tR extends e8 {
                     let e = o.state.userId,
                         i = null != e && null != tp && e !== tp;
                     if (o.state.gateway !== n)
-                        tI.verbose(`[FAST CONNECT] gatewayURL mismatch: ${o.state.gateway} !== ${n}`),
+                        (tI.verbose(`[FAST CONNECT] gatewayURL mismatch: ${o.state.gateway} !== ${n}`),
                             t.close(1e3),
-                            (t = null);
+                            (t = null));
                     else if (i)
-                        tI.log(
+                        (tI.log(
                             `[FAST CONNECT] refusing to adopt socket: identified user ${e} does not match switch target ${tp}`,
                         ),
                             t.close(1e3),
-                            (t = null);
+                            (t = null));
                     else {
                         let e = { ...o.state };
-                        null != e.messages &&
+                        (null != e.messages &&
                             (e.messages = e.messages.map((e) =>
                                 null != e.data && "string" == typeof e.data
                                     ? { ...e, data: e.data.substring(0, 100) }
@@ -2312,28 +2314,28 @@ class tR extends e8 {
                             (d = o.state.open),
                             (c = o.state.identify),
                             (u = o.state.messages),
-                            (_ = o.state.clientState);
+                            (_ = o.state.clientState));
                     }
                 }
-                null == t && ((t = (0, tt.A)(n)).binaryType = "arraybuffer"),
+                (null == t && ((t = (0, tt.A)(n)).binaryType = "arraybuffer"),
                     i(t),
                     d && r(c, _),
                     null != u && u.forEach(a),
                     (t.onopen = () => r(c, _)),
                     (t.onmessage = a),
                     (t.onclose = l),
-                    (t.onerror = s);
+                    (t.onerror = s));
             })({
                 gatewayURL: d.toString(),
                 newCallback: (e) => {
-                    (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
+                    ((this.webSocket = e), this.compressionHandler.bindWebSocket(e));
                 },
                 onOpen: (e) => {
                     c.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
-                    tI.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
+                    (tI.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
-                        e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
+                        e ? this._doFastConnectIdentify() : this._doResumeOrIdentify());
                 },
                 onMessage:
                     ((e = this.compressionHandler),
@@ -2346,7 +2348,7 @@ class tR extends e8 {
                             C.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
-                            i === e7.DISPATCH && e.push(a), e.push(s), tI.verboseDangerously("<~", ...e);
+                            (i === e7.DISPATCH && e.push(a), e.push(s), tI.verboseDangerously("<~", ...e));
                         }
                         let l = Date.now() - n;
                         switch (
@@ -2359,7 +2361,7 @@ class tR extends e8 {
                             i)
                         ) {
                             case e7.HELLO:
-                                this._clearHelloTimeout(), this._handleHello(s);
+                                (this._clearHelloTimeout(), this._handleHello(s));
                                 break;
                             case e7.RECONNECT:
                                 this._handleReconnect();
@@ -2412,21 +2414,21 @@ class tR extends e8 {
                         }
                     }),
                 onError: () => {
-                    this.setResumeUrl(null),
+                    (this.setResumeUrl(null),
                         R.A.flushDNSCache(),
-                        this._handleClose(!1, 0, "An error with the websocket occurred");
+                        this._handleClose(!1, 0, "An error with the websocket occurred"));
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: i } = e;
                     return this._handleClose(t, n, i);
                 },
-            });
+            }));
     }
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now(),
             i = n - this.connectionStartTime;
-        tI.verbose(`[HELLO] via ${eC(e)}, heartbeat interval: ${t}, took ${i} ms`),
+        (tI.verbose(`[HELLO] via ${eC(e)}, heartbeat interval: ${t}, took ${i} ms`),
             (function (e) {
                 let { socket: t, altGateway: n, gatewayUrl: i, now: r } = e;
                 O.default.track(
@@ -2447,16 +2449,16 @@ class tR extends e8 {
             (this.receivedHelloThisAttempt = !0),
             (this.failedConnectAttempts = 0),
             (this.firstConnectAttemptStartTime = 0),
-            this._startHeartbeater();
+            this._startHeartbeater());
     }
     _handleReconnect() {
-        tI.verbose("[RECONNECT] gateway requested I reconnect."),
+        (tI.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
             (this.connectionState = w.A.WILL_RECONNECT),
-            this._connect();
+            this._connect());
     }
     _handleInvalidSession(e) {
-        tI.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify();
+        (tI.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify());
     }
     _handleDispatch(e, t, n) {
         let i = Date.now() - this.connectionStartTime;
@@ -2464,14 +2466,14 @@ class tR extends e8 {
             let t = e.session_id;
             this.sessionId = t;
             let n = eC(e);
-            c.A.setServerTrace(n),
+            (c.A.setServerTrace(n),
                 tI.info(`[READY] took ${i}ms, as ${t}`),
                 tI.verbose(`${n}`),
                 (this.connectionState = w.A.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.altGateway.recordSuccess(),
-                this.setResumeUrl(e.resume_gateway_url);
+                this.setResumeUrl(e.resume_gateway_url));
         } else
             "READY_SUPPLEMENTAL" === t
                 ? (tI.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
@@ -2494,7 +2496,7 @@ class tR extends e8 {
         );
     }
     handleReadyDispatched() {
-        (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
+        ((this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0));
     }
     _getGatewayUrl() {
         return null != this.resumeUrl ? this.resumeUrl : (this.altGateway.getAltGatewayUrl() ?? tO);
@@ -2508,24 +2510,24 @@ class tR extends e8 {
                 tI.warn("[ALT GATEWAY] 3 consecutive failures, falling back to default URL for this session.")));
     }
     _handleHeartbeatReceive() {
-        this._sendHeartbeat(),
+        (this._sendHeartbeat(),
             null != this.heartbeater &&
                 null != this.heartbeatInterval &&
                 (clearInterval(this.heartbeater),
-                (this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval)));
+                (this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval))));
     }
     _handleHeartbeatAck(e) {
-        (this.lastHeartbeatAckTime = Date.now()),
+        ((this.lastHeartbeatAckTime = Date.now()),
             (this.heartbeatAck = !0),
             null !== this.expeditedHeartbeatTimeout &&
                 (clearTimeout(this.expeditedHeartbeatTimeout),
                 (this.expeditedHeartbeatTimeout = null),
-                tI.verbose("Expedited heartbeat succeeded"));
+                tI.verbose("Expedited heartbeat succeeded")));
     }
     _handleHeartbeatTimeout() {
-        this._cleanup((e) => e.close(4e3)),
+        (this._cleanup((e) => e.close(4e3)),
             (this.connectionState = w.A.WILL_RECONNECT),
-            this._maybeFallBackFromAltGateway();
+            this._maybeFallBackFromAltGateway());
         let e = this.gatewayBackoff.fail(() => this._connect());
         tI.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
@@ -2543,11 +2545,11 @@ class tR extends e8 {
             this._maybeFallBackFromAltGateway(),
             this.nextReconnectIsImmediate)
         )
-            tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
+            (tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect());
         else {
             let i = this.gatewayBackoff.fail(() => this._connect());
-            tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
-                this.gatewayBackoff.fails > 4 && this._reset(e, t, n);
+            (tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
+                this.gatewayBackoff.fails > 4 && this._reset(e, t, n));
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
@@ -2564,19 +2566,19 @@ class tR extends e8 {
                     },
                     (e) => {
                         let { status: t } = e;
-                        401 === t &&
+                        (401 === t &&
                             ((this.connectionState = w.A.CLOSED),
                             tI.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            O.default.track(eN.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            O.default.track(eN.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t }));
                     },
                 ));
     }
     _reset(e, t, n) {
-        (this.sessionId = null),
+        ((this.sessionId = null),
             (this.seq = 0),
             tI.warn(`[RESET] (${e.toString()}, ${t}, ${n})`),
-            this.emit("disconnect", { wasClean: e, code: t, reason: n });
+            this.emit("disconnect", { wasClean: e, code: t, reason: n }));
     }
     _sendHeartbeatIfDue() {
         if (null == this.heartbeatInterval || null == this.heartbeater) return;
@@ -2590,46 +2592,46 @@ class tR extends e8 {
     }
     _startHeartbeater() {
         let { heartbeatInterval: e } = this;
-        o()(null != e, "GatewaySocket: Heartbeat interval should never null here."),
+        (o()(null != e, "GatewaySocket: Heartbeat interval should never null here."),
             null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout),
             null !== this.heartbeater && (clearInterval(this.heartbeater), (this.heartbeater = null)),
             (this.initialHeartbeatTimeout = setTimeout(
                 () => {
-                    (this.initialHeartbeatTimeout = null),
+                    ((this.initialHeartbeatTimeout = null),
                         (this.heartbeatAck = !0),
                         (this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), e)),
-                        this._doHeartbeatInterval();
+                        this._doHeartbeatInterval());
                 },
                 Math.floor(Math.random() * e),
-            ));
+            )));
     }
     _stopHeartbeater() {
-        null !== this.heartbeater && (clearInterval(this.heartbeater), (this.heartbeater = null)),
+        (null !== this.heartbeater && (clearInterval(this.heartbeater), (this.heartbeater = null)),
             null !== this.initialHeartbeatTimeout &&
                 (clearTimeout(this.initialHeartbeatTimeout), (this.initialHeartbeatTimeout = null)),
             null !== this.expeditedHeartbeatTimeout &&
-                (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null));
+                (clearTimeout(this.expeditedHeartbeatTimeout), (this.expeditedHeartbeatTimeout = null)));
     }
     _clearHelloTimeout() {
         null != this.helloTimeout && (clearTimeout(this.helloTimeout), (this.helloTimeout = null));
     }
     _cleanup(e) {
-        A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
+        (A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout());
         let t = this.webSocket;
-        (this.webSocket = null),
+        ((this.webSocket = null),
             null != t && ((t.onopen = tm), (t.onmessage = tm), (t.onerror = tm), (t.onclose = tm), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = Y(tf));
+            (this.compressionHandler = Y(tf)));
     }
     _doResume() {
-        (this.connectionState = w.A.RESUMING),
+        ((this.connectionState = w.A.RESUMING),
             (this.dispatcher.resumeAnalytics = eO(Date.now() - this.connectionStartTime)),
             tI.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
-            this.send(e7.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
+            this.send(e7.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1));
     }
     async _doIdentify() {
-        (this.seq = 0), (this.sessionId = null);
+        ((this.seq = 0), (this.sessionId = null));
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
         this.connectionState = w.A.IDENTIFYING;
@@ -2667,7 +2669,7 @@ class tR extends e8 {
         if (this.connectionState !== w.A.IDENTIFYING || this.identifyStartTime !== t)
             return void tI.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: l, properties: o = {}, presence: c } = e;
-        (this.token = l), tI.verbose("[IDENTIFY]");
+        ((this.token = l), tI.verbose("[IDENTIFY]"));
         let u = {
                 token: l,
                 capabilities: (function (e) {
@@ -2681,30 +2683,30 @@ class tR extends e8 {
                 qos_token: a,
             },
             _ = JSON.stringify(u);
-        (this.identifyUncompressedByteSize = _.length),
+        ((this.identifyUncompressedByteSize = _.length),
             (this.identifyCompressedByteSize = d.deflate(_).length),
             (this.identifyCount += 1),
             this.send(e7.IDENTIFY, u, !1),
-            O.default.track(eN.HAw.SESSION_START_CLIENT, {});
+            O.default.track(eN.HAw.SESSION_START_CLIENT, {}));
     }
     _doFastConnectIdentify() {
-        (this.seq = 0), (this.sessionId = null);
+        ((this.seq = 0), (this.sessionId = null));
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
         let { token: t } = e;
-        (this.token = t),
+        ((this.token = t),
             (this.connectionState = w.A.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
             tI.verbose("[IDENTIFY, fast-connect]"),
-            this._updateLastHeartbeatAckTime();
+            this._updateLastHeartbeatAckTime());
     }
     _doResumeOrIdentify() {
         let e = Date.now();
-        null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= tS)
+        (null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= tS)
             ? this._doResume()
             : this._doIdentify(),
-            this._updateLastHeartbeatAckTime();
+            this._updateLastHeartbeatAckTime());
     }
     _updateLastHeartbeatAckTime() {
         this.lastHeartbeatAckTime = Date.now();
@@ -2724,7 +2726,7 @@ class tR extends e8 {
     }
     _sendHeartbeat() {
         let e = this._consumeQOSPayload();
-        this.send(e7.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now());
+        (this.send(e7.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now()));
     }
     getLogger() {
         return tI;
@@ -2759,7 +2761,7 @@ class tR extends e8 {
         let { action: t, error: n, metricAction: i } = e;
         tI.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, E.b)();
-        S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
+        (S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && D.A.captureException(n, { tags: { socketCrashedAction: t } }),
             O.default.track(eN.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
@@ -2781,7 +2783,7 @@ class tR extends e8 {
             I.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
             I.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
-            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * tN));
+            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * tN)));
     }
     resetSocketOnDispatchError(e) {
         let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
@@ -2790,20 +2792,20 @@ class tR extends e8 {
     close() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this.isClosed()) {
-            tI.verbose("close() called, but socket is already closed."),
-                e || ((this.sessionId = null), (this.token = null));
+            (tI.verbose("close() called, but socket is already closed."),
+                e || ((this.sessionId = null), (this.token = null)));
             return;
         }
         tI.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
-        this._cleanup((e) => e.close(t)),
+        (this._cleanup((e) => e.close(t)),
             (this.connectionState = w.A.CLOSED),
             e ||
                 ((this.sessionId = null),
                 (this.token = null),
                 setImmediate(() => {
                     this._reset(!0, 1e3, "Disconnect requested by user");
-                }));
+                })));
     }
     networkStateChange(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -2815,14 +2817,14 @@ class tR extends e8 {
             i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (!this.isClosed()) {
             if (this.isConnected()) {
-                tI.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
+                (tI.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
                     (this.heartbeatAck = !1),
                     this._sendHeartbeat(),
                     null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout),
                     (this.expeditedHeartbeatTimeout = setTimeout(() => {
-                        (this.expeditedHeartbeatTimeout = null),
-                            !1 === this.heartbeatAck && this._handleHeartbeatTimeout();
-                    }, e));
+                        ((this.expeditedHeartbeatTimeout = null),
+                            !1 === this.heartbeatAck && this._handleHeartbeatTimeout());
+                    }, e)));
                 return;
             }
             n
@@ -2835,13 +2837,13 @@ class tR extends e8 {
     resetBackoff() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        tI.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
+        (tI.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
             this.gatewayBackoff.succeed(),
             (this.iosGoingAwayEventCount = 0),
             (this.nextReconnectIsImmediate = !0),
             this.willReconnect()
                 ? this._connect()
-                : t && this.connectionState !== w.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
+                : t && this.connectionState !== w.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e));
     }
     send = (e, t, n) => {
         C.default.isLoggingGatewayEvents && tI.verboseDangerously("~>", e, e7[e], t);

@@ -1,4 +1,4 @@
-o.d(n, { default: () => d, loadActivityContextMenuIcons: () => c }), o(321073);
+(o.d(n, { default: () => d, loadActivityContextMenuIcons: () => c }), o(321073));
 var t = o(477900),
     i = o(582128),
     r = o(477782),
@@ -269,7 +269,7 @@ let h = {
 async function c(e) {
     let n = new Set();
     !(function e(n, o) {
-        for (let t of n) null != t.icon && t.icon in h && o.add(t.icon), null != t.items && e(t.items, o);
+        for (let t of n) (null != t.icon && t.icon in h && o.add(t.icon), null != t.items && e(t.items, o));
     })(e, n);
     let o = new Map();
     return (
@@ -316,7 +316,7 @@ function d(e) {
                                         leadingAccessory: null != c ? { type: "icon", icon: c } : void 0,
                                     };
                                 function a() {
-                                    h(s), (0, l.Z_)();
+                                    (h(s), (0, l.Z_)());
                                 }
                                 if ("checkbox" === n.type)
                                     return (0, t.jsx)(

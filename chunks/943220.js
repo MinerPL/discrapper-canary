@@ -14,5 +14,5 @@ function n(e) {
             isRepliedMessage: !!e.isRepliedMessage,
         }),
         n = {};
-    return null != a && (n[i.w.SYSTEM_TAG] = a), (0, r.jsx)(i.A, { ...e, author: s, decorations: n });
+    return (null != a && (n[i.w.SYSTEM_TAG] = a), (0, r.jsx)(i.A, { ...e, author: s, decorations: n }));
 }

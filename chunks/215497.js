@@ -41,8 +41,8 @@ let A = s.forwardRef(function (e, t) {
             return {
                 handleFocus: (0, s.useCallback)(
                     (t) => {
-                        (t.target === t.currentTarget || t.currentTarget.contains(document.activeElement)) && n(!0),
-                            null != e && e(t);
+                        ((t.target === t.currentTarget || t.currentTarget.contains(document.activeElement)) && n(!0),
+                            null != e && e(t));
                     },
                     [e],
                 ),
@@ -72,7 +72,7 @@ let A = s.forwardRef(function (e, t) {
                 if (E) {
                     switch (e.which) {
                         case m.Ks6.D:
-                            e.preventDefault(), c.A.remove(l, n, y);
+                            (e.preventDefault(), c.A.remove(l, n, y));
                             return;
                         case m.Ks6.E:
                             null != C && (e.preventDefault(), C(e));
@@ -84,7 +84,7 @@ let A = s.forwardRef(function (e, t) {
                             return;
                         case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                            e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 });
+                            (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
                     I?.(e);
                 }

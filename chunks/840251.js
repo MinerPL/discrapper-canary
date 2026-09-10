@@ -6,7 +6,7 @@ class r {
     triggerPoint;
     params;
     constructor(e, t, n) {
-        (this.experiments = e), (this.triggerPoint = t), (this.params = n);
+        ((this.experiments = e), (this.triggerPoint = t), (this.params = n));
     }
     registeredExperimentIds() {
         return this.experiments.map((e) => e.definition.id);
@@ -14,13 +14,13 @@ class r {
     trigger() {
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        i.A.trackCommonTriggerPointExposures(this.params.location),
+        (i.A.trackCommonTriggerPointExposures(this.params.location),
             this.triggerPoint,
             (e = this.experiments),
             (t = { ...this.params, ...n }),
             e.forEach((e) => {
                 e.trackExposure(t);
-            });
+            }));
     }
     getExperiments() {
         return this.experiments;

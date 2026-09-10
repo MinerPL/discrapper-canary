@@ -48,22 +48,22 @@ class w {
     }
     captureException(e, t, n) {
         let r = (0, g.eJ)();
-        if ((0, g.GR)(e)) return o.T && m.vF.log(S), r;
+        if ((0, g.GR)(e)) return (o.T && m.vF.log(S), r);
         let i = { event_id: r, ...t };
-        return this._process(this.eventFromException(e, i).then((e) => this._captureEvent(e, i, n))), i.event_id;
+        return (this._process(this.eventFromException(e, i).then((e) => this._captureEvent(e, i, n))), i.event_id);
     }
     captureMessage(e, t, n, r) {
         let i = { event_id: (0, g.eJ)(), ...n },
             o = (0, f.NF)(e) ? e : String(e),
             a = (0, f.sO)(e) ? this.eventFromMessage(o, t, i) : this.eventFromException(e, i);
-        return this._process(a.then((e) => this._captureEvent(e, i, r))), i.event_id;
+        return (this._process(a.then((e) => this._captureEvent(e, i, r))), i.event_id);
     }
     captureEvent(e, t, n) {
         let r = (0, g.eJ)();
-        if (t && t.originalException && (0, g.GR)(t.originalException)) return o.T && m.vF.log(S), r;
+        if (t && t.originalException && (0, g.GR)(t.originalException)) return (o.T && m.vF.log(S), r);
         let i = { event_id: r, ...t },
             a = (e.sdkProcessingMetadata || {}).capturedSpanScope;
-        return this._process(this._captureEvent(e, i, a || n)), i.event_id;
+        return (this._process(this._captureEvent(e, i, a || n)), i.event_id);
     }
     captureSession(e) {
         "string" != typeof e.release
@@ -106,7 +106,7 @@ class w {
     }
     addIntegration(e) {
         let t = this._integrations[e.name];
-        (0, s.qm)(this, e, this._integrations), t || (0, s.lc)(this, [e]);
+        ((0, s.qm)(this, e, this._integrations), t || (0, s.lc)(this, [e]));
     }
     sendEvent(e, t = {}) {
         this.emit("beforeSendEvent", e, t);
@@ -123,8 +123,8 @@ class w {
         if (this._options.sendClientReports) {
             let r = "number" == typeof n ? n : 1,
                 i = `${e}:${t}`;
-            o.T && m.vF.log(`Recording outcome: "${i}"${r > 1 ? ` (${r} times)` : ""}`),
-                (this._outcomes[i] = (this._outcomes[i] || 0) + r);
+            (o.T && m.vF.log(`Recording outcome: "${i}"${r > 1 ? ` (${r} times)` : ""}`),
+                (this._outcomes[i] = (this._outcomes[i] || 0) + r));
         }
     }
     on(e, t) {
@@ -148,7 +148,7 @@ class w {
     }
     _setupIntegrations() {
         let { integrations: e } = this._options;
-        (this._integrations = (0, s.P$)(this, e)), (0, s.lc)(this, e);
+        ((this._integrations = (0, s.P$)(this, e)), (0, s.lc)(this, e));
     }
     _updateSessionFromEvent(e, t) {
         let n = "fatal" === t.level,
@@ -232,8 +232,8 @@ class w {
             .then((n) => {
                 if (null === n)
                     throw (
-                        (this.recordDroppedEvent("event_processor", u, e),
-                        new h.U("An event processor returned `null`, will not send event.", "log"))
+                        this.recordDroppedEvent("event_processor", u, e),
+                        new h.U("An event processor returned `null`, will not send event.", "log")
                     );
                 return t.data && !0 === t.data.__sentry__
                     ? n
@@ -305,18 +305,18 @@ class w {
             .then(null, (e) => {
                 if (e instanceof h.U) throw e;
                 throw (
-                    (this.captureException(e, { data: { __sentry__: !0 }, originalException: e }),
+                    this.captureException(e, { data: { __sentry__: !0 }, originalException: e }),
                     new h.U(`Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.
-Reason: ${e}`))
+Reason: ${e}`)
                 );
             });
     }
     _process(e) {
-        this._numProcessing++,
+        (this._numProcessing++,
             e.then(
                 (e) => (this._numProcessing--, e),
                 (e) => (this._numProcessing--, e),
-            );
+            ));
     }
     _clearOutcomes() {
         let e = this._outcomes;
@@ -363,22 +363,22 @@ var x = n(588130),
 class O extends w {
     constructor(e) {
         const t = { parentSpanIsAlwaysRootSpan: !0, ...e };
-        !(function (e, t, n = [t], r = "npm") {
+        (!(function (e, t, n = [t], r = "npm") {
             let i = e._metadata || {};
-            i.sdk ||
+            (i.sdk ||
                 (i.sdk = {
                     name: `sentry.javascript.${t}`,
                     packages: n.map((e) => ({ name: `${r}:@sentry/${e}`, version: "8.55.0" })),
                     version: "8.55.0",
                 }),
-                (e._metadata = i);
+                (e._metadata = i));
         })(t, "browser", ["browser"], I.jf.SENTRY_SDK_SOURCE || (0, x.e)()),
             super(t),
             t.sendClientReports &&
                 I.jf.document &&
                 I.jf.document.addEventListener("visibilitychange", () => {
                     "hidden" === I.jf.document.visibilityState && this._flushOutcomes();
-                });
+                }));
     }
     eventFromException(e, t) {
         return (0, T.u)(this._options.stackParser, e, t, this._options.attachStacktrace);
@@ -395,6 +395,6 @@ class O extends w {
         this.sendEnvelope(t);
     }
     _prepareEvent(e, t, n) {
-        return (e.platform = e.platform || "javascript"), super._prepareEvent(e, t, n);
+        return ((e.platform = e.platform || "javascript"), super._prepareEvent(e, t, n));
     }
 }

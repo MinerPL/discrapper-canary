@@ -26,7 +26,7 @@ function p(e) {
         text: f.intl.string(f.t.Ve9Ge6),
         icon: a.GiftIcon,
         onClick: () => {
-            n(), t(), p(m.i.TAKE_ACTION);
+            (n(), t(), p(m.i.TAKE_ACTION));
         },
     };
     return (0, l.jsxs)(l.Fragment, {
@@ -45,7 +45,7 @@ function p(e) {
                 action: v,
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    t(), p(m.i.USER_DISMISS);
+                    (t(), p(m.i.USER_DISMISS));
                 },
             }),
         ],

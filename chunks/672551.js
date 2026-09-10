@@ -35,7 +35,7 @@ class x extends a.PureComponent {
             a = p.Ay.getGuildFolders().map((e) =>
                 e.folderId === t ? { ...e, folderName: l, folderColor: (0, c.rk)(s) } : e,
             );
-        (0, h.um)(a), this.close();
+        ((0, h.um)(a), this.close());
     };
     render() {
         let { transitionState: e, onClose: t } = this.props,

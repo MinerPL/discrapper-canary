@@ -14,27 +14,27 @@ class s extends n.AbstractParserWithWordBoundaryChecking {
         switch (r) {
             case "gisteren":
                 let u = new Date(o.getTime());
-                u.setDate(u.getDate() - 1), (0, i.assignSimilarDate)(s, u);
+                (u.setDate(u.getDate() - 1), (0, i.assignSimilarDate)(s, u));
                 break;
             case "van":
                 (0, i.assignSimilarDate)(s, o);
                 break;
             case "morgen":
                 let l = new Date(o.getTime());
-                l.setDate(l.getDate() + 1), (0, i.assignSimilarDate)(s, l), (0, i.implySimilarTime)(s, l);
+                (l.setDate(l.getDate() + 1), (0, i.assignSimilarDate)(s, l), (0, i.implySimilarTime)(s, l));
         }
         switch (n) {
             case "ochtend":
-                s.imply("meridiem", a.Meridiem.AM), s.imply("hour", 6);
+                (s.imply("meridiem", a.Meridiem.AM), s.imply("hour", 6));
                 break;
             case "middag":
-                s.imply("meridiem", a.Meridiem.AM), s.imply("hour", 12);
+                (s.imply("meridiem", a.Meridiem.AM), s.imply("hour", 12));
                 break;
             case "namiddag":
-                s.imply("meridiem", a.Meridiem.PM), s.imply("hour", 15);
+                (s.imply("meridiem", a.Meridiem.PM), s.imply("hour", 15));
                 break;
             case "avond":
-                s.imply("meridiem", a.Meridiem.PM), s.imply("hour", 20);
+                (s.imply("meridiem", a.Meridiem.PM), s.imply("hour", 20));
         }
         return s;
     }

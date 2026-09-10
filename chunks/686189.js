@@ -14,7 +14,7 @@ function o(e) {
             if (null == d || "SHOULD_LOAD" !== c) return;
             u("LOADING");
             let e = new Image();
-            (e.src = d), (e.onload = () => u("COMPLETE"));
+            ((e.src = d), (e.onload = () => u("COMPLETE")));
         }, [d, c]),
         (0, l.useEffect)(() => {
             if (o) return;

@@ -31,7 +31,7 @@ function f(t) {
                       variant: "primary",
                       size: "md",
                       onClick: (t) => {
-                          s?.(t), r();
+                          (s?.(t), r());
                       },
                   },
               ]

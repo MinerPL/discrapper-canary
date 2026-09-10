@@ -6,13 +6,13 @@ var a = n(582128),
 class o extends a.Component {
     getFileContents() {
         let { fileContents: e } = this.props;
-        return "function" == typeof e && (e = e()), e;
+        return ("function" == typeof e && (e = e()), e);
     }
     handleFileDownload = (e) => {
         e.preventDefault();
         let t = this.getFileContents(),
             { fileName: n, onDownload: a } = this.props;
-        i.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), a?.();
+        (i.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), a?.());
     };
     downloadNative(e, t) {
         s.A.fileManager.saveWithDialog(e, t);

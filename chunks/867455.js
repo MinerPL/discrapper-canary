@@ -1,4 +1,4 @@
-n.d(t, { A: () => O }), n(938796);
+(n.d(t, { A: () => O }), n(938796));
 var i = n(392421),
     r = n(636537),
     a = n(228366),
@@ -40,15 +40,15 @@ function C(e, t) {
 let O = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), N(e, n);
+        return (t && (n.locked = !0), N(e, n));
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
-        return t && (await this.unarchiveThread(e, !1)), N(e, { locked: !0, archived: t });
+        return (t && (await this.unarchiveThread(e, !1)), N(e, { locked: !0, archived: t }));
     },
     async unlockThread(e) {
         let t = e.isArchivedThread();
-        return t && (await this.unarchiveThread(e, !0)), N(e, { locked: !1, archived: t });
+        return (t && (await this.unarchiveThread(e, !0)), N(e, { locked: !1, archived: t }));
     },
     async unarchiveThread(e, t) {
         let n = { archived: !1 },
@@ -58,7 +58,7 @@ let O = {
             return await N(e, n);
         } catch (e) {
             throw (
-                (e.body?.code === m.t02.TOO_MANY_THREADS
+                e.body?.code === m.t02.TOO_MANY_THREADS
                     ? s.A.show({
                           title: i ? S.intl.string(S.t.kwyWNX) : S.intl.string(S.t["PeIE/r"]),
                           body: i ? S.intl.string(S.t.KGaiEK) : S.intl.string(S.t.P0wT5S),
@@ -76,7 +76,7 @@ let O = {
                                 body: i ? S.intl.string(S.t.hIXtcT) : S.intl.string(S.t["96UEzi"]),
                             })
                           : s.A.show({ title: S.intl.string(S.t.j2d6Km), body: S.intl.string(S.t.fEptJP) }),
-                e)
+                e
             );
         }
     },
@@ -155,10 +155,10 @@ let O = {
     async replacePin(e, t) {
         let n = e.merge({ flags: e.flags & ~g.lx.PINNED }),
             i = t.merge({ flags: t.flags | g.lx.PINNED });
-        a.h.dispatch({ type: "THREAD_UPDATE", channel: n }),
+        (a.h.dispatch({ type: "THREAD_UPDATE", channel: n }),
             a.h.dispatch({ type: "THREAD_UPDATE", channel: i }),
             await this.unarchiveThreadIfNecessary(e.id),
-            await this.unarchiveThreadIfNecessary(t.id);
+            await this.unarchiveThreadIfNecessary(t.id));
         try {
             await r.Bo.patch({
                 url: m.Rsh.CHANNEL(e.id),
@@ -166,7 +166,7 @@ let O = {
                 rejectWithError: !0,
             });
         } catch {
-            a.h.dispatch({ type: "THREAD_UPDATE", channel: e }), a.h.dispatch({ type: "THREAD_UPDATE", channel: t });
+            (a.h.dispatch({ type: "THREAD_UPDATE", channel: e }), a.h.dispatch({ type: "THREAD_UPDATE", channel: t }));
             return;
         }
         try {
@@ -176,9 +176,9 @@ let O = {
         }
     },
     openThreadCreationForMobile(e, t, n) {
-        (0, o.zV)(m.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
+        ((0, o.zV)(m.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
             l.A.changeThreadSettings(e.id, { parentMessageId: t, isPrivate: !1, location: n }),
-            null == t && (0, d.Gf)({ channelId: e.id, command: null, section: null });
+            null == t && (0, d.Gf)({ channelId: e.id, command: null, section: null }));
     },
     async setNotificationSettings(e, t) {
         return (
@@ -279,8 +279,8 @@ let O = {
                         a.h.dispatch({ type: "SUMMARIZE_THREAD_SUCCESS", channelId: e.id });
                     })
                     .catch(() => {
-                        a.h.dispatch({ type: "SUMMARIZE_THREAD_FAILURE", channelId: e.id }),
-                            s.A.show({ title: S.intl.string(S.t.j2d6Km), body: S.intl.string(S.t.fEptJP) });
+                        (a.h.dispatch({ type: "SUMMARIZE_THREAD_FAILURE", channelId: e.id }),
+                            s.A.show({ title: S.intl.string(S.t.j2d6Km), body: S.intl.string(S.t.fEptJP) }));
                     })
             );
     },

@@ -9,7 +9,7 @@ var n = i(562708),
     u = i(652215),
     c = i(375708);
 function p() {
-    return (0, l.IO)(), (0, a.pX)(u.BVt.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
+    return ((0, l.IO)(), (0, a.pX)(u.BVt.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve());
 }
 function g(t) {
     let { underageMessage: e, transitionState: i } = t;

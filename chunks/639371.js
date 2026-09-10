@@ -1,6 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.AudioTypes = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.AudioTypes = void 0));
 class n {}
-(t.AudioTypes = n),
+((t.AudioTypes = n),
     (n.AAC = {
         extension: "aac",
         mimeType: "audio/aac",
@@ -58,4 +58,4 @@ class n {}
         mimeType: "audio/wav",
         description: "Waveform Audio File Format",
         signatures: [{ sequence: [82, 73, 70, 70, 87, 65, 86, 69, 102, 109, 116, 32], skippedBytes: [4, 5, 6, 7] }],
-    });
+    }));

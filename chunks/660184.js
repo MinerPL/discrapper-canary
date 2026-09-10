@@ -37,24 +37,24 @@ function C(e) {
             function c() {
                 if (0 === i.length) return;
                 let e = i;
-                (i = []),
+                ((i = []),
                     null != r
                         ? u.push((0, l.jsx)("span", { className: r, children: e }, `word-${u.length}`))
-                        : u.push(...e);
+                        : u.push(...e));
             }
             return (
                 (0, g.p)(t).forEach((t, r) => {
                     R.lastIndex = 0;
                     let d = R.test(t);
                     if (0 === t.trim().length) {
-                        c(), u.push((0, l.jsx)("span", { children: t }, `space-${r}`));
+                        (c(), u.push((0, l.jsx)("span", { children: t }, `space-${r}`)));
                         return;
                     }
                     let f = null != o && o.length > 0 && !d ? o[e % o.length] : void 0,
                         m = null != f ? { color: f } : void 0;
-                    null == a || d || (m = { ...m, "--custom-letter-index": s }),
+                    (null == a || d || (m = { ...m, "--custom-letter-index": s }),
                         i.push((0, l.jsx)("span", { className: d ? n : a, style: m, children: t }, r)),
-                        !d && (e++, s++);
+                        !d && (e++, s++));
                 }),
                 c(),
                 u
@@ -137,7 +137,7 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                                   };
                         break;
                     case o.z.PRISM:
-                        (l = t),
+                        ((l = t),
                             (s = u),
                             (i =
                                 0 === l.length
@@ -149,7 +149,7 @@ let v = [u.x.CHERRY_BOMB, u.x.CHICLE],
                                           ).join(", "),
                                           "--custom-display-name-styles-prism-cycle": `max(${s}ch, ${L.LP}px)`,
                                           [T]: l[0],
-                                      });
+                                      }));
                         break;
                     case o.z.GUMMY:
                     case o.z.NEON:

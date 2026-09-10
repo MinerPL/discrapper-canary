@@ -32,6 +32,6 @@ function E(e) {
         case r.M.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER:
             return 0;
         default:
-            return (0, a.dr)(e, { andFail: !1 }), 0;
+            return ((0, a.dr)(e, { andFail: !1 }), 0);
     }
 }

@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => N });
+(a.r(t), a.d(t, { default: () => N }));
 var n = a(477900),
     s = a(582128),
     r = a(503698),
@@ -29,12 +29,12 @@ function N(e) {
         { currentBadge: I, prevBadge: U, levelUpVideoSrc: L } = t,
         P = s.useCallback(() => {
             let e = 700 * (I.id !== g.Ac.PREMIUM_TENURE_1_MONTH);
-            (A.current.currentTime = 0),
+            ((A.current.currentTime = 0),
                 setTimeout(() => {
-                    j(!0), A.current.play();
-                }, e);
+                    (j(!0), A.current.play());
+                }, e));
         }, [I.id]);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         a && P();
     }, [a, P]),
         (0, m.A)(
@@ -47,15 +47,15 @@ function N(e) {
         ),
         s.useEffect(() => {
             null != A.current && A.current.load();
-        }, []);
+        }, []));
     let w = s.useCallback(() => {
-            y(!1),
+            (y(!1),
                 j(!1),
                 P(),
                 (R.current.style.display = "none"),
                 R.current.offsetWidth,
                 (R.current.style.display = ""),
-                p.default.track(x.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: I.id });
+                p.default.track(x.HAw.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: I.id }));
         }, [I.id, P]),
         C = {
             "--custom-old-badge-color": `linear-gradient(to right, ${t.prevBadgeTextGradient ?? "transparent"})`,

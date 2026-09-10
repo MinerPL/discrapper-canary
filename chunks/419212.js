@@ -43,10 +43,10 @@ let A = new E(r.h, {
         s = new a.Ey(t);
     },
     SKU_PURCHASE_START: function (e) {
-        (d = !0 === e.isGift ? (e.loadId ?? null) : null), (c = !1);
+        ((d = !0 === e.isGift ? (e.loadId ?? null) : null), (c = !1));
     },
     SKU_PURCHASE_SUCCESS: function (e) {
-        (l = e.giftCode), (o = e.skuId), null != e.loadId && e.loadId === d && (c = !0);
+        ((l = e.giftCode), (o = e.skuId), null != e.loadId && e.loadId === d && (c = !0));
     },
     SKU_PURCHASE_FAIL: function (e) {
         s = e.error;

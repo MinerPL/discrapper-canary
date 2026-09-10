@@ -28,12 +28,12 @@ let u = function (t) {
             [n, u],
         ),
         h = i.useCallback(() => {
-            d(),
+            (d(),
                 P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, I.openModalLazy)(async () => {
                     let { default: t } = await E(679276);
                     return (E) => (0, e.jsx)(t, { channelId: n, messageId: u, ...E });
-                });
+                }));
         }, [n, u, d, P]);
     return (
         i.useEffect(() => {
@@ -45,8 +45,8 @@ let u = function (t) {
                 if (g)
                     return M.intl.format(M.t.KEPOlE, {
                         handleOnHelpUrlHook: () => {
-                            l.A.openUrl(R.A.getArticleURL(c.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                            (l.A.openUrl(R.A.getArticleURL(c.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
                         },
                     });
                 let t = M.intl.string(M.t.RUw0ZC),
@@ -61,20 +61,20 @@ let u = function (t) {
                     ? {
                           text: S,
                           onClick: function () {
-                              d(),
+                              (d(),
                                   P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
                                   l.A.showAgeVerificationGetStartedModal({
                                       entryPoint: o.q1.SENSITIVE_MEDIA_LEARN_MORE,
-                                  });
+                                  }));
                           },
                       }
                     : f
                       ? {
                             text: M.intl.string(M.t["9D+zGX"]),
                             onClick: function () {
-                                P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                (P(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
                                     (0, C.openUserSettings)(a.X.CONTENT_FILTERS_SETTING),
-                                    d();
+                                    d());
                             },
                         }
                       : {

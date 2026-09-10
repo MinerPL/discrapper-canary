@@ -94,7 +94,8 @@ function T(e) {
                                 text: h.intl.string(h.t.N8M39C),
                                 fullWidth: !0,
                                 onClick: function () {
-                                    i(), (0, C.vn)(t, _.VV.GUILD_SPACE, { source: "Leaderboard Winner Badge Popout" });
+                                    (i(),
+                                        (0, C.vn)(t, _.VV.GUILD_SPACE, { source: "Leaderboard Winner Badge Popout" }));
                                 },
                             }),
                         }),

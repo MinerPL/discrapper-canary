@@ -61,10 +61,10 @@ function E(e) {
         if (a) {
             let t = s.getAttribute(g);
             if (null == t || "" === t) return;
-            e.preventDefault(), e.clipboardData.setData("text/plain", (0, f.KW)(t));
+            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, f.KW)(t)));
             return;
         }
-        e.preventDefault(),
+        (e.preventDefault(),
             e.clipboardData.setData(
                 "text/plain",
                 (function (e) {
@@ -87,7 +87,7 @@ function E(e) {
                             if ("BR" === i) return "\n";
                             let s = "";
                             for (let l = 0; l < t.childNodes.length; l++) s += e(t.childNodes[l], n + 1);
-                            return x.has(i) && "" !== s && !s.endsWith("\n") && (s += "\n"), s;
+                            return (x.has(i) && "" !== s && !s.endsWith("\n") && (s += "\n"), s);
                         })(e.childNodes[n]);
                     return t.endsWith("\n") ? t.slice(0, -1) : t;
                 })(l),
@@ -102,7 +102,7 @@ function E(e) {
                 }),
                 (n = document.createElement("div")).appendChild(t),
                 n.innerHTML),
-            );
+            ));
     }
 }
 var I = n(375708),

@@ -40,11 +40,11 @@ let j = function (e) {
         { analyticsLocations: n } = (0, A.Ay)(),
         { isHidden: i } = x.A.useConfig({ location: "CollectiblesGiftPremiumPlanSelectUpsell" });
     function r() {
-        t(),
+        (t(),
             (0, v.pX)(T.BVt.COLLECTIBLES_SHOP),
             (0, _.Cz)({ analyticsSource: I.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
             (0, y.jH)(),
-            (0, P.dF)(g.Zt);
+            (0, P.dF)(g.Zt));
     }
     return i
         ? null
@@ -215,7 +215,7 @@ function X(e) {
                                     "aria-pressed": t,
                                     className: q.Jy,
                                     onClick: () => {
-                                        S("preset"), c(e);
+                                        (S("preset"), c(e));
                                     },
                                     children: [
                                         (0, l.jsx)("div", {
@@ -267,7 +267,7 @@ function X(e) {
                                         if (!/^\d*$/.test(t)) return;
                                         if ("" !== t && Number(t) > 50) {
                                             let e = String(50);
-                                            S("custom"), I(e), g(50), c(50);
+                                            (S("custom"), I(e), g(50), c(50));
                                             return;
                                         }
                                         I(t);
@@ -365,7 +365,7 @@ function ep(e) {
         c = !u || a <= h.y0,
         m = !u || a >= 50;
     function p(e) {
-        s(e), r(e);
+        (s(e), r(e));
     }
     return (0, l.jsxs)("div", {
         className: ed.kL,
@@ -562,7 +562,7 @@ function eb(e) {
         K = null != I && l.includes(I) ? (0, U.y8)(I, !1, A, W) : void 0,
         Z = null != B ? B.id : void 0,
         q = null != Z && l.includes(Z);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         if (q) return void d(Z, { shouldUpdateQuantity: !1 });
         let e = !A && null != I && l.includes(I) ? I : null;
         if (null == M || A) d(e ?? l[0]);
@@ -573,7 +573,7 @@ function eb(e) {
     }, [q, A, l, M, d, Z, I]),
         i.useEffect(() => {
             b && null != x && x.length > 0 && T(x);
-        }, [x, T, b]);
+        }, [x, T, b]));
     let { ref: z, ...Q } = (0, o._u)(),
         $ = B?.id != null ? (0, U.y8)(B.id, !1, A, W) : void 0,
         { ipCountryCode: J } = (0, eC.A)(),

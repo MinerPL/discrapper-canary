@@ -46,7 +46,7 @@ function I(e) {
                 ? v.current ||
                   (null === A.current &&
                       (A.current = setTimeout(() => {
-                          m(), (v.current = !0), (A.current = null);
+                          (m(), (v.current = !0), (A.current = null));
                       }, 1e3)))
                 : ((v.current = !1), null !== A.current && (clearTimeout(A.current), (A.current = null)));
         }, 0.5);

@@ -11,7 +11,7 @@ class d extends i.PureComponent {
     componentDidMount() {
         let { intervalDuration: t, onInterval: e } = this.props;
         this._interval = setInterval(() => {
-            this.forceUpdate(), e?.();
+            (this.forceUpdate(), e?.());
         }, t);
     }
     componentWillUnmount() {

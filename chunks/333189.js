@@ -138,7 +138,7 @@ function L(e) {
         v = r.useCallback(() => {
             b.current?.scrollPageDown({ animate: !0 });
         }, [b]);
-    r.useEffect(
+    (r.useEffect(
         () => (
             E._.subscribe(N.jej.SCROLL_PAGE_UP, p),
             () => {
@@ -161,7 +161,7 @@ function L(e) {
         }, [s, d]),
         r.useEffect(() => {
             b.current?.scrollToTop();
-        }, [b, l]);
+        }, [b, l]));
     let y = r.useCallback(
         (e) => {
             let {
@@ -183,7 +183,7 @@ function L(e) {
         [l, j],
     );
     function D(e) {
-        m(e), (0, h.oR)(e);
+        (m(e), (0, h.oR)(e));
     }
     return null == d
         ? null

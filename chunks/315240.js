@@ -1,4 +1,4 @@
-n.d(t, { A: () => ea, u: () => G }), n(321073);
+(n.d(t, { A: () => ea, u: () => G }), n(321073));
 var i,
     l,
     r = n(17928),
@@ -41,7 +41,7 @@ class v {
     lastActivityAtMs;
     scoreInfo = { rawSignalsScore: {} };
     constructor(e, t) {
-        (this.signals = e), (this.providers = t), (this.lastActivityAtMs = Date.now());
+        ((this.signals = e), (this.providers = t), (this.lastActivityAtMs = Date.now()));
     }
     _computeMentionScore(e) {
         if (this.signals.mentionCount <= 0) return 0;
@@ -66,15 +66,15 @@ class v {
             this.signals.unread)
         ) {
             let n = y(this.signals.lastUnreadAtMs, e, 18e5);
-            (t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n);
+            ((t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n));
         }
         let n = T(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
-        return (this.scoreInfo.rawSignalsScore.recentMessageAuthorIds = n), (t += 1.2 * n);
+        return ((this.scoreInfo.rawSignalsScore.recentMessageAuthorIds = n), (t += 1.2 * n));
     }
     _computeActivityScore(e) {
         if (!this.signals.isTyping) return 0;
         let t = T(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
-        return (this.scoreInfo.rawSignalsScore.typingUserIdsWithTimestampMs = t), 1.5 * t;
+        return ((this.scoreInfo.rawSignalsScore.typingUserIdsWithTimestampMs = t), 1.5 * t);
     }
     getScoreWithoutPenalty(e) {
         let t = this._computeActivityScore(e),
@@ -89,7 +89,7 @@ class v {
     }
     computeScore(e) {
         let t = x(e, this.lastActivityAtMs);
-        return (this.scoreInfo.penalty = t), this.getScoreWithoutPenalty(e) * (1 - t);
+        return ((this.scoreInfo.penalty = t), this.getScoreWithoutPenalty(e) * (1 - t));
     }
     pruneSignals(e) {
         if (this.signals.typingUserIdsWithTimestampMs.size > 0) {
@@ -114,7 +114,7 @@ class v {
         }
     }
     updateSignals(e, t) {
-        (this.lastActivityAtMs = t), (this.signals = e);
+        ((this.lastActivityAtMs = t), (this.signals = e));
     }
 }
 class M {
@@ -124,10 +124,10 @@ class M {
     scoreInfo = { rawSignalsScore: {} };
     _textualScore;
     constructor(e, t) {
-        (this.signals = e),
+        ((this.signals = e),
             (this.providers = t),
             (this._textualScore = new v(e, t)),
-            (this.lastActivityAtMs = Date.now());
+            (this.lastActivityAtMs = Date.now()));
     }
     _computeTextualScore(e) {
         let t = this._textualScore.getScoreWithoutPenalty(e);
@@ -143,12 +143,12 @@ class M {
     _computeVoiceUsersScore(e) {
         if (0 === this.signals.voiceUsersWithJoinTimestampMs.size) return 0;
         let t = T(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
-        return (this.scoreInfo.rawSignalsScore.voiceUsersWithJoinTimestampMs = t), 1.25 * t;
+        return ((this.scoreInfo.rawSignalsScore.voiceUsersWithJoinTimestampMs = t), 1.25 * t);
     }
     _computeVoiceActivityScore(e) {
         let t = 0;
-        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, y(this.signals.lastVoiceJoinAtMs, e, 12e4))),
-            (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t);
+        (null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, y(this.signals.lastVoiceJoinAtMs, e, 12e4))),
+            (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t));
         let n = T(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
         return (
             (this.scoreInfo.rawSignalsScore.lastUnmuteActivityAtMs = n),
@@ -164,7 +164,7 @@ class M {
         let t = T(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         this.scoreInfo.rawSignalsScore.streamUsersWithTimestampMs = t;
         let n = T(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
-        return (this.scoreInfo.rawSignalsScore.videoUsersWithTimestampMs = n), 2 * (t + n);
+        return ((this.scoreInfo.rawSignalsScore.videoUsersWithTimestampMs = n), 2 * (t + n));
     }
     computeScore(e) {
         let t = this._computeTextualScore(e),
@@ -187,15 +187,15 @@ class M {
             for (let [i, l] of t.entries()) e - l <= 12e4 && n.set(i, l);
             return n;
         }
-        this._textualScore.pruneSignals(e),
+        (this._textualScore.pruneSignals(e),
             (this.signals = {
                 ...this.signals,
                 lastUnmuteActivityAtMs: t(this.signals.lastUnmuteActivityAtMs),
                 lastUndeafenActivityAtMs: t(this.signals.lastUndeafenActivityAtMs),
-            });
+            }));
     }
     updateSignals(e, t) {
-        this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t);
+        (this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t));
     }
 }
 function y(e, t, n) {
@@ -242,12 +242,12 @@ class w {
     _activeNowScoreSource;
     _score = 0;
     constructor(e, t, n) {
-        (this.candidate = e),
+        ((this.candidate = e),
             (this.signals = t),
             "GUILD_VOICE" === e.kind || "GROUP_DM" === e.kind
                 ? (this._activeNowScoreSource = new M(t, n))
                 : (this._activeNowScoreSource = new v(t, n)),
-            this.recomputeScore(Date.now());
+            this.recomputeScore(Date.now()));
     }
     get score() {
         return this._score;
@@ -259,7 +259,7 @@ class w {
         return this._score <= 0;
     }
     recomputeScore(e) {
-        return (this._score = this._activeNowScoreSource.computeScore(e)), this._score;
+        return ((this._score = this._activeNowScoreSource.computeScore(e)), this._score);
     }
     prepareForUpdate(e) {
         return (
@@ -299,13 +299,13 @@ class F {
         return this._channelsByChannelId.get(e) ?? null;
     }
     upsert(e) {
-        this._channelsByChannelId.set(e.candidate.channelId, e), (this._isDirty = !0);
+        (this._channelsByChannelId.set(e.candidate.channelId, e), (this._isDirty = !0));
     }
     delete(e) {
         this._channelsByChannelId.has(e) && (this._channelsByChannelId.delete(e), (this._isDirty = !0));
     }
     applyBatch(e) {
-        e(), (this._isDirty = !0);
+        (e(), (this._isDirty = !0));
     }
     rebuildSortedIndexIfDirty(e) {
         if (!this._isDirty) return;
@@ -316,9 +316,9 @@ class F {
         }
         t.sort((e, t) => (e.score !== t.score ? t.score - e.score : e.channelId < t.channelId ? -1 : 1));
         let n = t.slice(0, this._maxItems);
-        (this._sortedScoreIndex = n),
+        ((this._sortedScoreIndex = n),
             (this._sortedChannelIdSet = new Set(n.map((e) => e.channelId))),
-            (this._isDirty = !1);
+            (this._isDirty = !1));
     }
     getSortedChannels() {
         let e = [];
@@ -335,10 +335,10 @@ class F {
         return this._sortedChannelIdSet.has(e);
     }
     clear() {
-        this._channelsByChannelId.clear(),
+        (this._channelsByChannelId.clear(),
             (this._sortedScoreIndex = []),
             this._sortedChannelIdSet.clear(),
-            (this._isDirty = !1);
+            (this._isDirty = !1));
     }
 }
 let j = !1,
@@ -407,7 +407,7 @@ function $(e, t) {
 function K() {
     let e = Z({ includeVcProbability: !1 }),
         t = Z({ includeVcProbability: !0 });
-    H.rebuildSortedIndexIfDirty((t) => $(t, e)), B.rebuildSortedIndexIfDirty((e) => $(e, t));
+    (H.rebuildSortedIndexIfDirty((t) => $(t, e)), B.rebuildSortedIndexIfDirty((e) => $(e, t)));
 }
 function q() {
     return {
@@ -465,7 +465,7 @@ function ee(e, t, n) {
     let r = H.getChannel(e);
     if (null != r) return r;
     let s = new w(l, t, n);
-    return H.upsert(s), s;
+    return (H.upsert(s), s);
 }
 function et(e, t, n) {
     if (!Q(e, "VOICE")) return null;
@@ -484,7 +484,7 @@ function et(e, t, n) {
     let r = B.getChannel(e);
     if (null != r) return r;
     let s = new w(l, t, n);
-    return B.upsert(s), s;
+    return (B.upsert(s), s);
 }
 let en = 30 * p.A.Millis.MINUTE;
 function ei() {
@@ -509,12 +509,12 @@ function ei() {
                     let n = m.default.extractTimestamp(e);
                     if (n < t || null != H.getChannel(i)) continue;
                     let r = q();
-                    (r.lastMessageAtMs = n),
+                    ((r.lastMessageAtMs = n),
                         (r.unread = g.Ay.hasUnread(i)),
                         (r.mentionCount = g.Ay.getMentionCount(i)),
                         r.unread && (r.lastUnreadAtMs = n),
                         r.mentionCount > 0 && (r.lastDirectMentionAtMs = n),
-                        ee(i, r, l);
+                        ee(i, r, l));
                 }
                 if (s.isVocal()) {
                     if (null != B.getChannel(i)) continue;
@@ -536,7 +536,7 @@ function el(e) {
     if (null == n || !f.Ay.isGuildOrCategoryOrChannelMuted(n, e)) return !1;
     let i = null != H.getChannel(e),
         l = null != B.getChannel(e);
-    return i && H.delete(e), l && B.delete(e), i || l;
+    return (i && H.delete(e), l && B.delete(e), i || l);
 }
 class er extends r.Ay.Store {
     static displayName = "OverlayActiveNowStore";
@@ -598,12 +598,12 @@ let ea = new er(
                   if (e.isFavorite) {
                       let e = null != H.getChannel(t),
                           n = null != B.getChannel(t);
-                      return e && H.delete(t), n && B.delete(t), e || n;
+                      return (e && H.delete(t), n && B.delete(t), e || n);
                   }
                   return !1;
               }),
               OVERLAY_MOUNTED: es(function (e) {
-                  return W(!0), ei(), !0;
+                  return (W(!0), ei(), !0);
               }),
               OVERLAY_UPDATE_OVERLAY_METHOD: es(function (e) {
                   let { overlayMethod: t } = e;
@@ -618,7 +618,7 @@ let ea = new er(
                   return !e.locked && (W(!0), K(), !0);
               }),
               FRIENDS_LIST_POPOUT_MOUNTED: es(function () {
-                  return (k = !0), W(!0), ei(), !0;
+                  return ((k = !0), W(!0), ei(), !0);
               }),
               MESSAGE_CREATE: es(function (e) {
                   if (!j || e.optimistic) return !1;
@@ -750,7 +750,7 @@ let ea = new er(
                                           let u = new Map(r.lastUnmuteActivityAtMs);
                                           u.delete(e);
                                           let d = new Map(r.lastUndeafenActivityAtMs);
-                                          d.delete(e),
+                                          (d.delete(e),
                                               l.updateSignalsAndRescore(
                                                   {
                                                       voiceUsersWithJoinTimestampMs: s,
@@ -762,7 +762,7 @@ let ea = new er(
                                                   t,
                                               ),
                                               l.prunable && B.delete(n),
-                                              (i = !0);
+                                              (i = !0));
                                       })(s),
                                   null != r)
                               ) {
@@ -797,7 +797,7 @@ let ea = new er(
                                       let n = p.get(e) ?? null;
                                       (null == n || t - n >= 15e3) && p.set(e, t);
                                   }
-                                  d.updateSignalsAndRescore(
+                                  (d.updateSignalsAndRescore(
                                       {
                                           voiceUsersWithJoinTimestampMs: g,
                                           lastVoiceJoinAtMs: h ? t : c.lastVoiceJoinAtMs,
@@ -809,7 +809,7 @@ let ea = new er(
                                       t,
                                   ),
                                       d.prunable && B.delete(r),
-                                      (i = !0);
+                                      (i = !0));
                               }
                           }
                       }),
@@ -818,10 +818,10 @@ let ea = new er(
                   );
               }),
               VOICE_CHANNEL_SELECT: es(function (e) {
-                  return K(), !0;
+                  return (K(), !0);
               }),
               RTC_CONNECTION_STATE: es(function (e) {
-                  return K(), !0;
+                  return (K(), !0);
               }),
               CHANNEL_SELECT: es(function (e) {
                   let { channelId: t } = e;
@@ -852,7 +852,7 @@ let ea = new er(
               }),
               LOGOUT: es(function () {
                   let e = H.size > 0 || B.size > 0;
-                  return H.clear(), B.clear(), (j = !1), (k = !1), (V = null), e;
+                  return (H.clear(), B.clear(), (j = !1), (k = !1), (V = null), e);
               }),
           },
 );

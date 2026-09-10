@@ -37,7 +37,7 @@ function d(e) {
         }),
         s = (0, i.useMemo)(() => {
             let e;
-            return null != (e = o.get(t)) || ((e = { threshold: t }), o.set(t, e)), e;
+            return (null != (e = o.get(t)) || ((e = { threshold: t }), o.set(t, e)), e);
         }, [t]);
     return l(a.current, s, n);
 }

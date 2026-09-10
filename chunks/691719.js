@@ -3,7 +3,7 @@ var n = r(747773);
 function i(e, t) {
     let r = [],
         i = document.scrollingElement || document.documentElement;
-    for (; e && ((0, n.o)(e, t) && r.push(e), e !== i); ) e = e.parentElement;
+    for (; e && ((0, n.o)(e, t) && r.push(e), e !== i);) e = e.parentElement;
     return r;
 }
 var o = r(644255);

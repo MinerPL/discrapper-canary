@@ -1,4 +1,4 @@
-n.r(s), n.d(s, { OpenViduRecordingProvider: () => r });
+(n.r(s), n.d(s, { OpenViduRecordingProvider: () => r }));
 var t = n(772292),
     r = class {
         async connect(e) {
@@ -8,7 +8,9 @@ var t = n(772292),
                         s = document.getElementById(e);
                     if (s) return { id: e, element: s };
                     let n = document.createElement("div");
-                    return (n.id = e), (n.style.display = "none"), document.body.appendChild(n), { id: e, element: n };
+                    return (
+                        (n.id = e), (n.style.display = "none"), document.body.appendChild(n), { id: e, element: n }
+                    );
                 })(),
                 r = new s(),
                 i = r.initSession(),
@@ -21,21 +23,21 @@ var t = n(772292),
                     videoSource: o ?? !1,
                     frameRate: 30,
                 });
-            i.on("exception", (s) => {
+            (i.on("exception", (s) => {
                 e.events?.onSessionException?.({ name: s?.name, message: s?.message, sessionId: i.sessionId });
             }),
                 c.on("streamCreated", () => {
                     e.events?.onPublisherCreated?.({ sessionId: i.sessionId, streamId: c.stream?.streamId });
                 }),
                 await i.connect(e.sessionToken),
-                e.events?.onSessionConnected?.(i.sessionId);
+                e.events?.onSessionConnected?.(i.sessionId));
             try {
                 await i.publish(c);
             } catch (n) {
                 let s = n instanceof Error ? n.message : String(n);
                 throw (
-                    (e.events?.onPublisherError?.({ message: s, sessionId: i.sessionId, streamId: c.stream?.streamId }),
-                    n)
+                    e.events?.onPublisherError?.({ message: s, sessionId: i.sessionId, streamId: c.stream?.streamId }),
+                    n
                 );
             }
             return {
@@ -49,13 +51,13 @@ var t = n(772292),
                 },
                 disconnect: async () => {
                     try {
-                        i.disconnect(),
+                        (i.disconnect(),
                             e.stream.getTracks().forEach((e) => {
                                 e.stop();
-                            });
+                            }));
                     } finally {
-                        e.events?.onSessionDisconnected?.(i.sessionId),
-                            n.element.parentNode && n.element.parentNode.removeChild(n.element);
+                        (e.events?.onSessionDisconnected?.(i.sessionId),
+                            n.element.parentNode && n.element.parentNode.removeChild(n.element));
                     }
                 },
             };

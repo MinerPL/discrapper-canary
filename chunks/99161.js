@@ -14,7 +14,7 @@ t.d(e, {
                 E = !h && (null == L || "checking" === L || "ineligible" === L);
             if (!E && !I) {
                 let i = "none";
-                h ? (i = "gift") : "eligible" === L ? (i = "already_eligible") : "error" === L && (i = "prior_error"),
+                (h ? (i = "gift") : "eligible" === L ? (i = "already_eligible") : "error" === L && (i = "prior_error"),
                     d.default.track(u.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                         sku_id: e.id,
                         guild_id: _ ?? null,
@@ -24,7 +24,7 @@ t.d(e, {
                         skip_reason: i,
                         error_http_status: m?.state === "error" ? (m.httpStatus ?? null) : null,
                         location_stack: g,
-                    });
+                    }));
             }
             let S = b ?? { hasFinished: !1 };
             E
@@ -110,7 +110,7 @@ t.d(e, {
                       giftingOrigin: y,
                       additionalUserIds: C,
                       onCloseCallback: function () {
-                          (0, o.ET)(), (0, l.z)(), (0, a.closeModal)(r), (S.hasFinished = !0);
+                          ((0, o.ET)(), (0, l.z)(), (0, a.closeModal)(r), (S.hasFinished = !0));
                       },
                       onComplete: function () {
                           S.hasFinished = !0;

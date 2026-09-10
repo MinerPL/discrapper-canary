@@ -28,7 +28,7 @@ function c(e) {
                 innerRef: h,
                 className: o.x,
                 onClick: (t) => {
-                    t.stopPropagation(), e.onClick?.(t);
+                    (t.stopPropagation(), e.onClick?.(t));
                 },
                 children: (0, l.jsxs)(r.E, {
                     className: o.s,

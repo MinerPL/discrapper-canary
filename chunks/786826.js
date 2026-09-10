@@ -44,7 +44,7 @@ function H(e) {
         o = a.useCallback(
             (e, l) => {
                 let { emoji: t, willClose: a } = e;
-                null != t &&
+                (null != t &&
                     (!(function (e, n) {
                         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             t = n.animated ? "a" : "",
@@ -57,7 +57,7 @@ function H(e) {
                         });
                     })(n, t, a),
                     k.VW.focus(n)),
-                    a && l();
+                    a && l());
             },
             [n],
         ),
@@ -252,7 +252,7 @@ function K(e) {
                             previewMarkdown: l,
                             updateState: (e, n, l) => {
                                 let { value: t, selection: a } = l;
-                                void 0 !== t && (e.children = t), null != a && (e.selection = a), e.onChange();
+                                (void 0 !== t && (e.children = t), null != a && (e.selection = a), e.onChange());
                             },
                         }),
                         t
@@ -274,7 +274,7 @@ function K(e) {
         x,
         () => ({
             focus(e) {
-                y.b.resetSelectionToEditorEnd(M), u.rL.toDOMNode(M, M).focus(e);
+                (y.b.resetSelectionToEditorEnd(M), u.rL.toDOMNode(M, M).focus(e));
             },
             blur() {
                 u.rL.toDOMNode(M, M).blur();
@@ -294,7 +294,7 @@ function K(e) {
     let U = a.useCallback(
         (e) => {
             let n = (0, C.WO)(e, { mode: "raw" });
-            n !== Y.current && (V(n), q(!0), k?.(n)), d && z(e.length);
+            (n !== Y.current && (V(n), q(!0), k?.(n)), d && z(e.length));
         },
         [d, k, q],
     );

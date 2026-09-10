@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, Nr: () => v, R3: () => C }), n(938796);
+(n.d(t, { Ay: () => I, Nr: () => v, R3: () => C }), n(938796));
 var s = n(477900),
     i = n(582128),
     l = n(665260),
@@ -65,9 +65,9 @@ function T(e) {
                 if (n.hasFlag(_.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === r.I5.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== r.I5.TEXT_DISPLAY);
-                    t.splice(+!!e, 0, { type: r.I5.TEXT_DISPLAY, content: a, id: "82744" }),
+                    (t.splice(+!!e, 0, { type: r.I5.TEXT_DISPLAY, content: a, id: "82744" }),
                         (h.content = ""),
-                        (h.components = t);
+                        (h.components = t));
                 }
                 return (
                     d && null != b && (0, l.Lt)(b.flags, _.pr7.CROSSPOSTED)
@@ -115,7 +115,7 @@ function v(e) {
                 m._.subscribe(_.jej.TEXTAREA_FOCUS, E),
                 m._.subscribe(_.jej.TEXTAREA_BLUR, A),
                 () => {
-                    m._.unsubscribe(_.jej.TEXTAREA_FOCUS, E), m._.unsubscribe(_.jej.TEXTAREA_BLUR, A);
+                    (m._.unsubscribe(_.jej.TEXTAREA_FOCUS, E), m._.unsubscribe(_.jej.TEXTAREA_BLUR, A));
                 }
             ),
             [E, A],

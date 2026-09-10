@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => e4 });
+(n.r(t), n.d(t, { default: () => e4 }));
 var a,
     i = n(477900),
     l = n(582128),
@@ -295,7 +295,7 @@ function eh(e) {
         n = l.useCallback(
             (t) => {
                 let n = t.target.files?.[0] ?? null;
-                (t.target.value = ""), null != n && e(n);
+                ((t.target.value = ""), null != n && e(n));
             },
             [e],
         );
@@ -445,7 +445,7 @@ function eL(e) {
             let [t, n] = l.useState(ez),
                 a = l.useRef(ez),
                 i = l.useCallback((e) => {
-                    (a.current = (0, e_.Q6)(a.current, e)), n(a.current);
+                    ((a.current = (0, e_.Q6)(a.current, e)), n(a.current));
                 }, []);
             return {
                 pending: t,
@@ -787,7 +787,7 @@ function e3(e) {
                     em(t, n)
                         .catch((e) => {
                             let n;
-                            console.error("[vibegrations] project export failed", t, e),
+                            (console.error("[vibegrations] project export failed", t, e),
                                 (0, y.P0)(
                                     (0, b.o)(
                                         409 === (n = e instanceof $._v ? e.status : null)
@@ -797,7 +797,7 @@ function e3(e) {
                                               : H.intl.string(Y.default.G2GqyP),
                                         j.Ck.FAILURE,
                                     ),
-                                );
+                                ));
                         })
                         .finally(() => {
                             a.current = !1;
@@ -911,7 +911,7 @@ function e7(e) {
         O = l.useRef(!0),
         X = l.useRef(!1),
         q = l.useRef(null);
-    (B.current = F),
+    ((B.current = F),
         l.useEffect(
             () => (
                 (O.current = !0),
@@ -920,7 +920,7 @@ function e7(e) {
                 }
             ),
             [],
-        );
+        ));
     let W = (0, c.bG)([Q.Ay], () => (null == F ? null : Q.Ay.getIntegrationStatus(F)), [F]),
         { data: J, isLoading: ee } = (0, D.YY)(t?.preview_application_id ?? void 0),
         et = null != F && L !== F,
@@ -950,7 +950,7 @@ function e7(e) {
         ex = H.intl.string(ef ? Y.default.YdgE0j : Y.default.aWVf4j),
         ey = l.useCallback(() => {
             if (I || h || f) {
-                S(!1), g(!1), E(!1), m(!0);
+                (S(!1), g(!1), E(!1), m(!0));
                 return;
             }
             m((e) => !e);
@@ -967,7 +967,7 @@ function e7(e) {
                 function a() {
                     return O.current && B.current === n;
                 }
-                (X.current = !0),
+                ((X.current = !0),
                     g(!1),
                     m(!0),
                     _({ entry: e, status: "restoring" }),
@@ -985,7 +985,7 @@ function e7(e) {
                         )
                         .finally(() => {
                             a() && (X.current = !1);
-                        });
+                        }));
             },
             [t],
         ),
@@ -999,7 +999,7 @@ function e7(e) {
         }, [eE, eI]),
         eP = l.useCallback(() => {
             var e, n;
-            null != t && ((e = t.id), (n = eE?.id), (0, $.Bn)(e), (0, eH.A)().leaveFrame(n)), s();
+            (null != t && ((e = t.id), (n = eE?.id), (0, $.Bn)(e), (0, eH.A)().leaveFrame(n)), s());
         }, [t, eE?.id, s]),
         eR = l.useCallback(() => {
             null != t && (m(!0), (0, $.dv)(t.id, H.intl.string(Y.default["2ejwtJ"])));
@@ -1037,7 +1037,7 @@ function e7(e) {
             if (null == F || B.current !== F) return;
             q.current?.abort();
             let e = new AbortController();
-            (q.current = e), G(null);
+            ((q.current = e), G(null));
             try {
                 await (0, K.U1)(F, e.signal);
             } catch {
@@ -1049,7 +1049,7 @@ function e7(e) {
         () => (
             ez(),
             () => {
-                q.current?.abort(), (q.current = null);
+                (q.current?.abort(), (q.current = null));
             }
         ),
         [ez],
@@ -1117,7 +1117,7 @@ function e7(e) {
                     })
                     .catch(() => {});
             let e = (0, $.$C)(t.id);
-            e.catch(() => {}),
+            (e.catch(() => {}),
                 (0, eW.A)({
                     projectId: t.id,
                     guildId: r,
@@ -1125,7 +1125,7 @@ function e7(e) {
                     projectName: t.name,
                     publish: eU(t.id),
                     initialDraft: e,
-                });
+                }));
         }, [r, ec, en, t, eU]),
         e7 = (0, i.jsx)(eB, {
             title: t?.name ?? H.intl.string(Y.default.F2dRba),
@@ -1237,10 +1237,10 @@ function e7(e) {
                                       R?.status === "restoring"
                                           ? void 0
                                           : () => {
-                                                m(!0), S(!1), E(!1), g(!0);
+                                                (m(!0), S(!1), E(!1), g(!0));
                                             },
                                   onRestorePoints: () => {
-                                      m(!0), S(!1), g(!1), E(!0);
+                                      (m(!0), S(!1), g(!1), E(!0));
                                   },
                                   refreshApplicationId:
                                       es.modes.includes("widget") &&
@@ -1728,10 +1728,14 @@ function e4(e) {
         r = (0, c.bG)([Q.Ay], () => Q.Ay.getProjectsFetchState()),
         o = (0, c.yK)([Q.Ay], () => Q.Ay.getSharedProjects(n), [n]),
         d = (0, c.yK)([L.Ay], () => L.Ay.getSelfMember(n)?.roles ?? [], [n]),
-        u = (0, c.bG)([G.A, F.A], () => {
-            let e = G.A.getGuild(n);
-            return null != e && F.A.can(eQ.xBc.MANAGE_GUILD, e);
-        }, [n]),
+        u = (0, c.bG)(
+            [G.A, F.A],
+            () => {
+                let e = G.A.getGuild(n);
+                return null != e && F.A.can(eQ.xBc.MANAGE_GUILD, e);
+            },
+            [n],
+        ),
         [p, m] = l.useState(""),
         h = a ?? null,
         [g, f] = l.useState(!1),
@@ -1739,14 +1743,14 @@ function e4(e) {
         [w, C] = l.useState("guild"),
         [k, A] = l.useState(null),
         [N, E] = l.useState(null);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         (0, K.hF)(n);
     }, [n, d, u]),
         l.useEffect(() => {
             (0, K.dm)(n, h);
-        }, [n, h]);
+        }, [n, h]));
     let I = l.useCallback((e) => {
-            C(e), A(null);
+            (C(e), A(null));
         }, []),
         S = l.useCallback(
             async (e) => {
@@ -1754,15 +1758,15 @@ function e4(e) {
                     a = J({ idea: t, installScope: w, submitting: g });
                 if ("idea" !== a && "submitting" !== a) {
                     if (null == w) return void A(H.intl.string(Y.default.jQ3nQB));
-                    null != e && m(e), f(!0), v(null);
+                    (null != e && m(e), f(!0), v(null));
                     try {
                         let e = await (0, K.gA)({ guild_id: n, install_scope: w });
-                        (0, $.Hc)(e),
+                        ((0, $.Hc)(e),
                             (0, $.r2)(e, N ?? X.Cl),
                             (0, $.dv)(e, t),
                             (0, M.pX)(eQ.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, e)),
                             m(""),
-                            E(null);
+                            E(null));
                     } catch (e) {
                         v(e instanceof Error ? e.message : H.intl.string(Y.default.KKkp5Y));
                     } finally {
@@ -1780,15 +1784,15 @@ function e4(e) {
                 R(!0);
                 let i = null;
                 try {
-                    (i = await (0, K.gA)({ guild_id: n, install_scope: t })),
+                    ((i = await (0, K.gA)({ guild_id: n, install_scope: t })),
                         (0, $.Hc)(i),
                         (0, $.r2)(i, N ?? X.Cl),
                         await eu(i, e, H.intl.string(Y.default.KjEtrZ)),
                         (0, M.pX)(eQ.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS, i)),
-                        E(null);
+                        E(null));
                 } catch {
-                    null != i && (await (0, K.xx)(i).catch(() => void 0)),
-                        (0, y.P0)((0, b.o)(H.intl.string(Y.default["02GpNr"]), j.Ck.FAILURE));
+                    (null != i && (await (0, K.xx)(i).catch(() => void 0)),
+                        (0, y.P0)((0, b.o)(H.intl.string(Y.default["02GpNr"]), j.Ck.FAILURE)));
                 } finally {
                     R(!1);
                 }
@@ -1805,13 +1809,17 @@ function e4(e) {
             (0, M.pX)(eQ.BVt.CHANNEL(n, eM.VV.VIBEGRATIONS));
         }, [n]),
         z = l.useCallback((e) => {
-            m(e), v(null);
+            (m(e), v(null));
         }, []),
-        V = (0, c.bG)([Q.Ay], () => {
-            if (null == h) return null;
-            let e = Q.Ay.getProject(h);
-            return null == e || (0, Q.PV)(e) || e.guild_id === n ? e : null;
-        }, [h, n]),
+        V = (0, c.bG)(
+            [Q.Ay],
+            () => {
+                if (null == h) return null;
+                let e = Q.Ay.getProject(h);
+                return null == e || (0, Q.PV)(e) || e.guild_id === n ? e : null;
+            },
+            [h, n],
+        ),
         B = (0, c.bG)([Q.Ay], () => Q.Ay.hasFetchedGuildProjects(n), [n]);
     return null != h
         ? (0, i.jsx)(e7, { project: V, projectsLoaded: B, onBack: T, guildId: n }, h)

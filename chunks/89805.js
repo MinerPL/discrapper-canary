@@ -10,10 +10,10 @@ function o(t) {
         (0, s.Bf)(s.A5.NSFW_EMBEDDED_ACTIVITY, E);
     }, [E]);
     let C = e.useCallback(() => {
-            (0, s.mU)(s.IY.NSFW_CHANNEL_AGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), a(), o();
+            ((0, s.mU)(s.IY.NSFW_CHANNEL_AGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), a(), o());
         }, [a, o, E]),
         _ = e.useCallback(() => {
-            (0, s.mU)(s.IY.NSFW_CHANNEL_DISAGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), c(), o();
+            ((0, s.mU)(s.IY.NSFW_CHANNEL_DISAGREE_CTA, s.A5.NSFW_EMBEDDED_ACTIVITY, E), c(), o());
         }, [c, o, E]);
     return (0, n.jsx)(l.Modal, {
         transitionState: A,

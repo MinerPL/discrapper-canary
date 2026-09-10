@@ -47,12 +47,12 @@ let E = new _(a.h, {
     },
     APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: function (e) {
         let { application: t } = e;
-        (o = { ...o, [t.id]: t }), (d = { ...d, [t.id]: 1 });
+        ((o = { ...o, [t.id]: t }), (d = { ...d, [t.id]: 1 }));
         let n = Date.now();
-        (u = { ...u, [t.id]: n }), c.has(t.id) && (c.delete(t.id), (c = new Set(c)));
+        ((u = { ...u, [t.id]: n }), c.has(t.id) && (c.delete(t.id), (c = new Set(c))));
     },
     APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: function (e) {
         let { applicationId: t, isInvalidApplication: n } = e;
-        (d = { ...d, [t]: 2 }), n && (c.add(t), (c = new Set(c)));
+        ((d = { ...d, [t]: 2 }), n && (c.add(t), (c = new Set(c))));
     },
 });

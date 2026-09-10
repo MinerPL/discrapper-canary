@@ -32,7 +32,7 @@ let U = (0, d.A)(
                               id: "report-raid",
                               label: T.intl.string(T.t.cswId3),
                               action: () => {
-                                  (0, o.jH)(), (0, O.M)(c);
+                                  ((0, o.jH)(), (0, O.M)(c));
                               },
                           }),
                 I =
@@ -69,7 +69,7 @@ let U = (0, d.A)(
                               id: "nav-server-settings",
                               label: T.intl.string(T.t["154/bL"]),
                               action: () => {
-                                  (0, o.jH)(), u.A.open(c, A.BEX.MODERATION);
+                                  ((0, o.jH)(), u.A.open(c, A.BEX.MODERATION));
                               },
                           });
             return (0, l.jsxs)(i.W, {

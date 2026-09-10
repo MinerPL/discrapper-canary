@@ -27,7 +27,7 @@ function c(e, t) {
 function u(e) {
     let { baseCode: t, guildScheduledEventId: n, targetChannelId: r, targetMessageId: a } = e,
         d = {};
-    null != n && (d[s] = n), null != r && ((d[l] = r), null != a && (d[o] = a));
+    (null != n && (d[s] = n), null != r && ((d[l] = r), null != a && (d[o] = a)));
     let c = i.stringify(d);
     return "" === c ? t : `${t}?${c}`;
 }

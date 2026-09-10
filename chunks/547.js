@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => Z });
+n.d(t, { A: () => q });
 var r = n(506774),
     a = n(228366),
     s = n(157559),
@@ -45,11 +45,12 @@ function M(e) {
     let f = T.A.getChannel(n);
     if (f?.type === L.rbe.GUILD_STORE || (f?.type != null && L.kvI.GUILD_THREADS_ONLY.has(f.type))) return;
     let p = c.A.getOrCreate(n);
-    p.some(O.$r) && (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
+    (p.some(O.$r) &&
+        (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
         null != p.jumpTargetId &&
             null == a &&
             ((p = p.mutate({ jumpTargetId: null, jumped: !1, jumpType: o.vx.ANIMATED })), c.A.commit(p)),
-        null != p.focusTargetId && null == a && ((p = p.mutate({ focusTargetId: null })), c.A.commit(p));
+        null != p.focusTargetId && null == a && ((p = p.mutate({ focusTargetId: null })), c.A.commit(p)));
     let S = s;
     if (
         (!d || E.A.isConnected() || p.loadingMore
@@ -78,7 +79,7 @@ function M(e) {
                     i[e] = Date.now();
                     let t = Date.now() - P;
                     for (let e in i) i[e] < t && delete i[e];
-                    return r.w.set(U, i), !0;
+                    return (r.w.set(U, i), !0);
                 })(n)
             )
                 return (
@@ -134,22 +135,22 @@ function w() {
             exact: !0,
         })),
         { channelId: e, messageId: t?.params?.message });
-    M({ guildId: i.getGuildId(), channelId: i.id, messageId: r.messageId, avoidInitialScroll: null != r.messageId }),
-        V(i.getGuildId(), i.id);
+    (M({ guildId: i.getGuildId(), channelId: i.id, messageId: r.messageId, avoidInitialScroll: null != r.messageId }),
+        B(i.getGuildId(), i.id));
 }
 function G() {
     let e = S.Ay.getChannelId();
     if (null == e) return;
     let t = T.A.getChannel(e);
     if (null == t) return;
-    if (!(0, f.pQ)(t.type)) return void V(t.getGuildId(), t.id);
+    if (!(0, f.pQ)(t.type)) return void B(t.getGuildId(), t.id);
     let n = c.A.getOrCreate(e);
-    (n.ready && n.hasFetched) || M({ guildId: t.getGuildId(), channelId: t.id }), V(t.getGuildId(), t.id);
+    ((n.ready && n.hasFetched) || M({ guildId: t.getGuildId(), channelId: t.id }), B(t.getGuildId(), t.id));
 }
 function x(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: r, skipMessageFetch: a } = e;
     if (a) return !1;
-    M({ guildId: t, channelId: n, messageId: i, jumpType: r }), V(t, n);
+    (M({ guildId: t, channelId: n, messageId: i, jumpType: r }), B(t, n));
 }
 function k(e) {
     let { guildId: t, channelId: n } = e;
@@ -159,20 +160,20 @@ function F(e) {
     let { guildId: t, channelId: n, messageId: i, jumpType: r } = e;
     M({ guildId: t, channelId: n, messageId: i, jumpType: r });
 }
-function V(e, t) {
+function B(e, t) {
     let n = p.Ay.getCurrentSidebarChannelId(t);
     null == n || M({ guildId: e, channelId: n, messageId: p.Ay.getCurrentSidebarMessageId(t) });
 }
-function B() {
+function V() {
     let e = S.Ay.getChannelId(),
         t = N.A.getGuildId();
     if (null == t || null == e) return;
     let n = p.Ay.getSidebarState(e);
-    (n?.type !== I.PE.VIEW_CHANNEL || n.channelId !== e) && V(t, e);
+    (n?.type !== I.PE.VIEW_CHANNEL || n.channelId !== e) && B(t, e);
 }
 function H(e) {
     let { guildId: t, channelId: n, context: i } = e;
-    i === L.QCW && (M({ guildId: t, channelId: n }), V(t, n));
+    i === L.QCW && (M({ guildId: t, channelId: n }), B(t, n));
 }
 function j(e) {
     let { channel: t, messageId: n } = e,
@@ -223,10 +224,10 @@ function z() {
     if (null == e) return !1;
     l.A.fetchNewLocalMessages(e, L.EMb);
 }
-class q extends d.A {
+class X extends d.A {
     fetchMessages = M;
     loadSelectedChannelIfNecessary = G;
-    stores = new Map().set(p.Ay, B);
+    stores = new Map().set(p.Ay, V);
     actions = {
         APP_STATE_UPDATE_WILL_BECOME_ACTIVE: z,
         OVERLAY_INITIALIZE: w,
@@ -251,4 +252,4 @@ class q extends d.A {
         a.h.unsubscribe("CONNECTION_OPEN", w);
     }
 }
-let Z = new q();
+let q = new X();

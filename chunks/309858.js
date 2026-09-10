@@ -45,7 +45,7 @@ function q(e, t) {
         : {
               playingApplication: p,
               handleRequestToStream: function (n) {
-                  u.A.sendActivityInvite({
+                  (u.A.sendActivityInvite({
                       type: R.xL.STREAM_REQUEST,
                       channelId: t.id,
                       activity: a,
@@ -56,7 +56,7 @@ function q(e, t) {
                       c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: e }),
                       setTimeout(() => {
                           c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: e });
-                      }, A.e);
+                      }, A.e));
               },
           };
 }

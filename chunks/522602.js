@@ -1,4 +1,4 @@
-n.d(t, { A: () => T }), n(321073);
+(n.d(t, { A: () => T }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -19,7 +19,7 @@ function I(e) {
 }
 function f(e, t, n) {
     let i = I(e);
-    i.set(t, n), E.set(e, i);
+    (i.set(t, n), E.set(e, i));
 }
 class p extends a.Ay.Store {
     static displayName = "UploadAttachmentStore";
@@ -47,7 +47,7 @@ let T = new p(s.h, {
     UPLOAD_ATTACHMENT_POP_FILE: function (e) {
         let { channelId: t } = e,
             n = [...h(t, c.C.ChannelMessage)];
-        n.shift(), f(t, c.C.ChannelMessage, n);
+        (n.shift(), f(t, c.C.ChannelMessage, n));
     },
     UPLOAD_ATTACHMENT_ADD_FILES: function (e) {
         let { files: t, channelId: n, draftType: i, allowOptimization: a } = e,
@@ -59,7 +59,7 @@ let T = new p(s.h, {
               })
             : (r().forEach(t, (e) => {
                   let t = new o.bK(e, n, s.length, a);
-                  t.upload(), s.push(t);
+                  (t.upload(), s.push(t));
               }),
               f(n, i, s));
     },
@@ -86,11 +86,11 @@ let T = new p(s.h, {
     UPLOAD_ATTACHMENT_REMOVE_FILES: function (e) {
         let { channelId: t, attachmentIds: n, draftType: i } = e,
             r = [...h(t, i)];
-        n.forEach((e) => {
+        (n.forEach((e) => {
             let t = r.findIndex((t) => e === t.id);
             t > -1 && r.splice(t, 1)[0].removeFromMsgDraft();
         }),
-            f(t, i, r);
+            f(t, i, r));
     },
     UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function (e) {
         let { channelId: t, draftType: n } = e;
@@ -104,6 +104,6 @@ let T = new p(s.h, {
         let { channelId: t, id: n, file: i, draftType: r, allowOptimization: a } = e,
             s = [...h(t, r)].filter((e) => e.id !== n),
             l = new o.bK(i, t, void 0, a);
-        l.upload(), s.push(l), f(t, r, s);
+        (l.upload(), s.push(l), f(t, r, s));
     },
 });

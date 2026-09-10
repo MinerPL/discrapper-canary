@@ -46,15 +46,15 @@ function C(e) {
             typeahead: k = !1,
         } = e,
         F = r.useId(),
-        V = n ?? F,
-        B = r.useRef(null),
+        B = n ?? F,
+        V = r.useRef(null),
         H = r.useMemo(() => p.map((e, t) => ({ ...e, index: t })), [p]),
         [j, W] = r.useState(L ?? []),
         Y = null != y,
         K = Y ? y : j,
         $ = (0, l.Ay)({
-            id: V,
-            defaultFocused: null != v ? (0, f.ZN)(V, v) : void 0,
+            id: B,
+            defaultFocused: null != v ? (0, f.ZN)(B, v) : void 0,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !u,
@@ -63,31 +63,31 @@ function C(e) {
             useVirtualFocus: -1 === a,
         }),
         z = r.useRef(C);
-    r.useLayoutEffect(() => {
+    (r.useLayoutEffect(() => {
         z.current = C;
     }, [C]),
         r.useEffect(() => {
             requestAnimationFrame(() => {
                 if (null != v) {
                     let [e, t] = (0, f.LE)(z.current, v);
-                    B.current?.scrollToIndex({ section: e, row: t });
+                    V.current?.scrollToIndex({ section: e, row: t });
                 }
             });
-        }, [V, v]);
-    let { activeIndex: q, handleKeyDown: Z } = R(k, H);
+        }, [B, v]));
+    let { activeIndex: X, handleKeyDown: q } = R(k, H);
     r.useEffect(() => {
-        if (null != q && k && -1 !== a) {
-            let e = (0, o.t$)(V, (0, f.ZN)(V, q)),
+        if (null != X && k && -1 !== a) {
+            let e = (0, o.t$)(B, (0, f.ZN)(B, X)),
                 t = document.querySelector((0, o.Mz)(e));
             t?.focus();
         }
-    }, [q, H, k, V, a]);
-    let X = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? g : m), [H, C]),
+    }, [X, H, k, B, a]);
+    let Z = r.useCallback((e, t) => (N(H[(0, f.rp)(C, e, t)]) ? g : m), [H, C]),
         Q = r.useCallback(
             (e) => {
                 if (!0 === c && 1 === K.length && K.includes(e)) return;
                 let t = (0, f.qH)(_, K, e);
-                Y || W(t), D?.(t);
+                (Y || W(t), D?.(t));
             },
             [c, K, D, Y, _],
         ),
@@ -120,7 +120,7 @@ function C(e) {
     else if (H.length > 0) {
         let e = C.length > 0;
         t = (0, i.jsx)(E.Ei, {
-            ref: B,
+            ref: V,
             style: {
                 height:
                     null != U
@@ -130,7 +130,7 @@ function C(e) {
                                   (function (e, t) {
                                       let n = 0,
                                           i = 0;
-                                      for (let r of e) i < t && n++, (i += r.count);
+                                      for (let r of e) (i < t && n++, (i += r.count));
                                       return n;
                                   })(C, U)
                           }px`
@@ -138,7 +138,7 @@ function C(e) {
             },
             role: void 0,
             tabIndex: a,
-            rowHeight: X,
+            rowHeight: Z,
             sections: e ? C.map((e) => e.count) : [H.length],
             sectionHeight: 26 * !!e,
             renderSection: e
@@ -164,7 +164,7 @@ function C(e) {
             renderRow: (e) => {
                 let { rowIndex: t } = e,
                     n = H[t],
-                    r = (0, f.ZN)(V, t),
+                    r = (0, f.ZN)(B, t),
                     s = null == M && N(n) ? `${r}-desc` : void 0,
                     l = 0 !== K.length && null != K.find((e) => e.id === n.id);
                 return (0, i.jsx)(
@@ -199,7 +199,7 @@ function C(e) {
                     "aria-busy": w,
                     ref: n,
                     onKeyDown: (e) => {
-                        r?.(e), Z(e);
+                        (r?.(e), q(e));
                     },
                     ...l,
                     role: "listbox",

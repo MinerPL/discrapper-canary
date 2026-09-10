@@ -1,4 +1,4 @@
-n.d(t, { A: () => F }), n(321073), n(667532);
+(n.d(t, { A: () => F }), n(321073), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -56,16 +56,16 @@ function M(e, t, n, i) {
         s = g.indexOf(r);
     -1 !== s && g.splice(s, 1);
     let l = b(e, t);
-    0 !== l && (n ? -1 === l && (m.push(a), v()) : (l > 0 && m.splice(l, 1), m.unshift(a), v())),
+    (0 !== l && (n ? -1 === l && (m.push(a), v()) : (l > 0 && m.splice(l, 1), m.unshift(a), v())),
         !n && S && E.A.resume(),
-        D();
+        D());
 }
 function P(e, t) {
     let n = (0, _.gW)(e, t),
         i = g.indexOf(n);
     -1 !== i && g.splice(i, 1);
     let r = b(e, t);
-    -1 !== r && (m.splice(r, 1), D()), v();
+    (-1 !== r && (m.splice(r, 1), D()), v());
 }
 function U(e) {
     let { applicationId: t, branchId: n } = e;
@@ -85,18 +85,18 @@ function G() {
 function x() {
     for (let e of d.Ay.getRunningDiscordApplicationIds()) o.ZT(e, e);
     let e = d.Ay.getVisibleGame();
-    return S || null == e || e.pid === y || o.v7(), (y = null == e ? null : e.pid), !1;
+    return (S || null == e || e.pid === y || o.v7(), (y = null == e ? null : e.pid), !1);
 }
 class k extends a.Ay.Store {
     static displayName = "DispatchManagerStore";
     initialize() {
         let e = s.w.get(T) ?? { queue: null, paused: null, userActions: null };
-        null != e.queue && (m = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
+        (null != e.queue && (m = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
             null != e.paused && (S = e.paused),
             null != e.userActions && (R = new Map(Array.from(e.userActions))),
             this.waitFor(h.A, d.Ay),
             this.syncWith([d.Ay], x),
-            this.waitFor(u.A, c.default, h.A);
+            this.waitFor(u.A, c.default, h.A));
     }
     get activeItems() {
         return m.map((e) => {
@@ -120,34 +120,34 @@ class k extends a.Ay.Store {
 let F = new k(l.h, {
     DISPATCH_APPLICATION_INSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
-        R.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch");
+        (R.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch"));
     },
     DISPATCH_APPLICATION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, automatic: i } = e;
         M(t, n, i, "Patch");
     },
     DISPATCH_APPLICATION_UNINSTALL: function (e) {
-        U(e), w(e);
+        (U(e), w(e));
     },
     DISPATCH_APPLICATION_CANCEL: U,
     DISPATCH_APPLICATION_REPAIR: function (e) {
         let { applicationId: t, branchId: n } = e;
-        R.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair");
+        (R.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair"));
     },
     DISPATCH_APPLICATION_MOVE_UP: function (e) {
         let { applicationId: t, branchId: n } = e,
             i = b(t, n);
         if (i < 1) return !1;
-        m.splice(0, 0, m.splice(i, 1)[0]), v(), S && E.A.resume(), D();
+        (m.splice(0, 0, m.splice(i, 1)[0]), v(), S && E.A.resume(), D());
     },
     DISPATCH_APPLICATION_REMOVE_FINISHED: w,
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
         let { state: t } = e;
         !O && ((O = !0), v(), S || E.A.resume());
         let n = S;
-        (S = t.paused), (N = t.currentTask), (C = t.nextTask);
+        ((S = t.paused), (N = t.currentTask), (C = t.nextTask));
         let i = !1;
-        (m = m.filter((e) => {
+        ((m = m.filter((e) => {
             let { comboId: t } = e,
                 { applicationId: n, branchId: a } = (0, _.r0)(t),
                 s = h.A.getState(n, a),
@@ -171,12 +171,12 @@ let F = new k(l.h, {
                     }
                     R.delete(t);
                 }
-                return (i = !0), !1;
+                return ((i = !0), !1);
             }
             return !0;
         })),
             v(),
-            (i || n !== S) && D();
+            (i || n !== S) && D());
     },
     DISPATCH_APPLICATION_ERROR: function (e) {
         let { error: t } = e,
@@ -196,6 +196,6 @@ let F = new k(l.h, {
         (0, A.isDesktop)() && G();
     },
     LOGOUT: function () {
-        s.w.remove(T), (0, A.isDesktop)() && E.A.pause();
+        (s.w.remove(T), (0, A.isDesktop)() && E.A.pause());
     },
 });

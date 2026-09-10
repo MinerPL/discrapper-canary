@@ -8,7 +8,7 @@ function a(e = !0) {
             let [t, r] = (0, o.useState)(e),
                 n = (0, o.useRef)(!1),
                 a = (0, o.useCallback)((e) => {
-                    (n.current = !0), r(!!e);
+                    ((n.current = !0), r(!!e));
                 }, []);
             return (
                 (0, i.N)(() => {

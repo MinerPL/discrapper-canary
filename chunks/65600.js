@@ -14,7 +14,7 @@ function c(e) {
         searchResultsOffset: null,
         searchMode: i.z,
     };
-    return a.set(e, t), t;
+    return (a.set(e, t), t);
 }
 function u(e, t) {
     let s = a.get(e);
@@ -54,7 +54,7 @@ let h = new l(n.h, {
     SEARCH_RESULTS_QUERY_UPDATE: function (e) {
         let { id: t, queryString: s, query: r, offset: n } = e,
             i = c(t);
-        (i.searchResultsQueryString = s), (i.searchResultsQuery = r), (i.searchResultsOffset = n ?? 0);
+        ((i.searchResultsQueryString = s), (i.searchResultsQuery = r), (i.searchResultsOffset = n ?? 0));
     },
     SEARCH_QUERY_TEXT_CLEAR: function (e) {
         let { id: t } = e;

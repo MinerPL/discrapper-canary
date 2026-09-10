@@ -112,5 +112,5 @@ e.exports = function (e) {
                 contains: [{ begin: "^@@.*", end: "$", className: "comment" }],
             },
         ];
-    return (r.contains = p), (i.contains = p), { name: "Perl", aliases: ["pl", "pm"], keywords: n, contains: p };
+    return ((r.contains = p), (i.contains = p), { name: "Perl", aliases: ["pl", "pm"], keywords: n, contains: p });
 };

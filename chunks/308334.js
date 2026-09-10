@@ -67,7 +67,7 @@ function O(e) {
                                             let a = (0, D.xx)(n.join("\n"));
                                             null != a && t.push({ startSec: I(l[1]), endSec: I(l[2]), ...a });
                                         }
-                                        return t.sort((e, t) => e.startSec - t.startSec), t;
+                                        return (t.sort((e, t) => e.startSec - t.startSec), t);
                                     })(s),
                                 });
                             } catch {}
@@ -361,10 +361,10 @@ function et(e) {
                                     className: r()(q.$y, q.vk, { [q.FQ]: t }),
                                     onClick: h,
                                     onMouseEnter: () => {
-                                        s(), i();
+                                        (s(), i());
                                     },
                                     onMouseLeave: () => {
-                                        s(), o();
+                                        (s(), o());
                                     },
                                     children: (0, l.jsxs)("span", {
                                         className: q.wl,

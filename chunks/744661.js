@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "ru",
     pluralRuleFunction: function (e, t) {
         var r = String(e).split("."),
@@ -21,4 +21,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({ locale: "ru-KG", parentLocale: "ru" }),
     IntlMessageFormat.__addLocaleData({ locale: "ru-KZ", parentLocale: "ru" }),
     IntlMessageFormat.__addLocaleData({ locale: "ru-MD", parentLocale: "ru" }),
-    IntlMessageFormat.__addLocaleData({ locale: "ru-UA", parentLocale: "ru" });
+    IntlMessageFormat.__addLocaleData({ locale: "ru-UA", parentLocale: "ru" }));

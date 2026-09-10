@@ -4,5 +4,5 @@ var r = n(155084),
 e.exports = function (e, t) {
     if ((r(e), a(t) && t.constructor === e)) return t;
     var n = o.f(e);
-    return (0, n.resolve)(t), n.promise;
+    return ((0, n.resolve)(t), n.promise);
 };

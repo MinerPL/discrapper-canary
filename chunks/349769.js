@@ -1,4 +1,4 @@
-l.d(t, { G: () => eI }), l(321073);
+(l.d(t, { G: () => eI }), l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(696292),
@@ -144,7 +144,7 @@ function W(e) {
         m = (0, s.bG)([D.default], () => D.default.locale),
         A = a.useRef(null),
         [C, p] = a.useState(!1);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         let e = setTimeout(() => {
             d(b);
         }, 250);
@@ -155,7 +155,7 @@ function W(e) {
         }, [c]),
         a.useEffect(() => {
             p(i && o);
-        }, [i, o]);
+        }, [i, o]));
     let g = a.useCallback(
             (e) => {
                 "Enter" === e.key && d(b);
@@ -177,13 +177,13 @@ function W(e) {
             [l, S],
         ),
         h = a.useCallback(() => {
-            l !== B.G2.CATALOG && t(B.G2.CATALOG), f(B.uY.SEARCH_ICON), p(!0), setTimeout(() => A.current?.focus());
+            (l !== B.G2.CATALOG && t(B.G2.CATALOG), f(B.uY.SEARCH_ICON), p(!0), setTimeout(() => A.current?.focus()));
         }, [l, t, f]),
         O = a.useCallback(() => {
-            l !== B.G2.CATALOG && t(B.G2.CATALOG), f(B.uY.SEARCH_BAR);
+            (l !== B.G2.CATALOG && t(B.G2.CATALOG), f(B.uY.SEARCH_BAR));
         }, [l, t, f]),
         L = a.useCallback(() => {
-            E(""), d(""), f(B.uY.SEARCH_BAR_CLEAR), i && p(!1);
+            (E(""), d(""), f(B.uY.SEARCH_BAR_CLEAR), i && p(!1));
         }, [d, f, i]),
         x = a.useCallback(() => {
             i && "" === b && p(!1);
@@ -312,10 +312,10 @@ function ec(e) {
         u = a.useRef(!1),
         { isHovered: d, setIsHovered: b, onMouseEnter: E, onMouseLeave: S, cancelTimers: m } = (0, en.A)(100, 100),
         A = a.useCallback(() => {
-            (u.current = el.Ay.keyboardModeEnabled), E();
+            ((u.current = el.Ay.keyboardModeEnabled), E());
         }, [E]),
         C = a.useCallback(() => {
-            m(), b(!0), (u.current = el.Ay.keyboardModeEnabled), o || s(t);
+            (m(), b(!0), (u.current = el.Ay.keyboardModeEnabled), o || s(t));
         }, [m, b, o, s, t]);
     return (0, n.jsx)(Z.Y, {
         targetElementRef: c,
@@ -323,12 +323,12 @@ function ec(e) {
         position: "bottom",
         align: "left",
         onRequestOpen: () => {
-            m(), b(!0), (u.current = el.Ay.keyboardModeEnabled);
+            (m(), b(!0), (u.current = el.Ay.keyboardModeEnabled));
         },
         onRequestClose: () => {
-            u.current && !el.Ay.keyboardModeEnabled && (0, et.uS)(),
+            (u.current && !el.Ay.keyboardModeEnabled && (0, et.uS)(),
                 b(!1),
-                requestAnimationFrame(() => c.current?.focus());
+                requestAnimationFrame(() => c.current?.focus()));
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -373,10 +373,10 @@ function eu(e) {
         o = a.useRef(!1),
         { isHovered: c, setIsHovered: u, onMouseEnter: d, onMouseLeave: b, cancelTimers: E } = (0, en.A)(100, 100),
         S = a.useCallback(() => {
-            (o.current = el.Ay.keyboardModeEnabled), d();
+            ((o.current = el.Ay.keyboardModeEnabled), d());
         }, [d]),
         m = a.useCallback(() => {
-            E(), u(!0), (o.current = el.Ay.keyboardModeEnabled);
+            (E(), u(!0), (o.current = el.Ay.keyboardModeEnabled));
         }, [E, u]);
     return (0, n.jsx)(Z.Y, {
         targetElementRef: r,
@@ -384,12 +384,12 @@ function eu(e) {
         position: "bottom",
         align: "left",
         onRequestOpen: () => {
-            E(), u(!0), (o.current = el.Ay.keyboardModeEnabled);
+            (E(), u(!0), (o.current = el.Ay.keyboardModeEnabled));
         },
         onRequestClose: () => {
-            o.current && !el.Ay.keyboardModeEnabled && (0, et.uS)(),
+            (o.current && !el.Ay.keyboardModeEnabled && (0, et.uS)(),
                 u(!1),
-                requestAnimationFrame(() => r.current?.focus());
+                requestAnimationFrame(() => r.current?.focus()));
         },
         renderPopout: (e) => {
             let { closePopout: a } = e;
@@ -537,7 +537,7 @@ function eO(e) {
             () => (t ? (eg.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled) : []),
             [t],
         );
-    a.useEffect(() => {
+    (a.useEffect(() => {
         t && (0, ep.Xw)();
     }, [t]),
         a.useEffect(() => {
@@ -546,10 +546,10 @@ function eO(e) {
                     n.map((e) => e.applicationId),
                     !1,
                 );
-        }, [n]);
+        }, [n]));
     let i = a.useCallback(
             (e) => {
-                U.default.track(K.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (U.default.track(K.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: l?.sessionId,
                     page_type: B.G2.GAME_SHOPS,
                     page_category: l?.pageCategory,
@@ -557,7 +557,7 @@ function eO(e) {
                     tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
                     cta_name: "go_to_game_shop",
                 }),
-                    (0, ef.default)({ applicationId: e }).catch(() => {});
+                    (0, ef.default)({ applicationId: e }).catch(() => {}));
             },
             [l],
         ),
@@ -637,7 +637,7 @@ function eI(e) {
                                         badge: t === B.G2.PROFILE_FRAMES ? "new" : void 0,
                                         trailingIndicator: null != s ? { type: "icon", icon: s } : void 0,
                                         action: () => {
-                                            a(t), i();
+                                            (a(t), i());
                                         },
                                     },
                                     t,
@@ -672,7 +672,7 @@ function eI(e) {
                                             leadingAccessory:
                                                 null != e.iconSrc ? { type: "image", src: e.iconSrc } : void 0,
                                             action: () => {
-                                                e.onSelect(), l();
+                                                (e.onSelect(), l());
                                             },
                                         },
                                         e.id,
@@ -692,8 +692,8 @@ function eI(e) {
         }, [D, l, N, O, I, A, w, V]),
         z = t === B.G2.ORBS ? K.liQ.SHOP_ORBS_TAB : K.liQ.COLLECTIBLES_SHOP,
         q = a.useCallback(() => {
-            (0, g.Y)({ pageType: z, sectionType: K.JJy.ORBS_BALANCE_MENU, ctaObject: K.ZSU.CTA_TO_QUEST_HOME }),
-                (0, S.mA)({ fromContent: i.u.ORBS_BALANCE_MENU });
+            ((0, g.Y)({ pageType: z, sectionType: K.JJy.ORBS_BALANCE_MENU, ctaObject: K.ZSU.CTA_TO_QUEST_HOME }),
+                (0, S.mA)({ fromContent: i.u.ORBS_BALANCE_MENU }));
         }, [z]),
         Y = a.useCallback(() => {
             m?.id != null && (0, p.openUserProfileModal)({ userId: m.id, tabSection: e_.RP.WISHLIST });

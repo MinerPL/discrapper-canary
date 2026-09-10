@@ -13,7 +13,7 @@ class a {
         this.timers = {};
     }
     reset() {
-        Object.values(this.timers).forEach((e) => clearTimeout(e)), (this.timers = {});
+        (Object.values(this.timers).forEach((e) => clearTimeout(e)), (this.timers = {}));
     }
     setTimer(e, t, n) {
         if (null == e || null == t) return !1;

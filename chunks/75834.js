@@ -45,7 +45,7 @@ function E(t) {
         C((t) => !t);
     }
     function A() {
-        r(), (0, c.im)(e, E);
+        (r(), (0, c.im)(e, E));
     }
     let O = l.useCallback(() => {
         (0, d.A)(h.X7G.DEVELOPER_PORTAL_TEAMS);

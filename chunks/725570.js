@@ -26,7 +26,7 @@ function d(e) {
         }),
         i.useLayoutEffect(() => {
             let { contextKey: e, modalKey: i, onCloseCallback: r } = E.current;
-            u.current || (0, l.updateModal)(i, t, n, r, e), (u.current = !1);
+            (u.current || (0, l.updateModal)(i, t, n, r, e), (u.current = !1));
         }, [t, n]),
         null
     );

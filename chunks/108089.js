@@ -31,7 +31,7 @@ function l(e) {
                                                   : "decimal" === l.type && (n += ".");
                                           return Number(n);
                                       })(n.formatToParts(s), t);
-                                  (i = r > 0 ? s / r : 1), l.set(e, i);
+                                  ((i = r > 0 ? s / r : 1), l.set(e, i));
                               }
                               return i;
                           })(o)
@@ -46,8 +46,8 @@ function l(e) {
 function i(e) {
     if (0 === e) return 0;
     let t = Math.floor(Math.log10(e));
-    for (; 10 ** t > e; ) t--;
-    for (; 10 ** (t + 1) <= e; ) t++;
+    for (; 10 ** t > e;) t--;
+    for (; 10 ** (t + 1) <= e;) t++;
     return t;
 }
 n.d(t, { e: () => l });

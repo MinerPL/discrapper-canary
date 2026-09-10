@@ -1,4 +1,4 @@
-n.d(t, { Pq: () => eh, rq: () => eE, Ay: () => eI, he: () => eA }), n(938796);
+(n.d(t, { Pq: () => eh, rq: () => eE, Ay: () => eI, he: () => eA }), n(938796));
 var i = n(481613),
     r = n.n(i),
     a = n(562708),
@@ -47,8 +47,8 @@ var m = n(612200),
     x = n(790535),
     k = n(95701),
     F = n(280450),
-    V = n(734057),
-    B = n(808728),
+    B = n(734057),
+    V = n(808728),
     H = n(696451),
     j = n(71393),
     W = n(958590),
@@ -56,9 +56,9 @@ var m = n(612200),
     K = n(576705),
     $ = n(994500),
     z = n(967198),
-    q = n(287809),
-    Z = n(174459),
-    X = n(927813),
+    X = n(287809),
+    q = n(174459),
+    Z = n(927813),
     Q = n(499785),
     J = n(877062),
     ee = n(827343),
@@ -76,10 +76,10 @@ function eu(e) {
     let t = {};
     switch (e.target_type) {
         case el.yV.STREAM:
-            (t.targetType = e.target_type), (t.targetUserId = e.target_user?.id);
+            ((t.targetType = e.target_type), (t.targetUserId = e.target_user?.id));
             break;
         case el.yV.EMBEDDED_APPLICATION:
-            (t.targetType = e.target_type), (t.targetApplicationId = e.target_application?.id);
+            ((t.targetType = e.target_type), (t.targetApplicationId = e.target_application?.id));
             break;
         case el.yV.ROLE_SUBSCRIPTIONS_PURCHASE:
             t.targetType = e.target_type;
@@ -100,9 +100,9 @@ function eu(e) {
 }
 function e_(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    V.A.addConditionalChangeListener(() => {
-        let r = V.A.getChannel(e),
-            a = q.default.getCurrentUser();
+    B.A.addConditionalChangeListener(() => {
+        let r = B.A.getChannel(e),
+            a = X.default.getCurrentUser();
         return (
             null == r ||
             null == a ||
@@ -117,7 +117,7 @@ function e_(e, t) {
                           null != t &&
                               (0, C.B)(() => {
                                   let e = { guildScheduledEventId: t.id };
-                                  null != n && (e.welcomeModalChannelId = n), (0, y.Ul)(t, e);
+                                  (null != n && (e.welcomeModalChannelId = n), (0, y.Ul)(t, e));
                               });
                       })(t)
                     : !(function (e) {
@@ -133,28 +133,28 @@ function e_(e, t) {
                               } = r ?? {};
                           if (!u && !_ && !r?.forceTransition && l && z.A.getGuildId() !== t) return;
                           let { type: A } = i,
-                              h = V.A.getChannel(i.id),
+                              h = B.A.getChannel(i.id),
                               I = (function (e, t, n) {
                                   if (n?.targetType === el.yV.ROLE_SUBSCRIPTIONS_PURCHASE)
                                       return ea.VV.ROLE_SUBSCRIPTIONS;
                                   let i = n?.targetChannelId;
                                   if (null != i) {
-                                      let e = V.A.getChannel(i);
+                                      let e = B.A.getChannel(i);
                                       if (null != e && K.A.can((0, k.TA)(e.type), e)) return i;
                                   }
                                   if (n?.targetType == null && !(0, k.QE)(t.type) && (0, L.K)(e))
                                       return ea.VV.GUILD_HOME;
-                                  let r = V.A.getChannel(t.id),
+                                  let r = B.A.getChannel(t.id),
                                       a = (0, k.TA)(t.type);
                                   return K.A.can(a, r)
                                       ? t.id
-                                      : (B.Ay.getDefaultChannel(e, !0, ei.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
+                                      : (V.Ay.getDefaultChannel(e, !0, ei.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
                               })(t, i, r),
                               f = A === ei.rbe.GUILD_STAGE_VOICE,
                               m = r?.targetChannelId != null && I === r.targetChannelId,
                               g = m ? r?.targetMessageId : void 0,
                               N = ei.BVt.CHANNEL(t, I, g);
-                          I === i.id && (0, k.QE)(A) && r?.autoJoin !== !1
+                          (I === i.id && (0, k.QE)(A) && r?.autoJoin !== !1
                               ? (0, C.B)(() => {
                                     Promise.resolve()
                                         .then(n.bind(n, 730852))
@@ -162,13 +162,13 @@ function e_(e, t) {
                                             let { default: n } = e,
                                                 s = () => {
                                                     if (f) {
-                                                        (0, x.av)(
+                                                        ((0, x.av)(
                                                             i instanceof k.YB ? i : (0, k.createChannelRecord)(i),
                                                         ),
-                                                            (0, G.pX)(N);
+                                                            (0, G.pX)(N));
                                                         return;
                                                     }
-                                                    r?.muteOnJoinVoiceChannel && ee.A.setSelfMute(E.x.DEFAULT, !0),
+                                                    (r?.muteOnJoinVoiceChannel && ee.A.setSelfMute(E.x.DEFAULT, !0),
                                                         n.selectVoiceChannel(I),
                                                         d === el.yV.STREAM &&
                                                             null != o &&
@@ -188,9 +188,9 @@ function e_(e, t) {
                                                                 inviterUserId: r?.inviterUserId,
                                                                 analyticsLocations: a,
                                                                 commandOrigin: S.iw.CHAT,
-                                                            }));
+                                                            })));
                                                 };
-                                            !u && (0, R.V)(t, [j.A, q.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
+                                            !u && (0, R.V)(t, [j.A, X.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
                                         });
                                 })
                               : (0, p.AX)(h) &&
@@ -222,7 +222,7 @@ function e_(e, t) {
                                   i,
                                   r,
                                   m,
-                              )(N);
+                              )(N));
                       })({ guildId: r.getGuildId() ?? ei.ME, channel: r, options: t, analyticsLocations: i }),
                 !1))
         );
@@ -243,7 +243,7 @@ function eA(e, t) {
         stream_key: o,
         number_of_users_in_channel: d,
     } = e;
-    Z.default.track(ei.HAw.INVITE_EMBED_ACTIONED, {
+    q.default.track(ei.HAw.INVITE_EMBED_ACTIONED, {
         action: i,
         invite_code: n.code,
         invite_type: n.type?.toString(),
@@ -257,7 +257,7 @@ function eA(e, t) {
     });
 }
 function eh(e, t, n) {
-    Z.default.track(ei.HAw.INVITE_SERVER_CLICKED, { guild_id: e, action: t, location_stack: n ?? null });
+    q.default.track(ei.HAw.INVITE_SERVER_CLICKED, { guild_id: e, action: t, location_stack: n ?? null });
 }
 let eI = {
     resolveInvite: function e(t, n, i) {
@@ -292,7 +292,7 @@ let eI = {
                 context: { location: n },
                 rejectWithError: !0,
             });
-            return h.h.dispatch({ type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: e, invite: r }), r;
+            return (h.h.dispatch({ type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: e, invite: r }), r);
         } catch (t) {
             throw (h.h.dispatch({ type: "INSTANT_INVITE_CREATE_FAILURE", channelId: e }), new I.A(t));
         }
@@ -300,7 +300,7 @@ let eI = {
     async mobileCreateInvite(e, t) {
         let n = W.A.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
-        let i = { max_age: X.A.Seconds.DAY },
+        let i = { max_age: Z.A.Seconds.DAY },
             r = await this.createInvite(e.id, i, t).catch(() =>
                 h.h.dispatch({ type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED" }),
             );
@@ -309,8 +309,8 @@ let eI = {
     async getAllFriendInvites(e) {
         if ((await new Promise((e) => h.h.wait(() => e(null))), W.A.getFriendInvitesFetching()))
             return null != ec ? ec.then((e) => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
-        (ec = _.Bo.get({ url: ei.Rsh.FRIEND_INVITES, context: { location: e }, rejectWithError: (0, _.fT)() })),
-            h.h.dispatch({ type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: new Date() });
+        ((ec = _.Bo.get({ url: ei.Rsh.FRIEND_INVITES, context: { location: e }, rejectWithError: (0, _.fT)() })),
+            h.h.dispatch({ type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: new Date() }));
         let { body: t } = await ec;
         return (
             (ec = null), h.h.dispatch({ type: "FRIEND_INVITES_FETCH_RESPONSE", receivedAt: new Date(), invites: t }), t
@@ -326,7 +326,7 @@ let eI = {
         }).then(
             (e) => {
                 let { body: t } = e;
-                return h.h.dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: t }), t;
+                return (h.h.dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: t }), t);
             },
             (e) => {
                 throw (h.h.dispatch({ type: "FRIEND_INVITE_CREATE_FAILURE", error: e }), e);
@@ -389,16 +389,16 @@ let eI = {
             p = W.A.getReceivedInstallationIdForInviteCode(A),
             T = Y.A.getInvite(d);
         if (null != T)
-            (i = T.guild_scheduled_event),
+            ((i = T.guild_scheduled_event),
                 (s = i?.id),
                 (r = T.target_channel_id ?? void 0),
-                (a = T.target_message_id ?? void 0);
+                (a = T.target_message_id ?? void 0));
         else {
             let e = (0, M.y$)(d);
-            (s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId);
+            ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
         let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
-            S = q.default.getCurrentUser();
+            S = X.default.getCurrentUser();
         return S?.hasFlag(ei.nhx.QUARANTINED)
             ? ((0, U.default)(), new Promise((e, t) => t(Error())))
             : (h.h.dispatch({ type: "INVITE_ACCEPT", code: d }),
@@ -410,8 +410,8 @@ let eI = {
                   rejectWithError: (0, _.fT)(),
               }).then(
                   async (e) => {
-                      null != p && this.clearReceivedInstallationIdForInviteCode(A),
-                          h.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: d });
+                      (null != p && this.clearReceivedInstallationIdForInviteCode(A),
+                          h.h.dispatch({ type: "INVITE_ACCEPT_SUCCESS", invite: e.body, code: d }));
                       let t = i ?? D.Ay.getGuildScheduledEvent(s),
                           c = {
                               ...e.body,
@@ -425,18 +425,18 @@ let eI = {
                           let { default: e } = await Promise.resolve().then(n.bind(n, 608401));
                           await e({ guildId: _ });
                       }
-                      return u?.(c), e.body;
+                      return (u?.(c), e.body);
                   },
                   (e) => {
                       throw (
-                          (e.body?.code === ei.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
+                          e.body?.code === ei.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                               (0, m.yO)(er.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           h.h.dispatch({
                               type: "INVITE_ACCEPT_FAILURE",
                               code: d,
                               error: { message: e.body?.message, code: e.body?.code },
                           }),
-                          new f.A(e))
+                          new f.A(e)
                       );
                   },
               ));
@@ -461,7 +461,7 @@ let eI = {
             { transitionTo: n, muteOnJoinVoiceChannel: i, intent: r, forceTransition: a } = t,
             { channel: s, guild: d, inviter: c } = e;
         if (null == s && null == d && null != c) {
-            let e = $.A.isFriend(c.id) ? V.A.getDMFromUserId(c.id) : null;
+            let e = $.A.isFriend(c.id) ? B.A.getDMFromUserId(c.id) : null;
             null != e && e_(e, t);
             return;
         }
@@ -471,11 +471,11 @@ let eI = {
         if (null != d && !_ && e.new_member && (0, v.h)(d)) return void (0, v.W)(d.id);
         if (null == s) return;
         let E = eu(e);
-        null != n && (E.transitionTo = n),
+        (null != n && (E.transitionTo = n),
             null != r && (E.intent = r),
             null != i && (E.muteOnJoinVoiceChannel = i),
             null != a && (E.forceTransition = a),
-            e_(s.id, E);
+            e_(s.id, E));
     },
     openNativeAppModal(e) {
         let t = (0, M.y$)(e),
@@ -512,7 +512,7 @@ let eI = {
         if (r().os?.family === "Android" || r().os?.family === "iOS" || s.v1) {
             let e = null != _ ? (0, d.jN)(_) : (0, d.BH)(),
                 t = (0, c.I_)();
-            (l = (0, c.Ay)(e, {
+            ((l = (0, c.Ay)(e, {
                 utmSource: a?.inviteType === 2 ? "friend_invite" : ed,
                 fingerprint: n,
                 installationId: F.default.getInstallationForTracking(),
@@ -524,15 +524,15 @@ let eI = {
                 didRegister: a?.didRegister === !0 ? "true" : void 0,
                 iosFallbackLink: `https://discord.com/api/download/mobile?invite_code=${_}`,
             })),
-                Z.default.track(ei.HAw.DEEP_LINK_CLICKED, {
+                q.default.track(ei.HAw.DEEP_LINK_CLICKED, {
                     fingerprint: (0, u.v)(n),
                     attempt_id: t,
                     source: ed,
                     invite_code: _,
-                });
+                }));
         } else {
             let e = t ?? A;
-            "#" === (l = null != e ? ei.BVt.INVITE_PROXY(e, E) : "")[0] && (l = l.slice(1)), (l = `discord://${l}`);
+            ("#" === (l = null != e ? ei.BVt.INVITE_PROXY(e, E) : "")[0] && (l = l.slice(1)), (l = `discord://${l}`));
         }
         J.A.launch(l, (t) => {
             h.h.dispatch(t ? { type: "INVITE_APP_OPENED", code: e } : { type: "INVITE_APP_NOT_OPENED", code: e });

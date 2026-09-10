@@ -1,4 +1,4 @@
-l.r(a), l.d(a, { mfaPlaygroundConfig: () => u }), l(321073);
+(l.r(a), l.d(a, { mfaPlaygroundConfig: () => u }), l(321073));
 var t = l(477900);
 l(582128);
 var o = l(331322),
@@ -28,7 +28,7 @@ let i = new (l(626584).A)("MFAPlayground"),
                                             simulateError: h,
                                         } = e,
                                         b = [];
-                                    d &&
+                                    (d &&
                                         b.push({
                                             type: "webauthn",
                                             challenge: JSON.stringify({
@@ -44,7 +44,7 @@ let i = new (l(626584).A)("MFAPlayground"),
                                         u && b.push({ type: "totp" }),
                                         p && b.push({ type: "sms" }),
                                         c && b.push({ type: "backup" }),
-                                        a && b.push({ type: "password" });
+                                        a && b.push({ type: "password" }));
                                     let m = b.length > 0 ? b : [{ type: "password" }];
                                     return (0, t.jsxs)(o.B, {
                                         align: "center",

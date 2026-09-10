@@ -13,7 +13,7 @@ var r = n(675879),
     m = r("".split),
     y = r("".toLowerCase),
     v = function (e) {
-        for (var t = [], n = 0, r = e.length; n < r; ) {
+        for (var t = [], n = 0, r = e.length; n < r;) {
             var a = d(e, n++);
             if (a >= 55296 && a <= 56319 && n < r) {
                 var o = d(e, n++);
@@ -27,7 +27,7 @@ var r = n(675879),
     },
     b = function (e, t, n) {
         var r = 0;
-        for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > 455; ) (e = c(e / 35)), (r += 36);
+        for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > 455;) ((e = c(e / 35)), (r += 36));
         return c(r + (36 * e) / (e + 38));
     },
     _ = function (e) {
@@ -41,7 +41,7 @@ var r = n(675879),
         for (t = 0; t < e.length; t++) (n = e[t]) < 128 && h(r, u(n));
         var f = r.length,
             m = f;
-        for (f && h(r, "-"); m < a; ) {
+        for (f && h(r, "-"); m < a;) {
             var y = 0x7fffffff;
             for (t = 0; t < e.length; t++) (n = e[t]) >= o && n < y && (y = n);
             var _ = m + 1;
@@ -49,17 +49,17 @@ var r = n(675879),
             for (l += (y - o) * _, o = y, t = 0; t < e.length; t++) {
                 if ((n = e[t]) < o && ++l > 0x7fffffff) throw new s(i);
                 if (n === o) {
-                    for (var k = l, C = 36; ; ) {
+                    for (var k = l, C = 36; ;) {
                         var w = C <= d ? 1 : C >= d + 26 ? 26 : C - d;
                         if (k < w) break;
                         var S = k - w,
                             N = 36 - w;
-                        h(r, u(g(w + (S % N)))), (k = c(S / N)), (C += 36);
+                        (h(r, u(g(w + (S % N)))), (k = c(S / N)), (C += 36));
                     }
-                    h(r, u(g(k))), (d = b(l, _, m === f)), (l = 0), m++;
+                    (h(r, u(g(k))), (d = b(l, _, m === f)), (l = 0), m++);
                 }
             }
-            l++, o++;
+            (l++, o++);
         }
         return p(r, "");
     };

@@ -1,4 +1,4 @@
-n.d(t, { A: () => k, k: () => x }), n(142703);
+(n.d(t, { A: () => k, k: () => x }), n(142703));
 var i = n(562708),
     r = n(136722),
     a = n(636537),
@@ -51,7 +51,7 @@ let k = {
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
             u = t.lurker ?? !1,
             _ = L.default.getCurrentUser();
-        if (_?.hasFlag(M.nhx.QUARANTINED)) return (0, f.default)(), new Promise((e, t) => t(Error()));
+        if (_?.hasFlag(M.nhx.QUARANTINED)) return ((0, f.default)(), new Promise((e, t) => t(Error())));
         s.h.wait(() => s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: u, source: i, loadId: r }));
         try {
             let t = R.A.getGuildId(),
@@ -75,7 +75,7 @@ let k = {
                     s.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: _.body.join_request }),
                 null == C.A.getGuild(e) && _.body.show_verification_form && d)
             )
-                return (0, c.q)(e), _;
+                return ((0, c.q)(e), _);
             if (
                 (null != _.body.welcome_screen &&
                     s.h.dispatch({
@@ -97,14 +97,14 @@ let k = {
             return _;
         } catch (t) {
             throw (
-                (t.body?.code === M.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
+                t.body?.code === M.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                     (0, o.yO)(P.w_.JOIN_LARGE_GUILD_UNDERAGE),
                 t.body?.code === M.t02.TOO_MANY_USER_GUILDS &&
                     ((0, I.Om)(L.default.getCurrentUser()) ? w(M.cZu) : w(M.qlD)),
                 t.body?.code === M.t02.GUILD_AT_CAPACITY &&
                     b.A.show({ title: U.intl.string(U.t.ZZlox4), body: U.intl.string(U.t.ZUEGFn) }),
                 u && t.body?.code === M.t02.UNKNOWN_GUILD && G(e),
-                t)
+                t
             );
         }
     },
@@ -113,11 +113,11 @@ let k = {
         var r;
         let a = ((r = (await x(e)).id), null != n ? n : (0, p.W)(r)),
             s = t;
-        t?.hasOwnProperty("welcomeModalChannelId") &&
+        (t?.hasOwnProperty("welcomeModalChannelId") &&
             null == t.welcomeModalChannelId &&
             (s = { ...t, welcomeModalChannelId: a ?? void 0 }),
             (0, A.A)(M.BVt.CHANNEL(e, a, i), s),
-            await new Promise(setImmediate);
+            await new Promise(setImmediate));
     },
     deleteGuild: G,
     selectGuild(e) {
@@ -255,7 +255,7 @@ let k = {
                 oldFormErrors: !0,
                 rejectWithError: (0, a.fT)(),
             });
-        return E.A.checkGuildTemplateDirty(e), o;
+        return (E.A.checkGuildTemplateDirty(e), o);
     },
     updateRolePermissions: (e, t, n) =>
         a.Bo.patch({
@@ -276,7 +276,7 @@ let k = {
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
-        return E.A.checkGuildTemplateDirty(e), n;
+        return (E.A.checkGuildTemplateDirty(e), n);
     },
     async batchRoleUpdate(e, t) {
         let n = await a.Bo.patch({
@@ -285,7 +285,7 @@ let k = {
             oldFormErrors: !0,
             rejectWithError: (0, a.fT)(),
         });
-        return E.A.checkGuildTemplateDirty(e), n;
+        return (E.A.checkGuildTemplateDirty(e), n);
     },
     requestMembers(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
@@ -323,8 +323,8 @@ let k = {
         s.h.dispatch({ type: "GUILD_MOVE_BY_ID", sourceId: e, targetId: t, moveToBelow: n, combine: i });
     },
     createGuildFolderLocal(e, t) {
-        y.default.track(M.HAw.GUILD_FOLDER_CREATED),
-            s.h.dispatch({ type: "GUILD_FOLDER_CREATE_LOCAL", sourceIds: e, name: t });
+        (y.default.track(M.HAw.GUILD_FOLDER_CREATED),
+            s.h.dispatch({ type: "GUILD_FOLDER_CREATE_LOCAL", sourceIds: e, name: t }));
     },
     editGuildFolderLocal(e, t, n) {
         s.h.dispatch({ type: "GUILD_FOLDER_EDIT_LOCAL", targetId: e, sourceIds: t, name: n });
@@ -334,8 +334,8 @@ let k = {
     },
     toggleGuildFolderExpand(e) {
         let t = S.A.isFolderExpanded(e);
-        y.default.track(M.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
-            s.h.dispatch({ type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: e });
+        (y.default.track(M.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
+            s.h.dispatch({ type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: e }));
     },
     setGuildFolderExpanded(e, t) {
         s.h.dispatch({ type: "SET_GUILD_FOLDER_EXPANDED", folderId: e, expanded: t });
@@ -373,7 +373,7 @@ let k = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             i = { limit: t };
-        null != n && (i.after = n),
+        (null != n && (i.after = n),
             await a.Bo.get({
                 url: M.Rsh.GUILD_BANS(e),
                 oldFormErrors: !0,
@@ -381,12 +381,12 @@ let k = {
                 rejectWithError: (0, a.fT)(),
             }).then((t) => {
                 s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: t.body, guildId: e });
-            });
+            }));
     },
     async searchGuildBans(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
             r = { limit: i };
-        null != n && n.length > 0 && (r.user_ids = n),
+        (null != n && n.length > 0 && (r.user_ids = n),
             null != t && t.trim().length > 0 && (r.query = t),
             await a.Bo.get({
                 url: M.Rsh.GUILD_BANS_SEARCH(e),
@@ -395,7 +395,7 @@ let k = {
                 rejectWithError: (0, a.fT)(),
             }).then((t) => {
                 s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: t.body, userIds: n, guildId: e });
-            });
+            }));
     },
     async fetchGuildBans(e) {
         await a.Bo.get({ url: M.Rsh.GUILD_BANS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then((e) => {

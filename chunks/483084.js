@@ -7,7 +7,7 @@ function a(e) {
         [l, o] = i.useState({ options: s ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
         { options: d, loading: c, query: u, debouncedQuery: _ } = l,
         E = i.useCallback((e) => o((t) => ({ ...t, loading: s, query: e, debouncedQuery: e })), [s]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         t && E("");
     }, [t, E]),
         i.useEffect(() => {
@@ -35,7 +35,7 @@ function a(e) {
                     e = !0;
                 }
             );
-        }, [t, n, _, a, s]);
+        }, [t, n, _, a, s]));
     let A = i.useCallback((e) => {
             o((t) => ({ ...t, query: e }));
         }, []),

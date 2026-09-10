@@ -14,19 +14,19 @@ var s = r(522681),
     a = r(334954),
     n = r(580607),
     o = r(41851);
-r(162748), r(269882);
+(r(162748), r(269882));
 var c = r(528239);
-r(829601), r(924260), r(489510), r(886347), r(219877), r(309076);
+(r(829601), r(924260), r(489510), r(886347), r(219877), r(309076));
 var d = r(646613);
 r(880008);
 var l = r(49954),
     u = r(154676),
     h = r(327487);
-r(280366), r(693160);
+(r(280366), r(693160));
 var p = r(97669);
 r(614235);
 var g = r(888091);
-r(453080), r(660125), r(588936);
+(r(453080), r(660125), r(588936));
 var m = r(974916),
     f = r(132680),
     v = r(502220),
@@ -38,10 +38,10 @@ function y(e, t) {
     let r = n.t.getInstance();
     return new Promise((i, s) => {
         let a = r.setTimeout(() => {
-                t.removeEventListener("abort", n), i();
+                (t.removeEventListener("abort", n), i());
             }, e),
             n = () => {
-                r.clearTimeout(a), s(Error("aborted"));
+                (r.clearTimeout(a), s(Error("aborted")));
             };
         t.addEventListener("abort", n, { once: !0 });
     });
@@ -49,14 +49,14 @@ function y(e, t) {
 async function b(e) {
     let { config: t, deps: r, stream: i, signal: s, onStatus: a } = e,
         n = new h.b();
-    await n.initialize({ autocaptureInterval: 1e4, useOnDeviceWorkflow: !1, videoSelfie: !0 }),
+    (await n.initialize({ autocaptureInterval: 1e4, useOnDeviceWorkflow: !1, videoSelfie: !0 }),
         n.setChecksEnabled({
             lenses: t.validateLenses ?? !1,
             mask: t.validateFaceMask ?? !1,
             closedEyes: t.validateClosedEyes ?? !1,
             headWear: t.validateHeadCover ?? !1,
             occlusion: !1,
-        });
+        }));
     let o = !0 === t.useAsSelfie ? "selfie" : "videoSelfie",
         c = new m.t(i),
         d = {
@@ -71,10 +71,10 @@ async function b(e) {
         l = () =>
             new Promise((e, t) => {
                 let i = () => {
-                        u.cleanup(), t(Error("aborted"));
+                        (u.cleanup(), t(Error("aborted")));
                     },
                     l = (e) => {
-                        s.removeEventListener("abort", i), e();
+                        (s.removeEventListener("abort", i), e());
                     };
                 s.addEventListener("abort", i, { once: !0 });
                 let u = (0, h.l)({
@@ -85,7 +85,7 @@ async function b(e) {
                     onSuccess: (i, s) => {
                         (async () => {
                             try {
-                                await (0, h.m)({
+                                (await (0, h.m)({
                                     encryptedBase64Image: await (0, h.a)({
                                         canvas: i,
                                         dependencies: { getWasmUtil: async () => r.getWasmUtil() },
@@ -94,7 +94,7 @@ async function b(e) {
                                     imageType: o,
                                 }),
                                     await (0, h.p)(o),
-                                    l(e);
+                                    l(e));
                             } catch (e) {
                                 l(() => t(e instanceof Error ? e : Error(String(e))));
                             }
@@ -109,10 +109,10 @@ async function b(e) {
                 return;
             } catch (t) {
                 if (s.aborted || e >= 3) throw t;
-                a?.("error"), n.reset(), await y(1500, s);
+                (a?.("error"), n.reset(), await y(1500, s));
             }
     } finally {
-        c.dispose(), n.dispose();
+        (c.dispose(), n.dispose());
     }
 }
 async function T(e) {
@@ -120,7 +120,7 @@ async function T(e) {
         n = new w.i();
     await n.initialize({ videoSelfie: !0 });
     let o = (0, g.n)();
-    n.setGeometry({
+    (n.setGeometry({
         ...w.t,
         windowOuterWidth: o.outerWidth,
         windowOuterHeight: o.outerHeight,
@@ -138,7 +138,7 @@ async function T(e) {
             fpsLimitEnabled: !1,
         }),
         n.setThresholds(w.r),
-        n.setModelType(w.n);
+        n.setModelType(w.n));
     let c = new m.t(i);
     return new Promise((e, i) => {
         let o = !1,
@@ -159,12 +159,12 @@ async function T(e) {
                     (async () => {
                         try {
                             if (await k(t, r, n)) {
-                                a?.("success"), await y(900, s), p(), e();
+                                (a?.("success"), await y(900, s), p(), e());
                                 return;
                             }
                             o = !1;
                         } catch (e) {
-                            p(), i(e instanceof Error ? e : Error(String(e)));
+                            (p(), i(e instanceof Error ? e : Error(String(e))));
                         }
                     })());
             },
@@ -174,10 +174,10 @@ async function T(e) {
             p = () => {
                 u || ((u = !0), l.dispose(), c.dispose(), n.dispose());
             };
-        s.addEventListener(
+        (s.addEventListener(
             "abort",
             () => {
-                p(), i(Error("aborted"));
+                (p(), i(Error("aborted")));
             },
             { once: !0 },
         ),
@@ -185,7 +185,7 @@ async function T(e) {
                 .then(() => {
                     u || s.aborted || ((d = !0), a?.("detecting"));
                 })
-                .catch(() => {});
+                .catch(() => {}));
     });
 }
 async function k(e, t, r) {
@@ -210,36 +210,36 @@ async function k(e, t, r) {
 }
 var I = class {
         constructor(e = {}) {
-            (this.canvas = null),
+            ((this.canvas = null),
                 (this.ctx = null),
                 (this.video = null),
                 (this.rafId = null),
                 (this.audioTrack = null),
                 (this.videoTrack = null),
                 (this.composite = null),
-                (this.fps = e.fps ?? 30);
+                (this.fps = e.fps ?? 30));
         }
         start(e) {
-            (this.canvas = document.createElement("canvas")),
+            ((this.canvas = document.createElement("canvas")),
                 (this.ctx = this.canvas.getContext("2d")),
                 (this.video = document.createElement("video")),
                 (this.video.muted = !0),
                 (this.video.playsInline = !0),
                 (this.audioTrack = e.getAudioTracks()[0] ?? null),
-                this.setVideoSource(e);
+                this.setVideoSource(e));
             let t = this.canvas.captureStream(this.fps);
-            return this.audioTrack && t.addTrack(this.audioTrack), (this.composite = t), this.startDrawLoop(), t;
+            return (this.audioTrack && t.addTrack(this.audioTrack), (this.composite = t), this.startDrawLoop(), t);
         }
         switchVideo(e) {
             if (!this.composite) return;
             let t = this.videoTrack;
-            this.setVideoSource(e), t && t.stop();
+            (this.setVideoSource(e), t && t.stop());
         }
         get stream() {
             return this.composite ?? void 0;
         }
         stop() {
-            null !== this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null)),
+            (null !== this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null)),
                 this.videoTrack?.stop(),
                 this.audioTrack?.stop(),
                 this.composite?.getTracks().forEach((e) => e.stop()),
@@ -249,7 +249,7 @@ var I = class {
                 (this.video = null),
                 (this.videoTrack = null),
                 (this.audioTrack = null),
-                (this.composite = null);
+                (this.composite = null));
         }
         setVideoSource(e) {
             this.videoTrack = e.getVideoTracks()[0] ?? null;
@@ -261,21 +261,21 @@ var I = class {
                 let t = this.video,
                     r = this.canvas,
                     i = this.ctx;
-                t &&
+                (t &&
                     r &&
                     i &&
                     t.videoWidth > 0 &&
                     ((r.width !== t.videoWidth || r.height !== t.videoHeight) &&
                         ((r.width = t.videoWidth), (r.height = t.videoHeight)),
                     i.drawImage(t, 0, 0, r.width, r.height)),
-                    (this.rafId = requestAnimationFrame(e));
+                    (this.rafId = requestAnimationFrame(e)));
             };
             this.rafId = requestAnimationFrame(e);
         }
     },
     S = class {
         constructor() {
-            (this.mediaRecorder = null),
+            ((this.mediaRecorder = null),
                 (this._isRecording = !1),
                 (this._hasError = !1),
                 (this._error = null),
@@ -283,7 +283,7 @@ var I = class {
                 (this.buffer = []),
                 (this.bufferedBytes = 0),
                 (this.partNumber = 0),
-                (this.onPart = null);
+                (this.onPart = null));
         }
         get isRecording() {
             return this._isRecording;
@@ -295,47 +295,47 @@ var I = class {
             return this._error;
         }
         startRecording(e, t) {
-            this.reset(), (this.buffer = []), (this.bufferedBytes = 0), (this.partNumber = 0), (this.onPart = t);
+            (this.reset(), (this.buffer = []), (this.bufferedBytes = 0), (this.partNumber = 0), (this.onPart = t));
             try {
                 this.mimeType = (0, f.n)();
                 let t = new MediaRecorder(e.clone(), { mimeType: this.mimeType, videoBitsPerSecond: 25e5 });
-                (t.ondataavailable = (e) => {
+                ((t.ondataavailable = (e) => {
                     e.data.size > 0 &&
                         (this.buffer.push(e.data),
                         (this.bufferedBytes += e.data.size),
                         this.bufferedBytes >= 5242880 && this.flushPart());
                 }),
                     (t.onerror = (e) => {
-                        (this._error = `Recording error: ${e instanceof ErrorEvent && e.error instanceof Error ? e.error.message : e.type}`),
+                        ((this._error = `Recording error: ${e instanceof ErrorEvent && e.error instanceof Error ? e.error.message : e.type}`),
                             (this._isRecording = !1),
-                            (this._hasError = !0);
+                            (this._hasError = !0));
                     }),
                     t.start(1e3),
                     (this.mediaRecorder = t),
                     (this._isRecording = !0),
                     (this._error = null),
-                    (this._hasError = !1);
+                    (this._hasError = !1));
             } catch (e) {
-                (this._error = `Failed to start recording: ${e instanceof Error ? e.message : String(e)}`),
-                    (this._hasError = !0);
+                ((this._error = `Failed to start recording: ${e instanceof Error ? e.message : String(e)}`),
+                    (this._hasError = !0));
             }
         }
         stopRecording() {
             let e = this.mediaRecorder;
             return new Promise((t) => {
-                e && this._isRecording
+                (e && this._isRecording
                     ? ((e.onstop = () => {
-                          this.flushPart(), t();
+                          (this.flushPart(), t());
                       }),
                       e.stop(),
                       (this._isRecording = !1))
                     : t(),
-                    e?.stream?.getTracks().forEach((e) => e.stop());
+                    e?.stream?.getTracks().forEach((e) => e.stop()));
             });
         }
         reset() {
             let e = this.mediaRecorder;
-            e &&
+            (e &&
                 ((e.ondataavailable = null),
                 (e.onerror = null),
                 (e.onstop = null),
@@ -347,15 +347,15 @@ var I = class {
                 (this.bufferedBytes = 0),
                 (this._isRecording = !1),
                 (this._error = null),
-                (this._hasError = !1);
+                (this._hasError = !1));
         }
         flushPart() {
             if (0 === this.bufferedBytes || !this.onPart) return;
             let e = new Blob(this.buffer, { type: this.mimeType });
-            (this.partNumber += 1),
+            ((this.partNumber += 1),
                 this.onPart({ chunk: e, partNumber: this.partNumber }),
                 (this.buffer = []),
-                (this.bufferedBytes = 0);
+                (this.bufferedBytes = 0));
         }
     };
 async function C() {
@@ -373,17 +373,17 @@ async function x(e, t) {
 }
 var A = class {
     constructor() {
-        (this.recorder = new S()),
+        ((this.recorder = new S()),
             (this.uploadId = null),
             (this.parts = []),
             (this.inflight = []),
-            (this.uploadFailed = !1);
+            (this.uploadFailed = !1));
     }
     get isRecording() {
         return this.recorder.isRecording;
     }
     async start(e) {
-        (this.uploadId = await C()),
+        ((this.uploadId = await C()),
             (this.parts = []),
             (this.inflight = []),
             (this.uploadFailed = !1),
@@ -398,7 +398,7 @@ var A = class {
                         this.uploadFailed = !0;
                     });
                 this.inflight.push(i);
-            });
+            }));
     }
     async stop() {
         let e = this.uploadId;
@@ -412,7 +412,7 @@ var A = class {
             return { recordingId: null };
         let t = [...this.parts].sort((e, t) => e.partNumber - t.partNumber);
         try {
-            return await x(e, t), { recordingId: e };
+            return (await x(e, t), { recordingId: e });
         } catch {
             return { recordingId: null };
         }
@@ -519,7 +519,7 @@ let M = (0, d.t)({
             clearDetectionFeedback: (0, d.r)({ detectionStatus: () => void 0, detectionError: () => void 0 }),
             setUploadFailedError: (0, d.r)({ error: () => "Video upload failed" }),
             cleanup: ({ context: e }) => {
-                e.service.cleanup(), e.compositor.stop(), e.stream?.getTracks().forEach((e) => e.stop());
+                (e.service.cleanup(), e.compositor.stop(), e.stream?.getTracks().forEach((e) => e.stop()));
             },
         },
         guards: {
@@ -691,7 +691,7 @@ function V(e = {}) {
     return {
         ...r,
         stop() {
-            "active" === t.getSnapshot().status && t.send({ type: "ABORT" }), r.stop();
+            ("active" === t.getSnapshot().status && t.send({ type: "ABORT" }), r.stop());
         },
     };
 }
@@ -720,11 +720,11 @@ async function $(e) {
 let Q = window.AudioContext || window.webkitAudioContext,
     X = (e) => {
         let t = new Event("error");
-        return (t.data = Error("Wrong state for " + e)), t;
+        return ((t.data = Error("Wrong state for " + e)), t);
     };
 var G = class e {
     constructor(t, r = null) {
-        (this.stream = t),
+        ((this.stream = t),
             (this.config = r),
             (this.state = "inactive"),
             (this.em = document.createDocumentFragment()),
@@ -736,18 +736,18 @@ var G = class e {
                         .replace(/}$/, ""),
                 ]);
                 return new Worker(URL.createObjectURL(t));
-            })(e.encoder));
+            })(e.encoder)));
         let i = this;
         this.encoder.addEventListener("message", (e) => {
             let t = new Event("dataavailable");
-            (t.data = new Blob([e.data], { type: i.mimeType })),
+            ((t.data = new Blob([e.data], { type: i.mimeType })),
                 i.em.dispatchEvent(t),
-                "inactive" === i.state && i.em.dispatchEvent(new Event("stop"));
+                "inactive" === i.state && i.em.dispatchEvent(new Event("stop")));
         });
     }
     start(e) {
         if ("inactive" !== this.state) return this.em.dispatchEvent(X("start"));
-        (this.state = "recording"),
+        ((this.state = "recording"),
             i || (i = new Q(this.config)),
             (this.clone = this.stream.clone()),
             (this.input = i.createMediaStreamSource(this.clone)),
@@ -762,7 +762,7 @@ var G = class e {
             e &&
                 (this.slicing = setInterval(() => {
                     "recording" === this.state && this.requestData();
-                }, e));
+                }, e)));
     }
     stop() {
         return "inactive" === this.state
@@ -801,7 +801,7 @@ var G = class e {
         this.em.dispatchEvent(...e);
     }
 };
-(G.prototype.mimeType = "audio/wav"),
+((G.prototype.mimeType = "audio/wav"),
     (G.isTypeSupported = (e) => G.prototype.mimeType === e),
     (G.notSupported = !navigator.mediaDevices || !Q),
     (G.encoder = () => {
@@ -814,7 +814,7 @@ var G = class e {
                       for (let e = 0; e < r; e++) {
                           let r = 2 * e,
                               s = t[e];
-                          s > 1 ? (s = 1) : s < -1 && (s = -1), (s *= 32768), (i[r] = s), (i[r + 1] = s >> 8);
+                          (s > 1 ? (s = 1) : s < -1 && (s = -1), (s *= 32768), (i[r] = s), (i[r + 1] = s >> 8));
                       }
                       e.push(i);
                   })(t.data[1])
@@ -824,7 +824,7 @@ var G = class e {
                           i = e.length * r,
                           s = new Uint8Array(44 + i),
                           a = new DataView(s.buffer);
-                      a.setUint32(0, 0x52494646, !1),
+                      (a.setUint32(0, 0x52494646, !1),
                           a.setUint32(4, 36 + i, !0),
                           a.setUint32(8, 0x57415645, !1),
                           a.setUint32(12, 0x666d7420, !1),
@@ -836,9 +836,9 @@ var G = class e {
                           a.setUint16(32, 2, !0),
                           a.setUint16(34, 16, !0),
                           a.setUint32(36, 0x64617461, !1),
-                          a.setUint32(40, i, !0);
+                          a.setUint32(40, i, !0));
                       for (let t = 0; t < e.length; t++) s.set(e[t], t * r + 44);
-                      (e = []), postMessage(s.buffer, [s.buffer]);
+                      ((e = []), postMessage(s.buffer, [s.buffer]));
                   })(t.data[1]);
         };
     }),
@@ -849,12 +849,12 @@ var G = class e {
         function r(e, t) {
             if (0 === t.length) return e;
             let r = new Int8Array(e.length + t.length);
-            return r.set(e), r.set(t, e.length), r;
+            return (r.set(e), r.set(t, e.length), r);
         }
         onmessage = (i) => {
             if ("init" === i.data[0]) {
                 var s;
-                (s = i.data[1]), (e = new lamejs.Mp3Encoder(1, s || 44100, 128));
+                ((s = i.data[1]), (e = new lamejs.Mp3Encoder(1, s || 44100, 128)));
             } else if ("encode" === i.data[0]) {
                 var a = i.data[1];
                 for (let e = 0; e < a.length; e++) a[e] = 32767.5 * a[e];
@@ -862,39 +862,39 @@ var G = class e {
                 t = r(t, s);
             } else {
                 let s, a;
-                i.data[1], (s = e.flush()), (a = (t = r(t, s)).buffer), (t = new Int8Array()), postMessage(a, [a]);
+                (i.data[1], (s = e.flush()), (a = (t = r(t, s)).buffer), (t = new Int8Array()), postMessage(a, [a]));
             }
         };
     }),
-    (G.prototype.mimeType = "audio/mpeg");
+    (G.prototype.mimeType = "audio/mpeg"));
 let J = "audio/mpeg";
 var K = class {
     constructor() {
-        (this.recorder = null), (this.chunks = []), (this._isRecording = !1);
+        ((this.recorder = null), (this.chunks = []), (this._isRecording = !1));
     }
     get isRecording() {
         return this._isRecording;
     }
     start(e) {
-        this.reset(), (this.chunks = []);
+        (this.reset(), (this.chunks = []));
         let t = new G(new MediaStream(e.getAudioTracks()).clone());
-        (t.mimeType = J),
+        ((t.mimeType = J),
             t.addEventListener("dataavailable", (e) => {
                 e.data.size > 0 && this.chunks.push(e.data);
             }),
             t.start(),
             (this.recorder = t),
-            (this._isRecording = !0);
+            (this._isRecording = !0));
     }
     stop() {
         let e = this.recorder;
         return new Promise((t) => {
             e && this._isRecording
                 ? (e.addEventListener("stop", () => {
-                      (this._isRecording = !1),
+                      ((this._isRecording = !1),
                           e.stream?.getTracks().forEach((e) => e.stop()),
                           (this.recorder = null),
-                          t(new Blob(this.chunks, { type: J }));
+                          t(new Blob(this.chunks, { type: J })));
                   }),
                   e.stop())
                 : t(new Blob([], { type: J }));
@@ -906,7 +906,7 @@ var K = class {
             ? ""
             : new Promise((t, r) => {
                   let i = new FileReader();
-                  (i.onloadend = () => {
+                  ((i.onloadend = () => {
                       let e = i.result;
                       if ("string" != typeof e) return void r(Error("Failed to encode blob as base64"));
                       let s = e.indexOf(",");
@@ -915,7 +915,7 @@ var K = class {
                       (i.onerror = () => {
                           r(i.error ?? Error("Failed to read blob"));
                       }),
-                      i.readAsDataURL(e);
+                      i.readAsDataURL(e));
               });
     }
     reset() {
@@ -926,7 +926,7 @@ var K = class {
             } catch {}
             e.stream?.getTracks().forEach((e) => e.stop());
         }
-        (this.recorder = null), (this._isRecording = !1);
+        ((this.recorder = null), (this._isRecording = !1));
     }
 };
 function Y() {

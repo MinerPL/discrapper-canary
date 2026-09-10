@@ -15,7 +15,7 @@ function f(e) {
 async function A(e) {
     let { userId: n, applicationId: t, onSuccess: r } = e;
     try {
-        await a.Bo.del({ url: s.Rsh.USER_GAME_RELATIONSHIP(n, t), oldFormErrors: !0, rejectWithError: !1 }), r();
+        (await a.Bo.del({ url: s.Rsh.USER_GAME_RELATIONSHIP(n, t), oldFormErrors: !0, rejectWithError: !1 }), r());
     } catch (e) {
         f(e);
     }
@@ -79,7 +79,7 @@ var C = t(192308),
     _ = t(646363);
 function g(e) {
     let { onConfirm: n, onFinally: r } = e;
-    N.default.track(s.HAw.OPEN_MODAL, { type: _.C }),
+    (N.default.track(s.HAw.OPEN_MODAL, { type: _.C }),
         (0, C.openModalLazy)(async () => {
             let { default: e } = await t.e("352049").then(t.bind(t, 691464));
             return (t) => {
@@ -87,12 +87,12 @@ function g(e) {
                 return (0, y.jsx)(e, {
                     onConfirm: n,
                     onClose: async () => {
-                        await i(), r?.();
+                        (await i(), r?.());
                     },
                     ...o,
                 });
             };
-        });
+        }));
 }
 function T(e) {
     let { userId: n, applicationId: t, location: r, confirmStrangerRequest: i = !1 } = e;
@@ -105,7 +105,7 @@ function O(e, n) {
         ? (i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: n.userId, isStranger: !0 }),
           g({
               onConfirm: () => {
-                  T({ ...n, confirmStrangerRequest: !0 }), n.onConfirm?.();
+                  (T({ ...n, confirmStrangerRequest: !0 }), n.onConfirm?.());
               },
               onCancel: () => {
                   n.onCancel?.();
@@ -133,7 +133,7 @@ let F = {
             ? s
                 ? void g({
                       onConfirm: () => {
-                          T({ userId: n, applicationId: t, location: i, confirmStrangerRequest: !0 }), o?.();
+                          (T({ userId: n, applicationId: t, location: i, confirmStrangerRequest: !0 }), o?.());
                       },
                       onCancel: () => {
                           a?.();
@@ -153,7 +153,7 @@ let F = {
                           c?.();
                       })
             : T({ userId: n, applicationId: t, location: i, confirmStrangerRequest: !0 }).then(() => {
-                  o?.(), c?.();
+                  (o?.(), c?.());
               });
     },
     getDisplayName: function (e) {

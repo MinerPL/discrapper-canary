@@ -17,7 +17,7 @@ class f extends r.Ay.Store {
         !i.isPlatformEmbedded ||
             __OVERLAY__ ||
             n.Ay.getGPUDriverVersions().then((e) => {
-                (g = (function (e) {
+                ((g = (function (e) {
                     let t = d[(0, i.getPlatform)()];
                     if (null == t) return !1;
                     for (let a of Object.keys(e)) {
@@ -48,7 +48,7 @@ class f extends r.Ay.Store {
                         }
                         return !1;
                     })(e)),
-                    this.emitChange();
+                    this.emitChange());
             });
     }
     get GPUDriversOutdated() {
@@ -67,6 +67,6 @@ class f extends r.Ay.Store {
 let S = new f(l.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
-        (g = t.GPUDriversOutdated), (c = t.canUseHardwareAcceleration);
+        ((g = t.GPUDriversOutdated), (c = t.canUseHardwareAcceleration));
     },
 });

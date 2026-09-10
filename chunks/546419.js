@@ -1,4 +1,4 @@
-n.r(l), n.d(l, { default: () => V }), n(321073);
+(n.r(l), n.d(l, { default: () => V }), n(321073));
 var t = n(477900),
     r = n(582128),
     s = n(503698),
@@ -100,7 +100,7 @@ function _(e) {
         }),
         en = r.useCallback(
             (e) => {
-                (J.current = e), ee(el(e)), y(l.id, e);
+                ((J.current = e), ee(el(e)), y(l.id, e));
             },
             [ee, el, y, l.id],
         ),
@@ -108,16 +108,20 @@ function _(e) {
             mentionCount: et,
             isLowImportanceMention: er,
             showUnreadDot: es,
-        } = (0, o.cf)([P.Ay, B.Ay], () => {
-            if ("channel" !== l.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
-            let e = P.Ay.getMentionCount(l.channelId),
-                n = B.Ay.isGuildOrCategoryOrChannelMuted(l.guildId, l.channelId);
-            return {
-                mentionCount: e,
-                isLowImportanceMention: P.Ay.getIsMentionLowImportance(l.channelId),
-                showUnreadDot: 0 === e && !n && P.Ay.hasUnread(l.channelId),
-            };
-        }, [l]),
+        } = (0, o.cf)(
+            [P.Ay, B.Ay],
+            () => {
+                if ("channel" !== l.kind) return { mentionCount: 0, isLowImportanceMention: !1, showUnreadDot: !1 };
+                let e = P.Ay.getMentionCount(l.channelId),
+                    n = B.Ay.isGuildOrCategoryOrChannelMuted(l.guildId, l.channelId);
+                return {
+                    mentionCount: e,
+                    isLowImportanceMention: P.Ay.getIsMentionLowImportance(l.channelId),
+                    showUnreadDot: 0 === e && !n && P.Ay.hasUnread(l.channelId),
+                };
+            },
+            [l],
+        ),
         ei = null;
     if ("route" === l.kind)
         l.routePath === O.BVt.FRIENDS
@@ -223,17 +227,17 @@ function V() {
             let g = "before" === n ? d : d + 1,
                 h = o < g ? g - 1 : g;
             if (h === u.current) return;
-            (u.current = h), (a.current = { toIndex: h });
+            ((u.current = h), (a.current = { toIndex: h }));
             let C = r.getBoundingClientRect(),
                 x = c.getBoundingClientRect();
             f("before" === n ? x.left - C.left - 1 : x.right - C.left - 1);
         }, []),
         C = r.useCallback((e) => {
             let l = a.current;
-            null != l && (0, w.Aq)(e, l.toIndex), (a.current = null), (u.current = null), f(null);
+            (null != l && (0, w.Aq)(e, l.toIndex), (a.current = null), (u.current = null), f(null));
         }, []),
         x = r.useCallback(() => {
-            (a.current = null), (u.current = null), f(null);
+            ((a.current = null), (u.current = null), f(null));
         }, []),
         [, m] = (0, c.H)({
             accept: G,
@@ -243,7 +247,7 @@ function V() {
         }),
         b = r.useCallback(
             (e) => {
-                (s.current = e), m(e);
+                ((s.current = e), m(e));
             },
             [m],
         ),
@@ -254,12 +258,12 @@ function V() {
             let e = i.current;
             if (0 === e.size) return;
             let l = new Map();
-            e.forEach((e, n) => {
+            (e.forEach((e, n) => {
                 l.set(n, e.getBoundingClientRect().left);
             }),
                 e.forEach((e) => {
-                    (e.style.transition = ""), (e.style.transform = "");
-                });
+                    ((e.style.transition = ""), (e.style.transform = ""));
+                }));
             let n = [];
             if (
                 (e.forEach((e, t) => {
@@ -272,7 +276,7 @@ function V() {
             ) {
                 for (let { node: e, dx: l } of n) e.style.transform = `translateX(${l}px)`;
                 for (let { node: e } of (n[0].node.offsetHeight, n))
-                    (e.style.transition = "transform 150ms ease-out"),
+                    ((e.style.transition = "transform 150ms ease-out"),
                         (e.style.transform = ""),
                         e.addEventListener(
                             "transitionend",
@@ -280,7 +284,7 @@ function V() {
                                 e.style.transition = "";
                             },
                             { once: !0 },
-                        );
+                        ));
             }
         }, [A]),
         !n)

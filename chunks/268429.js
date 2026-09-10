@@ -1,11 +1,11 @@
-n.d(t, { A: () => a }), n(321073);
+(n.d(t, { A: () => a }), n(321073));
 var i = n(860840);
 let r = /^[a-f0-9]{32}$/;
 class a {
     surface;
     originalMd5Promise;
     constructor(e, t) {
-        (this.surface = e), (this.originalMd5Promise = t);
+        ((this.surface = e), (this.originalMd5Promise = t));
     }
     static fromBlob(e, t) {
         return new a(

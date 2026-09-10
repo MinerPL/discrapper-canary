@@ -102,16 +102,16 @@ var r = class {
             window.addEventListener("pagehide", l),
             window.addEventListener("beforeunload", l),
             () => {
-                document.removeEventListener("visibilitychange", t),
+                (document.removeEventListener("visibilitychange", t),
                     window.removeEventListener("pagehide", l),
-                    window.removeEventListener("beforeunload", l);
+                    window.removeEventListener("beforeunload", l));
             }
         );
     }
 };
 let y = new (class {
     constructor() {
-        (this.detectorPaused = !0), (this.isDevtoolsOpen = !1);
+        ((this.detectorPaused = !0), (this.isDevtoolsOpen = !1));
     }
     start(l) {
         this.canUseDevtoolsDetector() &&
@@ -126,13 +126,13 @@ let y = new (class {
             });
     }
     stop() {
-        this.clearNextPulse(),
+        (this.clearNextPulse(),
             this.resolveVerdict?.(null),
             (this.resolveVerdict = void 0),
             this.heart?.terminate(),
             (this.heart = void 0),
             (this.detectorPaused = !0),
-            (this.isDevtoolsOpen = !1);
+            (this.isDevtoolsOpen = !1));
     }
     canUseDevtoolsDetector() {
         return (
@@ -170,17 +170,17 @@ onmessage = (ev) => { postMessage({isOpenBeat:true});
         let t = (t) => {
             t.data.isOpenBeat
                 ? new Promise((t) => {
-                      (this.resolveVerdict = t),
+                      ((this.resolveVerdict = t),
                           setTimeout(() => {
                               this.resolveVerdict?.(!0);
-                          }, l.maxMillisBeforeAckWhenClosed + 1);
+                          }, l.maxMillisBeforeAckWhenClosed + 1));
                   }).then((t) => {
                       null !== t &&
                           (t !== this.isDevtoolsOpen &&
                               ((this.isDevtoolsOpen = t), t ? l.onDetectOpen() : l.onDetectClose && l.onDetectClose()),
                           this.clearNextPulse(),
                           (this.nextPulseTimeout = setTimeout(() => {
-                              (this.nextPulseTimeout = void 0), this.doOnePulse(l.moreAnnoyingDebuggerStatements);
+                              ((this.nextPulseTimeout = void 0), this.doOnePulse(l.moreAnnoyingDebuggerStatements));
                           }, 1e3 * l.pollingIntervalSeconds)));
                   })
                 : this.resolveVerdict?.(!1);
@@ -212,7 +212,7 @@ async function Y() {
 }
 let T = "sha1";
 async function V(l) {
-    void 0 !== l.ipLookup && (0, m.s)(l.ipLookup),
+    (void 0 !== l.ipLookup && (0, m.s)(l.ipLookup),
         void 0 !== l.fingerprint && ((0, m.o)(l.fingerprint), (0, e.r)(!1 === l.fingerprint)),
         (0, n._)() ||
             (0, n.y)(
@@ -224,7 +224,7 @@ async function V(l) {
                     pageLifecycle: new r(),
                     timer: c.t.getInstance(),
                 }),
-            );
+            ));
     let t = (function (l) {
             if (void 0 !== l)
                 return !1 === l
@@ -251,17 +251,17 @@ async function V(l) {
             }),
         u)
     ) {
-        (i = { ...u, pipelines: u.pipelines ? [...u.pipelines] : void 0 }), await (0, e.i)(u);
+        ((i = { ...u, pipelines: u.pipelines ? [...u.pipelines] : void 0 }), await (0, e.i)(u));
         let t = await e.t.getInstance();
         await t.initialize({ ...u, pipelines: u.pipelines ? [...u.pipelines] : void 0 });
         let d = "object" == typeof l.wasm && !0 === l.wasm.showLogs;
-        await t.setProductionMode(!d),
+        (await t.setProductionMode(!d),
             l.devMode ||
                 y.start({
                     onInspectorOpened: () => {
                         Y();
                     },
-                });
+                }));
     }
     l.tri && (await (0, o.n)(l.tri, { sessionToken: l.token }));
 }
@@ -282,7 +282,7 @@ async function w(l) {
     t && (await (0, s.i)(X(t)));
 }
 function R() {
-    y.stop(),
+    (y.stop(),
         (0, b.r)(),
         (0, a.a)(),
         (0, m.a)(),
@@ -294,5 +294,5 @@ function R() {
         (0, o.a)(),
         (i = void 0),
         e.t.resetInstance(),
-        (0, o.o)();
+        (0, o.o)());
 }

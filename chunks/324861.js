@@ -10,10 +10,10 @@ let u = function () {
         t = (0, r.A)(n.M.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
         l = (0, r.A)(n.M.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK),
         u = a.useCallback(() => {
-            e.isDismissed && e.handleToggleDismissState(),
+            (e.isDismissed && e.handleToggleDismissState(),
                 t.isDismissed && t.handleToggleDismissState(),
                 l.isDismissed && l.handleToggleDismissState(),
-                i.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" });
+                i.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" }));
         }, [t, l, e]),
         { handleResetStatusClick: d } = (0, o.j$)(s.Fw);
     return { resetOnboardingExperience: u, resetQuestStatus: d };

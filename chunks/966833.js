@@ -1,4 +1,4 @@
-n.d(t, { A: () => D, e: () => N }), n(667532);
+(n.d(t, { A: () => D, e: () => N }), n(667532));
 var i,
     l = n(435558),
     r = n.n(l),
@@ -26,11 +26,11 @@ function C(e) {
 }
 function S() {
     r().forEach(R, (e) => {
-        e.items.forEach((e) => {
+        (e.items.forEach((e) => {
             let { message: t } = e;
-            t.set("blocked", T.A.isBlockedForMessage(t)), t.set("ignored", T.A.isIgnoredForMessage(t));
+            (t.set("blocked", T.A.isBlockedForMessage(t)), t.set("ignored", T.A.isIgnoredForMessage(t)));
         }),
-            (e.items = e.items.slice());
+            (e.items = e.items.slice()));
     });
 }
 class O extends s.Ay.Store {
@@ -63,7 +63,7 @@ let D = new O(a.h, {
             let { pinned_at: t, message: n } = e;
             return { pinnedAt: new Date(Date.parse(t)), message: (0, E.rh)(n) };
         });
-        (l.items = [...l.items, ...r]), (l.state = i ? "LOADED_HAS_MORE" : "LOADING_FINISHED");
+        ((l.items = [...l.items, ...r]), (l.state = i ? "LOADED_HAS_MORE" : "LOADING_FINISHED"));
     },
     LOAD_PINNED_MESSAGES_FAILURE: function (e) {
         let { channelId: t } = e,
@@ -92,7 +92,7 @@ let D = new O(a.h, {
                 }).length
         )
             return !1;
-        (i.items = i.items.slice()), (R[n] = i);
+        ((i.items = i.items.slice()), (R[n] = i));
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e,
@@ -119,7 +119,7 @@ let D = new O(a.h, {
                 o = (0, E.IU)(a, e.message);
             if (o !== a) {
                 let e = i.items.slice();
-                (e[l] = { pinnedAt: s, message: o }), (R[n].items = e);
+                ((e[l] = { pinnedAt: s, message: o }), (R[n].items = e));
             }
             return;
         }
@@ -139,7 +139,7 @@ let D = new O(a.h, {
             return n.id === t;
         });
         if (-1 === l) return !1;
-        (i.items = i.items.slice()), i.items.splice(l, 1);
+        ((i.items = i.items.slice()), i.items.splice(l, 1));
     },
     RELATIONSHIP_ADD: S,
     RELATIONSHIP_REMOVE: S,
@@ -153,6 +153,6 @@ let D = new O(a.h, {
             return n.id === t;
         });
         if (-1 === l) return !1;
-        (i.items = i.items.slice()), (i.items[l].message = (0, o.Td)(i.items[l].message));
+        ((i.items = i.items.slice()), (i.items[l].message = (0, o.Td)(i.items[l].message)));
     },
 });

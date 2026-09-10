@@ -5,13 +5,13 @@ var a = n(873326),
     l = n(231577),
     c = n(296438);
 function u(e) {
-    (0, a.s5)("dom", e), (0, a.AS)("dom", d);
+    ((0, a.s5)("dom", e), (0, a.AS)("dom", d));
 }
 function d() {
     if (!c.j.document) return;
     let e = a.aj.bind(null, "dom"),
         t = p(e, !0);
-    c.j.document.addEventListener("click", t, !1),
+    (c.j.document.addEventListener("click", t, !1),
         c.j.document.addEventListener("keypress", t, !1),
         ["EventTarget", "Node"].forEach((t) => {
             let n = c.j[t],
@@ -28,7 +28,7 @@ function d() {
                                     o = (r[n] = r[n] || { refCount: 0 });
                                 if (!o.handler) {
                                     let r = p(e);
-                                    (o.handler = r), t.call(this, n, r, i);
+                                    ((o.handler = r), t.call(this, n, r, i));
                                 }
                                 o.refCount++;
                             } catch (e) {}
@@ -50,7 +50,7 @@ function d() {
                         return e.call(this, t, n, r);
                     };
                 }));
-        });
+        }));
 }
 function p(e, t = !1) {
     return (n) => {
@@ -69,9 +69,9 @@ function p(e, t = !1) {
                 (!u || !u.tagName || ("INPUT" !== u.tagName && "TEXTAREA" !== u.tagName && !u.isContentEditable && 1)))
         )
             return;
-        (0, s.my)(n, "_sentryCaptured", !0), u && !u._sentryId && (0, s.my)(u, "_sentryId", (0, l.eJ)());
+        ((0, s.my)(n, "_sentryCaptured", !0), u && !u._sentryId && (0, s.my)(u, "_sentryId", (0, l.eJ)()));
         let d = "keypress" === n.type ? "input" : n.type;
-        !(function (e) {
+        (!(function (e) {
             if (e.type !== i) return !1;
             try {
                 if (!e.target || e.target._sentryId !== o) return !1;
@@ -80,7 +80,7 @@ function p(e, t = !1) {
         })(n) && (e({ event: n, name: d, global: t }), (i = n.type), (o = u ? u._sentryId : void 0)),
             clearTimeout(r),
             (r = c.j.setTimeout(() => {
-                (o = void 0), (i = void 0);
-            }, 1e3));
+                ((o = void 0), (i = void 0));
+            }, 1e3)));
     };
 }

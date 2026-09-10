@@ -19,7 +19,7 @@ function u(e) {
             {
                 text: c.intl.string(o.default.ctefO2),
                 onClick: function () {
-                    h && a.w.set(d, !0), n(), u();
+                    (h && a.w.set(d, !0), n(), u());
                 },
             },
         ],

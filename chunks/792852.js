@@ -35,12 +35,12 @@ let a = {
         toggleGameId: (t) =>
             e((e) => {
                 let n = new Set(e.selectedGameIds);
-                return n.has(t) ? n.delete(t) : n.add(t), { selectedGameIds: n };
+                return (n.has(t) ? n.delete(t) : n.add(t), { selectedGameIds: n });
             }),
         toggleUserId: (t) =>
             e((e) => {
                 let n = new Set(e.selectedUserIds);
-                return n.has(t) ? n.delete(t) : n.add(t), { selectedUserIds: n };
+                return (n.has(t) ? n.delete(t) : n.add(t), { selectedUserIds: n });
             }),
         setSelectedGuildId: (t) => e({ selectedGuildId: t }),
         setSelectedActivity: (t) => e({ selectedActivity: t }),

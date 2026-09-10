@@ -14,5 +14,5 @@ function l() {
 }
 function o() {
     var e, t;
-    return (e = a.A.windowSize().width), (t = r.A.hasConsented(s.YAq.PERSONALIZATION)), e > 1200 && t;
+    return ((e = a.A.windowSize().width), (t = r.A.hasConsented(s.YAq.PERSONALIZATION)), e > 1200 && t);
 }

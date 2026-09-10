@@ -1,4 +1,4 @@
-n.d(t, { Eq: () => d }), n(477900);
+(n.d(t, { Eq: () => d }), n(477900));
 var i = n(582128),
     r = n(435558),
     a = n.n(r);
@@ -10,13 +10,13 @@ function d(e, t) {
     i.useEffect(
         () => (
             a().forEach(e, (e, n) => {
-                !o &&
+                (!o &&
                     e.length > 50 &&
                     ((o = !0),
                     l.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
                         extra: { count: e.length, guildId: n, reason: t },
                     })),
-                    (0, s.un)(n, e);
+                    (0, s.un)(n, e));
             }),
             () => {
                 a().forEach(e, (e, t) => (0, s.NE)(t, e));

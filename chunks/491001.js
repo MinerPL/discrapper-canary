@@ -7,5 +7,5 @@ let i = (0, n(945810).mj)({
     }),
     r = null;
 function a() {
-    return null == r && (r = i.getConfig({ location: "isIOSPushNotificationRawPayloadFixExperiment" }).enabled), r;
+    return (null == r && (r = i.getConfig({ location: "isIOSPushNotificationRawPayloadFixExperiment" }).enabled), r);
 }

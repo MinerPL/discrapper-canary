@@ -28,7 +28,7 @@ function O() {
         return null;
     async function n() {
         try {
-            t(!0), await (0, g.iD)(), window.location.reload(!0);
+            (t(!0), await (0, g.iD)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }
@@ -65,7 +65,7 @@ class D extends i.PureComponent {
         this.setState({ error: e, info: t });
         let r = (0, d.b)(),
             i = x.A.captureCrash(e, { extra: t });
-        y.default.track(C.HAw.APP_CRASHED, {
+        (y.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -75,7 +75,7 @@ class D extends i.PureComponent {
             error_level: "fatal",
         }),
             _(r),
-            w.Ay.cleanupDisplaySleep();
+            w.Ay.cleanupDisplaySleep());
     }
     _handleSubmitReport() {
         location.reload(!0);

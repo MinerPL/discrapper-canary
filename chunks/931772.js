@@ -10,12 +10,12 @@ class l extends s.A {
     summary;
     styles;
     constructor(e) {
-        super(),
+        (super(),
             (this.storeListingId = e.storeListingId),
             (this.skuId = e.skuId),
             (this.name = e.name),
             (this.summary = e.summary?.trim()),
-            (this.styles = e.styles);
+            (this.styles = e.styles));
     }
     static fromServer(e) {
         let { store_listing_id: t, sku_id: n, styles: i, ...s } = e;

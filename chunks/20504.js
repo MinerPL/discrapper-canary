@@ -53,7 +53,7 @@ class f extends i.PureComponent {
                 i?.(Math.max(t, n - s));
                 break;
             case "Escape":
-                this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault();
+                (this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault());
         }
     };
     handleDragStart = () => {
@@ -87,13 +87,13 @@ class f extends i.PureComponent {
             (0, l.jsxs)("div", {
                 className: r()(n, m.kL),
                 onMouseEnter: () => {
-                    clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.();
+                    (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }), C?.());
                 },
                 onMouseLeave: () => {
-                    clearTimeout(this._hoverTimeout),
+                    (clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
-                            this.setState({ hovered: !1 }), E?.();
-                        }, 150));
+                            (this.setState({ hovered: !1 }), E?.());
+                        }, 150)));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
@@ -101,11 +101,11 @@ class f extends i.PureComponent {
                     (0, l.jsx)("div", {
                         className: r()(m.QS, i, { [m.OZ]: I || y || S }),
                         onMouseEnter: () => {
-                            clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
+                            (clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 }));
                         },
                         onMouseLeave: () => {
-                            clearTimeout(this._hoverTimeout),
-                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150));
+                            (clearTimeout(this._hoverTimeout),
+                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150)));
                         },
                         children: (0, l.jsx)(d.A, {
                             className: m.YZ,

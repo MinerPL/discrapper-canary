@@ -19,15 +19,15 @@ class d {
             return;
         }
         let c = document.createElement("script");
-        (c.src = `https://www.google.com/recaptcha/enterprise.js?render=${this.getSiteKey(e)}`),
+        ((c.src = `https://www.google.com/recaptcha/enterprise.js?render=${this.getSiteKey(e)}`),
             (c.id = `recaptcha-script-${this.getSiteKey(e)}`),
             (c.async = !0),
             (c.defer = !0),
             document.body.appendChild(c),
             null != t &&
                 (c.onload = () => {
-                    a?.("recaptcha-script-onload-callback"), t();
-                });
+                    (a?.("recaptcha-script-onload-callback"), t());
+                }));
     }
 }
 var p = a(652215);
@@ -39,19 +39,19 @@ function u(e) {
         }, []),
         o = r.useCallback(
             (e) => {
-                h("handle-verify"), i(e);
+                (h("handle-verify"), i(e));
             },
             [i, h],
         ),
         A = r.useCallback(() => {
             window?.grecaptcha?.enterprise?.ready(async () => {
-                h("recaptcha-ready"),
+                (h("recaptcha-ready"),
                     o(await (window?.grecaptcha).enterprise.execute(t, null != a ? { action: a } : void 0)),
-                    u("loaded");
+                    u("loaded"));
             });
         }, [t, a, o, h]),
         g = r.useCallback(() => {
-            u("running"), h("recaptcha-loading"), d.loadRecaptchaScript(t, A, h);
+            (u("running"), h("recaptcha-loading"), d.loadRecaptchaScript(t, A, h));
         }, [t, A, h]);
     return (
         r.useEffect(() => {
@@ -59,11 +59,11 @@ function u(e) {
         }, [g, l]),
         r.useEffect(
             () => () => {
-                h("recaptcha-unloading"),
+                (h("recaptcha-unloading"),
                     document
                         .querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge')
                         .forEach((e) => e.parentNode?.removeChild(e)),
-                    null != window.grecaptcha && delete window.grecaptcha;
+                    null != window.grecaptcha && delete window.grecaptcha);
             },
             [h],
         ),
@@ -75,6 +75,6 @@ function h(e) {
         r = (0, l.M)(t) ? "dark" : "light";
     return (0, c.jsx)(i.A, { sitekey: p._Ak, ...a, theme: r });
 }
-(h.Themes = { LIGHT: "light", DARK: "dark" }),
-    (h.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
+((h.Themes = { LIGHT: "light", DARK: "dark" }),
+    (h.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" }));
 let o = 588245 != a.j ? h : null;

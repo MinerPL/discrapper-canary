@@ -1,4 +1,4 @@
-n.d(t, { e: () => G }), n(321073);
+(n.d(t, { e: () => G }), n(321073));
 var i,
     r = n(477900),
     a = n(582128),
@@ -81,8 +81,8 @@ function G(e) {
             mainWindowVisible: x,
             currentWindow: k,
             fontScale: F,
-            fontScaleClass: V,
-            keyboardModeEnabled: B,
+            fontScaleClass: B,
+            keyboardModeEnabled: V,
             saturation: H,
             desaturateUserColors: j,
             useForcedColors: W,
@@ -107,7 +107,7 @@ function G(e) {
             alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
             highContrastMode: f.Ay.isHighContrastModeEnabled,
         })),
-        q = (function (e, t) {
+        X = (function (e, t) {
             let [n, i] = a.useState(0),
                 r = (0, m.aL)();
             a.useEffect(() => {
@@ -121,7 +121,7 @@ function G(e) {
                     r.subscribe(g.jej.POPOUT_SHOW, e),
                     r.subscribe(g.jej.POPOUT_HIDE, t),
                     () => {
-                        r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t);
+                        (r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t));
                     }
                 );
             }, [r]);
@@ -137,14 +137,14 @@ function G(e) {
                               l((e) => !e);
                     }
                     let r = s ? "keyup" : "mousemove";
-                    return t && e.addEventListener(r, i), () => e?.removeEventListener(r, i);
+                    return (t && e.addEventListener(r, i), () => e?.removeEventListener(r, i));
                 }, [e, s, n, t]),
                 t && 0 === n && s
             );
         })(k, __OVERLAY__ || G),
-        Z = 0;
-    1 !== H && (Z |= _.REDUCE_SATURATION_ENABLED);
-    let X = (0, b.C)(),
+        q = 0;
+    1 !== H && (q |= _.REDUCE_SATURATION_ENABLED);
+    let Z = (0, b.C)(),
         Q = (0, N.qK)("RootThemeContextProvider"),
         J = (0, N.k5)("RootThemeContextProvider"),
         ee = (0, N.lV)("RootThemeContextProvider"),
@@ -250,7 +250,7 @@ function G(e) {
                     function e() {
                         A(_);
                     }
-                    (0, s.waitForAllDefaultIntlMessagesLoaded)().then(e), U.intl.onLocaleChange(e);
+                    ((0, s.waitForAllDefaultIntlMessagesLoaded)().then(e), U.intl.onLocaleChange(e));
                 }, [_]),
                 E
             );
@@ -275,18 +275,18 @@ function G(e) {
         value: ei,
         children: (0, r.jsx)(I, {
             theme: h,
-            flags: Z,
+            flags: q,
             saturation: H,
-            density: X,
+            density: Z,
             children: (0, r.jsx)(M.fs, {
                 lang: A,
                 theme: h,
-                density: X,
+                density: Z,
                 focused: G,
                 fontScale: F,
-                fontScaleClass: V,
-                keyboardModeEnabled: B,
-                mouseMode: q,
+                fontScaleClass: B,
+                keyboardModeEnabled: V,
+                mouseMode: X,
                 saturation: H,
                 desaturateUserColors: j,
                 useForcedColors: W,

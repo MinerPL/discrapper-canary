@@ -182,8 +182,8 @@ let B = {
             i.insertText(((d = a), `/${d.displayName}`));
         } else {
             let e = s;
-            null == e && (e = u ? E.Oh.QUERY : E.Oh.DISCOVERY),
-                y.Gf({ channelId: r.id, command: a, section: c ?? null, location: e, queryLength: l?.length });
+            (null == e && (e = u ? E.Oh.QUERY : E.Oh.DISCOVERY),
+                y.Gf({ channelId: r.id, command: a, section: c ?? null, location: e, queryLength: l?.length }));
         }
         return { type: o.kc.COMMAND };
     },
@@ -268,7 +268,7 @@ let Q = { results: { choices: [] } },
                     options: l,
                 } = e,
                 i = t[n];
-            return l.insertText(i.displayName), { type: o.kc.CHOICE };
+            return (l.insertText(i.displayName), { type: o.kc.CHOICE });
         },
     };
 n(321073);
@@ -349,7 +349,7 @@ let F = { results: { commandOptions: [] } },
                     options: i,
                 } = e,
                 r = n[l];
-            return i.insertText(((t = r), `${t.displayName}:`)), { type: o.kc.COMMAND_OPTION };
+            return (i.insertText(((t = r), `${t.displayName}:`)), { type: o.kc.COMMAND_OPTION });
         },
     };
 var z = n(243264),
@@ -439,7 +439,7 @@ let eN = {
             (0, ep.YB)();
             let t = U.Ay.queryStickers([n], !0, [e, (e, t) => t === em.Ux.SENDABLE]),
                 l = Math.max(4, 8 - a.length);
-            (o = t.slice(0, l)), "-" === n[0] && (o = t.filter((e) => e.sticker.name === n));
+            ((o = t.slice(0, l)), "-" === n[0] && (o = t.filter((e) => e.sticker.name === n)));
         }
         let c = [];
         r &&
@@ -604,7 +604,7 @@ class e_ extends eD.Ay.Store {
 let eL = new e_(eS.h, {
         INTEGRATION_QUERY: function (e) {
             let { integration: t, query: n } = e;
-            (eO[t] = eO[t] ?? {}), (eO[t][n] = { loading: !0, results: [] });
+            ((eO[t] = eO[t] ?? {}), (eO[t][n] = { loading: !0, results: [] }));
         },
         INTEGRATION_QUERY_SUCCESS: function (e) {
             let { integration: t, query: n, results: l } = e;
@@ -662,9 +662,9 @@ function eQ(e) {
             let e = n.current;
             if (null == e) return;
             let t = e.scrollWidth - e.clientWidth;
-            s(e.scrollLeft > 1), a(e.scrollLeft < t - 1);
+            (s(e.scrollLeft > 1), a(e.scrollLeft < t - 1));
         }, []);
-    d.useEffect(() => {
+    (d.useEffect(() => {
         let e = n.current;
         if (null == e) return;
         o();
@@ -675,14 +675,14 @@ function eQ(e) {
         d.useEffect(() => {
             let e = n.current;
             if (null != e)
-                return e.addEventListener("wheel", t, { passive: !1 }), () => e.removeEventListener("wheel", t);
+                return (e.addEventListener("wheel", t, { passive: !1 }), () => e.removeEventListener("wheel", t));
             function t(t) {
                 null == e ||
                     Math.abs(t.deltaY) <= Math.abs(t.deltaX) ||
                     e.scrollWidth <= e.clientWidth ||
                     (t.preventDefault(), (e.scrollLeft += t.deltaY));
             }
-        }, []);
+        }, []));
     let m = d.useCallback(
         (e) => {
             let t = n.current;
@@ -1356,7 +1356,7 @@ let e3 = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                                     return `#"${(0, ei.Eq)((0, ei.m1)(e, ea.default, eu.A))}"`;
                                 default:
                                     let t = es.Ay.getTextChannelNameDisambiguations(e.guild_id)[e.id];
-                                    return `#${null != t ? t.name : ((0, ei.m1))(e, ea.default, eu.A)}`;
+                                    return `#${null != t ? t.name : (0, ei.m1)(e, ea.default, eu.A)}`;
                             }
                         })(r),
                         ((t = r), eo.aQ.has(t.id) ? `<id:${t.id}>` : `<#${t.id}>`),
@@ -1423,7 +1423,7 @@ let e3 = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                         options: i,
                     } = e,
                     r = n[l];
-                return i.sendMessage(((t = r), `+:${t.name}:`)), { type: o.kc.REACTION };
+                return (i.sendMessage(((t = r), `+:${t.name}:`)), { type: o.kc.REACTION });
             },
         },
         [o.DB.GAME]: ee,
@@ -1528,7 +1528,7 @@ let e3 = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                                     { adjustedTimestamp: l, adjustedDescription: i, unadjustedDescription: r }
                                 );
                             })(t, s, e);
-                            null != p &&
+                            (null != p &&
                                 (u.push({ mention: { timestamp: p, format: m }, description: y }),
                                 u.push({ mention: { timestamp: p, format: "f" } }),
                                 u.push({ mention: { timestamp: p, format: "F" } }),
@@ -1537,7 +1537,7 @@ let e3 = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                                 u.push({ mention: { timestamp: d, format: m }, description: h }),
                                 u.push({ mention: { timestamp: d, format: "f" } }),
                                 u.push({ mention: { timestamp: d, format: "F" } }),
-                                u.push({ mention: { timestamp: d, format: "R" } });
+                                u.push({ mention: { timestamp: d, format: "R" } }));
                         }
                         return u;
                     })(l),
@@ -1642,20 +1642,20 @@ function tn(e) {
         };
     if (null != t) {
         let e = (0, s.XM)(t);
-        e.canMentionChannels && (S.mentions.channel = o.xS.ALLOW_SELECTABLE),
+        (e.canMentionChannels && (S.mentions.channel = o.xS.ALLOW_SELECTABLE),
             e.canMentionEveryone &&
                 (S.mentions.global = e.canMentionHere ? o.VN.ALLOW_EVERYONE_OR_HERE : o.VN.ALLOW_EVERYONE),
             e.canMentionRoles &&
                 (S.mentions.role = e.canMentionNonMentionableRoles ? o.eP.ALLOW_ALL : o.eP.ALLOW_MENTIONABLE),
             e.canMentionUsers && (S.mentions.user = e.canMentionAnyGuildUser ? o.Vf.ALLOW_GUILD : o.Vf.ALLOW_CHANNEL),
             e.canMentionOtherGlobals && (S.mentions.otherGlobals = !0),
-            (S.hideMentionDescription = !0);
+            (S.hideMentionDescription = !0));
     } else
-        i && (S.mentions.channel = o.xS.ALLOW_SELECTABLE),
+        (i && (S.mentions.channel = o.xS.ALLOW_SELECTABLE),
             l && (S.mentions.role = o.eP.ALLOW_MENTIONABLE),
             n && (S.mentions.user = o.Vf.ALLOW_CHANNEL),
             a && (S.mentions.global = o.VN.ALLOW_EVERYONE_OR_HERE),
-            c && (S.mentions.otherGlobals = !0);
+            c && (S.mentions.otherGlobals = !0));
     return (
         A.commands?.enabled &&
             (d ? (S.commands = m ? o.Ze.NEW_TEXT_ONLY : o.Ze.NEW) : (S.commands = o.Ze.OLD_BUILT_INS)),
@@ -1689,8 +1689,8 @@ function ti(e) {
         let y = tt[e];
         if (null != d) {
             if (y.autocompleteInputElementType === d) {
-                i()(null != m, "parentAutocompleteInputValue is null, but we're in an inline autocomplete object"),
-                    (p = { type: e, typeInfo: y, query: m });
+                (i()(null != m, "parentAutocompleteInputValue is null, but we're in an inline autocomplete object"),
+                    (p = { type: e, typeInfo: y, query: m }));
                 break;
             }
             continue;

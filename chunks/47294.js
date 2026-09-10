@@ -24,14 +24,14 @@ function _(e) {
                 {
                     text: u.intl.string(u.t.B8pz37),
                     onClick: function () {
-                        n?.(), l.onClose();
+                        (n?.(), l.onClose());
                     },
                     variant: "secondary",
                 },
                 {
                     text: u.intl.string(u.t.makWn9),
                     onClick: function () {
-                        t(), l.onClose();
+                        (t(), l.onClose());
                     },
                     variant: "primary",
                 },

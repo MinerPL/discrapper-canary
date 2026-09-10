@@ -23,18 +23,18 @@ class g extends a.PureComponent {
         e.targetHeight !== this.state.targetHeight && this.props.setHeight(this.state.targetHeight);
     }
     componentWillAppear(t) {
-        this.setState({ animationState: 2 }), t();
+        (this.setState({ animationState: 2 }), t());
     }
     componentDidAppear() {
         let { animationProgress: t, targetHeight: e } = this.state;
-        t.setValue(2), this.setState({ animationState: 3, baseHeight: e });
+        (t.setValue(2), this.setState({ animationState: 3, baseHeight: e }));
     }
     componentWillEnter(t) {
         let { duration: e } = this.props,
             { animationProgress: i } = this.state;
-        this.setState({ animationState: 0 }),
+        (this.setState({ animationState: 0 }),
             this.props.setHeight(this.state.targetHeight),
-            p.A.timing(i, { toValue: 2, duration: e, delay: e / 2 }).start(t);
+            p.A.timing(i, { toValue: 2, duration: e, delay: e / 2 }).start(t));
     }
     componentDidEnter() {
         this.setState({ animationState: 3 });
@@ -42,9 +42,9 @@ class g extends a.PureComponent {
     componentWillLeave(t) {
         let { animationProgress: e } = this.state,
             { duration: i, getDirection: s } = this.props;
-        (this.direction = s()),
+        ((this.direction = s()),
             this.setState({ animationState: 1 }),
-            p.A.timing(e, { toValue: 0, duration: i }).start(t);
+            p.A.timing(e, { toValue: 0, duration: i }).start(t));
     }
     componentDidLeave() {
         this.setState({ animationState: 3 });
@@ -158,7 +158,7 @@ class d extends a.Component {
     }
     setPrevSteps() {
         let { step: t, steps: e } = this.props;
-        (this.prevStep = t), (this.prevSteps = e);
+        ((this.prevStep = t), (this.prevSteps = e));
     }
     getBaseHeight = () =>
         null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0;

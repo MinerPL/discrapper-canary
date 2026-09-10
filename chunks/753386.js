@@ -27,7 +27,7 @@ function m(e) {
     let u = s.A.getQuest(t);
     null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && C(u, l.maxTimestampSec);
     let d = E(l.maxTimestampSec, l.duration);
-    (0, a.av)({
+    ((0, a.av)({
         questId: t,
         event: c.HAw.QUEST_VIDEO_PROGRESSED,
         properties: { progress: d, video_timestamp_seconds: l.maxTimestampSec, video_session_id: r },
@@ -42,7 +42,7 @@ function m(e) {
                 network_connection_speed: i.A.getEffectiveConnectionSpeed(),
             },
             sourceQuestContent: n,
-        });
+        }));
 }
 function A(e) {
     return `VIDEO-QUEST-${e}`;

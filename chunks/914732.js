@@ -34,7 +34,7 @@ class C extends P.Ay.PersistedStore {
         return O;
     }
     initialize(e) {
-        this.waitFor(A.A, f.A, d.A), null != e && (O = e);
+        (this.waitFor(A.A, f.A, d.A), null != e && (O = e));
     }
     getNotificationStateForGuild(e) {
         return O[e];
@@ -241,7 +241,7 @@ function B(e) {
                         return {
                             ...ei,
                             markAsDismissed: (e) => {
-                                es(e), ei.markAsDismissed(e);
+                                (es(e), ei.markAsDismissed(e));
                             },
                         };
                 }
@@ -252,7 +252,7 @@ function B(e) {
 function F(e) {
     let t = (0, r.bG)([f.A], () => f.A.getStateForGuild(e)),
         n = B(e);
-    (0, H.m)(e),
+    ((0, H.m)(e),
         u.useEffect(() => {
             (0, S.Zm)(e);
         }, [e]),
@@ -268,5 +268,5 @@ function F(e) {
                     let l = b.On[n];
                     null != l && (0, a._$)(l, e, !1, v.i.AUTO_DISMISS);
                 });
-        }, [e, t]);
+        }, [e, t]));
 }

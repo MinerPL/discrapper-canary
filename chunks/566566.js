@@ -21,11 +21,11 @@ function h(e) {
         description: d.intl.format(d.t.d486Wm, { helpUrl: o.A.getArticleURL(c.MVz.VOICE_VIDEO_TROUBLESHOOTING) }),
         errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: f }),
         onCTAClick: function () {
-            (0, s.W)(r.x.DEFAULT, t),
+            ((0, s.W)(r.x.DEFAULT, t),
                 l.A.setDisableLocalVideo(t, c.bb8.DISABLED, r.x.DEFAULT, !1),
                 setTimeout(() => {
                     l.A.setDisableLocalVideo(t, c.bb8.MANUAL_ENABLED, r.x.DEFAULT, !1);
-                }, 1e3);
+                }, 1e3));
         },
         callToAction: d.intl.string(d.t["hxmQ/e"]),
     });

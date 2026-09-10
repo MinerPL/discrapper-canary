@@ -22,8 +22,8 @@ function a(e, t) {
             if ("user" === e) {
                 let e = t.user;
                 if (!e) continue;
-                e.name && (a += `&name=${encodeURIComponent(e.name)}`),
-                    e.email && (a += `&email=${encodeURIComponent(e.email)}`);
+                (e.name && (a += `&name=${encodeURIComponent(e.name)}`),
+                    e.email && (a += `&email=${encodeURIComponent(e.email)}`));
             } else a += `&${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`;
     return `${o}?${a}`;
 }

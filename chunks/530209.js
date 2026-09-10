@@ -9,9 +9,13 @@ function c(t, e) {
     return r.MJ(u.xBc.VIEW_CHANNEL, t) || e === a.Ps.EXTERNAL;
 }
 function d(t, e) {
-    return (0, l.bG)([i.A, s.Ay], () => {
-        let n = i.A.getChannel(t),
-            l = s.Ay.getGuildScheduledEvent(e);
-        return c(n, l?.entity_type);
-    }, [t, e]);
+    return (0, l.bG)(
+        [i.A, s.Ay],
+        () => {
+            let n = i.A.getChannel(t),
+                l = s.Ay.getGuildScheduledEvent(e);
+            return c(n, l?.entity_type);
+        },
+        [t, e],
+    );
 }

@@ -72,7 +72,7 @@ function B(e) {
         [eu, ed] = i.useState(!1),
         eo = i.useRef(!1),
         ec = i.useRef(null != z);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let e = !1;
         return (
             Q.then(
@@ -113,9 +113,9 @@ function B(e) {
                     e = !0;
                 }
             );
-        }, [$]);
+        }, [$]));
     let eh = i.useCallback((e, t, l) => {
-            (eo.current = !0), et({ textValue: t, richValue: l });
+            ((eo.current = !0), et({ textValue: t, richValue: l }));
         }, []),
         em = i.useMemo(
             () =>
@@ -132,7 +132,7 @@ function B(e) {
         eg = J.trim(),
         eC = null == U ? null : H(`<#${U}>`),
         eN = i.useCallback(() => {
-            (0, j.pX)(null == U ? V.BVt.CHANNEL(t) : V.BVt.CHANNEL(t, U)), D();
+            ((0, j.pX)(null == U ? V.BVt.CHANNEL(t) : V.BVt.CHANNEL(t, U)), D());
         }, [U, t, D]),
         eb = i.useCallback(async () => {
             if (null != ef && "" !== eg) {
@@ -141,9 +141,9 @@ function B(e) {
                     let e = v.Ay.parse(ef, null == eC ? eg : `${eg}${eC}`),
                         l = await g.A.sendMessage(ef.id, e, !1, { location: L.Hx.VIBEGRATIONS_PATCH_NOTES });
                     if (l?.ok === !1) throw Error("send failed");
-                    s.w.set(O, { ...s.w.get(O), [t]: ef.id }), D();
+                    (s.w.set(O, { ...s.w.get(O), [t]: ef.id }), D());
                 } catch {
-                    (0, u.P0)((0, d.o)(G.intl.string(w.default.P6SoGm), o.Ck.FAILURE)), ed(!1);
+                    ((0, u.P0)((0, d.o)(G.intl.string(w.default.P6SoGm), o.Ck.FAILURE)), ed(!1));
                 }
             }
         }, [ef, eg, eC, t, D]);
@@ -266,7 +266,7 @@ function B(e) {
                                                   value: z ?? void 0,
                                                   placeholder: G.intl.string(w.default["8qO519"]),
                                                   onSelectionChange: (e) => {
-                                                      (ec.current = !0), W(e);
+                                                      ((ec.current = !0), W(e));
                                                   },
                                                   fullWidth: !0,
                                               }),

@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => tU });
+(l.r(t), l.d(t, { default: () => tU }));
 var n = l(477900),
     i = l(582128),
     s = l(562708),
@@ -9,7 +9,7 @@ var n = l(477900),
     d = l(976860),
     c = l(71393),
     m = l(363487);
-l(321073), l(323874), l(14289), l(35956);
+(l(321073), l(323874), l(14289), l(35956));
 var p = l(503698),
     g = l.n(p),
     x = l(192308),
@@ -108,8 +108,8 @@ function W(e) {
                                   ? P.intl.string(V.default.PuvU5b)
                                   : P.intl.string(V.default.b62EHM),
                           onClick: (e) => {
-                              e.stopPropagation(),
-                                  (0, D.A)({ guildId: s, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW });
+                              (e.stopPropagation(),
+                                  (0, D.A)({ guildId: s, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }));
                           },
                       }),
                   }),
@@ -336,7 +336,7 @@ function eN(e) {
                 onMouseLeave: () => o?.(!1),
                 className: r,
                 ref: (e) => {
-                    (x.current = e), (I.current = e);
+                    ((x.current = e), (I.current = e));
                 },
                 children: a,
             }),
@@ -416,7 +416,7 @@ function ek(e) {
         c = u.type !== U.b_.INACTIVE,
         m = a.type === U.b_.TIER_OVERRIDE_ACTIVATED,
         [p, g] = i.useState(void 0);
-    (0, eT.A)(p), (t = 0 === s ? U.At.START : null == o ? U.At.END : U.At.MIDDLE);
+    ((0, eT.A)(p), (t = 0 === s ? U.At.START : null == o ? U.At.END : U.At.MIDDLE));
     let { textColor: x } = N(d);
     return (0, n.jsxs)(eN, {
         guildId: l,
@@ -463,10 +463,10 @@ function eM(e, t) {
                               g = r ? "secondary" : "expressive",
                               A = i
                                   ? () => {
-                                        r
+                                        (r
                                             ? eU.A.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
                                             : null != u && (0, eB.A)(t, u),
-                                            (0, x.closeAllModals)();
+                                            (0, x.closeAllModals)());
                                     }
                                   : void 0;
                           return {
@@ -1095,15 +1095,19 @@ function tG(e) {
                     username: l,
                     roleColor: n,
                     roleColorStrings: i,
-                } = (0, r.cf)([tx.Ay], () => {
-                    let t = tx.Ay.getMember(e.guildId, e.userId);
-                    return {
-                        username:
-                            tx.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? P.intl.string(P.t["30mdIx"]),
-                        roleColor: t?.colorString ?? null,
-                        roleColorStrings: t?.colorStrings ?? null,
-                    };
-                }, [e]);
+                } = (0, r.cf)(
+                    [tx.Ay],
+                    () => {
+                        let t = tx.Ay.getMember(e.guildId, e.userId);
+                        return {
+                            username:
+                                tx.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? P.intl.string(P.t["30mdIx"]),
+                            roleColor: t?.colorString ?? null,
+                            roleColorStrings: t?.colorStrings ?? null,
+                        };
+                    },
+                    [e],
+                );
             return { timestamp: t, username: l, roleColor: n, roleColorStrings: i };
         })(l),
         d = (0, tN.gn)(l.guildId, l.userId, u ?? null),
@@ -1209,16 +1213,20 @@ function tP(e) {
                             .slice(0, void 0),
                     [t, void 0, l],
                 ),
-                s = (0, r.yK)([tx.Ay], () => {
-                    let t = new Set();
-                    return (
-                        n.forEach((l) => {
-                            let { boost: n } = l;
-                            null == tx.Ay.getMember(e, n.userId) && t.add(n.userId);
-                        }),
-                        Array.from(t)
-                    );
-                }, [e, n]);
+                s = (0, r.yK)(
+                    [tx.Ay],
+                    () => {
+                        let t = new Set();
+                        return (
+                            n.forEach((l) => {
+                                let { boost: n } = l;
+                                null == tx.Ay.getMember(e, n.userId) && t.add(n.userId);
+                            }),
+                            Array.from(t)
+                        );
+                    },
+                    [e, n],
+                );
             i.useEffect(() => {
                 s.length > 0 && s.forEach((t) => t_.A.requestMember(e, t));
             }, [e, s]);
@@ -1272,13 +1280,13 @@ function tO(e) {
         y,
         C,
         { guildId: N, powerupListingId: T } = e;
-    (t = (0, _.C$)(N, "useLoadGuildPowerups")),
+    ((t = (0, _.C$)(N, "useLoadGuildPowerups")),
         i.useEffect(() => {
             t && (0, Q.z9)(N);
         }, [N, t]),
         i.useEffect(() => {
-            (0, Z.AK)(N), (0, Z.Xd)(N);
-        }, [N]);
+            ((0, Z.AK)(N), (0, Z.Xd)(N));
+        }, [N]));
     let R = (0, _.C$)(N, "GuildPowerupsOverview"),
         G = (0, b.c)("GuildPowerupsOverview");
     (0, H.Pq)(N);
@@ -1328,7 +1336,7 @@ function tO(e) {
                                 i = t.reduce((e, t) => {
                                     if (t.type !== U.o9.PERK) return e;
                                     let l = Y[t.skuId];
-                                    return null == l || ((e[l] ??= []), e[l].push(t)), e;
+                                    return (null == l || ((e[l] ??= []), e[l].push(t)), e);
                                 }, {});
                             for (let e of t) {
                                 if (e.type === U.o9.LEVEL) {
@@ -1340,9 +1348,9 @@ function tO(e) {
                                     let e = i[t];
                                     if (void 0 !== e) {
                                         let l = q[t];
-                                        e.sort((e, t) => l.indexOf(e.skuId) - l.indexOf(t.skuId)),
+                                        (e.sort((e, t) => l.indexOf(e.skuId) - l.indexOf(t.skuId)),
                                             n.push({ type: "multiPerk", group: t, powerups: e }),
-                                            (i[t] = void 0);
+                                            (i[t] = void 0));
                                     }
                                     continue;
                                 }
@@ -1361,7 +1369,7 @@ function tO(e) {
                                         let t = [...e],
                                             [n] = t.splice(l, 1),
                                             i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === z.SL);
-                                        return t.splice(i + 1, 0, n), t;
+                                        return (t.splice(i + 1, 0, n), t);
                                     }
                                     return e;
                                 })(
@@ -1370,12 +1378,12 @@ function tO(e) {
                                         if (t <= 0) return e;
                                         let l = [...e],
                                             [n] = l.splice(t, 1);
-                                        return l.unshift(n), l;
+                                        return (l.unshift(n), l);
                                     })(n),
                                 )
                             );
                         })(t, l, R);
-                        return e.push({ type: t, listings: n }), e;
+                        return (e.push({ type: t, listings: n }), e);
                     }, []),
                 [C?.powerupCatalog, R],
             )),
@@ -1391,7 +1399,7 @@ function tO(e) {
             for (let e of eo)
                 for (let t of e.listings) {
                     if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === T) {
-                        (0, eB.A)(N, t.powerup), (B.current = !0);
+                        ((0, eB.A)(N, t.powerup), (B.current = !0));
                         return;
                     }
                     if ("multiPerk" === t.type && (t.group === T || t.powerups.some((e) => e.skuId === T))) {
@@ -1403,13 +1411,13 @@ function tO(e) {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(U.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                (0, d.bG)(t), (B.current = !1);
+                                ((0, d.bG)(t), (B.current = !1));
                             },
                         });
                         return;
                     }
                     if ("gameServer" === t.type && T === O.W5) {
-                        (0, D.A)({ guildId: N, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (B.current = !0);
+                        ((0, D.A)({ guildId: N, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (B.current = !0));
                         return;
                     }
                 }

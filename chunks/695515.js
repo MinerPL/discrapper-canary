@@ -1,4 +1,4 @@
-n.d(t, { A: () => ea }), n(321073);
+(n.d(t, { A: () => ea }), n(321073));
 var i = n(423764),
     r = n(536802),
     a = n(287809),
@@ -76,7 +76,7 @@ function k() {
 function F(e) {
     void 0 !== e && (f = e);
 }
-function V(e, t) {
+function B(e, t) {
     let n = t ? I : G();
     return (
         e.forEach((e) => {
@@ -87,7 +87,7 @@ function V(e, t) {
         (I = n)
     );
 }
-function B(e) {
+function V(e) {
     U = e.reduce(
         (e, t) => ({
             ...e,
@@ -134,11 +134,11 @@ function Y(e) {
             invoices: p,
             gifts: T,
         } = n;
-    (_ = o),
+    ((_ = o),
         (E = d),
-        V(r),
+        B(r),
         F(s),
-        B(a),
+        V(a),
         k(t),
         null != p && H(p),
         null != T && j(T),
@@ -151,7 +151,7 @@ function Y(e) {
         (P = i ?? null),
         (S = !1),
         (N = l.default.fromTimestamp(Date.now())),
-        (g = !0);
+        (g = !0));
 }
 function K(e) {
     let { linkedUsers: t } = e;
@@ -179,11 +179,11 @@ function z(e) {
         spendingLimit: I,
         monthlyPurchases: f,
     } = t;
-    (_ = a),
+    ((_ = a),
         (E = s),
-        V(n),
+        B(n),
         F(i),
-        B(r),
+        V(r),
         null != A && H(A),
         null != h && j(h),
         (O = o),
@@ -193,24 +193,24 @@ function z(e) {
         (L = c),
         (y = u),
         (D = I ?? null),
-        (v = f ?? null);
+        (v = f ?? null));
 }
-function q(e) {
+function X(e) {
     let { familyCenterTeenActivity: t } = e,
         { actions: n, guilds: i } = t;
-    V(n, !0), B(i);
+    (B(n, !0), V(i));
 }
-function Z(e) {
+function q(e) {
     let { linkedUsers: t } = e;
     k(t);
 }
-function X(e) {
+function Z(e) {
     let { linkedUsers: t } = e;
     k(t, !0);
 }
 function Q(e) {
     let { linkCode: t, expiresAt: n } = e;
-    (p = t), (T = n);
+    ((p = t), (T = n));
 }
 function J(e) {
     let { tab: t } = e;
@@ -237,7 +237,7 @@ function en(e) {
     null != t && (C = (0, i.XF)(t) ?? null);
 }
 function ei() {
-    (_ = null),
+    ((_ = null),
         (E = null),
         (A = {}),
         (p = null),
@@ -258,7 +258,7 @@ function ei() {
         (b = {}),
         (M = {}),
         (P = null),
-        (g = !1);
+        (g = !1));
 }
 class er extends r.A {
     static displayName = "FamilyCenterStore";
@@ -272,10 +272,10 @@ class er extends r.A {
             FAMILY_CENTER_FETCH_START: W,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: K,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: z,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: X,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: $,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: Z,
-            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: X,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: q,
+            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Q,
             FAMILY_CENTER_HANDLE_TAB_SELECT: J,
             SET_LOCATION_METADATA: en,
@@ -289,8 +289,8 @@ class er extends r.A {
         let e = this.readSnapshot(er.LATEST_SNAPSHOT_VERSION);
         null != e &&
             (k(e.linkedUsers),
-            B(e.guilds),
-            V(e.teenActivity),
+            V(e.guilds),
+            B(e.teenActivity),
             (f = e.teenActivityTotals.reduce((e, t) => {
                 let [n, i] = t.split(":"),
                     r = (0, d.k5)(n);
@@ -383,7 +383,7 @@ class er extends r.A {
         for (let i of Object.values(M))
             if (null != i.price) {
                 if (null != e && i.price.currency !== e) return null;
-                (e = i.price.currency), (t += i.price.amount), (n = !0);
+                ((e = i.price.currency), (t += i.price.amount), (n = !0));
             }
         return n && null != e ? { amount: t, currency: e } : null;
     }

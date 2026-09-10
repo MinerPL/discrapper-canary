@@ -316,7 +316,7 @@ function ea(e) {
         h = (0, c.bG)([R.A], () => R.A.getTemplates(i)),
         [j, { loading: p, error: S }] = (0, C.A)(b),
         y = l.useRef("voluntarily_exit");
-    l.useEffect(() => {
+    (l.useEffect(() => {
         (null == h || 0 === h.length) && j(i);
     }, [j, i, h]),
         l.useEffect(() => {
@@ -325,19 +325,19 @@ function ea(e) {
                     exit_reason: y.current,
                     ...(0, I.H$)(i),
                 });
-        }, [s, i, y]);
+        }, [s, i, y]));
     let [U, k] = l.useState(0),
         [O, G] = l.useState(!1),
         P = l.useCallback(
             (e) => {
-                (y.current = "template_selected"),
+                ((y.current = "template_selected"),
                     A.h.dispatch({
                         type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
                         selectedTemplate: e,
                         guildId: i,
                     }),
                     r(e),
-                    t();
+                    t());
             },
             [i, r, t],
         ),
@@ -415,7 +415,7 @@ function ea(e) {
                                 (0, a.jsx)(E.E, { variant: "text-sm/normal", children: B.intl.string(B.t.jymUTC) }),
                                 (0, a.jsx)(v.$, {
                                     onClick: function () {
-                                        (y.current = "create_from_scratch"), d(), t();
+                                        ((y.current = "create_from_scratch"), d(), t());
                                     },
                                     variant: "secondary",
                                     icon: T.PencilIcon,

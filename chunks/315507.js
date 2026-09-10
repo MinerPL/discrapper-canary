@@ -1,5 +1,5 @@
-r.r(t),
-    r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => i });
+(r.r(t),
+    r.d(t, { parseNumberSkeleton: () => m, parseNumberSkeletonFromString: () => s, parseDateTimeSkeleton: () => i }));
 var n =
     /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g;
 function i(e) {
@@ -54,16 +54,16 @@ function i(e) {
                 case "B":
                     throw RangeError("`b/B` (period) patterns are not supported, use `a` instead");
                 case "h":
-                    (t.hourCycle = "h12"), (t.hour = ["numeric", "2-digit"][r - 1]);
+                    ((t.hourCycle = "h12"), (t.hour = ["numeric", "2-digit"][r - 1]));
                     break;
                 case "H":
-                    (t.hourCycle = "h23"), (t.hour = ["numeric", "2-digit"][r - 1]);
+                    ((t.hourCycle = "h23"), (t.hour = ["numeric", "2-digit"][r - 1]));
                     break;
                 case "K":
-                    (t.hourCycle = "h11"), (t.hour = ["numeric", "2-digit"][r - 1]);
+                    ((t.hourCycle = "h11"), (t.hour = ["numeric", "2-digit"][r - 1]));
                     break;
                 case "k":
-                    (t.hourCycle = "h24"), (t.hour = ["numeric", "2-digit"][r - 1]);
+                    ((t.hourCycle = "h24"), (t.hour = ["numeric", "2-digit"][r - 1]));
                     break;
                 case "j":
                 case "J":
@@ -178,10 +178,10 @@ function m(e) {
                 t.style = "percent";
                 continue;
             case "%x100":
-                (t.style = "percent"), (t.scale = 100);
+                ((t.style = "percent"), (t.scale = 100));
                 continue;
             case "currency":
-                (t.style = "currency"), (t.currency = n.options[0]);
+                ((t.style = "currency"), (t.currency = n.options[0]));
                 continue;
             case "group-off":
             case ",_":
@@ -193,15 +193,15 @@ function m(e) {
                 continue;
             case "measure-unit":
             case "unit":
-                (t.style = "unit"), (t.unit = n.options[0].replace(/^(.*?)-/, ""));
+                ((t.style = "unit"), (t.unit = n.options[0].replace(/^(.*?)-/, "")));
                 continue;
             case "compact-short":
             case "K":
-                (t.notation = "compact"), (t.compactDisplay = "short");
+                ((t.notation = "compact"), (t.compactDisplay = "short"));
                 continue;
             case "compact-long":
             case "KK":
-                (t.notation = "compact"), (t.compactDisplay = "long");
+                ((t.notation = "compact"), (t.compactDisplay = "long"));
                 continue;
             case "scientific":
                 t = (0, o.Cl)(
@@ -223,13 +223,13 @@ function m(e) {
                 t.notation = "standard";
                 continue;
             case "unit-width-narrow":
-                (t.currencyDisplay = "narrowSymbol"), (t.unitDisplay = "narrow");
+                ((t.currencyDisplay = "narrowSymbol"), (t.unitDisplay = "narrow"));
                 continue;
             case "unit-width-short":
-                (t.currencyDisplay = "code"), (t.unitDisplay = "short");
+                ((t.currencyDisplay = "code"), (t.unitDisplay = "short"));
                 continue;
             case "unit-width-full-name":
-                (t.currencyDisplay = "name"), (t.unitDisplay = "long");
+                ((t.currencyDisplay = "name"), (t.unitDisplay = "long"));
                 continue;
             case "unit-width-iso-code":
                 t.currencyDisplay = "symbol";

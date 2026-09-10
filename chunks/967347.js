@@ -108,7 +108,7 @@ async function A() {
         let e = (await E()).filter((e) => c.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: i } of e) {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
-            s.default.track(d.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
+            (s.default.track(d.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n));
         }
         e.length > 0 && I.emitChange();
     } catch (e) {}
@@ -118,7 +118,7 @@ class h extends i.Ay.PersistedStore {
     static persistKey = "SystemAnalyticsStore";
     cachedHardwareInfo;
     initialize(e) {
-        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A);
+        ((c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A));
     }
     getState() {
         return c;
@@ -128,13 +128,13 @@ class h extends i.Ay.PersistedStore {
         try {
             let e = (await E()).find((e) => "hardware_detected" === e.name || (e.name, !1));
             if (null == e) return null;
-            return (0, l.isLinux)() && (this.cachedHardwareInfo = e.data), e.data;
+            return ((0, l.isLinux)() && (this.cachedHardwareInfo = e.data), e.data);
         } catch (e) {}
     }
 }
 let I = new h(r.h, {
     START_SESSION: function () {
-        return A(), !1;
+        return (A(), !1);
     },
 });
 function f() {

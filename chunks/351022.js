@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(321073);
+(n.d(t, { A: () => A }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(913122),
@@ -21,26 +21,26 @@ class c {
         this.query = e;
     }
     handleSearchStart() {
-        (this.error = null), (this.isFetching = !0);
+        ((this.error = null), (this.isFetching = !0));
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new a.LG(e));
+        ((this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new a.LG(e)));
     }
     handleSearchSuccess(e) {
         let { total: t, guilds: n } = e;
-        (this.error = null),
+        ((this.error = null),
             (this.isFetching = !1),
             (this.isInitialFetchComplete = !0),
             (this.lastFetchTimestamp = Date.now()),
-            null != t && (this.total = t);
+            null != t && (this.total = t));
         let i = [...this.guildIds];
-        n.forEach((e) => i.push(e.id)), (this.guildIds = i), (this.offset = i.length);
+        (n.forEach((e) => i.push(e.id)), (this.guildIds = i), (this.offset = i.length));
     }
 }
 function u(e) {
     let t = d(e),
         n = l.get(t) ?? new c({ query: e.query });
-    return l.set(t, n), n;
+    return (l.set(t, n), n);
 }
 function _(e, t) {
     let n = d(e),
@@ -79,19 +79,19 @@ class E extends i.Ay.Store {
 }
 let A = new E(r.h, {
     CONNECTION_OPEN: function () {
-        l.clear(), o.clear();
+        (l.clear(), o.clear());
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
         let { query: t, categoryId: n, languageCode: i, reset: r } = e,
             a = d({ query: t, categoryId: n, languageCode: i });
-        r && l.delete(a), u({ query: t, categoryId: n, languageCode: i }).handleSearchStart();
+        (r && l.delete(a), u({ query: t, categoryId: n, languageCode: i }).handleSearchStart());
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
         let { query: t, categoryId: n, languageCode: i, total: r, guilds: a } = e;
-        u({ query: t, categoryId: n, languageCode: i }).handleSearchSuccess({ total: r, guilds: a }),
+        (u({ query: t, categoryId: n, languageCode: i }).handleSearchSuccess({ total: r, guilds: a }),
             a.forEach((e) => {
                 o.set(e.id, e);
-            });
+            }));
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function (e) {
         let { query: t, categoryId: n, languageCode: i, error: r } = e;

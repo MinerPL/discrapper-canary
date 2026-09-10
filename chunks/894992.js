@@ -15,11 +15,11 @@ class l extends r.A {
     };
     checkQuestCompletion = (e, t) => {
         let n = t.userStatus?.completedAt ?? null;
-        this.questCompletionStates.has(e) &&
+        (this.questCompletionStates.has(e) &&
             null == this.questCompletionStates.get(e) &&
             null != n &&
             this.onQuestCompleted(e),
-            this.questCompletionStates.set(e, n);
+            this.questCompletionStates.set(e, n));
     };
     onQuestCompleted = (e) => {
         (0, a.hs)(i.w.QUEST_COMPLETED, { quest_id: e });

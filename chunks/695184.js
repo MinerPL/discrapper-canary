@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => h }), n(321073);
+(n.d(t, { A: () => h }), n(321073));
 var r = n(635377),
     a = n.n(r),
     s = n(66834),
@@ -10,7 +10,7 @@ var r = n(635377),
     u = n(375708);
 let _ = new (a())({ maxAge: +d.A.Millis.MINUTE });
 function E(e, t, n) {
-    null != i && clearTimeout(i),
+    (null != i && clearTimeout(i),
         (i = setTimeout(() => {
             let i = [];
             function r(e) {
@@ -27,7 +27,7 @@ function E(e, t, n) {
                 null != t && r(t);
             }
             i.length > 0 && s.A.requestMembers(i, t.toLocaleLowerCase(), n);
-        }, 200));
+        }, 200)));
 }
 function A(e, t) {
     let n = `${e ?? ""}:${t}`,
@@ -48,11 +48,11 @@ let h = {
             i = Array.isArray(e),
             r = [],
             a = !1;
-        i
+        (i
             ? e.forEach((e) => {
                   null == A(e, t) && r.push(e);
               })
             : null == A(e, t) && (a = !0),
-            r.length > 0 && i ? E(r, t, n) : a && E(e, t, n);
+            r.length > 0 && i ? E(r, t, n) : a && E(e, t, n));
     },
 };

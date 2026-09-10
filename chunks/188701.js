@@ -26,8 +26,8 @@ n(
                 e = s(r),
                 n = arguments.length;
             u(e + n);
-            for (var c = 0; c < n; c++) (r[e] = arguments[c]), e++;
-            return i(r, e), e;
+            for (var c = 0; c < n; c++) ((r[e] = arguments[c]), e++);
+            return (i(r, e), e);
         },
     },
 );

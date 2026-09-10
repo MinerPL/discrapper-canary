@@ -1,11 +1,11 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isvalidColorString =
         t.red =
         t.getContrastingColor =
         t.isValidHex =
         t.toState =
         t.simpleCheckForValidColor =
-            void 0);
+            void 0));
 var n = a(r(992966)),
     o = a(r(440745));
 function a(e) {
@@ -39,7 +39,7 @@ var i = (t.toState = function (e, t) {
         }
     );
 });
-(t.isValidHex = function (e) {
+((t.isValidHex = function (e) {
     if ("transparent" === e) return !0;
     var t = +("#" === String(e).charAt(0));
     return e.length !== 4 + t && e.length < 7 + t && (0, o.default)(e).isValid();
@@ -62,4 +62,4 @@ var i = (t.toState = function (e, t) {
     (t.isvalidColorString = function (e, t) {
         var r = e.replace("\xb0", "");
         return (0, o.default)(t + " (" + r + ")")._ok;
-    });
+    }));

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => K, I6: () => N, vM: () => C }), n(321073);
+(n.d(t, { Ay: () => K, I6: () => N, vM: () => C }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(136722),
@@ -43,7 +43,7 @@ function G(e, t) {
     return n - i;
 }
 function x() {
-    (R = {}), (v = {}), (L = {}), (y = {}), null != O && k(O);
+    ((R = {}), (v = {}), (L = {}), (y = {}), null != O && k(O));
 }
 function k(e) {
     var t, n;
@@ -86,8 +86,8 @@ function k(e) {
                 )
                     return;
                 let a = ((i = r.type), (0, E.tr)(i) ? N : (0, E.ay)(i) ? C : i);
-                r.type === S.rbe.GUILD_DIRECTORY && (null == v[t] && (v[t] = []), v[t].push(n)),
-                    null != e[a] && e[a].push(n);
+                (r.type === S.rbe.GUILD_DIRECTORY && (null == v[t] && (v[t] = []), v[t].push(n)),
+                    null != e[a] && e[a].push(n));
             });
         })(s),
         s[N].sort(G),
@@ -99,7 +99,7 @@ function k(e) {
             let { channel: t } = e,
                 n = (0, d.m1)(t, g.default, m.A),
                 r = Object.prototype.hasOwnProperty.call(a, n) ? a[n] : null;
-            null == r ? (a[n] = 1) : ((a[n] = r + 1), (n += `~${r}`)), (i[t.id] = { id: t.id, name: n });
+            (null == r ? (a[n] = 1) : ((a[n] = r + 1), (n += `~${r}`)), (i[t.id] = { id: t.id, name: n }));
         }),
         (n = e),
         !(function (e, t) {
@@ -122,18 +122,18 @@ function F(e) {
         guild: { id: t },
     } = e;
     if (null == t) return !1;
-    (R[t] = void 0), O === t && k(t);
+    ((R[t] = void 0), O === t && k(t));
 }
-function V(e) {
+function B(e) {
     let {
         channel: { guild_id: t },
     } = e;
     if (null == t) return !1;
-    (R[t] = void 0), t === O && k(t);
+    ((R[t] = void 0), t === O && k(t));
 }
-function B(e) {
+function V(e) {
     let { guildId: t } = e;
-    (R[t] = void 0), t === O && k(t);
+    ((R[t] = void 0), t === O && k(t));
 }
 function H(e, t) {
     return a.X8(A.cc({ user: e, context: t, checkElevated: !1 }), S.Lti);
@@ -149,7 +149,7 @@ function W() {
 class Y extends s.Ay.Store {
     static displayName = "GuildChannelStore";
     initialize() {
-        this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, g.default), this.syncWith([c.A], W);
+        (this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, g.default), this.syncWith([c.A], W));
     }
     getAllGuilds() {
         return R;
@@ -231,15 +231,15 @@ let K = new Y(l.h, {
         let {
             guild: { id: t },
         } = e;
-        return delete R[t], delete L[t], delete y[t], delete v[t], !0;
+        return (delete R[t], delete L[t], delete y[t], delete v[t], !0);
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         if (h.default.getId() !== n.id) return !1;
-        (R[t] = void 0), t === O && k(t);
+        ((R[t] = void 0), t === O && k(t));
     },
-    CHANNEL_CREATE: V,
-    CHANNEL_DELETE: V,
+    CHANNEL_CREATE: B,
+    CHANNEL_DELETE: B,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
@@ -249,11 +249,11 @@ let K = new Y(l.h, {
         }
         return n;
     },
-    GUILD_ROLE_CREATE: B,
-    GUILD_ROLE_UPDATE: B,
-    GUILD_ROLE_DELETE: B,
-    IMPERSONATE_UPDATE: B,
-    IMPERSONATE_STOP: B,
+    GUILD_ROLE_CREATE: V,
+    GUILD_ROLE_UPDATE: V,
+    GUILD_ROLE_DELETE: V,
+    IMPERSONATE_UPDATE: V,
+    IMPERSONATE_STOP: V,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         return null == t && null != D ? j(I.A.getChannel(D), null) : j(I.A.getChannel(t), t);

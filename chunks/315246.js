@@ -44,7 +44,7 @@ function I(e) {
                 "data-menu-migrated-auto": !0,
                 navId: E,
                 onClose: () => {
-                    (0, d.Z_)(), t();
+                    ((0, d.Z_)(), t());
                 },
                 "aria-label": A.intl.string(A.t.liqwPJ),
                 onSelect: S,
@@ -58,7 +58,7 @@ function I(e) {
                                         id: "game-profile",
                                         label: A.intl.string(A.t.f7aVGn),
                                         action: (e) => {
-                                            L(e), _?.();
+                                            (L(e), _?.());
                                         },
                                     }),
                             ],

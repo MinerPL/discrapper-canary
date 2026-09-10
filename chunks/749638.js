@@ -78,7 +78,7 @@ function g(e) {
             (e) => {
                 let l = e.contentRect.width;
                 if (null == l || h.current === l) return;
-                u(l), (h.current = l);
+                (u(l), (h.current = l));
                 let t = l - g.current.reduce((e, l, t) => e + l + 24 * (0 !== t));
                 c?.(t);
             },
@@ -113,7 +113,7 @@ function g(e) {
                     default:
                         return;
                 }
-                e.preventDefault(), n[l]?.focus();
+                (e.preventDefault(), n[l]?.focus());
             }
         }, []);
     return (0, n.jsxs)("div", {

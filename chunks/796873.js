@@ -2,10 +2,10 @@
     var r = this,
         n = r.humanize,
         i = {};
-    e.exports && (t = e.exports = i),
+    (e.exports && (t = e.exports = i),
         (t.humanize = i),
         (i.noConflict = function () {
-            return (r.humanize = n), this;
+            return ((r.humanize = n), this);
         }),
         (i.pad = function (e, t, r, n) {
             if (
@@ -13,16 +13,16 @@
                 r ? r.length > 1 && (r = r.charAt(0)) : (r = " "),
                 "right" == (n = void 0 === n ? "left" : "right"))
             )
-                for (; e.length < t; ) e += r;
-            else for (; e.length < t; ) e = r + e;
+                for (; e.length < t;) e += r;
+            else for (; e.length < t;) e = r + e;
             return e;
         }),
         (i.time = function () {
             return new Date().getTime() / 1e3;
-        });
+        }));
     var o = [0, 0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334],
         a = [0, 0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335];
-    (i.date = function (e, t) {
+    ((i.date = function (e, t) {
         var r = void 0 === t ? new Date() : new Date(t instanceof Date ? t : 1e3 * t),
             n = /\\?([a-z])/gi,
             s = function (e, t) {
@@ -161,7 +161,7 @@
         return e.replace(n, s);
     }),
         (i.numberFormat = function (e, t, r, n) {
-            (t = isNaN(t) ? 2 : Math.abs(t)), (r = void 0 === r ? "." : r), (n = void 0 === n ? "," : n);
+            ((t = isNaN(t) ? 2 : Math.abs(t)), (r = void 0 === r ? "." : r), (n = void 0 === n ? "," : n));
             var i = e < 0 ? "-" : "",
                 o = parseInt((e = Math.abs(+e || 0)).toFixed(t), 10) + "",
                 a = o.length > 3 ? o.length % 3 : 0;
@@ -178,7 +178,7 @@
             );
         }),
         (i.naturalDay = function (e, t) {
-            (e = void 0 === e ? i.time() : e), (t = void 0 === t ? "Y-m-d" : t);
+            ((e = void 0 === e ? i.time() : e), (t = void 0 === t ? "Y-m-d" : t));
             var r = new Date(),
                 n = new Date(r.getFullYear(), r.getMonth(), r.getDate()).getTime() / 1e3;
             return e < n && e >= n - 86400
@@ -231,12 +231,12 @@
                   i.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, r, n, o, a));
         }),
         (i.intword = function (e, t, r, n, o, a, s) {
-            (u = (t = t || ["", "K", "M", "B", "T"]).length - 1),
+            ((u = (t = t || ["", "K", "M", "B", "T"]).length - 1),
                 (r = r || 1e3),
                 (n = isNaN(n) ? 2 : Math.abs(n)),
                 (o = o || "."),
                 (a = a || ","),
-                (s = s || "");
+                (s = s || ""));
             for (var l, u, c = 0; c < t.length; c++)
                 if (e < Math.pow(r, c + 1)) {
                     u = c;
@@ -265,5 +265,5 @@
         (i.truncatewords = function (e, t) {
             var r = e.split(" ");
             return r.length < t ? e : r.slice(0, t).join(" ") + "\u2026";
-        });
+        }));
 }).call(this);

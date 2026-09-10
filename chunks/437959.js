@@ -22,7 +22,7 @@ class u extends i.Ay.Store {
 }
 let _ = new u(r.h, {
     CONNECTION_OPEN: function () {
-        (o = null), s.A.checkScheduledMaintenances();
+        ((o = null), s.A.checkScheduledMaintenances());
     },
     STATUS_PAGE_INCIDENT: function (e) {
         o = e.incident;
@@ -32,6 +32,6 @@ let _ = new u(r.h, {
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
         if (null == E) return !1;
-        (c = E.id), l.w.set(a, c);
+        ((c = E.id), l.w.set(a, c));
     },
 });

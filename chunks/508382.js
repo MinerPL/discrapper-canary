@@ -1,4 +1,4 @@
-n.d(t, { $Y: () => f, IP: () => _, Ow: () => h, Pv: () => I, jQ: () => E }), n(321073);
+(n.d(t, { $Y: () => f, IP: () => _, Ow: () => h, Pv: () => I, jQ: () => E }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(458265),
@@ -65,16 +65,16 @@ function A(e) {
                 e
             );
         }, [S, N, C, R, M, P, O, A, U]),
-        V = (0, s.fI)(),
+        B = (0, s.fI)(),
         {
-            refs: B,
+            refs: V,
             floatingStyles: H,
             placement: j,
             middlewareData: W,
             update: Y,
             context: K,
         } = (0, s.we)({
-            nodeId: V,
+            nodeId: B,
             placement: g,
             open: h,
             onOpenChange: I,
@@ -90,19 +90,19 @@ function A(e) {
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != m ? B.setPositionReference({ getBoundingClientRect: () => m }) : null != T && B.setReference(T);
-    }, [B, m, T]);
+        null != m ? V.setPositionReference({ getBoundingClientRect: () => m }) : null != T && V.setReference(T);
+    }, [V, m, T]);
     let $ = (0, s.s9)(K),
         z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
-        { getReferenceProps: q, getFloatingProps: Z } = (0, s.bv)([$, z]),
-        X = W.hide?.referenceHidden ? "hidden" : "visible",
+        { getReferenceProps: X, getFloatingProps: q } = (0, s.bv)([$, z]),
+        Z = W.hide?.referenceHidden ? "hidden" : "visible",
         Q = y ? c.sM : r.Fragment,
         J = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            v({ ref: B.setReference, props: q() }),
+            v({ ref: V.setReference, props: X() }),
             (0, i.jsx)(s.$c, {
-                id: V,
+                id: B,
                 children:
                     h &&
                     (0, i.jsxs)(Q, {
@@ -113,12 +113,12 @@ function A(e) {
                                 id: f,
                                 className: d()(p, u.q),
                                 [_]: !0,
-                                style: { ...H, visibility: X },
-                                ref: B.setFloating,
-                                ...Z(),
+                                style: { ...H, visibility: Z },
+                                ref: V.setFloating,
+                                ...q(),
                                 children: (0, i.jsx)(E.Provider, {
                                     value: J,
-                                    children: b({ placement: j, update: Y, hidden: "hidden" === X, shift: W.shift }),
+                                    children: b({ placement: j, update: Y, hidden: "hidden" === Z, shift: W.shift }),
                                 }),
                             })),
                             "none" === n

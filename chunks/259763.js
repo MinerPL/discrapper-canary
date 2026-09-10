@@ -20,7 +20,7 @@ let c = function (t) {
                 variant: o ? "primary" : "critical-primary",
                 text: o ? d.intl.string(d.t.YqAjXy) : d.intl.string(d.t.w4m945),
                 onClick: () => {
-                    s.A.updateChannelOverrideSettings(null, n, { muted: !o }, o ? u.fd.Unmuted : u.fd.Muted), i();
+                    (s.A.updateChannelOverrideSettings(null, n, { muted: !o }, o ? u.fd.Unmuted : u.fd.Muted), i());
                 },
             },
         ],

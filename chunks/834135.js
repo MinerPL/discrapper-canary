@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { VideoQuestModalContext: () => M.a, VideoQuestConfigContext: () => M.l, default: () => en });
+(s.r(t), s.d(t, { VideoQuestModalContext: () => M.a, VideoQuestConfigContext: () => M.l, default: () => en }));
 var n = s(477900),
     a = s(582128),
     l = s(503698),
@@ -147,7 +147,7 @@ function ee() {
         A = e.userStatus?.claimedAt != null,
         N = R.intl.formatToPlainString(f && !A ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: C });
     a.useEffect(() => {
-        null == x.current && e.userStatus?.completedAt != null && p(!0), (x.current = e.userStatus?.completedAt);
+        (null == x.current && e.userStatus?.completedAt != null && p(!0), (x.current = e.userStatus?.completedAt));
     }, [e.userStatus?.completedAt]);
     let O = (0, $.D)({
         quest: e,

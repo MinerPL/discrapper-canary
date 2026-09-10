@@ -1,8 +1,8 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.IntlManager = t.DEFAULT_LOCALE = void 0));
 let n = r(896745),
     i = r(668317),
     o = r(624067);
-(t.DEFAULT_LOCALE = "en-US"),
+((t.DEFAULT_LOCALE = "en-US"),
     (t.IntlManager = class {
         constructor({
             initialLocale: e = t.DEFAULT_LOCALE,
@@ -10,8 +10,9 @@ let n = r(896745),
             formatConfig: i = n.DEFAULT_FORMAT_CONFIG,
             forceLookupMatcher: a = !1,
         }) {
-            (this.onLocaleChange = (e) => (
-                this._localeSubscriptions.add(e), () => this._localeSubscriptions.delete(e)
+            ((this.onLocaleChange = (e) => (
+                this._localeSubscriptions.add(e),
+                () => this._localeSubscriptions.delete(e)
             )),
                 (this.currentLocale = e),
                 (this.defaultLocale = r),
@@ -22,7 +23,7 @@ let n = r(896745),
                     this.formatConfig,
                     this._forceLookupMatcher,
                 )),
-                (this._localeSubscriptions = new Set());
+                (this._localeSubscriptions = new Set()));
         }
         withFormatters(e) {
             for (let [t, r] of Object.entries(e)) this[t] = this.makeFormatFunction(r);
@@ -33,13 +34,13 @@ let n = r(896745),
             return (e, n) => (null == e ? null : r(e(this.currentLocale), n, t));
         }
         setLocale(e) {
-            (this.currentLocale = e),
+            ((this.currentLocale = e),
                 (this.data = (0, o.makeDataFormatters)(
                     [this.currentLocale, this.defaultLocale],
                     this.formatConfig,
                     this._forceLookupMatcher,
                 )),
-                this.emitLocaleChange(e);
+                this.emitLocaleChange(e));
         }
         emitLocaleChange(e) {
             for (let t of this._localeSubscriptions) t(e);
@@ -63,4 +64,4 @@ let n = r(896745),
                 keyPrefix: "",
             });
         }
-    });
+    }));

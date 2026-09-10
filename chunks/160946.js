@@ -19,9 +19,9 @@ function u() {
         u = n.isLoadedForSKUs(e),
         _ = i.getPremiumTypeSubscription()?.paymentSourceId;
     if (null != _ && !n.hasPaymentSourceForSKUIds(_, e))
-        return d(`subscription payment source ${_} not loaded for ${e}`), !1;
+        return (d(`subscription payment source ${_} not loaded for ${e}`), !1);
     if (null != c && !n.hasPaymentSourceForSKUIds(c, e))
-        return d(`default payment source ${c} not loaded for ${e}`), !1;
-    for (let t of r) if (!n.hasPaymentSourceForSKUIds(t, e)) return d(`payment source ${t} not loaded for ${e}`), !1;
+        return (d(`default payment source ${c} not loaded for ${e}`), !1);
+    for (let t of r) if (!n.hasPaymentSourceForSKUIds(t, e)) return (d(`payment source ${t} not loaded for ${e}`), !1);
     return u;
 }

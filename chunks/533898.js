@@ -16,7 +16,7 @@ function o(a) {
 function l(a) {
     return a.replace(/(vuosi|vuotta)/, "vuoden");
 }
-i.r(e), i.d(e, { default: () => b });
+(i.r(e), i.d(e, { default: () => b }));
 var s = {
         lessThanXSeconds: { one: "alle sekunti", other: "alle {{count}} sekuntia", futureTense: t },
         xSeconds: { one: "sekunti", other: "{{count}} sekuntia", futureTense: t },

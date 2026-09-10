@@ -81,6 +81,6 @@ function u(n) {
         let n = (0, r.Zo)(i.primaryGuild).guildId ?? null;
         l.primaryGuildId === n ? (c.pendingPrimaryGuildId = void 0) : (c.pendingPrimaryGuildId = l.primaryGuildId);
     }
-    "legacyUsernameDisabled" in l && (c.pendingLegacyUsernameDisabled = l.legacyUsernameDisabled),
-        o.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: e, ...c });
+    ("legacyUsernameDisabled" in l && (c.pendingLegacyUsernameDisabled = l.legacyUsernameDisabled),
+        o.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: e, ...c }));
 }

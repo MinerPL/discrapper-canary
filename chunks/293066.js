@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => o }), n(321073);
+(n.d(t, { A: () => o }), n(321073));
 var r = n(17928),
     a = n(228366);
 let s = { hasAcceptedStoreTerms: !1, hasAcceptedEulaIds: [] };

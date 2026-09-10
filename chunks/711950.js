@@ -9,9 +9,9 @@ function l(e) {
 let o = {
     transitionToSection(e) {
         let { explicit: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        (0, a.JK)().location.pathname !== s.BVt.FRIENDS && (0, a.pX)(s.BVt.FRIENDS),
+        ((0, a.JK)().location.pathname !== s.BVt.FRIENDS && (0, a.pX)(s.BVt.FRIENDS),
             l(e),
-            t && (0, r.A)({ tab_opened: e });
+            t && (0, r.A)({ tab_opened: e }));
     },
     setSection: l,
     setInitialSection(e) {

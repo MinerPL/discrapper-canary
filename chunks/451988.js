@@ -1,4 +1,4 @@
-n.d(t, { BK: () => s, Ep: () => i, IX: () => a, J_: () => r, OC: () => o, bY: () => l }), n(321073);
+(n.d(t, { BK: () => s, Ep: () => i, IX: () => a, J_: () => r, OC: () => o, bY: () => l }), n(321073));
 class i {
     _ref;
     start(e, t) {
@@ -6,7 +6,7 @@ class i {
         (!this.isStarted() || n) &&
             (this.stop(),
             (this._ref = window.setTimeout(() => {
-                (this._ref = null), t();
+                ((this._ref = null), t());
             }, e)));
     }
     stop() {
@@ -21,10 +21,10 @@ class r {
     _delay;
     _handler;
     constructor(e, t) {
-        (this._delay = e), (this._handler = t), (this._timeout = new i());
+        ((this._delay = e), (this._handler = t), (this._timeout = new i()));
     }
     set(e) {
-        return (this._delay = e), this;
+        return ((this._delay = e), this);
     }
     delay() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -40,7 +40,7 @@ class r {
 class a {
     _ref;
     start(e, t) {
-        this.stop(), (this._ref = window.setInterval(t, e));
+        (this.stop(), (this._ref = window.setInterval(t, e)));
     }
     stop() {
         null != this._ref && (clearInterval(this._ref), (this._ref = null));
@@ -64,9 +64,9 @@ class o {
     _pending = new Set();
     _flushHandler;
     constructor(e, t = {}) {
-        (this.invoke = e),
+        ((this.invoke = e),
             (this.options = t),
-            (this._flushHandler = new r(this.options.delay ?? 32, () => this._flush()));
+            (this._flushHandler = new r(this.options.delay ?? 32, () => this._flush())));
     }
     queue(e) {
         let t = Array.isArray(e) ? e : [e],
@@ -76,18 +76,18 @@ class o {
         return (n.length > 0 && this.options.onQueued?.(n), 0 === this._pending.size)
             ? Promise.resolve()
             : new Promise((e, t) => {
-                  this._promises.add({ resolve: e, reject: t }), this._flushHandler.delay(!1);
+                  (this._promises.add({ resolve: e, reject: t }), this._flushHandler.delay(!1));
               });
     }
     reset() {
         let e = [...this._pending],
             t = [...this._promises],
             n = new l("BatchInvocationManager was reset");
-        this._pending.clear(),
+        (this._pending.clear(),
             this._promises.clear(),
             this._flushHandler.cancel(),
             e.length > 0 && this.options.onCancelled?.(e),
-            t.forEach((e) => e.reject(n));
+            t.forEach((e) => e.reject(n)));
     }
     async _flush() {
         let e = [...this._pending];
@@ -95,7 +95,7 @@ class o {
         let t = [...this._promises];
         if ((this._promises.clear(), 0 === e.length)) return void t.forEach((e) => e.resolve());
         try {
-            await this.invoke(e), t.forEach((e) => e.resolve());
+            (await this.invoke(e), t.forEach((e) => e.resolve()));
         } catch (e) {
             t.forEach((t) => t.reject(e));
         }

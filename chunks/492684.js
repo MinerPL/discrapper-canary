@@ -10,7 +10,7 @@ function o(e) {
     return class extends l.PureComponent {
         _interval;
         constructor(e) {
-            super(e), (this._interval = new r.IX()), (this.state = { ...this.getUpdatedTime() });
+            (super(e), (this._interval = new r.IX()), (this.state = { ...this.getUpdatedTime() }));
         }
         componentDidMount() {
             this._interval.start(1e3, () => this.setState(this.getUpdatedTime()));

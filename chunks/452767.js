@@ -2,14 +2,14 @@ var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     i = r(150433);
@@ -46,7 +46,7 @@ e.exports = (function (e) {
                 key: "start",
                 value: function (e, t, r) {
                     var n = this;
-                    (this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = r);
+                    ((this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = r));
                     var i = function () {
                         0 === n._duration
                             ? (n._onUpdate(n._toValue), n.__debouncedOnEnd({ finished: !0 }))
@@ -60,26 +60,26 @@ e.exports = (function (e) {
                 value: function () {
                     var e = Date.now();
                     if (e >= this._startTime + this._duration) {
-                        0 === this._duration
+                        (0 === this._duration
                             ? this._onUpdate(this._toValue)
                             : this._onUpdate(this._fromValue + this._easing(1) * (this._toValue - this._fromValue)),
-                            this.__debouncedOnEnd({ finished: !0 });
+                            this.__debouncedOnEnd({ finished: !0 }));
                         return;
                     }
-                    this._onUpdate(
+                    (this._onUpdate(
                         this._fromValue +
                             this._easing((e - this._startTime) / this._duration) * (this._toValue - this._fromValue),
                     ),
-                        this.__active && (this._animationFrame = a.current(this.onUpdate.bind(this)));
+                        this.__active && (this._animationFrame = a.current(this.onUpdate.bind(this))));
                 },
             },
             {
                 key: "stop",
                 value: function () {
-                    (this.__active = !1),
+                    ((this.__active = !1),
                         clearTimeout(this._timeout),
                         s.current(this._animationFrame),
-                        this.__debouncedOnEnd({ finished: !1 });
+                        this.__debouncedOnEnd({ finished: !1 }));
                 },
             },
         ]),

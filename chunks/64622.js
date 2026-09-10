@@ -101,12 +101,12 @@ function q(i) {
                             className: B.Qs,
                             children: [
                                 ((t = (i) => {
-                                    i.stopPropagation(),
+                                    (i.stopPropagation(),
                                         il &&
                                             (ir({ action: "PRESS_IMAGE" }),
                                             m.default.selectVoiceChannel(q.channelId),
                                             (0, p.Nl)(q),
-                                            K?.());
+                                            K?.()));
                                 }),
                                 null == im && iA
                                     ? (0, e.jsx)("div", { className: Q.VH, children: (0, e.jsx)(r.y, {}) })
@@ -177,8 +177,8 @@ function q(i) {
                                                   maxUsers: U.k,
                                                   size: h._3.SIZE_16,
                                                   onClickOverflow: (i) => {
-                                                      i?.stopPropagation(),
-                                                          ir?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                                      (i?.stopPropagation(),
+                                                          ir?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
                                                   },
                                                   onUserClick: (i) => i.stopPropagation(),
                                                   disableUserPopout: (i) => i === l.id,

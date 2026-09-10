@@ -23,13 +23,13 @@ var r = n(72290),
     m = Object.assign,
     v = {};
 function S(e, t, n) {
-    (this.props = e), (this.context = t), (this.refs = v), (this.updater = n || b);
+    ((this.props = e), (this.context = t), (this.refs = v), (this.updater = n || b));
 }
 function E() {}
 function w(e, t, n) {
-    (this.props = e), (this.context = t), (this.refs = v), (this.updater = n || b);
+    ((this.props = e), (this.context = t), (this.refs = v), (this.updater = n || b));
 }
-(S.prototype.isReactComponent = {}),
+((S.prototype.isReactComponent = {}),
     (S.prototype.setState = function (e, t) {
         if ("object" != typeof e && "function" != typeof e && null != e)
             throw Error(
@@ -40,9 +40,9 @@ function w(e, t, n) {
     (S.prototype.forceUpdate = function (e) {
         this.updater.enqueueForceUpdate(this, e, "forceUpdate");
     }),
-    (E.prototype = S.prototype);
+    (E.prototype = S.prototype));
 var g = (w.prototype = new E());
-(g.constructor = w), m(g, S.prototype), (g.isPureReactComponent = !0);
+((g.constructor = w), m(g, S.prototype), (g.isPureReactComponent = !0));
 var k = Array.isArray;
 function H() {}
 var j = { H: null, A: null, T: null, S: null },
@@ -121,7 +121,7 @@ function A(e, t, n) {
                 );
             p = 0;
             var y = "" === i ? "." : i + ":";
-            if (k(t)) for (var h = 0; h < t.length; h++) (l = y + x((i = t[h]), h)), (p += e(i, n, r, l, c));
+            if (k(t)) for (var h = 0; h < t.length; h++) ((l = y + x((i = t[h]), h)), (p += e(i, n, r, l, c)));
             else if (
                 "function" ==
                 typeof (h =
@@ -131,8 +131,8 @@ function A(e, t, n) {
                           ? f
                           : null)
             )
-                for (t = h.call(t), h = 0; !(i = t.next()).done; )
-                    (l = y + x((i = i.value), h++)), (p += e(i, n, r, l, c));
+                for (t = h.call(t), h = 0; !(i = t.next()).done;)
+                    ((l = y + x((i = i.value), h++)), (p += e(i, n, r, l, c)));
             else if ("object" === l) {
                 if ("function" == typeof t.then)
                     return e(
@@ -190,7 +190,7 @@ function A(e, t, n) {
 function O(e) {
     if (-1 === e._status) {
         var t = e._result;
-        (t = t()).then(
+        ((t = t()).then(
             function (t) {
                 (0 === e._status || -1 === e._status) && ((e._status = 1), (e._result = t));
             },
@@ -198,7 +198,7 @@ function O(e) {
                 (0 === e._status || -1 === e._status) && ((e._status = 2), (e._result = t));
             },
         ),
-            -1 === e._status && ((e._status = 0), (e._result = t));
+            -1 === e._status && ((e._status = 0), (e._result = t)));
     }
     if (1 === e._status) return e._result.default;
     throw e._result;
@@ -222,7 +222,7 @@ var I =
                   return void r.emit("uncaughtException", e);
               console.error(e);
           };
-(t.Activity = h),
+((t.Activity = h),
     (t.Children = {
         map: A,
         forEach: function (e, t, n) {
@@ -346,11 +346,11 @@ var I =
         try {
             var r = e(),
                 o = j.S;
-            null !== o && o(n, r), "object" == typeof r && null !== r && "function" == typeof r.then && r.then(H, I);
+            (null !== o && o(n, r), "object" == typeof r && null !== r && "function" == typeof r.then && r.then(H, I));
         } catch (e) {
             I(e);
         } finally {
-            null !== t && null !== n.types && (t.types = n.types), (j.T = t);
+            (null !== t && null !== n.types && (t.types = n.types), (j.T = t));
         }
     }),
     (t.unstable_useCacheRefresh = function () {
@@ -411,4 +411,4 @@ var I =
     (t.useTransition = function () {
         return j.H.useTransition();
     }),
-    (t.version = "19.2.3");
+    (t.version = "19.2.3"));

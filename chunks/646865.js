@@ -19,5 +19,5 @@ async function o(e, t) {
     } catch {
         n = !1;
     }
-    return !n && e && a.close(s.MLl.ACTIVITY_POPOUT), n;
+    return (!n && e && a.close(s.MLl.ACTIVITY_POPOUT), n);
 }

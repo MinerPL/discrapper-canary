@@ -9,7 +9,7 @@ function o(e) {
 }
 function d(e) {
     let { data: t } = e;
-    (l = {}),
+    ((l = {}),
         t.forEach((e) => {
             let { messages: t } = e;
             t.forEach((e) => {
@@ -17,7 +17,7 @@ function d(e) {
                     l[o(e)] = (0, a.rh)(e);
                 });
             });
-        });
+        }));
 }
 class c extends i.Ay.Store {
     static displayName = "SearchMessageStore";

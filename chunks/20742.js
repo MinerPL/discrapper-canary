@@ -59,13 +59,13 @@ function S(e) {
                     t = 0;
                 if (null != _ && null != _.current) {
                     let n = _.current.getBoundingClientRect();
-                    (e = Math.max(e, n.height)), (t = Math.max(t, n.width));
+                    ((e = Math.max(e, n.height)), (t = Math.max(t, n.width)));
                 }
                 if (null != E && null != E.current) {
                     let n = E.current.getBoundingClientRect();
-                    (e = Math.max(e, n.height)), (t = Math.max(t, n.width));
+                    ((e = Math.max(e, n.height)), (t = Math.max(t, n.width)));
                 }
-                u(Math.ceil(t)), d(Math.ceil(e));
+                (u(Math.ceil(t)), d(Math.ceil(e)));
             });
             return (
                 null != _.current && e.observe(_.current),

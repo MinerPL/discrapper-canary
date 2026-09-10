@@ -1,4 +1,4 @@
-r.d(t, { RT: () => a }), r(323874), r(14289), r(35956);
+(r.d(t, { RT: () => a }), r(323874), r(14289), r(35956));
 var n = r(582128),
     u = r(812729),
     s = r.n(u),
@@ -65,7 +65,7 @@ function a(e, t, r, u) {
                                 maxSearchResults: o = -1,
                             } = n;
                         return new Promise((n) => {
-                            f?.addEventListener("message", function t(r) {
+                            (f?.addEventListener("message", function t(r) {
                                 let {
                                     data: { id: s, foundItemIndexes: c },
                                 } = r;
@@ -79,7 +79,7 @@ function a(e, t, r, u) {
                                     sortType: a,
                                     jaroWinklerSearchThreshold: d,
                                     maxSearchResults: o,
-                                });
+                                }));
                         });
                     })(t, e, r, { promiseUuid: d.current, ...u });
                     null != d.current && p.current(s);
@@ -96,7 +96,7 @@ function a(e, t, r, u) {
         }, [g, e, E, m, ...a]),
         n.useEffect(
             () => () => {
-                null != o.current && o.current.cancel(), (o.current = null), (d.current = null);
+                (null != o.current && o.current.cancel(), (o.current = null), (d.current = null));
             },
             [m, r, u],
         ),

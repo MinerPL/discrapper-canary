@@ -60,7 +60,7 @@ function E(e) {
         E = l.useId(),
         [b, _] = l.useState(null),
         T = l.useRef(null);
-    v || null == b || _(null),
+    (v || null == b || _(null),
         l.useEffect(() => {
             if (g)
                 return (
@@ -70,7 +70,7 @@ function E(e) {
                     }
                 );
             function e() {
-                (0, u.HW)(t), s.O.announce(f.intl.string(A.default.bUGP71), "assertive");
+                ((0, u.HW)(t), s.O.announce(f.intl.string(A.default.bUGP71), "assertive"));
             }
         }, [g, t]),
         l.useEffect(() => {
@@ -81,7 +81,7 @@ function E(e) {
         }, [v]),
         l.useEffect(() => {
             v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
-        }, [v, n]);
+        }, [v, n]));
     let S = l.useMemo(
         () =>
             v
@@ -89,13 +89,13 @@ function E(e) {
                       descriptionId: E,
                       setPreviewTarget: (e) => {
                           let t = T.current ?? C();
-                          (T.current = t), _(y(e, t));
+                          ((T.current = t), _(y(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
                           let i = T.current ?? C();
-                          (T.current = i), (0, u.Dr)(t, y(e, i));
+                          ((T.current = i), (0, u.Dr)(t, y(e, i)));
                       },
                   }
                 : null,

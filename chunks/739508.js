@@ -6,7 +6,7 @@ var i = n(636537),
     l = n(818348);
 function o(e, t) {
     let n = new Date();
-    return n.setMonth(e - 1), n.toLocaleString(t, { month: "short" });
+    return (n.setMonth(e - 1), n.toLocaleString(t, { month: "short" }));
 }
 async function d(e) {
     let t = null;

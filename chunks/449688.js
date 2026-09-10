@@ -35,7 +35,7 @@ e.exports = function (e) {
         },
         o = e.inherit(r, { contains: [] }),
         s = e.inherit(i, { contains: [] });
-    r.contains.push(s), i.contains.push(o);
+    (r.contains.push(s), i.contains.push(o));
     let l = [a, n];
     return (
         [r, i, o, s].forEach((e) => {

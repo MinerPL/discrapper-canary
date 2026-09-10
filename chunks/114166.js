@@ -21,10 +21,10 @@ class h extends a.PureComponent {
     prevAnimate;
     currAnimate;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.state = { prevValue: null, currValue: e.value, nextValue: null }),
             (this.prevAnimate = new s.A.Value(0)),
-            (this.currAnimate = new s.A.Value(1));
+            (this.currAnimate = new s.A.Value(1)));
     }
     static getDerivedStateFromProps(e, t) {
         let { prevValue: n, currValue: i, nextValue: l } = t;
@@ -41,7 +41,7 @@ class h extends a.PureComponent {
     animateBetween(e, t) {
         let n,
             { forcePosition: i, animationSpeed: l } = this.props;
-        this.prevAnimate.setValue(1),
+        (this.prevAnimate.setValue(1),
             null != i
                 ? 0 === i
                     ? (this.currAnimate.setValue(0), (n = 2))
@@ -51,7 +51,7 @@ class h extends a.PureComponent {
                   : (this.currAnimate.setValue(2), (n = 0)),
             s.A.parallel([s.A.timing(this.prevAnimate, d(n, l)), s.A.timing(this.currAnimate, d(1, l))]).start(
                 this.animateNext,
-            );
+            ));
     }
     animateNext = () => {
         let { currValue: e, nextValue: t } = this.state;

@@ -15,7 +15,7 @@ let s = [6, 8, 10, 12],
     };
 function f(e, t, r) {
     let n = (0x165667b1 * e) ^ (0x27d4eb2f * t) ^ (0x7fffffff * r);
-    return (n = Math.imul(n ^ (n >>> 13), 0x4bf19f61)), (((n ^= n >>> 16) >>> 0) % 1e6) / 1e6;
+    return ((n = Math.imul(n ^ (n >>> 13), 0x4bf19f61)), (((n ^= n >>> 16) >>> 0) % 1e6) / 1e6);
 }
 let m = i.memo(function (e) {
     let { state: t, orientation: r = "bottom" } = e,
@@ -26,7 +26,7 @@ let m = i.memo(function (e) {
         m.current = t;
     }, [t]);
     let d = i.useRef(r);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         d.current = r;
     }, [r]),
         i.useEffect(() => {
@@ -66,7 +66,7 @@ let m = i.memo(function (e) {
                 k = Array(8).fill(""),
                 F = !1;
             function N() {
-                !(function () {
+                (!(function () {
                     let {
                             r: e,
                             g: r,
@@ -90,7 +90,7 @@ let m = i.memo(function (e) {
                         k[t] = `rgba(${e}, ${r}, ${n}, ${a})`;
                     }
                 })(),
-                    (F = "1" === getComputedStyle(t).getPropertyValue("--custom-vibegrations-glow-mirror").trim());
+                    (F = "1" === getComputedStyle(t).getPropertyValue("--custom-vibegrations-glow-mirror").trim()));
             }
             N();
             let j = [];
@@ -138,13 +138,13 @@ let m = i.memo(function (e) {
             }
             E();
             let T = new ResizeObserver(E);
-            T.observe(t), window.addEventListener("resize", E);
+            (T.observe(t), window.addEventListener("resize", E));
             let q = performance.now(),
                 S = 0;
             function V(e) {
                 var t, n, a;
                 if (i <= 0 || o <= 0) return;
-                r.clearRect(0, 0, i, o), (r.globalAlpha = w);
+                (r.clearRect(0, 0, i, o), (r.globalAlpha = w));
                 let l = y,
                     s = "right" === d.current,
                     h = s ? o : i,
@@ -186,10 +186,10 @@ let m = i.memo(function (e) {
                 for (let e = 0; e < 8; e++) {
                     let t = j[e];
                     if (0 !== t.length) {
-                        (r.fillStyle = k[e]), r.beginPath();
+                        ((r.fillStyle = k[e]), r.beginPath());
                         for (let e = 0; e < t.length; e++) {
                             let i = t[e];
-                            (n = i.i * l),
+                            ((n = i.i * l),
                                 (a = i.j * l),
                                 "function" == typeof r.roundRect
                                     ? r.roundRect(n, a, 4, 4, 1)
@@ -197,7 +197,7 @@ let m = i.memo(function (e) {
                                       r.arcTo(n + 4, a, n + 4, a + 4, 1),
                                       r.arcTo(n + 4, a + 4, n, a + 4, 1),
                                       r.arcTo(n, a + 4, n, a, 1),
-                                      r.arcTo(n, a, n + 4, a, 1));
+                                      r.arcTo(n, a, n + 4, a, 1)));
                         }
                         r.fill();
                     }
@@ -208,7 +208,7 @@ let m = i.memo(function (e) {
                     y = s[h];
                     let r = t - q,
                         n = Math.min(64, r);
-                    (q = t),
+                    ((q = t),
                         !(function (e, t) {
                             if (
                                 ++R < 30 ||
@@ -233,27 +233,27 @@ let m = i.memo(function (e) {
                                     n.toFixed(2),
                                     "ms",
                                 ));
-                        })(r, t);
+                        })(r, t));
                     let i = c[m.current] ?? c.home,
                         a = 1 - Math.exp(-n / 80);
-                    (x += (i.blob - x) * a), (M += (i.twink - M) * a), (w += (i.alpha - w) * a);
+                    ((x += (i.blob - x) * a), (M += (i.twink - M) * a), (w += (i.alpha - w) * a));
                     let l = 1.5 * x;
                     for (let e = 0; e < v.length; e++) {
                         let t = v[e];
-                        (t.x += t.vx * n * l),
+                        ((t.x += t.vx * n * l),
                             (t.y += t.vy * n * l),
                             (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
                             (t.y < 0.1 || t.y > 1.1) && (t.vy *= -1),
                             (t.vx += (Math.random() - 0.5) * 2e-7 * n),
-                            (t.vy += (Math.random() - 0.5) * 2e-7 * n);
+                            (t.vy += (Math.random() - 0.5) * 2e-7 * n));
                     }
-                    V(0.001 * t), (S = requestAnimationFrame(e));
+                    (V(0.001 * t), (S = requestAnimationFrame(e)));
                 })),
                 () => {
-                    cancelAnimationFrame(S), T.disconnect(), P.disconnect(), window.removeEventListener("resize", E);
+                    (cancelAnimationFrame(S), T.disconnect(), P.disconnect(), window.removeEventListener("resize", E));
                 }
             );
-        }, []);
+        }, []));
     let g = o.P5;
     return (
         (g = "conversation" === t ? `${g} ${o.wY}` : "home" === t ? `${g} ${o.Qy}` : `${g} ${o.fR}`),

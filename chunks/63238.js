@@ -20,21 +20,21 @@ class h {
         this._onChange = e;
     }
     reset() {
-        (this._subscriptions = {}), (this._unsubscriptions = {}), this._unsubscribe.cancel();
+        ((this._subscriptions = {}), (this._unsubscriptions = {}), this._unsubscribe.cancel());
     }
     get(e) {
         let t = this._subscriptions[e] ?? {};
         return E.default.keys(t);
     }
     clear(e) {
-        delete this._subscriptions[e], delete this._unsubscriptions[e];
+        (delete this._subscriptions[e], delete this._unsubscriptions[e]);
     }
     subscribe(e, t) {
         let n = this._subscriptions[e] ?? {};
-        (n[t] = (n[t] ?? 0) + 1),
+        ((n[t] = (n[t] ?? 0) + 1),
             (this._subscriptions[e] = n),
             1 === n[t] && this._onChange(e, this.get(e)),
-            this.checkForLeaks(e, t);
+            this.checkForLeaks(e, t));
     }
     isSubscribed(e, t) {
         return null != this._subscriptions[e] && null != this._subscriptions[e][t];
@@ -45,7 +45,7 @@ class h {
     unsubscribe(e, t) {
         if (!this.isSubscribed(e, t)) return;
         let n = this._unsubscriptions[e] ?? {};
-        (n[t] = (n[t] ?? 0) + 1), (this._unsubscriptions[e] = n), 1 === n[t] && this._unsubscribe.delay(!1);
+        ((n[t] = (n[t] ?? 0) + 1), (this._unsubscriptions[e] = n), 1 === n[t] && this._unsubscribe.delay(!1));
     }
     checkForLeaks(e, t) {
         let n = (this._subscriptions[e]?.[t] ?? 0) - (this._unsubscriptions[e]?.[t] ?? 0);
@@ -58,11 +58,11 @@ class h {
         a().isEmpty(this._unsubscriptions) ||
             (a().forEach(this._unsubscriptions, (e, t) => {
                 let n = this._subscriptions[t];
-                a().forEach(e, (e, t) => {
-                    (n[t] = (n[t] ?? 0) - e), n[t] <= 0 && delete n[t];
+                (a().forEach(e, (e, t) => {
+                    ((n[t] = (n[t] ?? 0) - e), n[t] <= 0 && delete n[t]);
                 }),
                     a().isEmpty(n) && delete this._subscriptions[t],
-                    this._onChange(t, this.get(t));
+                    this._onChange(t, this.get(t)));
             }),
             (this._unsubscriptions = {}));
     }
@@ -128,10 +128,10 @@ class g {
         this._onChange = e;
     }
     _enqueue(e, t) {
-        (this._pending[e] = { ...this._pending[e], ...t }), this._flush.delay();
+        ((this._pending[e] = { ...this._pending[e], ...t }), this._flush.delay());
     }
     reset() {
-        this._subscribed.clear(),
+        (this._subscribed.clear(),
             (this._pending = {}),
             this._members.reset(),
             this._memberUpdates.clear(),
@@ -139,7 +139,7 @@ class g {
             this._threadMemberLists.reset(),
             this._typing.clear(),
             this._threads.clear(),
-            this._activities.clear();
+            this._activities.clear());
     }
     get(e) {
         return {
@@ -168,7 +168,7 @@ class g {
         this._subscribed.forEach(e);
     }
     clearWithoutFlushing(e, t) {
-        (t || !this._threads.has(e)) && this._subscribed.delete(e),
+        ((t || !this._threads.has(e)) && this._subscribed.delete(e),
             delete this._pending[e],
             this._members.clear(e),
             this._channels.clear(e),
@@ -176,14 +176,14 @@ class g {
             this._typing.delete(e),
             this._memberUpdates.delete(e),
             t && this._threads.delete(e),
-            this._activities.delete(e);
+            this._activities.delete(e));
     }
     flush() {
-        a().forEach(this._pending, (e, t) => {
+        (a().forEach(this._pending, (e, t) => {
             this._subscribed.add(t);
         }),
             this._onChange(this._pending),
-            (this._pending = {});
+            (this._pending = {}));
     }
     subscribeUser(e, t) {
         m(e) && this._members.subscribe(e, t);
@@ -196,7 +196,7 @@ class g {
     }
     subscribeToMemberUpdates(e) {
         if (!m(e)) return !1;
-        this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
+        (this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e));
     }
     unsubscribeFromMemberUpdates(e) {
         if (!m(e)) return !1;
@@ -209,9 +209,9 @@ class g {
         return !!m(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
-        this._subscribeToFeature(e, this._typing, { typing: !0 }),
+        (this._subscribeToFeature(e, this._typing, { typing: !0 }),
             this._subscribeToFeature(e, this._activities, { activities: !0 }),
-            this._subscribeToFeature(e, this._threads, { threads: !0 });
+            this._subscribeToFeature(e, this._threads, { threads: !0 }));
     }
     _subscribeToFeature(e, t, n) {
         !m(e) || t.has(e) || (t.add(e), this._enqueue(e, n));
@@ -237,18 +237,18 @@ let G = new g((e) => {
 });
 function x(e, t) {
     let n = {};
-    G.forEach((r) => {
+    (G.forEach((r) => {
         r !== w.A.getGuildId() &&
             r !== M.A.getGuildId() &&
             r !== y.A.getChannel(U.Ay.getChannelId())?.getGuildId() &&
             (null == i || i.guildId !== r) &&
             (G.clearWithoutFlushing(r, e), t && (n[r] = G.get(r)));
     }),
-        a().isEmpty(n) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n });
+        a().isEmpty(n) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: n }));
 }
 function k(e, t) {
     let n = (0, d.ai)(e) && null != t ? (y.A.getChannel(t)?.getGuildId() ?? e) : e;
-    return G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD);
+    return (G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD));
 }
 function F(e, t, n) {
     if (t === R.sN) return G.subscribeChannel(e, t, n);
@@ -261,7 +261,7 @@ function F(e, t, n) {
             : !!i.isActiveThread() && G.subscribeThreadMemberList(r, t, U.Ay.getChannelId())
         : G.subscribeChannel(r, t, n);
 }
-function V(e) {
+function B(e) {
     let { type: t } = e;
     "CONNECTION_OPEN" === t && x(!0, !1);
     let n = w.A.getGuildId();
@@ -269,12 +269,12 @@ function V(e) {
     let i = {},
         r = new Set(N.A.lurkingGuildIds()),
         s = N.A.mostRecentLurkedGuildId();
-    G.forEach((e) => {
+    (G.forEach((e) => {
         null == b.A.getGuild(e) ? G.clearWithoutFlushing(e, !0) : (r.has(e) && e !== s) || (i[e] = G.get(e));
     }),
-        a().isEmpty(i) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: i });
+        a().isEmpty(i) || l.h.dispatch({ type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: i }));
 }
-function B(e) {
+function V(e) {
     let { guildId: t, channelId: n } = e;
     return !D.A.isUnavailable(t) && k(t, n);
 }
@@ -290,16 +290,16 @@ function j() {
         let n = v.Ay.memberOf(t);
         if (0 === n.length) return !1;
         let [r] = n;
-        (i = { guildId: r, userId: t }), G.subscribeUser(r, t);
+        ((i = { guildId: r, userId: t }), G.subscribeUser(r, t));
     }
     return !1;
 }
 class W extends s.Ay.Store {
     static displayName = "GuildSubscriptionsStore";
     initialize() {
-        this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
+        (this.waitFor(O.default, L.Ay, y.A, S.A, D.A, v.Ay, b.A, N.A, M.A, P.A, U.Ay, w.A, C.A),
             this.syncWith([C.A], j),
-            this.syncWith([L.Ay], H);
+            this.syncWith([L.Ay], H));
     }
     getSubscribedThreadIds() {
         return G.getSubscribedThreadIds();
@@ -319,8 +319,8 @@ class W extends s.Ay.Store {
     }
 }
 let Y = new W(l.h, {
-    CONNECTION_OPEN: V,
-    CONNECTION_RESUMED: V,
+    CONNECTION_OPEN: B,
+    CONNECTION_RESUMED: B,
     CONNECTION_CLOSED: function () {
         x(!1, !1);
     },
@@ -332,8 +332,8 @@ let Y = new W(l.h, {
     LOGOUT: function () {
         G.reset();
     },
-    VOICE_CHANNEL_SELECT: B,
-    CHANNEL_SELECT: B,
+    VOICE_CHANNEL_SELECT: V,
+    CHANNEL_SELECT: V,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
         t.id === w.A.getGuildId() && H();

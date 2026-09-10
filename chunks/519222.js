@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $b: () => k,
     DT: () => N,
     Io: () => M,
@@ -15,7 +15,7 @@ n.d(t, {
     vc: () => v,
     wF: () => P,
 }),
-    n(582128);
+    n(582128));
 var i = n(687709),
     l = n(148494),
     s = n(419056),
@@ -45,8 +45,8 @@ function N(e, t, n) {
     (0, p.C)(n.shiftKey ? `${t.channel_id}-${t.id}` : t.id);
 }
 function j(e, t) {
-    h.default.track(_.HAw.MESSAGE_LINK_COPIED, { message_id: t.id, channel: t.channel_id }),
-        (0, p.C)((0, g.n)(e.guild_id, e.id, t.id));
+    (h.default.track(_.HAw.MESSAGE_LINK_COPIED, { message_id: t.id, channel: t.channel_id }),
+        (0, p.C)((0, g.n)(e.guild_id, e.id, t.id)));
 }
 function T(e, t, n) {
     t.state === _.cmJ.SEND_FAILED || n.shiftKey
@@ -77,8 +77,8 @@ function M(e, t) {
 function k(e, t, n) {
     let i = e.isPrivate(),
         l = t.author.id === u.default.getId();
-    (0, o.Yf)({ channel: e, message: t, shouldMention: !n.shiftKey && !l, showMentionToggle: !i && !l }),
-        A._.dispatch(_.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+    ((0, o.Yf)({ channel: e, message: t, shouldMention: !n.shiftKey && !l, showMentionToggle: !i && !l }),
+        A._.dispatch(_.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id }));
 }
 function L(e, t) {
     (0, d.Tv)(e, t, "Message");

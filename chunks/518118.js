@@ -11,14 +11,14 @@ var n =
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     o = r(562210),
@@ -32,7 +32,9 @@ e.exports = (function (e) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return e.style && (e = n({}, e, { style: new a(e.style) })), (i._props = e), (i._callback = r), i.__attach(), i;
+        return (
+            e.style && (e = n({}, e, { style: new a(e.style) })), (i._props = e), (i._callback = r), i.__attach(), i
+        );
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => P }), n(321073);
+(n.d(t, { A: () => P }), n(321073));
 var i = n(536637),
     r = n.n(i),
     a = n(17928),
@@ -12,7 +12,7 @@ var i = n(536637),
 let E = new Map(),
     A = {};
 function h(e, t) {
-    (A[e] = t), E.set(e, r()());
+    ((A[e] = t), E.set(e, r()()));
 }
 function I(e, t, n) {
     if (t !== n && null != t) {
@@ -32,7 +32,7 @@ let f = {},
 function m(e) {
     let t,
         n = [];
-    return n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(T(e.guildId, e.applicationStatus)), n;
+    return (n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(T(e.guildId, e.applicationStatus)), n);
 }
 let g = new s.J(m, (e) => `${e.joinRequestId}`),
     S = new s.J(m, (e) => `${e.joinRequestId}`),
@@ -41,10 +41,10 @@ function C(e) {
     return g.get(e);
 }
 function O(e) {
-    (v[e.joinRequestId] = e),
+    ((v[e.joinRequestId] = e),
         g.set(e.joinRequestId, e),
         (0, c.ar)(e.applicationStatus) && (N.delete(e.joinRequestId), S.set(e.joinRequestId, e)),
-        (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e));
+        (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e)));
 }
 function R(e) {
     let { guildId: t, request: n } = e,
@@ -52,7 +52,7 @@ function R(e) {
         r = o.default.getCurrentUser();
     if (null == r || i.userId === r.id) return !1;
     let a = C(i.joinRequestId)?.applicationStatus;
-    return I(t, i.applicationStatus, a), O(i), !0;
+    return (I(t, i.applicationStatus, a), O(i), !0);
 }
 let L = {},
     y = {},
@@ -105,15 +105,15 @@ let P = new M(l.h, {
     },
     GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS: function (e) {
         let { guildId: t, userId: n, requests: i } = e;
-        i.forEach(O), (f[`${t}:${n}`] = i.map((e) => e.joinRequestId));
+        (i.forEach(O), (f[`${t}:${n}`] = i.map((e) => e.joinRequestId)));
     },
     GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
         let { status: t, requests: n, total: i, guildId: r } = e;
-        (p = !1),
+        ((p = !1),
             t === u.B5.SUBMITTED && h(r, i),
             n.forEach((e) => {
                 O(e);
-            });
+            }));
     },
     GUILD_JOIN_REQUESTS_FETCH_START: function () {
         p = !0;

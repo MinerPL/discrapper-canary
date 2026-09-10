@@ -33,13 +33,13 @@ class I {
         isPrepaidPaymentSource: r,
         isInPastDueCheckout: a,
     }) {
-        (this.isTrial = e),
+        ((this.isTrial = e),
             (this.isGift = t),
             (this.selectedPlan = n),
             (this.premiumSubscription = l),
             (this.planGroup = i),
             (this.isPrepaidPaymentSource = r),
-            (this.isInPastDueCheckout = a);
+            (this.isInPastDueCheckout = a));
     }
     resolveDisabledPurchase(e, t) {
         let { paymentSource: n, invoicePreview: l } = t;

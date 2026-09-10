@@ -186,10 +186,10 @@ function B() {
         error: j,
         gameProvider: p,
     } = (0, w.bv)();
-    (0, m.SX)(e, n?.id, null == n ? "create" : "edit"),
+    ((0, m.SX)(e, n?.id, null == n ? "create" : "edit"),
         a.useEffect(() => {
             (0, R.Jr)(e);
-        }, [e]);
+        }, [e]));
     let g = (0, v.bG)([_.A], () => _.A.getRegions()),
         M = (0, v.bG)([_.A], () => _.A.getRegionState()),
         V = a.useMemo(

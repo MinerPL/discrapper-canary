@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { baseRules: () => N, customRules: () => _ });
+(s.r(t), s.d(t, { baseRules: () => N, customRules: () => _ }));
 var l = s(477900),
     a = s(582128),
     n = s(503698),
@@ -37,29 +37,29 @@ let N = null != g.A ? g.A.defaultRules : null,
                 return (
                     (l = n
                         ? (e) => {
-                              R.default.track(k.HAw.PREMIUM_PROMOTION_OPENED, { location: x }),
+                              (R.default.track(k.HAw.PREMIUM_PROMOTION_OPENED, { location: x }),
                                   (0, h.openUserSettings)(f.X.NITRO_PANEL),
                                   s.changeLog.track(k.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
                                   (0, i.closeModal)(b.lb),
-                                  e.preventDefault();
+                                  e.preventDefault());
                           }
                         : r
                           ? (e) => {
-                                (0, m.pX)(a),
+                                ((0, m.pX)(a),
                                     s.changeLog.track(k.HAw.CHANGE_LOG_CTA_CLICKED, {
                                         ...R.default.getCampaignParams(a),
                                     }),
                                     (0, d.bz)(),
                                     (0, i.closeModal)(b.lb),
-                                    e.preventDefault();
+                                    e.preventDefault());
                             }
                           : () => {
-                                s && "function" == typeof s.onLinkClick && s.onLinkClick(a),
+                                (s && "function" == typeof s.onLinkClick && s.onLinkClick(a),
                                     s.changeLog.track(k.HAw.CHANGE_LOG_CTA_CLICKED, {
                                         target: a,
                                         cta_type: "inline_link",
                                         ...R.default.getCampaignParams(a),
-                                    });
+                                    }));
                             }),
                     { ...C.parse(e, t, s), callToAction: l }
                 );

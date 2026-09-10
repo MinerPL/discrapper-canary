@@ -1,4 +1,4 @@
-l.d(t, { A: () => x }),
+(l.d(t, { A: () => x }),
     l(323874),
     l(14289),
     l(35956),
@@ -9,7 +9,7 @@ l.d(t, { A: () => x }),
     l(949626),
     l(767709),
     l(65162),
-    l(321073);
+    l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(503698),
@@ -63,7 +63,7 @@ let f = new Map(),
                             let t = [];
                             for (let l = 0; l < e.numberOfChannels; l++) {
                                 let n = new Float32Array(e.getChannelData(l));
-                                t.push(n), s.push(n.buffer);
+                                (t.push(n), s.push(n.buffer));
                             }
                             l.push(t);
                         }
@@ -73,7 +73,7 @@ let f = new Map(),
                     }
                 })(),
                 () => {
-                    (a = !0), n.removeEventListener("message", s);
+                    ((a = !0), n.removeEventListener("message", s));
                 }
             );
         }, [i, t, b]),
@@ -85,7 +85,7 @@ let f = new Map(),
             let { width: l, height: n } = e,
                 a = l / y.length,
                 i = -(a * (m.Jh.waveformBarWidth - 1));
-            t.clearRect(0, 0, l, n), (t.fillStyle = E);
+            (t.clearRect(0, 0, l, n), (t.fillStyle = E));
             for (let e = 0; e < y.length; e++) {
                 let l = y[e] * n,
                     s = e * a + i;

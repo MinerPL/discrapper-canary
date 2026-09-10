@@ -17,7 +17,7 @@ async function I(e) {
     try {
         let t = await i.Bo.get({ url: h.Rsh.GUILD_HOME_SETTINGS(e), oldFormErrors: !0, rejectWithError: !0 }),
             n = (0, E.Xu)(t.body);
-        return r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: e, homeSettings: n }), n;
+        return (r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: e, homeSettings: n }), n);
     } catch (t) {
         r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: e });
     }
@@ -28,7 +28,7 @@ async function f(e) {
         try {
             let t = await i.Bo.get({ url: h.Rsh.GUILD_MEMBER_ACTIONS(e), oldFormErrors: !0, rejectWithError: !0 }),
                 n = (0, E.xr)(t.body);
-            return r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: e, memberActions: n }), n;
+            return (r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: e, memberActions: n }), n);
         } catch (t) {
             r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: e });
         }
@@ -39,7 +39,7 @@ function p(e, t) {
     if (null == t) return;
     let i = d.A.getChannel(t),
         r = _.h.getResourceForChannel(e, t);
-    null == e ||
+    (null == e ||
         l.A.isFullServerPreview(e) ||
         null == i ||
         null == r ||
@@ -55,12 +55,12 @@ function p(e, t) {
             messageId: u.default.castChannelIdAsMessageId(t),
             flash: !1,
             jumpType: s.vx.INSTANT,
-        });
+        }));
 }
 function T(e, t) {
     let n = d.A.getChannel(t),
         i = _.h.getActionForChannel(e, t);
-    null == e ||
+    (null == e ||
         l.A.isFullServerPreview(e) ||
         null == n ||
         null == i ||
@@ -70,7 +70,7 @@ function T(e, t) {
             server_guide_channel_type: "member action",
             channel_action_type: i.actionType,
         }),
-        (0, o.iN)(t);
+        (0, o.iN)(t));
 }
 function m(e, t) {
     if ((r.h.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId: e, channelId: t }), l.A.isFullServerPreview(e)))

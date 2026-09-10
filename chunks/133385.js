@@ -93,7 +93,7 @@ function G(e) {
     return (s.useEffect(() => {
         if (d)
             return () => {
-                S(T.COACHMARK_DISMISSED, U.d.POPOUT), c(P.i.AUTO_DISMISS);
+                (S(T.COACHMARK_DISMISSED, U.d.POPOUT), c(P.i.AUTO_DISMISS));
             };
     }, [d, c]),
     s.useEffect(() => {
@@ -119,7 +119,7 @@ function G(e) {
                       text: y.intl.string(y.t["bqZVd/"]),
                       variant: "primary",
                       onClick: () => {
-                          S(T.COACHMARK_CTA_CLICKED, U.d.POPOUT), c(P.i.TAKE_ACTION), a();
+                          (S(T.COACHMARK_CTA_CLICKED, U.d.POPOUT), c(P.i.TAKE_ACTION), a());
                       },
                   },
               ],
@@ -268,11 +268,11 @@ function em(e) {
         { trackUserProfileAction: j } = (0, ep.NJ)(),
         { analyticsLocations: k, newestAnalyticsLocation: P } = (0, f.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU),
         U = p("UserProfileOverflowMenuButton");
-    (t = i.id),
+    ((t = i.id),
         (n = h(t, l)),
         s.useEffect(() => {
             U && 0 !== n.length && (0, g.tu)({ skuIds: n });
-        }, [U, n]);
+        }, [U, n]));
     let L = {
             action: e_.pt.PRESS_OPTIONS,
             icon: a.MoreHorizontalIcon,
@@ -354,17 +354,17 @@ function em(e) {
                 d = (0, el.A)({ id: t.id, label: y.intl.string(y.t["/AXYnE"]), onSuccess: i }),
                 E = s.useMemo(() => (null == l ? null : l.getBannerURL({ canAnimate: !0, size: N.XAf })), [l]),
                 f = s.useCallback(() => {
-                    (0, eu.C)(t.id), i?.();
+                    ((0, eu.C)(t.id), i?.());
                 }, [t.id, i]),
                 R = s.useCallback(() => {
-                    (0, eu.C)((0, es.A)(t.id)), i?.();
+                    ((0, eu.C)((0, es.A)(t.id)), i?.());
                 }, [t.id, i]),
                 p = s.useCallback(() => {
                     let e = t.getAvatarURL(n, N.XAf, !0);
-                    ei()(null != e, "cannot copy null avatar URL"), (0, eu.C)(e), i?.();
+                    (ei()(null != e, "cannot copy null avatar URL"), (0, eu.C)(e), i?.());
                 }, [t, n, i]),
                 I = s.useCallback(() => {
-                    ei()(null != E, "cannot copy null banner URL"), (0, eu.C)(E), i?.();
+                    (ei()(null != E, "cannot copy null banner URL"), (0, eu.C)(E), i?.());
                 }, [E, i]);
             return !__OVERLAY__ && r && eu.p5 && null != t.id
                 ? a
@@ -445,7 +445,7 @@ function em(e) {
                                   },
                                   action: i
                                       ? () => {
-                                            C({
+                                            (C({
                                                 action: v.ROW_CLICKED,
                                                 skuId: t,
                                                 productType: l,
@@ -456,7 +456,7 @@ function em(e) {
                                                     skuId: t,
                                                     analyticsLocations: s,
                                                     analyticsSource: E.A.USER_PROFILE_OVERFLOW_MENU,
-                                                });
+                                                }));
                                         }
                                       : void 0,
                               },
@@ -474,7 +474,7 @@ function em(e) {
                   targetElementRef: O,
                   shouldShow: m,
                   onRequestOpen: () => {
-                      null != $ && S(T.MENU_VIEWED, D), b?.();
+                      (null != $ && S(T.MENU_VIEWED, D), b?.());
                   },
                   onRequestClose: x,
                   renderPopout: (e) => {
@@ -508,7 +508,7 @@ function eb(e) {
     }, [a, n]);
     let [d, c] = s.useState(!1),
         E = s.useCallback(() => {
-            c(!0), a && (S(T.RED_DOT_DISMISSED, n), u(P.i.TAKE_ACTION));
+            (c(!0), a && (S(T.RED_DOT_DISMISSED, n), u(P.i.TAKE_ACTION)));
         }, [a, u, n]);
     return (0, o.jsxs)("div", {
         className: eO.g2,
@@ -532,7 +532,7 @@ function eb(e) {
                 isMenuOpen: d,
                 targetElementRef: t,
                 onClick: () => {
-                    S(T.MENU_VIEWED, n), c(!0);
+                    (S(T.MENU_VIEWED, n), c(!0));
                 },
             }),
         ],

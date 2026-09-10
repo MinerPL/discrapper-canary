@@ -41,7 +41,7 @@ function c(e) {
                     }
                 );
             }
-            u(!1), clearTimeout(m.current);
+            (u(!1), clearTimeout(m.current));
         }, [c]),
         d ? null : t
     );

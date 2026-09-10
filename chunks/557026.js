@@ -52,7 +52,7 @@ function A(t) {
     return (0, s.jsxs)(T.D, {
         className: p()(R.U, i),
         onClick: function () {
-            null != l && (0, C.P6)(l), n();
+            (null != l && (0, C.P6)(l), n());
         },
         children: [
             (0, s.jsx)(I.j, { color: v.A.colors.TEXT_BRAND }),
@@ -73,12 +73,12 @@ function x(t) {
                       initialCode: r ?? "",
                       onComplete: (t) => {
                           let n = (0, g.$g)(t.amount, t.currency);
-                          (0, b.P0)(
+                          ((0, b.P0)(
                               (0, y.o)(w.intl.formatToPlainString(h.default["66Wi6B"], { price: n }), P.Ck.SUCCESS, {
                                   position: P.xJ.TOP,
                               }),
                           ),
-                              e?.(t);
+                              e?.(t));
                       },
                       onClose: n,
                       source: "payment_modal",

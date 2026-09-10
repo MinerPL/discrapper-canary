@@ -12,10 +12,10 @@ let c = (0, i._C)(() => ({
             s.T && o.vF.warn("Using the `browserSessionIntegration` in non-browser environments is not supported.");
             return;
         }
-        (0, a.J0)({ ignoreDuration: !0 }),
+        ((0, a.J0)({ ignoreDuration: !0 }),
             (0, a.J5)(),
             (0, r._)(({ from: e, to: t }) => {
                 void 0 !== e && e !== t && ((0, a.J0)({ ignoreDuration: !0 }), (0, a.J5)());
-            });
+            }));
     },
 }));

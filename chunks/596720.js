@@ -29,5 +29,5 @@ function c(e) {
     }
 }
 let u = new Set([0, 3]);
-a.Auw.IMAGE, a.Auw.GIFV;
+(a.Auw.IMAGE, a.Auw.GIFV);
 var _ = (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"), (r[(r.BOOKMARKS = 2)] = "BOOKMARKS"), r);

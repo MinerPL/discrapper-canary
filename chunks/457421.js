@@ -17,9 +17,9 @@ let o = new l(r.h, {
         s = "FETCHING";
     },
     COLLECTIBLES_MARKETING_FETCH_SUCCESS: function (e) {
-        (a = e.marketings.marketingsBySurfaces), (s = "FETCHED");
+        ((a = e.marketings.marketingsBySurfaces), (s = "FETCHED"));
     },
     LOGOUT: function () {
-        (a = {}), (s = "NOT_FETCHED");
+        ((a = {}), (s = "NOT_FETCHED"));
     },
 });

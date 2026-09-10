@@ -7,5 +7,5 @@ function r(e) {
     let { skuId: s } = e,
         t = (0, u.bG)([c.A], () => c.A.get(s)),
         r = p.useMemo(() => [s], [s]);
-    return (0, i.j)({ skuIds: r }), t;
+    return ((0, i.j)({ skuIds: r }), t);
 }

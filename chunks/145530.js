@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(938796);
+(n.d(t, { A: () => b }), n(938796));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -41,7 +41,7 @@ class y extends l.PureComponent {
               });
     };
     handleDeleteMana = () => {
-        this.handleDelete(), this.props.onClose?.();
+        (this.handleDelete(), this.props.onClose?.());
     };
     handleToggleReport = (e) => {
         this.setState({ report: e });
@@ -55,7 +55,7 @@ class y extends l.PureComponent {
             { report: n, resolveFlag: l } = this.state,
             { channel: s, message: a, showContextMenuHint: c, moderatorReportData: m, ...h } = this.props,
             g = s.type === N.rbe.GUILD_ANNOUNCEMENT && (0, r.Lt)(a.flags, N.pr7.CROSSPOSTED);
-        c && (e = (0, i.jsx)(A.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
+        (c && (e = (0, i.jsx)(A.A, { className: S.Vc, children: j.intl.format(j.t.IxY7E6, {}) })),
             (0, _.AR)(a) &&
                 (t = (0, i.jsx)("div", {
                     className: S.Vc,
@@ -64,7 +64,7 @@ class y extends l.PureComponent {
                         checked: n,
                         onChange: this.handleToggleReport,
                     }),
-                }));
+                })));
         let p = g ? j.intl.string(j.t["2kHABX"]) : j.intl.string(j.t.AMvpS4),
             f = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -118,7 +118,9 @@ let b = {
     confirmPin: function (e, t) {
         let n,
             l = (0, p.m1)(e, C.default, I.A);
-        (n = e.isPrivate() ? j.intl.string(j.t.hMRngA) : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
+        ((n = e.isPrivate()
+            ? j.intl.string(j.t.hMRngA)
+            : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
             (0, c.A)({
                 title: j.intl.string(j.t.bKMaZX),
                 subtitle: n,
@@ -132,7 +134,7 @@ let b = {
                     className: S.iU,
                     children: (0, i.jsx)(v.A, { channel: e, message: t, animateAvatar: !1, disableInteraction: !0 }),
                 }),
-            });
+            }));
     },
     confirmUnpin: function (e, t) {
         (0, c.A)({

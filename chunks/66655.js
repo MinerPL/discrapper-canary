@@ -35,10 +35,10 @@ function h(e) {
             let e = Object.values(f).map((e) => e.row.id);
             C(!0);
             try {
-                await g.A.bulkAddMemberRoles(S, h, e), (0, b.a)(S, h, !1), a();
+                (await g.A.bulkAddMemberRoles(S, h, e), (0, b.a)(S, h, !1), a());
             } catch (t) {
                 let e = new d.LG(t);
-                C(!1), j(e);
+                (C(!1), j(e));
             }
         }, [S, h, f, a]),
         q = n.useMemo(

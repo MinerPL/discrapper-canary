@@ -6,7 +6,7 @@ var i = n(17928),
     l = n(168186);
 let o = {};
 function d() {
-    return (o = {}), !0;
+    return ((o = {}), !0);
 }
 function c(e) {
     return (
@@ -40,13 +40,13 @@ function u(e) {
         } = e,
         h = c(t);
     if (n?.id === h.activeCommand?.id) return !1;
-    (h.activeCommand = n),
+    ((h.activeCommand = n),
         (h.activeCommandSection = i),
         (h.activeOptionName = null),
         (h.preferredCommandId = null),
         (h.initialValues = r ?? {}),
         (h.commandOrigin = A ?? null),
-        (h.source = E);
+        (h.source = E));
     let I = {};
     return (
         n?.options != null &&
@@ -84,7 +84,7 @@ function E(e) {
     for (let [e, t] of Object.entries(n)) {
         if (!(e in i.optionStates)) continue;
         if (!(void 0 !== t.hasValue ? t.hasValue : r[e].hasValue)) {
-            (r[e] = {
+            ((r[e] = {
                 hasValue: !1,
                 isActive: !1,
                 lastValidationResult: null,
@@ -92,11 +92,11 @@ function E(e) {
                 location: void 0,
                 length: void 0,
             }),
-                i.activeOptionName === e && (i.activeOptionName = null);
+                i.activeOptionName === e && (i.activeOptionName = null));
             continue;
         }
         let n = r[e];
-        (r[e] = {
+        ((r[e] = {
             hasValue: !0,
             isActive: void 0 !== t.isActive ? t.isActive : n.isActive,
             lastValidationResult: void 0 !== t.lastValidationResult ? t.lastValidationResult : n.lastValidationResult,
@@ -111,21 +111,21 @@ function E(e) {
                           ((r[i.activeOptionName] = { ...r[i.activeOptionName] }),
                           (r[i.activeOptionName].isActive = !1)),
                       (i.activeOptionName = e))
-                    : e === i.activeOptionName && (i.activeOptionName = null));
+                    : e === i.activeOptionName && (i.activeOptionName = null)));
     }
-    return (i.optionStates = r), !0;
+    return ((i.optionStates = r), !0);
 }
 class A extends i.Ay.Store {
     static displayName = "ApplicationCommandStore";
     initialize() {
-        this.waitFor(a.Ay, s.Ay),
+        (this.waitFor(a.Ay, s.Ay),
             a.Ay.addChangeListener(() => {
                 let e = s.Ay.getChannelId();
-                if (null == e) return (o = {}), !0;
+                if (null == e) return ((o = {}), !0);
                 let t = a.Ay.getCurrentSidebarChannelId(e);
                 if (null != t && t in o) return !1;
                 o = e in o ? { [e]: o[e] } : {};
-            });
+            }));
     }
     getActiveCommand(e) {
         return c(e).activeCommand;

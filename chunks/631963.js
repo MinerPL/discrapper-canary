@@ -81,7 +81,7 @@ function P(t) {
             if (null != P) {
                 K(!0);
                 try {
-                    await _.A.setCommunicationDisabledDuration(n, e, B, H, M, c),
+                    (await _.A.setCommunicationDisabledDuration(n, e, B, H, M, c),
                         W && null != c && O.A.resolveFlag(c),
                         $(y.Nj.TIMEOUT),
                         (0, g.P0)(
@@ -90,7 +90,7 @@ function P(t) {
                                 D.Ck.SUCCESS,
                             ),
                         ),
-                        u();
+                        u());
                 } catch (t) {
                     (0, g.P0)((0, C.o)(E.intl.string(E.t.epyCuh), D.Ck.FAILURE));
                 } finally {

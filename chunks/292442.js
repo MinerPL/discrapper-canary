@@ -4,7 +4,7 @@ let o = (0, s.createContext)(null),
     n = { didCatch: !1, error: null };
 class i extends s.Component {
     constructor(e) {
-        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = n);
+        (super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = n));
     }
     static getDerivedStateFromError(e) {
         return { didCatch: !0, error: e };
@@ -13,8 +13,8 @@ class i extends s.Component {
         let { error: e } = this.state;
         if (null !== e) {
             for (var t, r, s = arguments.length, o = Array(s), i = 0; i < s; i++) o[i] = arguments[i];
-            null == (t = (r = this.props).onReset) || t.call(r, { args: o, reason: "imperative-api" }),
-                this.setState(n);
+            (null == (t = (r = this.props).onReset) || t.call(r, { args: o, reason: "imperative-api" }),
+                this.setState(n));
         }
     }
     componentDidCatch(e, t) {
@@ -34,8 +34,8 @@ class i extends s.Component {
             })(e.resetKeys, s)
         ) {
             var o, i;
-            null == (o = (i = this.props).onReset) || o.call(i, { next: s, prev: e.resetKeys, reason: "keys" }),
-                this.setState(n);
+            (null == (o = (i = this.props).onReset) || o.call(i, { next: s, prev: e.resetKeys, reason: "keys" }),
+                this.setState(n));
         }
     }
     render() {

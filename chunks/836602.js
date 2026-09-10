@@ -16,19 +16,19 @@ let u = {},
     f = l.XlH.CLOSED,
     p = {};
 function T() {
-    (f = l.XlH.OPEN), (p = {});
+    ((f = l.XlH.OPEN), (p = {}));
 }
 function m() {
-    (f = l.XlH.CLOSED), (p = {});
+    ((f = l.XlH.CLOSED), (p = {}));
 }
 function g() {
     I = _;
 }
 function S() {
-    (h = {}), (p = {});
+    ((h = {}), (p = {}));
 }
 function N() {
-    S(), g(), m();
+    (S(), g(), m());
 }
 class C extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -74,30 +74,30 @@ let O = new C(a.h, {
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== l.nc_.ACCOUNT) return !1;
-        (f = l.XlH.OPEN), (p = {});
+        ((f = l.XlH.OPEN), (p = {}));
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        (i = null == t || A.has(t) ? void 0 : t), (f = l.XlH.OPEN), (p = {});
+        ((i = null == t || A.has(t) ? void 0 : t), (f = l.XlH.OPEN), (p = {}));
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        (i = null == t || A.has(t) ? void 0 : t), (p = {});
+        ((i = null == t || A.has(t) ? void 0 : t), (p = {}));
     },
     USER_PROFILE_SETTINGS_CLOSE: m,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: N,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        (f = l.XlH.SUBMITTING), (p = {});
+        ((f = l.XlH.SUBMITTING), (p = {}));
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
         if (f !== l.XlH.SUBMITTING) return !1;
-        (f = l.XlH.OPEN), (p[t ?? l.ME] = E);
+        ((f = l.XlH.OPEN), (p[t ?? l.ME] = E));
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
         if (f !== l.XlH.SUBMITTING) return !1;
-        (f = l.XlH.OPEN), (p[t ?? l.ME] = n ?? E);
+        ((f = l.XlH.OPEN), (p[t ?? l.ME] = n ?? E));
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
         let { type: t, guildId: n, ...i } = e;
@@ -196,7 +196,7 @@ let O = new C(a.h, {
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        (f = l.XlH.OPEN), (p[t ?? l.ME] = n ?? E);
+        ((f = l.XlH.OPEN), (p[t ?? l.ME] = n ?? E));
     },
     LOGOUT: N,
 });

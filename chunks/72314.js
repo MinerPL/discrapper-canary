@@ -50,9 +50,9 @@ let _ = new u(a.h, {
     },
     UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
         let { guildId: t, scrollTop: n, scrollTo: i } = e;
-        null == l[t] && (l[t] = d(t)), void 0 !== n && (l[t].scrollTop = n);
+        (null == l[t] && (l[t] = d(t)), void 0 !== n && (l[t].scrollTop = n));
         let r = !1;
-        return void 0 !== i && ((r = l[t].scrollTo !== i), (l[t].scrollTo = i)), null != i || r;
+        return (void 0 !== i && ((r = l[t].scrollTo !== i), (l[t].scrollTo = i)), null != i || r);
     },
     UPDATE_GUILD_LIST_DIMENSIONS: function (e) {
         let { scrollTop: t } = e;

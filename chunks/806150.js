@@ -1,4 +1,4 @@
-n.d(t, { i: () => R }), n(582128);
+(n.d(t, { i: () => R }), n(582128));
 var l = n(228366),
     r = n(157559),
     a = n(779185),
@@ -23,7 +23,7 @@ function T(e, t) {
 }
 let S = function (e, t) {
         let n = t.getGuildId();
-        return c()(null != n, "isGuildChannel with null guildId"), T(e, t) > 30 && h.A.can(m.xBc.MENTION_EVERYONE, t);
+        return (c()(null != n, "isGuildChannel with null guildId"), T(e, t) > 30 && h.A.can(m.xBc.MENTION_EVERYONE, t));
     },
     g = function (e, t) {
         for (let n of d.Ay.parsePreprocessor(t, e)) {
@@ -107,7 +107,7 @@ function R(e) {
             if (s.length > g) {
                 if (f || null == u) {
                     var E;
-                    (E = s.length),
+                    ((E = s.length),
                         r.A.show({
                             title: x.intl.string(x.t.l8rYLt),
                             body: x.intl.formatToPlainString(x.t.FfjF15, { currentLength: E, maxLength: g }),
@@ -116,7 +116,7 @@ function R(e) {
                         o.default.track(m.HAw.OPEN_MODAL, {
                             type: "Message Too Long Alert",
                             message_content_length: E,
-                        });
+                        }));
                 } else l.h.dispatch({ type: "MESSAGE_LENGTH_UPSELL", channel: u, content: s });
                 S({ valid: !1, failureReason: m.X8x.MESSAGE_TOO_LONG });
                 return;
@@ -139,12 +139,12 @@ function R(e) {
                     }
             }
             if (a.Ay.isFull()) {
-                r.A.show({
+                (r.A.show({
                     title: x.intl.string(x.t["7Q4eo2"]),
                     body: x.intl.string(x.t.gi6XHp),
                     confirmText: x.intl.string(x.t["Z4U1g/"]),
                 }),
-                    S({ valid: !1, failureReason: m.X8x.RATE_LIMITED });
+                    S({ valid: !1, failureReason: m.X8x.RATE_LIMITED }));
                 return;
             }
             S({ valid: !0 });

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_PATTERN =
         t.YEAR_PATTERN =
         t.ORDINAL_NUMBER_PATTERN =
@@ -17,21 +17,21 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         if (/AC/i.test(e)) return -parseInt((e = e.replace(/BC/i, "")));
         if (/AD/i.test(e) || /C/i.test(e)) return parseInt((e = e.replace(/[^\d]+/i, "")));
         let t = parseInt(e);
-        return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
+        return (t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t);
     }),
     (t.parseDuration = function (e) {
         let r = {},
             n = e,
             i = s.exec(n);
-        for (; i; )
-            (function (e, r) {
+        for (; i;)
+            ((function (e, r) {
                 let n = a(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, i),
                 (n = n.substring(i[0].length)),
-                (i = s.exec(n));
+                (i = s.exec(n)));
         return r;
-    });
+    }));
 let n = r(798401);
 function a(e) {
     let r = e.toLowerCase();
@@ -45,7 +45,7 @@ function a(e) {
               ? 0.5
               : parseFloat(r);
 }
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     dimanche: 0,
     dim: 0,
     lundi: 1,
@@ -143,7 +143,7 @@ function a(e) {
     }),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`),
     (t.ORDINAL_NUMBER_PATTERN = "(?:[0-9]{1,2}(?:er)?)"),
-    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])");
+    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])"));
 let i = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
     s = RegExp(i, "i");
 t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", i);

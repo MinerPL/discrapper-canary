@@ -18,6 +18,6 @@ function o(e) {
         e && a(e, u));
 }
 function a(e, t) {
-    e.dispatchEvent(new FocusEvent("focus", { relatedTarget: t })),
-        e.dispatchEvent(new FocusEvent("focusin", { bubbles: !0, relatedTarget: t }));
+    (e.dispatchEvent(new FocusEvent("focus", { relatedTarget: t })),
+        e.dispatchEvent(new FocusEvent("focusin", { bubbles: !0, relatedTarget: t })));
 }

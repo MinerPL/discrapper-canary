@@ -44,7 +44,7 @@ class u extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -78,7 +78,7 @@ class u extends l.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy),
+        ("" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy),
             0 !== e.buttonAction && t.tag(2, r.O0.Varint).int32(e.buttonAction),
             "" !== e.deeplinkSection && t.tag(3, r.O0.LengthDelimited).string(e.deeplinkSection),
             e.copyLocalized &&
@@ -86,9 +86,9 @@ class u extends l.G {
             e.navigableStorefrontApplicationId &&
                 o.ol
                     .internalBinaryWrite(e.navigableStorefrontApplicationId, t.tag(5, r.O0.LengthDelimited).fork(), n)
-                    .join();
+                    .join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let _ = new u();

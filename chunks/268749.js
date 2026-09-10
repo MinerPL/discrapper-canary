@@ -22,12 +22,12 @@ let M = Object.freeze({ editingRule: null, hasChanges: !1, isLoading: !1, errorM
             let r = n().editingRule,
                 l = null != t && null != r && t.id === r.id,
                 a = i().cloneDeep(t);
-            null != a && (a = { ...a, actions: a.actions.filter(o.Vq) }),
-                (0, s.r)(() => e({ editingRule: a, hasChanges: l, errorMessage: null }));
+            (null != a && (a = { ...a, actions: a.actions.filter(o.Vq) }),
+                (0, s.r)(() => e({ editingRule: a, hasChanges: l, errorMessage: null })));
         },
         createNewEditingRule: (n, t, r) => {
             let i = { ...(0, d._I)(n, t), ...(r ?? {}) };
-            return (0, s.r)(() => e({ editingRule: i, hasChanges: !1 })), i;
+            return ((0, s.r)(() => e({ editingRule: i, hasChanges: !1 })), i);
         },
         isLoading: !1,
         errorMessage: null,
@@ -35,15 +35,15 @@ let M = Object.freeze({ editingRule: null, hasChanges: !1, isLoading: !1, errorM
             (0, s.r)(() => e({ ...M }));
         },
         saveRule: async (n, t) => {
-            if (null == n) return (0, s.r)(() => e({ ...M })), null;
+            if (null == n) return ((0, s.r)(() => e({ ...M })), null);
             try {
-                (0, d.KU)(n) &&
+                ((0, d.KU)(n) &&
                     ((n.triggerMetadata.keywordFilter = (0, h.HR)((0, h.Uq)(n.triggerMetadata.keywordFilter ?? []))),
                     (n.triggerMetadata.allowList = (0, h.HR)((0, h.Uq)(n.triggerMetadata.allowList ?? [])))),
                     (0, d.ZG)(n) &&
                         (n.triggerMetadata.allowList = (0, h.HR)((0, h.Uq)(n.triggerMetadata.allowList ?? []))),
                     (0, c.xG)(n, t),
-                    (0, d.uV)(n);
+                    (0, d.uV)(n));
             } catch (n) {
                 return (
                     n instanceof g.lH
@@ -114,5 +114,5 @@ function L() {
             }),
             l.x,
         );
-    return null != e && n.setEditingRule(e), n;
+    return (null != e && n.setEditingRule(e), n);
 }

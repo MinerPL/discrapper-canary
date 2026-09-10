@@ -39,7 +39,8 @@ function v(e) {
               renderCards: I,
               heading: x.intl.string(x.t.J6STd9),
               onExpand: () => {
-                  p({ action: "PRESS_SHOW_MORE_ACTIVITY", analyticsLocations: A }), j?.({ tabSection: o.RP.ACTIVITY });
+                  (p({ action: "PRESS_SHOW_MORE_ACTIVITY", analyticsLocations: A }),
+                      j?.({ tabSection: o.RP.ACTIVITY }));
               },
           });
 }

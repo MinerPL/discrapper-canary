@@ -18,7 +18,7 @@ function e(t) {
                 variant: "primary",
                 text: o.intl.string(o.t.n8U5jd),
                 onClick: function () {
-                    (0, s.Pt)(), n();
+                    ((0, s.Pt)(), n());
                 },
             },
         ],

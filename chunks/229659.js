@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(134528), n(947204);
+(n.d(t, { A: () => d }), n(134528), n(947204));
 var i = n(477900),
     l = n(582128),
     r = n(546738),
@@ -10,7 +10,7 @@ class u {
     getConverter;
     color = "#000";
     constructor(e, t) {
-        (this.getSource = e), (this.getConverter = t);
+        ((this.getSource = e), (this.getConverter = t));
     }
     setColor(e) {
         this.color = e;
@@ -38,16 +38,16 @@ class u {
         }
         let u = e;
         for (let e = 0; e < n; e++) {
-            for (; a < r; ) {
+            for (; a < r;) {
                 let e = i.at(a);
                 if (null == e) {
                     a++;
                     continue;
                 }
                 if (e.time >= u) break;
-                (o = null != l ? l(e.value) : e.value), a++;
+                ((o = null != l ? l(e.value) : e.value), a++);
             }
-            (s[e] = o), (u += t);
+            ((s[e] = o), (u += t));
         }
         return s;
     }
@@ -61,26 +61,26 @@ function d(e) {
         f = (0, a.r)(s.A.unsafe_rawColors.BRAND_500).hsl(),
         A = e.windowMs,
         E = (0, l.useRef)(e);
-    (0, l.useEffect)(() => {
+    ((0, l.useEffect)(() => {
         E.current = e;
     }),
         (0, l.useEffect)(() => {
             let n = t.current;
             if (null == n) return;
-            (n.width = e.width), (n.height = e.height);
+            ((n.width = e.width), (n.height = e.height));
             let i = new r.TimelineGraphView(n, window.devicePixelRatio ?? 1);
-            (i.backgroundColor = c),
+            ((i.backgroundColor = c),
                 (i.textColor = h),
                 (i.gridColor = g),
                 (i.timeOptions = { timeStyle: "short" }),
                 (i.fontFamily = "gg sans"),
                 (i.fontSize = 11),
-                null != A && i.setScale(A / n.width);
+                null != A && i.setScale(A / n.width));
             let l = new u(
                 () => E.current.dataPoints,
                 () => E.current.converter,
             );
-            l.setColor(f), i.addDataSeries(l), i.updateEndDate(), d(i);
+            (l.setColor(f), i.addDataSeries(l), i.updateEndDate(), d(i));
         }, [t, c, f, g, h, A, e.width, e.height]),
         (0, l.useEffect)(() => {
             if (null == n) return;
@@ -89,7 +89,7 @@ function d(e) {
             return (
                 (e = requestAnimationFrame(function l(r) {
                     if (null == n || ((e = requestAnimationFrame(l)), r - i < o)) return;
-                    (i = r), n.updateEndDate(), n.repaint();
+                    ((i = r), n.updateEndDate(), n.repaint());
                     let s = E.current,
                         a = s.markers,
                         u = s.windowMs;
@@ -104,13 +104,13 @@ function d(e) {
                             let l = i - t.time;
                             if (l < 0 || l > u) continue;
                             let s = e.width * (1 - l / u);
-                            n.save(),
+                            (n.save(),
                                 (n.strokeStyle = t.color),
                                 n.beginPath(),
                                 n.moveTo(s, 0),
                                 n.lineTo(s, r),
                                 n.stroke(),
-                                n.restore();
+                                n.restore());
                         }
                     }
                     let d = s.hoverSource?.time;
@@ -123,20 +123,20 @@ function d(e) {
                             let t = window.devicePixelRatio ?? 1,
                                 l = Math.round(e.width * (1 - i / u)),
                                 r = e.height - Math.ceil(11 * t) - 4;
-                            n.save(),
+                            (n.save(),
                                 (n.strokeStyle = s.crosshairColor ?? h),
                                 (n.lineWidth = t),
                                 n.beginPath(),
                                 n.moveTo(l, 0),
                                 n.lineTo(l, r),
                                 n.stroke(),
-                                n.restore();
+                                n.restore());
                         }
                     }
                 })),
                 () => cancelAnimationFrame(e)
             );
-        }, [n, h]);
+        }, [n, h]));
     let p = { width: e.width, height: e.height },
         { onHoverTime: m, onHoverClick: I } = e;
     function S(e) {

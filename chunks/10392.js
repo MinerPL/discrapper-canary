@@ -14,7 +14,7 @@ n(202541);
 var A = n(652215);
 function h() {
     let e = null;
-    return (0, _.isAndroid)() ? (e = A.kM_.GOOGLE) : (0, _.isIOS)() && (e = A.kM_.APPLE), e;
+    return ((0, _.isAndroid)() ? (e = A.kM_.GOOGLE) : (0, _.isIOS)() && (e = A.kM_.APPLE), e);
 }
 async function I(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

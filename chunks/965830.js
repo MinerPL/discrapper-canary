@@ -46,7 +46,7 @@ class d {
     constructor(e) {
         this.container = e?.createElement("div");
         const t = (this.svg = e?.createElement("svg"));
-        null != t && (t.style.contain = "paint"),
+        (null != t && (t.style.contain = "paint"),
             (this.foreignObject = e?.createElement("foreignObject")),
             null != this.container &&
                 null != this.svg &&
@@ -56,18 +56,18 @@ class d {
                     "z-index: 1000; filter: drop-shadow(0 0 0 var(--background-surface-high)) drop-shadow(var(--elevation-high))"),
                 this.svg.appendChild(this.foreignObject),
                 this.container.appendChild(this.svg),
-                e?.body.appendChild(this.container));
+                e?.body.appendChild(this.container)));
     }
     createDragPreview(e) {
         if (null == this.container || null == this.svg || null == this.foreignObject) return;
         let { width: t, height: n } = e.getBoundingClientRect();
-        this.svg.setAttribute("viewBox", `0 0 ${t} ${n}`),
+        (this.svg.setAttribute("viewBox", `0 0 ${t} ${n}`),
             this.svg.setAttribute("width", `${t}`),
             this.svg.setAttribute("height", `${n}`),
             this.foreignObject.setAttribute("x", "0"),
             this.foreignObject.setAttribute("y", "0"),
             this.foreignObject.setAttribute("width", `${t}`),
-            this.foreignObject.setAttribute("height", `${n}`);
+            this.foreignObject.setAttribute("height", `${n}`));
         let r = e.cloneNode(!0);
         this.foreignObject.appendChild(r);
     }
@@ -96,7 +96,7 @@ class f {
     actions;
     monitor;
     constructor(e, t, n, r, i) {
-        (this.targetNodes = t),
+        ((this.targetNodes = t),
             (this.manager = n),
             (this.previewer = r),
             (this.announcer = i),
@@ -108,7 +108,7 @@ class f {
             (this.actions = n.getActions()),
             (this.monitor = n.getMonitor()),
             this.overrideRoleToApplicationForHoveredNode(),
-            window.addEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
+            window.addEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 }));
     }
     findInitialHoveredNode(e, t) {
         let n = null;
@@ -134,18 +134,18 @@ class f {
             this.currentHoveredNode.focus());
     }
     disconnect() {
-        window.removeEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 }),
-            this.restoreRoleOfHoveredNode();
+        (window.removeEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 }),
+            this.restoreRoleOfHoveredNode());
     }
     handleDraggedElementKeyDown = async (e) => {
         switch (e.key) {
             case "ArrowUp":
             case "ArrowLeft":
-                e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget());
+                (e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getPreviousDropTarget()));
                 return;
             case "ArrowDown":
             case "ArrowRight":
-                e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget());
+                (e.preventDefault(), e.stopPropagation(), this.hoverNode(await this.getNextDropTarget()));
         }
     };
     hoverNode(e) {
@@ -189,14 +189,14 @@ class f {
             ? Array.from(e.values())
             : Array.from(e).reduce((e, t) => {
                   let [n, r] = t;
-                  return this.manager.getMonitor().canDropOnTarget(n) && e.push(r), e;
+                  return (this.manager.getMonitor().canDropOnTarget(n) && e.push(r), e);
               }, []);
     }
 }
 let g = [" ", "Enter"],
     p = ["Escape"];
 function m(e) {
-    e.preventDefault(), e.stopImmediatePropagation();
+    (e.preventDefault(), e.stopImmediatePropagation());
 }
 function A(e, t) {
     return t.includes(e.key);
@@ -221,7 +221,7 @@ class y {
     _announcer;
     _handlingFirstEvent = !1;
     constructor(e, t, n) {
-        (this.manager = e),
+        ((this.manager = e),
             (this.actions = e.getActions()),
             (this.monitor = e.getMonitor()),
             (this.context = t),
@@ -231,18 +231,18 @@ class y {
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
             (this._previewer = new d(t.document)),
-            (this._announcer = new c(n?.announcer));
+            (this._announcer = new c(n?.announcer)));
     }
     setup() {
         if (y.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-        (y.isSetUp = !0),
+        ((y.isSetUp = !0),
             (this._handlingFirstEvent = !0),
-            this.context.window?.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
+            this.context.window?.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }));
     }
     teardown() {
-        (y.isSetUp = !1),
+        ((y.isSetUp = !1),
             this.context.window?.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
-            this.endDrag();
+            this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
         this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
@@ -263,7 +263,7 @@ class y {
             this.sourceNodes.set(e, t),
             t.addEventListener("keydown", n),
             () => {
-                this.sourceNodes.delete(e), t.removeEventListener("keydown", n);
+                (this.sourceNodes.delete(e), t.removeEventListener("keydown", n));
             }
         );
     }
@@ -272,7 +272,7 @@ class y {
             this.sourcePreviewNodeOptions.set(e, n),
             this.sourcePreviewNodes.set(e, t),
             () => {
-                this.sourcePreviewNodes.delete(e), this.sourcePreviewNodeOptions.delete(e);
+                (this.sourcePreviewNodes.delete(e), this.sourcePreviewNodeOptions.delete(e));
             }
         );
     }
@@ -282,7 +282,7 @@ class y {
             t.addEventListener("keydown", this.handleDrop),
             (t.tabIndex = Math.max(-1, t.tabIndex)),
             () => {
-                this.targetNodes.delete(e), t.removeEventListener("keydown", this.handleDrop);
+                (this.targetNodes.delete(e), t.removeEventListener("keydown", this.handleDrop));
             }
         );
     }
@@ -316,11 +316,11 @@ class y {
         A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
-        null != e && m(e),
+        (null != e && m(e),
             this._navigator?.disconnect(),
             this._previewer.clear(),
             this.monitor.isDragging() && this.actions.endDrag(),
-            this.setDndMode(!1);
+            this.setDndMode(!1));
     }
 }
 let x = (0, s.eV)("keydown", (e) => !!v(e) && (e.preventDefault(), !0)),

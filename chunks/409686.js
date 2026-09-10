@@ -1,4 +1,4 @@
-n.d(t, { pK: () => w, Ay: () => W }), n(667532), n(321073);
+(n.d(t, { pK: () => w, Ay: () => W }), n(667532), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -31,14 +31,14 @@ let N = "recentMentionFilterSettings",
     M = !1;
 function P(e) {
     let { addedMessages: t, deletedMessages: n } = e;
-    null != t &&
+    (null != t &&
         t.forEach((e) => {
-            null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++;
+            (null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++);
         }),
         null != n &&
             n.forEach((e) => {
                 null != O[e.getChannelId()] && (O[e.getChannelId()] = Math.max(0, O[e.getChannelId()] - 1));
-            });
+            }));
 }
 function U(e) {
     if (e instanceof A.Ay) return e;
@@ -104,7 +104,7 @@ function G(e) {
 }
 function x(e) {
     if (null == R[e]) return !1;
-    delete R[e],
+    (delete R[e],
         P({
             deletedMessages: r().filter(C, (t) => {
                 let { id: n } = t;
@@ -114,7 +114,7 @@ function x(e) {
         (C = r().filter(C, (t) => {
             let { id: n } = t;
             return n !== e;
-        }));
+        })));
 }
 function k(e) {
     let { id: t } = e;
@@ -125,32 +125,32 @@ function F(e) {
     function n(e, n) {
         return t[e] !== D[e] && D[e] === n;
     }
-    (D = r().defaults(r().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), D)), s.w.set(N, D);
+    ((D = r().defaults(r().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), D)), s.w.set(N, D));
     let i = n("guildFilter", E.KE7.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
     R = {};
     let a = [];
-    i &&
+    (i &&
         C.forEach((e) => {
             let t = G(e);
             null != t && (a.push(t), (R[t.id] = !0));
         }),
         (O = {}),
         (C = a).forEach((e) => {
-            null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++;
+            (null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++);
         }),
-        0 === C.length && (v = !1);
-}
-function V() {
-    (C = []), (R = {}), (v = !1), (M = !1), (O = {});
+        0 === C.length && (v = !1));
 }
 function B() {
-    P({ deletedMessages: r().filter(C, (e) => T.A.isBlockedOrIgnoredForMessage(e)) }),
-        (C = C.filter((e) => !T.A.isBlockedOrIgnoredForMessage(e)));
+    ((C = []), (R = {}), (v = !1), (M = !1), (O = {}));
+}
+function V() {
+    (P({ deletedMessages: r().filter(C, (e) => T.A.isBlockedOrIgnoredForMessage(e)) }),
+        (C = C.filter((e) => !T.A.isBlockedOrIgnoredForMessage(e))));
 }
 function H(e) {
     let { channel: t } = e,
         n = [];
-    (C = r().filter(C, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), P({ deletedMessages: n });
+    ((C = r().filter(C, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), P({ deletedMessages: n }));
 }
 class j extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
@@ -200,12 +200,12 @@ class j extends a.Ay.Store {
 let W = new j(o.h, {
     LOAD_RECENT_MENTIONS: function (e) {
         let { guildId: t } = e;
-        (L = !0), null == t && D.guildFilter === E.KE7.THIS_SERVER && F({ guildFilter: E.KE7.ALL_SERVERS });
+        ((L = !0), null == t && D.guildFilter === E.KE7.THIS_SERVER && F({ guildFilter: E.KE7.ALL_SERVERS }));
     },
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let { hasMoreAfter: t, messages: n, isAfter: i } = e,
             a = r().map(n, U);
-        P({ addedMessages: a }),
+        (P({ addedMessages: a }),
             i ? (C = C.concat(a)) : ((C = a), (R = {})),
             r().forEach(a, (e) => {
                 R[e.id] = !0;
@@ -213,14 +213,14 @@ let W = new j(o.h, {
             (L = !1),
             (y = t),
             (b = (0, l.tB)()),
-            (v = !0);
+            (v = !0));
     },
     LOAD_RECENT_MENTIONS_FAILURE: function () {
         L = !1;
     },
     SET_RECENT_MENTIONS_FILTER: F,
     CLEAR_MENTIONS: function (e) {
-        V();
+        B();
     },
     TRUNCATE_MENTIONS: function (e) {
         let { size: t } = e;
@@ -232,15 +232,15 @@ let W = new j(o.h, {
         if (D.guildFilter !== E.KE7.THIS_SERVER) return !1;
         v = !1;
     },
-    CONNECTION_OPEN: V,
+    CONNECTION_OPEN: B,
     GUILD_DELETE: function (e) {
         let { guild: t } = e,
             n = [];
-        (C = r().filter(C, (e) => {
+        ((C = r().filter(C, (e) => {
             let i = I.A.getChannel(e.channel_id);
             return (null != i && i.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
         })),
-            P({ deletedMessages: n });
+            P({ deletedMessages: n }));
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e,
@@ -249,7 +249,7 @@ let W = new j(o.h, {
             return !1;
         let r = G(n, t);
         if (null == r) return !1;
-        (C = C.slice()).unshift(r), (R[r.id] = !0), P({ addedMessages: [r] });
+        ((C = C.slice()).unshift(r), (R[r.id] = !0), P({ addedMessages: [r] }));
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.id;
@@ -269,9 +269,9 @@ let W = new j(o.h, {
     },
     CHANNEL_DELETE: H,
     THREAD_DELETE: H,
-    RELATIONSHIP_ADD: B,
-    RELATIONSHIP_REMOVE: B,
-    RELATIONSHIP_UPDATE: B,
+    RELATIONSHIP_ADD: V,
+    RELATIONSHIP_REMOVE: V,
+    RELATIONSHIP_UPDATE: V,
     SET_RECENT_MENTIONS_STALE: function (e) {
         M = !0;
     },

@@ -1,7 +1,7 @@
 let a;
 function n(e, t) {
     let r = e.length;
-    Array.isArray(e[0]) || (e = [e]), Array.isArray(t[0]) || (t = t.map((e) => [e]));
+    (Array.isArray(e[0]) || (e = [e]), Array.isArray(t[0]) || (t = t.map((e) => [e])));
     let a = t[0].length,
         n = t[0].map((e, r) => t.map((e) => e[r])),
         o = e.map((e) =>
@@ -64,9 +64,9 @@ function m(e) {
                     t.test(s)
                         ? ((s = new Number(s)).type = "<number>")
                         : "none" === s && ((s = new Number(NaN)).none = !0);
-                a.startsWith("/") && ((s = s instanceof Number ? s : new Number(s)).alpha = !0),
+                (a.startsWith("/") && ((s = s instanceof Number ? s : new Number(s)).alpha = !0),
                     "object" == typeof s && s instanceof Number && (s.raw = n),
-                    e.push(s);
+                    e.push(s));
             }),
             { name: a[1].toLowerCase(), rawName: a[1], rawArgs: a[2], args: e }
         );
@@ -90,7 +90,7 @@ function b(e) {
             let t = (e = e.trim()).match(/^(<[a-z]+>)\[(-?[.\d]+),\s*(-?[.\d]+)\]?$/);
             if (t) {
                 let e = new String(t[1]);
-                return (e.range = [+t[2], +t[3]]), e;
+                return ((e.range = [+t[2], +t[3]]), e);
             }
             return e;
         }),
@@ -109,7 +109,7 @@ function v(e, t) {
     return 0 === t ? 0 : e / t;
 }
 function C(e, t, r = 0, a = e.length) {
-    for (; r < a; ) {
+    for (; r < a;) {
         let n = (r + a) >> 1;
         e[n] < t ? (r = n + 1) : (a = n);
     }
@@ -143,14 +143,14 @@ let _ = new (class {
             return;
         }
         (Array.isArray(e) ? e : [e]).forEach(function (e) {
-            (this[e] = this[e] || []), t && this[e][r ? "unshift" : "push"](t);
+            ((this[e] = this[e] || []), t && this[e][r ? "unshift" : "push"](t));
         }, this);
     }
     run(e, t) {
-        (this[e] = this[e] || []),
+        ((this[e] = this[e] || []),
             this[e].forEach(function (e) {
                 e.call(t && t.context ? t.context : t, t);
-            });
+            }));
     }
 })();
 var B = {
@@ -207,7 +207,7 @@ function z(e, t, r, a) {
         let u = s.range;
         "<percentage>" === c && (u ||= [0, 1]);
         let h = n.range || n.refRange;
-        return u && h && (a[o] = g(u, h, a[o])), s;
+        return (u && h && (a[o] = g(u, h, a[o])), s);
     });
 }
 function I(e, { meta: t } = {}) {
@@ -270,7 +270,7 @@ function I(e, { meta: t } = {}) {
                 let n = e.formats[a];
                 if ("custom" !== n.type || (n.test && !n.test(r.str))) continue;
                 let o = n.parse(r.str);
-                if (o) return (o.alpha ??= 1), t && (t.formatId = a), o;
+                if (o) return ((o.alpha ??= 1), t && (t.formatId = a), o);
             }
     throw TypeError(`Could not parse ${e} as a color. Missing a plugin?`);
 }
@@ -279,24 +279,24 @@ function L(e) {
     if (!e) throw TypeError("Empty color reference");
     o(e) && (e = I(e));
     let t = e.space || e.spaceId;
-    return t instanceof P || (e.space = P.get(t)), void 0 === e.alpha && (e.alpha = 1), e;
+    return (t instanceof P || (e.space = P.get(t)), void 0 === e.alpha && (e.alpha = 1), e);
 }
 class P {
     constructor(e) {
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.name = e.name),
             (this.base = e.base ? P.get(e.base) : null),
             (this.aliases = e.aliases),
-            this.base && ((this.fromBase = e.fromBase), (this.toBase = e.toBase));
+            this.base && ((this.fromBase = e.fromBase), (this.toBase = e.toBase)));
         let t = e.coords ?? this.base.coords;
         for (let e in t) "name" in t[e] || (t[e].name = e);
         this.coords = t;
         let r = e.white ?? this.base.white ?? "D65";
         for (let t in ((this.white = k(r)), (this.formats = e.formats ?? {}), this.formats)) {
             let e = this.formats[t];
-            (e.type ||= "function"), (e.name ||= t);
+            ((e.type ||= "function"), (e.name ||= t));
         }
-        this.formats.color?.id || (this.formats.color = { ...(this.formats.color ?? {}), id: e.cssId || this.id }),
+        (this.formats.color?.id || (this.formats.color = { ...(this.formats.color ?? {}), id: e.cssId || this.id }),
             e.gamutSpace
                 ? (this.gamutSpace = "self" === e.gamutSpace ? this : P.get(e.gamutSpace))
                 : this.isPolar
@@ -307,18 +307,18 @@ class P {
             Object.defineProperty(this, "path", {
                 value: (function (e) {
                     let t = [e];
-                    for (let r = e; (r = r.base); ) t.push(r);
+                    for (let r = e; (r = r.base);) t.push(r);
                     return t;
                 })(this).reverse(),
                 writable: !1,
                 enumerable: !0,
                 configurable: !0,
             }),
-            _.run("colorspace-init-end", this);
+            _.run("colorspace-init-end", this));
     }
     inGamut(e, { epsilon: t = 75e-6 } = {}) {
         if (!this.equals(this.gamutSpace))
-            return (e = this.to(this.gamutSpace, e)), this.gamutSpace.inGamut(e, { epsilon: t });
+            return ((e = this.to(this.gamutSpace, e)), this.gamutSpace.inGamut(e, { epsilon: t }));
         let r = Object.values(this.coords);
         return e.every((e, a) => {
             let n = r[a];
@@ -362,7 +362,7 @@ class P {
         let n = this.path,
             o = e.path;
         for (let e = 0; e < n.length; e++)
-            if (n[e].equals(o[e])) (r = n[e]), (a = e);
+            if (n[e].equals(o[e])) ((r = n[e]), (a = e));
             else break;
         if (!r) throw Error(`Cannot convert between color spaces ${this} and ${e}: no connection space was found`);
         for (let e = n.length - 1; e > a; e--) t = n[e].toBase(t);
@@ -450,7 +450,7 @@ class P {
 }
 function j(e, { coords: t } = {}) {
     if (e.coords && !e.coordGrammar) {
-        (e.type ||= "function"), (e.name ||= "color"), (e.coordGrammar = b(e.coords));
+        ((e.type ||= "function"), (e.name ||= "color"), (e.coordGrammar = b(e.coords)));
         let r = Object.entries(t).map(([t, r], a) => {
             let n = e.coordGrammar[a][0],
                 o = r.range || r.refRange,
@@ -464,7 +464,7 @@ function j(e, { coords: t } = {}) {
         e.serializeCoords = (e, t) =>
             e.map((e, a) => {
                 let { fromRange: n, toRange: o, suffix: s } = r[a];
-                return n && o && (e = g(n, o, e)), (e = i(e, { precision: t, unit: s }));
+                return (n && o && (e = g(n, o, e)), (e = i(e, { precision: t, unit: s })));
             });
     }
     return e;
@@ -479,7 +479,7 @@ var A = new P({
 });
 class E extends P {
     constructor(e) {
-        e.coords ||
+        (e.coords ||
             (e.coords = {
                 r: { range: [0, 1], name: "Red" },
                 g: { range: [0, 1], name: "Green" },
@@ -490,11 +490,11 @@ class E extends P {
                 e.fromXYZ_M &&
                 ((e.toBase ??= (t) => {
                     let r = n(e.toXYZ_M, t);
-                    return this.white !== this.base.white && (r = S(this.white, this.base.white, r)), r;
+                    return (this.white !== this.base.white && (r = S(this.white, this.base.white, r)), r);
                 }),
                 (e.fromBase ??= (t) => ((t = S(this.base.white, this.white, t)), n(e.fromXYZ_M, t)))),
             (e.referred ??= "display"),
-            super(e);
+            super(e));
     }
 }
 function O(e, t) {
@@ -506,7 +506,7 @@ function $(e, t) {
     return O(e, r)[a];
 }
 function q(e, t, r) {
-    return (e = L(e)), (t = P.get(t)), (e.coords = t.to(e.space, r)), e;
+    return ((e = L(e)), (t = P.get(t)), (e.coords = t.to(e.space, r)), e);
 }
 function D(e, t, r) {
     if (((e = L(e)), 2 == arguments.length && "object" === s(arguments[1]))) {
@@ -516,11 +516,11 @@ function D(e, t, r) {
         "function" == typeof r && (r = r($(e, t)));
         let { space: a, index: n } = P.resolveCoord(t, e.space),
             o = O(e, a);
-        (o[n] = r), q(e, a, o);
+        ((o[n] = r), q(e, a, o));
     }
     return e;
 }
-(q.returns = "color"), (D.returns = "color");
+((q.returns = "color"), (D.returns = "color"));
 var H = new P({
     id: "xyz-d50",
     name: "XYZ D50",
@@ -608,7 +608,7 @@ function K(e, t, { kL: r = 1, kC: a = 1, kH: n = 1 } = {}) {
         u = F.from(Y, [i, l, c])[1],
         [h, m, d] = Y.from(t),
         f = F.from(Y, [h, m, d])[1];
-    u < 0 && (u = 0), f < 0 && (f = 0);
+    (u < 0 && (u = 0), f < 0 && (f = 0));
     let p = V((u + f) / 2),
         g = 0.5 * (1 - Math.sqrt(p / (p + 0x16bcc41e9))),
         b = (1 + g) * l,
@@ -617,7 +617,7 @@ function K(e, t, { kL: r = 1, kC: a = 1, kH: n = 1 } = {}) {
         y = Math.sqrt(M ** 2 + d ** 2),
         v = 0 === b && 0 === c ? 0 : Math.atan2(c, b),
         C = 0 === M && 0 === d ? 0 : Math.atan2(d, M);
-    v < 0 && (v += 2 * J), C < 0 && (C += 2 * J), (v *= Q);
+    (v < 0 && (v += 2 * J), C < 0 && (C += 2 * J), (v *= Q));
     let R = h - i,
         _ = y - w,
         N = (C *= Q) - v,
@@ -711,9 +711,9 @@ function eo(e, t) {
     return Math.sqrt((r - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
 }
 function es(e, t, { epsilon: r = 75e-6 } = {}) {
-    (e = L(e)), t || (t = e.space), (t = P.get(t));
+    ((e = L(e)), t || (t = e.space), (t = P.get(t)));
     let a = e.coords;
-    return t !== e.space && (a = t.from(e)), t.inGamut(a, { epsilon: r });
+    return (t !== e.space && (a = t.from(e)), t.inGamut(a, { epsilon: r }));
 }
 function ei(e) {
     return { space: e.space, coords: e.coords.slice(), alpha: e.alpha };
@@ -903,27 +903,27 @@ function eT(e, t) {
 }
 function eW(e, t, r, a, o) {
     let s = {};
-    (s.discounting = o), (s.refWhite = e), (s.surround = a);
+    ((s.discounting = o), (s.refWhite = e), (s.surround = a));
     let i = e.map((e) => 100 * e);
-    (s.la = t), (s.yb = r);
+    ((s.la = t), (s.yb = r));
     let l = i[1],
         c = n(eP, i),
         u = (a = eE[s.surround])[0];
-    (s.c = a[1]), (s.nc = a[2]);
+    ((s.c = a[1]), (s.nc = a[2]));
     let h = (1 / (5 * s.la + 1)) ** 4;
-    (s.fl = h * s.la + 0.1 * (1 - h) * (1 - h) * Math.cbrt(5 * s.la)),
+    ((s.fl = h * s.la + 0.1 * (1 - h) * (1 - h) * Math.cbrt(5 * s.la)),
         (s.flRoot = s.fl ** 0.25),
         (s.n = s.yb / l),
         (s.z = 1.48 + Math.sqrt(s.n)),
         (s.nbb = 0.725 * s.n ** -0.2),
-        (s.ncb = s.nbb);
+        (s.ncb = s.nbb));
     let m = o ? 1 : Math.max(Math.min(u * (1 - (1 / 3.6) * Math.exp((-s.la - 42) / 92)), 1), 0);
-    (s.dRgb = c.map((e) => f(1, l / e, m))), (s.dRgbInv = s.dRgb.map((e) => 1 / e));
+    ((s.dRgb = c.map((e) => f(1, l / e, m))), (s.dRgbInv = s.dRgb.map((e) => 1 / e)));
     let d = eT(
         c.map((e, t) => e * s.dRgb[t]),
         s.fl,
     );
-    return (s.aW = s.nbb * (2 * d[0] + d[1] + 0.05 * d[2])), s;
+    return ((s.aW = s.nbb * (2 * d[0] + d[1] + 0.05 * d[2])), s);
 }
 let eG = eW(eI, (64 / Math.PI) * 0.2, 20, "average", !1);
 function eX(e, t) {
@@ -1061,13 +1061,13 @@ var eK = new P({
                     : 9514440756550361e-21 * n ** 2 + 0.08693057439788597 * n - 21.928975842194614;
             let l = 0,
                 c = 1 / 0;
-            for (; l <= 15; ) {
+            for (; l <= 15;) {
                 let e = Math.abs((o = eX({ J: s, C: a, h: r }, t))[1] - i);
                 if (e < c) {
                     if (e <= 2e-12) return o;
                     c = e;
                 }
-                (s -= ((o[1] - i) * s) / (2 * o[1])), (l += 1);
+                ((s -= ((o[1] - i) * s) / (2 * o[1])), (l += 1));
             }
             return eX({ J: s, C: a, h: r }, t);
         })(e, eV),
@@ -1094,7 +1094,7 @@ var e2 = {
             [, i, l] = F.from(Y, [n, o, s]),
             [c, u, h] = Y.from(t),
             m = F.from(Y, [c, u, h])[1];
-        i < 0 && (i = 0), m < 0 && (m = 0);
+        (i < 0 && (i = 0), m < 0 && (m = 0));
         let d = n - c,
             f = i - m,
             p = o - u,
@@ -1161,18 +1161,18 @@ function e9(
         return e;
     if ("css" === t)
         i = (function (e, { space: t } = {}) {
-            (e = L(e)), t || (t = e.space), (t = P.get(t));
+            ((e = L(e)), t || (t = e.space), (t = P.get(t)));
             let r = P.get("oklch");
             if (t.isUnbounded) return e3(e, t);
             let a = e3(e, r),
                 n = a.coords[0];
             if (n >= 1) {
                 let r = e3(e6, t);
-                return (r.alpha = e.alpha), e3(r, t);
+                return ((r.alpha = e.alpha), e3(r, t));
             }
             if (n <= 0) {
                 let r = e3(e8, t);
-                return (r.alpha = e.alpha), e3(r, t);
+                return ((r.alpha = e.alpha), e3(r, t));
             }
             if (es(a, t, { epsilon: 0 })) return e3(a, t);
             function o(e) {
@@ -1196,12 +1196,12 @@ function e9(
                 u = o(c),
                 h = eo(u, c);
             if (h < 0.02) return u;
-            for (; i - s > 1e-4; ) {
+            for (; i - s > 1e-4;) {
                 let e = (s + i) / 2;
                 if (((c.coords[1] = e), l && es(c, t, { epsilon: 0 }))) s = e;
                 else if ((h = eo((u = o(c)), c)) < 0.02)
                     if (0.02 - h < 1e-4) break;
-                    else (l = !1), (s = e);
+                    else ((l = !1), (s = e));
                 else i = e;
             }
             return u;
@@ -1242,10 +1242,10 @@ function e9(
                         Math.max(parseFloat(`1e${a - 2}`), 1e-6)),
                     g = f,
                     b = $(d, m);
-                for (; b - g > p; ) {
+                for (; b - g > p;) {
                     let e = ei(d);
-                    o(d, (e = e9(e, { space: r, method: "clip" }))) - n < p ? (g = $(d, m)) : (b = $(d, m)),
-                        D(d, m, (g + b) / 2);
+                    (o(d, (e = e9(e, { space: r, method: "clip" }))) - n < p ? (g = $(d, m)) : (b = $(d, m)),
+                        D(d, m, (g + b) / 2));
                 }
                 i = e3(d, r);
             } else i = u;
@@ -1254,11 +1254,11 @@ function e9(
             let e = Object.values(r.coords).map((e) => e.range || []);
             i.coords = i.coords.map((t, r) => {
                 let [a, n] = e[r];
-                return void 0 !== a && (t = Math.max(a, t)), void 0 !== n && (t = Math.min(t, n)), t;
+                return (void 0 !== a && (t = Math.max(a, t)), void 0 !== n && (t = Math.min(t, n)), t);
             });
         }
     }
-    return r !== e.space && (i = e3(i, e.space)), (e.coords = i.coords), e;
+    return (r !== e.space && (i = e3(i, e.space)), (e.coords = i.coords), e);
 }
 e9.returns = "color";
 let e6 = { space: en, coords: [1, 0, 0] },
@@ -1267,7 +1267,7 @@ function e3(e, t, { inGamut: r } = {}) {
     e = L(e);
     let a = (t = P.get(t)).from(e),
         n = { space: t, coords: a, alpha: e.alpha };
-    return r && (n = e9(n, !0 === r ? void 0 : r)), n;
+    return (r && (n = e9(n, !0 === r ? void 0 : r)), n);
 }
 function e4(e, { precision: t = B.precision, format: r = "default", inGamut: a = !0, ...n } = {}) {
     let o;
@@ -1546,7 +1546,7 @@ var ti = new E({
                     );
                 },
                 serialize: (e, t, { collapse: r = !0 } = {}) => {
-                    t < 1 && e.push(t), (e = e.map((e) => Math.round(255 * e)));
+                    (t < 1 && e.push(t), (e = e.map((e) => Math.round(255 * e))));
                     let a = r && e.every((e) => e % 17 == 0);
                     return "#" + e.map((e) => (a ? (e / 17).toString(16) : e.toString(16).padStart(2, "0"))).join("");
                 },
@@ -1642,9 +1642,9 @@ var tM = new P({
         __proto__: null,
         contrastAPCA: function (e, t) {
             let r, a, n, o;
-            (t = L(t)), (e = L(e)), (t = e3(t, "srgb")), ([a, n, o] = t.coords);
+            ((t = L(t)), (e = L(e)), (t = e3(t, "srgb")), ([a, n, o] = t.coords));
             let s = 0.2126729 * td(a) + 0.7151522 * td(n) + 0.072175 * td(o);
-            (e = e3(e, "srgb")), ([a, n, o] = e.coords);
+            ((e = e3(e, "srgb")), ([a, n, o] = e.coords));
             let i = 0.2126729 * td(a) + 0.7151522 * td(n) + 0.072175 * td(o),
                 l = tm(s),
                 c = tm(i);
@@ -1666,7 +1666,7 @@ var tM = new P({
             );
         },
         contrastDeltaPhi: function (e, t) {
-            (e = L(e)), (t = L(t));
+            ((e = L(e)), (t = L(t)));
             let r =
                 Math.pow(
                     Math.abs(
@@ -1679,10 +1679,10 @@ var tM = new P({
             return r < 7.5 ? 0 : r;
         },
         contrastLstar: function (e, t) {
-            return (e = L(e)), (t = L(t)), Math.abs($(e, [Y, "l"]) - $(t, [Y, "l"]));
+            return ((e = L(e)), (t = L(t)), Math.abs($(e, [Y, "l"]) - $(t, [Y, "l"])));
         },
         contrastMichelson: function (e, t) {
-            (e = L(e)), (t = L(t));
+            ((e = L(e)), (t = L(t)));
             let r = Math.max(tc(e), 0),
                 a = Math.max(tc(t), 0);
             a > r && ([r, a] = [a, r]);
@@ -1690,16 +1690,16 @@ var tM = new P({
             return 0 === n ? 0 : (r - a) / n;
         },
         contrastWCAG21: function (e, t) {
-            (e = L(e)), (t = L(t));
+            ((e = L(e)), (t = L(t)));
             let r = Math.max(tc(e), 0),
                 a = Math.max(tc(t), 0);
-            return a > r && ([r, a] = [a, r]), (r + 0.05) / (a + 0.05);
+            return (a > r && ([r, a] = [a, r]), (r + 0.05) / (a + 0.05));
         },
         contrastWeber: function (e, t) {
-            (e = L(e)), (t = L(t));
+            ((e = L(e)), (t = L(t)));
             let r = Math.max(tc(e), 0),
                 a = Math.max(tc(t), 0);
-            return a > r && ([r, a] = [a, r]), 0 === a ? 5e4 : (r - a) / a;
+            return (a > r && ([r, a] = [a, r]), 0 === a ? 5e4 : (r - a) / a);
         },
     });
 function ty(e) {
@@ -1715,7 +1715,7 @@ function tv(e) {
 var tC = Object.freeze({
     __proto__: null,
     register: function (e) {
-        Object.defineProperty(e.prototype, "uv", {
+        (Object.defineProperty(e.prototype, "uv", {
             get() {
                 return ty(this);
             },
@@ -1724,7 +1724,7 @@ var tC = Object.freeze({
                 get() {
                     return tv(this);
                 },
-            });
+            }));
     },
     uv: ty,
     xy: tv,
@@ -1745,7 +1745,7 @@ var t_ = Object.freeze({
     },
 });
 function tB(e, t, r = 0.5, a = {}) {
-    return ([e, t] = [L(e), L(t)]), "object" === s(r) && ([r, a] = [0.5, r]), tk(e, t, a)(r);
+    return (([e, t] = [L(e), L(t)]), "object" === s(r) && ([r, a] = [0.5, r]), tk(e, t, a)(r));
 }
 function tN(e, t, r = {}) {
     let a;
@@ -1765,14 +1765,14 @@ function tN(e, t, r = {}) {
     }
     if (n > 0) {
         let e = h.reduce((e, t, r) => (0 === r ? 0 : Math.max(e, tR(t.color, h[r - 1].color, o))), 0);
-        for (; e > n; ) {
+        for (; e > n;) {
             e = 0;
             for (let t = 1; t < h.length && h.length < i; t++) {
                 let r = h[t - 1],
                     n = h[t],
                     o = (n.p + r.p) / 2,
                     s = a(o);
-                (e = Math.max(e, tR(s, r.color), tR(s, n.color))), h.splice(t, 0, { p: o, color: a(o) }), t++;
+                ((e = Math.max(e, tR(s, r.color), tR(s, n.color))), h.splice(t, 0, { p: o, color: a(o) }), t++);
             }
         }
     }
@@ -1784,7 +1784,7 @@ function tk(e, t, r = {}) {
         return tk(...r.rangeArgs.colors, { ...r.rangeArgs.options, ...a });
     }
     let { space: a, outputSpace: n, progression: o, premultiplied: s } = r;
-    (e = L(e)), (t = L(t)), (e = ei(e)), (t = ei(t));
+    ((e = L(e)), (t = L(t)), (e = ei(e)), (t = ei(t)));
     let i = { colors: [e, t], options: r };
     if (
         ((a = a ? P.get(a) : P.registry[B.interpolationSpace] || e.space),
@@ -1798,7 +1798,7 @@ function tk(e, t, r = {}) {
         let n = (r.hue = r.hue || "shorter"),
             o = [a, "h"],
             [s, i] = [$(e, o), $(t, o)];
-        isNaN(s) && !isNaN(i) ? (s = i) : isNaN(i) && !isNaN(s) && (i = s),
+        (isNaN(s) && !isNaN(i) ? (s = i) : isNaN(i) && !isNaN(s) && (i = s),
             ([s, i] = (function (e, t) {
                 if ("raw" === e) return t;
                 let [r, a] = t.map(Z),
@@ -1815,7 +1815,7 @@ function tk(e, t, r = {}) {
                 );
             })(n, [s, i])),
             D(e, o, s),
-            D(t, o, i);
+            D(t, o, i));
     }
     return (
         s && ((e.coords = e.coords.map((t) => t * e.alpha)), (t.coords = t.coords.map((e) => e * t.alpha))),
@@ -1825,7 +1825,7 @@ function tk(e, t, r = {}) {
                 let i = e.coords.map((e, a) => f(e, t.coords[a], r)),
                     l = f(e.alpha, t.alpha, r),
                     c = { space: a, coords: i, alpha: l };
-                return s && (c.coords = c.coords.map((e) => e / l)), n !== a && (c = e3(c, n)), c;
+                return (s && (c.coords = c.coords.map((e) => e / l)), n !== a && (c = e3(c, n)), c);
             },
             { rangeArgs: i },
         )
@@ -1841,9 +1841,9 @@ var tx = Object.freeze({
         mix: tB,
         range: tk,
         register: function (e) {
-            e.defineFunction("mix", tB, { returns: "color" }),
+            (e.defineFunction("mix", tB, { returns: "color" }),
                 e.defineFunction("range", tk, { returns: "function<color>" }),
-                e.defineFunction("steps", tN, { returns: "array<color>" });
+                e.defineFunction("steps", tN, { returns: "array<color>" }));
         },
         steps: tN,
     }),
@@ -1875,7 +1875,7 @@ var tx = Object.freeze({
                 }
                 s *= 60;
             }
-            return i < 0 && ((s += 180), (i = Math.abs(i))), s >= 360 && (s -= 360), [s, 100 * i, 100 * l];
+            return (i < 0 && ((s += 180), (i = Math.abs(i))), s >= 360 && (s -= 360), [s, 100 * i, 100 * l]);
         },
         toBase: (e) => {
             let [t, r, a] = e;
@@ -1884,7 +1884,7 @@ var tx = Object.freeze({
                     o = r * Math.min(a, 1 - a);
                 return a - o * Math.max(-1, Math.min(n - 3, 9 - n, 1));
             }
-            return (t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)];
+            return ((t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)]);
         },
         formats: {
             hsl: { coords: ["<number> | <angle>", "<percentage>", "<percentage>"] },
@@ -2048,7 +2048,7 @@ var tX = new P({
         toBase(e) {
             let [t, r, a] = e;
             if (0 === t || l(t)) return [0, 0, 0];
-            (r = c(r)), (a = c(a));
+            ((r = c(r)), (a = c(a)));
             let n = r / (13 * t) + tW,
                 o = a / (13 * t) + tG,
                 s = t <= 8 ? t / tT : Math.pow((t + 16) / 116, 3);
@@ -2189,7 +2189,7 @@ function t7(e) {
         t4(e.b1s, e.b1i),
     );
 }
-tr[0][0], tr[0][1], tr[0][2], tr[1][0], tr[1][1], tr[1][2], tr[2][0], tr[2][1], tr[2][2];
+(tr[0][0], tr[0][1], tr[0][2], tr[1][0], tr[1][1], tr[1][2], tr[2][0], tr[2][1], tr[2][2]);
 var re = new P({
     id: "hpluv",
     name: "HPLuv",
@@ -2275,7 +2275,7 @@ function rl(e, t, r = "Bradford") {
         );
     return n(a.fromCone_M, h);
 }
-_.add("chromatic-adaptation-start", (e) => {
+(_.add("chromatic-adaptation-start", (e) => {
     e.options.method && (e.M = rl(e.W1, e.W2, e.options.method));
 }),
     _.add("chromatic-adaptation-end", (e) => {
@@ -2343,7 +2343,7 @@ _.add("chromatic-adaptation-start", (e) => {
         F7: [0.95041, 1, 1.08747],
         F11: [1.00962, 1, 0.6435],
     }),
-    (N.ACES = [0.32168 / 0.33767, 1, 1.0088251843515859]);
+    (N.ACES = [0.32168 / 0.33767, 1, 1.0088251843515859]));
 var rc = new E({
     id: "acescg",
     cssId: "--acescg",
@@ -2436,11 +2436,11 @@ var rh = Object.freeze({
 class rm {
     constructor(...e) {
         let t, r, a, n;
-        1 === e.length && (t = L(e[0])),
+        (1 === e.length && (t = L(e[0])),
             t ? ((r = t.space || t.spaceId), (a = t.coords), (n = t.alpha)) : ([r, a, n] = e),
             Object.defineProperty(this, "space", { value: P.get(r), writable: !1, enumerable: !0, configurable: !0 }),
             (this.coords = a ? a.slice() : [0, 0, 0]),
-            (this.alpha = n > 1 || void 0 === n ? 1 : n < 0 ? 0 : n);
+            (this.alpha = n > 1 || void 0 === n ? 1 : n < 0 ? 0 : n));
         for (let e = 0; e < this.coords.length; e++) "NaN" === this.coords[e] && (this.coords[e] = NaN);
         for (let e in this.space.coords)
             Object.defineProperty(this, e, { get: () => this.get(e), set: (t) => this.set(e, t) });
@@ -2468,12 +2468,12 @@ class rm {
                     (n = e4(o, r)),
                     CSS.supports("color", n))
                 )
-                    return ((n = new String(n)).color = o), n;
+                    return (((n = new String(n)).color = o), n);
                 (n = new String(e4((o = e3(o, t)), r))).color = o;
             }
             return n;
         })(this, ...e);
-        return (t.color = new rm(t.color)), t;
+        return ((t.color = new rm(t.color)), t);
     }
     static get(e, ...t) {
         return e instanceof rm ? e : new rm(e, ...t);
@@ -2495,11 +2495,11 @@ class rm {
                 } else "array<color>" === n && (r = r.map((e) => rm.get(e)));
                 return r;
             };
-        e in rm || (rm[e] = o),
+        (e in rm || (rm[e] = o),
             a &&
                 (rm.prototype[e] = function (...e) {
                     return o(this, ...e);
-                });
+                }));
     }
     static defineFunctions(e) {
         for (let t in e) rm.defineFunction(t, e[t], e[t]);
@@ -2541,7 +2541,7 @@ function rd(e, t) {
                 : new Proxy(r, {
                       has: (e, r) => {
                           try {
-                              return P.resolveCoord([t, r]), !0;
+                              return (P.resolveCoord([t, r]), !0);
                           } catch (e) {}
                           return Reflect.has(e, r);
                       },
@@ -2555,7 +2555,7 @@ function rd(e, t) {
                       set: (r, a, n, o) => {
                           if ((a && "symbol" != typeof a && !(a in r)) || a >= 0) {
                               let { index: o } = P.resolveCoord([t, a]);
-                              if (o >= 0) return (r[o] = n), this.setAll(e, r), !0;
+                              if (o >= 0) return ((r[o] = n), this.setAll(e, r), !0);
                           }
                           return Reflect.set(r, a, n, o);
                       },
@@ -2568,11 +2568,11 @@ function rd(e, t) {
         enumerable: !0,
     });
 }
-_.add("colorspace-init-end", (e) => {
-    rd(e.id, e),
+(_.add("colorspace-init-end", (e) => {
+    (rd(e.id, e),
         e.aliases?.forEach((t) => {
             rd(t, e);
-        });
+        }));
 }),
     rm.extend(e2),
     rm.extend({ deltaE: tR }),
@@ -2596,4 +2596,4 @@ _.add("colorspace-init-end", (e) => {
     rm.extend(tC),
     rm.extend(th),
     rm.extend(tx),
-    rm.extend(tw);
+    rm.extend(tw));

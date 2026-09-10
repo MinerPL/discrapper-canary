@@ -3590,10 +3590,10 @@ var M = d(202103),
     };
 function Y(l, t) {
     var d = Array.prototype.slice.call(t);
-    return d.push(y), l.apply(this, d);
+    return (d.push(y), l.apply(this, d));
 }
 function T(l, t) {
-    (l = l.split("-")), (t = t.split("-"));
+    ((l = l.split("-")), (t = t.split("-")));
     for (var d = l[0].split("."), i = t[0].split("."), e = 0; e < 3; e++) {
         var c = Number(d[e]),
             a = Number(i[e]);
@@ -3626,7 +3626,7 @@ function z(l, t) {
 function w(l, t) {
     for (var d = 0; d < t.length; d++) {
         var i = t[d];
-        (i.enumerable = i.enumerable || !1),
+        ((i.enumerable = i.enumerable || !1),
             (i.configurable = !0),
             "value" in i && (i.writable = !0),
             Object.defineProperty(
@@ -3645,17 +3645,17 @@ function w(l, t) {
                     return "symbol" == I(t) ? t : t + "";
                 })(i.key),
                 i,
-            );
+            ));
     }
 }
 function R(l, t, d) {
-    return t && w(l.prototype, t), d && w(l, d), Object.defineProperty(l, "prototype", { writable: !1 }), l;
+    return (t && w(l.prototype, t), d && w(l, d), Object.defineProperty(l, "prototype", { writable: !1 }), l);
 }
 var S = " ext. ",
     C = /^\d+$/,
     x = R(
         function l(t) {
-            z(this, l), O(t), (this.metadata = t), E.call(this, t);
+            (z(this, l), O(t), (this.metadata = t), E.call(this, t));
         },
         [
             {
@@ -3849,7 +3849,7 @@ var S = " ext. ",
     ),
     g = R(
         function l(t, d) {
-            z(this, l), (this.globalMetadataObject = d), (this.metadata = t), E.call(this, d.metadata);
+            (z(this, l), (this.globalMetadataObject = d), (this.metadata = t), E.call(this, d.metadata));
         },
         [
             {
@@ -3995,7 +3995,7 @@ var S = " ext. ",
     ),
     D = R(
         function l(t, d) {
-            z(this, l), (this._format = t), (this.metadata = d);
+            (z(this, l), (this._format = t), (this.metadata = d));
         },
         [
             {
@@ -4051,7 +4051,7 @@ var S = " ext. ",
     j = /^\(?\$1\)?$/,
     U = R(
         function l(t, d) {
-            z(this, l), (this.type = t), (this.metadata = d);
+            (z(this, l), (this.type = t), (this.metadata = d));
         },
         [
             {
@@ -4198,7 +4198,7 @@ function H(l, t, d) {
     return "IS_POSSIBLE" === K(l, t, d);
 }
 function Q(l, t) {
-    return (l = l || ""), RegExp("^(?:" + t + ")$").test(l);
+    return ((l = l || ""), RegExp("^(?:" + t + ")$").test(l));
 }
 function P(l, t) {
     (null == t || t > l.length) && (t = l.length);
@@ -4293,10 +4293,10 @@ function ld(l, t) {
                 s = i.length - 1,
                 n = s > 0 && i[s];
             if (t.nationalPrefixTransformRule() && n)
-                (e = l.replace(d, t.nationalPrefixTransformRule())), s > 1 && (c = i[1]);
+                ((e = l.replace(d, t.nationalPrefixTransformRule())), s > 1 && (c = i[1]));
             else {
                 var Z = i[0];
-                (e = l.slice(Z.length)), n && (c = i[1]);
+                ((e = l.slice(Z.length)), n && (c = i[1]));
             }
             if (n) {
                 var b = l.indexOf(i[1]);
@@ -4407,7 +4407,7 @@ function ln(l, t, d, i, e) {
     if ("+" !== l[0]) {
         var c,
             a = lt(l, t || d, i, e);
-        if (a && a !== l) (c = !0), (l = "+" + a);
+        if (a && a !== l) ((c = !0), (l = "+" + a));
         else {
             if (t || d || i) {
                 var s = ls(l, t, d, i, e),
@@ -4425,7 +4425,7 @@ function ln(l, t, d, i, e) {
     }
     if ("0" === l[1]) return {};
     e = new x(e);
-    for (var b = 2; b - 1 <= 3 && b <= l.length; ) {
+    for (var b = 2; b - 1 <= 3 && b <= l.length;) {
         var m = l.slice(1, b);
         if (e.hasCallingCode(m))
             return (
@@ -4447,7 +4447,7 @@ var lb = /(\$\d)/;
 function lm(l, t, d) {
     var i = d.useInternationalFormat,
         e = d.withNationalPrefix;
-    d.carrierCode, d.metadata;
+    (d.carrierCode, d.metadata);
     var c = l.replace(
         new RegExp(t.pattern()),
         i
@@ -4495,7 +4495,7 @@ var lW = "[" + q + "]{0,1}(?:[" + $ + "]*[" + _ + "]){3,}[" + $ + _ + "]*",
     };
 function lM(l, t, d, i, e) {
     var c = (function (l, t) {
-        for (var d = l, i = 0; i < d.length; ) {
+        for (var d = l, i = 0; i < d.length;) {
             if (
                 (function (l) {
                     if (l.leadingDigitsPatterns().length > 0) {
@@ -4535,11 +4535,11 @@ function lr(l, t) {
     var d = Object.keys(l);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(l);
-        t &&
+        (t &&
             (i = i.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(l, t).enumerable;
             })),
-            d.push.apply(d, i);
+            d.push.apply(d, i));
     }
     return d;
 }
@@ -4549,12 +4549,12 @@ function ly(l) {
         t % 2
             ? lr(Object(d), !0).forEach(function (t) {
                   var i, e, c;
-                  (i = l),
+                  ((i = l),
                       (e = t),
                       (c = d[t]),
                       (e = lY(e)) in i
                           ? Object.defineProperty(i, e, { value: c, enumerable: !0, configurable: !0, writable: !0 })
-                          : (i[e] = c);
+                          : (i[e] = c));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(d))
@@ -4608,13 +4608,13 @@ var lT =
                 })(t, i),
                 n = s.country,
                 Z = s.countryCallingCode;
-            (this.country = n),
+            ((this.country = n),
                 (this.countryCallingCode = Z),
                 (this.nationalNumber = d),
                 (this.number = "+" + this.countryCallingCode + this.nationalNumber),
                 (this.getMetadata = function () {
                     return i;
-                });
+                }));
         }),
         (e = [
             {
@@ -4707,7 +4707,7 @@ var lT =
                                 ? (function () {
                                       for (var l = 1, t = arguments.length, d = Array(t), i = 0; i < t; i++)
                                           d[i] = arguments[i];
-                                      for (; l < d.length; ) {
+                                      for (; l < d.length;) {
                                           if (d[l]) for (var e in d[l]) d[0][e] = d[l][e];
                                           l++;
                                       }
@@ -4824,10 +4824,10 @@ var lT =
         (function (l, t) {
             for (var d = 0; d < t.length; d++) {
                 var i = t[d];
-                (i.enumerable = i.enumerable || !1),
+                ((i.enumerable = i.enumerable || !1),
                     (i.configurable = !0),
                     "value" in i && (i.writable = !0),
-                    Object.defineProperty(l, lY(i.key), i);
+                    Object.defineProperty(l, lY(i.key), i));
             }
         })(i.prototype, e),
         Object.defineProperty(i, "prototype", { writable: !1 }),
@@ -4870,7 +4870,7 @@ function lI(l) {
                 var i = [null];
                 i.push.apply(i, t);
                 var e = new (l.bind.apply(l, i))();
-                return d && lw(e, d.prototype), e;
+                return (d && lw(e, d.prototype), e);
             })(l, arguments, lR(this).constructor);
         }
         return (
@@ -4893,7 +4893,7 @@ function lw(l, t) {
     return (lw = Object.setPrototypeOf
         ? Object.setPrototypeOf.bind()
         : function (l, t) {
-              return (l.__proto__ = t), l;
+              return ((l.__proto__ = t), l);
           })(l, t);
 }
 function lR(l) {
@@ -5102,11 +5102,11 @@ function lQ(l, t) {
     var d = Object.keys(l);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(l);
-        t &&
+        (t &&
             (i = i.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(l, t).enumerable;
             })),
-            d.push.apply(d, i);
+            d.push.apply(d, i));
     }
     return d;
 }
@@ -5116,7 +5116,7 @@ function lP(l) {
         t % 2
             ? lQ(Object(d), !0).forEach(function (t) {
                   var i, e, c;
-                  (i = l),
+                  ((i = l),
                       (e = t),
                       (c = d[t]),
                       (e = (function (l) {
@@ -5133,7 +5133,7 @@ function lP(l) {
                           return "symbol" == lH(t) ? t : t + "";
                       })(e)) in i
                           ? Object.defineProperty(i, e, { value: c, enumerable: !0, configurable: !0, writable: !0 })
-                          : (i[e] = c);
+                          : (i[e] = c));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(d))
@@ -5159,11 +5159,11 @@ function lB(l, t) {
     var d = Object.keys(l);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(l);
-        t &&
+        (t &&
             (i = i.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(l, t).enumerable;
             })),
-            d.push.apply(d, i);
+            d.push.apply(d, i));
     }
     return d;
 }
@@ -5188,11 +5188,11 @@ function l$(l, t) {
     var d = Object.keys(l);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(l);
-        t &&
+        (t &&
             (i = i.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(l, t).enumerable;
             })),
-            d.push.apply(d, i);
+            d.push.apply(d, i));
     }
     return d;
 }
@@ -5202,7 +5202,7 @@ function lq(l) {
         t % 2
             ? l$(Object(d), !0).forEach(function (t) {
                   var i, e, c;
-                  (i = l),
+                  ((i = l),
                       (e = t),
                       (c = d[t]),
                       (e = (function (l) {
@@ -5219,7 +5219,7 @@ function lq(l) {
                           return "symbol" == l_(t) ? t : t + "";
                       })(e)) in i
                           ? Object.defineProperty(i, e, { value: c, enumerable: !0, configurable: !0, writable: !0 })
-                          : (i[e] = c);
+                          : (i[e] = c));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(d))
@@ -5252,10 +5252,10 @@ function l2() {
                                 s = !0,
                                 n = !1;
                             try {
-                                (e = (t = t.call(l)).next), !1;
+                                ((e = (t = t.call(l)).next), !1);
                                 for (; !(s = (d = e.call(t)).done) && (a.push(d.value), 4 !== a.length); s = !0);
                             } catch (l) {
-                                (n = !0), (i = l);
+                                ((n = !0), (i = l));
                             } finally {
                                 try {
                                     if (!s && null != t.return && ((c = t.return()), Object(c) !== c)) return;
@@ -5295,7 +5295,7 @@ function l2() {
                 if (L(s)) n ? ((i = s), (e = n)) : (e = s);
                 else throw Error("Invalid second argument: ".concat(s));
             else
-                Z ? ((i = n), (e = Z)) : ((i = void 0), (e = n)),
+                (Z ? ((i = n), (e = Z)) : ((i = void 0), (e = n)),
                     s &&
                         (i = (function (l) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -5303,7 +5303,7 @@ function l2() {
                                 t % 2
                                     ? lB(Object(d), !0).forEach(function (t) {
                                           var i, e, c;
-                                          (i = l),
+                                          ((i = l),
                                               (e = t),
                                               (c = d[t]),
                                               (e = (function (l) {
@@ -5327,7 +5327,7 @@ function l2() {
                                                         configurable: !0,
                                                         writable: !0,
                                                     })
-                                                  : (i[e] = c);
+                                                  : (i[e] = c));
                                       })
                                     : Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(d))
@@ -5336,7 +5336,7 @@ function l2() {
                                         });
                             }
                             return l;
-                        })({ defaultCountry: s }, i));
+                        })({ defaultCountry: s }, i)));
             return { text: d, options: i, metadata: e };
         })(arguments),
         i = d.text,
@@ -5374,7 +5374,7 @@ function l2() {
                                 throw new lS("NOT_A_NUMBER");
                             if (null === i) e = d(l) || "";
                             else {
-                                (e = ""), "+" === i.charAt(0) && (e += i);
+                                ((e = ""), "+" === i.charAt(0) && (e += i));
                                 var e,
                                     c,
                                     a = l.indexOf(lk);
@@ -5402,7 +5402,7 @@ function l2() {
                         var e = (function (l) {
                             var t = l.search(lC);
                             if (t < 0) return {};
-                            for (var d = l.slice(0, t), i = l.match(lC), e = 1; e < i.length; ) {
+                            for (var d = l.slice(0, t), i = l.match(lC), e = 1; e < i.length;) {
                                 if (i[e]) return { number: d, ext: i[e] };
                                 e++;
                             }
@@ -5428,7 +5428,7 @@ function l2() {
                         if (s) i.selectNumberingPlan(s);
                         else {
                             if (!n || (!t && !d)) return {};
-                            i.selectNumberingPlan(t, d), t && (e = t), (s = d || k(t, i.metadata));
+                            (i.selectNumberingPlan(t, d), t && (e = t), (s = d || k(t, i.metadata)));
                         }
                         if (!n) return { countryCallingCodeSource: a, countryCallingCode: s };
                         var Z = la(lU(n), e, i),
@@ -5511,7 +5511,7 @@ var l1 =
         var d = t.onCountryChange,
             i = t.onCallingCodeChange;
         if (!(this instanceof l)) throw TypeError("Cannot call a class as a function");
-        (this.onCountryChange = d), (this.onCallingCodeChange = i);
+        ((this.onCountryChange = d), (this.onCallingCodeChange = i));
     }),
     (a = [
         {
@@ -5519,23 +5519,23 @@ var l1 =
             value: function (l) {
                 var t = l.country,
                     d = l.callingCode;
-                (this.international = !1),
+                ((this.international = !1),
                     (this.missingPlus = !1),
                     (this.IDDPrefix = void 0),
                     (this.callingCode = void 0),
                     (this.digits = ""),
                     this.resetNationalSignificantNumber(),
-                    this.initCountryAndCallingCode(t, d);
+                    this.initCountryAndCallingCode(t, d));
             },
         },
         {
             key: "resetNationalSignificantNumber",
             value: function () {
-                (this.nationalSignificantNumber = this.getNationalDigits()),
+                ((this.nationalSignificantNumber = this.getNationalDigits()),
                     (this.nationalSignificantNumberIsModified = !1),
                     (this.nationalPrefix = void 0),
                     (this.carrierCode = void 0),
-                    (this.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = void 0);
+                    (this.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = void 0));
             },
         },
         {
@@ -5550,25 +5550,25 @@ var l1 =
         {
             key: "initCountryAndCallingCode",
             value: function (l, t) {
-                this.setCountry(l), this.setCallingCode(t);
+                (this.setCountry(l), this.setCallingCode(t));
             },
         },
         {
             key: "setCountry",
             value: function (l) {
-                (this.country = l), this.onCountryChange(l);
+                ((this.country = l), this.onCountryChange(l));
             },
         },
         {
             key: "setCallingCode",
             value: function (l) {
-                (this.callingCode = l), this.onCallingCodeChange(l, this.country);
+                ((this.callingCode = l), this.onCallingCodeChange(l, this.country));
             },
         },
         {
             key: "startInternationalNumber",
             value: function (l, t) {
-                (this.international = !0), this.initCountryAndCallingCode(l, t);
+                ((this.international = !0), this.initCountryAndCallingCode(l, t));
             },
         },
         {
@@ -5604,7 +5604,7 @@ var l1 =
     (function (l, t) {
         for (var d = 0; d < t.length; d++) {
             var i = t[d];
-            (i.enumerable = i.enumerable || !1),
+            ((i.enumerable = i.enumerable || !1),
                 (i.configurable = !0),
                 "value" in i && (i.writable = !0),
                 Object.defineProperty(
@@ -5623,7 +5623,7 @@ var l1 =
                         return "symbol" == l0(t) ? t : t + "";
                     })(i.key),
                     i,
-                );
+                ));
         }
     })(c.prototype, a),
     Object.defineProperty(c, "prototype", { writable: !1 }),
@@ -5636,20 +5636,20 @@ function l5(l, t) {
 var l3 = /x/;
 function l9(l, t) {
     if (t < 1) return "";
-    for (var d = ""; t > 1; ) 1 & t && (d += l), (t >>= 1), (l += l);
+    for (var d = ""; t > 1;) (1 & t && (d += l), (t >>= 1), (l += l));
     return d + l;
 }
 function l4(l, t) {
     return (
         ")" === l[t] && t++,
         (function (l) {
-            for (var t = [], d = 0; d < l.length; ) "(" === l[d] ? t.push(d) : ")" === l[d] && t.pop(), d++;
+            for (var t = [], d = 0; d < l.length;) ("(" === l[d] ? t.push(d) : ")" === l[d] && t.pop(), d++);
             var i = 0,
                 e = "";
             t.push(l.length);
             for (var c = 0; c < t.length; c++) {
                 var a = t[c];
-                (e += l.slice(i, a)), (i = a + 1);
+                ((e += l.slice(i, a)), (i = a + 1));
             }
             return e;
         })(l.slice(0, t))
@@ -5746,36 +5746,36 @@ var l8 =
                         e = l.slice(t.index + d.length);
                     switch (d) {
                         case "(?:":
-                            i && this.parsePattern(i), this.startContext({ or: !0, instructions: [], branches: [] });
+                            (i && this.parsePattern(i), this.startContext({ or: !0, instructions: [], branches: [] }));
                             break;
                         case ")":
                             if (!this.getContext().or) throw Error('")" operator must be preceded by "(?:" operator');
                             if ((i && this.parsePattern(i), 0 === this.getContext().instructions.length))
                                 throw Error('No instructions found after "|" operator in an "or" group');
                             var c = this.getContext().branches;
-                            c.push(td(this.getContext().instructions)),
+                            (c.push(td(this.getContext().instructions)),
                                 this.endContext(),
-                                this.getContext().instructions.push({ op: "|", args: c });
+                                this.getContext().instructions.push({ op: "|", args: c }));
                             break;
                         case "|":
                             if (!this.getContext().or) throw Error('"|" operator can only be used inside "or" groups');
                             if ((i && this.parsePattern(i), !this.getContext().branches))
                                 if (1 === this.context.length) this.getContext().branches = [];
                                 else throw Error('"branches" not found in an "or" group context');
-                            this.getContext().branches.push(td(this.getContext().instructions)),
-                                (this.getContext().instructions = []);
+                            (this.getContext().branches.push(td(this.getContext().instructions)),
+                                (this.getContext().instructions = []));
                             break;
                         case "[":
-                            i && this.parsePattern(i), this.startContext({ oneOfSet: !0 });
+                            (i && this.parsePattern(i), this.startContext({ oneOfSet: !0 }));
                             break;
                         case "]":
                             if (!this.getContext().oneOfSet)
                                 throw Error('"]" operator must be preceded by "[" operator');
-                            this.endContext(),
+                            (this.endContext(),
                                 this.getContext().instructions.push({
                                     op: "[]",
                                     args: (function (l) {
-                                        for (var t = [], d = 0; d < l.length; ) {
+                                        for (var t = [], d = 0; d < l.length;) {
                                             if ("-" === l[d]) {
                                                 if (0 === d || d === l.length - 1)
                                                     throw Error("Couldn't parse a one-of set pattern: ".concat(l));
@@ -5785,13 +5785,13 @@ var l8 =
                                                         c = i;
                                                     c <= e;
                                                 )
-                                                    t.push(String.fromCharCode(c)), c++;
+                                                    (t.push(String.fromCharCode(c)), c++);
                                             } else t.push(l[d]);
                                             d++;
                                         }
                                         return t;
                                     })(i),
-                                });
+                                }));
                             break;
                         default:
                             throw Error("Unknown operator: ".concat(d));
@@ -5803,7 +5803,7 @@ var l8 =
         (function (l, t) {
             for (var d = 0; d < t.length; d++) {
                 var i = t[d];
-                (i.enumerable = i.enumerable || !1),
+                ((i.enumerable = i.enumerable || !1),
                     (i.configurable = !0),
                     "value" in i && (i.writable = !0),
                     Object.defineProperty(
@@ -5822,7 +5822,7 @@ var l8 =
                             return "symbol" == l6(t) ? t : t + "";
                         })(i.key),
                         i,
-                    );
+                    ));
             }
         })(s.prototype, n),
         Object.defineProperty(s, "prototype", { writable: !1 }),
@@ -5905,7 +5905,7 @@ var ta =
                               : void 0;
                     }
                     if (Array.isArray(d)) {
-                        for (var c = t.slice(), a = 0; a < d.length; ) {
+                        for (var c = t.slice(), a = 0; a < d.length;) {
                             var s = l(c, d[a], i && a === d.length - 1);
                             if (!s) return;
                             if (s.overflow) return s;
@@ -5921,7 +5921,7 @@ var ta =
                     }
                     switch (d.op) {
                         case "|":
-                            for (var n, Z, b = ti(d.args); !(Z = b()).done; ) {
+                            for (var n, Z, b = ti(d.args); !(Z = b()).done;) {
                                 var m = l(t, Z.value, i);
                                 if (m)
                                     if (m.overflow) return m;
@@ -5932,7 +5932,7 @@ var ta =
                             if (n) return { partialMatch: !0 };
                             return;
                         case "[]":
-                            for (var o, u = ti(d.args); !(o = u()).done; ) {
+                            for (var o, u = ti(d.args); !(o = u()).done;) {
                                 var h = o.value;
                                 if (t[0] === h) {
                                     if (1 === t.length) return { match: !0, matchedChars: t };
@@ -5952,7 +5952,7 @@ var ta =
     (function (l, t) {
         for (var d = 0; d < t.length; d++) {
             var i = t[d];
-            (i.enumerable = i.enumerable || !1),
+            ((i.enumerable = i.enumerable || !1),
                 (i.configurable = !0),
                 "value" in i && (i.writable = !0),
                 Object.defineProperty(
@@ -5971,7 +5971,7 @@ var ta =
                         return "symbol" == tc(t) ? t : t + "";
                     })(i.key),
                     i,
-                );
+                ));
         }
     })(Z.prototype, b),
     Object.defineProperty(Z, "prototype", { writable: !1 }),
@@ -6032,28 +6032,28 @@ var tb = l9("9", 15),
             t.state;
             var d = t.metadata;
             if (!(this instanceof l)) throw TypeError("Cannot call a class as a function");
-            (this.metadata = d), this.resetFormat();
+            ((this.metadata = d), this.resetFormat());
         }),
         (o = [
             {
                 key: "resetFormat",
                 value: function () {
-                    (this.chosenFormat = void 0),
+                    ((this.chosenFormat = void 0),
                         (this.template = void 0),
                         (this.nationalNumberTemplate = void 0),
                         (this.populatedNationalNumberTemplate = void 0),
-                        (this.populatedNationalNumberTemplatePosition = -1);
+                        (this.populatedNationalNumberTemplatePosition = -1));
                 },
             },
             {
                 key: "reset",
                 value: function (l, t) {
-                    this.resetFormat(),
+                    (this.resetFormat(),
                         l
                             ? ((this.isNANP = "1" === l.callingCode()),
                               (this.matchingFormats = l.formats()),
                               t.nationalSignificantNumber && this.narrowDownMatchingFormats(t))
-                            : ((this.isNANP = void 0), (this.matchingFormats = []));
+                            : ((this.isNANP = void 0), (this.matchingFormats = [])));
                 },
             },
             {
@@ -6061,7 +6061,7 @@ var tb = l9("9", 15),
                 value: function (l, t) {
                     var d = this;
                     if (((i = t.nationalSignificantNumber), "IS_POSSIBLE" === K(i, t.country, this.metadata)))
-                        for (var i, e, c = tn(this.matchingFormats); !(e = c()).done; ) {
+                        for (var i, e, c = tn(this.matchingFormats); !(e = c()).done;) {
                             var a = e.value,
                                 s = (function (l, t, d) {
                                     var i = d.metadata,
@@ -6139,13 +6139,13 @@ var tb = l9("9", 15),
                         i = l.nationalPrefix,
                         e = l.international,
                         c = d.length - 3;
-                    c < 0 && (c = 0),
+                    (c < 0 && (c = 0),
                         (this.matchingFormats = this.matchingFormats.filter(function (l) {
                             return t.formatSuits(l, e, i) && t.formatMatches(l, d, c);
                         })),
                         this.chosenFormat &&
                             -1 === this.matchingFormats.indexOf(this.chosenFormat) &&
-                            this.resetFormat();
+                            this.resetFormat());
                 },
             },
             {
@@ -6168,7 +6168,7 @@ var tb = l9("9", 15),
                         try {
                             return void 0 !== new ta(e).match(t, { allowOverflow: !0 });
                         } catch (l) {
-                            return console.error(l), !0;
+                            return (console.error(l), !0);
                         }
                     return new RegExp("^(".concat(e, ")")).test(t);
                 },
@@ -6200,7 +6200,7 @@ var tb = l9("9", 15),
                                       : 1));
                     )
                         if (1 === d) continue;
-                    return this.chosenFormat || this.resetFormat(), this.chosenFormat;
+                    return (this.chosenFormat || this.resetFormat(), this.chosenFormat);
                 },
             },
             {
@@ -6208,7 +6208,7 @@ var tb = l9("9", 15),
                 value: function (l, t) {
                     if (!(l.pattern().indexOf("|") >= 0)) {
                         var d = this.getTemplateForFormat(l, t);
-                        if (d) return this.setNationalNumberTemplate(d, t), !0;
+                        if (d) return (this.setNationalNumberTemplate(d, t), !0);
                     }
                 },
             },
@@ -6241,7 +6241,7 @@ var tb = l9("9", 15),
                                     : "";
                             d < i.length + l.getDigitsWithoutInternationalPrefix().length;
                         )
-                            (t = this.template.indexOf("x", t + 1)), d++;
+                            ((t = this.template.indexOf("x", t + 1)), d++);
                         return l4(this.template, t + 1);
                     }
                 },
@@ -6249,7 +6249,7 @@ var tb = l9("9", 15),
             {
                 key: "setNationalNumberTemplate",
                 value: function (l, t) {
-                    (this.nationalNumberTemplate = l),
+                    ((this.nationalNumberTemplate = l),
                         (this.populatedNationalNumberTemplate = l),
                         (this.populatedNationalNumberTemplatePosition = -1),
                         t.international
@@ -6258,7 +6258,7 @@ var tb = l9("9", 15),
                                   l9("x", t.callingCode.length) +
                                   " " +
                                   l)
-                            : (this.template = l);
+                            : (this.template = l));
                 },
             },
             {
@@ -6280,7 +6280,7 @@ var tb = l9("9", 15),
                         if (this.shouldTryNationalPrefixFormattingRule(l, { international: e, nationalPrefix: c })) {
                             var o = m.replace(lb, l.nationalPrefixFormattingRule());
                             if (lD(l.nationalPrefixFormattingRule()) === (c || "") + lD("$1") && ((m = o), (d = !0), c))
-                                for (var u = c.length; u > 0; ) (m = m.replace(/\d/, "x")), u--;
+                                for (var u = c.length; u > 0;) ((m = m.replace(/\d/, "x")), u--);
                         }
                         var h = n.replace(new RegExp(s), m).replace(/9/g, "x");
                         return (
@@ -6335,7 +6335,7 @@ var tb = l9("9", 15),
                         ) {
                             var c = i.value;
                             if (0 > l.slice(t + 1).search(l3)) return;
-                            (t = l.search(l3)), (l = l.replace(l3, c));
+                            ((t = l.search(l3)), (l = l.replace(l3, c)));
                         }
                         return [l, t];
                     })(this.populatedNationalNumberTemplate, this.populatedNationalNumberTemplatePosition, l);
@@ -6361,7 +6361,7 @@ var tb = l9("9", 15),
         (function (l, t) {
             for (var d = 0; d < t.length; d++) {
                 var i = t[d];
-                (i.enumerable = i.enumerable || !1),
+                ((i.enumerable = i.enumerable || !1),
                     (i.configurable = !0),
                     "value" in i && (i.writable = !0),
                     Object.defineProperty(
@@ -6380,7 +6380,7 @@ var tb = l9("9", 15),
                             return "symbol" == ts(t) ? t : t + "";
                         })(i.key),
                         i,
-                    );
+                    ));
             }
         })(m.prototype, o),
         Object.defineProperty(m, "prototype", { writable: !1 }),
@@ -6418,7 +6418,7 @@ function tW(l, t) {
                         n = !1;
                     } else for (; !(n = (i = c.call(d)).done) && (s.push(i.value), s.length !== t); n = !0);
                 } catch (l) {
-                    (Z = !0), (e = l);
+                    ((Z = !0), (e = l));
                 } finally {
                     try {
                         if (!n && null != d.return && ((a = d.return()), Object(a) !== a)) return;
@@ -6466,10 +6466,10 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                 e = t.metadata,
                 c = t.onNationalSignificantNumberChange;
             if (!(this instanceof l)) throw TypeError("Cannot call a class as a function");
-            (this.defaultCountry = d),
+            ((this.defaultCountry = d),
                 (this.defaultCallingCode = i),
                 (this.metadata = e),
-                (this.onNationalSignificantNumberChange = c);
+                (this.onNationalSignificantNumberChange = c));
         }),
         (h = [
             {
@@ -6549,7 +6549,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                         ),
                         d = t.countryCallingCode,
                         i = t.number;
-                    if (d) return l.setCallingCode(d), l.update({ nationalSignificantNumber: i }), !0;
+                    if (d) return (l.setCallingCode(d), l.update({ nationalSignificantNumber: i }), !0);
                 },
             },
             {
@@ -6560,8 +6560,8 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                         var t = l._nationalPrefixForParsing();
                         this.couldPossiblyExtractAnotherNationalSignificantNumber = t && tX.test(t);
                     } else
-                        (this.hasSelectedNumberingPlan = void 0),
-                            (this.couldPossiblyExtractAnotherNationalSignificantNumber = void 0);
+                        ((this.hasSelectedNumberingPlan = void 0),
+                            (this.couldPossiblyExtractAnotherNationalSignificantNumber = void 0));
                 },
             },
             {
@@ -6572,7 +6572,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                             i = d.nationalPrefix,
                             e = d.nationalNumber,
                             c = d.carrierCode;
-                        if (e !== l) return this.onExtractedNationalNumber(i, c, e, l, t), !0;
+                        if (e !== l) return (this.onExtractedNationalNumber(i, c, e, l, t), !0);
                     }
                 },
             },
@@ -6585,7 +6585,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                             e = i.nationalPrefix,
                             c = i.nationalNumber,
                             a = i.carrierCode;
-                        if (c !== t) return this.onExtractedNationalNumber(e, a, c, l, d), !0;
+                        if (c !== t) return (this.onExtractedNationalNumber(e, a, c, l, d), !0);
                     }
                 },
             },
@@ -6600,7 +6600,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                         var n = i.slice(0, s);
                         n && n !== l && (c = n);
                     }
-                    e({
+                    (e({
                         nationalPrefix: l,
                         carrierCode: t,
                         nationalSignificantNumber: d,
@@ -6608,7 +6608,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                         prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix: c,
                     }),
                         (this.hasExtractedNationalSignificantNumber = !0),
-                        this.onNationalSignificantNumberChange();
+                        this.onNationalSignificantNumberChange());
                 },
             },
             {
@@ -6670,11 +6670,11 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                 value: function (l, t) {
                     var d = t.country,
                         i = t.callingCode;
-                    l.startInternationalNumber(d, i),
+                    (l.startInternationalNumber(d, i),
                         l.nationalSignificantNumber &&
                             (l.resetNationalSignificantNumber(),
                             this.onNationalSignificantNumberChange(),
-                            (this.hasExtractedNationalSignificantNumber = void 0));
+                            (this.hasExtractedNationalSignificantNumber = void 0)));
                 },
             },
             {
@@ -6690,7 +6690,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
         (function (l, t) {
             for (var d = 0; d < t.length; d++) {
                 var i = t[d];
-                (i.enumerable = i.enumerable || !1),
+                ((i.enumerable = i.enumerable || !1),
                     (i.configurable = !0),
                     "value" in i && (i.writable = !0),
                     Object.defineProperty(
@@ -6709,7 +6709,7 @@ var tp = RegExp("^[" + $ + _ + "]+$", "i"),
                             return "symbol" == th(t) ? t : t + "";
                         })(i.key),
                         i,
-                    );
+                    ));
             }
         })(u.prototype, h),
         Object.defineProperty(u, "prototype", { writable: !1 }),
@@ -6751,10 +6751,10 @@ var tT =
                             s = !0,
                             n = !1;
                         try {
-                            (e = (t = t.call(l)).next), !1;
+                            ((e = (t = t.call(l)).next), !1);
                             for (; !(s = (d = e.call(t)).done) && (a.push(d.value), 2 !== a.length); s = !0);
                         } catch (l) {
-                            (n = !0), (i = l);
+                            ((n = !0), (i = l));
                         } finally {
                             try {
                                 if (!s && null != t.return && ((c = t.return()), Object(c) !== c)) return;
@@ -6786,7 +6786,7 @@ var tT =
                 })(),
             c = e[0],
             a = e[1];
-        (this.defaultCountry = c), (this.defaultCallingCode = a), this.reset();
+        ((this.defaultCountry = c), (this.defaultCallingCode = a), this.reset());
     }),
     (G = [
         {
@@ -6833,9 +6833,9 @@ var tT =
                             l.country = t;
                         },
                         onCallingCodeChange: function (t, d) {
-                            l.metadata.selectNumberingPlan(d, t),
+                            (l.metadata.selectNumberingPlan(d, t),
                                 l.formatter.reset(l.metadata.numberingPlan, l.state),
-                                l.parser.reset(l.metadata.numberingPlan);
+                                l.parser.reset(l.metadata.numberingPlan));
                         },
                     })),
                     (this.formatter = new tu({ state: this.state, metadata: this.metadata })),
@@ -6845,7 +6845,7 @@ var tT =
                         metadata: this.metadata,
                         state: this.state,
                         onNationalSignificantNumberChange: function () {
-                            l.determineTheCountryIfNeeded(), l.formatter.reset(l.metadata.numberingPlan, l.state);
+                            (l.determineTheCountryIfNeeded(), l.formatter.reset(l.metadata.numberingPlan, l.state));
                         },
                     })),
                     this.state.reset({ country: this.defaultCountry, callingCode: this.defaultCallingCode }),
@@ -6923,7 +6923,7 @@ var tT =
                     i = l.nationalPrefix,
                     e = t,
                     c = d || i;
-                return c && (e = c + e), e;
+                return (c && (e = c + e), e);
             },
         },
         {
@@ -6997,7 +6997,7 @@ var tT =
                         }
                     }
                     var Z = new lT(e || i, t, this.metadata.metadata);
-                    return d && (Z.carrierCode = d), Z;
+                    return (d && (Z.carrierCode = d), Z);
                 }
             },
         },
@@ -7037,7 +7037,7 @@ var tT =
     (function (l, t) {
         for (var d = 0; d < t.length; d++) {
             var i = t[d];
-            (i.enumerable = i.enumerable || !1),
+            ((i.enumerable = i.enumerable || !1),
                 (i.configurable = !0),
                 "value" in i && (i.writable = !0),
                 Object.defineProperty(
@@ -7056,7 +7056,7 @@ var tT =
                         return "symbol" == ty(t) ? t : t + "";
                     })(i.key),
                     i,
-                );
+                ));
         }
     })(W.prototype, G),
     Object.defineProperty(W, "prototype", { writable: !1 }),
@@ -7073,7 +7073,7 @@ function tI(l) {
 function tz() {
     return Y(k, arguments);
 }
-(tI.prototype = Object.create(tT.prototype, {})), (tI.prototype.constructor = tI);
+((tI.prototype = Object.create(tT.prototype, {})), (tI.prototype.constructor = tI));
 var tw = {
         AC: "40123",
         AD: "312345",

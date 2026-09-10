@@ -23,13 +23,13 @@ function c(a, e) {
             }
         }, [t]),
         j = r.useCallback((a) => {
-            m(null), h(a), c(l.N.ERROR);
+            (m(null), h(a), c(l.N.ERROR));
         }, []),
         g = r.useCallback((a) => {
-            m(a), c(l.N.PRE_CONNECT_WAITING);
+            (m(a), c(l.N.PRE_CONNECT_WAITING));
         }, []),
         C = r.useCallback((a) => {
-            m(null), u(a), c(l.N.DISCORD_CONSENT);
+            (m(null), u(a), c(l.N.DISCORD_CONSENT));
         }, []);
     return (
         r.useEffect(() => {

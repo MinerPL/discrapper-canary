@@ -45,11 +45,11 @@ class M extends Error {
         const { cause: n, response: i } = t,
             r = M.getErrorKind(n ?? Error(`${i?.text ?? "Unknown error"}`), i),
             a = "server_error" === r || "client_error" === r ? `${e}:${r}:status_${i?.status ?? 0}` : `${e}:${r}`;
-        super(a, { cause: n }),
+        (super(a, { cause: n }),
             (this.name = "ResumableUploadError"),
             (this.phase = e),
             (this.kind = r),
-            (this.messageShort = a);
+            (this.messageShort = a));
     }
     static getErrorKind(e, t) {
         let n = t?.status ?? 0,
@@ -169,15 +169,15 @@ class w extends O.Ay {
             e.platform === O.xz.WEB && null != e.imageConversionAnalytics)
         ) {
             const { convertedMimeType: t, conversionFailureReason: n, compressTimeMs: i } = e.imageConversionAnalytics;
-            null != t && (this.uploadAnalytics.convertedMimeType = t),
+            (null != t && (this.uploadAnalytics.convertedMimeType = t),
                 null != n && (this.uploadAnalytics.conversionFailureReason = n),
-                (this.uploadAnalytics.timing.compressTimeMs = i);
+                (this.uploadAnalytics.timing.compressTimeMs = i));
         }
-        (this._abortController = new AbortController()),
+        ((this._abortController = new AbortController()),
             null != this.origin &&
                 (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : O.Cj[this.origin]),
             (this._uploadHttpClient = new L.nd()),
-            (this._libdiscoreEnabled = !1);
+            (this._libdiscoreEnabled = !1));
     }
     parseRangeHeader(e) {
         let t = e.match(/^bytes=(\d+)-(\d+)(?:\/\d+)?$/);
@@ -187,7 +187,7 @@ class w extends O.Ay {
         let n = t.loaded + e,
             i = t.total + e,
             r = n - this.loaded;
-        this.emit("progress", n, i, r), (this.loaded = n);
+        (this.emit("progress", n, i, r), (this.loaded = n));
     };
     retryOpts() {
         return this.item.platform === O.xz.REACT_NATIVE
@@ -264,11 +264,11 @@ class w extends O.Ay {
         if (
             (v.log(`Attempting to upload attachment with resumeFrom: ${t} and attempts: ${this.uploadAttempts}`), t > 0)
         )
-            this.uploadAnalytics.uploadResumptionCount++,
+            (this.uploadAnalytics.uploadResumptionCount++,
                 (e.headers = {
                     ...(e.headers ?? {}),
                     "Content-Range": `bytes ${t}-${this.currentSize - 1}/${this.currentSize}`,
-                });
+                }));
         else if (null != e.headers) {
             let { "Content-Range": t, ...n } = e.headers;
             e.headers = n;
@@ -293,30 +293,30 @@ class w extends O.Ay {
                 timeout: i,
             },
             o = 0;
-        for (; this.uploadAttempts <= a && !this._aborted; ) {
-            this.uploadAttempts++, (this.uploadAnalytics.numUploadAttempts = this.uploadAttempts);
+        for (; this.uploadAttempts <= a && !this._aborted;) {
+            (this.uploadAttempts++, (this.uploadAnalytics.numUploadAttempts = this.uploadAttempts));
             try {
                 let e = this.responseUrl;
                 if ((await this.ensureFreshResponseUrl(), (l.url = this.responseUrl), e !== this.responseUrl))
-                    (o = 0), (this.loaded = 0);
+                    ((o = 0), (this.loaded = 0));
                 else if (this.uploadAttempts > 1) {
                     let e = await this.trackTime(
                         "resumptionCheckTimeMs",
                         async () => await this.getResumePosition(this.responseUrl),
                     );
-                    (this.uploadAnalytics.uploadResumptionPosition = e),
+                    ((this.uploadAnalytics.uploadResumptionPosition = e),
                         (o = this.supportsResume() ? e : 0),
-                        (this.loaded = o);
+                        (this.loaded = o));
                 }
                 return await this.startOrResumeUpload(l, o);
             } catch (e) {
                 if (e instanceof M && e.canRetry()) {
-                    v.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
+                    (v.warn(`Error uploading ${this.id}: ${e.message}, attempting resumption`),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
-                        await S.A.awaitOnline();
+                        await S.A.awaitOnline());
                     let t = r.fail();
-                    v.log(`Waiting ${t}ms before attachment upload attempt ${this.uploadAttempts + 1}`),
-                        await new Promise((e) => setTimeout(e, t));
+                    (v.log(`Waiting ${t}ms before attachment upload attempt ${this.uploadAttempts + 1}`),
+                        await new Promise((e) => setTimeout(e, t)));
                 } else throw (v.warn(`Unrecoverable error uploading ${this.id}: ${e.message}`), e);
             }
         }
@@ -396,7 +396,7 @@ class w extends O.Ay {
         let t = await i.getUploadPayload(this),
             n = (0, R.B)(this.item.target);
         if (null == t.filename || "" === t.filename) {
-            v.error("File does not have a filename.", JSON.stringify(t)), this.handleError(D.t02.INVALID_FILE_ASSET);
+            (v.error("File does not have a filename.", JSON.stringify(t)), this.handleError(D.t02.INVALID_FILE_ASSET));
             return;
         }
         if (0 === this.currentSize && null != this.item.file)
@@ -429,20 +429,20 @@ class w extends O.Ay {
                     rejectWithError: !1,
                 });
             });
-            this.setResponseUrl(e.body.attachments[0].upload_url),
-                this.setUploadedFilename(e.body.attachments[0].upload_filename);
+            (this.setResponseUrl(e.body.attachments[0].upload_url),
+                this.setUploadedFilename(e.body.attachments[0].upload_filename));
         } catch (t) {
             let e = t?.body?.code ?? t.status;
-            e !== D.t02.ENTITY_TOO_LARGE &&
+            (e !== D.t02.ENTITY_TOO_LARGE &&
                 (v.error(`Requesting upload url failed with code ${e ?? JSON.stringify(t.body)} for ${this.id}`),
                 N.A.captureException(t)),
-                this.handleError(e);
+                this.handleError(e));
             return;
         }
         try {
-            await this.trackTime("uploadTimeMs", async () => await this.uploadFileToCloud()),
+            (await this.trackTime("uploadTimeMs", async () => await this.uploadFileToCloud()),
                 this.trackUploadFinished("COMPLETED"),
-                this.handleComplete(this.id);
+                this.handleComplete(this.id));
         } catch (e) {
             this.isCancelled()
                 ? this.handleComplete(e)
@@ -467,7 +467,7 @@ class w extends O.Ay {
             "compressTimeMs",
             async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
         );
-        if (null == e || null == e.file) return v.error(`Failed to get compressed file for ${this.id}`), this;
+        if (null == e || null == e.file) return (v.error(`Failed to get compressed file for ${this.id}`), this);
         let t = e.uri,
             n = e.file.name;
         if (
@@ -506,8 +506,8 @@ class w extends O.Ay {
             null == n || null == t || null == e.file.type)
         )
             throw (
-                (v.error(`Insufficient file data: ${{ filename: n, uri: t, type: e.file.type }} for ${this.id}`),
-                Error(`Insufficient file data: ${{ filename: n, uri: t, type: e.file.type }}`))
+                v.error(`Insufficient file data: ${{ filename: n, uri: t, type: e.file.type }} for ${this.id}`),
+                Error(`Insufficient file data: ${{ filename: n, uri: t, type: e.file.type }}`)
             );
         let i = n.split(".").pop()?.toLowerCase(),
             r = "jpg" === i || "jpeg" === i ? "image/jpeg" : e.file.type;
@@ -531,10 +531,10 @@ class w extends O.Ay {
                 let { location: t } = e;
                 return h.getConfig({ location: t });
             })({ location: "CloudUpload.maybeConvertToWebP" });
-        if (!s.enabled) return v.warn(`webp conversion skipped for ${i}: not enabled`), null;
-        if (null == e) return v.warn(`webp conversion skipped for ${i}: no file`), null;
+        if (!s.enabled) return (v.warn(`webp conversion skipped for ${i}: not enabled`), null);
+        if (null == e) return (v.warn(`webp conversion skipped for ${i}: no file`), null);
         if (null != s.maxFileSizeBytes && e.size > s.maxFileSizeBytes)
-            return v.warn(`webp conversion skipped for ${i}: too big`), null;
+            return (v.warn(`webp conversion skipped for ${i}: too big`), null);
         if (t()) return null;
         let l = performance.now(),
             o = { compressTimeMs: 0 };
@@ -542,7 +542,7 @@ class w extends O.Ay {
             let s = await Promise.all([n.e("896904"), n.e("787096")]).then(n.bind(n, 989707));
             if (((a = s.ConversionFailureReason), (r = await s.maybeConvertToWebP(e)), t())) return null;
             if (r.success && null != r.convertedBlob)
-                v.log(
+                (v.log(
                     `webp conversion worked for ${i}: ${r.sizeBefore} -> ${r.sizeAfter} bytes (${r.compressionRatio.toFixed(2)}x)`,
                 ),
                     (o.convertedFile = new File([r.convertedBlob], e.name, {
@@ -550,17 +550,17 @@ class w extends O.Ay {
                         lastModified: e.lastModified,
                     })),
                     (o.convertedMimeType = "image/webp"),
-                    (o.hashTimeMs = r.hashTimeMs ?? void 0);
+                    (o.hashTimeMs = r.hashTimeMs ?? void 0));
             else {
                 let e = r.reason ?? a.UNKNOWN_ERROR;
-                v.log(`webp conversion skipped for ${i}: ${e}`), (o.conversionFailureReason = e);
+                (v.log(`webp conversion skipped for ${i}: ${e}`), (o.conversionFailureReason = e));
             }
         } catch (e) {
-            v.warn(`webp conversion failed for ${i}:`, e),
-                (o.conversionFailureReason = a?.UNKNOWN_ERROR ?? "unknown_error");
+            (v.warn(`webp conversion failed for ${i}:`, e),
+                (o.conversionFailureReason = a?.UNKNOWN_ERROR ?? "unknown_error"));
         }
         let d = Math.round(performance.now() - l);
-        return (o.compressTimeMs = r?.compressTimeMs ?? d), o;
+        return ((o.compressTimeMs = r?.compressTimeMs ?? d), o);
     }
     static async tryConvertHeicToJpeg(e, t, i, r, a) {
         if (null == e || t()) return null;
@@ -605,27 +605,27 @@ class w extends O.Ay {
         }
     }
     handleError(e) {
-        this.setStatus("ERROR"), (this.error = e), this.trackUploadFinished("ERROR");
+        (this.setStatus("ERROR"), (this.error = e), this.trackUploadFinished("ERROR"));
         try {
             this.emit("error", e);
         } catch {}
         this.removeAllListeners();
     }
     handleComplete(e) {
-        this.setStatus("COMPLETED"),
+        (this.setStatus("COMPLETED"),
             v.log(`Upload complete for ${this.id}`),
             this.emit("complete", e),
-            this.removeAllListeners();
+            this.removeAllListeners());
     }
     _cancel(e, t) {
-        v.log(t),
+        (v.log(t),
             (this._aborted = !0),
             this._abortController.abort(),
             this.trackUploadFinished(e),
             "COMPLETED" === this.status && this.delete(),
             this.setStatus(e),
             this.emit("complete"),
-            this.removeAllListeners();
+            this.removeAllListeners());
     }
     cancel() {
         this._cancel("CANCELED", `Cancelled called for ${this.id}`);
@@ -659,7 +659,7 @@ class w extends O.Ay {
         } catch {}
     }
     setResponseUrl(e) {
-        (this.responseUrl = e), (this.responseUrlSetAt = Date.now());
+        ((this.responseUrl = e), (this.responseUrlSetAt = Date.now()));
     }
     static isResponseUrlStale(e) {
         if (null == e) return !0;
@@ -684,8 +684,8 @@ class w extends O.Ay {
             throw e;
         }
         if (e.body?.attachments?.[0] == null) throw new M("upload", { response: e });
-        this.setResponseUrl(e.body.attachments[0].upload_url),
-            this.setUploadedFilename(e.body.attachments[0].upload_filename);
+        (this.setResponseUrl(e.body.attachments[0].upload_url),
+            this.setUploadedFilename(e.body.attachments[0].upload_filename));
     }
     setStatus(e) {
         this.status = e;

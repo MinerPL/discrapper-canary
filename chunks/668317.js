@@ -1,7 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FormatBuilder = void 0),
     (t.bindFormatValuesWithBuilder = a),
-    (t.bindFormatValues = s);
+    (t.bindFormatValues = s));
 let n = r(315507),
     i = r(524897);
 t.FormatBuilder = class {
@@ -11,10 +11,10 @@ t.FormatBuilder = class {
 };
 class o extends Error {
     constructor(e, t, r) {
-        super(`No value for variable '${e}' was provided for the localized message '${t}'`),
+        (super(`No value for variable '${e}' was provided for the localized message '${t}'`),
             (this.variableName = e),
             (this.originalMessage = t),
-            (this.nodeType = r);
+            (this.nodeType = r));
     }
 }
 function a(e) {

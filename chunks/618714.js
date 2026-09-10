@@ -1,5 +1,6 @@
 var n;
-(n = function () {
+((n = function () {
+    "use strict";
     var e,
         t,
         n,
@@ -31,23 +32,23 @@ var n;
         },
         S =
             ((e = function () {
-                (m = 22), (y = 66), (v = 0);
+                ((m = 22), (y = 66), (v = 0));
             }),
             (i = function () {
                 var r = Date.now() - n;
                 r < 99 ? (t = setTimeout(i, 99 - r)) : ((t = null), e());
             }),
             function () {
-                (n = Date.now()), t || (t = setTimeout(i, 99));
+                ((n = Date.now()), t || (t = setTimeout(i, 99)));
             });
     function x() {
-        125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S();
+        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S());
     }
     function E() {
-        (l = null), (s = setTimeout(T, 0));
+        ((l = null), (s = setTimeout(T, 0)));
     }
     function k() {
-        (s = null), c(E);
+        ((s = null), c(E));
     }
     function C() {
         h ||
@@ -63,11 +64,11 @@ var n;
             r,
             n = m > 9 ? 9 : 1;
         if (((b = Date.now()), (h = !1), (s = null), p > 2 || b - a - 50 < o))
-            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) (e = d.shift()), w++, e && e(_);
+            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) ((e = d.shift()), w++, e && e(_));
         d.length ? C() : (p = 0);
     }
     function M(e) {
-        return g++, d.push(e), C(), g;
+        return (g++, d.push(e), C(), g);
     }
     function P(e) {
         var t = e - 1 - w;
@@ -97,7 +98,7 @@ var n;
             })(u.requestIdleCallback);
         }
     else
-        (u.requestIdleCallback = M),
+        ((u.requestIdleCallback = M),
             (u.cancelIdleCallback = P),
             u.document &&
                 document.addEventListener &&
@@ -113,11 +114,11 @@ var n;
                         childList: !0,
                         subtree: !0,
                         attributes: !0,
-                    }));
+                    })));
     return { request: M, cancel: P };
 }),
     "function" == typeof define && define.amd
         ? define([], n)
         : e.exports
           ? (e.exports = n())
-          : (window.idleCallbackShim = n());
+          : (window.idleCallbackShim = n()));

@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { IGNORE_CLASS_NAME: () => h, default: () => v });
+(r.r(t), r.d(t, { IGNORE_CLASS_NAME: () => h, default: () => v }));
 var n,
     i,
     o = r(582128),
@@ -7,7 +7,7 @@ function s(e, t) {
     return (s =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 function l(e) {
@@ -41,7 +41,7 @@ var u = function () {
     h = "ignore-react-onclickoutside";
 function m(e, t) {
     var r = {};
-    return -1 !== p.indexOf(t) && i && (r.passive = !e.props.preventDefault), r;
+    return (-1 !== p.indexOf(t) && i && (r.passive = !e.props.preventDefault), r);
 }
 let v = function (e, t) {
     var r,
@@ -76,9 +76,9 @@ let v = function (e, t) {
                         }),
                         (n.enableOnClickOutside = function () {
                             if ("u" > typeof document && !d[n._uid]) {
-                                void 0 === i && (i = u()), (d[n._uid] = !0);
+                                (void 0 === i && (i = u()), (d[n._uid] = !0));
                                 var e = n.props.eventTypes;
-                                e.forEach || (e = [e]),
+                                (e.forEach || (e = [e]),
                                     (f[n._uid] = function (e) {
                                         null !== n.componentNode &&
                                             !(n.initTimeStamp > e.timeStamp) &&
@@ -89,7 +89,7 @@ let v = function (e, t) {
                                                     document.documentElement.clientHeight <= e.clientY)) ||
                                                 ((function (e, t, r) {
                                                     if (e === t) return !0;
-                                                    for (; e.parentNode || e.host; ) {
+                                                    for (; e.parentNode || e.host;) {
                                                         var n;
                                                         if (
                                                             e.parentNode &&
@@ -112,7 +112,7 @@ let v = function (e, t) {
                                     }),
                                     e.forEach(function (e) {
                                         document.addEventListener(e, f[n._uid], m(l(n), e));
-                                    });
+                                    }));
                             }
                         }),
                         (n.disableOnClickOutside = function () {
@@ -120,11 +120,11 @@ let v = function (e, t) {
                             var e = f[n._uid];
                             if (e && "u" > typeof document) {
                                 var t = n.props.eventTypes;
-                                t.forEach || (t = [t]),
+                                (t.forEach || (t = [t]),
                                     t.forEach(function (t) {
                                         return document.removeEventListener(t, e, m(l(n), t));
                                     }),
-                                    delete f[n._uid];
+                                    delete f[n._uid]);
                             }
                         }),
                         (n.getRef = function (e) {
@@ -135,7 +135,7 @@ let v = function (e, t) {
                         n
                     );
                 }
-                (n.prototype = Object.create(r.prototype)), (n.prototype.constructor = n), s(n, r);
+                ((n.prototype = Object.create(r.prototype)), (n.prototype.constructor = n), s(n, r));
                 var h = n.prototype;
                 return (
                     (h.getInstance = function () {
@@ -157,8 +157,8 @@ let v = function (e, t) {
                                         p +
                                         " lacks a function for processing outside click events specified by the handleClickOutside config option.",
                                 );
-                            (this.componentNode = this.__getComponentNode()),
-                                this.props.disableOnClickOutside || this.enableOnClickOutside();
+                            ((this.componentNode = this.__getComponentNode()),
+                                this.props.disableOnClickOutside || this.enableOnClickOutside());
                         }
                     }),
                     (h.componentDidUpdate = function () {

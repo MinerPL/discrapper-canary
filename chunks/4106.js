@@ -15,7 +15,7 @@ let d = {
                     rejectWithError: !1,
                 })
             ).body;
-            return r.h.dispatch({ type: "LOAD_ICYMI_POPULAR_GUILDS", categoryIds: e, guilds: n, offset: t }), !0;
+            return (r.h.dispatch({ type: "LOAD_ICYMI_POPULAR_GUILDS", categoryIds: e, guilds: n, offset: t }), !0);
         } catch (e) {
             s.A.captureException(e);
         }
@@ -61,7 +61,7 @@ let d = {
                     !0
                 );
             } catch (e) {
-                return s.A.captureException(e), !1;
+                return (s.A.captureException(e), !1);
             }
     },
     async fetchForNotification(e, t) {

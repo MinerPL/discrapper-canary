@@ -1,4 +1,4 @@
-e.d(n, { A: () => j }), e(323874), e(14289), e(35956), e(321073);
+(e.d(n, { A: () => j }), e(323874), e(14289), e(35956), e(321073));
 var i = e(477900);
 e(582128);
 var l = e(691540),
@@ -45,21 +45,21 @@ function j(t, n, e, j) {
         return null;
     let L = (0, m.E)(t);
     function x(t) {
-        f.default.track(w.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: L, ...(0, b.N)() }),
+        (f.default.track(w.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: L, ...(0, b.N)() }),
             y.Ay.copy(t),
-            (0, l.P0)((0, a.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS));
+            (0, l.P0)((0, a.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS)));
     }
     function D(e, i) {
         if (null == t) return;
         let l = !0 === i ? t.replace("tel:", "sms:") : t;
-        f.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
-            (0, g.h)({ href: l, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e);
+        (f.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
+            (0, g.h)({ href: l, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e));
     }
     let P = [],
         U = t.match(k);
     if (null != U) {
         let t = C.intl.string("mailto" === U[1] ? C.t.ZYLVKo : C.t["3zozoR"]);
-        P.push(
+        (P.push(
             (0, i.jsx)(
                 o.Dr,
                 {
@@ -79,7 +79,7 @@ function j(t, n, e, j) {
                         { id: "native-send-sms", label: C.intl.string(C.t["+wbjMW"]), action: (t) => D(t, !0) },
                         "native-send-sms",
                     ),
-                );
+                ));
     }
     let M = (function (t) {
             try {

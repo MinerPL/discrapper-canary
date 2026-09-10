@@ -49,7 +49,7 @@ let u = {
                 (e) => {
                     let { body: n } = e,
                         i = Object.entries(n.tabs);
-                    a.h.dispatch({
+                    (a.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
                         guildId: m,
                         data: i.map((e) => {
@@ -70,7 +70,7 @@ let u = {
                             };
                         }),
                     }),
-                        A?.({ searchContext: t, tabEntries: i });
+                        A?.({ searchContext: t, tabEntries: i }));
                 },
                 () => {
                     a.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: S });
@@ -96,10 +96,10 @@ let u = {
             E = (0, o.nm)(r),
             A = { ..._, ...E, offset: i.offset },
             h = (0, o.mt)(t);
-        null != h && (0, o.L5)(A, h), l && (A.search_everywhere = !0);
+        (null != h && (0, o.L5)(A, h), l && (A.search_everywhere = !0));
         let I = (0, o.bS)(t),
             f = d.A.create({ id: I, searchType: t.type, searchQuery: A });
-        c?.({ searchContext: t, searchQueryString: n, searchQuery: A }),
+        (c?.({ searchContext: t, searchQueryString: n, searchQuery: A }),
             a.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [I] }),
             f.fetch(
                 (e) => {
@@ -128,7 +128,7 @@ let u = {
                 (e) => {
                     a.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [I], error: e });
                 },
-            );
+            ));
     },
     clearSearchRecentMessages: function () {
         a.h.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
@@ -144,8 +144,8 @@ let u = {
     },
     updateAutocompleteQuery: function (e) {
         let { searchContext: t, tokens: n, queryString: i, cursorScope: r } = e;
-        i.trim().length > 0 && l.bW.loadIfNecessary(),
-            a.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext: t, tokens: n, cursorScope: r });
+        (i.trim().length > 0 && l.bW.loadIfNecessary(),
+            a.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext: t, tokens: n, cursorScope: r }));
     },
     markSearchTokensRefreshed: function () {
         a.h.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });

@@ -50,7 +50,7 @@ class A extends r.Ay.PersistedStore {
 }
 let h = new A(a.h, {
     LOGOUT: function () {
-        (c = d()), (_ = "INITIALIZED"), (E = []);
+        ((c = d()), (_ = "INITIALIZED"), (E = []));
     },
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
         c.useActivityUrlOverride = !c.useActivityUrlOverride;
@@ -69,7 +69,7 @@ let h = new A(a.h, {
     },
     DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
         let { applications: t } = e;
-        (_ = "LOADED"), (E = t.filter((e) => (0, s.n)(e, o.gfo.EMBEDDED)));
+        ((_ = "LOADED"), (E = t.filter((e) => (0, s.n)(e, o.gfo.EMBEDDED))));
     },
     DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
         let { type: t } = e;

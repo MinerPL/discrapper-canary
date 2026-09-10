@@ -14,7 +14,7 @@ class A extends i.Ay.DeviceSettingsStore {
     static displayName = "GameConsoleStore";
     static persistKey = "GameConsoleStore";
     initialize(e) {
-        null != e && (u = e.lastSelectedDeviceByPlatform), this.waitFor(a.A, s.A);
+        (null != e && (u = e.lastSelectedDeviceByPlatform), this.waitFor(a.A, s.A));
     }
     getUserAgnosticState() {
         return { lastSelectedDeviceByPlatform: u };
@@ -44,10 +44,10 @@ class A extends i.Ay.DeviceSettingsStore {
 let h = new A(r.h, {
     REMOTE_SESSION_CONNECT: function (e) {
         let { sessionId: t } = e;
-        (l = t), (o = null);
+        ((l = t), (o = null));
     },
     REMOTE_SESSION_DISCONNECT: function () {
-        (l = null), (o = null);
+        ((l = null), (o = null));
     },
     WAIT_FOR_REMOTE_SESSION: function (e) {
         let { sessionType: t, nonce: n, channelId: i, deviceId: r, commandId: a } = e;
@@ -62,7 +62,7 @@ let h = new A(r.h, {
         _.delete(t);
         let i = (c[t] = {}),
             r = {};
-        for (let e of n) (i[e.id] = e), u[t] === e.id && (r[t] = e.id);
+        for (let e of n) ((i[e.id] = e), u[t] === e.id && (r[t] = e.id));
         u = r;
     },
     GAME_CONSOLE_FETCH_DEVICES_FAIL: function (e) {

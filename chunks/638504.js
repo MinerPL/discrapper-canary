@@ -8,13 +8,13 @@ function s(e) {
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = o.ls),
+        ((this.varint64 = o.ls),
             (this.uint32 = o.Gn),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),
             (this.view = new DataView(e.buffer, e.byteOffset, e.byteLength)),
-            (this.textDecoder = null != t ? t : new TextDecoder("utf-8", { fatal: !0, ignoreBOM: !0 }));
+            (this.textDecoder = null != t ? t : new TextDecoder("utf-8", { fatal: !0, ignoreBOM: !0 })));
     }
     tag() {
         let e = this.uint32(),
@@ -27,7 +27,7 @@ class l {
         let t = this.pos;
         switch (e) {
             case n.O0.Varint:
-                for (; 128 & this.buf[this.pos++]; );
+                for (; 128 & this.buf[this.pos++];);
                 break;
             case n.O0.Bit64:
                 this.pos += 4;
@@ -40,12 +40,12 @@ class l {
                 break;
             case n.O0.StartGroup:
                 let i;
-                for (; (i = this.tag()[1]) !== n.O0.EndGroup; ) this.skip(i);
+                for (; (i = this.tag()[1]) !== n.O0.EndGroup;) this.skip(i);
                 break;
             default:
                 throw Error("cant skip wire type " + e);
         }
-        return this.assertBounds(), this.buf.subarray(t, this.pos);
+        return (this.assertBounds(), this.buf.subarray(t, this.pos));
     }
     assertBounds() {
         if (this.pos > this.len) throw RangeError("premature EOF");
@@ -66,7 +66,7 @@ class l {
     sint64() {
         let [e, t] = this.varint64(),
             r = -(1 & e);
-        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ r), (t = (t >>> 1) ^ r), new i.h(e, t);
+        return ((e = ((e >>> 1) | ((1 & t) << 31)) ^ r), (t = (t >>> 1) ^ r), new i.h(e, t));
     }
     bool() {
         let [e, t] = this.varint64();
@@ -93,7 +93,7 @@ class l {
     bytes() {
         let e = this.uint32(),
             t = this.pos;
-        return (this.pos += e), this.assertBounds(), this.buf.subarray(t, t + e);
+        return ((this.pos += e), this.assertBounds(), this.buf.subarray(t, t + e));
     }
     string() {
         return this.textDecoder.decode(this.bytes());

@@ -1,4 +1,4 @@
-n.d(t, { Nw: () => j, Iy: () => F, jk: () => x, l1: () => B, w0: () => W, r$: () => H, EN: () => k }), n(321073);
+(n.d(t, { Nw: () => j, Iy: () => F, jk: () => x, l1: () => V, w0: () => W, r$: () => H, EN: () => k }), n(321073));
 var i,
     r = n(582128),
     a = n(665260),
@@ -45,17 +45,17 @@ function k(e) {
 function F(e, t) {
     return 3 === t || (e.isPrivate ?? !1);
 }
-function V(e, t) {
+function B(e, t) {
     return e.length > t ? e.substring(0, t) + "..." : e;
 }
-function B(e, t) {
+function V(e, t) {
     let n = null == t ? null : O.A.getMessage(e.id, t),
         i = n?.getContentMessage(),
         r = i?.embeds?.[0]?.rawTitle ?? "",
         a = n?.poll?.question?.text ?? "";
-    if ("" !== r) return V(r, 40);
+    if ("" !== r) return B(r, 40);
     {
-        if ("" !== a) return V(a, 80);
+        if ("" !== a) return B(a, 80);
         let t = T.Ay.unparse(i?.content ?? "", e.id, !0),
             n = (0, M.A)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
@@ -66,7 +66,7 @@ function B(e, t) {
                 r.push(n);
                 break;
             }
-            r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length));
+            (r.push(n.substring(0, e.index)), r.push(e[0]), (n = n.substring(e.index + e[0].length)));
         }
         let s = r[0];
         for (let e = 1; e < r.length; e++) {
@@ -74,7 +74,7 @@ function B(e, t) {
             if (t.length > 40) break;
             s = t;
         }
-        return V(s, 40);
+        return B(s, 40);
     }
 }
 function H(e) {
@@ -94,7 +94,7 @@ function H(e) {
                 I = F(i, a),
                 f = i.name ?? "";
             if ("" === f && d) {
-                let e = B(t, n);
+                let e = V(t, n);
                 f = "" !== e ? e : G.intl.string(G.t["7Xm5QI"]);
             }
             let p = (0, v.Gl)(t),
@@ -120,7 +120,7 @@ function H(e) {
             if (S !== m) {
                 var O, R, L, D, b;
                 let n = g.trim();
-                c.A.clearDraft(t.id, C.C.ThreadSettings),
+                (c.A.clearDraft(t.id, C.C.ThreadSettings),
                     c.A.clearDraft(t.id, C.C.FirstThreadMessage),
                     "" !== n && n !== e.trim() && c.A.saveDraft(S.id, g, C.C.ChannelMessage),
                     o?.(S),
@@ -133,7 +133,7 @@ function H(e) {
                             ? b(O, D, R, L)
                             : null != L && L.length > 0
                               ? u.A.sendStickers(O.id, L, T.Ay.parse(O, R), { location: w.Hx.THREAD_CREATION })
-                              : u.A.sendMessage(O.id, T.Ay.parse(O, R), void 0, { location: w.Hx.THREAD_CREATION }));
+                              : u.A.sendMessage(O.id, T.Ay.parse(O, R), void 0, { location: w.Hx.THREAD_CREATION })));
             }
             _.A.clearAll(t.id, C.C.FirstThreadMessage);
         },
@@ -197,18 +197,12 @@ function W(e) {
             )
                 try {
                     let e = await d(I);
-                    (O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t)));
+                    ((O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t))));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
                     throw (
-                        ((0, p.k)({
-                            file: e,
-                            guildId: t.getGuildId(),
-                            analyticsLocations: l ?? [],
-                            code: n,
-                            reason: i,
-                        }),
-                        r)
+                        (0, p.k)({ file: e, guildId: t.getGuildId(), analyticsLocations: l ?? [], code: n, reason: i }),
+                        r
                     );
                 }
             let x = await Y(t, l, O, () => s.Bo.post({ url: M, body: P, rejectWithError: (0, s.fT)() }));
@@ -243,12 +237,12 @@ async function Y(e, t, i, r) {
     let a,
         s = e.isForumLikeChannel();
     try {
-        (a = await r()),
+        ((a = await r()),
             null == a.body
                 ? d.A.show({ title: G.intl.string(G.t.j2d6Km), body: G.intl.string(G.t.fEptJP) })
                 : (o.h.dispatch({ type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: R.R.CreateThread, channelId: e.id }),
                   o.h.dispatch({ type: "THREAD_CREATE_LOCAL", channelId: a.body.id }),
-                  l.O.announce(G.intl.string(s ? G.t.zDAG2N : G.t.XkUoBb)));
+                  l.O.announce(G.intl.string(s ? G.t.zDAG2N : G.t.XkUoBb))));
     } catch (r) {
         if (r.body?.code === U.t02.TOO_MANY_THREADS)
             d.A.show({
@@ -279,7 +273,7 @@ async function Y(e, t, i, r) {
                     let t = (0, m.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
-                        o.h.dispatch({
+                        (o.h.dispatch({
                             type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE",
                             messageId: t,
                             channelId: e.id,
@@ -293,7 +287,7 @@ async function Y(e, t, i, r) {
                                     n.e("666009"),
                                 ]).then(n.bind(n, 33216));
                                 return (n) => (0, h.jsx)(e, { ...n, channelId: c, messageId: t });
-                            });
+                            }));
                     }
                 } else
                     (0, p.k)({
@@ -304,7 +298,7 @@ async function Y(e, t, i, r) {
                         reason: r.body?.reason,
                     });
             return new Promise((e, t) => {
-                null == r.body && t(),
+                (null == r.body && t(),
                     A.A.addConditionalChangeListener(() => {
                         let n = A.A.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != n) {
@@ -316,12 +310,12 @@ async function Y(e, t, i, r) {
                                 !1
                             );
                         }
-                    });
+                    }));
             });
         } else d.A.show({ title: G.intl.string(G.t.j2d6Km), body: G.intl.string(G.t.fEptJP) });
     }
     let _ = await new Promise((e, t) => {
-        null == a.body && t(),
+        (null == a.body && t(),
             N.A.addConditionalChangeListener(() => {
                 let t = N.A.getChannel(a.body.id);
                 if (null != t)
@@ -331,7 +325,7 @@ async function Y(e, t, i, r) {
                         }),
                         !1
                     );
-            });
+            }));
     });
     try {
         await u.A.fetchMessages({ channelId: _.id, limit: U.EMb });

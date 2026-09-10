@@ -26,7 +26,7 @@ function A(t) {
               id: "delete-entry-history",
               label: d(u),
               action: () => {
-                  x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
+                  (x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                       (0, s.$R)(u) &&
                           (0, a.openModalLazy)(async () => {
                               let { default: t } = await Promise.all([
@@ -36,7 +36,7 @@ function A(t) {
                               ]).then(e.bind(e, 839785));
                               return (e) =>
                                   (0, i.jsx)(t, { entry: u, user: n, onAction: x, onOpenGameSettings: p, ...e });
-                          });
+                          }));
               },
               color: "danger",
           })

@@ -1,4 +1,4 @@
-i.r(t), i.d(t, { default: () => h });
+(i.r(t), i.d(t, { default: () => h }));
 var n = {
         lessThanXSeconds: {
             one: "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32 1 \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35",

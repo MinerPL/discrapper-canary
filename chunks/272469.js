@@ -10,7 +10,7 @@ function a(t) {
         i = Object.keys(o);
     i.forEach((t) => {
         let i = o[t];
-        (s[t] = e[t]), (e[t] = i);
+        ((s[t] = e[t]), (e[t] = i));
     });
     try {
         return t();

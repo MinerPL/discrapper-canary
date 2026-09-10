@@ -11,6 +11,6 @@ let o = {
         if (!r.A.isConnected()) return !1;
         let e = r.A.getGuildId() ?? a.ME,
             t = s.Ay.getChannelId(e);
-        return (0, l.i)(e, t), i.A.channelListScrollTo(e, r.A.getChannelId()), !1;
+        return ((0, l.i)(e, t), i.A.channelListScrollTo(e, r.A.getChannelId()), !1);
     },
 };

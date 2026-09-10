@@ -1,4 +1,4 @@
-n.d(t, { Ae: () => c, Q_: () => _, Uq: () => d, gD: () => u, lz: () => E }), n(321073);
+(n.d(t, { Ae: () => c, Q_: () => _, Uq: () => d, gD: () => u, lz: () => E }), n(321073));
 var i,
     r = n(174459),
     a = n(271520),
@@ -53,11 +53,11 @@ function E(e) {
             if (e.timestamp > d) break;
             let t = (e.signal.speakingFlags & o.ME.VOICE) === o.ME.VOICE;
             if ((_.get(e.signal.userId) ?? !1) === t) continue;
-            _.set(e.signal.userId, t),
+            (_.set(e.signal.userId, t),
                 E.push({
                     timestamp_ms: Math.round(e.timestamp - i),
                     speaking: { user_id: e.signal.userId, speaking_flags: e.signal.speakingFlags },
-                });
+                }));
         } else if (e.signal.type === s.Gy.GAME_EVENT) {
             let t;
             if (e.timestamp < i) continue;
@@ -76,7 +76,7 @@ function E(e) {
                 2 === t && (E[r].game = { type: t });
                 continue;
             }
-            A.set(n, E.length), E.push({ timestamp_ms: n, game: { type: t } });
+            (A.set(n, E.length), E.push({ timestamp_ms: n, game: { type: t } }));
         }
     let h = E.slice(0, s.td);
     return (

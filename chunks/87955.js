@@ -13,7 +13,7 @@ e.exports.parse = function (e) {
     var o = [];
     if (t[6]) {
         (a = t[6].split("-")).shift();
-        for (var a, s, l = []; a.length; ) {
+        for (var a, s, l = []; a.length;) {
             var u = a.shift();
             1 === u.length ? (s ? (o.push({ singleton: s, extension: l }), (s = u), (l = [])) : (s = u)) : l.push(u);
         }

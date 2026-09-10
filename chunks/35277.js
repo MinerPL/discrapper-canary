@@ -1,4 +1,4 @@
-n.d(t, { b: () => a }), n(134528), n(947204);
+(n.d(t, { b: () => a }), n(134528), n(947204));
 var l = n(719442),
     i = n(317681),
     s = n(820066),
@@ -32,7 +32,7 @@ let a = {
             } else h = s.VW.after(e, h, { distance: i, unit: r }) ?? s.VW.end(e, []);
         if (null != u) {
             let [e, t] = s.ZF.edges(u);
-            s.Kh.isBefore(d, e) && (d = e), s.Kh.isAfter(h, t) && (h = t);
+            (s.Kh.isBefore(d, e) && (d = e), s.Kh.isAfter(h, t) && (h = t));
         }
         !s.Kh.equals(d, h) &&
             (l.gB.delete(e, { at: { anchor: d, focus: h }, hanging: !0, voids: c }),
@@ -43,23 +43,23 @@ let a = {
             [r, a] = s.ZF.edges(n),
             o = s.VW.before(e, r) ?? s.VW.start(e, []),
             c = s.VW.after(e, a);
-        s.ZF.isExpanded(n) && l.gB.delete(e, { at: n, voids: !0 }),
+        (s.ZF.isExpanded(n) && l.gB.delete(e, { at: n, voids: !0 }),
             l.gB.insertText(e, t, { at: o }),
             (o = o ?? s.VW.start(e, [])),
             (c = c ?? s.VW.end(e, [])),
-            u(e, i, o, c, c);
+            u(e, i, o, c, c));
     },
     textToVoid(e, t, n) {
         let i = s.VW.getSelectionOverlap(e, n),
             r = s.ZF.start(n),
             a = s.PW.next(r.path),
             o = { path: s.PW.next(a), offset: 0 };
-        l.gB.delete(e, { at: n, voids: !0 }),
+        (l.gB.delete(e, { at: n, voids: !0 }),
             0 === r.offset && l.gB.insertNodes(e, [{ text: "" }], { at: r.path }),
             l.gB.insertNodes(e, [t], { at: r }),
             (s.VW.hasPath(e, o.path) && s.l5.isText(s.VW.node(e, o.path)[0])) ||
                 l.gB.insertNodes(e, [{ text: "" }], { at: o.path }),
-            u(e, i, r, o, o);
+            u(e, i, r, o, o));
     },
     textToInline(e, t, n) {
         let i = s.VW.getSelectionOverlap(e, n),
@@ -67,30 +67,30 @@ let a = {
             a = s.ZF.start(n),
             o = s.PW.next(a.path),
             c = { path: s.PW.child(o, t.children.length - 1), offset: s.l5.isText(r) ? r.text.length : 0 };
-        l.gB.delete(e, { at: n, voids: !0 }),
+        (l.gB.delete(e, { at: n, voids: !0 }),
             0 === a.offset && l.gB.insertNodes(e, [{ text: "" }], { at: a.path }),
             l.gB.insertNodes(e, [t], { at: a }),
-            u(e, i, a, c, c);
+            u(e, i, a, c, c));
     },
     voidToText(e, t, n) {
         let i = s.VW.getSelectionOverlap(e, n),
             r = s.VW.before(e, n) ?? s.VW.start(e, []),
             a = { path: r.path, offset: r.offset + t.length };
-        l.gB.delete(e, { at: n, voids: !0 }), l.gB.insertText(e, t, { at: r }), u(e, i, r, r, a);
+        (l.gB.delete(e, { at: n, voids: !0 }), l.gB.insertText(e, t, { at: r }), u(e, i, r, r, a));
     },
     removeInline(e, t) {
         let n = s.VW.getSelectionOverlap(e, t),
             i = s.VW.before(e, t) ?? s.VW.start(e, []);
-        l.gB.delete(e, { at: t, voids: !0 }), u(e, n, i, i, i);
+        (l.gB.delete(e, { at: t, voids: !0 }), u(e, n, i, i, i));
     },
     removeInlineChildren(e, t) {
         let [n, i] = t,
             r = s.VW.getSelectionOverlap(e, i),
             a = { path: s.PW.child(i, 0), offset: 0 };
-        s.VW.withoutNormalizing(e, () => {
+        (s.VW.withoutNormalizing(e, () => {
             for (let t = n.children.length - 1; t >= 0; t--) l.gB.removeNodes(e, { at: s.PW.child(i, t), voids: !0 });
         }),
-            u(e, r, null, a, null);
+            u(e, r, null, a, null));
     },
     selectCommandOption(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -117,7 +117,7 @@ let a = {
         null != o ? l.gB.select(e, o[1]) : a.resetSelectionToEditorEnd(e);
     },
     insertCommandOption(e, t) {
-        a.resetSelectionToEditorEnd(e),
+        (a.resetSelectionToEditorEnd(e),
             a.insertNodes(e, [
                 {
                     type: "applicationCommandOption",
@@ -126,7 +126,7 @@ let a = {
                     optionType: t.type,
                     children: [{ text: "" }],
                 },
-            ]);
+            ]));
     },
     keyboardMove(e, t) {
         let { distance: n = 1, unit: i = "character", reverse: r = !1, edge: a } = t ?? {},

@@ -37,10 +37,10 @@ function U() {
     });
 }
 function w(e) {
-    L[e]?.stop(), delete L[e];
+    (L[e]?.stop(), delete L[e]);
 }
 function G(e) {
-    y[e]?.stop(), delete y[e];
+    (y[e]?.stop(), delete y[e]);
 }
 function x(e, t) {
     if (T.Ay.getVoiceChannelId() !== e) return !1;
@@ -59,33 +59,33 @@ function k(e, t) {
 function F(e, t) {
     if (m.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
-    (y[e] = n),
+    ((y[e] = n),
         n.start(t ? b : v, () => {
             c.h.dispatch({ type: "STREAM_TIMED_OUT", streamKey: e });
-        });
+        }));
 }
-class V extends _.A {
+class B extends _.A {
     handleStreamWatch = (e) => {
         let { streamKey: t, allowMultiple: n } = e,
             { channelId: i } = (0, N.Iy)(t),
             r = I.A.getChannel(i);
-        F(t, r?.isGuildStageVoice()),
+        (F(t, r?.isGuildStageVoice()),
             w(t),
             n ||
                 a.A.getAllActiveStreams().forEach((e) => {
                     let n = (0, N._z)(e);
                     e.ownerId === s.default.getId() || (n !== t && (0, u.vN)(n, !1));
-                });
+                }));
     };
     handleStreamStart = (e) => {
         let { channelId: t, streamType: n, guildId: i } = e,
             r = I.A.getChannel(t);
-        F((0, N._z)({ streamType: n, guildId: i, channelId: t, ownerId: s.default.getId() }), r?.isGuildStageVoice()),
-            this.platformHandleStreamStart(e);
+        (F((0, N._z)({ streamType: n, guildId: i, channelId: t, ownerId: s.default.getId() }), r?.isGuildStageVoice()),
+            this.platformHandleStreamStart(e));
     };
     handleStreamCreate = (e) => {
         let { streamKey: t } = e;
-        G(t), U();
+        (G(t), U());
         let { ownerId: n, guildId: i } = (0, N.Iy)(t);
         if (null == i || null == n || n !== g.default.getCurrentUser()?.id) return;
         let r = f.A.getMemberCount(i);
@@ -93,24 +93,24 @@ class V extends _.A {
     };
     handleStreamUpdate = (e) => {
         let { streamKey: t } = e;
-        G(t), U();
+        (G(t), U());
     };
     handleStreamDelete = (e) => {
         let { reason: t, streamKey: n } = e;
-        G(n),
+        (G(n),
             t === O.H2B.STREAM_FULL &&
                 ((0, E.QW)({ type: E.iy.STREAM_FULL, ...(0, A.id)(n) }),
                 (0, u.Xi)(n, !1),
-                P.has(n) || (P.add(n), this.platformShowStreamFull()));
+                P.has(n) || (P.add(n), this.platformShowStreamFull())));
     };
     handleStreamClose = (e) => {
         let { streamKey: t } = e;
-        w(t), G(t);
+        (w(t), G(t));
     };
     handleVoiceChannelSelect = (e) => {
         let { channelId: t } = e;
         if (null == t) return;
-        (M = null), U();
+        ((M = null), U());
         let n = a.A.getAllApplicationStreamsForChannel(t).find(
             (e) => e.ownerId !== s.default.getId() && !a.A.isStreamMarkedFull((0, N._z)(e)),
         );
@@ -130,7 +130,7 @@ class V extends _.A {
                     if (!r && e.state !== O.XYD.ENDED) {
                         let t = (0, N._z)(e),
                             n = L[t] ?? new d.Ep();
-                        n.start(D, () => (0, u.Xi)(t, !1)), (L[t] = n);
+                        (n.start(D, () => (0, u.Xi)(t, !1)), (L[t] = n));
                     }
                     if (r && e.state === O.XYD.ENDED) {
                         w((0, N._z)(e));
@@ -170,11 +170,11 @@ class V extends _.A {
         LOGOUT: this.handleSessionReset,
     };
 }
-var B = n(725792),
+var V = n(725792),
     H = n(338771);
-let j = new (class extends V {
+let j = new (class extends B {
     _initialize() {
-        super._initialize(), B.Ay.initializeIfNeeded();
+        (super._initialize(), V.Ay.initializeIfNeeded());
     }
     platformShowStreamFull() {
         (0, r.openModalLazy)(

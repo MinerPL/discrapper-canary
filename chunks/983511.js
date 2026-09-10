@@ -98,14 +98,14 @@ async function H(e, t, n, i) {
                       : null);
     if (null == a) throw Error("No slot to cancel");
     let o = (0, U.aE)(e, t);
-    await (0, S.HJ)(a),
+    (await (0, S.HJ)(a),
         await (0, x.nV)(
             e,
             { items: o },
             { amount: 0, currency: e.currency },
             (0, U.UC)(o, e.currency, e.paymentSourceId),
             n,
-        );
+        ));
 }
 function K(e) {
     let {
@@ -128,12 +128,12 @@ function K(e) {
             }
         }, [t]),
         k = l.useRef(f);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         k.current = f;
     }),
         l.useEffect(() => {
             V && k.current();
-        }, [V]);
+        }, [V]));
     let { premiumSubscriptionPlan: B, premiumGuildPlan: Y } = (0, o.cf)([D.A], () => {
             let e = D.A.get(t.planId);
             return {
@@ -190,9 +190,9 @@ function K(e) {
         ei = z.intl.format(z.t["0W23cu"], { endDate: q.subscriptionPeriodStart });
     async function el() {
         try {
-            v(!0), P(null), await H(t, G, K, n), x();
+            (v(!0), P(null), await H(t, G, K, n), x());
         } catch (e) {
-            P(z.intl.string(z.t["5mlOCW"])), v(!1);
+            (P(z.intl.string(z.t["5mlOCW"])), v(!1));
         }
     }
     return (t.isPausedForFractionalPremium &&

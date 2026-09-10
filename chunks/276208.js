@@ -35,10 +35,10 @@ class I extends r.A {
     logger = new l.A("WindowVisibilityVideoManager");
     HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * d.A.Millis.SECOND;
     constructor() {
-        super(),
+        (super(),
             s.h.subscribe("WINDOW_VISIBILITY_CHANGE", this.update),
             s.h.subscribe("APP_STATE_UPDATE", this.update),
-            o.A.addOnPipModeChangedListener(this.update);
+            o.A.addOnPipModeChangedListener(this.update));
     }
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
@@ -58,13 +58,13 @@ class I extends r.A {
     };
     setIncomingVideoEnabled(e) {
         let t = this.incomingVideoEnabled !== e;
-        (this.incomingVideoEnabled = e),
+        ((this.incomingVideoEnabled = e),
             t &&
                 (this.logger.info(
                     `Incoming video enabled changed, incomingVideoEnabled = ${this.incomingVideoEnabled}`,
                 ),
                 (this.lastEnabledChange = performance.now()),
-                this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled));
+                this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled)));
     }
 }
 let f = new I();

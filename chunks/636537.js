@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Bo: () => L,
     tr: () => U,
     Cu: () => M,
@@ -11,7 +11,7 @@ n.d(t, {
     bG: () => 50035,
     Wl: () => c,
 }),
-    n(321073);
+    n(321073));
 var i = n(333405),
     r = n.n(i),
     a = n(158390);
@@ -64,12 +64,12 @@ class c {
                 }
             return { status: e.status };
         })(e, t);
-        (this.message = i || n),
+        ((this.message = i || n),
             (this.retryAfter = a),
             (this.code = r || -1),
             (this.fields = s || {}),
             (this.status = l),
-            (this.error = Error(i));
+            (this.error = Error(i)));
     }
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;
@@ -90,7 +90,7 @@ class h extends Error {
     retryAfter;
     constructor({ method: e, url: t, status: n, body: i, text: r, headers: a, retryAfter: s }, ...l) {
         const o = t.replace(/\d+/g, "xxx");
-        super(`${e.toUpperCase()} ${o} [${n}]`, ...l),
+        (super(`${e.toUpperCase()} ${o} [${n}]`, ...l),
             (this.name = "HTTPResponseError"),
             (this.method = e),
             (this.url = t),
@@ -99,7 +99,7 @@ class h extends Error {
             (this.body = i),
             (this.text = r),
             (this.headers = a),
-            (this.retryAfter = s);
+            (this.retryAfter = s));
     }
 }
 function I(e, t) {
@@ -116,7 +116,7 @@ function I(e, t) {
 function f(e, t, n, i, s, l) {
     if (t.signal?.aborted) {
         let e = Object.assign(Error("Request aborted", { cause: l }), { code: "ABORTED" });
-        m(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e });
+        (m(t), i(e), null != s && s({ ok: !1, hasErr: !0, err: e }));
         return;
     }
     let o = r()[e](t.url);
@@ -124,10 +124,10 @@ function f(e, t, n, i, s, l) {
         let e = t.query;
         if ("object" == typeof e) {
             let t = { ...e };
-            Object.keys(t).map((e) => {
+            (Object.keys(t).map((e) => {
                 null == t[e] && delete t[e];
             }),
-                (e = t);
+                (e = t));
         }
         o.query(e);
     }
@@ -153,20 +153,20 @@ function f(e, t, n, i, s, l) {
         })(t.context);
         null != e && o.set("X-Context-Properties", e);
     }
-    null != t.retried && 0 !== t.retried && o.set("X-Failed-Requests", `${t.retried}`),
+    (null != t.retried && 0 !== t.retried && o.set("X-Failed-Requests", `${t.retried}`),
         null != t.timeout && 0 !== t.timeout && o.timeout(t.timeout),
         t.binary && o.responseType("blob"),
         null != t.onRequestProgress &&
             o.on("progress", (e) => {
                 t.onRequestProgress?.(e);
-            });
+            }));
     let c = () => {
-            (t.backoff = null != t.backoff ? t.backoff : new a.A()),
+            ((t.backoff = null != t.backoff ? t.backoff : new a.A()),
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
-                t.backoff.fail(() => b(t.url).then(() => f(e, t, n, i, s, l)));
+                t.backoff.fail(() => b(t.url).then(() => f(e, t, n, i, s, l))));
         },
         _ = D?.prepareRequest?.(o);
-    o.ok((e) => null != e.status),
+    (o.ok((e) => null != e.status),
         o.then(
             (r) => {
                 if (null != t.retries && t.retries-- > 0 && E.has(r.status)) return c();
@@ -182,7 +182,7 @@ function f(e, t, n, i, s, l) {
                 let o = !1,
                     u = (r, a) => {
                         let d = { ...t, headers: { ...t.headers, ...r }, interceptResponse: a };
-                        (o = !0), f(e, d, n, i, s, l);
+                        ((o = !0), f(e, d, n, i, s, l));
                     },
                     A = (e) => {
                         o || (i(e), s?.({ ok: !1, hasErr: !0, err: e }));
@@ -204,7 +204,7 @@ function f(e, t, n, i, s, l) {
                                 headers: a.headers,
                                 retryAfter: a.retryAfter,
                             });
-                            null != l && (n.cause = l), i(n);
+                            (null != l && (n.cause = l), i(n));
                         } else i(a);
                     }
                     null != s && s({ hasErr: !1, ...a });
@@ -219,7 +219,7 @@ function f(e, t, n, i, s, l) {
                       null != s && s({ ok: !1, hasErr: !0, err: e }));
             },
         ),
-        t.signal?.aborted ? o.abort() : t.signal?.addEventListener("abort", () => o.abort(), { once: !0 });
+        t.signal?.aborted ? o.abort() : t.signal?.addEventListener("abort", () => o.abort(), { once: !0 }));
 }
 let p = new Map();
 function T(e) {
@@ -232,10 +232,10 @@ function T(e) {
         );
     let n = t.queue.shift();
     if (null == n) {
-        _.verbose("rateLimitExpirationHandler: removing key for", e), p.delete(e);
+        (_.verbose("rateLimitExpirationHandler: removing key for", e), p.delete(e));
         return;
     }
-    _.verbose("rateLimitExpirationHandler: moving to next record for ", e), n();
+    (_.verbose("rateLimitExpirationHandler: moving to next record for ", e), n());
 }
 function m(e, t) {
     var n;
@@ -247,8 +247,8 @@ function m(e, t) {
             l = Date.now() + s;
         if (null != i && i.retryAfterTimestamp >= l)
             return void _.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
-        null != i && (_.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(i.timeoutId)),
-            _.verbose(`cleanupRequestEntry: rate limit for ${e.url} retry after ${s}ms`);
+        (null != i && (_.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(i.timeoutId)),
+            _.verbose(`cleanupRequestEntry: rate limit for ${e.url} retry after ${s}ms`));
         let o = setTimeout(() => T(e.url), s);
         p.set(e.url, {
             queue: i?.queue ?? [],
@@ -289,7 +289,7 @@ let S = g.bind(null, "get"),
     L = { get: S, post: N, put: C, patch: O, del: R };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });
-    (S = e), (N = e), (C = e), (O = e), (R = e);
+    ((S = e), (N = e), (C = e), (O = e), (R = e));
 }
 function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

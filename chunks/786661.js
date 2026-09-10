@@ -1,4 +1,4 @@
-n.d(t, { E: () => d }), n(321073), n(775443);
+(n.d(t, { E: () => d }), n(321073), n(775443));
 var i = n(284009),
     r = n.n(i),
     a = n(260549),
@@ -47,7 +47,7 @@ class o {
             let r = e + 1e3 * t,
                 a = c(n, r),
                 s = 1;
-            a.inGame ? a.bombPlanted && (s *= 2) : (s /= 4), i.push({ timestamp_ms: r, modifier: s });
+            (a.inGame ? a.bombPlanted && (s *= 2) : (s /= 4), i.push({ timestamp_ms: r, modifier: s }));
         }
         return i;
     }
@@ -73,5 +73,5 @@ class o {
 let d = { applicationIds: ["1158877933042143272", "356875057940791296"], create: (e) => new o(e) };
 function c(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
-    return r()(null != n, "bad timeline!"), n;
+    return (r()(null != n, "bad timeline!"), n);
 }

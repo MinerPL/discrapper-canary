@@ -1,4 +1,4 @@
-i.d(t, { default: () => ea }), i(321073);
+(i.d(t, { default: () => ea }), i(321073));
 var s = i(477900),
     l = i(582128),
     n = i(503698),
@@ -81,7 +81,7 @@ let W = (e) => {
         _ = I === n.length - 1,
         G = o ?? B.intl.string(B.t.i4jeWR),
         P = l.useCallback(() => {
-            x?.(), S(I - 1);
+            (x?.(), S(I - 1));
         }, [x, I, S]);
     return (0, s.jsxs)(T.EO, {
         size: T.rI.MEDIUM,
@@ -636,7 +636,7 @@ let ea = (e) => {
         e.add(q.GuildFeatures.COMMUNITY);
         let t = m ? r.TF(M.permissions, z.e$) : M.permissions,
             s = { ...M, permissions: t };
-        t !== M.permissions && (await (0, I.JY)(n.id, [s])),
+        (t !== M.permissions && (await (0, I.JY)(n.id, [s])),
             S.A.updateGuild({ features: e, rulesChannelId: u, publicUpdatesChannelId: g }),
             await S.A.saveGuild(n.id, {
                 features: e,
@@ -648,7 +648,7 @@ let ea = (e) => {
             }),
             setTimeout(() => {
                 i();
-            }, 0);
+            }, 0));
     }
     let V = (0, s.jsx)(X, {
             guild: n,
@@ -685,12 +685,12 @@ let ea = (e) => {
                   policyAccepted: o,
                   onAcceptPolicy: function (e) {
                       if (e) {
-                          d(!0),
+                          (d(!0),
                               Y || S.A.updateGuild({ defaultMessageNotifications: q.orn.ONLY_MENTIONS }),
-                              m || null == M || x(!0);
+                              m || null == M || x(!0));
                           return;
                       }
-                      d(!1), Y && S.A.updateGuild({ defaultMessageNotifications: N }), m && null != M && x(!1);
+                      (d(!1), Y && S.A.updateGuild({ defaultMessageNotifications: N }), m && null != M && x(!1));
                   },
                   headerId: w,
                   theme: a,
@@ -730,7 +730,7 @@ let ea = (e) => {
         title: B.intl.string(B.t["6U5XTu"]),
         transitionState: t,
         onClose: function () {
-            i(), k.default.track(q.HAw.MODAL_DISMISSED, { type: z.bK });
+            (i(), k.default.track(q.HAw.MODAL_DISMISSED, { type: z.bK }));
         },
         completeButtonText: B.intl.string(B.t.XGl4ba),
         onComplete: H,

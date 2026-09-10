@@ -37,7 +37,7 @@ function _(e, t) {
                 e
                     ? null === L.current &&
                       (L.current = setTimeout(() => {
-                          p(), (L.current = null);
+                          (p(), (L.current = null));
                       }, 1e3))
                     : null !== L.current && (clearTimeout(L.current), (L.current = null));
             },

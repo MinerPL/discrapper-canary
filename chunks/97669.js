@@ -62,7 +62,7 @@ async function n() {
                 return t ? parseInt(t[1], 10) : NaN;
             }),
             d = t.length - 1;
-        l.some(isNaN) || (d = l.lastIndexOf(Math.max(...l))), (t[d].cameraType = "back");
+        (l.some(isNaN) || (d = l.lastIndexOf(Math.max(...l))), (t[d].cameraType = "back"));
     }
     return t;
 }
@@ -139,8 +139,8 @@ async function b(l = 0) {
     } catch (i) {
         let t = i instanceof Error ? i.name : "UnknownError",
             d = Math.min(l + 1, 5);
-        if ("NotReadableError" === t) return await (0, c.t)(300), b(d);
-        if ("AbortError" === t) return await (0, c.t)(300), b(l);
+        if ("NotReadableError" === t) return (await (0, c.t)(300), b(d));
+        if ("AbortError" === t) return (await (0, c.t)(300), b(l));
         return b(d);
     }
 }
@@ -155,7 +155,7 @@ async function o() {
         audio: !1,
         video: { resizeMode: "none", facingMode: "environment", height: { ideal: (0, i.a)() ? 1080 : 720 } },
     });
-    return await m(l), l;
+    return (await m(l), l);
 }
 async function u(l, t = 0) {
     if (t > 5) throw Error("Failed to get desktop camera after all fallback attempts");
@@ -222,7 +222,7 @@ async function h(l) {
     if (d && d.getSettings().deviceId === c.deviceId) return t;
     try {
         let l = await u({ deviceId: c.deviceId });
-        return (0, e.a)(t), l;
+        return ((0, e.a)(t), l);
     } catch {
         return t;
     }
@@ -237,7 +237,7 @@ async function W(l) {
     if (d.getSettings().deviceId === c.deviceId) return t;
     try {
         let d = await l(c.deviceId);
-        return (0, e.a)(t), d;
+        return ((0, e.a)(t), d);
     } catch {
         return t;
     }

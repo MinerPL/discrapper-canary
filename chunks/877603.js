@@ -197,11 +197,11 @@ let W = { ltr: "ArrowRight", rtl: "ArrowLeft" },
 function G(e, t, r, n, i, o, a, s) {
     if (!("expandedKeys" in t) || (!s && o !== a)) return !1;
     if (e.key === W[i] && t.selectionManager.focusedKey === r.key && n && !t.expandedKeys.has(r.key))
-        return t.toggleKey(r.key), e.stopPropagation(), !0;
+        return (t.toggleKey(r.key), e.stopPropagation(), !0);
     if (e.key === H[i] && t.selectionManager.focusedKey === r.key) {
-        if (n && t.expandedKeys.has(r.key)) return t.toggleKey(r.key), e.stopPropagation(), !0;
+        if (n && t.expandedKeys.has(r.key)) return (t.toggleKey(r.key), e.stopPropagation(), !0);
         else if (!t.expandedKeys.has(r.key) && r.parentKey && t.collection.getItem(r.parentKey)?.type === "item")
-            return t.selectionManager.setFocusedKey(r.parentKey), e.stopPropagation(), !0;
+            return (t.selectionManager.setFocusedKey(r.parentKey), e.stopPropagation(), !0);
     }
     return !1;
 }
@@ -374,8 +374,8 @@ function ei({ props: e, forwardedRef: t, collection: r }) {
                 y = (0, p.useRef)(t.collection.size);
             return (
                 (0, p.useEffect)(() => {
-                    r.current && y.current > 0 && 0 === t.collection.size && f && r.current.focus(),
-                        (y.current = t.collection.size);
+                    (r.current && y.current > 0 && 0 === t.collection.size && f && r.current.focus(),
+                        (y.current = t.collection.size));
                 }, [t.collection.size, f, r]),
                 I.set(t, { onRemove: e.onRemove }),
                 {
@@ -484,7 +484,7 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                                     if ((0, N.ae)(r.current) && r.current !== (0, N.bq)((0, B.TW)(r.current))) return;
                                     let e = (0, j.N$)(r.current, { tabbable: !0 }).firstChild();
                                     if (e) {
-                                        (0, F.l)(e), (0, V.o)(e, { containingElement: (0, K.m)(e) });
+                                        ((0, F.l)(e), (0, V.o)(e, { containingElement: (0, K.m)(e) }));
                                         return;
                                     }
                                 }
@@ -497,12 +497,12 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                         _ = t.selectionManager.isLink(n.key);
                     if (null != n && "expandedKeys" in t) {
                         let e = t.collection.getChildren?.(n.key);
-                        (g = g || [...(e ?? [])].length > 1),
+                        ((g = g || [...(e ?? [])].length > 1),
                             null == l &&
                                 !_ &&
                                 "none" === t.selectionManager.selectionMode &&
                                 g &&
-                                (l = () => t.toggleKey(n.key));
+                                (l = () => t.toggleKey(n.key)));
                         let r = g ? t.expandedKeys.has(n.key) : void 0,
                             i = 1,
                             o = n.index;
@@ -514,11 +514,11 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                                         n = r ? Array.from(r) : [],
                                         i = n.length > 0 ? n[0] : null,
                                         o = [];
-                                    for (; i; ) o.push(i), (i = null != i.nextKey ? t.getItem(i.nextKey) : null);
+                                    for (; i;) (o.push(i), (i = null != i.nextKey ? t.getItem(i.nextKey) : null));
                                     return o;
                                 })(e, t.collection);
-                                (i = [...r].filter((e) => "item" === e.type).length),
-                                    o > 0 && "item" !== r[0].type && (o -= 1);
+                                ((i = [...r].filter((e) => "item" === e.type).length),
+                                    o > 0 && "item" !== r[0].type && (o -= 1));
                             }
                         } else i = [...t.collection].filter((e) => 0 === e.level && "item" === e.type).length;
                         y = {
@@ -557,19 +557,19 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                                                       if ("arrow" === c) {
                                                           let t = "rtl" === s ? o.nextNode() : o.previousNode();
                                                           if (t)
-                                                              e.preventDefault(),
+                                                              (e.preventDefault(),
                                                                   e.stopPropagation(),
                                                                   (0, F.l)(t),
                                                                   (0, V.o)(t, {
                                                                       containingElement: (0, K.m)(r.current),
-                                                                  });
+                                                                  }));
                                                           else if (
                                                               (e.preventDefault(), e.stopPropagation(), "rtl" === s)
                                                           )
-                                                              (0, F.l)(r.current),
+                                                              ((0, F.l)(r.current),
                                                                   (0, V.o)(r.current, {
                                                                       containingElement: (0, K.m)(r.current),
-                                                                  });
+                                                                  }));
                                                           else {
                                                               o.currentNode = r.current;
                                                               let e = q(o);
@@ -585,19 +585,19 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                                                       if ("arrow" === c) {
                                                           let t = "rtl" === s ? o.previousNode() : o.nextNode();
                                                           if (t)
-                                                              e.preventDefault(),
+                                                              (e.preventDefault(),
                                                                   e.stopPropagation(),
                                                                   (0, F.l)(t),
                                                                   (0, V.o)(t, {
                                                                       containingElement: (0, K.m)(r.current),
-                                                                  });
+                                                                  }));
                                                           else if (
                                                               (e.preventDefault(), e.stopPropagation(), "ltr" === s)
                                                           )
-                                                              (0, F.l)(r.current),
+                                                              ((0, F.l)(r.current),
                                                                   (0, V.o)(r.current, {
                                                                       containingElement: (0, K.m)(r.current),
-                                                                  });
+                                                                  }));
                                                           else {
                                                               o.currentNode = r.current;
                                                               let e = q(o);
@@ -643,7 +643,7 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                     let M = T.onKeyDown;
                     if (
                         ((T.onKeyDown = (e) => {
-                            ((e) => {
+                            (((e) => {
                                 let i = (0, N.bq)((0, B.TW)(r.current));
                                 if ((0, N.sD)(e.currentTarget, (0, N.wt)(e)) && r.current && i) {
                                     if ("tab" === c) {
@@ -652,12 +652,12 @@ let es = (0, s.KU)(c._B, (e, t, r) => {
                                     }
                                     if ("Tab" === e.key && "tab" === c) {
                                         let t = (0, j.N$)(r.current, { tabbable: !0 });
-                                        (t.currentNode = i),
-                                            (e.shiftKey ? t.previousNode() : t.nextNode()) && e.stopPropagation();
+                                        ((t.currentNode = i),
+                                            (e.shiftKey ? t.previousNode() : t.nextNode()) && e.stopPropagation());
                                     }
                                 }
                             })(e),
-                                e.isPropagationStopped() || M?.(e);
+                                e.isPropagationStopped() || M?.(e));
                         }),
                         i)
                     ) {

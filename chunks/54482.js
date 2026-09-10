@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { createStringInterpolator: () => P });
+(r.r(t), r.d(t, { createStringInterpolator: () => P }));
 var n,
     i = function () {
         return (i =

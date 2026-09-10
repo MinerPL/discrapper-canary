@@ -15,7 +15,7 @@ async function h() {
     try {
         let e = await n.Bo.get({ url: o.Rsh.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: !1 }),
             t = e.body.balance;
-        return a.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance: t }), e.body;
+        return (a.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS", balance: t }), e.body);
     } catch (t) {
         let e = t instanceof l.Ey ? t : new l.Ey(t);
         a.h.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL", error: e });
@@ -30,10 +30,10 @@ async function _(e) {
         onRedeemFail: C,
         shouldRefetchBalance: E = !0,
     } = e;
-    a.h.wait(() => {
+    (a.h.wait(() => {
         a.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t });
     }),
-        i?.();
+        i?.());
     try {
         let e = c.A.get(t),
             l = e?.applicationId,
@@ -51,6 +51,6 @@ async function _(e) {
         );
     } catch (r) {
         let e = r instanceof l.Ey ? r : new l.Ey(r);
-        a.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), E && h(), C?.(e);
+        (a.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: t, error: e }), E && h(), C?.(e));
     }
 }

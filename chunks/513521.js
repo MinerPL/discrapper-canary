@@ -23,7 +23,7 @@ let o = function (e) {
             let e = b.trim();
             if (0 !== e.length) {
                 if (null != c && t.length >= c) return void p?.(i.intl.string(i.t.Xx7XeB));
-                d(e), v("");
+                (d(e), v(""));
             }
         }, [b, c, d, p, t.length]),
         w = l.useCallback(
@@ -37,7 +37,7 @@ let o = function (e) {
                     case h.dh.ENTER:
                     case h.dh.TAB:
                     case h.dh.COMMA:
-                        e.preventDefault(), e.stopPropagation(), f();
+                        (e.preventDefault(), e.stopPropagation(), f());
                 }
             },
             [f, b.length, r, t],

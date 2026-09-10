@@ -1,4 +1,4 @@
-t(393431),
+(t(393431),
     t(532706),
     t(42231),
     t(232424),
@@ -61,4 +61,4 @@ t(393431),
             let e = { waveform: [], error: r instanceof Error ? r.message : "Unknown error" };
             self.postMessage(e);
         }
-    });
+    }));

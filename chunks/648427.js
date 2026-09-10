@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(667532);
+(n.d(t, { A: () => A }), n(667532));
 var i = n(17928),
     l = n(228366),
     r = n(95701),
@@ -13,7 +13,7 @@ function g(e) {
     let { channelId: t, history: n, historySet: i } = e;
     if (i.has(t)) {
         let e = n.filter((e) => e !== t);
-        return e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) };
+        return (e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) });
     }
     let l = [t, ...n],
         r = new Set(i);
@@ -34,11 +34,11 @@ class f extends i.Ay.PersistedStore {
                   },
     ];
     initialize(e) {
-        this.waitFor(a.Ay, o.A, s.A),
+        (this.waitFor(a.Ay, o.A, s.A),
             (u = e?.voiceChannelHistory ?? []),
             (c = e?.textChannelHistory ?? []),
             (d = new Set([...u])),
-            (h = new Set([...c]));
+            (h = new Set([...c])));
     }
     getState() {
         return { voiceChannelHistory: u, textChannelHistory: c };
@@ -52,13 +52,13 @@ class f extends i.Ay.PersistedStore {
 }
 let A = new f(l.h, {
     POST_CONNECTION_OPEN: function () {
-        (d = new Set([...u])), (h = new Set([...c]));
+        ((d = new Set([...u])), (h = new Set([...c])));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == t || !s.A.getChannel(t)?.isVocal()) return !1;
         let n = g({ channelId: t, history: u, historySet: d });
-        return (u = n.history), (d = n.historySet), n.didChange;
+        return ((u = n.history), (d = n.historySet), n.didChange);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -66,6 +66,6 @@ let A = new f(l.h, {
         let n = s.A.getChannel(t);
         if (null == n || n.isVocal() || n.isPrivate() || !(0, r.ke)(n.type)) return !1;
         let i = g({ channelId: t, history: c, historySet: h });
-        return (c = i.history), (h = i.historySet), i.didChange;
+        return ((c = i.history), (h = i.historySet), i.didChange);
     },
 });

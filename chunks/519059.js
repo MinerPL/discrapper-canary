@@ -20,7 +20,7 @@ class o extends r.Ay.DeviceSettingsStore {
         return l[e] ?? !1;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return ((l[e] = t), t);
     }
 }
 let d = new o(a.h, {

@@ -5,9 +5,9 @@ function r(e, t) {
     let n = Math.floor(t / 8);
     if (e.length <= n) {
         let t = new Uint8Array(n + 1);
-        t.set(e, 0), (e = t);
+        (t.set(e, 0), (e = t));
     }
-    return (e[n] |= 1 << (t % 8)), e;
+    return ((e[n] |= 1 << (t % 8)), e);
 }
 function a(e, t) {
     if (i(e, t)) {
@@ -23,11 +23,11 @@ function s(e) {
 function l(e) {
     return null != e && "object" == typeof e && "uint8array" === e.__tag__;
 }
-n.d(t, { I: () => l, Vf: () => r, We: () => a, c0: () => i, mg: () => s }),
+(n.d(t, { I: () => l, Vf: () => r, We: () => a, c0: () => i, mg: () => s }),
     n(393431),
     n(532706),
     n(42231),
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));

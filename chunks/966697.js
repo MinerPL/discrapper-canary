@@ -4,7 +4,7 @@ var i = a(477900),
     l = a(503698),
     n = a.n(l),
     r = a(289873);
-a(323874), a(14289), a(35956);
+(a(323874), a(14289), a(35956));
 var d = a(132500);
 let c = new Worker(new URL("/assets/" + a.u("314250"), a.b));
 var h = a(652215),
@@ -33,13 +33,13 @@ function o(e) {
                         i &&
                             new Promise((t) => {
                                 let a = (0, d.A)();
-                                c.addEventListener("message", function e(i) {
+                                (c.addEventListener("message", function e(i) {
                                     let {
                                         data: { id: s, png: l },
                                     } = i;
                                     a === s && (t(l), c.removeEventListener("message", e));
                                 }),
-                                    c.postMessage({ id: a, placeholderData: e });
+                                    c.postMessage({ id: a, placeholderData: e }));
                             }).then((e) => {
                                 t || n(e);
                             }),

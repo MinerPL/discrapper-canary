@@ -7,11 +7,11 @@ var r = n(875565),
     l = n(873326);
 function c(e, t) {
     let n = "fetch";
-    (0, l.s5)(n, e), (0, l.AS)(n, () => d(void 0, t));
+    ((0, l.s5)(n, e), (0, l.AS)(n, () => d(void 0, t)));
 }
 function u(e) {
     let t = "fetch-body-resolved";
-    (0, l.s5)(t, e), (0, l.AS)(t, () => d(h));
+    ((0, l.s5)(t, e), (0, l.AS)(t, () => d(h)));
 }
 function d(e, t = !1) {
     (!t || (0, o.m7)()) &&
@@ -37,15 +37,16 @@ function d(e, t = !1) {
                     e || (0, l.aj)("fetch", { ...d }),
                     t.apply(s.O, n).then(
                         async (t) => (
-                            e ? e(t) : (0, l.aj)("fetch", { ...d, endTimestamp: 1e3 * (0, a.zf)(), response: t }), t
+                            e ? e(t) : (0, l.aj)("fetch", { ...d, endTimestamp: 1e3 * (0, a.zf)(), response: t }),
+                            t
                         ),
                         (e) => {
                             throw (
-                                ((0, l.aj)("fetch", { ...d, endTimestamp: 1e3 * (0, a.zf)(), error: e }),
+                                (0, l.aj)("fetch", { ...d, endTimestamp: 1e3 * (0, a.zf)(), error: e }),
                                 (0, r.bJ)(e) &&
                                     void 0 === e.stack &&
                                     ((e.stack = o.stack), (0, i.my)(e, "framesToPop", 1)),
-                                e)
+                                e
                             );
                         },
                     )
@@ -61,21 +62,21 @@ async function p(e, t) {
                 n.cancel().then(null, () => {});
             }, 9e4),
             o = !0;
-        for (; o; ) {
+        for (; o;) {
             let e;
             try {
                 e = setTimeout(() => {
                     n.cancel().then(null, () => {});
                 }, 5e3);
                 let { done: i } = await r.read();
-                clearTimeout(e), i && (t(), (o = !1));
+                (clearTimeout(e), i && (t(), (o = !1)));
             } catch (e) {
                 o = !1;
             } finally {
                 clearTimeout(e);
             }
         }
-        clearTimeout(i), r.releaseLock(), n.cancel().then(null, () => {});
+        (clearTimeout(i), r.releaseLock(), n.cancel().then(null, () => {}));
     }
 }
 function h(e) {

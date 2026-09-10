@@ -1,4 +1,4 @@
-i.d(e, { default: () => w }), i(321073);
+(i.d(e, { default: () => w }), i(321073));
 var n = i(477900),
     s = i(582128),
     l = i(136722),
@@ -271,10 +271,10 @@ function w(t) {
             ...(!p && { explicitContentFilter: M.gh6.ALL_MEMBERS }),
             ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
         };
-        f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 });
+        (f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 }));
     }
     async function K() {
-        N.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
+        (N.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose());
     }
     let U = [
             {

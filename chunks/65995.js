@@ -28,7 +28,7 @@ let d = new o(r.h, {
             s[n] = a;
             return;
         }
-        (s[n] = t), l.delete(n);
+        ((s[n] = t), l.delete(n));
     },
     GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;

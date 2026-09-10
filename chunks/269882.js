@@ -59,7 +59,7 @@ function m() {
     return n;
 }
 function o() {
-    n?.dispose(), (n = null), (Z.length = 0);
+    (n?.dispose(), (n = null), (Z.length = 0));
 }
 function u(l) {
     return s.subscribe(l);
@@ -142,7 +142,7 @@ function W(l) {
     function y() {
         if (u || 0 === m.length) return;
         let l = m;
-        (m = []), p();
+        ((m = []), p());
         let i = d();
         if (!i) return void N();
         let c = `${a().replace(/\/$/, "")}${t}`,
@@ -155,7 +155,7 @@ function W(l) {
                 if (m.length >= n) return void r();
                 null === h &&
                     (h = c.setTimeout(() => {
-                        (h = null), r();
+                        ((h = null), r());
                     }, Z));
             }
         },
@@ -447,4 +447,4 @@ let I = {
         videoSelfieReconnecting: "videoSelfieReconnecting",
         videoSelfieReconnected: "videoSelfieReconnected",
     };
-z.passportTutorial, z.frontTutorial, z.backTutorial, z.faceCaptureTutorial;
+(z.passportTutorial, z.frontTutorial, z.backTutorial, z.faceCaptureTutorial);

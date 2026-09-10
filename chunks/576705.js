@@ -83,30 +83,30 @@ function F(e) {
     let { guildId: t } = e;
     delete O[t];
     let n = T.A.getMutableBasicGuildChannelsForGuild(t);
-    r().forEach(n, (e) => {
+    (r().forEach(n, (e) => {
         delete R[e.id];
     }),
         (y += 1),
-        M(t);
+        M(t));
 }
-function V(e) {
+function B(e) {
     let { instance: t } = e,
         n = T.A.getChannel(t.channel_id);
     if (null == n) return !1;
     let i = S.default.getCurrentUser(),
         r = p.cc({ user: i, context: n });
     if (r === R[n.id]) return !1;
-    (R[n.id] = r), (y += 1);
+    ((R[n.id] = r), (y += 1));
 }
-function B(e) {
+function V(e) {
     let { guildId: t } = e;
     delete O[t];
     let n = T.A.getMutableBasicGuildChannelsForGuild(t);
-    r().forEach(n, (e) => {
+    (r().forEach(n, (e) => {
         delete R[e.id];
     }),
         (y += 1),
-        M(t);
+        M(t));
 }
 function H(e, t, n, i) {
     let r = p.x3;
@@ -216,7 +216,7 @@ class j extends s.Ay.Store {
     }
 }
 function W() {
-    (R = {}), (O = {}), (L = {}), (y = 0);
+    ((R = {}), (O = {}), (L = {}), (y = 0));
 }
 let Y = new j(l.h, {
     BACKGROUND_SYNC: U,
@@ -242,7 +242,7 @@ let Y = new j(l.h, {
         let i = S.default.getCurrentUser(),
             r = p.cc({ user: i, context: n });
         if (R[n.id] === r) return !1;
-        (R[n.id] = r), (y += 1), M(n.getGuildId());
+        ((R[n.id] = r), (y += 1), M(n.getGuildId()));
     },
     THREAD_CREATE: x,
     THREAD_UPDATE: x,
@@ -275,15 +275,15 @@ let Y = new j(l.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return delete R[t.id], (y += 1), M(t.guild_id), !1;
+        return (delete R[t.id], (y += 1), M(t.guild_id), !1);
     },
     GUILD_ROLE_CREATE: F,
     GUILD_ROLE_UPDATE: F,
     GUILD_ROLE_DELETE: F,
     LOGOUT: W,
-    STAGE_INSTANCE_CREATE: V,
-    STAGE_INSTANCE_UPDATE: V,
-    STAGE_INSTANCE_DELETE: V,
-    IMPERSONATE_UPDATE: B,
-    IMPERSONATE_STOP: B,
+    STAGE_INSTANCE_CREATE: B,
+    STAGE_INSTANCE_UPDATE: B,
+    STAGE_INSTANCE_DELETE: B,
+    IMPERSONATE_UPDATE: V,
+    IMPERSONATE_STOP: V,
 });

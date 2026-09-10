@@ -26,7 +26,7 @@ class a extends i.A {
                             },
                             paymentSourcePrices: Object.entries(i.payment_source_prices).reduce((t, n) => {
                                 let [i, r] = n;
-                                return (t[i] = r.map((t) => s(t, e.tax_inclusive))), t;
+                                return ((t[i] = r.map((t) => s(t, e.tax_inclusive))), t);
                             }, {}),
                         }),
                         t
@@ -46,7 +46,7 @@ class a extends i.A {
         );
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.interval = e.interval),
@@ -55,7 +55,7 @@ class a extends i.A {
             (this.skuId = e.skuId),
             (this.currency = e.currency),
             (this.price = e.price),
-            (this.prices = e.prices);
+            (this.prices = e.prices));
     }
     get premiumSubscriptionType() {
         switch (this.skuId) {

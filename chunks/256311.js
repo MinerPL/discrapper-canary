@@ -17,10 +17,10 @@ let c = {
         r.h.dispatch({ type: "CHANGE_LOG_UNLOCK", key: e });
     },
     markChangelogAsSeen(e, t) {
-        r.h.dispatch({ type: "CHANGE_LOG_MARK_SEEN", changelogId: e, changelogDate: t }), s.pK.updateSetting(e);
+        (r.h.dispatch({ type: "CHANGE_LOG_MARK_SEEN", changelogId: e, changelogDate: t }), s.pK.updateSetting(e));
     },
     setChangelogOverride(e) {
-        r.h.dispatch({ type: "CHANGE_LOG_SET_OVERRIDE", id: e }), null != e && this.sendChangelogMessage(e);
+        (r.h.dispatch({ type: "CHANGE_LOG_SET_OVERRIDE", id: e }), null != e && this.sendChangelogMessage(e));
     },
     sendChangelogMessage(e) {
         i.Bo.post({ url: l.Rsh.CHANGELOG_MESSAGES, body: { changelog_id: e }, rejectWithError: !0 });
@@ -40,7 +40,7 @@ let c = {
                 url: `https://cdn.discordapp.com/changelogs/${s}/${e}/${t}.json${l}`,
                 rejectWithError: !0,
             });
-            return r.h.dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: e, changelog: n.body }), n.body;
+            return (r.h.dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: e, changelog: n.body }), n.body);
         } catch {
             if ((r.h.dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: e, locale: t }), "en-US" !== t))
                 return await this.fetchChangelog(e, "en-US");

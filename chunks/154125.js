@@ -221,7 +221,7 @@ e.exports = function (e) {
             literal:
                 ((t = []),
                 E.forEach((e) => {
-                    t.push(e), e.toLowerCase() === e ? t.push(e.toUpperCase()) : t.push(e.toLowerCase());
+                    (t.push(e), e.toLowerCase() === e ? t.push(e.toUpperCase()) : t.push(e.toLowerCase()));
                 }),
                 t),
             built_in: b,

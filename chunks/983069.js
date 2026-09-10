@@ -1,4 +1,4 @@
-n.d(t, { YK: () => p, Yo: () => d, R_: () => m, JX: () => g }),
+(n.d(t, { YK: () => p, Yo: () => d, R_: () => m, JX: () => g }),
     n(321073),
     n(393431),
     n(532706),
@@ -6,7 +6,7 @@ n.d(t, { YK: () => p, Yo: () => d, R_: () => m, JX: () => g }),
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var a = n(284009),
     r = n.n(a),
     i = n(602674),
@@ -20,9 +20,9 @@ class l {
         if (this._offset + e.length > this._buffer.length) {
             let t = this._offset + e.length,
                 n = new Uint8Array(Math.pow(2, Math.ceil(Math.log2(Math.max(2 * this._buffer.length, t)))));
-            n.set(this._buffer.subarray(0, this._offset)), (this._buffer = n);
+            (n.set(this._buffer.subarray(0, this._offset)), (this._buffer = n));
         }
-        this._buffer.set(e, this._offset), (this._offset += e.length);
+        (this._buffer.set(e, this._offset), (this._offset += e.length));
     }
     addPage(e) {
         if (e.segments.length > 255) throw Error(`Too many segments: ${e.segments.length} exceeds limit of 255`);
@@ -73,7 +73,7 @@ class l {
         e.segments))
             this.appendBytes(t);
         let s = this._buffer.subarray(a, this._offset).reduce((e, t) => ((e << 8) >>> 0) ^ u[(e >>> 24) ^ t], 0) >>> 0;
-        this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++;
+        (this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++);
     }
     finalize(e) {
         this.addPage({ pageType: 4, granulePosition: e, segments: [] });
@@ -112,11 +112,11 @@ async function p(e) {
     }),
     new Promise((e, n) => {
         let a = new FileReader();
-        a.addEventListener("load", function t() {
-            a.removeEventListener("load", t), a.removeEventListener("error", n), e(a.result);
+        (a.addEventListener("load", function t() {
+            (a.removeEventListener("load", t), a.removeEventListener("error", n), e(a.result));
         }),
             a.addEventListener("error", n),
-            t(a);
+            t(a));
     }));
     if ("string" != typeof n) throw Error("Unexpected file type");
     return n;
@@ -133,9 +133,9 @@ async function c(e) {
                 let t = e[0],
                     n = e[1],
                     a = [];
-                for (let e = 0; e < t.length; e++) a.push(t[e]), a.push(n[e]);
+                for (let e = 0; e < t.length; e++) (a.push(t[e]), a.push(n[e]));
                 let r = new Float32Array(a.length);
-                return r.set(a), r;
+                return (r.set(a), r);
             }
             throw Error("Only handles up to 2 channels");
         })(
@@ -159,7 +159,7 @@ async function c(e) {
                 r()(null != n.duration, "Chunk duration must not be null");
                 let a = (n.duration / 1e6) * e.sampleRate,
                     i = new Uint8Array(n.byteLength);
-                n.copyTo(i), t.push({ buffer: i, numSamples: a });
+                (n.copyTo(i), t.push({ buffer: i, numSamples: a }));
             },
             error: (e) => {
                 throw Error(`Audio encoding error: ${e.message}`);
@@ -208,7 +208,7 @@ async function c(e) {
                             }
                             return n;
                         })(t.buffer);
-                        (i += t.numSamples), r.addPage({ pageType: 0, granulePosition: i, segments: e });
+                        ((i += t.numSamples), r.addPage({ pageType: 0, granulePosition: i, segments: e }));
                     }
                     return r.finalize(i);
                 })(t, {
@@ -237,7 +237,7 @@ async function d(e, t) {
             let n = g.getChannelData(t),
                 a = e.getChannelData(t),
                 r = 0;
-            for (let e = h; e <= p; e++) (n[r] = a[e]), r++;
+            for (let e = h; e <= p; e++) ((n[r] = a[e]), r++);
         }
         return g;
     })(await h(e), t);

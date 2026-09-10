@@ -48,7 +48,7 @@ class _ extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -95,7 +95,7 @@ class _ extends l.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.assetUrl && t.tag(1, r.O0.LengthDelimited).string(e.assetUrl),
+        ("" !== e.assetUrl && t.tag(1, r.O0.LengthDelimited).string(e.assetUrl),
             "" !== e.desktopBody && t.tag(2, r.O0.LengthDelimited).string(e.desktopBody),
             "" !== e.mobileBody && t.tag(3, r.O0.LengthDelimited).string(e.mobileBody),
             e.gradient && c.H.internalBinaryWrite(e.gradient, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
@@ -109,9 +109,9 @@ class _ extends l.G {
             e.desktopBodyLocalized &&
                 o.X.internalBinaryWrite(e.desktopBodyLocalized, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             e.mobileBodyLocalized &&
-                o.X.internalBinaryWrite(e.mobileBodyLocalized, t.tag(11, r.O0.LengthDelimited).fork(), n).join();
+                o.X.internalBinaryWrite(e.mobileBodyLocalized, t.tag(11, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let E = new _();

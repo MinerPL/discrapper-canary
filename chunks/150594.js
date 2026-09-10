@@ -131,7 +131,7 @@ var t = (e.exports = {
             names: ["id", "attribute", "value"],
             format: function (e) {
                 var t = "ssrc:%d";
-                return null != e.attribute && ((t += " %s"), null != e.value && (t += ":%s")), t;
+                return (null != e.attribute && ((t += " %s"), null != e.value && (t += ":%s")), t);
             },
         },
         {
@@ -235,6 +235,6 @@ var t = (e.exports = {
 });
 Object.keys(t).forEach(function (e) {
     t[e].forEach(function (e) {
-        e.reg || (e.reg = /(.*)/), e.format || (e.format = "%s");
+        (e.reg || (e.reg = /(.*)/), e.format || (e.format = "%s"));
     });
 });

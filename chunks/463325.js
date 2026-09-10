@@ -22,7 +22,7 @@ let A = function (e) {
         C = (0, s.bG)([c.Ay], () => (null != x ? c.Ay.getMember(t, x) : null), [x, t]),
         G = l.useCallback(() => {
             let e;
-            A(), null == C && ((e = (0, m.JK)()).length > 0 ? e.goBack() : (0, m.pX)(p.BVt.ME));
+            (A(), null == C && ((e = (0, m.JK)()).length > 0 ? e.goBack() : (0, m.pX)(p.BVt.ME)));
         }, [C, A]),
         R = l.useCallback(async () => {
             if (C?.isPending) {
@@ -31,7 +31,7 @@ let A = function (e) {
                 } catch (e) {
                     throw e;
                 }
-                A(), (0, g.Ze)(t);
+                (A(), (0, g.Ze)(t));
             } else d.A.resetGuildJoinRequest(t);
         }, [t, C?.isPending, A]),
         y = l.useMemo(

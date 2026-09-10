@@ -4,7 +4,7 @@ var i = n(17928),
 let r = {},
     s = null;
 function a() {
-    (r = {}), (s = null);
+    ((r = {}), (s = null));
 }
 class o extends i.Ay.Store {
     static displayName = "EmailSettingsStore";
@@ -17,7 +17,7 @@ let d = new o(l.h, {
     LOGOUT: a,
     EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {
         let { settings: t } = e;
-        (r = t.categories), (s = t.initialized);
+        ((r = t.categories), (s = t.initialized));
     },
     EMAIL_SETTINGS_UPDATE_SUCCESS: function (e) {
         let { settings: t } = e;

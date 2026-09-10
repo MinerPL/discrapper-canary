@@ -27,7 +27,7 @@ let p = function (t) {
               actionBarInput: (0, e.jsx)(c.S, {
                   checked: f,
                   onChange: function (t) {
-                      s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), y(t);
+                      (s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), y(t));
                   },
                   label: h.intl.string(h.t["JdIQ/Y"]),
               }),
@@ -37,7 +37,7 @@ let p = function (t) {
                       variant: "primary",
                       text: h.intl.string(h.t["cY+Oob"]),
                       onClick: function () {
-                          n(), p();
+                          (n(), p());
                       },
                       autoFocus: !1,
                   },

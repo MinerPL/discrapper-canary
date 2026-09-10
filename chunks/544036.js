@@ -29,11 +29,11 @@ function S(t) {
             C.default.track(A.HAw.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL, { is_nitro_user: R, load_id: k }));
     }, [R, k]);
     let h = s.useCallback(() => {
-            C.default.track(A.HAw.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED, { is_nitro_user: R, load_id: k }),
+            (C.default.track(A.HAw.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED, { is_nitro_user: R, load_id: k }),
                 R
                     ? (0, c.Cz)({ analyticsLocations: x, analyticsSource: l.A.GIFT_CARD_REDEMPTION_SUCCESS_MODAL })
                     : ((0, _.default)(), (0, u.default)(), (0, o.pX)(A.BVt.NITRO_HOME)),
-                i();
+                i());
         }, [x, R, k, i]),
         m = [
             { variant: "secondary", size: "md", text: E.intl.string(E.t.WAI6xu), onClick: i },

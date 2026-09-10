@@ -1,14 +1,15 @@
 t.exports = (function () {
+    "use strict";
     function t() {
-        (this.dataPoints_ = []),
+        ((this.dataPoints_ = []),
             (this.color_ = "red"),
             (this.isVisible_ = !0),
             (this.cacheStartTime_ = null),
             (this.cacheStepSize_ = 0),
-            (this.cacheValues_ = []);
+            (this.cacheValues_ = []));
     }
     function i(t, i) {
-        (this.time = t), (this.value = i);
+        ((this.time = t), (this.value = i));
     }
     return (
         (t.prototype = {
@@ -23,7 +24,7 @@ t.exports = (function () {
             },
             addPoint: function (t, e) {
                 var s = new Date(t);
-                this.dataPoints_.push(new i(s, e)), this.dataPoints_.length > 1e3 && this.dataPoints_.shift();
+                (this.dataPoints_.push(new i(s, e)), this.dataPoints_.length > 1e3 && this.dataPoints_.shift());
             },
             setPoints: function (t) {
                 let i = Math.max(0, t.length - 1e3);
@@ -55,9 +56,9 @@ t.exports = (function () {
             },
             getValuesInternal_: function (t, i, e) {
                 for (var s = [], a = 0, h = 0, n = t, r = 0; r < e; ++r) {
-                    for (; a < this.dataPoints_.length && this.dataPoints_[a].time < n; )
-                        (h = this.dataPoints_[a].value), ++a;
-                    (s[r] = h), (n += i);
+                    for (; a < this.dataPoints_.length && this.dataPoints_[a].time < n;)
+                        ((h = this.dataPoints_[a].value), ++a);
+                    ((s[r] = h), (n += i));
                 }
                 return s;
             },

@@ -15,7 +15,7 @@ function o(e) {
 }
 class a {
     constructor() {
-        (this.node = null),
+        ((this.node = null),
             (this.assertiveLog = null),
             (this.politeLog = null),
             "u" > typeof document &&
@@ -37,7 +37,7 @@ class a {
                 this.node.appendChild(this.assertiveLog),
                 (this.politeLog = this.createLog("polite")),
                 this.node.appendChild(this.politeLog),
-                document.body.prepend(this.node));
+                document.body.prepend(this.node)));
     }
     isAttached() {
         return this.node?.isConnected;
@@ -57,14 +57,14 @@ class a {
     announce(e, t = "assertive", r = 7e3) {
         if (!this.node) return;
         let n = document.createElement("div");
-        "object" == typeof e
+        ("object" == typeof e
             ? (n.setAttribute("role", "img"), n.setAttribute("aria-labelledby", e["aria-labelledby"]))
             : (n.textContent = e),
             "assertive" === t ? this.assertiveLog?.appendChild(n) : this.politeLog?.appendChild(n),
             "" !== e &&
                 setTimeout(() => {
                     n.remove();
-                }, r);
+                }, r));
     }
     clear(e) {
         this.node &&

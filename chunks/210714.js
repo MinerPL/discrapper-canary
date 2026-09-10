@@ -95,7 +95,7 @@ class u {
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
-            performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
+            (performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e));
             try {
                 c.Ay.appViewed();
             } catch (e) {}

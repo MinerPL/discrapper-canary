@@ -9,4 +9,4 @@ var u = n(s()),
     c = function (e) {
         return u(void 0 === this ? Promise : this, e);
     };
-i(c, { getPolyfill: s, implementation: a, shim: l }), (e.exports = c);
+(i(c, { getPolyfill: s, implementation: a, shim: l }), (e.exports = c));

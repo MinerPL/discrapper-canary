@@ -210,7 +210,7 @@ function $(e) {
         } = e,
         R = l.useRef(null),
         _ = l.useRef(j);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         _.current = j;
     }, [j]),
         l.useEffect(() => {
@@ -225,10 +225,10 @@ function $(e) {
             function t() {
                 _.current(!1);
             }
-        }, []);
+        }, []));
     let { trackUserProfileWishlistAction: O } = (0, I.NJ)(),
         P = l.useCallback(() => {
-            w?.(),
+            (w?.(),
                 null != k &&
                     (O({
                         wishlistId: k,
@@ -236,10 +236,10 @@ function $(e) {
                         skuId: s.sku.id,
                         productLines: new Set([s.sku.productLine]),
                     }),
-                    v());
+                    v()));
         }, [v, s.sku, k, O, w]),
         D = l.useCallback(() => {
-            w?.(),
+            (w?.(),
                 null != k &&
                     (O({
                         wishlistId: k,
@@ -247,10 +247,10 @@ function $(e) {
                         skuId: s.sku.id,
                         productLines: new Set([s.sku.productLine]),
                     }),
-                    C());
+                    C()));
         }, [C, s.sku, k, O, w]),
         M = l.useCallback(() => {
-            (0, E.XA)(q.jM.SOMETHING_WENT_WRONG), o.O.announce(L.intl.string(L.t.F8FvUy));
+            ((0, E.XA)(q.jM.SOMETHING_WENT_WRONG), o.O.announce(L.intl.string(L.t.F8FvUy)));
         }, []),
         G = null != m ? (0, i.jsx)("div", { ref: R, className: Z.BU, children: m }) : null,
         {

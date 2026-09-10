@@ -1,4 +1,4 @@
-n.d(t, { A: () => g }), n(938796), n(321073);
+(n.d(t, { A: () => g }), n(938796), n(321073));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -23,7 +23,7 @@ let A = {
     I = {};
 function f(e) {
     let t, n;
-    p(e), h.add(e);
+    (p(e), h.add(e));
     let r = c.A.getGuild(e),
         l = u.default.getCurrentUser(),
         A = null != r && r.verificationLevel !== _.PvD.NONE,
@@ -64,7 +64,7 @@ function f(e) {
                 (O = r.verificationLevel >= _.PvD.HIGH && L > 0)));
     }
     let y = [];
-    O && y.push(L),
+    (O && y.push(L),
         C && y.push(R),
         y.length > 0 &&
             (n = setTimeout(() => a.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...y))),
@@ -80,14 +80,14 @@ function f(e) {
             accountDeadline: new Date(Date.now() + R),
             memberDeadline: new Date(Date.now() + L),
             timeoutRef: n,
-        });
+        }));
 }
 function p(e) {
     let t = I[e];
-    null != t && clearTimeout(t.timeoutRef), delete I[e];
+    (null != t && clearTimeout(t.timeoutRef), delete I[e]);
 }
 function T(e) {
-    h.delete(e.guild.id), f(e.guild.id);
+    (h.delete(e.guild.id), f(e.guild.id));
 }
 class m extends r.Ay.Store {
     static displayName = "GuildVerificationStore";
@@ -120,7 +120,7 @@ let g = new m(a.h, {
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         if (n.id !== u.default.getCurrentUser()?.id) return !1;
-        h.delete(t), f(t);
+        (h.delete(t), f(t));
     },
     GUILD_VERIFICATION_CHECK: function (e) {
         let { guildId: t } = e;

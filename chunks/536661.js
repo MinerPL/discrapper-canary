@@ -1,5 +1,5 @@
 var n = a(383930);
-n.registerLanguage("1c", a(473325)),
+(n.registerLanguage("1c", a(473325)),
     n.registerLanguage("abnf", a(276238)),
     n.registerLanguage("accesslog", a(374133)),
     n.registerLanguage("actionscript", a(842156)),
@@ -193,4 +193,4 @@ n.registerLanguage("1c", a(473325)),
     n.registerLanguage("zephir", a(257179)),
     (n.HighlightJS = n),
     (n.default = n),
-    (e.exports = n);
+    (e.exports = n));

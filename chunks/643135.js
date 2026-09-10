@@ -39,7 +39,7 @@ let d = `
                 children: (0, o.jsx)("textarea", {
                     ...s,
                     ref: function (e) {
-                        (g.current = e), "function" == typeof t ? t(g.current) : null != t && (t.current = e);
+                        ((g.current = e), "function" == typeof t ? t(g.current) : null != t && (t.current = e));
                     },
                     style: { ...r, height: b },
                     autoFocus: a,
@@ -53,8 +53,8 @@ function c(e, t, r, o) {
     var l, i, s, c, g, b;
     let p, h, x, m, y, f;
     if (null == e) return;
-    (o = o ?? e.value),
-        null == a && null != document.body && ((a = document.createElement("textarea")), document.body.appendChild(a));
+    ((o = o ?? e.value),
+        null == a && null != document.body && ((a = document.createElement("textarea")), document.body.appendChild(a)));
     let {
             paddingSize: v,
             borderSize: w,
@@ -94,9 +94,9 @@ function c(e, t, r, o) {
             (f = a.scrollHeight),
             "border-box" === g ? ((y += c), (f += c)) : "content-box" === g && ((y -= s), (f -= s)),
             { minHeight: y, maxHeight: f });
-    a.setAttribute("style", z + ";" + d),
+    (a.setAttribute("style", z + ";" + d),
         (a.value = o),
-        null != t ? a.setAttribute("rows", `${t}`) : a.removeAttribute("rows");
+        null != t ? a.setAttribute("rows", `${t}`) : a.removeAttribute("rows"));
     let M = Math.ceil(a.scrollHeight + 1);
-    return "border-box" === j ? (M += w) : "content-box" === j && (M -= v), (M = Math.max(C, Math.min(M, V)));
+    return ("border-box" === j ? (M += w) : "content-box" === j && (M -= v), (M = Math.max(C, Math.min(M, V))));
 }

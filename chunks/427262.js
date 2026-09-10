@@ -29,13 +29,13 @@ function _(e) {
     if (null == e) return;
     let t = r.A.hidePersonalInformation,
         n = u(e);
-    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n;
+    return (t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n);
 }
 function E(e) {
     let t = (0, i.bG)([r.A], () => r.A.hidePersonalInformation);
     if (null == e) return;
     let n = u(e);
-    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n;
+    return (t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n);
 }
 function A(e) {
     if (null != e)

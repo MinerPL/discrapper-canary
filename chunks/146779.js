@@ -25,8 +25,8 @@ function C(e) {
     return (0, o.n)(e, m.gfo.CLOUD_GAMING_DEMO) && (0, o.n)(e, m.gfo.EMBEDDED);
 }
 function E() {
-    (0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: x.i.TAKE_ACTION }),
-        (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: x.i.TAKE_ACTION });
+    ((0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: x.i.TAKE_ACTION }),
+        (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: x.i.TAKE_ACTION }));
 }
 function I(e) {
     let { countryCode: t, activity: n } = e;
@@ -76,23 +76,23 @@ function _(e) {
             i && null != t
                 ? C(t) && null != r
                     ? () => {
-                          E(),
+                          (E(),
                               p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                   source_application_id: t.id,
                                   launching_application_id: t.id,
                                   location_stack: n,
                               }),
-                              (0, s.Q)({ appId: t.id, botId: r.id, analyticsLocations: n ?? [] });
+                              (0, s.Q)({ appId: t.id, botId: r.id, analyticsLocations: n ?? [] }));
                       }
                     : null != u && null != c
                       ? () => {
-                            E(),
+                            (E(),
                                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                                     source_application_id: t.id,
                                     launching_application_id: u,
                                     location_stack: n,
                                 }),
-                                (0, s.Q)({ appId: u, botId: c, analyticsLocations: n ?? [] });
+                                (0, s.Q)({ appId: u, botId: c, analyticsLocations: n ?? [] }));
                         }
                       : void 0
                 : null,
@@ -107,13 +107,13 @@ function j(e) {
         if (a?.bot == null || !y(a, r?.alpha2)) return null;
         let e = a.bot;
         return () => {
-            E(),
+            (E(),
                 p.default.track(m.HAw.CLOUD_PLAY_CTA_CLICKED, {
                     source_application_id: n ?? a.id,
                     launching_application_id: a.id,
                     location_stack: i,
                 }),
-                (0, s.Q)({ appId: a.id, botId: e.id, analyticsLocations: i ?? [] });
+                (0, s.Q)({ appId: a.id, botId: e.id, analyticsLocations: i ?? [] }));
         };
     }, [a, r, n, i]);
 }

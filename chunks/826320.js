@@ -57,7 +57,7 @@ function _() {
                 a = { affinities: r, getChannelId: N, index: 0 },
                 d = 0;
             function h(e) {
-                for (; e.index < e.affinities.length; ) {
+                for (; e.index < e.affinities.length;) {
                     let l = e.affinities[e.index];
                     if ((e.index++, null == l)) continue;
                     let i = e.getChannelId(l);
@@ -67,14 +67,14 @@ function _() {
                 }
                 return null;
             }
-            for (; e.length < 4; ) {
+            for (; e.length < 4;) {
                 let n = e.length % 2 == 0,
                     s = h(n ? i : a);
                 if (
                     (null == s && (s = h(n ? a : i)),
                     null == s &&
                         (s = (function () {
-                            for (; d < l.length; ) {
+                            for (; d < l.length;) {
                                 let e = l[d];
                                 if ((d++, !(null == e || e.type === c.rD.HEADER || t.has(e.record.id)))) return e;
                             }
@@ -83,7 +83,7 @@ function _() {
                     null == s)
                 )
                     break;
-                t.add(s.record.id), e.push(s);
+                (t.add(s.record.id), e.push(s));
             }
             return e.length > 0 ? e : o.E9;
         }, [s, n, 4, l, r]);

@@ -1,4 +1,4 @@
-r.d(t, { A: () => S }), r(323874), r(14289), r(35956);
+(r.d(t, { A: () => S }), r(323874), r(14289), r(35956));
 var n = r(17928),
     s = r(803805),
     l = r(228366),
@@ -81,16 +81,16 @@ let S = new y(l.h, {
     },
     GIF_PICKER_QUERY_SUCCESS: function (e) {
         if (null != e.query && m === p) return !1;
-        null != e.query && (p = e.query),
+        (null != e.query && (p = e.query),
             (g = e.items.map((e) => {
                 let { width: t, height: r, src: n, gif_src: s, url: l, id: i } = e;
                 return { width: t, height: r, src: E(n), gifSrc: E(s), url: l, id: i, format: h };
-            }));
+            })));
     },
     GIF_PICKER_QUERY_FAILURE: function (e) {
         let { query: t } = e;
         if (null == t) return !1;
-        (p = t), (g = []);
+        ((p = t), (g = []));
     },
     GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
         let t = e.trendingCategories;

@@ -70,7 +70,7 @@ let R = s.forwardRef((e, t) => {
     if (1 === A && 1 === L) return null;
     let K = (0, o.Uj)({ width: A, height: L, maxWidth: k, maxHeight: W, minWidth: C, minHeight: D }),
         q = 0 !== K.width ? K.width / K.height : 1;
-    "" !== j && y !== f.Rv1.ERROR
+    ("" !== j && y !== f.Rv1.ERROR
         ? (m = H({ src: j, size: K, alt: E, className: w, mediaLayoutType: G }))
         : y !== f.Rv1.LOADING && (m = (0, i.jsx)(b, { size: K, mediaLayoutType: G, alt: E })),
         (m = (0, i.jsx)(x.y, {
@@ -81,7 +81,7 @@ let R = s.forwardRef((e, t) => {
             placeholderVersion: S,
             placeholderStyle: N(K, G),
             children: m,
-        }));
+        })));
     let B = null != T ? T() : null;
     return (
         (B = B ?? M),

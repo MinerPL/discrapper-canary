@@ -154,10 +154,10 @@ var w = n(939249),
 function F(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function V(e) {
+function B(e) {
     C.Ay.keyboardModeEnabled && e.current?.scrollIntoView({ block: "nearest" });
 }
-var B = n(745396),
+var V = n(745396),
     H = n(379261);
 function j(e) {
     return R("MenuLabel") ? (0, r.jsx)(H.r, { children: e.children }) : e.children;
@@ -212,7 +212,7 @@ function z(e) {
             return (0, r.jsx)("div", { className: D.guildTagAccessory, children: t.element });
     }
 }
-function q(e) {
+function X(e) {
     let { indicator: t } = e,
         { type: n, icon: i, color: a = "currentColor", className: s, ...o } = t;
     return (0, r.jsx)("div", {
@@ -220,8 +220,8 @@ function q(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(D.icon, s) }),
     });
 }
-var Z = n(869431);
-function X(e) {
+var q = n(869431);
+function Z(e) {
     let {
             color: t = "default",
             label: n,
@@ -263,11 +263,11 @@ function X(e) {
         );
     return (
         a.useEffect(() => {
-            p && (V(H), N?.());
+            p && (B(H), N?.());
         }, [p, N]),
         (0, r.jsxs)(w.D, {
             innerRef: H,
-            className: l()(D.item, D.labelContainer, Z.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [O ?? ""]: p }),
+            className: l()(D.item, D.labelContainer, q.nM, M[t], C, { [D.disabled]: f, [D.focused]: p, [O ?? ""]: p }),
             onClick: f ? void 0 : Y,
             "aria-disabled": f,
             ...T,
@@ -276,7 +276,7 @@ function X(e) {
             children: [
                 W || d?.type === "status"
                     ? null != d && (0, r.jsx)(z, { accessory: d, isFocused: p })
-                    : (0, B.O)(o)
+                    : (0, V.O)(o)
                       ? o
                       : null != o &&
                         (0, r.jsx)("div", {
@@ -315,8 +315,8 @@ function X(e) {
                         children: (0, r.jsx)(S.y, { type: S.y.Type.PULSING_ELLIPSIS }),
                     }),
                 W
-                    ? null != c && (0, r.jsx)(q, { indicator: c })
-                    : (0, B.O)(s)
+                    ? null != c && (0, r.jsx)(X, { indicator: c })
+                    : (0, V.O)(s)
                       ? s
                       : null != s &&
                         (0, r.jsx)("div", {
@@ -439,7 +439,7 @@ function en(e) {
         } = e,
         A = a.useRef(null);
     a.useEffect(() => {
-        i && V(A);
+        i && B(A);
     }, [i]);
     let h = a.useCallback(
             (e) => {
@@ -480,7 +480,7 @@ function er(e) {
         T = R("MenuCheckboxItem"),
         m = a.useRef(null);
     a.useEffect(() => {
-        E && V(m);
+        E && B(m);
     }, [E]);
     let g = a.useCallback(
         (e) => {
@@ -490,7 +490,7 @@ function er(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: m,
-        className: l()(D.item, D.checkboxContainer, D.labelContainer, Z.nM, M[t], I, {
+        className: l()(D.item, D.checkboxContainer, D.labelContainer, q.nM, M[t], I, {
             [D.disabled]: _,
             [D.focused]: E,
             [f ?? ""]: E,
@@ -503,7 +503,7 @@ function er(e) {
         children: [
             T
                 ? null != u && (0, r.jsx)(z, { accessory: u, isFocused: E })
-                : (0, B.O)(c)
+                : (0, V.O)(c)
                   ? c
                   : null != c &&
                     (0, r.jsx)("div", {
@@ -547,7 +547,7 @@ function es(e) {
         f = R("MenuRadioItem"),
         p = a.useRef(null);
     a.useEffect(() => {
-        E && V(p);
+        E && B(p);
     }, [E]);
     let T = a.useCallback(
         (e) => {
@@ -557,7 +557,7 @@ function es(e) {
     );
     return (0, r.jsxs)(w.D, {
         innerRef: p,
-        className: l()(D.item, D.labelContainer, Z.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
+        className: l()(D.item, D.labelContainer, q.nM, M[t], { [D.disabled]: _, [D.focused]: E }),
         onClick: _ ? void 0 : T,
         ...A,
         "aria-checked": s,
@@ -566,7 +566,7 @@ function es(e) {
         children: [
             f
                 ? null != u && (0, r.jsx)(z, { accessory: u, isFocused: E })
-                : (0, B.O)(c)
+                : (0, V.O)(c)
                   ? c
                   : null != c &&
                     (0, r.jsx)("div", {
@@ -607,7 +607,7 @@ function eo(e) {
         { onInteraction: A } = a.useContext(y.x),
         h = a.useRef(null);
     a.useEffect(() => {
-        c && V(h);
+        c && B(h);
     }, [c]);
     let I = a.useCallback(() => {
         (_(!o), A?.({ type: y.Q.SWITCH }));
@@ -677,7 +677,7 @@ function eu(e) {
         T(Math.ceil(i + (Number.isNaN(r) ? 24 : r) + 2));
     }, [o]),
         a.useEffect(() => {
-            _ && (V(h), I.current?.focus());
+            _ && (B(h), I.current?.focus());
         }, [_]));
     let m = a.useCallback(
         (e) => {
@@ -733,7 +733,7 @@ function e_(e) {
         h = a.useRef(null),
         I = a.useRef(null);
     a.useLayoutEffect(() => {
-        o ? (V(h), I.current?.focus()) : d && I.current?.blur?.();
+        o ? (B(h), I.current?.focus()) : d && I.current?.blur?.();
     }, [o, d]);
     let f = a.useCallback(() => {
             I.current?.activate?.() && E();
@@ -789,7 +789,7 @@ function eE(e) {
             if (!i) return;
             let e = c.current;
             if (null == e) return;
-            V(c);
+            B(c);
             let t = e.querySelector('[tabindex="0"]');
             t?.focus();
         }, [i]),
@@ -1096,7 +1096,7 @@ function eA(e) {
                 className: l()(D.scroller, { [D.scrollerWithScrollbar]: !i }),
                 children: [
                     0 === h.length &&
-                        (0, r.jsx)(X, {
+                        (0, r.jsx)(Z, {
                             disabled: !0,
                             void_label: () => (0, r.jsx)(eI, {}),
                             menuItemProps: M.getItemProps({ path: ["empty"] }),
@@ -1136,7 +1136,7 @@ function eA(e) {
                                             A = [...i, o.key],
                                             h = n.isFocused(A),
                                             I = (0, r.jsx)(
-                                                X,
+                                                Z,
                                                 {
                                                     ...o.props,
                                                     ...(null != o.label

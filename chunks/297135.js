@@ -9,15 +9,15 @@ var i,
         function (t) {
             return t && t.__esModule ? t : { default: t };
         };
-Object.defineProperty(e, "__esModule", { value: !0 }),
-    (e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = void 0);
+(Object.defineProperty(e, "__esModule", { value: !0 }),
+    (e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = void 0));
 let u = l(a(367019)),
     h = a(488320),
     c = l(a(612121)),
     p = l(a(517358)),
     f = l(a(977327)),
     m = a(954298);
-((i = s = e.ICalEventStatus || (e.ICalEventStatus = {})).CONFIRMED = "CONFIRMED"),
+(((i = s = e.ICalEventStatus || (e.ICalEventStatus = {})).CONFIRMED = "CONFIRMED"),
     (i.TENTATIVE = "TENTATIVE"),
     (i.CANCELLED = "CANCELLED"),
     ((r = o = e.ICalEventBusyStatus || (e.ICalEventBusyStatus = {})).FREE = "FREE"),
@@ -60,7 +60,7 @@ let u = l(a(367019)),
                 !e)
             )
                 throw Error("`calendar` option required!");
-            t.id && this.id(t.id),
+            (t.id && this.id(t.id),
                 void 0 !== t.sequence && this.sequence(t.sequence),
                 t.start && this.start(t.start),
                 void 0 !== t.end && this.end(t.end),
@@ -84,7 +84,7 @@ let u = l(a(367019)),
                 void 0 !== t.transparency && this.transparency(t.transparency),
                 void 0 !== t.created && this.created(t.created),
                 void 0 !== t.lastModified && this.lastModified(t.lastModified),
-                void 0 !== t.x && this.x(t.x);
+                void 0 !== t.x && this.x(t.x));
         }
         id(t) {
             return void 0 === t ? this.data.id : ((this.data.id = String(t)), this);
@@ -95,7 +95,7 @@ let u = l(a(367019)),
         sequence(t) {
             if (void 0 === t) return this.data.sequence;
             if (isNaN(parseInt(String(t), 10))) throw Error("`sequence` must be a number!");
-            return (this.data.sequence = t), this;
+            return ((this.data.sequence = t), this);
         }
         start(t) {
             if (void 0 === t) return this.data.start;
@@ -106,13 +106,13 @@ let u = l(a(367019)),
                     (0, h.toDate)(this.data.start).getTime() > (0, h.toDate)(this.data.end).getTime())
             ) {
                 let t = this.data.start;
-                (this.data.start = this.data.end), (this.data.end = t);
+                ((this.data.start = this.data.end), (this.data.end = t));
             }
             return this;
         }
         end(t) {
             if (void 0 === t) return this.data.end;
-            if (null === t) return (this.data.end = null), this;
+            if (null === t) return ((this.data.end = null), this);
             if (
                 ((this.data.end = (0, h.checkDate)(t, "end")),
                 this.data.start &&
@@ -120,7 +120,7 @@ let u = l(a(367019)),
                     (0, h.toDate)(this.data.start).getTime() > (0, h.toDate)(this.data.end).getTime())
             ) {
                 let t = this.data.start;
-                (this.data.start = this.data.end), (this.data.end = t);
+                ((this.data.start = this.data.end), (this.data.end = t));
             }
             return this;
         }
@@ -157,8 +157,8 @@ let u = l(a(367019)),
         }
         repeating(t) {
             if (void 0 === t) return this.data.repeating;
-            if (!t) return (this.data.repeating = null), this;
-            if ((0, h.isRRule)(t) || "string" == typeof t) return (this.data.repeating = t), this;
+            if (!t) return ((this.data.repeating = null), this);
+            if ((0, h.isRRule)(t) || "string" == typeof t) return ((this.data.repeating = t), this);
             if (((this.data.repeating = { freq: (0, h.checkEnum)(m.ICalEventRepeatingFreq, t.freq) }), t.count)) {
                 if (!isFinite(t.count)) throw Error("`repeating.count` must be a finite number!");
                 this.data.repeating.count = t.count;
@@ -194,7 +194,7 @@ let u = l(a(367019)),
                 if (!this.data.repeating.byDay) throw "`repeating.bySetPos` must be used along with `repeating.byDay`!";
                 if ("number" != typeof t.bySetPos || t.bySetPos < -1 || t.bySetPos > 4)
                     throw "`repeating.bySetPos` contains invalid value `" + t.bySetPos + "`!";
-                this.data.repeating.byDay.splice(1), (this.data.repeating.bySetPos = t.bySetPos);
+                (this.data.repeating.byDay.splice(1), (this.data.repeating.bySetPos = t.bySetPos));
             }
             if (t.exclude) {
                 let e = Array.isArray(t.exclude) ? t.exclude : [t.exclude];
@@ -210,12 +210,12 @@ let u = l(a(367019)),
         }
         location(t) {
             if (void 0 === t) return this.data.location;
-            if ("string" == typeof t) return (this.data.location = { title: t }), this;
+            if ("string" == typeof t) return ((this.data.location = { title: t }), this);
             if ((t && !t.title) || ((null == t ? void 0 : t.geo) && (!isFinite(t.geo.lat) || !isFinite(t.geo.lon))))
                 throw Error(
                     "`location` isn't formatted correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalevent.html#location",
                 );
-            return (this.data.location = t || null), this;
+            return ((this.data.location = t || null), this);
         }
         description(t) {
             return void 0 === t
@@ -236,24 +236,24 @@ let u = l(a(367019)),
                   this);
         }
         createAttendee(t = {}) {
-            if (t instanceof c.default) return this.data.attendees.push(t), t;
+            if (t instanceof c.default) return (this.data.attendees.push(t), t);
             "string" == typeof t && (t = (0, h.checkNameAndMail)("data", t));
             let e = new c.default(t, this);
-            return this.data.attendees.push(e), e;
+            return (this.data.attendees.push(e), e);
         }
         attendees(t) {
             return t ? (t.forEach((t) => this.createAttendee(t)), this) : this.data.attendees;
         }
         createAlarm(t = {}) {
             let e = t instanceof p.default ? t : new p.default(t, this);
-            return this.data.alarms.push(e), e;
+            return (this.data.alarms.push(e), e);
         }
         alarms(t) {
             return t ? (t.forEach((t) => this.createAlarm(t)), this) : this.data.alarms;
         }
         createCategory(t = {}) {
             let e = t instanceof f.default ? t : new f.default(t);
-            return this.data.categories.push(e), e;
+            return (this.data.categories.push(e), e);
         }
         categories(t) {
             return t ? (t.forEach((t) => this.createCategory(t)), this) : this.data.categories;
@@ -270,9 +270,9 @@ let u = l(a(367019)),
         }
         priority(t) {
             if (void 0 === t) return this.data.priority;
-            if (null === t) return (this.data.priority = null), this;
+            if (null === t) return ((this.data.priority = null), this);
             if (t < 0 || t > 9) throw Error("`priority` is invalid, musst be 0 \u2264 priority \u2264 9.");
-            return (this.data.priority = Math.round(t)), this;
+            return ((this.data.priority = Math.round(t)), this);
         }
         url(t) {
             return void 0 === t ? this.data.url : ((this.data.url = t ? String(t) : null), this);
@@ -475,4 +475,4 @@ let u = l(a(367019)),
                 (n += "END:VEVENT\r\n")
             );
         }
-    });
+    }));

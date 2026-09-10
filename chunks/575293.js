@@ -67,7 +67,7 @@ function k(e) {
         [j, T] = i.useState(!1),
         [k] = i.useState(new a.A.Value(0)),
         [w] = i.useState(new a.A.Value(0));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         x
             ? a.A.timing(k, { toValue: 0, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
                   T(!0),
@@ -76,7 +76,7 @@ function k(e) {
     }, [x, k, I, E]),
         i.useEffect(() => {
             x && j && a.A.timing(w, { toValue: 1, duration: 350 * !E, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, w, j, E]);
+        }, [x, w, j, E]));
     let P = i.useCallback(() => {
         null != A && (0, S.qo)(t, A.channelId);
     }, [t, A]);

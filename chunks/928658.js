@@ -29,19 +29,20 @@ var i = n(95561),
     u = n(882276),
     s = n(652215);
 function E(e, t) {
-    y(o.t0.GUILD_DIRECTORY_ENTRY, { channel_id: e.channelId, guild_id: e.guildId }),
-        (0, u.T)({ name: o.t0.GUILD_DIRECTORY_ENTRY, record: e }, {}, { onSubmit: t });
+    (y(o.t0.GUILD_DIRECTORY_ENTRY, { channel_id: e.channelId, guild_id: e.guildId }),
+        (0, u.T)({ name: o.t0.GUILD_DIRECTORY_ENTRY, record: e }, {}, { onSubmit: t }));
 }
 function c(e, t, n) {
-    y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
-        (0, u.T)({ name: o.t0.MESSAGE, record: e }, {}, { onSubmit: n });
+    (y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
+        (0, u.T)({ name: o.t0.MESSAGE, record: e }, {}, { onSubmit: n }));
 }
 function m(e, t, n) {
-    y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
-        (0, u.T)({ name: o.t0.MESSAGE, record: e }, { variant: "staff" }, { onSubmit: n });
+    (y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
+        (0, u.T)({ name: o.t0.MESSAGE, record: e }, { variant: "staff" }, { onSubmit: n }));
 }
 function S(e, t, n) {
-    y(o.t0.GUILD, { guild_id: e.id }), (0, u.T)({ name: o.t0.GUILD, record: e }, { variant: "staff" }, { onSubmit: n });
+    (y(o.t0.GUILD, { guild_id: e.id }),
+        (0, u.T)({ name: o.t0.GUILD, record: e }, { variant: "staff" }, { onSubmit: n }));
 }
 function T(e, t) {
     let n = a.A.getStageInstanceByChannel(e.id);
@@ -50,92 +51,92 @@ function T(e, t) {
         (0, u.T)({ name: o.t0.STAGE_CHANNEL, record: n }, {}, { onSubmit: t }));
 }
 function I(e, t) {
-    y(o.t0.GUILD_SCHEDULED_EVENT, {
+    (y(o.t0.GUILD_SCHEDULED_EVENT, {
         guild_scheduled_event_id: e.id,
         guild_id: e.guild_id,
         channel_id: e.channel_id ?? void 0,
     }),
-        (0, u.T)({ name: o.t0.GUILD_SCHEDULED_EVENT, record: e }, {}, { onSubmit: t });
+        (0, u.T)({ name: o.t0.GUILD_SCHEDULED_EVENT, record: e }, {}, { onSubmit: t }));
 }
 function A(e, t) {
-    y(o.t0.FIRST_DM, { message_id: e.id, channel_id: e.channel_id }),
-        (0, u.T)({ name: o.t0.FIRST_DM, record: e }, {}, { onSubmit: t, isEligibleForFeedback: !1 });
+    (y(o.t0.FIRST_DM, { message_id: e.id, channel_id: e.channel_id }),
+        (0, u.T)({ name: o.t0.FIRST_DM, record: e }, {}, { onSubmit: t, isEligibleForFeedback: !1 }));
 }
 async function R(e, t) {
     try {
-        await (0, l.gP)({ name: o.t0.FIRST_DM, record: e }, { variant: "_first_dm_ham_v1" }), t?.();
+        (await (0, l.gP)({ name: o.t0.FIRST_DM, record: e }, { variant: "_first_dm_ham_v1" }), t?.());
     } catch {}
 }
 function g(e, t, n, i) {
-    y(o.t0.USER, { reported_user_id: e.id }),
-        (0, u.T)({ name: o.t0.USER, record: e, contextualGuildId: t }, {}, { onSubmit: n, appContext: i });
+    (y(o.t0.USER, { reported_user_id: e.id }),
+        (0, u.T)({ name: o.t0.USER, record: e, contextualGuildId: t }, {}, { onSubmit: n, appContext: i }));
 }
 function h(e, t, n, i) {
-    y(o.t0.USER, { reported_user_id: e.id }),
+    (y(o.t0.USER, { reported_user_id: e.id }),
         (0, u.T)(
             { name: o.t0.USER, record: e, contextualGuildId: t },
             { variant: "staff" },
             { onSubmit: n, isEligibleForFeedback: !1, appContext: i },
-        );
+        ));
 }
 function D(e, t) {
     let n = new r.A({});
-    y(o.tY.USER, { reported_user_id: n.id }),
+    (y(o.tY.USER, { reported_user_id: n.id }),
         (0, u.T)(
             { name: o.tY.USER, record: n },
             {},
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
-        );
+        ));
 }
 function O(e, t) {
     let n = (0, d.dangerouslyConstructGuildRecordFromUntypedObject)({});
-    y(o.tY.GUILD, { guild_id: n.id }),
+    (y(o.tY.GUILD, { guild_id: n.id }),
         (0, u.T)(
             { name: o.tY.GUILD, record: n },
             {},
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
-        );
+        ));
 }
 function U(e, t) {
-    y(o.tY.MEDIA_TAKEDOWN, {}),
+    (y(o.tY.MEDIA_TAKEDOWN, {}),
         (0, u.T)(
             { name: o.tY.MEDIA_TAKEDOWN },
             {},
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
-        );
+        ));
 }
 function G(e, t) {
     let n = new _.Ay({});
-    y(o.tY.MESSAGE, { message_id: void 0, channel_id: void 0 }),
+    (y(o.tY.MESSAGE, { message_id: void 0, channel_id: void 0 }),
         (0, u.T)(
             { name: o.tY.MESSAGE, record: n },
             {},
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
-        );
+        ));
 }
 async function L(e, t, n) {
     try {
-        await (0, l.gP)({ name: o.t0.MESSAGE, record: e }, { variant: "safety_alerts_headless_v1" }), t?.();
+        (await (0, l.gP)({ name: o.t0.MESSAGE, record: e }, { variant: "safety_alerts_headless_v1" }), t?.());
     } catch {
         n?.();
     }
 }
 function p(e, t) {
-    y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
-        (0, u.T)({ name: o.t0.MESSAGE, record: e }, { variant: "safety_alerts_v1" }, { onSubmit: t });
+    (y(o.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
+        (0, u.T)({ name: o.t0.MESSAGE, record: e }, { variant: "safety_alerts_v1" }, { onSubmit: t }));
 }
 function f(e, t, n, i) {
     (0, u.T)({ name: o.t0.WIDGET, widget_id: t.id ?? "", user_id: e, widget: t }, {}, { onSubmit: n, appContext: i });
 }
 function N(e) {
     let { application: t, entrypoint: n, contextualGuildId: a, contextualChannelId: _, onSubmit: r, appContext: d } = e;
-    i.Ay.trackWithMetadata(s.HAw.REPORT_APPLICATION_CLICKED, { application_id: t.id, location: n }),
+    (i.Ay.trackWithMetadata(s.HAw.REPORT_APPLICATION_CLICKED, { application_id: t.id, location: n }),
         y(o.t0.APPLICATION, { application_id: t.id, guild_id: a, channel_id: _ }),
         (0, u.T)(
             { name: o.t0.APPLICATION, record: t, contextualGuildId: a, contextualChannelId: _, entrypoint: n },
             {},
             { onSubmit: r, appContext: d },
-        );
+        ));
 }
 function v(e, t) {
     (0, u.T)({ name: o.Yw.MESSAGE, record: e }, {}, { onSubmit: t, isEligibleForFeedback: !1 });

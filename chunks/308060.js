@@ -1,5 +1,6 @@
 var n = r(72290);
 !(function (e) {
+    "use strict";
     if (!e.setImmediate) {
         var t,
             r,
@@ -11,7 +12,7 @@ var n = r(72290);
             u = !1,
             c = e.document,
             f = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (f = f && f.setTimeout ? f : e),
+        ((f = f && f.setTimeout ? f : e),
             "[object process]" === {}.toString.call(e.process)
                 ? (a = function (e) {
                       n.nextTick(function () {
@@ -54,10 +55,10 @@ var n = r(72290);
                       ? ((o = c.documentElement),
                         (a = function (e) {
                             var t = c.createElement("script");
-                            (t.onreadystatechange = function () {
-                                p(e), (t.onreadystatechange = null), o.removeChild(t), (t = null);
+                            ((t.onreadystatechange = function () {
+                                (p(e), (t.onreadystatechange = null), o.removeChild(t), (t = null));
                             }),
-                                o.appendChild(t);
+                                o.appendChild(t));
                         }))
                       : (a = function (e) {
                             setTimeout(p, 0, e);
@@ -66,9 +67,9 @@ var n = r(72290);
                 "function" != typeof e && (e = Function("" + e));
                 for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
                 var n = { callback: e, args: t };
-                return (l[s] = n), a(s), s++;
+                return ((l[s] = n), a(s), s++);
             }),
-            (f.clearImmediate = d);
+            (f.clearImmediate = d));
     }
     function d(e) {
         delete l[e];
@@ -99,7 +100,7 @@ var n = r(72290);
                             r.apply(void 0, n);
                     }
                 } finally {
-                    d(e), (u = !1);
+                    (d(e), (u = !1));
                 }
             }
         }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $J: () => P,
     IG: () => L,
     Ps: () => G,
@@ -17,7 +17,7 @@ n.d(t, {
     n(14289),
     n(35956),
     n(134528),
-    n(947204);
+    n(947204));
 var i,
     r = n(132500),
     s = n(323889),
@@ -44,7 +44,7 @@ function O(e) {
     let t = (0, _.t)({ quest: e }) || (0, _.fE)({ quest: e }) || (0, _.I6)(e),
         n = (0, _.uD)(e),
         i = [];
-    return t && i.push(S.fO.DESKTOP), n && i.push(S.fO.CONSOLE), i;
+    return (t && i.push(S.fO.DESKTOP), n && i.push(S.fO.CONSOLE), i);
 }
 function b(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
@@ -70,7 +70,7 @@ function P(e) {
 }
 function w(e, t) {
     let { platformType: n, quest: i } = e;
-    (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
+    ((0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, u.r)({
               type: d.F.CLICK_INTERNAL,
               adCreativeType: s.p.QUEST,
@@ -87,7 +87,7 @@ function w(e, t) {
               questContentCTA: t.ctaContent,
               impressionId: t.impressionId,
           }),
-        (0, f.A)({ platformType: n, location: t.ctaContent });
+        (0, f.A)({ platformType: n, location: t.ctaContent }));
 }
 function L(e) {
     return P(e) === g.fg2.XBOX ? v.t["mytEv+"] : v.t.iDiwby;
@@ -124,7 +124,7 @@ function Q(e) {
         getIosAttribution: s,
         allowExternalOpen: o = !0,
     } = e;
-    return T.OO.getConfig({ location: "quest_open_game_link" }).enabled, o && (0, l.A)(t), Promise.resolve(!1);
+    return (T.OO.getConfig({ location: "quest_open_game_link" }).enabled, o && (0, l.A)(t), Promise.resolve(!1));
 }
 function k(e, t) {
     let n,
@@ -132,7 +132,7 @@ function k(e, t) {
         o,
         a = (0, h.Jx)(e.config),
         l = null == (n = e.config.ctaConfig) ? null : R({ url: (0, h.Jx)(e.config), android: n.android, ios: n.ios });
-    null != l && (a = l),
+    (null != l && (a = l),
         (function (e) {
             try {
                 return new URL(e).searchParams.has("dclid");
@@ -143,7 +143,7 @@ function k(e, t) {
             (a = (function (e, t) {
                 try {
                     let n = new URL(e);
-                    return n.searchParams.set("dclid", t), n.toString();
+                    return (n.searchParams.set("dclid", t), n.toString());
                 } catch {
                     return e;
                 }
@@ -168,10 +168,10 @@ function k(e, t) {
                   impressionId: t.impressionId,
                   sourceQuestContent: t.sourceQuestContent,
                   clickId: o,
-              });
+              }));
     let { impressionId: f } = t,
         E = null != f ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
-    m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
+    (m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
         Q({
             link: a,
             directLink: l,
@@ -190,7 +190,7 @@ function k(e, t) {
                     overlaySurface: o,
                 }),
             getIosAttribution: null != E && null != f ? () => (0, C.FW)({ impressionId: f }) : void 0,
-        });
+        }));
 }
 function D(e, t) {
     let { adContentId: n, adCreativeType: i, cta: r } = e;
@@ -199,7 +199,7 @@ function D(e, t) {
             { preferExternalAppStore: o } = n,
             a = s.url,
             f = R(s);
-        null != f && (a = f),
+        (null != f && (a = f),
             (0, p.E5)(p.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
                 ? (0, u.r)({
                       type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -220,7 +220,7 @@ function D(e, t) {
                       impressionId: t.impressionId,
                       sourceQuestContent: t.sourceQuestContent,
                   }),
-            m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED);
+            m._.dispatch(g.jej.QUEST_GAME_LINK_OPENED));
         let { impressionId: E } = t,
             A = null != E ? (0, c.vV)(s.ios?.iosAppId != null, t.sourceQuestContent, i) : null,
             T = M(s),
@@ -248,7 +248,7 @@ function D(e, t) {
 }
 function U(e, t) {
     let { quest: i } = e;
-    (0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
+    ((0, p.E5)(p.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, u.r)({
               type: d.F.CLICK_INTERNAL,
               adCreativeType: s.p.QUEST,
@@ -272,7 +272,7 @@ function U(e, t) {
                 let { openUserSettings: e } = n(766075);
                 e(E.X.CONNECTIONS_CATEGORY);
             }
-        })();
+        })());
 }
 function q(e, t) {
     let { quest: n } = e;

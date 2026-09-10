@@ -14,7 +14,7 @@ class d {
     type;
     games;
     constructor({ id: e, type: t, games: n }) {
-        (this.id = e), (this.type = t), (this.games = n);
+        ((this.id = e), (this.type = t), (this.games = n));
     }
     toSubmission() {
         return {

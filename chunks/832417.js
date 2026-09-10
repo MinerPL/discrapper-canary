@@ -12,7 +12,7 @@ var i = n(477900),
     _ = n(331322),
     I = n(834730),
     p = n(289873);
-n(731787), n(715097), n(606109), n(981673);
+(n(731787), n(715097), n(606109), n(981673));
 var A = n(736653),
     E = n(632738),
     g = n(295972),
@@ -74,7 +74,7 @@ function P(e) {
 }
 async function j(e) {
     try {
-        return await (0, g.Zo)(e), !0;
+        return (await (0, g.Zo)(e), !0);
     } catch {
         return !1;
     }
@@ -87,7 +87,7 @@ function M(e, t) {
     function c(e) {
         O(r) || o || ((o = !0), e());
     }
-    return (s.onFinish = () => c(a)), (s.onError = () => c(l)), (s.config = i), n.appendChild(s), s;
+    return ((s.onFinish = () => c(a)), (s.onError = () => c(l)), (s.config = i), n.appendChild(s), s);
 }
 function U(e, t) {
     return t
@@ -116,7 +116,7 @@ let B = function (e) {
         [p, A] = r.useState(!1),
         [E, C] = r.useState(!1),
         [R, b] = r.useState({ sessionToken: n, interviewId: a, consentId: i });
-    r.useEffect(() => {
+    (r.useEffect(() => {
         let e = U(l, s);
         0 !== e.length && (0, T.ZU)((0, T.Dz)({ pipelines: e })).catch(() => {});
     }, []),
@@ -129,7 +129,7 @@ let B = function (e) {
         }, [n, a, i]),
         r.useEffect(() => {
             C(!1);
-        }, [R.sessionToken, R.interviewId]);
+        }, [R.sessionToken, R.interviewId]));
     let L = "waiting_for_result" === _,
         B = "error" === _,
         q = "fallback_available" === _,
@@ -139,11 +139,11 @@ let B = function (e) {
             (e) => {
                 if ("bootstrapping_fallback" === _) {
                     if ("error" in e) {
-                        P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" });
+                        (P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" }));
                         return;
                     }
-                    b((t) => ({ sessionToken: e.sessionToken, interviewId: e.interviewId, consentId: t.consentId })),
-                        I({ type: "FALLBACK_READY" });
+                    (b((t) => ({ sessionToken: e.sessionToken, interviewId: e.interviewId, consentId: t.consentId })),
+                        I({ type: "FALLBACK_READY" }));
                 }
             },
             [_],
@@ -155,18 +155,21 @@ let B = function (e) {
                 try {
                     let e = (await (0, g.eb)({ previousInterviewId: R.interviewId })).incode_parameters;
                     if (e?.session_token == null || null == e.interview_id || null == e.consent_id) {
-                        P("fallback_bootstrap_incomplete"), I({ type: "CAPTURE_FAILED" });
+                        (P("fallback_bootstrap_incomplete"), I({ type: "CAPTURE_FAILED" }));
                         return;
                     }
-                    b({ sessionToken: e.session_token, interviewId: e.interview_id, consentId: e.consent_id }),
-                        I({ type: "FALLBACK_READY" });
+                    (b({ sessionToken: e.session_token, interviewId: e.interview_id, consentId: e.consent_id }),
+                        I({ type: "FALLBACK_READY" }));
                 } catch (e) {
-                    P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" });
+                    (P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" }));
                 }
             }
         }, [R.interviewId, c]),
         Y = r.useCallback(() => {
-            (f.current = !1), C(!1), b({ sessionToken: n, interviewId: a, consentId: i }), I({ type: "RETRY_CAPTURE" });
+            ((f.current = !1),
+                C(!1),
+                b({ sessionToken: n, interviewId: a, consentId: i }),
+                I({ type: "RETRY_CAPTURE" }));
         }, [n, a, i]);
     return (
         r.useEffect(() => {
@@ -177,7 +180,7 @@ let B = function (e) {
                 (async function () {
                     let e = R.interviewId;
                     if (0 === e.length) {
-                        P("missing_interview_id"), O(t) || I({ type: "VERIFICATION_FAILED" });
+                        (P("missing_interview_id"), O(t) || I({ type: "VERIFICATION_FAILED" }));
                         return;
                     }
                     if (null != c) return c.onCaptureComplete(e);
@@ -192,7 +195,7 @@ let B = function (e) {
         r.useEffect(() => {
             if ("bootstrapping_fallback" === _) {
                 let e = setTimeout(() => {
-                    P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" });
+                    (P("fallback_bootstrap_failed"), (f.current = !1), I({ type: "CAPTURE_FAILED" }));
                 }, 3e4);
                 return () => {
                     clearTimeout(e);
@@ -200,7 +203,7 @@ let B = function (e) {
             }
             if ("waiting_for_result" !== _ && !E) return;
             let e = setTimeout(() => {
-                C(!1), P("result_wait_timeout"), I({ type: "VERIFICATION_FAILED" });
+                (C(!1), P("result_wait_timeout"), I({ type: "VERIFICATION_FAILED" }));
             }, 3e4);
             return () => {
                 clearTimeout(e);
@@ -246,7 +249,7 @@ let B = function (e) {
                             }),
                 g = !1;
             function T(e) {
-                f.current || P(e), C(!1), I({ type: "FALLBACK_AVAILABLE" });
+                (f.current || P(e), C(!1), I({ type: "FALLBACK_AVAILABLE" }));
             }
             return (
                 (async function () {
@@ -261,7 +264,7 @@ let B = function (e) {
                                     t = w.intl.string(m.default["S+mgl0"]),
                                     n = { idv2: { capture: { processing: { uploading: t, verifying: t } } } },
                                     i = (0, k.hU)({ lang: e, translations: { en: n, [e]: n } });
-                                i.changeLanguage(e), (0, k.Q5)(i);
+                                (i.changeLanguage(e), (0, k.Q5)(i));
                             })(),
                             await (0, F.mj)({
                                 apiURL: (n = t.endsWith("/") ? t.slice(0, -1) : t).endsWith("/0") ? n : `${n}/0`,
@@ -298,12 +301,12 @@ let B = function (e) {
                                                             e?.scoreStatus === "MANUAL_FAIL";
                                                         if (E.allowsIdFallback && !f.current && t)
                                                             return void T("result_gate_triggered_fallback");
-                                                        C(!1), I({ type: "CAPTURE_COMPLETED" });
+                                                        (C(!1), I({ type: "CAPTURE_COMPLETED" }));
                                                     } catch {
                                                         if (O(p)) return;
-                                                        C(!1),
+                                                        (C(!1),
                                                             P("finish_status_error"),
-                                                            I({ type: "VERIFICATION_FAILED" });
+                                                            I({ type: "VERIFICATION_FAILED" }));
                                                     }
                                                 })())
                                               : I({ type: "CAPTURE_COMPLETED" });
@@ -323,23 +326,23 @@ let B = function (e) {
                                 config: { consentId: R.consentId },
                                 signal: p,
                                 onFinish: () => {
-                                    t.parentNode?.removeChild(t), e();
+                                    (t.parentNode?.removeChild(t), e());
                                 },
                                 onError: () => {
-                                    P("consent_error"), I({ type: "CAPTURE_FAILED" });
+                                    (P("consent_error"), I({ type: "CAPTURE_FAILED" }));
                                 },
                             });
-                            (d.current = t), A(!0);
+                            ((d.current = t), A(!0));
                         }
                     } catch (e) {
                         if (O(p)) return;
-                        P("sdk_init_error"), I({ type: "CAPTURE_FAILED" });
+                        (P("sdk_init_error"), I({ type: "CAPTURE_FAILED" }));
                     }
                 })(),
                 () => {
-                    c.abort(), i?.(), A(!1);
+                    (c.abort(), i?.(), A(!1));
                     let e = d.current;
-                    e?.parentNode != null && e.parentNode.removeChild(e), (d.current = null), V();
+                    (e?.parentNode != null && e.parentNode.removeChild(e), (d.current = null), V());
                 }
             );
         }, [t, R, _, l, s, o]),
@@ -370,7 +373,7 @@ let Q = function (e) {
         [N, D] = r.useState(T),
         [S, x] = r.useState(!1),
         V = r.useCallback(async (e) => {
-            L(e), x(!1), D(null);
+            (L(e), x(!1), D(null));
             try {
                 let t = await (0, g.D0)(e);
                 null == t ? x(!0) : D(t);
@@ -424,7 +427,7 @@ let Q = function (e) {
         }, [O, F]);
     (0, C.dZ)(ei);
     let er = r.useCallback(() => {
-            a?.(), t();
+            (a?.(), t());
         }, [a, t]),
         ea = null;
     return (H ||

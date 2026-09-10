@@ -32,10 +32,10 @@ function y(e) {
     function Y() {
         if (null != T && H) {
             if (S) {
-                v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
+                (v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t());
                 return;
             }
-            v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
+            (v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t());
         }
     }
     let O = l.useCallback((e) => R(e), []),
@@ -98,13 +98,13 @@ function y(e) {
                                             closePopout: n,
                                             onSelectEmoji: (e) => {
                                                 let { emoji: t, willClose: i } = e;
-                                                null != t &&
+                                                (null != t &&
                                                     F(
                                                         null != t.id
                                                             ? { id: t.id, name: t.name }
                                                             : { id: void 0, name: t.optionallyDiverseSequence },
                                                     ),
-                                                    i && n();
+                                                    i && n());
                                             },
                                             pickerIntention: k.EmojiIntention.COMMUNITY_CONTENT,
                                             onNavigateAway: t,
@@ -148,7 +148,7 @@ function y(e) {
                                 ? {
                                       icon: s.a,
                                       onClick: function () {
-                                          R(""), F(null);
+                                          (R(""), F(null));
                                       },
                                       "aria-label": N.intl.string(N.t.o8lsHe),
                                   }

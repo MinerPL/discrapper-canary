@@ -1,13 +1,13 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.createParsingComponentsAtWeekday = function (e, t, r) {
         let n = i(e.getDateWithAdjustedTimezone(), t, r),
             s = new a.ParsingComponents(e);
-        return (s = s.addDurationAsImplied({ day: n })).assign("weekday", t), s;
+        return ((s = s.addDurationAsImplied({ day: n })).assign("weekday", t), s);
     }),
     (t.getDaysToWeekday = i),
     (t.getDaysToWeekdayClosest = s),
     (t.getDaysForwardToWeekday = o),
-    (t.getBackwardDaysToWeekday = u);
+    (t.getBackwardDaysToWeekday = u));
 let n = r(115004),
     a = r(115835);
 function i(e, t, r) {
@@ -36,9 +36,9 @@ function s(e, t) {
 }
 function o(e, t) {
     let r = t - e.getDay();
-    return r < 0 && (r += 7), r;
+    return (r < 0 && (r += 7), r);
 }
 function u(e, t) {
     let r = t - e.getDay();
-    return r >= 0 && (r -= 7), r;
+    return (r >= 0 && (r -= 7), r);
 }

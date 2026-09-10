@@ -11,11 +11,11 @@ function n(e) {
         !1
     );
 }
-((t = e.exports =
+(((t = e.exports =
     "[object Arguments]" ==
     (function () {
         return Object.prototype.toString.call(arguments);
     })()
         ? r
         : n).supported = r),
-    (t.unsupported = n);
+    (t.unsupported = n));

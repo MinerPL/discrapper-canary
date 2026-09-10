@@ -9,7 +9,7 @@ n.d(t, {
     R_: () => j,
     Un: () => W,
     XW: () => M,
-    XX: () => q,
+    XX: () => X,
     Y5: () => D,
     cv: () => C,
     ef: () => Y,
@@ -18,10 +18,10 @@ n.d(t, {
     mC: () => x,
     mI: () => P,
     mS: () => N,
-    oc: () => B,
+    oc: () => V,
     qA: () => v,
     s1: () => F,
-    tg: () => V,
+    tg: () => B,
     uA: () => K,
     y9: () => S,
 });
@@ -82,7 +82,7 @@ function y(e) {
     if (-1 === n) return [e, ...t];
     {
         let i = [...t];
-        return (i[n] = e), i;
+        return ((i[n] = e), i);
     }
 }
 function D(e) {
@@ -167,7 +167,7 @@ function F(e, t, n) {
         d = y(new _.Yy({ ...a, games: o }));
     h.A.setPendingWidgets(d);
 }
-function V(e, t, n) {
+function B(e, t, n) {
     let i = L(e);
     if (null == i) return;
     let r = i.games.find((e) => e.gameId === t);
@@ -175,7 +175,7 @@ function V(e, t, n) {
     let a = r.tags.filter((e) => e !== n);
     F(i.type, t, a.length > 0 ? a : []);
 }
-function B(e, t, n) {
+function V(e, t, n) {
     let i = L(e);
     if (null == i) return;
     let r = i.games.find((e) => e.gameId === t);
@@ -197,7 +197,7 @@ function H(e) {
     let l = { gameId: i.gameId, comment: i.comment, tags: i.tags };
     t = null != a ? [l, ...(a.games ?? [])] : [l];
     let o = y(new _.Yy({ ...(a ?? { type: n }), games: t }));
-    h.A.setPendingWidgets(o), d.I.fetchMany([i.gameId]);
+    (h.A.setPendingWidgets(o), d.I.fetchMany([i.gameId]));
 }
 function j(e, t) {
     if (e === t) return;
@@ -205,7 +205,7 @@ function j(e, t) {
     if (e < 0 || e >= n.length || t < 0 || t >= n.length) return;
     let i = [...n],
         [r] = i.splice(e, 1);
-    i.splice(t, 0, r), h.A.setPendingWidgets(i);
+    (i.splice(t, 0, r), h.A.setPendingWidgets(i));
 }
 function W(e, t, n) {
     let i = L(e);
@@ -251,6 +251,6 @@ function z(e, t, n) {
         )
     );
 }
-function q(e) {
+function X(e) {
     return !(0, l.K)(e.contentClassification) && !i.Z.has(e.id);
 }

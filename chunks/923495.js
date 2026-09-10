@@ -37,7 +37,7 @@ class d {
     ageVerification;
     appStore;
     constructor(e, t, n) {
-        (this.settings = e), (this.ageVerification = t), (this.appStore = n);
+        ((this.settings = e), (this.ageVerification = t), (this.appStore = n));
     }
     isFeatureAgeGated(e) {
         return this.ageVerification.isFeatureAgeGated(e);
@@ -94,7 +94,8 @@ class E extends i.Ay.Store {
 }
 let A = new E(r.h, {
     CONNECTION_OPEN: function (e) {
-        _(e.countryCode), (c = null != e.regionalFeatureConfig ? d.fromConnectionOpen(e.regionalFeatureConfig) : null);
+        (_(e.countryCode),
+            (c = null != e.regionalFeatureConfig ? d.fromConnectionOpen(e.regionalFeatureConfig) : null));
     },
     SET_LOCATION_METADATA: function (e) {
         let { countryCode: t } = e;

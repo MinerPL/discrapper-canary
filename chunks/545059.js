@@ -5,7 +5,7 @@ var l = n(132500),
 let s = {
     createGroup(e) {
         let t = (0, l.A)();
-        return i.h.dispatch({ type: "CREATE_FRIEND_GROUP", groupId: t, name: e }), t;
+        return (i.h.dispatch({ type: "CREATE_FRIEND_GROUP", groupId: t, name: e }), t);
     },
     updateGroup(e, t) {
         i.h.dispatch({ type: "UPDATE_FRIEND_GROUP", groupId: e, name: t });

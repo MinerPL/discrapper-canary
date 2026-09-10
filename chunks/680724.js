@@ -9,7 +9,7 @@ let o = {},
     c = null,
     u = new Set();
 function _() {
-    (d = {}), (o = {});
+    ((d = {}), (o = {}));
 }
 class E extends i.Ay.Store {
     initialize() {
@@ -49,7 +49,7 @@ let A = new E(r.h, {
         if (null == i.nonce || i.activity?.type !== l.xL.STREAM_REQUEST) return !1;
         let a = o[i.nonce];
         if (null == a) return !1;
-        delete o[i.nonce], (d = { ...d, [a]: i.id });
+        (delete o[i.nonce], (d = { ...d, [a]: i.id }));
     },
     MESSAGE_DELETE: function (e) {
         let { id: t } = e;
@@ -63,13 +63,13 @@ let A = new E(r.h, {
     VOICE_STATE_UPDATES: function () {
         if (s.A.getWasMoved()) {
             if (s.A.getChannelId() === c) return !1;
-            (c = s.A.getChannelId()), _();
+            ((c = s.A.getChannelId()), _());
         } else {
             if (null == c) return !1;
             c = null;
         }
     },
     LOGOUT: function () {
-        _(), u.clear();
+        (_(), u.clear());
     },
 });

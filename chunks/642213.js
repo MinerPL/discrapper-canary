@@ -21,7 +21,7 @@ function d(n) {
             l._.subscribe(o.jej.SCROLL_PAGE_DOWN, c),
             l._.subscribe(o.jej.SCROLL_PAGE_UP, e),
             () => {
-                l._.unsubscribe(o.jej.SCROLL_PAGE_DOWN, c), l._.unsubscribe(o.jej.SCROLL_PAGE_UP, e);
+                (l._.unsubscribe(o.jej.SCROLL_PAGE_DOWN, c), l._.unsubscribe(o.jej.SCROLL_PAGE_UP, e));
             }
         );
     });
@@ -34,10 +34,12 @@ function p(n) {
 function C(n, e, c) {
     function t() {
         let { id: t, channel_id: u } = n;
-        null != s.A.getChannel(u) && (i.A.trackJump(u, t, e), (0, a.ci)(u, t)), c();
+        (null != s.A.getChannel(u) && (i.A.trackJump(u, t, e), (0, a.ci)(u, t)), c());
     }
     (0, r.A)(n, t) && t();
 }
 function L(n, e, c, i) {
-    (0, u.zV)(o.HAw.INBOX_CHANNEL_CLICKED, { channel_id: n, guild_id: e, type: c }), (0, _.A)(o.BVt.CHANNEL(e, n)), i();
+    ((0, u.zV)(o.HAw.INBOX_CHANNEL_CLICKED, { channel_id: n, guild_id: e, type: c }),
+        (0, _.A)(o.BVt.CHANNEL(e, n)),
+        i());
 }

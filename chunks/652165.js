@@ -44,7 +44,7 @@ function r(e) {
         discoverySessionId: r,
         skuId: o,
         onComplete: (e) => {
-            h || t(e), (h = !0);
+            (h || t(e), (h = !0));
         },
         applicationId: d,
         analyticsLocations: n,

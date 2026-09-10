@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { safetyPlaygroundConfig: () => c });
+(s.r(t), s.d(t, { safetyPlaygroundConfig: () => c }));
 var r = s(477900),
     a = s(582128),
     n = s(297264),

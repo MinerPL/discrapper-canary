@@ -21,7 +21,7 @@ let a = "",
     g = null,
     P = null;
 function v() {
-    (a = ""),
+    ((a = ""),
         (s = null),
         (o = ""),
         (u = !1),
@@ -38,7 +38,7 @@ function v() {
         (I = null),
         (A = null),
         (g = null),
-        (P = null);
+        (P = null));
 }
 function _() {
     I = null;
@@ -96,11 +96,11 @@ class N extends l.Ay.Store {
 let b = new N(i.h, {
     NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: function (e) {
         let { info: t, isValid: n } = e;
-        (m = t.name), (u = n);
+        ((m = t.name), (u = n));
     },
     NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function (e) {
         let { info: t, isValid: n } = e;
-        null != t.name && "" !== t.name && (m = t.name),
+        (null != t.name && "" !== t.name && (m = t.name),
             (d = t.country),
             (m = t.name),
             (C = t.line1),
@@ -109,14 +109,14 @@ let b = new N(i.h, {
             (E = t.postalCode),
             (S = t.state),
             (p = t.email),
-            (y = n);
+            (y = n));
     },
     BRAINTREE_TOKENIZE_PAYPAL_START: function () {
-        (a = ""), (s = null);
+        ((a = ""), (s = null));
     },
     BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: function (e) {
         let { email: t, nonce: n, billingAddress: l } = e;
-        (a = t),
+        ((a = t),
             (s = n),
             (m = l.name),
             (d = l.country),
@@ -126,14 +126,14 @@ let b = new N(i.h, {
             (E = l.postalCode),
             (S = l.state),
             (p = l.email),
-            (y = d.length > 0);
+            (y = d.length > 0));
     },
     BRAINTREE_TOKENIZE_VENMO_START: function () {
-        (o = ""), (s = null);
+        ((o = ""), (s = null));
     },
     BRAINTREE_TOKENIZE_VENMO_SUCCESS: function (e) {
         let { username: t, nonce: n } = e;
-        (o = t), (s = n);
+        ((o = t), (s = n));
     },
     BRAINTREE_TOKENIZE_PAYPAL_FAIL: T,
     BRAINTREE_TOKENIZE_VENMO_FAIL: T,
@@ -155,6 +155,6 @@ let b = new N(i.h, {
             : t?.payment_source_id != null && ((g = !0), (P = t.payment_source_id));
     },
     RESET_PAYMENT_ID: function () {
-        (g = !1), (A = null);
+        ((g = !1), (A = null));
     },
 });

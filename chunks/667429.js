@@ -1,4 +1,4 @@
-t.r(s), t.d(s, { default: () => h });
+(t.r(s), t.d(s, { default: () => h }));
 var r = t(477900);
 t(582128);
 var e = t(331322),

@@ -1,4 +1,4 @@
-s.r(i), s.d(i, { default: () => ig });
+(s.r(i), s.d(i, { default: () => ig }));
 var l = s(477900),
     n = s(582128),
     t = s(234e3),
@@ -349,7 +349,7 @@ function ew(e) {
                                 applicationRoleConnection: e,
                                 locale: c,
                                 onApplicationClicked: () => {
-                                    t({ action: "PRESS_APP_CONNECTION" }), n();
+                                    (t({ action: "PRESS_APP_CONNECTION" }), n());
                                 },
                                 selectedGuildId: d ?? void 0,
                             },
@@ -401,14 +401,14 @@ function eX(e) {
                                     channelId: t,
                                     onSelect: () => {
                                         var e;
-                                        d?.(),
+                                        (d?.(),
                                             o({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = n.id),
                                             (0, eK.openUserProfileModal)({
                                                 ...c,
                                                 userId: e,
                                                 sourceAnalyticsLocations: a,
-                                            });
+                                            }));
                                     },
                                 },
                                 i,
@@ -441,7 +441,7 @@ function e$(e) {
                                 nick: d,
                                 onSelect: () => {
                                     var e;
-                                    n({ action: "PRESS_MUTUAL_GUILD" }), (e = t.id), (0, eZ.u)(e), s(), (0, eQ.jH)();
+                                    (n({ action: "PRESS_MUTUAL_GUILD" }), (e = t.id), (0, eZ.u)(e), s(), (0, eQ.jH)());
                                 },
                             },
                             t.id,
@@ -495,7 +495,7 @@ function e3(e) {
     }, [r, A]);
     let h = n.useCallback(
         (e) => {
-            o({ action: "PRESS_SECTION", section: e }), x(e);
+            (o({ action: "PRESS_SECTION", section: e }), x(e));
         },
         [o],
     );
@@ -963,23 +963,23 @@ function im(e) {
                                             size: "md",
                                             isBlocked: h,
                                             onClick: () => {
-                                                o(),
+                                                (o(),
                                                     (0, io.Wn)({
                                                         action: h ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: j,
                                                         ...p,
-                                                    });
+                                                    }));
                                             },
                                         }),
                                         (0, l.jsx)(iA.A, {
                                             userId: i.id,
                                             onClick: () => {
-                                                o(),
+                                                (o(),
                                                     (0, io.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                         analyticsLocations: j,
                                                         ...p,
-                                                    });
+                                                    }));
                                             },
                                         }),
                                     ],

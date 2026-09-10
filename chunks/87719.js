@@ -10,7 +10,7 @@ function l() {
     }
 }
 function o(e) {
-    e?.(), (0, i.jH)();
+    (e?.(), (0, i.jH)());
     {
         let { default: e } = n(830543);
         e();

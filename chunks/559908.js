@@ -90,7 +90,7 @@ let m = new T(s.h, {
                         multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
                         decayInterval: i?.decayInterval ?? new a.IX(),
                     };
-                h.set(f(t), r),
+                (h.set(f(t), r),
                     n &&
                         r.decayInterval?.start(1e3, () => {
                             let t = h.get(f(r));
@@ -101,7 +101,7 @@ let m = new T(s.h, {
                                       t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), m.emitChange()))
                                     : (e({ ...t, value: t.value - 1 }), m.emitChange());
                             }
-                        });
+                        }));
             })(n);
         },
         POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
@@ -125,7 +125,7 @@ let m = new T(s.h, {
                 null != n.find((e) => e.id === a)
             ) {
                 let e = null != s ? ((0, u.U$)(s, _.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
-                return d._.dispatch(E.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0;
+                return (d._.dispatch(E.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0);
             }
             return !1;
         },

@@ -1,4 +1,4 @@
-(e.byteLength = function (t) {
+((e.byteLength = function (t) {
     var e = a(t),
         r = e[0],
         s = e[1];
@@ -14,14 +14,14 @@
             c = 0,
             l = h > 0 ? o - 4 : o;
         for (r = 0; r < l; r += 4)
-            (e =
+            ((e =
                 (s[t.charCodeAt(r)] << 18) |
                 (s[t.charCodeAt(r + 1)] << 12) |
                 (s[t.charCodeAt(r + 2)] << 6) |
                 s[t.charCodeAt(r + 3)]),
                 (f[c++] = (e >> 16) & 255),
                 (f[c++] = (e >> 8) & 255),
-                (f[c++] = 255 & e);
+                (f[c++] = 255 & e));
         return (
             2 === h && ((e = (s[t.charCodeAt(r)] << 2) | (s[t.charCodeAt(r + 1)] >> 4)), (f[c++] = 255 & e)),
             1 === h &&
@@ -36,8 +36,8 @@
             i.push(
                 (function (t, e, s) {
                     for (var n, i = [], o = e; o < s; o += 3)
-                        (n = ((t[o] << 16) & 0xff0000) + ((t[o + 1] << 8) & 65280) + (255 & t[o + 2])),
-                            i.push(r[(n >> 18) & 63] + r[(n >> 12) & 63] + r[(n >> 6) & 63] + r[63 & n]);
+                        ((n = ((t[o] << 16) & 0xff0000) + ((t[o + 1] << 8) & 65280) + (255 & t[o + 2])),
+                            i.push(r[(n >> 18) & 63] + r[(n >> 12) & 63] + r[(n >> 6) & 63] + r[63 & n]));
                     return i.join("");
                 })(t, o, o + 16383 > h ? h : o + 16383),
             );
@@ -48,7 +48,7 @@
                   i.push(r[(e = (t[s - 2] << 8) + t[s - 1]) >> 10] + r[(e >> 4) & 63] + r[(e << 2) & 63] + "="),
             i.join("")
         );
-    });
+    }));
 for (
     var r = [],
         s = [],
@@ -59,7 +59,7 @@ for (
     o < h;
     ++o
 )
-    (r[o] = i[o]), (s[i.charCodeAt(o)] = o);
+    ((r[o] = i[o]), (s[i.charCodeAt(o)] = o));
 function a(t) {
     var e = t.length;
     if (e % 4 > 0) throw Error("Invalid string. Length must be a multiple of 4");
@@ -68,4 +68,4 @@ function a(t) {
     var s = r === e ? 0 : 4 - (r % 4);
     return [r, s];
 }
-(s[45] = 62), (s[95] = 63);
+((s[45] = 62), (s[95] = 63));

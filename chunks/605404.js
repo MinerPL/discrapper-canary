@@ -30,8 +30,8 @@ class d {
             s = this.pendingDetectedLaunchTimeouts.get(t);
         i && null != s && (clearTimeout(s), this.pendingDetectedLaunchTimeouts.delete(t));
         let l = setTimeout(() => {
-            this.pendingDetectedLaunchTimeouts.get(t) === l && this.pendingDetectedLaunchTimeouts.delete(t), r();
+            (this.pendingDetectedLaunchTimeouts.get(t) === l && this.pendingDetectedLaunchTimeouts.delete(t), r());
         }, a);
-        i || this.pendingDetectedLaunchTimeouts.set(t, l), this.identityKeys.set(t, n);
+        (i || this.pendingDetectedLaunchTimeouts.set(t, l), this.identityKeys.set(t, n));
     }
 }

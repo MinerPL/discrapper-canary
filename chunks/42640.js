@@ -4,17 +4,17 @@ var i =
             ? function (e, t, n, i) {
                   void 0 === i && (i = n);
                   var r = Object.getOwnPropertyDescriptor(t, n);
-                  (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
+                  ((!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
                       (r = {
                           enumerable: !0,
                           get: function () {
                               return t[n];
                           },
                       }),
-                      Object.defineProperty(e, i, r);
+                      Object.defineProperty(e, i, r));
               }
             : function (e, t, n, i) {
-                  void 0 === i && (i = n), (e[i] = t[n]);
+                  (void 0 === i && (i = n), (e[i] = t[n]));
               }),
     r =
         (this && this.__setModuleDefault) ||
@@ -31,7 +31,7 @@ var i =
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var n in e) "default" !== n && Object.prototype.hasOwnProperty.call(e, n) && i(t, e, n);
-            return r(t, e), t;
+            return (r(t, e), t);
         };
 let a = o(n(794268)),
     s = o(n(636102));

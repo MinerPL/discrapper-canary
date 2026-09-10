@@ -38,10 +38,10 @@ function d(e) {
               src: j,
               alt: c.intl.formatToPlainString(c.t["3ev90U"], { game: v }),
               onError: function (e) {
-                  h(!0), d?.(e);
+                  (h(!0), d?.(e));
               },
               onLoad: function (e) {
-                  h(!1), u?.(e);
+                  (h(!1), u?.(e));
               },
               draggable: !1,
           });

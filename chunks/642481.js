@@ -43,11 +43,11 @@ function b(e) {
             caretConfig: x,
             scrollBehavior: _,
             showCloseButton: A = !0,
-            isCaretHoverable: v = !1,
-            shouldTrapFocus: N = !1,
+            isCaretHoverable: N = !1,
+            shouldTrapFocus: v = !1,
             returnRef: R,
-            onNudgeChange: j,
-            ...I
+            onNudgeChange: I,
+            ...j
         } = e,
         [y, C] = l.useState(h ?? "top");
     l.useEffect(() => {
@@ -66,28 +66,28 @@ function b(e) {
         P = l.useCallback((e) => {
             C(e);
         }, []),
-        M = v ? E.caretHoverable : void 0,
-        O = {
-            targetElementRef: I.targetElementRef,
-            shouldShow: I.shouldShow,
-            hasVideo: I.hasVideo,
+        O = N ? E.caretHoverable : void 0,
+        M = {
+            targetElementRef: j.targetElementRef,
+            shouldShow: j.shouldShow,
+            hasVideo: j.hasVideo,
             position: y,
             caretConfig: T,
             onRequestClose: S,
             gradientColor: g,
             onPositionChange: P,
-            onNudgeChange: j,
+            onNudgeChange: I,
             scrollBehavior: _,
-            modal: N,
+            modal: v,
             returnRef: R,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === I.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: I.align }
+            ...("edge" === j.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: j.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
     return (0, a.jsx)(i.x, {
-        ...O,
+        ...M,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
@@ -102,7 +102,7 @@ function b(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: E.actionBar }) : null,
-                null != T && (0, a.jsx)(d.F, { className: M }),
+                null != T && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });

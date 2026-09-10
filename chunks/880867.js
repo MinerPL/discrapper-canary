@@ -69,10 +69,10 @@ ${l}`
                         null != t &&
                             (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: _.Hx.USER_PROFILE }));
                     }
-                    (0, n.P0)((0, s.o)(M.intl.string(M.t.kwmYkt), r.Ck.SUCCESS)),
+                    ((0, n.P0)((0, s.o)(M.intl.string(M.t.kwmYkt), r.Ck.SUCCESS)),
                         a &&
                             null != t[0] &&
-                            ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, o.closeAllModals)());
+                            ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, o.closeAllModals)()));
                 } catch (e) {
                     (0, n.P0)((0, s.o)(M.intl.string(M.t.iufib1), r.Ck.FAILURE));
                 } finally {

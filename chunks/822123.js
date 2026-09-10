@@ -1,28 +1,28 @@
-n.d(t, {
+(n.d(t, {
     C5: () => H,
     CQ: () => U,
-    D6: () => Z,
-    DA: () => X,
+    D6: () => q,
+    DA: () => Z,
     EG: () => G,
     Fj: () => K,
     Nu: () => W,
-    O7: () => q,
+    O7: () => X,
     QZ: () => $,
     V$: () => b,
     Wf: () => k,
     Wi: () => x,
     XI: () => z,
-    _7: () => B,
+    _7: () => V,
     bo: () => F,
     sL: () => Y,
     ss: () => P,
     wT: () => Q,
     wt: () => j,
     xf: () => w,
-    yB: () => V,
+    yB: () => B,
 }),
     n(667532),
-    n(321073);
+    n(321073));
 var i = n(582128),
     r = n(435558),
     a = n(132500),
@@ -63,7 +63,8 @@ function v(e) {
 function b(e) {
     let { intention: t, location: n } = e,
         i = (0, a.A)().replace(D, "");
-    u.Om.setAnalyticsId(i), l.Ay.trackWithMetadata(C.HAw.SEARCH_OPENED, { search_type: v(t), load_id: i, location: n });
+    (u.Om.setAnalyticsId(i),
+        l.Ay.trackWithMetadata(C.HAw.SEARCH_OPENED, { search_type: v(t), load_id: i, location: n }));
 }
 function M(e) {
     return null != e && "" !== e ? { load_id: e } : {};
@@ -114,7 +115,7 @@ function P(e, t) {
                     if (0 === l.length) continue;
                     let _ = o.Ay.getHiddenEmojiIds(e.id),
                         E = null;
-                    t === N.s.GUILD &&
+                    (t === N.s.GUILD &&
                         (E = {
                             type: N.s.GUILD,
                             guild: e,
@@ -123,7 +124,7 @@ function P(e, t) {
                             emojisDisabled: s,
                             emojisHidden: _,
                         }),
-                        null != E && (e.id === n ? c.unshift(E) : c.push(E));
+                        null != E && (e.id === n ? c.unshift(E) : c.push(E)));
                 }
             })(s, N.s.GUILD),
             o.Ay.categories.reduce(
@@ -165,8 +166,8 @@ function P(e, t) {
                         });
                     } else if (i === N.R2.CUSTOM) {
                         let e = c;
-                        l || (e = c.filter((e) => (e.type === N.s.GUILD ? e.guild.id === n : (e.type, !1)))),
-                            t.push(...e);
+                        (l || (e = c.filter((e) => (e.type === N.s.GUILD ? e.guild.id === n : (e.type, !1)))),
+                            t.push(...e));
                     } else t.push({ type: N.s.UNICODE, id: i, name: i, isNitroLocked: !1 });
                     return t;
                 },
@@ -238,7 +239,7 @@ function F(e) {
     let { location: t, searchQuery: n, intention: i, loadId: r } = e;
     l.Ay.trackWithMetadata(C.HAw.SEARCH_RESULT_EMPTY, { search_type: v(i), query: n, location: t, ...M(r) });
 }
-function V(e) {
+function B(e) {
     let { emoji: t, subCategory: n, position: i, newlyAddedHighlight: r } = e;
     l.Ay.trackWithMetadata(C.HAw.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
         expression_section: n?.toString(),
@@ -249,7 +250,7 @@ function V(e) {
         emoji_position: i,
     });
 }
-function B(e) {
+function V(e) {
     let t,
         {
             emoji: n,
@@ -393,7 +394,7 @@ function z(e) {
         (0, s.yK)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
     );
 }
-function q(e, t) {
+function X(e, t) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();
@@ -404,7 +405,7 @@ function q(e, t) {
         )
     );
 }
-function Z(e) {
+function q(e) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();
@@ -412,7 +413,7 @@ function Z(e) {
         (0, s.yK)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function X(e, t, n) {
+function Z(e, t, n) {
     if (null == n) return N.tm.NONE;
     let i = e.map((e) => e.id ?? e.uniqueName ?? e.name),
         r = t.map((e) => e.id);

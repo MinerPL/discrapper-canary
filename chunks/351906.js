@@ -30,12 +30,12 @@ class E extends i.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        Object.assign(u, e),
+        (Object.assign(u, e),
             this.syncWith([l.default], () => {
                 let e,
                     t = l.default.getId();
                 _ = null != t ? (null == (e = u[t]) && (e = u[t] = { ...c }), e) : { ...c };
-            });
+            }));
     }
     getState() {
         return u;
@@ -106,7 +106,7 @@ let A = new E(r.h, {
         if (!_.autoToggle) return !1;
         {
             let t = e.count > 0;
-            return (_.enabled = t), d(t, !0), !0;
+            return ((_.enabled = t), d(t, !0), !0);
         }
     },
 });

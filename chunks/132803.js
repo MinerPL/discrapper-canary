@@ -46,6 +46,6 @@ var l = function (e) {
 function f(e, t) {
     if (e.size) {
         var r = Array.from(e);
-        e.clear(), u(r, t);
+        (e.clear(), u(r, t));
     }
 }

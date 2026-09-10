@@ -7,15 +7,15 @@ let l = s.wY_.UNKNOWN,
     o = s.NKC.UNKNOWN,
     d = null;
 function c(e) {
-    (l = null != e.type ? e.type : s.wY_.UNKNOWN),
+    ((l = null != e.type ? e.type : s.wY_.UNKNOWN),
         (o = e.effectiveSpeed ?? s.NKC.UNKNOWN),
         (d = e.serviceProvider),
-        _.emitChange();
+        _.emitChange());
 }
 class u extends i.Ay.Store {
     static displayName = "NetworkStore";
     initialize() {
-        a.A.getNetworkInformation().then(c), a.A.addChangeCallback(c);
+        (a.A.getNetworkInformation().then(c), a.A.addChangeCallback(c));
     }
     getType() {
         return l;

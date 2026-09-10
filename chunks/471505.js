@@ -12,7 +12,7 @@ function e(a) {
             onError: p,
         }),
         r = i.useCallback(async () => {
-            n?.(), await t();
+            (n?.(), await t());
         }, [n, t]);
     return { ...h, handleToggle: r };
 }

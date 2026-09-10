@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(321073), n(667532);
+(n.d(t, { A: () => b }), n(321073), n(667532));
 var l = n(435558),
     r = n.n(l),
     a = n(136722),
@@ -57,12 +57,12 @@ function P(e) {
             if ((null != e.reason && l.push(new E.QO(A.gGk.REASON, null, e.reason)), null != e.changes))
                 for (let t of e.changes) {
                     let e = new E.QO(t.key, t.old_value, t.new_value);
-                    l.push(e),
+                    (l.push(e),
                         e.key === A.gGk.NAME
                             ? (a = e)
                             : e.key === A.gGk.TYPE
                               ? (s = e)
-                              : e.key === A.gGk.TITLE && (i = e);
+                              : e.key === A.gGk.TITLE && (i = e));
                 }
             if (e.action_type === A.F_X.MEMBER_PRUNE) {
                 let t =
@@ -72,12 +72,12 @@ function P(e) {
                     n = new E.QO(A.gGk.PRUNE_DELETE_DAYS, null, t);
                 l.push(n);
             }
-            e.action_type === A.F_X.AUTO_MODERATION_BLOCK_MESSAGE &&
+            (e.action_type === A.F_X.AUTO_MODERATION_BLOCK_MESSAGE &&
                 e.options?.auto_moderation_rule_name != null &&
                 l.push(new E.QO(A.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)),
                 e.action_type === A.F_X.VOICE_CHANNEL_STATUS_CREATE &&
                     e.options?.status != null &&
-                    l.push(new E.QO(A.gGk.STATUS, null, e.options.status));
+                    l.push(new E.QO(A.gGk.STATUS, null, e.options.status)));
             let o = new E.Ay({
                     id: e.id,
                     action: e.action_type,
@@ -112,20 +112,20 @@ function P(e) {
                     );
                 })(c, o, n)
             ) {
-                (t[0] = c.merge({ changes: [...c.changes, ...o.changes], timestampEnd: o.timestampStart })), n++;
+                ((t[0] = c.merge({ changes: [...c.changes, ...o.changes], timestampEnd: o.timestampStart })), n++);
                 return;
             }
             if (o.actionType === A.RWi.DELETE && (null != a || null != i)) {
                 let e = a?.oldValue ?? i?.oldValue;
-                (o.targetType === A.GaG.CHANNEL || o.targetType === A.GaG.CHANNEL_OVERWRITE) &&
+                ((o.targetType === A.GaG.CHANNEL || o.targetType === A.GaG.CHANNEL_OVERWRITE) &&
                     null !== s &&
                     (0, u.tr)(s.oldValue) &&
                     (e = `#${e}`),
                     null == k[o.targetType]
                         ? (k[o.targetType] = { [o.targetId]: e })
-                        : (k[o.targetType][o.targetId] = e);
+                        : (k[o.targetType][o.targetId] = e));
             }
-            (n = 0), t.unshift(o);
+            ((n = 0), t.unshift(o));
         }),
         t
     );
@@ -214,7 +214,7 @@ let b = new v(s.h, {
         L = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
-        (F = 0),
+        ((F = 0),
             (h = !1),
             (L = !1),
             (M = !0),
@@ -226,14 +226,14 @@ let b = new v(s.h, {
             (m = e.automodRules ?? []),
             (R = e.threads),
             (D = e.applicationCommands),
-            e.logs.length < A.$jw && (M = !1);
+            e.logs.length < A.$jw && (M = !1));
     },
     AUDIT_LOG_FETCH_FAIL: function () {
-        (L = !1), (x = !0), (I = []);
+        ((L = !1), (x = !0), (I = []));
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        (C = !0), t && F++;
+        ((C = !0), t && F++);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -278,10 +278,10 @@ let b = new v(s.h, {
     GUILD_SETTINGS_SET_SECTION: j,
     GUILD_SETTINGS_INIT: function (e) {
         let { guildId: t, section: n } = e;
-        return (T = t), (p = null), j({ section: n });
+        return ((T = t), (p = null), j({ section: n }));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (I = []),
+        ((I = []),
             (G = []),
             (f = A.F_X.ALL),
             (U = null),
@@ -293,6 +293,6 @@ let b = new v(s.h, {
             (O = []),
             (S = []),
             (m = []),
-            (R = []);
+            (R = []));
     },
 });

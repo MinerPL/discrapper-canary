@@ -10,7 +10,7 @@ function l(e) {
 }
 class o extends i.A {
     constructor() {
-        super(), (0, a.A)(this, l);
+        (super(), (0, a.A)(this, l));
     }
 }
 let d = new o();

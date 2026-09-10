@@ -40,7 +40,7 @@ class g {
     _index = {};
     constructor({ intervalInMinutes: e = 15, labelFormat: t = p } = {}) {
         if (e <= 0) throw Error(`intervalInMinutes should be positive number, got ${e}`);
-        (this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
+        ((this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions());
     }
     lookupByValue(e) {
         if (null == e) return;
@@ -51,13 +51,13 @@ class g {
         return (0, o.i$)(e.locale(l().locale()), this.labelFormat);
     }
     _generateTimeOptions() {
-        (this.options = []), (this._index = {});
+        ((this.options = []), (this._index = {}));
         let e = l()(f),
             t = l()(e).add(1, "day"),
             n = l()(e);
-        for (; n < t; ) {
+        for (; n < t;) {
             let e = this._createNewOption(n.clone());
-            this.options.push(e), (this._index[e.value.unix()] = e.value), n.add(this.intervalInMinutes, "minutes");
+            (this.options.push(e), (this._index[e.value.unix()] = e.value), n.add(this.intervalInMinutes, "minutes"));
         }
     }
     _createNewOption(e) {

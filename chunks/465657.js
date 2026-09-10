@@ -80,11 +80,11 @@ function f(e) {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);
     let B = i.useCallback(() => {
-            b(void 0), n();
+            (b(void 0), n());
         }, [b, n]),
         H = i.useCallback(
             (e) => {
-                j(e?.linkWalletEnabled ?? !0), I(o.pn.ADD_PAYMENT_STEPS);
+                (j(e?.linkWalletEnabled ?? !0), I(o.pn.ADD_PAYMENT_STEPS));
             },
             [I, j],
         ),

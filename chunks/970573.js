@@ -125,7 +125,7 @@ function k(e) {
                                                 label: D.intl.string(D.t.lSLMaU),
                                                 action: () => {
                                                     let e;
-                                                    _.A.logout("multi_accounts_list", null, a.id).finally(() => {
+                                                    (_.A.logout("multi_accounts_list", null, a.id).finally(() => {
                                                         f.At(a.id);
                                                     }),
                                                         (e = {}),
@@ -136,7 +136,7 @@ function k(e) {
                                                             location: e,
                                                         }),
                                                         i(2, a.id),
-                                                        null != t && t();
+                                                        null != t && t());
                                                 },
                                                 color: "danger",
                                             }),

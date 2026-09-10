@@ -396,11 +396,11 @@ let G = {
                           if (null == n || null == i) return;
                           let t = C.default.getUser(r);
                           if (null == t) throw Error();
-                          await c.A.kickUser(n.id, r, w(e, "reason") ?? ""),
+                          (await c.A.kickUser(n.id, r, w(e, "reason") ?? ""),
                               u.A.sendBotMessage(
                                   i.id,
                                   P.intl.formatToPlainString(P.t["9wzHDV"], { user: R.Ay.getUserTag(t) }),
-                              );
+                              ));
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t.l0gNlp));
                       })
@@ -508,11 +508,11 @@ let G = {
                           let t = w(e, "delete_messages") ?? 0,
                               a = w(e, "reason") ?? "",
                               s = C.default.getUser(r);
-                          await c.A.banUser(n.id, r, t, a),
+                          (await c.A.banUser(n.id, r, t, a),
                               u.A.sendBotMessage(
                                   i.id,
                                   P.intl.formatToPlainString(P.t.YflWdM, { user: null != s ? R.Ay.getUserTag(s) : r }),
-                              );
+                              ));
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t.w2J6Qs));
                       })
@@ -588,7 +588,7 @@ let G = {
                               a = w(e, "reason") ?? "",
                               l = C.default.getUser(r);
                           if (null == l) throw Error();
-                          await c.A.setCommunicationDisabledUntil({
+                          (await c.A.setCommunicationDisabledUntil({
                               guildId: n.id,
                               userId: r,
                               communicationDisabledUntilTimestamp: s()().add(t, "s").toISOString(),
@@ -598,7 +598,7 @@ let G = {
                               u.A.sendBotMessage(
                                   i.id,
                                   P.intl.formatToPlainString(P.t.BbRV6o, { user: R.Ay.getUserTag(l), duration: t }),
-                              );
+                              ));
                       })().catch(() => {
                           u.A.sendBotMessage(i.id, P.intl.string(P.t["+mWyVq"]));
                       })
@@ -655,8 +655,8 @@ let G = {
                 (async function () {
                     await d.A.openPrivateChannel({ recipientIds: i }).then((e) => {
                         let t = S.A.getChannel(e);
-                        r()(null != t, "Newly created PrivateChannel is null"),
-                            u.A.sendMessage(t.id, I.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND });
+                        (r()(null != t, "Newly created PrivateChannel is null"),
+                            u.A.sendMessage(t.id, I.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
                     });
                 })().catch(() => {
                     u.A.sendBotMessage(n.id, P.intl.string(P.t["3XaE95"]));

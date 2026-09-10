@@ -18,7 +18,7 @@ async function c() {
             },
             rejectWithError: !0,
         });
-        return r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body;
+        return (r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_SUCCESS", settings: e.body }), e.body);
     } catch {
         r.h.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
     }

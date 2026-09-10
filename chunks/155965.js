@@ -77,13 +77,13 @@ function v(e) {
         { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: _, fetched: N } = (0, s.RD)(p),
         y = (0, l.jsx)(d.A, { game: p, size: d.M.MEDIUM }),
         E = i.useCallback(() => {
-            m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
                 connection_type: "application",
                 application_id: t.application_id ?? void 0,
                 location: h,
             }),
-                _({ analyticsLocations: g });
+                _({ analyticsLocations: g }));
         }, [_, n, t.application_id, h, g]);
     return (0, l.jsx)(C, {
         displayName: x,
@@ -143,13 +143,13 @@ function I(e) {
             };
         })(t.provider_id),
         g = i.useCallback(async () => {
-            m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
                 connection_type: "provider",
                 provider_id: t.provider_id ?? void 0,
                 location: a,
             }),
-                await h(a);
+                await h(a));
         }, [h, n, t.provider_id, a]),
         x = i.useMemo(() => {
             if (null != t.provider_id) {
@@ -178,6 +178,6 @@ function M(e) {
         case k.wZ.PROVIDER_CONNECTED_ACCOUNT:
             return (0, l.jsx)(I, { connection: t, guildId: n, location: i });
         default:
-            return t.connection_type, null;
+            return (t.connection_type, null);
     }
 }

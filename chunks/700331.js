@@ -33,18 +33,18 @@ let c = {
     u = {
         markSessionStarted: (e) => {
             let t = l.A.getChannel(e.channelId);
-            i.default.track(s.HAw.OPEN_MODAL, {
+            (i.default.track(s.HAw.OPEN_MODAL, {
                 type: s.JJy.MEDIA_VIEWER,
                 source: e.source,
                 channel_id: e.channelId,
                 channel_type: t?.type,
                 guild_id: t?.guild_id,
             }),
-                d.setState({ ...c, ...e, channelId: e.channelId, channelType: t?.type, guildId: t?.guild_id });
+                d.setState({ ...c, ...e, channelId: e.channelId, channelType: t?.type, guildId: t?.guild_id }));
         },
         markSessionCompleted: () => {
             let e = d.getState();
-            i.default.track(s.HAw.MEDIA_VIEWER_SESSION_COMPLETED, {
+            (i.default.track(s.HAw.MEDIA_VIEWER_SESSION_COMPLETED, {
                 source: e.source,
                 guild_id: e.guildId,
                 channel_id: e.channelId,
@@ -53,7 +53,7 @@ let c = {
                 has_media_options: e.hasMediaOptions,
                 ...e.incrementableActions,
             }),
-                d.setState({ ...c });
+                d.setState({ ...c }));
         },
         markActionPerformed: (e) => {
             d.setState((t) => ({

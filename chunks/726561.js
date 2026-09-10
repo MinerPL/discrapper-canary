@@ -1,4 +1,4 @@
-e.r(s), e.d(s, { default: () => il });
+(e.r(s), e.d(s, { default: () => il }));
 var l,
     t = e(477900),
     n = e(582128),
@@ -174,8 +174,8 @@ function ie(i) {
         S = (0, I.X)(),
         { shouldHideGuildPurchaseEntryPoints: f, restrictionsLoading: G } = (0, h.MH)(s),
         O = null == e || !S || T || G;
-    (0, x.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
-        (0, g.A)(r.Fr ? "role-subscriptions-overview" : void 0);
+    ((0, x.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
+        (0, g.A)(r.Fr ? "role-subscriptions-overview" : void 0));
     let R = l && (null == e || !(E || b) || (f && !G));
     if (
         (n.useEffect(() => {

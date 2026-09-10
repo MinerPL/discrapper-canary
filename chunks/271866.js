@@ -33,10 +33,10 @@ async function A(e, t) {
     }
 }
 function d() {
-    o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
-        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
+    (o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
+        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" }));
 }
 function T() {
-    o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
-        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
+    (o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
+        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" }));
 }

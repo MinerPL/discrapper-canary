@@ -31,7 +31,7 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
             n = new Date(e.refDate.getTime());
         if (t[1]) {
             let a = t[1];
-            "\u660E" == a
+            ("\u660E" == a
                 ? e.refDate.getHours() > 1 && n.setDate(n.getDate() + 1)
                 : "\u6628" == a
                   ? n.setDate(n.getDate() - 1)
@@ -44,10 +44,10 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
                         : "\u5927\u540E" == a && n.setDate(n.getDate() + 3),
                 r.start.assign("day", n.getDate()),
                 r.start.assign("month", n.getMonth() + 1),
-                r.start.assign("year", n.getFullYear());
+                r.start.assign("year", n.getFullYear()));
         } else if (t[4]) {
             let e = t[4];
-            "\u660E" == e
+            ("\u660E" == e
                 ? n.setDate(n.getDate() + 1)
                 : "\u6628" == e
                   ? n.setDate(n.getDate() - 1)
@@ -60,11 +60,11 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
                         : "\u5927\u540E" == e && n.setDate(n.getDate() + 3),
                 r.start.assign("day", n.getDate()),
                 r.start.assign("month", n.getMonth() + 1),
-                r.start.assign("year", n.getFullYear());
+                r.start.assign("year", n.getFullYear()));
         } else
-            r.start.imply("day", n.getDate()),
+            (r.start.imply("day", n.getDate()),
                 r.start.imply("month", n.getMonth() + 1),
-                r.start.imply("year", n.getFullYear());
+                r.start.imply("year", n.getFullYear()));
         let i = 0,
             o = 0,
             u = -1;
@@ -88,7 +88,7 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
         if ((i >= 12 && (u = 1), t[9])) {
             if (i > 12) return null;
             let e = t[9][0].toLowerCase();
-            "a" == e && ((u = 0), 12 == i && (i = 0)), "p" == e && ((u = 1), 12 != i && (i += 12));
+            ("a" == e && ((u = 0), 12 == i && (i = 0)), "p" == e && ((u = 1), 12 != i && (i += 12)));
         } else if (t[2]) {
             let e = t[2][0];
             "\u65E9" == e ? ((u = 0), 12 == i && (i = 0)) : "\u665A" == e && ((u = 1), 12 != i && (i += 12));
@@ -103,19 +103,19 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
                 ? ((u = 0), 12 == i && (i = 0))
                 : ("\u4E0B" == e || "\u665A" == e) && ((u = 1), 12 != i && (i += 12));
         }
-        r.start.assign("hour", i),
+        (r.start.assign("hour", i),
             r.start.assign("minute", o),
             u >= 0
                 ? r.start.assign("meridiem", u)
                 : i < 12
                   ? r.start.imply("meridiem", 0)
-                  : r.start.imply("meridiem", 1);
+                  : r.start.imply("meridiem", 1));
         let l = s.exec(e.text.substring(r.index + r.text.length));
         if (!l) return r.text.match(/^\d+$/) ? null : r;
         let d = new Date(n.getTime());
         if (((r.end = e.createParsingComponents()), l[1])) {
             let t = l[1];
-            "\u660E" == t
+            ("\u660E" == t
                 ? e.refDate.getHours() > 1 && d.setDate(d.getDate() + 1)
                 : "\u6628" == t
                   ? d.setDate(d.getDate() - 1)
@@ -128,10 +128,10 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
                         : "\u5927\u540E" == t && d.setDate(d.getDate() + 3),
                 r.end.assign("day", d.getDate()),
                 r.end.assign("month", d.getMonth() + 1),
-                r.end.assign("year", d.getFullYear());
+                r.end.assign("year", d.getFullYear()));
         } else if (l[4]) {
             let e = l[4];
-            "\u660E" == e
+            ("\u660E" == e
                 ? d.setDate(d.getDate() + 1)
                 : "\u6628" == e
                   ? d.setDate(d.getDate() - 1)
@@ -144,11 +144,11 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
                         : "\u5927\u540E" == e && d.setDate(d.getDate() + 3),
                 r.end.assign("day", d.getDate()),
                 r.end.assign("month", d.getMonth() + 1),
-                r.end.assign("year", d.getFullYear());
+                r.end.assign("year", d.getFullYear()));
         } else
-            r.end.imply("day", d.getDate()),
+            (r.end.imply("day", d.getDate()),
                 r.end.imply("month", d.getMonth() + 1),
-                r.end.imply("year", d.getFullYear());
+                r.end.imply("year", d.getFullYear()));
         if (((i = 0), (o = 0), (u = -1), l[8])) {
             let e = parseInt(l[8]);
             if ((isNaN(e) && (e = (0, a.zhStringToNumber)(l[8])), e >= 60)) return null;
@@ -169,13 +169,13 @@ class o extends n.AbstractParserWithWordBoundaryChecking {
         if ((i >= 12 && (u = 1), l[9])) {
             if (i > 12) return null;
             let e = l[9][0].toLowerCase();
-            "a" == e && ((u = 0), 12 == i && (i = 0)),
+            ("a" == e && ((u = 0), 12 == i && (i = 0)),
                 "p" == e && ((u = 1), 12 != i && (i += 12)),
                 r.start.isCertain("meridiem") ||
                     (0 == u
                         ? (r.start.imply("meridiem", 0), 12 == r.start.get("hour") && r.start.assign("hour", 0))
                         : (r.start.imply("meridiem", 1),
-                          12 != r.start.get("hour") && r.start.assign("hour", r.start.get("hour") + 12)));
+                          12 != r.start.get("hour") && r.start.assign("hour", r.start.get("hour") + 12))));
         } else if (l[2]) {
             let e = l[2][0];
             "\u65E9" == e ? ((u = 0), 12 == i && (i = 0)) : "\u665A" == e && ((u = 1), 12 != i && (i += 12));

@@ -26,7 +26,7 @@ class c extends i.Ay.Store {
 let u = new c(r.h, {
     CONTEXT_MENU_OPEN: function (e) {
         let { contextMenu: t } = e;
-        o++, (l = t);
+        (o++, (l = t));
     },
     LAYER_PUSH: d,
     CONTEXT_MENU_CLOSE: d,

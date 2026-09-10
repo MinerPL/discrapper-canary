@@ -84,11 +84,11 @@ let d = new u(l.h, {
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;
         let t = a(e.lobbyId);
-        (t.state = e.state), (t.hostname = e.hostname);
+        ((t.state = e.state), (t.hostname = e.hostname));
     },
     RTC_CONNECTION_PING: function (e) {
         let t = a(e.lobbyId);
-        (t.pings = e.pings), (t.quality = e.quality);
+        ((t.pings = e.pings), (t.quality = e.quality));
     },
     RTC_CONNECTION_LOSS_RATE: function (e) {
         a(e.lobbyId).lossRate = e.lossRate;

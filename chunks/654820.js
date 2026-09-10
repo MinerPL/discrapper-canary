@@ -1,4 +1,4 @@
-n.d(t, { A: () => o }), n(134528), n(947204);
+(n.d(t, { A: () => o }), n(134528), n(947204));
 var l = n(477900),
     i = n(582128),
     s = n(520698),
@@ -20,14 +20,14 @@ function o(e) {
                     void 0 === (l = s?.resolution) || (0 === l.width && 0 === l.height)
                         ? "unknown"
                         : l.width + " x " + l.height;
-            c("unknown" === a ? "-" : (s?.codec ?? "unknown")),
+            (c("unknown" === a ? "-" : (s?.codec ?? "unknown")),
                 m("unknown" === a ? "-" : a),
                 g(
                     s?.bitrateEstimate !== void 0
                         ? ((i = s.bitrateEstimate), `${(i / 1e3).toFixed(2)} Kbps`)
                         : "unknown",
                 ),
-                x("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps));
+                x("unknown" === a || s?.fps === void 0 ? "-" : String(s.fps)));
         }, []);
     return (
         i.useEffect(() => {

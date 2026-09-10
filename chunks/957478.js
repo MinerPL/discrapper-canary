@@ -38,10 +38,10 @@ function s(r, e) {
                               d ? h.focusNext() : h.focusPrevious();
                           else {
                               if ("Tab" !== r.key) return;
-                              (w.current = (0, l.bq)()), r.shiftKey ? h.focusFirst() : h.focusLast();
+                              ((w.current = (0, l.bq)()), r.shiftKey ? h.focusFirst() : h.focusLast());
                               return;
                           }
-                          r.stopPropagation(), r.preventDefault();
+                          (r.stopPropagation(), r.preventDefault());
                       }
                   },
             onFocusCapture: p

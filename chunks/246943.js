@@ -14,17 +14,17 @@ function u(e) {
 }
 function _(e, t) {
     let n = null == t ? null : (0, a.rh)(t);
-    return (c[e] = { loaded: !0, message: n }), !0;
+    return ((c[e] = { loaded: !0, message: n }), !0);
 }
 function E(e) {
     return c[e]?.message;
 }
 function A(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach((e) => _(e.id, null)),
+    (t.forEach((e) => _(e.id, null)),
         n?.filter(o.Vq).forEach((e) => {
             _(e.channel_id, e);
-        });
+        }));
 }
 class h extends i.Ay.Store {
     static displayName = "ForumPostRecentMessageStore";
@@ -32,7 +32,7 @@ class h extends i.Ay.Store {
         this.waitFor(s.A, l.default);
     }
     getMessageState(e) {
-        return e in c || (c[e] = { loaded: !1, message: null }), c[e];
+        return (e in c || (c[e] = { loaded: !1, message: null }), c[e]);
     }
 }
 new h(r.h, {
@@ -49,16 +49,16 @@ new h(r.h, {
         var t, n;
         let i, r;
         if (!u(e.message) || e.message.channel_id === e.message.id) return !1;
-        (t = e.message.channel_id),
+        ((t = e.message.channel_id),
             (n = e.message),
             (i = c[t]),
             (r = E(t)),
-            null == i || null == r || (c[t] = { ...i, message: (0, a.IU)(r, n) });
+            null == i || null == r || (c[t] = { ...i, message: (0, a.IU)(r, n) }));
     },
     MESSAGE_DELETE: function (e) {
         var t, n;
         let i;
-        return (t = e.channelId), (n = e.id), (i = E(t)), i?.id === n && (delete c[t], !0);
+        return ((t = e.channelId), (n = e.id), (i = E(t)), i?.id === n && (delete c[t], !0));
     },
     LOAD_FORUM_POSTS: function (e) {
         let { threads: t } = e;

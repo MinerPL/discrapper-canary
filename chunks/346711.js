@@ -6,7 +6,7 @@ function n(e) {
                 try {
                     document.createElement("div").focus({
                         get preventScroll() {
-                            return (i = !0), !0;
+                            return ((i = !0), !0);
                         },
                     });
                 } catch {}
@@ -20,18 +20,18 @@ function n(e) {
             let t = e.parentNode,
                 r = [],
                 n = document.scrollingElement || document.documentElement;
-            for (; t instanceof HTMLElement && t !== n; )
-                (t.offsetHeight < t.scrollHeight || t.offsetWidth < t.scrollWidth) &&
+            for (; t instanceof HTMLElement && t !== n;)
+                ((t.offsetHeight < t.scrollHeight || t.offsetWidth < t.scrollWidth) &&
                     r.push({ element: t, scrollTop: t.scrollTop, scrollLeft: t.scrollLeft }),
-                    (t = t.parentNode);
+                    (t = t.parentNode));
             return (
                 n instanceof HTMLElement && r.push({ element: n, scrollTop: n.scrollTop, scrollLeft: n.scrollLeft }), r
             );
         })(e);
-        e.focus(),
+        (e.focus(),
             (function (e) {
-                for (let { element: t, scrollTop: r, scrollLeft: n } of e) (t.scrollTop = r), (t.scrollLeft = n);
-            })(t);
+                for (let { element: t, scrollTop: r, scrollLeft: n } of e) ((t.scrollTop = r), (t.scrollLeft = n));
+            })(t));
     }
 }
 r.d(t, { e: () => n });

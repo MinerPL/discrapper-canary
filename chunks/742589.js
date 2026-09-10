@@ -113,9 +113,9 @@ function I(e) {
         children: t ? (0, i.jsx)(C, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
     });
 }
-(I.Title = u.Ay.Title),
+((I.Title = u.Ay.Title),
     (I.Icon = u.Ay.Icon),
     (I.ChannelIcon = u.Ay.ChannelIcon),
     (I.Divider = u.Ay.Divider),
-    (I.Caret = u.Ay.Caret);
+    (I.Caret = u.Ay.Caret));
 let T = I;

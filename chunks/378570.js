@@ -11,9 +11,9 @@ function u(e, t) {
     let n = l.A.getChannel(e);
     if (null == n) return;
     let i = (0, d.j)(n);
-    a.A.preload(n.guild_id, n.id),
+    (a.A.preload(n.guild_id, n.id),
         (0, o.pX)(c.BVt.CHANNEL(i, n.id), { openChannel: !0, ...t }),
-        t?.openTextInVoiceIfVoiceChannel && n.isGuildVocal() && s.A.updateChatOpen(n.id, !0);
+        t?.openTextInVoiceIfVoiceChannel && n.isGuildVocal() && s.A.updateChatOpen(n.id, !0));
 }
 function _(e, t) {
     r()(null != e.parent_id, "Thread must have a parent ID.");

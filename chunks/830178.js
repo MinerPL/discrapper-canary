@@ -31,9 +31,9 @@ class r {
             ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents]))
             : this.visibleComponents.add(e.target);
         let i = n || this.animatingComponents.size < 100;
-        i ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target),
+        (i ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target),
             t.updateState(i),
-            i && this.visibleComponents.size > 100 && this.stopNodeFromAnimating();
+            i && this.visibleComponents.size > 100 && this.stopNodeFromAnimating());
     }
     handleNotVisible(e, t) {
         this.visibleComponents.has(e.target) &&
@@ -48,7 +48,7 @@ class r {
             let n = e[t];
             if (this.animatingComponents.has(n)) {
                 let e = this.registeredNodes.get(n);
-                e?.updateState(!1), this.animatingComponents.delete(n);
+                (e?.updateState(!1), this.animatingComponents.delete(n));
                 return;
             }
         }
@@ -58,7 +58,7 @@ class r {
             for (let e of this.visibleComponents)
                 if (!this.animatingComponents.has(e)) {
                     let t = this.registeredNodes.get(e);
-                    t?.updateState(!0), this.animatingComponents.add(e);
+                    (t?.updateState(!0), this.animatingComponents.add(e));
                     return;
                 }
         }
@@ -75,14 +75,14 @@ class r {
         );
     }
     unregisterNode(e) {
-        this.registeredNodes.delete(e),
+        (this.registeredNodes.delete(e),
             this.animatingComponents.delete(e),
             this.visibleComponents.delete(e),
             this.observer?.unobserve(e),
-            this.potentiallyAnimateNewNode();
+            this.potentiallyAnimateNewNode());
     }
     cleanUp() {
-        this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
+        (this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear());
     }
 }
 let a = l.createContext({
@@ -101,13 +101,15 @@ function o(e) {
                     return {
                         animate: n,
                         registerRef: l.useCallback((n) => {
-                            null != t.current && e.unregisterNode(t.current),
+                            (null != t.current && e.unregisterNode(t.current),
                                 (t.current = n),
-                                null != t.current && e.registerNode(t.current, i);
+                                null != t.current && e.registerNode(t.current, i));
                         }, []),
                     };
                 },
             };
         });
-    return l.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(a.Provider, { value: n, children: t });
+    return (
+        l.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(a.Provider, { value: n, children: t })
+    );
 }

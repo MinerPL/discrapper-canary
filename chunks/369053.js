@@ -165,11 +165,11 @@ async function G(e) {
 }
 function L(e) {
     let t = e.name;
-    return r()(Object.values(c.tY).includes(t), `Invalid report type ${e.name}`), t;
+    return (r()(Object.values(c.tY).includes(t), `Invalid report type ${e.name}`), t);
 }
 function p(e) {
     let t = e.name;
-    return r()(Object.values(c.t0).includes(t), `Invalid report type ${e.name}`), t;
+    return (r()(Object.values(c.t0).includes(t), `Invalid report type ${e.name}`), t);
 }
 function f(e, t, n, i) {
     let { version: a, variant: _, language: r } = e,

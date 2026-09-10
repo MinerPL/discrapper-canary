@@ -30,7 +30,7 @@ var g = ({ config: t, manager: i, onFinish: e, onError: n }) => {
             ((0, a._)(() => {
                 if (O) {
                     let t = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(O.trim());
-                    f(O.trim()), E.setEmail(O.trim(), t);
+                    (f(O.trim()), E.setEmail(O.trim(), t));
                 }
             }, [O, E]),
             "idle" === g.status ||
@@ -60,7 +60,7 @@ var g = ({ config: t, manager: i, onFinish: e, onError: n }) => {
                             disabled: t,
                             required: !0,
                             onEmailChange: (t, i) => {
-                                E.setEmail(t, i), f(t);
+                                (E.setEmail(t, i), f(t));
                             },
                             onBlur: () => {
                                 E.validateEmail();
@@ -120,7 +120,7 @@ var g = ({ config: t, manager: i, onFinish: e, onError: n }) => {
                 "email-otp",
             );
         }
-        return (0, s.s)(g), null;
+        return ((0, s.s)(g), null);
     },
     E = ({ config: t, manager: i, onFinish: e, onError: r }) =>
         (0, a.v)(n.t, { children: t || i ? (0, a.v)(g, { config: t, manager: i, onFinish: e, onError: r }) : null });

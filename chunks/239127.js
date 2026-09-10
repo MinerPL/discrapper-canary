@@ -30,7 +30,7 @@ var n =
             l((n = n.apply(e, t || [])).next());
         });
     };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.MessageLoader = void 0),
     (t.loadAllMessagesInLocale = function (e) {
         return n(this, void 0, void 0, function* () {
@@ -44,31 +44,31 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     }),
     (t.createLoader = function (e, t) {
         let r = new o(e, t);
-        return a.push(r), r;
-    });
+        return (a.push(r), r);
+    }));
 let i = r(522267);
 class o {
     constructor(e, t) {
-        (this.messages = {}),
+        ((this.messages = {}),
             (this.localeImportMap = e),
             (this.supportedLocales = Object.keys(e)),
             (this.defaultLocale = t),
             (this._localeLoadingPromises = {}),
             (this._parseCache = {}),
             (this._subscribers = new Set()),
-            (this.fallbackMessage = new i.InternalIntlMessage([], this.defaultLocale));
+            (this.fallbackMessage = new i.InternalIntlMessage([], this.defaultLocale)));
     }
     withDebugValues(e, t) {
-        (this._debugKeyMap = e), (this._localeFileMap = t);
+        ((this._debugKeyMap = e), (this._localeFileMap = t));
     }
     fallbackWith(e) {
         let t = this;
-        for (; null != t; )
+        for (; null != t;)
             if ((t = t._parentLoader) === this)
                 throw Error(
                     "Setting `fallbackWith` on MessageLoader created a circular chain that would never resolve",
                 );
-        (this.fallbackLoader = e), (e._parentLoader = this);
+        ((this.fallbackLoader = e), (e._parentLoader = this));
     }
     get(e, t) {
         var r;
@@ -103,7 +103,7 @@ class o {
         let s = this.messages[t][e];
         if (null != s) {
             let r = new i.InternalIntlMessage(s, t);
-            return ((null != (n = (o = this._parseCache)[t]) ? n : (o[t] = {}))[e] = r), r;
+            return (((null != (n = (o = this._parseCache)[t]) ? n : (o[t] = {}))[e] = r), r);
         }
     }
     _loadLocale(e) {
@@ -120,17 +120,17 @@ class o {
                     );
             let o = this.localeImportMap[e](),
                 a = null != (i = null == (n = this._localeLoadingPromises[e]) ? void 0 : n.initialized) && i;
-            (this._localeLoadingPromises[e] = { initialized: a, current: o }),
+            ((this._localeLoadingPromises[e] = { initialized: a, current: o }),
                 (this.messages[e] = (yield o).default),
                 (this._localeLoadingPromises[e] = { initialized: !0, current: void 0 }),
-                this.emitChange();
+                this.emitChange());
         });
     }
     emitChange() {
         for (let e of this._subscribers.values()) e();
     }
     onChange(e) {
-        return this._subscribers.add(e), () => this._subscribers.delete(e);
+        return (this._subscribers.add(e), () => this._subscribers.delete(e));
     }
     isLocaleLoading(e) {
         var t;

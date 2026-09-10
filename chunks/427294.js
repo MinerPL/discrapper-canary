@@ -1,4 +1,4 @@
-n.d(e, { default: () => tc, Z: () => tr }), n(321073);
+(n.d(e, { default: () => tc, Z: () => tr }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -292,13 +292,13 @@ function tc(t) {
         to(ti.jK.WELCOME);
     }, []);
     let I = s.useCallback((t) => {
-            to(ta[t]), f(t), m(t);
+            (to(ta[t]), f(t), m(t));
         }, []),
         L = s.useCallback(
             (t, e) => {
                 "next-steps" === t && null != b && f(null);
                 let n = ta[t];
-                null != n && to(n), m(t);
+                (null != n && to(n), m(t));
             },
             [b],
         ),
@@ -320,7 +320,7 @@ function tc(t) {
                 }
         }, [y, k]),
         B = s.useCallback(async () => {
-            "next-steps" === i && to(ti.jK.DISMISSED), await U();
+            ("next-steps" === i && to(ti.jK.DISMISSED), await U());
         }, [i, U]),
         _ = s.useCallback(async () => {
             let t = O.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
@@ -335,29 +335,29 @@ function tc(t) {
                 );
             } catch (e) {
                 let t = e instanceof p.Wl || e instanceof p.LG ? e.code : void 0;
-                return o.A.show({ title: w.intl.string(w.t.R0RpRX), body: (0, v.s)(t) }), !1;
+                return (o.A.show({ title: w.intl.string(w.t.R0RpRX), body: (0, v.s)(t) }), !1);
             }
         }, [O]),
         M = s.useCallback(async () => {
-            to(ti.jK.EXPLORE),
+            (to(ti.jK.EXPLORE),
                 await U(),
                 await e(),
-                (0, x.transitionToGlobalDiscovery)({ tab: te.GlobalDiscoveryTab.SERVERS, entrypoint: tn.J8.UNKNOWN });
+                (0, x.transitionToGlobalDiscovery)({ tab: te.GlobalDiscoveryTab.SERVERS, entrypoint: tn.J8.UNKNOWN }));
         }, [U, e]),
         F = s.useCallback(async () => {
             let t = R.trim();
             if (0 === t.length) return !1;
             try {
-                return await d.A.sendRequest({ discordTag: t, context: { location: "New User Onboarding" } }), !0;
+                return (await d.A.sendRequest({ discordTag: t, context: { location: "New User Onboarding" } }), !0);
             } catch {
                 return !1;
             }
         }, [R]),
         G = s.useCallback(async () => {
-            to(ti.jK.CREATE_SERVER),
+            (to(ti.jK.CREATE_SERVER),
                 await U(),
                 await e(),
-                (0, g.openCreateGuildModal)({ location: "New User Onboarding" });
+                (0, g.openCreateGuildModal)({ location: "New User Onboarding" }));
         }, [U, e]),
         z = s.useCallback(() => {
             window.open((0, C.SU)());

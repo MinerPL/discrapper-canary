@@ -1,5 +1,5 @@
 let r;
-n.d(t, { A: () => _ }), n(321073);
+(n.d(t, { A: () => _ }), n(321073));
 var i = n(17928),
     s = n(228366),
     l = n(308368),
@@ -19,10 +19,10 @@ let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     x = [],
     w = [];
 function E(e) {
-    (x = [...x, e]), (w = w.map((e) => ({ ...e, sent: x.includes(e.data.record.id) }))), O.emitChange();
+    ((x = [...x, e]), (w = w.map((e) => ({ ...e, sent: x.includes(e.data.record.id) }))), O.emitChange());
 }
 function C() {
-    (v = null), null != r && (r.destroy(), (r = null)), null != y && y();
+    ((v = null), null != r && (r.destroy(), (r = null)), null != y && y());
 }
 function b() {
     let e = null != v && null != v.application_id ? u.A.getApplicationActivity(v.application_id) : null;
@@ -45,14 +45,14 @@ class N extends i.Ay.Store {
 }
 let O = new N(s.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (v = e.activity),
+            ((v = e.activity),
                 (y = e.resolve),
                 (x = []),
                 null == r &&
                     (r = new o.Ay(
                         (e, t) => {
                             let n;
-                            (w = (
+                            ((w = (
                                 "" === t.trim()
                                     ? ((n = []),
                                       p.A.getPrivateChannelIds().forEach((e) => {
@@ -101,12 +101,12 @@ let O = new N(s.h, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                O.emitChange();
+                                O.emitChange());
                         },
                         A,
                         100,
                     )),
-                r.search("");
+                r.search(""));
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;

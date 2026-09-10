@@ -1,4 +1,4 @@
-s.r(e), s.d(e, { default: () => k });
+(s.r(e), s.d(e, { default: () => k }));
 var n = s(477900),
     i = s(582128),
     r = s(492462),
@@ -46,10 +46,10 @@ class k extends i.PureComponent {
             .then(this.done, this.failed);
     }
     done = () => {
-        N(), this.setState({ stage: A });
+        (N(), this.setState({ stage: A }));
     };
     failed = () => {
-        this.setState({ stage: C }), N();
+        (this.setState({ stage: C }), N());
     };
     handleOpenApp = () => {
         (0, f.pX)(p.BVt.ME);

@@ -40,7 +40,7 @@ class d extends r.A {
         return this.linkedApplications?.find((e) => e.type === i.Mh.OFFICIAL)?.id;
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.description = e.description),
@@ -93,7 +93,7 @@ class d extends r.A {
             })(e.reviews)),
             (this.opencriticUrl = e.opencritic_url),
             (this.gameFlags = e.game_flags ?? 0),
-            (this.contentClassification = e.content_classification);
+            (this.contentClassification = e.content_classification));
     }
     getIconURL(e, t) {
         return (0, o.A)(this.id, this.media?.icon, { size: e, format: t });

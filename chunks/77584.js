@@ -33,7 +33,7 @@ class h extends s.A {
         CHANNEL_SELECT: A,
     };
     constructor(e) {
-        super(), (this.handleShowUrgentMessageAlert = e);
+        (super(), (this.handleShowUrgentMessageAlert = e));
     }
 }
 let I = new h(() =>

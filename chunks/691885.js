@@ -42,17 +42,17 @@ function O(e) {
             onSelectionChange: x,
             value: k,
             wrapTags: F = !1,
-            variant: V = "default",
-            ...B
+            variant: B = "default",
+            ...V
         } = e,
         H = r.useRef(null),
-        { fieldProps: j } = (0, _.n)(B),
+        { fieldProps: j } = (0, _.n)(V),
         { id: W, required: Y, label: K, disabled: $ } = j,
         {
             isOpen: z,
-            setIsOpen: q,
-            refs: Z,
-            floatingStyles: X,
+            setIsOpen: X,
+            refs: q,
+            floatingStyles: Z,
             getReferenceProps: Q,
             getFloatingProps: J,
             transitionStyles: ee,
@@ -100,8 +100,8 @@ function O(e) {
             };
         })(en, n),
         ef = r.useCallback(() => {
-            eA || q(!z);
-        }, [eA, q, z]),
+            eA || X(!z);
+        }, [eA, X, z]),
         ep = r.useCallback(
             (e) => {
                 z && 0 === e.button && e.preventDefault();
@@ -109,8 +109,8 @@ function O(e) {
             [z],
         ),
         eT = r.useCallback(() => {
-            q(!1), ea.current?.focus();
-        }, [q]),
+            (X(!1), ea.current?.focus());
+        }, [X]),
         em = r.useCallback(() => {
             !1 !== f && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
         }, [x, n, f]);
@@ -129,10 +129,10 @@ function O(e) {
                         let e = en[el];
                         null != e && !0 !== e.disabled && x(e.value);
                     }
-                    z && q(!1);
+                    z && X(!1);
                 }
             },
-            [z, n, el, en, x, q],
+            [z, n, el, en, x, X],
         ),
         eN = r.useMemo(() => {
             let e = Array.isArray(k) ? k : [k];
@@ -142,8 +142,12 @@ function O(e) {
             (e) => {
                 if (eA) return;
                 let t = Array.from(e);
-                "multiple" === n && t.length < 1 ? x([]) : "multiple" === n ? x(t.map((e) => e.value)) : x(t[0]?.value),
-                    e_ && z && eT();
+                ("multiple" === n && t.length < 1
+                    ? x([])
+                    : "multiple" === n
+                      ? x(t.map((e) => e.value))
+                      : x(t[0]?.value),
+                    e_ && z && eT());
             },
             [eA, n, x, e_, eT, z],
         ),
@@ -151,8 +155,8 @@ function O(e) {
         eL = r.useRef(null);
     r.useEffect(() => {
         let e = eO !== eL.current;
-        (eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), q(!0)));
-    }, [eO, z, q]);
+        ((eL.current = eO), null != eO && e && (eo(eO), z || ((ec.current = !0), X(!0))));
+    }, [eO, z, X]);
     let ey = r.useCallback(
             (e) => {
                 if (eA) return;
@@ -163,7 +167,7 @@ function O(e) {
                         let n = "PageDown" === e.key ? 10 : 1;
                         if (0 === t) return;
                         if ((e.preventDefault(), !z || e.altKey)) {
-                            z || q(!0);
+                            z || X(!0);
                             return;
                         }
                         eo((e) => {
@@ -188,7 +192,7 @@ function O(e) {
                             eT();
                             break;
                         }
-                        if (!z) return void q(!0);
+                        if (!z) return void X(!0);
                         eo((e) => {
                             if (null === e) return 0;
                             let i = e - n;
@@ -198,7 +202,7 @@ function O(e) {
                     }
                     case "Enter":
                     case " ":
-                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void q(!0);
+                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void X(!0);
                         if (null == el || el > t - 1) return;
                         {
                             let e = en[el];
@@ -208,24 +212,24 @@ function O(e) {
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
-                        eo(0), z || ((ec.current = !0), q(!0));
+                        (eo(0), z || ((ec.current = !0), X(!0)));
                         break;
                     case "End":
                         if ((e.preventDefault(), 0 === t)) return;
-                        eo(t - 1), z || ((ec.current = !0), q(!0));
+                        (eo(t - 1), z || ((ec.current = !0), X(!0)));
                         break;
                     case "Tab":
                         if (z && "single" === n && null != el) {
                             let e = en[el];
                             null != e && !0 !== e.disabled && x(e.value);
                         }
-                        (eu.current = !0), q(!1);
+                        ((eu.current = !0), X(!1));
                         break;
                     case "ArrowLeft":
-                        e.preventDefault(), H.current?.firstChild?.focus();
+                        (e.preventDefault(), H.current?.firstChild?.focus());
                         break;
                     case "ArrowRight":
-                        e.preventDefault(), H.current?.lastChild?.focus();
+                        (e.preventDefault(), H.current?.lastChild?.focus());
                         break;
                     case "Backspace":
                         eE && (e.preventDefault(), H.current?.lastChild?.focus());
@@ -239,7 +243,7 @@ function O(e) {
                         eR(e);
                 }
             },
-            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, q],
+            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, X],
         ),
         eD = r.useMemo(() => {
             if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!f + 36 + 12}px`;
@@ -247,20 +251,20 @@ function O(e) {
         ev = "multiple" === n && eN.length > 0,
         eb = r.useRef(null);
     r.useEffect(() => {
-        clearTimeout(eb.current),
+        (clearTimeout(eb.current),
             ev &&
                 !F &&
                 (eb.current = setTimeout(() => {
                     H.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
-                }, 10));
+                }, 10)));
     }, [eN, ev, F]);
-    let eM = (0, o.A)(es, Z.setReference),
+    let eM = (0, o.A)(es, q.setReference),
         eP = r.useCallback(
             (e) => {
                 if (eA) return;
                 let t = Array.from(e)[0],
                     n = eN.filter((e) => e.id !== t);
-                eC(n), 0 === n.length && ea.current?.focus();
+                (eC(n), 0 === n.length && ea.current?.focus());
             },
             [eC, eN, eA],
         ),
@@ -305,7 +309,7 @@ function O(e) {
                             hasError: e?.errorMessageId != null,
                             handleToggle: ef,
                             handleClear: em,
-                            variant: V,
+                            variant: B,
                             ...Q(),
                             children: (0, i.jsxs)(u.s, {
                                 "aria-label": K,
@@ -356,10 +360,10 @@ function O(e) {
                         !eA &&
                             z &&
                             (0, i.jsx)("div", {
-                                ref: Z.setFloating,
+                                ref: q.setFloating,
                                 className: C.S_,
                                 ...J(),
-                                style: { ...X, ...ee },
+                                style: { ...Z, ...ee },
                                 children: (0, i.jsx)(A.q, {
                                     id: et,
                                     tabIndex: -1,

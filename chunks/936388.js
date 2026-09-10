@@ -15,16 +15,16 @@ async function f(e, t) {
     if (e) {
         r.h.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: e });
         try {
-            await (0, s.to)(1), t?.();
+            (await (0, s.to)(1), t?.());
         } catch (t) {
             let e = new o.LG(t);
-            r.h.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: !1 }),
+            (r.h.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: !1 }),
                 i.A.show({
                     title: _.intl.string(_.t.R0RpRX),
                     body: e.getAnyErrorMessage() ?? _.intl.string(_.t.eAn6z2),
-                });
+                }));
         }
-    } else r.h.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: e }), t?.();
+    } else (r.h.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: e }), t?.());
 }
 let A = {
     clearUploadedKeyVersions: function () {
@@ -46,7 +46,7 @@ let A = {
                   confirmText: _.intl.string(_.t.aTuFYT),
                   onConfirm: async () => {
                       await f(e, () => {
-                          a.default.disconnect(), a.default.selectVoiceChannel(r);
+                          (a.default.disconnect(), a.default.selectVoiceChannel(r));
                       });
                   },
               })

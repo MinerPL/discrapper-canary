@@ -21,12 +21,12 @@ async function w(t) {
         R = r.A.get(O);
     if (null == R) {
         let t = (await (0, u.JI)(U)).find((t) => t.sku.id === O);
-        l()(null != t, "Could not find store listing for sku"),
-            t.sku.type === h.Puh.SUBSCRIPTION_GROUP && (await (0, P.vz)(U, t.id));
+        (l()(null != t, "Could not find store listing for sku"),
+            t.sku.type === h.Puh.SUBSCRIPTION_GROUP && (await (0, P.vz)(U, t.id)));
     }
-    (R = R ?? r.A.get(O)),
+    ((R = R ?? r.A.get(O)),
         l()(null != R && R.applicationId === U, "SKU must belong to application"),
-        R.type !== h.Puh.SUBSCRIPTION || (0, d.B)([R.id]) || (await (0, a.ur)(R.id));
+        R.type !== h.Puh.SUBSCRIPTION || (0, d.B)([R.id]) || (await (0, a.ur)(R.id)));
     let T =
         null == (k = null != (f = (0, s.LU)({ applicationId: U })) ? c.A.getWindow(f) : void 0) || k.closed
             ? o.SY

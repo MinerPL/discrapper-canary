@@ -32,7 +32,7 @@ class o extends i.Ay.Store {
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / 864e5),
                 i = Math.floor((1e3 * t.total_duration) / 36e5);
-            0 === e
+            (0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2
                   ? (n += 40)
@@ -49,7 +49,7 @@ class o extends i.Ay.Store {
                         ? (n += 20)
                         : i >= 168 && i < 720
                           ? (n += 40)
-                          : i >= 720 && (n += 50);
+                          : i >= 720 && (n += 50));
         }
         return n;
     }
@@ -57,10 +57,10 @@ class o extends i.Ay.Store {
 let d = new o(r.h, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
         let { statistics: t } = e;
-        t.forEach((e) => {
+        (t.forEach((e) => {
             s[e.application_id] = e;
         }),
-            (l = Date.now());
+            (l = Date.now()));
     },
     ACTIVITY_UPDATE_START: function (e) {
         let { duration: t, applicationId: n, distributor: i } = e,
@@ -68,12 +68,12 @@ let d = new o(r.h, {
             l = new Date().toISOString(),
             o = 0,
             d = 0;
-        null != r && ((o = r.total_duration), (d = r.total_discord_sku_duration ?? 0)),
+        (null != r && ((o = r.total_duration), (d = r.total_discord_sku_duration ?? 0)),
             (o += t),
             i === a.d3x.DISCORD && (d += t),
-            (s[n] = { application_id: n, total_duration: o, last_played_at: l, total_discord_sku_duration: d });
+            (s[n] = { application_id: n, total_duration: o, last_played_at: l, total_discord_sku_duration: d }));
     },
     LOGOUT: function () {
-        (s = {}), (l = null);
+        ((s = {}), (l = null));
     },
 });

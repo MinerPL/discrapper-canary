@@ -13,13 +13,13 @@ let h = (e) => {
         { current: p } = l.useRef({ guild_id: n, emoji_id: t, ...(0, s.dI)(r.A.getChannel(a.Ay.getChannelId(n))) });
     return (
         (0, i.Ay)(() => {
-            (0, u.K)(c.EmojiInteractionPoint.TrackOpenPopoutUsed),
+            ((0, u.K)(c.EmojiInteractionPoint.TrackOpenPopoutUsed),
                 f ||
                     o.default.track(d.HAw.OPEN_POPOUT, {
                         type: h?.analyticsType ?? "Standard Emoji Popout",
                         nonce: m,
                         ...p,
-                    });
+                    }));
         }),
         p
     );

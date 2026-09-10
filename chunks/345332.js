@@ -28,12 +28,12 @@ function k(i) {
                 id: "role-subscription-copy-link",
                 label: b.intl.string(b.t.WqhZss),
                 action: () => {
-                    o.default.track(h.HAw.GUILD_SHOP_COPY_LINK, {
+                    (o.default.track(h.HAw.GUILD_SHOP_COPY_LINK, {
                         ...(0, c.H$)(n.id),
                         is_admin_or_owner: k,
                         copy_location: p.lJ.CHANNEL_ROW_CONTEXT_MENU,
                     }),
-                        (0, u.C)((0, _.n)(n.id, C.VV.GUILD_SHOP));
+                        (0, u.C)((0, _.n)(n.id, C.VV.GUILD_SHOP)));
                 },
             }),
         }),

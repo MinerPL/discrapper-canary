@@ -7,7 +7,7 @@ var l = n(477900),
     o = n(652215);
 async function u(e) {
     let { analyticsLocation: t = null, ...u } = e;
-    s.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
+    (s.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
         await (0, i.openModalLazy)(
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
@@ -29,5 +29,5 @@ async function u(e) {
                     (0, a.p)();
                 },
             },
-        );
+        ));
 }

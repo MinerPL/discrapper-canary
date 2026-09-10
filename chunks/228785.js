@@ -20,7 +20,7 @@ function l(e, t) {
             (function (e, t) {
                 let r = [],
                     n = e.length;
-                for (; n--; ) r[n] = t(e[n]);
+                for (; n--;) r[n] = t(e[n]);
                 return r;
             })((e = e.replace(n, ".")).split("."), t).join(".")
     );
@@ -29,7 +29,7 @@ function u(e) {
     let t = [],
         r = 0,
         n = e.length;
-    for (; r < n; ) {
+    for (; r < n;) {
         let i = e.charCodeAt(r++);
         if (i >= 55296 && i <= 56319 && r < n) {
             let n = e.charCodeAt(r++);
@@ -54,25 +54,25 @@ let c = function (e, t) {
             a = 72,
             l = e.lastIndexOf("-");
         l < 0 && (l = 0);
-        for (let r = 0; r < l; ++r) e.charCodeAt(r) >= 128 && s("not-basic"), t.push(e.charCodeAt(r));
-        for (let c = l > 0 ? l + 1 : 0; c < r; ) {
+        for (let r = 0; r < l; ++r) (e.charCodeAt(r) >= 128 && s("not-basic"), t.push(e.charCodeAt(r)));
+        for (let c = l > 0 ? l + 1 : 0; c < r;) {
             let l = n;
             for (let t = 1, i = 36; ; i += 36) {
                 var u;
                 c >= r && s("invalid-input");
                 let l = (u = e.charCodeAt(c++)) - 48 < 10 ? u - 22 : u - 65 < 26 ? u - 65 : u - 97 < 26 ? u - 97 : 36;
-                (l >= 36 || l > o((0x7fffffff - n) / t)) && s("overflow"), (n += l * t);
+                ((l >= 36 || l > o((0x7fffffff - n) / t)) && s("overflow"), (n += l * t));
                 let f = i <= a ? 1 : i >= a + 26 ? 26 : i - a;
                 if (l < f) break;
                 let d = 36 - f;
-                t > o(0x7fffffff / d) && s("overflow"), (t *= d);
+                (t > o(0x7fffffff / d) && s("overflow"), (t *= d));
             }
             let d = t.length + 1;
-            (a = f(n - l, d, 0 == l)),
+            ((a = f(n - l, d, 0 == l)),
                 o(n / d) > 0x7fffffff - i && s("overflow"),
                 (i += o(n / d)),
                 (n %= d),
-                t.splice(n++, 0, i);
+                t.splice(n++, 0, i));
         }
         return String.fromCodePoint(...t);
     },
@@ -85,7 +85,7 @@ let c = function (e, t) {
         for (let r of e) r < 128 && t.push(a(r));
         let d = t.length,
             p = d;
-        for (d && t.push("-"); p < r; ) {
+        for (d && t.push("-"); p < r;) {
             let r = 0x7fffffff;
             for (let t of e) t >= n && t < r && (r = t);
             let u = p + 1;
@@ -97,11 +97,11 @@ let c = function (e, t) {
                         if (e < n) break;
                         let i = e - n,
                             s = 36 - n;
-                        t.push(a(c(n + (i % s), 0))), (e = o(i / s));
+                        (t.push(a(c(n + (i % s), 0))), (e = o(i / s)));
                     }
-                    t.push(a(c(e, 0))), (l = f(i, u, p == d)), (i = 0), ++p;
+                    (t.push(a(c(e, 0))), (l = f(i, u, p == d)), (i = 0), ++p);
                 }
-            ++i, ++n;
+            (++i, ++n);
         }
         return t.join("");
     };

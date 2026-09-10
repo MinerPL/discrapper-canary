@@ -52,14 +52,14 @@ function V(i) {
             children: (0, t.jsx)(a.D, {
                 className: h.__invalid_premiumGuildIcon,
                 onClick: function (i) {
-                    i.stopPropagation(),
+                    (i.stopPropagation(),
                         i.preventDefault(),
                         l &&
                             !o &&
                             (0, T.K4)({
                                 guildId: s.id,
                                 location: { section: E.JJy.GUILD_HEADER, object: E.ZSU.BOOST_GEM_ICON },
-                            });
+                            }));
                 },
                 children: (0, t.jsx)(_, {
                     size: 18,

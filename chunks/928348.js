@@ -1,4 +1,4 @@
-n.d(t, { H6: () => h, p3: () => _, qv: () => f, wP: () => p }), n(321073);
+(n.d(t, { H6: () => h, p3: () => _, qv: () => f, wP: () => p }), n(321073));
 var r = n(582128),
     i = n(462180),
     u = n(882035),
@@ -31,7 +31,7 @@ let o = {},
                 l = Object.keys(u).reduce((e, t) => {
                     let r = Number(t),
                         i = u[r] ?? [];
-                    return (e[r] = i.filter((e) => e.id !== n)), e;
+                    return ((e[r] = i.filter((e) => e.id !== n)), e);
                 }, {});
             (0, a.r)(() => {
                 e({ rules: { ...i, [r]: l }, error: null });
@@ -84,7 +84,7 @@ function h(e) {
         r.useCallback(async () => {
             if (!a && null != e)
                 try {
-                    n(!0), await u(e);
+                    (n(!0), await u(e));
                 } finally {
                     n(!1);
                 }

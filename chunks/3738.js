@@ -634,8 +634,8 @@ function F(e) {
 function X(e) {
     let { quest: t, questContent: n, preCtaClick: l, getImpressionId: s, sourceQuestContent: a } = e;
     async function u() {
-        await l?.(),
-            (0, h.pu)(t, { content: n, ctaContent: S.Cy.OPEN_GAME_LINK, impressionId: s?.(), sourceQuestContent: a });
+        (await l?.(),
+            (0, h.pu)(t, { content: n, ctaContent: S.Cy.OPEN_GAME_LINK, impressionId: s?.(), sourceQuestContent: a }));
     }
     let o = i.useMemo(() => {
         let e = t.config.ctaConfig?.subtitle;

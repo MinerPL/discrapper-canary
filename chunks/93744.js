@@ -32,7 +32,7 @@ var c =
               return (
                   s(
                       function () {
-                          (i.value = r), (i.getSnapshot = t), u(i) && c({ inst: i });
+                          ((i.value = r), (i.getSnapshot = t), u(i) && c({ inst: i }));
                       },
                       [e, r, t],
                   ),

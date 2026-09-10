@@ -10,7 +10,7 @@ function a(t) {
             function i(t) {
                 a(t?.matches ?? !1);
             }
-            return i(e), e?.addListener(i), () => e?.removeListener(i);
+            return (i(e), e?.addListener(i), () => e?.removeListener(i));
         }, [t, n]),
         e
     );

@@ -1,10 +1,10 @@
-n.d(t, { H: () => u }), n(632459);
+(n.d(t, { H: () => u }), n(632459));
 var r = n(243399),
     i = n(206311),
     a = n(120330);
 function o(e) {
     let t = (0, a.xC)(e);
-    return (0, r.V1)(t.isInteger(), `${e} is not an integer`), t.toNumber();
+    return ((0, r.V1)(t.isInteger(), `${e} is not an integer`), t.toNumber());
 }
 function u(e) {
     if ("object" != typeof e) {

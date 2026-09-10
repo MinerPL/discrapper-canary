@@ -1,4 +1,4 @@
-n.d(t, { A: () => p, c: () => c }), n(323874), n(14289), n(35956), n(321073);
+(n.d(t, { A: () => p, c: () => c }), n(323874), n(14289), n(35956), n(321073));
 var r = n(582128),
     l = n(435558),
     a = n(736653);
@@ -75,11 +75,11 @@ let p = function (e) {
                                                   if (!t.ok) return { mimeType: void 0, status: t.status };
                                                   let n = (t.headers.get("Content-Type") ?? "").split(";")[0].trim(),
                                                       r = "" !== n ? n : void 0;
-                                                  return u.set(e, r), { mimeType: r, status: t.status };
+                                                  return (u.set(e, r), { mimeType: r, status: t.status });
                                               })
                                               .catch(() => ({ mimeType: void 0, status: void 0 }))
                                               .finally(() => d.delete(e));
-                                          return d.set(e, n), n;
+                                          return (d.set(e, n), n);
                                       })(e),
                                   ]),
                               )
@@ -88,7 +88,7 @@ let p = function (e) {
                         let t = {},
                             r = [];
                         for (let [e, l] of n) null != l.status && l.status >= 400 ? r.push(e) : (t[e] = l.mimeType);
-                        i((n) => ({ ...n, ...e, ...t })), r.length > 0 && c((e) => new Set([...e, ...r]));
+                        (i((n) => ({ ...n, ...e, ...t })), r.length > 0 && c((e) => new Set([...e, ...r])));
                     }
                 })(),
                 () => {

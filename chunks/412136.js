@@ -17,4 +17,4 @@ var _ =
     (i[(i.SEVEN_DAYS = 168)] = "SEVEN_DAYS"),
     (i[(i.FOURTEEN_DAYS = 336)] = "FOURTEEN_DAYS"),
     i);
-r.kx.GIF, r.kx.EMOJI;
+(r.kx.GIF, r.kx.EMOJI);

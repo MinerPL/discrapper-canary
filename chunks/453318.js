@@ -87,7 +87,7 @@ function v(e) {
         x(v);
     }, [x, v]);
     let F = r.useCallback((e) => (null != p ? p(e, v) : (0, l.Ht)(e, v, T ?? D)), [v, p, T]),
-        { flatOptions: V, groups: B } = r.useMemo(() => {
+        { flatOptions: B, groups: V } = r.useMemo(() => {
             if ("" === v) return { flatOptions: U, groups: w };
             if (0 === w.length) return { flatOptions: F(U), groups: [] };
             let e = [],
@@ -113,10 +113,10 @@ function v(e) {
     }, [k, j, u, L]),
         r.useEffect(() => {
             if (s && null != H.current) {
-                let e = V.findIndex((e) => e.value === H.current?.value);
+                let e = B.findIndex((e) => e.value === H.current?.value);
                 R(-1 !== e ? e : null);
             }
-        }, [s, R, V]));
+        }, [s, R, B]));
     let W = _ || E,
         Y = r.useCallback(
             (e) => {
@@ -145,8 +145,8 @@ function v(e) {
             hasValue: K,
             value: f,
             options: U,
-            filteredOptions: V,
-            groups: B,
+            filteredOptions: B,
+            groups: V,
             selectedOptions: j,
             maxOptionsVisible: a,
             query: M,
@@ -201,8 +201,8 @@ function M(e) {
             selectionMode: x,
             disabled: k,
             readOnly: F,
-            loading: V,
-            clearable: B,
+            loading: B,
+            clearable: V,
             required: H,
             listBoxId: j,
             inputFieldRef: W,
@@ -210,9 +210,9 @@ function M(e) {
             isInert: K,
             isCollapsible: $,
             hasValue: z,
-            handleSelectionChange: q,
-            onSelectionChange: Z,
-            isOpen: X,
+            handleSelectionChange: X,
+            onSelectionChange: q,
+            isOpen: Z,
             setIsOpen: Q,
             options: J,
             selectedOptions: ee,
@@ -229,8 +229,8 @@ function M(e) {
             K || Q?.((e) => (e || b.current?.focus(), !e));
         }, [K, Q]),
         ec = r.useCallback(() => {
-            !0 === B && ("multiple" === x ? Z([]) : Z(null), ei(""), b.current?.focus());
-        }, [Z, x, B, ei]),
+            !0 === V && ("multiple" === x ? q([]) : q(null), ei(""), b.current?.focus());
+        }, [q, x, V, ei]),
         eu = r.useCallback(
             (e) => {
                 (ea(!0), h?.(e), b.current?.setSelectionRange(en?.length ?? 0, en?.length ?? 0));
@@ -263,9 +263,9 @@ function M(e) {
             (e) => {
                 if (K) return;
                 let t = Array.from(e)[0];
-                q(ee.filter((e) => e.id !== t));
+                X(ee.filter((e) => e.id !== t));
             },
-            [q, ee, K],
+            [X, ee, K],
         ),
         ef = r.useCallback(
             (e) => {
@@ -276,7 +276,7 @@ function M(e) {
                     case "PageDown":
                         if (
                             ((n = "PageDown" === e.key ? 10 : 1),
-                            0 === t || (e.preventDefault(), Q?.(!0), e.altKey || !X))
+                            0 === t || (e.preventDefault(), Q?.(!0), e.altKey || !Z))
                         )
                             return;
                         G((e) => {
@@ -297,7 +297,7 @@ function M(e) {
                             Q?.(!0));
                         break;
                     case "Enter":
-                        if ((e.preventDefault(), e.stopPropagation(), !X)) {
+                        if ((e.preventDefault(), e.stopPropagation(), !Z)) {
                             if (0 === t) return;
                             Q?.(!0);
                             return;
@@ -305,8 +305,8 @@ function M(e) {
                         if (null == w || t - 1 < w) return;
                         let i = et[w];
                         if (null == i || !0 === i.disabled) return;
-                        if (H && 1 === ee.length && ee.includes(i)) return void q(ee);
-                        q("single" === x ? [i] : (0, R.qH)(x, ee, i));
+                        if (H && 1 === ee.length && ee.includes(i)) return void X(ee);
+                        X("single" === x ? [i] : (0, R.qH)(x, ee, i));
                         break;
                     case "Backspace":
                         "multiple" === x &&
@@ -316,7 +316,7 @@ function M(e) {
                             (e.preventDefault(), e.stopPropagation(), v.current.lastChild?.focus());
                         break;
                     case "Escape":
-                        z && B && (e.preventDefault(), e.stopPropagation(), ec());
+                        z && V && (e.preventDefault(), e.stopPropagation(), ec());
                         break;
                     case "Home":
                         if ((e.preventDefault(), 0 === t)) return;
@@ -327,7 +327,7 @@ function M(e) {
                         G(t - 1);
                 }
             },
-            [x, H, B, z, Y, X, N, ec, q, ee, en, Q, et, w, G],
+            [x, H, V, z, Y, Z, N, ec, X, ee, en, Q, et, w, G],
         ),
         ep = r.useCallback(
             (e) => {
@@ -374,11 +374,11 @@ function M(e) {
                 ref: em,
                 disabled: k,
                 readOnly: F,
-                loading: V,
-                clearable: B,
+                loading: B,
+                clearable: V,
                 fullWidth: !0,
                 showChevronButton: _,
-                isOpen: !!X,
+                isOpen: !!Z,
                 isInert: K,
                 hasValue: z,
                 hasError: P?.errorMessageId != null,
@@ -404,9 +404,9 @@ function M(e) {
                                     readOnly: F,
                                     "aria-haspopup": "listbox",
                                     "aria-autocomplete": "list",
-                                    "aria-busy": V,
+                                    "aria-busy": B,
                                     "aria-controls": j,
-                                    "aria-expanded": !$ || X,
+                                    "aria-expanded": !$ || Z,
                                     "aria-activedescendant": eo,
                                     "aria-labelledby": P?.labelId,
                                     "aria-describedby": P?.describedById,
@@ -431,7 +431,7 @@ function M(e) {
                 disabled: K,
                 selectionMode: x,
                 selectedItems: ee,
-                onSelectionChange: q,
+                onSelectionChange: X,
                 listItems: J,
             }),
         ],

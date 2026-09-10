@@ -22,7 +22,7 @@ let A = (0, s.A)(
                 "data-menu-migrated": !0,
                 navId: "guild-moderation-roles",
                 onClose: function () {
-                    (0, d.Z_)(), E?.();
+                    ((0, d.Z_)(), E?.());
                 },
                 "aria-label": _.intl.string(_.t.liqwPJ),
                 onSelect: l,

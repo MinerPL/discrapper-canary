@@ -60,7 +60,7 @@ let n = -1,
     },
     u = new WeakMap();
 function p(e, t) {
-    return u.get(e) || u.set(e, new t()), u.get(e);
+    return (u.get(e) || u.set(e, new t()), u.get(e));
 }
 class c {
     t;
@@ -70,10 +70,10 @@ class c {
         if (e.hadRecentInput) return;
         let t = this.o[0],
             i = this.o.at(-1);
-        this.i && t && i && e.startTime - i.startTime < 1e3 && e.startTime - t.startTime < 5e3
+        (this.i && t && i && e.startTime - i.startTime < 1e3 && e.startTime - t.startTime < 5e3
             ? ((this.i += e.value), this.o.push(e))
             : ((this.i = e.value), (this.o = [e])),
-            this.t?.(e);
+            this.t?.(e));
     }
 }
 let m = (e, t, i = {}) => {
@@ -84,7 +84,7 @@ let m = (e, t, i = {}) => {
                         t(e.getEntries());
                     });
                 });
-                return r.observe({ type: e, buffered: !0, ...i }), r;
+                return (r.observe({ type: e, buffered: !0, ...i }), r);
             }
         } catch {}
     },
@@ -108,7 +108,7 @@ let m = (e, t, i = {}) => {
     b = () => {
         if (v < 0) {
             let e = d();
-            (v =
+            ((v =
                 (document.prerendering
                     ? void 0
                     : globalThis.performance
@@ -120,7 +120,7 @@ let m = (e, t, i = {}) => {
                     setTimeout(() => {
                         v = T();
                     });
-                });
+                }));
         }
         return {
             get firstHiddenTime() {
@@ -150,10 +150,10 @@ let m = (e, t, i = {}) => {
             l &&
                 ((r = s(e, n, P, t.reportAllChanges)),
                 a((i) => {
-                    (r = s(e, (n = h("FCP")), P, t.reportAllChanges)),
+                    ((r = s(e, (n = h("FCP")), P, t.reportAllChanges)),
                         o(() => {
-                            (n.value = performance.now() - i.timeStamp), r(!0);
-                        });
+                            ((n.value = performance.now() - i.timeStamp), r(!0));
+                        }));
                 }));
         });
     },
@@ -173,10 +173,10 @@ let m = (e, t, i = {}) => {
                 u &&
                     ((r = s(e, n, L, t.reportAllChanges)),
                     i.onHidden(() => {
-                        d(u.takeRecords()), r(!0);
+                        (d(u.takeRecords()), r(!0));
                     }),
                     a(() => {
-                        (l.i = 0), (r = s(e, (n = h("CLS", 0)), L, t.reportAllChanges)), o(() => r());
+                        ((l.i = 0), (r = s(e, (n = h("CLS", 0)), L, t.reportAllChanges)), o(() => r()));
                     }),
                     setTimeout(r));
             }),
@@ -198,7 +198,7 @@ class H {
     m;
     p;
     v() {
-        (F = M()), (this.u.length = 0), this.l.clear();
+        ((F = M()), (this.u.length = 0), this.l.clear());
     }
     L() {
         let e = Math.min(this.u.length - 1, Math.floor((M() - F) / 50));
@@ -229,7 +229,7 @@ let x = (e) => {
             ? e()
             : (addEventListener("visibilitychange", (e = f(e)), { once: !0, capture: !0 }),
               t(() => {
-                  e(), removeEventListener("visibilitychange", e, { capture: !0 });
+                  (e(), removeEventListener("visibilitychange", e, { capture: !0 }));
               }));
     },
     B = [200, 500],
@@ -251,15 +251,15 @@ let x = (e) => {
                     });
                 },
                 u = m("event", d, { durationThreshold: t.durationThreshold ?? 40 });
-            (n = s(e, o, B, t.reportAllChanges)),
+            ((n = s(e, o, B, t.reportAllChanges)),
                 u &&
                     (u.observe({ type: "first-input", buffered: !0 }),
                     i.onHidden(() => {
-                        d(u.takeRecords()), n(!0);
+                        (d(u.takeRecords()), n(!0));
                     }),
                     a(() => {
-                        l.v(), (n = s(e, (o = h("INP")), B, t.reportAllChanges));
-                    }));
+                        (l.v(), (n = s(e, (o = h("INP")), B, t.reportAllChanges)));
+                    })));
         });
     };
 class q {
@@ -277,25 +277,25 @@ let N = [2500, 4e3],
                 l = p(t, q),
                 u = (e) => {
                     for (let a of (t.reportAllChanges || (e = e.slice(-1)), e))
-                        l.h(a),
+                        (l.h(a),
                             a.startTime < i.firstHiddenTime &&
-                                ((n.value = Math.max(a.startTime - d(), 0)), (n.entries = [a]), r());
+                                ((n.value = Math.max(a.startTime - d(), 0)), (n.entries = [a]), r()));
                 },
                 c = m("largest-contentful-paint", u);
             if (c) {
                 r = s(e, n, N, t.reportAllChanges);
                 let i = f(() => {
-                        u(c.takeRecords()), c.disconnect(), r(!0);
+                        (u(c.takeRecords()), c.disconnect(), r(!0));
                     }),
                     l = (e) => {
                         e.isTrusted && (x(i), removeEventListener(e.type, l, { capture: !0 }));
                     };
                 for (let e of ["keydown", "click", "visibilitychange"]) addEventListener(e, l, { capture: !0 });
                 a((i) => {
-                    (r = s(e, (n = h("LCP")), N, t.reportAllChanges)),
+                    ((r = s(e, (n = h("LCP")), N, t.reportAllChanges)),
                         o(() => {
-                            (n.value = performance.now() - i.timeStamp), r(!0);
-                        });
+                            ((n.value = performance.now() - i.timeStamp), r(!0));
+                        }));
                 });
             }
         });

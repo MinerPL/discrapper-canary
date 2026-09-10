@@ -1,4 +1,4 @@
-n.d(t, { A: () => V });
+n.d(t, { A: () => B });
 var i = n(435558),
     r = n(306264),
     a = n(228366),
@@ -56,34 +56,34 @@ function v() {
     if (t?.refresh_stale_inbox_after_ms != null && null == C) return;
     let n = t?.expired_at == null ? 0 : new Date(t.expired_at).getTime() - Date.now(),
         i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? R() : 0);
-    L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
+    (L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
         g.set(
             T,
             setTimeout(() => b({ feedId: T, feature: r.M.INBOX }), i),
-        );
+        ));
 }
 async function b(e) {
     let { feedId: t, feature: n, force: i = !1 } = e;
     if (y(t) || i)
         try {
             let e = h.A.getFeed(t);
-            S.add(t), L(t, { loading: !0 });
+            (S.add(t), L(t, { loading: !0 }));
             let i = await (0, E.sy)({ token: e?.refresh_token, feedId: t, feature: n });
-            a.h.dispatch({ type: "CONTENT_INVENTORY_SET_FEED", feedId: t, feed: i }),
+            (a.h.dispatch({ type: "CONTENT_INVENTORY_SET_FEED", feedId: t, feed: i }),
                 N.set(t, 0),
                 S.delete(t),
                 L(t, { loading: !1 }),
-                t === T && ((C = null), v());
+                t === T && ((C = null), v()));
         } catch (r) {
             let e = N.get(t) ?? 0;
             if (e < 4) {
                 let r = u.A.Millis.MINUTE * Math.pow(2, e),
                     a = R(e);
-                g.set(
+                (g.set(
                     t,
                     setTimeout(() => b({ feedId: t, feature: n, force: i }), r + a),
                 ),
-                    N.set(t, e + 1);
+                    N.set(t, e + 1));
             } else a.h.dispatch({ type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: t });
             S.delete(t);
         }
@@ -99,7 +99,7 @@ function U() {
 }
 function w(e) {
     let { feedId: t, feature: n } = e;
-    D(t), b({ feedId: t, feature: n, force: !0 });
+    (D(t), b({ feedId: t, feature: n, force: !0 }));
 }
 function G(e) {
     let { refreshAfterMs: t } = e,
@@ -127,4 +127,4 @@ class F extends s.A {
         GAME_PROFILE_OPEN: k,
     };
 }
-let V = new F();
+let B = new F();

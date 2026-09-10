@@ -9,8 +9,8 @@ var s = i(231723),
     a = i(652215);
 function f(t, n) {
     let f = n ?? `${a.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
-    null != t.targetBoostedGuildTier && (f += ` - Tier ${t.targetBoostedGuildTier}`),
-        e.default.track(a.HAw.OPEN_MODAL, { type: f, location: t.analyticsSourceLocation });
+    (null != t.targetBoostedGuildTier && (f += ` - Tier ${t.targetBoostedGuildTier}`),
+        e.default.track(a.HAw.OPEN_MODAL, { type: f, location: t.analyticsSourceLocation }));
     let { openInPopoutEnabled: u, ...d } = t,
         _ = o.A.getWindowOpen(a.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
     _ && (0, c.A)(a.MLl.CHANNEL_CALL_POPOUT);

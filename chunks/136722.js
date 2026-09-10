@@ -19,7 +19,7 @@ function a(e) {
     let t = [];
     for (let n = 0; n < e.length; n++) {
         let i = Number(e[n]);
-        for (let e = 0; i || e < t.length; e++) (i += 10 * (t[e] || 0)), (t[e] = i % 16), (i = (i - t[e]) / 16);
+        for (let e = 0; i || e < t.length; e++) ((i += 10 * (t[e] || 0)), (t[e] = i % 16), (i = (i - t[e]) / 16));
     }
     return t;
 }
@@ -56,16 +56,16 @@ class s {
         let { parts: n } = t,
             i = 0,
             r = 0;
-        for (; r < e && r < 16 * n.length; ) {
+        for (; r < e && r < 16 * n.length;) {
             let t = Math.min(e - r, 16),
                 a = (1 << t) - 1,
                 s = n.length - Math.floor(r / 16) - 1;
-            (i |= (n[s] & a) << r), (r += t);
+            ((i |= (n[s] & a) << r), (r += t));
         }
         return i;
     }
     constructor(e, t) {
-        (this.parts = e), (this.str = t);
+        ((this.parts = e), (this.str = t));
     }
     and(e) {
         let { parts: t } = e;

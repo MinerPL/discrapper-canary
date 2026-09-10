@@ -25,7 +25,7 @@ var n = i(775162),
                 let i = (function (e) {
                     if (e.readyState < 2 || 0 === e.videoWidth || 0 === e.videoHeight) return null;
                     let t = document.createElement("canvas");
-                    (t.width = e.videoWidth), (t.height = e.videoHeight);
+                    ((t.width = e.videoWidth), (t.height = e.videoHeight));
                     let i = t.getContext("2d");
                     return i ? (i.drawImage(e, 0, 0), t.toDataURL("image/jpeg", 0.92).split(",")[1] ?? null) : null;
                 })(e);
@@ -662,7 +662,7 @@ var n = i(775162),
 function k(e) {
     return new Promise((t, i) => {
         let n = new FileReader();
-        (n.onload = () => t(n.result)), (n.onerror = i), n.readAsDataURL(e);
+        ((n.onload = () => t(n.result)), (n.onerror = i), n.readAsDataURL(e));
     });
 }
 var R = ({ manager: e, title: t, text: i, allowSkipDocumentCapture: l, captureMode: o, error: c, pageNumber: u }) => {
@@ -683,7 +683,7 @@ var R = ({ manager: e, title: t, text: i, allowSkipDocumentCapture: l, captureMo
                     n = i.files?.[0];
                 if (n) {
                     let t = await k(n);
-                    e.setFile(n, t), I && w();
+                    (e.setFile(n, t), I && w());
                 }
                 i.value = "";
             };
@@ -749,7 +749,7 @@ var R = ({ manager: e, title: t, text: i, allowSkipDocumentCapture: l, captureMo
                           isOpen: m,
                           onClose: w,
                           onCameraClick: () => {
-                              w(), e.capture();
+                              (w(), e.capture());
                           },
                           onUploadClick: V,
                           cameraOptionTestId: "camera-option",
@@ -777,7 +777,7 @@ var R = ({ manager: e, title: t, text: i, allowSkipDocumentCapture: l, captureMo
                 if (n) {
                     f();
                     let t = await k(n);
-                    e.captureNextPageFromFile(), e.setFile(n, t);
+                    (e.captureNextPageFromFile(), e.setFile(n, t));
                 }
                 i.value = "";
             };
@@ -833,7 +833,7 @@ var R = ({ manager: e, title: t, text: i, allowSkipDocumentCapture: l, captureMo
                           isOpen: p,
                           onClose: f,
                           onCameraClick: () => {
-                              f(), e.captureNextPageFromCamera();
+                              (f(), e.captureNextPageFromCamera());
                           },
                           onUploadClick: g,
                           cameraOptionTestId: "next-page-camera-option",

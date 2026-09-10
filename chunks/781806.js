@@ -1,4 +1,4 @@
-e.r(a), e.d(a, { default: () => s });
+(e.r(a), e.d(a, { default: () => s }));
 var n = {
         lessThanXSeconds: { one: "mai pu\u021Bin de o secund\u0103", other: "mai pu\u021Bin de {{count}} secunde" },
         xSeconds: { one: "1 secund\u0103", other: "{{count}} secunde" },

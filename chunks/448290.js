@@ -15,14 +15,18 @@ function h(t, n) {
     let { id: e } = t,
         i = `@${o.Ay.getUserTag(t, { decoration: "never" })}`,
         r = `<@${e}>`;
-    d._.dispatchToLastSubscribed(A.jej.INSERT_TEXT, { plainText: i, rawText: r }), null != n && s.A.startTyping(n);
+    (d._.dispatchToLastSubscribed(A.jej.INSERT_TEXT, { plainText: i, rawText: r }), null != n && s.A.startTyping(n));
 }
 function T(t, n, e, s) {
-    let [d, o] = (0, r.yK)([u.Ay, l.A, c.A], () => {
-            let t = e ?? u.Ay.getChannelId(n),
-                i = l.A.getChannel(t);
-            return [t, null != i && (i.isMultiUserDM() || c.A.can(A.xBc.SEND_MESSAGES, i))];
-        }, [e, n]),
+    let [d, o] = (0, r.yK)(
+            [u.Ay, l.A, c.A],
+            () => {
+                let t = e ?? u.Ay.getChannelId(n),
+                    i = l.A.getChannel(t);
+                return [t, null != i && (i.isMultiUserDM() || c.A.can(A.xBc.SEND_MESSAGES, i))];
+            },
+            [e, n],
+        ),
         T = s === A.BRT.POPOUT;
     return !o || T
         ? null

@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => j });
+(r.r(t), r.d(t, { default: () => j }));
 var n = r(477900),
     i = r(503698),
     a = r.n(i),
@@ -42,13 +42,13 @@ function j(e) {
                 a = E.Ay.getVoiceChannelId() === i.id;
             if (null != n && a) {
                 let e = (0, y.od)(n.applicationId, i.id);
-                t.preventDefault(),
+                (t.preventDefault(),
                     (0, g.A)({
                         onConfirm: async () => {
-                            await e, r();
+                            (await e, r());
                         },
                         usesPopoutContext: !0,
-                    });
+                    }));
             } else r();
         },
         children: (0, n.jsx)("div", {

@@ -5,7 +5,7 @@ function t(r, n, i, o) {
     } catch (e) {
         a = 0;
     }
-    (e.exports = t =
+    ((e.exports = t =
         function (e, r, n, i) {
             function o(r, n) {
                 t(e, r, function (e) {
@@ -20,6 +20,6 @@ function t(r, n, i, o) {
         }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        t(r, n, i, o);
+        t(r, n, i, o));
 }
-(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+((e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports));

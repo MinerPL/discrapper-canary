@@ -114,7 +114,7 @@ var Z = ({
                                         disabled: n,
                                         required: Z,
                                         onChange: (l) => {
-                                            V || T(l.target.checked), o?.(l);
+                                            (V || T(l.target.checked), o?.(l));
                                         },
                                         "aria-label": p,
                                         "aria-labelledby": N,
@@ -247,7 +247,7 @@ var Z = ({
                                     "aria-describedby": I,
                                     onChange: (l) => {
                                         var d;
-                                        return (d = t.value), void (!y && r(d), W?.(d, l));
+                                        return ((d = t.value), void (!y && r(d), W?.(d, l)));
                                     },
                                     onBlur: G,
                                 },

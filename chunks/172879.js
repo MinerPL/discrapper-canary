@@ -3,7 +3,7 @@ var s = e(557939),
     p = e(581390),
     i = e(633228),
     o = Array;
-s(
+(s(
     { target: "Array", proto: !0 },
     {
         toReversed: function () {
@@ -11,4 +11,4 @@ s(
         },
     },
 ),
-    i("toReversed");
+    i("toReversed"));

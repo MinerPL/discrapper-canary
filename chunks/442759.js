@@ -1,4 +1,4 @@
-r.d(t, { f5: () => n }), r(321073);
+(r.d(t, { f5: () => n }), r(321073));
 var s = r(582128),
     a = r(575593);
 r(375708);
@@ -26,7 +26,7 @@ class i {
     sortByTypes(e) {
         return e.reduce((e, t) => {
             let r = e.get(t.type);
-            return null != r ? r.push(t) : e.set(t.type, [t]), e;
+            return (null != r ? r.push(t) : e.set(t.type, [t]), e);
         }, new Map());
     }
 }

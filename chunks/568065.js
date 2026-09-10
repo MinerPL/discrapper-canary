@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     At: () => $,
     Fq: () => v,
     G0: () => W,
@@ -6,11 +6,11 @@ n.d(t, {
     On: () => D,
     Pn: () => K,
     Q0: () => j,
-    QS: () => V,
+    QS: () => B,
     Wb: () => N,
     YV: () => x,
     a8: () => L,
-    aH: () => B,
+    aH: () => V,
     b_: () => F,
     fe: () => w,
     mB: () => R,
@@ -27,7 +27,7 @@ n.d(t, {
     ys: () => M,
     z0: () => z,
 }),
-    n(582128);
+    n(582128));
 var i,
     r,
     a,
@@ -71,7 +71,7 @@ let N = "1340102344645283891",
     b = [[c.SL], [c.aN], [c.FB], [c.OJ, c.jF], [c.Ht, c.tv], [c.zY], [c.d0]],
     M = { [m.W5]: "beta", [c.zY]: "beta", [c.d0]: "beta" },
     P = new Set([c.SL, c.aN, c.FB, c.OJ, c.jF, c.Ht, c.tv, c.d0]);
-c.aN, c.SL;
+(c.aN, c.SL);
 let U = () => ({
         [T.GuildFeatures.VIDEO_QUALITY_1080_60FPS]: { perkIcon: E.TP.STREAM, description: g.intl.string(g.t.y4ft4D) },
         [T.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
@@ -129,7 +129,7 @@ var F =
         (r.LEVEL_ACTIVATED = "level_activated"),
         (r.TIER_OVERRIDE_ACTIVATED = "tier_override_activated"),
         r),
-    V =
+    B =
         (((a = {})[(a.VANITY_URL = 1)] = "VANITY_URL"),
         (a[(a.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
         (a[(a.GAME_SERVER_HOSTING = 3)] = "GAME_SERVER_HOSTING"),
@@ -138,9 +138,9 @@ var F =
         (a[(a.GUILD_THEME = 6)] = "GUILD_THEME"),
         (a[(a.GUILD_TAG = 7)] = "GUILD_TAG"),
         a);
-let B = new Set([c.OJ, c.jF]),
+let V = new Set([c.OJ, c.jF]),
     H = new Set([c.Ht, c.tv]),
-    j = { 1: new Set([c.FB]), 2: B, 3: new Set(), 4: H, 5: new Set([c.zY]), 6: new Set([c.d0]), 7: new Set([c.SL]) },
+    j = { 1: new Set([c.FB]), 2: V, 3: new Set(), 4: H, 5: new Set([c.zY]), 6: new Set([c.d0]), 7: new Set([c.SL]) },
     W = "powerupId";
 var Y = (((s = {})[(s.AVAILABLE = 0)] = "AVAILABLE"), (s[(s.SPENT = 1)] = "SPENT"), (s[(s.TOTAL = 2)] = "TOTAL"), s),
     K = (((l = {})[(l.LEVEL = 0)] = "LEVEL"), (l[(l.PERK = 1)] = "PERK"), l),

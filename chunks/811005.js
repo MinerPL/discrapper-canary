@@ -438,7 +438,7 @@ var o = C(775162),
             "geolocationv2.desktop.opera.step4",
         ],
     };
-(E.edge = E.chrome), (E.other = E.chrome);
+((E.edge = E.chrome), (E.other = E.chrome));
 var K = () =>
         (0, i.v)("div", {
             class: "IncodeGeolocationPermissionSections",

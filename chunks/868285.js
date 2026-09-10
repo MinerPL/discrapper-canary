@@ -1,4 +1,4 @@
-n.d(t, { F: () => s }), n(321073);
+(n.d(t, { F: () => s }), n(321073));
 var i = n(582128);
 function r(e) {
     let t = {};
@@ -52,12 +52,12 @@ class s extends i.Component {
     _isMounted;
     _keyChildMapping = {};
     constructor(e) {
-        super(e),
+        (super(e),
             (this.state = { children: r(e.children), firstRender: !0 }),
             (this._currentlyTransitioningKeys = new Set()),
             (this._keysToEnter = []),
             (this._keysToLeave = []),
-            (this._isMounted = !1);
+            (this._isMounted = !1));
     }
     componentDidMount() {
         this._isMounted = !0;
@@ -65,7 +65,7 @@ class s extends i.Component {
         if (this.props.transitionAppear) for (let t in e) e[t] && this.performAppear(t);
     }
     componentWillUnmount() {
-        (this._isMounted = !1), (this._keyChildMapping = {}), (this.state.children = {});
+        ((this._isMounted = !1), (this._keyChildMapping = {}), (this.state.children = {}));
     }
     componentDidUpdate(e, t) {
         if (
@@ -87,17 +87,17 @@ class s extends i.Component {
                 this._enqueueTransitions(n, e, t);
                 let i = a(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete i[t[e]];
-                this._isMounted && this.setState({ children: i }),
-                    this._keysToLeave.length > 0 && (this._keysToLeave = []);
+                (this._isMounted && this.setState({ children: i }),
+                    this._keysToLeave.length > 0 && (this._keysToLeave = []));
             }
         }
         if (this._keysToEnter.length > 0) {
             let e = this._keysToEnter;
-            (this._keysToEnter = []), e.forEach(this.performEnter, this);
+            ((this._keysToEnter = []), e.forEach(this.performEnter, this));
         }
         if (this._keysToLeave.length > 0) {
             let e = this._keysToLeave;
-            (this._keysToLeave = []), e.forEach(this.performLeave, this);
+            ((this._keysToLeave = []), e.forEach(this.performLeave, this));
         }
     }
     _enqueueTransitions(e, t, n) {
@@ -116,7 +116,7 @@ class s extends i.Component {
     _handleDonePerform(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = this._keyChildMapping[e];
-        null != i && null != i[t] && i[t](), this._currentlyTransitioningKeys.delete(e);
+        (null != i && null != i[t] && i[t](), this._currentlyTransitioningKeys.delete(e));
         let a = r(this.props.children);
         n
             ? null != a && a.hasOwnProperty(e)
@@ -151,6 +151,6 @@ class s extends i.Component {
                 r.push(i.cloneElement(null == e ? a : e(a), { ref: (e) => this.addChildRef(t, e), key: t }));
         }
         let a = { ...this.props };
-        return Object.keys(s.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
+        return (Object.keys(s.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r));
     }
 }

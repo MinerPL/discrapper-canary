@@ -1,8 +1,8 @@
-n.d(t, {
+(n.d(t, {
     $B: () => O,
     Ag: () => y,
     Cx: () => P,
-    EF: () => B,
+    EF: () => V,
     Ii: () => M,
     K4: () => G,
     ME: () => x,
@@ -14,13 +14,13 @@ n.d(t, {
     X2: () => w,
     b7: () => D,
     fl: () => b,
-    hX: () => V,
+    hX: () => B,
     kF: () => F,
     lq: () => R,
     sw: () => k,
     u8: () => L,
 }),
-    n(321073);
+    n(321073));
 var i = n(487899),
     r = n(157559),
     a = n(148494),
@@ -110,17 +110,17 @@ function U(e) {
                 });
                 if (t.inputType === d.y$.BUILT_IN_TEXT && null != e && null != i.channel) {
                     let t = A.Ay.parse(_, e.content);
-                    (t.tts = e.tts ?? !1), a.A.sendMessage(i.channel.id, t, !0, { location: S.Hx.APP_COMMAND });
+                    ((t.tts = e.tts ?? !1), a.A.sendMessage(i.channel.id, t, !0, { location: S.Hx.APP_COMMAND }));
                 }
             } catch (e) {
                 throw (
-                    (r.A.show({
+                    r.A.show({
                         title: N.intl.string(N.t["aHO//m"]),
                         body: N.intl.string(N.t.kuzKHK),
                         confirmText: N.intl.string(N.t["5911Lb"]),
                         onConfirm: () => E(),
                     }),
-                    e)
+                    e
                 );
             }
         };
@@ -150,7 +150,7 @@ function k(e) {
 function F(e) {
     return null == e ? "" : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll("_", " ");
 }
-function V(e) {
+function B(e) {
     let t = [];
     for (let n of e) {
         let e = n.application_directory_collection_items.filter((e) => e.type === i.L.APPLICATION && y(e.application));
@@ -158,7 +158,7 @@ function V(e) {
     }
     return t;
 }
-function B(e) {
+function V(e) {
     return {
         applicationId: e.id,
         customInstallUrl: e.customInstallUrl,

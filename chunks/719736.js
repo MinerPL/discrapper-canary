@@ -2,7 +2,7 @@ n.d(t, { $2: () => h, Q_: () => m, Vv: () => _, Yj: () => l, c9: () => y, dY: ()
 var r = n(968072);
 function i(e, t, n, r) {
     let i = { filename: e, function: "<anonymous>" === t ? "?" : t, in_app: !0 };
-    return void 0 !== n && (i.lineno = n), void 0 !== r && (i.colno = r), i;
+    return (void 0 !== n && (i.lineno = n), void 0 !== r && (i.colno = r), i);
 }
 let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
     a =
@@ -41,7 +41,7 @@ let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                 }
                 let e = t[3],
                     n = t[1] || "?";
-                return ([n, e] = b(n, e)), i(e, n, t[4] ? +t[4] : void 0, t[5] ? +t[5] : void 0);
+                return (([n, e] = b(n, e)), i(e, n, t[4] ? +t[4] : void 0, t[5] ? +t[5] : void 0));
             }
         },
     ],

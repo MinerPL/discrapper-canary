@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => eo });
+(n.r(t), n.d(t, { default: () => eo }));
 var s = n(477900),
     l = n(582128),
     i = n(503698),
@@ -71,7 +71,8 @@ function q(e) {
         onMouseLeave: () => o(!1),
         onClick: function () {
             let e = h.A.getDMFromUserId(t.user.id);
-            null != e ? (0, O.pX)(g.BVt.CHANNEL(g.ME, e)) : G.A.openPrivateChannel({ recipientIds: t.user.id }), i?.();
+            (null != e ? (0, O.pX)(g.BVt.CHANNEL(g.ME, e)) : G.A.openPrivateChannel({ recipientIds: t.user.id }),
+                i?.());
         },
         children: (0, s.jsx)(V.A, {
             user: t.user,
@@ -138,30 +139,35 @@ function Q(e) {
         i = void 0 !== t,
         [r, a] = (0, l.useState)(""),
         o = (0, X.HI)(i ? t : r),
-        u = (0, f.bG)([W.A, _.default], () => {
-            if ("" === o) return [];
-            let e = W.A.getFriendIDs(),
-                t = [];
-            return (
-                e.forEach((e) => {
-                    let n = _.default.getUser(e);
-                    if (void 0 === n) return;
-                    let s = W.A.getNickname(e),
-                        l = [(0, X.HI)(n.username)];
-                    null != n.globalName && l.push((0, X.HI)(n.globalName)),
-                        null != s && l.push((0, X.HI)(s)),
-                        l.some((e) => e.includes(o)) &&
-                            t.push({
-                                userId: e,
-                                user: n,
-                                nickname: s,
-                                sortName: s?.toLowerCase() ?? n.globalName?.toLowerCase() ?? n.username.toLowerCase(),
-                            });
-                }),
-                t.sort((e, t) => e.sortName.localeCompare(t.sortName)),
-                t
-            );
-        }, [o]);
+        u = (0, f.bG)(
+            [W.A, _.default],
+            () => {
+                if ("" === o) return [];
+                let e = W.A.getFriendIDs(),
+                    t = [];
+                return (
+                    e.forEach((e) => {
+                        let n = _.default.getUser(e);
+                        if (void 0 === n) return;
+                        let s = W.A.getNickname(e),
+                            l = [(0, X.HI)(n.username)];
+                        (null != n.globalName && l.push((0, X.HI)(n.globalName)),
+                            null != s && l.push((0, X.HI)(s)),
+                            l.some((e) => e.includes(o)) &&
+                                t.push({
+                                    userId: e,
+                                    user: n,
+                                    nickname: s,
+                                    sortName:
+                                        s?.toLowerCase() ?? n.globalName?.toLowerCase() ?? n.username.toLowerCase(),
+                                }));
+                    }),
+                    t.sort((e, t) => e.sortName.localeCompare(t.sortName)),
+                    t
+                );
+            },
+            [o],
+        );
     return (0, s.jsx)(L.l, {
         children: (0, s.jsxs)("div", {
             className: Z.kL,
@@ -260,7 +266,7 @@ function es() {
     let e = l.useRef(null),
         [t, n] = l.useState(!1);
     function i(e) {
-        e.preventDefault(), n(!0);
+        (e.preventDefault(), n(!0));
     }
     return (0, s.jsx)(M.Y, {
         targetElementRef: e,

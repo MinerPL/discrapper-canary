@@ -17,7 +17,7 @@ function d(e) {
                         (0, a.jsx)(r, {
                             initialCustomMessage: t.metadata.customMessage ?? "",
                             onSubmit: (a) => {
-                                (t.metadata.customMessage = a), e(t), n.onClose();
+                                ((t.metadata.customMessage = a), e(t), n.onClose());
                             },
                             ...n,
                             onClose: () => (e(null), n.onClose()),
@@ -41,7 +41,7 @@ function d(e) {
                             triggerType: t.triggerType,
                             guildId: e,
                             onEditChannel: (e) => {
-                                (r.metadata.channelId = e), t.exemptChannels.add(e), l(r), n.onClose();
+                                ((r.metadata.channelId = e), t.exemptChannels.add(e), l(r), n.onClose());
                             },
                             ...n,
                             onClose: () => (l(null), n.onClose()),
@@ -64,7 +64,7 @@ function d(e) {
                             isEdit: null != l,
                             triggerType: e.triggerType,
                             onUpdateDuration: (e) => {
-                                null != e && (t.metadata.durationSeconds = e), r(t), n.onClose();
+                                (null != e && (t.metadata.durationSeconds = e), r(t), n.onClose());
                             },
                             ...n,
                             onClose: () => (r(null), n.onClose()),

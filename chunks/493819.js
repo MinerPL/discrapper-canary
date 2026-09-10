@@ -49,7 +49,7 @@ function h(e) {
     i.useEffect(() => {
         if (!r) return;
         let e = setTimeout(() => {
-            (c.current = !0), d(!1);
+            ((c.current = !0), d(!1));
         }, a);
         return () => clearTimeout(e);
     }, [r, a]);

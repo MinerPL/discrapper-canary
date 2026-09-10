@@ -1,4 +1,4 @@
-function e(n) {
-    return n instanceof DOMException && "NotAllowedError" === n.name;
+function i(e) {
+    return e instanceof DOMException && "NotAllowedError" === e.name;
 }
-c.d(t, { u: () => e }), c(508300);
+(n.d(t, { u: () => i }), n(508300));

@@ -25,13 +25,13 @@ function I(t) {
         s = l.useCallback(
             (t) => {
                 let i = (0, S.CN)();
-                t ? i.delete(n) : i.add(n),
+                (t ? i.delete(n) : i.add(n),
                     c.pE.updateSetting([...i]),
                     a.default.track(f.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: T.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                         ingress: e,
                         guild_id: n,
-                    });
+                    }));
             },
             [e, n],
         );
@@ -60,13 +60,13 @@ function x(t) {
         s = l.useCallback(
             (t) => {
                 let i = (0, S.Kk)();
-                t ? i.delete(n) : i.add(n),
+                (t ? i.delete(n) : i.add(n),
                     c.JG.updateSetting([...i]),
                     a.default.track(f.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: T.m.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: e,
                         guild_id: n,
-                    });
+                    }));
             },
             [e, n],
         );
@@ -103,13 +103,13 @@ function L(t) {
         E = l.useCallback(
             (t) => {
                 let i = (0, S.Tb)();
-                t ? i.delete(n) : i.add(n),
+                (t ? i.delete(n) : i.add(n),
                     c.$s.updateSetting(Array.from(i)),
                     a.default.track(f.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: T.m.DIRECT_MESSAGES_TOGGLE,
                         ingress: e,
                         guild_id: n,
-                    });
+                    }));
             },
             [n, e],
         );
@@ -129,7 +129,7 @@ function L(t) {
                       value: !d,
                       onChange: function (t) {
                           var e;
-                          (e = !t),
+                          ((e = !t),
                               (0, k.O)({
                                   header: R.intl.string(R.t["uUr+GR"]),
                                   body: R.intl.string(R.t.hjGJBp),
@@ -137,12 +137,12 @@ function L(t) {
                                   cancelText: R.intl.string(R.t.p89ACt),
                                   confirmButtonColor: h.$n.Colors.BRAND,
                                   onConfirm: function () {
-                                      c.n6.updateSetting(e), I(e, !1);
+                                      (c.n6.updateSetting(e), I(e, !1));
                                   },
                                   onCancel: function () {
-                                      c.n6.updateSetting(e), c.$s.updateSetting(e ? V.A.getGuildIds() : []), I(e, !0);
+                                      (c.n6.updateSetting(e), c.$s.updateSetting(e ? V.A.getGuildIds() : []), I(e, !0));
                                   },
-                              });
+                              }));
                       },
                       disabled: o,
                       tooltipText: o ? R.intl.string(Y.default["6Af/cw"]) : void 0,
@@ -174,13 +174,13 @@ function D(t) {
         C = l.useCallback(
             (t) => {
                 let i = (0, S.xo)();
-                t ? i.delete(n) : i.add(n),
+                (t ? i.delete(n) : i.add(n),
                     c.Zr.updateSetting(Array.from(i)),
                     a.default.track(f.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: T.m.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: e,
                         guild_id: n,
-                    });
+                    }));
             },
             [e, n],
         );
@@ -204,10 +204,10 @@ function D(t) {
                     cancelText: R.intl.string(R.t.p89ACt),
                     confirmButtonColor: h.$n.Colors.BRAND,
                     onConfirm: function () {
-                        c.YX.updateSetting(n), G(n, !1);
+                        (c.YX.updateSetting(n), G(n, !1));
                     },
                     onCancel: function () {
-                        c.YX.updateSetting(n), c.Zr.updateSetting(n ? V.A.getGuildIds() : []), G(n, !0);
+                        (c.YX.updateSetting(n), c.Zr.updateSetting(n ? V.A.getGuildIds() : []), G(n, !0));
                     },
                 }));
     }

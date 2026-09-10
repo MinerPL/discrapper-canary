@@ -18,7 +18,7 @@ function _(e, t) {
 }
 function E(e, t) {
     if (__OVERLAY__) throw new r.A({ errorCode: o.Lw6.UNKNOWN_ERROR }, "called from wrong app context");
-    a.A.setCommandHandler(o.e$_.OVERLAY, {
+    (a.A.setCommandHandler(o.e$_.OVERLAY, {
         scope: d.LQ,
         handler(n) {
             let { args: i } = n;
@@ -32,21 +32,21 @@ function E(e, t) {
                 let { args: n } = e;
                 if (!t(n.token)) throw new r.A({ errorCode: o.Lw6.INVALID_TOKEN }, "Invalid RPC auth token provided");
             },
-        });
+        }));
 }
 function A(e) {
     if (__OVERLAY__) return i.default.request(o.e$_.OVERLAY, (0, l.g)(e));
     try {
-        return a.A.dispatchToSubscriptions(o.ZE4.OVERLAY, {}, (0, l.g)(e)), Promise.resolve();
+        return (a.A.dispatchToSubscriptions(o.ZE4.OVERLAY, {}, (0, l.g)(e)), Promise.resolve());
     } catch (r) {
         let t = e.type,
             n = [];
         t === o.kGV.DISPATCH && (n = e.payloads.map((e) => e.type));
         let i = Error(`Error dispatching overlay RPC: ${r.message}`);
         throw (
-            (r.stack && (i.stack = r.stack),
+            r.stack && (i.stack = r.stack),
             s.A.captureException(i, { tags: { source: "legacy-overlay" }, extra: { eventType: t, payloadTypes: n } }),
-            i)
+            i
         );
     }
 }

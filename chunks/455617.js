@@ -152,7 +152,7 @@ e.exports = function (e) {
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, o],
         },
         _ = e.inherit(c, { illegal: /\n/, contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, s] });
-    (o.contains = [c, l, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, n, e.C_BLOCK_COMMENT_MODE]),
+    ((o.contains = [c, l, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, n, e.C_BLOCK_COMMENT_MODE]),
         (s.contains = [
             _,
             l,
@@ -161,7 +161,7 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             n,
             e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ }),
-        ]);
+        ]));
     let d = {
             variants: [
                 { className: "string", begin: /"""("*)(?!")(.|\n)*?"""\1/, relevance: 1 },

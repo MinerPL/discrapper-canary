@@ -38,15 +38,15 @@ let U = (e, t, s) => (
         }).then(
             (t) => {
                 let s = t.body;
-                _.h.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code: e, guild: s }),
+                (_.h.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_SUCCESS", code: e, guild: s }),
                     b.A.isConnected()
                         ? G.A.addConditionalChangeListener(() => {
-                              if (null != G.A.getGuild(s.id)) return (0, S.u)(s.id), r(s), !1;
+                              if (null != G.A.getGuild(s.id)) return ((0, S.u)(s.id), r(s), !1);
                           })
-                        : ((0, S.u)(s.id), r(s));
+                        : ((0, S.u)(s.id), r(s)));
             },
             (t) => {
-                _.h.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code: e }), n(t.body);
+                (_.h.dispatch({ type: "GUILD_TEMPLATE_ACCEPT_FAILURE", code: e }), n(t.body));
             },
         );
     })
@@ -65,7 +65,7 @@ function y(e) {
         [a, d] = n.useState(null),
         [h, E] = n.useState(null),
         A = (0, O.A)(e.code);
-    n.useEffect(() => {
+    (n.useEffect(() => {
         !(async function () {
             let e = I.default.getCurrentUser();
             if (null == e)
@@ -89,7 +89,7 @@ function y(e) {
                     guild_template_description: e.description,
                     guild_template_guild_id: e.sourceGuildId,
                 }));
-        });
+        }));
     let C = (0, r.jsxs)(r.Fragment, {
             children: [
                 s ? (0, r.jsx)(Z.A, { guildTemplate: e }) : null,
@@ -127,7 +127,7 @@ function y(e) {
         handleSubmit: function () {
             U(e.code, i, a)
                 .then(() => {
-                    (0, u.closeAllModals)(), (0, x.bz)();
+                    ((0, u.closeAllModals)(), (0, x.bz)());
                 })
                 .catch((e) => E(e));
         },

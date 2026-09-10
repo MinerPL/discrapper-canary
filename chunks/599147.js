@@ -103,13 +103,13 @@ let P = () => {
         [y, g] = n.useState([]),
         [v, E] = n.useState(() => {
             let e = new Date();
-            return e.setMonth(e.getMonth() + 1), e;
+            return (e.setMonth(e.getMonth() + 1), e);
         }),
         [T, P] = n.useState(null),
         [k, R] = n.useState(!1),
         [M, N] = n.useState(!1),
         [D, O] = n.useState(!1);
-    (0, n.useEffect)(() => {
+    ((0, n.useEffect)(() => {
         (0, u.zS)();
     }, []),
         (0, n.useEffect)(() => {
@@ -130,29 +130,29 @@ let P = () => {
         (0, n.useEffect)(() => {
             switch (e) {
                 case A.PremiumTypes.TIER_0:
-                    g([
+                    (g([
                         { label: "Nitro Basic Monthly", value: A.gD.PREMIUM_MONTH_TIER_0 },
                         { label: "Nitro Basic Yearly", value: A.gD.PREMIUM_YEAR_TIER_0 },
                     ]),
-                        f(A.gD.PREMIUM_MONTH_TIER_0);
+                        f(A.gD.PREMIUM_MONTH_TIER_0));
                     break;
                 case A.PremiumTypes.TIER_1:
-                    g([
+                    (g([
                         { label: "Nitro Classic Monthly", value: A.gD.PREMIUM_MONTH_TIER_1 },
                         { label: "Nitro Classic Yearly", value: A.gD.PREMIUM_YEAR_TIER_1 },
                     ]),
-                        f(A.gD.PREMIUM_MONTH_TIER_1);
+                        f(A.gD.PREMIUM_MONTH_TIER_1));
                     break;
                 case A.PremiumTypes.TIER_2:
-                    g([
+                    (g([
                         { label: "Nitro Monthly", value: A.gD.PREMIUM_MONTH_TIER_2 },
                         { label: "Nitro Yearly", value: A.gD.PREMIUM_YEAR_TIER_2 },
                     ]),
-                        f(A.gD.PREMIUM_MONTH_TIER_2);
+                        f(A.gD.PREMIUM_MONTH_TIER_2));
             }
         }, [e]),
         (0, n.useEffect)(() => {
-            [d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
+            ([d.g.CONFIRM_DISCOUNT, d.g.DISCOUNT_APPLIED].includes(l) && null === b && h(_()),
                 l === d.g.PREVIEW &&
                     null === T &&
                     P(
@@ -185,16 +185,16 @@ let P = () => {
                             status: S.lT7.PAID,
                         }),
                     ),
-                l !== d.g.PREVIEW && null !== T && P(null);
-        }, [l, b, v, x, T]);
+                l !== d.g.PREVIEW && null !== T && P(null));
+        }, [l, b, v, x, T]));
     let V = n.useCallback(async () => {
-        O(!0),
+        (O(!0),
             await (0, i.openModalLazy)(
                 async () => (t) =>
                     (0, a.jsx)(C, {
                         ...t,
                         onClose: () => {
-                            t.onClose(), O(!1);
+                            (t.onClose(), O(!1));
                         },
                         premiumType: e,
                         churnDiscount: b,
@@ -204,7 +204,7 @@ let P = () => {
                         errorOnCancel: k,
                         errorOnRedeem: M,
                         setActiveStep: (e) => {
-                            p(e), t.onClose();
+                            (p(e), t.onClose());
                         },
                         activeStep: l,
                         premiumSubscription: {
@@ -230,7 +230,7 @@ let P = () => {
                             pauseReason: j.qf.UNKNOWN,
                         },
                     }),
-            );
+            ));
     }, [e, b, x, T, k, M, l, v]);
     return (
         (0, n.useEffect)(() => {

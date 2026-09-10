@@ -1,7 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.reactFormatter = t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = void 0),
     (t.formatReact = a),
-    (t.makeReactFormatter = s);
+    (t.makeReactFormatter = s));
 let n = r(582128),
     i = r(668317),
     o = n.createElement;
@@ -13,7 +13,7 @@ function s(e) {
         format: a,
         builder: class extends i.FormatBuilder {
             constructor() {
-                super(...arguments), (this._nodeKey = 0), (this.result = []);
+                (super(...arguments), (this._nodeKey = 0), (this.result = []));
             }
             pushRichTextTag(t, r, n) {
                 this.result.push(e[t](r, `${this.context.keyPrefix}.tag-${this._nodeKey++}`, n));
@@ -32,7 +32,7 @@ function s(e) {
         },
     };
 }
-(t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
+((t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
     $b: (e, t) => o("strong", { key: t }, e),
     $i: (e, t) => o("em", { key: t }, e),
     $del: (e, t) => o("del", { key: t }, e),
@@ -40,4 +40,4 @@ function s(e) {
     $link: (e, t, [r]) => o("a", { href: r, key: t }, e),
     $p: (e, t) => o("p", { key: t }, e),
 }),
-    (t.reactFormatter = s(t.DEFAULT_REACT_RICH_TEXT_ELEMENTS));
+    (t.reactFormatter = s(t.DEFAULT_REACT_RICH_TEXT_ELEMENTS)));

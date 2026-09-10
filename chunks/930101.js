@@ -60,7 +60,7 @@ function S(e) {
                 tag: "span",
                 tabIndex: a ? 0 : -1,
                 onClick: (t) => {
-                    C(!0), e?.onClick?.(t);
+                    (C(!0), e?.onClick?.(t));
                 },
                 className: r()(y.qq, { [y._Y]: s, [y.gp]: t.jumboable }),
                 children: E(),
@@ -120,10 +120,10 @@ let v = (e) => {
             position: n,
             shouldShow: !R,
             onTooltipShow: () => {
-                b(!0),
+                (b(!0),
                     s &&
                         (N({ emojiNode: t, isCustomEmoji: !0, nonce: k }),
-                        (0, m.K)(C.EmojiInteractionPoint.CustomEmojiTooltipShown));
+                        (0, m.K)(C.EmojiInteractionPoint.CustomEmojiTooltipShown)));
             },
             children: (0, l.jsx)(u.D, {
                 ...e,
@@ -133,7 +133,7 @@ let v = (e) => {
                 },
                 onClick: s
                     ? (t) => {
-                          b(!1), O(!0), e?.onClick?.(t);
+                          (b(!1), O(!0), e?.onClick?.(t));
                       }
                     : void 0,
                 onMouseLeave: () => {
@@ -152,7 +152,7 @@ let v = (e) => {
               scrollBehavior: "close",
               align: "center",
               onRequestClose: () => {
-                  f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1), O(!1);
+                  (f.default.track(A.HAw.CLOSE_POPOUT, { nonce: k }), b(!1), O(!1));
               },
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,

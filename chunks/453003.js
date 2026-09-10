@@ -1,4 +1,4 @@
-n.d(t, { V: () => ei, A: () => el }), n(321073);
+(n.d(t, { V: () => ei, A: () => el }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -56,7 +56,7 @@ var G = n(665260),
         (i.XBOX = "xbox"),
         (i.VR = "vr"),
         i);
-B.yTV.DESKTOP,
+(B.yTV.DESKTOP,
     B.yTV.ANDROID,
     B.yTV.IOS,
     B.yTV.XBOX,
@@ -64,7 +64,7 @@ B.yTV.DESKTOP,
     B.yTV.PS5,
     B.yTV.SAMSUNG,
     B.yTV.EMBEDDED,
-    B.yTV.META_QUEST;
+    B.yTV.META_QUEST);
 let q = [];
 function Q(e) {
     let { width: t, height: n, color: i } = e;
@@ -338,7 +338,7 @@ function el(e) {
                       trackingArea: j.kY.JOIN,
                       submitting: ev,
                       onClick: () => {
-                          _.Ay.join({
+                          (_.Ay.join({
                               userId: t.author.id,
                               sessionId: f.session_id,
                               applicationId: f.application_id,
@@ -360,7 +360,7 @@ function el(e) {
                                   messageId: t.id,
                                   analyticsLocations: Q,
                                   remoteJoinPlatform: ef,
-                              });
+                              }));
                       },
                   })
                 : e_ && es

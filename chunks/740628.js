@@ -10,10 +10,10 @@ t.exports =
                   r = !1,
                   e = {};
               try {
-                  (t = n(Object.prototype, "__proto__", "set"))(e, []), (r = e instanceof Array);
+                  ((t = n(Object.prototype, "__proto__", "set"))(e, []), (r = e instanceof Array));
               } catch (t) {}
               return function (e, n) {
-                  return s(e), i(n), o(e) && (r ? t(e, n) : (e.__proto__ = n)), e;
+                  return (s(e), i(n), o(e) && (r ? t(e, n) : (e.__proto__ = n)), e);
               };
           })()
         : void 0);

@@ -1,7 +1,7 @@
 let n = r(221180);
 class i extends Error {
     constructor(e) {
-        super(e), (this.name = "TimeoutError");
+        (super(e), (this.name = "TimeoutError"));
     }
 }
 let o = (e, t, r) =>
@@ -19,10 +19,10 @@ let o = (e, t, r) =>
             }
             let n = "string" == typeof r ? r : `Promise timed out after ${t} milliseconds`,
                 s = r instanceof Error ? r : new i(n);
-            "function" == typeof e.cancel && e.cancel(), a(s);
+            ("function" == typeof e.cancel && e.cancel(), a(s));
         }, t);
         n(e.then(o, a), () => {
             clearTimeout(s);
         });
     });
-(e.exports = o), (e.exports.default = o), (e.exports.TimeoutError = i);
+((e.exports = o), (e.exports.default = o), (e.exports.TimeoutError = i));

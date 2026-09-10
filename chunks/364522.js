@@ -26,7 +26,7 @@ function u(e, t) {
             N = !1 === h || "vertical" !== A ? void 0 : "stable" === h ? c.x2 : c.GV;
         return (0, i.jsx)("div", {
             ref: (e) => {
-                "function" == typeof a ? a(e) : null != a && (a.current = e), (g.current = e);
+                ("function" == typeof a ? a(e) : null != a && (a.current = e), (g.current = e));
             },
             className: s()(_, N, { [e]: !0, [t]: I }),
             style: (0, d.Ay)(T, A),

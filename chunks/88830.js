@@ -20,7 +20,7 @@ function C(e) {
     return o.some((e) => null === e) ? null : o.join("");
 }
 async function u(e, n) {
-    await e(n), "u" > typeof document && (document.documentElement.lang = n);
+    (await e(n), "u" > typeof document && (document.documentElement.lang = n));
 }
 function g() {
     let e,

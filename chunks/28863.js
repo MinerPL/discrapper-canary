@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { Anchor: () => E });
+(n.r(t), n.d(t, { Anchor: () => E }));
 var i = n(477900),
     r = n(582128),
     a = n(503698),

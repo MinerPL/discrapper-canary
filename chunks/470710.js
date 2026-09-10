@@ -54,11 +54,11 @@ let I = new h(l.h, {
         return A(!0);
     },
     CONNECTION_CLOSED: function () {
-        (_ = {}), (E = {});
+        ((_ = {}), (E = {}));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { callStoreInternalState: t } = e;
-        (_ = { ...t.calls }), (E = { ...t.enqueuedRings });
+        ((_ = { ...t.calls }), (E = { ...t.enqueuedRings }));
     },
     CONNECTION_RESUMED: function () {
         return A(!0);
@@ -86,9 +86,14 @@ let I = new h(l.h, {
             null != E[t])
         ) {
             let e = E[t];
-            delete E[t],
+            (delete E[t],
                 1 !== e.indexOf("all") && (e = null),
-                s.Bo.post({ url: u.Rsh.CALL_RING(t), body: { recipients: e }, oldFormErrors: !0, rejectWithError: !0 });
+                s.Bo.post({
+                    url: u.Rsh.CALL_RING(t),
+                    body: { recipients: e },
+                    oldFormErrors: !0,
+                    rejectWithError: !0,
+                }));
         }
     },
     CALL_UPDATE: function (e) {
@@ -100,10 +105,10 @@ let I = new h(l.h, {
     CALL_DELETE: function (e) {
         let { channelId: t, unavailable: n } = e,
             i = _[t];
-        !0 === n && null != i
+        (!0 === n && null != i
             ? (_[t] = { ...i, unavailable: n })
             : (_[t] = { channelId: t, ringing: [], messageId: null, region: null, regionUpdated: !1, unavailable: n }),
-            null != E[t] && delete E[t];
+            null != E[t] && delete E[t]);
     },
     CALL_ENQUEUE_RING: function (e) {
         let { channelId: t, recipients: n } = e;

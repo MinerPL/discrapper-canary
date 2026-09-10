@@ -87,10 +87,10 @@ function p(e) {
                 caretAriaLabel: h.intl.string(h.t.jO7lgy),
                 isActive: o,
                 onMouseEnter: (e) => {
-                    m.onMouseEnter?.(e), a?.();
+                    (m.onMouseEnter?.(e), a?.());
                 },
                 onMouseLeave: (e) => {
-                    m.onMouseLeave?.(e), l?.();
+                    (m.onMouseLeave?.(e), l?.());
                 },
                 className: s()(u, { [I.t]: r && !d }),
                 onPopoutClick: T,

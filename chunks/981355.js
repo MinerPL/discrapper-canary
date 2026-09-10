@@ -15,7 +15,7 @@ function d() {
             function e() {
                 i({ width: window.innerWidth, height: window.innerHeight });
             }
-            return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+            return (e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, []),
         e
     );

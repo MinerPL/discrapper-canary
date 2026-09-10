@@ -25,5 +25,5 @@ e.exports = l
                   var n = u(r, s(arguments));
                   return this instanceof i ? h(t, n.length, n) : t.apply(e, n);
               };
-          return o(n) && (i.prototype = n), i;
+          return (o(n) && (i.prototype = n), i);
       };

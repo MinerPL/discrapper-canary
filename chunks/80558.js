@@ -1,4 +1,4 @@
-n.d(t, { O: () => r }), n(321073);
+(n.d(t, { O: () => r }), n(321073));
 var h = n(582128),
     s = n(435558),
     i = n.n(s),
@@ -17,13 +17,13 @@ class d {
     }
     _flush() {
         let e = [];
-        this._pending.forEach((t) => {
-            this._lastFetchedAttempted.set(t, Date.now()), e.push(t);
+        (this._pending.forEach((t) => {
+            (this._lastFetchedAttempted.set(t, Date.now()), e.push(t));
         }),
-            this._pending.clear();
+            this._pending.clear());
         let t = [],
             n = [];
-        e.forEach((e) => {
+        (e.forEach((e) => {
             c.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
         }),
             t.length > 0 &&
@@ -37,7 +37,7 @@ class d {
                     .chunk(n, 20)
                     .forEach((e) => {
                         p.Ay.fetchApplications(e, !0);
-                    });
+                    }));
     }
 }
 let u = new d();

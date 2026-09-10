@@ -3,15 +3,15 @@ var n =
     function (e) {
         return e && e.__esModule ? e : { default: e };
     };
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.ParsingContext = t.Chrono = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.ParsingContext = t.Chrono = void 0));
 let a = r(115835),
     i = n(r(614583));
 class s {
     constructor(e) {
-        (this.defaultConfig = new i.default()),
+        ((this.defaultConfig = new i.default()),
             (e = e || this.defaultConfig.createCasualConfiguration()),
             (this.parsers = [...e.parsers]),
-            (this.refiners = [...e.refiners]);
+            (this.refiners = [...e.refiners]));
     }
     clone() {
         return new s({ parsers: [...this.parsers], refiners: [...this.refiners] });
@@ -41,12 +41,12 @@ class s {
             i = e.text,
             s = e.text,
             o = n.exec(s);
-        for (; o; ) {
+        for (; o;) {
             let u = o.index + i.length - s.length;
             o.index = u;
             let l = t.extract(e, o);
             if (!l) {
-                (s = i.substring(o.index + 1)), (o = n.exec(s));
+                ((s = i.substring(o.index + 1)), (o = n.exec(s)));
                 continue;
             }
             let d = null;
@@ -57,10 +57,10 @@ class s {
                   : (d = e.createParsingResult(o.index, o[0], l));
             let c = d.index,
                 m = d.text;
-            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${c}) '${m}'`)),
+            (e.debug(() => console.log(`${t.constructor.name} extracted (at index=${c}) '${m}'`)),
                 r.push(d),
                 (s = i.substring(c + m.length)),
-                (o = n.exec(s));
+                (o = n.exec(s)));
         }
         return r;
     }
@@ -68,10 +68,10 @@ class s {
 t.Chrono = s;
 class o {
     constructor(e, t, r) {
-        (this.text = e),
+        ((this.text = e),
             (this.option = null != r ? r : {}),
             (this.reference = a.ReferenceWithTimezone.fromInput(t, this.option.timezones)),
-            (this.refDate = this.reference.instant);
+            (this.refDate = this.reference.instant));
     }
     createParsingComponents(e) {
         return e instanceof a.ParsingComponents ? e : new a.ParsingComponents(this.reference, e);

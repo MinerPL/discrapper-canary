@@ -14,5 +14,5 @@ e.exports =
     ((!!l && "function" == typeof l.set && n([l.set])) ||
         function (e, t) {
             if (null == e) throw new o("set Object.prototype.__proto__ called on null or undefined");
-            return (e.__proto__ = t), t;
+            return ((e.__proto__ = t), t);
         });

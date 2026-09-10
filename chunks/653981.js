@@ -1,4 +1,4 @@
-n.d(t, { default: () => b }), n(321073);
+(n.d(t, { default: () => b }), n(321073));
 var i = n(477900),
     e = n(582128),
     l = n(136722),
@@ -200,7 +200,7 @@ function b(s) {
         }, [t]);
     if (null == t) return null;
     function N() {
-        n &&
+        (n &&
             (function () {
                 if (null == t) return;
                 let s = j.A.getEveryoneRole(t),
@@ -210,7 +210,7 @@ function b(s) {
             r &&
                 null != t &&
                 (E.A.updateGuild({ defaultMessageNotifications: I.orn.ONLY_MENTIONS }),
-                E.A.saveGuild(t.id, { defaultMessageNotifications: I.orn.ONLY_MENTIONS }));
+                E.A.saveGuild(t.id, { defaultMessageNotifications: I.orn.ONLY_MENTIONS })));
     }
     let h = [
         ...(0 === u

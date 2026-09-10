@@ -1,4 +1,4 @@
-n.d(t, { AZ: () => N, Ay: () => D, Qn: () => O, cR: () => R }), n(321073);
+(n.d(t, { AZ: () => N, Ay: () => D, Qn: () => O, cR: () => R }), n(321073));
 var i,
     r = n(284009),
     a = n.n(r),
@@ -61,7 +61,7 @@ class y extends T.A {
     requests = new Map();
     analyticsTimeouts = new Map();
     constructor(e = 5) {
-        super(new d.A("MessageQueue")), (this.maxSize = e);
+        (super(new d.A("MessageQueue")), (this.maxSize = e));
     }
     isFull() {
         return this.queue.length >= this.maxSize;
@@ -82,27 +82,27 @@ class y extends T.A {
         }
     }
     cancelRequest(e) {
-        this.logger.log("Cancel message send: ", e),
+        (this.logger.log("Cancel message send: ", e),
             this.requests.get(e)?.abort(),
             this.requests.delete(e),
             this.cancelQueueMetricTimers(e),
-            this.remove((t) => (C(t) || 2 === t.type) && t.message.nonce === e);
+            this.remove((t) => (C(t) || 2 === t.type) && t.message.nonce === e));
     }
     cancelPendingSendRequests(e) {
         let t = [],
             n = [];
-        for (; this.queue.length > 0; ) {
+        for (; this.queue.length > 0;) {
             let i = this.queue.shift(),
                 { message: r } = i;
             0 === r.type && r.message.channelId === e ? t.push(r.message) : n.push(i);
         }
-        return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
+        return (this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t);
     }
     clear() {
-        this.requests.forEach((e) => e.abort()),
+        (this.requests.forEach((e) => e.abort()),
             this.requests.clear(),
             this.analyticsTimeouts.forEach((e, t) => this.cancelQueueMetricTimers(t)),
-            super.clear();
+            super.clear());
     }
     startQueueMetricTimers(e) {
         let t = L.map((e) =>
@@ -113,7 +113,7 @@ class y extends T.A {
         this.analyticsTimeouts.set(e, t);
     }
     cancelQueueMetricTimers(e) {
-        this.analyticsTimeouts.get(e)?.forEach(clearTimeout), this.analyticsTimeouts.delete(e);
+        (this.analyticsTimeouts.get(e)?.forEach(clearTimeout), this.analyticsTimeouts.delete(e));
     }
     createResponseHandler(e, t) {
         return (n) => {
@@ -136,13 +136,13 @@ class y extends T.A {
             l = (0, u.O)(),
             o = { mobile_network_type: I.A.getType(), ...r, ...(null != l && { signal_strength: l }) };
         if (c.Ay.get("send_fail_100")) {
-            this.logger.log("Skipping message send because send_fail_100 is enabled"),
-                t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" });
+            (this.logger.log("Skipping message send because send_fail_100 is enabled"),
+                t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
             return;
         }
         let d = this.createResponseHandler(e.nonce, t),
             _ = new AbortController();
-        null != e.nonce && this.requests.set(e.nonce, _),
+        (null != e.nonce && this.requests.set(e.nonce, _),
             this.startQueueMetricTimers(e.nonce),
             s.Bo.post(
                 {
@@ -155,7 +155,7 @@ class y extends T.A {
                     rejectWithError: !0,
                 },
                 d,
-            );
+            ));
     }
     handleSendAnnouncement(e, t) {
         let { channelId: n, analyticsLocation: i, ...r } = e,
@@ -163,13 +163,13 @@ class y extends T.A {
             l = (0, u.O)(),
             o = { mobile_network_type: I.A.getType(), ...r, ...(null != l && { signal_strength: l }) };
         if (c.Ay.get("send_fail_100")) {
-            this.logger.log("Skipping message send because send_fail_100 is enabled"),
-                t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" });
+            (this.logger.log("Skipping message send because send_fail_100 is enabled"),
+                t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
             return;
         }
         let d = this.createResponseHandler(e.nonce, t),
             _ = new AbortController();
-        null != e.nonce && this.requests.set(e.nonce, _),
+        (null != e.nonce && this.requests.set(e.nonce, _),
             this.startQueueMetricTimers(e.nonce),
             s.Bo.post(
                 {
@@ -182,7 +182,7 @@ class y extends T.A {
                     rejectWithError: !0,
                 },
                 d,
-            );
+            ));
     }
     handleEdit = (e, t) => {
         let { channelId: n, messageId: i, isCrossposted: r, ...a } = e,
@@ -199,7 +199,7 @@ class y extends T.A {
                     this.requests.set(i, l);
                 },
             };
-        r && (d.failImmediatelyWhenRateLimited = !0), s.Bo.patch(d, o);
+        (r && (d.failImmediatelyWhenRateLimited = !0), s.Bo.patch(d, o));
     };
     handleCommand(e, t) {
         let {
@@ -234,7 +234,7 @@ class y extends T.A {
                 ),
             ));
         let T = new AbortController();
-        this.requests.set(d, T),
+        (this.requests.set(d, T),
             s.Bo.post(
                 {
                     url: E.Rsh.INTERACTIONS,
@@ -250,7 +250,7 @@ class y extends T.A {
                     },
                 },
                 this.createResponseHandler(d, t),
-            );
+            ));
     }
 }
 let D = new y();

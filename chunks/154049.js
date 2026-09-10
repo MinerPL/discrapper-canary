@@ -5,7 +5,7 @@ async function a(e) {
     try {
         return await e();
     } catch (e) {
-        return r.log("database load failed.", e), null;
+        return (r.log("database load failed.", e), null);
     }
 }
 function s(e, t, n) {

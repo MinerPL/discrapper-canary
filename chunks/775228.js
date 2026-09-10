@@ -17,33 +17,33 @@ function _(e, t) {
 }
 function E(e) {
     let { applicationId: t, branchId: n, installationPath: r } = e;
-    null == i.installations[t] && (i.installations[t] = {}),
+    (null == i.installations[t] && (i.installations[t] = {}),
         (i.installations[t][n] = { installationPath: r }),
-        i.installationPaths.has(r) || h({ path: r, metadata: {} });
+        i.installationPaths.has(r) || h({ path: r, metadata: {} }));
 }
 function A(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == i.installations[t]) return !1;
-    delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t];
+    (delete i.installations[t][n], 0 === Object.keys(i.installations[t]).length && delete i.installations[t]);
 }
 function h(e) {
     if (i.installationPaths.has(e.path)) return !1;
     _(e.path, e.metadata);
     let t = new Set(i.installationPaths);
-    t.add(e.path), (i.installationPaths = t);
+    (t.add(e.path), (i.installationPaths = t));
 }
 class I extends r.Ay.PersistedStore {
     static displayName = "InstallationManagerStore";
     static persistKey = "InstallationManagerStore";
     initialize(e) {
         let t = { ...e };
-        null == t.installations && (t.installations = {}),
+        (null == t.installations && (t.installations = {}),
             null == t.defaultInstallationPath && (t.defaultInstallationPath = u),
             null == t.installationPaths
                 ? (t.installationPaths = new Set([t.defaultInstallationPath]))
                 : (t.installationPaths = new Set(Array.from(t.installationPaths))),
             null == t.pathLabels && (t.pathLabels = {}),
-            (i = t);
+            (i = t));
     }
     getState() {
         return i;
@@ -95,18 +95,18 @@ let f = new I(a.h, {
         let { path: n } = e;
         if (!i.installationPaths.has(n) || i.defaultInstallationPath === n) return !1;
         let r = new Set(i.installationPaths);
-        r.delete(n),
+        (r.delete(n),
             (i.installationPaths = r),
             (c = { ...c }),
             delete c[n],
             (t = n),
-            null == i.pathLabels[t] || ((i.pathLabels = { ...i.pathLabels }), delete i.pathLabels[t]);
+            null == i.pathLabels[t] || ((i.pathLabels = { ...i.pathLabels }), delete i.pathLabels[t]));
     },
     INSTALLATION_LOCATION_UPDATE: function (e) {
         let { path: t, label: n, isDefault: r } = e;
         if (!i.installationPaths.has(t)) return !1;
-        null != n && "" !== n && i.pathLabels[t] !== n && (i.pathLabels = { ...i.pathLabels, [t]: n }),
-            r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t);
+        (null != n && "" !== n && i.pathLabels[t] !== n && (i.pathLabels = { ...i.pathLabels, [t]: n }),
+            r && i.defaultInstallationPath !== t && (i.defaultInstallationPath = t));
     },
     INSTALLATION_LOCATION_FETCH_METADATA: function (e) {
         let { metadataPayload: t } = e;

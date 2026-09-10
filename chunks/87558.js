@@ -1,4 +1,4 @@
-t.d(r, { Ay: () => i, GT: () => s, Mz: () => u, XG: () => c, fB: () => f, qH: () => o, rs: () => p }),
+(t.d(r, { Ay: () => i, GT: () => s, Mz: () => u, XG: () => c, fB: () => f, qH: () => o, rs: () => p }),
     t(323874),
     t(14289),
     t(35956),
@@ -9,7 +9,7 @@ t.d(r, { Ay: () => i, GT: () => s, Mz: () => u, XG: () => c, fB: () => f, qH: ()
     t(232424),
     t(949626),
     t(767709),
-    t(65162);
+    t(65162));
 var n,
     a = t(115943),
     l = t.n(a);
@@ -36,10 +36,10 @@ function s(e, r) {
 function u(e, r) {
     if (null == e) return;
     let t = new FileReader();
-    (t.onload = (e) => {
+    ((t.onload = (e) => {
         null == e.target || ("string" == typeof e.target.result && r?.(e.target.result));
     }),
-        t.readAsDataURL(e);
+        t.readAsDataURL(e));
 }
 function c(e) {
     if (null == e) return "";

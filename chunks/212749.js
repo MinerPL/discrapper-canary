@@ -1,12 +1,12 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.isWEBM = t.isSWF = t.isOGG = t.isMP4 = t.isMOV = t.isMKV = t.isM4V = t.isFLV = t.isAVI = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.isWEBM = t.isSWF = t.isOGG = t.isMP4 = t.isMOV = t.isMKV = t.isM4V = t.isFLV = t.isAVI = void 0));
 let i = n(835986),
     r = n(817762);
 function o(e) {
     let t = (0, r.getFileChunk)(e);
     return !!i.FileTypes.checkByFileType(t, "m4v") && (0, r.isftypStringIncluded)(t);
 }
-(t.isAVI = function (e) {
+((t.isAVI = function (e) {
     let t = (0, r.getFileChunk)(e);
     return i.FileTypes.checkByFileType(t, "avi");
 }),
@@ -38,4 +38,4 @@ function o(e) {
     (t.isWEBM = function (e) {
         let t = (0, r.getFileChunk)(e, 64);
         return !!i.FileTypes.checkByFileType(t, "webm") && "webm" === (0, r.findMatroskaDocTypeElements)(t);
-    });
+    }));

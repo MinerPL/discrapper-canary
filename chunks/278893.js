@@ -217,19 +217,19 @@ function U({ actor: t, trackElementClicked: e }) {
             t.send({ type: "LOAD" });
         },
         sendSms(r) {
-            e?.("sendSms"), t.send({ type: "SEND_SMS", phone: r });
+            (e?.("sendSms"), t.send({ type: "SEND_SMS", phone: r }));
         },
         continueOnDesktop() {
-            e?.("continueOnDesktop"), t.send({ type: "CONTINUE_ON_DESKTOP" });
+            (e?.("continueOnDesktop"), t.send({ type: "CONTINUE_ON_DESKTOP" }));
         },
         resetSms() {
             t.send({ type: "RESET_SMS" });
         },
         close() {
-            e?.("close"), t.send({ type: "CLOSE" });
+            (e?.("close"), t.send({ type: "CLOSE" }));
         },
         retry() {
-            e?.("retry"), t.send({ type: "RETRY" });
+            (e?.("retry"), t.send({ type: "RETRY" }));
         },
     };
 }

@@ -12,7 +12,7 @@ r(
                 t = o(this),
                 n = i(t),
                 r = l(t, 0);
-            return (r.length = a(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r;
+            return ((r.length = a(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r);
         },
     },
 );

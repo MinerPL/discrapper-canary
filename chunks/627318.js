@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => ei });
+(a.r(t), a.d(t, { default: () => ei }));
 var s,
     l = a(477900),
     r = a(582128),
@@ -48,7 +48,7 @@ async function T(e, t, a) {
     try {
         E()(null != l, "No URL in authorize response");
         let { state: e } = (0, I.vA)(l);
-        E()(null != e, "Authorize URL state query parameter must be present"), (r = e);
+        (E()(null != e, "Authorize URL state query parameter must be present"), (r = e));
     } catch (e) {
         throw (await k(a, 2, "authorize"), Error("error parsing callback params"));
     }
@@ -76,13 +76,13 @@ function P(e) {
                 }
                 if (null == e.twoWayLinkCode)
                     try {
-                        await (0, D.IN)(e.userCode, "granted"), n(e);
+                        (await (0, D.IN)(e.userCode, "granted"), n(e));
                     } catch (t) {
                         s(e);
                     }
                 else
                     try {
-                        await T(e.clientId, e.twoWayLinkCode, e.userCode), n(e);
+                        (await T(e.clientId, e.twoWayLinkCode, e.userCode), n(e));
                     } catch (t) {
                         s(e);
                     }
@@ -147,7 +147,7 @@ function X(e) {
     return (
         r.useEffect(() => {
             let e = new Image();
-            (e.src = Y), (e.onload = () => s(!0)), (e.onerror = () => s(!0));
+            ((e.src = Y), (e.onload = () => s(!0)), (e.onerror = () => s(!0)));
         }, [Y]),
         "" !== t && a
             ? (0, l.jsxs)(l.Fragment, {
@@ -327,16 +327,16 @@ function ea(e) {
                     try {
                         l(!0);
                         let a = await (0, D.cG)(e);
-                        l(!1),
+                        (l(!1),
                             t({
                                 userCode: e,
                                 clientId: a.body.client_id,
                                 scopes: a.body.scopes,
                                 twoWayLinkCode: a.body.two_way_link_code,
-                            });
+                            }));
                     } catch (e) {
                         var s;
-                        i(
+                        (i(
                             429 === (s = e?.status)
                                 ? G.intl.string(G.t.BPmZvj)
                                 : 404 === s || 400 === s
@@ -344,7 +344,7 @@ function ea(e) {
                                   : G.intl.string(G.t.JNQRU4),
                         ),
                             l(!1),
-                            e?.status === 401 && a();
+                            e?.status === 401 && a());
                     }
                 }, [e, t, a]);
             return (
@@ -419,7 +419,7 @@ function er() {
             return { type: "user-code-input", usePrefilledCode: !0 };
         }),
         f = (0, c.bG)([x.A], () => x.A.hasLoadedExperiments);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         p.default.isAuthenticated() && !f && d.A.getExperiments();
     }, [f]),
         (0, o.A)(),
@@ -427,13 +427,13 @@ function er() {
         r.useEffect(() => {
             if (s === t) return;
             let e = null;
-            "user-code-input" !== s.type && "handoff" !== s.type && (e = v(s.userCodeData.clientId)),
+            ("user-code-input" !== s.type && "handoff" !== s.type && (e = v(s.userCodeData.clientId)),
                 g.default.track(j.HAw.DEVICE_LINK_STEP, {
                     previous_step: t?.type,
                     current_step: s.type,
                     platform_type: e,
-                });
-        }, [t, s]);
+                }));
+        }, [t, s]));
     let y = r.useCallback(() => {
             u({ type: "user-code-input" });
         }, [u]),
@@ -458,13 +458,13 @@ function er() {
         E = !0;
     switch (s.type) {
         case "handoff":
-            (e = (0, l.jsx)(M, { code: s.code })), (E = !1);
+            ((e = (0, l.jsx)(M, { code: s.code })), (E = !1));
             break;
         case "user-code-input":
             e = (0, l.jsx)(ea, { usePrefilledCode: s.usePrefilledCode || !1, onUserCodeAccepted: b });
             break;
         case "authorization":
-            (e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: y, onError: A, onSuccess: C })), (E = !1);
+            ((e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: y, onError: A, onSuccess: C })), (E = !1));
             break;
         case "success":
             e = (0, l.jsx)(q, { onComplete: () => (0, m.pX)(j.BVt.ME), data: s.userCodeData });

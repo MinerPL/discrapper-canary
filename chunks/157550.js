@@ -14,12 +14,12 @@ function o(e) {
     );
 }
 function d() {
-    a.clear(),
+    (a.clear(),
         s.clear(),
         Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
             o(e);
         }),
-        (l = !0);
+        (l = !0));
 }
 function c(e) {
     let { channelId: t } = e;
@@ -36,7 +36,7 @@ function _(e) {
 function E(e) {
     let { channel: t } = e,
         n = !1;
-    return a.has(t.id) && (a.delete(t.id), (n = !0)), n;
+    return (a.has(t.id) && (a.delete(t.id), (n = !0)), n);
 }
 class A extends r.A {
     static displayName = "SpamMessageRequestStore";

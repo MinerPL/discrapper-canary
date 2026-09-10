@@ -1,12 +1,12 @@
 n.d(t, { z: () => d });
 var r = n(582128),
     l = n(192308),
-    o = n(139033),
-    i = n(626584),
+    i = n(139033),
+    o = n(626584),
     a = n(38405),
     s = n(794400),
     u = n(375708);
-let c = new i.A("RevenueErrorBoundary.tsx");
+let c = new o.A("RevenueErrorBoundary.tsx");
 class d extends r.PureComponent {
     state = { error: null, info: null };
     getSentryTags(e, t) {
@@ -17,12 +17,12 @@ class d extends r.PureComponent {
     }
     onErrorCaught(e, t, n) {}
     closeAndShowAlert() {
-        (0, l.closeAllModals)(),
-            (0, o.A)({
+        ((0, l.closeAllModals)(),
+            (0, i.A)({
                 title: u.intl.string(u.t.iufib1),
                 subtitle: u.intl.string(u.t.ZUEGFn),
                 confirmText: u.intl.string(u.t.TyCVIq),
-            });
+            }));
     }
     getErrorHandlingBehavior(e) {
         return e instanceof s.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
@@ -34,15 +34,15 @@ class d extends r.PureComponent {
         let n,
             { additionalAnalyticsData: r } = this.props,
             l = this.getCrashedFlag(e),
-            o = this.getSentryExtras(e),
-            i = {
+            i = this.getSentryExtras(e),
+            o = {
                 tags: this.getSentryTags(e, l),
-                extra: { ...o, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+                extra: { ...i, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            (e instanceof s.v && e.skipReportingToSentry) || (n = a.A.captureException(e, i)),
-            c.error("Revenue error occurred:", { error: e, additionalErrorContext: o }),
-            { sentryErrorOptions: i, sentryEventId: n }
+            (e instanceof s.v && e.skipReportingToSentry) || (n = a.A.captureException(e, o)),
+            c.error("Revenue error occurred:", { error: e, additionalErrorContext: i }),
+            { sentryErrorOptions: o, sentryEventId: n }
         );
     }
     componentDidCatch(e, t) {

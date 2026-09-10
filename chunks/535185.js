@@ -1,4 +1,4 @@
-n.d(t, { g: () => d, w: () => c }), n(142703);
+(n.d(t, { g: () => d, w: () => c }), n(142703));
 var i = n(582128),
     r = n(238040),
     a = n(935399);
@@ -41,7 +41,7 @@ function o(e, t) {
         r = arguments.length > 3 ? arguments[3] : void 0,
         { enabled: s = !0, fireOnMount: o = !1, fireOnDepsChange: d = !1 } = r,
         c = (0, i.useRef)(!1);
-    (0, a.u5)(() => {
+    ((0, a.u5)(() => {
         let n = e.current;
         s &&
             o &&
@@ -54,7 +54,7 @@ function o(e, t) {
         (0, i.useLayoutEffect)(() => {
             let n = e.current;
             s && d && c.current && null != n && t(l(n));
-        }, [t, e, ...n]);
+        }, [t, e, ...n]));
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
@@ -62,15 +62,15 @@ function d(e, t) {
         l = (0, i.useId)(),
         { enabled: d = !0 } = a,
         c = (0, i.useRef)(null);
-    s(l, e.current),
+    (s(l, e.current),
         o(e, t, n, a),
         (0, i.useEffect)(() => {
             if (!d) return;
             let n = e.current;
             if (null == n) return;
             let i = (0, r.NQ)(l, n, t);
-            if (((c.current = i), null != i)) return (0, r.wB)(i, n), () => (0, r.$v)(i, n);
-        }, [d, l, t, e, ...n]);
+            if (((c.current = i), null != i)) return ((0, r.wB)(i, n), () => (0, r.$v)(i, n));
+        }, [d, l, t, e, ...n]));
 }
 function c(e) {
     let t,
@@ -94,7 +94,7 @@ function c(e) {
             if (!c) return;
             let e = _.current,
                 t = u.current;
-            if (null != e && null != t) return (0, r.wB)(t, e), () => (0, r.$v)(t, e);
+            if (null != e && null != t) return ((0, r.wB)(t, e), () => (0, r.$v)(t, e));
         }, [c, _, u, ...l]),
         _
     );

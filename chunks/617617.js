@@ -30,7 +30,7 @@ function g() {
     });
 }
 function S(e) {
-    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.O9)());
+    (null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.O9)()));
 }
 function N(e) {
     let {
@@ -41,14 +41,14 @@ function N(e) {
     } = e;
     T = !s;
     let l = p[n];
-    a && S(l),
+    (a && S(l),
         i
             ? ((l.proto = (0, A.RK)(l.ProtoClass, l.proto, t)),
               r()("string" != typeof l.proto, "UserSettingsProto cannot be a string"))
             : ((l.proto = t),
               r()("string" != typeof l.proto, "UserSettingsProto cannot be a string"),
               (l.editInfo.loaded = !0),
-              (l.editInfo.loading = !1));
+              (l.editInfo.loading = !1)));
 }
 function C(e) {
     null != e &&
@@ -58,7 +58,7 @@ function C(e) {
             let a = i?.proto ?? "",
                 s = (0, A.ii)(t.ProtoClass, a);
             if (null == s) return;
-            (t.proto = s), r()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
+            ((t.proto = s), r()("string" != typeof t.proto, "UserSettingsProto cannot be a string"));
             let l = i?.protoToSave ?? null;
             if (null == l || null == i.offlineEditDataVersion) return;
             let o = (0, A.ii)(t.ProtoClass, l);
@@ -155,13 +155,13 @@ let R = new O(u.h, {
         } = e;
         r()(!__OVERLAY__, "this cannot run in the overlay");
         let i = p[t];
-        return (i.editInfo = { ...i.editInfo, ...n }), !1;
+        return ((i.editInfo = { ...i.editInfo, ...n }), !1);
     },
     CONNECTION_OPEN: function (e) {
         let { userSettingsProto: t } = e;
         null != t && ((I.proto = t), r()("string" != typeof I.proto, "UserSettingsProto cannot be a string"));
         let { proto: n, isDirty: i, cleanupFuncs: a } = (0, A.vI)(I.proto, E.A[h.oD.PRELOADED_USER_SETTINGS]);
-        i && S(I),
+        (i && S(I),
             (I.proto = n),
             r()("string" != typeof I.proto, "UserSettingsProto cannot be a string"),
             (I.editInfo.triggeredMigrations = i),
@@ -170,18 +170,18 @@ let R = new O(u.h, {
             Object.values(p).forEach((e) => {
                 e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
             }),
-            g();
+            g());
     },
     CONNECTION_CLOSED: m,
     CONNECTION_RESUMED: m,
     OVERLAY_INITIALIZE: function (e) {
         let { userSettingsProto: t } = e;
-        (I.proto = (0, A.Gd)(t)), r()("string" != typeof I.proto, "UserSettingsProto cannot be a string");
+        ((I.proto = (0, A.Gd)(t)), r()("string" != typeof I.proto, "UserSettingsProto cannot be a string"));
     },
     LOGOUT: function () {
-        g(),
+        (g(),
             Object.values(p).forEach((e) => {
-                (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.O9)());
-            });
+                ((e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.O9)()));
+            }));
     },
 });

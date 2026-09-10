@@ -10,7 +10,7 @@ try {
 let a = !(function () {
     let e = "test";
     try {
-        return i.setItem(e, e), i.removeItem(e), !0;
+        return (i.setItem(e, e), i.removeItem(e), !0);
     } catch (e) {
         return !1;
     }

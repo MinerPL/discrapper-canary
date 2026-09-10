@@ -210,7 +210,7 @@ function U() {
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
 function w(e) {
-    i.Ay.trackWithMetadata(E.HAw.CHANNEL_OPENED, {
+    (i.Ay.trackWithMetadata(E.HAw.CHANNEL_OPENED, {
         ...(0, i.H$)(e.guild_id),
         ...(0, i.dI)(e),
         ...(0, r.C)(e, !0),
@@ -218,7 +218,7 @@ function w(e) {
         channel_view: "Split View",
         platform: (0, d.getPlatform)(),
     }),
-        (0, a.A)({ channelId: e.id });
+        (0, a.A)({ channelId: e.id }));
 }
 function G() {
     i.Ay.trackWithMetadata(E.HAw.OPEN_MODAL, {

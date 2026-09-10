@@ -7,7 +7,7 @@ let n = r(40840),
     u = RegExp(`(${n.TIME_UNITS_NO_ABBR_PATTERN})\\s{0,5}(?:ago|before|earlier)(?=\\W|$)`, "i");
 class l extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     innerPattern() {
         return this.strictMode ? u : o;

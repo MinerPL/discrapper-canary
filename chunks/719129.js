@@ -24,7 +24,7 @@ async function I() {
             if (null == e.setFlags) return;
             let t = 0,
                 n = o.default.getCurrentUser();
-            null != n && n.isStaff() && (console.log("Hook: Enabling crash trigger."), (t |= 2)), e.setFlags(t);
+            (null != n && n.isStaff() && (console.log("Hook: Enabling crash trigger."), (t |= 2)), e.setFlags(t));
         })(e),
         e
     );
@@ -40,7 +40,7 @@ function p(e, t) {
             E = null;
         return new Promise((l) => {
             function o(e, n) {
-                d.default.track(_.HAw.HOOK_RESULT, {
+                (d.default.track(_.HAw.HOOK_RESULT, {
                     game_name: c,
                     game_id: null == u ? null : u.id,
                     success: n,
@@ -48,13 +48,13 @@ function p(e, t) {
                     ...t,
                 }),
                     null != E && (clearTimeout(E), (E = null)),
-                    n ? l() : l((e = e ?? "Unknown hook error"));
+                    n ? l() : l((e = e ?? "Unknown hook error")));
             }
             let A = s.Ay.getOverlayOptionsForPID(e),
                 h = { ...a.gH, ...A, elevate: s.Ay.shouldElevateProcessForPID(e) };
             null == h.allowHook || h.allowHook
                 ? ((E = setTimeout(() => {
-                      n.cancelAttachToProcess(e), o("Timed out waiting for hook response", !1);
+                      (n.cancelAttachToProcess(e), o("Timed out waiting for hook response", !1));
                   }, 12e4)),
                   n.attachToProcess(e, h, o),
                   i.h.wait(() => r.A.clearElevatedProcess()))

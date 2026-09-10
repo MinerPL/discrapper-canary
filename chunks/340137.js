@@ -23,10 +23,10 @@ class h extends a.A {
         this.handleCommonUpdates();
     };
     handleCommonUpdates = () => {
-        this.manageExpiringCustomStatus(),
+        (this.manageExpiringCustomStatus(),
             this.manageExpiringStatus(),
             this.lazilyMigrateStatusCreatedAt(),
-            this.manageExpiringFocusMode();
+            this.manageExpiringFocusMode());
     };
     manageExpiringCustomStatus = () => {
         let e = o.G2.getSetting();

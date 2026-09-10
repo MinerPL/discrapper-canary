@@ -55,7 +55,7 @@ Event: ${(0, a.$X)(c)}`),
                             try {
                                 t = e.exception.values[e.exception.values.length - 1];
                             } catch (e) {}
-                            return t && t.value && (n.push(t.value), t.type && n.push(`${t.type}: ${t.value}`)), n;
+                            return (t && t.value && (n.push(t.value), t.type && n.push(`${t.type}: ${t.value}`)), n);
                         })(p).some((e) => (0, s.Xr)(e, h)))
                   ? (r.T &&
                         o.vF.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
@@ -121,6 +121,6 @@ function u(e) {
               })(t)
             : null;
     } catch (t) {
-        return r.T && o.vF.error(`Cannot extract url for event ${(0, a.$X)(e)}`), null;
+        return (r.T && o.vF.error(`Cannot extract url for event ${(0, a.$X)(e)}`), null);
     }
 }

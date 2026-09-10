@@ -258,7 +258,7 @@ function u() {
         let t = s.A.find((t) => t.name === e);
         if (null != t) return { name: t.name, code: t.phoneCountryCode, alpha2: t.alpha2 };
     })("United States");
-    return a()(null != e, "Default country code cannot be missing."), e;
+    return (a()(null != e, "Default country code cannot be missing."), e);
 }
 let _ = {
     AF: () => d.intl.string(d.t["Jafq/8"]),

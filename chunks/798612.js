@@ -17,7 +17,7 @@ function h(t) {
         subtitle: u.intl.format(u.t.QhcEAL, {
             maxLength: p.uvi,
             onLearnMore: function () {
-                n(), (0, o.e)();
+                (n(), (0, o.e)());
             },
         }),
         graphic: { src: d.A, type: "image" },
@@ -26,8 +26,8 @@ function h(t) {
         onSecondaryClick: function () {
             n();
             let t = new Blob([h], { type: "text/plain" });
-            (0, c.R)([(0, r.VE)(t, "message.txt", "text/plain")], e, s.C.ChannelMessage, { requireConfirm: !0 }),
-                a._.dispatchToLastSubscribed(p.jej.CLEAR_TEXT);
+            ((0, c.R)([(0, r.VE)(t, "message.txt", "text/plain")], e, s.C.ChannelMessage, { requireConfirm: !0 }),
+                a._.dispatchToLastSubscribed(p.jej.CLEAR_TEXT));
         },
         ...C,
     });

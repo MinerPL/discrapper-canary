@@ -8,11 +8,15 @@ var i = n(582128),
     c = n(652215);
 function d(e) {
     let { message: t, channel: n, announcementEnabled: d = !0, officialMessagesEnabled: u = !1 } = e,
-        m = (0, a.bG)([r.A], () => {
-            if (!d) return !1;
-            let e = r.A.getGuild(n.guild_id);
-            return e?.features.has(c.GuildFeatures.COMMUNITY) ?? !1;
-        }, [d, n.guild_id]),
+        m = (0, a.bG)(
+            [r.A],
+            () => {
+                if (!d) return !1;
+                let e = r.A.getGuild(n.guild_id);
+                return e?.features.has(c.GuildFeatures.COMMUNITY) ?? !1;
+            },
+            [d, n.guild_id],
+        ),
         h =
             t.messageReference?.guild_id != null &&
             null != t.webhookId &&
@@ -26,7 +30,7 @@ function d(e) {
         E = h && t.messageReference?.guild_id != null ? t.messageReference.guild_id : n.guild_id,
         I = i.useCallback(
             (e) => {
-                p &&
+                (p &&
                     (e
                         ? o.A.handleMessageBecameVisible({
                               type: o.K.ANNOUNCEMENT,
@@ -45,7 +49,7 @@ function d(e) {
                                   channelId: n.id,
                                   guildId: n.guild_id,
                               })
-                            : o.A.handleMessageLostVisibility(t.id, o.K.OFFICIAL_MESSAGE));
+                            : o.A.handleMessageLostVisibility(t.id, o.K.OFFICIAL_MESSAGE)));
             },
             [p, A, x, t.id, n.id, n.guild_id, f, E],
         );

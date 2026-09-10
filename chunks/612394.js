@@ -16,7 +16,7 @@ function d() {
 function h(e, t) {
     if (!r.BQ.getSetting() || e !== i.DB.GAME) return;
     let n = "game_mention_autocomplete";
-    u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3));
+    (u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3)));
 }
 function m(e, t, n) {
     a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {

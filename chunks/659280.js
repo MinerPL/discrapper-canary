@@ -199,8 +199,8 @@ let X = function (e) {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, H.Ay)();
     i.useEffect(() => {
-        z.default.track(Y.HAw.PREMIUM_UPSELL_VIEWED, { type: J.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
-            (0, W.sq)(Y.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, K.uq)(J.e.EMOJI_AUTOCOMPLETE_INLINE));
+        (z.default.track(Y.HAw.PREMIUM_UPSELL_VIEWED, { type: J.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
+            (0, W.sq)(Y.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, K.uq)(J.e.EMOJI_AUTOCOMPLETE_INLINE)));
     }, [n]);
     let s = (0, l.jsx)("div", {
         className: $.gm,
@@ -270,7 +270,7 @@ class ef extends i.PureComponent {
     selectable = !0;
     layoutClass = S.rT;
     constructor(e) {
-        super(e), (this.state = { hovered: !1 });
+        (super(e), (this.state = { hovered: !1 }));
     }
     isSelectable() {
         return this.selectable;
@@ -290,7 +290,7 @@ class ef extends i.PureComponent {
                   id: ed(i) ?? void 0,
                   onClick: this.handleClick,
                   onMouseMove: () => {
-                      this.setState({ hovered: !0 }), this.handleMouseEnter();
+                      (this.setState({ hovered: !0 }), this.handleMouseEnter());
                   },
                   onMouseLeave: () => this.setState({ hovered: !1 }),
                   role: "option",

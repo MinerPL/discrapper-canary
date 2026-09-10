@@ -20,7 +20,7 @@ var n = r(330976),
 function _(e, t) {
     let r = (0, b.useRef)(!0),
         n = (0, b.useRef)(null);
-    (0, w.N)(
+    ((0, w.N)(
         () => (
             (r.current = !0),
             () => {
@@ -30,9 +30,9 @@ function _(e, t) {
         [],
     ),
         (0, w.N)(() => {
-            r.current ? (r.current = !1) : (!n.current || t.some((e, t) => !Object.is(e, n[t]))) && e(),
-                (n.current = t);
-        }, t);
+            (r.current ? (r.current = !1) : (!n.current || t.some((e, t) => !Object.is(e, n[t]))) && e(),
+                (n.current = t));
+        }, t));
 }
 var S = r(333007);
 function x(e) {
@@ -178,7 +178,8 @@ function x(e) {
                     return { shouldContinuePropagation: !0, shouldPreventDefault: !1 };
                 },
                 "Tab+Shift": () => (
-                    !O && x.current && x.current.focus(), { shouldContinuePropagation: !0, shouldPreventDefault: !1 }
+                    !O && x.current && x.current.focus(),
+                    { shouldContinuePropagation: !0, shouldPreventDefault: !1 }
                 ),
             },
         }),
@@ -193,17 +194,17 @@ function x(e) {
         I
             ? (e) => {
                   let { detail: t } = e;
-                  e.stopPropagation(), r.setFocused(!0), t?.focusStrategy === "first" && (U.current = !0);
+                  (e.stopPropagation(), r.setFocused(!0), t?.focusStrategy === "first" && (U.current = !0));
               }
             : void 0,
     );
     let z = w.getFirstKey?.() ?? null;
-    _(() => {
+    (_(() => {
         if (U.current)
             if (null == z) {
                 let e = (0, a.bq)();
-                (0, n.vX)(x.current), (0, n.Ig)(e, null), r.collection.size > 0 && (U.current = !1);
-            } else r.setFocusedKey(z), (U.current = !1);
+                ((0, n.vX)(x.current), (0, n.Ig)(e, null), r.collection.size > 0 && (U.current = !1));
+            } else (r.setFocusedKey(z), (U.current = !1));
     }, [z, r.collection.size]),
         _(() => {
             r.collection.size > 0 && (U.current = !1);
@@ -213,16 +214,16 @@ function x(e) {
             "react-aria-clear-focus",
             I
                 ? (e) => {
-                      e.stopPropagation(), r.setFocused(!1), e.detail?.clearFocusKey && r.setFocusedKey(null);
+                      (e.stopPropagation(), r.setFocused(!1), e.detail?.clearFocusKey && r.setFocusedKey(null));
                   }
                 : void 0,
-        );
+        ));
     let W = (0, b.useRef)(E),
         H = (0, b.useRef)(!1);
     (0, b.useEffect)(() => {
         if (W.current) {
             let e = null;
-            "first" === E && (e = w.getFirstKey?.() ?? null), "last" === E && (e = w.getLastKey?.() ?? null);
+            ("first" === E && (e = w.getFirstKey?.() ?? null), "last" === E && (e = w.getLastKey?.() ?? null));
             let t = r.selectedKeys;
             if (t.size) {
                 for (let n of t)
@@ -231,15 +232,15 @@ function x(e) {
                         break;
                     }
             }
-            r.setFocused(!0),
+            (r.setFocused(!0),
                 r.setFocusedKey(e),
                 null == e && !I && x.current && (0, i.l)(x.current),
-                r.collection.size > 0 && ((W.current = !1), (H.current = !0));
+                r.collection.size > 0 && ((W.current = !1), (H.current = !0)));
         }
     });
     let G = (0, b.useRef)(r.focusedKey),
         q = (0, b.useRef)(null);
-    (0, b.useEffect)(() => {
+    ((0, b.useEffect)(() => {
         if (
             r.isFocused &&
             null != r.focusedKey &&
@@ -257,9 +258,9 @@ function x(e) {
                         ((0, h.R)(D.current, t), "virtual" !== e && (0, h.o)(t, { containingElement: x.current }));
                 })));
         }
-        !I && r.isFocused && null == r.focusedKey && null != G.current && x.current && (0, i.l)(x.current),
+        (!I && r.isFocused && null == r.focusedKey && null != G.current && x.current && (0, i.l)(x.current),
             (G.current = r.focusedKey),
-            (H.current = !1);
+            (H.current = !1));
     }),
         (0, b.useEffect)(
             () => () => {
@@ -268,8 +269,8 @@ function x(e) {
             [],
         ),
         (0, m._)(x, "react-aria-focus-scope-restore", (e) => {
-            e.preventDefault(), r.setFocused(!0);
-        });
+            (e.preventDefault(), r.setFocused(!0));
+        }));
     let Y = {
             ...(0, p.v)($, K),
             onFocus: (e) => {
@@ -328,13 +329,13 @@ function x(e) {
                                           null != t.getKeyForSearch)
                                       ) {
                                           let e = t.getKeyForSearch(i.current.search, r.focusedKey);
-                                          null == e && (e = t.getKeyForSearch(i.current.search)),
-                                              null != e && (r.setFocusedKey(e), n && n(e));
+                                          (null == e && (e = t.getKeyForSearch(i.current.search)),
+                                              null != e && (r.setFocusedKey(e), n && n(e)));
                                       }
-                                      clearTimeout(i.current.timeout),
+                                      (clearTimeout(i.current.timeout),
                                           (i.current.timeout = setTimeout(() => {
                                               i.current.search = "";
-                                          }, 1e3));
+                                          }, 1e3)));
                                   }
                               }
                             : void 0,
@@ -353,21 +354,21 @@ function x(e) {
                                       if (((i.current.search += s), null != t.getKeyForSearch)) {
                                           let o = t.getKeyForSearch(i.current.search, r.focusedKey);
                                           if ((null == o && (o = t.getKeyForSearch(i.current.search)), null != o))
-                                              r.setFocusedKey(o),
+                                              (r.setFocusedKey(o),
                                                   n && n(o),
                                                   e.preventDefault(),
-                                                  "continuePropagation" in e || e.stopPropagation();
+                                                  "continuePropagation" in e || e.stopPropagation());
                                           else {
-                                              (i.current.search = ""),
+                                              ((i.current.search = ""),
                                                   clearTimeout(i.current.timeout),
-                                                  (i.current.timeout = void 0);
+                                                  (i.current.timeout = void 0));
                                               return;
                                           }
                                       }
-                                      clearTimeout(i.current.timeout),
+                                      (clearTimeout(i.current.timeout),
                                           (i.current.timeout = setTimeout(() => {
                                               i.current.search = "";
-                                          }, 1e3));
+                                          }, 1e3)));
                                   }
                               }
                             : void 0,
@@ -375,7 +376,7 @@ function x(e) {
                 }
             );
         })({ keyboardDelegate: w, selectionManager: r });
-    A || (Y = (0, p.v)(X, Y)), I || (t = null == r.focusedKey ? 0 : -1);
+    (A || (Y = (0, p.v)(X, Y)), I || (t = null == r.focusedKey ? 0 : -1));
     let J = (0, u.j5)(r.collection);
     return { collectionProps: (0, p.v)(Y, { tabIndex: t, "data-collection": J }) };
 }

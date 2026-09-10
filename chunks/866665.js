@@ -33,7 +33,7 @@ function E(e) {
     }, [g]);
     let y = r.useCallback(
             (e) => {
-                null == g && L(e), (0, d.cZ)(m, e);
+                (null == g && L(e), (0, d.cZ)(m, e));
             },
             [m, g],
         ),
@@ -72,8 +72,8 @@ function E(e) {
         F = (0, c.j)({ shouldShow: v, onExitComplete: k });
     if (!G && (v || !P)) return t;
     if (null == t || (!h && !r.isValidElement(t))) return null;
-    let V = N ?? (0, d.Xj)(n),
-        B = F((e, t) =>
+    let B = N ?? (0, d.Xj)(n),
+        V = F((e, t) =>
             t
                 ? (0, i.jsx)(o.R, {
                       isVisible: v,
@@ -88,11 +88,11 @@ function E(e) {
                       spacing: T,
                       caretConfig: S,
                       animationStyle: e,
-                      positionKey: V,
+                      positionKey: B,
                   })
                 : null,
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: D, children: w }), B],
+        children: [M, C || null == w || "" === w ? null : (0, i.jsx)(a.A, { id: D, children: w }), V],
     });
 }

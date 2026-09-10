@@ -1,4 +1,4 @@
-l.d(e, { default: () => b }), l(321073);
+(l.d(e, { default: () => b }), l(321073));
 var i = l(477900),
     n = l(582128),
     a = l(189213),
@@ -35,7 +35,7 @@ class T extends o.Ay.Store {
 let O = new T(N.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (f = e), (C = !0), (E = []);
+        ((f = e), (C = !0), (E = []));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
@@ -46,7 +46,7 @@ let O = new T(N.h, {
         f === e && ((E = []), (C = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (f = null), (E = null), (C = !1);
+        ((f = null), (E = null), (C = !1));
     },
 });
 var v = l(652215);
@@ -83,7 +83,7 @@ async function m(t) {
             []
         );
     } catch (e) {
-        return N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE", guildId: t }), [];
+        return (N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE", guildId: t }), []);
     }
 }
 var G = l(923121),
@@ -96,21 +96,25 @@ function b(t) {
         E = null != L && null != N,
         C = S.A.getGuildId(),
         T = (0, o.bG)([O], () => O.getAllowedApplicationIds(C) ?? [], [C]);
-    n.useEffect(() => {
+    (n.useEffect(() => {
         null != C && m(C);
     }, [C]),
         n.useEffect(() => {
             for (let t of T)
                 null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
-        }, [T]);
-    let v = (0, o.yK)([_.A], () => {
-            let t = [];
-            for (let e of T) {
-                let l = _.A.getApplication(e);
-                null != l && t.push(l);
-            }
-            return t;
-        }, [T]),
+        }, [T]));
+    let v = (0, o.yK)(
+            [_.A],
+            () => {
+                let t = [];
+                for (let e of T) {
+                    let l = _.A.getApplication(e);
+                    null != l && t.push(l);
+                }
+                return t;
+            },
+            [T],
+        ),
         [b, P] = n.useState(() => (null != L ? (0, x.Sq)(L) : void 0)),
         [j, F] = n.useState(L?.description ?? ""),
         [U, R] = n.useState([]),
@@ -125,7 +129,7 @@ function b(t) {
                 null == _.A.getApplication(e) &&
                     _.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
-            return t.sort((t, e) => t.label.localeCompare(e.label)), t;
+            return (t.sort((t, e) => t.label.localeCompare(e.label)), t);
         }, [v, T, f]),
         B = n.useCallback(() => {
             if (null == b || "" === b) return void R(["Please select a connection"]);
@@ -175,7 +179,7 @@ function b(t) {
                                     selectionMode: "single",
                                     value: b,
                                     onSelectionChange: (t) => {
-                                        P(t), R([]);
+                                        (P(t), R([]));
                                     },
                                     options: W,
                                     formatOption: k,

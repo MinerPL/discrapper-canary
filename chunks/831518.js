@@ -1,4 +1,4 @@
-n.d(t, { tA: () => y, Ly: () => D, Q4: () => R, pn: () => b, Tv: () => v, GC: () => L, lq: () => M }), n(321073);
+(n.d(t, { tA: () => y, Ly: () => D, Q4: () => R, pn: () => b, Tv: () => v, GC: () => L, lq: () => M }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(997649),
@@ -13,7 +13,7 @@ class u {
     gameAxisScoreThreshold = 0.17;
     gameStateTimeline = [];
     constructor(e) {
-        (this.gameEvents = e),
+        ((this.gameEvents = e),
             (this.gameStateTimeline = (function (e) {
                 let t = { in_game: !1, is_dead: !1 },
                     n = [{ ...t, timestamp_ms: 0 }];
@@ -53,7 +53,7 @@ class u {
                             i({ in_game: !0 }, t.timestamp_ms);
                     }
                 return n;
-            })(this.gameEvents));
+            })(this.gameEvents)));
     }
     calculateModifiers(e, t) {
         let n = this.gameStateTimeline,
@@ -63,7 +63,7 @@ class u {
             let r = e + 1e3 * t,
                 a = E(n, r),
                 s = 1;
-            a.in_game ? a.is_dead && (s *= d.pw) : (s *= d.ym), i.push({ timestamp_ms: r, modifier: s });
+            (a.in_game ? a.is_dead && (s *= d.pw) : (s *= d.ym), i.push({ timestamp_ms: r, modifier: s }));
         }
         return i;
     }
@@ -88,7 +88,7 @@ class u {
 let _ = { applicationIds: [o.m], create: (e) => new u(e) };
 function E(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
-    return r()(null != n, "bad timeline!"), n;
+    return (r()(null != n, "bad timeline!"), n);
 }
 var A = n(190443),
     h = n(979563);
@@ -144,7 +144,7 @@ class p {
 let T = { applicationIds: [A.e], create: (e) => new p(e) };
 function m(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
-    return r()(null != n, "bad timeline!"), n;
+    return (r()(null != n, "bad timeline!"), n);
 }
 var g = n(45926),
     S = n(557329),
@@ -254,9 +254,9 @@ function D(e, t, n, i) {
                 A = [];
             for (let e of u) {
                 let t = c[e];
-                _.push(t.laughterData.map((e) => e.value)),
+                (_.push(t.laughterData.map((e) => e.value)),
                     E.push(t.shoutingData.map((e) => e.value)),
-                    A.push(t.rmsData.map((e) => e.value));
+                    A.push(t.rmsData.map((e) => e.value)));
             }
             let h = u.length > 0 ? c[u[0]] : void 0;
             return {
@@ -317,7 +317,7 @@ function D(e, t, n, i) {
                     y = f,
                     D = N;
                 if (t.normalizeComponents) {
-                    (y = (f - t.sMainMedian) / t.sMainIqr), (D = (N - t.sReactionMedian) / t.sReactionIqr);
+                    ((y = (f - t.sMainMedian) / t.sMainIqr), (D = (N - t.sReactionMedian) / t.sReactionIqr));
                     let e = Math.max(1, o - 1);
                     n = (R - t.sCoMedianPerPair * e) / (t.sCoIqrPerPair * e);
                 } else n = Math.log1p(R);
@@ -353,7 +353,7 @@ function D(e, t, n, i) {
             x = (0.5 + (0, N.ry)(w.audioScore)) * (1 + Math.tanh(G / u.gameSquashScale)) - 0.5,
             k = L(s, i.decision.timestamp),
             F = k.gridStartMs,
-            V =
+            B =
                 null != F
                     ? (function (e, t) {
                           let { pLaughter: n, pShouting: i, rms: r } = e;
@@ -370,19 +370,19 @@ function D(e, t, n, i) {
                           peakConfidence: e.peakV,
                       }))
                     : [],
-            B = {
+            V = {
                 clip: i,
                 score: x,
                 audioScore: w.audioScore,
                 gameEventsScore: G,
                 hasAudio: h.length > 0,
                 hasGameEvents: P.length > 0,
-                audioEvents: V,
+                audioEvents: B,
             };
         if (c) {
-            B.components = { ...w.components, gameEventsScore: G };
+            V.components = { ...w.components, gameEventsScore: G };
             let e = null != g ? (g - l) / 1e3 : 0;
-            B.debug = {
+            V.debug = {
                 ...w.debug,
                 userIds: A,
                 tsSec: Array.from({ length: R }, (t, n) => e + n),
@@ -391,7 +391,7 @@ function D(e, t, n, i) {
                 rms: p,
             };
         }
-        _.push(B);
+        _.push(V);
     }
     _.sort((e, t) => t.score - e.score);
     let D = (function (e, t, n, i) {
@@ -442,11 +442,11 @@ function D(e, t, n, i) {
         }
         let u = l.map((e) => e.quota),
             _ = !0;
-        for (; o.length < n && _; ) {
+        for (; o.length < n && _;) {
             _ = !1;
             for (let e = 0; e < l.length && o.length !== n; e++) !(u[e] <= 0) && c(l[e]) && (u[e]--, (_ = !0));
         }
-        for (_ = !0; o.length < n && _; )
+        for (_ = !0; o.length < n && _;)
             for (let e of ((_ = !1), l)) {
                 if (o.length === n) break;
                 c(e) && (_ = !0);
@@ -470,5 +470,5 @@ function M(e, t, n) {
             : (null != l && r()(l.timestamp_ms % b == 0, `bad timestamp! ${l.timestamp_ms}`),
               i.push({ value: 0, timestamp_ms: n }));
     }
-    return r()(i.length === n, "bad track!"), i;
+    return (r()(i.length === n, "bad track!"), i);
 }

@@ -38,7 +38,7 @@ function D(e) {
         [y, k] = i.useState(!1),
         P = i.useRef(void 0),
         F = i.useCallback(() => {
-            clearTimeout(P.current), k(!0);
+            (clearTimeout(P.current), k(!0));
         }, []),
         V = i.useCallback(() => {
             P.current = setTimeout(() => {

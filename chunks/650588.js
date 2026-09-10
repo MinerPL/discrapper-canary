@@ -20,7 +20,7 @@ function S(e) {
         y = i.useRef(null),
         I = a()(f.Qq, f.Ow);
     function A(e) {
-        S(!1), t?.(e);
+        (S(!1), t?.(e));
     }
     function g(e) {
         return (0, l.jsxs)("div", {

@@ -1,4 +1,4 @@
-n.d(t, { o: () => a }), n(321073);
+(n.d(t, { o: () => a }), n(321073));
 var l = n(820066);
 let i = new WeakMap(),
     r = new WeakMap(),
@@ -35,7 +35,7 @@ let i = new WeakMap(),
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = arguments.length > 3 ? arguments[3] : void 0,
                 r = arguments.length > 4 ? arguments[4] : void 0;
-            (r = r ?? e.selection), (i = i ?? l.VW.richValue(e));
+            ((r = r ?? e.selection), (i = i ?? l.VW.richValue(e)));
             let { history: s } = e,
                 o = a.currentEntry(e);
             for (
@@ -43,8 +43,8 @@ let i = new WeakMap(),
                 s.stack.length >= 250;
             )
                 s.stack.shift();
-            s.stack.push({ type: t, mergeable: n, createdAt: Date.now(), value: i, selection: r }),
-                (s.index = s.stack.length - 1);
+            (s.stack.push({ type: t, mergeable: n, createdAt: Date.now(), value: i, selection: r }),
+                (s.index = s.stack.length - 1));
         },
         mergeEntry(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

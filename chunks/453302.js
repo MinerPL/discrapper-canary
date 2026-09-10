@@ -12,7 +12,7 @@ var i = n(691540),
     h = n(375708);
 function m(e, t, n) {
     let { rating: l, problem: a, feedback: d } = n;
-    !(function (e) {
+    (!(function (e) {
         let {
             summary: t,
             guildId: n,
@@ -22,7 +22,7 @@ function m(e, t, n) {
             feedback: r = "",
             location: a,
         } = e;
-        (0, u.C7)(t, i),
+        ((0, u.C7)(t, i),
             o.default.track(c.HAw.SUMMARIES_REPORT_PROBLEM, {
                 reason: s,
                 location: a,
@@ -36,7 +36,7 @@ function m(e, t, n) {
                 summary_id: t.id,
                 summary_source: t.source,
                 summary_type: t.type,
-            });
+            }));
     })({
         problem: a?.value ?? null,
         summary: e,
@@ -46,7 +46,7 @@ function m(e, t, n) {
         location: "Summary divider",
         rating: l,
     }),
-        (0, i.P0)((0, s.o)(h.intl.string(h.t["d9+vQ8"]), r.Ck.SUCCESS));
+        (0, i.P0)((0, s.o)(h.intl.string(h.t["d9+vQ8"]), r.Ck.SUCCESS)));
 }
 function f(e) {
     let { summary: t, channel: i, rating: s } = e;

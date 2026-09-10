@@ -33,7 +33,7 @@ function h(e) {
         V =
             ((l = u.useContext(r.cK)),
             u.useEffect(() => {
-                l.setHasValue?.((null != I && "" !== I) || (null != F && "" !== F)), l.setIsFocused?.(!1);
+                (l.setHasValue?.((null != I && "" !== I) || (null != F && "" !== F)), l.setIsFocused?.(!1));
             }, []),
             u.useEffect(() => {
                 null != F && "" !== F && l.setHasValue?.(!0);
@@ -75,13 +75,13 @@ function h(e) {
                     ...y,
                     "aria-labelledby": y["aria-labelledby"] ?? V.titleId,
                     onChange: function (e) {
-                        y.onChange?.(e.currentTarget.value, b), S(!0), V.setHasValue?.("" !== e.currentTarget.value);
+                        (y.onChange?.(e.currentTarget.value, b), S(!0), V.setHasValue?.("" !== e.currentTarget.value));
                     },
                     onBlur: function (e) {
-                        y.onBlur?.(e, b), V.setIsFocused?.(!1);
+                        (y.onBlur?.(e, b), V.setIsFocused?.(!1));
                     },
                     onFocus: function (e) {
-                        y.onFocus?.(e, b), V.setIsFocused?.(!0);
+                        (y.onFocus?.(e, b), V.setIsFocused?.(!0));
                     },
                     ref: g,
                 }),

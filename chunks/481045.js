@@ -40,7 +40,7 @@ function m(t) {
         ? null
         : (0, n.jsxs)(k, {
               onClick: () => {
-                  i(), g();
+                  (i(), g());
               },
               children: [
                   (0, n.jsx)(c.E, {

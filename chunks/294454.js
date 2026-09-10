@@ -13,7 +13,7 @@ function _(e) {
         onRequestSent: r,
         customSendHandler: u,
     } = e;
-    (0, i.pp)(n.channel_id, n.id, _),
+    ((0, i.pp)(n.channel_id, n.id, _),
         (0, s.openModalLazy)(
             async () => {
                 let { ForwardModal: e } = await Promise.all([
@@ -56,7 +56,7 @@ function _(e) {
                     });
             },
             { modalKey: d },
-        );
+        ));
 }
 function o() {
     (0, s.closeModal)(d);

@@ -53,13 +53,13 @@ function S(e) {
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            (i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg);
+            ((i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg));
             break;
         case "ALLOW":
-            (i = E.intl.string(E.t.RzDfSk)), (t = b.CheckmarkLargeIcon), (n = C.cw);
+            ((i = E.intl.string(E.t.RzDfSk)), (t = b.CheckmarkLargeIcon), (n = C.cw));
             break;
         default:
-            (i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le);
+            ((i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le));
     }
     let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
         d = (0, A.Gx)({ isSelected: r, label: c });
@@ -89,7 +89,7 @@ function k(e) {
             }),
     });
 }
-I.Types, (k.Types = I.Types);
+(I.Types, (k.Types = I.Types));
 var O = n(659262);
 class L extends s.PureComponent {
     getOverwriteValue(e) {

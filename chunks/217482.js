@@ -421,7 +421,7 @@ function ev(e) {
                             text: Q.intl.string(Q.t.PdRCRg),
                             children: (0, n.jsx)(r.K, {
                                 onClick: function (e) {
-                                    X(),
+                                    (X(),
                                         (0, L.L3)(e, async () => {
                                             let { default: e } = await Promise.all([
                                                 l.e("249169"),
@@ -449,7 +449,7 @@ function ev(e) {
                                                     onAfterDelete: c,
                                                     displayConfiguration: eh,
                                                 });
-                                        });
+                                        }));
                                 },
                                 variant: "icon-only",
                                 "aria-label": Q.intl.string(Q.t.PdRCRg),
@@ -532,7 +532,7 @@ function ev(e) {
                                         fullWidth: !0,
                                         text: Q.intl.string(J.default.RiEyiS),
                                         onClick: () => {
-                                            eo(null), el($.Y.CROP);
+                                            (eo(null), el($.Y.CROP));
                                         },
                                     }),
                                 eu &&
@@ -602,7 +602,7 @@ function ev(e) {
                                   ep({
                                       clips: [P()],
                                       onShareComplete: () => {
-                                          o?.(), c();
+                                          (o?.(), c());
                                       },
                                   }),
                               text: Q.intl.string(Q.t["R3BPH+"]),

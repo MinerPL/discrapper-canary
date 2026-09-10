@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.flattenNames = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.flattenNames = void 0));
 var n = u(r(565102)),
     o = u(r(43646)),
     a = u(r(85092)),
@@ -17,7 +17,7 @@ var l = (t.flattenNames = function e() {
                   })
                 : (0, a.default)(t)
                   ? (0, o.default)(t, function (e, t) {
-                        !0 === e && r.push(t), r.push(t + "-" + e);
+                        (!0 === e && r.push(t), r.push(t + "-" + e));
                     })
                   : (0, n.default)(t) && r.push(t);
         }),

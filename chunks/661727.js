@@ -1,6 +1,6 @@
 var a,
     l = t(605685);
-t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
+(t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0));
 var o = l(t(442160)),
     s = l(t(733296)),
     i = l(t(768790)),
@@ -13,7 +13,7 @@ var o = l(t(442160)),
     b = l(t(747562)),
     f = l(t(358508)),
     v = new b.default([]);
-(0, m.default)((a = (0, p.default)((0, c.default)(f.default).call(f.default)))).call(a, function (e) {
+((0, m.default)((a = (0, p.default)((0, c.default)(f.default).call(f.default)))).call(a, function (e) {
     var r,
         t,
         a = f.default.get(e);
@@ -29,11 +29,11 @@ var o = l(t(442160)),
                         d = ((0, n.default)((a = (0, p.default)((0, i.default)(v).call(v)))).call(a, function (e) {
                             var r = (0, s.default)(e, 2),
                                 t = r[0];
-                            return r[1], (0, u.default)(t) === l;
+                            return (r[1], (0, u.default)(t) === l);
                         }) || [])[1];
-                    d || (d = new o.default([])), d.add(e), v.set(t, d);
+                    (d || (d = new o.default([])), d.add(e), v.set(t, d));
                 }
             }
         });
 }),
-    (r.default = v);
+    (r.default = v));

@@ -1,5 +1,5 @@
 let l;
-n.d(t, { A: () => A, a: () => p }), n(667532);
+(n.d(t, { A: () => A, a: () => p }), n(667532));
 var i = n(435558),
     s = n(17928),
     r = n(765178),
@@ -17,7 +17,7 @@ let g = [],
     f = 10 * o.A.Millis.SECOND,
     x = (0, i.debounce)(() => {
         let e = (0, u.fr)(m);
-        r.O.announce(e, "polite"), (m = []);
+        (r.O.announce(e, "polite"), (m = []));
     }, 500);
 class h extends s.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";

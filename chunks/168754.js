@@ -12,13 +12,13 @@ function a(e) {
         color: n ? "green" : void 0,
         iconComponent: c,
         onMouseEnter: (e) => {
-            t?.(e), u.onMouseEnter();
+            (t?.(e), u.onMouseEnter());
         },
         onMouseLeave: (e) => {
-            a?.(e), u.onMouseLeave();
+            (a?.(e), u.onMouseLeave());
         },
         onClick: (e) => {
-            r?.(e), d();
+            (r?.(e), d());
         },
         ...o,
     });

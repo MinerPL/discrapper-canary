@@ -24,7 +24,7 @@ let b = (0, l._C)((e = {}) => {
         name: "Breadcrumbs",
         setup(e) {
             var n, l, b, S, w, E, k;
-            t.console &&
+            (t.console &&
                 (0, a.P)(
                     ((n = e),
                     function (e) {
@@ -38,8 +38,8 @@ let b = (0, l._C)((e = {}) => {
                         if ("assert" === e.level)
                             if (!1 !== e.args[0]) return;
                             else
-                                (t.message = `Assertion failed: ${((0, m.gt))(e.args.slice(1), " ") || "console.assert"}`),
-                                    (t.data.arguments = e.args.slice(1));
+                                ((t.message = `Assertion failed: ${(0, m.gt)(e.args.slice(1), " ") || "console.assert"}`),
+                                    (t.data.arguments = e.args.slice(1)));
                         (0, u.Z)(t, { input: e.args, level: e.level });
                     }),
                 ),
@@ -55,26 +55,26 @@ let b = (0, l._C)((e = {}) => {
                                     "object" == typeof b && "number" == typeof b.maxStringLength
                                         ? b.maxStringLength
                                         : void 0;
-                            i &&
+                            (i &&
                                 i > 1024 &&
                                 (y.T &&
                                     p.vF.warn(
                                         `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${i} was configured. Sentry will use 1024 instead.`,
                                     ),
                                 (i = 1024)),
-                                "string" == typeof r && (r = [r]);
+                                "string" == typeof r && (r = [r]));
                             try {
                                 var o;
                                 let a = e.event,
                                     s = (o = a) && o.target ? a.target : a;
-                                (t = (0, h.Hd)(s, { keyAttrs: r, maxStringLength: i })), (n = (0, h.xE)(s));
+                                ((t = (0, h.Hd)(s, { keyAttrs: r, maxStringLength: i })), (n = (0, h.xE)(s)));
                             } catch (e) {
                                 t = "<unknown>";
                             }
                             if (0 === t.length) return;
                             let a = { category: `ui.${e.name}`, message: t };
-                            n && (a.data = { "ui.component_name": n }),
-                                (0, u.Z)(a, { event: e.event, name: e.name, global: e.global });
+                            (n && (a.data = { "ui.component_name": n }),
+                                (0, u.Z)(a, { event: e.event, name: e.name, global: e.global }));
                         }),
                     ),
                 t.xhr &&
@@ -129,10 +129,10 @@ let b = (0, l._C)((e = {}) => {
                                 r = (0, _.Dl)(v.jf.location.href),
                                 i = t ? (0, _.Dl)(t) : void 0,
                                 o = (0, _.Dl)(n);
-                            (i && i.path) || (i = r),
+                            ((i && i.path) || (i = r),
                                 r.protocol === o.protocol && r.host === o.host && (n = o.relative),
                                 r.protocol === i.protocol && r.host === i.host && (t = i.relative),
-                                (0, u.Z)({ category: "navigation", data: { from: t, to: n } });
+                                (0, u.Z)({ category: "navigation", data: { from: t, to: n } }));
                         }),
                     ),
                 t.sentry &&
@@ -151,7 +151,7 @@ let b = (0, l._C)((e = {}) => {
                                     { event: e },
                                 );
                         }),
-                    );
+                    ));
         },
     };
 });

@@ -1,5 +1,5 @@
 let o, i;
-n.d(t, { default: () => b }), n(323874), n(14289), n(35956), n(321073);
+(n.d(t, { default: () => b }), n(323874), n(14289), n(35956), n(321073));
 var r = n(143236),
     s = n(435558),
     l = n.n(s),
@@ -38,7 +38,7 @@ function S() {
                 : () => {
                       if (!w(i.listening)) return;
                       let e = i.address().port;
-                      C.info(`Starting on ${e}`), c.h.dispatch({ type: "RPC_SERVER_READY", port: e });
+                      (C.info(`Starting on ${e}`), c.h.dispatch({ type: "RPC_SERVER_READY", port: e }));
                   };
     i.listen(I.xEi + (e % I.sJq), "127.0.0.1", t);
 }
@@ -54,12 +54,12 @@ function N(e, t, n) {
                       "Access-Control-Allow-Headers": "Content-Type, Authorization",
                   }
                 : {};
-    (n = n ? JSON.stringify(n) : ""),
+    ((n = n ? JSON.stringify(n) : ""),
         (o = 200 === o && 0 === n.length ? 204 : o),
         t.setHeader("Content-Length", v.byteLength(n).toString()),
         t.setHeader("Content-Type", "application/json"),
         t.writeHead(o, { ...i, ...r }),
-        t.end(n);
+        t.end(n));
 }
 function k(e, t, n, o) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
@@ -75,11 +75,11 @@ class T extends A.A {
         this._socket = e;
     }
     send(e) {
-        (u.default.isLoggingOverlayEvents || (e.cmd !== I.e$_.OVERLAY && e.evt !== I.ZE4.OVERLAY)) &&
+        ((u.default.isLoggingOverlayEvents || (e.cmd !== I.e$_.OVERLAY && e.evt !== I.ZE4.OVERLAY)) &&
             C.info(`Socket Emit: ${this.id}`, (0, _.A)(e)),
             null != o && "etf" === this.encoding
                 ? this._socket.send(o.pack(e), { binary: !0 })
-                : this._socket.send(JSON.stringify(e));
+                : this._socket.send(JSON.stringify(e)));
     }
     close(e, t) {
         this._socket.close(e, t);
@@ -91,11 +91,11 @@ class L extends A.A {
     constructor(e, t, n, o) {
         if ((super({ type: g.z4.HTTP }, n, o), "json" !== o))
             throw new p.A({ closeCode: I.YI$.INVALID_ENCODING }, `Invalid Encoding: ${o}`);
-        (this._sendCallback = e), (this._closeCallback = t);
+        ((this._sendCallback = e), (this._closeCallback = t));
     }
     send(e) {
-        (u.default.isLoggingOverlayEvents || e.cmd !== I.e$_.OVERLAY) && C.info(`Socket Emit: ${this.id}`, e),
-            this._sendCallback(e);
+        ((u.default.isLoggingOverlayEvents || e.cmd !== I.e$_.OVERLAY) && C.info(`Socket Emit: ${this.id}`, e),
+            this._sendCallback(e));
     }
     close(e, t) {
         this._closeCallback(t, e);
@@ -105,12 +105,12 @@ class R extends r.EventEmitter {
     constructor() {
         super();
         let e = 0;
-        (i = E.http.createServer()).on("error", (t) => {
-            C.error(`Error: ${t.message}`),
-                ("EADDRINUSE" === t.code || t.message.includes("EADDRINUSE")) && setTimeout(() => S(++e), 1e3);
+        ((i = E.http.createServer()).on("error", (t) => {
+            (C.error(`Error: ${t.message}`),
+                ("EADDRINUSE" === t.code || t.message.includes("EADDRINUSE")) && setTimeout(() => S(++e), 1e3));
         }),
             i.on("request", this.handleRequest.bind(this)),
-            S(e);
+            S(e));
         const t = { instanceId: i.instanceId ?? 0, server: i };
         new E.ws.Server(t).on("connection", (e) => this.handleConnection(e));
     }
@@ -128,20 +128,20 @@ class R extends r.EventEmitter {
                 i = r ? w(e.headers)["content-type"].split("/")[1] : "json",
                 s = function () {
                     let { protocol: e, host: o } = d.A.toURLSafe(n.get("callback") ?? "") ?? {};
-                    e === location.protocol && o === location.host
+                    (e === location.protocol && o === location.host
                         ? t.setHeader("Location", n.get("callback"))
                         : t.setHeader("Location", y),
                         t.writeHead(301),
-                        t.end();
+                        t.end());
                 },
                 l = new L(!r ? s : N.bind(null, e, t), !r ? s : k.bind(null, e, t, 400), Number(n.get("v")), i);
             r
                 ? (0, f.j7)(l, w(e.headers).origin, n.get("client_id"))
                       .then(() => {
                           let n = "";
-                          e.on("data", (e) => (n += e)),
+                          (e.on("data", (e) => (n += e)),
                               e.on("error", () => k(e, t, 500, "Internal Server Error")),
-                              e.on("end", () => this.handleMessage(l, n));
+                              e.on("end", () => this.handleMessage(l, n)));
                       })
                       .catch((e) => {
                           let { code: t, message: n } = e;
@@ -163,21 +163,21 @@ class R extends r.EventEmitter {
             e.close(t.code, t.message);
             return;
         }
-        C.info(`Socket Opened: ${t.id}`),
+        (C.info(`Socket Opened: ${t.id}`),
             e.on("error", (e) => C.error(`WS Error: ${e.message}`)),
             e.on("close", (e, n) => {
-                C.info(`Socket Closed: ${t.id}, code ${e}, message ${n}`),
+                (C.info(`Socket Closed: ${t.id}, code ${e}, message ${n}`),
                     l().remove(O, (e) => e === t),
-                    this.emit("disconnect", t);
+                    this.emit("disconnect", t));
             }),
             (0, f.j7)(t, o, n.get("client_id"))
                 .then(() => {
-                    O.push(t), e.on("message", (e) => this.handleMessage(t, e)), this.emit("connect", t);
+                    (O.push(t), e.on("message", (e) => this.handleMessage(t, e)), this.emit("connect", t));
                 })
                 .catch((e) => {
                     let { code: n, message: o } = e;
                     return t.close(n, o);
-                });
+                }));
     }
     handleMessage(e, t) {
         let n;
@@ -189,8 +189,9 @@ class R extends r.EventEmitter {
             e.close(I.YI$.CLOSE_UNSUPPORTED, `Payload not ${e.encoding}`);
             return;
         }
-        (u.default.isLoggingOverlayEvents || n.cmd !== I.e$_.OVERLAY) && C.info(`Socket Message: ${e.id}`, (0, _.A)(n)),
-            this.emit("request", e, n);
+        ((u.default.isLoggingOverlayEvents || n.cmd !== I.e$_.OVERLAY) &&
+            C.info(`Socket Message: ${e.id}`, (0, _.A)(n)),
+            this.emit("request", e, n));
     }
 }
 let b = new R();

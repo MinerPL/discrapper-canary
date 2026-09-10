@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => c });
+(n.r(t), n.d(t, { default: () => c }));
 var a = {
         lessThanXSeconds: {
             one: "1\u79D2\u672A\u6E80",

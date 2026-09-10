@@ -28,8 +28,8 @@ function i(e, r) {
             u = 0;
         u < i;
     )
-        (a = o[u]), r ? (n[u] = r(a, u)) : (n[u] = a), (u += 1);
-    return (n.length = i), n;
+        ((a = o[u]), r ? (n[u] = r(a, u)) : (n[u] = a), (u += 1));
+    return ((n.length = i), n);
 }
 function n(e) {
     return (n =
@@ -62,17 +62,17 @@ var d =
             t,
             a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
-        (t = void 0),
+        ((t = void 0),
             (r = u((r = "items"))) in this
                 ? Object.defineProperty(this, r, { value: t, enumerable: !0, configurable: !0, writable: !0 })
                 : (this[r] = t),
-            (this.items = a);
+            (this.items = a));
     }),
     (l = [
         {
             key: "add",
             value: function (e) {
-                return !1 === this.has(e) && this.items.push(e), this;
+                return (!1 === this.has(e) && this.items.push(e), this);
             },
         },
         {
@@ -118,10 +118,10 @@ var d =
     (function (e, r) {
         for (var t = 0; t < r.length; t++) {
             var a = r[t];
-            (a.enumerable = a.enumerable || !1),
+            ((a.enumerable = a.enumerable || !1),
                 (a.configurable = !0),
                 "value" in a && (a.writable = !0),
-                Object.defineProperty(e, u(a.key), a);
+                Object.defineProperty(e, u(a.key), a));
         }
     })(a.prototype, l),
     Object.defineProperty(a, "prototype", { writable: !1 }),
@@ -371,7 +371,7 @@ function E(e) {
                       var t = a.get(e);
                       if (t) return t;
                       var l = m(e, r);
-                      return a.set(e, l), l;
+                      return (a.set(e, l), l);
                   };
               function E(e, r) {
                   var t,
@@ -416,7 +416,7 @@ function E(e) {
                       })(e, v) &&
                       !r.isReferenced
                   )
-                      return t.add(e), "";
+                      return (t.add(e), "");
                   var a = C(e) ? e.getAttributeNode("aria-labelledby") : null,
                       l = null === a || t.has(a) ? [] : x(e, "aria-labelledby");
                   if ("name" === s && !r.isReferenced && l.length > 0)
@@ -438,7 +438,7 @@ function E(e) {
                       "name" === s;
                   if (!o) {
                       var n = ((C(e) && e.getAttribute("aria-label")) || "").trim();
-                      if ("" !== n && "name" === s) return t.add(e), n;
+                      if ("" !== n && "name" === s) return (t.add(e), n);
                       if (!y(e, h)) {
                           var u = (function (e) {
                               if (!C(e)) return null;
@@ -534,10 +534,10 @@ function E(e) {
                               }
                               return null;
                           })(e);
-                          if (null !== u) return t.add(e), u;
+                          if (null !== u) return (t.add(e), u);
                       }
                   }
-                  if (y(e, ["menu"])) return t.add(e), "";
+                  if (y(e, ["menu"])) return (t.add(e), "");
                   if (o || r.isEmbeddedInLabel || r.isReferenced) {
                       if (y(e, ["combobox", "listbox"])) {
                           t.add(e);
@@ -566,7 +566,7 @@ function E(e) {
                                 ? e.getAttribute("aria-valuenow")
                                 : e.getAttribute("value") || "";
                       if (y(e, ["textbox"]))
-                          return t.add(e), P(e) || (C(e) && "textarea" === p(e)) ? e.value : e.textContent || "";
+                          return (t.add(e), P(e) || (C(e) && "textarea" === p(e)) ? e.value : e.textContent || "");
                   }
                   if (
                       y(e, [
@@ -595,10 +595,11 @@ function E(e) {
                       q(e)
                   ) {
                       var c = E(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1 });
-                      if ("" !== c) return t.add(e), c;
+                      if ("" !== c) return (t.add(e), c);
                   }
-                  if (e.nodeType === e.TEXT_NODE) return t.add(e), e.textContent || "";
-                  if (r.recursion) return t.add(e), E(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1 });
+                  if (e.nodeType === e.TEXT_NODE) return (t.add(e), e.textContent || "");
+                  if (r.recursion)
+                      return (t.add(e), E(e, { isEmbeddedInLabel: r.isEmbeddedInLabel, isReferenced: !1 }));
                   var m = C(e) ? M(e, "title") : null;
                   return null !== m ? (t.add(e), m) : (t.add(e), "");
               }

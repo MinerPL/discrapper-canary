@@ -44,7 +44,7 @@ function L(e) {
         await I.A.sendTransferOwnershipPincode(s.id, !0);
     }
     async function Z(e) {
-        e.preventDefault(), L();
+        (e.preventDefault(), L());
         try {
             x.mfaEnabled || null == x.email
                 ? (await I.A.transferOwnership(s.id, i.id, x.mfaEnabled ? S.MFA : null), (0, N.jH)())

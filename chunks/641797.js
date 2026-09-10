@@ -46,7 +46,7 @@ var n = r(788409),
     },
     h = {},
     m = function e(t, r, o, a, s, u, f, d, m, v, y, g, b, w, _, S, x, E) {
-        for (var k, C, T = t, M = E, P = 0, A = !1; void 0 !== (M = M.get(h)) && !A; ) {
+        for (var k, C, T = t, M = E, P = 0, A = !1; void 0 !== (M = M.get(h)) && !A;) {
             var I = M.get(t);
             if (((P += 1), void 0 !== I))
                 if (I === P) throw RangeError("Cyclic object value");
@@ -82,7 +82,7 @@ var n = r(788409),
         var O = [];
         if (void 0 === T) return O;
         if ("comma" === o && l(T))
-            S && m && (T = i.maybeMap(T, m)), (C = [{ value: T.length > 0 ? T.join(",") || null : void 0 }]);
+            (S && m && (T = i.maybeMap(T, m)), (C = [{ value: T.length > 0 ? T.join(",") || null : void 0 }]));
         else if (l(v)) C = v;
         else {
             var D = Object.keys(T);
@@ -99,8 +99,8 @@ var n = r(788409),
                     K = l(T) ? ("function" == typeof o ? o(L, B) : L) : L + (g ? "." + B : "[" + B + "]");
                 E.set(t, P);
                 var $ = n();
-                $.set(h, E),
-                    c(O, e(j, K, o, a, s, u, f, d, "comma" === o && S && l(T) ? null : m, v, y, g, b, w, _, S, x, $));
+                ($.set(h, E),
+                    c(O, e(j, K, o, a, s, u, f, d, "comma" === o && S && l(T) ? null : m, v, y, g, b, w, _, S, x, $)));
             }
         }
         return O;
@@ -169,7 +169,7 @@ e.exports = function (e, t) {
     if ("object" != typeof i || null === i) return "";
     var u = s[o.arrayFormat],
         f = "comma" === u && o.commaRoundTrip;
-    r || (r = Object.keys(i)), o.sort && r.sort(o.sort);
+    (r || (r = Object.keys(i)), o.sort && r.sort(o.sort));
     for (var d = n(), p = 0; p < r.length; ++p) {
         var h = r[p],
             y = i[h];

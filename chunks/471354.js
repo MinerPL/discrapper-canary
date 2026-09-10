@@ -31,7 +31,7 @@ function s(e, t, r) {
 function l(e, t) {
     let r = [],
         n = t;
-    for (; n?.parentKey != null; ) (n = e.getItem(n.parentKey)) && r.unshift(n);
+    for (; n?.parentKey != null;) (n = e.getItem(n.parentKey)) && r.unshift(n);
     return r;
 }
 r.d(t, { W: () => a, cj: () => o, iQ: () => n, o3: () => s, ue: () => i });

@@ -24,7 +24,7 @@ function f(t) {
         })),
         M = s.useRef(null);
     async function T(t) {
-        t.preventDefault(), (0, d.x8)();
+        (t.preventDefault(), (0, d.x8)());
         let e = !1;
         if (
             ("" === m ? (E(w.intl.string(w.t["/7/oPU"])), (e = !0)) : E(null),

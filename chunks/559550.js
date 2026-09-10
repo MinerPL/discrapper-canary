@@ -4,7 +4,7 @@ let i = Symbol.for("react-aria.i18n.locale"),
     o = Symbol.for("react-aria.i18n.strings");
 class a {
     constructor(e, t = "en-US") {
-        (this.strings = Object.fromEntries(Object.entries(e).filter(([, e]) => e))), (this.defaultLocale = t);
+        ((this.strings = Object.fromEntries(Object.entries(e).filter(([, e]) => e))), (this.defaultLocale = t));
     }
     getStringForLocale(e, t) {
         let r = this.getStringsForLocale(t)[e];

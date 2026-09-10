@@ -1,4 +1,4 @@
-n.d(e, { F: () => u, wL: () => a }), n(321073), n(477900);
+(n.d(e, { F: () => u, wL: () => a }), n(321073), n(477900));
 var i,
     r = n(582128),
     a = (((i = {})[(i.MOUNTED = 0)] = "MOUNTED"), (i[(i.ENTERED = 1)] = "ENTERED"), (i[(i.YEETED = 2)] = "YEETED"), i);
@@ -43,7 +43,7 @@ function u(t) {
                         r = n(e, a, i, l.cleanUp);
                     l = { item: a, children: r, state: i, cleanUp: t, renderItem: n };
                 }
-                r.set(e, l), t.delete(e);
+                (r.set(e, l), t.delete(e));
             }
             for (let e of t) {
                 let t = r.get(e);

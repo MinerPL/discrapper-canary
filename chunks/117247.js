@@ -57,7 +57,7 @@ var i = d(252422),
                                         disabled: b,
                                         required: m,
                                         onChange: (l) => {
-                                            I || L(l.target.checked), h?.(l);
+                                            (I || L(l.target.checked), h?.(l));
                                         },
                                         "aria-label": M,
                                         "aria-labelledby": X,

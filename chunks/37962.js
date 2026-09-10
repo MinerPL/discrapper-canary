@@ -129,10 +129,10 @@ class p extends a.A {
     showFeedbackModalDebounced = (0, i.debounce)((e, t) => {
         if (null != this.feedbackTypeToShow) {
             var n;
-            (n = this.feedbackTypeToShow),
+            ((n = this.feedbackTypeToShow),
                 d.Yt.updateSetting((e) => ({ ...e, [n]: { ...e[n], lastImpressionTime: Date.now() } })),
                 (this.feedbackTypeToShow = null),
-                e();
+                e());
         } else t?.();
     }, 200);
 }

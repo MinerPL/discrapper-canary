@@ -59,7 +59,7 @@ class l extends r.c {
             pagination: s,
             trackExactTotalHits: l,
         });
-        return this.set(t, o), o;
+        return (this.set(t, o), o);
     }
 }
 let o = new l();

@@ -45,8 +45,8 @@ class u extends a.Ay.DeviceSettingsStore {
 }
 let _ = new u(s.h, {
     RTC_LATENCY_TEST_COMPLETE: function (e) {
-        e.latencyRankedRegions.length > 0 &&
+        (e.latencyRankedRegions.length > 0 &&
             ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
-            (d.lastTestTimestamp = Date.now());
+            (d.lastTestTimestamp = Date.now()));
     },
 });

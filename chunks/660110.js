@@ -23,9 +23,9 @@ function g() {
               hook: (e) =>
                   (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
-                          e.preventDefault(),
+                          (e.preventDefault(),
                               e.stopPropagation(),
-                              (0, h.A)(p.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE));
+                              (0, h.A)(p.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE)));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -35,9 +35,9 @@ function g() {
               hook: (e) =>
                   (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
-                          e.preventDefault(),
+                          (e.preventDefault(),
                               e.stopPropagation(),
-                              x.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.START_STAGE_PROMPT });
+                              x.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.START_STAGE_PROMPT }));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),

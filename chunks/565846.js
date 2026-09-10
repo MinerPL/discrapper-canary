@@ -21,16 +21,20 @@ function g(t) {
         j = (0, u.kt)(e),
         p = j.length >= 5,
         f = (0, c.Id)(e),
-        v = (0, r.bG)([s.Ay], () => {
-            let t = new Set();
-            for (let e of b ?? [])
-                if (null != e.emojiId) {
-                    let n = s.Ay.getUsableCustomEmojiById(e.emojiId);
-                    n?.animated && t.add(e.emojiId);
-                }
-            return t;
-        }, [b]);
-    if (null == e) return (0, a.Z_)(), null;
+        v = (0, r.bG)(
+            [s.Ay],
+            () => {
+                let t = new Set();
+                for (let e of b ?? [])
+                    if (null != e.emojiId) {
+                        let n = s.Ay.getUsableCustomEmojiById(e.emojiId);
+                        n?.animated && t.add(e.emojiId);
+                    }
+                return t;
+            },
+            [b],
+        );
+    if (null == e) return ((0, a.Z_)(), null);
     if (!n || __OVERLAY__ || !e.isForumPost() || b?.length === 0 || !f || e.isModeratorReportChannel()) return null;
     let I = b?.map((t) => {
         let n = j.includes(t),

@@ -7,7 +7,7 @@ var a = n(477900),
 function c(t) {
     let { onConfirm: i, onClose: n, transitionState: c } = t,
         o = r.useCallback(() => {
-            i(), n();
+            (i(), n());
         }, [i, n]);
     return (0, a.jsx)(s.Modal, {
         title: l.intl.string(l.t["5yF7e1"]),

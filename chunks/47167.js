@@ -39,7 +39,7 @@ function h(e, t, n) {
             let [u] = e.recipients.map(t.getUser).filter(l.Vq);
             if (null == u) return "???";
             if (u.isProvisional && null != u.globalName) return u.globalName;
-            return (s = n.getNickname(u.id) ?? o.Ay.getName(u) ?? "???"), i ? `@${s}` : s;
+            return ((s = n.getNickname(u.id) ?? o.Ay.getName(u) ?? "???"), i ? `@${s}` : s);
         case d.rbe.GROUP_DM:
             if ("" !== a) return a;
             return _(e, t, n);

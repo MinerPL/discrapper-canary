@@ -32,7 +32,7 @@ let d = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-(0, a.mj)({
+((0, a.mj)({
     name: "2026-07-custom-app-store-overlay",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -48,7 +48,7 @@ let d = (0, a.mj)({
             2: { enabled: !0, variant: 2 },
             3: { enabled: !0, variant: 3 },
         },
-    });
+    }));
 let C = (0, a.mj)({
     name: "2026-07-ios-attribution",
     kind: "user",

@@ -17,16 +17,16 @@ var r = s(477900),
     p = s(652215);
 function g(e) {
     let t = (0, u.bS)(e);
-    d.A.clearSearchQueryText(e), c.A.clearSearchMessages(t), l.A.cleanUp(t), h.A.cleanUp(t);
+    (d.A.clearSearchQueryText(e), c.A.clearSearchMessages(t), l.A.cleanUp(t), h.A.cleanUp(t));
 }
 function R(e) {
     let { searchContext: t, searchQueryString: s, searchQuery: r, offset: n } = e,
         i = (0, u.bS)(t);
-    c.A.clearSearchMessages(i),
+    (c.A.clearSearchMessages(i),
         d.A.setShowNoResultsAlt(t),
         d.A.setShowBlockedResults(t, !1),
         d.A.updateSearchResultsQuery(t, s, r, n),
-        d.A.addSearchHistoryItem(t, s);
+        d.A.addSearchHistoryItem(t, s));
 }
 function T(e) {
     let { searchContext: t, searchQueryString: s, searchEverywhere: r, offset: n } = e,
@@ -78,7 +78,7 @@ let L = {
         let s = f(e);
         if (null == s) return;
         let r = s.endsWith(" ") ? s + t : s + " " + t;
-        I(e, r), T({ searchContext: e, searchQueryString: r, offset: 0 });
+        (I(e, r), T({ searchContext: e, searchQueryString: r, offset: 0 }));
     },
     getSearchInputText: f,
     setSearchQuery: function (e) {
@@ -97,14 +97,14 @@ let L = {
         let a = t.type === p.I4_.CHANNEL ? (0, u.EH)(n) : n;
         I(t, (a = a.trim()));
         let _ = S.A.getSearchMode(r);
-        d.A.updateSearchMode(t, _ ?? y.z), o.A.transferSession(e, t);
+        (d.A.updateSearchMode(t, _ ?? y.z), o.A.transferSession(e, t));
         let l = (0, u._o)(a),
             h = (0, u.Zf)(l);
-        o.A.refreshQueryId(t),
+        (o.A.refreshQueryId(t),
             (0, A.fd)({ searchContext: t, query: h, queryString: a, searchQuerySource: E.Q_.SEARCH_XDM_SETTINGS }),
-            T({ searchContext: t, searchQueryString: a, offset: 0 });
+            T({ searchContext: t, searchQueryString: a, offset: 0 }));
         let g = (0, u.bS)(t);
-        i.A.setSelectedSearchContext(g), d.A.clearSearchQueryText(e), c.A.clearSearchMessages(r), s?.();
+        (i.A.setSelectedSearchContext(g), d.A.clearSearchQueryText(e), c.A.clearSearchMessages(r), s?.());
     },
     cleanUpPrivateChannelSearchState: function () {
         S.A.getSearchStateIds().forEach((e) => {
@@ -113,7 +113,7 @@ let L = {
         });
     },
     openSearchFiltersModal: function (e) {
-        (0, A.TJ)({ searchContext: e }),
+        ((0, A.TJ)({ searchContext: e }),
             (0, n.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
@@ -132,6 +132,6 @@ let L = {
                     return (s) => (0, r.jsx)(t, { ...s, searchContext: e });
                 },
                 { modalKey: y.b },
-            );
+            ));
     },
 };

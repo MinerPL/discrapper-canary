@@ -1,4 +1,4 @@
-n.d(t, { EA: () => s, J8: () => l, ZW: () => o, mn: () => r }), n(321073);
+(n.d(t, { EA: () => s, J8: () => l, ZW: () => o, mn: () => r }), n(321073));
 let i = new Map();
 function r(e, t) {
     let n = i.get(e) ?? [];
@@ -9,7 +9,7 @@ function r(e, t) {
             let n = i.get(e);
             if (null == n) return;
             let r = n.indexOf(t);
-            -1 !== r && n.splice(r, 1), 0 === n.length && i.delete(e);
+            (-1 !== r && n.splice(r, 1), 0 === n.length && i.delete(e));
         }
     );
 }
@@ -38,14 +38,14 @@ function o(e, t, n) {
                 let r = Date.now(),
                     o = r + t;
                 function a(t) {
-                    window.clearInterval(d),
+                    (window.clearInterval(d),
                         n?.removeEventListener("abort", u),
                         console.debug("[vibegrations] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
                             ms: Date.now() - r,
                         }),
-                        i(t);
+                        i(t));
                 }
                 function u() {
                     a(null);

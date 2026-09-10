@@ -86,7 +86,7 @@ class I {
     database;
     defaultDebugTag;
     constructor(e, t, n, i) {
-        (this.prefix = e), (this.tableId = t), (this.database = n), (this.defaultDebugTag = i ? void 0 : null);
+        ((this.prefix = e), (this.tableId = t), (this.database = n), (this.defaultDebugTag = i ? void 0 : null));
     }
     close() {
         this.database.close();
@@ -160,7 +160,7 @@ class I {
     }
     replaceAll(e) {
         return this.transaction((t) => {
-            t.delete(), t.putAll(e);
+            (t.delete(), t.putAll(e));
         }, this.defaultDebugTag);
     }
     delete() {
@@ -228,7 +228,7 @@ class f {
         return new f(e, t, n);
     }
     constructor(e, t, n) {
-        (this.prefix = e), (this.tableId = t), (this.transaction = n);
+        ((this.prefix = e), (this.tableId = t), (this.transaction = n));
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Replace;
@@ -324,7 +324,7 @@ class p {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
     }
     withoutLogging() {
         return new p(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -405,15 +405,15 @@ class C {
             this.initialize(),
             new Promise((n, i) => {
                 let r = this.nextId();
-                t(r), this.pending.set(r, { id: r, tag: e, started: performance.now(), resolve: n, reject: i });
+                (t(r), this.pending.set(r, { id: r, tag: e, started: performance.now(), resolve: n, reject: i }));
             })
         );
     }
     static addCompletionCallback(e) {
-        return this.completionCallbacks.push(e), e;
+        return (this.completionCallbacks.push(e), e);
     }
     static addDatabaseStateCallback(e) {
-        return this.dbStateCallbacks.push(e), e;
+        return (this.dbStateCallbacks.push(e), e);
     }
     static removeCompletionCallback(e) {
         this.completionCallbacks = this.completionCallbacks.filter((t) => t !== e);
@@ -515,19 +515,19 @@ class R {
         return O.delete(e);
     }
     constructor(e) {
-        (this.raw = e),
+        ((this.raw = e),
             (this.name = e.name),
             (this.lastState = c.Open),
             (this.handle = e.handle),
             (this.databaseStateCallback = C.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t);
-            }));
+            })));
     }
     close() {
-        (this.lastState = c.Closed),
+        ((this.lastState = c.Closed),
             this.raw?.close(),
             (this.raw = null),
-            C.removeCompletionCallback(this.databaseStateCallback);
+            C.removeCompletionCallback(this.databaseStateCallback));
     }
     disable(e) {
         return null == this.raw
@@ -581,7 +581,7 @@ class L {
     database;
     operations;
     constructor(e) {
-        (this.database = e), (this.operations = []);
+        ((this.database = e), (this.operations = []));
     }
     add(e) {
         this.operations.push(e);
@@ -601,7 +601,7 @@ class y {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
     }
     withoutLogging() {
         return new y(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -677,7 +677,7 @@ class D {
         );
     }
     replaceAll(e) {
-        this.delete(), this.putAll(e);
+        (this.delete(), this.putAll(e));
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete([]) : this.transaction.delete([e]);
@@ -693,7 +693,7 @@ class v {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
     }
     withoutLogging() {
         return new v(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -795,7 +795,7 @@ class M {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
     }
     withoutLogging() {
         return new M(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -884,7 +884,7 @@ class P {
         );
     }
     replaceAll(e, t) {
-        this.delete(e), this.putAll(e, t);
+        (this.delete(e), this.putAll(e, t));
     }
     delete(e, t) {
         switch (arguments.length) {
@@ -910,7 +910,7 @@ class U {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        (this.originalPrefix = e), (this.table = new I([e], t, n, i));
+        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
     }
     withoutLogging() {
         return new U(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -976,7 +976,7 @@ class w {
         this.transaction.putAll(r, i);
     }
     replaceChannel(e, t, n) {
-        this.deleteChannel(e, t), this.putAll(e, t, n);
+        (this.deleteChannel(e, t), this.putAll(e, t, n));
     }
     deleteAll() {
         this.transaction.delete();

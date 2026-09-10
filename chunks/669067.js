@@ -7,7 +7,7 @@ function a(e) {
     if (!(0, l.hasModalOpen)(r.USER_SETTINGS_MODAL_KEY)) return;
     let t = s.A.getField("previousPanelKey"),
         n = s.A.getField("analyticsLocations");
-    (0, i.iY)({ destinationPane: e, originPane: t, locationStack: n }),
+    ((0, i.iY)({ destinationPane: e, originPane: t, locationStack: n }),
         s.A.setState({ previousPanelKey: e }),
-        n.length > 0 && s.A.setState({ analyticsLocations: [] });
+        n.length > 0 && s.A.setState({ analyticsLocations: [] }));
 }

@@ -20,18 +20,18 @@ var n = e(410323),
         }),
     m = String(String).split("String"),
     d = (r.exports = function (r, t, e) {
-        "Symbol(" === b(v(t), 0, 7) && (t = "[" + g(v(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
+        ("Symbol(" === b(v(t), 0, 7) && (t = "[" + g(v(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
             e && e.getter && (t = "get " + t),
             e && e.setter && (t = "set " + t),
             (!u(r, "name") || (c && r.name !== t)) && (a ? y(r, "name", { value: t, configurable: !0 }) : (r.name = t)),
-            x && e && u(e, "arity") && r.length !== e.arity && y(r, "length", { value: e.arity });
+            x && e && u(e, "arity") && r.length !== e.arity && y(r, "length", { value: e.arity }));
         try {
             e && u(e, "constructor") && e.constructor
                 ? a && y(r, "prototype", { writable: !1 })
                 : r.prototype && (r.prototype = void 0);
         } catch (r) {}
         var n = p(r);
-        return u(n, "source") || (n.source = h(m, "string" == typeof t ? t : "")), r;
+        return (u(n, "source") || (n.source = h(m, "string" == typeof t ? t : "")), r);
     });
 Function.prototype.toString = d(function () {
     return (i(this) && l(this).source) || f(this);

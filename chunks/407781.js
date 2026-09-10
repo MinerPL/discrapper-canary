@@ -9,7 +9,7 @@ async function u(e) {
     let { animationType: t, animationId: n, url: l, shouldResize: i } = e,
         o = r.Bf[t] ?? r.Bf[a.B.BASIC],
         u = JSON.parse(JSON.stringify(null != n && n < o.length ? o[n] : (0, s.sample)(o)));
-    return (u.assets[0].p = i ? await (0, r.tm)(l) : l), u;
+    return ((u.assets[0].p = i ? await (0, r.tm)(l) : l), u);
 }
 function c(e) {
     let { containerDimensions: t, effect: s, onComplete: r } = e,

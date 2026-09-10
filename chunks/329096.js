@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "es",
     pluralRuleFunction: function (e, t) {
         return t ? "other" : 1 == e ? "one" : "other";
@@ -28,4 +28,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({ locale: "es-SV", parentLocale: "es-419" }),
     IntlMessageFormat.__addLocaleData({ locale: "es-US", parentLocale: "es-419" }),
     IntlMessageFormat.__addLocaleData({ locale: "es-UY", parentLocale: "es-419" }),
-    IntlMessageFormat.__addLocaleData({ locale: "es-VE", parentLocale: "es-419" });
+    IntlMessageFormat.__addLocaleData({ locale: "es-VE", parentLocale: "es-419" }));

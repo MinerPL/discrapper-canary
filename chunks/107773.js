@@ -274,7 +274,7 @@ function S(r) {
     V.premium && ((o = J), (t = W));
     let Z = (0, u.M)(b) ? y : H,
         z = (0, u.M)(b) ? U : Y;
-    (o = o ?? Z), (t = t ?? z);
+    ((o = o ?? Z), (t = t ?? z));
     let q = Math.floor(0.75 * x) - (K ?? 0),
         { tooltipTitle: X, tooltipSubtitle: Q } = F(S, V.visibility),
         $ = g ?? (null != Q ? Q : X),
@@ -303,14 +303,14 @@ function S(r) {
                               "aria-label": $,
                               "aria-describedby": O,
                               onClick: (o) => {
-                                  r.onClick?.(),
+                                  (r.onClick?.(),
                                       B &&
                                           (o.stopPropagation(),
                                           o.preventDefault(),
                                           (0, h.K4)({
                                               guildId: s.id,
                                               location: { section: k.JJy.GUILD_HEADER, object: k.ZSU.BOOST_GEM_ICON },
-                                          }));
+                                          })));
                               },
                               tabIndex: 0,
                               children: ro,

@@ -16,10 +16,10 @@ function r(e) {
             if (null == t) return;
             let l = t.startContainer,
                 i = t.startOffset;
-            for (; null != l; ) {
+            for (; null != l;) {
                 if (l.nodeType !== Node.TEXT_NODE || null == l.nodeValue) return void o(null);
                 if (l.nodeValue?.length === 0) {
-                    (l = l.previousSibling), (i = l?.nodeValue?.length ?? 0);
+                    ((l = l.previousSibling), (i = l?.nodeValue?.length ?? 0));
                     continue;
                 }
                 null != u && (i >= u.queryText.length ? (i -= u.queryText.length) : (i = 0));
@@ -27,7 +27,7 @@ function r(e) {
             }
             if (null == l) return;
             let a = d.document.createRange();
-            a.setStart(l, i), a.setEnd(l, i);
+            (a.setStart(l, i), a.setEnd(l, i));
             let h = a.getBoundingClientRect();
             h?.height !== 0 && o(h ?? null);
         }, [d.document, r, c, u, n]);

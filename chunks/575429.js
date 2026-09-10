@@ -1,4 +1,4 @@
-r.r(e), r.d(e, { default: () => w });
+(r.r(e), r.d(e, { default: () => w }));
 var a = r(477900),
     i = r(582128),
     s = r(132500),
@@ -9,7 +9,7 @@ var a = r(477900),
     u = r(289873),
     o = r(174459),
     h = r(723702);
-r(323874), r(14289), r(35956);
+(r(323874), r(14289), r(35956));
 var p = r(17928),
     _ = r(157559),
     f = r(308528),
@@ -87,22 +87,22 @@ function w(t) {
                     })
                         .then((t) => {
                             let r = t ?? !1;
-                            A(r),
+                            (A(r),
                                 o.default.track(b.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
                                     attempt_id: E,
                                     rpc_success: r,
-                                });
+                                }));
                         })
                         .catch(() => {
-                            A(!1),
+                            (A(!1),
                                 o.default.track(b.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: e,
                                     source_url: location.href,
                                     attempt_id: E,
                                     rpc_success: !1,
-                                });
+                                }));
                         })
                         .then(() => r.disconnect());
                 }),

@@ -19,7 +19,7 @@ e.exports = function () {
                 return !!e && e.has(t);
             },
             set: function (t, r) {
-                e || (e = s()), e.set(t, r);
+                (e || (e = s()), e.set(t, r));
             },
         };
     return t;

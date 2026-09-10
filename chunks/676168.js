@@ -32,7 +32,7 @@ function I() {
     let [e] = (0, s.gc)(A),
         t = e === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
         [n, a] = i.useState(t);
-    return t && !n && a(!0), (t || n) && !(0, c.zW)();
+    return (t && !n && a(!0), (t || n) && !(0, c.zW)());
 }
 function f(e) {
     let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),

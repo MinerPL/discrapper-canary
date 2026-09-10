@@ -43,7 +43,7 @@ function C(s) {
         })((0, g.z$)("CollectiblesAnnouncementModal")),
         L = f.intl.string(f.t.W3MtdV),
         M = i.useRef(!1);
-    (0, a.Ay)(() => {
+    ((0, a.Ay)(() => {
         (0, h.Wx)(n.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT);
     }),
         i.useEffect(
@@ -55,23 +55,23 @@ function C(s) {
                     });
             },
             [],
-        );
+        ));
     let S = i.useCallback(async () => {
-            (M.current = !0),
+            ((M.current = !0),
                 (0, N.Dr)(n.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
                     dismissAction: u.i.USER_DISMISS,
                     forceTrack: !0,
                 }),
-                await t();
+                await t());
         }, [t]),
         T = i.useCallback(async () => {
-            (M.current = !0),
+            ((M.current = !0),
                 (0, N.Dr)(n.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
                     dismissAction: u.i.TAKE_ACTION,
                     forceTrack: !0,
                 }),
                 (0, E.Cz)({ analyticsLocations: [], analyticsSource: x.A.COLLECTIBLES_SHOP }),
-                await t();
+                await t());
         }, [t]);
     return (0, c.jsx)(m.d, {
         ...e,

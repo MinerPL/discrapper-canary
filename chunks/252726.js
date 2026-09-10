@@ -21,10 +21,14 @@ var l = n(17928),
     B = n(375708);
 function M(e, t) {
     let n = (0, l.bG)([s.Ay], () => s.Ay.getChannels(t)[s.vM], [t]),
-        M = (0, l.bG)([f.A, A.A], () => {
-            let n = f.A.getUserVoiceChannelId(t, e.id);
-            return A.A.getChannel(n);
-        }, [t, e.id]);
+        M = (0, l.bG)(
+            [f.A, A.A],
+            () => {
+                let n = f.A.getUserVoiceChannelId(t, e.id);
+                return A.A.getChannel(n);
+            },
+            [t, e.id],
+        );
     if ((0, l.bG)([C.Ay], () => C.Ay.isGuestOrLurker(t, e.id), [t, e.id]) || null == M) return null;
     let N = e.id === u.default.getId();
     if (!N && !o.A.can(g.xBc.MOVE_MEMBERS, M)) return null;

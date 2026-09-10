@@ -23,7 +23,7 @@ function g() {
 }
 let S = {
     initBasic() {
-        A.addListener(this.handleSystemPrefersReducedMotionChanged),
+        (A.addListener(this.handleSystemPrefersReducedMotionChanged),
             this.handleSystemPrefersReducedMotionChanged(A),
             f.addListener(this.handleSystemColorPreferencesChanged),
             p.addListener(this.handleSystemColorPreferencesChanged),
@@ -31,20 +31,20 @@ let S = {
             this.handleSystemColorPreferencesChanged(),
             h.addListener(this.handleSystemPrefersContrastChanged),
             I.addListener(this.handleSystemPrefersContrastChanged),
-            this.handleSystemPrefersContrastChanged();
+            this.handleSystemPrefersContrastChanged());
     },
     init() {
-        this.initBasic(),
+        (this.initBasic(),
             a.h.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
                 o.default.track(_.HAw.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: u.Ay.colorblindMode });
             }),
             a.h.subscribe("ACCESSIBILITY_SET_SATURATION", (e) => {
                 o.default.track(_.HAw.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
-            });
+            }));
     },
     maybeShowKeyboardNavigationExplainerModal() {
         let e;
-        (m = Math.max(m - 1, 0)),
+        ((m = Math.max(m - 1, 0)),
             null == (e = l.default.getCurrentUser()) ||
                 Date.now() - e.createdAt < 864e5 ||
                 u.Ay.keyboardNavigationExplainerModalSeen ||
@@ -57,7 +57,7 @@ let S = {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     { modalKey: "keyboard-navigation-explainer" },
-                );
+                ));
     },
     handleSystemPrefersReducedMotionChanged(e) {
         a.h.wait(() => {
@@ -69,14 +69,14 @@ let S = {
         f.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
         let t = (!d.isPlatformEmbedded || g()) && T.matches ? "active" : "none";
         a.h.wait(() => {
-            s.LA(e), c.RI(t);
+            (s.LA(e), c.RI(t));
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = "no-preference";
-        h.matches ? (e = "more") : I.matches && (e = "less"),
+        (h.matches ? (e = "more") : I.matches && (e = "less"),
             a.h.wait(() => {
                 c.Jb(e);
-            });
+            }));
     },
 };

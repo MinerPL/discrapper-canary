@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     G8: () => U,
     NV: () => D,
     QY: () => y,
@@ -16,7 +16,7 @@ n.d(t, {
     n(323874),
     n(14289),
     n(35956),
-    n(321073);
+    n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(536637),
@@ -157,7 +157,7 @@ function L(e) {
             if (null == e.url) return void n.push(e);
             let i = t.get(e.url);
             if (null == i) {
-                n.push(e), t.set(e.url, e);
+                (n.push(e), t.set(e.url, e));
                 return;
             }
             null != e.image &&

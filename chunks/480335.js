@@ -31,17 +31,17 @@ let p = 1e3 / 24,
             f = l.useRef(0),
             A = l.useRef(void 0),
             m = l.useCallback(() => {
-                (f.current = 0), null != A.current && (clearTimeout(A.current), (A.current = void 0));
+                ((f.current = 0), null != A.current && (clearTimeout(A.current), (A.current = void 0)));
             }, []),
             T = l.useCallback(() => {
-                (d.current = !1), cancelAnimationFrame(o.current), clearTimeout(A.current);
+                ((d.current = !1), cancelAnimationFrame(o.current), clearTimeout(A.current));
             }, []),
             h = l.useCallback(
                 (r) => {
                     if (!d.current) return;
-                    null == c.current && (c.current = r), null == i.current && (i.current = r);
+                    (null == c.current && (c.current = r), null == i.current && (i.current = r));
                     let l = r - i.current;
-                    r - c.current > 1.5 * Math.min(t ?? 120, s.current) &&
+                    (r - c.current > 1.5 * Math.min(t ?? 120, s.current) &&
                         ((f.current += 1),
                         null != A.current && clearTimeout(A.current),
                         (A.current = setTimeout(m, u)),
@@ -54,15 +54,15 @@ let p = 1e3 / 24,
                             a() && (f.current = 0))),
                         (c.current = r),
                         l >= s.current - 3 && ((i.current = r), e(l)),
-                        (o.current = requestAnimationFrame(h));
+                        (o.current = requestAnimationFrame(h)));
                 },
                 [t, m, u, n, a, e],
             ),
             N = l.useCallback(() => {
-                (d.current = !0),
+                ((d.current = !0),
                     (i.current = void 0),
                     cancelAnimationFrame(o.current),
-                    (o.current = requestAnimationFrame(h));
+                    (o.current = requestAnimationFrame(h)));
             }, [h]);
         return (
             l.useEffect(() => {
@@ -81,7 +81,7 @@ function b(e) {
             Math.random() *
                 (r.effects.reduce((e, r) => {
                     let t = r.randomizedSources?.length ?? 0;
-                    return t > 0 && (e = 0 === e ? t : Math.min(e, t)), e;
+                    return (t > 0 && (e = 0 === e ? t : Math.min(e, t)), e);
                 }, 0) -
                     1 -
                     0 +
@@ -91,13 +91,14 @@ function b(e) {
     return (
         (r.effects = r.effects.map(
             (e) => (
-                null != e.randomizedSources && e.randomizedSources.length > 0 && (e.src = e.randomizedSources[t].src), e
+                null != e.randomizedSources && e.randomizedSources.length > 0 && (e.src = e.randomizedSources[t].src),
+                e
             ),
         )),
         r
     );
 }
-t(323874), t(14289), t(35956);
+(t(323874), t(14289), t(35956));
 var v = t(676279),
     S = t(38405),
     g = t(666082);
@@ -138,9 +139,9 @@ let R = (e) => {
                                     if (e.signal.aborted) return;
                                     b.current = t;
                                 }
-                                h.current !== A?.src && URL.revokeObjectURL(h.current),
+                                (h.current !== A?.src && URL.revokeObjectURL(h.current),
                                     (h.current = URL.createObjectURL(b.current)),
-                                    y(() => h.current);
+                                    y(() => h.current));
                             } catch (e) {
                                 if ("AbortError" === e.name) return null;
                                 S.A.captureException(e);
@@ -164,9 +165,9 @@ let R = (e) => {
             r.loop && void 0 !== r.loopDelay && r.loopDelay > 0)
         ) {
             let e = r.duration + r.loopDelay;
-            (E = Math.floor((u - r.start) / e)),
+            ((E = Math.floor((u - r.start) / e)),
                 u - r.start - E * e > r.duration &&
-                    (t === s.l.ANIMATION_TYPE_INTERMITTENT && !o && null != i && E >= i && c(!0), (T = !1));
+                    (t === s.l.ANIMATION_TYPE_INTERMITTENT && !o && null != i && E >= i && c(!0), (T = !1)));
         }
         return T
             ? (P("layer"),
@@ -202,7 +203,7 @@ let R = (e) => {
                 return (
                     p.forEach((t) => {
                         let n = t.start + t.duration;
-                        n > e && (e = n), t.loop && t.start < r && (r = t.start);
+                        (n > e && (e = n), t.loop && t.start < r && (r = t.start));
                     }),
                     { firstLoop: r, loopEnd: e }
                 );
@@ -219,25 +220,25 @@ let R = (e) => {
                 }, []),
             ),
             O = l.useRef(v);
-        l.useEffect(() => {
+        (l.useEffect(() => {
             O.current = v;
         }),
             l.useEffect(() => {
                 P(-O.current);
-            }, [A]);
+            }, [A]));
         let [w, j] = l.useState(!1);
         return (
             l.useEffect(() => {
                 null != T && (P(-O.current), j(!1), C.current || M());
             }, [T, M, C]),
             l.useEffect(() => {
-                !0 === i || o || (_(), P(0)),
+                (!0 === i || o || (_(), P(0)),
                     !o && w && C.current && (_(), P(0)),
                     a &&
                         o &&
                         !C.current &&
                         (M(),
-                        A.animationType === s.l.ANIMATION_TYPE_PERSISTENT ? P(f === d.HL.FromStart ? 0 : y) : P(0));
+                        A.animationType === s.l.ANIMATION_TYPE_PERSISTENT ? P(f === d.HL.FromStart ? 0 : y) : P(0)));
             }, [o, w, y, a, _, M, C, A.animationType, i, f]),
             (0, n.jsx)("div", {
                 ref: I,
@@ -321,7 +322,7 @@ let M = function (e) {
         d = (function (e) {
             let [r, t] = l.useState(e),
                 [n, a] = l.useState(b(e));
-            return (0, y.isEqual)(r, e) || (t(e), a(b(e))), n;
+            return ((0, y.isEqual)(r, e) || (t(e), a(b(e))), n);
         })(a),
         m = u ?? d,
         { autoPlay: T = !0, isHovering: E } = e,

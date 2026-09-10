@@ -1,4 +1,4 @@
-n.d(t, { A: () => C }), n(321073);
+(n.d(t, { A: () => C }), n(321073));
 var l,
     i = n(477900),
     s = n(582128),
@@ -53,13 +53,13 @@ function C(e) {
     )
         return null;
     function T(e, t, i, s) {
-        !(function (e) {
+        (!(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
             y?.({ action: i }),
             S?.(),
-            v(e);
+            v(e));
     }
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
@@ -70,7 +70,7 @@ function C(e) {
             text: e.getLabel(),
             fullWidth: E,
             onClick: (t) => {
-                I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY);
+                (I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY));
             },
         });
     }
@@ -129,7 +129,7 @@ function C(e) {
                 fullWidth: E,
                 ...e,
                 onClick: (t) => {
-                    I && t.stopPropagation(), e.onClick?.(t);
+                    (I && t.stopPropagation(), e.onClick?.(t));
                 },
             }),
     });

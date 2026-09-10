@@ -95,7 +95,7 @@ function _(e) {
             category: U,
             state: k,
             retry: l.useCallback(() => {
-                (0, c.tu)({ skuIds: [e], ignoreCache: !0 }),
+                ((0, c.tu)({ skuIds: [e], ignoreCache: !0 }),
                     t &&
                         "" !== p &&
                         (0, u._v)({
@@ -103,7 +103,7 @@ function _(e) {
                             includeUnpublishedCollections: E,
                             includeUnpublishedProducts: E,
                             ignoreCache: !0,
-                        });
+                        }));
             }, [e, t, p, E]),
         }
     );
@@ -142,16 +142,24 @@ function T(e) {
     l.useEffect(() => {
         u.length > 0 && i.p.requestProducts(u);
     }, [c]);
-    let a = (0, o.cf)([s.A], () => {
-            let e = {};
-            for (let t of u) e[t] = s.A.getProductsForSku(t)?.[0];
-            return e;
-        }, [u]),
-        h = (0, o.cf)([s.A], () => {
-            let e = {};
-            for (let t of u) e[t] = s.A.getFetchStateForSku(t);
-            return e;
-        }, [u]),
+    let a = (0, o.cf)(
+            [s.A],
+            () => {
+                let e = {};
+                for (let t of u) e[t] = s.A.getProductsForSku(t)?.[0];
+                return e;
+            },
+            [u],
+        ),
+        h = (0, o.cf)(
+            [s.A],
+            () => {
+                let e = {};
+                for (let t of u) e[t] = s.A.getFetchStateForSku(t);
+                return e;
+            },
+            [u],
+        ),
         _ = l.useMemo(() => {
             let e = {};
             for (let r of u) e[r] = t ? (a[r]?.primaryCollectionId ?? "") : "";
@@ -162,16 +170,24 @@ function T(e) {
     l.useEffect(() => {
         t && T.length > 0 && i.p.requestCollections(T);
     }, [t, F]);
-    let C = (0, o.cf)([n.A], () => {
-            let e = {};
-            for (let t of T) e[t] = n.A.getCollection(t);
-            return e;
-        }, [T]),
-        O = (0, o.cf)([n.A], () => {
-            let e = {};
-            for (let t of T) e[t] = n.A.getFetchState(t);
-            return e;
-        }, [T]),
+    let C = (0, o.cf)(
+            [n.A],
+            () => {
+                let e = {};
+                for (let t of T) e[t] = n.A.getCollection(t);
+                return e;
+            },
+            [T],
+        ),
+        O = (0, o.cf)(
+            [n.A],
+            () => {
+                let e = {};
+                for (let t of T) e[t] = n.A.getFetchState(t);
+                return e;
+            },
+            [T],
+        ),
         p = E(h),
         R = E(O);
     return l.useMemo(() => {

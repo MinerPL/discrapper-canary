@@ -23,13 +23,13 @@ function R(t) {
         { analyticsLocations: U } = (0, l.Ay)(p, c.A.PREMIUM_UPSELL_MODAL);
     return (
         (0, _.Ay)(() => {
-            e.default.track(M.HAw.PREMIUM_UPSELL_VIEWED, {
+            (e.default.track(M.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: E.w.SAVED_MESSAGES,
                 location_section: M.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
                 location_stack: U,
                 sku_id: (0, s.mH)(L.pe.TIER_2),
             }),
-                (0, r.sq)(M.U7l.PREMIUM_UPSELL_VIEWED, U, () => (0, A.uq)(E.w.SAVED_MESSAGES));
+                (0, r.sq)(M.U7l.PREMIUM_UPSELL_VIEWED, U, () => (0, A.uq)(E.w.SAVED_MESSAGES)));
         }),
         (0, a.jsx)(l.f5, {
             value: U,
@@ -46,12 +46,12 @@ function R(t) {
                 badgeType: "beta",
                 secondaryCTA: P.intl.string(P.t.PcTCB7),
                 onSecondaryClick: function () {
-                    e.default.track(M.HAw.PREMIUM_PROMOTION_OPENED, {
+                    (e.default.track(M.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_section: M.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
                         location_object: M.ZSU.NAVIGATION_LINK,
                     }),
                         i(),
-                        (0, o.pX)(M.BVt.APPLICATION_STORE);
+                        (0, o.pX)(M.BVt.APPLICATION_STORE));
                 },
                 onClose: i,
                 ...O,

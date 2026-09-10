@@ -28,7 +28,7 @@ function c(e) {
         E = l.useCallback(
             (e, t) => {
                 let n = (0, i.A)(e, t);
-                return null != x && x(e, n, t), n;
+                return (null != x && x(e, n, t), n);
             },
             [x],
         ),
@@ -64,7 +64,7 @@ function c(e) {
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
                             return () => {
-                                S(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n });
+                                (S(!0), p({ type: i.n.SET_FOCUSED_POSITION, x: t, y: n }));
                             };
                         }),
                 );
@@ -110,12 +110,12 @@ function c(e) {
             let k = l.useCallback((e) => {
                 E.current && null == e && M(!0);
             }, []);
-            l.useEffect(() => {
+            (l.useEffect(() => {
                 y && v && null != I && (b(I), N(!1));
             }, [v, I]),
                 l.useEffect(() => {
                     y && (_ || R(c, d), j(!1));
-                }, [c, d]);
+                }, [c, d]));
             let w = l.useCallback(
                     (e) => {
                         if (!E.current) return;
@@ -125,7 +125,7 @@ function c(e) {
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
                         ) {
-                            e.preventDefault(), e.stopPropagation(), O();
+                            (e.preventDefault(), e.stopPropagation(), O());
                             return;
                         }
                         let t = (function (e) {
@@ -157,17 +157,17 @@ function c(e) {
                             case s.X2.NAVIGATE_INLINE_END:
                             case s.X2.NAVIGATE_START:
                             case s.X2.NAVIGATE_END:
-                                0 !== n.length &&
+                                (0 !== n.length &&
                                     (0 !== c || 0 !== d || t !== s.X2.NAVIGATE_LEFT) &&
                                     (e.preventDefault(), e.stopPropagation()),
-                                    p({ type: t });
+                                    p({ type: t }));
                                 return;
                             case s.X2.SELECT_FOCUSED_ITEM:
                                 if ((A && I?.ownerDocument.activeElement !== I) || e.repeat) return;
-                                e.preventDefault(),
+                                (e.preventDefault(),
                                     e.stopPropagation(),
                                     p({ type: t }),
-                                    null != h ? h(c, d, e) : null != I && I.click();
+                                    null != h ? h(c, d, e) : null != I && I.click());
                         }
                     },
                     [O, p, A, I, h, c, d],
@@ -211,7 +211,7 @@ function c(e) {
                             tabIndex: g && e === c && n === d ? 0 : -1,
                             onFocus: T.get(`${e},${n}`),
                         };
-                        return e === c && n === d && (l.ref = k), l;
+                        return (e === c && n === d && (l.ref = k), l);
                     },
                     [t, g, c, d, T, k],
                 ),

@@ -2,7 +2,7 @@ r.d(t, { G: () => s });
 var n = r(582128);
 class i {
     build(e, t) {
-        return (this.context = t), o(() => this.iterateCollection(e));
+        return ((this.context = t), o(() => this.iterateCollection(e)));
     }
     *iterateCollection(e) {
         let { children: t, items: r } = e;
@@ -11,14 +11,14 @@ class i {
         else if ("function" == typeof t) {
             if (!r) throw Error("props.children was a function but props.items is missing");
             let e = 0;
-            for (let n of r) yield* this.getFullNode({ value: n, index: e }, { renderer: t }), e++;
+            for (let n of r) (yield* this.getFullNode({ value: n, index: e }, { renderer: t }), e++);
         } else {
             let e = [];
             n.Children.forEach(t, (t) => {
                 t && e.push(t);
             });
             let r = 0;
-            for (let t of e) for (let e of this.getFullNode({ element: t, index: r }, {})) r++, yield e;
+            for (let t of e) for (let e of this.getFullNode({ element: t, index: r }, {})) (r++, yield e);
         }
     }
     getKey(e, t, r, n) {
@@ -49,7 +49,7 @@ class i {
         if (!s && e.value && t && t.renderer) {
             let r = this.cache.get(e.value);
             if (r && (!r.shouldInvalidate || !r.shouldInvalidate(this.context))) {
-                (r.index = e.index), (r.parentKey = i ? i.key : null), yield r;
+                ((r.index = e.index), (r.parentKey = i ? i.key : null), yield r);
                 return;
             }
             s = t.renderer(e.value);
@@ -63,7 +63,7 @@ class i {
             let o = n.getCollectionNode(s.props, this.context),
                 l = e.index ?? 0,
                 u = o.next();
-            for (; !u.done && u.value; ) {
+            for (; !u.done && u.value;) {
                 let n = u.value;
                 e.index = l;
                 let c = n.key ?? null;
@@ -92,7 +92,7 @@ class i {
                         throw Error(
                             `Unsupported type <${a(t.type)}> in <${a(i?.type ?? "unknown parent type")}>. Only <${a(e.type)}> is supported.`,
                         );
-                    l++, yield t;
+                    (l++, yield t);
                 }
                 u = o.next(f);
             }
@@ -120,7 +120,7 @@ class i {
                     for (let n of e.childNodes())
                         for (let e of (null != n.key && (n.key = `${u.key}${n.key}`),
                         l.getFullNode({ ...n, index: r }, l.getChildState(t, n), u.key, u)))
-                            r++, yield e;
+                            (r++, yield e);
                 }),
             };
         yield u;
@@ -135,7 +135,7 @@ function o(e) {
     return {
         *[Symbol.iterator]() {
             for (let e of t) yield e;
-            for (let n of (r || (r = e()), r)) t.push(n), yield n;
+            for (let n of (r || (r = e()), r)) (t.push(n), yield n);
         },
     };
 }

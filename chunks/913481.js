@@ -34,7 +34,7 @@ function j(e) {
                 e.addEventListener("mousemove", n),
                 e.addEventListener("click", i),
                 () => {
-                    e.removeEventListener("mousemove", n), e.removeEventListener("click", i);
+                    (e.removeEventListener("mousemove", n), e.removeEventListener("click", i));
                 }
             );
         }

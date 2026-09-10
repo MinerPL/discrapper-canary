@@ -2,7 +2,7 @@ var n = r(969001),
     i = function () {
         return !!n;
     };
-(i.hasArrayLengthDefineBug = function () {
+((i.hasArrayLengthDefineBug = function () {
     if (!n) return null;
     try {
         return 1 !== n([], "length", { value: 1 }).length;
@@ -10,4 +10,4 @@ var n = r(969001),
         return !0;
     }
 }),
-    (e.exports = i);
+    (e.exports = i));

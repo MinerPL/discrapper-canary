@@ -40,7 +40,7 @@ function y(e) {
                 size: "sm",
                 "aria-label": S.intl.string(T.default.TZsu1U),
                 onClick: (e) => {
-                    e.stopPropagation(),
+                    (e.stopPropagation(),
                         (0, A.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("522052"),
@@ -58,7 +58,7 @@ function y(e) {
                                 n.e("393038"),
                             ]).then(n.bind(n, 432669));
                             return (n) => (0, i.jsx)(e, { guildId: t, gameInstance: a, ...n });
-                        });
+                        }));
                 },
             }),
         }),
@@ -122,13 +122,13 @@ function $() {
     (0, g.ft)(e, null == s ? "create" : "edit");
     let h = a.useCallback(
             (e) => {
-                j(e), b();
+                (j(e), b());
             },
             [j, b],
         ),
         C = a.useCallback(
             (e) => {
-                v(e), b();
+                (v(e), b());
             },
             [v, b],
         ),

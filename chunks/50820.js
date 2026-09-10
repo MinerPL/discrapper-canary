@@ -1,4 +1,4 @@
-l.d(t, { A: () => ea, O: () => Z }), l(938796);
+(l.d(t, { A: () => ea, O: () => Z }), l(938796));
 var n,
     i = l(477900),
     s = l(582128),
@@ -462,11 +462,11 @@ class ei extends s.PureComponent {
         let d = "ActivityFeed" === t,
             u = "StreamPreview" === t,
             m = !1;
-        if ((0, Y.A)(o)) (e = this.renderXboxImage()), (m = !0);
+        if ((0, Y.A)(o)) ((e = this.renderXboxImage()), (m = !0));
         else {
             let t = (0, L.Gf)(this.props.user.id, o ?? void 0);
-            t.isSpotify || (e = (0, i.jsx)(L.Tf, { resolvedActivity: t })),
-                null == e && (m = null != (e = this.renderGameImage(o)));
+            (t.isSpotify || (e = (0, i.jsx)(L.Tf, { resolvedActivity: t })),
+                null == e && (m = null != (e = this.renderGameImage(o))));
         }
         let A = this.renderName(o),
             p = this.renderDetails(o),
@@ -503,7 +503,7 @@ class ei extends s.PureComponent {
                                               onClick:
                                                   null != c
                                                       ? (e) => {
-                                                            c(e), a?.();
+                                                            (c(e), a?.());
                                                         }
                                                       : void 0,
                                               children: [A, p, h, x],
@@ -523,15 +523,15 @@ class ei extends s.PureComponent {
     }
     handleOpenSpotifyTrack = () => {
         let { activity: e, onOpenSpotifyTrack: t } = this.props;
-        o()(null != e, "Spotify activity was null"), t?.(e);
+        (o()(null != e, "Spotify activity was null"), t?.(e));
     };
     handleOpenSpotifyArtist = (e) => {
         let { activity: t, onOpenSpotifyArtist: l, user: n } = this.props;
-        o()(null != t, "Spotify activity was null"), l?.(t, n.id, e);
+        (o()(null != t, "Spotify activity was null"), l?.(t, n.id, e));
     };
     handleOpenSpotifyAlbum = () => {
         let { activity: e, onOpenSpotifyAlbum: t, user: l } = this.props;
-        o()(null != e, "Spotify activity was null"), t?.(e, l.id);
+        (o()(null != e, "Spotify activity was null"), t?.(e, l.id));
     };
 }
 function es(e) {

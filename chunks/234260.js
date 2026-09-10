@@ -1,4 +1,4 @@
-e.r(s), e.d(s, { default: () => j });
+(e.r(s), e.d(s, { default: () => j }));
 var n = e(477900),
     a = e(582128),
     c = e(549711),
@@ -18,7 +18,7 @@ function A() {
             !(async function () {
                 let t = (0, i.parse)(s.search);
                 try {
-                    await (0, h.Kf)(t.token ?? ""), c(!0);
+                    (await (0, h.Kf)(t.token ?? ""), c(!0));
                 } catch {
                     l(!0);
                 }

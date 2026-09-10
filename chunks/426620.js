@@ -18,10 +18,10 @@ class s extends i.Ay.PersistedStore {
 let l = new s(r.h, {
         NUF_NEW_USER: function (e) {
             let { newUserType: t } = e;
-            (a = t), l.persist();
+            ((a = t), l.persist());
         },
         NUF_COMPLETE: function () {
-            (a = null), l.persist();
+            ((a = null), l.persist());
         },
     }),
     o = l;

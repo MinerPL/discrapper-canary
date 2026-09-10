@@ -51,7 +51,7 @@ function b(e, t, l) {
     let T = (0, h.A)({ id: t.id, label: f.intl.string(f.t.sMsaLg) });
     if ((null != T && b.push(T), !s && !E && !C)) {
         async function I() {
-            j && (await (0, g.qK)(e.id, t.id, [])), m.A.deleteRole(e.id, t.id);
+            (j && (await (0, g.qK)(e.id, t.id, [])), m.A.deleteRole(e.id, t.id));
         }
         let l = N
             ? () => {

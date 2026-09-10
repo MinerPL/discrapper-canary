@@ -244,7 +244,7 @@ function G(e) {
             }),
             [t, n.id, l, s.paymentSourceId, s.currency, o, p],
         );
-    (0, x.E)(f), (0, _.F)(C, h);
+    ((0, x.E)(f), (0, _.F)(C, h));
     let { renewalDate: E, planSwitchNoticeCopy: y } = r.useMemo(() => {
         if (null == C) return { renewalDate: void 0, planSwitchNoticeCopy: null };
         let e = C.subscriptionPeriodStart;

@@ -1,4 +1,4 @@
-i.r(t), i.d(t, { default: () => h }), i(321073);
+(i.r(t), i.d(t, { default: () => h }), i(321073));
 var l = i(19575),
     n = i(696016),
     r = i(801344),
@@ -60,7 +60,7 @@ class m {
         }
     }
     handleInGame(e) {
-        (this.consecutiveFailures = 0),
+        ((this.consecutiveFailures = 0),
             null == this.activePlayerRiotId &&
                 ((this.activePlayerRiotId = e.riotId ?? null), (this.activePlayerName = e.riotIdGameName ?? "")),
             this.isInGame ||
@@ -72,7 +72,7 @@ class m {
             (this.currentHealthFraction = (function (e) {
                 let { currentHealth: t, maxHealth: i } = e.championStats;
                 return i <= 0 ? 1 : Math.max(0, Math.min(1, t / i));
-            })(e));
+            })(e)));
     }
     handlePollFailure() {
         this.isInGame &&
@@ -98,9 +98,9 @@ class m {
         let l = new Map();
         for (let e of i.items) l.set(e.itemID, e);
         let n = { level: e.level ?? 1, currentGold: e.currentGold ?? 0, items: l };
-        (this.gameTime += 1),
+        ((this.gameTime += 1),
             null != this.previousPlayerState && this.detectStateChanges(this.previousPlayerState, n),
-            (this.previousPlayerState = n);
+            (this.previousPlayerState = n));
     }
     updateDeadState(e) {
         e !== this.isDead &&
@@ -108,7 +108,7 @@ class m {
             e || this.emitLifecycleEvent(r.Ou, a.intl.string(a.t.ebbBDl), a.intl.string(a.t.CCiFY7)));
     }
     emitLifecycleEvent(e, t, i) {
-        n.nx.info(`[LoL] lifecycle marker: ${e}`),
+        (n.nx.info(`[LoL] lifecycle marker: ${e}`),
             this.emitSignal({
                 type: n.Gy.GAME_EVENT,
                 eventType: n.rb.UNCLASSIFIED,
@@ -117,7 +117,7 @@ class m {
                 description: i,
                 score: 0,
                 importance: 0,
-            });
+            }));
     }
     async pollEvents() {
         try {
@@ -127,8 +127,8 @@ class m {
                     (n.nx.info(`[LoL] eventdata received: ${e.Events.map((e) => e.EventName).join(", ")}`),
                     this.isFirstPoll)
                 )
-                    n.nx.info(`[LoL] first poll \u{2014} skipping ${e.Events.length} historical events`),
-                        (this.isFirstPoll = !1);
+                    (n.nx.info(`[LoL] first poll \u{2014} skipping ${e.Events.length} historical events`),
+                        (this.isFirstPoll = !1));
                 else
                     for (let t of e.Events) {
                         let e;
@@ -192,7 +192,7 @@ class m {
         } catch (e) {}
     }
     addEventToWindow(e) {
-        this.eventWindow.push(e), this.eventWindow.length > this.EVENT_WINDOW_SIZE && this.eventWindow.shift();
+        (this.eventWindow.push(e), this.eventWindow.length > this.EVENT_WINDOW_SIZE && this.eventWindow.shift());
         let t = (function (e) {
             switch (e.type) {
                 case "ChampionKill":
@@ -324,7 +324,7 @@ class m {
         }
     }
     resetGameState() {
-        (this.activePlayerRiotId = null),
+        ((this.activePlayerRiotId = null),
             (this.activePlayerName = null),
             (this.nextEventId = 0),
             (this.eventWindow = []),
@@ -334,7 +334,7 @@ class m {
             (this.isInGame = !1),
             (this.isDead = !1),
             (this.currentHealthFraction = 1),
-            (this.consecutiveFailures = 0);
+            (this.consecutiveFailures = 0));
     }
     reset() {
         this.resetGameState();

@@ -24,5 +24,5 @@ function L(e) {
           })
         : (0, l.jsx)(i.Lp, { text: v, className: n()(r, d.VD, u, d.Oh), disableColor: !0, shape: h[C], style: t });
 }
-(L.Looks = u), (L.Sizes = c);
+((L.Looks = u), (L.Sizes = c));
 let v = L;

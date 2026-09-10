@@ -1,4 +1,4 @@
-n.d(t, { RL: () => et, oO: () => q, dL: () => K }), n(321073);
+(n.d(t, { RL: () => et, oO: () => q, dL: () => K }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -124,7 +124,7 @@ function X(e) {
                 u = null != o && t?.getDiscountIdIfExists() === String(o);
             (0, i.useEffect)(() => {
                 let e = u ? (0, I.ml)(s)?.reward : null;
-                r(e?.collected?.overrideTitle), a(null != e ? (0, A.KD)(e.flavor) : void 0);
+                (r(e?.collected?.overrideTitle), a(null != e ? (0, A.KD)(e.flavor) : void 0));
             }, [u, s, r, a]);
         })({ invoicePreview: n, product: l, promotion: (0, E.A)() }),
         null

@@ -48,7 +48,7 @@ var a,
         (o[(o.SEXUAL_CONTENT = 2)] = "SEXUAL_CONTENT"),
         (o[(o.SLURS = 3)] = "SLURS"),
         o);
-s.USER_PROFILE, s.SERVER_POLICY, s.MENTION_SPAM, s.ML_SPAM, s.DEFAULT_KEYWORD_LIST, s.KEYWORD;
+(s.USER_PROFILE, s.SERVER_POLICY, s.MENTION_SPAM, s.ML_SPAM, s.DEFAULT_KEYWORD_LIST, s.KEYWORD);
 let u = 1e3,
     E = 100,
     A = 1e3,

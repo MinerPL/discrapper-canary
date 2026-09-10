@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Dg: () => f,
     IO: () => g,
     Ij: () => O,
@@ -12,7 +12,7 @@ n.d(t, {
     t4: () => R,
     yk: () => C,
 }),
-    n(321073);
+    n(321073));
 var i = n(582128),
     r = n(284009),
     a = n.n(r),
@@ -66,16 +66,20 @@ function N(e) {
 }
 function C(e, t) {
     let n = e.isGameInvitesChannel(),
-        r = (0, s.yK)([h.A], () => {
-            if (!n) return [];
-            let e = new Set(),
-                i = [];
-            for (let n of t) {
-                let t = h.A.getChannel(n)?.ownerId;
-                null == t || e.has(t) || (e.add(t), i.push(t));
-            }
-            return i;
-        }, [n, t]),
+        r = (0, s.yK)(
+            [h.A],
+            () => {
+                if (!n) return [];
+                let e = new Set(),
+                    i = [];
+                for (let n of t) {
+                    let t = h.A.getChannel(n)?.ownerId;
+                    null == t || e.has(t) || (e.add(t), i.push(t));
+                }
+                return i;
+            },
+            [n, t],
+        ),
         a = (0, i.useMemo)(() => (n ? { [e.guild_id]: r } : {}), [r, e.guild_id, n]);
     (0, l.Eq)(a, "GameInvitesChannelPostAuthors");
 }

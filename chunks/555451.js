@@ -16,14 +16,14 @@ class o extends s.AbstractParserWithLeftRightBoundaryChecking {
             "\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C" == r
         ) {
             let t = {};
-            return (t[s] = 1), a.ParsingComponents.createRelativeFromReference(e.reference, t);
+            return ((t[s] = 1), a.ParsingComponents.createRelativeFromReference(e.reference, t));
         }
         if (
             "\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C" == r ||
             "\u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u0439" == r
         ) {
             let t = {};
-            return (t[s] = -1), a.ParsingComponents.createRelativeFromReference(e.reference, t);
+            return ((t[s] = -1), a.ParsingComponents.createRelativeFromReference(e.reference, t));
         }
         let o = e.createParsingComponents(),
             u = new Date(e.reference.instant.getTime());

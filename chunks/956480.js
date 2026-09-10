@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(321073);
+(n.d(t, { A: () => m }), n(321073));
 var i = n(582128),
     l = n(17928),
     a = n(765178),
@@ -21,7 +21,7 @@ function m(e, t, n) {
         let i = (function (e, t, n) {
                 let i = new Map(),
                     l = new Map();
-                for (let [e, n] of t) i.set(e, n.position), l.set(e, n.statusId);
+                for (let [e, n] of t) (i.set(e, n.position), l.set(e, n.statusId));
                 let a = new Map();
                 for (let e of n) a.set(e.objectId, e.createdBy);
                 return { channelId: e, positions: i, statusIds: l, noteAuthors: a };

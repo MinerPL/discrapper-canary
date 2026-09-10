@@ -5,7 +5,7 @@ var i = n(439372),
 class s extends i.A {
     actions = { POST_CONNECTION_OPEN: this.handlePostConnectionOpen, LOGOUT: this.handleLogout };
     handlePostConnectionOpen() {
-        (0, r.C)(), (0, a.Tn)("startup");
+        ((0, r.C)(), (0, a.Tn)("startup"));
     }
     handleLogout() {
         (0, a.AV)();

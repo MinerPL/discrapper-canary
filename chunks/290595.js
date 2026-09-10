@@ -4,7 +4,7 @@ var i = n(636537),
     r = n(652215),
     s = n(375708);
 function a(e) {
-    return null != e && null != e.body && l.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...e.body } }), e.body;
+    return (null != e && null != e.body && l.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...e.body } }), e.body);
 }
 function o(e) {
     throw Error(

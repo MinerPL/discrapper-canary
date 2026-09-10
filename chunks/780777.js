@@ -57,7 +57,7 @@ class s extends a.Component {
 class l extends a.Component {
     _ref = a.createRef();
     constructor(e) {
-        super(e), (this.setRef = this.setRef.bind(this));
+        (super(e), (this.setRef = this.setRef.bind(this)));
     }
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();

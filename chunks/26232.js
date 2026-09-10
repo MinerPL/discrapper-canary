@@ -1557,7 +1557,7 @@ function l(e, t, n) {
             r = (t ? n[a.slice(1)] : n[a.slice(2)]).map((e) => o[e] || [e]).reduce((e, t) => [...e, ...t], []);
         u &&= r.indexOf(e.region || "") > -1 == t;
     } else u &&= !e.region || "*" === a || a === e.region;
-    return (u &&= !e.script || "*" === i || i === e.script), (u &&= !e.language || "*" === r || r === e.language);
+    return ((u &&= !e.script || "*" === i || i === e.script), (u &&= !e.language || "*" === r || r === e.language));
 }
 function d(e) {
     return [e.language, e.script, e.region].filter(Boolean).join("-");
@@ -1598,7 +1598,7 @@ let f = (0, i.B)(
                             matchVariables: t.reduce((e, t) => {
                                 let n = Object.keys(t)[0],
                                     r = t[n];
-                                return (e[n.slice(1)] = r._value.split("+")), e;
+                                return ((e[n.slice(1)] = r._value.split("+")), e);
                             }, {}),
                             paradigmLocales: [
                                 ...e,
@@ -1662,7 +1662,7 @@ function p(e, t, n = 838) {
                 let a = (function (e) {
                     let t = [],
                         n = e;
-                    for (; n; ) {
+                    for (; n;) {
                         t.push(n);
                         let e = n.lastIndexOf("-");
                         if (-1 === e) break;
@@ -1679,9 +1679,9 @@ function p(e, t, n = 838) {
                         } catch {
                             a = 10 * u + 40 * t;
                         }
-                        i.distances[n] || (i.distances[n] = {}),
+                        (i.distances[n] || (i.distances[n] = {}),
                             (i.distances[n][s] = a),
-                            a < r && ((r = a), (i.matchedDesiredLocale = n), (i.matchedSupportedLocale = s));
+                            a < r && ((r = a), (i.matchedDesiredLocale = n), (i.matchedSupportedLocale = s)));
                         break;
                     }
                 }
@@ -1691,13 +1691,13 @@ function p(e, t, n = 838) {
     return (
         (i.matchedSupportedLocale && 0 === r) ||
             (e.forEach((e, n) => {
-                i.distances[e] || (i.distances[e] = {}),
+                (i.distances[e] || (i.distances[e] = {}),
                     a.forEach((a, o) => {
                         let u = t[o],
                             s = f(e, a) + 0 + 40 * n;
-                        (i.distances[e][u] = s),
-                            s < r && ((r = s), (i.matchedDesiredLocale = e), (i.matchedSupportedLocale = u));
-                    });
+                        ((i.distances[e][u] = s),
+                            s < r && ((r = s), (i.matchedDesiredLocale = e), (i.matchedSupportedLocale = u)));
+                    }));
             }),
             r >= n && ((i.matchedDesiredLocale = void 0), (i.matchedSupportedLocale = void 0))),
         i

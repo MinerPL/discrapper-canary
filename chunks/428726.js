@@ -15,7 +15,7 @@ function c(t) {
     async function k() {
         g(!0);
         try {
-            await (0, u.c6)(c.id, h), n();
+            (await (0, u.c6)(c.id, h), n());
         } catch (t) {
             E(t.message);
         } finally {

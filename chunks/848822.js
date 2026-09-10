@@ -7,7 +7,7 @@ var t = {
         return e;
     },
     inject: function (e, r) {
-        (t.current = e), (t.transformStyles = r);
+        ((t.current = e), (t.transformStyles = r));
     },
 };
 e.exports = t;

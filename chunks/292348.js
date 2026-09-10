@@ -57,13 +57,13 @@ function d(e) {
 function c(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, i) => {
-        t.open("GET", e, !0),
+        (t.open("GET", e, !0),
             (t.responseType = "blob"),
             (t.onabort = (e) => i(e)),
             (t.onerror = (e) => i(e)),
             (t.ontimeout = (e) => i(e)),
             (t.onload = () => n(t?.response?.data)),
-            t.send();
+            t.send());
     });
 }
 function u(e) {

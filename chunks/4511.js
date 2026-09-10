@@ -1,4 +1,4 @@
-n.d(t, { r: () => r }), n(321073);
+(n.d(t, { r: () => r }), n(321073));
 var i = n(731854);
 class r {
     pixelBudget;
@@ -7,9 +7,9 @@ class r {
     constructor(e = i.eQ) {
         const { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error("Invalid argument");
-        (this.pixelBudget = t * n),
+        ((this.pixelBudget = t * n),
             (this.ladder = r.calculateLadder(this.pixelBudget)),
-            (this.orderedLadder = r.calculateOrderedLadder(this.ladder));
+            (this.orderedLadder = r.calculateOrderedLadder(this.ladder)));
     }
     getMaxSinkValue(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
@@ -57,13 +57,13 @@ class r {
                 c = 0;
             for (let i of n) {
                 if (i.pixelCount * t > e) break;
-                (o = i.width), (d = i.height), (c = i.budgetPortion);
+                ((o = i.width), (d = i.height), (c = i.budgetPortion));
             }
             if (s !== o) {
                 let e = r.getMutedFramerate(l);
-                (a[l] = { width: o, height: d, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
+                ((a[l] = { width: o, height: d, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
                     (l -= 10),
-                    (s = o);
+                    (s = o));
             }
         }
         return a;

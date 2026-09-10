@@ -15,7 +15,7 @@ function n(t, e) {
             s,
             u.useCallback(
                 (e) => {
-                    n(e), a.w.set(t, e);
+                    (n(e), a.w.set(t, e));
                 },
                 [t],
             ),

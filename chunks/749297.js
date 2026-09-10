@@ -72,7 +72,7 @@ var Z = {
         let { dismissible: s, requestClose: Z } = n();
         if (!s) return null;
         let b = async () => {
-            a && (await a()), Z();
+            (a && (await a()), Z());
         };
         return (0, i.v)("button", {
             type: "button",

@@ -9,7 +9,7 @@ n.exports = function (n) {
     var r = 0;
     return (
         (n = e(n, function (n) {
-            if (a(n)) return (r = h(n.length, r)), !0;
+            if (a(n)) return ((r = h(n.length, r)), !0);
         })),
         p(r, function (r) {
             return u(n, i(r));

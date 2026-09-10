@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(134528), n(947204);
+(n.d(t, { A: () => m }), n(134528), n(947204));
 var i = n(636537),
     l = n(228366),
     s = n(913122),
@@ -10,7 +10,7 @@ var i = n(636537),
 let u = {
         async pinMessage(e, t) {
             let { id: n, name: l } = e;
-            await a.A.unarchiveThreadIfNecessary(e.id),
+            (await a.A.unarchiveThreadIfNecessary(e.id),
                 i.Bo.put({ url: c.Rsh.PIN(n, t), rejectWithError: !0 }).catch((t) => {
                     let n = new s.LG(t),
                         i = n.code,
@@ -19,35 +19,35 @@ let u = {
                     if (null != i)
                         switch (i) {
                             case c.t02.TOO_MANY_PINS_IN_CHANNEL:
-                                (a = d.intl.string(d.t.HI88Q3)),
+                                ((a = d.intl.string(d.t.HI88Q3)),
                                     (r = e.isPrivate()
                                         ? d.intl.formatToPlainString(d.t.Q89oQU, { maxPins: c.KL3 })
-                                        : d.intl.formatToPlainString(d.t.NnO1S5, { maxPins: c.KL3, channelName: l }));
+                                        : d.intl.formatToPlainString(d.t.NnO1S5, { maxPins: c.KL3, channelName: l })));
                                 break;
                             case c.t02.INVALID_ACCESS:
-                                (a = d.intl.string(d.t["25gfQX"])), (r = d.intl.string(d.t.QNnTwN));
+                                ((a = d.intl.string(d.t["25gfQX"])), (r = d.intl.string(d.t.QNnTwN)));
                                 break;
                             case c.t02.INVALID_PIN_MESSAGE_CHANNEL:
-                                (a = d.intl.string(d.t["Q5G6+m"])), (r = d.intl.string(d.t["5hgPfC"]));
+                                ((a = d.intl.string(d.t["Q5G6+m"])), (r = d.intl.string(d.t["5hgPfC"])));
                                 break;
                             case c.t02.INVALID_THREAD_ARCHIVE_STATE:
-                                (a = d.intl.string(d.t.fu6Lbl)), (r = d.intl.string(d.t.FmrcZM));
+                                ((a = d.intl.string(d.t.fu6Lbl)), (r = d.intl.string(d.t.FmrcZM)));
                                 break;
                             case c.t02.INVALID_ACTION_SYSTEM_MESSAGE:
-                                (a = d.intl.string(d.t["zV0/FC"])), (r = d.intl.string(d.t.C4a7xI));
+                                ((a = d.intl.string(d.t["zV0/FC"])), (r = d.intl.string(d.t.C4a7xI)));
                                 break;
                             case c.t02.UNKNOWN_MESSAGE:
-                                (a = d.intl.string(d.t.fkqPro)), (r = d.intl.string(d.t.H6fRIg));
+                                ((a = d.intl.string(d.t.fkqPro)), (r = d.intl.string(d.t.H6fRIg)));
                                 break;
                             default:
-                                (a = d.intl.string(d.t.HI88Q3)),
-                                    (r = n.getAnyErrorMessage() ?? d.intl.string(d.t.fEptJP));
+                                ((a = d.intl.string(d.t.HI88Q3)),
+                                    (r = n.getAnyErrorMessage() ?? d.intl.string(d.t.fEptJP)));
                         }
                     o.A.show({ title: a, body: r, confirmText: d.intl.string(d.t.BddRzS) });
-                });
+                }));
         },
         async unpinMessage(e, t) {
-            await a.A.unarchiveThreadIfNecessary(e.id),
+            (await a.A.unarchiveThreadIfNecessary(e.id),
                 i.Bo.del({ url: c.Rsh.PIN(e.id, t), oldFormErrors: !0, rejectWithError: !0 }).catch(() =>
                     o.A.show({
                         title: d.intl.string(d.t.xFjByk),
@@ -56,7 +56,7 @@ let u = {
                         cancelText: d.intl.string(d.t["ETE/oC"]),
                         onConfirm: u.unpinMessage.bind(u, e, t),
                     }),
-                );
+                ));
         },
         ackPins(e) {
             l.h.dispatch({ type: "CHANNEL_PINS_ACK", channelId: e });

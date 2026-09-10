@@ -51,7 +51,7 @@ let m = new d(a.h, {
                 if (Object.keys(i).length >= 5 && "EXTERNAL" === e) {
                     for (let e in i)
                         if (null == u[t] || null == u[t][e]) {
-                            delete s[t][e], delete i[e];
+                            (delete s[t][e], delete i[e]);
                             break;
                         }
                 }
@@ -72,7 +72,7 @@ let m = new d(a.h, {
     BURST_REACTION_ANIMATION_ADD: function (e) {
         let { channelId: t, messageId: n, emoji: i, animation: l } = e,
             a = c(n, i);
-        null == u[t] && (u[t] = {}), (u[t][a] = l);
+        (null == u[t] && (u[t] = {}), (u[t][a] = l));
     },
     BURST_REACTION_PICKER_ANIMATION_ADD: function (e) {
         let { messageId: t, emojiName: n, emojiId: i, startPosition: l } = e;

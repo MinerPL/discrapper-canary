@@ -29,7 +29,7 @@ let A = new r(i.h, {
     CONNECTION_RESUMED: d,
     CONNECTION_OPEN: d,
     VOICE_CHANNEL_STATUS_UPDATE: function (t) {
-        null == u[t.guildId] && (u[t.guildId] = {}), (u[t.guildId][t.id] = t.status);
+        (null == u[t.guildId] && (u[t.guildId] = {}), (u[t.guildId][t.id] = t.status));
     },
     CHANNEL_INFO: function (t) {
         let { guildId: e, channels: l } = t;

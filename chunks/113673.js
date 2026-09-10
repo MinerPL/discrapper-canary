@@ -1,11 +1,11 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         repairApplication: () => G,
         updateApplication: () => w,
         playApplication: () => R,
         installApplication: () => U,
         performDefaultLibraryApplicationAction: () => x,
-    });
+    }));
 var i = n(92077),
     r = n(477900),
     a = n(582128),
@@ -37,7 +37,7 @@ class C extends a.PureComponent {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 { libraryApplication: i, analyticsParams: r } = e.props;
-            e.onClose(), R(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n });
+            (e.onClose(), R(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n }));
         };
     })();
     handleChooseDownload = () => {

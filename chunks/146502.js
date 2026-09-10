@@ -14,7 +14,7 @@ function f(t) {
         subtitle: e.intl.format(e.t["ff/gx7"], { ruleName: u }),
         confirmText: e.intl.string(e.t["cY+Oob"]),
         onConfirm: function () {
-            o(null), i?.();
+            (o(null), i?.());
         },
     });
 }

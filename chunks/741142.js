@@ -270,9 +270,9 @@ function D(e, a, t, r, n) {
             s = new (0, c.J)(e, r),
             D = new (0, o.p)(e, v({}, n)),
             p = D.resolvedOptions().timeZone;
-        l && null != a && m.push(s.format("rangeUnderflow", { minValue: D.format(a.toDate(p)) })),
+        (l && null != a && m.push(s.format("rangeUnderflow", { minValue: D.format(a.toDate(p)) })),
             i && null != t && m.push(s.format("rangeOverflow", { maxValue: D.format(t.toDate(p)) })),
-            u && m.push(s.format("unavailableDate"));
+            u && m.push(s.format("unavailableDate")));
     }
     return {
         isInvalid: s,
@@ -344,5 +344,5 @@ function P(e, a) {
         r = e && "minute" in e ? "minute" : "day";
     if (e && a && !(a in e)) throw Error("Invalid granularity " + a + " for value " + e.toString());
     let [n, i] = (0, m.useState)([r, t]);
-    return e && (n[0] !== r || n[1] !== t) && i([r, t]), a || (a = e ? r : n[0]), [a, e ? t : n[1]];
+    return (e && (n[0] !== r || n[1] !== t) && i([r, t]), a || (a = e ? r : n[0]), [a, e ? t : n[1]]);
 }

@@ -31,7 +31,7 @@ function C(e) {
             onSubmit: function (e) {
                 var n;
                 let { rating: d, problem: c, dontShowAgain: C, feedback: E } = e;
-                C && (0, r.n3)({ feedbackType: s.MW.VIDEO_BACKGROUND, location: "VideoBackgroundFeedbackModal" }),
+                (C && (0, r.n3)({ feedbackType: s.MW.VIDEO_BACKGROUND, location: "VideoBackgroundFeedbackModal" }),
                     null != d &&
                         ((n = c?.value ?? null),
                         o.default.track(u.HAw.VIDEO_BACKGROUND_FEEDBACK, { ...t, reason: n, rating: d, feedback: E }),
@@ -39,7 +39,7 @@ function C(e) {
                             (0, i.openModalLazy)(async () => {
                                 let { default: e } = await l.e("137836").then(l.bind(l, 845671));
                                 return (t) => (0, a.jsx)(e, { body: b.intl.string(b.t.aHB11f), ...t });
-                            }));
+                            })));
             },
             onClose: E,
             transitionState: C,

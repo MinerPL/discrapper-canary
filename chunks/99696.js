@@ -68,7 +68,7 @@ function v(t) {
                 currencyCode: l,
                 loadId: a,
                 onClose: async () => {
-                    o?.(), await n.onClose();
+                    (o?.(), await n.onClose());
                 },
             });
     });
@@ -93,7 +93,7 @@ function D() {
                     initialCode: e,
                     onComplete: a,
                     onClose: async () => {
-                        l?.(), await n.onClose();
+                        (l?.(), await n.onClose());
                     },
                     withRedemptionSuccessModal: o,
                     source: u,

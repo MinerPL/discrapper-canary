@@ -4,7 +4,7 @@ var i = n(952589),
 function a(e, t, n, i) {
     if (null != t) {
         let n = r()(e, t, i);
-        for (; e[n] !== t && n < e.length - 1; ) n += 1;
+        for (; e[n] !== t && n < e.length - 1;) n += 1;
         e.splice(n, 1);
     }
     null != n && e.splice(r()(e, n, i), 0, n);
@@ -21,7 +21,7 @@ class l {
     dirty = !1;
     _version = 0;
     constructor(e, t, n = (e, t) => e === t) {
-        (this.indexBy = e), (this.sortBy = t), (this.isEqual = n);
+        ((this.indexBy = e), (this.sortBy = t), (this.isEqual = n));
     }
     get version() {
         return this._version;
@@ -32,7 +32,7 @@ class l {
         if (!e && this.dirty) {
             let e = {};
             for (let [t, n] of Object.entries(this.valueIndexes)) e[t] = [...n];
-            (this.valueIndexesForGetter = e), (this.dirty = !1);
+            ((this.valueIndexesForGetter = e), (this.dirty = !1));
         }
         return this.valueIndexesForGetter;
     }
@@ -47,7 +47,7 @@ class l {
         return null == e ? this.valueArray.length : (this.valueIndexes[e]?.length ?? 0);
     }
     clear() {
-        this.valueMap.clear(), (this.valueArray = []), (this.valueIndexes = {}), (this.valueIndexesForGetter = {});
+        (this.valueMap.clear(), (this.valueArray = []), (this.valueIndexes = {}), (this.valueIndexesForGetter = {}));
     }
     has(e) {
         return this.valueMap.has(e);
@@ -73,6 +73,6 @@ class l {
     }
     getIndex(e) {
         let t = this.valueIndexes[e];
-        return null == t && ((t = []), (this.valueIndexes[e] = t)), t;
+        return (null == t && ((t = []), (this.valueIndexes[e] = t)), t);
     }
 }

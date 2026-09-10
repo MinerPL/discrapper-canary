@@ -45,7 +45,7 @@ function y(e) {
                 size: "sm",
                 onClick: () => {
                     var e, l, i;
-                    (e = t.guild_id),
+                    ((e = t.guild_id),
                         (l = t.id),
                         (i = I.vv.UNREADS_ONLY_MENTIONS),
                         p.A.updateChannelOverrideSettings(
@@ -55,7 +55,7 @@ function y(e) {
                             C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         ),
-                        n();
+                        n());
                 },
             }),
         ],
@@ -95,13 +95,13 @@ function P(e) {
                           variant: "secondary",
                           text: _.intl.string(_.t["0dvvEi"]),
                           onClick: function () {
-                              R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                              (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
                                   ...(0, M.dI)(t),
                                   banner_type: "thread",
                                   cta_type: "unarchive",
                               }),
-                                  D.A.unarchiveThread(t, !1);
+                                  D.A.unarchiveThread(t, !1));
                           },
                           size: "sm",
                       })
@@ -135,13 +135,13 @@ function O(e) {
                           variant: "secondary",
                           text: _.intl.string(_.t.zA9d1J),
                           onClick: function () {
-                              R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                              (R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
                                   ...(0, M.dI)(t),
                                   banner_type: "thread",
                                   cta_type: "unlock",
                               }),
-                                  D.A.unlockThread(t);
+                                  D.A.unlockThread(t));
                           },
                           size: "sm",
                       })

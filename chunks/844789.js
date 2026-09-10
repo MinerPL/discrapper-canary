@@ -51,7 +51,7 @@ let w = (0, E.UT)([O.A, b.A, R.A], {
         if (null == e) return;
         let t = { url: U.Rsh.STOREFRONT_PREMIUM_BUTTON(e), rejectWithError: !1 },
             { body: n } = await y.Bo.get(t);
-        T.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: n.store_listings }),
+        (T.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: n.store_listings }),
             null != n.subscription_plans &&
                 T.h.dispatch({
                     type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS",
@@ -61,7 +61,7 @@ let w = (0, E.UT)([O.A, b.A, R.A], {
             null != n.skus &&
                 n.skus.forEach((e) => {
                     T.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: e });
-                });
+                }));
     },
 });
 var F = n(957565),
@@ -296,9 +296,9 @@ function ep(e) {
             c === S.current
         )
             return;
-        (E.current = e), (y.current = o), (S.current = c);
+        ((E.current = e), (y.current = o), (S.current = c));
         let t = new Map(a?.map((e) => [e.value, e]));
-        N(t), A(new Set(t.keys())), L((e) => e + 1);
+        (N(t), A(new Set(t.keys())), L((e) => e + 1));
     }, [a, o, c]);
     let b = (0, h.jc)();
     ei()(null != b, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
@@ -319,7 +319,7 @@ function ep(e) {
             O?.type === d.I5.CHANNEL_SELECT
         ) {
             let e = new Map(O.selectedOptions.map((e) => [e.value, e]));
-            N(e), A(new Set(e.keys()));
+            (N(e), A(new Set(e.keys())));
         }
     }, [O]);
     let D = s.useCallback(() => {
@@ -363,7 +363,7 @@ function ep(e) {
                               {
                                   value: Array.from(C.values()),
                                   onChange: function (e) {
-                                      f || v(!0), N(new Map(e.map((e) => [e.value, e])));
+                                      (f || v(!0), N(new Map(e.map((e) => [e.value, e]))));
                                   },
                                   multi: !0,
                                   inputClassNames: u()({ [ec.R]: !w }),
@@ -611,7 +611,7 @@ function eK(e) {
         A = (0, E.bG)([W.A], () => W.A.getBasicChannel(m));
     ei()(null != A, "FileUploadActionComponent requires a valid channel");
     let y = s.useCallback((e) => {
-            e.preventDefault(), e.dataTransfer?.types.includes("Files") && o(!0);
+            (e.preventDefault(), e.dataTransfer?.types.includes("Files") && o(!0));
         }, []),
         S = s.useCallback((e) => {
             r.current?.contains(e.relatedTarget) || o(!1);
@@ -646,7 +646,7 @@ function eK(e) {
         ),
         L = s.useCallback(
             (e) => {
-                e.preventDefault(), o(!1), T(Array.from(e.dataTransfer?.files ?? []), "drag_drop");
+                (e.preventDefault(), o(!1), T(Array.from(e.dataTransfer?.files ?? []), "drag_drop"));
             },
             [T],
         );
@@ -660,9 +660,9 @@ function eK(e) {
             e?.addEventListener("dragleave", S),
             e?.addEventListener("drop", L),
             () => {
-                e?.removeEventListener("dragover", y),
+                (e?.removeEventListener("dragover", y),
                     e?.removeEventListener("dragleave", S),
-                    e?.removeEventListener("drop", L);
+                    e?.removeEventListener("drop", L));
             }
         );
     }, [y, S, L]),
@@ -690,7 +690,7 @@ function eK(e) {
                   (0, i.jsx)(eT.A, {
                       ref: l,
                       onChange: function (e) {
-                          T(Array.from(e.currentTarget.files ?? []), "file_picker"), (e.currentTarget.value = "");
+                          (T(Array.from(e.currentTarget.files ?? []), "file_picker"), (e.currentTarget.value = ""));
                       },
                       multiple: n > 1,
                       filters: x.length > 0 ? [{ name: "", extensions: x }] : void 0,
@@ -924,10 +924,10 @@ function tt(e) {
     s.useEffect(() => {
         if (p?.type === d.I5.STRING_SELECT) {
             let e = new Set(p.values);
-            y(e), T(e);
+            (y(e), T(e));
         } else {
             let e = new Set(c);
-            y(e), T(e);
+            (y(e), T(e));
         }
     }, [l, c, p]);
     let b = s.useCallback(() => {
@@ -987,7 +987,7 @@ function ts(e) {
         maxLength: u,
         required: c,
         onChange: function (e) {
-            x(e), g({ type: n, value: e });
+            (x(e), g({ type: n, value: e }));
         },
         autoFocus: v,
     };
@@ -1050,7 +1050,7 @@ function tI(e) {
             let e = [];
             e.push("/assets/390e5e747351159f.svg");
             for (let t = 0; t < 8; t++) e.push("/assets/3a6b11549118d705.svg");
-            return e.push("/assets/db1951f89e12e0e3.svg"), e;
+            return (e.push("/assets/db1951f89e12e0e3.svg"), e);
         }, []);
     return (0, i.jsxs)("div", {
         className: tN.kL,
@@ -1406,7 +1406,7 @@ function tX(e) {
                 onEditItem: U.tEg,
             },
             u = (0, tW.E)({ proxyURL: l.proxyUrl, url: l.url });
-        return u in c && ((i.onClick = c[u]), (i.handlePreloadImage = d[u]), (i.onSeekRequest = m[u])), i;
+        return (u in c && ((i.onClick = c[u]), (i.handlePreloadImage = d[u]), (i.onSeekRequest = m[u])), i);
     });
     return (0, i.jsx)("div", { children: (0, i.jsx)(tY.A, { items: x, isInAppComponentsV2: !0 }) });
 }
@@ -1433,7 +1433,7 @@ function t8(e) {
         o = s.useMemo(() => {
             let e = { className: void 0, size: n ?? a.size, color: l ?? a.color, weight: r ?? a.weight },
                 t = u()(t0.SIZE[e.size], t0.COLOR[e.color], t0.WEIGHT[e.weight]);
-            return "" !== t && (e.className = u()(tQ.zr, t)), e;
+            return ("" !== t && (e.className = u()(tQ.zr, t)), e);
         }, [n, l, r, a]);
     return (0, i.jsx)(t1.Provider, { value: o, children: t });
 }

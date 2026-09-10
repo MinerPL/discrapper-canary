@@ -12,13 +12,13 @@ let l = {
             rejectWithError: (0, i.fT)(),
         }).then(
             (e) => {
-                (l = e.body.nick),
+                ((l = e.body.nick),
                     r.A.sendBotMessage(
                         t,
                         null != l && "" !== l
                             ? s.intl.formatToMarkdownString(s.t["gz+HRq"], { nick: l })
                             : s.intl.string(s.t.Vhpd9A),
-                    );
+                    ));
             },
             (e) => {
                 403 === e.status

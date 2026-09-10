@@ -10,7 +10,7 @@ function l(t) {
     let { clientX: e, clientY: n, currentTarget: c } = t;
     c.style.pointerEvents = "none";
     let o = document.elementFromPoint(e, n);
-    return (c.style.pointerEvents = "auto"), { elementBelow: o, button: o?.closest("button") ?? null };
+    return ((c.style.pointerEvents = "auto"), { elementBelow: o, button: o?.closest("button") ?? null });
 }
 function a(t) {
     let { isCustomCursorEnabled: e, className: n, riveEventTargetRef: o } = t,

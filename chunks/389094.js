@@ -53,7 +53,7 @@ let j = function (e) {
                             variant: "critical-primary",
                             text: p.intl.string(k.default.dKxFcn),
                             onClick: function () {
-                                g(!1), L(n.id);
+                                (g(!1), L(n.id));
                             },
                             disabled: S,
                             loading: S,

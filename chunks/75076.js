@@ -24,5 +24,5 @@ function o(e, t, n) {
     });
 }
 function d(e, t) {
-    (i = e), (r = t);
+    ((i = e), (r = t));
 }

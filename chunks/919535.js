@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $: () => r,
     Ae: () =>
         function e(t) {
@@ -8,13 +8,13 @@ n.d(t, {
                 for (let a = 0; a < r; a++) {
                     let { ast: r } = e(t[a], n);
                     if (r === i) {
-                        (n.hasBailedAst = !0), (t.length = a);
+                        ((n.hasBailedAst = !0), (t.length = a));
                         break;
                     }
                     t[a] = r;
                 }
             } else if ("text" !== t.type) {
-                if (((n.limit -= 1), n.limit <= 0)) return (n.hasBailedAst = !0), { ast: i, hasBailedAst: !0 };
+                if (((n.limit -= 1), n.limit <= 0)) return ((n.hasBailedAst = !0), { ast: i, hasBailedAst: !0 });
                 if (Array.isArray(t.content)) {
                     let { ast: i } = e(t.content, n);
                     t.content = i;
@@ -58,7 +58,7 @@ n.d(t, {
                                     t = i;
                                     continue;
                                 }
-                                (t.content += i.content), e.splice(n, 1), n--;
+                                ((t.content += i.content), e.splice(n, 1), n--);
                             }
                         })(a),
                     a
@@ -72,7 +72,7 @@ n.d(t, {
                 : n;
         },
 }),
-    n(321073);
+    n(321073));
 let i = {};
 function r(e) {
     return (function e(t) {

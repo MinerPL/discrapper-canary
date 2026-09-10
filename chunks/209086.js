@@ -1,4 +1,4 @@
-t.r(e), t.d(e, { default: () => P });
+(t.r(e), t.d(e, { default: () => P }));
 var a,
     o = t(477900);
 t(582128);
@@ -32,7 +32,7 @@ async function m(r, e, t, a) {
     try {
         i()(null != o, "No URL in authorize response");
         let { state: r } = (0, p.vA)(o);
-        i()(null != r, "Authorize URL state query parameter must be present"), (n = r);
+        (i()(null != r, "Authorize URL state query parameter must be present"), (n = r));
     } catch (r) {
         throw Error("error at authorize parsing callback params");
     }
@@ -60,10 +60,10 @@ function E(r) {
                 f.error("Error Creating Discord link", e?.message);
                 let r = I.A.toURLSafe(t);
                 if (null == r) return;
-                r.searchParams.delete("code"),
+                (r.searchParams.delete("code"),
                     r.searchParams.set("error", "two_way_link_error"),
                     r.searchParams.set("error_description", e?.message ?? "unknown_error"),
-                    (t = r.toString());
+                    (t = r.toString()));
             }
         window.location = null == i || i === c.OAUTH_REDIRECT ? t : i;
     }

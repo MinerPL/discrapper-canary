@@ -15,7 +15,7 @@ class r extends i.A {
     discoverable;
     connectedAt;
     constructor(e) {
-        super(),
+        (super(),
             (this.userId = e.userId || ""),
             (this.channelId = e.channelId || null),
             (this.sessionId = e.sessionId || null),
@@ -28,7 +28,7 @@ class r extends i.A {
             (this.suppress = e.suppress || !1),
             (this.requestToSpeakTimestamp = e.requestToSpeakTimestamp),
             (this.discoverable = e.discoverable ?? !0),
-            (this.connectedAt = e.connectedAt);
+            (this.connectedAt = e.connectedAt));
     }
     isVoiceMuted() {
         return this.selfMute || this.mute || this.suppress || null != this.requestToSpeakTimestamp;

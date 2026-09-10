@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(321073);
+(n.d(t, { A: () => d }), n(321073));
 var i = n(575593),
     r = n(993408),
     a = n(623373),
@@ -27,7 +27,7 @@ class d extends l.A {
     heroLogoDisplayConfig;
     heroBannerDisplayConfig;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.products = e.products),
             (this.heroRanking = e.heroRanking),
             (this.unpublishedAt = e.unpublishedAt),
@@ -49,7 +49,7 @@ class d extends l.A {
             (this.mobileBannerUrl = e.mobileBannerUrl),
             (this.mobileBgUrl = e.mobileBgUrl),
             (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig),
-            (this.heroBannerDisplayConfig = e.heroBannerDisplayConfig);
+            (this.heroBannerDisplayConfig = e.heroBannerDisplayConfig));
     }
     static fromServer(e) {
         let {
@@ -76,7 +76,7 @@ class d extends l.A {
             ...super.fromServer(S),
             products: t.reduce((e, t) => {
                 let n = s.A.fromServer(t);
-                return (o(n.type) || 0 !== n.items.length) && e.push(n), e;
+                return ((o(n.type) || 0 !== n.items.length) && e.push(n), e);
             }, []),
             unpublishedAt: null != n ? new Date(n) : null,
             heroRanking: i,
@@ -107,7 +107,7 @@ class d extends l.A {
             styles: e.styles,
             products: e.products.reduce((e, t) => {
                 let n = s.A.fromStorefrontProductRecord(t);
-                return null != n && (o(n.type) || 0 !== n.items.length) && e.push(n), e;
+                return (null != n && (o(n.type) || 0 !== n.items.length) && e.push(n), e);
             }, []),
             heroRanking: e.heroRanking,
             heroBannerUrl: e.heroBannerUrl,

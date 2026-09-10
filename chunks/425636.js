@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "pt",
     pluralRuleFunction: function (e, t) {
         var r = Number(String(e).split(".")[0]) == e;
@@ -19,4 +19,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({ locale: "pt-MO", parentLocale: "pt-PT" }),
     IntlMessageFormat.__addLocaleData({ locale: "pt-MZ", parentLocale: "pt-PT" }),
     IntlMessageFormat.__addLocaleData({ locale: "pt-ST", parentLocale: "pt-PT" }),
-    IntlMessageFormat.__addLocaleData({ locale: "pt-TL", parentLocale: "pt-PT" });
+    IntlMessageFormat.__addLocaleData({ locale: "pt-TL", parentLocale: "pt-PT" }));

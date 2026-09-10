@@ -45,7 +45,7 @@ function d(e, a, t) {
                 do (a = t.lastChild()) && (e = a);
                 while (a);
             }
-            for (; e?.hasAttribute("data-placeholder"); ) {
+            for (; e?.hasAttribute("data-placeholder");) {
                 let a = t.previousNode();
                 if (a && a.hasAttribute("data-placeholder")) e = a;
                 else break;
@@ -69,10 +69,10 @@ function c(e, a, t) {
         i = n.nextNode(),
         o = null,
         l = 1 / 0;
-    for (; i; ) {
+    for (; i;) {
         let e = i.getBoundingClientRect().left - a,
             r = Math.abs(e);
-        Math.sign(e) === t && r < l && ((o = i), (l = r)), (i = n.nextNode());
+        (Math.sign(e) === t && r < l && ((o = i), (l = r)), (i = n.nextNode()));
     }
     return o;
 }

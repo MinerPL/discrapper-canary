@@ -65,7 +65,7 @@ let x = new p(r.h, {
     },
     GUILD_PROFILE_FETCH_SUCCESS: function (e) {
         let { guildId: t, profile: n } = e;
-        d.get(t)?.succeed(), d.delete(t);
+        (d.get(t)?.succeed(), d.delete(t));
         let i = c.get(t);
         null == i
             ? c.set(t, { ...h, profile: n, lastSyncTimestamp: Date.now(), fetchStatus: "FETCHED" })

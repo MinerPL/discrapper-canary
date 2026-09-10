@@ -1,9 +1,9 @@
-n.d(t, { A: () => r }), n(423034);
+(n.d(t, { A: () => r }), n(423034));
 var i = n(228366);
 class r {
     initializedCount = 0;
     initialize() {
-        this.initializedCount++,
+        (this.initializedCount++,
             this.initializedCount > 1 ||
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
@@ -11,8 +11,8 @@ class r {
                     i.h.subscribe(t, "function" == typeof n ? n : n.callback);
                 }),
                 this.stores.forEach((e, t) => {
-                    t.addChangeListener(e), e();
-                }));
+                    (t.addChangeListener(e), e());
+                })));
     }
     terminate(e) {
         this.initializedCount <= 0 ||

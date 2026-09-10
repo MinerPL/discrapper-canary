@@ -9,7 +9,7 @@ let d = (0, a.y)((e, t) => ({
     notificationDismissedInGuilds: new Set(l.w.get(o.hs) ?? []),
     dismissNotification: (n) => {
         let i = t().notificationDismissedInGuilds;
-        i.add(n), l.w.set(o.hs, i), (0, s.r)(() => e({ notificationDismissedInGuilds: i }));
+        (i.add(n), l.w.set(o.hs, i), (0, s.r)(() => e({ notificationDismissedInGuilds: i })));
     },
     resetNotification: (n) => {
         let i = t().notificationDismissedInGuilds;

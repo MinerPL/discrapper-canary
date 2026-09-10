@@ -13,7 +13,7 @@ function s(e) {
         throw Error("Invalid ISO 8601 date string: " + e);
     }
     let t = new (0, r.ng)(c(a[1], 0, 9999), c(a[2], 1, 12), 1);
-    return (t.day = c(a[3], 1, t.calendar.getDaysInMonth(t))), t;
+    return ((t.day = c(a[3], 1, t.calendar.getDaysInMonth(t))), t);
 }
 function d(e) {
     let a = e.match(l);
@@ -32,7 +32,7 @@ function d(e) {
             a[6] ? c(a[6], 0, 59) : 0,
             a[7] ? 1e3 * c(a[7], 0, 1 / 0) : 0,
         );
-    return (n.day = c(a[3], 0, n.calendar.getDaysInMonth(n))), n;
+    return ((n.day = c(a[3], 0, n.calendar.getDaysInMonth(n))), n);
 }
 function c(e, a, t) {
     let r = Number(e);

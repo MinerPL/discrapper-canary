@@ -22,7 +22,7 @@ function _(t) {
             approximatePresenceCount: t.guild?.approximate_presence_count,
             featurableInDirectory: t.guild?.featurable_in_directory,
         };
-    t.type, r()(!1, "Directory entries must be connected to a guild!");
+    (t.type, r()(!1, "Directory entries must be connected to a guild!"));
 }
 let p = 5;
 function I(t) {

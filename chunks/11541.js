@@ -1,4 +1,4 @@
-n.d(t, { CI: () => f, UP: () => I, eN: () => T, uY: () => h, v8: () => p, vk: () => g }), n(321073);
+(n.d(t, { CI: () => f, UP: () => I, eN: () => T, uY: () => h, v8: () => p, vk: () => g }), n(321073));
 var i,
     r = n(636537),
     a = n(462887),
@@ -74,7 +74,7 @@ function T(e) {
     let t = l.A.get((0, o.ML)(e)),
         n = (0, s.Ay)();
     return null != t && ["twitch", "youtube"].includes(e)
-        ? `url('${((0, a.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
+        ? `url('${(0, a.M)(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
         : null;
 }
 function m(e) {
@@ -97,7 +97,7 @@ async function g(e, t) {
             body: { user_ids: i },
             rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return A(n, 0), [];
+        if (!Array.isArray(t.body)) return (A(n, 0), []);
         let a = t.body.map(m),
             s = [];
         a.forEach((e) => {
@@ -107,7 +107,7 @@ async function g(e, t) {
         let l = _(e, s),
             o = i.filter((e) => !s.includes(e)),
             c = _(e, o);
-        return A(l, 3), A(c, 0), a;
+        return (A(l, 3), A(c, 0), a);
     } catch (e) {
         A(n, 0);
     }

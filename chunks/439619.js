@@ -28,7 +28,7 @@ var n,
     E = _
         ? (function () {
               try {
-                  return arguments.callee, x;
+                  return (arguments.callee, x);
               } catch (e) {
                   try {
                       return _(arguments, "callee").get;
@@ -148,7 +148,7 @@ var L = function e(t) {
             var i = e("%AsyncGenerator%");
             i && C && (r = C(i.prototype));
         }
-        return (D[t] = r), r;
+        return ((D[t] = r), r);
     },
     F = {
         __proto__: null,
@@ -265,7 +265,7 @@ e.exports = function (e, t) {
             if (_ && f + 1 >= r.length) {
                 var v = _(a, p);
                 a = (d = !!v) && "get" in v && !("originalValue" in v.get) ? v.get : a[p];
-            } else (d = j(a, p)), (a = a[p]);
+            } else ((d = j(a, p)), (a = a[p]));
             d && !s && (D[o] = a);
         }
     }

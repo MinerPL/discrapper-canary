@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => nI });
+(t.r(n), t.d(n, { default: () => nI }));
 var l = t(477900),
     i = t(582128),
     s = t(503698),
@@ -105,7 +105,7 @@ function eg(e) {
                           (0, l.jsx)(p.$, {
                               variant: "overlay-primary",
                               onClick: function () {
-                                  eu.A.open(n.id, el.BEX.ONBOARDING), (0, C.Dr)(s, { dismissAction: em.i.PRIMARY });
+                                  (eu.A.open(n.id, el.BEX.ONBOARDING), (0, C.Dr)(s, { dismissAction: em.i.PRIMARY }));
                               },
                               text: es.intl.string(es.t["+OtO4e"]),
                           }),
@@ -314,7 +314,7 @@ let eI = i.memo(function () {
                     children: (0, l.jsxs)(T.D, {
                         className: a()(ef.WG, { [ef.Qn]: u, [ef.wp]: x, [ef.r9]: f }),
                         onClick: function (e) {
-                            if (!f) return e.stopPropagation(), m(o.id, d.id, c.id), !0;
+                            if (!f) return (e.stopPropagation(), m(o.id, d.id, c.id), !0);
                         },
                         onContextMenu: function (e) {
                             d.isGuildVocal()
@@ -448,12 +448,12 @@ function e_(e) {
                 onChannelClick: i.useCallback((e, n, t) => {
                     let l = ee.Ay.isChannelOptedIn(e, n),
                         i = n === t;
-                    !l && $.A.isCollapsed(t) && null != t && (0, Q.fh)(t),
+                    (!l && $.A.isCollapsed(t) && null != t && (0, Q.fh)(t),
                         (0, et.cE)(e)
                             ? i
                                 ? (0, et.le)(e, { include: new Set([n]) })
                                 : (0, et.le)(e, { exclude: new Set([n]) })
-                            : (0, en.zk)(e, n, !l, { section: el.JJy.CHANNEL_BROWSER });
+                            : (0, en.zk)(e, n, !l, { section: el.JJy.CHANNEL_BROWSER }));
                 }, []),
             }),
         g = (0, C.HX)(d.M.CHANNEL_BROWSER_NUX) ? 0 : -1,
@@ -556,10 +556,10 @@ function eO(e) {
                               ref: d,
                               query: s,
                               onChange: function (e) {
-                                  "" === s &&
+                                  ("" === s &&
                                       "" !== e &&
                                       w.default.track(el.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
-                                      a(e.toLowerCase());
+                                      a(e.toLowerCase()));
                               },
                               onClear: C,
                               onKeyDown: E,
@@ -626,9 +626,9 @@ function nl(e) {
                                 s = [];
                             if (e.singleSelect && t) {
                                 let t = e.options.find((e) => l.includes(e.id));
-                                (i = e8().difference(n.roleIds ?? [], t?.roleIds ?? [])),
-                                    (s = e8().difference(t?.roleIds ?? [], n.roleIds ?? []));
-                            } else if (t) (i = n.roleIds ?? []), (s = []);
+                                ((i = e8().difference(n.roleIds ?? [], t?.roleIds ?? [])),
+                                    (s = e8().difference(t?.roleIds ?? [], n.roleIds ?? [])));
+                            } else if (t) ((i = n.roleIds ?? []), (s = []));
                             else {
                                 let t = e.options.filter((e) => l.includes(e.id)),
                                     a = t.filter((e) => n.id !== e.id),
@@ -640,7 +640,7 @@ function nl(e) {
                                         .map((e) => e.roleIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                (i = []), (s = e8().difference(r, d));
+                                ((i = []), (s = e8().difference(r, d)));
                             }
                             return { addedRoleIds: i, removedRoleIds: s };
                         })(n, t, l, i),
@@ -650,9 +650,9 @@ function nl(e) {
                                 r = [];
                             if (t.singleSelect && i) {
                                 let e = t.options.find((e) => s.includes(e.id));
-                                (a = e8().difference(l.channelIds ?? [], e?.channelIds ?? [])),
-                                    (r = e8().difference(e?.channelIds ?? [], l.channelIds ?? []));
-                            } else if (i) (a = l.channelIds ?? []), (r = []);
+                                ((a = e8().difference(l.channelIds ?? [], e?.channelIds ?? [])),
+                                    (r = e8().difference(e?.channelIds ?? [], l.channelIds ?? [])));
+                            } else if (i) ((a = l.channelIds ?? []), (r = []));
                             else {
                                 let e = t.options.filter((e) => s.includes(e.id)),
                                     n = e.filter((e) => l.id !== e.id),
@@ -664,7 +664,7 @@ function nl(e) {
                                         .map((e) => e.channelIds)
                                         .flat()
                                         .filter(e0.Vq);
-                                (a = []), (r = e8().difference(i, d));
+                                ((a = []), (r = e8().difference(i, d)));
                             }
                             return (
                                 (0, et.cE)(n) && a.push(...e9.A.getDefaultChannelIds(n)),
@@ -673,16 +673,16 @@ function nl(e) {
                         })({ guildId: e, prompt: n, option: t, selected: l, responses: i }),
                         c = r.reduce((n, t) => {
                             let l = ee.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e3.lA)(l, ne.vv.OPT_IN_ENABLED, !0) }), n;
+                            return ((n[t] = { flags: (0, e3.lA)(l, ne.vv.OPT_IN_ENABLED, !0) }), n);
                         }, {}),
                         o = d.reduce((n, t) => {
                             let l = ee.Ay.getChannelIdFlags(e, t);
-                            return (n[t] = { flags: (0, e3.lA)(l, ne.vv.OPT_IN_ENABLED, !1) }), n;
+                            return ((n[t] = { flags: (0, e3.lA)(l, ne.vv.OPT_IN_ENABLED, !1) }), n);
                         }, {}),
                         u = { ...c, ...o };
-                    e5.A.selectOption(e, n.id, t.id, l),
+                    (e5.A.selectOption(e, n.id, t.id, l),
                         J.h.dispatch({ type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK", guildId: e, overrides: u }),
-                        e5.A.updateRolesLocal(e, s, a);
+                        e5.A.updateRolesLocal(e, s, a));
                 },
                 [e],
             ),
@@ -875,16 +875,17 @@ function nN(e) {
                 onChange: function (e) {
                     let t = e.find((e) => !C.includes(e.id)),
                         l = e.map((e) => e.id);
-                    if (null != t) N(n, t, !0), n.singleSelect && n.options.forEach((e) => c.delete(e.id)), c.add(t.id);
+                    if (null != t)
+                        (N(n, t, !0), n.singleSelect && n.options.forEach((e) => c.delete(e.id)), c.add(t.id));
                     else {
                         let e = C.filter((e) => !l.includes(e)),
                             t = n.options.filter((n) => e.includes(n.id));
                         if (C.length <= t.length && n.required) return void d({ type: ng });
                         t.forEach((e) => {
-                            N(n, e, !1), c.delete(e.id);
+                            (N(n, e, !1), c.delete(e.id));
                         });
                     }
-                    o(new Set(c)), d(null);
+                    (o(new Set(c)), d(null));
                 },
                 canBeNew: !n.isNew,
             }),
@@ -1003,7 +1004,7 @@ function nj(e) {
         o = (0, r.bG)([e$.default], () => e$.default.getCurrentUser()),
         u = (0, eP.A)("(min-width: 1344px)") && null != o,
         h = i.useCallback(() => {
-            (0, Z.pX)(el.BVt.CHANNEL(t, eA.VV.CHANNEL_BROWSER)), s?.();
+            ((0, Z.pX)(el.BVt.CHANNEL(t, eA.VV.CHANNEL_BROWSER)), s?.());
         }, [t, s]),
         x = (0, r.bG)([eQ.Ay], () => eQ.Ay.hasUnread(t, nh.P.GUILD_ONBOARDING_QUESTION)),
         m = c?.latestOnboardingQuestionId,
@@ -1038,16 +1039,16 @@ function nj(e) {
                 onboardingPrompts: i.concat(s),
             };
         }, [n]));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         c?.id == null || (!eq.A.isFullServerPreview(c.id) && (e9.A.shouldFetchPrompts(c.id) || x) && (0, e6.jx)(c.id));
     }, [c?.id, x, m]),
         i.useEffect(() => {
             if (c?.id != null && !eq.A.isFullServerPreview(c.id))
                 return () => {
-                    (0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(c.id)),
-                        e5.A.updateOnboardingResponses(c.id);
+                    ((0, ek.hK)(c.id, nh.P.GUILD_ONBOARDING_QUESTION, e9.A.ackIdForGuild(c.id)),
+                        e5.A.updateOnboardingResponses(c.id));
                 };
-        }, [c?.id]);
+        }, [c?.id]));
     let p = i.useCallback(
         (e) => {
             if (null == c) return null;
@@ -1162,12 +1163,12 @@ function nI(e) {
         s = (0, r.bG)([_.A], () => _.A.getGuild(n)),
         d = (0, eR.A)(s),
         [c, m] = i.useState(t ?? nu.qC.CUSTOMIZE);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         null != t && m(t);
     }, [t]),
         i.useEffect(() => {
             d || c !== nu.qC.CUSTOMIZE || m(nu.qC.BROWSE);
-        }, [d, c]);
+        }, [d, c]));
     let C = (0, r.bG)([I.Ay], () => I.Ay.getCurrentSidebarChannelId(eA.VV.CHANNEL_BROWSER)),
         g = null != C && c === nu.qC.BROWSE,
         N = (0, x.f4)("ChannelsAndRolesPage"),

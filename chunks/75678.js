@@ -40,8 +40,8 @@ function S(e) {
             openInvoiceId: x,
             applicationId: k,
             referralTrialOfferId: F,
-            giftRecipient: V,
-            returnRef: B,
+            giftRecipient: B,
+            returnRef: V,
             subscription: H,
             skipConfirm: j,
             shouldDisallowPlanSelection: W,
@@ -50,12 +50,12 @@ function S(e) {
         } = e,
         $ = r()("payment-modal"),
         z = (0, f.mH)(U),
-        q = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
-        Z = q?.rewardSkuIds[0] ?? null,
-        X = !1;
+        X = v || z !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
+        q = X?.rewardSkuIds[0] ?? null,
+        Z = !1;
     function Q() {
-        X ||
-            ((X = !0),
+        Z ||
+            ((Z = !0),
             I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                 ? setTimeout(() => {
@@ -555,13 +555,13 @@ function S(e) {
                     trialId: w,
                     planGroup: g.LE,
                     openInvoiceId: x,
-                    returnRef: B,
+                    returnRef: V,
                     subscriptionTier: U,
                     skipConfirm: !!j,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            X ||
-                                ((X = !0),
+                            Z ||
+                                ((Z = !0),
                                 I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                                     ? setTimeout(() => {
@@ -572,10 +572,10 @@ function S(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != Z && q.endDate >= new Date())
+                                    e && null != q && X.endDate >= new Date())
                                 ) {
-                                    await (0, u.RE)(Z);
-                                    let e = _.A.getProduct(Z);
+                                    await (0, u.RE)(q);
+                                    let e = _.A.getProduct(q);
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
@@ -589,7 +589,7 @@ function S(e) {
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
-                giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
+                giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: B },
                 tenantParams: {
                     confirmationFooter: D,
                     defaultPlanId: void 0,

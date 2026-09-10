@@ -1,4 +1,4 @@
-a.d(t, { default: () => T }), a(323874), a(14289), a(35956);
+(a.d(t, { default: () => T }), a(323874), a(14289), a(35956));
 var n = a(477900),
     i = a(582128),
     o = a(503698),
@@ -88,8 +88,8 @@ function T(e) {
                                   return "image/jpeg";
                           }
                       })(i),
-            c = `selected.${((0, f.B))(r) ?? "gif"}`;
-        o(),
+            c = `selected.${(0, f.B)(r) ?? "gif"}`;
+        (o(),
             (0, p.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
@@ -113,7 +113,7 @@ function T(e) {
                         });
                 },
                 { contextKey: H },
-            );
+            ));
     }
     i.useEffect(() => {
         $.default.track(y.HAw.OPEN_MODAL, {

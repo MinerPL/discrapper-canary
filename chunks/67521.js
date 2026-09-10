@@ -11,7 +11,7 @@ var _ = t(192308),
     l = t(239093),
     c = t(40449);
 function P() {
-    U.success(), U.start_verification_check();
+    (U.success(), U.start_verification_check());
 }
 let U = {
         open(e, A) {
@@ -45,10 +45,10 @@ let U = {
                             (0, E.jsx)(e, {
                                 entryPoint: i.q1.AUTOMATED_UNDERAGE_APPEALS,
                                 onComplete: () => {
-                                    (0, T.hn)(),
+                                    ((0, T.hn)(),
                                         a.h.dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" }),
                                         a.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }),
-                                        setTimeout(() => (0, T.vN)(U), l.wQ);
+                                        setTimeout(() => (0, T.vN)(U), l.wQ));
                                 },
                                 ...A,
                             });
@@ -74,8 +74,8 @@ let U = {
             a.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS" });
         },
         start_verification_check() {
-            a.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }),
-                setTimeout(() => (0, T.d)(), l.wQ);
+            (a.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" }),
+                setTimeout(() => (0, T.d)(), l.wQ));
         },
     },
     d = U;

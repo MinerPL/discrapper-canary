@@ -55,11 +55,11 @@ class l extends n.Component {
             l = Math.max(r * s + t + n, 0) % s,
             i = this.calculateClosest(e[t][r], e[l]) ?? r,
             a = 0;
-        return n < 0 && l > t && (a = -1), n > 0 && l < t && (a = 1), { column: l, row: i + a };
+        return (n < 0 && l > t && (a = -1), n > 0 && l < t && (a = 1), { column: l, row: i + a });
     };
     getNext(e, t, r, n) {
         let s, l, i, a;
-        if (null == t || null == r) (l = 0), (i = 0), (s = { column: 0, row: 0 });
+        if (null == t || null == r) ((l = 0), (i = 0), (s = { column: 0, row: 0 }));
         else
             switch (((l = t), (i = r), n)) {
                 case "ARROW_UP":
@@ -89,7 +89,7 @@ class l extends n.Component {
             let l = this.props.getCoordsMap()[t[e]];
             if (null == l) continue;
             let i = Math.abs(l.top - n.top);
-            if (i < s) (s = i), (r = e);
+            if (i < s) ((s = i), (r = e));
             else break;
         }
         return r;

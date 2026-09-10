@@ -67,7 +67,7 @@ ${JSON.stringify(t)}
         : (function (e) {
               let t = new Uint8Array(e.reduce((e, t) => e + t.length, 0)),
                   n = 0;
-              for (let r of e) t.set(r, n), (n += r.length);
+              for (let r of e) (t.set(r, n), (n += r.length));
               return t;
           })(r);
 }
@@ -75,7 +75,7 @@ function h(e) {
     let t = "string" == typeof e ? d(e) : e;
     function n(e) {
         let n = t.subarray(0, e);
-        return (t = t.subarray(e + 1)), n;
+        return ((t = t.subarray(e + 1)), n);
     }
     function r() {
         var e;
@@ -92,7 +92,7 @@ function h(e) {
     }
     let i = r(),
         o = [];
-    for (; t.length; ) {
+    for (; t.length;) {
         let e = r(),
             t = "number" == typeof e.length ? e.length : void 0;
         o.push([e, t ? n(t) : r()]);

@@ -1,4 +1,4 @@
-n.d(t, { o: () => $ }), n(323874), n(14289), n(35956);
+(n.d(t, { o: () => $ }), n(323874), n(14289), n(35956));
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -69,16 +69,16 @@ function C(e) {
     let { popout: t, iframe: n } = e,
         i = l.useRef(null),
         [, u] = l.useReducer((e) => e + 1, 0);
-    l.useLayoutEffect(() => {
+    (l.useLayoutEffect(() => {
         u();
     }, []),
         l.useEffect(() => {
             let e = n.ownerDocument.defaultView;
-            if (null != e) return e.addEventListener("blur", r), () => e.removeEventListener("blur", r);
+            if (null != e) return (e.addEventListener("blur", r), () => e.removeEventListener("blur", r));
             function r() {
                 n.ownerDocument.activeElement === n && (0, S.OR)(t.iframeId);
             }
-        }, [n, t.iframeId]);
+        }, [n, t.iframeId]));
     let a = n.getBoundingClientRect(),
         s = a.left + Math.min(Math.max(t.x, 0), a.width),
         o = a.top + Math.min(Math.max(t.y, 0), a.height);
@@ -142,7 +142,7 @@ function k(e) {
                                 u.subscribe(O.jej.POPOUT_SHOW, e),
                                 u.subscribe(O.jej.POPOUT_HIDE, t),
                                 () => {
-                                    u.unsubscribe(O.jej.POPOUT_SHOW, e), u.unsubscribe(O.jej.POPOUT_HIDE, t);
+                                    (u.unsubscribe(O.jej.POPOUT_SHOW, e), u.unsubscribe(O.jej.POPOUT_HIDE, t));
                                 }
                             );
                         }, [u]),
@@ -153,7 +153,7 @@ function k(e) {
                 s = (0, A.aL)();
             return (
                 l.useEffect(() => {
-                    if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
+                    if (t) return (n.addEventListener("blur", e), () => n.removeEventListener("blur", e));
                     function e() {
                         i && (s.dispatch(O.jej.POPOUT_CLOSE), f._.dispatch(O.jej.CONTEXT_MENU_CLOSE));
                     }
@@ -172,7 +172,7 @@ function k(e) {
                         l?.addEventListener("focusout", s),
                         n.document.activeElement?.tagName === "IFRAME" || a || l?.focus(),
                         () => {
-                            l?.removeEventListener("focusout", s), (a = !0);
+                            (l?.removeEventListener("focusout", s), (a = !0));
                         }
                     );
                 }, [t, u, r, e, n, i]),
@@ -206,8 +206,8 @@ function k(e) {
                 a = l.useRef(n),
                 s = l.useRef(r),
                 o = l.useRef(i);
-            l.useEffect(() => {
-                (u.current = t), (a.current = n), (s.current = r), (o.current = i);
+            (l.useEffect(() => {
+                ((u.current = t), (a.current = n), (s.current = r), (o.current = i));
             }),
                 l.useEffect(
                     () => (
@@ -217,7 +217,7 @@ function k(e) {
                         }
                     ),
                     [e],
-                );
+                ));
         })(C, { onIframeMount: T, onIframeUnmount: w }),
         l.useEffect(() => {
             function e(e) {
@@ -242,16 +242,16 @@ function k(e) {
                           referrerPolicy: v,
                           onLoad: function (e) {
                               let n = e.target;
-                              K.current === C && ((0, R.ny)(C), (0, D.ir)(C), (0, S.OR)(C), g?.(C)),
+                              (K.current === C && ((0, R.ny)(C), (0, D.ir)(C), (0, S.OR)(C), g?.(C)),
                                   (K.current = C),
                                   null != n.contentWindow && n.contentWindow.postMessage([o.A.HELLO, $], t ?? ""),
                                   k(!0),
-                                  b?.(n);
+                                  b?.(n));
                           },
                           sandbox: (function (e) {
                               let { allowPopups: t } = e,
                                   n = M;
-                              return t && (n = [...M, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
+                              return (t && (n = [...M, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" "));
                           })({ allowPopups: _ }),
                           className: n,
                           src: `${t}?${new URLSearchParams($)}`,
@@ -269,7 +269,7 @@ function $(e) {
         [a, s] = l.useState(!1),
         o = l.useCallback(
             (e) => {
-                s(!0), i?.(e);
+                (s(!0), i?.(e));
             },
             [i],
         );

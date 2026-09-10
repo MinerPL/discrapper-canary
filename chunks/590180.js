@@ -27,14 +27,14 @@ let A = 10 * u.A.Millis.SECOND,
 function v(e) {
     R = new Map([...(O = e).values()].map((e) => [e.storeListingId, e]));
     let t = new Map((0, _.P_)(O, !0).map((e) => [e.skuId, e]));
-    m.forEach((e) => {
+    (m.forEach((e) => {
         t.has(e.skuId) || t.set(e.skuId, e);
     }),
         (m = t),
-        (S = [...(g = new Map((0, _.P_)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
+        (S = [...(g = new Map((0, _.P_)(O, !1).map((e) => [e.storeListingId, e]))).values()]));
 }
 function b() {
-    (O = I),
+    ((O = I),
         (m = f),
         (r = void 0),
         (L = !1),
@@ -44,7 +44,7 @@ function b() {
         (i = void 0),
         (a = void 0),
         (y = {}),
-        (D = 0);
+        (D = 0));
 }
 class M extends o.Ay.Store {
     static displayName = "CollectiblesCategoryStore";
@@ -109,27 +109,27 @@ class M extends o.Ay.Store {
 }
 let P = new M(d.h, {
     COLLECTIBLES_CATEGORIES_FETCH: function (e) {
-        (L = !0), (i = void 0), (a = void 0), (y = e.options);
+        ((L = !0), (i = void 0), (a = void 0), (y = e.options));
     },
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: function (e) {
         let t =
             e.categories.collections.length > 0
                 ? e.categories.collections.map(E.A.fromStorefrontCollectionRecord)
                 : e.categories.categories;
-        if (0 === t.length) (O = I), (m = f);
+        if (0 === t.length) ((O = I), (m = f));
         else if (!(0, s.isEqual)([...O.values()], t) && !e.noOp) {
             let e = new Map(t.map((e) => [e.skuId, e])),
                 n = new Date();
-            O.forEach((t, i) => {
+            (O.forEach((t, i) => {
                 !e.has(i) && (null == t.unpublishedAt || t.unpublishedAt > n) && e.set(i, t);
             }),
-                v(e);
+                v(e));
         }
-        (r = Date.now()), (L = !1), (i = void 0), (a = void 0);
+        ((r = Date.now()), (L = !1), (i = void 0), (a = void 0));
     },
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (O = I), (m = f), (L = !1), (C = {}), (i = t), (a = Date.now());
+        ((O = I), (m = f), (L = !1), (C = {}), (i = t), (a = Date.now()));
     },
     COLLECTIBLES_PRODUCT_FETCH: function (e) {
         let { skuId: t, startedAt: n } = e;
@@ -149,14 +149,14 @@ let P = new M(d.h, {
                 null != n && 0 === Object.keys(t.prices).length && (t.prices = n);
             }
         }
-        m.set(t, n), (C[t] = { state: "success", startedAt: C[t]?.startedAt, endedAt: i }), N[t]?.succeed();
+        (m.set(t, n), (C[t] = { state: "success", startedAt: C[t]?.startedAt, endedAt: i }), N[t]?.succeed());
     },
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: function (e) {
         let { skuId: t, error: n, endedAt: i } = e;
         C[t] = { state: "error", startedAt: C[t]?.startedAt, endedAt: i, error: n };
         let r = N[t];
-        null == r && ((r = new l.A(A, h)), (N[t] = r)),
-            r.pending || r.fail(() => d.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId: t }));
+        (null == r && ((r = new l.A(A, h)), (N[t] = r)),
+            r.pending || r.fail(() => d.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId: t })));
     },
     COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED: function (e) {
         let { skuId: t } = e;

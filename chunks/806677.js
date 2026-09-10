@@ -116,7 +116,7 @@ function q(i) {
         u = (0, g.bG)([M.Ay, w.A], () => w.A.getChannel(M.Ay.getChannelId())),
         I = o > t.length ? o - t.length + 1 : void 0,
         h = s.useCallback(() => {
-            c?.(), (0, m.closeAllModals)();
+            (c?.(), (0, m.closeAllModals)());
         }, [c]);
     return (0, n.jsx)(n.Fragment, {
         children: t.map((i, s) => {
@@ -259,9 +259,9 @@ function it(i) {
         j = s.useRef(!1),
         N = s.useCallback(
             (i) => {
-                m(i), (j.current = !0);
+                (m(i), (j.current = !0));
                 let e = _.current;
-                null != e &&
+                (null != e &&
                     e.addEventListener(
                         "scrollend",
                         () => {
@@ -276,18 +276,18 @@ function it(i) {
                         gift_recipient_id: t.id,
                         tab_name: i,
                         location_stack: a,
-                    });
+                    }));
             },
             [t.id, a, T],
         ),
         L = s.useCallback(() => {
-            R.default.track(Q.HAw.GIFT_SELECTION_SEE_WISHLIST_CTA_CLICKED, {
+            (R.default.track(Q.HAw.GIFT_SELECTION_SEE_WISHLIST_CTA_CLICKED, {
                 gift_recipient_id: t.id,
                 wishlist_item_count: o,
                 location_stack: a,
             }),
                 e(),
-                (0, A.openUserProfileModal)({ userId: t.id, tabSection: V.RP.WISHLIST });
+                (0, A.openUserProfileModal)({ userId: t.id, tabSection: V.RP.WISHLIST }));
         }, [t.id, o, a, e]);
     return (
         s.useEffect(() => {
@@ -301,7 +301,7 @@ function it(i) {
                 },
                 { root: t, threshold: 0.5 },
             );
-            return e.observe(i), () => e.disconnect();
+            return (e.observe(i), () => e.disconnect());
         }, [u]),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -403,7 +403,7 @@ function is(i) {
         g = null != I && I.length > 0,
         m = s.useCallback(
             (i) => {
-                (0, E.A)({
+                ((0, E.A)({
                     isGift: !0,
                     giftRecipient: t,
                     giftingOrigin: d,
@@ -419,7 +419,7 @@ function is(i) {
                     giftMessage: r,
                     ...(0, H.Dv)(i, !0, "gift_selection_modal"),
                 }),
-                    e();
+                    e());
             },
             [t, d, a, c, o, r, e],
         ),

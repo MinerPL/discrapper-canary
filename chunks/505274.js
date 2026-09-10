@@ -63,19 +63,19 @@ class l extends n.Ay.Store {
         return this.balance;
     }
     handleBalanceStateReset() {
-        (this._balance = null), (this._fetchBalanceError = null), (this._isFetchingBalance = !1);
+        ((this._balance = null), (this._fetchBalanceError = null), (this._isFetchingBalance = !1));
     }
     handleBalanceFetch(e) {
         let {} = e;
-        (this._isFetchingBalance = !0), (this._fetchBalanceError = null);
+        ((this._isFetchingBalance = !0), (this._fetchBalanceError = null));
     }
     handleBalanceFetchSuccess(e) {
         let { balance: t } = e;
-        (this._isFetchingBalance = !1), (this._balance = t);
+        ((this._isFetchingBalance = !1), (this._balance = t));
     }
     handleBalanceFetchFail(e) {
         let { error: t } = e;
-        (this._isFetchingBalance = !1), (this._fetchBalanceError = t);
+        ((this._isFetchingBalance = !1), (this._fetchBalanceError = t));
     }
     handleBalanceUpdate(e) {
         let { balance: t } = e;
@@ -83,21 +83,21 @@ class l extends n.Ay.Store {
     }
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
-        (this._entitlements = null),
+        ((this._entitlements = null),
             (this._redeemingSkuId = t),
             (this._redeemVirtualCurrencyError = null),
-            (this._isRedeemingVirtualCurrency = !0);
+            (this._isRedeemingVirtualCurrency = !0));
     }
     handleRedeemVirtualCurrencySuccess(e) {
         let { entitlements: t } = e;
-        (this._entitlements = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
+        ((this._entitlements = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1));
     }
     handleRedeemVirtualCurrencyFail(e) {
         let { error: t } = e;
-        (this._entitlements = null),
+        ((this._entitlements = null),
             (this._redeemVirtualCurrencyError = t),
             (this._redeemingSkuId = null),
-            (this._isRedeemingVirtualCurrency = !1);
+            (this._isRedeemingVirtualCurrency = !1));
     }
     handleOnboardingModalOpen(e) {
         let {} = e;

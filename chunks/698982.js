@@ -1,19 +1,19 @@
 function r(e, t, r) {
-    (this.locales = e), (this.formats = t), (this.pluralFn = r);
+    ((this.locales = e), (this.formats = t), (this.pluralFn = r));
 }
 function n(e) {
     this.id = e;
 }
 function i(e, t, r, n, i) {
-    (this.id = e), (this.useOrdinal = t), (this.offset = r), (this.options = n), (this.pluralFn = i);
+    ((this.id = e), (this.useOrdinal = t), (this.offset = r), (this.options = n), (this.pluralFn = i));
 }
 function o(e, t, r, n) {
-    (this.id = e), (this.offset = t), (this.numberFormat = r), (this.string = n);
+    ((this.id = e), (this.offset = t), (this.numberFormat = r), (this.string = n));
 }
 function a(e, t) {
-    (this.id = e), (this.options = t);
+    ((this.id = e), (this.options = t));
 }
-(t.default = r),
+((t.default = r),
     (r.prototype.compile = function (e) {
         return (
             (this.pluralStack = []),
@@ -58,15 +58,15 @@ function a(e, t) {
             l = this.pluralFn;
         switch (t.type) {
             case "numberFormat":
-                return (r = o.number[t.style]), { id: e.id, format: new Intl.NumberFormat(s, r).format };
+                return ((r = o.number[t.style]), { id: e.id, format: new Intl.NumberFormat(s, r).format });
             case "dateFormat":
-                return (r = o.date[t.style]), { id: e.id, format: new Intl.DateTimeFormat(s, r).format };
+                return ((r = o.date[t.style]), { id: e.id, format: new Intl.DateTimeFormat(s, r).format });
             case "timeFormat":
-                return (r = o.time[t.style]), { id: e.id, format: new Intl.DateTimeFormat(s, r).format };
+                return ((r = o.time[t.style]), { id: e.id, format: new Intl.DateTimeFormat(s, r).format });
             case "pluralFormat":
-                return (r = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, r, l);
+                return ((r = this.compileOptions(e)), new i(e.id, t.ordinal, t.offset, r, l));
             case "selectFormat":
-                return (r = this.compileOptions(e)), new a(e.id, r);
+                return ((r = this.compileOptions(e)), new a(e.id, r));
             default:
                 throw Error("Message element does not have a valid format type");
         }
@@ -87,7 +87,7 @@ function a(e, t) {
             t += 1
         )
             a[(n = o[t]).selector] = this.compileMessage(n.value);
-        return (this.currentPlural = this.pluralStack.pop()), a;
+        return ((this.currentPlural = this.pluralStack.pop()), a);
     }),
     (n.prototype.format = function (e) {
         return e ? ("string" == typeof e ? e : String(e)) : "";
@@ -103,4 +103,4 @@ function a(e, t) {
     (a.prototype.getOption = function (e) {
         var t = this.options;
         return t[e] || t.other;
-    });
+    }));

@@ -81,7 +81,7 @@ let N = i.forwardRef(function (e, t) {
         h = i.useRef(null),
         m = i.useContext(A.Ay),
         f = i.useCallback(() => {
-            d(!1), clearTimeout(h.current);
+            (d(!1), clearTimeout(h.current));
         }, []),
         p = i.useCallback(
             (e) => {
@@ -97,18 +97,18 @@ let N = i.forwardRef(function (e, t) {
                     if (0 !== e.button) f();
                     else {
                         let n = e.target instanceof t.Node && u.current?.contains(e.target);
-                        clearTimeout(h.current),
+                        (clearTimeout(h.current),
                             (h.current = setTimeout(() => {
                                 let t = (0, o.BF)(e)?.activeElement,
                                     l = s.current;
                                 d(n || (null != t && null != l && l.contains(t)));
-                            }, 100));
+                            }, 100)));
                     }
                 else f();
             },
             [m, s, f],
         );
-    i.useImperativeHandle(t, () => ({ hide: f }), [f]),
+    (i.useImperativeHandle(t, () => ({ hide: f }), [f]),
         i.useEffect(() => {
             let e = m.renderWindow;
             return (
@@ -118,15 +118,15 @@ let N = i.forwardRef(function (e, t) {
                 e.addEventListener("focus", f),
                 e.addEventListener("blur", f),
                 () => {
-                    e.document.removeEventListener("keydown", f),
+                    (e.document.removeEventListener("keydown", f),
                         e.document.removeEventListener("mousedown", p),
                         e.document.removeEventListener("mouseup", g),
                         e.removeEventListener("focus", f),
                         e.removeEventListener("blur", f),
-                        clearTimeout(h.current);
+                        clearTimeout(h.current));
                 }
             );
-        }, [m, f, p, g]);
+        }, [m, f, p, g]));
     let { x: C, y: E } = i.useMemo(() => {
             let e = n();
             if (e?.selection == null || I.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
@@ -134,13 +134,13 @@ let N = i.forwardRef(function (e, t) {
                 l = t.getSelection();
             if (null == l || null == l.focusNode || null == l.anchorNode || l.isCollapsed) return { x: null, y: null };
             let i = t.createRange();
-            i.setStart(l.focusNode, l.focusOffset), i.setEnd(l.focusNode, l.focusOffset);
+            (i.setStart(l.focusNode, l.focusOffset), i.setEnd(l.focusNode, l.focusOffset));
             let r = i.getBoundingClientRect(),
                 o = t.createRange();
-            o.setStart(l.anchorNode, l.anchorOffset), o.setEnd(l.anchorNode, l.anchorOffset);
+            (o.setStart(l.anchorNode, l.anchorOffset), o.setEnd(l.anchorNode, l.anchorOffset));
             let u = o.getBoundingClientRect(),
                 d = t.createRange();
-            d.setStart(l.anchorNode, l.anchorOffset), d.setEnd(l.focusNode, l.focusOffset);
+            (d.setStart(l.anchorNode, l.anchorOffset), d.setEnd(l.focusNode, l.focusOffset));
             let h = d.getBoundingClientRect(),
                 m = r.x === u.x,
                 f = m ? h.x : Math.min(r.x, u.x);
@@ -155,7 +155,7 @@ let N = i.forwardRef(function (e, t) {
         (i.useLayoutEffect(() => {
             if (null == C || null == E || null == u.current) return;
             let e = u.current.getBoundingClientRect();
-            j(e.width / 2), N(e.height + 12);
+            (j(e.width / 2), N(e.height + 12));
         }, [C, E]),
         null == C || null == E)
     )
@@ -170,7 +170,7 @@ let N = i.forwardRef(function (e, t) {
                   className: S.KE,
                   style: { top: E - y, left: C - _ },
                   onMouseDown: (e) => {
-                      e.preventDefault(), e.stopPropagation();
+                      (e.preventDefault(), e.stopPropagation());
                   },
                   onMouseUp: (e) => {
                       e.stopPropagation();

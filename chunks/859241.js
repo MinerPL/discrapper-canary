@@ -48,7 +48,7 @@ let O = new A(o.h, {
     },
     USER_APPLIED_BOOSTS_FETCH_SUCCESS: function (t) {
         let { appliedGuildBoosts: e } = t;
-        (u = !1), (s = e);
+        ((u = !1), (s = e));
     },
     APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: function (t) {
         let { endsAt: e } = t;
@@ -59,19 +59,19 @@ let O = new A(o.h, {
     GUILD_APPLY_BOOST_SUCCESS: function (t) {
         let { appliedGuildBoost: e } = t,
             l = new Set(e.map((t) => t.id));
-        (s = [...e, ...s.filter((t) => !l.has(t.id))]), (_ = null), (S = !1);
+        ((s = [...e, ...s.filter((t) => !l.has(t.id))]), (_ = null), (S = !1));
     },
     GUILD_APPLY_BOOST_FAIL: function (t) {
         let { error: e } = t;
-        (S = !1), (_ = e);
+        ((S = !1), (_ = e));
     },
     GUILD_UNAPPLY_BOOST_SUCCESS: function (t) {
         let { boostId: e } = t;
-        (s = s.filter((t) => t.id !== e)), (S = !1);
+        ((s = s.filter((t) => t.id !== e)), (S = !1));
     },
     GUILD_UNAPPLY_BOOST_FAIL: function (t) {
         let { error: e } = t;
-        (S = !1), (d = e);
+        ((S = !1), (d = e));
     },
     USER_APPLIED_BOOSTS_FETCH_START: function () {
         u = !0;

@@ -1,5 +1,5 @@
 var a, i;
-Object.defineProperty(e, "__esModule", { value: !0 }),
+(Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.ICalWeekday = e.ICalEventRepeatingFreq = void 0),
     ((a = e.ICalEventRepeatingFreq || (e.ICalEventRepeatingFreq = {})).SECONDLY = "SECONDLY"),
     (a.MINUTELY = "MINUTELY"),
@@ -14,4 +14,4 @@ Object.defineProperty(e, "__esModule", { value: !0 }),
     (i.WE = "WE"),
     (i.TH = "TH"),
     (i.FR = "FR"),
-    (i.SA = "SA");
+    (i.SA = "SA"));

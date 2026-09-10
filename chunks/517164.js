@@ -8,7 +8,7 @@ let s = new Map(),
     d = !1,
     c = !1;
 function u() {
-    (s = new Map()), (l = new Set()), (o = null), (d = !1);
+    ((s = new Map()), (l = new Set()), (o = null), (d = !1));
 }
 class _ extends i.Ay.Store {
     static displayName = "ContentInventoryOutboxStore";
@@ -35,7 +35,7 @@ class _ extends i.Ay.Store {
 }
 let E = new _(r.h, {
     CONNECTION_OPEN: function () {
-        u(), (c = !0);
+        (u(), (c = !0));
     },
     LOGOUT: function () {
         u();
@@ -46,14 +46,14 @@ let E = new _(r.h, {
     },
     CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: function (e) {
         let { outbox: t, userId: n } = e;
-        s.set(n, { ...t, lastFetched: Date.now() }), l.delete(n);
+        (s.set(n, { ...t, lastFetched: Date.now() }), l.delete(n));
     },
     CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: function (e) {
         let { userId: t } = e;
         l.delete(t);
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
-        (o = null), (d = !0);
+        ((o = null), (d = !0));
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
         let { entry: t, userId: n } = e;
@@ -61,13 +61,13 @@ let E = new _(r.h, {
         let i = s.get(n);
         if (null == i) return !1;
         let r = i.entries.filter((e) => e.id !== t.id);
-        s.set(n, { ...i, entries: r }), (d = !1);
+        (s.set(n, { ...i, entries: r }), (d = !1));
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
         let { error: t } = e;
-        (o = t), (d = !1);
+        ((o = t), (d = !1));
     },
     CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
-        (o = null), (d = !1);
+        ((o = null), (d = !1));
     },
 });

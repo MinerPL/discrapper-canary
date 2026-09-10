@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $Y: () => S,
     A2: () => m,
     G4: () => D,
@@ -16,7 +16,7 @@ n.d(t, {
     vV: () => w,
 }),
     n(938796),
-    n(321073);
+    n(321073));
 var i = n(665260),
     r = n(17928),
     a = n(52133),
@@ -73,14 +73,14 @@ function N(e, t) {
 }
 function C(e, t, n) {
     let i = new Set();
-    e.forEach((e) => {
+    (e.forEach((e) => {
         e.options.forEach((e) => {
             e?.channelIds?.forEach((e) => {
                 i.add(e);
             });
         });
     }),
-        t.forEach((e) => i.add(e));
+        t.forEach((e) => i.add(e)));
     let r = n.filter((e) => !e.isCategory() && !e.isThread() && !(0, s.A)(e));
     return [
         r.filter((e) => i.has(e.id) || (null != e.parent_id && i.has(e.parent_id))),

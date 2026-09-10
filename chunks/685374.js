@@ -1,4 +1,4 @@
-n.d(t, { default: () => w }), n(321073);
+(n.d(t, { default: () => w }), n(321073));
 var i = n(477900),
     s = n(582128),
     l = n(189213),
@@ -48,7 +48,7 @@ function C(e) {
         try {
             var e, t, i;
             let s;
-            await ((e = n),
+            (await ((e = n),
             (t = C),
             (i = p),
             (s = []),
@@ -62,10 +62,10 @@ function C(e) {
             }),
             (0, d.R$)(e.id, s, i)),
                 r(),
-                S(!1);
+                S(!1));
         } catch (t) {
             let e = new u.LG(t);
-            S(!1), G(e);
+            (S(!1), G(e));
         }
     }
     let W = (0, x.ke)(n.type) ? a.I : c.t;

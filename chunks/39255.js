@@ -1,4 +1,4 @@
-s.d(t, { A: () => C, _: () => P }), s(321073);
+(s.d(t, { A: () => C, _: () => P }), s(321073));
 var a,
     l = s(477900),
     n = s(582128),
@@ -41,8 +41,8 @@ class b extends n.Component {
     }
     componentDidUpdate(e) {
         let { focusAfterReady: t, isReady: s } = this.props;
-        t && !e.isReady && s && this.focus(),
-            (e.tags !== this.props.tags || e.query !== this.props.query) && this.handleHeightChange();
+        (t && !e.isReady && s && this.focus(),
+            (e.tags !== this.props.tags || e.query !== this.props.query) && this.handleHeightChange());
     }
     handleHeightChange() {
         let e = this.containerRef.current;
@@ -72,28 +72,28 @@ class b extends n.Component {
                         (e.preventDefault(), e.stopPropagation(), i?.(n.length - 1));
                     break;
                 case f.dh.ARROW_DOWN:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t
                             ? ((t = 0), (s = 0))
-                            : ((t += 1) >= a.length && (t = a.length - 1), s >= a[t] && (s = a[t] - 1));
+                            : ((t += 1) >= a.length && (t = a.length - 1), s >= a[t] && (s = a[t] - 1)));
                     break;
                 case f.dh.ARROW_UP:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
-                        (t -= 1) < 0 ? ((t = 0), (s = 0)) : s >= a[t] && (s = a[t] - 1);
+                        (t -= 1) < 0 ? ((t = 0), (s = 0)) : s >= a[t] && (s = a[t] - 1));
                     break;
                 case f.dh.ARROW_LEFT:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
-                        (s -= 1) < 0 && ((t -= 1) >= 0 ? (s = a[t] - 1) : t < 0 && ((t = 0), (s = 0)));
+                        (s -= 1) < 0 && ((t -= 1) >= 0 ? (s = a[t] - 1) : t < 0 && ((t = 0), (s = 0))));
                     break;
                 case f.dh.ARROW_RIGHT:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
-                        (s += 1) >= a[t] && ((s = 0), (t += 1) >= a.length && ((t = a.length - 1), (s = a[t] - 1)));
+                        (s += 1) >= a[t] && ((s = 0), (t += 1) >= a.length && ((t = a.length - 1), (s = a[t] - 1))));
                     break;
                 case f.dh.ENTER:
                     if (
@@ -107,7 +107,7 @@ class b extends n.Component {
                     null != o && o(t, s, e);
                     return;
                 case f.dh.ESCAPE:
-                    e.preventDefault(), h && e.stopPropagation(), null != o && o(null, null, e);
+                    (e.preventDefault(), h && e.stopPropagation(), null != o && o(null, null, e));
                     return;
                 default:
                     return;
@@ -136,22 +136,22 @@ class b extends n.Component {
                         (e.preventDefault(), e.stopPropagation(), this.props.onRemoveTag?.(o.length - 1));
                     break;
                 case f.dh.ARROW_DOWN:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         t.length > s && ++a >= t[s] && (++s >= t.length && (s = 0), (a = 0)),
-                        n?.(s, a);
+                        n?.(s, a));
                     break;
                 case f.dh.ARROW_UP:
-                    e.preventDefault(),
+                    (e.preventDefault(),
                         e.stopPropagation(),
                         --a < 0 && (--s < 0 && (s = t.length - 1), (a = t[s] - 1)),
-                        n?.(s, a);
+                        n?.(s, a));
                     break;
                 case f.dh.ENTER:
-                    e.preventDefault(), e.stopPropagation(), t.length > s && t[s] > a && l?.(s, a, e);
+                    (e.preventDefault(), e.stopPropagation(), t.length > s && t[s] > a && l?.(s, a, e));
                     break;
                 case f.dh.ESCAPE:
-                    e.preventDefault(), i && e.stopPropagation(), l?.(null, null, e), h.blur();
+                    (e.preventDefault(), i && e.stopPropagation(), l?.(null, null, e), h.blur());
             }
     }
     handleKeyDown = (e) => {
@@ -163,7 +163,7 @@ class b extends n.Component {
             return;
         }
         if (e.key === f.dh.ESCAPE && null != n.value && "" !== n.value && n.value.length > 0) {
-            (n.value = ""), null != a && a("");
+            ((n.value = ""), null != a && a(""));
             return;
         }
         l && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e));

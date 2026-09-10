@@ -1,4 +1,4 @@
-e.d(i, { default: () => g }), e(321073);
+(e.d(i, { default: () => g }), e(321073));
 var n = e(477900);
 e(582128);
 var a = e(772707),
@@ -22,13 +22,13 @@ function g(t) {
         O = C ? S < p.p2C : T?.premiumTier !== p.TVA.TIER_3 && S <= p.nyz,
         L = d.A.can(c.QY, e);
     function f() {
-        E(),
+        (E(),
             l.default.track(p.HAw.BOOSTING_UPSELL_CLICKED, {
                 guild_id: e.guild_id,
                 type: o.e.VIDEO_STAGE_LIMIT,
                 is_moderator: L,
                 action: o.pd.DISMISS,
-            });
+            }));
     }
     i =
         C && T?.premiumTier === p.TVA.TIER_3
@@ -55,14 +55,14 @@ function g(t) {
                       text: I.intl.string(I.t.Uj0md3),
                       variant: "expressive",
                       onClick: function () {
-                          E(),
+                          (E(),
                               (0, r.K4)({ guildId: e.guild_id, location: { section: p.JJy.STAGE_VIDEO_LIMIT } }),
                               l.default.track(p.HAw.BOOSTING_UPSELL_CLICKED, {
                                   guild_id: e.guild_id,
                                   type: o.e.VIDEO_STAGE_LIMIT,
                                   is_moderator: L,
                                   action: o.pd.BOOST,
-                              });
+                              }));
                       },
                   },
               )

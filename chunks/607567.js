@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => U, RQ: () => L, hz: () => R }), n(321073);
+(n.d(t, { Ay: () => U, RQ: () => L, hz: () => R }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -21,7 +21,7 @@ let m = Object.freeze([]),
     S = null;
 function N(e) {
     let t = g[e];
-    return null == t && ((t = new y(e)), (g[e] = t)), t;
+    return (null == t && ((t = new y(e)), (g[e] = t)), t);
 }
 function C(e, t) {
     return A.Ay.getMember(e, t.id);
@@ -47,7 +47,7 @@ function L(e, t, n, i) {
             nick: l?.nick,
             connectedOn: i?.connectedOn ?? Date.now(),
         };
-    return s && (d._isPlaceholder = !0), d;
+    return (s && (d._isPlaceholder = !0), d);
 }
 class y {
     guildId;
@@ -68,29 +68,29 @@ class y {
         this.guildId = e;
     }
     updateVoiceState(e) {
-        if (null != this._pending) return this._pending.add(e), !1;
+        if (null != this._pending) return (this._pending.add(e), !1);
         let t = I.A.getVoiceState(this.guildId, e),
             n = this._voiceStates.get(e),
             i = h.default.getUser(e);
         if (null != t && null != i) {
-            if (null == n) return this._voiceStates.set(e, L(t, this.guildId, e)), !0;
+            if (null == n) return (this._voiceStates.set(e, L(t, this.guildId, e)), !0);
             else if (n.voiceState !== t) {
                 let r = C(this.guildId, i),
                     a = r?.nick ?? p.Ay.getName(i);
-                return this._voiceStates.set(e, { ...n, member: r, comparator: R(t, a), nick: a, voiceState: t }), !0;
+                return (this._voiceStates.set(e, { ...n, member: r, comparator: R(t, a), nick: a, voiceState: t }), !0);
             }
-        } else if (null != n) return this._voiceStates.delete(e), !0;
+        } else if (null != n) return (this._voiceStates.delete(e), !0);
         return !1;
     }
     updateMember(e) {
-        if (null != this._pending) return this._pending.add(e), !1;
+        if (null != this._pending) return (this._pending.add(e), !1);
         let t = this._voiceStates.get(e),
             n = h.default.getUser(e);
         if (null != t && null != n) {
             let i = C(this.guildId, n);
             if (i?.nick !== t.member?.nick || i?.avatar !== t.member?.avatar) {
                 let { comparator: r } = O(t.voiceState, i, n);
-                return this._voiceStates.set(e, { ...t, member: i, comparator: r, nick: i?.nick }), !0;
+                return (this._voiceStates.set(e, { ...t, member: i, comparator: r, nick: i?.nick }), !0);
             }
         }
         return !1;
@@ -107,10 +107,10 @@ class y {
         );
     }
     getUserIds() {
-        return this.processPending(), this._voiceStates.keys();
+        return (this.processPending(), this._voiceStates.keys());
     }
     getVoiceStates() {
-        return this.processPending(), this._voiceStates.indexes();
+        return (this.processPending(), this._voiceStates.indexes());
     }
     getVoiceStatesForChannel(e) {
         this.processPending();
@@ -118,15 +118,15 @@ class y {
         return 0 === t.length ? m : t;
     }
     countVoiceStatesForChannel(e) {
-        return this.processPending(), this._voiceStates.size(e);
+        return (this.processPending(), this._voiceStates.size(e));
     }
     getVersion() {
-        return this.processPending(), this._voiceStates.version;
+        return (this.processPending(), this._voiceStates.version);
     }
     processPending() {
         if (null != this._pending) {
             let e = this._pending;
-            (this._pending = void 0), e.forEach((e) => this.updateVoiceState(e));
+            ((this._pending = void 0), e.forEach((e) => this.updateVoiceState(e)));
         }
     }
 }
@@ -135,14 +135,14 @@ function D() {
 }
 function v() {
     let e = null != S;
-    return (S = null), e;
+    return ((S = null), e);
 }
 function b() {
     let e = S;
     return null != e && !!e.unknownChannels.some((e) => null != E.A.getChannel(e)) && ((S = null), !0);
 }
 function M() {
-    (g = {}), (S = null);
+    ((g = {}), (S = null));
     let e = I.A.getAllVoiceStates();
     f.default.keys(e).forEach((t) => {
         Object.keys(e[t]).forEach((e) => {
@@ -153,11 +153,11 @@ function M() {
 class P extends a.Ay.Store {
     static displayName = "SortedVoiceStateStore";
     initialize() {
-        M(),
+        (M(),
             this.waitFor(_.default, E.A, d.A, A.Ay, h.default, I.A),
             this.syncWith([h.default], D),
             this.syncWith([d.A], v),
-            this.syncWith([E.A], b);
+            this.syncWith([E.A], b));
     }
     getVoiceStates(e) {
         return (0, c.ai)(e)
@@ -195,7 +195,7 @@ class P extends a.Ay.Store {
                       let d = o.getVoiceStatesForChannel(r);
                       d.length > 0 && (i[r] = d);
                   }
-                  return (S = { favoriteChannels: e, versions: t, unknownChannels: n, result: i }), i;
+                  return ((S = { favoriteChannels: e, versions: t, unknownChannels: n, result: i }), i);
               })()
             : N(e ?? T.ME).getVoiceStates();
     }
@@ -220,7 +220,7 @@ class P extends a.Ay.Store {
 }
 let U = new P(o.h, {
     CONNECTION_OPEN: function () {
-        (g = {}), (S = null);
+        ((g = {}), (S = null));
     },
     OVERLAY_INITIALIZE: function () {
         M();

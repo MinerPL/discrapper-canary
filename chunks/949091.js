@@ -20,8 +20,8 @@ function u() {
             label: "Playgrounds",
             leadingAccessory: e ? { type: "icon", icon: d.R } : void 0,
             action: () => {
-                a.PlaygroundStore.setState({ selectedCollection: null, selectedStory: null }),
-                    (0, i.id)(c.zgK.COMPONENT_PLAYGROUND);
+                (a.PlaygroundStore.setState({ selectedCollection: null, selectedStory: null }),
+                    (0, i.id)(c.zgK.COMPONENT_PLAYGROUND));
             },
             children: (0, t.jsx)(
                 o.rX,
@@ -33,8 +33,8 @@ function u() {
                                 id: `${e.id}-playground`,
                                 label: e.name,
                                 action: () => {
-                                    a.PlaygroundStore.setState({ selectedCollection: e.id, selectedStory: null }),
-                                        (0, i.id)(c.zgK.COMPONENT_PLAYGROUND);
+                                    (a.PlaygroundStore.setState({ selectedCollection: e.id, selectedStory: null }),
+                                        (0, i.id)(c.zgK.COMPONENT_PLAYGROUND));
                                 },
                             },
                             e.id,

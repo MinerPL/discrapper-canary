@@ -18,13 +18,13 @@ function g(e) {
         c = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.email),
         [g, T] = l.useState({ status: "unknown" });
     l.useEffect(() => {
-        T({ status: "loading" }),
+        (T({ status: "loading" }),
             d.A.verifyResend().then(
                 () => T({ status: "success" }),
                 (e) => {
-                    T({ status: "error" }), (0, A.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                    (T({ status: "error" }), (0, A.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
                 },
-            );
+            ));
     }, []);
     let m =
         "error" === g.status

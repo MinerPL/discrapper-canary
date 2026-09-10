@@ -1,4 +1,4 @@
-n.d(t, { RD: () => R }), n(321073);
+(n.d(t, { RD: () => R }), n(321073));
 var i = n(582128),
     r = n(52133),
     o = n(958538),
@@ -54,7 +54,7 @@ function R(e) {
                         i.useCallback(
                             (e) =>
                                 p(() => {
-                                    (R.current = h), e();
+                                    ((R.current = h), e());
                                 }),
                             [p],
                         ),
@@ -77,7 +77,7 @@ function R(e) {
                                         t.push({
                                             type: b._.RPC,
                                             initiate(t) {
-                                                u.A.dispatchToSubscriptions(
+                                                (u.A.dispatchToSubscriptions(
                                                     C,
                                                     (t) => t.socket.application.id === e.application.id,
                                                     {},
@@ -94,7 +94,7 @@ function R(e) {
                                                     (0, d.gk)(e.application.id, {
                                                         onSuccess: t.onSuccess,
                                                         onError: t.onError,
-                                                    });
+                                                    }));
                                             },
                                         }),
                                     A.includes(b._.WEB) && null != e.application.connectionEntrypointUrl)
@@ -103,22 +103,22 @@ function R(e) {
                                     t.push({
                                         type: b._.WEB,
                                         initiate(t) {
-                                            (0, s.h)({
+                                            ((0, s.h)({
                                                 href: n,
                                                 onConfirm: () => {
-                                                    (0, a.A)(n),
+                                                    ((0, a.A)(n),
                                                         t?.onConfirm?.(),
                                                         (0, d.gk)(e.application.id, {
                                                             onSuccess: t.onSuccess,
                                                             onError: t.onError,
-                                                        });
+                                                        }));
                                                 },
                                             }),
                                                 c.Ay.trackWithMetadata(T.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                                     location_stack: t.analyticsLocations,
                                                     application_id: e.application.id,
                                                     flow_type: b._.WEB,
-                                                });
+                                                }));
                                         },
                                     });
                                 }

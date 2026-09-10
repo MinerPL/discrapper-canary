@@ -1,4 +1,4 @@
-n.d(t, { t: () => N }), n(938796);
+(n.d(t, { t: () => N }), n(938796));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -32,7 +32,7 @@ class N extends l.Component {
         this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
     };
     handleAddReactionClick = (e) => {
-        e.stopPropagation(), this.handleReactionPickerToggle();
+        (e.stopPropagation(), this.handleReactionPickerToggle());
     };
     renderReactionPopout = (e) => {
         let { closePopout: t } = e,
@@ -42,7 +42,7 @@ class N extends l.Component {
                 channel: n,
                 onSelectEmoji: (e) => {
                     let { emoji: n, willClose: i, isBurst: l } = e;
-                    this.onAddReaction(n, l), i && (l ? o()(t, 150)() : t());
+                    (this.onAddReaction(n, l), i && (l ? o()(t, 150)() : t()));
                 },
                 analyticsOverride: { openPopoutType: "message_reaction_emoji_picker" },
                 messageId: l.id,

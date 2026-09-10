@@ -13,7 +13,7 @@ e.exports = function (e, t) {
         u = !0;
     if ("length" in e && a) {
         var c = a(e, "length");
-        c && !c.configurable && (n = !1), c && !c.writable && (u = !1);
+        (c && !c.configurable && (n = !1), c && !c.writable && (u = !1));
     }
-    return (n || u || !r) && (o ? i(e, "length", t, !0, !0) : i(e, "length", t)), e;
+    return ((n || u || !r) && (o ? i(e, "length", t, !0, !0) : i(e, "length", t)), e);
 };

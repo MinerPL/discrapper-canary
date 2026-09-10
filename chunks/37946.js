@@ -25,7 +25,7 @@ function i() {
                             a: p,
                             f: p.bind(t, 4),
                             d: function (e, r) {
-                                return (o = e), (a = 0), (s = t), (d.n = r), u;
+                                return ((o = e), (a = 0), (s = t), (d.n = r), u);
                             },
                         };
                     function p(e, n) {
@@ -48,23 +48,23 @@ function i() {
                     }
                     return function (i, c, h) {
                         if (l > 1) throw TypeError("Generator is already running");
-                        for (f && 1 === c && p(c, h), a = c, s = h; (r = a < 2 ? t : s) || !f; ) {
+                        for (f && 1 === c && p(c, h), a = c, s = h; (r = a < 2 ? t : s) || !f;) {
                             o || (a ? (a < 3 ? (a > 1 && (d.n = -1), p(a, s)) : (d.n = s)) : (d.v = s));
                             try {
                                 if (((l = 2), o)) {
                                     if ((a || (i = "next"), (r = o[i]))) {
                                         if (!(r = r.call(o, s))) throw TypeError("iterator result is not an object");
                                         if (!r.done) return r;
-                                        (s = r.value), a < 2 && (a = 0);
+                                        ((s = r.value), a < 2 && (a = 0));
                                     } else
-                                        1 === a && (r = o.return) && r.call(o),
+                                        (1 === a && (r = o.return) && r.call(o),
                                             a < 2 &&
                                                 ((s = TypeError("The iterator does not provide a '" + i + "' method")),
-                                                (a = 1));
+                                                (a = 1)));
                                     o = t;
                                 } else if ((r = (f = d.n < 0) ? s : e.call(n, d)) !== u) break;
                             } catch (e) {
-                                (o = t), (a = 1), (s = e);
+                                ((o = t), (a = 1), (s = e));
                             } finally {
                                 l = 1;
                             }
@@ -122,4 +122,4 @@ function i() {
         (e.exports.default = e.exports))()
     );
 }
-(e.exports = i), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+((e.exports = i), (e.exports.__esModule = !0), (e.exports.default = e.exports));

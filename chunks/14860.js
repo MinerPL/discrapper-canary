@@ -87,13 +87,13 @@ function N(e) {
         let e = N[E ?? ""];
         d()(null != e, "Cannot transfer without selected device");
         try {
-            y(!0), await v.VP(h, e.id, u), x();
+            (y(!0), await v.VP(h, e.id, u), x());
         } catch (t) {
-            y(!1),
+            (y(!1),
                 f.A.show({
                     title: p.intl.string(p.t.QL1y93),
                     body: p.intl.formatToPlainString(p.t["6ZyNH/"], { deviceName: e.name }),
-                });
+                }));
         }
     }
     return (
@@ -115,7 +115,7 @@ function N(e) {
                     devices: I,
                     selectedDeviceId: E,
                     onSelectDeviceId: function (e) {
-                        M(e), (0, v.Jm)(h, e);
+                        (M(e), (0, v.Jm)(h, e));
                     },
                 }))),
         (0, l.jsx)(c.Modal, {

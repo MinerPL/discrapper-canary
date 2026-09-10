@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => g });
+(n.r(t), n.d(t, { default: () => g }));
 var l = n(477900),
     s = n(582128),
     a = n(702841),
@@ -40,7 +40,7 @@ function g(e) {
     let G = s.useCallback(
             (e) => {
                 let { unmountWindow: t } = e;
-                r.A.returnParticipant(o, E), t();
+                (r.A.returnParticipant(o, E), t());
             },
             [o, E],
         ),

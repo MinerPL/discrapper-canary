@@ -9,11 +9,11 @@ class s extends r.A {
     label;
     palette;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.type = i.R.NAMEPLATE),
             (this.asset = e.asset),
             (this.label = e.label),
-            (this.palette = e.palette);
+            (this.palette = e.palette));
     }
     static fromServer(e) {
         return new s({ ...super.fromServer(e), ...e });

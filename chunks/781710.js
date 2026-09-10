@@ -1,4 +1,4 @@
-a.d(t, { A: () => g, h: () => S }),
+(a.d(t, { A: () => g, h: () => S }),
     a(393431),
     a(532706),
     a(42231),
@@ -8,7 +8,7 @@ a.d(t, { A: () => g, h: () => S }),
     a(65162),
     a(323874),
     a(14289),
-    a(35956);
+    a(35956));
 var n = a(477900),
     r = a(582128),
     i = a(139033),
@@ -32,7 +32,7 @@ async function y(e) {
     let { default: t } = await a.e("25777").then(a.t.bind(a, 293384, 19)),
         n = t.createFile(!1),
         r = new Promise((e, t) => {
-            (n.onReady = e), (n.onError = (e) => t(Error(e)));
+            ((n.onReady = e), (n.onError = (e) => t(Error(e))));
         }),
         i = e.slice(0);
     if (((i.fileStart = 0), n.appendBuffer(i), n.flush(), await r, null == n.boxes)) return null;
@@ -88,7 +88,7 @@ function A(e) {
                                     return;
                                 }
                             }
-                            O(null), S(e);
+                            (O(null), S(e));
                         })(e.value),
                 }),
                 children: [
@@ -142,10 +142,10 @@ function A(e) {
                                                           "New uuid box exceeds 32-bit size; extended size encoding not implemented",
                                                       );
                                                   let l = new Uint8Array(i);
-                                                  new DataView(l.buffer).setUint32(0, i, !1),
+                                                  (new DataView(l.buffer).setUint32(0, i, !1),
                                                       l.set(v, 4),
                                                       l.set(new Uint8Array(e, t + 8, n - 8), 8),
-                                                      l.set(r, n);
+                                                      l.set(r, n));
                                                   let s = new Uint8Array(e, 0, t),
                                                       o = new Uint8Array(e, t + a),
                                                       c = new Uint8Array(s.length + l.length + o.length);
@@ -156,13 +156,13 @@ function A(e) {
                                                       c.buffer
                                                   );
                                               })(i, d, h, p, s);
-                                          (n = new Blob([o], { type: "video/mp4" })),
+                                          ((n = new Blob([o], { type: "video/mp4" })),
                                               (a = URL.createObjectURL(n)),
                                               ((r = document.createElement("a")).href = a),
                                               (r.download = t),
                                               r.click(),
                                               URL.revokeObjectURL(a),
-                                              A();
+                                              A());
                                       } catch (e) {
                                           O(e instanceof Error ? e.message : String(e));
                                       }
@@ -219,7 +219,7 @@ function g() {
                 accept: "video/mp4,.mp4",
                 onChange: function (e) {
                     let t = e.target.files?.[0];
-                    (e.target.value = ""), null != t && w(t);
+                    ((e.target.value = ""), null != t && w(t));
                 },
                 className: x.Z_,
             }),

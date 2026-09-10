@@ -45,11 +45,11 @@ function l(e) {
 function o(e) {
     return e.value * (e.multiplier ?? 1);
 }
-s.map((e) => {
+(s.map((e) => {
     let [t] = e;
     return t;
 }),
     s.map((e) => {
         let [t, n] = e;
         return n;
-    });
+    }));

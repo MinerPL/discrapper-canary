@@ -40,7 +40,7 @@ let I = function (e) {
     async function S() {
         v(!0);
         try {
-            await m.A.joinGuild(i.id, { source: f.Q4z.CHAT_INPUT_BLOCKER }), N();
+            (await m.A.joinGuild(i.id, { source: f.Q4z.CHAT_INPUT_BLOCKER }), N());
         } catch {
             v(!1);
         }

@@ -22,7 +22,7 @@ let f = { width: 232, height: 315 },
     N = !1;
 function C(e) {
     if (null == e || null == g.get(e)) return !1;
-    g.delete(e), (S = new Set(S)).delete(e);
+    (g.delete(e), (S = new Set(S)).delete(e));
 }
 function O(e) {
     let { channelId: t, ongoingRings: n } = e,
@@ -53,7 +53,7 @@ function O(e) {
                 null != i && i.x + s.width < e.width && i.y + s.height < e.height
                     ? i
                     : { x: e.width / 2 - s.width / 2, y: e.height / 2 - s.height / 2 });
-        return g.set(t, { channel: d, senderId: n[a], x: E + u, y: I + u }), void (S = new Set(S)).add(t);
+        return (g.set(t, { channel: d, senderId: n[a], x: E + u, y: I + u }), void (S = new Set(S)).add(t));
     }
     return !!S.has(t) && !s && C(t);
 }
@@ -78,10 +78,10 @@ function y() {
 class D extends r.Ay.Store {
     static displayName = "IncomingCallStore";
     initialize() {
-        this.waitFor(u.default, l.A, _.A, E.A, A.Ay, d.A, h.A),
+        (this.waitFor(u.default, l.A, _.A, E.A, A.Ay, d.A, h.A),
             this.syncWith([E.A], L),
             this.syncWith([d.A], L),
-            this.syncWith([l.A], y);
+            this.syncWith([l.A], y));
     }
     getIncomingCalls() {
         return N ? m : Array.from(g.values());
@@ -108,7 +108,7 @@ let v = new D(s.h, {
     },
     INCOMING_CALL_MOVE: function (e) {
         let { x: t, y: n } = e;
-        return (i = { x: t, y: n }), a.w.set("IncomingCallStore", i), !1;
+        return ((i = { x: t, y: n }), a.w.set("IncomingCallStore", i), !1);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;

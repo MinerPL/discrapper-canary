@@ -9,7 +9,7 @@ function a() {
     null != l && (clearTimeout(l), (l = null));
 }
 function s(e) {
-    a(), (r = { ...e }), (l = setTimeout(() => o(), 8e3)), u();
+    (a(), (r = { ...e }), (l = setTimeout(() => o(), 8e3)), u());
 }
 function o(e) {
     null != r && (null == e || r.iframeId === e) && (a(), (r = null), u());

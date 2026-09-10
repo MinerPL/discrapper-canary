@@ -75,7 +75,7 @@ function N() {
 class T extends i.Ay.Store {
     static displayName = "NowPlayingStore";
     initialize() {
-        this.waitFor(o.A, r.A, u.default), this.syncWith([r.A], N);
+        (this.waitFor(o.A, r.A, u.default), this.syncWith([r.A], N));
     }
     get games() {
         return c;
@@ -95,7 +95,7 @@ class T extends i.Ay.Store {
 }
 let I = new T(l.h, {
     CONNECTION_OPEN: function () {
-        (c = {}), (A = {});
+        ((c = {}), (A = {}));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (t) {
         let { guilds: e, presences: n } = t,
@@ -109,7 +109,7 @@ let I = new T(l.h, {
         );
     },
     LOGOUT: function () {
-        (c = {}), (A = {});
+        ((c = {}), (A = {}));
     },
     PRESENCE_UPDATES: function (t) {
         let { updates: e } = t;

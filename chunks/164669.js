@@ -1,7 +1,7 @@
 var a = t(231131),
     l = t(964347),
     o = t(106722);
-(e.exports = function (e, r) {
+((e.exports = function (e, r) {
     var t = null == e ? null : (void 0 !== a && l(e)) || e["@@iterator"];
     if (null != t) {
         var s,
@@ -17,7 +17,7 @@ var a = t(231131),
                 c = !1;
             } else for (; !(c = (s = n.call(t)).done) && (o(d).call(d, s.value), d.length !== r); c = !0);
         } catch (e) {
-            (p = !0), (i = e);
+            ((p = !0), (i = e));
         } finally {
             try {
                 if (!c && null != t.return && ((u = t.return()), Object(u) !== u)) return;
@@ -29,4 +29,4 @@ var a = t(231131),
     }
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

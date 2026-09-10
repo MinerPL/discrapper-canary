@@ -300,7 +300,7 @@ function eg(e) {
         }),
         U = i.useCallback(
             (e) => {
-                H(e), R(e);
+                (H(e), R(e));
             },
             [R],
         ),
@@ -322,7 +322,7 @@ function eg(e) {
                     });
                     if (-1 === n) return I ? t : (H(""), R(""), (T.current += 1), [e, ...t]);
                     let l = [...t];
-                    return l.splice(n, 1), (T.current += 1), l;
+                    return (l.splice(n, 1), (T.current += 1), l);
                 });
             },
             [I, R],
@@ -338,7 +338,7 @@ function eg(e) {
                 if (null === V) return;
                 L(!0);
                 let n = (await Promise.all(e.map(g.pk))).filter(A.Vq);
-                t && (S(!0), eh()),
+                (t && (S(!0), eh()),
                     n.forEach(async (e) => {
                         let t = b.A.getChannel(e);
                         if (null == t) return;
@@ -350,7 +350,7 @@ function eg(e) {
                             (0, r.P0)((0, o.o)(ei.intl.string(ei.t["5WjJcl"]), c.Ck.MESSAGE));
                     }),
                     S(!0),
-                    eh();
+                    eh());
             },
             [S, V, x.options],
         ),

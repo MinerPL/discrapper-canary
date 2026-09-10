@@ -12,7 +12,7 @@ var a = i(772707),
 function u(t) {
     let { onClose: n, transitionState: i } = t;
     function u() {
-        n(), (0, c.openUserSettings)(r.X.ENABLE_LEGACY_CHAT_INPUT);
+        (n(), (0, c.openUserSettings)(r.X.ENABLE_LEGACY_CHAT_INPUT));
     }
     return (0, e.jsx)(a.k, {
         transitionState: i,
@@ -28,12 +28,12 @@ function u(t) {
                 variant: "primary",
                 text: d.intl.string(d.t.VdzwlA),
                 onClick: function () {
-                    l.default.track(p.HAw.LEGACY_CHAT_INPUT_TOGGLED, {
+                    (l.default.track(p.HAw.LEGACY_CHAT_INPUT_TOGGLED, {
                         enabled: !1,
                         location: "LegacyChatInputExplanationModal",
                     }),
                         o.D_.updateSetting(!1),
-                        n();
+                        n());
                 },
             },
         ],

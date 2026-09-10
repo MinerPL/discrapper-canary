@@ -16,7 +16,7 @@ function d(t) {
                 text: l.intl.string(r.default.Z61nkt),
                 variant: "secondary",
                 onClick: () => {
-                    n(), (0, e.Vq)();
+                    (n(), (0, e.Vq)());
                 },
             },
             { text: l.intl.string(l.t["NX+WJN"]), variant: "primary", onClick: n },

@@ -41,7 +41,7 @@ var i = e(775162),
                 children: (0, n.v)("form", {
                     class: "IncodeWatchlistForBusinessForm",
                     onSubmit: (s) => {
-                        s.preventDefault(), u.submit();
+                        (s.preventDefault(), u.submit());
                     },
                     autoComplete: "off",
                     children: [

@@ -9,18 +9,18 @@ class l {
     error = null;
     counts = null;
     handleSearchCountStart() {
-        (this.error = null), (this.isFetching = !0);
+        ((this.error = null), (this.isFetching = !0));
     }
     handleSearchCountSuccess(e) {
-        (this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0);
+        ((this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0));
     }
     handleSearchCountFailure(e) {
-        (this.error = new a.LG(e)), (this.isFetching = !1);
+        ((this.error = new a.LG(e)), (this.isFetching = !1));
     }
 }
 function o(e) {
     let t = s.get(e) ?? new l();
-    return s.set(e, t), t;
+    return (s.set(e, t), t);
 }
 function d(e, t) {
     let n = s.get(e);

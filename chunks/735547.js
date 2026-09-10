@@ -1,5 +1,5 @@
 let n;
-I.d(e, { Ay: () => U, Be: () => h, Gv: () => m, OK: () => o, Uo: () => g, Us: () => d, oW: () => V }), I(321073);
+(I.d(e, { Ay: () => U, Be: () => h, Gv: () => m, OK: () => o, Uo: () => g, Us: () => d, oW: () => V }), I(321073));
 var i,
     l = I(933958),
     _ = I(734057),
@@ -34,7 +34,7 @@ function f(t) {
         let N = _.A.getChannel(t);
         if (null == N || !N.isPrivate()) continue;
         if (O && N.type === S.rbe.GROUP_DM) {
-            l.push({ type: "GROUP_DM", item: N, isSuggested: !1 }), u.numGroupDms++, s++;
+            (l.push({ type: "GROUP_DM", item: N, isSuggested: !1 }), u.numGroupDms++, s++);
             continue;
         }
         if (null == T.Ay.lastMessageId(N.id)) continue;
@@ -42,7 +42,7 @@ function f(t) {
         if (null != E && !e.has(E) && !i.has(E)) {
             let t = r.default.getUser(E);
             if (null == t || t.bot || P(n, t.id)) continue;
-            i.add(t.id), l.push({ type: "DM", item: t, isSuggested: !1 }), u.numDms++, s++;
+            (i.add(t.id), l.push({ type: "DM", item: t, isSuggested: !1 }), u.numDms++, s++);
         }
     }
 }
@@ -61,7 +61,7 @@ function d(t) {
         o = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
     if ("" === e) {
         let t = { omitUserIds: n, maxRowsWithoutQuery: u, omitGuildId: N, shownUserIds: S, rows: E, counts: o };
-        I === s.yV.EMBEDDED_APPLICATION &&
+        (I === s.yV.EMBEDDED_APPLICATION &&
             (f({ ...t, includeGroupDms: !1, limit: 1 }),
             (function (t) {
                 let { suggestedChannelIds: e, maxRowsWithoutQuery: I, rows: n, counts: i } = t;
@@ -101,16 +101,16 @@ function d(t) {
                     !(null == u || P(n, u.id)) &&
                         (l.push({ type: "FRIEND", item: u, isSuggested: !1 }), _.numFriends++);
                 }
-            })(t);
+            })(t));
     } else {
         let t = { query: e, rows: E, counts: o };
-        I === s.yV.EMBEDDED_APPLICATION &&
+        (I === s.yV.EMBEDDED_APPLICATION &&
             (function (t) {
                 let { query: e, rows: I, counts: n, inviteTargetType: i } = t;
                 i === s.yV.EMBEDDED_APPLICATION &&
                     a.Ay.queryChannels({ query: e, limit: 3, guildId: void 0 }).forEach((t) => {
                         let { record: e, score: i } = t;
-                        I.push({ type: "CHANNEL", item: e, isSuggested: !1, score: i }), n.numChannels++;
+                        (I.push({ type: "CHANNEL", item: e, isSuggested: !1, score: i }), n.numChannels++);
                     });
             })({ ...t, inviteTargetType: I }),
             (function (t) {
@@ -132,9 +132,9 @@ function d(t) {
                 }
                 a.Ay.queryMemberList({ query: e, members: T, limit: 10 }).forEach((t) => {
                     let { record: e, score: i } = t;
-                    _.add(e.id),
+                    (_.add(e.id),
                         I.push({ type: "FRIEND", item: e, isSuggested: !0, score: i, isGuildMember: P(l, e.id) }),
-                        n.numFriends++;
+                        n.numFriends++);
                 });
             })({ ...t, omitUserIds: n, omitGuildId: N, shownUserIds: S, suggestedUserIds: i }),
             (function (t) {
@@ -154,7 +154,7 @@ function d(t) {
                 let { query: e, rows: I, counts: n } = t;
                 a.Ay.queryGroupDMs({ query: e, limit: 50, fuzzy: !1 }).forEach((t) => {
                     let { record: e, score: i } = t;
-                    I.push({ type: "GROUP_DM", item: e, isSuggested: !1, score: i }), n.numGroupDms++;
+                    (I.push({ type: "GROUP_DM", item: e, isSuggested: !1, score: i }), n.numGroupDms++);
                 });
             })(t),
             (function (t) {
@@ -167,7 +167,7 @@ function d(t) {
                             I.push({ type: "FRIEND", item: e, isSuggested: !1, score: u, isGuildMember: P(l, e.id) }),
                             n.numFriends++));
                 });
-            })({ ...t, omitUserIds: n, omitGuildId: N, shownUserIds: S });
+            })({ ...t, omitUserIds: n, omitGuildId: N, shownUserIds: S }));
     }
     return { rows: E, counts: o };
 }

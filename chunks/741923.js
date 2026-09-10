@@ -75,15 +75,15 @@ function g(e) {
                         try {
                             let e = null != l && (0, u.Fs)(l),
                                 n = await (0, c.fS)({ skuId: t, paymentGateway: r, loadId: o, testMode: e });
-                            v(n), null != C && C(n);
+                            (v(n), null != C && C(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
-                            (0, p.gr)(n) ||
+                            ((0, p.gr)(n) ||
                                 (0, p.pM)(e, {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(r), loadId: o },
                                 }),
-                                x(e);
+                                x(e));
                         } finally {
                             N(!1);
                         }

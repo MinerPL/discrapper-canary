@@ -89,7 +89,7 @@ function E(e) {
                                           onFocus: L,
                                           onBlur: O,
                                           onClick: () => {
-                                              (0, y.k)(e.stream), a();
+                                              ((0, y.k)(e.stream), a());
                                           },
                                           children: (0, i.jsxs)("div", {
                                               ref: r,

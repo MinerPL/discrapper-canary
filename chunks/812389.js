@@ -62,23 +62,23 @@ var r,
                   n === e.promise ? c(new V("Promise-chain cycle")) : (r = W(n)) ? d(r, n, l, c) : l(n))
                 : c(o);
         } catch (e) {
-            u && !a && u.exit(), c(e);
+            (u && !a && u.exit(), c(e));
         }
     },
     $ = function (e, t) {
         e.notified ||
             ((e.notified = !0),
             C(function () {
-                for (var n, r = e.reactions; (n = r.get()); ) G(n, e);
-                (e.notified = !1), t && !e.rejection && Q(e);
+                for (var n, r = e.reactions; (n = r.get());) G(n, e);
+                ((e.notified = !1), t && !e.rejection && Q(e));
             }));
     },
     Y = function (e, t, n) {
         var r, a;
-        H
+        (H
             ? (((r = j.createEvent("Event")).promise = t), (r.reason = n), r.initEvent(e, !1, !0), u.dispatchEvent(r))
             : (r = { promise: t, reason: n }),
-            !O && (a = u["on" + e]) ? a(r) : e === z && w("Unhandled promise rejection", n);
+            !O && (a = u["on" + e]) ? a(r) : e === z && w("Unhandled promise rejection", n));
     },
     Q = function (e) {
         d(k, u, function () {
@@ -115,7 +115,7 @@ var r,
     },
     et = function (e, t, n) {
         if (!e.done) {
-            (e.done = !0), n && (e = n);
+            ((e.done = !0), n && (e = n));
             try {
                 if (e.facade === t) throw new V("Promise can't be resolved itself");
                 var r = W(t);
@@ -137,7 +137,7 @@ var r,
 if (
     E &&
     ((L = (D = function (e) {
-        b(this, L), y(e), d(r, this);
+        (b(this, L), y(e), d(r, this));
         var t = M(this);
         try {
             e(X(et, t), X(ee, t));
@@ -175,7 +175,7 @@ if (
     (a = function () {
         var e = new r(),
             t = M(e);
-        (this.promise = e), (this.resolve = X(et, t)), (this.reject = X(ee, t));
+        ((this.promise = e), (this.resolve = X(et, t)), (this.reject = X(ee, t)));
     }),
     (R.f = q =
         function (e) {
@@ -183,7 +183,7 @@ if (
         }),
     !l && v(P) && B !== Object.prototype)
 ) {
-    (i = B.then),
+    ((i = B.then),
         I ||
             p(
                 B,
@@ -195,10 +195,10 @@ if (
                     }).then(e, t);
                 },
                 { unsafe: !0 },
-            );
+            ));
     try {
         delete B.constructor;
     } catch (e) {}
     h && h(B, L);
 }
-s({ global: !0, constructor: !0, wrap: !0, forced: E }, { Promise: D }), f(D, F, !1, !0), m(F);
+(s({ global: !0, constructor: !0, wrap: !0, forced: E }, { Promise: D }), f(D, F, !1, !0), m(F));

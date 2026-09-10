@@ -34,7 +34,7 @@ function p() {
         t = f({ forUserProfile: !1 }),
         n = i.useMemo(() => {
             let t = new Set();
-            return e.forEach((e) => t.add(e.type)), t;
+            return (e.forEach((e) => t.add(e.type)), t);
         }, [e]);
     return i.useMemo(
         () =>
@@ -63,7 +63,7 @@ function T(e) {
             window.addEventListener("keydown", r),
             window.addEventListener("keyup", a),
             () => {
-                window.removeEventListener("keydown", r), window.removeEventListener("keyup", a);
+                (window.removeEventListener("keydown", r), window.removeEventListener("keyup", a));
             }
         ),
         [],
@@ -72,4 +72,4 @@ function T(e) {
         ? _.fg2.TWITTER_LEGACY
         : e;
 }
-_.fg2.PLAYSTATION, _.fg2.XBOX, _.fg2.SPOTIFY, _.fg2.STEAM, _.fg2.TWITCH;
+(_.fg2.PLAYSTATION, _.fg2.XBOX, _.fg2.SPOTIFY, _.fg2.STEAM, _.fg2.TWITCH);

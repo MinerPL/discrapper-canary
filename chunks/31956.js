@@ -15,7 +15,7 @@ function c(e) {
         (d.current !== t || _.current !== n) &&
             ((d.current = t), (_.current = n), (I.current = !1), (u.current = void 0));
         let e = Date.now();
-        (u.current ??= e - n),
+        ((u.current ??= e - n),
             o?.state !== "success" ||
                 I.current ||
                 ((I.current = !0),
@@ -28,6 +28,6 @@ function c(e) {
                     fetchStartedAt: o.startedAt,
                     analyticsLocations: a,
                     ...c,
-                }));
+                })));
     }, [t, n, o]);
 }

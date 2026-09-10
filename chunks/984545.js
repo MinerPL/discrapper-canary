@@ -63,7 +63,7 @@ function S(n) {
                       action: () =>
                           (function (n, t) {
                               function i() {
-                                  (0, y.closeModal)(v), t.onSubmit?.();
+                                  ((0, y.closeModal)(v), t.onSubmit?.());
                               }
                               (0, y.openModalLazy)(
                                   async () => {

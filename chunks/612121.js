@@ -1,8 +1,8 @@
 var i, r, n, s, o, d;
-Object.defineProperty(e, "__esModule", { value: !0 }),
-    (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0);
+(Object.defineProperty(e, "__esModule", { value: !0 }),
+    (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0));
 let l = a(488320);
-((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = "CHAIR"),
+(((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = "CHAIR"),
     (s.REQ = "REQ-PARTICIPANT"),
     (s.OPT = "OPT-PARTICIPANT"),
     (s.NON = "NON-PARTICIPANT"),
@@ -15,7 +15,7 @@ let l = a(488320);
     (d.GROUP = "GROUP"),
     (d.RESOURCE = "RESOURCE"),
     (d.ROOM = "ROOM"),
-    (d.UNKNOWN = "UNKNOWN");
+    (d.UNKNOWN = "UNKNOWN"));
 class u {
     constructor(t, e) {
         if (
@@ -35,7 +35,7 @@ class u {
             !this.event)
         )
             throw Error("`event` option required!");
-        void 0 !== t.name && this.name(t.name),
+        (void 0 !== t.name && this.name(t.name),
             void 0 !== t.email && this.email(t.email),
             void 0 !== t.mailto && this.mailto(t.mailto),
             void 0 !== t.status && this.status(t.status),
@@ -46,7 +46,7 @@ class u {
             void 0 !== t.delegatedFrom && this.delegatedFrom(t.delegatedFrom),
             t.delegatesTo && this.delegatesTo(t.delegatesTo),
             t.delegatesFrom && this.delegatesFrom(t.delegatesFrom),
-            void 0 !== t.x && this.x(t.x);
+            void 0 !== t.x && this.x(t.x));
     }
     name(t) {
         return void 0 === t ? this.data.name : ((this.data.name = t || null), this);
@@ -100,11 +100,11 @@ class u {
     }
     delegatesTo(t) {
         let e = t instanceof u ? t : this.event.createAttendee(t);
-        return this.delegatedTo(e), e.delegatedFrom(this), e;
+        return (this.delegatedTo(e), e.delegatedFrom(this), e);
     }
     delegatesFrom(t) {
         let e = t instanceof u ? t : this.event.createAttendee(t);
-        return this.delegatedFrom(e), e.delegatedTo(this), e;
+        return (this.delegatedFrom(e), e.delegatedTo(this), e);
     }
     x(t, e) {
         if (void 0 === t) return (0, l.addOrGetCustomAttributes)(this.data);

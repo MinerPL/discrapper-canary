@@ -15,8 +15,8 @@ function c(e) {
             d = o.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            (i = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
-                (0, r.VI)(e) && null == c && (s = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 }));
+            ((i = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
+                (0, r.VI)(e) && null == c && (s = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 })));
         }
         if (n) {
             let t = (0, a.Cx)(e);

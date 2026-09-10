@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => k }), n(938796);
+(n.d(t, { A: () => k }), n(938796));
 var l = n(17928),
     u = n(228366),
     d = n(376728),
@@ -62,7 +62,7 @@ let k = new V(u.h, {
             let { channel: n, guild: i } = t;
             if (null == n) return !1;
             if ((0, s.MK)(n.type)) {
-                if (null != A.A.getChannel(n.id)) return (0, c.uh)(m.ME, n.id), E.Ay.focus(), !1;
+                if (null != A.A.getChannel(n.id)) return ((0, c.uh)(m.ME, n.id), E.Ay.focus(), !1);
             } else {
                 if (null == i) return !1;
                 if (null != v.A.getGuild(i.id) && !(0, r.G4)(t)) {
@@ -95,7 +95,7 @@ let k = new V(u.h, {
                             }
                             return null;
                         })(t);
-                        return (0, c.uh)(i.id, n), E.Ay.focus(), !1;
+                        return ((0, c.uh)(i.id, n), E.Ay.focus(), !1);
                     }
                 }
             }
@@ -154,13 +154,13 @@ let k = new V(u.h, {
         }
     },
     INVITE_MODAL_CLOSE: function () {
-        (i = null), (O = !1), (T = null), (R = null), null != y && (y.resolve?.(), (y = null));
+        ((i = null), (O = !1), (T = null), (R = null), null != y && (y.resolve?.(), (y = null)));
     },
     INVITE_ACCEPT: function () {
         O = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        (i = t), (O = !1);
+        ((i = t), (O = !1));
     },
 });

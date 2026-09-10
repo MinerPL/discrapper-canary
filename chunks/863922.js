@@ -44,7 +44,7 @@ async function A(e) {
         t = new u.LG(e);
     }
     let i = n?.body?.summaries instanceof Array ? n.body.summaries : (n?.body ?? []);
-    (i = s().takeRight(i, 75)),
+    ((i = s().takeRight(i, 75)),
         o.h.dispatch({
             type: "RECEIVE_CHANNEL_SUMMARIES",
             channelId: e,
@@ -52,7 +52,7 @@ async function A(e) {
             error: t ?? void 0,
             requestedAt: l,
             receivedAt: Date.now(),
-        });
+        }));
 }
 function C(e, t) {
     o.h.dispatch({ type: "SET_HIGHLIGHTED_SUMMARY", channelId: e, summaryId: t ?? null });
@@ -61,8 +61,8 @@ function E() {
     o.h.dispatch({ type: "TOGGLE_TOPICS_BAR" });
 }
 function I(e, t) {
-    null != e && null != t && x(e, t),
-        o.h.dispatch({ type: "SET_SELECTED_SUMMARY", channelId: e, summaryId: t ?? null });
+    (null != e && null != t && x(e, t),
+        o.h.dispatch({ type: "SET_SELECTED_SUMMARY", channelId: e, summaryId: t ?? null }));
 }
 function y(e, t) {
     o.h.dispatch({ type: "UPDATE_VISIBLE_MESSAGES", topVisibleMessage: e ?? null, bottomVisibleMessage: t ?? null });
@@ -132,8 +132,8 @@ async function N(e) {
 }
 async function _(e) {
     try {
-        await a.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
-            o.h.dispatch({ type: "DELETE_SUMMARY", summary: e });
+        (await a.Bo.del({ url: p.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+            o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new u.LG(e);
     }

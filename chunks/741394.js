@@ -8,7 +8,7 @@ function r() {
 function a(e, t) {
     let n = e.split(/[/\\]/),
         i = "" !== n[n.length - 1] ? n[n.length - 1] : e;
-    return null != t && i.endsWith(t) && (i = i.slice(0, -t.length)), i;
+    return (null != t && i.endsWith(t) && (i = i.slice(0, -t.length)), i);
 }
 function s(e) {
     let t = a(e),

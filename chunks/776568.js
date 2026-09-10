@@ -46,10 +46,10 @@ function C(e) {
         w = l.useRef(null),
         { isHoveringOrFocusing: M } = (0, c.A)(w);
     function O() {
-        k(void 0), D(void 0);
+        (k(void 0), D(void 0));
     }
     function P(e) {
-        e.stopPropagation(), O();
+        (e.stopPropagation(), O());
     }
     let R = l.useMemo(() => {
             let e = null != C && "" !== C,
@@ -78,7 +78,7 @@ function C(e) {
                         onSelectEmoji: (e) => {
                             let { emoji: t, willClose: i } = e,
                                 l = t?.id == null;
-                            O(), l ? k(t?.optionallyDiverseSequence) : (b && k(t?.name), D(t?.id)), i && n();
+                            (O(), l ? k(t?.optionallyDiverseSequence) : (b && k(t?.name), D(t?.id)), i && n());
                         },
                         guildId: t,
                         channel: S,

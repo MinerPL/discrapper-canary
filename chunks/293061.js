@@ -55,7 +55,7 @@ let j = [h.Dmq.PAST_DUE, h.Dmq.PAUSED, h.Dmq.BILLING_RETRY],
                     [l] = s.useState(Date.now()),
                     i = s.useCallback(
                         (e) => {
-                            T.default.track(h.HAw.CANCELLATION_FLOW_STEP, {
+                            (T.default.track(h.HAw.CANCELLATION_FLOW_STEP, {
                                 from_step: S.T[n],
                                 to_step: S.T[e],
                                 step_duration_ms: Date.now() - u,
@@ -64,7 +64,7 @@ let j = [h.Dmq.PAST_DUE, h.Dmq.PAUSED, h.Dmq.BILLING_RETRY],
                                 ...(0, g.j)(t),
                             }),
                                 r(e),
-                                c(Date.now());
+                                c(Date.now()));
                         },
                         [a, l, u, n, t],
                     );
@@ -84,21 +84,25 @@ let j = [h.Dmq.PAST_DUE, h.Dmq.PAUSED, h.Dmq.BILLING_RETRY],
                 analyticsLocation: o.A.CANCEL_INVOICE_PREVIEW,
             }),
             ee = null !== X ? A.Ay.getIntervalForInvoice(X) : null,
-            et = (0, i.bG)([I.A], () => {
-                if (null != I.A.get(k.gD.PREMIUM_MONTH_TIER_2))
-                    try {
-                        let e = (0, A.y8)(
-                            k.gD.PREMIUM_MONTH_TIER_2,
-                            !1,
-                            !1,
-                            { currency: F.currency, paymentSourceId: F.paymentSourceId },
-                            !1,
-                        );
-                        return (0, N.$g)(e.amount, e.currency);
-                    } catch {
-                        return;
-                    }
-            }, [F.currency, F.paymentSourceId]),
+            et = (0, i.bG)(
+                [I.A],
+                () => {
+                    if (null != I.A.get(k.gD.PREMIUM_MONTH_TIER_2))
+                        try {
+                            let e = (0, A.y8)(
+                                k.gD.PREMIUM_MONTH_TIER_2,
+                                !1,
+                                !1,
+                                { currency: F.currency, paymentSourceId: F.paymentSourceId },
+                                !1,
+                            );
+                            return (0, N.$g)(e.amount, e.currency);
+                        } catch {
+                            return;
+                        }
+                },
+                [F.currency, F.paymentSourceId],
+            ),
             ea = s.useMemo(() => (0, d.A)(), []);
         s.useEffect(() => {
             T.default.track(h.HAw.CANCELLATION_FLOW_STARTED, { location_stack: a, load_id: ea, ...(0, g.j)(F) });
@@ -158,7 +162,7 @@ let j = [h.Dmq.PAST_DUE, h.Dmq.PAUSED, h.Dmq.BILLING_RETRY],
                     setStep: Y,
                     premiumType: q,
                     onClose: () => {
-                        u(),
+                        (u(),
                             T.default.track(h.HAw.CANCELLATION_FLOW_STEP, {
                                 from_step: S.T[B],
                                 to_step: null,
@@ -167,7 +171,7 @@ let j = [h.Dmq.PAST_DUE, h.Dmq.PAUSED, h.Dmq.BILLING_RETRY],
                                 location_stack: a,
                                 load_id: ea,
                                 ...(0, g.j)(F),
-                            });
+                            }));
                     },
                     transitionState: x,
                     premiumSubscription: F,

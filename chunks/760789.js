@@ -63,7 +63,7 @@ let g = (e) => {
         h = i.useCallback(() => {
             if (!p.current && !C.current) {
                 if (I(o, { paymentSources: s, eligiblePaymentGateways: r })) {
-                    u(o), (p.current = !0);
+                    (u(o), (p.current = !0));
                     return;
                 }
                 u(
@@ -83,7 +83,7 @@ let g = (e) => {
     let f = i.useCallback(
         (e) => {
             let { paymentSource: t } = e;
-            (C.current = !0), m(), c(t.id), u(t.id);
+            ((C.current = !0), m(), c(t.id), u(t.id));
         },
         [u, c, m],
     );
@@ -116,12 +116,12 @@ function v(e) {
             captureStartingFractionalPremiumEndsAt: e.captureStartingFractionalPremiumEndsAt,
             captureStartingPaymentFlowWithPaymentSources: e.captureStartingPaymentFlowWithPaymentSources,
         }));
-    i.useEffect(() => {
+    (i.useEffect(() => {
         t && null == r && o(n);
     }, [t, n, o, r]),
         i.useEffect(() => {
             null != l && a(l.planId);
-        }, [l, a]);
+        }, [l, a]));
     let { endsAt: u } = (0, P.A)({ forceFetch: !1, excludeReverseTrial: !0 });
     return (
         i.useEffect(() => {
@@ -286,7 +286,7 @@ function B() {
         }));
     return (i.useEffect(() => {
         let n = t.current;
-        (t.current = e), n === w.pn.REVIEW && e !== w.pn.REVIEW && (a(null), s(null));
+        ((t.current = e), n === w.pn.REVIEW && e !== w.pn.REVIEW && (a(null), s(null)));
     }, [e, a, s]),
     null == n && null == r)
         ? null
@@ -311,7 +311,7 @@ class V {
     checkoutStore;
     isPatchingRef;
     constructor(e, t) {
-        (this.checkoutStore = e), (this.isPatchingRef = t);
+        ((this.checkoutStore = e), (this.isPatchingRef = t));
     }
     shouldPatchOrder(e) {
         return null == e || null == e.billing_facet || e.billing_facet.payment_gateway !== H.kM.VIRTUAL_CURRENCY;
@@ -340,7 +340,7 @@ class V {
         let i = this.pendingOrderUpdates(t, n);
         if (null == i || this.isPatchingRef.current) return;
         let { setOrder: r, setIsOrderSyncing: a, setOrderSyncError: s } = this.checkoutStore.getState();
-        (this.isPatchingRef.current = !0), a(!0);
+        ((this.isPatchingRef.current = !0), a(!0));
         try {
             let e = await (0, W.iY)({ orderId: t.id, updates: i, expectedRevision: t.revision });
             if (null != e) {
@@ -348,14 +348,14 @@ class V {
                 let { currency: n, ...l } = i;
                 if (null != this.pendingOrderUpdates(e, l)) {
                     let e = Error("Order patch was not applied");
-                    (0, Y.pM)(e, { tags: { source: "order_sync" }, extra: { orderId: t.id } }), s(e);
+                    ((0, Y.pM)(e, { tags: { source: "order_sync" }, extra: { orderId: t.id } }), s(e));
                 }
             }
         } catch (n) {
             let e = n instanceof Error ? n : Error(String(n));
-            (0, Y.gr)(n) || (0, Y.pM)(e, { tags: { source: "order_sync" }, extra: { orderId: t.id } }), s(e);
+            ((0, Y.gr)(n) || (0, Y.pM)(e, { tags: { source: "order_sync" }, extra: { orderId: t.id } }), s(e));
         } finally {
-            (this.isPatchingRef.current = !1), a(!1);
+            ((this.isPatchingRef.current = !1), a(!1));
         }
     }
 }
@@ -484,8 +484,8 @@ function ei() {
                     for (let t of et) E.h.unsubscribe(t, e);
                     for (let e of en) E.h.unsubscribe(e, t);
                     for (let e of el) E.h.unsubscribe(e, r);
-                    E.h.unsubscribe("PAYMENT_AUTHENTICATION_ERROR", n),
-                        E.h.unsubscribe("PAYMENT_AUTHENTICATION_CANCEL", l);
+                    (E.h.unsubscribe("PAYMENT_AUTHENTICATION_ERROR", n),
+                        E.h.unsubscribe("PAYMENT_AUTHENTICATION_CANCEL", l));
                 }
             );
         }, [e, t, n, l, r]),
@@ -636,12 +636,12 @@ function em(e) {
             );
         }),
         R = i.useRef(null != c);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         R.current || null == c || (j.getState().setOrder(c), (R.current = !0));
     }, [c, j]),
         i.useEffect(() => {
             j.getState().setCheckoutInitParameters(r);
-        }, [j, r]);
+        }, [j, r]));
     let M = ((t = r.purchaseType), null != (n = r.unifiedCheckoutFlow) && t === J.VVm.SUBSCRIPTION && ed.includes(n)),
         O = r.unifiedCheckoutFlow === h.C.GUILD_ROLE_CHECKOUT,
         L = r.purchaseType === J.VVm.ONE_TIME && r.unifiedCheckoutFlow !== h.C.ORB_CHECKOUT;

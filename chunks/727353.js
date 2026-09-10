@@ -31,13 +31,17 @@ function v(e) {
             className: S,
         } = e,
         { actionString: I, canWatch: C } = (0, x.K)(t),
-        P = (0, a.bG)([u.A], () => {
-            if (null != i) {
-                if (null != i.id) return u.A.getApplication(i.id);
-                else if (null != i.name) return u.A.getApplicationByName(i.name);
-            }
-            return null;
-        }, [i]),
+        P = (0, a.bG)(
+            [u.A],
+            () => {
+                if (null != i) {
+                    if (null != i.id) return u.A.getApplication(i.id);
+                    else if (null != i.name) return u.A.getApplicationByName(i.name);
+                }
+                return null;
+            },
+            [i],
+        ),
         E =
             null != l && null != l.name
                 ? f.intl.formatToPlainString(f.t["4CQq9Q"], { name: l.name })

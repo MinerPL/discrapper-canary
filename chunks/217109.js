@@ -40,7 +40,7 @@ function p(e) {
                     i = Math.min(n - 2, a + r - 1);
                 a = Math.max(1, i - r + 1);
                 let s = Array.from({ length: r }, (e, t) => a + t);
-                a > 1 && (s[0] = "ellipsis"), i < n - 2 && (s[s.length - 1] = "ellipsis"), (e = [0, ...s, n - 1]);
+                (a > 1 && (s[0] = "ellipsis"), i < n - 2 && (s[s.length - 1] = "ellipsis"), (e = [0, ...s, n - 1]));
             }
             return e.map((e, n) =>
                 "number" == typeof e
@@ -124,7 +124,8 @@ function v(e, t, n) {
             perPage: a,
             setPage: l.useCallback(
                 (e) => {
-                    d(e), s && n?.current != null && n.current.scrollIntoView({ behavior: "instant", block: "start" });
+                    (d(e),
+                        s && n?.current != null && n.current.scrollIntoView({ behavior: "instant", block: "start" }));
                 },
                 [s, n],
             ),

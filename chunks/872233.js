@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(323874), n(14289), n(35956);
+(n.d(t, { default: () => T }), n(323874), n(14289), n(35956));
 var i = n(477900),
     a = n(582128),
     c = n(224640),
@@ -48,7 +48,7 @@ function T(e) {
                             })
                             .catch(() => {}),
                         () => {
-                            (a = !0), null != t && URL.revokeObjectURL(t), n(void 0);
+                            ((a = !0), null != t && URL.revokeObjectURL(t), n(void 0));
                         }
                     );
                 }, [e]),
@@ -110,14 +110,14 @@ function T(e) {
             m(!1));
     }
     async function Q() {
-        v.current?.pause(),
+        (v.current?.pause(),
             await (0, d.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("677508"), n.e("418710")]).then(n.bind(n, 770101));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
                         onSelectGuild: (e) => {
-                            t.onClose(),
+                            (t.onClose(),
                                 I(),
                                 (0, U.g)({
                                     analyticsLocations: g,
@@ -128,10 +128,10 @@ function T(e) {
                                         objectType: R.AnalyticsObjectTypes.BUY,
                                     },
                                     guild: e,
-                                });
+                                }));
                         },
                     });
-            });
+            }));
     }
     let F = E.intl.string(E.t["0f1VCH"]);
     return (0, i.jsxs)(c.d, {

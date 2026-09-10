@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, J: () => L }), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => M, J: () => L }), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -78,7 +78,7 @@ function R(e) {
             }),
             (n.src = e),
             () => {
-                d(void 0), m({ width: 0, height: 0 }), URL.revokeObjectURL(e);
+                (d(void 0), m({ width: 0, height: 0 }), URL.revokeObjectURL(e));
             }
         );
     }, [t]);
@@ -147,7 +147,7 @@ function O(e) {
             return (
                 m(e),
                 () => {
-                    m(void 0), URL.revokeObjectURL(e);
+                    (m(void 0), URL.revokeObjectURL(e));
                 }
             );
         }, [t]),

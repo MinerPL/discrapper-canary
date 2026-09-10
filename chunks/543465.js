@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => q, b5: () => j, wn: () => H }), n(938796);
+(n.d(t, { Ay: () => X, b5: () => j, wn: () => H }), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -52,15 +52,15 @@ function w(e, t) {
         i = n?.channel_overrides ?? {},
         s = j(t.channel_overrides),
         l = { ...H(e), ...n, ...t, channel_overrides: s };
-    O.clearTimer(e),
+    (O.clearTimer(e),
         r().forEach(i, (e) => {
             R.clearTimer(e.channel_id);
         }),
         G(e, l),
         (m[e] = l),
-        (D[e] = K(m[e]));
+        (D[e] = K(m[e])));
     let o = r().filter(l.channel_overrides, (e) => a.Lt(e.flags ?? 0, T.vv.OPT_IN_ENABLED));
-    (v[e] = new Set(o.map((e) => e.channel_id))),
+    ((v[e] = new Set(o.map((e) => e.channel_id))),
         (function (e) {
             if (null == e) return;
             let t = new Set(v[e]),
@@ -71,47 +71,47 @@ function w(e, t) {
             }
             Object.keys(n).length > 0 ? (U[e] = t) : delete U[e];
         })(e),
-        delete g[e];
+        delete g[e]);
 }
 function G(e, t) {
-    !0 === t.muted &&
+    (!0 === t.muted &&
         O.setTimer(e, t.mute_config, () => {
-            x(e, { muted: !1 }), l.h.dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: e });
+            (x(e, { muted: !1 }), l.h.dispatch({ type: "GUILD_MUTE_EXPIRED", guildId: e }));
         }) &&
         (t.muted = !1),
         r().forEach(t.channel_overrides, (t) => {
             !0 === t.muted &&
                 R.setTimer(t.channel_id, t.mute_config, () => {
-                    k(e, t.channel_id, { muted: !1 }),
-                        l.h.dispatch({ type: "CHANNEL_MUTE_EXPIRED", guildId: e, channelId: t.channel_id });
+                    (k(e, t.channel_id, { muted: !1 }),
+                        l.h.dispatch({ type: "CHANNEL_MUTE_EXPIRED", guildId: e, channelId: t.channel_id }));
                 }) &&
                 (t.muted = !1);
-        });
+        }));
 }
 function x(e, t) {
     let n = m[e];
     w(e, { channel_overrides: n?.channel_overrides ?? {}, ...t });
 }
 function k(e, t, n) {
-    let i = B(e, t, n);
-    V(e, { [t]: i });
+    let i = V(e, t, n);
+    B(e, { [t]: i });
 }
 function F(e, t) {
     let n = {},
         i = (null != e ? P[e] : null) ?? {};
-    _.default.keys(t).forEach((r) => {
-        let a = B(e, r, t[r]);
-        (n[r] = a), (i[r] = { flags: a.flags ?? 0 });
+    (_.default.keys(t).forEach((r) => {
+        let a = V(e, r, t[r]);
+        ((n[r] = a), (i[r] = { flags: a.flags ?? 0 }));
     }),
         null != e && (P[e] = { ...P[e], ...i }),
-        V(e, n);
+        B(e, n));
 }
-function V(e, t) {
+function B(e, t) {
     let n = m[e],
         i = n?.channel_overrides ?? {};
     w(e, { channel_overrides: null == n ? t : { ...i, ...t } });
 }
-function B(e, t, n) {
+function V(e, t, n) {
     let i = m[e];
     return { channel_id: t, muted: !1, ...(i?.channel_overrides ?? {})[t], ...n };
 }
@@ -127,7 +127,7 @@ function W(e) {
     return m[e] ?? H(e);
 }
 function Y(e) {
-    (S = a.Lt(e.flags, f.i.USE_NEW_NOTIFICATIONS)), (N = a.Lt(e.flags, f.i.MENTION_ON_ALL_MESSAGES)), (C = e);
+    ((S = a.Lt(e.flags, f.i.USE_NEW_NOTIFICATIONS)), (N = a.Lt(e.flags, f.i.MENTION_ON_ALL_MESSAGES)), (C = e));
 }
 function K(e) {
     return new Set(
@@ -146,7 +146,7 @@ class z extends s.Ay.PersistedStore {
     static displayName = "UserGuildSettingsStore";
     static persistKey = "collapsedGuilds";
     initialize(e) {
-        this.waitFor(E.A, A.A, d.A, c.A, h.default),
+        (this.waitFor(E.A, A.A, d.A, c.A, h.default),
             null != e &&
                 ((S = e.useNewNotifications ?? !1),
                 "userGuildSettings" in e &&
@@ -154,7 +154,7 @@ class z extends s.Ay.PersistedStore {
                     (v = r().mapValues(e.optedInChannelsByGuild ?? {}, (e) => new Set(e))),
                     r().forEach(m, (e, t) => {
                         D[t] = K(e);
-                    })));
+                    }))));
     }
     getState() {
         return { useNewNotifications: S };
@@ -210,7 +210,7 @@ class z extends s.Ay.PersistedStore {
     }
     isChannelMuted(e, t) {
         let n = E.A.getChannel(t);
-        return (e = n?.getGuildId() ?? e), this.getMutedChannels(e).has(t);
+        return ((e = n?.getGuildId() ?? e), this.getMutedChannels(e).has(t));
     }
     isCategoryMuted(e, t) {
         let n = E.A.getChannel(t);
@@ -369,7 +369,7 @@ class z extends s.Ay.PersistedStore {
               : p.e.UNSET;
     }
 }
-let q = new z(l.h, {
+let X = new z(l.h, {
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e;
         t.forEach((e) => {
@@ -382,23 +382,26 @@ let q = new z(l.h, {
     },
     USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function (e) {
         let { guildId: t, settings: n } = e;
-        x(t, n), F(t, n.channel_overrides);
+        (x(t, n), F(t, n.channel_overrides));
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE: function (e) {
         let { guildId: t, channelId: n, settings: i } = e;
-        null != t && null != i.flags && (P[t] = { ...P[t], [n]: { flags: i.flags } }), k(t, n, i);
+        (null != t && null != i.flags && (P[t] = { ...P[t], [n]: { flags: i.flags } }), k(t, n, i));
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function (e) {
         let { guildId: t, overrides: n } = e;
         return !(null == t || d.A.isFullServerPreview(t)) && (F(t, n), !0);
     },
     CONNECTION_OPEN: function (e) {
-        Y(e.notificationSettings), O.reset(), R.reset(), e.userGuildSettings.partial || ((m = {}), (D = {}), (v = {}));
+        (Y(e.notificationSettings),
+            O.reset(),
+            R.reset(),
+            e.userGuildSettings.partial || ((m = {}), (D = {}), (v = {})));
         let t = new Set();
         for (let n in (e.userGuildSettings.entries.forEach((e) => {
-            "channel_overrides" in e || (e.channel_overrides = {}),
+            ("channel_overrides" in e || (e.channel_overrides = {}),
                 w(e.guild_id, e),
-                null != e.guild_id && t.add(e.guild_id);
+                null != e.guild_id && t.add(e.guild_id));
         }),
         m))
             t.has(n) || G(n, m[n]);
@@ -416,15 +419,15 @@ let q = new z(l.h, {
                     i = new Set();
                 for (let t in e.channel_overrides) {
                     let r = e.channel_overrides[t];
-                    (0, o.tG)(r) && n.add(t), a.Lt(r.flags ?? 0, T.vv.OPT_IN_ENABLED) && i.add(t);
+                    ((0, o.tG)(r) && n.add(t), a.Lt(r.flags ?? 0, T.vv.OPT_IN_ENABLED) && i.add(t));
                 }
-                (D[t] = n), (v[t] = i);
+                ((D[t] = n), (v[t] = i));
             }));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { allUserGuildSettings: t } = e,
             { userGuildSettings: n, mutedChannels: i, optedInChannelsByGuild: r } = t;
-        (m = { ...n }),
+        ((m = { ...n }),
             (D = {}),
             (v = {}),
             _.default.keys(i).forEach((e) => {
@@ -432,7 +435,7 @@ let q = new z(l.h, {
             }),
             _.default.keys(r).forEach((e) => {
                 v[e] = new Set(r[e]);
-            });
+            }));
     },
     GUILD_CREATE: $,
     GUILD_UPDATE: $,
@@ -453,7 +456,7 @@ let q = new z(l.h, {
     CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: function (e) {
         let { guildId: t } = e;
         if (null == t) return !1;
-        delete P[t], delete U[t];
+        (delete P[t], delete U[t]);
     },
     NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;

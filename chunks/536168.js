@@ -1,6 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.CompressedTypes = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.CompressedTypes = void 0));
 class n {}
-(t.CompressedTypes = n),
+((t.CompressedTypes = n),
     (n._7Z = {
         extension: "7z",
         mimeType: "application/x-7z-compressed",
@@ -126,4 +126,4 @@ class n {}
                 ],
             },
         ],
-    });
+    }));

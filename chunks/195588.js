@@ -7,7 +7,7 @@ function a(e, t = (0, r.qd)("fetch")) {
         s = 0;
     return (0, o.o)(e, function (o) {
         let a = o.body.length;
-        (n += a), s++;
+        ((n += a), s++);
         let l = {
             body: o.body,
             method: "POST",
@@ -16,7 +16,7 @@ function a(e, t = (0, r.qd)("fetch")) {
             keepalive: n <= 6e4 && s < 15,
             ...e.fetchOptions,
         };
-        if (!t) return (0, r.y7)("fetch"), (0, i.xg)("No fetch implementation available");
+        if (!t) return ((0, r.y7)("fetch"), (0, i.xg)("No fetch implementation available"));
         try {
             return t(e.url, l).then(
                 (e) => (
@@ -32,7 +32,7 @@ function a(e, t = (0, r.qd)("fetch")) {
                 ),
             );
         } catch (e) {
-            return (0, r.y7)("fetch"), (n -= a), s--, (0, i.xg)(e);
+            return ((0, r.y7)("fetch"), (n -= a), s--, (0, i.xg)(e));
         }
     });
 }

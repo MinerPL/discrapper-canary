@@ -4,10 +4,10 @@ var l = n(17928),
 class a extends Map {
     maxSize;
     constructor(t) {
-        super(), (this.maxSize = t);
+        (super(), (this.maxSize = t));
     }
     set(t, e) {
-        return this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(t, e);
+        return (this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(t, e));
     }
 }
 let u = new a(196606),
@@ -16,11 +16,11 @@ let u = new a(196606),
     d = new a(196606);
 function s(t, e, n) {
     let l = u.get(t) ?? new Map();
-    l.set(e, n), u.set(t, l), o++;
+    (l.set(e, n), u.set(t, l), o++);
 }
 function c(t) {
     let e = r.get(t);
-    null != e && d.delete(e), r.delete(t), u.delete(t), o++;
+    (null != e && d.delete(e), r.delete(t), u.delete(t), o++);
 }
 class p extends l.Ay.Store {
     static displayName = "LocalInteractionComponentStateStore";
@@ -37,11 +37,11 @@ class p extends l.Ay.Store {
 }
 let I = new p(i.h, {
     LOGOUT: function () {
-        u.clear(), r.clear(), d.clear(), o++;
+        (u.clear(), r.clear(), d.clear(), o++);
     },
     QUEUE_INTERACTION_COMPONENT_STATE: function (t) {
         let { messageId: e, nonce: n, componentId: l, state: i } = t;
-        r.set(e, n), d.set(n, { messageId: e, componentId: l }), s(e, l, i);
+        (r.set(e, n), d.set(n, { messageId: e, componentId: l }), s(e, l, i));
     },
     SET_INTERACTION_COMPONENT_STATE: function (t) {
         let { rootContainerId: e, componentId: n, state: l } = t;
@@ -62,7 +62,7 @@ let I = new p(i.h, {
         if (null == e) return !1;
         let n = d.get(e);
         if (null == n) return !1;
-        r.delete(n.messageId), d.delete(e), o++;
+        (r.delete(n.messageId), d.delete(e), o++);
     },
     INTERACTION_FAILURE: function (t) {
         let { nonce: e } = t;
@@ -77,6 +77,6 @@ let I = new p(i.h, {
     },
     CLEAR_INTERACTION_MODAL_STATE: function (t) {
         let { customId: e } = t;
-        u.delete(e), o++;
+        (u.delete(e), o++);
     },
 });

@@ -9,5 +9,5 @@ let t = { PRIMARY: p.Xc, DANGER: p.Wg, WARNING: p.vH, SUCCESS: p.CN, BRAND: p.cX
         let { children: s, outline: d = !1, editable: c, type: N = t.PRIMARY, className: R, ...l } = e;
         return (0, a.jsx)("div", { ref: r, className: i()(R, p.Nr, N, { [p.VR]: d }), ...l, children: s });
     });
-(N.displayName = "Card"), (N.Types = t);
+((N.displayName = "Card"), (N.Types = t));
 let R = N;

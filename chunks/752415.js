@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => h });
+(n.r(t), n.d(t, { default: () => h }));
 var a = {
         lessThanXSeconds: { one: "1\uCD08 \uBBF8\uB9CC", other: "{{count}}\uCD08 \uBBF8\uB9CC" },
         xSeconds: { one: "1\uCD08", other: "{{count}}\uCD08" },

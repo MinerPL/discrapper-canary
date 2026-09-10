@@ -34,7 +34,7 @@ function p(e) {
               label: w ? c.intl.string(c.t["8wXU9B"]) : c.intl.string(c.t.ytCpKs),
               action: w
                   ? () => {
-                        A?.(), d.A.unignoreUser(x, C ?? "use-ignore-user-item-web", g ?? void 0);
+                        (A?.(), d.A.unignoreUser(x, C ?? "use-ignore-user-item-web", g ?? void 0));
                     }
                   : () => {
                         (0, s.openModalLazy)(

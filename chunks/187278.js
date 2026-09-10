@@ -48,7 +48,7 @@ let x = function (e) {
                             variant: "critical-primary",
                             text: b.intl.string(p.default.mK40bk),
                             onClick: function () {
-                                y(!1), v(t.id);
+                                (y(!1), v(t.id));
                             },
                             disabled: w || g,
                             loading: w,

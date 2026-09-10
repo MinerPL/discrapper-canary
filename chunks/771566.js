@@ -106,18 +106,18 @@ function F(e) {
     if ((s()(null != a && null != c, "Missing startingPlan or newPlan"), M.LE.indexOf(l) < M.LE.indexOf(n)))
         switch (n) {
             case M.gD.PREMIUM_MONTH_TIER_1:
-                (t = U.intl.string(U.t.knvOVz)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.o6hBiR, {}));
+                ((t = U.intl.string(U.t.knvOVz)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.o6hBiR, {})));
                 break;
             case M.gD.PREMIUM_MONTH_TIER_2:
-                (t = U.intl.string(U.t.f8Dquh)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.A4THYt, {}));
+                ((t = U.intl.string(U.t.f8Dquh)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.A4THYt, {})));
                 break;
             case M.gD.PREMIUM_YEAR_TIER_1:
-                (t = U.intl.string(U.t.YZd5rw)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.MHAxpE, {}));
+                ((t = U.intl.string(U.t.YZd5rw)), L.NcF.has(r ?? L.hes.UNKNOWN) && (t = U.intl.format(U.t.MHAxpE, {})));
                 break;
             case M.gD.PREMIUM_YEAR_TIER_2:
-                (t = U.intl.formatToPlainString(U.t["M/Lknl"], { numFreeGuildSubscriptions: M.M4 })),
+                ((t = U.intl.formatToPlainString(U.t["M/Lknl"], { numFreeGuildSubscriptions: M.M4 })),
                     L.NcF.has(r ?? L.hes.UNKNOWN) &&
-                        (t = U.intl.format(U.t.mULxLW, { numFreeGuildSubscriptions: M.M4 }));
+                        (t = U.intl.format(U.t.mULxLW, { numFreeGuildSubscriptions: M.M4 })));
                 break;
             case M.gD.PREMIUM_3_MONTH_TIER_2:
             case M.gD.PREMIUM_6_MONTH_TIER_2:
@@ -233,7 +233,7 @@ function H(e) {
         });
     else if (K && !f) {
         let e = S.A.get(l);
-        s()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             e.skuId === M.pe.TIER_0
                 ? (t = (0, i.jsxs)(u.E, {
                       variant: "text-md/medium",
@@ -261,11 +261,11 @@ function H(e) {
                               }),
                           }),
                       ],
-                  }));
+                  })));
     } else if (null != a) t = (0, i.jsx)(F, { planId: l, startingPremiumSubscriptionPlanId: a });
     else if (null != v) {
         let e = S.A.get(l);
-        s()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.E, {
@@ -281,16 +281,16 @@ function H(e) {
                         children: U.intl.format(U.t["6aZ0NR"], { guildName: v.name }),
                     }),
                 ],
-            }));
+            })));
     } else {
         let e = S.A.get(l);
-        s()(null != e, "Missing plan"),
+        (s()(null != e, "Missing plan"),
             (t = (0, i.jsx)(u.E, {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
                 className: G.Qq,
                 children: q(e),
-            }));
+            })));
     }
     let [z, Q] = r.useState(!1),
         $ = r.useCallback(() => {

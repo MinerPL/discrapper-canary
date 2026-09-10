@@ -1,5 +1,5 @@
 var r = n(271434);
-(t.exports = function t(e, n, o) {
+((t.exports = function t(e, n, o) {
     if ((r(n) || ((o = n || o), (n = [])), (o = o || {}), e instanceof RegExp)) {
         var a,
             u,
@@ -17,26 +17,26 @@ var r = n(271434);
                     asterisk: !1,
                     pattern: null,
                 });
-        return (e.keys = c), e;
+        return ((e.keys = c), e);
     }
     if (r(e)) {
         for (var v, h = n, d = o, m = [], y = 0; y < e.length; y++) m.push(t(e[y], h, d).source);
-        return ((v = RegExp("(?:" + m.join("|") + ")", s(d))).keys = h), v;
+        return (((v = RegExp("(?:" + m.join("|") + ")", s(d))).keys = h), v);
     }
-    return (a = n), l(i(e, (u = o)), a, u);
+    return ((a = n), l(i(e, (u = o)), a, u));
 }),
     (t.exports.parse = i),
     (t.exports.compile = function (t, e) {
         return u(i(t, e), e);
     }),
     (t.exports.tokensToFunction = u),
-    (t.exports.tokensToRegExp = l);
+    (t.exports.tokensToRegExp = l));
 var o = RegExp(
     "(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
     "g",
 );
 function i(t, e) {
-    for (var n, r = [], i = 0, a = 0, u = "", s = (e && e.delimiter) || "/"; null != (n = o.exec(t)); ) {
+    for (var n, r = [], i = 0, a = 0, u = "", s = (e && e.delimiter) || "/"; null != (n = o.exec(t));) {
         var l,
             p,
             f = n[0],
@@ -78,7 +78,7 @@ function i(t, e) {
                         : c(p) + "|(?:(?!" + c(p) + ")[^" + c(l) + "])+?"),
         });
     }
-    return a < t.length && (u += t.substr(a)), u && r.push(u), r;
+    return (a < t.length && (u += t.substr(a)), u && r.push(u), r);
 }
 function a(t) {
     return encodeURI(t).replace(/[\/?#]/g, function (t) {
@@ -153,10 +153,10 @@ function l(t, e, n) {
         else {
             var f = c(p.prefix),
                 v = "(?:" + p.pattern + ")";
-            e.push(p),
+            (e.push(p),
                 p.repeat && (v += "(?:" + f + v + ")*"),
                 (u += v =
-                    p.optional ? (p.partial ? f + "(" + v + ")?" : "(?:" + f + "(" + v + "))?") : f + "(" + v + ")");
+                    p.optional ? (p.partial ? f + "(" + v + ")?" : "(?:" + f + "(" + v + "))?") : f + "(" + v + ")"));
         }
     }
     var h = c(n.delimiter || "/"),

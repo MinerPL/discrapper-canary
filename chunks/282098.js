@@ -1,4 +1,4 @@
-n.d(t, { A: () => eo, i: () => el }), n(321073);
+(n.d(t, { A: () => eo, i: () => el }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(459838),
@@ -19,17 +19,17 @@ class p {
     timelineLength;
     clipNow;
     constructor(e = 3e5, t) {
-        (this.timelineLength = e), (this.clipNow = t);
+        ((this.timelineLength = e), (this.clipNow = t));
     }
     clear() {
         this.timeline.length = 0;
     }
     updateLength(e) {
-        (this.timelineLength = e), this.cull();
+        ((this.timelineLength = e), this.cull());
     }
     add(e) {
         if (0 === this.timeline.length || this.timeline[this.timeline.length - 1].timestamp <= e.timestamp) {
-            this.timeline.push(e), this.cull();
+            (this.timeline.push(e), this.cull());
             return;
         }
         let t = this.timeline.length;
@@ -38,16 +38,16 @@ class p {
                 t = n + 1;
                 break;
             }
-        t === this.timeline.length && this.timeline[0].timestamp > e.timestamp && (t = 0),
+        (t === this.timeline.length && this.timeline[0].timestamp > e.timestamp && (t = 0),
             this.timeline.splice(t, 0, e),
-            this.cull();
+            this.cull());
     }
     read(e, t) {
-        return this.cull(), this.timeline.filter((n) => n.timestamp >= e && n.timestamp <= t);
+        return (this.cull(), this.timeline.filter((n) => n.timestamp >= e && n.timestamp <= t));
     }
     cull() {
         let e = this.clipNow() - this.timelineLength;
-        for (; this.timeline.length > 0 && this.timeline[0].timestamp < e; ) this.timeline.shift();
+        for (; this.timeline.length > 0 && this.timeline[0].timestamp < e;) this.timeline.shift();
     }
 }
 var T = n(439818),
@@ -65,14 +65,14 @@ function v(e, t, n) {
     let i = 0,
         r = e.length - 1,
         a = -1;
-    for (; i <= r; ) {
+    for (; i <= r;) {
         let s = (i + r) >> 1,
             l = e[s].startMs;
         l < t || (n && l === t) ? ((a = s), (i = s + 1)) : (r = s - 1);
     }
     return a;
 }
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162));
 var b = n(260549);
 function M(e) {
     if (e.eventName !== O.C.MultiKill) return null;
@@ -118,22 +118,22 @@ function k(e) {
 function F(e, t, n) {
     return { srcStartMs: e.startMs - t.beforeMs, srcEndMs: e.endMs + t.afterMs, ...n };
 }
-function V(e) {
+function B(e) {
     let t = [];
     for (let n of e) {
         let e = t[t.length - 1];
         if (null != e && n.srcStartMs <= e.srcEndMs) {
-            (e.srcEndMs = Math.max(e.srcEndMs, n.srcEndMs)),
+            ((e.srcEndMs = Math.max(e.srcEndMs, n.srcEndMs)),
                 (e.hasGame = !0 === e.hasGame || !0 === n.hasGame),
                 (e.hasAudio = !0 === e.hasAudio || !0 === n.hasAudio),
-                null != n.label && (e.label = null != e.label ? `${e.label} + ${n.label}` : n.label);
+                null != n.label && (e.label = null != e.label ? `${e.label} + ${n.label}` : n.label));
             continue;
         }
         t.push({ ...n });
     }
     return t;
 }
-function B(e, t) {
+function V(e, t) {
     let n = [],
         i = [];
     for (let r of e) {
@@ -187,10 +187,10 @@ function H(e, t, n) {
                 }),
                 i = 0;
             for (let e of n)
-                (e.blendIn = 0 === e.index ? 0 : Math.min(t, e.durMs)),
+                ((e.blendIn = 0 === e.index ? 0 : Math.min(t, e.durMs)),
                     (e.dstStart = 0 === e.index ? 0 : Math.max(0, i - e.blendIn)),
                     (e.dstEnd = e.dstStart + e.durMs),
-                    (i = e.dstEnd);
+                    (i = e.dstEnd));
             return n;
         })(e, s),
         c = [],
@@ -211,7 +211,7 @@ function H(e, t, n) {
                     dst_end_ms: e.dstEnd,
                     transform: o,
                 };
-            e.blendIn > 0 && (s.transition_in = { kind: "blend", duration_ms: e.blendIn }), _.push(s);
+            (e.blendIn > 0 && (s.transition_in = { kind: "blend", duration_ms: e.blendIn }), _.push(s));
             let l = {
                 input: r,
                 src_start_ms: e.srcStart,
@@ -220,7 +220,7 @@ function H(e, t, n) {
                 dst_end_ms: e.dstEnd,
                 volume: 1,
             };
-            e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), E.push(l);
+            (e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), E.push(l));
         }),
         {
             version: 1,
@@ -248,20 +248,20 @@ function z(e, t) {
     let n = e.additionalData?.round;
     return "number" == typeof n ? n : null;
 }
-function q(e) {
+function X(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
-function Z(e, t, n) {
+function q(e, t, n) {
     let i = 0,
         r = e.length;
-    for (; i < r; ) {
+    for (; i < r;) {
         let a = (i + r) >> 1,
             s = e[a].timestamp_ms;
         s < t || (!n && s === t) ? (i = a + 1) : (r = a);
     }
     return i;
 }
-var X = n(435558);
+var Z = n(435558);
 function Q(e) {
     return 1e3 * Math.floor(e / 1e3);
 }
@@ -279,7 +279,7 @@ function et(e, t) {
     for (let r of e) {
         if (null == r) continue;
         let e = r.videoEndMs - r.videoStartMs;
-        (n += e), i || (n -= Math.min(t, e)), (i = !1);
+        ((n += e), i || (n -= Math.min(t, e)), (i = !1));
     }
     return n;
 }
@@ -348,12 +348,12 @@ function er(e) {
                                   i = null;
                               for (let r of e) {
                                   if (r.eventName === O.C.InMatchChange && r.additionalData?.inMatch !== !0) {
-                                      n.clear(), (i = null);
+                                      (n.clear(), (i = null));
                                       continue;
                                   }
                                   let e = z(r, O.C.RoundStart);
                                   if (null != e) {
-                                      null != i && e <= i && n.clear(), n.set(e, r.timestamp_ms), (i = e);
+                                      (null != i && e <= i && n.clear(), n.set(e, r.timestamp_ms), (i = e));
                                       continue;
                                   }
                                   let a = z(r, O.C.RoundEnd);
@@ -376,10 +376,10 @@ function er(e) {
                           l =
                               ((t = (function (e, t) {
                                   if (e?.calculateModifiers == null || 0 === t.length) return () => 1;
-                                  let n = q(t[0].timestamp_ms),
-                                      i = q(t[t.length - 1].timestamp_ms),
+                                  let n = X(t[0].timestamp_ms),
+                                      i = X(t[t.length - 1].timestamp_ms),
                                       r = new Map(e.calculateModifiers(n, i).map((e) => [e.timestamp_ms, e.modifier]));
-                                  return (e) => r.get(q(e)) ?? 1;
+                                  return (e) => r.get(X(e)) ?? 1;
                               })(s, r)),
                               (n = new Float64Array(r.length + 1)),
                               (i = 0),
@@ -388,14 +388,14 @@ function er(e) {
                                   s?.rescoreEvent != null &&
                                       (a = e.eventName === O.C.Death ? -0.1 : (s.rescoreEvent(e) ?? a));
                                   let l = a * t(e.timestamp_ms);
-                                  Number.isFinite(l) || (i++, (l = 0)), (n[r + 1] = n[r] + l);
+                                  (Number.isFinite(l) || (i++, (l = 0)), (n[r + 1] = n[r] + l));
                               }),
                               i > 0 &&
                                   j.nx.warn(`automontage: ignored ${i} non-finite event score(s) while ranking rounds`),
                               a
                                   .map((e) => {
-                                      let t = Z(r, e.startMs, !1),
-                                          i = Z(r, e.endMs, !1);
+                                      let t = q(r, e.startMs, !1),
+                                          i = q(r, e.endMs, !1);
                                       return { round: e, score: n[i] - n[t] };
                                   })
                                   .sort((e, t) => t.score - e.score)),
@@ -407,12 +407,12 @@ function er(e) {
                               ),
                               null
                           );
-                      let d = V(
+                      let d = B(
                               (function (e, t) {
                                   let n = e.startMs + 23e3,
                                       i = [F({ startMs: n, endMs: n }, Y, { label: `r${e.number} context` })],
-                                      r = Z(t, n, !1),
-                                      a = Z(t, e.endMs, !0),
+                                      r = q(t, n, !1),
+                                      a = q(t, e.endMs, !0),
                                       s = t.slice(r, a),
                                       l = U(s),
                                       o = new Set(P(s.filter((e) => e.eventName === O.C.MultiKill)));
@@ -442,7 +442,7 @@ function er(e) {
                                   );
                               })(o.round, r),
                           ),
-                          { resolved: c, skipped: u } = B(d, e.clipCandidates);
+                          { resolved: c, skipped: u } = V(d, e.clipCandidates);
                       return 0 === c.length
                           ? (j.nx.info(
                                 `automontage: no candidate clip covers any of the ${d.length} sections of best round ${o.round.number} (candidates=${e.clipCandidates.length}) - skipping round summary`,
@@ -506,8 +506,8 @@ function er(e) {
                                           let n = e[t];
                                           for (let e of [n.rmsData, ...i.map((e) => n[D[e]])])
                                               for (let t of e)
-                                                  t.timestamp_ms < o && (o = t.timestamp_ms),
-                                                      t.timestamp_ms > d && (d = t.timestamp_ms);
+                                                  (t.timestamp_ms < o && (o = t.timestamp_ms),
+                                                      t.timestamp_ms > d && (d = t.timestamp_ms));
                                       }
                                       if (d < o) return [];
                                       let c = (d - o) / g.pn + 1;
@@ -545,10 +545,10 @@ function er(e) {
                                                       n = -1;
                                                   for (let i = 0; i <= e.length; i++) {
                                                       let r = i < e.length && e[i] > 0;
-                                                      r && -1 === n && (n = i),
+                                                      (r && -1 === n && (n = i),
                                                           r ||
                                                               -1 === n ||
-                                                              (t.push({ startChunk: n, endChunk: i - 1 }), (n = -1));
+                                                              (t.push({ startChunk: n, endChunk: i - 1 }), (n = -1)));
                                                   }
                                                   return t;
                                               })(r[n]))
@@ -561,7 +561,7 @@ function er(e) {
                                                       });
                                           });
                                       }
-                                      return I.sort((e, t) => e.startMs - t.startMs), I;
+                                      return (I.sort((e, t) => e.startMs - t.startMs), I);
                                   })(t, r, s, Array.from(_.keys()))) {
                                       let t = _.get(e.kind);
                                       null != t &&
@@ -625,9 +625,9 @@ function er(e) {
                                         let a = [],
                                             s = 0;
                                         for (let e of r) {
-                                            for (; s < n.length && n[s].timestamp < e.start; ) s++;
+                                            for (; s < n.length && n[s].timestamp < e.start;) s++;
                                             let t = new Map();
-                                            for (; s < n.length && n[s].timestamp <= e.end; ) {
+                                            for (; s < n.length && n[s].timestamp <= e.end;) {
                                                 let e = n[s];
                                                 s++;
                                                 let i = t.get(e.userId);
@@ -657,7 +657,7 @@ function er(e) {
                                       maxDurationMs: d,
                                       scoreSection: c,
                                   } = e,
-                                  u = V(
+                                  u = B(
                                       (function (e, t, n, i) {
                                           let r = [];
                                           for (let a of e) {
@@ -665,7 +665,7 @@ function er(e) {
                                                   hasGame: "game" === a.kind,
                                                   hasAudio: "audio" === a.kind,
                                               });
-                                              n &&
+                                              (n &&
                                                   (e.srcStartMs = (function (e, t) {
                                                       let n = v(t, e, !1);
                                                       if (-1 === n) return e;
@@ -679,9 +679,9 @@ function er(e) {
                                                           let i = t[n];
                                                           return e < i.endMs ? i.endMs : e;
                                                       })(e.srcEndMs, t)),
-                                                  e.srcEndMs <= e.srcStartMs || r.push(e);
+                                                  e.srcEndMs <= e.srcStartMs || r.push(e));
                                           }
-                                          return r.sort((e, t) => e.srcStartMs - t.srcStartMs), r;
+                                          return (r.sort((e, t) => e.srcStartMs - t.srcStartMs), r);
                                       })(
                                           t,
                                           (function (e) {
@@ -703,7 +703,7 @@ function er(e) {
                                   E = [],
                                   A = [];
                               for (let e of _) e.srcEndMs - e.srcStartMs < 1e3 ? E.push(e) : A.push(e);
-                              let { resolved: h, skipped: I } = B(A, n),
+                              let { resolved: h, skipped: I } = V(A, n),
                                   { kept: f, removed: p } = (function (e, t, n, i) {
                                       let r = [...e],
                                           a = e
@@ -714,10 +714,10 @@ function er(e) {
                                               .sort((e, t) => t.score - e.score),
                                           s = [],
                                           l = et(r, t);
-                                      for (; l > n; ) {
+                                      for (; l > n;) {
                                           let n = a.pop();
                                           if (null == n) break;
-                                          s.push(e[n.id]), (r[n.id] = null), (l = et(r, t));
+                                          (s.push(e[n.id]), (r[n.id] = null), (l = et(r, t)));
                                       }
                                       return (
                                           s.length > 0 &&
@@ -765,16 +765,16 @@ function er(e) {
                                               let s = e.score ?? 0;
                                               t?.rescoreEvent != null && (s = t.rescoreEvent(e) ?? s);
                                               let l = s * n(e.timestamp_ms);
-                                              Number.isFinite(l) || (r++, (l = 0)), (i[a + 1] = i[a] + l);
+                                              (Number.isFinite(l) || (r++, (l = 0)), (i[a + 1] = i[a] + l));
                                           }),
                                           r > 0 &&
                                               j.nx.warn(
                                                   `automontage: ignored ${r} non-finite event score(s) while scoring sections`,
                                               ),
                                           (t, n) => {
-                                              let r = (0, X.sortedIndexBy)(e, { timestamp_ms: t }, "timestamp_ms");
+                                              let r = (0, Z.sortedIndexBy)(e, { timestamp_ms: t }, "timestamp_ms");
                                               return (
-                                                  i[(0, X.sortedLastIndexBy)(e, { timestamp_ms: n }, "timestamp_ms")] -
+                                                  i[(0, Z.sortedLastIndexBy)(e, { timestamp_ms: n }, "timestamp_ms")] -
                                                   i[r]
                                               );
                                           }
@@ -815,7 +815,7 @@ class el extends l.A {
     pendingSessionGameKey = null;
     sessionTransition = Promise.resolve();
     constructor() {
-        super(), (this.timeline = new p(Math.max(f.Ay.getSettings().clipsLength, 6e4), N.l));
+        (super(), (this.timeline = new p(Math.max(f.Ay.getSettings().clipsLength, 6e4), N.l)));
     }
     actions = {
         CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
@@ -931,12 +931,12 @@ class el extends l.A {
         {
             let e = o.length > 0 ? Math.min(...o.map((e) => e.timestamp_ms)) : null,
                 t = i + 5e3;
-            null != e && (t = Math.min(t, e - 3e3)), (i = l(1e3 * Math.floor((i - 5e3) / 1e3), t, !1) ?? i);
+            (null != e && (t = Math.min(t, e - 3e3)), (i = l(1e3 * Math.floor((i - 5e3) / 1e3), t, !1) ?? i));
         }
         {
             let e = o.length > 0 ? Math.max(...o.map((e) => e.timestamp_ms)) : null,
                 t = a - 5e3;
-            null != e && (t = Math.max(t, e + 3e3)), (a = l(1e3 * Math.ceil(t / 1e3), a + 5e3, !0) ?? a);
+            (null != e && (t = Math.max(t, e + 3e3)), (a = l(1e3 * Math.ceil(t / 1e3), a + 5e3, !0) ?? a));
         }
         return (
             (i = Math.max(i, t)) >= (a = Math.min(a, n)) && ((i = e.startMs), (a = e.endMs)),
@@ -987,7 +987,7 @@ class el extends l.A {
             .catch((t) => j.nx.error(`decider: ${e} failed`, t));
     }
     async clearAsync() {
-        j.nx.info(
+        (j.nx.info(
             `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${f.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${f.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
@@ -996,7 +996,7 @@ class el extends l.A {
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
             await (0, S.YV)(),
-            this.timeline.clear();
+            this.timeline.clear());
     }
     unscheduleClip() {
         for (let e of this.scheduledClips) e.timeout.stop();
@@ -1026,11 +1026,11 @@ class el extends l.A {
             };
         j.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
         let c = { timeout: new s.Ep(), request: d, signal: e };
-        this.scheduledClips.push(c),
+        (this.scheduledClips.push(c),
             c.timeout.start(l > a ? l - a : 0, async () => {
                 try {
                     let t = i ? this.adjustTrimForRms(d) : d;
-                    j.nx.info(
+                    (j.nx.info(
                         `decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type}, finalRequest=${JSON.stringify(t)})`,
                     ),
                         await (0, S.yd)({
@@ -1041,12 +1041,12 @@ class el extends l.A {
                             isCandidate: n,
                             gameSessionId: r ?? void 0,
                             decisionSignals: n ? this.decisionSignals : void 0,
-                        });
+                        }));
                 } finally {
                     let e = this.scheduledClips.indexOf(c);
                     -1 !== e && this.scheduledClips.splice(e, 1);
                 }
-            });
+            }));
     }
     handleVoiceChannelSelect() {
         this.enqueueSessionTransition("handleVoiceChannelSelect", () => this.handleVoiceChannelSelectAsync());
@@ -1057,10 +1057,10 @@ class el extends l.A {
         if (null == e) return;
         this.currentSessionGameKey = (0, c.Es)(e);
         let t = crypto.randomUUID();
-        (0, S.Vp)(t, e.id ?? null),
+        ((0, S.Vp)(t, e.id ?? null),
             j.nx.info(
                 `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${t}, for game: ${this.currentSessionGameKey}`,
-            );
+            ));
     }
     handleRunningGamesChange() {
         this.enqueueSessionTransition("handleRunningGamesChange", () => this.handleRunningGamesChangeAsync());
@@ -1077,19 +1077,19 @@ class el extends l.A {
             if (null != t) {
                 this.currentSessionGameKey = t;
                 let n = crypto.randomUUID();
-                (0, S.Vp)(n, e?.id ?? null),
-                    j.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
+                ((0, S.Vp)(n, e?.id ?? null),
+                    j.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`));
             } else j.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
             return;
         }
         if (t === this.currentSessionGameKey) {
-            j.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
+            (j.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
                 this.sessionEndTimeout.stop(),
-                (this.pendingSessionGameKey = null);
+                (this.pendingSessionGameKey = null));
             return;
         }
         if (null === t) {
-            j.nx.info(
+            (j.nx.info(
                 "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
             ),
                 this.sessionEndTimeout.stop(),
@@ -1097,7 +1097,7 @@ class el extends l.A {
                 await this.processClipCandidates(),
                 (this.currentSessionGameKey = null),
                 await (0, S.YV)(),
-                (this.pendingSessionGameKey = null);
+                (this.pendingSessionGameKey = null));
             return;
         }
         this.pendingSessionGameKey === t
@@ -1108,13 +1108,13 @@ class el extends l.A {
               (this.pendingSessionGameKey = t),
               this.sessionEndTimeout.start(3e4, () => {
                   this.enqueueSessionTransition("sessionEndTimeout", async () => {
-                      this.unscheduleClip(), await this.processClipCandidates(), (this.currentSessionGameKey = t);
+                      (this.unscheduleClip(), await this.processClipCandidates(), (this.currentSessionGameKey = t));
                       let n = crypto.randomUUID();
-                      (0, S.Vp)(n, e?.id ?? null),
+                      ((0, S.Vp)(n, e?.id ?? null),
                           (this.pendingSessionGameKey = null),
                           j.nx.info(
                               `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
-                          );
+                          ));
                   });
               }));
     }
@@ -1134,10 +1134,10 @@ class el extends l.A {
         if (null == t) return;
         let n = await t(e),
             i = (0, g.Ly)(n.clipCandidates, n.decisionSignals, n.localUserId, n.gameId);
-        j.nx.info("ranked clips:", i),
+        (j.nx.info("ranked clips:", i),
             i.selected.forEach((e, t) => {
                 j.nx.info(`Clip ${t + 1} score ${e.score}, ${o.A.fileManager.basename(e.clip.filepath)}`);
-            });
+            }));
     }
     static async debugRunAutoMontage(e) {
         j.nx.info(`DEBUG RUN AUTO-MONTAGE${null != e ? ` (${e})` : ""}`);
@@ -1163,8 +1163,8 @@ class el extends l.A {
             c = o.A.fileManager.join(d, `automontage_${s.type}_${Date.now()}.mp4`);
         j.nx.info(`debugRunAutoMontage: rendering \u{2014} output=${c}`);
         let u = performance.now();
-        await n(JSON.stringify(s.recipe), c, ""),
-            j.nx.info(`debugRunAutoMontage: video rendered in ${(performance.now() - u).toFixed(1)}ms \u{2014} ${c}`);
+        (await n(JSON.stringify(s.recipe), c, ""),
+            j.nx.info(`debugRunAutoMontage: video rendered in ${(performance.now() - u).toFixed(1)}ms \u{2014} ${c}`));
     }
     debugCreateRankableLaughterClip() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.default.getId(),
@@ -1243,11 +1243,11 @@ class el extends l.A {
               ),
               (async function () {
                   try {
-                      await r(JSON.stringify(e.recipe), t.filepath, (0, S.h5)(t)),
+                      (await r(JSON.stringify(e.recipe), t.filepath, (0, S.h5)(t)),
                           j.nx.info(`decider: auto-montage render succeeded \u{2014} ${t.filepath}`),
-                          await (0, S.EM)(t);
+                          await (0, S.EM)(t));
                   } catch (e) {
-                      j.nx.error("decider: auto-montage failed", e), await (0, S.t9)(t);
+                      (j.nx.error("decider: auto-montage failed", e), await (0, S.t9)(t));
                   } finally {
                       await i();
                   }
@@ -1311,12 +1311,12 @@ class el extends l.A {
                 n = l.reduce((e, n) => ((t.get(n) ?? 0) > (t.get(e) ?? 0) ? n : e)),
                 i = t.get(n) ?? 0,
                 r = i > 0 ? n : l.reduce((e, t) => (t.score < e.score ? t : e));
-            (l = l.filter((e) => e !== r)),
+            ((l = l.filter((e) => e !== r)),
                 j.nx.info(
                     i > 0
                         ? `decider: auto-montage replaces the selected clip it already covers most (id=${r.clip.id}, score=${r.score}, overlapMs=${i})`
                         : `decider: auto-montage replaces worst selected clip (id=${r.clip.id}, score=${r.score})`,
-                );
+                ));
         }
         let o = new Set(l.map((e) => e.clip.id)),
             d = new Map();
@@ -1344,7 +1344,7 @@ class el extends l.A {
                 let t = this.buildMontagePlaceholderClip(s, n, e);
                 this.startAutoMontageRender(s, t, c) || (s = null);
             } catch (e) {
-                j.nx.error("decider: failed to start the auto-montage render", e), (s = null);
+                (j.nx.error("decider: failed to start the auto-montage render", e), (s = null));
             }
         let _ = new Set(s?.recipe.inputs.map((e) => e.path) ?? []);
         await Promise.all(

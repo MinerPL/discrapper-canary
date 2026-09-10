@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,7 +41,7 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         });
 Object.defineProperty(t, "__esModule", { value: !0 });
 let o = r(167385),
@@ -70,45 +70,45 @@ class c extends o.AbstractParserWithWordBoundaryChecking {
             case "imorgon":
             case "imorn":
                 let s = new Date(r.getTime());
-                s.setDate(s.getDate() + 1), (0, u.assignSimilarDate)(i, s), (0, u.implySimilarTime)(i, s);
+                (s.setDate(s.getDate() + 1), (0, u.assignSimilarDate)(i, s), (0, u.implySimilarTime)(i, s));
                 break;
             case "ig\xe5r":
                 let o = new Date(r.getTime());
-                o.setDate(o.getDate() - 1), (0, u.assignSimilarDate)(i, o), (0, u.implySimilarTime)(i, o);
+                (o.setDate(o.getDate() - 1), (0, u.assignSimilarDate)(i, o), (0, u.implySimilarTime)(i, o));
                 break;
             case "f\xf6rrg\xe5r":
             case "i f\xf6rrg\xe5r":
                 let d = new Date(r.getTime());
-                d.setDate(d.getDate() - 2), (0, u.assignSimilarDate)(i, d), (0, u.implySimilarTime)(i, d);
+                (d.setDate(d.getDate() - 2), (0, u.assignSimilarDate)(i, d), (0, u.implySimilarTime)(i, d));
         }
         switch (a) {
             case "morgon":
             case "morgonen":
-                i.imply("hour", 6), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0);
+                (i.imply("hour", 6), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0));
                 break;
             case "f\xf6rmiddag":
             case "f\xf6rmiddagen":
-                i.imply("hour", 9), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0);
+                (i.imply("hour", 9), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0));
                 break;
             case "middag":
             case "middagen":
-                i.imply("hour", 12), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0);
+                (i.imply("hour", 12), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0));
                 break;
             case "eftermiddag":
             case "eftermiddagen":
-                i.imply("hour", 15), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0);
+                (i.imply("hour", 15), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0));
                 break;
             case "kv\xe4ll":
             case "kv\xe4llen":
-                i.imply("hour", 20), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0);
+                (i.imply("hour", 20), i.imply("minute", 0), i.imply("second", 0), i.imply("millisecond", 0));
                 break;
             case "natt":
             case "natten":
             case "midnatt":
-                "midnatt" === a ? i.imply("hour", 0) : i.imply("hour", 2),
+                ("midnatt" === a ? i.imply("hour", 0) : i.imply("hour", 2),
                     i.imply("minute", 0),
                     i.imply("second", 0),
-                    i.imply("millisecond", 0);
+                    i.imply("millisecond", 0));
         }
         return i;
     }

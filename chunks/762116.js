@@ -2,14 +2,14 @@ var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     i = r(652925);
@@ -49,7 +49,7 @@ e.exports = (function (e) {
                 key: "addListener",
                 value: function (e) {
                     var t = this;
-                    !this._aListener &&
+                    (!this._aListener &&
                         this._a.addListener &&
                         (this._aListener = this._a.addListener(function () {
                             for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
@@ -58,9 +58,9 @@ e.exports = (function (e) {
                             this._b.addListener &&
                             (this._bListener = this._b.addListener(function () {
                                 for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
-                            }));
+                            })));
                     var r = guid();
-                    return (this._listeners[r] = e), r;
+                    return ((this._listeners[r] = e), r);
                 },
             },
             {
@@ -78,13 +78,13 @@ e.exports = (function (e) {
             {
                 key: "__attach",
                 value: function () {
-                    this._a.__addChild(this), this._b.__addChild(this);
+                    (this._a.__addChild(this), this._b.__addChild(this));
                 },
             },
             {
                 key: "__detach",
                 value: function () {
-                    this._a.__removeChild(this), this._b.__removeChild(this);
+                    (this._a.__removeChild(this), this._b.__removeChild(this));
                 },
             },
         ]),

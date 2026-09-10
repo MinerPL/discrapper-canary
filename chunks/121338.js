@@ -1,4 +1,4 @@
-e.r(a), e.d(a, { default: () => E, openInteractionModal: () => N });
+(e.r(a), e.d(a, { default: () => E, openInteractionModal: () => N }));
 var s = e(477900),
     i = e(224640),
     n = e(20742),
@@ -33,7 +33,7 @@ function E(t) {
         (0, x.A)({ onPasteFiles: f.tE, onPasteBackgroundText: f.tE }),
         (0, s.jsx)("form", {
             onSubmit: (t) => {
-                t.preventDefault(), F();
+                (t.preventDefault(), F());
             },
             children: (0, s.jsxs)(i.d, {
                 transitionState: u,

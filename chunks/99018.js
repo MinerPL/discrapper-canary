@@ -39,7 +39,7 @@ let f = (0, u.createContext)(null),
                 ...e,
                 isExpanded: v,
                 onExpandedChange(t) {
-                    s && s.toggleKey(x), e.onExpandedChange?.(t);
+                    (s && s.toggleKey(x), e.onExpandedChange?.(t));
                 },
             }),
             w = u.useRef(null),
@@ -51,12 +51,12 @@ let f = (0, u.createContext)(null),
                     c = (0, r.wR)(),
                     h = (0, u.useRef)(null),
                     x = (0, u.useCallback)(() => {
-                        (h.current = requestAnimationFrame(() => {
+                        ((h.current = requestAnimationFrame(() => {
                             s.current && s.current.setAttribute("hidden", "until-found");
                         })),
                             (0, o.flushSync)(() => {
                                 t.toggle();
-                            });
+                            }));
                     }, [s, t]);
                 (0, n._)(s, "beforematch", x);
                 let b = (0, u.useRef)(null);
@@ -64,7 +64,7 @@ let f = (0, u.createContext)(null),
                     (0, d.N)(() => {
                         if ((h.current && cancelAnimationFrame(h.current), s.current && !c)) {
                             let e = s.current;
-                            null == b.current || "function" != typeof e.getAnimations
+                            (null == b.current || "function" != typeof e.getAnimations
                                 ? t.isExpanded
                                     ? (e.removeAttribute("hidden"),
                                       e.style.setProperty("--disclosure-panel-width", "auto"),
@@ -79,8 +79,8 @@ let f = (0, u.createContext)(null),
                                         e.style.setProperty("--disclosure-panel-height", e.scrollHeight + "px"),
                                         Promise.all(e.getAnimations().map((e) => e.finished))
                                             .then(() => {
-                                                e.style.setProperty("--disclosure-panel-width", "auto"),
-                                                    e.style.setProperty("--disclosure-panel-height", "auto");
+                                                (e.style.setProperty("--disclosure-panel-width", "auto"),
+                                                    e.style.setProperty("--disclosure-panel-height", "auto"));
                                             })
                                             .catch(() => {}))
                                       : (e.style.setProperty("--disclosure-panel-width", e.scrollWidth + "px"),
@@ -91,7 +91,7 @@ let f = (0, u.createContext)(null),
                                         Promise.all(e.getAnimations().map((e) => e.finished))
                                             .then(() => e.setAttribute("hidden", "until-found"))
                                             .catch(() => {}))),
-                                (b.current = t.isExpanded);
+                                (b.current = t.isExpanded));
                         }
                     }, [i, s, t.isExpanded, c]),
                     (0, u.useEffect)(

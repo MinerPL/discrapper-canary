@@ -7,7 +7,7 @@ function o(e, t, r) {
         l = (0, n.useRef)(void 0 !== e),
         u = void 0 !== e;
     (0, n.useEffect)(() => {
-        l.current, (l.current = u);
+        (l.current, (l.current = u));
     }, [u]);
     let c = u ? e : o;
     i(() => {

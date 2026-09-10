@@ -27,7 +27,7 @@ function _(e) {
             fullWidth: i,
             variant: "primary",
             onClick: function () {
-                (0, f.mA)({ fromContent: s }),
+                ((0, f.mA)({ fromContent: s }),
                     (0, h.E5)(h.kI.STEP_2_CLICKED_INTERNAL, "fallback_quest_embed")
                         ? (0, d.r)({
                               type: m.F.CLICK_INTERNAL,
@@ -43,7 +43,7 @@ function _(e) {
                               cta_name: C.Cy.VIEW_QUESTS,
                               is_targeted: !1,
                               ...(0, C.fF)(s),
-                          });
+                          }));
             },
             text: v.intl.string(v.t.GURBQl),
         }),

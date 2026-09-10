@@ -16,7 +16,7 @@ t.exports = function (t) {
         var f = e.length,
             p = !0;
         return function (t, r) {
-            if (p) return (p = !1), r;
+            if (p) return ((p = !1), r);
             if (o(this)) return r;
             for (var n = 0; n < f; n++) if (e[n] === t) return r;
         };

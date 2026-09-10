@@ -9,8 +9,8 @@ function d() {
     async function e() {
         if (!a.O)
             throw (
-                (l.error("Attempted to load overlay on an unsupported platform."),
-                Error("Overlay is not supported on this platform."))
+                l.error("Attempted to load overlay on an unsupported platform."),
+                Error("Overlay is not supported on this platform.")
             );
         try {
             return (

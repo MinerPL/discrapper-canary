@@ -9,7 +9,7 @@ function l(e) {
 }
 function o(e) {
     let t = s[e] ?? { query: null, loading: !1, results: null };
-    return (s[e] = t), t;
+    return ((s[e] = t), t);
 }
 class d extends i.Ay.Store {
     initialize() {

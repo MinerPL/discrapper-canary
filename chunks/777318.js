@@ -7,7 +7,7 @@ n(655972);
 var a = n(1139),
     u = n(299146),
     c = n(258635);
-o.Component, o.Component;
+(o.Component, o.Component);
 var s = function (t, e) {
         return "function" == typeof t ? t(e) : t;
     },
@@ -42,7 +42,7 @@ var v = f(function (t, e) {
                         (t.preventDefault(), r());
                 },
             });
-        return p !== f ? (l.ref = e || n) : (l.ref = n), o.createElement("a", l);
+        return (p !== f ? (l.ref = e || n) : (l.ref = n), o.createElement("a", l));
     }),
     h = f(function (t, e) {
         var n = t.component,
@@ -64,7 +64,7 @@ var v = f(function (t, e) {
                         (d || r ? n.replace : n.push)(e);
                     },
                 });
-            return p !== f ? (v.ref = e || y) : (v.innerRef = y), o.createElement(h, v);
+            return (p !== f ? (v.ref = e || y) : (v.innerRef = y), o.createElement(h, v));
         });
     }),
     d = function (t) {
@@ -122,6 +122,6 @@ var y = m(function (t, e) {
             })(T, f)),
             (j = (0, a.A)({}, j, v)));
         var P = (0, a.A)({ "aria-current": (N && i) || null, className: T, style: j, to: u }, w);
-        return d !== m ? (P.ref = e || A) : (P.innerRef = A), o.createElement(h, P);
+        return (d !== m ? (P.ref = e || A) : (P.innerRef = A), o.createElement(h, P));
     });
 });

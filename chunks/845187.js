@@ -18,14 +18,14 @@ function h(e) {
         T = p?.name ?? "This Activity";
     async function m() {
         let e = "temporary";
-        I && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+        (I && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(_.HAw.MODAL_DISMISSED, { type: A, dismiss_type: e }),
-            await h();
+            await h());
     }
     async function g() {
-        c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
+        (c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
             u.Ay.setEnableHardwareAcceleration(!0),
-            await m();
+            await m());
     }
     return (
         r.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073);
+(n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -12,7 +12,7 @@ class u {
     inner = null;
     cachedConfig = c;
     constructor(e, t) {
-        (this.id = e), d.push(this);
+        ((this.id = e), d.push(this));
     }
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
@@ -39,7 +39,7 @@ class _ extends u {
     label;
     defaultValue;
     constructor(e, t, n = !1) {
-        super(e), (this.label = t), (this.defaultValue = n);
+        (super(e), (this.label = t), (this.defaultValue = n));
     }
     getLabel() {
         return this.label;
@@ -55,7 +55,7 @@ class _ extends u {
 let E = new (class extends u {
         storeName;
         constructor(e, t, n) {
-            super(e, n), (this.storeName = t);
+            (super(e, n), (this.storeName = t));
         }
         getCachedBridgedStoreMode() {
             var e;
@@ -129,18 +129,18 @@ class I extends u {
         return Array.from({ length: this.treatmentCount }, (e, t) => ({ treatmentId: t }));
     }
     constructor(e, t, n) {
-        super(e), (this.label = t), (this.treatmentCount = n);
+        (super(e), (this.label = t), (this.treatmentCount = n));
     }
 }
 let f = new I("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
-new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+(new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
     new _(
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
     ),
-    new I("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3);
+    new I("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
 let p = !1;
 function T() {
     return p;

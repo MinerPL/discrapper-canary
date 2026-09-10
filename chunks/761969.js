@@ -1,12 +1,12 @@
 d.d(t, { n: () => e });
 var i = class extends Error {
     constructor(l, t, d, i, e) {
-        super(i),
+        (super(i),
             (this.name = "IncodeApiError"),
             (this.endpoint = l),
             (this.status = t),
             (this.httpStatus = d),
-            void 0 !== e && (this.cause = e);
+            void 0 !== e && (this.cause = e));
     }
 };
 function e(l, t) {

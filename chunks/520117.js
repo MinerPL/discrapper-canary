@@ -14,10 +14,10 @@ function c(u) {
         ),
         (0, t.K)(function (u) {
             function e() {
-                r(), (l.current = !0), (i.current = null);
+                (r(), (l.current = !0), (i.current = null));
             }
-            null == i.current || u || !1 !== l.current || (clearTimeout(i.current), (i.current = null)),
-                u && !0 !== l.current && (null != c ? (i.current = setTimeout(e, c)) : e());
+            (null == i.current || u || !1 !== l.current || (clearTimeout(i.current), (i.current = null)),
+                u && !0 !== l.current && (null != c ? (i.current = setTimeout(e, c)) : e()));
         }, e)
     );
 }

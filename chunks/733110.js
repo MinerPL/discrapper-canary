@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { FetchState: () => c, default: () => m });
+(n.r(t), n.d(t, { FetchState: () => c, default: () => m }));
 var i,
     r = n(17928),
     a = n(228366),
@@ -20,7 +20,7 @@ function f() {
     });
 }
 function p(e, t) {
-    if (null == t) (A = e), h.clear(), (I += 1);
+    if (null == t) ((A = e), h.clear(), (I += 1));
     else {
         for (let n of t) h.set(n, e);
         I += 1;
@@ -63,7 +63,7 @@ let m = new T(a.h, {
         "full" === e.request.type ? p("FETCHED") : p("FETCHED", e.request.applicationIds);
     },
     USER_AUTHORIZED_APPS_UPDATE: function (e) {
-        if (e.isFullFetch) p("FETCHED"), (u = new Map(Object.entries(e.tokens).filter(d.QE))), f();
+        if (e.isFullFetch) (p("FETCHED"), (u = new Map(Object.entries(e.tokens).filter(d.QE))), f());
         else {
             for (let [t, n] of (p("FETCHED", Object.keys(e.tokens)), Object.entries(e.tokens)))
                 null == n ? u.delete(t) : u.set(t, n);
@@ -72,15 +72,15 @@ let m = new T(a.h, {
     },
     OAUTH2_TOKEN_CREATE: function (e) {
         let { id: t, application: n, scopes: i } = e;
-        u.set(n.id, { id: t, application: n, scopes: i }), f();
+        (u.set(n.id, { id: t, application: n, scopes: i }), f());
     },
     OAUTH2_TOKEN_DELETE: function (e) {
         let { id: t, applicationId: n } = e,
             i = u.get(n);
         if (null == i || i.id !== t) return !1;
-        u.delete(i.application.id), f();
+        (u.delete(i.application.id), f());
     },
     LOGOUT: function () {
-        (u = new Map()), (_ = []), (E = []), (A = "NOT_FETCHED"), h.clear(), (I += 1);
+        ((u = new Map()), (_ = []), (E = []), (A = "NOT_FETCHED"), h.clear(), (I += 1));
     },
 });

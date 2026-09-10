@@ -43,16 +43,24 @@ function I(e) {
     return t && n;
 }
 function f(e) {
-    return (0, r.bG)([s.A, l.A], () => {
-        let t = s.A.getGuild(e);
-        return null != t && l.A.can(u.xBc.MANAGE_GUILD, t);
-    }, [e]);
+    return (0, r.bG)(
+        [s.A, l.A],
+        () => {
+            let t = s.A.getGuild(e);
+            return null != t && l.A.can(u.xBc.MANAGE_GUILD, t);
+        },
+        [e],
+    );
 }
 function p(e, t, n) {
-    return (0, r.bG)([l.A, s.A], () => {
-        let i = s.A.getGuild(e);
-        return null != i && t && l.A.canManageUser(u.xBc.BAN_MEMBERS, n, i);
-    }, [t, e, n]);
+    return (0, r.bG)(
+        [l.A, s.A],
+        () => {
+            let i = s.A.getGuild(e);
+            return null != i && t && l.A.canManageUser(u.xBc.BAN_MEMBERS, n, i);
+        },
+        [t, e, n],
+    );
 }
 function T(e, t, n) {
     let i = s.A.getGuild(e);

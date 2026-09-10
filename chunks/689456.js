@@ -31,7 +31,7 @@ function v(e, t) {
         transactionName: h,
         span: f,
     } = t;
-    b(e, "extra", n),
+    (b(e, "extra", n),
         b(e, "tags", r),
         b(e, "user", i),
         b(e, "contexts", o),
@@ -43,7 +43,7 @@ function v(e, t) {
         c.length && (e.fingerprint = [...e.fingerprint, ...c]),
         u.length && (e.eventProcessors = [...e.eventProcessors, ...u]),
         d.length && (e.attachments = [...e.attachments, ...d]),
-        (e.propagationContext = { ...e.propagationContext, ...p });
+        (e.propagationContext = { ...e.propagationContext, ...p }));
 }
 function b(e, t, n) {
     e[t] = (0, _.h)(e[t], n, 1);
@@ -53,12 +53,12 @@ function S(e, t, n, _, b, S) {
     let { normalizeDepth: k = 3, normalizeMaxBreadth: x = 1e3 } = e,
         C = { ...t, event_id: t.event_id || n.event_id || (0, d.eJ)(), timestamp: t.timestamp || (0, f.lu)() },
         T = n.integrations || e.integrations.map((e) => e.name);
-    (function (e, t) {
+    ((function (e, t) {
         let { environment: n, release: i, dist: o, maxValueLength: a = 250 } = t;
-        (e.environment = e.environment || n || r.U),
+        ((e.environment = e.environment || n || r.U),
             !e.release && i && (e.release = i),
             !e.dist && o && (e.dist = o),
-            e.message && (e.message = (0, h.xv)(e.message, a));
+            e.message && (e.message = (0, h.xv)(e.message, a)));
         let s = e.exception && e.exception.values && e.exception.values[0];
         s && s.value && (s.value = (0, h.xv)(s.value, a));
         let l = e.request;
@@ -77,16 +77,16 @@ function S(e, t, n, _, b, S) {
                         });
                     });
                 } catch (e) {}
-            })(C, e.stackParser);
+            })(C, e.stackParser));
     let I = (function (e, t) {
         if (!t) return e;
         let n = e ? e.clone() : new c.H();
-        return n.update(t), n;
+        return (n.update(t), n);
     })(_, n.captureContext);
     n.mechanism && (0, d.M6)(C, n.mechanism);
     let M = b ? b.getEventProcessors() : [],
         O = (0, i.m6)().getScopeData();
-    S && v(O, S.getScopeData()), I && v(O, I.getScopeData());
+    (S && v(O, S.getScopeData()), I && v(O, I.getScopeData()));
     let D = [...(n.attachments || []), ...O.attachments];
     return (
         D.length && (n.attachments = D),
@@ -96,7 +96,7 @@ function S(e, t, n, _, b, S) {
                 d,
                 p,
                 { fingerprint: h, span: f, breadcrumbs: _, sdkProcessingMetadata: v } = t;
-            (function (e, t) {
+            ((function (e, t) {
                 let { extra: n, tags: r, user: i, contexts: o, level: a, transactionName: s } = t,
                     l = (0, g.Ce)(n);
                 l && Object.keys(l).length && (e.extra = { ...l, ...e.extra });
@@ -105,9 +105,9 @@ function S(e, t, n, _, b, S) {
                 let u = (0, g.Ce)(i);
                 u && Object.keys(u).length && (e.user = { ...u, ...e.user });
                 let d = (0, g.Ce)(o);
-                d && Object.keys(d).length && (e.contexts = { ...d, ...e.contexts }),
+                (d && Object.keys(d).length && (e.contexts = { ...d, ...e.contexts }),
                     a && (e.level = a),
-                    s && "transaction" !== e.type && (e.transaction = s);
+                    s && "transaction" !== e.type && (e.transaction = s));
             })(e, t),
                 f &&
                     ((n = e),
@@ -130,7 +130,7 @@ function S(e, t, n, _, b, S) {
                 (a.breadcrumbs = p.length ? p : void 0),
                 (l = e),
                 (c = v),
-                (l.sdkProcessingMetadata = { ...l.sdkProcessingMetadata, ...c });
+                (l.sdkProcessingMetadata = { ...l.sdkProcessingMetadata, ...c }));
         })(C, O),
         (function e(t, n, r, i = 0) {
             return new l.T2((l, c) => {
@@ -138,12 +138,12 @@ function S(e, t, n, _, b, S) {
                 if (null === n || "function" != typeof u) l(n);
                 else {
                     let d = u({ ...n }, r);
-                    o.T && u.id && null === d && s.vF.log(`Event processor "${u.id}" dropped event`),
+                    (o.T && u.id && null === d && s.vF.log(`Event processor "${u.id}" dropped event`),
                         (0, a.Qg)(d)
                             ? d.then((n) => e(t, n, r, i + 1).then(l)).then(null, c)
                             : e(t, d, r, i + 1)
                                   .then(l)
-                                  .then(null, c);
+                                  .then(null, c));
                 }
             });
         })([...M, ...O.eventProcessors], C, n).then((e) =>
@@ -162,7 +162,7 @@ function S(e, t, n, _, b, S) {
                         });
                     } catch (e) {}
                     if (0 === Object.keys(t).length) return;
-                    (e.debug_meta = e.debug_meta || {}), (e.debug_meta.images = e.debug_meta.images || []);
+                    ((e.debug_meta = e.debug_meta || {}), (e.debug_meta.images = e.debug_meta.images || []));
                     let n = e.debug_meta.images;
                     Object.entries(t).forEach(([e, t]) => {
                         n.push({ type: "sourcemap", code_file: e, debug_id: t });

@@ -168,7 +168,7 @@ function N(e) {
                         if (n) {
                             if ((null != s && s !== t.id) || r) return void d(!1);
                             if (l) {
-                                o(!0), d(!1);
+                                (o(!0), d(!1));
                                 return;
                             }
                             p.current && d(!1);

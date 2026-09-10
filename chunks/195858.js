@@ -13,14 +13,14 @@ class a extends n.AbstractParserWithWordBoundaryChecking {
             a = e.refDate,
             i = new Date(a.getTime());
         if (t[1])
-            n.start.imply("hour", a.getHours()),
+            (n.start.imply("hour", a.getHours()),
                 n.start.imply("minute", a.getMinutes()),
                 n.start.imply("second", a.getSeconds()),
-                n.start.imply("millisecond", a.getMilliseconds());
+                n.start.imply("millisecond", a.getMilliseconds()));
         else if (t[2]) {
             let e = t[2],
                 r = t[3];
-            "\u660E" == e || "\u807D" == e
+            ("\u660E" == e || "\u807D" == e
                 ? a.getHours() > 1 && i.setDate(i.getDate() + 1)
                 : "\u6628" == e || "\u5C0B" == e || "\u7434" == e
                   ? i.setDate(i.getDate() - 1)
@@ -33,7 +33,7 @@ class a extends n.AbstractParserWithWordBoundaryChecking {
                         : "\u5927\u5F8C" == e && i.setDate(i.getDate() + 3),
                 "\u65E9" == r || "\u671D" == r
                     ? n.start.imply("hour", 6)
-                    : "\u665A" == r && (n.start.imply("hour", 22), n.start.imply("meridiem", 1));
+                    : "\u665A" == r && (n.start.imply("hour", 22), n.start.imply("meridiem", 1)));
         } else if (t[4]) {
             let e = t[4][0];
             "\u65E9" == e || "\u671D" == e || "\u4E0A" == e

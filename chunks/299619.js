@@ -27,17 +27,17 @@ let l = (e) => {
         function f() {
             o && h?.current?.pause();
         }
-        r.useLayoutEffect(
+        (r.useLayoutEffect(
             () => () => {
                 let { current: e } = h;
                 null != e &&
                     (function (e) {
-                        e.removeAttribute("src"),
+                        (e.removeAttribute("src"),
                             Array.from(e.children).forEach((e) => {
-                                (0, s.vq)(e, HTMLSourceElement) &&
+                                ((0, s.vq)(e, HTMLSourceElement) &&
                                     (e.removeAttribute("src"), e.removeAttribute("type")),
-                                    (0, s.vq)(e, HTMLImageElement) && e.removeAttribute("src");
-                            });
+                                    (0, s.vq)(e, HTMLImageElement) && e.removeAttribute("src"));
+                            }));
                         try {
                             e.load();
                         } catch (e) {}
@@ -53,7 +53,7 @@ let l = (e) => {
                     }
                 ),
                 [n, h],
-            );
+            ));
         let p = E.tabIndex ?? (!0 === E.controls ? 0 : -1);
         return (0, i.jsx)("video", {
             "aria-label": t,

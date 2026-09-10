@@ -228,7 +228,7 @@ function en(e) {
                 let { ref: t, ...l } = e;
                 return (0, s.jsx)(G.OZ, {
                     ref: (e) => {
-                        (m.current = e), (t.current = e?.getScrollerNode() ?? null);
+                        ((m.current = e), (t.current = e?.getScrollerNode() ?? null));
                     },
                     ...l,
                     ...i,
@@ -273,7 +273,7 @@ function eu(e) {
         { results: O, updateSearchText: Q } = (0, g.R)({ selectedDestinations: z, includeMissingDMs: !0 }),
         B = a.useCallback(
             (e) => {
-                I(e), Q(e);
+                (I(e), Q(e));
             },
             [I, Q],
         ),
@@ -289,7 +289,7 @@ function eu(e) {
                     });
                     if (-1 === l) return V ? t : (I(""), (H.current += 1), [e, ...t]);
                     let s = [...t];
-                    return s.splice(l, 1), (H.current += 1), s;
+                    return (s.splice(l, 1), (H.current += 1), s);
                 });
             },
             [V],
@@ -301,7 +301,7 @@ function eu(e) {
                     let s = !1,
                         a = e.replaceAll(N.A.URL_REGEX, (e) => {
                             let t = k.some((t) => null != t(e));
-                            return t && (s = !0), t ? e : `\`${e}\``;
+                            return (t && (s = !0), t ? e : `\`${e}\``);
                         });
                     if (s) return a;
                     let n = S.intl.formatToMarkdownString(S.t.dZJpdG, { applicationName: t.name, link: l });
@@ -309,7 +309,7 @@ function eu(e) {
 
 ${n}`;
                 })(v, _, G);
-                U(!0),
+                (U(!0),
                     (await Promise.all(e.map(f.pk))).filter(C.Vq).forEach(async (e) => {
                         let l = p.A.getChannel(e);
                         null != l &&
@@ -319,13 +319,13 @@ ${n}`;
                         (0, u.o)(S.intl.formatToPlainString(S.t.jQULqL, { applicationName: _.name }), c.Ck.SUCCESS),
                     ),
                     P(!0),
-                    y();
+                    y());
             },
             [v, G, y, P, _],
         ),
         $ = a.useCallback(() => {
             (0, j.C)(G, () => {
-                L(), (0, i.P0)((0, u.o)(S.intl.string(S.t.t5VZ88), c.Ck.SUCCESS));
+                (L(), (0, i.P0)((0, u.o)(S.intl.string(S.t.t5VZ88), c.Ck.SUCCESS)));
             });
         }, [G, L]),
         Y =

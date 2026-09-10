@@ -15,7 +15,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
             ...A,
             parse(e, t, n) {
                 let i = A.parse(e, t, n);
-                return (i.context = n.context), i;
+                return ((i.context = n.context), i);
             },
         },
         strong: h,
@@ -38,7 +38,7 @@ let { newline: u, paragraph: _, url: E, link: A, strong: h, u: I, br: f, em: p, 
             parse(e, t, n) {
                 let { unsafeContext: i } = n,
                     r = i[e[1]];
-                return "string" != typeof r && (r = null != r ? r.toString() : ""), { type: "text", content: r };
+                return ("string" != typeof r && (r = null != r ? r.toString() : ""), { type: "text", content: r });
             },
             react: (e) => e.content,
         },
@@ -53,9 +53,9 @@ class R {
     hasMarkdown;
     intlMessage;
     constructor(e, t, n) {
-        (this.message = n ? e : e.replace(O, "")),
+        ((this.message = n ? e : e.replace(O, "")),
             (this.hasMarkdown = n),
-            (this.intlMessage = new (l())(this.message, t));
+            (this.intlMessage = new (l())(this.message, t)));
     }
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
@@ -81,23 +81,23 @@ class R {
 }
 function L(e) {
     let t, n, a;
-    (t = c().parserFor(e(g))),
+    ((t = c().parserFor(e(g))),
         (n = c().reactFor(c().ruleOutput(g, "react"))),
         (i = (e, i, r) => {
             let a = !e.includes("\n\n");
-            return a || (e += "\n\n"), n(t(e, { inline: a, context: i, unsafeContext: r }));
+            return (a || (e += "\n\n"), n(t(e, { inline: a, context: i, unsafeContext: r })));
         }),
         (a = c().parserFor(g)),
-        (r = (e, t, n) => a(e + "\n\n", { inline: !1, context: t, unsafeContext: n }));
+        (r = (e, t, n) => a(e + "\n\n", { inline: !1, context: t, unsafeContext: n })));
 }
 function y(e, t) {
     if (null == e) return "";
-    null == i && L(n(759794).A), (e = e.replace(/^\n+|\n+$/g, ""));
+    (null == i && L(n(759794).A), (e = e.replace(/^\n+|\n+$/g, "")));
     let r = S.test(e),
         a = N.test(e);
     return r || a ? new R(e, t, a) : e;
 }
-(n.g.IntlMessageFormat = l()),
+((n.g.IntlMessageFormat = l()),
     n(718931),
     n(653802),
     n(361715),
@@ -127,7 +127,7 @@ function y(e, t) {
     n(29274),
     n(525919),
     delete n.g.IntlMessageFormat,
-    "u" < typeof Intl && n(426586);
+    "u" < typeof Intl && n(426586));
 let D = "en-US";
 class v {
     _context = { messages: {}, defaultMessages: {}, locale: D };
@@ -142,7 +142,7 @@ class v {
 }
 class b extends v {
     refresh(e) {
-        (this._context = e), this._refresh(e, this._parsedMessages);
+        ((this._context = e), this._refresh(e, this._parsedMessages));
     }
     _refresh = (() => {
         var e = this;
@@ -162,13 +162,13 @@ class b extends v {
 }
 class M extends v {
     constructor(e) {
-        super(e), (this._parsedMessages = this._createProxy(this._context));
+        (super(e), (this._parsedMessages = this._createProxy(this._context)));
     }
     refresh(e) {
-        Object.assign(this._context, e),
+        (Object.assign(this._context, e),
             Object.keys(this._parsedMessages).forEach((e) => {
                 delete this._parsedMessages[e];
-            });
+            }));
     }
     _createProxy = (() => {
         var e = this;
@@ -189,7 +189,7 @@ class P extends a.EventEmitter {
     _requestedLocale;
     _getMessages;
     constructor({ initialLocale: e, getMessages: t, getLanguages: i }) {
-        super(),
+        (super(),
             (this.initialLanguageLoad = new Promise((e, t) => {
                 this.resolveLanguageLoaded = e;
             })),
@@ -197,9 +197,9 @@ class P extends a.EventEmitter {
             (this._languages = i()),
             (this._provider = null != window.Proxy ? new M(this._getParsedMessages) : new b(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
-            (this._getMessages = t);
+            (this._getMessages = t));
         try {
-            new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale());
+            (new Intl.NumberFormat(e, {}), this.setLocale(e || this.getDefaultLocale()));
         } catch (e) {
             this.setLocale(this.getDefaultLocale());
         }
@@ -217,9 +217,9 @@ class P extends a.EventEmitter {
         if (this._chosenLocale === e) return;
         this._requestedLocale = e;
         let t = this._chosenLocale;
-        (this._chosenLocale = e),
+        ((this._chosenLocale = e),
             (this.loadPromise = this._loadMessagesForLocale(e)),
-            this.emit("locale", this._chosenLocale, t);
+            this.emit("locale", this._chosenLocale, t));
     }
     setUpdateRules(e) {
         L(e);

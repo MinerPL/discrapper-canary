@@ -1,6 +1,6 @@
 var a,
     l = t(605685);
-t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
+(t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0));
 var o = l(t(736883)),
     s = l(t(945836)),
     i = l(t(290845)),
@@ -59,10 +59,10 @@ function q(e, r) {
         },
         n: function () {
             var e = l.next();
-            return (p = e.done), e;
+            return ((p = e.done), e);
         },
         e: function (e) {
-            (m = !0), (c = e);
+            ((m = !0), (c = e));
         },
         f: function () {
             try {
@@ -79,7 +79,7 @@ function P(e, r) {
     return a;
 }
 var x = new f.default([]);
-(0, b.default)((a = [v.default, h.default, C.default])).call(a, function (e) {
+((0, b.default)((a = [v.default, h.default, C.default])).call(a, function (e) {
     (0, b.default)(e).call(e, function (e, r) {
         return x.set(r, e);
     });
@@ -88,12 +88,12 @@ var x = new f.default([]);
         var t,
             a = q(e.superClass);
         try {
-            for (a.s(); !(t = a.n()).done; ) {
+            for (a.s(); !(t = a.n()).done;) {
                 var l,
                     o = t.value,
                     s = q(o);
                 try {
-                    for (s.s(); !(l = s.n()).done; ) {
+                    for (s.s(); !(l = s.n()).done;) {
                         var i = l.value,
                             n = x.get(i);
                         if (n)
@@ -115,4 +115,4 @@ var x = new f.default([]);
             a.f();
         }
     }),
-    (r.default = x);
+    (r.default = x));

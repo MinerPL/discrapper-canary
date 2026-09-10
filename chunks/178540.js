@@ -7,7 +7,7 @@ let r = [],
             e((e) => {
                 if (0 === n.length && !e.errorHintsByQuestId.has(t)) return e;
                 let i = new Map(e.errorHintsByQuestId);
-                return 0 === n.length ? i.delete(t) : i.set(t, [...n]), { errorHintsByQuestId: i };
+                return (0 === n.length ? i.delete(t) : i.set(t, [...n]), { errorHintsByQuestId: i });
             });
         },
         getErrorHints: (e) => t().errorHintsByQuestId.get(e) ?? r,
@@ -15,7 +15,7 @@ let r = [],
             e((e) => {
                 if (!e.errorHintsByQuestId.has(t)) return e;
                 let n = new Map(e.errorHintsByQuestId);
-                return n.delete(t), { errorHintsByQuestId: n };
+                return (n.delete(t), { errorHintsByQuestId: n });
             });
         },
         clearErrorHintsByType: (t, n) => {
@@ -25,7 +25,7 @@ let r = [],
                 let r = i.filter((e) => e.type !== n);
                 if (r.length === i.length) return e;
                 let a = new Map(e.errorHintsByQuestId);
-                return 0 === r.length ? a.delete(t) : a.set(t, r), { errorHintsByQuestId: a };
+                return (0 === r.length ? a.delete(t) : a.set(t, r), { errorHintsByQuestId: a });
             });
         },
         reset: () => {

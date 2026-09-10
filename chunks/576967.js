@@ -30,7 +30,7 @@ let D = (0, c.createContext)(null),
                 let o = (0, h.X1)();
                 o = "alertdialog" !== n || e["aria-describedby"] ? void 0 : o;
                 let y = (0, c.useRef)(!1);
-                (0, c.useEffect)(() => {
+                ((0, c.useEffect)(() => {
                     if (a.current && !(0, s.ae)(a.current)) {
                         (0, u.l)(a.current);
                         let e = setTimeout(() => {
@@ -50,7 +50,7 @@ let D = (0, c.createContext)(null),
                         r?.(!0);
                     }, [r]),
                     (0, c.useRef)(!1),
-                    (0, c.useEffect)(() => {});
+                    (0, c.useEffect)(() => {}));
                 let D = e["aria-describedby"] ?? o;
                 return {
                     dialogProps: {

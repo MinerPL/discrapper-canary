@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => $ }), n(323874), n(14289), n(35956), n(134528), n(947204);
+(n.r(t), n.d(t, { default: () => $ }), n(323874), n(14289), n(35956), n(134528), n(947204));
 var i = n(607399),
     r = n(696292),
     a = n(228366),
@@ -37,8 +37,8 @@ var b = n(280450),
     x = n(967198),
     k = n(711014),
     F = n(174459),
-    V = n(998218),
-    B = n(975807),
+    B = n(998218),
+    V = n(975807),
     H = n(652215);
 async function j(e, t, n) {
     await a.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: e, code: t, context: H.BRT.APP, invite_instance_id: n });
@@ -86,14 +86,15 @@ async function Y(e, t) {
     if (null == r) return void i();
     if (null == P.A.getGuild(e))
         try {
-            await l.A.joinGuild(e, { lurker: !0, source: H.Q4z.GUILD_EVENT_EMBED }), await l.A.transitionToGuildSync(e);
+            (await l.A.joinGuild(e, { lurker: !0, source: H.Q4z.GUILD_EVENT_EMBED }),
+                await l.A.transitionToGuildSync(e));
         } catch (e) {
             e.body?.code === H.t02.UNKNOWN_GUILD && i();
             return;
         }
-    x.A.getGuildId() !== e && (0, C.A)(H.BVt.CHANNEL(e)), (0, T.uR)({ eventId: r.id });
+    (x.A.getGuildId() !== e && (0, C.A)(H.BVt.CHANNEL(e)), (0, T.uR)({ eventId: r.id }));
 }
-n(758836), n(188275);
+(n(758836), n(188275));
 let K = { skipExtensionCheck: void 0, analyticsLocations: [] };
 function $(e) {
     let {
@@ -121,7 +122,7 @@ function $(e) {
                 l = x.A.getGuildId() ?? void 0;
             return (
                 null == a
-                    ? (0, B.A)(e)
+                    ? (0, V.A)(e)
                     : (F.default.track(H.HAw.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: a,
                           device_platform: i.Fr ? "mobile_web" : "desktop_web",
@@ -247,12 +248,12 @@ function $(e) {
     if (null != T && T.type === f.I.QUESTS_EMBED && (0, O.s)())
         return (e) => {
             e?.preventDefault();
-            let { search: t } = V.A.toURLSafe(T.url) ?? {};
+            let { search: t } = B.A.toURLSafe(T.url) ?? {};
             if (null != t) {
                 let e = new URLSearchParams(t);
-                e.get("sort"), e.get("filter");
+                (e.get("sort"), e.get("filter"));
             }
-            return (0, R.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0;
+            return ((0, R.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0);
         };
     if (null != T && T.type === f.I.GAME_PROFILE)
         return (e) => {
@@ -275,8 +276,8 @@ function $(e) {
                 !0
             );
         };
-    let { host: m, hostname: S, pathname: b, search: M, hash: P } = V.A.toURLSafe(e) ?? {},
-        U = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(m ?? null, S ?? null);
+    let { host: m, hostname: S, pathname: b, search: M, hash: P } = B.A.toURLSafe(e) ?? {},
+        U = B.A.isDiscordHostname(S ?? null) || B.A.isDiscordLocalhost(m ?? null, S ?? null);
     if (U && (b?.startsWith("/application-directory") || b?.startsWith("/discovery/applications"))) {
         let e = b.split("/"),
             t = b?.startsWith("/discovery/applications"),
@@ -287,7 +288,7 @@ function $(e) {
             let i, s, l;
             if ((t?.preventDefault(), r)) {
                 let e = new URLSearchParams(M);
-                (i = e.get("q") ?? void 0), (s = e.get("category_id") ?? void 0), (l = e.get("page") ?? void 0);
+                ((i = e.get("q") ?? void 0), (s = e.get("category_id") ?? void 0), (l = e.get("page") ?? void 0));
             } else a && (s = e[4]);
             return (
                 n
@@ -307,9 +308,11 @@ function $(e) {
             );
         };
     }
-    if (null != b && U && V.A.isAppRoute(b)) {
+    if (null != b && U && B.A.isAppRoute(b)) {
         let e = { navigationReplace: !1, openChannel: !0 };
-        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (t?.preventDefault(), (0, C.A)(b, e), !0);
+        return (
+            null != M && (e.search = M), null != P && (e.hash = P), (t) => (t?.preventDefault(), (0, C.A)(b, e), !0)
+        );
     }
     if (U && b?.startsWith("/users/")) {
         let e = b.match(/^\/users\/(\d+)/);
@@ -345,7 +348,7 @@ function $(e) {
         return (e) => {
             e?.preventDefault();
             let { guildId: t, guildEventId: n } = k;
-            return Y(t, n), !0;
+            return (Y(t, n), !0);
         };
     if (U && b?.startsWith("/settings/")) {
         let { openUserSettings: e } = n(766075),
@@ -353,7 +356,9 @@ function $(e) {
         return (n) => {
             n?.preventDefault();
             let r = t({ path: b, search: M });
-            return i(r, "link_click"), e(r.target, { analyticsLocations: a, path: r.path, searchParams: r.params }), !0;
+            return (
+                i(r, "link_click"), e(r.target, { analyticsLocations: a, path: r.path, searchParams: r.params }), !0
+            );
         };
     }
     if (U && b?.startsWith("/playground")) {

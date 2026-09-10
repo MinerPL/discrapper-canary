@@ -1,4 +1,4 @@
-r.d(t, { h: () => l }), r(321073);
+(r.d(t, { h: () => l }), r(321073));
 let n = 0,
     a = null;
 function l(e) {
@@ -9,10 +9,10 @@ function l(e) {
             0 === n &&
                 (function (e) {
                     let t = e;
-                    for (; null != t && t !== document.body; ) {
+                    for (; null != t && t !== document.body;) {
                         for (let t of Object.keys(e))
                             if (t.startsWith("__reactFiber$")) {
-                                (a = t), (n = 1);
+                                ((a = t), (n = 1));
                                 return;
                             }
                         t = t.parentElement;
@@ -21,7 +21,7 @@ function l(e) {
                 })(e);
             let t = a,
                 r = e;
-            for (; null != r && r !== document.body; ) {
+            for (; null != r && r !== document.body;) {
                 if (t in r) return r[t];
                 r = r.parentElement;
             }
@@ -31,7 +31,7 @@ function l(e) {
             return (function (e, t) {
                 let r = [],
                     n = e;
-                for (; null != n; ) {
+                for (; null != n;) {
                     let e = n?._debugSource?.fileName,
                         a = n?._debugSource?.lineNumber;
                     if (null != e && null != a) {

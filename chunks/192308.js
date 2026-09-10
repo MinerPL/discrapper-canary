@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         closeAllModals: () => L,
         closeAllModalsInContext: () => y,
@@ -23,7 +23,7 @@ n.r(t),
         useModalsStore: () => A,
     }),
     n(134528),
-    n(947204);
+    n(947204));
 var i = n(277057),
     r = n.n(i),
     a = n(196765),
@@ -55,7 +55,7 @@ async function h(e) {
         a = null != t.modalKey ? t.modalKey : r()(),
         s = !1,
         l = setTimeout(() => {
-            (s = !0), I(c, { ...i, modalKey: a }, n);
+            ((s = !0), I(c, { ...i, modalKey: a }, n));
         }, 300),
         o = await e();
     return (

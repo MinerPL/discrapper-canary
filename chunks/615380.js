@@ -1,11 +1,12 @@
 e.exports = (function () {
+    "use strict";
     var e = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
     function t(e, t) {
         var r = e[0],
             n = e[1],
             i = e[2],
             o = e[3];
-        (r += (((n & i) | (~n & o)) + t[0] - 0x28955b88) | 0),
+        ((r += (((n & i) | (~n & o)) + t[0] - 0x28955b88) | 0),
             (o += ((((r = (((r << 7) | (r >>> 25)) + n) | 0) & n) | (~r & i)) + t[1] - 0x173848aa) | 0),
             (i += ((((o = (((o << 12) | (o >>> 20)) + r) | 0) & r) | (~o & n)) + t[2] + 0x242070db) | 0),
             (n += ((((i = (((i << 17) | (i >>> 15)) + o) | 0) & o) | (~i & r)) + t[3] - 0x3e423112) | 0),
@@ -89,7 +90,7 @@ e.exports = (function () {
             (e[0] = (r + e[0]) | 0),
             (e[1] = (n + e[1]) | 0),
             (e[2] = (i + e[2]) | 0),
-            (e[3] = (o + e[3]) | 0);
+            (e[3] = (o + e[3]) | 0));
     }
     function r(e) {
         var t,
@@ -146,7 +147,7 @@ e.exports = (function () {
         return t.join("");
     }
     function a(e) {
-        return /[\u0080-\uFFFF]/.test(e) && (e = unescape(encodeURIComponent(e))), e;
+        return (/[\u0080-\uFFFF]/.test(e) && (e = unescape(encodeURIComponent(e))), e);
     }
     function s(e) {
         var t,
@@ -183,14 +184,14 @@ e.exports = (function () {
                 };
             })(),
         (l.prototype.append = function (e) {
-            return this.appendBinary(a(e)), this;
+            return (this.appendBinary(a(e)), this);
         }),
         (l.prototype.appendBinary = function (e) {
-            (this._buff += e), (this._length += e.length);
+            ((this._buff += e), (this._length += e.length));
             var n,
                 i = this._buff.length;
             for (n = 64; n <= i; n += 64) t(this._hash, r(this._buff.substring(n - 64, n)));
-            return (this._buff = this._buff.substring(n - 64)), this;
+            return ((this._buff = this._buff.substring(n - 64)), this);
         }),
         (l.prototype.end = function (e) {
             var t,
@@ -199,7 +200,7 @@ e.exports = (function () {
                 i = n.length,
                 a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             for (t = 0; t < i; t += 1) a[t >> 2] |= n.charCodeAt(t) << ((t % 4) << 3);
-            return this._finish(a, i), (r = o(this._hash)), e && (r = s(r)), this.reset(), r;
+            return (this._finish(a, i), (r = o(this._hash)), e && (r = s(r)), this.reset(), r);
         }),
         (l.prototype.reset = function () {
             return (
@@ -213,10 +214,10 @@ e.exports = (function () {
             return { buff: this._buff, length: this._length, hash: this._hash.slice() };
         }),
         (l.prototype.setState = function (e) {
-            return (this._buff = e.buff), (this._length = e.length), (this._hash = e.hash), this;
+            return ((this._buff = e.buff), (this._length = e.length), (this._hash = e.hash), this);
         }),
         (l.prototype.destroy = function () {
-            delete this._hash, delete this._buff, delete this._length;
+            (delete this._hash, delete this._buff, delete this._length);
         }),
         (l.prototype._finish = function (e, r) {
             var n,
@@ -224,11 +225,11 @@ e.exports = (function () {
                 o,
                 a = r;
             if (((e[a >> 2] |= 128 << ((a % 4) << 3)), a > 55)) for (t(this._hash, e), a = 0; a < 16; a += 1) e[a] = 0;
-            (i = parseInt((n = (n = 8 * this._length).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
+            ((i = parseInt((n = (n = 8 * this._length).toString(16).match(/(.*?)(.{0,8})$/))[2], 16)),
                 (o = parseInt(n[1], 16) || 0),
                 (e[14] = i),
                 (e[15] = o),
-                t(this._hash, e);
+                t(this._hash, e));
         }),
         (l.hash = function (e, t) {
             return l.hashBinary(a(e), t);
@@ -251,7 +252,7 @@ e.exports = (function () {
                     i),
                 s = a.length;
             for (this._length += e.byteLength, o = 64; o <= s; o += 64) t(this._hash, n(a.subarray(o - 64, o)));
-            return (this._buff = new Uint8Array(o - 64 < s ? a.buffer.slice(o - 64) : 0)), this;
+            return ((this._buff = new Uint8Array(o - 64 < s ? a.buffer.slice(o - 64) : 0)), this);
         }),
         (l.ArrayBuffer.prototype.end = function (e) {
             var t,
@@ -260,7 +261,7 @@ e.exports = (function () {
                 i = n.length,
                 a = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
             for (t = 0; t < i; t += 1) a[t >> 2] |= n[t] << ((t % 4) << 3);
-            return this._finish(a, i), (r = o(this._hash)), e && (r = s(r)), this.reset(), r;
+            return (this._finish(a, i), (r = o(this._hash)), e && (r = s(r)), this.reset(), r);
         }),
         (l.ArrayBuffer.prototype.reset = function () {
             return (
@@ -273,7 +274,7 @@ e.exports = (function () {
         (l.ArrayBuffer.prototype.getState = function () {
             var e,
                 t = l.prototype.getState.call(this);
-            return (e = t.buff), (t.buff = String.fromCharCode.apply(null, new Uint8Array(e))), t;
+            return ((e = t.buff), (t.buff = String.fromCharCode.apply(null, new Uint8Array(e))), t);
         }),
         (l.ArrayBuffer.prototype.setState = function (e) {
             return (

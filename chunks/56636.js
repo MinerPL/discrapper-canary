@@ -16,7 +16,7 @@ function i(e, t) {
     function r() {
         this.constructor = e;
     }
-    n(e, t), (e.prototype = null === t ? Object.create(t) : ((r.prototype = t.prototype), new r()));
+    (n(e, t), (e.prototype = null === t ? Object.create(t) : ((r.prototype = t.prototype), new r())));
 }
 var o = function () {
     return (o =

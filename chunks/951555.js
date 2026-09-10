@@ -88,7 +88,7 @@ function k(e) {
         [Z, q] = l.useState(t.currency);
     async function Q(e, n, i) {
         if (null == t) throw Error("missing subscription and paymentSource");
-        null == e ? await S.r6(t, n, i, Y, a) : await S.uK(t, e, i, Y, a), W(!1), q(n);
+        (null == e ? await S.r6(t, n, i, Y, a) : await S.uK(t, e, i, Y, a), W(!1), q(n));
     }
     async function J(e, n, i) {
         W(!0);
@@ -114,10 +114,10 @@ function k(e) {
             : i(e, l.currency, s);
     }
     function $(e) {
-        (0, v.c_)(e.id, (0, j.MP)(t)).then(() => {
+        ((0, v.c_)(e.id, (0, j.MP)(t)).then(() => {
             J(e, void 0, Q);
         }),
-            "function" == typeof n && n(e.id);
+            "function" == typeof n && n(e.id));
     }
     let ee = () => {
         (0, d.openModalLazy)(
@@ -220,7 +220,7 @@ async function w(e, t, l) {
         },
         {
             onCloseRequest: () => {
-                null != s && (0, d.closeModal)(s), l();
+                (null != s && (0, d.closeModal)(s), l());
             },
         },
     );

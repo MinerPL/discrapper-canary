@@ -25,10 +25,10 @@ let d = function (e) {
         (0, c.Bf)(f, j, N);
     }, [f, j, N]);
     let p = i.useCallback(() => {
-            (0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, f, j, N), x?.();
+            ((0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, f, j, N), x?.());
         }, [x, f, j, N]),
         C = i.useCallback(() => {
-            (0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, f, j, N), m?.();
+            ((0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, f, j, N), m?.());
         }, [m, f, j, N]),
         E = null != o && null != m ? (0, t.jsx)(a.$, { variant: A, text: o, onClick: C }, "agree") : null,
         I = null != h && null != x ? (0, t.jsx)(a.$, { variant: g, text: h, onClick: p }, "disagree") : null;

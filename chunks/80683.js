@@ -76,7 +76,7 @@ let B = function (e) {
                     {
                         variant: "primary",
                         onClick: function () {
-                            e.onAccept(), e.onClose();
+                            (e.onAccept(), e.onClose());
                         },
                         text: w.intl.string(w.t.NuzmOA),
                     },
@@ -168,7 +168,7 @@ class eA extends i.PureComponent {
     renderSuccessPopout = (e) => {
         let { closePopout: t } = e,
             { guild: n } = this.props;
-        return a()(null != n, "This guildID cannot be null"), (0, l.jsx)(X, { onClose: t, guild: n });
+        return (a()(null != n, "This guildID cannot be null"), (0, l.jsx)(X, { onClose: t, guild: n }));
     };
     handleCancelApplication = () => {
         let { guild: e } = this.props;
@@ -233,7 +233,7 @@ class eA extends i.PureComponent {
         }
     };
     handleGoBack = () => {
-        this.setState({ submitting: !0 }), (0, et.JK)().goBack();
+        (this.setState({ submitting: !0 }), (0, et.JK)().goBack());
     };
     handleFollowAnnouncement = () => {
         let { channel: e } = this.props;
@@ -295,44 +295,44 @@ class eA extends i.PureComponent {
             { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
             k = { theme: d, useReducedMotion: I };
         if (e && !A && null != M)
-            null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
+            (null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
                 (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
                 (k.buttonText = w.intl.string(w.t.DjifDP)),
                 (k.buttonIcon = h.r),
                 (k.buttonVariant = "primary"),
-                (k.onButtonClick = M.onReturnToGameProfile);
+                (k.onButtonClick = M.onReturnToGameProfile));
         else if (e && !A) {
             if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != p && p >= 1e3)) {
                 let e = 1e3 * Math.floor(p / 1e3);
                 k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
             }
-            (k.buttonText = w.intl.string(w.t["3aOv+h"])),
+            ((k.buttonText = w.intl.string(w.t["3aOv+h"])),
                 (k.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((k.onSecondaryButtonClick = this.handleJoinServer),
-                    (k.secondaryButtonText = w.intl.string(w.t.RLch70)));
+                    (k.secondaryButtonText = w.intl.string(w.t.RLch70))));
         } else if (n)
-            (k.message = w.intl.string(w.t["Eg3/c9"])),
+            ((k.message = w.intl.string(w.t["Eg3/c9"])),
                 (k.buttonText = w.intl.string(w.t.fiNVin)),
-                (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount);
+                (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (C)
             switch (j?.applicationStatus) {
                 case v.B5.SUBMITTED:
-                    (k.message = w.intl.string(w.t["5iLvSx"])),
+                    ((k.message = w.intl.string(w.t["5iLvSx"])),
                         (k.subtitle = w.intl.string(w.t.FdsK4h)),
                         (k.buttonText = w.intl.string(w.t.mqtdmQ)),
-                        (k.onButtonClick = this.handleCancelApplication);
+                        (k.onButtonClick = this.handleCancelApplication));
                     break;
                 case v.B5.REJECTED:
-                    (k.message = w.intl.string(w.t.lk30cY)),
+                    ((k.message = w.intl.string(w.t.lk30cY)),
                         (k.buttonText = w.intl.string(w.t["8RrsHr"])),
-                        (k.onButtonClick = this.handleViewApplicationRejection);
+                        (k.onButtonClick = this.handleViewApplicationRejection));
                     break;
                 default:
-                    (k.message = w.intl.string(w.t.rEBKvg)),
+                    ((k.message = w.intl.string(w.t.rEBKvg)),
                         (k.buttonText = w.intl.string(w.t["r8/DT+"])),
                         (k.buttonVariant = "primary"),
-                        (k.onButtonClick = this.handleShowMemberVerification);
+                        (k.onButtonClick = this.handleShowMemberVerification));
             }
         else
             null != R && null != S && x

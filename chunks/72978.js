@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.stringSimilarity = void 0),
     (t.stringSimilarity = function (e, t, r, n) {
         if (
@@ -19,4 +19,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         }
         return (2 * s) / (e.length + t.length - (r - 1) * 2);
     }),
-    (t.default = t.stringSimilarity);
+    (t.default = t.stringSimilarity));

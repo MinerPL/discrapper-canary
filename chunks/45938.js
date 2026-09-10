@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AK: () => G,
     GM: () => w,
     Ik: () => y,
@@ -11,15 +11,15 @@ n.d(t, {
     Zq: () => U,
     e7: () => P,
     eN: () => Y,
-    e_: () => V,
+    e_: () => B,
     lo: () => L,
     n$: () => k,
     pF: () => M,
     tB: () => R,
-    u1: () => B,
+    u1: () => V,
     v3: () => x,
 }),
-    n(801541);
+    n(801541));
 var i,
     r = n(889137),
     a = n(607399),
@@ -85,15 +85,15 @@ function P(e) {
     let t;
     if (null == e) return [];
     let n = new Set();
-    for (; null != (t = m.exec(e)) && n.size < 3; ) n.add(b(t[1]));
-    for (; null != (t = S.exec(e)) && n.size < 3; ) n.add(b(t[t.length - 1]));
+    for (; null != (t = m.exec(e)) && n.size < 3;) n.add(b(t[1]));
+    for (; null != (t = S.exec(e)) && n.size < 3;) n.add(b(t[t.length - 1]));
     return Array.from(n);
 }
 function U() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
         n = window.GLOBAL_ENV.GIFT_CODE_HOST;
-    return null != n ? (e = `/${t}`) : ((n = location.host), (e = `/gifts/${t}`)), `${location.protocol}//${n}${e}`;
+    return (null != n ? (e = `/${t}`) : ((n = location.host), (e = `/gifts/${t}`)), `${location.protocol}//${n}${e}`);
 }
 async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -173,7 +173,7 @@ function F(e, t, n) {
             return t.isSubscription ? p.intl.string(p.t.wQ1FHy) : p.intl.string(p.t.OgpR0c);
     }
 }
-function V(e) {
+function B(e) {
     let {
         step: t,
         sku: n,
@@ -186,7 +186,7 @@ function V(e) {
     } = e;
     switch (t) {
         case I.frR.ERROR:
-            return B(i, a, s, l, o);
+            return V(i, a, s, l, o);
         case I.frR.SUCCESS:
             if (null != d)
                 return (0, r.YW)(d)
@@ -213,7 +213,7 @@ function V(e) {
             return p.intl.formatToPlainString(p.t.l6Ea4Z, { skuName: n.name });
     }
 }
-function B(e, t, n, i, r) {
+function V(e, t, n, i, r) {
     let a = p.intl.format(p.t["5zyz9y"], { onGoToLibrary: r });
     return null != (n || i ? void 0 : e) ? a : null == t ? null : Y(t, c.default.getCurrentUser());
 }

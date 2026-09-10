@@ -32,7 +32,7 @@ var n,
         r.src = "".concat(a).concat(t);
         var n = document.head || document.body;
         if (!n) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
-        return n.appendChild(r), r;
+        return (n.appendChild(r), r);
     },
     d = function (e, t) {
         e && e._registerWrapper && e._registerWrapper({ name: "stripe-js", version: "7.3.1", startTime: t });
@@ -57,7 +57,7 @@ var n,
                     ),
             );
         var s = e.apply(void 0, t);
-        return d(s, r), s;
+        return (d(s, r), s);
     },
     y = function (e) {
         var t =
@@ -83,7 +83,7 @@ var n,
                   try {
                       var n,
                           i = c();
-                      i && e
+                      (i && e
                           ? console.warn(u)
                           : i
                             ? i &&
@@ -101,18 +101,18 @@ var n,
                               r(Error("Failed to load Stripe.js", { cause: e }));
                           }),
                           i.addEventListener("load", m),
-                          i.addEventListener("error", h);
+                          i.addEventListener("error", h));
                   } catch (e) {
                       r(e);
                       return;
                   }
               })).catch(function (e) {
-                  return (p = null), Promise.reject(e);
+                  return ((p = null), Promise.reject(e));
               })).then(function (e) {
             return v(e, r, o);
         });
     };
-(b.setLoadParameters = function (e) {
+((b.setLoadParameters = function (e) {
     if (
         !(
             g &&
@@ -127,4 +127,4 @@ var n,
         n = y(e);
     }
 }),
-    (t.loadStripe = b);
+    (t.loadStripe = b));

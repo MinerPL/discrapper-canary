@@ -1,11 +1,11 @@
-n.d(t, {
+(n.d(t, {
     E3: () => Y,
     EH: () => K,
     Gk: () => U,
     IY: () => j,
     Jl: () => m,
     L5: () => D,
-    Pe: () => V,
+    Pe: () => B,
     Pp: () => M,
     Rt: () => W,
     TZ: () => w,
@@ -16,7 +16,7 @@ n.d(t, {
     _B: () => N,
     _b: () => C,
     _o: () => F,
-    av: () => B,
+    av: () => V,
     bS: () => T,
     dX: () => b,
     lX: () => G,
@@ -25,7 +25,7 @@ n.d(t, {
     sh: () => L,
     zZ: () => P,
 }),
-    n(321073);
+    n(321073));
 var i = n(435558),
     r = n.n(i);
 n(536637);
@@ -164,7 +164,7 @@ function v(e) {
             case f.LWr.ANSWER_AFTER:
                 let a = e.getData("start"),
                     s = e.getData("end");
-                a && (t.min_id = E.default.fromTimestamp(a)), s && (t.max_id = E.default.fromTimestamp(s));
+                (a && (t.min_id = E.default.fromTimestamp(a)), s && (t.max_id = E.default.fromTimestamp(s)));
                 return;
         }
         let l = (null == (i = null != (n = I.Ay[r]) ? n.queryKey : null) && (i = "content"), i);
@@ -198,7 +198,9 @@ function v(e) {
     }),
     Object.entries(t)))
         i instanceof Set && (t[n] = Array.from(i));
-    return t.content && (delete t.contents, (t.content = t.content.join(" ").trim()), t.content || delete t.content), t;
+    return (
+        t.content && (delete t.contents, (t.content = t.content.join(" ").trim()), t.content || delete t.content), t
+    );
 }
 function b(e) {
     return e?.contents != null && e.contents.length > 0
@@ -249,10 +251,10 @@ let x = new a.Ay(),
 function F(e) {
     return x.tokenize(e);
 }
-function V() {
-    x.clearCache(), k.clearCache();
+function B() {
+    (x.clearCache(), k.clearCache());
 }
-function B(e) {
+function V(e) {
     return null != e ? y[e] : null;
 }
 function H(e, t) {
@@ -260,9 +262,9 @@ function H(e, t) {
     return (null != t || !n) && (null == t || !n || !!f.T2E.test(t.type));
 }
 function j() {
-    (0, I.nD)(), x.reset(), r()(I.Ay).forOwn((e, t) => x.addRule({ type: t, ...e })), k.reset();
+    ((0, I.nD)(), x.reset(), r()(I.Ay).forOwn((e, t) => x.addRule({ type: t, ...e })), k.reset());
     let e = (0, I.gU)();
-    r()(e).forOwn((e, t) => k.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
+    (r()(e).forOwn((e, t) => k.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed());
 }
 function W(e) {
     let t = (0, s.m1)(e, _.default, c.A),

@@ -1,6 +1,6 @@
-n.d(t, {
+(n.d(t, {
     $w: () => w,
-    D1: () => V,
+    D1: () => B,
     Df: () => y,
     JM: () => v,
     Sb: () => g.Sb,
@@ -24,7 +24,7 @@ n.d(t, {
     n(949626),
     n(767709),
     n(65162),
-    n(582128);
+    n(582128));
 var i = n(284009),
     r = n.n(i),
     a = n(636537),
@@ -48,7 +48,7 @@ var I = n(460288),
     S = n(652215);
 let N = "UserSettingsProtoLastWriteTimes";
 function C() {}
-Date.now(),
+(Date.now(),
     c.h.subscribe("CONNECTION_OPEN", () => {
         Date.now();
     }),
@@ -56,7 +56,7 @@ Date.now(),
         Date.now();
     }),
     "u" > typeof document &&
-        (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {}));
+        (document.addEventListener("mousedown", () => {}), document.addEventListener("keydown", () => {})));
 class O {
     ProtoClass;
     type;
@@ -64,7 +64,7 @@ class O {
     beforeSendCallbacks = [];
     lastSendTime = 0;
     constructor(e, t) {
-        (this.ProtoClass = e), (this.type = t), (this.logger = new u.A(this.ProtoClass.typeName));
+        ((this.ProtoClass = e), (this.type = t), (this.logger = new u.A(this.ProtoClass.typeName)));
     }
     getEditInfo() {
         return p.A.getFullState()[this.type];
@@ -119,22 +119,22 @@ class O {
             null == i.timeout)
         ) {
             let e = a * h.A.Millis.SECOND;
-            t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * h.A.Millis.SECOND))),
+            (t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * h.A.Millis.SECOND))),
                 this.logger.log("Scheduling save from markDirty"),
                 (i.timeout = setTimeout(this.persistChanges, e)),
-                (i.timeoutDelay = a);
+                (i.timeoutDelay = a));
         }
-        null != t.cleanup && (i.cleanupFuncs = [...n.cleanupFuncs, ...t.cleanup]),
+        (null != t.cleanup && (i.cleanupFuncs = [...n.cleanupFuncs, ...t.cleanup]),
             null == t.onError ||
                 n.errorCallbacks.includes(t.onError) ||
                 (i.errorCallbacks = [...n.errorCallbacks, t.onError]),
             null == n.protoToSave
                 ? (i.protoToSave = e)
                 : (i.protoToSave = (0, m.RK)(this.ProtoClass, n.protoToSave, e)),
-            this.dispatchChanges(i);
+            this.dispatchChanges(i));
     }
     persistChanges = async () => {
-        r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto");
+        (r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Persisting proto"));
         let { editInfo: e } = this.getEditInfo();
         if (null == e.protoToSave) return void this.logger.log("Not persisting proto because the proto was null");
         this.beforeSendCallbacks.forEach((t) => {
@@ -151,8 +151,8 @@ class O {
                 body: { settings: t, required_data_version: e.offlineEditDataVersion },
                 rejectWithError: !1,
             });
-            n.out_of_date && this.logger.log("Proto was out of date, discarding changes"),
-                this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
+            (n.out_of_date && this.logger.log("Proto was out of date, discarding changes"),
+                this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e()));
             let i = (0, m.ii)(this.ProtoClass, n.settings);
             if (null == i) return;
             c.h.dispatch({
@@ -171,16 +171,16 @@ class O {
                 this.dispatchChanges({ rateLimited: !0, timeout: n });
             } else if (400 === e.status && e.body?.code === S.t02.INVALID_USER_SETTINGS_DATA)
                 throw (
-                    (this.logger.log("Reloading do to invalid data"),
+                    this.logger.log("Reloading do to invalid data"),
                     this.getEditInfo().editInfo.errorCallbacks.forEach((t) => t(e)),
                     this.loadIfNecessary(!0),
-                    e)
+                    e
                 );
             else
                 throw (
-                    (this.logger.log("Unknown user settings error"),
+                    this.logger.log("Unknown user settings error"),
                     this.getEditInfo().editInfo.errorCallbacks.forEach((t) => t(e)),
-                    e)
+                    e
                 );
         }
     };
@@ -189,7 +189,7 @@ class O {
     }
     saveLastSendTime() {
         let e = d.w.get(N) ?? {};
-        (e[this.type] = Date.now()), d.w.set(N, e);
+        ((e[this.type] = Date.now()), d.w.set(N, e));
     }
     loadIfUncached(e, t) {
         (p.A.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
@@ -199,7 +199,7 @@ class O {
             return void c.h.dispatch({ type: "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", settingsType: this.type });
         let { editInfo: t } = this.getEditInfo();
         if (e || (!t.loaded && !t.loading)) {
-            this.logger.log("Loading proto"), this.dispatchChanges({ loading: !0 });
+            (this.logger.log("Loading proto"), this.dispatchChanges({ loading: !0 }));
             try {
                 let {
                         body: { settings: t },
@@ -224,13 +224,13 @@ class O {
         }
     }
     markDirtyFromMigration(e, t) {
-        r()(!__OVERLAY__, "this cannot run in the overlay"),
+        (r()(!__OVERLAY__, "this cannot run in the overlay"),
             this.logger.log("Marking dirty due to migrates"),
             r()(
                 null == this.getEditInfo().editInfo.offlineEditDataVersion,
                 "offline changes are not supported with migrations",
             ),
-            this.markDirty(e, { cleanup: t, dispatch: !1, delaySeconds: g.Sb.AUTOMATED, jitter: !0 });
+            this.markDirty(e, { cleanup: t, dispatch: !1, delaySeconds: g.Sb.AUTOMATED, jitter: !0 }));
     }
     markDirtyIfHasPendingChange(e) {
         this.beforeSendCallbacks.some((e) => {
@@ -239,11 +239,11 @@ class O {
         }) && this.markDirty(this.ProtoClass.create(), { dispatch: !1, delaySeconds: 0, cleanup: e });
     }
     scheduleSaveFromOfflineEdit() {
-        r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Scheduling save from offline edit");
+        (r()(!__OVERLAY__, "this cannot run in the overlay"), this.logger.log("Scheduling save from offline edit"));
         let { editInfo: e } = this.getEditInfo();
-        r()(null != e.protoToSave, "protoToSave cannot be null"),
+        (r()(null != e.protoToSave, "protoToSave cannot be null"),
             r()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
-            r()(null == e.timeout, "timeout must not be set already");
+            r()(null == e.timeout, "timeout must not be set already"));
         let t = 5e3 + Math.floor(5e3 * Math.random()),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({ timeout: n, timeoutDelay: t });
@@ -334,12 +334,12 @@ function F() {
     return R.updateAsync(
         "userContent",
         (e) => {
-            (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
+            ((e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {}));
         },
         g.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function V() {
+function B() {
     return R.updateAsync(
         "userContent",
         (e) => {

@@ -8,10 +8,10 @@ class l extends s.A {
     buttonColors;
     confettiColors;
     constructor(e) {
-        super(),
+        (super(),
             (this.backgroundColors = e.backgroundColors),
             (this.buttonColors = e.buttonColors),
-            (this.confettiColors = e.confettiColors);
+            (this.confettiColors = e.confettiColors));
     }
     static fromServer(e) {
         let { background_colors: t, button_colors: n, confetti_colors: i } = e;

@@ -5,7 +5,7 @@ function o(e, t) {
     if (!(0, i.Nf)()) return !!t && !!e && e.contains(t);
     if (!e || !t) return !1;
     let r = t;
-    for (; null !== r; ) {
+    for (; null !== r;) {
         if (r === e) return !0;
         r =
             "function" != typeof r.assignedElements && r.assignedSlot?.parentNode
@@ -19,7 +19,7 @@ function o(e, t) {
 let a = (e = document) => {
     if (!(0, i.Nf)()) return e.activeElement;
     let t = e.activeElement;
-    for (; t && "shadowRoot" in t && t.shadowRoot?.activeElement; ) t = t.shadowRoot.activeElement;
+    for (; t && "shadowRoot" in t && t.shadowRoot?.activeElement;) t = t.shadowRoot.activeElement;
     return t;
 };
 function s(e) {

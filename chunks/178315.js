@@ -1,4 +1,4 @@
-n.d(t, { A: () => h }), n(321073);
+(n.d(t, { A: () => h }), n(321073));
 var i = n(582128),
     l = n(975807),
     s = n(375708),
@@ -25,13 +25,13 @@ function h(e) {
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isUserMFAEnabled: c, isModerationMFAEnabled: u } = g(),
         h = i.useCallback(async () => {
-            c ? u || (await n?.onRequireModeratorMFAClick?.()) : await n?.onEnableMFAClick?.(), t?.();
+            (c ? u || (await n?.onRequireModeratorMFAClick?.()) : await n?.onEnableMFAClick?.(), t?.());
         }, [c, u, t, n]),
         E = (function (e) {
             let { onEnableMFAClick: t, onMFAEnabled: n } = e,
                 { isUserMFAEnabled: l, isModerationMFAEnabled: s } = g(),
                 r = i.useCallback(async () => {
-                    await t(), n?.();
+                    (await t(), n?.());
                 }, [t, n]),
                 d = i.useCallback((e) => (0, a.jsx)(o.A, { onClick: r, children: e }), [r]);
             return l && s ? x : d;
@@ -129,6 +129,6 @@ function h(e) {
                 actionHandler: l ? h : void 0,
             });
         }
-        return !0 === d && g.sort((e) => (e.checked ? 0 : -1)), g;
+        return (!0 === d && g.sort((e) => (e.checked ? 0 : -1)), g);
     }, [e, d, c, n, u, E, h]);
 }

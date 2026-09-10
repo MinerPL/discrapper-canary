@@ -144,11 +144,11 @@ function Q(e) {
         f = (0, i.bG)([g.A], () => g.A.can(O.xBc.READ_MESSAGE_HISTORY, t)),
         v = (0, m.AI)(t);
     function N() {
-        r(), (0, R.Tv)(t, void 0, "Thread Browser Empty State");
+        (r(), (0, R.Tv)(t, void 0, "Thread Browser Empty State"));
     }
     let S = l.useCallback(
             (e, t) => {
-                r(), (0, R.JA)(e, !t, D.H9.BROWSER);
+                (r(), (0, R.JA)(e, !t, D.H9.BROWSER));
             },
             [r],
         ),
@@ -162,7 +162,7 @@ function Q(e) {
                     a(!0);
                     try {
                         let s = await j.A.searchThreads(e, t, n);
-                        c(!0), d(s);
+                        (c(!0), d(s));
                     } finally {
                         a(!1);
                     }
@@ -171,7 +171,7 @@ function Q(e) {
             return {
                 query: n,
                 setQuery: function (e) {
-                    s(e), 0 === e.length && c(!1);
+                    (s(e), 0 === e.length && c(!1));
                 },
                 isLoading: r,
                 hasResults: i,
@@ -207,7 +207,7 @@ function Q(e) {
                                   children: (0, s.jsx)(c.$, {
                                       size: "sm",
                                       onClick: function () {
-                                          r(), (0, R.Tv)(t, void 0, "Thread Browser Toolbar");
+                                          (r(), (0, R.Tv)(t, void 0, "Thread Browser Toolbar"));
                                       },
                                       text: w.intl.string(w.t.CumH4u),
                                   }),

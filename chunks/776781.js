@@ -2,7 +2,7 @@ n.d(t, { $b: () => E, Ni: () => I, pC: () => f, pF: () => A, qd: () => h });
 var i = n(136722),
     r = n(17928),
     a = n(857071);
-n(260509), n(280450);
+(n(260509), n(280450));
 var s = n(734057),
     l = n(71393),
     o = n(576705),
@@ -19,15 +19,19 @@ function A(e) {
     return i.aI(t, d.x3) && i.aI(n, d.x3);
 }
 function h(e) {
-    return (0, r.bG)([o.A, l.A, s.A], () => {
-        let t = s.A.getChannel(e),
-            n = l.A.getGuild(t?.getGuildId());
-        return !!(
-            o.A.can(_.xBc.ADMINISTRATOR, n) ||
-            o.A.can(_.xBc.MANAGE_ROLES, t, void 0, void 0, !0) ||
-            o.A.can(c.Kn, t)
-        );
-    }, [e]);
+    return (0, r.bG)(
+        [o.A, l.A, s.A],
+        () => {
+            let t = s.A.getChannel(e),
+                n = l.A.getGuild(t?.getGuildId());
+            return !!(
+                o.A.can(_.xBc.ADMINISTRATOR, n) ||
+                o.A.can(_.xBc.MANAGE_ROLES, t, void 0, void 0, !0) ||
+                o.A.can(c.Kn, t)
+            );
+        },
+        [e],
+    );
 }
 function I(e) {
     return (0, r.bG)([s.A, o.A], () => null != e && o.A.can(_.xBc.MUTE_MEMBERS, s.A.getChannel(e)), [e]);

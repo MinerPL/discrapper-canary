@@ -154,29 +154,41 @@ function D(e) {
 function U(e) {
     let { popoutProps: t, roleId: n, guildId: s, channelId: a } = e,
         d = i.useRef(null);
-    (0, p.Ay)(() => {
+    ((0, p.Ay)(() => {
         t.setPopoutRef?.(d.current);
     }),
         (0, p.l0)(() => {
             t.setPopoutRef?.(null);
-        });
+        }));
     let h = (0, I.A)(s),
-        m = (0, o.bG)([O.A], () => {
-            let e = O.A.getGuild(s);
-            return null == e ? null : (0, j.af)(e);
-        }, [s]),
-        f = (0, o.yK)([b.Ay, L.default], () => {
-            let e = b.Ay.getMembers(s),
-                t = null == n || n === m ? e : e.filter((e) => e.roles.includes(n));
-            return r()(t)
-                .filter((e) => null != L.default.getUser(e.userId))
-                .sortBy((e) => e.nick ?? M.Ay.getName(L.default.getUser(e.userId)))
-                .value();
-        }, [s, n, m]),
-        g = (0, o.bG)([R.A], () => {
-            let e = n ?? m;
-            return null == e ? null : R.A.getRole(s, e);
-        }, [s, n, m]),
+        m = (0, o.bG)(
+            [O.A],
+            () => {
+                let e = O.A.getGuild(s);
+                return null == e ? null : (0, j.af)(e);
+            },
+            [s],
+        ),
+        f = (0, o.yK)(
+            [b.Ay, L.default],
+            () => {
+                let e = b.Ay.getMembers(s),
+                    t = null == n || n === m ? e : e.filter((e) => e.roles.includes(n));
+                return r()(t)
+                    .filter((e) => null != L.default.getUser(e.userId))
+                    .sortBy((e) => e.nick ?? M.Ay.getName(L.default.getUser(e.userId)))
+                    .value();
+            },
+            [s, n, m],
+        ),
+        g = (0, o.bG)(
+            [R.A],
+            () => {
+                let e = n ?? m;
+                return null == e ? null : R.A.getRole(s, e);
+            },
+            [s, n, m],
+        ),
         x = null == n ? null : h?.[n],
         A = i.useMemo(
             () =>

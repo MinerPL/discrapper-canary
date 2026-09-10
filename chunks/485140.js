@@ -17,7 +17,7 @@ function m() {
         (i) => {
             if (null == e) return void (0, o.pX)(b.BVt.LOGIN, { source: "premium_subscribe_button" });
             if (t?.status === b.Dmq.ACCOUNT_HOLD) {
-                (0, l.xf)(), (0, c.openUserSettings)(u.X.NITRO_PANEL);
+                ((0, l.xf)(), (0, c.openUserSettings)(u.X.NITRO_PANEL));
                 return;
             }
             e.isClaimed()

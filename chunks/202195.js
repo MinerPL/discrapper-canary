@@ -11,13 +11,17 @@ var l = n(17928),
     h = n(583846);
 function m(e) {
     let t = (0, h.JM)(e),
-        n = (0, l.bG)([d.A, o.A, u.A], () => {
-            if (!t || e.author_type !== i.ContentInventoryAuthorType.USER) return null;
-            let n = d.A.getVoiceStateForUser(e.author_id),
-                l = o.A.getChannel(n?.channelId),
-                r = "channel_id" in e ? e.channel_id : null;
-            return (null == r || r === n?.channelId) && (null == l || (0, s.A)(l, u.A)) ? l : null;
-        }, [e, t]),
+        n = (0, l.bG)(
+            [d.A, o.A, u.A],
+            () => {
+                if (!t || e.author_type !== i.ContentInventoryAuthorType.USER) return null;
+                let n = d.A.getVoiceStateForUser(e.author_id),
+                    l = o.A.getChannel(n?.channelId),
+                    r = "channel_id" in e ? e.channel_id : null;
+                return (null == r || r === n?.channelId) && (null == l || (0, s.A)(l, u.A)) ? l : null;
+            },
+            [e, t],
+        ),
         m = (0, l.bG)([c.A], () => (null != t ? c.A.getPrimaryActivity(e.author_id, n?.guild_id) : null), [
             n,
             e.author_id,

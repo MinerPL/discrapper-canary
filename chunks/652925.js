@@ -2,14 +2,14 @@ var n = (function () {
     function e(e, t) {
         for (var r = 0; r < t.length; r++) {
             var n = t[r];
-            (n.enumerable = n.enumerable || !1),
+            ((n.enumerable = n.enumerable || !1),
                 (n.configurable = !0),
                 "value" in n && (n.writable = !0),
-                Object.defineProperty(e, n.key, n);
+                Object.defineProperty(e, n.key, n));
         }
     }
     return function (t, r, n) {
-        return r && e(t.prototype, r), n && e(t, n), t;
+        return (r && e(t.prototype, r), n && e(t, n), t);
     };
 })();
 e.exports = (function (e) {
@@ -21,7 +21,7 @@ e.exports = (function (e) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (e._children = []), e;
+        return ((e._children = []), e);
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
@@ -32,7 +32,7 @@ e.exports = (function (e) {
             {
                 key: "__addChild",
                 value: function (e) {
-                    0 === this._children.length && this.__attach(), this._children.push(e);
+                    (0 === this._children.length && this.__attach(), this._children.push(e));
                 },
             },
             {

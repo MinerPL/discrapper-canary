@@ -52,7 +52,7 @@ function C(t) {
                                 ))
                               : (0, m.tr)(A.id, D, Z, w);
                           let { source: t, alertType: i, messageId: s } = N;
-                          x.default.track(p.HAw.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
+                          (x.default.track(p.HAw.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                               guild_id: e,
                               source: t,
                               raid_alert_id: s,
@@ -61,7 +61,7 @@ function C(t) {
                               intervention_type_disabled: (0, v.fi)(D, Z),
                               duration: 60 * w,
                           }),
-                              C();
+                              C());
                       },
                       loading: S,
                       disabled: !R,
@@ -77,7 +77,7 @@ function C(t) {
                           placeholder: E.intl.string(E.t.vKYZzc),
                           options: (0, _.aE)(),
                           onSelectionChange: function (t) {
-                              y(t), Q(!0);
+                              (y(t), Q(!0));
                           },
                           value: w,
                           selectionMode: "single",

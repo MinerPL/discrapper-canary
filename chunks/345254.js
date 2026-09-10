@@ -15,8 +15,8 @@ function d(n, i) {
               leadingAccessory: { type: "icon", icon: r.LinkIcon },
               icon: r.LinkIcon,
               action: () => {
-                  (0, a.C)(`${location.protocol}//${location.host}${s.BVt.CHANNEL(i.guild_id, i.id, n.id)}`),
-                      o.default.track(s.HAw.MESSAGE_LINK_COPIED, { message_id: n.id, channel: n.channel_id });
+                  ((0, a.C)(`${location.protocol}//${location.host}${s.BVt.CHANNEL(i.guild_id, i.id, n.id)}`),
+                      o.default.track(s.HAw.MESSAGE_LINK_COPIED, { message_id: n.id, channel: n.channel_id }));
               },
           })
         : null;

@@ -48,7 +48,7 @@ function j(i) {
               : (0, e.jsx)(c.Dr, {
                     id: "favorite",
                     action: () => {
-                        (0, E.Dt)({ sticker: m, location: { ...h, object: f.ZSU.STICKER } }), (0, A.uK)(m?.id);
+                        ((0, E.Dt)({ sticker: m, location: { ...h, object: f.ZSU.STICKER } }), (0, A.uK)(m?.id));
                     },
                     label: C.intl.string(C.t.kWmiPW),
                     leadingAccessory: { type: "icon", icon: a.StarIcon },
@@ -64,7 +64,7 @@ function j(i) {
               : (0, e.jsx)(c.Dr, {
                     id: "favorite",
                     action: () => {
-                        (0, d.C5)({ emoji: N, location: { ...h, object: f.ZSU.EMOJI } }), (0, s.V4)(N);
+                        ((0, d.C5)({ emoji: N, location: { ...h, object: f.ZSU.EMOJI } }), (0, s.V4)(N));
                     },
                     label: C.intl.string(C.t.nNsr67),
                     leadingAccessory: { type: "icon", icon: a.StarIcon },

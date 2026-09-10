@@ -14,7 +14,7 @@ function d() {
     };
 }
 function c() {
-    return (o = d()), !1;
+    return ((o = d()), !1);
 }
 class u extends i.Ay.PersistedStore {
     static displayName = "UserSettingsOverridesStore";
@@ -22,11 +22,11 @@ class u extends i.Ay.PersistedStore {
     static migrations = [
         () => {
             let e = r.w.get("UserSettingsStoreOverrides") ?? {};
-            return r.w.remove("UserSettingsStoreOverrides"), e;
+            return (r.w.remove("UserSettingsStoreOverrides"), e);
         },
     ];
     initialize(e) {
-        (l = e ?? {}), this.syncWith([s.A], c);
+        ((l = e ?? {}), this.syncWith([s.A], c));
     }
     getState() {
         return l;

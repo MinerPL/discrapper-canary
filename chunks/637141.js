@@ -119,11 +119,15 @@ function b(e) {
             i.useEffect(() => {
                 null != f && (0, c.YP)(f);
             }, [f]);
-            let S = (0, r.bG)([d.A], () => {
-                    if (null == f) return null;
-                    let e = d.A.getBalance(f);
-                    return null != e ? (0, E.$g)(e.amount, e.currency) : null;
-                }, [f]),
+            let S = (0, r.bG)(
+                    [d.A],
+                    () => {
+                        if (null == f) return null;
+                        let e = d.A.getBalance(f);
+                        return null != e ? (0, E.$g)(e.amount, e.currency) : null;
+                    },
+                    [f],
+                ),
                 y = 0 === n.length,
                 I = null != l ? [l] : [],
                 P = [...I, ...n, ...(C ? [x] : [])].map((e, t) => {
@@ -157,7 +161,7 @@ function b(e) {
                         e = 0 === t.length ? m.a : t[0].id;
                     }
                     let l = n.filter((e) => e instanceof p.A);
-                    return l.length > 0 && l.every((e) => !e.enabled) && (e = m.a), e;
+                    return (l.length > 0 && l.every((e) => !e.enabled) && (e = m.a), e);
                 }, [t, u, n]);
             return {
                 hasNoPaymentSources: y,

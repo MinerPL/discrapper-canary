@@ -12,14 +12,14 @@ class s extends r.A {
     overflowBottom;
     overflowHorizontal;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.type = i.R.PROFILE_FRAME),
             (this.label = e.label),
             (this.layers = e.layers),
             (this.innerWidth = e.innerWidth),
             (this.overflowTop = e.overflowTop),
             (this.overflowBottom = e.overflowBottom),
-            (this.overflowHorizontal = e.overflowHorizontal);
+            (this.overflowHorizontal = e.overflowHorizontal));
     }
     static fromServer(e) {
         let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...a } = e;

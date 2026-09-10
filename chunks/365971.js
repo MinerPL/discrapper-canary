@@ -5,7 +5,7 @@ function r(e) {
 }
 function a(e) {
     let t = (0, i.uniqueId)("window-");
-    return (e.__DISCORD_WINDOW_ID = t), t;
+    return ((e.__DISCORD_WINDOW_ID = t), t);
 }
 function s() {
     return r(window);

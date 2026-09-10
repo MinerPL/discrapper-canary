@@ -1,4 +1,4 @@
-n.d(e, { default: () => T }), n(321073);
+(n.d(e, { default: () => T }), n(321073));
 var i = n(477900),
     l = n(582128),
     r = n(562708),
@@ -148,7 +148,7 @@ function T(t) {
             })
                 .then(
                     (t) => {
-                        f.A.checkGuildTemplateDirty(e), T(t.body.id), B();
+                        (f.A.checkGuildTemplateDirty(e), T(t.body.id), B());
                     },
                     (t) => {},
                 )
@@ -189,7 +189,7 @@ function T(t) {
                         label: R.intl.string(R.t.PVbHDl),
                         value: W,
                         onChange: function (t) {
-                            (0, k.ke)(X) && (t = (0, N.an)(t)), P(t);
+                            ((0, k.ke)(X) && (t = (0, N.an)(t)), P(t));
                         },
                         maxLength: w.Ign,
                         placeholder: R.intl.string(R.t["bw/b8E"]),

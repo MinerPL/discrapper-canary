@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CC: () => y,
     CI: () => b,
     DS: () => W,
@@ -19,7 +19,7 @@ n.d(t, {
     z7: () => j,
     zD: () => U,
 }),
-    n(321073);
+    n(321073));
 var i = n(435558),
     r = n(536637),
     a = n.n(r),
@@ -83,7 +83,7 @@ function O(e) {
 function R() {
     let e = a()().add(1, "hour"),
         t = e.hour();
-    return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
+    return (e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0));
 }
 function L(e, t) {
     return (0, o.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
@@ -113,7 +113,7 @@ function D(e) {
 }
 function v(e, t) {
     let n;
-    return null != e && ((n = { startDate: a()(e), endDate: void 0 }), null != t && (n.endDate = a()(t))), n;
+    return (null != e && ((n = { startDate: a()(e), endDate: void 0 }), null != t && (n.endDate = a()(t))), n);
 }
 function b(e, t) {
     var n;
@@ -190,20 +190,20 @@ function F(e, t) {
             return !0;
     }
 }
-function V(e) {
+function B(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? p : f;
 }
-function B(e) {
+function V(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
     return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? g : m;
 }
 function H(e, t) {
     let n = (function (e, t) {
-        let n = V(t),
-            i = B(t),
+        let n = B(t),
+            i = V(t),
             r = D(t.toDate().getUTCDay()),
             a = Math.ceil(t.toDate().getUTCDate() / 7),
             l = t.toDate();
@@ -266,8 +266,8 @@ function j(e, t) {
             return u.z.MONTHLY;
         case s.p3.DAILY:
             if (null == n.options.byweekday || 0 === n.options.byweekday.length) return u.z.DAILY;
-            if ((0, i.isEqual)(n.options.byweekday, V(e))) return u.z.WEEKDAY_ONLY;
-            if ((0, i.isEqual)(n.options.byweekday, B(e))) return u.z.WEEKEND_ONLY;
+            if ((0, i.isEqual)(n.options.byweekday, B(e))) return u.z.WEEKDAY_ONLY;
+            if ((0, i.isEqual)(n.options.byweekday, V(e))) return u.z.WEEKEND_ONLY;
             return u.z.NONE;
         default:
             return u.z.NONE;

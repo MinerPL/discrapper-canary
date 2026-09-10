@@ -1,4 +1,4 @@
-t.r(a), t.d(a, { default: () => o });
+(t.r(a), t.d(a, { default: () => o }));
 var o = {
     payButton: "Zaplati\u0165",
     "payButton.redirecting": "Prebieha presmerovanie...",

@@ -1,4 +1,4 @@
-n.d(t, { A: () => y }), n(938796);
+(n.d(t, { A: () => y }), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -32,7 +32,7 @@ function L(e) {
         a = {},
         o = {};
     return (n.forEach((e) => {
-        (a[e.id] = Date.now()), e.options.forEach((e) => (o[e.id] = Date.now()));
+        ((a[e.id] = Date.now()), e.options.forEach((e) => (o[e.id] = Date.now())));
     }),
     t)
         ? s.Bo.post({
@@ -144,7 +144,7 @@ let y = {
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
-            (0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: !0 }), (0, u.ID)(e, Array.from(r));
+            ((0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: !0 }), (0, u.ID)(e, Array.from(r)));
             let t = I.default.getCurrentUser();
             if (null != t) {
                 let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
@@ -154,8 +154,8 @@ let y = {
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        (g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
-            n.size > 0 && (0, E.Hb)(e, Array.from(n), !0, { page: C.liQ.GUILD_ONBOARDING });
+        ((g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
+            n.size > 0 && (0, E.Hb)(e, Array.from(n), !0, { page: C.liQ.GUILD_ONBOARDING }));
     },
     finishOnboarding(e) {
         l.h.dispatch({ type: "GUILD_ONBOARDING_COMPLETE", guildId: e });

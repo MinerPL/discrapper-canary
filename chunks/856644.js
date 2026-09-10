@@ -1,5 +1,5 @@
-n.d(t, { EF: () => A, K5: () => N, L9: () => I, SB: () => f, Vh: () => S, cG: () => p, gz: () => j, uc: () => E }),
-    n(321073);
+(n.d(t, { EF: () => A, K5: () => N, L9: () => I, SB: () => f, Vh: () => S, cG: () => p, gz: () => j, uc: () => E }),
+    n(321073));
 var i = n(582128),
     l = n(91871),
     s = n.n(l),
@@ -16,16 +16,20 @@ var i = n(582128),
 let E = 50,
     j = 1e3;
 function f(e, t) {
-    let n = (0, r.yK)([a.Ay], () => {
-            let n = a.Ay.getMembers(e);
-            return null == t ? n : n.filter(t);
-        }, [e, t]),
+    let n = (0, r.yK)(
+            [a.Ay],
+            () => {
+                let n = a.Ay.getMembers(e);
+                return null == t ? n : n.filter(t);
+            },
+            [e, t],
+        ),
         l = (0, r.cf)(
             [o.default],
             () =>
                 n.reduce((e, t) => {
                     let n = o.default.getUser(t.userId);
-                    return null == n || (e[t.userId] = n), e;
+                    return (null == n || (e[t.userId] = n), e);
                 }, {}),
             [n],
         );
@@ -68,10 +72,10 @@ function N(e, t, n) {
 function p(e, t) {
     let n = i.useRef(!1);
     i.useEffect(() => {
-        u.A.requestMembers(e, t, 200),
+        (u.A.requestMembers(e, t, 200),
             "" === t ||
                 n.current ||
-                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
+                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0)));
     }, [e, t]);
 }
 function A(e, t) {

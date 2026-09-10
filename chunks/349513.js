@@ -5,7 +5,7 @@ i.push(void 0, null, !0, !1);
 let o = 0,
     _ = null;
 function u() {
-    return (null === _ || 0 === _.byteLength) && (_ = new Uint8Array(r.memory.buffer)), _;
+    return ((null === _ || 0 === _.byteLength) && (_ = new Uint8Array(r.memory.buffer)), _);
 }
 let a =
         "u" > typeof TextEncoder
@@ -22,7 +22,7 @@ let a =
               }
             : function (e, n) {
                   let t = a.encode(e);
-                  return n.set(t), { read: e.length, written: t.length };
+                  return (n.set(t), { read: e.length, written: t.length });
               };
 function b(e, n, t) {
     if (void 0 === t) {
@@ -46,11 +46,11 @@ function b(e, n, t) {
         _[i + b] = n;
     }
     if (b !== r) {
-        0 !== b && (e = e.slice(b)), (i = t(i, r, (r = b + 3 * e.length), 1) >>> 0);
+        (0 !== b && (e = e.slice(b)), (i = t(i, r, (r = b + 3 * e.length), 1) >>> 0));
         let n = c(e, u().subarray(i + b, i + r));
-        (b += n.written), (i = t(i, r, b, 1) >>> 0);
+        ((b += n.written), (i = t(i, r, b, 1) >>> 0));
     }
-    return (o = b), i;
+    return ((o = b), i);
 }
 let s = null;
 function f() {
@@ -64,7 +64,7 @@ let l = i.length;
 function g(e) {
     l === i.length && i.push(i.length + 1);
     let n = l;
-    return (l = i[n]), (i[n] = e), n;
+    return ((l = i[n]), (i[n] = e), n);
 }
 function d(e, n) {
     try {
@@ -75,7 +75,7 @@ function d(e, n) {
 }
 function w(e) {
     let n = i[e];
-    return e < 132 || ((i[e] = l), (l = e)), n;
+    return (e < 132 || ((i[e] = l), (l = e)), n);
 }
 function y(e) {
     return null == e;
@@ -89,7 +89,7 @@ let p =
               },
           };
 function h(e, n) {
-    return (e >>>= 0), p.decode(u().subarray(e, e + n));
+    return ((e >>>= 0), p.decode(u().subarray(e, e + n)));
 }
 function m(e, n, t) {
     try {
@@ -129,19 +129,19 @@ async function x(e, n) {
 async function v(e) {
     let n;
     if (void 0 !== r) return r;
-    void 0 !== e &&
+    (void 0 !== e &&
         (Object.getPrototypeOf(e) === Object.prototype
             ? ({ module_or_path: e } = e)
             : console.warn(
                   "using deprecated parameters for the initialization function; pass a single object instead",
               )),
-        void 0 === e && (e = new URL(t(424932), t.b));
+        void 0 === e && (e = new URL(t(424932), t.b)));
     let u =
         (((n = {}).wbg = {}),
         (n.wbg.__wbg_String_8f0eb39a4a4c2f66 = function (e, n) {
             let t = b(String(i[n]), r.__wbindgen_export_0, r.__wbindgen_export_1),
                 _ = o;
-            f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0);
+            (f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0));
         }),
         (n.wbg.__wbg_buffer_609cc3eee51ed158 = function (e) {
             return g(i[e].buffer);
@@ -257,7 +257,7 @@ async function v(e) {
         (n.wbg.__wbindgen_bigint_get_as_i64 = function (e, n) {
             let t = i[n],
                 r = "bigint" == typeof t ? t : void 0;
-            f().setBigInt64(e + 8, y(r) ? BigInt(0) : r, !0), f().setInt32(e + 0, !y(r), !0);
+            (f().setBigInt64(e + 8, y(r) ? BigInt(0) : r, !0), f().setInt32(e + 0, !y(r), !0));
         }),
         (n.wbg.__wbindgen_boolean_get = function (e) {
             let n = i[e];
@@ -302,7 +302,7 @@ ${n.stack}`
                     r.__wbindgen_export_1,
                 ),
                 _ = o;
-            f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0);
+            (f().setInt32(e + 4, _, !0), f().setInt32(e + 0, t, !0));
         }),
         (n.wbg.__wbindgen_error_new = function (e, n) {
             return g(Error(h(e, n)));
@@ -341,7 +341,7 @@ ${n.stack}`
         (n.wbg.__wbindgen_number_get = function (e, n) {
             let t = i[n],
                 r = "number" == typeof t ? t : void 0;
-            f().setFloat64(e + 8, y(r) ? 0 : r, !0), f().setInt32(e + 0, !y(r), !0);
+            (f().setFloat64(e + 8, y(r) ? 0 : r, !0), f().setInt32(e + 0, !y(r), !0));
         }),
         (n.wbg.__wbindgen_number_new = function (e) {
             return g(e);
@@ -357,7 +357,7 @@ ${n.stack}`
                 _ = "string" == typeof t ? t : void 0;
             var u = y(_) ? 0 : b(_, r.__wbindgen_export_0, r.__wbindgen_export_1),
                 a = o;
-            f().setInt32(e + 4, a, !0), f().setInt32(e + 0, u, !0);
+            (f().setInt32(e + 4, a, !0), f().setInt32(e + 0, u, !0));
         }),
         (n.wbg.__wbindgen_string_new = function (e, n) {
             return g(h(e, n));
@@ -371,7 +371,7 @@ ${n.stack}`
         ("function" == typeof URL && e instanceof URL)) &&
         (e = fetch(e));
     let { instance: a, module: c } = await x(await e, u);
-    return (r = a.exports), (v.__wbindgen_wasm_module = c), (s = null), (_ = null), r;
+    return ((r = a.exports), (v.__wbindgen_wasm_module = c), (s = null), (_ = null), r);
 }
 "u" > typeof TextDecoder && p.decode();
 let j = v;

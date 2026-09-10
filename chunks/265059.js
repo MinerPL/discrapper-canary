@@ -16,7 +16,7 @@ class o extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsSettingsStore";
     static persistKey = "DevToolsSettingsStore";
     initialize(e) {
-        (l = e ?? l), (r.h.actionLogger.persist = a.A.isDeveloper);
+        ((l = e ?? l), (r.h.actionLogger.persist = a.A.isDeveloper));
     }
     getUserAgnosticState() {
         return l;

@@ -11,14 +11,14 @@ function u(e) {
         n = l.useRef(1.4),
         [u, d] = l.useState(!1),
         c = l.useCallback((e) => {
-            d(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (n.current = 1.4);
+            (d(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (n.current = 1.4));
         }, []),
         g = l.useCallback(
             (e) => {
                 if (u) {
-                    (0, r.fO)({ duration: 300, intensity: n.current }),
+                    ((0, r.fO)({ duration: 300, intensity: n.current }),
                         (n.current = Math.min(n.current + 2, 15)),
-                        s._.dispatch(a.jej.EMPHASIZE_NOTICE);
+                        s._.dispatch(a.jej.EMPHASIZE_NOTICE));
                     return;
                 }
                 e();

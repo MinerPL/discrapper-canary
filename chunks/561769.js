@@ -99,11 +99,16 @@ function S(e, t, n) {
 }
 function T(e) {
     let { flattenProductVariants: t, productOverride: n } = s.useContext(x),
-        { legacyProduct: r, storefrontProduct: i } = (0, a.cf)([I.A, c.A], () => {
-            if (null != n) return { legacyProduct: void 0, storefrontProduct: void 0 };
-            let r = !0 === t ? I.A.getProduct(e) : I.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e);
-            return { legacyProduct: r, storefrontProduct: null == r ? c.A.getProductsForSku(e)?.[0] : void 0 };
-        }, [e, t, n]),
+        { legacyProduct: r, storefrontProduct: i } = (0, a.cf)(
+            [I.A, c.A],
+            () => {
+                if (null != n) return { legacyProduct: void 0, storefrontProduct: void 0 };
+                let r =
+                    !0 === t ? I.A.getProduct(e) : I.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e);
+                return { legacyProduct: r, storefrontProduct: null == r ? c.A.getProductsForSku(e)?.[0] : void 0 };
+            },
+            [e, t, n],
+        ),
         l = null == n && null == r && null == i;
     s.useEffect(() => {
         l && "" !== e && g.p.requestProducts([e]);

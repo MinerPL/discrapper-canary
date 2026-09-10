@@ -24,16 +24,16 @@ let t = async (e) =>
             let w = s ?? 2e3;
             w > 0 &&
                 setTimeout(() => {
-                    (p = !0), _({ stopRecording: async () => {} });
+                    ((p = !0), _({ stopRecording: async () => {} }));
                 }, w);
             let S = document.createElement("script");
-            (S.type = "text/javascript"),
+            ((S.type = "text/javascript"),
                 (S.src = new URL(
-                    `${null != u ? "record/" : ""}${null == ((R = u ?? null)) ? "v1" : `v/${R}`}/meticulous-manual-init.js`,
+                    `${null != u ? "record/" : ""}${null == (R = u ?? null) ? "v1" : `v/${R}`}/meticulous-manual-init.js`,
                     r || "https://snippet.meticulous.ai",
-                ).href);
+                ).href));
             let T = window;
-            (T.METICULOUS_RECORDING_TOKEN = i ?? e),
+            ((T.METICULOUS_RECORDING_TOKEN = i ?? e),
                 void 0 !== o && (T.METICULOUS_UPLOAD_INTERVAL_MS = o),
                 void 0 !== n && (T.METICULOUS_APP_COMMIT_HASH = n),
                 void 0 !== t && (T.METICULOUS_SNAPSHOT_LINKED_STYLESHEETS = t),
@@ -64,7 +64,7 @@ let t = async (e) =>
                 (S.onerror = () => {
                     E("Meticulous recorder failed to initialise.");
                 }),
-                document.head.appendChild(S);
+                document.head.appendChild(S));
         });
     },
     s = async () => {

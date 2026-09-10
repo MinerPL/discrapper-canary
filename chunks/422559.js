@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => O });
+(t.r(n), t.d(n, { default: () => O }));
 var i = t(477900),
     l = t(582128),
     a = t(17928),
@@ -77,7 +77,7 @@ class N extends l.PureComponent {
                 canAccessMembersPage: g,
                 canViewGuildAnalytics: p,
             } = this.props;
-        t !== n && j(t, n),
+        (t !== n && j(t, n),
             ((i || l || a || c || o || u || d || g || r || A || p) &&
                 (d || t !== D.BEX.AUDIT_LOG) &&
                 (a || t !== D.BEX.ROLES) &&
@@ -86,7 +86,7 @@ class N extends l.PureComponent {
                 (u || t !== D.BEX.SOUNDBOARD) &&
                 (c || t !== D.BEX.BANS) &&
                 (g || t !== D.BEX.MEMBERS)) ||
-                (0, s.jH)();
+                (0, s.jH)());
     }
     render() {
         let {
@@ -173,20 +173,20 @@ function O() {
         c || null == j || (0, r.mo)(j);
     }, [c, j]);
     let P = e?.features.has(D.GuildFeatures.COMMUNITY) ?? !1;
-    l.useEffect(() => {
+    (l.useEffect(() => {
         null != j && P && ((0, A.jx)(j), (0, M.Fy)(j));
     }, [j, P]),
         l.useEffect(() => {
             null != j && (0, p.ag)(j);
-        }, [j]);
+        }, [j]));
     let U = (0, a.bG)([h.A], () => e?.id != null && h.A.getForGuild(e.id)?.isDirty === !0, [e]),
         X = (0, a.bG)([C.A], () => C.A.getMemberCount(e?.id), [e]);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         null != j && _.canManageGuild && E.A.loadTemplatesForGuild(j);
     }, [j, _.canManageGuild]),
         l.useEffect(() => {
             O || w.A.close();
-        }, [O]);
+        }, [O]));
     let v = (0, a.bG)([I.A], () => I.A.getCurrentPage()),
         R = (0, a.bG)([g.A], () => null != j && g.A.getEnabled(j)),
         V = (0, a.bG)([S.A], () => null != j && S.A.isEmpty(j)),

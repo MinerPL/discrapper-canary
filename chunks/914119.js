@@ -27,15 +27,15 @@ async function G(e, n) {
         case I.Ps.STAGE_INSTANCE: {
             let n = w.A.getChannelId(),
                 t = g.A.getChannel(e.channel_id);
-            p()(null != t, "could not find channel"),
+            (p()(null != t, "could not find channel"),
                 n !== t.id && (await m.cy(t, !0), await m.jA(t, null)),
-                await (0, C.e7)(t, !1, !0);
+                await (0, C.e7)(t, !1, !0));
             break;
         }
         case I.Ps.VOICE: {
             let n = w.A.getChannelId(),
                 t = g.A.getChannel(e.channel_id);
-            p()(null != t, "could not find channel"), n !== t.id && _.default.selectVoiceChannel(t.id);
+            (p()(null != t, "could not find channel"), n !== t.id && _.default.selectVoiceChannel(t.id));
         }
     }
 }
@@ -76,10 +76,10 @@ async function L(e) {
         { channel_id: t, entity_type: i, name: a, id: l, guild_id: s } = e;
     switch (i) {
         case I.Ps.STAGE_INSTANCE:
-            p()(null != t, "channel_id is required"), await (0, P.yG)(t, a, I.dD.GUILD_ONLY, n, l);
+            (p()(null != t, "channel_id is required"), await (0, P.yG)(t, a, I.dD.GUILD_ONLY, n, l));
             break;
         case I.Ps.VOICE:
-            p()(null != t, "channel_id is required"), await x.default.startEvent(l, s);
+            (p()(null != t, "channel_id is required"), await x.default.startEvent(l, s));
             break;
         case I.Ps.EXTERNAL:
             await x.default.startEvent(l, s);
@@ -109,7 +109,7 @@ function M(e) {
                         arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : j;
                     n(!0);
                     try {
-                        await T(e, l),
+                        (await T(e, l),
                             await L(e, t),
                             await G(e, a),
                             await (function (e, n) {
@@ -122,9 +122,9 @@ function M(e) {
                                 }
                                 return Promise.resolve();
                             })(e, a),
-                            n(!1);
+                            n(!1));
                     } catch (e) {
-                        i(new y.LG(e)), n(!1);
+                        (i(new y.LG(e)), n(!1));
                     }
                     n(!1);
                 },
@@ -134,7 +134,7 @@ function M(e) {
     if (!P) return null;
     let H = C === I.dD.PUBLIC ? D.intl.string(D.t.HhlaLP) : D.intl.string(D.t.GI3xXd);
     function q() {
-        f?.(), p(), (0, A.ek)(!1);
+        (f?.(), p(), (0, A.ek)(!1));
     }
     async function J() {
         await M(t, k, { onSuccess: q });

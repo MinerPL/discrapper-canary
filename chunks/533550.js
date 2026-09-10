@@ -27,7 +27,7 @@ function c(e, t) {
             function a() {
                 requestAnimationFrame(() => {
                     var i;
-                    (i = {
+                    ((i = {
                         name: t,
                         guildId: e,
                         disabled: n,
@@ -40,13 +40,13 @@ function c(e, t) {
                                     [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
                                 },
                             }));
-                        });
+                        }));
                 });
             }
-            if (null == i) return a(), () => {};
+            if (null == i) return (a(), () => {});
             let o = (function (e) {
                 let t = e.parentNode;
-                for (; null != t && t !== document.body && !d(t); ) t = t.parentNode;
+                for (; null != t && t !== document.body && !d(t);) t = t.parentNode;
                 return d(t) ? t : null;
             })(i);
             return (

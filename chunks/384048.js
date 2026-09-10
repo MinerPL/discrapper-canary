@@ -78,7 +78,7 @@ let D = function (a) {
             );
         });
     function P() {
-        (0, x.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }), s?.();
+        ((0, x.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }), s?.());
     }
     return (0, e.jsxs)(r.EO, {
         "data-migration-pending": !0,

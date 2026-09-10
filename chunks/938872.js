@@ -22,16 +22,16 @@ function w(e) {
             n().catch(() => void 0);
         }, [n]),
         y = r.useCallback((e) => {
-            m(e), v(null);
+            (m(e), v(null));
         }, []),
         S = r.useCallback(async () => {
             let e = w.trim();
             if ("" === e) return void v(g.intl.string(p.default.Wo5sQv));
             if (null == I || b) return;
-            A(!0), v(null);
+            (A(!0), v(null));
             let t = null;
             try {
-                (t = await (0, u.gA)({ guild_id: I, install_scope: "user" })),
+                ((t = await (0, u.gA)({ guild_id: I, install_scope: "user" })),
                     (0, c.Hc)(t),
                     (0, c.dv)(
                         t,
@@ -41,10 +41,10 @@ function w(e) {
                         ].join("\n"),
                     ),
                     (0, a.pX)(f.BVt.CHANNEL(I, h.VV.VIBEGRATIONS, t)),
-                    T();
+                    T());
             } catch (e) {
                 if (null != t) {
-                    (0, a.pX)(f.BVt.CHANNEL(I, h.VV.VIBEGRATIONS, t)), T();
+                    ((0, a.pX)(f.BVt.CHANNEL(I, h.VV.VIBEGRATIONS, t)), T());
                     return;
                 }
                 v(e instanceof Error ? e.message : g.intl.string(p.default.KKkp5Y));

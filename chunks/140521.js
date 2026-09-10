@@ -1,5 +1,5 @@
 let t;
-s.d(i, { default: () => w }), s(323874), s(14289), s(35956), s(321073);
+(s.d(i, { default: () => w }), s(323874), s(14289), s(35956), s(321073));
 var a = s(132500),
     r = s(872379),
     n = s(795521);
@@ -31,7 +31,7 @@ class w {
     onInitialDraw;
     onError;
     constructor({ canvas: e, animationId: i, assetUrl: s, assetData: n, onInitialDraw: o, onError: l }) {
-        (this.canvasId = (0, a.A)()),
+        ((this.canvasId = (0, a.A)()),
             (this.assetUrl = s),
             (this.assetData = n),
             (this.onInitialDraw = o),
@@ -40,10 +40,10 @@ class w {
             this.observer.observe(e),
             h
                 ? (this.initializationPromise = v().then(() => {
-                      this.worker?.addEventListener("message", this.handleMessage),
-                          this.worker?.addEventListener("error", this.handleError);
+                      (this.worker?.addEventListener("message", this.handleMessage),
+                          this.worker?.addEventListener("error", this.handleError));
                       let t = e.transferControlToOffscreen();
-                      this.worker?.postMessage(
+                      (this.worker?.postMessage(
                           {
                               type: r.l.INITIALIZE,
                               animationId: i,
@@ -56,10 +56,10 @@ class w {
                           },
                           [t],
                       ),
-                          (this.isInitialized = !0);
+                          (this.isInitialized = !0));
                   }))
                 : (this.initializationPromise = I().then(() => {
-                      (this.lottieView = new t({
+                      ((this.lottieView = new t({
                           canvas: e,
                           id: i,
                           assetUrl: s,
@@ -69,8 +69,8 @@ class w {
                           onInitialDraw: o,
                           onError: l,
                       })),
-                          (this.isInitialized = !0);
-                  }));
+                          (this.isInitialized = !0));
+                  })));
     }
     get workerIndex() {
         let e = d.get(this.canvasId);
@@ -82,7 +82,7 @@ class w {
                 for (let [s, t] of l.entries()) t.numActive <= i && ((i = t.numActive), (e = s));
                 c.set(this.assetUrl, e);
             }
-            d.set(this.canvasId, e), l[e].numActive++;
+            (d.set(this.canvasId, e), l[e].numActive++);
         }
         return e;
     }
@@ -93,12 +93,12 @@ class w {
     }
     async drop() {
         if ((await this.initializationPromise, h)) {
-            this.worker?.removeEventListener("message", this.handleMessage),
+            (this.worker?.removeEventListener("message", this.handleMessage),
                 this.worker?.removeEventListener("error", this.handleError),
-                this.worker?.postMessage({ canvasId: this.canvasId, type: r.l.DROP });
+                this.worker?.postMessage({ canvasId: this.canvasId, type: r.l.DROP }));
             let e = d.get(this.canvasId);
             if (null == e) throw Error(`No worker index assigned for asset ${this.canvasId}`);
-            d.delete(this.canvasId), l[e].numActive--;
+            (d.delete(this.canvasId), l[e].numActive--);
         } else this.lottieView?.drop();
         this.observer.disconnect();
     }
@@ -112,13 +112,13 @@ class w {
         }
     };
     handleMessage = (e) => {
-        e.data.type === r.l.FIRST_DRAW && this.onInitialDraw?.(), e.data.type === r.l.ERROR && this.onError?.();
+        (e.data.type === r.l.FIRST_DRAW && this.onInitialDraw?.(), e.data.type === r.l.ERROR && this.onError?.());
     };
     handleError = (e) => {
         this.onError?.(e);
     };
     setState(e, i) {
-        (this.shouldAnimate = e),
+        ((this.shouldAnimate = e),
             this.isInitialized &&
                 (h
                     ? this.worker?.postMessage({
@@ -127,6 +127,6 @@ class w {
                           shouldAnimate: e,
                           nextFrame: i,
                       })
-                    : this.lottieView?.setState(e, i));
+                    : this.lottieView?.setState(e, i)));
     }
 }

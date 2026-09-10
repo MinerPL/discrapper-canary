@@ -1,4 +1,4 @@
-n.d(t, { CR: () => h, RM: () => A, Wq: () => _, v5: () => E }), n(321073);
+(n.d(t, { CR: () => h, RM: () => A, Wq: () => _, v5: () => E }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -55,10 +55,10 @@ function h(e, t) {
         let r = (0, l.A)(),
             a = [],
             o = 0;
-        for (; null !== (n = r.exec(e)); )
-            n.index > o && a.push(e.slice(o, n.index)),
+        for (; null !== (n = r.exec(e));)
+            (n.index > o && a.push(e.slice(o, n.index)),
                 a.push((0, i.jsx)("span", { className: s()(u.Zg, t), children: n[0] }, `emoji${n.index}`)),
-                (o = r.lastIndex);
-        return o < e.length && a.push(e.slice(o)), a;
+                (o = r.lastIndex));
+        return (o < e.length && a.push(e.slice(o)), a);
     }, [e, t]);
 }

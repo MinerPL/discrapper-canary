@@ -45,7 +45,7 @@ function y(t) {
               children: I
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
-                            t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL);
+                            (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));
                         },
                     })
                   : A.intl.string(A.t.PIeSHF),

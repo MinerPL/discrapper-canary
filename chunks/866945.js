@@ -22,7 +22,7 @@ function C(e) {
             null != C && (C(), (0, h.N)(I, A.YX.DISMISS));
         }, [I, C]),
         S = l.useCallback(() => {
-            n(), (0, h.N)(I, A.YX.LEARN_MORE);
+            (n(), (0, h.N)(I, A.YX.LEARN_MORE));
         }, [I, n]);
     return (0, i.jsxs)("div", {
         className: s()(g.I, _),

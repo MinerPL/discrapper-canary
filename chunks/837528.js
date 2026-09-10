@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     U_: () => K,
     G8: () => z,
     I: () => L,
@@ -16,7 +16,7 @@ n.d(t, {
     m: () => R,
     Ge: () => D,
 }),
-    n(938796);
+    n(938796));
 var i = n(477900),
     l = n(582128),
     s = n(621466),
@@ -55,7 +55,7 @@ function b(e, t, n) {
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${N.Ay.getUserTag(l, { decoration: "never" })}`,
                 a = `<@${e}>`;
-            _._.dispatchToLastSubscribed(p.jej.INSERT_TEXT, { plainText: s, rawText: a }), c.A.startTyping(t);
+            (_._.dispatchToLastSubscribed(p.jej.INSERT_TEXT, { plainText: s, rawText: a }), c.A.startTyping(t));
         },
         [e, t, n],
     );
@@ -79,7 +79,7 @@ function L(e, t, n, i) {
 function O(e) {
     return l.useCallback(
         (t) => {
-            t.preventDefault(), t.stopPropagation(), e();
+            (t.preventDefault(), t.stopPropagation(), e());
         },
         [e],
     );
@@ -222,10 +222,10 @@ function B(e) {
         [o, c] = l.useState(i);
     r.current = o || r.current;
     let d = l.useCallback(() => {
-            (0, A.cE)(), o || (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0));
+            ((0, A.cE)(), o || (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !0), c(!0)));
         }, [o, a]),
         u = l.useCallback(() => {
-            _._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1);
+            (_._.dispatchKeyed(p.zOV.ANIMATE_CHAT_AVATAR, a, !1), c(!1));
         }, [a]);
     return { hasHovered: r.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: u };
 }
@@ -236,14 +236,14 @@ function z(e, t) {
         handleFocus: l.useCallback(
             (t) => {
                 let n = (0, s.BF)(t)?.activeElement ?? null;
-                (t.target === t.currentTarget || t.currentTarget.contains(n)) && (r(!0), i(!0)), null != e && e(t);
+                ((t.target === t.currentTarget || t.currentTarget.contains(n)) && (r(!0), i(!0)), null != e && e(t));
             },
             [e],
         ),
         handleBlur: l.useCallback(
             (e) => {
                 let n = (0, s.BF)(e)?.activeElement ?? null;
-                (e.target !== e.currentTarget && e.currentTarget.contains(n)) || i(!1), null != t && t(e);
+                ((e.target !== e.currentTarget && e.currentTarget.contains(n)) || i(!1), null != t && t(e));
             },
             [t],
         ),
@@ -277,10 +277,11 @@ function J(e, t, n) {
             c = null;
         if (t.state === g.a.LOADED) {
             let e = (0, h.A)(t.message);
-            (r = e.attachments.length > 0 || e.embeds.length > 0 || e.stickerItems.length > 0 || e.stickers.length > 0),
-                (c = e.content?.length ?? 0);
+            ((r =
+                e.attachments.length > 0 || e.embeds.length > 0 || e.stickerItems.length > 0 || e.stickers.length > 0),
+                (c = e.content?.length ?? 0));
         }
-        (0, m.zV)(p.HAw.REPLIED_MESSAGE_CLICKED, {
+        ((0, m.zV)(p.HAw.REPLIED_MESSAGE_CLICKED, {
             guild_id: n.guild_id ?? void 0,
             channel_id: n.id,
             reply_message_id: e.id,
@@ -289,14 +290,14 @@ function J(e, t, n) {
             replied_message_has_media: r,
             replied_message_length: c,
         }),
-            (null == l || (0, S.A)(l, s)) && s();
+            (null == l || (0, S.A)(l, s)) && s());
     }, [t, e, n]);
 }
 function K(e, t) {
     let n = y("interactionData", e, t);
     return l.useCallback(
         (e) => {
-            e.preventDefault(), e.stopPropagation(), n();
+            (e.preventDefault(), e.stopPropagation(), n());
         },
         [n],
     );

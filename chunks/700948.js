@@ -44,11 +44,11 @@ function O(e) {
         } = T.iX[O],
         { width: F = 0, height: z = 0, ref: H } = (0, c.Ay)(),
         W = F / z > U,
-        $ = W ? z * U : F,
-        Y = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
-        K = Y ? (0, T.bf)(U, W) : 1,
-        q = l.useRef(null),
+        Y = W ? z * U : F,
+        $ = (0, u.bG)([f.A], () => f.A.getVideoOverlayVisibility()),
+        K = $ ? (0, T.bf)(U, W) : 1,
         X = l.useRef(null),
+        q = l.useRef(null),
         Z = (0, u.bG)([f.A], () => f.A.getRoomUsers(t)),
         Q = (0, u.bG)([f.A], () => f.A.getNotes(t)),
         J = Z.size,
@@ -71,14 +71,14 @@ function O(e) {
         (0, i.jsxs)("div", {
             className: L.kL,
             style: {
-                backgroundImage: `url(${Y ? M : P})`,
+                backgroundImage: `url(${$ ? M : P})`,
                 backgroundSize: W ? `auto ${100 * K}%` : `${100 * K}% auto`,
             },
             ref: H,
             role: "region",
             "aria-label": B(),
             children: [
-                Y
+                $
                     ? (0, i.jsx)(v.A, {
                           channelId: t,
                           popoutType: n,
@@ -99,21 +99,21 @@ function O(e) {
                               (0, i.jsx)("div", {
                                   className: s()(L.hk, { [L.Nb]: W }),
                                   style: { aspectRatio: U },
-                                  ref: q,
+                                  ref: X,
                                   children: (0, i.jsx)(x.t.Provider, {
                                       value: el,
                                       children: (0, i.jsx)(g.bE, {
                                           channelId: t,
-                                          containerRef: X,
-                                          roomWidth: $,
+                                          containerRef: q,
+                                          roomWidth: Y,
                                           children: (0, i.jsxs)(h.xp, {
-                                              containerRef: q,
+                                              containerRef: X,
                                               children: [
-                                                  (0, i.jsx)(j.A, { channelId: t, corners: G, roomWidth: $ }),
+                                                  (0, i.jsx)(j.A, { channelId: t, corners: G, roomWidth: Y }),
                                                   (0, i.jsxs)("div", {
-                                                      ref: X,
+                                                      ref: q,
                                                       children: [
-                                                          (0, i.jsx)(N.A, { channelId: t, roomWidth: $ }),
+                                                          (0, i.jsx)(N.A, { channelId: t, roomWidth: Y }),
                                                           (0, i.jsx)("div", {
                                                               role: "list",
                                                               "aria-label": es,
@@ -126,7 +126,7 @@ function O(e) {
                                                                           x: l.position.x,
                                                                           y: l.position.y,
                                                                           label: l.getLabel(),
-                                                                          roomWidth: $,
+                                                                          roomWidth: Y,
                                                                           seat: parseInt(n),
                                                                       },
                                                                       n,
@@ -140,7 +140,7 @@ function O(e) {
                                                                   (0, i.jsx)(y.A, {
                                                                       channelId: t,
                                                                       plantConfig: D,
-                                                                      roomWidth: $,
+                                                                      roomWidth: Y,
                                                                   }),
                                                                   null != V &&
                                                                       (0, i.jsx)(E.A, {
@@ -156,7 +156,7 @@ function O(e) {
                                                                       }),
                                                               ],
                                                           }),
-                                                          (0, i.jsx)(C.A, { channelId: t, roomWidth: $ }),
+                                                          (0, i.jsx)(C.A, { channelId: t, roomWidth: Y }),
                                                       ],
                                                   }),
                                               ],

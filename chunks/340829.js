@@ -1,4 +1,4 @@
-n.d(t, { A: () => V }), n(142703);
+(n.d(t, { A: () => B }), n(142703));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -129,11 +129,11 @@ class F extends a.Ay.Store {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (C) return setImmediate(e), !1;
+            if (C) return (setImmediate(e), !1);
         });
     }
 }
-let V = new F(s.h, {
+let B = new F(s.h, {
     CONNECTION_OPEN: function () {
         C = !1;
     },
@@ -186,13 +186,13 @@ let V = new F(s.h, {
                                                 let t,
                                                     { executable: i, name: r, working_dir: a } = n,
                                                     s = l.A.fileManager.join(e, i);
-                                                (0, d.isMac)() && !s.startsWith(N) && (s = `${N}${s}`),
+                                                ((0, d.isMac)() && !s.startsWith(N) && (s = `${N}${s}`),
                                                     (t =
                                                         null != a
                                                             ? l.A.fileManager.join(e, a)
                                                             : l.A.fileManager.dirname(s)),
                                                     (T[r] = { ...n, id: r, fullExecutablePath: s, fullWorkingDir: t }),
-                                                    null == g && (g = r);
+                                                    null == g && (g = r));
                                             }
                                     } else if (null != c) {
                                         t === m.lM6.WIN64 && null == c[t] && (t = m.lM6.WIN32);
@@ -200,7 +200,7 @@ let V = new F(s.h, {
                                         if (null != n) {
                                             let { executable: i } = n,
                                                 r = "Default";
-                                            (T[r] = {
+                                            ((T[r] = {
                                                 ...n,
                                                 name: r,
                                                 id: r,
@@ -208,7 +208,7 @@ let V = new F(s.h, {
                                                 fullWorkingDir: e,
                                                 platforms: [t],
                                             }),
-                                                (g = r);
+                                                (g = r));
                                         }
                                     }
                                 }
@@ -288,17 +288,17 @@ let V = new F(s.h, {
                                 case m.OQC.VERIFYING:
                                 case m.OQC.REPAIRING:
                                 case m.OQC.POST_INSTALL_SCRIPTS:
-                                    u.setProgress(
+                                    (u.setProgress(
                                         "dispatch_application_progress",
                                         (0, I.uA)(e.progress, e.total) / 100,
                                     ),
-                                        (o = !0);
+                                        (o = !0));
                             }
                     }
                 }
                 if (!b) {
                     let i = l.A.fileManager.dirname(n[c].installPath);
-                    T.A.getInstallationPath(e, t) !== i &&
+                    (T.A.getInstallationPath(e, t) !== i &&
                         s.h.wait(() => {
                             s.h.dispatch({
                                 type: "DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS",
@@ -318,11 +318,11 @@ let V = new F(s.h, {
                                     branchId: t,
                                     automatic: !0,
                                 });
-                            });
+                            }));
                 }
             }
-        o || "dispatch_application_progress" !== u.taskID || u.clearProgress("dispatch_application_progress"),
+        (o || "dispatch_application_progress" !== u.taskID || u.clearProgress("dispatch_application_progress"),
             (S = n),
-            (b = !0);
+            (b = !0));
     },
 });

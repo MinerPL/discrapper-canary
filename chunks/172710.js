@@ -5,7 +5,7 @@ var i = n(723702),
     l = n(272984);
 function s(t, e, n) {
     let s;
-    (0, i.isDesktop)() || (s = window.open("", "_blank")),
+    ((0, i.isDesktop)() || (s = window.open("", "_blank")),
         (0, r.LI)(t, e)
             .then((t) => n(t))
             .then((t) => {
@@ -15,7 +15,7 @@ function s(t, e, n) {
             })
             .catch(() => {
                 null != s && s.close();
-            });
+            }));
 }
 function u() {
     window.open(l.RQ.PREMIUM_SITE);

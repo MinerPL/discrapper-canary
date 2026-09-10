@@ -1,4 +1,4 @@
-r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => c, l$: () => s, ny: () => o }),
+(r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => c, l$: () => s, ny: () => o }),
     r(323874),
     r(14289),
     r(35956),
@@ -8,7 +8,7 @@ r.d(t, { F3: () => h, MS: () => l, Qp: () => f, Qx: () => c, l$: () => s, ny: ()
     r(232424),
     r(949626),
     r(767709),
-    r(65162);
+    r(65162));
 var a = r(435558),
     n = r(830917),
     i = r(339984);
@@ -44,22 +44,22 @@ async function o(e) {
                 let { data: n } = a;
                 if (n.type === i.lA.CROP_ANIMATED_IMAGE_COMPLETE) {
                     var o;
-                    e(
+                    (e(
                         ((o = new Blob([n.result], { type: t.type })),
                         new Promise((e) => {
                             let t = new FileReader();
-                            (t.onload = (t) => {
+                            ((t.onload = (t) => {
                                 let r = t.target?.result;
                                 "string" == typeof r ? e(r) : e("");
                             }),
-                                t.readAsDataURL(o);
+                                t.readAsDataURL(o));
                         })),
                     ),
-                        _.terminate();
+                        _.terminate());
                 } else if (n.type === i.lA.CROP_ANIMATED_IMAGE_ERROR) {
                     let e = n?.error,
                         t = e?.message ?? "Unknown error";
-                    r(Error(`Error cropping animated image: ${t}`)), _.terminate();
+                    (r(Error(`Error cropping animated image: ${t}`)), _.terminate());
                 }
             };
         }),
@@ -93,14 +93,14 @@ async function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1024,
         r = new Image();
     await new Promise((t, a) => {
-        (r.onload = () => t()), (r.onerror = () => a(Error("Failed to load image for static preview"))), (r.src = e);
+        ((r.onload = () => t()), (r.onerror = () => a(Error("Failed to load image for static preview"))), (r.src = e));
     });
     let a = Math.min(1, t / Math.max(r.naturalWidth, r.naturalHeight)),
         n = document.createElement("canvas");
-    (n.width = Math.round(r.naturalWidth * a)), (n.height = Math.round(r.naturalHeight * a));
+    ((n.width = Math.round(r.naturalWidth * a)), (n.height = Math.round(r.naturalHeight * a)));
     let i = n.getContext("2d");
     if (null == i) throw Error("Canvas 2d context unavailable");
-    return i.drawImage(r, 0, 0, n.width, n.height), n.toDataURL("image/png");
+    return (i.drawImage(r, 0, 0, n.width, n.height), n.toDataURL("image/png"));
 }
 function h(e, t, r) {
     return { x: (0, a.clamp)(e, r.left, r.right), y: (0, a.clamp)(t, r.bottom, r.top) };

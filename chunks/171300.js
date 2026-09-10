@@ -20,7 +20,7 @@ function d(t) {
             id: "reset",
             label: u.intl.string(u.t["hW+EMu"]),
             action: (t) => {
-                t.stopPropagation(), l.A.resetDefaultLayout(e, d ?? 4);
+                (t.stopPropagation(), l.A.resetDefaultLayout(e, d ?? 4));
             },
         }),
     });

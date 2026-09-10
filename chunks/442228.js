@@ -35,10 +35,10 @@ let A = r.memo(function (e) {
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
-                          (j.current = e),
+                          ((j.current = e),
                               null == e ||
                                   (y(!v && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && C(!0));
+                                  e.getBoundingClientRect().height > 57.75 && C(!0)));
                       },
                       className: i()(m.mA, v && m.Em),
                       onBlur: function (e) {
@@ -65,13 +65,13 @@ let A = r.memo(function (e) {
                               variant: "secondary",
                               text: h.intl.string(h.t.YDiPq8),
                               onClick: function () {
-                                  a?.(),
+                                  (a?.(),
                                       (0, c.openUserProfileModal)({
                                           ...p,
                                           userId: t,
                                           hideRestrictedProfile: g,
                                           sourceAnalyticsLocations: E,
-                                      });
+                                      }));
                               },
                               disabled: x,
                           }),

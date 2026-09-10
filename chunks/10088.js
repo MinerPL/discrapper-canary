@@ -16,14 +16,14 @@ class o extends i.Ay.Store {
 let u = new o(l.h, {
     NATIVE_APP_MODAL_OPENING: function (e) {
         let { code: t } = e;
-        (a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING);
+        ((a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING));
     },
     NATIVE_APP_MODAL_OPENED: function (e) {
         let { code: t } = e;
-        (a[t] = s.fAW.OPEN), (r = s.fAW.OPEN);
+        ((a[t] = s.fAW.OPEN), (r = s.fAW.OPEN));
     },
     NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
         let { code: t } = e;
-        (a[t] = s.fAW.OPEN_FAIL), (null === r || r === s.fAW.OPENING) && (r = s.fAW.OPEN_FAIL);
+        ((a[t] = s.fAW.OPEN_FAIL), (null === r || r === s.fAW.OPENING) && (r = s.fAW.OPEN_FAIL));
     },
 });

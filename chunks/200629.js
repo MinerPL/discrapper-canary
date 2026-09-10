@@ -18,7 +18,7 @@ function s(t) {
                 text: a.intl.string(a.t.mbD50D),
                 variant: "primary",
                 onClick: function () {
-                    i(n), u();
+                    (i(n), u());
                 },
             },
         ],

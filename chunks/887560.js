@@ -23,17 +23,27 @@ function _(e) {
                 ignoreNotificationSetting: !1,
             }),
         ),
-        [t, s] = (0, i.yK)([r.Ay, a.A], () => {
-            let t = a.A.getChannel(e.parent_id);
-            return null != t && n.includes(t.id)
-                ? ["parent", (0, l.jL)((0, l.jU)(r.Ay.resolveUnreadSetting(t), r.Ay.resolvedMessageNotifications(t)))]
-                : [
-                      "guild",
-                      (0, l.jL)(
-                          (0, l.jU)(r.Ay.getGuildUnreadSetting(e.guild_id), r.Ay.getMessageNotifications(e.guild_id)),
-                      ),
-                  ];
-        }, [e.guild_id, e.parent_id, n]);
+        [t, s] = (0, i.yK)(
+            [r.Ay, a.A],
+            () => {
+                let t = a.A.getChannel(e.parent_id);
+                return null != t && n.includes(t.id)
+                    ? [
+                          "parent",
+                          (0, l.jL)((0, l.jU)(r.Ay.resolveUnreadSetting(t), r.Ay.resolvedMessageNotifications(t))),
+                      ]
+                    : [
+                          "guild",
+                          (0, l.jL)(
+                              (0, l.jU)(
+                                  r.Ay.getGuildUnreadSetting(e.guild_id),
+                                  r.Ay.getMessageNotifications(e.guild_id),
+                              ),
+                          ),
+                      ];
+            },
+            [e.guild_id, e.parent_id, n],
+        );
     return { inherited: !n.includes(e.id), inheritedFrom: t, inheritedPreset: s };
 }
 function f(e, n, t) {

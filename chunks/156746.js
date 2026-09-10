@@ -1,5 +1,5 @@
 var n = r(949499).default;
-(e.exports = function (e, t) {
+((e.exports = function (e, t) {
     if ("object" != n(e) || !e) return e;
     var r = e[Symbol.toPrimitive];
     if (void 0 !== r) {
@@ -10,4 +10,4 @@ var n = r(949499).default;
     return ("string" === t ? String : Number)(e);
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

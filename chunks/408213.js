@@ -123,13 +123,13 @@ let T = {
             switch (e) {
                 case 429:
                     throw (
-                        ((0, s.Z_)(),
+                        (0, s.Z_)(),
                         a.A.show({
                             title: p.intl.string(p.t.MmIrpf),
                             body: p.intl.string(p.t.yjpDQ3),
                             confirmText: p.intl.string(p.t.XNGT1O),
                         }),
-                        { ...t, message: p.intl.string(p.t.yjpDQ3) })
+                        { ...t, message: p.intl.string(p.t.yjpDQ3) }
                     );
                 case 403:
                     throw { ...t, message: p.intl.string(p.t["8T1rxN"]) };

@@ -4,7 +4,7 @@ var n = r(948055),
 function i(e, t) {
     return t.encode ? (t.strict ? n(e) : encodeURIComponent(e)) : e;
 }
-(t.extract = function (e) {
+((t.extract = function (e) {
     return e.split("?")[1] || "";
 }),
     (t.parse = function (e, t) {
@@ -17,7 +17,7 @@ function i(e, t) {
                                 n[e] = r;
                                 return;
                             }
-                            void 0 === n[e] && (n[e] = {}), (n[e][t[1]] = r);
+                            (void 0 === n[e] && (n[e] = {}), (n[e][t[1]] = r));
                         };
                     case "bracket":
                         return function (e, r, n) {
@@ -48,7 +48,7 @@ function i(e, t) {
                   var t = e.replace(/\+/g, " ").split("="),
                       a = t.shift(),
                       i = t.length > 0 ? t.join("=") : void 0;
-                  (i = void 0 === i ? null : o(i)), r(o(a), i, n);
+                  ((i = void 0 === i ? null : o(i)), r(o(a), i, n));
               }),
               Object.keys(n)
                   .sort()
@@ -117,4 +117,4 @@ function i(e, t) {
                   })
                   .join("&")
             : "";
-    });
+    }));

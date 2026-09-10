@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     EY: () => o,
     Gp: () => l,
     K8: () => A,
@@ -12,7 +12,7 @@ n.d(t, {
 }),
     n(323874),
     n(14289),
-    n(35956);
+    n(35956));
 var i,
     r,
     a = n(179771),
@@ -32,11 +32,11 @@ let l = "xbox://communitylinking/donut/audio",
     u = (e) => {
         let { guildId: t, channelName: n, guildName: i, channelId: r, muted: a, deafened: s, nonce: l } = e,
             o = { channelid: r, guildid: t, channelname: n, guildname: i, muted: String(a), deafened: String(s) };
-        return null != l && (o.nonce = l), new URLSearchParams(o);
+        return (null != l && (o.nonce = l), new URLSearchParams(o));
     };
 var _ = (((i = {}).PLAYSTATION = "playstation"), (i.XBOX = "xbox"), i);
 let E = new Set(["xbox", "playstation"]);
-s.yTV.XBOX, s.yTV.PS5;
+(s.yTV.XBOX, s.yTV.PS5);
 var A =
     (((r = {})[(r.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 27e4)] = "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED"),
     (r[(r.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = "CONSOLE_DEVICE_UNAVAILABLE"),

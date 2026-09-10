@@ -36,13 +36,17 @@ function c(t) {
 function g(t) {
     let n = t.getGuildId(),
         e = t.id,
-        g = (0, r.bG)([a.Ay], () => {
-            let e = u.orn.NULL;
-            return (
-                null != t.parent_id && (e = a.Ay.getChannelMessageNotifications(n, t.parent_id)),
-                e !== u.orn.NULL ? e : a.Ay.getMessageNotifications(n)
-            );
-        }, [n, t.parent_id]),
+        g = (0, r.bG)(
+            [a.Ay],
+            () => {
+                let e = u.orn.NULL;
+                return (
+                    null != t.parent_id && (e = a.Ay.getChannelMessageNotifications(n, t.parent_id)),
+                    e !== u.orn.NULL ? e : a.Ay.getMessageNotifications(n)
+                );
+            },
+            [n, t.parent_id],
+        ),
         L = (0, r.bG)([a.Ay], () => a.Ay.getNewForumThreadsCreated(t)),
         h = (0, r.bG)([a.Ay], () => a.Ay.getChannelOverrides(n)[e], [n, e]),
         b = null == h ? u.orn.NULL : h.message_notifications,

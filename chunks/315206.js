@@ -41,7 +41,7 @@ function N() {
             let e = i;
             r.h.wait(() => a.VN(e));
         }
-        return r.h.wait(() => a.ho(e, m.o1q.ACTIVITY, { channel: s })), void (i = e);
+        return (r.h.wait(() => a.ho(e, m.o1q.ACTIVITY, { channel: s })), void (i = e));
     }
 }
 function C() {
@@ -49,22 +49,22 @@ function C() {
 }
 class O extends s.A {
     _initialize() {
-        _.Ay.addChangeListener(N),
+        (_.Ay.addChangeListener(N),
             E.A.addChangeListener(N),
             u.A.addChangeListener(N),
             A.A.addChangeListener(N),
             l.A.addChangeListener(N),
             I.Ay.addChangeListener(N),
-            d.A.addChangeListener(C);
+            d.A.addChangeListener(C));
     }
     _terminate() {
-        _.Ay.removeChangeListener(N),
+        (_.Ay.removeChangeListener(N),
             E.A.removeChangeListener(N),
             u.A.removeChangeListener(N),
             A.A.removeChangeListener(N),
             l.A.removeChangeListener(N),
             I.Ay.removeChangeListener(N),
-            d.A.removeChangeListener(C);
+            d.A.removeChangeListener(C));
     }
 }
 let R = new O();

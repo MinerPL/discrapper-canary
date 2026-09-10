@@ -7,7 +7,7 @@ let l = new r.A("ProcessUtilsElectron");
 class o extends a.D {
     lastMemoryUsageKB = void 0;
     constructor() {
-        super(), (this.cpuCoreCount = i.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer();
+        (super(), (this.cpuCoreCount = i.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer());
     }
     setupReportingTimer() {
         let e = i.A?.processUtils?.setMemoryInformation;
@@ -30,7 +30,7 @@ class o extends a.D {
     }
     getCurrentMemoryUsageKB() {
         let e = o.getCurrentMemoryUsageKBCore();
-        return (this.lastMemoryUsageKB = e), e;
+        return ((this.lastMemoryUsageKB = e), e);
     }
     static getCurrentMemoryUsageKBCore() {
         try {
@@ -131,7 +131,7 @@ class o extends a.D {
         try {
             let t = i.A?.processUtils?.enablePAMemoryProfiler;
             if (void 0 === t) return null;
-            return t(e), !0;
+            return (t(e), !0);
         } catch (e) {
             return null;
         }
@@ -140,7 +140,7 @@ class o extends a.D {
         try {
             let e = i.A?.processUtils?.disablePAMemoryProfiler;
             if (void 0 === e) return null;
-            return e(), !0;
+            return (e(), !0);
         } catch (e) {
             return null;
         }

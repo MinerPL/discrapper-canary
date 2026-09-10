@@ -2,7 +2,7 @@ n.d(t, { c: () => i });
 class i {
     searchFetchers = new Map();
     cleanUp(e) {
-        this.cancel(e), this.delete(e);
+        (this.cancel(e), this.delete(e));
     }
     cancel(e) {
         this.searchFetchers.get(e)?.cancel();

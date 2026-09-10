@@ -39,12 +39,12 @@ var N = n(233993),
     O = n(403362);
 class R extends f.A {
     _initialize() {
-        I.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            I.h.subscribe("LOGOUT", this.handleLogout);
+        (I.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            I.h.subscribe("LOGOUT", this.handleLogout));
     }
     _terminate() {
-        I.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            I.h.unsubscribe("LOGOUT", this.handleLogout);
+        (I.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            I.h.unsubscribe("LOGOUT", this.handleLogout));
     }
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, guildId: n } = e;
@@ -52,14 +52,14 @@ class R extends f.A {
             let e = c.A.getChannel(t);
             if (null == e || e.isGuildStageVoice()) return;
         }
-        this.terminate(), this.handleDisconnectFromStageChannel(null == t ? null : (n ?? null));
+        (this.terminate(), this.handleDisconnectFromStageChannel(null == t ? null : (n ?? null)));
     };
     handleDisconnectFromStageChannel = (e) => {
         let t = C.A.getGuildId();
         (0, o.A)([t, e].filter(O.Vq));
     };
     handleLogout = () => {
-        this.terminate(), this.handleDisconnectFromStageChannel(null);
+        (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
 let L = new R();
@@ -67,13 +67,13 @@ function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {
         let a = c.A.getChannel(t);
-        if (null != a) return D(a, n), r(a);
-        await (0, o.A)([e]),
+        if (null != a) return (D(a, n), r(a));
+        (await (0, o.A)([e]),
             await i.A.joinGuild(e, { lurker: !0 }),
             u.A.addConditionalChangeListener(() => {
                 let e = c.A.getChannel(t);
                 return null == e || (D(e), L.initialize(), r(e), !1);
-            });
+            }));
     });
 }
 function D(e) {
@@ -86,7 +86,7 @@ function D(e) {
     )
         return !1;
     let s = d.A.getAllApplicationStreamsForChannel(e.id).find((e) => !d.A.isStreamMarkedFull((0, l._z)(e)));
-    return null != s && (0, a.A9)(s, { noFocus: !1 }), !0;
+    return (null != s && (0, a.A9)(s, { noFocus: !1 }), !0);
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

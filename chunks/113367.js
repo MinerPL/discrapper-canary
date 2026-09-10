@@ -24,12 +24,12 @@ function m(e) {
         A = (0, l.bG)([h.A], () => h.A.getOverdueMessageReminderCount()),
         p = (0, l.bG)([h.A], () => h.A.getMostRecentOverdueDueAt()),
         m = A > 0 && p > o;
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (null == n) return;
         let e = setTimeout(() => T.setState({ isPulsing: !1 }), 600),
             t = setTimeout(() => T.setState({ isVisible: !1 }), 5e3);
         return () => {
-            clearTimeout(e), clearTimeout(t);
+            (clearTimeout(e), clearTimeout(t));
         };
     }, [n]),
         (0, s.l0)(() => T.setState({ toast: null, isVisible: !1, isPulsing: !1 })),
@@ -44,7 +44,7 @@ function m(e) {
             function e(e) {
                 e.key === I.dh.ESCAPE && N();
             }
-        }, [m]);
+        }, [m]));
     let g = null != n && (a || !m) ? n : null,
         S = null != g ? g.message : f.intl.formatToPlainString(f.t.yBmFPA, { count: A }),
         C = null != g ? (g.icon === d.Ck.CLOCK ? c.ClockIcon : u.BookmarkIcon) : c.ClockIcon;
@@ -64,11 +64,11 @@ function m(e) {
     });
 }
 function g(e) {
-    T.setState({ toast: { ...e }, isVisible: !0, isPulsing: !0 }), A.O.announce(e.message, "polite");
+    (T.setState({ toast: { ...e }, isVisible: !0, isPulsing: !0 }), A.O.announce(e.message, "polite"));
 }
 function S() {
     return T((e) => e.isPulsing);
 }
 function N() {
-    o.w.set(p, Date.now()), T.setState({ inboxLastOpenedAt: Date.now() });
+    (o.w.set(p, Date.now()), T.setState({ inboxLastOpenedAt: Date.now() }));
 }

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => O, W1: () => C }), n(323874), n(14289), n(35956);
+(n.d(t, { Ay: () => O, W1: () => C }), n(323874), n(14289), n(35956));
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -18,7 +18,7 @@ function h(e) {
     let n = (0, E.Fd)(e),
         i = (0, E.El)(n),
         r = { whitespaceSanitized: n, fullySanitized: i };
-    return A.set(e, r), r;
+    return (A.set(e, r), r);
 }
 let I = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
     f = [
@@ -80,7 +80,7 @@ function C(e) {
         if (("http:" === n || "https:" === n) && (null == t.hostname || 0 === t.hostname.length))
             throw Error("no hostname");
         let i = (0, E.nK)(t);
-        (t.username = ""), (t.password = "");
+        ((t.username = ""), (t.password = ""));
         let r = (0, E.nK)(t);
         return { target: i, displayTarget: r };
     } catch (e) {
@@ -181,7 +181,7 @@ let O = {
         let x = r().pick(t.rules, b),
             k = o().parserFor(x)(A.whitespaceSanitized, v),
             F = I.whitespaceSanitized,
-            { target: V } = D;
-        return { content: k, target: V, title: F };
+            { target: B } = D;
+        return { content: k, target: B, title: F };
     },
 };

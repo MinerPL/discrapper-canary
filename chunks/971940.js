@@ -40,7 +40,7 @@ function l() {
 var u = (function () {
         function e() {}
         var t = e.prototype;
-        return (t.observe = function () {}), (t.unobserve = function () {}), (t.disconnect = function () {}), e;
+        return ((t.observe = function () {}), (t.unobserve = function () {}), (t.disconnect = function () {}), e);
     })(),
     c = globalThis.ResizeObserver || u,
     f = void 0 !== globalThis.ResizeObserver,
@@ -113,10 +113,10 @@ function m(e) {
                     (l = 0),
                     function () {
                         for (var e = this, t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
-                        clearTimeout(l),
+                        (clearTimeout(l),
                             (l = window.setTimeout(function () {
                                 return a.apply(e, r);
-                            }, 0));
+                            }, 0)));
                     }),
                 ),
             )),
@@ -128,7 +128,7 @@ function m(e) {
                     return (
                         y.current && f && e.observe(y.current),
                         function () {
-                            e.disconnect(), r && f && e.unobserve(r);
+                            (e.disconnect(), r && f && e.unobserve(r));
                         }
                     );
                 },
@@ -151,7 +151,7 @@ function m(e) {
             },
             [y, L, V, U],
         );
-    i.useEffect(
+    (i.useEffect(
         function () {
             if (F && y.current && m) {
                 var e = z(),
@@ -168,17 +168,17 @@ function m(e) {
                         if (i || o) {
                             var a = K * t,
                                 s = K * r;
-                            (v.width = a),
+                            ((v.width = a),
                                 (v.height = s),
                                 (v.style.width = t + "px"),
                                 (v.style.height = r + "px"),
                                 I({ width: a, height: s }),
-                                (n = !0);
+                                (n = !0));
                         }
                     } else i && ((v.width = t), (v.height = r), I({ width: t, height: r }), (n = !0));
                     C({ width: t, height: r });
                 }
-                b && (D || n) && b && b(), D && R(!1);
+                (b && (D || n) && b && b(), D && R(!1));
             }
         },
         [v, y, B, K, z, D, R, P, A, E, k, b, F, L, N, m],
@@ -188,39 +188,39 @@ function m(e) {
                 I({ width: 0, height: 0 });
             },
             [v],
-        );
+        ));
 }
 var v = (function () {
         function e() {}
         var t = e.prototype;
-        return (t.observe = function () {}), (t.unobserve = function () {}), (t.disconnect = function () {}), e;
+        return ((t.observe = function () {}), (t.unobserve = function () {}), (t.disconnect = function () {}), e);
     })(),
     y = globalThis.IntersectionObserver || v,
     g = (function () {
         function e() {
             var e = this;
-            (this.elementsMap = new Map()),
+            ((this.elementsMap = new Map()),
                 (this.onObserved = function (t) {
                     t.forEach(function (t) {
                         var r = e.elementsMap.get(t.target);
                         r && r(t);
                     });
                 }),
-                (this.observer = new y(this.onObserved));
+                (this.observer = new y(this.onObserved)));
         }
         var t = e.prototype;
         return (
             (t.registerCallback = function (e, t) {
-                this.observer.observe(e), this.elementsMap.set(e, t);
+                (this.observer.observe(e), this.elementsMap.set(e, t));
             }),
             (t.removeCallback = function (e) {
-                this.observer.unobserve(e), this.elementsMap.delete(e);
+                (this.observer.unobserve(e), this.elementsMap.delete(e));
             }),
             e
         );
     })(),
     b = function () {
-        return n || (n = new g()), n;
+        return (n || (n = new g()), n);
     };
 function w() {
     return (w =
@@ -240,7 +240,7 @@ function _(e, t) {
         i = {},
         o = Object.getOwnPropertyNames(e);
     for (n = 0; n < o.length; n++)
-        (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
     return i;
 }
 function S(e) {
@@ -276,11 +276,11 @@ function x(e, t) {
                 if (d) {
                     if (d.layout && d.layout.fit === o.Fit.Layout && n) {
                         var e = g * d.layout.layoutScaleFactor;
-                        (d.devicePixelRatioUsed = g),
+                        ((d.devicePixelRatioUsed = g),
                             (d.artboardWidth = (null == n ? void 0 : n.width) / e),
-                            (d.artboardHeight = (null == n ? void 0 : n.height) / e);
+                            (d.artboardHeight = (null == n ? void 0 : n.height) / e));
                     }
-                    d.startRendering(), d.resizeToCanvas();
+                    (d.startRendering(), d.resizeToCanvas());
                 }
             },
             [d, g],
@@ -294,7 +294,7 @@ function x(e, t) {
         artboardBounds: null == d ? void 0 : d.bounds,
     });
     var E = i.useCallback(function (e) {
-        null === e && n && ((n.height = 0), (n.width = 0)), l(e);
+        (null === e && n && ((n.height = 0), (n.width = 0)), l(e));
     }, []);
     i.useEffect(
         function () {
@@ -305,12 +305,12 @@ function x(e, t) {
                     var i = y.useOffscreenRenderer,
                         a = e.onRiveReady,
                         s = _(e, ["onRiveReady"]);
-                    (t = new o.Rive(w({ useOffscreenRenderer: i }, s, { canvas: n }))),
+                    ((t = new o.Rive(w({ useOffscreenRenderer: i }, s, { canvas: n }))),
                         null != c.current && c.current.cleanup(),
                         (c.current = t),
                         t.on(o.EventType.Load, function () {
-                            (r = !0), a && a(t), n ? p(t) : t.cleanup();
-                        });
+                            ((r = !0), a && a(t), n ? p(t) : t.cleanup());
+                        }));
                 }
                 return function () {
                     r || null == t || t.cleanup();
@@ -332,7 +332,7 @@ function x(e, t) {
         },
         T = C.observe,
         M = C.unobserve;
-    i.useEffect(
+    (i.useEffect(
         function () {
             var e,
                 t = !1,
@@ -352,10 +352,10 @@ function x(e, t) {
                 n &&
                     !1 !== y.shouldUseIntersectionObserver &&
                     T(n, function (n) {
-                        n.isIntersecting ? d && d.startRendering() : d && d.stopRendering(),
+                        (n.isIntersecting ? d && d.startRendering() : d && d.stopRendering(),
                             (t = !n.isIntersecting),
                             clearTimeout(e),
-                            n.isIntersecting || 0 !== n.boundingClientRect.width || (e = setTimeout(r, 10));
+                            n.isIntersecting || 0 !== n.boundingClientRect.width || (e = setTimeout(r, 10)));
                     }),
                 function () {
                     n && M(n);
@@ -376,7 +376,7 @@ function x(e, t) {
             return function () {
                 null != c.current && c.current.cleanup();
             };
-        }, []);
+        }, []));
     var P = null == e ? void 0 : e.animations;
     i.useEffect(
         function () {
@@ -401,7 +401,7 @@ function k(e) {
     E.has(e) ||
         (E.add(e),
         queueMicrotask(function () {
-            E.delete(e), e.bind();
+            (E.delete(e), e.bind());
         }));
 }
 function C(e, t) {
@@ -452,14 +452,14 @@ function M(e, t, r) {
         var e = p.current,
             t = h.current,
             r = m.current;
-        if (!e || !t) return a(null), u(r.defaultValue), d(null), function () {};
+        if (!e || !t) return (a(null), u(r.defaultValue), d(null), function () {});
         var n = r.getProperty(e, t);
         if (n) {
-            a(n), u(r.getValue(n)), r.getExtendedData && d(r.getExtendedData(n));
+            (a(n), u(r.getValue(n)), r.getExtendedData && d(r.getExtendedData(n)));
             var i = function () {
-                u(r.getValue(n)),
+                (u(r.getValue(n)),
                     r.getExtendedData && d(r.getExtendedData(n)),
-                    r.onPropertyEvent && r.onPropertyEvent();
+                    r.onPropertyEvent && r.onPropertyEvent());
             };
             return (
                 n.on(i),
@@ -472,7 +472,7 @@ function M(e, t, r) {
     }, []);
     i.useEffect(
         function () {
-            return (p.current = t), (h.current = e), v();
+            return ((p.current = t), (h.current = e), v());
         },
         [t, e, v],
     );
@@ -480,7 +480,7 @@ function M(e, t, r) {
             function (e) {
                 if (o && p.current === t)
                     try {
-                        e(o), m.current.getExtendedData && d(m.current.getExtendedData(o));
+                        (e(o), m.current.getExtendedData && d(m.current.getExtendedData(o)));
                         return;
                     } catch (e) {}
                 if (p.current)
@@ -498,7 +498,7 @@ function M(e, t, r) {
             [y],
         ),
         b = T({ value: l }, g);
-    return r.getExtendedData && (b.extendedData = f), b;
+    return (r.getExtendedData && (b.extendedData = f), b);
 }
 function P(e, t, r, n, i, o, a) {
     try {
@@ -510,7 +510,7 @@ function P(e, t, r, n, i, o, a) {
     }
     s.done ? t(l) : Promise.resolve(l).then(n, i);
 }
-(t.default = function (e) {
+((t.default = function (e) {
     var t = e.src,
         r = e.artboard,
         n = e.animations,
@@ -571,7 +571,7 @@ function P(e, t, r, n, i, o, a) {
             i.useEffect(
                 function () {
                     var r = C(e, { name: o, useNew: s, instance: l });
-                    d(r), u && t && r && u.setGlobalViewModelInstance(t, r) && k(u);
+                    (d(r), u && t && r && u.setGlobalViewModelInstance(t, r) && k(u));
                 },
                 [e, t, o, s, l, u],
             ),
@@ -625,7 +625,7 @@ function P(e, t, r, n, i, o, a) {
                                     return function (l) {
                                         var u = [s, l];
                                         if (r) throw TypeError("Generator is already executing.");
-                                        for (; a && ((a = 0), u[0] && (o = 0)), o; )
+                                        for (; a && ((a = 0), u[0] && (o = 0)), o;)
                                             try {
                                                 if (
                                                     ((r = 1),
@@ -645,12 +645,12 @@ function P(e, t, r, n, i, o, a) {
                                                         i = u;
                                                         break;
                                                     case 4:
-                                                        return o.label++, { value: u[1], done: !1 };
+                                                        return (o.label++, { value: u[1], done: !1 });
                                                     case 5:
-                                                        o.label++, (n = u[1]), (u = [0]);
+                                                        (o.label++, (n = u[1]), (u = [0]));
                                                         continue;
                                                     case 7:
-                                                        (u = o.ops.pop()), o.trys.pop();
+                                                        ((u = o.ops.pop()), o.trys.pop());
                                                         continue;
                                                     default:
                                                         if (
@@ -665,19 +665,19 @@ function P(e, t, r, n, i, o, a) {
                                                             break;
                                                         }
                                                         if (6 === u[0] && o.label < i[1]) {
-                                                            (o.label = i[1]), (i = u);
+                                                            ((o.label = i[1]), (i = u));
                                                             break;
                                                         }
                                                         if (i && o.label < i[2]) {
-                                                            (o.label = i[2]), o.ops.push(u);
+                                                            ((o.label = i[2]), o.ops.push(u));
                                                             break;
                                                         }
-                                                        i[2] && o.ops.pop(), o.trys.pop();
+                                                        (i[2] && o.ops.pop(), o.trys.pop());
                                                         continue;
                                                 }
                                                 u = t.call(e, o);
                                             } catch (e) {
-                                                (u = [6, e]), (n = 0);
+                                                ((u = [6, e]), (n = 0));
                                             } finally {
                                                 r = i = 0;
                                             }
@@ -687,17 +687,17 @@ function P(e, t, r, n, i, o, a) {
                                 }
                             })(this, function (t) {
                                 try {
-                                    l("loading"),
+                                    (l("loading"),
                                         (r = new o.RiveFile(e)).init(),
                                         r.on(o.EventType.Load, function () {
-                                            null == r || r.getInstance(), n(r), l("success");
+                                            (null == r || r.getInstance(), n(r), l("success"));
                                         }),
                                         r.on(o.EventType.LoadError, function () {
                                             l("failed");
                                         }),
-                                        n(r);
+                                        n(r));
                                 } catch (e) {
-                                    console.error(e), l("failed");
+                                    (console.error(e), l("failed"));
                                 }
                                 return [2];
                             });
@@ -740,15 +740,15 @@ function P(e, t, r, n, i, o, a) {
                                 var o = i.find(function (e) {
                                     return e.name === r;
                                 });
-                                void 0 !== n && o && (o.value = n), l(o || null);
+                                (void 0 !== n && o && (o.value = n), l(o || null));
                             }
                         } else l(null);
                     };
-                    i(),
+                    (i(),
                         e &&
                             e.on(o.EventType.Load, function () {
                                 i();
-                            });
+                            }));
                 },
                 [e],
             ),
@@ -802,7 +802,7 @@ function P(e, t, r, n, i, o, a) {
                 function () {
                     if (!e) return void f(null);
                     var t = C(e, { name: n, useNew: s });
-                    f(t), l && t && l.viewModelInstance !== t && (l.setViewModelInstance(t), k(l));
+                    (f(t), l && t && l.viewModelInstance !== t && (l.setViewModelInstance(t), k(l)));
                 },
                 [e, n, void 0 !== o && o, s, l],
             ),
@@ -1104,4 +1104,4 @@ function P(e, t, r, n, i, o, a) {
                     return o[e];
                 },
             });
-    });
+    }));

@@ -138,7 +138,7 @@ let S = r.memo(function (e) {
         if (!(0, d.qt)(l)) return void T((e) => ({ ...e, input: l }));
         let n = (0, d.LX)(l),
             t = (0, d.tf)(n);
-        T({ current: n, pending: { hex: l, hsl: t }, input: l }), o(n);
+        (T({ current: n, pending: { hex: l, hsl: t }, input: l }), o(n));
     }
     async function z() {
         if (null != C)
@@ -147,16 +147,16 @@ let S = r.memo(function (e) {
                 H(e);
             } catch {}
     }
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (null == y || y === S.current) return;
         let e = (0, d.Hl)(y),
             l = (0, d.tf)(y);
         T({ current: y, pending: { hex: e, hsl: l }, input: e });
     }, [y, S]),
-        r.useEffect(() => a, [a]);
+        r.useEffect(() => a, [a]));
     let P = r.useCallback(
             (e) => {
-                T((l) => ({ ...l, pending: e, input: e.hex })), s && o((0, d.LX)(e.hex));
+                (T((l) => ({ ...l, pending: e, input: e.hex })), s && o((0, d.LX)(e.hex)));
             },
             [s, o],
         ),

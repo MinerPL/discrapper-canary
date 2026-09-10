@@ -12,12 +12,12 @@ function d(t, n) {
         ((0, o.hv)({ action: o.rY.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId: n, channelId: t }),
         !r.A.canSubmitFpReport(n))
     ) {
-        l.A.show({
+        (l.A.show({
             title: c.intl.string(c.t["iS/eFN"]),
             body: c.intl.string(c.t.YrjcgR),
             confirmText: c.intl.string(c.t.BddRzS),
         }),
-            s.A.disableFalsePositiveButton(t, n);
+            s.A.disableFalsePositiveButton(t, n));
         return;
     }
     (0, a.openModalLazy)(async () => {

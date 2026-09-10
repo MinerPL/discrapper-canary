@@ -31,10 +31,10 @@ class g extends A.A {
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();
     onPostConnectionOpen() {
-        this.lastReconciledDismissalAtMs.clear(), this.sendGiftingPromptSystemMessagesIfEligible();
+        (this.lastReconciledDismissalAtMs.clear(), this.sendGiftingPromptSystemMessagesIfEligible());
     }
     onPremiumGiftingIntentStoreChange() {
-        this.maybeReconcileServerDismissals(), this.maybeRetryHeldGiftingPromptSystemMessage();
+        (this.maybeReconcileServerDismissals(), this.maybeRetryHeldGiftingPromptSystemMessage());
     }
     maybeReconcileServerDismissals() {
         !this.isReconcileEligible() || this.reconcileBackoff.pending || this.attemptReconcileFetch();
@@ -55,11 +55,11 @@ class g extends A.A {
             ((this.isReconciling = !0), (0, d.qH)(e));
     }
     onReconcileSuccess(e) {
-        this.onReconcileSettled(!0), this.removeRemotelyDismissedGiftIntentCards(e.dismissals);
+        (this.onReconcileSettled(!0), this.removeRemotelyDismissedGiftIntentCards(e.dismissals));
     }
     onReconcileSettled(e) {
-        (this.isReconciling = !1),
-            e ? this.reconcileBackoff.succeed() : this.reconcileBackoff.fail(this.retryReconcileServerDismissals);
+        ((this.isReconciling = !1),
+            e ? this.reconcileBackoff.succeed() : this.reconcileBackoff.fail(this.retryReconcileServerDismissals));
     }
     removeRemotelyDismissedGiftIntentCards(e) {
         for (let { targetId: t, dismissedAtMs: n } of e) {
@@ -74,10 +74,10 @@ class g extends A.A {
         }
     }
     onLogout() {
-        this.reconcileBackoff.cancel(),
+        (this.reconcileBackoff.cancel(),
             (this.isReconciling = !1),
             (this.heldGiftingPromptSystemMessage = !1),
-            this.lastReconciledDismissalAtMs.clear();
+            this.lastReconciledDismissalAtMs.clear());
     }
     maybeRetryHeldGiftingPromptSystemMessage() {
         !this.heldGiftingPromptSystemMessage ||

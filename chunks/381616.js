@@ -1,5 +1,5 @@
 let o;
-i.d(e, { A: () => l }), i(321073);
+(i.d(e, { A: () => l }), i(321073));
 var s = i(17928),
     n = i(228366);
 let a = { guildNoticeDismissed: [] },
@@ -28,7 +28,7 @@ class d extends s.Ay.PersistedStore {
 let l = new d(n.h, {
     COMMANDS_MIGRATION_UPDATE_SUCCESS: function (t) {
         let { guildId: e, integrationIdsWithAppCommands: i } = t;
-        return I.set(e, new Set(i)), !0;
+        return (I.set(e, new Set(i)), !0);
     },
     COMMANDS_MIGRATION_NOTICE_DISMISSED: function (t) {
         let { guildId: e } = t;
@@ -36,7 +36,7 @@ let l = new d(n.h, {
     },
     COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (t) {
         let { guildId: e, integrationId: i } = t;
-        I.get(e)?.clear(), S.add(i);
+        (I.get(e)?.clear(), S.add(i));
     },
     COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (t) {
         let { integrationId: e } = t;

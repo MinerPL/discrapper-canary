@@ -25,7 +25,7 @@ async function p(e, r) {
         c.default.compare(e.id, f) > 0 && (0, s.Wm)(e, a) && m++;
     });
     let k = n.A.getChannel(e);
-    null != k &&
+    (null != k &&
         k.isThread() &&
         (k.isArchivedThread() && (await l.A.unarchiveThread(k, !1)),
         i.A.hasJoined(e) || (await l.A.joinThread(k, "Mark Unread"))),
@@ -35,5 +35,5 @@ async function p(e, r) {
             body: { manual: !0, mention_count: m },
             oldFormErrors: !0,
             rejectWithError: !0,
-        });
+        }));
 }

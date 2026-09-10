@@ -10,7 +10,7 @@ let a = function (e) {
         if (s) {
             if (t.current && e?.current != null && (0, n.vq)(e.current, HTMLVideoElement))
                 try {
-                    e.current.load(), (t.current = !1);
+                    (e.current.load(), (t.current = !1));
                 } catch (e) {}
         } else t.current = !0;
     }, [s, e, t]);

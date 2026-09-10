@@ -27,7 +27,7 @@ function d(e) {
                 try {
                     let e = await (0, a.Vw)(n.order.id);
                     if (0 === e.length) throw new a.j2();
-                    o(e), r?.(e);
+                    (o(e), r?.(e));
                 } catch (r) {
                     p(r, { skuId: e, loadId: t, orderId: n.order.id });
                 } finally {
@@ -42,13 +42,13 @@ function d(e) {
                     skuId: e,
                     loadId: t,
                     onRedeemStart: function () {
-                        C(!0), h(null);
+                        (C(!0), h(null));
                     },
                     onRedeemSucceed: function (e) {
-                        o(e), C(!1), r?.(e);
+                        (o(e), C(!1), r?.(e));
                     },
                     onRedeemFail: function (e) {
-                        h(e), C(!1);
+                        (h(e), C(!1));
                     },
                 }),
             [],

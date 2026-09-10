@@ -10,7 +10,7 @@ var s = r(542113),
     c = (function (e) {
         function t() {
             for (var t, r = arguments.length, n = Array(r), i = 0; i < r; i++) n[i] = arguments[i];
-            return ((t = e.call.apply(e, [this].concat(n)) || this).history = (0, a.zR)(t.props)), t;
+            return (((t = e.call.apply(e, [this].concat(n)) || this).history = (0, a.zR)(t.props)), t);
         }
         return (
             (0, i.A)(t, e),
@@ -55,7 +55,7 @@ var m = h(function (e, t) {
                         (e.preventDefault(), n());
                 },
             });
-        return p !== h ? (c.ref = t || r) : (c.ref = r), o.createElement("a", c);
+        return (p !== h ? (c.ref = t || r) : (c.ref = r), o.createElement("a", c));
     }),
     v = h(function (e, t) {
         var r = e.component,
@@ -77,14 +77,14 @@ var m = h(function (e, t) {
                         (c || n ? r.replace : r.push)(t);
                     },
                 });
-            return p !== h ? (m.ref = t || y) : (m.innerRef = y), o.createElement(i, m);
+            return (p !== h ? (m.ref = t || y) : (m.innerRef = y), o.createElement(i, m));
         });
     }),
     y = function (e) {
         return e;
     },
     g = o.forwardRef;
-void 0 === g && (g = y),
+(void 0 === g && (g = y),
     g(function (e, t) {
         var r = e["aria-current"],
             i = void 0 === r ? "page" : r,
@@ -135,6 +135,6 @@ void 0 === g && (g = y),
                 })(A, c)),
                 (I = (0, s.A)({}, I, p)));
             var O = (0, s.A)({ "aria-current": (P && i) || null, className: A, style: I, to: a }, C);
-            return y !== g ? (O.ref = t || k) : (O.innerRef = k), o.createElement(v, O);
+            return (y !== g ? (O.ref = t || k) : (O.innerRef = k), o.createElement(v, O));
         });
-    });
+    }));

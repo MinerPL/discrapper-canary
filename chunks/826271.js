@@ -42,7 +42,7 @@ function A(t) {
         Q = U >= I.dh,
         T = a.useCallback(
             (t) => {
-                _(t), H(t);
+                (_(t), H(t));
             },
             [H],
         ),
@@ -67,10 +67,10 @@ function A(t) {
             N(!0);
             let t = (await Promise.all(M.map(x.pk))).filter(C.Vq);
             if (0 === t.length) {
-                (0, u.P0)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1);
+                ((0, u.P0)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1));
                 return;
             }
-            (0, S.S_)({ channelIds: t, parentId: f ?? null, source: "modal" }), l();
+            ((0, S.S_)({ channelIds: t, parentId: f ?? null, source: "modal" }), l());
         }, [l, f, M]),
         X = a.useMemo(() => F.filter((t) => t.type !== g.rD.HEADER), [F]),
         z = (0, m.s)({ rowData: X, selectedDestinations: M, handleToggleDestination: q, disableSelection: Q }),
@@ -117,7 +117,7 @@ function A(t) {
                         ...(0 === X.length ? K : z),
                         ...i,
                         ref: (t) => {
-                            (B.current = t), (a.current = t?.getScrollerNode() ?? null);
+                            ((B.current = t), (a.current = t?.getScrollerNode() ?? null));
                         },
                     },
                 });

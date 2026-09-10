@@ -39,6 +39,6 @@ let m = new o(i.h, {
             t = n.gameUpsellsDismissal[l];
         if (null == t || null == t[s]) return;
         let i = { ...t };
-        delete i[s], (n = { gameUpsellsDismissal: { ...n.gameUpsellsDismissal, [l]: i } });
+        (delete i[s], (n = { gameUpsellsDismissal: { ...n.gameUpsellsDismissal, [l]: i } }));
     },
 });

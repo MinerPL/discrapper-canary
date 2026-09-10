@@ -6,7 +6,7 @@ var t = n(477900),
 class o extends s.PureComponent {
     state = { error: null, info: null };
     componentDidCatch(r, e) {
-        console.error("Error rendering component (LocalErrorBoundary): ", r), this.setState({ error: r, info: e });
+        (console.error("Error rendering component (LocalErrorBoundary): ", r), this.setState({ error: r, info: e }));
     }
     render() {
         return null != this.state.error

@@ -12,7 +12,7 @@ function d(t) {
         [d, p] = a.useState("");
     return (0, e.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(), (0, o.od)(d), n();
+            (t.preventDefault(), (0, o.od)(d), n());
         },
         children: (0, e.jsx)(s.Modal, {
             title: c.intl.string(c.t["ISN+NM"]),

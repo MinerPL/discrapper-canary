@@ -17,7 +17,7 @@ class c extends i.Ay.Store {
     initialize() {
         "u" > typeof window &&
             window.addEventListener("focus", () => {
-                l.clear(), this.emitChange();
+                (l.clear(), this.emitChange());
             });
     }
     get launchingGames() {
@@ -27,7 +27,7 @@ class c extends i.Ay.Store {
         return s;
     }
     isLaunchable(e) {
-        return l.has(e) || (l.add(e), r.h.dispatch({ type: "CHECK_LAUNCHABLE_GAME", gameId: e })), s[e] ?? !1;
+        return (l.has(e) || (l.add(e), r.h.dispatch({ type: "CHECK_LAUNCHABLE_GAME", gameId: e })), s[e] ?? !1);
     }
     isLaunchableLoading(e) {
         return null == s[e] && l.has(e);

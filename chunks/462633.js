@@ -1,4 +1,4 @@
-t.d(e, { M: () => e_, ekycMachine: () => eE }), t(580607);
+(t.d(e, { M: () => e_, ekycMachine: () => eE }), t(580607));
 var r,
     n,
     $ = t(41851),
@@ -3685,10 +3685,10 @@ var M = {
 };
 function F(d, e) {
     var t = Array.prototype.slice.call(e);
-    return t.push(M), d.apply(this, t);
+    return (t.push(M), d.apply(this, t));
 }
 function U(d, e) {
-    (d = d.split("-")), (e = e.split("-"));
+    ((d = d.split("-")), (e = e.split("-")));
     for (var t = d[0].split("."), r = e[0].split("."), n = 0; n < 3; n++) {
         var $ = Number(t[n]),
             i = Number(r[n]);
@@ -3721,7 +3721,7 @@ function V(d, e) {
 function K(d, e) {
     for (var t = 0; t < e.length; t++) {
         var r = e[t];
-        (r.enumerable = r.enumerable || !1),
+        ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             "value" in r && (r.writable = !0),
             Object.defineProperty(
@@ -3740,17 +3740,17 @@ function K(d, e) {
                     return "symbol" == B(e) ? e : e + "";
                 })(r.key),
                 r,
-            );
+            ));
     }
 }
 function H(d, e, t) {
-    return e && K(d.prototype, e), t && K(d, t), Object.defineProperty(d, "prototype", { writable: !1 }), d;
+    return (e && K(d.prototype, e), t && K(d, t), Object.defineProperty(d, "prototype", { writable: !1 }), d);
 }
 var W = " ext. ",
     Y = /^\d+$/,
     Z = H(
         function d(e) {
-            V(this, d), dd(e), (this.metadata = e), dr.call(this, e);
+            (V(this, d), dd(e), (this.metadata = e), dr.call(this, e));
         },
         [
             {
@@ -3944,7 +3944,7 @@ var W = " ext. ",
     ),
     X = H(
         function d(e, t) {
-            V(this, d), (this.globalMetadataObject = t), (this.metadata = e), dr.call(this, t.metadata);
+            (V(this, d), (this.globalMetadataObject = t), (this.metadata = e), dr.call(this, t.metadata));
         },
         [
             {
@@ -4090,7 +4090,7 @@ var W = " ext. ",
     ),
     J = H(
         function d(e, t) {
-            V(this, d), (this._format = e), (this.metadata = t);
+            (V(this, d), (this._format = e), (this.metadata = t));
         },
         [
             {
@@ -4146,7 +4146,7 @@ var W = " ext. ",
     Q = /^\(?\$1\)?$/,
     z = H(
         function d(e, t) {
-            V(this, d), (this.type = e), (this.metadata = t);
+            (V(this, d), (this.type = e), (this.metadata = t));
         },
         [
             {
@@ -4293,7 +4293,7 @@ function di(d, e, t) {
     return "IS_POSSIBLE" === d$(d, e, t);
 }
 function da(d, e) {
-    return (d = d || ""), RegExp("^(?:" + e + ")$").test(d);
+    return ((d = d || ""), RegExp("^(?:" + e + ")$").test(d));
 }
 function du(d, e) {
     (null == e || e > d.length) && (e = d.length);
@@ -4441,10 +4441,10 @@ function dv(d, e, t) {
                         a = r.length - 1,
                         o = a > 0 && r[a];
                     if (e.nationalPrefixTransformRule() && o)
-                        (n = d.replace(t, e.nationalPrefixTransformRule())), a > 1 && ($ = r[1]);
+                        ((n = d.replace(t, e.nationalPrefixTransformRule())), a > 1 && ($ = r[1]));
                     else {
                         var u = r[0];
-                        (n = d.slice(u.length)), o && ($ = r[1]);
+                        ((n = d.slice(u.length)), o && ($ = r[1]));
                     }
                     if (o) {
                         var l = d.indexOf(r[1]);
@@ -4493,7 +4493,7 @@ function db(d, e, t, r, n) {
                     }
                 }
             })(d, e || t, r, n);
-        if (i && i !== d) ($ = !0), (d = "+" + i);
+        if (i && i !== d) (($ = !0), (d = "+" + i));
         else {
             if (e || t || r) {
                 var a = (function (d, e, t, r, n) {
@@ -4525,7 +4525,7 @@ function db(d, e, t, r, n) {
     }
     if ("0" === d[1]) return {};
     n = new Z(n);
-    for (var l = 2; l - 1 <= 3 && l <= d.length; ) {
+    for (var l = 2; l - 1 <= 3 && l <= d.length;) {
         var s = d.slice(1, l);
         if (n.hasCallingCode(s))
             return (
@@ -4584,7 +4584,7 @@ function dI(d, e, t, r, n) {
         u,
         l,
         s = (function (d, e) {
-            for (var t = d, r = 0; r < t.length; ) {
+            for (var t = d, r = 0; r < t.length;) {
                 if (
                     (function (d) {
                         if (d.leadingDigitsPatterns().length > 0) {
@@ -4638,11 +4638,11 @@ function dT(d, e) {
     var t = Object.keys(d);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(d);
-        e &&
+        (e &&
             (r = r.filter(function (e) {
                 return Object.getOwnPropertyDescriptor(d, e).enumerable;
             })),
-            t.push.apply(t, r);
+            t.push.apply(t, r));
     }
     return t;
 }
@@ -4652,12 +4652,12 @@ function dx(d) {
         e % 2
             ? dT(Object(t), !0).forEach(function (e) {
                   var r, n, $;
-                  (r = d),
+                  ((r = d),
                       (n = e),
                       ($ = t[e]),
                       (n = dL(n)) in r
                           ? Object.defineProperty(r, n, { value: $, enumerable: !0, configurable: !0, writable: !0 })
-                          : (r[n] = $);
+                          : (r[n] = $));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(t))
@@ -4711,13 +4711,13 @@ var dD =
                 })(e, r),
                 o = a.country,
                 u = a.countryCallingCode;
-            (this.country = o),
+            ((this.country = o),
                 (this.countryCallingCode = u),
                 (this.nationalNumber = t),
                 (this.number = "+" + this.countryCallingCode + this.nationalNumber),
                 (this.getMetadata = function () {
                     return r;
-                });
+                }));
         }),
         (n = [
             {
@@ -4810,7 +4810,7 @@ var dD =
                                 ? (function () {
                                       for (var d = 1, e = arguments.length, t = Array(e), r = 0; r < e; r++)
                                           t[r] = arguments[r];
-                                      for (; d < t.length; ) {
+                                      for (; d < t.length;) {
                                           if (t[d]) for (var n in t[d]) t[0][n] = t[d][n];
                                           d++;
                                       }
@@ -4927,10 +4927,10 @@ var dD =
         (function (d, e) {
             for (var t = 0; t < e.length; t++) {
                 var r = e[t];
-                (r.enumerable = r.enumerable || !1),
+                ((r.enumerable = r.enumerable || !1),
                     (r.configurable = !0),
                     "value" in r && (r.writable = !0),
-                    Object.defineProperty(d, dL(r.key), r);
+                    Object.defineProperty(d, dL(r.key), r));
             }
         })(r.prototype, n),
         Object.defineProperty(r, "prototype", { writable: !1 }),
@@ -4973,7 +4973,7 @@ function dM(d) {
                 var r = [null];
                 r.push.apply(r, e);
                 var n = new (d.bind.apply(d, r))();
-                return t && dU(n, t.prototype), n;
+                return (t && dU(n, t.prototype), n);
             })(d, arguments, dG(this).constructor);
         }
         return (
@@ -4996,7 +4996,7 @@ function dU(d, e) {
     return (dU = Object.setPrototypeOf
         ? Object.setPrototypeOf.bind()
         : function (d, e) {
-              return (d.__proto__ = e), d;
+              return ((d.__proto__ = e), d);
           })(d, e);
 }
 function dG(d) {
@@ -5159,11 +5159,11 @@ function d0(d, e) {
     var t = Object.keys(d);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(d);
-        e &&
+        (e &&
             (r = r.filter(function (e) {
                 return Object.getOwnPropertyDescriptor(d, e).enumerable;
             })),
-            t.push.apply(t, r);
+            t.push.apply(t, r));
     }
     return t;
 }
@@ -5173,7 +5173,7 @@ function d1(d) {
         e % 2
             ? d0(Object(t), !0).forEach(function (e) {
                   var r, n, $;
-                  (r = d),
+                  ((r = d),
                       (n = e),
                       ($ = t[e]),
                       (n = (function (d) {
@@ -5190,7 +5190,7 @@ function d1(d) {
                           return "symbol" == dq(e) ? e : e + "";
                       })(n)) in r
                           ? Object.defineProperty(r, n, { value: $, enumerable: !0, configurable: !0, writable: !0 })
-                          : (r[n] = $);
+                          : (r[n] = $));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(t))
@@ -5216,11 +5216,11 @@ function d3(d, e) {
     var t = Object.keys(d);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(d);
-        e &&
+        (e &&
             (r = r.filter(function (e) {
                 return Object.getOwnPropertyDescriptor(d, e).enumerable;
             })),
-            t.push.apply(t, r);
+            t.push.apply(t, r));
     }
     return t;
 }
@@ -5249,10 +5249,10 @@ function d4(d) {
                         a = !0,
                         o = !1;
                     try {
-                        (n = (e = e.call(d)).next), !1;
+                        ((n = (e = e.call(d)).next), !1);
                         for (; !(a = (t = n.call(e)).done) && (i.push(t.value), 4 !== i.length); a = !0);
                     } catch (d) {
-                        (o = !0), (r = d);
+                        ((o = !0), (r = d));
                     } finally {
                         try {
                             if (!a && null != e.return && (($ = e.return()), Object($) !== $)) return;
@@ -5292,7 +5292,7 @@ function d4(d) {
         if (j(a)) o ? ((r = a), (n = o)) : (n = a);
         else throw Error("Invalid second argument: ".concat(a));
     else
-        u ? ((r = o), (n = u)) : ((r = void 0), (n = o)),
+        (u ? ((r = o), (n = u)) : ((r = void 0), (n = o)),
             a &&
                 (r = (function (d) {
                     for (var e = 1; e < arguments.length; e++) {
@@ -5300,7 +5300,7 @@ function d4(d) {
                         e % 2
                             ? d3(Object(t), !0).forEach(function (e) {
                                   var r, n, $;
-                                  (r = d),
+                                  ((r = d),
                                       (n = e),
                                       ($ = t[e]),
                                       (n = (function (d) {
@@ -5322,7 +5322,7 @@ function d4(d) {
                                                 configurable: !0,
                                                 writable: !0,
                                             })
-                                          : (r[n] = $);
+                                          : (r[n] = $));
                               })
                             : Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(t))
@@ -5331,7 +5331,7 @@ function d4(d) {
                                 });
                     }
                     return d;
-                })({ defaultCountry: a }, r));
+                })({ defaultCountry: a }, r)));
     return { text: t, options: r, metadata: n };
 }
 function d8(d) {
@@ -5350,11 +5350,11 @@ function d6(d, e) {
     var t = Object.keys(d);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(d);
-        e &&
+        (e &&
             (r = r.filter(function (e) {
                 return Object.getOwnPropertyDescriptor(d, e).enumerable;
             })),
-            t.push.apply(t, r);
+            t.push.apply(t, r));
     }
     return t;
 }
@@ -5364,7 +5364,7 @@ function d5(d) {
         e % 2
             ? d6(Object(t), !0).forEach(function (e) {
                   var r, n, $;
-                  (r = d),
+                  ((r = d),
                       (n = e),
                       ($ = t[e]),
                       (n = (function (d) {
@@ -5381,7 +5381,7 @@ function d5(d) {
                           return "symbol" == d8(e) ? e : e + "";
                       })(n)) in r
                           ? Object.defineProperty(r, n, { value: $, enumerable: !0, configurable: !0, writable: !0 })
-                          : (r[n] = $);
+                          : (r[n] = $));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(t))
@@ -5424,7 +5424,7 @@ function d7(d, e, t) {
                                 throw new dj("NOT_A_NUMBER");
                             if (null === r) n = t(d) || "";
                             else {
-                                (n = ""), "+" === r.charAt(0) && (n += r);
+                                ((n = ""), "+" === r.charAt(0) && (n += r));
                                 var n,
                                     $,
                                     i = d.indexOf(dX);
@@ -5452,7 +5452,7 @@ function d7(d, e, t) {
                         var n = (function (d) {
                             var e = d.search(dB);
                             if (e < 0) return {};
-                            for (var t = d.slice(0, e), r = d.match(dB), n = 1; n < r.length; ) {
+                            for (var t = d.slice(0, e), r = d.match(dB), n = 1; n < r.length;) {
                                 if (r[n]) return { number: t, ext: r[n] };
                                 n++;
                             }
@@ -5478,7 +5478,7 @@ function d7(d, e, t) {
                         if (a) r.selectNumberingPlan(a);
                         else {
                             if (!o || (!e && !t)) return {};
-                            r.selectNumberingPlan(e, t), e && (n = e), (a = t || dt(e, r.metadata));
+                            (r.selectNumberingPlan(e, t), e && (n = e), (a = t || dt(e, r.metadata)));
                         }
                         if (!o) return { countryCallingCodeSource: i, countryCallingCode: a };
                         var u = dv(dH(o), n, r),
@@ -5564,11 +5564,11 @@ function et(d, e) {
     var t = Object.keys(d);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(d);
-        e &&
+        (e &&
             (r = r.filter(function (e) {
                 return Object.getOwnPropertyDescriptor(d, e).enumerable;
             })),
-            t.push.apply(t, r);
+            t.push.apply(t, r));
     }
     return t;
 }
@@ -5578,7 +5578,7 @@ function er(d) {
         e % 2
             ? et(Object(t), !0).forEach(function (e) {
                   var r, n, $;
-                  (r = d),
+                  ((r = d),
                       (n = e),
                       ($ = t[e]),
                       (n = (function (d) {
@@ -5595,7 +5595,7 @@ function er(d) {
                           return "symbol" == ee(e) ? e : e + "";
                       })(n)) in r
                           ? Object.defineProperty(r, n, { value: $, enumerable: !0, configurable: !0, writable: !0 })
-                          : (r[n] = $);
+                          : (r[n] = $));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(t))
@@ -5664,7 +5664,7 @@ let e$ = new (class {
                         let e = l.n[d];
                         if (void 0 !== e) return { length: e };
                         let t = (0, l.a)(d);
-                        return ("US" === d || "BR" === d) && (t -= 1), { maxLength: t };
+                        return (("US" === d || "BR" === d) && (t -= 1), { maxLength: t });
                     })(e.country),
                 };
         },
@@ -5709,10 +5709,10 @@ function ec(d, e, t, r = !1) {
                     "email" === u.name && o.push({ type: "emailFormat" }),
                     "panNumber" === u.name && o.push({ type: "exactLength", length: 10 }),
                     o);
-            l.length > 0 && (u.validation = l), n.push(u);
+            (l.length > 0 && (u.validation = l), n.push(u));
         },
         i = d.name || (!!E.includes(e) && "user_input");
-    i &&
+    (i &&
         ($("firstName", "text", "verification.labels.firstName", i, {
             maxLength: 100,
             placeholder: "verification.placeholder.firstName",
@@ -5732,7 +5732,7 @@ function ec(d, e, t, r = !1) {
                 maxLength: 100,
                 placeholder: "verification.placeholder.maternalSurname",
             })),
-        d["date of birth"] && $("dateOfBirth", "date", "verification.labels.dateOfBirth", d["date of birth"]);
+        d["date of birth"] && $("dateOfBirth", "date", "verification.labels.dateOfBirth", d["date of birth"]));
     let a = d.email || (!!v.includes(e) && "user_input");
     if (
         (a && $("email", "text", "verification.labels.email", a, { placeholder: "verification.placeholder.email" }),
@@ -5741,7 +5741,7 @@ function ec(d, e, t, r = !1) {
         let t = (r && "PHONE_RISK_1" !== e) || s.includes(e);
         $("phone", "phone", "verification.labels.phone", d.phone, { disableCountrySelector: t });
     }
-    d.SSN &&
+    (d.SSN &&
         ("BR" === t || R.includes(e)
             ? $("taxId", "text", "verification.labels.taxId", d.SSN, { ...("BR" === t && { displayLabel: "CPF" }) })
             : "CN" === t
@@ -5768,7 +5768,7 @@ function ec(d, e, t, r = !1) {
                     { value: "M", label: "common.male" },
                 ],
             }),
-        d.panNumber && $("panNumber", "text", "verification.labels.panNumber", d.panNumber, { maxLength: 10 });
+        d.panNumber && $("panNumber", "text", "verification.labels.panNumber", d.panNumber, { maxLength: 10 }));
     let o = () => {
             let r = C.includes(e) || N.includes(e) || _.includes(e),
                 n = d.address || (!!r && "user_input");
@@ -5802,7 +5802,7 @@ function ec(d, e, t, r = !1) {
                     ));
         },
         u = () => {
-            d.dlNumber &&
+            (d.dlNumber &&
                 $("dlNumber", "text", "verification.labels.dlNumber", d.dlNumber, { section: "driverLicense" }),
                 d.dlState &&
                     $("dlState", "dropdown", "verification.labels.dlState", d.dlState, {
@@ -5813,9 +5813,9 @@ function ec(d, e, t, r = !1) {
                 d.dlExpireAt &&
                     $("dlExpireAt", "date", "verification.labels.dlExpireAt", d.dlExpireAt, {
                         section: "driverLicense",
-                    });
+                    }));
         };
-    return "US_TELCO_1" === e ? (u(), o()) : (o(), u()), n;
+    return ("US_TELCO_1" === e ? (u(), o()) : (o(), u()), n);
 }
 async function ef(d, e) {
     let t = `${a.t.moduleConfig}?id=${encodeURIComponent(d)}&moduleKey=EXTERNAL_VERIFICATION`,
@@ -5835,10 +5835,10 @@ async function eh(d) {
 }
 var ey = class extends Error {
     constructor(d, e) {
-        super(`POST ${a.t.ekycSubmit} failed: ${d} \u{2013} ${e}`),
+        (super(`POST ${a.t.ekycSubmit} failed: ${d} \u{2013} ${e}`),
             (this.name = "EkycSubmitError"),
             (this.status = d),
-            (this.apiError = e);
+            (this.apiError = e));
     }
 };
 async function ep(d, e) {
@@ -5889,7 +5889,7 @@ let eg = (0, o.a)(async ({ input: d, signal: e }) => ef(d.flowId, e)),
                             $ = {},
                             i = [],
                             a = !1;
-                        "document_scan" === d.name &&
+                        ("document_scan" === d.name &&
                             e?.name &&
                             (e.name.firstName &&
                                 ((n.firstName = e.name.firstName), ($.firstName = !0), i.push("firstName")),
@@ -5903,7 +5903,7 @@ let eg = (0, o.a)(async ({ input: d, signal: e }) => ef(d.flowId, e)),
                                 i.push("maternalSurname"))),
                             "document_scan" === d["date of birth"] &&
                                 e?.birthDate &&
-                                ((n.dateOfBirth = e.birthDate), ($.dateOfBirth = !0), i.push("dateOfBirth"));
+                                ((n.dateOfBirth = e.birthDate), ($.dateOfBirth = !0), i.push("dateOfBirth")));
                         let o = d.address;
                         if ("document_scan" === o || "poa_document" === o) {
                             let d =
@@ -5963,7 +5963,7 @@ let eg = (0, o.a)(async ({ input: d, signal: e }) => ef(d.flowId, e)),
                 let t = d.validationErrors;
                 if (!t?.[e.name]) return {};
                 let r = { ...t };
-                return delete r[e.name], { validationErrors: Object.keys(r).length > 0 ? r : void 0 };
+                return (delete r[e.name], { validationErrors: Object.keys(r).length > 0 ? r : void 0 });
             }),
             validateFormField: (0, o.r)(({ context: d, event: e }) => {
                 if ("VALIDATE_FIELD" !== e.type) return {};
@@ -5987,7 +5987,7 @@ let eg = (0, o.a)(async ({ input: d, signal: e }) => ef(d.flowId, e)),
                         (r = eu()),
                         t.reduce((d, t) => {
                             let n = es(el(e[t.name]), t.validation, t, r);
-                            return n && (d[t.name] = n), d;
+                            return (n && (d[t.name] = n), d);
                         }, {}));
                 return { validationErrors: Object.keys(n).length > 0 ? n : void 0 };
             }),
@@ -6275,16 +6275,16 @@ function eO({ actor: d, trackElementClicked: e }) {
             d.send({ type: "SELECT_ADDRESS", suggestion: e });
         },
         submit() {
-            e?.("submit"), d.send({ type: "SUBMIT" });
+            (e?.("submit"), d.send({ type: "SUBMIT" }));
         },
         retry() {
-            e?.("retry"), d.send({ type: "RETRY" });
+            (e?.("retry"), d.send({ type: "RETRY" }));
         },
         skip() {
-            e?.("skip"), d.send({ type: "SKIP" });
+            (e?.("skip"), d.send({ type: "SKIP" }));
         },
         close() {
-            e?.("close"), d.send({ type: "CLOSE" });
+            (e?.("close"), d.send({ type: "CLOSE" }));
         },
     };
 }

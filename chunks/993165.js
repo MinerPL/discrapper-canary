@@ -77,7 +77,7 @@ function p() {
         preset: n,
         setPreset: l.useCallback(
             (e) => {
-                t(e), i(e);
+                (t(e), i(e));
             },
             [t],
         ),

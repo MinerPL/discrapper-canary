@@ -64,7 +64,7 @@ class R {
             onImpression: f,
             sourceQuestContent: E,
         } = e;
-        (this.id = (0, s.A)()),
+        ((this.id = (0, s.A)()),
             (this.questContent = r),
             (this.questContentPosition = u),
             (this.minViewTimeSeconds = c),
@@ -85,7 +85,7 @@ class R {
             )),
             n === o.p.QUEST
                 ? (this.entity = { adContentIds: t, adCreativeType: n })
-                : (this.entity = { adContentIds: t, adCreativeType: n, relatedQuestId: i });
+                : (this.entity = { adContentIds: t, adCreativeType: n, relatedQuestId: i }));
     }
     getId() {
         return this.id;
@@ -128,7 +128,7 @@ class R {
                 ...(0, T.A)(),
                 ...(0, N.X)(this.questContent),
             };
-        this.entity.adContentIds.forEach((i, r) => {
+        (this.entity.adContentIds.forEach((i, r) => {
             let s = (0, g.L4)(this.sourceQuestContent, i),
                 a = this.shouldExtendSession(i);
             if ((this.trackViewedPlacement(i), this.migrateQuestContentViewedToCaptureAdUserAction)) {
@@ -154,7 +154,7 @@ class R {
                     questContentRowIndex: this.questContentRowIndex,
                     trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 };
-                this.entity.adCreativeType === o.p.QUEST
+                (this.entity.adCreativeType === o.p.QUEST
                     ? (0, d.r)({
                           ...t,
                           adCreativeType: this.entity.adCreativeType,
@@ -175,13 +175,13 @@ class R {
                     (0, v.L)().info(
                         `${i} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                         { impressionId: this.id },
-                    );
+                    ));
                 return;
             }
             if (this.entity.adCreativeType === o.p.QUEST) {
                 let e = this.entity.adContentIds[r],
                     i = _.A.getQuest(e);
-                null == i || (0, g.Ic)(i) || (0, h.zh)(o.p.QUEST, [e]),
+                (null == i || (0, g.Ic)(i) || (0, h.zh)(o.p.QUEST, [e]),
                     (0, v.L)().info(
                         `${i?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                         { impressionId: this.id },
@@ -198,10 +198,10 @@ class R {
                             search_session_id: (0, P.tv)()?.uuid ?? null,
                             traffic_metadata_sealed: (0, g.Gp)(this.sourceQuestContent, i?.id) ?? null,
                         },
-                    });
+                    }));
             } else {
                 let e = this.entity.adContentIds[r];
-                (0, v.L)().info(
+                ((0, v.L)().info(
                     `${e} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, b.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
@@ -213,10 +213,10 @@ class R {
                         adCreativeType: this.entity.adCreativeType,
                         event: w.HAw.QUEST_CONTENT_VIEWED,
                         properties: { ...n, ...this.commonProperties() },
-                    });
+                    }));
             }
         }),
-            this.onImpressionCallback?.();
+            this.onImpressionCallback?.());
     };
     beat = (() => {
         var e = this;
@@ -237,7 +237,7 @@ class R {
                     if (e.entity.adCreativeType === o.p.QUEST) {
                         let s = e.entity.adContentIds[a],
                             o = _.A.getQuest(s);
-                        (0, v.L)().info(
+                        ((0, v.L)().info(
                             `${o?.config.messages.questName ?? s} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
@@ -246,10 +246,10 @@ class R {
                                 questId: s,
                                 event: w.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
-                            });
+                            }));
                     } else {
                         let s = e.entity.adContentIds[a];
-                        (0, v.L)().info(
+                        ((0, v.L)().info(
                             `${s} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
@@ -260,7 +260,7 @@ class R {
                                 adCreativeType: e.entity.adCreativeType,
                                 event: w.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
-                            });
+                            }));
                     }
                 });
             }
@@ -290,19 +290,19 @@ class R {
         );
     };
     start = () => {
-        this.stop(!1),
+        (this.stop(!1),
             (this.lastBeatTime = Date.now()),
             (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 6e4)),
             (this.minViewTimeReachedTimeoutId = window.setTimeout(
                 this.onMinViewTimeReached,
                 1e3 * this.minViewTimeSeconds,
-            ));
+            )));
         let e = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
             },
             t = { triggered_by_status_change: this.triggeredByStatusChange };
-        this.entity.adContentIds.forEach((n, i) => {
+        (this.entity.adContentIds.forEach((n, i) => {
             let r = (0, g.L4)(this.sourceQuestContent, n),
                 s = (0, g.s9)(this.sourceQuestContent, n);
             if (
@@ -332,7 +332,7 @@ class R {
             if (this.entity.adCreativeType === o.p.QUEST) {
                 let n = this.entity.adContentIds[i],
                     s = _.A.getQuest(n);
-                (0, v.L)().info(
+                ((0, v.L)().info(
                     `${s?.config.messages.questName ?? n} Quest became visible at ${(0, b.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
@@ -346,10 +346,10 @@ class R {
                             ...this.commonProperties(),
                             traffic_metadata_sealed: (0, g.Gp)(this.sourceQuestContent, s?.id) ?? null,
                         },
-                    });
+                    }));
             } else {
                 let n = this.entity.adContentIds[i];
-                (0, v.L)().info(`${n} ad content became visible at ${(0, b.jO)(this.questContent)}`, {
+                ((0, v.L)().info(`${n} ad content became visible at ${(0, b.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
                     (0, O.Qg)({
@@ -359,25 +359,25 @@ class R {
                         adCreativeType: this.entity.adCreativeType,
                         event: w.HAw.QUEST_CONTENT_LOADED,
                         properties: { ...t, ...this.commonProperties() },
-                    });
+                    }));
             }
         }),
             p.A.increment({
                 name: a.K.QUEST_CONTENT_IMPRESSION,
                 tags: [`quest_content:${(0, b.jO)(this.questContent)}`],
             }),
-            (this.isRunning = !0);
+            (this.isRunning = !0));
     };
     stop = (() => {
         var e = this;
         return function () {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            t && e.beat(!0),
+            (t && e.beat(!0),
                 (e.lastBeatTime = void 0),
                 clearInterval(e.heartbeatTimeoutId),
                 clearTimeout(e.minViewTimeReachedTimeoutId),
                 (e.isRunning = !1),
-                (0, f.bg)(e.id);
+                (0, f.bg)(e.id));
         };
     })();
 }
@@ -408,7 +408,7 @@ function Q(e) {
                     trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                     triggeredByStatusChange: C,
                 };
-                e.adCreativeType === o.p.QUEST
+                (e.adCreativeType === o.p.QUEST
                     ? (E.current = new R({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType }))
                     : (E.current = new R({
                           ...t,
@@ -416,7 +416,7 @@ function Q(e) {
                           adCreativeType: e.adCreativeType,
                           relatedQuestId: f,
                       })),
-                    E.current.start();
+                    E.current.start());
             }
         }, [
             s,

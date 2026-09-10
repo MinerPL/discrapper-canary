@@ -100,7 +100,7 @@ function f(e) {
 }
 function p(e, t) {
     let { ctaContent: n } = t;
-    (0, l.E5)(l.kI.STEP_2_CLICKED_INTERNAL, "copy_share_link")
+    ((0, l.E5)(l.kI.STEP_2_CLICKED_INTERNAL, "copy_share_link")
         ? (0, r.r)({
               type: a.F.CLICK_INTERNAL,
               adCreativeType: i.p.QUEST,
@@ -119,7 +119,7 @@ function p(e, t) {
               impressionId: t.impressionId,
               sourceQuestContent: t.sourceQuestContent,
           }),
-        (0, s.C)(`${location.protocol}//${location.host}/quests/${e}`);
+        (0, s.C)(`${location.protocol}//${location.host}/quests/${e}`));
 }
 function T(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);

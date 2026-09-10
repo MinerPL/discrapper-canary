@@ -1,4 +1,4 @@
-l.d(t, { d1: () => ef, Ay: () => eT, iU: () => eC }), l(321073);
+(l.d(t, { d1: () => ef, Ay: () => eT, iU: () => eC }), l(321073));
 var n = l(477900),
     i = l(582128),
     s = l(503698),
@@ -178,7 +178,7 @@ function ef(e, t, l) {
                     {
                         text: ec.intl.string(ec.t.xUqheM),
                         onClick: () => {
-                            l(), e.onClose();
+                            (l(), e.onClose());
                         },
                         variant: "critical-primary",
                     },
@@ -324,7 +324,7 @@ function ev(e) {
                                   return (0, n.jsxs)(C.D, {
                                       className: ex.gF,
                                       onClick: (e) => {
-                                          I(!f), t(e);
+                                          (I(!f), t(e));
                                       },
                                       children: [
                                           (0, n.jsx)(T.D, {
@@ -349,8 +349,8 @@ function ev(e) {
                     (function () {
                         let e = [];
                         for (let t of c)
-                            e.push(...(0, X.rY)(t, c)),
-                                t === d.F.APPLICATIONS_COMMANDS && e.push(ec.intl.string(ec.t.Ls2XRq));
+                            (e.push(...(0, X.rY)(t, c)),
+                                t === d.F.APPLICATIONS_COMMANDS && e.push(ec.intl.string(ec.t.Ls2XRq)));
                         if (e.length > 0 || (null != h && h.length > 0))
                             return (0, n.jsx)(v.N, {
                                 className: ex.Nm,
@@ -399,7 +399,7 @@ function ev(e) {
                                             (0, n.jsxs)(C.D, {
                                                 className: ex.gF,
                                                 onClick: (e) => {
-                                                    R(!P), l(e);
+                                                    (R(!P), l(e));
                                                 },
                                                 children: [
                                                     (0, n.jsx)(T.D, {

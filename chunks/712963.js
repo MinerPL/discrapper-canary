@@ -13,7 +13,7 @@ class d extends l.A {
         return new d({ id: e.id, liveBuildId: e.live_build_id, name: e.name });
     }
     constructor(e) {
-        super(), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);
+        (super(), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name));
     }
     getName(e) {
         return null != this.name ? this.name : this.id === e ? o.intl.string(o.t.AHqj6c) : o.intl.string(o.t["62f4nE"]);
@@ -39,17 +39,17 @@ async function E() {
             ),
             n = await Promise.all(e),
             i = r().flatten(n);
-        return s.h.dispatch({ type: "APPLICATION_BRANCHES_FETCH_SUCCESS", branches: i }), i;
+        return (s.h.dispatch({ type: "APPLICATION_BRANCHES_FETCH_SUCCESS", branches: i }), i);
     } catch (t) {
-        return s.h.dispatch({ type: "APPLICATION_BRANCHES_FETCH_FAIL", branchIds: e }), [];
+        return (s.h.dispatch({ type: "APPLICATION_BRANCHES_FETCH_FAIL", branchIds: e }), []);
     }
 }
 async function A(e) {
     try {
         let t = await a.Bo.get({ url: _.Rsh.OWNED_APPLICATION_BRANCHES(e), oldFormErrors: !0, rejectWithError: !0 }),
             n = Array.isArray(t.body) ? t.body.map(d.createFromServer) : [];
-        return s.h.dispatch({ type: "OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS", applicationId: e, branches: n }), n;
+        return (s.h.dispatch({ type: "OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS", applicationId: e, branches: n }), n);
     } catch (t) {
-        return s.h.dispatch({ type: "OWNED_APPLICATION_BRANCHES_FETCH_FAIL", applicationId: e }), [];
+        return (s.h.dispatch({ type: "OWNED_APPLICATION_BRANCHES_FETCH_FAIL", applicationId: e }), []);
     }
 }

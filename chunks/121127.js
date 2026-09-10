@@ -29,13 +29,13 @@ function I(e) {
               id: "mod-view",
               label: y.intl.string(y.t.kj3tz2),
               action: () => {
-                  S?.(), (0, h.A)(j), L.dispatch(E.jej.POPOUT_CLOSE), (0, r.closeAllModals)();
+                  (S?.(), (0, h.A)(j), L.dispatch(E.jej.POPOUT_CLOSE), (0, r.closeAllModals)());
                   let e = A.A.getChannel(x),
                       i = { modViewPanel: k.g.INFO, sourceLocation: O ?? w.location };
                   if (e?.isThread() && null != e.parent_id) {
-                      C.Ay.getCurrentSidebarChannelId(e.parent_id) === e.id &&
+                      (C.Ay.getCurrentSidebarChannelId(e.parent_id) === e.id &&
                           (s.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }), (0, u.iN)(e.id)),
-                          (0, o.z)(n, t, e.parent_id, i);
+                          (0, o.z)(n, t, e.parent_id, i));
                       return;
                   }
                   (0, o.z)(n, t, x ?? g.VV.MEMBER_SAFETY, i);

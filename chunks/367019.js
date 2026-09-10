@@ -8,7 +8,7 @@
     function o() {
         var t =
             ((!i || n + 16 > d.BUFFER_SIZE) && ((n = 0), (i = d.randomBytes(d.BUFFER_SIZE))), i.slice(n, (n += 16)));
-        return (t[6] = (15 & t[6]) | 64), (t[8] = (63 & t[8]) | 128), t;
+        return ((t[6] = (15 & t[6]) | 64), (t[8] = (63 & t[8]) | 128), t);
     }
     function d() {
         var t = o();
@@ -35,10 +35,10 @@
             s[t[15]]
         );
     }
-    (d.BUFFER_SIZE = 4096),
+    ((d.BUFFER_SIZE = 4096),
         (d.bin = o),
         (d.clearBuffer = function () {
-            (i = null), (n = 0);
+            ((i = null), (n = 0));
         }),
         (d.test = function (t) {
             return (
@@ -55,11 +55,11 @@
                     return "function" != typeof Uint8Array.prototype.slice
                         ? function (t) {
                               var a = new Uint8Array(t);
-                              return e.getRandomValues(a), Array.from(a);
+                              return (e.getRandomValues(a), Array.from(a));
                           }
                         : function (t) {
                               var a = new Uint8Array(t);
-                              return e.getRandomValues(a), a;
+                              return (e.getRandomValues(a), a);
                           };
             }
             return function (t) {
@@ -68,5 +68,5 @@
                 for (e = 0; e < t; e++) a.push(Math.floor(256 * Math.random()));
                 return a;
             };
-        })());
+        })()));
 })();

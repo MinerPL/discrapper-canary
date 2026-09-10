@@ -65,10 +65,10 @@ function L(e) {
             [H],
         ),
         P = s.useCallback(() => {
-            S(E), n();
+            (S(E), n());
         }, [n, S, E]),
         Q = s.useCallback(() => {
-            S(null), n();
+            (S(null), n());
         }, [S, n]),
         y = E.authorIds[0] ?? "",
         F = (function (e) {

@@ -46,7 +46,7 @@ async function p(e, t, n, d) {
             (s.h.dispatch({ type: "GUILD_ROOM_CONNECT", room: h, guildId: e, pendingPosition: u, pendingSeat: _ }),
             t !== e)
         ) {
-            (0, c.E2)({ guildId: e, channelId: t }), (0, l.hs)(r.w.GUILD_ROOM_JOINED);
+            ((0, c.E2)({ guildId: e, channelId: t }), (0, l.hs)(r.w.GUILD_ROOM_JOINED));
             let i = h.users.get(o.default.getId());
             if (null != i) {
                 for (let e of [
@@ -71,8 +71,8 @@ async function p(e, t, n, d) {
     }
 }
 function T(e, t) {
-    s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: o.default.getId(), roomId: t }),
-        t !== e && (0, c.e6)({ guildId: e, channelId: t });
+    (s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: o.default.getId(), roomId: t }),
+        t !== e && (0, c.e6)({ guildId: e, channelId: t }));
 }
 function m(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
@@ -83,12 +83,12 @@ async function g(e, t, n) {
         l = _.A.getRoomObjects(t);
     try {
         let i = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId: t };
-        n?.background != null && (i.background = n.background),
+        (n?.background != null && (i.background = n.background),
             n?.user_position != null && (i.position = n.user_position),
             n?.user_seat != null && (i.seat = n.user_seat),
             n?.user_status_id != null && (i.statusId = n.user_status_id),
             n?.user_status_text != null && (i.statusText = n.user_status_text),
-            s.h.dispatch(i);
+            s.h.dispatch(i));
         let r = await a.Bo.post({ url: I.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
             l = (0, A.S)(r.body);
         if (e !== t) {
@@ -130,14 +130,14 @@ async function g(e, t, n) {
         }
     } catch (t) {
         throw (
-            (s.h.dispatch({
+            s.h.dispatch({
                 type: "GUILD_ROOM_UPDATE_FAILURE",
                 originalRoom: i,
                 originalRoomUsers: r,
                 originalRoomObjects: l,
                 guildId: e,
             }),
-            t)
+            t
         );
     }
 }
@@ -170,17 +170,17 @@ function v(e) {
 }
 async function b(e, t, n, i) {
     let r = d.default.fromTimestamp(Date.now());
-    s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_START", roomId: t, localId: r, position: i }), v(t);
+    (s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_START", roomId: t, localId: r, position: i }), v(t));
     try {
-        await O(e, t, { object_type: E.N.NOTE, content: n, position: i }),
-            t !== e && (0, c.Ql)({ interactionType: "note_created", guildId: e, channelId: t });
+        (await O(e, t, { object_type: E.N.NOTE, content: n, position: i }),
+            t !== e && (0, c.Ql)({ interactionType: "note_created", guildId: e, channelId: t }));
     } catch (e) {
         throw (s.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_FAILURE", roomId: t, localId: r }), e);
     }
 }
 async function M(e, t, n) {
-    await L(e, t, n, { object_type: E.N.NOTE }),
-        t !== e && (0, c.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
+    (await L(e, t, n, { object_type: E.N.NOTE }),
+        t !== e && (0, c.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t }));
 }
 async function P(e, t) {
     try {
@@ -193,15 +193,15 @@ async function P(e, t) {
 }
 function U(e, t) {
     let n = _.A.getVideoOverlayVisibility();
-    s.h.dispatch({ type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value: e }),
-        e !== n && (0, c.n0)({ interactionType: e ? "video_overlay_opened" : "video_overlay_closed", channelId: t });
+    (s.h.dispatch({ type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value: e }),
+        e !== n && (0, c.n0)({ interactionType: e ? "video_overlay_opened" : "video_overlay_closed", channelId: t }));
 }
 function w(e, t, n) {
     (0, h.W8)({ guildId: t, location: "maybeSetGuildRoomVideoOverlay" }, { autoTrackExposure: !1 }).enabled && U(e, n);
 }
 function G(e) {
-    s.h.dispatch({ type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility: e }),
-        (0, c.iY)({ rememberVideoOverlayVisibility: e });
+    (s.h.dispatch({ type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility: e }),
+        (0, c.iY)({ rememberVideoOverlayVisibility: e }));
 }
 async function x(e, t, n, i) {
     try {

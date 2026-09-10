@@ -3,13 +3,13 @@ function n() {
         t = 0;
     for (let r = 0; r < 28; r += 7) {
         let n = this.buf[this.pos++];
-        if (((e |= (127 & n) << r), (128 & n) == 0)) return this.assertBounds(), [e, t];
+        if (((e |= (127 & n) << r), (128 & n) == 0)) return (this.assertBounds(), [e, t]);
     }
     let r = this.buf[this.pos++];
-    if (((e |= (15 & r) << 28), (t = (112 & r) >> 4), (128 & r) == 0)) return this.assertBounds(), [e, t];
+    if (((e |= (15 & r) << 28), (t = (112 & r) >> 4), (128 & r) == 0)) return (this.assertBounds(), [e, t]);
     for (let r = 3; r <= 31; r += 7) {
         let n = this.buf[this.pos++];
-        if (((t |= (127 & n) << r), (128 & n) == 0)) return this.assertBounds(), [e, t];
+        if (((t |= (127 & n) << r), (128 & n) == 0)) return (this.assertBounds(), [e, t]);
     }
     throw Error("invalid varint");
 }
@@ -39,9 +39,9 @@ function o(e) {
         n = 0;
     function i(t, i) {
         let o = Number(e.slice(t, i));
-        (n *= 1e6), (r = 1e6 * r + o) >= 0x100000000 && ((n += (r / 0x100000000) | 0), (r %= 0x100000000));
+        ((n *= 1e6), (r = 1e6 * r + o) >= 0x100000000 && ((n += (r / 0x100000000) | 0), (r %= 0x100000000)));
     }
-    return i(-24, -18), i(-18, -12), i(-12, -6), i(-6), [t, r, n];
+    return (i(-24, -18), i(-18, -12), i(-12, -6), i(-6), [t, r, n]);
 }
 function a(e, t) {
     if (t <= 2097151) return "" + (0x100000000 * t + (e >>> 0));
@@ -62,10 +62,10 @@ function a(e, t) {
 }
 function s(e, t) {
     if (e >= 0) {
-        for (; e > 127; ) t.push((127 & e) | 128), (e >>>= 7);
+        for (; e > 127;) (t.push((127 & e) | 128), (e >>>= 7));
         t.push(e);
     } else {
-        for (let r = 0; r < 9; r++) t.push((127 & e) | 128), (e >>= 7);
+        for (let r = 0; r < 9; r++) (t.push((127 & e) | 128), (e >>= 7));
         t.push(1);
     }
 }
@@ -78,10 +78,10 @@ function l() {
         ((t |= (127 & (e = this.buf[this.pos++])) << 14), (128 & e) == 0) ||
         ((t |= (127 & (e = this.buf[this.pos++])) << 21), (128 & e) == 0)
     )
-        return this.assertBounds(), t;
+        return (this.assertBounds(), t);
     t |= (15 & (e = this.buf[this.pos++])) << 28;
     for (let t = 5; (128 & e) != 0 && t < 10; t++) e = this.buf[this.pos++];
     if ((128 & e) != 0) throw Error("invalid varint");
-    return this.assertBounds(), t >>> 0;
+    return (this.assertBounds(), t >>> 0);
 }
 r.d(t, { Gn: () => l, Jg: () => o, cV: () => i, f7: () => s, ls: () => n, oJ: () => a });

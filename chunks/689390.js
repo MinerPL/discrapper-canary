@@ -62,5 +62,7 @@ e.exports = function (e) {
             n,
         ],
         s = [...o];
-    return s.pop(), s.push(r), (i.contains = s), { name: "YAML", case_insensitive: !0, aliases: ["yml"], contains: o };
+    return (
+        s.pop(), s.push(r), (i.contains = s), { name: "YAML", case_insensitive: !0, aliases: ["yml"], contains: o }
+    );
 };

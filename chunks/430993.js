@@ -42,7 +42,7 @@ function f(e) {
         [N],
     );
     let C = r.useCallback(() => {
-            null != S.current && S.current(), null != l && l();
+            (null != S.current && S.current(), null != l && l());
         }, [S, l]),
         O = null != a;
     return (
@@ -55,7 +55,7 @@ function f(e) {
                     p(g.current.getBoundingClientRect().height > t.height);
                 }),
                 t = T?.current?.getScrollerNode() ?? null;
-            return null != t && e.observe(t), g?.current != null && e.observe(g.current), () => e.disconnect();
+            return (null != t && e.observe(t), g?.current != null && e.observe(g.current), () => e.disconnect());
         }, [O]),
         (0, i.jsxs)(c.F, {
             children: [
@@ -73,7 +73,7 @@ function f(e) {
                           innerRole: a.innerRole ?? "listbox",
                           ref: m,
                           onScroll: (e) => {
-                              C(), a.onScroll?.(e);
+                              (C(), a.onScroll?.(e));
                           },
                       })
                     : (0, i.jsx)(_.Gt, {

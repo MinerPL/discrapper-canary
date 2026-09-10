@@ -23,8 +23,8 @@ function c() {
                 return;
             }
         }
-        null != e && (0, i.V2)(e.id),
-            d.A.setState({ subsection: null != e ? a.Eq.GUILD : a.Eq.USER_PROFILE, scrollPosition: t });
+        (null != e && (0, i.V2)(e.id),
+            d.A.setState({ subsection: null != e ? a.Eq.GUILD : a.Eq.USER_PROFILE, scrollPosition: t }));
         {
             let { openUserSettings: e } = l(766075);
             e(n.X.PROFILE_PANEL, { analyticsLocations: c });

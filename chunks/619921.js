@@ -41,7 +41,7 @@ let E = new A(l.h, {
         let { guildId: t, channelId: n } = e;
         if (null == t && null != n) {
             let e = c.BVt.CHANNEL(c.ME, n);
-            if (e !== u) return (u = e), !0;
+            if (e !== u) return ((u = e), !0);
         }
         return !1;
     },

@@ -12,7 +12,7 @@ class d {
     nodes;
     version;
     constructor() {
-        (this.root = { type: "root", children: [] }), (this.nodes = {}), (this.version = 0);
+        ((this.root = { type: "root", children: [] }), (this.nodes = {}), (this.version = 0));
     }
     getSnapshot() {
         let e = {};
@@ -27,7 +27,7 @@ class d {
             let e = this.nodes[t];
             "childrenIds" in e && ((e.children = e.childrenIds.map((e) => this.nodes[e])), delete e.childrenIds);
         }
-        (this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++;
+        ((this.root.children = e.rootChildrenIds.map((e) => this.nodes[e])), this.version++);
     }
     moveNextTo(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -54,7 +54,7 @@ class d {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         this._pluckNode(e);
         let i = n ? t.children.length : 0;
-        return (t.children = [...t.children]), t.children.splice(i, 0, e), (e.parentId = t.id), this.version++, this;
+        return ((t.children = [...t.children]), t.children.splice(i, 0, e), (e.parentId = t.id), this.version++, this);
     }
     addNode(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.root,
@@ -80,8 +80,8 @@ class d {
         );
     }
     replaceNode(e, t) {
-        a()(null != e.id, "[GUILDS TREE] Tried replacing a node without an id"),
-            a()(null != t.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id");
+        (a()(null != e.id, "[GUILDS TREE] Tried replacing a node without an id"),
+            a()(null != t.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id"));
         let n = null != e.parentId ? this.nodes[e.parentId] : this.root,
             i = n.children.indexOf(e);
         return (
@@ -104,9 +104,9 @@ class d {
     }
     convertToFolder(e) {
         let t = o();
-        for (; null != this.getNode(t); ) t = o();
+        for (; null != this.getNode(t);) t = o();
         let n = { type: "folder", id: t, expanded: !1, children: [] };
-        return this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n;
+        return (this.replaceNode(e, n), this.removeNode(e), this.addNode(e, n, !1), this.version++, n);
     }
     allNodes() {
         return Object.values(this.nodes);
@@ -132,13 +132,13 @@ class d {
             `[GUILDS TREE] source node (${e.id}) had a parent id (${e.parentId}) which doesn't exist in the tree`,
         );
         let n = t.children;
-        a()(
+        (a()(
             null != n,
             `[GUILDS TREE] source node (${e.id}) had a parent id (${e.parentId}) which contains no children`,
         ),
             (t.children = n.filter((t) => t !== e)),
             (e.parentId = void 0),
-            this.version++;
+            this.version++);
     }
 }
 function c(e, t) {

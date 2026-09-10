@@ -15,15 +15,15 @@ async function o(t, n) {
     r.h.dispatch({ type: "GUILD_PRODUCT_FETCH", productId: n });
     try {
         let e = await i.bq(t, n);
-        return r.h.dispatch({ type: "GUILD_PRODUCT_FETCH_SUCCESS", product: e }), e;
+        return (r.h.dispatch({ type: "GUILD_PRODUCT_FETCH_SUCCESS", product: e }), e);
     } catch (t) {
         throw (r.h.dispatch({ type: "GUILD_PRODUCT_FETCH_FAILURE", productId: n, error: new a.LG(t) }), t);
     }
 }
 async function s(t, n, e) {
     let a = await i.Qm(t, n, e);
-    return r.h.dispatch({ type: "GUILD_PRODUCT_UPDATE", product: a }), a;
+    return (r.h.dispatch({ type: "GUILD_PRODUCT_UPDATE", product: a }), a);
 }
 async function l(t, n) {
-    return await i.Oo(t, n), r.h.dispatch({ type: "GUILD_PRODUCT_DELETE", productId: n }), !0;
+    return (await i.Oo(t, n), r.h.dispatch({ type: "GUILD_PRODUCT_DELETE", productId: n }), !0);
 }

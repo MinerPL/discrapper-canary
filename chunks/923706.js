@@ -22,5 +22,5 @@ e.exports = function (e) {
             { className: "string", begin: /0'\\s/ },
             e.C_NUMBER_MODE,
         ];
-    return (t.contains = i), (a.contains = i), { name: "Prolog", contains: i.concat([{ begin: /\.$/ }]) };
+    return ((t.contains = i), (a.contains = i), { name: "Prolog", contains: i.concat([{ begin: /\.$/ }]) });
 };

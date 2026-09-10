@@ -20,7 +20,7 @@ let u = {
     getCommunityURL: () => d(`/hc/${c()}`),
     getSubmitRequestURL(e) {
         let t = d(`/hc/${c()}/requests/new?platform=${encodeURIComponent((0, a.getPlatformName)())}`);
-        return null != e && (t += `&device_info=${encodeURIComponent(e)}`), t;
+        return (null != e && (t += `&device_info=${encodeURIComponent(e)}`), t);
     },
     getSearchURL(e) {
         let t = encodeURIComponent(e);

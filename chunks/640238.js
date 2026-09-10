@@ -44,7 +44,7 @@ function _(e) {
                 size: o.$n.Sizes.MEDIUM,
                 disabled: g,
                 onClick: () => {
-                    I?.(), f();
+                    (I?.(), f());
                 },
                 autoFocus: N,
                 children: E,
@@ -59,7 +59,7 @@ function _(e) {
                 submitting: g,
                 onClick: async () => {
                     try {
-                        await h?.(), f();
+                        (await h?.(), f());
                     } catch (e) {
                         throw e;
                     }

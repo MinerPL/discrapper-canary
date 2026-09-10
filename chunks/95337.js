@@ -1,4 +1,4 @@
-e.d(n, { r: () => g }), e(321073);
+(e.d(n, { r: () => g }), e(321073));
 var i = e(477900),
     r = e(582128),
     l = e(189213),
@@ -26,11 +26,11 @@ let g = () => {
         [v, E] = (0, r.useState)(!1),
         [D, j] = (0, r.useState)(!1);
     async function S() {
-        E(!0), j(!1);
+        (E(!0), j(!1));
         try {
-            await P(), n();
+            (await P(), n());
         } catch (t) {
-            j(!0), E(!1);
+            (j(!0), E(!1));
         }
     }
     let T =
@@ -44,7 +44,7 @@ let g = () => {
                 return !d.JM.has(n);
             }) != null,
         A = [];
-    A.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
+    (A.push({ text: C.intl.string(C.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
         T
             ? A.push({
                   text: C.intl.string(C.t.PDTjLN),
@@ -59,7 +59,7 @@ let g = () => {
                   disabled: v,
                   variant: "critical-primary",
                   loading: v,
-              });
+              }));
     let N = (0, o.Zb)(y),
         b = N ? C.intl.string(p.default.qbDPGM) : C.intl.string(C.t.LZunzZ);
     return (0, i.jsx)(l.Modal, {

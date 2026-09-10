@@ -1,4 +1,4 @@
-l.d(n, { ix: () => e5, Ay: () => nn, tO: () => e9 }), l(321073), l(938796);
+(l.d(n, { ix: () => e5, Ay: () => nn, tO: () => e9 }), l(321073), l(938796));
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -248,8 +248,8 @@ function es(e) {
         x = i.useRef(null);
     if (null == o) return null;
     async function j() {
-        N()(null != o, "visibleConnectionsRole is null"),
-            h && null == u && (await T.A.fetchGuildRoleConnectionsEligibility(a.id, o.id), g(!1));
+        (N()(null != o, "visibleConnectionsRole is null"),
+            h && null == u && (await T.A.fetchGuildRoleConnectionsEligibility(a.id, o.id), g(!1)));
     }
     return (0, t.jsx)(d.Q, {
         targetElementRef: x,
@@ -270,7 +270,7 @@ function es(e) {
                               (0, J.c0)(a.id);
                           },
                           onOpenProfile: () => {
-                              (0, D.openUserProfileModal)({
+                              ((0, D.openUserProfileModal)({
                                   userId: n,
                                   messageId: l,
                                   guildId: a.id,
@@ -279,7 +279,7 @@ function es(e) {
                                   scrollTarget: ee.bk.CONNECTIONS,
                                   sourceAnalyticsLocations: r,
                               }),
-                                  i();
+                                  i());
                           },
                       }));
             });
@@ -820,10 +820,14 @@ let nn = i.memo(function (e) {
         } = e,
         y = i.useMemo(() => (null != d ? (e) => d(e, n) : void 0), [d, n]),
         [, E] = (0, eu.Ay)(n.author.id, e.guildId),
-        M = (0, c.bG)([eH.A, eV.A], () => {
-            let l = eV.A.getGuild(e.guildId);
-            return null != n.author && null != l && eH.A.canManageUser(Q.xBc.MODERATE_MEMBERS, n.author, l);
-        }, [n.author, e.guildId]),
+        M = (0, c.bG)(
+            [eH.A, eV.A],
+            () => {
+                let l = eV.A.getGuild(e.guildId);
+                return null != n.author && null != l && eH.A.canManageUser(Q.xBc.MODERATE_MEMBERS, n.author, l);
+            },
+            [n.author, e.guildId],
+        ),
         _ = E && M,
         S = (function (e) {
             let {

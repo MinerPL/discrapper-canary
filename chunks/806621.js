@@ -15,23 +15,27 @@ function h(e) {
         m = h ? e.getRecipientId() : null,
         g = (0, a.l)(e.id),
         A = e.hasFlag(u.lx.HAS_ONLY_SYSTEM_MESSAGES);
-    return (0, i.bG)([r.A, s.A, o.A, c.default], () => {
-        if (
-            (n.current !== e.id && ((t.current = !1), (n.current = e.id)),
-            null != g ||
-                !h ||
-                s.A.isMessageRequest(e.id) ||
-                (null != m && o.A.getRelationshipType(m) === d.eA$.BLOCKED))
-        )
-            return !1;
-        if (null != m) {
-            let e = c.default.getUser(m);
-            if (null != e && e.hasFlag(d.nhx.PROVISIONAL_ACCOUNT)) return !1;
-        }
-        let l = r.A.getMessages(e.id),
-            i = !l.hasMoreBefore && !l.hasMoreAfter && l.length < 25,
-            a = r.A.hasCurrentUserSentWaveBlockingMessage(e.id),
-            u = (l.ready || t.current) && (A || i) && !a;
-        return (t.current = u), u;
-    }, [g, h, e.id, m, A]);
+    return (0, i.bG)(
+        [r.A, s.A, o.A, c.default],
+        () => {
+            if (
+                (n.current !== e.id && ((t.current = !1), (n.current = e.id)),
+                null != g ||
+                    !h ||
+                    s.A.isMessageRequest(e.id) ||
+                    (null != m && o.A.getRelationshipType(m) === d.eA$.BLOCKED))
+            )
+                return !1;
+            if (null != m) {
+                let e = c.default.getUser(m);
+                if (null != e && e.hasFlag(d.nhx.PROVISIONAL_ACCOUNT)) return !1;
+            }
+            let l = r.A.getMessages(e.id),
+                i = !l.hasMoreBefore && !l.hasMoreAfter && l.length < 25,
+                a = r.A.hasCurrentUserSentWaveBlockingMessage(e.id),
+                u = (l.ready || t.current) && (A || i) && !a;
+            return ((t.current = u), u);
+        },
+        [g, h, e.id, m, A],
+    );
 }

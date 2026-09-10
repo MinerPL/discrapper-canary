@@ -332,14 +332,14 @@ function F(e) {
                         e.send({ type: "SET_CONSENT", name: n, checked: r });
                     },
                     selectFile(n, t, s) {
-                        (r.current = t),
-                            e.send({ type: "SELECT_FILE", fileName: n, fileSize: t.byteLength, fileUrl: s });
+                        ((r.current = t),
+                            e.send({ type: "SELECT_FILE", fileName: n, fileSize: t.byteLength, fileUrl: s }));
                     },
                     replaceFile() {
-                        (r.current = null), e.send({ type: "REPLACE_FILE" });
+                        ((r.current = null), e.send({ type: "REPLACE_FILE" }));
                     },
                     confirmFile() {
-                        n?.("confirmFile"), e.send({ type: "CONFIRM_FILE" });
+                        (n?.("confirmFile"), e.send({ type: "CONFIRM_FILE" }));
                     },
                     viewDocument(n) {
                         e.send({ type: "VIEW_DOCUMENT", url: n });
@@ -348,16 +348,16 @@ function F(e) {
                         e.send({ type: "CLOSE_DOCUMENT_VIEW" });
                     },
                     sign() {
-                        n?.("sign"), e.send({ type: "SIGN" });
+                        (n?.("sign"), e.send({ type: "SIGN" }));
                     },
                     finish() {
-                        n?.("finish"), e.send({ type: "FINISH" });
+                        (n?.("finish"), e.send({ type: "FINISH" }));
                     },
                     retry() {
-                        n?.("retry"), (r.current = null), e.send({ type: "RETRY" });
+                        (n?.("retry"), (r.current = null), e.send({ type: "RETRY" }));
                     },
                     close() {
-                        n?.("close"), e.send({ type: "CLOSE" });
+                        (n?.("close"), e.send({ type: "CLOSE" }));
                     },
                 };
             })({ ...e, fileDataRef: r }),

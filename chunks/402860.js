@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { openUserProfileModal: () => f, closeUserProfileModal: () => p });
+(n.r(t), n.d(t, { openUserProfileModal: () => f, closeUserProfileModal: () => p }));
 var i = n(778712),
     r = n(228366),
     a = n(803306),

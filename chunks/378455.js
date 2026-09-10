@@ -23,7 +23,7 @@ var l,
     y = n(598104),
     T = n(980707),
     E = n(477782);
-n(321073), n(839272);
+(n(321073), n(839272));
 var P = n(309199),
     A = n(734057),
     O = n(573163),
@@ -53,7 +53,7 @@ function I(e) {
                         label: N.intl.string(z.default.VHmOpK),
                         checked: t === D.NEWEST,
                         action: () => {
-                            n(D.NEWEST), l();
+                            (n(D.NEWEST), l());
                         },
                     }),
                     (0, i.jsx)(E.iD, {
@@ -62,7 +62,7 @@ function I(e) {
                         label: N.intl.string(z.default.NLTGck),
                         checked: t === D.OLDEST,
                         action: () => {
-                            n(D.OLDEST), l();
+                            (n(D.OLDEST), l());
                         },
                     }),
                 ],
@@ -81,7 +81,7 @@ function G(e) {
                     n = (function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 180,
                             t = new Date();
-                        return t.setDate(t.getDate() - e), t.getTime();
+                        return (t.setDate(t.getDate() - e), t.getTime());
                     })(t),
                     l = [];
                 for (let e of Object.values(A.A.getMutablePrivateChannels())) {
@@ -124,7 +124,7 @@ function G(e) {
                         ),
                     S((t) => {
                         let n = new Set(t);
-                        return n.has(e) ? n.delete(e) : n.size < 1e3 && n.add(e), n;
+                        return (n.has(e) ? n.delete(e) : n.size < 1e3 && n.add(e), n);
                     }));
             },
             [x, y],
@@ -132,11 +132,11 @@ function G(e) {
         U = a.useCallback(() => {
             let e = y >= T,
                 t = e ? 0 : T;
-            o.O.announce(
+            (o.O.announce(
                 e ? N.intl.string(z.default.hhQnsH) : N.intl.formatToPlainString(z.default.GpUOWb, { count: t }),
                 "polite",
             ),
-                S((e) => (e.size >= T ? new Set() : new Set(C.slice(0, 1e3).map((e) => e.channel.id))));
+                S((e) => (e.size >= T ? new Set() : new Set(C.slice(0, 1e3).map((e) => e.channel.id)))));
         }, [C, T, y]),
         B = a.useCallback(
             async (e) => {
@@ -155,8 +155,8 @@ function G(e) {
                     (0, d.P0)((0, u.o)(e, c.Ck.FAILURE));
                     return;
                 }
-                (0, d.P0)((0, u.o)(N.intl.formatToPlainString(z.default.b2r81u, { count: e.length }), c.Ck.SUCCESS)),
-                    n().catch(() => {});
+                ((0, d.P0)((0, u.o)(N.intl.formatToPlainString(z.default.b2r81u, { count: e.length }), c.Ck.SUCCESS)),
+                    n().catch(() => {}));
             },
             [n],
         ),
@@ -231,7 +231,7 @@ function G(e) {
                               ...a,
                               innerRole: void 0,
                               ref: (e) => {
-                                  (Y.current = e), (l.current = e?.getScrollerNode() ?? null);
+                                  ((Y.current = e), (l.current = e?.getScrollerNode() ?? null));
                               },
                           },
                     actions: k

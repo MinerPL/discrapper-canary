@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         international: () => T,
         initialLocale: () => S,
@@ -9,7 +9,7 @@ n.r(t),
         getLanguages: () => h,
         getAvailableLocales: () => A,
         systemLocale: () => g,
-    });
+    }));
 var i = n(477900),
     r = n(582128),
     a = n(632296),
@@ -94,7 +94,7 @@ let g = m("en-US"),
                         break;
                     case "object":
                         if (null == a) break;
-                        (o.onClick = a.onClick ?? a), (o.onContextMenu = a.onContextMenu);
+                        ((o.onClick = a.onClick ?? a), (o.onContextMenu = a.onContextMenu));
                 }
                 return (0, r.createElement)(s, { ...o, key: t }, e);
             },

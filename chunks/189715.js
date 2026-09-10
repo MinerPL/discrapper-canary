@@ -9,11 +9,11 @@ e.exports = (e, t) => {
     for (let t = 0; t < e.set.length; ++t) {
         let i = e.set[t],
             a = null;
-        i.forEach((e) => {
+        (i.forEach((e) => {
             let t = new n(e.semver.version);
             switch (e.operator) {
                 case ">":
-                    0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
+                    (0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format()));
                 case "":
                 case ">=":
                     (!a || o(t, a)) && (a = t);
@@ -25,7 +25,7 @@ e.exports = (e, t) => {
                     throw Error(`Unexpected operation: ${e.operator}`);
             }
         }),
-            a && (!r || o(r, a)) && (r = a);
+            a && (!r || o(r, a)) && (r = a));
     }
     return r && e.test(r) ? r : null;
 };

@@ -89,7 +89,7 @@ function m(t) {
                 return {
                     text: G.intl.string(G.t.T0zC77),
                     onClick: () => {
-                        (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
+                        ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
                             ? (0, o.r)({
                                   type: A.F.CLICK_INTERNAL,
                                   adCreativeType: a.p.QUEST,
@@ -105,7 +105,7 @@ function m(t) {
                                   questContentCTA: h.Cy.START_WEB_AUTHORIZATION,
                                   sourceQuestContent: n,
                               }),
-                            m({ analyticsLocations: [T.A.QUEST_IN_GAME_MODAL_CONNECT] });
+                            m({ analyticsLocations: [T.A.QUEST_IN_GAME_MODAL_CONNECT] }));
                     },
                 };
             let t = e.config.taskConfigV2.tasks[s.n.ACHIEVEMENT_IN_GAME];
@@ -117,7 +117,7 @@ function m(t) {
                     (0, c.h)({
                         href: i,
                         onConfirm: () => {
-                            (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
+                            ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
                                 ? (0, o.r)({
                                       type: A.F.CLICK_INTERNAL,
                                       adCreativeType: a.p.QUEST,
@@ -133,7 +133,7 @@ function m(t) {
                                       questContentCTA: h.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
                                       sourceQuestContent: n,
                                   }),
-                                (0, r.A)(i);
+                                (0, r.A)(i));
                         },
                     }),
             };

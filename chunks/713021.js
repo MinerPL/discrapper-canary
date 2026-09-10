@@ -15,7 +15,7 @@ class h extends r.Ay.DeviceSettingsStore {
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
         let { positions: t, ...n } = e ?? {};
-        (d = { ...c, ...n }), null != t && d.positions.load(t);
+        ((d = { ...c, ...n }), null != t && d.positions.load(t));
     }
     getUserAgnosticState() {
         return { rates: d.rates, positions: d.positions.dump() };

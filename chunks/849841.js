@@ -6,6 +6,6 @@ var r = u(582128),
 function d(t) {
     let i = (0, n.A)({ scrollPosition: l._F.GUILD_TAG });
     return r.useCallback(() => {
-        (0, e.p)({ primaryGuildId: t }), i();
+        ((0, e.p)({ primaryGuildId: t }), i());
     }, [t, i]);
 }

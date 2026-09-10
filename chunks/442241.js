@@ -1,4 +1,4 @@
-i.d(t, { default: () => o }), i(321073);
+(i.d(t, { default: () => o }), i(321073));
 var s = i(477900),
     e = i(582128),
     n = i(189213),
@@ -10,7 +10,7 @@ function o(a) {
     let { modalConfig: t, markAsDismissed: i, onClose: o, ...h } = a,
         p = e.useCallback(
             (a) => {
-                t.onPrimaryClick?.(a), i(l.i.TAKE_ACTION), o?.();
+                (t.onPrimaryClick?.(a), i(l.i.TAKE_ACTION), o?.());
             },
             [t, i, o],
         ),

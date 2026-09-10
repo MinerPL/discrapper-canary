@@ -95,16 +95,16 @@ function _(i) {
               "aria-label": V.intl.string(null != I ? V.t.xB7MI3 : V.t["+Xp3hq"]),
               ...h,
               onMouseEnter: function () {
-                  h.onMouseEnter(), null != I && (0, E.V)({ user: r.user, guildId: f });
+                  (h.onMouseEnter(), null != I && (0, E.V)({ user: r.user, guildId: f }));
               },
               className: l()(g, b.vk),
               focusProps: { ringClassName: b.Rg },
               onClick: () => {
                   if (null != I) {
-                      o({ action: N.pt.VIEW_AVATAR, analyticsLocations: u }), I();
+                      (o({ action: N.pt.VIEW_AVATAR, analyticsLocations: u }), I());
                       return;
                   }
-                  o({ action: N.pt.PRESS_VIEW_PROFILE, analyticsLocations: u }), e?.();
+                  (o({ action: N.pt.PRESS_VIEW_PROFILE, analyticsLocations: u }), e?.());
               },
               children: (0, s.jsx)(C, { ...c, imageClassName: l()(b.Lw, m && n) }),
           });

@@ -39,12 +39,12 @@ function h() {
             [],
         ),
         S = r.useCallback((e) => {
-            i(e),
+            (i(e),
                 E.nextTick(() => {
-                    d.Ay.updateLocale(e),
+                    (d.Ay.updateLocale(e),
                         (0, o.closeModal)(g.USER_SETTINGS_MODAL_KEY) &&
-                            (0, g.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL);
-                });
+                            (0, g.openUserSettings)(l.X.LANGUAGE_AND_TIME_PANEL));
+                }));
         }, []);
     return (0, s.jsx)(u.Z, {
         selectionMode: "single",

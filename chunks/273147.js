@@ -101,7 +101,7 @@ let K = c.Ay.getEnableHardwareAcceleration() ? s.Js : s.eu,
     Y = a._3.SIZE_96,
     W = {
         "--custom-user-profile-banner-height": "120px",
-        "--custom-user-profile-avatar-size": `${((0, a.Kj))(Y).size}px`,
+        "--custom-user-profile-avatar-size": `${(0, a.Kj)(Y).size}px`,
         "--custom-user-profile-content-inset": "16px",
     };
 function X(e) {

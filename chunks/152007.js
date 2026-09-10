@@ -1,4 +1,4 @@
-n.d(t, { A: () => g }), n(938796);
+(n.d(t, { A: () => g }), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -33,20 +33,20 @@ function h(e) {
 }
 function I(e) {
     let t = c[e];
-    u.clearTimer(e),
+    (u.clearTimer(e),
         !0 === t.muted
             ? ((_ = new Set(_)).add(e),
               u.setTimer(e, t.muteConfig, () => {
-                  (c[e].muted = !1), (_ = new Set(_)).delete(e), m.emitChange();
+                  ((c[e].muted = !1), (_ = new Set(_)).delete(e), m.emitChange());
               }) && ((c[e].muted = !1), (_ = new Set(_)).delete(e)))
-            : (_ = new Set(_)).delete(e);
+            : (_ = new Set(_)).delete(e));
 }
 function f(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
         n.forEach((e) => {
-            (c[e.id] = {
+            ((c[e.id] = {
                 threadId: e.id,
                 guildId: t,
                 flags: e.flags,
@@ -54,7 +54,7 @@ function f(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                I(e.id);
+                I(e.id));
         });
 }
 function p(e) {
@@ -63,7 +63,7 @@ function p(e) {
         n.forEach((e) => {
             let { members: n } = e;
             n.forEach((e) => {
-                (c[e.id] = {
+                ((c[e.id] = {
                     threadId: e.id,
                     guildId: t,
                     flags: e.flags,
@@ -71,7 +71,7 @@ function p(e) {
                     muteConfig: e.muteConfig,
                     joinTimestamp: new Date(e.joinTimestamp),
                 }),
-                    I(e.id);
+                    I(e.id));
             });
         });
 }
@@ -104,12 +104,12 @@ class T extends a.Ay.Store {
 }
 let m = new T(s.h, {
         CONNECTION_OPEN: function (e) {
-            u.reset(),
+            (u.reset(),
                 (_ = new Set()),
                 (c = {}),
                 e.guilds.forEach((e) => {
                     A(e);
-                });
+                }));
         },
         OVERLAY_INITIALIZE: function (e) {
             let { joinedThreads: t } = e;
@@ -120,7 +120,7 @@ let m = new T(s.h, {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            E(t.id), A(t);
+            (E(t.id), A(t));
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
@@ -138,11 +138,11 @@ let m = new T(s.h, {
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
             if (!(t.id in c)) return !1;
-            (c = { ...c }), delete c[t.id];
+            ((c = { ...c }), delete c[t.id]);
         },
         THREAD_MEMBER_UPDATE: function (e) {
             if (d.default.getId() !== e.userId) return !1;
-            (c[e.id] = {
+            ((c[e.id] = {
                 threadId: e.id,
                 guildId: e.guildId,
                 flags: e.flags,
@@ -150,7 +150,7 @@ let m = new T(s.h, {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp),
             }),
-                I(e.id);
+                I(e.id));
         },
         THREAD_MEMBER_LOCAL_UPDATE: function (e) {
             let { id: t, userId: n, guildId: i, isJoining: r } = e;

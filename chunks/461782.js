@@ -19,25 +19,25 @@ function u(e) {
             (d.current = new i.J_(n, () => o(!0))),
             d.current.delay(),
             () => {
-                d.current?.cancel(), (d.current = null);
+                (d.current?.cancel(), (d.current = null));
             }
         ),
         [n],
     );
     let f = r.useCallback(
             (e) => {
-                o(!1), c.current.add(e), d.current?.cancel();
+                (o(!1), c.current.add(e), d.current?.cancel());
             },
             [c, d, o],
         ),
         h = r.useCallback(
             (e) => {
-                c.current.delete(e), 0 === c.current.size && d.current?.delay();
+                (c.current.delete(e), 0 === c.current.size && d.current?.delay());
             },
             [c, d],
         ),
         p = r.useCallback(() => {
-            o(!1), 0 === c.current.size && d.current?.delay();
+            (o(!1), 0 === c.current.size && d.current?.delay());
         }, [c, d, o]),
         m = r.useCallback(() => {
             c.current.size > 0 || (d.current?.cancel(), o(!0));

@@ -1,4 +1,4 @@
-s.r(e), s.d(e, { default: () => Y });
+(s.r(e), s.d(e, { default: () => Y }));
 var i = s(477900),
     n = s(582128),
     a = s(17928),
@@ -47,9 +47,9 @@ let Y = function (t) {
             });
             switch (t) {
                 case h.WM.SUCCESS:
-                    (0, h.g5)(e.id, x.uF.ACTIVITY_PANEL),
+                    ((0, h.g5)(e.id, x.uF.ACTIVITY_PANEL),
                         Y ? (0, h.L4)(x.uF.ACTIVITY_PANEL, e.id) : s?.(),
-                        (0, F.mA)({ fromContent: x.uF.ACTIVITY_PANEL, questId: e.id });
+                        (0, F.mA)({ fromContent: x.uF.ACTIVITY_PANEL, questId: e.id }));
                     break;
                 case h.WM.CAPTCHA_FAILED:
                     A.A.show({ title: y.intl.string(y.t["/CidxO"]), body: y.intl.string(y.t.HQdHg6) });
@@ -91,20 +91,20 @@ let Y = function (t) {
                       icon: o.I,
                       "aria-label": (0, _.wr)(e),
                       onClick: (t) => {
-                          t.stopPropagation(), J();
+                          (t.stopPropagation(), J());
                       },
                       onKeyPress: S,
                   })
                 : null,
         te = n.useCallback(
             async (t) => {
-                t.stopPropagation(), await z();
+                (t.stopPropagation(), await z());
             },
             [z],
         ),
         ts = n.useCallback(
             (t) => {
-                t.stopPropagation(), V(t);
+                (t.stopPropagation(), V(t));
             },
             [V],
         ),

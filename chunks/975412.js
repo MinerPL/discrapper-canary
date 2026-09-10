@@ -14,7 +14,7 @@ function h(e) {
     let { context: t, openInPopout: h, analyticsLocation: f = "open-activity-shelf", initialState: S } = e;
     h && (0, r.A)(A.MLl.CHANNEL_CALL_POPOUT);
     let M = h ? i.KX : i.SY;
-    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, S, "channel" === t.type ? t.channel.id : void 0);
+    ((0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, S, "channel" === t.type ? t.channel.id : void 0));
     let p = "contextless" !== t.type && (o.Ay.hasUnread(t.channel.id) || o.Ay.getMentionCount(t.channel.id) > 0);
     return (
         s.default.track(A.HAw.VOICE_PANEL_TAB_OPENED, {

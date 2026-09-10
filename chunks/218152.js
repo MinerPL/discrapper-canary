@@ -35,17 +35,19 @@ class C {
     titleFocused = !1;
     bodyFocused = !1;
     constructor(e, t, s) {
-        (this.channelId = e), (this._set = t), (this.get = s);
+        ((this.channelId = e), (this._set = t), (this.get = s));
         const i = u.A.getChannel(e);
         if (null == i) return;
         const n = c.A.getThreadSettings(i.id) ?? {},
             r = null == i.template ? "" : i.template.trim(),
             a = c.A.getDraft(i.id, c.C.FirstThreadMessage),
             h = (0, d.ur)(null != a && "" !== a.trim() ? a : r);
-        (this.name = n.name ?? ""), (this.appliedTags = new Set(n.appliedTags) ?? new Set()), (this.textAreaState = h);
+        ((this.name = n.name ?? ""),
+            (this.appliedTags = new Set(n.appliedTags) ?? new Set()),
+            (this.textAreaState = h));
         const l = h.textValue !== r,
             o = g.A.getUploads(i.id, c.C.FirstThreadMessage).length > 0;
-        (this.formOpen = l || o), this.formOpen && p.A.clearForumSearch(i.id);
+        ((this.formOpen = l || o), this.formOpen && p.A.clearForumSearch(i.id));
     }
     set = (e) => {
         (0, l.r)(() => this._set(e));
@@ -68,9 +70,9 @@ class C {
     };
     toggleAppliedTag = (e) => {
         let { appliedTags: t } = this.get();
-        (t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
+        ((t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
             this.set({ appliedTags: t }),
-            o.A.changeThreadSettings(this.channelId, { appliedTags: t });
+            o.A.changeThreadSettings(this.channelId, { appliedTags: t }));
     };
     setPopoutOpen = (e) => {
         this.set({ popoutOpen: e });
@@ -85,7 +87,7 @@ class C {
         this.set({ submitting: e });
     };
     setFormOpen = (e) => {
-        this.set({ formOpen: e }), p.A.clearForumSearch(this.channelId);
+        (this.set({ formOpen: e }), p.A.clearForumSearch(this.channelId));
     };
     setOnboardingExpanded = (e) => {
         this.set({ onboardingExpanded: e });
@@ -97,10 +99,10 @@ class C {
         this.set({ bodyFocused: e });
     };
     setName = (e) => {
-        this.set({ name: e }), o.A.changeThreadSettings(this.channelId, { name: e });
+        (this.set({ name: e }), o.A.changeThreadSettings(this.channelId, { name: e }));
     };
     setTextAreaState = (e) => {
-        this.set({ textAreaState: e }), o.A.saveDraft(this.channelId, e.textValue, c.C.FirstThreadMessage);
+        (this.set({ textAreaState: e }), o.A.saveDraft(this.channelId, e.textValue, c.C.FirstThreadMessage));
     };
     setHasClickedForm = (e) => {
         this.set({ hasClickedForm: e });
@@ -108,15 +110,15 @@ class C {
     resetFormState = () => {
         let e = u.A.getChannel(this.channelId),
             t = null == e || null == e.template ? "" : e.template.trim();
-        this.set({ name: "", textAreaState: (0, d.ur)(t), appliedTags: new Set(), hasClickedForm: !1 }),
-            p.A.clearForumSearch(this.channelId);
+        (this.set({ name: "", textAreaState: (0, d.ur)(t), appliedTags: new Set(), hasClickedForm: !1 }),
+            p.A.clearForumSearch(this.channelId));
     };
     setFormOpenFromUserAction = () => {
         if (this.hasClickedForm) return;
         let e = u.A.getChannel(this.channelId);
-        null != e && (0, m.OG)({ guildId: e.guild_id, channelId: this.channelId }),
+        (null != e && (0, m.OG)({ guildId: e.guild_id, channelId: this.channelId }),
             this.set({ hasClickedForm: !0, formOpen: !0 }),
-            p.A.clearForumSearch(this.channelId);
+            p.A.clearForumSearch(this.channelId));
     };
 }
 let F = n.createContext(null);
@@ -127,9 +129,9 @@ function A(e) {
 }
 function S(e, t) {
     let s = n.useContext(F);
-    return a()(null != s, "[useForumPostComposerStore] Context should not be null"), s(e, t);
+    return (a()(null != s, "[useForumPostComposerStore] Context should not be null"), s(e, t));
 }
 function x() {
     let e = n.useContext(F);
-    return a()(null != e, "[useForumPostComposerStore] Context should not be null"), e;
+    return (a()(null != e, "[useForumPostComposerStore] Context should not be null"), e);
 }

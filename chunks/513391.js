@@ -1,4 +1,4 @@
-n.d(t, { A: () => s }), n(321073), n(142703), n(667532);
+(n.d(t, { A: () => s }), n(321073), n(142703), n(667532));
 var i = n(677623),
     r = n.n(i);
 let a = new (n(626584).A)("Queue");
@@ -10,10 +10,10 @@ class s {
     draining = !1;
     pendingRetryItem = null;
     constructor(e = a, t = 100) {
-        (this.logger = e), (this.defaultRetryAfter = t);
+        ((this.logger = e), (this.defaultRetryAfter = t));
     }
     enqueue(e, t, n) {
-        this.queue.push({ message: e, success: t, logId: n }), this._drainIfNecessary();
+        (this.queue.push({ message: e, success: t, logId: n }), this._drainIfNecessary());
     }
     get length() {
         return this.queue.length;
@@ -39,40 +39,40 @@ class s {
                     }
                 } else {
                     let n = t.retryAfter ?? this.defaultRetryAfter;
-                    this.logger.info(
+                    (this.logger.info(
                         `Rate limited. Delaying draining of queue for ${n} ms. LogId:${i} QueueLength: ${this.queue.length}`,
                     ),
                         (this.pendingRetryItem = e),
                         (this.timeout = setTimeout(() => {
-                            (this.pendingRetryItem = null),
+                            ((this.pendingRetryItem = null),
                                 this.queue.unshift(e),
                                 (this.timeout = null),
-                                this._drainIfNecessary();
-                        }, n));
+                                this._drainIfNecessary());
+                        }, n)));
                 }
             };
-        this.logger.log(`Draining message from queue LogId:${i} QueueLength: ${this.queue.length}`), this.drain(t, r);
+        (this.logger.log(`Draining message from queue LogId:${i} QueueLength: ${this.queue.length}`), this.drain(t, r));
     }
     clear() {
-        this.queue.clear(),
+        (this.queue.clear(),
             clearTimeout(this.timeout),
             (this.timeout = null),
             (this.draining = !1),
-            (this.pendingRetryItem = null);
+            (this.pendingRetryItem = null));
     }
     remove(e) {
         let t = [];
-        for (; this.queue.length > 0; ) {
+        for (; this.queue.length > 0;) {
             let n = this.queue.shift();
             e(n.message) || t.push(n);
         }
-        this.queue.push(...t),
+        (this.queue.push(...t),
             null !== this.timeout &&
                 null !== this.pendingRetryItem &&
                 e(this.pendingRetryItem.message) &&
                 (clearTimeout(this.timeout),
                 (this.timeout = null),
                 (this.pendingRetryItem = null),
-                this._drainIfNecessary());
+                this._drainIfNecessary()));
     }
 }

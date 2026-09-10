@@ -692,7 +692,7 @@ function O(e, a, t) {
 }
 function N(e, a, t, r, n) {
     let i = {};
-    for (let e in a) (i[e] = Math.floor(a[e] / 2)), i[e] > 0 && a[e] % 2 == 0 && i[e]--;
+    for (let e in a) ((i[e] = Math.floor(a[e] / 2)), i[e] > 0 && a[e] % 2 == 0 && i[e]--);
     let o = Z(e, a, t).subtract(i);
     return z(e, o, a, t, r, n);
 }
@@ -737,7 +737,7 @@ function j(e, a, t) {
 }
 function K(e, a, t) {
     if (!t) return e;
-    for (; e.compare(a) >= 0 && t(e); ) e = e.subtract({ days: 1 });
+    for (; e.compare(a) >= 0 && t(e);) e = e.subtract({ days: 1 });
     return e.compare(a) >= 0 ? e : null;
 }
 var L = t(526739),
@@ -801,12 +801,12 @@ function G(e) {
         (F(i), k(C()));
     let B = (0, y.useMemo)(() => {
             let e = { ...i };
-            return e.days ? e.days-- : (e.days = -1), x.add(e);
+            return (e.days ? e.days-- : (e.days = -1), x.add(e));
         }, [x, i]),
         [M, I] = (0, y.useState)(p);
     if (!(0, h.Jg)(p, M)) {
         let e = (0, T.yP)(P, p);
-        k(N(e, i, r, o, l)), w(e), I(p);
+        (k(N(e, i, r, o, l)), w(e), I(p));
     }
     function A(e) {
         w((e = j(e, o, l)));
@@ -866,11 +866,11 @@ function G(e) {
         },
         focusNextPage() {
             let e = x.add(Q);
-            w(j(P.add(Q), o, l)), k(Z(z(P, e, Q, r, o, l), Q, r));
+            (w(j(P.add(Q), o, l)), k(Z(z(P, e, Q, r, o, l), Q, r)));
         },
         focusPreviousPage() {
             let e = x.subtract(Q);
-            w(j(P.subtract(Q), o, l)), k(Z(z(P, e, Q, r, o, l), Q, r));
+            (w(j(P.subtract(Q), o, l)), k(Z(z(P, e, Q, r, o, l), Q, r)));
         },
         focusSectionStart() {
             i.days ? A(x) : i.weeks ? A((0, h.kq)(P, r)) : (i.months || i.years) && A((0, h.wH)(P));
@@ -941,18 +941,18 @@ function G(e) {
                 let e = (0, h.SJ)(t, r, m);
                 for (let a = 0; a < e; a++) n.push(null);
             }
-            for (; n.length < o; ) {
+            for (; n.length < o;) {
                 n.push(t);
                 let e = t.add({ days: 1 });
                 if ((0, h.ro)(t, e)) break;
                 t = e;
             }
-            for (; n.length < o; ) n.push(null);
+            for (; n.length < o;) n.push(null);
             return n;
         },
         getWeeksInMonth(e = x) {
             let a = D || (0, h.RZ)(e, r, m);
-            return (i.weeks || i.days) && ((a = i.weeks ?? 0), i.days && (a += Math.ceil(i.days / 7))), a;
+            return ((i.weeks || i.days) && ((a = i.weeks ?? 0), i.days && (a += Math.ceil(i.days / 7))), a);
         },
     };
 }
@@ -971,7 +971,7 @@ function _(e, a, t, r) {
     let n = e.add({ days: r }),
         i = e.subtract(t),
         o = e.add(t);
-    for (; (r < 0 ? n.compare(i) >= 0 : 0 >= n.compare(o)) && !a(n); ) n = n.add({ days: r });
+    for (; (r < 0 ? n.compare(i) >= 0 : 0 >= n.compare(o)) && !a(n);) n = n.add({ days: r });
     if (a(n)) return n.add({ days: -r });
 }
 var Q = t(288378),
@@ -1083,7 +1083,7 @@ let ea = (0, y.createContext)(null),
                         if (t)
                             if (m) {
                                 let e = q(m, t);
-                                e && c({ start: H(e.start, d?.start), end: H(e.end, d?.end) }), D(null);
+                                (e && c({ start: H(e.start, d?.start), end: H(e.end, d?.end) }), D(null));
                             } else D(t);
                     },
                     [C, x] = (0, y.useState)(!1),
@@ -1123,13 +1123,13 @@ let ea = (0, y.createContext)(null),
                     isDragging: C,
                     setDragging: x,
                     clearSelection() {
-                        D(null), c(null);
+                        (D(null), c(null));
                     },
                     focusNearestAvailableDate(e) {
                         let a = f(e),
                             t = (e) => this.isInvalid(e) || O(e, a?.start, a?.end),
                             r = e.add({ days: 1 });
-                        t(r) && (r = e.subtract({ days: 1 })), t(r) || (this.setFocusedDate(r), this.setFocused(!0));
+                        (t(r) && (r = e.subtract({ days: 1 })), t(r) || (this.setFocusedDate(r), this.setFocused(!0)));
                     },
                 };
             })({ ...e, locale: t, createCalendar: e.createCalendar || A.d }),
@@ -1419,7 +1419,7 @@ let ea = (0, y.createContext)(null),
                     $ = !o && !v,
                     R = a.isSelected(i) && $,
                     P = !1;
-                a.isValueInvalid &&
+                (a.isValueInvalid &&
                     ("highlightedRange" in a
                         ? (P =
                               !a.anchorDate &&
@@ -1430,7 +1430,7 @@ let ea = (0, y.createContext)(null),
                           ? (P = a.value.some((e) => (0, h.ro)(e, i)))
                           : a.value && (P = (0, h.ro)(a.value, i))),
                     P && !o && (R = !0),
-                    (i = (0, F.k)(i, h.NV));
+                    (i = (0, F.k)(i, h.NV)));
                 let w = (0, y.useMemo)(() => i.toDate(a.timeZone), [i, a.timeZone]),
                     C = (0, h.cK)(i, a.timeZone),
                     I = (0, y.useMemo)(() => {
@@ -1467,7 +1467,7 @@ let ea = (0, y.createContext)(null),
                         isDisabled: !$ || a.isReadOnly,
                         onPressStart(e) {
                             if (a.isReadOnly) {
-                                a.setFocusedDate(i), a.setFocused(!0);
+                                (a.setFocusedDate(i), a.setFocused(!0));
                                 return;
                             }
                             if (
@@ -1477,34 +1477,34 @@ let ea = (0, y.createContext)(null),
                             ) {
                                 if (a.highlightedRange && !P) {
                                     if ((0, h.ro)(i, a.highlightedRange.start)) {
-                                        a.setAnchorDate(a.highlightedRange.end),
+                                        (a.setAnchorDate(a.highlightedRange.end),
                                             a.setFocusedDate(i),
                                             a.setFocused(!0),
                                             a.setDragging(!0),
-                                            (N.current = !0);
+                                            (N.current = !0));
                                         return;
                                     } else if ((0, h.ro)(i, a.highlightedRange.end)) {
-                                        a.setAnchorDate(a.highlightedRange.start),
+                                        (a.setAnchorDate(a.highlightedRange.start),
                                             a.setFocusedDate(i),
                                             a.setFocused(!0),
                                             a.setDragging(!0),
-                                            (N.current = !0);
+                                            (N.current = !0));
                                         return;
                                     }
                                 }
                                 let t = () => {
-                                    a.setDragging(!0),
+                                    (a.setDragging(!0),
                                         (Z.current = void 0),
                                         a.selectDate(i),
                                         a.setFocusedDate(i),
                                         a.setFocused(!0),
-                                        (O.current = !0);
+                                        (O.current = !0));
                                 };
                                 "touch" === e.pointerType ? (Z.current = setTimeout(t, 200)) : t();
                             }
                         },
                         onPressEnd() {
-                            (N.current = !1), (O.current = !1), clearTimeout(Z.current), (Z.current = void 0);
+                            ((N.current = !1), (O.current = !1), clearTimeout(Z.current), (Z.current = void 0));
                         },
                         onPress() {
                             "anchorDate" in a ||
@@ -1527,7 +1527,7 @@ let ea = (0, y.createContext)(null),
                                             : (a.selectDate(i), a.focusNearestAvailableDate(i))));
                         },
                     });
-                o || (n = (0, h.ro)(i, a.focusedDate) ? 0 : -1),
+                (o || (n = (0, h.ro)(i, a.focusedDate) ? 0 : -1),
                     (0, y.useEffect)(() => {
                         f &&
                             t.current &&
@@ -1535,7 +1535,7 @@ let ea = (0, y.createContext)(null),
                             "pointer" !== (0, S.ME)() &&
                                 (0, k.bq)() === t.current &&
                                 (0, V.o)(t.current, { containingElement: (0, E.m)(t.current) }));
-                    }, [f, t]);
+                    }, [f, t]));
                 let j = (0, d.i)({ day: "numeric", timeZone: a.timeZone, calendar: i.calendar.identifier }),
                     K = (0, y.useMemo)(() => j.formatToParts(w).find((e) => "day" === e.type).value, [j, w]);
                 return {

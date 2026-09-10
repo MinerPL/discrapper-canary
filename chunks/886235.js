@@ -1,4 +1,4 @@
-n.d(t, { A: () => eu }), n(938796);
+(n.d(t, { A: () => eu }), n(938796));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -49,11 +49,11 @@ function F(e) {
         o = l.useMemo(() => new Intl.NumberFormat(V.intl.currentLocale).format(r), [r]),
         c = l.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     (0, H.L3)(e, async () => {
                         let { default: e } = await n.e("54526").then(n.bind(n, 551309));
                         return () => (0, i.jsx)(e, { roles: t });
-                    });
+                    }));
             },
             [t],
         );

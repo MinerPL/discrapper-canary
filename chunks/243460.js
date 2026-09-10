@@ -26,11 +26,11 @@ function G(t) {
             children: E.intl.string(E.t["13/7kX"]),
         });
     function D(t) {
-        m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
+        (m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
             is_community: t === g.IR.COMMUNITY,
         }),
-            G(t);
+            G(t));
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {

@@ -79,7 +79,7 @@ function N(e) {
         ea = (0, l.useRef)(null),
         [eo, ec] = l.useState(null),
         ed = l.useCallback((e) => {
-            (ea.current = e), ec(e);
+            ((ea.current = e), ec(e));
         }, []),
         eE = l.useMemo(() => (0, C.L)({ quest: B, location: L.rE.VIDEO_MODAL }), [B]),
         ef = (0, l.useRef)(0),
@@ -138,7 +138,7 @@ function N(e) {
             (e, t) => {
                 switch ((eN(e, t), e)) {
                     case u.Q6.PLAYING:
-                        K.current?.paused === !0 && eS(eU.current), (eU.current = null);
+                        (K.current?.paused === !0 && eS(eU.current), (eU.current = null));
                         break;
                     case u.Q6.PAUSED: {
                         let e = (function (e) {
@@ -167,32 +167,32 @@ function N(e) {
         }, [em, en]),
         ew = l.useCallback(
             (e) => {
-                eb(e), ep(e);
+                (eb(e), ep(e));
             },
             [eb, ep],
         ),
         eB = l.useCallback(
             (e) => {
                 let t = e - U;
-                ey(t), eg(t);
+                (ey(t), eg(t));
             },
             [ey, eg, U],
         ),
         eF = l.useCallback(
             (e) => {
-                j(e), eI(e);
+                (j(e), eI(e));
             },
             [j, eI],
         ),
         ej = l.useCallback(
             (e) => {
-                J(e), eT(e);
+                (J(e), eT(e));
             },
             [J, eT],
         ),
         eY = l.useCallback(
             (e, t) => {
-                z(B.id, e, t), (0, _.Gn)(B.id, H.taskType, e), N(e);
+                (z(B.id, e, t), (0, _.Gn)(B.id, H.taskType, e), N(e));
                 let r = q && e >= n && !e_.current;
                 (e >= ef.current || r) &&
                     (r && (e_.current = !0),
@@ -206,7 +206,7 @@ function N(e) {
             (e, t) => {
                 if ((eV(), null != K.current)) {
                     let n = K.current.duration;
-                    z(B.id, e, n), z(B.id, t, n);
+                    (z(B.id, e, n), z(B.id, t, n));
                 }
             },
             [eV, B.id, z],
@@ -214,7 +214,7 @@ function N(e) {
         eH = l.useCallback(() => {
             if (null != K.current) {
                 let e = K.current.duration;
-                G || B.userStatus?.enrolledAt == null || (0, A.zv)(B, e + 1), z(B.id, e, e), ex();
+                (G || B.userStatus?.enrolledAt == null || (0, A.zv)(B, e + 1), z(B.id, e, e), ex());
             }
         }, [B, G, z, ex]),
         eG = l.useCallback(

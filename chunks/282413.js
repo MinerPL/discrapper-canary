@@ -12,14 +12,14 @@ var i = n(477900),
 let E = { [u.DUB.NORMAL]: _.qb, [u.DUB.MINIMUM]: _.Bp, [u.DUB.NO_CHAT]: _.Oo, [u.DUB.FULL_SCREEN]: _.iy };
 class A extends r.PureComponent {
     constructor(e) {
-        super(e), (this.state = { animation: new l.A.Value(0) });
+        (super(e), (this.state = { animation: new l.A.Value(0) }));
     }
     componentDidAppear() {
         this.state.animation.setValue(1);
     }
     componentWillEnter(e) {
         let { animation: t } = this.state;
-        t.setValue(0), l.A.spring(t, { toValue: 1, overshootClamping: !0 }).start(e);
+        (t.setValue(0), l.A.spring(t, { toValue: 1, overshootClamping: !0 }).start(e));
     }
     componentWillLeave(e) {
         l.A.spring(this.state.animation, { toValue: 0, overshootClamping: !0 }).start(e);
@@ -36,16 +36,16 @@ class h extends r.PureComponent {
     static defaultProps = { layout: u.DUB.MINIMUM, animated: !0 };
     _timeout = new o.Ep();
     constructor(e) {
-        super(e), (this.state = { idle: !1, backgroundAnimation: new l.A.Value(0), layoutProp: e.layout });
+        (super(e), (this.state = { idle: !1, backgroundAnimation: new l.A.Value(0), layoutProp: e.layout }));
     }
     componentDidMount() {
-        document.addEventListener("mousedown", this.handleMouseEvent, !0),
-            document.addEventListener("mousemove", this.handleMouseEvent, !0);
+        (document.addEventListener("mousedown", this.handleMouseEvent, !0),
+            document.addEventListener("mousemove", this.handleMouseEvent, !0));
     }
     componentWillUnmount() {
-        document.removeEventListener("mousedown", this.handleMouseEvent, !0),
+        (document.removeEventListener("mousedown", this.handleMouseEvent, !0),
             document.removeEventListener("mousemove", this.handleMouseEvent, !0),
-            this._timeout.stop();
+            this._timeout.stop());
     }
     static getDerivedStateFromProps(e, t) {
         return e.layout !== t.layoutProp

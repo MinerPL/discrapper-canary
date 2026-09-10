@@ -1,4 +1,4 @@
-n.d(t, { Bq: () => x, fH: () => f, p2: () => h, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073);
+(n.d(t, { Bq: () => x, fH: () => f, p2: () => h, q3: () => E, sF: () => u, yM: () => g, zN: () => m }), n(321073));
 var i = n(228366),
     l = n(157559),
     s = n(913122),
@@ -33,17 +33,17 @@ async function E(e) {
         n.length > 0)
     )
         throw (
-            (j(n),
+            j(n),
             l.A.show({ title: c.intl.string(c.t.ISppXw), body: n.join("\n") }),
-            Error("failed to validate connections"))
+            Error("failed to validate connections")
         );
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SUBMIT" });
     try {
         var u, m;
-        await (0, o.YN)(e, { connections: t }),
+        (await (0, o.YN)(e, { connections: t }),
             (u = e),
             (m = t),
-            i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_SUCCESS", guildId: u, connections: m });
+            i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_SUCCESS", guildId: u, connections: m }));
     } catch (i) {
         let { fieldName: e, error: t } = new s.LG(i).getAnyErrorMessageAndField() ?? {},
             n = [e, t].filter(r.Vq).join(": ");

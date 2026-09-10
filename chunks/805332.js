@@ -14,7 +14,7 @@ class o extends i.Ay.Store {
 let a = new o(r.h, {
     LOGOUT: function () {
         if (null == l && !s) return !1;
-        (l = null), (s = !1);
+        ((l = null), (s = !1));
     },
     VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET: function (e) {
         let { applicationId: t } = e;

@@ -13,7 +13,7 @@ function d(t) {
     async function b() {
         h(!0);
         try {
-            await (0, r.Bo)(i), d();
+            (await (0, r.Bo)(i), d());
         } finally {
             h(!1);
         }

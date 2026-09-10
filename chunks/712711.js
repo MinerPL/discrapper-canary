@@ -1,11 +1,11 @@
-n.d(t, { S1: () => m, gB: () => T, PX: () => g }),
+(n.d(t, { S1: () => m, gB: () => T, PX: () => g }),
     n(393431),
     n(532706),
     n(42231),
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var i = n(459838),
     r = n(287809),
     a = n(486020),
@@ -34,11 +34,11 @@ async function p(e, t, n) {
     if ("blur" === n) return f(e, t, i.gO.BACKGROUND_BLUR);
     if ("string" == typeof n || "number" == typeof n) {
         let e = (0, c.A)()[n];
-        (s = e.isVideo ?? !1), (r = e.source);
+        ((s = e.isVideo ?? !1), (r = e.source));
     } else {
         let e = n.asset;
-        (s = (0, a.VI)(e) || (0, a.q6)(e)),
-            (r = (0, a.Bo)({ userId: n.user_id, assetId: n.id, assetHash: e, size: E.Im.width }));
+        ((s = (0, a.VI)(e) || (0, a.q6)(e)),
+            (r = (0, a.Bo)({ userId: n.user_id, assetId: n.id, assetHash: e, size: E.Im.width })));
     }
     if (null != r)
         try {
@@ -48,10 +48,10 @@ async function p(e, t, n) {
                     : await ((o = r),
                       new Promise((e, t) => {
                           let n = new Image();
-                          (n.crossOrigin = "anonymous"),
+                          ((n.crossOrigin = "anonymous"),
                               (n.onload = () => {
                                   let t = document.createElement("canvas");
-                                  (t.width = E.Im.width), (t.height = E.Im.height);
+                                  ((t.width = E.Im.width), (t.height = E.Im.height));
                                   let i = t.getContext("2d");
                                   _()(null != i, "Canvas context is missing");
                                   let r = n.height / n.width,
@@ -64,7 +64,7 @@ async function p(e, t, n) {
                                   e({ data: d.data, width: d.width, height: d.height, pixelFormat: "rgba" });
                               }),
                               (n.onerror = (e) => t(e)),
-                              (n.src = o);
+                              (n.src = o));
                       })),
                 a = s ? await I(r) : void 0;
             f(e, t, i.gO.BACKGROUND_REPLACEMENT, n, a);
@@ -74,13 +74,13 @@ async function p(e, t, n) {
 }
 async function T(e, t) {
     let { track: n = !0, location: r } = t;
-    await p(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled");
+    (await p(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
 async function m(e, t, n) {
     let { track: r = !0, location: a } = n;
-    (0, l.Oo)(),
+    ((0, l.Oo)(),
         await p(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
-        r && (0, d.Uz)(e, a, "Preview");
+        r && (0, d.Uz)(e, a, "Preview"));
 }
 function g() {
     let e = r.default.getCurrentUser();

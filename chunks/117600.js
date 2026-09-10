@@ -28,7 +28,7 @@ function I() {
         i.useLayoutEffect(() => {
             _.setState({
                 dismiss: () => {
-                    A(c.i.USER_DISMISS), h(u);
+                    (A(c.i.USER_DISMISS), h(u));
                 },
             });
         }, [A]),

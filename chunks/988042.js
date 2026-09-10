@@ -1,7 +1,7 @@
 function a(e) {
     return e && e.__esModule ? e.default : e;
 }
-(t.__esModule = !0),
+((t.__esModule = !0),
     (t.threezerotwofour = a(r(751368))),
     (t.apathy = a(r(546691))),
     (t.ashes = a(r(341994))),
@@ -38,4 +38,4 @@ function a(e) {
     (t.summerfruit = a(r(336423))),
     (t.tomorrow = a(r(160547))),
     (t.tube = a(r(693986))),
-    (t.twilight = a(r(458372)));
+    (t.twilight = a(r(458372))));

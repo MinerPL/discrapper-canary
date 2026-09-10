@@ -24,7 +24,7 @@ function _(e) {
                 onClick:
                     null != h
                         ? function () {
-                              h?.(), (0, s.closeModal)(u);
+                              (h?.(), (0, s.closeModal)(u));
                           }
                         : _,
             },
@@ -33,8 +33,8 @@ function _(e) {
                 text: c.intl.string(c.t.iQ1SwX),
                 onClick: function () {
                     let e = I.toISOString();
-                    null != A ? A(e) : l.A.changeScheduledMessage(t.id, { scheduledTimestamp: e }),
-                        (0, s.closeModal)(u);
+                    (null != A ? A(e) : l.A.changeScheduledMessage(t.id, { scheduledTimestamp: e }),
+                        (0, s.closeModal)(u));
                 },
                 disabled: null != p,
             },

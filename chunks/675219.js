@@ -1,8 +1,8 @@
-n.d(t, { od: () => N }), n(321073);
+(n.d(t, { od: () => N }), n(321073));
 var r = n(477900),
     l = n(582128),
-    o = n(132500),
-    i = n(192308),
+    i = n(132500),
+    o = n(192308),
     a = n(231723),
     s = n(228366),
     u = n(166532),
@@ -60,11 +60,11 @@ class N {
             })(e, t)
         )
             throw Error(`Checkout flow ${e} is not implemented`);
-        (this.checkoutFlowConfiguration = t),
+        ((this.checkoutFlowConfiguration = t),
             (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
             (this.internalCheckoutFlowControls = A[e]),
             (this.override_analytic_params =
-                this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams);
+                this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams));
     }
     getCheckoutStep(e) {
         return this.tenantCheckoutFlowConfig.CHECKOUT_STEPS[e];
@@ -133,12 +133,12 @@ class N {
         let { isGift: t } = e,
             { CUSTOM_CONFIRM_STEP_CONFIG: n, STEPS_BEFORE_CHECKOUT: r = [] } = this.tenantCheckoutFlowConfig,
             { excludePaymentAuthSteps: l } = this.internalCheckoutFlowControls,
-            o = this.getPredicateStepConfig(),
-            i = this.getGiftCustomizationStepConfig({ isGift: t }),
+            i = this.getPredicateStepConfig(),
+            o = this.getGiftCustomizationStepConfig({ isGift: t }),
             a = this.getAddPaymentStepConfig({ isGift: t }),
             s = this.getReviewStepConfig(),
-            c = this.createDefinedStepConfigsArray([o, ...(null != i ? [i] : []), ...r, a, ...(l ? [] : E.PL), s]);
-        return null != n && c.push({ key: u.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
+            c = this.createDefinedStepConfigsArray([i, ...(null != o ? [o] : []), ...r, a, ...(l ? [] : E.PL), s]);
+        return (null != n && c.push({ key: u.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c);
     }
     getApplicationId(e) {
         return this.checkoutFlow === C.C.ORB_CHECKOUT && null != e
@@ -155,8 +155,8 @@ class N {
             skuId: n,
             skuProductLine: r,
             applicationId: l,
-            discoverySessionId: o,
-            analyticsLocation: i,
+            discoverySessionId: i,
+            analyticsLocation: o,
             analyticsLocations: a,
             analyticsObject: s,
             analyticsSourceLocation: u,
@@ -165,13 +165,13 @@ class N {
         } = e;
         h.default.track(x.HAw.PAYMENT_FLOW_CANCELED, {
             load_id: t,
-            discovery_session_id: o,
+            discovery_session_id: i,
             payment_type: x.frM[this.checkoutFlowConfiguration.purchaseType],
             is_gift: c,
             sku_id: n,
             sku_product_line: r,
             application_id: l,
-            location: i ?? s,
+            location: o ?? s,
             location_stack: a,
             source: u,
             eligible_for_trial: d,
@@ -183,7 +183,7 @@ class N {
         });
     }
     getStandaloneLoadId() {
-        return (0, c.A)() ?? (0, o.A)();
+        return (0, c.A)() ?? (0, i.A)();
     }
     renderCheckoutInstance(e) {
         let {
@@ -204,7 +204,7 @@ class N {
             A = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
             k = arguments.length > 2 ? arguments[2] : void 0,
             N = arguments.length > 3 ? arguments[3] : void 0,
-            j = { current: N ?? (0, o.A)() },
+            j = { current: N ?? (0, i.A)() },
             w = { current: null },
             { modalKey: T } = k,
             F = this.generateRenderHeader(),
@@ -218,7 +218,7 @@ class N {
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                 stepConfigs: this.generateCheckoutStepConfigs({ isGift: b }),
                 onComplete: (e) => {
-                    null != u && u(e), (O = !0);
+                    (null != u && u(e), (O = !0));
                 },
                 onClose: c,
                 renderHeader: F,
@@ -226,7 +226,7 @@ class N {
                 tenantParams: I ?? {},
                 loadId: j.current,
                 onOrderCreated: function (e) {
-                    (j.current = e.id), (w.current = e);
+                    ((j.current = e.id), (w.current = e));
                 },
                 discoverySessionId: C,
                 activeSubscription: f ?? null,
@@ -238,7 +238,7 @@ class N {
                 giftContextProps: t,
             };
         if ("modal" === A)
-            return (0, i.openModalLazy)(
+            return (0, o.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
                         n.e("339384"),
@@ -253,11 +253,11 @@ class N {
                 {
                     ...k,
                     onCloseRequest: () => {
-                        null != k.onCloseRequest && k.onCloseRequest(O, j.current),
-                            k.skipCloseModalOnCloseRequest || (0, i.closeModal)(T);
+                        (null != k.onCloseRequest && k.onCloseRequest(O, j.current),
+                            k.skipCloseModalOnCloseRequest || (0, o.closeModal)(T));
                     },
                     onCloseCallback: () => {
-                        s.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: O }),
+                        (s.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: O }),
                             O ||
                                 ((0, p.S)({ checkoutSucceeded: O, order: w.current }),
                                 this.trackPaymentFlowCanceled({
@@ -274,7 +274,7 @@ class N {
                                     eligibleForTrial: null != _.trialId,
                                 })),
                             null != k.onCloseCallback && k.onCloseCallback(O),
-                            null != c && c(O, d);
+                            null != c && c(O, d));
                     },
                     modalKey: T,
                 },

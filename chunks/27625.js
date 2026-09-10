@@ -46,7 +46,7 @@ function j(i) {
                             text: x.intl.string(x.t["/bHu89"]),
                             variant: "secondary",
                             onClick: function () {
-                                j(), (0, d.A)(s, !0);
+                                (j(), (0, d.A)(s, !0));
                             },
                         }),
                     ],

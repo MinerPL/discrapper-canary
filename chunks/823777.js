@@ -9,7 +9,7 @@ var i = r(477900),
 function m(t) {
     let { transitionState: n, onClose: r } = t;
     function m() {
-        return r?.(), Promise.resolve();
+        return (r?.(), Promise.resolve());
     }
     a.useEffect(() => {
         (0, l.Ak)("success", 0.1);

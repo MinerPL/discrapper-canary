@@ -1,4 +1,4 @@
-i.d(e, { Ay: () => ty, ru: () => tf }), i(321073);
+(i.d(e, { Ay: () => ty, ru: () => tf }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(284009),
@@ -112,7 +112,7 @@ function ts(t) {
                 else {
                     let t = await S.A.getOrEnsurePrivateChannel(u.id),
                         e = z.A.getChannel(t) ?? null;
-                    r()(null != e, "Send channel must be defined"),
+                    (r()(null != e, "Send channel must be defined"),
                         (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
                         (0, F.A)(tn.BRT.OVERLAY, !0),
                         !0 === i.extra.fake_inventory_item
@@ -130,15 +130,15 @@ function ts(t) {
                                   whenReady: !0,
                                   doNotNotifyOnError: !1,
                                   location: tl.Hx.OVERLAY,
-                              });
+                              }));
                 }
-                C.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
+                (C.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
                     target_user_id: u.id,
                     target_content_entry_id: i.id,
                     target_index: s,
                 }),
                     (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.INVITE_SENT, userId: u.id }),
-                    I("sent");
+                    I("sent"));
             } catch (t) {
                 I("unsent");
             }
@@ -148,10 +148,10 @@ function ts(t) {
         if (null == u) return;
         let t = await S.A.getOrEnsurePrivateChannel(u.id),
             e = z.A.getChannel(t) ?? null;
-        r()(null != e, "Send channel must be defined"),
+        (r()(null != e, "Send channel must be defined"),
             (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
             (0, F.A)(tn.BRT.OVERLAY, !0),
-            (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
+            (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id }));
     }
     let b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
@@ -181,7 +181,7 @@ function to(t) {
         if (null != o && null != r && "unsent" === u) {
             t.stopPropagation();
             try {
-                d("sending"),
+                (d("sending"),
                     await _.A.sendActivityInviteUser({
                         type: tn.xL.JOIN_REQUEST,
                         userId: r.id,
@@ -189,7 +189,7 @@ function to(t) {
                         location: tn.ThZ.UNLOCKED_OVERLAY,
                     }),
                     (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.JOIN_REQUEST_SENT, userId: r.id }),
-                    d("sent");
+                    d("sent"));
             } catch (t) {
                 d("unsent");
             }
@@ -330,44 +330,48 @@ function tA(t) {
         (0, J.u)();
     });
     let r = (0, ti.xl)(e),
-        d = (0, c.yK)([Q.A, W.A, k.A], () => {
-            if (null == e) return [];
-            let t = Q.A.nowPlayingCards,
-                i = { v2: n };
-            return t
-                .reduce((t, i) => {
-                    if (i.type !== tn.ZzC.USER) return i.type, t;
-                    {
-                        let n = i.party.currentActivities;
-                        if (0 === n.length) return t;
-                        for (let i of n) i.application.id === e && null != i.activity && t.push(i);
-                        return t;
-                    }
-                }, [])
-                .filter((t) => {
-                    let e = t.activityUser.id,
-                        n = W.A.isFriend(e);
-                    return (function (t, e, i) {
-                        let { v2: n } = i;
-                        if (null == t) return e;
-                        let {
-                            communicationProbability: l,
-                            dmProbability: a,
-                            serverMessageProbability: r,
-                            vcProbability: s,
-                        } = t;
-                        switch (!0) {
-                            case l > n:
-                            case a > n:
-                            case r > n:
-                            case s > n:
-                                return !0;
-                            default:
-                                return e;
+        d = (0, c.yK)(
+            [Q.A, W.A, k.A],
+            () => {
+                if (null == e) return [];
+                let t = Q.A.nowPlayingCards,
+                    i = { v2: n };
+                return t
+                    .reduce((t, i) => {
+                        if (i.type !== tn.ZzC.USER) return (i.type, t);
+                        {
+                            let n = i.party.currentActivities;
+                            if (0 === n.length) return t;
+                            for (let i of n) i.application.id === e && null != i.activity && t.push(i);
+                            return t;
                         }
-                    })(k.A.getUserAffinity(e), n, i);
-                });
-        }, [e, n]);
+                    }, [])
+                    .filter((t) => {
+                        let e = t.activityUser.id,
+                            n = W.A.isFriend(e);
+                        return (function (t, e, i) {
+                            let { v2: n } = i;
+                            if (null == t) return e;
+                            let {
+                                communicationProbability: l,
+                                dmProbability: a,
+                                serverMessageProbability: r,
+                                vcProbability: s,
+                            } = t;
+                            switch (!0) {
+                                case l > n:
+                                case a > n:
+                                case r > n:
+                                case s > n:
+                                    return !0;
+                                default:
+                                    return e;
+                            }
+                        })(k.A.getUserAffinity(e), n, i);
+                    });
+            },
+            [e, n],
+        );
     return (
         (0, T.Ay)(() => (Y.O(), () => Y.v())),
         {
@@ -430,8 +434,8 @@ function tp(t) {
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    (0, N.qf)(a, !1, tn.BRT.POPOUT),
-                                        (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.PANEL_OPENED });
+                                    ((0, N.qf)(a, !1, tn.BRT.POPOUT),
+                                        (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.PANEL_OPENED }));
                                 },
                             }),
                         })

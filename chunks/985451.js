@@ -12,10 +12,10 @@ function s() {
 }
 function o(e) {
     let t = r.get(e) ?? { holders: 0, timers: new Set() };
-    (t.holders += 1), r.set(e, t);
+    ((t.holders += 1), r.set(e, t));
     let n = !1,
         i = setTimeout(() => {
-            console.warn("[vibegrations] control lease expired without release", { projectId: e }), l();
+            (console.warn("[vibegrations] control lease expired without release", { projectId: e }), l());
         }, 35e3);
     function l() {
         n ||
@@ -23,7 +23,7 @@ function o(e) {
             clearTimeout(i),
             r.get(e) === t && (t.timers.delete(i), (t.holders -= 1), t.holders <= 0 && r.delete(e), s()));
     }
-    return t.timers.add(i), s(), l;
+    return (t.timers.add(i), s(), l);
 }
 let a = new Map();
 function u(e) {
@@ -32,7 +32,7 @@ function u(e) {
     if (null != t) {
         clearTimeout(t.timer);
         let i = o(e);
-        t.release(), a.set(e, { release: i, timer: n });
+        (t.release(), a.set(e, { release: i, timer: n }));
         return;
     }
     a.set(e, { release: o(e), timer: n });
@@ -47,7 +47,7 @@ function c(e) {
     let n = r.get(e);
     if (null != n) {
         for (let e of n.timers) clearTimeout(e);
-        r.delete(e), s();
+        (r.delete(e), s());
     }
 }
 function f(e) {

@@ -32,20 +32,20 @@ let r = {
                     if (_) {
                         if (s.$s.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, g.Tb)());
-                            t.delete(e.guild.id), s.$s.updateSetting(Array.from(t));
+                            (t.delete(e.guild.id), s.$s.updateSetting(Array.from(t)));
                         }
                     } else {
                         let t = new Set((0, g.Tb)());
-                        t.add(e.guild?.id), s.$s.updateSetting(Array.from(t));
+                        (t.add(e.guild?.id), s.$s.updateSetting(Array.from(t)));
                     }
                     if (r) {
                         if (s.JG.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, g.Kk)());
-                            t.delete(e.guild.id), s.JG.updateSetting(Array.from(t));
+                            (t.delete(e.guild.id), s.JG.updateSetting(Array.from(t)));
                         }
                     } else {
                         let t = new Set((0, g.Kk)());
-                        t.add(e.guild.id), s.JG.updateSetting(Array.from(t));
+                        (t.add(e.guild.id), s.JG.updateSetting(Array.from(t)));
                     }
                     null != c && c.length > 0 && (0, n.GL)(e.guild.id, { nick: c });
                 }
@@ -73,6 +73,6 @@ let r = {
                 changed_from_default: n,
             });
         }
-        (0, a.xP)(), l.h.dispatch({ type: "INVITE_MODAL_CLOSE", inviteCode: t });
+        ((0, a.xP)(), l.h.dispatch({ type: "INVITE_MODAL_CLOSE", inviteCode: t }));
     },
 };

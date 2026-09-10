@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { HeicUploadConversionExperiment: () => i });
+(n.r(t), n.d(t, { HeicUploadConversionExperiment: () => i }));
 let i = (0, n(945810).mj)({
     name: "2026-08-heic-upload-conversion",
     kind: "user",

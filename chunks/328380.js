@@ -38,7 +38,7 @@ function h(e) {
                 boostGemColor: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                 boostPriceTextColor: void 0,
                 handleClick: () => {
-                    (0, u.oT)(n, i.id, i.name, f), s?.(i);
+                    ((0, u.oT)(n, i.id, i.name, f), s?.(i));
                 },
             },
             viewable: {

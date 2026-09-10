@@ -36,7 +36,7 @@ function b(t) {
                               label: e,
                               action: () => {
                                   let i;
-                                  return (i = o.p(n)), void a.A.setNotificationSettings(t, i);
+                                  return ((i = o.p(n)), void a.A.setNotificationSettings(t, i));
                               },
                           },
                           n,

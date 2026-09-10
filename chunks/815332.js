@@ -21,7 +21,7 @@ function h(n) {
                 [i, a] = s.useState(null);
             return {
                 resetRenewalMutation: async function (t) {
-                    e(!0), a(null);
+                    (e(!0), a(null));
                     try {
                         await (0, u.ZK)(t, n);
                     } catch (n) {

@@ -11,7 +11,7 @@ function d(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         a = { closeModal: t, isGift: n },
         s = l.useRef(a);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         s.current = a;
     }),
         l.useEffect(() => {
@@ -30,7 +30,7 @@ function d(e, t, n) {
                     confirmText: c.intl.string(c.t.BddRzS),
                 }),
                 t());
-        }, [e, i]);
+        }, [e, i]));
 }
 let m = [];
 function p(e, t) {

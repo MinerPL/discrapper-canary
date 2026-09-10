@@ -31,7 +31,7 @@ class _ extends s.A {
     memberCount;
     emojis;
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.icon = e.icon),
@@ -41,7 +41,7 @@ class _ extends s.A {
             (this.premiumSubscriberCount = e.premiumSubscriberCount),
             (this.presenceCount = e.presenceCount),
             (this.memberCount = e.memberCount),
-            (this.emojis = e.emojis);
+            (this.emojis = e.emojis));
     }
     getIconURL(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -104,7 +104,7 @@ class E extends s.A {
     id;
     name;
     constructor(e) {
-        super(), (this.id = e.id), (this.name = e.name);
+        (super(), (this.id = e.id), (this.name = e.name));
     }
     static createFromServer(e) {
         return new E({ id: e.id, name: e.name });

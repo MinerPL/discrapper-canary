@@ -33,7 +33,7 @@ let y = {
     g = _();
 function _() {
     return new Promise((e, r) => {
-        (t = e), (i = r);
+        ((t = e), (i = r));
     });
 }
 function T() {
@@ -61,13 +61,13 @@ function S(e) {
         f = o.useRef(null),
         h = o.useRef(null),
         p = o.useRef({ onLoad: a, onVerify: c, onError: u, onExpire: s, onUnknownVendorErrorCode: d });
-    (p.current = { onLoad: a, onVerify: c, onError: u, onExpire: s, onUnknownVendorErrorCode: d }),
+    ((p.current = { onLoad: a, onVerify: c, onError: u, onExpire: s, onUnknownVendorErrorCode: d }),
         o.useEffect(() => {
             let e = !1,
                 l = 0;
             return (
                 (function () {
-                    if (null != window.turnstile) return x(), g;
+                    if (null != window.turnstile) return (x(), g);
                     if (
                         ("unloaded" === v &&
                             ((v = "loading"),
@@ -79,26 +79,26 @@ function S(e) {
                         null == document.getElementById(b))
                     ) {
                         let e = document.createElement("script");
-                        (e.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?onload=${A}&render=explicit`),
+                        ((e.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?onload=${A}&render=explicit`),
                             (e.id = b),
                             (e.async = !0),
                             (e.defer = !0),
                             (e.onerror = () => {
                                 !(function (e) {
                                     if ("ready" === v) return;
-                                    (v = "unloaded"), T(), document.getElementById(b)?.remove();
+                                    ((v = "unloaded"), T(), document.getElementById(b)?.remove());
                                     let r = i;
-                                    (g = _()), r?.(e ?? Error("Turnstile script failed to load"));
+                                    ((g = _()), r?.(e ?? Error("Turnstile script failed to load")));
                                 })(Error("Turnstile script failed to load"));
                             }),
-                            document.body.appendChild(e);
+                            document.body.appendChild(e));
                     }
                     return g;
                 })()
                     .then(() => {
                         if (e || null == f.current || null == window.turnstile) return;
                         let i = "invisible" === t ? "normal" : (t ?? "normal");
-                        (h.current = window.turnstile.render(f.current, {
+                        ((h.current = window.turnstile.render(f.current, {
                             sitekey: r,
                             theme: n ?? "auto",
                             size: i,
@@ -136,19 +136,19 @@ function S(e) {
                                 p.current.onExpire?.();
                             },
                         })),
-                            p.current.onLoad?.();
+                            p.current.onLoad?.());
                     })
                     .catch(() => {
                         e || p.current.onError?.("script-error");
                     }),
                 () => {
-                    (e = !0),
+                    ((e = !0),
                         null != h.current &&
                             null != window.turnstile &&
-                            (window.turnstile.remove(h.current), (h.current = null));
+                            (window.turnstile.remove(h.current), (h.current = null)));
                 }
             );
-        }, [r, n, t]);
+        }, [r, n, t]));
     let E = R[t ?? "normal"];
     return (0, l.jsx)("div", { ref: f, style: E });
 }
@@ -210,7 +210,7 @@ let H = new Set([
             T = o.useCallback(
                 (e, n) => {
                     let t = [`event_name:${e}`, `captcha_service:${r}`];
-                    null != n && t.push(`error_code:${n}`), M.A.increment({ name: P.K.CAPTCHA_EVENT, tags: t });
+                    (null != n && t.push(`error_code:${n}`), M.A.increment({ name: P.K.CAPTCHA_EVENT, tags: t }));
                 },
                 [r],
             ),
@@ -220,37 +220,37 @@ let H = new Set([
                     "invisible" === h && null != b.current && b.current?.execute());
             }, [t, b, h, r]),
             R = o.useCallback(() => {
-                v || (_("initial-load"), T("initial-load"), g(!0)), x();
+                (v || (_("initial-load"), T("initial-load"), g(!0)), x());
             }, [T, v, _, x]);
-        o.useEffect(() => {
+        (o.useEffect(() => {
             x();
         }, [x]),
             o.useEffect(() => {
                 R();
-            }, [R]);
+            }, [R]));
         let I = o.useCallback(
                 (e) => {
-                    _("error"), T("error", null != e && H.has(e) ? e : "unknown"), x(), c?.();
+                    (_("error"), T("error", null != e && H.has(e) ? e : "unknown"), x(), c?.());
                 },
                 [_, T, x, c],
             ),
             V = o.useCallback(
                 (e) => {
-                    _("verify"), T("verify"), a(e);
+                    (_("verify"), T("verify"), a(e));
                 },
                 [T, a, _],
             ),
             O = o.useCallback(() => {
-                _("render"), (0, E.emitCaptchaDistributionMetric)(p), i?.();
+                (_("render"), (0, E.emitCaptchaDistributionMetric)(p), i?.());
             }, [i, _, p]),
             D = o.useCallback(() => {
-                _("open"), T("open"), (0, E.emitCaptchaDistributionMetric)(p), u?.();
+                (_("open"), T("open"), (0, E.emitCaptchaDistributionMetric)(p), u?.());
             }, [T, u, _, p]),
             z = o.useCallback(() => {
-                _("close"), T("cancel"), s?.(), x();
+                (_("close"), T("cancel"), s?.(), x());
             }, [s, _, T, x]),
             U = o.useCallback(() => {
-                _("chal-expire"), T("chal-expire"), d?.();
+                (_("chal-expire"), T("chal-expire"), d?.());
             }, [d, _, T]),
             $ = o.useCallback((e) => {
                 N.A.captureMessage(`Unknown Turnstile error code: ${e}`, {
@@ -352,7 +352,7 @@ function z(e) {
             (0, l.jsx)(I, {
                 size: w ? "invisible" : void 0,
                 onVerify: function (e) {
-                    y(), n(e, C), r();
+                    (y(), n(e, C), r());
                 },
                 onClose: w ? r : void 0,
                 ...m,

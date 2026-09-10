@@ -8,14 +8,14 @@ n.d(t, {
     mH: () => k,
     cg: () => F,
     Y7: () => b,
-    kr: () => V,
+    kr: () => B,
     HG: () => R,
     KK: () => C,
     JX: () => v,
     tU: () => O,
     k5: () => g,
     nj: () => T,
-    $s: () => B,
+    $s: () => V,
     _Z: () => D,
     l0: () => U,
     mq: () => x,
@@ -141,7 +141,7 @@ function G(e, t, n) {
     }
     if (N(e)) {
         let n;
-        return (n = w(e, t) ?? D(e) ?? 0), A.intl.formatToPlainString(A.t["nLXlh+"], { orbAmount: n });
+        return ((n = w(e, t) ?? D(e) ?? 0), A.intl.formatToPlainString(A.t["nLXlh+"], { orbAmount: n }));
     }
     let i = (0, h.xv)(e);
     return n ? i.messages.nameWithArticle : i.messages.name;
@@ -158,7 +158,7 @@ function F(e) {
     let i = t.config.rewardsConfig.rewards[n];
     return i.type === o.l.REWARD_CODE ? i : null;
 }
-function V(e) {
+function B(e) {
     let {
             quest: { config: t },
         } = e,
@@ -167,7 +167,7 @@ function V(e) {
         n.assignmentMethod === s.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === o.l.REWARD_CODE)
     );
 }
-function B(e) {
+function V(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : d.pY.CROSS_PLATFORM;
 }

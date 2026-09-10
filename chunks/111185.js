@@ -43,9 +43,9 @@ function W(e) {
         u = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
         N = a.useRef(null);
     async function E(e) {
-        e.preventDefault(), L()(null != t, "Cannot submit null birthday."), m(!0);
+        (e.preventDefault(), L()(null != t, "Cannot submit null birthday."), m(!0));
         try {
-            await b.n7(t, M.w_.NEW_USER_FLOW), s();
+            (await b.n7(t, M.w_.NEW_USER_FLOW), s());
         } catch (e) {
             null != e.body && null != e.body.date_of_birth
                 ? (b.Xv(M.w_.NEW_USER_FLOW), b.$2(M.w_.NEW_USER_FLOW), i())
@@ -210,19 +210,19 @@ function ea(e) {
         ea = (0, d.bG)([f.A], () => f.A.getType() === ei.zY.INVITE_UNCLAIMED),
         er = a.useCallback(
             (e) => {
-                H(e),
+                (H(e),
                     S(X.i.CREATION_INTENT),
-                    g.default.track(R.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code });
+                    g.default.track(R.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code }));
             },
             [H, S],
         ),
         { content: eo, footer: ec } = (0, j.u)({
             hasFooter: !1,
             onBack: () => {
-                H(null), S(X.i.CHOOSE_TEMPLATE);
+                (H(null), S(X.i.CHOOSE_TEMPLATE));
             },
             onCreationIntentChosen: (e) => {
-                ee(e === en.IR.COMMUNITY), S(X.i.CUSTOMIZE_GUILD);
+                (ee(e === en.IR.COMMUNITY), S(X.i.CUSTOMIZE_GUILD));
             },
         }),
         { content: ed, footer: em } = (0, I.D)({
@@ -230,7 +230,7 @@ function ea(e) {
             titleClassName: el.RH,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                M(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0);
+                (M(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0));
             },
             onBack: () => {
                 S(X.i.CREATION_INTENT);
@@ -260,7 +260,7 @@ function ea(e) {
                     e.preventDefault();
                     let s = r.trim();
                     if ("" === s) return void N(P.intl.string(P.t.IRq5ah));
-                    N(null), d(!0);
+                    (N(null), d(!0));
                     let t = s.split("/"),
                         n = t[t.length - 1];
                     z.Ay.resolveInvite(n, "Join Guild", { inputValue: s }).then(
@@ -273,7 +273,7 @@ function ea(e) {
                                     inviteKey: s.code,
                                     context: e,
                                     callback: (e) => {
-                                        i(), z.Ay.transitionToInvite(e);
+                                        (i(), z.Ay.transitionToInvite(e));
                                     },
                                 }).catch((e) => {
                                     e instanceof B.Wl || e instanceof B.LG
@@ -338,7 +338,7 @@ function ea(e) {
                                     className: Y.LR,
                                     children: P.intl.format(P.t["8F/who"], {
                                         onClick: function () {
-                                            t(), (0, Z.openUserSettings)(V.X.CONNECTIONS_CATEGORY);
+                                            (t(), (0, Z.openUserSettings)(V.X.CONNECTIONS_CATEGORY));
                                         },
                                     }),
                                 }),

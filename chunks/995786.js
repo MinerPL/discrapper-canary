@@ -14,7 +14,7 @@ function A(e) {
         ? e
         : Object.keys(e).reduce((t, n) => {
               let a = (0, E.camelCase)(n);
-              return "object" != typeof e[n] || Array.isArray(e[n]) ? (t[a] = e[n]) : (t[a] = A(e[n])), t;
+              return ("object" != typeof e[n] || Array.isArray(e[n]) ? (t[a] = e[n]) : (t[a] = A(e[n])), t);
           }, {});
 }
 function c(e) {
@@ -70,7 +70,7 @@ function N(e) {
         exemptChannels: new Set(e.exempt_channels ?? []),
         exemptRoles: new Set(e.exempt_roles ?? []),
     };
-    return null != t.triggerMetadata && delete t.triggerMetadata.keywordLists, t;
+    return (null != t.triggerMetadata && delete t.triggerMetadata.keywordLists, t);
 }
 async function p(e) {
     let t = T(e);
@@ -94,7 +94,7 @@ async function S(e) {
     );
 }
 async function R(e, t) {
-    return await a.Bo.del({ url: O.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: (0, a.fT)() }), !0;
+    return (await a.Bo.del({ url: O.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: (0, a.fT)() }), !0);
 }
 async function U(e) {
     let t = await a.Bo.get({ url: O.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: (0, a.fT)() });
@@ -113,12 +113,12 @@ function m(e, t, n) {
     null == r ||
         (d.A.can(O.xBc.MANAGE_GUILD, r) &&
             (0, I.rI)(function () {
-                (0, i.zV)(O.HAw.GUILD_AUTOMOD_FEEDBACK, {
+                ((0, i.zV)(O.HAw.GUILD_AUTOMOD_FEEDBACK, {
                     feedback_type: u.Gb.MENTION_RAID_REMOVE_RESTRICTION,
                     decision_id: t,
                 }),
                     a.Bo.post({ url: O.Rsh.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e), rejectWithError: !0 }),
-                    n();
+                    n());
             }));
 }
 function D(e) {

@@ -18,20 +18,20 @@ class o extends l.Ay.Store {
 }
 let u = new o(i.h, {
     PAYMENT_SOURCE_CREATION_CONTEXT_CLEAR: function (e) {
-        (r = !1), (a = null), (s = null);
+        ((r = !1), (a = null), (s = null));
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START: function (e) {
-        (r = !0), (a = null), (s = null);
+        ((r = !0), (a = null), (s = null));
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_SUCCESS: function (e) {
         let { data: t } = e;
-        (r = !1), (a = null), (s = t);
+        ((r = !1), (a = null), (s = t));
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL: function (e) {
         let { error: t } = e;
-        (r = !1), (a = t), (s = null);
+        ((r = !1), (a = t), (s = null));
     },
     LOGOUT: function () {
-        (r = !1), (a = null), (s = null);
+        ((r = !1), (a = null), (s = null));
     },
 });

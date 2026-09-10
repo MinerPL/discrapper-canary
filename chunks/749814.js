@@ -1,5 +1,5 @@
 let n, a, o;
-t(321073), t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162);
+(t(321073), t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162));
 var i,
     l,
     s,
@@ -18,7 +18,7 @@ var i,
     y = t.n(p);
 let C = parseInt(y().version ?? "0", 10),
     T = null != y().ua && y().ua.indexOf("OculusBrowser") > -1;
-(() => {
+((() => {
     if (!("u" > typeof window) || null != window.WebSocket) return y().name;
 })(),
     T ||
@@ -40,7 +40,7 @@ let C = parseInt(y().version ?? "0", 10),
     ("Chrome" === y().name && C >= 72) ||
         ("Safari" === y().name && C >= 11) ||
         ("Opera" === y().name && C >= 60) ||
-        y().name;
+        y().name);
 let S = new u.Vy("LibDaveManager"),
     E = null,
     R = {
@@ -73,20 +73,20 @@ function O(e) {
                 if (null == l) {
                     if (t === c.ENCRYPT) {
                         let e = new n.Encryptor();
-                        e.SetProtocolVersionChangedCallback(() => {
+                        (e.SetProtocolVersionChangedCallback(() => {
                             _(e.GetProtocolVersion());
                         }),
                             _(e.GetProtocolVersion()),
-                            (l = e);
+                            (l = e));
                     } else l = new n.Decryptor();
                     i.cryptor = l;
                 }
                 if (t === c.ENCRYPT) {
                     let e = l;
-                    e.SetPassthroughMode(!o && a === n.kDisabledVersion), e.SetKeyRatchet(o);
+                    (e.SetPassthroughMode(!o && a === n.kDisabledVersion), e.SetKeyRatchet(o));
                 } else {
                     let e = l;
-                    e.TransitionToPassthroughMode(!o && a === n.kDisabledVersion), e.TransitionToKeyRatchet(o);
+                    (e.TransitionToPassthroughMode(!o && a === n.kDisabledVersion), e.TransitionToKeyRatchet(o));
                 }
             })(r);
             break;
@@ -99,13 +99,13 @@ function O(e) {
                 [o.audioSSRC, ...o.videoSSRCs]))
                     a.includes(e) || h.get(e) !== r || h.delete(e);
                 for (let e of a) e > 0 && h.set(e, r);
-                (o.audioSSRC = t), (o.videoSSRCs = n);
+                ((o.audioSSRC = t), (o.videoSSRCs = n));
             })(r);
             break;
         case d.UPDATE_CODECS:
             !(function (e) {
                 let { audioCodec: r, videoCodec: t } = e;
-                (a = D(r)), (o = D(t));
+                ((a = D(r)), (o = D(t)));
             })(r);
             break;
         case d.DESTROY_USER:
@@ -134,14 +134,14 @@ async function P() {
                           let { DaveModuleFactory: n } = t;
                           n(R)
                               .then((r) => {
-                                  S.info("Successfully initialized DAVE"), e(r);
+                                  (S.info("Successfully initialized DAVE"), e(r));
                               })
                               .catch((e) => {
-                                  S.error("Failed to initialize DAVE", e), r(e);
+                                  (S.error("Failed to initialize DAVE", e), r(e));
                               });
                       })
                       .catch((e) => {
-                          S.error("Failed to load DAVE module", e), r(e);
+                          (S.error("Failed to load DAVE module", e), r(e));
                       });
               })))),
         (b = "initialized"),
@@ -185,7 +185,7 @@ function v(e, r) {
                     if (0 === o) return null;
                     let l = n.HEAPU8.subarray(u, u + o),
                         d = new Uint8Array(o);
-                    d.set(l), (e.data = d.buffer);
+                    (d.set(l), (e.data = d.buffer));
                 } finally {
                     n._free(u);
                 }
@@ -205,7 +205,7 @@ function v(e, r) {
                     if (0 === l) return null;
                     let s = n.HEAPU8.subarray(o, o + l),
                         u = new Uint8Array(l);
-                    return u.set(s), (e.data = u.buffer), e;
+                    return (u.set(s), (e.data = u.buffer), e);
                 } finally {
                     n._free(o);
                 }
@@ -235,9 +235,9 @@ function D(e) {
             return n.Codec.Unknown;
     }
 }
-(self.onmessage = (e) => {
+((self.onmessage = (e) => {
     O(e);
 }),
     (self.onrtctransform = (e) => {
         g({ type: d.RTC_TRANSFORM, readable: e.transformer.readable, writable: e.transformer.writable });
-    });
+    }));

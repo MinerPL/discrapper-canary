@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CG: () => O,
     DJ: () => x,
     IP: () => y,
@@ -14,7 +14,7 @@ n.d(t, {
     vJ: () => U,
     we: () => L,
 }),
-    n(321073);
+    n(321073));
 var i = n(136722),
     r = n(155718),
     a = n(842937),
@@ -197,13 +197,13 @@ function G(e, t, n, i) {
         s = (0, l.$m)(a, t);
     if (null != t && s) {
         var o, d, c;
-        (o = t.id),
+        ((o = t.id),
             (d = e.id),
             (c = I.default.castChannelIdAsMessageId(e.id)),
             (r =
                 null == a || null == o || null == d
                     ? w(a, o, c)
-                    : `${location.protocol}//${location.host}${f.BVt.CHANNEL_THREAD_VIEW(a, o, d, c)}`);
+                    : `${location.protocol}//${location.host}${f.BVt.CHANNEL_THREAD_VIEW(a, o, d, c)}`));
     } else r = i ?? w(a, e.id, n);
     return r;
 }

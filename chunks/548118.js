@@ -149,7 +149,7 @@ let y = o.Ay.connectStores([m.A], (e) => {
                 super(e);
                 const { style: t } = e,
                     n = null != t ? I(t.backgroundImage) : null;
-                (this.cachedURLs = [n]), (this.state = { cached: n, loaded: !0 });
+                ((this.cachedURLs = [n]), (this.state = { cached: n, loaded: !0 }));
             }
             componentDidUpdate(e, t) {
                 if (t === this.state) return;
@@ -161,14 +161,14 @@ let y = o.Ay.connectStores([m.A], (e) => {
                     : null != a && a !== n && !0 === i && this.setState({ loaded: !1 }, () => this.preloadURL(a));
             }
             preloadURL(e) {
-                this.canceller?.(),
+                (this.canceller?.(),
                     (this.canceller = (0, A.yt)(e, (t) => {
-                        (this.canceller = null),
-                            t || (this.cachedURLs.push(e), this.setState({ cached: e, loaded: !0 }));
-                    }));
+                        ((this.canceller = null),
+                            t || (this.cachedURLs.push(e), this.setState({ cached: e, loaded: !0 })));
+                    })));
             }
             componentWillUnmount() {
-                this.canceller?.(), (this.cachedURLs.length = 0);
+                (this.canceller?.(), (this.cachedURLs.length = 0));
             }
             render() {
                 let { style: t, ...n } = this.props,
@@ -181,7 +181,7 @@ let y = o.Ay.connectStores([m.A], (e) => {
                 );
             }
         }
-        return E()(t, e), t;
+        return (E()(t, e), t);
     })((e) => (0, i.jsx)(L, { ...e })),
 );
 class D extends r.PureComponent {

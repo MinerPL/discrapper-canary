@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     AS: () => Y,
     Ot: () => ee,
     cv: () => q,
@@ -10,7 +10,7 @@ n.d(t, {
     Kh: () => X,
 }),
     n(134528),
-    n(947204);
+    n(947204));
 var l = n(284009),
     i = n.n(l),
     s = n(719442),
@@ -89,8 +89,8 @@ for (let e in m.Ay.RULES) {
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = C[e];
-    "skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e]));
+    ("skip" !== t.type && (S[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (v[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
 function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
@@ -99,7 +99,7 @@ function N(e) {
         ...e,
         parse(e, n, l) {
             let i = t.call(this, e, n, l);
-            return i instanceof Array || (i.originalMatch = e), i;
+            return (i instanceof Array || (i.originalMatch = e), i);
         },
     };
 }
@@ -308,34 +308,34 @@ function F(e) {
         let e = n.indexOf(l, i);
         if (-1 === e) return W(`Slate: Unable to find syntax characters "${l}" at position ${i}`, l, i);
         let r = n.substring(i, e + l.length);
-        t.push({ text: r, attributes: [...s], start: i, data: null }), (i = e + l.length);
+        (t.push({ text: r, attributes: [...s], start: i, data: null }), (i = e + l.length));
     }
     return i;
 }
 function H(e) {
     let { result: t, sourceText: n, text: l, originalStart: i, attributes: s, data: r } = e,
         a = B(n, i);
-    for (; "\n" === l.charAt(0) || " " === l.charAt(0); ) l = l.substring(1);
+    for (; "\n" === l.charAt(0) || " " === l.charAt(0);) l = l.substring(1);
     let o = n.indexOf(l, a);
     if ((o !== a ? (a = i = K(t, n, a, o)) : "\\" === l && "\\" === n.charAt(o + 1) && (o++, (i = ++a)), o !== a))
         return W(`Slate: Unable to find content in source text at start position ${a} for text position ${o}`, l, i);
     let u = a + l.length,
         c = n.substring(i, u);
-    return t.push({ text: c, attributes: s.slice(), start: i, data: r }), u;
+    return (t.push({ text: c, attributes: s.slice(), start: i, data: r }), u);
 }
 function B(e, t) {
-    for (; "\n" === e.charAt(t) || " " === e.charAt(t); ) t++;
+    for (; "\n" === e.charAt(t) || " " === e.charAt(t);) t++;
     return t;
 }
 function W(e, t, n) {
-    if (t.split("").some((e) => y.has(e))) return A.error(e), n;
+    if (t.split("").some((e) => y.has(e))) return (A.error(e), n);
     throw Error(e);
 }
 function K(e, t, n, l) {
-    for (; n < l; )
+    for (; n < l;)
         if (y.has(t[n]))
-            (n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
-                (n = B(t, n));
+            ((n = F({ result: e, sourceText: t, syntaxCharacters: t[n], pos: n, attributes: ["syntaxBefore"] })),
+                (n = B(t, n)));
         else break;
     return n;
 }
@@ -384,7 +384,7 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
                         if (!($.equals(p, e) || $.isAncestor(p, e))) {
                             let e = t.isVoid(m);
                             if ("line" === a && q.isElement(m) && !e) {
-                                null != l && (yield l, (l = void 0)), (A = !0);
+                                (null != l && (yield l, (l = void 0)), (A = !0));
                                 return;
                             }
                             if (!u && e) continue;
@@ -406,8 +406,8 @@ if ((n(654821), !s.KE._addedDiscordOverrides)) {
                 yield r;
     };
     let t = r.rL.findDocumentOrShadowRoot;
-    (r.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),
-        (s.KE._addedDiscordOverrides = !0);
+    ((r.rL.findDocumentOrShadowRoot = (e) => e.windowContext?.renderWindow.document ?? t(e)),
+        (s.KE._addedDiscordOverrides = !0));
 }
 let Z = {
         ...s.KE,
@@ -573,7 +573,7 @@ let Z = {
                             let t,
                                 n = [],
                                 l = /\\|```/g;
-                            for (; null != (t = l.exec(e)); ) {
+                            for (; null != (t = l.exec(e));) {
                                 if ("\\" === t[0]) {
                                     l.lastIndex += 1;
                                     continue;
@@ -633,12 +633,12 @@ let Z = {
                                         }
                                         return t;
                                     })(l);
-                                    return i.set(e, o), o;
+                                    return (i.set(e, o), o);
                                 })(o, t, l).forEach((e) => {
                                     a.push({ ...e, start: e.start + s });
                                 });
                         }
-                        (r = !r), (s = n);
+                        ((r = !r), (s = n));
                     }
                     return a;
                 })(i.join(""), t ?? null, l, n),
@@ -679,7 +679,7 @@ let Z = {
         },
         clamp(e, t) {
             let [n, l] = Q.edges(t);
-            return X.isBefore(e, n) && (e = n), X.isAfter(e, l) && (e = l), e;
+            return (X.isBefore(e, n) && (e = n), X.isAfter(e, l) && (e = l), e);
         },
     },
     Q = {
@@ -726,7 +726,7 @@ function el(e, t, n, l) {
         s = 0,
         r = n.length,
         a = Math.floor((s + r) / 2);
-    for (; a !== s; )
+    for (; a !== s;)
         if (
             (en(e, { anchor: n[a], focus: n[a] }, i) ? (l ? (r = a) : (s = a)) : l ? (s = a) : (r = a),
             (a = Math.floor((s + r) / 2)),

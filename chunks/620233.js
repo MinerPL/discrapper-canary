@@ -20,7 +20,7 @@ async function c(e) {
         }));
         s.h.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: t });
     } catch (e) {
-        s.h.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" }), console.log(e);
+        (s.h.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" }), console.log(e));
     }
 }
 async function u(e) {
@@ -31,8 +31,8 @@ async function u(e) {
             if (e?.body != null) {
                 let { installation: t, ...n } = e.body;
                 i.Ay.Emitter.batched(() => {
-                    t && s.h.dispatch({ type: "INSTALLATION_ID", installation: t }),
-                        s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: o.sz, experiments: n });
+                    (t && s.h.dispatch({ type: "INSTALLATION_ID", installation: t }),
+                        s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: o.sz, experiments: n }));
                 });
             } else s.h.dispatch({ type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: o.sz });
         } catch (e) {

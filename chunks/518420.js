@@ -1,4 +1,4 @@
-i.d(t, { default: () => c }), i(323874), i(14289), i(35956);
+(i.d(t, { default: () => c }), i(323874), i(14289), i(35956));
 var s = i(477900),
     r = i(582128),
     n = i(189213),
@@ -10,7 +10,7 @@ let l = [],
         let { transitionState: t, onClose: i, questId: c } = e,
             u = r.useMemo(() => {
                 let e = new URL(`${window.location.origin}/quests/${c}`);
-                return e.searchParams.append("referrer_id", "quest_home_qr_code"), e.toString();
+                return (e.searchParams.append("referrer_id", "quest_home_qr_code"), e.toString());
             }, [c]);
         return (0, s.jsx)(n.Modal, {
             actions: l,

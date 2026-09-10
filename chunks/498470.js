@@ -39,7 +39,7 @@ function I(e) {
             };
         case i.d.OPEN_SOCIAL_LAYER_STOREFRONT:
             return () => {
-                null != l && (0, o.default)({ applicationId: l }), d?.();
+                (null != l && (0, o.default)({ applicationId: l }), d?.());
             };
         case i.d.OPEN_MARKETING_PAGE:
             return () => {
@@ -47,7 +47,7 @@ function I(e) {
                     null != n && "" !== n
                         ? `${E.BVt.APPLICATION_STORE}?${A.x}=${encodeURIComponent(n)}`
                         : E.BVt.APPLICATION_STORE;
-                (0, a.pX)(e), d?.();
+                ((0, a.pX)(e), d?.());
             };
         case i.d.OPEN_TIER_1_PAYMENT_MODAL:
             return () =>

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => S }), n(938796);
+(n.r(t), n.d(t, { default: () => S }), n(938796));
 var i = n(158390),
     r = n(247775),
     a = n(17928),
@@ -69,10 +69,10 @@ let E = (() => {
     f = "DeveloperOptionsRoutingKey",
     p = [];
 function T(e) {
-    (I = { ...h, ...I, ...e }), E.set(I.sourceMapsEnabled), l.w.set(A, I);
+    ((I = { ...h, ...I, ...e }), E.set(I.sourceMapsEnabled), l.w.set(A, I));
 }
 function m(e) {
-    (p = e), l.w.set(f, p);
+    ((p = e), l.w.set(f, p));
 }
 class g extends a.Ay.Store {
     static displayName = "DeveloperOptionsStore";
@@ -153,12 +153,12 @@ class g extends a.Ay.Store {
 }
 let S = new g(o.h, {
     LOGOUT: function (e) {
-        T(h), m([]);
+        (T(h), m([]));
     },
     CONNECTION_OPEN: function (e) {
         let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
             n = t || null != e.user.personal_connection_id;
-        t && E.set(I.sourceMapsEnabled), u.A.setTags({ isStaff: n.toString() });
+        (t && E.set(I.sourceMapsEnabled), u.A.setTags({ isStaff: n.toString() }));
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;

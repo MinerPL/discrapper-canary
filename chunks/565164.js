@@ -1,4 +1,4 @@
-n.d(t, { B8: () => h, wb: () => p, xx: () => m, z5: () => f }), n(321073);
+(n.d(t, { B8: () => h, wb: () => p, xx: () => m, z5: () => f }), n(321073));
 var r = n(477900),
     l = n(582128),
     a = n(61491),
@@ -40,7 +40,7 @@ function f(e, t, n, r) {
                     let r = m(n.text);
                     null != r && l.push({ startSec: n.startTime, endSec: n.endTime, ...r });
                 }
-                l.sort((e, t) => e.startSec - t.startSec), i({ url: n, cues: l });
+                (l.sort((e, t) => e.startSec - t.startSec), i({ url: n, cues: l }));
             }
         }, [n, t, e]),
         l.useEffect(() => {
@@ -61,7 +61,7 @@ function h(e, t) {
     if (0 === e.length) return null;
     let n = 0,
         r = e.length - 1;
-    for (; n <= r; ) {
+    for (; n <= r;) {
         let l = (n + r) >> 1,
             a = e[l];
         if (t < a.startSec) r = l - 1;

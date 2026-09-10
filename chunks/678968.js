@@ -38,7 +38,7 @@ function g(e) {
                 let e = (0, s.qf)(t.current?.parentNode, t.current);
                 null != e && (0, s.sP)(e);
             }
-            n(a.uF.VIDEO_MODAL_END_CARD, d.Cy.LEARN_MORE), T(a.uF.VIDEO_MODAL_END_CARD, d.Cy.OPEN_GAME_LINK);
+            (n(a.uF.VIDEO_MODAL_END_CARD, d.Cy.LEARN_MORE), T(a.uF.VIDEO_MODAL_END_CARD, d.Cy.OPEN_GAME_LINK));
         }, [D, t, T, n]),
         { title: x, subtitle: L } = {
             title: (0, E.wr)(I),

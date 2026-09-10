@@ -43,8 +43,8 @@ function _(e) {
                     emojiName: d?.emoji?.name,
                     soundId: d?.sound?.id,
                     onComplete: (e, t) => {
-                        (I = e),
-                            t && ((T = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, E.o)(!0));
+                        ((I = e),
+                            t && ((T = t), e.isSubscription && null == s.A.getPremiumSubscription(!1) && (0, E.o)(!0)));
                     },
                     ...n,
                 });

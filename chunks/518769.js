@@ -1,4 +1,4 @@
-n.d(t, { wY: () => N, ip: () => S, Ay: () => y }), n(321073);
+(n.d(t, { wY: () => N, ip: () => S, Ay: () => y }), n(321073));
 var i,
     r,
     a = n(713402),
@@ -66,7 +66,7 @@ class y {
     _participantsIndex = new a.J(L, C);
     _requestToSpeakIndex = new a.J(() => [], O);
     constructor(e) {
-        (this.channelId = e), (this.guildId = d.A.getChannel(e)?.getGuildId());
+        ((this.channelId = e), (this.guildId = d.A.getChannel(e)?.getGuildId()));
     }
     _getParticipantsForUser(e, t) {
         let n,
@@ -75,7 +75,7 @@ class y {
         if (null == r) return i;
         let a = E.default.getUser(e);
         if (null == a)
-            return null != this.guildId && p.A.isPublic(this.channelId) && c.A.requestMember(this.guildId, e), i;
+            return (null != this.guildId && p.A.isPublic(this.channelId) && c.A.requestMember(this.guildId, e), i);
         let s = null != t ? t[0] : null,
             d = null != this.guildId ? u.Ay.getMember(this.guildId, e) : null,
             S = d?.nick ?? I.Ay.getName(this.guildId, this.channelId, a),
@@ -105,7 +105,7 @@ class y {
         let O = o.A.getStreamForUser(e, this.guildId) ?? o.A.getActiveStreamForUser(e, this.guildId);
         if (null != O && O.channelId === this.channelId) {
             let e = (0, l._z)(O);
-            (n = { ...N, id: e, type: "STREAM", rtsState: T.zF.NONE }), i.push(n);
+            ((n = { ...N, id: e, type: "STREAM", rtsState: T.zF.NONE }), i.push(n));
         }
         return i;
     }
@@ -115,13 +115,13 @@ class y {
         return (
             (null != t || 0 !== n.length) &&
             (t?.forEach((e) => {
-                this._participantsIndex.delete(e.id), this._requestToSpeakIndex.delete(e.id);
+                (this._participantsIndex.delete(e.id), this._requestToSpeakIndex.delete(e.id));
             }),
             n.forEach((t) => {
-                this._participantsIndex.set(t.id, t),
+                (this._participantsIndex.set(t.id, t),
                     t.id === e && R(t.rtsState)
                         ? this._requestToSpeakIndex.set(e, t)
-                        : this._requestToSpeakIndex.delete(e);
+                        : this._requestToSpeakIndex.delete(e));
             }),
             (this.participants[e] = n),
             !0)

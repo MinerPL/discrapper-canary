@@ -15,7 +15,7 @@ function c() {
 class u extends i.Ay.Store {
     static displayName = "HubLinkNoticeStore";
     initialize() {
-        this.waitFor(s.A, a.A), this.syncWith([a.A], c);
+        (this.waitFor(s.A, a.A), this.syncWith([a.A], c));
     }
     channelNoticePredicate(e) {
         return !!e.features.has(l.GuildFeatures.LINKED_TO_HUB) && !o;

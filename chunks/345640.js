@@ -4,5 +4,5 @@ var a = n(17928),
     i = n(977997);
 function s(t) {
     var e;
-    return (e = t?.id), (0, a.bG)([i.A, l.default], () => i.A.isInChannel(e, l.default.getId()));
+    return ((e = t?.id), (0, a.bG)([i.A, l.default], () => i.A.isInChannel(e, l.default.getId())));
 }

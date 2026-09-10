@@ -73,7 +73,7 @@ var m = d(478034),
                     (0, e.v)(u.t, {
                         class: "IncodeAgeVerificationButton",
                         onClick: () => {
-                            c(!0), l.nextStep();
+                            (c(!0), l.nextStep());
                         },
                         isLoading: d,
                         "data-testid": "age-verification-continue-button",
@@ -265,7 +265,7 @@ var I = ({ state: l }) => {
                             variant: "secondary",
                             "aria-haspopup": "dialog",
                             onClick: () => {
-                                l.digitalUploadReplace(), c.current?.click();
+                                (l.digitalUploadReplace(), c.current?.click());
                             },
                             children: d("idv2.digitalIdUpload.reviewScreen.replaceButton"),
                         }),
@@ -604,7 +604,7 @@ var I = ({ state: l }) => {
             h = (l) => {
                 let t = l.target,
                     d = t.files?.[0];
-                d && m(d), (t.value = "");
+                (d && m(d), (t.value = ""));
             };
         return (0, e.v)(e.x, {
             children: [

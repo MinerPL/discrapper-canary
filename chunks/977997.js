@@ -19,7 +19,7 @@ let E = 0,
     g = {};
 function S(e, t) {
     let n = e[t];
-    return null == n && ((n = {}), (e[t] = n)), n;
+    return (null == n && ((n = {}), (e[t] = n)), n);
 }
 function N(e) {
     let t = h[u.ME] ?? {};
@@ -38,16 +38,16 @@ function O(e, t, n) {
     if (s === l) return [!1, l, s];
     if (null != s) {
         let n;
-        delete a[t],
+        (delete a[t],
             null != s.channelId && (delete S(p, s.channelId)[t], delete S(T, s.channelId)[t]),
             null != s.sessionId && delete S(m, t)[s.sessionId],
             (i = e ?? u.ME),
-            (n = C(i)).has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? f.delete(i) : f.set(i, n));
+            (n = C(i)).has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? f.delete(i) : f.set(i, n)));
     }
     if (null != l) {
         if (((a[t] = l), null != l.channelId && ((S(p, l.channelId)[t] = l), l.selfVideo))) {
             let n;
-            (S(T, l.channelId)[t] = l), (r = e ?? u.ME), (n = C(r)).has(t) || ((n = new Set(n)).add(t), f.set(r, n));
+            ((S(T, l.channelId)[t] = l), (r = e ?? u.ME), (n = C(r)).has(t) || ((n = new Set(n)).add(t), f.set(r, n)));
         }
         null != l.sessionId && (S(m, t)[l.sessionId] = l);
     }
@@ -78,10 +78,10 @@ function R(e, t) {
 }
 function L(e) {
     let { guild: t } = e;
-    s().forEach(h[t.id], (e) => {
+    (s().forEach(h[t.id], (e) => {
         O(t.id, e.userId, () => null);
     }),
-        delete h[t.id];
+        delete h[t.id]);
 }
 class y extends l.Ay.Store {
     static displayName = "VoiceStateStore";
@@ -154,16 +154,16 @@ let D = new y(o.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t, sessionId: n } = e,
             a = null != i && i !== t.id;
-        return a && ((h = {}), (p = {}), (m = {}), (T = {}), f.clear()), (i = t.id), (r = n), a;
+        return (a && ((h = {}), (p = {}), (m = {}), (T = {}), f.clear()), (i = t.id), (r = n), a);
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function () {
-        (h = {}), (p = {}), (m = {}), (T = {}), f.clear();
+        ((h = {}), (p = {}), (m = {}), (T = {}), f.clear());
     },
     OVERLAY_INITIALIZE: function (e) {
         let { voiceStates: t, user: n, sessionId: a } = e;
         for (let [e, n] of ((h = {}), (p = {}), (m = {}), (T = {}), Object.entries(t)))
             for (let [t, i] of Object.entries(n)) O(e, t, () => new c.A(i));
-        (i = n.id), (r = a);
+        ((i = n.id), (r = a));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e,
@@ -195,8 +195,8 @@ let D = new y(o.h, {
             let [i] = R(e.guildId, n);
             t = t || i;
         }
-        for (let n of e.removedVoiceStateUsers) O(e.guildId, n, () => null), (t = !0);
-        return t && A++, t;
+        for (let n of e.removedVoiceStateUsers) (O(e.guildId, n, () => null), (t = !0));
+        return (t && A++, t);
     },
     RTC_CONNECTION_PLATFORM: function (e) {
         let { userId: t, channelId: n, platform: i } = e;

@@ -55,7 +55,7 @@ function p(e) {
         (E = l.useRef(new Set())),
         (I = l.useMemo(() => {
             let e = new Set(p?.map((e) => e.author_id));
-            return (0, c.v)([...E.current], [...e]) || (E.current = e), E.current;
+            return ((0, c.v)([...E.current], [...e]) || (E.current = e), E.current);
         }, [p])),
         (y = (0, i.yK)([d.A], () =>
             Array.from(I).filter((e) => {

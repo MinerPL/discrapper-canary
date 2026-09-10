@@ -180,11 +180,11 @@ function E(e) {
     let t = (function (e) {
         if ("null" === e.origin && e.pathname.startsWith("//")) return e.protocol;
         let t = "";
-        "" !== e.username && (t += e.username), "" !== e.password && (t += ":" + e.password), "" !== t && (t += "@");
+        ("" !== e.username && (t += e.username), "" !== e.password && (t += ":" + e.password), "" !== t && (t += "@"));
         let n = "//" === e.href.substr(e.protocol.length, 2);
         return `${e.protocol}${n ? "//" : ""}${t}${e.host}`;
     })(e);
-    return (t += A(e.pathname)), (t += A(e.search)), (t += A(e.hash));
+    return ((t += A(e.pathname)), (t += A(e.search)), (t += A(e.hash)));
 }
 function A(e) {
     let t = i.A.safeDecodeURIComponent(e);
@@ -192,18 +192,18 @@ function A(e) {
     let n = "",
         r = e,
         a = t;
-    for (; r.length > 0; ) {
+    for (; r.length > 0;) {
         let e = r.codePointAt(0),
             t = a.codePointAt(0);
         if (e === t) {
             let t = String.fromCodePoint(e);
-            (n += t), (r = r.substring(t.length)), (a = a.substring(t.length));
+            ((n += t), (r = r.substring(t.length)), (a = a.substring(t.length)));
             continue;
         }
         let i = String.fromCodePoint(t),
             s = encodeURIComponent(i),
             l = s === i ? 3 : s.length;
-        (n += (
+        ((n += (
             t >= 0 && t < 128
                 ? 1 !== _[t]
                 : 8206 === t ||
@@ -284,7 +284,7 @@ function A(e) {
             ? s
             : i),
             (r = r.substring(l)),
-            (a = a.substring(i.length));
+            (a = a.substring(i.length)));
     }
     return n;
 }

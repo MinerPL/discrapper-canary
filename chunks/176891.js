@@ -1,9 +1,9 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.YEAR_PATTERN = t.MONTH_DICTIONARY = t.WEEKDAY_DICTIONARY = void 0),
     (t.parseYear = function (e) {
         if (e.match(/^[0-9]{1,4}$/)) {
             let t = parseInt(e);
-            return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
+            return (t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t);
         }
         return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
     }),
@@ -67,4 +67,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         dez: 12,
         "dez.": 12,
     }),
-    (t.YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?");
+    (t.YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?"));

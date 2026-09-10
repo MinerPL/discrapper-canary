@@ -172,7 +172,7 @@ function B(e) {
                                 id: "learn-more",
                                 label: X.intl.string(X.t["Ws2Bl+"]),
                                 action: function () {
-                                    (0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                    ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
                                               type: C.F.CLICK_INTERNAL,
                                               adCreativeType: r.p.QUEST,
@@ -190,7 +190,7 @@ function B(e) {
                                               questContentCTA: h.Cy.CONTEXT_MENU_LEARN_MORE,
                                               sourceQuestContent: e.sourceQuestContent,
                                           }),
-                                        (0, j.mA)({ fromContent: e.questContent, questId: e.quest.id });
+                                        (0, j.mA)({ fromContent: e.questContent, questId: e.quest.id }));
                                 },
                                 icon: d.r,
                                 leadingAccessory: { type: "icon", icon: d.r },
@@ -218,7 +218,7 @@ function B(e) {
                                 id: "hide-entrypoint",
                                 label: X.intl.string(X.t.NN79E9),
                                 action: function () {
-                                    (0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
+                                    ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, R.r)({
                                               type: C.F.CLICK_INTERNAL,
                                               adCreativeType: r.p.QUEST,
@@ -237,7 +237,7 @@ function B(e) {
                                               sourceQuestContent: e.sourceQuestContent,
                                           }),
                                         (0, y.vy)(e.questContent) &&
-                                            ((0, m.g5)(e.quest.id, e.questContent), w && (0, j.z6)(e.quest));
+                                            ((0, m.g5)(e.quest.id, e.questContent), w && (0, j.z6)(e.quest)));
                                 },
                                 subtext: X.intl.string(X.t.RK9gxo),
                             }),
@@ -256,7 +256,7 @@ function B(e) {
                                 id: "enrollment",
                                 label: X.intl.string(X.t.taqkwK),
                                 action: function () {
-                                    Z(), et();
+                                    (Z(), et());
                                 },
                             }),
                             (0, i.jsx)(c.Dr, {
@@ -275,7 +275,7 @@ function B(e) {
                                         (0, i.jsx)(c.Dr, {
                                             disabled: !0,
                                             id: "status",
-                                            label: `Status: ${((0, k.YL))(e.quest) ? "alive" : "dead"}`,
+                                            label: `Status: ${(0, k.YL)(e.quest) ? "alive" : "dead"}`,
                                         }),
                                         (0, i.jsx)(c.Dr, {
                                             id: "start",
@@ -318,7 +318,7 @@ function w(e) {
         d = (0, U.go)(),
         I = l.useRef(null),
         N = l.useCallback(() => {
-            (0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
+            ((0, f.E5)(f.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
                 ? (0, R.r)({
                       type: C.F.CLICK_INTERNAL,
                       adCreativeType: r.p.QUEST,
@@ -336,7 +336,7 @@ function w(e) {
                       questContentPosition: c,
                       sourceQuestContent: u,
                   }),
-                null != n && n();
+                null != n && n());
         }, [n, o.id, E, c, A, u, d]);
     return (0, i.jsx)(T.Y, {
         targetElementRef: I,

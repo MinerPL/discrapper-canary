@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { XXH64: () => u, hash: () => c });
+(r.r(t), r.d(t, { XXH64: () => u, hash: () => c }));
 let n = 2n ** 64n - 1n,
     i = new TextEncoder();
 function o(e, t, r, n) {
@@ -54,12 +54,12 @@ class u {
             n = t + r;
         if (0 === r) return this;
         if (((this.#a += r), 0 === this.#s && (this.#o = new Uint8Array(32)), this.#s + r < 32))
-            return this.#o.set(e.subarray(0, r), this.#s), (this.#s += r), this;
+            return (this.#o.set(e.subarray(0, r), this.#s), (this.#s += r), this);
         if (this.#s > 0) {
             let r;
             this.#o.set(e.subarray(0, 32 - this.#s), this.#s);
             let n = 0;
-            (r = a(this.#o, n)),
+            ((r = a(this.#o, n)),
                 (this.#t = l(0x9e3779b185ebca87n * s(l(this.#t + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                 (n += 8),
                 (r = a(this.memory, n)),
@@ -71,13 +71,13 @@ class u {
                 (r = a(this.memory, n)),
                 (this.#i = l(0x9e3779b185ebca87n * s(l(this.#i + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                 (t += 32 - this.#s),
-                (this.#s = 0);
+                (this.#s = 0));
         }
         if (t <= n - 32) {
             let r = n - 32;
             do {
                 let r;
-                (r = a(e, t)),
+                ((r = a(e, t)),
                     (this.#t = l(0x9e3779b185ebca87n * s(l(this.#t + 0xc2b2ae3d27d4eb4fn * r), 31n))),
                     (t += 8),
                     (r = a(e, t)),
@@ -88,10 +88,10 @@ class u {
                     (t += 8),
                     (r = a(e, t)),
                     (this.#i = l(0x9e3779b185ebca87n * s(l(this.#i + 0xc2b2ae3d27d4eb4fn * r), 31n))),
-                    (t += 8);
+                    (t += 8));
             } while (t <= r);
         }
-        return t < n && (this.#o.set(e.subarray(t, n), this.#s), (this.#s = n - t)), this;
+        return (t < n && (this.#o.set(e.subarray(t, n), this.#s), (this.#s = n - t)), this);
     }
     digest() {
         let e = this.#o,
@@ -117,9 +117,9 @@ class u {
                 n += BigInt(this.#a);
             r <= t - 8;
         )
-            (u = l(0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * (u = a(e, r))), 31n))),
+            ((u = l(0x9e3779b185ebca87n * s(l(0xc2b2ae3d27d4eb4fn * (u = a(e, r))), 31n))),
                 (n = l(0x9e3779b185ebca87n * s(n ^ u, 27n) + 0x85ebca77c2b2ae63n)),
-                (r += 8);
+                (r += 8));
         for (
             r + 4 <= t &&
             ((n = l(

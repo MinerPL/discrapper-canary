@@ -91,7 +91,7 @@ function A(e) {
             (e) => {
                 let t = e.contentRect.width;
                 if (null == t || g.current === t) return;
-                m(t), (g.current = t);
+                (m(t), (g.current = t));
                 let l = t - I.current.reduce((e, t, l) => e + t + 20 * (0 !== l));
                 c?.(l);
             },

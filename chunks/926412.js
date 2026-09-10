@@ -1,4 +1,5 @@
 !(function (e) {
+    "use strict";
     function a(e, a, s) {
         var n = e + " ";
         switch (s) {
@@ -9,19 +10,23 @@
             case "m":
                 return a ? "jedna minuta" : "jedne minute";
             case "mm":
-                return 1 === e ? (n += "minuta") : 2 === e || 3 === e || 4 === e ? (n += "minute") : (n += "minuta"), n;
+                return (
+                    1 === e ? (n += "minuta") : 2 === e || 3 === e || 4 === e ? (n += "minute") : (n += "minuta"), n
+                );
             case "h":
                 return a ? "jedan sat" : "jednog sata";
             case "hh":
-                return 1 === e ? (n += "sat") : 2 === e || 3 === e || 4 === e ? (n += "sata") : (n += "sati"), n;
+                return (1 === e ? (n += "sat") : 2 === e || 3 === e || 4 === e ? (n += "sata") : (n += "sati"), n);
             case "dd":
-                return 1 === e ? (n += "dan") : (n += "dana"), n;
+                return (1 === e ? (n += "dan") : (n += "dana"), n);
             case "MM":
                 return (
                     1 === e ? (n += "mjesec") : 2 === e || 3 === e || 4 === e ? (n += "mjeseca") : (n += "mjeseci"), n
                 );
             case "yy":
-                return 1 === e ? (n += "godina") : 2 === e || 3 === e || 4 === e ? (n += "godine") : (n += "godina"), n;
+                return (
+                    1 === e ? (n += "godina") : 2 === e || 3 === e || 4 === e ? (n += "godine") : (n += "godina"), n
+                );
         }
     }
     e.defineLocale("hr", {

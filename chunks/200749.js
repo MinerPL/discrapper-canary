@@ -56,7 +56,7 @@ function d(e) {
                           size: "small" === A ? "sm" : "md",
                           variant: "secondary",
                           onClick: (e) => {
-                              e.stopPropagation(), t?.(e);
+                              (e.stopPropagation(), t?.(e));
                           },
                           text: n,
                       }),

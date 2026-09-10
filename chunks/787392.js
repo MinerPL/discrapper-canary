@@ -1,4 +1,4 @@
-r.d(t, { A: () => a }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+(r.d(t, { A: () => a }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 var n = r(17928),
     E = r(277515),
     i = r(228366),
@@ -41,7 +41,7 @@ let a = new s(i.h, {
         if (null == n) return !1;
         let E = delete n[r],
             i = !1;
-        return 0 === Object.keys(n).length && (delete l[t], (i = !0)), E || i;
+        return (0 === Object.keys(n).length && (delete l[t], (i = !0)), E || i);
     },
     SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: function (e) {
         let { userId: t } = e;

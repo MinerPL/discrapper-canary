@@ -1,4 +1,4 @@
-a.d(t, { default: () => S, i: () => N }), a(321073);
+(a.d(t, { default: () => S, i: () => N }), a(321073));
 var n = a(477900),
     l = a(582128),
     i = a(562708),
@@ -26,11 +26,15 @@ var n = a(477900),
 let M = l.memo(function (e) {
         let { game: t } = e,
             a = (0, r.bG)([c.A], () => c.A.getApplicationByName(t.name) ?? c.A.getApplication(t.id), [t.id, t.name]),
-            l = (0, r.bG)([p.Ay], () => {
-                let e = p.Ay.getVisibleGame(),
-                    a = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
-                return a?.name?.toLowerCase() === t.name.toLowerCase() ? a : p.Ay.getGameForName(t.name);
-            }, [t]),
+            l = (0, r.bG)(
+                [p.Ay],
+                () => {
+                    let e = p.Ay.getVisibleGame(),
+                        a = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
+                    return a?.name?.toLowerCase() === t.name.toLowerCase() ? a : p.Ay.getGameForName(t.name);
+                },
+                [t],
+            ),
             [i] = (0, g.A)([
                 (function () {
                     if (null != t.id) return t.id;
@@ -51,7 +55,7 @@ let M = l.memo(function (e) {
         searchStringGenerator: (e) => {
             let { game: t, label: a } = e,
                 n = [t.name, a, t.id.toString()];
-            return t.aliases.length > 0 && n.push(...t.aliases), n;
+            return (t.aliases.length > 0 && n.push(...t.aliases), n);
         },
         throttleMs: 100,
         maxSearchResults: 20,
@@ -62,7 +66,7 @@ let M = l.memo(function (e) {
             [u, d] = l.useState(""),
             m = l.useCallback(
                 (e) => {
-                    d(e), s?.(e);
+                    (d(e), s?.(e));
                 },
                 [s],
             ),
@@ -85,14 +89,14 @@ let M = l.memo(function (e) {
                     let t = g[e];
                     if (null == t) return;
                     let a = t.game;
-                    i(a ?? null), m(a?.name ?? "");
+                    (i(a ?? null), m(a?.name ?? ""));
                 },
                 [g, i, m],
             ),
             v = l.useCallback(
                 (e) => {
                     let t = e.target.value;
-                    m(t), null != a && t !== a.name && i(null);
+                    (m(t), null != a && t !== a.name && i(null));
                 },
                 [a, i, m],
             );
@@ -135,14 +139,14 @@ function S(e) {
                     let { id: a } = t;
                     return a === e;
                 });
-                D(t ?? null), y(t?.name ?? "");
+                (D(t ?? null), y(t?.name ?? ""));
             },
             [Z],
         ),
         J = l.useCallback(
             (e) => {
                 let t = e.target.value;
-                y(t), null != T && t !== T.name && D(null);
+                (y(t), null != T && t !== T.name && D(null));
             },
             [T],
         ),
@@ -161,7 +165,7 @@ function S(e) {
         })(p),
         V = null != P;
     function Y() {
-        (0, x.trackGameProfileFeedback)({
+        ((0, x.trackGameProfileFeedback)({
             viewId: R,
             applicationId: P?.analyticsId ?? "",
             suggestedGameName: "" !== S.trim() ? S.trim() : void 0,
@@ -170,7 +174,7 @@ function S(e) {
             submitted: !0,
         }),
             g?.(T ?? null),
-            t();
+            t());
     }
     let z = (function () {
         switch (A) {
@@ -215,7 +219,7 @@ function S(e) {
                                 children: (0, n.jsx)(d.z, {
                                     value: E ?? void 0,
                                     onChange: (e) => {
-                                        N(e),
+                                        (N(e),
                                             C.default.track(k.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
                                                 selected_option: e,
                                                 application_id: P?.analyticsId ?? null,
@@ -224,7 +228,7 @@ function S(e) {
                                                 "game_not_detected" === e || "wrong_game_shown" === e
                                                     ? M("game_search")
                                                     : M("other_feedback");
-                                            }, 100);
+                                            }, 100));
                                     },
                                     options: V
                                         ? [

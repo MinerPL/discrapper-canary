@@ -88,15 +88,19 @@ function v(e) {
                 [s, r] = l.useState(!1),
                 a = (0, N.ME)(t);
             return {
-                canSubmitAcceptance: (0, g.bG)([j.default], () => {
-                    let e = j.default.getCurrentUser();
-                    return null != t && (0, h.bM)(t, e);
-                }, [t]),
+                canSubmitAcceptance: (0, g.bG)(
+                    [j.default],
+                    () => {
+                        let e = j.default.getCurrentUser();
+                        return null != t && (0, h.bM)(t, e);
+                    },
+                    [t],
+                ),
                 error: n,
                 loading: s,
                 submitAcceptTermsRequest: l.useCallback(async () => {
                     if (null != e && a) {
-                        r(!0), i(void 0);
+                        (r(!0), i(void 0));
                         try {
                             await f.Bo(e);
                         } catch (e) {

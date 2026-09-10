@@ -128,7 +128,7 @@ function u(e) {
         {
             eligibleToShow: D,
             markAsDismissed: function (e, s) {
-                (0, n.M)(e, d), S(s);
+                ((0, n.M)(e, d), S(s));
             },
         }
     );

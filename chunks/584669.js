@@ -7,4 +7,4 @@ function r(e) {
         backgroundRepeat: "no-repeat",
     };
 }
-n.d(t, { u: () => r }), n(582128);
+(n.d(t, { u: () => r }), n(582128));

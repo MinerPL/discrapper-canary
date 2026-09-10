@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,7 +41,7 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         });
 Object.defineProperty(t, "__esModule", { value: !0 });
 let o = s(r(681743)),
@@ -72,7 +72,7 @@ class d extends l.AbstractParserWithLeftRightBoundaryChecking {
         if (n.match(/\u043d\u0430\u0441\u0442\u0443\u043f\u043d\u043e\u0457\s*\u043d\u043e\u0447\u0456/)) {
             let e = 22 > r.getHours() ? 1 : 2,
                 t = new Date(r.getTime());
-            t.setDate(t.getDate() + e), (0, u.assignSimilarDate)(a, t), a.imply("hour", 1);
+            (t.setDate(t.getDate() + e), (0, u.assignSimilarDate)(a, t), a.imply("hour", 1));
         }
         return n.match(/\u0446\u0456\u0454\u0457\s*\u043d\u043e\u0447\u0456/) ||
             n.endsWith("\u043E\u043F\u0456\u0432\u043D\u043E\u0447\u0456") ||

@@ -1,4 +1,4 @@
-i.r(n), i.d(n, { default: () => d });
+(i.r(n), i.d(n, { default: () => d }));
 var e = {
         lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\xe2y", other: "d\u01B0\u1EDBi {{count}} gi\xe2y" },
         xSeconds: { one: "1 gi\xe2y", other: "{{count}} gi\xe2y" },

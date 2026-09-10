@@ -1,4 +1,4 @@
-a.r(s), a.d(s, { default: () => el });
+(a.r(s), a.d(s, { default: () => el }));
 var t = a(477900),
     l = a(582128),
     i = a(687966),
@@ -295,7 +295,7 @@ function el(e) {
     (0, A.tR)(b);
     let p = (0, g.U)("GameServerPage"),
         S = (0, n.bG)([j.A], () => j.A.getGuild(b)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1);
-    (s = S ? b : null),
+    ((s = S ? b : null),
         (a = (0, ee.j)()),
         l.useEffect(() => {
             if (null == s) return;
@@ -319,12 +319,12 @@ function el(e) {
                     );
                 })();
             return () => {
-                (e = !1), t?.abort(), clearTimeout(i);
+                ((e = !1), t?.abort(), clearTimeout(i));
             };
         }, [s, a]),
         l.useEffect(() => {
             S && ((0, v.cq)(b), m.Ay.getDetectableGames());
-        }, [b, S]);
+        }, [b, S]));
     let G = (0, x.A)(b),
         C = (0, E.N)("GameServerPage"),
         I = (0, n.bG)([N.A], () => N.A.getStateForGuild(b)),

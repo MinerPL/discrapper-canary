@@ -13,7 +13,7 @@ function d() {
 class c extends i.Ay.Store {
     static displayName = "GuildMFAWarningStore";
     initialize() {
-        this.waitFor(s.default, a.Ay), this.syncWith([s.default, a.Ay], d);
+        (this.waitFor(s.default, a.Ay), this.syncWith([s.default, a.Ay], d));
     }
     isVisible(e) {
         return null != e && e.mfaLevel === l.EkJ.ELEVATED && !1 === o && a.Ay.hasElevatedPermissions(e.id);

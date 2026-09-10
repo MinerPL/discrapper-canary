@@ -33,7 +33,7 @@ function c(t) {
         },
         onSubmit: function (t) {
             let { rating: l, problem: n, dontShowAgain: s, feedback: p } = t;
-            s && (0, i.n3)({ feedbackType: d.MW.VIBEGRATIONS, location: "VibegrationsFeedback" }),
+            (s && (0, i.n3)({ feedbackType: d.MW.VIBEGRATIONS, location: "VibegrationsFeedback" }),
                 null != l &&
                     r.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
                         project_id: e,
@@ -43,7 +43,7 @@ function c(t) {
                         feedback: p,
                         prompt_count: a,
                         location: "Vibegrations Prompt",
-                    });
+                    }));
         },
         onClose: c,
         ratingHeader: p.intl.string(s.default.W7Sdp4),

@@ -17,7 +17,8 @@ async function i(l) {
 async function e(l) {
     let t = await i(l.variant);
     try {
-        await t.start(l.stream, { assets: l.assets, maxFps: l.maxFps }), l.initialState && t.setState?.(l.initialState);
+        (await t.start(l.stream, { assets: l.assets, maxFps: l.maxFps }),
+            l.initialState && t.setState?.(l.initialState));
     } catch (l) {
         throw (t.stop(), l);
     }

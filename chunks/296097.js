@@ -7,7 +7,7 @@ let n = r(40840),
     u = RegExp(`(this|last|past|next|after|\\+|-)\\s*(${n.TIME_UNITS_NO_ABBR_PATTERN})(?=\\W|$)`, "i");
 class l extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e = !0) {
-        super(), (this.allowAbbreviations = e);
+        (super(), (this.allowAbbreviations = e));
     }
     innerPattern() {
         return this.allowAbbreviations ? o : u;

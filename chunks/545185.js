@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+(n.d(t, { A: () => E }), n(321073));
 var i = n(148494),
     r = n(439372),
     a = n(451909),
@@ -27,15 +27,15 @@ class _ extends r.A {
         let s = [];
         for (let e = 0; e < r; e++) s.push(Math.floor(Math.random() * a) + 1);
         this.rollTimer = setTimeout(() => {
-            (this.rollTimer = null), this.finishRoll(t, r, a, s);
+            ((this.rollTimer = null), this.finishRoll(t, r, a, s));
         }, 1500);
     };
     finishRoll(e, t, n, i) {
-        o.Ay.setState({ rolling: !1, results: i }),
+        (o.Ay.setState({ rolling: !1, results: i }),
             (this.postRollDismissTimer = setTimeout(() => {
-                (this.postRollDismissTimer = null), this.dismiss();
+                ((this.postRollDismissTimer = null), this.dismiss());
             }, 2e3)),
-            this.sendMessage(e, t, n, i);
+            this.sendMessage(e, t, n, i));
     }
     sendMessage(e, t, n, r) {
         let l = s.A.getChannel(e);
@@ -55,16 +55,16 @@ ${I}`;
         i.A.sendMessage(e, a.Ay.parse(l, f), !0, { location: c.Hx.CHAT_INPUT });
     }
     dismiss() {
-        o.Ay.setState({ dismissing: !0 }),
+        (o.Ay.setState({ dismissing: !0 }),
             (this.collapseTimer = setTimeout(() => {
-                (this.collapseTimer = null), o.Ay.setState(o.N_);
-            }, 300));
+                ((this.collapseTimer = null), o.Ay.setState(o.N_));
+            }, 300)));
     }
     clearTimers() {
-        null != this.rollTimer && (clearTimeout(this.rollTimer), (this.rollTimer = null)),
+        (null != this.rollTimer && (clearTimeout(this.rollTimer), (this.rollTimer = null)),
             null != this.postRollDismissTimer &&
                 (clearTimeout(this.postRollDismissTimer), (this.postRollDismissTimer = null)),
-            null != this.collapseTimer && (clearTimeout(this.collapseTimer), (this.collapseTimer = null));
+            null != this.collapseTimer && (clearTimeout(this.collapseTimer), (this.collapseTimer = null)));
     }
 }
 let E = new _();

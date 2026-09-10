@@ -22,7 +22,7 @@ e.exports = function (e, t, r) {
                 (!("[[Enumerable]]" in r) || r["[[Enumerable]]"]) &&
                 (!("[[Writable]]" in r) || r["[[Writable]]"]) &&
                 "[[Value]]" in r;
-        if (h || m) return (e[t] = r["[[Value]]"]), f(e[t], r["[[Value]]"]);
+        if (h || m) return ((e[t] = r["[[Value]]"]), f(e[t], r["[[Value]]"]));
         throw new i(
             "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
         );

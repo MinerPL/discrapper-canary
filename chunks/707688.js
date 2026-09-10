@@ -34,7 +34,7 @@ function g(e) {
             freeformNeededProblems: _,
             onSubmit: function (e) {
                 let { rating: a, problem: d, dontShowAgain: p, feedback: _ } = e;
-                p && (0, i.n3)({ feedbackType: f.MW.IN_APP_REPORTS, location: "InAppReportsFeedbackModal" }),
+                (p && (0, i.n3)({ feedbackType: f.MW.IN_APP_REPORTS, location: "InAppReportsFeedbackModal" }),
                     (function (e) {
                         let {
                             problem: t,
@@ -65,7 +65,7 @@ function g(e) {
                         (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e("137836").then(n.bind(n, 845671));
                             return (t) => (0, o.jsx)(e, { body: s.intl.string(s.t["d9+vQ8"]), ...t });
-                        });
+                        }));
             },
             otherKey: p.OTHER,
             ...g,

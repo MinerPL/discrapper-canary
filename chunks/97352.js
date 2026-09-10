@@ -1,4 +1,4 @@
-n.d(t, { A: () => S }), n(321073);
+(n.d(t, { A: () => S }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(832946),
@@ -46,7 +46,7 @@ function p(e) {
     I(a.Ay.createFromServer(e));
 }
 function T() {
-    (0, s.LP)(c), (0, s.LP)(u), _.clear(), E.clear(), (0, s.LP)(A), (0, s.LP)(h), f();
+    ((0, s.LP)(c), (0, s.LP)(u), _.clear(), E.clear(), (0, s.LP)(A), (0, s.LP)(h), f());
 }
 f();
 let m = [d.WT.DAY, d.WT.MONTH, d.WT.YEAR];
@@ -56,12 +56,12 @@ class g extends i.Ay.Store {
         let t = [];
         for (let n of e) {
             let e = Array.from(u[n] ?? new Set());
-            e.sort((e, t) => {
+            (e.sort((e, t) => {
                 let n = c[e],
                     i = c[t];
                 return m.indexOf(n.interval) - m.indexOf(i.interval) || n.intervalCount - i.intervalCount;
             }),
-                t.push(...e);
+                t.push(...e));
         }
         return t;
     }
@@ -106,7 +106,7 @@ class g extends i.Ay.Store {
     }
     getPaymentSourceIds() {
         let e = new Set();
-        return Object.values(A).forEach((t) => t.forEach((t) => e.add(t))), e;
+        return (Object.values(A).forEach((t) => t.forEach((t) => e.add(t))), e);
     }
     hasPaymentSourceForSKUId(e, t) {
         return d.pe.NONE === t || (null != h[t] && h[t].has(e));
@@ -122,11 +122,11 @@ let S = new g(r.h, {
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: function (e) {
         let { skuId: t, subscriptionPlans: n } = e;
-        (u[t] = new Set()), (h[t] = new Set()), n.forEach(p), _.delete(t), E.delete(t);
+        ((u[t] = new Set()), (h[t] = new Set()), n.forEach(p), _.delete(t), E.delete(t));
     },
     SUBSCRIPTION_PLANS_FETCH_FAILURE: function (e) {
         let { skuId: t } = e;
-        _.delete(t), E.delete(t);
+        (_.delete(t), E.delete(t));
     },
     SUBSCRIPTION_PLANS_RESET: T,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {

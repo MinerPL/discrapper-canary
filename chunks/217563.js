@@ -20,7 +20,7 @@ function b(n, i) {
               id: "join-muted-custom-join-sound",
               label: A.intl.string(A.t.saLMWc),
               action: () => {
-                  (0, s.CX)(n.id), c.default.selectVoiceChannel(n.id);
+                  ((0, s.CX)(n.id), c.default.selectVoiceChannel(n.id));
               },
           })
         : null;

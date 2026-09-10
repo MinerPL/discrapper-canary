@@ -38,13 +38,13 @@ class u {
     makeHandler;
     handlers = new Map();
     constructor(e) {
-        (this.makeHandler = e), (this.makeHandler = e);
+        ((this.makeHandler = e), (this.makeHandler = e));
     }
     get(e) {
         let t = this.handlers.get(e);
-        return null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t;
+        return (null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t);
     }
     clean() {
-        delete this.handlers, (this.handlers = new Map());
+        (delete this.handlers, (this.handlers = new Map()));
     }
 }

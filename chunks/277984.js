@@ -8,14 +8,14 @@ n.d(t, {
     TD: () => U,
     _D: () => eb,
     Gr: () => ea,
-    IC: () => V,
+    IC: () => B,
     ZK: () => eh,
     A8: () => K,
     $o: () => er,
     hr: () => F,
     N: () => eC,
     IV: () => eL,
-    jV: () => q,
+    jV: () => X,
     im: () => H,
     tc: () => eS,
     ne: () => b,
@@ -116,22 +116,22 @@ function O(e) {
                 failure_sub_code: e.decline_code,
                 payment_source_type: e.payment_method?.type,
             };
-        (n = s),
+        ((n = s),
             "card_error" === e.type &&
                 (_.default.track(S.HAw.PAYMENT_SOURCE_CREATION_FAILED, { ...s, stacktrace: Error().stack }), (i = !1)),
-            (t = new l.Ey(a));
+            (t = new l.Ey(a)));
     } else
-        (n = { failure_message: (t = new l.Ey("string" == typeof e ? r : e)).message, status_code: t.code }),
-            429 === t.code && (i = !1);
+        ((n = { failure_message: (t = new l.Ey("string" == typeof e ? r : e)).message, status_code: t.code }),
+            429 === t.code && (i = !1));
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: t });
     let o = Error("string" == typeof e ? e : t.message);
-    return i && (0, E.pM)(o, { ...a, extra: { ...n, ...a.extra } }), o;
+    return (i && (0, E.pM)(o, { ...a, extra: { ...n, ...a.extra } }), o);
 }
 async function R(e) {
     let {
         body: { state: t },
     } = await a.Bo.post({ url: S.Rsh.BILLING_POPUP_BRIDGE(e), oldFormErrors: !0, rejectWithError: !0 });
-    return s.h.dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state: t, paymentSourceType: e }), t;
+    return (s.h.dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state: t, paymentSourceType: e }), t);
 }
 async function L(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -162,14 +162,14 @@ async function L(e, t, n, i) {
                 rejectWithError: !1,
             }),
             o = d.Ay.createFromServer(l.body);
-        return s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: o }), o;
+        return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", paymentSource: o }), o);
     } catch (t) {
         let e = (0, o.Wd)(t);
         throw (
-            (t?.body?.adyen_redirect_url && (e.fields.adyen_redirect_url = t?.body?.adyen_redirect_url),
+            t?.body?.adyen_redirect_url && (e.fields.adyen_redirect_url = t?.body?.adyen_redirect_url),
             e.code !== o.tG.CONFIRMATION_REQUIRED &&
                 s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: e }),
-            e)
+            e
         );
     }
 }
@@ -252,10 +252,10 @@ async function k(e, t) {
     if (null != i) throw (v.error("Stripe createPaymentMethod error: ", i), b(i, !0));
     if (null == n)
         throw (
-            (v.warn("Stripe createPaymentMethod failed to return payment method: ", { paymentMethod: n, error: i }),
-            b("paymentMethod not available with successful stripe call", !0))
+            v.warn("Stripe createPaymentMethod failed to return payment method: ", { paymentMethod: n, error: i }),
+            b("paymentMethod not available with successful stripe call", !0)
         );
-    return (x.hasCreatedPaymentMethod = !0), { paymentMethod: n, error: i };
+    return ((x.hasCreatedPaymentMethod = !0), { paymentMethod: n, error: i });
 }
 async function F(e, t) {
     if (null == e) throw b("Stripe not loaded", !0);
@@ -264,12 +264,12 @@ async function F(e, t) {
     let { paymentMethod: n, error: i } = await k(e, t);
     return { paymentMethod: n, error: i };
 }
-async function V(e) {
+async function B(e) {
     let { stripePaymentMethodId: t, billingAddress: n, analyticsLocation: i } = e,
         r = await C(n);
     return L(S.kM_.STRIPE, t, n, { billingAddressToken: r, analyticsLocation: i });
 }
-let B = new Set([D.he.CARD, D.he.PAYMENT_REQUEST]);
+let V = new Set([D.he.CARD, D.he.PAYMENT_REQUEST]);
 async function H() {
     let e;
     for (var t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
@@ -281,7 +281,7 @@ async function H() {
     let E = await C(o);
     d !== D.he.PAYMENT_REQUEST && (await G(l));
     let A = null;
-    if (B.has(d)) {
+    if (V.has(d)) {
         let e,
             n = c.current ?? void 0;
         if (
@@ -296,10 +296,10 @@ async function H() {
                 d !== D.he.PAYMENT_REQUEST)
         ) {
             let { client_secret: t } = await u();
-            await G(l), (e = await a.confirmSetup({ redirect: "if_required", clientSecret: t, elements: l }));
+            (await G(l), (e = await a.confirmSetup({ redirect: "if_required", clientSecret: t, elements: l })));
         }
         let { setupIntent: i } = w(e.setupIntent, e.error, (e) => b(e, !0));
-        (c.current = i), (A = i.payment_method);
+        ((c.current = i), (A = i.payment_method));
     } else {
         let { paymentMethod: t } = await k(a, l);
         if (((A = t.id), d === D.he.PIX)) {
@@ -370,18 +370,18 @@ async function $(e, t, n, i) {
         var E;
         if (t.code !== o.tG.CONFIRMATION_REQUIRED)
             throw (
-                (s.h.dispatch({
+                s.h.dispatch({
                     type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
                     error: new l.Ey(
                         `Unable to create payment source token: code: ${t?.code} message: ${t?.message}`,
                         l.Ey.ErrorCodes.UNKNOWN,
                     ),
                 }),
-                t)
+                t
             );
         let e = t.fields.adyen_redirect_url;
         if (null == e) throw O("redirect url cannot be null on a redirect for adyen.");
-        return (E = e), window.open(E), { redirectConfirmation: !0 };
+        return ((E = e), window.open(E), { redirectConfirmation: !0 });
     }
 }
 async function z(e) {
@@ -400,24 +400,24 @@ async function z(e) {
             u.type = "giropay";
             break;
         case D.he.SOFORT:
-            (u.type = "sofort"), (u.sofort = { country: c ?? "" }), (u.billing_details.email = n);
+            ((u.type = "sofort"), (u.sofort = { country: c ?? "" }), (u.billing_details.email = n));
             break;
         case D.he.BANCONTACT:
             u.type = "bancontact";
             break;
         case D.he.IDEAL:
-            (u.type = "ideal"), (u.ideal = { bank: e.bank });
+            ((u.type = "ideal"), (u.ideal = { bank: e.bank }));
             break;
         case D.he.PRZELEWY24:
             if (null == e.bank) throw new l.Ey("p24 missing bank information", l.Ey.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
-            (u.type = "p24"), (u.p24 = { bank: e.bank }), (u.billing_details.email = e.email);
+            ((u.type = "p24"), (u.p24 = { bank: e.bank }), (u.billing_details.email = e.email));
             break;
         case D.he.EPS:
             if (null == e.bank) throw new l.Ey("EPS missing bank information", l.Ey.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
-            (u.type = "eps"), (u.eps = { bank: e.bank });
+            ((u.type = "eps"), (u.eps = { bank: e.bank }));
             break;
         case D.he.PIX:
-            (u.type = "pix"), (u.billing_details.email = e.email), (u.billing_details.tax_id = e.pixMetadata?.taxId);
+            ((u.type = "pix"), (u.billing_details.email = e.email), (u.billing_details.tax_id = e.pixMetadata?.taxId));
     }
     p()(null != u.type, "unsupported payment method type");
     let { paymentMethod: _, error: E } = await t.createPaymentMethod(u);
@@ -428,12 +428,12 @@ async function z(e) {
         );
     return _.id;
 }
-function q(e) {
+function X(e) {
     if (S.DYY.has(e.type)) return null;
     if (D.Kc.has(e.type)) return S.DYY.has(e.type) ? null : JSON.stringify({ type: D.Kc.get(e.type) ?? null });
     return z(e);
 }
-let Z = {
+let q = {
         [D.he.GIROPAY]: {
             confirmationType: "stripe_redirect_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
@@ -491,7 +491,7 @@ let Z = {
             },
         },
     },
-    X = {
+    Z = {
         [D.he.SEPA_DEBIT]: {
             confirmationType: "stripe_direct_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
@@ -514,10 +514,10 @@ class Q {
     paymentSourceType;
     paymentId;
     constructor(e, t) {
-        (this.paymentSource = e),
+        ((this.paymentSource = e),
             (this.payment = t),
             (this.paymentSourceType = e.type),
-            (this.paymentId = t.payment_id);
+            (this.paymentId = t.payment_id));
     }
     performRedirect(e) {
         window.open(e);
@@ -531,11 +531,11 @@ class J extends Q {
         if (
             (super(e, t),
             (function (e) {
-                return S.CmT.has(e) && e in Z;
+                return S.CmT.has(e) && e in q;
             })(this.paymentSourceType))
         )
-            this.handlerRegistry = Z[this.paymentSourceType];
-        else if (this.paymentSourceType in X) this.handlerRegistry = X[this.paymentSourceType];
+            this.handlerRegistry = q[this.paymentSourceType];
+        else if (this.paymentSourceType in Z) this.handlerRegistry = Z[this.paymentSourceType];
         else throw O("Invalid Payment Source Type - redirect or direct confirmation handlers not found.");
     }
     async getStripe() {
@@ -635,8 +635,8 @@ var et = n(601107);
 async function en(e) {
     s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_START" });
     try {
-        await a.Bo.del({ url: S.Rsh.BILLING_PAYMENT_SOURCE(e), oldFormErrors: !0, rejectWithError: !1 }),
-            s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS", id: e });
+        (await a.Bo.del({ url: S.Rsh.BILLING_PAYMENT_SOURCE(e), oldFormErrors: !0, rejectWithError: !1 }),
+            s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS", id: e }));
     } catch (t) {
         let e = new l.Ey(t);
         throw (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_REMOVE_FAIL", error: e }), e);
@@ -671,9 +671,9 @@ async function er() {
             let e = a.Bo.get({ url: S.Rsh.BILLING_PAYMENT_SOURCES, oldFormErrors: !0, rejectWithError: !1 });
             s.h.wait(() => s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: e }));
             let t = await e;
-            return s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS", paymentSources: t.body }), t;
+            return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS", paymentSources: t.body }), t);
         } catch (e) {
-            return s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_FAIL" }), null;
+            return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_FAIL" }), null);
         }
 }
 async function ea(e) {
@@ -681,7 +681,7 @@ async function ea(e) {
         let t = a.Bo.get({ url: S.Rsh.BILLING_PAYMENT_SOURCE(e), oldFormErrors: !0, rejectWithError: !1 }),
             n = await t,
             i = d.Ay.createFromServer(n.body);
-        return s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_FETCH_SUCCESS", paymentSource: i }), n;
+        return (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_FETCH_SUCCESS", paymentSource: i }), n);
     } catch (e) {
         throw (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_FETCH_FAIL" }), e);
     }
@@ -705,12 +705,12 @@ async function es(e) {
             n
         );
     } catch (t) {
-        return s.h.dispatch({ type: "BILLING_WALLET_BALANCE_FETCH_FAIL", paymentSourceId: e }), null;
+        return (s.h.dispatch({ type: "BILLING_WALLET_BALANCE_FETCH_FAIL", paymentSourceId: e }), null);
     }
 }
 async function el(e) {
     let t = await a.Bo.get({ url: S.Rsh.BILLING_PAYMENT(e), rejectWithError: !0 });
-    return s.h.dispatch({ type: "BILLING_PAYMENT_FETCH_SUCCESS", payment: t.body }), t;
+    return (s.h.dispatch({ type: "BILLING_PAYMENT_FETCH_SUCCESS", payment: t.body }), t);
 }
 async function eo() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10,
@@ -723,7 +723,7 @@ async function eo() {
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return s.h.dispatch({ type: "BILLING_PAYMENTS_FETCH_SUCCESS", payments: n.body }), n;
+        return (s.h.dispatch({ type: "BILLING_PAYMENTS_FETCH_SUCCESS", payments: n.body }), n);
     } catch (e) {
         throw (s.h.dispatch({ type: "BILLING_PAYMENTS_FETCH_FAIL" }), e);
     }
@@ -789,7 +789,7 @@ async function eu(e) {
         expectedInvoicePrice: I,
         expectedRenewalPrice: f,
     } = e;
-    s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" }), (t = (0, A.qn)(t));
+    (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" }), (t = (0, A.qn)(t)));
     let p = null;
     if (null != n && D.Kc.has(n.type)) {
         let e = await R(n.type);
@@ -804,7 +804,7 @@ async function eu(e) {
                     return { plan_id: t, quantity: n };
                 }),
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await q(n) : null,
+                payment_source_token: null != n ? await X(n) : null,
                 trial_id: i,
                 return_url: p,
                 code: r,
@@ -846,7 +846,7 @@ async function e_(e, t, n, i, r) {
             url: S.Rsh.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
             body: {
                 payment_source_id: null != n ? n.id : null,
-                payment_source_token: null != n ? await q(n) : null,
+                payment_source_token: null != n ? await X(n) : null,
                 return_url: d,
                 currency: i,
                 purchase_token: (0, h.r)(),
@@ -879,7 +879,7 @@ async function eA(e, t, n) {
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return s.h.dispatch({ type: "BILLING_SUBSCRIPTION_CANCEL_SUCCESS" }), i;
+        return (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_CANCEL_SUCCESS" }), i);
     } catch (t) {
         let e = new l.Ey(t);
         throw (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_CANCEL_FAIL", error: e }), e);
@@ -900,7 +900,7 @@ async function eI(e, t, n, i, r, d, c) {
         let l = {
             status: t.status,
             payment_source_id: t.paymentSource?.id,
-            payment_source_token: null != t.paymentSource ? await q(t.paymentSource) : null,
+            payment_source_token: null != t.paymentSource ? await X(t.paymentSource) : null,
             currency: t.currency,
             gateway_checkout_context: await (0, E.ob)(t.paymentSource),
             load_id: c,
@@ -994,13 +994,13 @@ async function eR() {
         s.h.wait(() => s.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: e }));
         let t = await e,
             n = t.body.country_code;
-        return s.h.dispatch({ type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: n }), t;
+        return (s.h.dispatch({ type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: n }), t);
     } catch (e) {
-        return s.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FAILURE" }), e;
+        return (s.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FAILURE" }), e);
     }
 }
 function eL() {
-    s.h.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" }),
+    (s.h.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" }),
         a.Bo.get({ url: S.Rsh.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: !0, rejectWithError: !1 })
             .then((e) => {
                 let t = e.body;
@@ -1023,7 +1023,7 @@ function eL() {
                     type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL",
                     error: e instanceof Error ? e : Error(String(e)),
                 });
-            });
+            }));
 }
 async function ey() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -1056,8 +1056,8 @@ function ev(e) {
 async function eb(e, t) {
     try {
         let n = await a.Bo.post({ url: S.Rsh.REACTIVATION_OFFER_REDEEM(e.id, t.id), rejectWithError: !1 });
-        s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: n.body }),
-            s.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: t.id });
+        (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: n.body }),
+            s.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: t.id }));
     } catch (t) {
         let e = t instanceof l.Ey ? t : new l.Ey(t);
         throw (s.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: e }), e);
@@ -1065,8 +1065,8 @@ async function eb(e, t) {
 }
 async function eM(e) {
     try {
-        await a.Bo.post({ url: S.Rsh.USER_OFFER_REDEEM, body: { user_discount_offer_id: e.id }, rejectWithError: !0 }),
-            s.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: e.id });
+        (await a.Bo.post({ url: S.Rsh.USER_OFFER_REDEEM, body: { user_discount_offer_id: e.id }, rejectWithError: !0 }),
+            s.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: e.id }));
     } catch (e) {
         throw e instanceof l.Ey ? e : new l.Ey(e);
     }

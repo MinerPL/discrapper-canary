@@ -101,7 +101,7 @@ function f(e) {
               onMouseLeave: () => w(!1),
               "aria-disabled": P,
               onClick: (e) => {
-                  e.stopPropagation(), P || M?.({ shouldCloseAllModals: !1 });
+                  (e.stopPropagation(), P || M?.({ shouldCloseAllModals: !1 }));
               },
               children: T,
           });

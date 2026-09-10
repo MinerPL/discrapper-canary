@@ -1,4 +1,4 @@
-n.d(t, { H: () => s }), n(321073);
+(n.d(t, { H: () => s }), n(321073));
 var i = n(696016),
     l = n(731854);
 let a = { speakingUserIds: [], activeSoundboards: [] };
@@ -8,10 +8,10 @@ class s {
     activeSoundboards;
     soundboardPlayCounts;
     constructor(e) {
-        (this.timeline = []),
+        ((this.timeline = []),
             (this.userSpeakingStates = new Map()),
             (this.activeSoundboards = new Map()),
-            (this.soundboardPlayCounts = new Map());
+            (this.soundboardPlayCounts = new Map()));
         const t = [...e].sort((e, t) => e.timestamp - t.timestamp),
             n = new Set(),
             l = new Set();
@@ -32,10 +32,10 @@ class s {
         for (const e of ((this.userSpeakingStates.size > 0 || this.activeSoundboards.size > 0) &&
             this.appendSnapshot(0),
         t))
-            e.signal.type === i.Gy.SPEAKING
+            (e.signal.type === i.Gy.SPEAKING
                 ? this.processSpeakingEvent(e.signal)
                 : e.signal.type === i.Gy.SOUNDBOARD && this.processSoundboardEvent(e.signal),
-                this.appendSnapshot(e.timestamp);
+                this.appendSnapshot(e.timestamp));
     }
     static fromAttachmentTimeline(e) {
         return new s(
@@ -74,10 +74,10 @@ class s {
         let t = this.getSoundboardKey(e.soundboardId, e.userId),
             n = this.soundboardPlayCounts.get(t) ?? 0;
         if (e.playing)
-            this.soundboardPlayCounts.set(t, n + 1), this.activeSoundboards.set(t, this.soundboardFromSignal(e));
+            (this.soundboardPlayCounts.set(t, n + 1), this.activeSoundboards.set(t, this.soundboardFromSignal(e)));
         else {
             let e = Math.max(0, n - 1);
-            this.soundboardPlayCounts.set(t, e), 0 === e && this.activeSoundboards.delete(t);
+            (this.soundboardPlayCounts.set(t, e), 0 === e && this.activeSoundboards.delete(t));
         }
     }
     getCurrentSnapshot() {
@@ -98,7 +98,7 @@ class s {
         let t = 0,
             n = this.timeline.length - 1,
             i = -1;
-        for (; t <= n; ) {
+        for (; t <= n;) {
             let l = Math.floor((t + n) / 2);
             this.timeline[l].timestamp <= e ? ((i = l), (t = l + 1)) : (n = l - 1);
         }

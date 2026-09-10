@@ -65,7 +65,7 @@ async function z(e) {
             onComplete: () => {
                 var e;
                 let i = x && c && null != d ? d.id : null;
-                null != i && (0, C.hE)(i),
+                (null != i && (0, C.hE)(i),
                     (0, C.hU)()
                         .catch(() => {})
                         .then(() => {
@@ -82,7 +82,7 @@ async function z(e) {
                     (0, I.openModalLazy)(async () => {
                         let { default: i } = await Promise.all([t.e("909189"), t.e("489541")]).then(t.bind(t, 978084));
                         return (t) => (0, l.jsx)(i, { ...t, ...e });
-                    });
+                    }));
             },
         },
         modalAPIOptions: { modalKey: "game-server-subscription-payment-modal" },
@@ -398,7 +398,7 @@ function ea(e) {
             if (null != em) {
                 if (O) {
                     if (!eE || null == I) return;
-                    ep && (0, C.Ce)(I.id, Y.trim()),
+                    (ep && (0, C.Ce)(I.id, Y.trim()),
                         ej &&
                             z({
                                 skuId: em.id,
@@ -410,7 +410,7 @@ function ea(e) {
                                 onViewServer: V,
                                 onBack: eC,
                             }),
-                        R.onClose();
+                        R.onClose());
                     return;
                 }
                 eE &&

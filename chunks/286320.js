@@ -21,14 +21,14 @@ let l = new c(s.h, {
     },
     BILLING_PREMIUM_AFFINITY_FETCHED: function (e) {
         let {} = e;
-        (r.fetched = !0), (r.fetching = !1);
+        ((r.fetched = !0), (r.fetching = !1));
     },
     BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED: function (e) {
         let { res: t } = e;
         r.affinities = t;
     },
     LOGOUT: function () {
-        (r.fetched = !1), (r.fetching = !1), (r.affinities = []);
+        ((r.fetched = !1), (r.fetching = !1), (r.affinities = []));
     },
 });
 var h = i(636537),

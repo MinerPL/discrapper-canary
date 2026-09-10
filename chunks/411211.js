@@ -121,24 +121,24 @@ class g {
             c = (0, a.W)(s, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
             f = (0, a.W)(s, "numberingSystem", "string", void 0, void 0);
         if (void 0 !== f && 0 > p.P.indexOf(f)) throw RangeError(`Invalid numberingSystems: ${f}`);
-        (u.nu = f), (u.localeMatcher = c);
+        ((u.nu = f), (u.localeMatcher = c));
         const { localeData: m, availableLocales: v } = g,
             y = (0, l.B)(v, n, u, ["nu"], m, g.getDefaultLocale),
             b = y.locale,
             D = (0, h.n)(this);
-        (D.initializedDurationFormat = !0), (D.locale = b), (D.numberingSystem = y.nu);
+        ((D.initializedDurationFormat = !0), (D.locale = b), (D.numberingSystem = y.nu));
         const w = (0, a.W)(s, "style", "string", ["long", "short", "narrow", "digital"], "short");
-        (D.style = w), (D.dataLocale = y.dataLocale);
+        ((D.style = w), (D.dataLocale = y.dataLocale));
         let E = "";
-        _.forEach((e) => {
+        (_.forEach((e) => {
             let { styleSlot: t, displaySlot: n, unit: r, values: i, digitalDefault: a } = e,
                 o = (0, d.$)(r, s, w, i, a, E);
-            (D[t] = o.style),
+            ((D[t] = o.style),
                 (D[n] = o.display),
                 ("hours" === r || "minutes" === r || "seconds" === r || "milliseconds" === r || "microseconds" === r) &&
-                    (E = o.style);
+                    (E = o.style));
         }),
-            (D.fractionalDigits = (0, o.z)(s, "fractionalDigits", 0, 9, void 0));
+            (D.fractionalDigits = (0, o.z)(s, "fractionalDigits", 0, 9, void 0)));
     }
     resolvedOptions() {
         if ("object" != typeof this || !(0, i.Wt)(g, this))
@@ -147,10 +147,10 @@ class g {
             t = {};
         for (let n of v) {
             let r = e[n];
-            "fractionalDigits" === n
+            ("fractionalDigits" === n
                 ? void 0 !== r && (r = Number(r))
                 : (0, u.V1)(void 0 !== r, `Missing internal slot ${n}`),
-                (t[n] = r);
+                (t[n] = r));
         }
         return t;
     }
@@ -161,7 +161,7 @@ class g {
             r = [];
         for (let { type: e, unit: t, value: i } of n) {
             let n = { type: e, value: i };
-            t && (n.unit = t), r.push(n);
+            (t && (n.unit = t), r.push(n));
         }
         return r;
     }

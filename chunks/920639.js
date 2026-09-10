@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     E2: () => g,
     EB: () => m,
     JF: () => O,
@@ -11,7 +11,7 @@ n.d(t, {
     yt: () => f,
     zR: () => p,
 }),
-    n(321073);
+    n(321073));
 var i = n(821578),
     r = n(95561),
     a = n(280450),
@@ -43,7 +43,7 @@ function A(e, t) {
             voice_media_session_id: n,
         });
     function i() {
-        l.A.removeChangeListener(r), clearTimeout(a);
+        (l.A.removeChangeListener(r), clearTimeout(a));
     }
     function r() {
         let n = l.A.getMediaSessionId();
@@ -52,7 +52,7 @@ function A(e, t) {
             t({ voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length, voice_media_session_id: n }));
     }
     let a = setTimeout(() => {
-        i(), t({ voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length });
+        (i(), t({ voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length }));
     }, 2500);
     l.A.addChangeListener(r);
 }
@@ -97,10 +97,10 @@ function T(e) {
             (A = []),
             (h = []),
             c.A.getRoomUsers(l).forEach((e, t) => {
-                o.push(t),
+                (o.push(t),
                     d.push((0, u.r)(e.seat, e.position, l)?.name ?? ""),
                     A.push(e.position.x),
-                    h.push(e.position.y);
+                    h.push(e.position.y));
             }),
             { seated_user_ids: o, seated_user_seat_names: d, seated_user_x_positions: A, seated_user_y_positions: h }),
             ...e,

@@ -21,13 +21,13 @@ function p(e) {
             f(!1);
         }, [f]),
         x = s.useCallback(() => {
-            A || c.A.loadMoreInbox({ loadingTrigger: g.VA.ON_OPEN }), f(!A);
+            (A || c.A.loadMoreInbox({ loadingTrigger: g.VA.ON_OPEN }), f(!A));
         }, [A, f]);
-    (0, l.Ay)(() => {
+    ((0, l.Ay)(() => {
         function e() {
             f(!1);
         }
-        return r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
+        return (r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e));
     }),
         s.useEffect(
             () => (
@@ -37,7 +37,7 @@ function p(e) {
                 }
             ),
             [x],
-        );
+        ));
     let { entrypoint: L } = (0, d.X8)({ location: "NotificationsInboxPopout" });
     return (0, i.jsx)(a.Y, {
         targetElementRef: E,

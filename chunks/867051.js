@@ -31,7 +31,7 @@ function u(e, t) {
     return "object" == typeof t && null != t && (s.L in t && t[s.L]) === e;
 }
 function _(e, t) {
-    return (t[s.L] = e), t;
+    return ((t[s.L] = e), t);
 }
 function E(e, t) {
     return null == e || null == t

@@ -6,6 +6,6 @@ var n = r(142896),
     l = r(573872),
     u = n(s()),
     c = function (e) {
-        return o(e), u(e);
+        return (o(e), u(e));
     };
-i(c, { getPolyfill: s, implementation: a, shim: l }), (e.exports = c);
+(i(c, { getPolyfill: s, implementation: a, shim: l }), (e.exports = c));

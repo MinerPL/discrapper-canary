@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isPCAP =
         t.isDOC =
         t.isTTF =
@@ -14,10 +14,10 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.isEXE =
         t.isELF =
         t.isBLEND =
-            void 0);
+            void 0));
 let i = n(835986),
     r = n(817762);
-(t.isBLEND = function (e) {
+((t.isBLEND = function (e) {
     let t = (0, r.getFileChunk)(e);
     return i.FileTypes.checkByFileType(t, "blend");
 }),
@@ -76,4 +76,4 @@ let i = n(835986),
     (t.isPCAP = function (e) {
         let t = (0, r.getFileChunk)(e);
         return i.FileTypes.checkByFileType(t, "pcap");
-    });
+    }));

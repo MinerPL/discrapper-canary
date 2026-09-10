@@ -5,7 +5,7 @@ var l = n(811996),
 n(652215);
 var i = n(206285),
     s = n(375708);
-let o = {
+let u = {
         [l.U.DESKTOP]: "PC",
         [l.U.XBOX]: "Xbox",
         [l.U.PLAYSTATION]: "PlayStation",
@@ -14,17 +14,17 @@ let o = {
         [l.U.NETFLIX]: "Netflix",
         [l.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    u = [l.U.PLAYSTATION];
+    o = [l.U.PLAYSTATION];
 function c(e) {
     let t = (function (e) {
-        if (null == e) return u;
+        if (null == e) return o;
         let t = a.A.getConfigForApplicationId(e);
-        return null == t ? u : t.excludedPlatforms;
+        return null == t ? o : t.excludedPlatforms;
     })(e);
     return 0 === t.length
         ? ""
         : s.intl.formatToPlainString(i.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => o[e])),
+              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => u[e])),
               count: t.length,
           });
 }

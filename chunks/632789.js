@@ -11,10 +11,10 @@ class o {
         return this;
     }
     constructor(e) {
-        (this.index = 0), (this.items = e);
+        ((this.index = 0), (this.items = e));
     }
     next() {
-        for (; this.index < this.items.length; ) {
+        for (; this.index < this.items.length;) {
             let e = this.items[this.index].next();
             if (!e.done) return e;
             this.index += 1;
@@ -36,7 +36,7 @@ class c {
         return this.limit;
     }
     constructor(e) {
-        (this.items = new Map()), (this.limit = e);
+        ((this.items = new Map()), (this.limit = e));
     }
     [Symbol.iterator]() {
         return this.items.entries();
@@ -66,7 +66,7 @@ class c {
         if ((this.items.delete(e), this.items.set(e, t), this.items.size > this.limit)) {
             let e = this.oldestKey(),
                 t = this.items.get(e);
-            return this.items.delete(e), [e, t];
+            return (this.items.delete(e), [e, t]);
         }
     }
     delete(e) {
@@ -80,7 +80,7 @@ class u {
     primary;
     extended;
     constructor(e, t) {
-        (this.primary = new c(e)), (this.extended = new c(t));
+        ((this.primary = new c(e)), (this.extended = new c(t)));
     }
     get totalLength() {
         return this.primary.length + this.extended.length;
@@ -92,7 +92,7 @@ class u {
         return this.extended.capacity;
     }
     clear() {
-        this.primary.clear(), this.extended.clear();
+        (this.primary.clear(), this.extended.clear());
     }
     has(e) {
         return this.primary.has(e);
@@ -110,7 +110,7 @@ class u {
     delete(e) {
         let t = this.primary.delete(e),
             n = this.extended.delete(e);
-        return this.upstreamItems(), t || n;
+        return (this.upstreamItems(), t || n);
     }
     upstreamItems() {
         if (this.canUpstreamItems()) {
@@ -172,11 +172,11 @@ class g extends a.A {
         });
     }
     initialize() {
-        this.waitFor(i.A),
+        (this.waitFor(i.A),
             this.waitFor(s.Ay),
             this.waitFor(r.A),
             this.syncWith([l.A], () => !0),
-            this.syncWith([s.Ay], S);
+            this.syncWith([s.Ay], S));
     }
     loadCache() {
         let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
@@ -213,7 +213,7 @@ class g extends a.A {
         let t = i.A.getBasicChannel(e);
         if (null != t && (0, A.c)(t)) {
             let n = { guildId: t.guild_id ?? null, channelId: e, channelType: t.type };
-            (f = n), p.put(e, n), E(t) && null != T.put(e, null) && p.delete(e);
+            ((f = n), p.put(e, n), E(t) && null != T.put(e, null) && p.delete(e));
         }
     }
     static deleteChannel(e) {
@@ -240,7 +240,7 @@ function S() {
     null != e && g.recordChannel(e);
 }
 function N() {
-    g.dropUnreachableChannels(),
+    (g.dropUnreachableChannels(),
         g.replaceLru(
             (function (e) {
                 if (e.totalLength >= 1250) return e;
@@ -271,13 +271,13 @@ function N() {
                         }
                 return I(t, e);
             })(p),
-        );
+        ));
 }
 function C(e) {
     let t = e.id,
         n = (0, A.c)(e),
         i = s.Ay.getChannelId();
-    n && t === i && g.recordChannel(t), n || g.deleteChannel(t);
+    (n && t === i && g.recordChannel(t), n || g.deleteChannel(t));
 }
 function O(e) {
     for (let t of e.channels) C(t);
@@ -295,7 +295,7 @@ function D(e) {
     return !e.guild.unavailable && (g.deleteGuild(e.guild.id), !0);
 }
 function v(e) {
-    p.clear(), T.clear(), (m = !1);
+    (p.clear(), T.clear(), (m = !1));
 }
 function b(e) {
     m = !0;

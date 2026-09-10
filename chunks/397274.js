@@ -30,7 +30,7 @@ let r = new (class {
         null != t &&
             (null != this.scrollListener && t.removeEventListener("scroll", this.scrollListener),
             (this.scrollListener = () => {
-                (this.scrollListener = null), e();
+                ((this.scrollListener = null), e());
             }),
             t.addEventListener("scroll", this.scrollListener, { once: !0 }));
     }
@@ -73,13 +73,13 @@ let r = new (class {
         if (null == this.panelScrollerRef) return;
         let n = this.panelScrollerRef.getScrollerNode();
         if (null == n) return;
-        this.clearPanelInitialScrollListener(), (this.isSidebarCategoryAutoSelectEnabled = !1);
+        (this.clearPanelInitialScrollListener(), (this.isSidebarCategoryAutoSelectEnabled = !1));
         let i = n.querySelector("[data-settings-panel-sticky-decoration]"),
             r = Math.max(0, (i?.getBoundingClientRect().bottom ?? 0) - n.getBoundingClientRect().top);
-        await this.scrollIntoView({ scrollerRef: this.panelScrollerRef, target: e, options: t, padding: 16 + r }),
+        (await this.scrollIntoView({ scrollerRef: this.panelScrollerRef, target: e, options: t, padding: 16 + r }),
             this.setPanelInitialScrollListener(() => {
                 this.isSidebarCategoryAutoSelectEnabled = !0;
-            });
+            }));
     }
     async scrollSidebarNodeIntoView(e, t) {
         null != this.sidebarScrollerRef &&
@@ -89,9 +89,9 @@ let r = new (class {
         this.isSidebarCategoryAutoSelectEnabled = !0;
     }
     reset() {
-        (this.isSidebarCategoryAutoSelectEnabled = !0),
+        ((this.isSidebarCategoryAutoSelectEnabled = !0),
             (this.scrollListener = null),
             (this.panelScrollerRef = null),
-            (this.sidebarScrollerRef = null);
+            (this.sidebarScrollerRef = null));
     }
 })();

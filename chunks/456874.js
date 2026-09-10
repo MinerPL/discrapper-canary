@@ -33,17 +33,17 @@ function T(e, t) {
 }
 function m(e, t) {
     let n = (p[e.parentId] ?? 0) + 1;
-    (p[e.parentId] = n), t(e);
+    ((p[e.parentId] = n), t(e));
 }
 function g(e) {
-    e.threads?.forEach(N), e.threadMessages?.forEach(S);
+    (e.threads?.forEach(N), e.threadMessages?.forEach(S));
 }
 function S(e) {
     if (e.type === h.lAJ.THREAD_STARTER_MESSAGE) return;
     let t = u.A.getChannel(e.channel_id);
     null != t &&
         T(t, (t) => {
-            (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
+            ((t.mostRecentRawMessage = e), (t.mostRecentMessage = null));
         });
 }
 function N(e) {
@@ -58,7 +58,7 @@ function N(e) {
 function C(e) {
     if (null != e && !(e.id in f)) {
         let t = u.A.getChannel(e.id);
-        if (null != t) return N(t), !0;
+        if (null != t) return (N(t), !0);
     }
     return !1;
 }
@@ -74,12 +74,12 @@ function L(e) {
     let { data: t } = e;
     t.forEach((e) => {
         let { messages: t, threads: n } = e;
-        t.forEach((e) => {
+        (t.forEach((e) => {
             e.forEach((e) => {
                 C(e.thread);
             });
         }),
-            n.forEach(C);
+            n.forEach(C));
     });
 }
 function y() {
@@ -120,7 +120,7 @@ class D extends a.Ay.Store {
 }
 let v = new D(s.h, {
     CONNECTION_OPEN: function (e) {
-        (p = {}), I.clear(), e.guilds.forEach(g);
+        ((p = {}), I.clear(), e.guilds.forEach(g));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { threadMessages: t } = e;
@@ -136,25 +136,25 @@ let v = new D(s.h, {
     GUILD_DELETE: function (e) {
         var t;
         let { guild: n } = e;
-        (t = n.id),
+        ((t = n.id),
             (f = r().omitBy(f, (e) => {
                 let n = e.guildId === t;
-                return n && delete p[e.parentId], n;
-            }));
+                return (n && delete p[e.parentId], n);
+            })));
     },
     THREAD_CREATE: O,
     THREAD_UPDATE: O,
     THREAD_LIST_SYNC: function (e) {
         let { threads: t, mostRecentMessages: n } = e;
-        t.forEach(N),
+        (t.forEach(N),
             n?.forEach((e) => {
                 let t = u.A.getChannel(e.channel_id);
                 null != t &&
                     e.type !== h.lAJ.THREAD_STARTER_MESSAGE &&
                     T(t, (t) => {
-                        (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
+                        ((t.mostRecentRawMessage = e), (t.mostRecentMessage = null));
                     });
-            });
+            }));
     },
     LOAD_THREADS_SUCCESS: R,
     LOAD_ARCHIVED_THREADS_SUCCESS: R,
@@ -170,7 +170,7 @@ let v = new D(s.h, {
     CHANNEL_DELETE: function (e) {
         var t;
         let { channel: n } = e;
-        (t = n.id), (f = r().omitBy(f, (e) => e.parentId === t)), delete p[t];
+        ((t = n.id), (f = r().omitBy(f, (e) => e.parentId === t)), delete p[t]);
     },
     MESSAGE_CREATE: function (e) {
         var t, n;
@@ -186,7 +186,7 @@ let v = new D(s.h, {
         )
             return !1;
         T(l, (e) => {
-            (e.count = Math.min(e.count + 1, A.su)), (e.mostRecentRawMessage = i), (e.mostRecentMessage = null);
+            ((e.count = Math.min(e.count + 1, A.su)), (e.mostRecentRawMessage = i), (e.mostRecentMessage = null));
         });
     },
     MESSAGE_UPDATE: function (e) {
@@ -195,8 +195,8 @@ let v = new D(s.h, {
             i = n?.mostRecentRawMessage ?? n?.mostRecentMessage;
         if (null == n || null == i || i.id !== t.id) return !1;
         m(n, (e) => {
-            null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.IU)(e.mostRecentMessage, t)),
-                null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.SP)(e.mostRecentRawMessage, t));
+            (null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.IU)(e.mostRecentMessage, t)),
+                null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.SP)(e.mostRecentRawMessage, t)));
         });
     },
     MESSAGE_DELETE: function (e) {
@@ -207,9 +207,9 @@ let v = new D(s.h, {
             a = !I.has(t);
         m(i, (e) => {
             let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
-            null != n && n.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
+            (null != n && n.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                 (e.count = r && a ? Math.max(e.count - 1, 0) : e.count),
-                I.add(t);
+                I.add(t));
         });
     },
     MESSAGE_DELETE_BULK: function (e) {
@@ -224,9 +224,9 @@ let v = new D(s.h, {
         r > 0 &&
             m(i, (e) => {
                 let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
-                null != n && t.includes(n.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
+                (null != n && t.includes(n.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                     (e.count -= r),
-                    t.forEach((e) => I.add(e));
+                    t.forEach((e) => I.add(e)));
             });
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
@@ -236,12 +236,12 @@ let v = new D(s.h, {
         let n = u.A.getChannel(e.channelId);
         if (null == n || !o.Le.has(n.type)) return t;
         T(n, (t) => {
-            if (0 === e.messages.length) (t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0);
+            if (0 === e.messages.length) ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0));
             else {
                 let n = e.messages[0] ?? null;
-                (t.count = e.messages.length >= A.su ? A.su : t.count),
+                ((t.count = e.messages.length >= A.su ? A.su : t.count),
                     n?.type !== h.lAJ.THREAD_STARTER_MESSAGE &&
-                        ((t.mostRecentRawMessage = n), (t.mostRecentMessage = null));
+                        ((t.mostRecentRawMessage = n), (t.mostRecentMessage = null)));
             }
         });
     },

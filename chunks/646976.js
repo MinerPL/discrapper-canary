@@ -13,7 +13,7 @@ class l {
     type = a.x.CLIPS_GALLERY;
     clips;
     constructor({ id: e, clips: t }) {
-        (this.id = e), (this.clips = t);
+        ((this.id = e), (this.clips = t));
     }
     toSubmission() {
         return { id: this.id, data: { type: this.type, clips: this.clips.map(s) } };

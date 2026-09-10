@@ -34,7 +34,7 @@ function S(e, t, n) {
     if (429 === r) {
         if (n.isRetry) return !0;
         let e = parseInt(i["retry-after"]);
-        return isNaN(e) || setTimeout(t, e * I.A.Millis.SECOND), !1;
+        return (isNaN(e) || setTimeout(t, e * I.A.Millis.SECOND), !1);
     }
     if (403 === r)
         switch (a && a.code) {
@@ -48,7 +48,7 @@ function S(e, t, n) {
             case T.t02.REACTION_BLOCKED:
                 h._.dispatch(T.jej.SHAKE_APP, { duration: 200, intensity: 2 });
         }
-    else if (!n.isRetry) return t(), !1;
+    else if (!n.isRetry) return (t(), !1);
     return !0;
 }
 function N(e, t, n, i, r) {
@@ -157,10 +157,10 @@ function L(e) {
 }
 async function y(e, t, n) {
     let i = null != n && !!n.isRetry;
-    await c.A.unarchiveThreadIfNecessary(e),
+    (await c.A.unarchiveThreadIfNecessary(e),
         r.Bo.del({ url: T.Rsh.REMOVE_REACTIONS(e, t), oldFormErrors: !0, rejectWithError: (0, r.fT)() }).catch((n) => {
             S(n, () => y(e, t, { isRetry: !0 }), { isRetry: i });
-        });
+        }));
 }
 async function D(e, t, n, i) {
     let a = null != i && !!i.isRetry;
@@ -176,7 +176,7 @@ async function v(e) {
     let { channelId: t, messageId: n, emoji: i, location: s = "Message", userId: l, options: o } = e,
         u = null != o && !!o.burst,
         _ = null != o && !!o.isRetry;
-    N("MESSAGE_REACTION_REMOVE", t, n, i, { userId: l, burst: u }),
+    (N("MESSAGE_REACTION_REMOVE", t, n, i, { userId: l, burst: u }),
         await c.A.unarchiveThreadIfNecessary(t),
         r.Bo.del({
             url: C({
@@ -213,12 +213,12 @@ async function v(e) {
                     )
                 ) {
                     let e = await b(i, u);
-                    N("MESSAGE_REACTION_ADD", t, n, i, { userId: l, burst: u, colors: e }),
+                    (N("MESSAGE_REACTION_ADD", t, n, i, { userId: l, burst: u, colors: e }),
                         o?.burst
                             ? a.O.announce(m.intl.formatToPlainString(m.t.OamVbV, { name: i.name }))
-                            : a.O.announce(m.intl.formatToPlainString(m.t["tD9+b+"], { name: i.name }));
+                            : a.O.announce(m.intl.formatToPlainString(m.t["tD9+b+"], { name: i.name })));
                 }
-            });
+            }));
 }
 async function b(e, t) {
     let n = [];

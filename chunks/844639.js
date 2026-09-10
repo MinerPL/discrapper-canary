@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SocialLayerStorefrontInnerWrapper: () => e$, default: () => eV });
+(t.r(l), t.d(l, { SocialLayerStorefrontInnerWrapper: () => e$, default: () => eV }));
 var n = t(477900),
     s = t(582128),
     i = t(503698),
@@ -138,12 +138,12 @@ function er(e) {
                 });
         }, [r]),
         h = s.useCallback(() => {
-            q.default.track(et.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+            (q.default.track(et.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: d?.sessionId,
                 cta_type: el.ST.LEARN_MORE,
                 location_stack: c,
             }),
-                window.open(Q.A.getArticleURL(et.MVz.SOCIAL_LAYER_STOREFRONT));
+                window.open(Q.A.getArticleURL(et.MVz.SOCIAL_LAYER_STOREFRONT)));
         }, [d, c]),
         I = s.useCallback(() => {
             null != f && (0, m.pX)(f(0));
@@ -459,7 +459,7 @@ function eT(e) {
                         group: "social-layer-storefront-entry",
                         checked: e.id === t,
                         action: () => {
-                            i(e.id), a();
+                            (i(e.id), a());
                         },
                         label:
                             ((l = e.id === s),
@@ -624,12 +624,12 @@ function e$(e) {
             let { applicationId: l } = e,
                 { isTestMode: t, selectedStorefrontId: n, liveStorefrontId: i, liveStorefront: a } = R(l),
                 r = t && null != n && n !== i;
-            s.useEffect(() => {
+            (s.useEffect(() => {
                 t && null != l && (0, _.JX)(l);
             }, [t, l]),
                 s.useEffect(() => {
                     r && null != l && null != n && (0, _.d8)(l, n);
-                }, [r, l, n]);
+                }, [r, l, n]));
             let d = (0, o.bG)([M.A], () => (r && null != n ? M.A.getStorefrontById(n) : void 0), [r, n]);
             return {
                 isTestMode: t,
@@ -641,7 +641,7 @@ function e$(e) {
         T = y.effectiveStorefront ?? E,
         O = null != T && T.id === y.liveStorefrontId,
         D = (0, o.bG)([v.A], () => v.A.get(i), [i]);
-    (0, I.pE)(), (0, h.x)({ applicationId: k?.storefront?.applicationId });
+    ((0, I.pE)(), (0, h.x)({ applicationId: k?.storefront?.applicationId }));
     let w = (0, f.A)((0, r.A)()),
         G = (0, o.bG)([S.Ay, j.default], () => S.Ay.isMember(t, j.default.getId())),
         Y = s.useMemo(() => (null == g || isNaN(g) || (null != T && g >= T.pages.length) ? 0 : g), [g, T]),

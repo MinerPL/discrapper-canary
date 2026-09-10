@@ -38,7 +38,7 @@ let G = w("/detectables/games.json", b.Rsh.GAMES_DETECTABLE),
     x = w("/detectables/non-games.json", b.Rsh.NON_GAMES_DETECTABLE);
 var k = n(375708);
 let F = new A.A("GamesActionCreators");
-function V(e) {
+function B(e) {
     let {
         applicationId: t,
         secret: n,
@@ -58,8 +58,8 @@ function V(e) {
                 (null == e || e.closed || void 0 === e.closed) && (window.location.href = i);
             } else window.location.href = i;
         } catch (e) {
-            F.warn("Failed to open join URL", { applicationId: t, error: e.message }),
-                d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t });
+            (F.warn("Failed to open join URL", { applicationId: t, error: e.message }),
+                d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t }));
         }
         return Promise.resolve();
     }
@@ -84,7 +84,7 @@ function V(e) {
             }
         }
     }
-    B({ applicationId: t, channelId: r, embedded: s, source: l, locationObject: o, analyticsLocations: c })
+    V({ applicationId: t, channelId: r, embedded: s, source: l, locationObject: o, analyticsLocations: c })
         .then(async (e) => {
             if (0 === e) return null;
             null == _.A.getApplication(t) && (await (0, u.TA)(t));
@@ -125,7 +125,7 @@ function V(e) {
         })
         .catch(() => d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t }));
 }
-async function B(e) {
+async function V(e) {
     let {
         applicationId: t,
         branchId: n,
@@ -199,8 +199,8 @@ async function B(e) {
           A.then((e) => {
               d.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
           }).catch((e) => {
-              v.A.show(b.kqX.LAUNCH_GAME_FAILURE, k.intl.string(k.t.YZEBdj)),
-                  d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f });
+              (v.A.show(b.kqX.LAUNCH_GAME_FAILURE, k.intl.string(k.t.YZEBdj)),
+                  d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }));
           }))
         : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }), Promise.reject(f));
 }
@@ -209,8 +209,8 @@ function H(e) {
 }
 let j = {
     addGame(e, t) {
-        d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            C.default.track(b.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+        (d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
+            C.default.track(b.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t }));
     },
     toggleOverlay(e, t, n) {
         let i = (0, p.Zh)(e),
@@ -222,7 +222,7 @@ let j = {
                     r = s.Lt(i, b.hM6.OVERLAY_DISABLED);
                 t && r !== t && (i = s.PQ(i, b.hM6.OVERLAY_DISABLED));
                 let a = s.Lt(i, b.hM6.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (i = s.PQ(i, b.hM6.OVERLAY_V3_DISABLED)), D.V(e.id, e.branchId, i);
+                (null != n && n !== a && (i = s.PQ(i, b.hM6.OVERLAY_V3_DISABLED)), D.V(e.id, e.branchId, i));
                 return;
             }
         }
@@ -272,7 +272,7 @@ let j = {
         if (!g.A.canFetchDetectableGames()) return;
         let e = g.A.detectableGamesEtag;
         d.h.wait(() => {
-            d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
+            (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
                 L.A.get({
                     url: null != U ? `https://${U}/detectables/games-v1.json` : G,
                     headers: { "If-None-Match": e },
@@ -297,13 +297,13 @@ let j = {
                             ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: g.A.detectableGamesEtag })
                             : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
                     },
-                );
+                ));
         });
     },
     getDetectableBlocklist() {
         if (!g.A.canFetchExecutableBlocklist()) return;
         let e = g.A.blocklistEtag;
-        d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
+        (d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             l.Bo.get({
                 url: b.Rsh.GAMES_BLOCKLIST,
                 headers: { "If-None-Match": e },
@@ -334,13 +334,13 @@ let j = {
                         : (F.error("Failed to fetch games blocklist"),
                           d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
                 },
-            );
+            ));
     },
     getDetectableNonGames() {
         if (!f.A.canFetch()) return;
         let e = f.A.etag;
         d.h.wait(() => {
-            d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
+            (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
                 L.A.get({
                     url: null != U ? `https://${U}/detectables/non-games-v1.json` : x,
                     headers: { "If-None-Match": e },
@@ -364,7 +364,7 @@ let j = {
                             ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: f.A.etag })
                             : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
                     },
-                );
+                ));
         });
     },
     reportUnverifiedGame(e) {
@@ -413,7 +413,7 @@ let j = {
     deleteEntry(e) {
         d.h.dispatch({ type: "RUNNING_GAME_DELETE_ENTRY", game: e });
     },
-    launch: B,
+    launch: V,
     async join(e) {
         let {
             userId: t,
@@ -446,7 +446,7 @@ let j = {
                 { secret: d, joinUrl: E } = await y.A.getJoinSecret(t, n, i, r, a);
             return (
                 null == _ &&
-                    V({
+                    B({
                         applicationId: i,
                         secret: d,
                         joinUrl: E,
@@ -461,8 +461,8 @@ let j = {
                 !0
             );
         } catch (e) {
-            return d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: i }), !1;
+            return (d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: i }), !1);
         }
     },
-    joinWithSecret: V,
+    joinWithSecret: B,
 };

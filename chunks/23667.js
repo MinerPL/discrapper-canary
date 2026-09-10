@@ -6,7 +6,7 @@ class a extends r.c {
         let { id: t, searchType: n, searchQuery: r } = e;
         this.cancel(t);
         let a = new i.MS(t, n, r);
-        return this.set(t, a), a;
+        return (this.set(t, a), a);
     }
 }
 let s = new a();

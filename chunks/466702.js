@@ -24,10 +24,10 @@ let _ = [
             E = (0, l.bG)([x.A], () => x.A.getAgeVerificationWebviewUrl()),
             j = (0, l.bG)([x.A], () => x.A.getIsLoadingAgeVerification()),
             f = r.useCallback(() => {
-                i(), A.A.close();
+                (i(), A.A.close());
             }, [i]),
             m = r.useCallback(() => {
-                A.A.success(), f(), A.A.start_verification_check();
+                (A.A.success(), f(), A.A.start_verification_check());
             }, [f]);
         return (
             r.useEffect(() => {

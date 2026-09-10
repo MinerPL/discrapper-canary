@@ -16,7 +16,7 @@ function o(n) {
         id: null == b ? "add-friend-nickname" : "edit-friend-nickname",
         label: p,
         action: () => {
-            o?.(),
+            (o?.(),
                 (0, d.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([t.e("722514"), t.e("188941"), t.e("659139")]).then(
@@ -25,7 +25,7 @@ function o(n) {
                         return (t) => (0, l.jsx)(n, { user: e, nickname: b, ...t });
                     },
                     { contextKey: null != u ? (0, d.modalContextFromAppContext)(u) : void 0 },
-                );
+                ));
         },
     });
 }

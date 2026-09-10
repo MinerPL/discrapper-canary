@@ -15,13 +15,13 @@ function c(e, t) {
     let g = r.useRef(d),
         E = r.useRef(m),
         b = r.useRef(f);
-    (b.current = f),
+    ((b.current = f),
         r.useEffect(() => {
             g.current = d;
         }, [d]),
         r.useEffect(() => {
             E.current = m;
-        }, [m]);
+        }, [m]));
     let [S, C] = r.useState(!1),
         y = !S && a.u.isHlsUrl(n) && (0, i.Ap)();
     return (
@@ -57,9 +57,9 @@ function c(e, t) {
                             new Request(e.url, t)
                         ),
                     }));
-                    (h.current = i), v(i), E.current?.(i);
+                    ((h.current = i), v(i), E.current?.(i));
                     let d = 0;
-                    (c = () => {
+                    ((c = () => {
                         i.mainForwardBufferInfo?.len === 0 &&
                             i.trigger(e.Events.BUFFER_FLUSHING, {
                                 startOffset: t.currentTime,
@@ -92,7 +92,7 @@ function c(e, t) {
                                 n.fatal)
                             ) {
                                 if (d >= 3) {
-                                    i.destroy(), (h.current = null), v(null), E.current?.(null);
+                                    (i.destroy(), (h.current = null), v(null), E.current?.(null));
                                     return;
                                 }
                                 switch ((d++, n.type)) {
@@ -103,21 +103,21 @@ function c(e, t) {
                                         i.recoverMediaError();
                                         break;
                                     default:
-                                        i.destroy(), (h.current = null), E.current?.(null);
+                                        (i.destroy(), (h.current = null), E.current?.(null));
                                 }
                             }
                         }),
                         t.addEventListener("seeking", c),
                         i.loadSource(n),
-                        i.attachMedia(t);
+                        i.attachMedia(t));
                 }),
                 () => {
-                    (r = !0),
+                    ((r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
                             (h.current === a && (a.destroy(), (h.current = null), v(null), E.current?.(null)),
                             t.removeAttribute("src"),
-                            t.load());
+                            t.load()));
                 }
             );
         }, [y, n, e]),

@@ -23,7 +23,7 @@ function R(t) {
             fullWidth: !0,
             text: A.intl.string(p.default.g5Ds69),
             onClick: (t) => {
-                l?.(t), c?.(t);
+                (l?.(t), c?.(t));
             },
         }),
     });
@@ -38,7 +38,7 @@ function x(t) {
             fullWidth: !0,
             text: A.intl.string(A.t["0Q61kF"]),
             onClick: (t) => {
-                l?.(t), c?.();
+                (l?.(t), c?.());
             },
         }),
     });

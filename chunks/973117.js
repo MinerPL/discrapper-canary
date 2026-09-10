@@ -2,10 +2,10 @@ let i;
 n.d(t, { J: () => a, n: () => s });
 let r = "__d6gp33cibjs";
 try {
-    (i = window.localStorage), null == i && ((i = window[r]), delete window[r]);
+    ((i = window.localStorage), null == i && ((i = window[r]), delete window[r]));
 } catch (e) {}
 try {
-    null != window.localStorage && (window[r] = window.localStorage), delete window.localStorage;
+    (null != window.localStorage && (window[r] = window.localStorage), delete window.localStorage);
 } catch (e) {}
 class a {
     storage;
@@ -43,7 +43,7 @@ class a {
 let s = !(function () {
     let e = "test";
     try {
-        return i.setItem(e, e), i.removeItem(e), !0;
+        return (i.setItem(e, e), i.removeItem(e), !0);
     } catch (e) {
         return !1;
     }

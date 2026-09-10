@@ -28,7 +28,7 @@ function l(e) {
             let n = t.buildLayout().map(e),
                 { buildLayout: i, ...l } = t,
                 s = { ...l, layout: n };
-            return n.forEach((e) => (e.parent = s)), s;
+            return (n.forEach((e) => (e.parent = s)), s);
         }
         return t;
     })(e);

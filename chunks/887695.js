@@ -1,4 +1,4 @@
-n.d(t, { FV: () => p, Ff: () => x, Fk: () => g, JZ: () => C, oV: () => f, se: () => A }), n(321073);
+(n.d(t, { FV: () => p, Ff: () => x, Fk: () => g, JZ: () => C, oV: () => f, se: () => A }), n(321073));
 var l = n(582128),
     i = n(435558),
     s = n.n(i),
@@ -29,7 +29,7 @@ function f(e) {
         }, [n, c, i]),
         l.useEffect(() => {
             let e = s().debounce(c, 250);
-            return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+            return (window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, [c]),
         o
     );
@@ -38,15 +38,15 @@ function p(e) {
     let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
         s = l.useRef(i),
         r = l.useRef(!0);
-    l.useLayoutEffect(() => {
-        "" === i && "" !== s.current && n.current?.scrollToSectionTop(t), (s.current = i);
+    (l.useLayoutEffect(() => {
+        ("" === i && "" !== s.current && n.current?.scrollToSectionTop(t), (s.current = i));
     }, [i, t, n]),
         l.useLayoutEffect(() => {
             r.current && (n.current?.scrollToSectionTop(t), (r.current = !1));
         }, [t, n]),
         l.useEffect(() => {
             s.current = i;
-        }, [i]);
+        }, [i]));
 }
 let g = (e) => {
     let {
@@ -90,7 +90,7 @@ let g = (e) => {
         );
     return l.useCallback(
         (e) => {
-            (i.current = !0), m(), f(e);
+            ((i.current = !0), m(), f(e));
         },
         [i, m, f],
     );
@@ -119,7 +119,7 @@ function x(e) {
                 let l = d(t, n);
                 if (null == l) return;
                 let { visibleRowIndex: i, columnIndex: r } = l;
-                u(r, i), null != s.current && s.current.scrollRowIntoView(n);
+                (u(r, i), null != s.current && s.current.scrollRowIntoView(n));
             },
             [d, s, u],
         ),
@@ -170,7 +170,7 @@ function x(e) {
             function e() {
                 c.current = !1;
             }
-            return window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e);
+            return (window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e));
         }, []),
         {
             gridDispatch: p,
@@ -220,7 +220,7 @@ function A(e) {
                                         visibleRowIndex: m,
                                         category: n,
                                     }));
-                            l || (m++, c.push(a), o.push(a.length)), d++;
+                            (l || (m++, c.push(a), o.push(a.length)), d++);
                         }
                         h++;
                     })(l.items, l.categoryInfo.type, n?.has(`${l.key}`) ?? !1);

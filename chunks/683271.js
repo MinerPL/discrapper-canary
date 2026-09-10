@@ -6,8 +6,8 @@ var s = e(9588),
     u = e(309010),
     c = e(652215);
 function r(n, t) {
-    (0, s.showInaccessibleLinkModal)({ kind: "channel" }),
+    ((0, s.showInaccessibleLinkModal)({ kind: "channel" }),
         u.Ay.getChannelId(n) === t
             ? (0, i.bG)(c.BVt.CHANNEL(n, l.Ay.getDefaultChannel(n)?.id))
-            : (0, i.bG)(a.A.defaultRoute);
+            : (0, i.bG)(a.A.defaultRoute));
 }

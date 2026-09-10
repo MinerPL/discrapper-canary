@@ -6,6 +6,6 @@ var n,
     c = s.Deno,
     a = (u && u.versions) || (c && c.version),
     f = a && a.v8;
-f && (o = (n = f.split("."))[0] > 0 && n[0] < 4 ? 1 : +(n[0] + n[1])),
+(f && (o = (n = f.split("."))[0] > 0 && n[0] < 4 ? 1 : +(n[0] + n[1])),
     !o && i && (!(n = i.match(/Edge\/(\d+)/)) || n[1] >= 74) && (n = i.match(/Chrome\/(\d+)/)) && (o = +n[1]),
-    (t.exports = o);
+    (t.exports = o));

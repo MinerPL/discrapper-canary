@@ -62,7 +62,7 @@ function P(e) {
 async function O(e) {
     let t = await (0, z.We)(e),
         i = new Image();
-    (i.src = t), await i.decode();
+    ((i.src = t), await i.decode());
     let l = (0, s.h_)(i, 320, 320);
     return (0, z.bX)(l, e.name, "image/png");
 }
@@ -106,11 +106,11 @@ function M(e) {
             });
         }
         if (i.size > X) {
-            er({
+            (er({
                 message: B.intl.formatToPlainString(B.t["3eK7Ru"], { maxSize: (0, C.up)(X, { useKibibytes: !0 }) }),
                 isBlocking: null == Y.file,
             }),
-                w.default.track(N.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type });
+                w.default.track(N.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type }));
             return;
         }
         let l = (0, T.l3)(i.type);
@@ -121,15 +121,15 @@ function M(e) {
                     isBlocking: !0,
                 });
             let e = new FileReader();
-            e.addEventListener("load", () => {
-                V({ id: (0, a.A)(), formatType: l, content: e.result }), er(null);
+            (e.addEventListener("load", () => {
+                (V({ id: (0, a.A)(), formatType: l, content: e.result }), er(null));
             }),
-                e.readAsText(i);
+                e.readAsText(i));
         } else {
             let e = await (0, z.We)(i);
-            V({ id: (0, a.A)(), formatType: l, content: e }), er(null);
+            (V({ id: (0, a.A)(), formatType: l, content: e }), er(null));
         }
-        (J.current = E.A.fromBlob(b.f.STICKER, e)), W({ file: i, filename: i.name });
+        ((J.current = E.A.fromBlob(b.f.STICKER, e)), W({ file: i, filename: i.name }));
     }
     async function ep(e) {
         e.preventDefault();
@@ -139,20 +139,20 @@ function M(e) {
             else {
                 var l;
                 let e = new FormData();
-                e.append("name", Z),
+                (e.append("name", Z),
                     e.append("tags", t),
                     e.append("description", ei),
                     Y?.file != null && e.append("file", Y.file),
                     (l = Y.file?.type ?? ""),
-                    w.default.track(N.HAw.STICKER_UPLOAD_STARTED, { filetype: l });
+                    w.default.track(N.HAw.STICKER_UPLOAD_STARTED, { filetype: l }));
                 let i = (await J.current?.getOriginalMd5()) ?? null;
-                await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
+                (await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
                     K(!0),
-                    (0, d.P0)((0, f.o)(B.intl.string(B.t.QR85gd), m.Ck.SUCCESS));
+                    (0, d.P0)((0, f.o)(B.intl.string(B.t.QR85gd), m.Ck.SUCCESS)));
             }
             i();
         } catch (e) {
-            er({ message: e.body.message, isBlocking: !1 }), K(!1, e.body.message);
+            (er({ message: e.body.message, isBlocking: !1 }), K(!1, e.body.message));
         } finally {
             ea(!1);
         }

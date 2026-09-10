@@ -1,4 +1,4 @@
-n.d(t, { $: () => m }), n(321073);
+(n.d(t, { $: () => m }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -47,8 +47,8 @@ function m(e, t, n, a) {
                 renderSidebar: x,
                 renderListHeader: k,
                 stickyListHeader: F,
-                wrapSection: V,
-                getAnchorId: B,
+                wrapSection: B,
+                getAnchorId: V,
                 paddingTop: H,
                 paddingBottom: j,
                 scrollbarGutter: W = "stable",
@@ -56,9 +56,9 @@ function m(e, t, n, a) {
                 customTheme: K = !1,
                 chunkSize: $,
                 style: z,
-                innerId: q,
-                innerRole: Z,
-                innerAriaLabel: X,
+                innerId: X,
+                innerRole: q,
+                innerAriaLabel: Z,
                 innerAriaMultiselectable: Q,
                 innerAriaOrientation: J,
                 innerClassName: ee,
@@ -150,24 +150,24 @@ function m(e, t, n, a) {
                 paddingBottom: j,
                 chunkSize: $,
                 getScrollerState: ed,
-                getAnchorId: B,
+                getAnchorId: V,
             }),
             ef = (0, I.A)(el),
             ep = r.useRef(R),
             eT = r.useRef(L);
         r.useLayoutEffect(() => {
-            (ep.current = R), (eT.current = L);
+            ((ep.current = R), (eT.current = L));
         });
         let em = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > eo.current.dirty && (eo.current.dirty = e), 2 === e && ep.current?.(), eh(e);
+                    (e > eo.current.dirty && (eo.current.dirty = e), 2 === e && ep.current?.(), eh(e));
                 },
                 [eh, eo],
             ),
             eg = r.useCallback(() => em(), [em]);
-        (0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
-            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l });
+        ((0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
+            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
         let eS =
                 ((S = r.useRef(e_)),
                 r.useEffect(() => {
@@ -224,19 +224,19 @@ function m(e, t, n, a) {
         );
         let eC = r.useCallback(
             (e) => {
-                em(1),
+                (em(1),
                     null == ei.current ? es(!0) : clearTimeout(ei.current),
                     (ei.current = setTimeout(() => {
-                        (ei.current = null), es(!1);
+                        ((ei.current = null), es(!1));
                     }, 200)),
-                    null != O && O(e);
+                    null != O && O(e));
             },
             [O, em],
         );
         return (
             r.useLayoutEffect(() => {
                 2 !== eo.current.dirty && (eo.current.dirty = 2);
-            }, [U, w, G, V, eu, ec, eo]),
+            }, [U, w, G, B, eu, ec, eo]),
             !(function (e) {
                 let {
                     scrollerRef: t,
@@ -261,7 +261,7 @@ function m(e, t, n, a) {
                             return !1;
                         let [i] = a.computeScrollPosition(n.section, t),
                             l = i - n.scrollOffset;
-                        return r !== l && (e.scrollTop = l), !0;
+                        return (r !== l && (e.scrollTop = l), !0);
                     }
                     null != n &&
                         null != n.row &&
@@ -275,7 +275,7 @@ function m(e, t, n, a) {
                 anchor: eI,
                 getScrollerState: ed,
                 listComputer: eA,
-                getAnchorId: B,
+                getAnchorId: V,
                 totalHeight: eu,
             }),
             (0, i.jsxs)("div", {
@@ -293,9 +293,9 @@ function m(e, t, n, a) {
                     r.useMemo(
                         () =>
                             (0, i.jsx)(et, {
-                                id: q,
-                                role: Z,
-                                "aria-label": X,
+                                id: X,
+                                role: q,
+                                "aria-label": Z,
                                 "aria-multiselectable": Q,
                                 "aria-orientation": J,
                                 style: { height: eu },
@@ -358,12 +358,12 @@ function m(e, t, n, a) {
                                         renderSection: U,
                                         renderRow: w,
                                         renderFooter: G,
-                                        wrapSection: V,
+                                        wrapSection: B,
                                         spacerTop: ec,
                                     }),
                                 }),
                             }),
-                        [et, q, Z, X, Q, J, eu, ee, e_, k, F, U, w, G, V, ec],
+                        [et, X, q, Z, Q, J, eu, ee, e_, k, F, U, w, G, B, ec],
                     ),
                     r.useMemo(
                         () =>

@@ -351,7 +351,7 @@ function C(e) {
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, R(t);
+    return (delete t.roles, delete t.member, R(t));
 }
 function O(e) {
     return R({ ...d.do, ...e });

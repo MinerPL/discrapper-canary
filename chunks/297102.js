@@ -1,4 +1,4 @@
-i.d(e, { default: () => b }), i(321073);
+(i.d(e, { default: () => b }), i(321073));
 var n = i(477900),
     r = i(582128),
     s = i(132500),
@@ -36,7 +36,7 @@ let b = function (t) {
                 buttonText: N,
                 buttonLoading: h,
                 onButtonPress: () => {
-                    L(), (0, p.St)(k, p.WU.RETRY, p._7.GET_STARTED);
+                    (L(), (0, p.St)(k, p.WU.RETRY, p._7.GET_STARTED));
                 },
             },
         ];
@@ -48,7 +48,7 @@ let b = function (t) {
                     buttonText: x.intl.string(x.t["LZO+Hd"]),
                     buttonLoading: h,
                     onButtonPress: () => {
-                        E.A.openUrl(_.d$.APPEALS_LINK), (0, p.St)(k, p.WU.RETRY, p._7.MANUAL_REVIEW_REQUEST);
+                        (E.A.openUrl(_.d$.APPEALS_LINK), (0, p.St)(k, p.WU.RETRY, p._7.MANUAL_REVIEW_REQUEST));
                     },
                 }),
             t
@@ -79,8 +79,8 @@ let b = function (t) {
                     className: A.Z,
                     children: x.intl.format(x.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
-                            E.A.openUrl(u.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, p.St)(k, p.WU.RETRY, p._7.LEARN_MORE);
+                            (E.A.openUrl(u.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                (0, p.St)(k, p.WU.RETRY, p._7.LEARN_MORE));
                         },
                     }),
                 }),

@@ -7,6 +7,6 @@ e.exports = function (e) {
             this.ignoreNextKeyup = !1;
             return;
         }
-        (t = r(767721)), this.handleKey(n, t(e), e);
+        ((t = r(767721)), this.handleKey(n, t(e), e));
     }
 };

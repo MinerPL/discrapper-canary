@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(321073);
+(n.d(t, { A: () => A }), n(321073));
 var i = n(927739),
     r = n(703806),
     a = n.n(r),
@@ -13,7 +13,7 @@ function c(e) {
 let u = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
 function _(e) {
     let t = e.match(u);
-    return null != t && (e = `rgba(${0 | t[1]}, ${0 | t[2]}, ${0 | t[3]}, ${t[4]})`), e;
+    return (null != t && (e = `rgba(${0 | t[1]}, ${0 | t[2]}, ${0 | t[3]}, ${t[4]})`), e);
 }
 function E(e, t, n) {
     return void 0 !== t && void 0 != n ? l()(t, n) : e;
@@ -41,7 +41,7 @@ let A = {
     ...i,
     Easing: a(),
     accelerate: function (e) {
-        return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
+        return ((e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e);
     },
     animate: function e(t, n) {
         let r,
@@ -67,8 +67,8 @@ let A = {
             N = S;
         if (c || u) {
             let e = E(n.duration, I, f);
-            (r = i[A](t, { ...p, toValue: c ? T : -g, tension: l, friction: o, duration: e })),
-                (N = i.sequence([S, r]));
+            ((r = i[A](t, { ...p, toValue: c ? T : -g, tension: l, friction: o, duration: e })),
+                (N = i.sequence([S, r])));
         }
         d
             ? N.start(() => {

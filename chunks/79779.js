@@ -30,10 +30,10 @@ function f(t) {
         [P, R] = a.useState(null),
         T = a.useRef(null);
     async function D(t) {
-        t.preventDefault(), R(null), A(!0);
+        (t.preventDefault(), R(null), A(!0));
         try {
             let t = await n(E);
-            null != k && k(t), C();
+            (null != k && k(t), C());
         } catch (t) {
             R(new g.A(t).getAnyErrorMessage());
         } finally {
@@ -44,7 +44,7 @@ function f(t) {
         if (!v) {
             M(!0);
             try {
-                await f(), (0, o.P0)((0, u.o)(d.intl.string(d.t["84yeoz"]), c.Ck.SUCCESS));
+                (await f(), (0, o.P0)((0, u.o)(d.intl.string(d.t["84yeoz"]), c.Ck.SUCCESS)));
             } catch (e) {
                 let t = new g.A(e).getAnyErrorMessage();
                 null != t && (0, o.P0)((0, u.o)(t, c.Ck.FAILURE));

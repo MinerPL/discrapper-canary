@@ -42,7 +42,7 @@ function d(e) {
                     src: q,
                     onLoad: f,
                     ref: (e) => {
-                        null != E && (E.current = e), w || null == g || (g.current = e);
+                        (null != E && (E.current = e), w || null == g || (g.current = e));
                     },
                 }),
             w &&

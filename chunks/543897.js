@@ -1,4 +1,4 @@
-n.d(t, { A: () => l }), n(321073);
+(n.d(t, { A: () => l }), n(321073));
 var i = n(17928),
     r = n(228366);
 let a = [];
@@ -19,6 +19,6 @@ let l = new s(r.h, {
     },
     GUILD_GEO_RESTRICTED: function (e) {
         let t = a.filter((t) => t.id !== e.guildId);
-        t.push({ id: e.guildId, name: e.name, icon: e.icon, unavailable: !0, geo_restricted: !0 }), (a = t);
+        (t.push({ id: e.guildId, name: e.name, icon: e.icon, unavailable: !0, geo_restricted: !0 }), (a = t));
     },
 });

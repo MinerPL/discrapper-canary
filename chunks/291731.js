@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, { A: () => y }), n(321073);
+(n.d(t, { A: () => y }), n(321073));
 var s = n(435558),
     l = n.n(s),
     o = n(17928),
@@ -26,7 +26,7 @@ function N() {
         let e = O(f.id);
         null != e && (f = e);
     }
-    (T = h.XlH.OPEN), (m = {}), (g = !1);
+    ((T = h.XlH.OPEN), (m = {}), (g = !1));
 }
 let C = l().debounce(() => {
     g && ((null == f || l().isEqual(f, O(f.id))) && (g = !1), g || L.emitChange());
@@ -86,35 +86,35 @@ let L = new R(
                       if (((a = h.wLn.OVERVIEW), null == i)) {
                           let e = u.A.getChannel(),
                               t = e?.getGuildId();
-                          null != e && null != t && (c.A.fetchForChannel(t, e.id), (p = !0)), N();
+                          (null != e && null != t && (c.A.fetchForChannel(t, e.id), (p = !0)), N());
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                       let { section: t, sectionId: n } = e;
-                      (a = t), (S = n);
+                      ((a = t), (S = n));
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
                           n = O(t);
                       if (null == n) return !1;
-                      (f = n), (m = {}), (g = !1);
+                      ((f = n), (m = {}), (g = !1));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                      (f = null), (m = {}), (g = !1);
+                      ((f = null), (m = {}), (g = !1));
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == f) return !1;
-                      (f = { ...f }),
+                      ((f = { ...f }),
                           null != t.name && f.name !== t.name && ((f.name = t.name), (g = !0)),
                           void 0 !== t.avatar && f.avatar !== t.avatar && ((f.avatar = t.avatar), (g = !0)),
                           null != t.channelId &&
                               f.channel_id !== t.channelId &&
                               ((f.channel_id = t.channelId), (g = !0)),
-                          g && C();
+                          g && C());
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
-                      (r = null), (i = null), (I = []), (f = null), (T = h.XlH.CLOSED);
+                      ((r = null), (i = null), (I = []), (f = null), (T = h.XlH.CLOSED));
                   },
                   WEBHOOKS_UPDATE: function (e) {
                       let { guildId: t, channelId: n, webhooks: a } = e;
@@ -131,8 +131,8 @@ let L = new R(
                               });
                               if (null != i) {
                                   let n = { ...t, ...i };
-                                  (I[e] = n), g || f?.id !== n.id || (f = n);
-                              } else f?.id === t.id && (f = null), I.splice(e, 1);
+                                  ((I[e] = n), g || f?.id !== n.id || (f = n));
+                              } else (f?.id === t.id && (f = null), I.splice(e, 1));
                           }
                           for (let e of a)
                               null ==
@@ -140,15 +140,15 @@ let L = new R(
                                       let { id: n } = t;
                                       if (n === e.id) return !0;
                                   }) && I.push(e);
-                          (I = [...I]), C();
+                          ((I = [...I]), C());
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
-                      (T = h.XlH.SUBMITTING), (m = {});
+                      ((T = h.XlH.SUBMITTING), (m = {}));
                   },
                   INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                       if (T !== h.XlH.SUBMITTING) return !1;
-                      (T = h.XlH.OPEN), (m = e.errors ?? {});
+                      ((T = h.XlH.OPEN), (m = e.errors ?? {}));
                   },
               },
     ),

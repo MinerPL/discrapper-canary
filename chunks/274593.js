@@ -10,12 +10,12 @@ class s {
     applicationId;
     branchId;
     constructor(e) {
-        (this.raw = e),
+        ((this.raw = e),
             null != e.code && (this.code = e.code),
             null != e.uuid && (this.uuid = e.uuid),
             null != e.application_id && (this.applicationId = e.application_id),
             null != e.branch_id && (this.branchId = e.branch_id),
-            null != e.context ? (this.context = e.context) : (this.context = {});
+            null != e.context ? (this.context = e.context) : (this.context = {}));
     }
     get displayMessage() {
         if (null == this.code) return a.intl.string(a.t["5NMPSS"]);

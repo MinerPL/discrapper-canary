@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => V, S: () => x });
+n.d(t, { A: () => B, S: () => x });
 var r = n(435558),
     a = n.n(r),
     s = n(392421),
@@ -44,7 +44,7 @@ function U(e) {
     };
 }
 function w() {
-    (R = []),
+    ((R = []),
         (i = null),
         (g = null),
         (S = new Set()),
@@ -55,11 +55,11 @@ function w() {
         (D = a().chain(T)),
         (v = a().chain(T)),
         M.clear(),
-        b.clear();
+        b.clear());
 }
 function G() {
     let e = I.Ay.getChannelId();
-    if (null == e || !A.A.getChannel(e)?.isForumLikeChannel()) return w(), !1;
+    if (null == e || !A.A.getChannel(e)?.isForumLikeChannel()) return (w(), !1);
     k({ refreshThreadIds: !0 });
 }
 function x(e) {
@@ -77,7 +77,7 @@ function k(e) {
     var t, n;
     let r = A.A.getChannel(g);
     if (null == r) return;
-    e?.refreshThreadIds &&
+    (e?.refreshThreadIds &&
         ((y = Object.values(u.A.getThreadsForParent(r.guild_id, r.id)).map((e) => {
             let { id: t } = e;
             return t;
@@ -87,7 +87,7 @@ function k(e) {
         0 !== b.size && ((y = y.filter((e) => !b.has(e))), b.clear()),
         0 !== M.size && ((y = Array.from(new Set([...y, ...M]))), M.clear()),
         (e?.refreshThreadIds || e?.sortThreadIds) &&
-            ((v = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE))));
+            ((v = a().chain(y).sort(U(l.T.LATEST_ACTIVITY))), (D = a().chain(y).sort(U(l.T.CREATION_DATE)))));
     let o = (N === l.T.LATEST_ACTIVITY ? v : D).value(),
         d = (R =
             0 === S.size
@@ -138,13 +138,13 @@ class F extends d.Ay.Store {
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
         let e = m;
-        return (m = null), e;
+        return ((m = null), e);
     }
     getFirstNoReplyThreadId() {
         return i;
     }
 }
-let V = new F(c.h, {
+let B = new F(c.h, {
     CONNECTION_OPEN: G,
     OVERLAY_INITIALIZE: G,
     GUILD_CREATE: G,
@@ -169,16 +169,16 @@ let V = new F(c.h, {
         if (null == t.parent_id || t.parent_id !== g) return !1;
         let n = (0, p.yr)(t.id),
             i = M.has(t.id);
-        if (n && !i) M.add(t.id), k({ sortThreadIds: !0 });
+        if (n && !i) (M.add(t.id), k({ sortThreadIds: !0 }));
         else {
             if (n || !i) return !1;
-            M.delete(t.id), k({ sortThreadIds: !0 });
+            (M.delete(t.id), k({ sortThreadIds: !0 }));
         }
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (null == t.parent_id || t.parent_id !== g) return !1;
-        b.add(t.id), k({ sortThreadIds: !0 });
+        (b.add(t.id), k({ sortThreadIds: !0 }));
     },
     RESORT_THREADS: function (e) {
         let { channelId: t } = e;

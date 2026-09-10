@@ -24,25 +24,25 @@ var i =
 function o() {
     o.init.call(this);
 }
-(e.exports = o),
+((e.exports = o),
     (e.exports.once = function (e, t) {
         return new Promise(function (n, r) {
             var i, o, s;
             function u(n) {
-                e.removeListener(t, f), r(n);
+                (e.removeListener(t, f), r(n));
             }
             function f() {
-                "function" == typeof e.removeListener && e.removeListener("error", u), n([].slice.call(arguments));
+                ("function" == typeof e.removeListener && e.removeListener("error", u), n([].slice.call(arguments)));
             }
-            y(e, t, f, { once: !0 }),
+            (y(e, t, f, { once: !0 }),
                 "error" !== t &&
-                    ((i = e), (o = u), (s = { once: !0 }), "function" == typeof i.on && y(i, "error", o, s));
+                    ((i = e), (o = u), (s = { once: !0 }), "function" == typeof i.on && y(i, "error", o, s)));
         });
     }),
     (o.EventEmitter = o),
     (o.prototype._events = void 0),
     (o.prototype._eventsCount = 0),
-    (o.prototype._maxListeners = void 0);
+    (o.prototype._maxListeners = void 0));
 var s = 10;
 function u(e) {
     if ("function" != typeof e)
@@ -60,7 +60,7 @@ function c(e, t, n, r) {
               (s = o[t])),
         void 0 === s)
     )
-        (s = o[t] = n), ++e._eventsCount;
+        ((s = o[t] = n), ++e._eventsCount);
     else if (
         ("function" == typeof s ? (s = o[t] = r ? [n, s] : [s, n]) : r ? s.unshift(n) : s.push(n),
         (i = f(e)) > 0 && s.length > i && !s.warned)
@@ -76,11 +76,11 @@ function c(e, t, n, r) {
                     String(t) +
                     " listeners added. Use emitter.setMaxListeners() to increase limit",
             );
-        (c.name = "MaxListenersExceededWarning"),
+        ((c.name = "MaxListenersExceededWarning"),
             (c.emitter = e),
             (c.type = t),
             (c.count = s.length),
-            console && console.warn && console.warn(c);
+            console && console.warn && console.warn(c));
     }
     return e;
 }
@@ -93,7 +93,7 @@ function p() {
 function v(e, t, n) {
     var r = { fired: !1, wrapFn: void 0, target: e, type: t, listener: n },
         i = p.bind(r);
-    return (i.listener = n), (r.wrapFn = i), i;
+    return ((i.listener = n), (r.wrapFn = i), i);
 }
 function a(e, t, n) {
     var r = e._events;
@@ -129,11 +129,11 @@ function y(e, t, n, r) {
     if ("function" == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
     else if ("function" == typeof e.addEventListener)
         e.addEventListener(t, function i(o) {
-            r.once && e.removeEventListener(t, i), n(o);
+            (r.once && e.removeEventListener(t, i), n(o));
         });
     else throw TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof e);
 }
-Object.defineProperty(o, "defaultMaxListeners", {
+(Object.defineProperty(o, "defaultMaxListeners", {
     enumerable: !0,
     get: function () {
         return s;
@@ -149,14 +149,14 @@ Object.defineProperty(o, "defaultMaxListeners", {
     },
 }),
     (o.init = function () {
-        (void 0 === this._events || this._events === Object.getPrototypeOf(this)._events) &&
+        ((void 0 === this._events || this._events === Object.getPrototypeOf(this)._events) &&
             ((this._events = Object.create(null)), (this._eventsCount = 0)),
-            (this._maxListeners = this._maxListeners || void 0);
+            (this._maxListeners = this._maxListeners || void 0));
     }),
     (o.prototype.setMaxListeners = function (e) {
         if ("number" != typeof e || e < 0 || i(e))
             throw RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + e + ".");
-        return (this._maxListeners = e), this;
+        return ((this._maxListeners = e), this);
     }),
     (o.prototype.getMaxListeners = function () {
         return f(this);
@@ -187,10 +187,10 @@ Object.defineProperty(o, "defaultMaxListeners", {
         return c(this, e, t, !0);
     }),
     (o.prototype.once = function (e, t) {
-        return u(t), this.on(e, v(this, e, t)), this;
+        return (u(t), this.on(e, v(this, e, t)), this);
     }),
     (o.prototype.prependOnceListener = function (e, t) {
-        return u(t), this.prependListener(e, v(this, e, t)), this;
+        return (u(t), this.prependListener(e, v(this, e, t)), this);
     }),
     (o.prototype.removeListener = function (e, t) {
         var n, r, i, o, s;
@@ -202,18 +202,18 @@ Object.defineProperty(o, "defaultMaxListeners", {
         else if ("function" != typeof n) {
             for (i = -1, o = n.length - 1; o >= 0; o--)
                 if (n[o] === t || n[o].listener === t) {
-                    (s = n[o].listener), (i = o);
+                    ((s = n[o].listener), (i = o));
                     break;
                 }
             if (i < 0) return this;
-            0 === i
+            (0 === i
                 ? n.shift()
                 : (function (e, t) {
                       for (; t + 1 < e.length; t++) e[t] = e[t + 1];
                       e.pop();
                   })(n, i),
                 1 === n.length && (r[e] = n[0]),
-                void 0 !== r.removeListener && this.emit("removeListener", e, s || t);
+                void 0 !== r.removeListener && this.emit("removeListener", e, s || t));
         }
         return this;
     }),
@@ -256,4 +256,4 @@ Object.defineProperty(o, "defaultMaxListeners", {
     (o.prototype.listenerCount = l),
     (o.prototype.eventNames = function () {
         return this._eventsCount > 0 ? t(this._events) : [];
-    });
+    }));

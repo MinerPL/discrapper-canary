@@ -33,7 +33,7 @@ function c(e, t, n, i) {
         }
         if (0 === d && 0 === c) {
             let { left: e = 0, top: n = 0, width: i = 0, height: r = 0 } = t?.getBoundingClientRect() ?? {};
-            (d = e + i / 2), (c = n + r / 2);
+            ((d = e + i / 2), (c = n + r / 2));
         }
     }
     let u = {
@@ -46,9 +46,9 @@ function c(e, t, n, i) {
         _ = "nativeEvent" in e ? e.nativeEvent : e;
     if (n?.enableSpellCheck && (0, a.isDesktop)() && _.isTrusted) {
         let e = (0, s.nL)(function () {
-            e(), o(u);
+            (e(), o(u));
         });
-    } else e.preventDefault(), o(u);
+    } else (e.preventDefault(), o(u));
 }
 function u(e, t, n) {
     c(e, void 0, n, t);

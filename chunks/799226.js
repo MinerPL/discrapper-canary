@@ -15,14 +15,14 @@ function c(e) {
         if (null == t || null != i || n || d.getState().riveAssetCache.has(t)) return;
         let e = new a.RiveFile({ src: t });
         (0, l.O)(() => {
-            e.init(),
+            (e.init(),
                 e.on(a.EventType.Load, () => {
                     let n = { status: "loaded", buffer: e.buffer };
                     d.setState((e) => ({ riveAssetCache: e.riveAssetCache.set(t, n) }));
                 }),
                 e.on(a.EventType.LoadError, (e) => {
                     console.error("Rive file load error", t, e);
-                });
+                }));
         });
     }, [t, i, n]),
     null != i)

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     E$: () => h,
     VR: () => m,
     ZH: () => f,
@@ -15,7 +15,7 @@ n.d(t, {
         },
     v7: () => p,
 }),
-    n(142703);
+    n(142703));
 var i = n(636537),
     r = n(451988),
     a = n(228366),
@@ -59,13 +59,14 @@ function A(e) {
         })
         .then((t) => {
             let { access_token: n } = t.body;
-            return a.h.dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId: e, accessToken: n }), t;
+            return (a.h.dispatch({ type: "SPOTIFY_ACCOUNT_ACCESS_TOKEN", accountId: e, accessToken: n }), t);
         });
 }
 function h(e, t) {
     return E.get(e, t, { url: c.RQ.PROFILE }).then(
         (t) => (
-            a.h.dispatch({ type: "SPOTIFY_PROFILE_UPDATE", accountId: e, isPremium: "premium" === t.body.product }), t
+            a.h.dispatch({ type: "SPOTIFY_PROFILE_UPDATE", accountId: e, isPremium: "premium" === t.body.product }),
+            t
         ),
     );
 }

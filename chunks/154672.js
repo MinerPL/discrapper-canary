@@ -15,7 +15,7 @@ let c = {
                 properties: (t) => {
                     let e = !1,
                         r = t?.body?.email_domain;
-                    return null != r && (e = -1 !== r.split(".").indexOf("edu")), (0, o.e0)({ is_edu_email: e });
+                    return (null != r && (e = -1 !== r.split(".").indexOf("edu")), (0, o.e0)({ is_edu_email: e }));
                 },
             },
             rejectWithError: (0, a.fT)(),
@@ -60,7 +60,7 @@ let c = {
                         rejectWithError: (0, a.fT)(),
                     }),
                     c = o.body.guild?.id;
-                return _.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: c }), o.body;
+                return (_.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: c }), o.body);
             } catch (t) {
                 throw (_.h.dispatch({ type: "HUB_VERIFY_EMAIL_FAILURE", errors: t.body }), t);
             }

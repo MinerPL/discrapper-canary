@@ -64,7 +64,7 @@ let E =
     A = 5 / 219;
 function h(e, t) {
     let n = 2 * A;
-    return t && (n *= e), 1 + n;
+    return (t && (n *= e), 1 + n);
 }
 function I(e, t) {
     return () => l.intl.formatToPlainString(s.default.crFI7e, { seatType: l.intl.string(e), number: t });

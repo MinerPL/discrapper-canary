@@ -15,8 +15,8 @@ let m = (e) => {
         [a, r] = i.useState(!0);
     return (
         i.useEffect(() => {
-            a && (t === d.e.NOT_FETCHED || (t === d.e.FETCHED && d.A.isGuildProductsCacheExpired(e))) && n && c.GI(e),
-                r(!n);
+            (a && (t === d.e.NOT_FETCHED || (t === d.e.FETCHED && d.A.isGuildProductsCacheExpired(e))) && n && c.GI(e),
+                r(!n));
         }, [e, n, t, a]),
         { listingsLoaded: t === d.e.FETCHED && !a }
     );

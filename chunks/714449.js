@@ -8,7 +8,7 @@ class o extends i.A {
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     handlePostConnectionOpen = () => {
         let e;
-        (e = s.default.getCurrentUser()), e?.isStaff() && null != a.A.getGuild(l) && r.A.requestMembers(l, "", 0, !1);
+        ((e = s.default.getCurrentUser()), e?.isStaff() && null != a.A.getGuild(l) && r.A.requestMembers(l, "", 0, !1));
     };
 }
 let d = new o();

@@ -48,7 +48,7 @@ async function u(e, t, n, i, c, u) {
         r()(null != _, "Expected existing premium plan");
         let E = (0, o.GX)(e, _.planId),
             A = void 0 !== n ? n.toLowerCase() : e.currency;
-        (0, l.U)(e, t, u),
+        ((0, l.U)(e, t, u),
             await s.nV(
                 e,
                 { status: d.Dmq.ACTIVE, paymentSource: i, items: E, currency: n },
@@ -58,7 +58,7 @@ async function u(e, t, n, i, c, u) {
                 c,
                 u,
             ),
-            a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+            a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" }));
     } catch (e) {
         throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", error: e }), e);
     }
@@ -79,14 +79,14 @@ async function _(e, t, n) {
 }
 async function E(e, t, n, i, r) {
     try {
-        await s.r6(e, t, n, i, r), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+        (await s.r6(e, t, n, i, r), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" }));
     } catch (e) {
         throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", error: e }), e);
     }
 }
 async function A(e, t, n, i, r) {
     try {
-        await s.uK(e, t, n, i, r), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
+        (await s.uK(e, t, n, i, r), a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" }));
     } catch (e) {
         throw (a.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", error: e }), e);
     }

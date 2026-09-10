@@ -15,7 +15,7 @@ function b(t, e) {
     let n = i.A.getGuild(t)?.guildTheme,
         s = n?.themeSettings ?? null,
         b = n?.enabled === !0 && (0, u.Om)(s);
-    (0, c.tA)({
+    ((0, c.tA)({
         guildId: t,
         draft: b ? s : (0, a.Qy)(),
         original: b ? s : null,
@@ -25,5 +25,5 @@ function b(t, e) {
         owner: d.AY.PREVIEW_PANEL,
     }),
         (0, r.nf)(r.HP.GUILD_THEME_PREVIEW, { guildId: t, from: r.dJ.PERK_MODAL }),
-        e?.();
+        e?.());
 }

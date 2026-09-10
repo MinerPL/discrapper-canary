@@ -3,7 +3,7 @@ var r = {},
     n = (t.render = function (e, t, r, n) {
         if ("u" < typeof document && !n) return null;
         var o = n ? new n() : document.createElement("canvas");
-        (o.width = 2 * r), (o.height = 2 * r);
+        ((o.width = 2 * r), (o.height = 2 * r));
         var a = o.getContext("2d");
         return a
             ? ((a.fillStyle = e),
@@ -19,5 +19,5 @@ t.get = function (e, t, o, a) {
     var i = e + "-" + t + "-" + o + (a ? "-server" : "");
     if (r[i]) return r[i];
     var u = n(e, t, o, a);
-    return (r[i] = u), u;
+    return ((r[i] = u), u);
 };

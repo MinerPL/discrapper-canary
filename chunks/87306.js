@@ -1,4 +1,4 @@
-n.d(t, { A: () => l }), n(817476);
+(n.d(t, { A: () => l }), n(817476));
 let { getDeviceState: i, logger: r } = n(82193);
 var a = n(321034),
     s = n(687658);

@@ -19,19 +19,19 @@ var l = n(503698),
     x = n(179820),
     _ = n(375708),
     A = n(381134),
-    v = n(963434);
-function N(e) {
+    N = n(963434);
+function v(e) {
     let { rarity: t, className: n } = e,
         l = (function (e) {
             switch (e) {
                 case s.x.COMMON:
-                    return { Icon: p.p, className: v["rarity-common"], label: _.intl.string(_.t.L0K5ci) };
+                    return { Icon: p.p, className: N["rarity-common"], label: _.intl.string(_.t.L0K5ci) };
                 case s.x.RARE:
-                    return { Icon: b.A, className: v["rarity-rare"], label: _.intl.string(_.t["sTx/5z"]) };
+                    return { Icon: b.A, className: N["rarity-rare"], label: _.intl.string(_.t["sTx/5z"]) };
                 case s.x.EPIC:
-                    return { Icon: h.b, className: v["rarity-epic"], label: _.intl.string(_.t.RD8RiN) };
+                    return { Icon: h.b, className: N["rarity-epic"], label: _.intl.string(_.t.RD8RiN) };
                 case s.x.MYTHIC:
-                    return { Icon: x.O, className: v["rarity-mythic"], label: _.intl.string(_.t.vqc1ol) };
+                    return { Icon: x.O, className: N["rarity-mythic"], label: _.intl.string(_.t.vqc1ol) };
                 default:
                     return null;
             }
@@ -46,8 +46,8 @@ function N(e) {
     });
 }
 var R = n(140049),
-    j = n(518477),
-    I = n(881518);
+    I = n(518477),
+    j = n(881518);
 function y(e) {
     let {
             children: t,
@@ -59,27 +59,27 @@ function y(e) {
             badgeName: x,
             progressCircle: _,
             rarity: A,
-            isAnimated: v = !1,
+            isAnimated: N = !1,
             targetElementRef: y,
             onShow: C,
             position: T = "top",
             shouldShow: S,
         } = e,
-        D = v && null == _,
+        D = N && null == _,
         {
             tooltipId: P,
-            isVisible: M,
-            targetElementRef: O,
+            isVisible: O,
+            targetElementRef: M,
             trigger: U,
-        } = (0, o.D)({ children: t, targetElementRef: y, delay: j.In, onTooltipShow: C, shouldShow: S }),
+        } = (0, o.D)({ children: t, targetElementRef: y, delay: I.In, onTooltipShow: C, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
         k = (0, a.jsxs)("div", {
-            className: I.Qs,
+            className: j.Qs,
             "data-mana-component": "mini-premium-tooltip",
             children: [
-                B && (0, a.jsx)("div", { className: I.xV, children: (0, a.jsx)(N, { rarity: A }) }),
+                B && (0, a.jsx)("div", { className: j.xV, children: (0, a.jsx)(v, { rarity: A }) }),
                 (0, a.jsx)("div", {
-                    className: r()(I.fA, { [I.qJ]: D }),
+                    className: r()(j.fA, { [j.qJ]: D }),
                     "aria-hidden": !0,
                     children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
                         src: h,
@@ -93,26 +93,26 @@ function y(e) {
                 (0, a.jsxs)(d.B, {
                     gap: 4,
                     align: "center",
-                    className: I.i8,
+                    className: j.i8,
                     children: [
                         null != l &&
                             (0, a.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                className: I.UP,
+                                className: j.UP,
                                 children: l,
                             }),
                         (0, a.jsx)(u.D, {
                             variant: "display-sm",
                             color: "text-strong",
-                            className: r()(I.DD, { [I.x$]: "nitro" === b }),
+                            className: r()(j.DD, { [j.x$]: "nitro" === b }),
                             children: n,
                         }),
                         null != p &&
                             (0, a.jsx)(c.E, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                className: I.rf,
+                                className: j.rf,
                                 children: p,
                             }),
                     ],
@@ -120,14 +120,14 @@ function y(e) {
             ],
         }),
         G = null != p ? `${x}. ${p}` : x,
-        w = (0, m.j)({ shouldShow: M })((e, t) =>
+        w = (0, m.j)({ shouldShow: O })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(g.R, {
-                          isVisible: M,
+                          isVisible: O,
                           isRendered: !0,
-                          targetElementRef: O,
+                          targetElementRef: M,
                           content: k,
                           position: T,
                           align: "center",

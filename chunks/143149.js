@@ -17,7 +17,7 @@ function a(i) {
         return i.past ? t(i.past, n) : t(i.regular, n) + " \u0442\u043E\u043C\u0443";
     };
 }
-e.r(n), e.d(n, { default: () => p });
+(e.r(n), e.d(n, { default: () => p }));
 var r = {
         lessThanXSeconds: a({
             regular: {
@@ -553,7 +553,7 @@ var v = {
 let p = {
     code: "uk",
     formatDistance: function (i, n, e) {
-        return (e = e || {}), r[i](n, e);
+        return ((e = e || {}), r[i](n, e));
     },
     formatLong: o,
     formatRelative: function (i, n, e, t) {

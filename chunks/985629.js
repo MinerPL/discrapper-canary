@@ -28,7 +28,7 @@ function x(t) {
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), p?.();
+                      (t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), p?.());
                   },
                   fullWidth: f !== d.d.MODAL_V2,
               }),

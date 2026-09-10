@@ -16,16 +16,16 @@ function u(e, t) {
             rejectWithError: !1,
         }).then((e) => {
             let a = e.body;
-            n.h.dispatch({ type: "CURRENT_USER_UPDATE", user: a }),
-                i.default.track(s.HAw.AGE_GATE_ACTION, { source: t, action: o.AM.AGE_GATE_SUCCESS });
+            (n.h.dispatch({ type: "CURRENT_USER_UPDATE", user: a }),
+                i.default.track(s.HAw.AGE_GATE_ACTION, { source: t, action: o.AM.AGE_GATE_SUCCESS }));
         })
     );
 }
 function c(e) {
-    n.h.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" }),
-        i.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: o.AM.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION });
+    (n.h.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" }),
+        i.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: o.AM.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION }));
 }
 function d(e) {
-    n.h.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" }),
-        i.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: o.AM.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER });
+    (n.h.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" }),
+        i.default.track(s.HAw.AGE_GATE_ACTION, { source: e, action: o.AM.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER }));
 }

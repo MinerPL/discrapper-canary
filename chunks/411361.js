@@ -14,7 +14,7 @@ function p(e, t) {
     let n = t.getOptions(),
         { publicKey: i } = t.getDsn() || {},
         o = (0, s.Ce)({ environment: n.environment || r.U, release: n.release, public_key: i, trace_id: e });
-    return t.emit("createDsc", o), o;
+    return (t.emit("createDsc", o), o);
 }
 function h(e, t) {
     let n = t.getPropagationContext();

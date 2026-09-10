@@ -4,7 +4,7 @@ var e = d(522681),
     c = d(41851),
     a = class extends Error {
         constructor(l, t, d, i, e, c) {
-            super(`HTTP ${l} ${t}`),
+            (super(`HTTP ${l} ${t}`),
                 (this.ok = !1),
                 (this.status = l),
                 (this.statusText = t),
@@ -12,7 +12,7 @@ var e = d(522681),
                 (this.method = i),
                 (this.headers = e),
                 (this.data = c),
-                (this.name = "FetchHttpError");
+                (this.name = "FetchHttpError"));
         }
     };
 let s = async (l, t) => {
@@ -34,7 +34,7 @@ let s = async (l, t) => {
 };
 var n = class extends Error {
     constructor(l, t, d, i, e, c) {
-        super(`HTTP ${l} ${t}`),
+        (super(`HTTP ${l} ${t}`),
             (this.ok = !1),
             (this.status = l),
             (this.statusText = t),
@@ -42,7 +42,7 @@ var n = class extends Error {
             (this.method = i),
             (this.headers = e),
             (this.data = c),
-            (this.name = "WasmHttpError");
+            (this.name = "WasmHttpError"));
     }
 };
 let Z = new Set(["GET", "POST", "PUT", "PATCH", "DELETE"]),
@@ -51,10 +51,10 @@ let Z = new Set(["GET", "POST", "PUT", "PATCH", "DELETE"]),
         if (t.aborted) throw d;
         return await new Promise((i, e) => {
             let c = () => e(d);
-            t.addEventListener("abort", c, { once: !0 }),
+            (t.addEventListener("abort", c, { once: !0 }),
                 l.then(i, e).finally(() => {
                     t.removeEventListener("abort", c);
-                });
+                }));
         });
     },
     m = async (l) => {
@@ -66,14 +66,14 @@ let Z = new Set(["GET", "POST", "PUT", "PATCH", "DELETE"]),
             },
             d = l.isEncryptionEnabled ?? (() => !1),
             i = "sha256" === l.mgf1;
-        await (0, e.c)(
+        (await (0, e.c)(
             l.wasm.wasmPath,
             l.wasm.wasmSimdPath ?? l.wasm.wasmPath,
             l.wasm.glueCodePath,
             l.wasm.glueCodeSimdPath ?? "",
             l.wasm.useSimd ?? !0,
         ),
-            await (0, e.u)(l.apiURL, "", l.encryptionEnabled ?? !1, t, i);
+            await (0, e.u)(l.apiURL, "", l.encryptionEnabled ?? !1, t, i));
         let c = { baseURL: l.apiURL, headers: t },
             a = {
                 defaults: c,
@@ -173,7 +173,7 @@ let Z = new Set(["GET", "POST", "PUT", "PATCH", "DELETE"]),
         return a;
     };
 function o(l) {
-    (0, c.o)(l),
+    ((0, c.o)(l),
         (0, e.l)(async (t, d, i) => {
             let e = await l.request({
                 method: "POST",
@@ -185,7 +185,7 @@ function o(l) {
                 ie: i.ie,
             });
             return { data: e.data, status: e.status };
-        });
+        }));
 }
 function u() {
     return i;
@@ -194,12 +194,12 @@ function h() {
     return i?.encryption.enabled ?? !1;
 }
 function W() {
-    (i = void 0), (0, e.l)(null);
+    ((i = void 0), (0, e.l)(null));
 }
 async function G(l, t, d, e) {
     var c;
     let n, Z, b;
-    o(
+    (o(
         d
             ? await N(e.enabled, () =>
                   m({
@@ -272,7 +272,7 @@ async function G(l, t, d, e) {
                               (l = r),
                               new Promise((t, d) => {
                                   let e = new XMLHttpRequest();
-                                  e.open(i, N, !0),
+                                  (e.open(i, N, !0),
                                       Object.entries(l).forEach(([l, t]) => {
                                           e.setRequestHeader(l, t);
                                       }),
@@ -317,9 +317,9 @@ async function G(l, t, d, e) {
                                       }),
                                       u &&
                                           u.addEventListener("abort", () => {
-                                              e.abort(), d(new a(0, "Request aborted", N, i, {}, null));
+                                              (e.abort(), d(new a(0, "Request aborted", N, i, {}, null)));
                                           }),
-                                      e.send(X);
+                                      e.send(X));
                               })
                           );
                       }
@@ -355,7 +355,7 @@ async function G(l, t, d, e) {
                   },
               })),
     ),
-        (i = { apiURL: l, customHeaders: t.customHeaders, timeout: t.timeout, isWasm: !!d, encryption: e });
+        (i = { apiURL: l, customHeaders: t.customHeaders, timeout: t.timeout, isWasm: !!d, encryption: e }));
 }
 async function p(l) {
     let t = i;

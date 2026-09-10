@@ -9,7 +9,7 @@ let l = {},
 async function c(e) {
     if (!(0 === a.Ay.getGuildScheduledEventsForGuild(e).length || o.has(e)) && !d.has(e))
         try {
-            o.add(e), await s.default.getGuildEventsForCurrentUser(e), d.add(e);
+            (o.add(e), await s.default.getGuildEventsForCurrentUser(e), d.add(e));
         } catch (t) {
             o.delete(e);
         }
@@ -25,7 +25,7 @@ class u extends i.A {
     async getGuildEventUserCounts(e, t, n) {
         let i = n.filter((n) => null == l[`${e}-${t}-${n}`] || Date.now() - l[`${e}-${t}-${n}`] > 18e5);
         if (!(Date.now() - l[`${e}-${t}`] < 18e5) || 0 !== i.length) {
-            (l[`${e}-${t}`] = Date.now()), i.forEach((n) => (l[`${e}-${t}-${n}`] = Date.now()));
+            ((l[`${e}-${t}`] = Date.now()), i.forEach((n) => (l[`${e}-${t}-${n}`] = Date.now())));
             try {
                 await s.default.fetchGuildEventUserCounts(e, t, i);
             } catch (e) {}
@@ -38,16 +38,16 @@ class u extends i.A {
         return c(e);
     }
     async handleConnectionOpen() {
-        o.clear(), d.clear(), (l = {}), r.A.getLastSelectedGuildId();
+        (o.clear(), d.clear(), (l = {}), r.A.getLastSelectedGuildId());
     }
     handleGuildUnavailable(e) {
         let { guildId: t } = e;
-        o.delete(t), d.delete(t), delete l[t];
+        (o.delete(t), d.delete(t), delete l[t]);
     }
     handleGuildDelete(e) {
         let { guild: t } = e,
             n = t.id;
-        o.delete(n), d.delete(n), delete l[n];
+        (o.delete(n), d.delete(n), delete l[n]);
     }
     handleInviteResolveSuccess(e) {
         let { invite: t } = e,

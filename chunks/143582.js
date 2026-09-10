@@ -79,12 +79,12 @@ async function f(e) {
         let t = await n.q$(e);
         l.h.dispatch({ type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS", groupListing: t });
         let i = t.subscription_listings ?? [];
-        await Promise.all(
+        (await Promise.all(
             i.map((t) => {
                 if (t.subscription_plans[0].id === e) return a.ur(t.id, void 0, void 0, !0);
             }),
         ),
-            h(i);
+            h(i));
     } catch (i) {
         if ("status" in i && 429 === i.status && t < 10) await f(e, ++t);
         else throw i;

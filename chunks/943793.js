@@ -45,8 +45,8 @@ function L(e) {
         b = M(p, I, u, h, v),
         k = (0, l.useCallback)(
             (e, t) => {
-                (0, A.s1)(s, a, e),
-                    f({ action: "added" === t ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: s, gameId: a });
+                ((0, A.s1)(s, a, e),
+                    f({ action: "added" === t ? "TAG_ADDED" : "TAG_REMOVED", widgetEdited: s, gameId: a }));
             },
             [s, a, f],
         ),
@@ -84,8 +84,8 @@ function L(e) {
                                         tag: e,
                                         onRemove: c
                                             ? () => {
-                                                  (0, A.tg)(s, a, e),
-                                                      f({ action: "TAG_REMOVED", widgetEdited: s, gameId: a });
+                                                  ((0, A.tg)(s, a, e),
+                                                      f({ action: "TAG_REMOVED", widgetEdited: s, gameId: a }));
                                               }
                                             : void 0,
                                         ref: (t) => {
@@ -102,10 +102,10 @@ function L(e) {
                                 isExpanded: S,
                                 numberOfOverflowingTags: E,
                                 onExpandTags: () => {
-                                    C(!0), x({ action: "EXPAND_GAME_TAGS" });
+                                    (C(!0), x({ action: "EXPAND_GAME_TAGS" }));
                                 },
                                 onCollapseTags: () => {
-                                    C(!1), x({ action: "COLLAPSE_GAME_TAGS" });
+                                    (C(!1), x({ action: "COLLAPSE_GAME_TAGS" }));
                                 },
                                 disableInteraction: d,
                             }),
@@ -245,15 +245,15 @@ function Y(e) {
         I = l.useCallback(
             (e) => {
                 let t = e.trim();
-                (0, A.oc)(o, d, "" !== t ? t : void 0),
-                    t !== h.trim() && u({ action: "COMMENTARY_EDITED", widgetEdited: o, gameId: d });
+                ((0, A.oc)(o, d, "" !== t ? t : void 0),
+                    t !== h.trim() && u({ action: "COMMENTARY_EDITED", widgetEdited: o, gameId: d }));
             },
             [o, d, h, u],
         ),
         E = (0, v.T)({ value: h, onCommit: I }),
         { handleStartEditing: S, isInlineSurface: C } = E,
         b = l.useCallback(() => {
-            u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o }), S();
+            (u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o }), S());
         }, [o, u, S]),
         k = (0, i.jsxs)("div", {
             children: [

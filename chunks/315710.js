@@ -19,5 +19,5 @@ function d(e) {
 }
 function c(e) {
     let { keyboardModeEnabled: t } = e;
-    return d(e.containerRef, { keyboardModeEnabled: t }), e.children;
+    return (d(e.containerRef, { keyboardModeEnabled: t }), e.children);
 }

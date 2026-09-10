@@ -13,7 +13,7 @@ function o(e, t) {
     let n = s(e);
     if (null == n) return null;
     let i = r()(t);
-    return i.add(n.tenureReqNumMonths, "months"), i.add(1, "days"), i.toDate();
+    return (i.add(n.tenureReqNumMonths, "months"), i.add(1, "days"), i.toDate());
 }
 function d(e) {
     if (null == e) return null;

@@ -1,6 +1,6 @@
 t.a(e, async function (e, l) {
     try {
-        t.r(n), t.d(n, { default: () => w });
+        (t.r(n), t.d(n, { default: () => w }));
         var r = t(477900),
             a = t(582128),
             s = t(244377),

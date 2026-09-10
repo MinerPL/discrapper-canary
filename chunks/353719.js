@@ -1,5 +1,5 @@
 var n = r(271434);
-(e.exports = function e(t, r, a) {
+((e.exports = function e(t, r, a) {
     if ((n(r) || ((a = r || a), (r = [])), (a = a || {}), t instanceof RegExp)) {
         var i,
             s,
@@ -17,26 +17,26 @@ var n = r(271434);
                     asterisk: !1,
                     pattern: null,
                 });
-        return (t.keys = l), t;
+        return ((t.keys = l), t);
     }
     if (n(t)) {
         for (var f, d = r, m = a, g = [], b = 0; b < t.length; b++) g.push(e(t[b], d, m).source);
-        return ((f = RegExp("(?:" + g.join("|") + ")", c(m))).keys = d), f;
+        return (((f = RegExp("(?:" + g.join("|") + ")", c(m))).keys = d), f);
     }
-    return (i = r), u(o(t, (s = a)), i, s);
+    return ((i = r), u(o(t, (s = a)), i, s));
 }),
     (e.exports.parse = o),
     (e.exports.compile = function (e, t) {
         return s(o(e, t));
     }),
     (e.exports.tokensToFunction = s),
-    (e.exports.tokensToRegExp = u);
+    (e.exports.tokensToRegExp = u));
 var a = RegExp(
     "(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
     "g",
 );
 function o(e, t) {
-    for (var r, n = [], o = 0, i = 0, s = "", c = (t && t.delimiter) || "/"; null != (r = a.exec(e)); ) {
+    for (var r, n = [], o = 0, i = 0, s = "", c = (t && t.delimiter) || "/"; null != (r = a.exec(e));) {
         var u = r[0],
             h = r[1],
             p = r.index;
@@ -68,7 +68,7 @@ function o(e, t) {
             pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : v ? ".*" : "[^" + l(x) + "]+?",
         });
     }
-    return i < e.length && (s += e.substr(i)), s && n.push(s), n;
+    return (i < e.length && (s += e.substr(i)), s && n.push(s), n);
 }
 function i(e) {
     return encodeURI(e).replace(/[\/?#]/g, function (e) {
@@ -143,10 +143,10 @@ function u(e, t, r) {
         else {
             var p = l(h.prefix),
                 f = "(?:" + h.pattern + ")";
-            t.push(h),
+            (t.push(h),
                 h.repeat && (f += "(?:" + p + f + ")*"),
                 (s += f =
-                    h.optional ? (h.partial ? p + "(" + f + ")?" : "(?:" + p + "(" + f + "))?") : p + "(" + f + ")");
+                    h.optional ? (h.partial ? p + "(" + f + ")?" : "(?:" + p + "(" + f + "))?") : p + "(" + f + ")"));
         }
     }
     var d = l(r.delimiter || "/"),

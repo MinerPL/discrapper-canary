@@ -310,7 +310,7 @@ function ez(e) {
     }
     function e3(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n);
+        (null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, l, n));
     }
     function e7() {
         M.A.preload(el.ME, t.id);
@@ -326,7 +326,7 @@ function ez(e) {
             "contextmenu" === e.type
                 ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
                 : c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
-        eA(!0),
+        (eA(!0),
             t.isMultiUserDM()
                 ? (0, b.L3)(
                       e,
@@ -433,19 +433,19 @@ function ez(e) {
                           return (n) => (0, i.jsx)(e, { ...n, user: a, channel: t, channelSelected: l });
                       },
                       { impressionName: r, onClose: () => eA(!1) },
-                  );
+                  ));
     }
     function ti(e) {
-        e.preventDefault(), e.stopPropagation();
+        (e.preventDefault(), e.stopPropagation());
         let r = ea.intl.formatToPlainString(ea.t.hJ5Ap4, { name: e2 }),
             l = ea.intl.format(ea.t.SSIVOu, { name: e2 });
-        t.isManaged() &&
+        (t.isManaged() &&
             ((r = ea.intl.formatToPlainString(ea.t.hVGjEW, { name: e2 })),
             (l = ea.intl.format(ea.t.IK1Qvs, { name: e2 }))),
             (0, S.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 148166));
                 return (t) => (0, i.jsx)(e, { title: r, body: l, onSubmit: e3, ...t });
-            });
+            }));
     }
     let tr = (0, i.jsx)(ep.A, {
             userName: e2,
@@ -492,9 +492,9 @@ function ez(e) {
                 [A, m] = r.useState(!1),
                 N = r.useCallback(async () => {
                     if (!A) {
-                        m(!0),
+                        (m(!0),
                             (0, J.W)({ channelId: e.id, source: "DM Channel" }),
-                            (0, X.pX)(el.BVt.CHANNEL(el.ME, e.id));
+                            (0, X.pX)(el.BVt.CHANNEL(el.ME, e.id)));
                         try {
                             await Q.A.sendStickers(e.id, ["749054660769218631"], "", { location: es.Hx.SEND_WAVE });
                         } catch (e) {
@@ -685,20 +685,24 @@ let eF =
               let { channel: t, selected: n, ...r } = e,
                   l = (0, g.bG)([eT.default], () => eT.default.getUser(t.getRecipientId())),
                   s = l?.id,
-                  a = (0, g.cf)([ey.A, eR.A], () => {
-                      let e;
-                      if (t.isMultiUserDM()) {
-                          let n = ey.A.getState().statuses;
-                          t.recipients.some((e) => n[e] === el.clD.ONLINE) && (e = el.clD.ONLINE);
-                      } else null != s && (e = ey.A.getStatus(s));
-                      return {
-                          status: e,
-                          activities: null != s ? ey.A.getActivities(s) : null,
-                          applicationStream: null != s ? eR.A.getAnyStreamForUser(s) : null,
-                          isMobile: null != s && ey.A.isMobileOnline(s),
-                          isVR: null != s && ey.A.isVROnline(s),
-                      };
-                  }, [t, s]),
+                  a = (0, g.cf)(
+                      [ey.A, eR.A],
+                      () => {
+                          let e;
+                          if (t.isMultiUserDM()) {
+                              let n = ey.A.getState().statuses;
+                              t.recipients.some((e) => n[e] === el.clD.ONLINE) && (e = el.clD.ONLINE);
+                          } else null != s && (e = ey.A.getStatus(s));
+                          return {
+                              status: e,
+                              activities: null != s ? ey.A.getActivities(s) : null,
+                              applicationStream: null != s ? eR.A.getAnyStreamForUser(s) : null,
+                              isMobile: null != s && ey.A.isMobileOnline(s),
+                              isVR: null != s && ey.A.isVROnline(s),
+                          };
+                      },
+                      [t, s],
+                  ),
                   { voiceChannel: o } = (0, L.Ay)({ userId: s }),
                   u = (0, eo.r)({ user: l }),
                   c = (0, g.bG)(

@@ -1,4 +1,4 @@
-o.r(e),
+(o.r(e),
     o.d(e, {
         CheckpointNumbersCenterAlignedRive: () => F,
         UnlockRive: () => z.V,
@@ -32,7 +32,7 @@ o.r(e),
         TeenScreenTimeRive: () => K.w,
         NitroWishlistingWumpusRive: () => X,
         VibingWumpusRive: () => q.Z,
-    });
+    }));
 var t = o(402386),
     i = o(567341),
     a = o(896572),

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isHeicSignatureIncluded =
         t.isAvifStringIncluded =
         t.isFileContaineJfiforExifHeader =
@@ -65,4 +65,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isHeicSignatureIncluded = function (e) {
         let t = e.map((e) => String.fromCharCode(e)).join("");
         return ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"].some((e) => t.includes(e));
-    });
+    }));

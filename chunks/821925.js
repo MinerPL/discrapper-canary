@@ -1,4 +1,4 @@
-r.d(t, { A: () => s }), r(321073);
+(r.d(t, { A: () => s }), r(321073));
 var l = r(17928),
     o = r(228366);
 let u = {},
@@ -42,12 +42,12 @@ let s = new c(o.h, {
         let { productIds: t, products: r } = e,
             l = Date.now(),
             o = new Set();
-        r.forEach((e) => {
-            o.add(e.id), (u[e.id] = { state: "success", product: e, fetchedAt: l });
+        (r.forEach((e) => {
+            (o.add(e.id), (u[e.id] = { state: "success", product: e, fetchedAt: l }));
         }),
             t.forEach((e) => {
                 o.has(e) || delete u[e];
-            });
+            }));
     },
     STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE: function (e) {
         let { productIds: t, apiError: r } = e,
@@ -74,12 +74,12 @@ let s = new c(o.h, {
                 ),
                 {},
             );
-        t.forEach((e) => {
+        (t.forEach((e) => {
             null == o[e] ? delete n[e] : (n[e] = { state: "success", products: o[e], fetchedAt: l });
         }),
             r.forEach((e) => {
                 u[e.id] = { state: "success", product: e, fetchedAt: l };
-            });
+            }));
     },
     STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function (e) {
         let { skuIds: t, apiError: r } = e,
@@ -111,14 +111,14 @@ let s = new c(o.h, {
             r = Date.now();
         t.forEach((e) => {
             e.products.forEach((e) => {
-                (u[e.id] = { state: "success", product: e, fetchedAt: r }),
+                ((u[e.id] = { state: "success", product: e, fetchedAt: r }),
                     e.skuIds.forEach((t) => {
                         n[t] = { state: "success", products: [e], fetchedAt: r };
-                    });
+                    }));
             });
         });
     },
     LOGOUT: function (e) {
-        (u = {}), (n = {});
+        ((u = {}), (n = {}));
     },
 });

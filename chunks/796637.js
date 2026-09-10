@@ -1,4 +1,4 @@
-n.d(t, { D: () => y, g: () => D }), n(321073);
+(n.d(t, { D: () => y, g: () => D }), n(321073));
 var i = n(582128),
     l = n(435558),
     r = n.n(l),
@@ -51,7 +51,7 @@ function y() {
         [n, l] = i.useState(() => D(void 0, { withSuggestionsNotice: e })),
         s = o.A.isConnected(),
         a = i.useMemo(() => D({}), []);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         function t() {
             l(D(void 0, { withSuggestionsNotice: e }));
         }
@@ -60,7 +60,7 @@ function y() {
         return (
             R.forEach((e) => e.addChangeListener(n)),
             () => {
-                n.cancel(), R.forEach((e) => e.removeChangeListener(n));
+                (n.cancel(), R.forEach((e) => e.removeChangeListener(n)));
             }
         );
     }, [e]),
@@ -69,7 +69,7 @@ function y() {
                 let e;
                 0 === (e = U({ limit: O.lj, includeLoading: !1 })).length ? Promise.resolve() : A.A.loadThreadsBulk(e);
             }
-        }, [t, s]);
+        }, [t, s]));
     let d = t ? n : a,
         u = t && U({ limit: 1, includeLoading: !0 }).length > 0,
         h = (function (e) {
@@ -103,7 +103,7 @@ function D(e) {
             continue;
         }
         let r = t.parentId;
-        r in A || (A[r] = []), A[r].push(l);
+        (r in A || (A[r] = []), A[r].push(l));
     }
     function R(e, t) {
         let { isCollapsed: l, isMuted: s } = t;
@@ -152,7 +152,7 @@ function D(e) {
             getShownChannelAndThreadIds: () => d.map((e) => e.id),
             isEmpty: () => 0 === d.length,
             get channelList() {
-                return null == U && (U = R(d, this)), U;
+                return (null == U && (U = R(d, this)), U);
             },
         },
         D = (0, m.m_)(n)
@@ -176,7 +176,7 @@ function D(e) {
                     getShownChannelAndThreadIds: () => l.map((e) => e.id),
                     isEmpty: () => 0 === l.length,
                     get channelList() {
-                        return null == a && (a = R(l, this)), a;
+                        return (null == a && (a = R(l, this)), a);
                     },
                 };
             })
@@ -195,7 +195,7 @@ function D(e) {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            (e[c.Xt] = x.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = y.channelList.length);
+            ((e[c.Xt] = x.length), (e[c.PU] = 0), (e[c.HP] = 0), (e[c.yO] = 0), (e[c.bK] = y.channelList.length));
             for (let t = 0; t < D.length; t++) e[c.TF + t] = Math.max(1, D[t].channelList.length);
             return e;
         },

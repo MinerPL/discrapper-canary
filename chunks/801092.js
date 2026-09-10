@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.WEEKDAY_OFFSET = t.NUMBER = void 0),
     (t.zhStringToNumber = function (e) {
         let r = 0;
@@ -16,19 +16,5 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         }
         return parseInt(r);
     }),
-    (t.NUMBER = {
-        \u96F6: 0,
-        \u3007: 0,
-        \u4E00: 1,
-        \u4E8C: 2,
-        \u4E24: 2,
-        \u4E09: 3,
-        \u56DB: 4,
-        \u4E94: 5,
-        \u516D: 6,
-        \u4E03: 7,
-        \u516B: 8,
-        \u4E5D: 9,
-        \u5341: 10,
-    }),
-    (t.WEEKDAY_OFFSET = { \u5929: 0, \u65E5: 0, \u4E00: 1, \u4E8C: 2, \u4E09: 3, \u56DB: 4, \u4E94: 5, \u516D: 6 });
+    (t.NUMBER = { 零: 0, 〇: 0, 一: 1, 二: 2, 两: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 }),
+    (t.WEEKDAY_OFFSET = { 天: 0, 日: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6 }));

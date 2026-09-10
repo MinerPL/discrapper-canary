@@ -1,4 +1,4 @@
-r.d(t, { MessageReminderEditMenu: () => D, S: () => b }), r(321073);
+(r.d(t, { MessageReminderEditMenu: () => D, S: () => b }), r(321073));
 var a = r(477900),
     n = r(582128),
     i = r(192308),

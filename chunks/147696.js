@@ -1,4 +1,4 @@
-a.r(e), a.d(e, { default: () => A });
+(a.r(e), a.d(e, { default: () => A }));
 var s = a(477900),
     n = a(582128),
     l = a(435558),
@@ -147,7 +147,7 @@ function A(t) {
         K = n.useCallback(() => {
             N.forEach((t) => {
                 let e = (0, C.es)(t, t.accessPermissions, !0);
-                (0, h.R$)(t.id, [e]), a();
+                ((0, h.R$)(t.id, [e]), a());
             });
         }, [N, a]),
         M = n.useMemo(

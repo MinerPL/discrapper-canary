@@ -1,10 +1,10 @@
-n.d(t, { AT: () => o, ZW: () => u, d6: () => c, gE: () => l, ly: () => _, zA: () => d }), n(284009);
+(n.d(t, { AT: () => o, ZW: () => u, d6: () => c, gE: () => l, ly: () => _, zA: () => d }), n(284009));
 var i = n(317097),
     r = n(176201),
     a = n(9865),
     s = n(935208);
 function l(e) {
-    return e.sort(o), e;
+    return (e.sort(o), e);
 }
 function o(e, t) {
     let n = e.guildId;

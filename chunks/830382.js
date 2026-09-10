@@ -24,12 +24,12 @@ async function p(e, t, n, s) {
                     rejectWithError: (0, r.fT)(),
                 },
                 d = {};
-            n === i.g.VARIANTS_GROUP && (d.variants_return_style = n),
+            (n === i.g.VARIANTS_GROUP && (d.variants_return_style = n),
                 s && (d.include_unpublished = !0),
-                Object.keys(d).length > 0 && (o.query = d);
+                Object.keys(d).length > 0 && (o.query = d));
             let u = await (0, I.aP)(o);
-            a.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: l ? u.body : u.body.sku }),
-                l || a.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: u.body });
+            (a.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: l ? u.body : u.body.sku }),
+                l || a.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: u.body }));
         } catch (e) {
             throw (a.h.dispatch({ type: "SKU_FETCH_FAIL", skuId: t }), new o.A(`Failed to fetch SKU ${t}`));
         }
@@ -39,7 +39,7 @@ async function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, c.Fs)(e) && t) throw Error("this should only be used in test mode");
     let n = (await (0, I.aP)({ url: f.Rsh.APPLICATION_SKUS(e), rejectWithError: (0, r.fT)() })).body;
-    return a.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n;
+    return (a.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n);
 }
 async function m(e) {
     let { applicationId: t, skuId: n, paymentSourceId: i, isGift: a, currency: o } = e,
@@ -91,7 +91,7 @@ async function S(e, t, n, i, l) {
             });
         let o = (await r.Bo.post({ url: f.Rsh.ORDER_CREATE, body: s, rejectWithError: (0, r.fT)() })).body,
             d = o.id;
-        return a.h.dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: d, order: o }), d;
+        return (a.h.dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: d, order: o }), d);
     } catch (e) {
         throw (a.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new s.Ey(`Failed to create order: ${e}`));
     }
@@ -134,10 +134,10 @@ async function N(e, t, n) {
             }
             null != N && (e.country_code = N);
         }
-        null != o && (e.expected_amount = o),
+        (null != o && (e.expected_amount = o),
             null != _ && (e.expected_currency = _),
             (e.purchase_token = (0, h.r)()),
-            null != C && (e.quantity = C);
+            null != C && (e.quantity = C));
         let s = await r.Bo.post({
             url: f.Rsh.STORE_SKU_PURCHASE(t),
             body: e,

@@ -11,10 +11,10 @@ class d {
     sessionId;
     hlsInstance;
     constructor(t) {
-        (this.config = t),
+        ((this.config = t),
             (this.videoElement = t.videoElement),
             (this.sessionId = r.C.generateSessionId()),
-            (this.hlsInstance = t.hlsInstance);
+            (this.hlsInstance = t.hlsInstance));
     }
     initialize() {
         let t = {
@@ -25,16 +25,16 @@ class d {
         };
         null != this.hlsInstance && ((t.hlsjs = this.hlsInstance), (t.Hls = this.hlsInstance.constructor));
         try {
-            n.A.monitor(this.videoElement, t), (this.isMonitoring = !0);
+            (n.A.monitor(this.videoElement, t), (this.isMonitoring = !0));
         } catch (t) {
-            a.error("Error creating Mux monitor", t), (this.isMonitoring = !1);
+            (a.error("Error creating Mux monitor", t), (this.isMonitoring = !1));
         }
     }
     endSession() {
         if (this.isMonitoring)
             try {
-                "function" == typeof n.A.destroyMonitor && n.A.destroyMonitor(this.videoElement),
-                    (this.isMonitoring = !1);
+                ("function" == typeof n.A.destroyMonitor && n.A.destroyMonitor(this.videoElement),
+                    (this.isMonitoring = !1));
             } catch (t) {
                 a.error("Error ending Mux session", t);
             }
@@ -42,8 +42,8 @@ class d {
     destroy() {
         if (this.isMonitoring)
             try {
-                "function" == typeof n.A.destroyMonitor && n.A.destroyMonitor(this.videoElement),
-                    (this.isMonitoring = !1);
+                ("function" == typeof n.A.destroyMonitor && n.A.destroyMonitor(this.videoElement),
+                    (this.isMonitoring = !1));
             } catch (t) {
                 a.error("Error destroying Mux monitor", t);
             }

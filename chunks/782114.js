@@ -35,7 +35,7 @@ function a(e) {
                 return c.current;
             },
             setFocused(e) {
-                (c.current = e), f(e);
+                ((c.current = e), f(e));
             },
             get focusedKey() {
                 return d.current;
@@ -44,7 +44,7 @@ function a(e) {
                 return p.current;
             },
             setFocusedKey(e, t = "first") {
-                (d.current = e), (p.current = t), h(e);
+                ((d.current = e), (p.current = t), h(e));
             },
             selectedKeys: y,
             setSelectedKeys(e) {

@@ -37,5 +37,5 @@ function o(e) {
 }
 function a(e) {
     let t = (t, r) => ((0, n.useContext)(i) ? null : e(t, r));
-    return (t.displayName = e.displayName || e.name), (0, n.forwardRef)(t);
+    return ((t.displayName = e.displayName || e.name), (0, n.forwardRef)(t));
 }

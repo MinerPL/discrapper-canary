@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { slayerStorefrontPlaygroundConfig: () => er, storefrontCollection: () => en });
+(l.r(t), l.d(t, { slayerStorefrontPlaygroundConfig: () => er, storefrontCollection: () => en }));
 var a = l(34188),
     o = l(477900),
     n = l(582128),
@@ -245,7 +245,7 @@ function D() {
 }
 function N() {
     n.useEffect(() => {
-        f.h.dispatch({
+        (f.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
             config: {
                 promotionalSkuIds: [],
@@ -279,7 +279,7 @@ function N() {
                     assets: {},
                     promotions: {},
                 },
-            });
+            }));
     }, []);
 }
 let V = "/assets/863cb535889630a2.svg";
@@ -305,7 +305,7 @@ let U = {
             } = e,
             b = r ? String(i) : null,
             g = r ? Math.round(a * (1 - i / 100)) : null;
-        P({
+        (P({
             name: l,
             price: a,
             salePrice: g,
@@ -315,7 +315,7 @@ let U = {
             daysUntilExpiry: c ? p : null,
             isEligible: m,
         }),
-            D();
+            D());
         let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
@@ -353,7 +353,7 @@ let U = {
     },
 };
 var k = l(439325);
-l(323874), l(14289), l(35956);
+(l(323874), l(14289), l(35956));
 var M = l(366523);
 let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
     F = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
@@ -718,7 +718,7 @@ let en = {
                                     )),
                                     n.useEffect(() => {
                                         for (let { id: e, params: l } of T.slice(0, p)) R(e, l, t);
-                                        f.h.dispatch({
+                                        (f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
                                                 promotionalSkuIds: l,
@@ -754,7 +754,7 @@ let en = {
                                                     assets: {},
                                                     promotions: {},
                                                 },
-                                            });
+                                            }));
                                     }, [p, t, l, c]),
                                     l),
                                 y = n.useMemo(
@@ -857,7 +857,7 @@ let en = {
                                     [c, m, s],
                                 ),
                                 n.useEffect(() => {
-                                    f.h.dispatch({
+                                    (f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
@@ -910,7 +910,7 @@ let en = {
                                                     },
                                                 },
                                             },
-                                        });
+                                        }));
                                 }, [t, l, r, i]),
                                 (0, o.jsx)(ee.M, { applicationId: x, analyticsLocations: [] })
                             );
@@ -960,7 +960,7 @@ let en = {
                                 u = (0, J.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
                                 c = (0, J.i)((e) => e.setOverrideCurrentPremiumPlanId),
                                 m = (0, J.i)((e) => e.setCurrentPremiumPlanId);
-                            n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
+                            (n.useEffect(() => (d(!0), u(a), () => d(!1)), [d, u, a]),
                                 n.useEffect(
                                     () => (
                                         c(!0),
@@ -968,7 +968,7 @@ let en = {
                                         () => c(!1)
                                     ),
                                     [c, m, s],
-                                );
+                                ));
                             let b = {
                                 Icon: void 0,
                                 text: l,
@@ -1023,7 +1023,7 @@ let en = {
                         docs: "The shop card under a Nitro-flavored promotion: the price row shows the Nitro wheel, the discounted (Nitro) price in the positive color, and the struck-through original price. This is the same price treatment used on the PDP for subscribed users.",
                         component: function (e) {
                             let { name: t, price: l, nitroDiscountPercent: a } = e;
-                            P({
+                            (P({
                                 name: t,
                                 price: l,
                                 salePrice: Math.round(l * (1 - a / 100)),
@@ -1035,7 +1035,7 @@ let en = {
                             }),
                                 D(),
                                 n.useEffect(() => {
-                                    f.h.dispatch({
+                                    (f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
@@ -1082,8 +1082,8 @@ let en = {
                                                     },
                                                 },
                                             },
-                                        });
-                                }, []);
+                                        }));
+                                }, []));
                             let r = n.useCallback((e) => {
                                 e.preventDefault();
                             }, []);

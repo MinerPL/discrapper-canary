@@ -10,10 +10,10 @@ class c {
             else e = e.version;
         else if ("string" != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
         if (e.length > i) throw TypeError(`version is longer than ${i} characters`);
-        n("SemVer", e, t),
+        (n("SemVer", e, t),
             (this.options = t),
             (this.loose = !!t.loose),
-            (this.includePrerelease = !!t.includePrerelease);
+            (this.includePrerelease = !!t.includePrerelease));
         const r = e.trim().match(t.loose ? a[s.LOOSE] : a[s.FULL]);
         if (!r) throw TypeError(`Invalid Version: ${e}`);
         if (
@@ -26,7 +26,7 @@ class c {
             throw TypeError("Invalid major version");
         if (this.minor > o || this.minor < 0) throw TypeError("Invalid minor version");
         if (this.patch > o || this.patch < 0) throw TypeError("Invalid patch version");
-        r[4]
+        (r[4]
             ? (this.prerelease = r[4].split(".").map((e) => {
                   if (/^[0-9]+$/.test(e)) {
                       let t = +e;
@@ -36,7 +36,7 @@ class c {
               }))
             : (this.prerelease = []),
             (this.build = r[5] ? r[5].split(".") : []),
-            this.format();
+            this.format());
     }
     format() {
         return (
@@ -92,30 +92,30 @@ class c {
     inc(e, t, r) {
         switch (e) {
             case "premajor":
-                (this.prerelease.length = 0), (this.patch = 0), (this.minor = 0), this.major++, this.inc("pre", t, r);
+                ((this.prerelease.length = 0), (this.patch = 0), (this.minor = 0), this.major++, this.inc("pre", t, r));
                 break;
             case "preminor":
-                (this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc("pre", t, r);
+                ((this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc("pre", t, r));
                 break;
             case "prepatch":
-                (this.prerelease.length = 0), this.inc("patch", t, r), this.inc("pre", t, r);
+                ((this.prerelease.length = 0), this.inc("patch", t, r), this.inc("pre", t, r));
                 break;
             case "prerelease":
-                0 === this.prerelease.length && this.inc("patch", t, r), this.inc("pre", t, r);
+                (0 === this.prerelease.length && this.inc("patch", t, r), this.inc("pre", t, r));
                 break;
             case "major":
-                (0 !== this.minor || 0 !== this.patch || 0 === this.prerelease.length) && this.major++,
+                ((0 !== this.minor || 0 !== this.patch || 0 === this.prerelease.length) && this.major++,
                     (this.minor = 0),
                     (this.patch = 0),
-                    (this.prerelease = []);
+                    (this.prerelease = []));
                 break;
             case "minor":
-                (0 !== this.patch || 0 === this.prerelease.length) && this.minor++,
+                ((0 !== this.patch || 0 === this.prerelease.length) && this.minor++,
                     (this.patch = 0),
-                    (this.prerelease = []);
+                    (this.prerelease = []));
                 break;
             case "patch":
-                0 === this.prerelease.length && this.patch++, (this.prerelease = []);
+                (0 === this.prerelease.length && this.patch++, (this.prerelease = []));
                 break;
             case "pre": {
                 let e = +!!Number(r);
@@ -123,7 +123,7 @@ class c {
                 if (0 === this.prerelease.length) this.prerelease = [e];
                 else {
                     let n = this.prerelease.length;
-                    for (; --n >= 0; ) "number" == typeof this.prerelease[n] && (this.prerelease[n]++, (n = -2));
+                    for (; --n >= 0;) "number" == typeof this.prerelease[n] && (this.prerelease[n]++, (n = -2));
                     if (-1 === n) {
                         if (t === this.prerelease.join(".") && !1 === r)
                             throw Error("invalid increment argument: identifier already exists");
@@ -132,17 +132,17 @@ class c {
                 }
                 if (t) {
                     let n = [t, e];
-                    !1 === r && (n = [t]),
+                    (!1 === r && (n = [t]),
                         0 === u(this.prerelease[0], t)
                             ? isNaN(this.prerelease[1]) && (this.prerelease = n)
-                            : (this.prerelease = n);
+                            : (this.prerelease = n));
                 }
                 break;
             }
             default:
                 throw Error(`invalid increment argument: ${e}`);
         }
-        return (this.raw = this.format()), this.build.length && (this.raw += `+${this.build.join(".")}`), this;
+        return ((this.raw = this.format()), this.build.length && (this.raw += `+${this.build.join(".")}`), this);
     }
 }
 e.exports = c;

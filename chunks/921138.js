@@ -1,4 +1,4 @@
-l.d(e, { T_: () => I, oS: () => h, Ay: () => A }), l(321073);
+(l.d(e, { T_: () => I, oS: () => h, Ay: () => A }), l(321073));
 var t,
     a = l(582128),
     o = l(284009),
@@ -16,7 +16,7 @@ function m(n) {
 function p(n) {
     if (null == n) return ["no match"];
     let e = [];
-    return m(n) && e.push("profile disabled"), (0, d.K)(n.contentClassification) && e.push("nsfw"), e;
+    return (m(n) && e.push("profile disabled"), (0, d.K)(n.contentClassification) && e.push("nsfw"), e);
 }
 function I(n) {
     return 0 === p(n).length;

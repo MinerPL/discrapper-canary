@@ -28,16 +28,16 @@ function f(e) {
     function z(e, n) {
         j((t) => {
             let i = new Set(t);
-            return n ? i.add(e) : i.delete(e), i;
+            return (n ? i.add(e) : i.delete(e), i);
         });
     }
     async function E() {
-        w(null), k(new Set(S));
+        (w(null), k(new Set(S)));
         try {
-            for (let e of S) await u.A.createForumTag({ name: e }, n), z(e, !1);
+            for (let e of S) (await u.A.createForumTag({ name: e }, n), z(e, !1));
             t.onClose();
         } catch (e) {
-            w(new o.LG(e)), k(new Set());
+            (w(new o.LG(e)), k(new Set()));
         }
     }
     return (0, i.jsxs)(s.Modal, {

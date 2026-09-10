@@ -21,6 +21,6 @@ let o = new l(r.h, {
         a = { progress: t, total: n, name: i };
     },
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: function () {
-        (a = null), (s = !1);
+        ((a = null), (s = !1));
     },
 });

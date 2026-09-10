@@ -7,7 +7,7 @@ var l = e(477900),
 let c = function (t) {
     let { name: i, guildId: e, onClose: c, ...o } = t,
         u = n.useCallback(() => {
-            c?.(), a.A.leaveGuild(e);
+            (c?.(), a.A.leaveGuild(e));
         }, [e, c]),
         d = n.useMemo(
             () => [

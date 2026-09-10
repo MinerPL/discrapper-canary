@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0));
 var n,
     o = (n = r(43646)) && n.__esModule ? n : { default: n },
     a =
@@ -56,11 +56,11 @@ var n,
         return (
             (0, o.default)(e, function (e, r) {
                 var n = {};
-                (0, o.default)(e, function (e, t) {
+                ((0, o.default)(e, function (e, t) {
                     var r = i[t];
                     r ? (n = a({}, n, r(e))) : (n[t] = e);
                 }),
-                    (t[r] = n);
+                    (t[r] = n));
             }),
             t
         );

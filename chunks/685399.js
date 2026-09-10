@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => d, IQ: () => m, Rz: () => f, a1: () => h }), n(321073);
+(n.d(t, { Ay: () => d, IQ: () => m, Rz: () => f, a1: () => h }), n(321073));
 var l = n(582128),
     i = n(17928),
     s = n(429913),
@@ -24,7 +24,7 @@ function h(e) {
                 let n = (0, c.H)(t.embeddedActivity.location);
                 if (null == n) return;
                 let l = e.get(n) ?? [];
-                l.push(t), e.set(n, l);
+                (l.push(t), e.set(n, l));
             }),
             e
         );
@@ -35,11 +35,15 @@ function m(e, t) {
         r = (0, s.A)(n),
         u = new Set([]);
     for (let t of e) for (let e of t.userIds) u.add(e);
-    let c = (0, i.yK)([a.default], () => {
-        let e = [];
-        for (let t of u) e.push(a.default.getUser(t));
-        return e;
-    }, [u]);
+    let c = (0, i.yK)(
+        [a.default],
+        () => {
+            let e = [];
+            for (let t of u) e.push(a.default.getUser(t));
+            return e;
+        },
+        [u],
+    );
     return l.useMemo(() => {
         let n = new Map();
         return (

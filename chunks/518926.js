@@ -41,7 +41,7 @@ let d = n.memo(function (t) {
             return (
                 (t = t.map((i, s) =>
                     setTimeout(() => {
-                        j.createMultipleConfetti(
+                        (j.createMultipleConfetti(
                             (function (t, e, i, s, n) {
                                 let l = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                     a = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
@@ -68,7 +68,7 @@ let d = n.memo(function (t) {
                             })(e.getBoundingClientRect(), h, p, m, g, x, y),
                             f ?? 50,
                         ),
-                            s === t.length - 1 && null != R && E(!0);
+                            s === t.length - 1 && null != R && E(!0));
                     }, 60 * s),
                 )),
                 () => {

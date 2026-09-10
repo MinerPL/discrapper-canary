@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => Z });
+(s.r(t), s.d(t, { default: () => Z }));
 var n = s(477900),
     i = s(582128),
     a = s(331322),
@@ -59,7 +59,7 @@ function L(e) {
         d = (0, V.Ut)(),
         C = (0, Q.go)(),
         m = i.useCallback(() => {
-            (0, Y.E5)(Y.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
+            ((0, Y.E5)(Y.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
                 ? (0, S.r)({
                       type: U.F.CLICK_INTERNAL,
                       adCreativeType: g.p.QUEST,
@@ -77,7 +77,7 @@ function L(e) {
                   }),
                 (0, D.mA)({ fromContent: x.uF.RUNNING_ACTIVITY, questId: t.id }),
                 o(),
-                u();
+                u());
         }, [t.id, d, C, o, u]);
     return (0, n.jsxs)(y.l, {
         className: z.kL,

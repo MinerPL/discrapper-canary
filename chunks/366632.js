@@ -59,7 +59,7 @@ function p() {
             0 === f.size && window.addEventListener("languagechange", d),
             f.add(r),
             () => {
-                f.delete(r), 0 === f.size && window.removeEventListener("languagechange", d);
+                (f.delete(r), 0 === f.size && window.removeEventListener("languagechange", d));
             }
         ),
         [],

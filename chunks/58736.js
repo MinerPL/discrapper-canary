@@ -178,7 +178,7 @@ function C(e) {
         children: S ? O : (0, i.jsx)(h.xp, { containerRef: N, children: O }),
     });
 }
-(C.Icon = m),
+((C.Icon = m),
     (C.ChannelIcon = N),
     (C.Title = function (e) {
         let {
@@ -258,5 +258,5 @@ function C(e) {
         return "right" === t
             ? (0, i.jsx)(E._, { size: "md", color: "currentColor", className: s()(T.OW, n) })
             : (0, i.jsx)(A.n, { size: "md", color: "currentColor", className: s()(T.OW, n) });
-    });
+    }));
 let O = C;

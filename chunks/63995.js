@@ -1,4 +1,4 @@
-n.d(t, { A: () => W }), n(321073);
+(n.d(t, { A: () => W }), n(321073));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -50,7 +50,7 @@ function v(e) {
 }
 function b(e) {
     let t = L[e];
-    return null == t && ((t = new g.Ay(e)), (L[e] = t), t.rebuild()), t;
+    return (null == t && ((t = new g.Ay(e)), (L[e] = t), t.rebuild()), t);
 }
 function M(e) {
     return null != e && e.isGuildStageVoice() && m.Ay.countVoiceStatesForChannel(e.id) > 0;
@@ -78,7 +78,7 @@ function w(e) {
     return null != e && (delete L[e], O.delete(e), !0);
 }
 function G() {
-    R.clear(), O.clear(), (L = {});
+    (R.clear(), O.clear(), (L = {}));
 }
 function x(e, t, n) {
     if (null == n || e.has(n)) return;
@@ -93,13 +93,13 @@ function F(e) {
     let { relationship: t } = e;
     return U(t.id);
 }
-function V(e) {
+function B(e) {
     let { guild: t } = e;
     var n = t.id;
-    for (let e of O.values(n)) O.delete(e.id), delete L[e.id];
+    for (let e of O.values(n)) (O.delete(e.id), delete L[e.id]);
     R.delete(n);
 }
-function B(e) {
+function V(e) {
     let { streamKey: t } = e,
         { channelId: n, guildId: i, ownerId: r } = (0, c.Iy)(t);
     return null != i && !!R.has(i) && U(r, [n]);
@@ -126,7 +126,7 @@ class j extends l.Ay.Store {
         return v(e)?.size(t) ?? 0;
     }
     getChannels(e) {
-        return D(e ?? C), O.values(e ?? C);
+        return (D(e ?? C), O.values(e ?? C));
     }
     getChannelsVersion() {
         return O.version;
@@ -180,7 +180,7 @@ let W = new j(d.h, {
                     e
                 );
             }, []);
-        return P((e) => e.rebuild(), n), n.length > 0;
+        return (P((e) => e.rebuild(), n), n.length > 0);
     },
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
@@ -190,13 +190,13 @@ let W = new j(d.h, {
         let { channelId: t, guildId: n, userId: i } = e;
         return null != n && !!R.has(n) && U(i, [t]);
     },
-    STREAM_CLOSE: B,
-    STREAM_DELETE: B,
+    STREAM_CLOSE: V,
+    STREAM_DELETE: V,
     RELATIONSHIP_ADD: F,
     RELATIONSHIP_REMOVE: F,
     RELATIONSHIP_UPDATE: F,
-    GUILD_CREATE: V,
-    GUILD_DELETE: V,
+    GUILD_CREATE: B,
+    GUILD_DELETE: B,
     PASSIVE_UPDATE_V2: function (e) {
         let t = !1;
         for (let n of y(e.guildId)) t = b(n).rebuild() || t;

@@ -29,9 +29,9 @@ function m(e) {
             preload: g,
             renderPopout: p,
             onRequestOpen: C,
-            onRequestClose: E,
-            onClosePopout: I,
-            shouldShow: S,
+            onRequestClose: S,
+            onClosePopout: E,
+            shouldShow: I,
             shouldPreload: _ = !0,
             ignoreModalClicks: T = !0,
             ...w
@@ -67,19 +67,19 @@ function m(e) {
                           appContext: A,
                           openedAt: F.current,
                           closePopout: () => {
-                              e.closePopout(), I?.();
+                              (e.closePopout(), E?.());
                           },
                       }),
-            [i, r, p, a, o, v, j, f, m, A, I],
+            [i, r, p, a, o, v, j, f, m, A, E],
         );
     return (0, s.jsx)(l.Y, {
         popoutKey: u.KM,
-        shouldShow: S,
+        shouldShow: I,
         preload: _ ? P : void 0,
         loadingComponent: (0, c.Zm)(),
         renderPopout: y,
         onRequestOpen: C,
-        onRequestClose: E,
+        onRequestClose: S,
         ignoreModalClicks: T,
         ...w,
         children: t,

@@ -16,7 +16,7 @@ function i(e) {
         );
     };
 }
-n.d(t, { L_: () => i, Zy: () => r }), n(321073);
+(n.d(t, { L_: () => i, Zy: () => r }), n(321073));
 class r {
     #t = new Map();
     one(e, t) {
@@ -26,7 +26,7 @@ class r {
         let r = t().finally(() => {
             this.#t.get(e) === r && this.#t.delete(e);
         });
-        return this.#t.set(e, r), r;
+        return (this.#t.set(e, r), r);
     }
     many(e, t) {
         let { force: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -57,7 +57,7 @@ class r {
                     .finally(() => {
                         this.#t.get(t) === n && this.#t.delete(t);
                     });
-                this.#t.set(t, n), a.set(t, n);
+                (this.#t.set(t, n), a.set(t, n));
             }
         }
         return Promise.all(

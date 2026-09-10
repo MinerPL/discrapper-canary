@@ -50,7 +50,7 @@ let I = new h(a.h, {
         i = !0;
     },
     NON_GAMES_DATABASE_FETCH_FAIL: function () {
-        (i = !1), (A = !0);
+        ((i = !1), (A = !0));
     },
     NON_GAMES_DATABASE_UPDATE: function (e) {
         let { nonGames: t, etag: n } = e;
@@ -62,6 +62,6 @@ let I = new h(a.h, {
                 aliases: e.aliases ?? [],
                 thirdPartySkus: e.third_party_skus ?? [],
             });
-        (i = void 0), (E = Date.now()), (A = !0);
+        ((i = void 0), (E = Date.now()), (A = !0));
     },
 });

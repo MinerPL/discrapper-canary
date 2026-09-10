@@ -49,7 +49,7 @@ class S extends r.PureComponent {
         let { location: t, onLoginSuccess: n, source: s, resetToken: r } = this.props,
             { password: a, error: i } = this.state;
         if ((e.preventDefault(), 0 === a.length)) {
-            this.setState({ error: C.intl.string(C.t.R98xD5) }), I._.dispatch(w.jej.WAVE_EMPHASIZE);
+            (this.setState({ error: C.intl.string(C.t.R98xD5) }), I._.dispatch(w.jej.WAVE_EMPHASIZE));
             return;
         }
         null != i && this.setState({ error: null });
@@ -80,14 +80,15 @@ class S extends r.PureComponent {
     handleTokenSubmitMFAv2 = async (e, t) => {
         let { location: n, mfaTicket: s, onLoginSuccess: r, resetToken: a, source: i } = this.props,
             { password: l } = this.state;
-        if (0 === l.length) return h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject();
+        if (0 === l.length) return (h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         let o = a;
-        if ((null != n && (o = (0, m.A)(n)), null == o)) return h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject();
+        if ((null != n && (o = (0, m.A)(n)), null == o))
+            return (h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         this.setState({ working: !0 });
         try {
             let n = await p.A.resetPasswordMFAv2({ method: e, code: t, ticket: s, password: l, token: o, source: i });
             if (null != r) return void r(n);
-            h.h.dispatch({ type: "LOGIN_SUCCESS", token: n }), this.handlePasswordChangeSuccess();
+            (h.h.dispatch({ type: "LOGIN_SUCCESS", token: n }), this.handlePasswordChangeSuccess());
         } finally {
             this.setState({ working: !1 });
         }
@@ -98,7 +99,7 @@ class S extends r.PureComponent {
     };
     handleGoToLogin = () => {
         let { transitionTo: e } = this.props;
-        p.A.loginReset(), e(w.BVt.LOGIN, { source: "reset_password" });
+        (p.A.loginReset(), e(w.BVt.LOGIN, { source: "reset_password" }));
     };
     handleOpenApp = () => {
         (0, f.A)("password_reset");

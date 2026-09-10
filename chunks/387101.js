@@ -49,10 +49,10 @@ function f(t) {
         }, []),
         Y = i.useCallback(async () => {
             if ("unreported" === C && 0 === S.length) {
-                F(!0), await (0, l.yy)(100), F(!1), N(!0);
+                (F(!0), await (0, l.yy)(100), F(!1), N(!0));
                 return;
             }
-            M(!0),
+            (M(!0),
                 await g.default.track(b.HAw.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: S,
@@ -66,7 +66,7 @@ function f(t) {
                 M(!1),
                 z(!0),
                 await (0, l.yy)(1500),
-                e();
+                e());
         }, [C, S, f, O?.id, O?.name, P, e]);
     (0, m.Ay)(() => {
         g.default.track(b.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
@@ -108,7 +108,7 @@ function f(t) {
                         value: "unreported" === C ? void 0 : C,
                         options: U,
                         onChange: function (t) {
-                            A(t), N(!1), F(!1);
+                            (A(t), N(!1), F(!1));
                         },
                     }),
                 ],

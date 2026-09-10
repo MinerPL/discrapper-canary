@@ -34,10 +34,10 @@ class _ extends r.Ay.Store {
 }
 let E = new _(a.h, {
     COLLECTIBLES_SHOP_OPEN: function (e) {
-        (l = e.analyticsLocations ?? s), (o = e.analyticsSource ?? null), (i = e.initialProductSkuId);
+        ((l = e.analyticsLocations ?? s), (o = e.analyticsSource ?? null), (i = e.initialProductSkuId));
     },
     COLLECTIBLES_SHOP_CLOSE: function (e) {
-        (l = s), (o = null), (i = void 0);
+        ((l = s), (o = null), (i = void 0));
     },
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: function (e) {
         e.skuId === i && (i = void 0);
@@ -48,13 +48,13 @@ let E = new _(a.h, {
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: function (e) {
         let { tab: t, layoutId: n } = e;
-        (d[t] = n), delete u[t], c.delete(t);
+        ((d[t] = n), delete u[t], c.delete(t));
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: function (e) {
         let { tab: t, apiError: n } = e;
-        (u[t] = n), c.delete(t);
+        ((u[t] = n), c.delete(t));
     },
     LOGOUT: function (e) {
-        (l = s), (o = null), (i = void 0), (d = {}), (c = new Set()), (u = {});
+        ((l = s), (o = null), (i = void 0), (d = {}), (c = new Set()), (u = {}));
     },
 });

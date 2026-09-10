@@ -49,20 +49,20 @@ class l extends Error {
                                       continue;
                                   }
                                   let e = {};
-                                  (e._errors = s(i)), (t[n] = e);
+                                  ((e._errors = s(i)), (t[n] = e));
                               }
                               return t;
                           })(n),
                       }
                 : { message: n.message, code: n.code, retryAfter: n.retry_after, errors: n.errors, status: e.status };
         })(e, t);
-        super(i ?? n),
+        (super(i ?? n),
             (this.code = r ?? -1),
             (this.retryAfter = a),
             (this.errors = l),
             (this.status = o),
             (this.captchaFields = d ?? {}),
-            (this.cause = e);
+            (this.cause = e));
     }
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;
@@ -70,7 +70,7 @@ class l extends Error {
     getFieldErrors(e) {
         "string" == typeof e && (e = [e]);
         let t = this.errors;
-        for (; e.length > 0 && null != t; ) (t = t[e[0]]), (e = e.splice(1));
+        for (; e.length > 0 && null != t;) ((t = t[e[0]]), (e = e.splice(1)));
         return t?._errors;
     }
     getAllFieldErrors() {
@@ -103,9 +103,9 @@ class l extends Error {
     getAnyErrorMessageAndField() {
         let e = this.errors,
             t = null;
-        for (; null != e; ) {
+        for (; null != e;) {
             if (null != e._errors) return { fieldName: t, error: e._errors[0].message };
-            (t = Object.keys(e)[0]), (e = e[t]);
+            ((t = Object.keys(e)[0]), (e = e[t]));
         }
         return null;
     }

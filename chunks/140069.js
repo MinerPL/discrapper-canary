@@ -63,11 +63,11 @@ function w(e, t, n, i, r) {
     };
 }
 function G() {
-    y.clear(), (D = null), (v = null), (b = !1), (M = null);
+    (y.clear(), (D = null), (v = null), (b = !1), (M = null));
 }
 function x() {
     let e = Date.now();
-    G(),
+    (G(),
         (v = e),
         (M = _.A.getChannelId() ?? null),
         (function (e) {
@@ -94,10 +94,10 @@ function x() {
                 let a = p.default.extractTimestamp(r);
                 if (e - a > P) continue;
                 let s = w(i, m.B9.MANUAL, e, a, r);
-                y.set(i, s), n++;
+                (y.set(i, s), n++);
             }
         })(e),
-        V();
+        B());
 }
 function k() {
     return _.A.getChannelId() ?? null;
@@ -107,11 +107,11 @@ function F(e) {
     for (let t of y.values()) if (t.channelId !== e) return t.channelId;
     return null;
 }
-function V() {
+function B() {
     let e = k();
     return null != e && !b && null == D && ((D = e), !0);
 }
-function B() {
+function V() {
     let e,
         t = (function () {
             if (null == D) return !1;
@@ -119,7 +119,7 @@ function B() {
             return e !== D && M === D && e !== D && ((D = F(M)), !0);
         })(),
         n = null == (e = k()) ? ((M = null), !!b && ((b = !1), !0)) : M !== e && ((M = e), !!b && ((b = !1), !0)),
-        i = V();
+        i = B();
     return t || n || i;
 }
 function H(e) {
@@ -136,7 +136,7 @@ function j(e) {
 class W extends a.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        this.waitFor(C.A, N.A, S.A, d.A, c.A, u.A, o.A, _.A, I.A, E.Ay, A.Ay, h.Ay), x();
+        (this.waitFor(C.A, N.A, S.A, d.A, c.A, u.A, o.A, _.A, I.A, E.Ay, A.Ay, h.Ay), x());
     }
     isChannelTracked(e) {
         return y.has(e);
@@ -163,7 +163,7 @@ let K = new W(
                   return null == v && (x(), !0);
               }),
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: Y(function () {
-                  return G(), !0;
+                  return (G(), !0);
               }),
               MESSAGE_ACK: Y(function (e) {
                   let { channelId: t } = e;
@@ -177,13 +177,13 @@ let K = new W(
                   for (let { channelId: e } of t) H(e) && (n = !0);
                   return n;
               }),
-              VOICE_STATE_UPDATES: Y(B),
-              VOICE_CHANNEL_SELECT: Y(B),
+              VOICE_STATE_UPDATES: Y(V),
+              VOICE_CHANNEL_SELECT: Y(V),
               OVERLAY_TEXT_CHAT_SELECT_CHANNEL: Y(function (e) {
                   let { channelId: t, source: n } = e;
                   return (function (e, t) {
                       if (null == e) return !1;
-                      null == v && (v = Date.now()), D !== e && (D = e);
+                      (null == v && (v = Date.now()), D !== e && (D = e));
                       let n = k();
                       if ((null != n && e === n && b && (b = !1), null != D && !y.has(D))) {
                           let e = Date.now(),
@@ -210,14 +210,14 @@ let K = new W(
                           lastMessageId: e.lastMessageId,
                       }),
                       n = !1;
-                  return null == D && ((D = e.channelId), (n = !0)), t || n;
+                  return (null == D && ((D = e.channelId), (n = !0)), t || n);
               }),
               OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: Y(function (e) {
                   let t = y.delete(e.channelId),
                       n = !1;
                   if (D === e.channelId) {
                       let e = k();
-                      (D = F(e) ?? (b || null == e ? null : e)), (n = !0);
+                      ((D = F(e) ?? (b || null == e ? null : e)), (n = !0));
                   }
                   return t || n;
               }),
@@ -225,14 +225,14 @@ let K = new W(
                   let e = y.size() > 0;
                   y.clear();
                   let t = k();
-                  return (D = b || null == t ? null : t), e;
+                  return ((D = b || null == t ? null : t), e);
               }),
               OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: Y(function (e) {
                   let { minimized: t } = e;
                   if (b === t) return !1;
-                  if (((b = t), !t)) return V(), !0;
+                  if (((b = t), !t)) return (B(), !0);
                   let n = k();
-                  return null != n && D === n && (D = F(n)), !0;
+                  return (null != n && D === n && (D = F(n)), !0);
               }),
           },
 );

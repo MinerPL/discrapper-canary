@@ -55,7 +55,7 @@ t.useSyncExternalStoreWithSelector = function (e, t, r, n, i) {
     return (
         l(
             function () {
-                (d.hasValue = !0), (d.value = p);
+                ((d.hasValue = !0), (d.value = p));
             },
             [p],
         ),

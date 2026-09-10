@@ -26,7 +26,7 @@ function d() {
     if ("path1" == (0.2 > Math.random() ? "path1" : "path2")) {
         let n = Math.floor(Math.random() * a.length),
             i = Math.floor(Math.random() * a.length);
-        for (; i === n; ) i = Math.floor(Math.random() * a.length);
+        for (; i === n;) i = Math.floor(Math.random() * a.length);
         return { type: "gradient", colors: [a[n], a[i]], angle: t, intensity: e, gradientType: "two-color" };
     }
     {

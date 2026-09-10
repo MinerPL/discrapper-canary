@@ -52,7 +52,7 @@ function h(e, r) {
     if ("" === t) return g(t, b, e);
     let E = t.toLocaleLowerCase(),
         k = c(E);
-    f.forEach((e, r) => {
+    (f.forEach((e, r) => {
         let n;
         if (
             !(function (e, r, t, n, a) {
@@ -85,21 +85,21 @@ function h(e, r) {
                 var t, i, l, o;
                 let f,
                     m = s(e.toLocaleLowerCase());
-                h.test(e)
+                (h.test(e)
                     ? (f = { comparator: e, score: ((t = p[r]), 10 * (t ?? d)) })
                     : v.test(e)
                       ? (f = { comparator: e, score: ((i = p[r]), 5 * (i ?? d)) })
                       : a()(E, m)
                         ? (f = { comparator: e, score: ((l = p[r]), +(l ?? d)) })
                         : a()(k, c(m)) && (f = { comparator: e, score: ((o = p[r]), +(o ?? d)) }),
-                    null != f && (null == n || n.score < f.score) && (n = { ...f, id: r, username: u });
+                    null != f && (null == n || n.score < f.score) && (n = { ...f, id: r, username: u }));
             });
         }
         null != n && b.push(n);
     }),
         b.sort(u),
         b.length > n && (b.length = n),
-        g(t, b, e);
+        g(t, b, e));
 }
 function g(e, r, t) {
     self.postMessage({ type: "USER_RESULTS", uuid: t, payload: { query: e, results: r } });
@@ -113,7 +113,7 @@ self.addEventListener("message", (e) => {
                 let { payload: r } = e,
                     t = !1,
                     n = new Set();
-                r.forEach((e) => {
+                (r.forEach((e) => {
                     let r = f.get(e.id) ?? null,
                         a =
                             null == r
@@ -129,7 +129,7 @@ self.addEventListener("message", (e) => {
                                       globalName: e.globalName ?? r.globalName,
                                       nicknames: { ...r.nicknames, ...e.nicknames },
                                   };
-                    f.set(e.id, a),
+                    (f.set(e.id, a),
                         p.size > 0 &&
                             ((a.isFriend !== r?.isFriend ||
                                 a.friendNickname !== r?.friendNickname ||
@@ -137,23 +137,23 @@ self.addEventListener("message", (e) => {
                                 (t = !0),
                             Object.keys(a.nicknames).forEach((e) => {
                                 n.add(e);
-                            }));
+                            })));
                 }),
                     p.forEach((e, r) => {
                         let { filters: a } = e;
                         (null == a || a.friends === t || a.staff === t || n.has(a.guild)) && d.add(r);
                     }),
-                    m();
+                    m());
             })(r);
         case "QUERY_SET":
             return (function (e) {
                 let { uuid: r, payload: t } = e;
-                p.set(r, t), h(r, t);
+                (p.set(r, t), h(r, t));
             })(r);
         case "QUERY_CLEAR":
             return (function (e) {
                 let { uuid: r } = e;
-                p.delete(r), d.delete(r), 0 === d.size && m.cancel();
+                (p.delete(r), d.delete(r), 0 === d.size && m.cancel());
             })(r);
         case "REQUEST_DEBUG_STATE":
             return (function (e) {

@@ -39,10 +39,10 @@ function S(t) {
     return u.useCallback(
         (t) => {
             if ((null != t && O?.(t), m && (0, o.ks)(e.config) && e.userStatus?.claimedAt != null)) {
-                L?.(), (0, l.Cz)({ tab: T.G2.ORBS, analyticsLocations: [], analyticsSource: n.A.QUEST_HOME_PAGE });
+                (L?.(), (0, l.Cz)({ tab: T.G2.ORBS, analyticsLocations: [], analyticsSource: n.A.QUEST_HOME_PAGE }));
                 return;
             }
-            y &&
+            (y &&
                 (L?.(),
                 (0, o.K9)(e.config) ||
                     (0, A.p)() ||
@@ -68,7 +68,7 @@ function S(t) {
                           }),
                     (0, p.mA)({ fromContent: a }))),
                 !y && (0, o.K9)(e.config) && L?.(),
-                h();
+                h());
         },
         [O, L, e.config, e.userStatus?.claimedAt, h, m, y, e.id, a, S, I, f, N, g],
     );

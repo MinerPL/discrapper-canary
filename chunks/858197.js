@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,9 +41,9 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         });
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.casual =
         t.strict =
         t.sv =
@@ -71,11 +71,11 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     }),
     (t.parseDate = function (e, r, n) {
         return t.casual.parseDate(e, r, n);
-    });
+    }));
 let o = s(r(336321));
 t.en = o;
 let u = r(329454);
-Object.defineProperty(t, "Chrono", {
+(Object.defineProperty(t, "Chrono", {
     enumerable: !0,
     get: function () {
         return u.Chrono;
@@ -86,9 +86,9 @@ Object.defineProperty(t, "Chrono", {
         get: function () {
             return u.ParsingContext;
         },
-    });
+    }));
 let l = r(115835);
-Object.defineProperty(t, "ParsingResult", {
+(Object.defineProperty(t, "ParsingResult", {
     enumerable: !0,
     get: function () {
         return l.ParsingResult;
@@ -105,9 +105,9 @@ Object.defineProperty(t, "ParsingResult", {
         get: function () {
             return l.ReferenceWithTimezone;
         },
-    });
+    }));
 let d = r(115004);
-Object.defineProperty(t, "Meridiem", {
+(Object.defineProperty(t, "Meridiem", {
     enumerable: !0,
     get: function () {
         return d.Meridiem;
@@ -131,4 +131,4 @@ Object.defineProperty(t, "Meridiem", {
     (t.it = s(r(717091))),
     (t.sv = s(r(963059))),
     (t.strict = o.strict),
-    (t.casual = o.casual);
+    (t.casual = o.casual));

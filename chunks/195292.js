@@ -35,7 +35,7 @@ function i(e) {
         t.useEffect(() => {
             let e = o.current;
             if (!n || !l || null == e) return void u(null);
-            u(e.current()), e.advance();
+            (u(e.current()), e.advance());
             let t = e.current();
             null != t && d.current?.(t);
         }, [l]),

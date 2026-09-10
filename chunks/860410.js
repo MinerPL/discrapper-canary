@@ -13,12 +13,12 @@ var i = n(691540),
 class A extends s.A {
     actions = {
         GUILD_BULK_BAN_FAILED: (e) => {
-            (0, i.P0)((0, r.o)(E.intl.string(E.t.mICAWY), a.Ck.FAILURE)), u.E.getState().clearSelection(e.guildId);
+            ((0, i.P0)((0, r.o)(E.intl.string(E.t.mICAWY), a.Ck.FAILURE)), u.E.getState().clearSelection(e.guildId));
         },
         GUILD_BULK_BAN_UPDATE: (e) => {
             let { bannedUsers: t, failedUsers: n, targetUserIds: s } = e.bulkBan,
                 A = null != s ? s : [...t, ...n];
-            n.length > 0 && 0 === t.length
+            (n.length > 0 && 0 === t.length
                 ? (0, i.P0)((0, r.o)(E.intl.string(E.t.mICAWY), a.Ck.FAILURE))
                 : ((0, i.P0)((0, r.o)(E.intl.string(E.t.AsCe5I), a.Ck.SUCCESS)),
                   d.default.track(_.HAw.BULK_MODERATION_ACTION_COMPLETED, {
@@ -29,7 +29,7 @@ class A extends s.A {
                       successful_user_ids: t,
                       location: "MemberSafetyPageActionNotice",
                   })),
-                u.E.getState().clearSelection(e.guildId);
+                u.E.getState().clearSelection(e.guildId));
         },
     };
 }

@@ -8,19 +8,19 @@ var i = s(95561),
     d = s(652215);
 function S() {
     let e = a.$s.getSetting();
-    return 0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e);
+    return (0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e));
 }
 function c() {
     let e = a.Zr.getSetting();
-    return 0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e);
+    return (0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e));
 }
 function o() {
     let e = a.JG.getSetting();
-    return 0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e);
+    return (0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e));
 }
 function h() {
     let e = a.pE.getSetting();
-    return 0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e);
+    return (0 === r.A.totalUnavailableGuilds && (e = e.filter((e) => null != l.A.getGuild(e))), new Set(e));
 }
 function _(e) {
     return (e & d.yKI) === d.yKI

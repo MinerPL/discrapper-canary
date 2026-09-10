@@ -32,8 +32,8 @@ function k(s) {
         } = s,
         M = (0, t.bG)([N.A], () => N.A.getGuildIdFromApplicationId(C ?? void 0));
     i.useEffect(() => {
-        j.default.track(v.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal", application_id: C }),
-            (0, h.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, a, { dismissAction: A.i.AUTO_DISMISS });
+        (j.default.track(v.HAw.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal", application_id: C }),
+            (0, h.$l)(c.M.GAME_SHOP_ANNOUNCEMENT_MODAL, a, { dismissAction: A.i.AUTO_DISMISS }));
     }, [C, a]);
     let T = i.useCallback(() => {
             null != M && (0, p.X)({ guildId: M });

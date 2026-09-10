@@ -95,13 +95,13 @@ function R(e) {
                     label: j,
                     checked: A ? s && o : o,
                     onChange: function (e) {
-                        A &&
+                        (A &&
                             (0, y.yO)({
                                 clipsEnabled: e,
                                 trackAnalytics: !0,
                                 analyticsLocation: p.A.CLIPS_VIDEO_CALL_TILE,
                             }),
-                            (0, y.uL)(e, !0, p.A.CLIPS_VIDEO_CALL_TILE);
+                            (0, y.uL)(e, !0, p.A.CLIPS_VIDEO_CALL_TILE));
                     },
                 }),
             }),

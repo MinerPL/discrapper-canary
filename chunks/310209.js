@@ -9,7 +9,7 @@ class o extends r.A {
     skusToUserAndReason;
     applications;
     constructor(e) {
-        super(),
+        (super(),
             (this.skus = e.skus.map((e) => a.A.createFromServer(e))),
             (this.skusToUserAndReason = Object.fromEntries(
                 Object.entries(e.skus_to_user_and_reason).map((e) => {
@@ -17,7 +17,7 @@ class o extends r.A {
                     return [t, n];
                 }),
             )),
-            (this.applications = e.applications.map((e) => s.Ay.createFromServer(e)));
+            (this.applications = e.applications.map((e) => s.Ay.createFromServer(e))));
     }
     static fromServer(e) {
         return new o(e);

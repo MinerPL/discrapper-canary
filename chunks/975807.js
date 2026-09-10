@@ -7,6 +7,6 @@ async function r(e, t) {
     else if (i.isPlatformEmbedded) window.open(e);
     else {
         let t = document.createElement("a");
-        (t.href = e), (t.target = "_blank"), (t.rel = "noreferrer noopener"), t.click();
+        ((t.href = e), (t.target = "_blank"), (t.rel = "noreferrer noopener"), t.click());
     }
 }

@@ -207,7 +207,7 @@ class ex extends i.PureComponent {
     containerRef = i.createRef();
     state;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.renderElement = this.renderElement.bind(this)),
             (this.renderLeaf = this.renderLeaf.bind(this)),
             (this.handleOnChange = this.handleOnChange.bind(this)),
@@ -222,7 +222,7 @@ class ex extends i.PureComponent {
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             A.VW.isEditorEmpty(e.editor)
                 ? (this.state = { initialValue: (0, f.N3)().richValue, showPlaceholder: !0 })
-                : (this.state = { initialValue: A.VW.richValue(e.editor), showPlaceholder: !1 });
+                : (this.state = { initialValue: A.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
@@ -236,7 +236,7 @@ class ex extends i.PureComponent {
         this.props.editor.events.removeListener("onChange", this.handleOnChange);
     }
     componentDidCatch(e, t) {
-        h.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] });
+        (h.A.captureException(e, { extra: t }), this.setState({ initialValue: [...this.props.editor.children] }));
     }
     renderElement(e) {
         let { guildId: t, channelId: n, renderExtraElement: i, spellCheck: s } = this.props,
@@ -410,14 +410,14 @@ class ex extends i.PureComponent {
     }
     handleKeyDown(e) {
         if (null != this.props.editor.composition) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
             return;
         }
         this.props.onKeyDown?.(e);
     }
     handleKeyUp(e) {
         if (null != this.props.editor.composition) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
             return;
         }
         this.props.onKeyUp?.(e);
@@ -438,7 +438,7 @@ class ex extends i.PureComponent {
                     null != e.data &&
                     (A.ZF.isExpanded(n)
                         ? p.o.withSingleEntry(t, () => {
-                              (t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault();
+                              ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
             }
@@ -468,14 +468,14 @@ class ex extends i.PureComponent {
                     : null) && (t.startedInsideInline = !0),
             A.VW.isEditorEmpty(e))
         ) {
-            x.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t);
+            (x.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t));
             return;
         }
         let l = a.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
             i = (l?.rangeCount ?? 0) > 0 ? l?.getRangeAt(0) : null;
         if (null == (null != i ? A.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
             let t = A.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
-            (e.selection = null), null != t ? x.b.select(e, t) : x.b.select(e, A.VW.end(e, []));
+            ((e.selection = null), null != t ? x.b.select(e, t) : x.b.select(e, A.VW.end(e, [])));
         }
         e.composition = t;
     }
@@ -488,7 +488,7 @@ class ex extends i.PureComponent {
                 n = A.AS.leaf(t, e);
             A.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                x.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), A.VW.insertText(t, e);
+                (x.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), A.VW.insertText(t, e));
             });
         }
         t.composition = null;
@@ -588,11 +588,11 @@ class ex extends i.PureComponent {
     }
     handlePasteCapture(e) {
         let { editor: t, onPaste: n, readOnly: l } = this.props;
-        n?.(e),
+        (n?.(e),
             e.isDefaultPrevented() ||
                 e.isPropagationStopped() ||
                 l ||
-                (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation());
+                (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation()));
     }
     render() {
         let {

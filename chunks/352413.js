@@ -31,13 +31,13 @@ function A(e) {
         }),
         g = (0, r.useCallback)(
             (e) => {
-                (0, o.p)({ guildId: A, avatar: e }), (0, i.WU)(null == e ? "remove" : "set");
+                ((0, o.p)({ guildId: A, avatar: e }), (0, i.WU)(null == e ? "remove" : "set"));
             },
             [A],
         ),
         f = (0, r.useCallback)(
             (e) => {
-                (0, o.p)({ guildId: A, avatarDecoration: e }), null != e && d(e);
+                ((0, o.p)({ guildId: A, avatarDecoration: e }), null != e && d(e));
             },
             [d, A],
         );

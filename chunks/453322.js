@@ -23,6 +23,6 @@ function c(e) {
             return;
         }
         let e = t > d.current;
-        (d.current = t), e && c.current();
+        ((d.current = t), e && c.current());
     }, [r, t]);
 }

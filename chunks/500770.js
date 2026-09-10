@@ -62,7 +62,7 @@ function C(e) {
         : (0, i.jsx)(c.D, {
               className: s()(E.dO, E.hY),
               onClick: function (e) {
-                  e.stopPropagation(), null != t && t();
+                  (e.stopPropagation(), null != t && t());
               },
               children: l,
           });

@@ -1,4 +1,4 @@
-d.r(s), d.d(s, { default: () => k });
+(d.r(s), d.d(s, { default: () => k }));
 var i = d(477900),
     t = d(582128),
     a = d(17928),
@@ -41,10 +41,10 @@ function k(e) {
         B = (0, f.pb)({ layout: "POPOUT", userId: s.id, guildId: d, channelId: v, messageId: R, roleId: b }),
         G = t.useRef(null),
         U = (0, P.Ay)(s.id, d);
-    (0, O.A)(W, U, m.R7.POPOUT),
+    ((0, O.A)(W, U, m.R7.POPOUT),
         t.useEffect(() => {
             k?.(G?.current);
-        }, [G, k]);
+        }, [G, k]));
     let S = F ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
         V = T ? "div" : l.l;
     return (0, i.jsx)(u.f5, {
@@ -97,18 +97,18 @@ function k(e) {
                                             (0, i.jsx)(_.A, {
                                                 isBlocked: F,
                                                 onClick: () => {
-                                                    D(), (0, E.Wn)({ action: S, analyticsLocations: W, ...B });
+                                                    (D(), (0, E.Wn)({ action: S, analyticsLocations: W, ...B }));
                                                 },
                                             }),
                                             (0, i.jsx)(I.A, {
                                                 userId: s.id,
                                                 onClick: () => {
-                                                    D(),
+                                                    (D(),
                                                         (0, E.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                             analyticsLocations: W,
                                                             ...B,
-                                                        });
+                                                        }));
                                                 },
                                             }),
                                         ],

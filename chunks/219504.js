@@ -24,7 +24,7 @@ function l(e, t) {
                     o = r.indexOf(l),
                     c = r.indexOf(s),
                     d = +(c - o > 0);
-                r.splice(o, 1), (c = r.indexOf(s)), r.splice(c + d, 0, l), t(r);
+                (r.splice(o, 1), (c = r.indexOf(s)), r.splice(c + d, 0, l), t(r));
             },
             [e, n, a, t],
         );

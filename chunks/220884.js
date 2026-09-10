@@ -31,13 +31,13 @@ function S(e) {
                 (e) => {
                     l && (e?.preventDefault(), e?.stopPropagation());
                     let [i] = g.A.isFavorite(t, n);
-                    (0, I.k)({ tab: t, targetId: n, isFavorite: !i }),
+                    ((0, I.k)({ tab: t, targetId: n, isFavorite: !i }),
                         (0, m.YX)(r, {
                             type: m.Z5.FAVORITE,
                             value: i ? m.IP.REMOVED_FROM_FAVORITES : m.IP.ADDED_TO_FAVORITES,
                             secondaryValue: t,
                             userId: t === c.x.FRIENDS ? n : void 0,
-                        });
+                        }));
                 },
                 [l, t, n, r],
             );

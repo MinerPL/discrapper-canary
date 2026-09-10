@@ -1,4 +1,4 @@
-n.d(t, { A: () => x, Y: () => I }), n(321073);
+(n.d(t, { A: () => x, Y: () => I }), n(321073));
 var i,
     l = n(17928),
     r = n(713402),
@@ -87,10 +87,10 @@ function v() {
         n = !1;
     for (let t of e) n = T(t) || n;
     for (let e of [...S.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
-    return (_ = t), n;
+    return ((_ = t), n);
 }
 function M() {
-    S.clear(), (_ = new Set());
+    (S.clear(), (_ = new Set()));
     let e = !1;
     for (let t of h.A.getPrivateChannelIds()) e = T(t) || e;
     for (let t of a.A.getChannelHistory()) e = T(t) || e;
@@ -106,7 +106,7 @@ function y(e) {
 class D extends l.Ay.Store {
     static displayName = "FriendsWidgetMessagesStore";
     initialize() {
-        this.waitFor(u.A, p.A, a.A, d.Ay, c.A, h.A, E.A), M();
+        (this.waitFor(u.A, p.A, a.A, d.Ay, c.A, h.A, E.A), M());
     }
     getRows(e) {
         return [S.values(e), S.version];
@@ -131,7 +131,7 @@ let x = new D(
                       n = C;
                   C = t;
                   let i = !1;
-                  null != n && (i = T(n) || i), null != t && (i = T(t) || i);
+                  (null != n && (i = T(n) || i), null != t && (i = T(t) || i));
                   let l = v();
                   return i || l;
               }),
@@ -150,7 +150,7 @@ let x = new D(
                       i = !1;
                   for (let e of ((i = T(t) || i), n)) _.has(e) || (i = T(e) || i);
                   for (let e of _) n.has(e) || (i = T(e) || i);
-                  return (_ = n), i;
+                  return ((_ = n), i);
               }),
               RTC_CONNECTION_STATE: R(function () {
                   return v();
@@ -185,7 +185,7 @@ let x = new D(
               FRIENDS_LIST_POPOUT_MOUNTED: R(M),
               LOGOUT: R(function () {
                   let e = S.size() > 0;
-                  return S.clear(), (C = null), (_ = new Set()), e;
+                  return (S.clear(), (C = null), (_ = new Set()), e);
               }),
           },
 );

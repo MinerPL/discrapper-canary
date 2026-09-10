@@ -56,27 +56,27 @@ class C extends c.Ay.Store {
 }
 let O = new C(u.h, {
     CONNECTION_OPEN: function () {
-        (A = {}), (h = {}), (I = {}), (f = {}), (i = null), (T = !1), (m = !1), (p = !1);
+        ((A = {}), (h = {}), (I = {}), (f = {}), (i = null), (T = !1), (m = !1), (p = !1));
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        delete A[t.id], delete h[t.id], delete I[t.id];
+        (delete A[t.id], delete h[t.id], delete I[t.id]);
     },
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-        (f[e.invite.code] = _.A.createFromServer(e.invite)),
+        ((f[e.invite.code] = _.A.createFromServer(e.invite)),
             (i = a()(l()(d()(Object.values(f), "createdAt"))) ?? null),
-            (m = !1);
+            (m = !1));
     },
     FRIEND_INVITE_CREATE_FAILURE: function () {
         m = !1;
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
-        null != e.invites &&
+        (null != e.invites &&
             e.invites.forEach((e) => {
                 null != f[e.code] && delete f[e.code];
             }),
             (i = a()(l()(d()(Object.values(f), "createdAt"))) ?? null),
-            (T = !1);
+            (T = !1));
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
         let { channelId: t, invite: n } = e,
@@ -105,12 +105,12 @@ let O = new C(u.h, {
         p = !0;
     },
     FRIEND_INVITES_FETCH_RESPONSE: function (e) {
-        (f = {}),
+        ((f = {}),
             e.invites.forEach((e) => {
                 f[e.code] = _.A.createFromServer(e);
             }),
             (i = a()(l()(d()(Object.values(f), "createdAt"))) ?? null),
-            (p = !1);
+            (p = !1));
     },
     INSTANT_INVITE_CLEAR: function (e) {
         delete A[e.channelId];

@@ -1,4 +1,4 @@
-s.d(t, { default: () => L }), s(321073);
+(s.d(t, { default: () => L }), s(321073));
 var i = s(477900),
     a = s(582128),
     n = s(189213),
@@ -63,7 +63,7 @@ function R(e) {
                     icon: M.ChatIcon,
                     onClick: () => {
                         var e;
-                        return (e = t.id), void ((0, k.default)(), v.A.openPrivateChannel({ recipientIds: e }), a());
+                        return ((e = t.id), void ((0, k.default)(), v.A.openPrivateChannel({ recipientIds: e }), a()));
                     },
                 }),
         ],
@@ -92,9 +92,9 @@ function T(e) {
             async function f(e) {
                 if (!u && null != e)
                     try {
-                        c(!0), o(!1);
+                        (c(!0), o(!1));
                         let i = await (0, _.EQ)(t, e, s);
-                        n((t) => (0 === e ? i.users : [...t, ...i.users])), r(i.nextIndex);
+                        (n((t) => (0 === e ? i.users : [...t, ...i.users])), r(i.nextIndex));
                     } catch (e) {
                         o(!0);
                     } finally {
@@ -103,7 +103,7 @@ function T(e) {
             }
             return (
                 (0, a.useEffect)(() => {
-                    r(0), f(0);
+                    (r(0), f(0));
                 }, [t, s]),
                 { eligibleUsers: i, isFetching: u, hasError: d, getNextRows: () => f(l) }
             );
@@ -152,12 +152,12 @@ function T(e) {
                     size: "md",
                     fullWidth: !0,
                     onClick: async () => {
-                        p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
+                        (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_CTA_CLICKED, {
                             invited_user_ids: f.map((e) => e.id),
                         }),
                             k(!0),
                             await t(f),
-                            k(!1);
+                            k(!1));
                     },
                 }),
                 ...o,
@@ -165,7 +165,7 @@ function T(e) {
                     users: C,
                     isUserSelected: (e) => f.some((t) => t.id === e.id),
                     onSelectionChange: (e, t) => {
-                        m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N("");
+                        (m((s) => (t ? [...s, e] : s.filter((t) => t.id !== e.id))), t && N(""));
                     },
                     isUserDisabled: (e) => (f.length >= b && !f.some((t) => t.id === e.id)) || !e.eligible,
                     isFetching: v,
@@ -209,7 +209,7 @@ function z(e) {
         }),
         subtitle: y.intl.format(j.default.olkQkj, {
             onClick: () => {
-                t(), (0, m.openUserSettings)(f.X.SUBSCRIPTIONS_PANEL);
+                (t(), (0, m.openUserSettings)(f.X.SUBSCRIPTIONS_PANEL));
             },
         }),
         onClose: t,
@@ -232,21 +232,24 @@ let L = function (e) {
     async function d(e) {
         let s = new Map(),
             i = [];
-        for (let t of e) s.set(t.id, t), i.push(t.id);
+        for (let t of e) (s.set(t.id, t), i.push(t.id));
         let a = await (0, _.n2)(t.id, i);
         if (null == a) {
-            p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, { successful_user_ids: [], failed_user_ids: i }),
+            (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, {
+                successful_user_ids: [],
+                failed_user_ids: i,
+            }),
                 r(e.map((e) => ({ user: e, isSuccess: !1 }))),
-                c(2);
+                c(2));
             return;
         }
         let { invitedUsers: n, ineligibleUsers: l } = a;
-        p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, { successful_user_ids: n, failed_user_ids: l }),
+        (p.default.track(w.HAw.PREMIUM_GROUP_INVITE_FRIENDS_RESULT, { successful_user_ids: n, failed_user_ids: l }),
             r([
                 ...n.map((e) => ({ user: s.get(e), isSuccess: !0 })),
                 ...l.map((e) => ({ user: s.get(e), isSuccess: !1 })),
             ]),
-            c(2);
+            c(2));
     }
     switch (u) {
         case 1:

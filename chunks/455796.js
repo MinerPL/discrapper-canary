@@ -13,7 +13,7 @@ function l(e) {
         { createMultipleConfetti: m } = n.useContext(u.x);
     return (
         n.useEffect(() => {
-            setTimeout(() => h(1), 200),
+            (setTimeout(() => h(1), 200),
                 setTimeout(() => {
                     let e = window.innerWidth / 2,
                         t = window.innerHeight / 2;
@@ -28,7 +28,7 @@ function l(e) {
                         25,
                     );
                 }, 700),
-                setTimeout(t, 2e3);
+                setTimeout(t, 2e3));
         }, [m, t]),
         (0, i.jsxs)("div", {
             children: [

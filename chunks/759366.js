@@ -4,12 +4,12 @@ var i = n(17928),
     a = n(935208);
 let s = new Set(),
     l = !1;
-(s = new Set()), (l = !1);
+((s = new Set()), (l = !1));
 class o extends i.Ay.PersistedStore {
     static displayName = "UnenrolledActivityQuestStore";
     static persistKey = "UnenrolledActivityQuestStore";
     initialize(e) {
-        (s = new Set(e?.dismissedQuestIds ?? [])), (l = e?.autoEnroll ?? !1);
+        ((s = new Set(e?.dismissedQuestIds ?? [])), (l = e?.autoEnroll ?? !1));
     }
     getState() {
         return { dismissedQuestIds: [...s], autoEnroll: l };
@@ -36,6 +36,6 @@ let d = new o(r.h, {
         );
     },
     UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL: function (e) {
-        return (l = e.autoEnroll), !0;
+        return ((l = e.autoEnroll), !0);
     },
 });

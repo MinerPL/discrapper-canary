@@ -1,4 +1,4 @@
-n.d(t, { M$: () => v, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532);
+(n.d(t, { M$: () => v, Fv: () => O, kF: () => m, Oc: () => f, GY: () => b }), n(667532));
 var i = n(310953),
     l = n(473529),
     r = n(519059),
@@ -42,19 +42,19 @@ function I() {
             let c = a[d];
             if (_().includes(c)) {
                 let e;
-                (e = u.A.getCurrentRoute()), c === g.BVt.APPLICATION_STORE && null != e ? (0, E.a)(e) : (0, E.a)(c);
-            } else (n = g.ME), (0, E.i)(n, c);
+                ((e = u.A.getCurrentRoute()), c === g.BVt.APPLICATION_STORE && null != e ? (0, E.a)(e) : (0, E.a)(c));
+            } else ((n = g.ME), (0, E.i)(n, c));
         })(e);
     else {
         var n, r, s;
         let a, d;
-        (a = o.A.getState().channelId),
+        ((a = o.A.getState().channelId),
             (d = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
             (0, l.K)(t) && d.unshift(C.VV.GUILD_HOME),
             (n = (null != a ? d.indexOf(a) : -1) + e),
             (r = d.length),
             (s = d[n < 0 ? r - 1 : n >= r ? 0 : n]),
-            (0, E.i)(t, s);
+            (0, E.i)(t, s));
     }
 }
 var T = n(963169),
@@ -74,7 +74,7 @@ let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) 
                 let t = N.A.getLastSelectedGuildId();
                 null != t && ((e = t), (0, E.i)(t, S.Ay.getChannelId(t)));
             }
-            return null != e && (0, p.u)(e), !1;
+            return (null != e && (0, p.u)(e), !1);
         },
     },
     b = {

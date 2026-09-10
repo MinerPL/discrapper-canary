@@ -30,9 +30,9 @@ let l = new s(r.h, {
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
         let { wumpusMedia: t } = e;
-        (a.wowMomentWumpusMediaUrl = t), (a.isFetchingWowMomentMedia = !1);
+        ((a.wowMomentWumpusMediaUrl = t), (a.isFetchingWowMomentMedia = !1));
     },
     PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-        (a.isFetchingWowMomentMedia = !1), (a.canPlayWowMoment = !1);
+        ((a.isFetchingWowMomentMedia = !1), (a.canPlayWowMoment = !1));
     },
 });

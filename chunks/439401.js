@@ -23,16 +23,16 @@ let E = s.memo(function (e) {
         F = x ? I.intl.string(I.t["5/NS74"]) : I.intl.string(I.t.nIH0v8),
         T = x ? a.StarIcon : o.y;
     function N(e) {
-        e.preventDefault(),
+        (e.preventDefault(),
             e.stopPropagation(),
             v(!0),
             x
                 ? (0, h.Tr)(_)
                 : ((0, h.wg)({ url: _, src: l, gifSrc: E, width: t, height: r, format: y }),
-                  p._.dispatch(g.jej.FAVORITE_GIF));
+                  p._.dispatch(g.jej.FAVORITE_GIF)));
     }
     function G() {
-        (0, m.cE)(), w(!0);
+        ((0, m.cE)(), w(!0));
     }
     return (
         s.useEffect(() => {

@@ -20,13 +20,13 @@ function d(e) {
                         (clearTimeout(d.current),
                         s(!0),
                         (d.current = setTimeout(() => {
-                            s(!1), c.A.setState({ requestFlashKey: void 0 });
+                            (s(!1), c.A.setState({ requestFlashKey: void 0 }));
                         }, 2250)));
                 },
                 { equalityFn: o.x, fireImmediately: !0 },
             );
             return () => {
-                clearTimeout(d.current), e();
+                (clearTimeout(d.current), e());
             };
         }, [n.key, n.type]),
         (0, r.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(u.kL, i && u.jl), children: t })
@@ -72,7 +72,7 @@ var b = t(174459),
 function T(e) {
     return l.useCallback(() => {
         let n = e;
-        for (; "parent" in n && null != n.parent; ) n = n.parent;
+        for (; "parent" in n && null != n.parent;) n = n.parent;
         let t = "analyticsKey" in e ? e.analyticsKey : e.key;
         null != t &&
             b.default.track(N.HAw.UI_SETTING_INTERACTED, {
@@ -247,7 +247,7 @@ function M(e) {
             children: [null != a && (0, r.jsx)(z, { decoration: a }), (0, r.jsx)(D.u, {})],
         }),
         onClick: function () {
-            w.A.navigate(t, { animateSidebarScroll: !1 }), m();
+            (w.A.navigate(t, { animateSidebarScroll: !1 }), m());
         },
     });
 }
@@ -281,7 +281,7 @@ function V(e) {
             value: h,
             badge: g,
             onChange: (e) => {
-                v(), l(e);
+                (v(), l(e));
             },
             disabled: p,
             helperText: b,
@@ -321,7 +321,7 @@ function q(e) {
                     ((e = a),
                     (n = k),
                     (t) => {
-                        n(), e(t);
+                        (n(), e(t));
                     }),
             };
         }, [j, v, a, k]);
@@ -387,7 +387,7 @@ function Y(e) {
             onValueRender: j,
             asValueChanges: h,
             onValueChange: function (e) {
-                L(), t?.(e);
+                (L(), t?.(e));
             },
             orientation: "horizontal",
             markers: f,
@@ -459,7 +459,7 @@ function et(e) {
                 checked: h,
                 hasIcon: u,
                 onChange: function (e) {
-                    v(), l(e);
+                    (v(), l(e));
                 },
                 disabled: f,
             }),
@@ -550,7 +550,7 @@ let ej = l.memo(function (e) {
                 if (null != e.target && u !== x.current && ((x.current = u), x.current))
                     switch (j.current) {
                         case "navigation":
-                            o(!0), w.A.notifyAccordionExpanded(n.key);
+                            (o(!0), w.A.notifyAccordionExpanded(n.key));
                             break;
                         case "user":
                             w.A.navigate(n.key, { animatePanelScroll: !0, panelScrollBlock: "nearest" });
@@ -569,7 +569,7 @@ let ej = l.memo(function (e) {
         collapsedSubtitle: p,
         isExpanded: u,
         onExpandedChange: function (e) {
-            (j.current = "user"), v(), d(e);
+            ((j.current = "user"), v(), d(e));
         },
         animate: a,
         children: i.map((e) => (0, r.jsx)(ni, { node: e }, e.key)),
@@ -612,28 +612,28 @@ function ey(e) {
                     r(e);
                 }, []),
                 o = l.useCallback(() => {
-                    clearTimeout(s.current),
+                    (clearTimeout(s.current),
                         (s.current = null),
                         null == i.current &&
                             (i.current = setTimeout(() => {
-                                (i.current = null), n(!0);
-                            }, 250));
+                                ((i.current = null), n(!0));
+                            }, 250)));
                 }, []),
                 c = l.useCallback(() => {
-                    clearTimeout(i.current),
+                    (clearTimeout(i.current),
                         (i.current = null),
                         null == s.current &&
                             (s.current = setTimeout(() => {
-                                (s.current = null), n(!1);
-                            }, 150));
+                                ((s.current = null), n(!1));
+                            }, 150)));
                 }, []),
                 u = l.useCallback(() => {
-                    clearTimeout(i.current), (i.current = null), clearTimeout(s.current), (s.current = null), n(!1);
+                    (clearTimeout(i.current), (i.current = null), clearTimeout(s.current), (s.current = null), n(!1));
                 }, []);
             return (
                 l.useEffect(
                     () => () => {
-                        clearTimeout(i.current), clearTimeout(s.current);
+                        (clearTimeout(i.current), clearTimeout(s.current));
                     },
                     [],
                 ),
@@ -645,10 +645,10 @@ function ey(e) {
                             t.addEventListener("focusin", o),
                             t.addEventListener("focusout", c),
                             () => {
-                                t.removeEventListener("mouseenter", o),
+                                (t.removeEventListener("mouseenter", o),
                                     t.removeEventListener("mouseleave", c),
                                     t.removeEventListener("focusin", o),
-                                    t.removeEventListener("focusout", c);
+                                    t.removeEventListener("focusout", c));
                             }
                         );
                 }, [t, o, c]),

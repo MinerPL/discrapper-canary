@@ -53,23 +53,23 @@ let E = new g(a.h, {
     },
     UNIQUE_USERNAME_ATTEMPT_FAILURE: function (e) {
         let { username: t, error: i, statusCode: n, retryAfter: s } = e;
-        429 === n
+        (429 === n
             ? l.validations.set(t, { taken: null, error: i, rateLimited: !0 }, (s ?? 7) * o.A.Millis.SECOND)
             : l.validations.set(t, { taken: null, error: i }),
-            null != s && (l.retryAfterTime = Date.now() + s * o.A.Millis.SECOND);
+            null != s && (l.retryAfterTime = Date.now() + s * o.A.Millis.SECOND));
     },
     UNIQUE_USERNAME_SUGGESTIONS_RESET: function () {
-        (l.suggestions.migration = { suggestion: { username: void 0 }, fetched: !1, usernameSuggestionLoading: !1 }),
-            (l.suggestions.registration = { suggestion: { username: void 0 }, source: void 0, fetched: !1 });
+        ((l.suggestions.migration = { suggestion: { username: void 0 }, fetched: !1, usernameSuggestionLoading: !1 }),
+            (l.suggestions.registration = { suggestion: { username: void 0 }, source: void 0, fetched: !1 }));
     },
     UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function (e) {
         let { suggestion: t } = e;
-        (l.suggestions.migration = { suggestion: t, fetched: !0, usernameSuggestionLoading: !1 }),
-            t?.invalid_current_username === !0 && (l.currentUsernameInvalid = !0);
+        ((l.suggestions.migration = { suggestion: t, fetched: !0, usernameSuggestionLoading: !1 }),
+            t?.invalid_current_username === !0 && (l.currentUsernameInvalid = !0));
     },
     UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
         let { suggestion: t, source: i } = e;
-        (l.suggestions.registration = { suggestion: t, source: i, fetched: !0 }),
-            t?.username != null && l.validations.set(t.username, { taken: !1 });
+        ((l.suggestions.registration = { suggestion: t, source: i, fetched: !0 }),
+            t?.username != null && l.validations.set(t.username, { taken: !1 }));
     },
 });

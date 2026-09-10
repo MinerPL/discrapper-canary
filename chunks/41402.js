@@ -26,7 +26,7 @@ function A(t) {
                                 title: h.intl.string(h.t.IMbjxo),
                                 body: h.intl.string(h.t["mi5+Vl"]),
                                 onConfirm: async () => {
-                                    await s.A.unpin(A), s.A.pin(t);
+                                    (await s.A.unpin(A), s.A.pin(t));
                                 },
                             })
                           : s.A.pin(t);

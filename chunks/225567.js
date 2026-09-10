@@ -40,9 +40,9 @@ let l = (0, s.mj)({
 async function _(e, t) {
     if (!(0, a.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let n = e.readValue(t);
-    n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
+    (n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
         (await window.DiscordNative.settings.set(e.settingKey, n)),
-        u.set(e.settingKey, n);
+        u.set(e.settingKey, n));
 }
 class E extends i.A {
     stores = new Map().set(r.A, () => {
@@ -59,7 +59,7 @@ class E extends i.A {
                 ((0, a.isDesktop)() && ((c = !0), await Promise.all(d.map((e) => _(e, "postConnectionOpen")))));
         },
         LOGOUT: () => {
-            (c = !1), u.clear();
+            ((c = !1), u.clear());
         },
     };
 }

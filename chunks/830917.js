@@ -15,16 +15,16 @@ function h(t) {
                 r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             switch (e) {
                 case 90:
-                    (i = a), (h = -n);
+                    ((i = a), (h = -n));
                     break;
                 case 180:
-                    (i = -n), (h = -a);
+                    ((i = -n), (h = -a));
                     break;
                 case 270:
-                    (i = -a), (h = n);
+                    ((i = -a), (h = n));
                     break;
                 default:
-                    (i = n), (h = a);
+                    ((i = n), (h = a));
             }
             return { x: r ? -i : i, y: h };
         })(h, a, r),
@@ -110,12 +110,12 @@ function n(t) {
             flipHorizontal: c,
         }),
         f = document.createElement("canvas");
-    (f.width = y), (f.height = p);
+    ((f.width = y), (f.height = p));
     let k = f.getContext("2d");
     if (null != k) {
         c && k.scale(-1, 1);
         let t = c ? -r : r;
-        k.rotate((t * Math.PI) / 180), k.drawImage(e, d, s, u, l, g, o, w, x);
+        (k.rotate((t * Math.PI) / 180), k.drawImage(e, d, s, u, l, g, o, w, x));
     }
     return f.toDataURL("image/png");
 }

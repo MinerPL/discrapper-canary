@@ -6,7 +6,7 @@ var i = n(17928),
 let l = {},
     o = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 };
 function d(e) {
-    return null == l[e] && (l[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), l[e];
+    return (null == l[e] && (l[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), l[e]);
 }
 function c(e, t) {
     return Object.values(t).reduce((e, t) => e + ((0, a.A)(t) ?? 0), 0);
@@ -66,7 +66,7 @@ class E extends i.Ay.PersistedStore {
 }
 let A = new E(r.h, {
     LOGOUT: function () {
-        (l = {}), (o = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 });
+        ((l = {}), (o = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 }));
     },
     GAME_SERVER_FETCH_CATALOG_SUCCESS: function (e) {
         let { guildId: t, catalog: n } = e;
@@ -100,24 +100,24 @@ let A = new E(r.h, {
         let { guildId: t, gameServerId: n } = e;
         if (null == t) return;
         let i = d(t);
-        delete i.instances[n], (l = { ...l, [t]: { ...i } });
+        (delete i.instances[n], (l = { ...l, [t]: { ...i } }));
     },
     GUILD_POWERUP_ENTITLEMENTS_CREATE: function (e) {
         let { guildId: t, entitlements: n } = e,
             i = d(t);
-        n
+        (n
             .filter((e) => e.sku?.tenant_metadata?.guild_monetization?.game_server != null)
             .forEach((e) => {
                 i.entitlements[e.id] = e;
             }),
-            _(t, i);
+            _(t, i));
     },
     GUILD_POWERUP_ENTITLEMENTS_DELETE: function (e) {
         let { guildId: t, entitlements: n } = e,
             i = d(t);
-        n.forEach((e) => {
+        (n.forEach((e) => {
             delete i.entitlements[e.id];
         }),
-            _(t, i);
+            _(t, i));
     },
 });

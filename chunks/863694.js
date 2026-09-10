@@ -10,11 +10,11 @@ let c = !1,
     I = null,
     u = new Set();
 function E() {
-    (c = !1),
+    ((c = !1),
         (I = null),
         null != (I = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            (u = new Set(a.A.getDefaultChannelIds(I)));
+            (u = new Set(a.A.getDefaultChannelIds(I))));
 }
 class N extends s.Ay.Store {
     static displayName = "GuildSettingsDefaultChannelsStore";

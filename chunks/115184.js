@@ -16,7 +16,7 @@ var a = n(691540),
     C = n(652215),
     u = n(375708);
 function _(t, e) {
-    (0, a.P0)((0, r.o)(t, o.Ck.FAILURE)), g.A.captureException(e);
+    ((0, a.P0)((0, r.o)(t, o.Ck.FAILURE)), g.A.captureException(e));
 }
 function T(t, e, n) {
     if (
@@ -36,17 +36,17 @@ function T(t, e, n) {
                 (p.default.track(C.HAw.CONTEXT_MENU_IMAGE_SAVED, { ...(0, A.N)() }),
                 (0, a.P0)((0, r.o)(u.intl.string(u.t.cqpdJW), o.Ck.SUCCESS)));
         } catch (t) {
-            p.default.track(C.HAw.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, A.N)() }),
-                _(u.intl.string(u.t["8Ve/S0"]), t);
+            (p.default.track(C.HAw.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, A.N)() }),
+                _(u.intl.string(u.t["8Ve/S0"]), t));
         }
     }
     async function I() {
         try {
-            await y.Ay.copyImage(g, n?.contentType),
+            (await y.Ay.copyImage(g, n?.contentType),
                 p.default.track(C.HAw.CONTEXT_MENU_IMAGE_COPIED, { ...(0, A.N)() }),
-                (0, a.P0)((0, r.o)(u.intl.string(u.t.bhUpvC), o.Ck.SUCCESS));
+                (0, a.P0)((0, r.o)(u.intl.string(u.t.bhUpvC), o.Ck.SUCCESS)));
         } catch (t) {
-            _(u.intl.string(u.t.PTPbjx), t), p.default.track(C.HAw.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, A.N)() });
+            (_(u.intl.string(u.t.PTPbjx), t), p.default.track(C.HAw.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, A.N)() }));
         }
     }
     return [

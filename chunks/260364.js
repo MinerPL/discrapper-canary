@@ -17,12 +17,12 @@ let o = new (class {
             s.default.track(l.HAw.QUEST_BAR_RENDER_DELAY, { quest_id: e, timeout: t, duration: n }));
     }
     startTracking(e) {
-        this.clearTracking(),
+        (this.clearTracking(),
             (this.startTime = performance.now()),
             (this.questId = e),
             (this.timeoutTimer = setTimeout(() => {
                 this.stopTracking(e, !0);
-            }, 3e4));
+            }, 3e4)));
     }
     stopTracking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -35,6 +35,6 @@ let o = new (class {
         }
     }
     clearTracking() {
-        this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null);
+        (this.clearTimeoutTimer(), (this.startTime = null), (this.questId = null));
     }
 })();

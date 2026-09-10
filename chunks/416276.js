@@ -1,4 +1,4 @@
-r.r(e), r.d(e, { default: () => o });
+(r.r(e), r.d(e, { default: () => o }));
 var o = {
     payButton: "Zap\u0142a\u0107",
     "payButton.redirecting": "Przekierowywanie...",

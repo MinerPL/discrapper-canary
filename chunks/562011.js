@@ -17,7 +17,7 @@ function y(t) {
         b = i.Ay.isPremium(U) ? f.t.E0sNsc : f.t.UBcuto,
         C = f.intl.format(b, {
             onLearnMore: function () {
-                e(), (0, r.e)();
+                (e(), (0, r.e)());
             },
         });
     return (0, c.jsx)(d.A, {
@@ -27,7 +27,7 @@ function y(t) {
         body: C,
         glowUp: C,
         onSecondaryClick: () => {
-            e(), (0, s.XD)({ uploadType: l.HL.BANNER, analyticsSource: a });
+            (e(), (0, s.XD)({ uploadType: l.HL.BANNER, analyticsSource: a }));
         },
         secondaryCTA: f.intl.string(f.t.SpAQib),
         analyticsSource: a,

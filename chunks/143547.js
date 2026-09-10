@@ -49,7 +49,7 @@ function v(t) {
             confirmText: T.intl.string(T.t.ytCpKs),
             cancelText: T.intl.string(T.t["ETE/oC"]),
             onConfirm: () => {
-                c?.(), N.A.ignoreUser(i.id, v, a ?? void 0), j.default.track(R.HAw.IGNORE_USER_CONFIRMED);
+                (c?.(), N.A.ignoreUser(i.id, v, a ?? void 0), j.default.track(R.HAw.IGNORE_USER_CONFIRMED));
             },
             onCancel: function () {
                 j.default.track(R.HAw.USER_REMEDIATION_ACTION, { action: C.p.CANCEL_IGNORE, location: v });
@@ -103,7 +103,7 @@ function v(t) {
                                     descriptionVariant: "text-xs/medium",
                                     buttonText: T.intl.string(T.t.QdfUHE),
                                     onButtonPress: () => {
-                                        j.default.track(R.HAw.USER_REMEDIATION_ACTION, {
+                                        (j.default.track(R.HAw.USER_REMEDIATION_ACTION, {
                                             action: C.p.GOTO_BLOCK,
                                             location: v,
                                         }),
@@ -118,7 +118,7 @@ function v(t) {
                                                     onIgnore: c,
                                                     location: v,
                                                 }),
-                                            );
+                                            ));
                                     },
                                 }),
                             }),

@@ -2,16 +2,16 @@ n.d(t, { p: () => c });
 var r = n(875565),
     i = n(826476);
 function o(e, t) {
-    (e.mechanism = e.mechanism || { type: "generic", handled: !0 }),
+    ((e.mechanism = e.mechanism || { type: "generic", handled: !0 }),
         (e.mechanism = {
             ...e.mechanism,
             ...("AggregateError" === e.type && { is_exception_group: !0 }),
             exception_id: t,
-        });
+        }));
 }
 function a(e, t, n, r) {
-    (e.mechanism = e.mechanism || { type: "generic", handled: !0 }),
-        (e.mechanism = { ...e.mechanism, type: "chained", source: t, exception_id: n, parent_id: r });
+    ((e.mechanism = e.mechanism || { type: "generic", handled: !0 }),
+        (e.mechanism = { ...e.mechanism, type: "chained", source: t, exception_id: n, parent_id: r }));
 }
 var s = n(688331),
     l = n(297458);
@@ -35,7 +35,7 @@ let c = (0, s._C)((e = {}) => {
                                 o(u, d);
                                 let r = t(n, s[l]),
                                     c = p.length;
-                                a(r, l, c, d), (p = e(t, n, i, s[l], l, [r, ...p], r, c));
+                                (a(r, l, c, d), (p = e(t, n, i, s[l], l, [r, ...p], r, c)));
                             }
                             return (
                                 Array.isArray(s.errors) &&
@@ -44,7 +44,7 @@ let c = (0, s._C)((e = {}) => {
                                             o(u, d);
                                             let r = t(n, s),
                                                 h = p.length;
-                                            a(r, `errors[${c}]`, h, d), (p = e(t, n, i, s, l, [r, ...p], r, h));
+                                            (a(r, `errors[${c}]`, h, d), (p = e(t, n, i, s, l, [r, ...p], r, h)));
                                         }
                                     }),
                                 p

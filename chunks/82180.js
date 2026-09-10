@@ -26,7 +26,7 @@ function a(e) {
 let s = /^-?[0-9]+$/;
 class l {
     constructor(e, t) {
-        (this.lo = 0 | e), (this.hi = 0 | t);
+        ((this.lo = 0 | e), (this.hi = 0 | t));
     }
     isZero() {
         return 0 == this.lo && 0 == this.hi;
@@ -52,7 +52,7 @@ class u extends l {
                     if (!e) return this.ZERO;
                     if (e < o.UMIN) throw Error("signed value for ulong");
                     if (e > o.UMAX) throw Error("ulong too large");
-                    return o.V.setBigUint64(0, e, !0), new u(o.V.getInt32(0, !0), o.V.getInt32(4, !0));
+                    return (o.V.setBigUint64(0, e, !0), new u(o.V.getInt32(0, !0), o.V.getInt32(4, !0)));
             }
         else
             switch (typeof e) {
@@ -74,7 +74,7 @@ class u extends l {
         return o ? this.toBigInt().toString() : (0, i.oJ)(this.lo, this.hi);
     }
     toBigInt() {
-        return a(o), o.V.setInt32(0, this.lo, !0), o.V.setInt32(4, this.hi, !0), o.V.getBigUint64(0, !0);
+        return (a(o), o.V.setInt32(0, this.lo, !0), o.V.setInt32(4, this.hi, !0), o.V.getBigUint64(0, !0));
     }
 }
 u.ZERO = new u(0, 0);
@@ -93,7 +93,7 @@ class c extends l {
                     if (!e) return this.ZERO;
                     if (e < o.MIN) throw Error("ulong too small");
                     if (e > o.MAX) throw Error("ulong too large");
-                    return o.V.setBigInt64(0, e, !0), new c(o.V.getInt32(0, !0), o.V.getInt32(4, !0));
+                    return (o.V.setBigInt64(0, e, !0), new c(o.V.getInt32(0, !0), o.V.getInt32(4, !0)));
             }
         else
             switch (typeof e) {
@@ -116,7 +116,7 @@ class c extends l {
     negate() {
         let e = ~this.hi,
             t = this.lo;
-        return t ? (t = ~t + 1) : (e += 1), new c(t, e);
+        return (t ? (t = ~t + 1) : (e += 1), new c(t, e));
     }
     toString() {
         if (o) return this.toBigInt().toString();
@@ -127,7 +127,7 @@ class c extends l {
         return (0, i.oJ)(this.lo, this.hi);
     }
     toBigInt() {
-        return a(o), o.V.setInt32(0, this.lo, !0), o.V.setInt32(4, this.hi, !0), o.V.getBigInt64(0, !0);
+        return (a(o), o.V.setInt32(0, this.lo, !0), o.V.setInt32(4, this.hi, !0), o.V.getBigInt64(0, !0));
     }
 }
 c.ZERO = new c(0, 0);

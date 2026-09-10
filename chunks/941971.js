@@ -6,7 +6,7 @@ var i = n(503698),
     r = n(354001);
 function a(e) {
     let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: a = !1, className: o, overlay: u = !1 } = e;
-    (t = !a && t), (n = !a && n), (i = !a && i);
+    ((t = !a && t), (n = !a && n), (i = !a && i));
     let c = t || n || i;
     return (0, l.jsx)("div", {
         className: s()(o, r.iE, { [r.Lw]: u }),

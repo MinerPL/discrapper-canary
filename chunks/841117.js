@@ -10,16 +10,16 @@ async function s(e) {
         o = 0;
     for (;;)
         try {
-            return performance.mark("importWithRetry:start", { detail: { webpackId: a, name: s } }), await t();
+            return (performance.mark("importWithRetry:start", { detail: { webpackId: a, name: s } }), await t());
         } catch (e) {
             if ((console.log(e), a in n.c))
                 throw (
-                    (console.log(
+                    console.log(
                         "Module was found in webpack cache so it has loaded from the network and webpack will not retry",
                     ),
-                    e)
+                    e
                 );
             if (o >= 50) throw e;
-            await i(l), await r(), (l = Math.min(5e3, 2 * l)), o++;
+            (await i(l), await r(), (l = Math.min(5e3, 2 * l)), o++);
         }
 }

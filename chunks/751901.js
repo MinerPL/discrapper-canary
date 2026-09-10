@@ -51,7 +51,7 @@ function m(t) {
         freeformNeededProblems: _,
         onSubmit: function (t) {
             let { rating: a, problem: o, dontShowAgain: r, feedback: _ } = t;
-            r &&
+            (r &&
                 (c.default.track(u.HAw.ACTIVITY_REPORT_DONT_SHOW, { application_id: b.id, rating: a }),
                 (0, d.n3)({ feedbackType: p.MW.ACTIVITY, location: "ActivityFeedback" })),
                 null == a ||
@@ -93,7 +93,7 @@ function m(t) {
                         (0, l.openModalLazy)(async () => {
                             let { default: t } = await n.e("137836").then(n.bind(n, 845671));
                             return (i) => (0, e.jsx)(t, { body: s.intl.string(s.t["zuHR+y"]), ...i });
-                        }));
+                        })));
         },
         onClose: g,
         transitionState: f,

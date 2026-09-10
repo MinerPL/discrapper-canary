@@ -46,12 +46,12 @@ function p(e) {
         x = P ? "" : `--custom-zoom: ${G};`,
         k = (0, E.A)("highlight_mana_buttons"),
         F = (0, E.A)("highlight_mana_components"),
-        V = (0, E.A)("highlight_mana_text"),
-        B = (0, E.A)("highlight_void_toggleables"),
+        B = (0, E.A)("highlight_mana_text"),
+        V = (0, E.A)("highlight_void_toggleables"),
         H = (0, E.A)("highlight_void_buttons"),
         j = (0, E.A)("highlight_mana_text_overrides");
-    r.useEffect(() => {
-        if (!V) return;
+    (r.useEffect(() => {
+        if (!B) return;
         let e = () => {},
             t = !1;
         return (
@@ -62,10 +62,10 @@ function p(e) {
                     t || (e = n.startComposedHighlight());
                 }),
             () => {
-                (t = !0), e();
+                ((t = !0), e());
             }
         );
-    }, [V]),
+    }, [B]),
         r.useEffect(() => {
             if (!j) return;
             let e = () => {},
@@ -78,10 +78,10 @@ function p(e) {
                         t || (e = n.startOverrideAudit());
                     }),
                 () => {
-                    (t = !0), e();
+                    ((t = !0), e());
                 }
             );
-        }, [j]);
+        }, [j]));
     let W = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
         Y = `font-size: ${g}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
         K = s()(
@@ -116,9 +116,9 @@ function p(e) {
                 "visual-refresh-chat-input": !1,
                 "highlight-mana-buttons": k,
                 "highlight-mana-components": F,
-                "highlight-mana-text": V,
+                "highlight-mana-text": B,
                 "highlight-mana-text-overrides": j,
-                "highlight-void-toggleables": B,
+                "highlight-void-toggleables": V,
                 "highlight-void-buttons": H,
                 "high-contrast-mode": M,
             },

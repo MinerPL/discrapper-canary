@@ -13,7 +13,7 @@ t.default = class {
                     console.log(`Extracting year: '${i[0]}' into : ${t}`);
                 });
                 let s = (0, n.parseYear)(i[1]);
-                null != t.end && t.end.assign("year", s), t.start.assign("year", s), (t.text += i[0]);
+                (null != t.end && t.end.assign("year", s), t.start.assign("year", s), (t.text += i[0]));
             }),
             t
         );

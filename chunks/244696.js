@@ -100,6 +100,6 @@ let N = new S(s.h, {
     OVERLAY_INITIALIZE: T,
     LOGOUT: function () {
         let e = null != E;
-        return (E = null), I() || e;
+        return ((E = null), I() || e);
     },
 });

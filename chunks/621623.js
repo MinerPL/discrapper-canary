@@ -57,7 +57,7 @@ var d = i(194226),
                             type: "submit",
                             disabled: !e || t,
                             onClick: (t) => {
-                                t.preventDefault(), p.submit();
+                                (t.preventDefault(), p.submit());
                             },
                             children: l("common.continue"),
                         }),

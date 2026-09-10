@@ -9,9 +9,9 @@ var r = t(503698),
     u = t(17928),
     o = t(590180),
     d = t(14702);
-t(735164), t(980094);
+(t(735164), t(980094));
 var m = t(366523);
-t(773669), t(252424), t(580630);
+(t(773669), t(252424), t(580630));
 var p = t(652215);
 t(375708);
 var x = t(799591);
@@ -40,8 +40,8 @@ function L(e) {
 }
 function f(e) {
     let { invoicePreview: s } = e;
-    l()(null != s.total, "SKU must have a price set."),
-        l()(null != s.invoiceItems && 1 === s.invoiceItems.length, "SKU preview must have single line item");
+    (l()(null != s.total, "SKU must have a price set."),
+        l()(null != s.invoiceItems && 1 === s.invoiceItems.length, "SKU preview must have single line item"));
     let t = s.invoiceItems[0],
         n = t.unitPrice?.amount ?? t.amount,
         r = !s.taxInclusive && s.tax > 0,

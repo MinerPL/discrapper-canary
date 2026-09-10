@@ -24,7 +24,7 @@ var v = function (t) {
         }
         return o(t, this, arguments);
     };
-    return (r.prototype = t.prototype), r;
+    return ((r.prototype = t.prototype), r);
 };
 t.exports = function (t, r) {
     var e,
@@ -44,7 +44,7 @@ t.exports = function (t, r) {
         E = w ? a : a[S] || p(a, S, {})[S],
         T = E.prototype;
     for (h in r)
-        (o = !(e = c(w ? h : S + (O ? "." : "#") + h, t.forced)) && A && l(A, h)),
+        ((o = !(e = c(w ? h : S + (O ? "." : "#") + h, t.forced)) && A && l(A, h)),
             (d = E[h]),
             o && (g = t.dontCallGetSet ? (m = u(A, h)) && m.value : A[h]),
             (x = o && g ? g : r[h]),
@@ -55,5 +55,5 @@ t.exports = function (t, r) {
                 j &&
                     (l(a, (y = S + "Prototype")) || p(a, y, {}),
                     p(a[y], h, x),
-                    t.real && T && (e || !T[h]) && p(T, h, x)));
+                    t.real && T && (e || !T[h]) && p(T, h, x))));
 };

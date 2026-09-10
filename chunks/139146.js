@@ -39,7 +39,7 @@ function g(t) {
         } = (0, p.z)({ userId: c, product: e, selectedVariantIndex: r, location: l, onError: s }),
         R = (0, f.s7)(y),
         L = n.useCallback(() => {
-            o?.(S ? _.sH.REMOVE_FROM_WISHLIST : _.sH.ADD_TO_WISHLIST), m();
+            (o?.(S ? _.sH.REMOVE_FROM_WISHLIST : _.sH.ADD_TO_WISHLIST), m());
         }, [S, m, o]);
     return g
         ? null
@@ -83,7 +83,7 @@ function T(t) {
     }, [e]);
     let O = n.useCallback(
             (t) => {
-                t.stopPropagation(), u || (f || k.enabled ? f && C && F(!1) : F(!0), T());
+                (t.stopPropagation(), u || (f || k.enabled ? f && C && F(!1) : F(!0), T()));
             },
             [u, f, k.enabled, C, T],
         ),

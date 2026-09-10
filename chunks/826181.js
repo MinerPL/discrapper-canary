@@ -98,7 +98,7 @@ function B(t) {
                             fullWidth: !0,
                             text: h.intl.string(L.default.EL9m2H),
                             onClick: () => {
-                                e(), (0, b.pX)(E.BVt.APPLICATION_STORE);
+                                (e(), (0, b.pX)(E.BVt.APPLICATION_STORE));
                             },
                         }),
                     }),
@@ -122,18 +122,18 @@ function A(t) {
         f = (0, C.DP)(),
         [S, N] = (0, n.useState)(!1);
     async function U() {
-        R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_CTA_CLICKED, {
+        (R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_CTA_CLICKED, {
             invite_id: s,
             subscription_id: r,
             is_existing_sub: l,
         }),
-            N(!0);
+            N(!0));
         let t = await (0, g.wc)(r, c.id, s);
         if ((N(!1), t.ok)) e(1);
         else {
             var a;
             let i = null == (a = t.body?.code) ? 0 : (x[a] ?? 0);
-            R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_ERROR, {
+            (R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_ERROR, {
                 invite_id: s,
                 subscription_id: r,
                 error_type: (function (t) {
@@ -171,7 +171,7 @@ function A(t) {
                 error_code: t.body?.code,
             }),
                 d(i),
-                e(2);
+                e(2));
         }
     }
     return (
@@ -219,42 +219,42 @@ function y(t) {
         l = (0, C.DP)();
     switch (n) {
         case 1:
-            (e = h.intl.formatToPlainString(L.default["wMo6/n"], { premiumGroupProductName: l })),
+            ((e = h.intl.formatToPlainString(L.default["wMo6/n"], { premiumGroupProductName: l })),
                 (a = h.intl.formatToPlainString(L.default.C08r8L, {
                     premiumGroupProductName: l,
                     cooldownMonths: C.wl,
-                }));
+                })));
             break;
         case 2:
-            (e = h.intl.formatToPlainString(L.default["Um4ml+"], { premiumGroupProductName: l })),
-                (a = h.intl.string(L.default.Fm8iss));
+            ((e = h.intl.formatToPlainString(L.default["Um4ml+"], { premiumGroupProductName: l })),
+                (a = h.intl.string(L.default.Fm8iss)));
             break;
         case 3:
-            (e = h.intl.string(L.default.yGTLxP)),
-                (a = h.intl.formatToPlainString(L.default["7/qtoL"], { premiumGroupProductName: l }));
+            ((e = h.intl.string(L.default.yGTLxP)),
+                (a = h.intl.formatToPlainString(L.default["7/qtoL"], { premiumGroupProductName: l })));
             break;
         case 4:
-            (e = h.intl.formatToPlainString(L.default["S+UfpQ"], { premiumGroupProductName: l })),
+            ((e = h.intl.formatToPlainString(L.default["S+UfpQ"], { premiumGroupProductName: l })),
                 (a = h.intl.formatToPlainString(L.default.AKYhx6, {
                     premiumGroupProductName: l,
                     countryName: (0, C.mU)(),
-                }));
+                })));
             break;
         case 5:
-            (e = h.intl.formatToPlainString(L.default.anKEqI, { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default["67BbUf"], { premiumGroupProductName: l }));
+            ((e = h.intl.formatToPlainString(L.default.anKEqI, { premiumGroupProductName: l })),
+                (a = h.intl.formatToPlainString(L.default["67BbUf"], { premiumGroupProductName: l })));
             break;
         case 6:
-            (e = h.intl.formatToPlainString(L.default.VH7zHG, { premiumGroupProductName: l })),
-                (a = h.intl.string(L.default.s47Jqb));
+            ((e = h.intl.formatToPlainString(L.default.VH7zHG, { premiumGroupProductName: l })),
+                (a = h.intl.string(L.default.s47Jqb)));
             break;
         case 7:
-            (e = h.intl.formatToPlainString(L.default.agSoQJ, { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.YhJsq4, { premiumGroupProductName: l }));
+            ((e = h.intl.formatToPlainString(L.default.agSoQJ, { premiumGroupProductName: l })),
+                (a = h.intl.formatToPlainString(L.default.YhJsq4, { premiumGroupProductName: l })));
             break;
         default:
-            (e = h.intl.formatToPlainString(L.default["Kpg/uU"], { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.GrEzlX, { premiumGroupProductName: l }));
+            ((e = h.intl.formatToPlainString(L.default["Kpg/uU"], { premiumGroupProductName: l })),
+                (a = h.intl.formatToPlainString(L.default.GrEzlX, { premiumGroupProductName: l })));
     }
     return (0, i.jsx)(I.Modal, {
         size: "md",

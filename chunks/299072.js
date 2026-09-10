@@ -40,7 +40,7 @@ async function A(e) {
     let { effect: t } = e,
         n = await m(t.channelId, t.messageId ?? p.dJq, t.emoji.name),
         i = await (0, h.fz)(`${t.channelId}:${t.messageId}:${t.emoji.name}`, t.url, n, t.color);
-    return (i.assets[0].p = t.url), i;
+    return ((i.assets[0].p = t.url), i);
 }
 function E(e) {
     let { className: t, effect: i, onComplete: r, emojiSize: c = 20 } = e,
@@ -65,7 +65,7 @@ function E(e) {
                                     autoplay: !0,
                                     animationData: t,
                                 })).addEventListener("complete", () => {
-                                    r?.(), e.destroy();
+                                    (r?.(), e.destroy());
                                 }),
                                 null != i.channelId &&
                                     null != i.messageId &&

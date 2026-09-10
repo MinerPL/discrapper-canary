@@ -1,4 +1,4 @@
-s.d(t, { default: () => em }), s(321073), s(142703);
+(s.d(t, { default: () => em }), s(321073), s(142703));
 var n = s(477900),
     l = s(582128),
     i = s(503698),
@@ -130,9 +130,9 @@ let er = (e) => {
                     let { backgroundColor: t = "", opacity: s = 1 } = c ?? {};
                     i
                         ? ((e.background = (0, d.xp)(t, s) ?? ""),
-                          (e.border = `1px solid ${((0, d.xp))(t, 1.1 * s) ?? ""}`))
+                          (e.border = `1px solid ${(0, d.xp)(t, 1.1 * s) ?? ""}`))
                         : ((e.background = (0, d.xp)(t, 0.025) ?? ""),
-                          (e.border = `1px solid ${((0, d.xp))(t, 0.05) ?? ""}`));
+                          (e.border = `1px solid ${(0, d.xp)(t, 0.05) ?? ""}`));
                 }
                 return e;
             }, [h, c, i]),
@@ -170,14 +170,14 @@ function ed(e) {
         S = (0, c.bG)([Z.A], () => Z.A.can(es.xBc.MANAGE_MESSAGES, i) && j) || h === s.id,
         M = (0, c.bG)([$.Ay, P.A, q.A], () => K.Ay.getName(r, i.id, s));
     async function v() {
-        await (0, H.A)(s.id, s.getAvatarURL(r ?? void 0, 80), { guildId: r ?? void 0, channelId: i.id }),
+        (await (0, H.A)(s.id, s.getAvatarURL(r ?? void 0, 80), { guildId: r ?? void 0, channelId: i.id }),
             (0, D.openUserProfileModal)({
                 userId: s.id,
                 guildId: r ?? void 0,
                 channelId: i.id,
                 messageId: l.id,
                 sourceAnalyticsLocations: m,
-            });
+            }));
     }
     return (0, n.jsxs)(E.A, {
         className: el.Px,
@@ -224,7 +224,7 @@ function ed(e) {
                     className: el.TF,
                     children: (0, n.jsx)(u.K, {
                         onClick: function () {
-                            ee.et({
+                            (ee.et({
                                 channelId: i.id,
                                 messageId: l.id,
                                 emoji: t,
@@ -232,7 +232,7 @@ function ed(e) {
                                 userId: s.id,
                                 options: { burst: o === w.v.BURST },
                             }),
-                                d?.();
+                                d?.());
                         },
                         "aria-label": en.intl.string(en.t["+BdaDn"]),
                         icon: f.P,
@@ -265,10 +265,10 @@ class ec extends l.PureComponent {
     loadMore() {
         let { message: e, reaction: t, reactionType: s } = this.props,
             { lastId: n } = this.state;
-        this.setState({ loadingMore: !0 }),
+        (this.setState({ loadingMore: !0 }),
             ee
                 .ao({ channelId: e.getChannelId(), messageId: e.id, emoji: t.emoji, limit: es.WxW, after: n, type: s })
-                .then((e) => this.setState({ loadingMore: !1, lastId: e[e.length - 1]?.id }));
+                .then((e) => this.setState({ loadingMore: !1, lastId: e[e.length - 1]?.id })));
     }
     renderSection() {
         return null;
@@ -339,17 +339,21 @@ function em(e) {
         } = e,
         d = (0, c.bG)([P.A], () => P.A.getChannel(t.getChannelId())),
         u = d?.getGuildId(),
-        p = (0, c.bG)([V.A, G.A], () => {
-            let e =
-                V.A.getMessage(t.getChannelId(), t.id) ??
-                G.A.getMessage(J.default.castMessageIdAsChannelId(t.id))?.firstMessage;
-            return null != e ? e.reactions : [];
-        }, [t]),
+        p = (0, c.bG)(
+            [V.A, G.A],
+            () => {
+                let e =
+                    V.A.getMessage(t.getChannelId(), t.id) ??
+                    G.A.getMessage(J.default.castMessageIdAsChannelId(t.id))?.firstMessage;
+                return null != e ? e.reactions : [];
+            },
+            [t],
+        ),
         j = l.useMemo(() => {
             let e = [];
             return (
                 p.forEach((t) => {
-                    t.burst_count > 0 && e.push({ ...t, count: 0 }), t.count > 0 && e.push({ ...t, burst_count: 0 });
+                    (t.burst_count > 0 && e.push({ ...t, count: 0 }), t.count > 0 && e.push({ ...t, burst_count: 0 }));
                 }),
                 e.sort((e, t) => {
                     let s = e.burst_count > 0 ? e.burst_count : e.count;

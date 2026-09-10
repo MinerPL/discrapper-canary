@@ -27,13 +27,13 @@ var h = "hcaptcha-api-script-id",
             var s = t.apihost || "https://js.hcaptcha.com";
             delete t.apihost;
             var o = a.document.createElement("script");
-            (o.id = h),
+            ((o.id = h),
                 (o.src = s + "/1/api.js?render=explicit&onload=" + c),
                 (o.async = void 0 === t.loadAsync || t.loadAsync),
                 delete t.loadAsync,
                 (o.onerror = function (t) {
                     return n("script-error");
-                });
+                }));
             var r = Object.entries(t)
                 .filter(function (t) {
                     t[0];
@@ -46,9 +46,9 @@ var h = "hcaptcha-api-script-id",
                     return encodeURIComponent(e) + "=" + encodeURIComponent(a);
                 })
                 .join("&");
-            (o.src += "" !== r ? "&" + r : ""), e.appendChild(o);
+            ((o.src += "" !== r ? "&" + r : ""), e.appendChild(o));
         });
-        return p.push({ promise: n, scope: a.window }), n;
+        return (p.push({ promise: n, scope: a.window }), n);
     };
 let l = (function (t) {
     function e(e) {
@@ -110,7 +110,7 @@ let l = (function (t) {
                     i = t.endpoint,
                     n = t.host,
                     s = t.imghost;
-                d({
+                (d({
                     apihost: e,
                     assethost: a,
                     endpoint: i,
@@ -126,7 +126,7 @@ let l = (function (t) {
                 })
                     .then(this.handleOnLoad)
                     .catch(this.handleError),
-                    (this.apiScriptRequested = !0);
+                    (this.apiScriptRequested = !0));
             }
         }),
         (a.renderCaptcha = function (t) {
@@ -159,18 +159,18 @@ let l = (function (t) {
                 a = this._hcaptcha;
             this.isReady() &&
                 this.setState({ isRemoved: !0 }, function () {
-                    a.remove(e), t && t();
+                    (a.remove(e), t && t());
                 });
         }),
         (a.handleOnLoad = function () {
             var t = this;
             this.setState({ isApiReady: !0 }, function () {
                 var e = o(r(t.props.scriptLocation));
-                (t._hcaptcha = e.window.hcaptcha),
+                ((t._hcaptcha = e.window.hcaptcha),
                     t.renderCaptcha(function () {
                         var e = t.props.onLoad;
                         e && e();
-                    });
+                    }));
             });
         }),
         (a.handleSubmit = function (t) {
@@ -195,7 +195,7 @@ let l = (function (t) {
             var e = this.props.onError,
                 a = this.state.captchaId,
                 i = this._hcaptcha;
-            this.isReady() && i.reset(a), e && e(t);
+            (this.isReady() && i.reset(a), e && e(t));
         }),
         (a.isReady = function () {
             var t = this.state,
@@ -216,7 +216,7 @@ let l = (function (t) {
             void 0 === t && (t = null);
             var e = this.state.captchaId,
                 a = this._hcaptcha;
-            if (this.isReady()) return t && "object" != typeof t && (t = null), a.execute(e, t);
+            if (this.isReady()) return (t && "object" != typeof t && (t = null), a.execute(e, t));
         }),
         (a.setData = function (t) {
             var e = this.state.captchaId,

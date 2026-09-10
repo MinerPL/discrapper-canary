@@ -29,7 +29,7 @@ function v(s) {
         F = g ? h.intl.string(x.default.VPDgHa) : h.intl.string(x.default.CrCSF3),
         H = g && N && null != f ? h.intl.format(h.t["+y0Tjy"], { renewalDate: f }) : h.intl.string(x.default.H9ti8H),
         S = i.useCallback(() => {
-            v(), C.onClose();
+            (v(), C.onClose());
         }, [v, C]);
     return (0, t.jsx)(n.d, {
         ...C,

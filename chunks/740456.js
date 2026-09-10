@@ -17,11 +17,11 @@ var n = e(834647),
     },
     g = (t.exports = {
         enable: function () {
-            (g.enable = function () {}), (y = !0);
+            ((g.enable = function () {}), (y = !0));
             var t = a.f,
                 r = o([].splice),
                 e = {};
-            (e[h] = 1),
+            ((e[h] = 1),
                 t(e).length &&
                     ((a.f = function (e) {
                         for (var n = t(e), o = 0, s = n.length; o < s; o++)
@@ -31,7 +31,7 @@ var n = e(834647),
                             }
                         return n;
                     }),
-                    n({ target: "Object", stat: !0, forced: !0 }, { getOwnPropertyNames: f.f }));
+                    n({ target: "Object", stat: !0, forced: !0 }, { getOwnPropertyNames: f.f })));
         },
         fastKey: function (t, r) {
             if (!i(t)) return "symbol" == typeof t ? t : ("string" == typeof t ? "S" : "P") + t;
@@ -51,7 +51,7 @@ var n = e(834647),
             return t[h].weakData;
         },
         onFreeze: function (t) {
-            return v && y && p(t) && !u(t, h) && d(t), t;
+            return (v && y && p(t) && !u(t, h) && d(t), t);
         },
     });
 s[h] = !0;

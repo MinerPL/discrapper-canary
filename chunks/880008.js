@@ -30,7 +30,7 @@ var s = class l {
         return l.readSessionFlag(a);
     }
     constructor(t) {
-        (this._isRunning = !1),
+        ((this._isRunning = !1),
             (this.acl = null),
             (this.gyro = null),
             (this.minNumberOfFrames = 10),
@@ -92,7 +92,7 @@ var s = class l {
                 maeAccOldThreshold: t?.maeAccOldThreshold ?? 0.3,
                 maeGyroscopeOldThreshold: t?.maeGyroscopeOldThreshold ?? 10,
                 maeOrientationOldThreshold: t?.maeOrientationOldThreshold ?? 10,
-            });
+            }));
     }
     get isRunning() {
         return this._isRunning;
@@ -125,14 +125,14 @@ var s = class l {
     }
     async requestPermission() {
         if (!l.isIosMotionPermissionRequired()) return "not-required";
-        if (l.hasMotionPermissionGrantedInSession()) return (this._hasPermission = !0), "granted";
-        if (l.hasMotionPermissionDeniedInSession()) return (this._hasPermission = !1), "denied";
+        if (l.hasMotionPermissionGrantedInSession()) return ((this._hasPermission = !0), "granted");
+        if (l.hasMotionPermissionDeniedInSession()) return ((this._hasPermission = !1), "denied");
         try {
             if ((await DeviceMotionEvent.requestPermission()) !== "granted")
-                return (this._hasPermission = !1), this.markMotionPermissionDeniedInSession(), "denied";
-            return (this._hasPermission = !0), this.markMotionPermissionGrantedInSession(), "granted";
+                return ((this._hasPermission = !1), this.markMotionPermissionDeniedInSession(), "denied");
+            return ((this._hasPermission = !0), this.markMotionPermissionGrantedInSession(), "granted");
         } catch {
-            return (this._hasPermission = !1), this.markMotionPermissionDeniedInSession(), "denied";
+            return ((this._hasPermission = !1), this.markMotionPermissionDeniedInSession(), "denied");
         }
     }
     initializeAccelerometer() {
@@ -156,18 +156,18 @@ var s = class l {
     async start() {
         if ((this.syncSessionPermission(), !this._isRunning && this._hasPermission)) {
             try {
-                this.initializeAccelerometer(), this.acl && this.acl.start();
+                (this.initializeAccelerometer(), this.acl && this.acl.start());
             } catch {}
             try {
-                this.initializeGyroscope(), this.gyro && this.gyro.start();
+                (this.initializeGyroscope(), this.gyro && this.gyro.start());
             } catch {}
-            window.addEventListener("devicemotion", this.deviceMotionListener),
+            (window.addEventListener("devicemotion", this.deviceMotionListener),
                 window.addEventListener("deviceorientation", this.deviceOrientationListener),
-                (this._isRunning = !0);
+                (this._isRunning = !0));
         }
     }
     stop() {
-        (this._isRunning = !1),
+        ((this._isRunning = !1),
             this.acl && this.acl.stop(),
             this.gyro && this.gyro.stop(),
             window.removeEventListener("devicemotion", this.deviceMotionListener),
@@ -177,7 +177,7 @@ var s = class l {
             (this.paramsAccGrOld = { ...this.emptyParams }),
             (this.paramsAccOld = { ...this.emptyParams }),
             (this.paramsGyroscopeOld = { ...this.emptyParams }),
-            (this.paramsOrientationOld = { ...this.emptyParams });
+            (this.paramsOrientationOld = { ...this.emptyParams }));
     }
     updateAcc() {
         if (!this._isRunning || !this.acl) return;
@@ -222,7 +222,7 @@ var s = class l {
         let d = t.x - l.meanX,
             i = t.y - l.meanY,
             e = t.z - l.meanZ;
-        (l.meanX += d / l.ptsNum),
+        ((l.meanX += d / l.ptsNum),
             (l.meanY += i / l.ptsNum),
             (l.meanZ += e / l.ptsNum),
             (l.m2X += d * (t.x - l.meanX)),
@@ -230,7 +230,7 @@ var s = class l {
             (l.m2Z += e * (t.z - l.meanZ)),
             (l.cumulativeAbsErrorX += Math.abs(t.x - l.meanX)),
             (l.cumulativeAbsErrorY += Math.abs(t.y - l.meanY)),
-            (l.cumulativeAbsErrorZ += Math.abs(t.z - l.meanZ));
+            (l.cumulativeAbsErrorZ += Math.abs(t.z - l.meanZ)));
     }
     calculateStd(l) {
         let t = { x: l.m2X / l.ptsNum, y: l.m2Y / l.ptsNum, z: l.m2Z / l.ptsNum };

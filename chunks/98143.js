@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { createProvider: () => u });
+(r.r(t), r.d(t, { createProvider: () => u }));
 var a = r(614235);
 let i = {
         frost: 0.55,
@@ -105,7 +105,7 @@ void main() {
         "function" == typeof e.requestVideoFrameCallback && "function" == typeof e.cancelVideoFrameCallback ? e : null;
 var n = class {
     constructor() {
-        (this.gl = null),
+        ((this.gl = null),
             (this.program = null),
             (this.quad = null),
             (this.videoTex = null),
@@ -125,9 +125,9 @@ var n = class {
                     r = this.videoHandle?.element;
                 if (!t || !this.program) return;
                 if (!r || r.readyState < 2 || !r.videoWidth) return void t.clear(t.COLOR_BUFFER_BIT);
-                t.activeTexture(t.TEXTURE0),
+                (t.activeTexture(t.TEXTURE0),
                     t.bindTexture(t.TEXTURE_2D, this.videoTex),
-                    t.texImage2D(t.TEXTURE_2D, 0, t.RGBA, t.RGBA, t.UNSIGNED_BYTE, r);
+                    t.texImage2D(t.TEXTURE_2D, 0, t.RGBA, t.RGBA, t.UNSIGNED_BYTE, r));
                 let a = (() => {
                         if ("u" < typeof window) return i;
                         let e = window.__incodePrivacyLensParams;
@@ -141,7 +141,7 @@ var n = class {
                         let i = this.uniforms.get(e);
                         i && t.uniform2f(i, r, a);
                     };
-                s("uRes", 512, 512),
+                (s("uRes", 512, 512),
                     s("uVideoRes", r.videoWidth, r.videoHeight),
                     o("uTime", (e - this.startTime) / 1e3),
                     o("uFrost", a.frost),
@@ -152,33 +152,33 @@ var n = class {
                     o("uShadow", a.shadowLift),
                     o("uSun", a.sun),
                     o("uSunSpeed", a.sunSpeed),
-                    t.drawArrays(t.TRIANGLE_STRIP, 0, 4);
+                    t.drawArrays(t.TRIANGLE_STRIP, 0, 4));
             }),
             (this.canvas = document.createElement("canvas")),
             (this.canvas.width = 512),
-            (this.canvas.height = 512);
+            (this.canvas.height = 512));
     }
     getCanvas() {
         return this.canvas;
     }
     async start(e, t = {}) {
-        (this.minFrameIntervalMs = 1e3 / (t.maxFps ?? 30)), (this.videoHandle = (0, a.t)(e, { keepStreamAlive: !0 }));
+        ((this.minFrameIntervalMs = 1e3 / (t.maxFps ?? 30)), (this.videoHandle = (0, a.t)(e, { keepStreamAlive: !0 })));
         try {
             if ((this.initGl(), this.stopped)) return;
             this.startTime = performance.now();
             let e = this.videoHandle.element;
-            (this.usingRvfc = !!l(e)), this.scheduleNextFrame();
+            ((this.usingRvfc = !!l(e)), this.scheduleNextFrame());
         } catch (e) {
             throw (this.stop(), e);
         }
         return Promise.resolve();
     }
     stop() {
-        (this.stopped = !0), null != this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null));
+        ((this.stopped = !0), null != this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null)));
         let e = this.videoHandle?.element;
         e && null != this.rvfcHandle && (l(e)?.cancelVideoFrameCallback(this.rvfcHandle), (this.rvfcHandle = null));
         let t = this.gl;
-        t &&
+        (t &&
             (this.program && t.deleteProgram(this.program),
             this.quad && t.deleteBuffer(this.quad),
             this.videoTex && t.deleteTexture(this.videoTex),
@@ -188,7 +188,7 @@ var n = class {
             (this.videoTex = null),
             (this.gl = null),
             this.videoHandle?.dispose(),
-            (this.videoHandle = null);
+            (this.videoHandle = null));
     }
     initGl() {
         let e =
@@ -201,10 +201,10 @@ var n = class {
         if (!e) throw Error("PrivacyLensProvider: WebGL is not available");
         this.gl = e;
         let t = this.buildProgram(e, o, s);
-        (this.program = t), e.useProgram(t);
+        ((this.program = t), e.useProgram(t));
         let r = e.createBuffer();
-        e.bindBuffer(e.ARRAY_BUFFER, r),
-            e.bufferData(e.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), e.STATIC_DRAW);
+        (e.bindBuffer(e.ARRAY_BUFFER, r),
+            e.bufferData(e.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), e.STATIC_DRAW));
         let a = e.getAttribLocation(t, "aPos");
         for (let i of (e.enableVertexAttribArray(a),
         e.vertexAttribPointer(a, 2, e.FLOAT, !1, 0, 0),
@@ -226,9 +226,9 @@ var n = class {
             "uSunSpeed",
         ]))
             this.uniforms.set(i, e.getUniformLocation(t, i));
-        e.uniform1i(this.uniforms.get("uVideo") ?? null, 0),
+        (e.uniform1i(this.uniforms.get("uVideo") ?? null, 0),
             e.viewport(0, 0, 512, 512),
-            e.clearColor(0.88, 0.86, 0.83, 1);
+            e.clearColor(0.88, 0.86, 0.83, 1));
     }
     buildProgram(e, t, r) {
         let a = (t, r) => {

@@ -1,7 +1,7 @@
-t.d(r, { C: () => v, JE: () => m, NE: () => _, VU: () => g, bA: () => E, eo: () => O, lM: () => h, mb: () => d }),
+(t.d(r, { C: () => v, JE: () => m, NE: () => _, VU: () => g, bA: () => E, eo: () => O, lM: () => h, mb: () => d }),
     t(323874),
     t(14289),
-    t(35956);
+    t(35956));
 var n = t(582128),
     a = t(435558),
     l = t(196765),
@@ -11,8 +11,8 @@ var n = t(582128),
     u = t(875741),
     c = t(25176);
 function p(e) {
-    null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
-        Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e));
+    (null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
+        Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e)));
 }
 function f(e) {
     let { collectionAssets: r, avatarDecorationAssets: t, profileFrameAssets: n, previewProfileEffectSkuId: a } = e;
@@ -38,7 +38,7 @@ let m = (0, l.v)((e) => ({
                 null != n && URL.revokeObjectURL(n.src);
                 let a = URL.createObjectURL(t),
                     l = { ...e.collectionAssets };
-                return (l[r] = { type: r, name: t.name, src: a }), { ...e, collectionAssets: l, previewEnabled: !0 };
+                return ((l[r] = { type: r, name: t.name, src: a }), { ...e, collectionAssets: l, previewEnabled: !0 });
             });
         }),
     deleteCollectionAsset: (r) =>
@@ -214,7 +214,7 @@ function O() {
             let n = e.layerSrcByLayerId[t.id];
             if (null == n) continue;
             let a = new Image();
-            (a.src = n), (r[t.id] = a);
+            ((a.src = n), (r[t.id] = a));
         }
         return { layers: e.layers, layerData: r, css: (0, u.i)(e) };
     }, [e]);

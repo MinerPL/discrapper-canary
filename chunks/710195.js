@@ -22,7 +22,7 @@ let u = [o.ni.User, o.ni.Installation],
     S = {};
 function N(e) {
     let t = S[e];
-    return null == t && ((t = r().v3(e)), (S[e] = t)), t;
+    return (null == t && ((t = r().v3(e)), (S[e] = t)), t);
 }
 class C extends a.Ay.PersistedStore {
     static displayName = "ApexExperimentStore";
@@ -59,7 +59,7 @@ class C extends a.Ay.PersistedStore {
                     let { evaluation_id: t, assignments: n } = i[e],
                         a = { evaluationId: t ?? void 0, assignments: {} };
                     for (let [t, i, s, l, d, c] of ((r[e] = a), n))
-                        (s ??= 0),
+                        ((s ??= 0),
                             (a.assignments[t] = {
                                 hashedName: t,
                                 variantId: i,
@@ -69,10 +69,10 @@ class C extends a.Ay.PersistedStore {
                                 exposureTrackingEnabled: (s & o.fd.ExposureTrackingEnabled) != 0,
                                 useAsEligibility: (s & o.fd.UseAsEligibility) != 0,
                                 config: c,
-                            });
+                            }));
                 }
             }
-        return null != t && this.setGuildExperimentAssignments(t), !0;
+        return (null != t && this.setGuildExperimentAssignments(t), !0);
     }
     setGuildExperimentAssignments(e) {
         let t = _.guild;
@@ -94,8 +94,8 @@ class C extends a.Ay.PersistedStore {
         }
     }
     createOverride(e, t) {
-        (A = { ...A, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
-            this.trackExposureSuppression(e, "client_override");
+        ((A = { ...A, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
+            this.trackExposureSuppression(e, "client_override"));
     }
     deleteOverride(e) {
         let { [e]: t, ...n } = A;
@@ -127,12 +127,12 @@ class C extends a.Ay.PersistedStore {
         return h[e];
     }
     handleLogout(e) {
-        e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
+        (e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
             l.w.remove(m),
-            this.clearAllTrackedExposures();
+            this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
-        (E[e.name] = e), null != I[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
+        ((E[e.name] = e), null != I[e.name] && this.trackExposureSuppression(e.name, "cookie_override"));
     }
     getRegisteredExperiments() {
         return E;
@@ -291,26 +291,26 @@ class C extends a.Ay.PersistedStore {
             n = Date.now(),
             i = !1;
         for (let e in t) n - t[e] > 6048e5 && (delete t[e], (i = !0));
-        return i && this.saveTrackedExposures(t), t;
+        return (i && this.saveTrackedExposures(t), t);
     }
     saveTrackedExposures(e) {
         try {
             l.w.set(m, { version: 2, exposures: e });
         } catch (e) {
-            c.error("Error saving tracked exposures", e),
+            (c.error("Error saving tracked exposures", e),
                 this.track(
                     d.sE.EXPERIMENT_SAVE_EXPOSURE_FAILED,
                     { module: this.surface, call: "ApexExperimentStore.saveTrackedExposures" },
                     { flush: !0 },
-                );
+                ));
         }
     }
     clearForTests() {
-        this.clearAllServerAssignments(),
+        (this.clearAllServerAssignments(),
             this.clearAllOverrides(),
             this.clearAllTrackedExposures(),
             p.clear(),
-            T.clear();
+            T.clear());
     }
     clearAllServerAssignments() {
         _ = { user: {}, guild: {}, installation: {} };
@@ -319,7 +319,7 @@ class C extends a.Ay.PersistedStore {
         _ = { user: {}, guild: {}, installation: _.installation };
     }
     clearAllOverrides() {
-        (A = {}), (h = {}), (I = {});
+        ((A = {}), (h = {}), (I = {}));
     }
     clearSessionOverrides() {
         h = {};
@@ -334,10 +334,10 @@ class C extends a.Ay.PersistedStore {
         p.add(e);
     }
     handleFetchSuccess(e, t) {
-        p.delete(e), T.add(e), this.setExperimentAssignments(t);
+        (p.delete(e), T.add(e), this.setExperimentAssignments(t));
     }
     handleFetchFailure(e) {
-        p.delete(e), T.add(e);
+        (p.delete(e), T.add(e));
     }
     isFetching(e) {
         return p.has(e);
@@ -357,7 +357,7 @@ var O = n(228366),
 let v = new (class extends C {
     lastEmittedDebugVariantId;
     constructor() {
-        super(
+        (super(
             O.h,
             {
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
@@ -383,10 +383,10 @@ let v = new (class extends C {
                 return y.default.track(...t);
             }),
             (this.surface = "discord_app"),
-            this.addChangeListener(() => this.maybeEmitDebugExperimentEvent());
+            this.addChangeListener(() => this.maybeEmitDebugExperimentEvent()));
     }
     initialize(e) {
-        this.waitFor(L.default), this.loadStoredState(e, (0, R.DI)());
+        (this.waitFor(L.default), this.loadStoredState(e, (0, R.DI)()));
     }
     maybeEmitDebugExperimentEvent() {
         let e = L.default.getId(),

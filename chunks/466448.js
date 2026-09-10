@@ -6,25 +6,25 @@ let a = new (class {
     badgeSidebarItemKey = null;
     currentSidebarItemKey = null;
     registerBadges(e, t) {
-        (this.dismissibleBadges = e),
+        ((this.dismissibleBadges = e),
             (this.badgeSidebarItemKey =
-                null != t ? (e.dismissibleContentToNodeKeys.get(t)?.sidebarItemKey ?? null) : null);
+                null != t ? (e.dismissibleContentToNodeKeys.get(t)?.sidebarItemKey ?? null) : null));
     }
     notifyNavigated(e) {
         e !== this.currentSidebarItemKey && (this.markAsDismissed(), (this.currentSidebarItemKey = e));
     }
     reset() {
-        this.markAsDismissed(),
+        (this.markAsDismissed(),
             (this.dismissibleBadges = null),
             (this.badgeSidebarItemKey = null),
-            (this.currentSidebarItemKey = null);
+            (this.currentSidebarItemKey = null));
     }
     markAsDismissed() {
         if (null == this.currentSidebarItemKey || this.badgeSidebarItemKey !== this.currentSidebarItemKey) return;
         let e = this.dismissibleBadges?.nodeKeyToDismissibleContents.get(this.currentSidebarItemKey);
-        (this.badgeSidebarItemKey = null),
+        ((this.badgeSidebarItemKey = null),
             e?.forEach((e) => {
                 (0, i.Dr)(e, { dismissAction: r.i.AUTO, forceTrack: !0 });
-            });
+            }));
     }
 })();

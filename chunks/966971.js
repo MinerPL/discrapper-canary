@@ -1,4 +1,4 @@
-c.d(t, { _F: () => n, AB: () => p, K9: () => o, FF: () => d }), c(582128);
+(c.d(t, { _F: () => n, AB: () => p, K9: () => o, FF: () => d }), c(582128));
 var s,
     a = c(758836),
     d =
@@ -16,7 +16,7 @@ class i {
     style;
     animated;
     constructor({ src: e, style: t, animated: c }) {
-        (this.src = e), (this.style = t), (this.animated = c);
+        ((this.src = e), (this.style = t), (this.animated = c));
     }
     getSrc = (() => {
         var e = this;

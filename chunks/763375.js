@@ -101,7 +101,7 @@ function P(e) {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        h.default.track(I.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
+                        (h.default.track(I.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
                             slayer_storefront_session_id: E?.sessionId,
                             guild_id: i,
                             application_id: t.applicationId,
@@ -111,7 +111,7 @@ function P(e) {
                         }),
                             (0, f.C)((0, N.OY)(i, t), () =>
                                 (0, o.P0)((0, r.o)(w.intl.string(w.t["L/PwZf"]), c.Ck.SUCCESS)),
-                            );
+                            ));
                     },
                     icon: l.LinkIcon,
                 },

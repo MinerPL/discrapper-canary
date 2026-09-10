@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,7 +41,7 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         }),
     o =
         (this && this.__importDefault) ||
@@ -75,17 +75,25 @@ class g extends u.AbstractParserWithWordBoundaryChecking {
                 i = c.today(e.reference);
                 break;
             case "morgen":
-                (r = (0, m.addDuration)(r, { day: 1 })), (0, l.assignSimilarDate)(i, r), (0, l.implySimilarTime)(i, r);
+                ((r = (0, m.addDuration)(r, { day: 1 })),
+                    (0, l.assignSimilarDate)(i, r),
+                    (0, l.implySimilarTime)(i, r));
                 break;
             case "\xfcbermorgen":
             case "uebermorgen":
-                (r = (0, m.addDuration)(r, { day: 2 })), (0, l.assignSimilarDate)(i, r), (0, l.implySimilarTime)(i, r);
+                ((r = (0, m.addDuration)(r, { day: 2 })),
+                    (0, l.assignSimilarDate)(i, r),
+                    (0, l.implySimilarTime)(i, r));
                 break;
             case "gestern":
-                (r = (0, m.addDuration)(r, { day: -1 })), (0, l.assignSimilarDate)(i, r), (0, l.implySimilarTime)(i, r);
+                ((r = (0, m.addDuration)(r, { day: -1 })),
+                    (0, l.assignSimilarDate)(i, r),
+                    (0, l.implySimilarTime)(i, r));
                 break;
             case "vorgestern":
-                (r = (0, m.addDuration)(r, { day: -2 })), (0, l.assignSimilarDate)(i, r), (0, l.implySimilarTime)(i, r);
+                ((r = (0, m.addDuration)(r, { day: -2 })),
+                    (0, l.assignSimilarDate)(i, r),
+                    (0, l.implySimilarTime)(i, r));
                 break;
             default:
                 n.match(/letzte\s*nacht/) &&
@@ -93,7 +101,7 @@ class g extends u.AbstractParserWithWordBoundaryChecking {
                     (0, l.assignSimilarDate)(i, r),
                     i.imply("hour", 0));
         }
-        return a && (i = d.default.extractTimeComponents(i, a)), i;
+        return (a && (i = d.default.extractTimeComponents(i, a)), i);
     }
 }
 t.default = g;

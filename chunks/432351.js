@@ -12,7 +12,7 @@ class o extends i.A {
     Video = s;
     Camera = l;
     destroy() {
-        this.emit(r.bg.Destroy), this.removeAllListeners();
+        (this.emit(r.bg.Destroy), this.removeAllListeners());
     }
     interact() {}
     supported() {

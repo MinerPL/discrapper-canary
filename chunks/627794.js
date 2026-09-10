@@ -54,7 +54,7 @@ function f(e, t) {
         };
     if (M(a)) throw Error(s.intl.string(s.t["A/nX8D"]));
     let A = (0, l.p3)(e, t);
-    return A > 0 && (a.name += ` ${A + 1}`), a;
+    return (A > 0 && (a.name += ` ${A + 1}`), a);
 }
 function p(e, t) {
     if (e.length > t) throw Error(s.intl.formatToPlainString(s.t.mee4qd, { limit: t }));

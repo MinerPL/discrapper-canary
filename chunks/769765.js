@@ -1,4 +1,4 @@
-n.d(t, { A: () => R }), n(321073);
+(n.d(t, { A: () => R }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(999903),
@@ -28,7 +28,7 @@ function p(e) {
     return (
         t[u.rbe.GUILD_CATEGORY].forEach((e) => {
             let { channel: t } = e;
-            n._categories.push({ channel: t, index: -1 }), (n[t.id] = []);
+            (n._categories.push({ channel: t, index: -1 }), (n[t.id] = []));
         }),
         t[d.I6].forEach(i),
         t[d.vM].forEach(i),
@@ -38,24 +38,24 @@ function p(e) {
     );
 }
 function T() {
-    (E = {}), null != _ && p(_);
+    ((E = {}), null != _ && p(_));
 }
 function m(e) {
     let {
         guild: { id: t },
     } = e;
-    (E[t] = void 0), _ === t && p(t);
+    ((E[t] = void 0), _ === t && p(t));
 }
 function g(e) {
     let {
         channel: { guild_id: t },
     } = e;
     if (null == t) return !1;
-    (E[t] = void 0), _ === t && p(t);
+    ((E[t] = void 0), _ === t && p(t));
 }
 function S(e) {
     let { guildId: t } = e;
-    (E[t] = void 0), t === _ && p(t);
+    ((E[t] = void 0), t === _ && p(t));
 }
 function N(e, t) {
     if (((A = t), null == e || null == e.getGuildId())) return !1;
@@ -68,7 +68,7 @@ function C() {
 class O extends i.Ay.Store {
     static displayName = "GuildCategoryStore";
     initialize() {
-        this.waitFor(d.Ay, c.A, l.default, o.A, s.A), this.syncWith([s.A], C);
+        (this.waitFor(d.Ay, c.A, l.default, o.A, s.A), this.syncWith([s.A], C));
     }
     getCategories(e) {
         return null != e ? (E[e] ?? p(e)) : I;
@@ -102,7 +102,7 @@ let R = new O(r.h, {
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         if (l.default.getId() !== n.id) return !1;
-        (E[t] = void 0), t === _ && p(t);
+        ((E[t] = void 0), t === _ && p(t));
     },
     CURRENT_USER_UPDATE: function () {
         if (null == _) return !1;

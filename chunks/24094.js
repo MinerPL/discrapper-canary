@@ -22,7 +22,7 @@ let g = function (e) {
         if (0 === e.length) return void A(h.intl.string(h.t.TCHkcd));
         let t = { field_type: d.rX.TERMS, label: h.intl.string(h.t["9suSIA"]), values: e, required: !0 };
         try {
-            await l(t), r();
+            (await l(t), r());
         } catch (e) {
             A(new a.LG(e).getAnyErrorMessage());
         }

@@ -11,7 +11,7 @@ class c extends l.Component {
     };
     claimAccount = () => {
         let { onClose: t } = this.props;
-        t?.(),
+        (t?.(),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
                     i.e("722514"),
@@ -23,7 +23,7 @@ class c extends l.Component {
                     i.e("121007"),
                 ]).then(i.bind(i, 888363));
                 return (e) => (0, n.jsx)(t, { ...e });
-            });
+            }));
     };
     render() {
         let { transitionState: t } = this.props;

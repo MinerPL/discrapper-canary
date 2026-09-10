@@ -1,4 +1,4 @@
-n.d(t, { Cp: () => _, Gf: () => v, Sw: () => R, V4: () => b, ak: () => N, dK: () => y, dZ: () => S }), n(321073);
+(n.d(t, { Cp: () => _, Gf: () => v, Sw: () => R, V4: () => b, ak: () => N, dK: () => y, dZ: () => S }), n(321073));
 var l = n(435558),
     i = n.n(l),
     s = n(636537),
@@ -22,17 +22,17 @@ function y(e) {
     p.wc.updateAsync(
         "textAndImages",
         (t) => {
-            (t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e);
+            ((t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e));
         },
         E.Sb.FREQUENT_USER_ACTION,
     );
 }
 function S(e) {
-    o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
+    (o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
         s.Bo.get({ url: C.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
             (t) => o.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
             () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
-        );
+        ));
 }
 function v(e) {
     let { guildId: t, image: n, name: l, roles: i, analyticsLocation: r, originalMd5: a } = e;

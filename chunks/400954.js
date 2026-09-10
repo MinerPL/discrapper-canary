@@ -12,7 +12,7 @@ function h(t) {
         u = (0, a.Mu)(e),
         p = r.useCallback(
             (t, e) => {
-                n(), (0, l.JA)(t, !e, c.H9.GUILD_ACTIVE_THREADS_MODAL);
+                (n(), (0, l.JA)(t, !e, c.H9.GUILD_ACTIVE_THREADS_MODAL));
             },
             [n],
         ),

@@ -119,7 +119,7 @@ function H(e) {
         l = i ? _.uF.QUEST_HOME_ENTRYPOINT_THEMED : _.uF.QUEST_HOME_ENTRYPOINT,
         s = n.useMemo(() => {
             let e = (0, E.fF)(l);
-            return delete e.row_index, e;
+            return (delete e.row_index, e);
         }, [l]),
         d = n.useCallback(
             (e) => {

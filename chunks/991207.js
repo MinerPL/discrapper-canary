@@ -14,9 +14,9 @@ var n,
         return "<" + l + ">" + t + "</" + l + ">";
     },
     x = function (t) {
-        t.write(h("")), t.close();
+        (t.write(h("")), t.close());
         var r = t.parentWindow.Object;
-        return (t = null), r;
+        return ((t = null), r);
     },
     d = function () {
         var t,
@@ -36,10 +36,10 @@ var n,
             n = new ActiveXObject("htmlfile");
         } catch (t) {}
         g = "u" > typeof document ? (document.domain && n ? x(n) : d()) : x(n);
-        for (var t = i.length; t--; ) delete g[p][i[t]];
+        for (var t = i.length; t--;) delete g[p][i[t]];
         return g();
     };
-(u[v] = !0),
+((u[v] = !0),
     (t.exports =
         Object.create ||
         function (t, r) {
@@ -48,4 +48,4 @@ var n,
                 null !== t ? ((y[p] = o(t)), (e = new y()), (y[p] = null), (e[v] = t)) : (e = g()),
                 void 0 === r ? e : s.f(e, r)
             );
-        });
+        }));

@@ -1,4 +1,4 @@
-n.d(t, { A: () => o }), n(321073);
+(n.d(t, { A: () => o }), n(321073));
 var l = n(582128),
     i = n(17928),
     s = n(429913),
@@ -10,6 +10,6 @@ function o() {
     return l.useMemo(() => {
         if (null == e) return;
         let n = [{ type: r.Wy.HOME }];
-        return null != e.applicationId && null != t && n.push({ type: r.Wy.APPLICATION, application: t }), n;
+        return (null != e.applicationId && null != t && n.push({ type: r.Wy.APPLICATION, application: t }), n);
     }, [e, t]);
 }

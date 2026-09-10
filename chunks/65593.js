@@ -39,19 +39,19 @@ class D extends n.Component {
     }
     componentWillUnmount() {
         let e = this.elementDOMRef.current;
-        null != e &&
+        (null != e &&
             (e.ownerDocument.body.removeEventListener("dragover", this.handleDragOver, !1),
             e.ownerDocument.body.removeEventListener("drop", this.handleDragLeave, !1),
             e.removeEventListener("dragover", this.handleDragOverZone, !1),
             e.removeEventListener("dragleave", this.handleDragLeaveZone, !1),
             e.removeEventListener("drop", this.handleDrop, !1)),
-            clearTimeout(this.dragOverTimeout);
+            clearTimeout(this.dragOverTimeout));
     }
     isAllDropFiles = (e) => {
         for (let t = 0; t < e.length; t++)
             try {
                 let r = e[t].webkitGetAsEntry() ?? e[t].getAsEntry();
-                if (null == r) return h.warn("Dropped item is null or undefined"), !1;
+                if (null == r) return (h.warn("Dropped item is null or undefined"), !1);
                 if (!r.isFile) return !1;
             } catch (e) {}
         return !0;
@@ -97,10 +97,10 @@ class D extends n.Component {
                     -1 !== t.types.indexOf("Files")) &&
                     this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
             }
-            clearTimeout(this.dragOverTimeout),
+            (clearTimeout(this.dragOverTimeout),
                 (this.dragOverTimeout = setTimeout(() => {
-                    this.setState({ isDragging: !1 }), this.props.onDragClear?.();
-                }, 1e3));
+                    (this.setState({ isDragging: !1 }), this.props.onDragClear?.());
+                }, 1e3)));
         }
     };
     handleDragOverZone = () => {
@@ -113,7 +113,7 @@ class D extends n.Component {
         this.state.isDragging && (e.stopPropagation(), e.preventDefault(), this.clearDragging());
     };
     clearDragging = () => {
-        this.setState({ isDragging: !1, isOverZone: !1 }), this.props.onDragClear?.();
+        (this.setState({ isDragging: !1, isOverZone: !1 }), this.props.onDragClear?.());
     };
     handleDrop = (e) => {
         if (!this.preventUnwantedDrop(e, !0)) return !1;

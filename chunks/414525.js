@@ -1,4 +1,4 @@
-n.d(t, { H: () => o }), n(321073);
+(n.d(t, { H: () => o }), n(321073));
 var i = n(852015),
     r = n(144367),
     a = n(428420),
@@ -21,7 +21,7 @@ class l extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -44,7 +44,7 @@ class l extends s.G {
         for (let n = 0; n < e.colors.length; n++) t.tag(1, i.O0.LengthDelimited).string(e.colors[n]);
         0 !== e.angle && t.tag(2, i.O0.Bit32).float(e.angle);
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let o = new l();

@@ -8,6 +8,6 @@ function a(e) {
     try {
         return i(e);
     } catch (e) {
-        return console.error("[rpc] command interceptor threw; running the real handler", e), null;
+        return (console.error("[rpc] command interceptor threw; running the real handler", e), null);
     }
 }

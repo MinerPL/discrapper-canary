@@ -54,12 +54,12 @@ class T extends i.A {
         this.lastFetchAttemptedAt = Date.now();
     };
     handlePostConnectionOpen = () => {
-        window.clearTimeout(this.initialFetchTimerId),
+        (window.clearTimeout(this.initialFetchTimerId),
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.recurringFetchTimerId = window.setInterval(() => {
                 Date.now() - this.lastFetchAttemptedAt > A && this._fetch("post_connect_recurring");
-            }, h));
+            }, h)));
         let e = (0, E.s)(),
             t = this.hasHandledConnectionOpen;
         this.hasHandledConnectionOpen = !0;
@@ -102,12 +102,12 @@ class T extends i.A {
         this.hasHandledConnectionOpen = !1;
     };
     handleLogout = () => {
-        window.clearTimeout(this.initialFetchTimerId),
+        (window.clearTimeout(this.initialFetchTimerId),
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.lastFetchAttemptedAt = 0),
             (this.lastFetchedQuestForLocaleChangeAt = 0),
-            (this.hasHandledConnectionOpen = !1);
+            (this.hasHandledConnectionOpen = !1));
     };
     actions = {
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,

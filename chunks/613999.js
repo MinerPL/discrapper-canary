@@ -1,4 +1,4 @@
-n.d(t, { $l: () => l, Ay: () => c, O_: () => d, xx: () => o }), n(321073);
+(n.d(t, { $l: () => l, Ay: () => c, O_: () => d, xx: () => o }), n(321073));
 var i = n(543531),
     r = n(407689),
     a = n(853742),
@@ -17,10 +17,10 @@ class c extends r.id {
     channelId;
     sessionId;
     constructor({ guildId: e, channelId: t, windowId: n, isPaused: i }) {
-        super({ windowId: n, isPaused: i, id: l(t) }),
+        (super({ windowId: n, isPaused: i, id: l(t) }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, s.cr)(t));
+            (this.sessionId = (0, s.cr)(t)));
     }
     createFlushSeenItemsFunction = (e) => {
         let t = this.trackedFeedItems,

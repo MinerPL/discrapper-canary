@@ -4,7 +4,7 @@ var l = n(506774),
 let s = "MediaPlayerVolume";
 function r() {
     let { volume: e } = l.w.get(s) ?? {};
-    return "number" != typeof e && (e = 1), (e = Math.min(1, Math.max(0, e)));
+    return ("number" != typeof e && (e = 1), (e = Math.min(1, Math.max(0, e))));
 }
 function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
@@ -19,7 +19,7 @@ function u(e) {
 }
 function c() {
     let { muted: e } = l.w.get(s) ?? {};
-    return "boolean" != typeof e && (e = !1), e;
+    return ("boolean" != typeof e && (e = !1), e);
 }
 function d(e) {
     l.w.set(s, { volume: r(), muted: e });

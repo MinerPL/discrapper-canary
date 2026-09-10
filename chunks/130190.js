@@ -50,7 +50,7 @@ function F(e) {
               value: C ? P.intl.string(P.t["0n2u0k"]) : t.code,
               buttonColor: d.XD.PRIMARY,
               onCopy: () => {
-                  C && (0, h.C)(t.code),
+                  (C && (0, h.C)(t.code),
                       (0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_code_copy_input")
                           ? (0, A.r)({
                                 type: p.F.CLICK_INTERNAL,
@@ -66,7 +66,7 @@ function F(e) {
                                 questContent: n,
                                 questContentCTA: D.Cy.COPY_REWARD_CODE,
                                 sourceQuestContent: i,
-                            });
+                            }));
               },
           });
 }
@@ -230,9 +230,9 @@ function z(e) {
                 [l, C] = r.useState(!1),
                 c = r.useCallback(async (e, t, n) => {
                     try {
-                        C(!0), await (0, w.Oq)(e, t, n), u(!1), C(!1);
+                        (C(!0), await (0, w.Oq)(e, t, n), u(!1), C(!1));
                     } catch (e) {
-                        u(!0), C(!1);
+                        (u(!0), C(!1));
                     }
                 }, []),
                 E = r.useCallback((e) => {
@@ -258,7 +258,7 @@ function z(e) {
                 { claimCode: c, fetchCode: E, hasError: d, setHasError: u }
             );
         })({ isClaimingReward: q, isFetchingRewardCode: h, quest: A, questContent: p, rewardCode: I });
-    (t = (0, m.A)(() => {
+    ((t = (0, m.A)(() => {
         y(!0);
     })),
         (n = R.default.useIsCaptchaModalOpen()),
@@ -266,7 +266,7 @@ function z(e) {
         (i = !!(!n && a)),
         r.useEffect(() => {
             i && t();
-        }, [i, t]);
+        }, [i, t]));
     let v = null == I && (h || q),
         j = g && !q && !h;
     return (0, s.jsx)(Q.A, {

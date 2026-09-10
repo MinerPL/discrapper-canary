@@ -18,7 +18,7 @@ function l(e) {
                   (null === n.current &&
                       (n.current = setTimeout(() => {
                           let t = o.current;
-                          i.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
+                          (i.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
                               sku_id: t?.skuId,
                               wishlist_id: t?.wishlistId,
                               wishlist_owner_id: t?.wishlistOwnerId,
@@ -31,7 +31,7 @@ function l(e) {
                               location_stack: t?.analyticsLocations,
                           }),
                               (l.current = !0),
-                              (n.current = null);
+                              (n.current = null));
                       }, 500)))
                 : null !== n.current && (clearTimeout(n.current), (n.current = null));
         },

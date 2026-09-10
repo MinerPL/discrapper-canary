@@ -33,11 +33,11 @@ let v = () => {
         [b, M] = (0, r.useState)(!1);
     async function I() {
         if (null === j) return void M(!0);
-        N(!0), M(!1);
+        (N(!0), M(!1));
         try {
-            await D(), E(f.g.DISCOUNT_APPLIED);
+            (await D(), E(f.g.DISCOUNT_APPLIED));
         } catch (t) {
-            M(!0), N(!1);
+            (M(!0), N(!1));
         }
     }
     if (null === j || null === S) return (0, i.jsx)("div", { className: x.dc, children: (0, i.jsx)(s.y, {}) });

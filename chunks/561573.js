@@ -17,12 +17,12 @@ function _(e, t) {
             : { ...l, ...Object.fromEntries(e.skuIds.map((e) => [u({ type: "sku", skuId: e }), t])) };
 }
 function E() {
-    (l = {}), (o = {}), (d = {}), (c = {});
+    ((l = {}), (o = {}), (d = {}), (c = {}));
 }
 class A extends i.Ay.Store {
     static displayName = "SKUPricesStore";
     initialize() {
-        this.waitFor(a.default), this.syncWith([a.default], E);
+        (this.waitFor(a.default), this.syncWith([a.default], E));
     }
     getPricesForSkuId(e) {
         if (null == e) return;
@@ -53,12 +53,12 @@ let h = new A(r.h, {
     SKUS_PRICING_FETCH_SUCCESS: function (e) {
         let { priceId: t, data: n } = e,
             i = Date.now();
-        _(t, { type: "success", fetchedAt: i }),
+        (_(t, { type: "success", fetchedAt: i }),
             "application" === t.type &&
                 _({ type: "skus", skuIds: Object.keys(n.skuPriceMap) }, { type: "success", fetchedAt: i }),
             (o = { ...o, ...n.pricingResultIdMap }),
             (c = { ...c, ...n.skuPriceMap }),
-            (d = { ...d, ...n.rewardResultIdMap });
+            (d = { ...d, ...n.rewardResultIdMap }));
     },
     SKUS_PRICING_FETCH_FAIL: function (e) {
         let { priceId: t } = e;

@@ -24,7 +24,7 @@ function C(t) {
             {
                 text: u.intl.string(c.default.K1xIXf),
                 onClick: () => {
-                    (0, s.Wp)(!0, e), i?.(), C.onClose();
+                    ((0, s.Wp)(!0, e), i?.(), C.onClose());
                 },
                 variant: "primary",
             },

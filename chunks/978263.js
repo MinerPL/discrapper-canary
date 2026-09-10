@@ -1,4 +1,4 @@
-n.d(t, { A: () => L }), n(321073), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => L }), n(321073), n(323874), n(14289), n(35956));
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -21,7 +21,7 @@ class A extends _.A {
         return new A({ id: `invite:${e}`, path: E.BVt.INVITE(e), inviteCode: e });
     }
     constructor(e) {
-        super(), (this.id = e.id), (this.path = e.path), (this.inviteCode = e.inviteCode);
+        (super(), (this.id = e.id), (this.path = e.path), (this.inviteCode = e.inviteCode));
     }
 }
 var h = n(808728),
@@ -60,12 +60,12 @@ class L {
     _refetchForSingleCategoryLimit;
     _refetched = !1;
     constructor(e, t, n = 100, i = O, r = 0) {
-        (this.onResultsChange = e),
+        ((this.onResultsChange = e),
             this.setOptions(i, !0),
             (this._limit = n),
             (this._refetchForSingleCategoryLimit = r),
             this.createSearchContext(),
-            this.setResultTypes(t);
+            this.setResultTypes(t));
     }
     createSearchContext() {
         null == this.userSearchContext &&
@@ -73,7 +73,7 @@ class L {
     }
     setLimit(e) {
         let { userSearchContext: t } = this;
-        (this._limit = e),
+        ((this._limit = e),
             null != t && t.setLimit(e),
             this._userResults.length > this._limit && (this._userResults.length = this._limit),
             this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit),
@@ -83,13 +83,13 @@ class L {
             this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit),
             this._gameProfileResults.length > this._limit && (this._gameProfileResults.length = this._limit),
             this._linkResults.length > this._limit && (this._linkResults.length = this._limit),
-            this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit);
+            this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit));
     }
     setRefetchForSingleCategoryLimit(e) {
         this._refetchForSingleCategoryLimit = e;
     }
     setResultTypes(e) {
-        (this.resultTypes = null != e ? new Set(e) : null),
+        ((this.resultTypes = null != e ? new Set(e) : null),
             (this._userResults = this._include(C.rD.USER) ? this._userResults : []),
             (this._groupDMResults = this._include(C.rD.GROUP_DM) ? this._groupDMResults : []),
             (this._textChannelResults = this._include(C.rD.TEXT_CHANNEL) ? this._textChannelResults : []),
@@ -98,7 +98,7 @@ class L {
             (this._applicationResults = this._include(C.rD.APPLICATION) ? this._applicationResults : []),
             (this._gameProfileResults = this._include(C.rD.GAME_PROFILE) ? this._gameProfileResults : []),
             (this._linkResults = this._include(C.rD.LINK) ? this._linkResults : []),
-            (this._inAppNavigations = this._include(C.rD.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
+            (this._inAppNavigations = this._include(C.rD.IN_APP_NAVIGATION) ? this._inAppNavigations : []));
     }
     _include(e) {
         return null == this.resultTypes || this.resultTypes.has(e);
@@ -108,12 +108,12 @@ class L {
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        t ? (this.options = { ...this.options, ...e }) : (this.options = e),
+        (t ? (this.options = { ...this.options, ...e }) : (this.options = e),
             null != this.options.blacklist
                 ? (this._userBlacklist = Array.from(this.options.blacklist)
                       .map((e) => (e.startsWith("user:") ? e.replace("user:", "") : ""))
                       .filter((e) => "" !== e))
-                : (this._userBlacklist = null);
+                : (this._userBlacklist = null));
     }
     _willRefetchIfSingleCategoryResults() {
         return (
@@ -163,11 +163,11 @@ class L {
     }
     search(e, t) {
         if (((this.query = e), (this._refetched = !1), "" === e.trim())) {
-            this.clear(), this.updateAllResults();
+            (this.clear(), this.updateAllResults());
             return;
         }
         (this.options.frecencyBoosters ? u.bW.loadIfNecessary() : Promise.resolve()).finally(() => {
-            this.queryUsers(e, t, this._limit),
+            (this.queryUsers(e, t, this._limit),
                 (this._groupDMResults = this.queryGroupDMs(e, this._limit)),
                 (this._textChannelResults = this.queryTextChannels(e, this._limit)),
                 (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)),
@@ -178,12 +178,12 @@ class L {
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
                     ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, 300)))
-                    : this._include(C.rD.USER) || this.updateAllResults();
+                    : this._include(C.rD.USER) || this.updateAllResults());
         });
     }
     clear() {
         let { userSearchContext: e } = this;
-        null != e && e.clearQuery(),
+        (null != e && e.clearQuery(),
             (this.results = []),
             (this._userResults = []),
             (this._groupDMResults = []),
@@ -193,10 +193,10 @@ class L {
             (this._applicationResults = []),
             (this._gameProfileResults = []),
             (this._linkResults = []),
-            (this._inAppNavigations = []);
+            (this._inAppNavigations = []));
     }
     clean() {
-        this.clear(), this.destroy(), (this.query = ""), this.updateAllResults();
+        (this.clear(), this.destroy(), (this.query = ""), this.updateAllResults());
     }
     pause() {
         this.userSearchContext?.unsubscribe?.();
@@ -261,9 +261,9 @@ class L {
             this._userResults = p.Ay.queryUsers({ query: e, users: i, limit: n, boosters: s, allowSnowflake: r });
             return;
         }
-        void 0 !== t && T.A.requestMembers(t, e, 100),
+        (void 0 !== t && T.A.requestMembers(t, e, 100),
             i.setLimit(n),
-            i.setQuery({ query: e, filters: a, blacklist: this._userBlacklist, boosters: s });
+            i.setQuery({ query: e, filters: a, blacklist: this._userBlacklist, boosters: s }));
     }
     queryGroupDMs(e, t) {
         if (!this._include(C.rD.GROUP_DM)) return [];
@@ -326,12 +326,12 @@ class L {
                 this._userResults.push({ type: C.rD.USER, record: t, score: (0, p.zy)(n), comparator: i ?? void 0 });
         }
         let n = this._willRefetchIfSingleCategoryResults();
-        !n && this._userResults.length > this._limit && (this._userResults.length = this._limit),
+        (!n && this._userResults.length > this._limit && (this._userResults.length = this._limit),
             n && this.refetchIfSingleCategoryResults(),
-            this.updateAllResults();
+            this.updateAllResults());
     };
     updateAllResults = () => {
-        clearTimeout(this._asyncTimeout),
+        (clearTimeout(this._asyncTimeout),
             (this.results = r()([
                 ...this._userResults,
                 ...this._groupDMResults,
@@ -345,6 +345,6 @@ class L {
                 .uniqBy((e) => `${e.type}-${e.record.id}`)
                 .sort(N.A)
                 .value()),
-            this.onResultsChange(this.results, this.query);
+            this.onResultsChange(this.results, this.query));
     };
 }

@@ -1,7 +1,7 @@
-n.d(t, { HV: () => s, WQ: () => r, lK: () => a }), n(321073);
+(n.d(t, { HV: () => s, WQ: () => r, lK: () => a }), n(321073));
 let i = [];
 function r(e) {
-    for (i.push(e); i.length > 10; ) i.shift();
+    for (i.push(e); i.length > 10;) i.shift();
 }
 function a() {
     return i.join(" -> ");

@@ -70,14 +70,14 @@ function tn(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(),
+            (t.stopPropagation(),
                 o?.(X.sH.BUY_WITH_FIAT),
                 (0, R.A)({
                     skuId: (0, Q.Y)({ product: i, selectedVariantIndex: l }),
                     returnRef: r,
                     analyticsLocations: a,
                     discoverySessionId: d,
-                });
+                }));
         },
         text: k,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: k, productLabel: c }),
@@ -93,7 +93,7 @@ function te(t) {
         buttonTextOverride: a,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: a, productLabel: e }),
         onClick: (t) => {
-            t.stopPropagation(), r?.(X.sH.UNLOCK_WITH_NITRO);
+            (t.stopPropagation(), r?.(X.sH.UNLOCK_WITH_NITRO));
         },
     });
 }
@@ -103,7 +103,7 @@ function ta(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), e?.(X.sH.VIEW_DETAILS), i(t);
+            (t.stopPropagation(), e?.(X.sH.VIEW_DETAILS), i(t));
         },
         text: l,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: l, productLabel: a }),
@@ -116,7 +116,7 @@ function tl(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), a?.(X.sH.USE_NOW), i();
+            (t.stopPropagation(), a?.(X.sH.USE_NOW), i());
         },
         loading: r,
         text: s,
@@ -131,7 +131,7 @@ function ts(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), r?.(X.sH.EDIT_PROFILE), a();
+            (t.stopPropagation(), r?.(X.sH.EDIT_PROFILE), a());
         },
         text: l,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: l, productLabel: e }),
@@ -144,7 +144,7 @@ function to(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), r(i);
+            (t.stopPropagation(), r(i));
         },
         text: l,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: l, productLabel: a }),
@@ -164,15 +164,15 @@ function tc(t) {
         } = t,
         u = l ?? ti.intl.string(ti.t.zp6caO);
     async function d() {
-        s?.("claim premium product button"),
+        (s?.("claim premium product button"),
             o?.(X.sH.ADD_TO_COLLECTION),
             await (0, D.iJ)(i.skuId),
-            (0, J.A)({ product: i, analyticsLocations: a, purchaseType: X.gs.PREMIUM_PURCHASE });
+            (0, J.A)({ product: i, analyticsLocations: a, purchaseType: X.gs.PREMIUM_PURCHASE }));
     }
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), d();
+            (t.stopPropagation(), d());
         },
         disabled: r,
         loading: e,
@@ -205,23 +205,23 @@ function tu(t) {
                 orbIconHook: () => (0, n.jsx)(V.A, { className: tr.f }),
             }),
         onClick: (t) => {
-            t.stopPropagation(),
+            (t.stopPropagation(),
                 s?.("claim with orbs button"),
                 o?.(X.sH.BUY_WITH_ORBS),
                 (0, w.B4)({
                     skuId: (0, Q.Y)({ product: i, selectedVariantIndex: a }),
                     onComplete: (t) => {
-                        (0, D.gB)(),
+                        ((0, D.gB)(),
                             (0, J.A)({
                                 product: i,
                                 analyticsLocations: e,
                                 itemConsumed: t?.entitlements?.[0]?.consumed,
                                 purchaseType: X.gs.ORB,
-                            });
+                            }));
                     },
                     analyticsLocations: e,
                     discoverySessionId: u,
-                });
+                }));
         },
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: d, productLabel: c }),
         fullWidth: !0,
@@ -233,7 +233,7 @@ function td(t) {
     return (0, n.jsx)(_.$, {
         variant: "primary",
         onClick: (t) => {
-            t.stopPropagation(), e?.(X.sH.PAYMENT_OPTIONS), i(t);
+            (t.stopPropagation(), e?.(X.sH.PAYMENT_OPTIONS), i(t));
         },
         text: l,
         "aria-label": ti.intl.formatToPlainString(ti.t["5UYoSr"], { ctaLabel: l, productLabel: a }),
@@ -368,7 +368,7 @@ function tI(t) {
               }),
               icon: l ?? tC.EyeIcon,
               onClick: (t) => {
-                  t.stopPropagation(), null != a ? a(i.skuId) : (c?.(X.sH.OPEN_DETAILS), C(t));
+                  (t.stopPropagation(), null != a ? a(i.skuId) : (c?.(X.sH.OPEN_DETAILS), C(t)));
               },
           })
         : p

@@ -10,7 +10,7 @@ function d(t) {
     let { onClose: c, source: e, ...d } = t,
         r = p.intl.format(p.t.WMO9po, {
             onAndMore: function () {
-                c(), (0, n.e)();
+                (c(), (0, n.e)());
             },
         });
     return (0, a.jsx)(o.A, {

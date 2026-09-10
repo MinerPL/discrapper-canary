@@ -32,7 +32,7 @@ function a(e) {
                         e || (l.warn("Failed to load Mux SDK; continuing without QoE tracking", t), d(!0));
                     }),
                 () => {
-                    (e = !0), null != o.current && (o.current.endSession(), o.current.destroy(), (o.current = null));
+                    ((e = !0), null != o.current && (o.current.endSession(), o.current.destroy(), (o.current = null)));
                 }
             );
         }, [u, a, t, i, s]),

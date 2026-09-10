@@ -20,7 +20,7 @@ function p(e, t) {
     return {
         playSoundboardSound: l.useCallback(
             (n) => {
-                null != g.current && g.current.pause(), null != t && (0, d.Ak)(e, t, n);
+                (null != g.current && g.current.pause(), null != t && (0, d.Ak)(e, t, n));
             },
             [e, g, t],
         ),
@@ -28,7 +28,7 @@ function p(e, t) {
         previewSound: l.useCallback(async () => {
             let t = (0, h.A)(e.soundId),
                 l = new (await (0, r.A)(t))();
-            (l.src = t),
+            ((l.src = t),
                 null != g.current && g.current.pause(),
                 u.isPlatformEmbedded && p === f.a.VOICE && l.setSinkId?.(s.voiceSinkId),
                 (g.current = l),
@@ -36,7 +36,7 @@ function p(e, t) {
                 (l.volume = (0, m.A)(e.volume, n)),
                 l.play(),
                 A(!0),
-                l.addEventListener("pause", () => A(!1), { once: !0 });
+                l.addEventListener("pause", () => A(!1), { once: !0 }));
         }, [e, n, g, p]),
         isPreviewingSound: x,
     };

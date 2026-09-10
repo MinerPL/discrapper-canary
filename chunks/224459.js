@@ -38,11 +38,11 @@ function l(e, t) {
                     t && o.push(c.format("deselectedItem", { item: t }));
                 }
             }
-            "multiple" === t.selectionManager.selectionMode &&
+            ("multiple" === t.selectionManager.selectionMode &&
                 (0 === o.length || "all" === f || f.size > 1 || "all" === d.current || d.current?.size > 1) &&
                 o.push("all" === f ? c.format("selectedAll") : c.format("selectedCount", { count: f.size })),
                 o.length > 0 && (0, n.iP)(o.join(" ")),
-                (d.current = f);
+                (d.current = f));
         }, [
             f,
             t.selectionManager.selectedKeys,

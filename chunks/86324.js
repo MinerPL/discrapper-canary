@@ -35,7 +35,7 @@ self.addEventListener("message", (e) => {
         case s.l.DROP:
             ((e) => {
                 let { canvasId: r } = e;
-                o.get(r)?.drop(), o.delete(r);
+                (o.get(r)?.drop(), o.delete(r));
             })(r);
             break;
         case s.l.VISIBILITY_CHANGE:

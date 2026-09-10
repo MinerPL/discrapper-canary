@@ -25,7 +25,7 @@ class A extends r.PureComponent {
                         height: r,
                         marginLeft: i,
                         marginTop: a,
-                        backgroundImage: `url(${((0, d.M))(u) ? l : e})`,
+                        backgroundImage: `url(${(0, d.M)(u) ? l : e})`,
                     },
                 }),
         });

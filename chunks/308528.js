@@ -35,7 +35,7 @@ let S = {
         if (1 === o.length) {
             let [e] = o,
                 t = this._openCachedDMChannel(e, s, l);
-            if (null != t) return d(t), Promise.resolve(t.id);
+            if (null != t) return (d(t), Promise.resolve(t.id));
         }
         try {
             let e = await i.Bo.post({
@@ -67,7 +67,7 @@ let S = {
                 retries: 3,
                 rejectWithError: (0, i.fT)(),
             });
-            return a && (r?.(), this._openPrivateChannel(e.body)), e.body.id;
+            return (a && (r?.(), this._openPrivateChannel(e.body)), e.body.id);
         } catch (e) {
             throw (e?.body?.code === m.t02.QUARANTINED && (0, c.default)(), e);
         }
@@ -94,7 +94,7 @@ let S = {
                 rejectWithError: (0, i.fT)(),
             }),
             r = (0, E.UE)(n.body);
-        return a.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), r.id;
+        return (a.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), r.id);
     },
     async getOrEnsurePrivateChannel(e) {
         let t = A.A.getDMFromUserId(e);
@@ -103,7 +103,7 @@ let S = {
     async getDMChannel(e) {
         let t = await i.Bo.get({ url: m.Rsh.DM_CHANNEL(e), rejectWithError: !0 }),
             n = (0, E.UE)(t.body);
-        return a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id;
+        return (a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id);
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
@@ -152,7 +152,7 @@ let S = {
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
         });
-        return a.h.dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: e, overwrite: t }), n;
+        return (a.h.dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: e, overwrite: t }), n);
     },
     async clearPermissionOverwrite(e, t) {
         let n = await i.Bo.del({
@@ -160,7 +160,9 @@ let S = {
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
         });
-        return a.h.dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: e, overwriteId: t }), n;
+        return (
+            a.h.dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: e, overwriteId: t }), n
+        );
     },
     addRecipient(e, t, n, a) {
         return i.Bo.put({
@@ -188,7 +190,7 @@ let S = {
         let n = A.A.getChannel(e),
             r = await i.Bo.patch({ url: m.Rsh.CHANNEL(e), body: { name: t }, oldFormErrors: !0, rejectWithError: !0 }),
             a = n?.getGuildId();
-        return null == a || n?.isThread() || o.A.checkGuildTemplateDirty(a), r;
+        return (null == a || n?.isThread() || o.A.checkGuildTemplateDirty(a), r);
     },
     async setIcon(e, t, n) {
         let r = A.A.getChannel(e),
@@ -210,16 +212,16 @@ let S = {
             });
             I.default.track(m.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...a, status: "success" });
             let s = r?.getGuildId();
-            return null == s || r?.isThread() || o.A.checkGuildTemplateDirty(s), n;
+            return (null == s || r?.isThread() || o.A.checkGuildTemplateDirty(s), n);
         } catch (e) {
             throw (
-                (I.default.track(m.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
+                I.default.track(m.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
                     ...a,
                     status: "failed",
                     is_rate_limited: e?.body?.retry_after != null,
                     error_message: e?.body?.message,
                 }),
-                e)
+                e
             );
         }
     },
@@ -251,14 +253,14 @@ let S = {
             );
         } catch (e) {
             throw (
-                (r &&
+                r &&
                     I.default.track(m.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
                         ...l,
                         status: "failed",
                         is_rate_limited: e?.body?.retry_after != null,
                         error_message: e?.body?.message,
                     }),
-                e)
+                e
             );
         }
     },
@@ -274,21 +276,21 @@ let S = {
     },
     async createTextChannel(e, t, n, r) {
         let a = { type: m.rbe.GUILD_TEXT, name: t, permission_overwrites: [] };
-        null != n && (a.parent_id = n), null != r && (a.topic = r);
+        (null != n && (a.parent_id = n), null != r && (a.topic = r));
         let s = await i.Bo.post({
             url: m.Rsh.GUILD_CHANNELS(e),
             body: a,
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
         });
-        return o.A.checkGuildTemplateDirty(e), s;
+        return (o.A.checkGuildTemplateDirty(e), s);
     },
     fetchChannel: async (e) => (await i.Bo.get({ url: m.Rsh.CHANNEL(e), rejectWithError: !0 })).body,
     async openChannel(e) {
         try {
             let t = await this.fetchChannel(e),
                 n = (0, E.UE)(t);
-            return a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n;
+            return (a.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n);
         } catch {
             return;
         }

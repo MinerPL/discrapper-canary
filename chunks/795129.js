@@ -6,15 +6,15 @@ async function i(e) {
                 r = setTimeout(() => {
                     n(Error("File read timeout"));
                 }, 1e4);
-            (i.onload = (e) => {
+            ((i.onload = (e) => {
                 clearTimeout(r);
                 let i = e.target?.result;
                 i instanceof ArrayBuffer ? t(i.byteLength) : n(Error("Unexpected FileReader result type"));
             }),
                 (i.onerror = () => {
-                    clearTimeout(r), n(Error("Could not read file"));
+                    (clearTimeout(r), n(Error("Could not read file")));
                 }),
-                i.readAsArrayBuffer(e);
+                i.readAsArrayBuffer(e));
         });
     } catch (e) {
         return 0;

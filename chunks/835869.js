@@ -12,17 +12,17 @@ function s(e) {
         n(e);
     });
 }
-((r = i || (i = {}))[(r.PENDING = 0)] = "PENDING"),
+(((r = i || (i = {}))[(r.PENDING = 0)] = "PENDING"),
     (r[(r.RESOLVED = 1)] = "RESOLVED"),
-    (r[(r.REJECTED = 2)] = "REJECTED");
+    (r[(r.REJECTED = 2)] = "REJECTED"));
 class l {
     constructor(e) {
-        l.prototype.__init.call(this),
+        (l.prototype.__init.call(this),
             l.prototype.__init2.call(this),
             l.prototype.__init3.call(this),
             l.prototype.__init4.call(this),
             (this._state = i.PENDING),
-            (this._handlers = []);
+            (this._handlers = []));
         try {
             e(this._resolve, this._reject);
         } catch (e) {
@@ -31,7 +31,7 @@ class l {
     }
     then(e, t) {
         return new l((n, r) => {
-            this._handlers.push([
+            (this._handlers.push([
                 !1,
                 (t) => {
                     if (e)
@@ -52,7 +52,7 @@ class l {
                     else r(e);
                 },
             ]),
-                this._executeHandlers();
+                this._executeHandlers());
         });
     }
     catch(e) {
@@ -63,10 +63,10 @@ class l {
             let r, i;
             return this.then(
                 (t) => {
-                    (i = !1), (r = t), e && e();
+                    ((i = !1), (r = t), e && e());
                 },
                 (t) => {
-                    (i = !0), (r = t), e && e();
+                    ((i = !0), (r = t), e && e());
                 },
             ).then(() => {
                 i ? n(r) : t(r);
@@ -87,7 +87,7 @@ class l {
         this._setResult = (e, t) => {
             if (this._state === i.PENDING) {
                 if ((0, o.Qg)(t)) return void t.then(this._resolve, this._reject);
-                (this._state = e), (this._value = t), this._executeHandlers();
+                ((this._state = e), (this._value = t), this._executeHandlers());
             }
         };
     }
@@ -95,13 +95,13 @@ class l {
         this._executeHandlers = () => {
             if (this._state === i.PENDING) return;
             let e = this._handlers.slice();
-            (this._handlers = []),
+            ((this._handlers = []),
                 e.forEach((e) => {
                     e[0] ||
                         (this._state === i.RESOLVED && e[1](this._value),
                         this._state === i.REJECTED && e[2](this._value),
                         (e[0] = !0));
-                });
+                }));
         };
     }
 }

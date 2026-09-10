@@ -1,4 +1,4 @@
-n.d(t, { b: () => C, k: () => S }), n(667532), n(775443);
+(n.d(t, { b: () => C, k: () => S }), n(667532), n(775443));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -24,36 +24,36 @@ class g extends r.PureComponent {
     };
     componentWillEnter = (e) => {
         let { instant: t } = this.props;
-        this.setState({ transitionState: f.ip.ENTERING }),
+        (this.setState({ transitionState: f.ip.ENTERING }),
             setTimeout(
                 () => {
-                    this.setState({ transitionState: f.ip.ENTERED }), e?.();
+                    (this.setState({ transitionState: f.ip.ENTERED }), e?.());
                 },
                 t ? 0 : f.xt,
-            );
+            ));
     };
     componentWillLeave = (e) => {
         let { instant: t } = this.props;
-        this.setState({ transitionState: f.ip.EXITING }),
+        (this.setState({ transitionState: f.ip.EXITING }),
             setTimeout(
                 () => {
-                    this.setState({ transitionState: f.ip.EXITED }), e();
+                    (this.setState({ transitionState: f.ip.EXITED }), e());
                 },
                 t ? 0 : f.xt,
-            );
+            ));
     };
     componentDidUpdate = (e) => {
         if (e.isVisible !== this.props.isVisible) {
             let { transitionState: e } = this.state;
-            e === f.ip.HIDDEN && this.props.isVisible && this.componentWillEnter(),
+            (e === f.ip.HIDDEN && this.props.isVisible && this.componentWillEnter(),
                 this.props.isVisible ||
                     (e !== f.ip.ENTERING && e !== f.ip.ENTERED) ||
-                    this.setState({ transitionState: f.ip.HIDDEN });
+                    this.setState({ transitionState: f.ip.HIDDEN }));
         }
     };
     close = () =>
         new Promise((e) => {
-            this.props.closeModal(this.props.modalKey), setTimeout(() => e(), f.xt);
+            (this.props.closeModal(this.props.modalKey), setTimeout(() => e(), f.xt));
         });
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: r, dismissable: a } = this.props,
@@ -81,7 +81,7 @@ function C() {
                         let r = e[i],
                             a = e[i + 1]?.stackingBehavior,
                             s = n || "replace" === a;
-                        t.unshift({ ...r, isVisible: !s }), "replaceAll" === r.stackingBehavior && (n = !0);
+                        (t.unshift({ ...r, isVisible: !s }), "replaceAll" === r.stackingBehavior && (n = !0));
                     }
                     return t;
                 })(t),

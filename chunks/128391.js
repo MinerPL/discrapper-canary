@@ -11,17 +11,17 @@ function i(e, t) {
     }
     function l(e) {
         let { channelId: t, messages: n } = e;
-        r.add(t), i?.(), n.forEach((e) => a(e));
+        (r.add(t), i?.(), n.forEach((e) => a(e)));
     }
     function o(e) {
         let { data: n } = e;
-        i?.(),
+        (i?.(),
             n.forEach((e) => {
                 let { messages: n } = e;
                 n.forEach((e) => {
                     e.forEach((e) => t(e));
                 });
-            });
+            }));
     }
     e.actions = {
         ...e.actions,
@@ -34,15 +34,15 @@ function i(e, t) {
         LOAD_MESSAGES_AROUND_SUCCESS: l,
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { messages: n } = e;
-            i?.(), n.forEach((e) => t(e));
+            (i?.(), n.forEach((e) => t(e)));
         },
         LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
             let { pins: n } = e;
-            i?.(),
+            (i?.(),
                 n.forEach((e) => {
                     let { message: n } = e;
                     return t(n);
-                });
+                }));
         },
         SEARCH_MESSAGES_SUCCESS: o,
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: o,

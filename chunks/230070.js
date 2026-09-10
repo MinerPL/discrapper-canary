@@ -5,12 +5,12 @@ var i,
         function (t) {
             return t && t.__esModule ? t : { default: t };
         };
-Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalCalendarMethod = void 0);
+(Object.defineProperty(e, "__esModule", { value: !0 }), (e.ICalCalendarMethod = void 0));
 let s = a(488320),
     o = n(a(297135)),
     d = a(9363),
     l = a(9363);
-((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH"),
+(((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = "PUBLISH"),
     (i.REQUEST = "REQUEST"),
     (i.REPLY = "REPLY"),
     (i.ADD = "ADD"),
@@ -20,7 +20,7 @@ let s = a(488320),
     (i.DECLINECOUNTER = "DECLINECOUNTER"),
     (e.default = class {
         constructor(t = {}) {
-            (this.data = {
+            ((this.data = {
                 prodId: "//sebbo.net//ical-generator//EN",
                 method: null,
                 name: null,
@@ -43,12 +43,12 @@ let s = a(488320),
                 void 0 !== t.scale && this.scale(t.scale),
                 void 0 !== t.ttl && this.ttl(t.ttl),
                 void 0 !== t.events && this.events(t.events),
-                void 0 !== t.x && this.x(t.x);
+                void 0 !== t.x && this.x(t.x));
         }
         prodId(t) {
             if (!t) return this.data.prodId;
             if ("string" == typeof t && /^\/\/(.+)\/\/(.+)\/\/([A-Z]{1,4})$/.test(t))
-                return (this.data.prodId = t), this;
+                return ((this.data.prodId = t), this);
             if ("string" == typeof t)
                 throw Error(
                     "`prodId` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalcalendar.html#prodid",
@@ -57,7 +57,7 @@ let s = a(488320),
             if (!t.company) throw Error("`prodid.company` is a mandatory item!");
             if (!t.product) throw Error("`prodid.product` is a mandatory item!");
             let e = (t.language || "EN").toUpperCase();
-            return (this.data.prodId = "//" + t.company + "//" + t.product + "//" + e), this;
+            return ((this.data.prodId = "//" + t.company + "//" + t.product + "//" + e), this);
         }
         method(t) {
             return void 0 === t
@@ -104,19 +104,19 @@ let s = a(488320),
         }
         createEvent(t) {
             let e = t instanceof o.default ? t : new o.default(t, this);
-            return this.data.events.push(e), e;
+            return (this.data.events.push(e), e);
         }
         events(t) {
             return t ? (t.forEach((t) => this.createEvent(t)), this) : this.data.events;
         }
         clear() {
-            return (this.data.events = []), this;
+            return ((this.data.events = []), this);
         }
         save(t, e) {
             return e ? ((0, d.writeFile)(t, this.toString(), e), this) : l.promises.writeFile(t, this.toString());
         }
         saveSync(t) {
-            return (0, d.writeFileSync)(t, this.toString()), this;
+            return ((0, d.writeFileSync)(t, this.toString()), this);
         }
         serve(t, e = "calendar.ics") {
             return (
@@ -184,4 +184,4 @@ let s = a(488320),
                 (0, s.foldLines)(a)
             );
         }
-    });
+    }));

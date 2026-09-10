@@ -36,7 +36,7 @@ let u = new a(n.h, {
     },
     DISCOVER_CHECKLIST_FETCH_SUCCESS: function (e) {
         let { checklist: i, guildId: t } = e;
-        (s = !1),
+        ((s = !1),
             (r[t] = {
                 guildId: i.guild_id,
                 safeEnvironment: i.safe_environment,
@@ -54,6 +54,6 @@ let u = new a(n.h, {
                 healthScore: i.health_score,
                 minimumGuildAge: i.minimum_age ?? 0,
                 age: i.age,
-            });
+            }));
     },
 });

@@ -1,11 +1,11 @@
-n.d(t, { n: () => s }), n(321073);
+(n.d(t, { n: () => s }), n(321073));
 var i = n(228366);
 let r = {},
     a = !1;
 function s(e) {
     for (let t in e) {
         let n = e[t];
-        n.actions,
+        (n.actions,
             (function (e) {
                 let t = e.actions ?? [];
                 for (let n of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) &&
@@ -15,8 +15,8 @@ function s(e) {
                     (t.includes("CONNECTION_OPEN") || (t = [...t, "CONNECTION_OPEN"]),
                     t.includes("OVERLAY_INITIALIZE") || (t = [...t, "OVERLAY_INITIALIZE"])),
                 t))
-                    n in r || (r[n] = []), r[n].push(e);
-            })(n);
+                    (n in r || (r[n] = []), r[n].push(e));
+            })(n));
     }
     i.h.addInterceptor(l);
 }

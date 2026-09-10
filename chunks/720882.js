@@ -229,8 +229,8 @@ function tw(e) {
         x = d.getAttribute("data-name");
     if (null != A) n = t = i = A.url;
     else
-        for (; (0, r.vq)(h); )
-            (0, r.vq)(h, HTMLImageElement) && null != h.src && (n = h.src),
+        for (; (0, r.vq)(h);)
+            ((0, r.vq)(h, HTMLImageElement) && null != h.src && (n = h.src),
                 (0, r.vq)(h, HTMLAnchorElement) &&
                     null != h.href &&
                     ((t = h.href),
@@ -241,7 +241,7 @@ function tw(e) {
                         h.hasAttribute("data-safe-src") &&
                             "" !== h.getAttribute("data-safe-src") &&
                             (i = h.getAttribute("data-safe-src")))),
-                (h = h.parentNode);
+                (h = h.parentNode));
     let _ = document.getSelection()?.toString() ?? "";
     return (0, l.jsx)(g.f5, {
         value: f,
@@ -315,7 +315,7 @@ function tP(e) {
             shouldHideMediaOptions: na = !1,
         } = e,
         nr = a.useRef(null);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         nr.current = Date.now();
     }, []),
         a.useEffect(
@@ -331,7 +331,7 @@ function tP(e) {
                 }
             },
             [tQ, tY],
-        );
+        ));
     let ns = a.useCallback(() => {
             if (null != nr.current) {
                 let e = Date.now() - nr.current;
@@ -525,13 +525,13 @@ function tP(e) {
                                 let r = l ?? i;
                                 n(!0);
                                 let s = a ?? (0, j.getAvailableLocales)().find((e) => e.value === r)?.name ?? r;
-                                tA.has(e.id) || tA.set(e.id, e.content),
+                                (tA.has(e.id) || tA.set(e.id, e.content),
                                     (0, G.P0)(
                                         (0, T.o)(
                                             j.intl.formatToPlainString(j.t.Znl8Z8, { targetLanguage: s }),
                                             v.Ck.AI,
                                         ),
-                                    );
+                                    ));
                                 try {
                                     let t = await ts.Bo.post({
                                         url: X.Rsh.AI_TRANSLATE,
@@ -717,7 +717,7 @@ function tP(e) {
                     { poll: n } = e;
                 if (!e.isPoll() || null == n) return S;
                 let i = [];
-                return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || i.push(0), i;
+                return (n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || i.push(0), i);
             })(tY)).length
                 ? null
                 : (0, l.jsx)(l.Fragment, { children: tB.map((e) => D[e](tY)) }),
@@ -911,7 +911,7 @@ function tP(e) {
                       id: "report-to-mod",
                       label: t ? j.intl.string(e4.default["8wsdng"]) : j.intl.string(e4.default["1D+vqy"]),
                       action: () => {
-                          r(e5.i.USER_DISMISS), (0, e8.dy)(e);
+                          (r(e5.i.USER_DISMISS), (0, e8.dy)(e));
                       },
                       icon: e$.FlagIcon,
                       disabled: t,
@@ -958,11 +958,11 @@ function tP(e) {
                         keywordFilter: [...(t.triggerMetadata?.keywordFilter ?? []), e],
                     },
                 };
-                await r(n, f),
+                (await r(n, f),
                     p(n),
                     null != o
                         ? (0, G.P0)((0, T.o)(j.intl.string(j.t.wH6L0r), v.Ck.FAILURE))
-                        : (0, G.P0)((0, T.o)(j.intl.string(j.t["0rdYm2"]), v.Ck.SUCCESS));
+                        : (0, G.P0)((0, T.o)(j.intl.string(j.t["0rdYm2"]), v.Ck.SUCCESS)));
             }
             let S = (0, l.jsx)(s.Dr, { id: "automod-rules-loading", label: j.intl.string(j.t.ZTNur7) });
             return (

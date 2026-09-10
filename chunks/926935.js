@@ -12,7 +12,7 @@ function l() {
 class o extends i.A {
     stores = new Map().set(a.A, l);
     constructor() {
-        l(), super();
+        (l(), super());
     }
 }
 let d = new o();

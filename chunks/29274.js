@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "zh",
     pluralRuleFunction: function (e, t) {
         return "other";
@@ -15,4 +15,4 @@ IntlMessageFormat.__addLocaleData({
         },
     }),
     IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" }),
-    IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" });
+    IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" }));

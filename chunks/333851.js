@@ -14,7 +14,7 @@ var s = (0, i.a)(({ id: l, label: t, disabled: d, class: s, onInput: n, onBlur: 
         disabled: d,
         class: (0, e.n)("IncodeDateInputComposed", s),
         onInput: (l) => {
-            n(l), (o.current = !0);
+            (n(l), (o.current = !0));
         },
         onBlur: (l) => {
             if ((Z?.(l), !o.current || ((o.current = !1), null !== l.relatedTarget))) return;
@@ -37,7 +37,7 @@ var s = (0, i.a)(({ id: l, label: t, disabled: d, class: s, onInput: n, onBlur: 
                     : ((l) => {
                           if (l && "showPicker" in HTMLInputElement.prototype)
                               try {
-                                  return l.showPicker(), !0;
+                                  return (l.showPicker(), !0);
                               } catch {
                                   return !1;
                               }

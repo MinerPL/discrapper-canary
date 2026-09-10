@@ -13,7 +13,7 @@ var i = n(477900),
 function g(e) {
     let { skuId: t, product: s, productName: a, tab: r, source: h = "collectibles-shop-pdp", onTrackClick: g } = e;
     return l.useCallback(() => {
-        o.default.track(m.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
+        (o.default.track(m.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
             g?.(u.sH.SHARE_LINK),
             ((e) => {
                 let { skuId: t, product: l, productName: s, tab: a, source: r } = e;
@@ -41,7 +41,7 @@ function g(e) {
                     },
                     { stackingBehavior: "stack", modalKey: d.aU },
                 );
-            })({ skuId: t, product: s, productName: a, tab: r, source: h });
+            })({ skuId: t, product: s, productName: a, tab: r, source: h }));
     }, [t, s, a, r, h, g]);
 }
 function p(e) {

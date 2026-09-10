@@ -18,10 +18,10 @@ function h(e, i, s) {
               id: "message-user",
               label: u.intl.string(u.t.OAJQlP),
               action: () => {
-                  (0, r.A)(i, !0),
+                  ((0, r.A)(i, !0),
                       c.A.openPrivateChannel({ recipientIds: e }),
                       h.dispatch(p.jej.POPOUT_CLOSE),
-                      (0, n.closeAllModals)();
+                      (0, n.closeAllModals)());
               },
               icon: s,
               leadingAccessory: null != s ? { type: "icon", icon: s } : void 0,

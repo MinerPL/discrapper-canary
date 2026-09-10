@@ -140,6 +140,6 @@ let x = new A(s.h, {
     LOAD_MESSAGES_SUCCESS: g,
     LOAD_MESSAGES_AROUND_SUCCESS: g,
     LOGOUT: function () {
-        (d = new Map()), (u = !1), (m = !1);
+        ((d = new Map()), (u = !1), (m = !1));
     },
 });

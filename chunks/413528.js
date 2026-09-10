@@ -32,7 +32,7 @@ class h extends i.A {
         null == n || i || !e || o.A.isSoundDisabled("call_calling") || c.A.disableSounds ? A.stop() : A.loop();
     };
     handleSoundpackUpdate = () => {
-        A.stop(), (A = (0, r.aN)("call_calling", a.A.getSoundpack()));
+        (A.stop(), (A = (0, r.aN)("call_calling", a.A.getSoundpack())));
     };
     handleRingUpdate = () => {
         let e = d.Ay.getVoiceChannelId(),
@@ -44,23 +44,23 @@ class h extends i.A {
     };
     handleGuildRingStart = (e) => {
         let { ringing: t, guildId: n } = e;
-        t.forEach((e) => {
+        (t.forEach((e) => {
             this.#e.add(e);
         }),
-            this._handleRing(this.#e.size > 0, n);
+            this._handleRing(this.#e.size > 0, n));
     };
     handleGuildRingStop = (e) => {
         let { ringing: t, guildId: n } = e;
-        t.forEach((e) => {
+        (t.forEach((e) => {
             this.#e.delete(e);
         }),
-            this._handleRing(this.#e.size > 0, n);
+            this._handleRing(this.#e.size > 0, n));
     };
     handleChannelRTCStoreChange = () => {
         let e = d.Ay.getVoiceChannelId();
         if (!(this.#e.size > 0)) return;
         if (null == e) {
-            (this.#e = new Set()), this._handleRing(this.#e.size > 0, null);
+            ((this.#e = new Set()), this._handleRing(this.#e.size > 0, null));
             return;
         }
         if (null == e) return;

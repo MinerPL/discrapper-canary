@@ -6,7 +6,7 @@ var a = n(690094),
     s = n(296438);
 function l(e) {
     let t = "history";
-    (0, i.s5)(t, e), (0, i.AS)(t, c);
+    ((0, i.s5)(t, e), (0, i.AS)(t, c));
 }
 function c() {
     let e, t, n;
@@ -23,12 +23,12 @@ function c() {
             if (n) {
                 let e = r,
                     t = String(n);
-                (r = t), (0, i.aj)("history", { from: e, to: t });
+                ((r = t), (0, i.aj)("history", { from: e, to: t }));
             }
             return e.apply(this, t);
         };
     }
-    (s.j.onpopstate = function (...e) {
+    ((s.j.onpopstate = function (...e) {
         let t = s.j.location.href,
             n = r;
         if (((r = t), (0, i.aj)("history", { from: n, to: t }), l))
@@ -37,5 +37,5 @@ function c() {
             } catch (e) {}
     }),
         (0, a.GS)(s.j.history, "pushState", c),
-        (0, a.GS)(s.j.history, "replaceState", c);
+        (0, a.GS)(s.j.history, "replaceState", c));
 }

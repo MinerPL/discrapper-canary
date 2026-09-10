@@ -17,7 +17,7 @@ class _ {
     _processing = !1;
     _minimumTimeRemaining = 5;
     constructor(e, t) {
-        (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
+        ((this._language = e), (this._languageHint = e), (this._onChange = t), t(e));
     }
     get language() {
         return this._language;
@@ -51,7 +51,7 @@ class _ {
                           });
                       })).then(
                           (e) => {
-                              (this.language = e), this._processEnd(t.didTimeout);
+                              ((this.language = e), this._processEnd(t.didTimeout));
                           },
                           () => {
                               this._processEnd(t.didTimeout);
@@ -61,7 +61,7 @@ class _ {
     }
     _processEnd() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (this._processing = !1), e && this._minimumTimeRemaining++;
+        ((this._processing = !1), e && this._minimumTimeRemaining++);
     }
 }
 let E = (0, n(945810).mj)({
@@ -246,7 +246,7 @@ class p {
             this.applyLanguages(d.default.locale);
         else {
             const [e, t] = d.default.locale.split("-");
-            (this.regionPreference = t),
+            ((this.regionPreference = t),
                 (this.languageDetector = new _(e, (t) => {
                     let n = `${t}-${this.regionPreference}`;
                     if (-1 !== this.availableLocales.indexOf(n)) this.applyLocale(n);
@@ -254,10 +254,10 @@ class p {
                         let n = this.availableLanguagesByLanguage[t] ?? A[e];
                         null != n && this.applyLocale(n);
                     }
-                }));
+                })));
         }
         I.on("spellcheck-result", (e, t) => {
-            (this.misspelledWord = e ?? ""), (this.corrections = t ?? []);
+            ((this.misspelledWord = e ?? ""), (this.corrections = t ?? []));
         });
     }
     get enabled() {
@@ -312,14 +312,14 @@ class p {
         if (0 === n.length) return void h.info(`No spellcheck languages resolved from candidates: ${t.join(", ")}`);
         let i = n.map((e) => this.rawLocaleByNormalized[e] ?? e);
         if (null == I.setSpellCheckerLanguages) {
-            h.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
-                this.applyLocale(i[0]);
+            (h.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
+                this.applyLocale(i[0]));
             return;
         }
         I.setSpellCheckerLanguages(i)?.then((e) => {
             if (!e) {
-                h.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
-                    this.applyLocale(i[0]);
+                (h.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
+                    this.applyLocale(i[0]));
                 return;
             }
             h.info(`Spellcheck languages: ${i.join(", ")}`, "(applied)");

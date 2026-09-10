@@ -38,7 +38,7 @@ function f(e) {
     let N = a.useRef(null),
         y = (0, l.A)(f, N),
         [C, D] = a.useState(() => c(n));
-    C !== c(n) && p(C, E) !== n && D(c(n)),
+    (C !== c(n) && p(C, E) !== n && D(c(n)),
         (function (e) {
             let { name: t, disabled: n, readOnly: r, value: u, min: i, max: l, step: s, onChange: o, ref: d } = e;
             a.useEffect(() => {
@@ -48,7 +48,7 @@ function f(e) {
                         e.addEventListener("keydown", c),
                         e.addEventListener("wheel", p, { passive: !1 }),
                         () => {
-                            e.removeEventListener("keydown", c), e.removeEventListener("wheel", p);
+                            (e.removeEventListener("keydown", c), e.removeEventListener("wheel", p));
                         }
                     );
                 function a(e) {
@@ -60,17 +60,17 @@ function f(e) {
                 function c(e) {
                     switch (e.key) {
                         case "ArrowUp":
-                            e.preventDefault(), a(1);
+                            (e.preventDefault(), a(1));
                             break;
                         case "ArrowDown":
-                            e.preventDefault(), a(-1);
+                            (e.preventDefault(), a(-1));
                     }
                 }
                 function p(t) {
                     document.activeElement === e && (t.preventDefault(), a(t.deltaY < 0 ? 1 : -1));
                 }
             }, [n, r, u, i, l, s, o, d, t]);
-        })({ name: t, disabled: k, readOnly: g, value: n, min: v, max: h, step: w, onChange: u, ref: N });
+        })({ name: t, disabled: k, readOnly: g, value: n, min: v, max: h, step: w, onChange: u, ref: N }));
     let L = a.useCallback(
         (e, t) => {
             (E ? d : o).test(e) && (D(e), u(p(e, E), t));

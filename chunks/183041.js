@@ -42,11 +42,11 @@ function M(e) {
     return `${e.channel_id}:${e.id}`;
 }
 function P() {
-    Object.values(b).forEach((e) => {
+    (Object.values(b).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
-        (b = {});
+        (b = {}));
 }
 function U(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
@@ -134,7 +134,7 @@ function k(e) {
         n = {};
     return (
         e.forEach((e) => {
-            null == t[e.channel_id] &&
+            (null == t[e.channel_id] &&
                 (t[e.channel_id] = {
                     numOfAttachments: 0,
                     numOfAttachmentsPendingScan: 0,
@@ -152,17 +152,17 @@ function k(e) {
                         numOfSelfHarmEmbeds: 0,
                         numOfGoreEmbeds: 0,
                         numOfExplicitEmbeds: 0,
-                    });
+                    }));
             let i = e.attachments?.length ?? 0,
                 r = e.embeds?.length ?? 0,
                 { attachmentIds: a, embedIds: s } = (0, L.M)(e),
                 l = t[e.channel_id];
-            (l.numOfAttachments += i),
+            ((l.numOfAttachments += i),
                 (l.numOfEmbeds += r),
                 (l.numOfAttachmentsPendingScan += a.length),
-                (l.numOfEmbedsPendingScan += s.length);
+                (l.numOfEmbedsPendingScan += s.length));
             let o = n[e.id];
-            (o.numOfAttachments += i),
+            ((o.numOfAttachments += i),
                 (o.numOfEmbeds += r),
                 (o.numOfExplicitAttachments =
                     e.attachments?.filter((e) => (0, L.gh)(R.kn.EXPLICIT, { type: N.D.Attachment, media: e })).length ??
@@ -177,7 +177,7 @@ function k(e) {
                     e.attachments?.filter((e) => (0, L.gh)(R.kn.SELF_HARM, { type: N.D.Attachment, media: e }))
                         .length ?? 0),
                 (o.numOfSelfHarmEmbeds =
-                    e.embeds?.filter((e) => (0, L.gh)(R.kn.SELF_HARM, { type: N.D.Embed, media: e })).length ?? 0);
+                    e.embeds?.filter((e) => (0, L.gh)(R.kn.SELF_HARM, { type: N.D.Embed, media: e })).length ?? 0));
         }),
         { channelLookup: t, messageLookup: n }
     );
@@ -246,7 +246,7 @@ function F(e, t) {
         o.length > 0 && (x(o, t), !0)
     );
 }
-function V(e) {
+function B(e) {
     let { message: t } = e;
     if (
         null == t.channel_id ||
@@ -269,7 +269,7 @@ function V(e) {
     let r = I.A.getMessage(t.channel_id, t.id);
     return null != r && F([r], { isMessageUpdate: !0 });
 }
-function B(e) {
+function V(e) {
     let { channelId: t, message: n, optimistic: i, isPushNotification: r } = e;
     if (i || r || null == t || (0, L.nx)(n).authorId === E.default.getId()) return !1;
     let a = f.Ay.getChannelId(),
@@ -319,23 +319,23 @@ function K(e) {
 }
 function $(e) {
     let { channelId: t } = e;
-    return null != t && X(t);
+    return null != t && Z(t);
 }
 function z(e) {
     let { channelId: t } = e;
-    return null != t && t === f.Ay.getChannelId() && X(t);
+    return null != t && t === f.Ay.getChannelId() && Z(t);
 }
-function q(e) {
+function X(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== D.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = f.Ay.getChannelId();
-    return null != i && X(i);
+    return null != i && Z(i);
+}
+function q(e) {
+    let { channelId: t, chatOpen: n } = e;
+    return !!n && Z(t);
 }
 function Z(e) {
-    let { channelId: t, chatOpen: n } = e;
-    return !!n && X(t);
-}
-function X(e) {
     let t = I.A.getMessages(e);
     return (
         0 !== t.length &&
@@ -412,15 +412,15 @@ class Q extends d.A {
         LOAD_THREADS_SUCCESS: K,
         LOAD_ARCHIVED_THREADS_SUCCESS: K,
         SIDEBAR_VIEW_CHANNEL: $,
-        MESSAGE_CREATE: B,
-        MESSAGE_UPDATE: V,
+        MESSAGE_CREATE: V,
+        MESSAGE_UPDATE: B,
         LOGOUT: P,
         SEARCH_MESSAGES_SUCCESS: j,
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: j,
         CHANNEL_SELECT: z,
         LOAD_PINNED_MESSAGES_SUCCESS: W,
-        USER_SETTINGS_PROTO_UPDATE: q,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
+        USER_SETTINGS_PROTO_UPDATE: X,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
     };
 }
 let J = new Q();

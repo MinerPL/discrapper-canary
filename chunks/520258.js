@@ -33,28 +33,28 @@ var l = o(775162),
             B = "ekyc-address-modal-title",
             K = (0, a.a)(),
             L = b(e);
-        (0, n._)(() => {
+        ((0, n._)(() => {
             function e(e) {
                 C.current && !C.current.contains(e.target) && k(!1);
             }
-            return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
+            return (document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e));
         }, []),
             (0, n._)(() => {
-                $(-1), S(-1);
+                ($(-1), S(-1));
             }, [i]),
             (0, n._)(() => {
                 let e = K ? D : E,
                     t = K ? M : N;
                 t < 0 || e.current?.children[t]?.scrollIntoView({ block: "nearest" });
-            }, [N, M, K]);
+            }, [N, M, K]));
         let O = (0, n.h)(
                 (e) => {
-                    A(e), k(!1), f(!1), $(-1), S(-1);
+                    (A(e), k(!1), f(!1), $(-1), S(-1));
                 },
                 [A],
             ),
             P = (0, n.h)(() => {
-                f(!1), S(-1);
+                (f(!1), S(-1));
             }, []),
             H = (e, t, o) => (l) => {
                 0 !== i.length &&
@@ -70,7 +70,7 @@ var l = o(775162),
                 () => N,
                 $,
                 () => {
-                    k(!1), $(-1);
+                    (k(!1), $(-1));
                 },
             ),
             V = H(() => M, S),
@@ -91,7 +91,7 @@ var l = o(775162),
                     error: (0, r.i)(b, o, c),
                     onInput: (e) => {
                         var t;
-                        v((t = e.target.value)), t.length >= 3 ? (K ? (f(!0), x(t), h(t)) : (h(t), k(!0))) : k(!1);
+                        (v((t = e.target.value)), t.length >= 3 ? (K ? (f(!0), x(t), h(t)) : (h(t), k(!0))) : k(!1));
                     },
                     onKeyDown: U,
                     onBlur: g,
@@ -158,7 +158,7 @@ var l = o(775162),
                                         "aria-autocomplete": "list",
                                         onInput: (e) => {
                                             let t = e.target.value;
-                                            x(t), t.length >= 3 && h(t);
+                                            (x(t), t.length >= 3 && h(t));
                                         },
                                         onKeyDown: V,
                                         autoFocus: !0,

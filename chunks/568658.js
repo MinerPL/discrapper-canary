@@ -90,7 +90,7 @@ let I = function (e) {
                                       (0, a.jsx)("div", { className: y.WG, children: N.intl.string(N.t["mz++Qq"]) }),
                                       (0, a.jsx)(p.A, {
                                           onChange: (e) => {
-                                              w(!1), t(e), g();
+                                              (w(!1), t(e), g());
                                           },
                                           onFileSizeError: () => {
                                               w(!0);
@@ -119,10 +119,10 @@ let I = function (e) {
                               closePopout: () => g(),
                               onSelectEmoji: async (e) => {
                                   let { emoji: i } = e;
-                                  i?.id != null
+                                  (i?.id != null
                                       ? i.type === u.i.GUILD && t(await f(i.id))
                                       : i?.surrogates != null && x(i.defaultDiversityChild?.surrogates ?? i.surrogates),
-                                      g();
+                                      g());
                               },
                               pickerIntention: b.EmojiIntention.COMMUNITY_CONTENT,
                               channel: E,

@@ -119,13 +119,13 @@ function l({ actor: t, trackElementClicked: e }) {
             t.send({ type: "TOGGLE" });
         },
         submit() {
-            e?.("submit"), t.send({ type: "SUBMIT" });
+            (e?.("submit"), t.send({ type: "SUBMIT" }));
         },
         cancel() {
-            e?.("cancel"), t.send({ type: "CANCEL" });
+            (e?.("cancel"), t.send({ type: "CANCEL" }));
         },
         retry() {
-            e?.("retry"), t.send({ type: "RETRY" });
+            (e?.("retry"), t.send({ type: "RETRY" }));
         },
         reset() {
             t.send({ type: "RESET" });

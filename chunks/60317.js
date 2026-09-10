@@ -10,7 +10,7 @@ let u = 7.5,
         (e, t, n, i) =>
             new Promise((e) => {
                 let l = new Image();
-                (l.src = t),
+                ((l.src = t),
                     (l.crossOrigin = "Anonymous"),
                     (l.onload = () => {
                         let t = 32 * (0, a.mZ)(),
@@ -31,7 +31,7 @@ let u = 7.5,
                                 ),
                             );
                         }
-                    });
+                    }));
             }),
     );
 function d(e, t, n, i) {

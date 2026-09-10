@@ -1,4 +1,4 @@
-n.d(t, { A: () => R }), n(321073);
+(n.d(t, { A: () => R }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -22,7 +22,7 @@ function p(e, t, n) {
             for (let t = 0; t < e.options.length; t++) {
                 let a = e.options[t],
                     s = null == n[a.id];
-                s && (i = !0), r.push({ ...a, isUnseen: s });
+                (s && (i = !0), r.push({ ...a, isUnseen: s }));
             }
             return { ...e, options: r, hasNewAnswers: i, isNew: null == t[e.id] };
         })(e, t, n),
@@ -38,15 +38,15 @@ function T(e) {
 function m(e, t) {
     if (null == h[e]) return;
     let n = {};
-    Object.keys(h[e]).forEach((i) => {
+    (Object.keys(h[e]).forEach((i) => {
         !t.includes(i) && h[e][i] ? (n[i] = !0) : t.includes(i) && !1 === h[e][i] && (n[i] = !1);
     }),
-        (h[e] = n);
+        (h[e] = n));
     let i = t.filter((e) => null == n[e] || !0 === n[e]);
-    Object.keys(n).forEach((e) => {
+    (Object.keys(n).forEach((e) => {
         !0 !== n[e] || t.includes(e) || i.push(e);
     }),
-        (A[e] = { ...A[e], responses: i });
+        (A[e] = { ...A[e], responses: i }));
 }
 let g = [],
     S = [],
@@ -117,10 +117,10 @@ class O extends a.Ay.Store {
             n = "0";
         return (
             t.forEach((e) => {
-                e.options.forEach((e) => {
+                (e.options.forEach((e) => {
                     c.default.compare(e.id, n) > 0 && (n = e.id);
                 }),
-                    c.default.compare(e.id, n) > 0 && (n = e.id);
+                    c.default.compare(e.id, n) > 0 && (n = e.id));
             }),
             n
         );
@@ -143,11 +143,11 @@ class O extends a.Ay.Store {
 }
 let R = new O(s.h, {
     CONNECTION_OPEN: function () {
-        (f = !1), (A = {});
+        ((f = !1), (A = {}));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete A[t.id], delete h[t.id], delete I[t.id];
+        (delete A[t.id], delete h[t.id], delete I[t.id]);
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
         f = !0;
@@ -169,7 +169,7 @@ let R = new O(s.h, {
         f = !1;
         let h = _.Ay.getOnboardingStatus(t) === _.$o.READY,
             T = p(n, s, l);
-        (A[t] = {
+        ((A[t] = {
             enabled: r,
             mode: o,
             belowRequirements: d,
@@ -183,7 +183,7 @@ let R = new O(s.h, {
             additionalConnections: E ?? [],
         }),
             h || m(t, a),
-            (I[t] = Date.now());
+            (I[t] = Date.now()));
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
         f = !1;

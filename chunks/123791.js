@@ -13,13 +13,17 @@ function E(t) {
     s.useEffect(() => {
         _(t);
     }, [t]);
-    let e = (0, o.yK)([p.A, T.A, A.A], () => {
-            let e = p.A.getStoreLayout(t);
-            return (0, c.oC)(e.subscriptions, T.A, A.A);
-        }, [t]),
+    let e = (0, o.yK)(
+            [p.A, T.A, A.A],
+            () => {
+                let e = p.A.getStoreLayout(t);
+                return (0, c.oC)(e.subscriptions, T.A, A.A);
+            },
+            [t],
+        ),
         r = (0, o.yK)([p.A], () => p.A.getStoreLayout(t).otps, [t]);
     return s.useMemo(() => ({ subscriptions: e, otps: r }), [e, r]);
 }
 function _(t) {
-    (0, i.V)(t), (0, a.JI)(t), u.default.isAuthenticated() && (0, n.LM)(t, !1);
+    ((0, i.V)(t), (0, a.JI)(t), u.default.isAuthenticated() && (0, n.LM)(t, !1));
 }

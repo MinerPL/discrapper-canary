@@ -17,14 +17,14 @@ var n,
         n);
 function k(e) {
     let { articleId: t, guildId: i, modalStep: n = null, pageView: l = null } = e;
-    open(u.A.getArticleURL(t)),
+    (open(u.A.getArticleURL(t)),
         r.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
             cta_name: _.Mmu,
             discovery_settings_view: l,
             help_center_article_id: t,
             modal_step: n,
             ...(0, o.H$)(i),
-        });
+        }));
 }
 var E = i(544548);
 function C(e) {
@@ -64,7 +64,7 @@ function C(e) {
             };
         })(),
         C = s.useCallback(() => {
-            n(), o();
+            (n(), o());
         }, [n, o]);
     return (0, l.jsx)(c.Modal, {
         title: a.intl.string(a.t["Q8OFN+"]),

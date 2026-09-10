@@ -1,4 +1,4 @@
-t.d(n, { I: () => m, p: () => P }), t(938796);
+(t.d(n, { I: () => m, p: () => P }), t(938796));
 var l = t(477900),
     a = t(582128),
     s = t(821418),
@@ -25,7 +25,7 @@ function v(e) {
     let { guild: n, error: t, onClose: s } = e,
         i = n.id,
         r = a.useCallback(() => {
-            s(), C.A.open(i, b.BEX.INVITES);
+            (s(), C.A.open(i, b.BEX.INVITES));
         }, [i, s]),
         c = a.useCallback(
             (e) =>

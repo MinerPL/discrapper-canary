@@ -47,7 +47,7 @@ async function m(e) {
             M.applicationId === n &&
             (0, _.H)(M.location) === a.Ay.getVoiceChannelId())
     )
-        return (0, f.A)(D, M.location), Promise.resolve(!0);
+        return ((0, f.A)(D, M.location), Promise.resolve(!0));
     let P = await (0, E.A)(n, o);
     if (
         !(await (0, u.O)({

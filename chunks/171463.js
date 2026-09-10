@@ -16,5 +16,5 @@ e.exports = function (e) {
             }
         },
     };
-    return n.set(t, "[[Iterator]]", e), t;
+    return (n.set(t, "[[Iterator]]", e), t);
 };

@@ -10,6 +10,6 @@ r.exports = function (r, t) {
         f = 0,
         s = [];
     for (e in n) !o(a, e) && o(n, e) && c(s, e);
-    for (; t.length > f; ) o(n, (e = t[f++])) && (~u(s, e) || c(s, e));
+    for (; t.length > f;) o(n, (e = t[f++])) && (~u(s, e) || c(s, e));
     return s;
 };

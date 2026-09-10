@@ -1,4 +1,4 @@
-t.d(a, { A: () => o }), t(321073);
+(t.d(a, { A: () => o }), t(321073));
 var s = t(435558),
     d = t.n(s),
     l = t(334738),
@@ -32,7 +32,7 @@ function o(e, a, t) {
         }));
     return (
         e.forEach((e) => {
-            s.push({
+            (s.push({
                 channelId: i.default.cast(e),
                 readStateType: I.P.GUILD_EVENT,
                 messageId: c.Ay.lastMessageId(e, I.P.GUILD_EVENT),
@@ -41,7 +41,7 @@ function o(e, a, t) {
                     channelId: i.default.cast(e),
                     readStateType: I.P.GUILD_ONBOARDING_QUESTION,
                     messageId: n.A.ackIdForGuild(e),
-                });
+                }));
         }),
         h.default.track(A.HAw.MARK_AS_READ, { source: a, type: "guild" }),
         (0, l.Uq)(s, t)

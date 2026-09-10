@@ -40,11 +40,15 @@ function h(e) {
 function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { shouldFetch: n = !1 } = t,
-        a = (0, r.bG)([c.A], () => {
-            if (null == e) return !1;
-            let { catalog: t } = c.A.getGlobalCatalogState();
-            return Object.values(t).some((t) => t.gameId === e);
-        }, [e]),
+        a = (0, r.bG)(
+            [c.A],
+            () => {
+                if (null == e) return !1;
+                let { catalog: t } = c.A.getGlobalCatalogState();
+                return Object.values(t).some((t) => t.gameId === e);
+            },
+            [e],
+        ),
         s = (0, r.bG)([c.A], () => c.A.shouldFetchGlobalCatalog());
     return (
         i.useEffect(() => {

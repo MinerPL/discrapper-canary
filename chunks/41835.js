@@ -7,7 +7,7 @@ var n = r(72290),
             return r;
         },
     o = /%[sdj%]/g;
-(t.format = function (e) {
+((t.format = function (e) {
     if (!b(e)) {
         for (var t = [], r = 0; r < arguments.length; r++) t.push(u(arguments[r]));
         return t.join(" ");
@@ -51,11 +51,11 @@ var n = r(72290),
         return function () {
             if (!i) {
                 if (n.throwDeprecation) throw Error(r);
-                n.traceDeprecation ? console.trace(r) : console.error(r), (i = !0);
+                (n.traceDeprecation ? console.trace(r) : console.error(r), (i = !0));
             }
             return e.apply(this, arguments);
         };
-    });
+    }));
 var a = {},
     s = /^$/;
 if (n.env.NODE_DEBUG) {
@@ -107,7 +107,7 @@ function d(e, r, n) {
             l,
             u,
             c = r.inspect(n, e);
-        return b(c) || (c = d(e, c, n)), c;
+        return (b(c) || (c = d(e, c, n)), c);
     }
     var f = (function (e, t) {
         if (w(t)) return e.stylize("undefined", "undefined");
@@ -182,7 +182,7 @@ function d(e, r, n) {
         (a = I),
         (s = 0),
         i.reduce(function (e, t) {
-            return s++, t.indexOf("\n") >= 0 && s++, e + t.replace(/\u001b\[\d\d?m/g, "").length + 1;
+            return (s++, t.indexOf("\n") >= 0 && s++, e + t.replace(/\u001b\[\d\d?m/g, "").length + 1);
         }, 0) > 60
             ? a[0] + ("" === o ? "" : o + "\n ") + " " + i.join(",\n  ") + " " + a[1]
             : a[0] + o + " " + i.join(", ") + " " + a[1]
@@ -269,7 +269,7 @@ function C(e) {
 function T(e) {
     return e < 10 ? "0" + e.toString(10) : e.toString(10);
 }
-(t.debuglog = function (e) {
+((t.debuglog = function (e) {
     if (!a[(e = e.toUpperCase())])
         if (s.test(e)) {
             var r = n.pid;
@@ -337,12 +337,12 @@ function T(e) {
             void 0 === e
         );
     }),
-    (t.isBuffer = r(308505));
+    (t.isBuffer = r(308505)));
 var M = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function P(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
 }
-(t.log = function () {
+((t.log = function () {
     var e, r;
     console.log(
         "%s - %s",
@@ -354,30 +354,30 @@ function P(e, t) {
     (t.inherits = r(618628)),
     (t._extend = function (e, t) {
         if (!t || !S(t)) return e;
-        for (var r = Object.keys(t), n = r.length; n--; ) e[r[n]] = t[r[n]];
+        for (var r = Object.keys(t), n = r.length; n--;) e[r[n]] = t[r[n]];
         return e;
-    });
+    }));
 var A = "u" > typeof Symbol ? Symbol("util.promisify.custom") : void 0;
 function I(e, t) {
     if (!e) {
         var r = Error("Promise was rejected with a falsy value");
-        (r.reason = e), (e = r);
+        ((r.reason = e), (e = r));
     }
     return t(e);
 }
-(t.promisify = function (e) {
+((t.promisify = function (e) {
     if ("function" != typeof e) throw TypeError('The "original" argument must be of type Function');
     if (A && e[A]) {
         var t = e[A];
         if ("function" != typeof t) throw TypeError('The "util.promisify.custom" argument must be of type Function');
-        return Object.defineProperty(t, A, { value: t, enumerable: !1, writable: !1, configurable: !0 }), t;
+        return (Object.defineProperty(t, A, { value: t, enumerable: !1, writable: !1, configurable: !0 }), t);
     }
     function t() {
         for (
             var t,
                 r,
                 n = new Promise(function (e, n) {
-                    (t = e), (r = n);
+                    ((t = e), (r = n));
                 }),
                 i = [],
                 o = 0;
@@ -421,5 +421,5 @@ function I(e, t) {
                 },
             );
         }
-        return Object.setPrototypeOf(t, Object.getPrototypeOf(e)), Object.defineProperties(t, i(e)), t;
-    });
+        return (Object.setPrototypeOf(t, Object.getPrototypeOf(e)), Object.defineProperties(t, i(e)), t);
+    }));

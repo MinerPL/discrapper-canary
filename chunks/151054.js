@@ -13,7 +13,7 @@ function h(e) {
     let { query: t, queryMode: u } = (0, c.LV)(e),
         r = f.D,
         s = null;
-    return null != u && f.D.includes(u) && ((r = [u]), (s = u)), { query: t, queryMode: s, resultTypes: r };
+    return (null != u && f.D.includes(u) && ((r = [u]), (s = u)), { query: t, queryMode: s, resultTypes: r });
 }
 function p(e) {
     let {
@@ -36,14 +36,14 @@ function p(e) {
         M = r.useRef(null),
         R = r.useRef(u),
         m = C !== M.current ? u : R.current;
-    r.useEffect(() => {
-        C !== M.current && (R.current = u), (M.current = C);
+    (r.useEffect(() => {
+        (C !== M.current && (R.current = u), (M.current = C));
     }, [C, u]),
         r.useLayoutEffect(() => {
             let { query: e, resultTypes: t } = g;
             A({ query: e, resultTypes: t });
         }, [A, g]),
-        (0, l.k)(b);
+        (0, l.k)(b));
     let q = (0, s.bG)([a.A], () => a.A.getFrequentlyWithoutFetchingLatest()),
         D = (0, s.bG)([n.A], () => n.A.isConnected()),
         E = "" !== C;

@@ -18,9 +18,9 @@ function s(t) {
         id: "user-profile",
         label: n ?? d.intl.string(d.t.LYju5J),
         action: () => {
-            i?.(),
+            (i?.(),
                 (0, u.openUserProfileModal)({ sourceAnalyticsLocations: A, appContext: f, ...y, ...p }),
-                _.dispatch(c.jej.POPOUT_CLOSE);
+                _.dispatch(c.jej.POPOUT_CLOSE));
         },
         icon: s,
         leadingAccessory: null != s ? { type: "icon", icon: s } : void 0,

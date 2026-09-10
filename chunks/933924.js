@@ -1,4 +1,4 @@
-n.d(t, { a: () => N }), n(508300);
+(n.d(t, { a: () => N }), n(508300));
 var s = n(228366),
     r = n(830215),
     a = n(913122),
@@ -30,28 +30,28 @@ async function N(e) {
                     m.warn(e.name, e.message);
                     break;
                 default:
-                    (0, c.Os)(e), m.error(e.name, e.message);
+                    ((0, c.Os)(e), m.error(e.name, e.message));
             }
             return;
         }
-        s.h.dispatch({ type: "PASSWORDLESS_START" }),
+        (s.h.dispatch({ type: "PASSWORDLESS_START" }),
             o.default.track(p.HAw.LOGIN_ATTEMPTED, {
                 source: p.mdB.PASSWORDLESS_CONDITIONAL_UI,
                 login_method: "passwordless",
                 login_source: n,
                 gift_code_sku_id: l,
-            });
+            }));
         try {
             await r.A.loginWebAuthn({ ticket: g, credential: e, source: n, giftCodeSKUId: l, isMultiAccount: N });
         } catch (t) {
             throw (
-                (s.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: t }),
+                s.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: t }),
                 t instanceof a.LG &&
                     null != t.status &&
                     t.status >= 400 &&
                     t.status < 500 &&
                     (await d.A.signalUnknownCredential(e)),
-                t)
+                t
             );
         }
     }

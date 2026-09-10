@@ -132,7 +132,7 @@ b.a(_, async function (_, c) {
         var w = b(5426),
             a = b(841873),
             n = _([w]);
-        (w = (n.then ? (await n)() : n)[0]), (0, a.lI)(w), w.__wbindgen_start(), c();
+        ((w = (n.then ? (await n)() : n)[0]), (0, a.lI)(w), w.__wbindgen_start(), c());
     } catch (_) {
         c(_);
     }

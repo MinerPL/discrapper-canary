@@ -24,7 +24,7 @@ let A = {
             sessionId: u = null,
             mediaSessionId: E = null,
         } = e;
-        r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: l, distributor: n })),
+        (r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: l, distributor: n })),
             i.Bo.post({
                 url: _.Rsh.ACTIVITIES,
                 body: {
@@ -57,7 +57,7 @@ let A = {
                 })
                 .catch(() => {
                     r.h.dispatch({ type: "ACTIVITY_UPDATE_FAIL", applicationId: t });
-                });
+                }));
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: i, content: r, targetUserId: c, location: A } = e,
@@ -78,7 +78,7 @@ let A = {
                     message_id: null != e ? e.body.id : null,
                 });
                 let t = (0, s.N)(i);
-                return null != t && (0, a.y)(t, h.id), Promise.resolve(h);
+                return (null != t && (0, a.y)(t, h.id), Promise.resolve(h));
             },
             (e) => Promise.reject(e),
         );
@@ -91,7 +91,7 @@ let A = {
     },
     async getJoinSecret(e, t, n, r, a) {
         let s = {};
-        null != r && (s.channel_id = r), null != a && (s.message_id = a);
+        (null != r && (s.channel_id = r), null != a && (s.message_id = a));
         let l = await i.Bo.get({
             url: _.Rsh.USER_ACTIVITY_JOIN(e, t, n),
             retries: 3,

@@ -55,8 +55,8 @@ function f(e) {
                                     let e = (0, m.DP)(t);
                                     if (("day" === a.granularity && (e = (0, m._U)(t)), "setSegment" in a))
                                         for (let t in e)
-                                            p.includes(t) && a.setSegment(t, e[t]),
-                                                s.includes(t) && a.setSegment(t, e[t]);
+                                            (p.includes(t) && a.setSegment(t, e[t]),
+                                                s.includes(t) && a.setSegment(t, e[t]));
                                     a.setValue(e);
                                 } catch {}
                         },
@@ -143,10 +143,10 @@ let z = (0, y.createContext)(null),
                     w = P.displayValidation.isInvalid,
                     C = e.validationState || (w ? "invalid" : null),
                     x = (e, a) => {
-                        r("timeZone" in a ? a.set((0, c.gw)(e)) : (0, c.tR)(e, a)),
+                        (r("timeZone" in a ? a.set((0, c.gw)(e)) : (0, c.tR)(e, a)),
                             h(null),
                             p(null),
-                            P.commitValidation();
+                            P.commitValidation());
                     };
                 return {
                     ...P,
@@ -157,12 +157,12 @@ let z = (0, y.createContext)(null),
                     timeValue: D,
                     setDateValue: (t) => {
                         let n = "function" == typeof d ? d() : d;
-                        s
+                        (s
                             ? D || n
                                 ? x(t, D || (0, A.$l)(e.defaultValue || e.placeholderValue))
                                 : h(t)
                             : (r(t), P.commitValidation()),
-                            n && a.setOpen(!1);
+                            n && a.setOpen(!1));
                     },
                     setTimeValue: (e) => {
                         m && e ? x(m, e) : p(e);
@@ -171,7 +171,8 @@ let z = (0, y.createContext)(null),
                     hasTime: s,
                     ...a,
                     setOpen(r) {
-                        !r && !t && m && s && x(m, D || (0, A.$l)(e.defaultValue || e.placeholderValue)), a.setOpen(r);
+                        (!r && !t && m && s && x(m, D || (0, A.$l)(e.defaultValue || e.placeholderValue)),
+                            a.setOpen(r));
                     },
                     validationState: C,
                     isInvalid: w,
@@ -374,7 +375,7 @@ let z = (0, y.createContext)(null),
                 null == t && i.start && i.end && o((i = { start: null, end: null }));
                 let l = t || i,
                     u = (e) => {
-                        o((l = e || { start: null, end: null })), Z(l) ? r(l) : r(null);
+                        (o((l = e || { start: null, end: null })), Z(l) ? r(l) : r(null));
                     },
                     s = l?.start || l?.end || e.placeholderValue || null,
                     [d, m] = (0, A.bf)(s, e.granularity),
@@ -384,18 +385,18 @@ let z = (0, y.createContext)(null),
                     [f, v] = (0, y.useState)(null);
                 l && Z(l) && ((p = l), "hour" in l.start && (f = l));
                 let b = (e, a) => {
-                        u({
+                        (u({
                             start:
                                 "timeZone" in a.start ? a.start.set((0, c.gw)(e.start)) : (0, c.tR)(e.start, a.start),
                             end: "timeZone" in a.end ? a.end.set((0, c.gw)(e.end)) : (0, c.tR)(e.end, a.end),
                         }),
                             g(null),
                             v(null),
-                            E.commitValidation();
+                            E.commitValidation());
                     },
                     $ = (t) => {
                         let r = "function" == typeof D ? D() : D;
-                        h
+                        (h
                             ? Z(t) && (r || (f?.start && f?.end))
                                 ? b(t, {
                                       start: f?.start || (0, A.$l)(e.placeholderValue),
@@ -405,7 +406,7 @@ let z = (0, y.createContext)(null),
                             : Z(t)
                               ? (u(t), E.commitValidation())
                               : g(t),
-                            r && a.setOpen(!1);
+                            r && a.setOpen(!1));
                     },
                     R = (e) => {
                         Z(p) && Z(e) ? b(p, e) : v(e);
@@ -459,7 +460,7 @@ let z = (0, y.createContext)(null),
                     setTimeRange: R,
                     ...a,
                     setOpen(t) {
-                        !t &&
+                        (!t &&
                             !(l?.start && l?.end) &&
                             Z(p) &&
                             h &&
@@ -467,7 +468,7 @@ let z = (0, y.createContext)(null),
                                 start: f?.start || (0, A.$l)(e.placeholderValue),
                                 end: f?.end || (0, A.$l)(e.placeholderValue),
                             }),
-                            a.setOpen(t);
+                            a.setOpen(t));
                     },
                     validationState: F,
                     isInvalid: V,
@@ -631,7 +632,7 @@ let z = (0, y.createContext)(null),
                             realtimeValidation: a.realtimeValidation,
                             displayValidation: a.displayValidation,
                             updateValidation(e) {
-                                (K.current = e), a.updateValidation((0, I.cX)(e, L.current));
+                                ((K.current = e), a.updateValidation((0, I.cX)(e, L.current)));
                             },
                             resetValidation: a.resetValidation,
                             commitValidation: a.commitValidation,
@@ -649,7 +650,7 @@ let z = (0, y.createContext)(null),
                             realtimeValidation: a.realtimeValidation,
                             displayValidation: a.displayValidation,
                             updateValidation(e) {
-                                (L.current = e), a.updateValidation((0, I.cX)(K.current, e));
+                                ((L.current = e), a.updateValidation((0, I.cX)(K.current, e)));
                             },
                             resetValidation: a.resetValidation,
                             commitValidation: a.commitValidation,

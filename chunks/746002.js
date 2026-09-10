@@ -1,9 +1,9 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         CollectiblesItemAssetFormat: () => s,
         getCollectiblesItemAssetUrl: () => o,
         parseSkuIdFromServerData: () => a.V,
-    });
+    }));
 var i,
     r = n(403362),
     a = n(628856),

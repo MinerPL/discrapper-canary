@@ -33,7 +33,7 @@ function A(e) {
         })(l.content);
         if (void 0 !== e) {
             let i = x(l.content);
-            n.add(i), e !== g.get(i) && (t.add(i), g.set(i, e));
+            (n.add(i), e !== g.get(i) && (t.add(i), g.set(i, e)));
         }
     }
     return { updatedKeys: t, matchedKeys: n };
@@ -51,13 +51,13 @@ function C() {
         for (let e of s) l.add(e);
         e = e || i.size > 0;
     }
-    for (let n of i().difference(t, [...l])) g.delete(n), (e = !0);
+    for (let n of i().difference(t, [...l])) (g.delete(n), (e = !0));
     return e;
 }
 class E extends a.Ay.Store {
     static displayName = "ContentInventoryActivityStore";
     initialize() {
-        this.waitFor(c.A, u.A), this.syncWith([u.A], C);
+        (this.waitFor(c.A, u.A), this.syncWith([u.A], C));
     }
     canRenderContent = (e) => !(0, m.I5)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e));
     getMatchingActivity(e) {

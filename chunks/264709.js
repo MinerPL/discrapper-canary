@@ -1,15 +1,15 @@
 n.d(t, { i: () => s });
 var r = n(477900),
     a = n(582128),
-    l = n(503698),
-    o = n.n(l),
+    o = n(503698),
+    l = n.n(o),
     i = n(374839);
 let u = ["1", "2", "3", "4", "5", "6", "7"],
     s = a.memo(function (e) {
-        let { size: t = 16, "aria-label": n, className: a, ref: l, color: s = "currentColor" } = e;
+        let { size: t = 16, "aria-label": n, className: a, ref: o, color: s = "currentColor" } = e;
         return (0, r.jsx)("div", {
-            ref: l,
-            className: o()(i.wG, a),
+            ref: o,
+            className: l()(i.wG, a),
             style: { "--custom-ai-loader-size": `${t}px`, color: "string" == typeof s ? s : s.css },
             role: null == n ? void 0 : "img",
             "aria-label": n,

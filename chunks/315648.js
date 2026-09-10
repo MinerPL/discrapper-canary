@@ -13,10 +13,10 @@ function c(e, t, i) {
 }
 class d {
     constructor(e, t, i, l = new Set()) {
-        (this.collection = e),
+        ((this.collection = e),
             (this.flipDirection = "rtl" === t && "horizontal" === i),
             (this.disabledKeys = l),
-            (this.tabDirection = "horizontal" === i);
+            (this.tabDirection = "horizontal" === i));
     }
     getKeyLeftOf(e) {
         return this.flipDirection ? this.getNextKey(e) : this.getPreviousKey(e);
@@ -29,11 +29,11 @@ class d {
     }
     getFirstKey() {
         let e = this.collection.getFirstKey();
-        return null != e && this.isDisabled(e) && (e = this.getNextKey(e)), e;
+        return (null != e && this.isDisabled(e) && (e = this.getNextKey(e)), e);
     }
     getLastKey() {
         let e = this.collection.getLastKey();
-        return null != e && this.isDisabled(e) && (e = this.getPreviousKey(e)), e;
+        return (null != e && this.isDisabled(e) && (e = this.getPreviousKey(e)), e);
     }
     getKeyAbove(e) {
         return this.tabDirection ? null : this.getPreviousKey(e);
@@ -73,7 +73,7 @@ var u = i(295551),
 function E(e, t) {
     let i = null;
     if (e) {
-        for (i = e.getFirstKey(); null != i && (t.has(i) || e.getItem(i)?.props?.isDisabled) && i !== e.getLastKey(); )
+        for (i = e.getFirstKey(); null != i && (t.has(i) || e.getItem(i)?.props?.isDisabled) && i !== e.getLastKey();)
             i = e.getKeyAfter(i);
         null != i && (t.has(i) || e.getItem(i)?.props?.isDisabled) && i === e.getLastKey() && (i = e.getFirstKey());
     }
@@ -137,7 +137,7 @@ function L({ props: e, tabsRef: t, collection: i }) {
                             onSelectionChange: (l) => {
                                 if ("all" === l) return;
                                 let n = l.values().next().value ?? null;
-                                n === t && e.onSelectionChange && e.onSelectionChange(n), i(n);
+                                (n === t && e.onSelectionChange && e.onSelectionChange(n), i(n));
                             },
                         }),
                         o = null != t ? n.getItem(t) : null;
@@ -167,12 +167,12 @@ function L({ props: e, tabsRef: t, collection: i }) {
             return (
                 (0, y.useEffect)(() => {
                     let r = n;
-                    null == e.selectedKey &&
+                    (null == e.selectedKey &&
                         (i.isEmpty || null == r || !l.getItem(r)) &&
                         null != (r = E(l, t.disabledKeys)) &&
                         i.setSelectedKeys([r]),
                         ((null == r || null != i.focusedKey) && (i.isFocused || r === s.current)) || i.setFocusedKey(r),
-                        (s.current = r);
+                        (s.current = r));
                 }),
                 { ...t, isDisabled: e.isDisabled || !1 }
             );
@@ -343,7 +343,7 @@ let B = (0, P.KU)(H, (e, t, i) => {
             s = (0, y.useRef)(i.selectedKey),
             r = (0, y.useRef)(null),
             o = (0, y.useRef)(null);
-        (0, F.N)(() => {
+        ((0, F.N)(() => {
             let e = n.current;
             if (e) {
                 if (
@@ -353,7 +353,8 @@ let B = (0, P.KU)(H, (e, t, i) => {
                         )),
                     o.current && null != s.current && s.current !== i.selectedKey)
                 ) {
-                    e.style.setProperty("--tab-panel-width", "auto"), e.style.setProperty("--tab-panel-height", "auto");
+                    (e.style.setProperty("--tab-panel-width", "auto"),
+                        e.style.setProperty("--tab-panel-height", "auto"));
                     let { width: t, height: i } = e.getBoundingClientRect();
                     r.current &&
                         (r.current.width !== t || r.current.height !== i) &&
@@ -364,8 +365,8 @@ let B = (0, P.KU)(H, (e, t, i) => {
                         e.style.setProperty("--tab-panel-height", i + "px"),
                         Promise.all(e.getAnimations().map((e) => e.finished))
                             .then(() => {
-                                e.style.setProperty("--tab-panel-width", "auto"),
-                                    e.style.setProperty("--tab-panel-height", "auto");
+                                (e.style.setProperty("--tab-panel-width", "auto"),
+                                    e.style.setProperty("--tab-panel-height", "auto"));
                             })
                             .catch(() => {}));
                 }
@@ -376,7 +377,7 @@ let B = (0, P.KU)(H, (e, t, i) => {
                 i.selectedKey !== s.current &&
                 n.current &&
                 o.current &&
-                (r.current = n.current.getBoundingClientRect());
+                (r.current = n.current.getBoundingClientRect()));
         let a = (0, p.$)(e, { labelable: !0, global: !0 });
         return (
             delete a.id,

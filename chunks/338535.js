@@ -3,7 +3,7 @@ var i = n(315069);
 class r extends i.A {
     skuId;
     constructor(e) {
-        super(), (this.skuId = e.skuId);
+        (super(), (this.skuId = e.skuId));
     }
     static fromServer(e) {
         let { sku_id: t, ...n } = e;

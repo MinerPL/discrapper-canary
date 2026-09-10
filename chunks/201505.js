@@ -1,4 +1,4 @@
-a.d(t, { A: () => m }), a(321073);
+(a.d(t, { A: () => m }), a(321073));
 var r = a(477900),
     n = a(582128),
     l = a(503698),
@@ -27,7 +27,7 @@ function _(e) {
             if (f.test(e.key)) {
                 let r = `${i}${e.key.toLowerCase()}`,
                     n = t.find((e) => e.label.toLowerCase().startsWith(r));
-                null != n && a(n.value), o(r);
+                (null != n && a(n.value), o(r));
             }
         },
         [a, o, i, t],
@@ -100,13 +100,13 @@ let m = n.forwardRef(function (e, t) {
         w = n.useMemo(T, []),
         I = { onPopulated: m, sortedInputs: w },
         W = n.useRef(I);
-    n.useEffect(() => {
+    (n.useEffect(() => {
         W.current = I;
     }),
         n.useEffect(() => {
             let { onPopulated: e, sortedInputs: t } = W.current;
             if ($ >= t.length) return void e?.();
-        }, [$]);
+        }, [$]));
     let Y = [];
     for (let e = 0; e < 3; e++) {
         let { type: t } = w[e];
@@ -124,7 +124,7 @@ let m = n.forwardRef(function (e, t) {
                             options: E,
                             value: b,
                             onChange: (t) => {
-                                D(t), j(e + 1);
+                                (D(t), j(e + 1));
                             },
                             maxVisibleItems: 6,
                             autoFocus: $ === e,
@@ -147,7 +147,7 @@ let m = n.forwardRef(function (e, t) {
                             options: h,
                             value: R,
                             onChange: (t) => {
-                                v(t), j(e + 1);
+                                (v(t), j(e + 1));
                             },
                             maxVisibleItems: 6,
                             autoFocus: $ === e,
@@ -170,7 +170,7 @@ let m = n.forwardRef(function (e, t) {
                             options: S,
                             value: O,
                             onChange: (t) => {
-                                C(t), j(e + 1);
+                                (C(t), j(e + 1));
                             },
                             maxVisibleItems: 6,
                             autoFocus: $ === e,

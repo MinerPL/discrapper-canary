@@ -20,7 +20,7 @@ function r(t) {
                 variant: "secondary",
                 text: o.intl.string(o.t["ETE/oC"]),
                 onClick: function () {
-                    d(), r();
+                    (d(), r());
                 },
                 disabled: u,
             },

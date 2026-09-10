@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(321073);
+(n.d(t, { A: () => m }), n(321073));
 var i = n(228366),
     l = n(272355),
     r = n(400492),
@@ -16,7 +16,7 @@ let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
     _ = [],
     I = null;
 function T() {
-    E.stop(), (g = !1);
+    (E.stop(), (g = !1));
 }
 function p() {
     let e = u.A.isEnabled(),
@@ -27,28 +27,28 @@ function S() {
     if (0 === _.length || !p() || C) return;
     C = !0;
     let [e, t] = _[_.length - 1];
-    (0, r.Ak)(e, t), (I = setTimeout(N, 1e3));
+    ((0, r.Ak)(e, t), (I = setTimeout(N, 1e3)));
 }
 function N() {
-    _.pop(), (C = !1), S();
+    (_.pop(), (C = !1), S());
 }
 class L extends l.A {
     _initialize() {
-        h.Ay.addChangeListener(this.startAudio),
+        (h.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
             i.h.subscribe("TYPING_STOP", this.stopAudio),
             i.h.subscribe("TYPING_STOP_LOCAL", this.stopAudio),
             i.h.subscribe("CHANNEL_SELECT", this.stopAudio),
-            i.h.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio);
+            i.h.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio));
     }
     _terminate() {
-        h.Ay.removeChangeListener(this.startAudio),
+        (h.Ay.removeChangeListener(this.startAudio),
             i.h.unsubscribe("RTC_CONNECTION_STATE", this.setVolume),
             i.h.unsubscribe("TYPING_STOP", this.stopAudio),
             i.h.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio),
             i.h.unsubscribe("CHANNEL_SELECT", this.stopAudio),
             i.h.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio),
-            clearTimeout(I);
+            clearTimeout(I));
     }
     setVolume(e) {
         let { state: t } = e;
@@ -76,7 +76,7 @@ class L extends l.A {
             (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     n = o.A.isConnected();
-                _.push([e, t * (n ? 0.1 : 1)]), S();
+                (_.push([e, t * (n ? 0.1 : 1)]), S());
             })("poggermode_achievement_unlock");
     }
 }

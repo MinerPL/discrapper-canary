@@ -38,26 +38,26 @@ class A extends a.EventEmitter {
         if ((super(), (this.item = e), 0 === e.platform)) {
             this.id = e.id ?? e.uri;
             const t = (0, c.ly)({ uri: e.uri, overrideFilename: e.filename, overrideType: e.mimeType });
-            (this.filename = t.filename),
+            ((this.filename = t.filename),
                 (this.isImage = t.isImage),
                 (this.isVideo = t.isVideo),
                 (this.mimeType = t.type),
                 (this.origin = e.origin),
                 (this.durationSecs = e.durationSecs),
-                (this.waveform = e.waveform);
+                (this.waveform = e.waveform));
         } else
-            (this.id = e.id ?? l().uniqueId("upload")),
+            ((this.id = e.id ?? l().uniqueId("upload")),
                 (this.classification = d.TX(e.file)),
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
                 (this.filename = e.file.name),
                 (this.mimeType = e.file.type),
-                (this.origin = e.origin);
-        (this.isThumbnail = e.isThumbnail),
+                (this.origin = e.origin));
+        ((this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
             (this.uniqueId = (0, o.A)()),
             (this.spoiler = !1),
-            (this.description = null);
+            (this.description = null));
     }
     cancel() {}
     resetState() {

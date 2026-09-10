@@ -43,12 +43,12 @@ let _ = new f(s.h, {
     },
     LOAD_CHANNEL_AFFINITIES_V2_SUCCESS: function (e) {
         let { affineChannels: t } = e;
-        (A.lastFetched = Date.now()), (c = !1), (A.channelAffinities = t), l();
+        ((A.lastFetched = Date.now()), (c = !1), (A.channelAffinities = t), l());
     },
     LOAD_CHANNEL_AFFINITIES_V2_FAILURE: function () {
         c = !1;
     },
     LOGOUT: function () {
-        (A = { ...r }), (h = new Map()), (c = !1);
+        ((A = { ...r }), (h = new Map()), (c = !1));
     },
 });

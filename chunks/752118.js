@@ -24,7 +24,7 @@ function f(t) {
     let { disabled: e = !1, user: n, setNickname: a, nickname: i, error: s, hasNick: x } = t,
         A = r.useRef(null),
         g = r.useCallback(() => {
-            a(""), A.current?.focus();
+            (a(""), A.current?.focus());
         }, [a]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -91,18 +91,18 @@ let j = function (t) {
                 let e = null;
                 if ((M !== (N?.nick ?? "") && (e = { nick: M }), null == e)) return void u();
                 try {
-                    j(!0),
+                    (j(!0),
                         await i.Bo.patch({ url: p.Rsh.GUILD_MEMBER(c, n.id), body: e, rejectWithError: !1 }),
                         I(A.Nj.CHANGE_NICKNAME),
-                        u();
+                        u());
                 } catch (n) {
                     let t;
                     j(!1);
                     let e = n.body?.errors ?? null;
-                    e?.nick != null
+                    (e?.nick != null
                         ? (t = e.nick?._errors?.[0]?.message || y.intl.string(y.t.xex86n))
                         : e?.username != null && (t = e.username?._errors?.[0]?.message || y.intl.string(y.t.xex86n)),
-                        G({ nick: t });
+                        G({ nick: t }));
                 }
             },
             [c, M, u, n, N, I],

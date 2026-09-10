@@ -153,12 +153,12 @@ function c(e, a, t) {
                           if (!a) {
                               if (Intl.Locale) {
                                   let t = new Intl.Locale(e);
-                                  if ("getWeekInfo" in t && (a = t.getWeekInfo())) return x.set(e, a), a.firstDay;
+                                  if ("getWeekInfo" in t && (a = t.getWeekInfo())) return (x.set(e, a), a.firstDay);
                               }
                               let t = (function (e) {
                                   if (Intl.Locale) {
                                       let a = C.get(e);
-                                      return !a && (a = new Intl.Locale(e).maximize().region) && C.set(e, a), a;
+                                      return (!a && (a = new Intl.Locale(e).maximize().region) && C.set(e, a), a);
                                   }
                                   let a = e.split("-")[1];
                                   return "u" === a ? void 0 : a;
@@ -185,7 +185,7 @@ function c(e, a, t) {
                           return a.firstDay;
                       })(a)),
         ) % 7;
-    return r < 0 && (r += 7), r;
+    return (r < 0 && (r += 7), r);
 }
 function m(e) {
     return (0, r.Yd)(Date.now(), e);
@@ -204,7 +204,7 @@ function p(e) {
 }
 let g = null;
 function f() {
-    return null == g && (g = new Intl.DateTimeFormat().resolvedOptions().timeZone), g;
+    return (null == g && (g = new Intl.DateTimeFormat().resolvedOptions().timeZone), g);
 }
 function v() {
     return !1;

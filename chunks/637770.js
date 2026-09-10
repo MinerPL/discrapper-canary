@@ -17,17 +17,17 @@ r(
                         i = [],
                         s = 0,
                         u = 1;
-                    l(e, function (e) {
+                    (l(e, function (e) {
                         var o = s++,
                             l = !1;
-                        u++,
+                        (u++,
                             a(n, t, e).then(function (e) {
                                 !l && ((l = !0), (i[o] = e), --u || r(i));
-                            }, c);
+                            }, c));
                     }),
-                        --u || r(i);
+                        --u || r(i));
                 });
-            return u.error && c(u.value), n.promise;
+            return (u.error && c(u.value), n.promise);
         },
     },
 );

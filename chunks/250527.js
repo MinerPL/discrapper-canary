@@ -25,11 +25,11 @@ function a(e, t) {
               l.Bo.get({ url: c.Rsh.GUILD_PROFILE(e), rejectWithError: (0, l.fT)() })
                   .then((t) => {
                       let r = (0, h.wr)(t.body);
-                      return n.h.dispatch({ type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: e, profile: r }), r;
+                      return (n.h.dispatch({ type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: e, profile: r }), r);
                   })
                   .catch((t) => {
                       let r = new o.LG(t);
-                      return n.h.dispatch({ type: "GUILD_PROFILE_FETCH_FAILURE", guildId: e, error: r }), null;
+                      return (n.h.dispatch({ type: "GUILD_PROFILE_FETCH_FAILURE", guildId: e, error: r }), null);
                   }))
             : Promise.resolve(u);
 }
@@ -40,11 +40,11 @@ function E(e, t) {
           l.Bo.patch({ url: c.Rsh.GUILD_PROFILE(e), body: (0, h.ow)(t), rejectWithError: (0, l.fT)() })
               .then((t) => {
                   let r = (0, h.wr)(t.body);
-                  return n.h.dispatch({ type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: e, profile: r }), r;
+                  return (n.h.dispatch({ type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: e, profile: r }), r);
               })
               .catch((t) => {
                   let r = new o.LG(t);
-                  return n.h.dispatch({ type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: e, error: r }), null;
+                  return (n.h.dispatch({ type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: e, error: r }), null);
               }));
 }
 async function L(e) {

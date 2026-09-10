@@ -1,4 +1,4 @@
-n.d(t, { A: () => w }), n(321073);
+(n.d(t, { A: () => w }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -68,9 +68,9 @@ function b(e) {
                 e?.addEventListener("dragleave", L, !1),
                 e?.addEventListener("drop", k, !1)),
             () => {
-                e?.removeEventListener("dragover", O, !1),
+                (e?.removeEventListener("dragover", O, !1),
                     e?.removeEventListener("dragleave", L, !1),
-                    e?.removeEventListener("drop", k, !1);
+                    e?.removeEventListener("drop", k, !1));
             }
         );
     }, [c, O, L, k]),
@@ -172,22 +172,22 @@ function k(e) {
     (0, x.Vo)({ event: R.jej.FOCUS_ATTACHMENT_AREA, handler: w });
     let P = { isApplicationCommand: S, previousUploadOptions: T, uploadOptions: j },
         D = i.useRef(P);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         D.current = P;
     }),
         i.useEffect(() => {
             let { isApplicationCommand: e, previousUploadOptions: l, uploadOptions: i } = D.current;
             if (e) {
                 let e = [];
-                l.forEach((t) => {
+                (l.forEach((t) => {
                     i.some((e) => t.name === e.name) || e.push(t);
                 }),
                     e.forEach((e) => {
                         d.A.remove(t, e.name, n.drafts.type);
                     }),
-                    k(i);
+                    k(i));
             }
-        }, [t, j.length, n]);
+        }, [t, j.length, n]));
     let U = y.filter((e) => e.filename !== s);
     return (!S && 0 === U.length) || (S && 0 === j.length)
         ? null

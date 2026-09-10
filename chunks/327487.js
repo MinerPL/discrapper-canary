@@ -40,7 +40,7 @@ function h(l) {
 }
 var W = class extends i.n {
         constructor() {
-            super(i.d.SelfieWithQualityMetrics),
+            (super(i.d.SelfieWithQualityMetrics),
                 (this.defaultThresholds = {
                     frameMinX: 0,
                     frameMinY: 0,
@@ -60,7 +60,7 @@ var W = class extends i.n {
                     framesAggregationInterval: 2e3,
                     minFramesWithFace: 3,
                 }),
-                (this.currentFrame = null);
+                (this.currentFrame = null));
         }
         async processFrame(l) {
             this.currentFrame = l;
@@ -73,35 +73,35 @@ var W = class extends i.n {
                         this.onFaceDataCallback(d, { width: l.width, height: l.height });
                 } catch {
                 } finally {
-                    h(d), h(t.faces), h(t);
+                    (h(d), h(t.faces), h(t));
                 }
             }
         }
         async initialize(l) {
-            !0 === l.videoSelfie
+            (!0 === l.videoSelfie
                 ? ((this.pipelineType = i.d.SelfieWithAggregationMetrics), await this.initializeBase(l, "videoSelfie"))
                 : !0 === l.useOnDeviceWorkflow
                   ? ((this.pipelineType = i.d.OnDeviceSelfieWorkflow), await this.initializeBase(l, "onDeviceSelfie"))
                   : await this.initializeBase(l, "selfie"),
                 this.applyDefaults(l.autocaptureInterval ?? 0),
-                !0 === l.videoSelfie && this.setVideoSelfieMode(!0);
+                !0 === l.videoSelfie && this.setVideoSelfieMode(!0));
         }
         processPhoto(l) {
-            this.ensureInitialized(), i.a.processPhoto(l);
+            (this.ensureInitialized(), i.a.processPhoto(l));
         }
         async postFaceResults(l) {
-            return this.ensureInitialized(), i.a.postFaceResults(l);
+            return (this.ensureInitialized(), i.a.postFaceResults(l));
         }
         setCallbacks(l) {
-            this.ensureInitialized(), (this.onFaceDataCallback = l.onFaceData);
+            (this.ensureInitialized(), (this.onFaceDataCallback = l.onFaceData));
             let t = (t, d) => {
                 if (!t) return;
                 let i = new b.t(t);
-                i.updateBase64Image(), i.updateBlob();
+                (i.updateBase64Image(), i.updateBlob());
                 let e = d ? this.formatFaceCoordinates(d) : this.createDefaultFaceCoordinates(i);
                 l.onCapture?.(i, e);
             };
-            (this.currentOnCaptureWrapper = t),
+            ((this.currentOnCaptureWrapper = t),
                 i.a.setFaceDetectionCallbacks(
                     this.getPipelineType(),
                     l.onFarAway ?? (() => {}),
@@ -121,14 +121,14 @@ var W = class extends i.n {
                     l.onHeadWear ?? (() => {}),
                     l.onSwitchToManualCapture ?? (() => {}),
                     l.onFaceOccluded ?? (() => {}),
-                );
+                ));
         }
         setPositionConstraints(l) {
-            this.ensureInitialized(),
-                i.a.setFacePositionConstraints(this.getPipelineType(), l.minX, l.minY, l.maxX, l.maxY);
+            (this.ensureInitialized(),
+                i.a.setFacePositionConstraints(this.getPipelineType(), l.minX, l.minY, l.maxX, l.maxY));
         }
         applyDefaults(l = 0) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 this.setThresholds({
                     brightnessThreshold: this.defaultThresholds.brightnessThreshold,
                     blurrinessThreshold: this.defaultThresholds.blurrinessThreshold,
@@ -152,7 +152,7 @@ var W = class extends i.n {
                     lensesThreshold: this.defaultThresholds.lensesThreshold,
                     closedEyesThreshold: this.defaultThresholds.closedEyesThreshold,
                     maskThreshold: this.defaultThresholds.maskThreshold,
-                });
+                }));
         }
         setAutocaptureInterval(l) {
             (this.ensureInitialized(), this.currentThresholds)
@@ -160,7 +160,7 @@ var W = class extends i.n {
                 : this.applyDefaults(l);
         }
         setThresholds(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 (this.currentThresholds = { ...l }),
                 i.a.setFaceDetectionThresholds(
                     this.getPipelineType(),
@@ -174,20 +174,20 @@ var W = class extends i.n {
                     l.getReadyDelay,
                     l.framesAggregationInterval,
                     l.minFramesWithFace,
-                );
+                ));
         }
         setAttributesThresholds(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setFaceAttributesThresholds(
                     this.getPipelineType(),
                     l.headwearThreshold,
                     l.lensesThreshold,
                     l.closedEyesThreshold,
                     l.maskThreshold,
-                );
+                ));
         }
         setChecksEnabled(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setFaceChecksEnabled(
                     this.getPipelineType(),
                     l.lenses,
@@ -195,10 +195,10 @@ var W = class extends i.n {
                     l.closedEyes,
                     l.headWear,
                     l.occlusion,
-                );
+                ));
         }
         setVideoSelfieMode(l) {
-            this.ensureInitialized(), i.a.setFaceDetectionMode(this.getPipelineType(), l);
+            (this.ensureInitialized(), i.a.setFaceDetectionMode(this.getPipelineType(), l));
         }
         forceCapture() {
             if (!this.currentFrame || !this.currentOnCaptureWrapper) return;
@@ -206,10 +206,10 @@ var W = class extends i.n {
             this.currentOnCaptureWrapper(l.canvas);
         }
         reset() {
-            super.reset(),
+            (super.reset(),
                 (this.currentFrame = null),
                 (this.onFaceDataCallback = void 0),
-                (this.currentOnCaptureWrapper = void 0);
+                (this.currentOnCaptureWrapper = void 0));
         }
         createDefaultFaceCoordinates(l) {
             return {
@@ -250,7 +250,7 @@ var W = class extends i.n {
     },
     G = class {
         constructor(l) {
-            (this.disposed = !1),
+            ((this.disposed = !1),
                 (this.isProcessing = !1),
                 (this.onFrameEvent = () => {
                     if (this.disposed || this.isProcessing) return;
@@ -268,7 +268,7 @@ var W = class extends i.n {
                 (this.capturer = l.capturer),
                 (this.provider = l.provider),
                 (this.onFrame = l.onFrame),
-                this.capturer.addEventListener("frame", this.onFrameEvent);
+                this.capturer.addEventListener("frame", this.onFrameEvent));
         }
         dispose() {
             this.disposed ||
@@ -441,7 +441,7 @@ function C(l) {
     return (
         (async () => {
             try {
-                i.setCallbacks({
+                (i.setCallbacks({
                     onFarAway: () => e("tooFar"),
                     onTooClose: () => e("tooClose"),
                     onTooManyFaces: () => e("tooManyFaces"),
@@ -469,16 +469,16 @@ function C(l) {
                     onFaceOccluded: () => e("faceOcclusion"),
                     onFaceData: l.onPose,
                     onSwitchToManualCapture: () => {
-                        e("manualCapture"), c();
+                        (e("manualCapture"), c());
                     },
                     onCapture: (t, d) => {
-                        e("success"), l.onSuccess(t, d), a();
+                        (e("success"), l.onSuccess(t, d), a());
                     },
                 }),
                     e("detecting"),
-                    (d = new G({ capturer: l.capturer, provider: i, onFrame: l.onFrame }));
+                    (d = new G({ capturer: l.capturer, provider: i, onFrame: l.onFrame })));
             } catch {
-                e("error"), a();
+                (e("error"), a());
             }
         })(),
         {
@@ -559,13 +559,13 @@ async function O(l) {
                     d = () => {
                         t || ((t = !0), l());
                     };
-                "function" == typeof requestAnimationFrame &&
+                ("function" == typeof requestAnimationFrame &&
                     requestAnimationFrame(() => {
                         requestAnimationFrame(() => {
                             setTimeout(d, 0);
                         });
                     }),
-                    setTimeout(d, 100);
+                    setTimeout(d, 100));
             }),
             await (0, Z.t)(350),
             l.provider.processPhoto(l.capturedImage.canvas)),

@@ -7,13 +7,13 @@ class s {
         let n = performance.now(),
             i = r.A.channels(e).getManySyncUnsafe(t),
             s = performance.now() - n;
-        return a.log(`synchronously loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), [i, s];
+        return (a.log(`synchronously loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), [i, s]);
     }
     static async getAsync(e, t) {
         let n = performance.now(),
             i = await r.A.channels(e).getMany(t),
             s = performance.now() - n;
-        return a.verbose(`loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), i;
+        return (a.verbose(`loaded in ${s}ms (guild: ${t}, channels: ${i.length})`), i);
     }
     static async getGuildIds() {
         try {
@@ -22,7 +22,7 @@ class s {
             let t = ((await e.getGuildIds()) ?? []).filter((e) => null !== e && "string" == typeof e);
             return new Set(t);
         } catch (e) {
-            return a.warn("couldn't get guild ids", e), new Set();
+            return (a.warn("couldn't get guild ids", e), new Set());
         }
     }
 }

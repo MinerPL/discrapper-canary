@@ -4,7 +4,7 @@ function i(e) {
     if (e)
         return (t) => {
             let r = !0;
-            e({
+            (e({
                 ...t,
                 preventDefault() {
                     t.preventDefault();
@@ -14,11 +14,11 @@ function i(e) {
                     r = !0;
                 },
                 continuePropagation() {
-                    (r = !1), "function" == typeof t.continuePropagation && t.continuePropagation();
+                    ((r = !1), "function" == typeof t.continuePropagation && t.continuePropagation());
                 },
                 isPropagationStopped: () => r,
             }),
-                r && !("function" == typeof t.isPropagationStopped && t.isPropagationStopped()) && t.stopPropagation();
+                r && !("function" == typeof t.isPropagationStopped && t.isPropagationStopped()) && t.stopPropagation());
         };
 }
 var o = r(644255);
@@ -115,11 +115,11 @@ function d(e) {
                             (n.length > 0 ? `${n.join("+")}+` : "") + i),
                         a = t.get(o),
                         s = a?.(e);
-                    void 0 === s && void 0 !== a
+                    (void 0 === s && void 0 !== a
                         ? (s = { shouldContinuePropagation: !1, shouldPreventDefault: !0 })
                         : "boolean" == typeof s && (s = { shouldContinuePropagation: !s, shouldPreventDefault: s }),
                         s?.shouldPreventDefault && e.preventDefault(),
-                        (!a || s?.shouldContinuePropagation) && e.continuePropagation();
+                        (!a || s?.shouldContinuePropagation) && e.continuePropagation());
                 };
             })(s),
             m = i((e) => {
@@ -130,12 +130,12 @@ function d(e) {
                     : h(e);
             }),
             v = i((e) => {
-                !(0, f.sD)(e.currentTarget, (0, f.wt)(e)) ||
+                (!(0, f.sD)(e.currentTarget, (0, f.wt)(e)) ||
                     (e.nativeEvent?.repeat && !d) ||
                     e.nativeEvent?.isComposing,
-                    e.continuePropagation();
+                    e.continuePropagation());
             });
-        (t = e.onKeyDown ? (0, n.c)(e.onKeyDown, m) : m), (r = e.onKeyUp ? (0, n.c)(e.onKeyUp, v) : v);
-    } else (t = i(e.onKeyDown)), (r = i(e.onKeyUp));
+        ((t = e.onKeyDown ? (0, n.c)(e.onKeyDown, m) : m), (r = e.onKeyUp ? (0, n.c)(e.onKeyUp, v) : v));
+    } else ((t = i(e.onKeyDown)), (r = i(e.onKeyUp)));
     return { keyboardProps: e.isDisabled ? {} : { onKeyDown: t, onKeyUp: r } };
 }

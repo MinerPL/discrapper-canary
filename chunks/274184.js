@@ -87,14 +87,14 @@ function v(e) {
 function b(e) {
     let t,
         { survey: n, isActionTriggered: i } = e;
-    (S = !1),
+    ((S = !1),
         (T.lastFetched = Date.now()),
         i && (T.lastActionTriggered = Date.now()),
-        null == T.hiddenSurveys && (T.hiddenSurveys = {});
+        null == T.hiddenSurveys && (T.hiddenSurveys = {}));
     let r = null != n,
         s = r && null == T.hiddenSurveys[n.key],
         l = r && v(n);
-    null == (t = o.w.get(f.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null);
+    (null == (t = o.w.get(f.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null));
 }
 function M() {
     let e;
@@ -122,7 +122,7 @@ class P extends l.Ay.PersistedStore {
         (e) => ({ ...e, hiddenSurveys: e.hiddenSurveys ?? {} }),
     ];
     initialize(e) {
-        this.waitFor(_.A, E.A, A.A, h.A, I.default), (T = e ?? p), this.syncWith([h.A], M);
+        (this.waitFor(_.A, E.A, A.A, h.A, I.default), (T = e ?? p), this.syncWith([h.A], M));
     }
     getState() {
         return T;
@@ -149,15 +149,15 @@ let U = new P(d.h, {
     SURVEY_FETCHED: b,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        (T.hiddenSurveys[t] = !0), (g = null), (m = m ?? {}), delete m[t];
+        ((T.hiddenSurveys[t] = !0), (g = null), (m = m ?? {}), delete m[t]);
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t, isActionTriggered: n } = e;
         if (n) {
-            (N = t), null != t && delete T.hiddenSurveys[t];
+            ((N = t), null != t && delete T.hiddenSurveys[t]);
             return;
         }
-        (N = null), (T.surveyOverride = t), null != t && delete T.hiddenSurveys[t], (0, c.BC)(T.surveyOverride, !0);
+        ((N = null), (T.surveyOverride = t), null != t && delete T.hiddenSurveys[t], (0, c.BC)(T.surveyOverride, !0));
     },
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},

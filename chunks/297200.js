@@ -214,6 +214,6 @@ let y = (0, r.i)(({ input: e, sendBack: a }) => {
             }
         }, 300);
     return () => {
-        t.clearTimeout(n), s.abort();
+        (t.clearTimeout(n), s.abort());
     };
 });

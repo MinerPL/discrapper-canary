@@ -69,7 +69,7 @@ let p = {
             t = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             a = {},
             p = _.default.getFingerprint();
-        null != p && "" !== p && (a["X-Fingerprint"] = p), t && (a.authorization = "");
+        (null != p && "" !== p && (a["X-Fingerprint"] = p), t && (a.authorization = ""));
         let u = await s.A.post({
             url: i.Rsh.VERIFY_PHONE,
             headers: a,
@@ -78,6 +78,6 @@ let p = {
             trackedActionData: { event: n.NetworkActionNames.USER_VERIFY_PHONE },
             rejectWithError: (0, h.fT)(),
         });
-        return o && E.h.dispatch({ type: "MODAL_POP", key: d.V }), u.body;
+        return (o && E.h.dispatch({ type: "MODAL_POP", key: d.V }), u.body);
     },
 };

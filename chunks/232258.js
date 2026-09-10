@@ -7,7 +7,7 @@ r ||
     });
 var i = r ? Map.prototype.has : null,
     o = n ? Set.prototype.has : null;
-t ||
+(t ||
     i ||
     (t = function (e) {
         return !1;
@@ -26,4 +26,4 @@ t ||
                 return e instanceof r;
             } catch (e) {}
             return !1;
-        });
+        }));

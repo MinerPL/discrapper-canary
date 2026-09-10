@@ -7,8 +7,8 @@ function R(I) {
                 return new Promise((I) => {
                     t.push(I);
                 });
-            for (i = 1, await I(), i = 2; t.length > 0; ) t.shift()?.();
+            for (i = 1, await I(), i = 2; t.length > 0;) t.shift()?.();
         }
     };
 }
-t.d(i, { u: () => R }), t(321073);
+(t.d(i, { u: () => R }), t(321073));

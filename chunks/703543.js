@@ -41,7 +41,7 @@ function p(e) {
                                     modalAPIOptions: {
                                         modalKey: "guild-product-purchase-modal",
                                         onCloseCallback() {
-                                            (0, c.ET)(), (0, d.z)();
+                                            ((0, c.ET)(), (0, d.z)());
                                         },
                                     },
                                 });

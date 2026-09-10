@@ -5,7 +5,7 @@ var n = r(691262),
 function s(e, t, r) {
     var n = "string" == typeof e ? s.__parse(e) : e;
     if (!(n && "messageFormatPattern" === n.type)) throw TypeError("A message must be provided as a String or AST.");
-    (r = this._mergeFormats(s.formats, r)), i.defineProperty(this, "_locale", { value: this._resolveLocale(t) });
+    ((r = this._mergeFormats(s.formats, r)), i.defineProperty(this, "_locale", { value: this._resolveLocale(t) }));
     var o = this._findPluralRuleFunction(this._locale),
         a = this._compilePattern(n, t, r, o),
         l = this;
@@ -13,7 +13,7 @@ function s(e, t, r) {
         return l._format(a, e);
     };
 }
-(t.default = s),
+((t.default = s),
     i.defineProperty(s, "formats", {
         enumerable: !0,
         value: {
@@ -49,7 +49,7 @@ function s(e, t, r) {
         return new o.default(t, r, n).compile(e);
     }),
     (s.prototype._findPluralRuleFunction = function (e) {
-        for (var t = s.__localeData__, r = t[e.toLowerCase()]; r; ) {
+        for (var t = s.__localeData__, r = t[e.toLowerCase()]; r;) {
             if (r.pluralRuleFunction) return r.pluralRuleFunction;
             r = r.parentLocale && t[r.parentLocale.toLowerCase()];
         }
@@ -68,7 +68,7 @@ function s(e, t, r) {
                 continue;
             }
             if (((a = o.id), !(t && n.hop.call(t, a)))) throw Error("A value must be provided for: " + a);
-            (s = t[a]), o.options ? (l += this._format(o.getOption(s), t)) : (l += o.format(s));
+            ((s = t[a]), o.options ? (l += this._format(o.getOption(s), t)) : (l += o.format(s)));
         }
         return l;
     }),
@@ -80,14 +80,14 @@ function s(e, t, r) {
         return a;
     }),
     (s.prototype._resolveLocale = function (e) {
-        "string" == typeof e && (e = [e]), (e = (e || []).concat(s.defaultLocale));
+        ("string" == typeof e && (e = [e]), (e = (e || []).concat(s.defaultLocale)));
         var t,
             r,
             n,
             i,
             o = s.__localeData__;
         for (t = 0, r = e.length; t < r; t += 1)
-            for (n = e[t].toLowerCase().split("-"); n.length; ) {
+            for (n = e[t].toLowerCase().split("-"); n.length;) {
                 if ((i = o[n.join("-")])) return i.locale;
                 n.pop();
             }
@@ -95,4 +95,4 @@ function s(e, t, r) {
         throw Error(
             "No locale data has been added to IntlMessageFormat for: " + e.join(", ") + ", or the default locale: " + a,
         );
-    });
+    }));

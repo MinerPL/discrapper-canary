@@ -1,5 +1,5 @@
 function t(e, a = {}) {
-    return (a.variants = e), a;
+    return ((a.variants = e), a);
 }
 e.exports = function (e) {
     let a = e.regex,

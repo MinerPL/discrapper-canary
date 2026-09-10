@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.WEEKDAY_OFFSET = t.NUMBER = void 0),
     (t.toHankaku = function (e) {
         return String(e)
@@ -19,21 +19,8 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         }
         return r;
     }),
-    (t.NUMBER = {
-        \u96F6: 0,
-        \u3007: 0,
-        \u4E00: 1,
-        \u4E8C: 2,
-        \u4E09: 3,
-        \u56DB: 4,
-        \u4E94: 5,
-        \u516D: 6,
-        \u4E03: 7,
-        \u516B: 8,
-        \u4E5D: 9,
-        \u5341: 10,
-    }),
-    (t.WEEKDAY_OFFSET = { \u65E5: 0, \u6708: 1, \u706B: 2, \u6C34: 3, \u6728: 4, \u91D1: 5, \u571F: 6 });
+    (t.NUMBER = { 零: 0, 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 }),
+    (t.WEEKDAY_OFFSET = { 日: 0, 月: 1, 火: 2, 水: 3, 木: 4, 金: 5, 土: 6 }));
 function r(e) {
     return String.fromCharCode(e.charCodeAt(0) - 65248);
 }

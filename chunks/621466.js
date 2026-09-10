@@ -1,7 +1,7 @@
 function i(e, t) {
     if (null == e) return !1;
     let n = e?.ownerDocument?.defaultView;
-    if (null == n) return console.warn("Unable to determine render window for element", e), !1;
+    if (null == n) return (console.warn("Unable to determine render window for element", e), !1);
     let i = t?.name ?? "Element",
         r = n[i];
     return null == r ? (console.warn(`Unable to find element constructor "${i}" in`, n), !1) : e instanceof r;
@@ -48,7 +48,7 @@ function d(e) {
 }
 function c(e, t) {
     let n = e.parentElement;
-    for (; null != n; ) {
+    for (; null != n;) {
         if (n.classList.contains(t)) return n;
         n = n.parentElement;
     }
@@ -56,7 +56,7 @@ function c(e, t) {
 }
 function u(e, t) {
     let n = e.parentElement;
-    for (; null != n; ) {
+    for (; null != n;) {
         if (null != n.getAttribute(t)) return n;
         n = n.parentElement;
     }

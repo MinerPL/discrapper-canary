@@ -20,7 +20,7 @@ function i(e, t) {
 function r(e) {
     return "classic-script" === e || "module-script" === e;
 }
-n.d(t, { $: () => d, v: () => o }), n(323874), n(14289), n(35956);
+(n.d(t, { $: () => d, v: () => o }), n(323874), n(14289), n(35956));
 class a {
     sink;
     maxUrls;
@@ -33,11 +33,11 @@ class a {
     warnedEviction = !1;
     onPageHide = () => this.stop();
     constructor(e = {}) {
-        (this.sink = e.sink), (this.maxUrls = e.maxUrls ?? 1e3);
+        ((this.sink = e.sink), (this.maxUrls = e.maxUrls ?? 1e3));
     }
     start() {
         if (!this.started) {
-            (this.loafSupported =
+            ((this.loafSupported =
                 "u" > typeof PerformanceObserver &&
                 PerformanceObserver.supportedEntryTypes?.includes("long-animation-frame") === !0),
                 (function () {
@@ -45,9 +45,9 @@ class a {
                     try {
                         performance.setResourceTimingBufferSize(e);
                     } catch {}
-                })();
+                })());
             try {
-                (this.resourceObserver = new PerformanceObserver((e) => this.foldResourceEntries(e.getEntries()))),
+                ((this.resourceObserver = new PerformanceObserver((e) => this.foldResourceEntries(e.getEntries()))),
                     this.resourceObserver.observe({ type: "resource", buffered: !0 }),
                     this.loafSupported
                         ? ((this.loafObserver = new PerformanceObserver((e) => this.foldScriptEntries(e.getEntries()))),
@@ -56,19 +56,19 @@ class a {
                           ((this.warnedLoafUnsupported = !0),
                           console.warn(
                               "[scriptCost] Long Animation Frames API unavailable (Chromium <123?); evaluation timings disabled, download-only.",
-                          ));
+                          )));
             } catch (e) {
-                this.resourceObserver?.disconnect(),
+                (this.resourceObserver?.disconnect(),
                     (this.resourceObserver = null),
                     this.loafObserver?.disconnect(),
                     (this.loafObserver = null),
                     console.warn(
                         "[scriptCost] failed to register PerformanceObserver; script-cost telemetry disabled.",
                         e,
-                    );
+                    ));
                 return;
             }
-            window.addEventListener("pagehide", this.onPageHide), (this.started = !0);
+            (window.addEventListener("pagehide", this.onPageHide), (this.started = !0));
         }
     }
     foldResourceEntries(e) {
@@ -83,9 +83,9 @@ class a {
                 )
                     return;
                 let n = i(e, t.name);
-                (n.downloadMs += t.responseEnd - t.startTime),
+                ((n.downloadMs += t.responseEnd - t.startTime),
                     (n.transferSizeBytes += t.transferSize),
-                    (n.fromCache = n.fromCache || "cache" === t.deliveryType);
+                    (n.fromCache = n.fromCache || "cache" === t.deliveryType));
             })(this.state, t);
         this.afterFold();
     }
@@ -98,10 +98,10 @@ class a {
                     if (null == (n = "string" == typeof a && a.length > 0 ? a : r(t.invokerType) ? "<inline>" : null))
                         return (e.unattributedEvalMs += t.duration);
                     let s = i(e, n);
-                    (s.totalEvalMs += t.duration),
+                    ((s.totalEvalMs += t.duration),
                         (s.evalSampleCount += 1),
                         r(t.invokerType) && (s.initialEvalMs += t.duration),
-                        (s.evalAttributed = !0);
+                        (s.evalAttributed = !0));
                 })(this.state, e);
         this.afterFold();
     }
@@ -123,16 +123,16 @@ class a {
             ));
     }
     drainPending() {
-        null != this.resourceObserver && this.foldResourceEntries(this.resourceObserver.takeRecords()),
-            null != this.loafObserver && this.foldScriptEntries(this.loafObserver.takeRecords());
+        (null != this.resourceObserver && this.foldResourceEntries(this.resourceObserver.takeRecords()),
+            null != this.loafObserver && this.foldScriptEntries(this.loafObserver.takeRecords()));
     }
     stop() {
-        this.resourceObserver?.disconnect(),
+        (this.resourceObserver?.disconnect(),
             (this.resourceObserver = null),
             this.loafObserver?.disconnect(),
             (this.loafObserver = null),
             window.removeEventListener("pagehide", this.onPageHide),
-            (this.started = !1);
+            (this.started = !1));
     }
     snapshot() {
         var e, t;
@@ -161,12 +161,12 @@ function o() {
 }
 function d() {
     if (null == s || l) return {};
-    (l = !0), s.drainPending();
+    ((l = !0), s.drainPending());
     let e = s.snapshot();
     function t(e) {
         return e.downloadMs + e.totalEvalMs;
     }
-    s.stop(), (s = null);
+    (s.stop(), (s = null));
     let n = [...e.scripts]
         .filter((e) => t(e) >= 32)
         .sort((e, n) => t(n) - t(e))

@@ -17,7 +17,7 @@ function p(e) {
         g = n.useCallback(async () => {
             null != v && C(null);
             try {
-                await s.A.saveGuild(t.id, { verificationLevel: h }), s.A.updateGuild({ verificationLevel: h }), i();
+                (await s.A.saveGuild(t.id, { verificationLevel: h }), s.A.updateGuild({ verificationLevel: h }), i());
             } catch (e) {
                 C(new r.LG(e).getAnyErrorMessage());
             }

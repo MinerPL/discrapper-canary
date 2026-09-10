@@ -12,7 +12,7 @@ class l {
     application = { id: null, name: null, icon: null };
     abortController = new AbortController();
     constructor(e, t, n) {
-        (this.source = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t);
+        ((this.source = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t));
     }
     checkRpcVersion(e) {
         if (null == e || e > s.dL4 || e < 1)

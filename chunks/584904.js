@@ -38,14 +38,14 @@ let m = l.forwardRef(function (t, n) {
                   "aria-label": f.intl.string(f.t.pD1L1u),
                   focusProps: { ringTarget: n },
                   onClick: () => {
-                      m?.({ action: "PRESS_CARD" }),
+                      (m?.({ action: "PRESS_CARD" }),
                           (0, u.openUserProfileModal)({
                               tabSection: x.RP.ACTIVITY,
                               sourceAnalyticsLocations: C,
                               scrollTarget: a,
                               ...I,
                           }),
-                          T?.();
+                          T?.());
                   },
                   children: (0, i.jsx)(d.A.Overlay, { ref: n, className: r()(_.Nr, l), ...N, children: e }),
               }),

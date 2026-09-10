@@ -23,14 +23,18 @@ function h(e, t) {
 }
 function I(e) {
     let t = (0, u.A)(e);
-    return (0, i.bG)([l.A, o.A, s.A], () => {
-        if (__OVERLAY__ || e === _.ME || (0, r.ai)(e)) return !1;
-        let n = o.A.getGuild(e);
-        return (
-            !!n?.features.has(_.GuildFeatures.COMMUNITY) &&
-            (s.A.isFullServerPreview(e) ? A(n) : (0, a.rs)(e) ? t || h(e, l.A) : !!(0, c.A)(n) && (t || h(e, l.A)))
-        );
-    }, [e, t]);
+    return (0, i.bG)(
+        [l.A, o.A, s.A],
+        () => {
+            if (__OVERLAY__ || e === _.ME || (0, r.ai)(e)) return !1;
+            let n = o.A.getGuild(e);
+            return (
+                !!n?.features.has(_.GuildFeatures.COMMUNITY) &&
+                (s.A.isFullServerPreview(e) ? A(n) : (0, a.rs)(e) ? t || h(e, l.A) : !!(0, c.A)(n) && (t || h(e, l.A)))
+            );
+        },
+        [e, t],
+    );
 }
 function f(e) {
     let t = o.A.getGuild(e),

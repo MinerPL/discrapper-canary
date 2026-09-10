@@ -16,13 +16,13 @@ var d = ["canDrop", "hover", "drop"],
         var e;
         function t(e, r, n) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            u(this, "props", null),
+            (u(this, "props", null),
                 u(this, "spec", void 0),
                 u(this, "monitor", void 0),
                 u(this, "ref", void 0),
                 (this.spec = e),
                 (this.monitor = r),
-                (this.ref = n);
+                (this.ref = n));
         }
         return (
             (e = [
@@ -60,10 +60,10 @@ var d = ["canDrop", "hover", "drop"],
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t
@@ -73,7 +73,7 @@ function f(e, t, r) {
     var u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     (0, s.cl)("DropTarget", "type, spec, collect[, options]", e, t, r, u);
     var f = e;
-    "function" != typeof e &&
+    ("function" != typeof e &&
         ((0, n.V)(
             (0, s.NE)(e, !0),
             'Expected "type" provided as the first argument to DropTarget to be a string, an array of strings, or a function that returns either given the current props. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
@@ -86,10 +86,10 @@ function f(e, t, r) {
             (0, s.Qd)(t),
             'Expected "spec" provided as the second argument to DropTarget to be a plain object. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
             t,
-        );
+        ));
     var l =
         (Object.keys(t).forEach(function (e) {
-            (0, n.V)(
+            ((0, n.V)(
                 d.indexOf(e) > -1,
                 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
                 d.join(", "),
@@ -101,7 +101,7 @@ function f(e, t, r) {
                     e,
                     e,
                     t[e],
-                );
+                ));
         }),
         function (e, r) {
             return new p(t, e, r);

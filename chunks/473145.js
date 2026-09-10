@@ -3,7 +3,7 @@ n.d(t, {
     D$: () => P,
     I5: () => H,
     Nc: () => U,
-    Os: () => B,
+    Os: () => V,
     P7: () => b,
     Qu: () => y,
     Ry: () => R,
@@ -17,7 +17,7 @@ n.d(t, {
     k1: () => v,
     kN: () => j,
     os: () => w,
-    sN: () => V,
+    sN: () => B,
     tO: () => k,
     yA: () => x,
     yS: () => M,
@@ -34,7 +34,7 @@ var d = n(71393),
     c = n(287809),
     u = n(178368),
     _ = n(166403);
-n(255438), n(403362), n(975571);
+(n(255438), n(403362), n(975571));
 var E = n(158045);
 n(38405);
 var A = n(652215),
@@ -186,11 +186,11 @@ function F(e) {
     let t = I.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
     return Math.max(e.features.has(A.GuildFeatures.MORE_SOUNDBOARD) ? I.xs : I.OW, t);
 }
-function V(e) {
+function B(e) {
     let t = h.DEFAULT_EMOJI_SLOTS + (e.premiumFeatures?.additionalEmojiSlots ?? 0);
     return Math.max(e.features.has(A.GuildFeatures.MORE_EMOJI) ? h.EMOJI_MAX_SLOTS_MORE : h.DEFAULT_EMOJI_SLOTS, t);
 }
-function B(e, t) {
+function V(e, t) {
     let n = (0, o.Z)(e.id).available;
     return Math.max(0, A.M2T[t] - n);
 }
@@ -200,4 +200,4 @@ function H(e) {
 function j(e) {
     return S.find((t) => e >= A.M2T[t]) ?? A.TVA.NONE;
 }
-A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3;
+(A.TVA.NONE, A.TVA.TIER_1, A.TVA.TIER_2, A.TVA.TIER_3);

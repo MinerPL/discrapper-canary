@@ -11,13 +11,13 @@ function s(e = {}) {
         h = (0, a.useCallback)(() => p(u.current.isFocused && u.current.isFocusVisible), []),
         m = (0, a.useCallback)(
             (e) => {
-                (u.current.isFocused = e), (u.current.isFocusVisible = (0, n.pP)()), f(e), h();
+                ((u.current.isFocused = e), (u.current.isFocusVisible = (0, n.pP)()), f(e), h());
             },
             [h],
         );
     (0, n.K7)(
         (e) => {
-            (u.current.isFocusVisible = e), h();
+            ((u.current.isFocusVisible = e), h());
         },
         [r, c],
         { enabled: c, isTextInput: r },

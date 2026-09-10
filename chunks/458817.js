@@ -239,7 +239,7 @@ function v(e) {
                     u = t.current?.networkState,
                     s = null != t.current ? (0, m.zh)(t.current.currentTime, t.current.duration) : void 0,
                     a = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
-                L({
+                (L({
                     questId: D,
                     event: S.HAw.QUEST_VIDEO_ERROR,
                     properties: {
@@ -259,7 +259,7 @@ function v(e) {
                     sourceQuestContent: g,
                 }),
                     (e === p.SB.SOURCE_ERROR || e === p.SB.NO_VALID_SOURCE) &&
-                        o.A.increment({ name: i.K.QUEST_VIDEO_ERROR, tags: [`quest_id:${D}`, `error_type:${e}`] });
+                        o.A.increment({ name: i.K.QUEST_VIDEO_ERROR, tags: [`quest_id:${D}`, `error_type:${e}`] }));
             },
             [D, t, h, A, n, L, g, k, R],
         );

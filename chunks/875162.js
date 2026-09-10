@@ -30,7 +30,7 @@ let c = function (e) {
                 className: s()(d.$H, { [d.Vd]: "vertical" === o }, r),
                 selectedItem: m.id,
                 onItemSelect: function (e) {
-                    h(t.find((t) => t.id === e) ?? t[0]), u?.(e);
+                    (h(t.find((t) => t.id === e) ?? t[0]), u?.(e));
                 },
                 orientation: o,
                 type: "vertical" === o ? "side" : "top",

@@ -8,7 +8,7 @@ let n = r(40840),
     );
 class o extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMonthDateOrder = e);
+        (super(), (this.strictMonthDateOrder = e));
     }
     innerPattern() {
         return s;

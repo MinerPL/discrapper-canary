@@ -20,13 +20,13 @@ class s extends i.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.planIds = e.planIds),
             (this.userUsageLimitInterval = e.userUsageLimitInterval),
             (this.userUsageLimitIntervalCount = e.userUsageLimitIntervalCount),
             (this.userUsageLimit = e.userUsageLimit),
-            (this.amount = e.amount);
+            (this.amount = e.amount));
     }
     get intervalType() {
         return this.userUsageLimitInterval;

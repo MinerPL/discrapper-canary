@@ -1,4 +1,4 @@
-n.d(t, { default: () => e5, p: () => eJ }), n(321073);
+(n.d(t, { default: () => e5, p: () => eJ }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -65,7 +65,7 @@ class J extends l.Component {
     static defaultProps = { includeMaster: !1 };
     componentDidMount() {
         let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
-        (0, W.w)(e), n?.(t.length > 0);
+        ((0, W.w)(e), n?.(t.length > 0));
     }
     componentDidUpdate(e) {
         let { onHasBranchesChange: t, branches: n } = this.props,
@@ -330,7 +330,7 @@ function e0(e) {
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === eC.i.UNICODE && t(n.surrogates), i && l();
+                        (null != n && n.type === eC.i.UNICODE && t(n.surrogates), i && l());
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: a,
@@ -363,7 +363,7 @@ class e1 extends l.PureComponent {
     constructor(e) {
         super(e);
         const { channelType: t, cloneChannel: n, prefillChannelName: i } = e;
-        (this.state = {
+        ((this.state = {
             channelTypeOption: t ?? eV.rbe.GUILD_TEXT,
             name: null != n ? (0, ej.m1)(n, eD.default, ex.A) : (i ?? ""),
             pendingPermissionOverwrites: {},
@@ -378,23 +378,23 @@ class e1 extends l.PureComponent {
             errors: {},
             submitting: !1,
         }),
-            (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this));
+            (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this)));
     }
     componentDidMount() {
         let { _input: e } = this;
         null != e && e.select();
         let { guildId: t, applications: n, canCreateStoreChannel: i } = this.props;
-        i && null == n && X.A.fetchApplications(t),
-            es.Ay.trackWithMetadata(eV.HAw.OPEN_MODAL, { type: "Create Channel" });
+        (i && null == n && X.A.fetchApplications(t),
+            es.Ay.trackWithMetadata(eV.HAw.OPEN_MODAL, { type: "Create Channel" }));
     }
     componentDidUpdate(e, t) {
-        !t.isPrivate &&
+        (!t.isPrivate &&
             this.state.isPrivate &&
             this.state.channelTypeOption === eV.rbe.GUILD_ANNOUNCEMENT &&
             this.setState({ channelTypeOption: eV.rbe.GUILD_TEXT }),
             !t.isPrivate &&
                 this.state.isPrivate &&
-                es.Ay.trackWithMetadata(eV.HAw.OPEN_MODAL, { type: "Create Private Channel" });
+                es.Ay.trackWithMetadata(eV.HAw.OPEN_MODAL, { type: "Create Private Channel" }));
     }
     getGuildId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -418,14 +418,14 @@ class e1 extends l.PureComponent {
             l = i.substring(0, t) + e + i.substring(n);
         this.setState({ name: l }, () => {
             let n = t + e.length;
-            this._input?.focus(), this._input?.setSelectionRange(n, n);
+            (this._input?.focus(), this._input?.setSelectionRange(n, n));
         });
     };
     handleTypeChange = (e) => {
         let t = eq(e),
             n = (0, eP.A)(this.state.name, t);
-        t === eV.rbe.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
-            this.setState({ channelTypeOption: e, name: n, applicationId: null, skuId: null, branchId: null });
+        (t === eV.rbe.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
+            this.setState({ channelTypeOption: e, name: n, applicationId: null, skuId: null, branchId: null }));
     };
     handlePrivacyChange = (e) => {
         this.setState({ isPrivate: e });
@@ -490,7 +490,7 @@ class e1 extends l.PureComponent {
             })(m),
             S = this.getGuildId();
         if (null != S) {
-            if (null != l) (t = h().values(l.permissionOverwrites)), (n = l.bitrate), (i = l.userLimit);
+            if (null != l) ((t = h().values(l.permissionOverwrites)), (n = l.bitrate), (i = l.userLimit));
             else if (b === eV.rbe.GUILD_ANNOUNCEMENT) t = (0, eR.IP)(S);
             else {
                 if (E) {
@@ -530,7 +530,7 @@ class e1 extends l.PureComponent {
                 });
                 if (null == e || 201 !== e.status) return void this.setState({ submitting: !1 });
                 let l = e.body;
-                (0, eL.ig)(b) && (0, eS.uh)(l.guild_id, l.id), this.setState({ submitting: !1 }), d();
+                ((0, eL.ig)(b) && (0, eS.uh)(l.guild_id, l.id), this.setState({ submitting: !1 }), d());
             } catch (e) {
                 null != e.body && "object" == typeof e.body
                     ? this.setState({ errors: e.body, submitting: !1 })
@@ -1003,7 +1003,7 @@ let e5 = l.forwardRef(function (e, t) {
         L = l.useMemo(() => c()(b, 300), []),
         v = l.useCallback(
             (e) => {
-                O(e), L(e);
+                (O(e), L(e));
             },
             [L],
         );

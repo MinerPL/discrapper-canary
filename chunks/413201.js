@@ -23,12 +23,12 @@ function h(t) {
         { title: g, subtitle: k, confirmText: m, toastContent: S } = (0, o.vz)(v, h),
         A = (0, r.useMemo)(
             () => () => {
-                d._Z.updateSetting(j), (0, o.gF)(i, e), (0, l.P0)((0, a.o)(S, c.Ck.SUCCESS));
+                (d._Z.updateSetting(j), (0, o.gF)(i, e), (0, l.P0)((0, a.o)(S, c.Ck.SUCCESS)));
             },
             [j, i, e, S],
         ),
         I = (0, r.useCallback)(() => {
-            x(), (0, f.L7)();
+            (x(), (0, f.L7)());
         }, [x]);
     return (0, n.jsx)(s.ConfirmModal, {
         title: g,

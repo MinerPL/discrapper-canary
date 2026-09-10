@@ -17,8 +17,8 @@ function d(n, t, i) {
               id: "channel-copy-link",
               label: p.intl.string(p.t.WqhZss),
               action: () => {
-                  n.isForumPost() && (0, c.jC)({ postId: n.id, location: { section: u.JJy.CONTEXT_MENU } }),
-                      (0, r.C)((0, o.af)(n, d, t, i));
+                  (n.isForumPost() && (0, c.jC)({ postId: n.id, location: { section: u.JJy.CONTEXT_MENU } }),
+                      (0, r.C)((0, o.af)(n, d, t, i)));
               },
           });
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Cf: () => m,
     PU: () => A,
     Z2: () => _,
@@ -11,7 +11,7 @@ n.d(t, {
     uf: () => T,
 }),
     n(488428),
-    n(636537);
+    n(636537));
 var i = n(66834),
     r = n(741231),
     a = n(857071),
@@ -49,7 +49,7 @@ async function _(e, t) {
             ));
     else {
         let r = o?.[o.length - 1] ?? t?.page;
-        await i.A.joinGuild(e, { lurker: !0, source: E, loadId: A, lurkLocation: r }),
+        (await i.A.joinGuild(e, { lurker: !0, source: E, loadId: A, lurkLocation: r }),
             h &&
                 (await i.A.transitionToGuildSync(
                     e,
@@ -62,7 +62,7 @@ async function _(e, t) {
                     },
                     c,
                     n.messageId,
-                ));
+                )));
     }
     _?.();
 }

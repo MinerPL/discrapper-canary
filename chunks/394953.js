@@ -10,7 +10,7 @@ var i = n(892227),
     u = n(71393);
 n(232835);
 var _ = n(573163);
-n(287809), n(927813);
+(n(287809), n(927813));
 var E = n(935208),
     A = n(310031),
     h = n(849077),
@@ -47,28 +47,32 @@ function g() {
         t = (0, a.yK)([_.Ay], () => e.filter((e) => _.Ay.hasUnread(e)), [e]),
         n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);
     return {
-        unreadRecentMentionsCount: (0, a.bG)([_.Ay, c.A, u.A], () => {
-            let t =
-                    n?.filter((e) => {
-                        let t = c.A.getBasicChannel(e.channel_id);
-                        return (
-                            null != t &&
-                            f({
-                                messageId: e.id,
-                                channelId: e.channel_id,
-                                guildId: t.guild_id,
-                                ReadStateStore_: _.Ay,
-                                GuildStore_: u.A,
-                            })
-                        );
-                    })?.length ?? 0,
-                i = 0;
-            for (let t of e) {
-                let e = c.A.getBasicChannel(t);
-                null != e && I.kvI.ALL_DMS.has(e.type) && (i += _.Ay.getMentionCount(t));
-            }
-            return t + i;
-        }, [n, e]),
+        unreadRecentMentionsCount: (0, a.bG)(
+            [_.Ay, c.A, u.A],
+            () => {
+                let t =
+                        n?.filter((e) => {
+                            let t = c.A.getBasicChannel(e.channel_id);
+                            return (
+                                null != t &&
+                                f({
+                                    messageId: e.id,
+                                    channelId: e.channel_id,
+                                    guildId: t.guild_id,
+                                    ReadStateStore_: _.Ay,
+                                    GuildStore_: u.A,
+                                })
+                            );
+                        })?.length ?? 0,
+                    i = 0;
+                for (let t of e) {
+                    let e = c.A.getBasicChannel(t);
+                    null != e && I.kvI.ALL_DMS.has(e.type) && (i += _.Ay.getMentionCount(t));
+                }
+                return t + i;
+            },
+            [n, e],
+        ),
         unreadChannelIds: t,
     };
 }

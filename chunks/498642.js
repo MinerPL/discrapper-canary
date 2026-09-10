@@ -24,10 +24,10 @@ class o extends i.Ay.Store {
 let d = new o(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
-        (a = {}),
+        ((a = {}),
             t.forEach((e) => {
                 a[e.id] = e.member_count;
-            });
+            }));
     },
     OVERLAY_INITIALIZE: function (e) {
         a = { ...e.guildMemberCounts };
@@ -39,12 +39,12 @@ let d = new o(r.h, {
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if (null == a[t.id] && null == s[t.id]) return !1;
-        delete a[t.id], delete s[t.id];
+        (delete a[t.id], delete s[t.id]);
     },
     GUILD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, memberCount: n, onlineCount: i } = e,
             r = !1;
-        return a[t] !== n && ((a[t] = n), (r = !0)), s[t] !== i && ((s[t] = i), (r = !0)), r;
+        return (a[t] !== n && ((a[t] = n), (r = !0)), s[t] !== i && ((s[t] = i), (r = !0)), r);
     },
     INVITE_ACCEPT_SUCCESS: l,
     INVITE_RESOLVE_SUCCESS: l,

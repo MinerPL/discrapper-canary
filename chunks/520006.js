@@ -30,7 +30,7 @@ function g(e) {
         guildScheduledEvent: _,
         source: E,
     } = e;
-    c?.(),
+    (c?.(),
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
@@ -57,7 +57,7 @@ function g(e) {
                     });
             },
             { modalKey: "stream-invite-modal", contextKey: d === T.BRT.POPOUT ? o.KX : o.SY },
-        );
+        ));
 }
 function S(e) {
     let {
@@ -102,7 +102,7 @@ function S(e) {
         : null != w && null != r && f.A.can(T.xBc.CREATE_INSTANT_INVITE, r)
           ? (0, i.jsx)(p.A, {
                 onClick: () => {
-                    a()(null != w, "guild cannot be null"),
+                    (a()(null != w, "guild cannot be null"),
                         a()(null != r, "channel cannot be null"),
                         null != P && (0, E.X)(P, E.O.INVITE),
                         g({
@@ -115,7 +115,7 @@ function S(e) {
                             analyticsLocation: S,
                             guildScheduledEvent: N,
                             source: r.isGuildStageVoice() ? T.PE1.STAGE_CHANNEL : T.PE1.STREAM_INVITE,
-                        });
+                        }));
                 },
                 iconComponent: x,
                 label: k,

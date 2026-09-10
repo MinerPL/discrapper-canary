@@ -51,7 +51,7 @@ async function S(e, t) {
 let w = (e, t) => {
         if (!e?.[t]) return e;
         let n = { ...e };
-        return delete n[t], Object.keys(n).length > 0 ? n : void 0;
+        return (delete n[t], Object.keys(n).length > 0 ? n : void 0);
     },
     y = (0, a.t)({
         types: { context: {}, events: {}, input: {} },
@@ -119,7 +119,7 @@ let w = (e, t) => {
                             { value: g(t[n.questionId]), questionId: n.questionId, answerValidity: r },
                             n.validation,
                         );
-                        return s && (e[n.questionId] = s), e;
+                        return (s && (e[n.questionId] = s), e);
                     }, {}));
                 return { validationErrors: Object.keys(s).length > 0 ? s : void 0 };
             }),
@@ -286,10 +286,10 @@ function h({ actor: e, trackElementClicked: t }) {
             e.send({ type: "VALIDATE_FIELD", questionId: t });
         },
         submit() {
-            t?.("submit"), e.send({ type: "SUBMIT" });
+            (t?.("submit"), e.send({ type: "SUBMIT" }));
         },
         close() {
-            t?.("close"), e.send({ type: "CLOSE" });
+            (t?.("close"), e.send({ type: "CLOSE" }));
         },
     };
 }

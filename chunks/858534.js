@@ -11,9 +11,9 @@ t.exports = function (t, r, e) {
         }
         i = n(i, t);
     } catch (t) {
-        (u = !0), (i = t);
+        ((u = !0), (i = t));
     }
     if ("throw" === r) throw e;
     if (u) throw i;
-    return o(i), e;
+    return (o(i), e);
 };

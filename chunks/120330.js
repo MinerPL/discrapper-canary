@@ -44,7 +44,7 @@ n.d(t, {
                 }
                 return e;
             })(t, "number");
-            return (0, a.V1)("object" != typeof n, "object expected", TypeError), e(n);
+            return ((0, a.V1)("object" != typeof n, "object expected", TypeError), e(n));
         },
 });
 var r = n(162929);

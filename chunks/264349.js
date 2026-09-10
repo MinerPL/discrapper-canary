@@ -46,7 +46,7 @@ function u(e) {
         l(async (i, l) => {
             let { default: a } = await t.e("299979").then(t.bind(t, 146502));
             function s() {
-                n(), i();
+                (n(), i());
             }
             return (n) =>
                 (0, r.jsx)(a, {

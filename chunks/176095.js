@@ -17,8 +17,8 @@ let c = new l(r.h, {
         (i = new Set(i)).add(e.paymentSourceId);
     },
     BILLING_WALLET_BALANCE_FETCH_SUCCESS: function (e) {
-        (i = new Set(i)).delete(e.paymentSourceId),
-            (a = { ...a, [e.paymentSourceId]: { currency: e.currency, amount: e.amount } });
+        ((i = new Set(i)).delete(e.paymentSourceId),
+            (a = { ...a, [e.paymentSourceId]: { currency: e.currency, amount: e.amount } }));
     },
     BILLING_WALLET_BALANCE_FETCH_FAIL: function (e) {
         (i = new Set(i)).delete(e.paymentSourceId);
@@ -27,6 +27,6 @@ let c = new l(r.h, {
         a = { ...a, [e.paymentSourceId]: { currency: e.currency, amount: e.balance } };
     },
     LOGOUT: function () {
-        (a = {}), (i = new Set());
+        ((a = {}), (i = new Set()));
     },
 });

@@ -59,16 +59,20 @@ function _(e) {
             icon: g,
             name: h,
             categoryName: x,
-        } = (0, c.cf)([v.A, k.default, S.A], () => {
-            if (m === n) return { name: w.intl.string(w.t["7YqSGx"]), icon: d.N };
-            let e = v.A.getChannel(n),
-                i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
-            return {
-                icon: null != e ? (0, N.gU)(e, t) : null,
-                name: null != e ? (0, j.m1)(e, k.default, S.A) : void 0,
-                categoryName: null != i ? (0, j.m1)(i, k.default, S.A) : void 0,
-            };
-        }, [m, t, n]),
+        } = (0, c.cf)(
+            [v.A, k.default, S.A],
+            () => {
+                if (m === n) return { name: w.intl.string(w.t["7YqSGx"]), icon: d.N };
+                let e = v.A.getChannel(n),
+                    i = e?.parent_id != null ? v.A.getChannel(e.parent_id) : null;
+                return {
+                    icon: null != e ? (0, N.gU)(e, t) : null,
+                    name: null != e ? (0, j.m1)(e, k.default, S.A) : void 0,
+                    categoryName: null != i ? (0, j.m1)(i, k.default, S.A) : void 0,
+                };
+            },
+            [m, t, n],
+        ),
         p = l.useCallback(
             (e) => {
                 n !== m && o(e);

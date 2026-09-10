@@ -12,7 +12,7 @@ let p = function (t) {
             {
                 text: o.intl.string(o.t.aRIFWD),
                 onClick: () => {
-                    e(), window.open(s.A.getArticleURL(i.MVz.IN_GAME_FEATURES), "_blank");
+                    (e(), window.open(s.A.getArticleURL(i.MVz.IN_GAME_FEATURES), "_blank"));
                 },
             },
         ];

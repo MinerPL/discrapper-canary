@@ -1,4 +1,4 @@
-n.d(t, { A: () => u }), n(321073);
+(n.d(t, { A: () => u }), n(321073));
 var i = n(277057),
     r = n.n(i),
     a = n(228366),
@@ -10,7 +10,7 @@ let o = new (class {
         this.queue.push(e);
     }
     flush() {
-        for (; this.queue.length > 0; ) this.queue.shift()?.();
+        for (; this.queue.length > 0;) this.queue.shift()?.();
     }
 })();
 var d = n(775602),
@@ -62,14 +62,14 @@ let u = {
         a.h.dispatch({ type: "MODAL_UPDATE", key: e, props: {}, partial: !0, animation: t });
     },
     pop() {
-        (0, l.tu)(), a.h.dispatch({ type: "MODAL_POP" });
+        ((0, l.tu)(), a.h.dispatch({ type: "MODAL_POP" }));
     },
     popWithKey(e, t) {
-        (0, l.tu)(e, t), a.h.dispatch({ type: "MODAL_POP", key: e, onExited: t });
+        ((0, l.tu)(e, t), a.h.dispatch({ type: "MODAL_POP", key: e, onExited: t }));
     },
     popAboveKey: (e) => (0, l.WR)(e),
     popAll() {
-        (0, l.f3)(),
+        ((0, l.f3)(),
             a.h.dispatch({ type: "MODAL_POP_ALL" }),
             a.h.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" }),
             a.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" }),
@@ -79,6 +79,6 @@ let u = {
             a.h.dispatch({ type: "QUICKSWITCHER_HIDE" }),
             a.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" }),
             a.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_HIDE" }),
-            a.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
+            a.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" }));
     },
 };

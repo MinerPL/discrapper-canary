@@ -11,8 +11,8 @@ n.d(t, {
     a9: () => L,
     k$: () => y,
     kK: () => U,
-    ni: () => V,
-    p5: () => B,
+    ni: () => B,
+    p5: () => V,
     qR: () => k,
     r9: () => R,
     sP: () => H,
@@ -32,8 +32,8 @@ var r = n(687123),
     E = n(71393),
     A = n(287809),
     h = n(975571),
-    f = n(935208),
-    I = n(612200),
+    I = n(935208),
+    f = n(612200),
     p = n(204925),
     T = n(652215),
     m = n(375708);
@@ -42,7 +42,7 @@ let g = new Date("06/16/2020"),
     N = new Set([p.w_.NSFW_SERVER, p.w_.NSFW_SERVER_INVITE, p.w_.NSFW_SERVER_INVITE_EMBED]);
 function C() {
     let e = A.default.getCurrentUser();
-    return null != e && f.default.extractTimestamp(e.id) > g.getTime() && null == e.nsfwAllowed;
+    return null != e && I.default.extractTimestamp(e.id) > g.getTime() && null == e.nsfwAllowed;
 }
 function O(e) {
     return S.includes(e.nsfwLevel);
@@ -72,18 +72,18 @@ function y(e) {
             teen: n ? m.intl.format(m.t["8tk6bB"], {}) : m.intl.format(m.t.XQZvwn, {}),
             unverified: n ? m.intl.string(m.t.V6Gmu9) : m.intl.string(m.t["5rygLk"]),
         },
-        f = m.intl.string(n ? m.t.xi46lg : m.t.ZmwvDc);
+        I = m.intl.string(n ? m.t.xi46lg : m.t.ZmwvDc);
     return u
         ? t
             ? {
-                  title: f,
+                  title: I,
                   description: _?.teen ?? E.teen,
                   agreement: m.intl.string(null != _ ? m.t.FDSSia : m.t.Zt4Mf4),
                   modalType: s.A5.NSFW_CHANNEL_AGE_VERIFY,
                   emphasiseDisagree: null != _,
               }
             : {
-                  title: f,
+                  title: I,
                   description: _?.unverified ?? E.unverified,
                   agreement: m.intl.string(m.t.FDSSia),
                   modalType: s.A5.NSFW_CHANNEL_AGE_VERIFY,
@@ -98,7 +98,7 @@ function y(e) {
                 modalType: s.A5.NSFW_CHANNEL_UNDERAGE,
             }
           : {
-                title: f,
+                title: I,
                 description: _?.adult ?? E.adult,
                 agreement: m.intl.string(m.t.wVq7uo),
                 modalType: s.A5.NSFW_CHANNEL_VERIFIED,
@@ -163,7 +163,7 @@ function M(e) {
     return R() && b(e);
 }
 function P(e) {
-    return !!M(e) && ((0, I.yO)(p.w_.NSFW_VOICE_CHANNEL), !0);
+    return !!M(e) && ((0, f.yO)(p.w_.NSFW_VOICE_CHANNEL), !0);
 }
 function U(e, t, n) {
     let i;
@@ -175,11 +175,11 @@ function U(e, t, n) {
         })(e)
     ) {
         let e = null != n && N.has(n) ? n : p.w_.NSFW_SERVER;
-        (0, I.yO)(e);
+        (0, f.yO)(e);
         return;
     }
     if (null != (i = A.default.getCurrentUser()) && null == i.nsfwAllowed && b(t))
-        return void (0, I.yO)(n ?? p.w_.NSFW_CHANNEL);
+        return void (0, f.yO)(n ?? p.w_.NSFW_CHANNEL);
 }
 function w(e) {
     return null != e && (e.isNSFW() || (0, c.wh)(E.A.getGuild(e.guild_id)));
@@ -215,12 +215,12 @@ function F(e) {
         u = !(n && !i) || (s && t);
     return null != e && ((!!e.isNSFW() && !!u) || (null != d && !!(0, c.wh)(d) && !!u));
 }
-function V(e) {
+function B(e) {
     let t = F(e),
         n = (0, d.IL)(e);
     return t || n;
 }
-function B() {
+function V() {
     let e = (0, o.d6)(r.t.COMMANDS_TOGGLE),
         t = (0, l.p9)();
     return e && t;

@@ -22,7 +22,7 @@ function u(e) {
         } = e,
         j = a.useCallback(
             (e) => {
-                u(e), x || d?.();
+                (u(e), x || d?.());
             },
             [u, d, x],
         );

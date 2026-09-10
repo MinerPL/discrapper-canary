@@ -14,7 +14,7 @@ function _(e) {
             (function (e) {
                 let t = 5381,
                     n = 0;
-                for (; n < e.length; ) t = (33 * t) ^ e.charCodeAt(n++);
+                for (; n < e.length;) t = (33 * t) ^ e.charCodeAt(n++);
                 return t >>> 0;
             })(e) % u.length
         ],

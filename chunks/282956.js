@@ -37,7 +37,7 @@ let l = {
     },
     async saveApplicationPermissions(e, t, n) {
         try {
-            T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            (T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
                 await I.Ni({
                     applicationId: e,
                     commandId: e,
@@ -46,25 +46,25 @@ let l = {
                     guildId: t,
                     permissions: n,
                 }),
-                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" }));
         } catch (e) {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_FAILURE", errors: e.body });
         }
     },
     async saveIntegration(e, t) {
         try {
-            T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            (T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
                 await i.A.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons),
-                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" }));
         } catch (e) {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_FAILURE", errors: e.body });
         }
     },
     async saveWebhook(e, t) {
         try {
-            T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
+            (T.h.dispatch({ type: "INTEGRATION_SETTINGS_SUBMITTING" }),
                 await N.A.update(e, t.id, t),
-                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" });
+                T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_SUCCESS" }));
         } catch (e) {
             T.h.dispatch({ type: "INTEGRATION_SETTINGS_SAVE_FAILURE", errors: e.body });
         }

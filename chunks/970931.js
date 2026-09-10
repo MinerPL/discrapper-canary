@@ -16,11 +16,11 @@ function E() {
 }
 function A(e, t) {
     let n = s.NO.getSetting();
-    l.wc.updateAsync(
+    (l.wc.updateAsync(
         "notifications",
         (n) => {
-            (n.quietMode = i._t.create({ value: e })),
-                (n.focusModeExpiresAtMs = e && null != t ? `${Date.now() + t}` : "0");
+            ((n.quietMode = i._t.create({ value: e })),
+                (n.focusModeExpiresAtMs = e && null != t ? `${Date.now() + t}` : "0"));
         },
         l.Sb.INFREQUENT_USER_ACTION,
     ),
@@ -40,5 +40,5 @@ function A(e, t) {
                 onConfirm: () => {
                     (0, a.A)({ nextStatus: u.clD.ONLINE });
                 },
-            });
+            }));
 }

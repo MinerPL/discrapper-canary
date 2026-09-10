@@ -245,7 +245,7 @@ function F(e) {
                       ...e,
                       ...I,
                       onMouseEnter: function () {
-                          c?.(), e.onMouseEnter?.();
+                          (c?.(), e.onMouseEnter?.());
                       },
                   }),
           });
@@ -281,7 +281,7 @@ function w(e) {
                       ...e,
                       ...I,
                       onMouseEnter: function () {
-                          c?.(), e.onMouseEnter?.();
+                          (c?.(), e.onMouseEnter?.());
                       },
                   }),
           });

@@ -68,7 +68,7 @@ function G(t) {
                 icon: N.ChatIcon,
                 onClick: () => {
                     var t;
-                    return (t = e.id), void ((0, F.default)(), w.A.openPrivateChannel({ recipientIds: t }), s());
+                    return ((t = e.id), void ((0, F.default)(), w.A.openPrivateChannel({ recipientIds: t }), s()));
                 },
             }),
         ],
@@ -160,10 +160,10 @@ function U(t) {
                       onSelectionChange: (t) => {
                           let e = Array.isArray(t) ? t : [t],
                               i = new Map();
-                          e.forEach((t) => {
+                          (e.forEach((t) => {
                               null != t && i.set(t.id, t);
                           }),
-                              h(i);
+                              h(i));
                       },
                       children: (0, n.jsx)("div", {
                           className: T.c,
@@ -210,7 +210,7 @@ function U(t) {
                           onSelectionChange: (t, e) => {
                               h((i) => {
                                   let s = new Map(i);
-                                  return e ? s.set(t.id, t) : s.delete(t.id), s;
+                                  return (e ? s.set(t.id, t) : s.delete(t.id), s);
                               });
                           },
                           isFetching: _,
@@ -242,7 +242,7 @@ function H(t) {
                 for (let [e, i] of d) {
                     if (p.A.isBlockedOrIgnored(e)) continue;
                     let s = await (0, A.getUser)(e);
-                    (s.referralStatus = i), t.set(s.id, s);
+                    ((s.referralStatus = i), t.set(s.id, s));
                 }
                 g(t);
             })();
@@ -265,7 +265,7 @@ function H(t) {
                         size: "md",
                         fullWidth: !0,
                         onClick: async () => {
-                            E(!0), await r([...R.values()]), E(!1);
+                            (E(!0), await r([...R.values()]), E(!1));
                         },
                     }),
                 })),
@@ -276,7 +276,7 @@ function H(t) {
                 onSelectionChange: (t, e) => {
                     h((i) => {
                         let s = new Map(i);
-                        return e ? s.set(t.id, t) : s.delete(t.id), s;
+                        return (e ? s.set(t.id, t) : s.delete(t.id), s);
                     });
                 },
                 className: T.p_,
@@ -298,7 +298,7 @@ let Q = function (t) {
     async function g(t) {
         f.default.track(L.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: A });
         let e = await (0, x.xm)(Object.values(t).map((t) => t.id));
-        u(t.map((t) => ({ recipient: t, status: e.get(t.id) }))), o(2);
+        (u(t.map((t) => ({ recipient: t, status: e.get(t.id) }))), o(2));
     }
     if (null === r) return (0, n.jsx)(m.y, {});
     switch (l) {

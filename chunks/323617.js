@@ -18,7 +18,7 @@ async function c() {
     if (!(0, a.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let { algo: e } = l({ location: "updateSwitch" }),
         t = "DESKTOP_TTI_UPDATE_BACKOFF_ALGO";
-    e !== (await window.DiscordNative.settings.get(t, 0)) && (await window.DiscordNative.settings.set(t, e)), (d = e);
+    (e !== (await window.DiscordNative.settings.get(t, 0)) && (await window.DiscordNative.settings.set(t, e)), (d = e));
 }
 class u extends i.A {
     stores = new Map().set(r.A, () => {
@@ -32,7 +32,7 @@ class u extends i.A {
             o || window.DiscordNative?.settings?.set == null || ((0, a.isDesktop)() && ((o = !0), await c()));
         },
         LOGOUT: () => {
-            (o = !1), (d = null);
+            ((o = !1), (d = null));
         },
     };
 }

@@ -15,12 +15,12 @@ function h(a) {
         className: r()(i, p.Qm, { [p.Wn]: s }),
         "data-size": u,
         onClick: (a) => {
-            a.stopPropagation(), null != n && n(a);
+            (a.stopPropagation(), null != n && n(a));
         },
         tabIndex: s ? 0 : -1,
         "aria-hidden": !s,
         onMouseDown: (a) => {
-            a.preventDefault(), a.stopPropagation();
+            (a.preventDefault(), a.stopPropagation());
         },
         children: (0, e.jsx)("div", {
             className: p.zc,

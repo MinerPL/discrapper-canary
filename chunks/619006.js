@@ -7,7 +7,7 @@ function r(t, o) {
     n.Bo.get({ url: c.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(t, o), rejectWithError: !0 })
         .then((t) => {
             let e = [];
-            t.body.length > 0 &&
+            (t.body.length > 0 &&
                 (e = t.body.map((t) =>
                     t.map((t) => ({
                         connectionType: t.connection_type,
@@ -21,7 +21,7 @@ function r(t, o) {
                     type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
                     roleId: o,
                     roleConnectionConfigurations: e,
-                });
+                }));
         })
         .catch(() => {});
 }
@@ -57,12 +57,12 @@ async function p(t, o, e) {
             );
         }),
         _ = await (0, i.a)(t, o, !1);
-    null != _ && a.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: t, roleId: o, count: _ }),
+    (null != _ && a.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: t, roleId: o, count: _ }),
         a.h.dispatch({
             type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
             roleId: o,
             roleConnectionConfigurations: p,
-        });
+        }));
 }
 async function _() {
     return (await n.Bo.get({ url: c.Rsh.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: !1 })).body;

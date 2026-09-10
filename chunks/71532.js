@@ -17,17 +17,17 @@ function c(e) {
             2 !== n.length && t();
             let i = n.map((e) => {
                     let i = parseInt(e);
-                    return isNaN(i) && t(`${n} is not a number.`), i < 1 && t(`${i} is less than one.`), i;
+                    return (isNaN(i) && t(`${n} is not a number.`), i < 1 && t(`${i} is less than one.`), i);
                 }),
                 [r, a] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
-            return r > 12 && t(`Month must be a number 1-12, not ${r}.`), a < 100 && (a += 2e3), [r, a];
+            return (r > 12 && t(`Month must be a number 1-12, not ${r}.`), a < 100 && (a += 2e3), [r, a]);
         })(e);
     } catch (e) {
         return !1;
     }
     let i = new Date(n, t),
         r = new Date();
-    return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r;
+    return (i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r);
 }
 function u() {
     return null != i ? Promise.resolve(i) : (0, r.loadStripe)(d.Gg3.STRIPE.KEY).then((e) => ((i = e), e));

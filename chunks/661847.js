@@ -44,7 +44,7 @@ function E(e) {
         }, [t, d?.maxVariantsToShow]),
         _ = i.useCallback(
             (e, n) => {
-                e.stopPropagation(), (0, g.n)(t, n);
+                (e.stopPropagation(), (0, g.n)(t, n));
             },
             [t],
         ),
@@ -108,7 +108,7 @@ function R(e) {
         { isPurchased: C } = (0, v.h)(t),
         m = i.useCallback(
             (e) => {
-                p?.(_.sH.VARIANT_CLICK, n), o(e, n), g();
+                (p?.(_.sH.VARIANT_CLICK, n), o(e, n), g());
             },
             [o, g, n, p],
         ),
@@ -139,7 +139,7 @@ function b(e) {
         { onFocus: f, ...I } = (0, a.rm)(`shop-variants-group-${o}-overflow`),
         p = i.useCallback(
             (e) => {
-                e.stopPropagation(), c?.(_.sH.VARIANT_CLICK_MORE), s(e), f();
+                (e.stopPropagation(), c?.(_.sH.VARIANT_CLICK_MORE), s(e), f());
             },
             [s, f, c],
         );

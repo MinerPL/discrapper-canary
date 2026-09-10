@@ -86,10 +86,10 @@ function u(e) {
                     "aria" !== h || d(k, e) ? (E.current = e) : C(e);
                 },
                 resetValidation() {
-                    d(a, T.current) || ((T.current = a), C(a)), "native" === h && P(!1), S(!0);
+                    (d(a, T.current) || ((T.current = a), C(a)), "native" === h && P(!1), S(!0));
                 },
                 commitValidation() {
-                    "native" === h && P(!0), S(!0);
+                    ("native" === h && P(!0), S(!0));
                 },
             }
         );
@@ -120,5 +120,5 @@ function p(...e) {
         for (let e of i.validationErrors) t.add(e);
         for (let e in ((r ||= i.isInvalid), n)) n[e] ||= i.validationDetails[e];
     }
-    return (n.valid = !r), { isInvalid: r, validationErrors: [...t], validationDetails: n };
+    return ((n.valid = !r), { isInvalid: r, validationErrors: [...t], validationDetails: n });
 }

@@ -1,4 +1,4 @@
-t.d(n, { A0: () => A, Ay: () => N, d_: () => L }), t(938796);
+(t.d(n, { A0: () => A, Ay: () => N, d_: () => L }), t(938796));
 var e = t(477900),
     s = t(582128),
     r = t(17928),
@@ -121,14 +121,14 @@ function A(i) {
 function L(i, n) {
     let { notification: t, unread: s } = (0, o.bH)(i);
     function r(i) {
-        i(), n();
+        (i(), n());
     }
     function a(n) {
         let t = { message_notifications: n };
-        n === S.orn.ALL_MESSAGES &&
+        (n === S.orn.ALL_MESSAGES &&
             s !== u.e.ALL_MESSAGES &&
             (t.flags = (0, c.mD)(_.Ay.getChannelIdFlags(i.guild_id, i.id), h.vv.UNREADS_ALL_MESSAGES)),
-            l.A.updateChannelOverrideSettings(i.guild_id, i.id, t, g.G_.notifications(n));
+            l.A.updateChannelOverrideSettings(i.guild_id, i.id, t, g.G_.notifications(n)));
     }
     return (0, e.jsxs)(d.rX, {
         children: [

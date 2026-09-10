@@ -1,4 +1,4 @@
-n.d(e, { bO: () => P, At: () => b, f5: () => U, jc: () => D }), n(938796);
+(n.d(e, { bO: () => P, At: () => b, f5: () => U, jc: () => D }), n(938796));
 var l = n(477900),
     i = n(582128),
     a = n(17928),
@@ -118,7 +118,7 @@ function O(t, e) {
                             h()(!1, "missing validator for this component");
                     }
                 })(t, e, null != n.modal ? "modal" : "message");
-                return n.setValidationErrors?.((e) => ({ ...e, [t.id]: l })), null == l;
+                return (n.setValidationErrors?.((e) => ({ ...e, [t.id]: l })), null == l);
             },
             [t, n],
         );

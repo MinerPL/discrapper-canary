@@ -13,7 +13,10 @@ class c extends I.A {
         return new c(e);
     }
     constructor(e) {
-        super(), (this.user = new R.A(e.user)), (this.member_type = e.member_type), (this.accepted_at = e.accepted_at);
+        (super(),
+            (this.user = new R.A(e.user)),
+            (this.member_type = e.member_type),
+            (this.accepted_at = e.accepted_at));
     }
     isPrimary() {
         return 1 === this.member_type;
@@ -45,7 +48,7 @@ async function n() {
             e
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" }), null;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" }), null);
     }
 }
 async function h(e, t, r, _) {
@@ -81,16 +84,16 @@ async function p(e, t) {
             { invitedUsers: r.body.invited_users, ineligibleUsers: r.body.ineligible_users }
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null);
     }
 }
 async function M(e, t) {
     s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
     try {
         let r = await i.Bo.del({ url: a.Rsh.BILLING_SUBSCRIPTION_REMOVE_USER(e, t), rejectWithError: !0 });
-        return s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS", subscriptionId: e }), r;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS", subscriptionId: e }), r);
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), e;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), e);
     }
 }
 async function U(e) {
@@ -113,16 +116,16 @@ async function U(e) {
             t
         );
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), [];
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), []);
     }
 }
 async function u(e, t, r) {
     s.h.dispatch({ type: "PREMIUM_GROUP_ACCEPT_INVITE_START", subscriptionGroupMemberId: r });
     try {
         let _ = await i.Bo.patch({ url: a.Rsh.BILLING_SUBSCRIPTION_INVITE(e, t), rejectWithError: !0 });
-        return s.h.dispatch({ type: "PREMIUM_GROUP_ACCEPT_INVITE_SUCCESS", subscriptionGroupMemberId: r }), _;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_ACCEPT_INVITE_SUCCESS", subscriptionGroupMemberId: r }), _);
     } catch (e) {
-        return s.h.dispatch({ type: "PREMIUM_GROUP_ACCEPT_INVITE_FAIL", subscriptionGroupMemberId: r }), e;
+        return (s.h.dispatch({ type: "PREMIUM_GROUP_ACCEPT_INVITE_FAIL", subscriptionGroupMemberId: r }), e);
     }
 }
 async function P(e, t, r) {

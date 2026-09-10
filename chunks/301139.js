@@ -113,7 +113,7 @@ function U(t) {
             return {
                 cancelSubscription: async function (e) {
                     try {
-                        return i(!0), await _.M2(e, t), !0;
+                        return (i(!0), await _.M2(e, t), !0);
                     } catch (t) {
                         l(t);
                     } finally {

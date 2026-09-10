@@ -127,7 +127,7 @@ let w = function (e) {
                           a || i)
                       ) {
                           let e = {};
-                          a && (e.name = w), i && (e.icon = b), _.A.updateChannel(t, e, d).catch(D.XA);
+                          (a && (e.name = w), i && (e.icon = b), _.A.updateChannel(t, e, d).catch(D.XA));
                       }
                       n();
                   },

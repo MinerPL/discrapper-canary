@@ -20,7 +20,7 @@ function m(t) {
     let k = (0, u.y8)(n.planId, !1, !1, { paymentSourceId: n.paymentSourceId, currency: n.currency }),
         v = (0, y.CE)((0, y.$g)(k.amount, k.currency), A.interval, A.intervalCount);
     async function x() {
-        await (0, o.ge)(
+        (await (0, o.ge)(
             n,
             n.planId,
             { amount: 0, currency: k.currency },
@@ -28,7 +28,7 @@ function m(t) {
             I,
             C,
         ),
-            await m();
+            await m());
     }
     return (0, i.jsx)(l.Modal, {
         "aria-label": g.intl.string(g.t.E9kB45),

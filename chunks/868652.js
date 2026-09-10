@@ -1,4 +1,4 @@
-n.d(t, { qM: () => A, Xd: () => I, Qh: () => f, AK: () => h, Zm: () => E, pz: () => p }), n(321073);
+(n.d(t, { qM: () => A, Xd: () => I, Qh: () => f, AK: () => h, Zm: () => E, pz: () => p }), n(321073));
 var i = n(636537),
     r = n(228366),
     a = n(403362),
@@ -101,7 +101,7 @@ function h(e, t) {
     if (!0 === t) {
         let t = o.concat(d),
             n = {};
-        (n[l.o9.LEVEL] = o),
+        ((n[l.o9.LEVEL] = o),
             (n[l.o9.PERK] = d),
             r.h.dispatch({
                 type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS",
@@ -110,7 +110,7 @@ function h(e, t) {
                     .sort((e, t) => (e.skuId >= t.skuId ? 1 : -1))
                     .reduce((e, t) => ((e[t.skuId] = t), e), {}),
                 powerupCatalog: n,
-            });
+            }));
         return;
     }
     let n = { application_id: l.Wb, guild_id: e };
@@ -145,12 +145,12 @@ function h(e, t) {
                                 a = c.OW + n.additional_sound_slots,
                                 s = c.GI + n.additional_sticker_slots,
                                 o = t.sku.dependent_sku_id;
-                            for (; null != o; ) {
+                            for (; null != o;) {
                                 let t = e.find((e) => o === e.sku.id);
-                                (i += t?.sku?.powerup_metadata?.guild_features?.additional_emoji_slots ?? 0),
+                                ((i += t?.sku?.powerup_metadata?.guild_features?.additional_emoji_slots ?? 0),
                                     (a += t?.sku?.powerup_metadata?.guild_features?.additional_sound_slots ?? 0),
                                     (s += t?.sku?.powerup_metadata?.guild_features?.additional_sticker_slots ?? 0),
-                                    (o = t?.sku.dependent_sku_id);
+                                    (o = t?.sku.dependent_sku_id));
                             }
                             return {
                                 type: l.o9.LEVEL,
@@ -168,7 +168,7 @@ function h(e, t) {
             .reduce(
                 (e, t) => {
                     let { allPowerups: n, powerupCatalog: i } = e;
-                    return (n[t.skuId] = t), null == i[t.type] && (i[t.type] = []), i[t.type]?.push?.(t), e;
+                    return ((n[t.skuId] = t), null == i[t.type] && (i[t.type] = []), i[t.type]?.push?.(t), e);
                 },
                 { allPowerups: {}, powerupCatalog: {} },
             );
@@ -193,7 +193,7 @@ function I(e) {
     }).then((t) => {
         let n = {},
             i = {};
-        t.body.forEach((e) => {
+        (t.body.forEach((e) => {
             e.sku?.tenant_metadata?.guild_monetization?.powerup != null || e?.sku?.powerup_metadata != null
                 ? (n[e.sku_id] = e)
                 : e.sku?.tenant_metadata?.guild_monetization?.game_server != null && (i[e.id] = e);
@@ -203,7 +203,7 @@ function I(e) {
                 guildId: e,
                 unlockedPowerups: n,
                 unlockedGameServers: i,
-            });
+            }));
     });
 }
 function f(e, t) {

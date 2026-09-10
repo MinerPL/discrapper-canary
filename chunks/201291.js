@@ -16,7 +16,7 @@ function m(t) {
         m = (0, d.GV)(),
         [g, { loading: b, error: k }] = (0, u.A)(o.ms);
     async function w() {
-        e()(null != n, "no guild"), null != (await g(n.id)) && a();
+        (e()(null != n, "no guild"), null != (await g(n.id)) && a());
     }
     return (0, l.jsx)(r.Modal, {
         transitionState: i,

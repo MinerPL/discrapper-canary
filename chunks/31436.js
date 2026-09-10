@@ -16,15 +16,15 @@ async function a() {
             if (e instanceof ReferenceError || e instanceof WebAssembly.CompileError) {
                 var l;
                 throw (
-                    ((l = !0),
+                    (l = !0),
                     (window._libdiscoreUnsupportedBrowser = l),
                     r(`Unsupported browser, skipping libdiscore, error: [${e.name}] ${e.message}`),
-                    e)
+                    e
                 );
             }
             if (((a = e), delete n.c[5426], 0 == --s)) throw a;
-            r(`Failed to import libdiscore-wasm, retrying... (${s} attempts left), ${a.name}: ${a.message}`),
-                await (0, i.eU)(t);
+            (r(`Failed to import libdiscore-wasm, retrying... (${s} attempts left), ${a.name}: ${a.message}`),
+                await (0, i.eU)(t));
         }
 }
 function s() {
@@ -34,14 +34,14 @@ function s() {
         var t;
         let e = (async () => {
             var e;
-            await a(),
+            (await a(),
                 (e = await (0, i.sq)({
                     createPromise: () => n.e("914575").then(n.bind(n, 811059)),
                     webpackId: 811059,
                 })),
-                (window._libdiscoreWasm = e);
+                (window._libdiscoreWasm = e));
         })();
-        return (t = e), (window._libdiscoreInitPromise = t), e;
+        return ((t = e), (window._libdiscoreInitPromise = t), e);
     }
 }
 function l() {

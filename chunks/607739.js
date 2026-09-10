@@ -70,8 +70,8 @@ function N(e) {
                             l = b.M8;
                         if (null != t.width && null != t.height) {
                             let e = (0, M.U8)({ width: t.width, height: t.height, maxWidth: b.V5, maxHeight: b.M8 });
-                            (a = (0, o.clamp)(Math.round(t.width * e), 0, b.V5)),
-                                (l = (0, o.clamp)(Math.round(t.height * e), 0, b.M8));
+                            ((a = (0, o.clamp)(Math.round(t.width * e), 0, b.V5)),
+                                (l = (0, o.clamp)(Math.round(t.height * e), 0, b.M8)));
                         }
                         return (0, i.jsx)("div", {
                             style: { width: n ? a : "100%", height: n ? l : "100%" },
@@ -157,22 +157,22 @@ function U(e) {
                     new Promise((t, n) => {
                         if ((0, m.u)(e.filename)) {
                             let i = new Image();
-                            (i.src = e.url),
+                            ((i.src = e.url),
                                 (i.onload = () => {
                                     t(i);
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                });
+                                }));
                         } else if ((0, m.AE)(e.filename)) {
                             let i = document.createElement("video");
-                            (i.src = e.url),
+                            ((i.src = e.url),
                                 (i.onloadedmetadata = () => {
                                     t({ width: i.videoWidth, height: i.videoHeight });
                                 }),
                                 (i.onerror = () => {
                                     n();
-                                });
+                                }));
                         } else t({ width: 0, height: 0 });
                     }).then((t) => r((n) => ({ ...n, [e.id]: t }))),
                 ),

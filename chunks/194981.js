@@ -33,7 +33,7 @@ function c(e) {
             {
                 triggerRef: i.useCallback(
                     (e) => {
-                        (c.current = e), null != N && (0, a.cZ)(N, e);
+                        ((c.current = e), null != N && (0, a.cZ)(N, e));
                     },
                     [N],
                 ),
@@ -81,20 +81,20 @@ function c(e) {
                         t.start(
                             e,
                             () => {
-                                f(!0), a?.();
+                                (f(!0), a?.());
                             },
                             !1,
                         );
                 }, [r, a, u, h]),
                 N = i.useCallback(() => {
-                    p.current?.stop(), f(!1), d?.();
+                    (p.current?.stop(), f(!1), d?.());
                 }, [d]),
                 C = i.useCallback(() => {
                     _ && N();
                 }, [N, _]),
                 O = i.useCallback(
                     (e) => {
-                        null == h.current && (h.current = e.currentTarget), (T.current = !1), S();
+                        (null == h.current && (h.current = e.currentTarget), (T.current = !1), S());
                     },
                     [S, h],
                 ),
@@ -105,7 +105,7 @@ function c(e) {
                     [E, S, h],
                 ),
                 L = i.useCallback(() => {
-                    p.current?.stop(), N();
+                    (p.current?.stop(), N());
                 }, [N]),
                 y = i.useMemo(
                     () => ({ onMouseEnter: O, onMouseLeave: L, onFocus: R, onBlur: N, onContextMenu: N, onClick: C }),
@@ -155,7 +155,7 @@ function c(e) {
             (E = (0, r.A)(_)),
             (A = i.useCallback(
                 (e) => {
-                    (0, a.cZ)(E.current, e), u(e);
+                    ((0, a.cZ)(E.current, e), u(e));
                 },
                 [E, u],
             )),
@@ -166,14 +166,14 @@ function c(e) {
             (f = (I = t.props).buttonRef),
             (p = i.useCallback(
                 (e) => {
-                    (0, a.cZ)(f, e), A(e);
+                    ((0, a.cZ)(f, e), A(e));
                 },
                 [f, A],
             )),
             (T = I.innerRef),
             (m = i.useCallback(
                 (e) => {
-                    (0, a.cZ)(T, e), A(e);
+                    ((0, a.cZ)(T, e), A(e));
                 },
                 [T, A],
             )),

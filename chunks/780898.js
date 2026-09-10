@@ -1,11 +1,11 @@
-n.d(t, { EQ: () => d, H6: () => _, Ov: () => A, WK: () => o, nI: () => E, wT: () => c }),
+(n.d(t, { EQ: () => d, H6: () => _, Ov: () => A, WK: () => o, nI: () => E, wT: () => c }),
     n(393431),
     n(532706),
     n(42231),
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var i = n(115943),
     r = n.n(i),
     a = n(837015),
@@ -33,10 +33,10 @@ function E(e) {
     let t = r().decode(e),
         n = r().toRGBA8(t)[0],
         i = document.createElement("canvas");
-    (i.width = t.width), (i.height = t.height);
+    ((i.width = t.width), (i.height = t.height));
     let a = i.getContext("2d"),
         s = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
-    return a.putImageData(s, 0, 0), i.toDataURL("image/png");
+    return (a.putImageData(s, 0, 0), i.toDataURL("image/png"));
 }
 function A() {
     return {

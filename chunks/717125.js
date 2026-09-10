@@ -66,7 +66,7 @@ function g(e, t) {
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function S() {
-    (f = {}), p.clear();
+    ((f = {}), p.clear());
 }
 function N(e) {
     let { guild: t } = e;

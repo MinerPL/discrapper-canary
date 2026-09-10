@@ -70,7 +70,7 @@ function b(e) {
                   (0, n.jsx)(x.F, {
                       children: (0, n.jsx)(a.A, {
                           onSave: function () {
-                              j.default.track(A.HAw.BULK_MODERATION_ACTION_STARTED, {
+                              (j.default.track(A.HAw.BULK_MODERATION_ACTION_STARTED, {
                                   ...(0, g.H$)(t),
                                   action_type: p.Nj.BAN,
                                   target_user_ids: [...D],
@@ -89,7 +89,7 @@ function b(e) {
                                               userIds: D,
                                               onBanMultiple: S,
                                           });
-                                  });
+                                  }));
                           },
                           onSaveText: I,
                           onSaveButtonColor: r.XD.RED,

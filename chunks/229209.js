@@ -18,7 +18,7 @@ class s {
         this.refcount++;
     }
     release() {
-        return this.refcount--, 0 === this.refcount;
+        return (this.refcount--, 0 === this.refcount);
     }
 }
 let l = new Map();

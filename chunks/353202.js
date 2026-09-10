@@ -1,4 +1,4 @@
-n.d(t, { A: () => T }), n(321073);
+(n.d(t, { A: () => T }), n(321073));
 var i = n(636537),
     r = n(228366),
     a = n(695870),
@@ -40,16 +40,16 @@ function p(e) {
         u = i.Bo.get({ url: _.Rsh.CHANNEL(e), rejectWithError: (0, i.fT)() })
             .then((t) => {
                 let { body: i } = t;
-                (A[e] = { type: "LOADED" }), d.Le.has(i.type) && f(i, n?.params?.messageId);
+                ((A[e] = { type: "LOADED" }), d.Le.has(i.type) && f(i, n?.params?.messageId));
             })
             .catch(() => {
-                (A[e] = { type: "NOT_FOUND" }),
+                ((A[e] = { type: "NOT_FOUND" }),
                     r.h.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: { id: e, guild_id: n?.params?.guildId, parent_id: void 0 },
-                    });
+                    }));
             });
-    return (A[e] = { type: "LOADING", promise: u }), u;
+    return ((A[e] = { type: "LOADING", promise: u }), u);
 }
 let T = {
     getLoadState: function (e) {
@@ -76,7 +76,7 @@ let T = {
                     i = new Set();
                 for (let e of t.items) {
                     let t = e.id;
-                    i.add(t), (A[t] = { type: "LOADED" }), f(e);
+                    (i.add(t), (A[t] = { type: "LOADED" }), f(e));
                 }
                 for (let e of n) i.has(e) || (A[e] = { type: "NOT_FOUND" });
             })

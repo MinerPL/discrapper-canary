@@ -11,10 +11,10 @@ n.d(t, {
     Sx: () => W,
     Tg: () => g,
     Uu: () => C,
-    Vh: () => V,
-    Wx: () => q,
+    Vh: () => B,
+    Wx: () => X,
     X0: () => H,
-    YV: () => B,
+    YV: () => V,
     bQ: () => S,
     cN: () => w,
     d6: () => j,
@@ -191,7 +191,7 @@ let k = new Set([r.M.ACCOUNT_LINK_INVITE_FRIENDS, r.M.ACCOUNT_LINK_PROMPT, r.M.A
 function F(e, t, n) {
     return t && !(null == n && k.has(e));
 }
-function V(e, t, n, i) {
+function B(e, t, n, i) {
     (0, A.dD)(e) ||
         E.A.hasUserHitDCCap(e, t?.guildId) ||
         F(e, n ?? !1, i ?? null) ||
@@ -200,12 +200,12 @@ function V(e, t, n, i) {
             content: e,
             groupName: t?.groupName,
             onAdded: (n) => {
-                (0, _.rF)(e, t?.guildId), q(e, t, n), t?.onShown?.();
+                ((0, _.rF)(e, t?.guildId), X(e, t, n), t?.onShown?.());
             },
         }));
 }
-function B(e, t) {
-    ((0, A.dD)(e) || t.forceTrack) &&
+function V(e, t) {
+    (((0, A.dD)(e) || t.forceTrack) &&
         (function (e, t) {
             let [n] = (0, A.oF)(),
                 i = E.A.getRenderedAtTimestamp(e),
@@ -225,7 +225,7 @@ function B(e, t) {
                 snowflake_id: t?.snowflakeId,
             });
         })(e, t),
-        (0, _.Xw)(e, t.guildId ?? void 0);
+        (0, _.Xw)(e, t.guildId ?? void 0));
 }
 function H(e, t) {
     let n = !E.A.hasUserHitDCCap();
@@ -246,17 +246,17 @@ function Y(e, t) {
 }
 async function K(e, t, n) {
     let i = Y(e, n);
-    B(e, n), await S(e, t, i), H(e, n);
+    (V(e, n), await S(e, t, i), H(e, n));
 }
 async function $(e, t, n) {
     let i = Y(e, n);
-    B(e, { ...n, snowflakeId: t }), await C(e, t, i), H(e, n);
+    (V(e, { ...n, snowflakeId: t }), await C(e, t, i), H(e, n));
 }
 async function z(e, t) {
     let n = Y(e, t);
-    B(e, t), await N(e, n), H(e, t);
+    (V(e, t), await N(e, n), H(e, t));
 }
-function q(e, t) {
+function X(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [i, a] = (0, A.oF)();
     o.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN, {

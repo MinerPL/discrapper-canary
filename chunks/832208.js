@@ -12,7 +12,7 @@ class c extends i.PureComponent {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
         else if (null != this.props.formError) {
             let { changedSinceError: t } = this.state;
-            this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t });
+            (this.getChangedValues(e).forEach((e) => t.add(e)), this.setState({ changedSinceError: t }));
         }
     }
     getChangedValues(e) {

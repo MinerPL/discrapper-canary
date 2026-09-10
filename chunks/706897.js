@@ -173,7 +173,7 @@ function V(e) {
         m = s.useRef(null),
         h = s.useRef(null),
         f = s.useCallback((e, l, t) => {
-            T.$P(e, l, t), g("" === e ? null : l);
+            (T.$P(e, l, t), g("" === e ? null : l));
         }, []),
         x = s.useCallback(
             (e) => {
@@ -183,9 +183,9 @@ function V(e) {
             [t],
         ),
         C = s.useCallback(() => {
-            T.Se(), g(null), (h.current = null), m.current?.focus();
+            (T.Se(), g(null), (h.current = null), m.current?.focus());
         }, []);
-    s.useEffect(
+    (s.useEffect(
         () => (
             T.V$(),
             () => {
@@ -196,27 +196,27 @@ function V(e) {
     ),
         s.useEffect(() => {
             if (null != o)
-                return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+                return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
             function e(e) {
                 e.key === K.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), C());
             }
-        }, [o, C]);
+        }, [o, C]));
     let j = s.useCallback(
             (e) => {
-                (h.current = null), f(e, z.dD.SEARCH);
+                ((h.current = null), f(e, z.dD.SEARCH));
             },
             [f],
         ),
         b = s.useCallback(
             (e) => {
-                (h.current = null), T.Se(), f(e, z.dD.SEARCH_SUGGESTION, !0);
+                ((h.current = null), T.Se(), f(e, z.dD.SEARCH_SUGGESTION, !0));
             },
             [f],
         ),
         y = s.useCallback(
             (e) => {
                 let { name: l, type: t } = e;
-                (h.current = t), r?.(t), f(l, z.dD.TRENDING_CATEGORY, !0), m.current?.focus();
+                ((h.current = t), r?.(t), f(l, z.dD.TRENDING_CATEGORY, !0), m.current?.focus());
             },
             [r, f],
         ),
@@ -403,7 +403,7 @@ let es = (0, t(839214).D)((e, l) => ({
             if (n.isLoading && n.guildId === t) return;
             n.cancelPendingFetch();
             let s = new AbortController();
-            e({ isLoading: !0, guildId: t, abortController: s, imageHashes: [] }),
+            (e({ isLoading: !0, guildId: t, abortController: s, imageHashes: [] }),
                 y.Bo.get({
                     url: z.Rsh.GUILD_VOICE_HANGOUT_RECENT_IMAGES(t),
                     oldFormErrors: !0,
@@ -417,7 +417,7 @@ let es = (0, t(839214).D)((e, l) => ({
                     .catch(() => {
                         s.signal.aborted ||
                             (l().guildId === t && e({ imageHashes: [], isLoading: !1, abortController: null }));
-                    });
+                    }));
         },
     })),
     er = [
@@ -560,10 +560,10 @@ function eo(e) {
             async (e, l, t) => {
                 N(null);
                 try {
-                    await (0, j.Hd)(g.id, e),
+                    (await (0, j.Hd)(g.id, e),
                         (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: l, gifCategoryType: t }),
                         (0, x.hs)(r.w.HANGOUT_WINDOW_SET),
-                        o();
+                        o());
                 } catch (e) {
                     N(p(e));
                 }
@@ -574,10 +574,10 @@ function eo(e) {
             async (e) => {
                 N(null);
                 try {
-                    await (0, j.B$)(g.id, e),
+                    (await (0, j.B$)(g.id, e),
                         (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: b.cM.RECENT_IMAGE }),
                         (0, x.hs)(r.w.HANGOUT_WINDOW_SET),
-                        o();
+                        o());
                 } catch (e) {
                     N(p(e));
                 }
@@ -653,10 +653,10 @@ function eo(e) {
             children: [
                 (0, n.jsx)(ei, {
                     onOpenGIFPicker: () => {
-                        N(null), C("GIF_PICKER");
+                        (N(null), C("GIF_PICKER"));
                     },
                     onOpenRecentUploads: () => {
-                        N(null), C("RECENT_UPLOADS");
+                        (N(null), C("RECENT_UPLOADS"));
                     },
                 }),
                 v

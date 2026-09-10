@@ -40,12 +40,12 @@ function b(e) {
             w(!1);
         }
     }
-    s.useEffect(() => {
-        a.A.flowStep(C.do.ANY, C.Ot.AGE_GATE), A.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
+    (s.useEffect(() => {
+        (a.A.flowStep(C.do.ANY, C.Ot.AGE_GATE), A.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" }));
     }, []),
         s.useEffect(() => {
             N?.nsfwAllowed != null && l();
-        }, [N, l]);
+        }, [N, l]));
     let O = s.useCallback(() => {
         S.current?.focus();
     }, [S]);

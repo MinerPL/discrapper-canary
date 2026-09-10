@@ -33,10 +33,10 @@ function O(t) {
     let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U, clipboardHasMixedContent: L } = t,
         v = r.useCallback(
             (t) => {
-                i.rL.focus(O),
+                (i.rL.focus(O),
                     setTimeout(() => {
-                        t?.(), T.VW.focus(O);
-                    }, 0);
+                        (t?.(), T.VW.focus(O));
+                    }, 0));
             },
             [O],
         ),
@@ -61,10 +61,10 @@ function O(t) {
                         : "",
                 d = r.useCallback(
                     (e) => {
-                        i.rL.focus(t),
+                        (i.rL.focus(t),
                             k.o.withSingleEntry(t, () => {
-                                t.deleteFragment(), t.insertText(e);
-                            });
+                                (t.deleteFragment(), t.insertText(e));
+                            }));
                     },
                     [t],
                 ),
@@ -72,7 +72,7 @@ function O(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI));
+                                (l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI)));
                                 try {
                                     let n = await y.Bo.post({
                                         url: N.Rsh.AI_FIX_GRAMMAR,
@@ -160,13 +160,13 @@ function O(t) {
                         s = r.useCallback(
                             async (t) => {
                                 if (null == l) {
-                                    i(t.id),
+                                    (i(t.id),
                                         (0, x.P0)(
                                             (0, C.o)(
                                                 P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }),
                                                 h.Ck.AI,
                                             ),
-                                        );
+                                        ));
                                     try {
                                         let a = await y.Bo.post({
                                             url: N.Rsh.AI_TEXT_TRANSFORM,
@@ -272,11 +272,11 @@ function O(t) {
             checked: Y,
             action: () => {
                 let t = !Y;
-                g._3.updateSetting(t),
+                (g._3.updateSetting(t),
                     b.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
                         location: { object: N.ZSU.CONTEXT_MENU },
-                    });
+                    }));
             },
         });
     return (0, a.jsxs)(c.W, {

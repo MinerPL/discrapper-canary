@@ -14,7 +14,7 @@ function i(l) {
         }, [c]),
         p = r.useCallback(
             (l) => {
-                _(), null != a && a(l);
+                (_(), null != a && a(l));
             },
             [_, a],
         );

@@ -1,4 +1,4 @@
-n.d(t, { A: () => B });
+n.d(t, { A: () => V });
 var i = n(17928),
     r = n(941426),
     a = n(228366),
@@ -21,26 +21,26 @@ var i = n(17928),
     S = n(392164);
 let N = new _.A("OverlayV3NativeModule");
 function C(e, t, n) {
-    (0, c._r)(e, "renderer_window_focus_changed", {
+    ((0, c._r)(e, "renderer_window_focus_changed", {
         windowHandle: t,
         popoutInitializationStages: p.A.getPopoutInitializationStages(),
     }),
-        (0, c.cS)(e, null != t ? (0, T.Oy)(t) : null, n);
+        (0, c.cS)(e, null != t ? (0, T.Oy)(t) : null, n));
 }
 function O(e) {
-    (0, c._r)(e, "renderer_window_focus_lost", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
-        (0, c.C7)(e);
+    ((0, c._r)(e, "renderer_window_focus_lost", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
+        (0, c.C7)(e));
 }
 function R(e) {
-    (0, c._r)(e, "successfully_shown", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
-        (0, c.oW)(e);
+    ((0, c._r)(e, "successfully_shown", { popoutInitializationStages: p.A.getPopoutInitializationStages() }),
+        (0, c.oW)(e));
 }
 function L(e) {
-    (0, c._r)(null, "window_handle_initialized", {
+    ((0, c._r)(null, "window_handle_initialized", {
         real_initialized: e,
         popoutInitializationStages: p.A.getPopoutInitializationStages(),
     }),
-        (0, c.i0)(e);
+        (0, c.i0)(e));
 }
 class y {
     static instance = null;
@@ -50,7 +50,7 @@ class y {
     lastAssociatedPID = null;
     trackedGamePids = new Set();
     static getInstance() {
-        return null == this.instance && (this.instance = new y()), this.instance;
+        return (null == this.instance && (this.instance = new y()), this.instance);
     }
     async initialize() {
         return await this.prepareOverlayModule();
@@ -60,10 +60,10 @@ class y {
         return this.module;
     }
     destroy() {
-        (this.module = null),
+        ((this.module = null),
             (this.lastAssociatedPID = null),
             (this.trackedGamePids = new Set()),
-            N.info("OverlayV3 Native Module destroyed");
+            N.info("OverlayV3 Native Module destroyed"));
     }
     getLastAssociatedPID() {
         return this.lastAssociatedPID;
@@ -81,7 +81,7 @@ class y {
             var e;
             await A.Ay.ensureModule("discord_desktop_overlay");
             let t = A.Ay.requireModule("discord_desktop_overlay");
-            t.init(),
+            (t.init(),
                 t.setHostWindowCallbacks(
                     (e) => this.createOutOfProcessOverlayHostWindow(e),
                     () => this.destroyOutOfProcessOverlayHostWindow(),
@@ -98,23 +98,23 @@ class y {
                 (0, c._r)(null, "native_module_callbacks_setup"),
                 N.verbose("Native module callbacks setup"),
                 (0, c.Mi)(),
-                N.info("OverlayV3 Module Loaded");
+                N.info("OverlayV3 Module Loaded"));
         } catch (e) {
             throw (
-                (N.error("failed loading overlay module", e),
+                N.error("failed loading overlay module", e),
                 (0, l.setOutOfProcessSupport)(!1),
                 (0, c.wK)(e),
                 (this.module = null),
                 (this.modulePromise = null),
-                e)
+                e
             );
         }
     }
     async createOutOfProcessOverlayHostWindow(e) {
-        N.verbose(`Creating OOP Host Window for pid ${e}`), (0, c.wX)(e);
+        (N.verbose(`Creating OOP Host Window for pid ${e}`), (0, c.wX)(e));
         let t = null;
         try {
-            (0, c._r)(e, "host_window_mounting_started", {
+            ((0, c._r)(e, "host_window_mounting_started", {
                 popoutInitializationStages: p.A.getPopoutInitializationStages(),
             }),
                 await (0, m.H)(),
@@ -123,22 +123,22 @@ class y {
                 (0, c._r)(e, "host_window_created", {
                     hasWindow: null != t,
                     popoutInitializationStages: p.A.getPopoutInitializationStages(),
-                });
+                }));
         } catch (t) {
-            N.error("Error creating OOP host window:", t),
-                (0, c._r)(e, "host_window_mounting_failed", { error: t }, h.QJ.Error);
+            (N.error("Error creating OOP host window:", t),
+                (0, c._r)(e, "host_window_mounting_failed", { error: t }, h.QJ.Error));
         }
         try {
-            u.A?.window?.setBackgroundThrottling(!1),
+            (u.A?.window?.setBackgroundThrottling(!1),
                 u.A?.window?.setFrameRate?.(S.f, f.A.getOverlayFPSLimit() ?? 0),
-                u.A?.window?.setFrameRate?.(null, f.A.getMainWindowFPSLimit() ?? 0);
+                u.A?.window?.setFrameRate?.(null, f.A.getMainWindowFPSLimit() ?? 0));
         } catch (t) {
-            N.error("Error setting background throttling:", t),
-                (0, c._r)(e, "background_throttling_setting_failed", { error: t }, h.QJ.Error);
+            (N.error("Error setting background throttling:", t),
+                (0, c._r)(e, "background_throttling_setting_failed", { error: t }, h.QJ.Error));
         }
         let n = null;
         try {
-            (n = await this.getNativeWindowHandleWithRetry()),
+            ((n = await this.getNativeWindowHandleWithRetry()),
                 I.A.resetWindowState(),
                 (0, c._r)(e, "native_window_handle_retrieved", {
                     handle: n,
@@ -146,9 +146,9 @@ class y {
                     popoutInitializationStages: p.A.getPopoutInitializationStages(),
                 }),
                 await (0, c.pi)(e, n),
-                this.module?.setOnWindowHandleInitializedCallback == null && (await (0, c.i0)(!0));
+                this.module?.setOnWindowHandleInitializedCallback == null && (await (0, c.i0)(!0)));
         } catch (t) {
-            N.error("Error getting native window handle:", t),
+            (N.error("Error getting native window handle:", t),
                 (0, c.lo)(e, t, n),
                 (0, c._r)(
                     e,
@@ -160,7 +160,7 @@ class y {
                         popoutInitializationStages: p.A.getPopoutInitializationStages(),
                     },
                     h.QJ.Error,
-                );
+                ));
         }
         return (
             null == n
@@ -170,28 +170,28 @@ class y {
         );
     }
     destroyOutOfProcessOverlayHostWindow() {
-        N.verbose("Destroying OOP host window"), (0, c._r)(this.lastAssociatedPID, "host_window_destroyed");
+        (N.verbose("Destroying OOP host window"), (0, c._r)(this.lastAssociatedPID, "host_window_destroyed"));
         try {
-            u.A?.window?.close(S.f),
+            (u.A?.window?.close(S.f),
                 u.A?.window?.setBackgroundThrottling(!0),
                 u.A?.window?.setFrameRate?.(S.f, 0),
                 u.A?.window?.setFrameRate?.(null, 0),
-                I.A.resetWindowState(!1);
+                I.A.resetWindowState(!1));
         } catch (e) {
             N.error("Error closing overlay window:", e);
         }
-        (0, c.bF)(this.lastAssociatedPID), (this.lastAssociatedPID = null);
+        ((0, c.bF)(this.lastAssociatedPID), (this.lastAssociatedPID = null));
     }
     refreshOutOfProcessOverlayHostWindow(e) {
-        N.verbose(`Refreshing OOP host window for pid ${e}`),
+        (N.verbose(`Refreshing OOP host window for pid ${e}`),
             (0, c._r)(e, "host_window_refreshing_started", {
                 popoutInitializationStages: p.A.getPopoutInitializationStages(),
             }),
             (0, c.ot)(e, this.lastAssociatedPID),
-            (this.lastAssociatedPID = e);
+            (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return await (0, g.o)(), await this.getWindowWithRetry();
+        return (await (0, g.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
@@ -250,13 +250,13 @@ class y {
         this.module?.onPopoutShowInactive?.();
     }
     setRenderingWindowHandle(e, t) {
-        this.module?.setRenderingWindowHandle?.(e), N.verbose(`Setting rendering window handle for pid ${t}: ${e}`);
+        (this.module?.setRenderingWindowHandle?.(e), N.verbose(`Setting rendering window handle for pid ${t}: ${e}`));
     }
     setInteractionEnabled(e) {
         this.module?.setInteractionEnabled?.(e);
     }
     setLimitedInteraction(e) {
-        this.module?.setLimitedInteraction?.(e), A.Ay.setFocusable(S.f, !e);
+        (this.module?.setLimitedInteraction?.(e), A.Ay.setFocusable(S.f, !e));
     }
     setCaptureZoneCallback(e) {
         this.module?.setCaptureZoneCallback?.(e);
@@ -272,12 +272,12 @@ class y {
     }
     untrackGame(e) {
         if (null == this.module) return;
-        this.module.untrackGame(e), this.trackedGamePids.delete(e);
+        (this.module.untrackGame(e), this.trackedGamePids.delete(e));
         let t = this.trackedGamePids.values().next().value;
-        this.lastAssociatedPID === e && null != t
+        (this.lastAssociatedPID === e && null != t
             ? (this.lastAssociatedPID = t)
             : this.lastAssociatedPID === e && null == t && (this.lastAssociatedPID = null),
-            (0, c.Lt)(e);
+            (0, c.Lt)(e));
     }
 }
 let D = new r.Vy("OverlayV3NativeModuleStore"),
@@ -289,15 +289,15 @@ let D = new r.Vy("OverlayV3NativeModuleStore"),
     w = null,
     G = (() => {
         async function e() {
-            k(), (M = y.getInstance());
+            (k(), (M = y.getInstance()));
             try {
-                await M.initialize(), (v = !0);
+                (await M.initialize(), (v = !0));
             } catch (e) {
-                (0, c._r)(null, "module_initialization_failed", { error: e }),
+                ((0, c._r)(null, "module_initialization_failed", { error: e }),
                     (v = !1),
-                    (0, c.mD)(l.UNSET_PID, e, { crashType: "native" });
+                    (0, c.mD)(l.UNSET_PID, e, { crashType: "native" }));
             } finally {
-                V.emitChange();
+                B.emitChange();
             }
         }
         return () => (null == w && (w = e()), w);
@@ -335,26 +335,26 @@ class F extends i.Ay.Store {
         return M;
     }
 }
-let V = new F(
+let B = new F(
         a.h,
         __OVERLAY__ || !d.O
             ? {}
             : {
                   CONNECTION_OPEN: function () {
-                      return G(), !1;
+                      return (G(), !1);
                   },
                   EXPERIMENT_OVERRIDE_BUCKET: k,
                   OVERLAY_SET_ENABLED: function (e) {
                       let { oopEnabled: t } = e;
-                      (U = null), x(t);
+                      ((U = null), x(t));
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE: function () {
-                      return (U = null), G(), !1;
+                      return ((U = null), G(), !1);
                   },
                   OVERLAY_CRASHED: function (e) {
                       let { isCrashedDisabled: t, error: n } = e;
-                      return !0 === t && (P = !0), null != n && (U = n instanceof Error ? n.message : String(n)), !0;
+                      return (!0 === t && (P = !0), null != n && (U = n instanceof Error ? n.message : String(n)), !0);
                   },
               },
     ),
-    B = V;
+    V = B;

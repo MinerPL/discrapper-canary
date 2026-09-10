@@ -40,9 +40,9 @@ let E = {
     fetchSurveyDetails: async function e(e) {
         try {
             let t = (await r.Bo.get({ url: u.Rsh.EMBEDDED_SURVEY(e), rejectWithError: !0 })).body;
-            return a.h.dispatch({ type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: e, surveyDetails: t }), t;
+            return (a.h.dispatch({ type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: e, surveyDetails: t }), t);
         } catch (e) {
-            return l.A.captureException(e), null;
+            return (l.A.captureException(e), null);
         }
     },
     submitSurveyResponse: async function e(e, t) {
@@ -55,12 +55,12 @@ let E = {
                     let t = i.Questions[e];
                     if (null != t)
                         if (t.QuestionType === c.SQ.MULTIPLE_CHOICE && t.Selector === c.BO.MULTIPLE_ANSWER)
-                            (r[e] = n.split(",")), null != t.ChoiceOrder && (r[`${e}_DO`] = t.ChoiceOrder);
+                            ((r[e] = n.split(",")), null != t.ChoiceOrder && (r[`${e}_DO`] = t.ChoiceOrder));
                         else if (t.QuestionType === c.SQ.MULTIPLE_CHOICE && t.Selector === c.BO.SINGLE_ANSWER) {
                             if (n.includes(":TEXT:")) {
                                 let t = n.split(":TEXT:", 2)[0],
                                     i = n.split(":TEXT:", 2)[1];
-                                (r[e] = parseInt(t)), (r[`${e}_${t}_TEXT`] = i);
+                                ((r[e] = parseInt(t)), (r[`${e}_${t}_TEXT`] = i));
                             } else r[e] = parseInt(n);
                             null != t.ChoiceOrder && (r[`${e}_DO`] = t.ChoiceOrder);
                         } else t.QuestionType === c.SQ.TEXT_ENTRY ? (r[`${e}_TEXT`] = n) : (r[e] = n);
@@ -91,7 +91,7 @@ let E = {
                 ).body.responseId,
             };
         } catch (e) {
-            return l.A.captureException(e), { responseId: "null" };
+            return (l.A.captureException(e), { responseId: "null" });
         }
     },
     fireSurveyAction: _,

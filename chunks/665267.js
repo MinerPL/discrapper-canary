@@ -27,9 +27,9 @@ var i = n(477900),
     v = n(375708),
     j = n(510081);
 function O() {
-    (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: b.i.PRIMARY, forceTrack: !0 }),
+    ((0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: b.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
-        (0, _.default)();
+        (0, _.default)());
 }
 function L() {
     let e = (0, S.O)(),

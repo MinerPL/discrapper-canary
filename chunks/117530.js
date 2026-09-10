@@ -3,14 +3,14 @@ var n = r(256062),
     i = r(77716);
 class o {
     constructor(e, t, r, n) {
-        (this._walkerStack = []),
+        ((this._walkerStack = []),
             (this._currentSetFor = new Set()),
             (this._acceptNode = (e) => {
                 if (e.nodeType === Node.ELEMENT_NODE) {
                     let t = e.shadowRoot;
                     if (t) {
                         let e = this._doc.createTreeWalker(t, this.whatToShow, { acceptNode: this._acceptNode });
-                        return this._walkerStack.unshift(e), NodeFilter.FILTER_ACCEPT;
+                        return (this._walkerStack.unshift(e), NodeFilter.FILTER_ACCEPT);
                     }
                     if ("function" == typeof this.filter) return this.filter(e);
                     if (this.filter?.acceptNode) return this.filter.acceptNode(e);
@@ -23,7 +23,7 @@ class o {
             (this.filter = n ?? null),
             (this.whatToShow = r ?? NodeFilter.SHOW_ALL),
             (this._currentNode = t),
-            this._walkerStack.unshift(e.createTreeWalker(t, r, this._acceptNode));
+            this._walkerStack.unshift(e.createTreeWalker(t, r, this._acceptNode)));
         const i = t.shadowRoot;
         if (i) {
             const e = this._doc.createTreeWalker(i, this.whatToShow, { acceptNode: this._acceptNode });
@@ -39,14 +39,14 @@ class o {
         let t = [],
             r = e,
             i = e;
-        for (this._currentNode = e; r && r !== this.root; )
+        for (this._currentNode = e; r && r !== this.root;)
             if (r.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
                 let e = r,
                     n = this._doc.createTreeWalker(e, this.whatToShow, { acceptNode: this._acceptNode });
-                t.push(n), (n.currentNode = i), this._currentSetFor.add(n), (r = i = e.host);
+                (t.push(n), (n.currentNode = i), this._currentSetFor.add(n), (r = i = e.host));
             } else r = r.parentNode;
         let o = this._doc.createTreeWalker(this.root, this.whatToShow, { acceptNode: this._acceptNode });
-        t.push(o), (o.currentNode = i), this._currentSetFor.add(o), (this._walkerStack = t);
+        (t.push(o), (o.currentNode = i), this._currentSetFor.add(o), (this._walkerStack = t));
     }
     get doc() {
         return this._doc;
@@ -58,7 +58,7 @@ class o {
     }
     lastChild() {
         let e = this._walkerStack[0].lastChild();
-        return e && (this.currentNode = e), e;
+        return (e && (this.currentNode = e), e);
     }
     nextNode() {
         let e = this._walkerStack[0].nextNode();
@@ -71,17 +71,17 @@ class o {
                         : this.filter?.acceptNode && (t = this.filter.acceptNode(e)),
                     t === NodeFilter.FILTER_ACCEPT)
                 )
-                    return (this.currentNode = e), e;
+                    return ((this.currentNode = e), e);
                 let r = this.nextNode();
-                return r && (this.currentNode = r), r;
+                return (r && (this.currentNode = r), r);
             }
-            return e && (this.currentNode = e), e;
+            return (e && (this.currentNode = e), e);
         }
         if (!(this._walkerStack.length > 1)) return null;
         {
             this._walkerStack.shift();
             let e = this.nextNode();
-            return e && (this.currentNode = e), e;
+            return (e && (this.currentNode = e), e);
         }
     }
     previousNode() {
@@ -90,7 +90,7 @@ class o {
             if (this._currentSetFor.has(e) && (this._currentSetFor.delete(e), this._walkerStack.length > 1)) {
                 this._walkerStack.shift();
                 let e = this.previousNode();
-                return e && (this.currentNode = e), e;
+                return (e && (this.currentNode = e), e);
             }
             return null;
         }
@@ -104,17 +104,17 @@ class o {
                         : this.filter?.acceptNode && (e = this.filter.acceptNode(t)),
                     e === NodeFilter.FILTER_ACCEPT)
                 )
-                    return t && (this.currentNode = t), t;
+                    return (t && (this.currentNode = t), t);
                 let r = this.lastChild();
-                return r && (this.currentNode = r), r;
+                return (r && (this.currentNode = r), r);
             }
-            return t && (this.currentNode = t), t;
+            return (t && (this.currentNode = t), t);
         }
         if (!(this._walkerStack.length > 1)) return null;
         {
             this._walkerStack.shift();
             let e = this.previousNode();
-            return e && (this.currentNode = e), e;
+            return (e && (this.currentNode = e), e);
         }
     }
     nextSibling() {
@@ -149,13 +149,13 @@ function v(e) {
         U = (0, d.useRef)([]),
         { parentNode: z } = (0, d.useContext)(p) || {},
         W = (0, d.useMemo)(() => new I({ scopeRef: U }), [U]);
-    (0, f.N)(() => {
+    ((0, f.N)(() => {
         let e = z || O.root;
         if (O.getTreeNode(e.scopeRef) && m && !_(m, e.scopeRef)) {
             let t = O.getTreeNode(m);
             t && (e = t);
         }
-        e.addChild(W), O.addNode(W);
+        (e.addChild(W), O.addNode(W));
     }, [W, z]),
         (0, f.N)(() => {
             let e = O.getTreeNode(U);
@@ -165,7 +165,7 @@ function v(e) {
             let e = $.current?.nextSibling,
                 t = [],
                 r = (e) => e.stopPropagation();
-            for (; e && e !== V.current; ) t.push(e), e.addEventListener(h, r), (e = e.nextSibling);
+            for (; e && e !== V.current;) (t.push(e), e.addEventListener(h, r), (e = e.nextSibling));
             return (
                 (U.current = t),
                 () => {
@@ -188,7 +188,8 @@ function v(e) {
                 o.addEventListener("focusin", a, !1),
                 e?.forEach((e) => e.addEventListener("focusin", a, !1)),
                 () => {
-                    o.removeEventListener("focusin", a, !1), e?.forEach((e) => e.removeEventListener("focusin", a, !1));
+                    (o.removeEventListener("focusin", a, !1),
+                        e?.forEach((e) => e.removeEventListener("focusin", a, !1)));
                 }
             );
         }, [t, r, i]),
@@ -212,13 +213,13 @@ function v(e) {
                     if (!r) return;
                     a.currentNode = r;
                     let s = e.shiftKey ? a.previousNode() : a.nextNode();
-                    s ||
+                    (s ||
                         ((a.currentNode = e.shiftKey
                             ? i[i.length - 1].nextElementSibling
                             : i[0].previousElementSibling),
                         (s = e.shiftKey ? a.previousNode() : a.nextNode())),
                         e.preventDefault(),
-                        s && (S(s, !0), s instanceof (0, l.mD)(s).HTMLInputElement && s.select());
+                        s && (S(s, !0), s instanceof (0, l.mD)(s).HTMLInputElement && s.select()));
                 },
                 i = (e) => {
                     (!m || _(m, o)) && b((0, n.wt)(e), o.current)
@@ -230,7 +231,7 @@ function v(e) {
                           : g(o) && (D.current = (0, n.wt)(e));
                 },
                 c = (e) => {
-                    R.current && cancelAnimationFrame(R.current),
+                    (R.current && cancelAnimationFrame(R.current),
                         (R.current = requestAnimationFrame(() => {
                             let r = (0, s.ME)(),
                                 i = ("virtual" === r || null === r) && (0, u.m0)() && (0, u.H8)(),
@@ -240,7 +241,7 @@ function v(e) {
                                 let t = (0, n.wt)(e);
                                 t && t.isConnected ? ((D.current = t), S(D.current)) : m.current && E(m.current);
                             }
-                        }));
+                        })));
                 };
             return (
                 t.addEventListener("keydown", r, !1),
@@ -248,10 +249,10 @@ function v(e) {
                 e?.forEach((e) => e.addEventListener("focusin", i, !1)),
                 e?.forEach((e) => e.addEventListener("focusout", c, !1)),
                 () => {
-                    t.removeEventListener("keydown", r, !1),
+                    (t.removeEventListener("keydown", r, !1),
                         t.removeEventListener("focusin", i, !1),
                         e?.forEach((e) => e.removeEventListener("focusin", i, !1)),
-                        e?.forEach((e) => e.removeEventListener("focusout", c, !1));
+                        e?.forEach((e) => e.removeEventListener("focusout", c, !1)));
                 }
             );
         }, [o, a]),
@@ -276,7 +277,8 @@ function v(e) {
                 t.addEventListener("focusin", r, !1),
                 e?.forEach((e) => e.addEventListener("focusin", r, !1)),
                 () => {
-                    t.removeEventListener("focusin", r, !1), e?.forEach((e) => e.removeEventListener("focusin", r, !1));
+                    (t.removeEventListener("focusin", r, !1),
+                        e?.forEach((e) => e.removeEventListener("focusin", r, !1)));
                 }
             );
         }, [c, M]),
@@ -327,12 +329,12 @@ function v(e) {
                             requestAnimationFrame(() => {
                                 if (e.activeElement === e.body) {
                                     let e = t.getTreeNode(c);
-                                    for (; e; ) {
+                                    for (; e;) {
                                         if (e.nodeToRestore && e.nodeToRestore.isConnected)
                                             return void C(e.nodeToRestore);
                                         e = e.parent;
                                     }
-                                    for (e = t.getTreeNode(c); e; ) {
+                                    for (e = t.getTreeNode(c); e;) {
                                         if (e.scopeRef && e.scopeRef.current && O.getTreeNode(e.scopeRef))
                                             return void C(x(e.scopeRef.current, !0));
                                         e = e.parent;
@@ -365,10 +367,10 @@ function v(e) {
         (0, f.N)(
             () => () => {
                 let e = O.getTreeNode(U)?.parent?.scopeRef ?? null;
-                (U === m || _(U, m)) && (!e || O.getTreeNode(e)) && (m = e), O.removeTreeNode(U);
+                ((U === m || _(U, m)) && (!e || O.getTreeNode(e)) && (m = e), O.removeTreeNode(U));
             },
             [U],
-        );
+        ));
     let H = (0, d.useMemo)(() => {
             var e;
             return (
@@ -382,7 +384,7 @@ function v(e) {
                             f = T(y(r), { tabbable: o, accept: s }, r);
                         f.currentNode = b(u, r) ? u : c;
                         let d = f.nextNode();
-                        return !d && a && ((f.currentNode = c), (d = f.nextNode())), d && S(d, !0), d;
+                        return (!d && a && ((f.currentNode = c), (d = f.nextNode())), d && S(d, !0), d);
                     },
                     focusPrevious(t = {}) {
                         let r = e.current,
@@ -392,7 +394,7 @@ function v(e) {
                             f = T(y(r), { tabbable: o, accept: s }, r);
                         f.currentNode = b(u, r) ? u : c;
                         let d = f.previousNode();
-                        return !d && a && ((f.currentNode = c), (d = f.previousNode())), d && S(d, !0), d;
+                        return (!d && a && ((f.currentNode = c), (d = f.previousNode())), d && S(d, !0), d);
                     },
                     focusFirst(t = {}) {
                         let r = e.current,
@@ -400,7 +402,7 @@ function v(e) {
                             o = T(y(r), { tabbable: n, accept: i }, r);
                         o.currentNode = r[0].previousElementSibling;
                         let a = o.nextNode();
-                        return a && S(a, !0), a;
+                        return (a && S(a, !0), a);
                     },
                     focusLast(t = {}) {
                         let r = e.current,
@@ -408,7 +410,7 @@ function v(e) {
                             o = T(y(r), { tabbable: n, accept: i }, r);
                         o.currentNode = r[r.length - 1].nextElementSibling;
                         let a = o.previousNode();
-                        return a && S(a, !0), a;
+                        return (a && S(a, !0), a);
                     },
                 }
             );
@@ -427,7 +429,7 @@ function y(e) {
 }
 function g(e) {
     let t = O.getTreeNode(m);
-    for (; t && t.scopeRef !== e; ) {
+    for (; t && t.scopeRef !== e;) {
         if (t.contain) return !1;
         t = t.parent;
     }
@@ -443,7 +445,7 @@ function w(e, t = null) {
 }
 function _(e, t) {
     let r = O.getTreeNode(t)?.parent;
-    for (; r; ) {
+    for (; r;) {
         if (r.scopeRef === e) return !0;
         r = r.parent;
     }
@@ -466,14 +468,14 @@ function x(e, t = !0) {
         i = T(n, { tabbable: t }, e);
     i.currentNode = r;
     let o = i.nextNode();
-    return t && !o && (((i = T((n = y(e)), { tabbable: !1 }, e)).currentNode = r), (o = i.nextNode())), o;
+    return (t && !o && (((i = T((n = y(e)), { tabbable: !1 }, e)).currentNode = r), (o = i.nextNode())), o);
 }
 function E(e, t = !0) {
     S(x(e, t));
 }
 function k(e) {
     let t = O.getTreeNode(m);
-    for (; t && t.scopeRef !== e; ) {
+    for (; t && t.scopeRef !== e;) {
         if (t.nodeToRestore) return !1;
         t = t.parent;
     }
@@ -524,7 +526,7 @@ function T(e, t, r) {
                           : NodeFilter.FILTER_SKIP,
             }),
             (0, i.Nf)() ? new o(p, a, s, u) : p.createTreeWalker(a, s, u));
-    return t?.from && (h.currentNode = t.from), h;
+    return (t?.from && (h.currentNode = t.from), h);
 }
 function M(e, t = {}) {
     return {
@@ -536,7 +538,7 @@ function M(e, t = {}) {
                 f = T(i, { tabbable: a, accept: u });
             (0, n.sD)(i, c) && (f.currentNode = c);
             let d = f.nextNode();
-            return !d && s && ((f.currentNode = i), (d = f.nextNode())), d && S(d, !0), d;
+            return (!d && s && ((f.currentNode = i), (d = f.nextNode())), d && S(d, !0), d);
         },
         focusPrevious(r = t) {
             let i = e.current;
@@ -547,7 +549,7 @@ function M(e, t = {}) {
             if ((0, n.sD)(i, c)) f.currentNode = c;
             else {
                 let e = P(f);
-                return e && S(e, !0), e ?? null;
+                return (e && S(e, !0), e ?? null);
             }
             let d = f.previousNode();
             if (!d && s) {
@@ -556,21 +558,21 @@ function M(e, t = {}) {
                 if (!e) return null;
                 d = e;
             }
-            return d && S(d, !0), d ?? null;
+            return (d && S(d, !0), d ?? null);
         },
         focusFirst(r = t) {
             let n = e.current;
             if (!n) return null;
             let { tabbable: i = t.tabbable, accept: o = t.accept } = r,
                 a = T(n, { tabbable: i, accept: o }).nextNode();
-            return a && S(a, !0), a;
+            return (a && S(a, !0), a);
         },
         focusLast(r = t) {
             let n = e.current;
             if (!n) return null;
             let { tabbable: i = t.tabbable, accept: o = t.accept } = r,
                 a = P(T(n, { tabbable: i, accept: o }));
-            return a && S(a, !0), a ?? null;
+            return (a && S(a, !0), a ?? null);
         },
     };
 }
@@ -582,7 +584,7 @@ function P(e) {
 }
 class A {
     constructor() {
-        (this.fastMap = new Map()), (this.root = new I({ scopeRef: null })), this.fastMap.set(null, this.root);
+        ((this.fastMap = new Map()), (this.root = new I({ scopeRef: null })), this.fastMap.set(null, this.root));
     }
     get size() {
         return this.fastMap.size;
@@ -594,7 +596,7 @@ class A {
         let n = this.fastMap.get(t ?? null);
         if (!n) return;
         let i = new I({ scopeRef: e });
-        n.addChild(i), (i.parent = n), this.fastMap.set(e, i), r && (i.nodeToRestore = r);
+        (n.addChild(i), (i.parent = n), this.fastMap.set(e, i), r && (i.nodeToRestore = r));
     }
     addNode(e) {
         this.fastMap.set(e.scopeRef, e);
@@ -613,7 +615,7 @@ class A {
                 b(e.nodeToRestore, t.scopeRef.current) &&
                 (e.nodeToRestore = t.nodeToRestore);
         let n = t.children;
-        r && (r.removeChild(t), n.size > 0 && n.forEach((e) => r && r.addChild(e))), this.fastMap.delete(t.scopeRef);
+        (r && (r.removeChild(t), n.size > 0 && n.forEach((e) => r && r.addChild(e))), this.fastMap.delete(t.scopeRef));
     }
     *traverse(e = this.root) {
         if ((null != e.scopeRef && (yield e), e.children.size > 0)) for (let t of e.children) yield* this.traverse(t);
@@ -626,13 +628,13 @@ class A {
 }
 class I {
     constructor(e) {
-        (this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef);
+        ((this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef));
     }
     addChild(e) {
-        this.children.add(e), (e.parent = this);
+        (this.children.add(e), (e.parent = this));
     }
     removeChild(e) {
-        this.children.delete(e), (e.parent = void 0);
+        (this.children.delete(e), (e.parent = void 0));
     }
 }
 let O = new A();

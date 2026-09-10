@@ -35,7 +35,7 @@ function E() {
         D = g.useConfig({ location: s.A.USER_PROFILE_MODAL_V2 }).enabled && O;
     return (
         i.useEffect(() => {
-            (0, u.Wq)().catch(() => {}), e && (0, u.i$)().catch(() => {});
+            ((0, u.Wq)().catch(() => {}), e && (0, u.i$)().catch(() => {}));
         }, [e]),
         i.useMemo(() => {
             let t = new Set(a.filter((e) => e instanceof A.R).map((e) => e.applicationId)),

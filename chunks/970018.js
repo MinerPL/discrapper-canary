@@ -39,7 +39,7 @@ function d(e) {
                     let e = Object.keys(d)
                         .filter((e) => d[e].checked)
                         .map((e) => d[e].value);
-                    n?.(e), t.onClose();
+                    (n?.(e), t.onClose());
                 },
                 variant: "primary",
             },
@@ -51,7 +51,7 @@ function d(e) {
                 return { label: t, value: e };
             }),
             onChange: function (e) {
-                u((t) => {
+                (u((t) => {
                     let n = { ...t };
                     return (
                         Object.keys(n).forEach((e) => {
@@ -63,7 +63,7 @@ function d(e) {
                         n
                     );
                 }),
-                    e.length > 0 && k && h(!1);
+                    e.length > 0 && k && h(!1));
             },
             errorMessage: k ? o.intl.string(o.t.W1Rw3D) : void 0,
         }),

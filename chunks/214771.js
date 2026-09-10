@@ -32,7 +32,7 @@ let c = new s.A("NonGuildVersions"),
                 let t = (await e.getMany()).map((e) => [e.id, "version" in e ? e.version : e.versionString]);
                 return Object.fromEntries(t ?? []);
             } catch (e) {
-                return c.warn("couldn't load guild versions", e), {};
+                return (c.warn("couldn't load guild versions", e), {});
             }
         }
         handleConnectionOpen(e, t) {

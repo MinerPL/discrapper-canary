@@ -40,10 +40,10 @@ async function I(e, t) {
                 let { status: i } = n;
                 if (404 === i) s.h.dispatch({ type: "APPLICATION_BUILD_NOT_FOUND", applicationId: e, branchId: t });
                 else
-                    null == h[t] && (h[t] = new a.Ep()),
+                    (null == h[t] && (h[t] = new a.Ep()),
                         h[t].start(_ + Math.random() * E, () => {
                             null != o.A.getLibraryApplication(e, t) && I(e, t);
-                        });
+                        }));
             },
         )
     );

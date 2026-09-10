@@ -1,10 +1,10 @@
-d.d(t, { Ni: () => a.n, ET: () => y, lv: () => a.t, noOpFlowModuleMachine: () => u }), d(580607), d(41851);
+(d.d(t, { Ni: () => a.n, ET: () => y, lv: () => a.t, noOpFlowModuleMachine: () => u }), d(580607), d(41851));
 var i = d(269882);
-d(528239), d(829601), d(924260), d(489510), d(886347), d(219877), d(309076);
+(d(528239), d(829601), d(924260), d(489510), d(886347), d(219877), d(309076));
 var e = d(646613);
 d(761969);
 var c = d(588936);
-d(673661), d(502220);
+(d(673661), d(502220));
 var a = d(647051),
     s = d(464628);
 function n(l) {
@@ -36,7 +36,7 @@ let b = [c.t.NONEXISTENT_CUSTOMER, c.t.HINT_NOT_PROVIDED, c.t.NO_MORE_ATTEMPTS],
         return (
             c.start(),
             () => {
-                a.unsubscribe(), c.stop();
+                (a.unsubscribe(), c.stop());
             }
         );
     }),
@@ -521,7 +521,7 @@ function y(l) {
                     (d = void 0),
                     (h = new Set()));
                 if ("loading" === l.status && !1 === a) {
-                    (a = !0), c.emit({ type: "flow.started", interviewId: t.interviewId });
+                    ((a = !0), c.emit({ type: "flow.started", interviewId: t.interviewId }));
                     return;
                 }
                 let i = l.flow;
@@ -531,7 +531,7 @@ function y(l) {
                         b = Z(a, u);
                     if ((void 0 !== d && void 0 !== b && d.key !== b.key && W(a), !1 === s)) {
                         let l;
-                        (s = !0),
+                        ((s = !0),
                             c.emit({
                                 type: "flow.ready",
                                 interviewId: t.interviewId,
@@ -543,9 +543,9 @@ function y(l) {
                                         currentStepIndex: a.currentStepIndex ?? -1,
                                     }),
                                     void 0 === a.currentStep ? l : { ...l, currentStep: a.currentStep }),
-                            });
+                            }));
                     }
-                    a.homeScreen?.visible === !0 && (u = !0),
+                    (a.homeScreen?.visible === !0 && (u = !0),
                         void 0 === (e = Z(a, u)) ||
                             (e.key !== d?.key &&
                                 ((d = e),
@@ -555,29 +555,29 @@ function y(l) {
                                     flowId: n(a),
                                     module: e.module,
                                     payload: e.payload,
-                                })));
+                                }))));
                     return;
                 }
                 if ("finished" === l.status && !1 === b) {
                     W(l);
                     let d = l.finishStatus;
-                    (b = !0),
+                    ((b = !0),
                         c.emit({
                             type: "flow.completed",
                             interviewId: t.interviewId,
                             flowId: n(l),
                             ...(void 0 !== d ? { payload: d } : {}),
-                        });
+                        }));
                     return;
                 }
                 if ("error" === l.status && !1 === m) {
-                    (m = !0),
+                    ((m = !0),
                         c.emit({
                             type: "flow.error",
                             interviewId: t.interviewId,
                             flowId: n(l),
                             error: l.error ?? "Unknown error",
-                        });
+                        }));
                     return;
                 }
                 "closed" === l.status &&
@@ -618,19 +618,19 @@ function y(l) {
                             l.send({ type: "LOAD" });
                         },
                         cancel() {
-                            d?.("cancel"), l.send({ type: "CANCEL" });
+                            (d?.("cancel"), l.send({ type: "CANCEL" }));
                         },
                         reset() {
                             l.send({ type: "RESET" });
                         },
                         completeModule() {
-                            d?.("completeModule"), l.send({ type: "MODULE_COMPLETE" });
+                            (d?.("completeModule"), l.send({ type: "MODULE_COMPLETE" }));
                         },
                         completeFlow() {
-                            d?.("completeFlow"), l.send({ type: "COMPLETE_FLOW" });
+                            (d?.("completeFlow"), l.send({ type: "COMPLETE_FLOW" }));
                         },
                         finishFlow() {
-                            d?.("finishFlow"), l.send({ type: "FINISH_FLOW" });
+                            (d?.("finishFlow"), l.send({ type: "FINISH_FLOW" }));
                         },
                         errorModule(t, d) {
                             l.send({ type: "MODULE_ERROR", error: t, moduleErrorCode: d });
@@ -669,11 +669,11 @@ function y(l) {
                             let t = c();
                             if (t.homeScreen.visible) {
                                 if ("ready" === t.status) {
-                                    d?.("homeContinue"), l.send({ type: "HOME_CONTINUE" });
+                                    (d?.("homeContinue"), l.send({ type: "HOME_CONTINUE" }));
                                     return;
                                 }
                                 if (t.presentation.isAwaitingReady) {
-                                    d?.("homeContinue"), l.send({ type: "HOME_CONTINUE" });
+                                    (d?.("homeContinue"), l.send({ type: "HOME_CONTINUE" }));
                                     try {
                                         await r(
                                             l,

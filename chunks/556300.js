@@ -16,9 +16,9 @@ function h(e) {
                 p = m.noStyleAndInteraction
                     ? void 0
                     : (n) => {
-                          e.shouldStopPropagation && n?.stopPropagation(),
+                          (e.shouldStopPropagation && n?.stopPropagation(),
                               (0, u.o)(t.guildId, t.channelId, t.messageId),
-                              e.shouldCloseDefaultModals && (0, i.closeAllModals)();
+                              e.shouldCloseDefaultModals && (0, i.closeAllModals)());
                       },
                 g =
                     m.noStyleAndInteraction || null == t.channelId || (null == f && null == t.originalLink)

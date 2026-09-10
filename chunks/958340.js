@@ -22,12 +22,12 @@ class l extends i.Ay.Store {
 }
 let o = new l(r.h, {
     BASIC_GUILD_FETCH: function (e) {
-        return (s[e.guildId] = { type: "loading" }), !1;
+        return ((s[e.guildId] = { type: "loading" }), !1);
     },
     BASIC_GUILD_FETCH_SUCCESS: function (e) {
-        (s[e.guildId] = e.guildInfo), a++;
+        ((s[e.guildId] = e.guildInfo), a++);
     },
     BASIC_GUILD_FETCH_FAILURE: function (e) {
-        return (s[e.guildId] = { type: "failed" }), !1;
+        return ((s[e.guildId] = { type: "failed" }), !1);
     },
 });

@@ -1,4 +1,4 @@
-i.d(t, { default: () => p }), i(321073);
+(i.d(t, { default: () => p }), i(321073));
 var a = i(477900),
     l = i(582128),
     o = i(189213),
@@ -25,7 +25,7 @@ let p = function (e) {
             console.log("Scan complete");
         }, []);
     async function w() {
-        p(!0), u("");
+        (p(!0), u(""));
         try {
             let e = await h(v);
             r.A.showAgeVerification({

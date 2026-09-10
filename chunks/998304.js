@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     De: () => p,
     E2: () => l,
     IB: () => u,
@@ -11,7 +11,7 @@ n.d(t, {
     lZ: () => A,
     tp: () => s,
 }),
-    n(321073);
+    n(321073));
 var i = n(310784),
     r = n.n(i);
 n(626584);
@@ -96,9 +96,9 @@ function c(e) {
         h = _,
         I = E,
         f = A;
-    I < 30 && (I += 30), f > 80 && (f -= 40), f < 20 && (f += 15);
+    (I < 30 && (I += 30), f > 80 && (f -= 40), f < 20 && (f += 15));
     let p = 360 / (c + 1);
-    for (; u.length < c; ) {
+    for (; u.length < c;) {
         (h -= p) < 0 && (h += 360);
         let {
             r: e,
@@ -158,7 +158,7 @@ function _(e, t, n) {
             },
             l = n < 0.5 ? n * (1 + t) : n + t - n * t,
             o = 2 * n - l;
-        (i = a(o, l, e + 1 / 3)), (r = a(o, l, e)), (s = a(o, l, e - 1 / 3));
+        ((i = a(o, l, e + 1 / 3)), (r = a(o, l, e)), (s = a(o, l, e - 1 / 3)));
     }
     return new a.A(Math.round(255 * i), Math.round(255 * r), Math.round(255 * s), 1);
 }

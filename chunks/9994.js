@@ -1,4 +1,4 @@
-n.d(t, { MU: () => c, oO: () => u, ow: () => d, wr: () => o }), n(516773);
+(n.d(t, { MU: () => c, oO: () => u, ow: () => d, wr: () => o }), n(516773));
 var i = n(236285),
     r = n(7584),
     a = n(403362),
@@ -42,7 +42,7 @@ function o(e) {
                 ? {}
                 : Object.entries(n).reduce((e, t) => {
                       let [n, i] = t;
-                      return (e[n] = { level: i.activity_level, score: i.activity_score }), e;
+                      return ((e[n] = { level: i.activity_level, score: i.activity_score }), e);
                   }, {}),
         games: e.games,
         features: e.features ?? [],

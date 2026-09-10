@@ -13,7 +13,7 @@ e.exports = function e(t, r, p, c, f) {
                 if ((f || (f = new n()), u(a))) i(t, r, l, p, e, c, f);
                 else {
                     var d = c ? c(s(t, l), a, l + "", t, r, f) : void 0;
-                    void 0 === d && (d = a), o(t, l, d);
+                    (void 0 === d && (d = a), o(t, l, d));
                 }
             },
             l,

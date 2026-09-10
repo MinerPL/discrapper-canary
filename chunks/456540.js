@@ -21,7 +21,7 @@ function o(n) {
                         message: h.intl.string(h.t.eSuJE2),
                         ctaMessage: h.intl.string(h.t.RXsxqb),
                         onClick: function () {
-                            a.A.setState({ subsection: d.nR }), (0, u.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL);
+                            (a.A.setState({ subsection: d.nR }), (0, u.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL));
                         },
                     }),
                 ],

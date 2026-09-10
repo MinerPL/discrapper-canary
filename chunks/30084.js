@@ -5,7 +5,7 @@ var a = n(477900),
     s = n(652215);
 function i(e) {
     let { analyticsLocations: t, displayProfile: i, location: o } = e;
-    null == o && (o = t[t.length - 1]),
+    (null == o && (o = t[t.length - 1]),
         r.default.track(s.HAw.OPEN_MODAL, {
             type: "Tiered Tenure Badge Details",
             location_stack: t,
@@ -23,5 +23,5 @@ function i(e) {
                 n.e("277641"),
             ]).then(n.bind(n, 384048));
             return (t) => (0, a.jsx)(e, { ...t, displayProfile: i });
-        });
+        }));
 }

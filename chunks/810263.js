@@ -22,11 +22,11 @@ function C(e) {
         C = (0, u.A)({ id: e.id, label: A.intl.string(A.t["94lLD7"]) }),
         L = t.useCallback(() => {
             let n = (0, y.Iv)(e, k.XAf, !0);
-            c()(null != n, "cannot copy null icon URL"), (0, g.C)(n);
+            (c()(null != n, "cannot copy null icon URL"), (0, g.C)(n));
         }, [e]),
         h = t.useCallback(() => {
             let n = v.Ay.getGuildBannerURL({ id: e.id, banner: e.banner }, !0);
-            c()(null != n, "cannot copy null banner URL"), (0, g.C)(n);
+            (c()(null != n, "cannot copy null banner URL"), (0, g.C)(n));
         }, [e]),
         I = t.useCallback(() => {
             (0, g.C)(e.id);

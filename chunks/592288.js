@@ -26,7 +26,7 @@ function i(e) {
                     let u = (s = t(a)).props.id ?? a?.key ?? a?.id;
                     null != i && null == s.props.id && null != u && (u = i + ":" + u);
                     let c = u ?? e.length;
-                    (s = (0, n.cloneElement)(s, o ? { key: c, id: u, value: a } : { key: c })), r && l.set(r, s);
+                    ((s = (0, n.cloneElement)(s, o ? { key: c, id: u, value: a } : { key: c })), r && l.set(r, s));
                 }
                 e.push(s);
             }

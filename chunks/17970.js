@@ -1815,10 +1815,10 @@ var U = ({ manager: l, permissionStatus: t }) => {
                     (clearTimeout(m.current),
                     (i.textContent = ""),
                     (o.current = setTimeout(() => {
-                        (i.textContent = l),
+                        ((i.textContent = l),
                             (m.current = setTimeout(() => {
                                 i.textContent = "";
-                            }, 3e3));
+                            }, 3e3)));
                     }, 50)));
             }, []);
         return (
@@ -1831,7 +1831,7 @@ var U = ({ manager: l, permissionStatus: t }) => {
                 if (b.current) return;
                 let e = setTimeout(
                     () => {
-                        (b.current = !0), h(d("selfiev2.autoCapture.defaultAriaInstructions"));
+                        ((b.current = !0), h(d("selfiev2.autoCapture.defaultAriaInstructions")));
                     },
                     i ? 1e3 : 500,
                 );
@@ -1839,18 +1839,18 @@ var U = ({ manager: l, permissionStatus: t }) => {
             }, [l, t, h, d]),
             (0, e._)(() => {
                 let i = n.current;
-                (n.current = l),
+                ((n.current = l),
                     t ||
                         ("manualCapture" !== i &&
                             "manualCapture" === l &&
-                            h(d("idv2.capture.manualCapture.modeSwitchAriaAnnouncement")));
+                            h(d("idv2.capture.manualCapture.modeSwitchAriaAnnouncement"))));
             }, [h, l, d, t]),
             (0, e._)(() => {
                 !t && u && h(u);
             }, [u, h, t]),
             (0, e._)(
                 () => () => {
-                    clearTimeout(o.current), clearTimeout(m.current);
+                    (clearTimeout(o.current), clearTimeout(m.current));
                 },
                 [],
             ),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => S }), n(321073);
+(n.d(t, { A: () => S }), n(321073));
 var i = n(507392),
     r = n.n(i),
     a = n(64460),
@@ -54,15 +54,15 @@ function g(e) {
             null != n.keydown)
         ) {
             let e = i.indexOf("any-character");
-            -1 !== e &&
+            (-1 !== e &&
                 (!(function (e, t) {
                     function n(e) {
                         return t(e, e.key);
                     }
-                    document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n));
+                    (document.addEventListener(e, n), p.push(() => document.removeEventListener(e, n)));
                 })("keydown", n.keydown),
                 i.splice(e, 1)),
-                i.length > 0 && r.call(h, i, m(t, n.keydown), "keydown");
+                i.length > 0 && r.call(h, i, m(t, n.keydown), "keydown"));
         }
         null != n.keypress && r.call(h, i, m(t, n.keypress), "keypress");
     }
@@ -79,7 +79,7 @@ let S = {
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let i of T(e)) t.has(i) && n.push(i), t.add(i);
+        for (let i of T(e)) (t.has(i) && n.push(i), t.add(i));
         n.length > 0 && new s.A("Keybinds").warn("Duplicate keyboard shortcuts defined:", n);
     },
     setLayout(e) {
@@ -89,11 +89,11 @@ let S = {
         A || ((A = !0), this.checkDupes(_), g(_));
     },
     enableTemp(e) {
-        E.push(_), (_ = e), g(e), (A = !0);
+        (E.push(_), (_ = e), g(e), (A = !0));
     },
     disableTemp() {
         let e = E.pop();
-        null != e && (_ = e), this.disable(), this.enable();
+        (null != e && (_ = e), this.disable(), this.enable());
     },
     disable() {
         A && ((A = !1), p.forEach((e) => e()), (p = []), h.reset());
@@ -103,6 +103,6 @@ let S = {
     },
     hasBind(e) {
         let t = T(_);
-        return (e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim()), t.includes(e);
+        return ((e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim()), t.includes(e));
     },
 };

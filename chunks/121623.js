@@ -18,12 +18,12 @@ let d = "template",
             let n = null != e ? (0, i.FH)(e) : (0, i.BH)(),
                 r = (0, l.I_)(),
                 u = (0, l.Ay)(n, { utmSource: d, fingerprint: t, attemptId: r });
-            a.default.track(c.HAw.DEEP_LINK_CLICKED, {
+            (a.default.track(c.HAw.DEEP_LINK_CLICKED, {
                 fingerprint: (0, s.v)(t),
                 attempt_id: r,
                 source: d,
                 guild_template_code: e,
             }),
-                o.A.launch(u, () => {});
+                o.A.launch(u, () => {}));
         },
     };

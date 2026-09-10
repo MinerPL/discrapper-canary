@@ -1,37 +1,37 @@
 e.exports = (function () {
     var e = {
             506: (e) => {
-                (e.exports = function (e) {
+                ((e.exports = function (e) {
                     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e;
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             575: (e) => {
-                (e.exports = function (e, t) {
+                ((e.exports = function (e, t) {
                     if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             913: (e) => {
                 function t(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
-                        (r.enumerable = r.enumerable || !1),
+                        ((r.enumerable = r.enumerable || !1),
                             (r.configurable = !0),
                             "value" in r && (r.writable = !0),
-                            Object.defineProperty(e, r.key, r);
+                            Object.defineProperty(e, r.key, r));
                     }
                 }
-                (e.exports = function (e, n, r) {
+                ((e.exports = function (e, n, r) {
                     return (
                         n && t(e.prototype, n), r && t(e, r), Object.defineProperty(e, "prototype", { writable: !1 }), e
                     );
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             525: (e, t, n) => {
                 var r = n(331);
@@ -52,7 +52,7 @@ e.exports = (function () {
                         i.apply(this, arguments)
                     );
                 }
-                (e.exports = i), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+                ((e.exports = i), (e.exports.__esModule = !0), (e.exports.default = e.exports));
             },
             754: (e) => {
                 function t(n) {
@@ -68,39 +68,39 @@ e.exports = (function () {
                         t(n)
                     );
                 }
-                (e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+                ((e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports));
             },
             205: (e, t, n) => {
                 var r = n(489);
-                (e.exports = function (e, t) {
+                ((e.exports = function (e, t) {
                     if ("function" != typeof t && null !== t)
                         throw TypeError("Super expression must either be null or a function");
-                    (e.prototype = Object.create(t && t.prototype, {
+                    ((e.prototype = Object.create(t && t.prototype, {
                         constructor: { value: e, writable: !0, configurable: !0 },
                     })),
                         Object.defineProperty(e, "prototype", { writable: !1 }),
-                        t && r(e, t);
+                        t && r(e, t));
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             318: (e) => {
-                (e.exports = function (e) {
+                ((e.exports = function (e) {
                     return e && e.__esModule ? e : { default: e };
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             585: (e, t, n) => {
                 var r = n(8).default,
                     i = n(506);
-                (e.exports = function (e, t) {
+                ((e.exports = function (e, t) {
                     if (t && ("object" === r(t) || "function" == typeof t)) return t;
                     if (void 0 !== t) throw TypeError("Derived constructors may only return object or undefined");
                     return i(e);
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             489: (e) => {
                 function t(n, r) {
@@ -108,23 +108,23 @@ e.exports = (function () {
                         (e.exports = t =
                             Object.setPrototypeOf ||
                             function (e, t) {
-                                return (e.__proto__ = t), e;
+                                return ((e.__proto__ = t), e);
                             }),
                         (e.exports.__esModule = !0),
                         (e.exports.default = e.exports),
                         t(n, r)
                     );
                 }
-                (e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+                ((e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports));
             },
             331: (e, t, n) => {
                 var r = n(754);
-                (e.exports = function (e, t) {
-                    for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = r(e)); );
+                ((e.exports = function (e, t) {
+                    for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = r(e)););
                     return e;
                 }),
                     (e.exports.__esModule = !0),
-                    (e.exports.default = e.exports);
+                    (e.exports.default = e.exports));
             },
             8: (e) => {
                 function t(n) {
@@ -147,16 +147,16 @@ e.exports = (function () {
                         t(n)
                     );
                 }
-                (e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+                ((e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports));
             },
             848: (e) => {
-                window,
+                (window,
                     (e.exports = (function (e) {
                         var t = {};
                         function n(r) {
                             if (t[r]) return t[r].exports;
                             var i = (t[r] = { i: r, l: !1, exports: {} });
-                            return e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports;
+                            return (e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports);
                         }
                         return (
                             (n.m = e),
@@ -165,10 +165,10 @@ e.exports = (function () {
                                 n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
                             }),
                             (n.r = function (e) {
-                                "u" > typeof Symbol &&
+                                ("u" > typeof Symbol &&
                                     Symbol.toStringTag &&
                                     Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-                                    Object.defineProperty(e, "__esModule", { value: !0 });
+                                    Object.defineProperty(e, "__esModule", { value: !0 }));
                             }),
                             (n.t = function (e, t) {
                                 if (
@@ -200,7 +200,7 @@ e.exports = (function () {
                                         : function () {
                                               return e;
                                           };
-                                return n.d(t, "a", t), t;
+                                return (n.d(t, "a", t), t);
                             }),
                             (n.o = function (e, t) {
                                 return Object.prototype.hasOwnProperty.call(e, t);
@@ -212,12 +212,12 @@ e.exports = (function () {
                         function (e, t) {
                             function n(e, t) {
                                 if (e < 1 || e !== Math.round(e)) throw "Invalid channel count for BufferQueue";
-                                (this.channels = e), (this.bufferSize = t), this.flush();
+                                ((this.channels = e), (this.bufferSize = t), this.flush());
                             }
-                            (n.prototype.flush = function () {
-                                (this._buffers = []),
+                            ((n.prototype.flush = function () {
+                                ((this._buffers = []),
                                     (this._pendingBuffer = this.createBuffer(this.bufferSize)),
-                                    (this._pendingPos = 0);
+                                    (this._pendingPos = 0));
                             }),
                                 (n.prototype.sampleCount = function () {
                                     var e = 0;
@@ -267,9 +267,9 @@ e.exports = (function () {
                                     if (!this.validate(e))
                                         throw "Invalid audio buffer passed to BufferQueue.prependBuffer";
                                     var t = this._buffers.slice(0);
-                                    t.push(this.trimBuffer(this._pendingBuffer, 0, this._pendingPos)),
+                                    (t.push(this.trimBuffer(this._pendingBuffer, 0, this._pendingPos)),
                                         this.flush(),
-                                        this.appendBuffer(e);
+                                        this.appendBuffer(e));
                                     for (var n = 0; n < t.length; n++) this.appendBuffer(t[n]);
                                 }),
                                 (n.prototype.nextBuffer = function () {
@@ -288,20 +288,20 @@ e.exports = (function () {
                                     for (var a = [], o = 0; o < this.channels; o++) a[o] = e[o].subarray(t, i);
                                     return a;
                                 }),
-                                (e.exports = n);
+                                (e.exports = n));
                         },
                         function (e, t, n) {
                             n(0);
                             var r = n(2),
                                 i = n(4);
                             function a(e) {
-                                (this._options = e || {}),
+                                ((this._options = e || {}),
                                     (this._backend = null),
                                     (this._resampleFractional = 0),
                                     (this._resampleLastSampleData = void 0),
-                                    (this._tempoChanger = null);
+                                    (this._tempoChanger = null));
                             }
-                            (a.prototype.rate = 0),
+                            ((a.prototype.rate = 0),
                                 (a.prototype.targetRate = 0),
                                 (a.prototype.channels = 0),
                                 (a.prototype.bufferSize = 0),
@@ -380,7 +380,7 @@ e.exports = (function () {
                                         if (!r.isSupported()) throw "No supported backend";
                                         this._backend = new r(e, t, this._options);
                                     }
-                                    (this.targetRate = this._backend.rate),
+                                    ((this.targetRate = this._backend.rate),
                                         (this.bufferSize = this._backend.bufferSize),
                                         (this._tempoChanger = i({
                                             sampleRate: this.targetRate,
@@ -392,7 +392,7 @@ e.exports = (function () {
                                         }.bind(this)),
                                         (this._backend.onbufferlow = function () {
                                             this.onbufferlow && this.onbufferlow();
-                                        }.bind(this));
+                                        }.bind(this)));
                                 }),
                                 (a.prototype._resample = function (e) {
                                     var t = this.rate,
@@ -426,8 +426,8 @@ e.exports = (function () {
                                                           d = ((u + 1 - s) * t) / r - 1,
                                                           c = Math.floor(d),
                                                           f = Math.ceil(d);
-                                                      (l = c == f ? o(c) : o(c) * (f - d) + o(f) * (d - c)),
-                                                          (n[u] = a * l);
+                                                      ((l = c == f ? o(c) : o(c) * (f - d) + o(f) * (d - c)),
+                                                          (n[u] = a * l));
                                                   }
                                               }
                                             : function (e, t, n, r) {
@@ -441,21 +441,21 @@ e.exports = (function () {
                                         h >= n && (p = 0);
                                         var m = e[p],
                                             v = new Float32Array(d);
-                                        a(
+                                        (a(
                                             m,
                                             v,
                                             this._resampleLastSampleData ? this._resampleLastSampleData[p] : void 0,
                                             f,
                                         ),
-                                            o.push(v);
+                                            o.push(v));
                                     }
-                                    return (this._resampleFractional = c), (this._resampleLastSampleData = e), o;
+                                    return ((this._resampleFractional = c), (this._resampleLastSampleData = e), o);
                                 }),
                                 (a.prototype.bufferData = function (e) {
                                     if (!this._backend)
                                         throw "Invalid state: AudioFeeder cannot bufferData before init";
                                     var t = this._resample(e);
-                                    (t = this._tempoChanger.process(t)), this._backend.appendBuffer(t);
+                                    ((t = this._tempoChanger.process(t)), this._backend.appendBuffer(t));
                                 }),
                                 (a.prototype.getPlaybackState = function () {
                                     if (this._backend) {
@@ -490,7 +490,7 @@ e.exports = (function () {
                                         !this._backend)
                                     )
                                         throw "Invalid state: AudioFeeder cannot flush before init";
-                                    this._tempoChanger.flush(this.durationBuffered), this._backend.flush();
+                                    (this._tempoChanger.flush(this.durationBuffered), this._backend.flush());
                                 }),
                                 (a.prototype.close = function () {
                                     this._backend && (this._backend.close(), (this._backend = null));
@@ -503,7 +503,7 @@ e.exports = (function () {
                                 (a.initSharedAudioContext = function () {
                                     return r.isSupported() ? r.initSharedAudioContext() : null;
                                 }),
-                                (e.exports = a);
+                                (e.exports = a));
                         },
                         function (e, t, n) {
                             var r = window.AudioContext || window.webkitAudioContext,
@@ -532,7 +532,7 @@ e.exports = (function () {
                                     this._node = r.createJavaScriptNode(this.bufferSize, 0, this.channels);
                                 }
                             }
-                            (o.prototype.bufferSize = 4096),
+                            ((o.prototype.bufferSize = 4096),
                                 (o.prototype.bufferThreshold = 8192),
                                 (o.prototype._volume = 1),
                                 Object.defineProperty(o.prototype, "volume", {
@@ -587,12 +587,12 @@ e.exports = (function () {
                                                 i++
                                             )
                                                 r[i] = n[i] * s;
-                                        (this._queuedTime += this.bufferSize / this.rate),
+                                        ((this._queuedTime += this.bufferSize / this.rate),
                                             (this._playbackTimeAtBufferTail = o + this.bufferSize / this.rate),
                                             this._bufferQueue.sampleCount() <
                                                 Math.max(this.bufferSize, this.bufferThreshold) &&
                                                 this.onbufferlow &&
-                                                a(this.onbufferlow.bind(this));
+                                                a(this.onbufferlow.bind(this)));
                                     }
                                 }),
                                 (o.prototype._samplesQueued = function () {
@@ -619,9 +619,9 @@ e.exports = (function () {
                                     this._bufferQueue.appendBuffer(e);
                                 }),
                                 (o.prototype.start = function () {
-                                    (this._node.onaudioprocess = this._audioProcess.bind(this)),
+                                    ((this._node.onaudioprocess = this._audioProcess.bind(this)),
                                         this._node.connect(this.output),
-                                        (this._playbackTimeAtBufferTail = this._context.currentTime);
+                                        (this._playbackTimeAtBufferTail = this._context.currentTime));
                                 }),
                                 (o.prototype.stop = function () {
                                     if (this._node) {
@@ -629,7 +629,7 @@ e.exports = (function () {
                                         if (e > 0) {
                                             var t = Math.round(e * this.rate),
                                                 n = this._liveBuffer ? this._liveBuffer[0].length : 0;
-                                            t > n
+                                            (t > n
                                                 ? (this._bufferQueue.prependBuffer(this._liveBuffer),
                                                   this._bufferQueue.prependBuffer(
                                                       this._bufferQueue.createBuffer(t - n),
@@ -637,16 +637,16 @@ e.exports = (function () {
                                                 : this._bufferQueue.prependBuffer(
                                                       this._bufferQueue.trimBuffer(this._liveBuffer, n - t, t),
                                                   ),
-                                                (this._playbackTimeAtBufferTail -= e);
+                                                (this._playbackTimeAtBufferTail -= e));
                                         }
-                                        (this._node.onaudioprocess = null), this._node.disconnect();
+                                        ((this._node.onaudioprocess = null), this._node.disconnect());
                                     }
                                 }),
                                 (o.prototype.flush = function () {
                                     this._bufferQueue.flush();
                                 }),
                                 (o.prototype.close = function () {
-                                    this.stop(), (this._context = null);
+                                    (this.stop(), (this._context = null));
                                 }),
                                 (o.prototype.onstarved = null),
                                 (o.prototype.onbufferlow = null),
@@ -663,11 +663,11 @@ e.exports = (function () {
                                             if (!t.createJavaScriptNode) throw Error("Bad version of web audio API?");
                                             e = t.createJavaScriptNode(1024, 0, 2);
                                         }
-                                        e.connect(t.destination), e.disconnect(), (o.sharedAudioContext = t);
+                                        (e.connect(t.destination), e.disconnect(), (o.sharedAudioContext = t));
                                     }
                                     return o.sharedAudioContext;
                                 }),
-                                (e.exports = o);
+                                (e.exports = o));
                         },
                         function (e, t) {
                             e.exports = (function () {
@@ -685,11 +685,11 @@ e.exports = (function () {
                                             }
                                         }),
                                         function (t) {
-                                            e.push(t),
+                                            (e.push(t),
                                                 window.postMessage(
                                                     { nextTickBrowserPingMessage: !0 },
                                                     document.location.toString(),
-                                                );
+                                                ));
                                         }
                                     );
                                 }
@@ -699,7 +699,7 @@ e.exports = (function () {
                             })();
                         },
                         function (e, t, n) {
-                            window,
+                            (window,
                                 (e.exports = (function () {
                                     var e = [
                                             function (e, t) {
@@ -714,7 +714,7 @@ e.exports = (function () {
                                             },
                                             function (e, t, n) {
                                                 var r, i;
-                                                (r = n(0)),
+                                                ((r = n(0)),
                                                     (i = n(2)),
                                                     (e.exports = function (e) {
                                                         var t = (e = e || {}).sampleRate || 44100,
@@ -750,10 +750,10 @@ e.exports = (function () {
                                                             k = [],
                                                             F = [];
                                                         for (m = 0; m < 2; m++)
-                                                            A.push(r.float_array(E)),
+                                                            (A.push(r.float_array(E)),
                                                                 B.push(r.float_array(E)),
                                                                 k.push(r.float_array(E)),
-                                                                F.push(r.float_array(v));
+                                                                F.push(r.float_array(v)));
                                                         var T = r.float_array(E),
                                                             V = r.float_array(E),
                                                             x = 0,
@@ -777,19 +777,19 @@ e.exports = (function () {
                                                                     return n.in_time + n.tempo * (e - n.out_time);
                                                                 },
                                                                 flush: function (e) {
-                                                                    (M = 0), (C = [0, 0]), (z = 0), (j = 0), (I = 0);
+                                                                    ((M = 0), (C = [0, 0]), (z = 0), (j = 0), (I = 0));
                                                                     for (var t = 0; t < 2; t++)
                                                                         for (var n = 0; n < v; n++) F[t][n] = 0;
                                                                     for (t = 0; t < d.length; t++) d[t] = 0;
                                                                     for (t = 0; t < c.length; t++) c[t] = 0;
                                                                     if (e) {
-                                                                        (P = Math.max(0, P - e)),
-                                                                            (x = L.mapOutputToInputTime(P));
+                                                                        ((P = Math.max(0, P - e)),
+                                                                            (x = L.mapOutputToInputTime(P)));
                                                                         for (
                                                                             var r = O.length - 1;
                                                                             P <= O[r].out_time && r >= 0;
                                                                         )
-                                                                            O.pop(), r--;
+                                                                            (O.pop(), r--);
                                                                         O.push({ in_time: x, out_time: P, tempo: a });
                                                                     }
                                                                 },
@@ -797,7 +797,7 @@ e.exports = (function () {
                                                                     return a;
                                                                 },
                                                                 setTempo: function (e) {
-                                                                    (f = h = l),
+                                                                    ((f = h = l),
                                                                         e >= 1
                                                                             ? (h = Math.round(f / e))
                                                                             : (f = Math.round(h * e)),
@@ -813,14 +813,14 @@ e.exports = (function () {
                                                                                 r += e[i * t];
                                                                             return 0.9 / r;
                                                                         })(p, h)),
-                                                                        (a = e);
+                                                                        (a = e));
                                                                     var t = O[O.length - 1];
                                                                     t.out_time == P
                                                                         ? (t.tempo = e)
                                                                         : O.push({ in_time: x, out_time: P, tempo: e });
                                                                 },
                                                             };
-                                                        L.flush(0), L.setTempo(a);
+                                                        (L.flush(0), L.setTempo(a));
                                                         var Z = function (e, t, n) {
                                                                 var r = Math.floor(n),
                                                                     i = r % 2 == 1 ? -1 : 1;
@@ -888,7 +888,7 @@ e.exports = (function () {
                                                                 if (0 != e && 0 != g) {
                                                                     var D = 0;
                                                                     for (I = 0; I < g; I++) {
-                                                                        for (j = _[I]; _[I] > f[D] && D != c; ) ++D;
+                                                                        for (j = _[I]; _[I] > f[D] && D != c;) ++D;
                                                                         var w = D;
                                                                         D > 0 && j - f[D - 1] < f[D] - j && (w = D - 1);
                                                                         var E = j * o;
@@ -902,15 +902,15 @@ e.exports = (function () {
                                                                                     p[w] +
                                                                                     U(x, j, h[w], f[w], a) -
                                                                                     x;
-                                                                            (y[I] = x),
+                                                                            ((y[I] = x),
                                                                                 (b[I] = P),
                                                                                 (T[I] = Math.cos(P)),
-                                                                                (V[I] = Math.sin(P));
+                                                                                (V[I] = Math.sin(P)));
                                                                         } else
-                                                                            (y[I] = Z(t, n, j)),
+                                                                            ((y[I] = Z(t, n, j)),
                                                                                 (b[I] = 0),
                                                                                 (T[I] = 1),
-                                                                                (V[I] = 0);
+                                                                                (V[I] = 0));
                                                                     }
                                                                     _[g] = 2 * u;
                                                                     var O = _[(w = 0)],
@@ -926,7 +926,7 @@ e.exports = (function () {
                                                                             (R = V[w]));
                                                                         var M = t[v] * z - n[v] * R,
                                                                             N = t[v] * R + n[v] * z;
-                                                                        (t[v] = M), (n[v] = N);
+                                                                        ((t[v] = M), (n[v] = N));
                                                                     }
                                                                 } else
                                                                     for (var I = 0; I < g; I++) {
@@ -938,9 +938,9 @@ e.exports = (function () {
                                                                 var e = 0 | (M += 2 * N);
                                                                 M -= e;
                                                                 for (var t = 0; t < u; t++)
-                                                                    (s.m_re[t] = p[t] * d[t]),
-                                                                        (s.m_im[t] = p[t] * d[f + t]);
-                                                                r.blit(d, 2 * f, d, 0, u - f),
+                                                                    ((s.m_re[t] = p[t] * d[t]),
+                                                                        (s.m_im[t] = p[t] * d[f + t]));
+                                                                (r.blit(d, 2 * f, d, 0, u - f),
                                                                     s.inplace(!1),
                                                                     s.unpack(_, g, y, b),
                                                                     $(S, _, g, 0, 0, h / f),
@@ -948,7 +948,7 @@ e.exports = (function () {
                                                                     r.blit(y, 0, D, 0, v),
                                                                     r.blit(b, 0, w, 0, v),
                                                                     s.repack(_, g, y, b),
-                                                                    s.inplace(!0);
+                                                                    s.inplace(!0));
                                                                 var n = c.length;
                                                                 for (r.blit(c, z, c, 0, n - z), t = n - z; t < n; t++)
                                                                     c[t] = 0;
@@ -965,9 +965,9 @@ e.exports = (function () {
                                                                         (i = Math.abs(2 * s.m_im[t]));
                                                                 var o = 1 / Math.floor(u / (2 * h));
                                                                 for (a * i > o && (a = o / i), t = 0; t < u; t++)
-                                                                    (c[t] += a * s.m_re[t]),
-                                                                        (c[t + h + e] += a * s.m_im[t]);
-                                                                return (S += 2), (z = 2 * h + e);
+                                                                    ((c[t] += a * s.m_re[t]),
+                                                                        (c[t + h + e] += a * s.m_im[t]));
+                                                                return ((S += 2), (z = 2 * h + e));
                                                             };
                                                         return (
                                                             (L.process = function (e) {
@@ -984,14 +984,14 @@ e.exports = (function () {
                                                                             m = [];
                                                                         for (s = 0; s < e.length; s++) {
                                                                             var v = r.float_array(p);
-                                                                            r.blit(c, 0, v, 0, j),
+                                                                            (r.blit(c, 0, v, 0, j),
                                                                                 r.blit(d, 0, v, j, I),
                                                                                 r.blit(e[s], 0, v, j + I, n),
-                                                                                m.push(v);
+                                                                                m.push(v));
                                                                         }
-                                                                        L.flush(0), (n = p), (e = m);
+                                                                        (L.flush(0), (n = p), (e = m));
                                                                     }
-                                                                    return (x += n / t), (P += n / t), e;
+                                                                    return ((x += n / t), (P += n / t), e);
                                                                 }
                                                                 var _ =
                                                                         2 *
@@ -1002,15 +1002,15 @@ e.exports = (function () {
                                                                 j > g && (g = j);
                                                                 var y = r.float_array(g);
                                                                 r.blit(c, 0, y, 0, j);
-                                                                for (var b = 0, D = j, w = 0, E = 0; ; ) {
+                                                                for (var b = 0, D = j, w = 0, E = 0; ;) {
                                                                     var C = u + f - I;
                                                                     if (b + C > n) {
-                                                                        r.blit(i, b, d, I, n - b),
+                                                                        (r.blit(i, b, d, I, n - b),
                                                                             (I += n - b),
-                                                                            (b = n);
+                                                                            (b = n));
                                                                         break;
                                                                     }
-                                                                    C <= 0
+                                                                    (C <= 0
                                                                         ? (I -= 2 * f)
                                                                         : (r.blit(i, b, d, I, C),
                                                                           (b += C),
@@ -1020,18 +1020,19 @@ e.exports = (function () {
                                                                         (P += E / t),
                                                                         (w = D + E - g) < 0 && (w = 0),
                                                                         r.blit(c, 0, y, D, E - w),
-                                                                        (D += E);
+                                                                        (D += E));
                                                                 }
-                                                                r.blit(c, E - w, c, 0, w), (j = w);
+                                                                (r.blit(c, E - w, c, 0, w), (j = w));
                                                                 var A = [];
                                                                 for (s = 0; s < e.length; s++) A.push(y);
                                                                 return A;
                                                             }),
                                                             L
                                                         );
-                                                    });
+                                                    }));
                                             },
                                             function (e, t, n) {
+                                                "use strict";
                                                 var r = n(0);
                                                 e.exports = function (e) {
                                                     for (
@@ -1049,16 +1050,16 @@ e.exports = (function () {
                                                         i++
                                                     ) {
                                                         for (var a = i, o = 0, u = 0; u < e; u++)
-                                                            (o <<= 1), (o |= 1 & a), (a >>= 1);
+                                                            ((o <<= 1), (o |= 1 & a), (a >>= 1));
                                                         n.m_revTgt[i] = o;
                                                     }
-                                                    (n.twiddleRe = r.float_array(n.m_logN)),
-                                                        (n.twiddleIm = r.float_array(n.m_logN));
+                                                    ((n.twiddleRe = r.float_array(n.m_logN)),
+                                                        (n.twiddleIm = r.float_array(n.m_logN)));
                                                     for (var s = 1, l = 0; l < n.m_logN; l++) {
                                                         var d = 2 * s * Math.PI * n.m_invN;
-                                                        (n.twiddleRe[l] = Math.cos(d)),
+                                                        ((n.twiddleRe[l] = Math.cos(d)),
                                                             (n.twiddleIm[l] = Math.sin(d)),
-                                                            (s <<= 1);
+                                                            (s <<= 1));
                                                     }
                                                     n.inplace = function (e) {
                                                         var t = n.m_re,
@@ -1070,12 +1071,12 @@ e.exports = (function () {
                                                             s = i;
                                                         if (e)
                                                             for (var l = 1 / i, d = 0; d < i; d++)
-                                                                (t[d] *= l), (r[d] *= l);
+                                                                ((t[d] *= l), (r[d] *= l));
                                                         for (var c = 0; c < a; c++) {
                                                             var f = n.twiddleRe[c],
                                                                 h = n.twiddleIm[c];
                                                             e || (h *= -1);
-                                                            for (var p = 0; p < i; ) {
+                                                            for (var p = 0; p < i;) {
                                                                 for (
                                                                     var m = p, v = p + u, _ = 1, g = 0, y = 0;
                                                                     y < o;
@@ -1085,20 +1086,20 @@ e.exports = (function () {
                                                                         D = r[m],
                                                                         w = t[v],
                                                                         E = r[v];
-                                                                    (t[m] = b + w),
+                                                                    ((t[m] = b + w),
                                                                         (r[m] = D + E),
                                                                         (w = b - w),
                                                                         (E = D - E),
                                                                         (t[v] = w * _ - E * g),
                                                                         (r[v] = w * g + E * _),
                                                                         m++,
-                                                                        v++;
+                                                                        v++);
                                                                     var C = _;
-                                                                    (_ = _ * f - g * h), (g = C * h + g * f);
+                                                                    ((_ = _ * f - g * h), (g = C * h + g * f));
                                                                 }
                                                                 p += s;
                                                             }
-                                                            (o >>= 1), (u >>= 1), (s >>= 1);
+                                                            ((o >>= 1), (u >>= 1), (s >>= 1));
                                                         }
                                                         for (var A, B, k = n.m_revTgt, F = 0; F < i; F++)
                                                             k[F] > F &&
@@ -1112,28 +1113,28 @@ e.exports = (function () {
                                                     var c = t >> 1;
                                                     return (
                                                         (n.unpack = function (e, r, i, a) {
-                                                            (e[0] = n.m_re[0]),
+                                                            ((e[0] = n.m_re[0]),
                                                                 (i[0] = n.m_im[0]),
                                                                 (r[0] = a[0] = 0),
                                                                 (e[c] = n.m_re[c]),
                                                                 (i[c] = n.m_im[c]),
-                                                                (r[c] = a[c] = 0);
+                                                                (r[c] = a[c] = 0));
                                                             for (var o = 1; o < c; o++)
-                                                                (e[o] = (n.m_re[o] + n.m_re[t - o]) / 2),
+                                                                ((e[o] = (n.m_re[o] + n.m_re[t - o]) / 2),
                                                                     (r[o] = (n.m_im[o] - n.m_im[t - o]) / 2),
                                                                     (i[o] = (n.m_im[o] + n.m_im[t - o]) / 2),
-                                                                    (a[o] = (-n.m_re[o] + n.m_re[t - o]) / 2);
+                                                                    (a[o] = (-n.m_re[o] + n.m_re[t - o]) / 2));
                                                         }),
                                                         (n.repack = function (e, r, i, a) {
-                                                            (n.m_re[0] = e[0]),
+                                                            ((n.m_re[0] = e[0]),
                                                                 (n.m_im[0] = i[0]),
                                                                 (n.m_re[c] = e[c]),
-                                                                (n.m_im[c] = i[c]);
+                                                                (n.m_im[c] = i[c]));
                                                             for (var o = 1; o < c; o++)
-                                                                (n.m_re[o] = e[o] - a[o]),
+                                                                ((n.m_re[o] = e[o] - a[o]),
                                                                     (n.m_im[o] = r[o] + i[o]),
                                                                     (n.m_re[t - o] = e[o] + a[o]),
-                                                                    (n.m_im[t - o] = -r[o] + i[o]);
+                                                                    (n.m_im[t - o] = -r[o] + i[o]));
                                                         }),
                                                         n
                                                     );
@@ -1144,7 +1145,7 @@ e.exports = (function () {
                                     function n(r) {
                                         if (t[r]) return t[r].exports;
                                         var i = (t[r] = { i: r, l: !1, exports: {} });
-                                        return e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports;
+                                        return (e[r].call(i.exports, i, i.exports, n), (i.l = !0), i.exports);
                                     }
                                     return (
                                         (n.m = e),
@@ -1153,10 +1154,10 @@ e.exports = (function () {
                                             n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
                                         }),
                                         (n.r = function (e) {
-                                            "u" > typeof Symbol &&
+                                            ("u" > typeof Symbol &&
                                                 Symbol.toStringTag &&
                                                 Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-                                                Object.defineProperty(e, "__esModule", { value: !0 });
+                                                Object.defineProperty(e, "__esModule", { value: !0 }));
                                         }),
                                         (n.t = function (e, t) {
                                             if (
@@ -1189,7 +1190,7 @@ e.exports = (function () {
                                                     : function () {
                                                           return e;
                                                       };
-                                            return n.d(t, "a", t), t;
+                                            return (n.d(t, "a", t), t);
                                         }),
                                         (n.o = function (e, t) {
                                             return Object.prototype.hasOwnProperty.call(e, t);
@@ -1197,23 +1198,24 @@ e.exports = (function () {
                                         (n.p = ""),
                                         n((n.s = 1))
                                     );
-                                })());
+                                })()));
                         },
-                    ]));
+                    ])));
             },
             893: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913));
                 t.default = (function () {
                     function e(t) {
-                        (0, i.default)(this, e),
+                        ((0, i.default)(this, e),
                             (this.lower = t.start),
                             (this.upper = t.end),
                             (this.onprocess = t.process),
                             (this.position = 0),
-                            (this.n = 0);
+                            (this.n = 0));
                     }
                     return (
                         (0, a.default)(e, [
@@ -1230,19 +1232,19 @@ e.exports = (function () {
                             {
                                 key: "start",
                                 value: function () {
-                                    return this.iterate(), this;
+                                    return (this.iterate(), this);
                                 },
                             },
                             {
                                 key: "left",
                                 value: function () {
-                                    return (this.upper = this.position), this.iterate();
+                                    return ((this.upper = this.position), this.iterate());
                                 },
                             },
                             {
                                 key: "right",
                                 value: function () {
-                                    return (this.lower = this.position), this.iterate();
+                                    return ((this.lower = this.position), this.iterate());
                                 },
                             },
                         ]),
@@ -1251,8 +1253,9 @@ e.exports = (function () {
                 })();
             },
             523: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913));
                 t.default = new ((function () {
@@ -1323,8 +1326,9 @@ e.exports = (function () {
                 })())();
             },
             408: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913)),
                     o = r(n(205)),
@@ -1357,7 +1361,7 @@ e.exports = (function () {
                                 );
                             });
                     function r() {
-                        return (0, i.default)(this, r), n.apply(this, arguments);
+                        return ((0, i.default)(this, r), n.apply(this, arguments));
                     }
                     return (
                         (0, a.default)(r, [
@@ -1391,8 +1395,9 @@ e.exports = (function () {
                 })((0, r(n(580)).default)({ loadedMetadata: !1, audioFormat: null, audioBuffer: null, cpuTime: 0 }));
             },
             319: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913)),
                     o = r(n(205)),
@@ -1425,7 +1430,7 @@ e.exports = (function () {
                                 );
                             });
                     function r() {
-                        return (0, i.default)(this, r), n.apply(this, arguments);
+                        return ((0, i.default)(this, r), n.apply(this, arguments));
                     }
                     return (
                         (0, a.default)(r, [
@@ -1475,8 +1480,9 @@ e.exports = (function () {
                 })((0, r(n(580)).default)({ loadedMetadata: !1, videoFormat: null, frameBuffer: null, cpuTime: 0 }));
             },
             445: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913)),
                     o = r(n(539)),
@@ -1500,7 +1506,7 @@ e.exports = (function () {
                     };
                 t.default = (function () {
                     function e() {
-                        (0, i.default)(this, e), (this.base = this.defaultBase());
+                        ((0, i.default)(this, e), (this.base = this.defaultBase()));
                     }
                     return (
                         (0, a.default)(e, [
@@ -1568,8 +1574,9 @@ e.exports = (function () {
                 })();
             },
             964: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913)),
                     o = r(n(525)),
@@ -1673,20 +1680,20 @@ e.exports = (function () {
                                         if ("done" == this.scriptStatus[e]) t();
                                         else if ("loading" == this.scriptStatus[e]) this.scriptCallbacks[e].push(t);
                                         else {
-                                            (this.scriptStatus[e] = "loading"), (this.scriptCallbacks[e] = [t]);
+                                            ((this.scriptStatus[e] = "loading"), (this.scriptCallbacks[e] = [t]));
                                             var r = document.createElement("script"),
                                                 i = function (t) {
                                                     var r = n.scriptCallbacks[e];
-                                                    delete n.scriptCallbacks[e],
+                                                    (delete n.scriptCallbacks[e],
                                                         (n.scriptStatus[e] = "done"),
                                                         r.forEach(function (e) {
                                                             e();
-                                                        });
+                                                        }));
                                                 };
-                                            r.addEventListener("load", i),
+                                            (r.addEventListener("load", i),
                                                 r.addEventListener("error", i),
                                                 (r.src = e),
-                                                document.querySelector("head").appendChild(r);
+                                                document.querySelector("head").appendChild(r));
                                         }
                                     },
                                 },
@@ -1720,22 +1727,22 @@ e.exports = (function () {
                                                         try {
                                                             v = new Blob([e], { type: "application/javascript" });
                                                         } catch (t) {
-                                                            (window.BlobBuilder =
+                                                            ((window.BlobBuilder =
                                                                 window.BlobBuilder ||
                                                                 window.WebKitBlobBuilder ||
                                                                 window.MozBlobBuilder),
                                                                 (v = new BlobBuilder()).append(e),
-                                                                (v = v.getBlob());
+                                                                (v = v.getBlob()));
                                                         }
-                                                        (r = new Worker(URL.createObjectURL(v))),
+                                                        ((r = new Worker(URL.createObjectURL(v))),
                                                             t(function (e) {
                                                                 return Promise.resolve(new s(e));
-                                                            });
+                                                            }));
                                                     }
                                                 },
                                                 g = !1,
                                                 y = !1;
-                                            (l = new XMLHttpRequest()).open("GET", o, !0),
+                                            ((l = new XMLHttpRequest()).open("GET", o, !0),
                                                 (l.onreadystatechange = function () {
                                                     4 == l.readyState &&
                                                         200 == l.status &&
@@ -1748,12 +1755,12 @@ e.exports = (function () {
                                                         200 == d.status &&
                                                         ((f = d.responseText), (y = !0), _());
                                                 }),
-                                                d.send();
+                                                d.send());
                                         } else
-                                            (r = new Worker(u)),
+                                            ((r = new Worker(u)),
                                                 t(function (e) {
                                                     return Promise.resolve(new s(e));
-                                                });
+                                                }));
                                     },
                                 },
                             ]),
@@ -1763,8 +1770,9 @@ e.exports = (function () {
                 t.default = m;
             },
             759: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(913)),
                     a = r(n(575)),
                     o = r(n(309)),
@@ -1775,34 +1783,35 @@ e.exports = (function () {
                         MEDIA_ERR_SRC_NOT_SUPPORTED: 4,
                     },
                     s = (0, i.default)(function e(t, n) {
-                        (0, a.default)(this, e), (this.code = t), (this.message = n);
+                        ((0, a.default)(this, e), (this.code = t), (this.message = n));
                     });
-                (0, o.default)(s, u), (0, o.default)(s.prototype, u), (t.default = s);
+                ((0, o.default)(s, u), (0, o.default)(s.prototype, u), (t.default = s));
             },
             278: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(913)),
                     a = r(n(575));
                 function o(e, t, n) {
                     var r = e.split(t, n).map(function (e) {
                         return e.replace(/^\s+/, "").replace(/\s+$/, "");
                     });
-                    if ("number" == typeof n) for (; r.length < n; ) r.push(null);
+                    if ("number" == typeof n) for (; r.length < n;) r.push(null);
                     return r;
                 }
                 t.default = (0, i.default)(function e(t) {
-                    (0, a.default)(this, e),
+                    ((0, a.default)(this, e),
                         (t = String(t)),
                         (this.major = null),
                         (this.minor = null),
-                        (this.codecs = null);
+                        (this.codecs = null));
                     var n = o(t, ";");
                     if (n.length) {
                         var r = n.shift();
                         if (r) {
                             var i = o(r, "/", 2);
-                            (this.major = i[0]), (this.minor = i[1]);
+                            ((this.major = i[0]), (this.minor = i[1]));
                         }
                         for (var u in n) {
                             var s = n[u].match(/^codecs\s*=\s*"(.*?)"$/);
@@ -1815,8 +1824,9 @@ e.exports = (function () {
                 });
             },
             869: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i,
                     a = r(n(575)),
                     o = r(n(913)),
@@ -1845,7 +1855,7 @@ e.exports = (function () {
                                 t.shift()();
                             }),
                             function (n) {
-                                t.push(n), e.port2.postMessage({});
+                                (t.push(n), e.port2.postMessage({}));
                             }
                         );
                     })(),
@@ -1882,11 +1892,11 @@ e.exports = (function () {
                         e
                     );
                 }
-                (i =
+                ((i =
                     "u" < typeof performance || void 0 === (0, c.default)(performance.now)
                         ? Date.now
                         : performance.now.bind(performance)),
-                    (N.prototype = Object.create(HTMLElement.prototype, {}));
+                    (N.prototype = Object.create(HTMLElement.prototype, {})));
                 var I = (function (e) {
                     (0, s.default)(r, e);
                     var t,
@@ -2033,9 +2043,9 @@ e.exports = (function () {
                                         return this.getAttribute("src") || "";
                                     },
                                     set: function (e) {
-                                        this.setAttribute("src", e),
+                                        (this.setAttribute("src", e),
                                             (this._loading = !1),
-                                            this._prepForLoad("interactive");
+                                            this._prepForLoad("interactive"));
                                     },
                                 },
                                 buffered: {
@@ -2111,7 +2121,7 @@ e.exports = (function () {
                                         return this._muted;
                                     },
                                     set: function (e) {
-                                        (this._muted = e),
+                                        ((this._muted = e),
                                             this._audioFeeder
                                                 ? (this._audioFeeder.muted = this._muted)
                                                 : this._started &&
@@ -2121,7 +2131,7 @@ e.exports = (function () {
                                                   (this._log("unmuting: switching from timer to audio clock"),
                                                   this._initAudioFeeder(),
                                                   this._startPlayback(this._audioEndTimestamp)),
-                                            this._fireEventAsync("volumechange");
+                                            this._fireEventAsync("volumechange"));
                                     },
                                 },
                                 poster: {
@@ -2133,7 +2143,7 @@ e.exports = (function () {
                                         if (((this._poster = e), !this._started)) {
                                             this._thumbnail && this.removeChild(this._thumbnail);
                                             var n = new Image();
-                                            (n.crossOrigin = this.crossOrigin),
+                                            ((n.crossOrigin = this.crossOrigin),
                                                 (n.src = this._poster),
                                                 (n.className = "ogvjs-poster"),
                                                 (n.style.position = "absolute"),
@@ -2152,7 +2162,7 @@ e.exports = (function () {
                                                         (n.style.visibility = "visible"));
                                                 }),
                                                 (this._thumbnail = n),
-                                                this.appendChild(n);
+                                                this.appendChild(n));
                                         }
                                     },
                                 },
@@ -2190,7 +2200,7 @@ e.exports = (function () {
                                         return this._width;
                                     },
                                     set: function (e) {
-                                        (this._width = parseInt(e, 10)), (this.style.width = this._width + "px");
+                                        ((this._width = parseInt(e, 10)), (this.style.width = this._width + "px"));
                                     },
                                 },
                                 height: {
@@ -2198,7 +2208,7 @@ e.exports = (function () {
                                         return this._height;
                                     },
                                     set: function (e) {
-                                        (this._height = parseInt(e, 10)), (this.style.height = this._height + "px");
+                                        ((this._height = parseInt(e, 10)), (this.style.height = this._height + "px"));
                                     },
                                 },
                                 autoplay: {
@@ -2226,14 +2236,14 @@ e.exports = (function () {
                                     set: function (e) {
                                         switch (e) {
                                             case null:
-                                                (this._crossOrigin = e), this.removeAttribute("crossorigin");
+                                                ((this._crossOrigin = e), this.removeAttribute("crossorigin"));
                                                 break;
                                             default:
                                                 e = "anonymous";
                                             case "":
                                             case "anonymous":
                                             case "use-credentials":
-                                                (this._crossOrigin = e), this.setAttribute("crossorigin", e);
+                                                ((this._crossOrigin = e), this.setAttribute("crossorigin", e));
                                         }
                                         this._thumbnail && (this._thumbnail.crossOrigin = e);
                                     },
@@ -2294,13 +2304,13 @@ e.exports = (function () {
                                     },
                                     set: function (e) {
                                         var t = Number(e) || 1;
-                                        this._audioFeeder
+                                        (this._audioFeeder
                                             ? (this._audioFeeder.tempo = t)
                                             : this._paused ||
                                               ((this._initialPlaybackOffset = this._getPlaybackTime()),
                                               (this._initialPlaybackPosition = (t * i()) / 1e3)),
                                             (this._playbackRate = t),
-                                            this._fireEventAsync("ratechange");
+                                            this._fireEventAsync("ratechange"));
                                     },
                                 },
                                 played: {
@@ -2313,9 +2323,9 @@ e.exports = (function () {
                                         return this._volume;
                                     },
                                     set: function (e) {
-                                        (this._volume = +e),
+                                        ((this._volume = +e),
                                             this._audioFeeder && (this._audioFeeder.volume = this._volume),
-                                            this._fireEventAsync("volumechange");
+                                            this._fireEventAsync("volumechange"));
                                     },
                                 },
                             }),
@@ -2356,7 +2366,7 @@ e.exports = (function () {
                                         var t = i();
                                         e();
                                         var n = i() - t;
-                                        return (this._lastFrameDecodeTime += n), n;
+                                        return ((this._lastFrameDecodeTime += n), n);
                                     },
                                 },
                                 {
@@ -2391,10 +2401,10 @@ e.exports = (function () {
                                     value: function (e) {
                                         var t = this,
                                             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                                        this._log("fireEventAsync " + e),
+                                        (this._log("fireEventAsync " + e),
                                             E(function () {
                                                 t._fireEvent(e, n);
-                                            });
+                                            }));
                                     },
                                 },
                                 {
@@ -2403,30 +2413,30 @@ e.exports = (function () {
                                         var e = this,
                                             t = this._options,
                                             n = { bufferSize: 8192 };
-                                        t.audioContext && (n.audioContext = t.audioContext),
+                                        (t.audioContext && (n.audioContext = t.audioContext),
                                             t.audioDestination && (n.output = t.audioDestination),
-                                            t.audioBackendFactory && (n.backendFactory = t.audioBackendFactory);
+                                            t.audioBackendFactory && (n.backendFactory = t.audioBackendFactory));
                                         var r = (this._audioFeeder = new p.default(n));
-                                        r.init(this._audioInfo.channels, this._audioInfo.rate),
+                                        (r.init(this._audioInfo.channels, this._audioInfo.rate),
                                             this.onaudiofeedercreated && this.onaudiofeedercreated(this._audioFeeder),
                                             (r.bufferThreshold = 1),
                                             (r.volume = this.volume),
                                             (r.muted = this.muted),
                                             (r.tempo = this.playbackRate),
                                             (r.onbufferlow = function () {
-                                                e._log("onbufferlow"),
+                                                (e._log("onbufferlow"),
                                                     (e._stream && (e._stream.buffering || e._stream.seeking)) ||
                                                         e._pendingAudio ||
-                                                        e._pingProcessing();
+                                                        e._pingProcessing());
                                             }),
                                             (r.onstarved = function () {
-                                                e._dataEnded
+                                                (e._dataEnded
                                                     ? e._log("onstarved: appear to have reached end of audio")
                                                     : (e._log("onstarved: halting audio due to starvation"),
                                                       e._stopPlayback(),
                                                       (e._prebufferingAudio = !0)),
-                                                    e._isProcessing() || e._pingProcessing(0);
-                                            });
+                                                    e._isProcessing() || e._pingProcessing(0));
+                                            }));
                                     },
                                 },
                                 {
@@ -2437,22 +2447,22 @@ e.exports = (function () {
                                             var t = this._audioFeeder.getPlaybackState();
                                             this._initialPlaybackPosition = t.playbackPosition;
                                         } else this._initialPlaybackPosition = (this._playbackRate * i()) / 1e3;
-                                        void 0 !== e && (this._initialPlaybackOffset = e),
+                                        (void 0 !== e && (this._initialPlaybackOffset = e),
                                             (this._prebufferingAudio = !1),
                                             this._log(
                                                 "continuing at " +
                                                     this._initialPlaybackPosition +
                                                     ", " +
                                                     this._initialPlaybackOffset,
-                                            );
+                                            ));
                                     },
                                 },
                                 {
                                     key: "_stopPlayback",
                                     value: function () {
-                                        (this._initialPlaybackOffset = this._getPlaybackTime()),
+                                        ((this._initialPlaybackOffset = this._getPlaybackTime()),
                                             this._log("pausing at " + this._initialPlaybackOffset),
-                                            this._audioFeeder && this._audioFeeder.stop();
+                                            this._audioFeeder && this._audioFeeder.stop());
                                     },
                                 },
                                 {
@@ -2470,7 +2480,7 @@ e.exports = (function () {
                                 {
                                     key: "_stopVideo",
                                     value: function () {
-                                        this._log("STOPPING"),
+                                        (this._log("STOPPING"),
                                             (this._state = A),
                                             (this._seekState = O),
                                             (this._started = !1),
@@ -2503,7 +2513,7 @@ e.exports = (function () {
                                             (this._initialSeekTime = 0),
                                             (this._initialPlaybackPosition = 0),
                                             (this._initialPlaybackOffset = 0),
-                                            (this._duration = null);
+                                            (this._duration = null));
                                     },
                                 },
                                 {
@@ -2519,7 +2529,7 @@ e.exports = (function () {
                                         var n = i(),
                                             r = n - this._lastFrameTimestamp,
                                             a = this._actualPerFrameTime - this._targetPerFrameTime;
-                                        (this._totalJitter += Math.abs(a)), (this._playTime += r);
+                                        ((this._totalJitter += Math.abs(a)), (this._playTime += r));
                                         var o = {
                                             cpuTime: this._lastFrameDecodeTime,
                                             drawingTime: this._drawingTime - this._lastFrameDrawingTime,
@@ -2535,7 +2545,7 @@ e.exports = (function () {
                                         function u(e) {
                                             return Math.round(10 * e) / 10;
                                         }
-                                        this._codec &&
+                                        (this._codec &&
                                             ((o.demuxerTime =
                                                 this._codec.demuxerCpuTime - this._lastFrameDemuxerCpuTime),
                                             (o.videoTime += this._currentVideoCpuTime - this._lastFrameVideoCpuTime),
@@ -2579,14 +2589,14 @@ e.exports = (function () {
                                             (!this._lastTimeUpdate ||
                                                 n - this._lastTimeUpdate >= this._timeUpdateInterval) &&
                                                 ((this._lastTimeUpdate = n), this._fireEventAsync("timeupdate")),
-                                            this._codec && t.yCbCrBuffer && this._codec.recycleFrame(t.yCbCrBuffer);
+                                            this._codec && t.yCbCrBuffer && this._codec.recycleFrame(t.yCbCrBuffer));
                                     },
                                 },
                                 {
                                     key: "_seekStream",
                                     value: function (e) {
                                         var t = this;
-                                        this._stream.seeking && this._stream.abort(),
+                                        (this._stream.seeking && this._stream.abort(),
                                             this._stream.buffering && this._stream.abort(),
                                             (this._streamEnded = !1),
                                             (this._dataEnded = !1),
@@ -2598,7 +2608,7 @@ e.exports = (function () {
                                                 })
                                                 .catch(function (e) {
                                                     t._onStreamError(e);
-                                                });
+                                                }));
                                     },
                                 },
                                 {
@@ -2632,7 +2642,7 @@ e.exports = (function () {
                                         if (this._codec && !this._codec.seekable)
                                             throw Error("Cannot seek in a non-seekable file");
                                         var r = function (r) {
-                                            n._stream && n._stream.buffering && n._stream.abort(),
+                                            (n._stream && n._stream.buffering && n._stream.abort(),
                                                 n._stream && n._stream.seeking && n._stream.abort(),
                                                 n._actionQueue.splice(0, n._actionQueue.length),
                                                 n._stopPlayback(),
@@ -2641,23 +2651,23 @@ e.exports = (function () {
                                                 (n._state = x),
                                                 (n._seekTargetTime = e),
                                                 (n._seekMode = t),
-                                                n._codec ? n._codec.flush(r) : r();
+                                                n._codec ? n._codec.flush(r) : r());
                                         };
-                                        r(function () {
+                                        (r(function () {
                                             n._isProcessing() || n._pingProcessing(0);
                                         }),
                                             this._actionQueue.push(function () {
                                                 r(function () {
                                                     n._doSeek(e);
                                                 });
-                                            });
+                                            }));
                                     },
                                 },
                                 {
                                     key: "_doSeek",
                                     value: function (e) {
                                         var t = this;
-                                        (this._streamEnded = !1),
+                                        ((this._streamEnded = !1),
                                             (this._dataEnded = !1),
                                             (this._ended = !1),
                                             (this._state = x),
@@ -2674,13 +2684,13 @@ e.exports = (function () {
                                                       t._fireEventAsync("seeking"),
                                                       t._didSeek || t._pingProcessing())
                                                     : t._codec.getKeypointOffset(e, function (e) {
-                                                          e > 0
+                                                          (e > 0
                                                               ? ((t._seekState = R), t._seekStream(e))
                                                               : ((t._seekState = S),
                                                                 t._startBisection(t._seekTargetTime)),
-                                                              t._fireEventAsync("seeking");
+                                                              t._fireEventAsync("seeking"));
                                                       });
-                                            });
+                                            }));
                                     },
                                 },
                                 {
@@ -2688,7 +2698,7 @@ e.exports = (function () {
                                     value: function (e) {
                                         var t = this,
                                             n = Math.max(0, this._stream.length - 65536);
-                                        (this._bisectTargetTime = e),
+                                        ((this._bisectTargetTime = e),
                                             (this._seekBisector = new v.default({
                                                 start: 0,
                                                 end: n,
@@ -2703,35 +2713,35 @@ e.exports = (function () {
                                                     );
                                                 },
                                             })),
-                                            this._seekBisector.start();
+                                            this._seekBisector.start());
                                     },
                                 },
                                 {
                                     key: "_continueSeekedPlayback",
                                     value: function () {
                                         var e = this;
-                                        (this._seekState = O),
+                                        ((this._seekState = O),
                                             (this._state = T),
                                             (this._frameEndTimestamp = this._codec.frameTimestamp),
                                             (this._audioEndTimestamp = this._codec.audioTimestamp),
                                             this._codec.hasAudio
                                                 ? (this._seekTargetTime = this._codec.audioTimestamp)
                                                 : (this._seekTargetTime = this._codec.frameTimestamp),
-                                            (this._initialPlaybackOffset = this._seekTargetTime);
+                                            (this._initialPlaybackOffset = this._seekTargetTime));
                                         var t = function () {
-                                            (e._lastTimeUpdate = e._seekTargetTime),
+                                            ((e._lastTimeUpdate = e._seekTargetTime),
                                                 e._fireEventAsync("timeupdate"),
                                                 e._fireEventAsync("seeked"),
-                                                e._isProcessing() || e._pingProcessing();
+                                                e._isProcessing() || e._pingProcessing());
                                         };
                                         if (this._codec.hasVideo && this._decodedFrames.length) {
                                             var n = this._decodedFrames.shift();
-                                            this._drawFrame(n.yCbCrBuffer), t();
+                                            (this._drawFrame(n.yCbCrBuffer), t());
                                         } else {
                                             if (this._codec.hasVideo && this._codec.frameReady)
                                                 return (
                                                     this._codec.decodeFrame(function (n) {
-                                                        n && e._drawFrame(e._codec.frameBuffer), t();
+                                                        (n && e._drawFrame(e._codec.frameBuffer), t());
                                                     }),
                                                     void this._codec.sync()
                                                 );
@@ -2742,9 +2752,9 @@ e.exports = (function () {
                                 {
                                     key: "_drawFrame",
                                     value: function (e) {
-                                        this._thumbnail &&
+                                        (this._thumbnail &&
                                             (this.removeChild(this._thumbnail), (this._thumbnail = null)),
-                                            this._frameSink.drawFrame(e);
+                                            this._frameSink.drawFrame(e));
                                     },
                                 },
                                 {
@@ -2779,14 +2789,14 @@ e.exports = (function () {
                                                     this._pendingFrames.push({ frameEndTimestamp: n }),
                                                     this._decodedFrames.splice(0, this._decodedFrames.length),
                                                     this._codec.decodeFrame(function (e) {
-                                                        t._pendingFrame--,
+                                                        (t._pendingFrame--,
                                                             t._pendingFrames.shift(),
                                                             t._decodedFrames.push({
                                                                 yCbCrBuffer: t._codec.frameBuffer,
                                                                 videoCpuTime: t._codec.videoCpuTime,
                                                                 frameEndTimestamp: n,
                                                             }),
-                                                            t._pingProcessing();
+                                                            t._pingProcessing());
                                                     }),
                                                     void this._codec.sync()
                                                 );
@@ -2820,11 +2830,11 @@ e.exports = (function () {
                                             t,
                                             n = this;
                                         if (this._codec.hasVideo)
-                                            (t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1e3);
+                                            ((t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1e3));
                                         else {
                                             if (!this._codec.hasAudio)
                                                 throw Error("Invalid seek state; no audio or video track available");
-                                            (t = this._codec.audioTimestamp), (e = 1 / 256);
+                                            ((t = this._codec.audioTimestamp), (e = 1 / 256));
                                         }
                                         t < 0
                                             ? this._codec.process(function (e) {
@@ -2835,8 +2845,7 @@ e.exports = (function () {
                                                           !n._seekBisector.right())
                                                       )
                                                           throw (
-                                                              (n._log("failed going back"),
-                                                              Error("not sure what to do"))
+                                                              n._log("failed going back"), Error("not sure what to do")
                                                           );
                                                   } else n._readBytesAndWait();
                                               })
@@ -2864,7 +2873,7 @@ e.exports = (function () {
                                 {
                                     key: "_setupVideo",
                                     value: function () {
-                                        this._videoInfo.fps > 0
+                                        (this._videoInfo.fps > 0
                                             ? (this._targetPerFrameTime = 1e3 / this._videoInfo.fps)
                                             : (this._targetPerFrameTime = 16.667),
                                             (this._canvas.width = this._videoInfo.displayWidth),
@@ -2872,11 +2881,11 @@ e.exports = (function () {
                                             r.styleManager.appendRule("." + this._instanceId, {
                                                 width: this._videoInfo.displayWidth + "px",
                                                 height: this._videoInfo.displayHeight + "px",
-                                            });
+                                            }));
                                         var e = {};
-                                        void 0 !== this._options.webGL && (e.webGL = this._options.webGL),
+                                        (void 0 !== this._options.webGL && (e.webGL = this._options.webGL),
                                             this._options.forceWebGL && (e.webGL = "required"),
-                                            (this._frameSink = f.default.attach(this._canvas, e));
+                                            (this._frameSink = f.default.attach(this._canvas, e)));
                                     },
                                 },
                                 {
@@ -2933,7 +2942,7 @@ e.exports = (function () {
                                         if (this._codec.loadedMetadata) {
                                             if (!this._codec.hasVideo && !this._codec.hasAudio)
                                                 throw Error("No audio or video found, something is wrong");
-                                            this._codec.hasAudio && (this._audioInfo = this._codec.audioFormat),
+                                            (this._codec.hasAudio && (this._audioInfo = this._codec.audioFormat),
                                                 this._codec.hasVideo &&
                                                     ((this._videoInfo = this._codec.videoFormat), this._setupVideo()),
                                                 isNaN(this._codec.duration) || (this._duration = this._codec.duration),
@@ -2945,14 +2954,14 @@ e.exports = (function () {
                                                       this._codec.flush(function () {
                                                           e._seekStream(Math.max(0, e._stream.length - 131072));
                                                       }))
-                                                    : ((this._state = k), this._pingProcessing());
+                                                    : ((this._state = k), this._pingProcessing()));
                                         } else
                                             this._codec.process(function (t) {
                                                 if (t) e._pingProcessing();
                                                 else {
                                                     if (e._streamEnded) throw Error("end of file before headers found");
-                                                    e._log("reading more cause we are out of data"),
-                                                        e._readBytesAndWait();
+                                                    (e._log("reading more cause we are out of data"),
+                                                        e._readBytesAndWait());
                                                 }
                                             });
                                     },
@@ -2991,9 +3000,9 @@ e.exports = (function () {
                                                                 (e._duration = e._lastSeenTimestamp),
                                                             (e._state = k),
                                                             e._codec.flush(function () {
-                                                                (e._streamEnded = !1),
+                                                                ((e._streamEnded = !1),
                                                                     (e._dataEnded = !1),
-                                                                    e._seekStream(0);
+                                                                    e._seekStream(0));
                                                             }))
                                                           : e._readBytesAndWait();
                                                 });
@@ -3002,11 +3011,11 @@ e.exports = (function () {
                                 {
                                     key: "_doProcessLoaded",
                                     value: function () {
-                                        (this._state = F),
+                                        ((this._state = F),
                                             this._fireEventAsync("loadedmetadata"),
                                             this._fireEventAsync("durationchange"),
                                             this._codec.hasVideo && this._fireEventAsync("resize"),
-                                            this._pingProcessing(0);
+                                            this._pingProcessing(0));
                                     },
                                 },
                                 {
@@ -3036,13 +3045,13 @@ e.exports = (function () {
                                             this._initialSeekTime > 0)
                                         ) {
                                             var t = this._initialSeekTime;
-                                            (this._initialSeekTime = 0),
+                                            ((this._initialSeekTime = 0),
                                                 this._log("initial seek to " + t),
-                                                this._doSeek(t);
+                                                this._doSeek(t));
                                         } else if (this._paused) this._log("paused while in ready");
                                         else {
                                             var n = function () {
-                                                e._log("finishStartPlaying"),
+                                                (e._log("finishStartPlaying"),
                                                     (e._state = V),
                                                     (e._lastFrameTimestamp = i()),
                                                     e._codec.hasAudio && e._audioFeeder
@@ -3050,7 +3059,7 @@ e.exports = (function () {
                                                         : e._startPlayback(),
                                                     e._pingProcessing(0),
                                                     e._fireEventAsync("play"),
-                                                    e._fireEventAsync("playing");
+                                                    e._fireEventAsync("playing"));
                                             };
                                             !this._codec.hasAudio || this._audioFeeder || this._muted
                                                 ? n()
@@ -3133,27 +3142,27 @@ e.exports = (function () {
                                                       (n = this._codec.audioReady && this._audioEndTimestamp < o)),
                                                 this._codec.hasVideo)
                                             ) {
-                                                (r = this._decodedFrames.length > 0),
+                                                ((r = this._decodedFrames.length > 0),
                                                     (i =
                                                         this._pendingFrame + this._decodedFrames.length <
                                                             this._framePipelineDepth + this._frameParallelism &&
                                                         this._codec.frameReady),
                                                     r &&
                                                         ((s = 1e3 * (this._decodedFrames[0].frameEndTimestamp - o)),
-                                                        (this._actualPerFrameTime = this._targetPerFrameTime - s));
+                                                        (this._actualPerFrameTime = this._targetPerFrameTime - s)));
                                                 var l = this._targetPerFrameTime;
                                                 if (this._prebufferingAudio)
-                                                    i && this._log("decoding a frame during prebuffering"), (r = !1);
+                                                    (i && this._log("decoding a frame during prebuffering"), (r = !1));
                                                 else if (r && this._dataEnded && u)
                                                     this._log("audio timeline ended? ready to draw frame");
                                                 else if (r && -s >= l) {
                                                     for (var d = -1, c = 0; c < this._decodedFrames.length - 1; c++)
                                                         this._decodedFrames[c].frameEndTimestamp < o && (d = c - 1);
                                                     if (d >= 0)
-                                                        for (; d-- >= 0; ) {
+                                                        for (; d-- >= 0;) {
                                                             this._lateFrames++;
                                                             var f = this._decodedFrames.shift();
-                                                            this._log(
+                                                            (this._log(
                                                                 "skipping already-decoded late frame at " +
                                                                     f.frameEndTimestamp,
                                                             ),
@@ -3163,7 +3172,7 @@ e.exports = (function () {
                                                                     this._targetPerFrameTime - s),
                                                                 this._framesProcessed++,
                                                                 (f.dropped = !0),
-                                                                this._doFrameComplete(f);
+                                                                this._doFrameComplete(f));
                                                         }
                                                     var h = this._codec.nextKeyframeTimestamp,
                                                         p =
@@ -3181,26 +3190,26 @@ e.exports = (function () {
                                                         );
                                                         for (var m = 0; m < this._decodedFrames.length; m++) {
                                                             var v = this._decodedFrames[m];
-                                                            this._lateFrames++,
+                                                            (this._lateFrames++,
                                                                 this._framesProcessed++,
                                                                 (this._frameEndTimestamp = v.frameEndTimestamp),
                                                                 (s = 1e3 * (v.frameEndTimestamp - o)),
                                                                 (this._actualPerFrameTime =
                                                                     this._targetPerFrameTime - s),
                                                                 (v.dropped = !0),
-                                                                this._doFrameComplete(v);
+                                                                this._doFrameComplete(v));
                                                         }
                                                         this._decodedFrames = [];
                                                         for (var _ = 0; _ < this._pendingFrames.length; _++) {
                                                             var g = this._pendingFrames[_];
-                                                            this._lateFrames++,
+                                                            (this._lateFrames++,
                                                                 this._framesProcessed++,
                                                                 (this._frameEndTimestamp = g.frameEndTimestamp),
                                                                 (s = 1e3 * (g.frameEndTimestamp - o)),
                                                                 (this._actualPerFrameTime =
                                                                     this._targetPerFrameTime - s),
                                                                 (g.dropped = !0),
-                                                                this._doFrameComplete(g);
+                                                                this._doFrameComplete(g));
                                                         }
                                                         for (
                                                             this._pendingFrames = [], this._pendingFrame = 0;
@@ -3210,20 +3219,20 @@ e.exports = (function () {
                                                                 frameEndTimestamp: this._codec.frameTimestamp,
                                                                 dropped: !0,
                                                             };
-                                                            (s = 1e3 * (y.frameEndTimestamp - o)),
+                                                            ((s = 1e3 * (y.frameEndTimestamp - o)),
                                                                 (this._actualPerFrameTime =
                                                                     this._targetPerFrameTime - s),
                                                                 this._lateFrames++,
                                                                 this._codec.discardFrame(function () {}),
                                                                 this._framesProcessed++,
-                                                                this._doFrameComplete(y);
+                                                                this._doFrameComplete(y));
                                                         }
                                                         return void (this._isProcessing() || this._pingProcessing());
                                                     }
                                                 } else (r && s <= 4) || (r = !1);
                                             }
                                             if (i) {
-                                                this._log(
+                                                (this._log(
                                                     "play loop: ready to decode frame; thread depth: " +
                                                         this._pendingFrame +
                                                         ", have buffered: " +
@@ -3235,10 +3244,10 @@ e.exports = (function () {
                                                             1e3 *
                                                             (this._codec.frameTimestamp - this._frameEndTimestamp)),
                                                     (this._totalFrameTime += this._targetPerFrameTime),
-                                                    this._totalFrameCount++;
+                                                    this._totalFrameCount++);
                                                 var b = (this._frameEndTimestamp = this._codec.frameTimestamp);
-                                                this._pendingFrame++,
-                                                    this._pendingFrames.push({ frameEndTimestamp: b });
+                                                (this._pendingFrame++,
+                                                    this._pendingFrames.push({ frameEndTimestamp: b }));
                                                 var D = this._pendingFrames,
                                                     w = !1,
                                                     E = this._time(function () {
@@ -3267,8 +3276,8 @@ e.exports = (function () {
                                                     this._pingProcessing(),
                                                     this._dataEnded && this._codec.sync());
                                             } else if (n) {
-                                                this._log("play loop: ready for audio; depth: " + this._pendingAudio),
-                                                    this._pendingAudio++;
+                                                (this._log("play loop: ready for audio; depth: " + this._pendingAudio),
+                                                    this._pendingAudio++);
                                                 var C = this._codec.audioTimestamp,
                                                     A = this._time(function () {
                                                         e._codec.decodeAudio(function (t) {
@@ -3300,20 +3309,20 @@ e.exports = (function () {
                                                         ? this._pingProcessing()
                                                         : this._doProcessPlayDemux());
                                             } else if (r) {
-                                                this._log("play loop: ready to draw frame"),
+                                                (this._log("play loop: ready to draw frame"),
                                                     this._nextFrameTimer &&
                                                         (clearTimeout(this._nextFrameTimer),
                                                         (this._nextFrameTimer = null)),
                                                     this._thumbnail &&
-                                                        (this.removeChild(this._thumbnail), (this._thumbnail = null));
+                                                        (this.removeChild(this._thumbnail), (this._thumbnail = null)));
                                                 var B = this._decodedFrames.shift();
-                                                (this._currentVideoCpuTime = B.videoCpuTime),
+                                                ((this._currentVideoCpuTime = B.videoCpuTime),
                                                     (this._drawingTime += this._time(function () {
                                                         e._drawFrame(B.yCbCrBuffer);
                                                     })),
                                                     this._framesProcessed++,
                                                     this._doFrameComplete(B),
-                                                    this._pingProcessing();
+                                                    this._pingProcessing());
                                             } else if (
                                                 !this._decodedFrames.length ||
                                                 this._nextFrameTimer ||
@@ -3336,7 +3345,7 @@ e.exports = (function () {
                                                             ],
                                                     );
                                                     var k = 0;
-                                                    this._codec.hasAudio &&
+                                                    (this._codec.hasAudio &&
                                                         this._audioFeeder &&
                                                         (k = 1e3 * this._audioFeeder.durationBuffered),
                                                         k > 0
@@ -3357,7 +3366,7 @@ e.exports = (function () {
                                                               (this._ended = !0),
                                                               (this._paused = !0),
                                                               this._fireEventAsync("pause"),
-                                                              this._fireEventAsync("ended"));
+                                                              this._fireEventAsync("ended")));
                                                 } else
                                                     this._prebufferingAudio &&
                                                     ((t.hasVideo && !t.frameReady) || (t.hasAudio && !t.audioReady))
@@ -3366,12 +3375,12 @@ e.exports = (function () {
                                                         : this._log("play loop: waiting on async/timers");
                                             else {
                                                 var F = s;
-                                                this._log("play loop: setting a timer for drawing " + F),
+                                                (this._log("play loop: setting a timer for drawing " + F),
                                                     (this._nextFrameTimer = setTimeout(function () {
-                                                        (e._nextFrameTimer = null), e._pingProcessing();
-                                                    }, F));
+                                                        ((e._nextFrameTimer = null), e._pingProcessing());
+                                                    }, F)));
                                             }
-                                        } else this._log("play loop: demuxing"), this._doProcessPlayDemux();
+                                        } else (this._log("play loop: demuxing"), this._doProcessPlayDemux());
                                     },
                                 },
                                 {
@@ -3414,7 +3423,7 @@ e.exports = (function () {
                                             : this._stream
                                                   .read(32768)
                                                   .then(function (t) {
-                                                      e._log("got input " + [t.byteLength]),
+                                                      (e._log("got input " + [t.byteLength]),
                                                           t.byteLength &&
                                                               e._actionQueue.push(function () {
                                                                   e._codec.receiveInput(t, function () {
@@ -3423,7 +3432,7 @@ e.exports = (function () {
                                                               }),
                                                           e._stream.eof &&
                                                               (e._log("stream is at end!"), (e._streamEnded = !0)),
-                                                          e._isProcessing() || e._pingProcessing();
+                                                          e._isProcessing() || e._pingProcessing());
                                                   })
                                                   .catch(function (t) {
                                                       e._onStreamError(t);
@@ -3455,19 +3464,19 @@ e.exports = (function () {
                                     value: function (e) {
                                         var t = this;
                                         if (!this._started && !this._codec) {
-                                            (this._framesProcessed = 0),
+                                            ((this._framesProcessed = 0),
                                                 (this._bufferTime = 0),
                                                 (this._drawingTime = 0),
                                                 (this._proxyTime = 0),
                                                 (this._started = !0),
-                                                (this._ended = !1);
+                                                (this._ended = !1));
                                             var n = {
                                                 base: this._options.base,
                                                 worker: this._enableWorker,
                                                 threading: this._enableThreading,
                                                 simd: this._enableSIMD,
                                             };
-                                            this._detectedType && (n.type = this._detectedType),
+                                            (this._detectedType && (n.type = this._detectedType),
                                                 (this._codec = new D.default(n)),
                                                 (this._lastVideoCpuTime = 0),
                                                 (this._lastAudioCpuTime = 0),
@@ -3483,13 +3492,13 @@ e.exports = (function () {
                                                 (this._lastFrameDrawingTime = 0),
                                                 (this._currentVideoCpuTime = 0),
                                                 (this._codec.onseek = function (e) {
-                                                    (t._didSeek = !0), t._stream && t._seekStream(e);
+                                                    ((t._didSeek = !0), t._stream && t._seekStream(e));
                                                 }),
                                                 this._codec.init(function () {
                                                     t._codec.receiveInput(e, function () {
                                                         t._readBytesAndWait();
                                                     });
-                                                });
+                                                }));
                                         }
                                     },
                                 },
@@ -3499,12 +3508,12 @@ e.exports = (function () {
                                         var t = this;
                                         this._stream.read(1024).then(function (n) {
                                             var r = new Uint8Array(n);
-                                            r.length > 4 && 79 == r[0] && 103 == r[1] && 103 == r[2] && 83 == r[3]
+                                            (r.length > 4 && 79 == r[0] && 103 == r[1] && 103 == r[2] && 83 == r[3]
                                                 ? (t._detectedType = "video/ogg")
                                                 : r.length > 4 && 26 == r[0] && 69 == r[1] && 223 == r[2] && 163 == r[3]
                                                   ? (t._detectedType = "video/webm")
                                                   : (t._detectedType = "video/ogg"),
-                                                e(n);
+                                                e(n));
                                         });
                                     },
                                 },
@@ -3512,7 +3521,7 @@ e.exports = (function () {
                                     key: "_prepForLoad",
                                     value: function (e) {
                                         var t = this;
-                                        this._stopVideo(),
+                                        (this._stopVideo(),
                                             (this._currentSrc = ""),
                                             (this._loading = !0),
                                             this._actionQueue.push(function () {
@@ -3528,22 +3537,22 @@ e.exports = (function () {
                                                       t._stream
                                                           .load()
                                                           .then(function () {
-                                                              (t._loading = !1),
+                                                              ((t._loading = !1),
                                                                   (t._currentSrc = t.src),
                                                                   (t._byteLength = t._stream.seekable
                                                                       ? t._stream.length
-                                                                      : 0);
+                                                                      : 0));
                                                               var e = t._stream.headers["x-content-duration"];
-                                                              "string" == typeof e && (t._duration = parseFloat(e)),
+                                                              ("string" == typeof e && (t._duration = parseFloat(e)),
                                                                   t._loadCodec(function (e) {
                                                                       t._startProcessingVideo(e);
-                                                                  });
+                                                                  }));
                                                           })
                                                           .catch(function (e) {
                                                               t._onStreamError(e);
                                                           }));
                                             }),
-                                            this._pingProcessing(0);
+                                            this._pingProcessing(0));
                                     },
                                 },
                                 {
@@ -3580,7 +3589,7 @@ e.exports = (function () {
                                 {
                                     key: "play",
                                     value: function () {
-                                        this._muted || this._options.audioContext || r.initSharedAudioContext(),
+                                        (this._muted || this._options.audioContext || r.initSharedAudioContext(),
                                             this._paused &&
                                                 ((this._startedPlaybackInDocument = document.body.contains(this)),
                                                 (this._paused = !1),
@@ -3595,7 +3604,7 @@ e.exports = (function () {
                                                         : this._loading
                                                           ? this._log(".play() while loading")
                                                           : (this._log(".play() before started"),
-                                                            this._stream || this.load())));
+                                                            this._stream || this.load()))));
                                     },
                                 },
                                 {
@@ -3629,7 +3638,7 @@ e.exports = (function () {
                                 {
                                     key: "resetPlaybackStats",
                                     value: function () {
-                                        (this._framesProcessed = 0),
+                                        ((this._framesProcessed = 0),
                                             (this._playTime = 0),
                                             this._codec &&
                                                 ((this._lastDemuxerCpuTime = this._codec.demuxerCpuTime),
@@ -3642,7 +3651,7 @@ e.exports = (function () {
                                             (this._lastProxyTime = this._proxyTime),
                                             (this._totalJitter = 0),
                                             (this._totalFrameTime = 0),
-                                            (this._totalFrameCount = 0);
+                                            (this._totalFrameCount = 0));
                                     },
                                 },
                                 {
@@ -3679,7 +3688,7 @@ e.exports = (function () {
                                 {
                                     key: "stop",
                                     value: function () {
-                                        this._stopVideo(), (this._paused = !0);
+                                        (this._stopVideo(), (this._paused = !0));
                                     },
                                 },
                                 {
@@ -3694,7 +3703,7 @@ e.exports = (function () {
                                     key: "initSharedAudioContext",
                                     value: function () {
                                         var e = document.createElement("audio");
-                                        (e.src = w.default), e.play(), p.default.initSharedAudioContext();
+                                        ((e.src = w.default), e.play(), p.default.initSharedAudioContext());
                                     },
                                 },
                             ],
@@ -3702,14 +3711,14 @@ e.exports = (function () {
                         r
                     );
                 })(N);
-                (0, _.default)(I, C),
+                ((0, _.default)(I, C),
                     (I.instanceCount = 0),
                     (I.styleManager = new (function () {
                         var e = document.createElement("style");
-                        (e.type = "text/css"),
+                        ((e.type = "text/css"),
                             (e.textContent =
                                 "ogvjs { display: inline-block; position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); "),
-                            document.head.appendChild(e);
+                            document.head.appendChild(e));
                         var t = e.sheet;
                         this.appendRule = function (e, n) {
                             var r = [];
@@ -3718,11 +3727,12 @@ e.exports = (function () {
                             t.insertRule(a, t.cssRules.length - 1);
                         };
                     })()),
-                    (t.default = I);
+                    (t.default = I));
             },
             580: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913));
                 t.default = function (e) {
@@ -3735,14 +3745,14 @@ e.exports = (function () {
                             var e = new ArrayBuffer(1024),
                                 t = new Uint8Array(e);
                             try {
-                                return n.postMessage({ action: "transferTest", bytes: t }, [e]), !e.byteLength;
+                                return (n.postMessage({ action: "transferTest", bytes: t }, [e]), !e.byteLength);
                             } catch (e) {
                                 return !1;
                             }
                         })()),
                         e))
                             e.hasOwnProperty(u) && (this[u] = e[u]);
-                        (this.processingQueue = 0),
+                        ((this.processingQueue = 0),
                             Object.defineProperty(this, "processing", {
                                 get: function () {
                                     return this.processingQueue > 0;
@@ -3753,7 +3763,7 @@ e.exports = (function () {
                             this.worker.addEventListener("message", function (e) {
                                 o.handleMessage(e);
                             }),
-                            this.proxy("construct", [r, a], function () {});
+                            this.proxy("construct", [r, a], function () {}));
                     }
                     return (
                         (0, a.default)(t, [
@@ -3765,8 +3775,10 @@ e.exports = (function () {
                                     var i = "callback-" + ++this.messageCount + "-" + e;
                                     n && (this.pendingCallbacks[i] = n);
                                     var a = { action: e, callbackId: i, args: t || [] };
-                                    this.processingQueue++,
-                                        this.transferables ? this.worker.postMessage(a, r) : this.worker.postMessage(a);
+                                    (this.processingQueue++,
+                                        this.transferables
+                                            ? this.worker.postMessage(a, r)
+                                            : this.worker.postMessage(a));
                                 },
                             },
                             {
@@ -3799,13 +3811,14 @@ e.exports = (function () {
                 };
             },
             168: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913));
                 t.default = (function () {
                     function e(t) {
-                        (0, i.default)(this, e), (this._ranges = t), (this.length = t.length);
+                        ((0, i.default)(this, e), (this._ranges = t), (this.length = t.length));
                     }
                     return (
                         (0, a.default)(e, [
@@ -3829,8 +3842,9 @@ e.exports = (function () {
                 })();
             },
             625: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(575)),
                     a = r(n(913)),
                     o = r(n(964));
@@ -3964,30 +3978,30 @@ e.exports = (function () {
                                 value: function (e) {
                                     var t,
                                         n = this;
-                                    (this.processing = !0),
+                                    ((this.processing = !0),
                                         (t =
                                             "video/webm" === this.options.type || "audio/webm" === this.options.type
                                                 ? "OGVDemuxerWebMW"
                                                 : "OGVDemuxerOggW"),
                                         o.default.loadClass(t, function (t) {
                                             t().then(function (t) {
-                                                (n.demuxer = t),
+                                                ((n.demuxer = t),
                                                     (t.onseek = function (e) {
                                                         n.onseek && n.onseek(e);
                                                     }),
                                                     t.init(function () {
-                                                        (n.processing = !1), e();
-                                                    });
+                                                        ((n.processing = !1), e());
+                                                    }));
                                             });
-                                        });
+                                        }));
                                 },
                             },
                             {
                                 key: "close",
                                 value: function () {
-                                    this.demuxer && (this.demuxer.close(), (this.demuxer = null)),
+                                    (this.demuxer && (this.demuxer.close(), (this.demuxer = null)),
                                         this.videoDecoder && (this.videoDecoder.close(), (this.videoDecoder = null)),
-                                        this.audioDecoder && (this.audioDecoder.close(), (this.audioDecoder = null));
+                                        this.audioDecoder && (this.audioDecoder.close(), (this.audioDecoder = null)));
                                 },
                             },
                             {
@@ -4003,7 +4017,7 @@ e.exports = (function () {
                                     if (this.processing) throw Error("reentrancy fail on OGVWrapperCodec.process");
                                     this.processing = !0;
                                     var n = function (n) {
-                                            (t.processing = !1), e(n);
+                                            ((t.processing = !1), e(n));
                                         },
                                         r = function () {
                                             t.demuxer.process(n);
@@ -4011,12 +4025,12 @@ e.exports = (function () {
                                     this.demuxer.loadedMetadata && !this.loadedDemuxerMetadata
                                         ? this.loadAudioCodec(function () {
                                               t.loadVideoCodec(function () {
-                                                  (t.loadedDemuxerMetadata = !0),
+                                                  ((t.loadedDemuxerMetadata = !0),
                                                       (t.loadedAudioMetadata = !t.audioDecoder),
                                                       (t.loadedVideoMetadata = !t.videoDecoder),
                                                       (t.loadedAllMetadata =
                                                           t.loadedAudioMetadata && t.loadedVideoMetadata),
-                                                      n(!0);
+                                                      n(!0));
                                               });
                                           })
                                         : this.loadedDemuxerMetadata && !this.loadedAudioMetadata
@@ -4027,10 +4041,10 @@ e.exports = (function () {
                                                 n(!0))
                                               : this.demuxer.audioReady
                                                 ? this.demuxer.dequeueAudioPacket(function (e, r) {
-                                                      (t.audioBytes += e.byteLength),
+                                                      ((t.audioBytes += e.byteLength),
                                                           t.audioDecoder.processHeader(e, function (e) {
                                                               n(!0);
-                                                          });
+                                                          }));
                                                   })
                                                 : r()
                                           : this.loadedAudioMetadata && !this.loadedVideoMetadata
@@ -4042,10 +4056,10 @@ e.exports = (function () {
                                                 : this.demuxer.frameReady
                                                   ? ((this.processing = !0),
                                                     this.demuxer.dequeueVideoPacket(function (e) {
-                                                        (t.videoBytes += e.byteLength),
+                                                        ((t.videoBytes += e.byteLength),
                                                             t.videoDecoder.processHeader(e, function () {
                                                                 n(!0);
-                                                            });
+                                                            }));
                                                     }))
                                                   : r()
                                             : this.loadedVideoMetadata && !this.loadedMetadata && this.loadedAllMetadata
@@ -4065,11 +4079,11 @@ e.exports = (function () {
                                         r = this.frameTimestamp,
                                         i = this.keyframeTimestamp;
                                     this.demuxer.dequeueVideoPacket(function (e) {
-                                        (t.videoBytes += e.byteLength),
+                                        ((t.videoBytes += e.byteLength),
                                             t.videoDecoder.processFrame(e, function (e) {
                                                 var a = t.videoDecoder.frameBuffer;
-                                                a && ((a.timestamp = r), (a.keyframeTimestamp = i)), n(e);
-                                            });
+                                                (a && ((a.timestamp = r), (a.keyframeTimestamp = i)), n(e));
+                                            }));
                                     });
                                 },
                             },
@@ -4079,7 +4093,7 @@ e.exports = (function () {
                                     var t = this,
                                         n = this.flushSafe(e);
                                     this.demuxer.dequeueAudioPacket(function (e, r) {
-                                        (t.audioBytes += e.byteLength),
+                                        ((t.audioBytes += e.byteLength),
                                             t.audioDecoder.processAudio(e, function (e) {
                                                 if (r) {
                                                     var i,
@@ -4144,10 +4158,10 @@ e.exports = (function () {
                                                                 },
                                                                 n: function () {
                                                                     var e = t.next();
-                                                                    return (a = e.done), e;
+                                                                    return ((a = e.done), e);
                                                                 },
                                                                 e: function (e) {
-                                                                    (o = !0), (i = e);
+                                                                    ((o = !0), (i = e));
                                                                 },
                                                                 f: function () {
                                                                     try {
@@ -4159,7 +4173,7 @@ e.exports = (function () {
                                                             };
                                                         })(t.audioDecoder.audioBuffer);
                                                     try {
-                                                        for (o.s(); !(i = o.n()).done; ) {
+                                                        for (o.s(); !(i = o.n()).done;) {
                                                             var s = i.value,
                                                                 l = Math.round((r * t.audioFormat.rate) / 1e9);
                                                             l > 0
@@ -4181,7 +4195,7 @@ e.exports = (function () {
                                                     t.audioDecoder.audioBuffer = a;
                                                 }
                                                 return n(e);
-                                            });
+                                            }));
                                     });
                                 },
                             },
@@ -4190,7 +4204,7 @@ e.exports = (function () {
                                 value: function (e) {
                                     var t = this;
                                     this.demuxer.dequeueVideoPacket(function (n) {
-                                        (t.videoBytes += n.byteLength), e();
+                                        ((t.videoBytes += n.byteLength), e());
                                     });
                                 },
                             },
@@ -4199,14 +4213,14 @@ e.exports = (function () {
                                 value: function (e) {
                                     var t = this;
                                     this.demuxer.dequeueAudioPacket(function (n, r) {
-                                        (t.audioBytes += n.byteLength), e();
+                                        ((t.audioBytes += n.byteLength), e());
                                     });
                                 },
                             },
                             {
                                 key: "flush",
                                 value: function (e) {
-                                    this.flushIter++, this.demuxer.flush(e);
+                                    (this.flushIter++, this.demuxer.flush(e));
                                 },
                             },
                             {
@@ -4241,23 +4255,23 @@ e.exports = (function () {
                                         var n = { vorbis: "OGVDecoderAudioVorbisW", opus: "OGVDecoderAudioOpusW" }[
                                             this.demuxer.audioCodec
                                         ];
-                                        (this.processing = !0),
+                                        ((this.processing = !0),
                                             o.default.loadClass(
                                                 n,
                                                 function (n) {
                                                     var r = {};
-                                                    t.demuxer.audioFormat && (r.audioFormat = t.demuxer.audioFormat),
+                                                    (t.demuxer.audioFormat && (r.audioFormat = t.demuxer.audioFormat),
                                                         n(r).then(function (n) {
-                                                            (t.audioDecoder = n),
+                                                            ((t.audioDecoder = n),
                                                                 n.init(function () {
-                                                                    (t.loadedAudioMetadata = n.loadedMetadata),
+                                                                    ((t.loadedAudioMetadata = n.loadedMetadata),
                                                                         (t.processing = !1),
-                                                                        e();
-                                                                });
-                                                        });
+                                                                        e());
+                                                                }));
+                                                        }));
                                                 },
                                                 { worker: this.options.worker },
-                                            );
+                                            ));
                                     } else e();
                                 },
                             },
@@ -4286,24 +4300,24 @@ e.exports = (function () {
                                                       ? "OGVDecoderVideoAV1SIMDW"
                                                       : "OGVDecoderVideoAV1W",
                                             }[this.demuxer.videoCodec];
-                                        (this.processing = !0),
+                                        ((this.processing = !0),
                                             o.default.loadClass(
                                                 i,
                                                 function (n) {
                                                     var i = {};
-                                                    t.demuxer.videoFormat && (i.videoFormat = t.demuxer.videoFormat),
+                                                    (t.demuxer.videoFormat && (i.videoFormat = t.demuxer.videoFormat),
                                                         r && delete window.ENVIRONMENT_IS_PTHREAD,
                                                         n(i).then(function (n) {
-                                                            (t.videoDecoder = n),
+                                                            ((t.videoDecoder = n),
                                                                 n.init(function () {
-                                                                    (t.loadedVideoMetadata = n.loadedMetadata),
+                                                                    ((t.loadedVideoMetadata = n.loadedMetadata),
                                                                         (t.processing = !1),
-                                                                        e();
-                                                                });
-                                                        });
+                                                                        e());
+                                                                }));
+                                                        }));
                                                 },
                                                 { worker: this.options.worker && !this.options.threading },
-                                            );
+                                            ));
                                     } else e();
                                 },
                             },
@@ -4313,14 +4327,15 @@ e.exports = (function () {
                 })();
             },
             539: (e, t, n) => {
+                "use strict";
                 var r = n(318);
-                Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0);
+                (Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = void 0));
                 var i = r(n(8)),
                     a = r(n(575)),
                     o = r(n(913));
                 t.default = new ((function () {
                     function e() {
-                        (0, a.default)(this, e), (this.tested = !1), (this.testResult = void 0);
+                        ((0, a.default)(this, e), (this.tested = !1), (this.testResult = void 0));
                     }
                     return (
                         (0, o.default)(e, [
@@ -4342,8 +4357,8 @@ e.exports = (function () {
                                                       0 !== new WebAssembly.Instance(t, {}).exports.test(4)))
                                                 : (this.testResult = !1);
                                         } catch (e) {
-                                            console.log("Exception while testing WebAssembly", e),
-                                                (this.testResult = !1);
+                                            (console.log("Exception while testing WebAssembly", e),
+                                                (this.testResult = !1));
                                         }
                                         this.tested = !0;
                                     }
@@ -4356,25 +4371,27 @@ e.exports = (function () {
                 })())();
             },
             309: (e, t) => {
-                Object.defineProperty(t, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(t, "__esModule", { value: !0 }),
                     (t.default = void 0),
                     (t.default = function (e, t) {
                         for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
-                    });
+                    }));
             },
             431: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                         function e(e, t) {
                             for (var n = 0; n < t.length; n++) {
                                 var r = t[n];
-                                (r.enumerable = r.enumerable || !1),
+                                ((r.enumerable = r.enumerable || !1),
                                     (r.configurable = !0),
                                     "value" in r && (r.writable = !0),
-                                    Object.defineProperty(e, r.key, r);
+                                    Object.defineProperty(e, r.key, r));
                             }
                         }
                         return function (t, n, r) {
-                            return n && e(t.prototype, n), r && e(t, r), t;
+                            return (n && e(t.prototype, n), r && e(t, r), t);
                         };
                     })(),
                     i = function e(t, n, r) {
@@ -4411,21 +4428,21 @@ e.exports = (function () {
                                     throw TypeError(
                                         "Super expression must either be null or a function, not " + typeof t,
                                     );
-                                (e.prototype = Object.create(t && t.prototype, {
+                                ((e.prototype = Object.create(t && t.prototype, {
                                     constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                                 })),
-                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
                             })(t, e),
                             r(t, [
                                 {
                                     key: "initXHR",
                                     value: function () {
-                                        i(
+                                        (i(
                                             t.prototype.__proto__ || Object.getPrototypeOf(t.prototype),
                                             "initXHR",
                                             this,
                                         ).call(this),
-                                            (this.xhr.responseType = o);
+                                            (this.xhr.responseType = o));
                                     },
                                 },
                                 { key: "onXHRProgress", value: function () {} },
@@ -4433,42 +4450,43 @@ e.exports = (function () {
                                     key: "onXHRLoad",
                                     value: function () {
                                         var e = this.xhr.response;
-                                        (this.bytesRead += e.byteLength),
+                                        ((this.bytesRead += e.byteLength),
                                             this.emit("buffer", e),
                                             i(
                                                 t.prototype.__proto__ || Object.getPrototypeOf(t.prototype),
                                                 "onXHRLoad",
                                                 this,
-                                            ).call(this);
+                                            ).call(this));
                                     },
                                 },
                             ]),
                             t
                         );
                     })(a);
-                (u.supported = function () {
+                ((u.supported = function () {
                     try {
                         var e = new XMLHttpRequest();
-                        return (e.responseType = o), e.responseType === o;
+                        return ((e.responseType = o), e.responseType === o);
                     } catch (e) {
                         return !1;
                     }
                 }),
-                    (e.exports = u);
+                    (e.exports = u));
             },
             306: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
                             var r = t[n];
-                            (r.enumerable = r.enumerable || !1),
+                            ((r.enumerable = r.enumerable || !1),
                                 (r.configurable = !0),
                                 "value" in r && (r.writable = !0),
-                                Object.defineProperty(e, r.key, r);
+                                Object.defineProperty(e, r.key, r));
                         }
                     }
                     return function (t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t;
+                        return (n && e(t.prototype, n), r && e(t, r), t);
                     };
                 })();
                 function i(e) {
@@ -4504,10 +4522,10 @@ e.exports = (function () {
                         (function (e, t) {
                             if ("function" != typeof t && null !== t)
                                 throw TypeError("Super expression must either be null or a function, not " + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
+                            ((e.prototype = Object.create(t && t.prototype, {
                                 constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                             })),
-                                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+                                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
                         })(t, e),
                         r(t, [
                             {
@@ -4517,7 +4535,7 @@ e.exports = (function () {
                                     return new Promise(function (t, n) {
                                         var r = null;
                                         e._onAbort = function (e) {
-                                            r(), n(e);
+                                            (r(), n(e));
                                         };
                                         var a = function () {
                                                 if (2 == e.xhr.readyState) {
@@ -4567,22 +4585,22 @@ e.exports = (function () {
                                                 }
                                             },
                                             o = function () {
-                                                r(), n(Error("network error"));
+                                                (r(), n(Error("network error")));
                                             },
                                             u = function () {
-                                                r(), t();
+                                                (r(), t());
                                             };
-                                        (r = function () {
-                                            e.xhr.removeEventListener("readystatechange", a),
+                                        ((r = function () {
+                                            (e.xhr.removeEventListener("readystatechange", a),
                                                 e.xhr.removeEventListener("error", o),
                                                 e.off("open", u),
-                                                (e._onAbort = null);
+                                                (e._onAbort = null));
                                         }),
                                             e.initXHR(),
                                             e.xhr.addEventListener("readystatechange", a),
                                             e.xhr.addEventListener("error", o),
                                             e.on("open", u),
-                                            e.xhr.send();
+                                            e.xhr.send());
                                     });
                                 },
                             },
@@ -4599,7 +4617,7 @@ e.exports = (function () {
                                         var e = this._onAbort;
                                         this._onAbort = null;
                                         var t = Error("Aborted");
-                                        (t.name = "AbortError"), e(t);
+                                        ((t.name = "AbortError"), e(t));
                                     }
                                 },
                             },
@@ -4607,11 +4625,12 @@ e.exports = (function () {
                                 key: "initXHR",
                                 value: function () {
                                     var e = this.url;
-                                    this.cachever && (e += "?buggy_cachever=" + this.cachever), this.xhr.open("GET", e);
+                                    (this.cachever && (e += "?buggy_cachever=" + this.cachever),
+                                        this.xhr.open("GET", e));
                                     var t = null;
-                                    (this.offset || this.length) && (t = "bytes=" + this.offset + "-"),
+                                    ((this.offset || this.length) && (t = "bytes=" + this.offset + "-"),
                                         this.length && (t += this.offset + this.length - 1),
-                                        null !== t && this.xhr.setRequestHeader("Range", t);
+                                        null !== t && this.xhr.setRequestHeader("Range", t));
                                 },
                             },
                             {
@@ -4626,18 +4645,19 @@ e.exports = (function () {
                 })(n(566));
             },
             810: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                         function e(e, t) {
                             for (var n = 0; n < t.length; n++) {
                                 var r = t[n];
-                                (r.enumerable = r.enumerable || !1),
+                                ((r.enumerable = r.enumerable || !1),
                                     (r.configurable = !0),
                                     "value" in r && (r.writable = !0),
-                                    Object.defineProperty(e, r.key, r);
+                                    Object.defineProperty(e, r.key, r));
                             }
                         }
                         return function (t, n, r) {
-                            return n && e(t.prototype, n), r && e(t, r), t;
+                            return (n && e(t.prototype, n), r && e(t, r), t);
                         };
                     })(),
                     i = function e(t, n, r) {
@@ -4672,22 +4692,22 @@ e.exports = (function () {
                                     throw TypeError(
                                         "Super expression must either be null or a function, not " + typeof t,
                                     );
-                                (e.prototype = Object.create(t && t.prototype, {
+                                ((e.prototype = Object.create(t && t.prototype, {
                                     constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                                 })),
-                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
                             })(t, e),
                             r(t, [
                                 {
                                     key: "initXHR",
                                     value: function () {
-                                        i(
+                                        (i(
                                             t.prototype.__proto__ || Object.getPrototypeOf(t.prototype),
                                             "initXHR",
                                             this,
                                         ).call(this),
                                             (this.xhr.responseType = "text"),
-                                            this.xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                                            this.xhr.overrideMimeType("text/plain; charset=x-user-defined"));
                                     },
                                 },
                                 {
@@ -4700,40 +4720,41 @@ e.exports = (function () {
                                 {
                                     key: "onXHRLoad",
                                     value: function () {
-                                        this.onXHRProgress(),
+                                        (this.onXHRProgress(),
                                             i(
                                                 t.prototype.__proto__ || Object.getPrototypeOf(t.prototype),
                                                 "onXHRLoad",
                                                 this,
-                                            ).call(this);
+                                            ).call(this));
                                     },
                                 },
                             ]),
                             t
                         );
                     })(n(828));
-                (a.supported = function () {
+                ((a.supported = function () {
                     try {
                         return !!new XMLHttpRequest().overrideMimeType;
                     } catch (e) {
                         return !1;
                     }
                 }),
-                    (e.exports = a);
+                    (e.exports = a));
             },
             828: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                         function e(e, t) {
                             for (var n = 0; n < t.length; n++) {
                                 var r = t[n];
-                                (r.enumerable = r.enumerable || !1),
+                                ((r.enumerable = r.enumerable || !1),
                                     (r.configurable = !0),
                                     "value" in r && (r.writable = !0),
-                                    Object.defineProperty(e, r.key, r);
+                                    Object.defineProperty(e, r.key, r));
                             }
                         }
                         return function (t, n, r) {
-                            return n && e(t.prototype, n), r && e(t, r), t;
+                            return (n && e(t.prototype, n), r && e(t, r), t);
                         };
                     })(),
                     i = function e(t, n, r) {
@@ -4764,10 +4785,10 @@ e.exports = (function () {
                         (function (e, t) {
                             if ("function" != typeof t && null !== t)
                                 throw TypeError("Super expression must either be null or a function, not " + typeof t);
-                            (e.prototype = Object.create(t && t.prototype, {
+                            ((e.prototype = Object.create(t && t.prototype, {
                                 constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                             })),
-                                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+                                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
                         })(t, e),
                         r(t, [
                             {
@@ -4779,28 +4800,28 @@ e.exports = (function () {
                                         else {
                                             var i = null;
                                             t._onAbort = function (e) {
-                                                i(), r(e);
+                                                (i(), r(e));
                                             };
                                             var a = function () {
                                                     t.offset >= e && !t.eof && (i(), n());
                                                 },
                                                 o = function () {
-                                                    i(), n();
+                                                    (i(), n());
                                                 },
                                                 u = function () {
-                                                    i(), r(Error("error streaming"));
+                                                    (i(), r(Error("error streaming")));
                                                 };
-                                            (i = function () {
-                                                (t.buffering = !1),
+                                            ((i = function () {
+                                                ((t.buffering = !1),
                                                     t.off("buffer", a),
                                                     t.off("done", o),
                                                     t.off("error", u),
-                                                    (t._onAbort = null);
+                                                    (t._onAbort = null));
                                             }),
                                                 (t.buffering = !0),
                                                 t.on("buffer", a),
                                                 t.on("done", o),
-                                                t.on("error", u);
+                                                t.on("error", u));
                                         }
                                     });
                                 },
@@ -4819,7 +4840,7 @@ e.exports = (function () {
                                 key: "onXHRStart",
                                 value: function () {
                                     var e = this;
-                                    this.xhr.addEventListener("progress", function () {
+                                    (this.xhr.addEventListener("progress", function () {
                                         return e.onXHRProgress();
                                     }),
                                         this.xhr.addEventListener("error", function () {
@@ -4828,7 +4849,7 @@ e.exports = (function () {
                                         this.xhr.addEventListener("load", function () {
                                             return e.onXHRLoad();
                                         }),
-                                        this.emit("open");
+                                        this.emit("open"));
                                 },
                             },
                             {
@@ -4846,7 +4867,7 @@ e.exports = (function () {
                             {
                                 key: "onXHRLoad",
                                 value: function () {
-                                    (this.eof = !0), this.emit("done");
+                                    ((this.eof = !0), this.emit("done"));
                                 },
                             },
                         ]),
@@ -4855,6 +4876,7 @@ e.exports = (function () {
                 })(n(306));
             },
             761: (e, t, n) => {
+                "use strict";
                 var r = n(855),
                     i = n(810),
                     a = n(431),
@@ -4867,18 +4889,19 @@ e.exports = (function () {
                 };
             },
             855: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                         function e(e, t) {
                             for (var n = 0; n < t.length; n++) {
                                 var r = t[n];
-                                (r.enumerable = r.enumerable || !1),
+                                ((r.enumerable = r.enumerable || !1),
                                     (r.configurable = !0),
                                     "value" in r && (r.writable = !0),
-                                    Object.defineProperty(e, r.key, r);
+                                    Object.defineProperty(e, r.key, r));
                             }
                         }
                         return function (t, n, r) {
-                            return n && e(t.prototype, n), r && e(t, r), t;
+                            return (n && e(t.prototype, n), r && e(t, r), t);
                         };
                     })(),
                     i = function e(t, n, r) {
@@ -4915,57 +4938,58 @@ e.exports = (function () {
                                     throw TypeError(
                                         "Super expression must either be null or a function, not " + typeof t,
                                     );
-                                (e.prototype = Object.create(t && t.prototype, {
+                                ((e.prototype = Object.create(t && t.prototype, {
                                     constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 },
                                 })),
-                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+                                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t)));
                             })(t, e),
                             r(t, [
                                 {
                                     key: "initXHR",
                                     value: function () {
-                                        i(
+                                        (i(
                                             t.prototype.__proto__ || Object.getPrototypeOf(t.prototype),
                                             "initXHR",
                                             this,
                                         ).call(this),
-                                            (this.xhr.responseType = o);
+                                            (this.xhr.responseType = o));
                                     },
                                 },
                                 {
                                     key: "onXHRProgress",
                                     value: function () {
                                         var e = this.xhr.response;
-                                        (this.bytesRead += e.byteLength), this.emit("buffer", e);
+                                        ((this.bytesRead += e.byteLength), this.emit("buffer", e));
                                     },
                                 },
                             ]),
                             t
                         );
                     })(a);
-                (u.supported = function () {
+                ((u.supported = function () {
                     try {
                         var e = new XMLHttpRequest();
-                        return (e.responseType = o), e.responseType === o;
+                        return ((e.responseType = o), e.responseType === o);
                     } catch (e) {
                         return !1;
                     }
                 }),
-                    (e.exports = u);
+                    (e.exports = u));
             },
             503: (e) => {
+                "use strict";
                 var t = (function () {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
                             var r = t[n];
-                            (r.enumerable = r.enumerable || !1),
+                            ((r.enumerable = r.enumerable || !1),
                                 (r.configurable = !0),
                                 "value" in r && (r.writable = !0),
-                                Object.defineProperty(e, r.key, r);
+                                Object.defineProperty(e, r.key, r));
                         }
                     }
                     return function (t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t;
+                        return (n && e(t.prototype, n), r && e(t, r), t);
                     };
                 })();
                 e.exports = (function () {
@@ -4986,7 +5010,7 @@ e.exports = (function () {
                             p = void 0 === h ? !(r || a) : h,
                             m = t.timestamp,
                             v = void 0 === m ? Date.now() : m;
-                        (function (e, t) {
+                        ((function (e, t) {
                             if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                         })(this, e),
                             (this.start = u),
@@ -5002,7 +5026,7 @@ e.exports = (function () {
                                 get: function () {
                                     return this.end - this.start;
                                 },
-                            });
+                            }));
                     }
                     return (
                         t(e, [
@@ -5033,7 +5057,7 @@ e.exports = (function () {
                                     if (!this.empty || !this.contains(t)) throw Error("invalid split");
                                     var n = new e({ start: this.start, end: t }),
                                         r = new e({ start: t, end: this.eof ? t : this.end, eof: this.eof });
-                                    return (n.next = r), (r.prev = n), [n, r];
+                                    return ((n.next = r), (r.prev = n), [n, r]);
                                 },
                             },
                             {
@@ -5056,18 +5080,19 @@ e.exports = (function () {
                 })();
             },
             91: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                         function e(e, t) {
                             for (var n = 0; n < t.length; n++) {
                                 var r = t[n];
-                                (r.enumerable = r.enumerable || !1),
+                                ((r.enumerable = r.enumerable || !1),
                                     (r.configurable = !0),
                                     "value" in r && (r.writable = !0),
-                                    Object.defineProperty(e, r.key, r);
+                                    Object.defineProperty(e, r.key, r));
                             }
                         }
                         return function (t, n, r) {
-                            return n && e(t.prototype, n), r && e(t, r), t;
+                            return (n && e(t.prototype, n), r && e(t, r), t);
                         };
                     })(),
                     i = n(503);
@@ -5077,13 +5102,13 @@ e.exports = (function () {
                             n = t.cacheSize;
                         if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
                         var r = new i({ eof: !0 });
-                        (this.head = r),
+                        ((this.head = r),
                             (this.tail = r),
                             (this.readOffset = 0),
                             (this.readCursor = r),
                             (this.writeOffset = 0),
                             (this.writeCursor = r),
-                            (this.cacheSize = void 0 === n ? 0 : n);
+                            (this.cacheSize = void 0 === n ? 0 : n));
                     }
                     return (
                         r(e, [
@@ -5118,7 +5143,7 @@ e.exports = (function () {
                                         return t.contains(e);
                                     });
                                     if (!t) throw Error("read seek out of range");
-                                    (this.readOffset = e), (this.readCursor = t);
+                                    ((this.readOffset = e), (this.readCursor = t));
                                 },
                             },
                             {
@@ -5128,7 +5153,7 @@ e.exports = (function () {
                                         return t.contains(e);
                                     });
                                     if (!t) throw Error("write seek out of range");
-                                    (this.writeOffset = e), (this.writeCursor = t);
+                                    ((this.writeOffset = e), (this.writeCursor = t));
                                 },
                             },
                             {
@@ -5146,7 +5171,7 @@ e.exports = (function () {
                                     ) {
                                         var u = Math.min(i, o.end),
                                             s = e.subarray(a - r, u - r);
-                                        o.readBytes(s, a, u), (a = u);
+                                        (o.readBytes(s, a, u), (a = u));
                                     }
                                     return (
                                         (this.readOffset = a),
@@ -5164,12 +5189,12 @@ e.exports = (function () {
                                         n = this.writeCursor;
                                     if (!n.empty) throw Error("write cursor not empty");
                                     if (!n.contains(t.end) && n.end !== t.end) throw Error("write cursor too small");
-                                    n.start < t.start && (this.split(n, t.start), (n = this.writeCursor)),
+                                    (n.start < t.start && (this.split(n, t.start), (n = this.writeCursor)),
                                         (t.end < n.end || n.eof) && (this.split(n, t.end), (n = this.writeCursor)),
                                         this.splice(n, n, t, t),
                                         (this.writeOffset = t.end),
                                         (this.writeCursor = t.next),
-                                        this.gc();
+                                        this.gc());
                                 },
                             },
                             {
@@ -5203,10 +5228,10 @@ e.exports = (function () {
                                     for (var e = [], t = this.head; t; t = t.next)
                                         if (!t.empty) {
                                             var n = t;
-                                            (t = t.last(function (e) {
+                                            ((t = t.last(function (e) {
                                                 return !e.empty;
                                             })),
-                                                e.push([n.start, t.end]);
+                                                e.push([n.start, t.end]));
                                         }
                                     return e;
                                 },
@@ -5226,7 +5251,7 @@ e.exports = (function () {
                                         for (var r = 0; r < t.length; r++) {
                                             var i = t[r];
                                             if (e <= this.cacheSize) break;
-                                            this.remove(i), (e -= i.length);
+                                            (this.remove(i), (e -= i.length));
                                         }
                                     }
                                 },
@@ -5235,10 +5260,10 @@ e.exports = (function () {
                                 key: "remove",
                                 value: function (e) {
                                     var t = new i({ start: e.start, end: e.end });
-                                    this.splice(e, e, t, t),
+                                    (this.splice(e, e, t, t),
                                         (e = t).prev && e.prev.empty && (e = this.consolidate(e.prev)),
                                         e.next && e.next.empty && !e.next.eof && (e = this.consolidate(e)),
-                                        0 === e.start && (this.head = e);
+                                        0 === e.start && (this.head = e));
                                 },
                             },
                             {
@@ -5248,7 +5273,7 @@ e.exports = (function () {
                                             return e.empty && !e.eof;
                                         }),
                                         n = new i({ start: e.start, end: t.end });
-                                    return this.splice(e, t, n, n), n;
+                                    return (this.splice(e, t, n, n), n);
                                 },
                             },
                             {
@@ -5259,7 +5284,7 @@ e.exports = (function () {
                                     if (!(t.end === r.end || (t.eof && r.eof))) throw Error("invalid splice tail");
                                     var a = e.prev,
                                         o = t.next;
-                                    (e.prev = null),
+                                    ((e.prev = null),
                                         (t.next = null),
                                         a && ((a.next = n), (n.prev = a)),
                                         o && ((o.prev = r), (r.next = o)),
@@ -5270,7 +5295,7 @@ e.exports = (function () {
                                         })),
                                         (this.writeCursor = this.head.first(function (e) {
                                             return e.contains(i.writeOffset);
-                                        }));
+                                        })));
                                 },
                             },
                             {
@@ -5285,29 +5310,31 @@ e.exports = (function () {
                 })();
             },
             814: (e, t, n) => {
+                "use strict";
                 e.exports = n(91);
             },
             566: (e) => {
+                "use strict";
                 var t = (function () {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
                             var r = t[n];
-                            (r.enumerable = r.enumerable || !1),
+                            ((r.enumerable = r.enumerable || !1),
                                 (r.configurable = !0),
                                 "value" in r && (r.writable = !0),
-                                Object.defineProperty(e, r.key, r);
+                                Object.defineProperty(e, r.key, r));
                         }
                     }
                     return function (t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t;
+                        return (n && e(t.prototype, n), r && e(t, r), t);
                     };
                 })();
                 e.exports = (function () {
                     function e() {
-                        !(function (e, t) {
+                        (!(function (e, t) {
                             if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                         })(this, e),
-                            (this._e = {});
+                            (this._e = {}));
                     }
                     return (
                         t(e, [
@@ -5339,18 +5366,19 @@ e.exports = (function () {
                 })();
             },
             936: (e, t, n) => {
+                "use strict";
                 var r = (function () {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
                             var r = t[n];
-                            (r.enumerable = r.enumerable || !1),
+                            ((r.enumerable = r.enumerable || !1),
                                 (r.configurable = !0),
                                 "value" in r && (r.writable = !0),
-                                Object.defineProperty(e, r.key, r);
+                                Object.defineProperty(e, r.key, r));
                         }
                     }
                     return function (t, n, r) {
-                        return n && e(t.prototype, n), r && e(t, r), t;
+                        return (n && e(t.prototype, n), r && e(t, r), t);
                     };
                 })();
                 n(566);
@@ -5362,7 +5390,7 @@ e.exports = (function () {
                             r = t.chunkSize,
                             a = t.cacheSize,
                             o = t.progressive;
-                        !(function (e, t) {
+                        (!(function (e, t) {
                             if (!(e instanceof t)) throw TypeError("Cannot call a class as a function");
                         })(this, e),
                             (this.length = -1),
@@ -5389,7 +5417,7 @@ e.exports = (function () {
                             (this._cache = new i({ cacheSize: void 0 === a ? 0 : a })),
                             (this._backend = null),
                             (this._cachever = 0),
-                            (this._chunkSize = void 0 === r ? 1048576 : r);
+                            (this._chunkSize = void 0 === r ? 1048576 : r));
                     }
                     return (
                         r(e, [
@@ -5400,20 +5428,20 @@ e.exports = (function () {
                                     return new Promise(function (t, n) {
                                         if (e.loading) throw Error("cannot load when loading");
                                         if (e.loaded) throw Error("cannot load when loaded");
-                                        (e.loading = !0),
+                                        ((e.loading = !0),
                                             e
                                                 ._openBackend()
                                                 .then(function (n) {
-                                                    (e.seekable = n.seekable),
+                                                    ((e.seekable = n.seekable),
                                                         (e.headers = n.headers),
                                                         (e.length = n.length),
                                                         (e.loaded = !0),
                                                         (e.loading = !1),
-                                                        t();
+                                                        t());
                                                 })
                                                 .catch(function (t) {
-                                                    "AbortError" !== t.name && (e.loading = !1), n(t);
-                                                });
+                                                    ("AbortError" !== t.name && (e.loading = !1), n(t));
+                                                }));
                                     });
                                 },
                             },
@@ -5462,15 +5490,15 @@ e.exports = (function () {
                                                             ? n(Error("invalid state"))
                                                             : ((e._backend = null), n(t));
                                                     };
-                                                (d = function () {
-                                                    l.off("open", c), l.off("error", f);
+                                                ((d = function () {
+                                                    (l.off("open", c), l.off("error", f));
                                                 }),
                                                     l.on("open", c),
                                                     l.on("error", f),
                                                     l.on("cachever", function () {
                                                         e._cachever++;
                                                     }),
-                                                    l.load();
+                                                    l.load());
                                             }
                                         }
                                     });
@@ -5503,10 +5531,10 @@ e.exports = (function () {
                                         if (e !== (0 | e) || e < 0) throw Error("invalid input");
                                         if (t.length >= 0 && e > t.length) throw Error("seek past end of file");
                                         if (!t.seekable) throw Error("seek on non-seekable stream");
-                                        t._backend && t.abort(),
+                                        (t._backend && t.abort(),
                                             t._cache.seekRead(e),
                                             t._cache.seekWrite(e),
-                                            t._readAhead().then(n).catch(r);
+                                            t._readAhead().then(n).catch(r));
                                     });
                                 },
                             },
@@ -5534,7 +5562,7 @@ e.exports = (function () {
                                     if (!this.loaded || this.buffering || this.seeking) throw Error("invalid state");
                                     if (!(e instanceof Uint8Array)) throw Error("invalid input");
                                     var t = this._cache.readBytes(e);
-                                    return this._readAhead(), t;
+                                    return (this._readAhead(), t);
                                 },
                             },
                             {
@@ -5555,15 +5583,15 @@ e.exports = (function () {
                                                   .then(function (n) {
                                                       return n
                                                           ? n.bufferToOffset(i).then(function () {
-                                                                return (t.buffering = !1), t.buffer(e);
+                                                                return ((t.buffering = !1), t.buffer(e));
                                                             })
                                                           : Promise.resolve(o);
                                                   })
                                                   .then(function (e) {
-                                                      (t.buffering = !1), n(e);
+                                                      ((t.buffering = !1), n(e));
                                                   })
                                                   .catch(function (e) {
-                                                      "AbortError" !== e.name && (t.buffering = !1), r(e);
+                                                      ("AbortError" !== e.name && (t.buffering = !1), r(e));
                                                   }));
                                     });
                                 },
@@ -5578,10 +5606,10 @@ e.exports = (function () {
                             {
                                 key: "abort",
                                 value: function () {
-                                    this.loading && (this.loading = !1),
+                                    (this.loading && (this.loading = !1),
                                         this.buffering && (this.buffering = !1),
                                         this.seeking && (this.seeking = !1),
-                                        this._backend && (this._backend.abort(), (this._backend = null));
+                                        this._backend && (this._backend.abort(), (this._backend = null)));
                                 },
                             },
                             {
@@ -5602,7 +5630,8 @@ e.exports = (function () {
                 })();
             },
             302: (e, t, n) => {
-                n.r(t), n.d(t, { default: () => r });
+                "use strict";
+                (n.r(t), n.d(t, { default: () => r }));
                 let r =
                     "data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU5LjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAAEEwCZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZ//////////////////////////////////////////////////////////////////8AAAAATGF2YzU5LjE4AAAAAAAAAAAAAAAAJAZAAAAAAAAABBMIw3vfAAAAAAAAAAAAAAAAAAAAAP/7kGQAD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7kmRAj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=";
             },
@@ -5619,20 +5648,22 @@ e.exports = (function () {
             },
             487: (e) => {
                 !(function () {
+                    "use strict";
                     function t(e, t) {
                         throw Error("abstract");
                     }
-                    (t.prototype.drawFrame = function (e) {
+                    ((t.prototype.drawFrame = function (e) {
                         throw Error("abstract");
                     }),
                         (t.prototype.clear = function () {
                             throw Error("abstract");
                         }),
-                        (e.exports = t);
+                        (e.exports = t));
                 })();
             },
             926: (e, t, n) => {
                 !(function () {
+                    "use strict";
                     var t = n(487),
                         r = n(627);
                     function i(e) {
@@ -5645,7 +5676,7 @@ e.exports = (function () {
                                 var u,
                                     s,
                                     l = o.format;
-                                (e.width === l.displayWidth && e.height === l.displayHeight) ||
+                                ((e.width === l.displayWidth && e.height === l.displayHeight) ||
                                     ((e.width = l.displayWidth), (e.height = l.displayHeight)),
                                     (null !== n && n.width == l.width && n.height == l.height) ||
                                         (function (e, r) {
@@ -5656,10 +5687,10 @@ e.exports = (function () {
                                             )
                                                 i[o + 3] = 255;
                                         })(l.width, l.height),
-                                    r.convertYCbCr(o, n.data);
+                                    r.convertYCbCr(o, n.data));
                                 var d,
                                     c = l.cropWidth != l.displayWidth || l.cropHeight != l.displayHeight;
-                                c
+                                (c
                                     ? (i ||
                                           ((u = l.cropWidth),
                                           (s = l.cropHeight),
@@ -5677,7 +5708,7 @@ e.exports = (function () {
                                         l.cropWidth,
                                         l.cropHeight,
                                     ),
-                                    c && t.drawImage(i, 0, 0, l.displayWidth, l.displayHeight);
+                                    c && t.drawImage(i, 0, 0, l.displayWidth, l.displayHeight));
                             }),
                             (this.clear = function () {
                                 t.clearRect(0, 0, e.width, e.height);
@@ -5685,11 +5716,12 @@ e.exports = (function () {
                             this
                         );
                     }
-                    (i.prototype = Object.create(t.prototype)), (e.exports = i);
+                    ((i.prototype = Object.create(t.prototype)), (e.exports = i));
                 })();
             },
             895: (e, t, n) => {
                 !(function () {
+                    "use strict";
                     var t = n(487),
                         r = n(826);
                     function i(e) {
@@ -5723,7 +5755,7 @@ e.exports = (function () {
                             b = {},
                             D = {};
                         function w(e, t) {
-                            return (y[e] && !t) || (y[e] = o.createTexture()), y[e];
+                            return ((y[e] && !t) || (y[e] = o.createTexture()), y[e]);
                         }
                         function E(e, t, n, r, a) {
                             var u = !y[e] || t,
@@ -5731,7 +5763,7 @@ e.exports = (function () {
                             if ((o.activeTexture(o.TEXTURE0), i.stripe)) {
                                 var l = !y[e + "_temp"] || t,
                                     d = w(e + "_temp", t);
-                                o.bindTexture(o.TEXTURE_2D, d),
+                                (o.bindTexture(o.TEXTURE_2D, d),
                                     l
                                         ? (o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_S, o.CLAMP_TO_EDGE),
                                           o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_T, o.CLAMP_TO_EDGE),
@@ -5748,10 +5780,10 @@ e.exports = (function () {
                                               o.UNSIGNED_BYTE,
                                               a,
                                           ))
-                                        : o.texSubImage2D(o.TEXTURE_2D, 0, 0, 0, n / 4, r, o.RGBA, o.UNSIGNED_BYTE, a);
+                                        : o.texSubImage2D(o.TEXTURE_2D, 0, 0, 0, n / 4, r, o.RGBA, o.UNSIGNED_BYTE, a));
                                 var c = y[e + "_stripe"],
                                     f = !c || t;
-                                f && (c = w(e + "_stripe", t)),
+                                (f && (c = w(e + "_stripe", t)),
                                     o.bindTexture(o.TEXTURE_2D, c),
                                     f &&
                                         (o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_S, o.CLAMP_TO_EDGE),
@@ -5770,28 +5802,28 @@ e.exports = (function () {
                                             (function (e) {
                                                 if (D[e]) return D[e];
                                                 for (var t = new Uint32Array(e), n = 0; n < e; n += 4)
-                                                    (t[n] = 255),
+                                                    ((t[n] = 255),
                                                         (t[n + 1] = 65280),
                                                         (t[n + 2] = 0xff0000),
-                                                        (t[n + 3] = 0xff000000);
+                                                        (t[n + 3] = 0xff000000));
                                                 return (D[e] = new Uint8Array(t.buffer));
                                             })(n),
-                                        ));
+                                        )));
                             } else
-                                o.bindTexture(o.TEXTURE_2D, s),
+                                (o.bindTexture(o.TEXTURE_2D, s),
                                     u
                                         ? (o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_S, o.CLAMP_TO_EDGE),
                                           o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_T, o.CLAMP_TO_EDGE),
                                           o.texParameteri(o.TEXTURE_2D, o.TEXTURE_MIN_FILTER, o.LINEAR),
                                           o.texParameteri(o.TEXTURE_2D, o.TEXTURE_MAG_FILTER, o.LINEAR),
                                           o.texImage2D(o.TEXTURE_2D, 0, o.ALPHA, n, r, 0, o.ALPHA, o.UNSIGNED_BYTE, a))
-                                        : o.texSubImage2D(o.TEXTURE_2D, 0, 0, 0, n, r, o.ALPHA, o.UNSIGNED_BYTE, a);
+                                        : o.texSubImage2D(o.TEXTURE_2D, 0, 0, 0, n, r, o.ALPHA, o.UNSIGNED_BYTE, a));
                         }
                         function C(e, t, r, i) {
                             var a = y[e];
                             o.useProgram(n);
                             var u = b[e];
-                            (u && !t) ||
+                            ((u && !t) ||
                                 (o.activeTexture(o.TEXTURE0),
                                 o.bindTexture(o.TEXTURE_2D, a),
                                 o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_S, o.CLAMP_TO_EDGE),
@@ -5801,11 +5833,11 @@ e.exports = (function () {
                                 o.texImage2D(o.TEXTURE_2D, 0, o.RGBA, r, i, 0, o.RGBA, o.UNSIGNED_BYTE, null),
                                 (u = b[e] = o.createFramebuffer())),
                                 o.bindFramebuffer(o.FRAMEBUFFER, u),
-                                o.framebufferTexture2D(o.FRAMEBUFFER, o.COLOR_ATTACHMENT0, o.TEXTURE_2D, a, 0);
+                                o.framebufferTexture2D(o.FRAMEBUFFER, o.COLOR_ATTACHMENT0, o.TEXTURE_2D, a, 0));
                             var p = y[e + "_temp"];
-                            o.activeTexture(o.TEXTURE1), o.bindTexture(o.TEXTURE_2D, p), o.uniform1i(h, 1);
+                            (o.activeTexture(o.TEXTURE1), o.bindTexture(o.TEXTURE_2D, p), o.uniform1i(h, 1));
                             var m = y[e + "_stripe"];
-                            o.activeTexture(o.TEXTURE2),
+                            (o.activeTexture(o.TEXTURE2),
                                 o.bindTexture(o.TEXTURE_2D, m),
                                 o.uniform1i(f, 2),
                                 o.bindBuffer(o.ARRAY_BUFFER, s),
@@ -5816,16 +5848,16 @@ e.exports = (function () {
                                 o.vertexAttribPointer(c, 2, o.FLOAT, !1, 0, 0),
                                 o.viewport(0, 0, r, i),
                                 o.drawArrays(o.TRIANGLES, 0, g.length / 2),
-                                o.bindFramebuffer(o.FRAMEBUFFER, null);
+                                o.bindFramebuffer(o.FRAMEBUFFER, null));
                         }
                         function A(e, n, r) {
-                            o.activeTexture(n),
+                            (o.activeTexture(n),
                                 o.bindTexture(o.TEXTURE_2D, y[e]),
                                 o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_S, o.CLAMP_TO_EDGE),
                                 o.texParameteri(o.TEXTURE_2D, o.TEXTURE_WRAP_T, o.CLAMP_TO_EDGE),
                                 o.texParameteri(o.TEXTURE_2D, o.TEXTURE_MIN_FILTER, o.LINEAR),
                                 o.texParameteri(o.TEXTURE_2D, o.TEXTURE_MAG_FILTER, o.LINEAR),
-                                o.uniform1i(o.getUniformLocation(t, e), r);
+                                o.uniform1i(o.getUniformLocation(t, e), r));
                         }
                         function B(e, t) {
                             var n = u(o.VERTEX_SHADER, e),
@@ -5851,17 +5883,17 @@ e.exports = (function () {
                                     t ||
                                         (function () {
                                             if (i.stripe) {
-                                                (n = B(r.vertexStripe, r.fragmentStripe)),
+                                                ((n = B(r.vertexStripe, r.fragmentStripe)),
                                                     o.getAttribLocation(n, "aPosition"),
-                                                    (d = o.createBuffer());
+                                                    (d = o.createBuffer()));
                                                 var e = new Float32Array([0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1]);
-                                                o.bindBuffer(o.ARRAY_BUFFER, d),
+                                                (o.bindBuffer(o.ARRAY_BUFFER, d),
                                                     o.bufferData(o.ARRAY_BUFFER, e, o.STATIC_DRAW),
                                                     (c = o.getAttribLocation(n, "aTexturePosition")),
                                                     (f = o.getUniformLocation(n, "uStripe")),
-                                                    (h = o.getUniformLocation(n, "uTexture"));
+                                                    (h = o.getUniformLocation(n, "uTexture")));
                                             }
-                                            (t = B(r.vertex, r.fragment)),
+                                            ((t = B(r.vertex, r.fragment)),
                                                 (s = o.createBuffer()),
                                                 o.bindBuffer(o.ARRAY_BUFFER, s),
                                                 o.bufferData(o.ARRAY_BUFFER, g, o.STATIC_DRAW),
@@ -5869,7 +5901,7 @@ e.exports = (function () {
                                                 (p = o.createBuffer()),
                                                 (m = o.getAttribLocation(t, "aLumaPosition")),
                                                 (v = o.createBuffer()),
-                                                (_ = o.getAttribLocation(t, "aChromaPosition"));
+                                                (_ = o.getAttribLocation(t, "aChromaPosition")));
                                         })(),
                                     b)
                                 ) {
@@ -5879,11 +5911,12 @@ e.exports = (function () {
                                             a = (y.cropTop + y.cropHeight) / y.height,
                                             u = y.cropTop / y.height,
                                             s = new Float32Array([r, a, i, a, r, u, r, u, i, a, i, u]);
-                                        o.bindBuffer(o.ARRAY_BUFFER, e), o.bufferData(o.ARRAY_BUFFER, s, o.STATIC_DRAW);
+                                        (o.bindBuffer(o.ARRAY_BUFFER, e),
+                                            o.bufferData(o.ARRAY_BUFFER, s, o.STATIC_DRAW));
                                     };
-                                    D(p, 0, u.y.stride), D(v, 0, (u.u.stride * y.width) / y.chromaWidth);
+                                    (D(p, 0, u.y.stride), D(v, 0, (u.u.stride * y.width) / y.chromaWidth));
                                 }
-                                E("uTextureY", b, u.y.stride, y.height, u.y.bytes),
+                                (E("uTextureY", b, u.y.stride, y.height, u.y.bytes),
                                     E("uTextureCb", b, u.u.stride, y.chromaHeight, u.u.bytes),
                                     E("uTextureCr", b, u.v.stride, y.chromaHeight, u.v.bytes),
                                     i.stripe &&
@@ -5904,18 +5937,18 @@ e.exports = (function () {
                                     o.bindBuffer(o.ARRAY_BUFFER, v),
                                     o.enableVertexAttribArray(_),
                                     o.vertexAttribPointer(_, 2, o.FLOAT, !1, 0, 0),
-                                    o.drawArrays(o.TRIANGLES, 0, g.length / 2);
+                                    o.drawArrays(o.TRIANGLES, 0, g.length / 2));
                             }),
                             (a.clear = function () {
-                                o.viewport(0, 0, e.width, e.height),
+                                (o.viewport(0, 0, e.width, e.height),
                                     o.clearColor(0, 0, 0, 0),
-                                    o.clear(o.COLOR_BUFFER_BIT);
+                                    o.clear(o.COLOR_BUFFER_BIT));
                             }),
                             a.clear(),
                             a
                         );
                     }
-                    (i.stripe = !1),
+                    ((i.stripe = !1),
                         (i.contextForCanvas = function (e) {
                             var t = {
                                 preferLowPowerToHighPerformance: !0,
@@ -5928,7 +5961,7 @@ e.exports = (function () {
                         (i.isAvailable = function () {
                             var e,
                                 t = document.createElement("canvas");
-                            (t.width = 1), (t.height = 1);
+                            ((t.width = 1), (t.height = 1));
                             try {
                                 e = i.contextForCanvas(t);
                             } catch (e) {
@@ -5955,11 +5988,12 @@ e.exports = (function () {
                             return !1;
                         }),
                         (i.prototype = Object.create(t.prototype)),
-                        (e.exports = i);
+                        (e.exports = i));
                 })();
             },
             627: (e, t, n) => {
                 !(function () {
+                    "use strict";
                     var t = n(877);
                     e.exports = {
                         convertYCbCr: function (e, n) {
@@ -5999,7 +6033,7 @@ e.exports = (function () {
                                         F < r;
                                         F += 2
                                     )
-                                        (w = 0 | s[_++]),
+                                        ((w = 0 | s[_++]),
                                             (A = (((409 * (E = 0 | l[g++])) | 0) - 57088) | 0),
                                             (B = (((100 * w) | 0) + ((208 * E) | 0) - 34816) | 0),
                                             (k = (((516 * w) | 0) - 70912) | 0),
@@ -6022,8 +6056,8 @@ e.exports = (function () {
                                             (n[D] = (C + A) >> 8),
                                             (n[D + 1] = (C - B) >> 8),
                                             (n[D + 2] = (C + k) >> 8),
-                                            (D += 4);
-                                    (b += h), (D += h), x++;
+                                            (D += 4));
+                                    ((b += h), (D += h), x++);
                                 }
                             else
                                 for (y = 0, T = 0; T < i; T++)
@@ -6032,7 +6066,7 @@ e.exports = (function () {
                                         F < r;
                                         F++
                                     )
-                                        (w = 0 | s[_ + (V = F >> a)]),
+                                        ((w = 0 | s[_ + (V = F >> a)]),
                                             (A = (((409 * (E = 0 | l[g + V])) | 0) - 57088) | 0),
                                             (B = (((100 * w) | 0) + ((208 * E) | 0) - 34816) | 0),
                                             (k = (((516 * w) | 0) - 70912) | 0),
@@ -6040,15 +6074,16 @@ e.exports = (function () {
                                             (n[y] = (C + A) >> 8),
                                             (n[y + 1] = (C - B) >> 8),
                                             (n[y + 2] = (C + k) >> 8),
-                                            (y += 4);
+                                            (y += 4));
                         },
                     };
                 })();
             },
             877: (e) => {
                 !(function () {
+                    "use strict";
                     e.exports = function (e) {
-                        for (var t = 0, n = e >> 1; 0 != n; ) (n >>= 1), t++;
+                        for (var t = 0, n = e >> 1; 0 != n;) ((n >>= 1), t++);
                         if (e !== 1 << t)
                             throw "chroma plane dimensions must be power of 2 ratio to luma plane dimensions; got " + e;
                         return t;
@@ -6057,6 +6092,7 @@ e.exports = (function () {
             },
             731: (e, t, n) => {
                 !(function () {
+                    "use strict";
                     var t = n(487),
                         r = n(926),
                         i = n(895);
@@ -6076,23 +6112,24 @@ e.exports = (function () {
         var i = t[r];
         if (void 0 !== i) return i.exports;
         var a = (t[r] = { exports: {} });
-        return e[r](a, a.exports, n), a.exports;
+        return (e[r](a, a.exports, n), a.exports);
     }
-    (n.d = (e, t) => {
+    ((n.d = (e, t) => {
         for (var r in t) n.o(t, r) && !n.o(e, r) && Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
     }),
         (n.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
         (n.r = (e) => {
-            "u" > typeof Symbol &&
+            ("u" > typeof Symbol &&
                 Symbol.toStringTag &&
                 Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-                Object.defineProperty(e, "__esModule", { value: !0 });
-        });
+                Object.defineProperty(e, "__esModule", { value: !0 }));
+        }));
     var r = {};
     return (
         (() => {
+            "use strict";
             var e = n(318);
-            Object.defineProperty(r, "__esModule", { value: !0 }),
+            (Object.defineProperty(r, "__esModule", { value: !0 }),
                 Object.defineProperty(r, "OGVCompat", {
                     enumerable: !0,
                     get: function () {
@@ -6129,7 +6166,7 @@ e.exports = (function () {
                         return l.default;
                     },
                 }),
-                (r.OGVVersion = void 0);
+                (r.OGVVersion = void 0));
             var t = e(n(8)),
                 i = e(n(523)),
                 a = e(n(964)),
@@ -6138,7 +6175,7 @@ e.exports = (function () {
                 s = e(n(869)),
                 l = e(n(168)),
                 d = "1.8.9-20220406232920-cb5f7ff";
-            (r.OGVVersion = d),
+            ((r.OGVVersion = d),
                 "object" === ("u" < typeof window ? "undefined" : (0, t.default)(window)) &&
                     ((window.OGVCompat = i.default),
                     (window.OGVLoader = a.default),
@@ -6146,7 +6183,7 @@ e.exports = (function () {
                     (window.OGVMediaType = u.default),
                     (window.OGVTimeRanges = l.default),
                     (window.OGVPlayer = s.default),
-                    (window.OGVVersion = d));
+                    (window.OGVVersion = d)));
         })(),
         r
     );

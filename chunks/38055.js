@@ -31,7 +31,7 @@ function A(e) {
                     leadingAccessory: { type: "icon", icon: o.CircleInformationIcon },
                     icon: o.CircleInformationIcon,
                     action: () => {
-                        (0, u.openModalLazy)(async () => {
+                        ((0, u.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("742445"),
                                 n.e("451778"),
@@ -40,7 +40,7 @@ function A(e) {
                             ]).then(n.bind(n, 643460));
                             return (t) => (0, l.jsx)(e, { ...t });
                         }),
-                            t?.();
+                            t?.());
                     },
                 }),
                 (0, l.jsx)(a.sL, {
@@ -49,7 +49,7 @@ function A(e) {
                     checked: i,
                     leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
-                        (0, f.Il)(), t?.();
+                        ((0, f.Il)(), t?.());
                     },
                 }),
             ],
@@ -74,7 +74,7 @@ let C = function (e) {
                 innerRef: t,
                 "aria-label": x.intl.string(x.t.w2jvOf),
                 onClick: (e) => {
-                    e.stopPropagation(), n.onClick(e);
+                    (e.stopPropagation(), n.onClick(e));
                 },
                 style: { width: "12px", height: "12px", display: "flex" },
                 children: (0, l.jsx)(m.SettingsIcon, { size: "xxs" }),

@@ -33,11 +33,11 @@ function _(e) {
 }
 let A = async (e, t, n) => {
         if (((0, a.sq)(e, t), (null == n || "" === n) && (0, a.IR)(t)))
-            return (e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve();
+            return ((e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve());
         if (null == n || "" === n)
             return Promise.reject(new c.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
         let o = s.Ay.releaseChannel !== d.BIo.CANARY && !h.includes(n) && e.transport !== u.z4.POST_MESSAGE;
-        return await (0, a.e2)(n, o, e.abortController.signal), (0, a.uM)(e, n, t);
+        return (await (0, a.e2)(n, o, e.abortController.signal), (0, a.uM)(e, n, t));
     },
     m = () =>
         (0, a.BB)((e) => {

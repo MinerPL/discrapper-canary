@@ -8,7 +8,7 @@ r(
     { target: "Object", stat: !0, sham: !a },
     {
         getOwnPropertyDescriptors: function (e) {
-            for (var t, n, r = i(e), a = s.f, c = o(r), u = {}, d = 0; c.length > d; )
+            for (var t, n, r = i(e), a = s.f, c = o(r), u = {}, d = 0; c.length > d;)
                 void 0 !== (n = a(r, (t = c[d++]))) && l(u, t, n);
             return u;
         },

@@ -1,4 +1,4 @@
-n.d(a, { K: () => m }), n(321073);
+(n.d(a, { K: () => m }), n(321073));
 var t = n(477900);
 n(582128);
 var i = n(192308),
@@ -49,16 +49,17 @@ async function m(e, a) {
                 switch (t.type) {
                     case h.nQ.CLIP:
                     case h.nQ.VOICE_CLIP:
-                        a.push(new File([i], l, { type: "video/mp4" })), n.push({ clip: e });
+                        (a.push(new File([i], l, { type: "video/mp4" })), n.push({ clip: e }));
                         break;
                     case h.nQ.SCREENSHOT:
-                        a.push(new File([i], l, { type: "image/jpeg" })), n.push({});
+                        (a.push(new File([i], l, { type: "image/jpeg" })), n.push({}));
                         break;
                     default:
                         t.type;
                 }
             }
-            (0, u.R)(a, C, o.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), i.closeAllModals();
+            ((0, u.R)(a, C, o.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }),
+                i.closeAllModals());
         } catch (e) {
             throw (h.nx.error(e), e);
         }

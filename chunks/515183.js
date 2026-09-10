@@ -66,7 +66,7 @@ let h = {
         "1314682894106497096": (e, t, n) =>
             !(function (e, t) {
                 let { quns: n } = l.Ay.GetWindowFullscreenTypeExtraByPid(e, t.name);
-                return c.info(`QUNS for ${t.name}: ${n}`), n === i.YL.QUNS_RUNNING_D3D_FULL_SCREEN;
+                return (c.info(`QUNS for ${t.name}: ${n}`), n === i.YL.QUNS_RUNNING_D3D_FULL_SCREEN);
             })(e, t)
                 ? n
                 : i.aI.FULLSCREEN,

@@ -25,12 +25,12 @@ function A(t) {
         }),
         U = (0, a.bG)([E.A], () => E.A.isEnrolling(_.id)),
         p = i.useCallback(async () => {
-            await (0, r.Oy)(_.id, {
+            (await (0, r.Oy)(_.id, {
                 questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
                 questContentCTA: l.Cy.START_QUEST,
                 sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
             }),
-                e();
+                e());
         }, [_.id, e]),
         I = i.useCallback(() => ((0, r.Zb)(_.id), e()), [_.id, e]);
     return (0, s.jsx)(o.k, {

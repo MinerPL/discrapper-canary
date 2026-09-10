@@ -28,13 +28,13 @@ let h = function (e) {
         }),
         y = i.useCallback(
             (e) => {
-                C(!0), p?.(e);
+                (C(!0), p?.(e));
             },
             [C, p],
         ),
         S = i.useCallback(
             (e) => {
-                C(!1), g?.(e);
+                (C(!1), g?.(e));
             },
             [C, g],
         ),

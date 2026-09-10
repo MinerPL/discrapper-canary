@@ -21,7 +21,7 @@ if (!k) {
     var C = new p(),
         w = function () {
             var e, t;
-            for (y && (e = b.domain) && e.exit(); (t = C.get()); )
+            for (y && (e = b.domain) && e.exit(); (t = C.get());)
                 try {
                     t();
                 } catch (e) {
@@ -29,7 +29,7 @@ if (!k) {
                 }
             e && e.enter();
         };
-    h || y || m || !v || !g
+    (h || y || m || !v || !g
         ? !f && _ && _.resolve
             ? (((i = _.resolve(void 0)).constructor = _),
               (s = u(i.then, i)),
@@ -51,7 +51,7 @@ if (!k) {
               o.data = a = !a;
           })),
         (k = function (e) {
-            C.head || r(), C.add(e);
-        });
+            (C.head || r(), C.add(e));
+        }));
 }
 e.exports = k;

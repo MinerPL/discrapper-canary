@@ -109,14 +109,14 @@ function U() {
                     m = c,
                     h = r.width,
                     f = r.height;
-                null != u &&
+                (null != u &&
                     ((f = (h = Math.min(r.width, r.height * u)) / u),
                     (d = o + (r.width - h) / 2),
                     (m = c + (r.height - f) / 2)),
                     (a.style.left = `${d}px`),
                     (a.style.top = `${m}px`),
                     (a.style.width = `${h}px`),
-                    (a.style.height = `${f}px`);
+                    (a.style.height = `${f}px`));
             }
             a();
             let s = new ResizeObserver(a);
@@ -126,7 +126,7 @@ function U() {
                 null != r && s.observe(r),
                 window.addEventListener("resize", a),
                 () => {
-                    s.disconnect(), window.removeEventListener("resize", a);
+                    (s.disconnect(), window.removeEventListener("resize", a));
                 }
             );
         }, [e, t]),
@@ -158,7 +158,7 @@ function K(e) {
                 t = d.current;
             if (null == e || null == t) return;
             let { x: l, y: n } = j.current;
-            (t.style.left = `${e.left + l * e.width}px`), (t.style.top = `${e.top + n * e.height}px`);
+            ((t.style.left = `${e.left + l * e.width}px`), (t.style.top = `${e.top + n * e.height}px`));
             let a = b.current * e.height;
             t.style.fontSize = `${a}px`;
             let i = m.current;
@@ -173,9 +173,9 @@ function K(e) {
             if (null == e || null == t) return;
             let l = t.getBoundingClientRect(),
                 n = (s.current?.videoElement ?? t).getBoundingClientRect();
-            (h.current = { left: n.left - l.left, top: n.top - l.top, width: n.width, height: n.height }), y();
+            ((h.current = { left: n.left - l.left, top: n.top - l.top, width: n.width, height: n.height }), y());
         }, [s, y]);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         let e = u.current;
         if (null == e) return;
         N();
@@ -186,13 +186,13 @@ function K(e) {
             null != l && t.observe(l),
             window.addEventListener("resize", N),
             () => {
-                t.disconnect(), window.removeEventListener("resize", N);
+                (t.disconnect(), window.removeEventListener("resize", N));
             }
         );
     }, [N, s]),
         a.useEffect(() => {
-            (j.current = p), (b.current = g.fontSize), (C.current = g.strokeWidth), y();
-        }, [p, g.fontSize, g.strokeWidth, y]);
+            ((j.current = p), (b.current = g.fontSize), (C.current = g.strokeWidth), y());
+        }, [p, g.fontSize, g.strokeWidth, y]));
     let E = a.useCallback(
             (e) => {
                 if (!f.current) return;
@@ -215,14 +215,14 @@ function K(e) {
             document.addEventListener("mousemove", E),
             document.addEventListener("mouseup", w),
             () => {
-                document.removeEventListener("mousemove", E), document.removeEventListener("mouseup", w);
+                (document.removeEventListener("mousemove", E), document.removeEventListener("mouseup", w));
             }
         ),
         [E, w],
     );
     let k = a.useCallback(
             (e) => {
-                e.stopPropagation(), e.preventDefault(), i();
+                (e.stopPropagation(), e.preventDefault(), i());
                 let t = h.current,
                     l = u.current?.getBoundingClientRect();
                 if (null != t && null != l && t.width > 0 && t.height > 0) {
@@ -311,7 +311,7 @@ function ea(e) {
             [p, m, c],
         ),
         j = a.useCallback(() => {
-            (f.current = null), v(null);
+            ((f.current = null), v(null));
         }, []);
     a.useEffect(() => {
         if (null != x)
@@ -319,16 +319,16 @@ function ea(e) {
                 document.addEventListener("mousemove", g),
                 document.addEventListener("mouseup", j),
                 () => {
-                    document.removeEventListener("mousemove", g), document.removeEventListener("mouseup", j);
+                    (document.removeEventListener("mousemove", g), document.removeEventListener("mouseup", j));
                 }
             );
     }, [x, g, j]);
     let C = a.useCallback(
             (e) => (t) => {
-                t.stopPropagation(),
+                (t.stopPropagation(),
                     d(),
                     (f.current = { mode: e, clientX: t.clientX, initialStart: s, initialEnd: o }),
-                    v(e);
+                    v(e));
             },
             [d, s, o],
         ),
@@ -338,10 +338,10 @@ function ea(e) {
                     l = o - s,
                     n = !1,
                     a = s;
-                "ArrowLeft" === e.key
+                ("ArrowLeft" === e.key
                     ? ((n = !0), (a = (0, G.clamp)(s - t, 0, c - l)))
                     : "ArrowRight" === e.key && ((n = !0), (a = (0, G.clamp)(s + t, 0, c - l))),
-                    n && (e.preventDefault(), e.stopPropagation(), m(a, a + l));
+                    n && (e.preventDefault(), e.stopPropagation(), m(a, a + l)));
             },
             [s, o, c, m],
         ),
@@ -350,10 +350,10 @@ function ea(e) {
                 let t = e.shiftKey ? 1 : 0.1,
                     l = !1,
                     n = s;
-                "ArrowLeft" === e.key
+                ("ArrowLeft" === e.key
                     ? ((l = !0), (n = (0, G.clamp)(s - t, 0, o - P.Cx)))
                     : "ArrowRight" === e.key && ((l = !0), (n = (0, G.clamp)(s + t, 0, o - P.Cx))),
-                    l && (e.preventDefault(), e.stopPropagation(), m(n, o));
+                    l && (e.preventDefault(), e.stopPropagation(), m(n, o)));
             },
             [s, o, m],
         ),
@@ -362,10 +362,10 @@ function ea(e) {
                 let t = e.shiftKey ? 1 : 0.1,
                     l = !1,
                     n = o;
-                "ArrowLeft" === e.key
+                ("ArrowLeft" === e.key
                     ? ((l = !0), (n = (0, G.clamp)(o - t, s + P.Cx, c)))
                     : "ArrowRight" === e.key && ((l = !0), (n = (0, G.clamp)(o + t, s + P.Cx, c))),
-                    l && (e.preventDefault(), e.stopPropagation(), m(s, n));
+                    l && (e.preventDefault(), e.stopPropagation(), m(s, n)));
             },
             [s, o, c, m],
         ),
@@ -438,7 +438,7 @@ function ec(e) {
     let t = Math.floor(e / 60),
         l = Math.floor(e % 60),
         n = Math.floor((e % 1) * 100);
-    return (t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`;
+    return ((t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`);
 }
 function eu(e) {
     let t = Math.floor(e / 60),
@@ -476,7 +476,7 @@ function ed(e) {
         () =>
             p({
                 onPlay: () => {
-                    R(null), S(!1);
+                    (R(null), S(!1));
                 },
             }),
         [p],
@@ -488,21 +488,21 @@ function ed(e) {
             let e = _.current;
             null != e && O(e.getBoundingClientRect());
         }, [_]);
-    a.useMemo(() => {
-        $.width, $.height, K();
+    (a.useMemo(() => {
+        ($.width, $.height, K());
     }, [$.width, $.height, z, l, K]),
         a.useEffect(() => {
             let e = V.current;
-            if (null != e) return e.addEventListener("scroll", K), () => e.removeEventListener("scroll", K);
-        }, [K]);
+            if (null != e) return (e.addEventListener("scroll", K), () => e.removeEventListener("scroll", K));
+        }, [K]));
     let en = a.useCallback(
             (e, t) => {
                 if (null == s || null == D) return;
                 let l = (((0, G.clamp)(e, D.left, D.right) - D.left) / D.width) * s,
                     n = (0, G.clamp)(l, 0, s),
                     a = L;
-                null == a && t && ((a = "playhead"), r && (v(), S(!0)), R(a)),
-                    "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, G.clamp)(n, o, c));
+                (null == a && t && ((a = "playhead"), r && (v(), S(!0)), R(a)),
+                    "start" === a ? d(n) : "end" === a ? m(n) : "playhead" === a && g((0, G.clamp)(n, o, c)));
             },
             [s, D, L, o, c, r, v, d, m, g],
         ),
@@ -513,10 +513,10 @@ function ed(e) {
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        (l = !0), d(o - t);
+                        ((l = !0), d(o - t));
                         break;
                     case "ArrowRight":
-                        (l = !0), d(o + t);
+                        ((l = !0), d(o + t));
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
@@ -529,10 +529,10 @@ function ed(e) {
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        (l = !0), m(c - t);
+                        ((l = !0), m(c - t));
                         break;
                     case "ArrowRight":
-                        (l = !0), m(c + t);
+                        ((l = !0), m(c + t));
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
@@ -546,7 +546,7 @@ function ed(e) {
         ),
         ef = a.useCallback(
             (e) => (t) => {
-                t.stopPropagation(), r && (v(), S(!0)), R(e);
+                (t.stopPropagation(), r && (v(), S(!0)), R(e));
             },
             [r, v],
         ),
@@ -557,14 +557,14 @@ function ed(e) {
             [en],
         ),
         ev = a.useCallback(() => {
-            M && h(), S(!1), R(null);
+            (M && h(), S(!1), R(null));
         }, [M, h]);
     a.useEffect(
         () => (
             document.addEventListener("mousemove", ex),
             document.addEventListener("mouseup", ev),
             () => {
-                document.removeEventListener("mousemove", ex), document.removeEventListener("mouseup", ev);
+                (document.removeEventListener("mousemove", ex), document.removeEventListener("mouseup", ev));
             }
         ),
         [ex, ev],
@@ -578,14 +578,14 @@ function ed(e) {
         if (0 === ep || 0 === eg) return;
         let e = _.current;
         if (null == e) return;
-        (e.height = U), (e.width = z);
+        ((e.height = U), (e.width = z));
         let t = e.getContext("2d");
         if (null == t) return;
-        (t.fillStyle = "transparent"), t.fillRect(0, 0, z, U);
+        ((t.fillStyle = "transparent"), t.fillRect(0, 0, z, U));
         let l = [];
         for (let e = 0; e < ep; e++) l.push((eg / z) * s * e);
         return C(l, eg, U, (e) => {
-            for (let l = 0; l < e.length; l++) t.drawImage(e[l], eg * l, 0, eg, U), e[l].close();
+            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], eg * l, 0, eg, U), e[l].close());
         });
     }, [U, _, s, ep, eg, C, z]);
     let ej = A - o,
@@ -821,7 +821,7 @@ function eh(e) {
         { tracks: k, selectedTrackId: A, setSelectedTrackId: L } = (0, H.fn)(),
         R = C.type === P.nQ.SCREENSHOT;
     a.useEffect(() => {
-        if (!R) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+        if (!R) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
             if ((0, i.Cw)(document.activeElement)) return;
             let t = g.current;
@@ -832,13 +832,13 @@ function eh(e) {
                 s = !1;
             switch (e.key) {
                 case " ":
-                    (s = !0), n.paused ? t.play() : t.pause();
+                    ((s = !0), n.paused ? t.play() : t.pause());
                     break;
                 case "ArrowLeft":
-                    (s = !0), t.seek(Math.max(l, n.currentTime - a));
+                    ((s = !0), t.seek(Math.max(l, n.currentTime - a)));
                     break;
                 case "ArrowRight":
-                    (s = !0), t.seek(Math.min(v, n.currentTime + a));
+                    ((s = !0), t.seek(Math.min(v, n.currentTime + a)));
             }
             s && (e.stopPropagation(), e.preventDefault());
         }

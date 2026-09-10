@@ -44,13 +44,13 @@ class o extends r.A {
         return new o(e);
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.ruleId = e.ruleId),
             (this.label = e.label),
             (this.startTime = e.startTime),
             (this.endTime = e.endTime),
             (this.days = e.days),
-            (this.enabled = e.enabled);
+            (this.enabled = e.enabled));
     }
     isActiveAt(e, t) {
         if (null == this.startTime || null == this.endTime || 0 === this.days.length || !this.enabled) return !1;
@@ -84,7 +84,7 @@ class d extends r.A {
         return null == e ? null : new d({ rules: e.rules.map(o.fromCache) });
     }
     constructor(e) {
-        super(), (this.rules = e.rules);
+        (super(), (this.rules = e.rules));
     }
     isInRestrictedHours() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
@@ -124,7 +124,7 @@ class d extends r.A {
                 s = new Date(e),
                 l = Math.floor(t / 60),
                 o = t % 60;
-            return a && n >= r && s.setDate(s.getDate() + 1), s.setHours(l, o, 0, 0), s;
+            return (a && n >= r && s.setDate(s.getDate() + 1), s.setHours(l, o, 0, 0), s);
         }
         return null;
     }

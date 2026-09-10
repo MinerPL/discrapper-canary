@@ -1,4 +1,4 @@
-i.r(l), i.d(l, { default: () => ef });
+(i.r(l), i.d(l, { default: () => ef }));
 var n = i(477900),
     t = i(582128),
     a = i(17928),
@@ -218,14 +218,18 @@ function ed(e) {
     let l,
         { applicationId: i, surface: r, guildId: c, channelId: s, project: d, chatOpen: o, onToggleChat: u } = e,
         h = (0, w.A)(i, r),
-        { badge: g, mentionCount: p } = (0, a.cf)([ea.Ay], () => {
-            let e = ea.Ay.getMentionCount(s);
-            return e > 0
-                ? { badge: "mention", mentionCount: e }
-                : ea.Ay.hasUnread(s)
-                  ? { badge: "unread", mentionCount: e }
-                  : { badge: null, mentionCount: e };
-        }, [s]),
+        { badge: g, mentionCount: p } = (0, a.cf)(
+            [ea.Ay],
+            () => {
+                let e = ea.Ay.getMentionCount(s);
+                return e > 0
+                    ? { badge: "mention", mentionCount: e }
+                    : ea.Ay.hasUnread(s)
+                      ? { badge: "unread", mentionCount: e }
+                      : { badge: null, mentionCount: e };
+            },
+            [s],
+        ),
         A = (0, E.G)(),
         { remix: x, canRemix: I } =
             ((l = null != c && null != d && (0, V.H_)(d)),
@@ -249,7 +253,7 @@ function ed(e) {
         }, [h]),
         F = t.useCallback(() => {
             let e = h?.id;
-            null != e &&
+            (null != e &&
                 R.A.getWindowOpen(er.MLl.ACTIVITY_POPOUT) &&
                 N.A.getMainFrame()?.id === e &&
                 (0, M.close)(er.MLl.ACTIVITY_POPOUT),
@@ -265,7 +269,7 @@ function ed(e) {
                         });
                         return null != n ? er.BVt.CHANNEL(e, n.id) : er.BVt.FRIENDS;
                     })(c, (0, es.h)(r)),
-                );
+                ));
         }, [h?.id, c, r]),
         L = f.intl.string(!0 === o ? q.default.YdgE0j : q.default.aWVf4j),
         K = !0 === o ? null : g,
@@ -351,29 +355,37 @@ function ef(e) {
         j =
             ((i = null != (l = (0, g.B9)(I?.topic))),
             (A = I?.guild_id ?? null),
-            (x = (0, a.bG)([o.A, P.A], () => {
-                let e = null != A ? o.A.getGuild(A) : null;
-                return null != e && P.A.can(er.xBc.MANAGE_GUILD, e);
-            }, [A])),
+            (x = (0, a.bG)(
+                [o.A, P.A],
+                () => {
+                    let e = null != A ? o.A.getGuild(A) : null;
+                    return null != e && P.A.can(er.xBc.MANAGE_GUILD, e);
+                },
+                [A],
+            )),
             (f = (0, a.yK)([eu.Ay], () => (null != A ? (eu.Ay.getSelfMember(A)?.roles ?? []) : []), [A])),
             t.useEffect(() => {
                 i && null != l && (0, ep.hF)(A ?? void 0);
             }, [i, l, A, x, f]),
-            (0, a.bG)([V.Ay], () => {
-                if (null == l) return null;
-                let e = V.Ay.findProjectByApplicationId(l);
-                if (null == e || (0, V.PV)(e)) return e;
-                let i = null != A ? eh.default.castGuildIdAsEveryoneGuildRoleId(A) : null,
-                    n = (e.collaborator_role_ids ?? []).some((e) => e === i || f.includes(e));
-                return e.guild_id === A && (0, eg.XE)(e) && (x || n) ? e : null;
-            }, [l, x, f, A])),
+            (0, a.bG)(
+                [V.Ay],
+                () => {
+                    if (null == l) return null;
+                    let e = V.Ay.findProjectByApplicationId(l);
+                    if (null == e || (0, V.PV)(e)) return e;
+                    let i = null != A ? eh.default.castGuildIdAsEveryoneGuildRoleId(A) : null,
+                        n = (e.collaborator_role_ids ?? []).some((e) => e === i || f.includes(e));
+                    return e.guild_id === A && (0, eg.XE)(e) && (x || n) ? e : null;
+                },
+                [l, x, f, A],
+            )),
         y = (0, c.Ay)(I),
         C = (0, a.bG)([o.A], () => o.A.getGuild(I.guild_id), [I.guild_id]),
         v = (0, a.bG)([p.A], () => p.A.isChatOpen(I.id), [I.id]),
         E = t.useRef(!1),
         _ = t.useCallback(
             (e) => {
-                (E.current = !e), (0, h.T)(I.id, e);
+                ((E.current = !e), (0, h.T)(I.id, e));
             },
             [I.id],
         ),
@@ -388,7 +400,7 @@ function ef(e) {
                 E.current ||
                 (0, h.T)(I.id, !0);
         }
-        return (E.current = !1), r.h.subscribe("MESSAGE_CREATE", e), () => r.h.unsubscribe("MESSAGE_CREATE", e);
+        return ((E.current = !1), r.h.subscribe("MESSAGE_CREATE", e), () => r.h.unsubscribe("MESSAGE_CREATE", e));
     }, [I.id]);
     let w = t.useMemo(() => ({ channel: I, guild: C ?? void 0, open: v, onClose: k }), [I, C, v, k]),
         {

@@ -93,16 +93,16 @@ t.isKeyHotkey = function (e, t) {
                         v && (m = m.slice(0, -1));
                         var _ = u(m),
                             g = r[_];
-                        (1 !== s && g) ||
+                        ((1 !== s && g) ||
                             (n
                                 ? (i.key = _)
                                 : (i.which = (function (e) {
                                       return a[(e = u(e))] || e.toUpperCase().charCodeAt(0);
                                   })(m))),
-                            g && (i[g] = !v || null);
+                            g && (i[g] = !v || null));
                     }
                 } catch (e) {
-                    (c = !0), (f = e);
+                    ((c = !0), (f = e));
                 } finally {
                     try {
                         !d && p.return && p.return();

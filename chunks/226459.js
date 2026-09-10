@@ -7,7 +7,7 @@ var i = n(435558),
 class o extends r.A {
     throttledPreloadInbox;
     constructor() {
-        super(), (this.throttledPreloadInbox = (0, i.throttle)(this.preloadInbox, 5e3));
+        (super(), (this.throttledPreloadInbox = (0, i.throttle)(this.preloadInbox, 5e3)));
     }
     stores = new Map().set(s.A, () => {
         s.A.hasPreloaded || (s.A.canLoadMore({ preload: !0 }) && this.throttledPreloadInbox());

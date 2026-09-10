@@ -35,12 +35,12 @@ function C(i) {
                         ? (0, e.jsx)(d.D, {
                               className: s()(v.sd, v.mG),
                               onClick: (i) => {
-                                  i.stopPropagation(),
+                                  (i.stopPropagation(),
                                       t.isGuildStageVoice()
                                           ? (0, g.av)(t)
                                           : (c.default.selectVoiceChannel(t.id), (0, h.iN)(t.id)),
                                       n?.({ action: "OPEN_VOICE_CHANNEL" }),
-                                      C?.();
+                                      C?.());
                               },
                               "aria-label": (0, u.Ay)({ channel: t }),
                               children: f,
@@ -54,7 +54,7 @@ function C(i) {
                       variant: "text-xs/normal",
                       text: _.intl.formatToPlainString(_.t["hq/Qze"], { guildName: l.name }),
                       onClick: (i) => {
-                          i.stopPropagation(), (0, x.u)(l.id), n?.({ action: "OPEN_VOICE_GUILD" }), C?.();
+                          (i.stopPropagation(), (0, x.u)(l.id), n?.({ action: "OPEN_VOICE_GUILD" }), C?.());
                       },
                       className: v.J5,
                   }),

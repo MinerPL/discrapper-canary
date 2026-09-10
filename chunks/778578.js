@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => ep });
+(l.r(t), l.d(t, { default: () => ep }));
 var n = l(477900),
     i = l(582128),
     a = l(503698),
@@ -290,7 +290,7 @@ function eo(e) {
                                       className: en.b6,
                                       "aria-label": e.name,
                                       onClick: () => {
-                                          ei(e.id), l();
+                                          (ei(e.id), l());
                                       },
                                       children: [
                                           (0, n.jsx)(T.Ay, { guild: e, iconSize: 32, className: en.$f }),
@@ -324,7 +324,7 @@ function ec(e) {
                                 let n = l.get(t);
                                 if (null != n) return n;
                                 let i = (0, z.ix)({ guildId: t, location: e });
-                                return l.set(t, i), i;
+                                return (l.set(t, i), i);
                             }
                             let i = new Set(),
                                 a = [],
@@ -504,7 +504,7 @@ function ex(e) {
                                   id: `vibegrations-create-${e.id}`,
                                   label: e.name,
                                   action: () => {
-                                      ei(e.id), l();
+                                      (ei(e.id), l());
                                   },
                               },
                               e.id,
@@ -615,7 +615,7 @@ function ep() {
                         l(!1);
                     },
                     onClick: () => {
-                        i(), m?.onClick?.();
+                        (i(), m?.onClick?.());
                     },
                     children: [
                         (0, n.jsx)(c.D, {

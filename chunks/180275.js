@@ -27,12 +27,12 @@ function c(t) {
         E = s.useRef(null);
     async function x(t) {
         if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
-            C(o.intl.string(o.t.hML7Gw)), g(!1);
+            (C(o.intl.string(o.t.hML7Gw)), g(!1));
             return;
         }
         try {
             let t = null != n ? await n(b) : void 0;
-            null != c && (null != t ? c({ response: t, email: b }) : c(b)), d();
+            (null != c && (null != t ? c({ response: t, email: b }) : c(b)), d());
         } catch (t) {
             C(new u.A(t).getAnyErrorMessage());
         } finally {

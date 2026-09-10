@@ -52,10 +52,10 @@ function x(e) {
                 .then(async (e) => {
                     if (!e) return void c(!0);
                     let n = document.createElement("a");
-                    (n.href = await (0, r.PK)(t, l, { download: !0 })),
+                    ((n.href = await (0, r.PK)(t, l, { download: !0 })),
                         (n.target = "_blank"),
                         (n.rel = "noopener noreferrer"),
-                        n.click();
+                        n.click());
                 })
                 .catch(() => {});
         }, [t, l]);
@@ -112,13 +112,13 @@ function p(e) {
               ariaLabel: o.intl.formatToPlainString(d.default.QUFLUq, { name: x }),
               onClick: b,
               onThumbError: () => {
-                  g(null),
+                  (g(null),
                       (0, r.n6)(t, f).then(
                           (e) => {
                               e ? 0 === v && j(1) : m(f);
                           },
                           () => {},
-                      );
+                      ));
               },
           });
 }

@@ -5,7 +5,7 @@ function r(e) {
 n.d(t, { bL: () => o, iI: () => b, lI: () => r, pY: () => c });
 let a = null;
 function f() {
-    return (null === a || 0 === a.byteLength) && (a = new Uint8Array(_.memory.buffer)), a;
+    return ((null === a || 0 === a.byteLength) && (a = new Uint8Array(_.memory.buffer)), a);
 }
 let i = new TextDecoder("utf-8", { ignoreBOM: !0, fatal: !0 });
 i.decode();
@@ -24,7 +24,7 @@ function b(e, t, n, r, a, i, d, b, c) {
         p,
         x,
         h = ((p = g[0]), (x = g[1]), (p >>>= 0), f().subarray(p / 1, p / 1 + x)).slice();
-    return _.__wbindgen_free(g[0], +g[1], 1), h;
+    return (_.__wbindgen_free(g[0], +g[1], 1), h);
 }
 function c(e, t) {
     var n, _;
@@ -37,5 +37,5 @@ function c(e, t) {
 function o() {
     let e = _.__wbindgen_externrefs,
         t = e.grow(4);
-    e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1);
+    (e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1));
 }

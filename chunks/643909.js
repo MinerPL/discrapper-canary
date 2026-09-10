@@ -1,13 +1,14 @@
 !(function (e, t) {
+    "use strict";
     function r(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
             var n = Object.getOwnPropertySymbols(e);
-            t &&
+            (t &&
                 (n = n.filter(function (t) {
                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 })),
-                r.push.apply(r, n);
+                r.push.apply(r, n));
         }
         return r;
     }
@@ -56,13 +57,13 @@
                     n,
                     i = {},
                     o = Object.keys(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
                 return i;
             })(e, t);
         if (Object.getOwnPropertySymbols) {
             var o = Object.getOwnPropertySymbols(e);
             for (n = 0; n < o.length; n++)
-                (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
         }
         return i;
     }
@@ -86,7 +87,7 @@
                             a = !0
                         );
                     } catch (e) {
-                        (s = !0), (n = e);
+                        ((s = !0), (n = e));
                     } finally {
                         try {
                             a || null == i.return || i.return();
@@ -167,7 +168,7 @@
                     checkPropTypes: r,
                     resetWarningCache: t,
                 };
-                return (o.PropTypes = o), o;
+                return ((o.PropTypes = o), o);
             })
         );
     })()();
@@ -175,7 +176,7 @@
         v = function (e, r, n) {
             var i = !!n,
                 o = t.useRef(n);
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     o.current = n;
                 },
@@ -195,7 +196,7 @@
                         );
                     },
                     [i, r, e, o],
-                );
+                ));
         },
         y = function (e) {
             var r = t.useRef(e);
@@ -397,7 +398,7 @@
     R.displayName = "CheckoutContext";
     var L = function (e, t) {
             if (!e) return null;
-            e.on, e.session;
+            (e.on, e.session);
             var r = a(e, I);
             return t ? Object.assign(t, r) : Object.assign(e.session(), r);
         },
@@ -472,7 +473,7 @@
             );
             var v = y(n),
                 g = y(f.checkoutSdk);
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     if (f.checkoutSdk) {
                         var e,
@@ -491,7 +492,7 @@
                         k(f.stripe);
                     },
                     [f.stripe],
-                );
+                ));
             var b = t.useMemo(
                 function () {
                     return L(f.checkoutSdk, l);
@@ -555,7 +556,7 @@
                               O = A[1],
                               D = t.useRef(null),
                               R = t.useRef(null);
-                          v(I, "blur", f),
+                          (v(I, "blur", f),
                               v(I, "focus", d),
                               v(I, "escape", m),
                               v(I, "click", g),
@@ -615,11 +616,11 @@
                                                       );
                                               }
                                           else M && (t = M.create(e, c));
-                                          (D.current = t), O(t), t && t.mount(R.current);
+                                          ((D.current = t), O(t), t && t.mount(R.current));
                                       }
                                   },
                                   [M, P, c],
-                              );
+                              ));
                           var L = y(c);
                           return (
                               t.useEffect(
@@ -635,7 +636,7 @@
                                   return function () {
                                       if (D.current && "function" == typeof D.current.destroy)
                                           try {
-                                              D.current.destroy(), (D.current = null);
+                                              (D.current.destroy(), (D.current = null));
                                           } catch (e) {}
                                   };
                               }, []),
@@ -678,7 +679,7 @@
             ? function (e) {
                   var r = e.id,
                       n = e.className;
-                  return V(), t.createElement("div", { id: r, className: n });
+                  return (V(), t.createElement("div", { id: r, className: n }));
               }
             : function (e) {
                   var r = e.id,
@@ -694,7 +695,7 @@
                                   function () {
                                       if (o.current && i)
                                           try {
-                                              i.unmount(), (o.current = !1);
+                                              (i.unmount(), (o.current = !1));
                                           } catch (e) {}
                                   }
                               );
@@ -724,7 +725,7 @@
         es = B("paymentMethodMessaging", K),
         el = B("affirmMessage", K),
         eu = B("afterpayClearpayMessage", K);
-    (e.AddressElement = eo),
+    ((e.AddressElement = eo),
         (e.AffirmMessageElement = el),
         (e.AfterpayClearpayMessageElement = eu),
         (e.AuBankAccountElement = z),
@@ -755,7 +756,7 @@
                 u = s(t.useState({ embeddedCheckout: null }), 2),
                 c = u[0],
                 f = u[1];
-            t.useEffect(
+            (t.useEffect(
                 function () {
                     if (!l.current && !a.current) {
                         var e = function (e) {
@@ -782,7 +783,7 @@
                                 ? ((a.current = null), c.embeddedCheckout.destroy())
                                 : a.current &&
                                   a.current.then(function () {
-                                      (a.current = null), c.embeddedCheckout && c.embeddedCheckout.destroy();
+                                      ((a.current = null), c.embeddedCheckout && c.embeddedCheckout.destroy());
                                   });
                         };
                     },
@@ -793,7 +794,7 @@
                         k(l);
                     },
                     [l],
-                );
+                ));
             var d = y(r);
             t.useEffect(
                 function () {
@@ -814,7 +815,7 @@
                                 return void console.warn(
                                     "Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.",
                                 );
-                            void 0 === n.clientSecret &&
+                            (void 0 === n.clientSecret &&
                                 void 0 === n.fetchClientSecret &&
                                 console.warn(
                                     "Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.",
@@ -843,7 +844,7 @@
                                     n.onLineItemsChange !== p.onLineItemsChange &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.",
-                                    );
+                                    ));
                         }
                     },
                     [p, n],
@@ -876,5 +877,5 @@
         }),
         (e.useStripe = function () {
             return N("calls useStripe()").stripe;
-        });
+        }));
 })(t, r(582128));

@@ -1,4 +1,4 @@
-t(697509)(r, "__esModule", { value: !0 }),
+(t(697509)(r, "__esModule", { value: !0 }),
     (r.default = void 0),
     (r.default = {
         abstract: !1,
@@ -18,4 +18,4 @@ t(697509)(r, "__esModule", { value: !0 }),
             ["roletype", "widget", "command", "menuitem", "menuitemcheckbox"],
             ["roletype", "widget", "input", "radio"],
         ],
-    });
+    }));

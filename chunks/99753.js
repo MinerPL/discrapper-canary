@@ -8,7 +8,7 @@ let l = new Map(),
     d = new Map(),
     c = !1;
 function u(e) {
-    e(l), (l = new Map(l));
+    (e(l), (l = new Map(l)));
 }
 class _ extends r.Ay.Store {
     static displayName = "ContentInventoryStore";
@@ -47,7 +47,7 @@ let E = new _(a.h, {
     },
     CONTENT_INVENTORY_SET_FEED: function (e) {
         let { feedId: t, feed: n } = e;
-        u((e) => e.set(t, n)), d.set(t, new Date());
+        (u((e) => e.set(t, n)), d.set(t, new Date()));
     },
     CONTENT_INVENTORY_SET_FEED_STATE: function (e) {
         let { feedId: t, state: n } = e;

@@ -162,13 +162,13 @@ let p = new s.A("OverlayActionCreators"),
                     let { type: t, id: n, anchor: i, size: r } = e;
                     switch (t) {
                         case f.uss.TEXT:
-                            (p = (0, A.fd)(r, _)), (0, I.uv)(n);
+                            ((p = (0, A.fd)(r, _)), (0, I.uv)(n));
                             break;
                         case f.uss.GUILDS:
-                            (T = (0, A.NR)(i, r, _)), (m = (0, A.fd)(r, _)), (0, I.uv)(n);
+                            ((T = (0, A.NR)(i, r, _)), (m = (0, A.fd)(r, _)), (0, I.uv)(n));
                             break;
                         case f.uss.GUILDS_TEXT:
-                            (g = (0, A.NR)(i, r, _)), (S = (0, A.fd)(r, _)), (0, I.uv)(n);
+                            ((g = (0, A.NR)(i, r, _)), (S = (0, A.fd)(r, _)), (0, I.uv)(n));
                     }
                 }),
                 e)

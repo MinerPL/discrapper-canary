@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.makeDataFormatters = function (e, t, r = !1) {
         function o(e) {
             return r ? Object.assign(Object.assign({}, e), { localeMatcher: "lookup" }) : e;
@@ -42,6 +42,6 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             },
             getPluralRules: (t) => i.dataFormatterCache.getPluralRules(e, o(t)),
         };
-    });
+    }));
 let n = r(896745),
     i = r(237341);

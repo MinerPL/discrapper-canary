@@ -31,7 +31,7 @@ class c extends i.A {
                         t = s.A.getPendingSeat();
                     this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, a.tB)(n, i, e, t);
                 }
-                (o = i), (d = n);
+                ((o = i), (d = n));
             }
         }
     }

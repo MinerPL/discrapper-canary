@@ -25,12 +25,12 @@ let C = !0,
     O = !1,
     R = !1;
 function L() {
-    C && (i = void 0), (R = !1), (O = !1);
+    (C && (i = void 0), (R = !1), (O = !1));
 }
 function y() {
     let e = !m.Ay.canUseClientThemes(T.default.getCurrentUser());
     if (e === C) return !1;
-    (C = e), (R = !1);
+    ((C = e), (R = !1));
 }
 function D() {
     let e = E.eh.getSetting().backgroundGradientPresetId;
@@ -64,13 +64,13 @@ class P extends a.Ay.PersistedStore {
     static persistKey = "ClientThemesBackgroundStore";
     migrations = [(e) => ({ gradientPresetId: e?.gradientPreset?.id })];
     initialize(e) {
-        (R = !1),
+        ((R = !1),
             null != e &&
                 ((i = null != e.gradientPresetId ? N.ag[e.gradientPresetId] : void 0),
                 (C = !0 !== e.canUseClientThemes)),
             this.waitFor(p.A, d.A, u.A, _.Ay, A.A, T.default),
             this.syncWith([T.default], y),
-            this.syncWith([d.A], D);
+            this.syncWith([d.A], D));
     }
     getState() {
         return C ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
@@ -114,7 +114,7 @@ let U = new P(l.h, {
         r = t;
     },
     RESET_PREVIEW_CLIENT_THEME: function (e) {
-        (i = void 0), (R = !1);
+        ((i = void 0), (R = !1));
     },
     CLIENT_THEMES_EDITOR_CLOSE: L,
     CHANNEL_SELECT: function (e) {

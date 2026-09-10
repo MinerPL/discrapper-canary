@@ -18,7 +18,7 @@ var d = ["canDrag", "beginDrag", "isDragging", "endDrag"],
         function t(e, r, n) {
             var o = this;
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            u(this, "props", null),
+            (u(this, "props", null),
                 u(this, "spec", void 0),
                 u(this, "monitor", void 0),
                 u(this, "ref", void 0),
@@ -27,7 +27,7 @@ var d = ["canDrag", "beginDrag", "isDragging", "endDrag"],
                 }),
                 (this.spec = e),
                 (this.monitor = r),
-                (this.ref = n);
+                (this.ref = n));
         }
         return (
             (e = [
@@ -65,10 +65,10 @@ var d = ["canDrag", "beginDrag", "isDragging", "endDrag"],
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t
@@ -78,7 +78,7 @@ function l(e, t, r) {
     var u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     (0, s.cl)("DragSource", "type, spec, collect[, options]", e, t, r, u);
     var l = e;
-    "function" != typeof e &&
+    ("function" != typeof e &&
         ((0, n.V)(
             (0, s.NE)(e),
             'Expected "type" provided as the first argument to DragSource to be a string, or a function that returns a string given the current props. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source',
@@ -91,10 +91,10 @@ function l(e, t, r) {
             (0, s.Qd)(t),
             'Expected "spec" provided as the second argument to DragSource to be a plain object. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source',
             t,
-        );
+        ));
     var h =
         (Object.keys(t).forEach(function (e) {
-            (0, n.V)(
+            ((0, n.V)(
                 d.indexOf(e) > -1,
                 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source',
                 d.join(", "),
@@ -106,7 +106,7 @@ function l(e, t, r) {
                     e,
                     e,
                     t[e],
-                );
+                ));
         }),
         p.forEach(function (e) {
             (0, n.V)(

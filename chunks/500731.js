@@ -32,7 +32,7 @@ function f(e) {
         { hoverProps: v, triggerHoverEnd: y } = (0, a.useMemo)(() => {
             let e = (e, t) => {
                     let n = p.target;
-                    (p.pointerType = ""),
+                    ((p.pointerType = ""),
                         (p.target = null),
                         "touch" !== t &&
                             p.isHovered &&
@@ -41,7 +41,7 @@ function f(e) {
                             m(),
                             l && l({ type: "hoverend", target: n, pointerType: t }),
                             r && r(!1),
-                            d(!1));
+                            d(!1)));
                 },
                 o = {};
             return (
@@ -56,7 +56,7 @@ function f(e) {
                                     return;
                                 p.isHovered = !0;
                                 let s = o.currentTarget;
-                                (p.target = s),
+                                ((p.target = s),
                                     h(
                                         (0, i.TW)((0, n.wt)(o)),
                                         "pointerover",
@@ -70,7 +70,7 @@ function f(e) {
                                     ),
                                     t && t({ type: "hoverstart", target: s, pointerType: a }),
                                     r && r(!0),
-                                    d(!0);
+                                    d(!0));
                             })(o, o.pointerType);
                     }),
                     (o.onPointerLeave = (t) => {

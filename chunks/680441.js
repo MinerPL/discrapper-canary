@@ -8,7 +8,7 @@ t.a(
             function _(e, n) {
                 return (0, o.qg)(e, n);
             }
-            await (0, i.qS)(), r();
+            (await (0, i.qS)(), r());
         } catch (e) {
             r(e);
         }

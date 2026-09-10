@@ -21,10 +21,10 @@ function r(t, e = {}) {
         let e = t.timestamp - t.started;
         t.duration = e >= 0 ? e : 0;
     }
-    e.release && (t.release = e.release),
+    (e.release && (t.release = e.release),
         e.environment && (t.environment = e.environment),
         !t.ipAddress && e.ipAddress && (t.ipAddress = e.ipAddress),
         !t.userAgent && e.userAgent && (t.userAgent = e.userAgent),
         "number" == typeof e.errors && (t.errors = e.errors),
-        e.status && (t.status = e.status);
+        e.status && (t.status = e.status));
 }

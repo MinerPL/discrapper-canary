@@ -1,4 +1,4 @@
-n.d(t, { A: () => L }), n(321073);
+(n.d(t, { A: () => L }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(683760),
@@ -24,11 +24,11 @@ function S(e) {
     if (-1 === i) return [n, ...t];
     {
         let e = [...t];
-        return C(n) && n.status !== d.Dmq.ENDED ? (e[i] = n) : e.splice(i, 1), e;
+        return (C(n) && n.status !== d.Dmq.ENDED ? (e[i] = n) : e.splice(i, 1), e);
     }
 }
 function N() {
-    (c = null),
+    ((c = null),
         (u = null),
         (_ = null),
         (E = null),
@@ -38,7 +38,7 @@ function N() {
         (f = !1),
         (p = !1),
         (m = !1),
-        (g = null);
+        (g = null));
 }
 function C(e) {
     return e.status !== d.Dmq.UNPAID;
@@ -126,29 +126,29 @@ let L = new R(r.h, {
             a = [],
             s = [],
             _ = o.default.getId();
-        t.forEach((e) => {
+        (t.forEach((e) => {
             if (e.user_id !== _) return;
             let t = l.h.createFromServer(e);
-            (i[t.id] = t),
+            ((i[t.id] = t),
                 C(t) &&
                     ((r[t.id] = t),
                     t.type === d.rzx.GUILD && t.status !== d.Dmq.ENDED && a.push(t),
-                    t.type === d.rzx.APPLICATION && t.status !== d.Dmq.ENDED && s.push(t));
+                    t.type === d.rzx.APPLICATION && t.status !== d.Dmq.ENDED && s.push(t)));
         }),
             (c = i),
             (u = r),
             (E = a),
             (A = s),
-            (g = n);
+            (g = n));
     },
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function (e) {
         let { subscription: t } = e;
         if (t.user_id !== o.default.getId()) return;
         let n = l.h.createFromServer(t);
-        (c = { ...c, [n.id]: n }),
+        ((c = { ...c, [n.id]: n }),
             C(n) && (u = { ...u, [n.id]: n }),
             null != E && n.type === d.rzx.GUILD && (E = S({ activeSubscriptions: E, record: n })),
-            null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n }));
+            null != A && n.type === d.rzx.APPLICATION && (E = S({ activeSubscriptions: A, record: n })));
     },
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function () {
         m = !0;
@@ -182,11 +182,11 @@ let L = new R(r.h, {
     },
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: function (e) {
         let { eligible: t } = e;
-        (T = t), (p = !1);
+        ((T = t), (p = !1));
     },
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: function (e) {
         let {} = e;
-        (T = !1), (p = !1);
+        ((T = !1), (p = !1));
     },
     SET_PREMIUM_TYPE_OVERRIDE: function () {
         return !0;

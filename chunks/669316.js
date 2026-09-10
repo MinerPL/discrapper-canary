@@ -21,14 +21,14 @@ class a extends i.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.discountId = e.discountId),
             (this.discount = e.discount),
             (this.userId = e.userId),
             (this.appliedAt = e.appliedAt ?? null),
             (this.deletedAt = e.deletedAt ?? null),
-            (this.expiresAt = e.expiresAt ?? null);
+            (this.expiresAt = e.expiresAt ?? null));
     }
     hasExpired() {
         return null != this.expiresAt && Date.now() > this.expiresAt.getTime();

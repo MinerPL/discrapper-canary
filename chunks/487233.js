@@ -39,8 +39,8 @@ function f(e) {
         C = (0, i.z5)(m, A)
             ? {
                   onClick: () => {
-                      (0, s.rM)(null, A, (e) => (0, o.p)({ guildId: l ?? void 0, avatar: e })),
-                          (0, i.WU)(I ? "reset" : "remove");
+                      ((0, s.rM)(null, A, (e) => (0, o.p)({ guildId: l ?? void 0, avatar: e })),
+                          (0, i.WU)(I ? "reset" : "remove"));
                   },
                   type: I ? "reset" : "remove",
                   accessibleLabel: v.intl.string(I ? v.t.Y0mxy1 : v.t.twB3fz),

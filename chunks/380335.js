@@ -17,12 +17,12 @@ function d(e) {
     );
 }
 function c(e) {
-    a.clear(),
+    (a.clear(),
         s.clear(),
         Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
             d(e);
         }),
-        (l = !0);
+        (l = !0));
 }
 function u(e) {
     let { channelId: t } = e;

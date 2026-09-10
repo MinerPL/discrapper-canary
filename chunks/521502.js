@@ -33,10 +33,10 @@ class c extends i.Ay.Store {
                     s = { ...s, [e]: { url: e, state: 3 } };
                     return;
                 }
-                (s = { ...s, [e]: { url: e, validatedURL: r.url, payload: String(r.payload), state: 1 } }),
+                ((s = { ...s, [e]: { url: e, validatedURL: r.url, payload: String(r.payload), state: 1 } }),
                     (0, n.k9)(r.url).then((r) => {
                         l.h.dispatch({ type: "BUILD_OVERRIDE_RESOLVED", url: e, override: r });
-                    });
+                    }));
             })(e),
             s[e]
         );
@@ -52,6 +52,6 @@ let h = new c(l.h, {
     },
     CURRENT_BUILD_OVERRIDE_RESOLVED: function (e) {
         let { overrides: r } = e;
-        (u = 2), (d = r);
+        ((u = 2), (d = r));
     },
 });

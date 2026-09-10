@@ -15,7 +15,7 @@ var d = l(322284),
     g = l(986664);
 class y {
     setup(e, t, l) {
-        (this.delegate = e), (this.state = t), (this.direction = l);
+        ((this.delegate = e), (this.state = t), (this.direction = l));
     }
     getDropTargetFromPoint(e, t, l) {
         let n = this.delegate.getDropTargetFromPoint(e, t, l);
@@ -34,7 +34,7 @@ class y {
             "before" === e.dropPosition)
         ) {
             let t = this.state.collection.getKeyBefore(e.key);
-            for (; null != t; ) {
+            for (; null != t;) {
                 let e = this.state.collection.getItem(t);
                 if (e?.type === "item") break;
                 t = e?.parentKey ?? null;
@@ -53,11 +53,11 @@ class y {
         if ("on" === e.dropPosition) return [e];
         let l = this.state.collection,
             n = l.getItem(e.key);
-        for (; n && n?.type !== "item" && null != n.nextKey; ) (e.key = n.nextKey), (n = l.getItem(n.nextKey));
+        for (; n && n?.type !== "item" && null != n.nextKey;) ((e.key = n.nextKey), (n = l.getItem(n.nextKey)));
         let o = [e];
         if (n && n.hasChildNodes && this.state.expandedKeys.has(n.key) && l.getChildren && "after" === e.dropPosition) {
             let e = null != n.firstChildKey ? l.getItem(n.firstChildKey) : null;
-            for (; e && "item" !== e.type; ) e = null != e.nextKey ? l.getItem(e.nextKey) : null;
+            for (; e && "item" !== e.type;) e = null != e.nextKey ? l.getItem(e.nextKey) : null;
             if (e?.type === "item") {
                 let l = { type: "item", key: e.key, dropPosition: "before" };
                 return t(l) ? [l] : [];
@@ -66,7 +66,7 @@ class y {
         if (n?.nextKey != null) return [e];
         let r = n?.parentKey,
             i = [];
-        for (; null != r; ) {
+        for (; null != r;) {
             let e = l.getItem(r),
                 n = e?.nextKey != null ? l.getItem(e.nextKey) : null;
             if (!n || n.parentKey !== r) {
@@ -99,14 +99,14 @@ class y {
             c = Math.abs(l - u.lastSwitchX);
         if (Math.abs(n - u.lastSwitchY) > 5 && o) {
             let t = u.preferredTargetIndex || 0;
-            "down" === o && 0 === t
+            ("down" === o && 0 === t
                 ? (u.preferredTargetIndex = e.length - 1)
                 : "up" === o && t === e.length - 1 && (u.preferredTargetIndex = 0),
-                (i.xDirection = null);
+                (i.xDirection = null));
         }
         if (c > 10 && r) {
             let t = u.preferredTargetIndex || 0;
-            "left" === r
+            ("left" === r
                 ? "ltr" === this.direction
                     ? t < e.length - 1 && ((u.preferredTargetIndex = t + 1), (u.lastSwitchX = l))
                     : t > 0 && ((u.preferredTargetIndex = t - 1), (u.lastSwitchX = l))
@@ -114,26 +114,26 @@ class y {
                   ("ltr" === this.direction
                       ? t > 0 && ((u.preferredTargetIndex = t - 1), (u.lastSwitchX = l))
                       : t < e.length - 1 && ((u.preferredTargetIndex = t + 1), (u.lastSwitchX = l))),
-                (i.yDirection = null);
+                (i.yDirection = null));
         }
         let d = Math.max(0, Math.min(u.preferredTargetIndex || 0, e.length - 1));
         return e[d];
     }
     constructor() {
-        (this.delegate = null),
+        ((this.delegate = null),
             (this.state = null),
             (this.direction = "ltr"),
-            (this.pointerTracking = { lastY: 0, lastX: 0, yDirection: null, xDirection: null, boundaryContext: null });
+            (this.pointerTracking = { lastY: 0, lastX: 0, yDirection: null, xDirection: null, boundaryContext: null }));
     }
 }
 var h = l(886721),
     m = l(471354);
 class f {
     constructor(e) {
-        (this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = e?.columnCount), (this.rows = []);
+        ((this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = e?.columnCount), (this.rows = []));
         let t = (n) => {
                 let o = this.keyMap.get(n.key);
-                e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n);
+                (e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n));
                 let r = new Set(),
                     i = null,
                     s = !1;
@@ -145,7 +145,7 @@ class f {
                         }
                 }
                 for (let e of n.childNodes)
-                    "cell" === e.type &&
+                    ("cell" === e.type &&
                         s &&
                         ((e.colspan = e.props?.colSpan),
                         (e.colSpan = e.props?.colSpan),
@@ -154,7 +154,7 @@ class f {
                         r.add(e.key),
                         i ? ((i.nextKey = e.key), (e.prevKey = i.key)) : (e.prevKey = null),
                         t(e),
-                        (i = e);
+                        (i = e));
                 if ((i && (i.nextKey = null), o)) for (let e of o.childNodes) r.has(e.key) || l(e);
             },
             l = (e) => {
@@ -174,7 +174,7 @@ class f {
                 textValue: o.textValue ?? "",
                 index: o.index ?? l,
             };
-            n ? ((n.nextKey = e.key), (e.prevKey = n.key)) : (e.prevKey = null), this.rows.push(e), t(e), (n = e);
+            (n ? ((n.nextKey = e.key), (e.prevKey = n.key)) : (e.prevKey = null), this.rows.push(e), t(e), (n = e));
         }
         n && (n.nextKey = null);
     }
@@ -216,7 +216,7 @@ class f {
 }
 let v = "row-header-column-" + Math.random().toString(36).slice(2),
     b = "row-header-column-" + Math.random().toString(36).slice(2);
-for (; v === b; ) b = "row-header-column-" + Math.random().toString(36).slice(2);
+for (; v === b;) b = "row-header-column-" + Math.random().toString(36).slice(2);
 function k(e, t) {
     if (0 === t.length) return [];
     let l = [],
@@ -224,19 +224,19 @@ function k(e, t) {
     for (let o of t) {
         let t = o.parentKey,
             r = [o];
-        for (; null != t; ) {
+        for (; null != t;) {
             let l = e.get(t);
             if (!l) break;
             if (n.has(l)) {
-                (l.colSpan ??= 0), l.colSpan++, (l.colspan = l.colSpan);
+                ((l.colSpan ??= 0), l.colSpan++, (l.colspan = l.colSpan));
                 let { column: e, index: t } = n.get(l);
                 if (t > r.length) break;
                 for (let l = t; l < r.length; l++) e.splice(l, 0, null);
                 for (let t = r.length; t < e.length; t++) e[t] && n.has(e[t]) && (n.get(e[t]).index = t);
-            } else (l.colSpan = 1), (l.colspan = 1), r.push(l), n.set(l, { column: r, index: r.length - 1 });
+            } else ((l.colSpan = 1), (l.colspan = 1), r.push(l), n.set(l, { column: r, index: r.length - 1 }));
             t = l.parentKey;
         }
-        l.push(r), (o.index = l.length - 1);
+        (l.push(r), (o.index = l.length - 1));
     }
     let o = Math.max(...l.map((e) => e.length)),
         r = Array(o)
@@ -263,12 +263,12 @@ function k(e, t) {
                         childNodes: [],
                         textValue: "",
                     };
-                    e.length > 0 && ((e[e.length - 1].nextKey = o.key), (o.prevKey = e[e.length - 1].key)), e.push(o);
+                    (e.length > 0 && ((e[e.length - 1].nextKey = o.key), (o.prevKey = e[e.length - 1].key)), e.push(o));
                 }
-                e.length > 0 && ((e[e.length - 1].nextKey = l.key), (l.prevKey = e[e.length - 1].key)),
+                (e.length > 0 && ((e[e.length - 1].nextKey = l.key), (l.prevKey = e[e.length - 1].key)),
                     (l.level = t),
                     (l.colIndex = i),
-                    e.push(l);
+                    e.push(l));
             }
             t--;
         }
@@ -351,7 +351,7 @@ class x extends f {
                         o = e;
                         break;
                     case "column":
-                        s.set(e.key, e), !e.hasChildNodes && (r.push(e), e.props.isRowHeader && n.add(e.key));
+                        (s.set(e.key, e), !e.hasChildNodes && (r.push(e), e.props.isRowHeader && n.add(e.key)));
                         break;
                     case "item":
                         i.push(e);
@@ -460,8 +460,8 @@ class U {
             !e.layout && !e.ref)
         )
             throw Error("Either a layout or a ref must be specified.");
-        (this.layoutDelegate = e.layoutDelegate || (e.layout ? new O(e.layout) : new (0, L.K)(e.ref))),
-            (this.focusMode = e.focusMode ?? "row");
+        ((this.layoutDelegate = e.layoutDelegate || (e.layout ? new O(e.layout) : new (0, L.K)(e.ref))),
+            (this.focusMode = e.focusMode ?? "row"));
     }
     isCell(e) {
         return "cell" === e.type;
@@ -478,7 +478,7 @@ class U {
     }
     findPreviousKey(e, t, l = !1) {
         let n = null != e ? this.collection.getKeyBefore(e) : this.collection.getLastKey();
-        for (; null != n; ) {
+        for (; null != n;) {
             let e = this.collection.getItem(n);
             if (!e) break;
             if ((l || !this.isDisabled(e)) && (!t || t(e))) return n;
@@ -488,7 +488,7 @@ class U {
     }
     findNextKey(e, t, l = !1) {
         let n = null != e ? this.collection.getKeyAfter(e) : this.collection.getFirstKey();
-        for (; null != n; ) {
+        for (; null != n;) {
             let e = this.collection.getItem(n);
             if (!e) break;
             if ((l || !this.isDisabled(e)) && (!t || t(e))) return n;
@@ -622,7 +622,7 @@ class U {
             l = this.layoutDelegate.getItemRect(t);
         if (!l) return null;
         let n = Math.max(0, l.y + l.height - this.layoutDelegate.getVisibleRect().height);
-        for (; l && l.y > n && null != t && null != (t = this.getKeyAbove(t) ?? null); )
+        for (; l && l.y > n && null != t && null != (t = this.getKeyAbove(t) ?? null);)
             l = this.layoutDelegate.getItemRect(t);
         return t;
     }
@@ -632,10 +632,10 @@ class U {
         if (!l) return null;
         let n = this.layoutDelegate.getVisibleRect().height,
             o = Math.min(this.layoutDelegate.getContentSize().height, l.y + n);
-        for (; l && l.y + l.height < o; ) {
+        for (; l && l.y + l.height < o;) {
             let e = this.getKeyBelow(t);
             if (null == e) break;
-            (l = this.layoutDelegate.getItemRect(e)), (t = e);
+            ((l = this.layoutDelegate.getItemRect(e)), (t = e));
         }
         return t;
     }
@@ -648,7 +648,7 @@ class U {
         if (!o) return null;
         "cell" === o.type && (l = o.parentKey ?? null);
         let r = !1;
-        for (; null != l; ) {
+        for (; null != l;) {
             let t = n.getItem(l);
             if (!t) break;
             if (t.textValue) {
@@ -1248,7 +1248,7 @@ class en extends U {
         let o = l.getItem(n);
         o?.type === "cell" && (n = o.parentKey ?? null);
         let r = !1;
-        for (; null != n; ) {
+        for (; null != n;) {
             let i = l.getItem(n);
             if (!i) break;
             if (i.textValue) {
@@ -1346,7 +1346,7 @@ function ef(e, t, l) {
                                       e.stopPropagation(),
                                       t)
                                   )
-                                      (0, ed.l)(t), (0, eh.o)(t, { containingElement: (0, eg.m)(l.current) });
+                                      ((0, ed.l)(t), (0, eh.o)(t, { containingElement: (0, eg.m)(l.current) }));
                                   else {
                                       if (d.getKeyLeftOf?.(n.key) !== n.key) {
                                           l.current.parentElement?.dispatchEvent(
@@ -1372,7 +1372,7 @@ function ef(e, t, l) {
                                       e.stopPropagation(),
                                       t)
                                   )
-                                      (0, ed.l)(t), (0, eh.o)(t, { containingElement: (0, eg.m)(l.current) });
+                                      ((0, ed.l)(t), (0, eh.o)(t, { containingElement: (0, eg.m)(l.current) }));
                                   else {
                                       if (d.getKeyRightOf?.(n.key) !== n.key) {
                                           l.current.parentElement?.dispatchEvent(
@@ -1416,8 +1416,8 @@ function ef(e, t, l) {
                                   return void e.stopPropagation();
                               if ("Tab" === e.key && "tab" === g) {
                                   let t = (0, w.N$)(l.current, { tabbable: !0 });
-                                  (t.currentNode = n),
-                                      (e.shiftKey ? t.previousNode() : t.nextNode()) && e.stopPropagation();
+                                  ((t.currentNode = n),
+                                      (e.shiftKey ? t.previousNode() : t.nextNode()) && e.stopPropagation());
                               }
                           }
                       }
@@ -1445,10 +1445,10 @@ function ef(e, t, l) {
             (b.onPointerDown = (e) => {
                 let t = e.currentTarget,
                     l = t.getAttribute("tabindex");
-                t.removeAttribute("tabindex"),
+                (t.removeAttribute("tabindex"),
                     requestAnimationFrame(() => {
                         null != l && t.setAttribute("tabindex", l);
-                    });
+                    }));
             }),
         { gridCellProps: b, isPressed: v }
     );
@@ -1477,10 +1477,10 @@ var eD = l(467324);
 class eE extends h.Wk {
     withExpandedKeys(e) {
         let t = this.clone();
-        return (t.expandedKeys = e), (t.frozen = this.frozen), (t.rows = Array.from(t.getRows())), t;
+        return ((t.expandedKeys = e), (t.frozen = this.frozen), (t.rows = Array.from(t.getRows())), t);
     }
     addNode(e) {
-        super.addNode(e), (this.columnsDirty ||= "column" === e.type), "tableheader" === e.type && (this.head = e);
+        (super.addNode(e), (this.columnsDirty ||= "column" === e.type), "tableheader" === e.type && (this.head = e));
     }
     getRows() {
         let e = [];
@@ -1500,7 +1500,7 @@ class eE extends h.Wk {
             let e = n.lastChildKey;
             if (null != e) {
                 let t = this.getItem(e);
-                for (; t && "cell" !== t.type; ) t = null != t.prevKey ? this.getItem(t.prevKey) : null;
+                for (; t && "cell" !== t.type;) t = null != t.prevKey ? this.getItem(t.prevKey) : null;
                 if (t) {
                     let e = (t.colIndex ?? t.index) + (t.colSpan ?? 1);
                     if (e !== this.columns.length && !l)
@@ -1515,7 +1515,7 @@ class eE extends h.Wk {
     }
     updateColumns(e) {
         if (!this.columnsDirty) return;
-        (this.rowHeaderColumnKeys = new Set()), (this.columns = []);
+        ((this.rowHeaderColumnKeys = new Set()), (this.columns = []));
         let t = new Map(),
             l = (e) => {
                 for (let n of ("column" === e.type &&
@@ -1540,9 +1540,9 @@ class eE extends h.Wk {
     }
     *[Symbol.iterator]() {
         let e = this.firstKey;
-        for (; null != e; ) {
+        for (; null != e;) {
             let t = this.getItem(e);
-            t && (yield t), (e = t?.nextKey ?? null);
+            (t && (yield t), (e = t?.nextKey ?? null));
         }
     }
     getFirstKey() {
@@ -1553,7 +1553,7 @@ class eE extends h.Wk {
         let e = this.lastKey;
         if (null == e) return null;
         let t = this.getItem(e);
-        for (; t?.lastChildKey != null && ("item" !== t.type || this.expandedKeys.has(t.key)); )
+        for (; t?.lastChildKey != null && ("item" !== t.type || this.expandedKeys.has(t.key));)
             t = this.getItem(t.lastChildKey);
         return t?.key;
     }
@@ -1563,7 +1563,7 @@ class eE extends h.Wk {
         if (!t) return null;
         if ("item" === t.type && null != t.firstChildKey && this.expandedKeys.has(t.key)) {
             let e = this.getItem(t.firstChildKey);
-            for (; e; ) {
+            for (; e;) {
                 if ("item" === e.type) return e.key;
                 e = null != e.nextKey ? this.getItem(e.nextKey) : null;
             }
@@ -1596,7 +1596,7 @@ class eE extends h.Wk {
                   *[Symbol.iterator]() {
                       let e = t.firstChildKey,
                           n = null != e ? l.getItem(e) : null;
-                      for (; n; ) {
+                      for (; n;) {
                           yield n;
                           let e = l.getKeyAfter(n.key);
                           if ((n = null != e ? l.getItem(e) : null) && n.parentKey === t.parentKey) break;
@@ -1641,14 +1641,14 @@ class eE extends h.Wk {
         return n.join(" ");
     }
     constructor(...e) {
-        super(...e),
+        (super(...e),
             (this.headerRows = []),
             (this.columns = []),
             (this.rows = []),
             (this.rowHeaderColumnKeys = new Set()),
             (this.head = new eT(-1)),
             (this.columnsDirty = !0),
-            (this.expandedKeys = new Set());
+            (this.expandedKeys = new Set()));
     }
 }
 let ez = (0, s.createContext)(null),
@@ -1793,7 +1793,7 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                 toggleKey(e) {
                     g((t) => {
                         let l = new Set(t);
-                        return l.has(e) ? l.delete(e) : l.add(e), l;
+                        return (l.has(e) ? l.delete(e) : l.add(e), l);
                     });
                 },
                 treeColumn: i,
@@ -1910,8 +1910,8 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                     { gridProps: A }
                 );
             })({ ...e, id: g, keyboardDelegate: p }, t, l);
-            r && (y["aria-rowcount"] = t.collection.size + t.collection.headerRows.length),
-                null != t.treeColumn && (y.role = "treegrid");
+            (r && (y["aria-rowcount"] = t.collection.size + t.collection.headerRows.length),
+                null != t.treeColumn && (y.role = "treegrid"));
             let { column: h, direction: m } = t.sortDescriptor || {},
                 f = (0, er.o)((n = el) && n.__esModule ? n.default : n, "@react-aria/table"),
                 v = (0, s.useMemo)(() => {
@@ -1933,19 +1933,19 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
         eu = L.selectionManager,
         ec = !!es?.useDraggableCollectionState,
         ed = !!es?.useDroppableCollectionState;
-    (0, s.useRef)(ec), (0, s.useRef)(ed), (0, s.useEffect)(() => {}, [ec, ed]);
+    ((0, s.useRef)(ec), (0, s.useRef)(ed), (0, s.useEffect)(() => {}, [ec, ed]));
     let ep = !1,
         eg = null,
         ey = (0, s.useRef)(null),
         { direction: eh } = (0, T.Y)(),
         [em] = (0, s.useState)(() => new y());
     if (ec && es) {
-        (p = es.useDraggableCollectionState({
+        ((p = es.useDraggableCollectionState({
             collection: L.collection,
             selectionManager: eu,
             preview: es.renderDragPreview ? ey : void 0,
         })),
-            es.useDraggableCollection({}, p, t);
+            es.useDraggableCollection({}, p, t));
         let e = es.DragPreview;
         eg = es.renderDragPreview ? s.createElement(e, { ref: ey }, es.renderDragPreview) : null;
     }
@@ -1959,7 +1959,7 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                 layoutDelegate: J,
             }),
             l = es.dropTargetDelegate || ee || new es.ListDropTargetDelegate(n.rows, t);
-        em.setup(l, R, eh),
+        (em.setup(l, R, eh),
             (f = es.useDroppableCollection(
                 {
                     keyboardDelegate: e,
@@ -1988,7 +1988,7 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                 h,
                 t,
             )),
-            (ep = h.isDropTarget({ type: "root" }));
+            (ep = h.isDropTarget({ type: "root" })));
     }
     let { focusProps: ef, isFocused: ev, isFocusVisible: eb } = (0, F.o)(),
         ek = (0, r.Sl)({
@@ -2050,7 +2050,7 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                                     t = null;
                                 if (null != e) {
                                     let n = l.collection.getItem(o)?.level ?? 0;
-                                    for (; null != e; ) {
+                                    for (; null != e;) {
                                         let o = l.collection.getItem(e);
                                         if (!o) break;
                                         if ("item" !== o.type) {
@@ -2058,7 +2058,7 @@ function eF({ props: e, forwardedRef: t, selectionState: l, collection: n }) {
                                             continue;
                                         }
                                         if ((o.level ?? 0) <= n) break;
-                                        (t = e), (e = l.collection.getKeyAfter(e));
+                                        ((t = e), (e = l.collection.getKeyAfter(e)));
                                     }
                                 }
                                 o = e ?? t ?? o;
@@ -2124,7 +2124,7 @@ function eL({ item: e }) {
         { rowProps: u } = (function (e, t) {
             let { node: l, isVirtualized: n } = e,
                 o = { role: "row" };
-            return n && null == t.treeColumn && (o["aria-rowindex"] = l.index + 1), { rowProps: o };
+            return (n && null == t.treeColumn && (o["aria-rowindex"] = l.index + 1), { rowProps: o });
         })({ node: e, isVirtualized: n }, l),
         { checkboxProps: c } = (function (e) {
             var t;
@@ -2238,7 +2238,7 @@ let eO = (0, s.forwardRef)(function (e, t) {
                     sortDirection: o.sortDescriptor?.column === l.key ? o.sortDescriptor.direction : void 0,
                     isResizing: h,
                     startResize: () => {
-                        if (y) y.startResize(l.key), o.setKeyboardNavigationDisabled(!0);
+                        if (y) (y.startResize(l.key), o.setKeyboardNavigationDisabled(!0));
                         else throw Error("Wrap your <Table> in a <ResizableTableContainer> to enable column resizing");
                     },
                     sort: (e) => {
@@ -2308,12 +2308,12 @@ let eq = (0, s.forwardRef)(function (e, t) {
         if (k && e.renderEmptyState && p) {
             let t = {},
                 l = {};
-            g ? ((t["aria-colspan"] = w), (l = { display: "contents" })) : (t.colSpan = w),
+            (g ? ((t["aria-colspan"] = w), (l = { display: "contents" })) : (t.colSpan = w),
                 (d = s.createElement(
                     eJ,
                     { role: "row", style: l },
                     s.createElement(e3, { role: "rowheader", ...t, style: l }, e.renderEmptyState(x)),
-                ));
+                )));
         }
         let { rowGroupProps: S } = es(),
             D = (0, K.$)(e, { global: !0 });
@@ -2352,7 +2352,7 @@ class eZ extends h.Pt {
         for (let n of e.getChildren(this.key))
             if (l(n.textValue, n)) {
                 let l = this.clone();
-                return t.addDescendants(l, e), l;
+                return (t.addDescendants(l, e), l);
             }
         return null;
     }
@@ -2398,7 +2398,7 @@ let eJ = (0, s.forwardRef)(function (e, t) {
                                     "aria-disabled": d.isDisabled || void 0,
                                     ...c,
                                 };
-                            return o && (g["aria-rowindex"] = n.index + 1), { rowProps: g, ...d };
+                            return (o && (g["aria-rowindex"] = n.index + 1), { rowProps: g, ...d });
                         })(e, t, l),
                         { direction: a } = (0, T.Y)();
                     r && null == t.treeColumn
@@ -2420,8 +2420,8 @@ let eJ = (0, s.forwardRef)(function (e, t) {
                                 r = t.collection.getItem(o.parentKey),
                                 i = "tablebody" === r.type || "body" === r.type,
                                 u = eS(t.collection, r);
-                            for (; u && "item" !== u.type && null != u.prevKey; ) u = t.collection.getItem(u.prevKey);
-                            (p = {
+                            for (; u && "item" !== u.type && null != u.prevKey;) u = t.collection.getItem(u.prevKey);
+                            ((p = {
                                 onKeyDown: (l) => {
                                     l.key === eK[a] &&
                                     t.selectionManager.focusedKey === e.key &&
@@ -2457,7 +2457,7 @@ let eJ = (0, s.forwardRef)(function (e, t) {
                                     preventFocusOnPress: !0,
                                     "data-react-aria-prevent-focus": !0,
                                     ...d,
-                                });
+                                }));
                         }
                     }
                     let y = (0, eC.HI)(o.props),

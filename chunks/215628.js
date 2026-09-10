@@ -30,8 +30,10 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
                 (0, a.o)({ config: l.config, deepsightService: l.deepsightService }),
             ),
             runDetection: (0, e.i)(({ input: l, sendBack: t }) => {
-                if (!l.frameCapturer || !l.provider) return t({ type: "DETECTION_UPDATE", status: "error" }), () => {};
-                if (l.manualCaptureTriggered) return t({ type: "DETECTION_UPDATE", status: "manualCapture" }), () => {};
+                if (!l.frameCapturer || !l.provider)
+                    return (t({ type: "DETECTION_UPDATE", status: "error" }), () => {});
+                if (l.manualCaptureTriggered)
+                    return (t({ type: "DETECTION_UPDATE", status: "manualCapture" }), () => {});
                 let { cleanup: d, reset: i } = (0, a.l)({
                     config: l.config,
                     capturer: l.frameCapturer,
@@ -40,7 +42,7 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
                     onSuccess: (l, d) => t({ type: "DETECTION_SUCCESS", canvas: l, faceCoordinates: d }),
                     provider: l.provider,
                 });
-                return t({ type: "DETECTION_RESET_READY", reset: i }), d;
+                return (t({ type: "DETECTION_RESET_READY", reset: i }), d);
             }),
             runAvatar: (0, e.i)(({ input: l, sendBack: t }) => {
                 let { obfuscateWithAvatar: d, avatarVariant: i } = o(l.config.selfieConcealmentOption);
@@ -54,13 +56,13 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
                         try {
                             let d = await (0, n.t)({ variant: c, stream: e, assets: l.config.avatarAssets });
                             if (s) return void d.stop();
-                            (a = d), t({ type: "AVATAR_READY", canvas: d.canvas });
+                            ((a = d), t({ type: "AVATAR_READY", canvas: d.canvas }));
                         } catch (l) {
                             console.warn("[face-avatar] failed to start avatar overlay", l);
                         }
                     })(),
                     () => {
-                        (s = !0), a?.stop();
+                        ((s = !0), a?.stop());
                     }
                 );
             }),
@@ -72,7 +74,7 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
                 let t = await l.dependencies.getWasmUtil(),
                     d = (0, i.r)(),
                     e = l.recordingService ?? (0, m.t)({ config: l.config, wasmUtil: t, sessionToken: d });
-                return e && (await e.start(l.stream)), e;
+                return (e && (await e.start(l.stream)), e);
             }),
             checkVirtualCamera: (0, e.a)(async ({ input: l }) => {
                 if (!l.deepsightService || !l.stream) return !1;
@@ -160,7 +162,7 @@ let u = (l) => l.captureAttempts ?? l.numberOfAttempts ?? 3,
             setTerminalError: (0, e.r)({ error: () => "Authentication failed" }),
             clearRecordingService: (0, e.r)({ recordingService: () => void 0 }),
             cleanup: ({ context: l }) => {
-                l.deepsightService?.cleanup(), l.recordingService?.cleanup();
+                (l.deepsightService?.cleanup(), l.recordingService?.cleanup());
             },
             setPermissionResultFromEvent: (0, e.r)({ permissionResult: ({ event: l }) => l.output }),
             setPermissionDenied: (0, e.r)({ permissionResult: () => "denied" }),

@@ -1,5 +1,5 @@
 let l;
-s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A });
+(s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A }));
 var a = s(478676),
     n = s.n(a),
     r = s(873879),

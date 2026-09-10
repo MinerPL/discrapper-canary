@@ -5,7 +5,7 @@
     jK: () => et,
     g$: () => er,
     qT: () => en,
-    mG: () => q,
+    mG: () => X,
     bb: () => ei,
     fE: () => ee,
 }),
@@ -1111,15 +1111,15 @@ class F extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let V = new F();
-class B extends O.G {
+let B = new F();
+class V extends O.G {
     constructor() {
         super("discord_protos.safety_common.v1.SafetyState", [
             { no: 101, name: "normal", kind: "message", oneof: "state", T: () => M },
             { no: 102, name: "restricted", kind: "message", oneof: "state", T: () => U },
             { no: 103, name: "deferred_action", kind: "message", oneof: "state", T: () => G },
             { no: 104, name: "temp_banned", kind: "message", oneof: "state", T: () => k },
-            { no: 105, name: "banned", kind: "message", oneof: "state", T: () => V },
+            { no: 105, name: "banned", kind: "message", oneof: "state", T: () => B },
             { no: 1, name: "reason", kind: "enum", T: () => ["discord_protos.safety_common.v1.SafetyStateReason", D] },
             {
                 no: 2,
@@ -1167,7 +1167,7 @@ class B extends O.G {
                     };
                     break;
                 case 105:
-                    r.state = { oneofKind: "banned", banned: V.internalBinaryRead(e, e.uint32(), n, r.state.banned) };
+                    r.state = { oneofKind: "banned", banned: B.internalBinaryRead(e, e.uint32(), n, r.state.banned) };
                     break;
                 case 1:
                     r.reason = e.int32();
@@ -1201,7 +1201,7 @@ class B extends O.G {
             "tempBanned" === e.state.oneofKind &&
                 k.internalBinaryWrite(e.state.tempBanned, t.tag(104, S.O0.LengthDelimited).fork(), n).join(),
             "banned" === e.state.oneofKind &&
-                V.internalBinaryWrite(e.state.banned, t.tag(105, S.O0.LengthDelimited).fork(), n).join(),
+                B.internalBinaryWrite(e.state.banned, t.tag(105, S.O0.LengthDelimited).fork(), n).join(),
             0 !== e.reason && t.tag(1, S.O0.Varint).int32(e.reason),
             e.annotations.length)
         ) {
@@ -1214,7 +1214,7 @@ class B extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let H = new B();
+let H = new V();
 var j =
         (((s = {})[(s.DAY_OF_WEEK_UNSPECIFIED = 0)] = "DAY_OF_WEEK_UNSPECIFIED"),
         (s[(s.MONDAY = 1)] = "MONDAY"),
@@ -1281,7 +1281,7 @@ var j =
         (u[(u.INACCESSIBLE_ANONYMIZED_USER = 2)] = "INACCESSIBLE_ANONYMIZED_USER"),
         (u[(u.ANONYMOUS_USER = 3)] = "ANONYMOUS_USER"),
         u),
-    q =
+    X =
         (((_ = {})[(_.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (_[(_.ID_SELFIE_MATCH = 1)] = "ID_SELFIE_MATCH"),
         (_[(_.ID_SCAN = 2)] = "ID_SCAN"),
@@ -1297,7 +1297,7 @@ var j =
         (_[(_.OS_SIGNAL_CONFIRMED = 12)] = "OS_SIGNAL_CONFIRMED"),
         (_[(_.TNS_DETERMINATION = 13)] = "TNS_DETERMINATION"),
         _),
-    Z =
+    q =
         (((E = {})[(E.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (E[(E.K_ID = 1)] = "K_ID"),
         (E[(E.PERSONA = 2)] = "PERSONA"),
@@ -1307,7 +1307,7 @@ var j =
         (E[(E.APPLE_APP_STORE = 6)] = "APPLE_APP_STORE"),
         (E[(E.GOOGLE_PLAY = 7)] = "GOOGLE_PLAY"),
         E),
-    X =
+    Z =
         (((A = {})[(A.AGE_ASSURANCE_GROUP_UNSPECIFIED = 0)] = "AGE_ASSURANCE_GROUP_UNSPECIFIED"),
         (A[(A.AGE_ASSURANCE_GROUP_13 = 1)] = "AGE_ASSURANCE_GROUP_13"),
         (A[(A.AGE_ASSURANCE_GROUP_14 = 2)] = "AGE_ASSURANCE_GROUP_14"),
@@ -2386,7 +2386,7 @@ class eF extends O.G {
         super("discord_protos.users.v1.UserData", [
             { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => ej } },
             { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => e$ } },
-            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => eq } },
+            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => eX } },
             { no: 4, name: "quest", kind: "message", T: () => eQ },
             { no: 5, name: "primary_guild", kind: "message", T: () => eS },
             { no: 6, name: "cross_platform_restriction", kind: "message", T: () => ey },
@@ -2396,7 +2396,7 @@ class eF extends O.G {
             { no: 10, name: "display_name_styles", kind: "message", T: () => eA },
             { no: 11, name: "store_country", kind: "message", T: () => e2 },
             { no: 12, name: "restricted_schedule", kind: "message", T: () => eR },
-            { no: 13, name: "age_assurance_data", kind: "message", T: () => eB },
+            { no: 13, name: "age_assurance_data", kind: "message", T: () => eV },
             { no: 14, name: "perks", kind: "message", T: () => ts },
             { no: 15, name: "badges", kind: "message", T: () => eG },
             { no: 16, name: "country_data", kind: "message", T: () => to },
@@ -2464,7 +2464,7 @@ class eF extends O.G {
                     r.restrictedSchedule = eR.internalBinaryRead(e, e.uint32(), n, r.restrictedSchedule);
                     break;
                 case 13:
-                    r.ageAssuranceData = eB.internalBinaryRead(e, e.uint32(), n, r.ageAssuranceData);
+                    r.ageAssuranceData = eV.internalBinaryRead(e, e.uint32(), n, r.ageAssuranceData);
                     break;
                 case 14:
                     r.perks = ts.internalBinaryRead(e, e.uint32(), n, r.perks);
@@ -2556,7 +2556,7 @@ class eF extends O.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = eq.internalBinaryRead(t, t.uint32(), n);
+                    s = eX.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -2564,7 +2564,7 @@ class eF extends O.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? eq.create();
+        e[a ?? 0] = s ?? eX.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.linkedUsers))
@@ -2580,7 +2580,7 @@ class eF extends O.G {
         for (let i of Object.keys(e.safetyFlags))
             (t.tag(3, S.O0.LengthDelimited).fork().tag(1, S.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, S.O0.LengthDelimited).fork(),
-                eq.internalBinaryWrite(e.safetyFlags[i], t, n),
+                eX.internalBinaryWrite(e.safetyFlags[i], t, n),
                 t.join().join());
         (e.quest && eQ.internalBinaryWrite(e.quest, t.tag(4, S.O0.LengthDelimited).fork(), n).join(),
             e.primaryGuild && eS.internalBinaryWrite(e.primaryGuild, t.tag(5, S.O0.LengthDelimited).fork(), n).join(),
@@ -2595,7 +2595,7 @@ class eF extends O.G {
             e.restrictedSchedule &&
                 eR.internalBinaryWrite(e.restrictedSchedule, t.tag(12, S.O0.LengthDelimited).fork(), n).join(),
             e.ageAssuranceData &&
-                eB.internalBinaryWrite(e.ageAssuranceData, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
+                eV.internalBinaryWrite(e.ageAssuranceData, t.tag(13, S.O0.LengthDelimited).fork(), n).join(),
             e.perks && ts.internalBinaryWrite(e.perks, t.tag(14, S.O0.LengthDelimited).fork(), n).join(),
             e.badges && eG.internalBinaryWrite(e.badges, t.tag(15, S.O0.LengthDelimited).fork(), n).join(),
             e.countryData && to.internalBinaryWrite(e.countryData, t.tag(16, S.O0.LengthDelimited).fork(), n).join(),
@@ -2611,7 +2611,7 @@ class eF extends O.G {
     }
 }
 new eF();
-class eV extends O.G {
+class eB extends O.G {
     constructor() {
         super("discord_protos.users.v1.AgeAssuranceData", [
             { no: 1, name: "estimated_date_of_birth", kind: "message", T: () => L.D },
@@ -2619,21 +2619,21 @@ class eV extends O.G {
                 no: 2,
                 name: "method",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceMethod", q, "AGE_ASSURANCE_METHOD_"],
+                T: () => ["discord_protos.users.v1.AgeAssuranceMethod", X, "AGE_ASSURANCE_METHOD_"],
             },
             { no: 3, name: "method_version", kind: "scalar", T: 5 },
             {
                 no: 4,
                 name: "vendor",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", Z, "AGE_ASSURANCE_VENDOR_"],
+                T: () => ["discord_protos.users.v1.AgeAssuranceVendor", q, "AGE_ASSURANCE_VENDOR_"],
             },
             { no: 5, name: "verified_at", kind: "message", T: () => L.D },
             {
                 no: 6,
                 name: "estimated_age_group",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", X],
+                T: () => ["discord_protos.users.v1.AgeAssuranceGroup", Z],
             },
             { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 },
             { no: 8, name: "cooldown_reset_at", kind: "message", T: () => L.D },
@@ -2717,7 +2717,7 @@ class eV extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eB = new eV();
+let eV = new eB();
 class eH extends O.G {
     constructor() {
         super("discord_protos.users.v1.LinkedUser", [
@@ -2917,8 +2917,8 @@ class ez extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eq = new ez();
-class eZ extends O.G {
+let eX = new ez();
+class eq extends O.G {
     constructor() {
         super("discord_protos.users.v1.GuildShardingConfig", [
             { no: 1, name: "shards", kind: "scalar", repeat: 1, T: 5 },
@@ -2960,8 +2960,8 @@ class eZ extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-new eZ();
-class eX extends O.G {
+new eq();
+class eZ extends O.G {
     constructor() {
         super("discord_protos.users.v1.QuestMetadata", [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }]);
     }
@@ -2995,7 +2995,7 @@ class eX extends O.G {
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eQ = new eX();
+let eQ = new eZ();
 class eJ extends O.G {
     constructor() {
         super("discord_protos.users.v1.PremiumState", [

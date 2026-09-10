@@ -1,4 +1,4 @@
-i.d(e, { default: () => y }), i(321073);
+(i.d(e, { default: () => y }), i(321073));
 var a = i(477900),
     l = i(582128),
     n = i(17928),
@@ -23,16 +23,16 @@ async function x(t, e) {
     let i = null;
     try {
         var a;
-        (i = await (0, k.gA)({
+        ((i = await (0, k.gA)({
             name: ((a = t.name), `${a.slice(0, 128 - w.length)}${w}`),
             guild_id: e,
             install_scope: t.install_scope,
         })),
-            await (0, v.oX)(t.id, i);
+            await (0, v.oX)(t.id, i));
     } catch (e) {
         null != i && (await (0, k.xx)(i).catch(() => void 0));
         let t = e instanceof v.Xk && 409 === e.status ? b.default.bTAItn : b.default.ekrwGo;
-        return (0, g.P0)((0, f.o)(m.intl.string(t), p.Ck.FAILURE)), !1;
+        return ((0, g.P0)((0, f.o)(m.intl.string(t), p.Ck.FAILURE)), !1);
     }
     return (
         (0, v.Hc)(i),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(321073);
+(n.d(t, { A: () => b }), n(321073));
 var i = n(439372),
     r = n(571694),
     a = n(47167),
@@ -102,7 +102,7 @@ function C(e, t) {
     if (null != E) {
         let e = (0, a.m1)(E, u.default, d.A, !0),
             t = (0, a.m1)(E, u.default, d.A, !1);
-        _.push(e), _.push(t), o.push(e);
+        (_.push(e), _.push(t), o.push(e));
     }
     null != t && (_.push(t.name), o.push(t.name));
     let A = i + (o.length > 0 ? ` (${o.join(", ")})` : ""),
@@ -172,7 +172,7 @@ function L(e) {
                         let [n] = e.recipients.map(u.default.getUser).filter(E.Vq);
                         if (null != n) {
                             let e = A.Ay.getGlobalName(n);
-                            null != e && t.push(e), t.push(n.username), t.push("@" + n.username);
+                            (null != e && t.push(e), t.push(n.username), t.push("@" + n.username));
                             let i = d.A.getNickname(n.id);
                             null != i && t.push(i);
                             let r = A.Ay.getName(n);
@@ -215,10 +215,10 @@ function D(e) {
             else {
                 let r = O(e),
                     s = [a];
-                t.push({ id: n, items: s, defaultThumbnailURL: r }), (i[n] = s);
+                (t.push({ id: n, items: s, defaultThumbnailURL: r }), (i[n] = s));
             }
         } else n.push(r.id);
-    t.length > 0 && p.indexDomains(t), n.length > 0 && p.deleteSearchItems(n);
+    (t.length > 0 && p.indexDomains(t), n.length > 0 && p.deleteSearchItems(n));
 }
 class v extends i.A {
     actions = {
@@ -240,7 +240,7 @@ class v extends i.A {
         USER_UPDATE: this.handleUserUpdate,
     };
     handleInit() {
-        L(c.Ay.getCurrentlySelectedChannelId()),
+        (L(c.Ay.getCurrentlySelectedChannelId()),
             S() && p.clearSearchIndex(),
             g() &&
                 (function () {
@@ -252,8 +252,8 @@ class v extends i.A {
                         let i = n[e];
                         t.push(C(i));
                     }
-                    e.push({ id: m.ME, items: t }), p.indexDomains(e);
-                })();
+                    (e.push({ id: m.ME, items: t }), p.indexDomains(e));
+                })());
     }
     handleLogout() {
         S() && p.clearSearchIndex();

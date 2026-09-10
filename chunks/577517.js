@@ -6,7 +6,7 @@ let a = null,
     l = null;
 function o() {
     let e = new Date();
-    return e.setHours(0, 0, 0, 0), e.getTime();
+    return (e.setHours(0, 0, 0, 0), e.getTime());
 }
 class d extends i.Ay.PersistedStore {
     static displayName = "ParentalConsentWarningStore";
@@ -19,7 +19,7 @@ class d extends i.Ay.PersistedStore {
         }),
     ];
     initialize(e) {
-        (a = e?.lastWarningFetchDayStart ?? null), (s = e?.lastModalShownDayStart ?? null), (l = e?.warning ?? null);
+        ((a = e?.lastWarningFetchDayStart ?? null), (s = e?.lastModalShownDayStart ?? null), (l = e?.warning ?? null));
     }
     getWarning() {
         return l;
@@ -37,16 +37,16 @@ class d extends i.Ay.PersistedStore {
 let c = new d(r.h, {
         PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function (e) {
             let { warning: t } = e;
-            (l = t), (a = o()), c.persist();
+            ((l = t), (a = o()), c.persist());
         },
         PARENTAL_CONSENT_WARNING_MODAL_SHOWN: function () {
-            (s = o()), c.persist();
+            ((s = o()), c.persist());
         },
         PARENTAL_CONSENT_WARNING_CLEARED: function () {
-            (l = null), c.persist();
+            ((l = null), c.persist());
         },
         LOGOUT: function () {
-            (a = null), (s = null), (l = null), c.persist();
+            ((a = null), (s = null), (l = null), c.persist());
         },
     }),
     u = c;

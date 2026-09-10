@@ -58,9 +58,9 @@ function y(e) {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
-                        (0, _.b0)(_.G8.APPEARANCE_SETTINGS),
+                        ((0, _.b0)(_.G8.APPEARANCE_SETTINGS),
                             (0, x.nf)(x.HP.CUSTOM_THEME, { from: x.xv.SETTING }),
-                            (0, I.default)();
+                            (0, I.default)());
                     },
                 }),
             }),
@@ -161,7 +161,7 @@ let W = (0, i.E2)(l.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                 r.A.isPreview,
             ]);
         function d(e, n, i) {
-            (0, X.NA)({ [e]: n }), (0, X.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n });
+            ((0, X.NA)({ [e]: n }), (0, X.qX)(e, null != i ? { backgroundGradientPresetId: i } : { theme: n }));
             let l = null != i ? `${e}-mode-${F.ju[i]}` : `${e}-mode-${n}`;
             (0, V.X8)({ isPersisted: !0, analyticsLocations: t, themeName: l });
         }
@@ -274,11 +274,11 @@ let Q = (0, i.zD)(l.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
                     let e = D.A.theme,
                         t = (0, Z.M)(e) ? Y.Fc.DARK : Y.Fc.LIGHT,
                         n = r.A.isPreview ? void 0 : r.A.gradientPreset?.id;
-                    (0, X.NA)({ [t]: e }),
-                        null != n ? (0, X.qX)(t, { backgroundGradientPresetId: n }) : (0, X.qX)(t, { theme: e });
+                    ((0, X.NA)({ [t]: e }),
+                        null != n ? (0, X.qX)(t, { backgroundGradientPresetId: n }) : (0, X.qX)(t, { theme: e }));
                 }
-                (0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON);
-            } else (0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1);
+                ((0, X.ZM)(!0), (0, X.k7)(Y.Q_.ON));
+            } else ((0, X.k7)(Y.Q_.OFF), (0, X.ZM)(!1));
         },
     }),
     J = (0, i.FW)(l.X.APPEARANCE_THEME_FIELDSET, {

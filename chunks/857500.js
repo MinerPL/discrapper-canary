@@ -8,7 +8,7 @@ var i = n(228366),
     d = n(117549),
     c = n(652215);
 function u() {
-    !(function () {
+    (!(function () {
         let e = o.Ay.getVoiceChannelId(),
             t = s.A.bitrate;
         if (null == e) return;
@@ -23,7 +23,7 @@ function u() {
             if (null == n) return;
             let r = n.videoQualityMode ?? c.K3c.AUTO;
             t !== r && i.h.dispatch({ type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: r });
-        })();
+        })());
 }
 function _(e) {
     let { channels: t } = e;

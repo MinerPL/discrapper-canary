@@ -38,11 +38,15 @@ function t(e) {
 }
 function I(e, E, r) {
     let L = (0, A.bG)([G.default], () => G.default.getUser(e), [e]),
-        _ = (0, A.bG)([d.Ay], () => {
-            if (null == E || null == e) return null;
-            let r = d.Ay.getMember(E, e);
-            return (0, a.TR)(r);
-        }, [E, e]),
+        _ = (0, A.bG)(
+            [d.Ay],
+            () => {
+                if (null == E || null == e) return null;
+                let r = d.Ay.getMember(E, e);
+                return (0, a.TR)(r);
+            },
+            [E, e],
+        ),
         { tag: O, guildId: S } = i(void 0 !== r ? r : L?.primaryGuild);
     return null != S && null != O && !_;
 }

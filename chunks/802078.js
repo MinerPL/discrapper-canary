@@ -131,5 +131,5 @@ e.exports = function (e) {
             },
             { className: "variable", begin: "(\\$\\W)|((\\$|@@?)(\\w+))" },
         ];
-    return (r.contains = g), { name: "Elixir", aliases: ["ex", "exs"], keywords: n, contains: g };
+    return ((r.contains = g), { name: "Elixir", aliases: ["ex", "exs"], keywords: n, contains: g });
 };

@@ -12,7 +12,7 @@ function l(e) {
         [r, h] = a.useState(!1),
         { protocol: o, authorityPrefix: p, hostname: i, theRestOfTheUrl: d } = c(t),
         k = a.useCallback(() => {
-            r && s(t), u(), n?.();
+            (r && s(t), u(), n?.());
         }, [t, r, s, u, n]);
     return {
         protocol: o,
@@ -23,7 +23,7 @@ function l(e) {
         setShouldTrustUrl: h,
         handleConfirm: k,
         handleCancel: a.useCallback(() => {
-            l(), n?.();
+            (l(), n?.());
         }, [l, n]),
     };
 }

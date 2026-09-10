@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "it",
     pluralRuleFunction: function (e, t) {
         var r = !String(e).split(".")[1];
@@ -6,4 +6,4 @@ IntlMessageFormat.__addLocaleData({
     },
 }),
     IntlMessageFormat.__addLocaleData({ locale: "it-CH", parentLocale: "it" }),
-    IntlMessageFormat.__addLocaleData({ locale: "it-SM", parentLocale: "it" });
+    IntlMessageFormat.__addLocaleData({ locale: "it-SM", parentLocale: "it" }));

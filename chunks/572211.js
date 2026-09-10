@@ -1,4 +1,4 @@
-n.d(t, { h: () => v, u: () => C }), n(323874), n(14289), n(35956);
+(n.d(t, { h: () => v, u: () => C }), n(323874), n(14289), n(35956));
 var i,
     l = n(477900),
     s = n(582128),
@@ -59,7 +59,7 @@ function v(e) {
         B = s.useMemo(() => {
             if (null != b)
                 return (e) => {
-                    b(e),
+                    (b(e),
                         (0, x.gx)({
                             applicationId: y.id,
                             linkType: y.linkType,
@@ -68,13 +68,13 @@ function v(e) {
                             customId: y.activityCustomId,
                             isDeadEnd: y.isDeadEnd,
                             messageId: y.messageId,
-                        });
+                        }));
                 };
         }, [b, y]),
         z = s.useMemo(() => {
             if (null != R)
                 return (e) => {
-                    R(e),
+                    (R(e),
                         (0, x.gx)({
                             applicationId: y.id,
                             linkType: y.linkType,
@@ -83,7 +83,7 @@ function v(e) {
                             customId: y.activityCustomId,
                             isDeadEnd: y.isDeadEnd,
                             messageId: y.messageId,
-                        });
+                        }));
                 };
         }, [R, y]);
     return (0, l.jsxs)("div", {
@@ -179,7 +179,7 @@ function v(e) {
                                                           "aria-label": n,
                                                           buttonRef: A,
                                                           onClick: (e) => {
-                                                              s(e),
+                                                              (s(e),
                                                                   (0, x.gx)({
                                                                       applicationId: y.id,
                                                                       linkType: y.linkType,
@@ -188,7 +188,7 @@ function v(e) {
                                                                       customId: y.activityCustomId,
                                                                       isDeadEnd: h,
                                                                       messageId: y.messageId,
-                                                                  });
+                                                                  }));
                                                           },
                                                       }),
                                                   },
@@ -207,7 +207,7 @@ function v(e) {
                                                               text: n,
                                                               buttonRef: A,
                                                               onClick: (e) => {
-                                                                  s(e),
+                                                                  (s(e),
                                                                       (0, x.gx)({
                                                                           applicationId: y.id,
                                                                           linkType: y.linkType,
@@ -216,7 +216,7 @@ function v(e) {
                                                                           customId: y.activityCustomId,
                                                                           isDeadEnd: h,
                                                                           messageId: y.messageId,
-                                                                      });
+                                                                      }));
                                                               },
                                                               fullWidth: !0,
                                                           }),

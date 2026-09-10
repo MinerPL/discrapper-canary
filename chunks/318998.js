@@ -1,4 +1,4 @@
-n.d(a, { PremiumSubscriptionPauseModalSelect: () => v, cN: () => P }), n(321073);
+(n.d(a, { PremiumSubscriptionPauseModalSelect: () => v, cN: () => P }), n(321073));
 var e = n(477900),
     i = n(582128),
     r = n(536637),
@@ -27,7 +27,7 @@ async function f(t) {
         analyticsLocation: l,
     } = t;
     try {
-        r(!0),
+        (r(!0),
             i(!1),
             await (0, m.nV)(
                 a,
@@ -37,9 +37,9 @@ async function f(t) {
                 s,
                 l,
             ),
-            e();
+            e());
     } catch {
-        i(!0), r(!1);
+        (i(!0), r(!1));
     }
 }
 function v() {

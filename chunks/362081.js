@@ -1,4 +1,4 @@
-l.d(t, { T: () => b, p: () => j }), l(323874), l(14289), l(35956), l(321073);
+(l.d(t, { T: () => b, p: () => j }), l(323874), l(14289), l(35956), l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(435558),
@@ -9,10 +9,10 @@ let c = new Map(),
     u = new Map();
 async function d(e) {
     let t = u.get(e);
-    for (; null != t; ) {
+    for (; null != t;) {
         u.delete(e);
         let l = t().catch(() => {});
-        c.set(e, l), await l, c.delete(e), (t = u.get(e));
+        (c.set(e, l), await l, c.delete(e), (t = u.get(e)));
     }
 }
 var m = l(956050),
@@ -101,7 +101,7 @@ function j(e) {
                     endSec: n,
                     data: { text: v.intl.string(x.default.v2jEIc), style: { ...f.QK }, position: { ...f._S } },
                 };
-            return ep((e) => [...e, a]), z(h.Y.NONE), e;
+            return (ep((e) => [...e, a]), z(h.Y.NONE), e);
         }, [$, B, z, F]),
         eb = a.useCallback((e) => {
             ep((t) => t.filter((t) => t.id !== e));
@@ -129,15 +129,15 @@ function j(e) {
             [k, U, $, B, H, G, V, K],
         ),
         eE = a.useCallback((e) => {
-            (F.current = e), en(e.videoElement);
+            ((F.current = e), en(e.videoElement));
         }, []),
         ew = a.useCallback((e, t, l, n) => {
-            ei(e), ec(t), er(l), eh(() => n);
+            (ei(e), ec(t), er(l), eh(() => n));
         }, []),
         ek = a.useCallback(() => {
             ed(!0);
         }, []);
-    (t = k.filepath),
+    ((t = k.filepath),
         a.useEffect(() => {
             let e = new Worker(new URL("/assets/" + l.u("380202"), l.b)),
                 n = new Worker(new URL("/assets/" + l.u("35886"), l.b)),
@@ -168,7 +168,7 @@ function j(e) {
                         ek();
                         return;
                     }
-                    (e.onmessage = (e) => {
+                    ((e.onmessage = (e) => {
                         let { videoBuffer: t, audioTracks: l, audioBuffer: a } = e.data,
                             i = URL.createObjectURL(new Blob([t], { type: "video/mp4" })),
                             r = [];
@@ -176,8 +176,8 @@ function j(e) {
                             let t = URL.createObjectURL(new Blob([e.buffer], { type: "audio/mp4" }));
                             r.push({ arrayBuffer: e.buffer, url: t, trackName: e.trackName });
                         }
-                        n.postMessage({ type: "init", videoBuffer: t }, [t]),
-                            ew(i, r, URL.createObjectURL(new Blob([a], { type: "audio/mp4" })), s);
+                        (n.postMessage({ type: "init", videoBuffer: t }, [t]),
+                            ew(i, r, URL.createObjectURL(new Blob([a], { type: "audio/mp4" })), s));
                     }),
                         (n.onmessage = (e) => {
                             let t = e.data;
@@ -200,14 +200,14 @@ function j(e) {
                                         null != t.requestId)
                                     ) {
                                         let e = a.get(t.requestId);
-                                        a.delete(t.requestId), e?.([]);
+                                        (a.delete(t.requestId), e?.([]));
                                     }
                             }
                         }),
-                        e.postMessage({ videoBuffer: l.data.buffer }, [l.data.buffer]);
+                        e.postMessage({ videoBuffer: l.data.buffer }, [l.data.buffer]));
                 })(),
                 () => {
-                    e.terminate(), n.terminate(), a.clear();
+                    (e.terminate(), n.terminate(), a.clear());
                 }
             );
         }, [t, ew, ex, ek]),
@@ -232,7 +232,7 @@ function j(e) {
         (function (e, t) {
             let { clipId: l, clipProtocolVideoURL: n, isScreenshot: i, editOnly: s, pendingEdits: r } = e,
                 h = a.useRef(r);
-            (h.current = r),
+            ((h.current = r),
                 a.useEffect(() => {
                     async function e() {
                         let e = {},
@@ -248,7 +248,7 @@ function j(e) {
                     return () => {
                         !s && (u.set(l, e), c.has(l) || d(l));
                     };
-                }, [l, n, i, h, s, t]);
+                }, [l, n, i, h, s, t]));
         })(
             {
                 clipId: k.id,
@@ -271,7 +271,7 @@ function j(e) {
         ),
         a.useEffect(() => {
             X > 0 && B <= 0 && I <= 0 && P((e) => ({ ...e, cropEnd: X }));
-        }, [X, B, I]);
+        }, [X, B, I]));
     let eA = a.useMemo(() => B - $, [$, B]),
         eL = a.useCallback(
             (e) => (
@@ -289,7 +289,7 @@ function j(e) {
         } = ((N = a.useCallback(
             (e) => {
                 let t = (0, i.clamp)(e, 0, B - 1);
-                P((e) => ({ ...e, cropStart: t })), F?.current?.seek(t);
+                (P((e) => ({ ...e, cropStart: t })), F?.current?.seek(t));
             },
             [B, P, F],
         )),
@@ -298,7 +298,7 @@ function j(e) {
             setCropEnd: a.useCallback(
                 (e) => {
                     let t = (0, i.clamp)(e, $ + 1, X);
-                    P((e) => ({ ...e, cropEnd: t })), F?.current?.seek(t);
+                    (P((e) => ({ ...e, cropEnd: t })), F?.current?.seek(t));
                 },
                 [$, X, P, F],
             ),
@@ -328,12 +328,12 @@ function j(e) {
                 [F],
             ),
         });
-    (0, s.A)(() => {
+    ((0, s.A)(() => {
         let e = F.current?.videoElement;
         if (null == e || !et.current) return;
         let t = e.currentTime;
-        W.current !== t && ((W.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
-            A.current?.style.setProperty("--custom-video-progress", `${(t / e.duration) * 100}%`);
+        (W.current !== t && ((W.current = t), ee.current.forEach((e) => e.onTimeUpdate?.(t))),
+            A.current?.style.setProperty("--custom-video-progress", `${(t / e.duration) * 100}%`));
     }),
         a.useEffect(() => {
             if (null != el)
@@ -347,18 +347,18 @@ function j(e) {
                     el.readyState >= 1 && (q(!0), F?.current?.seek(S)),
                     J(!el.paused),
                     () => {
-                        el.removeEventListener("play", e),
+                        (el.removeEventListener("play", e),
                             el.removeEventListener("pause", t),
                             el.removeEventListener("durationchange", l),
                             el.removeEventListener("loadedmetadata", n),
-                            el.removeEventListener("seeked", a);
+                            el.removeEventListener("seeked", a));
                     }
                 );
             function e() {
-                J(!0), ee.current.forEach((e) => e.onPlay?.());
+                (J(!0), ee.current.forEach((e) => e.onPlay?.()));
             }
             function t() {
-                J(!1), ee.current.forEach((e) => e.onPause?.());
+                (J(!1), ee.current.forEach((e) => e.onPause?.()));
             }
             function l() {
                 null != el && Z(el.duration);
@@ -369,7 +369,7 @@ function j(e) {
             function a() {
                 et.current = !0;
             }
-        }, [el, S, F, ee, J, q, Z, et]);
+        }, [el, S, F, ee, J, q, Z, et]));
     let eO = a.useCallback((e) => {
             P((t) => ({ ...t, clipName: e }));
         }, []),

@@ -20,9 +20,9 @@ function h(e) {
     async function g() {
         T(!0);
         try {
-            await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: I.toISOString() }),
+            (await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: I.toISOString() }),
                 (0, c.kb)(),
-                (0, o.closeModal)(A);
+                (0, o.closeModal)(A));
         } catch (e) {
             (0, c.xP)(e.message);
         } finally {

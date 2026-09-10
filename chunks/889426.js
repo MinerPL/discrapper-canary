@@ -32,7 +32,7 @@ function A(e) {
     if (null != g && t.type !== p.lp.ACTIVITY && t.type !== p.lp.HIDDEN_STREAM)
         switch (t.type) {
             case p.lp.STREAM:
-                m(t, p.qs.STREAM, x),
+                (m(t, p.qs.STREAM, x),
                     (0, a.L3)(
                         l,
                         async () => {
@@ -59,7 +59,7 @@ function A(e) {
                                 });
                         },
                         { context: f },
-                    );
+                    ));
                 return;
             case p.lp.USER:
                 let C = h.default.getUser(t.id);

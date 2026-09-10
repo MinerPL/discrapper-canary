@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => c });
+(n.r(t), n.d(t, { default: () => c }));
 var a = {
         lessThanXSeconds: {
             standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" },

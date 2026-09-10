@@ -1,4 +1,4 @@
-n.d(t, { A: () => y }), n(321073);
+(n.d(t, { A: () => y }), n(321073));
 var i = n(812729),
     r = n.n(i),
     a = n(17928),
@@ -34,7 +34,7 @@ async function C(e, t) {
             body: { data: i },
         } = await N("/games", { id: e }, t),
         r = i[0]?.name;
-    return (S[e] = r), r;
+    return ((S[e] = r), r);
 }
 let O = new (class {
     _nextCheck;
@@ -46,11 +46,11 @@ let O = new (class {
         this._started || ((this._started = !0), _.A.isFetching() ? o.A.fetch() : this._check());
     }
     stop() {
-        (this._started = !1),
+        ((this._started = !1),
             (m = null),
             (T = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
-            l.h.dispatch({ type: "STREAMING_UPDATE", stream: null });
+            l.h.dispatch({ type: "STREAMING_UPDATE", stream: null }));
     }
     async _checkTwitch(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -114,7 +114,7 @@ let O = new (class {
                 return o.A.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return 403 === n.status && g.add(e.id), null;
+            return (403 === n.status && g.add(e.id), null);
         }
     }
     _check() {
@@ -124,7 +124,7 @@ let O = new (class {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [A.fg2.TWITCH],
             n = Date.now();
-        T <= n && (t.push(A.fg2.YOUTUBE), (T = n + I)),
+        (T <= n && (t.push(A.fg2.YOUTUBE), (T = n + I)),
             Promise.allSettled(
                 e
                     .filter((e) => t.includes(e.type))
@@ -132,10 +132,10 @@ let O = new (class {
             ).then((e) => {
                 if (this._started) {
                     let t = e.find((e) => "fulfilled" === e.status && null != e.value)?.value;
-                    null == t && null != m && (t = m), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t });
+                    (null == t && null != m && (t = m), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
                 }
                 this._scheduleCheck();
-            });
+            }));
     }
     _scheduleCheck() {
         this._started && (this._nextCheck = setTimeout(() => this._check(), h));
@@ -147,7 +147,7 @@ function R() {
 class L extends a.Ay.Store {
     static displayName = "ExternalStreamingStore";
     initialize() {
-        E.A.enabled && O.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], R);
+        (E.A.enabled && O.start(), this.waitFor(_.A, E.A), this.syncWith([E.A], R));
     }
     getStream() {
         return p;

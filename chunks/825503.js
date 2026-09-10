@@ -2,7 +2,7 @@ t.d(a, { p: () => n });
 let r = new Map();
 class n {
     constructor(e, a = {}) {
-        (this.formatter = o(e, a)), (this.options = a);
+        ((this.formatter = o(e, a)), (this.options = a));
     }
     format(e) {
         return this.formatter.format(e);
@@ -72,7 +72,7 @@ function o(e, a = {}) {
     ) {
         let t = i[String((a = { ...a }).hour12)][e.split("-")[0]],
             r = a.hour12 ? "h12" : "h23";
-        (a.hourCycle = t ?? r), delete a.hour12;
+        ((a.hourCycle = t ?? r), delete a.hour12);
     }
     let t =
         e +
@@ -83,7 +83,7 @@ function o(e, a = {}) {
             : "");
     if (r.has(t)) return r.get(t);
     let n = new Intl.DateTimeFormat(e, a);
-    return r.set(t, n), n;
+    return (r.set(t, n), n);
 }
 let l = null,
     u = null;

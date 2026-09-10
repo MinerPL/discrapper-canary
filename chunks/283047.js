@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(205816), n(321073);
+(n.d(t, { A: () => d }), n(205816), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(536637),
@@ -33,7 +33,7 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
             numFrequentlyItems: s = 32,
             maxSamples: d = 10,
         }) {
-            (this.computeBonus = e),
+            ((this.computeBonus = e),
                 (this.computeWeight = t),
                 (this.computeFrecency = n),
                 (this.calculateMaxTotalUse = i),
@@ -44,18 +44,18 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
                 (this.maxSamples = d),
                 (this.numFrequentlyItems = s),
                 (this.dirty = !1),
-                (this.version = 0);
+                (this.version = 0));
         }
         overwriteHistory(e, t) {
-            (this.usageHistory = r().mapValues(e ?? {}, (e) => ({ ...e, frecency: -1 }))),
+            ((this.usageHistory = r().mapValues(e ?? {}, (e) => ({ ...e, frecency: -1 }))),
                 t?.forEach((e) => {
                     let { key: t, timestamp: n } = e;
                     return this.track(t, { timestamp: n });
                 }),
-                this.markDirty();
+                this.markDirty());
         }
         markDirty() {
-            (this.dirty = !0), this.version++;
+            ((this.dirty = !0), this.version++);
         }
         isDirty() {
             return this.dirty;
@@ -74,7 +74,7 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
                     i.recentUses.length > this.maxSamples;
                 )
                     i.recentUses.shift();
-            (this.usageHistory[e] = i), this.markDirty();
+            ((this.usageHistory[e] = i), this.markDirty());
         }
         getEntry(e) {
             return null == e
@@ -93,11 +93,11 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
         compute() {
             let e = s()(),
                 t = this.calculateMaxTotalUse ? r().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
-            r().forEach(this.usageHistory, (n, i) => {
+            (r().forEach(this.usageHistory, (n, i) => {
                 let { totalUses: a, recentUses: l, frecency: o } = n;
                 if (-1 !== o) return;
                 let d = this.computeBonus(i) / 100;
-                (n.score = 0),
+                ((n.score = 0),
                     r().forEach(l, (t, i) => {
                         if (i >= this.maxSamples) return !1;
                         let r = this.computeWeight(e.diff(s()(t), "days"));
@@ -110,7 +110,7 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
                                   maxTotalUse: t?.totalUses,
                               })),
                           (this.usageHistory[i] = n))
-                        : delete this.usageHistory[i];
+                        : delete this.usageHistory[i]);
             }),
                 (this.frequently = r()(this.usageHistory)
                     .map((e, t) => {
@@ -129,10 +129,10 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
                     .take(this.numFrequentlyItems)
                     .value()),
                 (this.dirty = !1),
-                this.afterCompute(this.usageHistory, this._frequently);
+                this.afterCompute(this.usageHistory, this._frequently));
         }
         get frequently() {
-            return this.dirty && this.compute(), this._frequently;
+            return (this.dirty && this.compute(), this._frequently);
         }
         set frequently(e) {
             this._frequently = e;

@@ -1,4 +1,4 @@
-n.d(l, { V: () => s, W: () => o }), n(323874), n(14289), n(35956);
+(n.d(l, { V: () => s, W: () => o }), n(323874), n(14289), n(35956));
 var e = n(652215);
 function o(t) {
     let { applicationId: l, customId: n, referrerId: o, linkId: s } = t,
@@ -20,7 +20,7 @@ function s(t) {
         null != s && Object.values(s).some((t) => t?.oauth2_install_params != null || t?.oauth2InstallParams != null);
     if (null != o && !r) {
         let { permissions: t, scopes: l } = o;
-        null != t && i.set("permissions", t), null != l && i.set("scope", l.join(" "));
+        (null != t && i.set("permissions", t), null != l && i.set("scope", l.join(" ")));
     }
     return `${location.protocol}//${location.host}${e.BVt.OAUTH2_AUTHORIZE}?${i.toString()}`;
 }

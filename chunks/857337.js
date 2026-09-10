@@ -1,4 +1,4 @@
-e.d(t, { default: () => k }), e(938796);
+(e.d(t, { default: () => k }), e(938796));
 var n = e(477900),
     a = e(582128),
     i = e(17928),
@@ -57,10 +57,10 @@ function k(l) {
             })(q, A),
         Y = J || O || X,
         N = a.useCallback((l) => {
-            T(l), U(null), W(null);
+            (T(l), U(null), W(null));
         }, []),
         $ = a.useCallback((l, t) => {
-            B((e) => (t ? e | l : e & ~l)), M(null), W(null);
+            (B((e) => (t ? e | l : e & ~l)), M(null), W(null));
         }, []),
         ll = a.useCallback((l) => {
             l.length > f.sq ? M(S.intl.formatToPlainString(v.default.VPUL05, { max: f.sq })) : (H(l), M(null), W(null));
@@ -70,12 +70,12 @@ function k(l) {
                 if ((l.preventDefault(), null == j || !Y || I)) return;
                 if ("" === D) return void U(S.intl.string(v.default.I2hgEB));
                 let n = {};
-                J && (n.name = D),
+                (J && (n.name = D),
                     O && (n.flags = w),
                     X && (n.collaborator_role_ids = [...q].sort()),
                     null == j.guild_id && null != e && (X || (O && z)) && (n.guild_id = e),
                     L(!0),
-                    W(null);
+                    W(null));
                 try {
                     if (!(await (0, h.CW)(t, n)).ok) return void W(S.intl.string(v.default.dxH2ZV));
                     await C();

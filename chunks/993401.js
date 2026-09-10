@@ -14,7 +14,7 @@ function h(e) {
     let { action: r, onClick: n } = e,
         { trackUserProfileAction: t } = (0, c.NJ)();
     return (e) => {
-        null != r && t({ action: r }), n?.(e);
+        (null != r && t({ action: r }), n?.(e));
     };
 }
 function f(e) {
@@ -66,20 +66,20 @@ function A(e) {
             loading: x = !1,
             ...N
         } = e,
-        R = h({ action: f, onClick: v }),
-        b = c ?? n;
+        b = h({ action: f, onClick: v }),
+        j = c ?? n;
     return (0, t.jsx)(o.m, {
         asContainer: !0,
         text: n,
         __unsupportedReactNodeAsText: l,
         position: s,
         align: u,
-        ariaHidden: b === n,
+        ariaHidden: j === n,
         children: (0, t.jsx)(a.D, {
             innerRef: A,
             className: i()(m.Xc, { [m.r9]: C }),
-            onClick: R,
-            "aria-label": b,
+            onClick: b,
+            "aria-label": j,
             "aria-disabled": C,
             "aria-busy": x,
             onMouseEnter: y,

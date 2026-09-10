@@ -31,11 +31,11 @@ function D(t) {
     let R = a.useCallback(
             async (t) => {
                 if ((t.preventDefault(), null == h)) return;
-                S(!0), y(null);
+                (S(!0), y(null));
                 let n = T.Ay.getDefaultChannel(h.id);
                 try {
                     let t = I.intl.formatToPlainString(I.t.V4lepJ, { topic: U });
-                    await _.A.createTextChannel(h.id, U, n?.parent_id, t), L();
+                    (await _.A.createTextChannel(h.id, U, n?.parent_id, t), L());
                 } catch (t) {
                     y(new g.Wl(t));
                 }

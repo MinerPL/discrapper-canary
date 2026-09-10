@@ -9,7 +9,7 @@ var t = i(376728),
     c = i(652215);
 function s(l) {
     let { guildId: e, invite: i, forceFetch: t } = l;
-    null != i && (e = i.guild?.id), null != e && (0, d.Rw)(e, { eager: !0, forceFetch: t });
+    (null != i && (e = i.guild?.id), null != e && (0, d.Rw)(e, { eager: !0, forceFetch: t }));
 }
 function p(l) {
     let { applicationId: e, forceFetch: i } = l;

@@ -76,7 +76,7 @@ class p extends s.Ay.Store {
 let T = new p(o.h, {
     GUILD_THEME_PREVIEW_START: function (e) {
         let { guildId: t, draft: n, original: i, draftEnabled: r, originalEnabled: a, origin: s, owner: l } = e;
-        I(),
+        (I(),
             (h = {
                 guildId: t,
                 draft: (0, c.z_)(n),
@@ -88,7 +88,7 @@ let T = new p(o.h, {
                 isSaving: !1,
                 isAwaitingGuildUpdate: !1,
                 saveError: null,
-            });
+            }));
     },
     GUILD_THEME_PREVIEW_SELECT_PRESET: function (e) {
         let { presetId: t } = e;
@@ -117,7 +117,7 @@ let T = new p(o.h, {
     },
     GUILD_THEME_PREVIEW_END: f,
     GUILD_THEME_PREVIEW_SAVE_START: function () {
-        I(), (h = { ...h, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null });
+        (I(), (h = { ...h, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null }));
     },
     GUILD_THEME_PREVIEW_SAVE_SUCCESS: function (e) {
         let { guildId: t, guildTheme: n } = e;

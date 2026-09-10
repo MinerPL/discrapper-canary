@@ -10,18 +10,18 @@ let u = {},
 function p(t, e, n) {
     null != c[t] && c[t].stop();
     let A = new i.Ep();
-    A.start(n, () => I.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: t, activityType: e })), (c[t] = A);
+    (A.start(n, () => I.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: t, activityType: e })), (c[t] = A));
 }
 function L(t, e, n) {
     let { applicationId: A, remotePartyId: i } = n;
     if (t === a.eAD.COMPLETE) {
-        delete u[A]?.[e], null != c[A] && (c[A].stop(), delete c[A]);
+        (delete u[A]?.[e], null != c[A] && (c[A].stop(), delete c[A]));
         return;
     }
     let I = u[A] ?? {};
-    (I[e] = { state: t, remotePartyId: i }),
+    ((I[e] = { state: t, remotePartyId: i }),
         (u[A] = I),
-        __OVERLAY__ || t !== a.eAD.FAILED ? t === a.eAD.LOADING && p(A, e, null != i ? 15e3 : 12e4) : p(A, e, 12e4);
+        __OVERLAY__ || t !== a.eAD.FAILED ? t === a.eAD.LOADING && p(A, e, null != i ? 15e3 : 12e4) : p(A, e, 12e4));
 }
 function s(t) {
     return ("ACTIVITY_JOIN" !== t.type || null == t.parentApplicationId) && L(a.eAD.COMPLETE, a.xL.JOIN, t);

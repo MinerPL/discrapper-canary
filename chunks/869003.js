@@ -24,14 +24,14 @@ let N = !1,
     C = !1;
 class O extends h.Ay {
     _initialize() {
-        super._initialize(),
+        (super._initialize(),
             c.A.addChangeListener(this.handlePopoutWindowUpdate),
-            d.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            d.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen));
     }
     _terminate() {
-        super._terminate(),
+        (super._terminate(),
             c.A.removeChangeListener(this.handlePopoutWindowUpdate),
-            d.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen);
+            d.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen));
     }
     showErrorModal(e) {
         let { code: t, message: n } = e;
@@ -61,10 +61,10 @@ class O extends h.Ay {
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: i, shouldClosePopout: r = !0 } = e;
-        d.h.wait(() => {
+        (d.h.wait(() => {
             (0, A._H)({ location: t, applicationId: n, showFeedback: i });
         }),
-            (0, E.f)() && r && (0, u.close)(g.MLl.ACTIVITY_POPOUT);
+            (0, E.f)() && r && (0, u.close)(g.MLl.ACTIVITY_POPOUT));
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -81,11 +81,11 @@ class O extends h.Ay {
         t === g.MLl.ACTIVITY_POPOUT && (C = !1);
     };
     popInActivity = () => {
-        (C = !0), u.close(g.MLl.ACTIVITY_POPOUT);
+        ((C = !0), u.close(g.MLl.ACTIVITY_POPOUT));
         let e = I.Ay.getCurrentEmbeddedActivity();
         if (null != e) {
             let t = (0, f.H)(e.location);
-            null != t && (0, _.iN)(t), (0, A.gk)(m.Gd.PANEL);
+            (null != t && (0, _.iN)(t), (0, A.gk)(m.Gd.PANEL));
         }
     };
     handlePopoutWindowUpdate = () => {

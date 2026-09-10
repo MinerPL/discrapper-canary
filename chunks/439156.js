@@ -84,7 +84,7 @@ function A(t) {
                         "aria-label": y.intl.string(w ? m.default.TZsu1U : m.default.gSxlHf),
                         disabled: D,
                         onClick: (t) => {
-                            t.stopPropagation(), w ? I() : j();
+                            (t.stopPropagation(), w ? I() : j());
                         },
                         loading: z || S,
                         fullWidth: C,

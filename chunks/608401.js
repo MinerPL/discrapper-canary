@@ -19,7 +19,7 @@ function f(e) {
 }
 async function p(e) {
     let { guildId: t, returnChannelId: n, isPreview: i = !1 } = e;
-    (0, a.closeAllModals)(), r()(null == I[t], "should not double-join guilds");
+    ((0, a.closeAllModals)(), r()(null == I[t], "should not double-join guilds"));
     let f = await (0, s.k)(t);
     if (f.features.has(A.GuildFeatures.COMMUNITY)) {
         var p;
@@ -31,7 +31,7 @@ async function p(e) {
         c.Ay.shouldShowOnboarding(t) &&
             (await ((p = t),
             new Promise((e) => {
-                (I[p] = e),
+                ((I[p] = e),
                     new Promise((e) => {
                         _.Ay.addConditionalChangeListener(() => {
                             let t = _.Ay.getSelfMember(p);
@@ -41,9 +41,9 @@ async function p(e) {
                             );
                         });
                     }).then(() => {
-                        I[p]?.(), (I[p] = null), o.A.finishOnboarding(p);
+                        (I[p]?.(), (I[p] = null), o.A.finishOnboarding(p));
                     }),
-                    (0, l.pX)(A.BVt.CHANNEL(p, h.VV.GUILD_ONBOARDING));
+                    (0, l.pX)(A.BVt.CHANNEL(p, h.VV.GUILD_ONBOARDING)));
             })),
             null != n && (0, l.pX)(A.BVt.CHANNEL(t, n)));
     }

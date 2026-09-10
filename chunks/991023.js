@@ -21,7 +21,7 @@ class l extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -45,7 +45,7 @@ class l extends s.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -73,7 +73,7 @@ class l extends s.G {
                 .string(e.localizations[n])
                 .join();
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let o = new l();
@@ -95,7 +95,7 @@ class d extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -119,7 +119,7 @@ class d extends s.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -146,7 +146,7 @@ class d extends s.G {
                 .fixed64(e.localizations[n])
                 .join();
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 new d();

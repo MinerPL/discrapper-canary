@@ -7,8 +7,8 @@ let i = (e) => {
                 let i = "function" == typeof e ? e(t) : e;
                 if (!Object.is(i, t)) {
                     let e = t;
-                    (t = (null != n ? n : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
-                        r.forEach((r) => r(t, e));
+                    ((t = (null != n ? n : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
+                        r.forEach((r) => r(t, e)));
                 }
             },
             i = () => t,
@@ -25,8 +25,8 @@ let i = (e) => {
                         () => t(e.getState()),
                         () => t(e.getInitialState()),
                     );
-                    return n.useDebugValue(r), r;
+                    return (n.useDebugValue(r), r);
                 })(t, e);
-        return Object.assign(r, t), r;
+        return (Object.assign(r, t), r);
     },
     a = (e) => (e ? o(e) : o);

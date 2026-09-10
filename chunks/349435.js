@@ -17,7 +17,7 @@ let u = [],
     E = new Set();
 function A(e) {
     let { safetyWarnings: t } = e;
-    null != t &&
+    (null != t &&
         ((_[e.id] = t),
         t.some(
             (e) =>
@@ -27,13 +27,13 @@ function A(e) {
         )
             ? E.add(e.id)
             : E.delete(e.id)),
-        null == t && (null != _[e.id] && delete _[e.id], E.delete(e.id));
+        null == t && (null != _[e.id] && delete _[e.id], E.delete(e.id)));
 }
 function h() {
-    (_ = {}),
+    ((_ = {}),
         Object.values(l.A.getMutablePrivateChannels()).forEach((e) => {
             A(e);
-        });
+        }));
 }
 class I extends a.Ay.Store {
     initialize() {
@@ -55,7 +55,7 @@ let f = new I(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        null != _[t.id] && delete _[t.id], E.delete(t.id);
+        (null != _[t.id] && delete _[t.id], E.delete(t.id));
     },
     CHANNEL_UPDATES: function (e) {
         e.channels.forEach((e) => {
@@ -72,7 +72,7 @@ let f = new I(s.h, {
     CLEAR_CHANNEL_SAFETY_WARNINGS: function (e) {
         let { channelId: t } = e,
             n = _[t];
-        E.delete(t), null != n && (_[t] = n.map((e) => ({ ...e, dismiss_timestamp: void 0 })));
+        (E.delete(t), null != n && (_[t] = n.map((e) => ({ ...e, dismiss_timestamp: void 0 }))));
     },
     DISMISS_CHANNEL_SAFETY_WARNINGS: function (e) {
         let { channelId: t, warningIds: n } = e,

@@ -47,7 +47,7 @@ var l = s(477900),
     K = s(270045),
     $ = s(657113),
     Y = s(79545);
-s(134528), s(947204);
+(s(134528), s(947204));
 var X = s(885574),
     J = s(939);
 let Z = n.forwardRef(function (e, t) {
@@ -181,28 +181,36 @@ function ex(e) {
         ec = (0, G.Dp)(j.p9.DESKTOP_ACCOUNT_PANEL_AREA),
         eE = (0, Q.Yz)(ec?.creative),
         ex = (0, a.bG)([U.A], () => (null != eE ? (U.A.quests.get(eE) ?? null) : null), [eE]),
-        { isCurrentUserStreamingQuestApplication: eQ, isQuestInQuestBar: eI } = (0, a.cf)([g.A], () => {
-            var e;
-            return {
-                isCurrentUserStreamingQuestApplication:
-                    null != s &&
-                    null != en &&
-                    ((e = g.A),
-                    eo.some((t) => {
-                        if (t.type !== e_.lp.STREAM || t.user.id !== en.id) return !1;
-                        let l = (0, f.nr)(t.stream, e);
-                        return null != l && (0, H.zS)(l, s);
-                    })),
-                isQuestInQuestBar: ex?.id === s?.id,
-            };
-        }, [en, s, eo, ex]),
+        { isCurrentUserStreamingQuestApplication: eQ, isQuestInQuestBar: eI } = (0, a.cf)(
+            [g.A],
+            () => {
+                var e;
+                return {
+                    isCurrentUserStreamingQuestApplication:
+                        null != s &&
+                        null != en &&
+                        ((e = g.A),
+                        eo.some((t) => {
+                            if (t.type !== e_.lp.STREAM || t.user.id !== en.id) return !1;
+                            let l = (0, f.nr)(t.stream, e);
+                            return null != l && (0, H.zS)(l, s);
+                        })),
+                    isQuestInQuestBar: ex?.id === s?.id,
+                };
+            },
+            [en, s, eo, ex],
+        ),
         eL = (0, z.pU)(s)?.[0],
-        eh = (0, a.bG)([L.Ay, g.A], () => {
-            let e = L.Ay.getRunningGames().map((e) => e.id);
-            if ((0, z.xZ)(s) && null !== eL && e.includes(eL)) return !0;
-            let t = null != en ? g.A.findActivity(en.id, (e) => e.type !== eT.$pd.CUSTOM_STATUS) : null;
-            return !!(null != t && (0, z.g5)(s) && (0, H.zS)(t, s));
-        }, [s, en, eL]),
+        eh = (0, a.bG)(
+            [L.Ay, g.A],
+            () => {
+                let e = L.Ay.getRunningGames().map((e) => e.id);
+                if ((0, z.xZ)(s) && null !== eL && e.includes(eL)) return !0;
+                let t = null != en ? g.A.findActivity(en.id, (e) => e.type !== eT.$pd.CUSTOM_STATUS) : null;
+                return !!(null != t && (0, z.g5)(s) && (0, H.zS)(t, s));
+            },
+            [s, en, eL],
+        ),
         ef = !0 === v || eQ || eh,
         eR = (0, a.bG)([U.A], () => null != s && U.A.isEnrolling(s.id), [s]),
         ev = (0, a.bG)([I.A], () => (en?.id == null ? null : I.A.getParticipant(t, en.id)) != null, [t, en]),
@@ -227,7 +235,7 @@ function ex(e) {
             }
         }, [s, eg]),
         ej = n.useCallback(() => {
-            (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_channel_call_header")
+            ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_channel_call_header")
                 ? (0, m.r)({
                       type: x.F.CLICK_INTERNAL,
                       adCreativeType: i.p.QUEST,
@@ -243,10 +251,10 @@ function ex(e) {
                       questContentCTA: D.Cy.TRACK_PROGRESS,
                       sourceQuestContent: j.uF.QUEST_LIVE_STREAM,
                   }),
-                (0, eA.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: s.id });
+                (0, eA.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: s.id }));
         }, [s, B, X]),
         eM = n.useCallback(() => {
-            (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_channel_call_header")
+            ((0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_channel_call_header")
                 ? (0, m.r)({
                       type: x.F.CLICK_INTERNAL,
                       adCreativeType: i.p.QUEST,
@@ -262,7 +270,7 @@ function ex(e) {
                       questContentCTA: D.Cy.LEARN_MORE,
                       sourceQuestContent: j.uF.QUEST_LIVE_STREAM,
                   }),
-                (0, eA.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: s.id });
+                (0, eA.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: s.id }));
         }, [s, B, X]),
         ey = (0, eS.D)({ quest: s, questContent: j.uF.QUEST_LIVE_STREAM, sourceQuestContent: j.uF.QUEST_LIVE_STREAM }),
         eb = n.useMemo(() => (0, O.L)({ quest: s, location: eC.rE.QUEST_CHANNEL_CALL_HEADER }), [s]),
@@ -473,12 +481,16 @@ function eQ(e) {
     n.useEffect(() => {
         null == e.previewQuest && null != E && (0, p.yO)([E], j.uF.QUEST_LIVE_STREAM, "QuestChannelCallHeader");
     }, [E, e.previewQuest]);
-    let d = (0, a.bG)([U.A], () => {
-            let e = U.A.earnedQuestForPlacement.get(j.uF.QUEST_LIVE_STREAM);
-            if (null == e || null == E) return null;
-            let t = e.earnedDecisionByQuestId.get(E);
-            return (0, k.Oh)(t) && t.shouldDeliver ? U.A.getQuest(E) : null;
-        }, [E]),
+    let d = (0, a.bG)(
+            [U.A],
+            () => {
+                let e = U.A.earnedQuestForPlacement.get(j.uF.QUEST_LIVE_STREAM);
+                if (null == e || null == E) return null;
+                let t = e.earnedDecisionByQuestId.get(E);
+                return (0, k.Oh)(t) && t.shouldDeliver ? U.A.getQuest(E) : null;
+            },
+            [E],
+        ),
         [A, S] = n.useState(null);
     n.useEffect(() => {
         null != d ? S(d) : null === E && S(null);

@@ -31,7 +31,7 @@ function _(e) {
                             null !== n.icon
                                 ? (c.Ay.getGuildIconURL({ id: n.id, icon: n.icon, size: 44, canAnimate: !0 }) ?? null)
                                 : null;
-                        return null !== r && (i.icon_url = r), i;
+                        return (null !== r && (i.icon_url = r), i);
                     })
                     .filter((e) => null !== e);
             })(),
@@ -43,7 +43,7 @@ function _(e) {
                               let t = a.A.getChannel(e);
                               if (void 0 === t) return null;
                               let n = { id: t.id, name: (0, i.m1)(t, d.default, l.A) };
-                              return t.topic.length > 0 && (n.channel_topic = t.topic), n;
+                              return (t.topic.length > 0 && (n.channel_topic = t.topic), n);
                           })
                           .filter((e) => null !== e),
         };

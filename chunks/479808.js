@@ -1,4 +1,4 @@
-l.r(s), l.d(s, { default: () => v });
+(l.r(s), l.d(s, { default: () => v }));
 var n = l(477900),
     t = l(582128),
     r = l(503698),
@@ -20,7 +20,7 @@ var n = l(477900),
     k = l(170522);
 let v = function (e) {
     let { layoutId: s } = e;
-    (0, d.P)(i.a), (0, p.pE)();
+    ((0, d.P)(i.a), (0, p.pE)());
     let l = t.useRef(null);
     t.useEffect(() => {
         l.current?.focus();

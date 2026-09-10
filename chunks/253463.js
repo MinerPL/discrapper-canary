@@ -10,7 +10,7 @@ function p(t) {
     let { transitionState: i, onClose: n } = t,
         p = s.useCallback(async () => {
             try {
-                await (0, l.S)(), n();
+                (await (0, l.S)(), n());
             } catch {}
         }, [n]);
     return (0, a.jsx)(r.ConfirmModal, {

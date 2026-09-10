@@ -11,10 +11,10 @@ let u = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
 function _(e, t, n) {
     let a = { ...(n ?? {}) },
         l = n?.localeOverride ?? r.default.locale;
-    "en-US" === l && u.includes(r.default.systemLocale) && (a.currencyDisplay = "code"),
-        "en-US" === l && (0, s.isWindows)() && "en-GB" === r.default.systemLocale && (a.currencyDisplay = "code");
+    ("en-US" === l && u.includes(r.default.systemLocale) && (a.currencyDisplay = "code"),
+        "en-US" === l && (0, s.isWindows)() && "en-GB" === r.default.systemLocale && (a.currencyDisplay = "code"));
     let { maximumFractionDigits: o, minimumFractionDigits: d } = a;
-    return 0 === o && null == d && (a.minimumFractionDigits = 0), (0, i.$g)(e, t, l, a);
+    return (0 === o && null == d && (a.minimumFractionDigits = 0), (0, i.$g)(e, t, l, a));
 }
 function E(e, t) {
     let n = _(e, d.Yr.EUR, t),

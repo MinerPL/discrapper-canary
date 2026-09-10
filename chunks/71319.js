@@ -19,7 +19,7 @@ function m(e) {
     s.A.isConnected() && n.code === a.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
 function p() {
-    (u = 0), (c = null), (d = null);
+    ((u = 0), (c = null), (d = null));
 }
 class C extends i.Ay.Store {
     initialize() {
@@ -40,7 +40,7 @@ let h = new C(r.h, {
     SKU_PURCHASE_FAIL: m,
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: m,
     USER_PAYMENT_CLIENT_ADD: function (e) {
-        (u = 2), (c = e.purchaseTokenHash), (d = e.expiresAt);
+        ((u = 2), (c = e.purchaseTokenHash), (d = e.expiresAt));
     },
     BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: p,
     BILLING_SUBSCRIPTION_UPDATE_START: p,

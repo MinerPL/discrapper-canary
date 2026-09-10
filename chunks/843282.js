@@ -39,7 +39,7 @@ function D(e) {
 }
 function L(e, l) {
     let t = new Set(l);
-    return t.has(e) ? t.delete(e) : t.add(e), { newValues: t, updated: !0 };
+    return (t.has(e) ? t.delete(e) : t.add(e), { newValues: t, updated: !0 });
 }
 function P(e, l) {
     return l.has(e) ? { newValues: new Set(), updated: !0 } : { newValues: new Set([e]), updated: !0 };
@@ -109,13 +109,13 @@ function I(e) {
         es = (0, c.K)(ei),
         er = n.useCallback(
             (e) => {
-                A(e), K && el.current?.focus();
+                (A(e), K && el.current?.focus());
             },
             [A, K, el],
         ),
         eo = n.useCallback(
             (e) => {
-                e.stopPropagation(), W?.();
+                (e.stopPropagation(), W?.());
             },
             [W],
         ),
@@ -182,18 +182,18 @@ function I(e) {
                             "aria-disabled": r,
                             fullWidth: "horizontal" === J,
                             innerRef: (e) => {
-                                (el.current = e), (es.current = e);
+                                ((el.current = e), (es.current = e));
                             },
                             onClick: r
                                 ? void 0
                                 : (e) => {
-                                      n(e), en(!Q);
+                                      (n(e), en(!Q));
                                   },
                             onKeyDown: (e) => {
-                                "ArrowDown" === e.key
+                                ("ArrowDown" === e.key
                                     ? en(!0)
                                     : "Escape" === e.key && d && (e.stopPropagation(), en(!1)),
-                                    o(e);
+                                    o(e));
                             },
                             ...u,
                             containerClassName: s()(E.kL, i),
@@ -269,7 +269,7 @@ function V(e) {
         [L],
     );
     let M = n.useRef(null);
-    (0, v.tj)(M, { returnRef: y }),
+    ((0, v.tj)(M, { returnRef: y }),
         n.useLayoutEffect(() => {
             M.current?.focus();
         }, []),
@@ -283,10 +283,10 @@ function V(e) {
         }, [f, p.length]),
         n.useEffect(() => {
             C();
-        }, [C, N]);
+        }, [C, N]));
     let I = n.useCallback(
             (e, l) => {
-                t(e), c && !l && i();
+                (t(e), c && !l && i());
             },
             [i, t, c],
         ),
@@ -346,12 +346,12 @@ function V(e) {
                             style: { width: h, maxHeight: N },
                             ref: (e) => {
                                 let l = e?.getScrollerNode() ?? null;
-                                (t.current = l), (M.current = l);
+                                ((t.current = l), (M.current = l));
                             },
                             ...r,
                             onKeyDown: (e) => {
                                 if ("Escape" === e.key) {
-                                    e.stopPropagation(), e.preventDefault(), i();
+                                    (e.stopPropagation(), e.preventDefault(), i());
                                     return;
                                 }
                                 n(e);

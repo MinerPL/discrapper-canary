@@ -24,7 +24,7 @@ function u(e) {
         isLoading: m,
         error: h,
         onDeactivate: () => {
-            p(void 0),
+            (p(void 0),
                 g(!0),
                 (0, d.e_)(t, a.planId, a.entitlementId)
                     .then(() => {
@@ -35,7 +35,7 @@ function u(e) {
                     })
                     .finally(() => {
                         g(!1);
-                    });
+                    }));
         },
         ...u,
     });

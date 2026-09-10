@@ -19,12 +19,12 @@ function h(e) {
     let f = i.useCallback((e) => {
         let { rating: t, problem: i, feedback: a } = e,
             o = null == t;
-        (0, d.$b)(t, a, i?.value ?? null, o),
+        ((0, d.$b)(t, a, i?.value ?? null, o),
             o ||
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await l.e("137836").then(l.bind(l, 845671));
                     return (t) => (0, n.jsx)(e, { body: c.intl.string(c.t["d9+vQ8"]), ...t });
-                });
+                }));
     }, []);
     return (0, n.jsx)(o.A, {
         modalType: "block_user",

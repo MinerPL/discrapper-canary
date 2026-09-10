@@ -44,13 +44,13 @@ let A = function (e) {
         [D, L] = i.useState(!1),
         U = i.useCallback(
             (e) => {
-                L(!0), w?.(e);
+                (L(!0), w?.(e));
             },
             [w],
         ),
         V = i.useCallback(
             (e) => {
-                L(!1), O?.(e);
+                (L(!1), O?.(e));
             },
             [O],
         ),

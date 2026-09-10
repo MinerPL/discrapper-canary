@@ -20,7 +20,7 @@ function i(l, t) {
             dispose: () => {
                 let l = i.srcObject;
                 if (!d && l instanceof MediaStream) for (let t of l.getTracks()) t.stop();
-                (i.srcObject = null), i.parentElement && i.parentElement.removeChild(i);
+                ((i.srcObject = null), i.parentElement && i.parentElement.removeChild(i));
             },
         }
     );

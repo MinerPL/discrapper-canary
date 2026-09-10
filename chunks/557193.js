@@ -8,7 +8,7 @@ function n(e, r) {
             e.badgeColorSecondary !== r.badgeColorSecondary)
     );
 }
-t.d(r, { HU: () => n }),
+(t.d(r, { HU: () => n }),
     t(685073),
     t(71393),
     t(576705),
@@ -18,4 +18,4 @@ t.d(r, { HU: () => n }),
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    t(652215);
+    t(652215));

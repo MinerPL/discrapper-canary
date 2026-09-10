@@ -72,7 +72,7 @@ function c(e) {
               giftRecipient: M,
               onClose: P,
               onCloseCallback: function (e) {
-                  (0, i.ET)(), (0, s.z)(), e && (0, r.gB)();
+                  ((0, i.ET)(), (0, s.z)(), e && (0, r.gB)());
               },
               onCloseRequest: function () {
                   null != n && C.has(n) && (0, a.closeModal)(O);
@@ -90,7 +90,7 @@ function c(e) {
                   return (0, t.jsx)(e, {
                       ...a,
                       onClose: () => {
-                          o(), P?.(!1);
+                          (o(), P?.(!1));
                       },
                   });
               };

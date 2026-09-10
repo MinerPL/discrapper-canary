@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { showInaccessibleLinkModal: () => c, showInaccessibleReportPostModal: () => u });
+(n.r(t), n.d(t, { showInaccessibleLinkModal: () => c, showInaccessibleReportPostModal: () => u }));
 var i = n(477900);
 n(582128);
 var r = n(139033),

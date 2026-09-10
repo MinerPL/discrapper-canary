@@ -27,10 +27,10 @@ function c(e) {
 function u(e, t) {
     let { guildId: n, entitlements: i } = e,
         r = c(n);
-    i.forEach((e) => {
+    (i.forEach((e) => {
         t ? (r.unlockedPowerups[e.sku_id] = e) : delete r.unlockedPowerups[e.sku_id];
     }),
-        (o = { ...o, [n]: { ...r, appliedBoosts: d(n) } });
+        (o = { ...o, [n]: { ...r, appliedBoosts: d(n) } }));
 }
 class _ extends i.Ay.PersistedStore {
     static displayName = "GuildPowerupsStore";
@@ -60,7 +60,7 @@ class _ extends i.Ay.PersistedStore {
                   ),
     ];
     initialize(e) {
-        this.waitFor(a.A), null != e && (o = e);
+        (this.waitFor(a.A), null != e && (o = e));
     }
     getState() {
         return o;

@@ -1,4 +1,4 @@
-n.d(t, { A: () => X });
+n.d(t, { A: () => Z });
 var i = n(477900),
     r = n(582128),
     a = n(64015),
@@ -36,7 +36,7 @@ var L = n(611924),
     x = n(192308),
     k = n(186492),
     F = n(375708);
-function V(e) {
+function B(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(w.W, {
         navId: "clean-up-inactive-gdms",
@@ -63,14 +63,14 @@ function V(e) {
         }),
     });
 }
-function B(e) {
+function V(e) {
     let { className: t, iconClassName: n } = e,
         a = r.useRef(null);
     return (0, i.jsx)(M.Y, {
         targetElementRef: a,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(V, { onClose: t });
+            return (0, i.jsx)(B, { onClose: t });
         },
         position: "bottom",
         align: "left",
@@ -100,7 +100,7 @@ var H = n(97469),
     K = n(715069),
     $ = n(652215),
     z = n(307636);
-let q = r.memo(function () {
+let X = r.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
@@ -130,7 +130,7 @@ let q = r.memo(function () {
         ],
     });
 });
-class Z extends r.Component {
+class q extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -146,17 +146,17 @@ class Z extends r.Component {
     hasReportedAnalytics = !1;
     componentDidMount() {
         let { selectedChannelId: e, homeLink: t } = this.props;
-        null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics();
+        (null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics());
     }
     shouldComponentUpdate(e) {
         return !(0, c.A)(this.props, e, ["children"]);
     }
     componentDidUpdate(e) {
         let { selectedChannelId: t, homeLink: n } = this.props;
-        null != t && t !== e.selectedChannelId
+        (null != t && t !== e.selectedChannelId
             ? this.scrollToChannel(t)
             : null == t && n !== e.homeLink && this.scrollToChannel(null),
-            this.reportAnalytics();
+            this.reportAnalytics());
     }
     scrollToChannel(e) {
         if (null == this._list) return;
@@ -184,13 +184,13 @@ class Z extends r.Component {
                 num_users_visible: s.length,
                 num_users_visible_with_mobile_indicator: l.filter((e) => null != e && W.A.isMobileOnline(e)).length,
             };
-        (this.hasReportedAnalytics = !0),
+        ((this.hasReportedAnalytics = !0),
             p.Ay.trackWithMetadata($.HAw.DM_LIST_VIEWED, {
                 ...d,
                 ...(0, m.F)(),
                 visible_user_ids: l.filter((e) => null != e),
                 changelog_dm_visible: o,
-            });
+            }));
     };
     getSectionHeight = (e) => 24 * (0 !== e);
     handleScroll = s()(() => {
@@ -223,7 +223,7 @@ class Z extends r.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === r.length
-              ? (0, i.jsx)(q, {}, "no-private-channels")
+              ? (0, i.jsx)(X, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
@@ -239,7 +239,7 @@ class Z extends r.Component {
                           (0, i.jsxs)("div", {
                               className: z.$s,
                               children: [
-                                  (0, i.jsx)(B, { className: `${z.U2} ${z.Mj}`, iconClassName: z.Br }),
+                                  (0, i.jsx)(V, { className: `${z.U2} ${z.Mj}`, iconClassName: z.Br }),
                                   (0, i.jsx)(y.Ay, {
                                       tooltip: F.intl.string(F.t.bA875g),
                                       tooltipPosition: "top",
@@ -280,9 +280,9 @@ class Z extends r.Component {
                             innerAriaLabel: F.intl.string(F.t.YUU0RF),
                             innerTag: "ul",
                             ref: (e) => {
-                                (this._list = e),
+                                ((this._list = e),
                                     (this.props.listRef.current = e),
-                                    (a.current = e?.getScrollerNode() ?? null);
+                                    (a.current = e?.getScrollerNode() ?? null));
                             },
                             onScroll: this.handleScroll,
                             className: z.XG,
@@ -301,7 +301,7 @@ class Z extends r.Component {
         });
     }
 }
-let X = function (e) {
+let Z = function (e) {
     let { density: t } = (0, A.wR)(),
         { version: n, theme: a, children: s, listScrollerRef: c } = e,
         u = r.Children.count(s),
@@ -370,7 +370,7 @@ let X = function (e) {
         value: p,
         children: (0, i.jsx)(l.hD, {
             navigator: w,
-            children: (0, i.jsx)(Z, {
+            children: (0, i.jsx)(q, {
                 ...e,
                 density: t,
                 channels: E,

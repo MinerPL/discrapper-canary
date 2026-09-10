@@ -1,4 +1,4 @@
-n.d(t, { $2: () => L, Ky: () => b, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => T }), n(938796);
+(n.d(t, { $2: () => L, Ky: () => b, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => T }), n(938796));
 var l,
     i = n(582128),
     s = n(665260),
@@ -57,7 +57,7 @@ function S(e) {
                       if (h) {
                           let e = x.A.toURLSafe(n);
                           if (null == e) return null;
-                          e.searchParams.append("format", "webp"), (f = e.toString());
+                          (e.searchParams.append("format", "webp"), (f = e.toString()));
                       }
                       return {
                           type: "attachment",

@@ -1,4 +1,4 @@
-e.d(i, { A: () => R, g: () => y }), e(321073);
+(e.d(i, { A: () => R, g: () => y }), e(321073));
 var t = e(477900);
 e(582128);
 var l = e(503698),
@@ -70,7 +70,7 @@ function R(n, i) {
             badge: H ? "new" : void 0,
             subtext: f ? (0, t.jsx)(j, { channel: _ }) : null,
             action: () => {
-                H && w(C.i.TAKE_ACTION), g.A.ring(i, [n.id], "user_context_menu"), f && null != i && (0, E.iN)(i);
+                (H && w(C.i.TAKE_ACTION), g.A.ring(i, [n.id], "user_context_menu"), f && null != i && (0, E.iN)(i));
             },
         });
     }
@@ -87,7 +87,7 @@ function R(n, i) {
                     })
                   : null,
               action: () => {
-                  H && w(C.i.TAKE_ACTION), g.A.stopRinging(i, [n.id]);
+                  (H && w(C.i.TAKE_ACTION), g.A.stopRinging(i, [n.id]));
               },
           })
         : null;

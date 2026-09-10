@@ -40,7 +40,7 @@ function T(e) {
                           label: I.intl.string(I.t.e6RscS),
                           icon: c.CheckmarkLargeIcon,
                           action: () => {
-                              r.h.dispatch({
+                              (r.h.dispatch({
                                   type: "NOTIFICATIONS_INBOX_ITEM_ACK",
                                   messageId: n.id,
                                   channelId: n.channel_id,
@@ -54,7 +54,7 @@ function T(e) {
                                       !0,
                                       void 0,
                                       n.id,
-                                  );
+                                  ));
                           },
                       })
                     : (0, a.jsx)(t.Dr, {

@@ -46,10 +46,10 @@ function H(i) {
         o = (0, w.J$)(l, t);
     if (!(0, d.A)(l) || (!(0, P.A)(l, k.jUm.PLAY) && !(0, P.A)(l, k.jUm.SYNC))) return null;
     let r = (i) => {
-            i?.stopPropagation(), n?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), a.onClick();
+            (i?.stopPropagation(), n?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), a.onClick());
         },
         c = (i) => {
-            i.stopPropagation(), n?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), o.onClick();
+            (i.stopPropagation(), n?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), o.onClick());
         };
     return s === F.d.MODAL_V2
         ? (0, e.jsxs)(e.Fragment, {
@@ -145,7 +145,7 @@ function Q(i) {
                                 size: A === F.d.MODAL_V2 ? _.w.SIZE_100 : _.w.SIZE_60,
                                 className: z.mM,
                                 onClick: (i) => {
-                                    i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, f.QX)(a, l.id);
+                                    (i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, f.QX)(a, l.id));
                                 },
                             }),
                             (0, e.jsxs)("div", {
@@ -157,7 +157,7 @@ function Q(i) {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    w({ action: "OPEN_SPOTIFY_TRACK" }), (0, f.Mp)(a);
+                                                    (w({ action: "OPEN_SPOTIFY_TRACK" }), (0, f.Mp)(a));
                                                 },
                                                 id: c,
                                             }),
@@ -175,11 +175,11 @@ function Q(i) {
                                                                         (0, e.jsx)(m.D, {
                                                                             className: g()(z.sd, z.mG),
                                                                             onClick: (i) => {
-                                                                                i.stopPropagation(),
+                                                                                (i.stopPropagation(),
                                                                                     w({
                                                                                         action: "OPEN_SPOTIFY_ARTIST",
                                                                                     }),
-                                                                                    (0, f.mN)(a, l.id, s);
+                                                                                    (0, f.mN)(a, l.id, s));
                                                                             },
                                                                             children: i,
                                                                         }),

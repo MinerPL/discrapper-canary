@@ -13,13 +13,13 @@ let I = !1,
     N = !1,
     S = [];
 function m() {
-    (I = !1),
+    ((I = !1),
         (u = null),
         (S = []),
         (N = !1),
         null != (u = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            ((E = a.A.getOnboardingPrompts(u)), (N = a.A.isAdvancedMode(u)));
+            ((E = a.A.getOnboardingPrompts(u)), (N = a.A.isAdvancedMode(u))));
 }
 class _ extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingPromptsStore";
@@ -61,14 +61,14 @@ let g = new _(r.h, {
     GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: m,
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (t) {
-        (S = t.errors ?? []), (I = !1);
+        ((S = t.errors ?? []), (I = !1));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (t) {
         let { prompts: e } = t;
         E = e;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-        (I = !0), (S = []);
+        ((I = !0), (S = []));
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (t) {
         S = t.errors ?? [];

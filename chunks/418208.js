@@ -24,19 +24,27 @@ function E(e) {
 }
 function A(e) {
     let t = null != e ? e : d.Ay.getChannelId(),
-        n = (0, r.bG)([o.A, l.A], () => {
-            let e = null != t ? l.A.getChannel(t) : null;
-            return null != e && o.A.can(c.xB.REQUEST_TO_SPEAK, e);
-        }, [t]),
+        n = (0, r.bG)(
+            [o.A, l.A],
+            () => {
+                let e = null != t ? l.A.getChannel(t) : null;
+                return null != e && o.A.can(c.xB.REQUEST_TO_SPEAK, e);
+            },
+            [t],
+        ),
         u = (0, a.uE)();
     return (0, s.aX)(i.t.STAGE_SPEAKING) && !u && n;
 }
 function h(e) {
     let t = null != e ? e : d.Ay.getChannelId(),
-        n = (0, r.bG)([o.A, l.A], () => {
-            let e = null != t ? l.A.getChannel(t) : null;
-            return null != e && o.A.can(c.xB.REQUEST_TO_SPEAK, e);
-        }, [t]),
+        n = (0, r.bG)(
+            [o.A, l.A],
+            () => {
+                let e = null != t ? l.A.getChannel(t) : null;
+                return null != e && o.A.can(c.xB.REQUEST_TO_SPEAK, e);
+            },
+            [t],
+        ),
         u = (0, a.b8)();
     return (0, s.aX)(i.t.STAGE_SPEAKING) && !u && n;
 }

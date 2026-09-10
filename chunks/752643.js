@@ -226,7 +226,7 @@ var o = l(775162),
                     i && t(e);
                 }),
                 () => {
-                    (i = !1), V.clear();
+                    ((i = !1), V.clear());
                 }
             );
         }, [e, V]);
@@ -263,7 +263,7 @@ var o = l(775162),
                                     (0, n.v)(C.t, {
                                         class: "IncodeVsVoicePanelButton",
                                         onClick: () => {
-                                            V.clear(),
+                                            (V.clear(),
                                                 (0, u.nU)({
                                                     module: u.vb.videoSelfie,
                                                     screen: u.bB.videoSelfieVoiceQuestion,
@@ -275,7 +275,7 @@ var o = l(775162),
                                                     screen: u.bB.videoSelfieVoiceQuestion,
                                                     code: u.nX.audioStreamClosed,
                                                     payload: { question: d[p] },
-                                                });
+                                                }));
                                             let e = p + 1;
                                             e >= d.length ? i() : (f(e), h(!1), m(!1));
                                         },
@@ -289,7 +289,7 @@ var o = l(775162),
                                 variant: "secondary",
                                 class: "IncodeVsVoicePanelButton",
                                 onClick: () => {
-                                    h(!0),
+                                    (h(!0),
                                         m(!1),
                                         (0, u.nU)({
                                             module: u.vb.videoSelfie,
@@ -299,7 +299,7 @@ var o = l(775162),
                                         }),
                                         V.schedule(() => {
                                             m(!0);
-                                        }, 1250);
+                                        }, 1250));
                                 },
                                 children: l("common.tapToAnswer", { defaultValue: "Tap to answer" }),
                             }),
@@ -343,7 +343,7 @@ var o = l(775162),
             L = (0, s.n)(),
             M = (0, n.h)(() => d(), [d]),
             x = (0, n.h)(() => {
-                V.clear(), k.clear(), L.clear();
+                (V.clear(), k.clear(), L.clear());
             }, [V, L, k]);
         (0, n._)(() => {
             let e = !0;
@@ -352,7 +352,7 @@ var o = l(775162),
                     e && r(i);
                 }),
                 () => {
-                    (e = !1), x(), w.cancel();
+                    ((e = !1), x(), w.cancel());
                 }
             );
         }, [w, x]);
@@ -366,26 +366,26 @@ var o = l(775162),
                     }),
                     !i)
                 ) {
-                    w.cancel(), M();
+                    (w.cancel(), M());
                     return;
                 }
-                f("submitting"),
+                (f("submitting"),
                     w.submit().then(({ success: e }) => {
                         if (e) {
-                            (0, u.nU)({ module: u.vb.videoSelfie, code: u.nX.videoSelfieTosAccepted }),
+                            ((0, u.nU)({ module: u.vb.videoSelfie, code: u.nX.videoSelfieTosAccepted }),
                                 f("success"),
-                                L.schedule(M, 1500);
+                                L.schedule(M, 1500));
                             return;
                         }
                         if (((m.current += 1), -1 !== l && m.current >= l)) {
-                            (0, u.nU)({ module: u.vb.videoSelfie, code: u.nX.videoSelfieTosNotAccepted }), M();
+                            ((0, u.nU)({ module: u.vb.videoSelfie, code: u.nX.videoSelfieTosNotAccepted }), M());
                             return;
                         }
                         f("error");
-                    });
+                    }));
             },
             y = () => {
-                w.cancel(), f("instructions"), h(!1);
+                (w.cancel(), f("instructions"), h(!1));
             };
         if ("submitting" === p || "success" === p)
             return (0, n.v)("div", {
@@ -473,7 +473,7 @@ var o = l(775162),
                           variant: "secondary",
                           class: "IncodeVsVoicePanelButton",
                           onClick: () => {
-                              e && w.start(e),
+                              (e && w.start(e),
                                   (0, u.nU)({
                                       module: u.vb.videoSelfie,
                                       screen: u.bB.videoSelfieVoiceFinalQuestion,
@@ -486,7 +486,7 @@ var o = l(775162),
                                   }, 1250),
                                   k.schedule(() => {
                                       f("confirm");
-                                  }, 1e4);
+                                  }, 1e4));
                           },
                           disabled: !c,
                           children: t("common.tapToSpeak", { defaultValue: "Tap to speak" }),
@@ -576,7 +576,7 @@ var o = l(775162),
                         permissionStatus: o,
                         manager: {
                             requestPermission: (0, n.h)(() => {
-                                s("requesting"), (0, h.U)({ requestAudio: !0 }).then(t);
+                                (s("requesting"), (0, h.U)({ requestAudio: !0 }).then(t));
                             }, [t]),
                             goToLearnMore: (0, n.h)(() => {
                                 s("learnMore");
@@ -588,7 +588,7 @@ var o = l(775162),
                     }
                 );
             })({ enabled: "permissions" === u, onGranted: () => w("capture"), onClose: () => l?.(void 0) });
-        (0, n._)(() => {
+        ((0, n._)(() => {
             ("tutorial" === u || "permissions" === u) && e && ((0, g.Wy)(e), a?.warm());
         }, [u, e, a]),
             (0, n._)(() => () => a?.dispose(), [a]),
@@ -601,7 +601,7 @@ var o = l(775162),
                 onError: l,
                 error: "error" === C.status ? C.error : void 0,
                 errorStatuses: ["error"],
-            });
+            }));
         let Z = (0, n.d)(() => (e ? (0, g.hM)(e) : []), [e]),
             I = C.step ?? "selfie",
             b = "frontId" === I || "backId" === I,

@@ -41,7 +41,7 @@ let x = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsG
             } = (0, p.IK)(t, { needsCategory: !0, seedCategoryStore: !0, includeUnpublished: N, flattenVariants: r }),
             { hasPreviouslyFetched: L, fetchPurchasesError: M } = (0, f.b5)(),
             B = L || null != M;
-        (0, d.A)(b.FYj), (0, o.pE)();
+        ((0, d.A)(b.FYj), (0, o.pE)());
         let F = (0, s.cf)([c.A], () => (null != m ? (0, y.o)(c.A, m) : x), [m]),
             Y = m?.isCategoryReward === !0 && !F.isPurchased;
         i.useEffect(() => {
@@ -51,7 +51,7 @@ let x = { isPurchased: !1, isPartiallyOwnedBundle: !1, isPartiallyOwnedVariantsG
         return (i.useEffect(() => {
             if (z.current || null == m || !(0, C.B1)(m)) return;
             let e = m.variants.findIndex((e) => e.skuId === t);
-            e > -1 && (0, h.n)(m, e), (z.current = !0);
+            (e > -1 && (0, h.n)(m, e), (z.current = !0));
         }, [m, t]),
         "ready" === D && B && !Y && null != m && null != v)
             ? (0, n.jsx)(I.default, {

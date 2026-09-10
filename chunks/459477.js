@@ -15,7 +15,7 @@ let o = (t) => {
                     "aria-label": t.ariaLabel,
                     variant: "secondary",
                     onClick: () => {
-                        u(t.action), d(t.url);
+                        (u(t.action), d(t.url));
                     },
                     role: "link",
                 })),

@@ -18,7 +18,7 @@ e.exports = function (e) {
         d = u((m && p(r) ? v(r, "") : r).length);
     if (!l(e)) throw TypeError("Array.prototype.map callback must be a function");
     arguments.length > 1 && (t = arguments[1]);
-    for (var h = n(r, d), y = 0; y < d; ) {
+    for (var h = n(r, d), y = 0; y < d;) {
         var g = f(y);
         if (s(r, g)) {
             var b = i(e, t, [a(r, g), y, r]);

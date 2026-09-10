@@ -18,12 +18,12 @@ class m extends n.PureComponent {
         this._input = t;
     };
     handleRetry = async () => {
-        await p.A.sendMFABackupCodesVerificationKeyEmail(this.props.password), this.setState({ retrySuccess: !0 });
+        (await p.A.sendMFABackupCodesVerificationKeyEmail(this.props.password), this.setState({ retrySuccess: !0 }));
     };
     handleSubmit = async (t) => {
-        t.preventDefault(), this.setState({ isLoading: !0 });
+        (t.preventDefault(), this.setState({ isLoading: !0 }));
         try {
-            await p.A.confirmViewBackupCodes(this.state.code, !1), this.props.onClose();
+            (await p.A.confirmViewBackupCodes(this.state.code, !1), this.props.onClose());
         } catch (t) {
             if (null == t.body) return;
             t.body.message && this.setState({ errorMessage: t.body.message });

@@ -13,21 +13,21 @@ var u = (function () {
     function t(e) {
         var r = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        a(
+        (a(
             this,
             "hooks",
             (0, n.i)({
                 dragSource: function (e, t) {
-                    r.clearDragSource(),
+                    (r.clearDragSource(),
                         (r.dragSourceOptions = t || null),
                         (0, i.i)(e) ? (r.dragSourceRef = e) : (r.dragSourceNode = e),
-                        r.reconnectDragSource();
+                        r.reconnectDragSource());
                 },
                 dragPreview: function (e, t) {
-                    r.clearDragPreview(),
+                    (r.clearDragPreview(),
                         (r.dragPreviewOptions = t || null),
                         (0, i.i)(e) ? (r.dragPreviewRef = e) : (r.dragPreviewNode = e),
-                        r.reconnectDragPreview();
+                        r.reconnectDragPreview());
                 },
             }),
         ),
@@ -46,7 +46,7 @@ var u = (function () {
             a(this, "lastConnectedDragPreview", null),
             a(this, "lastConnectedDragPreviewOptions", null),
             a(this, "backend", void 0),
-            (this.backend = e);
+            (this.backend = e));
     }
     return (
         (e = [
@@ -83,7 +83,7 @@ var u = (function () {
             {
                 key: "reconnect",
                 value: function () {
-                    this.reconnectDragSource(), this.reconnectDragPreview();
+                    (this.reconnectDragSource(), this.reconnectDragPreview());
                 },
             },
             {
@@ -197,23 +197,23 @@ var u = (function () {
             {
                 key: "clearDragSource",
                 value: function () {
-                    (this.dragSourceNode = null), (this.dragSourceRef = null);
+                    ((this.dragSourceNode = null), (this.dragSourceRef = null));
                 },
             },
             {
                 key: "clearDragPreview",
                 value: function () {
-                    (this.dragPreviewNode = null), (this.dragPreviewRef = null);
+                    ((this.dragPreviewNode = null), (this.dragPreviewRef = null));
                 },
             },
         ]),
         (function (e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         })(t.prototype, e),
         t

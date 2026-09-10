@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(938796);
+(n.d(t, { A: () => A }), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -30,7 +30,7 @@ let A = new E(a.h, {
             { channelId: n, message: r } = e;
         if (!(0, i.Lt)(r.flags ?? 0, o.pr7.EPHEMERAL)) return !1;
         let a = (null == (t = c.get(n)) && ((t = new Map()), c.set(n, t)), t);
-        for (a.set(r.id, (0, l.rh)(r)); a.size > 50; ) {
+        for (a.set(r.id, (0, l.rh)(r)); a.size > 50;) {
             let e = a.keys().next();
             if (!0 === e.done) break;
             a.delete(e.value);

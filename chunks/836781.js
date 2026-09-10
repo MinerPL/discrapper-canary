@@ -33,13 +33,13 @@ let M = r.memo(function (e) {
             function e() {
                 return c((e) => e + 1);
             }
-            return u.addEventListener("resize", e), () => u.removeEventListener("resize", e);
+            return (u.addEventListener("resize", e), () => u.removeEventListener("resize", e));
         }, [u]),
         r.useEffect(() => {
             if (t.length > 1) {
                 let e = t[(0, I.U3)(n - 1, t.length)],
                     i = t[(0, I.U3)(n + 1, t.length)];
-                G(e, !0), t.length > 2 && G(i, !0);
+                (G(e, !0), t.length > 2 && G(i, !0));
             }
         }, [n, t]),
         (0, i.jsx)(v.Ay, {
@@ -194,7 +194,7 @@ function z(e) {
         I = r.useCallback(
             (e) => {
                 var i;
-                g((e = ((e % (i = t.length)) + i) % i)), (x.current = e), n?.(e), E(!1);
+                (g((e = ((e % (i = t.length)) + i) % i)), (x.current = e), n?.(e), E(!1));
             },
             [n, t, E],
         );
@@ -209,7 +209,7 @@ function z(e) {
             p._.subscribe(H.jej.MODAL_CAROUSEL_NEXT, e),
             p._.subscribe(H.jej.MODAL_CAROUSEL_PREV, t),
             () => {
-                p._.unsubscribe(H.jej.MODAL_CAROUSEL_NEXT, e), p._.unsubscribe(H.jej.MODAL_CAROUSEL_PREV, t);
+                (p._.unsubscribe(H.jej.MODAL_CAROUSEL_NEXT, e), p._.unsubscribe(H.jej.MODAL_CAROUSEL_PREV, t));
             }
         );
     }, [I, E]);
@@ -217,7 +217,7 @@ function z(e) {
         C = (0, h.qo)({ type: u.D.GenericMedia, media: j }, d),
         N = c
             ? (e) => {
-                  e.stopPropagation(), e.preventDefault();
+                  (e.stopPropagation(), e.preventDefault());
               }
             : () => f.l.markActionPerformed(f.N.CONTEXT_MENU_OPENED),
         S = t.length > 1;
@@ -230,7 +230,7 @@ function z(e) {
                               children: [
                                   (0, i.jsx)(F.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_PREV);
+                                          (e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_PREV));
                                       },
                                       icon: s.Z,
                                       tooltip: L.intl.string(L.t.vgfxaA),
@@ -238,7 +238,7 @@ function z(e) {
                                   }),
                                   (0, i.jsx)(F.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_NEXT);
+                                          (e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_NEXT));
                                       },
                                       icon: o.K,
                                       tooltip: L.intl.string(L.t.XiOHRX),

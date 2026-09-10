@@ -4,7 +4,7 @@ let i = r(159093),
     a = o.isObject,
     s = o.hasOwn;
 function l() {}
-(e.exports = l),
+((e.exports = l),
     (l.prototype.clearTimeout = function () {
         return (
             clearTimeout(this._timer),
@@ -17,17 +17,17 @@ function l() {}
         );
     }),
     (l.prototype.parse = function (e) {
-        return (this._parser = e), this;
+        return ((this._parser = e), this);
     }),
     (l.prototype.responseType = function (e) {
-        return (this._responseType = e), this;
+        return ((this._responseType = e), this);
     }),
     (l.prototype.serialize = function (e) {
-        return (this._serializer = e), this;
+        return ((this._serializer = e), this);
     }),
     (l.prototype.timeout = function (e) {
         if (!e || "object" != typeof e)
-            return (this._timeout = e), (this._responseTimeout = 0), (this._uploadTimeout = 0), this;
+            return ((this._timeout = e), (this._responseTimeout = 0), (this._uploadTimeout = 0), this);
         for (let t in e)
             if (s(e, t))
                 switch (t) {
@@ -54,7 +54,7 @@ function l() {}
             (this._retryCallback = t),
             this
         );
-    });
+    }));
 let u = new Set([
         "ETIMEDOUT",
         "ECONNRESET",
@@ -66,7 +66,7 @@ let u = new Set([
         "EAI_AGAIN",
     ]),
     c = new Set([408, 413, 429, 500, 502, 503, 504, 521, 522, 524]);
-(l.prototype._shouldRetry = function (e, t) {
+((l.prototype._shouldRetry = function (e, t) {
     if (!this._maxRetries || this._retries++ >= this._maxRetries) return !1;
     if (this._retryCallback)
         try {
@@ -96,25 +96,25 @@ let u = new Set([
     (l.prototype.then = function (e, t) {
         if (!this._fullfilledPromise) {
             let e = this;
-            this._endCalled &&
+            (this._endCalled &&
                 console.warn(
                     "Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises",
                 ),
                 (this._fullfilledPromise = new Promise((t, r) => {
-                    e.on("abort", () => {
+                    (e.on("abort", () => {
                         if (this._maxRetries && this._maxRetries > this._retries) return;
                         if (this.timedout && this.timedoutError) return void r(this.timedoutError);
                         let e = Error("Aborted");
-                        (e.code = "ABORTED"),
+                        ((e.code = "ABORTED"),
                             (e.status = this.status),
                             (e.method = this.method),
                             (e.url = this.url),
-                            r(e);
+                            r(e));
                     }),
                         e.end((e, n) => {
                             e ? r(e) : t(n);
-                        });
-                }));
+                        }));
+                })));
         }
         return this._fullfilledPromise.then(e, t);
     }),
@@ -122,11 +122,11 @@ let u = new Set([
         return this.then(void 0, e);
     }),
     (l.prototype.use = function (e) {
-        return e(this), this;
+        return (e(this), this);
     }),
     (l.prototype.ok = function (e) {
         if ("function" != typeof e) throw Error("Callback required");
-        return (this._okCallback = e), this;
+        return ((this._okCallback = e), this);
     }),
     (l.prototype._isResponseOK = function (e) {
         return !!e && (this._okCallback ? this._okCallback(e) : e.status >= 200 && e.status < 300);
@@ -140,10 +140,10 @@ let u = new Set([
             for (let t in e) s(e, t) && this.set(t, e[t]);
             return this;
         }
-        return (this._header[e.toLowerCase()] = t), (this.header[e] = t), this;
+        return ((this._header[e.toLowerCase()] = t), (this.header[e] = t), this);
     }),
     (l.prototype.unset = function (e) {
-        return delete this._header[e.toLowerCase()], delete this.header[e], this;
+        return (delete this._header[e.toLowerCase()], delete this.header[e], this);
     }),
     (l.prototype.field = function (e, t, r) {
         if (null == e) throw Error(".field(name, val) name can not be empty");
@@ -173,7 +173,7 @@ let u = new Set([
                 throw Error("Superagent does not work in v13 properly with abort() due to Node.js core changes");
             this.req.abort();
         }
-        return this.clearTimeout(), this.emit("abort"), this;
+        return (this.clearTimeout(), this.emit("abort"), this);
     }),
     (l.prototype._auth = function (e, t, r, n) {
         switch (r.type) {
@@ -181,7 +181,7 @@ let u = new Set([
                 this.set("Authorization", `Basic ${n(`${e}:${t}`)}`);
                 break;
             case "auto":
-                (this.username = e), (this.password = t);
+                ((this.username = e), (this.password = t));
                 break;
             case "bearer":
                 this.set("Authorization", `Bearer ${e}`);
@@ -189,14 +189,14 @@ let u = new Set([
         return this;
     }),
     (l.prototype.withCredentials = function (e) {
-        return void 0 === e && (e = !0), (this._withCredentials = e), this;
+        return (void 0 === e && (e = !0), (this._withCredentials = e), this);
     }),
     (l.prototype.redirects = function (e) {
-        return (this._maxRedirects = e), this;
+        return ((this._maxRedirects = e), this);
     }),
     (l.prototype.maxResponseSize = function (e) {
         if ("number" != typeof e) throw TypeError("Invalid argument");
-        return (this._maxResponseSize = e), this;
+        return ((this._maxResponseSize = e), this);
     }),
     (l.prototype.toJSON = function () {
         return { method: this.method, url: this.url, data: this._data, headers: this._header };
@@ -224,10 +224,10 @@ let u = new Set([
                       ? (this._data = this._data ? `${this._data}&${e}` : e)
                       : (this._data = (this._data || "") + e))
                 : (this._data = e);
-        return !t || this._isHost(e) || r || this.type("json"), this;
+        return (!t || this._isHost(e) || r || this.type("json"), this);
     }),
     (l.prototype.sortQuery = function (e) {
-        return (this._sort = void 0 === e || e), this;
+        return ((this._sort = void 0 === e || e), this);
     }),
     (l.prototype._finalizeQueryString = function () {
         let e = this._query.join("&");
@@ -235,8 +235,8 @@ let u = new Set([
             let e = this.url.indexOf("?");
             if (e >= 0) {
                 let t = this.url.slice(e + 1).split("&");
-                "function" == typeof this._sort ? t.sort(this._sort) : t.sort(),
-                    (this.url = this.url.slice(0, e) + "?" + t.join("&"));
+                ("function" == typeof this._sort ? t.sort(this._sort) : t.sort(),
+                    (this.url = this.url.slice(0, e) + "?" + t.join("&")));
             }
         }
     }),
@@ -246,17 +246,17 @@ let u = new Set([
     (l.prototype._timeoutError = function (e, t, r) {
         if (this._aborted) return;
         let n = Error(`${e + t}ms exceeded`);
-        (n.timeout = t),
+        ((n.timeout = t),
             (n.code = "ECONNABORTED"),
             (n.errno = r),
             (this.timedout = !0),
             (this.timedoutError = n),
             this.abort(),
-            this.callback(n);
+            this.callback(n));
     }),
     (l.prototype._setTimeouts = function () {
         let e = this;
-        this._timeout &&
+        (this._timeout &&
             !this._timer &&
             (this._timer = setTimeout(() => {
                 e._timeoutError("Timeout of ", e._timeout, "ETIME");
@@ -265,5 +265,5 @@ let u = new Set([
                 !this._responseTimeoutTimer &&
                 (this._responseTimeoutTimer = setTimeout(() => {
                     e._timeoutError("Response timeout of ", e._responseTimeout, "ETIMEDOUT");
-                }, this._responseTimeout));
-    });
+                }, this._responseTimeout)));
+    }));

@@ -40,17 +40,17 @@ class u extends s.PureComponent {
             ((i && !a) || s || o) && this.animation.pause());
     }
     componentWillUnmount() {
-        (this.isUnmounted = !0), null != this.animation && (this.animation.destroy(), (this.animation = void 0));
+        ((this.isUnmounted = !0), null != this.animation && (this.animation.destroy(), (this.animation = void 0)));
     }
     componentDidUpdate(e) {
         let { nextScene: t, pauseWhileUnfocused: n, pause: i, isWindowFocused: s, useReducedMotion: a } = this.props;
-        t !== this.currentScene && this.shouldForcePlayAfter() && !i && this.playScene(t),
+        (t !== this.currentScene && this.shouldForcePlayAfter() && !i && this.playScene(t),
             null != this.animation &&
                 (n && !e.isWindowFocused && s && !a && !0 !== i
                     ? this.animation.play()
                     : (a || (n && e.isWindowFocused && !s)) && this.animation.pause()),
             !e.pause && i ? this.animation?.pause() : !e.pause || i || a || this.animation?.play(),
-            e.nextScene !== t && i && (this.playScene(t), this.animation?.pause());
+            e.nextScene !== t && i && (this.playScene(t), this.animation?.pause()));
     }
     shouldForcePlayAfter() {
         let { sceneSegments: e } = this.props;
@@ -61,16 +61,16 @@ class u extends s.PureComponent {
         let { onScenePlay: t, sceneSegments: n, useReducedMotion: i } = this.props,
             s = n[e],
             a = n[this.currentScene];
-        null != this.animation &&
+        (null != this.animation &&
             (e === this.currentScene || s.BEG !== a.BEG || s.END !== a.END) &&
             this.animation.playSegments([s.BEG, s.END], !0),
             (this.currentScene = e),
             null != t && t(this.currentScene),
-            i && this.animation?.pause();
+            i && this.animation?.pause());
     }
     handleLoopComplete = () => {
         let { onSceneComplete: e, nextScene: t } = this.props;
-        null != e && e(this.currentScene), this.playScene(t);
+        (null != e && e(this.currentScene), this.playScene(t));
     };
     handleComplete = () => {
         let { onSceneComplete: e } = this.props;

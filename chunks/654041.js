@@ -38,14 +38,14 @@ let h = function (t) {
                     icon: l.I,
                     iconPosition: "end",
                     onClick: async () => {
-                        (0, u.St)(T, u.WU.PRIMARY, u._7.GET_STARTED), await S();
+                        ((0, u.St)(T, u.WU.PRIMARY, u._7.GET_STARTED), await S());
                     },
                 },
             ],
             actionBarInput: (0, i.jsxs)(c.A, {
                 onClick: () => {
-                    R.A.openUrl(d.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, u.St)(T, u.WU.PRIMARY, u._7.LEARN_MORE);
+                    (R.A.openUrl(d.A.getArticleURL(m.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, u.St)(T, u.WU.PRIMARY, u._7.LEARN_MORE));
                 },
                 className: M.A,
                 children: [I.intl.string(I.t["aA6q/z"]), (0, i.jsx)(l.I, { size: "xs", color: "currentColor" })],
@@ -62,7 +62,8 @@ let h = function (t) {
                         className: M.B,
                         children: I.intl.format(I.t.pJAxgQ, {
                             handleOnRequestHook: () => {
-                                R.A.openUrl(x.d$.APPEALS_LINK), (0, u.St)(T, u.WU.PRIMARY, u._7.MANUAL_REVIEW_REQUEST);
+                                (R.A.openUrl(x.d$.APPEALS_LINK),
+                                    (0, u.St)(T, u.WU.PRIMARY, u._7.MANUAL_REVIEW_REQUEST));
                             },
                         }),
                     }),

@@ -6,7 +6,7 @@ n.d(t, {
     fu: () => P,
     ER: () => v,
     Ay: () => x,
-    ZD: () => V,
+    ZD: () => B,
     de: () => b,
     Bk: () => w,
     ZA: () => i,
@@ -275,6 +275,6 @@ function F(e) {
             return D.intl.string(D.t.GPg6JM);
     }
 }
-function V(e) {
+function B(e) {
     return M(e, I.E.ACTION_BY_USER_ID);
 }

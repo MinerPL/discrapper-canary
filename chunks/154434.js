@@ -1,4 +1,4 @@
-n.d(t, { default: () => I }), n(321073);
+(n.d(t, { default: () => I }), n(321073));
 var l = n(477900),
     r = n(582128),
     i = n(896170),
@@ -36,7 +36,7 @@ function C(e) {
         l = 1 === t[2].length ? 10 * Number(t[2]) : Number(t[2]);
     if (n >= 24 || l >= 60) return [];
     let r = [{ hours: n, minutes: l }];
-    return 12 === n ? r.push({ hours: 0, minutes: l }) : n >= 1 && n < 12 && r.push({ hours: n + 12, minutes: l }), r;
+    return (12 === n ? r.push({ hours: 0, minutes: l }) : n >= 1 && n < 12 && r.push({ hours: n + 12, minutes: l }), r);
 }
 function E(e) {
     return { hours: Math.floor((30 * e) / 60), minutes: (30 * e) % 60 };
@@ -156,7 +156,7 @@ function I(e) {
         F(!0);
         try {
             let e = { label: "", start_time: (0, f.v9)(B), end_time: (0, f.v9)(z), days: Array.from(D), enabled: L };
-            w ? await (0, x.Um)(s, S.ruleId, e) : await (0, x.qP)(s, e), n();
+            (w ? await (0, x.Um)(s, S.ruleId, e) : await (0, x.qP)(s, e), n());
         } finally {
             F(!1);
         }
@@ -165,7 +165,7 @@ function I(e) {
         if (w) {
             K(!0);
             try {
-                await (0, x.CS)(s, S.ruleId), n();
+                (await (0, x.CS)(s, S.ruleId), n());
             } finally {
                 K(!1);
             }
@@ -249,7 +249,7 @@ function I(e) {
                                         onSelectionChange: (e) => {
                                             if (null != e) {
                                                 let t = N(e);
-                                                R(t), _("");
+                                                (R(t), _(""));
                                                 let n = ((0, f.yN)(t) + 540) % 1440;
                                                 O({ hours: Math.floor(n / 60), minutes: n % 60 });
                                             }
@@ -309,7 +309,7 @@ function I(e) {
                                         onClick: () => {
                                             Z((t) => {
                                                 let n = new Set(t);
-                                                return n.has(e) ? n.delete(e) : n.add(e), n;
+                                                return (n.has(e) ? n.delete(e) : n.add(e), n);
                                             });
                                         },
                                         children: (0, l.jsx)(a.E, {

@@ -13,7 +13,7 @@ class d {
     retryDelay;
     isCanceled = !1;
     constructor(e, t, n) {
-        (this.searchId = e), (this.searchType = t), (this.query = n);
+        ((this.searchId = e), (this.searchType = t), (this.query = n));
     }
     async fetch(e, t, n) {
         if (!this.isCanceled)
@@ -24,20 +24,20 @@ class d {
                 else if (202 === i.status) {
                     if (((this.query.attempts = (this.query.attempts ?? 0) + 1), this.query.attempts > 5)) return;
                     let r = parseInt(i.headers["retry-after"]);
-                    (this.retryDelay = isNaN(r) || 0 === r ? 5e3 : r * l.A.Millis.SECOND),
+                    ((this.retryDelay = isNaN(r) || 0 === r ? 5e3 : r * l.A.Millis.SECOND),
                         this.retryLater(e, t, n),
-                        t(i);
+                        t(i));
                 }
             } catch (e) {
-                new a.A("SearchFetcher").error(e), n(e);
+                (new a.A("SearchFetcher").error(e), n(e));
             }
     }
     cancel() {
-        (this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId);
+        ((this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId));
     }
     retryLater(e, t, n) {
-        null != this.indexingPollId && clearTimeout(this.indexingPollId),
-            (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
+        (null != this.indexingPollId && clearTimeout(this.indexingPollId),
+            (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay)));
     }
 }
 class c extends d {
@@ -71,7 +71,7 @@ class c extends d {
 class u extends d {
     payload;
     constructor(e, t, n, i) {
-        super(e, t, n), (this.payload = i);
+        (super(e, t, n), (this.payload = i));
     }
     getEndpoint() {
         switch (this.searchType) {

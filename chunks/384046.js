@@ -42,7 +42,7 @@ class g extends a.A {
                     r = i.Fr && (0, m.X)() && d.getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
                 if (!(i.Fr ? n || r : t)) return;
             }
-            A.A.shouldFetchCatalogForGuild(e) && (0, E.AK)(e), A.A.shouldFetchPowerupsForGuild(e) && (0, E.Xd)(e);
+            (A.A.shouldFetchCatalogForGuild(e) && (0, E.AK)(e), A.A.shouldFetchPowerupsForGuild(e) && (0, E.Xd)(e));
         }
     }
     handleEntitlementUpdate(e) {

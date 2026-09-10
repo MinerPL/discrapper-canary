@@ -1,4 +1,4 @@
-c.r(a), c.d(a, { default: () => m });
+(c.r(a), c.d(a, { default: () => m }));
 var d = c(477900);
 c(582128);
 let t =

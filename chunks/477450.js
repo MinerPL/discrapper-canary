@@ -19,6 +19,6 @@ let t = "[a-fA-F\\d:]",
         .trim(),
     a = (e) =>
         e && e.exact ? RegExp(`(?:^${n}$)|(?:^${o}$)`) : RegExp(`(?:${r(e)}${n}${r(e)})|(?:${r(e)}${o}${r(e)})`, "g");
-(a.v4 = (e) => (e && e.exact ? RegExp(`^${n}$`) : RegExp(`${r(e)}${n}${r(e)}`, "g"))),
+((a.v4 = (e) => (e && e.exact ? RegExp(`^${n}$`) : RegExp(`${r(e)}${n}${r(e)}`, "g"))),
     (a.v6 = (e) => (e && e.exact ? RegExp(`^${o}$`) : RegExp(`${r(e)}${o}${r(e)}`, "g"))),
-    (e.exports = a);
+    (e.exports = a));

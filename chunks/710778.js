@@ -1,4 +1,4 @@
-n.d(t, { EE: () => o, Xj: () => d, cZ: () => r, cy: () => s, iO: () => a, l8: () => l }), n(321073);
+(n.d(t, { EE: () => o, Xj: () => d, cZ: () => r, cy: () => s, iO: () => a, l8: () => l }), n(321073));
 var i = n(582128);
 function r(e, t) {
     if (null != e) {
@@ -24,7 +24,7 @@ function s(e, t) {
     if (null != e || null != t)
         return function () {
             for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-            "function" == typeof e && e(...i), "function" == typeof t && t(...i);
+            ("function" == typeof e && e(...i), "function" == typeof t && t(...i));
         };
 }
 function l(e) {

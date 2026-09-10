@@ -46,7 +46,7 @@ function I(e) {
             innerRef: v,
             style: { ...(null != B && { backgroundImage: `url(${B})` }) },
             onClick: () => {
-                h({
+                (h({
                     sourceButton: "shop marketing tile",
                     categorySkuId: T,
                     isInternalShopDeeplink: !0,
@@ -61,7 +61,7 @@ function I(e) {
                         tile_type: "FEATURED_BLOCK",
                         tile_position: String(R?.tilePosition),
                         cta_name: null,
-                    });
+                    }));
             },
             children: [
                 null != l && (0, r.jsx)(u.Lp, { disableColor: !0, text: l, className: y.pv }),
@@ -84,7 +84,7 @@ function I(e) {
                         text: C.intl.string(C.t.jVcuVY),
                         "aria-label": P,
                         onClick: (e) => {
-                            h({
+                            (h({
                                 sourceButton: "shop marketing take me there button",
                                 categorySkuId: T,
                                 isInternalShopDeeplink: !0,
@@ -100,7 +100,7 @@ function I(e) {
                                     tile_type: "FEATURED_BLOCK",
                                     tile_position: String(R?.tilePosition),
                                     cta_name: "Take me there button",
-                                });
+                                }));
                         },
                     }),
                 }),

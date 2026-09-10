@@ -107,7 +107,7 @@ function el(e) {
         className: p()(et.oL, n && et.xO),
         onFocus: d.onFocus,
         onClick: () => {
-            x.current?.focus(), a();
+            (x.current?.focus(), a());
         },
         children: [
             r && (0, i.jsx)("span", { "aria-hidden": !0, className: et.Dn }),
@@ -666,7 +666,7 @@ function eR(e) {
             unlockedStatusText: c,
         }),
         b = [];
-    m && b.push({ key: "beta", node: (0, i.jsx)(eB, {}) }),
+    (m && b.push({ key: "beta", node: (0, i.jsx)(eB, {}) }),
         null != x &&
             b.push({
                 key: "status",
@@ -694,7 +694,7 @@ function eR(e) {
                     className: et.$L,
                     children: g,
                 }),
-            });
+            }));
     let _ = b.length >= 3 && null != h,
         v =
             null != h
@@ -841,7 +841,7 @@ function ez(e) {
         er = (function (e) {
             let [t, n] = l.useState(eS),
                 [i, a] = l.useState(e);
-            return e !== i && (a(e), n(eS())), t;
+            return (e !== i && (a(e), n(eS())), t);
         })(h.badge_id);
     c = h.owned
         ? h.badge_id === f.$.APRIL_FOOLS_2026
@@ -865,7 +865,7 @@ function ez(e) {
         ec = S && null != c && h.badge_id !== f.$.STAFF,
         eo = null != J,
         eu = null;
-    S && (ec || eo)
+    (S && (ec || eo)
         ? (eu = (0, i.jsxs)("div", {
               className: p()(et.$S, (!ec || !eo) && et.jQ),
               children: [
@@ -878,7 +878,7 @@ function ez(e) {
             (m =
                 S || null == es
                     ? ee.intl.string(ee.t.sTFApF)
-                    : ee.intl.formatToPlainString(ee.t["0aEh2a"], { date: new Date(es) }));
+                    : ee.intl.formatToPlainString(ee.t["0aEh2a"], { date: new Date(es) })));
     let eg = _?.owned === !0 && (_.tiers?.length ?? 0) > 0 && null == _.next_tier,
         em = b.default.getCurrentUser()?.premiumType,
         eb = W && (em === eE.PremiumTypes.TIER_0 || em === eE.PremiumTypes.TIER_1);
@@ -1082,14 +1082,14 @@ function eP(e) {
         U = (0, s.yK)([j.Ay], () => (null != C ? j.Ay.getBadges(C) : []), [C]),
         k = (0, s.bG)([j.Ay], () => null != C && j.Ay.hasCatalogFor(C), [C]),
         R = (0, s.bG)([j.Ay], () => j.Ay.hasCatalogFetchErrorFor(C), [C]);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         null != C && (j.Ay.hasCatalogFor(C) ? j.Ay.isCatalogStaleFor(C) && (0, _.RS)(C) : (0, _.RS)(C));
         let e = S ? I : p;
         A || null == e || j.Ay.hasCatalogFor(e) || (0, _.RS)(e);
     }, [C, A, S, I, p]),
         l.useEffect(() => {
             null != T && m.A.increment({ name: a.K.BADGE_DIRECTORY_MODAL_OPEN, tags: [T] });
-        }, [T]);
+        }, [T]));
     let D = l.useMemo(() => {
             let { earnable: e, owned: t } = es(U);
             return S ? (t[0]?.badge_id ?? null) : (t[0]?.badge_id ?? e[0]?.badge_id ?? null);
@@ -1137,7 +1137,7 @@ function eP(e) {
             null != C && (0, _.RS)(C, { isRetry: !0 });
         }, [C]),
         W = l.useCallback(() => {
-            eI({ actionName: "badge_directory_closed", badge: P, displayedUserId: C, isSociallyNavigated: S }), n();
+            (eI({ actionName: "badge_directory_closed", badge: P, displayedUserId: C, isSociallyNavigated: S }), n());
         }, [C, S, n, P]),
         Q = l.useCallback(() => {
             null != I &&

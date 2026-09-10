@@ -36,15 +36,15 @@ function f() {
                     daysRemaining: "number" == typeof t.days_remaining ? t.days_remaining : null,
                     surfaces: Array.isArray(t.surfaces) ? t.surfaces : [],
                 });
-            _.succeed(), I(), s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: i });
+            (_.succeed(), I(), s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: i }));
         } catch (t) {
             if (e !== h) return;
-            u.error("Failed to fetch parental-consent warning", t),
+            (u.error("Failed to fetch parental-consent warning", t),
                 o.A.captureException(t, { tags: { source: "parental_consent_warning", step: "fetch_warning" } }),
                 null == A &&
                     (A = setTimeout(() => {
-                        (A = null), p();
-                    }, _.fail()));
+                        ((A = null), p());
+                    }, _.fail())));
         } finally {
             e === h && (E = null);
         }
@@ -54,10 +54,10 @@ async function p() {
     null == E && null == A && c.A.shouldFetchToday() && (await f());
 }
 async function T() {
-    I(), null != E && (h++, (E = null)), await f();
+    (I(), null != E && (h++, (E = null)), await f());
 }
 function m() {
-    h++, I(), (E = null), _.succeed();
+    (h++, I(), (E = null), _.succeed());
 }
 function g() {
     s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });

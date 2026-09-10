@@ -27,7 +27,7 @@ function C(n) {
         id: "user-profile-overlay",
         label: i ?? f.intl.string(f.t.LYju5J),
         action: () => {
-            r?.(), t.dispatch(b.jej.POPOUT_CLOSE);
+            (r?.(), t.dispatch(b.jej.POPOUT_CLOSE));
         },
     });
 }

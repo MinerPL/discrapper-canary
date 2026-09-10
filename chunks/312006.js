@@ -39,7 +39,7 @@ function T(e, t) {
               }
             : p;
     })(e, t, n);
-    return (f[t][e] = i), i;
+    return ((f[t][e] = i), i);
 }
 function m(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());

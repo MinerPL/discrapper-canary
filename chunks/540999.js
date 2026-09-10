@@ -13,10 +13,10 @@ function u() {
 class _ extends i.Ay.Store {
     static displayName = "DeveloperExperimentStore";
     initialize() {
-        this.waitFor(l.default, s.A),
+        (this.waitFor(l.default, s.A),
             Object.defineProperties(this, { isDeveloper: { configurable: !1, get: () => c, set: () => {} } }),
             u(),
-            setTimeout(() => Object.freeze(this));
+            setTimeout(() => Object.freeze(this)));
     }
     getExperimentDescriptor() {
         return c

@@ -1,4 +1,4 @@
-t.d(e, { E: () => p, p: () => x }), t(321073);
+(t.d(e, { E: () => p, p: () => x }), t(321073));
 var l = t(582128),
     n = t(602853),
     r = t(661531),
@@ -66,7 +66,7 @@ function x(a) {
                 let a,
                     e,
                     { client_secret: t, custom_payment_methods: l, payment_method_order: n } = await g();
-                v(l),
+                (v(l),
                     r(t),
                     f(
                         null != n && Array.isArray(n)
@@ -75,12 +75,12 @@ function x(a) {
                               (e = l.find((a) => a.payment_source_type === u.he.PAYPAL)),
                               null != e && a.push(e.custom_payment_method_id),
                               a),
-                    );
+                    ));
             } catch (a) {
-                x(a),
+                (x(a),
                     null != e && e(a),
                     m.error("there was an error on setup for Payment Elements: ", a),
-                    (0, c.pM)(a, { tags: { source: "payment_elements" } });
+                    (0, c.pM)(a, { tags: { source: "payment_elements" } }));
             }
             C(!1);
         }, [e, g]);

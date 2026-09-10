@@ -20,29 +20,29 @@ class a extends r {
     placed = new Map();
     rafHandle = null;
     initialize(e) {
-        (e.style.position = "fixed"),
+        ((e.style.position = "fixed"),
             (e.style.top = "0"),
             (e.style.left = "0"),
             (e.style.pointerEvents = "none"),
             (e.style.display = "none"),
-            this.pool.appendChild(e);
+            this.pool.appendChild(e));
     }
     place(e, t, i) {
-        this.placed.set(e, { target: t, level: i }), this.position(e, t, i), this.ensureTicking();
+        (this.placed.set(e, { target: t, level: i }), this.position(e, t, i), this.ensureTicking());
     }
     unplace(e) {
-        this.placed.delete(e), (e.style.display = "none");
+        (this.placed.delete(e), (e.style.display = "none"));
     }
     ensureTicking() {
         null == this.rafHandle && (this.rafHandle = requestAnimationFrame(this.tick));
     }
     position(e, t, i) {
         let n = t.getBoundingClientRect();
-        (e.style.display = "block"),
+        ((e.style.display = "block"),
             (e.style.zIndex = String(l[i])),
             (e.style.transform = `translate(${n.left}px, ${n.top}px)`),
             (e.style.width = `${n.width}px`),
-            (e.style.height = `${n.height}px`);
+            (e.style.height = `${n.height}px`));
     }
     tick = () => {
         for (let [e, { target: t, level: i }] of this.placed) this.position(e, t, i);
@@ -51,17 +51,17 @@ class a extends r {
 }
 class o extends r {
     initialize(e) {
-        (e.style.width = "100%"),
+        ((e.style.width = "100%"),
             (e.style.height = "100%"),
             (e.style.pointerEvents = "none"),
             (e.style.display = "none"),
-            this.pool.appendChild(e);
+            this.pool.appendChild(e));
     }
     place(e, t, i) {
-        e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block");
+        (e.parentElement !== t && t.moveBefore(e, null), (e.style.display = "block"));
     }
     unplace(e) {
-        e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none");
+        (e.parentElement !== this.pool && this.pool.moveBefore(e, null), (e.style.display = "none"));
     }
 }
 function c() {

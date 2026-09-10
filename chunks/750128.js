@@ -22,23 +22,23 @@ class M extends A.Ay.Store {
 }
 let R = new M(I.h, {
     LOGOUT: function () {
-        return (e = null), (u = null), (E = null), (i = null), (r = null), !0;
+        return ((e = null), (u = null), (E = null), (i = null), (r = null), !0);
     },
     INTERACTION_MODAL_CREATE: function (l) {
         let { nonce: n } = l;
-        return n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1;
+        return (n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (l) {
         let { nonce: n } = l;
-        return n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1;
+        return (n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
     },
     INTERACTION_QUEUE: function (l) {
         let { messageId: n, nonce: t, data: s, preflight: a } = l;
         switch (s.interactionType) {
             case T.G4.APPLICATION_COMMAND:
-                return (E = n), (i = s.channelId), (r = t), !1;
+                return ((E = n), (i = s.channelId), (r = t), !1);
             case T.G4.MODAL_SUBMIT:
-                c()(null == e || 1 === u || 2 === u, "cannot submit multiple modals at once"), (e = t), (u = 0);
+                (c()(null == e || 1 === u || 2 === u, "cannot submit multiple modals at once"), (e = t), (u = 0));
                 let A = (l) => {
                     setTimeout(() => {
                         e === t && 0 === u && (0, o.C1)(t);

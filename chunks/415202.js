@@ -28,33 +28,33 @@ class _ extends i.A {
         e.entitlement.sku_id === d.f && (0, a.uM)();
     }
     _handleVirtualCurrencyUpdate() {
-        null != this.virtualCurrencyUpdateTimeoutId && clearTimeout(this.virtualCurrencyUpdateTimeoutId),
+        (null != this.virtualCurrencyUpdateTimeoutId && clearTimeout(this.virtualCurrencyUpdateTimeoutId),
             (this.virtualCurrencyUpdateTimeoutId = setTimeout(() => {
-                (0, a.uM)(), (this.virtualCurrencyUpdateTimeoutId = void 0);
-            }, u));
+                ((0, a.uM)(), (this.virtualCurrencyUpdateTimeoutId = void 0));
+            }, u)));
     }
     _handleNewSubscription() {
-        (0, a.uM)(),
+        ((0, a.uM)(),
             null != this.newSubscriptionTimeoutId && clearTimeout(this.newSubscriptionTimeoutId),
             (this.newSubscriptionTimeoutId = setTimeout(() => {
-                (0, a.uM)(), (this.newSubscriptionTimeoutId = void 0);
-            }, c));
+                ((0, a.uM)(), (this.newSubscriptionTimeoutId = void 0));
+            }, c)));
     }
     _initializeProgramRewards() {
         if (!(0, o.CC)("ProgramRewardsManager")) return;
         let e = s.A.getRewardForProgram(l.W.NITRO);
-        (0, o.J8)(e) ? (0, a.uM)() : (0, a.Ay)(),
+        ((0, o.J8)(e) ? (0, a.uM)() : (0, a.Ay)(),
             null != this.intervalId && clearInterval(this.intervalId),
             (this.intervalId = setInterval(() => {
                 (0, a.Ay)();
-            }, r.A.Millis.HOUR));
+            }, r.A.Millis.HOUR)));
     }
     _terminate() {
-        null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
+        (null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
             null != this.newSubscriptionTimeoutId &&
                 (clearTimeout(this.newSubscriptionTimeoutId), (this.newSubscriptionTimeoutId = void 0)),
             null != this.virtualCurrencyUpdateTimeoutId &&
-                (clearTimeout(this.virtualCurrencyUpdateTimeoutId), (this.virtualCurrencyUpdateTimeoutId = void 0));
+                (clearTimeout(this.virtualCurrencyUpdateTimeoutId), (this.virtualCurrencyUpdateTimeoutId = void 0)));
     }
 }
 let E = new _();

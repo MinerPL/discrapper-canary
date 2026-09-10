@@ -42,12 +42,12 @@ function _(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ZOOM", zoom: e });
 }
 function E() {
-    i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE" }),
-        a.default.track(l.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
+    (i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE" }),
+        a.default.track(l.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !0 }));
 }
 function A() {
-    i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE" }),
-        a.default.track(l.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
+    (i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE" }),
+        a.default.track(l.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !1 }));
 }
 function h() {
     i.h.dispatch({ type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE" });
@@ -89,12 +89,12 @@ function C(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR", enableCustomCursor: e });
 }
 function O(e) {
-    i.h.dispatch({ type: "ACCESSIBILITY_SET_ROLE_STYLE", roleStyle: e }),
-        a.default.track(l.HAw.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
+    (i.h.dispatch({ type: "ACCESSIBILITY_SET_ROLE_STYLE", roleStyle: e }),
+        a.default.track(l.HAw.ROLE_STYLE_SETTING_UPDATED, { role_style: e }));
 }
 function R(e) {
-    i.h.dispatch({ type: "ACCESSIBILITY_SET_OFFICIAL_MESSAGE_STYLE", officialMessageStyle: e }),
-        a.default.track(l.HAw.OFFICIAL_MESSAGE_STYLE_SETTING_UPDATED, { official_message_style: e });
+    (i.h.dispatch({ type: "ACCESSIBILITY_SET_OFFICIAL_MESSAGE_STYLE", officialMessageStyle: e }),
+        a.default.track(l.HAw.OFFICIAL_MESSAGE_STYLE_SETTING_UPDATED, { official_message_style: e }));
 }
 function L(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED", enabled: e });

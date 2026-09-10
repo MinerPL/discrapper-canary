@@ -10,10 +10,10 @@ function r(e, t) {
         let s = i.requestIdleCallback(n, t);
         return (
             (a = i.setTimeout(() => {
-                r || i.cancelIdleCallback(s), n();
+                (r || i.cancelIdleCallback(s), n());
             }, t?.timeout ?? 1e3)),
             () => {
-                i.cancelIdleCallback(s), null != a && (i.clearTimeout(a), (a = null));
+                (i.cancelIdleCallback(s), null != a && (i.clearTimeout(a), (a = null)));
             }
         );
     }

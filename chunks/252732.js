@@ -69,7 +69,7 @@ function R(e) {
                         let R = (await _?.getOriginalMd5()) ?? null,
                             m = A.name.replace(/\.[^/.]+$/, ""),
                             I = { imageUri: l, staticImageUri: u, originalMd5: R };
-                        (n = {
+                        ((n = {
                             ...(t === f.HL.AVATAR
                                 ? {
                                       uploadType: t,
@@ -94,7 +94,7 @@ function R(e) {
                             analyticsSource: s,
                             isTryItOut: d,
                         }),
-                            E.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" });
+                            E.h.dispatch({ ...n, type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL" }));
                     },
                     uploadType: t,
                     showUpsellHeader: !0,

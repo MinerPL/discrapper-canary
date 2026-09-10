@@ -84,7 +84,7 @@ function N(i) {
                                                 icon: p.t,
                                                 text: b.intl.formatToPlainString(b.t.mPWeSh, { price: T }),
                                                 onClick: async (i) => {
-                                                    await w(), t(i);
+                                                    (await w(), t(i));
                                                 },
                                             }),
                                         ],

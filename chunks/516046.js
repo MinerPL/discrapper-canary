@@ -2,47 +2,47 @@ r.d(t, { pM: () => k, GQ: () => v, KU: () => _, yq: () => S });
 var n = r(886721);
 class i {
     constructor(e) {
-        (this._firstChild = null),
+        ((this._firstChild = null),
             (this._lastChild = null),
             (this._previousSibling = null),
             (this._nextSibling = null),
             (this._parentNode = null),
             (this._minInvalidChildIndex = null),
-            (this.ownerDocument = e);
+            (this.ownerDocument = e));
     }
     *[Symbol.iterator]() {
         let e = this.firstChild;
-        for (; e; ) yield e, (e = e.nextSibling);
+        for (; e;) (yield e, (e = e.nextSibling));
     }
     get firstChild() {
         return this._firstChild;
     }
     set firstChild(e) {
-        (this._firstChild = e), this.ownerDocument.markDirty(this);
+        ((this._firstChild = e), this.ownerDocument.markDirty(this));
     }
     get lastChild() {
         return this._lastChild;
     }
     set lastChild(e) {
-        (this._lastChild = e), this.ownerDocument.markDirty(this);
+        ((this._lastChild = e), this.ownerDocument.markDirty(this));
     }
     get previousSibling() {
         return this._previousSibling;
     }
     set previousSibling(e) {
-        (this._previousSibling = e), this.ownerDocument.markDirty(this);
+        ((this._previousSibling = e), this.ownerDocument.markDirty(this));
     }
     get nextSibling() {
         return this._nextSibling;
     }
     set nextSibling(e) {
-        (this._nextSibling = e), this.ownerDocument.markDirty(this);
+        ((this._nextSibling = e), this.ownerDocument.markDirty(this));
     }
     get parentNode() {
         return this._parentNode;
     }
     set parentNode(e) {
-        (this._parentNode = e), this.ownerDocument.markDirty(this);
+        ((this._parentNode = e), this.ownerDocument.markDirty(this));
     }
     get isConnected() {
         return this.parentNode?.isConnected || !1;
@@ -55,11 +55,11 @@ class i {
     }
     updateChildIndices() {
         let e = this._minInvalidChildIndex;
-        for (; e; ) (e.index = e.previousSibling ? e.previousSibling.index + 1 : 0), (e = e.nextSibling);
+        for (; e;) ((e.index = e.previousSibling ? e.previousSibling.index + 1 : 0), (e = e.nextSibling));
         this._minInvalidChildIndex = null;
     }
     appendChild(e) {
-        e.parentNode && e.parentNode.removeChild(e),
+        (e.parentNode && e.parentNode.removeChild(e),
             null == this.firstChild && (this.firstChild = e),
             this.lastChild
                 ? ((this.lastChild.nextSibling = e),
@@ -70,11 +70,11 @@ class i {
             (e.nextSibling = null),
             (this.lastChild = e),
             this.ownerDocument.markDirty(this),
-            this.isConnected && this.ownerDocument.queueUpdate();
+            this.isConnected && this.ownerDocument.queueUpdate());
     }
     insertBefore(e, t) {
         if (null == t) return this.appendChild(e);
-        e.parentNode && e.parentNode.removeChild(e),
+        (e.parentNode && e.parentNode.removeChild(e),
             (e.nextSibling = t),
             (e.previousSibling = t.previousSibling),
             (e.index = t.index - 1),
@@ -82,7 +82,7 @@ class i {
             (t.previousSibling = e),
             (e.parentNode = t.parentNode),
             this.invalidateChildIndices(e),
-            this.isConnected && this.ownerDocument.queueUpdate();
+            this.isConnected && this.ownerDocument.queueUpdate());
     }
     removeChild(e) {
         e.parentNode === this &&
@@ -103,39 +103,39 @@ class i {
     removeEventListener() {}
     get previousVisibleSibling() {
         let e = this.previousSibling;
-        for (; e && e.isHidden; ) e = e.previousSibling;
+        for (; e && e.isHidden;) e = e.previousSibling;
         return e;
     }
     get nextVisibleSibling() {
         let e = this.nextSibling;
-        for (; e && e.isHidden; ) e = e.nextSibling;
+        for (; e && e.isHidden;) e = e.nextSibling;
         return e;
     }
     get firstVisibleChild() {
         let e = this.firstChild;
-        for (; e && e.isHidden; ) e = e.nextSibling;
+        for (; e && e.isHidden;) e = e.nextSibling;
         return e;
     }
     get lastVisibleChild() {
         let e = this.lastChild;
-        for (; e && e.isHidden; ) e = e.previousSibling;
+        for (; e && e.isHidden;) e = e.previousSibling;
         return e;
     }
 }
 class o extends i {
     constructor(e, t) {
-        super(t),
+        (super(t),
             (this.nodeType = 8),
             (this.isMutated = !0),
             (this._index = 0),
             (this.isHidden = !1),
-            (this.node = null);
+            (this.node = null));
     }
     get index() {
         return this._index;
     }
     set index(e) {
-        (this._index = e), this.ownerDocument.markDirty(this);
+        ((this._index = e), this.ownerDocument.markDirty(this));
     }
     get level() {
         return this.parentNode instanceof o ? this.parentNode.level + +(this.parentNode.node?.type === "item") : 0;
@@ -183,7 +183,7 @@ class o extends i {
             null != l && l !== o.key)
         )
             throw Error("Cannot change the id of an item");
-        null != u.colSpan && (o.colSpan = u.colSpan), this.isConnected && this.ownerDocument.queueUpdate();
+        (null != u.colSpan && (o.colSpan = u.colSpan), this.isConnected && this.ownerDocument.queueUpdate());
     }
     get style() {
         let e = this;
@@ -198,10 +198,10 @@ class o extends i {
                         e.ownerDocument.markDirty(e.parentNode);
                     let r = e.previousVisibleSibling,
                         n = e.nextVisibleSibling;
-                    r && e.ownerDocument.markDirty(r),
+                    (r && e.ownerDocument.markDirty(r),
                         n && e.ownerDocument.markDirty(n),
                         (e.isHidden = t),
-                        e.ownerDocument.markDirty(e);
+                        e.ownerDocument.markDirty(e));
                 }
             },
         };
@@ -213,7 +213,7 @@ class o extends i {
 }
 class a extends i {
     constructor(e) {
-        super(null),
+        (super(null),
             (this.nodeType = 11),
             (this.ownerDocument = this),
             (this.dirtyNodes = new Set()),
@@ -225,7 +225,7 @@ class a extends i {
             (this.queuedRender = !1),
             (this.inSubscription = !1),
             (this.collection = e),
-            (this.nextCollection = e);
+            (this.nextCollection = e));
     }
     get isConnected() {
         return !0;
@@ -234,7 +234,7 @@ class a extends i {
         return new o(e, this);
     }
     getMutableCollection() {
-        return this.nextCollection || (this.nextCollection = this.collection.clone()), this.nextCollection;
+        return (this.nextCollection || (this.nextCollection = this.collection.clone()), this.nextCollection);
     }
     markDirty(e) {
         this.dirtyNodes.add(e);
@@ -250,7 +250,7 @@ class a extends i {
         e.node && this.getMutableCollection().removeNode(e.node.key);
     }
     getCollection() {
-        return this.inSubscription || ((this.queuedRender = !1), this.updateCollection()), this.collection;
+        return (this.inSubscription || ((this.queuedRender = !1), this.updateCollection()), this.collection);
     }
     updateCollection() {
         for (let e of this.dirtyNodes)
@@ -280,7 +280,7 @@ class a extends i {
         }
     }
     subscribe(e) {
-        return this.subscriptions.add(e), this.queuedRender && e(), () => this.subscriptions.delete(e);
+        return (this.subscriptions.add(e), this.queuedRender && e(), () => this.subscriptions.delete(e));
     }
     resetAfterSSR() {
         this.isSSR && ((this.isSSR = !1), (this.firstChild = null), (this.lastChild = null), (this.nodeId = 0));
@@ -304,7 +304,7 @@ function v(e) {
                 (0, d.useCallback)((e) => t.subscribe(e), [t]),
                 (0, d.useCallback)(() => {
                     let e = t.getCollection();
-                    return t.isSSR && t.resetAfterSSR(), e;
+                    return (t.isSSR && t.resetAfterSSR(), e);
                 }, [t]),
                 (0, d.useCallback)(() => ((t.isSSR = !0), t.getCollection()), [t]),
             ),
@@ -373,7 +373,7 @@ function _(e, t) {
                 d.createElement(l.gY.Provider, { value: o }, d.createElement(r, { node: e })),
             );
         });
-    return (n.displayName = t.name), n;
+    return ((n.displayName = t.name), n);
 }
 function S(e, t, r = x) {
     let n = ({ node: e }) => t(e.props, e.props.ref, e),
@@ -381,7 +381,7 @@ function S(e, t, r = x) {
             let o = r(t);
             return w(e, t, i, null, o, (e) => d.createElement(n, { node: e })) ?? d.createElement(d.Fragment, null);
         });
-    return (i.displayName = t.name), i;
+    return ((i.displayName = t.name), i);
 }
 function x(e) {
     return (0, s.p)({ ...e, addIdAndValue: !0 });

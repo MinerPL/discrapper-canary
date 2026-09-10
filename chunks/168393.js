@@ -1,4 +1,4 @@
-e.r(t), e.d(t, { SubscriptionDetailsModal: () => f });
+(e.r(t), e.d(t, { SubscriptionDetailsModal: () => f }));
 var n = e(477900),
     s = e(582128),
     o = e(885996),

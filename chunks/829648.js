@@ -22,7 +22,7 @@ function c(e) {
                 innerRef: d,
                 className: u.RB,
                 onClick: (t) => {
-                    e.onClick(t), t.stopPropagation();
+                    (e.onClick(t), t.stopPropagation());
                 },
                 "aria-label": t.username,
                 children: (0, l.jsx)(r.eu, { src: t.getAvatarURL(n, 24), size: a._3.SIZE_24, "aria-hidden": !0 }),

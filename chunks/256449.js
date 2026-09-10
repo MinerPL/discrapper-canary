@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Gc: () => b,
     Sr: () => y,
     Th: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     pD: () => L,
 }),
     n(321073),
-    n(667532);
+    n(667532));
 var l = n(582128),
     i = n(17928),
     s = n(931991),
@@ -88,7 +88,7 @@ function v(e) {
                                 visibleRowIndex: E,
                                 category: n,
                             }));
-                    x > y &&
+                    (x > y &&
                         x > c &&
                         null != i &&
                         S > t.length &&
@@ -102,7 +102,7 @@ function v(e) {
                             visibleRowIndex: E,
                         }),
                         l || (E++, p.push(o), m.push(o.length)),
-                        g++;
+                        g++);
                 }
                 x++;
             }
@@ -112,8 +112,8 @@ function v(e) {
                         ? (g++, y(e.stickers, e.type, t?.has(e.id) === !0))
                         : e.type === A.Z2.EMPTY_GUILD_UPSELL && ((f[x] = 0), x++);
             else
-                n.sendable.length > 0 && y(n.sendable, A.Z2.SEARCH_RESULTS),
-                    n.sendableWithPremium.length > 0 && y(n.sendableWithPremium, A.Z2.SEARCH_RESULTS);
+                (n.sendable.length > 0 && y(n.sendable, A.Z2.SEARCH_RESULTS),
+                    n.sendableWithPremium.length > 0 && y(n.sendableWithPremium, A.Z2.SEARCH_RESULTS));
         }
         return { rowCount: g, rowCountBySection: f, stickersGrid: p, gutterWidth: l, columnCounts: m };
     }, [t, n, i, r, a, c, d]);
@@ -199,17 +199,21 @@ function L(e) {
             p = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
             y =
                 ((t = (0, i.bG)([x.A], () => x.A.getAllGuildStickers())),
-                (n = (0, i.yK)([c.Ay, o.A], () => {
-                    let e = c.Ay.getFlattenedGuildIds(),
-                        t = [];
-                    return (
-                        e.forEach((e) => {
-                            let n = o.A.getGuild(e);
-                            null != n && t.push(n);
-                        }),
-                        t
-                    );
-                }, [])),
+                (n = (0, i.yK)(
+                    [c.Ay, o.A],
+                    () => {
+                        let e = c.Ay.getFlattenedGuildIds(),
+                            t = [];
+                        return (
+                            e.forEach((e) => {
+                                let n = o.A.getGuild(e);
+                                null != n && t.push(n);
+                            }),
+                            t
+                        );
+                    },
+                    [],
+                )),
                 (r = (0, i.bG)([d.default], () => d.default.getCurrentUser())),
                 l.useMemo(() => {
                     let l = [];
@@ -221,7 +225,7 @@ function L(e) {
                         let t = o.A.getGuild(e.getGuildId()),
                             { canManageAllExpressions: n } = (0, s.ie)(t),
                             i = l.findIndex((t) => t.id === e.getGuildId());
-                        i >= 1
+                        (i >= 1
                             ? l.unshift(l.splice(i, 1)[0])
                             : -1 === i &&
                               null != t &&
@@ -229,7 +233,7 @@ function L(e) {
                               l.unshift({ type: A.Z2.EMPTY_GUILD_UPSELL, id: t.id, name: t.name, stickers: [] }),
                             null == r ||
                                 m.$3({ permission: E.xBc.USE_EXTERNAL_EMOJIS, user: r, context: e }) ||
-                                (l = l.filter((t) => t.id === e.getGuildId()));
+                                (l = l.filter((t) => t.id === e.getGuildId())));
                     }
                     return l;
                 }, [t, n, r, e]));

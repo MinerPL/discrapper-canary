@@ -36,7 +36,7 @@ let o = new Map(),
                 .finally(() => {
                     o.delete(t);
                 });
-            return o.set(t, d), d;
+            return (o.set(t, d), d);
         },
         loadTemplatesForGuild: (e) =>
             i.Bo.get({ url: l.Rsh.GUILD_TEMPLATES(e), oldFormErrors: !0, rejectWithError: (0, i.fT)() }).then(

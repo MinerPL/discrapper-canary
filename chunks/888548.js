@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         extractCaptchaPropsFromResponse: () => c,
         CaptchaCancelError: () => _,
         CaptchaError: () => d,
         emitCaptchaDistributionMetric: () => u,
-    });
+    }));
 var i,
     r = n(196765),
     a = n(731738),
@@ -27,7 +27,7 @@ function c(e) {
     };
 }
 function u(e) {
-    0 === Object.keys(o.getState().captchaServeVolume).length &&
+    (0 === Object.keys(o.getState().captchaServeVolume).length &&
         setTimeout(
             () =>
                 (function () {
@@ -49,7 +49,7 @@ function u(e) {
                       ? { captchaServeVolume: { ...t.captchaServeVolume, [e]: t.captchaServeVolume[e] + 1 } }
                       : { captchaServeVolume: { ...t.captchaServeVolume, [e]: 1 } },
             );
-        });
+        }));
 }
 class _ extends Error {
     constructor() {

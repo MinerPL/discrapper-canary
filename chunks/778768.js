@@ -52,7 +52,7 @@ function W(e) {
         x = (0, K.kt)({ channel: i }),
         { enabled: S } = D.A.useExperiment({ guildId: i.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: _ } = (0, G.Ay)(T.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         s && I.current?.focus();
     }, [s]),
         (0, O.A)({
@@ -65,10 +65,10 @@ function W(e) {
         }, [u]),
         l.useEffect(() => {
             r?.(v);
-        }, [r, v]);
+        }, [r, v]));
     let E = l.useCallback(() => {
         let e = U.A.getGuild(i.guild_id);
-        d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
+        (d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, c.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
                     t.e("683621"),
@@ -80,7 +80,7 @@ function W(e) {
                 ]).then(t.bind(t, 1310));
                 return (t) => (0, n.jsx)(l, { ...t, guild: e, channel: i, source: f.PE1.VOICE_INVITE_SUGGESTIONS });
             }),
-            p();
+            p());
     }, [i, p]);
     return (
         (0, m.tj)(I, { disable: !s }),
@@ -166,7 +166,7 @@ function Z(e) {
         en = "success" === m || "sending" === m,
         el = l.useCallback(
             (e) => {
-                e.stopPropagation(), D || K();
+                (e.stopPropagation(), D || K());
             },
             [K, D],
         ),

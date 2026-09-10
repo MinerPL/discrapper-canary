@@ -26,7 +26,7 @@ function d(e, t) {
             let e = p.current,
                 t = g.current,
                 n = (0, u.B1)(t);
-            l.default.track(c.HAw.SHOP_CARD_HOVERED, {
+            (l.default.track(c.HAw.SHOP_CARD_HOVERED, {
                 shop_session_id: e?.sessionId,
                 sku_id: n ? (t.variants[A.current]?.skuId ?? t.skuId) : t.skuId,
                 position_in_section: e?.tilePosition,
@@ -34,7 +34,7 @@ function d(e, t) {
                 product_sku_ids: (0, u.v8)(t),
                 location_stack: v.current,
             }),
-                (I.current = !0);
+                (I.current = !0));
         }, 250);
         return () => clearTimeout(t);
     }, [e, p, g, A, v]);

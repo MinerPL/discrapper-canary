@@ -12,7 +12,7 @@ class s extends r.A {
         i.w.set(a, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), i.w.set(a, this.seenForumGuidelines);
+        (this.seenForumGuidelines.add(e), i.w.set(a, this.seenForumGuidelines));
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);

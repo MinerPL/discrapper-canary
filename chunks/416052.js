@@ -11,10 +11,10 @@ class u extends i.PureComponent {
     _timeout;
     static defaultProps = { delay: 1e3 };
     constructor(t) {
-        super(t),
+        (super(t),
             (this.state = { mode: p.e.Modes.DEFAULT }),
             (this._timeout = new n.Ep()),
-            (this.handleCopy = this.handleCopy.bind(this));
+            (this.handleCopy = this.handleCopy.bind(this)));
     }
     componentWillUnmount() {
         this._timeout.stop();
@@ -27,15 +27,15 @@ class u extends i.PureComponent {
     }
     handleCopy(t) {
         let { onCopy: e, delay: s = 1e3 } = this.props;
-        (0, h.C)(
+        ((0, h.C)(
             t,
             () => {
-                this.setState({ mode: p.e.Modes.SUCCESS }), d.O.announce(a.intl.string(a.t.t5VZ88));
+                (this.setState({ mode: p.e.Modes.SUCCESS }), d.O.announce(a.intl.string(a.t.t5VZ88)));
             },
             () => this.setState({ mode: p.e.Modes.ERROR }),
         ),
             this._timeout.start(s, () => this.setState({ mode: p.e.Modes.DEFAULT })),
-            e?.(t);
+            e?.(t));
     }
     getVerticalButtonColor(t) {
         switch (t) {

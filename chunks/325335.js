@@ -7,7 +7,7 @@ class a {
     blue;
     alpha;
     constructor(e, t, n, i) {
-        (this.red = e), (this.green = t), (this.blue = n), (this.alpha = i);
+        ((this.red = e), (this.green = t), (this.blue = n), (this.alpha = i));
     }
     toHexString() {
         var e = Math.round(this.red).toString(16),
@@ -27,7 +27,7 @@ class a {
         if (!(null == e.match(i) || [6, 8].includes(e.length))) {
             if ((e = e.replace("#", "")).length < 6) {
                 let [t, n, i, r] = e;
-                (e = t + t + n + n + i + i), null != r && (e += r + r);
+                ((e = t + t + n + n + i + i), null != r && (e += r + r));
             }
             var t = e.match(/.{1,2}/g);
             if (null != t)

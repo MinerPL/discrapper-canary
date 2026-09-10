@@ -1,4 +1,4 @@
-n.d(e, { pD: () => tr, cH: () => ta }), n(321073);
+(n.d(e, { pD: () => tr, cH: () => ta }), n(321073));
 var i = n(731738),
     l = n(136722),
     a = n(17928),
@@ -83,7 +83,7 @@ let ta = "message1",
                 (delete this._channels[t],
                 e.forEach((t) => {
                     let { notification: e, trackingProps: n } = t;
-                    e.close(), X.default.track(tt.HAw.NOTIFICATION_ACTION, { action: "ACK", ...n });
+                    (e.close(), X.default.track(tt.HAw.NOTIFICATION_ACTION, { action: "ACK", ...n }));
                 }));
         }
     })();
@@ -204,8 +204,8 @@ new tT(
                       (0, O.n)(a, s.guild_id),
                       W.A.getDesktopType() === tt.nRU.NEVER)
                   )
-                      return tE(h), h && Z.A.playNotificationSound(ta, tr), !1;
-                  tE(h),
+                      return (tE(h), h && Z.A.playNotificationSound(ta, tr), !1);
+                  (tE(h),
                       Z.A.showNotification(
                           R,
                           v,
@@ -226,10 +226,10 @@ new tT(
                               sound: h ? ta : void 0,
                               volume: tr,
                               onClick() {
-                                  (0, D.iN)(s.id),
+                                  ((0, D.iN)(s.id),
                                       (s.type === tt.rbe.GUILD_VOICE || s.type === tt.rbe.GUILD_STAGE_VOICE) &&
                                           d.A.updateChatOpen(s.id, !0),
-                                      A.default.clickedNotification();
+                                      A.default.clickedNotification());
                               },
                               isUserAvatar: !0,
                               messageRecord: _,
@@ -238,15 +238,15 @@ new tT(
                           },
                       ).then((t) => {
                           null != t && tf.track(s.id, t.notification, t.trackingProps);
-                      });
+                      }));
               },
               CHANNEL_SELECT: function (t) {
                   let { channelId: e } = t;
-                  return null != e && tf.clearChannel(e), !1;
+                  return (null != e && tf.clearChannel(e), !1);
               },
               MESSAGE_ACK: function (t) {
                   let { channelId: e } = t;
-                  return tf.clearChannel(e), !1;
+                  return (tf.clearChannel(e), !1);
               },
               ACTIVITY_START: function (t) {
                   let { userId: e, activity: n } = t;
@@ -327,7 +327,7 @@ new tT(
                       tc.has(e.id)
                   )
                       return !1;
-                  tc.add(e.id),
+                  (tc.add(e.id),
                       Z.A.showNotification(
                           (0, w.Iv)(i, 128),
                           tl.intl.formatToPlainString(tl.t.bZ4Okd, { guildName: i.name }),
@@ -342,7 +342,7 @@ new tT(
                               },
                               isUserAvatar: !1,
                           },
-                      );
+                      ));
               },
               STAGE_INSTANCE_DELETE: function (t) {
                   let { instance: e } = t;
@@ -380,8 +380,9 @@ new tT(
                                         },
                                         {
                                             onClick() {
-                                                t.entity_type === te.Ps.STAGE_INSTANCE && (0, R.av)(a),
-                                                    t.entity_type === te.Ps.VOICE && f.default.selectVoiceChannel(a.id);
+                                                (t.entity_type === te.Ps.STAGE_INSTANCE && (0, R.av)(a),
+                                                    t.entity_type === te.Ps.VOICE &&
+                                                        f.default.selectVoiceChannel(a.id));
                                             },
                                             isUserAvatar: !1,
                                         },
@@ -401,7 +402,7 @@ new tT(
                                         { notif_type: "GUILD_SCHEDULED_EVENT_UPDATE", guild_id: n.id },
                                         {
                                             onClick() {
-                                                c.A.transitionToGuildSync(t.guild_id), (0, g.uR)({ eventId: t.id });
+                                                (c.A.transitionToGuildSync(t.guild_id), (0, g.uR)({ eventId: t.id }));
                                             },
                                             isUserAvatar: !1,
                                         },
@@ -513,11 +514,11 @@ new tT(
                   );
               },
               LOGOUT: function () {
-                  return r.w.remove(tu), !1;
+                  return (r.w.remove(tu), !1);
               },
               CONNECTION_OPEN: function (t) {
                   let { countryCode: e, guilds: n } = t;
-                  (td = e), tc.clear(), n.forEach((t) => t.stage_instances.forEach((t) => tc.add(t.id)));
+                  ((td = e), tc.clear(), n.forEach((t) => t.stage_instances.forEach((t) => tc.add(t.id))));
               },
               MESSAGE_REMINDER_DUE: function (t) {
                   let { savedMessage: e } = t;

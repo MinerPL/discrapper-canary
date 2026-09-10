@@ -31,6 +31,6 @@ let c = new s(l.h, {
     GAME_SERVER_REGION_PING_STATE_RESET: a,
     GAME_SERVER_FETCH_REGIONS_SUCCESS: function (e) {
         let { regions: r, creationDisabled: t } = e;
-        (i = r), null != t && (u = t);
+        ((i = r), null != t && (u = t));
     },
 });

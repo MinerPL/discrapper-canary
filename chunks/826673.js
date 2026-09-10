@@ -42,13 +42,13 @@ function I(e, t) {
 }
 async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (0, u.YV)(e, n), await (0, u.wH)(e, t, 1), (0, u.X0)(e, n);
+    ((0, u.YV)(e, n), await (0, u.wH)(e, t, 1), (0, u.X0)(e, n));
 }
 async function p(e, t, n) {
     let i = (0, u.Sx)(e, t);
-    (0, u.YV)(e, n), await (0, u.gG)(e, t, i), (0, u.X0)(e, n);
+    ((0, u.YV)(e, n), await (0, u.gG)(e, t, i), (0, u.X0)(e, n));
 }
 async function T(e, t, n, i) {
     let r = (0, u.Sx)(e, n);
-    (0, u.YV)(e, { ...i, snowflakeId: t }), await (0, u.G4)(e, t, n, r), (0, u.X0)(e, i);
+    ((0, u.YV)(e, { ...i, snowflakeId: t }), await (0, u.G4)(e, t, n, r), (0, u.X0)(e, i));
 }

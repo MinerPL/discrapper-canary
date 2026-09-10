@@ -16,7 +16,7 @@ function l(t) {
             {
                 text: e.intl.string(e.t.oyYWHE),
                 onClick: async () => {
-                    await n(), await l.onClose();
+                    (await n(), await l.onClose());
                 },
                 variant: "primary",
             },

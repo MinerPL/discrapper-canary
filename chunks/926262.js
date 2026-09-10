@@ -20,10 +20,10 @@ function C(e) {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
     let j = i.useCallback(() => {
-            C?.(), t();
+            (C?.(), t());
         }, [C, t]),
         y = i.useCallback(() => {
-            x?.(), t();
+            (x?.(), t());
         }, [x, t]),
         b = i.useRef(null);
     return (
@@ -49,7 +49,7 @@ function C(e) {
                             }));
                     })(),
                 () => {
-                    (l = !0), null != e && (e.destroy(), (e = void 0));
+                    ((l = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
         }, [_]),

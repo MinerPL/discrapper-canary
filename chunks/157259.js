@@ -35,13 +35,13 @@ function p(e) {
                     size: "sm",
                     variant: "primary",
                     onClick: function () {
-                        u.default.track(m.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                        (u.default.track(m.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                             ...(0, d.H$)(t.getGuildId()),
                             ...(0, d.dI)(t),
                             banner_type: "channel_opt_in",
                             cta_type: "add channel",
                         }),
-                            (0, h.AC)(t.guild_id, t.id, !0, { section: m.JJy.CHANNEL });
+                            (0, h.AC)(t.guild_id, t.id, !0, { section: m.JJy.CHANNEL }));
                     },
                     text: g.intl.string(g.t.ZtIlQo),
                     icon: c.j,

@@ -54,15 +54,19 @@ function _(e) {
             iconType: p,
             isForumPost: I,
             hasAccess: k,
-        } = (0, a.cf)([A.A, b.default, C.A], () => {
-            let e = A.A.getChannel(n);
-            return {
-                name: null != e ? (0, c.m1)(e, b.default, C.A) : void 0,
-                iconType: (0, N.QG)(e),
-                isForumPost: e?.isForumPost(),
-                hasAccess: null == e || (0, u.nc)(e),
-            };
-        }, [n]),
+        } = (0, a.cf)(
+            [A.A, b.default, C.A],
+            () => {
+                let e = A.A.getChannel(n);
+                return {
+                    name: null != e ? (0, c.m1)(e, b.default, C.A) : void 0,
+                    iconType: (0, N.QG)(e),
+                    isForumPost: e?.isForumPost(),
+                    hasAccess: null == e || (0, u.nc)(e),
+                };
+            },
+            [n],
+        ),
         y = (0, v.p)();
     if (null == p) return;
     let S = r === y?.guildId || null == r,
@@ -84,7 +88,7 @@ function _(e) {
         (0, l.jsxs)(g.A, {
             role: "link",
             onClick: function (e) {
-                e?.stopPropagation(), (0, o.o)(r, n, h), (0, s.closeAllModals)();
+                (e?.stopPropagation(), (0, o.o)(r, n, h), (0, s.closeAllModals)());
             },
             onContextMenu: function (e) {
                 let r = A.A.getChannel(n);

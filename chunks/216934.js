@@ -9,5 +9,5 @@ function o(e) {
     (0, a.jQ)({ questId: n, fromContent: t });
     let o = (0, s.p)() ? (0, i.JK)().location.search : "",
         d = null != n ? `#${n}` : "";
-    (0, r.default)(), (0, i.pX)(l.BVt.QUEST_HOME, { search: o, hash: d });
+    ((0, r.default)(), (0, i.pX)(l.BVt.QUEST_HOME, { search: o, hash: d }));
 }

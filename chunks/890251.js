@@ -1,4 +1,4 @@
-c.exports = {
+a.exports = {
     MY: "page__1c2c9",
     G1: "headerTitleRow__1c2c9",
     qd: "headerTitle__1c2c9",

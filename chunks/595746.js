@@ -69,7 +69,7 @@ let P = function (t) {
                                 title: I.intl.string(i),
                                 description: I.intl.string(n),
                                 onClick: async (e) => {
-                                    (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, t), await o(t);
+                                    ((0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, t), await o(t));
                                 },
                             };
                         })
@@ -84,9 +84,9 @@ let P = function (t) {
                                 title: I.intl.string(e.title),
                                 description: I.intl.string(e.description),
                                 onClick: (t) => {
-                                    p.A.increment({ name: S.K.GOOGLE_WALLET_METHOD_SELECTED }),
+                                    (p.A.increment({ name: S.K.GOOGLE_WALLET_METHOD_SELECTED }),
                                         (0, f.St)(t, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, v.VF.GOOGLE_WALLET),
-                                        n();
+                                        n());
                                 },
                             },
                         ];
@@ -109,8 +109,8 @@ function b(t) {
               variant: "text-xs/medium",
               children: I.intl.format(M.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      g.A.openUrl(C.d$.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
+                      (g.A.openUrl(C.d$.LEARN_MORE_UU_APPEAL_LINK),
+                          (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE));
                   },
               }),
           })
@@ -120,7 +120,8 @@ function b(t) {
                 textVariant: "text-sm/medium",
                 text: I.intl.string(I.t["2jxGer"]),
                 onClick: () => {
-                    (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LOG_OUT), (0, _.k)("age_verification_get_started_modal");
+                    ((0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LOG_OUT),
+                        (0, _.k)("age_verification_get_started_modal"));
                 },
             })
           : null;
@@ -131,7 +132,7 @@ let j = function (t) {
         x = (0, m.W$)(),
         { loading: O, ageVerificationMethods: v } = P({
             onClose: () => {
-                _?.(), s();
+                (_?.(), s());
             },
             classificationId: h,
         });
@@ -149,8 +150,8 @@ let j = function (t) {
             subtitle: (0, R.mK)(
                 i,
                 () => {
-                    g.A.openUrl(A.A.getArticleURL(T.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
+                    (g.A.openUrl(A.A.getArticleURL(T.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE));
                 },
                 x,
             ),

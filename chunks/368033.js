@@ -31,7 +31,7 @@ function k(t) {
                       variant: "primary",
                       text: p.intl.string(p.t.ELRJQu),
                       onClick: function () {
-                          u.isPlatformEmbedded ? c.Ay.focus() : window.focus(), n();
+                          (u.isPlatformEmbedded ? c.Ay.focus() : window.focus(), n());
                       },
                   },
               ],

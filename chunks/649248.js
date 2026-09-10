@@ -15,16 +15,16 @@ class o {
         this.strategy.setPool(e);
     }
     registerPoolEntry(e, t) {
-        this.entries.set(e, t), this.strategy.initialize(t.container), this.reconcile(e), this.emitEntryChange();
+        (this.entries.set(e, t), this.strategy.initialize(t.container), this.reconcile(e), this.emitEntryChange());
     }
     removePoolEntry(e) {
         let t = this.entries.get(e);
-        null != t && (this.strategy.unplace(t.container), t.container.remove()),
+        (null != t && (this.strategy.unplace(t.container), t.container.remove()),
             this.entries.delete(e),
             this.targets.delete(e),
             this.cancelBackground(e),
             (0, n.fS)(e) || s.A.removeFrame(e),
-            this.emitEntryChange();
+            this.emitEntryChange());
     }
     getPoolEntry(e) {
         return this.entries.get(e) ?? null;
@@ -42,9 +42,9 @@ class o {
     }
     registerFrameTarget(e, t, i) {
         let n = this.targets.get(e);
-        null == n && ((n = new Map()), this.targets.set(e, n)),
+        (null == n && ((n = new Map()), this.targets.set(e, n)),
             n.set(t, { target: t, level: i, seq: this.attachSeq++ }),
-            this.reconcile(e);
+            this.reconcile(e));
     }
     removeFrameTarget(e, t) {
         let i = this.targets.get(e);
@@ -55,12 +55,12 @@ class o {
         if (null == t) return;
         let i = this.pickWinner(e);
         if (null == i) {
-            this.strategy.unplace(t.container), this.background(e), (0, n.fS)(e) || s.A.setFrameVisible(e, !1);
+            (this.strategy.unplace(t.container), this.background(e), (0, n.fS)(e) || s.A.setFrameVisible(e, !1));
             return;
         }
-        this.cancelBackground(e),
+        (this.cancelBackground(e),
             this.strategy.place(t.container, i.target, i.level),
-            (0, n.fS)(e) || s.A.setFrameVisible(e, i.level !== r.A.Backstage);
+            (0, n.fS)(e) || s.A.setFrameVisible(e, i.level !== r.A.Backstage));
     }
     pickWinner(e) {
         let t = this.targets.get(e);

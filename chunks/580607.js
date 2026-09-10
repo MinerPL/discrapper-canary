@@ -1,7 +1,7 @@
 d.d(t, { t: () => i });
 var i = class l {
     static getInstance() {
-        return l.instance || (l.instance = new l()), l.instance;
+        return (l.instance || (l.instance = new l()), l.instance);
     }
     setTimeout(l, t) {
         return setTimeout(l, t);

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.MergingRefiner = t.Filter = void 0),
     (t.Filter = class {
         refine(e, t) {
@@ -18,12 +18,12 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
                     let t = n,
                         r = a,
                         i = this.mergeResults(s, t, r, e);
-                    e.debug(() => {
+                    (e.debug(() => {
                         console.log(`${this.constructor.name} merged ${t} and ${r} into ${i}`);
                     }),
-                        (n = i);
-                } else r.push(n), (n = a);
+                        (n = i));
+                } else (r.push(n), (n = a));
             }
-            return null != n && r.push(n), r;
+            return (null != n && r.push(n), r);
         }
-    });
+    }));

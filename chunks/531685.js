@@ -80,7 +80,7 @@ let E = new _(s.h, {
         );
     },
     WINDOW_UNLOAD: function (e) {
-        return c.add(e.windowId), d.delete(e.windowId), o === e.windowId && (o = null), !0;
+        return (c.add(e.windowId), d.delete(e.windowId), o === e.windowId && (o = null), !0);
     },
     WINDOW_VISIBILITY_CHANGE: function (e) {
         let t = u(e.windowId);
@@ -95,7 +95,7 @@ Promise.resolve()
             {
                 e.client_app_state = E.isAppFocused() ? "focused" : "unfocused";
                 let t = E.windowSize();
-                (e.client_viewport_width = t.width), (e.client_viewport_height = t.height);
+                ((e.client_viewport_width = t.width), (e.client_viewport_height = t.height));
             }
         });
     });

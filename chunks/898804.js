@@ -17,7 +17,7 @@ r(
                         a(i, t, e).then(n.resolve, r);
                     });
                 });
-            return c.error && r(c.value), n.promise;
+            return (c.error && r(c.value), n.promise);
         },
     },
 );

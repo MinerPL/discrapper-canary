@@ -22,10 +22,10 @@ function C(n) {
             let { userId: e, onClose: i } = n,
                 a = (0, o.aL)(),
                 A = d.useCallback(() => {
-                    s.A.openPrivateChannel({ recipientIds: e, joinCall: !0 }),
+                    (s.A.openPrivateChannel({ recipientIds: e, joinCall: !0 }),
                         i?.(),
                         a.dispatch(c.jej.POPOUT_CLOSE),
-                        (0, r.closeAllModals)();
+                        (0, r.closeAllModals)());
                 }, [e, a, i]),
                 b = d.useCallback(() => {
                     (0, r.openModalLazy)(async () => {

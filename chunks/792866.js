@@ -13,7 +13,7 @@ function r(t) {
             {
                 text: s,
                 onClick: function () {
-                    c(), o?.();
+                    (c(), o?.());
                 },
                 variant: "primary",
             },

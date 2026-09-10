@@ -1,6 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.OtherTypes = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.OtherTypes = void 0));
 class n {}
-(t.OtherTypes = n),
+((t.OtherTypes = n),
     (n.BLEND = {
         extension: "blend",
         mimeType: "application/x-blender",
@@ -150,4 +150,4 @@ class n {}
             { sequence: [212, 195, 178, 161] },
             { sequence: [77, 60, 178, 161], description: "Nanosecond resolution" },
         ],
-    });
+    }));

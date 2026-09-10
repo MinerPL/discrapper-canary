@@ -1,4 +1,4 @@
-n.d(e, {
+(n.d(e, {
     Ae: () => k,
     B4: () => I,
     C$: () => L,
@@ -19,7 +19,7 @@ n.d(e, {
     uh: () => h,
     vV: () => D,
 }),
-    n(321073);
+    n(321073));
 var r = n(136722),
     i = n(702805),
     l = n(155718),
@@ -67,7 +67,7 @@ function P(t, e, n, i) {
     if (null == l) return !1;
     if (null == t) return l.id !== e;
     let u = t.permissionOverwrites[e];
-    return i?.[e] != null && (u = i[e]), null == u || !r.zy(u.allow, n);
+    return (i?.[e] != null && (u = i[e]), null == u || !r.zy(u.allow, n));
 }
 function m(t, e) {
     return N.default.castGuildIdAsEveryoneGuildRoleId(t) === e;
@@ -194,7 +194,7 @@ function B(t, e, n) {
     let i = t.permissionOverwrites[t.guild_id];
     null == i && (i = f.xT(t.guild_id));
     let l = { ...i };
-    return (l.deny = r.TF(l.deny, e)), (l.allow = r.TF(l.allow, e)), n || (l.deny = r.WQ(l.deny, e)), l;
+    return ((l.deny = r.TF(l.deny, e)), (l.allow = r.TF(l.allow, e)), n || (l.deny = r.WQ(l.deny, e)), l);
 }
 function H(t, e, n) {
     let r = B(t, e, n);
@@ -210,13 +210,13 @@ function V(t, e) {
     }
     {
         let { allow: n, deny: l } = u;
-        return (n = r.WQ(n, e)), (0, i.LA)(t, u.id, n, l);
+        return ((n = r.WQ(n, e)), (0, i.LA)(t, u.id, n, l));
     }
 }
 function k(t, e) {
     if (null == t) return !1;
     let n = t.permissionOverwrites[t.guild_id];
-    return e?.[t.guild_id] != null && (n = e[t.guild_id]), null != n && r.zy(n.deny, t.accessPermissions);
+    return (e?.[t.guild_id] != null && (n = e[t.guild_id]), null != n && r.zy(n.deny, t.accessPermissions));
 }
 function W(t, e, n) {
     return t === _.rbe.GUILD_TEXT || t === _.rbe.GUILD_ANNOUNCEMENT || t === _.rbe.GUILD_APP

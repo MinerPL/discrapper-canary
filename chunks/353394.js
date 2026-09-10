@@ -102,10 +102,10 @@ function U(e) {
                                           size: _.w.SIZE_60,
                                           className: z.mM,
                                           onClick: (e) => {
-                                              e.stopPropagation(),
+                                              (e.stopPropagation(),
                                                   U({ action: "PRESS_IMAGE" }),
                                                   M(e),
-                                                  j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.();
+                                                  j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.());
                                           },
                                       }),
                                       (0, i.jsxs)("div", {
@@ -114,10 +114,10 @@ function U(e) {
                                               (0, i.jsx)(m.D, {
                                                   className: z.sd,
                                                   onClick: (e) => {
-                                                      e.stopPropagation(),
+                                                      (e.stopPropagation(),
                                                           U({ action: "PRESS_TEXT" }),
                                                           M(e),
-                                                          j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.();
+                                                          j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.());
                                                   },
                                                   children: (0, i.jsx)(k.Q, {
                                                       variant: "heading-sm/semibold",
@@ -182,7 +182,7 @@ function w(e) {
                                   size: _.w.SIZE_60,
                                   className: z.mM,
                                   onClick: (e) => {
-                                      e.stopPropagation(), A({ action: "PRESS_IMAGE" }), (0, j.C)(d);
+                                      (e.stopPropagation(), A({ action: "PRESS_IMAGE" }), (0, j.C)(d));
                                   },
                               }),
                         (0, i.jsxs)("div", {
@@ -205,7 +205,7 @@ function w(e) {
                                     : (0, i.jsxs)(m.D, {
                                           className: z.sd,
                                           onClick: (e) => {
-                                              e.stopPropagation(), A({ action: "PRESS_TEXT" }), (0, j.C)(d);
+                                              (e.stopPropagation(), A({ action: "PRESS_TEXT" }), (0, j.C)(d));
                                           },
                                           children: [
                                               (0, i.jsx)(k.Q, {
@@ -261,9 +261,9 @@ function Q(e) {
                                   size: _.w.SIZE_60,
                                   className: z.mM,
                                   onClick: (e) => {
-                                      e.stopPropagation(),
+                                      (e.stopPropagation(),
                                           x({ action: "OPEN_SPOTIFY_ALBUM" }),
-                                          (0, j.n)(G.M0.ALBUM, A.external_parent_id);
+                                          (0, j.n)(G.M0.ALBUM, A.external_parent_id));
                                   },
                               }),
                               (0, i.jsxs)("div", {
@@ -275,8 +275,8 @@ function Q(e) {
                                                   variant: "heading-sm/semibold",
                                                   text: A.title,
                                                   onClick: () => {
-                                                      x({ action: "OPEN_SPOTIFY_TRACK" }),
-                                                          (0, j.n)(G.M0.TRACK, A.external_id);
+                                                      (x({ action: "OPEN_SPOTIFY_TRACK" }),
+                                                          (0, j.n)(G.M0.TRACK, A.external_id));
                                                   },
                                                   id: c,
                                               }),
@@ -284,8 +284,8 @@ function Q(e) {
                                                   variant: "text-xs/normal",
                                                   text: A.artists[0]?.name,
                                                   onClick: () => {
-                                                      x({ action: "OPEN_SPOTIFY_ARTIST" }),
-                                                          (0, j.n)(G.M0.ARTIST, A.artists[0]?.external_id);
+                                                      (x({ action: "OPEN_SPOTIFY_ARTIST" }),
+                                                          (0, j.n)(G.M0.ARTIST, A.artists[0]?.external_id));
                                                   },
                                               }),
                                           ],
@@ -339,7 +339,7 @@ function F(e) {
                                     size: _.w.SIZE_60,
                                     className: z.mM,
                                     onClick: (e) => {
-                                        e.stopPropagation(), m({ action: "PRESS_IMAGE" }), h();
+                                        (e.stopPropagation(), m({ action: "PRESS_IMAGE" }), h());
                                     },
                                 }),
                                 (0, i.jsxs)("div", {
@@ -350,7 +350,7 @@ function F(e) {
                                                 variant: "heading-sm/semibold",
                                                 text: s.extra.activity_name,
                                                 onClick: () => {
-                                                    m({ action: "PRESS_TEXT" }), h();
+                                                    (m({ action: "PRESS_TEXT" }), h());
                                                 },
                                                 id: c,
                                             }),

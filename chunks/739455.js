@@ -1,6 +1,6 @@
-i.d(t, { Fx: () => m, JH: () => T, SY: () => N, aV: () => O, fE: () => g, pF: () => A, zu: () => v }),
+(i.d(t, { Fx: () => m, JH: () => T, SY: () => N, aV: () => O, fE: () => g, pF: () => A, zu: () => v }),
     i(938796),
-    i(321073);
+    i(321073));
 var l = i(582128),
     a = i(975975),
     n = i.n(a),
@@ -75,11 +75,11 @@ function I(e) {
 }
 function N(e) {
     let t = I(e);
-    (E[e] = t),
+    ((E[e] = t),
         t.forEach((e) => {
             let t = e.set("flags", C.lx.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             c.h.dispatch({ type: "CHANNEL_CREATE", channel: t });
-        });
+        }));
 }
 function m(e) {
     (E[e] ?? I(e)).forEach((e) => {
@@ -89,7 +89,7 @@ function m(e) {
 async function A(e, t) {
     let i = [],
         l = [];
-    t.forEach((t) => {
+    (t.forEach((t) => {
         let a = S.A.getChannel(t.ref_id);
         null != a && (i.push(h.A.createRoleSubscriptionTemplateChannel(e, a.name, a.type, a.topic)), l.push(a));
     }),
@@ -111,7 +111,7 @@ async function A(e, t) {
                     let e = t.findIndex((e) => e.ref_id === n);
                     -1 !== e && t?.splice(e, 1);
                 }
-            });
+            }));
 }
 function T(e, t) {
     let i = f.y.getState().listings[e],

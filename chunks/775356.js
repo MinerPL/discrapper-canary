@@ -1,6 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.ImageTypes = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.ImageTypes = void 0));
 class n {}
-(t.ImageTypes = n),
+((t.ImageTypes = n),
     (n.AVIF = {
         extension: "avif",
         mimeType: "image/avif",
@@ -137,4 +137,4 @@ class n {}
         description:
             "A modern image format that provides superior lossless and lossy compression for images on the web",
         signatures: [{ sequence: [82, 73, 70, 70, 87, 69, 66, 80], skippedBytes: [4, 5, 6, 7] }],
-    });
+    }));

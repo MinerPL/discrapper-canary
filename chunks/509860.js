@@ -19,12 +19,12 @@ let j = new Set(),
 function p(e) {
     let { subsection: t } = e;
     if (a.A.getGuildId() === N) return !1;
-    (f = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (N = a.A.getGuildId());
+    ((f = t === E.nd0.SERVER_GUIDE ? x.Hy.HOME_SETTINGS : x.Hy.LANDING), (N = a.A.getGuildId()));
 }
 class A extends i.Ay.Store {
     static displayName = "GuildSettingsOnboardingStore";
     initialize() {
-        this.waitFor(s.A, c.A, g.A, m.A, u.A, o.A, a.A), this.syncWith([s.A, c.A, g.A, m.A, u.A, o.A], () => !0);
+        (this.waitFor(s.A, c.A, g.A, m.A, u.A, o.A, a.A), this.syncWith([s.A, c.A, g.A, m.A, u.A, o.A], () => !0));
     }
     isEducationUpsellDismissed(e) {
         return j.has(e);

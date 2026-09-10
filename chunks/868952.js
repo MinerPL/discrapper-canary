@@ -1,4 +1,4 @@
-n.d(i, { default: () => q }), n(321073);
+(n.d(i, { default: () => q }), n(321073));
 var e = n(477900),
     t = n(582128),
     l = n(136722),
@@ -162,7 +162,7 @@ function q(s) {
         let s = null != i ? h.A.getEveryoneRole(i) : void 0;
         if (null == s) return;
         let n = l.TF(s.permissions, f.e$);
-        await (0, v.JY)(i.id, [{ ...s, permissions: n }]), r();
+        (await (0, v.JY)(i.id, [{ ...s, permissions: n }]), r());
     }
     return (0, e.jsxs)(d.EO, {
         transitionState: n,

@@ -18,18 +18,18 @@ function c(e) {
     return `framework:${e ?? "none"}`;
 }
 function C(e, t, n) {
-    o.A.increment({ name: s.K.IOS_ATTRIBUTION_IMPRESSION, tags: [`result:${e}`, c(t)] }),
+    (o.A.increment({ name: s.K.IOS_ATTRIBUTION_IMPRESSION, tags: [`result:${e}`, c(t)] }),
         a.default.track(l.HAw.IOS_ATTRIBUTION_VIEW_RESOLVED, {
             impression_id: n,
             attribution_framework: t ?? "none",
             attribution_result: e,
-        });
+        }));
 }
 function f(e, t, n) {
-    o.A.increment({ name: s.K.IOS_ATTRIBUTION_CLICK, tags: [`result:${e}`, c(t)] }),
+    (o.A.increment({ name: s.K.IOS_ATTRIBUTION_CLICK, tags: [`result:${e}`, c(t)] }),
         a.default.track(l.HAw.IOS_ATTRIBUTION_CLICK_RESOLVED, {
             impression_id: n,
             attribution_framework: t ?? "none",
             attribution_result: e,
-        });
+        }));
 }

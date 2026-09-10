@@ -1,6 +1,6 @@
 n.d(t, { A: () => T });
 var i = n(268218);
-n(667532), n(321073);
+(n(667532), n(321073));
 var r = n(284009),
     a = n.n(r),
     s = n(435558),
@@ -28,12 +28,12 @@ class p {
         this.getJoi = e;
     }
     registerTransport(e) {
-        e.on("connect", (e) => this.handleConnect(e)),
+        (e.on("connect", (e) => this.handleConnect(e)),
             e.on("request", (e, t) => this.handleRequest(e, t)),
-            e.on("disconnect", (e, t) => this.handleDisconnect(e, t));
+            e.on("disconnect", (e, t) => this.handleDisconnect(e, t)));
     }
     handleConnect(e) {
-        this.sockets.add(e), this.onConnect(e);
+        (this.sockets.add(e), this.onConnect(e));
         let t = {
             v: e.version,
             config: {
@@ -50,10 +50,10 @@ class p {
         this.dispatch(e, null, h.e$_.DISPATCH, h.ZE4.READY, t);
     }
     handleDisconnect(e, t) {
-        e.abortController.abort("DISCONNECTED"),
+        (e.abortController.abort("DISCONNECTED"),
             this.removeSubscriptions(e),
             this.sockets.delete(e),
-            this.onDisconnect(e, t);
+            this.onDisconnect(e, t));
     }
     handleRequest(e, t) {
         new Promise((n) => {
@@ -64,23 +64,23 @@ class p {
             if (null == r) throw new c.A({ errorCode: h.Lw6.INVALID_COMMAND }, `Invalid command: ${t.cmd}`);
             if (!(0, E.A)(e.authorization.scopes, r.scope))
                 throw new c.A({ errorCode: h.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
-            o.default.track(h.HAw.RPC_COMMAND_SENT, {
+            (o.default.track(h.HAw.RPC_COMMAND_SENT, {
                 command: i,
                 scope: "object" == typeof r.scope ? JSON.stringify(r.scope) : r.scope,
                 application_id: e.application.id,
                 socket_scope: e.authorization.scopes.toString(),
             }),
-                n(r);
+                n(r));
         })
             .then(
                 (e) =>
                     new Promise(async (n, i) => {
                         if (null != e.validation) {
                             let r = await this.getJoi();
-                            a()(null != e.validation, "command.validation must not be null"),
+                            (a()(null != e.validation, "command.validation must not be null"),
                                 r.validate(t.args, e.validation(r), { convert: !1 }, (t) => {
                                     null != t ? i(new c.A({ errorCode: h.Lw6.INVALID_PAYLOAD }, t.message)) : n(e);
-                                });
+                                }));
                         } else n(e);
                     }),
             )
@@ -124,8 +124,8 @@ class p {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.e$_.DISPATCH,
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.Lw6.UNKNOWN_ERROR,
             r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Unknown Error";
-        o.default.track(h.HAw.RPC_SERVER_ERROR_CAUGHT, { command: n, code: i, message: r }),
-            this.dispatch(e, t, n, h.ZE4.ERROR, { code: i, message: r });
+        (o.default.track(h.HAw.RPC_SERVER_ERROR_CAUGHT, { command: n, code: i, message: r }),
+            this.dispatch(e, t, n, h.ZE4.ERROR, { code: i, message: r }));
     }
     isSubscribedListeners = new Set();
     listenIsSubscribed(e) {
@@ -165,11 +165,11 @@ class p {
             this.dispatchIsSubscribedUpdate());
     }
     removeSubscription(e, t, n) {
-        l().remove(this.subscriptions, (i) => i.socket === e && i.evt === t && l().isEqual(i.args, n)),
-            this.dispatchIsSubscribedUpdate();
+        (l().remove(this.subscriptions, (i) => i.socket === e && i.evt === t && l().isEqual(i.args, n)),
+            this.dispatchIsSubscribedUpdate());
     }
     removeSubscriptions(e) {
-        l().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate();
+        (l().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate());
     }
     dispatchToSubscriptions(e, t, n, i) {
         (null != i && "" !== i && (f.includes(i) || (f.unshift(i), f.splice(50), 0))) ||
@@ -197,7 +197,7 @@ class p {
             a = () => this.removeSubscription(e, I, { uniqueId: r });
         return new Promise((i, s) => {
             let l = setTimeout(() => {
-                a(), s(Error("timeout"));
+                (a(), s(Error("timeout")));
             }, n * d.A.Millis.SECOND);
             this.addSubscription(e, I, { uniqueId: r }, () => {
                 let e = t();

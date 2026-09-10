@@ -21,7 +21,7 @@ class u {
             if (null == t) continue;
             let n = d.default.getUser(t),
                 a = o.Ay.getTrueMember(e ?? c.dJq, t);
-            null != n && r.push(n), null != a && i.push(a);
+            (null != n && r.push(n), null != a && i.push(a));
         }
         return [i, r];
     }
@@ -39,17 +39,17 @@ class I {
         if (e.length > 0) {
             const t = e[0]?.connectionId,
                 [n, i] = I.computeUsersAndMembers(e);
-            e.length > 0 && e.every((e) => e.connectionId === t) && (this.connectionId = t),
+            (e.length > 0 && e.every((e) => e.connectionId === t) && (this.connectionId = t),
                 (this.users = n),
                 (this.members = i),
-                (this.messages = e.map((e) => e.message));
+                (this.messages = e.map((e) => e.message)));
         }
     }
     static computeUsersAndMembers(e) {
         (0, A.D)(e);
         let t = new Map(),
             n = new Map();
-        for (let i of e) this.addIntoMap(t, i.users, (e) => e.id), this.addIntoMap(n, i.members, (e) => e.userId);
+        for (let i of e) (this.addIntoMap(t, i.users, (e) => e.id), this.addIntoMap(n, i.members, (e) => e.userId));
         return [Array.from(t.values()), Array.from(n.values())];
     }
     static addIntoMap(e, t, n) {
@@ -130,7 +130,7 @@ let f = new (class {
     upsertOne(e, t, n, r) {
         let s = l.A.messagesTransaction(r),
             o = a.A.lastTimeConnectedChanged();
-        s.put(e, t, u.fromMessage(e, t, n, o), i.hh.Replace), s.trimChannel(e, t, _.Ay.saveLimit(t));
+        (s.put(e, t, u.fromMessage(e, t, n, o), i.hh.Replace), s.trimChannel(e, t, _.Ay.saveLimit(t)));
     }
     upsertMany(e, t, n, i) {
         let r = l.A.messagesTransaction(i),
@@ -143,7 +143,7 @@ let f = new (class {
             s = a.A.lastTimeConnectedChanged(),
             o = _.Ay.saveLimit(t),
             d = (n.length > o ? n.slice(n.length - o) : n).map((n) => u.fromMessage(e, t, n, s));
-        r.replaceChannel(e, t, d), r.trimChannel(e, t, _.Ay.saveLimit(t));
+        (r.replaceChannel(e, t, d), r.trimChannel(e, t, _.Ay.saveLimit(t)));
     }
     async updateOne(e, t, n, i) {
         if (null == n.id)

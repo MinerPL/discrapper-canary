@@ -31,7 +31,7 @@ let u = function (e) {
     return (0, l.jsx)(n.$, {
         onClick: (e) =>
             _(() => {
-                j(), x?.(e);
+                (j(), x?.(e));
             }),
         icon: i.GiftIcon,
         ...p,

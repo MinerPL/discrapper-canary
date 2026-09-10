@@ -30,7 +30,7 @@ function p(e) {
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        E(n, S.current?.getBoundingClientRect() ?? null), (e = null);
+                        (E(n, S.current?.getBoundingClientRect() ?? null), (e = null));
                     }));
             };
         }, [n, t]);
@@ -40,7 +40,7 @@ function p(e) {
                 t.addEventListener("resize", C),
                 u._.subscribe(A.jej.REMEASURE_TARGET, C),
                 () => {
-                    t.removeEventListener("resize", C), u._.unsubscribe(A.jej.REMEASURE_TARGET, C);
+                    (t.removeEventListener("resize", C), u._.unsubscribe(A.jej.REMEASURE_TARGET, C));
                 }
             ),
             [C, t],
@@ -55,7 +55,7 @@ function p(e) {
             return (
                 i.observe(e),
                 () => {
-                    i.disconnect(), E(n, null);
+                    (i.disconnect(), E(n, null));
                 }
             );
         }, [n, C]),

@@ -14,7 +14,7 @@ function c(t) {
     return (0, i.useCallback)(
         (t) => {
             let { action: n } = t;
-            f({ action: n, analyticsLocations: m }),
+            (f({ action: n, analyticsLocations: m }),
                 (0, o.Tu)({
                     action: n,
                     display: e,
@@ -25,7 +25,7 @@ function c(t) {
                     voiceChannelId: A,
                     analyticsLocations: m,
                     ...p,
-                });
+                }));
         },
         [f, p, e, c, d, u, T, A, m],
     );

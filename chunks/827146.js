@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => y });
+(a.r(t), a.d(t, { default: () => y }));
 var r = {
         lessThanXSeconds: {
             one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u0441\u0435\u043A\u0443\u043D\u0434\u0430",

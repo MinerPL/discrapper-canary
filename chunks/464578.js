@@ -22,7 +22,7 @@ class d {
     endNumImports = 0;
     endImportTime = 0;
     constructor(e, t) {
-        (this.emoji = e), (this.name = t);
+        ((this.emoji = e), (this.name = t));
     }
     get start() {
         return this.start_;
@@ -37,25 +37,25 @@ class d {
         return this.end_ > 0;
     }
     recordStart() {
-        0 === this.start_ && this.recordStart_(), i.A.mark(this.emoji, `Start ${this.name}`), s();
+        (0 === this.start_ && this.recordStart_(), i.A.mark(this.emoji, `Start ${this.name}`), s());
     }
     recordStart_() {
-        (this.start_ = Date.now()), (this.startNumImports = a()), (this.startImportTime = l());
+        ((this.start_ = Date.now()), (this.startNumImports = a()), (this.startImportTime = l()));
     }
     recordEnd() {
-        0 === this.end_ && 0 !== this.start_
+        (0 === this.end_ && 0 !== this.start_
             ? (this.recordEnd_(), i.A.mark(this.emoji, `Finish ${this.name}`, this.end_ - this.start_))
             : i.A.mark(this.emoji, `Finish ${this.name}`),
-            s();
+            s());
     }
     recordEnd_() {
-        (this.end_ = Date.now()), (this.endNumImports = a()), (this.endImportTime = l());
+        ((this.end_ = Date.now()), (this.endNumImports = a()), (this.endImportTime = l()));
     }
     set(e, t) {
-        0 === this.start_ &&
+        (0 === this.start_ &&
             ((this.start_ = e), (this.end_ = e + t), (this.endNumImports = a()), (this.endImportTime = l())),
             i.A.mark(this.emoji, this.name, t),
-            s();
+            s());
     }
     serializeStart(e) {
         return o(e, this.start_);
@@ -67,13 +67,13 @@ class d {
         if (this.start_ > 0) return i.A.time(this.emoji, this.name, e);
         this.recordStart_();
         let t = i.A.time(this.emoji, this.name, e);
-        return this.recordEnd_(), s(), t;
+        return (this.recordEnd_(), s(), t);
     }
     async measureAsync(e) {
         if (this.start_ > 0) return i.A.timeAsync(this.emoji, this.name, e);
         this.recordStart_();
         let t = await i.A.timeAsync(this.emoji, this.name, e);
-        return this.recordEnd_(), s(), t;
+        return (this.recordEnd_(), s(), t);
     }
     async measureAsyncWithoutNesting(e) {
         if (this.start_ > 0) return i.A.timeAsync(this.emoji, this.name, e);
@@ -81,7 +81,7 @@ class d {
         let t = Date.now();
         i.A.mark(this.emoji, `Start ${this.name}`);
         let n = await e();
-        return i.A.mark(this.emoji, `Finish ${this.name}`, Date.now() - t), this.recordEnd_(), s(), n;
+        return (i.A.mark(this.emoji, `Finish ${this.name}`, Date.now() - t), this.recordEnd_(), s(), n);
     }
 }
 class c {
@@ -93,7 +93,7 @@ class c {
     numImports = null;
     importTime = 0;
     constructor(e, t, n = !1, i = !1) {
-        (this.emoji = e), (this.name = t), (this.onlyOnce = n), (this.alwaysRecord = i);
+        ((this.emoji = e), (this.name = t), (this.onlyOnce = n), (this.alwaysRecord = i));
     }
     get time() {
         return this.time_;
@@ -103,7 +103,7 @@ class c {
         if (0 === this.time_) this.recordState_(e);
         else if (!this.onlyOnce) {
             if (this.alwaysRecord) {
-                this.recordState_(e), s();
+                (this.recordState_(e), s());
                 return;
             }
             i.A.mark(this.emoji, this.name);
@@ -111,7 +111,7 @@ class c {
         s();
     }
     recordState_(e) {
-        (this.time_ = e), (this.numImports = a()), (this.importTime = l()), i.A.mark(this.emoji, this.name);
+        ((this.time_ = e), (this.numImports = a()), (this.importTime = l()), i.A.mark(this.emoji, this.name));
     }
     hasData() {
         return this.time_ > 0;
@@ -219,10 +219,10 @@ class E extends _ {
         this.lazyCacheInfo = e;
     }
     setInterstitial(e) {
-        (this.interstitial = e), s();
+        ((this.interstitial = e), s());
     }
     addLocalMessages(e, t) {
-        for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100; ) {
+        for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100;) {
             let e = this.cachedChannelCounts.keys();
             this.cachedChannelCounts.delete(e.next().value);
         }
@@ -231,15 +231,15 @@ class E extends _ {
         this.readyProperties = e;
     }
     appStateChanged(e) {
-        "active" === e &&
+        ("active" === e &&
             (null == this.firstAppActiveTime && (this.firstAppActiveTime = Date.now()), (this.wasEverActive = !0)),
             null == this.readyProperties.num_guilds &&
-                (this.didBackgroundApp = this.didBackgroundApp || "active" !== e);
+                (this.didBackgroundApp = this.didBackgroundApp || "active" !== e));
     }
     recordRender(e, t) {
-        this.renderMessages.record(),
+        (this.renderMessages.record(),
             (t || e > 0) && this.renderMessagesWithCache.record(),
-            t && this.renderLatestMessages.record();
+            t && this.renderLatestMessages.record());
     }
     recordMessageRender(e, t, i, r) {
         let { default: a } = n(935208);
@@ -266,12 +266,12 @@ class E extends _ {
                         i = t.sort(a.compare).reverse()[0];
                     this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(i) - a.extractTimestamp(n)) / 1e3);
                     let s = t.filter((e) => this.cachedMessageIds?.includes(e)).length;
-                    (this.messageCacheCount = this.cachedChannelCounts.get(e) ?? null),
+                    ((this.messageCacheCount = this.cachedChannelCounts.get(e) ?? null),
                         (this.messageCacheHavingCount = s),
                         (this.messageCacheMissingCount = t.length - s),
                         (this.messageRenderFullCount = t.length),
                         (this.messageRenderCachedCount = this.cachedMessageIds.length),
-                        (this.messageRenderHasMoreAfter = r);
+                        (this.messageRenderHasMoreAfter = r));
                 }
             } else
                 (null == this.cachedChannelId || e === this.cachedChannelId) &&

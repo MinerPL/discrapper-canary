@@ -27,12 +27,12 @@ let c = (0, r.createContext)({}),
                     setSelectedKeys: l,
                     toggleKey(e) {
                         let i;
-                        "multiple" === s
+                        ("multiple" === s
                             ? (i = new Set(d)).has(e) && (!t || i.size > 1)
                                 ? i.delete(e)
                                 : i.add(e)
                             : (i = new Set(d.has(e) && !t ? [] : [e])),
-                            l(i);
+                            l(i));
                     },
                     setSelected(e, s) {
                         s !== d.has(e) && this.toggleKey(e);

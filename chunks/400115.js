@@ -5,5 +5,5 @@ function r(e, t) {
 }
 function a(e) {
     let t = i[e];
-    if (null != t) return delete i[e], t;
+    if (null != t) return (delete i[e], t);
 }

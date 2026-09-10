@@ -1,4 +1,4 @@
-(e.exports = function (e) {
+((e.exports = function (e) {
     var t = this.constructor;
     return (
         (this.callbacks = {}),
@@ -34,4 +34,4 @@
     (e.exports.prototype.detach = r(935534)),
     (e.exports.instances = []),
     (e.exports.reset = r(679327)),
-    (e.exports.REVERSE_MAP = null);
+    (e.exports.REVERSE_MAP = null));

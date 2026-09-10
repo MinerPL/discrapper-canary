@@ -35,8 +35,8 @@ class g extends s.PureComponent {
     };
     inputRef = s.createRef();
     handleExternalFileChange(e) {
-        c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
-            this.inputRef.current.handleFileChange(e);
+        (c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
+            this.inputRef.current.handleFileChange(e));
     }
     handleRemove = () => {
         this.props.onChange(null);

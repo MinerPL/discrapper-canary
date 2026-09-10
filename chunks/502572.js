@@ -12,13 +12,13 @@ function l(e) {
         onMouseEnter:
             0 !== i
                 ? function () {
-                      clearTimeout(d.current), u(!0);
+                      (clearTimeout(d.current), u(!0));
                   }
                 : () => {},
         onMouseLeave:
             0 !== i
                 ? function () {
-                      clearTimeout(d.current), (d.current = setTimeout(() => u(!1), i));
+                      (clearTimeout(d.current), (d.current = setTimeout(() => u(!1), i)));
                   }
                 : () => {},
         children: (0, n.jsx)(a.ST, {

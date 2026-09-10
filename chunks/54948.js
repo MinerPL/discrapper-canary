@@ -94,7 +94,7 @@ function A(e) {
             () => (
                 f(h(x)),
                 () => {
-                    h(null), f(null);
+                    (h(null), f(null));
                 }
             ),
             [f, h],

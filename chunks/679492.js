@@ -16,7 +16,7 @@ function d() {
         [a, r] = l.useState(null),
         [o, c] = l.useState(l.createRef()),
         d = l.useCallback((t) => {
-            e(t.interactionType), i(t.interactionSource), r(t.interactionSourceId);
+            (e(t.interactionType), i(t.interactionSource), r(t.interactionSourceId));
         }, []),
         S = l.useCallback((t) => {
             c(t);
@@ -29,7 +29,7 @@ function d() {
         [R] = l.useState(new s.Ep()),
         h = l.useCallback(
             (t) => {
-                g(t), C(!0), null === t ? R.stop() : R.start(u.ME, () => C(!1));
+                (g(t), C(!0), null === t ? R.stop() : R.start(u.ME, () => C(!1)));
             },
             [R],
         );

@@ -12,7 +12,7 @@ function d(t) {
         u = i.pe.TIER_2,
         _ = r.intl.format(r.t.hDMlqD, {
             onLearnMore: function () {
-                d?.(), a(), (0, n.e)();
+                (d?.(), a(), (0, n.e)());
             },
         });
     return (0, c.jsx)(s.A, {

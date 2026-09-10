@@ -66,17 +66,17 @@ function C(e) {
         g = r.useRef(!1),
         { isHovered: j, setIsHovered: A, onMouseEnter: I, onMouseLeave: E, cancelTimers: L } = (0, h.A)(100, 100),
         w = r.useCallback(() => {
-            (g.current = y.Ay.keyboardModeEnabled), I();
+            ((g.current = y.Ay.keyboardModeEnabled), I());
         }, [I]),
         D = r.useCallback(() => {
-            L(), A(!0), (g.current = y.Ay.keyboardModeEnabled);
+            (L(), A(!0), (g.current = y.Ay.keyboardModeEnabled));
         }, [L, A]),
         M = r.useCallback(
             (e) => {
-                L(),
+                (L(),
                     g.current && !y.Ay.keyboardModeEnabled && (0, f.uS)(),
                     A(!1),
-                    e && requestAnimationFrame(() => (null != C.current ? C.current.focus() : v.current?.focus()));
+                    e && requestAnimationFrame(() => (null != C.current ? C.current.focus() : v.current?.focus())));
             },
             [L, A],
         ),
@@ -85,7 +85,7 @@ function C(e) {
         }, [j, D, M]),
         S = r.useCallback(
             (e) => {
-                M(!1), null != n.route && $(e) && (e.preventDefault(), n.onClick(e));
+                (M(!1), null != n.route && $(e) && (e.preventDefault(), n.onClick(e)));
             },
             [n, M],
         ),
@@ -202,13 +202,13 @@ function A(e, t) {
 function I(e) {
     switch (e.key) {
         case "ArrowRight":
-            e.preventDefault(), A(e.currentTarget, 1);
+            (e.preventDefault(), A(e.currentTarget, 1));
             return;
         case "ArrowLeft":
-            e.preventDefault(), A(e.currentTarget, -1);
+            (e.preventDefault(), A(e.currentTarget, -1));
             return;
         case "Home":
-            e.preventDefault(), e.currentTarget.querySelector(j)?.focus();
+            (e.preventDefault(), e.currentTarget.querySelector(j)?.focus());
             return;
         case "End": {
             e.preventDefault();

@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(938796);
+(n.d(t, { A: () => m }), n(938796));
 var i = n(136722),
     r = n(665260),
     a = n(441574),
@@ -58,7 +58,7 @@ class m extends s.A {
     constructor(e) {
         super();
         const t = e.premium_type ?? e.premiumType;
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.username = e.username ?? ""),
             (this.discriminator = e.discriminator ?? p.h3J),
             (this.avatar = e.avatar ?? null),
@@ -130,7 +130,7 @@ class m extends s.A {
                         this.hasFlag(p.nhx.RESTRICTED_COLLABORATOR),
                 },
             }),
-            this.globalName?.length === 0 && (this.globalName = null);
+            this.globalName?.length === 0 && (this.globalName = null));
     }
     get createdAt() {
         return new Date(f.default.extractTimestamp(this.id));

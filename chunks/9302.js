@@ -1,5 +1,5 @@
 let i;
-n.r(t),
+(n.r(t),
     n.d(t, {
         DEV_PID: () => A,
         OVERLAY_DEFAULT_RESOLUTION: () => u,
@@ -19,7 +19,7 @@ n.r(t),
     }),
     n(323874),
     n(14289),
-    n(35956);
+    n(35956));
 var r = n(719129),
     a = n(996308),
     s = n(206885),
@@ -36,7 +36,7 @@ let c = 2,
 function f() {
     if (void 0 !== i && i !== h) return i;
     let e = parseInt(new URLSearchParams(window.location.search).get("pid") ?? "", 10);
-    return isNaN(e) && (e = h), (i = e);
+    return (isNaN(e) && (e = h), (i = e));
 }
 function p(e) {
     i = e;

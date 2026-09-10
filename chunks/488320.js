@@ -59,7 +59,7 @@ function d(t) {
 function l(t) {
     return "object" == typeof t && null !== t && "function" == typeof t.toJSDate;
 }
-Object.defineProperty(e, "__esModule", { value: !0 }),
+(Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.toDurationString =
         e.toJSON =
         e.isRRule =
@@ -98,7 +98,7 @@ Object.defineProperty(e, "__esModule", { value: !0 }),
                     let n = t.charAt(r);
                     n >= "\uD800" && n <= "\uDBFF" && (n += t.charAt(++r));
                     let s = i.from(n).length;
-                    (a += s) > 74 && ((e += "\r\n "), (a = s)), (e += n);
+                    ((a += s) > 74 && ((e += "\r\n "), (a = s)), (e += n));
                 }
                 return e;
             })
@@ -195,4 +195,4 @@ Object.defineProperty(e, "__esModule", { value: !0 }),
                 t > 0 ? (e += t + "S") : e.length <= 2 && (e += "0S")),
             e
         );
-    });
+    }));

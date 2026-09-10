@@ -26,7 +26,7 @@ var a = r(41851),
                         : new Date(e),
                 i = r.getFullYear() - a.getFullYear(),
                 n = r.getMonth() - a.getMonth();
-            return (n < 0 || (0 === n && r.getDate() < a.getDate())) && i--, i;
+            return ((n < 0 || (0 === n && r.getDate() < a.getDate())) && i--, i);
         }
     };
 let c = new d();
@@ -158,7 +158,7 @@ let m = [
         let r = y();
         return t.reduce((t, a) => {
             let i = v(b(e[a.key]), a, r);
-            return i && (t[a.key] = i), t;
+            return (i && (t[a.key] = i), t);
         }, {});
     },
     O = () => ({}),
@@ -216,7 +216,7 @@ let m = [
                     a = e.validationErrors;
                 if (!a?.[r]) return {};
                 let i = { ...a };
-                return delete i[r], { validationErrors: Object.keys(i).length > 0 ? i : void 0 };
+                return (delete i[r], { validationErrors: Object.keys(i).length > 0 ? i : void 0 });
             }),
             setOcrValidationErrors: (0, o.r)(({ context: e }) => ({ validationErrors: h(e.formData, p(e.config)) })),
             validateFormField: (0, o.r)(({ context: e, event: t }) => {
@@ -229,7 +229,7 @@ let m = [
                         return v(b(e[a.key]), a, i);
                     })(e.formData, r, p(e.config)),
                     i = { ...(e.validationErrors ?? {}) };
-                return a ? (i[r] = a) : delete i[r], { validationErrors: Object.keys(i).length > 0 ? i : void 0 };
+                return (a ? (i[r] = a) : delete i[r], { validationErrors: Object.keys(i).length > 0 ? i : void 0 });
             }),
             setError: (0, o.r)(({ event: e }) => ({ error: String(e.error) })),
             beginSecondIdOcrPhase: (0, o.r)(() => ({
@@ -366,7 +366,7 @@ function S({ actor: e, trackElementClicked: t }) {
             e.send({ type: "VALIDATE_FIELD", field: t });
         },
         continue() {
-            e.send({ type: "CONTINUE" }), t?.("continue");
+            (e.send({ type: "CONTINUE" }), t?.("continue"));
         },
         retry() {
             e.send({ type: "RETRY" });

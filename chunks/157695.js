@@ -12,7 +12,14 @@ let I = 30 * A.A.Millis.SECOND,
     p = null,
     T = !1;
 function m() {
-    (i = new Map()), (r = 0), (a = new Map()), (s = new Map()), (l = new Map()), (o = new Map()), (p = null), (T = !1);
+    ((i = new Map()),
+        (r = 0),
+        (a = new Map()),
+        (s = new Map()),
+        (l = new Map()),
+        (o = new Map()),
+        (p = null),
+        (T = !1));
 }
 function g(e, t) {
     (i = new Map(i)).set(e, t);
@@ -71,7 +78,7 @@ let N = new S(E.h, {
             provenanceMetadataSealed: I,
             fetchedAt: f,
         } = e;
-        (r = Date.now()),
+        ((r = Date.now()),
             g(d, !1),
             (s = new Map(s)),
             !0 === i && null == t && c?.decision_id != null
@@ -84,7 +91,7 @@ let N = new S(E.h, {
                   })
                 : s.delete(d),
             l.get(d)?.succeed(),
-            o.delete(d);
+            o.delete(d));
         let p = {
             creative: n ?? null,
             fetchedAt: f,
@@ -99,9 +106,9 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
-        (s = new Map(s)).delete(t), (r = Date.now()), g(t, !1);
+        ((s = new Map(s)).delete(t), (r = Date.now()), g(t, !1));
         let n = l.get(t);
-        null == n && ((n = new d.A(I, f)), l.set(t, n)), o.set(t, Date.now() + n.fail());
+        (null == n && ((n = new d.A(I, f)), l.set(t, n)), o.set(t, Date.now() + n.fail()));
     },
     QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
         let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e;
@@ -111,10 +118,10 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
         let { placement: t } = e;
-        (T = !0), g(t, !0);
+        ((T = !0), g(t, !0));
     },
     QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function (e) {
-        (T = !1), (p = Date.now()), g(e.placement, !1);
+        ((T = !1), (p = Date.now()), g(e.placement, !1));
         let t = {
             creative: null != e.questHomeHero ? { type: c.p.QUEST_HOME_HERO, questHomeHero: e.questHomeHero } : null,
             fetchedAt: e.fetchedAt,
@@ -129,6 +136,6 @@ let N = new S(E.h, {
     },
     QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
         let { placement: t } = e;
-        (T = !1), g(t, !1);
+        ((T = !1), g(t, !1));
     },
 });

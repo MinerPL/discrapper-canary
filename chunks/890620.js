@@ -9,5 +9,5 @@ function d(e) {
     (0, r.r)(() => o.setState({ hasUnsubmittedChanges: e }));
 }
 function c(e) {
-    (0, r.r)(() => o.setState({ shouldShowWarning: e })), e && a._.dispatch(s.jej.EMPHASIZE_NOTICE);
+    ((0, r.r)(() => o.setState({ shouldShowWarning: e })), e && a._.dispatch(s.jej.EMPHASIZE_NOTICE));
 }

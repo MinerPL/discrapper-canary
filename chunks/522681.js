@@ -23,25 +23,25 @@ var e,
     c,
     a = class {
         constructor(l = 1, t = 3e4) {
-            (this.pending = []),
+            ((this.pending = []),
                 (this.available = []),
                 (this.processing = new Set()),
                 (this.maxId = l - 1),
-                (this.acquireTimeoutMs = t);
+                (this.acquireTimeoutMs = t));
             for (let t = 0; t < l; t++) this.available.push(t);
         }
         async acquire() {
             if (this.available.length > 0) {
                 let l = this.available.shift();
-                return this.processing.add(l), l;
+                return (this.processing.add(l), l);
             }
             return new Promise((l, t) => {
                 let d = {
                     resolve: (t) => {
-                        clearTimeout(d.timer), this.processing.add(t), l(t);
+                        (clearTimeout(d.timer), this.processing.add(t), l(t));
                     },
                     reject: (l) => {
-                        clearTimeout(d.timer), t(l);
+                        (clearTimeout(d.timer), t(l));
                     },
                     timer: setTimeout(() => {
                         console.error(
@@ -62,7 +62,7 @@ var e,
         }
         reset() {
             let l = this.pending;
-            (this.pending = []), (this.available = []), (this.processing = new Set());
+            ((this.pending = []), (this.available = []), (this.processing = new Set()));
             for (let l = 0; l <= this.maxId; l++) this.available.push(l);
             for (let t of l) t.reject(Error("SemaphoreProvider reset: pending acquire cancelled"));
         }
@@ -89,7 +89,7 @@ async function b(l) {
     return new Uint8Array(await t.arrayBuffer());
 }
 async function m(l, t) {
-    return (window.wasmArrayBuffer = await b(t)), await l();
+    return ((window.wasmArrayBuffer = await b(t)), await l());
 }
 async function o(l) {
     return (
@@ -104,14 +104,14 @@ async function o(l) {
                         let t = await Z(l.glueCodeSimdPath ?? i(d));
                         window.Module = t;
                         let e = { wasmModule: await m(t, d), simdUsed: !0 };
-                        return (n = e), e;
+                        return ((n = e), e);
                     } catch (l) {
                         console.warn("[Incode SDK] SIMD WASM load failed, falling back to non-SIMD", l);
                     }
                 let e = await Z(l.glueCodePath);
                 window.Module = e;
                 let c = { wasmModule: await m(e, l.wasmPath), simdUsed: !1 };
-                return (n = c), c;
+                return ((n = c), c);
             } catch (l) {
                 throw ((s = null), l);
             }
@@ -142,11 +142,11 @@ async function W(l, t, d = !0, ...i) {
 }
 var G = class extends Error {
     constructor(l, t, d) {
-        super(l),
+        (super(l),
             (this.name = "WasmWebClientError"),
             (this.status = t),
             (this.statusCode = t),
-            (t > 0 || void 0 !== d) && (this.response = { status: t, data: d });
+            (t > 0 || void 0 !== d) && (this.response = { status: t, data: d }));
     }
 };
 let p = null,
@@ -178,7 +178,7 @@ async function X(l, t, d, i, e) {
 }
 async function r(l, t, d, i, e) {
     let c = V();
-    c.resetSessionState?.(), c.setDefaultHeaders?.(i), await W(M, () => c.createApi(l, t, e, d), !1);
+    (c.resetSessionState?.(), c.setDefaultHeaders?.(i), await W(M, () => c.createApi(l, t, e, d), !1));
     let a = c.getRequestResult(-1);
     if (a.hasError) throw new G(a.errorMessage || "WebClient handshake failed", a.statusCode, a.result);
 }
@@ -234,7 +234,7 @@ async function y(l, t, d, i, e, c, a, s = !1) {
                 })(n, e)
             );
         } finally {
-            n.clearOnUploadProgress?.(e), n.clearOnDownloadProgress?.(e);
+            (n.clearOnUploadProgress?.(e), n.clearOnDownloadProgress?.(e));
         }
     });
 }
@@ -248,7 +248,7 @@ function V() {
 }
 var L = class l {
     constructor() {
-        (this.versionsFile = null),
+        ((this.versionsFile = null),
             (this.modelsBuffers = null),
             (this.inputImageBuffer = null),
             (this.wasmModule = null),
@@ -265,10 +265,10 @@ var L = class l {
             (this.onDeviceMode_ = !1),
             (this.dsEnabled_ = !1),
             (this.wasmCallSemaphore = new a()),
-            (this.Module = null);
+            (this.Module = null));
     }
     async initialize(l, t, d, i, e, c, a) {
-        await this.freeResources(), (this.pipelines_ = a), (this.versionsFile = c);
+        (await this.freeResources(), (this.pipelines_ = a), (this.versionsFile = c));
         let { wasmModule: s, simdUsed: n } = await o({
             glueCodePath: d,
             glueCodeSimdPath: i || void 0,
@@ -298,7 +298,7 @@ var L = class l {
         );
     }
     static getInstance() {
-        return l.instance || (l.instance = new l()), l.instance;
+        return (l.instance || (l.instance = new l()), l.instance);
     }
     isInitialized() {
         return (
@@ -310,7 +310,7 @@ var L = class l {
         );
     }
     async allocateImageBuffers(l, t) {
-        this.checkWasmInitialization("Unable to allocate image buffers, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to allocate image buffers, cpp API hasn't been initialized"),
             (l &&
                 t &&
                 l == this.imageWidth_ &&
@@ -319,11 +319,11 @@ var L = class l {
                 l * t * 4 === this.inputImageBuffer.length) ||
                 ((this.imageWidth_ = l),
                 (this.imageHeight_ = t),
-                (this.inputImageBuffer = this.workflowApiUtilities.allocateInputImageBuffer(l, t, 4)));
+                (this.inputImageBuffer = this.workflowApiUtilities.allocateInputImageBuffer(l, t, 4))));
     }
     async handleDetectionCallAndUpdateState(l) {
-        this.checkWasmInitialization("Unable to update pipeline state, cpp API hasn't been initialized"),
-            this.workflowApiUtilities.handleDetectionCallAndUpdateState(this.pipelineTypeToWasmEnum(l));
+        (this.checkWasmInitialization("Unable to update pipeline state, cpp API hasn't been initialized"),
+            this.workflowApiUtilities.handleDetectionCallAndUpdateState(this.pipelineTypeToWasmEnum(l)));
     }
     ens(l) {
         return (
@@ -344,13 +344,13 @@ var L = class l {
         );
     }
     async analyzeFrame(l) {
-        this.checkWasmInitialization("Unable to analyze the frame, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to analyze the frame, cpp API hasn't been initialized"),
             await this.allocateImageBuffers(l.width, l.height),
             this.inputImageBuffer.set(l.data),
-            this.utilityApi.analyzeFrame();
+            this.utilityApi.analyzeFrame());
     }
     async freeResources() {
-        (this.versionsFile = null),
+        ((this.versionsFile = null),
             (this.modelsBuffers = null),
             (this.inputImageBuffer = null),
             (this.imageWidth_ = null),
@@ -372,11 +372,11 @@ var L = class l {
             this.webApi && "function" == typeof this.webApi.delete && this.webApi.delete(),
             (this.webApi = null),
             (this.wasmModule = null),
-            (this.isInitialized_ = !1);
+            (this.isInitialized_ = !1));
     }
     resetPipeline(l) {
-        this.checkWasmInitialization("Unable to reset pipeline, cpp API hasn't been initialized"),
-            this.workflowApiUtilities.resetWorkflow(this.pipelineTypeToWasmEnum(l));
+        (this.checkWasmInitialization("Unable to reset pipeline, cpp API hasn't been initialized"),
+            this.workflowApiUtilities.resetWorkflow(this.pipelineTypeToWasmEnum(l)));
     }
     resetAllPipelines() {
         for (let [l, t] of (this.checkWasmInitialization("Unable to reset pipelines, cpp API hasn't been initialized"),
@@ -384,11 +384,11 @@ var L = class l {
             this.resetPipeline(l);
     }
     resetOther() {
-        this.checkWasmInitialization("Unable to reset other states, cpp API hasn't been initialized"),
-            this.utilityApi.resetOther();
+        (this.checkWasmInitialization("Unable to reset other states, cpp API hasn't been initialized"),
+            this.utilityApi.resetOther());
     }
     reset() {
-        this.resetAllPipelines(), this.resetOther();
+        (this.resetAllPipelines(), this.resetOther());
     }
     async process(l, t) {
         if (
@@ -416,7 +416,7 @@ var L = class l {
             null === this.inputImageBuffer)
         )
             throw Error("Unable to process the image, buffers haven't been allocated!");
-        return this.inputImageBuffer.set(l.data), this.idCaptureWasmApi.runIdCapture();
+        return (this.inputImageBuffer.set(l.data), this.idCaptureWasmApi.runIdCapture());
     }
     async runSelfieCapture(l) {
         if (
@@ -424,14 +424,14 @@ var L = class l {
             null === this.inputImageBuffer)
         )
             throw Error("Unable to process the image, buffers haven't been allocated!");
-        return this.inputImageBuffer.set(l.data), this.faceProcessingWasmApi.runSelfieCapture();
+        return (this.inputImageBuffer.set(l.data), this.faceProcessingWasmApi.runSelfieCapture());
     }
     async setFacePositionConstraints(l, t, d, i, e) {
-        this.checkWasmInitialization("Unable to set face position constraints, cpp API hasn't been initialized"),
-            this.faceProcessingWasmApi.setFacePositionConstraints(this.pipelineTypeToWasmEnum(l), t, d, i, e);
+        (this.checkWasmInitialization("Unable to set face position constraints, cpp API hasn't been initialized"),
+            this.faceProcessingWasmApi.setFacePositionConstraints(this.pipelineTypeToWasmEnum(l), t, d, i, e));
     }
     async setFaceDetectionThresholds(l, t, d, i, e, c, a, s, n, Z, b) {
-        this.checkWasmInitialization("Unable to set face detection thresholds, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to set face detection thresholds, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFaceProcessingThresholds(
                 this.pipelineTypeToWasmEnum(l),
                 t,
@@ -444,22 +444,22 @@ var L = class l {
                 n,
                 Z,
                 b,
-            );
+            ));
     }
     async setFaceAttributesThresholds(l, t, d, i, e) {
-        this.checkWasmInitialization("Unable to set face attributes thresholds, cpp API hasn't been initialized"),
-            this.faceProcessingWasmApi.setFaceAttributesThresholds(this.pipelineTypeToWasmEnum(l), t, d, i, e);
+        (this.checkWasmInitialization("Unable to set face attributes thresholds, cpp API hasn't been initialized"),
+            this.faceProcessingWasmApi.setFaceAttributesThresholds(this.pipelineTypeToWasmEnum(l), t, d, i, e));
     }
     async setFaceChecksEnabled(l, t, d, i, e, c) {
-        this.checkWasmInitialization("Unable to set face checks enabled flags, cpp API hasn't been initialized"),
-            this.faceProcessingWasmApi.setFaceChecksEnabled(this.pipelineTypeToWasmEnum(l), t, d, i, e, c);
+        (this.checkWasmInitialization("Unable to set face checks enabled flags, cpp API hasn't been initialized"),
+            this.faceProcessingWasmApi.setFaceChecksEnabled(this.pipelineTypeToWasmEnum(l), t, d, i, e, c));
     }
     async setFaceDetectionMode(l, t) {
-        this.checkWasmInitialization("Unable to set face detection mode, cpp API hasn't been initialized"),
-            this.faceProcessingWasmApi.setFaceProcessingMode(this.pipelineTypeToWasmEnum(l), t);
+        (this.checkWasmInitialization("Unable to set face detection mode, cpp API hasn't been initialized"),
+            this.faceProcessingWasmApi.setFaceProcessingMode(this.pipelineTypeToWasmEnum(l), t));
     }
     async setFaceDetectionCallbacks(l, t, d, i, e, c, a, s, n, Z, b, m, o, u, h, W, G, p) {
-        this.checkWasmInitialization("Unable to set face detection callbacks, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to set face detection callbacks, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFaceProcessingCallbacks(
                 this.pipelineTypeToWasmEnum(l),
                 t,
@@ -479,14 +479,14 @@ var L = class l {
                 W,
                 G,
                 p,
-            );
+            ));
     }
     async setIdCaptureThresholds(l, t, d, i, e, c, a, s, n, Z) {
-        this.checkWasmInitialization("Unable to set thresholds, cpp API hasn't been initialized"),
-            this.idCaptureWasmApi.setIdCaptureThresholds(this.pipelineTypeToWasmEnum(l), t, d, i, e, c, a, s, n, Z);
+        (this.checkWasmInitialization("Unable to set thresholds, cpp API hasn't been initialized"),
+            this.idCaptureWasmApi.setIdCaptureThresholds(this.pipelineTypeToWasmEnum(l), t, d, i, e, c, a, s, n, Z));
     }
     async setIdCaptureCallbacks(l, t, d, i, e, c, a, s, n, Z, b, m, o, u) {
-        this.checkWasmInitialization("Unable to set callbacks, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to set callbacks, cpp API hasn't been initialized"),
             this.idCaptureWasmApi.setIdCaptureCallbacks(
                 this.pipelineTypeToWasmEnum(l),
                 t,
@@ -502,10 +502,10 @@ var L = class l {
                 m,
                 o,
                 u,
-            );
+            ));
     }
     async setIdCaptureGeometryParams(l, t, d, i, e, c, a, s, n, Z, b, m, o) {
-        this.checkWasmInitialization("Unable to set geometry params, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to set geometry params, cpp API hasn't been initialized"),
             this.idCaptureWasmApi.setIdCaptureGeometryParams(
                 this.pipelineTypeToWasmEnum(l),
                 t,
@@ -520,18 +520,18 @@ var L = class l {
                 b,
                 m,
                 o,
-            );
+            ));
     }
     async setIdCaptureConfigParams(l, t, d, i, e, c, a, s, n) {
-        this.checkWasmInitialization("Unable to set config params, cpp API hasn't been initialized"),
-            this.idCaptureWasmApi.setIdCaptureConfigParams(this.pipelineTypeToWasmEnum(l), t, d, i, e, c, s, n);
+        (this.checkWasmInitialization("Unable to set config params, cpp API hasn't been initialized"),
+            this.idCaptureWasmApi.setIdCaptureConfigParams(this.pipelineTypeToWasmEnum(l), t, d, i, e, c, s, n));
     }
     setIdCaptureModelType(l, t) {
-        this.checkWasmInitialization("Unable to set model type, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to set model type, cpp API hasn't been initialized"),
             this.idCaptureWasmApi.setIdCaptureModelType(
                 this.pipelineTypeToWasmEnum(l),
                 this.IdCaptureModelTypeToWasmEnum(t),
-            );
+            ));
     }
     IdPerspectiveTransform(l, t) {
         return (
@@ -559,9 +559,9 @@ var L = class l {
                     d.set(l, t);
                 }
                 let t = d.get(l);
-                s.push_back(t.byteLength), a.push(t);
+                (s.push_back(t.byteLength), a.push(t));
             }
-            l.set(c, s), t.set(c, a);
+            (l.set(c, s), t.set(c, a));
         }
         for (let [d, i] of ((this.modelsBuffers = this.workflowApiUtilities.allocateModelsBuffers(l)), t)) {
             let l = this.modelsBuffers?.get(d);
@@ -573,13 +573,13 @@ var L = class l {
         }
     }
     async initializePipelines() {
-        this.checkWasmInitialization("Unable to initialize pipelines, cpp API hasn't been initialized"),
+        (this.checkWasmInitialization("Unable to initialize pipelines, cpp API hasn't been initialized"),
             this.modelsBuffers || (await this.loadModels()),
-            this.workflowApiUtilities.initializeWorkflows();
+            this.workflowApiUtilities.initializeWorkflows());
     }
     async setProductionMode(l) {
-        this.checkWasmInitialization("Unable to set production mode, cpp API hasn't been initialized"),
-            this.utilityApi.setProductionMode(l);
+        (this.checkWasmInitialization("Unable to set production mode, cpp API hasn't been initialized"),
+            this.utilityApi.setProductionMode(l));
     }
     getPipelineState() {
         return (
@@ -594,35 +594,35 @@ var L = class l {
         );
     }
     setSdkVersion(l) {
-        this.checkWasmInitialization("Unable to set sdk version, cpp API hasn't been initialized"),
-            this.utilityApi.setSdkVersion(l);
+        (this.checkWasmInitialization("Unable to set sdk version, cpp API hasn't been initialized"),
+            this.utilityApi.setSdkVersion(l));
     }
     setSdkPlatform(l) {
-        this.checkWasmInitialization("Unable to set device type, cpp API hasn't been initialized"),
-            this.utilityApi.setSdkPlatform(l);
+        (this.checkWasmInitialization("Unable to set device type, cpp API hasn't been initialized"),
+            this.utilityApi.setSdkPlatform(l));
     }
     setDeviceInfo(l, t = !0) {
-        this.checkWasmInitialization("Unable to set device info, cpp API hasn't been initialized"),
-            this.utilityApi.setDeviceInfo(l, t);
+        (this.checkWasmInitialization("Unable to set device info, cpp API hasn't been initialized"),
+            this.utilityApi.setDeviceInfo(l, t));
     }
     setBrowserInfo(l, t = !0) {
-        this.checkWasmInitialization("Unable to set browser info, cpp API hasn't been initialized"),
-            this.utilityApi.setBrowserInfo(l, t);
+        (this.checkWasmInitialization("Unable to set browser info, cpp API hasn't been initialized"),
+            this.utilityApi.setBrowserInfo(l, t));
     }
     setCameraInfo(l, t = !0) {
-        this.checkWasmInitialization("Unable to set camera info, cpp API hasn't been initialized"),
-            this.utilityApi.setCameraInfo(l, t);
+        (this.checkWasmInitialization("Unable to set camera info, cpp API hasn't been initialized"),
+            this.utilityApi.setCameraInfo(l, t));
     }
     setZc(l) {
-        this.checkWasmInitialization("Unable to set zc, cpp API hasn't been initialized"), this.utilityApi.setZc(l);
+        (this.checkWasmInitialization("Unable to set zc, cpp API hasn't been initialized"), this.utilityApi.setZc(l));
     }
     setMotionStatus(l) {
-        this.checkWasmInitialization("Unable to set motion status, cpp API hasn't been initialized"),
-            this.utilityApi.setMotionStatus(l);
+        (this.checkWasmInitialization("Unable to set motion status, cpp API hasn't been initialized"),
+            this.utilityApi.setMotionStatus(l));
     }
     setMetadataField(l, t) {
-        this.checkWasmInitialization("Unable to set metadata field, cpp API hasn't been initialized"),
-            this.utilityApi.setMetadataField(l, t);
+        (this.checkWasmInitialization("Unable to set metadata field, cpp API hasn't been initialized"),
+            this.utilityApi.setMetadataField(l, t));
     }
     setInspectorOpened(l) {
         this.inspectorOpened_ = l;
@@ -631,11 +631,11 @@ var L = class l {
         return this.inspectorOpened_;
     }
     setBackgroundMode(l) {
-        this.checkWasmInitialization("Unable to set background mode, cpp API hasn't been initialized"),
-            this.utilityApi.setBackgroundMode(l);
+        (this.checkWasmInitialization("Unable to set background mode, cpp API hasn't been initialized"),
+            this.utilityApi.setBackgroundMode(l));
     }
     setOnDeviceMode(l) {
-        (this.onDeviceMode_ = l), null != this.utilityApi && this.utilityApi.setOnDeviceMode(l);
+        ((this.onDeviceMode_ = l), null != this.utilityApi && this.utilityApi.setOnDeviceMode(l));
     }
     setDsEnabled(l) {
         this.dsEnabled_ = l;
@@ -654,38 +654,38 @@ var L = class l {
         );
     }
     async prc() {
-        this.checkWasmInitialization("Unable to prc, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.prc(this.dsEnabled_, !1), !0);
+        (this.checkWasmInitialization("Unable to prc, cpp API hasn't been initialized"),
+            await W(this.wasmCallSemaphore, () => this.utilityApi.prc(this.dsEnabled_, !1), !0));
     }
     async poc(l) {
-        this.checkWasmInitialization("Unable to poc, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.poc(this.dsEnabled_, l), !0);
+        (this.checkWasmInitialization("Unable to poc, cpp API hasn't been initialized"),
+            await W(this.wasmCallSemaphore, () => this.utilityApi.poc(this.dsEnabled_, l), !0));
     }
     async rsp() {
-        this.checkWasmInitialization("Unable to rsp, cpp API hasn't been initialized"),
-            await W(this.wasmCallSemaphore, () => this.utilityApi.rsp(this.dsEnabled_), !0);
+        (this.checkWasmInitialization("Unable to rsp, cpp API hasn't been initialized"),
+            await W(this.wasmCallSemaphore, () => this.utilityApi.rsp(this.dsEnabled_), !0));
     }
     ssl() {
-        this.checkWasmInitialization("Unable to ssl, cpp API hasn't been initialized"),
-            this.utilityApi.ssl(this.dsEnabled_);
+        (this.checkWasmInitialization("Unable to ssl, cpp API hasn't been initialized"),
+            this.utilityApi.ssl(this.dsEnabled_));
     }
     stl() {
-        this.checkWasmInitialization("Unable to stl, cpp API hasn't been initialized"), this.utilityApi.stl();
+        (this.checkWasmInitialization("Unable to stl, cpp API hasn't been initialized"), this.utilityApi.stl());
     }
     osv() {
-        this.checkWasmInitialization("Unable to set sensor beginning timestamp, cpp API hasn't been initialized"),
-            this.utilityApi.osv();
+        (this.checkWasmInitialization("Unable to set sensor beginning timestamp, cpp API hasn't been initialized"),
+            this.utilityApi.osv());
     }
     oev() {
-        this.checkWasmInitialization("Unable to set sensor ending timestamp, cpp API hasn't been initialized"),
-            this.utilityApi.oev();
+        (this.checkWasmInitialization("Unable to set sensor ending timestamp, cpp API hasn't been initialized"),
+            this.utilityApi.oev());
     }
     ckvcks(l) {
-        this.checkWasmInitialization("Unable to ckvcks, cpp API hasn't been initialized"), this.utilityApi.ckvcks(l);
+        (this.checkWasmInitialization("Unable to ckvcks, cpp API hasn't been initialized"), this.utilityApi.ckvcks(l));
     }
     processPhoto(l) {
-        this.checkWasmInitialization("Unable to process photo, cpp API hasn't been initialized"),
-            this.faceProcessingWasmApi.processPhoto(l);
+        (this.checkWasmInitialization("Unable to process photo, cpp API hasn't been initialized"),
+            this.faceProcessingWasmApi.processPhoto(l));
     }
     postFaceResults(l) {
         return (
@@ -846,7 +846,7 @@ async function U(l) {
             (R = (async () => {
                 try {
                     let l = j(d, x.modelsBasePath ?? D(x.wasmPath), x.pipelineModels);
-                    await L.initialize(
+                    (await L.initialize(
                         x.wasmPath,
                         x.wasmSimdPath ?? x.wasmPath,
                         x.glueCodePath,
@@ -860,7 +860,7 @@ async function U(l) {
                         (w = "ready"),
                         (C = d),
                         (x = { ...x, pipelines: d }),
-                        (R = null);
+                        (R = null));
                 } catch (l) {
                     throw ((w = "error"), (S = l instanceof Error ? l : Error(String(l))), (R = null), (g = []), S);
                 }
@@ -874,7 +874,7 @@ async function U(l) {
         (R = (async () => {
             try {
                 let i = j(t, d, l.pipelineModels);
-                void 0 !== l.onDeviceMode && L.setOnDeviceMode(l.onDeviceMode),
+                (void 0 !== l.onDeviceMode && L.setOnDeviceMode(l.onDeviceMode),
                     await L.initialize(
                         l.wasmPath,
                         l.wasmSimdPath ?? l.wasmPath,
@@ -889,7 +889,7 @@ async function U(l) {
                     (w = "ready"),
                     (C = [...t]),
                     (x = { ...l, pipelines: t }),
-                    (R = null);
+                    (R = null));
             } catch (l) {
                 throw ((w = "error"), (S = l instanceof Error ? l : Error(String(l))), (R = null), (g = []), S);
             }
@@ -901,7 +901,7 @@ function F(l) {
 }
 var O = class {
         constructor(l) {
-            (this._isInitialized = !1), (this.pipelineType = l);
+            ((this._isInitialized = !1), (this.pipelineType = l));
         }
         get initialized() {
             return this._isInitialized;
@@ -952,7 +952,7 @@ var O = class {
             this._isInitialized && void 0 !== this.pipelineType && L.resetPipeline(this.pipelineType);
         }
         async dispose() {
-            this.reset(), (this._isInitialized = !1);
+            (this.reset(), (this._isInitialized = !1));
         }
     },
     J = class l extends O {
@@ -962,12 +962,12 @@ var O = class {
                 : (l.initPromise ||
                       (l.initPromise = (async () => {
                           let t = new l();
-                          return await t.initializeBase({}, "selfie"), (l.instance = t), t;
+                          return (await t.initializeBase({}, "selfie"), (l.instance = t), t);
                       })()),
                   l.initPromise);
         }
         static resetInstance() {
-            (l.instance = void 0), (l.initPromise = void 0);
+            ((l.instance = void 0), (l.initPromise = void 0));
         }
         constructor() {
             super(void 0);
@@ -981,87 +981,87 @@ var O = class {
             throw Error("WasmUtilProvider does not support frame processing. Use encryptImage() instead.");
         }
         encryptImage(l) {
-            return this.ensureInitialized(), L.ens(l);
+            return (this.ensureInitialized(), L.ens(l));
         }
         setSdkVersion(l) {
-            this.ensureInitialized(), L.setSdkVersion(l);
+            (this.ensureInitialized(), L.setSdkVersion(l));
         }
         setSdkPlatform(l) {
-            this.ensureInitialized(), L.setSdkPlatform(l);
+            (this.ensureInitialized(), L.setSdkPlatform(l));
         }
         setDeviceInfo(l, t = !0) {
-            this.ensureInitialized(), L.setDeviceInfo(l, t);
+            (this.ensureInitialized(), L.setDeviceInfo(l, t));
         }
         setBrowserInfo(l, t = !0) {
-            this.ensureInitialized(), L.setBrowserInfo(l, t);
+            (this.ensureInitialized(), L.setBrowserInfo(l, t));
         }
         setCameraInfo(l, t = !0) {
-            this.ensureInitialized(), L.setCameraInfo(l, t);
+            (this.ensureInitialized(), L.setCameraInfo(l, t));
         }
         setMotionStatus(l) {
-            this.ensureInitialized(), L.setMotionStatus(l);
+            (this.ensureInitialized(), L.setMotionStatus(l));
         }
         setBackgroundMode(l) {
-            this.ensureInitialized(), L.setBackgroundMode(l);
+            (this.ensureInitialized(), L.setBackgroundMode(l));
         }
         setOnDeviceMode(l) {
-            this.ensureInitialized(), L.setOnDeviceMode(l);
+            (this.ensureInitialized(), L.setOnDeviceMode(l));
         }
         setZc(l) {
-            this.ensureInitialized(), L.setZc(l);
+            (this.ensureInitialized(), L.setZc(l));
         }
         setInspectorOpened(l) {
-            this.ensureInitialized(), L.setInspectorOpened(l);
+            (this.ensureInitialized(), L.setInspectorOpened(l));
         }
         getInspectorOpened() {
             return L.getInspectorOpened();
         }
         async setProductionMode(l) {
-            this.ensureInitialized(), await L.setProductionMode(l);
+            (this.ensureInitialized(), await L.setProductionMode(l));
         }
         getMetadata() {
-            return this.ensureInitialized(), L.getMetadata();
+            return (this.ensureInitialized(), L.getMetadata());
         }
         async analyzeFrame(l) {
-            this.ensureInitialized(), await L.analyzeFrame(l);
+            (this.ensureInitialized(), await L.analyzeFrame(l));
         }
         getCheck() {
-            return this.ensureInitialized(), L.getCheck();
+            return (this.ensureInitialized(), L.getCheck());
         }
         getPipelineState() {
-            return this.ensureInitialized(), L.getPipelineState();
+            return (this.ensureInitialized(), L.getPipelineState());
         }
         estimatePerformance() {
-            return this.ensureInitialized(), L.estimatePerformance();
+            return (this.ensureInitialized(), L.estimatePerformance());
         }
         isVirtualCamera(l) {
-            return this.ensureInitialized(), L.isVirtualCamera(l);
+            return (this.ensureInitialized(), L.isVirtualCamera(l));
         }
         async prc() {
-            this.ensureInitialized(), await L.prc();
+            (this.ensureInitialized(), await L.prc());
         }
         async poc(l) {
-            this.ensureInitialized(), await L.poc(l);
+            (this.ensureInitialized(), await L.poc(l));
         }
         async rsp() {
-            this.ensureInitialized(), await L.rsp();
+            (this.ensureInitialized(), await L.rsp());
         }
         ssl() {
-            this.ensureInitialized(), L.ssl();
+            (this.ensureInitialized(), L.ssl());
         }
         stl() {
-            this.ensureInitialized(), L.stl();
+            (this.ensureInitialized(), L.stl());
         }
         osv() {
-            this.ensureInitialized(), L.osv();
+            (this.ensureInitialized(), L.osv());
         }
         oev() {
-            this.ensureInitialized(), L.oev();
+            (this.ensureInitialized(), L.oev());
         }
         ckvcks(l) {
-            this.ensureInitialized(), L.ckvcks(l);
+            (this.ensureInitialized(), L.ckvcks(l));
         }
         async getVersions() {
-            return this.ensureInitialized(), L.getVersions();
+            return (this.ensureInitialized(), L.getVersions());
         }
     };

@@ -7,7 +7,7 @@ class l extends i.Ay.PersistedStore {
     static displayName = "DerivedQosDataStore";
     static persistKey = "DerivedQosDataStore";
     initialize(e) {
-        this.waitFor(a.default), (s = e ?? {});
+        (this.waitFor(a.default), (s = e ?? {}));
     }
     getState() {
         return s;
@@ -29,9 +29,9 @@ let o = new l(r.h, {
     },
     LOGOUT: function (e) {
         if (e.isSwitchingAccount || null == e.userId) return !1;
-        delete s[e.userId], e.userId;
+        (delete s[e.userId], e.userId);
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-        delete s[e.userId], e.userId;
+        (delete s[e.userId], e.userId);
     },
 });

@@ -1,4 +1,4 @@
-r.d(t, { nY: () => b, dL: () => _ }), r(321073);
+(r.d(t, { nY: () => b, dL: () => _ }), r(321073));
 var n = r(582128),
     a = r(21574);
 let l = Symbol.for("pass");
@@ -7,7 +7,7 @@ var i = r(707373),
     s = r(944181);
 function o(e) {
     let t = e;
-    for (; null != t && t !== document.body; ) {
+    for (; null != t && t !== document.body;) {
         if (t?.getAttribute("aria-hidden") === "true") return !0;
         t = t.parentElement;
     }
@@ -187,7 +187,7 @@ let c = Array.from(s.aria.keys()),
             selector: `button, a, ${Array.from(s.roles.entries())
                 .reduce((e, t) => {
                     let [r, n] = t;
-                    return !0 === n.childrenPresentational && e.push(`[role="${r}"]`), e;
+                    return (!0 === n.childrenPresentational && e.push(`[role="${r}"]`), e);
                 }, [])
                 .join(", ")}`,
             tags: [],
@@ -199,7 +199,7 @@ let c = Array.from(s.aria.keys()),
                 return !(function (e) {
                     let t = document.createNodeIterator(e, NodeFilter.SHOW_ELEMENT),
                         r = t.nextNode();
-                    for (; null !== r; ) {
+                    for (; null !== r;) {
                         if (
                             r !== e &&
                             (function (e) {
@@ -260,13 +260,13 @@ let c = Array.from(s.aria.keys()),
     y = () => {},
     x = document.body;
 function k() {
-    (v = 0), (w = 0), (A = null), ($ = { hash: 0, violations: new Map() });
+    ((v = 0), (w = 0), (A = null), ($ = { hash: 0, violations: new Map() }));
 }
 function I() {
     p = requestIdleCallback(N);
 }
 function E() {
-    (A = null), (w = 0), v < h.length - 1 ? ((v += 1), I()) : (y($), k());
+    ((A = null), (w = 0), v < h.length - 1 ? ((v += 1), I()) : (y($), k()));
 }
 function N() {
     let e = h[v];
@@ -277,7 +277,7 @@ function N() {
         return E();
     let t = performance.now() + 16,
         r = { includeContinuous: !0 };
-    for (; w < A.length && !(navigator.scheduling.isInputPending(r) || performance.now() >= t); ) {
+    for (; w < A.length && !(navigator.scheduling.isInputPending(r) || performance.now() >= t);) {
         let t = A[w++],
             r = e.check(t);
         if (r !== l) {
@@ -288,7 +288,7 @@ function N() {
                             ? (function (e) {
                                   let t = "",
                                       r = e;
-                                  for (; null != r; ) (t += r.className), (r = r.parentElement);
+                                  for (; null != r;) ((t += r.className), (r = r.parentElement));
                                   return L(t);
                               })(t)
                             : n.join("\n")
@@ -300,7 +300,7 @@ function N() {
                 s = $.violations.get(e.id) ?? { rule: e, instances: new Map() },
                 o = s.instances.get(u) ?? [],
                 c = { element: t, message: r, trace: n ?? [], hash: i };
-            o.push(c), s.instances.set(u, o), $.violations.set(e.id, s);
+            (o.push(c), s.instances.set(u, o), $.violations.set(e.id, s));
         }
     }
     if (w < A.length - 1) return I();
@@ -315,26 +315,26 @@ let M = (e) => {
 };
 function _(e, t) {
     let r = (0, n.useRef)(t);
-    (0, n.useLayoutEffect)(() => {
+    ((0, n.useLayoutEffect)(() => {
         r.current = t;
     }),
         (0, n.useLayoutEffect)(() => {
             if (m && null != e) {
                 let t;
-                (y = r.current), (x = e);
+                ((y = r.current), (x = e));
                 let n = ((t = new MutationObserver(M)).observe(e, { attributes: !0, childList: !0, subtree: !0 }), t);
                 return () => {
-                    (y = () => {}), n.disconnect();
+                    ((y = () => {}), n.disconnect());
                 };
             }
-        }, [e]);
+        }, [e]));
 }
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         r = 0xdeadbeef ^ t,
         n = 0x41c6ce57 ^ t;
     for (let t = 0, a; t < e.length; t++)
-        (r = Math.imul(r ^ (a = e.charCodeAt(t)), 0x9e3779b1)), (n = Math.imul(n ^ a, 0x5f356495));
+        ((r = Math.imul(r ^ (a = e.charCodeAt(t)), 0x9e3779b1)), (n = Math.imul(n ^ a, 0x5f356495)));
     return (
         (r = Math.imul(r ^ (r >>> 16), 0x85ebca6b) ^ Math.imul(n ^ (n >>> 13), 0xc2b2ae35)),
         0x100000000 * (2097151 & (n = Math.imul(n ^ (n >>> 16), 0x85ebca6b) ^ Math.imul(r ^ (r >>> 13), 0xc2b2ae35))) +

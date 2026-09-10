@@ -9,7 +9,7 @@ function o(t) {
         o = c.get(e);
     if (null == o || o.location !== n || o.sectionName !== a) {
         let t = new Map(c);
-        t.set(e, { location: n, sectionName: a }), (0, i.r)(() => s.setState({ commandAnalyticsContext: t }));
+        (t.set(e, { location: n, sectionName: a }), (0, i.r)(() => s.setState({ commandAnalyticsContext: t })));
     }
 }
 function l(t) {
@@ -20,6 +20,6 @@ function p(t) {
     let { commandAnalyticsContext: e } = s.getState();
     if (e.has(t)) {
         let n = new Map(e);
-        n.delete(t), (0, i.r)(() => s.setState({ commandAnalyticsContext: n }));
+        (n.delete(t), (0, i.r)(() => s.setState({ commandAnalyticsContext: n })));
     }
 }

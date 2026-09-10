@@ -43,7 +43,7 @@ class m {
         hasInitialPaymentSourceSeed: o,
         hasAddedPaymentSourceThisSession: u,
     }) {
-        (this.checkoutPaymentSources = e),
+        ((this.checkoutPaymentSources = e),
             (this.isReady = i),
             (this.pendingPaymentSourceId = r),
             (this.selectedPaymentSourceId = a),
@@ -52,7 +52,7 @@ class m {
             (this.giftCardWallet = l),
             (this.giftCardsEnabled = s),
             (this.hasInitialPaymentSourceSeed = o),
-            (this.hasAddedPaymentSourceThisSession = u);
+            (this.hasAddedPaymentSourceThisSession = u));
     }
     get hasPaymentSourcesFromCheckoutStore() {
         return this.isReady && this.checkoutPaymentSources.length > 0;
@@ -216,7 +216,7 @@ function S(e) {
             }),
             [i, P, S, v, E, I, a, y, A, g],
         );
-    (t = l.useRef(!1)),
+    ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(j), [j])),
         l.useEffect(() => {
             let { shouldSet: e, initialPaymentSourceId: l } = n.checkAndResolveInitialPaymentSourceId({
@@ -229,7 +229,7 @@ function S(e) {
                 hasCheckedInitialPaymentSourceRef: t,
             });
             e && o(l);
-        }, [n, o]);
+        }, [n, o]));
     let R = l.useCallback(
             (e) => {
                 o(null != e ? e.id : null);
@@ -239,7 +239,7 @@ function S(e) {
         M = l.useCallback(
             (e) => {
                 if (e && null != v) {
-                    a !== v.id && x(a ?? null), o(v.id);
+                    (a !== v.id && x(a ?? null), o(v.id));
                     return;
                 }
                 o(N);

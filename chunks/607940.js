@@ -44,7 +44,7 @@ let C = new u.J(
 function F(t) {
     for (let n of (C.set(t.id, t), t.subscription_listings ?? [])) {
         var i;
-        (i = n), E.set(i.id, i);
+        ((i = n), E.set(i.id, i));
     }
 }
 class A extends s.il {
@@ -57,7 +57,7 @@ class A extends s.il {
     }
     getSubscriptionGroupListingForSubscriptionListing(t) {
         let i = C.values(c(t));
-        return r()(i.length <= 1, "Found multiple group listings for listing"), i[0];
+        return (r()(i.length <= 1, "Found multiple group listings for listing"), i[0]);
     }
     getSubscriptionListing(t) {
         return E.get(t);
@@ -70,7 +70,7 @@ class A extends s.il {
     }
     getSubscriptionListingForPlan(t) {
         let i = E.values(`plan:${t}`);
-        return r()(i.length <= 1, "Found multiple listings for plan"), i[0];
+        return (r()(i.length <= 1, "Found multiple listings for plan"), i[0]);
     }
     getApplicationEntitlementsForGuild(t, i) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -83,7 +83,7 @@ class A extends s.il {
 }
 let L = new A(o.h, {
     LOGOUT: function () {
-        C.clear(), E.clear(), d.clear(), (g = {}), (N = {});
+        (C.clear(), E.clear(), d.clear(), (g = {}), (N = {}));
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (t) {
         let { applicationId: i, groupListingId: n } = t;
@@ -93,7 +93,7 @@ let L = new A(o.h, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (t) {
         let { applicationId: i, groupListing: n } = t;
-        (g[i] = 2), F(n);
+        ((g[i] = 2), F(n));
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (t) {
         let { applicationId: i } = t;
@@ -105,11 +105,11 @@ let L = new A(o.h, {
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(t) {
         let { guildId: i, entitlements: n } = t;
-        (N[i] = 2),
+        ((N[i] = 2),
             n.forEach((t) => {
                 let i = S.A.createFromServer(t);
                 d.set(i.id, i);
-            });
+            }));
     },
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(t) {
         let { guildId: i } = t;

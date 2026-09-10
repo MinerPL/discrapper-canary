@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, {
+(n.d(t, {
     EL: () => m,
     JK: () => S,
     MX: () => L,
@@ -17,7 +17,7 @@ n.d(t, {
     n(323874),
     n(14289),
     n(35956),
-    n(321073);
+    n(321073));
 var s = n(830845),
     l = n(626584),
     o = n(625494),
@@ -39,7 +39,7 @@ function h() {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
-    return n(712687).A.close(), !0;
+    return (n(712687).A.close(), !0);
 }
 function I(e, t) {
     return (
@@ -61,17 +61,17 @@ function p(e, t) {
     u.log(`transitionTo - Transitioning to ${e}`);
     let o = t?.source,
         d = t?.sourceLocationStack;
-    (n = i.location).pathname === l.pathname && n.search === f(l.search, "?") && n.hash === f(l.hash, "#")
+    ((n = i.location).pathname === l.pathname && n.search === f(l.search, "?") && n.hash === f(l.hash, "#")
         ? i.replace(l)
         : null == t
           ? i.push(e)
           : i.push(l),
         (r = o),
-        (a = d);
+        (a = d));
 }
 function T(e, t, n, i) {
-    u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
-        p(c.BVt.CHANNEL(e, t, n), i);
+    (u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
+        p(c.BVt.CHANNEL(e, t, n), i));
 }
 function m() {
     return null != r && d.n.has(r);
@@ -90,7 +90,7 @@ function C() {
     return a;
 }
 function O(e) {
-    return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
+    return (null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF));
 }
 function R(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;

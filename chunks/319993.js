@@ -50,7 +50,7 @@ function B(e) {
         r = s.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await T.A.joinGuild(t), T.A.transitionToGuildSync(t);
+                    (await T.A.joinGuild(t), T.A.transitionToGuildSync(t));
                 } catch {}
         }, [n, t]);
     return l === G.GET_NITRO
@@ -95,7 +95,7 @@ function W(e) {
                     C(e);
                 })
                 .finally(() => {
-                    _(!1), f();
+                    (_(!1), f());
                 }));
     }, [f, y, a.guildId, a.soundId]);
     let { buttonType: j, description: T } =
@@ -207,7 +207,7 @@ function z() {
             volume: e,
             onVolumeChange: s.useCallback((e) => {
                 let n = (0, y.w)(e);
-                t(n), N.HO.updateSetting(n);
+                (t(n), N.HO.updateSetting(n));
             }, []),
         };
     })();
@@ -278,7 +278,7 @@ function q(e) {
         [h, m] = s.useState(String(Date.now())),
         f = s.useCallback(
             (e) => {
-                e.stopPropagation(), d(!u);
+                (e.stopPropagation(), d(!u));
             },
             [u],
         ),
@@ -287,7 +287,7 @@ function q(e) {
         }, []),
         A = s.useRef(null);
     s.useEffect(() => {
-        u ? A.current?.focus() : A.current?.blur(), a?.(u);
+        (u ? A.current?.focus() : A.current?.blur(), a?.(u));
     }, [u, a]);
     let C = !u;
     return (0, i.jsx)(g.Y, {

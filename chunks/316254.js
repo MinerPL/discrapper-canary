@@ -34,7 +34,7 @@ function v(e) {
         C = r.useCallback(() => {
             if ((0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement)) {
                 let { selectionStart: e, selectionEnd: t, value: n } = l;
-                (l.value = ""), (l.value = n), "email" !== l.type && ((l.selectionStart = e), (l.selectionEnd = t));
+                ((l.value = ""), (l.value = n), "email" !== l.type && ((l.selectionStart = e), (l.selectionEnd = t)));
             }
         }, [l]);
     if (
@@ -43,7 +43,7 @@ function v(e) {
             return (
                 (T.current = !0),
                 () => {
-                    (T.current = !1), e();
+                    ((T.current = !1), e());
                 }
             );
         }, [x]),
@@ -79,7 +79,7 @@ function v(e) {
                                           return r;
                                       })(e.value, t, i);
                                   if (null == c) {
-                                      (0, E.rK)(l), e.focus();
+                                      ((0, E.rK)(l), e.focus());
                                       return;
                                   }
                                   let [s, o] = c,
@@ -96,7 +96,7 @@ function v(e) {
                                       "email" !== e.type)
                                   ) {
                                       let t = s + l.length;
-                                      (e.selectionStart = t), (e.selectionEnd = t);
+                                      ((e.selectionStart = t), (e.selectionEnd = t));
                                   }
                               })(l, h, e)
                             : ((0, E.rK)(e), (0, a.vq)(l, HTMLElement) && l.focus());
@@ -115,7 +115,7 @@ function v(e) {
                           id: "add-to-dictionary",
                           label: f.intl.string(f.t.HJmG1G),
                           action: () => {
-                              o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: h }), C();
+                              (o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: h }), C());
                           },
                       })
                     : null,
@@ -125,7 +125,7 @@ function v(e) {
                           id: "remove-from-dictionary",
                           label: f.intl.string(f.t.xXqIX0),
                           action: () => {
-                              o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: g }), C();
+                              (o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: g }), C());
                           },
                       }),
                 (0, n.jsx)(s.sL, {
@@ -133,7 +133,7 @@ function v(e) {
                     label: f.intl.string(f.t.TKkotf),
                     checked: i,
                     action: () => {
-                        o.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), C();
+                        (o.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), C());
                     },
                 }),
                 i

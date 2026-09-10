@@ -22,11 +22,11 @@ class A extends s.Ay.PersistedStore {
     ];
     initialize(e) {
         if (null == e) {
-            (_ = o.CUs.BOTTOM_RIGHT),
-                (E = { [d.R8.VIDEO]: d.fG[d.R8.VIDEO], [d.R8.CAMERA_PREVIEW]: d.fG[d.R8.CAMERA_PREVIEW] });
+            ((_ = o.CUs.BOTTOM_RIGHT),
+                (E = { [d.R8.VIDEO]: d.fG[d.R8.VIDEO], [d.R8.CAMERA_PREVIEW]: d.fG[d.R8.CAMERA_PREVIEW] }));
             return;
         }
-        (_ = e.openPosition), (E = e.pipWidths);
+        ((_ = e.openPosition), (E = e.pipWidths));
     }
     get pipWindow() {
         return null == i && null == r && null == a ? null : c.get(i ?? r ?? a ?? "");
@@ -106,11 +106,11 @@ let h = new A(l.h, {
         if (null == t || (i !== t && r !== t && a !== t)) return !1;
         {
             let e = new Map();
-            c.forEach((t, i) => {
+            (c.forEach((t, i) => {
                 e.set(i, { ...t, position: n });
             }),
                 (c = e),
-                (_ = n);
+                (_ = n));
         }
     },
     PICTURE_IN_PICTURE_RESIZE: function (e) {
@@ -158,6 +158,6 @@ let h = new A(l.h, {
             }
     },
     LOGOUT: function () {
-        (i = null), (r = null), (a = null), (c = new Map());
+        ((i = null), (r = null), (a = null), (c = new Map()));
     },
 });

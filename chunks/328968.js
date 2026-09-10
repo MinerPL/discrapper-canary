@@ -24,16 +24,16 @@ function g(e, t) {
     return `${e}:${t}`;
 }
 function p() {
-    (o = {}), (c = {}), (h = {}), (d = {}), (S = new Set());
+    ((o = {}), (c = {}), (h = {}), (d = {}), (S = new Set()));
 }
 function m() {
     if (l === s.default.locale) return !1;
-    p(), (l = s.default.locale);
+    (p(), (l = s.default.locale));
 }
 class I extends r.Ay.Store {
     static displayName = "StoreListingStore";
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], m), (l = s.default.locale);
+        (this.waitFor(s.default), this.syncWith([s.default], m), (l = s.default.locale));
     }
     get(e) {
         return o[e];
@@ -87,7 +87,7 @@ let T = new I(n.h, {
         let { storeListing: t, channelId: i } = e;
         if (null != i) {
             let e = u.A.createFromServer(t);
-            (d[g(i, e.skuId)] = e), (c[e.skuId] = e.id);
+            ((d[g(i, e.skuId)] = e), (c[e.skuId] = e.id));
         } else _(t);
     },
     USER_SETTINGS_PROTO_UPDATE: m,

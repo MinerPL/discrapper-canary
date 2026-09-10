@@ -17,26 +17,30 @@ var o = i(17928),
 let C = function (t, e) {
     let [i, l] = n.useState(!1),
         s = (0, o.bG)([j.A], () => j.A.getAdminGuildEntryIds(e)),
-        a = (0, o.yK)([g.Ay, m.A, x.A], () => {
-            let e = g.Ay.getFlattenedGuildIds(),
-                i = [];
-            return (
-                e.forEach((e) => {
-                    let l = m.A.getGuild(e);
-                    null != l && x.A.can(h.xBc.ADMINISTRATOR, l) && l.id !== t && i.push(l);
-                }),
-                i
-            );
-        }, [t]);
+        a = (0, o.yK)(
+            [g.Ay, m.A, x.A],
+            () => {
+                let e = g.Ay.getFlattenedGuildIds(),
+                    i = [];
+                return (
+                    e.forEach((e) => {
+                        let l = m.A.getGuild(e);
+                        null != l && x.A.can(h.xBc.ADMINISTRATOR, l) && l.id !== t && i.push(l);
+                    }),
+                    i
+                );
+            },
+            [t],
+        );
     return (
         (0, u.Ay)(() => {
             (async () => {
-                l(!0),
+                (l(!0),
                     await c.LH(
                         e,
                         a.map((t) => t.id),
                     ),
-                    l(!1);
+                    l(!1));
             })();
         }),
         {
@@ -420,10 +424,10 @@ function td(t) {
                 directoryChannelId: e,
                 directoryGuildName: m,
                 onGuildChosen: function (t) {
-                    O(!0), h(P.m8.CUSTOMIZE_EXISTING_GUILD), v(t);
+                    (O(!0), h(P.m8.CUSTOMIZE_EXISTING_GUILD), v(t));
                 },
                 handleChooseCreate: function () {
-                    O(!1), h(P.m8.GUILD_TEMPLATES);
+                    (O(!1), h(P.m8.GUILD_TEMPLATES));
                 },
                 availableGuilds: b,
                 addedGuilds: k,
@@ -434,7 +438,7 @@ function td(t) {
             H = (0, l.jsx)(tr, {
                 directoryGuildName: m,
                 onChooseTemplate: function (t) {
-                    O(!1), h(P.m8.CUSTOMIZE_NEW_GUILD), I(t);
+                    (O(!1), h(P.m8.CUSTOMIZE_NEW_GUILD), I(t));
                 },
                 onBack: () => h(P.m8.CHOOSE_GUILD),
             });
@@ -444,7 +448,7 @@ function td(t) {
                 isSlideReady: !0,
                 guildTemplate: S,
                 onHubGuildInfoSet: function (t, e) {
-                    E(t), T(e), h(P.m8.CUSTOMIZE_EXISTING_GUILD);
+                    (E(t), T(e), h(P.m8.CUSTOMIZE_EXISTING_GUILD));
                 },
                 onBack: () => h(P.m8.GUILD_TEMPLATES),
             });

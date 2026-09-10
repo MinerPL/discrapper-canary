@@ -1,6 +1,6 @@
 n.d(i, { S: () => o });
 var a = n(477900);
-n(582128), n(284009);
+(n(582128), n(284009));
 var e = n(189213);
 n(17928);
 var l = n(139033),
@@ -16,7 +16,7 @@ function o(t) {
         .catch((t) => {
             let { body: i } = t,
                 n = c.intl.string(c.t.XcrQN5);
-            null != i && i.email && (n = i.email),
+            (null != i && i.email && (n = i.email),
                 (0, r.openModal)((t) =>
                     (0, a.jsx)(e.Modal, {
                         actions: [{ variant: "primary", text: c.intl.string(c.t.BddRzS), onClick: t.onClose }],
@@ -24,6 +24,6 @@ function o(t) {
                         subtitle: n,
                         ...t,
                     }),
-                );
+                ));
         });
 }

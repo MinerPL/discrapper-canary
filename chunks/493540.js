@@ -38,7 +38,9 @@ async function A(t, r) {
             rejectWithError: (0, E.fT)(),
         })
     ).body;
-    return null != T.application && o.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: T.application }), T;
+    return (
+        null != T.application && o.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: T.application }), T
+    );
 }
 function u(t) {
     return E.Bo.post({ url: R.Rsh.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(t), rejectWithError: (0, E.fT)() });
@@ -50,5 +52,7 @@ async function I(t) {
     await E.Bo.post({ url: R.Rsh.CREATOR_MONETIZATION_REMOVE_MONETIZATION(t), body: {}, rejectWithError: (0, E.fT)() });
 }
 async function N(t) {
-    return await I(t), await i.Ay.getApplicationsForGuild(t, { type: n.S7.GUILD_ROLE_SUBSCRIPTIONS, includeTeam: !0 });
+    return (
+        await I(t), await i.Ay.getApplicationsForGuild(t, { type: n.S7.GUILD_ROLE_SUBSCRIPTIONS, includeTeam: !0 })
+    );
 }

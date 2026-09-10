@@ -1,4 +1,4 @@
-n.d(t, { A: () => S }), n(321073);
+(n.d(t, { A: () => S }), n(321073));
 var r = n(477900),
     i = n(582128),
     s = n(562708),
@@ -116,16 +116,16 @@ let I = i.memo(function (e) {
         ),
         P = i.useCallback(
             (e, t) => {
-                (A.current = t), c(_ * e + t);
+                ((A.current = t), c(_ * e + t));
             },
             [c],
         ),
         R = i.useCallback(() => {
-            (A.current = null), c(null);
+            ((A.current = null), c(null));
         }, [c]),
         M = i.useCallback(
             (e) => {
-                R(), (m.current = e);
+                (R(), (m.current = e));
             },
             [R],
         ),
@@ -340,7 +340,7 @@ function S(e) {
                         ((e && i) || (!e && !i)) && s.available && r.push(s);
                     }
                 }
-                return i.forEach((e) => s(e, !0)), i.forEach((e) => s(e, !1)), r;
+                return (i.forEach((e) => s(e, !0)), i.forEach((e) => s(e, !1)), r);
             }, [t, n, e]);
         })((0, A.Y)(n, !0)),
         N = (0, m.T)(),
@@ -350,12 +350,12 @@ function S(e) {
         { analyticsLocations: L } = (0, a.Ay)(o.A.SOUNDBOARD_WHEEL),
         P = i.useCallback(
             (e) => {
-                (0, p.Ak)(e, n.id, L), C();
+                ((0, p.Ak)(e, n.id, L), C());
             },
             [L, n.id, C],
         );
-    i.useEffect(() => {
-        f.E7(), d.bW.loadIfNecessary();
+    (i.useEffect(() => {
+        (f.E7(), d.bW.loadIfNecessary());
     }, []),
         i.useEffect(() => {
             0 === b.length && 0 === N.length && C();
@@ -374,9 +374,9 @@ function S(e) {
                 properties: { source: E, guild_id: t, media_session_id: S, type: j.c4.WHEEL },
             },
             { disableTrack: !w },
-        );
+        ));
     let R = i.useCallback((e) => {
-            (O.current = e), D(e?.soundId);
+            ((O.current = e), D(e?.soundId));
         }, []),
         M = i.useCallback(
             (e) => {

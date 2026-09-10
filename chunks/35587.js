@@ -32,7 +32,7 @@ function E() {
         E = !l.Ay.isPremium(t) || n,
         A = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodes),
         h = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodesLoaded);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         null != e && a.h.wait(() => d.Ay.markOutboundPromotionsSeen());
     }, [e]),
         i.useEffect(() => {
@@ -44,7 +44,7 @@ function E() {
             a.h.wait(() => {
                 d.Ay.fetchClaimedOutboundPromotionCodes();
             });
-        }, []);
+        }, []));
     let I = i.useMemo(() => (0, o.eN)(A), [A]),
         f = _({ includeClaimedPromotions: !0 }),
         p = i.useMemo(() => {

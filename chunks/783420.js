@@ -39,7 +39,7 @@ function f(e) {
             if ((e.preventDefault(), null == y))
                 return void (0, d.pX)(I.BVt.LOGIN, { source: "premium_subscribe_button" });
             if ((t?.(e), D?.status === I.Dmq.ACCOUNT_HOLD)) {
-                (0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), T?.(!1);
+                ((0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), T?.(!1));
                 return;
             }
             if (!y.isClaimed())

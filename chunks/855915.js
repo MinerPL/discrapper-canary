@@ -1,4 +1,4 @@
-t.d(r, { A: () => i }), t(508300);
+(t.d(r, { A: () => i }), t(508300));
 var n = t(582128),
     l = t(626584),
     a = t(403362),
@@ -13,7 +13,8 @@ async function o(e, r) {
         await Promise.race([
             n.decode(),
             new Promise((e, n) => {
-                (t = () => n(new DOMException("Aborted", "AbortError"))), r.addEventListener("abort", t, { once: !0 });
+                ((t = () => n(new DOMException("Aborted", "AbortError"))),
+                    r.addEventListener("abort", t, { once: !0 }));
             }),
         ]);
     } finally {

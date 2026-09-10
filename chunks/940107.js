@@ -1,7 +1,7 @@
-n.d(t, { W: () => l, f: () => i }), n(323874), n(14289), n(35956);
+(n.d(t, { W: () => l, f: () => i }), n(323874), n(14289), n(35956));
 class i extends Error {
     constructor(e, t) {
-        super(`preview frame did not answer ${e} within ${t}ms`), (this.name = "PreviewFrameCallTimeout");
+        (super(`preview frame did not answer ${e} within ${t}ms`), (this.name = "PreviewFrameCallTimeout"));
     }
 }
 function r(e, t, n) {
@@ -27,14 +27,14 @@ function l(e, t, n, l) {
         let g = 0,
             w = o,
             m = window.setTimeout(() => {
-                b(), p(new i(t, l.timeoutMs));
+                (b(), p(new i(t, l.timeoutMs)));
             }, l.timeoutMs),
             _ = null != l.retryMs ? window.setInterval(A, l.retryMs) : null;
         function v() {
             null != _ && window.clearInterval(_);
         }
         function b() {
-            window.clearTimeout(m), v(), window.removeEventListener("message", I);
+            (window.clearTimeout(m), v(), window.removeEventListener("message", I));
         }
         function A() {
             (g += 1) > 1 &&
@@ -44,13 +44,13 @@ function l(e, t, n, l) {
                     attempt: g,
                 });
             let i = { type: u, id: h, ...n };
-            (w = e.contentWindow), e.contentWindow?.postMessage(i, a);
+            ((w = e.contentWindow), e.contentWindow?.postMessage(i, a));
         }
         function I(e) {
             ("window" === f ? e.source !== w : e.origin !== a) ||
                 (r(e.data, c, h) ? v() : r(e.data, d, h) && (b(), s(e.data)));
         }
-        window.addEventListener("message", I), A();
+        (window.addEventListener("message", I), A());
     });
 }
 let s = 0;

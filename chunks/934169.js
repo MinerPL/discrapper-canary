@@ -18,4 +18,4 @@ var r = "(?:[a-z0-9]{5,8}|\\d[a-z0-9]{3})",
     s = RegExp("^(?!x).*?-(" + r + ")-(?:\\w{4,8}-(?!x-))*\\1\\b", "i"),
     l = RegExp("^(?!x).*?-(" + n + ")-(?:\\w+-(?!x-))*\\1\\b", "i"),
     u = RegExp("-" + i, "ig");
-(t.expBCP47Syntax = a), (t.expVariantDupes = s), (t.expSingletonDupes = l), (t.expExtSequences = u);
+((t.expBCP47Syntax = a), (t.expVariantDupes = s), (t.expSingletonDupes = l), (t.expExtSequences = u));

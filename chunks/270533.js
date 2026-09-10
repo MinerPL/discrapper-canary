@@ -149,7 +149,7 @@ function q(e) {
                 text: m ? F.intl.string(k.default.gSxlHf) : F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), m ? o() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                    (e.stopPropagation(), m ? o() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
                 },
                 loading: c,
             },
@@ -316,7 +316,7 @@ function $(e) {
                 text: F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: () => {
-                    n(H.i.TAKE_ACTION), (0, x.pX)(V.BVt.CHANNEL(t, w.VV.GAME_SERVERS));
+                    (n(H.i.TAKE_ACTION), (0, x.pX)(V.BVt.CHANNEL(t, w.VV.GAME_SERVERS)));
                 },
             },
         ],
@@ -347,12 +347,12 @@ function Q(e) {
                 text: F.intl.string(K.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
-                    n(H.i.TAKE_ACTION),
+                    (n(H.i.TAKE_ACTION),
                         (0, C.K4)({
                             guildId: t,
                             location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
-                        });
+                        }));
                 },
             },
         ],
@@ -384,14 +384,14 @@ function ee(e) {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
                     let l = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
-                    await (0, E.g)({
+                    (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: c,
                         analyticsLocation: l,
                         analyticsLocations: u,
                         intent: P.Pn.PERK,
                     }),
-                        n(H.i.TAKE_ACTION);
+                        n(H.i.TAKE_ACTION));
                 },
             },
         ],
@@ -417,14 +417,14 @@ function et(e) {
                 text: F.intl.string(K.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
-                    n(H.i.TAKE_ACTION),
+                    (n(H.i.TAKE_ACTION),
                         r
                             ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, B.W5)
                             : (0, C.K4)({
                                   guildId: t,
                                   location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
                                   scrollToPowerupCards: !0,
-                              });
+                              }));
                 },
             },
         ],
@@ -492,14 +492,14 @@ function el(e) {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
                     let l = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
-                    await (0, E.g)({
+                    (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: d,
                         analyticsLocation: l,
                         analyticsLocations: u,
                         intent: n.type === P.o9.PERK ? P.Pn.PERK : void 0,
                     }),
-                        r(H.i.TAKE_ACTION);
+                        r(H.i.TAKE_ACTION));
                 },
             },
         ],
@@ -544,14 +544,14 @@ function ei(e) {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
                     let l = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
-                    await (0, E.g)({
+                    (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: l,
                         analyticsLocations: u,
                         intent: h?.type === P.o9.PERK || n.isGameServer ? P.Pn.PERK : void 0,
                     }),
-                        r(H.i.TAKE_ACTION);
+                        r(H.i.TAKE_ACTION));
                 },
             },
         ],

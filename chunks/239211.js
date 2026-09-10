@@ -32,7 +32,7 @@ function b(e) {
               label: w ? p.intl.string(p.t.XyHpKH) : p.intl.string(p.t.l4Emac),
               action: w
                   ? () => {
-                        f?.(), r.A.unblockUser(C, { location: g }), i.A.showUnblockSuccessToast(C, k ?? void 0);
+                        (f?.(), r.A.unblockUser(C, { location: g }), i.A.showUnblockSuccessToast(C, k ?? void 0));
                     }
                   : () => {
                         (0, d.openModalLazy)(

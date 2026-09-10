@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => E, _c: () => _, go: () => c, vF: () => u }), n(938796), n(321073);
+(n.d(t, { Ay: () => E, _c: () => _, go: () => c, vF: () => u }), n(938796), n(321073));
 var i = n(485845),
     r = n(665260),
     a = n(315069),
@@ -20,7 +20,7 @@ class c extends a.A {
     stickerItems;
     soundboardSounds;
     constructor(e) {
-        super(),
+        (super(),
             (this.type = e.type ?? d.lAJ.DEFAULT),
             (this.content = e.content ?? ""),
             (this.attachments = e.attachments ?? []),
@@ -32,7 +32,7 @@ class c extends a.A {
             (this.codedLinks = e.codedLinks ?? []),
             (this.stickers = e.stickers ?? []),
             (this.stickerItems = e.sticker_items ?? e.stickerItems ?? []),
-            (this.soundboardSounds = e.soundboard_sounds ?? e.soundboardSounds);
+            (this.soundboardSounds = e.soundboard_sounds ?? e.soundboardSounds));
     }
     hasFlag(e) {
         return (0, r.Lt)(this.flags, e);
@@ -42,7 +42,7 @@ class u extends a.A {
     message;
     moderatorReport;
     constructor(e) {
-        super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null);
+        (super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null));
     }
 }
 function _(e) {
@@ -97,7 +97,7 @@ let E = class extends c {
     colorString;
     nick;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.id = e.id),
             (this.channel_id = e.channel_id),
             (this.author = e.author),
@@ -144,7 +144,7 @@ let E = class extends c {
             (this.isUnsupported = e.isUnsupported || !1),
             (this.changelogId = e.changelog_id ?? (e.changelogId || null)),
             (this.mediaMention = e.media_mention ?? e.mediaMention ?? null),
-            (this.additionalName = e.lobby_member?.additional_name ?? e.additionalName ?? null);
+            (this.additionalName = e.lobby_member?.additional_name ?? e.additionalName ?? null));
     }
     isEdited() {
         return null != this.editedTimestamp;
@@ -270,7 +270,7 @@ let E = class extends c {
             c = d?.normal ?? 0,
             u = d?.burst ?? 0,
             _ = d?.vote ?? 0;
-        return -1 !== i && a <= 0 && s <= 0 && c <= 0 && u <= 0 && _ <= 0 && r.splice(i, 1), this.set("reactions", r);
+        return (-1 !== i && a <= 0 && s <= 0 && c <= 0 && u <= 0 && _ <= 0 && r.splice(i, 1), this.set("reactions", r));
     }
     removeReactionsForEmoji(e) {
         return this.set(

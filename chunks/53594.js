@@ -1,5 +1,5 @@
-n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => T, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
-    n(938796);
+(n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => T, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
+    n(938796));
 var r,
     i,
     u = n(582128),
@@ -120,7 +120,7 @@ function p(e) {
                                 e.perGuildMaxCount > 0,
                         )
                         .map((e) => e.type);
-                    return (e[n] = r), e;
+                    return ((e[n] = r), e);
                 },
                 { members: [], content: [] },
             ),

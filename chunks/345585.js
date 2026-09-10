@@ -44,7 +44,7 @@ function E(t) {
                 if (!i && (await (0, w.ih)(t.name))) {
                     c(!0);
                     try {
-                        await (0, j.nV)(t.id, t.guildId), e(null), g(t.id, t.guildId);
+                        (await (0, j.nV)(t.id, t.guildId), e(null), g(t.id, t.guildId));
                     } catch (e) {
                         let t = new f.LG(e);
                         (0, d.P0)((0, s.o)(t.getAnyErrorMessage() ?? I.intl.string(I.t.fEptJP), o.Ck.FAILURE));

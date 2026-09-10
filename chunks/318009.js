@@ -34,11 +34,11 @@ function A(e) {
         x.current = n;
     });
     let w = i.useRef(o);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         w.current = o;
     }),
         i.useEffect(() => () => w.current?.(), []),
-        (0, d.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A });
+        (0, d.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, u.aL)(),
         C = i.useCallback(() => {
             E.dispatch(p.jej.POPOUT_SHOW);
@@ -81,7 +81,7 @@ class v extends i.PureComponent {
                 this.setState({ render: () => (0, r.jsx)(a.X, {}) });
             }, 300);
             e().then((e) => {
-                this.setState({ render: e }), clearTimeout(t);
+                (this.setState({ render: e }), clearTimeout(t));
             });
         }
     }
@@ -91,8 +91,8 @@ class v extends i.PureComponent {
     }
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
-        e.removeEventListener("resize", this.closeResize, !0),
-            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+        (e.removeEventListener("resize", this.closeResize, !0),
+            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;

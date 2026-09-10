@@ -1,4 +1,4 @@
-i.d(t, { aW: () => ee, Ay: () => et, rj: () => $ }), i(321073);
+(i.d(t, { aW: () => ee, Ay: () => et, rj: () => $ }), i(321073));
 var n = i(477900),
     s = i(582128),
     l = i(503698),
@@ -14,12 +14,12 @@ var n = i(477900),
     A = i(652215);
 let g = {
     dismissForApplicationId(e) {
-        m.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
+        (m.h.dispatch({ type: "ACTIVITY_INVITE_EDUCATION_DISMISS", key: e, value: !0 }),
             p.default.track(A.HAw.CLOSE_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
                 acknowledged: !0,
-            });
+            }));
     },
 };
 var I = i(770178),
@@ -41,10 +41,10 @@ function D(e) {
     if (
         (s.useEffect(() => {
             function e() {
-                d(!0),
+                (d(!0),
                     setTimeout(() => {
                         d(!1);
-                    }, 1e3);
+                    }, 1e3));
             }
             return (
                 y._.subscribe(A.jej.EMPHASIZE_SLOWMODE_COOLDOWN, e),
@@ -92,7 +92,7 @@ class R extends o.Ay.PersistedStore {
 }
 let U = new R(m.h, {
     ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
-        return (k[e.key] = e.value), !0;
+        return ((k[e.key] = e.value), !0);
     },
 });
 var L = i(629016),
@@ -113,7 +113,7 @@ class Q extends s.PureComponent {
     timeout = null;
     componentDidMount() {
         this.timeout = setTimeout(() => {
-            this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
+            (this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded());
         }, 100);
     }
     componentDidUpdate() {
@@ -183,7 +183,7 @@ function J(e) {
             let e = E.current.getBoundingClientRect();
             x.current.scrollWidth + 48 > e.width ? v(!0) : v(!1);
         }, []);
-    (0, I.g)(E, S, [], { enabled: m }), (0, I.g)(x, S, [], { enabled: m });
+    ((0, I.g)(E, S, [], { enabled: m }), (0, I.g)(x, S, [], { enabled: m }));
     let [C, _, N] = l,
         j = "";
     1 === l.length

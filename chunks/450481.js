@@ -50,7 +50,7 @@ function f(t) {
                     let t = (0, l.yX)({ pendingProfileEffect: h ?? void 0, pendingProfileFrame: y ?? void 0 });
                     await (0, s.gi)(t);
                 }
-                null != g && (t.nameplate = g), Object.keys(t).length > 0 && (await (0, a._L)(t));
+                (null != g && (t.nameplate = g), Object.keys(t).length > 0 && (await (0, a._L)(t)));
                 {
                     let {
                         ToastPosition: t,
@@ -59,7 +59,7 @@ function f(t) {
                         popToast: r,
                         showToast: a,
                     } = await Promise.all([n.e("304823"), n.e("977260")]).then(n.bind(n, 397927));
-                    r(), a(i(A, e.MESSAGE, { duration: 6e3, position: t.TOP }));
+                    (r(), a(i(A, e.MESSAGE, { duration: 6e3, position: t.TOP })));
                 }
                 f?.();
             } catch (t) {

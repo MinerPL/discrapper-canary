@@ -34,7 +34,7 @@ function U(e, t) {
         i = 0;
     for (let t of n) {
         let n = e?.find((e) => e.answer_id === parseInt(t))?.poll_media;
-        n?.text != null && (l += 1), n?.emoji != null && (i += 1);
+        (n?.text != null && (l += 1), n?.emoji != null && (i += 1));
     }
     return { analyticsSelectedAnswerIds: n, selectedTextAnswersCount: l, selectedEmojiAnswersCount: i };
 }
@@ -115,7 +115,7 @@ async function j(e) {
     let s = b({ channelId: t, messageId: n });
     try {
         let e = [...r.selectedAnswerIds.values()];
-        (0, O.A2)(
+        ((0, O.A2)(
             t,
             n,
             (e) => (
@@ -126,16 +126,16 @@ async function j(e) {
             await B({ channelId: t, messageId: n, answerIds: e }),
             await w.Q({ channelId: t, messageId: n, answerIds: e }),
             (0, O.A2)(t, n, () => void 0),
-            u.O.announce(0 === e.length ? D.intl.string(D.t["xcvy+3"]) : D.intl.string(D.t.o20GSo));
+            u.O.announce(0 === e.length ? D.intl.string(D.t["xcvy+3"]) : D.intl.string(D.t.o20GSo)));
     } catch (e) {
-        c.A.show({
+        (c.A.show({
             title: D.intl.string(D.t.iufib1),
             body: e.getAnyErrorMessage?.() ?? e.message ?? D.intl.string(D.t.eAn6z2),
         }),
             await B({ channelId: t, messageId: n, answerIds: s }),
             (0, O.A2)(t, n, (e) => {
                 if (null != e) return { ...e, submitting: !1, editing: !1 };
-            });
+            }));
     }
 }
 async function G(e) {
@@ -288,14 +288,14 @@ let V = {
             }),
             _ = { question: { text: n.trim() }, answers: c, allow_multiselect: i, duration: r, layout_type: s };
         try {
-            await E.A.sendPollMessage(t.id, _, {
+            (await E.A.sendPollMessage(t.id, _, {
                 attachmentsToUpload: d,
                 scheduledTimestamp: u,
                 onAttachmentUploadError: (e, n, l) => {
                     (0, I.k)({ file: e, guildId: t.getGuildId(), analyticsLocations: [], code: n, reason: l });
                 },
             }),
-                o?.(u);
+                o?.(u));
         } catch (e) {
             if ("poll" === (e instanceof S.LG ? e : new S.LG(e)).getAnyErrorMessage() && null != e.text)
                 throw { ...e, body: JSON.parse(e.text) };

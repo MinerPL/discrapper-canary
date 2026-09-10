@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $S: () => y,
     Am: () => M,
     Ap: () => N,
@@ -15,7 +15,7 @@ n.d(t, {
     my: () => b,
     zl: () => O,
 }),
-    n(321073);
+    n(321073));
 var i = n(824120),
     r = n.n(i),
     a = n(284009),
@@ -283,7 +283,7 @@ function v(e) {
         i = n?.find((e) => e.type === c.n4.SUB_COMMAND_GROUP);
     null != i && ((t += `${h.v4}${i.name}`), (n = i.options));
     let r = n?.find((e) => e.type === c.n4.SUB_COMMAND);
-    return null != r && ((t += `${h.v4}${r.name}`), (n = r.options)), { commandKey: t, interactionOptions: n };
+    return (null != r && ((t += `${h.v4}${r.name}`), (n = r.options)), { commandKey: t, interactionOptions: n });
 }
 function b(e) {
     let {

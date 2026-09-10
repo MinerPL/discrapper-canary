@@ -28,16 +28,16 @@ function f(e) {
         } = e,
         [v, N] = i.useState(!1),
         _ = i.useCallback(() => {
-            N(!0), C?.();
+            (N(!0), C?.());
         }, [C]),
         j = i.useCallback(() => {
-            N(!1), E?.();
+            (N(!1), E?.());
         }, [E]),
         T = i.useCallback(() => {
-            N(!0), I?.();
+            (N(!0), I?.());
         }, [I]),
         b = i.useCallback(() => {
-            N(!1), y?.();
+            (N(!1), y?.());
         }, [y]),
         R = (0, a.bG)([u.Ay], () =>
             t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,

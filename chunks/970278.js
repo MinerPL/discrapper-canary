@@ -15,15 +15,15 @@ function E(e) {
     e in c && delete c[e];
 }
 function A(e) {
-    null != e.threads &&
+    (null != e.threads &&
         e.threads.length > 0 &&
         ((c[e.id] = {}), e.threads.filter((e) => l.A_.has(e.type)).forEach((t) => h(e.id, t))),
-        e.hasThreadsSubscription && u.add(e.id);
+        e.hasThreadsSubscription && u.add(e.id));
 }
 function h(e, t) {
     let n = c[e],
         i = t.parent_id;
-    i in n || (n[i] = {}), (c[e][i][t.id] = _(t));
+    (i in n || (n[i] = {}), (c[e][i][t.id] = _(t)));
 }
 function I(e) {
     let { channel: t } = e;
@@ -37,7 +37,7 @@ function I(e) {
 function f(e) {
     let { guild_id: t, parent_id: n, id: i } = e;
     if (null == t || null == n || !(t in c) || !(n in c[t]) || !(i in c[t][n])) return !1;
-    (c[t] = { ...c[t], [n]: { ...c[t][n] } }), delete c[t][n][i], r().isEmpty(c[t][n]) && delete c[t][n];
+    ((c[t] = { ...c[t], [n]: { ...c[t][n] } }), delete c[t][n][i], r().isEmpty(c[t][n]) && delete c[t][n]);
 }
 let p = {};
 class T extends a.Ay.Store {
@@ -68,25 +68,25 @@ class T extends a.Ay.Store {
 }
 let m = new T(s.h, {
     CONNECTION_OPEN: function (e) {
-        (c = {}),
+        ((c = {}),
             u.clear(),
             e.guilds.forEach((e) => {
                 A(e);
-            });
+            }));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { channels: t } = e;
-        (c = {}),
+        ((c = {}),
             r()(t)
                 .filter((e) => l.Le.has(e.type))
                 .groupBy("guild_id")
                 .forEach((e, t) => {
-                    (c[t] = {}), e.forEach((e) => h(t, e));
-                });
+                    ((c[t] = {}), e.forEach((e) => h(t, e)));
+                }));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        E(t.id), A(t);
+        (E(t.id), A(t));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
@@ -106,6 +106,6 @@ let m = new T(s.h, {
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
         if (null == t.guild_id || !(t.guild_id in c)) return !1;
-        (c[t.guild_id] = { ...c[t.guild_id] }), delete c[t.guild_id][t.id];
+        ((c[t.guild_id] = { ...c[t.guild_id] }), delete c[t.guild_id][t.id]);
     },
 });

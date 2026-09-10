@@ -15,9 +15,9 @@ function p(t) {
         [h, f] = r.useState("");
     async function k(n) {
         let { onClose: i, guildId: e } = t;
-        n.preventDefault(), g(null);
+        (n.preventDefault(), g(null));
         try {
-            await (0, c.T)(e, { nick: h }), i?.();
+            (await (0, c.T)(e, { nick: h }), i?.());
         } catch (t) {
             g(new o.LG(t));
         }

@@ -79,12 +79,13 @@ function O(e) {
                     [t, n],
                 );
             async function i() {
-                if (null == a) return v.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                if (null == a)
+                    return (v.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1);
                 (0, p.p)({ avatarDecoration: a });
                 let e = A.A.getPendingChanges(),
                     t = (0, h.Sk)(e),
                     n = await (0, c._L)(t);
-                return (0, c.pZ)(), !!n?.ok;
+                return ((0, c.pZ)(), !!n?.ok);
             }
             return [a, i];
         })(k?.skuId ?? null),
@@ -102,7 +103,7 @@ function O(e) {
         M = q || (null == I && !0 !== d) || Y || "loading" === N,
         T = "error" === N || null == k;
     async function W() {
-        y("applying"), y((await O()) ? "applied" : "claimed");
+        (y("applying"), y((await O()) ? "applied" : "claimed"));
     }
     return (0, a.jsx)(E.A, {
         onClose: n,

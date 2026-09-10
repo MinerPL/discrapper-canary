@@ -106,16 +106,16 @@ class k extends i.PureComponent {
     };
     handleResendEmail = () => {
         let { onResend: t, onClose: e } = this.props;
-        t(),
+        (t(),
             this.state.resent ||
                 (this.setState({ resent: !0, shouldClose: !0 }),
                 this._timeout.start(3e3, () => {
                     this.state.shouldClose && e();
-                }));
+                })));
     };
     handleChangeEmailClick = () => {
         let { onChangeEmailClick: t } = this.props;
-        this.setState({ resent: !1, shouldClose: !1 }), t();
+        (this.setState({ resent: !1, shouldClose: !1 }), t());
     };
     handleEmailChange = (t) => {
         this.setState({ email: t });
@@ -161,7 +161,7 @@ let b = function (t) {
             b(!1);
         },
         onVerify: function (t, e) {
-            (0, d._L)({ email: t, password: e }).then((t) => {
+            ((0, d._L)({ email: t, password: e }).then((t) => {
                 t?.ok ||
                     (t?.body?.username != null
                         ? (0, R.E)()
@@ -169,7 +169,7 @@ let b = function (t) {
                           0 === x.length &&
                           (0, r.P0)((0, l.o)(f.intl.string(f.t.R0RpRX), o.Ck.FAILURE)));
             }),
-                b(!0);
+                b(!0));
         },
         onResend: function () {
             h.A.verifyResend();

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $l: () => p,
     TF: () => o,
     Ul: () => f,
@@ -9,7 +9,7 @@ n.d(t, {
     w6: () => u,
     yy: () => E,
 }),
-    n(140667);
+    n(140667));
 var i,
     r = n(218948),
     a = n.n(r),
@@ -23,10 +23,10 @@ let l = () => Math.floor(s.u5 + s.FO.now()),
 class d {
     milliseconds = 0;
     constructor(e, t, n, i) {
-        (this.milliseconds += i || 0),
+        ((this.milliseconds += i || 0),
             (this.milliseconds += 1e3 * (n || 0)),
             (this.milliseconds += 6e4 * (t || 0)),
-            (this.milliseconds += 36e5 * (e || 0));
+            (this.milliseconds += 36e5 * (e || 0)));
     }
     asMilliseconds = () => this.milliseconds;
     asSeconds = () => this.milliseconds / 1e3;
@@ -66,7 +66,7 @@ class c {
         this.startTime = this.timestampProducer.now();
     }
     reset() {
-        (this.startTime = void 0), (this.timePassed = 0);
+        ((this.startTime = void 0), (this.timePassed = 0));
     }
     stop() {
         null != this.startTime &&
@@ -85,23 +85,23 @@ class c {
     }
     static startNew() {
         let e = new c();
-        return e.start(), e;
+        return (e.start(), e);
     }
 }
 class u {
     stopwatch;
     state;
     constructor(e, t = o) {
-        (this.stopwatch = new c(t)), (this.state = e), this.stopwatch.toggle(e);
+        ((this.stopwatch = new c(t)), (this.state = e), this.stopwatch.toggle(e));
     }
     set value(e) {
-        this.stopwatch.toggle(e), (this.state = e);
+        (this.stopwatch.toggle(e), (this.state = e));
     }
     get value() {
         return this.state;
     }
     reset() {
-        this.stopwatch.reset(), this.stopwatch.toggle(this.state);
+        (this.stopwatch.reset(), this.stopwatch.toggle(this.state));
     }
     totalDuration() {
         return this.stopwatch.elapsed().asMilliseconds();
@@ -125,7 +125,7 @@ class _ {
     }
     static startNew(e) {
         let t = new _(e);
-        return t.start(), t;
+        return (t.start(), t);
     }
     static async waitFor(e, t) {
         let n,

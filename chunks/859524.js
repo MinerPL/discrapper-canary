@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $r: () => L,
     Lg: () => y,
     P0: () => b,
@@ -15,11 +15,11 @@ n.d(t, {
     xj: () => S,
     yx: () => M,
 }),
-    n(321073);
+    n(321073));
 var i,
     r = n(6161),
     a = n(681154);
-n(17928), n(256265);
+(n(17928), n(256265));
 var s = n(698441),
     l = n(320095),
     o = n(95701),
@@ -208,7 +208,7 @@ function P(e) {
 async function U(e) {
     let { ack: t } = await Promise.resolve().then(n.bind(n, 334738)),
         { AnalyticsObjectTypes: i } = await Promise.resolve().then(n.bind(n, 652215));
-    I.A.getDehydratedItems().forEach((n) => {
+    (I.A.getDehydratedItems().forEach((n) => {
         n.type === f.Mm.MESSAGE &&
             n.data.channel_type === T.rbe.GUILD_ANNOUNCEMENT &&
             _.default.compare(u.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
@@ -224,5 +224,5 @@ async function U(e) {
         await E.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
         await E.A.reloadICYMITab(),
         await E.A.getGuildChannelScores(),
-        E.A.getRecommendedGuilds();
+        E.A.getRecommendedGuilds());
 }

@@ -50,17 +50,17 @@ class P extends r.PureComponent {
         offsetY: E().random(0, 140, !1) - 70,
     };
     componentDidMount() {
-        this.setState({ animating: !0 }),
+        (this.setState({ animating: !0 }),
             (this._renderSecondaryTimeout = setTimeout(() => {
                 this.setState({ renderSecondary: !0 });
             }, 120)),
-            (this._doneTimeout = setTimeout(this.done, 1e3));
+            (this._doneTimeout = setTimeout(this.done, 1e3)));
     }
     componentDidUpdate(e, t) {
         this.state.renderSecondary && t.renderSecondary;
     }
     componentWillUnmount() {
-        clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout);
+        (clearTimeout(this._renderSecondaryTimeout), clearTimeout(this._doneTimeout));
     }
     done = () => {
         this.props.onAnimationComplete(this.props.componentId);
@@ -130,17 +130,17 @@ class U extends r.PureComponent {
     children = [];
     state = { explosions: 0, visible: !1 };
     componentDidMount() {
-        this.setTimeout(() => {
-            this.setState({ visible: !0 }), D._.dispatch(v.jej.SHAKE_APP, { duration: 2400 });
+        (this.setTimeout(() => {
+            (this.setState({ visible: !0 }), D._.dispatch(v.jej.SHAKE_APP, { duration: 2400 }));
         }, 1800),
-            this.setTimeout(this.createExplosion, 1800);
+            this.setTimeout(this.createExplosion, 1800));
     }
     componentWillUnmount() {
         for (let e of (R.A.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
     }
     setTimeout = (e, t) => {
         let n = setTimeout(e, t);
-        return this._timeouts.push(n), n;
+        return (this._timeouts.push(n), n);
     };
     removeExplosion = (e) => {
         let t = this.children,
@@ -149,7 +149,7 @@ class U extends r.PureComponent {
                 let n = t.props;
                 return null != n.componentId && n.componentId === e;
             });
-        n >= 0 && t.splice(n, 1), this.forceUpdate();
+        (n >= 0 && t.splice(n, 1), this.forceUpdate());
     };
     createExplosion = () => {
         let e = this.children,
@@ -157,7 +157,7 @@ class U extends r.PureComponent {
             n = (window.innerHeight / 2) | 0;
         if (this.state.explosions < 8) {
             let r = `expl-${this.state.explosions}`;
-            e.push(
+            (e.push(
                 (0, i.jsx)(
                     P,
                     {
@@ -170,11 +170,11 @@ class U extends r.PureComponent {
                 ),
             ),
                 this.setTimeout(this.createExplosion, 240),
-                this.setState({ explosions: this.state.explosions + 1 });
+                this.setState({ explosions: this.state.explosions + 1 }));
         } else this.setTimeout(this.addSymbol, 750);
     };
     addSymbol = () => {
-        (this.children = [(0, i.jsx)(M, {}, "symbol")]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3);
+        ((this.children = [(0, i.jsx)(M, {}, "symbol")]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3e3));
     };
     delayedClose = () => {
         this.props.handleDemonClose();
@@ -206,8 +206,8 @@ function F(e) {
             return null;
     }
 }
-let V = [C.Q_.MESSAGE, C.Q_.NAVIGATION, C.Q_.VOICE_AND_VIDEO, C.Q_.CHAT, C.Q_.MISCELLANEOUS];
-function B(e) {
+let B = [C.Q_.MESSAGE, C.Q_.NAVIGATION, C.Q_.VOICE_AND_VIDEO, C.Q_.CHAT, C.Q_.MISCELLANEOUS];
+function V(e) {
     let { showBackdrop: t } = e;
     return (0, i.jsx)("div", { className: d()(x.tB, { [x.WU]: t }) });
 }
@@ -221,7 +221,7 @@ function H() {
     );
     return (0, i.jsx)("div", {
         className: x.Io,
-        children: V.map((t) => {
+        children: B.map((t) => {
             let n = e[t],
                 r = (0, C.Gm)(t),
                 a = (0, C.zF)(t);
@@ -288,25 +288,25 @@ class j extends r.PureComponent {
     scrollerRef = r.createRef();
     lastInputedKeys = [];
     componentDidMount() {
-        (this.lastInputedKeys = []),
+        ((this.lastInputedKeys = []),
             D._.subscribe(v.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             D._.subscribe(v.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.addEventListener("keydown", this.handleKeyDown, { capture: !0 }),
-            window.addEventListener("keyup", this.handleKeyUp, { capture: !0 });
+            window.addEventListener("keyup", this.handleKeyUp, { capture: !0 }));
     }
     componentWillUnmount() {
-        D._.unsubscribe(v.jej.SCROLL_PAGE_UP, this.scrollPageUp),
+        (D._.unsubscribe(v.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             D._.unsubscribe(v.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             window.removeEventListener("keydown", this.handleKeyDown, { capture: !0 }),
-            window.removeEventListener("keyup", this.handleKeyUp, { capture: !0 });
+            window.removeEventListener("keyup", this.handleKeyUp, { capture: !0 }));
     }
     scrollPageUp = () => {
         let e = this.scrollerRef.current;
-        u()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({ animate: !0 });
+        (u()(null != e, "Scroller is pagedUp when not mounted"), e.scrollPageUp({ animate: !0 }));
     };
     scrollPageDown = () => {
         let e = this.scrollerRef.current;
-        u()(null != e, "Scroller is pagedDown when not mounted"), e.scrollPageDown({ animate: !0 });
+        (u()(null != e, "Scroller is pagedDown when not mounted"), e.scrollPageDown({ animate: !0 }));
     };
     arrowUp = (e) => {
         let { direction: t } = e;
@@ -314,16 +314,16 @@ class j extends r.PureComponent {
     };
     arrowDown = (e) => {
         let { direction: t } = e;
-        k[t](), this.setState({ [t]: !0 });
+        (k[t](), this.setState({ [t]: !0 }));
     };
     componentWillLeave = (e) => {
-        this.setState({ animating: !0 }),
+        (this.setState({ animating: !0 }),
             this.state.opacity.setValue(1),
             this.state.scaleX.setValue(0.5),
             this.state.scaleY.setValue(1),
             A.A.sequence([
                 A.A.timing(this.state.opacity, { toValue: 0, duration: 800, easing: A.A.Easing.cubic }),
-            ]).start(e);
+            ]).start(e));
     };
     toggleOpacity = () => {
         1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1);
@@ -395,7 +395,7 @@ function W(e) {
     let { isActive: t, arrow: n, className: a, children: s } = e,
         [l, o] = r.useState(t),
         c = r.useCallback(() => {
-            k[n](), o(!0);
+            (k[n](), o(!0));
         }, [n]);
     return (
         r.useEffect(() => {
@@ -418,7 +418,7 @@ function Y(e) {
         }));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(B, { showBackdrop: l }),
+            (0, i.jsx)(V, { showBackdrop: l }),
             (0, i.jsx)(f.EO, {
                 className: d()(x._$, { [x.O9]: a }),
                 size: f.rI.DYNAMIC,
@@ -432,7 +432,7 @@ function Y(e) {
                               U,
                               {
                                   handleDemonClose: function () {
-                                      o(!1), setTimeout(n, 500);
+                                      (o(!1), setTimeout(n, 500));
                                   },
                               },
                               "raging-demo",
@@ -456,12 +456,12 @@ function Y(e) {
 var K = n(946974);
 class $ extends l.A {
     _initialize() {
-        s.h.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
-            s.h.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
+        (s.h.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
+            s.h.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts));
     }
     _terminate() {
-        s.h.unsubscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
-            s.h.unsubscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
+        (s.h.unsubscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
+            s.h.unsubscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts));
     }
     showKeyboardShortcuts() {
         (0, a.openModal)((e) => (0, i.jsx)(Y, { ...e }), { modalKey: K.P });

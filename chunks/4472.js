@@ -1,4 +1,4 @@
-n.d(t, { A: () => o }), n(321073);
+(n.d(t, { A: () => o }), n(321073));
 var i = n(652215);
 let r = [],
     a = !1;
@@ -26,12 +26,12 @@ let o = {
         window.removeEventListener("offline", e);
     },
     addChangeCallback(e) {
-        r.push(e),
+        (r.push(e),
             (function () {
                 if (!0 === a) return;
                 let e = window.navigator.connection;
                 null != e && ((a = !0), e.addEventListener("change", l));
-            })();
+            })());
     },
     removeChangeCallback(e) {
         let t;

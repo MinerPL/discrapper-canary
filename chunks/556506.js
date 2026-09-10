@@ -47,7 +47,7 @@ let g = function (n) {
                 size: z,
                 color: c.$n.Colors.PRIMARY,
                 onClick: function () {
-                    D?.(), A?.();
+                    (D?.(), A?.());
                 },
                 className: h.zr,
                 children: j,
@@ -75,7 +75,7 @@ let g = function (n) {
             parentComponent: "Alert",
             children: (0, i.jsxs)("form", {
                 onSubmit: function (n) {
-                    null != n && n.preventDefault(), D?.(), C?.();
+                    (null != n && n.preventDefault(), D?.(), C?.());
                 },
                 className: h.Zd,
                 children: [

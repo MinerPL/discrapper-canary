@@ -2,14 +2,14 @@ var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     i = r(150433);
@@ -70,14 +70,14 @@ e.exports = (function (e) {
                         i instanceof t)
                     ) {
                         var o = i.getInternalState();
-                        (this._lastPosition = o.lastPosition),
+                        ((this._lastPosition = o.lastPosition),
                             (this._lastVelocity = o.lastVelocity),
-                            (this._lastTime = o.lastTime);
+                            (this._lastTime = o.lastTime));
                     }
-                    void 0 !== this._initialVelocity &&
+                    (void 0 !== this._initialVelocity &&
                         null !== this._initialVelocity &&
                         (this._lastVelocity = this._initialVelocity),
-                        this.onUpdate();
+                        this.onUpdate());
                 },
             },
             {
@@ -112,9 +112,9 @@ e.exports = (function (e) {
                         r = e + (0.001 * d) / 2;
                         var h = (n = t + (0.001 * p) / 2),
                             m = this._tension * (this._toValue - r) - this._friction * n;
-                        (r = e + (0.001 * d) / 2), (n = t + (0.001 * p) / 2);
+                        ((r = e + (0.001 * d) / 2), (n = t + (0.001 * p) / 2));
                         var v = (u + 2 * (f + p) + m) / 6;
-                        (e += ((l + 2 * (c + d) + h) / 6) * 0.001), (t += 0.001 * v);
+                        ((e += ((l + 2 * (c + d) + h) / 6) * 0.001), (t += 0.001 * v));
                     }
                     if (
                         ((this._lastTime = i),
@@ -134,8 +134,8 @@ e.exports = (function (e) {
                                 (b = Math.abs(this._toValue - e) <= this._restDisplacementThreshold),
                             y || (g && b))
                         ) {
-                            0 !== this._tension && this._onUpdate(this._toValue),
-                                this.__debouncedOnEnd({ finished: !0 });
+                            (0 !== this._tension && this._onUpdate(this._toValue),
+                                this.__debouncedOnEnd({ finished: !0 }));
                             return;
                         }
                         this._animationFrame = o.current(this.onUpdate.bind(this));
@@ -145,7 +145,7 @@ e.exports = (function (e) {
             {
                 key: "stop",
                 value: function () {
-                    (this.__active = !1), a.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 });
+                    ((this.__active = !1), a.current(this._animationFrame), this.__debouncedOnEnd({ finished: !1 }));
                 },
             },
         ]),

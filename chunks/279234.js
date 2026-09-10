@@ -24,7 +24,7 @@ function _() {
             (a = (async () => {
                 await r.Bf();
                 let e = r.vZ();
-                e.installLogCallback(l, o, d, c, u), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
+                (e.installLogCallback(l, o, d, c, u), await e.initLibdiscore(), (window._libdiscoreInitialized = !0));
             })()),
         a
     );

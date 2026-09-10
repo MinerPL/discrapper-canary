@@ -52,13 +52,13 @@ var i = d(252422),
             $ = `${l}-helper`,
             q = `${l}-error`,
             ll = G ? "" : [u ? $ : null, o ? q : null].filter(Boolean).join(" ");
-        (0, i._)(() => {
+        ((0, i._)(() => {
             if (!S) return;
             let l = requestAnimationFrame(() => {
-                M && v.current && v.current.focus(),
+                (M && v.current && v.current.focus(),
                     requestAnimationFrame(() => {
                         k.current?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
-                    });
+                    }));
             });
             return () => cancelAnimationFrame(l);
         }, [S, M]),
@@ -73,15 +73,15 @@ var i = d(252422),
                     H.current && clearTimeout(H.current);
                 },
                 [],
-            );
+            ));
         let lt = (l) => {
-            m(l), C(!1), j(-1), J.current?.focus();
+            (m(l), C(!1), j(-1), J.current?.focus());
         };
         return (0, i.v)("div", {
             class: (0, e.n)("IncodeDropdownComposed", z),
             ref: O,
             onBlur: (l) => {
-                g(!1), O.current?.contains(l.relatedTarget) || (C(!1), V?.());
+                (g(!1), O.current?.contains(l.relatedTarget) || (C(!1), V?.()));
             },
             children: [
                 y && (0, i.v)("input", { type: "hidden", name: y, value: Z || "", disabled: p, required: N }),
@@ -125,40 +125,40 @@ var i = d(252422),
                                         T?.(l);
                                         let { key: t } = l;
                                         if (1 === t.length && /^[a-zA-Z0-9]$/.test(t)) {
-                                            l.preventDefault(),
+                                            (l.preventDefault(),
                                                 H.current && clearTimeout(H.current),
-                                                (K.current += t.toLowerCase());
+                                                (K.current += t.toLowerCase()));
                                             let d = f.findIndex((l) => l.label.toLowerCase().startsWith(K.current));
-                                            -1 !== d && (S || C(!0), j(d)),
+                                            (-1 !== d && (S || C(!0), j(d)),
                                                 (H.current = setTimeout(() => {
                                                     K.current = "";
-                                                }, 500));
+                                                }, 500)));
                                             return;
                                         }
                                         switch (t) {
                                             case "ArrowDown":
-                                                l.preventDefault(),
-                                                    S ? j((l) => (l < f.length - 1 ? l + 1 : l)) : (C(!0), j(0));
+                                                (l.preventDefault(),
+                                                    S ? j((l) => (l < f.length - 1 ? l + 1 : l)) : (C(!0), j(0)));
                                                 break;
                                             case "ArrowUp":
-                                                l.preventDefault(),
-                                                    S ? j((l) => (l > 0 ? l - 1 : l)) : (C(!0), j(f.length - 1));
+                                                (l.preventDefault(),
+                                                    S ? j((l) => (l > 0 ? l - 1 : l)) : (C(!0), j(f.length - 1)));
                                                 break;
                                             case "Home":
-                                                l.preventDefault(), S && j(0);
+                                                (l.preventDefault(), S && j(0));
                                                 break;
                                             case "End":
-                                                l.preventDefault(), S && j(f.length - 1);
+                                                (l.preventDefault(), S && j(f.length - 1));
                                                 break;
                                             case "Enter":
-                                                l.preventDefault(), S && D >= 0 && f[D] ? lt(f[D].value) : S || C(!0);
+                                                (l.preventDefault(), S && D >= 0 && f[D] ? lt(f[D].value) : S || C(!0));
                                                 break;
                                             case " ":
-                                                l.preventDefault(),
-                                                    S && D >= 0 && f[D] ? lt(f[D].value) : S || (C(!0), j(0));
+                                                (l.preventDefault(),
+                                                    S && D >= 0 && f[D] ? lt(f[D].value) : S || (C(!0), j(0)));
                                                 break;
                                             case "Escape":
-                                                l.preventDefault(), S && (C(!1), j(-1), J.current?.focus());
+                                                (l.preventDefault(), S && (C(!1), j(-1), J.current?.focus()));
                                                 break;
                                             case "Tab":
                                                 S && (C(!1), j(-1));
@@ -228,33 +228,33 @@ var i = d(252422),
                                                         class: "IncodeDropdownComposedSearchInput",
                                                         value: U,
                                                         onInput: (l) => {
-                                                            F(l.target.value), j(0);
+                                                            (F(l.target.value), j(0));
                                                         },
                                                         onKeyDown: (l) => {
                                                             let { key: t } = l;
                                                             switch (t) {
                                                                 case "ArrowDown":
-                                                                    l.preventDefault(),
-                                                                        j((l) => (l < f.length - 1 ? l + 1 : l));
+                                                                    (l.preventDefault(),
+                                                                        j((l) => (l < f.length - 1 ? l + 1 : l)));
                                                                     break;
                                                                 case "ArrowUp":
-                                                                    l.preventDefault(), j((l) => (l > 0 ? l - 1 : l));
+                                                                    (l.preventDefault(), j((l) => (l > 0 ? l - 1 : l)));
                                                                     break;
                                                                 case "Home":
-                                                                    l.preventDefault(), j(0);
+                                                                    (l.preventDefault(), j(0));
                                                                     break;
                                                                 case "End":
-                                                                    l.preventDefault(), j(f.length - 1);
+                                                                    (l.preventDefault(), j(f.length - 1));
                                                                     break;
                                                                 case "Enter":
-                                                                    l.preventDefault(),
-                                                                        D >= 0 && f[D] && lt(f[D].value);
+                                                                    (l.preventDefault(),
+                                                                        D >= 0 && f[D] && lt(f[D].value));
                                                                     break;
                                                                 case "Escape":
-                                                                    l.preventDefault(),
+                                                                    (l.preventDefault(),
                                                                         C(!1),
                                                                         j(-1),
-                                                                        J.current?.focus();
+                                                                        J.current?.focus());
                                                                     break;
                                                                 case "Tab":
                                                                     U || (C(!1), j(-1));
@@ -274,7 +274,7 @@ var i = d(252422),
                                                               class: "IncodeDropdownComposedCloseIconButton",
                                                               onMouseDown: (l) => l.preventDefault(),
                                                               onClick: () => {
-                                                                  F(""), v.current?.focus();
+                                                                  (F(""), v.current?.focus());
                                                               },
                                                               "aria-label": "Clear search query",
                                                               children: (0, i.v)(a.o, {

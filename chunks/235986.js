@@ -30,7 +30,7 @@ function E(e) {
         children: t,
     });
 }
-(E.Child = function (e) {
+((E.Child = function (e) {
     let { children: t, className: n, shrink: a = 1, grow: o = 1, basis: d = "auto", style: c, wrap: u = !1, ..._ } = e,
         E = { className: (n = n ?? l.Gu), style: { flexGrow: o, flexShrink: a, flexBasis: d, ...c }, ..._ };
     if (!u && "string" != typeof t && 1 === r.Children.count(t)) {
@@ -46,5 +46,5 @@ function E(e) {
     (E.Direction = d),
     (E.Align = u),
     (E.Justify = c),
-    (E.Wrap = _);
+    (E.Wrap = _));
 let A = E;

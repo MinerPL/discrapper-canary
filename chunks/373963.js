@@ -14,7 +14,7 @@ function l(n, i) {
               shortcut: (0, o.isMac)() ? "\u2318C" : "Ctrl+C",
               leadingAccessory: { type: "icon", icon: r.CopyIcon },
               action: () => {
-                  a.Ay.copy(n), i?.focus();
+                  (a.Ay.copy(n), i?.focus());
               },
           })
         : null;

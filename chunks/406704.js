@@ -16,7 +16,7 @@ n.d(t, {
     lK: () => v,
     n: () => m,
     qi: () => x,
-    s5: () => V,
+    s5: () => B,
 });
 var i = n(435558),
     r = n.n(i),
@@ -43,12 +43,16 @@ let T = (0, o.A)({
 });
 function m(e, t) {
     return C(
-        (0, s.bG)([h.A], () => {
-            let t = e.isForumLikeChannel()
-                ? p.xBc.SEND_MESSAGES
-                : a.kg(p.xBc.CREATE_PUBLIC_THREADS, p.xBc.READ_MESSAGE_HISTORY);
-            return h.A.can(t, e);
-        }, [e]),
+        (0, s.bG)(
+            [h.A],
+            () => {
+                let t = e.isForumLikeChannel()
+                    ? p.xBc.SEND_MESSAGES
+                    : a.kg(p.xBc.CREATE_PUBLIC_THREADS, p.xBc.READ_MESSAGE_HISTORY);
+                return h.A.can(t, e);
+            },
+            [e],
+        ),
         e,
         t,
     );
@@ -111,10 +115,14 @@ function v(e) {
             [h.A],
             () => null != e && h.A.can(p.xBc.SEND_MESSAGES_IN_THREADS, e) && h.A.can(p.xBc.SEND_MESSAGES, e),
         ),
-        n = (0, s.bG)([h.A, A.A], () => {
-            let t = null != e ? A.A.getChannel(e.parent_id) : null;
-            return null != t && h.A.can(p.xBc.SEND_MESSAGES_IN_THREADS, e) && h.A.can(p.xBc.SEND_MESSAGES, t);
-        }, [e]),
+        n = (0, s.bG)(
+            [h.A, A.A],
+            () => {
+                let t = null != e ? A.A.getChannel(e.parent_id) : null;
+                return null != t && h.A.can(p.xBc.SEND_MESSAGES_IN_THREADS, e) && h.A.can(p.xBc.SEND_MESSAGES, t);
+            },
+            [e],
+        ),
         i = w(e);
     return D(e, t && n, i);
 }
@@ -171,7 +179,7 @@ function F(e) {
         a = (0, l.a9)() && (0, l.UK)(e.id);
     return !t && e.isVocalThread() && (i || r) && n && !a;
 }
-function V(e) {
+function B(e) {
     let t = w(e);
     return e.isLockedThread() && !t;
 }

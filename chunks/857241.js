@@ -62,7 +62,7 @@ var u = s(202103),
                           }),
                           (0, c.v)(o.t, {
                               onClick: () => {
-                                  r.current?.click(), t();
+                                  (r.current?.click(), t());
                               },
                               children: i("certificateIssuance.download.button"),
                           }),

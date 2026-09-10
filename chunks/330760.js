@@ -19,7 +19,7 @@ class l extends o.FG {
     }
     balanceDate() {}
     constructor(...e) {
-        super(...e), (this.identifier = "buddhist");
+        (super(...e), (this.identifier = "buddhist"));
     }
 }
 function u(e) {
@@ -45,11 +45,11 @@ class h {
     fromJulianDay(e) {
         let [a, t, r] = d(1723856, e),
             n = "AM";
-        return a <= 0 && ((n = "AA"), (a += 5500)), new (0, i.ng)(this, n, a, t, r);
+        return (a <= 0 && ((n = "AA"), (a += 5500)), new (0, i.ng)(this, n, a, t, r));
     }
     toJulianDay(e) {
         let a = e.year;
-        return "AA" === e.era && (a -= 5500), s(1723856, a, e.month, e.day);
+        return ("AA" === e.era && (a -= 5500), s(1723856, a, e.month, e.day));
     }
     getDaysInMonth(e) {
         return m(e.year, e.month);
@@ -79,7 +79,7 @@ class h {
 class y extends h {
     fromJulianDay(e) {
         let [a, t, r] = d(1723856, e);
-        return (a += 5500), new (0, i.ng)(this, "AA", a, t, r);
+        return ((a += 5500), new (0, i.ng)(this, "AA", a, t, r));
     }
     getEras() {
         return ["AA"];
@@ -88,22 +88,22 @@ class y extends h {
         return 9999;
     }
     constructor(...e) {
-        super(...e), (this.identifier = "ethioaa");
+        (super(...e), (this.identifier = "ethioaa"));
     }
 }
 class D extends h {
     fromJulianDay(e) {
         let [a, t, r] = d(1824665, e),
             n = "CE";
-        return a <= 0 && ((n = "BCE"), (a = 1 - a)), new (0, i.ng)(this, n, a, t, r);
+        return (a <= 0 && ((n = "BCE"), (a = 1 - a)), new (0, i.ng)(this, n, a, t, r));
     }
     toJulianDay(e) {
         let a = e.year;
-        return "BCE" === e.era && (a = 1 - a), s(1824665, a, e.month, e.day);
+        return ("BCE" === e.era && (a = 1 - a), s(1824665, a, e.month, e.day));
     }
     getDaysInMonth(e) {
         let a = e.year;
-        return "BCE" === e.era && (a = 1 - a), m(a, e.month);
+        return ("BCE" === e.era && (a = 1 - a), m(a, e.month));
     }
     isInverseEra(e) {
         return "BCE" === e.era;
@@ -118,7 +118,7 @@ class D extends h {
         return "BCE" === e.era ? 9999 : 9715;
     }
     constructor(...e) {
-        super(...e), (this.identifier = "coptic");
+        (super(...e), (this.identifier = "coptic"));
     }
 }
 var p = t(489138);
@@ -129,7 +129,7 @@ function f(e) {
 function v(e) {
     let a = Math.floor((235 * e - 234) / 19),
         t = 29 * a + Math.floor((12084 + 13753 * a) / 25920);
-    return 3 > (0, p.z)(3 * (t + 1), 7) && (t += 1), t;
+    return (3 > (0, p.z)(3 * (t + 1), 7) && (t += 1), t);
 }
 function b(e) {
     let a, t;
@@ -159,10 +159,10 @@ class P {
             t = Math.floor((((25920 * a) / g) * 19 + 234) / 235) + 1,
             r = b(t),
             n = Math.floor(a - r);
-        for (; n < 1; ) n = Math.floor(a - (r = b(--t)));
+        for (; n < 1;) n = Math.floor(a - (r = b(--t)));
         let o = 1,
             l = 0;
-        for (; l < n; ) (l += R(t, o)), o++;
+        for (; l < n;) ((l += R(t, o)), o++);
         let u = n - (l -= R(t, --o));
         return new (0, i.ng)(this, t, o, u);
     }
@@ -214,7 +214,7 @@ class w extends o.FG {
                 : ((a = (0, o.U_)(n.year) ? 31 : 30), (u -= 80)),
             u < a)
         )
-            (t = 1), (r = u + 1);
+            ((t = 1), (r = u + 1));
         else {
             let e = u - a;
             e < 155
@@ -244,7 +244,7 @@ class w extends o.FG {
     }
     balanceDate() {}
     constructor(...e) {
-        super(...e), (this.identifier = "indian");
+        (super(...e), (this.identifier = "indian"));
     }
 }
 function C(e, a, t, r) {
@@ -268,7 +268,7 @@ class S {
     }
     getDaysInMonth(e) {
         let a = 29 + (e.month % 2);
-        return 12 === e.month && k(e.year) && a++, a;
+        return (12 === e.month && k(e.year) && a++, a);
     }
     getMonthsInYear() {
         return 12;
@@ -300,7 +300,7 @@ class E extends S {
         return C(1948439, e.year, e.month, e.day);
     }
     constructor(...e) {
-        super(...e), (this.identifier = "islamic-tbla");
+        (super(...e), (this.identifier = "islamic-tbla"));
     }
 }
 function V(e) {
@@ -350,7 +350,7 @@ class I extends S {
             let e = 1299,
                 t = 1,
                 r = 1;
-            for (; r > 0; ) {
+            for (; r > 0;) {
                 r = a - V(++e) + 1;
                 let n = M(e);
                 if (r === n) {
@@ -359,7 +359,7 @@ class I extends S {
                 }
                 if (r < n) {
                     let a = F(e, t);
-                    for (t = 1; r > a; ) (r -= a), (a = F(e, ++t));
+                    for (t = 1; r > a;) ((r -= a), (a = F(e, ++t)));
                     break;
                 }
             }
@@ -415,7 +415,7 @@ class z extends o.FG {
     balanceDate(e) {
         let a = U(e),
             t = Z(a);
-        N[t] !== e.era && ((e.era = N[t]), (e.year = a.year - O[t])), this.constrainDate(e);
+        (N[t] !== e.era && ((e.era = N[t]), (e.year = a.year - O[t])), this.constrainDate(e));
     }
     constrainDate(e) {
         let a = N.indexOf(e.era),
@@ -423,12 +423,12 @@ class z extends o.FG {
         if (null != t) {
             let [r, n, i] = t,
                 o = r - O[a];
-            (e.year = Math.max(1, Math.min(o, e.year))),
-                e.year === o && ((e.month = Math.min(n, e.month)), e.month === n && (e.day = Math.min(i, e.day)));
+            ((e.year = Math.max(1, Math.min(o, e.year))),
+                e.year === o && ((e.month = Math.min(n, e.month)), e.month === n && (e.day = Math.min(i, e.day))));
         }
         if (1 === e.year && a >= 0) {
             let [, t, r] = A[a];
-            (e.month = Math.max(t, e.month)), e.month === t && (e.day = Math.max(r, e.day));
+            ((e.month = Math.max(t, e.month)), e.month === t && (e.day = Math.max(r, e.day)));
         }
     }
     getEras() {
@@ -440,7 +440,7 @@ class z extends o.FG {
             r = A[a + 1];
         if (null == r) return 9999 - t[0] + 1;
         let n = r[0] - t[0];
-        return (e.month < r[1] || (e.month === r[1] && e.day < r[2])) && n++, n;
+        return ((e.month < r[1] || (e.month === r[1] && e.day < r[2])) && n++, n);
     }
     getDaysInMonth(e) {
         return super.getDaysInMonth(U(e));
@@ -454,7 +454,7 @@ class z extends o.FG {
         return a && e.month === a[1] ? a[2] : 1;
     }
     constructor(...e) {
-        super(...e), (this.identifier = "japanese");
+        (super(...e), (this.identifier = "japanese"));
     }
 }
 function j(e) {
@@ -472,7 +472,7 @@ class L {
     }
     toJulianDay(e) {
         let a = 1948319 + 365 * (e.year - 1) + Math.floor((8 * e.year + 21) / 33);
-        return (a += K[e.month - 1]), (a += e.day);
+        return ((a += K[e.month - 1]), (a += e.day));
     }
     getMonthsInYear() {
         return 12;
@@ -517,7 +517,7 @@ class G extends o.FG {
     }
     balanceDate(e) {
         let [a, t] = Y(J(e));
-        (e.era = a), (e.year = t);
+        ((e.era = a), (e.year = t));
     }
     isInverseEra(e) {
         return "before_minguo" === e.era;
@@ -529,7 +529,7 @@ class G extends o.FG {
         return "before_minguo" === e.era ? 9999 : 8088;
     }
     constructor(...e) {
-        super(...e), (this.identifier = "roc");
+        (super(...e), (this.identifier = "roc"));
     }
 }
 function W(e) {

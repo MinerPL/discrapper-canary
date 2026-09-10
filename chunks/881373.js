@@ -1,9 +1,9 @@
-i.d(t, { K2: () => a, YS: () => o, aW: () => n, y$: () => r });
-var s = i(240921);
-let n = 30,
+n.d(t, { K2: () => s, YS: () => o, aW: () => a, y$: () => r });
+var i = n(240921);
+let a = 30,
     r = 5,
-    a = 5,
-    l = (0, s.Ay)({
+    s = 5,
+    l = (0, i.Ay)({
         kind: "user",
         name: "2026-03-l-3pp",
         defaultConfig: { enabled: !1 },
@@ -11,6 +11,6 @@ let n = 30,
     });
 function o(e) {
     let { location: t } = e,
-        { enabled: i } = l.useConfig({ location: t });
-    return { functionalityEnabled: i };
+        { enabled: n } = l.useConfig({ location: t });
+    return { functionalityEnabled: n };
 }

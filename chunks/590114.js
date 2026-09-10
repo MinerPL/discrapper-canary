@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => eF });
+(n.r(e), n.d(e, { default: () => eF }));
 var i = n(477900),
     l = n(582128),
     s = n(806163),
@@ -40,10 +40,10 @@ class E extends l.Component {
         document.addEventListener("keydown", this.handleKeyDown);
     }
     componentWillUnmount() {
-        p.h.wait(() => C(null)), document.removeEventListener("keydown", this.handleKeyDown);
+        (p.h.wait(() => C(null)), document.removeEventListener("keydown", this.handleKeyDown));
     }
     reset() {
-        C(null), T("");
+        (C(null), T(""));
     }
     focusInput() {
         let { searchBarRef: t } = this;
@@ -87,7 +87,7 @@ class E extends l.Component {
                     break;
                 case _.dh.ARROW_DOWN:
                 case _.dh.ARROW_UP:
-                    t.preventDefault(), t.stopPropagation(), this.updateActiveRow(t.key === _.dh.ARROW_DOWN ? 1 : -1);
+                    (t.preventDefault(), t.stopPropagation(), this.updateActiveRow(t.key === _.dh.ARROW_DOWN ? 1 : -1));
                     break;
                 default:
                     null != l.current && t.target !== l.current && l.current?.focus();
@@ -104,7 +104,7 @@ class E extends l.Component {
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
                 onClear: () => {
-                    this.reset(), this.focusInput();
+                    (this.reset(), this.focusInput());
                 },
                 query: t,
                 placeholder: v.intl.string(v.t.aSxWSo),
@@ -733,19 +733,19 @@ class tQ extends l.PureComponent {
             s || null == t || (!t.animate && l) || t.color !== this.props.color)
         ) {
             let t = tY.E2(this.props.color);
-            (this.fillColor = `rgba(${t.r}, ${t.g}, ${t.b}, 0.5)`),
+            ((this.fillColor = `rgba(${t.r}, ${t.g}, ${t.b}, 0.5)`),
                 window.cancelAnimationFrame(this.animationFrameRequestId),
-                (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+                (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)));
         }
     }
     componentDidMount() {
-        (this.animationFrameRequestId = 0), this.onDataUpdate(null, this.props);
+        ((this.animationFrameRequestId = 0), this.onDataUpdate(null, this.props));
     }
     componentDidUpdate(t) {
         this.onDataUpdate(t, this.props);
     }
     componentWillUnmount() {
-        window.cancelAnimationFrame(this.animationFrameRequestId), (this.animationFrameRequestId = 0);
+        (window.cancelAnimationFrame(this.animationFrameRequestId), (this.animationFrameRequestId = 0));
     }
     updateAnimation = (t) => {
         let e,
@@ -765,7 +765,7 @@ class tQ extends l.PureComponent {
         let h = Math.max(Math.min((t - this.dataChangedAt) / s, 1), 0),
             u = i.getContext("2d"),
             p = this.maxValue;
-        (u.strokeStyle = a), (u.lineWidth = o);
+        ((u.strokeStyle = a), (u.lineWidth = o));
         let A = i.height - u.lineWidth,
             m = u.createLinearGradient(0, 0, 0, A);
         if (null != d) m.addColorStop(0, d);
@@ -773,26 +773,26 @@ class tQ extends l.PureComponent {
             let { r: t, g: e, b: n } = tY.E2(a);
             m.addColorStop(0, `rgba(${t}, ${e}, ${n}, 0)`);
         }
-        m.addColorStop(1, this.fillColor), (u.fillStyle = m);
+        (m.addColorStop(1, this.fillColor), (u.fillStyle = m));
         let g = l.length >= r ? r : l.length;
-        u.setTransform(1, 0, 0, -1, 0, i.height),
+        (u.setTransform(1, 0, 0, -1, 0, i.height),
             u.clearRect(0, 0, i.width, i.height),
-            u.translate(0, 0.5 * u.lineWidth);
+            u.translate(0, 0.5 * u.lineWidth));
         let x = Math.floor(i.width / (g - 3)),
             f = 0.5 * x;
-        u.translate(x - x * h, 0), u.beginPath();
+        (u.translate(x - x * h, 0), u.beginPath());
         let y = -x;
-        l.forEach((t, i) => {
-            (e = { x: y, y: (A * t) / p }),
+        (l.forEach((t, i) => {
+            ((e = { x: y, y: (A * t) / p }),
                 0 === i ? u.moveTo(e.x, e.y) : u.bezierCurveTo(n.x + f, n.y, e.x - f, e.y, e.x, e.y),
                 (n = e),
-                (y += x);
+                (y += x));
         }),
             u.stroke(),
             u.lineTo(y - x, 0),
             u.lineTo(0, 0),
             u.fill(),
-            c && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+            c && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)));
     };
     render() {
         let { className: t, pixelWidth: e, pixelHeight: n } = this.props;
@@ -1197,14 +1197,14 @@ class ei extends l.PureComponent {
     }
     componentWillUnmount() {
         let { applications: t } = this.props;
-        t.forEach((t) => {
+        (t.forEach((t) => {
             t.finished &&
                 p.h.wait(() => {
                     tO.Vt(t.applicationId, t.branchId);
                 });
         }),
             window.removeEventListener("resize", this.throttledUpdateHeight),
-            (this.isUnmounted = !0);
+            (this.isUnmounted = !0));
     }
     throttledUpdateHeight = tP().throttle(() => {
         if (this.isUnmounted) return;
@@ -1305,13 +1305,13 @@ class eo extends l.PureComponent {
     _scrollToPadding = 0;
     state = { includeUpdatesInScroller: !1 };
     componentDidMount() {
-        A.I(w.BVt.APPLICATION_LIBRARY),
+        (A.I(w.BVt.APPLICATION_LIBRARY),
             (0, x.h)(ea.XK.LIBRARY),
             p.h.wait(() => (0, m.r)()),
             (0, g.X)(),
             null != this._scrollToOnMount &&
                 null != this._scrollerRef.current &&
-                this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
+                this.scrollToRow(this._scrollToOnMount, this._scrollToPadding));
     }
     handleHeightTallerThanHalfViewportChange = (t) => {
         this.setState({ includeUpdatesInScroller: t });
@@ -1423,11 +1423,11 @@ class eM extends l.PureComponent {
     state = { label: void 0, isDefault: null };
     handleStartEditing = () => {
         let { path: t, label: e, isDefault: n, onToggleEditing: i } = this.props;
-        i(t), this.setState({ label: e, isDefault: n });
+        (i(t), this.setState({ label: e, isDefault: n }));
     };
     handleStopEditing = () => {
         let { onToggleEditing: t } = this.props;
-        t(null), this.setState({ label: void 0, isDefault: null });
+        (t(null), this.setState({ label: void 0, isDefault: null }));
     };
     handleRemoveLocation = () => {
         (0, ef.A)({
@@ -1435,16 +1435,16 @@ class eM extends l.PureComponent {
             subtitle: v.intl.string(v.t["1XqeW2"]),
             confirmText: v.intl.string(v.t.iBUzS5),
             onConfirm: () => {
-                this.handleStopEditing(), (0, eS.JN)(this.props.path);
+                (this.handleStopEditing(), (0, eS.JN)(this.props.path));
             },
         });
     };
     handleSaveChanges = () => {
-        (0, eS.a8)(this.props.path, {
+        ((0, eS.a8)(this.props.path, {
             label: null != this.state.label ? this.state.label : this.props.label,
             isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault,
         }),
-            this.handleStopEditing();
+            this.handleStopEditing());
     };
     handleLabelChange = (t) => {
         this.setState({ label: t });
@@ -1705,7 +1705,7 @@ class eV extends l.PureComponent {
     }
     handleRestoreHiddenLibraryApplication = (t) => {
         let e = ec.PQ(t.getFlags(), w.hM6.HIDDEN);
-        eg.V(t.id, t.branchId, e), this.trackRestoreApplication(t, ec.Lt(e, w.hM6.HIDDEN));
+        (eg.V(t.id, t.branchId, e), this.trackRestoreApplication(t, ec.Lt(e, w.hM6.HIDDEN)));
     };
     renderBody() {
         let {

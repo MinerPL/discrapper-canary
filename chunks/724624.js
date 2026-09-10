@@ -239,7 +239,7 @@ let J = (t) => {
         ],
     });
 };
-(J.ApplyBody = Z),
+((J.ApplyBody = Z),
     (J.TransferBody = H),
     (J.Footer = function (t) {
         let { confirmation: e, confirmationLabel: l, isModifyingSubscription: i, onConfirm: s, onCancel: r } = t;
@@ -258,7 +258,7 @@ let J = (t) => {
                 ],
             }),
         });
-    });
+    }));
 var Y = l(770101),
     q = l(879100),
     W = l(527383),
@@ -455,8 +455,8 @@ let tj = function (t) {
     let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: f, transitionState: p, onClose: v } = t,
         S = (0, m.D)("ApplyGuildBoostModal"),
         E = (0, j.D$)(h.A.boostSlots);
-    r()(null != e || null != l, "Must either provide slots or an initial selected guild"),
-        r()(!e?.some((t) => t.isOnCooldown()), "If slots are provided, they must not be on cooldown");
+    (r()(null != e || null != l, "Must either provide slots or an initial selected guild"),
+        r()(!e?.some((t) => t.isOnCooldown()), "If slots are provided, they must not be on cooldown"));
     let N = [
             null == e ? "UNUSED_QUANTITY_SELECT" : null,
             null == l ? "GUILD_SELECT" : null,
@@ -540,7 +540,7 @@ let tj = function (t) {
             (0, n.jsx)(Y.default, {
                 onClose: D,
                 onSelectGuild: (t) => {
-                    U(t), P("CONFIRM");
+                    (U(t), P("CONFIRM"));
                 },
                 transitionState: p,
                 isTransfer: G,
@@ -559,7 +559,7 @@ let tj = function (t) {
                         "Cannot use a premium guild subscription slot while on cooldown",
                     );
                     try {
-                        await Promise.all(
+                        (await Promise.all(
                             k.map((t) => {
                                 let { premiumGuildSubscription: e } = t;
                                 return null != e ? (0, u.jZ)(e.guildId, e.id) : Promise.resolve();
@@ -573,7 +573,7 @@ let tj = function (t) {
                                 }),
                                 f === th.Pn.PERK,
                             ),
-                            P("SUCCESS");
+                            P("SUCCESS"));
                     } catch (t) {
                         I(!0);
                     }

@@ -1,4 +1,4 @@
-n.d(t, { Ht: () => er, as: () => ei, Vc: () => ea }), n(321073);
+(n.d(t, { Ht: () => er, as: () => ei, Vc: () => ea }), n(321073));
 var i = n(132500),
     r = n(71931),
     a = n(17928),
@@ -40,8 +40,8 @@ let v = 15 * I.A.Millis.MINUTE,
     x = 0,
     k = 0,
     F = { state: "uninitialized" },
-    V = A.A.getState(),
-    B = (0, S.R)(),
+    B = A.A.getState(),
+    V = (0, S.R)(),
     H = O(),
     j = _.default.getToken();
 function W() {
@@ -57,7 +57,7 @@ function W() {
             default:
                 w.type;
         }
-        return (w = null), !0;
+        return ((w = null), !0);
     })() && (f.A.addBreadcrumb({ category: P, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
 }
 async function Y() {
@@ -120,12 +120,12 @@ async function Y() {
             is_system_locked: E.A.getSystemLocked(),
         }),
     };
-    h.default.track(D.HAw.CLIENT_HEARTBEAT, _), (k = u()), (0, o.p)();
+    (h.default.track(D.HAw.CLIENT_HEARTBEAT, _), (k = u()), (0, o.p)());
 }
 function K() {
     let e = [];
     return (
-        null != j && H && (B && e.push("foregrounded"), V === D.S7L.RTC_CONNECTED && e.push("rtc_connected")),
+        null != j && H && (V && e.push("foregrounded"), B === D.S7L.RTC_CONNECTED && e.push("rtc_connected")),
         { active: e.length > 0, ver: 31, reasons: e }
     );
 }
@@ -133,51 +133,51 @@ function $() {
     return K().active;
 }
 function z() {
-    $()
+    ($()
         ? (function () {
               if (null != w) return;
               let e = 0 === k ? 0 : v - (u() - k);
-              f.A.addBreadcrumb({
+              (f.A.addBreadcrumb({
                   message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
               }),
                   (w = {
                       type: "timeout",
                       id: setTimeout(() => {
-                          Y(),
+                          (Y(),
                               (w = {
                                   type: "interval",
                                   id: setInterval(() => {
                                       Y();
                                   }, v),
-                              });
+                              }));
                       }, e),
-                  });
+                  }));
           })()
         : W(),
-        c.A.getSocket()?.handleActiveStateChange(K());
+        c.A.getSocket()?.handleActiveStateChange(K()));
 }
-function q(e) {
+function X(e) {
     return null == e
         ? null
         : e.version !== R.Ir
           ? (U.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
           : e;
 }
-async function Z() {
+async function q() {
     let e = await er(!1);
     null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
 }
-function X() {
+function Z() {
     let e = _.default.getToken();
-    j !== e && ((j = e), s.w.remove(M), (F = { state: "loaded", session: null }), W(), (k = 0)), z();
+    (j !== e && ((j = e), s.w.remove(M), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
 }
 function Q() {
     let e = A.A.getState();
-    V !== e && ((V = e), z());
+    B !== e && ((B = e), z());
 }
 function J(e) {
     let { focused: t } = e;
-    B !== t && ((B = t), z());
+    V !== t && ((V = t), z());
 }
 function ee() {
     let e = O();
@@ -186,18 +186,18 @@ function ee() {
 function et(e) {
     let { state: t } = e,
         n = t === D.g6G.ACTIVE;
-    B !== n && ((B = n), z());
+    V !== n && ((V = n), z());
 }
 function en() {
-    (V = A.A.getState()), (B = (0, S.R)()), (H = O()), X();
+    ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), Z());
 }
 function ei() {
-    f.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
+    (f.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
         A.A.addChangeListener(Q),
-        _.default.addChangeListener(X),
+        _.default.addChangeListener(Z),
         l.h.subscribe("WINDOW_FOCUS", J),
         l.h.subscribe("APP_STATE_UPDATE", et),
-        l.h.subscribe("CONNECTION_OPEN", Z),
+        l.h.subscribe("CONNECTION_OPEN", q),
         (0, N.JK)().listen(ee),
         z(),
         null == G &&
@@ -210,27 +210,27 @@ function ei() {
                 }, v),
                 type: "interval",
             }),
-        a.Ay.initialized.then(en);
+        a.Ay.initialized.then(en));
 }
 async function er() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = null,
         n = "loaded" === F.state ? F.session?.uuid : null;
     try {
-        t = "uninitialized" === F.state ? q(await s.w.getAfterRefresh(M)) : F.session;
+        t = "uninitialized" === F.state ? X(await s.w.getAfterRefresh(M)) : F.session;
     } catch (e) {
         f.A.captureException(e);
     }
     let a = Date.now();
     if ($()) {
-        (null == t || (0, R.aE)(t)) &&
+        ((null == t || (0, R.aE)(t)) &&
             ((t = { uuid: (0, i.A)(), createdAtTimestamp: a, lastUsedTimestamp: a, version: R.Ir }), (x = 0)),
-            (t.lastUsedTimestamp = a);
+            (t.lastUsedTimestamp = a));
         var l = t;
         let e = u();
         if (!(e - x < b))
             try {
-                s.w.set(M, l), (x = e);
+                (s.w.set(M, l), (x = e));
             } catch (e) {
                 f.A.captureException(e);
             }
@@ -245,6 +245,6 @@ async function er() {
     );
 }
 function ea() {
-    let e = "uninitialized" === F.state ? q(s.w.get(M)) : F.session;
+    let e = "uninitialized" === F.state ? X(s.w.get(M)) : F.session;
     return null == e || (0, R.aE)(e) ? null : e;
 }

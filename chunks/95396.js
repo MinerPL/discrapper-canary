@@ -8,7 +8,7 @@ async function s(e, t) {
         body: t,
         rejectWithError: (0, l.fT)(),
     });
-    return i.h.dispatch({ type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: e, restrictedSchedule: n }), n;
+    return (i.h.dispatch({ type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: e, restrictedSchedule: n }), n);
 }
 async function a(e, t, n) {
     let { body: s } = await l.Bo.patch({
@@ -16,7 +16,7 @@ async function a(e, t, n) {
         body: n,
         rejectWithError: (0, l.fT)(),
     });
-    return i.h.dispatch({ type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: e, restrictedSchedule: s }), s;
+    return (i.h.dispatch({ type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: e, restrictedSchedule: s }), s);
 }
 async function d(e, t) {
     let { body: n } = await l.Bo.del({

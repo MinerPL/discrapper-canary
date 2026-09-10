@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.detectFile = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.detectFile = void 0));
 let i = n(835986),
     r = n(817762);
 t.detectFile = function (e, t) {

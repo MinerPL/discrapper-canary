@@ -50,5 +50,5 @@ function A(e, t, n, i, a) {
             );
         }, {}),
         d = t.filter((e) => s[e.soundId] > 0).sort((e, t) => s[t.soundId] - s[e.soundId]);
-    return E(d, a, i?.id, e), d;
+    return (E(d, a, i?.id, e), d);
 }

@@ -29,9 +29,9 @@ function v(t) {
             if (null != _) {
                 M(!0);
                 try {
-                    await d.A.setCommunicationDisabledDuration(n, l, null, null, S),
+                    (await d.A.setCommunicationDisabledDuration(n, l, null, null, S),
                         (0, s.P0)((0, r.o)(A.intl.string(A.t["/Mmbfv"]), o.Ck.SUCCESS)),
-                        w();
+                        w());
                 } catch (t) {
                     (0, s.P0)((0, r.o)(A.intl.string(A.t.epyCuh), o.Ck.FAILURE));
                 } finally {

@@ -22,15 +22,15 @@ async function u(e) {
     try {
         let e = (await r.Bo.get({ url: d.Rsh.USER_BADGES(c(n)), rejectWithError: !0 })).body,
             t = [E, "result:success", `catalog_state:${0 === e.badges.length ? "empty" : "non_empty"}`, A];
-        s.A.distribution({ name: i.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: t }, Date.now() - h),
-            a.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: n, badges: e.badges });
+        (s.A.distribution({ name: i.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: t }, Date.now() - h),
+            a.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: n, badges: e.badges }));
     } catch (e) {
-        s.A.distribution(
+        (s.A.distribution(
             { name: i.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: [E, "result:failure", "catalog_state:unknown", A] },
             Date.now() - h,
         ),
             a.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: n }),
-            o.A.captureException(e);
+            o.A.captureException(e));
     }
 }
 async function _(e, t) {

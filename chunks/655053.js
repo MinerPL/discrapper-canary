@@ -10,7 +10,7 @@ function l(e) {
         [c, u] = r.useState(t ?? "");
     return (
         r.useEffect(() => {
-            null != n && d(n), null != t && u(t);
+            (null != n && d(n), null != t && u(t));
         }, [n, t]),
         (0, i.jsx)("div", {
             className: l ? s.sectionHidden : s.section,

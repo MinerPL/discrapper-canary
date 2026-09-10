@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         GameProfileEmbedAction: () => _,
         GameProfileSources: () => A,
@@ -11,7 +11,7 @@ n.r(t),
         trackGameProfileEmbedAction: () => g,
         trackGameProfileFeedback: () => m,
         trackGameProfileOpen: () => f,
-    });
+    }));
 var i,
     r,
     a,

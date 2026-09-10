@@ -28,7 +28,7 @@ function E(e) {
             (s = (0, u.bG)([p.A], () => p.A.getUserProfile(t))),
             i.useEffect(() => {
                 let e = new AbortController();
-                return (0, g.A)(t, void 0, { abortSignal: e.signal }), () => e.abort();
+                return ((0, g.A)(t, void 0, { abortSignal: e.signal }), () => e.abort());
             }, [t]),
             i.useMemo(
                 () => ({

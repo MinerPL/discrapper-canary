@@ -85,18 +85,18 @@ class d extends r.PureComponent {
         let { position: r } = this.state,
             a = e.target;
         if (e.button === o.hE4.PRIMARY && (t || (null != i && a.matches(i)))) {
-            this.grabDimensions(),
+            (this.grabDimensions(),
                 (this._dragStart = { x: e.clientX, y: e.clientY }),
                 (this._offsetX = e.clientX - r.x._value),
-                (this._offsetY = e.clientY - r.y._value);
+                (this._offsetY = e.clientY - r.y._value));
             let t = e.nativeEvent.view;
-            this._removeListeners(),
+            (this._removeListeners(),
                 t.addEventListener("mousemove", this.handleMouseMove),
                 t.addEventListener("mouseup", this.handleMouseUp),
                 (this._removeListeners = () => {
-                    t.removeEventListener("mousemove", this.handleMouseMove),
-                        t.removeEventListener("mouseup", this.handleMouseUp);
-                });
+                    (t.removeEventListener("mousemove", this.handleMouseMove),
+                        t.removeEventListener("mouseup", this.handleMouseUp));
+                }));
         }
     };
     handleMouseMove = (e) => {
@@ -105,7 +105,7 @@ class d extends r.PureComponent {
         if (i) return;
         let { dragging: r, dragging: s } = this.state,
             l = r;
-        !r &&
+        (!r &&
             ((e, t) => {
                 let { x: n, y: i } = e,
                     { x: r, y: a } = t;
@@ -121,17 +121,17 @@ class d extends r.PureComponent {
                     !1,
                 ),
                 (0, a.flushSync)(() => {
-                    this.setState({ dragging: l }), s || t?.(e.clientX, e.clientY), n?.(e.clientX, e.clientY);
-                }));
+                    (this.setState({ dragging: l }), s || t?.(e.clientX, e.clientY), n?.(e.clientX, e.clientY));
+                })));
     };
     handleMouseUp = (e) => {
-        this._removeListeners(),
+        (this._removeListeners(),
             this.state.dragging &&
                 (0, a.flushSync)(() => {
                     this.setState({ dragging: !1 });
                     let { onDragEnd: t } = this.props;
                     t?.(e.clientX, e.clientY);
-                });
+                }));
     };
 }
 let c = d;

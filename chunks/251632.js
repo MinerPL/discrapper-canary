@@ -1,4 +1,4 @@
-l.d(n, { default: () => X }), l(321073);
+(l.d(n, { default: () => X }), l(321073));
 var t = l(477900),
     i = l(582128),
     a = l(189213),
@@ -109,7 +109,7 @@ function X(e) {
             let e = H.A.getSettings();
             if (null == e.newMemberActions) return new Set();
             let n = new Set(e.newMemberActions.map((e) => e.channelId));
-            return null != K && n.delete(K), n;
+            return (null != K && n.delete(K), n);
         }),
         [er, ed] = i.useState(null == L ? null : (et.find((e) => e.value === L.actionType)?.value ?? null)),
         [eu, em] = i.useState(!1),
@@ -137,7 +137,7 @@ function X(e) {
             (e || (n && t)) && (n && (0, U.Rp)(ex), (0, U.J4)($, i));
             let a = eh !== eb,
                 s = ev !== ey;
-            X(
+            (X(
                 {
                     channelId: $,
                     title: es,
@@ -149,14 +149,14 @@ function X(e) {
                 i,
                 (a || s) && !e,
             ),
-                l();
+                l());
         }, [X, l, es, er, $, eh, ep, ev, eb, ey, ex, ej]),
         ef = i.useCallback(() => {
-            q?.(), l();
+            (q?.(), l());
         }, [q, l]),
         eT = i.useCallback(
             (e) => {
-                eo(e),
+                (eo(e),
                     ea(
                         z({
                             channelId: $ ?? void 0,
@@ -165,13 +165,13 @@ function X(e) {
                             actionType: er ?? void 0,
                             emoji: null != eh ? eh : void 0,
                         }),
-                    );
+                    ));
             },
             [eo, ea, $, er, eh],
         ),
         eI = i.useCallback(
             (e) => {
-                ee(e),
+                (ee(e),
                     ea(
                         z({
                             channelId: e,
@@ -180,13 +180,13 @@ function X(e) {
                             actionType: er ?? void 0,
                             emoji: null != eh ? eh : void 0,
                         }),
-                    );
+                    ));
             },
             [ee, ea, es, er, eh],
         ),
         eM = i.useCallback(
             (e) => {
-                ed(e),
+                (ed(e),
                     ea(
                         z({
                             channelId: $ ?? void 0,
@@ -195,7 +195,7 @@ function X(e) {
                             actionType: e,
                             emoji: null != eh ? eh : void 0,
                         }),
-                    );
+                    ));
             },
             [ed, ea, $, es, eh],
         ),
@@ -217,7 +217,7 @@ function X(e) {
         ),
         ek = i.useCallback(function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            eg(n), eA(e);
+            (eg(n), eA(e));
         }, []),
         eD = i.useCallback(() => (null != ev ? ev : null), [ev, eh])(),
         ew = i.useCallback(
@@ -337,7 +337,7 @@ function X(e) {
                                                       label: B.intl.string(B.t.ZCLmoR),
                                                       leadingAccessory: { type: "icon", icon: u.TrashIcon },
                                                       action: () => {
-                                                          ek(null), Z.current?.focus();
+                                                          (ek(null), Z.current?.focus());
                                                       },
                                                   })
                                                 : null,
@@ -407,7 +407,7 @@ function X(e) {
                                                             icon: n ? g.PencilIcon : p.X,
                                                             size: n ? "sm" : "md",
                                                             onClick: (n) => {
-                                                                n.stopPropagation(), e.onClick();
+                                                                (n.stopPropagation(), e.onClick());
                                                             },
                                                         }),
                                                     }),
@@ -432,7 +432,7 @@ function X(e) {
                                 position: "top",
                                 shouldShow: eu,
                                 onRequestClose: () => {
-                                    em(!1), Z.current?.focus();
+                                    (em(!1), Z.current?.focus());
                                 },
                                 renderPopout: (e) => {
                                     var n;
@@ -448,7 +448,7 @@ function X(e) {
                                             (e) => {
                                                 let { emoji: l, willClose: t } = e;
                                                 if (null != l)
-                                                    ek(
+                                                    (ek(
                                                         null,
                                                         null == l.id
                                                             ? {
@@ -462,7 +462,7 @@ function X(e) {
                                                                   animated: l.animated,
                                                               },
                                                     ),
-                                                        t && n();
+                                                        t && n());
                                             }),
                                         pickerIntention: W.EmojiIntention.COMMUNITY_CONTENT,
                                         channel: en,

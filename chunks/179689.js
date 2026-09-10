@@ -1,5 +1,5 @@
 var i, r, a, s, l, o, d;
-n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
+(n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
     n(321073),
     (i = n.g),
     (r = Date.now ? Date.now() : +new Date()),
@@ -11,7 +11,7 @@ n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
         return r;
     }),
     (d = function (e, t) {
-        for (var n, i = s.length; i--; ) (n = s[i]).entryType == e && (void 0 === t || n.name == t) && s.splice(i, 1);
+        for (var n, i = s.length; i--;) (n = s[i]).entryType == e && (void 0 === t || n.name == t) && s.splice(i, 1);
     }),
     a.now ||
         (a.now =
@@ -26,7 +26,7 @@ n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
             a.webkitMark ||
             function (e) {
                 var t = { name: e, entryType: "mark", startTime: a.now(), duration: 0 };
-                s.push(t), (l[e] = t);
+                (s.push(t), (l[e] = t));
             }),
     a.measure ||
         (a.measure =
@@ -41,9 +41,9 @@ n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
                     throw SyntaxError(
                         "Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.",
                     );
-                (i = l[t] ? l[t].startTime : 0),
+                ((i = l[t] ? l[t].startTime : 0),
                     (r = l[n] ? l[n].startTime : a.now()),
-                    s.push({ name: e, entryType: "measure", startTime: i, duration: r - i });
+                    s.push({ name: e, entryType: "measure", startTime: i, duration: r - i }));
             }),
     a.getEntriesByType ||
         (a.getEntriesByType =
@@ -74,7 +74,7 @@ n.d(t, { u5: () => u, FO: () => _, fL: () => c }),
         (define.amd || define.ajs) &&
         define("performance", [], function () {
             return a;
-        });
+        }));
 try {
     null == Date.now && (Date.now = () => new Date().valueOf());
 } catch (e) {}

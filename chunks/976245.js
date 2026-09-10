@@ -6,8 +6,8 @@ let n = (e) => {
                 let i = "function" == typeof e ? e(t) : e;
                 if (!Object.is(i, t)) {
                     let e = t;
-                    (t = (null != n ? n : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
-                        r.forEach((r) => r(t, e));
+                    ((t = (null != n ? n : "object" != typeof i || null === i) ? i : Object.assign({}, t, i)),
+                        r.forEach((r) => r(t, e)));
                 }
             },
             i = () => t,

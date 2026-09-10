@@ -47,7 +47,7 @@ let h = new A(l.h, {
                     );
                 })),
                 a().sortBy(t, ["position", "id"]));
-        (c = { ...c, [s]: l }), (u = { ...u, [s]: 1 });
+        ((c = { ...c, [s]: l }), (u = { ...u, [s]: 1 }));
         let o = Date.now();
         _ = { ..._, [s]: o };
     },

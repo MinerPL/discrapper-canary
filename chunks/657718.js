@@ -43,8 +43,8 @@ function S(e) {
             onMouseDown: x,
             onKeyDown: k,
             disabled: F,
-            minWidth: V,
-            className: B,
+            minWidth: B,
+            className: V,
             style: H,
             buttonRef: j,
             ...W
@@ -53,28 +53,28 @@ function S(e) {
         K = Y?.size ?? a,
         $ = Y?.fullWidth ?? g,
         z = null != _,
-        q = r.useRef(null),
-        Z = j ?? q,
-        X = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: Z, disabled: F }),
+        X = r.useRef(null),
+        q = j ?? X,
+        Z = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: q, disabled: F }),
         Q = "expressive" === n,
         J = r.useContext(d.C),
         { theme: ee, i18n: et } = (0, E.G9)(),
         en = (0, l.q)(ee),
         ei = r.useRef(!1);
     r.useEffect(() => {
-        !0 === R && ((ei.current = !0), o.O.announce(L ?? et.BUTTON_LOADING_STARTED_LABEL)),
-            !1 === R && !0 === ei.current && (o.O.announce(y ?? et.BUTTON_LOADING_FINISHED_LABEL), (ei.current = !1));
+        (!0 === R && ((ei.current = !0), o.O.announce(L ?? et.BUTTON_LOADING_STARTED_LABEL)),
+            !1 === R && !0 === ei.current && (o.O.announce(y ?? et.BUTTON_LOADING_FINISHED_LABEL), (ei.current = !1)));
     }, [R, L, y, et.BUTTON_LOADING_STARTED_LABEL, et.BUTTON_LOADING_FINISHED_LABEL]);
     let er = (0, i.jsxs)("div", {
             className: s()(f.buttonChildren, { [f.loading]: R }),
             children: [
-                null != X && "start" === h && X,
+                null != Z && "start" === h && Z,
                 z && (0, i.jsx)(I.E, { tag: "span", variant: T[K], color: "none", lineClamp: 1, children: _ }),
-                null != X && "end" === h && X,
+                null != Z && "end" === h && Z,
             ],
         }),
         ea = F || R,
-        es = V;
+        es = B;
     null != es && "number" == typeof es && (es = `${es}px`);
     let el = (0, i.jsx)(u.vN, {
         ...S,
@@ -99,7 +99,7 @@ function S(e) {
                 })(n, z),
                 { [f.hasText]: z, [f.fullWidth]: $, [f.rounded]: D },
             ),
-            ref: Z,
+            ref: q,
             rel: b,
             type: v,
             onClick: ea ? (e) => e.preventDefault() : M,
@@ -116,7 +116,7 @@ function S(e) {
                 Q &&
                     (0, i.jsx)(C, {
                         hasReducedMotion: J.reducedMotion.enabled,
-                        buttonRef: Z,
+                        buttonRef: q,
                         isLightMode: en,
                         disabled: F,
                     }),
@@ -183,7 +183,7 @@ function C(e) {
                     t?.addEventListener("mouseenter", e, !0),
                     t?.addEventListener("mouseleave", i, !0),
                     () => {
-                        t?.removeEventListener("mouseenter", e, !0), t?.removeEventListener("mouseleave", i, !0);
+                        (t?.removeEventListener("mouseenter", e, !0), t?.removeEventListener("mouseleave", i, !0));
                     }
                 );
             }
@@ -229,7 +229,7 @@ function O(e) {
                     t.addEventListener("mouseenter", e),
                     t.addEventListener("mouseleave", n),
                     () => {
-                        t.removeEventListener("mouseenter", e), t.removeEventListener("mouseleave", n);
+                        (t.removeEventListener("mouseenter", e), t.removeEventListener("mouseleave", n));
                     }
                 );
             }

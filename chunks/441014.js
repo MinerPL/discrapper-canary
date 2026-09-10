@@ -136,7 +136,7 @@ function D(e) {
                                                     (t = e.role_id),
                                                     p((e) => {
                                                         let i = new Set(e);
-                                                        return e.has(t) ? i.delete(t) : i.add(t), i;
+                                                        return (e.has(t) ? i.delete(t) : i.add(t), i);
                                                     })
                                                 );
                                             },
@@ -164,7 +164,7 @@ function I(e) {
             let l = (0, d.A)();
             S.default.track(y.HAw.EMOJI_UPLOAD_STARTED, { guild_id: t, upload_id: l });
             let s = await (0, v.W)({ guildId: t, uploadId: l, data: i, file: a, roles: e });
-            "object" == typeof s && "id" in s && f.X({ emojiId: s.id, userImage: { data: i, file: a } }), n();
+            ("object" == typeof s && "id" in s && f.X({ emojiId: s.id, userImage: { data: i, file: a } }), n());
         } catch (e) {
         } finally {
             o(!1);

@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(321073);
+(n.d(t, { A: () => p }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -38,9 +38,9 @@ class f extends i.PureComponent {
             i = [],
             s = e.length === t ? e.length : t - 1,
             r = 0;
-        for (; r < s && r < e.length; ) {
+        for (; r < s && r < e.length;) {
             let t = r === e.length - 1;
-            i.push(n(e[r] || null, t ? null : d.hC, `user-${r}`, t)), r++;
+            (i.push(n(e[r] || null, t ? null : d.hC, `user-${r}`, t)), r++);
         }
         if (r < e.length) {
             let t = Math.min(e.length - r, 99);

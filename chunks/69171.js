@@ -5,12 +5,12 @@ var r = n(873326),
     a = n(296438);
 let s = "__sentry_xhr_v3__";
 function l(e) {
-    (0, r.s5)("xhr", e), (0, r.AS)("xhr", c);
+    ((0, r.s5)("xhr", e), (0, r.AS)("xhr", c));
 }
 function c() {
     if (!a.j.XMLHttpRequest) return;
     let e = XMLHttpRequest.prototype;
-    (e.open = new Proxy(e.open, {
+    ((e.open = new Proxy(e.open, {
         apply(e, t, n) {
             let a = Error(),
                 l = 1e3 * (0, i.zf)(),
@@ -22,8 +22,8 @@ function c() {
                     } catch (e) {}
                 })(n[1]);
             if (!c || !u) return e.apply(t, n);
-            (t[s] = { method: c, url: u, request_headers: {} }),
-                "POST" === c && u.match(/sentry_key/) && (t.__sentry_own_request__ = !0);
+            ((t[s] = { method: c, url: u, request_headers: {} }),
+                "POST" === c && u.match(/sentry_key/) && (t.__sentry_own_request__ = !0));
             let d = () => {
                 let e = t[s];
                 if (e && 4 === t.readyState) {
@@ -59,7 +59,7 @@ function c() {
                 if (!o) return e.apply(t, n);
                 void 0 !== n[0] && (o.body = n[0]);
                 let a = { startTimestamp: 1e3 * (0, i.zf)(), xhr: t };
-                return (0, r.aj)("xhr", a), e.apply(t, n);
+                return ((0, r.aj)("xhr", a), e.apply(t, n));
             },
-        }));
+        })));
 }

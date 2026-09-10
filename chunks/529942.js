@@ -15,13 +15,13 @@ var i = n(228366),
     I = n(652215),
     f = n(746080);
 function p(e, t) {
-    E.default.track(I.HAw.VIEW_AS_ROLES_SELECTED, {
+    (E.default.track(I.HAw.VIEW_AS_ROLES_SELECTED, {
         num_roles: Object.keys(t.roles).length,
         ...(0, r.H$)(e),
         is_viewing_as_member: t.type === h._.NEW_MEMBER,
     }),
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: t }),
-        g(e);
+        g(e));
 }
 function T(e, t) {
     let n = A.A.getData(e);
@@ -48,19 +48,19 @@ function g(e) {
 }
 function S(e, t, n) {
     let i = new Set(_.Ay.getOptedInChannels(e));
-    t.forEach((e) => i.add(e)), n.forEach((e) => i.delete(e)), T(e, { type: h._.NEW_MEMBER, optInChannels: i });
+    (t.forEach((e) => i.add(e)), n.forEach((e) => i.delete(e)), T(e, { type: h._.NEW_MEMBER, optInChannels: i }));
 }
 function N(e, t) {
     let n, i;
-    (n = [...l.Ay.getSelectableChannelIds(e), ...l.Ay.getVocalChannelIds(e)]),
+    ((n = [...l.Ay.getSelectableChannelIds(e), ...l.Ay.getVocalChannelIds(e)]),
         (i = Array.from(t)),
         l.Ay.addConditionalChangeListener(() => {
             let t = o.Ay.getSelfMember(e);
             if (null == t) return !1;
             if (i.some((e) => !t.roles.includes(e))) return !0;
             let r = [...l.Ay.getSelectableChannelIds(e), ...l.Ay.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-            return r.length > 0 && S(e, r, []), !1;
-        });
+            return (r.length > 0 && S(e, r, []), !1);
+        }));
     let r = {};
     for (let n of d.A.getManyRoles(e, t)) r[n.id] = n;
     T(e, { type: h._.NEW_MEMBER, roles: r });

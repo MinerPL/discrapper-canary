@@ -117,9 +117,9 @@ function to(t) {
                       {
                           text: r ? Q.intl.string(Q.t.I6JG46) : t,
                           onClick: (t) => {
-                              t.stopPropagation(),
+                              (t.stopPropagation(),
                                   l?.({ action: r ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  ts({ user: n, activity: e, index: a });
+                                  ts({ user: n, activity: e, index: a }));
                           },
                       },
                       a,
@@ -135,9 +135,9 @@ function to(t) {
                           text: r ? Q.intl.string(Q.t.I6JG46) : t,
                           fullWidth: !0,
                           onClick: (t) => {
-                              t.stopPropagation(),
+                              (t.stopPropagation(),
                                   l?.({ action: r ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  ts({ user: n, activity: e, index: a });
+                                  ts({ user: n, activity: e, index: a }));
                           },
                       },
                       a,
@@ -165,8 +165,8 @@ function tm(t) {
             text: Q.intl.string(Q.t.RscU7I),
             fullWidth: r !== ta.d.MODAL_V2,
             onClick: (t) => {
-                t.stopPropagation(),
-                    null != c ? tx.Ay.launch({ applicationId: c }) : (l?.({ action: "PRESS_PLAY_BUTTON" }), s());
+                (t.stopPropagation(),
+                    null != c ? tx.Ay.launch({ applicationId: c }) : (l?.({ action: "PRESS_PLAY_BUTTON" }), s()));
             },
         });
     if (null == o) return null;
@@ -184,7 +184,7 @@ function tm(t) {
                 loading: u,
                 fullWidth: m,
                 onClick: (t) => {
-                    t.stopPropagation(), l?.({ action: _ ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }), d();
+                    (t.stopPropagation(), l?.({ action: _ ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }), d());
                 },
             }),
         }),
@@ -201,7 +201,7 @@ function tE(t) {
         text: Q.intl.string(Q.t.sbdnpw),
         fullWidth: !r,
         onClick: (t) => {
-            t.stopPropagation(), e?.({ action: "PRESS_CONNECT_ACCOUNT_BUTTON" }), n({ analyticsLocations: [l] });
+            (t.stopPropagation(), e?.({ action: "PRESS_CONNECT_ACCOUNT_BUTTON" }), n({ analyticsLocations: [l] }));
         },
     });
 }
@@ -216,9 +216,9 @@ function tC(t) {
               text: Q.intl.string(Q.t.vwl1PK),
               fullWidth: !r,
               onClick: (t) => {
-                  t.stopPropagation(),
+                  (t.stopPropagation(),
                       l?.({ action: "PRESS_NOTIFY_BUTTON" }),
-                      new tN.A("UserActivityActions").log("notify", n.id, e);
+                      new tN.A("UserActivityActions").log("notify", n.id, e));
               },
           })
         : null;
@@ -240,8 +240,8 @@ function tO(t) {
               onClick: (t) => {
                   t.stopPropagation();
                   let e = n === tg.fg2.XBOX;
-                  l?.({ action: e ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
-                      (0, tj.A)({ platformType: n, location: a });
+                  (l?.({ action: e ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
+                      (0, tj.A)({ platformType: n, location: a }));
               },
           });
 }
@@ -257,10 +257,14 @@ function tU(t) {
         r = a === ta.d.MODAL_V2,
         { channelId: s, guildId: o } = (0, y.UW)(n) ?? {},
         c = (0, U.bG)([tL.A], () => null != s && tL.A.isInChannel(s), [s]),
-        u = (0, U.bG)([tv.A, tR.A], () => {
-            let t = tv.A.getBasicChannel(s);
-            return null != t && (0, tS.A)(t, tR.A);
-        }, [s]);
+        u = (0, U.bG)(
+            [tv.A, tR.A],
+            () => {
+                let t = tv.A.getBasicChannel(s);
+                return null != t && (0, tS.A)(t, tR.A);
+            },
+            [s],
+        );
     return (0, y.Cy)(n) && u && null != o && null != s
         ? (0, i.jsx)($.FD, {
               text: Q.intl.string(Q.t.ZYO5OK),
@@ -452,7 +456,7 @@ function tq(t) {
                     variant: "text-xs/normal",
                     text: Q.intl.formatToPlainString(Q.t["hq/Qze"], { guildName: U.name }),
                     onClick: () => {
-                        (0, j.u)(U.id), H({ action: "OPEN_VOICE_GUILD" }), D?.();
+                        ((0, j.u)(U.id), H({ action: "OPEN_VOICE_GUILD" }), D?.());
                     },
                 })
               : (0, x.A)(l)
@@ -588,7 +592,7 @@ function tq(t) {
                                                       className: tr.mM,
                                                       aspectRatio: e,
                                                       onClick: (t) => {
-                                                          H({ action: "PRESS_IMAGE" }), K(t);
+                                                          (H({ action: "PRESS_IMAGE" }), K(t));
                                                       },
                                                   })),
                                         (0, i.jsxs)("div", {
@@ -599,7 +603,7 @@ function tq(t) {
                                                     : (0, i.jsxs)(u.D, {
                                                           className: tr.sd,
                                                           onClick: (t) => {
-                                                              H({ action: "PRESS_TEXT" }), K(t);
+                                                              (H({ action: "PRESS_TEXT" }), K(t));
                                                           },
                                                           children: [Z(), tt(), tn()],
                                                       }),
@@ -632,10 +636,10 @@ function tq(t) {
                                 userId: n.id,
                                 activityApplication: a,
                                 onClickViewMore: (t) => {
-                                    t.stopPropagation(),
+                                    (t.stopPropagation(),
                                         H({ action: "PRESS_APPLICATION_WIDGET_PREVIEW_VIEW_MORE" }),
                                         D?.(),
-                                        (0, v.openUserProfileModal)({ userId: n.id, tabSection: X.RP.WIDGETS });
+                                        (0, v.openUserProfileModal)({ userId: n.id, tabSection: X.RP.WIDGETS }));
                                 },
                             }),
                         ],

@@ -1,4 +1,4 @@
-n.d(t, { G8: () => p, LI: () => A, d3: () => m, dM: () => g, mD: () => f }), n(142703);
+(n.d(t, { G8: () => p, LI: () => A, d3: () => m, dM: () => g, mD: () => f }), n(142703));
 var i = n(729937),
     l = n(573648),
     s = n(952818),
@@ -19,11 +19,11 @@ function g() {
     let t = u.A.getPlayableComputerDevices();
     if (s.Ay.isObservedAppRunning(l.A.get(d.fg2.SPOTIFY).name) && t.length > 0) {
         let { socket: e, device: n } = t[0];
-        return (0, a.VR)(e.accountId, n.id), Promise.resolve({ socket: e, device: n });
+        return ((0, a.VR)(e.accountId, n.id), Promise.resolve({ socket: e, device: n }));
     }
     return new Promise((e, n) => {
         let i = setTimeout(() => {
-            u.A.removeChangeListener(l), n(Error("timeout launching spotify"));
+            (u.A.removeChangeListener(l), n(Error("timeout launching spotify")));
         }, h);
         function l() {
             for (let { socket: n, device: s } of u.A.getPlayableComputerDevices())
@@ -31,10 +31,10 @@ function g() {
                     (clearTimeout(i),
                     u.A.removeChangeListener(l),
                     setImmediate(() => {
-                        (0, a.VR)(n.accountId, s.id), e({ socket: n, device: s });
+                        ((0, a.VR)(n.accountId, s.id), e({ socket: n, device: s }));
                     }));
         }
-        u.A.addChangeListener(l), window.open(`${c.gY}:`);
+        (u.A.addChangeListener(l), window.open(`${c.gY}:`));
     });
 }
 function f() {

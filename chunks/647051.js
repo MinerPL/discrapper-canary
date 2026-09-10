@@ -85,7 +85,7 @@ let o = ["US", "Worldwide", "Other", "US_Illinois", "US_Texas", "US_California",
                     if ("TUTORIAL_ID" === l.key) {
                         let t = l.configuration,
                             d = [{ key: "ID", configuration: t }];
-                        return t.secondId && d.push({ key: "SECOND_ID", configuration: { ...t, isSecondId: !0 } }), d;
+                        return (t.secondId && d.push({ key: "SECOND_ID", configuration: { ...t, isSecondId: !0 } }), d);
                     }
                     let i = d[t - 1];
                     return "ID" === l.key && i?.key === "TUTORIAL_ID" ? [] : [l];

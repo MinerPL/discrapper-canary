@@ -40,21 +40,21 @@ function T() {
                   if (t !== p) {
                       var n, r;
                       let a, s, d;
-                      (n = e.rule),
+                      ((n = e.rule),
                           (r = e.startAtMs),
                           (a = E.intl.string(_.default["0JlDg0"])),
                           (s = l.bV[new Date(r).getDay()]),
                           (d = `${(0, o.n1)([s])} ${(0, o.li)(n)}`.trim()),
                           i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: a, subtitle: d }),
-                          (p = t);
+                          (p = t));
                   }
               })(e),
               (f = setTimeout(() => {
-                  (f = null), T();
+                  ((f = null), T());
               }, 6e4)))
             : (f = setTimeout(
                   () => {
-                      (f = null), T();
+                      ((f = null), T());
                   },
                   Math.max(0, (e.minutesUntil - 16) * 6e4),
               )));
@@ -68,14 +68,14 @@ function m() {
         T());
 }
 function g() {
-    (h = !1),
+    ((h = !1),
         (p = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
         (0, u.k)(),
-        null != f && (clearTimeout(f), (f = null));
+        null != f && (clearTimeout(f), (f = null)));
 }
 function S() {
-    m(), T();
+    (m(), T());
 }
 function N() {
     T();
@@ -89,18 +89,18 @@ class C extends r.A {
         LOGOUT: g,
     };
     _initialize() {
-        (h = A()),
+        ((h = A()),
             i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: h }),
             h && (0, u.openRestrictedHoursModal)(),
             (I = setInterval(m, 6e4)),
-            T();
+            T());
     }
     _terminate() {
-        null != I && (clearInterval(I), (I = null)),
+        (null != I && (clearInterval(I), (I = null)),
             null != f && (clearTimeout(f), (f = null)),
             (p = null),
             (0, u.k)(),
-            (h = !1);
+            (h = !1));
     }
 }
 let O = new C();

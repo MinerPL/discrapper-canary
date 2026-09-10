@@ -31,7 +31,7 @@ function u(t, e) {
                     case s.OJ:
                     case s.Ht:
                     case s.tv:
-                        (0, i.closeAllModals)(), a.A.open(t, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                        ((0, i.closeAllModals)(), a.A.open(t, c.BEX.TAG, c.JJy.GUILD_POWERUPS_OVERVIEW_CARD));
                         return;
                     default:
                         return;

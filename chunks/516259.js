@@ -1,4 +1,4 @@
-s.d(t, { default: () => C }), s(321073);
+(s.d(t, { default: () => C }), s(321073));
 var i = s(477900),
     n = s(582128),
     o = s(562708),
@@ -20,10 +20,10 @@ function y(e) {
     let { user: t, status: s, ignoredUser: n } = e,
         { analyticsLocations: o } = (0, u.Ay)();
     function a(e) {
-        e.stopPropagation(), d.A.cancelFriendRequest(t.id, { location: "Spam requests modal" });
+        (e.stopPropagation(), d.A.cancelFriendRequest(t.id, { location: "Spam requests modal" }));
     }
     function r(e) {
-        e.stopPropagation(), d.A.addRelationship({ userId: t.id, context: { location: "Spam requests modal" } });
+        (e.stopPropagation(), d.A.addRelationship({ userId: t.id, context: { location: "Spam requests modal" } }));
     }
     let A = s === N.clD.OFFLINE ? N.clD.UNKNOWN : s,
         y = n ? k.intl.string(k.t.pO68Oz) : k.intl.string(k.t["gp+Ytz"]);
@@ -75,11 +75,11 @@ function C(e) {
         0 === p && s();
     }, [p, s]);
     let m = n.useCallback(() => {
-            d.A.clearPendingSpamAndIgnored(), s();
+            (d.A.clearPendingSpamAndIgnored(), s());
         }, [s]),
         h = n.useMemo(() => {
             let e = [];
-            return p > 1 && e.push({ text: k.intl.string(k.t.O8k7O4), onClick: m, variant: "secondary" }), e;
+            return (p > 1 && e.push({ text: k.intl.string(k.t.O8k7O4), onClick: m, variant: "secondary" }), e);
         }, [m, p]);
     return (0, i.jsx)(a.Modal, {
         title: k.intl.string(k.t.kaYqnm),

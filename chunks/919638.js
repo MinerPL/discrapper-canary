@@ -6,13 +6,13 @@ var i = n(17928),
 let l = new a.A("GuildAvailabilityStore"),
     o = new Set();
 function d(e) {
-    (o = new Set(e.unavailableGuilds)),
+    ((o = new Set(e.unavailableGuilds)),
         e.unavailableGuilds.length > 0 &&
-            l.warn(`${e.unavailableGuilds.length} guilds are unavailable on connection open: ${e.unavailableGuilds}`);
+            l.warn(`${e.unavailableGuilds.length} guilds are unavailable on connection open: ${e.unavailableGuilds}`));
 }
 function c(e) {
     if (!o.has(e.guild.id)) return !1;
-    o.delete(e.guild.id), l.info(`Guild has become available: ${e.guild.id}`);
+    (o.delete(e.guild.id), l.info(`Guild has become available: ${e.guild.id}`));
 }
 class u extends i.Ay.Store {
     static displayName = "GuildAvailabilityStore";
@@ -39,9 +39,9 @@ let _ = new u(r.h, {
         if (o.has(e.guildId)) return !1;
         let t = s.A.getGuild(e.guildId),
             n = "???";
-        null != t && null != t.name && (n = t.name),
+        (null != t && null != t.name && (n = t.name),
             l.warn(`Guild has gone unavailable: ${e.guildId} (${n})`),
-            o.add(e.guildId);
+            o.add(e.guildId));
     },
     GUILD_DELETE: function (e) {
         !0 !== e.guild.unavailable && o.delete(e.guild.id);

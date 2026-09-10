@@ -44,7 +44,7 @@ function y(e) {
                 className: r()(p.DV, f, { [p.YR]: v }),
                 onContextMenu: N,
                 onClick: (e) => {
-                    i(e), x?.(e);
+                    (i(e), x?.(e));
                 },
                 children: [
                     (0, n.jsx)(o.eu, {

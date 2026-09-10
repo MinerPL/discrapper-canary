@@ -89,6 +89,6 @@ let E = new _(r.h, {
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if (null == l[t.id]) return !1;
-        delete l[t.id], delete d[t.id];
+        (delete l[t.id], delete d[t.id]);
     },
 });

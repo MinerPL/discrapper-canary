@@ -13,7 +13,7 @@ function E(e, t) {
     let n = (u[e] ?? {})[t];
     if (null == n) return;
     let i = u[e];
-    delete i[t], r().isEmpty(i) && delete u[e];
+    (delete i[t], r().isEmpty(i) && delete u[e]);
     let a = _.get(n);
     null != a && (a.delete(e), 0 === a.size && _.delete(n));
 }
@@ -31,7 +31,7 @@ function A(e, t, n, i) {
             let i = u[e];
             if ((null == i && (i = u[e] = {}), (i[t] = n), o.A.isBlocked(e) || o.A.isIgnored(e))) return;
             let r = _.get(n) ?? new Set();
-            _.set(n, r), r.add(e);
+            (_.set(n, r), r.add(e));
         })(t, e, a),
         !0
     );
@@ -69,7 +69,7 @@ function p(e) {
 class T extends a.Ay.Store {
     static displayName = "GamePartyStore";
     initialize() {
-        this.syncWith([d.A], f), this.waitFor(l.default, o.A, d.A);
+        (this.syncWith([d.A], f), this.waitFor(l.default, o.A, d.A));
     }
     getParty(e) {
         return null != e && _.has(e) ? _.get(e) : null;
@@ -91,7 +91,7 @@ let m = new T(s.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { parties: t, userParties: n } = e;
-        (_ = new Map()), (u = { ...n }), Object.keys(t).forEach((e) => _.set(e, new Set(t[e])));
+        ((_ = new Map()), (u = { ...n }), Object.keys(t).forEach((e) => _.set(e, new Set(t[e]))));
     },
     GUILD_CREATE: h,
     PRESENCES_REPLACE: function (e) {

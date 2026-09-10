@@ -1,4 +1,4 @@
-l.d(t, { default: () => ld }), l(321073);
+(l.d(t, { default: () => ld }), l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(731738),
@@ -252,10 +252,10 @@ let el = (e) => {
         d = (0, G.bG)([Z.A], () => Z.A.getChannel(l), [l]),
         o = a.useMemo(() => ee.Ay.getName(d?.guild_id, d?.id, t), [d, t]),
         c = a.useCallback(() => {
-            u.Ay.trackWithMetadata(et.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: i }),
+            (u.Ay.trackWithMetadata(et.HAw.IAR_BLOCK_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: i }),
                 Y.A.blockUser(t.id, { location: "ReportMenuBlockUser-iOS" }).then(() => {
                     q.A.showBlockSuccessToast(t.id, l);
-                });
+                }));
         }, [t, i, l]);
     return (0, n.jsx)(J.PQ, {
         title: T.intl.formatToPlainString(T.t["Q1o/f3"], { username: o }),
@@ -276,7 +276,7 @@ let ei = (e) => {
             } = e,
             n = [null, null],
             a = Object.values(l?.state ?? {});
-        return a.length > 0 && (n[0] = a.join(", ")), "" !== t && (n[1] = t), n;
+        return (a.length > 0 && (n[0] = a.join(", ")), "" !== t && (n[1] = t), n);
     }).filter((e) => null != e);
     return 0 === t.length
         ? null
@@ -353,7 +353,7 @@ let ex = (e) => {
         });
         return (0, n.jsx)("div", { className: ec.E8, children: i });
     };
-l(323874), l(14289), l(35956);
+(l(323874), l(14289), l(35956));
 var eg = l(331322),
     ep = l(95477),
     e_ = l(46054),
@@ -375,7 +375,7 @@ let eS = ["cdn.discordapp.com", "media.discordapp.net"],
         : /^https:\/\/(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?:@me|\d+)\/\d+\/\d+$/;
 function ey(e) {
     try {
-        return new URL(e), !0;
+        return (new URL(e), !0);
     } catch {
         return !1;
     }
@@ -410,20 +410,20 @@ let eI = (e) => {
             [j, b] = a.useState(null),
             [A, f] = a.useState(!1);
         a.useEffect(() => {
-            h(u?.value ?? ""), p(o?.value ?? ""), u?.value != null && "" !== u.value && f(eC(u.value));
+            (h(u?.value ?? ""), p(o?.value ?? ""), u?.value != null && "" !== u.value && f(eC(u.value)));
         }, [u, o]);
         let N = a.useCallback(
                 (e) => {
                     if ((h(e), "" === e)) {
-                        v(null), f(!1), p(""), b(null), d({ value: e, isValid: !1 });
+                        (v(null), f(!1), p(""), b(null), d({ value: e, isValid: !1 }));
                         return;
                     }
                     if (!ey(e)) {
-                        v(T.intl.string(T.t["24xrGb"])), f(!1), p(""), b(null), d({ value: e, isValid: !1 });
+                        (v(T.intl.string(T.t["24xrGb"])), f(!1), p(""), b(null), d({ value: e, isValid: !1 }));
                         return;
                     }
                     let t = eC(e);
-                    f(t),
+                    (f(t),
                         v(null),
                         t
                             ? "" === g
@@ -431,17 +431,17 @@ let eI = (e) => {
                                 : eT.test(g)
                                   ? d({ value: e, isValid: !0 }, { value: g, isValid: !0 })
                                   : d({ value: e, isValid: !1 }, { value: g, isValid: !1 })
-                            : (p(""), b(null), d({ value: e, isValid: !0 }));
+                            : (p(""), b(null), d({ value: e, isValid: !0 })));
                 },
                 [d, g],
             ),
             S = a.useCallback(
                 (e) => {
                     if ((p(e), "" === e || !eT.test(e))) {
-                        b(T.intl.string(T.t["24xrGb"])), d({ value: x, isValid: !1 }, { value: e, isValid: !1 });
+                        (b(T.intl.string(T.t["24xrGb"])), d({ value: x, isValid: !1 }, { value: e, isValid: !1 }));
                         return;
                     }
-                    b(null), d({ value: x, isValid: !0 }, { value: e, isValid: !0 });
+                    (b(null), d({ value: x, isValid: !0 }, { value: e, isValid: !0 }));
                 },
                 [d, x],
             );
@@ -594,9 +594,9 @@ let eP = (e) => {
     let { message: t, reportId: l } = e,
         [i, s] = a.useState(!1),
         r = a.useCallback(() => {
-            s(!0),
+            (s(!0),
                 u.Ay.trackWithMetadata(et.HAw.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: l }),
-                eG.A.deleteMessage(t.getChannelId(), t.id);
+                eG.A.deleteMessage(t.getChannelId(), t.id));
         }, [t, l]),
         d = a.useMemo(() => {
             let e = Z.A.getChannel(t.getChannelId());
@@ -982,8 +982,8 @@ let e6 = (e) => {
             d = (0, G.bG)([Z.A], () => Z.A.getChannel(l), [l]),
             o = a.useMemo(() => ee.Ay.getName(d?.guild_id, d?.id, t), [d, t]),
             c = a.useCallback(() => {
-                u.Ay.trackWithMetadata(et.HAw.IAR_IGNORE_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: i }),
-                    Y.A.ignoreUser(t.id, "web_iar_ignore_user_element", l);
+                (u.Ay.trackWithMetadata(et.HAw.IAR_IGNORE_USER_BUTTON_CLICKED, { other_user_id: t.id, report_id: i }),
+                    Y.A.ignoreUser(t.id, "web_iar_ignore_user_element", l));
             }, [t, i, l]),
             m = a.useMemo(() => s || r, [s, r]);
         return (0, n.jsx)(J.PQ, {
@@ -1020,9 +1020,9 @@ let td = (e) => {
         s(!d);
     }, [d]);
     let o = a.useCallback(() => {
-        s(!0),
+        (s(!0),
             u.Ay.trackWithMetadata(et.HAw.IAR_LEAVE_GUILD_BUTTON_CLICKED, { guild_id: t, report_id: l }),
-            tr.A.leaveGuild(t);
+            tr.A.leaveGuild(t));
     }, [t, l]);
     return null == r
         ? null
@@ -1211,7 +1211,7 @@ let tL = (e) => {
         [r, d] = a.useState(!1),
         o = (0, G.bG)([tw.Ay, Z.A], () => Z.A.getChannel(tw.Ay.getChannelId())?.guild_id),
         [c, m] = a.useState(null);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         null != c && (s(!0), d(!0));
     }, [c]),
         a.useEffect(() => {
@@ -1231,9 +1231,9 @@ let tL = (e) => {
                     e = !0;
                 }
             );
-        }, [o, t.id]);
+        }, [o, t.id]));
     let x = a.useCallback(() => {
-            d(!1),
+            (d(!1),
                 u.Ay.trackWithMetadata(et.HAw.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: o,
                     application_id: t.id,
@@ -1243,7 +1243,7 @@ let tL = (e) => {
                     null != c &&
                     tr.A.disableIntegration(o, c.id).catch(() => {
                         tR.A.show({ title: T.intl.string(T.t.wYqMmI), body: T.intl.string(T.t.A4Mnst) });
-                    });
+                    }));
         }, [t.id, o, c, l]),
         h = (0, G.bG)([eU.A, eZ.A], () => {
             let e = eZ.A.getGuild(o);
@@ -1280,7 +1280,7 @@ function tV(e) {
             buttonText: r ? T.intl.string(T.t["h+WsPb"]) : T.intl.string(T.t.A8t4Nf),
             buttonDisabled: r,
             onButtonPress: () => {
-                i(), u(!0), s(h.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
+                (i(), u(!0), s(h.lJ.SETTINGS_UPSELLS_APPLY_CLICKED));
             },
         })
     );
@@ -1338,14 +1338,14 @@ function tH(e) {
                   (0, n.jsx)(tG.Q, {
                       text: T.intl.string(T.t.olebGx),
                       onClick: () => {
-                          (0, tP.openUserSettings)(tU.X.MESSAGING_PERMISSIONS_PANEL),
+                          ((0, tP.openUserSettings)(tU.X.MESSAGING_PERMISSIONS_PANEL),
                               s(),
                               u.Ay.trackWithMetadata(et.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: r,
                                   report_type: d.name,
                                   report_subtype: o,
                                   action: h.lJ.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
-                              });
+                              }));
                       },
                   }),
               ],
@@ -1361,7 +1361,7 @@ let tK = (e) => {
         s = a.useCallback(() => {
             (0, t$.Xz)()
                 .then(() => {
-                    (0, tF.P0)(
+                    ((0, tF.P0)(
                         (0, tW.o)(
                             T.intl.formatToPlainString(T.t.wr4IT5, {
                                 count: t.length,
@@ -1372,7 +1372,7 @@ let tK = (e) => {
                             tz.Ck.SUCCESS,
                         ),
                     ),
-                        i(!0);
+                        i(!0));
                 })
                 .catch(() => {
                     q.A.showFailedToast();
@@ -1650,7 +1650,7 @@ let ls = (e) => {
         ea = a.useCallback(
             (e, t) => {
                 let l = { ...K };
-                e in K ? delete l[e] : (l[e] = t), Y(l);
+                (e in K ? delete l[e] : (l[e] = t), Y(l));
             },
             [K],
         ),
@@ -1660,9 +1660,9 @@ let ls = (e) => {
                     n = arguments.length > 3 ? arguments[3] : void 0,
                     a = arguments.length > 4 ? arguments[4] : void 0,
                     i = { ...q };
-                (i[e] = { value: t, isValid: l }),
+                ((i[e] = { value: t, isValid: l }),
                     null != n && (null != a && "" !== a ? (i[n] = { value: a, isValid: l }) : delete i[n]),
-                    J(i);
+                    J(i));
             },
             [q],
         ),
@@ -1672,8 +1672,8 @@ let ls = (e) => {
             },
             [d, ee],
         );
-    a.useEffect(() => {
-        null != m && Y(m), null != N && J(N);
+    (a.useEffect(() => {
+        (null != m && Y(m), null != N && J(N));
     }, [m, N]),
         a.useEffect(() => {
             null != S && $(S);
@@ -1692,13 +1692,13 @@ let ls = (e) => {
                 let e = E.data;
                 if (null != e) for (let [t, l, n, a] of e) a && Y((e) => ({ ...e, [t]: l }));
             }
-        }, [E]);
+        }, [E]));
     let ed = a.useCallback(
             (e) => {
                 switch (e) {
                     case et.t02.UNKNOWN_TIDA_CONTENT: {
                         let e = T.intl.string(T.t["2EPoxE"]);
-                        $(e), c?.("MEDIA_TAKEDOWN_CONTENT_DETAILS", e);
+                        ($(e), c?.("MEDIA_TAKEDOWN_CONTENT_DETAILS", e));
                         break;
                     }
                     case et.t02.INVALID_SIGNATURE_MISMATCH:
@@ -1717,7 +1717,7 @@ let ls = (e) => {
             let t = ["", e.successNodeId];
             o(ee(t))
                 .then(() => {
-                    $(""), er(t);
+                    ($(""), er(t));
                 })
                 .catch((e) => {
                     ed(e.body?.code);
@@ -1737,7 +1737,7 @@ let ls = (e) => {
                         er(["", e.target]);
                         break;
                     case "submit":
-                        H(!0), eu();
+                        (H(!0), eu());
                 }
             },
             [u, er, eu],
@@ -1998,7 +1998,7 @@ let ld = (e) => {
     async function B(e) {
         let n = j ? await (0, h.zC)(l, t, [...M, e]) : await (0, h.bo)(l, t, [...M, e], v),
             a = n?.body?.report_id;
-        null != a && O(a), L(A[e.nodeRef].report_type), p?.(a);
+        (null != a && O(a), L(A[e.nodeRef].report_type), p?.(a));
     }
     function V() {
         if (M.length < 1) return;
@@ -2015,7 +2015,7 @@ let ld = (e) => {
                 next_node: A[n].id,
             });
         }
-        C(l?.multiSelect?.state), k(l?.textInput), T(n), D(e), _?.("..");
+        (C(l?.multiSelect?.state), k(l?.textInput), T(n), D(e), _?.(".."));
     }
     let H = a.useCallback(
         (e, t) => {
@@ -2032,9 +2032,9 @@ let ld = (e) => {
             if (n >= 0) {
                 let e = M.slice(0, n),
                     t = M[n];
-                k(t?.textInput), C(t?.multiSelect?.state), D(e);
-            } else D([]), k(void 0), C(void 0);
-            U(t), T(l.id);
+                (k(t?.textInput), C(t?.multiSelect?.state), D(e));
+            } else (D([]), k(void 0), C(void 0));
+            (U(t), T(l.id));
         },
         [A, M],
     );

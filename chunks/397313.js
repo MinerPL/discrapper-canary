@@ -105,7 +105,7 @@ function G(n) {
         u = (0, E.O)();
     t.useEffect(() => {
         j.h.wait(() => {
-            (0, h.$o)(), (0, g.zS)(null, null, O.tF5.DISCOVERY);
+            ((0, h.$o)(), (0, g.zS)(null, null, O.tF5.DISCOVERY));
         });
     }, []);
     let m = o ? I.Ay.getDefaultPrice(T.gD.PREMIUM_MONTH_TIER_2) : null;

@@ -48,14 +48,18 @@ function j(l, e) {
             userRoles: x,
             isGuildMember: E,
             canManageRoles: M,
-        } = (0, r.cf)([A.Ay, p.A], () => {
-            let n = A.Ay.getMember(e, l);
-            return {
-                userRoles: null != n ? n.roles : [],
-                isGuildMember: null != n,
-                canManageRoles: null != j && p.A.can(R.xBc.MANAGE_ROLES, j),
-            };
-        }, [l, e, j]),
+        } = (0, r.cf)(
+            [A.Ay, p.A],
+            () => {
+                let n = A.Ay.getMember(e, l);
+                return {
+                    userRoles: null != n ? n.roles : [],
+                    isGuildMember: null != n,
+                    canManageRoles: null != j && p.A.can(R.xBc.MANAGE_ROLES, j),
+                };
+            },
+            [l, e, j],
+        ),
         O = (0, u.Ay)(e, l);
     if (__OVERLAY__ || null == x || null == j || !E) return null;
     let k = p.A.getHighestRole(j),

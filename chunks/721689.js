@@ -13,7 +13,7 @@ function l(e, t, r) {
                 i = t.realtimeValidation.isInvalid
                     ? t.realtimeValidation.validationErrors.join(" ") || "Invalid value."
                     : "";
-            r.current.setCustomValidity(i),
+            (r.current.setCustomValidity(i),
                 r.current.hasAttribute("title") || (r.current.title = ""),
                 t.realtimeValidation.isInvalid ||
                     t.updateValidation({
@@ -32,7 +32,7 @@ function l(e, t, r) {
                             valid: n.valid,
                         },
                         validationErrors: e.validationMessage ? [e.validationMessage] : [],
-                    });
+                    }));
         }
     });
     let c = (0, s.useRef)(!1),
@@ -42,7 +42,7 @@ function l(e, t, r) {
         d = (0, o.J)((e) => {
             t.displayValidation.isInvalid || t.commitValidation();
             let n = r?.current?.form;
-            !e.defaultPrevented &&
+            (!e.defaultPrevented &&
                 r &&
                 n &&
                 (function (e) {
@@ -53,7 +53,7 @@ function l(e, t, r) {
                     return null;
                 })(n) === r.current &&
                 (u ? u() : r.current?.focus(), (0, i.Cl)("keyboard")),
-                e.preventDefault();
+                e.preventDefault());
         }),
         p = (0, o.J)(() => {
             t.commitValidation();
@@ -66,20 +66,20 @@ function l(e, t, r) {
         return (
             t &&
                 (t.reset = () => {
-                    (c.current =
+                    ((c.current =
                         !window.event ||
                         ("message" === window.event.type && (0, n.wt)(window.event) instanceof MessagePort)),
                         i?.call(t),
-                        (c.current = !1);
+                        (c.current = !1));
                 }),
             e.addEventListener("invalid", d),
             e.addEventListener("change", p),
             t?.addEventListener("reset", f),
             () => {
-                e.removeEventListener("invalid", d),
+                (e.removeEventListener("invalid", d),
                     e.removeEventListener("change", p),
                     t?.removeEventListener("reset", f),
-                    t && (t.reset = i);
+                    t && (t.reset = i));
             }
         );
     }, [r, l]);

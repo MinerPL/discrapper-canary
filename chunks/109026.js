@@ -1,4 +1,4 @@
-l.r(s), l.d(s, { default: () => w });
+(l.r(s), l.d(s, { default: () => w }));
 var i = l(477900),
     a = l(582128),
     n = l(503698),
@@ -74,7 +74,7 @@ function w(e) {
         b = a.useCallback(() => {
             g(!0);
         }, [g]);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         g();
     }, [g]),
         a.useEffect(() => {
@@ -82,7 +82,7 @@ function w(e) {
         }, [s, N]),
         a.useEffect(() => {
             n?.(C?.current);
-        }, [C, n]);
+        }, [C, n]));
     let A = a.useMemo(
         () =>
             f === u.X.NOT_FETCHED || f === u.X.FETCHING

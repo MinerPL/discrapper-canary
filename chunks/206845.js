@@ -36,7 +36,7 @@ function M(t) {
     if (
         (s.useEffect(
             () => () => {
-                T.stop(), m.stop();
+                (T.stop(), m.stop());
             },
             [T, m],
         ),
@@ -65,7 +65,7 @@ function M(t) {
             return g({
                 ...s,
                 onClick: () => {
-                    n?.(),
+                    (n?.(),
                         E?.(),
                         (0, c.C)(e),
                         o.default.track(p.HAw.TEXT_COPIED),
@@ -73,7 +73,7 @@ function M(t) {
                         R(!0),
                         x(!0),
                         T.start(d, () => R(!1)),
-                        m.start(h, () => k(0));
+                        m.start(h, () => k(0)));
                 },
                 onMouseEnter: () => {
                     w ? (T.stop(), R(!1)) : i?.();

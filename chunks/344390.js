@@ -52,7 +52,7 @@ function f(t) {
                 for (let t = 0, e = 0; t < 3; t++)
                     for (let r = +!t, f = 2 * B[t]; r < 3 - t; r++, e++) {
                         let t = z[r] * f;
-                        (o += A[e] * t), (d += M[e] * t);
+                        ((o += A[e] * t), (d += M[e] * t));
                     }
                 if (p)
                     for (let t = 0, e = 0; t < 5; t++)
@@ -60,10 +60,10 @@ function f(t) {
                 let x = f - (2 / 3) * o,
                     s = (3 * f - x + d) / 2,
                     C = s - d;
-                (q[e] = n(0, 255 * c(1, s))),
+                ((q[e] = n(0, 255 * c(1, s))),
                     (q[e + 1] = n(0, 255 * c(1, C))),
                     (q[e + 2] = n(0, 255 * c(1, x))),
-                    (q[e + 3] = n(0, 255 * c(1, u)));
+                    (q[e + 3] = n(0, 255 * c(1, u))));
             }
         return { w: V, h: j, rgba: q };
     })(t);
@@ -128,7 +128,7 @@ function f(t) {
                 o++
             ) {
                 let t = 255 & r[o];
-                l.push(t), (a = (a + (n = (n + t) % 65521)) % 65521);
+                (l.push(t), (a = (a + (n = (n + t) % 65521)) % 65521));
             }
         for (let [t, e] of (l.push(
             a >> 8,
@@ -157,8 +157,8 @@ function f(t) {
             [37, 41 + o],
         ])) {
             let r = -1;
-            for (let f = t; f < e; f++) (r ^= l[f]), (r = ((r = (r >>> 4) ^ c[15 & r]) >>> 4) ^ c[15 & r]);
-            (r = ~r), (l[e++] = r >>> 24), (l[e++] = (r >> 16) & 255), (l[e++] = (r >> 8) & 255), (l[e++] = 255 & r);
+            for (let f = t; f < e; f++) ((r ^= l[f]), (r = ((r = (r >>> 4) ^ c[15 & r]) >>> 4) ^ c[15 & r]));
+            ((r = ~r), (l[e++] = r >>> 24), (l[e++] = (r >> 16) & 255), (l[e++] = (r >> 8) & 255), (l[e++] = 255 & r));
         }
         return "data:image/png;base64," + btoa(String.fromCharCode(...l));
     })(e.w, e.h, e.rgba);

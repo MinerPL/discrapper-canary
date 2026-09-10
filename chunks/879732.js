@@ -131,7 +131,7 @@ let w = (0, u.A)(
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: function () {
-                    (0, d.Z_)(), V?.();
+                    ((0, d.Z_)(), V?.());
                 },
                 "aria-label": f.intl.string(f.t.liqwPJ),
                 onSelect: W,

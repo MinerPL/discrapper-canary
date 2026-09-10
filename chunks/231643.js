@@ -171,7 +171,7 @@ function C(e, t) {
                     tabs: a,
                     selectedTabId: r,
                     onSelectTab: (e) => {
-                        o(e), s?.(e);
+                        (o(e), s?.(e));
                     },
                 }),
             [r, o, s, ...t],

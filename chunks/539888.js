@@ -201,7 +201,7 @@ function B(e) {
                                 children: (0, i.jsx)(l, {
                                     widget: t,
                                     commit: function (t) {
-                                        n(t), e.onClose();
+                                        (n(t), e.onClose());
                                     },
                                     cancel: function () {
                                         e.onClose();

@@ -25,19 +25,19 @@ let f = new Set(),
 function L(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
-    return null != t && null == n[t] && (n[t] = _.xT(t)), n;
+    return (null != t && null == n[t] && (n[t] = _.xT(t)), n);
 }
 function y() {
     if (((S = E.A.getChannel()), (N = E.A.getCategory()), null == S)) return !1;
     let e = S.getGuildId();
-    (g = m = L(S)),
+    ((g = m = L(S)),
         null == m[C] && (C = e),
         (r = null != N),
         (i = _.r(S, N, (0, c.GY)(S))),
         (O = null),
         (T = !1),
         (p = h.XlH.CLOSED),
-        f.clear();
+        f.clear());
 }
 class D extends l.Ay.Store {
     static displayName = "ChannelSettingsPermissionsStore";
@@ -92,12 +92,12 @@ let v = new D(d.h, {
         let { id: t, allow: n, deny: r } = e,
             a = m?.[t];
         if (null == a || null == S) return !1;
-        (a = { ...a, allow: n, deny: r }),
+        ((a = { ...a, allow: n, deny: r }),
             (m = { ...m, [t]: a }),
             f.add(t),
             (p = h.XlH.OPEN),
             (T = !s().isEqual(m, g)),
-            (i = _.r(S, N, (0, c.GY)(S)));
+            (i = _.r(S, N, (0, c.GY)(S))));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
@@ -111,7 +111,15 @@ let v = new D(d.h, {
         E.A.getSection() === h.p_A.PERMISSIONS && y();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (p = h.XlH.CLOSED), (m = null), (g = null), (S = null), (N = null), (T = !1), f.clear(), (C = null), (O = null);
+        ((p = h.XlH.CLOSED),
+            (m = null),
+            (g = null),
+            (S = null),
+            (N = null),
+            (T = !1),
+            f.clear(),
+            (C = null),
+            (O = null));
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -149,7 +157,7 @@ let v = new D(d.h, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (R = t), o.w.set(I.t0, t);
+        ((R = t), o.w.set(I.t0, t));
     },
     APPLICATION_FETCH_SUCCESS: function () {
         if (null == S || S.type !== h.rbe.GUILD_APP) return !1;

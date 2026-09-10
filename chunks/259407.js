@@ -55,7 +55,7 @@ function m(e) {
         { provider: r, src: a, autoMute: o, ...d } = e,
         u = h[r],
         m = i.useRef(null);
-    (l = "TikTok" === r),
+    ((l = "TikTok" === r),
         (t = i.useCallback(
             (e) => {
                 e.data["x-tiktok-player"] &&
@@ -67,8 +67,8 @@ function m(e) {
             [o, m],
         )),
         i.useEffect(() => {
-            if (l) return window.addEventListener("message", t), () => window.removeEventListener("message", t);
-        }, [l, t]);
+            if (l) return (window.addEventListener("message", t), () => window.removeEventListener("message", t));
+        }, [l, t]));
     let p = (function (e, l, t) {
         let r = n.A.toURLSafe(e ?? "");
         if (null === r) return "";

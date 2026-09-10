@@ -1,4 +1,4 @@
-t.d(r, { b: () => a }), t(321073);
+(t.d(r, { b: () => a }), t(321073));
 var n = t(582128),
     l = t(17928),
     o = t(498480),
@@ -21,7 +21,7 @@ function a(e) {
                             let i = setTimeout(() => {
                                 l || ((l = !0), o(), t(Error("WebSocket timeout")));
                             }, 5e3);
-                            (r.onopen = () => {
+                            ((r.onopen = () => {
                                 if (r.readyState === WebSocket.OPEN)
                                     for (let e = 0; e < 3; e++) {
                                         let e = performance.now();
@@ -34,7 +34,7 @@ function a(e) {
                                     if (!isNaN(t)) {
                                         let r = performance.now(),
                                             u = Math.round(r - t);
-                                        n.push(u), n.length >= 3 && ((l = !0), clearTimeout(i), o(), e());
+                                        (n.push(u), n.length >= 3 && ((l = !0), clearTimeout(i), o(), e()));
                                     }
                                 }),
                                 (r.onerror = () => {
@@ -42,7 +42,7 @@ function a(e) {
                                 }),
                                 (r.onclose = () => {
                                     l || ((l = !0), clearTimeout(i), t(Error("WebSocket closed")));
-                                });
+                                }));
                         }),
                         n.length > 0)
                     ) {
@@ -71,7 +71,7 @@ function a(e) {
             if (r?.rtt != null || r?.loading === !0) return;
             (0, o.QK)(e, { rtt: null, loading: !0, error: !1 });
             let n = new WebSocket(`wss://${e}`);
-            (t.current = n), a(n);
+            ((t.current = n), a(n));
         }, [e, a, s]),
         {
             pingText: n.useMemo(

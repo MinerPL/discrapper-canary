@@ -7,10 +7,10 @@ var l = n(477900),
 class o {
     emitter = new s.EventEmitter();
     subscribe(e, t) {
-        a._.subscribe(e, t), this.emitter.on(e, t);
+        (a._.subscribe(e, t), this.emitter.on(e, t));
     }
     unsubscribe(e, t) {
-        a._.unsubscribe(e, t), this.emitter.off(e, t);
+        (a._.unsubscribe(e, t), this.emitter.off(e, t));
     }
     bumpDispatchPriority() {
         for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) a._.resubscribe(e, t);
@@ -30,7 +30,7 @@ let u = i.createContext(
     c = i.forwardRef(function (e, t) {
         let { children: n } = e,
             s = (0, r.A)(() => new o());
-        return i.useImperativeHandle(t, () => s, [s]), (0, l.jsx)(u.Provider, { value: s, children: n });
+        return (i.useImperativeHandle(t, () => s, [s]), (0, l.jsx)(u.Provider, { value: s, children: n }));
     });
 function d(e) {
     let { event: t, handler: n } = e,
@@ -58,5 +58,5 @@ function d(e) {
     );
 }
 function h(e) {
-    return d(e), null;
+    return (d(e), null);
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => s }), n(938796);
+(n.d(t, { A: () => s }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(315069);
@@ -20,7 +20,7 @@ class s extends a.A {
     flags;
     roles;
     constructor(e) {
-        super(),
+        (super(),
             (this.code = e.code || ""),
             (this.temporary = e.temporary || !1),
             (this.revoked = e.revoked || !1),
@@ -36,7 +36,7 @@ class s extends a.A {
             (this.targetApplication = e.targetApplication || null),
             (this.type = e.type || null),
             (this.flags = e.flags || 0),
-            (this.roles = e.roles || []);
+            (this.roles = e.roles || []));
     }
     static createFromServer(e) {
         return new s({

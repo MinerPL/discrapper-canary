@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(321073);
+(n.d(t, { A: () => b }), n(321073));
 var i = n(477900),
     l = n(582128),
     a = n(562708),
@@ -58,7 +58,7 @@ function b(e) {
         z = (0, m.HX)(o.M.VC_TILE_ACTIVITIES_ENTRY_POINT),
         H = (0, d.et)(T.id) !== d.xy.CAN_LAUNCH,
         W = null != w && w === T.id,
-        $ = D.map(
+        Y = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
                     I.Ay,
@@ -85,14 +85,14 @@ function b(e) {
         { trackOnInitialLoad: !0 },
         [],
     );
-    let Y = F && !H,
-        [K, q] = (0, p._)();
+    let $ = F && !H,
+        [K, X] = (0, p._)();
     null != M &&
         !G &&
         (K
-            ? $.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: q }, "clips-video-call-tile"))
-            : U >= 2 && Y && !z && !W
-              ? $.push((e) =>
+            ? Y.push((e) => (0, i.jsx)(p.V, { width: e, handleClose: X }, "clips-video-call-tile"))
+            : U >= 2 && $ && !z && !W
+              ? Y.push((e) =>
                     (0, i.jsx)(j.y, {
                         channel: T,
                         guild: M,
@@ -105,7 +105,7 @@ function b(e) {
               : B &&
                 1 === U &&
                 k &&
-                $.push((e) =>
+                Y.push((e) =>
                     (0, i.jsx)(j.y, {
                         channel: T,
                         guild: M,
@@ -113,9 +113,9 @@ function b(e) {
                         inPopout: P,
                         handleClose: V,
                         userParticipantCount: U,
-                        activitiesEnabled: Y,
+                        activitiesEnabled: $,
                     }),
                 ));
-    let X = l.useCallback((e) => D[e]?.id ?? "empty-tile", [D]);
-    return (0, i.jsx)(x.A, { className: S, keyExtractor: X, paddingTop: 64, paddingBottom: 64, children: $ });
+    let q = l.useCallback((e) => D[e]?.id ?? "empty-tile", [D]);
+    return (0, i.jsx)(x.A, { className: S, keyExtractor: q, paddingTop: 64, paddingBottom: 64, children: Y });
 }

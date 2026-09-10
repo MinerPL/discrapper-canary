@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_NO_ABBR_PATTERN =
         t.TIME_UNITS_PATTERN =
         t.TIME_UNIT_PATTERN =
@@ -15,13 +15,13 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         let r = {},
             n = e,
             a = s.exec(n);
-        for (; a; )
-            (function (e, r) {
+        for (; a;)
+            ((function (e, r) {
                 let n = u(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length)),
-                (a = s.exec(n));
+                (a = s.exec(n)));
         return r;
     }),
     (t.parseNumberPattern = u),
@@ -32,14 +32,14 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.parseYear = function (e) {
         if (/\d+/.test(e)) {
             let t = parseInt(e);
-            return t < 100 && (t = (0, a.findMostLikelyADYear)(t)), t;
+            return (t < 100 && (t = (0, a.findMostLikelyADYear)(t)), t);
         }
         let r = e.toLowerCase();
         return void 0 !== t.INTEGER_WORD_DICTIONARY[r] ? t.INTEGER_WORD_DICTIONARY[r] : parseInt(e);
-    });
+    }));
 let n = r(798401),
     a = r(574253);
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     "s\xf6ndag": 0,
     "s\xf6n": 0,
     so: 0,
@@ -154,7 +154,7 @@ let n = r(798401),
         arton: 18,
         nitton: 19,
         tjugo: 20,
-        tretti\u043E: 30,
+        trettiо: 30,
         fyrtio: 40,
         femtio: 50,
         sextio: 60,
@@ -182,7 +182,7 @@ let n = r(798401),
         "m\xe5nad": "month",
         "m\xe5nader": "month",
         "\xe5r": "year",
-        kvart\u0430l: "quarter",
+        kvartаl: "quarter",
         kvartal: "quarter",
     }),
     (t.TIME_UNIT_NO_ABBR_DICTIONARY = {
@@ -203,7 +203,7 @@ let n = r(798401),
     }),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|\\d+)`),
     (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_NUMBER_DICTIONARY)}|\\d{1,2}(?:e|:e))`),
-    (t.TIME_UNIT_PATTERN = `(?:${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`);
+    (t.TIME_UNIT_PATTERN = `(?:${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`));
 let i = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
     s = RegExp(i, "i"),
     o = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_NO_ABBR_DICTIONARY)})\\s{0,5}`;
@@ -211,5 +211,5 @@ function u(e) {
     let r = e.toLowerCase();
     return void 0 !== t.INTEGER_WORD_DICTIONARY[r] ? t.INTEGER_WORD_DICTIONARY[r] : parseInt(r);
 }
-(t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", i)),
-    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("", o));
+((t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", i)),
+    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("", o)));

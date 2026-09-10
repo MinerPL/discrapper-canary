@@ -22,7 +22,7 @@ function l(e, a) {
 }
 function u(e) {
     let a = "AD";
-    return e <= 0 && ((a = "BC"), (e = 1 - e)), [a, e];
+    return (e <= 0 && ((a = "BC"), (e = 1 - e)), [a, e]);
 }
 let s = {
     standard: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],

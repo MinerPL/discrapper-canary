@@ -3,7 +3,7 @@ class i {
     id;
     text;
     constructor(e) {
-        (this.id = e), (this.text = e);
+        ((this.id = e), (this.text = e));
     }
 }
 var r,

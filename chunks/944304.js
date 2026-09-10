@@ -53,7 +53,7 @@ let T = function (e) {
         F = null != O ? Math.max((0, v.Os)(a, O), 1) : 1,
         q = (0, v.Nc)({ fractionalState: R });
     async function H() {
-        I(!0),
+        (I(!0),
             await (0, L.g)({
                 analyticsLocations: Q,
                 analyticsLocation: i,
@@ -67,7 +67,7 @@ let T = function (e) {
                 handleSubscribeModalClose: $,
                 intent: G,
             }),
-            I(!1);
+            I(!1));
     }
     let J = j.A.getPremiumTypeSubscription(),
         V = (0, n.jsxs)("div", { className: P.x6, children: [E, T ?? k.intl.string(k.t.gKmQ1G)] }),

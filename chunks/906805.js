@@ -81,7 +81,7 @@ var f = r(202103),
                 1156, 1258, 1364, 1474, 1588, 1706, 1828, 1921, 2051, 2185, 2323, 2465, 2611, 2761, 2876, 3034, 3196,
                 3362, 3532, 3706,
             ];
-        (t.getSymbolSize = function (t) {
+        ((t.getSymbolSize = function (t) {
             if (!t) throw Error('"version" cannot be null or undefined');
             if (t < 1 || t > 40) throw Error('"version" should be in range from 1 to 40');
             return 4 * t + 17;
@@ -91,7 +91,7 @@ var f = r(202103),
             }),
             (t.getBCHDigit = function (t) {
                 let e = 0;
-                for (; 0 !== t; ) e++, (t >>>= 1);
+                for (; 0 !== t;) (e++, (t >>>= 1));
                 return e;
             }),
             (t.setToSJISFunction = function (t) {
@@ -103,10 +103,10 @@ var f = r(202103),
             }),
             (t.toSJIS = function (t) {
                 return e(t);
-            });
+            }));
     }),
     b = (0, n.t)((t) => {
-        (t.L = { bit: 1 }),
+        ((t.L = { bit: 1 }),
             (t.M = { bit: 0 }),
             (t.Q = { bit: 3 }),
             (t.H = { bit: 2 }),
@@ -136,13 +136,13 @@ var f = r(202103),
                 } catch (t) {
                     return r;
                 }
-            });
+            }));
     }),
     A = (0, n.t)((t, e) => {
         function r() {
-            (this.buffer = []), (this.length = 0);
+            ((this.buffer = []), (this.length = 0));
         }
-        (r.prototype = {
+        ((r.prototype = {
             get: function (t) {
                 let e = Math.floor(t / 8);
                 return ((this.buffer[e] >>> (7 - (t % 8))) & 1) == 1;
@@ -155,21 +155,21 @@ var f = r(202103),
             },
             putBit: function (t) {
                 let e = Math.floor(this.length / 8);
-                this.buffer.length <= e && this.buffer.push(0),
+                (this.buffer.length <= e && this.buffer.push(0),
                     t && (this.buffer[e] |= 128 >>> (this.length % 8)),
-                    this.length++;
+                    this.length++);
             },
         }),
-            (e.exports = r);
+            (e.exports = r));
     }),
     B = (0, n.t)((t, e) => {
         function r(t) {
             if (!t || t < 1) throw Error("BitMatrix size must be defined and greater than 0");
-            (this.size = t), (this.data = new Uint8Array(t * t)), (this.reservedBit = new Uint8Array(t * t));
+            ((this.size = t), (this.data = new Uint8Array(t * t)), (this.reservedBit = new Uint8Array(t * t)));
         }
-        (r.prototype.set = function (t, e, r, n) {
+        ((r.prototype.set = function (t, e, r, n) {
             let i = t * this.size + e;
-            (this.data[i] = r), n && (this.reservedBit[i] = !0);
+            ((this.data[i] = r), n && (this.reservedBit[i] = !0));
         }),
             (r.prototype.get = function (t, e) {
                 return this.data[t * this.size + e];
@@ -180,18 +180,18 @@ var f = r(202103),
             (r.prototype.isReserved = function (t, e) {
                 return this.reservedBit[t * this.size + e];
             }),
-            (e.exports = r);
+            (e.exports = r));
     }),
     M = (0, n.t)((t) => {
         var e = R().getSymbolSize;
-        (t.getRowColCoords = function (t) {
+        ((t.getRowColCoords = function (t) {
             if (1 === t) return [];
             let r = Math.floor(t / 7) + 2,
                 n = e(t),
                 i = 145 === n ? 26 : 2 * Math.ceil((n - 13) / (2 * r - 2)),
                 o = [n - 7];
             for (let t = 1; t < r - 1; t++) o[t] = o[t - 1] - i;
-            return o.push(6), o.reverse();
+            return (o.push(6), o.reverse());
         }),
             (t.getPositions = function (e) {
                 let r = [],
@@ -204,7 +204,7 @@ var f = r(202103),
                             (t !== i - 1 || 0 !== e) &&
                             r.push([n[t], n[e]]);
                 return r;
-            });
+            }));
     }),
     N = (0, n.t)((t) => {
         var e = R().getSymbolSize;
@@ -228,7 +228,7 @@ var f = r(202103),
             PATTERN110: 6,
             PATTERN111: 7,
         };
-        (t.isValid = function (t) {
+        ((t.isValid = function (t) {
             return null != t && "" !== t && !isNaN(t) && t >= 0 && t <= 7;
         }),
             (t.from = function (e) {
@@ -242,13 +242,13 @@ var f = r(202103),
                     o = null,
                     a = null;
                 for (let s = 0; s < e; s++) {
-                    (n = i = 0), (o = a = null);
+                    ((n = i = 0), (o = a = null));
                     for (let l = 0; l < e; l++) {
                         let e = t.get(s, l);
-                        e === o ? n++ : (n >= 5 && (r += 3 + (n - 5)), (o = e), (n = 1)),
-                            (e = t.get(l, s)) === a ? i++ : (i >= 5 && (r += 3 + (i - 5)), (a = e), (i = 1));
+                        (e === o ? n++ : (n >= 5 && (r += 3 + (n - 5)), (o = e), (n = 1)),
+                            (e = t.get(l, s)) === a ? i++ : (i >= 5 && (r += 3 + (i - 5)), (a = e), (i = 1)));
                     }
-                    n >= 5 && (r += 3 + (n - 5)), i >= 5 && (r += 3 + (i - 5));
+                    (n >= 5 && (r += 3 + (n - 5)), i >= 5 && (r += 3 + (i - 5)));
                 }
                 return r;
             }),
@@ -270,10 +270,10 @@ var f = r(202103),
                 for (let o = 0; o < e; o++) {
                     n = i = 0;
                     for (let a = 0; a < e; a++)
-                        (n = ((n << 1) & 2047) | t.get(o, a)),
+                        ((n = ((n << 1) & 2047) | t.get(o, a)),
                             a >= 10 && (1488 === n || 93 === n) && r++,
                             (i = ((i << 1) & 2047) | t.get(a, o)),
-                            a >= 10 && (1488 === i || 93 === i) && r++;
+                            a >= 10 && (1488 === i || 93 === i) && r++);
                 }
                 return 40 * r;
             }),
@@ -320,12 +320,12 @@ var f = r(202103),
                     i = 0,
                     o = 1 / 0;
                 for (let a = 0; a < n; a++) {
-                    r(a), t.applyMask(a, e);
+                    (r(a), t.applyMask(a, e));
                     let n = t.getPenaltyN1(e) + t.getPenaltyN2(e) + t.getPenaltyN3(e) + t.getPenaltyN4(e);
-                    t.applyMask(a, e), n < o && ((o = n), (i = a));
+                    (t.applyMask(a, e), n < o && ((o = n), (i = a)));
                 }
                 return i;
-            });
+            }));
     }),
     L = (0, n.t)((t) => {
         var e = b(),
@@ -347,7 +347,7 @@ var f = r(202103),
                 980, 1440, 1710, 570, 1036, 1530, 1800, 570, 1064, 1590, 1890, 600, 1120, 1680, 1980, 630, 1204, 1770,
                 2100, 660, 1260, 1860, 2220, 720, 1316, 1950, 2310, 750, 1372, 2040, 2430,
             ];
-        (t.getBlocksCount = function (t, n) {
+        ((t.getBlocksCount = function (t, n) {
             switch (n) {
                 case e.L:
                     return r[(t - 1) * 4 + 0];
@@ -374,15 +374,15 @@ var f = r(202103),
                     default:
                         return;
                 }
-            });
+            }));
     }),
     S = (0, n.t)((t) => {
         var e = new Uint8Array(512),
             r = new Uint8Array(256);
         let n = 1;
-        for (let t = 0; t < 255; t++) (e[t] = n), (r[n] = t), 256 & (n <<= 1) && (n ^= 285);
+        for (let t = 0; t < 255; t++) ((e[t] = n), (r[n] = t), 256 & (n <<= 1) && (n ^= 285));
         for (let t = 255; t < 512; t++) e[t] = e[t - 255];
-        (t.log = function (t) {
+        ((t.log = function (t) {
             if (t < 1) throw Error("log(" + t + ")");
             return r[t];
         }),
@@ -391,22 +391,22 @@ var f = r(202103),
             }),
             (t.mul = function (t, n) {
                 return 0 === t || 0 === n ? 0 : e[r[t] + r[n]];
-            });
+            }));
     }),
     x = (0, n.t)((t) => {
         var e = S();
-        (t.mul = function (t, r) {
+        ((t.mul = function (t, r) {
             let n = new Uint8Array(t.length + r.length - 1);
             for (let i = 0; i < t.length; i++) for (let o = 0; o < r.length; o++) n[i + o] ^= e.mul(t[i], r[o]);
             return n;
         }),
             (t.mod = function (t, r) {
                 let n = new Uint8Array(t);
-                for (; n.length - r.length >= 0; ) {
+                for (; n.length - r.length >= 0;) {
                     let t = n[0];
                     for (let i = 0; i < r.length; i++) n[i] ^= e.mul(r[i], t);
                     let i = 0;
-                    for (; i < n.length && 0 === n[i]; ) i++;
+                    for (; i < n.length && 0 === n[i];) i++;
                     n = n.slice(i);
                 }
                 return n;
@@ -415,15 +415,15 @@ var f = r(202103),
                 let n = new Uint8Array([1]);
                 for (let i = 0; i < r; i++) n = t.mul(n, new Uint8Array([1, e.exp(i)]));
                 return n;
-            });
+            }));
     }),
     k = (0, n.t)((t, e) => {
         var r = x();
         function n(t) {
-            (this.genPoly = void 0), (this.degree = t), this.degree && this.initialize(this.degree);
+            ((this.genPoly = void 0), (this.degree = t), this.degree && this.initialize(this.degree));
         }
-        (n.prototype.initialize = function (t) {
-            (this.degree = t), (this.genPoly = r.generateECPolynomial(this.degree));
+        ((n.prototype.initialize = function (t) {
+            ((this.degree = t), (this.genPoly = r.generateECPolynomial(this.degree)));
         }),
             (n.prototype.encode = function (t) {
                 if (!this.genPoly) throw Error("Encoder not initialized");
@@ -433,11 +433,11 @@ var f = r(202103),
                     i = this.degree - n.length;
                 if (i > 0) {
                     let t = new Uint8Array(this.degree);
-                    return t.set(n, i), t;
+                    return (t.set(n, i), t);
                 }
                 return n;
             }),
-            (e.exports = n);
+            (e.exports = n));
     }),
     U = (0, n.t)((t) => {
         t.isValid = function (t) {
@@ -449,15 +449,15 @@ var f = r(202103),
             r =
                 "(?:[u3000-u303F]|[u3040-u309F]|[u30A0-u30FF]|[uFF00-uFFEF]|[u4E00-u9FAF]|[u2605-u2606]|[u2190-u2195]|u203B|[u2010u2015u2018u2019u2025u2026u201Cu201Du2225u2260]|[u0391-u0451]|[u00A7u00A8u00B1u00B4u00D7u00F7])+",
             n = "(?:(?![A-Z0-9 $%*+\\-./:]|" + (r = r.replace(/u/g, "\\u")) + ")(?:.|[\r\n]))+";
-        (t.KANJI = RegExp(r, "g")),
+        ((t.KANJI = RegExp(r, "g")),
             (t.BYTE_KANJI = RegExp("[^A-Z0-9 $%*+\\-./:]+", "g")),
             (t.BYTE = RegExp(n, "g")),
             (t.NUMERIC = RegExp(e, "g")),
-            (t.ALPHANUMERIC = RegExp("[A-Z $%*+\\-./:]+", "g"));
+            (t.ALPHANUMERIC = RegExp("[A-Z $%*+\\-./:]+", "g")));
         var i = RegExp("^" + r + "$"),
             o = RegExp("^" + e + "$"),
             a = RegExp("^[A-Z0-9 $%*+\\-./:]+$");
-        (t.testKanji = function (t) {
+        ((t.testKanji = function (t) {
             return i.test(t);
         }),
             (t.testNumeric = function (t) {
@@ -465,12 +465,12 @@ var f = r(202103),
             }),
             (t.testAlphanumeric = function (t) {
                 return a.test(t);
-            });
+            }));
     }),
     F = (0, n.t)((t) => {
         var e = U(),
             r = z();
-        (t.NUMERIC = { id: "Numeric", bit: 1, ccBits: [10, 12, 14] }),
+        ((t.NUMERIC = { id: "Numeric", bit: 1, ccBits: [10, 12, 14] }),
             (t.ALPHANUMERIC = { id: "Alphanumeric", bit: 2, ccBits: [9, 11, 13] }),
             (t.BYTE = { id: "Byte", bit: 4, ccBits: [8, 16, 16] }),
             (t.KANJI = { id: "Kanji", bit: 8, ccBits: [8, 10, 12] }),
@@ -515,7 +515,7 @@ var f = r(202103),
                 } catch (t) {
                     return r;
                 }
-            });
+            }));
     }),
     D = (0, n.t)((t) => {
         var e = R(),
@@ -527,7 +527,7 @@ var f = r(202103),
         function s(t, e) {
             return i.getCharCountIndicator(t, e) + 4;
         }
-        (t.from = function (t, e) {
+        ((t.from = function (t, e) {
             return o.isValid(t) ? parseInt(t, 10) : e;
         }),
             (t.getCapacity = function (t, n, a) {
@@ -579,9 +579,9 @@ var f = r(202103),
             (t.getEncodedBits = function (t) {
                 if (!o.isValid(t) || t < 7) throw Error("Invalid QR Code version");
                 let r = t << 12;
-                for (; e.getBCHDigit(r) - a >= 0; ) r ^= 7973 << (e.getBCHDigit(r) - a);
+                for (; e.getBCHDigit(r) - a >= 0;) r ^= 7973 << (e.getBCHDigit(r) - a);
                 return (t << 12) | r;
-            });
+            }));
     }),
     H = (0, n.t)((t) => {
         var e = R(),
@@ -589,16 +589,16 @@ var f = r(202103),
         t.getEncodedBits = function (t, n) {
             let i = (t.bit << 3) | n,
                 o = i << 10;
-            for (; e.getBCHDigit(o) - r >= 0; ) o ^= 1335 << (e.getBCHDigit(o) - r);
+            for (; e.getBCHDigit(o) - r >= 0;) o ^= 1335 << (e.getBCHDigit(o) - r);
             return ((i << 10) | o) ^ 21522;
         };
     }),
     _ = (0, n.t)((t, e) => {
         var r = F();
         function n(t) {
-            (this.mode = r.NUMERIC), (this.data = t.toString());
+            ((this.mode = r.NUMERIC), (this.data = t.toString()));
         }
-        (n.getBitsLength = function (t) {
+        ((n.getBitsLength = function (t) {
             return 10 * Math.floor(t / 3) + (t % 3 ? (t % 3) * 3 + 1 : 0);
         }),
             (n.prototype.getLength = function () {
@@ -609,11 +609,12 @@ var f = r(202103),
             }),
             (n.prototype.write = function (t) {
                 let e, r;
-                for (e = 0; e + 3 <= this.data.length; e += 3) (r = parseInt(this.data.substr(e, 3), 10)), t.put(r, 10);
+                for (e = 0; e + 3 <= this.data.length; e += 3)
+                    ((r = parseInt(this.data.substr(e, 3), 10)), t.put(r, 10));
                 let n = this.data.length - e;
                 n > 0 && ((r = parseInt(this.data.substr(e), 10)), t.put(r, 3 * n + 1));
             }),
-            (e.exports = n);
+            (e.exports = n));
     }),
     K = (0, n.t)((t, e) => {
         var r = F(),
@@ -665,9 +666,9 @@ var f = r(202103),
                 ":",
             ];
         function i(t) {
-            (this.mode = r.ALPHANUMERIC), (this.data = t);
+            ((this.mode = r.ALPHANUMERIC), (this.data = t));
         }
-        (i.getBitsLength = function (t) {
+        ((i.getBitsLength = function (t) {
             return 11 * Math.floor(t / 2) + (t % 2) * 6;
         }),
             (i.prototype.getLength = function () {
@@ -680,19 +681,19 @@ var f = r(202103),
                 let e;
                 for (e = 0; e + 2 <= this.data.length; e += 2) {
                     let r = 45 * n.indexOf(this.data[e]);
-                    (r += n.indexOf(this.data[e + 1])), t.put(r, 11);
+                    ((r += n.indexOf(this.data[e + 1])), t.put(r, 11));
                 }
                 this.data.length % 2 && t.put(n.indexOf(this.data[e]), 6);
             }),
-            (e.exports = i);
+            (e.exports = i));
     }),
     J = (0, n.t)((t, e) => {
         var r = F();
         function n(t) {
-            (this.mode = r.BYTE),
-                "string" == typeof t ? (this.data = new TextEncoder().encode(t)) : (this.data = new Uint8Array(t));
+            ((this.mode = r.BYTE),
+                "string" == typeof t ? (this.data = new TextEncoder().encode(t)) : (this.data = new Uint8Array(t)));
         }
-        (n.getBitsLength = function (t) {
+        ((n.getBitsLength = function (t) {
             return 8 * t;
         }),
             (n.prototype.getLength = function () {
@@ -704,15 +705,15 @@ var f = r(202103),
             (n.prototype.write = function (t) {
                 for (let e = 0, r = this.data.length; e < r; e++) t.put(this.data[e], 8);
             }),
-            (e.exports = n);
+            (e.exports = n));
     }),
     Y = (0, n.t)((t, e) => {
         var r = F(),
             n = R();
         function i(t) {
-            (this.mode = r.KANJI), (this.data = t);
+            ((this.mode = r.KANJI), (this.data = t));
         }
-        (i.getBitsLength = function (t) {
+        ((i.getBitsLength = function (t) {
             return 13 * t;
         }),
             (i.prototype.getLength = function () {
@@ -728,10 +729,10 @@ var f = r(202103),
                     if (r >= 33088 && r <= 40956) r -= 33088;
                     else if (r >= 57408 && r <= 60351) r -= 49472;
                     else throw Error("Invalid SJIS character: " + this.data[e] + "\nMake sure your charset is UTF-8");
-                    (r = ((r >>> 8) & 255) * 192 + (255 & r)), t.put(r, 13);
+                    ((r = ((r >>> 8) & 255) * 192 + (255 & r)), t.put(r, 13));
                 }
             }),
-            (e.exports = i);
+            (e.exports = i));
     }),
     O = (0, n.t)((t, e) => {
         var r = {
@@ -747,7 +748,7 @@ var f = r(202103),
                     h = {};
                 h[e] = 0;
                 var f = r.PriorityQueue.make();
-                for (f.push(e, 0); !f.empty(); )
+                for (f.push(e, 0); !f.empty();)
                     for (a in ((o = (i = f.pop()).value), (s = i.cost), (l = t[o] || {})))
                         l.hasOwnProperty(a) &&
                             ((u = s + l[a]),
@@ -758,8 +759,8 @@ var f = r(202103),
                 return d;
             },
             extract_shortest_path_from_predecessor_list: function (t, e) {
-                for (var r = [], n = e; n; ) r.push(n), t[n], (n = t[n]);
-                return r.reverse(), r;
+                for (var r = [], n = e; n;) (r.push(n), t[n], (n = t[n]));
+                return (r.reverse(), r);
             },
             find_path: function (t, e, n) {
                 var i = r.single_source_shortest_paths(t, e, n);
@@ -771,13 +772,13 @@ var f = r(202103),
                         n = r.PriorityQueue,
                         i = {};
                     for (e in ((t = t || {}), n)) n.hasOwnProperty(e) && (i[e] = n[e]);
-                    return (i.queue = []), (i.sorter = t.sorter || n.default_sorter), i;
+                    return ((i.queue = []), (i.sorter = t.sorter || n.default_sorter), i);
                 },
                 default_sorter: function (t, e) {
                     return t.cost - e.cost;
                 },
                 push: function (t, e) {
-                    this.queue.push({ value: t, cost: e }), this.queue.sort(this.sorter);
+                    (this.queue.push({ value: t, cost: e }), this.queue.sort(this.sorter));
                 },
                 pop: function () {
                     return this.queue.shift();
@@ -804,7 +805,7 @@ var f = r(202103),
         function c(t, e, r) {
             let n,
                 i = [];
-            for (; null !== (n = t.exec(r)); ) i.push({ data: n[0], index: n.index, mode: e, length: n[0].length });
+            for (; null !== (n = t.exec(r));) i.push({ data: n[0], index: n.index, mode: e, length: n[0].length });
             return i;
         }
         function d(t) {
@@ -861,9 +862,9 @@ var f = r(202103),
                     return new i(t);
             }
         }
-        (t.fromArray = function (t) {
+        ((t.fromArray = function (t) {
             return t.reduce(function (t, e) {
-                return "string" == typeof e ? t.push(f(e, null)) : e.data && t.push(f(e.data, e.mode)), t;
+                return ("string" == typeof e ? t.push(f(e, null)) : e.data && t.push(f(e.data, e.mode)), t);
             }, []);
         }),
             (t.fromString = function (r, n) {
@@ -877,7 +878,7 @@ var f = r(202103),
                             for (let t = 0; t < s.length; t++) {
                                 let u = s[t],
                                     c = "" + a + t;
-                                l.push(c), (n[c] = { node: u, lastCount: 0 }), (i[c] = {});
+                                (l.push(c), (n[c] = { node: u, lastCount: 0 }), (i[c] = {}));
                                 for (let t = 0; t < o.length; t++) {
                                     let a = o[t];
                                     n[a] && n[a].node.mode === u.mode
@@ -924,13 +925,13 @@ var f = r(202103),
                 return t.fromArray(
                     a.reduce(function (t, e) {
                         let r = t.length - 1 >= 0 ? t[t.length - 1] : null;
-                        return r && r.mode === e.mode ? (t[t.length - 1].data += e.data) : t.push(e), t;
+                        return (r && r.mode === e.mode ? (t[t.length - 1].data += e.data) : t.push(e), t);
                     }, []),
                 );
             }),
             (t.rawSplit = function (e) {
                 return t.fromArray(d(e, s.isKanjiModeEnabled()));
-            });
+            }));
     }),
     V = (0, n.t)((t) => {
         var e = R(),
@@ -952,13 +953,13 @@ var f = r(202103),
                 o = t.size,
                 a = d.getEncodedBits(e, r);
             for (n = 0; n < 15; n++)
-                (i = ((a >> n) & 1) == 1),
+                ((i = ((a >> n) & 1) == 1),
                     n < 6 ? t.set(n, 8, i, !0) : n < 8 ? t.set(n + 1, 8, i, !0) : t.set(o - 15 + n, 8, i, !0),
                     n < 8
                         ? t.set(8, o - n - 1, i, !0)
                         : n < 9
                           ? t.set(8, 15 - n - 1 + 1, i, !0)
-                          : t.set(8, 15 - n - 1, i, !0);
+                          : t.set(8, 15 - n - 1, i, !0));
             t.set(o - 8, 8, 1, !0);
         }
         t.create = function (t, d) {
@@ -995,12 +996,12 @@ var f = r(202103),
                     let E = (function (t, r, i) {
                             let o = new n();
                             i.forEach(function (e) {
-                                o.put(e.mode.bit, 4),
+                                (o.put(e.mode.bit, 4),
                                     o.put(e.getLength(), h.getCharCountIndicator(e.mode, t)),
-                                    e.write(o);
+                                    e.write(o));
                             });
                             let a = (e.getSymbolTotalCodewords(t) - l.getTotalCodewordsCount(t, r)) * 8;
-                            for (o.getLengthInBits() + 4 <= a && o.put(0, 4); o.getLengthInBits() % 8 != 0; )
+                            for (o.getLengthInBits() + 4 <= a && o.put(0, 4); o.getLengthInBits() % 8 != 0;)
                                 o.putBit(0);
                             let s = (a - o.getLengthInBits()) / 8;
                             for (let t = 0; t < s; t++) o.put(t % 2 ? 17 : 236, 8);
@@ -1023,7 +1024,10 @@ var f = r(202103),
                                     w = new Uint8Array(t.buffer);
                                 for (let t = 0; t < c; t++) {
                                     let e = t < d ? f : g;
-                                    (E[t] = w.slice(m, m + e)), (y[t] = v.encode(E[t])), (m += e), (C = Math.max(C, e));
+                                    ((E[t] = w.slice(m, m + e)),
+                                        (y[t] = v.encode(E[t])),
+                                        (m += e),
+                                        (C = Math.max(C, e)));
                                 }
                                 let I = new Uint8Array(a),
                                     T = 0;
@@ -1054,7 +1058,7 @@ var f = r(202103),
                     let C = y.size;
                     for (let t = 8; t < C - 8; t++) {
                         let e = t % 2 == 0;
-                        y.set(t, 6, e, !0), y.set(6, t, e, !0);
+                        (y.set(t, 6, e, !0), y.set(6, t, e, !0));
                     }
                     return (
                         !(function (t, e) {
@@ -1078,11 +1082,11 @@ var f = r(202103),
                                     o = t.size,
                                     a = c.getEncodedBits(e);
                                 for (let e = 0; e < 18; e++)
-                                    (r = Math.floor(e / 3)),
+                                    ((r = Math.floor(e / 3)),
                                         (n = (e % 3) + o - 8 - 3),
                                         (i = ((a >> e) & 1) == 1),
                                         t.set(r, n, i, !0),
-                                        t.set(n, r, i, !0);
+                                        t.set(n, r, i, !0));
                             })(y, r),
                         !(function (t, e) {
                             let r = t.size,
@@ -1091,16 +1095,16 @@ var f = r(202103),
                                 o = 7,
                                 a = 0;
                             for (let s = r - 1; s > 0; s -= 2)
-                                for (6 === s && s--; ; ) {
+                                for (6 === s && s--; ;) {
                                     for (let r = 0; r < 2; r++)
                                         if (!t.isReserved(i, s - r)) {
                                             let n = !1;
-                                            a < e.length && (n = ((e[a] >>> o) & 1) == 1),
+                                            (a < e.length && (n = ((e[a] >>> o) & 1) == 1),
                                                 t.set(i, s - r, n),
-                                                -1 == --o && (a++, (o = 7));
+                                                -1 == --o && (a++, (o = 7)));
                                         }
                                     if ((i += n) < 0 || r <= i) {
-                                        (i -= n), (n = -n);
+                                        ((i -= n), (n = -n));
                                         break;
                                     }
                                 }
@@ -1120,14 +1124,14 @@ var f = r(202103),
                 throw Error("Color should be defined as hex string");
             let e = t.slice().replace("#", "").split("");
             if (e.length < 3 || 5 === e.length || e.length > 8) throw Error("Invalid hex color: " + t);
-            (3 === e.length || 4 === e.length) &&
+            ((3 === e.length || 4 === e.length) &&
                 (e = Array.prototype.concat.apply(
                     [],
                     e.map(function (t) {
                         return [t, t];
                     }),
                 )),
-                6 === e.length && e.push("F", "F");
+                6 === e.length && e.push("F", "F"));
             let r = parseInt(e.join(""), 16);
             return {
                 r: (r >> 24) & 255,
@@ -1137,8 +1141,8 @@ var f = r(202103),
                 hex: "#" + e.slice(0, 6).join(""),
             };
         }
-        (t.getOptions = function (t) {
-            t || (t = {}), t.color || (t.color = {});
+        ((t.getOptions = function (t) {
+            (t || (t = {}), t.color || (t.color = {}));
             let r = void 0 === t.margin || null === t.margin || t.margin < 0 ? 4 : t.margin,
                 n = t.width && t.width >= 21 ? t.width : void 0,
                 i = t.scale || 4;
@@ -1169,7 +1173,7 @@ var f = r(202103),
                     for (let r = 0; r < s; r++) {
                         let c = (t * s + r) * 4,
                             d = n.color.light;
-                        t >= l &&
+                        (t >= l &&
                             r >= l &&
                             t < s - l &&
                             r < s - l &&
@@ -1177,17 +1181,17 @@ var f = r(202103),
                             (e[c++] = d.r),
                             (e[c++] = d.g),
                             (e[c++] = d.b),
-                            (e[c] = d.a);
+                            (e[c] = d.a));
                     }
-            });
+            }));
     }),
     j = (0, n.t)((t) => {
         var e = Q();
-        (t.render = function (t, r, n) {
+        ((t.render = function (t, r, n) {
             var i;
             let o = n,
                 a = r;
-            void 0 !== o || (r && r.getContext) || ((o = r), (r = void 0)),
+            (void 0 !== o || (r && r.getContext) || ((o = r), (r = void 0)),
                 r ||
                     (a = (function () {
                         try {
@@ -1196,7 +1200,7 @@ var f = r(202103),
                             throw Error("You need to specify a canvas element");
                         }
                     })()),
-                (o = e.getOptions(o));
+                (o = e.getOptions(o)));
             let s = e.getImageWidth(t.modules.size, o),
                 l = a.getContext("2d"),
                 u = l.createImageData(s, s);
@@ -1215,12 +1219,12 @@ var f = r(202103),
         }),
             (t.renderToDataURL = function (e, r, n) {
                 let i = n;
-                void 0 !== i || (r && r.getContext) || ((i = r), (r = void 0)), i || (i = {});
+                (void 0 !== i || (r && r.getContext) || ((i = r), (r = void 0)), i || (i = {}));
                 let o = t.render(e, r, i),
                     a = i.type || "image/png",
                     s = i.rendererOpts || {};
                 return o.toDataURL(a, s.quality);
-            });
+            }));
     }),
     $ = (0, n.t)((t) => {
         var e = Q();
@@ -1231,7 +1235,7 @@ var f = r(202103),
         }
         function n(t, e, r) {
             let n = t + e;
-            return void 0 !== r && (n += " " + r), n;
+            return (void 0 !== r && (n += " " + r), n);
         }
         t.render = function (t, i, o) {
             let a = e.getOptions(i),
@@ -1251,13 +1255,13 @@ var f = r(202103),
                         for (let l = 0; l < t.length; l++) {
                             let u = Math.floor(l % e),
                                 c = Math.floor(l / e);
-                            u || a || (a = !0),
+                            (u || a || (a = !0),
                                 t[l]
                                     ? (s++,
                                       (l > 0 && u > 0 && t[l - 1]) ||
                                           ((i += a ? n("M", u + r, 0.5 + c + r) : n("m", o, 0)), (o = 0), (a = !1)),
                                       (u + 1 < e && t[l + 1]) || ((i += n("h", s)), (s = 0)))
-                                    : o++;
+                                    : o++);
                         }
                         return i;
                     })(l, s, a.margin) +
@@ -1271,7 +1275,7 @@ var f = r(202103),
                     c +
                     d +
                     "</svg>\n";
-            return "function" == typeof o && o(null, h), h;
+            return ("function" == typeof o && o(null, h), h);
         };
     }),
     W = (0, n.t)((t) => {
@@ -1312,12 +1316,12 @@ var f = r(202103),
                 a(t);
             }
         }
-        (t.create = r.create),
+        ((t.create = r.create),
             (t.toCanvas = o.bind(null, n.render)),
             (t.toDataURL = o.bind(null, n.renderToDataURL)),
             (t.toString = o.bind(null, function (t, e, r) {
                 return i.render(t, r);
-            }));
+            })));
     })(),
     X = ({ value: t, size: e = 150, bgColor: r = "#ffffff", fgColor: n = "#000000" }) => {
         let { t: a } = (0, i.n)(),
@@ -1401,16 +1405,16 @@ var f = r(202103),
             g = (0, p.r)(t)?.code ?? "",
             v = l.startsWith(t) ? `${t} ${l.slice(t.length).replace(/(\d{3})(?=\d)/g, "$1 ")}` : l,
             m = (0, o.h)((t, e) => {
-                u(t), d(e);
+                (u(t), d(e));
             }, []),
             E = (0, o.h)(() => {
-                f(!0), n.sendSms(l), f(!1);
+                (f(!0), n.sendSms(l), f(!1));
             }, [n, l]),
             y = (0, o.h)(() => {
-                E(), a();
+                (E(), a());
             }, [E, a]),
             C = (0, o.h)(() => {
-                u(t), d(!1), n.resetSms();
+                (u(t), d(!1), n.resetSms());
             }, [n, t]);
         return (0, o.v)(o.x, {
             children: [
@@ -1445,7 +1449,7 @@ var f = r(202103),
         let { t: c } = (0, i.n)(),
             [d, h] = (0, o.p)(!1),
             f = (0, o.h)(() => {
-                h(!0), setTimeout(() => h(!1), 3e3);
+                (h(!0), setTimeout(() => h(!1), 3e3));
             }, []),
             g = (0, o.h)(() => {
                 l.continueOnDesktop();

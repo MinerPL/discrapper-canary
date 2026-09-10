@@ -61,14 +61,14 @@ function p(e) {
                     },
                     {
                         onCloseCallback: () => {
-                            (0, _.U)(t),
+                            ((0, _.U)(t),
                                 u.default.track(A.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                     action: E.Qi.DISMISS,
                                     channel_id: t,
                                     warning_medium: E.W_.MODAL,
                                     blocked_user_ids: i,
                                     ignored_user_ids: r,
-                                });
+                                }));
                         },
                     },
                 );

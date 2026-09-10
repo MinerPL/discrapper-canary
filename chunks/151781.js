@@ -1,4 +1,4 @@
-n.d(t, { A: () => V }), n(321073);
+(n.d(t, { A: () => B }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(280450),
@@ -41,13 +41,13 @@ class C {
     _searchState;
     hasDefaultQuery;
     constructor(e) {
-        (this.guildId = e), (this._searchState = g()), (this.hasDefaultQuery = !0);
+        ((this.guildId = e), (this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
     reset() {
-        (this._searchState = g()), (this.hasDefaultQuery = !0);
+        ((this._searchState = g()), (this.hasDefaultQuery = !0));
     }
     updateSearchState(e) {
         return (
@@ -118,11 +118,11 @@ class L {
     _lastRefreshTimer = null;
     _defaultSearchTotalResultsCount;
     constructor(e) {
-        (this.guildId = e),
+        ((this.guildId = e),
             (this._initialized = !1),
             (this._members = null),
             (this._pagination = null),
-            (this._search = null);
+            (this._search = null));
     }
     getSearchIndex() {
         return null == this._search || this._search.hasDefaultQuery
@@ -134,10 +134,10 @@ class L {
             this.lastCursorTimestamp = Date.now();
             return;
         }
-        (this._initialized = !0),
+        ((this._initialized = !0),
             (this._search = new C(this.guildId)),
             (this._members = new A.z8(this.guildId)),
-            (this._pagination = new h.qi(this.guildId, this._members.values(this.getSearchIndex())));
+            (this._pagination = new h.qi(this.guildId, this._members.values(this.getSearchIndex()))));
     }
     get isInitialized() {
         return this._initialized;
@@ -198,7 +198,7 @@ class L {
             r && ((n = !0), (t.isIncludedInSearchResults = e));
         } else t.isIncludedInSearchResults !== i.isIncludedInSearchResults && (n = !0);
         let r = this._members.updateMember(i, t);
-        return n || (n = this._checkUpdatesForPaginationUpdate(i, t)), [n, r];
+        return (n || (n = this._checkUpdatesForPaginationUpdate(i, t)), [n, r]);
     }
     isMemberInIndex(e) {
         return null != this._members && !!this._initialized && this._members._membersMap.has(e);
@@ -237,7 +237,7 @@ class L {
                 };
             }
             let [s, l] = this._rawUpdateMember(a.userId, e);
-            (i = s || i), (r = l || r);
+            ((i = s || i), (r = l || r));
         }
         return i ? this.updatePaginationChunks() : r;
     }
@@ -249,7 +249,7 @@ class L {
             let e = s.Ay.getTrueMember(this.guildId, i.user.id);
             if (null == e) continue;
             let [r, a] = this._rawUpdateMember(i.user.id, e);
-            (t = r || t), (n = a || n);
+            ((t = r || t), (n = a || n));
         }
         return t ? this.updatePaginationChunks() : n;
     }
@@ -257,13 +257,13 @@ class L {
         if (null == this._members || !this._initialized) return !1;
         let t = e.reduce((e, t) => {
             let n = s.Ay.getTrueMember(this.guildId, t);
-            return null != n && e.push(n), e;
+            return (null != n && e.push(n), e);
         }, []);
         return this.updateClientMembers(t);
     }
     updateMembersSort(e) {
         return new Promise((t) => {
-            [
+            ([
                 ...(0, u.cloneDeep)(this.getMembersByIndex(A.Tu.CURRENT_GUILD_MEMBER)[0]),
                 ...(0, u.cloneDeep)(this.getMembersByIndex(A.Tu.NEW_GUILD_MEMBER)[0]),
             ].forEach((t) => {
@@ -271,7 +271,7 @@ class L {
                     i = this._search?.isMemberIncludedInSearchResults(t) ?? !1;
                 this._members?.updateMember(t, { sort: n, isIncludedInSearchResults: i });
             }),
-                t();
+                t());
         });
     }
     sortMembersBySelectedSort(e) {
@@ -288,7 +288,7 @@ class L {
         if (null == this._search || null == this._members || !this._initialized) return !1;
         let t = e.reduce((e, t) => {
             let n = s.Ay.getTrueMember(this.guildId, t);
-            return null != n && e.push(n), e;
+            return (null != n && e.push(n), e);
         }, []);
         return this.updateClientMembers(t, this._search.requiresUsernameMatch, 0 !== this.lastRefreshTimestamp);
     }
@@ -298,12 +298,12 @@ class L {
         return this.updateClientMembers(e);
     }
     _scheduleRefresh(e) {
-        (this.lastRefreshTimestamp = e),
+        ((this.lastRefreshTimestamp = e),
             (this.lastCursorTimestamp = Date.now()),
             null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
             (this._lastRefreshTimer = setTimeout(() => {
-                (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
-            }, R));
+                ((this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0));
+            }, R)));
     }
     refreshNewMembersAndSearchResults() {
         if (null == this._search || null == this._members || !this._initialized) return !1;
@@ -318,9 +318,9 @@ class L {
                     refreshTimestamp: e,
                     user: o.default.getUser(i.userId),
                 }) || n;
-        this._members.resetNewMemberTimestamp(), this.resetSearchState() && (n = !1);
+        (this._members.resetNewMemberTimestamp(), this.resetSearchState() && (n = !1));
         let [i, r] = this.updatePaginationState({ currentPage: 1 }, !1);
-        return r && (n = !1), n && this.updatePaginationChunks(), !0;
+        return (r && (n = !1), n && this.updatePaginationChunks(), !0);
     }
     getNewMemberTimestamp() {
         return null != this._members && this._initialized ? this._members.newMemberTimestamp : 0;
@@ -393,7 +393,7 @@ class L {
     }
     removeRoleFromSearchState(e) {
         let t = new Set(this.getSearchState().selectedRoleIds);
-        return t.delete(e), this.updateSearchState({ selectedRoleIds: t });
+        return (t.delete(e), this.updateSearchState({ selectedRoleIds: t }));
     }
 }
 var y = n(70738),
@@ -403,7 +403,7 @@ var y = n(70738),
 let M = !1,
     P = {};
 function U(e) {
-    return null == P[e] && (P[e] = new L(e)), P[e];
+    return (null == P[e] && (P[e] = new L(e)), P[e]);
 }
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -415,7 +415,7 @@ function G() {
 function x(e) {
     let t = !1,
         n = U(e.guildId);
-    return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
+    return ("GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t);
 }
 function k(e) {
     let { guildId: t, userId: n } = e;
@@ -478,7 +478,7 @@ class F extends i.Ay.Store {
         return U(e).lastCursorTimestamp;
     }
 }
-let V = new F(r.h, {
+let B = new F(r.h, {
     CONNECTION_OPEN: function (e) {
         let t;
         return (
@@ -504,12 +504,12 @@ let V = new F(r.h, {
                 let { id: n, activity_instances: i } = e,
                     r = U(n),
                     a = [];
-                i?.forEach((e) => {
+                (i?.forEach((e) => {
                     e.participants?.forEach((e) => {
                         (0, d.Vq)(e.member) && a.push(e.member);
                     });
                 }),
-                    (t = r.updateServerMembers(a) || t);
+                    (t = r.updateServerMembers(a) || t));
             }),
             t
         );
@@ -594,7 +594,7 @@ let V = new F(r.h, {
         let i = U(t),
             r = n.reduce((e, t) => {
                 let n = t.userId;
-                return e.push(n), e;
+                return (e.push(n), e);
             }, []);
         return i.updateMembersByMemberIds(r);
     },
@@ -604,7 +604,7 @@ let V = new F(r.h, {
         let i = U(t),
             r = n.reduce((e, t) => {
                 let n = t.userId;
-                return e.push(n), e;
+                return (e.push(n), e);
             }, []);
         return i.updateMembersByMemberIds(r);
     },
@@ -646,7 +646,7 @@ let V = new F(r.h, {
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: function (e) {
         let { guildId: t, memberSupplementals: n } = e,
             i = (0, D.Ob)(t, n);
-        return i && U(t).updateMembersByMemberIds(n.map((e) => e.userId)), i;
+        return (i && U(t).updateMembersByMemberIds(n.map((e) => e.userId)), i);
     },
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function (e) {
         let t,

@@ -1,4 +1,4 @@
-t.d(s, { Ay: () => o, BQ: () => f, Gf: () => u, Z8: () => p, qv: () => C, s2: () => x }), t(321073);
+(t.d(s, { Ay: () => o, BQ: () => f, Gf: () => u, Z8: () => p, qv: () => C, s2: () => x }), t(321073));
 var n = t(477900),
     r = t(582128),
     a = t(284009),
@@ -19,7 +19,7 @@ function u(e) {
                     step: null != e[0] ? e[0].key : null,
                     setStep(e) {
                         let n = [...t().stepsHistory];
-                        n.push(e), s({ step: e, previousStep: t().step, stepsHistory: n });
+                        (n.push(e), s({ step: e, previousStep: t().step, stepsHistory: n }));
                     },
                     breadcrumbsData: e
                         .filter((e) => null != e.key && e?.options?.useBreadcrumbLabel != null)
@@ -37,7 +37,7 @@ function u(e) {
 }
 function o(e) {
     let s = r.useContext(c);
-    return i()(null != s, "useSteps must be used inside CheckoutStepContext"), s(e);
+    return (i()(null != s, "useSteps must be used inside CheckoutStepContext"), s(e));
 }
 function d(e) {
     return e.step;

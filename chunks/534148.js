@@ -20,7 +20,7 @@ var i,
     N = n(576705),
     E = n(542580),
     C = n(803378);
-n(321073), n(667532);
+(n(321073), n(667532));
 var v = n(47167),
     T = n(808728),
     I = n(994500),
@@ -37,7 +37,7 @@ var w = n(284009),
     _ = n(488926);
 function P(e) {
     let t = [e.username];
-    return e?.nick != null && t.push(e.nick), { id: e.id, names: t };
+    return (e?.nick != null && t.push(e.nick), { id: e.id, names: t });
 }
 function W(e) {
     return { id: e.id, names: [e.name] };
@@ -233,7 +233,7 @@ function ed(e) {
                     currentValue: o.permission,
                     onChange: b
                         ? (e) => {
-                              V.A.dismissToggleTooltip(n.id, c), a(e);
+                              (V.A.dismissToggleTooltip(n.id, c), a(e));
                           }
                         : a,
                 }),
@@ -309,22 +309,26 @@ function ef(e) {
         } = e,
         L = (0, c.bG)([C.A], () => (null == i ? null : C.A.getCommand(i)), [i]),
         w = L?.defaultMemberPermissions != null,
-        R = (0, c.bG)([j.A, f.Ay, N.A], () => {
-            let e = j.A.getGuild(a),
-                t = f.Ay.getSelfMember(a);
-            return (
-                null != e &&
-                null != t &&
-                (0, p.zl)({
-                    PermissionStore: N.A,
-                    guild: e,
-                    selfMember: t,
-                    applicationLevelPermissions: I,
-                    commandLevelPermissions: S,
-                    defaultMemberPermissions: L?.defaultMemberPermissions,
-                })
-            );
-        }, [a, L, I, S]),
+        R = (0, c.bG)(
+            [j.A, f.Ay, N.A],
+            () => {
+                let e = j.A.getGuild(a),
+                    t = f.Ay.getSelfMember(a);
+                return (
+                    null != e &&
+                    null != t &&
+                    (0, p.zl)({
+                        PermissionStore: N.A,
+                        guild: e,
+                        selfMember: t,
+                        applicationLevelPermissions: I,
+                        commandLevelPermissions: S,
+                        defaultMemberPermissions: L?.defaultMemberPermissions,
+                    })
+                );
+            },
+            [a, L, I, S],
+        ),
         M = i ?? t,
         [_, P] = s.useMemo(() => {
             let e = {},
@@ -559,7 +563,7 @@ function eb(e) {
                     name: (0, v.m1)(e.channel, S.default, I.A),
                     canManage: N.A.can(k.xBc.MANAGE_ROLES, e.channel),
                 }));
-                return i.unshift({ id: (0, p.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i;
+                return (i.unshift({ id: (0, p.Ap)(e), name: O.intl.string(O.t["7YqSGx"]), canManage: !0 }), i);
             }, [e]),
             [n, i] = s.useState(""),
             l = s.useMemo(() => {

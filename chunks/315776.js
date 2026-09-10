@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.Raised = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.Raised = void 0));
 var n = u(r(582128)),
     o = u(r(655972)),
     a = u(r(584946)),
@@ -45,11 +45,11 @@ var l = (t.Raised = function (e) {
         n.default.createElement("div", { style: s.content }, u),
     );
 });
-(l.propTypes = {
+((l.propTypes = {
     background: o.default.string,
     zDepth: o.default.oneOf([0, 1, 2, 3, 4, 5]),
     radius: o.default.number,
     styles: o.default.object,
 }),
     (l.defaultProps = { background: "#fff", zDepth: 1, radius: 2, styles: {} }),
-    (t.default = l);
+    (t.default = l));

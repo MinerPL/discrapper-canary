@@ -1,4 +1,4 @@
-n.r(r),
+(n.r(r),
     n.d(r, { default: () => t }),
     n(323874),
     n(14289),
@@ -10,7 +10,7 @@ n.r(r),
     n(949626),
     n(767709),
     n(65162),
-    n(321073);
+    n(321073));
 let t = async function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     var r,
@@ -50,7 +50,7 @@ let t = async function () {
         I = !1;
     function E() {
         var r = g.buffer;
-        (e.HEAP8 = s = new Int8Array(r)),
+        ((e.HEAP8 = s = new Int8Array(r)),
             (e.HEAP16 = c = new Int16Array(r)),
             (e.HEAPU8 = u = new Uint8Array(r)),
             (e.HEAPU16 = new Uint16Array(r)),
@@ -59,10 +59,10 @@ let t = async function () {
             (e.HEAPF32 = d = new Float32Array(r)),
             (e.HEAPF64 = b = new Float64Array(r)),
             (h = new BigInt64Array(r)),
-            new BigUint64Array(r);
+            new BigUint64Array(r));
     }
     function R(r) {
-        e.onAbort?.(r), _((r = "Aborted(" + r + ")")), (W = !0), (r += ". Build with -sASSERTIONS for more info.");
+        (e.onAbort?.(r), _((r = "Aborted(" + r + ")")), (W = !0), (r += ". Build with -sASSERTIONS for more info."));
         var n = new WebAssembly.RuntimeError(r);
         throw (o?.(n), n);
     }
@@ -81,7 +81,7 @@ let t = async function () {
             var n = await k(e);
             return await WebAssembly.instantiate(n, r);
         } catch (e) {
-            _(`failed to asynchronously prepare wasm: ${e}`), R(e);
+            (_(`failed to asynchronously prepare wasm: ${e}`), R(e));
         }
     }
     async function S(e, r, n) {
@@ -90,7 +90,7 @@ let t = async function () {
                 var t = fetch(r, { credentials: "same-origin" });
                 return await WebAssembly.instantiateStreaming(t, n);
             } catch (e) {
-                _(`wasm streaming compile failed: ${e}`), _("falling back to ArrayBuffer instantiation");
+                (_(`wasm streaming compile failed: ${e}`), _("falling back to ArrayBuffer instantiation"));
             }
         return C(r, n);
     }
@@ -138,14 +138,14 @@ let t = async function () {
             : ((m ??= (function () {
                   if (e.locateFile) {
                       var r;
-                      return (r = "webp_wasm.wasm"), e.locateFile ? e.locateFile(r, y) : y + r;
+                      return ((r = "webp_wasm.wasm"), e.locateFile ? e.locateFile(r, y) : y + r);
                   }
                   return new URL(n(14927), n.b).href;
               })()),
               r((await S(a, m, t)).instance));
     }
     var x = (r) => {
-            for (; r.length > 0; ) r.shift()(e);
+            for (; r.length > 0;) r.shift()(e);
         },
         F = [],
         B = (e) => F.push(e),
@@ -156,7 +156,7 @@ let t = async function () {
         G = (e) => {
             var r = g.buffer.byteLength;
             try {
-                return g.grow(((e - r + 65535) / 65536) | 0), E(), 1;
+                return (g.grow(((e - r + 65535) / 65536) | 0), E(), 1);
             } catch (e) {}
         },
         N = [null, [], []],
@@ -168,11 +168,11 @@ let t = async function () {
             var a = ((e, r, n, t) => {
                 var a = r + n;
                 if (t) return a;
-                for (; e[r] && !(r >= a); ) ++r;
+                for (; e[r] && !(r >= a);) ++r;
                 return r;
             })(e, r, n, t);
             if (a - r > 16 && e.buffer && V) return V.decode(e.subarray(r, a));
-            for (var i = ""; r < a; ) {
+            for (var i = ""; r < a;) {
                 var o = e[r++];
                 if (!(128 & o)) {
                     i += String.fromCharCode(o);
@@ -238,19 +238,19 @@ let t = async function () {
                                                 r[n++] = o;
                                             } else if (o <= 2047) {
                                                 if (n + 1 >= a) break;
-                                                (r[n++] = 192 | (o >> 6)), (r[n++] = 128 | (63 & o));
+                                                ((r[n++] = 192 | (o >> 6)), (r[n++] = 128 | (63 & o)));
                                             } else if (o <= 65535) {
                                                 if (n + 2 >= a) break;
-                                                (r[n++] = 224 | (o >> 12)),
+                                                ((r[n++] = 224 | (o >> 12)),
                                                     (r[n++] = 128 | ((o >> 6) & 63)),
-                                                    (r[n++] = 128 | (63 & o));
+                                                    (r[n++] = 128 | (63 & o)));
                                             } else {
                                                 if (n + 3 >= a) break;
-                                                (r[n++] = 240 | (o >> 18)),
+                                                ((r[n++] = 240 | (o >> 18)),
                                                     (r[n++] = 128 | ((o >> 12) & 63)),
                                                     (r[n++] = 128 | ((o >> 6) & 63)),
                                                     (r[n++] = 128 | (63 & o)),
-                                                    i++;
+                                                    i++);
                                             }
                                         }
                                         return (r[n] = 0);
@@ -263,7 +263,7 @@ let t = async function () {
                     array: (e) => {
                         let r;
                         var n = ((r = e.length), w(r));
-                        return s.set(e, n), n;
+                        return (s.set(e, n), n);
                     },
                 },
                 o = j(e),
@@ -276,7 +276,7 @@ let t = async function () {
                 }
             var b = o(...c);
             return (function (e) {
-                return 0 !== f && p(f), "string" === r ? O(e) : "boolean" === r ? !!e : e;
+                return (0 !== f && p(f), "string" === r ? O(e) : "boolean" === r ? !!e : e);
             })(b);
         };
     if (
@@ -288,8 +288,8 @@ let t = async function () {
         e.thisProgram && e.thisProgram,
         e.preInit)
     )
-        for ("function" == typeof e.preInit && (e.preInit = [e.preInit]); e.preInit.length > 0; ) e.preInit.shift()();
-    (e.ccall = z),
+        for ("function" == typeof e.preInit && (e.preInit = [e.preInit]); e.preInit.length > 0;) e.preInit.shift()();
+    ((e.ccall = z),
         (e.cwrap = (e, r, n, t) => {
             var a = !n || n.every((e) => "number" === e || "boolean" === e);
             return "string" !== r && a && !t
@@ -350,7 +350,7 @@ let t = async function () {
                     R(`invalid type for getValue: ${r}`);
             }
         }),
-        (e.UTF8ToString = O);
+        (e.UTF8ToString = O));
     var q = {
         c: (e) => {
             var r = u.length;
@@ -370,15 +370,15 @@ let t = async function () {
                 for (var c = 0; c < s; c++) L(e, u[o + c]);
                 a += s;
             }
-            return (l[t >> 2] = a), 0;
+            return ((l[t >> 2] = a), 0);
         },
     };
     if (((A = await U()), e.preRun))
-        for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length; ) H(e.preRun.shift());
+        for ("function" == typeof e.preRun && (e.preRun = [e.preRun]); e.preRun.length;) H(e.preRun.shift());
     function J() {
         if (((e.calledRun = !0), !W)) {
             if (((I = !0), A.e(), i?.(e), e.onRuntimeInitialized?.(), e.postRun))
-                for ("function" == typeof e.postRun && (e.postRun = [e.postRun]); e.postRun.length; )
+                for ("function" == typeof e.postRun && (e.postRun = [e.postRun]); e.postRun.length;)
                     B(e.postRun.shift());
             x(F);
         }
@@ -388,13 +388,13 @@ let t = async function () {
         e.setStatus
             ? (e.setStatus("Running..."),
               setTimeout(() => {
-                  setTimeout(() => e.setStatus(""), 1), J();
+                  (setTimeout(() => e.setStatus(""), 1), J());
               }, 1))
             : J(),
         I
             ? e
             : new Promise((e, r) => {
-                  (i = e), (o = r);
+                  ((i = e), (o = r));
               })
     );
 };

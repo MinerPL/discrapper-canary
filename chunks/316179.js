@@ -1,6 +1,6 @@
 var n = r(745340),
     i = r(904124);
-(t.grammar = r(150594)),
+((t.grammar = r(150594)),
     (t.write = i),
     (t.parse = n.parse),
     (t.parseParams = n.parseParams),
@@ -8,4 +8,4 @@ var n = r(745340),
     (t.parsePayloads = n.parsePayloads),
     (t.parseRemoteCandidates = n.parseRemoteCandidates),
     (t.parseImageAttributes = n.parseImageAttributes),
-    (t.parseSimulcastStreamList = n.parseSimulcastStreamList);
+    (t.parseSimulcastStreamList = n.parseSimulcastStreamList));

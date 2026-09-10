@@ -2,14 +2,14 @@ var n = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     i = r(652925),
@@ -28,7 +28,7 @@ e.exports = (function (e) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (r._value = e), (r._offset = 0), (r._animation = null), (r._listeners = {}), r;
+        return ((r._value = e), (r._offset = 0), (r._animation = null), (r._listeners = {}), r);
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
@@ -51,7 +51,7 @@ e.exports = (function (e) {
             {
                 key: "setValue",
                 value: function (e) {
-                    this._animation && (this._animation.stop(), (this._animation = null)), this._updateValue(e);
+                    (this._animation && (this._animation.stop(), (this._animation = null)), this._updateValue(e));
                 },
             },
             {
@@ -63,14 +63,14 @@ e.exports = (function (e) {
             {
                 key: "flattenOffset",
                 value: function () {
-                    (this._value += this._offset), (this._offset = 0);
+                    ((this._value += this._offset), (this._offset = 0));
                 },
             },
             {
                 key: "addListener",
                 value: function (e) {
                     var t = l();
-                    return (this._listeners[t] = e), t;
+                    return ((this._listeners[t] = e), t);
                 },
             },
             {
@@ -88,10 +88,10 @@ e.exports = (function (e) {
             {
                 key: "stopAnimation",
                 value: function (e) {
-                    this.stopTracking(),
+                    (this.stopTracking(),
                         this._animation && this._animation.stop(),
                         (this._animation = null),
-                        e && e(this.__getValue());
+                        e && e(this.__getValue()));
                 },
             },
             {
@@ -107,7 +107,7 @@ e.exports = (function (e) {
                         n = null;
                     e.__isInteraction && (n = o.current.createInteractionHandle());
                     var i = this._animation;
-                    this._animation && this._animation.stop(),
+                    (this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
                             this._value,
@@ -115,22 +115,22 @@ e.exports = (function (e) {
                                 r._updateValue(e);
                             },
                             function (e) {
-                                (r._animation = null), null !== n && o.current.clearInteractionHandle(n), t && t(e);
+                                ((r._animation = null), null !== n && o.current.clearInteractionHandle(n), t && t(e));
                             },
                             i,
-                        );
+                        ));
                 },
             },
             {
                 key: "stopTracking",
                 value: function () {
-                    this._tracking && this._tracking.__detach(), (this._tracking = null);
+                    (this._tracking && this._tracking.__detach(), (this._tracking = null));
                 },
             },
             {
                 key: "track",
                 value: function (e) {
-                    this.stopTracking(), (this._tracking = e);
+                    (this.stopTracking(), (this._tracking = e));
                 },
             },
             {

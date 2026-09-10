@@ -1,4 +1,4 @@
-n.d(t, { A: () => G }), n(321073);
+(n.d(t, { A: () => G }), n(321073));
 var i = n(477900),
     l = n(582128),
     a = n(435558),
@@ -88,18 +88,18 @@ function G(e) {
             }),
             [B],
         ),
-        { enabled: W, multipleRoomsEnabled: $ } = (0, j.mf)({
+        { enabled: W, multipleRoomsEnabled: Y } = (0, j.mf)({
             guildId: t.guild_id,
             location: "ChannelCallHeaderToolbar",
         }),
-        Y = (0, r.bG)([R.Ay], () => R.Ay.getVoiceChannelId() === B),
+        $ = (0, r.bG)([R.Ay], () => R.Ay.getVoiceChannelId() === B),
         K = t.isGuildVoiceOrThread() && !a,
-        q = [];
+        X = [];
     if (
         (W &&
-            $ &&
             Y &&
-            q.push(
+            $ &&
+            X.push(
                 (0, i.jsx)(
                     _.A,
                     {
@@ -120,24 +120,24 @@ function G(e) {
             ),
         o &&
             (z?.type === w.lp.STREAM
-                ? q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "stream-participants"))
+                ? X.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "stream-participants"))
                 : z?.type === w.lp.ACTIVITY &&
                   null != s &&
-                  q.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "activity-participants"))),
-        F && q.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
-        q.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
+                  X.push((0, i.jsx)(P.A, { channel: t, focusedParticipant: z }, "activity-participants"))),
+        F && X.push((0, i.jsx)(k, { channelId: B, guildId: t.guild_id }, "current-speaker")),
+        X.push((0, i.jsx)(x.A, { className: V.x6, channelId: B }, "clips-enabled-indicator")),
         z?.type === w.lp.STREAM &&
-            (q.push((0, i.jsx)(N.A, { className: V.x6, participant: z }, "warning")),
-            q.push(
+            (X.push((0, i.jsx)(N.A, { className: V.x6, participant: z }, "warning")),
+            X.push(
                 (0, i.jsx)(
                     g.A,
                     { size: f.Ay.Sizes.LARGE, className: V.x6, participant: z, showQuality: !0, premiumIndicator: !1 },
                     "live-indicator",
                 ),
             )),
-        z?.type === w.lp.USER && q.push((0, i.jsx)(v.A, { className: V.x6, userId: z.id }, "video-warning")),
+        z?.type === w.lp.USER && X.push((0, i.jsx)(v.A, { className: V.x6, userId: z.id }, "video-warning")),
         F &&
-            q.push(
+            X.push(
                 (0, i.jsx)(
                     u.Y,
                     {
@@ -159,10 +159,10 @@ function G(e) {
                     "call-members-popout",
                 ),
             ),
-        W && Y)
+        W && $)
     ) {
         let e = I && !S ? U.t["3jrUBj"] : D.default.f7g0DK;
-        q.push(
+        X.push(
             (0, i.jsx)(
                 _.A,
                 {
@@ -170,13 +170,13 @@ function G(e) {
                     label: U.intl.string(e),
                     onClick: () => {
                         if (!I) {
-                            (0, C.zD)(t.id),
+                            ((0, C.zD)(t.id),
                                 (0, y.yt)({
                                     channelId: t.id,
                                     guildId: t.guild_id,
                                     location: m.A.CHANNEL_CALL,
                                     guildRoomOpen: !0,
-                                });
+                                }));
                             return;
                         }
                         (0, C.UV)(!S, B);
@@ -188,7 +188,7 @@ function G(e) {
         );
     }
     return (
-        K && q.push((0, i.jsx)(b.V, { channelId: t.id, className: V.x6, disabled: a }, "chat-spacer")),
-        (0, i.jsx)(A.f5, { value: G, children: q })
+        K && X.push((0, i.jsx)(b.V, { channelId: t.id, className: V.x6, disabled: a }, "chat-spacer")),
+        (0, i.jsx)(A.f5, { value: G, children: X })
     );
 }

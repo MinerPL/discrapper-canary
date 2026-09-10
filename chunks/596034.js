@@ -2,8 +2,8 @@ l.d(t, { I: () => N, _: () => b });
 var n,
     r = l(477900);
 l(582128);
-var i = l(834730),
-    s = l(150934),
+var s = l(834730),
+    i = l(150934),
     a = l(118982),
     u = l(403362),
     c = l(975571),
@@ -14,41 +14,41 @@ var i = l(834730),
     h = l(583741),
     p = l(375708),
     v = l(484742);
-function f(e) {
+function j(e) {
     let { value: t, onChange: l } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.E, {
+            (0, r.jsx)(s.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: p.intl.string(h.default["5dmUS+"]),
             }),
-            (0, r.jsx)(s.S, { label: p.intl.string(h.default.XBtSMa), checked: t, onChange: l }),
+            (0, r.jsx)(i.S, { label: p.intl.string(h.default.XBtSMa), checked: t, onChange: l }),
         ],
     });
 }
-let j = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
+let f = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
 function g(e) {
     let {
             purchaseButtonText: t,
             totalDue: l,
             renewalPrice: n,
             currency: r,
-            interval: i,
-            intervalCount: s,
+            interval: s,
+            intervalCount: i,
             startDate: a,
             multiPeriodDiscountAttributes: u,
         } = e,
         x = (0, d.$g)(l, r),
         h = (0, d.$g)(n, r),
         v = m.X7G.PAID_TERMS,
-        f = m.qF7.CONTACT_US,
+        j = m.qF7.CONTACT_US,
         g = c.A.getArticleURL(m.MVz.BILLING);
     return {
         purchaseButtonText: t,
         totalDue: x,
         renewalPrice: h,
-        interval: p.intl.formatToPlainString(j[i], { intervalCount: s }),
+        interval: p.intl.formatToPlainString(f[s], { intervalCount: i }),
         startDate: a,
         multiPeriodDiscountAttributes: (function (e) {
             let { currency: t, multiPeriodDiscountAttributes: l } = e;
@@ -61,7 +61,7 @@ function g(e) {
                 };
         })({ multiPeriodDiscountAttributes: u, currency: r }),
         paidServicesTermsUrl: v,
-        contactUsUrl: f,
+        contactUsUrl: j,
         subscriptionsFaqUrl: g,
     };
 }
@@ -82,8 +82,8 @@ function b(e) {
     return (0, r.jsxs)("div", {
         className: v.k,
         children: [
-            null != e.immediateDelivery && (0, r.jsx)(f, { ...e.immediateDelivery }),
-            (0, r.jsx)(i.E, {
+            null != e.immediateDelivery && (0, r.jsx)(j, { ...e.immediateDelivery }),
+            (0, r.jsx)(s.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
@@ -143,10 +143,10 @@ function b(e) {
                             });
                         case 9:
                         case 10:
-                            let { applicationId: r, applicationName: i, shouldAppendDisclaimer: s } = e,
-                                c = i ?? "",
+                            let { applicationId: r, applicationName: s, shouldAppendDisclaimer: i } = e,
+                                c = s ?? "",
                                 o = (0, a.k3)(null != r ? { id: r, name: c } : void 0);
-                            if (s)
+                            if (i)
                                 return p.intl.format(9 === e.type ? h.default["0Zl+Xt"] : h.default["5fbNBX"], {
                                     ...e,
                                     applicationName: c,
@@ -166,13 +166,13 @@ function b(e) {
                 })(e.variant),
             }),
             e.paymentSourceType === m.hes.PAYSAFE_CARD &&
-                (0, r.jsx)(i.E, {
+                (0, r.jsx)(s.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: p.intl.string(p.t.kj9VLI),
                 }),
             e.paymentSourceType === m.hes.SOFORT &&
-                (0, r.jsx)(i.E, {
+                (0, r.jsx)(s.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: p.intl.string(p.t["UYy1/h"]),

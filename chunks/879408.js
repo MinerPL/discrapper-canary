@@ -28,11 +28,11 @@ let d = new o(r.h, {
     GUILD_BULK_BAN_UPDATE: function (e) {
         if (!s.has(e.guildId)) {
             let t = a.default.getId();
-            return l.add(`${e.guildId}:${t}`), !1;
+            return (l.add(`${e.guildId}:${t}`), !1);
         }
         s.delete(e.guildId);
     },
     CONNECTION_OPEN: function () {
-        s.clear(), l.clear();
+        (s.clear(), l.clear());
     },
 });

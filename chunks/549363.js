@@ -59,7 +59,7 @@ let b = l.forwardRef(function (e, t) {
         ],
     });
 });
-n(321073), n(938796);
+(n(321073), n(938796));
 var y = n(334279),
     v = n(122817),
     j = n(665260),
@@ -127,7 +127,7 @@ class V extends O.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.amount = e.amount),
             (this.amountRefunded = e.amountRefunded),
@@ -150,7 +150,7 @@ class V extends O.A {
             (this.hasRefundInvoiceURLs = e.hasRefundInvoiceURLs),
             (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons),
             (this.entitlements = e.entitlements),
-            (this.invoice = e.invoice);
+            (this.invoice = e.invoice));
     }
     get isPurchasedViaApple() {
         return this.paymentGateway === U.kM_.APPLE;
@@ -208,7 +208,8 @@ function F(e) {
     let { payment: t } = e,
         n = V.createFromServer(t),
         i = k.findIndex((e) => e.id === t.id);
-    -1 === i ? (k.push(n), k.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (k[i] = n), (k = [...k]);
+    (-1 === i ? (k.push(n), k.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (k[i] = n),
+        (k = [...k]));
 }
 class B extends d.Ay.Store {
     static displayName = "PaymentStore";
@@ -230,7 +231,7 @@ let z = new B(E.h, {
                 n = k.findIndex((t) => t.id === e.id);
             -1 !== n ? (k[n] = t) : k.push(t);
         }
-        k.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (k = [...k]);
+        (k.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (k = [...k]));
     },
     BILLING_PAYMENTS_FETCH_FAIL: function () {
         w = !0;
@@ -238,7 +239,7 @@ let z = new B(E.h, {
     PAYMENT_UPDATE: F,
     BILLING_PAYMENT_FETCH_SUCCESS: F,
     LOGOUT: function () {
-        (k = []), (w = !1);
+        ((k = []), (w = !1));
     },
 });
 var X = n(97352),
@@ -297,7 +298,7 @@ function ep(e) {
             let n = await eT(t.id);
             s(n);
             let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-            window.open(i, "_blank"), a(null);
+            (window.open(i, "_blank"), a(null));
         } catch (e) {
             a(e.body?.message);
         }
@@ -347,7 +348,7 @@ function ep(e) {
                   children: (0, i.jsx)(ei.Anchor, {
                       onClick: () => {
                           var e;
-                          (e = t.paymentSource), eE(t, e);
+                          ((e = t.paymentSource), eE(t, e));
                       },
                       children: N.intl.formatToPlainString(N.t.onRIxS, {}),
                   }),
@@ -415,7 +416,7 @@ function e2(e) {
             },
             onClick: function () {
                 (0, eY.C)(t, () => {
-                    u(!0), a(!0);
+                    (u(!0), a(!0));
                 });
             },
             children: (0, i.jsx)("div", { className: eS.l9, children: t }),
@@ -439,10 +440,10 @@ function e6(e) {
         a = (0, d.bG)([ek.A], () => ek.A.getGuild(t)),
         o = s?.role_id != null && s?.attachments_count === 0 ? N.intl.string(N.t.H11qcT) : r,
         u = l.useCallback(async () => {
-            a?.features.has(U.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
+            (a?.features.has(U.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
                 ? await (0, eb.A)(U.BVt.GUILD_PRODUCT(t, n))
                 : await (0, eb.A)(U.BVt.CHANNEL(t)),
-                (0, eG.default)();
+                (0, eG.default)());
         }, [a, t, n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -920,11 +921,11 @@ class e8 extends l.PureComponent {
                 if (
                     (g.items.forEach((e) => {
                         let { planId: n, quantity: i } = e;
-                        (0, H.xq)(n)
+                        ((0, H.xq)(n)
                             ? (l.push(H.Ay.getDisplayName(n, !1, m)), (o = (0, H.mH)(M.hd[n].skuId)))
                             : (l.push(`${i > 1 ? `${i}x ` : ""}${H.Ay.getDisplayName(n, !1, m)}`),
                               null == o && (o = (0, H.mH)(M.hd[n].skuId))),
-                            (0, H.z4)(n) || (t ??= n);
+                            (0, H.z4)(n) || (t ??= n));
                     }),
                     null != t)
                 ) {
@@ -934,7 +935,7 @@ class e8 extends l.PureComponent {
             } else if (g.type === U.rzx.GUILD) {
                 if (null != u) {
                     let e = u.interval === M.WT.YEAR ? N.t.V6UFQM : N.t["6oq128"];
-                    l.push(N.intl.format(e, { planName: u.name })), (o = u.skuId);
+                    (l.push(N.intl.format(e, { planName: u.name })), (o = u.skuId));
                 }
             } else
                 g.type === U.rzx.APPLICATION
@@ -943,7 +944,7 @@ class e8 extends l.PureComponent {
                           ? l.push(N.intl.formatToPlainString(N.t["0wL/VI"], { tier: c?.name }))
                           : l.push(N.intl.string(N.t["9czSYu"])))
                     : g.type;
-            (t = 0 !== l.length ? l.join(", ") : s.description),
+            ((t = 0 !== l.length ? l.join(", ") : s.description),
                 null == e &&
                     (e = (0, i.jsx)(ex.A, {
                         className: eS.Sy,
@@ -952,7 +953,7 @@ class e8 extends l.PureComponent {
                         guild: a,
                         size: ex.M.XSMALL,
                         skuId: o ?? c?.id,
-                    }));
+                    })));
         } else if (null != c) {
             if (s.isGuildProductPurchase && s.isSoftDeletedProduct) t = N.intl.string(N.t.O7uLmw);
             else {
@@ -991,7 +992,7 @@ class e8 extends l.PureComponent {
                             size: ex.M.XSMALL,
                             skuId: c.id,
                         });
-        } else (e = (0, i.jsx)(e4, { withGradient: !1, compactMode: n })), (t = s.description);
+        } else ((e = (0, i.jsx)(e4, { withGradient: !1, compactMode: n })), (t = s.description));
         let E = (0, i.jsx)(A.E, {
                 variant: "text-sm/normal",
                 className: eS.p6,
@@ -1111,10 +1112,14 @@ function e7(e) {
         T = a ? m : void 0,
         p = t.subscription,
         x = (0, d.bG)([X.A], () => (null != p && p.type !== U.rzx.PREMIUM ? X.A.get(p.items[0].planId) : null)),
-        f = (0, d.bG)([ew.default], () => {
-            let e = t.isGift ? t.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
-            return null == e ? null : (ew.default.getUser(e.user?.id ?? null) ?? e?.user);
-        }, [t]),
+        f = (0, d.bG)(
+            [ew.default],
+            () => {
+                let e = t.isGift ? t.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
+                return null == e ? null : (ew.default.getUser(e.user?.id ?? null) ?? e?.user);
+            },
+            [t],
+        ),
         { analyticsLocations: I } = (0, eu.Ay)(eo.A.BILLING_SETTINGS_BILLING);
     return (0, i.jsx)(e8, {
         applicationStatistics: g,
@@ -1185,7 +1190,7 @@ class tt extends l.PureComponent {
     }
     componentDidMount() {
         E.h.wait(() => {
-            (0, h.X)(), (0, p.CK)(30);
+            ((0, h.X)(), (0, p.CK)(30));
         });
     }
     renderPremiumExternalSubscription(e) {

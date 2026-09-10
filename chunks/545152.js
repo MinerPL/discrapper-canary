@@ -1,4 +1,4 @@
-n.d(t, { A: () => k, x: () => F }), n(321073);
+(n.d(t, { A: () => k, x: () => F }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(228366),
@@ -49,9 +49,9 @@ async function k(e) {
     if (null == i.channel) return;
     let p = M.A.getSource(i.channel.id) ?? f,
         T = M.A.getCommandOrigin(i.channel.id) ?? c;
-    null == i.autocomplete &&
+    (null == i.autocomplete &&
         a.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
-        await m.A.unarchiveThreadIfNecessary(i.channel.id);
+        await m.A.unarchiveThreadIfNecessary(i.channel.id));
     let S = [],
         C = [],
         O = (0, U.Qr)(T);
@@ -71,8 +71,8 @@ async function k(e) {
                     "" === t && null != i.autocomplete && !a)
                 )
                     continue;
-                r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                    S.push({ type: e.type, name: e.name, value: t, focused: a });
+                (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
+                    S.push({ type: e.type, name: e.name, value: t, focused: a }));
                 continue;
             }
             if (e.type === d.n4.ATTACHMENT) {
@@ -80,7 +80,7 @@ async function k(e) {
                 let t = N.A.getUpload(i.channel.id, e.name, O);
                 if (null == t) continue;
                 let n = C.length;
-                C.push(t), S.push({ type: e.type, name: e.name, value: n, focused: a });
+                (C.push(t), S.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
             let s = v.filterEmpty(n[e.name]);
@@ -97,7 +97,7 @@ async function k(e) {
                         if ((0, U.hT)(l.text)) t = l.text.trim();
                         else {
                             let e = (0, E.f)(l.text, i.guild?.id, i.channel.id);
-                            r()(e?.type === "channelMention", `Failed to resolve ${l.text}`), (t = e.channelId);
+                            (r()(e?.type === "channelMention", `Failed to resolve ${l.text}`), (t = e.channelId));
                         }
                     break;
                 case d.n4.ROLE:
@@ -106,7 +106,7 @@ async function k(e) {
                         if ((0, U.hT)(l.text)) t = l.text.trim();
                         else {
                             let e = (0, E.f)(l.text, i.guild?.id, i.channel.id, { allowUsers: !1 });
-                            r()(e?.type === "roleMention", `Failed to resolve ${l.text}`), (t = e.roleId);
+                            (r()(e?.type === "roleMention", `Failed to resolve ${l.text}`), (t = e.roleId));
                         }
                     else "textMention" === l.type && "@everyone" === l.text && (t = i.guild?.id);
                     break;
@@ -116,7 +116,7 @@ async function k(e) {
                         if ((0, U.hT)(l.text)) t = l.text.trim();
                         else {
                             let e = (0, E.f)(l.text, i.guild?.id, i.channel.id, { allowRoles: !1 });
-                            r()(e?.type === "userMention", `Failed to resolve ${l.text}`), (t = e.userId);
+                            (r()(e?.type === "userMention", `Failed to resolve ${l.text}`), (t = e.userId));
                         }
                     break;
                 case d.n4.MENTIONABLE:
@@ -142,27 +142,27 @@ async function k(e) {
                 case d.n4.INTEGER:
                     if ("text" === l.type) {
                         let n = l.text.trim();
-                        null != e.choices
+                        (null != e.choices
                             ? (t = (0, D.Bk)(e.choices, n))
                             : e.autocomplete &&
                               (t =
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, D.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n)));
+                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n))));
                     }
                     break;
                 case d.n4.NUMBER:
                     if ("text" === l.type) {
                         let n = l.text.trim();
-                        null != e.choices
+                        (null != e.choices
                             ? (t = (0, D.Bk)(e.choices, n))
                             : e.autocomplete &&
                               (t =
                                   null != i.autocomplete && a
                                       ? i.autocomplete.query
                                       : (0, D.lM)(i.channel.id, e.name, n)),
-                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n)));
+                            null == t && (t = Number(v.normalizeNumericString(g.default.locale, n))));
                     }
                     break;
                 default:
@@ -203,11 +203,11 @@ async function k(e) {
         options: S,
         application_command: t.rootCommand,
     };
-    null != s && (L.target_id = s),
+    (null != s && (L.target_id = s),
         null != i.autocomplete
             ? (0, y.WL)(t, i, L)
             : (l.A.clearAll(i.channel.id, O),
-              V({
+              B({
                   applicationId: t.applicationId,
                   data: L,
                   context: i,
@@ -235,12 +235,12 @@ async function k(e) {
                   sectionName: u,
                   source: p,
                   interactionLifecycleOptions: await I(t, i, L),
-              }));
+              })));
 }
 async function F(e, t, n) {
     if (e.isCommandType() && null != e.interactionData && null != n.command) {
         let i = { channel: t, guild: null != t.guild_id ? S.A.getGuild(t.guild_id) : null };
-        V({
+        B({
             applicationId: n.command.applicationId,
             data: e.interactionData,
             context: i,
@@ -248,7 +248,7 @@ async function F(e, t, n) {
         });
     }
 }
-function V(e) {
+function B(e) {
     let {
         applicationId: t,
         data: n,
@@ -277,7 +277,7 @@ function V(e) {
             sectionName: o,
             source: c,
         };
-    I.tU(f.nonce, {
+    (I.tU(f.nonce, {
         messageId: u.messageId,
         onCreate: u.onCreate,
         onSuccess: u.onSuccess,
@@ -286,13 +286,13 @@ function V(e) {
     }),
         null != r && r.length > 0
             ? Y(r, f.nonce, h, a).then((e) => {
-                  e && B(f, s);
+                  e && V(f, s);
               })
-            : B(f, s);
+            : V(f, s));
 }
-function B(e, t) {
+function V(e, t) {
     c.Ay.enqueue({ type: c.AZ.COMMAND, message: e }, (n) => {
-        (0, f.wy)(e.nonce, n, e.applicationId, e.channelId, e.guildId ?? null), n.ok && null != t && t();
+        ((0, f.wy)(e.nonce, n, e.applicationId, e.channelId, e.guildId ?? null), n.ok && null != t && t());
     });
 }
 async function H(e, t, n) {
@@ -338,8 +338,8 @@ async function H(e, t, n) {
                 if (null == t.channel) return;
                 null == i && null != n && s.A.sendClydeError(t.channel.id, n);
                 let d = i;
-                null == d && null != o && (d = (0, f.sW)(o, e.applicationId)),
-                    a.h.dispatch({ type: "MESSAGE_SEND_FAILED", messageId: l.id, channelId: t.channel.id, reason: d });
+                (null == d && null != o && (d = (0, f.sW)(o, e.applicationId)),
+                    a.h.dispatch({ type: "MESSAGE_SEND_FAILED", messageId: l.id, channelId: t.channel.id, reason: d }));
             },
         }
     );
@@ -373,7 +373,7 @@ async function W(e, t) {
         i = 0;
     for (let r of e) {
         let e = t ? (r.currentSize ?? 0) : await r.getSize();
-        e > i && (i = e), (n += e);
+        (e > i && (i = e), (n += e));
     }
     return { totalSize: n, largestUploadedFileSize: i };
 }
@@ -381,10 +381,10 @@ async function Y(e, t, n, i) {
     let r = (0, O.o2)(n),
         a = (0, L.jS)({ location: "executeCommand.stageAttachments" });
     function s(e) {
-        i?.(r, e), I.C1(t, w.t02.ENTITY_TOO_LARGE, x.intl.formatToPlainString(x.t.fxEKdS, { maxSize: (0, O.Hb)(r) }));
+        (i?.(r, e), I.C1(t, w.t02.ENTITY_TOO_LARGE, x.intl.formatToPlainString(x.t.fxEKdS, { maxSize: (0, O.Hb)(r) })));
     }
     let { totalSize: l, largestUploadedFileSize: o } = await W(e, !1);
-    if (o > Math.max(r, G.VP) || l > a) return s(o), !1;
+    if (o > Math.max(r, G.VP) || l > a) return (s(o), !1);
     try {
         await (0, u.A)(e);
     } catch {

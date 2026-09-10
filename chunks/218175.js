@@ -61,7 +61,7 @@ function $(e) {
         [C, f] = i.useState(!1),
         { isLoading: E, potentialRecipients: g } = (function () {
             i.useEffect(() => {
-                I.A.fetchRelationships(), (0, x.u)();
+                (I.A.fetchRelationships(), (0, x.u)());
             }, []);
             let { userAffinities: e, isLoading: t } = (0, u.cf)([T.A], () => ({
                     userAffinities: T.A.getUserAffinitiesMap(),
@@ -104,7 +104,7 @@ function $(e) {
         try {
             if (M) {
                 let n = _[0];
-                await (0, P.UN)(n, t), (e = { recipients: [n], failedRecipients: [] });
+                (await (0, P.UN)(n, t), (e = { recipients: [n], failedRecipients: [] }));
             } else {
                 if (null == r) throw Error("Checkout session ID must be defined");
                 let t = await (0, B.kW)(m, r),
@@ -188,7 +188,7 @@ function $(e) {
                         children: q.intl.format(z.default.ZvgWUV, {
                             giftCount: n,
                             onInventoryClick: function () {
-                                d(), (0, y.bz)(), (0, V.openUserSettings)(Y.X.GIFT_PANEL, { analyticsLocations: v });
+                                (d(), (0, y.bz)(), (0, V.openUserSettings)(Y.X.GIFT_PANEL, { analyticsLocations: v }));
                             },
                         }),
                     }),
@@ -203,7 +203,7 @@ function $(e) {
                             text: q.intl.string(z.default["qTXpj/"]),
                             disabled: C,
                             onClick: function () {
-                                d(), (0, y.bz)();
+                                (d(), (0, y.bz)());
                             },
                         },
                         { variant: "primary", text: q.intl.string(q.t["+EgwQn"]), disabled: w, loading: C, onClick: J },
@@ -277,7 +277,7 @@ function et(e) {
                 mode: F,
                 text: e,
                 onCopy: (e) => {
-                    null != P && (0, O.AK)(new N.A({ code: t, maxUses: 1 }), P),
+                    (null != P && (0, O.AK)(new N.A({ code: t, maxUses: 1 }), P),
                         (0, M.C)(
                             e,
                             () => B(p.e.Modes.SUCCESS),
@@ -285,7 +285,7 @@ function et(e) {
                         ),
                         setTimeout(() => {
                             B(p.e.Modes.DEFAULT);
-                        }, 1500);
+                        }, 1500));
                 },
                 supportsCopy: M.p5,
                 className: ee.__invalid_copyInput,
@@ -313,7 +313,7 @@ function et(e) {
                 privateGiftLink: 1 === r ? er() : null,
                 onComplete: (e) => {
                     var t;
-                    b(),
+                    (b(),
                         (0, y.bz)(),
                         (t = {
                             recipients: e.recipients,
@@ -326,7 +326,7 @@ function et(e) {
                         (0, _.openModalLazy)(async () => {
                             let { default: e } = await n.e("692318").then(n.bind(n, 150061));
                             return (n) => (0, l.jsx)(e, { ...n, ...t });
-                        });
+                        }));
                 },
                 onClose: b,
             })
@@ -385,7 +385,7 @@ function et(e) {
                                               (0, l.jsx)(en, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      b(), (0, y.bz)(), et && K();
+                                                      (b(), (0, y.bz)(), et && K());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: ee.yF }),
@@ -413,7 +413,7 @@ function et(e) {
                                         fullWidth: !0,
                                         text: q.intl.string(q.t.PDTjLN),
                                         onClick: () => {
-                                            b(), K();
+                                            (b(), K());
                                         },
                                     }),
                                 }),
@@ -425,7 +425,7 @@ function et(e) {
 function en(e) {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        I.A.fetchRelationships(), (0, x.u)();
+        (I.A.fetchRelationships(), (0, x.u)());
     }, []);
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
@@ -454,7 +454,7 @@ function en(e) {
                         loading: f,
                         value: r,
                         onSelectionChange: (e) => {
-                            a(e), c(!1);
+                            (a(e), c(!1));
                         },
                         options: N.map((e) => ({
                             id: e.id,
@@ -469,14 +469,14 @@ function en(e) {
                             disabled: null == r,
                             loading: m,
                             onClick: () => {
-                                p(!0),
+                                (p(!0),
                                     (0, P.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })
                                         .catch(() => {
-                                            c(!0), p(!1);
-                                        });
+                                            (c(!0), p(!1));
+                                        }));
                             },
                             text: q.intl.string(q.t["+EgwQn"]),
                         }),

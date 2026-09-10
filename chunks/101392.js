@@ -14,7 +14,7 @@ function E(e, t, n) {
     if (((i = e), null != _[(r = t)][i.id] && (_[r][i.id].timer.stop(), delete _[r][i.id]), (0, l.F3)(e) || n <= 0))
         return;
     let o = n + Date.now();
-    (_[t][e.id] = { rateLimitPerUser: e.rateLimitPerUser, cooldownMs: n, cooldownEndTimestamp: o, timer: new a.Ep() }),
+    ((_[t][e.id] = { rateLimitPerUser: e.rateLimitPerUser, cooldownMs: n, cooldownEndTimestamp: o, timer: new a.Ep() }),
         _[t][e.id].timer.start(
             1e3,
             () => {
@@ -26,7 +26,7 @@ function E(e, t, n) {
                 });
             },
             !0,
-        );
+        ));
 }
 function A(e, t) {
     let n = d.A.getChannel(e);
@@ -80,7 +80,7 @@ let f = new I(s.h, {
     },
     LOGOUT: function () {
         [0, 1].forEach((e) => {
-            Object.keys(_[e]).forEach((t) => _[e][t].timer.stop()), (_[e] = {});
+            (Object.keys(_[e]).forEach((t) => _[e][t].timer.stop()), (_[e] = {}));
         });
     },
 });

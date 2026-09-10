@@ -50,4 +50,4 @@ function f(e) {
             return a.intl.string(a.t.EkDo1i);
     }
 }
-Object.freeze([]), Object.freeze([]);
+(Object.freeze([]), Object.freeze([]));

@@ -11,13 +11,13 @@ class u {
     _createElement;
     _cleanElement;
     constructor(e, t) {
-        (this._elements = []), (this._createElement = e), (this._cleanElement = t);
+        ((this._elements = []), (this._createElement = e), (this._cleanElement = t));
     }
     getElement() {
         return 0 === this._elements.length ? this._createElement() : this._elements.pop();
     }
     poolElement(e) {
-        this._cleanElement(e), this._elements.push(e);
+        (this._cleanElement(e), this._elements.push(e));
     }
     clearPool() {
         this._elements.length = 0;
@@ -74,11 +74,11 @@ class U extends s.PureComponent {
     constructor(e) {
         super(e);
         const { format: t, color: r, imagePool: n } = this.props;
-        (this.state = { color: null == r ? o().sample(D) : r, loaded: !1 }),
+        ((this.state = { color: null == r ? o().sample(D) : r, loaded: !1 }),
             M(t) ||
                 ((this._image = n.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
-                (this._image.src = e.src));
+                (this._image.src = e.src)));
     }
     componentDidMount() {
         let {
@@ -92,12 +92,12 @@ class U extends s.PureComponent {
         } = this;
         if (e !== c.TL.VIDEO || null == l) return;
         let i = s.getElement();
-        (i.oncanplay = this.handleCanPlay),
+        ((i.oncanplay = this.handleCanPlay),
             (i.src = t),
             (i.width = r),
             (i.height = n),
             l.appendChild(i),
-            (this._video = i);
+            (this._video = i));
     }
     componentDidUpdate(e) {
         let { width: t, height: r } = this.props.coords;
@@ -109,7 +109,7 @@ class U extends s.PureComponent {
         this._mounted = !1;
         let { _image: e, _video: t } = this,
             { imagePool: r, videoPool: n } = this.props;
-        null != e && ((this._image = null), r.poolElement(e)), null != t && ((this._video = null), n.poolElement(t));
+        (null != e && ((this._image = null), r.poolElement(e)), null != t && ((this._video = null), n.poolElement(t)));
     }
     handleCanPlay = () => {
         this._mounted && this.setState({ loaded: !0 });
@@ -178,14 +178,14 @@ class O extends s.PureComponent {
     state = { focusedId: null, footerHeight: 180 };
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === T.dD.FAVORITES && ((0, _.Qh)(T.dD.FAVORITES), (0, _.H9)(t, T.dD.FAVORITES, { limit: null })),
-            this.measureFooter();
+        (e === T.dD.FAVORITES && ((0, _.Qh)(T.dD.FAVORITES), (0, _.H9)(t, T.dD.FAVORITES, { limit: null })),
+            this.measureFooter());
     }
     componentDidUpdate() {
         this.measureFooter();
     }
     setFooterContent = (e) => {
-        (this._footerContent = e), this.measureFooter();
+        ((this._footerContent = e), this.measureFooter());
     };
     measureFooter = () => {
         let e = this._footerContent;
@@ -202,7 +202,7 @@ class O extends s.PureComponent {
     };
     selectItem(e, t) {
         let { onSelectGIF: r, resultType: n, data: s, resultQuery: l } = this.props;
-        null != r && r(e),
+        (null != r && r(e),
             (0, _.g4)({
                 type: n,
                 index: t,
@@ -212,13 +212,13 @@ class O extends s.PureComponent {
                 totalResults: this.props.searchTotalResults,
                 query: l,
                 gifId: e.id,
-            });
+            }));
     }
     handleSelect = (e) => {
         let t,
             { data: r } = this.props,
             n = r.findIndex((t) => P(t) === e);
-        -1 !== n && (t = r[n]), null != t && this.selectItem(t, n);
+        (-1 !== n && (t = r[n]), null != t && this.selectItem(t, n));
     };
     handleClickItem = (e, t) => {
         this.selectItem(e, t);
@@ -443,7 +443,7 @@ function V() {
                 new u(
                     () => t.createElement("img"),
                     (e) => {
-                        (e.onload = null), (e.src = "");
+                        ((e.onload = null), (e.src = ""));
                     },
                 ),
         ),
@@ -464,7 +464,7 @@ function V() {
                         );
                     },
                     (e) => {
-                        (e.src = ""), (e.oncanplay = null);
+                        ((e.src = ""), (e.oncanplay = null));
                         let { parentNode: t } = e;
                         null != t && t.removeChild(e);
                     },

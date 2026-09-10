@@ -1,4 +1,4 @@
-t.d(n, { YC: () => x, zH: () => V, DD: () => y, RD: () => k, xb: () => B, vh: () => b }), t(667532);
+(t.d(n, { YC: () => x, zH: () => V, DD: () => y, RD: () => k, xb: () => B, vh: () => b }), t(667532));
 var l = t(582128),
     i = t(91871),
     a = t.n(i),
@@ -18,13 +18,13 @@ var l = t(582128),
     R = t(174459),
     S = t(652215);
 async function I(e, n) {
-    await (0, A.TG)(
+    (await (0, A.TG)(
         e,
         (e) => ((e.guildRecentsDismissedAt = f.D.fromDate(new Date())), !0),
         A.Sb.INFREQUENT_USER_ACTION,
     ),
         C.h.dispatch({ type: "BULK_CLEAR_RECENTS", guildId: e, channelIds: n }),
-        R.default.track(S.HAw.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+        R.default.track(S.HAw.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" }));
 }
 var L = t(976860),
     N = t(734057),
@@ -57,7 +57,8 @@ function b(e, n, t, i) {
         return (
             t[S.rbe.GUILD_CATEGORY].forEach((t) => {
                 let { channel: l } = t;
-                "null" === l.id && (e.null = n.null.filter((e) => c(e, i))), (e[l.id] = n[l.id].filter((e) => c(e, i)));
+                ("null" === l.id && (e.null = n.null.filter((e) => c(e, i))),
+                    (e[l.id] = n[l.id].filter((e) => c(e, i))));
             }),
             (e._categories = n._categories.filter(
                 (n) => "null" === n.channel.id || 0 === i.length || e[n.channel.id].length > 0,
@@ -87,21 +88,25 @@ function B(e) {
 }
 function y(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    I(e, n),
+    (I(e, n),
         (0, s.Uq)(n.map((e) => ({ channelId: e, readStateType: G.P.CHANNEL, messageId: p.Ay.lastMessageId(e) }))),
-        null != t && (0, L.pX)(S.BVt.CHANNEL(e, t));
+        null != t && (0, L.pX)(S.BVt.CHANNEL(e, t)));
 }
 function V(e, n, t, l) {
     let i = (0, _.HX)(u.M.CHANNEL_BROWSER_NUX),
-        a = (0, o.cf)([N.A], () => {
-            let n = {},
-                t = N.A.getMutableGuildChannelsForGuild(e);
-            for (let e in t) {
-                let { parent_id: l } = t[e];
-                null != l && (n[l] = (n[l] ?? 0) + 1);
-            }
-            return n;
-        }, [e]),
+        a = (0, o.cf)(
+            [N.A],
+            () => {
+                let n = {},
+                    t = N.A.getMutableGuildChannelsForGuild(e);
+                for (let e in t) {
+                    let { parent_id: l } = t[e];
+                    null != l && (n[l] = (n[l] ?? 0) + 1);
+                }
+                return n;
+            },
+            [e],
+        ),
         r = n._categories.map((e) => {
             let l = n[e.channel.id];
             return {
@@ -109,7 +114,7 @@ function V(e, n, t, l) {
                 rowHeight: 0 === l.length ? 0 : t,
             };
         });
-    return i || null == l || r.unshift({ rowCount: 1, rowHeight: l }), r;
+    return (i || null == l || r.unshift({ rowCount: 1, rowHeight: l }), r);
 }
 function k(e) {
     let n = (0, o.bG)([D.A], () => D.A.getCategories(e)),

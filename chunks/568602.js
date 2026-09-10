@@ -19,7 +19,7 @@ class o extends a.Component {
         t ? this.startShaking() : this.stopShaking();
     }
     startShaking() {
-        (this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate));
+        ((this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate)));
     }
     stopShaking() {
         null != this.animationFrame && cancelAnimationFrame(this.animationFrame);
@@ -35,7 +35,8 @@ class o extends a.Component {
                 s = r().random(-t, t, !0);
             e.style.transform = h.Ay.useReducedMotion ? "" : `translate3d(${i}px,${s}px,0px)`;
         }
-        (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
+        ((this.shouldRenderFrame = !this.shouldRenderFrame),
+            (this.animationFrame = requestAnimationFrame(this.animate)));
     };
     render() {
         let { className: t, children: i } = this.props;

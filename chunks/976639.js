@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(938796);
+(n.d(t, { A: () => m }), n(938796));
 var i = n(477900);
 n(582128);
 var r = n(665260),
@@ -67,8 +67,8 @@ class T extends s.A {
         let { guildId: t, channelId: n, message: i } = e;
         if (null == t || null == n || i.author?.id !== o.default.getId()) return;
         let r = d.A.getChannel(n);
-        r?.isForumPost() && r?.parent_id != null && this._completeChatAction(t, r.parent_id),
-            this._completeChatAction(t, n);
+        (r?.isForumPost() && r?.parent_id != null && this._completeChatAction(t, r.parent_id),
+            this._completeChatAction(t, n));
     };
     handleThreadCreate = (e) => {
         let { channel: t, isNewlyCreated: n } = e;

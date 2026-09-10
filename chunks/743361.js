@@ -103,10 +103,10 @@ let S = [
                         l.A.sendBotMessage(n.id, m.intl.string(m.t["YOsuT/"]));
                     }
             }
-            n.isManaged() &&
+            (n.isManaged() &&
                 ((r = m.intl.formatToPlainString(m.t.hVGjEW, { name: i })),
                 (o = m.intl.format(m.t.IK1Qvs, { name: i }))),
-                (0, a.A)({ title: r, subtitle: o, confirmText: m.intl.string(m.t["26C4oi"]), onConfirm: u });
+                (0, a.A)({ title: r, subtitle: o, confirmText: m.intl.string(m.t["26C4oi"]), onConfirm: u }));
         },
     },
     {

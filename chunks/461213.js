@@ -1,4 +1,4 @@
-n.d(t, { A: () => V }), n(321073), n(938796);
+(n.d(t, { A: () => B }), n(321073), n(938796));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -73,21 +73,21 @@ function x() {
     let n = m.A.getRemoteActivities();
     v !== n && ((v = n), (e = !0));
     let i = m.A.getHiddenActivities();
-    b !== i && (b = i),
+    (b !== i && (b = i),
         e &&
             (P = U(
                 (M = s()([...R, ...v.filter((e) => e.type !== g.$pd.CUSTOM_STATUS)].sort(T.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
-            ));
+            )));
 }
 function k() {
-    (D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, M);
+    ((D = !1), (C = g.clD.UNKNOWN), x(), T.A.setCurrentUserOnConnectionOpen(N, M));
 }
 class F extends o.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        this.waitFor(h.A, I.A, f.A, p.A, T.A, m.A, u.A, E.A), this.syncWith([p.A], x);
+        (this.waitFor(h.A, I.A, f.A, p.A, T.A, m.A, u.A, E.A), this.syncWith([p.A], x));
     }
     getLocalPresence() {
         return { status: N, since: O, activities: L, afk: y };
@@ -119,7 +119,7 @@ class F extends o.Ay.Store {
         return this.getActivities(t).find(e);
     }
 }
-let V = new F(d.h, {
+let B = new F(d.h, {
     START_SESSION: x,
     CONNECTION_OPEN: function () {
         k();
@@ -141,16 +141,16 @@ let V = new F(d.h, {
     LIBRARY_FETCH_SUCCESS: x,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
     LOGOUT: function () {
-        (D = !0), (C = N), x();
+        ((D = !0), (C = N), x());
     },
     FORCE_INVISIBLE: function (e) {
-        return (S = e.invisible), x();
+        return ((S = e.invisible), x());
     },
     WINDOW_FOCUS: function () {
-        return (S = !1), x();
+        return ((S = !1), x());
     },
     APP_STATE_UPDATE: function (e) {
         if (e.state !== g.g6G.ACTIVE || !S) return !1;
-        (S = !1), x();
+        ((S = !1), x());
     },
 });

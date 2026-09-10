@@ -1,4 +1,4 @@
-n.d(t, { Y: () => d }), n(667532);
+(n.d(t, { Y: () => d }), n(667532));
 var l = n(582128),
     i = n(702841),
     s = n(576705),
@@ -16,7 +16,7 @@ function d(e, t) {
         if ((o.Ay.canUseSoundboardEverywhere(n) || !t) && m) {
             let e = "" !== d,
                 t = e ? h.filter((e) => e !== d) : h;
-            return e && t.unshift(d), t;
+            return (e && t.unshift(d), t);
         }
         return [d];
     }, [n, t, d, h, m]);

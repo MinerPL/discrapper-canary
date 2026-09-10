@@ -14,7 +14,7 @@ class d {
     isGift;
     isFree;
     constructor({ isGift: e, isFree: t }) {
-        (this.isGift = e), (this.isFree = t);
+        ((this.isGift = e), (this.isFree = t));
     }
     resolveDisabledPurchase(e, t) {
         let { isSelectedPaymentSourceDisabled: n, purchasePreviewError: l, invoicePreview: i } = t;

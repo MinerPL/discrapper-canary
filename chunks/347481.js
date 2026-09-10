@@ -15,7 +15,7 @@ function E(e, t, n) {
 }
 function A(e, t) {
     let n = c[e];
-    null != n && n.forEach((e) => delete u[e.id]), (c[e] = t), t.forEach((e) => (u[e.id] = e));
+    (null != n && n.forEach((e) => delete u[e.id]), (c[e] = t), t.forEach((e) => (u[e.id] = e)));
 }
 class h extends a.Ay.Store {
     static displayName = "CertifiedDeviceStore";
@@ -23,10 +23,10 @@ class h extends a.Ay.Store {
         let e = s.w.get(d);
         null != e &&
             r().forEach(e, (e, t) => {
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1);
                 }),
-                    A(t, e);
+                    A(t, e));
             });
     }
     isCertified(e) {
@@ -67,6 +67,6 @@ class h extends a.Ay.Store {
 let I = new h(l.h, {
     CERTIFIED_DEVICES_SET: function (e) {
         let { applicationId: t, devices: n } = e;
-        A(t, n), s.w.set(d, c), _++;
+        (A(t, n), s.w.set(d, c), _++);
     },
 });

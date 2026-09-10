@@ -45,7 +45,7 @@ var n = t(477900),
     $ = t(427262),
     z = t(871123),
     X = t(375708);
-X.intl.string(X.t["7lZ31J"]), X.intl.string(X.t.pWG4ze), X.intl.string(X.t.SK5rmi), X.intl.string(X.t.BCi1gT);
+(X.intl.string(X.t["7lZ31J"]), X.intl.string(X.t.pWG4ze), X.intl.string(X.t.SK5rmi), X.intl.string(X.t.BCi1gT));
 var Y = t(652215),
     J = t(518477),
     K = t(951786);
@@ -98,7 +98,7 @@ function ii(i) {
         } = i,
         d = (0, g.bG)([Q.Ay, U.A], () => U.A.getChannel(Q.Ay.getChannelId())),
         u = s.useCallback(() => {
-            r?.(), (0, C.closeAllModals)();
+            (r?.(), (0, C.closeAllModals)());
         }, [r]);
     return (0, n.jsx)("ul", {
         className: S()(K.Md, K.e6),
@@ -203,7 +203,7 @@ function ie(i) {
                         let { sku: e } = i;
                         return e.id;
                     });
-                    V.default.track(Y.HAw.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED, {
+                    (V.default.track(Y.HAw.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED, {
                         gift_recipient_id: e.id,
                         sku_ids: i,
                         location_stack: u,
@@ -216,7 +216,7 @@ function ie(i) {
                             ),
                         ),
                     }),
-                        R(!0);
+                        R(!0));
                 }
             },
             [j, r, e.id, u],
@@ -373,7 +373,7 @@ function ic(i) {
         I = (0, o.t4)((i) => i.checkoutPriceOptions),
         x = s.useCallback(
             (i) => {
-                (0, u.A)({
+                ((0, u.A)({
                     isGift: !0,
                     giftRecipient: e,
                     subscriptionTier: i,
@@ -389,7 +389,7 @@ function ic(i) {
                     giftMessage: p,
                     ...(0, h.Dv)(i, !0, "gift_option_select_modal_content"),
                 }),
-                    t();
+                    t());
             },
             [e, d, m, g, p, t],
         );

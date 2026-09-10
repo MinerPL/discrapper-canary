@@ -73,19 +73,19 @@ let G = function (e) {
                 u = l.useCallback(async (e) => {
                     let a = b.A.methodsV2;
                     if (!e && null != a) {
-                        t(a), s(b.A.methodsV2FooterMessage), r(b.A.methodsV2OutageBannerMessage), c(!1), d(!1);
+                        (t(a), s(b.A.methodsV2FooterMessage), r(b.A.methodsV2OutageBannerMessage), c(!1), d(!1));
                         return;
                     }
-                    c(!0), d(!1);
+                    (c(!0), d(!1));
                     try {
                         let e = (0, N.qn)() ? await (0, y.j)() : await (0, y.J)();
-                        T.h.dispatch({
+                        (T.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
                             outageBannerMessage: e.outageBannerMessage,
                         }),
-                            h.current && (t(e.methods), s(e.footerMessage), r(e.outageBannerMessage));
+                            h.current && (t(e.methods), s(e.footerMessage), r(e.outageBannerMessage)));
                     } catch {
                         h.current && d(!0);
                     } finally {
@@ -118,7 +118,7 @@ let G = function (e) {
         $ = (0, S.Z)(z),
         q = $.length > 0,
         K = l.useCallback(() => {
-            D?.(), H();
+            (D?.(), H());
         }, [D, H]),
         { initiateAgeVerificationV2: Q } = (0, R.Ny)({ onComplete: K, entryPoint: G, onMethodUnavailable: Y }),
         ee = l.useRef(!1),
@@ -136,11 +136,11 @@ let G = function (e) {
     let er = l.useCallback(
         async (e, t) => {
             if (!ee.current) {
-                (0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.METHOD_SELECT, e.method), (ee.current = !0), ea(t);
+                ((0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.METHOD_SELECT, e.method), (ee.current = !0), ea(t));
                 try {
                     await Q(e);
                 } finally {
-                    (ee.current = !1), ea(null);
+                    ((ee.current = !1), ea(null));
                 }
             }
         },
@@ -160,13 +160,13 @@ let G = function (e) {
         subtitle: (0, R.mK)(
             G,
             () => {
-                j.A.openUrl(_.A.getArticleURL(B.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                    (0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.LEARN_MORE);
+                (j.A.openUrl(_.A.getArticleURL(B.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.LEARN_MORE));
             },
             void 0,
             en
                 ? () => {
-                      j.A.openUrl(k.zS), (0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.TRUSTED_PROVIDERS);
+                      (j.A.openUrl(k.zS), (0, w.St)(el, w.WU.EXPRESSIVE_V2, w._7.TRUSTED_PROVIDERS));
                   }
                 : void 0,
             !0,

@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(321073);
+(n.d(t, { A: () => d }), n(321073));
 var i = n(17928),
     r = n(228366);
 let a = [],
@@ -8,7 +8,7 @@ class o extends i.Ay.PersistedStore {
     static displayName = "SecureFramesPersistedStore";
     static persistKey = "SecureFramesPersistedStore";
     initialize(e) {
-        (s = e?.persistentCodesEnabled ?? !1), (l = e?.uploadedKeyVersions ?? a);
+        ((s = e?.persistentCodesEnabled ?? !1), (l = e?.uploadedKeyVersions ?? a));
     }
     getState() {
         return { persistentCodesEnabled: s, uploadedKeyVersions: l };
@@ -30,7 +30,7 @@ let d = new o(r.h, {
             if (n === e.keyVersion) return;
             t.push(n);
         }
-        t.push(e.keyVersion), (l = t);
+        (t.push(e.keyVersion), (l = t));
     },
     SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function () {
         l = a;

@@ -1,4 +1,4 @@
-t.r(s), t.d(s, { default: () => L }), t(323874), t(14289), t(35956);
+(t.r(s), t.d(s, { default: () => L }), t(323874), t(14289), t(35956));
 var a = t(477900),
     l = t(582128),
     i = t(607399),
@@ -47,9 +47,9 @@ function L(e) {
                 });
             else if (t === p.fAW.OPEN_FAIL) {
                 let e = new URLSearchParams();
-                e.set(N.L1.TAB, N.NC.PREVIEW_TOOL),
+                (e.set(N.L1.TAB, N.NC.PREVIEW_TOOL),
                     e.set(N.L1.QUEST_ID, i),
-                    (0, g.bG)({ pathname: p.BVt.QUEST_HOME, search: `?${e.toString()}` });
+                    (0, g.bG)({ pathname: p.BVt.QUEST_HOME, search: `?${e.toString()}` }));
             }
         }
     }, [t, i]);

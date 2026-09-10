@@ -17,7 +17,7 @@ function a(i) {
         return i.past ? t(i.past, n) : t(i.regular, n) + " \u043D\u0430\u0437\u0430\u0434";
     };
 }
-e.r(n), e.d(n, { default: () => f });
+(e.r(n), e.d(n, { default: () => f }));
 var r = {
         lessThanXSeconds: a({
             regular: {

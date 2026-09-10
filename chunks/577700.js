@@ -1,4 +1,4 @@
-n.d(t, { $: () => c, E: () => d }), n(321073);
+(n.d(t, { $: () => c, E: () => d }), n(321073));
 var i = n(636537),
     r = n(228366),
     a = n(174459),
@@ -45,7 +45,7 @@ async function d(e, t) {
                       r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: e, index: t.body })),
             (n) => {
                 if (t.signal.aborted) {
-                    u.push(1001), A({ error: !0 });
+                    (u.push(1001), A({ error: !0 }));
                     return;
                 }
                 return 429 === n.status

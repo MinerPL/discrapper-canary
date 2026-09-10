@@ -104,14 +104,14 @@ function F(e) {
                 return null != n && Date.now() - n.cachedAt < 36e5 ? n : null;
             })),
             { count: l?.count, isLoading: l?.isFinished === !1 });
-    i.useEffect(() => {
+    (i.useEffect(() => {
         function e(e) {
             var t, l;
             if (e.guildId !== C.id || !e.prune.isPreview) return;
             let n = e.prune.days,
                 i = e.prune.includeRoles,
                 s = Number(e.prune.pruneCount);
-            (t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l);
+            ((t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l));
         }
         return (
             N.h.subscribe("GUILD_PRUNE_UPDATE", e),
@@ -122,20 +122,24 @@ function F(e) {
     }, [C.id, r, o]),
         i.useEffect(() => {
             null == u && y.updateEstimateV2(C.id, r, o);
-        }, [C.id, r, o, u]);
+        }, [C.id, r, o, u]));
     let H = i.useCallback(() => {
-            y.prune(C.id, r, o), a(), T.getState().clear();
+            (y.prune(C.id, r, o), a(), T.getState().clear());
         }, [C.id, r, o, a]),
-        x = (0, L.yK)([g.A, w.A], () => {
-            let e = g.A.getHighestRole(C);
-            return M()(w.A.getSortedRoles(C.id))
-                .filter((t) => !(0, _.Oy)(t) && g.A.isRoleHigher(C, e, t))
-                .map((e) => {
-                    let { id: t, name: l } = e;
-                    return { id: t, label: l, value: t };
-                })
-                .value();
-        }, [C]);
+        x = (0, L.yK)(
+            [g.A, w.A],
+            () => {
+                let e = g.A.getHighestRole(C);
+                return M()(w.A.getSortedRoles(C.id))
+                    .filter((t) => !(0, _.Oy)(t) && g.A.isRoleHigher(C, e, t))
+                    .map((e) => {
+                        let { id: t, name: l } = e;
+                        return { id: t, label: l, value: t };
+                    })
+                    .value();
+            },
+            [C],
+        );
     return (0, n.jsx)(b.Modal, {
         title: `${k.intl.string(k.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
         actions: [
@@ -211,19 +215,19 @@ let q = i.forwardRef(function (e, t) {
         E = i.useCallback(
             (e) => {
                 let t = e.trim();
-                t.length > 0 && b(), (0, V.Ld)(l.id, { query: t });
+                (t.length > 0 && b(), (0, V.Ld)(l.id, { query: t }));
             },
             [l.id, b],
         ),
         S = i.useMemo(() => s()(E, 300), [E]),
         N = i.useCallback(
             (e) => {
-                R(e), S(e);
+                (R(e), S(e));
             },
             [S],
         ),
         Z = i.useCallback(() => {
-            R(""), E("");
+            (R(""), E(""));
         }, [E]);
     return (
         i.useImperativeHandle(t, () => ({

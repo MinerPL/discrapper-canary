@@ -1,7 +1,7 @@
 n.d(t, { DH: () => E, lj: () => u, AU: () => _, xb: () => A });
 var i = n(319060),
     r = n(155718);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var a = n(776231),
     s = n(486020),
     l = n(652215);
@@ -35,5 +35,5 @@ function A(e) {
             })(e.url);
             if (null != n) return { type: l.geh.YOUTUBE_VIDEO, youtubeVideoId: n };
     }
-    return console.warn("Unsupported carousel item", e), null;
+    return (console.warn("Unsupported carousel item", e), null);
 }

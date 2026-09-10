@@ -47,7 +47,7 @@ function m(e) {
                     leadingAccessory: { type: "icon", icon: c.CircleInformationIcon },
                     label: _.intl.string(_.t["2ia+9V"]),
                     action: function () {
-                        n(), (0, p._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 });
+                        (n(), (0, p._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 }));
                     },
                 }),
                 D &&
@@ -79,7 +79,7 @@ function m(e) {
                         leadingAccessory: { type: "icon", icon: r.EyeSlashIcon },
                         label: _.intl.string(_.t.xSWJPo),
                         action: function () {
-                            m(i.badge_id),
+                            (m(i.badge_id),
                                 (0, h.RC)({
                                     badgeId: i.badge_id,
                                     hidden: !0,
@@ -89,7 +89,7 @@ function m(e) {
                                         return i;
                                     }),
                                     canReorder: B,
-                                });
+                                }));
                         },
                     }),
             ],

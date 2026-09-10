@@ -47,10 +47,10 @@ class v {
         let t = this.zones.get(e);
         null != t && this.resizeObserver.unobserve(t.element);
         let n = e.getBoundingClientRect();
-        this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, u.A)(), n) }),
+        (this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, u.A)(), n) }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
-            this.updateZones();
+            this.updateZones());
     }
     unobserve(e) {
         null != this.zones.get(e) &&
@@ -93,12 +93,12 @@ class v {
             );
     }
     cleanUp() {
-        this.globalUpdate.cancel(),
+        (this.globalUpdate.cancel(),
             this.zones.clear(),
             this.elements.clear(),
             this.resizeObserver?.disconnect(),
             this.mutationObserver?.disconnect(),
-            this.updateZones();
+            this.updateZones());
     }
 }
 let _ = r.createContext(new v((0, b.b)()));
@@ -114,7 +114,7 @@ function O(e) {
                     null != e && (t ? o.observe(e) : o.unobserve(e));
                 },
                 refHandler(t) {
-                    null != e && o.unobserve(e), (e = t);
+                    (null != e && o.unobserve(e), (e = t));
                 },
             };
         });

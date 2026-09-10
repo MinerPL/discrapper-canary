@@ -22,10 +22,10 @@ function p(e) {
         C = v;
     if (null != b) n = t = b.url;
     else
-        for (; (0, r.vq)(C); )
-            (0, r.vq)(C, HTMLImageElement) && null != C.src && (n = C.src),
+        for (; (0, r.vq)(C);)
+            ((0, r.vq)(C, HTMLImageElement) && null != C.src && (n = C.src),
                 (0, r.vq)(C, HTMLAnchorElement) && null != C.href && ((t = C.href), (p = C.textContent)),
-                (C = C.parentNode);
+                (C = C.parentNode));
     let X = document.getSelection()?.toString(),
         w = (0, c.A)(X),
         _ = (0, o.A)(X),

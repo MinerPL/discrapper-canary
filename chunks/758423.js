@@ -56,7 +56,7 @@ function f(e, t, n, c) {
                 (0, u.E)().then((l) => {
                     if (!t && null != e.current && !p.current) {
                         if (!l.isSupported()) return void h(!0);
-                        (r = new l({
+                        ((r = new l({
                             backBufferLength: s.OJ,
                             maxBufferLength: s.Bu,
                             startPosition: n,
@@ -67,7 +67,7 @@ function f(e, t, n, c) {
                             r.attachMedia(e.current),
                             (S.current = r),
                             v(r),
-                            (p.current = !0);
+                            (p.current = !0));
                     }
                 }),
                 () => {

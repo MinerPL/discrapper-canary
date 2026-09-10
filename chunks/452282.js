@@ -23,12 +23,12 @@ class m extends r.Component {
         let { align: t, animate: n, currentIndex: i, items: r, width: l } = this.props,
             a = c(i, r.length),
             o = c(e.currentIndex, r.length);
-        (a !== o || r.length !== e.items.length) && this.updateAnimatedIndex(a, o),
+        ((a !== o || r.length !== e.items.length) && this.updateAnimatedIndex(a, o),
             l !== e.width
                 ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
                 : n &&
                   (t !== e.align || a !== o) &&
-                  s.A.spring(this.animatedAlignmentOffset, { ...d, toValue: this.getAlignmentOffset(t) }).start();
+                  s.A.spring(this.animatedAlignmentOffset, { ...d, toValue: this.getAlignmentOffset(t) }).start());
     }
     getAlignmentOffset(e) {
         let { width: t, itemSize: n, currentIndex: i, gutter: r, items: l } = this.props,
@@ -50,11 +50,11 @@ class m extends r.Component {
     animateToIndex(e, t) {
         let { animatedIndex: n } = this,
             { items: i, edgeItems: r } = this.props;
-        r > 0 &&
+        (r > 0 &&
             (0 === e && t === i.length - 1
                 ? n.setValue(-1)
                 : 0 === t && e === i.length - 1 && i.length > 2 && n.setValue(i.length)),
-            s.A.spring(n, { ...d, toValue: e }).start();
+            s.A.spring(n, { ...d, toValue: e }).start());
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: n, animatedOpacity: i } = this,
@@ -62,7 +62,7 @@ class m extends r.Component {
         r
             ? this.animateToIndex(e, t)
             : s.A.timing(i, { fromValue: 1, toValue: 0, duration: 100 }).start(() => {
-                  n.setValue(e), s.A.timing(i, { fromValue: 0, toValue: 1, duration: 100 }).start();
+                  (n.setValue(e), s.A.timing(i, { fromValue: 0, toValue: 1, duration: 100 }).start());
               });
     }
     renderSingleItem() {

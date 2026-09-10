@@ -26,15 +26,15 @@ function o(e) {
         e.document.hasFocus() || (0, i.XC)(e, !1);
     }),
     e.addEventListener("unload", function () {
-        (0, i.GP)(e), (0, r.$v)(o, e.document.body), (0, r.JE)(n, e.document.body);
+        ((0, i.GP)(e), (0, r.$v)(o, e.document.body), (0, r.JE)(n, e.document.body));
     }),
     e.addEventListener("visibilitychange", function () {
         (0, i.t2)(e);
     }),
     l.NC))
-        t.addEventListener(a, d, !0), t.addEventListener(a, c, !1);
-    (0, a.a3)(t, function () {
+        (t.addEventListener(a, d, !0), t.addEventListener(a, c, !1));
+    ((0, a.a3)(t, function () {
         (0, i._c)(e);
     }),
-        (0, i.Ts)(e);
+        (0, i.Ts)(e));
 }

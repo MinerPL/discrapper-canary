@@ -103,12 +103,12 @@ let em = 72,
             b = (0, T.Ay)(g),
             { ref: y, height: M } = (0, S.Ay)(),
             _ = (0, es.kU)((e) => e.setCardHeight, u.x);
-        l.useEffect(() => {
+        (l.useEffect(() => {
             null != M && _(t, M);
         }, [M, _, t]),
             l.useEffect(() => {
                 a?.(y.current, t);
-            }, [y, a, t]);
+            }, [y, a, t]));
         let k = l.useRef(null),
             { handleLeftClick: L, handleRightClick: P } = (0, er.A)({ facepileRef: k, goToThread: n, channel: g }),
             { role: E, onFocus: I, ...w } = (0, h.rm)(t),
@@ -473,11 +473,11 @@ function eS(e) {
         children: (0, s.jsxs)("div", {
             className: eu.pV,
             onClick: function (e) {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     i &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        L.A.showAgeVerificationGetStartedModal({ entryPoint: P.q1.FORUM_POST_MEDIA_PREVIEW }));
+                        L.A.showAgeVerificationGetStartedModal({ entryPoint: P.q1.FORUM_POST_MEDIA_PREVIEW })));
             },
             children: [
                 (0, s.jsx)(eM, { firstMedia: n, shouldObscure: l, obscureReason: a, shouldShowAgeVerification: i }),

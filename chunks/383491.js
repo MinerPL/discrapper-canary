@@ -14,12 +14,12 @@ function s(e) {
                 let n = `react-aria-description-${o++}`;
                 r(n);
                 let i = document.createElement("div");
-                (i.id = n),
+                ((i.id = n),
                     (i.style.display = "none"),
                     (i.textContent = e),
                     document.body.appendChild(i),
                     (t = { refCount: 0, element: i }),
-                    a.set(e, t);
+                    a.set(e, t));
             }
             return (
                 t.refCount++,

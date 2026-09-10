@@ -184,7 +184,7 @@ function h(n) {
                 });
                 f = b;
                 let L = g;
-                return null != h && (L = h(L, t)), L;
+                return (null != h && (L = h(L, t)), L);
             });
         return { hasSpoilerEmbeds: f, hasBailedAst: A, content: g };
     })(e.formatInline ? o.A.parseInlineReply : o.A.parse, n, e);

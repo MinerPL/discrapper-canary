@@ -35,7 +35,7 @@ function g(a) {
                 try {
                     t = await d.A.completeTwoWayLink(e, n, s, l);
                 } catch (a) {
-                    j.error(`${e} link error:`, a), (r = a.body?.code);
+                    (j.error(`${e} link error:`, a), (r = a.body?.code));
                 }
                 null != t ? g() : C(r);
             },
@@ -57,7 +57,7 @@ function g(a) {
             isTwoWayLinkDiscordConsent: !0,
         }),
         R = n.useCallback(() => {
-            l()(null != L, "sendAuthorize not available"), k(!0), L(!0);
+            (l()(null != L, "sendAuthorize not available"), k(!0), L(!0));
         }, [L]);
     return (0, r.jsxs)(N.A, {
         children: [

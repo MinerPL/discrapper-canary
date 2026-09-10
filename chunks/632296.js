@@ -4,24 +4,24 @@ var n =
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var i = Object.getOwnPropertyDescriptor(t, r);
-                  (!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
+                  ((!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
                       (i = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, i);
+                      Object.defineProperty(e, n, i));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__exportStar) ||
         function (e, t) {
             for (var r in e) "default" === r || Object.prototype.hasOwnProperty.call(t, r) || n(t, e, r);
         };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.makeMessagesProxy =
         t.chainMessagesObjects =
         t.MessageLoader =
@@ -36,7 +36,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.FormatBuilder =
         t.dataFormatterCache =
         t.makeDataFormatters =
-            void 0);
+            void 0));
 var o = r(624067);
 Object.defineProperty(t, "makeDataFormatters", {
     enumerable: !0,
@@ -52,7 +52,7 @@ Object.defineProperty(t, "dataFormatterCache", {
     },
 });
 var s = r(668317);
-Object.defineProperty(t, "FormatBuilder", {
+(Object.defineProperty(t, "FormatBuilder", {
     enumerable: !0,
     get: function () {
         return s.FormatBuilder;
@@ -64,7 +64,7 @@ Object.defineProperty(t, "FormatBuilder", {
             return s.bindFormatValues;
         },
     }),
-    i(r(597878), t);
+    i(r(597878), t));
 var l = r(446274);
 Object.defineProperty(t, "runtimeHashMessageKey", {
     enumerable: !0,
@@ -73,7 +73,7 @@ Object.defineProperty(t, "runtimeHashMessageKey", {
     },
 });
 var u = r(835751);
-Object.defineProperty(t, "IntlManager", {
+(Object.defineProperty(t, "IntlManager", {
     enumerable: !0,
     get: function () {
         return u.IntlManager;
@@ -84,7 +84,7 @@ Object.defineProperty(t, "IntlManager", {
         get: function () {
             return u.DEFAULT_LOCALE;
         },
-    });
+    }));
 var c = r(522267);
 Object.defineProperty(t, "InternalIntlMessage", {
     enumerable: !0,
@@ -93,7 +93,7 @@ Object.defineProperty(t, "InternalIntlMessage", {
     },
 });
 var f = r(239127);
-Object.defineProperty(t, "createLoader", {
+(Object.defineProperty(t, "createLoader", {
     enumerable: !0,
     get: function () {
         return f.createLoader;
@@ -116,9 +116,9 @@ Object.defineProperty(t, "createLoader", {
         get: function () {
             return f.MessageLoader;
         },
-    });
+    }));
 var d = r(221108);
-Object.defineProperty(t, "chainMessagesObjects", {
+(Object.defineProperty(t, "chainMessagesObjects", {
     enumerable: !0,
     get: function () {
         return d.chainMessagesObjects;
@@ -129,4 +129,4 @@ Object.defineProperty(t, "chainMessagesObjects", {
         get: function () {
             return d.makeMessagesProxy;
         },
-    });
+    }));

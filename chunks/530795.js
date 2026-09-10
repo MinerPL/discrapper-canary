@@ -27,13 +27,13 @@ function v(e, t) {
                 r,
                 i = {},
                 a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+            for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
@@ -86,14 +86,14 @@ var y = new WeakMap(),
             (!o || !u);
         ) {
             if (a >= r.length) {
-                (o = !0), (a = t - 1), (n = "backward");
+                ((o = !0), (a = t - 1), (n = "backward"));
                 continue;
             }
             if (a < 0) {
-                (u = !0), (a = t + 1), (n = "forward");
+                ((u = !0), (a = t + 1), (n = "forward"));
                 continue;
             }
-            (i = r[a]), (t = a), (a += "forward" === n ? 1 : -1);
+            ((i = r[a]), (t = a), (a += "forward" === n ? 1 : -1));
         }
         return [i, t];
     },
@@ -159,17 +159,17 @@ var y = new WeakMap(),
         },
         findKey(e, t) {
             var n = B.get(t);
-            return n || ((n = new g()), B.set(t, n)), n;
+            return (n || ((n = new g()), B.set(t, n)), n);
         },
         findPath(e, t) {
-            for (var n = [], r = t; ; ) {
+            for (var n = [], r = t; ;) {
                 var i = b.get(r);
                 if (null == i)
                     if (c.KE.isEditor(r)) return n;
                     else break;
                 var a = y.get(r);
                 if (null == a) break;
-                n.unshift(a), (r = i);
+                (n.unshift(a), (r = i));
             }
             throw Error("Unable to find the path for Slate node: ".concat(c.h6.stringify(t)));
         },
@@ -183,17 +183,17 @@ var y = new WeakMap(),
         blur(e) {
             var t = em.toDOMNode(e, e),
                 n = em.findDocumentOrShadowRoot(e);
-            T.set(e, !1), n.activeElement === t && t.blur();
+            (T.set(e, !1), n.activeElement === t && t.blur());
         },
         focus(e) {
             var t = em.toDOMNode(e, e),
                 n = em.findDocumentOrShadowRoot(e);
-            T.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 });
+            (T.set(e, !0), n.activeElement !== t && t.focus({ preventScroll: !0 }));
         },
         deselect(e) {
             var { selection: t } = e,
                 n = em.findDocumentOrShadowRoot(e).getSelection();
-            n && n.rangeCount > 0 && n.removeAllRanges(), t && c.gB.deselect(e);
+            (n && n.rangeCount > 0 && n.removeAllRanges(), t && c.gB.deselect(e));
         },
         hasDOMNode(e, t) {
             var n,
@@ -271,7 +271,7 @@ var y = new WeakMap(),
                 [d, f] = i ? a : o,
                 h = !!(W(s) ? s : s.parentElement).getAttribute("data-slate-zero-width"),
                 p = !!(W(d) ? d : d.parentElement).getAttribute("data-slate-zero-width");
-            return u.setStart(s, h ? 1 : l), u.setEnd(d, p ? 1 : f), u;
+            return (u.setStart(s, h ? 1 : l), u.setEnd(d, p ? 1 : f), u);
         },
         toSlateNode(e, t) {
             var n = W(t) ? t : t.parentElement;
@@ -337,9 +337,9 @@ var y = new WeakMap(),
                 if (v) {
                     if ((s = v.closest('[data-slate-node="text"]'))) {
                         var g = em.getWindow(e).document.createRange();
-                        g.setStart(s, 0), g.setEnd(a, o);
+                        (g.setStart(s, 0), g.setEnd(a, o));
                         var y = g.cloneContents();
-                        [
+                        ([
                             ...Array.prototype.slice.call(y.querySelectorAll("[data-slate-zero-width]")),
                             ...Array.prototype.slice.call(y.querySelectorAll("[contenteditable=false]")),
                         ].forEach((e) => {
@@ -356,7 +356,7 @@ var y = new WeakMap(),
                             e.parentNode.removeChild(e);
                         }),
                             (l = y.textContent.length),
-                            (_ = s);
+                            (_ = s));
                     }
                 } else if (m) {
                     for (var b = m.querySelectorAll("[data-slate-leaf]"), D = 0; D < b.length; D++) {
@@ -389,7 +389,7 @@ var y = new WeakMap(),
                 if (E && em.hasDOMNode(e, E, { editable: !0 })) {
                     var C = em.toSlateNode(e, E),
                         { path: A, offset: B } = c.KE.start(e, em.findPath(e, C));
-                    return E.querySelector("[data-slate-leaf]") || (B = o), { path: A, offset: B };
+                    return (E.querySelector("[data-slate-leaf]") || (B = o), { path: A, offset: B });
                 }
             }
             if (!s) {
@@ -417,7 +417,7 @@ var y = new WeakMap(),
                           (u =
                               eu &&
                               ((e) => {
-                                  for (var t = e && e.parentNode; t; ) {
+                                  for (var t = e && e.parentNode; t;) {
                                       if ("[object ShadowRoot]" === t.toString()) return !0;
                                       t = t.parentNode;
                                   }
@@ -443,7 +443,7 @@ var y = new WeakMap(),
             if (ei && !u && r !== a) {
                 var p = c.KE.isEnd(e, f, f.path),
                     m = c.KE.isStart(e, h, h.path);
-                p && (f = c.KE.after(e, f) || f), m && (h = c.KE.before(e, h) || h);
+                (p && (f = c.KE.after(e, f) || f), m && (h = c.KE.before(e, h) || h));
             }
             var v = { anchor: f, focus: h };
             return (
@@ -550,7 +550,7 @@ var y = new WeakMap(),
                 s = (0, l.useRef)(null),
                 d = eA(),
                 c = (0, l.useRef)(null);
-            (0, l.useEffect)(
+            ((0, l.useEffect)(
                 () => () => {
                     c.current && c.current.disconnect();
                 },
@@ -579,7 +579,7 @@ var y = new WeakMap(),
                             E.delete(d);
                         }
                     );
-                }, [s, t]);
+                }, [s, t]));
             var h = l.createElement(eb, { isLast: n, leaf: t, parent: i, text: r });
             if (t[j]) {
                 var p = {
@@ -646,10 +646,10 @@ var y = new WeakMap(),
             var v = (0, l.useCallback)(
                 (e) => {
                     var t = k.get(u);
-                    e
+                    (e
                         ? (null == t || t.set(f, e), A.set(o, e), C.set(e, o))
                         : (null == t || t.delete(f), A.delete(o), s.current && C.delete(s.current)),
-                        (s.current = e);
+                        (s.current = e));
                 },
                 [s, u, f, o],
             );
@@ -710,9 +710,9 @@ var y = new WeakMap(),
                 "rtl" === g && (v.dir = g);
             }
             if (c.KE.isVoid(s, n)) {
-                (v["data-slate-void"] = !0), !d && f && (v.contentEditable = !1);
+                ((v["data-slate-void"] = !0), !d && f && (v.contentEditable = !1));
                 var [[D]] = c.bP.texts(n);
-                (m = l.createElement(
+                ((m = l.createElement(
                     f ? "span" : "div",
                     {
                         "data-slate-spacer": !0,
@@ -721,7 +721,7 @@ var y = new WeakMap(),
                     l.createElement(eF, { renderPlaceholder: a, decorations: [], isLast: !1, parent: n, text: D }),
                 )),
                     y.set(D, 0),
-                    b.set(D, n);
+                    b.set(D, n));
             }
             return r({ attributes: v, children: m, element: n, decorations: t });
         },
@@ -771,7 +771,7 @@ var y = new WeakMap(),
                 var C = c.Q6.intersection(E, g);
                 C && w.push(C);
             }
-            c.Hg.isElement(v)
+            (c.Hg.isElement(v)
                 ? f.push(
                       l.createElement(
                           eP.Provider,
@@ -799,7 +799,7 @@ var y = new WeakMap(),
                       }),
                   ),
                 y.set(v, p),
-                b.set(v, n);
+                b.set(v, n));
         }
         return f;
     },
@@ -881,7 +881,7 @@ var y = new WeakMap(),
     eU = { subtree: !0, childList: !0, characterData: !0, characterDataOldValue: !0 };
 class e$ extends l.Component {
     constructor() {
-        super(...arguments), (this.context = null), (this.manager = null), (this.mutationObserver = null);
+        (super(...arguments), (this.context = null), (this.manager = null), (this.mutationObserver = null));
     }
     observe() {
         var e,
@@ -894,7 +894,7 @@ class e$ extends l.Component {
             t,
             { receivedUserInput: n } = this.props,
             r = this.context;
-        (this.manager =
+        ((this.manager =
             ((e = []),
             {
                 registerMutations: (t) => {
@@ -921,7 +921,7 @@ class e$ extends l.Component {
                 }),
             })),
             (this.mutationObserver = new MutationObserver(this.manager.registerMutations)),
-            this.observe();
+            this.observe());
     }
     getSnapshotBeforeUpdate() {
         var e,
@@ -938,7 +938,7 @@ class e$ extends l.Component {
     }
     componentDidUpdate() {
         var e;
-        null == (e = this.manager) || e.clear(), this.observe();
+        (null == (e = this.manager) || e.clear(), this.observe());
     }
     componentWillUnmount() {
         var e;
@@ -982,10 +982,10 @@ function eH(e, t) {
     if (!c.EY.isText(i)) return null;
     var a = c.KE.above(e, { match: (t) => c.Hg.isElement(t) && c.KE.isBlock(e, t), at: n });
     if (!a) return null;
-    for (; r > i.text.length; ) {
+    for (; r > i.text.length;) {
         var o = c.KE.next(e, { at: n, match: c.EY.isText });
         if (!o || !c.wA.isDescendant(o[1], a[1])) return null;
-        (r -= i.text.length), (i = o[0]), (n = o[1]);
+        ((r -= i.text.length), (i = o[0]), (n = o[1]));
     }
     return { path: n, offset: r };
 }
@@ -1031,11 +1031,11 @@ function eX(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1060,11 +1060,11 @@ function e2(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1088,11 +1088,11 @@ function e9(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -1152,21 +1152,21 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                     if (!n.current) {
                         n.current = !0;
                         var e = em.getWindow(t);
-                        e.cancelAnimationFrame(r.current),
+                        (e.cancelAnimationFrame(r.current),
                             (r.current = e.requestAnimationFrame(() => {
                                 n.current = !1;
-                            }));
+                            })));
                     }
                 }, [])),
                 (0, l.useEffect)(() => () => cancelAnimationFrame(r.current), []),
                 { receivedUserInput: n, onUserInput: a }),
             [, el] = (0, l.useReducer)((e) => e + 1, 0);
-        I.set(J, el), F.set(J, y);
+        (I.set(J, el), F.set(J, y));
         var ev = (0, l.useMemo)(
             () => ({ isDraggingInternally: !1, isUpdatingSelection: !1, latestElement: null, hasMarkPlaceholder: !1 }),
             [],
         );
-        (0, l.useLayoutEffect)(
+        ((0, l.useLayoutEffect)(
             () => () => {
                 null == ev || (null != ev.latestElement && (ev.latestElement.remove(), (ev.latestElement = null)));
             },
@@ -1174,7 +1174,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
         ),
             (0, l.useEffect)(() => {
                 ee.current && h && ee.current.focus();
-            }, [h]);
+            }, [h]));
         var e_ = (0, l.useCallback)(
                 s()(() => {
                     if (
@@ -1248,15 +1248,15 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                         !_() && !v())
                                     )
                                         return void d();
-                                    i || ((i = !0), setTimeout(() => (i = !1))), v() && (i = "action");
+                                    (i || ((i = !0), setTimeout(() => (i = !1))), v() && (i = "action"));
                                     var e = t.selection && c.KE.rangeRef(t, t.selection, { affinity: "forward" });
-                                    z.set(t, t.marks), e0("flush", M.get(t), R.get(t));
-                                    for (var a = _(); (s = null == (f = R.get(t)) ? void 0 : f[0]); ) {
+                                    (z.set(t, t.marks), e0("flush", M.get(t), R.get(t)));
+                                    for (var a = _(); (s = null == (f = R.get(t)) ? void 0 : f[0]);) {
                                         var s,
                                             f,
                                             h,
                                             p = S.get(t);
-                                        void 0 !== p && (S.delete(t), (t.marks = p)), p && !1 === l && (l = null);
+                                        (void 0 !== p && (S.delete(t), (t.marks = p)), p && !1 === l && (l = null));
                                         var m = (function (e) {
                                             var { path: t, diff: n } = e;
                                             return {
@@ -1264,7 +1264,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                 focus: { path: t, offset: n.end },
                                             };
                                         })(s);
-                                        (t.selection && c.Q6.equals(t.selection, m)) || c.gB.select(t, m),
+                                        ((t.selection && c.Q6.equals(t.selection, m)) || c.gB.select(t, m),
                                             s.diff.text ? c.KE.insertText(t, s.diff.text) : c.KE.deleteFragment(t),
                                             R.set(
                                                 t,
@@ -1294,7 +1294,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                 N.delete(t),
                                                 n.cancel(),
                                                 r.cancel(),
-                                                null == e || e.unref());
+                                                null == e || e.unref()));
                                     }
                                     var g = null == e ? void 0 : e.unref();
                                     if (
@@ -1316,9 +1316,9 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                 e.run();
                                             }
                                         })();
-                                    a && n(), n.flush(), r.flush(), d();
+                                    (a && n(), n.flush(), r.flush(), d());
                                     var y = z.get(t);
-                                    z.delete(t), void 0 !== y && ((t.marks = y), t.onChange());
+                                    (z.delete(t), void 0 !== y && ((t.marks = y), t.onChange()));
                                 },
                                 h = function () {
                                     var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1345,7 +1345,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                     var m = c.bP.leaf(t, e),
                                         v = p.findIndex((t) => c.wA.equals(t.path, e));
                                     if (v < 0) {
-                                        eK(m.text, n) && p.push({ path: e, diff: n, id: s++ }), h();
+                                        (eK(m.text, n) && p.push({ path: e, diff: n, id: s++ }), h());
                                         return;
                                     }
                                     var _ =
@@ -1368,20 +1368,20 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                             text: d,
                                         }));
                                     if (!_) {
-                                        p.splice(v, 1), h();
+                                        (p.splice(v, 1), h());
                                         return;
                                     }
                                     p[v] = eY(eY({}, p[v]), {}, { diff: _ });
                                 },
                                 m = function (e) {
                                     var { at: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                                    (l = !1),
+                                    ((l = !1),
                                         N.delete(t),
                                         n.cancel(),
                                         r.cancel(),
                                         v() && f(),
                                         M.set(t, { at: i, run: e }),
-                                        (u = setTimeout(f));
+                                        (u = setTimeout(f)));
                                 },
                                 v = () => !!M.get(t),
                                 _ = () => {
@@ -1389,14 +1389,14 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                     return !!(null != (e = R.get(t)) && e.length);
                                 },
                                 g = (e) => {
-                                    N.set(t, e), o && (clearTimeout(o), (o = null));
+                                    (N.set(t, e), o && (clearTimeout(o), (o = null)));
                                     var { selection: n } = t;
                                     if (e) {
                                         var r = !n || !c.wA.equals(n.anchor.path, e.anchor.path),
                                             i =
                                                 !n ||
                                                 !c.wA.equals(n.anchor.path.slice(0, -1), e.anchor.path.slice(0, -1));
-                                        ((r && l) || i) && (l = !1), (r || _()) && (o = setTimeout(f, 200));
+                                        (((r && l) || i) && (l = !1), (r || _()) && (o = setTimeout(f, 200)));
                                     }
                                 },
                                 y = () => {
@@ -1411,13 +1411,13 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                 isFlushing: () => i,
                                 handleUserSelect: g,
                                 handleCompositionEnd: (e) => {
-                                    a && clearTimeout(a),
+                                    (a && clearTimeout(a),
                                         (a = setTimeout(() => {
-                                            V.set(t, !1), f();
-                                        }, 25));
+                                            (V.set(t, !1), f());
+                                        }, 25)));
                                 },
                                 handleCompositionStart: (e) => {
-                                    V.set(t, !0), a && (clearTimeout(a), (a = null));
+                                    (V.set(t, !0), a && (clearTimeout(a), (a = null)));
                                 },
                                 handleDOMBeforeInput: (e) => {
                                     o && (clearTimeout(o), (o = null));
@@ -1491,8 +1491,8 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                             case "deleteEntireSoftLine":
                                                 return m(
                                                     () => {
-                                                        c.KE.deleteBackward(t, { unit: "line" }),
-                                                            c.KE.deleteForward(t, { unit: "line" });
+                                                        (c.KE.deleteBackward(t, { unit: "line" }),
+                                                            c.KE.deleteForward(t, { unit: "line" }));
                                                     },
                                                     { at: r },
                                                 );
@@ -1532,8 +1532,8 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                         () => {
                                                             var e = z.split("\n");
                                                             e.forEach((n, r) => {
-                                                                n && c.KE.insertText(t, n),
-                                                                    r !== e.length - 1 && c.KE.insertSoftBreak(t);
+                                                                (n && c.KE.insertText(t, n),
+                                                                    r !== e.length - 1 && c.KE.insertSoftBreak(t));
                                                             });
                                                         },
                                                         { at: r },
@@ -1595,13 +1595,13 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                 return (
                     !(function (e, t, n) {
                         var [r] = (0, l.useState)(() => new MutationObserver(t));
-                        ey(() => {
+                        (ey(() => {
                             r.takeRecords();
                         }),
                             (0, l.useEffect)(() => {
                                 if (!e.current) throw Error("Failed to attach MutationObserver, `node` is undefined");
-                                return r.observe(e.current, n), () => r.disconnect();
-                            }, []);
+                                return (r.observe(e.current, n), () => r.disconnect());
+                            }, []));
                     })(n, o.handleDomMutations, e3),
                     O.set(i, o.scheduleFlush),
                     a && o.flush(),
@@ -1666,24 +1666,24 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                     a = (null == eb ? void 0 : eb.isFlushing()) === "action";
                 if (!er || !a)
                     return void setTimeout(() => {
-                        i && ei && em.toDOMNode(J, J).focus(), (ev.isUpdatingSelection = !1);
+                        (i && ei && em.toDOMNode(J, J).focus(), (ev.isUpdatingSelection = !1));
                     });
                 var o = null,
                     u = requestAnimationFrame(() => {
                         if (a) {
                             var e = (e) => {
                                 try {
-                                    em.toDOMNode(J, J).focus(), r(e);
+                                    (em.toDOMNode(J, J).focus(), r(e));
                                 } catch (e) {}
                             };
-                            e(),
+                            (e(),
                                 (o = setTimeout(() => {
-                                    e(!0), (ev.isUpdatingSelection = !1);
-                                }));
+                                    (e(!0), (ev.isUpdatingSelection = !1));
+                                })));
                         }
                     });
                 return () => {
-                    cancelAnimationFrame(u), o && clearTimeout(o);
+                    (cancelAnimationFrame(u), o && clearTimeout(o));
                 };
             }
         });
@@ -1691,7 +1691,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                 (e) => {
                     if ((eo(), !y && em.hasEditableTarget(J, e.target) && !ti(e, _))) {
                         if (eb) return eb.handleDOMBeforeInput(e);
-                        eg.flush(), e_.flush();
+                        (eg.flush(), e_.flush());
                         var { selection: t } = J,
                             { inputType: n } = e,
                             r = e.dataTransfer || e.data || void 0,
@@ -1707,7 +1707,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                 /[a-z ]/i.test(e.data) &&
                                 0 !== t.anchor.offset
                             ) {
-                                (a = !0), J.marks && (a = !1);
+                                ((a = !0), J.marks && (a = !1));
                                 var { anchor: o } = t,
                                     [u, s] = em.toDOMPoint(J, o),
                                     l = null == (h = u.parentElement) ? void 0 : h.closest("a"),
@@ -1744,7 +1744,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                     if (!t || !c.Q6.equals(t, D)) {
                                         a = !1;
                                         var w = !i && J.selection && c.KE.rangeRef(J, J.selection);
-                                        c.gB.select(J, D), w && x.set(J, w);
+                                        (c.gB.select(J, D), w && x.set(J, w));
                                     }
                                 }
                             }
@@ -1768,8 +1768,8 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                         c.KE.deleteBackward(J);
                                         break;
                                     case "deleteEntireSoftLine":
-                                        c.KE.deleteBackward(J, { unit: "line" }),
-                                            c.KE.deleteForward(J, { unit: "line" });
+                                        (c.KE.deleteBackward(J, { unit: "line" }),
+                                            c.KE.deleteForward(J, { unit: "line" }));
                                         break;
                                     case "deleteHardLineBackward":
                                         c.KE.deleteBackward(J, { unit: "block" });
@@ -1801,16 +1801,16 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                     case "insertFromYank":
                                     case "insertReplacementText":
                                     case "insertText":
-                                        "insertFromComposition" === n && em.isComposing(J) && (X(!1), V.set(J, !1)),
+                                        ("insertFromComposition" === n && em.isComposing(J) && (X(!1), V.set(J, !1)),
                                             (null == r ? void 0 : r.constructor.name) === "DataTransfer"
                                                 ? em.insertData(J, r)
                                                 : "string" == typeof r &&
                                                   (a
                                                       ? en.current.push(() => c.KE.insertText(J, r))
-                                                      : c.KE.insertText(J, r));
+                                                      : c.KE.insertText(J, r)));
                                 }
                                 var C = null == (f = x.get(J)) ? void 0 : f.unref();
-                                x.delete(J), !C || (J.selection && c.Q6.equals(J.selection, C)) || c.gB.select(J, C);
+                                (x.delete(J), !C || (J.selection && c.Q6.equals(J.selection, C)) || c.gB.select(J, C));
                             }
                         }
                     }
@@ -1819,14 +1819,14 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
             ),
             ew = (0, l.useCallback)(
                 (e) => {
-                    null == e
+                    (null == e
                         ? (e_.cancel(),
                           eg.cancel(),
                           w.delete(J),
                           A.delete(J),
                           ee.current && ep && ee.current.removeEventListener("beforeinput", eD))
                         : ep && e.addEventListener("beforeinput", eD),
-                        (ee.current = e);
+                        (ee.current = e));
                 },
                 [ee, eD, e_, eg],
             );
@@ -2002,11 +2002,11 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                         e.data
                                     ) {
                                         var t = S.get(J);
-                                        S.delete(J),
+                                        (S.delete(J),
                                             void 0 !== t && (z.set(J, J.marks), (J.marks = t)),
-                                            c.KE.insertText(J, e.data);
+                                            c.KE.insertText(J, e.data));
                                         var n = z.get(J);
-                                        z.delete(J), void 0 !== n && (J.marks = n);
+                                        (z.delete(J), void 0 !== n && (J.marks = n));
                                     }
                                 },
                                 [q.onCompositionEnd],
@@ -2058,7 +2058,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                             onCut: (0, l.useCallback)(
                                 (e) => {
                                     if (!y && em.hasSelectableTarget(J, e.target) && !tr(e, q.onCut)) {
-                                        e.preventDefault(), em.setFragmentData(J, e.clipboardData, "cut");
+                                        (e.preventDefault(), em.setFragmentData(J, e.clipboardData, "cut"));
                                         var { selection: t } = J;
                                         if (t)
                                             if (c.Q6.isExpanded(t)) c.KE.deleteFragment(J);
@@ -2091,7 +2091,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                             var r = c.KE.range(J, n);
                                             c.gB.select(J, r);
                                         }
-                                        (ev.isDraggingInternally = !0), em.setFragmentData(J, e.dataTransfer, "drag");
+                                        ((ev.isDraggingInternally = !0), em.setFragmentData(J, e.dataTransfer, "drag"));
                                     }
                                 },
                                 [y, q.onDragStart],
@@ -2103,14 +2103,14 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                         var t = J.selection,
                                             n = em.findEventRange(J, e),
                                             r = e.dataTransfer;
-                                        c.gB.select(J, n),
+                                        (c.gB.select(J, n),
                                             ev.isDraggingInternally &&
                                                 t &&
                                                 !c.Q6.equals(t, n) &&
                                                 !c.KE.void(J, { at: n, voids: !0 }) &&
                                                 c.gB.delete(J, { at: t }),
                                             em.insertData(J, r),
-                                            em.isFocused(J) || em.focus(J);
+                                            em.isFocused(J) || em.focus(J));
                                     }
                                     ev.isDraggingInternally = !1;
                                 },
@@ -2118,12 +2118,12 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                             ),
                             onDragEnd: (0, l.useCallback)(
                                 (e) => {
-                                    !y &&
+                                    (!y &&
                                         ev.isDraggingInternally &&
                                         q.onDragEnd &&
                                         em.hasTarget(J, e.target) &&
                                         q.onDragEnd(e),
-                                        (ev.isDraggingInternally = !1);
+                                        (ev.isDraggingInternally = !1));
                                 },
                                 [y, q.onDragEnd],
                             ),
@@ -2159,54 +2159,54 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                 r = J.children[null !== n ? n.focus.path[0] : 0],
                                                 a = "rtl" === i()(c.bP.string(r));
                                             if (eZ.isRedo(t)) {
-                                                e.preventDefault(), "function" == typeof J.redo && J.redo();
+                                                (e.preventDefault(), "function" == typeof J.redo && J.redo());
                                                 return;
                                             }
                                             if (eZ.isUndo(t)) {
-                                                e.preventDefault(), "function" == typeof J.undo && J.undo();
+                                                (e.preventDefault(), "function" == typeof J.undo && J.undo());
                                                 return;
                                             }
                                             if (eZ.isMoveLineBackward(t)) {
-                                                e.preventDefault(), c.gB.move(J, { unit: "line", reverse: !0 });
+                                                (e.preventDefault(), c.gB.move(J, { unit: "line", reverse: !0 }));
                                                 return;
                                             }
                                             if (eZ.isMoveLineForward(t)) {
-                                                e.preventDefault(), c.gB.move(J, { unit: "line" });
+                                                (e.preventDefault(), c.gB.move(J, { unit: "line" }));
                                                 return;
                                             }
                                             if (eZ.isExtendLineBackward(t)) {
-                                                e.preventDefault(),
-                                                    c.gB.move(J, { unit: "line", edge: "focus", reverse: !0 });
+                                                (e.preventDefault(),
+                                                    c.gB.move(J, { unit: "line", edge: "focus", reverse: !0 }));
                                                 return;
                                             }
                                             if (eZ.isExtendLineForward(t)) {
-                                                e.preventDefault(), c.gB.move(J, { unit: "line", edge: "focus" });
+                                                (e.preventDefault(), c.gB.move(J, { unit: "line", edge: "focus" }));
                                                 return;
                                             }
                                             if (eZ.isMoveBackward(t)) {
-                                                e.preventDefault(),
+                                                (e.preventDefault(),
                                                     n && c.Q6.isCollapsed(n)
                                                         ? c.gB.move(J, { reverse: !a })
-                                                        : c.gB.collapse(J, { edge: "start" });
+                                                        : c.gB.collapse(J, { edge: "start" }));
                                                 return;
                                             }
                                             if (eZ.isMoveForward(t)) {
-                                                e.preventDefault(),
+                                                (e.preventDefault(),
                                                     n && c.Q6.isCollapsed(n)
                                                         ? c.gB.move(J, { reverse: a })
-                                                        : c.gB.collapse(J, { edge: "end" });
+                                                        : c.gB.collapse(J, { edge: "end" }));
                                                 return;
                                             }
                                             if (eZ.isMoveWordBackward(t)) {
-                                                e.preventDefault(),
+                                                (e.preventDefault(),
                                                     n && c.Q6.isExpanded(n) && c.gB.collapse(J, { edge: "focus" }),
-                                                    c.gB.move(J, { unit: "word", reverse: !a });
+                                                    c.gB.move(J, { unit: "word", reverse: !a }));
                                                 return;
                                             }
                                             if (eZ.isMoveWordForward(t)) {
-                                                e.preventDefault(),
+                                                (e.preventDefault(),
                                                     n && c.Q6.isExpanded(n) && c.gB.collapse(J, { edge: "focus" }),
-                                                    c.gB.move(J, { unit: "word", reverse: a });
+                                                    c.gB.move(J, { unit: "word", reverse: a }));
                                                 return;
                                             }
                                             if (ep) {
@@ -2222,7 +2222,7 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                         c.KE.isVoid(J, o) &&
                                                         (c.KE.isInline(J, o) || c.KE.isBlock(J, o))
                                                     ) {
-                                                        e.preventDefault(), c.KE.deleteBackward(J, { unit: "block" });
+                                                        (e.preventDefault(), c.KE.deleteBackward(J, { unit: "block" }));
                                                         return;
                                                     }
                                                 }
@@ -2230,53 +2230,53 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                                 if (eZ.isBold(t) || eZ.isItalic(t) || eZ.isTransposeCharacter(t))
                                                     return void e.preventDefault();
                                                 if (eZ.isSoftBreak(t)) {
-                                                    e.preventDefault(), c.KE.insertSoftBreak(J);
+                                                    (e.preventDefault(), c.KE.insertSoftBreak(J));
                                                     return;
                                                 }
                                                 if (eZ.isSplitBlock(t)) {
-                                                    e.preventDefault(), c.KE.insertBreak(J);
+                                                    (e.preventDefault(), c.KE.insertBreak(J));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "backward" })
-                                                            : c.KE.deleteBackward(J);
+                                                            : c.KE.deleteBackward(J));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteForward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "forward" })
-                                                            : c.KE.deleteForward(J);
+                                                            : c.KE.deleteForward(J));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteLineBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "backward" })
-                                                            : c.KE.deleteBackward(J, { unit: "line" });
+                                                            : c.KE.deleteBackward(J, { unit: "line" }));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteLineForward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "forward" })
-                                                            : c.KE.deleteForward(J, { unit: "line" });
+                                                            : c.KE.deleteForward(J, { unit: "line" }));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteWordBackward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "backward" })
-                                                            : c.KE.deleteBackward(J, { unit: "word" });
+                                                            : c.KE.deleteBackward(J, { unit: "word" }));
                                                     return;
                                                 }
                                                 if (eZ.isDeleteWordForward(t)) {
-                                                    e.preventDefault(),
+                                                    (e.preventDefault(),
                                                         n && c.Q6.isExpanded(n)
                                                             ? c.KE.deleteFragment(J, { direction: "forward" })
-                                                            : c.KE.deleteForward(J, { unit: "word" });
+                                                            : c.KE.deleteForward(J, { unit: "word" }));
                                                     return;
                                                 }
                                             }
@@ -2322,9 +2322,9 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
     tn = (e, t) => {
         if (t.getBoundingClientRect && (!e.selection || (e.selection && c.Q6.isCollapsed(e.selection)))) {
             var n = t.startContainer.parentElement;
-            (n.getBoundingClientRect = t.getBoundingClientRect.bind(t)),
+            ((n.getBoundingClientRect = t.getBoundingClientRect.bind(t)),
                 (0, d.A)(n, { scrollMode: "if-needed" }),
-                delete n.getBoundingClientRect;
+                delete n.getBoundingClientRect);
         }
     },
     tr = (e, t) => {
@@ -2354,13 +2354,13 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                         "[Slate] value is invalid! Expected a list of elements but got: ".concat(c.h6.stringify(u)),
                     );
                 if (!c.KE.isEditor(i)) throw Error("[Slate] editor is invalid! You passed: ".concat(c.h6.stringify(i)));
-                return (i.children = u), Object.assign(i, s), { v: 0, editor: i };
+                return ((i.children = u), Object.assign(i, s), { v: 0, editor: i });
             }),
             { selectorContext: p, onChange: m } =
                 ((t = (0, l.useRef)([]).current),
                 (n = (0, l.useRef)({ editor: i }).current),
                 (r = (0, l.useCallback)((e) => {
-                    (n.editor = e), t.forEach((t) => t(e));
+                    ((n.editor = e), t.forEach((t) => t(e)));
                 }, [])),
                 {
                     selectorContext: (0, l.useMemo)(
@@ -2378,13 +2378,13 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                     onChange: r,
                 }),
             _ = (0, l.useCallback)(() => {
-                o && o(i.children), h((e) => ({ v: e.v + 1, editor: i })), m(i);
+                (o && o(i.children), h((e) => ({ v: e.v + 1, editor: i })), m(i));
             }, [o]);
         (0, l.useEffect)(
             () => (
                 P.set(i, _),
                 () => {
-                    P.set(i, () => {}), (d.current = !0);
+                    (P.set(i, () => {}), (d.current = !0));
                 }
             ),
             [_],
@@ -2400,12 +2400,12 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                     ? (document.addEventListener("focusin", e),
                       document.addEventListener("focusout", e),
                       () => {
-                          document.removeEventListener("focusin", e), document.removeEventListener("focusout", e);
+                          (document.removeEventListener("focusin", e), document.removeEventListener("focusout", e));
                       })
                     : (document.addEventListener("focus", e, !0),
                       document.addEventListener("blur", e, !0),
                       () => {
-                          document.removeEventListener("focus", e, !0), document.removeEventListener("blur", e, !0);
+                          (document.removeEventListener("focus", e, !0), document.removeEventListener("blur", e, !0));
                       });
             }, []),
             l.createElement(
@@ -2432,11 +2432,11 @@ function tf(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, r);
+            n.push.apply(n, r));
     }
     return n;
 }
@@ -2462,14 +2462,14 @@ var tp = function (e) {
             k.set(e, new WeakMap()),
             (e.addMark = (t, n) => {
                 var r, i;
-                null == (r = O.get(e)) || r(),
+                (null == (r = O.get(e)) || r(),
                     !S.get(e) && null != (i = R.get(e)) && i.length && S.set(e, null),
                     z.delete(e),
-                    a(t, n);
+                    a(t, n));
             }),
             (e.removeMark = (t) => {
                 var n;
-                !S.get(e) && null != (n = R.get(e)) && n.length && S.set(e, null), z.delete(e), o(t);
+                (!S.get(e) && null != (n = R.get(e)) && n.length && S.set(e, null), z.delete(e), o(t));
             }),
             (e.deleteBackward = (t) => {
                 if ("line" !== t) return i(t);
@@ -2486,8 +2486,8 @@ var tp = function (e) {
                                     o = Math.floor(a / 2);
                                 if (tc(e, c.KE.range(e, r[i]), n)) return c.KE.range(e, r[i], n);
                                 if (r.length < 2) return c.KE.range(e, r[r.length - 1], n);
-                                for (; o !== r.length && o !== i; )
-                                    tc(e, c.KE.range(e, r[o]), n) ? (a = o) : (i = o), (o = Math.floor((i + a) / 2));
+                                for (; o !== r.length && o !== i;)
+                                    (tc(e, c.KE.range(e, r[o]), n) ? (a = o) : (i = o), (o = Math.floor((i + a) / 2)));
                                 return c.KE.range(e, r[a], n);
                             })(e, a);
                         c.Q6.isCollapsed(o) || c.gB.delete(e, { at: o });
@@ -2599,7 +2599,7 @@ var tp = function (e) {
                         i.push(...tm(e, t.path));
                         break;
                     case "set_selection":
-                        null == (r = x.get(e)) || r.unref(), x.delete(e);
+                        (null == (r = x.get(e)) || r.unref(), x.delete(e));
                         break;
                     case "insert_node":
                     case "remove_node":
@@ -2635,7 +2635,7 @@ var tp = function (e) {
                             var [f] = u,
                                 h = s.cloneRange(),
                                 p = em.toDOMNode(e, f);
-                            h.setEndAfter(p), (l = h.cloneContents());
+                            (h.setEndAfter(p), (l = h.cloneContents()));
                         }
                         if (
                             (o && (d = l.querySelector("[data-slate-spacer]")),
@@ -2646,11 +2646,11 @@ var tp = function (e) {
                             H(d))
                         ) {
                             var m = d.ownerDocument.createElement("span");
-                            (m.style.whiteSpace = "pre"), m.appendChild(d), l.appendChild(m), (d = m);
+                            ((m.style.whiteSpace = "pre"), m.appendChild(d), l.appendChild(m), (d = m));
                         }
                         var v = JSON.stringify(e.getFragment()),
                             _ = window.btoa(encodeURIComponent(v));
-                        d.setAttribute("data-slate-fragment", _), n.setData("application/".concat(t), _);
+                        (d.setAttribute("data-slate-fragment", _), n.setData("application/".concat(t), _));
                         var g = l.ownerDocument.createElement("div");
                         return (
                             g.appendChild(l),
@@ -2676,7 +2676,7 @@ var tp = function (e) {
                     })(n);
                 if (r) {
                     var i = JSON.parse(decodeURIComponent(window.atob(r)));
-                    return e.insertFragment(i), !0;
+                    return (e.insertFragment(i), !0);
                 }
                 return !1;
             }),
@@ -2685,7 +2685,7 @@ var tp = function (e) {
                 if (n) {
                     var r = n.split(/\r\n|\r|\n/),
                         i = !1;
-                    for (var a of r) i && c.gB.splitNodes(e, { always: !0 }), e.insertText(a), (i = !0);
+                    for (var a of r) (i && c.gB.splitNodes(e, { always: !0 }), e.insertText(a), (i = !0));
                     return !0;
                 }
                 return !1;
@@ -2693,7 +2693,7 @@ var tp = function (e) {
             (e.onChange = (t) => {
                 p.unstable_batchedUpdates(() => {
                     var n = P.get(e);
-                    n && n(), r(t);
+                    (n && n(), r(t));
                 });
             }),
             e

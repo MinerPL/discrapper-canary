@@ -1,12 +1,12 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.isWAV = t.isMP3 = t.isM4A = t.isFLAC = t.isAMR = t.isAAC = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.isWAV = t.isMP3 = t.isM4A = t.isFLAC = t.isAMR = t.isAAC = void 0));
 let i = n(835986),
     r = n(817762);
 function o(e) {
     let t = (0, r.getFileChunk)(e);
     return i.FileTypes.checkByFileType(t, "m4a");
 }
-(t.isAAC = function (e, t) {
+((t.isAAC = function (e, t) {
     let n = (0, r.getFileChunk)(e);
     return !!i.FileTypes.checkByFileType(n, "aac") || ((null == t || !t.excludeSimilarTypes) && o(n));
 }),
@@ -26,4 +26,4 @@ function o(e) {
     (t.isWAV = function (e) {
         let t = (0, r.getFileChunk)(e);
         return i.FileTypes.checkByFileType(t, "wav");
-    });
+    }));

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T }), n(938796);
+(n.d(t, { A: () => T }), n(938796));
 var i = n(665260),
     r = n(439372),
     a = n(976860),
@@ -27,11 +27,11 @@ class p extends r.A {
         let { guildId: t, channelId: n } = e;
         if ((I === t && f === n) || ((I = t ?? null), (f = n ?? null), null == I || null == f)) return;
         let i = l.A.getGuild(t);
-        null != i &&
+        (null != i &&
             i.features.has(E.GuildFeatures.COMMUNITY) &&
             u.A.shouldFetchPrompts(I, 8 * d.A.Millis.HOUR) &&
             (0, c.Tg)(I),
-            this._openOnboardingIfIncomplete(I, n);
+            this._openOnboardingIfIncomplete(I, n));
     };
     handleGuildDelete = (e) => {
         let { guild: t } = e;

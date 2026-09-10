@@ -1,8 +1,8 @@
-r.d(t, { cd: () => d, OJ: () => l, ekybMachine: () => L, j5: () => $ }), r(580607);
+(r.d(t, { cd: () => d, OJ: () => l, ekybMachine: () => L, j5: () => $ }), r(580607));
 var s = r(41851),
     n = r(269882),
     i = r(528239);
-r(829601), r(924260), r(489510), r(886347), r(219877), r(309076);
+(r(829601), r(924260), r(489510), r(886347), r(219877), r(309076));
 var a = r(646613);
 r(761969);
 var o = r(297200),
@@ -53,7 +53,7 @@ let d = ["BR", "CN", "FR", "DE", "IL", "IT", "MX", "ES", "GB", "US"],
     S = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
 function U(e, t) {
     let r = 11 - (t.reduce((t, r, s) => t + Number.parseInt(e.charAt(s), 10) * r, 0) % 11);
-    return r >= 10 && (r = 0), r.toString();
+    return (r >= 10 && (r = 0), r.toString());
 }
 let A = () => ({
         required: (e, t, r) => {
@@ -90,7 +90,7 @@ let A = () => ({
                         let t = o.n[e];
                         if (void 0 !== t) return { length: t };
                         let r = (0, o.a)(e);
-                        return ("US" === e || "BR" === e) && (r -= 1), { maxLength: r };
+                        return (("US" === e || "BR" === e) && (r -= 1), { maxLength: r });
                     })(t.country),
                 };
         },
@@ -127,14 +127,14 @@ function F(e, t, r) {
                         !!v.includes(n) ||
                         ("businessName" === n ? g.includes(t) : "addressLine2" === n || (!y.includes(n) && !1)),
                     a = { name: n, type: "text", label: `ekyb.${n}`, required: !i };
-                "taxId" === n &&
+                ("taxId" === n &&
                     ((a.required = !0),
                     "CN" === t && (a.label = "verification.labels.prcId"),
                     "BR" === t && (a.displayLabel = "CPF")),
                     "postalCode" === n && (a.maxLength = (0, o.a)(t)),
                     "state" === n &&
                         "US" === t &&
-                        ((a.type = "dropdown"), (a.options = o.d), (a.placeholder = "verification.placeholder.state"));
+                        ((a.type = "dropdown"), (a.options = o.d), (a.placeholder = "verification.placeholder.state")));
                 let u =
                     ((r = a.required),
                     (s = []),
@@ -142,7 +142,7 @@ function F(e, t, r) {
                     "taxId" === n && b.includes(t) && s.push({ type: "cnpj" }),
                     "postalCode" === n && s.push({ type: "postalCodeFormat", country: t }),
                     s);
-                return u.length > 0 && (a.validation = u), a;
+                return (u.length > 0 && (a.validation = u), a);
             })
     );
 }
@@ -243,7 +243,7 @@ let N = (0, a.a)(async ({ signal: e }) => O(e)),
                 let r = e.validationErrors;
                 if (!r?.[t.name]) return {};
                 let s = { ...r };
-                return delete s[t.name], { validationErrors: Object.keys(s).length > 0 ? s : void 0 };
+                return (delete s[t.name], { validationErrors: Object.keys(s).length > 0 ? s : void 0 });
             }),
             validateFormField: (0, a.r)(({ context: e, event: t }) => {
                 if ("VALIDATE_FIELD" !== t.type) return {};
@@ -266,7 +266,7 @@ let N = (0, a.a)(async ({ signal: e }) => O(e)),
                               return I(C(e[s.name]), s.validation, s, n);
                           })(e.values, r, e.fields),
                     n = { ...(e.validationErrors ?? {}) };
-                return s ? (n[r] = s) : delete n[r], { validationErrors: Object.keys(n).length > 0 ? n : void 0 };
+                return (s ? (n[r] = s) : delete n[r], { validationErrors: Object.keys(n).length > 0 ? n : void 0 });
             }),
             computeValidationResult: (0, a.r)(({ context: e }) => {
                 var t, r, s, n, i;
@@ -283,7 +283,7 @@ let N = (0, a.a)(async ({ signal: e }) => O(e)),
                         (a = A()),
                         (u = r.reduce((e, r) => {
                             let s = I(C(t[r.name]), r.validation, r, a);
-                            return s && (e[r.name] = s), e;
+                            return (s && (e[r.name] = s), e);
                         }, {})),
                         (d = (function (e, t, r) {
                             if (h.includes(r)) return {};
@@ -356,7 +356,7 @@ let N = (0, a.a)(async ({ signal: e }) => O(e)),
                     o = e.validationErrors;
                 if (!o?.[a]) return { ubos: i };
                 let u = { ...o };
-                return delete u[a], { ubos: i, validationErrors: Object.keys(u).length > 0 ? u : void 0 };
+                return (delete u[a], { ubos: i, validationErrors: Object.keys(u).length > 0 ? u : void 0 });
             }),
             setErrorMessage: (0, a.r)(({ event: e }) => ({ errorMessage: String(e.error ?? "verification.error") })),
             clearErrorMessage: (0, a.r)({ errorMessage: () => "" }),
@@ -566,10 +566,10 @@ function M({ actor: e, trackElementClicked: t }) {
             e.send({ type: "VALIDATE_FIELD", name: t });
         },
         addUbo() {
-            t?.("addUbo"), e.send({ type: "ADD_UBO" });
+            (t?.("addUbo"), e.send({ type: "ADD_UBO" }));
         },
         removeUbo(r) {
-            t?.(`removeUbo.${r}`), e.send({ type: "REMOVE_UBO", index: r });
+            (t?.(`removeUbo.${r}`), e.send({ type: "REMOVE_UBO", index: r }));
         },
         setUboField(t, r, s) {
             e.send({ type: "SET_UBO_FIELD", index: t, field: r, value: s });
@@ -581,13 +581,13 @@ function M({ actor: e, trackElementClicked: t }) {
             e.send({ type: "SELECT_ADDRESS", suggestion: t });
         },
         submit() {
-            t?.("submit"), e.send({ type: "SUBMIT" });
+            (t?.("submit"), e.send({ type: "SUBMIT" }));
         },
         retry() {
-            t?.("retry"), e.send({ type: "RETRY" });
+            (t?.("retry"), e.send({ type: "RETRY" }));
         },
         close() {
-            t?.("close"), e.send({ type: "CLOSE" });
+            (t?.("close"), e.send({ type: "CLOSE" }));
         },
     };
 }
@@ -599,4 +599,4 @@ function $(e) {
         instrumentation: (0, n.s)(n.n.ekyb, { getEventScreenName: w }),
     });
 }
-r(673661), r(502220);
+(r(673661), r(502220));

@@ -36,7 +36,7 @@ let h = function (e) {
         O = (0, I.uM)(),
         V = (0, p.A)();
     function P(e) {
-        e.stopPropagation(),
+        (e.stopPropagation(),
             f.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: O?.sessionId,
                 sku_id: t.skuId,
@@ -62,7 +62,7 @@ let h = function (e) {
                               e && E();
                           }
                         : void 0,
-            });
+            }));
     }
     if (k)
         return (0, r.jsx)(l.$, {

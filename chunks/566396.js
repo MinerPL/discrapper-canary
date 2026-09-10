@@ -25,24 +25,28 @@ function b(e) {
         guild: j,
         canJoin: C,
         isAlreadyConnected: I,
-    } = (0, a.cf)([A.A, d.A, h.Ay, g.default, p.A, s.A, c.A], () => {
-        let n = A.A.getDiscoverableVoiceStateForUser(e);
-        if (null == n) return x;
-        let l = d.A.getChannel(n.channelId);
-        if (null == l || !l.isVocal()) return x;
-        let r = l.getGuildId?.() ?? null,
-            a = null != r ? s.A.getGuild(r) : null,
-            t = h.Ay.getVoiceChannelId() === l.id,
-            i = l.isPrivate() || c.A.can(m.xBc.CONNECT, l);
-        return {
-            channelId: l.id,
-            channelName: (0, o.m1)(l, g.default, p.A),
-            channel: l,
-            guild: a,
-            canJoin: i,
-            isAlreadyConnected: t,
-        };
-    }, [e]);
+    } = (0, a.cf)(
+        [A.A, d.A, h.Ay, g.default, p.A, s.A, c.A],
+        () => {
+            let n = A.A.getDiscoverableVoiceStateForUser(e);
+            if (null == n) return x;
+            let l = d.A.getChannel(n.channelId);
+            if (null == l || !l.isVocal()) return x;
+            let r = l.getGuildId?.() ?? null,
+                a = null != r ? s.A.getGuild(r) : null,
+                t = h.Ay.getVoiceChannelId() === l.id,
+                i = l.isPrivate() || c.A.can(m.xBc.CONNECT, l);
+            return {
+                channelId: l.id,
+                channelName: (0, o.m1)(l, g.default, p.A),
+                channel: l,
+                guild: a,
+                canJoin: i,
+                isAlreadyConnected: t,
+            };
+        },
+        [e],
+    );
     if (null == n || !C || I) return null;
     let G = (0, u.gU)(b, j ?? void 0);
     return (0, r.jsx)(t.Dr, {

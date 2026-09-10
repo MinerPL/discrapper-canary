@@ -1,4 +1,4 @@
-t.d(r, {
+(t.d(r, {
     Li: () => F,
     KE: () => N,
     Ni: () => L,
@@ -15,7 +15,7 @@ t.d(r, {
     t(321073),
     t(323874),
     t(14289),
-    t(35956);
+    t(35956));
 var n,
     a,
     l,
@@ -118,12 +118,12 @@ function D(e) {
 }
 function P(e, r) {
     let t = new FileReader();
-    (t.onload = (t) => {
+    ((t.onload = (t) => {
         null == t.target || "string" != typeof t.target.result
             ? L("Error uploading file. Try again!")
             : r(e, t.target.result);
     }),
-        t.readAsDataURL(e);
+        t.readAsDataURL(e));
 }
 function N(e, r, t) {
     if (0 === e.length) return void t?.("No files found!");
@@ -273,13 +273,13 @@ function G(e) {
     return new Promise((r, t) => {
         let n = new window.Image(),
             a = setTimeout(() => t(Error("Timed out measuring image")), 15e3);
-        (n.onload = () => {
-            clearTimeout(a), r({ width: n.naturalWidth, height: n.naturalHeight });
+        ((n.onload = () => {
+            (clearTimeout(a), r({ width: n.naturalWidth, height: n.naturalHeight }));
         }),
             (n.onerror = () => {
-                clearTimeout(a), t(Error("Failed to measure image"));
+                (clearTimeout(a), t(Error("Failed to measure image")));
             }),
-            (n.src = e);
+            (n.src = e));
     });
 }
 async function V(e, r, t) {
@@ -298,12 +298,12 @@ async function V(e, r, t) {
         }
         let i = m.R9[a],
             u = `preview-${e}-${i}-${r.index}`;
-        o.push({
+        (o.push({
             layer: { id: u, type: r.type, order: i, anchor: r.anchor, responsive: r.responsive },
             order: i,
             index: r.index,
         }),
-            (s[u] = URL.createObjectURL(n));
+            (s[u] = URL.createObjectURL(n)));
     }
     o.sort(m.ui);
     let u = o.map((e) => e.layer);
@@ -316,7 +316,7 @@ async function V(e, r, t) {
                     try {
                         return { layer: r, dims: await G(s[r.id]) };
                     } catch (e) {
-                        return E.error(`Failed to measure preview layer ${r.id}:`, e), null;
+                        return (E.error(`Failed to measure preview layer ${r.id}:`, e), null);
                     }
                 }),
             )
@@ -371,7 +371,7 @@ function W() {
         l = o.useCallback(
             async (e) => {
                 let l = await x(e);
-                l.collectionFiles.forEach((e) => {
+                (l.collectionFiles.forEach((e) => {
                     P(e, (e) => {
                         let r = U(e);
                         null != r && t(r, e);
@@ -390,7 +390,7 @@ function W() {
                         }),
                     ),
                     l.ignoredFilenames.sort((e, r) => e.localeCompare(r)),
-                    r(l);
+                    r(l));
             },
             [t, n, a],
         ),

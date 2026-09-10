@@ -47,7 +47,7 @@ class s {
     wideBannerTitle;
     wideBannerBody;
     constructor(e) {
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.applicationId = e.applicationId),
             (this.name = e.name),
             (this.description = e.description),
@@ -89,7 +89,7 @@ class s {
             (this.mobileProductsTitle = e.mobileProductsTitle),
             (this.mobileSummary = e.mobileSummary),
             (this.wideBannerTitle = e.wideBannerTitle),
-            (this.wideBannerBody = e.wideBannerBody);
+            (this.wideBannerBody = e.wideBannerBody));
     }
     static fromServer(e) {
         let {

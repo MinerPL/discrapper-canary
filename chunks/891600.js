@@ -4,10 +4,10 @@ var i = n(478676),
     a = n(919535);
 function s(e, t, n, i, r) {
     let s;
-    n || (t += "\n\n"), (s = e(t, { inline: n, ...i })), (s = (0, a.rI)(i, s));
+    (n || (t += "\n\n"), (s = e(t, { inline: n, ...i })), (s = (0, a.rI)(i, s)));
     let l = (0, a.Ae)(s),
         o = l.hasBailedAst;
-    return (s = l.ast), null != r && (s = r(s, n, o)), s;
+    return ((s = l.ast), null != r && (s = r(s, n, o)), s);
 }
 let l = {
     reactParserFor(e) {

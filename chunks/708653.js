@@ -63,13 +63,13 @@ function h(e, n, t) {
             id: y,
             label: M(!1),
             action: () => {
-                (0, I.k)({ tab: e, targetId: g, isFavorite: !0 }),
+                ((0, I.k)({ tab: e, targetId: g, isFavorite: !0 }),
                     (0, o.YX)(t, {
                         type: o.Z5.FAVORITE,
                         value: o.IP.ADDED_TO_FAVORITES,
                         secondaryValue: e,
                         userId: e === A.x.FRIENDS ? g : void 0,
-                    });
+                    }));
             },
         }),
         _ = (0, r.jsx)(i.Dr, {
@@ -77,13 +77,13 @@ function h(e, n, t) {
             label: M(!0),
             color: "danger",
             action: () => {
-                (0, I.k)({ tab: e, targetId: g, isFavorite: !1 }),
+                ((0, I.k)({ tab: e, targetId: g, isFavorite: !1 }),
                     (0, o.YX)(t, {
                         type: o.Z5.FAVORITE,
                         value: o.IP.REMOVED_FROM_FAVORITES,
                         secondaryValue: e,
                         userId: e === A.x.FRIENDS ? g : void 0,
-                    });
+                    }));
             },
         });
     return { isFavorite: h, toggleFavoriteItem: h ? _ : F, addFavoriteItem: F, removeFavoriteItem: _ };

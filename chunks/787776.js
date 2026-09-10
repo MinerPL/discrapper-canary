@@ -1,4 +1,4 @@
-t(321073),
+(t(321073),
     self.addEventListener("message", (e) => {
         let {
                 data: { rawBufferData: r, width: t, options: o, config: a, id: l },
@@ -26,4 +26,4 @@ t(321073),
                 return { normalizedData: u, normalizedVolumeMultipler: Math.min((o.loudnessThreshold ?? c) / c, 1) };
             })(r, t, o, a);
         self.postMessage({ waveform: s, id: l, normalizedVolumeMultipler: n });
-    });
+    }));

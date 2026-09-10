@@ -11,7 +11,7 @@ function c(e) {
     let { onClose: t, ...n } = e,
         l = s.intl.format(s.t["JmbS+T"], {
             onClick: () => {
-                (0, r.openUserSettings)(a.X.NITRO_PANEL), t();
+                ((0, r.openUserSettings)(a.X.NITRO_PANEL), t());
             },
         });
     return (0, i.jsx)(o.A, {

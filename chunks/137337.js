@@ -11,7 +11,7 @@ async function a({
 }) {
     return (await t.e("447580").then(t.bind(t, 844183))).crop_and_rotate_gif(e, r, o, i, n, l, s, f, c);
 }
-t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162), t(323874), t(14289), t(35956), t(321073);
+(t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162), t(323874), t(14289), t(35956), t(321073));
 let o = null,
     i = {
         0: "VP8_ENC_OK",
@@ -32,7 +32,7 @@ function n(e, r) {
     if (0 === t) return "";
     let a = "",
         o = 0;
-    for (; 0 !== e.HEAPU8[t + o] && o < 256; ) (a += String.fromCharCode(e.HEAPU8[t + o])), o++;
+    for (; 0 !== e.HEAPU8[t + o] && o < 256;) ((a += String.fromCharCode(e.HEAPU8[t + o])), o++);
     return a;
 }
 function l(e, r, t) {
@@ -58,19 +58,17 @@ async function f(e) {
     r.HEAPU8.set(e, t);
     let a = r._malloc(8);
     if (0 === a) throw (r._free(t), Error("Failed to allocate 8 bytes for WebPData struct - out of WASM memory"));
-    (r.HEAPU32[a >> 2] = t), (r.HEAPU32[(a >> 2) + 1] = e.length);
+    ((r.HEAPU32[a >> 2] = t), (r.HEAPU32[(a >> 2) + 1] = e.length));
     let o = r._malloc(32);
     if (0 === o)
         throw (
-            (r._free(t),
-            r._free(a),
-            Error("Failed to allocate 32 bytes for WebPAnimDecoderOptions - out of WASM memory"))
+            r._free(t), r._free(a), Error("Failed to allocate 32 bytes for WebPAnimDecoderOptions - out of WASM memory")
         );
     r._WebPAnimDecoderOptionsInitInternal(o, 263);
     let i = r._WebPAnimDecoderNewInternal(a, o, 263);
     if ((r._free(o), 0 === i))
         throw (
-            (r._free(t), r._free(a), Error("Failed to create WebP decoder - file may be corrupt or not a valid WebP"))
+            r._free(t), r._free(a), Error("Failed to create WebP decoder - file may be corrupt or not a valid WebP")
         );
     try {
         let e = l(r, 32, "WebPAnimInfo");
@@ -81,7 +79,7 @@ async function f(e) {
         r._free(e);
         let n = [],
             s = t * a * 4;
-        for (; 0 !== r._WebPAnimDecoderHasMoreFrames(i); ) {
+        for (; 0 !== r._WebPAnimDecoderHasMoreFrames(i);) {
             let e = r._malloc(4);
             if (0 === e) throw Error("Failed to allocate 4 bytes for frame buffer pointer - out of WASM memory");
             let o = r._malloc(4);
@@ -89,17 +87,17 @@ async function f(e) {
                 throw (r._free(e), Error("Failed to allocate 4 bytes for timestamp pointer - out of WASM memory"));
             let l = r._WebPAnimDecoderGetNext(i, e, o);
             if (0 === l) {
-                r._free(e), r._free(o);
+                (r._free(e), r._free(o));
                 break;
             }
             let f = r.HEAPU32[e >> 2],
                 c = r.HEAP32[o >> 2],
                 u = new Uint8Array(r.HEAPU8.buffer, f, s).slice();
-            n.push({ data: u, timestamp: c, width: t, height: a }), r._free(e), r._free(o);
+            (n.push({ data: u, timestamp: c, width: t, height: a }), r._free(e), r._free(o));
         }
         return { frames: n, width: t, height: a, frameCount: o };
     } finally {
-        r._WebPAnimDecoderDelete(i), r._free(t), r._free(a);
+        (r._WebPAnimDecoderDelete(i), r._free(t), r._free(a));
     }
 }
 async function c(e, r, t) {
@@ -120,13 +118,13 @@ async function c(e, r, t) {
         c = a.quality ?? 85,
         u = a.method ?? 4,
         m = l(f, 128, "WebPAnimEncoderOptions");
-    f._WebPAnimEncoderOptionsInitInternal(m, 265), (f.HEAP32[(m >> 2) + 2] = 1), (f.HEAP32[(m >> 2) + 5] = 0);
+    (f._WebPAnimEncoderOptionsInitInternal(m, 265), (f.HEAP32[(m >> 2) + 2] = 1), (f.HEAP32[(m >> 2) + 5] = 0));
     let d = f._WebPAnimEncoderNewInternal(r, t, m, 265);
     if ((f._free(m), 0 === d)) throw Error("Failed to create WebP encoder");
     let _ = f._malloc(256);
     if (0 === _)
         throw (f._WebPAnimEncoderDelete(d), Error("Failed to allocate 256 bytes for WebPConfig - out of WASM memory"));
-    f._WebPConfigInitInternal(_, 0, c, 527), (f.HEAP32[(_ >> 2) + 2] = u);
+    (f._WebPConfigInitInternal(_, 0, c, 527), (f.HEAP32[(_ >> 2) + 2] = u));
     try {
         for (let a = 0; a < e.length; a++) {
             let o = e[a],
@@ -135,13 +133,13 @@ async function c(e, r, t) {
             if (0 === s) throw Error(`Failed to allocate 512 bytes for WebPPicture (frame ${a}) - out of WASM memory`);
             let c = f._WebPPictureInitInternal(s, 527);
             if (0 === c) throw (f._free(s), Error(`Failed to initialize WebPPicture for frame ${a}`));
-            (f.HEAP32[(s + 8) >> 2] = r), (f.HEAP32[(s + 12) >> 2] = t), (f.HEAP32[s >> 2] = 1);
+            ((f.HEAP32[(s + 8) >> 2] = r), (f.HEAP32[(s + 12) >> 2] = t), (f.HEAP32[s >> 2] = 1));
             let u = f._malloc(o.data.length);
             if (0 === u)
                 throw (
-                    (f._WebPPictureFree(s),
+                    f._WebPPictureFree(s),
                     f._free(s),
-                    Error(`Failed to allocate ${o.data.length} bytes for frame ${a} RGBA data - out of WASM memory`))
+                    Error(`Failed to allocate ${o.data.length} bytes for frame ${a} RGBA data - out of WASM memory`)
                 );
             f.HEAPU8.set(o.data, u);
             let m = 4 * r,
@@ -167,7 +165,7 @@ async function c(e, r, t) {
         }
         let l = f._malloc(8);
         if (0 === l) throw Error("Failed to allocate 8 bytes for output WebPData struct - out of WASM memory");
-        (f.HEAPU32[l >> 2] = 0), (f.HEAPU32[(l >> 2) + 1] = 0);
+        ((f.HEAPU32[l >> 2] = 0), (f.HEAPU32[(l >> 2) + 1] = 0));
         let s = f._WebPAnimEncoderAssemble(d, l);
         if (0 === s) {
             let e = n(f, d);
@@ -176,9 +174,9 @@ async function c(e, r, t) {
         let c = f.HEAPU32[l >> 2],
             u = f.HEAPU32[(l >> 2) + 1],
             m = new Uint8Array(f.HEAPU8.buffer, c, u).slice();
-        return f._WebPFree(c), f._free(l), m;
+        return (f._WebPFree(c), f._free(l), m);
     } finally {
-        f._free(_), f._WebPAnimEncoderDelete(d);
+        (f._free(_), f._WebPAnimEncoderDelete(d));
     }
 }
 async function u(e) {
@@ -236,7 +234,7 @@ async function u(e) {
                             let i = (o * r + t) * 4,
                                 n = r - 1 - t,
                                 l = (o * r + n) * 4;
-                            (a[l] = e[i]), (a[l + 1] = e[i + 1]), (a[l + 2] = e[i + 2]), (a[l + 3] = e[i + 3]);
+                            ((a[l] = e[i]), (a[l + 1] = e[i + 1]), (a[l + 2] = e[i + 2]), (a[l + 3] = e[i + 3]));
                         }
                     return a;
                 })(e.data, E, p),
@@ -257,19 +255,19 @@ async function u(e) {
                                 c = (a * r + n) * 4;
                             switch (o) {
                                 case 90:
-                                    (s = t - 1 - a), (f = n);
+                                    ((s = t - 1 - a), (f = n));
                                     break;
                                 case 180:
-                                    (s = r - 1 - n), (f = t - 1 - a);
+                                    ((s = r - 1 - n), (f = t - 1 - a));
                                     break;
                                 case 270:
-                                    (s = a), (f = r - 1 - n);
+                                    ((s = a), (f = r - 1 - n));
                                     break;
                                 default:
-                                    (s = n), (f = a);
+                                    ((s = n), (f = a));
                             }
                             let u = (f * i + s) * 4;
-                            (l[u] = e[c]), (l[u + 1] = e[c + 1]), (l[u + 2] = e[c + 2]), (l[u + 3] = e[c + 3]);
+                            ((l[u] = e[c]), (l[u + 1] = e[c + 1]), (l[u + 2] = e[c + 2]), (l[u + 3] = e[c + 3]));
                         }
                     return { data: l, width: i, height: n };
                 })(e.data, E, p, n).data,
@@ -280,7 +278,7 @@ async function u(e) {
     ) {
         let e = s ?? E,
             r = u ?? p;
-        null != s && null == u
+        (null != s && null == u
             ? (r = Math.round((p / E) * s))
             : null != u && null == s && (e = Math.round((E / p) * u)),
             (e !== E || r !== p) &&
@@ -293,18 +291,18 @@ async function u(e) {
                                 let s = Math.floor((l * r) / a),
                                     f = (Math.floor((n * t) / o) * r + s) * 4,
                                     c = (n * a + l) * 4;
-                                (i[c] = e[f]), (i[c + 1] = e[f + 1]), (i[c + 2] = e[f + 2]), (i[c + 3] = e[f + 3]);
+                                ((i[c] = e[f]), (i[c + 1] = e[f + 1]), (i[c + 2] = e[f + 2]), (i[c + 3] = e[f + 3]));
                             }
                         return i;
                     })(t.data, E, p, e, r),
                     timestamp: t.timestamp,
                 }))),
                 (E = e),
-                (p = r));
+                (p = r)));
     }
     return await c(h, E, p, { quality: m });
 }
-t(140667), [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, r, t) => ({ ...e, [r]: t }), {});
+(t(140667), [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, r, t) => ({ ...e, [r]: t }), {}));
 var m,
     d =
         (((m = {})[(m.CROP_ANIMATED_IMAGE_START = 0)] = "CROP_ANIMATED_IMAGE_START"),
@@ -326,7 +324,7 @@ async function _(e) {
     } = e;
     try {
         let e;
-        (e =
+        ((e =
             "webp" === m
                 ? await u({
                       webp: r,
@@ -350,7 +348,7 @@ async function _(e) {
                       resizeWidth: f,
                       resizeHeight: c,
                   })),
-            self.postMessage({ type: d.CROP_ANIMATED_IMAGE_COMPLETE, result: e });
+            self.postMessage({ type: d.CROP_ANIMATED_IMAGE_COMPLETE, result: e }));
     } catch (t) {
         let e = t instanceof Error ? t.message : String(t),
             r = t instanceof Error ? t.stack : void 0;

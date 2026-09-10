@@ -30,7 +30,7 @@ function g(e) {
                 a = n.useRef(0),
                 d = n.useCallback(() => {
                     let e = ++a.current;
-                    s(!1),
+                    (s(!1),
                         (0, h.HB)()
                             .then(() => {
                                 e === a.current && (s(!1), i(!0));
@@ -39,7 +39,7 @@ function g(e) {
                                 if (e !== a.current) return;
                                 let t = p.A.getLinkCodeExpiresAt();
                                 null != p.A.getLinkCode() && null != t && t > Date.now() ? i(!0) : s(!0);
-                            });
+                            }));
                 }, []);
             return ((0, c.Ay)(d), r)
                 ? { state: "error" }
@@ -49,10 +49,10 @@ function g(e) {
                       : { state: "error" }
                   : { state: "loading" };
         })();
-    (0, k.A)(r),
+    ((0, k.A)(r),
         n.useEffect(() => {
             "error" === L.state && (g?.(), r());
-        }, [L.state, r, g]);
+        }, [L.state, r, g]));
     let b = m ?? A.intl.string(C.default.ITlV6p),
         v = j ?? A.intl.format(C.default.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
     return (0, s.jsxs)(l.d, {

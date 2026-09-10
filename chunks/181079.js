@@ -24,7 +24,7 @@ function p() {
     if (null != d)
         for (let e in d) {
             let t = d[e];
-            a++,
+            (a++,
                 t.type !== s.Ip.CATEGORY && l++,
                 (n[e] = {
                     id: e,
@@ -33,7 +33,7 @@ function p() {
                     channelType: t.channelType?.value,
                     order: t.position,
                     parentId: t.parentId !== c.O8 ? t.parentId : null,
-                });
+                }));
         }
     let u = e?.guildVisible?.value,
         p = u ?? !(0, r.isEmpty)(n),
@@ -46,7 +46,7 @@ function p() {
 class T extends a.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(o.A), p(), this.syncWith([o.A], p);
+        (this.waitFor(o.A), p(), this.syncWith([o.A], p));
     }
     getFavoriteChannels() {
         return _;

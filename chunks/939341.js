@@ -92,7 +92,7 @@ function S(e, t) {
 }
 function v(e, t, n) {
     let l = S(e, t);
-    return N({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l;
+    return (N({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l);
 }
 function N(e) {
     let { activity: t, application: n, largeImageSrc: s, trackingSource: r } = e,

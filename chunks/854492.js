@@ -9,7 +9,7 @@ async function d(e) {
     let t = l.A.lurkingGuildIds().filter((t) => !e.includes(t));
     if (0 === t.length) return;
     let n = new Map(t.map((e) => [e, l.A.getLurkingSourceForGuild(e)]));
-    r.h.dispatch({ type: "GUILD_STOP_LURKING", ignoredGuildIds: e }),
+    (r.h.dispatch({ type: "GUILD_STOP_LURKING", ignoredGuildIds: e }),
         await Promise.all(
             t.map(async (e) => {
                 let t = n.get(e) ?? null;
@@ -24,7 +24,7 @@ async function d(e) {
                     r.h.dispatch({ type: "GUILD_STOP_LURKING_FAILURE", lurkingGuildId: e, lurkingSource: t });
                 }
             }),
-        );
+        ));
 }
 async function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,

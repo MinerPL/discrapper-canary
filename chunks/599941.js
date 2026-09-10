@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     KE: () => g,
     Tq: () => A,
     XE: () => P,
@@ -12,7 +12,7 @@ n.d(t, {
     uP: () => f,
     uk: () => h,
 }),
-    n(321073);
+    n(321073));
 var l = n(582128),
     i = n(17928),
     r = n(724442),
@@ -27,17 +27,21 @@ let m = [];
 function p(e) {
     let { includeSoftDeleted: t = !1, includeUnpublished: n = !0 } =
         arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (0, i.yK)([c.A], () => {
-        if (null == e) return [];
-        let l = c.A.getSubscriptionGroupListing(e);
-        if (null == l) return [];
-        let i = [];
-        for (let e of l.subscription_listings_ids) {
-            let l = c.A.getSubscriptionListing(e);
-            null != l && (!l.soft_deleted || t) && (l.published || n) && i.push(l);
-        }
-        return i;
-    }, [e, t, n]);
+    return (0, i.yK)(
+        [c.A],
+        () => {
+            if (null == e) return [];
+            let l = c.A.getSubscriptionGroupListing(e);
+            if (null == l) return [];
+            let i = [];
+            for (let e of l.subscription_listings_ids) {
+                let l = c.A.getSubscriptionListing(e);
+                null != l && (!l.soft_deleted || t) && (l.published || n) && i.push(l);
+            }
+            return i;
+        },
+        [e, t, n],
+    );
 }
 function C(e) {
     return (0, i.bG)([c.A], () => (null != e ? c.A.getSubscriptionListing(e) : null));
@@ -64,13 +68,13 @@ function f(e) {
                     null != e ? c.A.getSubscriptionGroupListingsForGuildFetchState(e) : c.e.FETCHED,
                 ),
                 p = l.useRef(t);
-            l.useEffect(() => {
+            (l.useEffect(() => {
                 if (null == e || !d || !0 === o) return;
                 let l = c.A.getSubscriptionGroupListingsForGuildFetchState(e);
                 (t || l === c.e.NOT_FETCHED) && ((p.current = !1), u.WA(e, { includeSoftDeleted: n, countryCode: a }));
             }, [d, e, n, t, a, o]),
                 (0, r.A)(p),
-                c.e.FETCHED;
+                c.e.FETCHED);
         })(e),
         (0, i.yK)([c.A], () => {
             let n = null != e ? c.A.getSubscriptionGroupListingsForGuild(e) : m,
@@ -112,7 +116,7 @@ function S() {
         submitting: e,
         deleteSubscriptionListing: async function (e, n, l) {
             try {
-                return t(!0), i(null), await u.H7(e, n, l), !0;
+                return (t(!0), i(null), await u.H7(e, n, l), !0);
             } catch (e) {
                 i(e);
             } finally {
@@ -159,7 +163,7 @@ function g() {
     return {
         loading: e,
         updateSubscriptionsSettings: l.useCallback(async (e, n) => {
-            t(!0), i(null);
+            (t(!0), i(null));
             try {
                 await u.DO(e, n);
             } catch (e) {
@@ -177,7 +181,7 @@ function P() {
     return {
         loading: e,
         fetchSubscriptionsSettings: l.useCallback(async (e) => {
-            t(!0), i(null);
+            (t(!0), i(null));
             try {
                 await u.W5(e);
             } catch (e) {

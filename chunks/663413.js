@@ -26,7 +26,7 @@ let p = new Set([f.BVt.LOGIN, f.BVt.REGISTER]),
                     let { lang: t, style: n, className: a } = (0, E.xb)(),
                         l = (0, o.zy)(),
                         c = r.useMemo(() => p.has(l.pathname), [l.pathname]);
-                    (0, I.A)(window, c), (0, A.A)(document.documentElement);
+                    ((0, I.A)(window, c), (0, A.A)(document.documentElement));
                     let h = (0, d.bG)([u.A, _.A], () =>
                         _.A.getWindowOpen(f.MLl.DEVTOOLS_POPOUT) ? 0 : u.A.sidebarWidth,
                     );

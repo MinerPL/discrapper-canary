@@ -1,4 +1,4 @@
-t.d(s, { l: () => eM, A: () => eR }), t(321073);
+(t.d(s, { l: () => eM, A: () => eR }), t(321073));
 var n = t(477900),
     r = t(582128),
     a = t(503698),
@@ -243,11 +243,11 @@ function ej(e) {
         (0, n.jsx)(eA, {
             description: u ? eu.intl.format(eu.t.xCaYwE, {}) : eu.intl.format(eu.t["gpqr+n"], {}),
             onLearnMore: function () {
-                a(),
+                (a(),
                     c ? (0, G.openUserProfileModal)({ userId: t.id }) : (0, Y.openUserSettings)(V.X.PROFILE_PANEL),
                     q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
                         action: "user_profile_customization",
-                    });
+                    }));
             },
             renderVisual: () => s,
         })
@@ -276,9 +276,9 @@ function eT(e) {
     return (0, n.jsx)(eA, {
         description: eu.intl.format(L, { time: C }),
         onLearnMore: function () {
-            t(),
+            (t(),
                 (0, ea.D)({ analyticsLocations: a, displayProfile: null }),
-                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
+                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" }));
         },
         renderVisual: () =>
             (0, n.jsx)(N.h, {
@@ -300,8 +300,8 @@ function e_(e) {
     return (0, n.jsx)(eA, {
         description: l ? eu.intl.format(eu.t.couiKJ, {}) : eu.intl.format(eu.t["0hUHi6"], {}),
         onLearnMore: function () {
-            window.open(Q.A.getArticleURL(ex.MVz.PREMIUM_DETAILS)),
-                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
+            (window.open(Q.A.getArticleURL(ex.MVz.PREMIUM_DETAILS)),
+                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" }));
         },
         renderVisual: () =>
             (null != r && r.length > 0) || (!l && null != a && a.length > 0)
@@ -361,9 +361,9 @@ function eS(e) {
     return (0, n.jsx)(eA, {
         description: s === ep.PremiumTypes.TIER_1 ? eu.intl.format(eu.t.K4Hv69, {}) : eu.intl.format(eu.t.wRxEDW, {}),
         onLearnMore: function () {
-            t(),
+            (t(),
                 (0, Y.openUserSettings)(V.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
-                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
+                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" }));
         },
         renderVisual: () =>
             u
@@ -408,8 +408,8 @@ function ey() {
     return (0, n.jsx)(eA, {
         description: eu.intl.format(eu.t.wK04T1, {}),
         onLearnMore: function () {
-            window.open(Q.A.getArticleURL(ex.MVz.STREAM_QUALITY_SETTINGS)),
-                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
+            (window.open(Q.A.getArticleURL(ex.MVz.STREAM_QUALITY_SETTINGS)),
+                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" }));
         },
         renderVisual: () => (0, n.jsx)("img", { alt: "", src: e }),
     });
@@ -420,8 +420,8 @@ function eP(e) {
     return (0, n.jsx)(eA, {
         description: s === ep.PremiumTypes.TIER_2 ? eu.intl.format(eu.t.GsOFRJ, {}) : eu.intl.format(eu.t.wFWO6D, {}),
         onLearnMore: function () {
-            window.open(Q.A.getArticleURL(ex.MVz.PREMIUM_DETAILS)),
-                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
+            (window.open(Q.A.getArticleURL(ex.MVz.PREMIUM_DETAILS)),
+                q.default.track(ex.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" }));
         },
         renderVisual: () => (0, n.jsx)("img", { alt: "", src: t }),
     });
@@ -494,7 +494,7 @@ let eR = function (e) {
         } = e,
         v = (0, d.bG)([Z.default], () => {
             let e = Z.default.getCurrentUser();
-            return c()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
+            return (c()(null != e, "ProfileItem: currentUser cannot be undefined"), e);
         });
     r.useEffect(() => {
         (0, B.A)(v.id, v.getAvatarURL(null, 80));

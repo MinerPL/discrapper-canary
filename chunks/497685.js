@@ -51,7 +51,7 @@ function v(e, t) {
 }
 function A(e, t, r) {
     let n = Date.now();
-    C(t),
+    (C(t),
         i.Bo.get({
             url: E.Rsh.GIFS_SEARCH,
             query: { q: e, media_format: p.A.getSelectedFormat(), locale: d.default.locale, limit: r },
@@ -60,11 +60,11 @@ function A(e, t, r) {
         }).then(
             (s) => {
                 let l = s.body;
-                v(l, t, { startTime: n, limit: r }),
-                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: l });
+                (v(l, t, { startTime: n, limit: r }),
+                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: e, items: l }));
             },
             () => o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e }),
-        );
+        ));
 }
 let w = s().debounce(A, 250);
 function x(e, t) {
@@ -91,16 +91,21 @@ function T() {
 function N(e) {
     let { type: t, index: r, offset: n, limit: s, results: l, totalResults: a, query: o, gifId: c } = e,
         h = (0, f.QL)(p.A.getAnalyticsID(), t, { offset: n, limit: s, results: l, totalResults: a });
-    u.Ay.trackWithMetadata(E.HAw.SEARCH_RESULT_SELECTED, { ...h, index_num: r, source_object: "GIF Picker", query: o }),
+    (u.Ay.trackWithMetadata(E.HAw.SEARCH_RESULT_SELECTED, {
+        ...h,
+        index_num: r,
+        source_object: "GIF Picker",
+        query: o,
+    }),
         null != c &&
-            i.Bo.post({ url: E.Rsh.GIFS_SELECT, body: { id: c, q: o }, oldFormErrors: !0, rejectWithError: !0 });
+            i.Bo.post({ url: E.Rsh.GIFS_SELECT, body: { id: c, q: o }, oldFormErrors: !0, rejectWithError: !0 }));
 }
 function G() {
     let e = (0, l.A)().replace(S, "");
-    u.Ay.trackWithMetadata(E.HAw.SEARCH_OPENED, { search_type: E.I4_.GIF, load_id: e }),
+    (u.Ay.trackWithMetadata(E.HAw.SEARCH_OPENED, { search_type: E.I4_.GIF, load_id: e }),
         o.h.wait(() => {
             o.h.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: e });
-        });
+        }));
 }
 function D() {
     i.Bo.get({
@@ -116,7 +121,7 @@ function D() {
 }
 function j(e) {
     let t = Date.now();
-    C(E.dD.TRENDING_GIFS),
+    (C(E.dD.TRENDING_GIFS),
         i.Bo.get({
             url: E.Rsh.GIFS_TRENDING_GIFS,
             query: { media_format: p.A.getSelectedFormat(), locale: d.default.locale, limit: e },
@@ -125,13 +130,13 @@ function j(e) {
         }).then(
             (r) => {
                 let { body: n } = r;
-                v(n, E.dD.TRENDING_GIFS, { startTime: t, limit: e }),
-                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: n });
+                (v(n, E.dD.TRENDING_GIFS, { startTime: t, limit: e }),
+                    o.h.dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: n }));
             },
             () => {
                 o.h.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
             },
-        );
+        ));
 }
 function P(e) {
     let t = I.A.toURLSafe(e);
@@ -173,9 +178,9 @@ function b(e) {
                     : r,
                 o = L.test(i) ? a.TL.IMAGE : e.format;
             if (((t.gifs[P(e.url)] = { ...e, src: i, format: o, order: n + 1 }), a.uz.toBinary(t).length > 762880))
-                return R.A.show({ title: y.intl.string(y.t["+XYXtZ"]), body: y.intl.string(y.t.YSDH9n) }), !1;
+                return (R.A.show({ title: y.intl.string(y.t["+XYXtZ"]), body: y.intl.string(y.t.YSDH9n) }), !1);
             let u = s().size(t.gifs);
-            u > 2 && (t.hideTooltip = !0), g.default.track(E.HAw.GIF_FAVORITED, { total_num_favorited: u });
+            (u > 2 && (t.hideTooltip = !0), g.default.track(E.HAw.GIF_FAVORITED, { total_num_favorited: u }));
         },
         _.Sb.INFREQUENT_USER_ACTION,
     );
@@ -184,8 +189,8 @@ function M(e) {
     m.bW.updateAsync(
         "favoriteGifs",
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)],
-                g.default.track(E.HAw.GIF_UNFAVORITED, { total_num_favorited: s().size(t.gifs) });
+            (e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)],
+                g.default.track(E.HAw.GIF_UNFAVORITED, { total_num_favorited: s().size(t.gifs) }));
         },
         _.Sb.INFREQUENT_USER_ACTION,
     );

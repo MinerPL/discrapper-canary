@@ -22,7 +22,7 @@ let o = u.createContext(null),
                 let e = Date.now();
                 if ((null == k.current && null != n && (k.current = e - n), !d)) return;
                 let { analyticsLocations: t, value: r } = C.current;
-                (0, c.Wn)({ action: "VIEW", analyticsLocations: t, ...r }),
+                ((0, c.Wn)({ action: "VIEW", analyticsLocations: t, ...r }),
                     (0, c.wd)({
                         profileUi: "USER_PROFILE",
                         timeToInteractiveMs: k.current,
@@ -32,7 +32,7 @@ let o = u.createContext(null),
                         fetchStartedAt: s,
                         analyticsLocations: t,
                         ...r,
-                    });
+                    }));
             }, [d]),
             (0, l.jsx)(o.Provider, { value: t, children: r })
         );

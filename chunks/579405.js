@@ -17,5 +17,5 @@ e.exports = function (e) {
             );
         u(r, t);
     }
-    return 0 !== e && (r.length = e), r;
+    return (0 !== e && (r.length = e), r);
 };

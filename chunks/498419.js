@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -29,17 +30,17 @@
                 dataUrl: !1,
                 win: window,
             };
-        ((f = {}).ff = "u" > typeof InstallTrigger),
+        (((f = {}).ff = "u" > typeof InstallTrigger),
             (f.chrome = !!window.chrome),
             (f.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
             (f.ie = !1),
             (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (f.supported = f.chrome || f.ff || f.opera);
+            (f.supported = f.chrome || f.ff || f.opera));
         var y = [];
-        (h = function () {}), (l = p = !1);
+        ((h = function () {}), (l = p = !1));
         var v = {};
-        (v.ready = function () {
-            (l = !0), v.reset(), h();
+        ((v.ready = function () {
+            ((l = !0), v.reset(), h());
         }),
             (v.reset = function () {
                 l &&
@@ -55,12 +56,12 @@
             (v.start = function () {
                 if (l && !u) {
                     var e = function () {
-                        (c = y[0]), (u = !1), y.length > 0 && (y.shift(), v.start());
+                        ((c = y[0]), (u = !1), y.length > 0 && (y.shift(), v.start()));
                     };
                     if (y.length > 0) {
                         u = !0;
                         var r = function () {
-                            ["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
+                            (["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
                                 function (e) {
                                     e in y[0].options && (t[e] = y[0].options[e]);
                                 },
@@ -71,7 +72,7 @@
                                         e();
                                     },
                                     !1,
-                                );
+                                ));
                         };
                         c
                             ? S.run(
@@ -84,7 +85,7 @@
                             : r();
                     }
                 }
-            });
+            }));
         var w = {},
             _ = function (e) {
                 return (
@@ -100,17 +101,17 @@
         function M(e) {
             if (e.paused || e.ended || p) return !1;
             try {
-                i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n);
+                (i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n));
             } catch (e) {}
-            (m = setTimeout(function () {
+            ((m = setTimeout(function () {
                 M(e);
             }, S.duration)),
-                x.setIcon(o);
+                x.setIcon(o));
         }
-        (w.circle = function (e) {
+        ((w.circle = function (e) {
             e = _(e);
             var r = !1;
-            2 === e.len
+            (2 === e.len
                 ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0))
                 : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w), (r = !0)),
                 i.clearRect(0, 0, a, n),
@@ -142,11 +143,11 @@
                           Math.floor(e.y + e.h - 0.2 * e.h),
                       )
                     : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
-                i.closePath();
+                i.closePath());
         }),
             (w.rectangle = function (e) {
                 e = _(e);
-                2 === e.len
+                (2 === e.len
                     ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w))
                     : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)),
                     i.clearRect(0, 0, a, n),
@@ -165,8 +166,8 @@
                               Math.floor(e.y + e.h - 0.2 * e.h),
                           )
                         : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
-                    i.closePath();
-            });
+                    i.closePath());
+            }));
         var x = {};
         function C(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, r, n) {
@@ -182,7 +183,7 @@
             for (r in t) n[r] = t[r];
             return n;
         }
-        (x.getIcon = function () {
+        ((x.getIcon = function () {
             var e = !1;
             return (
                 t.element
@@ -210,23 +211,23 @@
             (x.setIcon = function (e) {
                 var n = e.toDataURL("image/png");
                 if ((t.dataUrl && t.dataUrl(n), t.element))
-                    t.element.setAttribute("href", n), t.element.setAttribute("src", n);
+                    (t.element.setAttribute("href", n), t.element.setAttribute("src", n));
                 else if (t.elementId) {
                     var a = g.getElementById(t.elementId);
-                    a.setAttribute("href", n), a.setAttribute("src", n);
+                    (a.setAttribute("href", n), a.setAttribute("src", n));
                 } else if (f.ff || f.opera) {
                     var o = r;
-                    (r = g.createElement("link")),
+                    ((r = g.createElement("link")),
                         f.opera && r.setAttribute("rel", "icon"),
                         r.setAttribute("rel", "icon"),
                         r.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(r),
                         r.setAttribute("href", n),
-                        o.parentNode && o.parentNode.removeChild(o);
+                        o.parentNode && o.parentNode.removeChild(o));
                 } else r.setAttribute("href", n);
-            });
+            }));
         var S = {};
-        (S.duration = 40),
+        ((S.duration = 40),
             (S.types = {}),
             (S.types.fade = [
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0 },
@@ -277,7 +278,7 @@
                 a < i.length && a >= 0)
                     ? (w[t.type](R(e, i[a])),
                       (d = setTimeout(function () {
-                          n ? (a -= 1) : (a += 1), S.run(e, r, n, a);
+                          (n ? (a -= 1) : (a += 1), S.run(e, r, n, a));
                       }, S.duration)),
                       x.setIcon(o))
                     : r();
@@ -286,15 +287,15 @@
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
             (t.animation = S.types["" + t.animation] ? t.animation : b.animation),
-            (g = t.win.document);
+            (g = t.win.document));
         var E = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
         if (E || A)
             for (var T = 0; T < S.types["" + t.animation].length; T++) {
                 var P = S.types["" + t.animation][T];
-                E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
+                (E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
                     A && (P.x < 0.6 ? (P.x = P.x - 0.4) : (P.x = P.x - 2 * P.x + (1 - P.h))),
-                    (S.types["" + t.animation][T] = P);
+                    (S.types["" + t.animation][T] = P));
             }
         return (
             (t.type = w["" + t.type] ? t.type : b.type),
@@ -304,28 +305,28 @@
             r.hasAttribute("href")
                 ? (s.setAttribute("crossOrigin", "anonymous"),
                   (s.onload = function () {
-                      (n = s.height > 0 ? s.height : 32),
+                      ((n = s.height > 0 ? s.height : 32),
                           (a = s.width > 0 ? s.width : 32),
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          v.ready();
+                          v.ready());
                   }),
                   s.setAttribute("src", r.getAttribute("href")))
                 : ((s.onload = function () {
-                      (n = 32),
+                      ((n = 32),
                           (a = 32),
                           (s.height = n),
                           (s.width = a),
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          v.ready();
+                          v.ready());
                   }),
                   s.setAttribute("src", "")),
             {
                 badge: function (e, t) {
-                    (t = ("string" == typeof t ? { animation: t } : t) || {}),
+                    ((t = ("string" == typeof t ? { animation: t } : t) || {}),
                         (h = function () {
                             try {
                                 if ("number" == typeof e ? e > 0 : "" !== e) {
@@ -351,13 +352,13 @@
                                 throw Error("Error setting badge. Message: " + e.message);
                             }
                         }),
-                        l && h();
+                        l && h());
                 },
                 video: function (e) {
-                    (h = function () {
+                    ((h = function () {
                         try {
                             if ("stop" === e) {
-                                (p = !0), v.reset(), (p = !1);
+                                ((p = !0), v.reset(), (p = !1));
                                 return;
                             }
                             e.addEventListener(
@@ -371,27 +372,27 @@
                             throw Error("Error setting video. Message: " + e.message);
                         }
                     }),
-                        l && h();
+                        l && h());
                 },
                 image: function (e) {
-                    (h = function () {
+                    ((h = function () {
                         try {
                             var t = e.width,
                                 r = e.height,
                                 s = document.createElement("img"),
                                 l = t / a < r / n ? t / a : r / n;
-                            s.setAttribute("crossOrigin", "anonymous"),
+                            (s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
-                                    i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), x.setIcon(o);
+                                    (i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), x.setIcon(o));
                                 }),
                                 s.setAttribute("src", e.getAttribute("src")),
                                 (s.height = r / l),
-                                (s.width = t / l);
+                                (s.width = t / l));
                         } catch (e) {
                             throw Error("Error setting image. Message: " + e.message);
                         }
                     }),
-                        l && h();
+                        l && h());
                 },
                 webcam: function (e) {
                     if (
@@ -403,7 +404,7 @@
                         f.supported)
                     ) {
                         var t = !1;
-                        (navigator.getUserMedia =
+                        ((navigator.getUserMedia =
                             navigator.getUserMedia ||
                             navigator.oGetUserMedia ||
                             navigator.msGetUserMedia ||
@@ -412,23 +413,23 @@
                             (h = function () {
                                 try {
                                     if ("stop" === e) {
-                                        (p = !0), v.reset(), (p = !1);
+                                        ((p = !0), v.reset(), (p = !1));
                                         return;
                                     }
-                                    ((t = document.createElement("video")).width = a),
+                                    (((t = document.createElement("video")).width = a),
                                         (t.height = n),
                                         navigator.getUserMedia(
                                             { video: !0, audio: !1 },
                                             function (e) {
-                                                (t.src = URL.createObjectURL(e)), t.play(), M(t);
+                                                ((t.src = URL.createObjectURL(e)), t.play(), M(t));
                                             },
                                             function () {},
-                                        );
+                                        ));
                                 } catch (e) {
                                     throw Error("Error setting webcam. Message: " + e.message);
                                 }
                             }),
-                            l && h();
+                            l && h());
                     }
                 },
                 reset: v.reset,

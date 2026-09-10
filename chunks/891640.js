@@ -75,7 +75,7 @@ let f = {
             let { stripeElements: t, remountAddressElement: n, setBillingAddressState: l, stripe: i } = e,
                 { paymentMethod: a } = await (0, r.hr)(i, t),
                 { billingAddressInfo: s } = (0, o.uK)(a);
-            l((e) => ({ ...e, info: s })), n();
+            (l((e) => ({ ...e, info: s })), n());
         },
         stepAfterPaymentElement: s.pn.ADDRESS,
         submitAddressStep: async (e) => await c(e, u.he.PAYMENT_REQUEST),

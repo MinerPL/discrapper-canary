@@ -1,4 +1,4 @@
-n.d(t, { E: () => q, A: () => Z }), n(321073);
+(n.d(t, { E: () => q, A: () => Z }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -125,11 +125,15 @@ function Z(e) {
             guildPopulated:
                 ((s = (0, c.bG)([y.A], () => y.A.getChannel(ei?.systemChannelId))),
                 (o = (0, c.yK)([M.A], () => (null != s ? M.A.getMessages(s.id).toArray() : []))),
-                (0, c.bG)([N.A], () => {
-                    let e = N.A.getMemberCount(ei?.id) ?? 0,
-                        t = o.some((e) => e.type === L.lAJ.USER_JOIN);
-                    return e > 1 || t;
-                }, [ei, o])),
+                (0, c.bG)(
+                    [N.A],
+                    () => {
+                        let e = N.A.getMemberCount(ei?.id) ?? 0,
+                            t = o.some((e) => e.type === L.lAJ.USER_JOIN);
+                        return e > 1 || t;
+                    },
+                    [ei, o],
+                )),
             guildMessaged:
                 ((u = (0, c.bG)([y.A], () => (null != ei ? y.A.getMutableBasicGuildChannelsForGuild(ei.id) : null))),
                 (t = i.useMemo(() => (null == u ? [] : S().values(u)), [u])),
@@ -144,16 +148,21 @@ function Z(e) {
                 ((E = (0, c.bG)([v.A], () => v.A.hasLayers())),
                 (H = (0, c.bG)([T.A], () => T.A.getGuild(ei?.id))),
                 H?.icon != null && !E),
-            guildChannelCreated: (0, c.bG)([b.Ay], () => {
-                let e = b.Ay.getChannels(ei?.id),
-                    t = e[b.vM];
-                function n(e) {
-                    return (
-                        null != ei && D.default.extractTimestamp(e.channel.id) - D.default.extractTimestamp(ei.id) > 500
-                    );
-                }
-                return e[b.I6].some(n) || t.some(n);
-            }, [ei]),
+            guildChannelCreated: (0, c.bG)(
+                [b.Ay],
+                () => {
+                    let e = b.Ay.getChannels(ei?.id),
+                        t = e[b.vM];
+                    function n(e) {
+                        return (
+                            null != ei &&
+                            D.default.extractTimestamp(e.channel.id) - D.default.extractTimestamp(ei.id) > 500
+                        );
+                    }
+                    return e[b.I6].some(n) || t.some(n);
+                },
+                [ei],
+            ),
         },
         eg = (ei?.premiumSubscriberCount ?? 0) > 0,
         eA = !0 === (0, U.A)(ei?.id),
@@ -165,7 +174,7 @@ function Z(e) {
             handleAddApplication: eE,
             handleBoost: eS,
         } = ((Z = i.useCallback(() => {
-            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.INVITE,
             }),
@@ -187,24 +196,24 @@ function Z(e) {
                                 source: L.PE1.CHANNEL_WELCOME,
                                 analyticsLocation: { section: L.JJy.CHANNEL_WELCOME_CTA },
                             });
-                    });
+                    }));
         }, [ei])),
         (Y = i.useCallback(() => {
-            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.SEND_MESSAGE,
             }),
-                B._.dispatch(L.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: L.dJq });
+                B._.dispatch(L.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: L.dJq }));
         }, [])),
         (X = i.useCallback(() => {
-            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.PERSONALIZE_SERVER,
             }),
-                null != ei && k.A.open(ei.id, (0, O.x)(), { section: L.JJy.CHANNEL_WELCOME_CTA });
+                null != ei && k.A.open(ei.id, (0, O.x)(), { section: L.JJy.CHANNEL_WELCOME_CTA }));
         }, [ei])),
         (Q = i.useCallback(() => {
-            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.DOWNLOAD,
             }),
@@ -213,7 +222,7 @@ function Z(e) {
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });
-                });
+                }));
         }, [])),
         {
             handleInvite: Z,
@@ -237,11 +246,11 @@ function Z(e) {
                     }));
             }, [ei]),
             handleBoost: i.useCallback(() => {
-                x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+                (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                     setup_type: W.XT.CHANNEL_WELCOME,
                     action: W.AG.BOOST,
                 }),
-                    null != ei && (0, w.A)(ei.id, C.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA);
+                    null != ei && (0, w.A)(ei.id, C.A.GUILD_POWERUPS_CHANNEL_WELCOME_CTA));
             }, [ei]),
         }),
         eI = !(ed || eu || eh || em || eg),

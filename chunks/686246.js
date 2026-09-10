@@ -25,7 +25,7 @@ function i(r) {
                     try {
                         for (n = n.call(r); !(u = (t = n.next()).done) && (o.push(t.value), 2 !== o.length); u = !0);
                     } catch (r) {
-                        (a = !0), (e = r);
+                        ((a = !0), (e = r));
                     } finally {
                         try {
                             u || null == n.return || n.return();

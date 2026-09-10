@@ -13,27 +13,27 @@ function u() {
 }
 function c(e) {
     if (!(this instanceof c)) return new c(e);
-    "number" == typeof e && (e = { max: e }), e || (e = {});
+    ("number" == typeof e && (e = { max: e }), e || (e = {}));
     var t = l(this, "max", e.max);
     (!t || "number" != typeof t || t <= 0) && l(this, "max", 1 / 0);
     var r = e.length || u;
-    "function" != typeof r && (r = u),
+    ("function" != typeof r && (r = u),
         l(this, "lengthCalculator", r),
         l(this, "allowStale", e.stale || !1),
         l(this, "maxAge", e.maxAge || 0),
         l(this, "dispose", e.dispose),
-        this.reset();
+        this.reset());
 }
 function f(e, t, r, n) {
     var i = r.value;
-    p(e, i) && (m(e, r), l(e, "allowStale") || (i = void 0)), i && t.call(n, i.value, i.key, e);
+    (p(e, i) && (m(e, r), l(e, "allowStale") || (i = void 0)), i && t.call(n, i.value, i.key, e));
 }
 function d(e, t, r) {
     var n = l(e, "cache").get(t);
     if (n) {
         var i = n.value;
-        p(e, i) ? (m(e, n), l(e, "allowStale") || (i = void 0)) : r && l(e, "lruList").unshiftNode(n),
-            i && (i = i.value);
+        (p(e, i) ? (m(e, n), l(e, "allowStale") || (i = void 0)) : r && l(e, "lruList").unshiftNode(n),
+            i && (i = i.value));
     }
     return i;
 }
@@ -44,24 +44,24 @@ function p(e, t) {
 }
 function h(e) {
     if (l(e, "length") > l(e, "max"))
-        for (var t = l(e, "lruList").tail; l(e, "length") > l(e, "max") && null !== t; ) {
+        for (var t = l(e, "lruList").tail; l(e, "length") > l(e, "max") && null !== t;) {
             var r = t.prev;
-            m(e, t), (t = r);
+            (m(e, t), (t = r));
         }
 }
 function m(e, t) {
     if (t) {
         var r = t.value;
-        l(e, "dispose") && l(e, "dispose").call(this, r.key, r.value),
+        (l(e, "dispose") && l(e, "dispose").call(this, r.key, r.value),
             l(e, "length", l(e, "length") - r.length),
             l(e, "cache").delete(r.key),
-            l(e, "lruList").removeNode(t);
+            l(e, "lruList").removeNode(t));
     }
 }
 function v(e, t, r, n, i) {
-    (this.key = e), (this.value = t), (this.length = r), (this.now = n), (this.maxAge = i || 0);
+    ((this.key = e), (this.value = t), (this.length = r), (this.now = n), (this.maxAge = i || 0));
 }
-(n =
+((n =
     "function" == typeof Symbol
         ? function (e) {
               return Symbol.for(e);
@@ -71,7 +71,7 @@ function v(e, t, r, n, i) {
           }),
     Object.defineProperty(c.prototype, "max", {
         set: function (e) {
-            (!e || "number" != typeof e || e <= 0) && (e = 1 / 0), l(this, "max", e), h(this);
+            ((!e || "number" != typeof e || e <= 0) && (e = 1 / 0), l(this, "max", e), h(this));
         },
         get: function () {
             return l(this, "max");
@@ -89,7 +89,7 @@ function v(e, t, r, n, i) {
     }),
     Object.defineProperty(c.prototype, "maxAge", {
         set: function (e) {
-            (!e || "number" != typeof e || e < 0) && (e = 0), l(this, "maxAge", e), h(this);
+            ((!e || "number" != typeof e || e < 0) && (e = 0), l(this, "maxAge", e), h(this));
         },
         get: function () {
             return l(this, "maxAge");
@@ -98,15 +98,15 @@ function v(e, t, r, n, i) {
     }),
     Object.defineProperty(c.prototype, "lengthCalculator", {
         set: function (e) {
-            "function" != typeof e && (e = u),
+            ("function" != typeof e && (e = u),
                 e !== l(this, "lengthCalculator") &&
                     (l(this, "lengthCalculator", e),
                     l(this, "length", 0),
                     l(this, "lruList").forEach(function (e) {
-                        (e.length = l(this, "lengthCalculator").call(this, e.value, e.key)),
-                            l(this, "length", l(this, "length") + e.length);
+                        ((e.length = l(this, "lengthCalculator").call(this, e.value, e.key)),
+                            l(this, "length", l(this, "length") + e.length));
                     }, this)),
-                h(this);
+                h(this));
         },
         get: function () {
             return l(this, "lengthCalculator");
@@ -127,16 +127,16 @@ function v(e, t, r, n, i) {
     }),
     (c.prototype.rforEach = function (e, t) {
         t = t || this;
-        for (var r = l(this, "lruList").tail; null !== r; ) {
+        for (var r = l(this, "lruList").tail; null !== r;) {
             var n = r.prev;
-            f(this, e, r, t), (r = n);
+            (f(this, e, r, t), (r = n));
         }
     }),
     (c.prototype.forEach = function (e, t) {
         t = t || this;
-        for (var r = l(this, "lruList").head; null !== r; ) {
+        for (var r = l(this, "lruList").head; null !== r;) {
             var n = r.next;
-            f(this, e, r, t), (r = n);
+            (f(this, e, r, t), (r = n));
         }
     }),
     (c.prototype.keys = function () {
@@ -154,7 +154,7 @@ function v(e, t, r, n, i) {
             }, this);
     }),
     (c.prototype.reset = function () {
-        l(this, "dispose") &&
+        (l(this, "dispose") &&
             l(this, "lruList") &&
             l(this, "lruList").length &&
             l(this, "lruList").forEach(function (e) {
@@ -162,7 +162,7 @@ function v(e, t, r, n, i) {
             }, this),
             l(this, "cache", new i()),
             l(this, "lruList", new a()),
-            l(this, "length", 0);
+            l(this, "length", 0));
     }),
     (c.prototype.dump = function () {
         return l(this, "lruList")
@@ -193,11 +193,11 @@ function v(e, t, r, n, i) {
                 c ? (r += ",\n  ") : (n && (r += ",\n"), (c = !0), (r += "\n  "));
                 var i = o.inspect(e.key).split("\n").join("\n  "),
                     l = { value: e.value };
-                e.maxAge !== a && (l.maxAge = e.maxAge),
+                (e.maxAge !== a && (l.maxAge = e.maxAge),
                     s !== u && (l.length = e.length),
                     p(this, e) && (l.stale = !0),
                     (l = o.inspect(l, t).split("\n").join("\n  ")),
-                    (r += i + " => " + l);
+                    (r += i + " => " + l));
             }),
             (c || n) && (r += "\n"),
             (r += "}")
@@ -207,7 +207,7 @@ function v(e, t, r, n, i) {
         var n = (r = r || l(this, "maxAge")) ? Date.now() : 0,
             i = l(this, "lengthCalculator").call(this, t, e);
         if (l(this, "cache").has(e)) {
-            if (i > l(this, "max")) return m(this, l(this, "cache").get(e)), !1;
+            if (i > l(this, "max")) return (m(this, l(this, "cache").get(e)), !1);
             var o = l(this, "cache").get(e).value;
             return (
                 l(this, "dispose") && l(this, "dispose").call(this, e, o.value),
@@ -263,4 +263,4 @@ function v(e, t, r, n, i) {
         l(this, "cache").forEach(function (t, r) {
             d(e, r, !1);
         });
-    });
+    }));

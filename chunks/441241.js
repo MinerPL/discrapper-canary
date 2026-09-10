@@ -1,4 +1,4 @@
-s.r(l), s.d(l, { default: () => eC });
+(s.r(l), s.d(l, { default: () => eC }));
 var t = s(477900),
     n = s(582128),
     a = s(503698),
@@ -145,11 +145,15 @@ function er(e) {
                 ),
                 u = n.useMemo(() => (r ? (o ?? []) : []), [r, o]),
                 h = u.join(","),
-                g = (0, c.cf)([_.A], () => {
-                    let e = {};
-                    for (let l of u) e[l] = _.A.getCollectionOrSummary(l);
-                    return e;
-                }, [u]);
+                g = (0, c.cf)(
+                    [_.A],
+                    () => {
+                        let e = {};
+                        for (let l of u) e[l] = _.A.getCollectionOrSummary(l);
+                        return e;
+                    },
+                    [u],
+                );
             return {
                 categories: n.useMemo(
                     () =>
@@ -428,7 +432,7 @@ let eC = function (e) {
     let { selectedTab: _, transitionToTab: N, transitionState: v } = (0, k.o)(Q.G2.COLLECTION_INDEX);
     (0, I.pE)();
     let T = (0, A.$)("collection_index_page");
-    (0, S.Ay)({ stalePurchasesOK: !0, skipFetch: T }), (0, p.A)(Y.FYj);
+    ((0, S.Ay)({ stalePurchasesOK: !0, skipFetch: T }), (0, p.A)(Y.FYj));
     let B = (0, h.A)((0, o.A)()),
         F = (0, j.a)("CollectiblesShopIndexPage"),
         { category: G, state: P } = O(l, { enabled: T, includeUnpublished: (0, C.A)("shop_include_unpublished") }),
@@ -438,13 +442,13 @@ let eC = function (e) {
         H = (0, c.bG)([E.A], () => E.A.error),
         V = T ? (G ?? void 0) : U,
         { analyticsLocations: w } = (0, L.lC)(Q.G2.COLLECTION_INDEX);
-    (0, L.uS)(B, _, V?.name, v),
+    ((0, L.uS)(B, _, V?.name, v),
         n.useEffect(() => {
             a.current?.scrollTo({ top: 0 });
         }, [l]),
         n.useEffect(() => {
             (0, u.I)(Y.BVt.COLLECTIBLES_SHOP);
-        }, []);
+        }, []));
     let X = (T ? "loading" !== P : !D && (M || null != H)) && null == V;
     return null == l || !F || X
         ? (0, t.jsx)(i.rd, { to: Y.BVt.COLLECTIBLES_SHOP })

@@ -137,7 +137,7 @@ var m = ({ config: t, manager: e, onFinish: n, onError: s }) => {
                 "phone-otp",
             );
         }
-        return (0, o.s)(m), null;
+        return ((0, o.s)(m), null);
     },
     E = ({ config: t, manager: e, onFinish: n, onError: r }) =>
         (0, i.v)(s.t, { children: t || e ? (0, i.v)(m, { config: t, manager: e, onFinish: n, onError: r }) : null });

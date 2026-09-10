@@ -35,7 +35,7 @@ function T(t) {
         L(new u.LG(t, t.status).getAnyErrorMessage());
     }
     async function D(t) {
-        w === k && b(), t?.preventDefault(), L(null), O(!0);
+        (w === k && b(), t?.preventDefault(), L(null), O(!0));
         let n = w.length,
             a = w.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
             l = A.Ay.parse(e, w),
@@ -43,7 +43,7 @@ function T(t) {
                 let { invalidEmojis: n } = t;
                 if (null != n && n.length > 0) {
                     let { errorMessage: t } = d.A.validateMessage(n, U, e.id);
-                    return L(t), O(!1), { hasErrors: !0 };
+                    return (L(t), O(!1), { hasErrors: !0 });
                 }
                 return { hasErrors: !1 };
             })(l);
@@ -76,7 +76,7 @@ function T(t) {
     }, [e.guild_id, T]);
     let [R, j] = l.useState((0, g.x7)(w));
     async function q() {
-        return G || M || (await D()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 });
+        return (G || M || (await D()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 }));
     }
     let P = (0, a.jsx)(i.D, {
         label: y.intl.string(y.t.Fq5lwN),
@@ -90,7 +90,7 @@ function T(t) {
             focused: !0,
             channel: e,
             onChange: function (t, e, n) {
-                I(e), j(n);
+                (I(e), j(n));
             },
             onSubmit: q,
             type: C.oU.VOICE_CHANNEL_STATUS,

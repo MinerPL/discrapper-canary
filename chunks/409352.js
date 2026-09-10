@@ -132,7 +132,7 @@ class V extends n.PureComponent {
     state = { loading: !0, invites: null };
     componentDidMount() {
         let { channelId: e } = this.props;
-        d.Bo.get({ url: H.Rsh.INSTANT_INVITES(e), retries: 3, oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+        (d.Bo.get({ url: H.Rsh.INSTANT_INVITES(e), retries: 3, oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
             let s = e.body.map(
                 (e) => new B.A({ ...e, maxUses: e.max_uses, maxAge: e.max_age, createdAt: e.created_at }),
             );
@@ -142,7 +142,7 @@ class V extends n.PureComponent {
                 ...(0, _.dI)(X.A.getChannel(e)),
                 type: "Group DM Invites",
                 source: "Group DM Menu",
-            });
+            }));
     }
     renderContent() {
         let { loading: e, invites: s } = this.state,
@@ -262,7 +262,7 @@ class V extends n.PureComponent {
         });
     }
     handleRevoke = (e) => {
-        R.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) });
+        (R.Ay.revokeInvite(e), this.setState({ invites: this.state.invites.filter((s) => s !== e) }));
     };
     handleClose = () => {
         let { onClose: e } = this.props;

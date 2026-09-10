@@ -116,7 +116,7 @@ function k(e) {
                     let t = (await T.Bo.get({ url: _.Rsh.GUILD_INSTANT_INVITES(e), rejectWithError: !0 })).body.sort(
                         (e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime(),
                     );
-                    o(t), L.set(e, new Set(t)), s(!1);
+                    (o(t), L.set(e, new Set(t)), s(!1));
                 }, [e]);
             return (
                 n.useEffect(() => {
@@ -155,16 +155,16 @@ function k(e) {
         ),
         D = n.useCallback(
             (e) => {
-                e === m
+                (e === m
                     ? (0, v.Ld)(t, { selectedSourceInviteCode: void 0, selectedJoinSourceType: void 0 })
                     : (0, v.Ld)(t, { selectedSourceInviteCode: null, selectedJoinSourceType: e }),
-                    I(!1);
+                    I(!1));
             },
             [t, m],
         ),
         K = n.useCallback(
             (e) => {
-                (0, v.Ld)(t, { selectedSourceInviteCode: e, selectedJoinSourceType: void 0 }), R(e);
+                ((0, v.Ld)(t, { selectedSourceInviteCode: e, selectedJoinSourceType: void 0 }), R(e));
             },
             [t, R],
         );

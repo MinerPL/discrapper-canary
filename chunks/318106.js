@@ -6,7 +6,7 @@ let n = r(793277),
     o = RegExp("(" + n.TIME_UNITS_PATTERN + ")(later|vanaf nu)(?=(?:\\W|$))", "i");
 class u extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     innerPattern() {
         return this.strictMode ? o : s;

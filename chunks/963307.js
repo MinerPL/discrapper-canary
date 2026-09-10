@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => k, QP: () => O, S9: () => L, sN: () => R }), n(321073);
+(n.d(t, { Ay: () => k, QP: () => O, S9: () => L, sN: () => R }), n(321073));
 var i,
     r = n(435558),
     a = n.n(r),
@@ -117,7 +117,7 @@ class b {
     members = {};
     version = 0;
     constructor(e, t) {
-        (this.guildId = e), (this.listId = t), this.updateOwnerId();
+        ((this.guildId = e), (this.listId = t), this.updateOwnerId());
     }
     updateOwnerId() {
         let e = T.A.getGuild(this.guildId);
@@ -127,12 +127,12 @@ class b {
     }
     setGroups(e) {
         let t = 0;
-        (this.groups = e.map((e) => {
+        ((this.groups = e.map((e) => {
             let n = t,
                 i = Math.max(0, e.count ?? 0);
-            return (t += i + 1), y(this.guildId, e.id, i, n);
+            return ((t += i + 1), y(this.guildId, e.id, i, n));
         })),
-            (this.rows.length = t);
+            (this.rows.length = t));
     }
     sync(e, t) {
         let [n] = e;
@@ -143,7 +143,7 @@ class b {
         for (let e = t; e <= n; e++) {
             let t = this.rows[e];
             if (null == t) break;
-            delete this.rows[e], "MEMBER" === t.type && delete this.members[t.user.id];
+            (delete this.rows[e], "MEMBER" === t.type && delete this.members[t.user.id]);
         }
         this.version++;
     }
@@ -153,7 +153,7 @@ class b {
         else if (null != i) {
             let t = D(this.guildId, this.ownerId, i.user.id);
             if (null == t) return;
-            this.rows.splice(e, 0, t), (this.members[i.user.id] = t);
+            (this.rows.splice(e, 0, t), (this.members[i.user.id] = t));
         }
         this.version++;
     }
@@ -165,7 +165,7 @@ class b {
         else if (null != i) {
             let t = D(this.guildId, this.ownerId, i.user.id);
             if (null == t) return;
-            (this.rows[e] = t), (this.members[i.user.id] = t);
+            ((this.rows[e] = t), (this.members[i.user.id] = t));
         }
         this.version++;
     }
@@ -196,7 +196,7 @@ let M = new (class {
         let n = this._guildLists[e];
         null == n && (n = this._guildLists[e] = {});
         let i = n[t];
-        return null == i && ((i = new b(e, t)).setGroups([{ id: N.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i;
+        return (null == i && ((i = new b(e, t)).setGroups([{ id: N.clD.UNKNOWN, count: 0 }]), (n[t] = i)), i);
     }
     forEach(e, t) {
         if (null == e)
@@ -222,10 +222,10 @@ let U = [];
 function w() {
     let e = E.A.getAllApplicationStreams(),
         t = U.concat(e);
-    (U = e),
+    ((U = e),
         t.forEach((e) => {
             M.forEach(null, (t) => t.rebuildMember(e.ownerId));
-        });
+        }));
 }
 function G() {
     let e = A.default.getId();
@@ -234,9 +234,9 @@ function G() {
 class x extends d.Ay.Store {
     static displayName = "ChannelMemberStore";
     initialize() {
-        this.waitFor(S.default, T.A, p.A, h.A, f.Ay, m.A, g.A, A.default, I.A, E.A, u.A),
+        (this.waitFor(S.default, T.A, p.A, h.A, f.Ay, m.A, g.A, A.default, I.A, E.A, u.A),
             this.syncWith([g.A], G),
-            this.syncWith([E.A], w);
+            this.syncWith([E.A], w));
     }
     getProps(e, t) {
         let n = M.get(e, v(t));
@@ -251,7 +251,7 @@ let k = new x(c.h, {
     OVERLAY_INITIALIZE: P,
     GUILD_MEMBER_LIST_UPDATE: function (e) {
         let t = M.get(e.guildId, e.id);
-        e.ops.forEach((e) => {
+        (e.ops.forEach((e) => {
             switch (e.op) {
                 case "SYNC":
                     t.sync(e.range, e.items);
@@ -269,7 +269,7 @@ let k = new x(c.h, {
                     t.delete(e.index);
             }
         }),
-            t.setGroups(e.groups);
+            t.setGroups(e.groups));
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e;
@@ -284,7 +284,7 @@ let k = new x(c.h, {
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t, role: n } = e;
         M.forEach(t, (e) => {
-            e.rebuildGroup(n.id), e.rebuildMembers();
+            (e.rebuildGroup(n.id), e.rebuildMembers());
         });
     },
     GUILD_MEMBER_UPDATE: function (e) {

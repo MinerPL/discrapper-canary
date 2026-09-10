@@ -10,11 +10,15 @@ let o = () => {
 };
 function u() {
     let e = o();
-    return (0, i.cf)([r.A], () => {
-        let t = {};
-        for (let n of e) t[n] = r.A.get(n) ?? void 0;
-        return t;
-    }, [e]);
+    return (0, i.cf)(
+        [r.A],
+        () => {
+            let t = {};
+            for (let n of e) t[n] = r.A.get(n) ?? void 0;
+            return t;
+        },
+        [e],
+    );
 }
 function c() {
     let e = (0, a.t4)((e) => e.selectedSkuId),

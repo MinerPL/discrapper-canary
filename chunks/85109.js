@@ -38,14 +38,14 @@ function f(e) {
 }
 function p(e) {
     let t = f(e.saveData);
-    null == c.get(t) && (_ = Date.now()), c.set(t, e);
+    (null == c.get(t) && (_ = Date.now()), c.set(t, e));
     let n = e.saveData.messageId,
         i = e.saveData.channelId,
         r = h.get(i) ?? new Set();
-    r.add(n),
+    (r.add(n),
         h.set(i, r),
         null == e.message && A.add(n),
-        null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n);
+        null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(n) : E.delete(n));
 }
 function T(e) {
     let { messageId: t, channelId: n } = e,
@@ -53,7 +53,7 @@ function T(e) {
         r = c.get(i);
     if (r?.message == null) return !1;
     let a = { ...r };
-    return (a.message = null), c.set(i, a), !0;
+    return ((a.message = null), c.set(i, a), !0);
 }
 function m() {
     if (0 === A.size || u) return !1;
@@ -115,7 +115,7 @@ let S = new g(a.h, {
         u = !0;
     },
     LOGOUT: function () {
-        (u = !0), c.clear(), h.clear(), A.clear();
+        ((u = !0), c.clear(), h.clear(), A.clear());
     },
     SAVED_MESSAGES_UPDATE: function (e) {
         let { savedMessages: t } = e;
@@ -132,7 +132,7 @@ let S = new g(a.h, {
         if (null == i) return !1;
         c.delete(n);
         let r = t.messageId;
-        h.get(i.saveData.channelId)?.delete(r), A.delete(r), E.delete(r), (_ = Date.now());
+        (h.get(i.saveData.channelId)?.delete(r), A.delete(r), E.delete(r), (_ = Date.now()));
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
@@ -149,7 +149,7 @@ let S = new g(a.h, {
             i = c.get(n);
         if (i?.message == null) return !1;
         let r = { ...i };
-        (r.message = (0, s.IU)(i.message, t)), c.set(n, r);
+        ((r.message = (0, s.IU)(i.message, t)), c.set(n, r));
     },
     GUILD_CREATE: m,
     GUILD_UPDATE: m,

@@ -43,7 +43,7 @@ function v(a) {
         T = s.useCallback(
             (a) => {
                 if (h) {
-                    a.preventDefault(), a.stopPropagation(), (0, x.VQ)();
+                    (a.preventDefault(), a.stopPropagation(), (0, x.VQ)());
                     return;
                 }
                 f?.(a);

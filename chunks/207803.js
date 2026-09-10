@@ -27,9 +27,9 @@ var i = n(636537),
     h = n(202541),
     I = n(375708);
 function f() {
-    _._.dispatch(A.jej.SHAKE_PROFILE_MODAL),
+    (_._.dispatch(A.jej.SHAKE_PROFILE_MODAL),
         _._.dispatch(A.jej.EMPHASIZE_NOTICE),
-        r.O.announce(`${I.intl.string(I.t.GP7JLE)} ${I.intl.string(I.t.gKoO1D)}`);
+        r.O.announce(`${I.intl.string(I.t.GP7JLE)} ${I.intl.string(I.t.gKoO1D)}`));
 }
 function p(e) {
     u.default.track(A.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: h.tz.PREMIUM_STANDARD });
@@ -52,11 +52,11 @@ async function T(e, t, n) {
                 oldFormErrors: !0,
                 rejectWithError: !1,
             });
-        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: r, guildId: t, ...c.body }), c;
+        return (a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: r, guildId: t, ...c.body }), c);
     } catch (i) {
         let e = new s.LG(i),
             n = i?.body ?? {};
-        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i;
+        return (a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i);
     }
 }
 function m(e, t) {
@@ -73,23 +73,23 @@ function N() {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 }
 function C(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), p(h.Ae.ANIMATED_AVATAR);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), p(h.Ae.ANIMATED_AVATAR));
 }
 function O(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
-        p(h.Ae.AVATAR_DECORATION);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
+        p(h.Ae.AVATAR_DECORATION));
 }
 function R(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), p(h.Ae.PROFILE_BANNER);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), p(h.Ae.PROFILE_BANNER));
 }
 function L(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: e }),
-        p(h.Ae.PROFILE_THEME_COLOR);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: e }),
+        p(h.Ae.PROFILE_THEME_COLOR));
 }
 function y(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: e }),
-        p(h.Ae.DISPLAY_NAME_STYLES);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: e }),
+        p(h.Ae.DISPLAY_NAME_STYLES));
 }
 function D(e) {
-    a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), p(h.Ae.PRESET);
+    (a.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), p(h.Ae.PRESET));
 }

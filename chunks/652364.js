@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ }), n(323874), n(14289), n(35956), n(321073);
+(n.d(t, { A: () => _ }), n(323874), n(14289), n(35956), n(321073));
 var i = n(439372),
     r = n(236285),
     a = n(734057),
@@ -35,13 +35,13 @@ class u extends i.A {
                 null != e &&
                     0 !== e.length &&
                     new Promise((t) => {
-                        c?.addEventListener("message", function n(i) {
+                        (c?.addEventListener("message", function n(i) {
                             let {
                                 data: { url: r },
                             } = i;
-                            c?.removeEventListener("message", n), e === r && t();
+                            (c?.removeEventListener("message", n), e === r && t());
                         }),
-                            c?.postMessage({ url: e });
+                            c?.postMessage({ url: e }));
                     });
             });
         }

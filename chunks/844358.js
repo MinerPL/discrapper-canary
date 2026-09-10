@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => j });
+(r.r(t), r.d(t, { default: () => j }));
 var s = r(477900),
     n = r(582128),
     i = r(132500),
@@ -33,10 +33,10 @@ function j(e) {
                           })
                               .then((e) => {
                                   let t = e ?? !1;
-                                  v(t), t || k(!0);
+                                  (v(t), t || k(!0));
                               })
                               .catch(() => {
-                                  v(!1), k(!0);
+                                  (v(!1), k(!0));
                               })
                               .then(() => r.disconnect());
                       }),

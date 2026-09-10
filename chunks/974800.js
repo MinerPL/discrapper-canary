@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => eE }), s(801541);
+(s.r(t), s.d(t, { default: () => eE }), s(801541));
 var i = s(477900),
     n = s(582128),
     r = s(503698),
@@ -102,8 +102,8 @@ function et() {
                     size: "sm",
                     text: Q.intl.string(K.default.eGxkmm),
                     onClick: function () {
-                        (0, J.b0)(J.G8.PREVIEW_THEMES),
-                            (0, N.nf)(N.HP.CUSTOM_THEME, { from: N.xv.CLIENT_THEMES_EDITOR });
+                        ((0, J.b0)(J.G8.PREVIEW_THEMES),
+                            (0, N.nf)(N.HP.CUSTOM_THEME, { from: N.xv.CLIENT_THEMES_EDITOR }));
                     },
                     fullWidth: !0,
                 }),
@@ -140,7 +140,7 @@ function el(e) {
             (0, i.jsx)(m.D, {
                 className: er.VV,
                 onClick: function () {
-                    null != t && t(en.i.DISMISS), s(z.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, U.D)();
+                    (null != t && t(en.i.DISMISS), s(z.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, U.D)());
                 },
                 children: (0, i.jsx)(T.a, { size: "md", color: "currentColor", className: er.P0 }),
             }),
@@ -167,16 +167,16 @@ function ec(e) {
             if (e && (t?.(), null != s && s(en.i.PRIMARY), null != r)) {
                 if (l) {
                     let e = (0, o.M)(r.theme) ? X.Fc.DARK : X.Fc.LIGHT;
-                    (0, es.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
+                    ((0, es.X8)({ isPersisted: !0, themeName: `${e}-mode-${d.ju[r.id]}`, analyticsLocations: n }),
                         (0, R.NA)({ [e]: r.theme }),
                         (0, R.qX)(e, { backgroundGradientPresetId: r.id }),
                         (0, G.S8)(),
-                        (0, U.D)();
+                        (0, U.D)());
                     return;
                 }
-                (0, es.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
+                ((0, es.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
                     (0, I.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
-                    (0, R.XG)();
+                    (0, R.XG)());
             }
         },
         fullWidth: !0,
@@ -219,10 +219,10 @@ function ed(e) {
             (0, i.jsx)(E.$, {
                 fullWidth: !0,
                 onClick: function () {
-                    null != t && t(en.i.DISMISS),
+                    (null != t && t(en.i.DISMISS),
                         o(z.HAw.CLIENT_THEME_PREVIEW_CLOSED),
                         (0, U.D)(),
-                        s || (0, k.openUserSettings)(D.X.APPEARANCE_THEME_CATEGORY);
+                        s || (0, k.openUserSettings)(D.X.APPEARANCE_THEME_CATEGORY));
                 },
                 variant: "secondary",
                 text: m,
@@ -240,7 +240,7 @@ function eE(e) {
         })),
         u = (0, N.fy)().activePanel === N.HP.CLIENT_THEMES,
         m = $();
-    n.useEffect(() => m(z.HAw.CLIENT_THEME_PREVIEW_VIEWED), [m]),
+    (n.useEffect(() => m(z.HAw.CLIENT_THEME_PREVIEW_VIEWED), [m]),
         n.useEffect(() => {
             E &&
                 (L.default.track(z.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -248,7 +248,7 @@ function eE(e) {
                     location_stack: l,
                 }),
                 (0, v.sq)(z.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, P.uq)(Y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT)));
-        }, [E, l]);
+        }, [E, l]));
     let T = (() => {
             let e = (0, c.bG)([O.A], () => O.A.gradientPreset),
                 t = (0, c.bG)([V.Ay], () => V.Ay.useSystemTheme === X.Q_.ON),

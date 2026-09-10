@@ -57,11 +57,11 @@ let c = new o(
             for (let e of n) d(e.id, e.emojis, t);
         },
         OVERLAY_INITIALIZE: (e, t) => {
-            t.clear(),
+            (t.clear(),
                 Object.entries(e.emojis).forEach((e) => {
                     let [n, i] = e;
                     t.setPartition(n, l(n, i));
-                });
+                }));
         },
         CACHED_EMOJIS_LOADED: (e, t) => {
             for (let [n, i] of e.emojis) t.setPartition(n, l(n, i));

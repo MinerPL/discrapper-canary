@@ -56,15 +56,16 @@ let l = /\n{2,}$/,
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;
-                    (n._list = !0),
+                    ((n._list = !0),
                         (n._listLevel = (c ?? 0) + 1),
-                        l ? ((n.inline = !1), (r = a.replace(E, "\n\n"))) : ((n.inline = !0), (r = a.replace(E, "")));
+                        l ? ((n.inline = !1), (r = a.replace(E, "\n\n"))) : ((n.inline = !0), (r = a.replace(E, ""))));
                     let _ = t(r, { ...n, allowHeading: !1 }).map(
                         (e) => (
-                            "text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e
+                            "text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")),
+                            e
                         ),
                     );
-                    return (n.inline = o), (n._list = d), (n._listLevel = c), _;
+                    return ((n.inline = o), (n._list = d), (n._listLevel = c), _);
                 }),
                 consumedLeadingNewline: o,
             };

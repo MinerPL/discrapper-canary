@@ -3,7 +3,7 @@ d.d(t, { a: () => G, i: () => p, n: () => h, o: () => u, r: () => o });
 var e = d(580607),
     c = class {
         constructor(l, t, d) {
-            (this._loader = l), (this._options = t), (this._timer = d), (this._loaded = !1), (this._attempt = 0);
+            ((this._loader = l), (this._options = t), (this._timer = d), (this._loaded = !1), (this._attempt = 0));
         }
         get() {
             return this._cachedValue;
@@ -14,7 +14,7 @@ var e = d(580607),
                 : (this._inFlight || (this._inFlight = this.startLoad()), this._inFlight);
         }
         reset() {
-            (this._cachedValue = void 0), (this._loaded = !1), (this._inFlight = void 0), this._attempt++;
+            ((this._cachedValue = void 0), (this._loaded = !1), (this._inFlight = void 0), this._attempt++);
         }
         startLoad() {
             let l,
@@ -38,8 +38,8 @@ var e = d(580607),
                       e,
                       new Promise((l) => {
                           t = this._timer.setTimeout(() => {
-                              d === this._attempt && (this.warnTimeout(i), (this._inFlight = void 0), this._attempt++),
-                                  l(void 0);
+                              (d === this._attempt && (this.warnTimeout(i), (this._inFlight = void 0), this._attempt++),
+                                  l(void 0));
                           }, i);
                       }),
                   ]).finally(() => {
@@ -81,7 +81,7 @@ let s = {
     n = () => d.e("782997").then(d.bind(d, 971956));
 var Z = class l {
     constructor() {
-        (this._isStarted = !1), (this._lazySdk = a.getInstance().create(n, s));
+        ((this._isStarted = !1), (this._lazySdk = a.getInstance().create(n, s)));
     }
     static getInstance() {
         return (this._instance ??= new l());
@@ -109,22 +109,22 @@ var Z = class l {
             let t = await this._lazySdk.load();
             if (!t) return "init-failed";
             let d = await t.default.setup(l);
-            return "started" === d && (this._isStarted = !0), d;
+            return ("started" === d && (this._isStarted = !0), d);
         } catch {
             return "init-failed";
         }
     }
     async start() {
         let l = await (this._getSdk()?.start() ?? Promise.resolve("init-failed"));
-        return (this._isStarted = "started" === l), l;
+        return ((this._isStarted = "started" === l), l);
     }
     async stop() {
         let l = await (this._getSdk()?.stop() ?? Promise.resolve("init-failed"));
-        return (this._isStarted = !1), l;
+        return ((this._isStarted = !1), l);
     }
     async reset() {
         let l = await (this._getSdk()?.reset() ?? Promise.resolve("init-failed"));
-        return (this._isStarted = !1), l;
+        return ((this._isStarted = !1), l);
     }
     async linkInterview(l) {
         try {
@@ -145,7 +145,7 @@ function o() {
     return m().isStarted;
 }
 function u() {
-    (i = void 0), Z.resetInstance();
+    ((i = void 0), Z.resetInstance());
 }
 async function h(l, t = {}) {
     var d;
@@ -158,10 +158,10 @@ async function h(l, t = {}) {
         : null;
     if (!i) return "init-failed";
     let e = await W(i);
-    return o() && t.sessionToken && (await p(t.sessionToken)), e;
+    return (o() && t.sessionToken && (await p(t.sessionToken)), e);
 }
 async function W(l) {
-    return (i = l.apiURL), m().setup(l);
+    return ((i = l.apiURL), m().setup(l));
 }
 async function G() {
     return m().reset();

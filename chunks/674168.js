@@ -56,7 +56,7 @@ function L(e) {
             O
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          (0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), L?.(T.i.PRIMARY);
+                          ((0, g.openUserSettings)(E.X.SOUNDBOARD_CATEGORY), n?.(), L?.(T.i.PRIMARY));
                       },
                       text: S.intl.string(S.t.RzWDqY),
                       fullWidth: !0,

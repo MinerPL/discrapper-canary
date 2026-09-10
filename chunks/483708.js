@@ -120,7 +120,7 @@ function Q(e) {
         o = B.intl.formatToPlainString(B.t.sjSitP, { name: a }),
         [d] = l.useState(() => ((0, R.sample)(K) ?? K[0])(a)),
         c = l.useCallback(() => {
-            D.A.openPrivateChannel({ recipientIds: t.id }), r?.();
+            (D.A.openPrivateChannel({ recipientIds: t.id }), r?.());
         }, [t.id, r]);
     return (0, i.jsx)(q, {
         heading: o,
@@ -146,10 +146,10 @@ function $() {
 function ee(e) {
     let { onClose: t } = e,
         n = l.useCallback(() => {
-            t?.(), (0, F.openUserSettings)(U.X.CONNECTIONS_CATEGORY);
+            (t?.(), (0, F.openUserSettings)(U.X.CONNECTIONS_CATEGORY));
         }, [t]),
         s = l.useCallback(() => {
-            t?.(), (0, F.openUserSettings)(U.X.CONNECTED_GAMES_CATEGORY);
+            (t?.(), (0, F.openUserSettings)(U.X.CONNECTED_GAMES_CATEGORY));
         }, [t]);
     return (0, i.jsxs)(q, {
         heading: B.intl.string(B.t.VB6LWY),
@@ -328,13 +328,13 @@ function eg(e) {
                                     guildId: n,
                                     channelId: s,
                                     onSelect: () => {
-                                        r?.(),
+                                        (r?.(),
                                             d({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, ed.openUserProfileModal)({
                                                 ...o,
                                                 userId: l.id,
                                                 sourceAnalyticsLocations: a,
-                                            });
+                                            }));
                                     },
                                 },
                                 t,
@@ -378,7 +378,7 @@ function eh(e) {
                                 guild: s,
                                 nick: r,
                                 onSelect: () => {
-                                    l({ action: "PRESS_MUTUAL_GUILD" }), (0, ex.u)(s.id), n(), (0, em.jH)();
+                                    (l({ action: "PRESS_MUTUAL_GUILD" }), (0, ex.u)(s.id), n(), (0, em.jH)());
                                 },
                             },
                             s.id,
@@ -427,8 +427,8 @@ var eO = n(721932),
     e$ = n(111085),
     e0 = n(107563),
     e1 = n(840411),
-    e2 = n(666810);
-let e8 = (0, n(945810).mj)({
+    e8 = n(666810);
+let e2 = (0, n(945810).mj)({
     name: "2026-07-wishlist-show-owned-items-last",
     kind: "user",
     defaultConfig: { isEnabled: !1 },
@@ -513,21 +513,25 @@ function te(e) {
         u = null != d && d.id !== s.id,
         g =
             ((t = u ? "UserProfileModalV2WishlistGrid" : "UserProfileModalV2WishlistGrid Own Profile Do Not Use"),
-            e8.useConfig({ location: t }).isEnabled && u),
-        m = (0, p.bG)([e$.A], () => {
-            let e = n;
-            return (
-                g &&
-                    (e = (0, e1.hE)(e, (e) => {
-                        var t;
-                        return (
-                            (t = e$.A.hasSentGift(e.skuId, s.id)),
-                            e.skuProductLine !== I.EZt.PREMIUM && (!0 === e.isOwned || t)
-                        );
-                    })),
-                e
-            );
-        }, [n, g, s.id]),
+            e2.useConfig({ location: t }).isEnabled && u),
+        m = (0, p.bG)(
+            [e$.A],
+            () => {
+                let e = n;
+                return (
+                    g &&
+                        (e = (0, e1.hE)(e, (e) => {
+                            var t;
+                            return (
+                                (t = e$.A.hasSentGift(e.skuId, s.id)),
+                                e.skuProductLine !== I.EZt.PREMIUM && (!0 === e.isOwned || t)
+                            );
+                        })),
+                    e
+                );
+            },
+            [n, g, s.id],
+        ),
         { isDragging: x } = (0, eQ.V)((e) => ({ isDragging: e.isDragging() })),
         [f, h] = l.useState([]),
         j = l.useCallback((e) => {
@@ -571,7 +575,7 @@ function te(e) {
 function tt(e) {
     let t = eB.default.getCurrentUser()?.id,
         n = null != t && t !== e.profileOwner.id;
-    return (0, i.jsx)(e2.h, {
+    return (0, i.jsx)(e8.h, {
         isGifting: n,
         location: "UserProfileModalV2WishlistGrid",
         children: (0, i.jsx)(te, { ...e }),
@@ -618,7 +622,7 @@ function tS(e) {
         { handleVisibilityChange: j } = (0, tf.G)(p),
         A = (0, tr.K)(j, 0.5, h?.surface != null),
         E = l.useCallback(() => {
-            f({
+            (f({
                 wishlistId: m,
                 action: en.Mq.WISHLIST_ITEM_CLICKED,
                 skuId: t.id,
@@ -638,7 +642,7 @@ function tS(e) {
                         impression_session_id: h.impressionSessionId,
                         location_stack: h.analyticsLocations,
                     }),
-                c();
+                c());
         }, [c, t.id, t.productLine, f, m, h, p]);
     return (0, i.jsx)("div", {
         ref: A,
@@ -673,10 +677,10 @@ function tC(e) {
             if (!m) {
                 x(!0);
                 try {
-                    await eU.A.addSkuToWishlist(t.id, n), c?.(), a?.({ tabSection: en.RP.WISHLIST });
+                    (await eU.A.addSkuToWishlist(t.id, n), c?.(), a?.({ tabSection: en.RP.WISHLIST }));
                 } catch (e) {
-                    (0, to.P0)((0, td.o)(B.intl.string(B.t.F8FvUy), tc.Ck.FAILURE)),
-                        tu.O.announce(B.intl.string(B.t.F8FvUy));
+                    ((0, to.P0)((0, td.o)(B.intl.string(B.t.F8FvUy), tc.Ck.FAILURE)),
+                        tu.O.announce(B.intl.string(B.t.F8FvUy)));
                 } finally {
                     x(!1);
                 }
@@ -808,7 +812,7 @@ function tG(e) {
                 isVisible: i && (u || r || !s),
                 isDismissible: s,
                 markAsDismissed: l.useCallback(() => {
-                    a(!1), c(tO.i.USER_DISMISS);
+                    (a(!1), c(tO.i.USER_DISMISS));
                 }, [c]),
             };
         })({ userId: t.id, wishlist: s, hasFetchedWishlist: r });
@@ -850,7 +854,7 @@ function tU(e) {
             return {
                 items: l.useMemo(() => {
                     let e = a.filter((e) => !d.has(e.id)).map((e) => ({ sku: e, itemSource: "recommendation" }));
-                    return c && e.unshift({ sku: (0, e1.rI)(), itemSource: "takeover" }), e.slice(0, s);
+                    return (c && e.unshift({ sku: (0, e1.rI)(), itemSource: "takeover" }), e.slice(0, s));
                 }, [a, d, c, s]),
                 status: o,
             };
@@ -1108,7 +1112,7 @@ function t1(e) {
         ],
     });
 }
-function t2(e) {
+function t8(e) {
     let { application: t, handleOpenGameShop: n, handleOpenGameShopMouseDown: s } = e,
         r = l.useCallback(() => {
             n(t.id);
@@ -1125,7 +1129,7 @@ function t2(e) {
         onMouseDown: a,
     });
 }
-function t8(e) {
+function t2(e) {
     let {
             showEditingControls: t,
             socialLayerStorefrontApplicationIds: n,
@@ -1142,7 +1146,7 @@ function t8(e) {
                 let t = e[n[0]];
                 return null == t
                     ? null
-                    : (0, i.jsx)(t2, { application: t, handleOpenGameShop: r, handleOpenGameShopMouseDown: a });
+                    : (0, i.jsx)(t8, { application: t, handleOpenGameShop: r, handleOpenGameShopMouseDown: a });
             }
             return (0, i.jsx)(tX, {
                 title: B.intl.string(B.t.FkjcWY),
@@ -1217,13 +1221,13 @@ function t7(e) {
         E = l.useCallback(() => {
             if (null == u) return;
             let e = h ? ej.a.PRIVATE : ej.a.PUBLIC;
-            I(!h),
+            (I(!h),
                 eU.A.updateWishlistVisibility(u, e),
                 x({
                     wishlistId: u,
                     action: h ? en.Mq.WISHLIST_TOGGLE_PRIVATE : en.Mq.WISHLIST_TOGGLE_PUBLIC,
                     productLines: null != r ? (0, eH.y9)(r) : void 0,
-                });
+                }));
         }, [u, h, x, r]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -1305,7 +1309,7 @@ function t5(e) {
     let u = (0, eq.A)(t.id),
         { wishlist: g, wasFetched: m, error: f } = (0, eW.fw)({ wishlistId: a, userId: t.id }),
         [h, I] = l.useState(!1);
-    m && !h && I(!0), (0, eF.A)(g);
+    (m && !h && I(!0), (0, eF.A)(g));
     let j = (function (e) {
             let { wishlist: t, profileOwner: n, currentUser: i } = e,
                 s = n.id === i?.id,
@@ -1336,7 +1340,7 @@ function t5(e) {
             (0, eG.G)({ applicationId: e });
         }, []),
         S = l.useCallback((e) => {
-            (0, ed.closeUserProfileModal)(), (0, eG.default)({ applicationId: e });
+            ((0, ed.closeUserProfileModal)(), (0, eG.default)({ applicationId: e }));
         }, []),
         { handleToggle: C } = (0, eR.c)({
             userId: o?.id,
@@ -1353,7 +1357,7 @@ function t5(e) {
         fade: !0,
         children: [
             b
-                ? (0, i.jsx)(t8, {
+                ? (0, i.jsx)(t2, {
                       showEditingControls: u,
                       socialLayerStorefrontApplicationIds: j,
                       handleOpenShop: E,

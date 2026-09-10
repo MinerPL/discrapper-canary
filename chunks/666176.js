@@ -5,7 +5,7 @@ let a = "spotify",
     s = i.A.get(a);
 class l extends r.Ay {
     constructor() {
-        super({}), (this.id = a), (this.name = s.name);
+        (super({}), (this.id = a), (this.name = s.name));
     }
     getIconURL(e) {
         return s.icon.lightPNG;

@@ -28,7 +28,7 @@ function l(e) {
                             l = r.getComputedStyle(t).opacity;
                         l && (a = Number(l));
                         let o = t.parentElement;
-                        return o && (a *= e(o)), a;
+                        return (o && (a *= e(o)), a);
                     })(l))
         )
             return !1;
@@ -56,7 +56,7 @@ function l(e) {
                                     n = r.getComputedStyle(s).overflow;
                                 function u(e) {
                                     let t = r.getComputedStyle(e).position;
-                                    if ("fixed" == t) return (a = !0), e == s ? null : s;
+                                    if ("fixed" == t) return ((a = !0), e == s ? null : s);
                                     {
                                         var l;
                                         let a = e.parentElement;

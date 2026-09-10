@@ -1,10 +1,10 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         clearAnalyticsEventsRecording: () => F,
         trackNetworkAction: () => H,
         addExtraAnalyticsDecorator: () => O,
         stopRecordingAnalyticsEvents: () => x,
-        isGameApplicationType: () => B,
+        isGameApplicationType: () => V,
         AnalyticsContext: () => m,
         getNewAnalyticsLoadId: () => j,
         launchSignature: () => N,
@@ -17,9 +17,9 @@ n.r(t),
         AnalyticsSchema: () => i,
         debugLogEvent: () => P,
         expandEventProperties: () => M,
-    });
+    }));
 var i = {};
-n.r(i), n(321073);
+(n.r(i), n(321073));
 var r = n(582128),
     a = n(132500),
     s = n(562708),
@@ -207,12 +207,12 @@ function M(e) {
                   }),
         };
     }
-    (t.client_performance_cpu = A.A.getCurrentCPUUsagePercent()),
+    ((t.client_performance_cpu = A.A.getCurrentCPUUsagePercent()),
         (t.client_performance_memory = A.A.getCurrentMemoryUsageKB()),
         (t.cpu_core_count = A.A.getCPUCoreCount()),
         (t.accessibility_features = y()),
         (t.rendered_locale = T.intl.currentLocale),
-        (t.uptime_app = Math.floor((performance.now() - S) / 1e3));
+        (t.uptime_app = Math.floor((performance.now() - S) / 1e3)));
     let n = A.A.getProcessUptime();
     null != n && (t.uptime_process_renderer = Math.floor(n));
     let { utmSource: i, utmMedium: r, utmCampaign: a, utmContent: s } = g;
@@ -228,8 +228,8 @@ function M(e) {
 }
 function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    E.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
-        n ? u.z8("Analytics", e, t) : u.z8("Analytics", e);
+    (E.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
+        n ? u.z8("Analytics", e, t) : u.z8("Analytics", e));
 }
 let U = !1,
     w = {};
@@ -247,13 +247,13 @@ function F() {
         delete w[e];
     });
 }
-let V = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
-function B(e) {
+let B = (0, s.trackMaker)({ addBreadcrumb: D, analyticEventConfigs: R, dispatcher: d.h, TRACK_ACTION_NAME: "TRACK" });
+function V(e) {
     return e === p.S7.GAME || e === p.S7.DEPRECATED_GAME;
 }
 function H(e, t) {
     let n = M({ location: (0, c.g$)(), ...t });
-    (0, c.eE)(e, { type: "action", ...t }), P(e, n), V(e, n);
+    ((0, c.eE)(e, { type: "action", ...t }), P(e, n), B(e, n));
 }
 function j() {
     return (0, a.A)();
@@ -274,6 +274,6 @@ let W = {
         )
             return Promise.resolve();
         let r = M(t);
-        return P(i, r, n.logEventProperties), v(e, r, { flush: n.flush, fingerprint: n.fingerprint });
+        return (P(i, r, n.logEventProperties), v(e, r, { flush: n.flush, fingerprint: n.fingerprint }));
     },
 };

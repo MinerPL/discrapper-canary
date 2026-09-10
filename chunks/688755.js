@@ -10,13 +10,13 @@ function u(t) {
         x = (0, i.u0)(),
         m = s.useMemo(() => (0, a.vv)(e), [e]),
         C = s.useCallback(() => {
-            x({
+            (x({
                 questId: e.id,
                 event: o.HAw.QUEST_HOVER,
                 properties: { content_id: n, content_name: (0, l.jO)(n), content_position: u, row_index: c },
                 sourceQuestContent: d,
             }),
-                m && (0, r.l9)();
+                m && (0, r.l9)());
         }, [x, e.id, n, m, d, u, c]),
         h = s.useCallback(() => {
             x({

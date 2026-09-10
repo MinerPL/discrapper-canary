@@ -9,7 +9,7 @@ var n = e(958498),
             if (0 === a) return !t && -1;
             var f = o(i, a);
             if (t && e != e) {
-                for (; a > f; ) if ((u = c[f++]) != u) return !0;
+                for (; a > f;) if ((u = c[f++]) != u) return !0;
             } else for (; a > f; f++) if ((t || f in c) && c[f] === e) return t || f || 0;
             return !t && -1;
         };

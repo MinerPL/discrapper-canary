@@ -1,4 +1,4 @@
-n.d(t, { A: () => w, m: () => C }), n(321073);
+(n.d(t, { A: () => w, m: () => C }), n(321073));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -52,7 +52,7 @@ function O(e) {
     return n.length <= 1 ? e : [...t, [...n].sort(C)[0]].sort(C);
 }
 function R(e, t) {
-    (f[e] = t), (p[e] = O(t));
+    ((f[e] = t), (p[e] = O(t)));
 }
 function L(e) {
     if ((delete I[e], delete f[e], delete p[e], delete T[e], delete m[e], null == h[e])) return;
@@ -114,10 +114,10 @@ function v(e) {
         let e = s.length > 1 ? [...s].sort(C) : s,
             n = y(l ?? []),
             d = c[t];
-        (s = null != d && r()(d.activities, e) ? d.activities : e),
-            (c[t] = { status: i, clientStatus: a, activities: s, hiddenActivities: n, processedAtTimestamp: o });
+        ((s = null != d && r()(d.activities, e) ? d.activities : e),
+            (c[t] = { status: i, clientStatus: a, activities: s, hiddenActivities: n, processedAtTimestamp: o }));
     }
-    return delete g[n], L(n), !0;
+    return (delete g[n], L(n), !0);
 }
 function b(e) {
     let {
@@ -147,7 +147,7 @@ function M(e, t) {
     if (t === u.default.getId()) return !1;
     let n = h[t];
     if (null == n || null == n[e]) return !1;
-    delete n[e], 0 === Object.keys(n).length && delete h[t], L(t);
+    (delete n[e], 0 === Object.keys(n).length && delete h[t], L(t));
 }
 function P(e) {
     for (let t of c.default.keys(h)) M(e, t);
@@ -158,7 +158,7 @@ class U extends l.Ay.Store {
         this.waitFor(u.default, _.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (I[u.default.getId()] = e), R(u.default.getId(), [...t].sort(C));
+        ((I[u.default.getId()] = e), R(u.default.getId(), [...t].sort(C)));
     }
     getStatus(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
@@ -203,7 +203,7 @@ class U extends l.Ay.Store {
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         i = i ?? !1;
         let r = this.getActivities(e, n);
-        return i && (r = r.concat(this.getHiddenActivities(e, n))), r.find(t);
+        return (i && (r = r.concat(this.getHiddenActivities(e, n))), r.find(t));
     }
     getActivityMetadata(e) {
         return g[e];
@@ -246,15 +246,15 @@ let w = new U(o.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = u.default.getId();
-        (h = {}),
+        ((h = {}),
             (g = {}),
             (I = { [i]: I[i] }),
             (f = { [i]: f[i] }),
             (p = { [i]: p[i] }),
             (T = { [i]: T[i] }),
-            (m = { [i]: {} });
+            (m = { [i]: {} }));
         let r = new Set();
-        t.forEach((e) => {
+        (t.forEach((e) => {
             e.presences.forEach((t) => {
                 let {
                     user: n,
@@ -264,7 +264,7 @@ let w = new U(o.h, {
                     hiddenActivities: l,
                     processedAtTimestamp: o,
                 } = t;
-                b({
+                (b({
                     guildId: e.id,
                     userId: n.id,
                     status: i,
@@ -273,7 +273,7 @@ let w = new U(o.h, {
                     hiddenActivities: l,
                     processedAtTimestamp: o,
                 }),
-                    r.add(n.id);
+                    r.add(n.id));
             });
         }),
             n.forEach((e) => {
@@ -298,15 +298,15 @@ let w = new U(o.h, {
                     r.add(t.id));
             }),
             r.delete(i),
-            r.forEach(D);
+            r.forEach(D));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { presences: t } = e;
-        (h = t.presencesForGuilds),
+        ((h = t.presencesForGuilds),
             (I = t.statuses),
             (f = t.activities),
             (T = t.hiddenActivities),
-            (g = t.activityMetadata);
+            (g = t.activityMetadata));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
@@ -365,7 +365,7 @@ let w = new U(o.h, {
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;
-        P(E.ME),
+        (P(E.ME),
             t.forEach((e) => {
                 let {
                     user: t,
@@ -385,11 +385,11 @@ let w = new U(o.h, {
                         hiddenActivities: a,
                         processedAtTimestamp: s,
                     });
-            });
+            }));
     },
     ACTIVITY_METADATA_UPDATE: function (e) {
         let { userId: t, metadata: n } = e;
-        return (g[t] = n), !1;
+        return ((g[t] = n), !1);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
@@ -424,6 +424,6 @@ let w = new U(o.h, {
     SELF_PRESENCE_STORE_UPDATE: function (e) {
         let t = u.default.getId();
         if (I[t] === e.status && f[t] === e.activities && T[t] === e.hiddenActivities) return !1;
-        (I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t];
+        ((I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t]);
     },
 });

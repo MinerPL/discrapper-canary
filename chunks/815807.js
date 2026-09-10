@@ -62,10 +62,10 @@ function p(e) {
     return !n || !!i;
 }
 function T(e, t) {
-    a.Zp.updateSetting(e),
+    (a.Zp.updateSetting(e),
         l.default.track(o.HAw.NOTIFICATION_SETTINGS_UPDATED, {
             update_type: d.Y.ACCOUNT,
             reaction_notifications: e,
             reaction_notifications_old: t,
-        });
+        }));
 }

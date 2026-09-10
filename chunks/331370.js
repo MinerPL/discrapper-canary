@@ -72,7 +72,7 @@ e.exports = function (e) {
         m,
     ];
     let E = [r, o, g, s, u, p, e.QUOTE_STRING_MODE, i, l, c, _, d, m];
-    (s.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
+    ((s.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E));
     let S = { className: "params", begin: "\\(", end: "\\)", contains: E };
     return {
         name: "Erlang",

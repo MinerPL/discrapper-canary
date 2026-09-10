@@ -13,7 +13,7 @@ async function u(e, t) {
         _,
         E = c.intl.string(c.t["IOy+I5"]);
     if (e instanceof i.A) {
-        (n = 0), (_ = e.reason);
+        ((n = 0), (_ = e.reason));
         let r = l.A.getFetchState();
         switch ((s.Q_.getSetting() && r !== l.$.LOADED && (await (0, o.SE)()), e.reason)) {
             case i.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
@@ -25,7 +25,7 @@ async function u(e, t) {
             case i.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
                 u = e.detailCode;
         }
-    } else if (e instanceof r.A) (n = 1), (_ = e.reason), (E = (0, a.sW)(e.reason, t) ?? E);
+    } else if (e instanceof r.A) ((n = 1), (_ = e.reason), (E = (0, a.sW)(e.reason, t) ?? E));
     else
         switch (((n = 2), (u = e.status), (_ = e.code), e.code)) {
             case d.t02.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:

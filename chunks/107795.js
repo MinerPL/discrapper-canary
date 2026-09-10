@@ -74,37 +74,37 @@ function h(t, e) {
         _ = u.map((e) => (i.some((t) => t.id === e.id) ? f(t, u, e) : null));
     if (_.filter(c.Vq).length > 0)
         throw (
-            (l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED", errors: _ }),
-            Error("failed to locally validate prompts"))
+            l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED", errors: _ }),
+            Error("failed to locally validate prompts")
         );
     if (S.length > E.D1)
         throw (
-            (s.A.show({
+            s.A.show({
                 title: N.intl.string(N.t.iLdiqY),
                 body: N.intl.formatToPlainString(N.t["cTb/rg"], { numQuestions: E.D1 }),
             }),
             l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED", errors: _ }),
-            Error("too many prompts in onboarding"))
+            Error("too many prompts in onboarding")
         );
     return [...S, ...m];
 }
 async function T(t, e) {
     if (!I.A.hasChanges()) return;
     let n = h(t, e);
-    null == n && (n = []), l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
+    (null == n && (n = []), l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" }));
     try {
-        await D(t.id, { prompts: n.map(E.SA) }),
+        (await D(t.id, { prompts: n.map(E.SA) }),
             l.h.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
                 guildId: t.id,
                 updates: { prompts: n },
-            });
+            }));
     } catch (n) {
         let { fieldName: t, error: e } = new r.LG(n).getAnyErrorMessageAndField() ?? {};
         throw (
-            (s.A.show({ title: N.intl.string(N.t.iLdiqY), body: [t, e].filter(c.Vq).join(": ") }),
+            s.A.show({ title: N.intl.string(N.t.iLdiqY), body: [t, e].filter(c.Vq).join(": ") }),
             l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
-            Error("failed to save prompts"))
+            Error("failed to save prompts")
         );
     }
 }

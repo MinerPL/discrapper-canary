@@ -18,7 +18,7 @@ async function g(t) {
             i = (0, u.I_)();
         if (null == e && f.default.isAuthenticated())
             try {
-                await (0, d.fetchCurrentUser)(), (e = f.default.getId());
+                (await (0, d.fetchCurrentUser)(), (e = f.default.getId()));
             } catch {}
         return (0, u.Ay)((0, r.BH)(), { utmSource: t, fingerprint: e, attemptId: i });
     }
@@ -27,7 +27,7 @@ async function g(t) {
 async function A(t) {
     let e = await g(t),
         i = (0, u.X7)(e);
-    null != i &&
+    (null != i &&
         p.default.track(h.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.v)(i.fingerprint),
             attempt_id: i.attemptId,
@@ -35,5 +35,5 @@ async function A(t) {
         }),
         o.A.launch(e, (t) => {
             t || (0, l.bG)(s.A.fallbackRoute);
-        });
+        }));
 }

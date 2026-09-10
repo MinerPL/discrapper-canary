@@ -126,10 +126,14 @@ var H = t(834730),
     W = t(426781);
 function X(e) {
     let { guildId: n, onClose: t } = e,
-        a = (0, s.bG)([v.A, D.A], () => {
-            let e = v.A.getGuild(n);
-            return D.A.can(F.xBc.MANAGE_ROLES, e);
-        }, [n]);
+        a = (0, s.bG)(
+            [v.A, D.A],
+            () => {
+                let e = v.A.getGuild(n);
+                return D.A.can(F.xBc.MANAGE_ROLES, e);
+            },
+            [n],
+        );
     return (0, i.jsxs)("div", {
         className: W.kL,
         children: [
@@ -165,7 +169,7 @@ function X(e) {
                     className: W.Ec,
                     children: $.intl.format($.t["K+DH2o"], {
                         onClick: () => {
-                            J.A.open(n, F.BEX.ROLES), t();
+                            (J.A.open(n, F.BEX.ROLES), t());
                         },
                     }),
                 }),
@@ -186,7 +190,7 @@ function et(e) {
         M = (0, Y.A)();
     return (
         a.useEffect(() => {
-            D.forEach((e) => I.A.getGuildEventUserCounts(k, e.id, [])), I.A.getGuildEventsForCurrentUser(k);
+            (D.forEach((e) => I.A.getGuildEventUserCounts(k, e.id, [])), I.A.getGuildEventsForCurrentUser(k));
         }, [D, k]),
         (0, p.Ay)(() => {
             f.default.track(F.HAw.OPEN_MODAL, { type: Z.BV, guild_id: k, guild_events_count: D.length });

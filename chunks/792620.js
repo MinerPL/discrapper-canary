@@ -9,9 +9,9 @@ n.d(t, {
     Ki: () => v,
     Ov: () => T,
     TP: () => h,
-    Xi: () => V,
+    Xi: () => B,
     YL: () => w,
-    Yh: () => B,
+    Yh: () => V,
     _3: () => c,
     a2: () => I,
     fE: () => p,
@@ -188,12 +188,12 @@ function F(e) {
         applications: h,
     };
 }
-function V(e) {
+function B(e) {
     let t = e.taskConfigV2.tasks[r.n.WATCH_VIDEO],
         n = e.taskConfigV2.tasks[r.n.WATCH_VIDEO_ON_MOBILE];
     return null != t && null != n ? t : (n ?? t ?? null);
 }
-function B(e, t) {
+function V(e, t) {
     var n, i;
     let a =
         ((n = e),
@@ -235,7 +235,7 @@ function B(e, t) {
                     return F({ quest: t, includeTaskTypes: n });
                 })({ quest: n, includeTaskTypes: i ?? (w(n) ? r.o.CONSOLE : r.o.ALL) })
               : y(n)
-                ? F({ quest: n, taskType: V(n.config)?.type })
+                ? F({ quest: n, taskType: B(n.config)?.type })
                 : S(n)
                   ? F({ quest: n, taskType: r.n.PLAY_ON_DESKTOP })
                   : g(n)

@@ -10,7 +10,7 @@ function o(e) {
     let o = t.getGuild(e),
         d = n.getCurrentUser(),
         c = !1;
-    return null != d && (c = i.getMember(e, d.id)?.isPending ?? !1), c && !!(0, l.Qd)(o);
+    return (null != d && (c = i.getMember(e, d.id)?.isPending ?? !1), c && !!(0, l.Qd)(o));
 }
 function d(e) {
     return (0, i.bG)([a.A, s.default, r.Ay], () => null != e && o(e, [a.A, s.default, r.Ay]), [e]);

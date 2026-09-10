@@ -1,4 +1,4 @@
-a.d(n, { default: () => E }), a(321073);
+(a.d(n, { default: () => E }), a(321073));
 var l = a(477900),
     t = a(582128),
     i = a(834730),
@@ -96,9 +96,9 @@ ${c}`
                             (await d.A.sendMessage(n.id, u.Ay.parse(n, k), !1, { location: w.Hx.GAME_SERVER_SHOP }),
                             j.push(n));
                     }
-                    (0, f.iu)({ server: n, channels: j, hasContextMessage: g, source: a }),
+                    ((0, f.iu)({ server: n, channels: j, hasContextMessage: g, source: a }),
                         (0, r.P0)((0, s.o)(N.intl.string(N.t.kwmYkt), o.Ck.SUCCESS)),
-                        m && null != l[0] && (0, p.iN)(l[0], { openTextInVoiceIfVoiceChannel: !0 });
+                        m && null != l[0] && (0, p.iN)(l[0], { openTextInVoiceIfVoiceChannel: !0 }));
                 } catch (e) {
                     (0, r.P0)((0, s.o)(N.intl.string(N.t.iufib1), o.Ck.FAILURE));
                 } finally {

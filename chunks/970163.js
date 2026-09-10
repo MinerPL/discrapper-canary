@@ -125,5 +125,5 @@ function h(e, t, n) {
             .finally(() => {
                 A.delete(e);
             });
-    return A.set(e, p), p;
+    return (A.set(e, p), p);
 }

@@ -11,7 +11,7 @@ let c = "GameLibraryViewStore",
     _ = d.DpB.LAST_PLAYED,
     E = !1,
     A = a().debounce(() => {
-        (E = !1), I.emitChange();
+        ((E = !1), I.emitChange());
     }, 200);
 class h extends s.Ay.Store {
     static displayName = "GameLibraryViewStore";
@@ -35,11 +35,11 @@ class h extends s.Ay.Store {
 let I = new h(o.h, {
         LIBRARY_TABLE_SORT_UPDATE: function (e) {
             let { direction: t, key: n } = e;
-            (u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ });
+            ((u = t), (_ = n), l.w.set(c, { sortDirection: u, sortKey: _ }));
         },
         LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
             let { key: t, isKeyboardEvent: n } = e;
-            n && ((E = !0), A()), (i = t);
+            (n && ((E = !0), A()), (i = t));
         },
     }),
     f = I;

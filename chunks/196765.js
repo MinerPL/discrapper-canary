@@ -8,11 +8,11 @@ function a(e, t = o) {
         n.useCallback(() => t(e.getState()), [e, t]),
         n.useCallback(() => t(e.getInitialState()), [e, t]),
     );
-    return n.useDebugValue(r), r;
+    return (n.useDebugValue(r), r);
 }
 let s = (e) => {
         let t = (0, i.y)(e),
             r = (e) => a(t, e);
-        return Object.assign(r, t), r;
+        return (Object.assign(r, t), r);
     },
     u = (e) => (e ? s(e) : s);

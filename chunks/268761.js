@@ -16,4 +16,4 @@ function o() {
 function d(e, t) {
     return t ?? e?.defaultAutoArchiveDuration ?? s.cM;
 }
-a.A.Minutes.HOUR, a.A.Minutes.DAY, a.A.Minutes.DAY, a.A.Minutes.WEEK, r()(() => o().map((e) => e.value));
+(a.A.Minutes.HOUR, a.A.Minutes.DAY, a.A.Minutes.DAY, a.A.Minutes.WEEK, r()(() => o().map((e) => e.value)));

@@ -1,4 +1,4 @@
-r.d(t, { p: () => E }), r(321073);
+(r.d(t, { p: () => E }), r(321073));
 var l = r(228366),
     o = r(350172),
     u = r(730202),
@@ -34,14 +34,14 @@ let E = {
     requestCollections(e) {
         let { includeUnpublished: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         for (let t of e) "" !== t && "loading" !== u.A.getFetchState(t) && a.add(t);
-        t && (S = !0), a.size > 0 && null == d && (d = setTimeout(_, 32));
+        (t && (S = !0), a.size > 0 && null == d && (d = setTimeout(_, 32)));
     },
     reset() {
-        s.clear(),
+        (s.clear(),
             a.clear(),
             (S = !1),
             null != i && (clearTimeout(i), (i = null)),
-            null != d && (clearTimeout(d), (d = null));
+            null != d && (clearTimeout(d), (d = null)));
     },
 };
 l.h.subscribe("LOGOUT", E.reset);

@@ -13,9 +13,9 @@ let r = new (class {
         return null != this.searchSessionId;
     }
     initialize() {
-        (this.searchSessionId = (0, i.A)()),
+        ((this.searchSessionId = (0, i.A)()),
             (this.searchSessionStartTime = Date.now()),
-            (this.isQueryEnteredTracked = !1);
+            (this.isQueryEnteredTracked = !1));
     }
     maybeTrackQueryEntered() {
         this.isQueryEnteredTracked ||

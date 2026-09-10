@@ -276,7 +276,7 @@ let A = (e) => {
                 [S, g] = l.useState({ section: 0, row: -1 });
             function E(e) {
                 let n = O(e);
-                a((t) => {
+                (a((t) => {
                     if (n in t) {
                         let { [n]: e, ...r } = t;
                         return r;
@@ -285,13 +285,13 @@ let A = (e) => {
                         let r = h(e);
                         if (null != r) {
                             let l = { ...t };
-                            return (l[n] = { display: r, row: e }), l;
+                            return ((l[n] = { display: r, row: e }), l);
                         }
                     }
                     return t;
                 }),
                     o(""),
-                    m.current?.focus();
+                    m.current?.focus());
             }
             l.useEffect(() => {
                 m.current?.focus();
@@ -310,8 +310,8 @@ let A = (e) => {
                     isAtMaxPendingRows: R,
                     onSelectionChange: function (e, n) {
                         let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                        g((t) => (t.section === e && t.row === n ? t : { section: e ?? 0, row: n ?? -1 })),
-                            r && t?.current?.scrollToIndex({ section: e ?? 0, row: n ?? 0, padding: 8 });
+                        (g((t) => (t.section === e && t.row === n ? t : { section: e ?? 0, row: n ?? -1 })),
+                            r && t?.current?.scrollToIndex({ section: e ?? 0, row: n ?? 0, padding: 8 }));
                     },
                     onRowClick: E,
                     query: s,

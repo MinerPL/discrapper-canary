@@ -47,7 +47,7 @@ async function p(l = new e.t()) {
     try {
         await l.start();
         let t = await i.t.getInstance();
-        return await t.rsp(), t.ssl(), (b = !0), !0;
+        return (await t.rsp(), t.ssl(), (b = !0), !0);
     } catch {
         return !1;
     }
@@ -59,7 +59,7 @@ async function N(l = {}) {
             if ((await u(l)) === "denied") return "denied";
             b || (await p(l));
         }
-        return (0, c.a)(await (0, c.r)({ video: !0, audio: l.requestAudio ?? !1 })), s(), "granted";
+        return ((0, c.a)(await (0, c.r)({ video: !0, audio: l.requestAudio ?? !1 })), s(), "granted");
     } catch (t) {
         let l = t instanceof Error ? t.name : void 0;
         if ("NotAllowedError" === l || "PermissionDeniedError" === l) return "denied";

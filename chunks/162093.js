@@ -311,7 +311,7 @@ let tS = function (t, e, i, s) {
                 loading: t,
                 error: i,
                 getTrialPurchaseEligibility: n.useCallback(async (t, i, n) => {
-                    e(!0), l(null);
+                    (e(!0), l(null));
                     try {
                         return await (0, tf.KD)(t, i, n);
                     } catch (t) {
@@ -545,7 +545,7 @@ let tD = function (t) {
         [U, O] = n.useState(!1),
         F = n.useCallback((t) => {
             let e = !1;
-            null != t && (e = t.scrollHeight - t.clientHeight > 1), O(e);
+            (null != t && (e = t.scrollHeight - t.clientHeight > 1), O(e));
         }, []),
         [w] = E.tx(i),
         [V] = E.I8(i),

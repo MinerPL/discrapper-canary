@@ -1,4 +1,4 @@
-n.d(t, { A: () => D }), n(938796), n(142703);
+(n.d(t, { A: () => D }), n(938796), n(142703));
 var i = n(435558),
     r = n.n(i),
     a = n(665260),
@@ -36,7 +36,7 @@ function O(e) {
     let { libraryApplication: t } = e,
         n = d.A.createFromServer(t),
         i = (0, c.gW)(n.id, n.branchId);
-    (I[i] = n), p.delete(i);
+    ((I[i] = n), p.delete(i));
 }
 function R(e, t) {
     let n = (0, c.gW)(e, t);
@@ -117,7 +117,7 @@ class y extends s.Ay.Store {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (h) return setImmediate(e), !1;
+            if (h) return (setImmediate(e), !1);
         });
     }
 }
@@ -127,7 +127,7 @@ let D = new y(o.h, {
     },
     LIBRARY_FETCH_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
-        (I = {}), C(t), (h = !0);
+        ((I = {}), C(t), (h = !0));
     },
     SKU_PURCHASE_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
@@ -137,18 +137,18 @@ let D = new y(o.h, {
         let { applicationId: t, branchId: n, flags: i } = e,
             r = (0, c.gW)(t, n),
             s = R(t, n);
-        null != s && !s.isHidden() && a.Lt(i, _.hM6.HIDDEN) && (g = !0), p.add(r);
+        (null != s && !s.isHidden() && a.Lt(i, _.hM6.HIDDEN) && (g = !0), p.add(r));
     },
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
     LIBRARY_APPLICATION_UPDATE: O,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, launchOptionId: i } = e;
-        (m[(0, c.gW)(t, n)] = i), S();
+        ((m[(0, c.gW)(t, n)] = i), S());
     },
     LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
         let { applicationId: t, branchId: n } = e;
         if (T[t] === n) return !1;
-        (T[t] = n), N();
+        ((T[t] = n), N());
     },
     LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
         let { libraryApplications: t } = e;

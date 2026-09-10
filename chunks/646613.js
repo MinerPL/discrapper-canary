@@ -23,9 +23,9 @@ function i(l) {
                   }
                 : void 0,
         });
-    e?.onModuleOpened(e.moduleName),
+    (e?.onModuleOpened(e.moduleName),
         e && void 0 !== s && e.onScreenOpened(e.moduleName, s),
-        e && void 0 !== n && e.onErrorTriggered(e.moduleName, n, s, Z);
+        e && void 0 !== n && e.onErrorTriggered(e.moduleName, n, s, Z));
     let m = e?.getInitialVisibility?.();
     e && !1 === m && e.onBackground?.(e.moduleName, s);
     let o = e?.subscribeVisibility?.((l) => {
@@ -37,15 +37,15 @@ function i(l) {
                       d = e.getErrorName(l),
                       i = e.getErrorPayload(l);
                   if (s === t) {
-                      void 0 !== d && d !== n && e.onErrorTriggered(e.moduleName, d, s, i), (n = d), (Z = i);
+                      (void 0 !== d && d !== n && e.onErrorTriggered(e.moduleName, d, s, i), (n = d), (Z = i));
                       return;
                   }
-                  void 0 !== s && e.onScreenClosed(e.moduleName, s),
+                  (void 0 !== s && e.onScreenClosed(e.moduleName, s),
                       void 0 !== t && e.onScreenOpened(e.moduleName, t),
                       (s = t),
                       void 0 !== d && d !== n && e.onErrorTriggered(e.moduleName, d, t, i),
                       (n = d),
-                      (Z = i);
+                      (Z = i));
               })
             : void 0,
         h = !1;
@@ -113,10 +113,10 @@ var e,
     c,
     a = class {
         constructor(l) {
-            (this._process = l), (this._active = !1), (this._current = null), (this._last = null);
+            ((this._process = l), (this._active = !1), (this._current = null), (this._last = null));
         }
         start() {
-            (this._active = !0), this.flush();
+            ((this._active = !0), this.flush());
         }
         clear() {
             this._current && ((this._current.next = null), (this._last = this._current));
@@ -124,15 +124,15 @@ var e,
         enqueue(l) {
             let t = { value: l, next: null };
             if (this._current) {
-                (this._last.next = t), (this._last = t);
+                ((this._last.next = t), (this._last = t));
                 return;
             }
-            (this._current = t), (this._last = t), this._active && this.flush();
+            ((this._current = t), (this._last = t), this._active && this.flush());
         }
         flush() {
-            for (; this._current; ) {
+            for (; this._current;) {
                 let l = this._current;
-                this._process(l.value), (this._current = l.next);
+                (this._process(l.value), (this._current = l.next));
             }
             this._last = null;
         }
@@ -161,15 +161,15 @@ function h(l) {
     for (let i = 0; i < l.length; i++) {
         switch (l.charCodeAt(i)) {
             case 92:
-                (d += l[i + 1]), i++;
+                ((d += l[i + 1]), i++);
                 continue;
             case 46:
-                t.push(d), (d = "");
+                (t.push(d), (d = ""));
                 continue;
         }
         d += l[i];
     }
-    return t.push(d), t;
+    return (t.push(d), t);
 }
 function W(l) {
     var t;
@@ -185,7 +185,7 @@ function W(l) {
                     if (t === l.length - 2) d[l[t]] = l[t + 1];
                     else {
                         let i = d;
-                        (d = {}), (i[l[t]] = d);
+                        ((d = {}), (i[l[t]] = d));
                     }
                 return t;
             })(h(l));
@@ -249,7 +249,7 @@ let V = 0,
     };
 var w = class {
     constructor(l, t) {
-        (this.logic = l),
+        ((this.logic = l),
             (this._snapshot = void 0),
             (this.clock = void 0),
             (this.options = void 0),
@@ -268,10 +268,10 @@ var w = class {
             (this.system = void 0),
             (this._doneEvent = void 0),
             (this.src = void 0),
-            (this._deferred = []);
+            (this._deferred = []));
         const d = { ...z, ...t },
             { clock: i, logger: e, parent: c, syncSnapshot: s, id: n, systemId: Z, inspect: b } = d;
-        (this.system = c
+        ((this.system = c
             ? c.system
             : (function (l, t) {
                   let d = new Map(),
@@ -284,15 +284,15 @@ var w = class {
                           schedule: (l, t, d, i, e = Math.random().toString(36).slice(2)) => {
                               let c = { source: l, target: t, event: d, delay: i, id: e, startedAt: Date.now() },
                                   n = T(l, e);
-                              (b._snapshot._scheduledEvents[n] = c),
+                              ((b._snapshot._scheduledEvents[n] = c),
                                   (a[n] = s.setTimeout(() => {
-                                      delete a[n], delete b._snapshot._scheduledEvents[n], b._relay(l, t, d);
-                                  }, i));
+                                      (delete a[n], delete b._snapshot._scheduledEvents[n], b._relay(l, t, d));
+                                  }, i)));
                           },
                           cancel: (l, t) => {
                               let d = T(l, t),
                                   i = a[d];
-                              delete a[d], delete b._snapshot._scheduledEvents[d], void 0 !== i && s.clearTimeout(i);
+                              (delete a[d], delete b._snapshot._scheduledEvents[d], void 0 !== i && s.clearTimeout(i));
                           },
                           cancelAll: (l) => {
                               for (let t in b._snapshot._scheduledEvents) {
@@ -315,7 +315,7 @@ var w = class {
                           _set: (l, t) => {
                               let d = i.get(l);
                               if (d && d !== t) throw Error(`Actor with system ID '${l}' already exists.`);
-                              i.set(l, t), e.set(t, l);
+                              (i.set(l, t), e.set(t, l));
                           },
                           inspect: (l) => {
                               let t = y(l);
@@ -334,8 +334,8 @@ var w = class {
                               c.forEach((l) => l.next?.(d));
                           },
                           _relay: (l, t, d) => {
-                              b._sendInspectionEvent({ type: "@xstate.event", sourceRef: l, actorRef: t, event: d }),
-                                  t._send(d);
+                              (b._sendInspectionEvent({ type: "@xstate.event", sourceRef: l, actorRef: t, event: d }),
+                                  t._send(d));
                           },
                           scheduler: Z,
                           getSnapshot: () => ({ _scheduledEvents: { ...b._snapshot._scheduledEvents } }),
@@ -399,7 +399,7 @@ var w = class {
                             return;
                         let t = L;
                         try {
-                            (L = !0), l.exec(l.info, l.params);
+                            ((L = !0), l.exec(l.info, l.params));
                         } finally {
                             L = t;
                         }
@@ -411,7 +411,7 @@ var w = class {
             this.system._sendInspectionEvent({ type: "@xstate.actor", actorRef: this }),
             Z && ((this.systemId = Z), this.system._set(Z, this)),
             this._initState(t?.snapshot ?? t?.state),
-            Z && "active" !== this._snapshot.status && this.system._unregister(this);
+            Z && "active" !== this._snapshot.status && this.system._unregister(this));
     }
     _initState(l) {
         try {
@@ -426,11 +426,11 @@ var w = class {
     }
     update(l, t) {
         let d;
-        for (this._snapshot = l; (d = this._deferred.shift()); )
+        for (this._snapshot = l; (d = this._deferred.shift());)
             try {
                 d();
             } catch (t) {
-                (this._deferred.length = 0), (this._snapshot = { ...l, status: "error", error: t });
+                ((this._deferred.length = 0), (this._snapshot = { ...l, status: "error", error: t }));
             }
         switch (this._snapshot.status) {
             case "active":
@@ -449,11 +449,11 @@ var w = class {
                     } catch (l) {
                         o(l);
                     }
-                this._stopProcedure(),
+                (this._stopProcedure(),
                     this._complete(),
                     (this._doneEvent =
                         ((i = this.id), { type: `xstate.done.actor.${i}`, output: this._snapshot.output, actorId: i })),
-                    this._parent && this.system._relay(this, this._parent, this._doneEvent);
+                    this._parent && this.system._relay(this, this._parent, this._doneEvent));
                 break;
             case "error":
                 this._error(this._snapshot.error);
@@ -504,7 +504,7 @@ var w = class {
     }
     start() {
         if (this._processingStatus === I.Running) return this;
-        this._syncSnapshot &&
+        (this._syncSnapshot &&
             this.subscribe({
                 next: (l) => {
                     "active" === l.status &&
@@ -514,7 +514,7 @@ var w = class {
             }),
             this.system._register(this.sessionId, this),
             this.systemId && this.system._set(this.systemId, this),
-            (this._processingStatus = I.Running);
+            (this._processingStatus = I.Running));
         let l = m(this.options.input);
         switch (
             (this.system._sendInspectionEvent({
@@ -526,15 +526,15 @@ var w = class {
             this._snapshot.status)
         ) {
             case "done":
-                return this.update(this._snapshot, l), this;
+                return (this.update(this._snapshot, l), this);
             case "error":
-                return this._error(this._snapshot.error), this;
+                return (this._error(this._snapshot.error), this);
         }
         if ((this._parent || this.system.start(), this.logic.start))
             try {
                 this.logic.start(this._snapshot, this._actorScope);
             } catch (l) {
-                return (this._snapshot = { ...this._snapshot, status: "error", error: l }), this._error(l), this;
+                return ((this._snapshot = { ...this._snapshot, status: "error", error: l }), this._error(l), this);
             }
         return (
             this.update(this._snapshot, l), this.options.devTools && this.attachDevTools(), this.mailbox.start(), this
@@ -549,10 +549,10 @@ var w = class {
         }
         if (d) {
             let { err: l } = d;
-            (this._snapshot = { ...this._snapshot, status: "error", error: l }), this._error(l);
+            ((this._snapshot = { ...this._snapshot, status: "error", error: l }), this._error(l));
             return;
         }
-        this.update(t, l), l.type === n && (this._stopProcedure(), this._complete());
+        (this.update(t, l), l.type === n && (this._stopProcedure(), this._complete()));
     }
     _stop() {
         return (
@@ -591,12 +591,12 @@ var w = class {
                 o(l);
             }
         }
-        this.observers.clear(), t && o(l);
+        (this.observers.clear(), t && o(l));
     }
     _error(l) {
-        this._stopProcedure(),
+        (this._stopProcedure(),
             this._reportError(l),
-            this._parent && this.system._relay(this, this._parent, b(this.id, l));
+            this._parent && this.system._relay(this, this._parent, b(this.id, l)));
     }
     _stopProcedure() {
         return (
@@ -664,7 +664,7 @@ function C(l, t) {
 }
 function x(l) {
     function t(l, t) {}
-    return (t.type = "xstate.cancel"), (t.sendId = l), (t.resolve = S), (t.execute = C), t;
+    return ((t.type = "xstate.cancel"), (t.sendId = l), (t.resolve = S), (t.execute = C), t);
 }
 function g(l, t, d, i, { id: e, systemId: c, src: a, input: s, syncSnapshot: n }) {
     let Z,
@@ -702,7 +702,7 @@ function U(l, t, d, i, { actorRef: e }) {
     let c = "function" == typeof e ? e(d, i) : e,
         a = "string" == typeof c ? t.children[c] : c,
         s = t.children;
-    return a && ((s = { ...s }), delete s[a.id]), [lV(t, { children: s }), a, void 0];
+    return (a && ((s = { ...s }), delete s[a.id]), [lV(t, { children: s }), a, void 0]);
 }
 function F(l, t) {
     if (t) {
@@ -714,7 +714,7 @@ function F(l, t) {
 }
 function O(l) {
     function t(l, t) {}
-    return (t.type = "xstate.stopChild"), (t.actorRef = l), (t.resolve = U), (t.execute = F), t;
+    return ((t.type = "xstate.stopChild"), (t.actorRef = l), (t.resolve = U), (t.execute = F), t);
 }
 function J(l, { context: t, event: d }, { guards: i }) {
     return !K(i[0], t, d, l);
@@ -723,7 +723,7 @@ function k(l) {
     function t(l, t) {
         return !1;
     }
-    return (t.check = J), (t.guards = [l]), t;
+    return ((t.check = J), (t.guards = [l]), t);
 }
 function E(l, { context: t, event: d }, { guards: i }) {
     return i.every((i) => K(i, t, d, l));
@@ -732,7 +732,7 @@ function v(l) {
     function t(l, t) {
         return !1;
     }
-    return (t.check = E), (t.guards = l), t;
+    return ((t.check = E), (t.guards = l), t);
 }
 function K(l, t, d, i) {
     let { machine: e } = i,
@@ -759,7 +759,7 @@ function P(l, t) {
     let d = [];
     if (t === l) return d;
     let i = l.parent;
-    for (; i && i !== t; ) d.push(i), (i = i.parent);
+    for (; i && i !== t;) (d.push(i), (i = i.parent));
     return d;
 }
 function f(l) {
@@ -773,14 +773,14 @@ function f(l) {
         } else ld(l).forEach((l) => t.add(l));
     for (let l of t) {
         let d = l.parent;
-        for (; d; ) t.add(d), (d = d.parent);
+        for (; d;) (t.add(d), (d = d.parent));
     }
     return t;
 }
 function B(l) {
     let t = new Map();
     for (let d of l)
-        t.has(d) || t.set(d, []), d.parent && (t.has(d.parent) || t.set(d.parent, []), t.get(d.parent).push(d));
+        (t.has(d) || t.set(d, []), d.parent && (t.has(d.parent) || t.set(d.parent, []), t.get(d.parent).push(d)));
     return t;
 }
 function A(l, t) {
@@ -878,7 +878,7 @@ function lc(l, t) {
         } catch {}
     let d = h(t).slice(),
         i = l;
-    for (; d.length; ) {
+    for (; d.length;) {
         let l = d.shift();
         if (!l.length) break;
         i = le(i, l);
@@ -905,7 +905,7 @@ function la(l, t) {
 }
 function ls(l, t) {
     let d = l;
-    for (; d.parent && d.parent !== t; ) d = d.parent;
+    for (; d.parent && d.parent !== t;) d = d.parent;
     return d.parent === t;
 }
 function ln(l, t, d) {
@@ -970,7 +970,7 @@ function lo(l, t, d, i, e, c) {
         s = t.historyValue,
         n = ln(l, a, s),
         b = t;
-    e ||
+    (e ||
         ([b, s] = (function (l, t, d, i, e, c, a, s) {
             let n,
                 Z = l,
@@ -982,29 +982,30 @@ function lo(l, t, d, i, e, c) {
                         .filter((l) => "history" === l.type);
                 })(l)) {
                     let d;
-                    (d = "deep" === t.history ? (t) => H(t) && ls(t, l) : (t) => t.parent === l),
-                        ((n ??= { ...c })[t.id] = Array.from(e).filter(d));
+                    ((d = "deep" === t.history ? (t) => H(t) && ls(t, l) : (t) => t.parent === l),
+                        ((n ??= { ...c })[t.id] = Array.from(e).filter(d)));
                 }
-            for (let l of b) (Z = lW(Z, t, d, [...l.exit, ...l.invoke.map((l) => O(l.id))], a, void 0)), e.delete(l);
+            for (let l of b) ((Z = lW(Z, t, d, [...l.exit, ...l.invoke.map((l) => O(l.id))], a, void 0)), e.delete(l));
             return [Z, n || c];
         })(b, i, d, n, a, s, c, d.actionExecutor)),
         (b = (function (l, t, d, i, e, c, a, s) {
             let n = l,
                 b = new Set(),
                 m = new Set();
-            (function (l, t, d, i) {
+            ((function (l, t, d, i) {
                 for (let e of l) {
                     let l = lb(e, t);
                     for (let c of e.target || [])
-                        !lt(c) && (e.source !== c || e.source !== l || e.reenter) && (i.add(c), d.add(c)),
-                            lu(c, t, d, i);
+                        (!lt(c) && (e.source !== c || e.source !== l || e.reenter) && (i.add(c), d.add(c)),
+                            lu(c, t, d, i));
                     for (let c of lZ(e, t)) {
                         let a = P(c, l);
-                        l?.type === "parallel" && a.push(l), lh(i, t, d, a, !e.source.parent && e.reenter ? void 0 : l);
+                        (l?.type === "parallel" && a.push(l),
+                            lh(i, t, d, a, !e.source.parent && e.reenter ? void 0 : l));
                     }
                 }
             })(i, a, m, b),
-                s && m.add(l.machine.root);
+                s && m.add(l.machine.root));
             let o = new Set();
             for (let l of [...b].sort((l, t) => l.order - t.order)) {
                 e.add(l);
@@ -1033,7 +1034,7 @@ function lo(l, t, d, i, e, c) {
                         c.push(Z(i.id, void 0 !== l.output ? N(l.output, n.context, t, d.self) : void 0));
                         a?.type === "parallel" && !o.has(a) && _(e, a);
                     )
-                        o.add(a), c.push(Z(a.id)), (s = a), (a = a.parent);
+                        (o.add(a), c.push(Z(a.id)), (s = a), (a = a.parent));
                     if (a) continue;
                     n = lV(n, {
                         status: "done",
@@ -1065,7 +1066,7 @@ function lo(l, t, d, i, e, c) {
             c,
             s,
             e,
-        ));
+        )));
     let m = [...a];
     "done" === b.status &&
         (b = lW(
@@ -1096,20 +1097,20 @@ function lu(l, t, d, i) {
     if (lt(l))
         if (t[l.id]) {
             let a = t[l.id];
-            for (let l of a) i.add(l), lu(l, t, d, i);
+            for (let l of a) (i.add(l), lu(l, t, d, i));
             for (let s of a) {
-                (e = s), (c = l.parent), lh(i, t, d, P(e, c));
+                ((e = s), (c = l.parent), lh(i, t, d, P(e, c)));
             }
         } else {
             let e = ll(l);
-            for (let c of e.target) i.add(c), e === l.parent?.initial && d.add(l.parent), lu(c, t, d, i);
+            for (let c of e.target) (i.add(c), e === l.parent?.initial && d.add(l.parent), lu(c, t, d, i));
             for (let c of e.target) {
-                (a = c), (s = l.parent), lh(i, t, d, P(a, s));
+                ((a = c), (s = l.parent), lh(i, t, d, P(a, s)));
             }
         }
     else if ("compound" === l.type) {
         let [e] = l.initial.target;
-        lt(e) || (i.add(e), d.add(e)), lu(e, t, d, i), lh(i, t, d, P(e, l));
+        (lt(e) || (i.add(e), d.add(e)), lu(e, t, d, i), lh(i, t, d, P(e, l)));
     } else if ("parallel" === l.type)
         for (let e of Q(l).filter((l) => !lt(l)))
             [...i].some((l) => ls(l, e)) || (lt(e) || (i.add(e), d.add(e)), lu(e, t, d, i));
@@ -1147,11 +1148,11 @@ function lW(l, t, d, i, e, c) {
                     continue;
                 }
                 let [u, h, W] = b.resolve(i, n, m, o, b, c);
-                (n = u),
+                ((n = u),
                     "retryResolve" in b && a?.push([b, h]),
                     "execute" in b &&
                         i.actionExecutor({ type: b.type, info: m, params: h, exec: b.execute.bind(null, i, h) }),
-                    W && (n = l(n, d, i, W, c, a));
+                    W && (n = l(n, d, i, W, c, a)));
             }
             return n;
         })(l, t, d, i, { internalQueue: e, deferredActorIds: c }, a);
@@ -1166,27 +1167,27 @@ function lG(l, t, d, i) {
     let e = l,
         c = [];
     function a(l, t, i) {
-        d.system._sendInspectionEvent({
+        (d.system._sendInspectionEvent({
             type: "@xstate.microstep",
             actorRef: d.self,
             event: t,
             snapshot: l,
             _transitions: i,
         }),
-            c.push(l);
+            c.push(l));
     }
-    if (t.type === n) return a((e = lV(lp(e, t, d), { status: "stopped" })), t, []), { snapshot: e, microstates: c };
+    if (t.type === n) return (a((e = lV(lp(e, t, d), { status: "stopped" })), t, []), { snapshot: e, microstates: c });
     let Z = t;
     if (Z.type !== s) {
         let t = Z,
             s = t.type.startsWith("xstate.error.actor"),
             n = lN(t, e);
         if (s && !n.length)
-            return a((e = lV(l, { status: "error", error: t.error })), t, []), { snapshot: e, microstates: c };
+            return (a((e = lV(l, { status: "error", error: t.error })), t, []), { snapshot: e, microstates: c });
         a((e = lo(n, l, d, Z, !1, i)), t, n);
     }
     let b = !0;
-    for (; "active" === e.status; ) {
+    for (; "active" === e.status;) {
         let l = b
                 ? (function (l, t) {
                       let d = new Set();
@@ -1207,9 +1208,9 @@ function lG(l, t, d, i) {
             if (!i.length) break;
             l = lN((Z = i.shift()), e);
         }
-        (b = (e = lo(l, e, d, Z, !1, i)) !== t), a(e, Z, l);
+        ((b = (e = lo(l, e, d, Z, !1, i)) !== t), a(e, Z, l));
     }
-    return "active" !== e.status && lp(e, Z, d), { snapshot: e, microstates: c };
+    return ("active" !== e.status && lp(e, Z, d), { snapshot: e, microstates: c });
 }
 function lp(l, t, d) {
     return lW(
@@ -1281,7 +1282,7 @@ function lL(l, t, d, i, { event: e, id: c, delay: a }, { internalQueue: s }) {
         let l = Z && Z[a];
         n = "function" == typeof l ? l(d, i) : l;
     } else n = "function" == typeof a ? a(d, i) : a;
-    return "number" != typeof n && s.push(b), [t, { event: b, id: c, delay: n }, void 0];
+    return ("number" != typeof n && s.push(b), [t, { event: b, id: c, delay: n }, void 0]);
 }
 function lI(l, t) {
     let { event: d, delay: i, id: e } = t;
@@ -1310,7 +1311,7 @@ function lR(l) {
         start: (t, d) => {
             let { self: i, system: e, emit: c } = d,
                 a = { receivers: void 0, dispose: void 0 };
-            lw.set(i, a),
+            (lw.set(i, a),
                 (a.dispose = l({
                     input: t.input,
                     system: e,
@@ -1319,10 +1320,10 @@ function lR(l) {
                         "stopped" !== i.getSnapshot().status && i._parent && e._relay(i, i._parent, l);
                     },
                     receive: (l) => {
-                        (a.receivers ??= new Set()), a.receivers.add(l);
+                        ((a.receivers ??= new Set()), a.receivers.add(l));
                     },
                     emit: c,
-                }));
+                })));
         },
         transition: (l, t, d) => {
             let i = lw.get(d.self);
@@ -1354,7 +1355,7 @@ function lg(l) {
                 case lC:
                     return { ...l, status: "error", error: t.data, input: void 0 };
                 case n:
-                    return lx.get(d.self)?.abort(), { ...l, status: "stopped", input: void 0 };
+                    return (lx.get(d.self)?.abort(), { ...l, status: "stopped", input: void 0 });
                 default:
                     return l;
             }
@@ -1362,7 +1363,7 @@ function lg(l) {
         start: (t, { self: d, system: i, emit: e }) => {
             if ("active" !== t.status) return;
             let c = new AbortController();
-            lx.set(d, c),
+            (lx.set(d, c),
                 Promise.resolve(l({ input: t.input, system: i, self: d, signal: c.signal, emit: e })).then(
                     (l) => {
                         "active" === d.getSnapshot().status && (lx.delete(d), i._relay(d, d, { type: lS, data: l }));
@@ -1370,7 +1371,7 @@ function lg(l) {
                     (l) => {
                         "active" === d.getSnapshot().status && (lx.delete(d), i._relay(d, d, { type: lC, data: l }));
                     },
-                );
+                ));
         },
         getInitialSnapshot: (l, t) => ({ status: "active", output: void 0, error: void 0, input: t }),
         getPersistedSnapshot: (l) => l,
@@ -1410,7 +1411,7 @@ function lD(l, t, d, i, { assignment: e }) {
                                 src: c,
                                 systemId: a?.systemId,
                             });
-                            return (e[n.id] = n), n;
+                            return ((e[n.id] = n), n);
                         }
                     })(c, a);
                     return (
@@ -1443,12 +1444,12 @@ function lD(l, t, d, i, { assignment: e }) {
 }
 function lj(l) {
     function t(l, t) {}
-    return (t.type = "xstate.assign"), (t.assignment = l), (t.resolve = lD), t;
+    return ((t.type = "xstate.assign"), (t.assignment = l), (t.resolve = lD), t);
 }
 let lU = new WeakMap();
 function lF(l, t, d) {
     let i = lU.get(l);
-    return i ? t in i || (i[t] = d()) : ((i = { [t]: d() }), lU.set(l, i)), i[t];
+    return (i ? t in i || (i[t] = d()) : ((i = { [t]: d() }), lU.set(l, i)), i[t]);
 }
 let lO = {},
     lJ = (l) =>
@@ -1503,15 +1504,15 @@ var lk = class l {
                 throw Error(
                     `No initial state specified for compound state node "#${this.id}". Try adding { initial: "${Object.keys(this.states)[0]}" } to the state config.`,
                 );
-            (this.history = !0 === this.config.history ? "shallow" : this.config.history || !1),
+            ((this.history = !0 === this.config.history ? "shallow" : this.config.history || !1),
                 (this.entry = p(this.config.entry).slice()),
                 (this.exit = p(this.config.exit).slice()),
                 (this.meta = this.config.meta),
                 (this.output = "final" !== this.type && this.parent ? void 0 : this.config.output),
-                (this.tags = p(t.tags).slice());
+                (this.tags = p(t.tags).slice()));
         }
         _initialize() {
-            (this.transitions = (function (l) {
+            ((this.transitions = (function (l) {
                 let t = new Map();
                 if (l.config.on)
                     for (let d of Object.keys(l.config.on)) {
@@ -1557,14 +1558,14 @@ var lk = class l {
                 }
                 for (let d of l.after) {
                     let l = t.get(d.eventType);
-                    l || ((l = []), t.set(d.eventType, l)), l.push(d);
+                    (l || ((l = []), t.set(d.eventType, l)), l.push(d));
                 }
                 return t;
             })(this)),
                 this.config.always && (this.always = X(this.config.always).map((l) => q(this, "", l))),
                 Object.keys(this.states).forEach((l) => {
                     this.states[l]._initialize();
-                });
+                }));
         }
         get definition() {
             return {
@@ -1720,7 +1721,7 @@ var lk = class l {
 ${t.message}`);
                 }
                 if (n) {
-                    e.push(...c.actions), (d = c);
+                    (e.push(...c.actions), (d = c));
                     break;
                 }
             }
@@ -1750,7 +1751,7 @@ ${t.message}`);
     },
     lE = class l {
         constructor(l, t) {
-            (this.config = l),
+            ((this.config = l),
                 (this.version = void 0),
                 (this.schemas = void 0),
                 (this.implementations = void 0),
@@ -1777,7 +1778,7 @@ ${t.message}`);
                 (this.root = new lk(l, { _key: this.id, _machine: this })),
                 this.root._initialize(),
                 (this.states = this.root.states),
-                (this.events = this.root.events);
+                (this.events = this.root.events));
         }
         provide(t) {
             let { actions: d, guards: i, actors: e, delays: c } = this.implementations;
@@ -2017,7 +2018,7 @@ function lK(l, { event: t }) {
 }
 function lH(l) {
     function t(l, t) {}
-    return (t.type = "xstate.emit"), (t.event = l), (t.resolve = lv), (t.execute = lK), t;
+    return ((t.type = "xstate.emit"), (t.event = l), (t.resolve = lv), (t.execute = lK), t);
 }
 let lQ = (((c = {}).Parent = "#_parent"), (c.Internal = "#_internal"), c);
 function lP(l, t, d, i, { to: e, event: c, id: a, delay: s }, n) {
@@ -2124,7 +2125,7 @@ function l_(l, t, d, i, { collect: e }) {
 }
 function l$(l) {
     function t(l, t) {}
-    return (t.type = "xstate.enqueueActions"), (t.collect = l), (t.resolve = l_), t;
+    return ((t.type = "xstate.enqueueActions"), (t.collect = l), (t.resolve = l_), t);
 }
 function lq(l, t, d, i, { value: e, label: c }) {
     return [t, { value: "function" == typeof e ? e(d, i) : e, label: c }, void 0];
@@ -2134,5 +2135,5 @@ function l2({ logger: l }, { value: t, label: d }) {
 }
 function l0(l = ({ context: l, event: t }) => ({ context: l, event: t }), t) {
     function d(l, t) {}
-    return (d.type = "xstate.log"), (d.value = l), (d.label = t), (d.resolve = lq), (d.execute = l2), d;
+    return ((d.type = "xstate.log"), (d.value = l), (d.label = t), (d.resolve = lq), (d.execute = l2), d);
 }

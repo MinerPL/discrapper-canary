@@ -25,7 +25,7 @@ var h =
 let I = {};
 function f(e) {
     let t = I[e];
-    return null == t && (t = I[e] = {}), t;
+    return (null == t && (t = I[e] = {}), t);
 }
 function p(e) {
     let { type: t, channelId: n, draft: i, draftType: r, command: s } = e,
@@ -36,7 +36,7 @@ function p(e) {
         var c;
         let e = f(d),
             t = e[n];
-        null == t && (t = e[n] = {}), (c = i).length > A && (c = c.substr(0, A)), (i = c);
+        (null == t && (t = e[n] = {}), (c = i).length > A && (c = c.substr(0, A)), (i = c));
         let l = t[r],
             u = s ?? ((0, o.l)(l?.command, i) ? l?.command : void 0);
         (i === l?.draft && a().isEqual(u, l?.command)) || (t[r] = { timestamp: Date.now(), draft: i, command: u });
@@ -49,7 +49,7 @@ function T(e, t) {
     let i = f(n),
         r = i[e];
     if (null == r) return !1;
-    delete r[t], a().isEmpty(r) && delete i[e];
+    (delete r[t], a().isEmpty(r) && delete i[e]);
 }
 function m() {
     let e = u.default.getId();
@@ -64,7 +64,7 @@ function g(e) {
         n = u.default.getId();
     if (null == n) return !1;
     let i = f(n);
-    return delete i[t], !1;
+    return (delete i[t], !1);
 }
 class S extends s.Ay.PersistedStore {
     static displayName = "DraftStore";
@@ -151,7 +151,7 @@ class S extends s.Ay.PersistedStore {
 let N = new S(l.h, {
     CONNECTION_OPEN: function () {
         let e = u.default.getId();
-        return e in I || (I[e] = {}), m(), !1;
+        return (e in I || (I[e] = {}), m(), !1);
     },
     LOGOUT: function (e) {
         e.isSwitchingAccount || (I = {});
@@ -160,7 +160,7 @@ let N = new S(l.h, {
         e.userId in I && delete I[e.userId];
     },
     GUILD_DELETE: function () {
-        return m(), !1;
+        return (m(), !1);
     },
     CHANNEL_DELETE: g,
     THREAD_DELETE: g,
@@ -177,7 +177,7 @@ let N = new S(l.h, {
             let e = i[t.parent_id];
             if (null == e) return !1;
             let n = e[2]?.draft ?? "";
-            "" !== n && (i[t.id] = { 0: { timestamp: Date.now(), draft: n } }), T(t.parent_id, 1), T(t.parent_id, 2);
+            ("" !== n && (i[t.id] = { 0: { timestamp: Date.now(), draft: n } }), T(t.parent_id, 1), T(t.parent_id, 2));
         }
     },
     DRAFT_SAVE: p,
@@ -199,7 +199,7 @@ let N = new S(l.h, {
         if (null == i) return;
         let r = f(i),
             a = r[t];
-        null == a && (a = r[t] = {}), (a[1] = { timestamp: Date.now(), ...a[1], ...n, parentChannelId: t });
+        (null == a && (a = r[t] = {}), (a[1] = { timestamp: Date.now(), ...a[1], ...n, parentChannelId: t }));
     },
     SCHEDULED_MESSAGE_DRAFT_CHANGE: function (e) {
         let { channelId: t, draft: n } = e,
@@ -207,7 +207,7 @@ let N = new S(l.h, {
         if (null == i) return;
         let r = f(i),
             a = r[t];
-        null == a && (a = r[t] = {}), (a[8] = { ...a[8], ...n, timestamp: Date.now() });
+        (null == a && (a = r[t] = {}), (a[8] = { ...a[8], ...n, timestamp: Date.now() }));
     },
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t } = e;

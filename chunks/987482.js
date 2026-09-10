@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => P });
+(n.r(e), n.d(e, { default: () => P }));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -155,7 +155,7 @@ function P(t) {
             })(),
         );
     function y(t, l) {
-        (null != u.getToken() || null != m) &&
+        ((null != u.getToken() || null != m) &&
             w.default.track(S.HAw.DOWNLOAD_APP, {
                 platform: t,
                 ptb: !1,
@@ -164,7 +164,7 @@ function P(t) {
                 referring_location: e,
                 qr_code: !1,
             }),
-            p ? window.open(l, "_blank") : (n(), N.R());
+            p ? window.open(l, "_blank") : (n(), N.R()));
     }
     function K(t) {
         v(t);

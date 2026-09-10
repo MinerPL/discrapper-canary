@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a, c: () => s }), n(321073);
+(n.d(t, { Z: () => a, c: () => s }), n(321073));
 var i = n(435558),
     r = n.n(i);
 function a(e) {
@@ -13,7 +13,7 @@ function a(e) {
                     i.amount === e.amount &&
                     r().isEqual(i.discounts, e.discounts)
                 ) {
-                    n.add(i.subscriptionPlanId), (i.quantity += e.quantity);
+                    (n.add(i.subscriptionPlanId), (i.quantity += e.quantity));
                     return;
                 }
             t.push({ ...e });

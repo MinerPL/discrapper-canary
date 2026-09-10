@@ -40,7 +40,7 @@ class h extends s.A {
             E(t);
         },
         POST_CONNECTION_OPEN: () => {
-            (i = _(Object.values(l.A.getLinkedUsers()))), (0, o.PU)(), A();
+            ((i = _(Object.values(l.A.getLinkedUsers()))), (0, o.PU)(), A());
         },
         WINDOW_FOCUS: (e) => {
             let { focused: t } = e;
@@ -55,13 +55,13 @@ class h extends s.A {
             if (void 0 === t.linked_users) return;
             let n = _(t.linked_users),
                 r = i;
-            (i = n),
+            ((i = n),
                 void 0 !== r &&
                     r !== n &&
-                    (n ? d.A.getWarning()?.surfaces?.includes(c.x.BANNER) === !0 && (0, o.QX)() : (0, o.QX)());
+                    (n ? d.A.getWarning()?.surfaces?.includes(c.x.BANNER) === !0 && (0, o.QX)() : (0, o.QX)()));
         },
         LOGOUT: () => {
-            (i = void 0), (0, o.Ld)();
+            ((i = void 0), (0, o.Ld)());
         },
     };
 }

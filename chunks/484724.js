@@ -29,17 +29,21 @@ function v(e) {
             guild: y,
             channel: b,
             isMember: R,
-        } = (0, s.cf)([f.Ay, p.A, h.A, g.Ay, A.default], () => {
-            let e = f.Ay.getGuildScheduledEvent(v) ?? void 0,
-                t = p.A.getGuild(n),
-                i = h.A.getChannel(e?.channel_id);
-            return {
-                guildScheduledEvent: e,
-                guild: t,
-                channel: i,
-                isMember: g.Ay.isMember(n, A.default.getCurrentUser()?.id),
-            };
-        }, [n, v]);
+        } = (0, s.cf)(
+            [f.Ay, p.A, h.A, g.Ay, A.default],
+            () => {
+                let e = f.Ay.getGuildScheduledEvent(v) ?? void 0,
+                    t = p.A.getGuild(n),
+                    i = h.A.getChannel(e?.channel_id);
+                return {
+                    guildScheduledEvent: e,
+                    guild: t,
+                    channel: i,
+                    isMember: g.Ay.isMember(n, A.default.getCurrentUser()?.id),
+                };
+            },
+            [n, v],
+        );
     return (l.useEffect(() => {
         j &&
             (S?.id == null && E.default.fetchGuildEvent(n, v),

@@ -59,12 +59,12 @@ async function C(e) {
                           cancelText: p.intl.string(p.t["ETE/oC"]),
                           confirmText: p.intl.string(p.t["cY+Oob"]),
                           onConfirm: () => {
-                              (0, g.A)().leaveActivity({
+                              ((0, g.A)().leaveActivity({
                                   location: a.location,
                                   applicationId: t.id,
                                   shouldClosePopout: n,
                               }),
-                                  e(!0);
+                                  e(!0));
                           },
                           onCancel: () => e(!1),
                           body: p.intl.format(p.t["5/Xort"], {
@@ -84,11 +84,11 @@ async function O(e) {
             null == e ||
             (e.embeddedActivityConfig?.requires_age_gate &&
                 !(await new Promise((t) => {
-                    s?.(),
+                    (s?.(),
                         (function (e) {
                             let { application: t, channelId: i, onAgree: r, onDisagree: a } = e,
                                 s = null != (0, _.Ay)({ application: t, channelId: i }) ? c.KX : c.SY;
-                            (0, u.openModalLazy)(
+                            ((0, u.openModalLazy)(
                                 async () => {
                                     let { ActivityAgeGateModal: e } = await n.e("675710").then(n.bind(n, 89805));
                                     return (n) =>
@@ -102,8 +102,8 @@ async function O(e) {
                                 },
                                 { modalKey: "activity-age-gate", contextKey: s },
                             ),
-                                Promise.resolve();
-                        })({ application: e, channelId: r?.id, onAgree: () => t(!0), onDisagree: () => t(!1) });
+                                Promise.resolve());
+                        })({ application: e, channelId: r?.id, onAgree: () => t(!0), onDisagree: () => t(!1) }));
                 })))
         )
             return !1;
@@ -117,15 +117,15 @@ async function R(e) {
         null != l &&
         (!!((0, s.n)(l, S.gfo.EMBEDDED_RELEASED) || l.isVerified || o.Ay.hasActivityEverBeenLaunched(i)) ||
             new Promise((e) => {
-                a?.(),
+                (a?.(),
                     (function (e) {
                         let { application: t, onConfirm: i, onCancel: r } = e;
-                        (0, u.openModalLazy)(async () => {
+                        ((0, u.openModalLazy)(async () => {
                             let { default: e } = await n.e("738435").then(n.bind(n, 130574));
                             return (n) => (0, d.jsx)(e, { application: t, onConfirm: i, onCancel: r, ...n });
                         }),
-                            Promise.resolve();
-                    })({ application: l, onConfirm: () => e(!0), onCancel: () => e(!1) });
+                            Promise.resolve());
+                    })({ application: l, onConfirm: () => e(!0), onCancel: () => e(!1) }));
             }))
     );
 }

@@ -10,7 +10,7 @@ async function s(t, r) {
             body: { identity_guild_id: t, identity_enabled: r },
             rejectWithError: !1,
         });
-        return d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...u.default.getCurrentUser(), ...e.body } }), e;
+        return (d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...u.default.getCurrentUser(), ...e.body } }), e);
     } catch (t) {
         return t;
     }

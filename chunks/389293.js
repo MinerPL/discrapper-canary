@@ -4,10 +4,10 @@ var t = "%[a-f0-9]{2}",
 e.exports = function (e) {
     if ("string" != typeof e) throw TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof e + "`");
     try {
-        return (e = e.replace(/\+/g, " ")), decodeURIComponent(e);
+        return ((e = e.replace(/\+/g, " ")), decodeURIComponent(e));
     } catch (t) {
         return (function (e) {
-            for (var t = { "%FE%FF": "\uFFFD\uFFFD", "%FF%FE": "\uFFFD\uFFFD" }, i = n.exec(e); i; ) {
+            for (var t = { "%FE%FF": "\uFFFD\uFFFD", "%FF%FE": "\uFFFD\uFFFD" }, i = n.exec(e); i;) {
                 try {
                     t[i[0]] = decodeURIComponent(i[0]);
                 } catch (e) {

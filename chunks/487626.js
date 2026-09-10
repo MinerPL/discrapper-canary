@@ -1,4 +1,4 @@
-n.d(t, { $: () => d, w: () => o }), n(321073);
+(n.d(t, { $: () => d, w: () => o }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -20,7 +20,7 @@ function o(e, t, n) {
     for (let e of ((c = r().sortBy(c, (e) => (e.isGuildVocal() ? e.position + 1e4 : e.position))), o)) {
         i || c.push(e);
         let s = t.has(e.id) ? a[e.id] : n.filter((t) => t.parent_id === e.id);
-        (s = r().sortBy(s ?? [], (e) => (e.isGuildVocal() ? e.position + 1e4 : e.position))), c.push(...s);
+        ((s = r().sortBy(s ?? [], (e) => (e.isGuildVocal() ? e.position + 1e4 : e.position))), c.push(...s));
     }
     return c;
 }

@@ -6,7 +6,7 @@ r(
     {
         deleteAll: function () {
             for (var e, t = a(this), n = !0, r = 0, i = arguments.length; r < i; r++)
-                (e = o(t, arguments[r])), (n = n && e);
+                ((e = o(t, arguments[r])), (n = n && e));
             return !!n;
         },
     },

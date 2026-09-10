@@ -7,12 +7,12 @@ function o(e) {
 function a(e, t) {
     let r = `[data-key="${CSS.escape(String(t))}"]`,
         n = e.current?.dataset.collection;
-    return n && (r = `[data-collection="${CSS.escape(n)}"]${r}`), e.current?.querySelector(r);
+    return (n && (r = `[data-collection="${CSS.escape(n)}"]${r}`), e.current?.querySelector(r));
 }
 let s = new WeakMap();
 function l(e) {
     let t = (0, i.Bi)();
-    return s.set(e, t), t;
+    return (s.set(e, t), t);
 }
 function u(e) {
     return s.get(e);

@@ -29,7 +29,7 @@ function A(e) {
         description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
         errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: E }),
         onCTAClick: () => {
-            (0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t);
+            ((0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t));
         },
         callToAction: d.intl.string(d.t["4EGMWL"]),
     });

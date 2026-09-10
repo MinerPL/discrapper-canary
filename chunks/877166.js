@@ -1,4 +1,4 @@
-n.d(t, { A: () => r }), n(321073);
+(n.d(t, { A: () => r }), n(321073));
 var i = n(228366);
 class r {
     socket;
@@ -10,17 +10,19 @@ class r {
     add;
     shouldFlush;
     constructor(e, t, n) {
-        (this.socket = e),
+        ((this.socket = e),
             (this.shouldFlush = n),
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            r.batchers.push(this);
+            r.batchers.push(this));
     }
     flush() {
         let { action: e } = this;
-        (this.action = null),
+        ((this.action = null),
             null != e &&
-                i.h.dispatch(e).catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type }));
+                i.h
+                    .dispatch(e)
+                    .catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type })));
     }
 }

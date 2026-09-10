@@ -11,7 +11,7 @@ let u = [],
     _ = new Set();
 function E() {
     let e = c.A.getPrivateChannelIds().filter((e) => o.Ay.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, s.in)(e, u) && ((u = e), (_ = new Set(e)), !0);
+    return (e.length > 20 && (e.length = 20), !(0, s.in)(e, u) && ((u = e), (_ = new Set(e)), !0));
 }
 function A() {
     return E();

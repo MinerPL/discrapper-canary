@@ -48,10 +48,10 @@ let s = [
         return {
             name: "BrowserApiErrors",
             setupOnce() {
-                t.setTimeout && (0, r.GS)(a.jf, "setTimeout", c),
+                (t.setTimeout && (0, r.GS)(a.jf, "setTimeout", c),
                     t.setInterval && (0, r.GS)(a.jf, "setInterval", c),
                     t.requestAnimationFrame && (0, r.GS)(a.jf, "requestAnimationFrame", u),
-                    t.XMLHttpRequest && "XMLHttpRequest" in a.jf && (0, r.GS)(XMLHttpRequest.prototype, "send", d);
+                    t.XMLHttpRequest && "XMLHttpRequest" in a.jf && (0, r.GS)(XMLHttpRequest.prototype, "send", d));
                 let e = t.eventTarget;
                 e && (Array.isArray(e) ? e : s).forEach(p);
             },
@@ -95,7 +95,7 @@ function d(e) {
                                 },
                             },
                             i = (0, r.sp)(t);
-                        return i && (n.mechanism.data.handler = (0, o.qQ)(i)), (0, a.LV)(t, n);
+                        return (i && (n.mechanism.data.handler = (0, o.qQ)(i)), (0, a.LV)(t, n));
                     });
             }),
             e.apply(this, t)
@@ -112,7 +112,7 @@ function p(e) {
             return function (n, r, i) {
                 try {
                     var s;
-                    (s = r),
+                    ((s = r),
                         "function" == typeof s.handleEvent &&
                             (r.handleEvent = (0, a.LV)(r.handleEvent, {
                                 mechanism: {
@@ -120,7 +120,7 @@ function p(e) {
                                     handled: !1,
                                     type: "instrument",
                                 },
-                            }));
+                            })));
                 } catch (e) {}
                 return t.apply(this, [
                     n,

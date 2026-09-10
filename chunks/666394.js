@@ -21,9 +21,9 @@ function E(e) {
         confirmText: c.intl.string(c.t.TyCVIq),
         cancelText: c.intl.string(c.t["ETE/oC"]),
         onConfirm: function () {
-            R === d.yS.SERIES ? o.default.updateRsvp(t.id, null, s, f) : o.default.updateRsvp(t.id, n, s, f),
+            (R === d.yS.SERIES ? o.default.updateRsvp(t.id, null, s, f) : o.default.updateRsvp(t.id, n, s, f),
                 E?.(),
-                v.onClose();
+                v.onClose());
         },
         variant: "primary",
         children: (0, i.jsx)("div", {

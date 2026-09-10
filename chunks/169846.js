@@ -1,4 +1,4 @@
-a.r(e), a.d(e, { default: () => g });
+(a.r(e), a.d(e, { default: () => g }));
 var t = {
         xseconds_other: "sekund\u0117_sekund\u017Ei\u0173_sekundes",
         xminutes_one: "minut\u0117_minut\u0117s_minut\u0119",

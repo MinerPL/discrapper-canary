@@ -1,4 +1,4 @@
-i.r(t), i.d(t, { default: () => tm });
+(i.r(t), i.d(t, { default: () => tm }));
 var n,
     r,
     o,
@@ -44,7 +44,8 @@ var n,
                         function n() {
                             this.constructor = e;
                         }
-                        t(e, i), (e.prototype = null === i ? Object.create(i) : ((n.prototype = i.prototype), new n()));
+                        (t(e, i),
+                            (e.prototype = null === i ? Object.create(i) : ((n.prototype = i.prototype), new n())));
                     });
             function r(e) {
                 if (!e) return r.__;
@@ -57,10 +58,10 @@ var n,
                 return ("." + e).split(".").reduce(function (e, i, n, o) {
                     t ? (t += "." + i) : (t = i);
                     var s = e["__" + t];
-                    return void 0 === s && ((r.Logger.prototype = e), (s = new r.Logger(t)), (e["__" + t] = s)), s;
+                    return (void 0 === s && ((r.Logger.prototype = e), (s = new r.Logger(t)), (e["__" + t] = s)), s);
                 }, r.__);
             }
-            !(function (e) {
+            (!(function (e) {
                 function t(e, t, i) {
                     if (void 0 !== t[e]) {
                         if (null === t[e]) return void delete i[e];
@@ -89,7 +90,7 @@ var n,
                         else return e();
                     return e;
                 }
-                (e.requestId = ""),
+                ((e.requestId = ""),
                     (e.entryId = 0),
                     (e._createXMLHttpRequest = function () {
                         return new XMLHttpRequest();
@@ -98,10 +99,10 @@ var n,
                         return new Date().getTime();
                     }),
                     (e._console = console),
-                    (e._appenderNames = []);
+                    (e._appenderNames = []));
                 var s,
                     a = function (e, t, i) {
-                        (this.msg = e), (this.meta = t), (this.finalString = i);
+                        ((this.msg = e), (this.meta = t), (this.finalString = i));
                     };
                 function d(t) {
                     var i,
@@ -148,7 +149,7 @@ var n,
                 function m() {
                     return 6e3;
                 }
-                (e.setOptions = function (e) {
+                ((e.setOptions = function (e) {
                     return (
                         t("enabled", e, this),
                         t("maxMessages", e, this),
@@ -171,16 +172,16 @@ var n,
                     (e.getFatalLevel = m),
                     (e.getOffLevel = function () {
                         return 0x7fffffff;
-                    });
+                    }));
                 var v = function (e, t) {
-                    (this.inner = t), (this.name = "JL.Exception"), (this.message = d(e).finalString);
+                    ((this.inner = t), (this.name = "JL.Exception"), (this.message = d(e).finalString));
                 };
-                (e.Exception = v), (v.prototype = Error());
+                ((e.Exception = v), (v.prototype = Error()));
                 var f = function (e, t, i, n, r) {
-                    (this.l = e), (this.m = t), (this.n = i), (this.t = n), (this.u = r);
+                    ((this.l = e), (this.m = t), (this.n = i), (this.t = n), (this.u = r));
                 };
                 function g(t, i, n) {
-                    return e.entryId++, new f(t, i, n, e._getTime(), e.entryId);
+                    return (e.entryId++, new f(t, i, n, e._getTime(), e.entryId));
                 }
                 function b(e) {
                     e.id && (clearTimeout(e.id), (e.id = null));
@@ -195,7 +196,7 @@ var n,
                 e.LogItem = f;
                 var S = (function () {
                     function n(t, i) {
-                        (this.appenderName = t),
+                        ((this.appenderName = t),
                             (this.sendLogItems = i),
                             (this.level = e.getTraceLevel()),
                             (this.sendWithBufferLevel = 0x7fffffff),
@@ -210,7 +211,7 @@ var n,
                             (this.batchTimeoutTimer = { id: null }),
                             (this.sendTimeoutTimer = { id: null }),
                             (this.nbrLogItemsSkipped = 0),
-                            (this.nbrLogItemsBeingSent = 0);
+                            (this.nbrLogItemsBeingSent = 0));
                         var n = "Trying to create an appender without a name or with an empty name";
                         if (void 0 == t) throw n;
                         if (-1 != e._appenderNames.indexOf(t)) {
@@ -250,7 +251,7 @@ var n,
                                 this.sendBatch();
                         }),
                         (n.prototype.onSendingEnded = function () {
-                            b(this.sendTimeoutTimer), (this.nbrLogItemsBeingSent = 0), this.sendBatchIfComplete();
+                            (b(this.sendTimeoutTimer), (this.nbrLogItemsBeingSent = 0), this.sendBatchIfComplete());
                         }),
                         (n.prototype.setOptions = function (i) {
                             if (
@@ -284,11 +285,11 @@ var n,
                                         this.buffer.length > this.bufferSize && this.buffer.shift());
                                     return;
                                 }
-                                this.addLogItemsToBuffer([c]),
+                                (this.addLogItemsToBuffer([c]),
                                     s >= this.sendWithBufferLevel &&
                                         this.buffer.length &&
                                         (this.addLogItemsToBuffer(this.buffer), (this.buffer.length = 0)),
-                                    this.sendBatchIfComplete();
+                                    this.sendBatchIfComplete());
                             }
                         }),
                         (n.prototype.sendBatch = function () {
@@ -298,11 +299,11 @@ var n,
                             ) {
                                 this.nbrLogItemsBeingSent = this.batchBuffer.length;
                                 var e = this;
-                                E(this.sendTimeoutTimer, this.sendTimeout, function () {
+                                (E(this.sendTimeoutTimer, this.sendTimeout, function () {
                                     e.onSendingEnded.call(e);
                                 }),
                                     this.sendLogItems(this.batchBuffer, function () {
-                                        e.batchBuffer.splice(0, e.nbrLogItemsBeingSent),
+                                        (e.batchBuffer.splice(0, e.nbrLogItemsBeingSent),
                                             e.nbrLogItemsSkipped > 0 &&
                                                 (e.batchBuffer.push(
                                                     g(
@@ -314,8 +315,8 @@ var n,
                                                     ),
                                                 ),
                                                 (e.nbrLogItemsSkipped = 0)),
-                                            e.onSendingEnded.call(e);
-                                    });
+                                            e.onSendingEnded.call(e));
+                                    }));
                             }
                         }),
                         n
@@ -336,14 +337,14 @@ var n,
                         (o.prototype.sendLogItemsAjax = function (t, n) {
                             try {
                                 if (!i(this)) return;
-                                this.xhr && 0 != this.xhr.readyState && 4 != this.xhr.readyState && this.xhr.abort(),
-                                    (this.xhr = e._createXMLHttpRequest());
+                                (this.xhr && 0 != this.xhr.readyState && 4 != this.xhr.readyState && this.xhr.abort(),
+                                    (this.xhr = e._createXMLHttpRequest()));
                                 var r = "/jsnlog.logger";
-                                null != e.defaultAjaxUrl && (r = e.defaultAjaxUrl),
+                                (null != e.defaultAjaxUrl && (r = e.defaultAjaxUrl),
                                     this.url && (r = this.url),
                                     this.xhr.open("POST", r),
                                     this.xhr.setRequestHeader("Content-Type", "application/json"),
-                                    this.xhr.setRequestHeader("JSNLog-RequestId", e.requestId);
+                                    this.xhr.setRequestHeader("JSNLog-RequestId", e.requestId));
                                 var o = this;
                                 this.xhr.onreadystatechange = function () {
                                     4 == o.xhr.readyState && o.xhr.status >= 200 && o.xhr.status < 300 && n();
@@ -389,14 +390,14 @@ var n,
                                     var r,
                                         o = t[r],
                                         s = o.n + ": " + o.m;
-                                    "u" < typeof window && (s = new Date(o.t) + " | " + s),
+                                    ("u" < typeof window && (s = new Date(o.t) + " | " + s),
                                         o.l <= e.getDebugLevel()
                                             ? this.cdebug(s)
                                             : o.l <= e.getInfoLevel()
                                               ? this.cinfo(s)
                                               : o.l <= e.getWarnLevel()
                                                 ? this.cwarn(s)
-                                                : this.cerror(s);
+                                                : this.cerror(s));
                                 }
                             } catch (e) {}
                             n();
@@ -404,10 +405,10 @@ var n,
                         r
                     );
                 })(S);
-                (e.ConsoleAppender = w),
+                ((e.ConsoleAppender = w),
                     (e.Logger = (function () {
                         function e(e) {
-                            (this.loggerName = e), (this.seenRegexes = []);
+                            ((this.loggerName = e), (this.seenRegexes = []));
                         }
                         return (
                             (e.prototype.setOptions = function (e) {
@@ -445,15 +446,15 @@ var n,
                                     r(this, (s = d(a)).finalString))
                                 ) {
                                     if (this.onceOnly)
-                                        for (c = this.onceOnly.length - 1; c >= 0; ) {
+                                        for (c = this.onceOnly.length - 1; c >= 0;) {
                                             if (new RegExp(this.onceOnly[c]).test(s.finalString)) {
                                                 if (this.seenRegexes[c]) return this;
                                                 this.seenRegexes[c] = !0;
                                             }
                                             c--;
                                         }
-                                    for (s.meta = s.meta || {}, c = this.appenders.length - 1; c >= 0; )
-                                        this.appenders[c].log(
+                                    for (s.meta = s.meta || {}, c = this.appenders.length - 1; c >= 0;)
+                                        (this.appenders[c].log(
                                             e <= 1e3
                                                 ? "trace"
                                                 : e <= 2e3
@@ -472,7 +473,7 @@ var n,
                                             s.finalString,
                                             this.loggerName,
                                         ),
-                                            c--;
+                                            c--);
                                 }
                                 return this;
                             }),
@@ -508,7 +509,7 @@ var n,
                     }),
                     (s = "u" > typeof window ? new x("") : new w("")),
                     (e.__ = new e.Logger("")),
-                    e.__.setOptions({ level: e.getDebugLevel(), appenders: [s] });
+                    e.__.setOptions({ level: e.getDebugLevel(), appenders: [s] }));
             })(r || (r = {})),
                 void 0 !== e && ((e.__esModule = !0), (e.JL = r)),
                 "function" == typeof i &&
@@ -541,65 +542,65 @@ var n,
                             { msg: "unhandledrejection", errorMsg: e.reason ? e.reason.message : e.message || null },
                             e.reason,
                         );
-                    });
+                    }));
         },
     }),
     k = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Enums/LocalRecorderState.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.LocalRecorderState = void 0),
                     ((i = t || (e.LocalRecorderState = t = {})).READY = "READY"),
                     (i.RECORDING = "RECORDING"),
                     (i.PAUSED = "PAUSED"),
-                    (i.FINISHED = "FINISHED");
+                    (i.FINISHED = "FINISHED"));
             },
     }),
     T = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Logger/ConsoleLogger.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.ConsoleLogger = void 0),
                     (e.ConsoleLogger = class {
                         constructor(e) {
-                            (this.logger = e),
+                            ((this.logger = e),
                                 (this.log = e.log),
                                 (this.info = e.info),
                                 (this.debug = e.debug),
                                 (this.warn = e.warn),
-                                (this.error = e.error);
+                                (this.error = e.error));
                         }
-                    });
+                    }));
             },
     }),
     P = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Logger/OpenViduLoggerConfiguration.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.OpenViduLoggerConfiguration = void 0),
                     ((i = t || (e.OpenViduLoggerConfiguration = t = {})).disabled = "disabled"),
                     (i.debug = "debug"),
-                    (i.debug_app = "debug_app");
+                    (i.debug_app = "debug_app"));
             },
     }),
     N = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Logger/OpenViduLogger.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.OpenViduLogger = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.OpenViduLogger = void 0));
                 let t = R(),
                     i = T(),
                     n = P();
                 e.OpenViduLogger = class e {
                     constructor() {
-                        (this.JSNLOG_URL = "/openvidu/elk/openvidu-browser-logs"),
+                        ((this.JSNLOG_URL = "/openvidu/elk/openvidu-browser-logs"),
                             (this.MAX_JSNLOG_BATCH_LOG_MESSAGES = 100),
                             (this.MAX_MSECONDS_BATCH_MESSAGES = 5e3),
                             (this.MAX_LENGTH_STRING_JSON = 1e3),
                             (this.defaultConsoleLogger = new i.ConsoleLogger(globalThis.console)),
                             (this.isProdMode = !1),
-                            (this.isJSNLogSetup = !1);
+                            (this.isJSNLogSetup = !1));
                     }
                     static configureJSNLog(e, i) {
                         try {
@@ -610,34 +611,34 @@ var n,
                                     this.instance.isOpenViduBrowserLogsDebugActive(e) &&
                                     this.instance.canConfigureJSNLog(e, this.instance))
                             ) {
-                                e.sendBrowserLogs === n.OpenViduLoggerConfiguration.debug_app &&
+                                (e.sendBrowserLogs === n.OpenViduLoggerConfiguration.debug_app &&
                                     this.instance.replaceWindowConsole(),
                                     (this.instance.isJSNLogSetup = !1),
-                                    this.instance.info("Configuring JSNLogs.");
+                                    this.instance.info("Configuring JSNLogs."));
                                 let r = e.finalUserId,
                                     o = e.session.sessionId,
                                     s = (e) => {
                                         let t = e.onreadystatechange;
-                                        (e.onreadystatechange = () => {
-                                            this.isInvalidResponse(e) &&
+                                        ((e.onreadystatechange = () => {
+                                            (this.isInvalidResponse(e) &&
                                                 (Object.defineProperty(e, "readyState", { value: 4 }),
                                                 Object.defineProperty(e, "status", { value: 200 }),
                                                 this.instance.disableLogger()),
-                                                t();
+                                                t());
                                         }),
                                             e.setRequestHeader("Authorization", "Basic " + btoa(`${r}%/%${o}:` + i)),
                                             e.setRequestHeader("X-Requested-With", "XMLHttpRequest"),
                                             e.setRequestHeader("OV-Final-User-Id", r),
                                             e.setRequestHeader("OV-Session-Id", o),
-                                            e.setRequestHeader("OV-Token", i);
+                                            e.setRequestHeader("OV-Token", i));
                                     };
-                                (this.instance.currentAppender = t.JL.createAjaxAppender(`appender-${r}-${o}`)),
+                                ((this.instance.currentAppender = t.JL.createAjaxAppender(`appender-${r}-${o}`)),
                                     this.instance.currentAppender.setOptions({
                                         beforeSend: s,
                                         maxBatchSize: 1e3,
                                         batchSize: this.instance.MAX_JSNLOG_BATCH_LOG_MESSAGES,
                                         batchTimeout: this.instance.MAX_MSECONDS_BATCH_MESSAGES,
-                                    });
+                                    }));
                                 let a = (e) => {
                                     let t,
                                         i = JSON.stringify(
@@ -662,7 +663,7 @@ var n,
                                         i
                                     );
                                 };
-                                t.JL.setOptions({
+                                (t.JL.setOptions({
                                     defaultAjaxUrl: e.httpUri + this.instance.JSNLOG_URL,
                                     serialize: a,
                                     enabled: !0,
@@ -670,16 +671,16 @@ var n,
                                     (0, t.JL)().setOptions({ appenders: [this.instance.currentAppender] }),
                                     (this.instance.isJSNLogSetup = !0),
                                     (this.instance.loggingSessionId = o),
-                                    this.instance.info("JSNLog configured.");
+                                    this.instance.info("JSNLog configured."));
                             }
                         } catch (e) {
-                            console.error("Error configuring JSNLog: "),
+                            (console.error("Error configuring JSNLog: "),
                                 console.error(e),
-                                this.instance.disableLogger();
+                                this.instance.disableLogger());
                         }
                     }
                     static getInstance() {
-                        return e.instance || (e.instance = new e()), e.instance;
+                        return (e.instance || (e.instance = new e()), e.instance);
                     }
                     static isInvalidResponse(e) {
                         return 401 == e.status || 403 == e.status || 404 == e.status || 0 == e.status;
@@ -699,37 +700,37 @@ var n,
                             (e = this),
                             {
                                 log: function () {
-                                    e.defaultConsoleLogger.log.apply(e.defaultConsoleLogger.logger, arguments),
-                                        e.isJSNLogSetup && (0, t.JL)().info(arguments);
+                                    (e.defaultConsoleLogger.log.apply(e.defaultConsoleLogger.logger, arguments),
+                                        e.isJSNLogSetup && (0, t.JL)().info(arguments));
                                 },
                                 info: function () {
-                                    e.defaultConsoleLogger.info.apply(e.defaultConsoleLogger.logger, arguments),
-                                        e.isJSNLogSetup && (0, t.JL)().info(arguments);
+                                    (e.defaultConsoleLogger.info.apply(e.defaultConsoleLogger.logger, arguments),
+                                        e.isJSNLogSetup && (0, t.JL)().info(arguments));
                                 },
                                 debug: function () {
                                     e.defaultConsoleLogger.debug.apply(e.defaultConsoleLogger.logger, arguments);
                                 },
                                 warn: function () {
-                                    e.defaultConsoleLogger.warn.apply(e.defaultConsoleLogger.logger, arguments),
-                                        e.isJSNLogSetup && (0, t.JL)().warn(arguments);
+                                    (e.defaultConsoleLogger.warn.apply(e.defaultConsoleLogger.logger, arguments),
+                                        e.isJSNLogSetup && (0, t.JL)().warn(arguments));
                                 },
                                 error: function () {
-                                    e.defaultConsoleLogger.error.apply(e.defaultConsoleLogger.logger, arguments),
-                                        e.isJSNLogSetup && (0, t.JL)().error(arguments);
+                                    (e.defaultConsoleLogger.error.apply(e.defaultConsoleLogger.logger, arguments),
+                                        e.isJSNLogSetup && (0, t.JL)().error(arguments));
                                 },
                             }
                         );
                     }
                     replaceWindowConsole() {
-                        (globalThis.console = this.defaultConsoleLogger.logger),
+                        ((globalThis.console = this.defaultConsoleLogger.logger),
                             (globalThis.console.log = this.getConsoleWithJSNLog().log),
                             (globalThis.console.info = this.getConsoleWithJSNLog().info),
                             (globalThis.console.debug = this.getConsoleWithJSNLog().debug),
                             (globalThis.console.warn = this.getConsoleWithJSNLog().warn),
-                            (globalThis.console.error = this.getConsoleWithJSNLog().error);
+                            (globalThis.console.error = this.getConsoleWithJSNLog().error));
                     }
                     disableLogger() {
-                        t.JL.setOptions({ enabled: !1 }),
+                        (t.JL.setOptions({ enabled: !1 }),
                             (this.isJSNLogSetup = !1),
                             (this.loggingSessionId = void 0),
                             (this.currentAppender = void 0),
@@ -738,29 +739,29 @@ var n,
                             (globalThis.console.info = this.defaultConsoleLogger.info),
                             (globalThis.console.debug = this.defaultConsoleLogger.debug),
                             (globalThis.console.warn = this.defaultConsoleLogger.warn),
-                            (globalThis.console.error = this.defaultConsoleLogger.error);
+                            (globalThis.console.error = this.defaultConsoleLogger.error));
                     }
                     log() {
-                        this.isProdMode ||
+                        (this.isProdMode ||
                             this.defaultConsoleLogger.log.apply(this.defaultConsoleLogger.logger, arguments),
-                            this.isJSNLogSetup && (0, t.JL)().info(arguments);
+                            this.isJSNLogSetup && (0, t.JL)().info(arguments));
                     }
                     debug() {
                         this.isProdMode ||
                             this.defaultConsoleLogger.debug.apply(this.defaultConsoleLogger.logger, arguments);
                     }
                     info() {
-                        this.isProdMode ||
+                        (this.isProdMode ||
                             this.defaultConsoleLogger.info.apply(this.defaultConsoleLogger.logger, arguments),
-                            this.isJSNLogSetup && (0, t.JL)().info(arguments);
+                            this.isJSNLogSetup && (0, t.JL)().info(arguments));
                     }
                     warn() {
-                        this.defaultConsoleLogger.warn.apply(this.defaultConsoleLogger.logger, arguments),
-                            this.isJSNLogSetup && (0, t.JL)().warn(arguments);
+                        (this.defaultConsoleLogger.warn.apply(this.defaultConsoleLogger.logger, arguments),
+                            this.isJSNLogSetup && (0, t.JL)().warn(arguments));
                     }
                     error() {
-                        this.defaultConsoleLogger.error.apply(this.defaultConsoleLogger.logger, arguments),
-                            this.isJSNLogSetup && (0, t.JL)().error(arguments);
+                        (this.defaultConsoleLogger.error.apply(this.defaultConsoleLogger.logger, arguments),
+                            this.isJSNLogSetup && (0, t.JL)().error(arguments));
                     }
                     flush() {
                         this.isJSNLogSetup && null != this.currentAppender && this.currentAppender.sendBatch();
@@ -788,7 +789,7 @@ var n,
                     return (e = String(e)).charAt(0).toUpperCase() + e.slice(1);
                 }
                 function u(e) {
-                    return (e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : p(e);
+                    return ((e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : p(e));
                 }
                 function h(e, t) {
                     for (var i in e) c.call(e, i) && t(e[i], i, e);
@@ -806,7 +807,7 @@ var n,
                         },
                         r = -1,
                         o = e ? e.length : 0;
-                    if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++r < o; ) n(e[r], r, e);
+                    if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++r < o;) n(e[r], r, e);
                     else h(e, n);
                     return i;
                 }
@@ -1216,7 +1217,7 @@ var n,
                             O)
                         ) {
                             try {
-                                (V = d.require("ringo/engine").version.join(".")), (A = "RingoJS");
+                                ((V = d.require("ringo/engine").version.join(".")), (A = "RingoJS"));
                             } catch (e) {
                                 (o = d.system) &&
                                     o.global.system == d.system &&
@@ -1257,8 +1258,8 @@ var n,
                         A = "Firefox Mobile";
                     else if ("Maxthon" == A && V) V = V.replace(/\.[\d.]+/, ".x");
                     else if (/\bXbox\b/i.test(D))
-                        "Xbox 360" == D && (B = null),
-                            "Xbox 360" == D && /\bIEMobile\b/.test(e) && N.unshift("mobile mode");
+                        ("Xbox 360" == D && (B = null),
+                            "Xbox 360" == D && /\bIEMobile\b/.test(e) && N.unshift("mobile mode"));
                     else if (
                         (/^(?:Chrome|IE|Opera)$/.test(A) || (A && !D && !/Browser|Mobi/.test(A))) &&
                         ("Windows CE" == B || /Mobi/i.test(e))
@@ -1300,7 +1301,7 @@ var n,
                                     L || (V = null)),
                               (M = ["Presto"]),
                               N.push(o));
-                    (o = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(e) || 0)[1]) &&
+                    ((o = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(e) || 0)[1]) &&
                         ((o = [parseFloat(o.replace(/\.(\d)$/, ".0$1")), o]),
                         "Safari" == A && "+" == o[1].slice(-1)
                             ? ((A = "WebKit Nightly"), (_ = "alpha"), (V = o[1].slice(0, -1)))
@@ -1455,7 +1456,7 @@ var n,
                               "Chrome" == A &&
                               parseFloat(V) >= 39 &&
                               (B.architecture = 64),
-                        e || (e = null);
+                        e || (e = null));
                     var $ = {};
                     return (
                         ($.description = e),
@@ -1505,11 +1506,11 @@ var n,
     L = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Utils/Platform.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.PlatformUtils = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.PlatformUtils = void 0));
                 let t = _();
                 e.PlatformUtils = class e {
                     static getInstance() {
-                        return this.instance || (this.instance = new e()), e.instance;
+                        return (this.instance || (this.instance = new e()), e.instance);
                     }
                     isChromeBrowser() {
                         return "Chrome" === t.name;
@@ -1636,13 +1637,13 @@ var n,
     V = (0, I.t)({
         "../../node_modules/.pnpm/mime@2.6.0/node_modules/mime/Mime.js": (e, t) => {
             function i() {
-                (this._types = Object.create(null)), (this._extensions = Object.create(null));
+                ((this._types = Object.create(null)), (this._extensions = Object.create(null)));
                 for (let e = 0; e < arguments.length; e++) this.define(arguments[e]);
-                (this.define = this.define.bind(this)),
+                ((this.define = this.define.bind(this)),
                     (this.getType = this.getType.bind(this)),
-                    (this.getExtension = this.getExtension.bind(this));
+                    (this.getExtension = this.getExtension.bind(this)));
             }
-            (i.prototype.define = function (e, t) {
+            ((i.prototype.define = function (e, t) {
                 for (let i in e) {
                     let n = e[i].map(function (e) {
                         return e.toLowerCase();
@@ -1683,7 +1684,7 @@ var n,
                 (i.prototype.getExtension = function (e) {
                     return ((e = /^\s*([^;\s]*)/.test(e) && RegExp.$1) && this._extensions[e.toLowerCase()]) || null;
                 }),
-                (t.exports = i);
+                (t.exports = i));
         },
     }),
     M = (0, I.t)({
@@ -2686,7 +2687,7 @@ var n,
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/LocalRecorder.js":
             (e) => {
                 let t;
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.LocalRecorder = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.LocalRecorder = void 0));
                 let i = k(),
                     n = N(),
                     r = L(),
@@ -2694,14 +2695,14 @@ var n,
                     s = n.OpenViduLogger.getInstance();
                 e.LocalRecorder = class {
                     constructor(e) {
-                        (this.stream = e),
+                        ((this.stream = e),
                             (this.chunks = []),
                             (t = r.PlatformUtils.getInstance()),
                             (this.connectionId = this.stream.connection
                                 ? this.stream.connection.connectionId
                                 : "default-connection"),
                             (this.id = this.stream.streamId + "_" + this.connectionId + "_localrecord"),
-                            (this.state = i.LocalRecorderState.READY);
+                            (this.state = i.LocalRecorderState.READY));
                     }
                     record(e) {
                         return new Promise((t, n) => {
@@ -2712,12 +2713,12 @@ var n,
                                     );
                                 if ("u" < typeof MediaRecorder)
                                     throw (
-                                        (s.error(
+                                        s.error(
                                             "MediaRecorder not supported on your device. See compatibility in https://caniuse.com/#search=MediaRecorder",
                                         ),
                                         Error(
                                             "MediaRecorder not supported on your device. See compatibility in https://caniuse.com/#search=MediaRecorder",
-                                        ))
+                                        )
                                     );
                                 if (this.state !== i.LocalRecorderState.READY)
                                     throw Error(
@@ -2725,7 +2726,7 @@ var n,
                                             this.state +
                                             "'). Call 'LocalRecorder.clean()' or init a new LocalRecorder before",
                                     );
-                                s.log(
+                                (s.log(
                                     "Starting local recording of stream '" +
                                         this.stream.streamId +
                                         "' of connection '" +
@@ -2734,7 +2735,7 @@ var n,
                                 ),
                                     e ? e.mimeType || (e.mimeType = "video/webm") : (e = { mimeType: "video/webm" }),
                                     (this.mediaRecorder = new MediaRecorder(this.stream.getMediaStream(), e)),
-                                    this.mediaRecorder.start();
+                                    this.mediaRecorder.start());
                             } catch (e) {
                                 return n(e);
                             }
@@ -2774,8 +2775,8 @@ var n,
                                             this.state +
                                             "'). Call 'LocalRecorder.start()' before",
                                     );
-                                (this.mediaRecorder.onstop = () => (this.onStopDefault(), e())),
-                                    this.mediaRecorder.stop();
+                                ((this.mediaRecorder.onstop = () => (this.onStopDefault(), e())),
+                                    this.mediaRecorder.stop());
                             } catch (e) {
                                 return t(e);
                             }
@@ -2792,7 +2793,7 @@ var n,
                                                 "'). Call 'LocalRecorder.start()' or 'LocalRecorder.resume()' before",
                                         ),
                                     );
-                                return this.mediaRecorder.pause(), (this.state = i.LocalRecorderState.PAUSED), e();
+                                return (this.mediaRecorder.pause(), (this.state = i.LocalRecorderState.PAUSED), e());
                             } catch (e) {
                                 return t(e);
                             }
@@ -2807,7 +2808,9 @@ var n,
                                             this.state +
                                             "'). Call 'LocalRecorder.pause()' before",
                                     );
-                                return this.mediaRecorder.resume(), (this.state = i.LocalRecorderState.RECORDING), e();
+                                return (
+                                    this.mediaRecorder.resume(), (this.state = i.LocalRecorderState.RECORDING), e()
+                                );
                             } catch (e) {
                                 return t(e);
                             }
@@ -2830,11 +2833,11 @@ var n,
                             let t = document.getElementById(e);
                             t && (this.videoPreview = t.appendChild(this.videoPreview));
                         } else this.videoPreview = e.appendChild(this.videoPreview);
-                        return (this.videoPreview.src = this.videoPreviewSrc), this.videoPreview;
+                        return ((this.videoPreview.src = this.videoPreviewSrc), this.videoPreview);
                     }
                     clean() {
                         let e = () => {
-                            delete this.blob, (this.chunks = []), (this.state = i.LocalRecorderState.READY);
+                            (delete this.blob, (this.chunks = []), (this.state = i.LocalRecorderState.READY));
                         };
                         this.state === i.LocalRecorderState.RECORDING || this.state === i.LocalRecorderState.PAUSED
                             ? this.stop()
@@ -2851,13 +2854,13 @@ var n,
                             );
                         {
                             let e = document.createElement("a");
-                            (e.style.display = "none"), document.body.appendChild(e);
+                            ((e.style.display = "none"), document.body.appendChild(e));
                             let t = globalThis.URL.createObjectURL(this.blob);
-                            (e.href = t),
+                            ((e.href = t),
                                 (e.download = this.id + "." + o.default.getExtension(this.blob.type)),
                                 e.click(),
                                 globalThis.URL.revokeObjectURL(t),
-                                document.body.removeChild(e);
+                                document.body.removeChild(e));
                         }
                     }
                     getBlob() {
@@ -2878,12 +2881,12 @@ var n,
                                 let i = new XMLHttpRequest();
                                 if ((i.open("POST", e, !0), "object" == typeof t))
                                     for (let e of Object.keys(t)) i.setRequestHeader(e, t[e]);
-                                (i.onreadystatechange = () => {
+                                ((i.onreadystatechange = () => {
                                     if (4 === i.readyState)
                                         if ("2" === i.status.toString().charAt(0)) return n(i.responseText);
                                         else return r(i.status);
                                 }),
-                                    i.send(this.blob);
+                                    i.send(this.blob));
                             }
                         });
                     }
@@ -2902,22 +2905,22 @@ var n,
                                 if ((i.open("POST", e, !0), "object" == typeof t))
                                     for (let e of Object.keys(t)) i.setRequestHeader(e, t[e]);
                                 let s = new FormData();
-                                s.append("file", this.blob, this.id + "." + o.default.getExtension(this.blob.type)),
+                                (s.append("file", this.blob, this.id + "." + o.default.getExtension(this.blob.type)),
                                     (i.onreadystatechange = () => {
                                         if (4 === i.readyState)
                                             if ("2" === i.status.toString().charAt(0)) return n(i.responseText);
                                             else return r(i.status);
                                     }),
-                                    i.send(s);
+                                    i.send(s));
                             }
                         });
                     }
                     onStopDefault() {
-                        s.log("MediaRecorder stopped  (state=" + this.mediaRecorder.state + ")"),
+                        (s.log("MediaRecorder stopped  (state=" + this.mediaRecorder.state + ")"),
                             (this.blob = new Blob(this.chunks, { type: this.mediaRecorder.mimeType })),
                             (this.chunks = []),
                             (this.videoPreviewSrc = globalThis.URL.createObjectURL(this.blob)),
-                            (this.state = i.LocalRecorderState.FINISHED);
+                            (this.state = i.LocalRecorderState.FINISHED));
                     }
                 };
             },
@@ -2925,34 +2928,34 @@ var n,
     B = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/Event.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.Event = void 0),
                     (e.Event = class {
                         constructor(e, t, i) {
-                            (this.hasBeenPrevented = !1), (this.cancelable = e), (this.target = t), (this.type = i);
+                            ((this.hasBeenPrevented = !1), (this.cancelable = e), (this.target = t), (this.type = i));
                         }
                         isDefaultPrevented() {
                             return this.hasBeenPrevented;
                         }
                         preventDefault() {
-                            (this.callDefaultBehavior = () => {}), (this.hasBeenPrevented = !0);
+                            ((this.callDefaultBehavior = () => {}), (this.hasBeenPrevented = !0));
                         }
-                    });
+                    }));
             },
     }),
     U = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/StreamPropertyChangedEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamPropertyChangedEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamPropertyChangedEvent = void 0));
                 let t = B();
                 e.StreamPropertyChangedEvent = class extends t.Event {
                     constructor(e, t, i, n, r, o) {
-                        super(!1, e, "streamPropertyChanged"),
+                        (super(!1, e, "streamPropertyChanged"),
                             (this.stream = t),
                             (this.changedProperty = i),
                             (this.newValue = n),
                             (this.oldValue = r),
-                            (this.reason = o);
+                            (this.reason = o));
                     }
                     callDefaultBehavior() {}
                 };
@@ -2962,7 +2965,7 @@ var n,
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Enums/OpenViduError.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.OpenViduError = e.OpenViduErrorName = void 0),
                     ((t = i || (e.OpenViduErrorName = i = {})).BROWSER_NOT_SUPPORTED = "BROWSER_NOT_SUPPORTED"),
                     (t.DEVICE_ACCESS_DENIED = "DEVICE_ACCESS_DENIED"),
@@ -2982,22 +2985,22 @@ var n,
                     (t.GENERIC_ERROR = "GENERIC_ERROR"),
                     (e.OpenViduError = class {
                         constructor(e, t) {
-                            (this.name = e), (this.message = t);
+                            ((this.name = e), (this.message = t));
                         }
-                    });
+                    }));
             },
     }),
     $ = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/Filter.js": (
             e,
         ) => {
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Filter = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Filter = void 0));
             let t = U(),
                 i = F(),
                 n = N().OpenViduLogger.getInstance();
             e.Filter = class {
                 constructor(e, t) {
-                    (this.handlers = new Map()), (this.type = e), (this.options = t);
+                    ((this.handlers = new Map()), (this.type = e), (this.options = t));
                 }
                 execMethod(e, r) {
                     return new Promise((o, s) => {
@@ -3078,10 +3081,10 @@ var n,
                                     t = JSON.stringify(r);
                                 } catch (t) {
                                     let e = "'params' property must be a JSON formatted object";
-                                    return n.error(e), s(e);
+                                    return (n.error(e), s(e));
                                 }
                             else t = r;
-                            (d = t),
+                            ((d = t),
                                 this.stream.session.openvidu.sendRequest(
                                     "execFilterMethod",
                                     { streamId: this.stream.streamId, method: e, params: t },
@@ -3100,13 +3103,13 @@ var n,
                                                   )
                                                 : s(e)
                                             : c(!0),
-                                );
+                                ));
                         }
                     });
                 }
                 addEventListener(e, t) {
                     return new Promise((r, o) => {
-                        n.info("Adding filter event listener to event " + e + " to stream " + this.stream.streamId),
+                        (n.info("Adding filter event listener to event " + e + " to stream " + this.stream.streamId),
                             this.stream.session.openvidu.sendRequest(
                                 "addFilterEventListener",
                                 { streamId: this.stream.streamId, eventType: e },
@@ -3135,12 +3138,12 @@ var n,
                                                   this.stream.streamId,
                                           ),
                                           r()),
-                            );
+                            ));
                     });
                 }
                 removeEventListener(e) {
                     return new Promise((t, r) => {
-                        n.info("Removing filter event listener to event " + e + " to stream " + this.stream.streamId),
+                        (n.info("Removing filter event listener to event " + e + " to stream " + this.stream.streamId),
                             this.stream.session.openvidu.sendRequest(
                                 "removeFilterEventListener",
                                 { streamId: this.stream.streamId, eventType: e },
@@ -3169,7 +3172,7 @@ var n,
                                                   this.stream.streamId,
                                           ),
                                           t()),
-                            );
+                            ));
                     });
                 }
             };
@@ -3185,7 +3188,7 @@ var n,
                 var n = i.prototype,
                     r = e.EventEmitter;
                 function o(e, t) {
-                    for (var i = e.length; i--; ) if (e[i].listener === t) return i;
+                    for (var i = e.length; i--;) if (e[i].listener === t) return i;
                     return -1;
                 }
                 function s(e) {
@@ -3193,7 +3196,7 @@ var n,
                         return this[e].apply(this, arguments);
                     };
                 }
-                (n.getListeners = function (e) {
+                ((n.getListeners = function (e) {
                     var t,
                         i,
                         n = this._getEvents();
@@ -3210,7 +3213,7 @@ var n,
                     (n.getListenersAsObject = function (e) {
                         var t,
                             i = this.getListeners(e);
-                        return i instanceof Array && ((t = {})[e] = i), t || i;
+                        return (i instanceof Array && ((t = {})[e] = i), t || i);
                     }),
                     (n.addListener = function (e, t) {
                         if (
@@ -3236,7 +3239,7 @@ var n,
                     }),
                     (n.once = s("addOnceListener")),
                     (n.defineEvent = function (e) {
-                        return this.getListeners(e), this;
+                        return (this.getListeners(e), this);
                     }),
                     (n.defineEvents = function (e) {
                         for (var t = 0; t < e.length; t += 1) this.defineEvent(e[t]);
@@ -3261,8 +3264,7 @@ var n,
                             r,
                             o = e ? this.removeListener : this.addListener,
                             s = e ? this.removeListeners : this.addListeners;
-                        if ("object" != typeof t || t instanceof RegExp)
-                            for (n = i.length; n--; ) o.call(this, t, i[n]);
+                        if ("object" != typeof t || t instanceof RegExp) for (n = i.length; n--;) o.call(this, t, i[n]);
                         else
                             for (n in t)
                                 t.hasOwnProperty(n) &&
@@ -3289,9 +3291,9 @@ var n,
                         for (o in s)
                             if (s.hasOwnProperty(o))
                                 for (r = 0, i = s[o].slice(0); r < i.length; r++)
-                                    !0 === (n = i[r]).once && this.removeListener(e, n.listener),
+                                    (!0 === (n = i[r]).once && this.removeListener(e, n.listener),
                                         n.listener.apply(this, t || []) === this._getOnceReturnValue() &&
-                                            this.removeListener(e, n.listener);
+                                            this.removeListener(e, n.listener));
                         return this;
                     }),
                     (n.trigger = s("emitEvent")),
@@ -3300,7 +3302,7 @@ var n,
                         return this.emitEvent(e, t);
                     }),
                     (n.setOnceReturnValue = function (e) {
-                        return (this._onceReturnValue = e), this;
+                        return ((this._onceReturnValue = e), this);
                     }),
                     (n._getOnceReturnValue = function () {
                         return !this.hasOwnProperty("_onceReturnValue") || this._onceReturnValue;
@@ -3309,7 +3311,7 @@ var n,
                         return this._events || (this._events = {});
                     }),
                     (i.noConflict = function () {
-                        return (e.EventEmitter = r), i;
+                        return ((e.EventEmitter = r), i);
                     }),
                     "function" == typeof define && define.amd
                         ? define(function () {
@@ -3317,37 +3319,37 @@ var n,
                           })
                         : "object" == typeof t && t.exports
                           ? (t.exports = i)
-                          : (e.EventEmitter = i);
+                          : (e.EventEmitter = i));
             })("u" > typeof window ? window : e || {});
         },
     }),
     H = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/EventDispatcher.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.EventDispatcher = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.EventDispatcher = void 0));
                 let t = N(),
                     i = W(),
                     n = t.OpenViduLogger.getInstance();
                 e.EventDispatcher = class {
                     constructor() {
-                        (this.userHandlerArrowHandler = new WeakMap()), (this.ee = new i());
+                        ((this.userHandlerArrowHandler = new WeakMap()), (this.ee = new i()));
                     }
                     onAux(e, t, i) {
                         let r = (e) => {
-                            e ? n.debug(t, e) : n.debug(t), i(e);
+                            (e ? n.debug(t, e) : n.debug(t), i(e));
                         };
-                        return this.userHandlerArrowHandler.set(i, r), this.ee.on(e, r), this;
+                        return (this.userHandlerArrowHandler.set(i, r), this.ee.on(e, r), this);
                     }
                     onceAux(e, t, i) {
                         let r = (e) => {
-                            e ? n.debug(t, e) : n.debug(t), i(e), this.userHandlerArrowHandler.delete(i);
+                            (e ? n.debug(t, e) : n.debug(t), i(e), this.userHandlerArrowHandler.delete(i));
                         };
-                        return this.userHandlerArrowHandler.set(i, r), this.ee.once(e, r), this;
+                        return (this.userHandlerArrowHandler.set(i, r), this.ee.once(e, r), this);
                     }
                     offAux(e, t) {
                         if (t) {
                             let i = this.userHandlerArrowHandler.get(t);
-                            i && this.ee.off(e, i), this.userHandlerArrowHandler.delete(t);
+                            (i && this.ee.off(e, i), this.userHandlerArrowHandler.delete(t));
                         } else this.ee.removeAllListeners(e);
                         return this;
                     }
@@ -3357,11 +3359,11 @@ var n,
     z = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/StreamManagerEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamManagerEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamManagerEvent = void 0));
                 let t = B();
                 e.StreamManagerEvent = class extends t.Event {
                     constructor(e, t, i) {
-                        super(!1, e, t), (this.value = i);
+                        (super(!1, e, t), (this.value = i));
                     }
                     callDefaultBehavior() {}
                 };
@@ -3370,11 +3372,11 @@ var n,
     q = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/VideoElementEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.VideoElementEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.VideoElementEvent = void 0));
                 let t = B();
                 e.VideoElementEvent = class extends t.Event {
                     constructor(e, t, i) {
-                        super(!1, t, i), (this.element = e);
+                        (super(!1, t, i), (this.element = e));
                     }
                     callDefaultBehavior() {}
                 };
@@ -3384,44 +3386,44 @@ var n,
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/ExceptionEvent.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
-                    (e.ExceptionEvent = e.ExceptionEventName = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
+                    (e.ExceptionEvent = e.ExceptionEventName = void 0));
                 let n = B();
-                ((t = i || (e.ExceptionEventName = i = {})).ICE_CANDIDATE_ERROR = "ICE_CANDIDATE_ERROR"),
+                (((t = i || (e.ExceptionEventName = i = {})).ICE_CANDIDATE_ERROR = "ICE_CANDIDATE_ERROR"),
                     (t.ICE_CONNECTION_FAILED = "ICE_CONNECTION_FAILED"),
                     (t.ICE_CONNECTION_DISCONNECTED = "ICE_CONNECTION_DISCONNECTED"),
                     (t.NO_STREAM_PLAYING_EVENT = "NO_STREAM_PLAYING_EVENT"),
                     (t.SPEECH_TO_TEXT_DISCONNECTED = "SPEECH_TO_TEXT_DISCONNECTED"),
                     (e.ExceptionEvent = class extends n.Event {
                         constructor(e, t, i, n, r) {
-                            super(!1, e, "exception"),
+                            (super(!1, e, "exception"),
                                 (this.name = t),
                                 (this.origin = i),
                                 (this.message = n),
-                                (this.data = r);
+                                (this.data = r));
                         }
                         callDefaultBehavior() {}
-                    });
+                    }));
             },
     }),
     J = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Enums/VideoInsertMode.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.VideoInsertMode = void 0),
                     ((i = t || (e.VideoInsertMode = t = {})).AFTER = "AFTER"),
                     (i.APPEND = "APPEND"),
                     (i.BEFORE = "BEFORE"),
                     (i.PREPEND = "PREPEND"),
-                    (i.REPLACE = "REPLACE");
+                    (i.REPLACE = "REPLACE"));
             },
     }),
     X = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/StreamManager.js":
             (e) => {
                 let t;
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamManager = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamManager = void 0));
                 let i = H(),
                     n = z(),
                     r = q(),
@@ -3443,7 +3445,7 @@ var n,
                             i)
                         ) {
                             let e;
-                            "string" == typeof i
+                            ("string" == typeof i
                                 ? (e = document.getElementById(i))
                                 : i instanceof HTMLElement && (e = i),
                                 e &&
@@ -3461,13 +3463,13 @@ var n,
                                                 t.isFirefoxMobileBrowser()))) &&
                                         (this.firstVideoElement.video.playsInline = !0),
                                     (this.targetElement = e),
-                                    (this.element = e));
+                                    (this.element = e)));
                         }
                         this.canPlayListener = () => {
-                            this.deactivateStreamPlayingEventExceptionTimeout(),
+                            (this.deactivateStreamPlayingEventExceptionTimeout(),
                                 this.ee.emitEvent("streamPlaying", [
                                     new n.StreamManagerEvent(this, "streamPlaying", void 0),
-                                ]);
+                                ]));
                         };
                     }
                     on(e, t) {
@@ -3602,7 +3604,7 @@ var n,
                                 i.parentNode.replaceChild(n, i);
                                 break;
                             default:
-                                (o = s.VideoInsertMode.APPEND), i.appendChild(n);
+                                ((o = s.VideoInsertMode.APPEND), i.appendChild(n));
                         }
                         let a = { targetElement: i, video: n, insertMode: o, id: n.id, canplayListenerAdded: !1 };
                         return (
@@ -3631,12 +3633,12 @@ var n,
                                     : "number" == typeof t.threshold
                                       ? t.threshold
                                       : -50;
-                        (this.stream.harkOptions = { interval: i, threshold: n }),
+                        ((this.stream.harkOptions = { interval: i, threshold: n }),
                             this.stream.speechEvent &&
-                                (this.stream.speechEvent.setInterval(i), this.stream.speechEvent.setThreshold(n));
+                                (this.stream.speechEvent.setInterval(i), this.stream.speechEvent.setThreshold(n)));
                     }
                     initializeVideoProperties(e) {
-                        (!this.remote && this.stream.displayMyRemote()) ||
+                        ((!this.remote && this.stream.displayMyRemote()) ||
                             e.srcObject === this.stream.getMediaStream() ||
                             (e.srcObject = this.stream.getMediaStream()),
                             (e.autoplay = !0),
@@ -3660,14 +3662,14 @@ var n,
                                       ? this.removeMirrorVideo(e)
                                       : this.stream.outboundStreamOpts.publisherProperties.mirror &&
                                         !this.stream.isSendScreen() &&
-                                        this.mirrorVideo(e));
+                                        this.mirrorVideo(e)));
                     }
                     removeAllVideos() {
                         for (let e = this.stream.session.streamManagers.length - 1; e >= 0; --e)
                             this.stream.session.streamManagers[e] === this &&
                                 this.stream.session.streamManagers.splice(e, 1);
                         this.videos.forEach((e) => {
-                            e.video &&
+                            (e.video &&
                                 e.video.removeEventListener &&
                                 e.video.removeEventListener("canplay", this.canPlayListener),
                                 (e.canplayListenerAdded = !1),
@@ -3677,17 +3679,17 @@ var n,
                                         new r.VideoElementEvent(e.video, this, "videoElementDestroyed"),
                                     ])),
                                 this.removeSrcObject(e),
-                                (this.videos = this.videos.filter((e) => !e.targetElement));
+                                (this.videos = this.videos.filter((e) => !e.targetElement)));
                         });
                     }
                     disassociateVideo(e) {
                         let t = !1;
                         for (let i = 0; i < this.videos.length; i++)
                             if (this.videos[i].video === e) {
-                                this.videos[i].video.removeEventListener("canplay", this.canPlayListener),
+                                (this.videos[i].video.removeEventListener("canplay", this.canPlayListener),
                                     this.videos.splice(i, 1),
                                     (t = !0),
-                                    c.info("Video element disassociated from ", this);
+                                    c.info("Video element disassociated from ", this));
                                 break;
                             }
                         return t;
@@ -3705,7 +3707,7 @@ var n,
                             if (((i.video.srcObject = e), t.isIonicIos())) {
                                 let e = i.video.parentElement,
                                     t = i.video;
-                                e.replaceChild(t, i.video), (i.video = t);
+                                (e.replaceChild(t, i.video), (i.video = t));
                             }
                         });
                     }
@@ -3716,20 +3718,20 @@ var n,
                         return document.createElement("video");
                     }
                     removeSrcObject(e) {
-                        (e.video.srcObject = null), this.deactivateStreamPlayingEventExceptionTimeout();
+                        ((e.video.srcObject = null), this.deactivateStreamPlayingEventExceptionTimeout());
                     }
                     pushNewStreamManagerVideo(e) {
-                        this.videos.push(e),
+                        (this.videos.push(e),
                             this.addPlayEventToFirstVideo(),
                             -1 === this.stream.session.streamManagers.indexOf(this) &&
-                                this.stream.session.streamManagers.push(this);
+                                this.stream.session.streamManagers.push(this));
                     }
                     mirrorVideo(e) {
                         t.isIonicIos() ||
                             ((e.style.transform = "rotateY(180deg)"), (e.style.webkitTransform = "rotateY(180deg)"));
                     }
                     removeMirrorVideo(e) {
-                        (e.style.transform = "unset"), (e.style.webkitTransform = "unset");
+                        ((e.style.transform = "unset"), (e.style.webkitTransform = "unset"));
                     }
                     isMirroredVideo(e) {
                         return "rotateY(180deg)" === e.style.transform || "rotateY(180deg)" === e.style.webkitTransform;
@@ -3748,7 +3750,7 @@ var n,
                                 ') did not trigger "streamPlaying" event in ' +
                                 e +
                                 " ms";
-                            c.warn(t),
+                            (c.warn(t),
                                 this.stream.session.emitEvent("exception", [
                                     new o.ExceptionEvent(
                                         this.stream.session,
@@ -3757,12 +3759,12 @@ var n,
                                         t,
                                     ),
                                 ]),
-                                delete this.streamPlayingEventExceptionTimeout;
+                                delete this.streamPlayingEventExceptionTimeout);
                         }, e);
                     }
                     deactivateStreamPlayingEventExceptionTimeout() {
-                        clearTimeout(this.streamPlayingEventExceptionTimeout),
-                            delete this.streamPlayingEventExceptionTimeout;
+                        (clearTimeout(this.streamPlayingEventExceptionTimeout),
+                            delete this.streamPlayingEventExceptionTimeout);
                     }
                 };
             },
@@ -3771,12 +3773,12 @@ var n,
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/Subscriber.js": (
             e,
         ) => {
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Subscriber = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Subscriber = void 0));
             let t = X(),
                 i = N().OpenViduLogger.getInstance();
             e.Subscriber = class extends t.StreamManager {
                 constructor(e, t, i) {
-                    super(e, t), (this.element = this.targetElement), (this.stream = e), (this.properties = i);
+                    (super(e, t), (this.element = this.targetElement), (this.stream = e), (this.properties = i));
                 }
                 subscribeToAudio(e) {
                     return (
@@ -3807,13 +3809,13 @@ var n,
                 replaceTrackInMediaStream(e, t) {
                     let i,
                         n = this.stream.getMediaStream();
-                    "video" === e.kind
+                    ("video" === e.kind
                         ? ((i = n.getVideoTracks()[0]),
                           t && (this.stream.lastVideoTrackConstraints = e.getConstraints()))
                         : (i = n.getAudioTracks()[0]),
                         n.removeTrack(i),
                         i.stop(),
-                        n.addTrack(e);
+                        n.addTrack(e));
                 }
             };
         },
@@ -3875,13 +3877,13 @@ var n,
                     r = (e || {}).stunCount || 2,
                     o = (e || {}).turnCount || 0;
                 function s(e, t) {
-                    for (var r, o = [], s = [].concat(n[e]); s.length && o.length < t; )
-                        (r = (Math.random() * s.length) | 0), (o = o.concat(s.splice(r, 1)));
+                    for (var r, o = [], s = [].concat(n[e]); s.length && o.length < t;)
+                        ((r = (Math.random() * s.length) | 0), (o = o.concat(s.splice(r, 1))));
                     return o.map(function (t) {
                         return "string" == typeof t || t instanceof String ? i(e + ":" + t) : t;
                     });
                 }
-                return (t = [].concat(s("stun", r))), o && (t = t.concat(s("turn", o))), t;
+                return ((t = [].concat(s("stun", r))), o && (t = t.concat(s("turn", o))), t);
             };
         },
     });
@@ -3915,7 +3917,7 @@ function er(e) {
 }
 var eo = (0, I.n)({
     "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/validate.js": () => {
-        en(), (s = er);
+        (en(), (s = er));
     },
 });
 function es(e) {
@@ -3958,8 +3960,8 @@ function ed(e, t, i) {
         s = void 0 !== e.clockseq ? e.clockseq : p;
     if (null == o || null == s) {
         var a = e.random || (e.rng || et)();
-        null == o && (o = l = [1 | a[0], a[1], a[2], a[3], a[4], a[5]]),
-            null == s && (s = p = ((a[6] << 8) | a[7]) & 16383);
+        (null == o && (o = l = [1 | a[0], a[1], a[2], a[3], a[4], a[5]]),
+            null == s && (s = p = ((a[6] << 8) | a[7]) & 16383));
     }
     var d = void 0 !== e.msecs ? e.msecs : Date.now(),
         m = void 0 !== e.nsecs ? e.nsecs : h + 1,
@@ -3970,22 +3972,22 @@ function ed(e, t, i) {
         m >= 1e4)
     )
         throw Error("uuid.v1(): Can't create more than 10M uuids/sec");
-    (u = d), (h = m), (p = s);
+    ((u = d), (h = m), (p = s));
     var f = ((0xfffffff & (d += 122192928e5)) * 1e4 + m) % 0x100000000;
-    (r[n++] = (f >>> 24) & 255), (r[n++] = (f >>> 16) & 255), (r[n++] = (f >>> 8) & 255), (r[n++] = 255 & f);
+    ((r[n++] = (f >>> 24) & 255), (r[n++] = (f >>> 16) & 255), (r[n++] = (f >>> 8) & 255), (r[n++] = 255 & f));
     var g = ((d / 0x100000000) * 1e4) & 0xfffffff;
-    (r[n++] = (g >>> 8) & 255),
+    ((r[n++] = (g >>> 8) & 255),
         (r[n++] = 255 & g),
         (r[n++] = ((g >>> 24) & 15) | 16),
         (r[n++] = (g >>> 16) & 255),
         (r[n++] = (s >>> 8) | 128),
-        (r[n++] = 255 & s);
+        (r[n++] = 255 & s));
     for (var b = 0; b < 6; ++b) r[n + b] = o[b];
     return t || c(r);
 }
 var ec = (0, I.n)({
     "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/v1.js": () => {
-        ei(), ea(), (u = 0), (h = 0), (m = ed);
+        (ei(), ea(), (u = 0), (h = 0), (m = ed));
     },
 });
 function el(e) {
@@ -4014,7 +4016,7 @@ function el(e) {
 }
 var ep = (0, I.n)({
     "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/parse.js": () => {
-        eo(), (v = el);
+        (eo(), (v = el));
     },
 });
 function eu(e, t, i) {
@@ -4041,11 +4043,11 @@ function eu(e, t, i) {
     try {
         n.name = e;
     } catch (e) {}
-    return (n.DNS = f), (n.URL = g), n;
+    return ((n.DNS = f), (n.URL = g), n);
 }
 var eh = (0, I.n)({
     "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/v35.js": () => {
-        ea(), ep(), (f = "6ba7b810-9dad-11d1-80b4-00c04fd430c8"), (g = "6ba7b811-9dad-11d1-80b4-00c04fd430c8");
+        (ea(), ep(), (f = "6ba7b810-9dad-11d1-80b4-00c04fd430c8"), (g = "6ba7b811-9dad-11d1-80b4-00c04fd430c8"));
     },
 });
 function em(e) {
@@ -4063,13 +4065,13 @@ function em(e) {
         return t;
     })(
         (function (e, t) {
-            (e[t >> 5] |= 128 << (t % 32)), (e[ev(t) - 1] = t);
+            ((e[t >> 5] |= 128 << (t % 32)), (e[ev(t) - 1] = t));
             for (var i = 0x67452301, n = -0x10325477, r = -0x67452302, o = 0x10325476, s = 0; s < e.length; s += 16) {
                 var a = i,
                     d = n,
                     c = r,
                     l = o;
-                (i = eb(i, n, r, o, e[s], 7, -0x28955b88)),
+                ((i = eb(i, n, r, o, e[s], 7, -0x28955b88)),
                     (o = eb(o, i, n, r, e[s + 1], 12, -0x173848aa)),
                     (r = eb(r, o, i, n, e[s + 2], 17, 0x242070db)),
                     (n = eb(n, r, o, i, e[s + 3], 22, -0x3e423112)),
@@ -4136,7 +4138,7 @@ function em(e) {
                     (i = ef(i, a)),
                     (n = ef(n, d)),
                     (r = ef(r, c)),
-                    (o = ef(o, l));
+                    (o = ef(o, l)));
             }
             return [i, n, r, o];
         })(
@@ -4180,7 +4182,7 @@ var ew = (0, I.n)({
     }),
     ey = (0, I.n)({
         "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/v3.js": () => {
-            eh(), ew(), (E = eu("v3", 48, b));
+            (eh(), ew(), (E = eu("v3", 48, b)));
         },
     });
 function eO(e, t, i) {
@@ -4194,7 +4196,7 @@ function eO(e, t, i) {
 }
 var eI = (0, I.n)({
     "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/v4.js": () => {
-        ei(), ea(), (S = eO);
+        (ei(), ea(), (S = eO));
     },
 });
 function eC(e, t) {
@@ -4218,9 +4220,9 @@ function eR(e) {
                 e[64 * a + 4 * c + 3];
         s[a] = d;
     }
-    (s[o - 1][14] = ((e.length - 1) * 8) / 0x100000000),
+    ((s[o - 1][14] = ((e.length - 1) * 8) / 0x100000000),
         (s[o - 1][14] = Math.floor(s[o - 1][14])),
-        (s[o - 1][15] = ((e.length - 1) * 8) | 0);
+        (s[o - 1][15] = ((e.length - 1) * 8) | 0));
     for (var l = 0; l < o; ++l) {
         for (var p = new Uint32Array(80), u = 0; u < 16; ++u) p[u] = s[l][u];
         for (var h = 16; h < 80; ++h) p[h] = eC(p[h - 3] ^ p[h - 8] ^ p[h - 14] ^ p[h - 16], 1);
@@ -4243,13 +4245,13 @@ function eR(e) {
                         t[S] +
                         p[E]) >>>
                     0;
-            (b = g), (g = f), (f = eC(v, 30) >>> 0), (v = m), (m = x);
+            ((b = g), (g = f), (f = eC(v, 30) >>> 0), (v = m), (m = x));
         }
-        (i[0] = (i[0] + m) >>> 0),
+        ((i[0] = (i[0] + m) >>> 0),
             (i[1] = (i[1] + v) >>> 0),
             (i[2] = (i[2] + f) >>> 0),
             (i[3] = (i[3] + g) >>> 0),
-            (i[4] = (i[4] + b) >>> 0);
+            (i[4] = (i[4] + b) >>> 0));
     }
     return [
         (i[0] >> 24) & 255,
@@ -4281,7 +4283,7 @@ var ek = (0, I.n)({
     }),
     eT = (0, I.n)({
         "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/v5.js": () => {
-            eh(), ek(), (w = eu("v5", 80, x));
+            (eh(), ek(), (w = eu("v5", 80, x)));
         },
     }),
     eP = (0, I.n)({
@@ -4295,7 +4297,7 @@ function eN(e) {
 }
 var e_ = (0, I.n)({
         "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/version.js": () => {
-            eo(), (O = eN);
+            (eo(), (O = eN));
         },
     }),
     eL = (0, I.r)({
@@ -4311,7 +4313,7 @@ var e_ = (0, I.n)({
     }),
     eV = (0, I.n)({
         "../../node_modules/.pnpm/uuid@8.3.2/node_modules/uuid/dist/esm-browser/index.js": () => {
-            ec(), ey(), eI(), eT(), eP(), e_(), eo(), ea(), ep();
+            (ec(), ey(), eI(), eT(), eP(), e_(), eo(), ea(), ep());
         },
     }),
     eM = (0, I.t)({
@@ -4349,8 +4351,8 @@ var e_ = (0, I.n)({
                             d((n = n.apply(e, t || [])).next());
                         });
                     };
-                Object.defineProperty(e, "__esModule", { value: !0 }),
-                    (e.WebRtcPeerSendrecv = e.WebRtcPeerSendonly = e.WebRtcPeerRecvonly = e.WebRtcPeer = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
+                    (e.WebRtcPeerSendrecv = e.WebRtcPeerSendonly = e.WebRtcPeerRecvonly = e.WebRtcPeer = void 0));
                 let i = ee(),
                     n = (eV(), (0, I.i)(eL)),
                     r = G(),
@@ -4359,7 +4361,7 @@ var e_ = (0, I.n)({
                     a = o.OpenViduLogger.getInstance();
                 var d = class {
                     constructor(e) {
-                        (this.remoteCandidatesQueue = []),
+                        ((this.remoteCandidatesQueue = []),
                             (this.localCandidatesQueue = []),
                             (this.iceCandidateList = []),
                             s.PlatformUtils.getInstance(),
@@ -4371,25 +4373,25 @@ var e_ = (0, I.n)({
                                 id: e.id ? e.id : this.generateUniqueId(),
                             })),
                             a.debug(`[WebRtcPeer] configuration:
-${JSON.stringify(this.configuration, null, 2)}`);
+${JSON.stringify(this.configuration, null, 2)}`));
                         let n = this.configuration.rtcConfiguration
                             ? this.configuration.rtcConfiguration
                             : { iceServers: this.configuration.iceServers };
-                        !n.iceServers &&
+                        (!n.iceServers &&
                             this.configuration.iceServers &&
                             (n.iceServers = this.configuration.iceServers),
                             (this.pc = new RTCPeerConnection(n)),
                             this.pc.addEventListener("icecandidate", (e) => {
                                 if (null !== e.candidate) {
                                     let t = new RTCIceCandidate(e.candidate);
-                                    this.configuration.onIceCandidate(t),
-                                        "" !== t.candidate && this.localCandidatesQueue.push(t);
+                                    (this.configuration.onIceCandidate(t),
+                                        "" !== t.candidate && this.localCandidatesQueue.push(t));
                                 }
                             }),
                             this.pc.addEventListener("signalingstatechange", () =>
                                 t(this, void 0, void 0, function* () {
                                     if ("stable" === this.pc.signalingState)
-                                        for (; this.iceCandidateList.length > 0; ) {
+                                        for (; this.iceCandidateList.length > 0;) {
                                             let e = this.iceCandidateList.shift();
                                             try {
                                                 yield this.pc.addIceCandidate(e);
@@ -4402,16 +4404,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             }
                                         }
                                 }),
-                            );
+                            ));
                     }
                     getId() {
                         return this.configuration.id;
                     }
                     dispose() {
-                        a.debug("Disposing WebRtcPeer"),
+                        (a.debug("Disposing WebRtcPeer"),
                             this.pc &&
                                 "closed" !== this.pc.signalingState &&
-                                (this.pc.close(), (this.remoteCandidatesQueue = []), (this.localCandidatesQueue = []));
+                                (this.pc.close(), (this.remoteCandidatesQueue = []), (this.localCandidatesQueue = [])));
                     }
                     createOfferLegacy() {
                         this.configuration.mediaStream && this.deprecatedPeerConnectionTrackApi();
@@ -4474,14 +4476,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         a.info(`[createOffer] Video track dimensions: ${p}x${u}`);
                                         let h = p * u,
                                             m = 0;
-                                        (m = h >= 518400 ? 3 : h >= 129600 ? 2 : 1), (l.sendEncodings = []);
+                                        ((m = h >= 518400 ? 3 : h >= 129600 ? 2 : 1), (l.sendEncodings = []));
                                         for (let e = 0; e < m; e++) {
                                             let t = Math.pow(2, m - e - 1),
                                                 i = { rid: "rdiv" + t.toString(), scalabilityMode: "L1T1" };
-                                            ["detail", "text"].includes(c.contentHint)
+                                            (["detail", "text"].includes(c.contentHint)
                                                 ? ((i.scaleResolutionDownBy = 1), (i.maxFramerate = Math.floor(30 / t)))
                                                 : (i.scaleResolutionDownBy = t),
-                                                l.sendEncodings.push(i);
+                                                l.sendEncodings.push(i));
                                         }
                                     }
                                     let p = this.pc.addTransceiver(c, l);
@@ -4649,7 +4651,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         : (this.iceCandidateList.push(e), t());
                                     break;
                                 default:
-                                    this.iceCandidateList.push(e), t();
+                                    (this.iceCandidateList.push(e), t());
                             }
                         });
                     }
@@ -4663,11 +4665,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         " (" +
                                         e +
                                         ') change to "disconnected". Possible network disconnection';
-                                    a.warn(t),
+                                    (a.warn(t),
                                         this.configuration.onIceConnectionStateException(
                                             r.ExceptionEventName.ICE_CONNECTION_DISCONNECTED,
                                             t,
-                                        );
+                                        ));
                                     break;
                                 case "failed":
                                     let i =
@@ -4676,11 +4678,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         " (" +
                                         e +
                                         ') to "failed"';
-                                    a.error(i),
+                                    (a.error(i),
                                         this.configuration.onIceConnectionStateException(
                                             r.ExceptionEventName.ICE_CONNECTION_FAILED,
                                             i,
-                                        );
+                                        ));
                                     break;
                                 case "closed":
                                     a.log(
@@ -4733,22 +4735,22 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         return (0, n.v4)();
                     }
                 };
-                (e.WebRtcPeer = d),
+                ((e.WebRtcPeer = d),
                     (e.WebRtcPeerRecvonly = class extends d {
                         constructor(e) {
-                            (e.mode = "recvonly"), super(e);
+                            ((e.mode = "recvonly"), super(e));
                         }
                     }),
                     (e.WebRtcPeerSendonly = class extends d {
                         constructor(e) {
-                            (e.mode = "sendonly"), super(e);
+                            ((e.mode = "sendonly"), super(e));
                         }
                     }),
                     (e.WebRtcPeerSendrecv = class extends d {
                         constructor(e) {
-                            (e.mode = "sendrecv"), super(e);
+                            ((e.mode = "sendrecv"), super(e));
                         }
-                    });
+                    }));
             },
     }),
     eA = (0, I.t)({
@@ -4787,17 +4789,17 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             d((n = n.apply(e, t || [])).next());
                         });
                     };
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.WebRtcStats = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.WebRtcStats = void 0));
                 let n = N(),
                     r = L(),
                     o = n.OpenViduLogger.getInstance();
                 e.WebRtcStats = class {
                     constructor(e) {
-                        (this.stream = e),
+                        ((this.stream = e),
                             (this.STATS_ITEM_NAME = "webrtc-stats-config"),
                             (this.webRtcStatsEnabled = !1),
                             (this.statsInterval = 1),
-                            (t = r.PlatformUtils.getInstance());
+                            (t = r.PlatformUtils.getInstance()));
                     }
                     isEnabled() {
                         return this.webRtcStatsEnabled;
@@ -4810,7 +4812,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         if (e) {
                             this.webRtcStatsEnabled = !0;
                             let t = JSON.parse(e);
-                            o.warn(
+                            (o.warn(
                                 "WebRtc stats enabled for stream " +
                                     this.stream.streamId +
                                     " of connection " +
@@ -4825,7 +4827,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             yield this.sendStatsToHttpEndpoint();
                                         }),
                                     1e3 * this.statsInterval,
-                                ));
+                                )));
                         } else o.debug("WebRtc stats not enabled");
                     }
                     getSelectedIceCandidateInfo() {
@@ -4968,26 +4970,26 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                     };
                                                 switch (e.type) {
                                                     case "outbound-rtp":
-                                                        o("outbound", "bytesSent"),
+                                                        (o("outbound", "bytesSent"),
                                                             o("outbound", "packetsSent"),
                                                             o("outbound", "framesEncoded"),
                                                             o("outbound", "nackCount"),
                                                             o("outbound", "firCount"),
                                                             o("outbound", "pliCount"),
-                                                            o("outbound", "qpSum");
+                                                            o("outbound", "qpSum"));
                                                         break;
                                                     case "inbound-rtp":
-                                                        o("inbound", "bytesReceived"),
+                                                        (o("inbound", "bytesReceived"),
                                                             o("inbound", "packetsReceived"),
                                                             o("inbound", "packetsLost"),
                                                             o("inbound", "jitter"),
                                                             o("inbound", "framesDecoded"),
                                                             o("inbound", "nackCount"),
                                                             o("inbound", "firCount"),
-                                                            o("inbound", "pliCount");
+                                                            o("inbound", "pliCount"));
                                                         break;
                                                     case "track":
-                                                        o("inbound", "jitterBufferDelay"),
+                                                        (o("inbound", "jitterBufferDelay"),
                                                             o("inbound", "framesReceived"),
                                                             o("outbound", "framesDropped"),
                                                             o("outbound", "framesSent"),
@@ -4998,11 +5000,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                             o(
                                                                 this.stream.isLocal() ? "outbound" : "inbound",
                                                                 "frameWidth",
-                                                            );
+                                                            ));
                                                         break;
                                                     case "candidate-pair":
-                                                        o("candidatepair", "currentRoundTripTime"),
-                                                            o("candidatepair", "availableOutgoingBitrate");
+                                                        (o("candidatepair", "currentRoundTripTime"),
+                                                            o("candidatepair", "availableOutgoingBitrate"));
                                                 }
                                             }),
                                             ((null == i ? void 0 : i.candidatepair) &&
@@ -5011,7 +5013,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             e(i)
                                         );
                                     } catch (e) {
-                                        return o.error("Error getting common stats: ", e), t(e);
+                                        return (o.error("Error getting common stats: ", e), t(e));
                                     }
                                 }),
                             );
@@ -5039,11 +5041,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eD = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/PublisherSpeakingEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.PublisherSpeakingEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.PublisherSpeakingEvent = void 0));
                 let t = B();
                 e.PublisherSpeakingEvent = class extends t.Event {
                     constructor(e, t, i, n) {
-                        super(!1, e, t), (this.type = t), (this.connection = i), (this.streamId = n);
+                        (super(!1, e, t), (this.type = t), (this.connection = i), (this.streamId = n));
                     }
                     callDefaultBehavior() {}
                 };
@@ -5053,27 +5055,27 @@ ${JSON.stringify(this.configuration, null, 2)}`);
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Enums/TypeOfVideo.js":
             (e) => {
                 var t, i;
-                Object.defineProperty(e, "__esModule", { value: !0 }),
+                (Object.defineProperty(e, "__esModule", { value: !0 }),
                     (e.TypeOfVideo = void 0),
                     ((i = t || (e.TypeOfVideo = t = {})).CAMERA = "CAMERA"),
                     (i.SCREEN = "SCREEN"),
                     (i.CUSTOM = "CUSTOM"),
-                    (i.IPCAM = "IPCAM");
+                    (i.IPCAM = "IPCAM"));
             },
     }),
     eB = (0, I.t)({
         "../../node_modules/.pnpm/wildemitter@1.2.1/node_modules/wildemitter/wildemitter.js": (e, t) => {
             function i() {}
-            (t.exports = i),
+            ((t.exports = i),
                 (i.mixin = function (e) {
                     var t = e.prototype || e;
-                    (t.isWildEmitter = !0),
+                    ((t.isWildEmitter = !0),
                         (t.on = function (e, t, i) {
                             this.callbacks = this.callbacks || {};
                             var n = 3 == arguments.length,
                                 r = n ? arguments[1] : void 0,
                                 o = n ? arguments[2] : arguments[1];
-                            return (o._groupName = r), (this.callbacks[e] = this.callbacks[e] || []).push(o), this;
+                            return ((o._groupName = r), (this.callbacks[e] = this.callbacks[e] || []).push(o), this);
                         }),
                         (t.once = function (e, t, i) {
                             var n = this,
@@ -5082,7 +5084,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 s = r ? arguments[2] : arguments[1];
                             return (
                                 this.on(e, o, function t() {
-                                    n.off(e, t), s.apply(this, arguments);
+                                    (n.off(e, t), s.apply(this, arguments));
                                 }),
                                 this
                             );
@@ -5127,13 +5129,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 i,
                                 n = [];
                             for (t in this.callbacks)
-                                (i = t.split("*")),
+                                ((i = t.split("*")),
                                     ("*" === t || (2 === i.length && e.slice(0, i[0].length) === i[0])) &&
-                                        (n = n.concat(this.callbacks[t]));
+                                        (n = n.concat(this.callbacks[t])));
                             return n;
-                        });
+                        }));
                 }),
-                i.mixin(i);
+                i.mixin(i));
         },
     }),
     eU = (0, I.t)({
@@ -5155,7 +5157,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     u = t.history || 10,
                     h = !0,
                     m = (r = t.audioContext || r || new i()).createAnalyser();
-                (m.fftSize = 512),
+                ((m.fftSize = 512),
                     (m.smoothingTimeConstant = d),
                     (a = new Float32Array(m.frequencyBinCount)),
                     e.jquery && (e = e[0]),
@@ -5187,13 +5189,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         c = e;
                     }),
                     (o.stop = function () {
-                        (h = !1),
+                        ((h = !1),
                             o.emit("volume_change", -100, l),
                             o.speaking && ((o.speaking = !1), o.emit("stopped_speaking")),
                             m.disconnect(),
-                            s.disconnect();
+                            s.disconnect());
                     }),
-                    (o.speakingHistory = []);
+                    (o.speakingHistory = []));
                 for (var v = 0; v < u; v++) o.speakingHistory.push(0);
                 var f = function () {
                     setTimeout(function () {
@@ -5214,11 +5216,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 for (var i = 0; i < o.speakingHistory.length; i++) t += o.speakingHistory[i];
                                 0 == t && ((o.speaking = !1), o.emit("stopped_speaking"));
                             }
-                            o.speakingHistory.shift(), o.speakingHistory.push(0 + (e > l)), f();
+                            (o.speakingHistory.shift(), o.speakingHistory.push(0 + (e > l)), f());
                         }
                     }, c);
                 };
-                return f(), o;
+                return (f(), o);
             };
         },
     }),
@@ -5259,7 +5261,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         d((n = n.apply(e, t || [])).next());
                     });
                 };
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Stream = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Stream = void 0));
             let n = $(),
                 r = K(),
                 o = eM(),
@@ -5278,7 +5280,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 b = h.OpenViduLogger.getInstance();
             e.Stream = class {
                 constructor(e, i) {
-                    (this.isSubscribeToRemote = !1),
+                    ((this.isSubscribeToRemote = !1),
                         (this.isLocalStreamReadyToPublish = !1),
                         (this.isLocalStreamPublished = !1),
                         (this.publishedOnce = !1),
@@ -5332,15 +5334,15 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                   (this.filter = this.outboundStreamOpts.publisherProperties.filter)),
                         this.ee.on("mediastream-updated", () => {
                             var e;
-                            this.streamManager.updateMediaStream(this.mediaStream),
+                            (this.streamManager.updateMediaStream(this.mediaStream),
                                 b.debug(
                                     "Video srcObject [" +
                                         (null == (e = this.mediaStream) ? void 0 : e.id) +
                                         "] updated in stream [" +
                                         this.streamId +
                                         "]",
-                                );
-                        });
+                                ));
+                        }));
                 }
                 reconnect() {
                     return this.reconnectStream("API");
@@ -5428,8 +5430,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             "OpenVidu Virtual Background API is available from OpenVidu Pro edition onwards",
                                         ),
                                     );
-                                (a = encodeURIComponent(btoa(a))),
-                                    b.info("Applying Virtual Background to stream " + this.streamId);
+                                ((a = encodeURIComponent(btoa(a))),
+                                    b.info("Applying Virtual Background to stream " + this.streamId));
                                 let c = () =>
                                     i(this, void 0, void 0, function* () {
                                         try {
@@ -5437,7 +5439,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 n = this.streamId + "_" + (0, v.v4)(),
                                                 r = this.mediaStream.clone(),
                                                 o = this.streamManager.videos[0].video.cloneNode(!1);
-                                            (o.id = VirtualBackground.VirtualBackground.SOURCE_VIDEO_PREFIX + n),
+                                            ((o.id = VirtualBackground.VirtualBackground.SOURCE_VIDEO_PREFIX + n),
                                                 (o.srcObject = r),
                                                 (o.muted = !0),
                                                 (this.virtualBackgroundSourceElements = {
@@ -5449,7 +5451,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                     o,
                                                     n,
                                                 ),
-                                                yield o.play();
+                                                yield o.play());
                                             let c = new VirtualBackground.VirtualBackground({
                                                 id: n,
                                                 openviduServerUrl: new URL(d.httpUri),
@@ -5468,7 +5470,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 default:
                                                     throw Error("Unknown Virtual Background filter: " + e);
                                             }
-                                            (this.virtualBackgroundSinkElements = { VB: c, video: i }),
+                                            ((this.virtualBackgroundSinkElements = { VB: c, video: i }),
                                                 (o.style.display = "none"),
                                                 this.streamManager.remote
                                                     ? this.streamManager.replaceTrackInMediaStream(
@@ -5479,7 +5481,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                           this.virtualBackgroundSinkElements.video.srcObject.getVideoTracks()[0],
                                                           !1,
                                                       ),
-                                                s(void 0, !1);
+                                                s(void 0, !1));
                                         } catch (e) {
                                             e.name === p.OpenViduErrorName.VIRTUAL_BACKGROUND_ERROR
                                                 ? s(
@@ -5494,7 +5496,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     });
                                 if ("u" < typeof VirtualBackground) {
                                     let s = document.createElement("script");
-                                    (s.type = "text/javascript"),
+                                    ((s.type = "text/javascript"),
                                         (s.src =
                                             d.httpUri +
                                             "/openvidu/virtual-background/openvidu-virtual-background.js?token=" +
@@ -5502,12 +5504,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         (s.onload = () =>
                                             i(this, void 0, void 0, function* () {
                                                 try {
-                                                    yield c(), r(new n.Filter(e, t));
+                                                    (yield c(), r(new n.Filter(e, t)));
                                                 } catch (e) {
                                                     o(e);
                                                 }
                                             })),
-                                        document.body.appendChild(s);
+                                        document.body.appendChild(s));
                                 } else
                                     c()
                                         .then(() => r(new n.Filter(e, t)))
@@ -5516,14 +5518,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 if (!this.session.sessionConnected()) return o(this.session.notConnectedError());
                                 b.info("Applying server filter to stream " + this.streamId);
                                 let i = (t = null != t ? t : {});
-                                "string" != typeof i && (i = JSON.stringify(i)),
+                                ("string" != typeof i && (i = JSON.stringify(i)),
                                     this.session.openvidu.sendRequest(
                                         "applyFilter",
                                         { streamId: this.streamId, type: e, options: i },
                                         (e, t) => {
                                             s(e, !0);
                                         },
-                                    );
+                                    ));
                             }
                         }),
                     );
@@ -5610,10 +5612,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     return r(e, !1);
                                 }
                             if (!this.session.sessionConnected()) return n(this.session.notConnectedError());
-                            b.info("Removing filter of stream " + this.streamId),
+                            (b.info("Removing filter of stream " + this.streamId),
                                 this.session.openvidu.sendRequest("removeFilter", { streamId: this.streamId }, (e, t) =>
                                     r(e, !0),
-                                );
+                                ));
                         }),
                     );
                 }
@@ -5654,7 +5656,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 }
                 disposeWebRtcPeer() {
                     let e;
-                    this.webRtcPeer && (this.webRtcPeer.dispose(), (e = this.webRtcPeer.getId())),
+                    (this.webRtcPeer && (this.webRtcPeer.dispose(), (e = this.webRtcPeer.getId())),
                         this.stopWebRtcStats(),
                         b.info(
                             (this.outboundStreamOpts ? "Outbound " : "Inbound ") +
@@ -5663,23 +5665,23 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 "] from 'Stream' with id [" +
                                 this.streamId +
                                 "] is now closed",
-                        );
+                        ));
                 }
                 disposeMediaStream() {
                     return i(this, void 0, void 0, function* () {
                         if (this.filter && this.filter.type.startsWith("VB:"))
                             try {
-                                yield this.removeFilterAux(!0),
+                                (yield this.removeFilterAux(!0),
                                     console.debug(
                                         `Success removing Virtual Background filter for stream ${this.streamId}`,
-                                    );
+                                    ));
                             } catch (e) {
                                 console.error(
                                     `Error removing Virtual Background filter for stream ${this.streamId}`,
                                     e,
                                 );
                             }
-                        this.mediaStream &&
+                        (this.mediaStream &&
                             (this.mediaStream.getAudioTracks().forEach((e) => {
                                 e.stop();
                             }),
@@ -5702,7 +5704,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     "MediaStream from 'Stream' with id [" +
                                     this.streamId +
                                     "] is now disposed",
-                            );
+                            ));
                     });
                 }
                 displayMyRemote() {
@@ -5742,12 +5744,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     );
                 }
                 enableHarkSpeakingEvent() {
-                    this.setHarkListenerIfNotExists(),
+                    (this.setHarkListenerIfNotExists(),
                         !this.harkSpeakingEnabled &&
                             this.speechEvent &&
                             ((this.harkSpeakingEnabled = !0),
                             this.speechEvent.on("speaking", () => {
-                                this.session.emitEvent("publisherStartSpeaking", [
+                                (this.session.emitEvent("publisherStartSpeaking", [
                                     new d.PublisherSpeakingEvent(
                                         this.session,
                                         "publisherStartSpeaking",
@@ -5763,16 +5765,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             this.streamId,
                                         ),
                                     ]),
-                                    (this.harkSpeakingEnabledOnce = !1);
-                            }));
+                                    (this.harkSpeakingEnabledOnce = !1));
+                            })));
                 }
                 enableOnceHarkSpeakingEvent() {
-                    this.setHarkListenerIfNotExists(),
+                    (this.setHarkListenerIfNotExists(),
                         !this.harkSpeakingEnabledOnce &&
                             this.speechEvent &&
                             ((this.harkSpeakingEnabledOnce = !0),
                             this.speechEvent.once("speaking", () => {
-                                this.harkSpeakingEnabledOnce &&
+                                (this.harkSpeakingEnabledOnce &&
                                     (this.session.emitEvent("publisherStartSpeaking", [
                                         new d.PublisherSpeakingEvent(
                                             this.session,
@@ -5789,8 +5791,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             this.streamId,
                                         ),
                                     ])),
-                                    this.disableHarkSpeakingEvent(!0);
-                            }));
+                                    this.disableHarkSpeakingEvent(!0));
+                            })));
                 }
                 disableHarkSpeakingEvent(e) {
                     if (this.speechEvent) {
@@ -5806,12 +5808,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     }
                 }
                 enableHarkStoppedSpeakingEvent() {
-                    this.setHarkListenerIfNotExists(),
+                    (this.setHarkListenerIfNotExists(),
                         !this.harkStoppedSpeakingEnabled &&
                             this.speechEvent &&
                             ((this.harkStoppedSpeakingEnabled = !0),
                             this.speechEvent.on("stopped_speaking", () => {
-                                this.session.emitEvent("publisherStopSpeaking", [
+                                (this.session.emitEvent("publisherStopSpeaking", [
                                     new d.PublisherSpeakingEvent(
                                         this.session,
                                         "publisherStopSpeaking",
@@ -5827,16 +5829,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             this.streamId,
                                         ),
                                     ]),
-                                    (this.harkStoppedSpeakingEnabledOnce = !1);
-                            }));
+                                    (this.harkStoppedSpeakingEnabledOnce = !1));
+                            })));
                 }
                 enableOnceHarkStoppedSpeakingEvent() {
-                    this.setHarkListenerIfNotExists(),
+                    (this.setHarkListenerIfNotExists(),
                         !this.harkStoppedSpeakingEnabledOnce &&
                             this.speechEvent &&
                             ((this.harkStoppedSpeakingEnabledOnce = !0),
                             this.speechEvent.once("stopped_speaking", () => {
-                                this.harkStoppedSpeakingEnabledOnce &&
+                                (this.harkStoppedSpeakingEnabledOnce &&
                                     (this.session.emitEvent("publisherStopSpeaking", [
                                         new d.PublisherSpeakingEvent(
                                             this.session,
@@ -5853,8 +5855,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             this.streamId,
                                         ),
                                     ])),
-                                    this.disableHarkStoppedSpeakingEvent(!0);
-                            }));
+                                    this.disableHarkStoppedSpeakingEvent(!0));
+                            })));
                 }
                 disableHarkStoppedSpeakingEvent(e) {
                     if (this.speechEvent) {
@@ -5875,10 +5877,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           ((this.harkVolumeChangeEnabled = !0),
                           this.speechEvent.on("volume_change", (e) => {
                               let t = { newValue: e, oldValue: this.speechEvent.oldVolumeValue };
-                              (this.speechEvent.oldVolumeValue = e),
+                              ((this.speechEvent.oldVolumeValue = e),
                                   this.streamManager.emitEvent("streamAudioVolumeChange", [
                                       new c.StreamManagerEvent(this.streamManager, "streamAudioVolumeChange", t),
-                                  ]);
+                                  ]));
                           }))
                         : (this.harkVolumeChangeEnabled = !0);
                 }
@@ -5888,11 +5890,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           ((this.harkVolumeChangeEnabledOnce = !0),
                           this.speechEvent.once("volume_change", (e) => {
                               let t = { newValue: e, oldValue: this.speechEvent.oldVolumeValue };
-                              (this.speechEvent.oldVolumeValue = e),
+                              ((this.speechEvent.oldVolumeValue = e),
                                   this.disableHarkVolumeChangeEvent(!0),
                                   this.streamManager.emitEvent("streamAudioVolumeChange", [
                                       new c.StreamManagerEvent(this.streamManager, "streamAudioVolumeChange", t),
-                                  ]);
+                                  ]));
                           }))
                         : (this.harkVolumeChangeEnabledOnce = !0);
                 }
@@ -5946,9 +5948,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             let e = this.harkOptions
                                 ? this.harkOptions
                                 : this.session.openvidu.advancedConfiguration.publisherSpeakingEventsOptions || {};
-                            (e.interval = "number" == typeof e.interval ? e.interval : 100),
+                            ((e.interval = "number" == typeof e.interval ? e.interval : 100),
                                 (e.threshold = "number" == typeof e.threshold ? e.threshold : -50),
-                                (this.speechEvent = f(this.mediaStream, e));
+                                (this.speechEvent = f(this.mediaStream, e)));
                         }
                         return !0;
                     }
@@ -5994,7 +5996,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     i = { stream: this.streamId, sdpString: t };
                                 else {
                                     let e;
-                                    this.isSendVideo() &&
+                                    (this.isSendVideo() &&
                                         (e =
                                             "u" > typeof MediaStreamTrack &&
                                             this.outboundStreamOpts.publisherProperties.videoSource instanceof
@@ -6014,7 +6016,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             videoDimensions: JSON.stringify(this.videoDimensions),
                                             filter: this.outboundStreamOpts.publisherProperties.filter,
                                             sdpOffer: t,
-                                        });
+                                        }));
                                 }
                                 this.session.openvidu.sendRequest(e ? "reconnectStream" : "publishVideo", i, (t, i) => {
                                     t
@@ -6029,7 +6031,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         : this.webRtcPeer
                                               .processRemoteAnswer(i.sdpAnswer)
                                               .then(() => {
-                                                  (this.streamId = i.id),
+                                                  ((this.streamId = i.id),
                                                       (this.creationTime = i.createdAt),
                                                       (this.isLocalStreamPublished = !0),
                                                       (this.publishedOnce = !0),
@@ -6048,7 +6050,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                               (e ? "reconnected" : "published") +
                                                               " to session",
                                                       ),
-                                                      r();
+                                                      r());
                                               })
                                               .catch((e) => {
                                                   s(e);
@@ -6069,7 +6071,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 mediaServer: this.session.openvidu.mediaServer,
                                 typeOfVideo: this.typeOfVideo ? u.TypeOfVideo[this.typeOfVideo] : void 0,
                             };
-                        "mediasoup" !== this.session.openvidu.mediaServer && (d.simulcast = !1),
+                        ("mediasoup" !== this.session.openvidu.mediaServer && (d.simulcast = !1),
                             e && this.disposeWebRtcPeer(),
                             this.displayMyRemote()
                                 ? (this.webRtcPeer = new o.WebRtcPeerSendrecv(d))
@@ -6091,7 +6093,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 })
                                 .catch((e) => {
                                     s(Error("(publish) SDP create offer error: " + JSON.stringify(e)));
-                                });
+                                }));
                     });
                 }
                 finalResolveForSubscription(e, t) {
@@ -6173,12 +6175,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 );
                                 let s = e ? "reconnectStream" : "receiveVideoFrom",
                                     a = {};
-                                (a[e ? "stream" : "sender"] = this.streamId),
+                                ((a[e ? "stream" : "sender"] = this.streamId),
                                     i ? (a[e ? "sdpString" : "sdpAnswer"] = o) : (a.sdpOffer = o),
                                     e && (a.forciblyReconnect = t),
                                     this.session.openvidu.sendRequest(s, a, (e, t) =>
                                         e ? r(Error("Error on " + s + " : " + JSON.stringify(e))) : n(t),
-                                    );
+                                    ));
                             },
                             a = {
                                 mediaConstraints: { audio: this.hasAudio, video: this.hasVideo },
@@ -6190,7 +6192,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 mediaServer: this.session.openvidu.mediaServer,
                                 typeOfVideo: this.typeOfVideo ? u.TypeOfVideo[this.typeOfVideo] : void 0,
                             };
-                        e && this.disposeWebRtcPeer(),
+                        (e && this.disposeWebRtcPeer(),
                             (this.webRtcPeer = new o.WebRtcPeerRecvonly(a)),
                             this.webRtcPeer.addIceConnectionStateChangeListener(this.streamId),
                             i
@@ -6240,7 +6242,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                       })
                                       .catch((e) =>
                                           r(Error("(subscribe) SDP create offer error: " + JSON.stringify(e))),
-                                      );
+                                      ));
                     });
                 }
                 remotePeerSuccessfullyEstablished(e) {
@@ -6262,7 +6264,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 this.mediaStream.getVideoTracks()[0].enabled = t;
                             }
                         }
-                        this.updateMediaStreamInVideos(), this.initHarkEvents();
+                        (this.updateMediaStreamInVideos(), this.initHarkEvents());
                     }
                 }
                 initHarkEvents() {
@@ -6289,12 +6291,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     this.session.emitEvent("exception", [new a.ExceptionEvent(this.session, e, this, t, i)]);
                 }
                 onIceConnectionFailed() {
-                    b.log(
+                    (b.log(
                         `[ICE_CONNECTION_FAILED] Handling ICE_CONNECTION_FAILED event. Reconnecting stream ${this.streamId} (${this.isLocal() ? "Publisher" : "Subscriber"})`,
                     ),
                         this.reconnectStreamAndLogResultingIceConnectionState(
                             a.ExceptionEventName.ICE_CONNECTION_FAILED,
-                        );
+                        ));
                 }
                 onIceConnectionDisconnected() {
                     b.log(
@@ -6319,12 +6321,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             case "checking":
                             case "new":
                             case "disconnected":
-                                b.warn(
+                                (b.warn(
                                     `[ICE_CONNECTION_DISCONNECTED] ICE connection of stream ${this.streamId} (${this.isLocal() ? "Publisher" : "Subscriber"}) couldn't be restored after ICE_CONNECTION_DISCONNECTED event. Current ICE connection state after ${e} ms: ${t}`,
                                 ),
                                     this.reconnectStreamAndLogResultingIceConnectionState(
                                         a.ExceptionEventName.ICE_CONNECTION_DISCONNECTED,
-                                    );
+                                    ));
                         }
                     });
                 }
@@ -6405,7 +6407,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 isWebsocketConnected(e, t) {
                     return new Promise((i, n) => {
                         let r = this.session.openvidu.getWsReadyState();
-                        if (1 !== r) return console.warn(`[${e}] Websocket readyState is ${r}`), i(!1);
+                        if (1 !== r) return (console.warn(`[${e}] Websocket readyState is ${r}`), i(!1));
                         {
                             let n = setTimeout(() => (console.warn(`[${e}] Websocket timeout of ${t}ms`), i(!1)), t);
                             this.session.openvidu.sendRequest("echo", {}, (t, r) =>
@@ -6417,7 +6419,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     });
                 }
                 initWebRtcStats() {
-                    (this.webRtcStats = new s.WebRtcStats(this)), this.webRtcStats.initWebRtcStats();
+                    ((this.webRtcStats = new s.WebRtcStats(this)), this.webRtcStats.initWebRtcStats());
                 }
                 stopWebRtcStats() {
                     this.webRtcStats && this.webRtcStats.isEnabled() && this.webRtcStats.stopWebRtcStats();
@@ -6448,7 +6450,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                           e.forEach((e) => {
                                               if (this.isReportWanted(e)) {
                                                   let t = {};
-                                                  (t.type = e.type),
+                                                  ((t.type = e.type),
                                                       (t.timestamp = e.timestamp),
                                                       (t.id = e.id),
                                                       "outbound-rtp" === e.type &&
@@ -6475,7 +6477,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                           (t.rtt = e.currentRoundTripTime),
                                                           (t.averageRtt = e.totalRoundTripTime / e.responsesReceived)),
                                                       "remote-inbound-rtp" === e.type || e.type,
-                                                      b.log(t);
+                                                      b.log(t));
                                               }
                                           });
                                       }),
@@ -6487,7 +6489,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                           e.forEach((e) => {
                                               if (this.isReportWanted(e)) {
                                                   let t = {};
-                                                  (t.type = e.type),
+                                                  ((t.type = e.type),
                                                       (t.timestamp = e.timestamp),
                                                       (t.id = e.id),
                                                       "inbound-rtp" === e.type &&
@@ -6516,7 +6518,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                           (t.rtt = e.currentRoundTripTime),
                                                           (t.averageRtt = e.totalRoundTripTime / e.responsesReceived)),
                                                       "remote-inbound-rtp" === e.type || e.type,
-                                                      b.log(t);
+                                                      b.log(t));
                                               }
                                           });
                                       }),
@@ -6537,16 +6539,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenVidu/Connection.js": (
             e,
         ) => {
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Connection = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Connection = void 0));
             let t = eF(),
                 i = N(),
                 n = G(),
                 r = i.OpenViduLogger.getInstance();
             e.Connection = class {
                 constructor(e, t) {
-                    (this.session = e), (this.disposed = !1);
+                    ((this.session = e), (this.disposed = !1));
                     let i = "'Connection' created ";
-                    t.role
+                    (t.role
                         ? ((this.localOptions = t),
                           (this.connectionId = this.localOptions.id),
                           (this.creationTime = this.localOptions.createdAt),
@@ -6561,7 +6563,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           this.remoteOptions.metadata && (this.data = this.remoteOptions.metadata),
                           this.remoteOptions.streams && this.initRemoteStreams(this.remoteOptions.streams),
                           (i += "(remote) with 'connectionId' [" + this.remoteOptions.id + "]")),
-                        r.info(i);
+                        r.info(i));
                 }
                 sendIceCandidate(e) {
                     this.disposed
@@ -6598,7 +6600,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           ));
                 }
                 initRemoteStreams(e) {
-                    e.forEach((e) => {
+                    (e.forEach((e) => {
                         let i = {
                                 id: e.id,
                                 createdAt: e.createdAt,
@@ -6620,16 +6622,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 this.connectionId +
                                 "] is now configured for receiving Streams with options: ",
                             this.stream.inboundStreamOpts,
-                        );
+                        ));
                 }
                 addStream(e) {
-                    (e.connection = this), (this.stream = e);
+                    ((e.connection = this), (this.stream = e));
                 }
                 removeStream() {
                     delete this.stream;
                 }
                 dispose() {
-                    (this.disposed = !0), this.removeStream();
+                    ((this.disposed = !0), this.removeStream());
                 }
             };
         },
@@ -6637,11 +6639,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eW = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/ConnectionEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.ConnectionEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.ConnectionEvent = void 0));
                 let t = B();
                 e.ConnectionEvent = class extends t.Event {
                     constructor(e, t, i, n, r) {
-                        super(e, t, i), (this.connection = n), (this.reason = r);
+                        (super(e, t, i), (this.connection = n), (this.reason = r));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6650,11 +6652,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eH = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/FilterEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.FilterEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.FilterEvent = void 0));
                 let t = B();
                 e.FilterEvent = class extends t.Event {
                     constructor(e, t, i) {
-                        super(!1, e, t), (this.data = i);
+                        (super(!1, e, t), (this.data = i));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6663,11 +6665,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     ez = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/RecordingEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.RecordingEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.RecordingEvent = void 0));
                 let t = B();
                 e.RecordingEvent = class extends t.Event {
                     constructor(e, t, i, n, r) {
-                        super(!1, e, t), (this.id = i), n !== i && (this.name = n), (this.reason = r);
+                        (super(!1, e, t), (this.id = i), n !== i && (this.name = n), (this.reason = r));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6676,12 +6678,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eq = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/SessionDisconnectedEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.SessionDisconnectedEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.SessionDisconnectedEvent = void 0));
                 let t = B(),
                     i = N().OpenViduLogger.getInstance();
                 e.SessionDisconnectedEvent = class extends t.Event {
                     constructor(e, t) {
-                        super(!0, e, "sessionDisconnected"), (this.reason = t);
+                        (super(!0, e, "sessionDisconnected"), (this.reason = t));
                     }
                     callDefaultBehavior() {
                         i.info("Calling default behavior upon '" + this.type + "' event dispatched by 'Session'");
@@ -6690,17 +6692,17 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             var i, n, r, o, s, a, d, c;
                             let l = t.connectionId;
                             if (null == (i = e.remoteConnections.get(l)) ? void 0 : i.stream) {
-                                null == (n = e.remoteConnections.get(l)) || n.stream.disposeWebRtcPeer(),
+                                (null == (n = e.remoteConnections.get(l)) || n.stream.disposeWebRtcPeer(),
                                     null == (r = e.remoteConnections.get(l)) || r.stream.disposeMediaStream(),
                                     (null == (o = e.remoteConnections.get(l)) ? void 0 : o.stream.streamManager) &&
                                         (null == (s = e.remoteConnections.get(l)) ||
-                                            s.stream.streamManager.removeAllVideos());
+                                            s.stream.streamManager.removeAllVideos()));
                                 let t =
                                     null == (d = null == (a = e.remoteConnections.get(l)) ? void 0 : a.stream)
                                         ? void 0
                                         : d.streamId;
-                                t && e.remoteStreamsCreated.delete(t),
-                                    null == (c = e.remoteConnections.get(l)) || c.dispose();
+                                (t && e.remoteStreamsCreated.delete(t),
+                                    null == (c = e.remoteConnections.get(l)) || c.dispose());
                             }
                             e.remoteConnections.delete(l);
                         });
@@ -6711,11 +6713,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eG = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/SignalEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.SignalEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.SignalEvent = void 0));
                 let t = B();
                 e.SignalEvent = class extends t.Event {
                     constructor(e, t, i, n) {
-                        super(!1, e, "signal"), t && (this.type = "signal:" + t), (this.data = i), (this.from = n);
+                        (super(!1, e, "signal"), t && (this.type = "signal:" + t), (this.data = i), (this.from = n));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6724,16 +6726,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eJ = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/SpeechToTextEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.SpeechToTextEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.SpeechToTextEvent = void 0));
                 let t = B();
                 e.SpeechToTextEvent = class extends t.Event {
                     constructor(e, t, i, n, r, o) {
-                        super(!1, e, "speechToTextMessage"),
+                        (super(!1, e, "speechToTextMessage"),
                             (this.connection = t),
                             (this.text = i),
                             (this.reason = n),
                             (this.raw = r),
-                            (this.lang = o);
+                            (this.lang = o));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6742,28 +6744,28 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eX = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/StreamEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.StreamEvent = void 0));
                 let t = B(),
                     i = e8(),
                     n = e6(),
                     r = N().OpenViduLogger.getInstance();
                 e.StreamEvent = class extends t.Event {
                     constructor(e, t, i, n, r) {
-                        super(e, t, i), (this.stream = n), (this.reason = r);
+                        (super(e, t, i), (this.stream = n), (this.reason = r));
                     }
                     callDefaultBehavior() {
                         if ("streamDestroyed" === this.type) {
                             if (this.target instanceof n.Session)
-                                r.info(
+                                (r.info(
                                     "Calling default behavior upon '" + this.type + "' event dispatched by 'Session'",
                                 ),
-                                    this.stream.disposeWebRtcPeer();
+                                    this.stream.disposeWebRtcPeer());
                             else if (this.target instanceof i.Publisher) {
-                                r.info(
+                                (r.info(
                                     "Calling default behavior upon '" + this.type + "' event dispatched by 'Publisher'",
                                 ),
                                     clearInterval(this.target.screenShareResizeInterval),
-                                    (this.stream.isLocalStreamReadyToPublish = !1);
+                                    (this.stream.isLocalStreamReadyToPublish = !1));
                                 let e = this.target.openvidu.publishers;
                                 for (let t = 0; t < e.length; t++)
                                     if (e[t] === this.target) {
@@ -6771,9 +6773,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         break;
                                     }
                             }
-                            this.stream.disposeMediaStream(),
+                            (this.stream.disposeMediaStream(),
                                 this.stream.streamManager && this.stream.streamManager.removeAllVideos(),
-                                this.stream.session.remoteStreamsCreated.delete(this.stream.streamId);
+                                this.stream.session.remoteStreamsCreated.delete(this.stream.streamId));
                             let e = this.stream.session.remoteConnections.get(this.stream.connection.connectionId);
                             if (e && e.remoteOptions) {
                                 let t = e.remoteOptions.streams;
@@ -6788,15 +6790,15 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eK = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/ConnectionPropertyChangedEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.ConnectionPropertyChangedEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.ConnectionPropertyChangedEvent = void 0));
                 let t = B();
                 e.ConnectionPropertyChangedEvent = class extends t.Event {
                     constructor(e, t, i, n, r) {
-                        super(!1, e, "connectionPropertyChanged"),
+                        (super(!1, e, "connectionPropertyChanged"),
                             (this.connection = t),
                             (this.changedProperty = i),
                             (this.newValue = n),
-                            (this.oldValue = r);
+                            (this.oldValue = r));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6805,14 +6807,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     eY = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/Events/NetworkQualityLevelChangedEvent.js":
             (e) => {
-                Object.defineProperty(e, "__esModule", { value: !0 }), (e.NetworkQualityLevelChangedEvent = void 0);
+                (Object.defineProperty(e, "__esModule", { value: !0 }), (e.NetworkQualityLevelChangedEvent = void 0));
                 let t = B();
                 e.NetworkQualityLevelChangedEvent = class extends t.Event {
                     constructor(e, t, i, n) {
-                        super(!1, e, "networkQualityLevelChanged"),
+                        (super(!1, e, "networkQualityLevelChanged"),
                             (this.newValue = t),
                             (this.oldValue = i),
-                            (this.connection = n);
+                            (this.connection = n));
                     }
                     callDefaultBehavior() {}
                 };
@@ -6863,14 +6865,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             return e;
                         })(t),
                         r = p++;
-                    o(e, r, t),
+                    (o(e, r, t),
                         (l[e] = r),
                         (d[r] = t),
                         (c[r] = n),
                         (s[r] = new RegExp(t, i ? "g" : void 0)),
-                        (a[r] = new RegExp(n, i ? "g" : void 0));
+                        (a[r] = new RegExp(n, i ? "g" : void 0)));
                 };
-            m("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
+            (m("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
                 m("NUMERICIDENTIFIERLOOSE", "\\d+"),
                 m("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${u}*`),
                 m(
@@ -6930,7 +6932,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 m("HYPHENRANGELOOSE", `^\\s*(${d[l.XRANGEPLAINLOOSE]})\\s+-\\s+(${d[l.XRANGEPLAINLOOSE]})\\s*$`),
                 m("STAR", "(<|>)?=?\\s*\\*"),
                 m("GTE0", "^\\s*>=\\s*0\\.0\\.0\\s*$"),
-                m("GTE0PRE", "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
+                m("GTE0PRE", "^\\s*>=\\s*0\\.0\\.0-0\\s*$"));
         },
     }),
     e1 = (0, I.t)({
@@ -6947,7 +6949,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     if ("number" == typeof e && "number" == typeof t) return e === t ? 0 : e < t ? -1 : 1;
                     let n = i.test(e),
                         r = i.test(t);
-                    return n && r && ((e *= 1), (t *= 1)), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1;
+                    return (n && r && ((e *= 1), (t *= 1)), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1);
                 };
             t.exports = { compareIdentifiers: n, rcompareIdentifiers: (e, t) => n(t, e) };
         },
@@ -6967,10 +6969,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     else if ("string" != typeof t)
                         throw TypeError(`Invalid version. Must be a string. Got type "${typeof t}".`);
                     if (t.length > n) throw TypeError(`version is longer than ${n} characters`);
-                    i("SemVer", t, d),
+                    (i("SemVer", t, d),
                         (this.options = d),
                         (this.loose = !!d.loose),
-                        (this.includePrerelease = !!d.includePrerelease);
+                        (this.includePrerelease = !!d.includePrerelease));
                     const c = t.trim().match(d.loose ? o[s.LOOSE] : o[s.FULL]);
                     if (!c) throw TypeError(`Invalid Version: ${t}`);
                     if (
@@ -6983,7 +6985,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         throw TypeError("Invalid major version");
                     if (this.minor > r || this.minor < 0) throw TypeError("Invalid minor version");
                     if (this.patch > r || this.patch < 0) throw TypeError("Invalid patch version");
-                    c[4]
+                    (c[4]
                         ? (this.prerelease = c[4].split(".").map((e) => {
                               if (/^[0-9]+$/.test(e)) {
                                   let t = +e;
@@ -6993,7 +6995,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           }))
                         : (this.prerelease = []),
                         (this.build = c[5] ? c[5].split(".") : []),
-                        this.format();
+                        this.format());
                 }
                 format() {
                     return (
@@ -7066,45 +7068,45 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     }
                     switch (e) {
                         case "premajor":
-                            (this.prerelease.length = 0),
+                            ((this.prerelease.length = 0),
                                 (this.patch = 0),
                                 (this.minor = 0),
                                 this.major++,
-                                this.inc("pre", t, i);
+                                this.inc("pre", t, i));
                             break;
                         case "preminor":
-                            (this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc("pre", t, i);
+                            ((this.prerelease.length = 0), (this.patch = 0), this.minor++, this.inc("pre", t, i));
                             break;
                         case "prepatch":
-                            (this.prerelease.length = 0), this.inc("patch", t, i), this.inc("pre", t, i);
+                            ((this.prerelease.length = 0), this.inc("patch", t, i), this.inc("pre", t, i));
                             break;
                         case "prerelease":
-                            0 === this.prerelease.length && this.inc("patch", t, i), this.inc("pre", t, i);
+                            (0 === this.prerelease.length && this.inc("patch", t, i), this.inc("pre", t, i));
                             break;
                         case "release":
                             if (0 === this.prerelease.length) throw Error(`version ${this.raw} is not a prerelease`);
                             this.prerelease.length = 0;
                             break;
                         case "major":
-                            (0 !== this.minor || 0 !== this.patch || 0 === this.prerelease.length) && this.major++,
+                            ((0 !== this.minor || 0 !== this.patch || 0 === this.prerelease.length) && this.major++,
                                 (this.minor = 0),
                                 (this.patch = 0),
-                                (this.prerelease = []);
+                                (this.prerelease = []));
                             break;
                         case "minor":
-                            (0 !== this.patch || 0 === this.prerelease.length) && this.minor++,
+                            ((0 !== this.patch || 0 === this.prerelease.length) && this.minor++,
                                 (this.patch = 0),
-                                (this.prerelease = []);
+                                (this.prerelease = []));
                             break;
                         case "patch":
-                            0 === this.prerelease.length && this.patch++, (this.prerelease = []);
+                            (0 === this.prerelease.length && this.patch++, (this.prerelease = []));
                             break;
                         case "pre": {
                             let e = +!!Number(i);
                             if (0 === this.prerelease.length) this.prerelease = [e];
                             else {
                                 let n = this.prerelease.length;
-                                for (; --n >= 0; )
+                                for (; --n >= 0;)
                                     "number" == typeof this.prerelease[n] && (this.prerelease[n]++, (n = -2));
                                 if (-1 === n) {
                                     if (t === this.prerelease.join(".") && !1 === i)
@@ -7114,10 +7116,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             }
                             if (t) {
                                 let n = [t, e];
-                                !1 === i && (n = [t]),
+                                (!1 === i && (n = [t]),
                                     0 === d(this.prerelease[0], t)
                                         ? isNaN(this.prerelease[1]) && (this.prerelease = n)
-                                        : (this.prerelease = n);
+                                        : (this.prerelease = n));
                             }
                             break;
                         }
@@ -7180,7 +7182,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         d((n = n.apply(e, t || [])).next());
                     });
                 };
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Session = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Session = void 0));
             let n = e$(),
                 r = $(),
                 o = K(),
@@ -7205,12 +7207,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 O = E.OpenViduLogger.getInstance();
             e.Session = class extends s.EventDispatcher {
                 constructor(e) {
-                    super(),
+                    (super(),
                         (this.streamManagers = []),
                         (this.remoteStreamsCreated = new Map()),
                         (this.remoteConnections = new Map()),
                         (t = S.PlatformUtils.getInstance()),
-                        (this.openvidu = e);
+                        (this.openvidu = e));
                 }
                 connect(e, i) {
                     return new Promise((n, r) => {
@@ -7227,14 +7229,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         " is not supported in OpenVidu",
                                 ),
                             );
-                        (this.options = {
+                        ((this.options = {
                             sessionId: this.sessionId,
                             participantId: e,
                             metadata: i ? this.stringClientMetadata(i) : "",
                         }),
                             this.connectAux(e)
                                 .then(() => n())
-                                .catch((e) => r(e));
+                                .catch((e) => r(e)));
                     });
                 }
                 disconnect() {
@@ -7261,18 +7263,18 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         !this.sessionConnected())
                     )
                         throw (void 0 !== r && r(this.notConnectedError()), this.notConnectedError());
-                    O.info("Subscribing to " + e.connection.connectionId),
+                    (O.info("Subscribing to " + e.connection.connectionId),
                         e
                             .subscribe()
                             .then(() => {
-                                O.info("Subscribed correctly to " + e.connection.connectionId),
-                                    void 0 !== r && r(void 0);
+                                (O.info("Subscribed correctly to " + e.connection.connectionId),
+                                    void 0 !== r && r(void 0));
                             })
                             .catch((e) => {
                                 void 0 !== r && r(e);
-                            });
+                            }));
                     let a = new o.Subscriber(e, t, s);
-                    return a.targetElement && e.streamManager.createVideoElement(a.targetElement, s.insertMode), a;
+                    return (a.targetElement && e.streamManager.createVideoElement(a.targetElement, s.insertMode), a);
                 }
                 subscribeAsync(e, t, i) {
                     return new Promise((n, r) => {
@@ -7287,7 +7289,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         if (!this.sessionConnected()) return i(this.notConnectedError());
                         {
                             let n = e.stream.connection.connectionId;
-                            O.info("Unsubscribing from " + n),
+                            (O.info("Unsubscribing from " + n),
                                 this.openvidu.sendRequest(
                                     "unsubscribeFromVideo",
                                     { sender: e.stream.connection.connectionId },
@@ -7299,32 +7301,32 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                               e.stream.disposeWebRtcPeer(),
                                               e.stream.disposeMediaStream(),
                                               t()),
-                                );
+                                ));
                         }
                     });
                 }
                 publish(e) {
                     return new Promise((t, i) => {
                         if (!this.sessionConnected()) return i(this.notConnectedError());
-                        (e.session = this),
+                        ((e.session = this),
                             (e.stream.session = this),
                             e.stream.publishedOnce
                                 ? e
                                       .initialize()
                                       .then(() => {
-                                          this.connection.addStream(e.stream),
+                                          (this.connection.addStream(e.stream),
                                               e.reestablishStreamPlayingEvent(),
                                               e.stream
                                                   .publish()
                                                   .then(() => (this.sendVideoData(e, 8, !0, 5), t()))
-                                                  .catch((e) => i(e));
+                                                  .catch((e) => i(e)));
                                       })
                                       .catch((e) => i(e))
                                 : (this.connection.addStream(e.stream),
                                   e.stream
                                       .publish()
                                       .then(() => (this.sendVideoData(e, 8, !0, 5), t()))
-                                      .catch((e) => i(e)));
+                                      .catch((e) => i(e))));
                     });
                 }
                 unpublish(e) {
@@ -7342,11 +7344,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                   this.openvidu.sendRequest("unpublishVideo", (r, o) => {
                                       if (r) return i(r);
                                       {
-                                          O.info("Media unpublished correctly"),
+                                          (O.info("Media unpublished correctly"),
                                               n.disposeWebRtcPeer(),
-                                              n.connection.stream == n && delete n.connection.stream;
+                                              n.connection.stream == n && delete n.connection.stream);
                                           let i = new h.StreamEvent(!0, e, "streamDestroyed", e.stream, "unpublish");
-                                          return e.emitEvent("streamDestroyed", [i]), i.callDefaultBehavior(), t();
+                                          return (e.emitEvent("streamDestroyed", [i]), i.callDefaultBehavior(), t());
                                       }
                                   }))
                             : i(Error("The associated Connection object of this Publisher is null"));
@@ -7355,7 +7357,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 forceDisconnect(e) {
                     return new Promise((t, i) => {
                         if (!this.sessionConnected()) return i(this.notConnectedError());
-                        O.info("Forcing disconnect for connection " + e.connectionId),
+                        (O.info("Forcing disconnect for connection " + e.connectionId),
                             this.openvidu.sendRequest("forceDisconnect", { connectionId: e.connectionId }, (n, r) =>
                                 n
                                     ? (O.error("Error forcing disconnect for Connection " + e.connectionId, n),
@@ -7368,13 +7370,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                           )
                                         : i(n)
                                     : (O.info("Forcing disconnect correctly for Connection " + e.connectionId), t()),
-                            );
+                            ));
                     });
                 }
                 forceUnpublish(e) {
                     return new Promise((t, i) => {
                         if (!this.sessionConnected()) return i(this.notConnectedError());
-                        O.info("Forcing unpublish for stream " + e.streamId),
+                        (O.info("Forcing unpublish for stream " + e.streamId),
                             this.openvidu.sendRequest("forceUnpublish", { streamId: e.streamId }, (n, r) =>
                                 n
                                     ? (O.error("Error forcing unpublish for Stream " + e.streamId, n), 401 === n.code)
@@ -7386,7 +7388,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                           )
                                         : i(n)
                                     : (O.info("Forcing unpublish correctly for Stream " + e.streamId), t()),
-                            );
+                            ));
                     });
                 }
                 signal(e) {
@@ -7395,18 +7397,18 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         let n = {};
                         if (e.to && e.to.length > 0) {
                             let t = [];
-                            e.to.forEach((e) => {
+                            (e.to.forEach((e) => {
                                 e.connectionId && t.push(e.connectionId);
                             }),
-                                (n.to = t);
+                                (n.to = t));
                         } else n.to = [];
                         n.data = e.data ? e.data : "";
                         let r = e.type ? e.type : "signal";
-                        r && "signal:" !== r.substring(0, 7) && (r = "signal:" + r),
+                        (r && "signal:" !== r.substring(0, 7) && (r = "signal:" + r),
                             (n.type = r),
                             this.openvidu.sendRequest("sendMessage", { message: JSON.stringify(n) }, (e, n) =>
                                 e ? i(e) : t(),
-                            );
+                            ));
                     });
                 }
                 subscribeToSpeechToText(e, t) {
@@ -7528,10 +7530,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         })
                         .catch((t) => {
                             let i = new n.Connection(this, e);
-                            this.remoteConnections.set(e.id, i),
+                            (this.remoteConnections.set(e.id, i),
                                 this.ee.emitEvent("connectionCreated", [
                                     new a.ConnectionEvent(!1, this, "connectionCreated", i, ""),
-                                ]);
+                                ]));
                         });
                 }
                 onParticipantLeft(e) {
@@ -7540,15 +7542,15 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             if (t.stream) {
                                 let i = t.stream,
                                     n = new h.StreamEvent(!0, this, "streamDestroyed", i, e.reason);
-                                this.ee.emitEvent("streamDestroyed", [n]),
+                                (this.ee.emitEvent("streamDestroyed", [n]),
                                     n.callDefaultBehavior(),
-                                    this.remoteStreamsCreated.delete(i.streamId);
+                                    this.remoteStreamsCreated.delete(i.streamId));
                             }
-                            t.dispose(),
+                            (t.dispose(),
                                 this.remoteConnections.delete(t.connectionId),
                                 this.ee.emitEvent("connectionDestroyed", [
                                     new a.ConnectionEvent(!1, this, "connectionDestroyed", t, e.reason),
-                                ]);
+                                ]));
                         })
                         .catch((e) => {
                             O.error(e);
@@ -7557,16 +7559,20 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 onParticipantPublished(e) {
                     let t,
                         i = (e) => {
-                            this.remoteConnections.set(e.connectionId, e),
+                            (this.remoteConnections.set(e.connectionId, e),
                                 this.remoteStreamsCreated.get(e.stream.streamId) ||
                                     this.ee.emitEvent("streamCreated", [
                                         new h.StreamEvent(!1, this, "streamCreated", e.stream, ""),
                                     ]),
-                                this.remoteStreamsCreated.set(e.stream.streamId, !0);
+                                this.remoteStreamsCreated.set(e.stream.streamId, !0));
                         };
                     this.getRemoteConnection(e.id, "onParticipantPublished")
                         .then((n) => {
-                            (t = n), (e.metadata = n.data), (t.remoteOptions = e), t.initRemoteStreams(e.streams), i(t);
+                            ((t = n),
+                                (e.metadata = n.data),
+                                (t.remoteOptions = e),
+                                t.initRemoteStreams(e.streams),
+                                i(t));
                         })
                         .catch((r) => {
                             i((t = new n.Connection(this, e)));
@@ -7584,7 +7590,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                       null != t.stream)
                                   ) {
                                       let e = t.stream.streamId;
-                                      this.remoteStreamsCreated.delete(e), t.removeStream();
+                                      (this.remoteStreamsCreated.delete(e), t.removeStream());
                                   }
                               })
                               .catch((e) => {
@@ -7611,10 +7617,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                   this.connection.connectionId,
                           )
                               .then((i) => {
-                                  this.ee.emitEvent("signal", [new p.SignalEvent(this, t, e.data, i)]),
+                                  (this.ee.emitEvent("signal", [new p.SignalEvent(this, t, e.data, i)]),
                                       e.type &&
                                           "signal" !== e.type &&
-                                          this.ee.emitEvent(e.type, [new p.SignalEvent(this, t, e.data, i)]);
+                                          this.ee.emitEvent(e.type, [new p.SignalEvent(this, t, e.data, i)]));
                               })
                               .catch((e) => {
                                   O.error(e);
@@ -7632,14 +7638,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 s = t.stream;
                             switch (e.property) {
                                 case "audioActive":
-                                    (o = s.audioActive),
+                                    ((o = s.audioActive),
                                         (e.newValue = "true" === e.newValue),
-                                        (s.audioActive = e.newValue);
+                                        (s.audioActive = e.newValue));
                                     break;
                                 case "videoActive":
-                                    (o = s.videoActive),
+                                    ((o = s.videoActive),
                                         (e.newValue = "true" === e.newValue),
-                                        (s.videoActive = e.newValue);
+                                        (s.videoActive = e.newValue));
                                     let a =
                                         null ==
                                         (n =
@@ -7655,12 +7661,12 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     e.newValue = JSON.parse(e.newValue);
                                     break;
                                 case "videoDimensions":
-                                    (o = s.videoDimensions),
+                                    ((o = s.videoDimensions),
                                         (e.newValue = JSON.parse(JSON.parse(e.newValue))),
-                                        (s.videoDimensions = e.newValue);
+                                        (s.videoDimensions = e.newValue));
                                     break;
                                 case "filter":
-                                    (o = s.filter),
+                                    ((o = s.filter),
                                         (e.newValue = Object.keys(e.newValue).length > 0 ? e.newValue : void 0),
                                         void 0 !== e.newValue
                                             ? ((s.filter = new r.Filter(e.newValue.type, e.newValue.options)),
@@ -7668,9 +7674,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                               e.newValue.lastExecMethod &&
                                                   (s.filter.lastExecMethod = e.newValue.lastExecMethod))
                                             : delete s.filter,
-                                        (e.newValue = s.filter);
+                                        (e.newValue = s.filter));
                             }
-                            this.ee.emitEvent("streamPropertyChanged", [
+                            (this.ee.emitEvent("streamPropertyChanged", [
                                 new m.StreamPropertyChangedEvent(this, s, e.property, e.newValue, o, e.reason),
                             ]),
                                 s.streamManager &&
@@ -7683,7 +7689,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             o,
                                             e.reason,
                                         ),
-                                    ]);
+                                    ]));
                         } else
                             O.error(
                                 "No stream with streamId '" +
@@ -7707,15 +7713,15 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     let t;
                     switch (e.property) {
                         case "role":
-                            (t = this.connection.role.slice()),
+                            ((t = this.connection.role.slice()),
                                 (this.connection.role = e.newValue),
-                                (this.connection.localOptions.role = e.newValue);
+                                (this.connection.localOptions.role = e.newValue));
                             break;
                         case "record":
-                            (t = this.connection.record),
+                            ((t = this.connection.record),
                                 (e.newValue = "true" === e.newValue),
                                 (this.connection.record = e.newValue),
-                                (this.connection.localOptions.record = e.newValue);
+                                (this.connection.localOptions.record = e.newValue));
                     }
                     this.ee.emitEvent("connectionPropertyChanged", [
                         new v.ConnectionPropertyChangedEvent(this, this.connection, e.property, e.newValue, t),
@@ -7778,13 +7784,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         : O.warn("Session undefined on session closed", e);
                 }
                 onLostConnection(e) {
-                    O.warn("Lost connection in Session " + this.sessionId),
-                        this.sessionId && this.connection && !this.connection.disposed && this.leave(!0, e);
+                    (O.warn("Lost connection in Session " + this.sessionId),
+                        this.sessionId && this.connection && !this.connection.disposed && this.leave(!0, e));
                 }
                 onRecoveredConnection() {
-                    O.info("Recovered connection in Session " + this.sessionId),
+                    (O.info("Recovered connection in Session " + this.sessionId),
                         this.reconnectBrokenStreams(),
-                        this.ee.emitEvent("reconnected", []);
+                        this.ee.emitEvent("reconnected", []));
                 }
                 onMediaError(e) {
                     O.error("Media error: " + JSON.stringify(e));
@@ -7843,16 +7849,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             let t = () => {
                                                 let e =
                                                     r.reconnectionEventEmitter.onForciblyReconnectSubscriberLastEvent;
-                                                delete r.reconnectionEventEmitter
+                                                (delete r.reconnectionEventEmitter
                                                     .onForciblyReconnectSubscriberLastEvent,
-                                                    this.onForciblyReconnectSubscriber(e);
+                                                    this.onForciblyReconnectSubscriber(e));
                                             };
-                                            r.reconnectionEventEmitter.once("success", () => {
+                                            (r.reconnectionEventEmitter.once("success", () => {
                                                 t();
                                             }),
                                                 r.reconnectionEventEmitter.once("error", () => {
                                                     t();
-                                                });
+                                                }));
                                         }
                                         return;
                                     }
@@ -7872,7 +7878,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         "' found for connection '" +
                                         e.connectionId +
                                         "' on 'streamPropertyChanged' event";
-                                    return O.error(t), i(t);
+                                    return (O.error(t), i(t));
                                 }
                             })
                             .catch((e) => (O.error(e), i(e)));
@@ -7881,7 +7887,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 reconnectBrokenStreams() {
                     O.info("Re-establishing media connections...");
                     let e = !1;
-                    this.connection.stream &&
+                    (this.connection.stream &&
                         this.connection.stream.streamIceConnectionStateBroken() &&
                         (O.warn("Re-establishing Publisher " + this.connection.stream.streamId),
                         this.connection.stream.initWebRtcPeerSend(!0),
@@ -7893,7 +7899,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 t.stream.initWebRtcPeerReceive(!0),
                                 (e = !0));
                         }),
-                        e || O.info("There were no media streams in need of a reconnection");
+                        e || O.info("There were no media streams in need of a reconnection"));
                 }
                 onSpeechToTextMessage(e) {
                     return i(this, void 0, void 0, function* () {
@@ -7931,13 +7937,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             (this.connection.disposed || e
                                 ? this.openvidu.closeWs()
                                 : this.openvidu.sendRequest("leaveRoom", (e, t) => {
-                                      e && O.error(`leaveRoom error: ${JSON.stringify(e)}`), this.openvidu.closeWs();
+                                      (e && O.error(`leaveRoom error: ${JSON.stringify(e)}`), this.openvidu.closeWs());
                                   }),
                             this.stopPublisherStream(t),
                             !this.connection.disposed)
                         ) {
                             let e = new l.SessionDisconnectedEvent(this, t);
-                            this.ee.emitEvent("sessionDisconnected", [e]), e.callDefaultBehavior();
+                            (this.ee.emitEvent("sessionDisconnected", [e]), e.callDefaultBehavior());
                         }
                     } else O.warn("You were not connected to the session " + this.sessionId);
                     O.flush();
@@ -7976,7 +7982,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 if ("connected" === t.connectionState) {
                                     let i = yield t.getStats(),
                                         n = [];
-                                    i.forEach((e) => {
+                                    (i.forEach((e) => {
                                         "frameWidth" in e && "frameHeight" in e && 0 === n.length && n.push(e);
                                     }),
                                         n.length > 0 &&
@@ -7991,7 +7997,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 (e, t) => {
                                                     e && O.error("Error sending 'videoData' event", e);
                                                 },
-                                            );
+                                            ));
                                 }
                             });
                         if (r) {
@@ -8039,7 +8045,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     let r = 0;
                     if (i) {
                         let n = i.ee.getListeners(e);
-                        t && (n = n.filter((e) => e.once)), (r = n.length);
+                        (t && (n = n.filter((e) => e.once)), (r = n.length));
                     }
                     return r > 0;
                 }
@@ -8082,18 +8088,18 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 this.openvidu.sendRequest("joinRoom", r, (r, o) => {
                                     if (r) return i(r);
                                     {
-                                        this.processJoinRoomResponse(o, e),
-                                            (this.connection = new n.Connection(this, o));
+                                        (this.processJoinRoomResponse(o, e),
+                                            (this.connection = new n.Connection(this, o)));
                                         let i = [],
                                             r = [];
                                         return (
                                             o.value.forEach((e) => {
                                                 let t = new n.Connection(this, e);
-                                                this.remoteConnections.set(t.connectionId, t),
+                                                (this.remoteConnections.set(t.connectionId, t),
                                                     i.push(t),
                                                     t.stream &&
                                                         (this.remoteStreamsCreated.set(t.stream.streamId, !0),
-                                                        r.push(t.stream));
+                                                        r.push(t.stream)));
                                             }),
                                             this.ee.emitEvent("connectionCreated", [
                                                 new a.ConnectionEvent(
@@ -8139,7 +8145,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             this.connection.stream.ee.emitEvent("local-stream-destroyed", [e]));
                 }
                 stopVideoDataIntervals() {
-                    clearInterval(this.videoDataInterval), clearTimeout(this.videoDataTimeout);
+                    (clearInterval(this.videoDataInterval), clearTimeout(this.videoDataTimeout));
                 }
                 stringClientMetadata(e) {
                     return "string" != typeof e ? JSON.stringify(e) : e;
@@ -8172,7 +8178,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 }
                 processToken(e) {
                     let t = this.getTokenParams(e);
-                    (this.sessionId = t.sessionId),
+                    ((this.sessionId = t.sessionId),
                         t.secret && (this.openvidu.secret = t.secret),
                         t.recorder && (this.openvidu.recorder = !0),
                         t.stt && (this.openvidu.stt = !0),
@@ -8181,21 +8187,21 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         (this.openvidu.isAtLeastPro = "pro" === t.edition || "enterprise" === t.edition),
                         (this.openvidu.isEnterprise = "enterprise" === t.edition),
                         (this.openvidu.wsUri = t.wsUri),
-                        (this.openvidu.httpUri = t.httpUri);
+                        (this.openvidu.httpUri = t.httpUri));
                 }
                 processJoinRoomResponse(e, t) {
                     if (((this.sessionId = e.session), null != e.customIceServers && e.customIceServers.length > 0))
                         for (let t of ((this.openvidu.iceServers = []), e.customIceServers)) {
                             let e = { urls: [t.url] };
-                            O.log("STUN/TURN server IP: " + t.url),
+                            (O.log("STUN/TURN server IP: " + t.url),
                                 null != t.username &&
                                     null != t.credential &&
                                     ((e.username = t.username),
                                     (e.credential = t.credential),
                                     O.log("TURN credentials [" + t.username + ":" + t.credential + "]")),
-                                this.openvidu.iceServers.push(e);
+                                this.openvidu.iceServers.push(e));
                         }
-                    (this.openvidu.role = e.role),
+                    ((this.openvidu.role = e.role),
                         (this.openvidu.finalUserId = e.finalUserId),
                         (this.openvidu.mediaServer = e.mediaServer),
                         (this.openvidu.videoSimulcast = e.videoSimulcast),
@@ -8206,9 +8212,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             forceDisconnect: "MODERATOR" === this.openvidu.role,
                         }),
                         O.info("openvidu-server version: " + e.version),
-                        null != e.life && (this.openvidu.life = e.life);
+                        null != e.life && (this.openvidu.life = e.life));
                     let i = w(e.version) - w(this.openvidu.libraryVersion);
-                    x(e.version) !== x(this.openvidu.libraryVersion) || (0 != i && 1 != i)
+                    (x(e.version) !== x(this.openvidu.libraryVersion) || (0 != i && 1 != i)
                         ? O.error(
                               `openvidu-browser (${this.openvidu.libraryVersion}) and openvidu-server (${e.version}) versions are incompatible. Errors are likely to occur. openvidu-browser SDK is only compatible with the same version or the immediately following minor version of an OpenVidu deployment`,
                           )
@@ -8217,7 +8223,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                               `openvidu-browser version ${this.openvidu.libraryVersion} does not match openvidu-server version ${e.version}. These versions are still compatible with each other, but openvidu-browser version must be updated as soon as possible to ${x(e.version)}.${w(e.version)}.x. This client using openvidu-browser ${this.openvidu.libraryVersion} will become incompatible with the next release of openvidu-server`,
                           ),
                         E.OpenViduLogger.configureJSNLog(this.openvidu, t),
-                        (this.token = t);
+                        (this.token = t));
                 }
             };
         },
@@ -8259,7 +8265,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         d((n = n.apply(e, t || [])).next());
                     });
                 };
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.Publisher = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.Publisher = void 0));
             let n = e6(),
                 r = eF(),
                 o = X(),
@@ -8272,7 +8278,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 u = c.OpenViduLogger.getInstance();
             e.Publisher = class extends o.StreamManager {
                 constructor(e, i, o) {
-                    super(
+                    (super(
                         new r.Stream(o.session ? o.session : new n.Session(o), {
                             publisherProperties: i,
                             mediaConstraints: {},
@@ -8288,8 +8294,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         this.stream.ee.on("local-stream-destroyed", (e) => {
                             this.stream.isLocalStreamPublished = !1;
                             let t = new s.StreamEvent(!0, this, "streamDestroyed", this.stream, e);
-                            this.emitEvent("streamDestroyed", [t]), t.callDefaultBehavior();
-                        });
+                            (this.emitEvent("streamDestroyed", [t]), t.callDefaultBehavior());
+                        }));
                 }
                 publishAudio(e) {
                     this.stream.audioActive !== e &&
@@ -8350,8 +8356,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     s = !1;
                                 if (
                                     (o.getVideoTracks().forEach((i) => {
-                                        (i.enabled = e),
-                                            e || !0 !== t ? e && "ended" === i.readyState && (s = !0) : i.stop();
+                                        ((i.enabled = e),
+                                            e || !0 !== t ? e && "ended" === i.readyState && (s = !0) : i.stop());
                                     }),
                                     !e &&
                                         !0 === t &&
@@ -8365,7 +8371,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     o.removeTrack(e);
                                     let n = (e) =>
                                         i(this, void 0, void 0, function* () {
-                                            o.addTrack(e),
+                                            (o.addTrack(e),
                                                 this.stream.isLocalStreamPublished &&
                                                     (yield this.replaceTrackInRtcRtpSender(e)),
                                                 this.stream.lastVBFilter &&
@@ -8374,17 +8380,17 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                             i(this, void 0, void 0, function* () {
                                                                 let e = this.stream.lastVBFilter.options,
                                                                     t = this.stream.lastVBFilter.lastExecMethod;
-                                                                t &&
+                                                                (t &&
                                                                     "update" === t.method &&
                                                                     (e = Object.assign({}, e, t.params)),
                                                                     yield this.stream.applyFilter(
                                                                         this.stream.lastVBFilter.type,
                                                                         e,
                                                                     ),
-                                                                    delete this.stream.lastVBFilter;
+                                                                    delete this.stream.lastVBFilter);
                                                             }),
                                                         1,
-                                                    );
+                                                    ));
                                         });
                                     if (t && t instanceof MediaStreamTrack) yield n(t);
                                     else
@@ -8447,7 +8453,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     );
                 }
                 subscribeToRemote(e) {
-                    (e = void 0 === e || e), (this.isSubscribedToRemote = e), this.stream.subscribeToMyRemote(e);
+                    ((e = void 0 === e || e), (this.isSubscribedToRemote = e), this.stream.subscribeToMyRemote(e));
                 }
                 on(e, t) {
                     return (
@@ -8486,7 +8492,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     );
                 }
                 off(e, t) {
-                    return super.off(e, t), this;
+                    return (super.off(e, t), this);
                 }
                 replaceTrack(e) {
                     return i(this, void 0, void 0, function* () {
@@ -8545,10 +8551,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                     e.contentHint = "detail";
                                                     break;
                                                 case p.TypeOfVideo.CUSTOM:
-                                                    u.warn(
+                                                    (u.warn(
                                                         "CUSTOM type video track was provided without Content Hint!",
                                                     ),
-                                                        (e.contentHint = "motion");
+                                                        (e.contentHint = "motion"));
                                                     break;
                                                 case p.TypeOfVideo.CAMERA:
                                                 case p.TypeOfVideo.IPCAM:
@@ -8563,7 +8569,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         delete this.firstVideoElement,
                                         this.stream.isSendVideo()
                                             ? this.getVideoDimensions().then((e) => {
-                                                  (this.stream.videoDimensions = { width: e.width, height: e.height }),
+                                                  ((this.stream.videoDimensions = { width: e.width, height: e.height }),
                                                       this.stream.isSendScreen() &&
                                                           (this.stream.isSendAudio() &&
                                                               0 === t.getAudioTracks().length &&
@@ -8595,7 +8601,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                                   );
                                                           }, 650))),
                                                       (this.stream.isLocalStreamReadyToPublish = !0),
-                                                      this.stream.ee.emitEvent("stream-ready-to-publish", []);
+                                                      this.stream.ee.emitEvent("stream-ready-to-publish", []));
                                               })
                                             : ((this.stream.isLocalStreamReadyToPublish = !0),
                                               this.stream.ee.emitEvent("stream-ready-to-publish", [])),
@@ -8610,24 +8616,24 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 "screen" !== this.properties.audioSource &&
                                                 this.stream.isSendAudio())
                                         ) {
-                                            (c.audio = t),
+                                            ((c.audio = t),
                                                 (c.video = !1),
                                                 (s = Date.now()),
-                                                this.setPermissionDialogTimer(2e3);
+                                                this.setPermissionDialogTimer(2e3));
                                             try {
                                                 let t = yield navigator.mediaDevices.getUserMedia(c);
-                                                this.clearPermissionDialogTimer(s, 2e3),
+                                                (this.clearPermissionDialogTimer(s, 2e3),
                                                     e.addTrack(t.getAudioTracks()[0]),
-                                                    h(e);
+                                                    h(e));
                                             } catch (t) {
-                                                this.clearPermissionDialogTimer(s, 2e3),
+                                                (this.clearPermissionDialogTimer(s, 2e3),
                                                     e.getAudioTracks().forEach((e) => {
                                                         e.stop();
                                                     }),
                                                     e.getVideoTracks().forEach((e) => {
                                                         e.stop();
                                                     }),
-                                                    l(this.openvidu.generateAudioDeviceError(t, a));
+                                                    l(this.openvidu.generateAudioDeviceError(t, a)));
                                                 return;
                                             }
                                         } else h(e);
@@ -8643,7 +8649,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         ) {
                                             case "notfounderror":
                                                 try {
-                                                    (yield navigator.mediaDevices.getUserMedia({
+                                                    ((yield navigator.mediaDevices.getUserMedia({
                                                         audio: !1,
                                                         video: a.video,
                                                     }))
@@ -8653,23 +8659,23 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                         }),
                                                         (t = d.OpenViduErrorName.INPUT_AUDIO_DEVICE_NOT_FOUND),
                                                         (i = e.toString()),
-                                                        l(new d.OpenViduError(t, i));
+                                                        l(new d.OpenViduError(t, i)));
                                                 } catch (e) {
-                                                    (t = d.OpenViduErrorName.INPUT_VIDEO_DEVICE_NOT_FOUND),
+                                                    ((t = d.OpenViduErrorName.INPUT_VIDEO_DEVICE_NOT_FOUND),
                                                         (i = e.toString()),
-                                                        l(new d.OpenViduError(t, i));
+                                                        l(new d.OpenViduError(t, i)));
                                                 }
                                                 break;
                                             case "notallowederror":
-                                                (t = this.stream.isSendScreen()
+                                                ((t = this.stream.isSendScreen()
                                                     ? d.OpenViduErrorName.SCREEN_CAPTURE_DENIED
                                                     : d.OpenViduErrorName.DEVICE_ACCESS_DENIED),
                                                     (i = e.toString()),
-                                                    l(new d.OpenViduError(t, i));
+                                                    l(new d.OpenViduError(t, i)));
                                                 break;
                                             case "overconstrainederror":
                                                 try {
-                                                    (yield navigator.mediaDevices.getUserMedia({
+                                                    ((yield navigator.mediaDevices.getUserMedia({
                                                         audio: !1,
                                                         video: a.video,
                                                     }))
@@ -8688,9 +8694,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                                   "Audio input device doesn't support the value passed for constraint '" +
                                                                   e.constraint +
                                                                   "'")),
-                                                        l(new d.OpenViduError(t, i));
+                                                        l(new d.OpenViduError(t, i)));
                                                 } catch (e) {
-                                                    "deviceid" === e.constraint.toLowerCase()
+                                                    ("deviceid" === e.constraint.toLowerCase()
                                                         ? ((t = d.OpenViduErrorName.INPUT_VIDEO_DEVICE_NOT_FOUND),
                                                           (i =
                                                               "Video input device with deviceId '" +
@@ -8701,19 +8707,19 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                               "Video input device doesn't support the value passed for constraint '" +
                                                               e.constraint +
                                                               "'")),
-                                                        l(new d.OpenViduError(t, i));
+                                                        l(new d.OpenViduError(t, i)));
                                                 }
                                                 break;
                                             case "aborterror":
                                             case "notreadableerror":
-                                                (t = d.OpenViduErrorName.DEVICE_ALREADY_IN_USE),
+                                                ((t = d.OpenViduErrorName.DEVICE_ALREADY_IN_USE),
                                                     (i = e.toString()),
-                                                    l(new d.OpenViduError(t, i));
+                                                    l(new d.OpenViduError(t, i)));
                                                 break;
                                             default:
-                                                (t = d.OpenViduErrorName.GENERIC_ERROR),
+                                                ((t = d.OpenViduErrorName.GENERIC_ERROR),
                                                     (i = e.toString()),
-                                                    l(new d.OpenViduError(t, i));
+                                                    l(new d.OpenViduError(t, i)));
                                         }
                                     });
                             try {
@@ -8731,10 +8737,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     };
                                     this.stream.setOutboundStreamOptions(i);
                                     let n = void 0 === a.audio || a.audio;
-                                    (c.audio = !this.stream.isSendScreen() && n),
+                                    ((c.audio = !this.stream.isSendScreen() && n),
                                         (c.video = a.video),
                                         (s = Date.now()),
-                                        this.setPermissionDialogTimer(2e3);
+                                        this.setPermissionDialogTimer(2e3));
                                     try {
                                         if (
                                             this.stream.isSendScreen() &&
@@ -8745,11 +8751,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 video: !0,
                                                 audio: "screen" === this.properties.audioSource,
                                             });
-                                            this.openvidu.addAlreadyProvidedTracks(e, t), yield m(t, n);
+                                            (this.openvidu.addAlreadyProvidedTracks(e, t), yield m(t, n));
                                         } else {
                                             this.stream.lastVideoTrackConstraints = c.video;
                                             let t = yield navigator.mediaDevices.getUserMedia(c);
-                                            this.openvidu.addAlreadyProvidedTracks(e, t, this.stream), yield m(t, n);
+                                            (this.openvidu.addAlreadyProvidedTracks(e, t, this.stream), yield m(t, n));
                                         }
                                     } catch (e) {
                                         yield v(e);
@@ -8769,7 +8775,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             : "audio" === e.kind && (e.enabled = this.stream.audioActive);
                         try {
                             if (this.stream.isLocalStreamPublished)
-                                return this.replaceTrackInMediaStream(e, t), yield this.replaceTrackInRtcRtpSender(e);
+                                return (this.replaceTrackInMediaStream(e, t), yield this.replaceTrackInRtcRtpSender(e));
                             return this.replaceTrackInMediaStream(e, t);
                         } catch (t) {
                             throw ((e.enabled = i), t);
@@ -8784,14 +8790,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 let i, o;
                                 if ("function" == typeof this.stream.getMediaStream().getVideoTracks()[0].getSettings) {
                                     let e = this.stream.getMediaStream().getVideoTracks()[0].getSettings();
-                                    (i = e.width || this.videoReference.videoWidth),
-                                        (o = e.height || this.videoReference.videoHeight);
+                                    ((i = e.width || this.videoReference.videoWidth),
+                                        (o = e.height || this.videoReference.videoHeight));
                                 } else
-                                    u.warn(
+                                    (u.warn(
                                         "MediaStreamTrack does not have getSettings method on " + t.getDescription(),
                                     ),
                                         (i = this.videoReference.videoWidth),
-                                        (o = this.videoReference.videoHeight);
+                                        (o = this.videoReference.videoHeight));
                                 return (
                                     null != n && this.videoReference.removeEventListener("loadedmetadata", n),
                                     r && document.body.removeChild(this.videoReference),
@@ -8816,7 +8822,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     this.ee.getListeners("streamPlaying").length > 0 && this.addPlayEventToFirstVideo();
                 }
                 initializeVideoReference(e) {
-                    (this.videoReference = document.createElement("video")),
+                    ((this.videoReference = document.createElement("video")),
                         (this.videoReference.style.display = "none"),
                         (this.videoReference.muted = !0),
                         (this.videoReference.autoplay = !0),
@@ -8831,26 +8837,26 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         this.stream.setMediaStream(e),
                         this.firstVideoElement &&
                             this.createVideoElement(this.firstVideoElement.targetElement, this.properties.insertMode),
-                        (this.videoReference.srcObject = this.stream.getMediaStream());
+                        (this.videoReference.srcObject = this.stream.getMediaStream()));
                 }
                 replaceTrackInMediaStream(e, t) {
                     let i,
                         n = this.stream.displayMyRemote()
                             ? this.stream.localMediaStreamWhenSubscribedToRemote
                             : this.stream.getMediaStream();
-                    "video" === e.kind
+                    ("video" === e.kind
                         ? ((i = n.getVideoTracks()[0]),
                           t && (this.stream.lastVideoTrackConstraints = e.getConstraints()))
                         : (i = n.getAudioTracks()[0]),
                         (i.enabled = !1),
                         i.stop(),
                         n.removeTrack(i),
-                        n.addTrack(e);
+                        n.addTrack(e));
                     let r = {
                         oldLabel: (null == i ? void 0 : i.label) || "",
                         newLabel: (null == e ? void 0 : e.label) || "",
                     };
-                    "video" === e.kind && t
+                    ("video" === e.kind && t
                         ? (this.openvidu.sendNewVideoDimensionsIfRequired(this, "trackReplaced", 50, 30),
                           this.openvidu.sendTrackChangedEvent(this, r.oldLabel, r.newLabel, "videoTrack"),
                           this.stream.isLocalStreamPublished &&
@@ -8862,7 +8868,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             (this.stream.disableHarkSpeakingEvent(!1),
                             this.stream.disableHarkStoppedSpeakingEvent(!1),
                             this.stream.disableHarkVolumeChangeEvent(!1),
-                            this.stream.initHarkEvents());
+                            this.stream.initHarkEvents()));
                 }
                 setPermissionDialogTimer(e) {
                     this.permissionDialogTimeout = setTimeout(() => {
@@ -8870,8 +8876,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     }, e);
                 }
                 clearPermissionDialogTimer(e, t) {
-                    clearTimeout(this.permissionDialogTimeout),
-                        Date.now() - e > t && this.emitEvent("accessDialogClosed", []);
+                    (clearTimeout(this.permissionDialogTimeout),
+                        Date.now() - e > t && this.emitEvent("accessDialogClosed", []));
                 }
                 replaceTrackInRtcRtpSender(e) {
                     return i(this, void 0, void 0, function* () {
@@ -8937,7 +8943,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     t
                         ? e()
                         : (((t = document.createElement("iframe")).onload = function () {
-                              (t.isLoaded = !0), e();
+                              ((t.isLoaded = !0), e());
                           }),
                           (t.src = "https://openvidu.github.io/openvidu-screen-sharing-chrome-extension/"),
                           (t.style.display = "none"),
@@ -8950,7 +8956,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             : setTimeout(o, 100)
                         : r(o);
                 }
-                (globalThis.getScreenId = function (e, t, r) {
+                ((globalThis.getScreenId = function (e, t, r) {
                     -1 !== navigator.userAgent.indexOf("Edge") && (navigator.msSaveOrOpenBlob || navigator.msSaveBlob)
                         ? t({ video: !0 })
                         : navigator.mozGetUserMedia
@@ -8979,7 +8985,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     (globalThis.getScreenConstraints = function (e) {
                         r(function () {
                             getScreenId(function (t, i, n) {
-                                n || (n = { video: !0 }), e(t, n.video);
+                                (n || (n = { video: !0 }), e(t, n.video));
                             });
                         });
                     }),
@@ -8993,7 +8999,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                               }),
                               setTimeout(o, 100));
                     }),
-                    (e.getScreenId = globalThis.getScreenId);
+                    (e.getScreenId = globalThis.getScreenId));
             },
     }),
     e9 = (0, I.t)({
@@ -9004,7 +9010,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     n = "screen";
                 if ("u" > typeof window && "u" > typeof navigator && void 0 !== navigator.userAgent) {
                     var r = void 0 !== window.InstallTrigger;
-                    window.opera || navigator.userAgent.indexOf(" OPR/"),
+                    (window.opera || navigator.userAgent.indexOf(" OPR/"),
                         window.chrome,
                         window.addEventListener("message", function (e) {
                             e.origin == window.location.origin &&
@@ -9012,15 +9018,15 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     if ("PermissionDeniedError" == e)
                                         if (i) return i("PermissionDeniedError");
                                         else throw Error("PermissionDeniedError");
-                                    "rtcmulticonnection-extension-loaded" == e && (n = "desktop"),
-                                        e.sourceId && i && i((t = e.sourceId), !0 === e.canRequestAudioTrack);
+                                    ("rtcmulticonnection-extension-loaded" == e && (n = "desktop"),
+                                        e.sourceId && i && i((t = e.sourceId), !0 === e.canRequestAudioTrack));
                                 })(e.data);
-                        });
+                        }));
                 }
                 function o(e) {
                     if (!e) throw '"callback" parameter is mandatory.';
                     if (t) return e(t);
-                    (i = e), window.postMessage("get-sourceId", "*");
+                    ((i = e), window.postMessage("get-sourceId", "*"));
                 }
                 function s(e, s) {
                     if (((t = ""), r)) return e(null, { mozMediaSource: "window", mediaSource: "window" });
@@ -9038,46 +9044,46 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           ? (function (e) {
                                 if (!e) throw '"callback" parameter is mandatory.';
                                 if (t) return e(t);
-                                (i = e), window.postMessage("audio-plus-tab", "*");
+                                ((i = e), window.postMessage("audio-plus-tab", "*"));
                             })(function (t, i) {
-                                (a.mandatory.chromeMediaSourceId = t),
+                                ((a.mandatory.chromeMediaSourceId = t),
                                     i && (a.canRequestAudioTrack = !0),
-                                    e("PermissionDeniedError" == t ? t : null, a);
+                                    e("PermissionDeniedError" == t ? t : null, a));
                             })
                           : o(function (t) {
-                                (a.mandatory.chromeMediaSourceId = t), e("PermissionDeniedError" == t ? t : null, a);
+                                ((a.mandatory.chromeMediaSourceId = t), e("PermissionDeniedError" == t ? t : null, a));
                             });
                 }
-                (e.getScreenConstraints = s),
+                ((e.getScreenConstraints = s),
                     (e.getScreenConstraintsWithAudio = function (e) {
                         s(e, !0);
                     }),
                     (e.isChromeExtensionAvailable = function (e) {
                         if (e) {
                             if ("desktop" == n) return e(!0);
-                            window.postMessage("are-you-there", "*"),
+                            (window.postMessage("are-you-there", "*"),
                                 setTimeout(function () {
                                     "screen" == n ? e(!1) : e(!0);
-                                }, 2e3);
+                                }, 2e3));
                         }
                     }),
                     (e.getChromeExtensionStatus = function (e, t) {
                         if (r) return t("not-chrome");
                         2 != arguments.length && ((t = e), (e = "lfcgfepafnobdloecchnfaclibenjold"));
                         var i = document.createElement("img");
-                        (i.src = "chrome-extension://" + e + "/icon.png"),
+                        ((i.src = "chrome-extension://" + e + "/icon.png"),
                             (i.onload = function () {
-                                (n = "screen"),
+                                ((n = "screen"),
                                     window.postMessage("are-you-there", "*"),
                                     setTimeout(function () {
                                         "screen" == n ? t("installed-disabled") : t("installed-enabled");
-                                    }, 2e3);
+                                    }, 2e3));
                             }),
                             (i.onerror = function () {
                                 t("not-installed");
-                            });
+                            }));
                     }),
-                    (e.getSourceId = o);
+                    (e.getSourceId = o));
             },
     }),
     te = (0, I.t)({
@@ -9108,29 +9114,29 @@ ${JSON.stringify(this.configuration, null, 2)}`);
             function s() {
                 s.init.call(this);
             }
-            (t.exports = s),
+            ((t.exports = s),
                 (t.exports.once = function (e, t) {
                     return new Promise(function (i, n) {
                         var r, o, s;
                         function a(i) {
-                            e.removeListener(t, d), n(i);
+                            (e.removeListener(t, d), n(i));
                         }
                         function d() {
-                            "function" == typeof e.removeListener && e.removeListener("error", a),
-                                i([].slice.call(arguments));
+                            ("function" == typeof e.removeListener && e.removeListener("error", a),
+                                i([].slice.call(arguments)));
                         }
-                        f(e, t, d, { once: !0 }),
+                        (f(e, t, d, { once: !0 }),
                             "error" !== t &&
                                 ((r = e),
                                 (o = a),
                                 (s = { once: !0 }),
-                                "function" == typeof r.on && f(r, "error", o, s));
+                                "function" == typeof r.on && f(r, "error", o, s)));
                     });
                 }),
                 (s.EventEmitter = s),
                 (s.prototype._events = void 0),
                 (s.prototype._eventsCount = 0),
-                (s.prototype._maxListeners = void 0);
+                (s.prototype._maxListeners = void 0));
             var a = 10;
             function d(e) {
                 if ("function" != typeof e)
@@ -9149,7 +9155,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                           (s = o[t])),
                     void 0 === s)
                 )
-                    (s = o[t] = i), ++e._eventsCount;
+                    ((s = o[t] = i), ++e._eventsCount);
                 else if (
                     ("function" == typeof s ? (s = o[t] = n ? [i, s] : [s, i]) : n ? s.unshift(i) : s.push(i),
                     (r = c(e)) > 0 && s.length > r && !s.warned)
@@ -9165,11 +9171,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 String(t) +
                                 " listeners added. Use emitter.setMaxListeners() to increase limit",
                         );
-                    (a.name = "MaxListenersExceededWarning"),
+                    ((a.name = "MaxListenersExceededWarning"),
                         (a.emitter = e),
                         (a.type = t),
                         (a.count = s.length),
-                        console && console.warn && console.warn(a);
+                        console && console.warn && console.warn(a));
                 }
                 return e;
             }
@@ -9184,7 +9190,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
             function u(e, t, i) {
                 var n = { fired: !1, wrapFn: void 0, target: e, type: t, listener: i },
                     r = p.bind(n);
-                return (r.listener = i), (n.wrapFn = r), r;
+                return ((r.listener = i), (n.wrapFn = r), r);
             }
             function h(e, t, i) {
                 var n = e._events;
@@ -9220,11 +9226,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 if ("function" == typeof e.on) n.once ? e.once(t, i) : e.on(t, i);
                 else if ("function" == typeof e.addEventListener)
                     e.addEventListener(t, function r(o) {
-                        n.once && e.removeEventListener(t, r), i(o);
+                        (n.once && e.removeEventListener(t, r), i(o));
                     });
                 else throw TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof e);
             }
-            Object.defineProperty(s, "defaultMaxListeners", {
+            (Object.defineProperty(s, "defaultMaxListeners", {
                 enumerable: !0,
                 get: function () {
                     return a;
@@ -9240,16 +9246,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 },
             }),
                 (s.init = function () {
-                    (void 0 === this._events || this._events === Object.getPrototypeOf(this)._events) &&
+                    ((void 0 === this._events || this._events === Object.getPrototypeOf(this)._events) &&
                         ((this._events = Object.create(null)), (this._eventsCount = 0)),
-                        (this._maxListeners = this._maxListeners || void 0);
+                        (this._maxListeners = this._maxListeners || void 0));
                 }),
                 (s.prototype.setMaxListeners = function (e) {
                     if ("number" != typeof e || e < 0 || o(e))
                         throw RangeError(
                             'The value of "n" is out of range. It must be a non-negative number. Received ' + e + ".",
                         );
-                    return (this._maxListeners = e), this;
+                    return ((this._maxListeners = e), this);
                 }),
                 (s.prototype.getMaxListeners = function () {
                     return c(this);
@@ -9280,10 +9286,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     return l(this, e, t, !0);
                 }),
                 (s.prototype.once = function (e, t) {
-                    return d(t), this.on(e, u(this, e, t)), this;
+                    return (d(t), this.on(e, u(this, e, t)), this);
                 }),
                 (s.prototype.prependOnceListener = function (e, t) {
-                    return d(t), this.prependListener(e, u(this, e, t)), this;
+                    return (d(t), this.prependListener(e, u(this, e, t)), this);
                 }),
                 (s.prototype.removeListener = function (e, t) {
                     var i, n, r, o, s;
@@ -9295,18 +9301,18 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     else if ("function" != typeof i) {
                         for (r = -1, o = i.length - 1; o >= 0; o--)
                             if (i[o] === t || i[o].listener === t) {
-                                (s = i[o].listener), (r = o);
+                                ((s = i[o].listener), (r = o));
                                 break;
                             }
                         if (r < 0) return this;
-                        0 === r
+                        (0 === r
                             ? i.shift()
                             : (function (e, t) {
                                   for (; t + 1 < e.length; t++) e[t] = e[t + 1];
                                   e.pop();
                               })(i, r),
                             1 === i.length && (n[e] = i[0]),
-                            void 0 !== n.removeListener && this.emit("removeListener", e, s || t);
+                            void 0 !== n.removeListener && this.emit("removeListener", e, s || t));
                     }
                     return this;
                 }),
@@ -9351,7 +9357,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 (s.prototype.listenerCount = m),
                 (s.prototype.eventNames = function () {
                     return this._eventsCount > 0 ? i(this._events) : [];
-                });
+                }));
         },
     }),
     tt = (0, I.t)({
@@ -9368,7 +9374,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                       if (t) {
                           e.super_ = t;
                           var i = function () {};
-                          (i.prototype = t.prototype), (e.prototype = new i()), (e.prototype.constructor = e);
+                          ((i.prototype = t.prototype), (e.prototype = new i()), (e.prototype.constructor = e));
                       }
                   });
         },
@@ -9376,9 +9382,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
     ti = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/KurentoUtils/kurento-jsonrpc/packers/JsonRPC.js":
             (e) => {
-                (e.pack = function (e, t) {
+                ((e.pack = function (e, t) {
                     var i = { jsonrpc: "2.0" };
-                    if (e.method) (i.method = e.method), e.params && (i.params = e.params), void 0 != t && (i.id = t);
+                    if (e.method) ((i.method = e.method), e.params && (i.params = e.params), void 0 != t && (i.id = t));
                     else if (void 0 != t) {
                         if (e.error) {
                             if (void 0 !== e.result) throw TypeError("Both result and error are defined");
@@ -9400,21 +9406,21 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 r = void 0 !== t.error;
                             if (n && r) throw TypeError("Both result and error are defined: " + e);
                             if (!n && !r) throw TypeError("No result or error is defined: " + e);
-                            (t.ack = t.id), delete t.id;
+                            ((t.ack = t.id), delete t.id);
                         }
                         return t;
-                    });
+                    }));
             },
     }),
     tn = (0, I.t)({
         "../../node_modules/.pnpm/openvidu-browser@2.32.1/node_modules/openvidu-browser/lib/OpenViduInternal/KurentoUtils/kurento-jsonrpc/packers/XmlRPC.js":
             (e) => {
-                (e.pack = function (e) {
+                ((e.pack = function (e) {
                     throw TypeError("Not yet implemented");
                 }),
                     (e.unpack = function (e) {
                         throw TypeError("Not yet implemented");
-                    });
+                    }));
             },
     }),
     tr = (0, I.t)({
@@ -9422,7 +9428,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
             (e) => {
                 var t = ti(),
                     i = tn();
-                (e.JsonRPC = t), (e.XmlRPC = i);
+                ((e.JsonRPC = t), (e.XmlRPC = i));
             },
     }),
     to = (0, I.t)({
@@ -9430,7 +9436,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
             (e, t) => {
                 function i() {
                     var e = {};
-                    (this.forEach = function (t) {
+                    ((this.forEach = function (t) {
                         for (var i in e) {
                             var n = e[i];
                             for (var r in n) t(n[r]);
@@ -9450,14 +9456,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         (this.set = function (t, i, n) {
                             if (void 0 == t) return this.remove(i, n);
                             var r = e[n];
-                            void 0 == r && (e[n] = r = {}), (r[i] = t);
-                        });
+                            (void 0 == r && (e[n] = r = {}), (r[i] = t));
+                        }));
                 }
-                (i.prototype.pop = function (e, t) {
+                ((i.prototype.pop = function (e, t) {
                     var i = this.get(e, t);
-                    if (void 0 != i) return this.remove(e, t), i;
+                    if (void 0 != i) return (this.remove(e, t), i);
                 }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
     }),
     ts = (0, I.t)({
@@ -9470,13 +9476,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         r = e.uri,
                         o = !1,
                         s = new WebSocket(r);
-                    (s.onopen = () => {
-                        i.debug("WebSocket connected to " + r), e.onconnected && e.onconnected();
+                    ((s.onopen = () => {
+                        (i.debug("WebSocket connected to " + r), e.onconnected && e.onconnected());
                     }),
                         (s.onerror = (t) => {
-                            i.error("Could not connect to " + r + " (invoking onerror if defined)", t),
-                                e.onerror && e.onerror(t);
-                        });
+                            (i.error("Could not connect to " + r + " (invoking onerror if defined)", t),
+                                e.onerror && e.onerror(t));
+                        }));
                     var a = () => {
                         3 === s.readyState
                             ? n
@@ -9493,36 +9499,36 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 return void i.warn(
                                     "Trying to reconnect when already reconnecting... Ignoring this reconnection.",
                                 );
-                            (o = !0), e.onreconnecting && e.onreconnecting();
+                            ((o = !0), e.onreconnecting && e.onreconnecting());
                         }
-                        (l = n),
+                        ((l = n),
                             (p = c),
                             i.debug("Reconnection attempt #" + p),
                             s.close(4104, "Connection closed for reconnection"),
                             (h = new URLSearchParams(new URL((u = r)).search)).has("reconnect") ||
                                 (u = Array.from(h).length > 0 ? u + "&reconnect=true" : u + "?reconnect=true"),
                             ((s = new WebSocket((r = u))).onopen = () => {
-                                i.debug("Reconnected to " + r + " after " + p + " attempts..."),
+                                (i.debug("Reconnected to " + r + " after " + p + " attempts..."),
                                     (o = !1),
                                     t(),
                                     e.onreconnected && e.onreconnected(),
-                                    (s.onclose = a);
+                                    (s.onclose = a));
                             }),
                             (s.onerror = (t) => {
-                                i.warn("Reconnection error: ", t),
+                                (i.warn("Reconnection error: ", t),
                                     p === l
                                         ? e.ondisconnect && e.ondisconnect()
                                         : setTimeout(() => {
                                               d(l, p + 1);
-                                          }, 3e3);
-                            });
+                                          }, 3e3));
+                            }));
                     }
-                    (s.onclose = a),
+                    ((s.onclose = a),
                         (this.close = (e, t) => {
-                            (n = !0), s.close(e, t);
+                            ((n = !0), s.close(e, t));
                         }),
                         (this.reconnectWs = () => {
-                            i.debug("reconnectWs"), d(2e3, 1);
+                            (i.debug("reconnectWs"), d(2e3, 1));
                         }),
                         (this.send = (e) => {
                             s.send(e);
@@ -9532,7 +9538,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 s.addEventListener(e, i);
                             })();
                         }),
-                        (this.getReadyState = () => s.readyState);
+                        (this.getReadyState = () => s.readyState));
                 };
             },
     }),
@@ -9564,7 +9570,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         f = c.onreconnected,
                         g = c.onconnected,
                         b = c.onerror;
-                    (e.rpc.pull = function (e, t) {
+                    ((e.rpc.pull = function (e, t) {
                         t.reply(null, "push");
                     }),
                         (c.onreconnecting = function () {
@@ -9589,8 +9595,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 : ((m = s), (u = !0), O(), g && g());
                         }),
                         (c.onerror = function (e) {
-                            d.debug("--------- ONERROR -----------"), (m = a), I(), b && b(e);
-                        });
+                            (d.debug("--------- ONERROR -----------"), (m = a), I(), b && b(e));
+                        }));
                     var E = new n(c);
                     d.debug("Connecting websocket to URI: " + c.uri);
                     var S = {
@@ -9605,17 +9611,17 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     ? d.error("Method " + t.method + " not registered in client")
                                     : i(t.params, t);
                             } catch (e) {
-                                d.error("Exception processing request: " + JSON.stringify(t)), d.error(e);
+                                (d.error("Exception processing request: " + JSON.stringify(t)), d.error(e));
                             }
                         });
                     function w() {
-                        d.debug("notReconnectIfNumLessThan = " + p + " (old=" + l + ")"), (l = p);
+                        (d.debug("notReconnectIfNumLessThan = " + p + " (old=" + l + ")"), (l = p));
                     }
                     function y() {
                         if (u) {
                             var t,
                                 i = null;
-                            (0 == p || p == l) && (i = { interval: e.heartbeat || 5e3 }),
+                            ((0 == p || p == l) && (i = { interval: e.heartbeat || 5e3 }),
                                 p++,
                                 r.send(
                                     "ping",
@@ -9634,7 +9640,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                 ),
                                                 E.reconnectWs()));
                                     }),
-                                );
+                                ));
                         } else d.debug("Trying to send ping, but ping is not enabled");
                     }
                     function O() {
@@ -9644,14 +9650,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             void 0 != e.heartbeat && ((t = setInterval(y, e.heartbeat)), y()));
                     }
                     function I() {
-                        clearInterval(t), (h = !1), (u = !1), (p = -1), x.cancel();
+                        (clearInterval(t), (h = !1), (u = !1), (p = -1), x.cancel());
                     }
-                    (this.send = function (e, t, i) {
+                    ((this.send = function (e, t, i) {
                         var n = Date.now();
                         x.encode(e, t, function (r, o) {
                             if (r) {
                                 try {
-                                    d.error(
+                                    (d.error(
                                         "ERROR:" +
                                             r.message +
                                             " in Request: method:" +
@@ -9661,7 +9667,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             " request:" +
                                             r.request,
                                     ),
-                                        r.data && d.error("ERROR DATA:" + JSON.stringify(r.data));
+                                        r.data && d.error("ERROR DATA:" + JSON.stringify(r.data)));
                                 } catch (e) {}
                                 r.requestTime = n;
                             }
@@ -9671,21 +9677,21 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         });
                     }),
                         (this.close = function (e, i) {
-                            d.debug("Closing  with code: " + e + " because: " + i),
+                            (d.debug("Closing  with code: " + e + " because: " + i),
                                 void 0 != t && (d.debug("Clearing ping interval"), clearInterval(t)),
                                 (h = !1),
                                 (u = !1),
-                                E.close(e, i);
+                                E.close(e, i));
                         }),
                         (this.reconnect = function () {
                             E.reconnectWs();
                         }),
                         (this.resetPing = function () {
-                            (u = !0), (p = 0), O();
+                            ((u = !0), (p = 0), O());
                         }),
                         (this.getReadyState = function () {
                             return E.getReadyState();
-                        });
+                        }));
                 };
             },
     }),
@@ -9724,7 +9730,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     t.concat(Array.prototype.slice.call(arguments)),
                                 );
                             };
-                        return (n.prototype = this.prototype), (r.prototype = new n()), r;
+                        return ((n.prototype = this.prototype), (r.prototype = new n()), r);
                     });
                 var n = te().EventEmitter,
                     r = tt(),
@@ -9734,8 +9740,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     if (e) {
                         if (e instanceof Function) return { send: e };
                         if (e.send instanceof Function) return e;
-                        if (e.postMessage instanceof Function) return (e.send = e.postMessage), e;
-                        if (e.write instanceof Function) return (e.send = e.write), e;
+                        if (e.postMessage instanceof Function) return ((e.send = e.postMessage), e);
+                        if (e.write instanceof Function) return ((e.send = e.write), e);
                         if (void 0 === e.onmessage && !(e.pause instanceof Function))
                             throw SyntaxError("Transport is not a function nor a valid object");
                     }
@@ -9760,31 +9766,31 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     })(e.responseMethods);
                     if (t instanceof Function) {
                         if (void 0 != o) throw SyntaxError("There can't be parameters after onRequest");
-                        (c = t), (o = void 0), (t = void 0);
+                        ((c = t), (o = void 0), (t = void 0));
                     }
                     if (t && t.send instanceof Function) {
                         if (o && !(o instanceof Function)) throw SyntaxError("Only a function can be after transport");
-                        (c = o), (o = t), (t = void 0);
+                        ((c = o), (o = t), (t = void 0));
                     }
                     if (o instanceof Function) {
                         if (void 0 != c) throw SyntaxError("There can't be parameters after onRequest");
-                        (c = o), (o = void 0);
+                        ((c = o), (o = void 0));
                     }
                     if (o && o.send instanceof Function && c && !(c instanceof Function))
                         throw SyntaxError("Only a function can be after transport");
-                    (t = t || {}),
+                    ((t = t || {}),
                         n.call(this),
                         c && this.on("request", c),
-                        i ? (this.peerID = t.peerID) : Object.defineProperty(this, "peerID", { value: t.peerID });
+                        i ? (this.peerID = t.peerID) : Object.defineProperty(this, "peerID", { value: t.peerID }));
                     var u = t.max_retries || 0;
                     function h(e) {
                         l.decode(e.data || e);
                     }
-                    (this.getTransport = function () {
+                    ((this.getTransport = function () {
                         return o;
                     }),
                         (this.setTransport = function (e) {
-                            o &&
+                            (o &&
                                 (o.removeEventListener
                                     ? o.removeEventListener("message", h)
                                     : o.removeListener && o.removeListener("data", h)),
@@ -9792,14 +9798,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     (e.addEventListener
                                         ? e.addEventListener("message", h)
                                         : e.addListener && e.addListener("data", h)),
-                                (o = a(e));
+                                (o = a(e)));
                         }),
                         i ||
                             Object.defineProperty(this, "transport", {
                                 get: this.getTransport.bind(this),
                                 set: this.setTransport.bind(this),
                             }),
-                        this.setTransport(o);
+                        this.setTransport(o));
                     var m = t.request_timeout || 5e3,
                         v = t.ping_request_timeout || m,
                         f = t.response_timeout || 5e3,
@@ -9816,7 +9822,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         x.set(i, e, t);
                     }
                     function O(t, n, r, o, s) {
-                        d.call(this, t, n),
+                        (d.call(this, t, n),
                             (this.getTransport = function () {
                                 return s;
                             }),
@@ -9827,21 +9833,21 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 Object.defineProperty(this, "transport", {
                                     get: this.getTransport.bind(this),
                                     set: this.setTransport.bind(this),
-                                });
+                                }));
                         var c = S.get(r, o);
                         s ||
                             l.getTransport() ||
                             (i ? (this.duplicated = !!c) : Object.defineProperty(this, "duplicated", { value: !!c }));
                         var u = p[t];
-                        (this.pack = e.pack.bind(e, this, r)),
+                        ((this.pack = e.pack.bind(e, this, r)),
                             (this.reply = function (t, i, n) {
                                 var s, d;
                                 if (t instanceof Function || (t && t.send instanceof Function)) {
                                     if (void 0 != i) throw SyntaxError("There can't be parameters after callback");
-                                    (n = t), (i = null), (t = void 0);
+                                    ((n = t), (i = null), (t = void 0));
                                 } else if (i instanceof Function || (i && i.send instanceof Function)) {
                                     if (void 0 != n) throw SyntaxError("There can't be parameters after callback");
-                                    (n = i), (i = null);
+                                    ((n = i), (i = null));
                                 }
                                 return ((n = a(n)),
                                 c && clearTimeout(c.timeout),
@@ -9865,7 +9871,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 (n = n || this.getTransport() || l.getTransport()))
                                     ? n.send(s)
                                     : s;
-                            });
+                            }));
                     }
                     function I(e) {
                         var t = w[e];
@@ -9875,39 +9881,39 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             i && (clearTimeout(i.timeout), y(t.id, t.dest));
                         }
                     }
-                    r(O, d),
+                    (r(O, d),
                         (this.cancel = function (e) {
                             if (e) return I(e);
                             for (var e in w) I(e);
                         }),
                         (this.close = function () {
                             var e = this.getTransport();
-                            e && e.close && e.close(4003, "Cancel request"),
+                            (e && e.close && e.close(4003, "Cancel request"),
                                 this.cancel(),
                                 x.forEach(clearTimeout),
                                 S.forEach(function (e) {
                                     clearTimeout(e.timeout);
-                                });
+                                }));
                         }),
                         (this.encode = function (t, i, n, r, o) {
                             if (i instanceof Function) {
                                 if (void 0 != n) throw SyntaxError("There can't be parameters after callback");
-                                (o = i), (r = void 0), (n = void 0), (i = void 0);
+                                ((o = i), (r = void 0), (n = void 0), (i = void 0));
                             } else if (n instanceof Function) {
                                 if (void 0 != r) throw SyntaxError("There can't be parameters after callback");
-                                (o = n), (r = void 0), (n = void 0);
+                                ((o = n), (r = void 0), (n = void 0));
                             } else if (r instanceof Function) {
                                 if (void 0 != o) throw SyntaxError("There can't be parameters after callback");
-                                (o = r), (r = void 0);
+                                ((o = r), (r = void 0));
                             }
-                            void 0 != l.peerID && ((i = i || {}).from = l.peerID),
-                                void 0 != n && ((i = i || {}).dest = n);
+                            (void 0 != l.peerID && ((i = i || {}).from = l.peerID),
+                                void 0 != n && ((i = i || {}).dest = n));
                             var s = { method: t, params: i };
                             if (o) {
                                 var d = b++,
                                     c = 0;
                                 function h(e, t) {
-                                    l.cancel(s), o(e, t);
+                                    (l.cancel(s), o(e, t));
                                 }
                                 var f = { message: (s = e.pack(s, d)), callback: h, responseMethods: p[t] || {} },
                                     g = a(r);
@@ -9930,7 +9936,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 function O() {
                                     if (c < u) return y(r);
                                     var e = Error("Request has timed out");
-                                    (e.request = s), (e.retry = y), h(e);
+                                    ((e.request = s), (e.retry = y), h(e));
                                 }
                                 return S(r);
                             }
@@ -9990,14 +9996,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 e.callback(t, i);
                             }
                             function I(e) {
-                                console.warn("Response already processed", t), clearTimeout(e), y(r, c);
+                                (console.warn("Response already processed", t), clearTimeout(e), y(r, c));
                             }
-                        });
+                        }));
                 }
-                r(c, n), (c.RpcNotification = d), (t.exports = c);
+                (r(c, n), (c.RpcNotification = d), (t.exports = c));
                 var l = td(),
                     p = tc();
-                (c.clients = l), (c.clients.transports = p), (c.packers = o);
+                ((c.clients = l), (c.clients.transports = p), (c.packers = o));
             },
     }),
     tp = (0, I.t)({
@@ -10091,7 +10097,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         d((n = n.apply(e, t || [])).next());
                     });
                 };
-            Object.defineProperty(e, "__esModule", { value: !0 }), (e.OpenVidu = void 0);
+            (Object.defineProperty(e, "__esModule", { value: !0 }), (e.OpenVidu = void 0));
             let n = j(),
                 r = e8(),
                 o = e6(),
@@ -10109,7 +10115,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 g = l.OpenViduLogger.getInstance();
             e.OpenVidu = class {
                 constructor() {
-                    (this.masterNodeHasCrashed = !1),
+                    ((this.masterNodeHasCrashed = !1),
                         (this.publishers = []),
                         (this.secret = ""),
                         (this.recorder = !1),
@@ -10134,10 +10140,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         e.stream.hasVideo &&
                                         this.sendNewVideoDimensionsIfRequired(e, "deviceRotated", 75, 10);
                                 });
-                            });
+                            }));
                 }
                 initSession() {
-                    return (this.session = new o.Session(this)), this.session;
+                    return ((this.session = new o.Session(this)), this.session);
                 }
                 initPublisher(e, t, i) {
                     let n, o;
@@ -10183,10 +10189,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         s
                             .initialize()
                             .then(() => {
-                                void 0 !== o && o(void 0), s.emitEvent("accessAllowed", []);
+                                (void 0 !== o && o(void 0), s.emitEvent("accessAllowed", []));
                             })
                             .catch((e) => {
-                                void 0 !== o && o(e), s.emitEvent("accessDenied", [e]);
+                                (void 0 !== o && o(e), s.emitEvent("accessDenied", [e]));
                             }),
                         this.publishers.push(s),
                         s
@@ -10259,13 +10265,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                             if (e.label) r.push({ kind: e.kind, deviceId: e.deviceId, label: e.label });
                                             else {
                                                 let i = "";
-                                                (i =
+                                                ((i =
                                                     0 === t
                                                         ? "Front Camera"
                                                         : 1 === t
                                                           ? "Back Camera"
                                                           : "Unknown Camera"),
-                                                    r.push({ kind: e.kind, deviceId: e.deviceId, label: i });
+                                                    r.push({ kind: e.kind, deviceId: e.deviceId, label: i }));
                                             }
                                         }),
                                         s.forEach((e, t) => {
@@ -10309,16 +10315,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 let i = { audio: void 0 === t.audio || t.audio, video: !1 };
                                 try {
                                     let t = yield navigator.mediaDevices.getUserMedia(i);
-                                    return e.addTrack(t.getAudioTracks()[0]), e;
+                                    return (e.addTrack(t.getAudioTracks()[0]), e);
                                 } catch (t) {
                                     throw (
-                                        (e.getAudioTracks().forEach((e) => {
+                                        e.getAudioTracks().forEach((e) => {
                                             e.stop();
                                         }),
                                         e.getVideoTracks().forEach((e) => {
                                             e.stop();
                                         }),
-                                        this.generateAudioDeviceError(t, i))
+                                        this.generateAudioDeviceError(t, i)
                                     );
                                 }
                             });
@@ -10331,7 +10337,8 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             )
                                 return this.addAlreadyProvidedTracks(i, new MediaStream());
                             {
-                                i.videoTrack && delete i.constraints.video, i.audioTrack && delete i.constraints.audio;
+                                (i.videoTrack && delete i.constraints.video,
+                                    i.audioTrack && delete i.constraints.audio);
                                 let n = !1;
                                 if (
                                     "string" == typeof e.videoSource &&
@@ -10362,11 +10369,11 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     let t,
                                         i = n.toString();
                                     throw (
-                                        ((t =
+                                        (t =
                                             "screen" !== e.videoSource
                                                 ? d.OpenViduErrorName.DEVICE_ACCESS_DENIED
                                                 : d.OpenViduErrorName.SCREEN_CAPTURE_DENIED),
-                                        new d.OpenViduError(t, i))
+                                        new d.OpenViduError(t, i)
                                     );
                                 }
                             }
@@ -10396,16 +10403,16 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                 ? void 0
                                 : a.height) || 0,
                         p = setInterval(() => {
-                            ++d > n && clearTimeout(p),
+                            (++d > n && clearTimeout(p),
                                 e.getVideoDimensions().then((i) => {
                                     (i.width !== c || i.height !== l) &&
                                         (clearTimeout(p),
                                         this.sendVideoDimensionsChangedEvent(e, t, c, l, i.width, i.height));
-                                });
+                                }));
                         }, i);
                 }
                 sendVideoDimensionsChangedEvent(e, t, i, n, r, o) {
-                    (e.stream.videoDimensions = { width: r || 0, height: o || 0 }),
+                    ((e.stream.videoDimensions = { width: r || 0, height: o || 0 }),
                         this.sendRequest(
                             "streamPropertyChanged",
                             {
@@ -10439,7 +10446,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                       ]),
                                       this.session.sendVideoData(e));
                             },
-                        );
+                        ));
                 }
                 sendTrackChangedEvent(e, t, i, n) {
                     let r = { label: t },
@@ -10502,7 +10509,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             }
                             e.frameRate && (n.constraints.video.frameRate = { ideal: e.frameRate });
                         }
-                        return this.configureDeviceIdOrScreensharing(n, e, t, i), t(n);
+                        return (this.configureDeviceIdOrScreensharing(n, e, t, i), t(n));
                     });
                 }
                 startWs(e) {
@@ -10546,10 +10553,10 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                     this.jsonRpcClient = new v.clients.JsonRpcClient(t);
                 }
                 onMasterNodeCrashedNotification(e) {
-                    console.error("Master Node has crashed"),
+                    (console.error("Master Node has crashed"),
                         (this.masterNodeHasCrashed = !0),
                         this.session.onLostConnection("nodeCrashed"),
-                        this.jsonRpcClient.close(4103, "Master Node has crashed");
+                        this.jsonRpcClient.close(4103, "Master Node has crashed"));
                 }
                 getWsReadyState() {
                     return this.jsonRpcClient.getReadyState();
@@ -10559,9 +10566,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                 }
                 sendRequest(e, t, i) {
                     var n;
-                    t && t instanceof Function && ((i = t), (t = {})),
+                    (t && t instanceof Function && ((i = t), (t = {})),
                         g.debug('Sending request: {method:"' + e + '", params: ' + JSON.stringify(t) + "}"),
-                        null == (n = this.jsonRpcClient) || n.send(e, t, i);
+                        null == (n = this.jsonRpcClient) || n.send(e, t, i));
                 }
                 getWsUri() {
                     return this.wsUri;
@@ -10655,13 +10662,13 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     )
                                         return void h.getScreenConstraints((t, i) => {
                                             if (!t && (!i.mandatory || "screen" !== i.mandatory.chromeMediaSource))
-                                                return (e.constraints.video = i), n(e);
+                                                return ((e.constraints.video = i), n(e));
                                             if ("permission-denied" === t || "PermissionDeniedError" === t) {
                                                 let e = new d.OpenViduError(
                                                     d.OpenViduErrorName.SCREEN_CAPTURE_DENIED,
                                                     "You must allow access to one window of your desktop",
                                                 );
-                                                return g.error(e), r(e);
+                                                return (g.error(e), r(e));
                                             }
                                             {
                                                 let e = this.advancedConfiguration.screenShareChromeExtension
@@ -10674,14 +10681,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                             d.OpenViduErrorName.SCREEN_EXTENSION_DISABLED,
                                                             "You must enable the screen extension",
                                                         );
-                                                        return g.error(e), r(e);
+                                                        return (g.error(e), r(e));
                                                     }
                                                     if ("not-installed" === e) {
                                                         let e = new d.OpenViduError(
                                                             d.OpenViduErrorName.SCREEN_EXTENSION_NOT_INSTALLED,
                                                             this.advancedConfiguration.screenShareChromeExtension,
                                                         );
-                                                        return g.error(e), r(e);
+                                                        return (g.error(e), r(e));
                                                     }
                                                 });
                                                 return;
@@ -10690,7 +10697,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                     if (navigator.mediaDevices.getDisplayMedia) return n(e);
                                     let o = t.isFirefoxBrowser() || t.isFirefoxMobileBrowser() ? i.videoSource : void 0;
                                     return void u.getScreenId(o, (t, i, o) => {
-                                        if (!t) return (e.constraints.video = o.video), n(e);
+                                        if (!t) return ((e.constraints.video = o.video), n(e));
                                         if ("not-installed" === t) {
                                             let e = this.advancedConfiguration.screenShareChromeExtension
                                                     ? this.advancedConfiguration.screenShareChromeExtension
@@ -10699,28 +10706,28 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                     d.OpenViduErrorName.SCREEN_EXTENSION_NOT_INSTALLED,
                                                     e,
                                                 );
-                                            return g.error(t), r(t);
+                                            return (g.error(t), r(t));
                                         }
                                         if ("installed-disabled" === t) {
                                             let e = new d.OpenViduError(
                                                 d.OpenViduErrorName.SCREEN_EXTENSION_DISABLED,
                                                 "You must enable the screen extension",
                                             );
-                                            return g.error(e), r(e);
+                                            return (g.error(e), r(e));
                                         }
                                         if ("permission-denied" === t) {
                                             let e = new d.OpenViduError(
                                                 d.OpenViduErrorName.SCREEN_CAPTURE_DENIED,
                                                 "You must allow access to one window of your desktop",
                                             );
-                                            return g.error(e), r(e);
+                                            return (g.error(e), r(e));
                                         }
                                         {
                                             let e = new d.OpenViduError(
                                                 d.OpenViduErrorName.GENERIC_ERROR,
                                                 "Unknown error when accessing screen share",
                                             );
-                                            return g.error(e), g.error(t), r(e);
+                                            return (g.error(e), g.error(t), r(e));
                                         }
                                     });
                                 }
@@ -10732,30 +10739,30 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                         " " +
                                         t.getVersion(),
                                 );
-                                return g.error(e), r(e);
+                                return (g.error(e), r(e));
                             }
                         else
-                            this.setVideoSource(e, s),
+                            (this.setVideoSource(e, s),
                                 "screen" === o &&
                                     (g.warn(
                                         'Parameter "audioSource" is set to "screen", which means rquesting audio from screen sharing source. But "videoSource" is not set to "screen". No audio source will be requested',
                                     ),
-                                    (e.constraints.audio = !1));
+                                    (e.constraints.audio = !1)));
                 }
                 setVideoSource(e, t) {
-                    e.constraints.video || (e.constraints.video = {}), (e.constraints.video.deviceId = { exact: t });
+                    (e.constraints.video || (e.constraints.video = {}), (e.constraints.video.deviceId = { exact: t }));
                 }
                 disconnectCallback() {
-                    g.warn("Websocket connection lost"),
+                    (g.warn("Websocket connection lost"),
                         this.isRoomAvailable()
                             ? this.session.onLostConnection("networkDisconnect")
-                            : alert("Connection error. Please reload page.");
+                            : alert("Connection error. Please reload page."));
                 }
                 reconnectingCallback() {
-                    g.warn("Websocket connection lost (reconnecting)"),
+                    (g.warn("Websocket connection lost (reconnecting)"),
                         this.isRoomAvailable()
                             ? this.session.emitEvent("reconnecting", [])
-                            : alert("Connection error. Please reload page.");
+                            : alert("Connection error. Please reload page."));
                 }
                 reconnectWebsocketThroughRpcConnectMethod(e) {
                     this.sendRequest("connect", { sessionId: e, reconnect: !0 }, (e, t) => {
@@ -10764,9 +10771,9 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                             else {
                                 g.error(e);
                                 let t = (e, t) => {
-                                        g.warn(t),
+                                        (g.warn(t),
                                             this.session.onLostConnection(e),
-                                            this.jsonRpcClient.close(4101, "Reconnection fault: " + t);
+                                            this.jsonRpcClient.close(4101, "Reconnection fault: " + t));
                                     },
                                     i = () => {
                                         -1 === this.life
@@ -10792,14 +10799,14 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                                                   },
                                               );
                                     };
-                                40007 === e.code &&
+                                (40007 === e.code &&
                                     "reconnection error" === e.message &&
                                     console.error(
                                         "Invalid RPC sessionId. Client network disconnection or Master Node crash",
                                     ),
-                                    i();
+                                    i());
                             }
-                        else this.jsonRpcClient.resetPing(), this.session.onRecoveredConnection();
+                        else (this.jsonRpcClient.resetPing(), this.session.onRecoveredConnection());
                     });
                 }
                 reconnectedCallback() {
@@ -10809,7 +10816,7 @@ ${JSON.stringify(this.configuration, null, 2)}`);
                         else {
                             g.warn("There was no previous connection when running reconnection callback");
                             let e = new s.SessionDisconnectedEvent(this.session, "networkDisconnect");
-                            this.session.ee.emitEvent("sessionDisconnected", [e]), e.callDefaultBehavior();
+                            (this.session.ee.emitEvent("sessionDisconnected", [e]), e.callDefaultBehavior());
                         }
                     else alert("Connection error. Please reload page.");
                 }
@@ -10842,24 +10849,24 @@ let tm = (0, I.t)({
                     ? function (e, t, i, n) {
                           void 0 === n && (n = i);
                           var r = Object.getOwnPropertyDescriptor(t, i);
-                          (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
+                          ((!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
                               (r = {
                                   enumerable: !0,
                                   get: function () {
                                       return t[i];
                                   },
                               }),
-                              Object.defineProperty(e, n, r);
+                              Object.defineProperty(e, n, r));
                       }
                     : function (e, t, i, n) {
-                          void 0 === n && (n = i), (e[n] = t[i]);
+                          (void 0 === n && (n = i), (e[n] = t[i]));
                       }),
             i =
                 (e && e.__exportStar) ||
                 function (e, i) {
                     for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(i, n) || t(i, e, n);
                 };
-        Object.defineProperty(e, "__esModule", { value: !0 }),
+        (Object.defineProperty(e, "__esModule", { value: !0 }),
             (e.EventDispatcher =
                 e.ExceptionEventName =
                 e.ExceptionEvent =
@@ -10891,7 +10898,7 @@ let tm = (0, I.t)({
                 e.Publisher =
                 e.Session =
                 e.OpenVidu =
-                    void 0);
+                    void 0));
         let n = R();
         var r = tu();
         Object.defineProperty(e, "OpenVidu", {
@@ -10964,7 +10971,7 @@ let tm = (0, I.t)({
             },
         });
         var m = F();
-        Object.defineProperty(e, "OpenViduError", {
+        (Object.defineProperty(e, "OpenViduError", {
             enumerable: !0,
             get: function () {
                 return m.OpenViduError;
@@ -10975,7 +10982,7 @@ let tm = (0, I.t)({
                 get: function () {
                     return m.OpenViduErrorName;
                 },
-            });
+            }));
         var v = ej();
         Object.defineProperty(e, "TypeOfVideo", {
             enumerable: !0,
@@ -11089,7 +11096,7 @@ let tm = (0, I.t)({
             },
         });
         var L = G();
-        Object.defineProperty(e, "ExceptionEvent", {
+        (Object.defineProperty(e, "ExceptionEvent", {
             enumerable: !0,
             get: function () {
                 return L.ExceptionEvent;
@@ -11100,15 +11107,15 @@ let tm = (0, I.t)({
                 get: function () {
                     return L.ExceptionEventName;
                 },
-            });
+            }));
         var V = H();
-        Object.defineProperty(e, "EventDispatcher", {
+        (Object.defineProperty(e, "EventDispatcher", {
             enumerable: !0,
             get: function () {
                 return V.EventDispatcher;
             },
         }),
             i(th(), e),
-            n.JL.setOptions({ enabled: !1 });
+            n.JL.setOptions({ enabled: !1 }));
     },
 })();

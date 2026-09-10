@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(938796);
+(n.d(t, { A: () => A }), n(938796));
 var i = n(17928),
     r = n(228366),
     a = n(842241),
@@ -12,7 +12,7 @@ function u(e, t) {
     let n = (0, a.y$)(e),
         i = l.get(e),
         r = null != i ? { state: s.elq.RESOLVING, ...i } : { state: s.elq.RESOLVING, code: n.baseCode };
-    t(r), (l = new Map(l)).set(e, r), r.guild?.id != null && (d = { ...d, [r.guild.id]: e });
+    (t(r), (l = new Map(l)).set(e, r), r.guild?.id != null && (d = { ...d, [r.guild.id]: e }));
 }
 function _(e) {
     return u(e.code, (t) => {
@@ -45,7 +45,7 @@ let A = new E(r.h, {
     },
     INVITE_RESOLVE_SUCCESS: function (e) {
         return u(e.code, (t) => {
-            (t.state = s.elq.RESOLVED),
+            ((t.state = s.elq.RESOLVED),
                 (t.guild = e.invite.guild),
                 (t.channel = e.invite.channel),
                 (t.inviter = e.invite.inviter),
@@ -66,14 +66,14 @@ let A = new E(r.h, {
                 (t.target_channel_id = e.invite.target_channel_id),
                 (t.target_message_id = e.invite.target_message_id),
                 (t.liveliness = e.invite.liveliness),
-                (t.guild_experiments = e.invite.guild_experiments);
+                (t.guild_experiments = e.invite.guild_experiments));
         });
     },
     INVITE_RESOLVE_FAILURE: _,
     INSTANT_INVITE_REVOKE_SUCCESS: _,
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
         return u(e.invite.code, (t) => {
-            (t.state = s.elq.RESOLVED), (t.inviter = e.invite.inviter);
+            ((t.state = s.elq.RESOLVED), (t.inviter = e.invite.inviter));
         });
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
@@ -85,7 +85,7 @@ let A = new E(r.h, {
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
         return u(e.invite.code, (t) => {
-            (t.state = s.elq.RESOLVED),
+            ((t.state = s.elq.RESOLVED),
                 (t.guild = e.invite.guild),
                 (t.channel = e.invite.channel),
                 (t.inviter = e.invite.inviter),
@@ -98,7 +98,7 @@ let A = new E(r.h, {
                 (t.type = e.invite.type),
                 (t.is_nickname_changeable = e.invite.is_nickname_changeable),
                 (t.profile = e.invite.profile),
-                (t.roles = e.invite.roles);
+                (t.roles = e.invite.roles));
         });
     },
     INVITE_ACCEPT: function (e) {
@@ -108,10 +108,10 @@ let A = new E(r.h, {
     },
     INVITE_ACCEPT_SUCCESS: function (e) {
         return u(e.code, (t) => {
-            (t.state = s.elq.ACCEPTED),
+            ((t.state = s.elq.ACCEPTED),
                 (t.guild = e.invite.guild),
                 (t.new_member = e.invite.new_member),
-                (t.channel = { ...t.channel, ...e.invite.channel });
+                (t.channel = { ...t.channel, ...e.invite.channel }));
         });
     },
     INVITE_ACCEPT_FAILURE: function (e) {

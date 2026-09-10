@@ -23,7 +23,7 @@ async function a(e) {
                         case i.jP.REMOVED_FROM_MSG_DRAFT:
                             s(Error("Upload is removed from draft"));
                     }
-                    e.on("complete", () => {
+                    (e.on("complete", () => {
                         a("complete");
                     }),
                         e.on("error", () => {
@@ -31,7 +31,7 @@ async function a(e) {
                         }),
                         e.on("progress", (e, t) => {
                             n?.(e, t);
-                        });
+                        }));
                 }),
         );
     await Promise.all(a);

@@ -12,5 +12,5 @@ function o(e) {
                 : "");
     if (i.has(r)) return i.get(r);
     let o = new Intl.Collator(t, e);
-    return i.set(r, o), o;
+    return (i.set(r, o), o);
 }

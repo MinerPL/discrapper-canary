@@ -1,4 +1,4 @@
-n.d(t, { K: () => E, Tu: () => R, g0: () => f, t0: () => p, wv: () => N, yL: () => I }), n(321073);
+(n.d(t, { K: () => E, Tu: () => R, g0: () => f, t0: () => p, wv: () => N, yL: () => I }), n(321073));
 var i = n(812729),
     r = n.n(i),
     a = n(869484),
@@ -72,7 +72,7 @@ function N(e) {
                       }
                   })
                   .filter(c.Vq);
-    return n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n;
+    return (n.some((e) => e.type === a.K.FIELDS) || n.push({ type: a.K.FIELDS, fields: [] }), n);
 }
 function C(e) {
     if (null != e)
@@ -100,7 +100,7 @@ class R {
     header;
     sections;
     constructor({ id: e, header: t, sections: n }) {
-        (this.id = e), (this.type = s.x.PERSONAL), (this.header = t), (this.sections = n ?? []);
+        ((this.id = e), (this.type = s.x.PERSONAL), (this.header = t), (this.sections = n ?? []));
     }
     toSubmission() {
         return {

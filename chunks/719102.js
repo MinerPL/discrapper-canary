@@ -69,7 +69,7 @@ function F(i) {
         Y = null != G && G > 0,
         { handleVisibilityChange: U } = (0, A.G)(B),
         V = (0, r.K)(U, 0.5, !Y);
-    (s = F && !Y),
+    ((s = F && !Y),
         (t = (0, T.Ar)()),
         (c = n.useRef(!1)),
         (u = n.useRef(t)),
@@ -84,7 +84,7 @@ function F(i) {
             if (c.current) return;
             let i = setTimeout(() => {
                 let i = u.current;
-                h.default.track(g.HAw.WISHLIST_ITEM_HOVERED, {
+                (h.default.track(g.HAw.WISHLIST_ITEM_HOVERED, {
                     sku_id: i?.skuId,
                     wishlist_id: i?.wishlistId,
                     wishlist_owner_id: i?.wishlistOwnerId,
@@ -96,14 +96,14 @@ function F(i) {
                     impression_session_id: i?.impressionSessionId,
                     location_stack: i?.analyticsLocations,
                 }),
-                    (c.current = !0);
+                    (c.current = !0));
             }, 250);
             return () => clearTimeout(i);
-        }, [s, B]);
+        }, [s, B]));
     let Q = n.useCallback(() => {
             if (Y) return void I();
             let i = f === E.uS.WISHLIST ? "wishlist" : "shop";
-            h.default.track(g.HAw.GIFTING_ITEM_CLICKED, {
+            (h.default.track(g.HAw.GIFTING_ITEM_CLICKED, {
                 sku_id: a.id,
                 item_source: i,
                 wishlist_id: f === E.uS.WISHLIST ? S : null,
@@ -122,11 +122,11 @@ function F(i) {
                     impression_session_id: K?.impressionSessionId,
                     location_stack: K?.analyticsLocations,
                 }),
-                _?.();
+                _?.());
         }, [_, S, f, a.id, a.productLine, I, Y, K, B]),
         X = n.useCallback(() => {
             let i = f === E.uS.WISHLIST ? "wishlist" : "shop";
-            h.default.track(g.HAw.GIFTING_ITEM_CLICKED, {
+            (h.default.track(g.HAw.GIFTING_ITEM_CLICKED, {
                 sku_id: a.id,
                 item_source: i,
                 wishlist_id: f === E.uS.WISHLIST ? S : null,
@@ -145,7 +145,7 @@ function F(i) {
                     impression_session_id: K?.impressionSessionId,
                     location_stack: K?.analyticsLocations,
                 }),
-                p?.();
+                p?.());
         }, [p, a.id, a.productLine, f, S, K, B]),
         {
             onBodyClick: $,
@@ -196,7 +196,7 @@ function Z(i) {
         I = (0, a.bG)([p.A], () => p.A.getApplication(s.applicationId)),
         k = (0, f.F)("sku_gift_badge", { applicationId: s.applicationId, skuId: s.id }),
         S = n.useCallback(() => {
-            o?.(),
+            (o?.(),
                 null != I &&
                     null != I.guildId &&
                     (0, L.R)({
@@ -206,15 +206,15 @@ function Z(i) {
                         giftRecipient: t,
                         giftingOrigin: G,
                         analyticsLocations: c ?? [],
-                    });
+                    }));
         }, [c, I, o, s.applicationId, s.id, t]),
         h = n.useCallback(() => {
-            o?.(),
+            (o?.(),
                 (0, w.a)(
                     s,
                     { isGift: !0, giftRecipient: t, giftingOrigin: G },
                     { analyticsLocations: [...(c ?? []), _.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
-                );
+                ));
         }, [s, t, c, o]);
     return (0, e.jsx)(F, {
         sku: s,
@@ -233,11 +233,11 @@ function K(i) {
     let { sku: s, wishlistOwner: t, analyticsLocations: c, onClick: l, hasMultipleSources: r, source: a, ...d } = i,
         _ = (0, M.e)({ sku: s, giftRecipient: t, giftingOrigin: G, analyticsLocations: c }),
         p = n.useCallback(() => {
-            l?.(),
-                (0, I.A)({ skuId: s.id, isGift: !0, giftingOrigin: G, analyticsLocations: c ?? [], giftRecipient: t });
+            (l?.(),
+                (0, I.A)({ skuId: s.id, isGift: !0, giftingOrigin: G, analyticsLocations: c ?? [], giftRecipient: t }));
         }, [l, s.id, c, t]),
         k = n.useCallback(() => {
-            l?.(), _();
+            (l?.(), _());
         }, [l, _]);
     return (0, e.jsx)(F, {
         sku: s,

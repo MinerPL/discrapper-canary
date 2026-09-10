@@ -1,4 +1,4 @@
-n.d(t, { P0: () => eM, em: () => eR }), n(321073);
+(n.d(t, { P0: () => eM, em: () => eR }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(17928),
@@ -669,8 +669,8 @@ function eb(e) {
         o = Math.max(n, t.length),
         d = (0, c.SJ)({ maxPartySize: l, partySize: o, activityActionType: r }),
         u = [...t];
-    for (; u.length < n && u.length < 8; ) u.push(U.mt);
-    for (; u.length < l && u.length < 8; ) u.push(null);
+    for (; u.length < n && u.length < 8;) u.push(U.mt);
+    for (; u.length < l && u.length < 8;) u.push(null);
     return (0, i.jsxs)("div", {
         className: eh.UF,
         children: [
@@ -716,16 +716,20 @@ function eM(e) {
     let { analyticsLocations: t, app: n, channel: l, message: a, hideParty: o, hideBanner: c, onView: d } = e,
         u = (0, r.b)(n),
         m = (0, s.bG)([y.default], () => y.default.getId()),
-        h = (0, s.bG)([M.A], () => {
-            if (null == a.application) return M.A.findActivity(a.author.id, (e) => e.type === ee.$pd.LISTENING);
-            {
-                let e = a.author.id;
-                return (
-                    (0, P.v)(a) && (e = e === m && l.isPrivate() ? l.getRecipientId() : m),
-                    M.A.getApplicationActivity(e, a.application.id)
-                );
-            }
-        }, [a, l, m]),
+        h = (0, s.bG)(
+            [M.A],
+            () => {
+                if (null == a.application) return M.A.findActivity(a.author.id, (e) => e.type === ee.$pd.LISTENING);
+                {
+                    let e = a.author.id;
+                    return (
+                        (0, P.v)(a) && (e = e === m && l.isPrivate() ? l.getRecipientId() : m),
+                        M.A.getApplicationActivity(e, a.application.id)
+                    );
+                }
+            },
+            [a, l, m],
+        ),
         g = (0, s.bG)([R.A, k.A], () => (0, O.A)(R.A, k.A, u.id), [u.id]),
         p = eR({ presenceActivity: h, channel: l, activityActionType: a.activity?.type });
     return (0, ey.pH)(h?.party?.id) || u.id === S.HT.id

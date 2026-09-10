@@ -35,7 +35,7 @@ function h(e, t, n) {
             return (
                 e.addListener("text-changed", f),
                 () => {
-                    e.removeListener("text-changed", f), f.cancel();
+                    (e.removeListener("text-changed", f), f.cancel());
                 }
             );
     }, [h, f, e, t, n]);

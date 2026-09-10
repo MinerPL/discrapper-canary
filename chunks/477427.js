@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CP: () => g,
     DZ: () => T,
     G_: () => h,
@@ -9,7 +9,7 @@ n.d(t, {
     ct: () => m,
     fd: () => A,
 }),
-    n(938796);
+    n(938796));
 var i,
     r = n(665260),
     a = n(95561),
@@ -218,5 +218,5 @@ function S(e, t) {
 }
 function N(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, S(e, t))), n;
+    return (t.forEach((t) => n.set(t, S(e, t))), n);
 }

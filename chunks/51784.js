@@ -9,6 +9,6 @@ r.f =
         ? Object.defineProperties
         : function (t, r) {
               i(t);
-              for (var e, n = u(r), o = c(r), a = o.length, f = 0; a > f; ) s.f(t, (e = o[f++]), n[e]);
+              for (var e, n = u(r), o = c(r), a = o.length, f = 0; a > f;) s.f(t, (e = o[f++]), n[e]);
               return t;
           };

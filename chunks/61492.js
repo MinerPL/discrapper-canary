@@ -14,13 +14,13 @@ function d(t) {
         [S, k] = i.useState(!1),
         x = s.A.get(h)?.name ?? u.intl.string(u.t["bU/GZm"]);
     async function y() {
-        k(!0), b(null);
+        (k(!0), b(null));
         try {
             let t = await (0, c.d)(h, { location: d, successRedirect: g, handle: m });
             if (null == t) throw Error();
             a();
         } catch {
-            b(u.intl.string(u.t["7wbPNl"])), k(!1);
+            (b(u.intl.string(u.t["7wbPNl"])), k(!1));
         }
     }
     let C =
@@ -43,7 +43,7 @@ function d(t) {
         ],
         children: (0, n.jsx)("form", {
             onSubmit: (t) => {
-                t.preventDefault(), T && !S && y();
+                (t.preventDefault(), T && !S && y());
             },
             children: (0, n.jsx)(r.k, {
                 label: u.intl.string(u.t.tZ9QFR),

@@ -1,5 +1,5 @@
 let T, i;
-n.r(t), n.d(t, { default: () => U }), n(321073);
+(n.r(t), n.d(t, { default: () => U }), n(321073));
 var I = n(435558),
     N = n.n(I),
     l = n(17928),
@@ -25,13 +25,13 @@ function y(e) {
     if (t !== o.BEX.INTEGRATIONS) return !1;
     if (null == T) {
         let e = a.A.getGuildId();
-        null != e && (r.A.fetchForGuild(e), (A = !0)), g(!1);
+        (null != e && (r.A.fetchForGuild(e), (A = !0)), g(!1));
     }
 }
 function g(e) {
     if (null != (T = a.A.getProps().guild) && S.A.can(o.xBc.MANAGE_GUILD, T)) {
         let e = a.A.getProps().integrations;
-        null == e && (p = !0), (u = e ?? []);
+        (null == e && (p = !0), (u = e ?? []));
     } else u = [];
     if (((s = null != T && S.A.can(o.xBc.MANAGE_WEBHOOKS, T) ? _.A.getWebhooksForGuild(T.id) : []), !e && null != G)) {
         let e = D(G.id);
@@ -41,7 +41,7 @@ function g(e) {
         let e = M(c.id);
         null != e && (c = e);
     }
-    (d = null), (h = o.XlH.OPEN), (O = {}), (R = !1);
+    ((d = null), (h = o.XlH.OPEN), (O = {}), (R = !1));
 }
 let C = N().debounce(() => {
     R &&
@@ -129,30 +129,30 @@ let m = new P(
                   GUILD_SETTINGS_SET_SECTION: y,
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                       let { section: t, sectionId: n } = e;
-                      (i = t), (f = n);
+                      ((i = t), (f = n));
                   },
                   INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                       let { commandId: t } = e;
-                      (d = t), (G = null), (c = null), (O = {}), (R = !0);
+                      ((d = t), (G = null), (c = null), (O = {}), (R = !0));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                       let { commandId: t } = e;
                       if (null == d || d !== t) return !1;
-                      (d = null), (O = {}), (R = !1);
+                      ((d = null), (O = {}), (R = !1));
                   },
                   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function (e) {
                       let { integrationId: t } = e,
                           n = D(t);
                       if (null == n) return !1;
-                      (G = n), (d = null), (c = null), (O = {}), (R = !1);
+                      ((G = n), (d = null), (c = null), (O = {}), (R = !1));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
-                      (G = null), (O = {}), (R = !1);
+                      ((G = null), (O = {}), (R = !1));
                   },
                   INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function (e) {
                       let { settings: t } = e;
                       if (null == G) return !1;
-                      (G = { ...G }),
+                      ((G = { ...G }),
                           null != t.enableEmoticons &&
                               G.enable_emoticons !== t.enableEmoticons &&
                               ((G.enable_emoticons = t.enableEmoticons), (R = !0)),
@@ -162,30 +162,37 @@ let m = new P(
                           null != t.expireGracePeriod &&
                               G.expire_grace_period !== t.expireGracePeriod &&
                               ((G.expire_grace_period = t.expireGracePeriod), (R = !0)),
-                          R && C();
+                          R && C());
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == c) return !1;
-                      (c = { ...c }),
+                      ((c = { ...c }),
                           null != t.name && c.name !== t.name && ((c.name = t.name), (R = !0)),
                           void 0 !== t.avatar && c.avatar !== t.avatar && ((c.avatar = t.avatar), (R = !0)),
                           null != t.channelId &&
                               c.channel_id !== t.channelId &&
                               ((c.channel_id = t.channelId), (R = !0)),
-                          R && C();
+                          R && C());
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
                           n = M(t);
                       if (null == n) return !1;
-                      (c = n), (d = null), (G = null), (O = {}), (R = !1);
+                      ((c = n), (d = null), (G = null), (O = {}), (R = !1));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                      (c = null), (O = {}), (R = !1);
+                      ((c = null), (O = {}), (R = !1));
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      (T = null), (u = []), (s = []), (d = null), (G = null), (c = null), (h = o.XlH.CLOSED), (R = !1);
+                      ((T = null),
+                          (u = []),
+                          (s = []),
+                          (d = null),
+                          (G = null),
+                          (c = null),
+                          (h = o.XlH.CLOSED),
+                          (R = !1));
                   },
                   GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                       let { guildId: t, integrations: n } = e;
@@ -204,10 +211,10 @@ let m = new P(
                               });
                           if (null != T) {
                               let n = { ...t, ...T };
-                              G?.id === n.id && (!1 === n.enabled ? (G = null) : R || (G = n)), (u[e] = n);
-                          } else G?.id === t.id && (G = null), u.splice(e, 1);
+                              (G?.id === n.id && (!1 === n.enabled ? (G = null) : R || (G = n)), (u[e] = n));
+                          } else (G?.id === t.id && (G = null), u.splice(e, 1));
                       }
-                      (u = [...u]), C();
+                      ((u = [...u]), C());
                   },
                   WEBHOOKS_UPDATE: function (e) {
                       let { guildId: t, channelId: n, webhooks: i } = e;
@@ -221,8 +228,8 @@ let m = new P(
                               });
                               if (null != T) {
                                   let n = { ...t, ...T };
-                                  (s[e] = n), R || c?.id !== n.id || (c = n);
-                              } else c?.id === t.id && (c = null), s.splice(e, 1);
+                                  ((s[e] = n), R || c?.id !== n.id || (c = n));
+                              } else (c?.id === t.id && (c = null), s.splice(e, 1));
                           }
                           for (let e of i)
                               null ==
@@ -230,15 +237,15 @@ let m = new P(
                                       let { id: n } = t;
                                       if (n === e.id) return !0;
                                   }) && s.push(e);
-                          (s = [...s]), C();
+                          ((s = [...s]), C());
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
-                      (h = o.XlH.SUBMITTING), (O = {});
+                      ((h = o.XlH.SUBMITTING), (O = {}));
                   },
                   INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                       if (h !== o.XlH.SUBMITTING) return !1;
-                      (h = o.XlH.OPEN), (O = e.errors ?? {});
+                      ((h = o.XlH.OPEN), (O = e.errors ?? {}));
                   },
               },
     ),

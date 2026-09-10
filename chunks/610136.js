@@ -22,7 +22,7 @@ function m(t) {
 class A extends i.Ay.Store {
     static displayName = "GuildIncidentsStore";
     initialize() {
-        this.waitFor(u.A, r.A, a.A, d.A), this.syncWith([u.A, r.A, a.A, d.A], c);
+        (this.waitFor(u.A, r.A, a.A, d.A), this.syncWith([u.A, r.A, a.A, d.A], c));
     }
     getGuildIncident(t) {
         return o[t];

@@ -1,4 +1,4 @@
-i.r(l), i.d(l, { default: () => o });
+(i.r(l), i.d(l, { default: () => o }));
 var e = i(252422),
     o = (t) =>
         (0, e.v)("svg", {

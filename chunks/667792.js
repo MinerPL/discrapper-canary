@@ -1,4 +1,4 @@
-n.d(t, { default: () => E }), n(801541);
+(n.d(t, { default: () => E }), n(801541));
 var s = n(477900),
     r = n(582128),
     i = n(284009),
@@ -24,7 +24,7 @@ function E(e) {
     let { transitionState: n, onClose: i } = e,
         E = (0, o.bG)([b.default], () => {
             let e = b.default.getCurrentUser();
-            return a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e;
+            return (a()(null != e, "ChangeUsernameModal: currentUser cannot be undefined"), e);
         }),
         k = r.useMemo(() => v.Ay.canEditDiscriminator(E) && !E.hasUniqueUsername(), [E]),
         [y, w] = r.useState(E.username),
@@ -41,9 +41,9 @@ function E(e) {
     }, [n]);
     let N = R !== E.discriminator;
     async function P(e) {
-        e.preventDefault(), M(!0);
+        (e.preventDefault(), M(!0));
         let t = await (0, g._L)({ username: y, discriminator: k ? R : void 0, password: q });
-        M(!1), t?.ok && i();
+        (M(!1), t?.ok && i());
     }
     return (0, s.jsx)("form", {
         onSubmit: P,

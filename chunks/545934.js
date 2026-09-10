@@ -27,13 +27,13 @@ class r extends i.A {
         return null == this.premiumGuildSubscription && !this.isOnCooldown();
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.subscriptionId = e.subscriptionId),
             (this.premiumGuildSubscription = e.premiumGuildSubscription),
             (this.canceled = e.canceled),
             (this.cooldownEndsAt = e.cooldownEndsAt),
-            (this.subscription = e.subscription);
+            (this.subscription = e.subscription));
     }
 }
 let a = r;

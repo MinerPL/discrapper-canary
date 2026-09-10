@@ -29,5 +29,5 @@ class d extends r.Component {
 }
 let m = a.Ay.connectStores([u.default], () => {
     let t = u.default.getCurrentUser();
-    return s()(null != t, "PremiumRequiredModal: user cannot be null"), { user: t };
+    return (s()(null != t, "PremiumRequiredModal: user cannot be null"), { user: t });
 })(d);

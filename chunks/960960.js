@@ -4,7 +4,7 @@ var i = l(17928),
 let a = {};
 function s(e) {
     let t = a[e];
-    return null == t && ((t = { fetchStatus: "idle" }), (a[e] = t)), t;
+    return (null == t && ((t = { fetchStatus: "idle" }), (a[e] = t)), t);
 }
 class r extends i.Ay.Store {
     static displayName = "GuildSpaceCatalogStore";
@@ -26,7 +26,7 @@ let d = new r(n.h, {
     GUILD_SPACE_CATALOG_FETCH_SUCCESS: function (e) {
         let { guildId: t, widgets: l } = e,
             i = s(t);
-        (i.widgets = l), (i.fetchStatus = "success");
+        ((i.widgets = l), (i.fetchStatus = "success"));
     },
     GUILD_SPACE_CATALOG_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;

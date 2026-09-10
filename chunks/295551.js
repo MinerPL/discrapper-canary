@@ -23,7 +23,7 @@ function c(e) {
     return (
         (0, i.N)(
             () => () => {
-                n && (n.unregister(d), u.delete(d)), l.delete(f);
+                (n && (n.unregister(d), u.delete(d)), l.delete(f));
             },
             [f],
         ),
@@ -42,7 +42,7 @@ function c(e) {
 function f(e, t) {
     if (e === t) return e;
     let r = l.get(e);
-    if (r) return r.forEach((e) => (e.current = t)), t;
+    if (r) return (r.forEach((e) => (e.current = t)), t);
     let n = l.get(t);
     return n ? (n.forEach((t) => (t.current = e)), e) : t;
 }
@@ -63,13 +63,13 @@ function d(e = []) {
                 });
             return (
                 (0, i.N)(() => {
-                    (n.current = t), o.current && s.current();
+                    ((n.current = t), o.current && s.current());
                 }),
                 [
                     t,
                     (0, a.useCallback)(
                         (e) => {
-                            (o.current = e(n.current)), s.current();
+                            ((o.current = e(n.current)), s.current());
                         },
                         [s],
                     ),
@@ -78,8 +78,8 @@ function d(e = []) {
         })(t),
         o = (0, a.useCallback)(() => {
             n(function* () {
-                yield t, yield document.getElementById(t) ? t : void 0;
+                (yield t, yield document.getElementById(t) ? t : void 0);
             });
         }, [t, n]);
-    return (0, i.N)(o, [t, o, ...e]), r;
+    return ((0, i.N)(o, [t, o, ...e]), r);
 }

@@ -12,10 +12,14 @@ let i = {
 };
 function n(e) {
     let t = e.id;
-    return (0, s.bG)([r.A], () => {
-        let e = Array.from(r.A.getActiveErrors().values())
-            .filter((e) => "streamKey" in e && e.streamKey === t && null != i[e.type])
-            .sort((e, t) => (i[e.type] ?? 0) - (i[t.type] ?? 0))[0];
-        return e?.type;
-    }, [t]);
+    return (0, s.bG)(
+        [r.A],
+        () => {
+            let e = Array.from(r.A.getActiveErrors().values())
+                .filter((e) => "streamKey" in e && e.streamKey === t && null != i[e.type])
+                .sort((e, t) => (i[e.type] ?? 0) - (i[t.type] ?? 0))[0];
+            return e?.type;
+        },
+        [t],
+    );
 }

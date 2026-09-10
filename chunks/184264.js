@@ -1,4 +1,4 @@
-n.d(e, { $V: () => F, $k: () => B, aG: () => N, mO: () => v, v8: () => M }), n(321073);
+(n.d(e, { $V: () => F, $k: () => B, aG: () => N, mO: () => v, v8: () => M }), n(321073));
 var i = n(582128),
     r = n(776310),
     l = n(284009),
@@ -97,20 +97,20 @@ function N(t) {
                 text: D.intl.string(h.default.yfwZuy),
                 variant: "primary",
                 onClick: () => {
-                    _(), R._.dispatch(P.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                    (_(), R._.dispatch(P.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
                 },
             },
             {
                 text: D.intl.string(D.t.H57f41),
                 variant: "secondary",
                 onClick: () => {
-                    _(),
+                    (_(),
                         (0, d.Y)({
                             pageType: P.liQ.SHOP_ORBS_TAB,
                             sectionType: P.JJy.ORBS_BADGE_REDEMPTION_MODAL,
                             ctaObject: P.ZSU.CTA_TO_QUEST_HOME,
                         }),
-                        (0, o.mA)({ fromContent: c.uF.REWARD_MODAL });
+                        (0, o.mA)({ fromContent: c.uF.REWARD_MODAL }));
                 },
             },
         );
@@ -132,7 +132,7 @@ function N(t) {
                       text: D.intl.string(D.t["Jr6N+s"]),
                       variant: "primary",
                       onClick: () => {
-                          (0, E.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL), _();
+                          ((0, E.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL), _());
                       },
                   },
               );
@@ -144,23 +144,23 @@ function N(t) {
             onClick: () => {
                 if ((_(), (0, s.jH)(), f?.(), n.type !== u.R.BUNDLE)) {
                     if (n.type === u.R.AVATAR_DECORATION) {
-                        a()(t.type === u.R.AVATAR_DECORATION, "product type and item type are the same"),
-                            (0, y.L)({ initialSelectedDecoration: t, analyticsLocations: i });
+                        (a()(t.type === u.R.AVATAR_DECORATION, "product type and item type are the same"),
+                            (0, y.L)({ initialSelectedDecoration: t, analyticsLocations: i }));
                         return;
                     }
                     if (n.type === u.R.PROFILE_EFFECT) {
-                        a()(t.type === u.R.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, k.W)({ initialSelectedEffect: t, analyticsLocations: i });
+                        (a()(t.type === u.R.PROFILE_EFFECT, "product type and item type are the same"),
+                            (0, k.W)({ initialSelectedEffect: t, analyticsLocations: i }));
                         return;
                     }
                     if (n.type === u.R.NAMEPLATE) {
-                        a()(t.type === u.R.NAMEPLATE, "product type and item type are the same"),
-                            (0, m.p)({ initialSelectedNameplate: t, analyticsLocations: i });
+                        (a()(t.type === u.R.NAMEPLATE, "product type and item type are the same"),
+                            (0, m.p)({ initialSelectedNameplate: t, analyticsLocations: i }));
                         return;
                     }
                     if (n.type === u.R.PROFILE_FRAME) {
-                        a()(t.type === u.R.PROFILE_FRAME, "product type and item type are the same"),
-                            (0, C.w)({ initialSelectedProfileFrame: t, analyticsLocations: i });
+                        (a()(t.type === u.R.PROFILE_FRAME, "product type and item type are the same"),
+                            (0, C.w)({ initialSelectedProfileFrame: t, analyticsLocations: i }));
                         return;
                     }
                 }
@@ -180,7 +180,7 @@ function N(t) {
                 text: D.intl.string(D.t.PDTjLN),
                 variant: "primary",
                 onClick: () => {
-                    _(), (0, I.A)({ ...e, product: S, remainingProducts: B });
+                    (_(), (0, I.A)({ ...e, product: S, remainingProducts: B }));
                 },
             }),
         M

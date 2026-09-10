@@ -7,7 +7,7 @@ var i = n(636537),
 let o = new Set();
 async function d(e) {
     if (null == a.A.getGuild(e) && null == s.A.getGuildOrStatus(e) && !o.has(e)) {
-        r.h.dispatch({ type: "BASIC_GUILD_FETCH", guildId: e }), o.add(e);
+        (r.h.dispatch({ type: "BASIC_GUILD_FETCH", guildId: e }), o.add(e));
         try {
             let t = (await i.Bo.get({ url: l.Rsh.GUILD_BASIC(e), rejectWithError: !0 })).body;
             r.h.dispatch({ type: "BASIC_GUILD_FETCH_SUCCESS", guildId: e, guildInfo: t });

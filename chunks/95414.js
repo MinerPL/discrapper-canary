@@ -96,15 +96,15 @@ function V(t) {
             async function d(l) {
                 let { topic: a, privacyLevel: s, sendStartNotification: d } = l;
                 if (null != t && "" !== a && null != s) {
-                    i(!0), r(null), null != n && (B.A.selectGuild(n), O.default.selectVoiceChannel(t.id));
+                    (i(!0), r(null), null != n && (B.A.selectGuild(n), O.default.selectVoiceChannel(t.id)));
                     try {
                         let n;
-                        null != u
+                        (null != u
                             ? (n = await M.b3(t, a, s))
                             : ((n = await M.Nx(t, a, s, d ?? !1)), c && L.sF(P._.LIVE_STAGE_NOTIFICATION_BADGE)),
-                            e(n);
+                            e(n));
                     } catch (t) {
-                        r(new R.LG(t)), i(!1);
+                        (r(new R.LG(t)), i(!1));
                     }
                 }
             }

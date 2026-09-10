@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => D, W: () => R }), n(142703);
+(n.d(t, { A: () => D, W: () => R }), n(142703));
 var r,
     a = n(562708),
     s = n(247775),
@@ -73,7 +73,7 @@ let D = {
                             login_instance_id: _,
                         },
                     } = e;
-                    d.h.dispatch({ type: "LOGIN_ATTEMPTED", user_id: l, required_actions: o }),
+                    (d.h.dispatch({ type: "LOGIN_ATTEMPTED", user_id: l, required_actions: o }),
                         t
                             ? d.h.dispatch({
                                   type: "LOGIN_MFA_STEP",
@@ -86,22 +86,22 @@ let D = {
                               })
                             : u
                               ? this.switchAccountToken(a)
-                              : d.h.dispatch({ type: "LOGIN_SUCCESS", token: a });
+                              : d.h.dispatch({ type: "LOGIN_SUCCESS", token: a }));
                 },
                 (e) => {
                     let i = new c.Wl(e);
                     if (null != e.body && e.body?.suspended_user_token != null)
                         throw (
-                            (u && L({ isSwitchingAccount: !0 }),
+                            u && L({ isSwitchingAccount: !0 }),
                             d.h.dispatch({
                                 type: "LOGIN_SUSPENDED_USER",
                                 suspendedUserToken: e.body?.suspended_user_token,
                             }),
-                            i)
+                            i
                         );
                     let r = e.body?.code;
                     throw (
-                        (r === S.t02.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && "" !== n
+                        r === S.t02.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && "" !== n
                             ? d.h.dispatch({
                                   type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION",
                                   credentials: { login: t, password: n },
@@ -114,7 +114,7 @@ let D = {
                                       credentials: { login: t, password: n },
                                   })
                                 : d.h.dispatch({ type: "LOGIN_FAILURE", error: i }),
-                        i)
+                        i
                     );
                 },
             )
@@ -159,7 +159,7 @@ let D = {
             giftCodeSKUId: r,
             isMultiAccount: a,
         } = e;
-        n?.abort("Starting non-conditional mediation"), d.h.dispatch({ type: "PASSWORDLESS_START" });
+        (n?.abort("Starting non-conditional mediation"), d.h.dispatch({ type: "PASSWORDLESS_START" }));
         try {
             let { challenge: e, ticket: n } = await (0, I.YS)(),
                 s = await t(e);
@@ -167,12 +167,12 @@ let D = {
                 await this.loginWebAuthn({ ticket: n, credential: s, source: i, giftCodeSKUId: r, isMultiAccount: a });
             } catch (e) {
                 throw (
-                    (e instanceof c.LG &&
+                    e instanceof c.LG &&
                         null != e.status &&
                         e.status >= 400 &&
                         e.status < 500 &&
                         (await h.A.signalUnknownCredential(s)),
-                    e)
+                    e
                 );
             }
         } catch (e) {
@@ -192,8 +192,8 @@ let D = {
                 let {
                     body: { token: t, user_id: n, required_actions: i },
                 } = e;
-                d.h.dispatch({ type: "LOGIN_ATTEMPTED", user_id: n, required_actions: i }),
-                    s ? this.switchAccountToken(t) : d.h.dispatch({ type: "LOGIN_SUCCESS", token: t });
+                (d.h.dispatch({ type: "LOGIN_ATTEMPTED", user_id: n, required_actions: i }),
+                    s ? this.switchAccountToken(t) : d.h.dispatch({ type: "LOGIN_SUCCESS", token: t }));
             })
             .catch((e) => {
                 if (e instanceof l.oh) {
@@ -213,7 +213,7 @@ let D = {
             d.h.dispatch({ type: "LOGIN" }),
             new Promise((n) => {
                 setImmediate(() => {
-                    d.h.dispatch({ type: "LOGIN_SUCCESS", token: e }), t && this.startSession(e), n();
+                    (d.h.dispatch({ type: "LOGIN_SUCCESS", token: e }), t && this.startSession(e), n());
                 });
             })
         );
@@ -231,7 +231,7 @@ let D = {
                 })
             ).body.token;
             if (!t) throw Error("No token in response");
-            return await this.loginToken(t, !1), t;
+            return (await this.loginToken(t, !1), t);
         } catch (e) {
             throw (d.h.dispatch({ type: "LOGIN_FAILURE", error: new c.Wl(e) }), e);
         }
@@ -267,7 +267,7 @@ let D = {
             L({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
             this.loginToken(e, !0).then(() => {
                 let t = e === f.default.getToken();
-                return C.log("Switched accounts finished", { isCorrectToken: t }), t;
+                return (C.log("Switched accounts finished", { isCorrectToken: t }), t);
             })
         );
     },
@@ -282,7 +282,7 @@ let D = {
             trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
             rejectWithError: (0, l.fT)(),
         });
-        return d.h.dispatch({ type: "LOGIN_SUCCESS", token: t.body.token }), t.body.user_id;
+        return (d.h.dispatch({ type: "LOGIN_SUCCESS", token: t.body.token }), t.body.user_id);
     },
     authorizePayment: (e) =>
         m.A.post({
@@ -354,7 +354,7 @@ let D = {
                 trackedActionData: { event: a.NetworkActionNames.FORGOT_PASSWORD },
                 rejectWithError: (0, l.fT)(),
             });
-            return d.h.dispatch({ type: "FORGOT_PASSWORD_SENT" }), t.body.method;
+            return (d.h.dispatch({ type: "FORGOT_PASSWORD_SENT" }), t.body.method);
         } catch (n) {
             let t = new c.Wl(n);
             if (t.code === S.t02.PHONE_VERIFICATION_REQUIRED)
@@ -401,7 +401,9 @@ let D = {
                       }
                   },
                   () => {
-                      clearTimeout(i), d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }), (O = null);
+                      (clearTimeout(i),
+                          d.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }),
+                          (O = null));
                   },
               ))),
     closeSuspendedUser() {

@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => l });
+(n.r(t), n.d(t, { default: () => l }));
 var i = {
         lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" },
         xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" },

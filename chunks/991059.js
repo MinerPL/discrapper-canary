@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => p });
+(n.r(e), n.d(e, { default: () => p }));
 var t = {
         lessThanXSeconds: {
             one: {

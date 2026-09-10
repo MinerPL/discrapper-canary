@@ -319,10 +319,10 @@ let R = { US: c, CA: s },
         let n, l;
         switch (e) {
             case "US":
-                (n = E.intl.string(E.t["/95CeM"])), (l = E.intl.string(E.t["9xLNmi"]));
+                ((n = E.intl.string(E.t["/95CeM"])), (l = E.intl.string(E.t["9xLNmi"])));
                 break;
             case "CA":
-                (n = E.intl.string(E.t.mfpJ9m)), (l = E.intl.string(E.t.Nc4Rzt));
+                ((n = E.intl.string(E.t.mfpJ9m)), (l = E.intl.string(E.t.Nc4Rzt)));
                 break;
             default:
                 n = E.intl.string(E.t.mfpJ9m);
@@ -474,10 +474,10 @@ class B extends a.PureComponent {
     validateForm(e) {
         let { values: t, dirtyFields: n } = this.state,
             l = {};
-        (e && !n.name) || this.hasValue(t.name) || "edit" !== this.props.mode || (l.name = E.intl.string(E.t.KU5mWF)),
+        ((e && !n.name) || this.hasValue(t.name) || "edit" !== this.props.mode || (l.name = E.intl.string(E.t.KU5mWF)),
             (e && !n.country) || this.hasValue(t.country) || (l.country = E.intl.string(E.t["+bm+zE"])),
             (e && !n.line1) || this.hasValue(t.line1) || (l.line1 = E.intl.string(E.t["6HMkB4"])),
-            (e && !n.city) || this.hasValue(t.city) || (l.city = E.intl.string(E.t.kOrBmU));
+            (e && !n.city) || this.hasValue(t.city) || (l.city = E.intl.string(E.t.kOrBmU)));
         let i = t.country;
         switch (i) {
             case "US":
@@ -492,8 +492,8 @@ class B extends a.PureComponent {
                 (e && !n.state) || this.hasValue(t.state) || (l.state = E.intl.string(E.t.RIaPdF));
                 break;
             case "CA":
-                (e && !n.postalCode) || this.hasValue(t.postalCode) || (l.postalCode = E.intl.string(E.t.LRlhb1)),
-                    (e && !n.state) || this.hasValue(t.state) || (l.state = E.intl.string(E.t.PsJCcj));
+                ((e && !n.postalCode) || this.hasValue(t.postalCode) || (l.postalCode = E.intl.string(E.t.LRlhb1)),
+                    (e && !n.state) || this.hasValue(t.state) || (l.state = E.intl.string(E.t.PsJCcj)));
                 break;
             default:
                 (e && !n.postalCode) ||
@@ -514,7 +514,7 @@ class B extends a.PureComponent {
     handleFieldChange = (e, t) => {
         if (null == t) return;
         let { values: n, errors: l, dirtyFields: i } = this.state;
-        delete l[t], this.setState({ values: { ...n, [t]: e }, dirtyFields: { ...i, [t]: !0 }, errors: l });
+        (delete l[t], this.setState({ values: { ...n, [t]: e }, dirtyFields: { ...i, [t]: !0 }, errors: l }));
     };
     render() {
         let { errors: e, values: t } = this.state,

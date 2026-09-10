@@ -204,7 +204,7 @@ function z(e, t, l) {
         s = Y.Rsh.GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(e, t, l, i),
         r = null != n ? `https://${n}${s}` : location.protocol + a + s,
         d = { size: (0, H.kr)(500 * (0, H.mZ)()) };
-    return "jpg" === i && (d.quality = "lossless"), (r += `?${O.stringify(d)}`);
+    return ("jpg" === i && (d.quality = "lossless"), (r += `?${O.stringify(d)}`));
 }
 var X = l(61567),
     V = l(868602),
@@ -293,7 +293,7 @@ let eI = {
                         label: j.intl.string(j.t.gnwWrx),
                         value: d,
                         onChange: function (e) {
-                            E(null), u(e);
+                            (E(null), u(e));
                         },
                         maxLength: 100,
                         showCharacterCount: !0,
@@ -315,7 +315,7 @@ let eI = {
                                             variant: "secondary",
                                             text: j.intl.string(j.t["MsUY/S"]),
                                             onChange: function (e) {
-                                                E(null), g(e);
+                                                (E(null), g(e));
                                             },
                                             maxFileSizeBytes: 0xa00000,
                                             onFileSizeError: () => (0, P.A)(0xa00000),
@@ -328,7 +328,7 @@ let eI = {
                                                     variant: "critical-secondary",
                                                     icon: B.TrashIcon,
                                                     onClick: function () {
-                                                        E(null), g(null);
+                                                        (E(null), g(null));
                                                     },
                                                     "aria-label": j.intl.string(j.t.N86XcP),
                                                 }),
@@ -343,7 +343,7 @@ let eI = {
                         label: j.intl.string(j.t.COGMNC),
                         value: f,
                         onChange: function (e) {
-                            E(null), h(e);
+                            (E(null), h(e));
                         },
                         rows: 3,
                         autosize: !0,
@@ -375,7 +375,7 @@ let eI = {
                                         text: f.length > 0 ? f : null,
                                         title: d.length > 0 ? d : null,
                                     };
-                                    void 0 !== m && (t.image = m), l(t);
+                                    (void 0 !== m && (t.image = m), l(t));
                                 },
                             }),
                         ],
@@ -402,19 +402,27 @@ let eI = {
             let t,
                 l,
                 a = eg(),
-                s = (0, c.bG)([Q.A, J.A], () => {
-                    let e = null != a ? Q.A.getChannel(a) : void 0;
-                    return null != e && J.A.can(Y.xBc.USE_EMBEDDED_ACTIVITIES, e);
-                }, [a]),
-                r = (0, c.bG)([es.Ay], () => {
-                    let e = es.Ay.getCurrentEmbeddedActivity();
-                    return null == e ||
-                        e.applicationId !== em.NW ||
-                        e.location.kind !== ep.T.GUILD_CHANNEL ||
-                        e.location.channel_id !== a
-                        ? null
-                        : e;
-                }, [a]),
+                s = (0, c.bG)(
+                    [Q.A, J.A],
+                    () => {
+                        let e = null != a ? Q.A.getChannel(a) : void 0;
+                        return null != e && J.A.can(Y.xBc.USE_EMBEDDED_ACTIVITIES, e);
+                    },
+                    [a],
+                ),
+                r = (0, c.bG)(
+                    [es.Ay],
+                    () => {
+                        let e = es.Ay.getCurrentEmbeddedActivity();
+                        return null == e ||
+                            e.applicationId !== em.NW ||
+                            e.location.kind !== ep.T.GUILD_CHANNEL ||
+                            e.location.channel_id !== a
+                            ? null
+                            : e;
+                    },
+                    [a],
+                ),
                 d = (0, c.bG)([es.Ay], () => es.Ay.isLaunchingActivity(), []),
                 { authResolved: u, isAuthorized: o } =
                     ((t = (0, c.bG)(
@@ -422,19 +430,23 @@ let eI = {
                         () => eo.default.getFetchStateForApplication(em.NW) === eo.FetchState.FETCHED,
                         [],
                     )),
-                    (l = (0, c.bG)([eo.default, ec.A], () => {
-                        let e = eo.default.getNewestTokenForApplication(em.NW);
-                        if (null == e) return !1;
-                        let t = ec.A.getApplication(em.NW),
-                            l = t?.integrationTypesConfig?.[et.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
-                        if (null == l) return !0;
-                        let i = new Set(e.scopes);
-                        return l.every((e) => i.has(e));
-                    }, [])),
+                    (l = (0, c.bG)(
+                        [eo.default, ec.A],
+                        () => {
+                            let e = eo.default.getNewestTokenForApplication(em.NW);
+                            if (null == e) return !1;
+                            let t = ec.A.getApplication(em.NW),
+                                l = t?.integrationTypesConfig?.[et.b.USER_INSTALL]?.oauth2InstallParams?.scopes;
+                            if (null == l) return !0;
+                            let i = new Set(e.scopes);
+                            return l.every((e) => i.has(e));
+                        },
+                        [],
+                    )),
                     n.useEffect(() => {
-                        eo.default.getFetchStateForApplication(em.NW) === eo.FetchState.NOT_FETCHED &&
+                        (eo.default.getFetchStateForApplication(em.NW) === eo.FetchState.NOT_FETCHED &&
                             eu.A.fetch([em.NW]),
-                            null == ec.A.getApplication(em.NW) && (0, ed.TA)(em.NW);
+                            null == ec.A.getApplication(em.NW) && (0, ed.TA)(em.NW));
                     }, []),
                     { authResolved: t, isAuthorized: l }),
                 h = n.useRef(!1);
@@ -509,11 +521,11 @@ let eI = {
                 p = n.useMemo(() => u.map((e) => ({ id: e.id, label: e.name, value: e.id })), [u]);
             async function _() {
                 if (null != r) {
-                    E(!1), g(!0);
+                    (E(!1), g(!0));
                     try {
-                        await eE({ channel: r, selectedRoleIds: A }), t();
+                        (await eE({ channel: r, selectedRoleIds: A }), t());
                     } catch {
-                        g(!1), E(!0);
+                        (g(!1), E(!0));
                     }
                 }
             }
@@ -530,7 +542,7 @@ let eI = {
                               options: p,
                               value: A,
                               onSelectionChange: function (e) {
-                                  E(!1), h(e);
+                                  (E(!1), h(e));
                               },
                               disabled: !d || m,
                               fullWidth: !0,

@@ -27,16 +27,16 @@ function c(a) {
     let k = s.useMemo(() => {
         let a = { role: "progressbar", "aria-label": "Progress Bar" };
         if (null != v && null != b)
-            (a["aria-valuenow"] = v),
+            ((a["aria-valuenow"] = v),
                 (a["aria-valuemin"] = 1),
                 (a["aria-valuemax"] = b),
-                (a["aria-label"] = x.STEP_INDICATOR(v, b));
+                (a["aria-label"] = x.STEP_INDICATOR(v, b)));
         else if (null != l && "number" == typeof l) {
             let r = Math.round(l);
-            (a["aria-valuenow"] = r),
+            ((a["aria-valuenow"] = r),
                 (a["aria-valuemin"] = 0),
                 (a["aria-valuemax"] = 100),
-                (a["aria-valuetext"] = x.PERCENT_COMPLETE(r));
+                (a["aria-valuetext"] = x.PERCENT_COMPLETE(r)));
         }
         return a;
     }, [v, b, l, x]);
@@ -64,4 +64,4 @@ function c(a) {
                   }),
     });
 }
-(c.Sizes = o), (c.INDETERMINATE = d);
+((c.Sizes = o), (c.INDETERMINATE = d));

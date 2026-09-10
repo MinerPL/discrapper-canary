@@ -34,14 +34,14 @@ function _(i) {
         })(A, n, d);
     if (null == N || 0 === N.length) return null;
     function O(i) {
-        C?.(),
+        (C?.(),
             M({ action: "PRESS_APP_COMMAND" }),
             c.default.track(u.HAw.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: n,
                 command_id: i,
                 guild_id: _,
                 ...(0, l.Ou)(A.id),
-            });
+            }));
     }
     return (0, a.jsx)(r.A, {
         heading: m.intl.string(m.t["0hKkS+"]),

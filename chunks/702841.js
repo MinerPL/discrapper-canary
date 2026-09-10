@@ -51,7 +51,7 @@ let l = new s.Vy("useStateFromStores"),
               })()
             : l.log("No violators found"),
         _))
-            (t.warned = !1), (t.execTime = 0), (t.execCount = 0);
+            ((t.warned = !1), (t.execTime = 0), (t.execCount = 0));
     }, o);
 let _ = new Map();
 function E(e) {
@@ -72,19 +72,19 @@ function I(e, t, n) {
         d = o.state;
     if (null == n || !(0, r.v)(n, o.prevDeps)) {
         let e;
-        (e = t()), (null != d && s(d, e)) || (d = e);
+        ((e = t()), (null != d && s(d, e)) || (d = e));
     }
     (0, i.useInsertionEffect)(() => {
-        (o.getStateFromStores = t), (o.prevDeps = n), (o.state = d);
+        ((o.getStateFromStores = t), (o.prevDeps = n), (o.state = d));
     });
     let [, c] = (0, i.useState)(null);
     return (
         (0, i.useInsertionEffect)(() => {
             let t = new a.r(e, function () {
                 let e;
-                (e = o.getStateFromStores()), s(o.state, e) || ((o.state = e), c({}));
+                ((e = o.getStateFromStores()), s(o.state, e) || ((o.state = e), c({})));
             });
-            return t.attach("useStateFromStores"), () => t.detach();
+            return (t.attach("useStateFromStores"), () => t.detach());
         }, []),
         d
     );

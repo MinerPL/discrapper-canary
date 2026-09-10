@@ -45,7 +45,7 @@ function E(e) {
     return e != e;
 }
 function j(e, t) {
-    for (var r = -1, a = e.length, n = 0, s = []; ++r < a; ) {
+    for (var r = -1, a = e.length, n = 0, s = []; ++r < a;) {
         var i = e[r];
         (i === t || i === o) && ((e[r] = o), (s[n++] = r));
     }
@@ -104,11 +104,11 @@ function L(e, t, r, a, n, s, o, i, c, l) {
         d = 512 & t,
         p = f ? void 0 : I(e);
     function y() {
-        for (var g = arguments.length, v = Array(g), O = g; O--; ) v[O] = arguments[O];
+        for (var g = arguments.length, v = Array(g), O = g; O--;) v[O] = arguments[O];
         if (h)
             var k = z(y),
                 A = (function (e, t) {
-                    for (var r = e.length, a = 0; r--; ) e[r] === t && a++;
+                    for (var r = e.length, a = 0; r--;) e[r] === t && a++;
                     return a;
                 })(v, k);
         if (
@@ -126,8 +126,8 @@ function L(e, t, r, a, n, s, o, i, c, l) {
                         ++i < c;
                     )
                         u[i] = t[i];
-                    for (; ++n < o; ) (b || n < s) && (u[r[n]] = e[n]);
-                    for (; l--; ) u[i++] = e[n++];
+                    for (; ++n < o;) (b || n < s) && (u[r[n]] = e[n]);
+                    for (; l--;) u[i++] = e[n++];
                     return u;
                 })(v, a, n, h)),
             s &&
@@ -145,8 +145,8 @@ function L(e, t, r, a, n, s, o, i, c, l) {
                         ++n < u;
                     )
                         b[n] = e[n];
-                    for (var h = n; ++c < l; ) b[h + c] = t[c];
-                    for (; ++o < i; ) (f || n < s) && (b[h + r[o]] = e[n++]);
+                    for (var h = n; ++c < l;) b[h + c] = t[c];
+                    for (; ++o < i;) (f || n < s) && (b[h + r[o]] = e[n++]);
                     return b;
                 })(v, s, o, h)),
             (g -= A),
@@ -167,7 +167,7 @@ function L(e, t, r, a, n, s, o, i, c, l) {
                               n = (function (e, t) {
                                   var r = -1,
                                       a = e.length;
-                                  for (t || (t = Array(a)); ++r < a; ) t[r] = e[r];
+                                  for (t || (t = Array(a)); ++r < a;) t[r] = e[r];
                                   return t;
                               })(e);
                           a--;
@@ -195,9 +195,9 @@ function L(e, t, r, a, n, s, o, i, c, l) {
 }
 function q(e, t, r, a, n, s, o, i, c, l) {
     var u = 8 & t;
-    (t |= u ? 32 : 64), 4 & (t &= ~(u ? 64 : 32)) || (t &= -4);
+    ((t |= u ? 32 : 64), 4 & (t &= ~(u ? 64 : 32)) || (t &= -4));
     var b = r(e, t, n, u ? s : void 0, u ? o : void 0, u ? void 0 : s, u ? void 0 : o, i, c, l);
-    return (b.placeholder = a), $(b, e, t);
+    return ((b.placeholder = a), $(b, e, t));
 }
 function z(e) {
     return e.placeholder;
@@ -255,7 +255,7 @@ var $ = N
                           (c = ((a = (o = d.match(f)) ? o[1].split(h) : []),
                           (n = r),
                           !(function (e, t) {
-                              for (var r = -1, a = e ? e.length : 0; ++r < a && !1 !== t(e[r], r, e); );
+                              for (var r = -1, a = e ? e.length : 0; ++r < a && !1 !== t(e[r], r, e););
                           })(l, function (e) {
                               var t = "_." + e[0];
                               n & e[1] &&
@@ -263,10 +263,10 @@ var $ = N
                                       (a ? a.length : 0) &&
                                       (function (e, t) {
                                           if (t != t) {
-                                              for (var r = e.length, a = -1; ++a < r; ) if (E(e[a], a, e)) return a;
+                                              for (var r = e.length, a = -1; ++a < r;) if (E(e[a], a, e)) return a;
                                               return -1;
                                           }
-                                          for (var n = -1, s = e.length; ++n < s; ) if (e[n] === t) return n;
+                                          for (var n = -1, s = e.length; ++n < s;) if (e[n] === t) return n;
                                           return -1;
                                       })(a, t) > -1
                                   ) &&
@@ -314,7 +314,7 @@ function G(e, t, r) {
                 ? (C = (function (e, t, r) {
                       var a = I(e);
                       function n() {
-                          for (var s = arguments.length, o = Array(s), i = s, c = z(n); i--; ) o[i] = arguments[i];
+                          for (var s = arguments.length, o = Array(s), i = s, c = z(n); i--;) o[i] = arguments[i];
                           var l = s < 3 && o[0] !== c && o[s - 1] !== c ? [] : j(o, c);
                           return (s -= l.length) < r
                               ? q(e, t, L, n.placeholder, void 0, o, l, void 0, void 0, r - s)
@@ -341,7 +341,7 @@ function G(e, t, r) {
                             ++a < n;
                         )
                             s[a] = y[a];
-                        for (; r--; ) s[a++] = arguments[++t];
+                        for (; r--;) s[a++] = arguments[++t];
                         return A(o, g ? p : this, s);
                     }));
         else
@@ -367,7 +367,7 @@ function G(e, t, r) {
                     });
         return $(C, e, t);
     })(e, 8, void 0, void 0, void 0, void 0, void 0, (t = r ? void 0 : t));
-    return (a.placeholder = G.placeholder), a;
+    return ((a.placeholder = G.placeholder), a);
 }
 function W(e) {
     var t = typeof e;
@@ -400,4 +400,4 @@ function V(e) {
         a = r % 1;
     return r == r ? (a ? r - a : r) : 0;
 }
-(G.placeholder = {}), (e.exports = G);
+((G.placeholder = {}), (e.exports = G));

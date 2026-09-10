@@ -21,10 +21,10 @@ function _(e) {
     let t = (e.channelId ?? "unknown") + e.context;
     switch (e.state) {
         case o.S7L.RTC_CONNECTED:
-            d.add(t), l.Ay.setCrashInformation(i.du.HasRTCConnection, 1);
+            (d.add(t), l.Ay.setCrashInformation(i.du.HasRTCConnection, 1));
             break;
         case o.S7L.DISCONNECTED:
-            l.Ay.setCrashInformation(c(e.context), null),
+            (l.Ay.setCrashInformation(c(e.context), null),
                 d.delete(t),
                 0 === d.size &&
                     (function () {
@@ -36,7 +36,7 @@ function _(e) {
                             i.du.IsReceivingStream,
                         ])
                             l.Ay.setCrashInformation(e, 0);
-                    })();
+                    })());
     }
 }
 function E(e) {

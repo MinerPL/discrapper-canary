@@ -25,11 +25,11 @@ function k(t) {
             return { isModReportClosed: t?.isArchivedThread(), isModReport: t?.isModeratorReportChannel() };
         }),
         S = i.useCallback(() => {
-            c.A.kickUser(e, l.id, A, T).then(() => {
+            (c.A.kickUser(e, l.id, A, T).then(() => {
                 j && null != T && m.A.resolveFlag(T);
             }),
                 I(d.Nj.KICK),
-                null != T && b.onClose?.();
+                null != T && b.onClose?.());
         }, [e, l.id, A, I, T, j, b]),
         w = i.useCallback((t) => {
             v(t);

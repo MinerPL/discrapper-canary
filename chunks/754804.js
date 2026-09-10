@@ -26,8 +26,8 @@ function N() {
             [N],
         ),
         O = l.useCallback(() => {
-            o.default.track(I.HAw.APP_NOTICE_CLOSED, { notice_type: I.kqX.PREMIUM_MARKETING_NAGBAR }),
-                R(d.i.USER_DISMISS);
+            (o.default.track(I.HAw.APP_NOTICE_CLOSED, { notice_type: I.kqX.PREMIUM_MARKETING_NAGBAR }),
+                R(d.i.USER_DISMISS));
         }, [R]),
         p = l.useRef(null);
     if (
@@ -73,10 +73,10 @@ function N() {
                         (0, i.jsx)(u.fY, {
                             text: t.ctaLabel,
                             onClick: function () {
-                                o.default.track(I.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                                (o.default.track(I.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                                     notice_type: I.kqX.PREMIUM_MARKETING_NAGBAR,
                                 }),
-                                    M();
+                                    M());
                             },
                         }),
                 ],

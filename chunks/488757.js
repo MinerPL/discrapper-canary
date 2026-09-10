@@ -35,14 +35,14 @@ let u = (e) => {
             null != m.current && (window.clearTimeout(m.current), (m.current = void 0));
             return;
         }
-        window.clearTimeout(m.current),
+        (window.clearTimeout(m.current),
             (m.current = window.setTimeout(function e() {
-                u((e) => {
+                (u((e) => {
                     let t = e + 1;
                     return t >= (p?.length ?? 1) ? 0 : t;
                 }),
-                    (m.current = window.setTimeout(e, a));
-            }, a));
+                    (m.current = window.setTimeout(e, a)));
+            }, a)));
     }, [f, a, p]),
     l.useEffect(
         () => () => {

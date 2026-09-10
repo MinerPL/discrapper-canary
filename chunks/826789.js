@@ -12,13 +12,13 @@ function r(t) {
     return (0, o.jsx)(l.default, {
         onClose: a,
         handleLearnMore: function () {
-            (0, n.A)(),
+            ((0, n.A)(),
                 (0, c.closeAllModals)(),
                 d.default.track(i.HAw.PREMIUM_PROMOTION_OPENED, {
                     location_section: i.JJy.STREAM_UPSELL_MODAL,
                     location_object: i.ZSU.NAVIGATION_LINK,
                 }),
-                (0, s.pX)(i.BVt.APPLICATION_STORE);
+                (0, s.pX)(i.BVt.APPLICATION_STORE));
         },
         ...e,
     });

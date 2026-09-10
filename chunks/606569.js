@@ -1,4 +1,5 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.FileTypes = t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.FileTypes = t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = void 0));
 let i = n(817762),
     r = n(639371),
     o = n(536168),
@@ -78,7 +79,7 @@ class c {
         return !1;
     }
 }
-(t.FileTypes = c),
+((t.FileTypes = c),
     (c.AAC = r.AudioTypes.AAC),
     (c.AMR = r.AudioTypes.AMR),
     (c.FLAC = r.AudioTypes.FLAC),
@@ -127,4 +128,4 @@ class c {
     (c.RTF = a.OtherTypes.RTF),
     (c.SQLITE = a.OtherTypes.SQLITE),
     (c.STL = a.OtherTypes.STL),
-    (c.TTF = a.OtherTypes.TTF);
+    (c.TTF = a.OtherTypes.TTF));

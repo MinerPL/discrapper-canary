@@ -14,7 +14,7 @@ function _() {
 }
 function R(e) {
     let { subscriptionId: t } = e;
-    s.h.wait(() => (0, E.mm)(t).catch(r.FXj)), (M.membersData.isUpdating = !1);
+    (s.h.wait(() => (0, E.mm)(t).catch(r.FXj)), (M.membersData.isUpdating = !1));
 }
 function h() {
     M.membersData.isUpdating = !1;
@@ -67,7 +67,7 @@ let c = new U(s.h, {
     },
     PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: function (e) {
         let { members: t } = e;
-        (M.membersData.data = t), (M.membersData.isFetching = !1);
+        ((M.membersData.data = t), (M.membersData.isFetching = !1));
     },
     PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: function () {
         M.membersData.isFetching = !1;
@@ -80,13 +80,13 @@ let c = new U(s.h, {
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: function (e) {
         let { membership: t } = e;
-        (M.membershipData.data = t), (M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0);
+        ((M.membershipData.data = t), (M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
     },
     PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: function () {
-        (M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0);
+        ((M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
     },
     PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: function () {
-        (M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0);
+        ((M.membershipData.isFetching = !1), (M.membershipData.hasFetched = !0));
     },
     PREMIUM_GROUP_INVITE_USERS_START: _,
     PREMIUM_GROUP_INVITE_USERS_SUCCESS: R,
@@ -99,7 +99,7 @@ let c = new U(s.h, {
     PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function (e) {
         let { errorCode: t, subscriptionId: a } = e;
         if (t === n.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED)
-            return s.h.wait(() => (0, E.mm)(a).catch(r.FXj)), (M.membersData.isUpdating = !1), !0;
+            return (s.h.wait(() => (0, E.mm)(a).catch(r.FXj)), (M.membersData.isUpdating = !1), !0);
         h();
     },
     LOGOUT: function () {

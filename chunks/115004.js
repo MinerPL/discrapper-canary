@@ -1,5 +1,5 @@
 var r, n, a, i, s, o;
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.Month = t.Weekday = t.Meridiem = void 0),
     ((i = r || (t.Meridiem = r = {}))[(i.AM = 0)] = "AM"),
     (i[(i.PM = 1)] = "PM"),
@@ -21,4 +21,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (o[(o.SEPTEMBER = 9)] = "SEPTEMBER"),
     (o[(o.OCTOBER = 10)] = "OCTOBER"),
     (o[(o.NOVEMBER = 11)] = "NOVEMBER"),
-    (o[(o.DECEMBER = 12)] = "DECEMBER");
+    (o[(o.DECEMBER = 12)] = "DECEMBER"));

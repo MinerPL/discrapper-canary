@@ -24,11 +24,11 @@ function C(t) {
         [T, B] = i.useState(!1),
         E = i.useCallback(
             async (t) => {
-                z(!0), N(!1), B(!1);
+                (z(!0), N(!1), B(!1));
                 try {
                     k(await (0, f.y_)(l, { regenerate: t }));
                 } catch {
-                    t && k(null), N(!0);
+                    (t && k(null), N(!0));
                 } finally {
                     z(!1);
                 }

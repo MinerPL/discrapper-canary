@@ -127,17 +127,17 @@ var i,
         return lS(/\\?\"/g, l);
     },
     lx = function (l, t) {
-        return (l = lS(/^\s\s*/, String(l))), typeof t === b ? l : l.substring(0, t);
+        return ((l = lS(/^\s\s*/, String(l))), typeof t === b ? l : l.substring(0, t));
     },
     lg = function (l, t) {
         if (l && t)
-            for (var d, i, e, c, a, Z, b = 0; b < t.length && !a; ) {
+            for (var d, i, e, c, a, Z, b = 0; b < t.length && !a;) {
                 var m = t[b],
                     o = t[b + 1];
-                for (d = i = 0; d < m.length && !a && m[d]; )
+                for (d = i = 0; d < m.length && !a && m[d];)
                     if ((a = m[d++].exec(l)))
                         for (e = 0; e < o.length; e++)
-                            (Z = a[++i]),
+                            ((Z = a[++i]),
                                 typeof (c = o[e]) === n && c.length > 0
                                     ? 2 === c.length
                                         ? typeof c[1] == s
@@ -156,7 +156,7 @@ var i,
                                               : c.length > 3
                                                 ? (this[c[0]] = Z ? c[1].apply(this, c.slice(2)) : void 0)
                                                 : (this[c[0]] = Z ? c[1].call(this, Z, c[2]) : void 0))
-                                    : (this[c] = Z || void 0);
+                                    : (this[c] = Z || void 0));
                 b += 2;
             }
     },
@@ -924,7 +924,7 @@ var i,
                     withFeatureCheck: a.prototype.withFeatureCheck,
                 };
                 var i = new d();
-                return l(i), i;
+                return (l(i), i);
             }),
             new a()
         );
@@ -965,10 +965,10 @@ function lK(l, t, d) {
     )
         if (typeof d.append === s) {
             var i = {};
-            d.forEach(function (l, t) {
+            (d.forEach(function (l, t) {
                 i[String(t).toLowerCase()] = l;
             }),
-                (d = i);
+                (d = i));
         } else {
             var e = {};
             for (var c in d) d.hasOwnProperty(c) && (e[String(c).toLowerCase()] = d[c]);
@@ -1012,7 +1012,7 @@ function lK(l, t, d) {
                 [
                     "setUA",
                     function (l) {
-                        return lL(l) && (b = lx(l, 500)), this;
+                        return (lL(l) && (b = lx(l, 500)), this);
                     },
                 ],
             ])
@@ -1028,14 +1028,14 @@ function lH(l) {
         browser: { name: t.browser.name, version: t.browser.version },
     };
 }
-(lv.prototype.get = function (l) {
+((lv.prototype.get = function (l) {
     return l ? (this.data.hasOwnProperty(l) ? this.data[l] : void 0) : this.data;
 }),
     (lv.prototype.set = function (l, t) {
-        return (this.data[l] = t), this;
+        return ((this.data[l] = t), this);
     }),
     (lv.prototype.setCH = function (l) {
-        return (this.uaCH = l), this;
+        return ((this.uaCH = l), this);
     }),
     (lv.prototype.detectFeature = function () {
         if (lX && lX.userAgent == this.ua)
@@ -1044,13 +1044,13 @@ function lH(l) {
                     lX.brave && typeof lX.brave.isBrave == s && this.set(W, "Brave");
                     break;
                 case o:
-                    !this.get(G) && lr && lr[Y] && this.set(G, Y),
+                    (!this.get(G) && lr && lr[Y] && this.set(G, Y),
                         "Macintosh" == this.get(r) &&
                             lX &&
                             typeof lX.standalone !== b &&
                             lX.maxTouchPoints &&
                             lX.maxTouchPoints > 2 &&
-                            this.set(r, "iPad").set(G, T);
+                            this.set(r, "iPad").set(G, T));
                     break;
                 case "os":
                     !this.get(W) && lr && lr[C] && this.set(W, lr[C]);
@@ -1089,14 +1089,14 @@ function lH(l) {
                     for (var e = 0; e < i.length; e++) {
                         var c = i[e].brand || i[e],
                             a = i[e].version;
-                        this.itemType == m &&
+                        (this.itemType == m &&
                             !/not.a.brand/i.test(c) &&
                             (!d || (/Chrom/.test(d) && c != lb) || (d == lo && /WebView2/.test(c))) &&
                             ((c = lD(c, lF)),
                             ((d = this.get(W)) && !/Chrom/.test(d) && /Chrom/.test(c)) ||
                                 this.set(W, c).set(N, a).set(X, lw(a)),
                             (d = c)),
-                            this.itemType == u && c == lb && this.set(N, a);
+                            this.itemType == u && c == lb && this.set(N, a));
                     }
                 break;
             case "cpu":
@@ -1107,12 +1107,12 @@ function lH(l) {
                 if ((l[Y] && this.set(G, Y), l[r] && (this.set(r, l[r]), !this.get(G) || !this.get(p)))) {
                     var n,
                         Z = {};
-                    lg.call(Z, "droid 9; " + l[r] + ")", t),
+                    (lg.call(Z, "droid 9; " + l[r] + ")", t),
                         !this.get(G) && Z.type && this.set(G, Z.type),
-                        !this.get(p) && Z.vendor && this.set(p, Z.vendor);
+                        !this.get(p) && Z.vendor && this.set(p, Z.vendor));
                 }
                 if (l[R]) {
-                    if ("string" != typeof l[R]) for (var b = 0; !n && b < l[R].length; ) n = lD(l[R][b++], lU);
+                    if ("string" != typeof l[R]) for (var b = 0; !n && b < l[R].length;) n = lD(l[R][b++], lU);
                     else n = lD(l[R], lU);
                     this.set(G, n);
                 }
@@ -1121,7 +1121,7 @@ function lH(l) {
                 var y = l[C];
                 if (y) {
                     var T = l[x];
-                    y == lM && (T = parseInt(lw(T), 10) >= 13 ? "11" : "10"), this.set(W, y).set(N, T);
+                    (y == lM && (T = parseInt(lw(T), 10) >= 13 ? "11" : "10"), this.set(W, y).set(N, T));
                 }
                 this.get(W) == lM && "Xbox" == l[r] && this.set(W, "Xbox").set(N, void 0);
                 break;
@@ -1138,7 +1138,7 @@ function lH(l) {
     (lK.BROWSER = lY([W, N, X, G])),
     (lK.CPU = lY([M])),
     (lK.DEVICE = lY([r, p, G, y, Y, V, T, L, I])),
-    (lK.ENGINE = lK.OS = lY([W, N]));
+    (lK.ENGINE = lK.OS = lY([W, N])));
 let lQ = "thumbmark",
     lP = "https://api.thumbmarkjs.com",
     lf = {
@@ -1242,7 +1242,7 @@ function l0(l, t = 0) {
                 i = new Uint32Array(l, 0, 4 * d);
             for (let l = 0; l < d; l++) {
                 let d = i.subarray(4 * l, 4 * (l + 1));
-                (d[0] = Math.imul(d[0], lq[0])),
+                ((d[0] = Math.imul(d[0], lq[0])),
                     (d[0] = l2(d[0], 15)),
                     (d[0] = Math.imul(d[0], lq[1])),
                     (t[0] = t[0] ^ d[0]),
@@ -1269,7 +1269,7 @@ function l0(l, t = 0) {
                     (t[3] = t[3] ^ d[3]),
                     (t[3] = l2(t[3], 13)),
                     (t[3] = t[3] + t[0]),
-                    (t[3] = Math.imul(t[3], 5) + 0x32ac3b17);
+                    (t[3] = Math.imul(t[3], 5) + 0x32ac3b17));
             }
         })(l, i),
         (function (l, t) {
@@ -1283,11 +1283,11 @@ function l0(l, t = 0) {
                 case 14:
                     e[3] = e[3] ^ (c[13] << 8);
                 case 13:
-                    (e[3] = e[3] ^ c[12]),
+                    ((e[3] = e[3] ^ c[12]),
                         (e[3] = Math.imul(e[3], lq[3])),
                         (e[3] = l2(e[3], 18)),
                         (e[3] = Math.imul(e[3], lq[0])),
-                        (t[3] = t[3] ^ e[3]);
+                        (t[3] = t[3] ^ e[3]));
                 case 12:
                     e[2] = e[2] ^ (c[11] << 24);
                 case 11:
@@ -1295,11 +1295,11 @@ function l0(l, t = 0) {
                 case 10:
                     e[2] = e[2] ^ (c[9] << 8);
                 case 9:
-                    (e[2] = e[2] ^ c[8]),
+                    ((e[2] = e[2] ^ c[8]),
                         (e[2] = Math.imul(e[2], lq[2])),
                         (e[2] = l2(e[2], 17)),
                         (e[2] = Math.imul(e[2], lq[3])),
-                        (t[2] = t[2] ^ e[2]);
+                        (t[2] = t[2] ^ e[2]));
                 case 8:
                     e[1] = e[1] ^ (c[7] << 24);
                 case 7:
@@ -1307,11 +1307,11 @@ function l0(l, t = 0) {
                 case 6:
                     e[1] = e[1] ^ (c[5] << 8);
                 case 5:
-                    (e[1] = e[1] ^ c[4]),
+                    ((e[1] = e[1] ^ c[4]),
                         (e[1] = Math.imul(e[1], lq[1])),
                         (e[1] = l2(e[1], 16)),
                         (e[1] = Math.imul(e[1], lq[2])),
-                        (t[1] = t[1] ^ e[1]);
+                        (t[1] = t[1] ^ e[1]));
                 case 4:
                     e[0] = e[0] ^ (c[3] << 24);
                 case 3:
@@ -1319,11 +1319,11 @@ function l0(l, t = 0) {
                 case 2:
                     e[0] = e[0] ^ (c[1] << 8);
                 case 1:
-                    (e[0] = e[0] ^ c[0]),
+                    ((e[0] = e[0] ^ c[0]),
                         (e[0] = Math.imul(e[0], lq[0])),
                         (e[0] = l2(e[0], 15)),
                         (e[0] = Math.imul(e[0], lq[1])),
-                        (t[0] = t[0] ^ e[0]);
+                        (t[0] = t[0] ^ e[0]));
             }
         })(l, i),
         (d = l),
@@ -1353,23 +1353,23 @@ function l0(l, t = 0) {
     );
 }
 async function l1(l) {
-    for (var t; !document.body; ) await new Promise((l) => setTimeout(l, 50, void 0));
+    for (var t; !document.body;) await new Promise((l) => setTimeout(l, 50, void 0));
     let d = document.createElement("iframe");
     d.setAttribute("frameBorder", "0");
     let i = d.style;
-    i.setProperty("position", "fixed"),
+    (i.setProperty("position", "fixed"),
         i.setProperty("display", "block", "important"),
         i.setProperty("visibility", "visible"),
         i.setProperty("border", "0"),
         i.setProperty("opacity", "0"),
         (d.src = "about:blank"),
-        document.body.appendChild(d);
+        document.body.appendChild(d));
     let e = d.contentDocument || (null == (t = d.contentWindow) ? void 0 : t.document);
     if (!e) throw Error("Iframe document is not accessible");
-    l({ iframe: e }),
+    (l({ iframe: e }),
         setTimeout(() => {
             document.body.removeChild(d);
-        }, 0);
+        }, 0));
 }
 let l5 = [
         "Arial",
@@ -1464,7 +1464,7 @@ let l5 = [
     ],
     l3 = ["monospace", "sans-serif", "serif"];
 function l9(l, t) {
-    return (l.font = `72px ${t}`), l.measureText("WwMmLli0Oo").width;
+    return ((l.font = `72px ${t}`), l.measureText("WwMmLli0Oo").width);
 }
 let l4 = (l, t, d, i) => {
         let e = (d - t) / i,
@@ -1579,7 +1579,7 @@ function ti(l) {
             if ("number" == typeof d) return isFinite(d) ? "" + d : "null";
             if ("object" != typeof d) return JSON.stringify(d);
             if (Array.isArray(d)) {
-                for (e = "[", i = 0; i < d.length; i++) i && (e += ","), (e += l(d[i]) || "null");
+                for (e = "[", i = 0; i < d.length; i++) (i && (e += ","), (e += l(d[i]) || "null"));
                 return e + "]";
             }
             if (null === d) return "null";
@@ -1591,7 +1591,7 @@ function ti(l) {
                     c = l(d[t]);
                 c && (e && (e += ","), (e += JSON.stringify(t) + ":" + c));
             }
-            return t.splice(c, 1), "{" + e + "}";
+            return (t.splice(c, 1), "{" + e + "}");
         })(l) || ""
     );
 }
@@ -1650,7 +1650,7 @@ let ts = {
                                   e = d.createOscillator();
                               e.frequency.value = 1e3;
                               let c = d.createDynamicsCompressor();
-                              (c.threshold.value = -50),
+                              ((c.threshold.value = -50),
                                   (c.knee.value = 40),
                                   (c.ratio.value = 12),
                                   (c.attack.value = 0),
@@ -1659,7 +1659,7 @@ let ts = {
                                   c.connect(d.destination),
                                   e.start(),
                                   (d.oncomplete = (e) => {
-                                      (t = e.renderedBuffer.getChannelData(0)),
+                                      ((t = e.renderedBuffer.getChannelData(0)),
                                           l({
                                               sampleHash: (function (l) {
                                                   let t = 0;
@@ -1668,11 +1668,11 @@ let ts = {
                                               })(t),
                                               maxChannels: d.destination.maxChannelCount,
                                               channelCountMode: i.channelCountMode,
-                                          });
+                                          }));
                                   }),
-                                  d.startRendering();
+                                  d.startRendering());
                           } catch (l) {
-                              console.error("Error creating audio fingerprint:", l), t(l);
+                              (console.error("Error creating audio fingerprint:", l), t(l));
                           }
                       });
                   })()
@@ -1685,9 +1685,9 @@ let ts = {
                         let l = document.createElement("canvas"),
                             t = l.getContext("2d");
                         if (!t) return null;
-                        (l.width = 280), (l.height = 20);
+                        ((l.width = 280), (l.height = 20));
                         let d = t.createLinearGradient(0, 0, l.width, l.height);
-                        d.addColorStop(0, "red"),
+                        (d.addColorStop(0, "red"),
                             d.addColorStop(1 / 6, "orange"),
                             d.addColorStop(2 / 6, "yellow"),
                             d.addColorStop(0.5, "green"),
@@ -1695,7 +1695,7 @@ let ts = {
                             d.addColorStop(5 / 6, "indigo"),
                             d.addColorStop(1, "violet"),
                             (t.fillStyle = d),
-                            t.fillRect(0, 0, l.width, l.height);
+                            t.fillRect(0, 0, l.width, l.height));
                         let i = "Random Text WMwmil10Oo";
                         return (
                             (t.font = "23.123px Arial"),
@@ -1724,11 +1724,11 @@ let ts = {
                         if (!d) return void l(null);
                         let i = l3.map((l) => l9(d, l)),
                             e = {};
-                        l5.forEach((l) => {
+                        (l5.forEach((l) => {
                             let t = l9(d, l);
                             i.includes(t) || (e[l] = t);
                         }),
-                            l(e);
+                            l(e));
                     });
                 } catch (t) {
                     l(null);
@@ -1763,7 +1763,7 @@ let ts = {
                                     if (l) {
                                         let t = (d.getParameter(l.UNMASKED_VENDOR_WEBGL) || "").toString(),
                                             e = (d.getParameter(l.UNMASKED_RENDERER_WEBGL) || "").toString();
-                                        t && (i.vendorUnmasked = t), e && (i.rendererUnmasked = e);
+                                        (t && (i.vendorUnmasked = t), e && (i.rendererUnmasked = e));
                                     }
                                 }
                                 return i;
@@ -1881,12 +1881,12 @@ let ts = {
                         }),
                         t),
                 };
-                l8() &&
+                (l8() &&
                     navigator.maxTouchPoints > 0 &&
                     ((i = window.screen.width),
                     (e = window.screen.height),
                     (c.resolution = `${Math.max(i, e).toString()}x${Math.min(i, e).toString()}`)),
-                    l(c);
+                    l(c));
             });
         },
         system: function () {
@@ -1960,21 +1960,21 @@ let ts = {
                                             e = (2 * Math.PI) / 137;
                                         for (let l = 0; l < 137; l++) {
                                             let t = l * e;
-                                            (i[4 * l] = 0),
+                                            ((i[4 * l] = 0),
                                                 (i[4 * l + 1] = 0),
                                                 (i[4 * l + 2] = Math.cos(t) * (tt.width / 2)),
-                                                (i[4 * l + 3] = Math.sin(t) * (tt.height / 2));
+                                                (i[4 * l + 3] = Math.sin(t) * (tt.height / 2)));
                                         }
                                         let c = td.createBuffer();
-                                        td.bindBuffer(td.ARRAY_BUFFER, c),
-                                            td.bufferData(td.ARRAY_BUFFER, i, td.STATIC_DRAW);
+                                        (td.bindBuffer(td.ARRAY_BUFFER, c),
+                                            td.bufferData(td.ARRAY_BUFFER, i, td.STATIC_DRAW));
                                         let a = td.getAttribLocation(d, "position");
-                                        td.enableVertexAttribArray(a),
+                                        (td.enableVertexAttribArray(a),
                                             td.vertexAttribPointer(a, 2, td.FLOAT, !1, 0, 0),
                                             td.viewport(0, 0, tt.width, tt.height),
                                             td.clearColor(0, 0, 0, 1),
                                             td.clear(td.COLOR_BUFFER_BIT),
-                                            td.drawArrays(td.LINES, 0, 274);
+                                            td.drawArrays(td.LINES, 0, 274));
                                         let s = new Uint8ClampedArray(tt.width * tt.height * 4);
                                         return (
                                             td.readPixels(0, 0, tt.width, tt.height, td.RGBA, td.UNSIGNED_BYTE, s),
@@ -2008,7 +2008,7 @@ let ts = {
                     let t = window.RTCPeerConnection || window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
                     if (!t) return void l({ supported: !1, error: "WebRTC not supported" });
                     let d = new t({ iceCandidatePoolSize: 1, iceServers: [] });
-                    d.createDataChannel(""),
+                    (d.createDataChannel(""),
                         (async () => {
                             try {
                                 let t = await d.createOffer({ offerToReceiveAudio: !0, offerToReceiveVideo: !0 });
@@ -2058,9 +2058,9 @@ let ts = {
                                     },
                                     b = await new Promise((l) => {
                                         let t = setTimeout(() => {
-                                                d.removeEventListener("icecandidate", i),
+                                                (d.removeEventListener("icecandidate", i),
                                                     d.close(),
-                                                    l({ supported: !0, ...Z, timeout: !0 });
+                                                    l({ supported: !0, ...Z, timeout: !0 }));
                                             }, 3e3),
                                             i = (e) => {
                                                 let c = e.candidate;
@@ -2075,9 +2075,9 @@ let ts = {
                                     });
                                 l({ details: b, hash: l0(ti(b)) });
                             } catch (t) {
-                                d.close(), l({ supported: !0, error: `WebRTC offer failed: ${t.message}` });
+                                (d.close(), l({ supported: !0, error: `WebRTC offer failed: ${t.message}` }));
                             }
-                        })();
+                        })());
                 } catch (t) {
                     l({ supported: !1, error: `WebRTC error: ${t.message}` });
                 }
@@ -2093,12 +2093,12 @@ let ts = {
                                 !(function (l) {
                                     try {
                                         let t = l.createElement("math");
-                                        (t.innerHTML = "<mrow><mi>x</mi></mrow>"),
+                                        ((t.innerHTML = "<mrow><mi>x</mi></mrow>"),
                                             (t.style.position = "absolute"),
                                             (t.style.visibility = "hidden"),
-                                            l.body.appendChild(t);
+                                            l.body.appendChild(t));
                                         let d = t.getBoundingClientRect();
-                                        return l.body.removeChild(t), d.width > 0 && d.height > 0;
+                                        return (l.body.removeChild(t), d.width > 0 && d.height > 0);
                                     } catch (l) {
                                         return !1;
                                     }
@@ -2146,12 +2146,12 @@ let ts = {
                                 let i = (function (l, t) {
                                     try {
                                         let d = t.createElement("math");
-                                        (d.innerHTML = l.replace(/<\/?math>/g, "")),
+                                        ((d.innerHTML = l.replace(/<\/?math>/g, "")),
                                             (d.style.whiteSpace = "nowrap"),
                                             (d.style.position = "absolute"),
                                             (d.style.visibility = "hidden"),
                                             (d.style.top = "-9999px"),
-                                            t.body.appendChild(d);
+                                            t.body.appendChild(d));
                                         let i = d.getBoundingClientRect(),
                                             e = (t.defaultView || window).getComputedStyle(d),
                                             c = {
@@ -2171,13 +2171,13 @@ let ts = {
                                                     fontKerning: e.fontKerning || "auto",
                                                 },
                                             };
-                                        return t.body.removeChild(d), c;
+                                        return (t.body.removeChild(d), c);
                                     } catch (l) {
                                         return { error: l.message };
                                     }
                                 })(l, t);
-                                c.push({ width: i.dimensions.width, height: i.dimensions.height }),
-                                    0 === d && i.fontInfo && (a = l0(ti(i.fontInfo)));
+                                (c.push({ width: i.dimensions.width, height: i.dimensions.height }),
+                                    0 === d && i.fontInfo && (a = l0(ti(i.fontInfo))));
                             });
                             let s = { fontStyleHash: a, dimensions: c };
                             l({ details: s, hash: l0(ti(s)) });
@@ -2203,7 +2203,7 @@ let ts = {
                         d = null,
                         i = (i) => {
                             if (!t) {
-                                (t = !0), d && clearTimeout(d);
+                                ((t = !0), d && clearTimeout(d));
                                 try {
                                     let t = i.map((l) => {
                                         let t = (l) => l.replace(/\\/g, "\\\\").replace(/,/g, "\\,");
@@ -2229,8 +2229,8 @@ let ts = {
                         i(window.speechSynthesis.getVoices());
                     }, 800);
                     let c = () => {
-                        window.speechSynthesis.removeEventListener("voiceschanged", c),
-                            i(window.speechSynthesis.getVoices());
+                        (window.speechSynthesis.removeEventListener("voiceschanged", c),
+                            i(window.speechSynthesis.getVoices()));
                     };
                     window.speechSynthesis.addEventListener("voiceschanged", c);
                 } catch (t) {
@@ -2323,7 +2323,7 @@ async function tX(l) {
         s = {};
     if (i || d.experimental) {
         let { elapsed: l, resolvedComponents: t } = await tr(tn, d);
-        (a = t), (s = l);
+        ((a = t), (s = l));
     }
     let n = d.api_key
             ? ((l, t) => {
@@ -2342,7 +2342,7 @@ async function tX(l) {
                           try {
                               let t = tu(l),
                                   d = localStorage.getItem(t);
-                              return d || t === th || ((d = localStorage.getItem(th)) && tW(d, l)), d;
+                              return (d || t === th || ((d = localStorage.getItem(th)) && tW(d, l)), d);
                           } catch (l) {
                               return null;
                           }

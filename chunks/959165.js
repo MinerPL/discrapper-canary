@@ -24,7 +24,7 @@ class s extends i.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.userId = e.userId),
             (this.trialId = e.trialId),
@@ -32,7 +32,7 @@ class s extends i.A {
             (this.referrerId = e.referrerId ?? null),
             (this.referrer = e.referrer ?? null),
             (this.subscriptionTrial = e.subscriptionTrial ?? null),
-            (this.redeemedAt = e.redeemedAt ?? null);
+            (this.redeemedAt = e.redeemedAt ?? null));
     }
     get hasExpired() {
         return null != this.expiresAt && Date.now() > this.expiresAt.getTime();

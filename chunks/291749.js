@@ -3,7 +3,7 @@
     i2: () => T,
     tW: () => S,
     vm: () => R,
-    fY: () => I,
+    fY: () => f,
     WV: () => v,
     Yt: () => y,
     UX: () => D,
@@ -26,8 +26,8 @@ function A(e) {
     if (null != e) return e === u.NJ8.LIGHT || "light" === e ? "light" : "dark";
 }
 let h = /\.([a-zA-Z0-9]+)$/,
-    f = ["video/mp4", "video/webm"];
-var I =
+    I = ["video/mp4", "video/webm"];
+var f =
     (((i = {}).HERO = "hero"),
     (i.HERO_IMAGE = "hero_image"),
     (i.HERO_VIDEO = "hero_video"),
@@ -72,7 +72,7 @@ let m = {
 function S(e, t, n, i, r) {
     var l, o, u;
     let h,
-        I,
+        f,
         T,
         S,
         N = !1,
@@ -171,8 +171,8 @@ function S(e, t, n, i, r) {
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
         })(l, o, { theme: A(u?.theme) })),
-        (T = null != (I = R(o)) && f.includes(I)),
-        { url: h, mimetype: I, isAnimated: T });
+        (T = null != (f = R(o)) && I.includes(f)),
+        { url: h, mimetype: f, isAnimated: T });
     return C && null == O.mimetype ? null : O;
 }
 function N(e) {

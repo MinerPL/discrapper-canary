@@ -1,4 +1,4 @@
-n.d(l, { PlaygroundEmbed: () => b }), n(323874), n(14289), n(35956);
+(n.d(l, { PlaygroundEmbed: () => b }), n(323874), n(14289), n(35956));
 var t = n(477900),
     r = n(582128),
     u = n(659421),
@@ -71,13 +71,13 @@ function b(e) {
                           return t;
                       })(e.url)
                     : {};
-            p.PlaygroundStore.setState({
+            (p.PlaygroundStore.setState({
                 selectedCollection: j.id,
                 selectedStory: y?.id ?? null,
                 controlOverrides: Object.keys(l).length > 0 ? l : null,
                 currentProps: null,
             }),
-                (0, f.id)(x.zgK.COMPONENT_PLAYGROUND);
+                (0, f.id)(x.zgK.COMPONENT_PLAYGROUND));
         }, [y, j, e.url]);
     if (!l || null == j) return null;
     let k = v?.icon ?? u.H;

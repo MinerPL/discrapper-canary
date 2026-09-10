@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { VerifyAccountLoading: () => h, VerifyAccountDeekLink: () => g, default: () => A });
+(r.r(t), r.d(t, { VerifyAccountLoading: () => h, VerifyAccountDeekLink: () => g, default: () => A }));
 var n,
     l = r(477900),
     i = r(582128),
@@ -48,7 +48,7 @@ function A() {
         [x, D] = i.useState(!1),
         H = N(),
         $ = null == n ? (r ?? "") : n;
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let r;
         if (null != s) return;
         for (let e of t.keys()) e.startsWith("openid.") && (null == r && (r = {}), (r[e] = t.get(e)));
@@ -63,11 +63,11 @@ function A() {
                         return;
                     }
                     if ([200, 204].includes(l)) {
-                        e.replace(R.BVt.CONNECTIONS_SUCCESS(n)), _ && window.close();
+                        (e.replace(R.BVt.CONNECTIONS_SUCCESS(n)), _ && window.close());
                         return;
                     }
-                    i?.code != null && t.append("error-code", i.code),
-                        e.replace(`${R.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
+                    (i?.code != null && t.append("error-code", i.code),
+                        e.replace(`${R.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`));
                 }
             }
             if (await w({ platformType: n, code: $, state: u, openidParams: r, iss: d, handleCallbackResponse: l }))
@@ -86,8 +86,8 @@ function A() {
                           state: u,
                           handleCallbackResponse: l,
                           handleCallbackError: (r) => {
-                              r?.body?.code != null && t.append("error-code", r.body.code),
-                                  e.replace(`${R.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
+                              (r?.body?.code != null && t.append("error-code", r.body.code),
+                                  e.replace(`${R.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`));
                           },
                           openidParams: r,
                           code: $,
@@ -119,7 +119,7 @@ function A() {
                     null != t && clearTimeout(t);
                 }
             );
-        }, [H, e, m, y, u]);
+        }, [H, e, m, y, u]));
     let k = i.useMemo(() => {
         if (null != m) return `discord://${R.BVt.CONNECTIONS(m)}/?${t.toString()}`;
     }, [m, t]);
@@ -129,7 +129,7 @@ function A() {
                   platformType: m,
                   deeplink: k,
                   onClick: () => {
-                      D(!1), A(!0);
+                      (D(!1), A(!0));
                   },
               })
             : (0, l.jsx)(h, { platformType: m })
@@ -185,14 +185,14 @@ async function w(e) {
             .finally(() => {
                 C.default.disconnect();
             });
-        return a(e), !0;
+        return (a(e), !0);
     } catch (e) {
         return !1;
     }
 }
 async function F(e, t, r, n, l) {
     try {
-        return await f.A.sessionHandoff(e, t, r, n, l), 0;
+        return (await f.A.sessionHandoff(e, t, r, n, l), 0);
     } catch (e) {
         if (e?.body?.code === 10020) return 2;
         if (e?.body?.code === 40001) return 3;
@@ -211,8 +211,8 @@ async function T(e) {
     } = e;
     try {
         let e = await f.A.callback(t, { code: a, openid_params: i, state: r, iss: c }, !_);
-        return n(e), !0;
+        return (n(e), !0);
     } catch (e) {
-        return l(e), !0;
+        return (l(e), !0);
     }
 }

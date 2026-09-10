@@ -24,7 +24,7 @@ function l(e, t) {
         for (var o = 0; o < e.length; o++)
             for (var l = Math.max(0, o - r); l <= Math.min(t.length, o + r); l++)
                 if (e[o] === t[l] && !n[l]) {
-                    (n[l] = !0), a++;
+                    ((n[l] = !0), a++);
                     break;
                 }
         return a;
@@ -37,14 +37,14 @@ function l(e, t) {
                 for (let o = 0; o < e.length; o++)
                     for (let l = Math.max(0, o - r); l <= Math.min(t.length, o + r); l++)
                         if (e[o] === t[l] && !a[l]) {
-                            (n.a += e[o]), (a[l] = !0);
+                            ((n.a += e[o]), (a[l] = !0));
                             break;
                         }
                 a = [];
                 for (let o = 0; o < t.length; o++)
                     for (let l = Math.max(0, o - r); l <= Math.min(e.length, o + r); l++)
                         if (t[o] === e[l] && !a[l]) {
-                            (n.b += t[o]), (a[l] = !0);
+                            ((n.b += t[o]), (a[l] = !0));
                             break;
                         }
                 let o = 0;
@@ -111,7 +111,7 @@ self.addEventListener("message", (e) => {
                             (t, r, n) =>
                                 f(r).some((t) => {
                                     let r, n;
-                                    return (r = o(e)), (n = o(t)), a()(e, t) || a()(r, t) || a()(r, n);
+                                    return ((r = o(e)), (n = o(t)), a()(e, t) || a()(r, t) || a()(r, n));
                                 })
                                     ? [...t, n]
                                     : t,
@@ -139,7 +139,7 @@ self.addEventListener("message", (e) => {
                 );
         }
     let b = [...new Set(g)];
-    p === u.r.JARO_WINKLER &&
+    (p === u.r.JARO_WINKLER &&
         ((t = b),
         (r = s(l)),
         (b = t
@@ -149,7 +149,7 @@ self.addEventListener("message", (e) => {
             })
             .sort((e, t) => t.rank - e.rank)
             .map((e) => e.index))),
-        d > 0 && (b = b.slice(0, d));
+        d > 0 && (b = b.slice(0, d)));
     let v = { id: n, foundItemIndexes: b };
     self.postMessage(v);
 });

@@ -95,12 +95,12 @@ var y = i(703543),
 function P(t) {
     let { transitionState: e, guildProductListingId: i, analyticsLocation: n, guildId: l, onClose: N } = t,
         D = (0, c.bG)([p.A], () => p.A.getGuildProduct(i));
-    a()(null != D, "guildProductListing cannot be null"),
+    (a()(null != D, "guildProductListing cannot be null"),
         (0, h.A)({
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
             properties: { guild_product_listing_id: i, has_entitlement: !0 === D.has_entitlement, location: n },
-        });
+        }));
     let b = (0, _.z)(D) ?? "",
         O = (0, _.X)(D),
         v = (0, c.bG)([A.A], () => A.A.getGuild(l)),

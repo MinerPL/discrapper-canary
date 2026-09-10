@@ -108,10 +108,10 @@ E.subscribe(
             e.ended)
         ) {
             let t = { ...E.getState().flows };
-            delete t[e.type],
+            (delete t[e.type],
                 (0, o.r)(() => {
                     E.setState({ flows: t, currentFlow: null });
-                });
+                }));
         }
     },
 );

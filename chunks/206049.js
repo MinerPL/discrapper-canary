@@ -1,4 +1,4 @@
-n.d(e, { default: () => f }),
+(n.d(e, { default: () => f }),
     n(508300),
     n(393431),
     n(532706),
@@ -9,7 +9,7 @@ n.d(e, { default: () => f }),
     n(65162),
     n(323874),
     n(14289),
-    n(35956);
+    n(35956));
 var a = n(477900),
     o = n(582128),
     i = n(189213),
@@ -48,12 +48,12 @@ async function h(t, e, n) {
             let o = new Blob([a], { type: "application/pdf" }),
                 i = URL.createObjectURL(o),
                 l = document.createElement("a");
-            (l.href = i),
+            ((l.href = i),
                 (l.download = `receipt_${t}.pdf`),
                 document.body.appendChild(l),
                 l.click(),
                 document.body.removeChild(l),
-                URL.revokeObjectURL(i);
+                URL.revokeObjectURL(i));
         })(t, i.text),
         !0
     );
@@ -91,7 +91,7 @@ function f(t) {
                   mode: s.Ay.Modes.CREATE,
                   layout: x,
                   onBillingAddressChange: function (t, e) {
-                      m(t), b(e);
+                      (m(t), b(e));
                   },
                   error: null,
               })

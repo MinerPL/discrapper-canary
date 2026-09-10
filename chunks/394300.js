@@ -8,7 +8,7 @@ function s(t) {
 class u extends n.A {
     sku;
     constructor(t) {
-        super(t), (this.skuProductLine = l.EZt.PREMIUM), (this.sku = t.sku);
+        (super(t), (this.skuProductLine = l.EZt.PREMIUM), (this.sku = t.sku));
     }
     static fromServer(t) {
         let e = i.A.createFromServer(t.sku);

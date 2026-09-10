@@ -131,7 +131,7 @@ let u = new o(a.h, {
         );
     },
     GUILD_SETTINGS_GUILD_THEME_SAVE_START: function () {
-        return (d = { ...d, isSaving: !0, saveError: null }), !0;
+        return ((d = { ...d, isSaving: !0, saveError: null }), !0);
     },
     GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: function (e) {
         let { guildId: t, guildTheme: n } = e;

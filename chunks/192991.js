@@ -47,18 +47,18 @@ function m(e) {
                 O((i) => {
                     let l = (0, h.Eu)(e, t),
                         s = { ...i };
-                    return l in i ? delete s[l] : G || (s[l] = { id: e, permission: !0, type: t }), s;
+                    return (l in i ? delete s[l] : G || (s[l] = { id: e, permission: !0, type: t }), s);
                 });
             },
             [G, O],
         ),
         V = s.useCallback(() => {
-            t(N, []), y();
+            (t(N, []), y());
         }, [t, y, N]);
     s.useEffect(() => () => clearTimeout(A), [A]);
     let W = s.useCallback(
             (e) => {
-                q(e),
+                (q(e),
                     n &&
                         T((t) =>
                             (clearTimeout(t), 0 === e.length)
@@ -66,7 +66,7 @@ function m(e) {
                                 : setTimeout(() => {
                                       c.A.requestMembers(i, e, 200, !1);
                                   }, 500),
-                        );
+                        ));
             },
             [i, n, q, T],
         ),

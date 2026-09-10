@@ -1,4 +1,4 @@
-u.d(e, { A: () => F, e: () => E }), u(321073);
+(u.d(e, { A: () => F, e: () => E }), u(321073));
 var i,
     d = u(17928),
     l = u(713402),
@@ -23,11 +23,11 @@ function D(t) {
 let U = new l.J(
         (t) => {
             let e = [o(t.guild_id)];
-            return t.published && e.push(D(t.guild_id)), e;
+            return (t.published && e.push(D(t.guild_id)), e);
         },
         (t) => {
             let e;
-            return (e = c.default.extractTimestamp(t.id)), t.published ? -e : -e + 1e12;
+            return ((e = c.default.extractTimestamp(t.id)), t.published ? -e : -e + 1e12);
         },
     ),
     a = [];
@@ -52,22 +52,22 @@ class G extends d.Ay.Store {
 }
 let F = new G(n.h, {
     CONNECTION_OPEN: function () {
-        U.clear(), (s = {}), (C = {}), (T = {});
+        (U.clear(), (s = {}), (C = {}), (T = {}));
     },
     GUILD_PRODUCTS_FETCH: function (t) {
         let { guildId: e } = t;
-        (s[e] = 1),
+        ((s[e] = 1),
             [...U.values(o(e))].forEach((t) => {
                 U.delete(t.id);
-            });
+            }));
     },
     GUILD_PRODUCTS_FETCH_SUCCESS: function (t) {
         let { guildId: e, products: u } = t;
-        (s[e] = 2),
+        ((s[e] = 2),
             (T[e] = Date.now()),
             u.forEach((t) => {
-                U.set(t.id, t), (C[t.id] = 2);
-            });
+                (U.set(t.id, t), (C[t.id] = 2));
+            }));
     },
     GUILD_PRODUCTS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
@@ -91,10 +91,10 @@ let F = new G(n.h, {
     },
     GUILD_PRODUCT_FETCH_SUCCESS: function (t) {
         let { product: e } = t;
-        (C[e.id] = 2), U.set(e.id, e);
+        ((C[e.id] = 2), U.set(e.id, e));
     },
     GUILD_PRODUCT_FETCH_FAILURE: function (t) {
         let { productId: e, error: u } = t;
-        (C[e] = 2), 404 === u.status && U.delete(e);
+        ((C[e] = 2), 404 === u.status && U.delete(e));
     },
 });

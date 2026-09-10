@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => E });
+(n.r(t), n.d(t, { default: () => E }));
 var u = n(477900),
     l = n(582128),
     d = n(806163),

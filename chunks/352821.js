@@ -10,10 +10,10 @@ let o = [],
 function u() {
     let e = r.A.getGuildId();
     if (null == e) {
-        (o = []), (c = []), (d = !1);
+        ((o = []), (c = []), (d = !1));
         return;
     }
-    (o = [...s.A.getConnections(e)]), (c = []), (d = !1);
+    ((o = [...s.A.getConnections(e)]), (c = []), (d = !1));
 }
 class m extends i.Ay.Store {
     static displayName = "GuildSettingsOnboardingConnectionsStore";
@@ -64,37 +64,37 @@ let g = new m(l.h, {
             c = [`Maximum ${a.pA} connections allowed`];
             return;
         }
-        (o = [...o, t]), (c = (0, a.n4)(o));
+        ((o = [...o, t]), (c = (0, a.n4)(o)));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REMOVE: function (e) {
         let { index: t } = e;
-        (o = o.filter((e, n) => n !== t)), (c = (0, a.n4)(o));
+        ((o = o.filter((e, n) => n !== t)), (c = (0, a.n4)(o)));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_UPDATE: function (e) {
         let { index: t, updates: n } = e;
-        (o = o.map((e, i) => (i === t ? { ...e, ...n } : e))), (c = (0, a.n4)(o));
+        ((o = o.map((e, i) => (i === t ? { ...e, ...n } : e))), (c = (0, a.n4)(o)));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_REORDER: function (e) {
         let { connections: t } = e;
-        (o = [...t]), (c = (0, a.n4)(o));
+        ((o = [...t]), (c = (0, a.n4)(o)));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_RESET: function () {
         let e = r.A.getGuildId();
         if (null == e) {
-            (o = []), (c = []);
+            ((o = []), (c = []));
             return;
         }
-        (o = [...s.A.getConnections(e)]), (c = []);
+        ((o = [...s.A.getConnections(e)]), (c = []));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SUBMIT: function () {
-        (d = !0), (c = (0, a.n4)(o));
+        ((d = !0), (c = (0, a.n4)(o)));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_SUCCESS: function (e) {
         let { connections: t } = e;
-        (d = !1), (c = []), (o = [...t]);
+        ((d = !1), (c = []), (o = [...t]));
     },
     GUILD_SETTINGS_ONBOARDING_CONNECTIONS_SAVE_FAILED: function (e) {
         let { errors: t } = e;
-        (d = !1), (c = t);
+        ((d = !1), (c = t));
     },
 });

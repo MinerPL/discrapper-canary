@@ -1,4 +1,4 @@
-n.d(t, { kJ: () => h, lg: () => A, Ay: () => I }), n(938796);
+(n.d(t, { kJ: () => h, lg: () => A, Ay: () => I }), n(938796));
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     a = n(136722),
@@ -12,7 +12,7 @@ class d extends s.A {
         return new d(e);
     }
     constructor(e) {
-        super(), (this.id = e.id), (this.name = e.name);
+        (super(), (this.id = e.id), (this.name = e.name));
     }
 }
 var c = n(889227),
@@ -23,7 +23,7 @@ function A(e) {
     let t = { os: e.os, name: e.name };
     null != e.arguments && (t.arguments = e.arguments);
     let n = e.is_launcher ?? e.isLauncher;
-    return null != n && (t.isLauncher = n), t;
+    return (null != n && (t.isLauncher = n), t);
 }
 class h extends s.A {
     id;
@@ -58,7 +58,7 @@ class h extends s.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.icon = e.icon),
@@ -76,7 +76,7 @@ class h extends s.A {
             (this.parentId = e.parent_id ?? e.parentId),
             (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl),
             (this.contentClassification = e.content_classification ?? e.contentClassification),
-            (this.flags = a.iu(e.flags ?? 0));
+            (this.flags = a.iu(e.flags ?? 0)));
     }
     get connectionEntrypointUrl() {
         let { APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: e } = n(534952),
@@ -183,7 +183,7 @@ class I extends h {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             (this.overlay = e.overlay ?? !1),
             (this.overlayWarn = e.overlayWarn ?? !1),
             (this.overlayCompatibilityHook = e.overlayCompatibilityHook ?? !1),
@@ -221,7 +221,7 @@ class I extends h {
             (this.applicationAccountLinkBenefitConfig =
                 e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config),
             (this.vibegrationsProjectId = e.vibegrationsProjectId ?? e.vibegrations_project_id),
-            (this.parentId = e.parentId ?? e.parent_id);
+            (this.parentId = e.parentId ?? e.parent_id));
     }
     getCanonicalGameId() {
         return this.type === _.S7.GAME

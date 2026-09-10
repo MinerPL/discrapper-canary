@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(321073);
+(n.d(t, { A: () => d }), n(321073));
 var i = n(775602),
     r = n(963935),
     a = n(894858),
@@ -12,10 +12,10 @@ class o {
     accordionExpandResolvers = new Map();
     init(e) {
         let { accessibleDirectory: t, navigateWithValidation: n, closeWithValidation: i, onViewChange: r } = e;
-        (this.accessibleDirectory = t),
+        ((this.accessibleDirectory = t),
             (this.navigateWithValidation = n),
             (this.closeWithValidation = i),
-            (this.onViewChange = r);
+            (this.onViewChange = r));
     }
     async maybeWaitForAccordionExpansion(e) {
         null != e &&
@@ -33,11 +33,11 @@ class o {
         if (null == o) return;
         let d = a.A.getField("currentCategoryKey"),
             c = new Map(i);
-        c.set(t, { categoryKey: d, scrollOffset: o.scrollTop }), a.A.setState({ scrollPositionSnapshots: c });
+        (c.set(t, { categoryKey: d, scrollOffset: o.scrollTop }), a.A.setState({ scrollPositionSnapshots: c }));
     }
     deletePanelSnapshot(e) {
         let t = new Map(a.A.getField("scrollPositionSnapshots"));
-        t.delete(e), a.A.setState({ scrollPositionSnapshots: t });
+        (t.delete(e), a.A.setState({ scrollPositionSnapshots: t }));
     }
     deleteAllPanelSnapshots() {
         a.A.setState({ scrollPositionSnapshots: new Map() });
@@ -50,7 +50,7 @@ class o {
         if (null == i) return;
         if ((0, r.Px)(i)) {
             let e = i.parent;
-            for (; null != e; ) {
+            for (; null != e;) {
                 if (e.type === r.Z6.CATEGORY && (0, r.bJ)(e)) return e.key;
                 e = e.parent;
             }
@@ -94,7 +94,7 @@ class o {
             A = E?.parentSidebarItemKey === n.parentSidebarItemKey,
             h = n.parentPanelKey === d,
             I = async () => {
-                t.onTransitionStart?.(),
+                (t.onTransitionStart?.(),
                     A
                         ? this.maybeCreatePanelSnapshot({ currentPanelKey: d, nextPanelKey: o })
                         : this.deleteAllPanelSnapshots(),
@@ -108,7 +108,7 @@ class o {
                                 ? t.showNavigationMobile
                                 : a.A.getField("showNavigationMobile"),
                     }),
-                    null != n.parentSidebarItemKey && s.A.notifyNavigated(n.parentSidebarItemKey);
+                    null != n.parentSidebarItemKey && s.A.notifyNavigated(n.parentSidebarItemKey));
                 let c = null != t.animatePanelScroll ? t.animatePanelScroll : h,
                     E = null != t.animateSidebarScroll && t.animateSidebarScroll;
                 null != u
@@ -122,19 +122,19 @@ class o {
                           animateSidebarScroll: E,
                       });
                 let I = document.querySelector(`[data-nav-anchor-key="${e}"]`);
-                null != I
+                (null != I
                     ? I.focus({ preventScroll: !0 })
                     : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
                     h || this.onViewChange?.(o),
                     (!c || i.Ay.useReducedMotion) &&
                         n.node.type !== r.Z6.CATEGORY &&
-                        a.A.setState({ requestFlashKey: e });
+                        a.A.setState({ requestFlashKey: e }));
             };
         h ? I() : this.navigateWithValidation?.(e, I);
     }
     async scrollToOffset(e) {
         let { scrollOffset: t } = e;
-        await new Promise((e) => requestAnimationFrame(() => e())), await l.A.scrollPanelNodeTo(t);
+        (await new Promise((e) => requestAnimationFrame(() => e())), await l.A.scrollPanelNodeTo(t));
     }
     async scrollToTarget(e) {
         let {
@@ -155,11 +155,11 @@ class o {
             ]));
     }
     reset() {
-        (this.accessibleDirectory = null),
+        ((this.accessibleDirectory = null),
             (this.navigateWithValidation = null),
             (this.onViewChange = null),
             this.accordionExpandResolvers.clear(),
-            (this.closeWithValidation = null);
+            (this.closeWithValidation = null));
     }
 }
 let d = new o();

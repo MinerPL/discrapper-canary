@@ -15,12 +15,12 @@ var i = n(477900),
 let I = new WeakMap();
 function f(e) {
     let t = (0, d.p3)(e, h.qd);
-    return null == t && (t = (0, d.wB)(e, E.IP)), t ?? null;
+    return (null == t && (t = (0, d.wB)(e, E.IP)), t ?? null);
 }
 function p(e, t) {
     if (e.contains(t)) return !0;
     let n = f(t);
-    for (; null != n; ) {
+    for (; null != n;) {
         let t = I.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
@@ -39,14 +39,14 @@ function m(e, t, n, i, r) {
                 o()(null != t.bottom, "Missing bottom"), i.offsetHeight - (t.bottom + n.offsetHeight) - (r?.top ?? 0)
             );
         case "bottom":
-            return o()(null != t.top, "Missing top"), i.offsetHeight - (t.top + n.offsetHeight) - (r?.bottom ?? 0);
+            return (o()(null != t.top, "Missing top"), i.offsetHeight - (t.top + n.offsetHeight) - (r?.bottom ?? 0));
         case "left":
-            return o()(null != t.right, "Missing right"), i.offsetWidth - (t.right + n.offsetWidth) - (r?.left ?? 0);
+            return (o()(null != t.right, "Missing right"), i.offsetWidth - (t.right + n.offsetWidth) - (r?.left ?? 0));
         case "right":
-            return o()(null != t.left, "Missing left"), i.offsetWidth - (t.left + n.offsetWidth) - (r?.right ?? 0);
+            return (o()(null != t.left, "Missing left"), i.offsetWidth - (t.left + n.offsetWidth) - (r?.right ?? 0));
         case "center":
         case "window_center":
-            return o()(null != t.left, "Missing left"), i.offsetWidth - (t.left + n.offsetWidth / 2);
+            return (o()(null != t.left, "Missing left"), i.offsetWidth - (t.left + n.offsetWidth / 2));
         default:
             throw Error(`Unexpected position: ${e}`);
     }
@@ -212,7 +212,7 @@ class N extends r.Component {
         if (t && d < 0) {
             let t = g(e),
                 a = this.calculatePositionStyle(t, i, r);
-            (u = a.style), (_ = a.nudge);
+            ((u = a.style), (_ = a.nudge));
             let s = m(t, u, i, r, n);
             if ((s > d && ((l = { position: t, style: u, nudge: _ }), (c = s)), d < 0 && s < 0)) {
                 let a,
@@ -252,24 +252,24 @@ class N extends r.Component {
         let { targetRef: e, onMount: t } = this.props;
         this.setState({ isPositioned: !0, ...this.calculateState() });
         let n = this.elementRef.current;
-        o()(null != n, "Missing elementRef"),
+        (o()(null != n, "Missing elementRef"),
             null != e.current && I.set(n, e.current),
             n?.ownerDocument?.defaultView?.addEventListener("resize", this.updatePosition),
-            t?.();
+            t?.());
     }
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        (T(e) !== T(this.props) || ((n = this.props), (i = S(e)), (r = S(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((T(e) !== T(this.props) || ((n = this.props), (i = S(e)), (r = S(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
-            t.position !== this.state.position && this.props.onPositionChange?.(this.state.position);
+            t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }
     componentWillUnmount() {
         let e = this.elementRef.current;
-        o()(null != e, "Missing elementRef"),
+        (o()(null != e, "Missing elementRef"),
             I.delete(e),
             e?.ownerDocument?.defaultView?.removeEventListener("resize", this.updatePosition),
-            this.props.onUnmount?.();
+            this.props.onUnmount?.());
     }
     updatePosition = () => {
         this.setState(this.calculateState());

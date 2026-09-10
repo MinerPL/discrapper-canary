@@ -48,22 +48,22 @@ let c = new d(n.h, {
     WISHLIST_FETCH_START: function (t) {
         let { wishlistId: e } = t,
             r = o(e);
-        (r.status = "fetching"), (r.error = void 0);
+        ((r.status = "fetching"), (r.error = void 0));
     },
     WISHLIST_FETCH_SUCCESS: function (t) {
         let { wishlistId: e, wishlistData: r, updatedAt: i } = t,
             n = o(e);
-        (n.data = r), (n.status = "success"), (n.error = void 0), (n.updatedAt = i), (n.lastFetchedAt = Date.now());
+        ((n.data = r), (n.status = "success"), (n.error = void 0), (n.updatedAt = i), (n.lastFetchedAt = Date.now()));
     },
     WISHLIST_FETCH_FAILURE: function (t) {
         let { wishlistId: e, error: r } = t,
             i = o(e);
-        (i.status = "error"), (i.error = r);
+        ((i.status = "error"), (i.error = r));
     },
     WISHLIST_ADD_SKU_SUCCESS: function (t) {
         let { wishlistId: e, wishlistData: r } = t,
             i = o(e);
-        (i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now());
+        ((i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now()));
     },
     WISHLIST_ADD_SKU_FAILURE: function (t) {
         let { error: e } = t;
@@ -83,16 +83,16 @@ let c = new d(n.h, {
     WISHLIST_REMOVE_SKU_SUCCESS: function (t) {
         let { wishlistId: e, wishlistData: r } = t,
             i = o(e);
-        (i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now());
+        ((i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now()));
     },
     WISHLIST_REMOVE_SKU_FAILURE: function (t) {
         let { wishlistId: e, error: r } = t;
-        (o(e).updatedAt = void 0), l.A.captureException(r);
+        ((o(e).updatedAt = void 0), l.A.captureException(r));
     },
     WISHLIST_UPDATE_VISIBILITY_SUCCESS: function (t) {
         let { wishlistId: e } = t,
             r = o(e);
-        (r.status = "success"), (r.error = void 0), (r.lastFetchedAt = Date.now());
+        ((r.status = "success"), (r.error = void 0), (r.lastFetchedAt = Date.now()));
     },
     WISHLIST_UPDATE_VISIBILITY_FAILURE: function (t) {
         let { error: e } = t;
@@ -105,11 +105,11 @@ let c = new d(n.h, {
     WISHLIST_REORDER_SUCCESS: function (t) {
         let { wishlistId: e, wishlistData: r } = t,
             i = o(e);
-        (i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now());
+        ((i.data = r), (i.status = "success"), (i.error = void 0), (i.lastFetchedAt = Date.now()));
     },
     WISHLIST_REORDER_FAILURE: function (t) {
         let { wishlistId: e, error: r } = t;
-        (o(e).updatedAt = void 0), l.A.captureException(r);
+        ((o(e).updatedAt = void 0), l.A.captureException(r));
     },
     WISHLIST_ITEM_PURCHASED: function (t) {
         let { recipientId: e, skuId: i } = t,

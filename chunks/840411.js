@@ -1,6 +1,6 @@
-n.d(s, { Ap: () => u, hE: () => o, rI: () => r }), n(321073);
+(n.d(s, { Ap: () => u, hE: () => o, rI: () => r }), n(321073));
 var l = n(32731);
-n(993046), n(872472), n(394300), n(721932);
+(n(993046), n(872472), n(394300), n(721932));
 var t = n(652215),
     i = n(202541),
     a = n(375708);
@@ -28,7 +28,7 @@ function u(e, s, n, l) {
         : ((t = s[l - 1]?.skuId ?? null), (i = s[l]?.skuId ?? null));
     let a = [...s],
         [r] = a.splice(n, 1);
-    return a.splice(l, 0, r), { newWishlistData: e.set("items", a), previousSkuId: t, nextSkuId: i };
+    return (a.splice(l, 0, r), { newWishlistData: e.set("items", a), previousSkuId: t, nextSkuId: i });
 }
 function o(e, s) {
     let n = [],

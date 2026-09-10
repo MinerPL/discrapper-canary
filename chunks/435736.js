@@ -17,7 +17,7 @@ function f() {
     return I.getState();
 }
 function p(e) {
-    I.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, I.getState());
+    (I.setState((t) => ({ ...t, ...e }), !0), s.w.set(A, I.getState()));
 }
 function T() {
     p({ isNewOverlayUser: void 0 });

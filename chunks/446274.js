@@ -1,5 +1,5 @@
 let n;
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.runtimeHashMessageKey = function (e) {
         let t = (function (e) {
             e = BigInt(e);
@@ -17,7 +17,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             o[t[3] >> 2],
             o[((3 & t[3]) << 4) | (t[4] >> 4)],
         ].join("");
-    });
+    }));
 let i = r(618830),
     o = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
     a = !((new Uint32Array((n = new Uint8Array(4)).buffer)[0] = 1) & n[0]);

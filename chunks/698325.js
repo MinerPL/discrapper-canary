@@ -1,4 +1,4 @@
-i.d(t, { default: () => S }), i(321073);
+(i.d(t, { default: () => S }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(136722),
@@ -80,14 +80,14 @@ let S = function (e) {
             ));
     async function L() {
         if (!q) return;
-        P(!0), Z(!1);
+        (P(!0), Z(!1));
         let e = [...T];
         if (R) {
             let t = (0, x.af)(S);
             e.push(t);
         }
         try {
-            await K(j, e), N();
+            (await K(j, e), N());
         } catch (e) {
             Z(!0);
         } finally {

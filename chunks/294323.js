@@ -16,12 +16,16 @@ function g(l, n) {
         E,
         [F, C] =
             ((0, f.A)(null != n ? [n] : []),
-            (0, u.yK)([a.A], () => {
-                if (null == n) return [!1, null];
-                let l = a.A.getConfig(n) ?? null,
-                    e = a.A.getFetchState(n);
-                return [(e === a.e.NOT_FETCHED || e === a.e.FETCHING) && null == l, l];
-            }, [n])),
+            (0, u.yK)(
+                [a.A],
+                () => {
+                    if (null == n) return [!1, null];
+                    let l = a.A.getConfig(n) ?? null,
+                        e = a.A.getFetchState(n);
+                    return [(e === a.e.NOT_FETCHED || e === a.e.FETCHING) && null == l, l];
+                },
+                [n],
+            )),
         [T, y] =
             ((e = null != C ? n : null),
             (d = (0, r.h)(e)),
@@ -34,11 +38,15 @@ function g(l, n) {
             t.useEffect(() => {
                 E && null != g && A.A.fetchUserApplicationIdentitiesWithProfiles(g);
             }, [E, g]),
-            (0, u.yK)([c.A], () => {
-                if (null == g || null == h) return [!1, null];
-                let l = c.A.getUserIdentityByApplication(g, h) ?? null;
-                return [(c.A.isFetchingUser(g) || c.A.getFetchState(g) === c.e.NOT_FETCHED) && null == l, l];
-            }, [g, h])),
+            (0, u.yK)(
+                [c.A],
+                () => {
+                    if (null == g || null == h) return [!1, null];
+                    let l = c.A.getUserIdentityByApplication(g, h) ?? null;
+                    return [(c.A.isFetchingUser(g) || c.A.getFetchState(g) === c.e.NOT_FETCHED) && null == l, l];
+                },
+                [g, h],
+            )),
         [H, I] = (function (l) {
             let [n, e] = (0, u.yK)(
                     [p.A],

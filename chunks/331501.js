@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => c });
+(a.r(t), a.d(t, { default: () => c }));
 var i = { about: "k\xf6r\xfclbel\xfcl", over: "t\xf6bb mint", almost: "majdnem", lessthan: "kevesebb mint" },
     n = {
         xseconds: " m\xe1sodperc",
@@ -183,7 +183,7 @@ let c = {
             u = (null == a ? void 0 : a.comparison) || 0,
             m = l ? r[o][u] : n[o],
             h = "halfaminute" === o ? m : t + m;
-        return s && (h = i[s[0].toLowerCase()] + " " + h), h;
+        return (s && (h = i[s[0].toLowerCase()] + " " + h), h);
     },
     formatLong: d,
     formatRelative: function (e, t) {

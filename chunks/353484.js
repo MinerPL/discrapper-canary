@@ -16,7 +16,7 @@ class l extends o.AbstractParserWithWordBoundaryChecking {
         let r = e.createParsingResult(t.index, t[0]),
             s = a.MONTH_DICTIONARY[t[3].toLowerCase()],
             o = parseInt(t[1]);
-        if (o > 31) return (t.index = t.index + t[1].length), null;
+        if (o > 31) return ((t.index = t.index + t[1].length), null);
         if ((r.start.assign("month", s), r.start.assign("day", o), t[4])) {
             let e = (0, i.parseYear)(t[4]);
             r.start.assign("year", e);
@@ -26,7 +26,7 @@ class l extends o.AbstractParserWithWordBoundaryChecking {
         }
         if (t[2]) {
             let e = parseInt(t[2]);
-            (r.end = r.start.clone()), r.end.assign("day", e);
+            ((r.end = r.start.clone()), r.end.assign("day", e));
         }
         return r;
     }

@@ -10,7 +10,7 @@ var t = l(477900),
 function c(e) {
     let { userId: n, onClose: l } = e,
         t = i.useCallback(() => {
-            s.A.openPrivateChannel({ recipientIds: n }), l?.(), (0, r.closeAllModals)();
+            (s.A.openPrivateChannel({ recipientIds: n }), l?.(), (0, r.closeAllModals)());
         }, [n, l]);
     return { action: d.pt.SEND_MESSAGE, icon: a.ChatIcon, onClick: t, text: u.intl.string(u.t.zROXEV) };
 }

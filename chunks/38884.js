@@ -18,7 +18,7 @@ function u(t) {
             {
                 text: o.intl.string(o.t.TxBQzD),
                 onClick: () => {
-                    null != c && (0, s.openUserProfileModal)({ userId: c.id, tabSection: l.RP.WISHLIST }), n();
+                    (null != c && (0, s.openUserProfileModal)({ userId: c.id, tabSection: l.RP.WISHLIST }), n());
                 },
                 variant: "secondary",
             },

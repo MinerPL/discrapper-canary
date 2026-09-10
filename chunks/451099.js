@@ -17,7 +17,7 @@ function h() {
         else {
             if (null == _) return;
             let e = _;
-            (_ = null), d.Ay.unblockDisplaySleep(e);
+            ((_ = null), d.Ay.unblockDisplaySleep(e));
         }
     }).catch((e) => {
         u.error("Failed to update the display sleep blocker", e);
@@ -39,7 +39,7 @@ class f extends i.A {
             (this.stores = new Map().set(l.A, I).set(c.A, I).set(s.A, I).set(r.Ay, I));
     }
     _terminate() {
-        (E = !1), h();
+        ((E = !1), h());
     }
 }
 let p = new f();

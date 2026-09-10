@@ -23,24 +23,24 @@ function S() {
 }
 function N() {
     let e;
-    Date.now() - I > A.sdF || S()
+    (Date.now() - I > A.sdF || S()
         ? f || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: I })
         : f && l.h.dispatch({ type: "IDLE", idle: !1 }),
         0 === (e = c.cU.getSetting()) || null != i || Date.now() - I > Math.min(e * u.A.Millis.SECOND, A.sdF) || S()
             ? p || l.h.dispatch({ type: "AFK", afk: !0 })
-            : p && l.h.dispatch({ type: "AFK", afk: !1 });
+            : p && l.h.dispatch({ type: "AFK", afk: !1 }));
 }
 function C(e) {
-    e && (i = Date.now()), N();
+    (e && (i = Date.now()), N());
 }
 if (!__OVERLAY__) {
     _.isPlatformEmbedded && d.A?.powerMonitor != null
         ? (!(function e() {
               function t(t) {
                   let n = Date.now() - t;
-                  (null == i || n > i) && ((I = Math.max(n, I)), (i = null)),
+                  ((null == i || n > i) && ((I = Math.max(n, I)), (i = null)),
                       N(),
-                      setTimeout(e, 10 * u.A.Millis.SECOND);
+                      setTimeout(e, 10 * u.A.Millis.SECOND));
               }
               if (d.A?.powerMonitor?.getSystemIdleTimeMs != null) {
                   let e = d.A.powerMonitor.getSystemIdleTimeMs();
@@ -48,22 +48,24 @@ if (!__OVERLAY__) {
               }
           })(),
           d.A.powerMonitor.on("resume", () => {
-              (T = !1), C(!1);
+              ((T = !1), C(!1));
           }),
           d.A.powerMonitor.on("suspend", () => {
-              (T = !0), C(!0), o.default.disconnect();
+              ((T = !0), C(!0), o.default.disconnect());
           }),
           d.A.powerMonitor.on("lock-screen", () => {
-              (m = !0), C(!0);
+              ((m = !0), C(!0));
           }),
           d.A.powerMonitor.on("unlock-screen", () => {
-              (m = !1), C(!1);
+              ((m = !1), C(!1));
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
         O({});
     }, 500);
-    window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
+    (window.addEventListener("mouseup", e),
+        window.addEventListener("wheel", e),
+        window.addEventListener("keypress", e));
 }
 function O(e) {
     let { timestamp: t, type: n, bypassIdleUpdate: r } = e,
@@ -107,11 +109,11 @@ let L = new R(l.h, {
     },
     SPEAKING: function (e) {
         let { userId: t, speakingFlags: n } = e;
-        return n !== h.ME.NONE && t === E.default.getId() && O({}), !1;
+        return (n !== h.ME.NONE && t === E.default.getId() && O({}), !1);
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        return (g = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1;
+        return ((g = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1);
     },
     OVERLAY_SET_NOT_IDLE: O,
     CHANNEL_SELECT: O,

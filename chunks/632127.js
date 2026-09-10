@@ -1,4 +1,4 @@
-d.d(t, { p_: () => lz, idCaptureMachine: () => lW }), d(522681);
+(d.d(t, { p_: () => lz, idCaptureMachine: () => lW }), d(522681));
 var i = d(580607),
     e = d(41851),
     c = d(269882),
@@ -7,7 +7,7 @@ var i = d(580607),
     n = d(924260);
 d(489510);
 var Z = d(886347);
-d(219877), d(309076);
+(d(219877), d(309076));
 var b = d(646613);
 d(761969);
 var m = d(867386),
@@ -28,7 +28,7 @@ d(588936);
 var X = d(974916),
     r = d(159126),
     y = d(934350);
-d(132680), d(673661);
+(d(132680), d(673661));
 var Y = d(876229);
 let T = new Set(["DIGITAL_ID_REQUESTED_BUT_OTHER_PROVIDED", "ID_TYPE_UNACCEPTABLE"]);
 function V(l) {
@@ -126,7 +126,7 @@ let z = ["application/pdf"],
             hasAttemptsRemaining: ({ context: l }) => l.attemptsRemaining > 0,
             isTerminalFailReason: ({ event: l }) => {
                 var t;
-                return (t = R(l)), "string" == typeof t?.failReason && T.has(t.failReason);
+                return ((t = R(l)), "string" == typeof t?.failReason && T.has(t.failReason));
             },
             isCurrentFailReasonTerminal: ({ context: l }) => {
                 let t = new Set(["DIGITAL_ID_REQUESTED_BUT_OTHER_PROVIDED", "ID_TYPE_UNACCEPTABLE"]);
@@ -257,27 +257,27 @@ function x(l, t) {
 let g = (l) =>
         new Promise((t, d) => {
             let i = new FileReader();
-            (i.onload = () => {
+            ((i.onload = () => {
                 let l = i.result;
                 "string" == typeof l ? t(l) : d(Error("FileReader produced non-string result"));
             }),
                 (i.onerror = () => {
                     d(i.error ?? Error("FileReader failed"));
                 }),
-                i.readAsDataURL(l);
+                i.readAsDataURL(l));
         }),
     D = async (l, t) => {
         let d = URL.createObjectURL(l);
         try {
             let i = await new Promise((l, t) => {
                     let i = new Image();
-                    (i.onload = () => l(i)), (i.onerror = () => t(Error("Image decoding failed"))), (i.src = d);
+                    ((i.onload = () => l(i)), (i.onerror = () => t(Error("Image decoding failed"))), (i.src = d));
                 }),
                 e = i.naturalWidth || i.width,
                 c = i.naturalHeight || i.height;
             if (e <= 0 || c <= 0) return g(l);
             let a = document.createElement("canvas");
-            (a.width = e), (a.height = c);
+            ((a.width = e), (a.height = c));
             let s = a.getContext("2d");
             if (!s) return g(l);
             return (
@@ -449,18 +449,18 @@ async function Q(l) {
         G = a;
     if (m && o)
         try {
-            await m.analyzeFrame(o), m.update(), (G = m.getMetadata());
+            (await m.analyzeFrame(o), m.update(), (G = m.getMetadata()));
         } catch (l) {
             console.warn("[IdCapture] Analytics failed:", l);
         }
     let p = O(t, u),
         N = { base64Image: d, metadata: G },
         M = { imageType: "id" };
-    (h && "front" === t && (M.onlyFront = !0), b && "back" === t)
+    ((h && "front" === t && (M.onlyFront = !0), b && "back" === t)
         ? (M.glare = 0)
         : void 0 !== n && (M.glare = (1 - n) * 100),
         void 0 !== Z && (M.sharpness = (1 - Z) * 100),
-        !1 === W && "front" === t && (M.extractIdFace = !1);
+        !1 === W && "front" === t && (M.extractIdFace = !1));
     try {
         let l = await e.t.post(p, N, { signal: c, query: M, onUploadProgress: i });
         if (!l.ok) throw Error(`POST ${p} failed: ${l.status} ${l.statusText}`);
@@ -473,7 +473,7 @@ async function Q(l) {
                 backIdImage: n.croppedBackID,
                 ...n,
             };
-        return i?.(100), Z;
+        return (i?.(100), Z);
     } catch (t) {
         let l = t instanceof Error ? t.message : "Unknown error";
         throw Error(`${F.UPLOAD_ERROR}: ${l}`);
@@ -524,7 +524,7 @@ async function A(l) {
     let { side: t, base64Image: d, retry: i, onlyFront: c, signal: a, isSecondId: s, extractIdFace: n } = l,
         Z = O("back" === t ? "back" : "front", s),
         b = { captureType: "UPLOAD" };
-    i && (b.retry = !0), c && "front" === t && (b.onlyFront = !0), !1 === n && "back" !== t && (b.extractIdFace = !1);
+    (i && (b.retry = !0), c && "front" === t && (b.onlyFront = !0), !1 === n && "back" !== t && (b.extractIdFace = !1));
     let m = await e.t.post(Z, { base64Image: d }, { signal: a, query: b });
     if (!m.ok) throw Error(`POST ${Z} failed: ${m.status} ${m.statusText}`);
     return m.data;
@@ -814,7 +814,7 @@ let _ = async (l) => {
     le = (0, b.a)(async ({ input: l }) => (0, u.n)(l)),
     lc = (0, b.a)(async ({ input: l }) => E(l)),
     la = (0, b.i)(({ input: l, sendBack: t }) => {
-        if (!l.frameCapturer || !l.provider) return t({ type: "DETECTION_UPDATE", status: "error" }), () => {};
+        if (!l.frameCapturer || !l.provider) return (t({ type: "DETECTION_UPDATE", status: "error" }), () => {});
         let d = l.provider,
             e = null,
             c = null,
@@ -842,7 +842,7 @@ let _ = async (l) => {
                     (b = l),
                     t({ type: "DETECTION_UPDATE", status: l }),
                     (Z = n.setTimeout(() => {
-                        (Z = null), (b = null), t({ type: "DETECTION_UPDATE", status: "detecting" });
+                        ((Z = null), (b = null), t({ type: "DETECTION_UPDATE", status: "detecting" }));
                     }, 500)));
             },
             p = l.frameCapturer.getLatestCanvas(),
@@ -890,7 +890,7 @@ let _ = async (l) => {
         };
         d.setThresholds(r);
         let y = l.config.modelVersion ?? Y.n;
-        d.setModelType(y),
+        (d.setModelType(y),
             d.setCallbacks({
                 onFarAway: () => {
                     s || h("farAway");
@@ -909,20 +909,20 @@ let _ = async (l) => {
                     s || t({ type: "DETECTION_UPDATE", status: "idNotDetected" });
                 },
                 onSwitchToManualCapture: () => {
-                    (s = !1), t({ type: "SWITCH_TO_MANUAL_CAPTURE" });
+                    ((s = !1), t({ type: "SWITCH_TO_MANUAL_CAPTURE" }));
                 },
                 onCapturing: () => {
-                    u(), (m = null), (s = !0), t({ type: "DETECTION_UPDATE", status: "capturing" });
+                    (u(), (m = null), (s = !0), t({ type: "DETECTION_UPDATE", status: "capturing" }));
                 },
                 onBestFrame: (l, d, i) => {
-                    e && ((c = e.clone()), (a = { glare: d, sharpness: l })),
-                        ("horizontal" === i || "vertical" === i) && t({ type: "ORIENTATION_CHANGE", orientation: i });
+                    (e && ((c = e.clone()), (a = { glare: d, sharpness: l })),
+                        ("horizontal" === i || "vertical" === i) && t({ type: "ORIENTATION_CHANGE", orientation: i }));
                 },
                 onCapture: () => {
-                    (s = !1),
+                    ((s = !1),
                         c
                             ? t({ type: "DETECTION_SUCCESS", canvas: c, qualityElements: a })
-                            : e && t({ type: "DETECTION_SUCCESS", canvas: e.clone(), qualityElements: {} });
+                            : e && t({ type: "DETECTION_SUCCESS", canvas: e.clone(), qualityElements: {} }));
                 },
                 onIdTypeChange: (l) => {
                     t({ type: "ID_TYPE_CHANGE", idType: l });
@@ -934,21 +934,21 @@ let _ = async (l) => {
                     t({ type: "COUNTER_VALUE_CHANGE", value: l });
                 },
             }),
-            t({ type: "DETECTION_UPDATE", status: "detecting" });
+            t({ type: "DETECTION_UPDATE", status: "detecting" }));
         let T = new W.y({
             capturer: l.frameCapturer,
             provider: {
                 processFrame: async (l) => {
-                    (e = G.t.fromImageData(l)), t({ type: "DETECTION_FRAME", frame: l }), await d.processFrame(l);
+                    ((e = G.t.fromImageData(l)), t({ type: "DETECTION_FRAME", frame: l }), await d.processFrame(l));
                 },
                 reset: () => {
-                    Z && (n.clearTimeout(Z), (Z = null), (b = null)),
+                    (Z && (n.clearTimeout(Z), (Z = null), (b = null)),
                         (e = null),
                         (c = null),
                         (a = {}),
                         (s = !1),
                         (m = null),
-                        d.reset();
+                        d.reset());
                 },
             },
             onFrame: (l) => t({ type: "DETECTION_FRAME", frame: l }),
@@ -961,7 +961,7 @@ let _ = async (l) => {
                 },
             }),
             () => {
-                u(), T?.dispose();
+                (u(), T?.dispose());
             }
         );
     }),
@@ -978,7 +978,7 @@ let _ = async (l) => {
                 c && (await l.deepsightService.analyzeFrame(c));
                 let a = l.deepsightService.getAnalysisStatus(),
                     n = l.deepsightService.getMotionStatus();
-                "front" === l.type
+                ("front" === l.type
                     ? await (0, s.t)({
                           frontIdStatsAnalysisStatus: a,
                           backIdStatsAnalysisStatus: "",
@@ -991,7 +991,7 @@ let _ = async (l) => {
                           selfieStatsAnalysisStatus: "",
                           motionStatus: n,
                       }),
-                    (d = l.deepsightService.getMetadata());
+                    (d = l.deepsightService.getMetadata()));
             } catch {}
         let c = l.canvas?.getImageData() ?? void 0,
             a = l.deepsightService?.getPipelineState() ?? "";
@@ -1036,7 +1036,7 @@ let _ = async (l) => {
         return !!t && l.deepsightService.checkVirtualCamera(t);
     });
 function lo(l) {
-    l.frameCapturer?.dispose(), l.stream && v(l.stream);
+    (l.frameCapturer?.dispose(), l.stream && v(l.stream));
 }
 function lu(l) {
     l.provider?.dispose?.();
@@ -2659,10 +2659,10 @@ function lp({ actor: l, trackElementClicked: t, trackCaptureAttemptFinished: d }
         {
             load() {
                 let { config: t } = l.getSnapshot().context;
-                !0 === t.ds && (0, m.t)(!0), (0, u.o)(), l.send({ type: "LOAD" });
+                (!0 === t.ds && (0, m.t)(!0), (0, u.o)(), l.send({ type: "LOAD" }));
             },
             selectDocument(d) {
-                t?.(`selectDocument.${d}`), l.send({ type: "SELECT_DOCUMENT", documentType: d });
+                (t?.(`selectDocument.${d}`), l.send({ type: "SELECT_DOCUMENT", documentType: d }));
             },
             async nextStep() {
                 t?.("nextStep");
@@ -2674,85 +2674,85 @@ function lp({ actor: l, trackElementClicked: t, trackCaptureAttemptFinished: d }
                 l.send({ type: "NEXT_STEP" });
             },
             requestPermission() {
-                t?.("requestPermission"), l.send({ type: "REQUEST_PERMISSION" });
+                (t?.("requestPermission"), l.send({ type: "REQUEST_PERMISSION" }));
             },
             goToLearnMore() {
-                t?.("goToLearnMore"), l.send({ type: "GO_TO_LEARN_MORE" });
+                (t?.("goToLearnMore"), l.send({ type: "GO_TO_LEARN_MORE" }));
             },
             back() {
-                t?.("back"), l.send({ type: "BACK" });
+                (t?.("back"), l.send({ type: "BACK" }));
             },
             close() {
-                t?.("close"), l.send({ type: "QUIT" });
+                (t?.("close"), l.send({ type: "QUIT" }));
             },
             reset() {
                 l.send({ type: "RESET" });
             },
             retryCapture() {
-                t?.("retryCapture"), l.send({ type: "RETRY_CAPTURE" });
+                (t?.("retryCapture"), l.send({ type: "RETRY_CAPTURE" }));
             },
             continueExhausted() {
-                t?.("continueExhausted"), l.send({ type: "CONTINUE_EXHAUSTED" });
+                (t?.("continueExhausted"), l.send({ type: "CONTINUE_EXHAUSTED" }));
             },
             continueFromError() {
-                t?.("continueFromError"), l.send({ type: "CONTINUE_FROM_ERROR" });
+                (t?.("continueFromError"), l.send({ type: "CONTINUE_FROM_ERROR" }));
             },
             capture() {
-                t?.("capture"), l.send({ type: "MANUAL_CAPTURE" });
+                (t?.("capture"), l.send({ type: "MANUAL_CAPTURE" }));
             },
             switchToManualCapture() {
-                t?.("switchToManualCapture"), l.send({ type: "SWITCH_TO_MANUAL_CAPTURE" });
+                (t?.("switchToManualCapture"), l.send({ type: "SWITCH_TO_MANUAL_CAPTURE" }));
             },
             continueToBack() {
-                t?.("continueToBack"), l.send({ type: "CONTINUE_TO_BACK" });
+                (t?.("continueToBack"), l.send({ type: "CONTINUE_TO_BACK" }));
             },
             continueToFront() {
-                t?.("continueToFront"), l.send({ type: "CONTINUE_TO_FRONT" });
+                (t?.("continueToFront"), l.send({ type: "CONTINUE_TO_FRONT" }));
             },
             skipBack() {
-                t?.("skipBack"), l.send({ type: "SKIP_BACK" });
+                (t?.("skipBack"), l.send({ type: "SKIP_BACK" }));
             },
             acceptMandatoryConsent() {
-                t?.("acceptMandatoryConsent"), l.send({ type: "CONSENT_ACCEPT" });
+                (t?.("acceptMandatoryConsent"), l.send({ type: "CONSENT_ACCEPT" }));
             },
             cancelMandatoryConsent() {
-                t?.("cancelMandatoryConsent"), l.send({ type: "CONSENT_CANCEL" });
+                (t?.("cancelMandatoryConsent"), l.send({ type: "CONSENT_CANCEL" }));
             },
             updateDetectionArea(t) {
                 l.send({ type: "UPDATE_DETECTION_AREA", detectionArea: t });
             },
             manualUploadChangeTab(d) {
-                t?.(`manualUpload.tab.${d}`), l.send({ type: "MANUAL_UPLOAD_TAB_CHANGED", tab: d });
+                (t?.(`manualUpload.tab.${d}`), l.send({ type: "MANUAL_UPLOAD_TAB_CHANGED", tab: d }));
             },
             manualUploadSelectFile(d, i) {
-                t?.(`manualUpload.select.${d}`), l.send({ type: "MANUAL_UPLOAD_FILE_SELECTED", side: d, file: i });
+                (t?.(`manualUpload.select.${d}`), l.send({ type: "MANUAL_UPLOAD_FILE_SELECTED", side: d, file: i }));
             },
             manualUploadContinue() {
-                t?.("manualUpload.continue"), l.send({ type: "MANUAL_UPLOAD_CONTINUE" });
+                (t?.("manualUpload.continue"), l.send({ type: "MANUAL_UPLOAD_CONTINUE" }));
             },
             manualUploadReset() {
-                t?.("manualUpload.reset"), l.send({ type: "MANUAL_UPLOAD_RESET" });
+                (t?.("manualUpload.reset"), l.send({ type: "MANUAL_UPLOAD_RESET" }));
             },
             digitalUploadNextStep() {
-                t?.("digitalUpload.nextStep"), l.send({ type: "DIGITAL_UPLOAD_NEXT_STEP" });
+                (t?.("digitalUpload.nextStep"), l.send({ type: "DIGITAL_UPLOAD_NEXT_STEP" }));
             },
             digitalUploadPickFile(d) {
-                t?.("digitalUpload.pickFile"), l.send({ type: "DIGITAL_UPLOAD_FILE_PICKED", file: d });
+                (t?.("digitalUpload.pickFile"), l.send({ type: "DIGITAL_UPLOAD_FILE_PICKED", file: d }));
             },
             digitalUploadConfirm() {
-                t?.("digitalUpload.confirmFile"), l.send({ type: "DIGITAL_UPLOAD_CONFIRM" });
+                (t?.("digitalUpload.confirmFile"), l.send({ type: "DIGITAL_UPLOAD_CONFIRM" }));
             },
             digitalUploadReplace() {
-                t?.("digitalUpload.replaceFile"), l.send({ type: "DIGITAL_UPLOAD_REPLACE" });
+                (t?.("digitalUpload.replaceFile"), l.send({ type: "DIGITAL_UPLOAD_REPLACE" }));
             },
             digitalUploadRetry() {
-                t?.("digitalUpload.retry"), l.send({ type: "DIGITAL_UPLOAD_RETRY" });
+                (t?.("digitalUpload.retry"), l.send({ type: "DIGITAL_UPLOAD_RETRY" }));
             },
             digitalUploadScanInstead() {
-                t?.("digitalUpload.scanInstead"), l.send({ type: "DIGITAL_UPLOAD_SCAN_INSTEAD" });
+                (t?.("digitalUpload.scanInstead"), l.send({ type: "DIGITAL_UPLOAD_SCAN_INSTEAD" }));
             },
             digitalUploadChooseAnother() {
-                t?.("digitalUpload.chooseAnother"), l.send({ type: "DIGITAL_UPLOAD_CHOOSE_ANOTHER" });
+                (t?.("digitalUpload.chooseAnother"), l.send({ type: "DIGITAL_UPLOAD_CHOOSE_ANOTHER" }));
             },
         }
     );
@@ -3076,7 +3076,7 @@ async function lw(l, t) {
         })(l.croppedCanvas ?? null),
     };
 }
-d(788783),
+(d(788783),
     lW.provide({
         actors: {
             uploadIdImage: (0, b.a)(async ({ input: l, signal: t }) => await lw(l, t)),
@@ -3102,4 +3102,4 @@ d(788783),
                 !l.config.onlyBack &&
                 !l.config.usSmartCapture,
         },
-    });
+    }));

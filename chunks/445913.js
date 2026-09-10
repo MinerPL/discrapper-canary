@@ -22,10 +22,14 @@ var t,
 function N(e) {
     let { userId: r, wrapperClassName: s, children: t } = e,
         d = (0, c.bG)([C.A], () => C.A.getProgressForUserId(r), [r]),
-        N = (0, c.bG)([C.A], () => {
-            let e = C.A.getTrackingEntryForUserId(r);
-            return e?.presence?.phase === A.COMPLETED;
-        }, [r]),
+        N = (0, c.bG)(
+            [C.A],
+            () => {
+                let e = C.A.getTrackingEntryForUserId(r);
+                return e?.presence?.phase === A.COMPLETED;
+            },
+            [r],
+        ),
         R = (0, c.bG)([o.Ay], () => o.Ay.useReducedMotion),
         D = (0, l.Ay)(d),
         m = (0, l.Ay)(N),
@@ -53,12 +57,12 @@ function N(e) {
             let e = f.current?.getBoundingClientRect();
             null != e && x(e.left + e.width / 2, e.top + e.height / 2, L, 250);
         }, [L, x, R]);
-    n.useEffect(() => {
+    (n.useEffect(() => {
         R || ((D ?? 0) < 1 && y >= 1 && M());
     }, [y, M, D, R]),
         n.useEffect(() => {
             R || !0 !== N || (!0 !== m && M());
-        }, [M, N, m, R]);
+        }, [M, N, m, R]));
     let V = n.useCallback(() => {
         if (R || y < 1) return;
         let e = Date.now();

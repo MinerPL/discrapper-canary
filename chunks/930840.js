@@ -17,7 +17,7 @@ function d(s) {
         [k, x] = i.useState(!1),
         A = i.useCallback(() => {
             (0, C.C)(h, () => {
-                x(!0), n?.();
+                (x(!0), n?.());
             });
         }, [n, h]),
         _ = k ? l.y : r.CopyIcon;

@@ -11,7 +11,7 @@ function d(e, t) {
 }
 function u(e, t, n) {
     let i = t - e;
-    for (; i > 0; ) {
+    for (; i > 0;) {
         let t = e,
             l = Math.floor(i / 2);
         n((t += l)) ? ((e = t + 1), (i -= l + 1)) : (i = l);

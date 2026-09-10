@@ -9,7 +9,7 @@ class i {
     _fails = 0;
     constructor(e = 500, t = null, n = !0) {
         if (e <= 0) throw Error("Backoff min value must be greater than zero or backoff will never back-off.");
-        (this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e);
+        ((this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e));
     }
     get fails() {
         return this._fails;
@@ -21,29 +21,29 @@ class i {
         return null != this._timeoutId;
     }
     succeed() {
-        this.cancel(), (this._fails = 0), (this._current = this.min);
+        (this.cancel(), (this._fails = 0), (this._current = this.min));
     }
     fail(e, t) {
         this._fails += 1;
         let n = 2 * this._current;
-        this.jitter && (n *= Math.random()), (this._current = Math.min(this._current + n, this.max));
+        (this.jitter && (n *= Math.random()), (this._current = Math.min(this._current + n, this.max)));
         let i = null != t && t > this._current ? t : this._current;
         if (null != e) {
             if (null != this._timeoutId)
                 if (this._callback !== e) throw Error("callback already pending");
                 else this.cancel();
-            (this._callback = e),
+            ((this._callback = e),
                 (this._timeoutId = setTimeout(() => {
                     try {
                         null != e && e();
                     } finally {
                         this.cancel();
                     }
-                }, i));
+                }, i)));
         }
         return i;
     }
     cancel() {
-        (this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null));
+        ((this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null)));
     }
 }

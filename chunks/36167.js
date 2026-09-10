@@ -1,4 +1,4 @@
-n.d(t, { OD: () => o, my: () => u, xq: () => s }), n(323874), n(14289), n(35956);
+(n.d(t, { OD: () => o, my: () => u, xq: () => s }), n(323874), n(14289), n(35956));
 var l = n(132500),
     i = n(636537),
     r = n(998218),
@@ -23,7 +23,7 @@ function u(e, t) {
     return o(
         e,
         (e, t) => {
-            t.searchParams.append("handoff_token", e.body.handoff_token), window.open(t.href);
+            (t.searchParams.append("handoff_token", e.body.handoff_token), window.open(t.href));
         },
         t,
     );

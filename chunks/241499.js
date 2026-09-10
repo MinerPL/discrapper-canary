@@ -72,7 +72,7 @@ function A(e) {
                 L(I),
                 M(P(S)),
                 () => {
-                    L(null), P(null);
+                    (L(null), P(null));
                 }
             ),
             [L, P, M],
@@ -103,10 +103,10 @@ function A(e) {
                         focused: j,
                         onChange: function (e, t, n) {
                             let i = A ? l.value : t;
-                            i.length > D.pc && (i = i.slice(0, D.pc)),
+                            (i.length > D.pc && (i = i.slice(0, D.pc)),
                                 t !== i && ((t = i), (n = (0, v.x7)(i))),
                                 u(t),
-                                K({ textValue: t, richValue: n });
+                                K({ textValue: t, richValue: n }));
                         },
                         onKeyDown: r,
                         canMentionChannels: N,
@@ -148,8 +148,8 @@ function S(e) {
                 if (!a && l.length !== D.yN)
                     if (null != e && "" === l[l.length - 1].value) {
                         let n = [...l];
-                        (n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), m(n.length - 1);
-                    } else t([...l, { id: r()(), value: e ?? "" }]), m(l.length);
+                        ((n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), m(n.length - 1));
+                    } else (t([...l, { id: r()(), value: e ?? "" }]), m(l.length));
             },
             [a, l, t],
         ),
@@ -160,7 +160,7 @@ function S(e) {
             (e, n) => {
                 if (a) return;
                 let i = [...l];
-                (i[n] = { ...i[n], value: e }), t(i);
+                ((i[n] = { ...i[n], value: e }), t(i));
             },
             [a, l, t],
         ),
@@ -170,7 +170,7 @@ function S(e) {
                 let s = l.indexOf(e);
                 if (null != n && n !== s) {
                     let i = [...l];
-                    i.splice(s, 1), i.splice(n, 0, e), t(i);
+                    (i.splice(s, 1), i.splice(n, 0, e), t(i));
                 }
                 i ? null !== h && p(null) : n !== h && p(n);
             },

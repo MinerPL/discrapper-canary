@@ -28,7 +28,7 @@ function m(e) {
             [v],
         ),
         C = i.useCallback(() => {
-            p(), setTimeout(() => j.current?.focus());
+            (p(), setTimeout(() => j.current?.focus()));
         }, [p]);
     return t === u.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, s.jsx)(r.D, {

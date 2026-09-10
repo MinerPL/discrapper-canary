@@ -1,4 +1,4 @@
-n.d(t, { A: () => t7 }), n(321073);
+(n.d(t, { A: () => t7 }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -207,7 +207,7 @@ function es(e) {
         a = (0, o.bG)([D.A], () => D.A.isUnavailable());
     return (s.useEffect(() => (G.hu(t.id), G.AL), [t.id]),
     s.useEffect(() => {
-        G.gV(t.id, i, t.id), G.Jw(i, t.id);
+        (G.gV(t.id, i, t.id), G.Jw(i, t.id));
     }, [t.id, i]),
     a)
         ? null
@@ -699,10 +699,10 @@ function eJ(e) {
                                                         text: Z.intl.string(Z.t.Ae9rUW),
                                                         "aria-label": "",
                                                         onClick: () => {
-                                                            h(!0),
+                                                            (h(!0),
                                                                 eK.O.announce(Z.intl.string(Z.t.wwdb3g)),
                                                                 x.start(1e3, () => h(!1)),
-                                                                f();
+                                                                f());
                                                         },
                                                         disabled: null == n.token || "" === n.token,
                                                     }),
@@ -997,7 +997,7 @@ function e2(e) {
     });
 }
 var e3 = n(573648);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var e1 = n(536637),
     e8 = n.n(e1),
     e7 = n(788373),
@@ -1033,7 +1033,7 @@ function tr(e) {
         f = (0, o.bG)([tl.A], () => tl.A.hidePersonalInformation),
         b = (0, o.bG)([A.A], () => A.A.can(eG.xBc.KICK_MEMBERS, n)),
         j = s.useCallback(() => {
-            p(!0), h(i);
+            (p(!0), h(i));
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
@@ -1606,7 +1606,7 @@ function tO(e) {
                       title: Z.intl.string(Z.t.ufFDiC),
                       body: Z.intl.string(Z.t.TyMJwC),
                       onRequestClose: () => {
-                          C(!0), ty.A.dismissOverviewTooltip(A, u.integration);
+                          (C(!0), ty.A.dismissOverviewTooltip(A, u.integration));
                       },
                       position: "bottom",
                       align: "center",
@@ -1674,7 +1674,7 @@ function tO(e) {
     return h
         ? (0, l.jsx)(Y.D, {
               onClick: () => {
-                  b && null != A && null != u && ty.A.dismissOverviewTooltip(A, u.integration), p?.();
+                  (b && null != A && null != u && ty.A.dismissOverviewTooltip(A, u.integration), p?.());
               },
               children: (0, l.jsx)(T.Z, { editable: !0, className: _()(tk.Nr, tk.vk), children: D }),
           })
@@ -1873,9 +1873,13 @@ function t$(e) {
                 );
             });
         }, [L, ea, V]),
-        eu = (0, o.bG)([tF.A], () => {
-            if (null != y) return er.find((e) => tF.A.canShowOverviewTooltip(y.id, e.integration.id));
-        }, [er, y]),
+        eu = (0, o.bG)(
+            [tF.A],
+            () => {
+                if (null != y) return er.find((e) => tF.A.canShowOverviewTooltip(y.id, e.integration.id));
+            },
+            [er, y],
+        ),
         em = s.useMemo(
             () => (void 0 !== eu ? [eu, ...er.filter((e) => e.integration.id !== eu.integration.id)] : er),
             [er, eu],
@@ -1884,11 +1888,11 @@ function t$(e) {
         [eh, ex] = s.useState(!1),
         ep = s.useRef(0);
     function eA() {
-        ex(!0),
+        (ex(!0),
             clearTimeout(ep.current),
             (ep.current = setTimeout(() => {
                 ex(!1);
-            }, 200));
+            }, 200)));
     }
     s.useEffect(() => (window.addEventListener("scroll", eA, !0), () => window.removeEventListener("scroll", eA)));
     let ef = em.map((e) => {
@@ -1920,12 +1924,12 @@ function t$(e) {
                             buttonText: Z.intl.string(Z.t["Z/qRnM"]),
                             hasNextSection: !0,
                             onButtonClick: () => {
-                                n(a.id),
+                                (n(a.id),
                                     tS.default.track(eG.HAw.APP_MANAGE_CTA_CLICKED, {
                                         application_id: a.id,
                                         guild_id: e?.id,
                                         is_admin: null != e ? A.A.can(eG.xBc.ADMINISTRATOR, e) : void 0,
-                                    });
+                                    }));
                             },
                             details: o,
                             guildId: e?.id,
@@ -1940,7 +1944,7 @@ function t$(e) {
         eb = (0, l.jsx)("div", { className: tq.Hw });
     if (0 === ef.length && Q) {
         let e, n, i;
-        (t = y?.id),
+        ((t = y?.id),
             (e = (0, td.M)(z) ? tQ : tJ),
             (n = (0, l.jsxs)(g.A, {
                 direction: g.A.Direction.VERTICAL,
@@ -1976,14 +1980,14 @@ function t$(e) {
                             variant: "text-sm/normal",
                             children: Z.intl.format(Z.t.snvKU3, {
                                 handleGoToAppDirectory: function () {
-                                    (0, tB.transitionToGlobalDiscovery)({
+                                    ((0, tB.transitionToGlobalDiscovery)({
                                         tab: tY.GlobalDiscoveryTab.APPS,
                                         newSessionState: {
                                             entrypoint: { name: tH.sW.GUILD_INTEGRATION_SETTINGS },
                                             guildId: t,
                                         },
                                     }),
-                                        (0, tU.jH)();
+                                        (0, tU.jH)());
                                 },
                             }),
                         }),
@@ -1991,14 +1995,14 @@ function t$(e) {
                 }),
             })),
             (ef = ea > 0 ? n : i),
-            (eb = null);
+            (eb = null));
     }
     let ej = b.A.getArticleURL(eG.MVz.INTEGRATIONS),
         eN = null != O ? Z.t.YV0vh6 : Z.t.FnZEJs,
         eE = [];
     if (q) {
         let e, t, s, a, r;
-        eE.push(
+        (eE.push(
             ((n = R.length),
             n > 0 ? (t = (0, l.jsx)(tW.u, { size: "xs" })) : (e = Z.intl.string(Z.t.lOQqJK)),
             (0, l.jsx)(
@@ -2036,9 +2040,9 @@ function t$(e) {
                         },
                         "channels-followed",
                     )),
-                );
+                ));
     }
-    null == O &&
+    (null == O &&
         $.length > 0 &&
         eE.push(
             ((a = $.length),
@@ -2106,7 +2110,7 @@ function t$(e) {
                     },
                     "integrations-youtube",
                 )),
-            );
+            ));
     let eC = null != O && J && null != X;
     return (0, l.jsxs)("div", {
         className: _()(null != eb ? tq.bg : null),
@@ -2345,7 +2349,7 @@ let t7 = s.memo(function (e) {
                 followedChannelWebhooks: l,
             };
         }, [j, O, L, E]);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         if (!v)
             switch (t) {
                 case eG.wLn.TWITCH:
@@ -2366,7 +2370,7 @@ let t7 = s.memo(function (e) {
                 u.A.setSection(eG.wLn.OVERVIEW, null);
             },
             [],
-        );
+        ));
     let z = null;
     switch (t) {
         case eG.wLn.TWITCH:

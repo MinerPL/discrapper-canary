@@ -44,7 +44,7 @@ function h(e) {
         label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
         className: s()(_.N9, n),
         onClick: function (e) {
-            e.stopPropagation(), d.A.toggleParticipants(t, !a);
+            (e.stopPropagation(), d.A.toggleParticipants(t, !a));
         },
         iconComponent: h,
         shouldShowTooltip: !o,

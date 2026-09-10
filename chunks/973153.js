@@ -95,13 +95,13 @@ class E extends i.Ay.Store {
         return this.guilds.get(e)?.messageRecord(t) ?? null;
     }
     data(e) {
-        return this.guilds.has(e) || this.guilds.set(e, new g()), this.guilds.get(e);
+        return (this.guilds.has(e) || this.guilds.set(e, new g()), this.guilds.get(e));
     }
     handleOneGuildCreate(e) {
         let t = this.data(e.id);
-        t.putMany(e.lastMessages ?? [], this.generation),
+        (t.putMany(e.lastMessages ?? [], this.generation),
             t.putMany(e.threadMessages ?? [], this.generation),
-            null != e.lastMessages && (t.localNeeded = !1);
+            null != e.lastMessages && (t.localNeeded = !1));
     }
     handleConnectionOpen(e) {
         for (let t of ((this.generation += 1), e.guilds)) this.handleOneGuildCreate(t);
@@ -139,10 +139,10 @@ class E extends i.Ay.Store {
     handleLoadMessagesSuccess(e) {
         let t = a.A.getBasicChannel(e.channelId);
         if (null == t) return !1;
-        (0, r.D)(e.messages),
+        ((0, r.D)(e.messages),
             e.isAfter || e.isBefore || e.hasMoreAfter
                 ? this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, this.generation)
-                : this.data(t.guild_id).put(e.channelId, e.messages[0] ?? null, this.generation);
+                : this.data(t.guild_id).put(e.channelId, e.messages[0] ?? null, this.generation));
     }
     handleLocalMessagesLoaded(e) {
         let t = a.A.getBasicChannel(e.channelId);

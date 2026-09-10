@@ -49,7 +49,7 @@ let T = function (e) {
         className: s()(t, C.xP),
         onClick: (e) =>
             _(() => {
-                O(), g?.(e);
+                (O(), g?.(e));
             }),
         children: [
             !f && (0, r.jsx)(o.GiftIcon, { size: "md", color: "currentColor", className: C.ez }),

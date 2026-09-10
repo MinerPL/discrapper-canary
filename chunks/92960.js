@@ -30,18 +30,18 @@ function j(e) {
         comboKeysBindGlobal: !0,
         action(t) {
             if (T.A.isElementFullScreen()) return !1;
-            if (x._.hasSubscribers(y.jej.CALL_DECLINE)) return x._.dispatch(y.jej.CALL_DECLINE), !1;
+            if (x._.hasSubscribers(y.jej.CALL_DECLINE)) return (x._.dispatch(y.jej.CALL_DECLINE), !1);
             if (O.A.close()) return !1;
-            if (x._.hasSubscribers(y.jej.MEDIA_MODAL_CLOSE)) return x._.dispatch(y.jej.MEDIA_MODAL_CLOSE), !1;
+            if (x._.hasSubscribers(y.jej.MEDIA_MODAL_CLOSE)) return (x._.dispatch(y.jej.MEDIA_MODAL_CLOSE), !1);
             let n = (0, o.wp)(t);
-            if (n?.hasSubscribers(y.jej.POPOUT_CLOSE)) return n.dispatch(y.jej.POPOUT_CLOSE), !1;
-            if (x._.hasSubscribers(y.jej.CLOSE_GIF_PICKER)) return x._.dispatch(y.jej.CLOSE_GIF_PICKER), !1;
-            if (x._.hasSubscribers(y.jej.MODAL_CLOSE)) return x._.dispatch(y.jej.MODAL_CLOSE), !1;
+            if (n?.hasSubscribers(y.jej.POPOUT_CLOSE)) return (n.dispatch(y.jej.POPOUT_CLOSE), !1);
+            if (x._.hasSubscribers(y.jej.CLOSE_GIF_PICKER)) return (x._.dispatch(y.jej.CLOSE_GIF_PICKER), !1);
+            if (x._.hasSubscribers(y.jej.MODAL_CLOSE)) return (x._.dispatch(y.jej.MODAL_CLOSE), !1);
             if (x._.hasSubscribers(y.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
-                return x._.dispatch(y.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
-            if (x._.hasSubscribers(y.jej.SEARCH_RESULTS_CLOSE)) return x._.dispatch(y.jej.SEARCH_RESULTS_CLOSE), !1;
+                return (x._.dispatch(y.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1);
+            if (x._.hasSubscribers(y.jej.SEARCH_RESULTS_CLOSE)) return (x._.dispatch(y.jej.SEARCH_RESULTS_CLOSE), !1);
             if (n?.hasSubscribers(y.jej.POPOUT_CLOSE_AFTER_MODALS))
-                return n.dispatch(y.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
+                return (n.dispatch(y.jej.POPOUT_CLOSE_AFTER_MODALS), !1);
             let r = _.A.getGuildId(),
                 l = e ?? v.Ay.getChannelId(r),
                 s = f.A.getChannel(l),
@@ -49,10 +49,10 @@ function j(e) {
                 c = u?.type === A.PE.VIEW_CHANNEL ? u.channelId : null;
             if (!1 === R(l) || !1 === R(c)) return !1;
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL))
-                return x._.dispatch(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL), !1;
+                return (x._.dispatch(y.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL), !1);
             if (x._.hasSubscribers(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE))
-                return x._.dispatch(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1;
-            if (null != l && u?.type === A.PE.CREATE_THREAD) return d.A.closeChannelSidebar(l), !1;
+                return (x._.dispatch(y.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE), !1);
+            if (null != l && u?.type === A.PE.CREATE_THREAD) return (d.A.closeChannelSidebar(l), !1);
             let h = I(l),
                 m = I(c);
             return (
@@ -68,10 +68,10 @@ function j(e) {
 }
 function R(e) {
     if (null != e) {
-        if (p.A.isEditingAny(e)) return l.A.endEditMessage(e), !1;
-        if (null != c.A.getPendingReply(e)) return (0, u.Jx)(e), !1;
-        if (null != b.A.getScheduledMessage(e)) return r.A.clearDraft(e, b.C.ScheduledMessage), !1;
-        if (null != h.A.getStickerPreview(e, b.C.ChannelMessage)) return (0, m.x5)(e, b.C.ChannelMessage), !1;
+        if (p.A.isEditingAny(e)) return (l.A.endEditMessage(e), !1);
+        if (null != c.A.getPendingReply(e)) return ((0, u.Jx)(e), !1);
+        if (null != b.A.getScheduledMessage(e)) return (r.A.clearDraft(e, b.C.ScheduledMessage), !1);
+        if (null != h.A.getStickerPreview(e, b.C.ChannelMessage)) return ((0, m.x5)(e, b.C.ChannelMessage), !1);
     }
 }
 function I(e) {

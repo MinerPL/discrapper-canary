@@ -10,19 +10,19 @@ async function i(n) {
     if (null != l) return l;
     let e = await new Promise((l, e) => {
             let t = new Image();
-            (t.crossOrigin = "Anonymous"),
+            ((t.crossOrigin = "Anonymous"),
                 (t.onerror = (n) => {
-                    e(n), null != t && ((t.onerror = null), (t.onload = null)), (t = null);
+                    (e(n), null != t && ((t.onerror = null), (t.onload = null)), (t = null));
                 }),
                 (t.onload = () => {
                     null != t
                         ? (l((0, s.Sf)(t, 2, 10)), (t.onerror = null), (t.onload = null), (t = null))
                         : e("image is null");
                 }),
-                (t.src = n);
+                (t.src = n));
         }),
         t = (0, o.Ob)(...e[0]);
-    return a.set(n, t), t;
+    return (a.set(n, t), t);
 }
 function c(n) {
     let [l, e] = t.useState(() => (null != n ? a.get(n) : void 0)),

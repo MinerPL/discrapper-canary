@@ -44,24 +44,24 @@ function E(t) {
         let s = P.intl.format(m.default.MkcFjx, { receiverName: t, premiumGroupProductName: c });
         switch (f) {
             case d.xI.ACCEPTED:
-                (e = P.intl.formatToPlainString(m.default.K37xCB, { premiumGroupProductName: c })),
-                    (n = P.intl.formatToPlainString(m.default["W7e/z1"], { receiverName: t }));
+                ((e = P.intl.formatToPlainString(m.default.K37xCB, { premiumGroupProductName: c })),
+                    (n = P.intl.formatToPlainString(m.default["W7e/z1"], { receiverName: t })));
                 break;
             case d.xI.REMOVED:
             case d.xI.NOT_FOUND:
             case d.xI.ERROR:
-                (e = P.intl.formatToPlainString(m.default.YLvraS, { premiumGroupProductName: c })),
+                ((e = P.intl.formatToPlainString(m.default.YLvraS, { premiumGroupProductName: c })),
                     (n = P.intl.format(m.default.BHxlIR, {
                         premiumGroupProductName: c,
                         onClick: () => {
                             (0, a.openUserSettings)(r.X.SUBSCRIPTIONS_PANEL);
                         },
-                    }));
+                    })));
                 break;
             case d.xI.PENDING:
             default:
-                (e = P.intl.formatToPlainString(m.default["5uwv8J"], { premiumGroupProductName: c })),
-                    (n = P.intl.formatToPlainString(m.default["AmE0B/"], { receiverName: t }));
+                ((e = P.intl.formatToPlainString(m.default["5uwv8J"], { premiumGroupProductName: c })),
+                    (n = P.intl.formatToPlainString(m.default["AmE0B/"], { receiverName: t })));
         }
         return { message: s, header: e, body: n };
     }
@@ -70,19 +70,19 @@ function E(t) {
             r = P.intl.format(m.default["51Kv/4"], { senderName: t, premiumGroupProductName: c, helpCenterLink: d.TE });
         switch (f) {
             case d.xI.ACCEPTED:
-                (e = P.intl.string(m.default.ssge1y)),
-                    (n = P.intl.formatToPlainString(m.default.fTAcw3, { senderName: t }));
+                ((e = P.intl.string(m.default.ssge1y)),
+                    (n = P.intl.formatToPlainString(m.default.fTAcw3, { senderName: t })));
                 break;
             case d.xI.REMOVED:
             case d.xI.NOT_FOUND:
             case d.xI.ERROR:
-                (e = P.intl.formatToPlainString(m.default["AmLUw+"], { premiumGroupProductName: c })),
-                    (n = P.intl.formatToPlainString(m.default["7XAuyg"], { premiumGroupProductName: c }));
+                ((e = P.intl.formatToPlainString(m.default["AmLUw+"], { premiumGroupProductName: c })),
+                    (n = P.intl.formatToPlainString(m.default["7XAuyg"], { premiumGroupProductName: c })));
                 break;
             case d.xI.PENDING:
             default:
-                (e = P.intl.string(m.default.ssge1y)),
-                    (n = P.intl.formatToPlainString(m.default.MkcdX8, { senderName: t, premiumGroupProductName: c }));
+                ((e = P.intl.string(m.default.ssge1y)),
+                    (n = P.intl.formatToPlainString(m.default.MkcdX8, { senderName: t, premiumGroupProductName: c })));
         }
         return { message: r, header: e, body: n };
     }

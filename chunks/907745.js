@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { Search: () => _, default: () => G });
+(l.r(t), l.d(t, { Search: () => _, default: () => G }));
 var n = l(477900),
     r = l(582128),
     s = l(64015),
@@ -28,7 +28,7 @@ function _(e) {
     let { searchContext: t, className: l } = e,
         s = (0, p.bS)(t),
         a = (0, u.bG)([i.Ay], () => i.Ay.keyboardModeEnabled);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         S.A.initializeAutocomplete(t);
     }, [t]),
         r.useEffect(
@@ -39,7 +39,7 @@ function _(e) {
                 }
             ),
             [s],
-        );
+        ));
     let { isSearching: C, hasResults: E } = (0, u.cf)([g.A], () => {
             let e = g.A.getTotalCount(s);
             return { hasResults: null != e && e > 0, isSearching: g.A.getIsFetching(s) };
@@ -59,10 +59,10 @@ function _(e) {
     let Q = r.useCallback(
             (e) => {
                 let { queryString: l, query: n, searchEverywhere: r, searchQuerySource: s } = e;
-                b.A.refreshQueryId(t),
+                (b.A.refreshQueryId(t),
                     (0, M.fd)({ searchContext: t, query: n, queryString: l, searchQuerySource: s }),
                     y.A.updateSearchMode(t, x.BBH.NEWEST),
-                    I({ searchContext: t, searchQueryString: l, searchEverywhere: r, offset: 0 });
+                    I({ searchContext: t, searchQueryString: l, searchEverywhere: r, offset: 0 }));
             },
             [t],
         ),

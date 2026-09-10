@@ -1,4 +1,4 @@
-l.r(i), l.d(i, { default: () => ei });
+(l.r(i), l.d(i, { default: () => ei }));
 var d = l(477900),
     s = l(582128),
     n = l(17928),
@@ -134,9 +134,9 @@ function ei(e) {
         q = s.useRef(null),
         { isHoveringOrFocusing: B } = (0, p.A)(q);
     function K(e) {
-        k?.(),
+        (k?.(),
             W.dispatch($.jej.POPOUT_CLOSE),
-            (0, m.openUserProfileModal)({ sourceAnalyticsLocations: V, hideRestrictedProfile: !0, ...M, ...e });
+            (0, m.openUserProfileModal)({ sourceAnalyticsLocations: V, hideRestrictedProfile: !0, ...M, ...e }));
     }
     s.useEffect(() => {
         N?.(q?.current);
@@ -175,12 +175,12 @@ function ei(e) {
                                               id: "view-profile",
                                               label: J.intl.string(J.t["+Xp3hq"]),
                                               action: () => {
-                                                  K(),
+                                                  (K(),
                                                       (0, I.Wn)({
                                                           action: "PRESS_VIEW_PROFILE",
                                                           analyticsLocations: V,
                                                           ...M,
-                                                      });
+                                                      }));
                                               },
                                           }),
                                 }),

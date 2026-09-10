@@ -79,8 +79,8 @@ function U(e) {
         [u, c] = i.useState(!1),
         o = i.useCallback(
             (e) => {
-                (s.current = a.current?.selectionStart),
-                    l((e = (e = e.replace(/\s/g, "_")).length < 2 ? e : k.Ay.sanitizeEmojiName(e)));
+                ((s.current = a.current?.selectionStart),
+                    l((e = (e = e.replace(/\s/g, "_")).length < 2 ? e : k.Ay.sanitizeEmojiName(e))));
             },
             [l],
         );
@@ -290,9 +290,9 @@ let eb = new S.A("ImageEditor"),
                             : { x: o.current.x, y: o.current.y };
                     if (null == h.current) return;
                     let { x: t, y: l } = (0, ev.F3)(e.x, e.y, b);
-                    (o.current = { x: t, y: l }),
+                    ((o.current = { x: t, y: l }),
                         (h.current.style.transform = `translate3d(${t}px, ${l}px, 0) rotate(${A}deg) scaleX(${E ? "-1" : "1"})`),
-                        m({ x: t, y: l });
+                        m({ x: t, y: l }));
                 },
                 [h, A, b, E],
             );
@@ -303,7 +303,7 @@ let eb = new S.A("ImageEditor"),
                 (e) => {
                     if (null == j) return;
                     let t = eM(j, e, R);
-                    x(e), I(t), B(), F?.();
+                    (x(e), I(t), B(), F?.());
                 },
                 [j, B, R, F],
             ),
@@ -313,7 +313,7 @@ let eb = new S.A("ImageEditor"),
                     t = j.height,
                     l = j.width,
                     n = eM({ width: t, height: l }, g, R);
-                S(e), v({ width: t, height: l }), I(n), B(), F?.();
+                (S(e), v({ width: t, height: l }), I(n), B(), F?.());
             }, [j, A, B, g, R, F]),
             P = i.useCallback(() => {
                 null != h.current && (N((e) => !e), B(), F?.());
@@ -336,13 +336,13 @@ let eb = new S.A("ImageEditor"),
                 Z.current?.moveGrabber(0.025);
             }, []),
             $ = i.useCallback((e) => {
-                p({ x: e.clientX - o.current.x, y: e.clientY - o.current.y }), C(!0);
+                (p({ x: e.clientX - o.current.x, y: e.clientY - o.current.y }), C(!0));
             }, []);
         i.useEffect(() => {
             function e() {
                 return C(!1);
             }
-            return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e);
+            return (window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e));
         }, []);
         let Q = i.useCallback(
             (e) => {
@@ -354,7 +354,7 @@ let eb = new S.A("ImageEditor"),
             [_, M, B, F],
         );
         i.useEffect(() => {
-            if (_) return window.addEventListener("mousemove", Q), () => window.removeEventListener("mousemove", Q);
+            if (_) return (window.addEventListener("mousemove", Q), () => window.removeEventListener("mousemove", Q));
         }, [Q, _]);
         let X = i.useRef(null),
             q = i.useCallback(async () => {
@@ -395,11 +395,11 @@ let eb = new S.A("ImageEditor"),
                                 g,
                             ),
                             { result: a, cancelFn: s } = await (0, ev.ny)(t);
-                        (X.current = s), (e = await a);
+                        ((X.current = s), (e = await a));
                     } catch (e) {
-                        eb.error("Error cropping animated image", e), (s = D.j.ANIMATED_CROPPING);
+                        (eb.error("Error cropping animated image", e), (s = D.j.ANIMATED_CROPPING));
                     } finally {
-                        X.current?.(), (X.current = null);
+                        (X.current?.(), (X.current = null));
                     }
                 else
                     e = G
@@ -415,7 +415,7 @@ let eb = new S.A("ImageEditor"),
                 return (
                     u({ imageData: e, imageDataTimestamp: t, error: s, loading: !1 }),
                     () => {
-                        X.current?.(), (X.current = null);
+                        (X.current?.(), (X.current = null));
                     }
                 );
             }, [r, A, R, G, k, u, j, g, a, E]);
@@ -426,9 +426,9 @@ let eb = new S.A("ImageEditor"),
                 if (null == h.current) return;
                 let e = h.current.naturalWidth,
                     t = h.current.naturalHeight;
-                v({ width: e, height: t }), S(0), N(!1);
+                (v({ width: e, height: t }), S(0), N(!1));
                 let l = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-                x(l), z(l), (V.current += 1), I(eM({ width: e, height: t }, l, R)), B({ x: 0, y: 0 });
+                (x(l), z(l), (V.current += 1), I(eM({ width: e, height: t }, l, R)), B({ x: 0, y: 0 }));
             }, [h, R, B]),
             et = i.useCallback(() => {
                 ee();
@@ -579,7 +579,7 @@ function eS(e, t) {
     let { width: l, height: n } = e,
         i = 288 * t,
         r = l / n;
-    return l > n ? (n = (l = i) / r) : (l = (n = i) * r), { width: l, height: n };
+    return (l > n ? (n = (l = i) / r) : (l = (n = i) * r), { width: l, height: n });
 }
 function eM(e, t, l) {
     let { width: n, height: i } = eS(e, t),
@@ -639,7 +639,7 @@ let eO = new S.A("EmojiStudio"),
                 l),
             { isEditableAnimatedImage: eb } = (0, O._)(F?.file),
             eI = eb || F?.file?.type === "image/avif";
-        i.useEffect(
+        (i.useEffect(
             () => (
                 (0, R.O)(!1),
                 () => {
@@ -652,18 +652,18 @@ let eO = new S.A("EmojiStudio"),
                 if (null == S) return;
                 let e = M.A.getEmojiRawAsset(S.id);
                 if (null != e) {
-                    Z(e), ed(e.data), eu(S.name), B(!1);
+                    (Z(e), ed(e.data), eu(S.name), B(!1));
                     return;
                 }
-                B(!0),
+                (B(!0),
                     (0, W.$)(S)
                         .then((e) => {
-                            Z(e), ed(e.data), eu(S.name), B(!1);
+                            (Z(e), ed(e.data), eu(S.name), B(!1));
                         })
                         .catch((e) => {
-                            eO.error("Failed to fetch emoji image", e), ei(D.j.MISSING_IMAGE_DATA), B(!1);
-                        });
-            }, [S]);
+                            (eO.error("Failed to fetch emoji image", e), ei(D.j.MISSING_IMAGE_DATA), B(!1));
+                        }));
+            }, [S]));
         let eS = i.useCallback(
             (e) => {
                 let { reason: t } = e,
@@ -690,16 +690,16 @@ let eO = new S.A("EmojiStudio"),
                 let e = (await eN.current?.getOriginalMd5()) ?? null,
                     t = null;
                 try {
-                    (t = await (0, N.Gf)({
+                    ((t = await (0, N.Gf)({
                         image: eo,
                         guildId: $,
                         name: es,
                         originalMd5: e,
                         analyticsLocation: { page: Y.liQ.EMOJI_STUDIO },
                     })),
-                        p.X({ emojiId: t.id, userImage: { ...F } });
+                        p.X({ emojiId: t.id, userImage: { ...F } }));
                 } catch (e) {
-                    el(!1), ei(q(e)), eO.error("Failed to upload emoji.", e);
+                    (el(!1), ei(q(e)), eO.error("Failed to upload emoji.", e));
                     return;
                 }
                 if (null != S)
@@ -709,11 +709,11 @@ let eO = new S.A("EmojiStudio"),
                         if (429 === e.status)
                             E.A.show({ title: H.intl.string(H.t.iufib1), body: H.intl.string(H.t.Whhv4w) });
                         else {
-                            el(!1), ei(q(e)), eO.error("Failed to delete emoji.", e);
+                            (el(!1), ei(q(e)), eO.error("Failed to delete emoji.", e));
                             return;
                         }
                     }
-                (0, R.O)(!1),
+                ((0, R.O)(!1),
                     (0, c.closeModal)(D.y),
                     eS({ reason: "uploaded" }),
                     (ef.current = !0),
@@ -727,10 +727,10 @@ let eO = new S.A("EmojiStudio"),
                             }),
                         );
                     })({ emoji: t, guildId: $ }),
-                    el(!1);
+                    el(!1));
             }, [$, F, S, eo, eS, es, eN]),
             e_ = i.useCallback(() => {
-                ei(null), null != F && ed(F.data), (eg.current = 0), (0, R.O)(!1), ex.current?.reset();
+                (ei(null), null != F && ed(F.data), (eg.current = 0), (0, R.O)(!1), ex.current?.reset());
             }, [ex, F]),
             ey = i.useCallback(() => {
                 (0, W.p)({ onClose: e_ });
@@ -738,12 +738,12 @@ let eO = new S.A("EmojiStudio"),
             ew = i.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: l = 0, error: n } = e,
                     i = null;
-                null != t && k.Ay.isDataTooBig(t) && (i = D.j.TOO_BIG),
+                (null != t && k.Ay.isDataTooBig(t) && (i = D.j.TOO_BIG),
                     ei(n ?? i),
-                    l < eh.current || (null != t && (ed(t), (eh.current = l)));
+                    l < eh.current || (null != t && (ed(t), (eh.current = l))));
             }, []),
             ek = i.useCallback(() => {
-                eg.current++, (0, R.O)(!0);
+                (eg.current++, (0, R.O)(!0));
             }, []),
             eR = T ? H.intl.string(H.t.FOYn8U) : H.intl.string(H.t.iMJO37);
         return V || null == F

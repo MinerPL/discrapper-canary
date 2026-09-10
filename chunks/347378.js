@@ -26,11 +26,11 @@ let g = () => {
         [v, E] = r.useState(!1);
     if (null == e) return null;
     async function D() {
-        P(!0), E(!1);
+        (P(!0), E(!1));
         try {
-            await g(), l();
+            (await g(), l());
         } catch (t) {
-            E(!0), P(!1);
+            (E(!0), P(!1));
         }
     }
     let j = [

@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(321073);
+(n.d(t, { A: () => A }), n(321073));
 var i = n(17928),
     l = n(451988),
     r = n(228366),
@@ -9,7 +9,7 @@ let u = {},
     d = {},
     c = new l.J_(3e3, function () {
         let e = [];
-        for (let [t, n] of Object.entries(d)) e.push(n), (u[t] = n), delete d[t];
+        for (let [t, n] of Object.entries(d)) (e.push(n), (u[t] = n), delete d[t]);
         0 !== e.length && s.A.subscribeActivities(e);
     });
 function h(e) {
@@ -18,7 +18,7 @@ function h(e) {
     return i in u || i in d;
 }
 function g() {
-    (u = {}), (d = {});
+    ((u = {}), (d = {}));
 }
 class f extends i.Ay.Store {
     static displayName = "PresenceSubscriptionsStore";
@@ -52,6 +52,6 @@ let A = new f(r.h, {
     CONNECTION_OPEN: g,
     CONNECTION_RESUMED: g,
     LOGOUT: function () {
-        (u = {}), (d = {});
+        ((u = {}), (d = {}));
     },
 });

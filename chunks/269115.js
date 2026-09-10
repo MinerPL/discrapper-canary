@@ -1,4 +1,4 @@
-i.d(t, { L: () => u, j: () => r }), i(899898);
+(i.d(t, { L: () => u, j: () => r }), i(899898));
 var s = i(621466);
 let n = { root: null, rootMargin: "0px", threshold: 0.5 };
 class r {
@@ -8,9 +8,9 @@ class r {
     _components = new WeakMap();
     _visibleComponents = new WeakSet();
     constructor(e = n) {
-        (this._options = e),
+        ((this._options = e),
             null != window.IntersectionObserver &&
-                (this._observer = new window.IntersectionObserver(this._handleEntries, e));
+                (this._observer = new window.IntersectionObserver(this._handleEntries, e)));
     }
     _handleEntries = (e) => {
         e.forEach((e) => {
@@ -28,10 +28,10 @@ class r {
             let i = this._nodes.get(e.target);
             if (null != i) {
                 let e = !1;
-                t
+                (t
                     ? this._visibleComponents.has(i) || (this._visibleComponents.add(i), (e = !0))
                     : this._visibleComponents.has(i) && (this._visibleComponents.delete(i), (e = !0)),
-                    e && i.forceUpdate();
+                    e && i.forceUpdate());
             }
         });
     };
@@ -78,19 +78,19 @@ class u extends l.Component {
     componentDidMount() {
         if (this.props.active) {
             let e = this.getVisibilityObserver();
-            e.observe(this, this.props.innerRef),
+            (e.observe(this, this.props.innerRef),
                 (this.isVisible = e.isVisible(this)),
-                this.props.onChange(this.isVisible);
+                this.props.onChange(this.isVisible));
         }
     }
     componentDidUpdate(e) {
         let t = this.getVisibilityObserver(),
             i = t.isVisible(this);
-        this.props.active && i !== this.isVisible && this.props.onChange(i),
+        (this.props.active && i !== this.isVisible && this.props.onChange(i),
             !e.active && this.props.active
                 ? t.observe(this, this.props.innerRef)
                 : e.active && !this.props.active && t.unobserve(this),
-            (this.isVisible = i);
+            (this.isVisible = i));
     }
     componentWillUnmount() {
         this.getVisibilityObserver().unobserve(this);

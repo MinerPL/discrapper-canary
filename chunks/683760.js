@@ -30,15 +30,15 @@ class u extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         if (null != e) {
-            (d.premiumTypeActual = e?.premiumTypeActual),
+            ((d.premiumTypeActual = e?.premiumTypeActual),
                 (d.premiumTypeOverride = e?.premiumTypeOverride),
                 (d.perksActual = e?.perksActual ?? null),
                 null != e.createdAtOverride
                     ? (d.createdAtOverride = new Date(e.createdAtOverride))
-                    : (d.createdAtOverride = l.lk);
+                    : (d.createdAtOverride = l.lk));
             return;
         }
-        (d.premiumTypeOverride = l.$I), (d.createdAtOverride = l.lk);
+        ((d.premiumTypeOverride = l.$I), (d.createdAtOverride = l.lk));
     }
     getPremiumTypeOverride() {
         return d.premiumTypeOverride;

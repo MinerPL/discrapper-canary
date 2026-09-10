@@ -34,17 +34,17 @@ class E extends r.Ay.Store {
 }
 let A = new E(a.h, {
     LOGOUT: function () {
-        (u = {}), (_ = {});
+        ((u = {}), (_ = {}));
     },
     CONNECTION_OPEN: function (e) {
         let { explicitContentScanVersion: t } = e;
-        (i = t), (u = {}), (_ = {});
+        ((i = t), (u = {}), (_ = {}));
     },
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
         let { messageId: t, channelId: n, attachments: i } = e,
             r = { messageId: t, channelId: n, attachments: i, reportSubmit: !1 },
             a = _[n] ?? c;
-        (_[n] = [...a, r]), (u[t] = r);
+        ((_[n] = [...a, r]), (u[t] = r));
     },
     MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
         let { messageId: t, channelId: n } = e,

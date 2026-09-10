@@ -5,10 +5,10 @@ class i {
     responsive;
     backgroundStyle;
     constructor(e) {
-        (this.desktopMaxHeight = e.desktop_max_height),
+        ((this.desktopMaxHeight = e.desktop_max_height),
             (this.mobileMaxHeight = e.mobile_max_height),
             (this.responsive = e.responsive),
-            (this.backgroundStyle = e.background_style);
+            (this.backgroundStyle = e.background_style));
     }
     static fromServer(e) {
         return new i(e);

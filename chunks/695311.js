@@ -15,7 +15,7 @@ function x(t) {
         p = (0, i.bG)([u.A, d.Ay], () => u.A.getChannel(d.Ay.getChannelId())),
         f = (0, c.Us)() === A.BRT.POPOUT;
     return () => {
-        e?.(),
+        (e?.(),
             null == p || p?.isVocal()
                 ? (0, s.A)({
                       context: null != p ? { type: "channel", channel: p } : { type: "contextless" },
@@ -23,6 +23,6 @@ function x(t) {
                       openInPopout: f,
                       initialState: { applicationId: n },
                   })
-                : (0, a.R)(r.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id);
+                : (0, a.R)(r.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id));
     };
 }

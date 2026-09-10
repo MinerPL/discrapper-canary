@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+(n.d(t, { A: () => E }), n(321073));
 var i = n(810531),
     r = n(137903),
     a = n(927813),
@@ -75,7 +75,7 @@ class u extends r.yW {
     getPremiumPacks = this.premiumPacksDatabase.memoized((e) => Object.values(e));
 }
 function _(e, t, n, i, r) {
-    n.set(e.id, e),
+    (n.set(e.id, e),
         r && i.set(e.id, e),
         t.setPartition(
             e.id,
@@ -84,7 +84,7 @@ function _(e, t, n, i, r) {
                 for (let n of e) t[n.id] = c(n);
                 return t;
             })(e.stickers),
-        );
+        ));
 }
 let E = new u({
     LOGOUT: (e, t) => {
@@ -98,7 +98,7 @@ let E = new u({
     },
     STICKER_PACKS_FETCH_START: (e, t) => {
         let { markDirty: n } = t;
-        (l = !0), n();
+        ((l = !0), n());
     },
     STICKER_PACKS_FETCH_SUCCESS: (e, t) => {
         let { packs: n } = e,

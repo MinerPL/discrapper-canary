@@ -33,7 +33,7 @@ class g {
         this.enabled = !1;
     }
     startMonitoringPid(e) {
-        this.pids.add(e), this.enabled && m.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0);
+        (this.pids.add(e), this.enabled && m.Ay.SetSystemServicePerformanceMonitorEnabled(e, !0));
     }
     stopMonitoringPid(e) {
         this.pids.has(e) &&
@@ -76,9 +76,9 @@ class D {
             }, 1e3)));
     }
     disable() {
-        null != this.samplingInterval && (clearInterval(this.samplingInterval), (this.samplingInterval = null)),
+        (null != this.samplingInterval && (clearInterval(this.samplingInterval), (this.samplingInterval = null)),
             (this.lastCpuSnapshot = null),
-            this.resetHistograms();
+            this.resetHistograms());
     }
     getSnapshot() {
         if (
@@ -115,10 +115,12 @@ class D {
         );
     }
     resetHistograms() {
-        (this.cpuHistogram = new C.d()), (this.memoryHistogram = new C.d()), (this.discordMemoryHistogram = new C.d());
+        ((this.cpuHistogram = new C.d()),
+            (this.memoryHistogram = new C.d()),
+            (this.discordMemoryHistogram = new C.d()));
     }
     async takeSample() {
-        this.sampleDiscordMemory(), await this.sampleCpuAndMemory();
+        (this.sampleDiscordMemory(), await this.sampleCpuAndMemory());
     }
     async sampleCpuAndMemory() {
         try {
@@ -187,14 +189,14 @@ class w extends l.A {
         n.includes("tool-service") && ("running" === t.state ? S.enable() : S.reset());
     }
     _terminate() {
-        this.heartbeatInterval.stop(), S.disable(), v.disable(), this.disableWindowTracking();
+        (this.heartbeatInterval.stop(), S.disable(), v.disable(), this.disableWindowTracking());
     }
     handleLogout() {
-        S.disable(),
+        (S.disable(),
             v.disable(),
             this.disableWindowTracking(),
             this.gameSessions.clear(),
-            this.heartbeatInterval.stop();
+            this.heartbeatInterval.stop());
     }
     handleGameIdentityChange() {
         s.h.wait(() => this.scheduleHeartbeatTracking());
@@ -212,20 +214,20 @@ class w extends l.A {
     handleWindowStateChange() {
         if (!this.windowTrackingEnabled) return;
         let e = performance.now();
-        (this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
+        ((this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
             (this.windowStateLastChangeTime = e),
-            (this.windowStateTrackingState = U());
+            (this.windowStateTrackingState = U()));
     }
     getWindowStateDurationsSnapshot() {
         let e = performance.now();
-        (this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
-            (this.windowStateLastChangeTime = e);
+        ((this.windowStateDurations[this.windowStateTrackingState] += e - this.windowStateLastChangeTime),
+            (this.windowStateLastChangeTime = e));
         let t = {
             discord_window_focused_duration_ms: Math.round(this.windowStateDurations.focused),
             discord_window_visible_duration_ms: Math.round(this.windowStateDurations.visible),
             discord_window_hidden_duration_ms: Math.round(this.windowStateDurations.hidden),
         };
-        return (this.windowStateDurations = { focused: 0, visible: 0, hidden: 0 }), t;
+        return ((this.windowStateDurations = { focused: 0, visible: 0, hidden: 0 }), t);
     }
     peekWindowStateDurations() {
         let e = performance.now() - this.windowStateLastChangeTime;
@@ -243,12 +245,12 @@ class w extends l.A {
     }
     scheduleHeartbeatTracking() {
         if ((this.processSessionChanges(), 0 === this.gameSessions.size)) {
-            this.heartbeatInterval.stop(), v.disable(), this.disableWindowTracking();
+            (this.heartbeatInterval.stop(), v.disable(), this.disableWindowTracking());
             return;
         }
-        v.enable(),
+        (v.enable(),
             this.enableWindowTracking(),
-            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(P, this.logRunningGameHeartbeats);
+            this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(P, this.logRunningGameHeartbeats));
     }
     handleRunningGamesChanged = (e) => {
         this.scheduleHeartbeatTracking();
@@ -304,14 +306,14 @@ class w extends l.A {
                 });
             })
             .catch((e) => {
-                t || e instanceof r.Fh || M.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
+                (t || e instanceof r.Fh || M.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
                     I.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
                         ...E,
                         ...f,
                         ...(a ?? {}),
                         ...(i ?? {}),
                         ...(h ?? {}),
-                    });
+                    }));
             });
     }
     processSessionChanges() {
@@ -327,7 +329,7 @@ class w extends l.A {
                     let n = null != e.name ? e.name : "",
                         i = `${e.id ?? e.exePath}:${n}`,
                         r = e.distributor === b.d3x.ROBLOX ? (0, E.hD)(e) : null;
-                    return null != r && (i += `:${r}`), i;
+                    return (null != r && (i += `:${r}`), i);
                 })(a, e);
             if ((n.add(s), this.gameSessions.has(s))) {
                 let n = this.gameSessions.get(s);
@@ -335,16 +337,16 @@ class w extends l.A {
                 if (n.runningGame.pid !== a.pid) {
                     let l = n.runningGame.pid,
                         o = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a, analyticsIdentity: e };
-                    this.gameSessions.set(s, o),
+                    (this.gameSessions.set(s, o),
                         S.startMonitoringPid(a.pid),
                         this.logHeartbeat(n, !1, !0, null, r).finally(() => {
                             this.stopMonitoringPidIfInactive(l);
                         }),
-                        this.logHeartbeat(o, !0, !1, null, null);
-                } else (n.runningGame = a), (n.analyticsIdentity = e);
+                        this.logHeartbeat(o, !0, !1, null, null));
+                } else ((n.runningGame = a), (n.analyticsIdentity = e));
             } else {
                 let n = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a, analyticsIdentity: e };
-                this.gameSessions.set(s, n), S.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null);
+                (this.gameSessions.set(s, n), S.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
             }
         }
         for (let [e, t] of this.gameSessions)

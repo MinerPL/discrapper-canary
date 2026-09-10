@@ -17,10 +17,10 @@ r(
                         i = [],
                         s = 0,
                         c = 1;
-                    l(e, function (e) {
+                    (l(e, function (e) {
                         var o = s++,
                             l = !1;
-                        c++,
+                        (c++,
                             a(n, t, e).then(
                                 function (e) {
                                     !l && ((l = !0), (i[o] = { status: "fulfilled", value: e }), --c || r(i));
@@ -28,11 +28,11 @@ r(
                                 function (e) {
                                     !l && ((l = !0), (i[o] = { status: "rejected", reason: e }), --c || r(i));
                                 },
-                            );
+                            ));
                     }),
-                        --c || r(i);
+                        --c || r(i));
                 });
-            return u.error && c(u.value), n.promise;
+            return (u.error && c(u.value), n.promise);
         },
     },
 );

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_PATTERN =
         t.YEAR_PATTERN =
         t.NUMBER_PATTERN =
@@ -11,7 +11,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.parseYear = function (e) {
         if (e.match(/^[0-9]{1,4}$/)) {
             let t = parseInt(e);
-            return t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t;
+            return (t < 100 && (t > 50 ? (t += 1900) : (t += 2e3)), t);
         }
         return e.match(/a\.?\s*c\.?/i) ? -parseInt((e = e.replace(/a\.?\s*c\.?/i, ""))) : parseInt(e);
     }),
@@ -19,15 +19,15 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         let r = {},
             n = e,
             i = s.exec(n);
-        for (; i; )
-            (function (e, r) {
+        for (; i;)
+            ((function (e, r) {
                 let n = a(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, i),
                 (n = n.substring(i[0].length)),
-                (i = s.exec(n));
+                (i = s.exec(n)));
         return r;
-    });
+    }));
 let n = r(798401);
 function a(e) {
     let r = e.toLowerCase();
@@ -38,7 +38,7 @@ function a(e) {
     if (r.match(/media?/)) return 0.5;
     return parseFloat(r);
 }
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     domingo: 0,
     dom: 0,
     lunes: 1,
@@ -137,7 +137,7 @@ function a(e) {
         "a\xf1os": "year",
     }),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`),
-    (t.YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?");
+    (t.YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?"));
 let i = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
     s = RegExp(i, "i");
 t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", i);

@@ -19,9 +19,9 @@ function p(t) {
         if ((x(null), h !== p.description || C !== p.primaryCategoryId)) {
             f(!0);
             try {
-                await (0, c.FA)(p.channelId, p.guildId, h, C), f(!1), i();
+                (await (0, c.FA)(p.channelId, p.guildId, h, C), f(!1), i());
             } catch (t) {
-                f(!1), x(new o.A(t));
+                (f(!1), x(new o.A(t)));
             }
         }
     }

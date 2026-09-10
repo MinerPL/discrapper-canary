@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "nl",
     pluralRuleFunction: function (e, t) {
         var r = !String(e).split(".")[1];
@@ -10,4 +10,4 @@ IntlMessageFormat.__addLocaleData({
     IntlMessageFormat.__addLocaleData({ locale: "nl-BQ", parentLocale: "nl" }),
     IntlMessageFormat.__addLocaleData({ locale: "nl-CW", parentLocale: "nl" }),
     IntlMessageFormat.__addLocaleData({ locale: "nl-SR", parentLocale: "nl" }),
-    IntlMessageFormat.__addLocaleData({ locale: "nl-SX", parentLocale: "nl" });
+    IntlMessageFormat.__addLocaleData({ locale: "nl-SX", parentLocale: "nl" }));

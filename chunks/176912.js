@@ -25,5 +25,5 @@ function c(t) {
     r = 0;
     for (let t = 0; t < 10; t++) r += Number.parseInt(e.charAt(t), 10) * (11 - t);
     let a = 11 - (r % 11);
-    return a >= 10 && (a = 0), e.charAt(10) === a.toString();
+    return (a >= 10 && (a = 0), e.charAt(10) === a.toString());
 }

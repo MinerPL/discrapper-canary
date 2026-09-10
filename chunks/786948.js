@@ -48,7 +48,7 @@ async function A(e) {
         let e, n, i, O;
         if ((t(), r)) return;
         if (T === y.VVm.ONE_TIME)
-            a()(null != x, "SKU must exist and be fetched."),
+            (a()(null != x, "SKU must exist and be fetched."),
                 a()(null != R, "invoicePreview must exist."),
                 (e = await (0, f.XU)(x.applicationId, x.id, {
                     expectedAmount: R.total,
@@ -58,16 +58,16 @@ async function A(e) {
                     loadId: b,
                     giftInfoOptions: j,
                     quantity: M,
-                }));
+                })));
         else {
-            a()(null != d, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview");
+            (a()(null != d, "Missing subscriptionPlan"), a()(null != R, "Missing invoicePreview"));
             let t = { amount: R.total, currency: R.currency },
                 n = (0, S.l6)(C, R.checkoutContext?.available_plans),
                 l = (0, S.$Q)((0, S.y8)(d.id, !1, !1, n));
             if (null != P) {
                 let e = C.currency ?? R.currency,
                     t = (0, S.Pg)(P, d.id, 1, new Set(m));
-                (t = (0, S.qn)(t)), (l = (0, S.UC)(t, e.toLowerCase(), C.paymentSourceId));
+                ((t = (0, S.qn)(t)), (l = (0, S.UC)(t, e.toLowerCase(), C.paymentSourceId)));
             }
             if (s) {
                 let t = R.total,
@@ -90,9 +90,9 @@ async function A(e) {
             } else if (null != P) {
                 let n = (0, S.Pg)(P, d.id, 1, new Set(m)),
                     i = { paymentSource: A, currency: C.currency ?? R.currency };
-                P.status === y.Dmq.PAUSED && (i.status = y.Dmq.ACTIVE),
+                (P.status === y.Dmq.PAUSED && (i.status = y.Dmq.ACTIVE),
                     P.isPausedAllowsResumeButNotUpdates || (i.items = n),
-                    (e = await (0, c.nV)(P, i, t, l, u, o, b));
+                    (e = await (0, c.nV)(P, i, t, l, u, o, b)));
             } else
                 e = await (0, h.B1)({
                     planId: d.id,
@@ -108,7 +108,7 @@ async function A(e) {
         }
         let { shouldReturnEarly: L } = l(e);
         if (L) return;
-        "subscription" in e
+        ("subscription" in e
             ? (n = null != e.subscription ? E.A.createFromServer(e.subscription) : null)
             : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0),
             "appliedUserDiscounts" in e &&
@@ -116,7 +116,7 @@ async function A(e) {
                     null != e.appliedUserDiscounts && e.appliedUserDiscounts.length > 0
                         ? e.appliedUserDiscounts
                         : void 0),
-            v(n, i, O);
+            v(n, i, O));
     } catch (e) {
         n(e);
     } finally {
@@ -143,7 +143,7 @@ class D {
     init;
     resolveTenantReviewButtonProps;
     constructor(e, t) {
-        (this.init = e), (this.resolveTenantReviewButtonProps = t ?? this.defaultResolveTenantReviewButtonProps);
+        ((this.init = e), (this.resolveTenantReviewButtonProps = t ?? this.defaultResolveTenantReviewButtonProps));
     }
     defaultResolveTenantReviewButtonProps(e) {
         return {
@@ -366,7 +366,7 @@ function W(e) {
         eE = (0, _.Mq)(eo),
         eS = (0, N.lo)(eh),
         ey = {};
-    (ey.gift_style = ed),
+    ((ey.gift_style = ed),
         (ey.reward_sku_ids = eE ? ef : []),
         eS === N.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (a()(null != eh, "Gift recipient must be set at purchase review step for these gift options."),
@@ -374,7 +374,7 @@ function W(e) {
             (ey.custom_message = em),
             (ey.emoji_id = ep?.id),
             (ey.emoji_name = ep?.id == null ? ep?.surrogates : void 0),
-            (ey.sound_id = eC?.soundId));
+            (ey.sound_id = eC?.soundId)));
     let eI = eo?.id,
         { analyticsLocations: eA } = (0, u.Ay)(),
         eg = (0, v.W)(es, Z),
@@ -396,7 +396,7 @@ function W(e) {
         (eM = eu[B] ?? null),
         a()(null != eM, "SKU must exist and be fetched."));
     let eO = i.useCallback(() => {
-            V(P.h.PURCHASING),
+            (V(P.h.PURCHASING),
                 Y(!0),
                 ex(!0),
                 s.h.wait(o.ET),
@@ -410,11 +410,11 @@ function W(e) {
                     duration_ms: Date.now() - r,
                     gift_card_balance: eP,
                     gift_card_currency: ev,
-                });
+                }));
         }, [V, Y, q, n, r, W, eP, ev]),
         eL = i.useCallback(
             (e) => {
-                V(P.h.FAIL),
+                (V(P.h.FAIL),
                     q(e),
                     T.default.track(y.HAw.PAYMENT_FLOW_FAILED, {
                         ...n,
@@ -424,7 +424,7 @@ function W(e) {
                         duration_ms: Date.now() - r,
                         gift_card_balance: eP,
                         gift_card_currency: ev,
-                    });
+                    }));
             },
             [V, q, n, r, eg, eP, ev],
         ),
@@ -448,19 +448,19 @@ function W(e) {
         eG = i.useCallback(
             (e, t, n) => {
                 let l = e ?? null;
-                et(l),
+                (et(l),
                     null != t && X(t),
                     null != n && ee(n),
-                    L(w, { fulfillment: { subscription: l, entitlements: t } });
+                    L(w, { fulfillment: { subscription: l, entitlements: t } }));
             },
             [L, w, et, X, ee],
         );
     async function eF() {
-        eO(), er(!0);
+        (eO(), er(!0));
         try {
             await eB();
         } finally {
-            er(!1), eD();
+            (er(!1), eD());
         }
     }
     async function eB() {
@@ -470,7 +470,7 @@ function W(e) {
                 let t = await (0, m.Vw)(e.order.id);
                 if (!eb.current) return;
                 if (0 === t.length) throw new m.j2();
-                V(P.h.COMPLETED), eG(null, t);
+                (V(P.h.COMPLETED), eG(null, t));
             } catch (t) {
                 ew(t, { orderId: e.order.id, loadId: K.loadId });
             }

@@ -6,14 +6,14 @@ var n,
     s = "ResizeObserver loop completed with undelivered notifications.",
     l = function () {
         var e;
-        "function" == typeof ErrorEvent
+        ("function" == typeof ErrorEvent
             ? (e = new ErrorEvent("error", { message: s }))
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = s)),
-            window.dispatchEvent(e);
+            window.dispatchEvent(e));
     };
-((n = i || (i = {})).BORDER_BOX = "border-box"),
+(((n = i || (i = {})).BORDER_BOX = "border-box"),
     (n.CONTENT_BOX = "content-box"),
-    (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
+    (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box"));
 var u = (function () {
         function e(e, t, r, n) {
             return (
@@ -105,7 +105,7 @@ var u = (function () {
     }),
     S = function (e, t) {
         if ((void 0 === t && (t = !1), m.has(e) && !t)) return m.get(e);
-        if (f(e)) return m.set(e, _), _;
+        if (f(e)) return (m.set(e, _), _);
         var r = getComputedStyle(e),
             n = c(e) && e.ownerSVGElement && e.getBBox(),
             i = !g && "border-box" === r.boxSizing,
@@ -136,7 +136,7 @@ var u = (function () {
                 contentBoxSize: w(O, D, o),
                 contentRect: new u(h, l, O, D),
             });
-        return m.set(e, F), F;
+        return (m.set(e, F), F);
     },
     x = function (e, t, r) {
         var n = S(e, r),
@@ -154,15 +154,15 @@ var u = (function () {
     },
     E = function (e) {
         var t = S(e);
-        (this.target = e),
+        ((this.target = e),
             (this.contentRect = t.contentRect),
             (this.borderBoxSize = [t.borderBoxSize]),
             (this.contentBoxSize = [t.contentBoxSize]),
-            (this.devicePixelContentBoxSize = [t.devicePixelContentBoxSize]);
+            (this.devicePixelContentBoxSize = [t.devicePixelContentBoxSize]));
     },
     k = function (e) {
         if (f(e)) return 1 / 0;
-        for (var t = 0, r = e.parentNode; r; ) (t += 1), (r = r.parentNode);
+        for (var t = 0, r = e.parentNode; r;) ((t += 1), (r = r.parentNode));
         return t;
     },
     C = function () {
@@ -171,15 +171,15 @@ var u = (function () {
         a.forEach(function (r) {
             if (0 !== r.activeTargets.length) {
                 var n = [];
-                r.activeTargets.forEach(function (t) {
+                (r.activeTargets.forEach(function (t) {
                     var r = new E(t.target),
                         i = k(t.target);
-                    n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), i < e && (e = i);
+                    (n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), i < e && (e = i));
                 }),
                     t.push(function () {
                         r.callback.call(r.observer, n, r.observer);
                     }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    r.activeTargets.splice(0, r.activeTargets.length));
             }
         });
         for (var r = 0; r < t.length; r++) (0, t[r])();
@@ -187,11 +187,11 @@ var u = (function () {
     },
     T = function (e) {
         a.forEach(function (t) {
-            t.activeTargets.splice(0, t.activeTargets.length),
+            (t.activeTargets.splice(0, t.activeTargets.length),
                 t.skippedTargets.splice(0, t.skippedTargets.length),
                 t.observationTargets.forEach(function (r) {
                     r.isActive() && (k(r.target) > e ? t.activeTargets.push(r) : t.skippedTargets.push(r));
-                });
+                }));
         });
     },
     M = function () {
@@ -215,16 +215,16 @@ var u = (function () {
         if (!o) {
             var t = 0,
                 r = document.createTextNode("");
-            new MutationObserver(function () {
+            (new MutationObserver(function () {
                 return P.splice(0).forEach(function (e) {
                     return e();
                 });
             }).observe(r, { characterData: !0 }),
                 (o = function () {
                     r.textContent = "" + (t ? t-- : t++);
-                });
+                }));
         }
-        P.push(e), o();
+        (P.push(e), o());
     },
     I = function (e) {
         A(function () {
@@ -250,16 +250,16 @@ var u = (function () {
         "focus",
     ],
     L = function (e) {
-        return void 0 === e && (e = 0), Date.now() + e;
+        return (void 0 === e && (e = 0), Date.now() + e);
     },
     F = !1,
     N = new ((function () {
         function e() {
             var e = this;
-            (this.stopped = !0),
+            ((this.stopped = !0),
                 (this.listener = function () {
                     return e.schedule();
-                });
+                }));
         }
         return (
             (e.prototype.run = function (e) {
@@ -279,7 +279,7 @@ var u = (function () {
                 }
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run();
+                (this.stop(), this.run());
             }),
             (e.prototype.observe = function () {
                 var e = this,
@@ -311,13 +311,13 @@ var u = (function () {
         );
     })())(),
     j = function (e) {
-        !O && e > 0 && N.start(), (O += e) || N.stop();
+        (!O && e > 0 && N.start(), (O += e) || N.stop());
     },
     B = (function () {
         function e(e, t) {
-            (this.target = e),
+            ((this.target = e),
                 (this.observedBox = t || i.CONTENT_BOX),
-                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
+                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 }));
         }
         return (
             (e.prototype.isActive = function () {
@@ -335,11 +335,11 @@ var u = (function () {
         );
     })(),
     K = function (e, t) {
-        (this.activeTargets = []),
+        ((this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
-            (this.callback = t);
+            (this.callback = t));
     },
     $ = new WeakMap(),
     V = function (e, t) {
@@ -368,10 +368,10 @@ var u = (function () {
             (e.disconnect = function (e) {
                 var t = this,
                     r = $.get(e);
-                r.observationTargets.slice().forEach(function (r) {
+                (r.observationTargets.slice().forEach(function (r) {
                     return t.unobserve(e, r.target);
                 }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    r.activeTargets.splice(0, r.activeTargets.length));
             }),
             e
         );

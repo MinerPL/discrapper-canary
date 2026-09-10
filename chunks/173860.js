@@ -1,4 +1,4 @@
-n.d(t, { A: () => I }), n(321073);
+(n.d(t, { A: () => I }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -13,7 +13,7 @@ let E = { friction: 10, tension: 300 };
 class A extends r.Component {
     _timeout;
     constructor(e) {
-        super(e), (this.state = { translateY: new d.A.Value(), reduceMotion: !1 });
+        (super(e), (this.state = { translateY: new d.A.Value(), reduceMotion: !1 }));
     }
     shouldComponentUpdate(e, t) {
         return !(0, c.A)(this.props, e, ["animate"]) || !(0, c.A)(this.state, t);
@@ -91,7 +91,7 @@ class h extends r.PureComponent {
             o = null,
             d = [];
         function c(e) {
-            null == l && r(e, a, d) && (l = e), null == o && i(e, a, d) && (o = e);
+            (null == l && r(e, a, d) && (l = e), null == o && i(e, a, d) && (o = e));
         }
         e.forEach((e) => {
             "string" == typeof e
@@ -104,7 +104,7 @@ class h extends r.PureComponent {
         });
         let u = a ? d.length - 1 : 0,
             _ = d[u];
-        for (; null != _; ) {
+        for (; null != _;) {
             if ("string" == typeof _) {
                 if (n(_, a, d)) break;
                 c(_);
@@ -119,12 +119,12 @@ class h extends r.PureComponent {
                 }
                 if (e) break;
             }
-            (u += a ? -1 : 1), (_ = d[u]);
+            ((u += a ? -1 : 1), (_ = d[u]));
         }
-        null != s && s(l, o, a), this.setState({ mention: l, unread: o });
+        (null != s && s(l, o, a), this.setState({ mention: l, unread: o }));
     }, 200);
     handleClick = (e) => {
-        e.preventDefault(), e.stopPropagation();
+        (e.preventDefault(), e.stopPropagation());
         let { unread: t, mention: n } = this.state,
             { onJumpTo: i } = this.props,
             r = null != n ? n : t;

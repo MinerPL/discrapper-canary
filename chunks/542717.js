@@ -16,7 +16,7 @@ function d(t) {
         let t = h.trim();
         if ("" === t) return void T(c.intl.string(c.t["G+TI44"]));
         try {
-            await p({ field_type: n, label: t, required: !0 }), g();
+            (await p({ field_type: n, label: t, required: !0 }), g());
         } catch (t) {
             T(new s.LG(t).getAnyErrorMessage());
         }
@@ -32,7 +32,7 @@ function d(t) {
             onChange: function (t) {
                 null != f && T(null);
                 let n = t.replace(/(\r\n|\n|\r)/g, " ");
-                n.length > u.Ty && (n = n.slice(0, u.Ty)), y(n);
+                (n.length > u.Ty && (n = n.slice(0, u.Ty)), y(n));
             },
             placeholder: c.intl.string(c.t.fqVmbL),
             value: h,

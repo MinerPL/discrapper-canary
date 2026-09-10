@@ -28,11 +28,11 @@ function h(e) {
         A = n.useCallback(
             async (e) => {
                 if ((e.preventDefault(), N && !b)) {
-                    g(!0), C(!1);
+                    (g(!0), C(!1));
                     try {
-                        await (0, o.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
+                        (await (0, o.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
                             (0, o.dv)(t, m.intl.string(_ ? u.default.pu8e3p : u.default.lM98yZ)),
-                            await p();
+                            await p());
                     } catch {
                         C(!0);
                     } finally {

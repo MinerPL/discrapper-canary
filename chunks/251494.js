@@ -6,6 +6,6 @@ let s = {
     binds: ["return"],
     action() {
         if (!i.Ay.keyboardModeEnabled && l._.hasSubscribers(r.jej.MODAL_SUBMIT))
-            return l._.dispatch(r.jej.MODAL_SUBMIT), !1;
+            return (l._.dispatch(r.jej.MODAL_SUBMIT), !1);
     },
 };

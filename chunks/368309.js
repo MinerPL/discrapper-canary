@@ -23,23 +23,23 @@ function S(e) {
         S = (0, h.TM)() ? m.A : g.A,
         { analyticsLocations: N } = (0, o.Ay)(n, l.A.PREMIUM_UPSELL);
     (0, s.Ay)(() => {
-        A.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
+        (A.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
             type: p.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED,
             is_external: !0,
             location_section: f.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
             location_stack: N,
             sku_id: I.Ay.getSkuIdForPremiumType(p.PremiumTypes.TIER_2),
         }),
-            (0, c.sq)(f.U7l.PREMIUM_UPSELL_VIEWED, N, () => (0, u.uq)(p.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED));
+            (0, c.sq)(f.U7l.PREMIUM_UPSELL_VIEWED, N, () => (0, u.uq)(p.e.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED)));
     });
     let C = (0, r.useCallback)(() => {
-        A.default.track(f.HAw.PREMIUM_PROMOTION_OPENED, {
+        (A.default.track(f.HAw.PREMIUM_PROMOTION_OPENED, {
             location_section: f.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
             location_object: f.ZSU.NAVIGATION_LINK,
         }),
             (0, d.A)(),
             t(),
-            (0, E.pX)(f.BVt.APPLICATION_STORE);
+            (0, E.pX)(f.BVt.APPLICATION_STORE));
     }, [t]);
     return (0, i.jsx)(o.f5, {
         value: N,

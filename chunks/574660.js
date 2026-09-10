@@ -19,10 +19,14 @@ function E(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: a } = e,
         r = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: a }),
         o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
-        h = (0, l.bG)([c.A, d.A, u.Ay], () => {
-            let e = c.A.getChannel(u.Ay.getChannelId());
-            return null != e && (e.isPrivate() || d.A.can(A.xBc.SEND_MESSAGES, e));
-        }, []),
+        h = (0, l.bG)(
+            [c.A, d.A, u.Ay],
+            () => {
+                let e = c.A.getChannel(u.Ay.getChannelId());
+                return null != e && (e.isPrivate() || d.A.can(A.xBc.SEND_MESSAGES, e));
+            },
+            [],
+        ),
         p = (0, s.V1)(e, o) && h;
     return {
         isDiscoverable: t,
@@ -59,7 +63,7 @@ function I(e, t) {
                   }
                 : s
                   ? () => {
-                        t?.(),
+                        (t?.(),
                             (0, h.o)({
                                 applicationId: e.id,
                                 customInstallUrl: c,
@@ -67,7 +71,7 @@ function I(e, t) {
                                 integrationTypesConfig: u,
                                 guildId: m,
                                 source: "app_message_embed",
-                            });
+                            }));
                     }
                   : void 0,
         [e.id, l, n, c, d, u, s, t, m],

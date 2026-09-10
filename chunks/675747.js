@@ -1,4 +1,4 @@
-l.d(t, { A: () => k }), l(321073);
+(l.d(t, { A: () => k }), l(321073));
 var n = l(477900),
     a = l(582128),
     i = l(503698),
@@ -140,7 +140,7 @@ let k = a.forwardRef(function (e, t) {
                 if (null != e) {
                     let t = null != x ? (0, r.round)(x, 3) : (0, r.round)(e.duration, 3);
                     if ((0, r.round)(e.currentTime, 3) >= t) {
-                        z(), (M.current = !1);
+                        (z(), (M.current = !1));
                         return;
                     }
                 }
@@ -163,7 +163,7 @@ let k = a.forwardRef(function (e, t) {
         }, []);
     a.useImperativeHandle(t, () => {
         let e = { play: _, seek: U, pause: z, videoElement: I.current.main };
-        return v(e), e;
+        return (v(e), e);
     }, [_, U, z, v]);
     let H = a.useCallback(() => {
         U(m);
@@ -180,7 +180,7 @@ let k = a.forwardRef(function (e, t) {
         let e = T.current;
         if (null == e) return;
         if (!K) {
-            (e.style.width = ""), (e.style.height = "");
+            ((e.style.width = ""), (e.style.height = ""));
             return;
         }
         function t() {
@@ -197,7 +197,7 @@ let k = a.forwardRef(function (e, t) {
         let l = e.parentElement;
         if (null == l) return;
         let n = new ResizeObserver(t);
-        return n.observe(l), () => n.disconnect();
+        return (n.observe(l), () => n.disconnect());
     }, [K, o]),
     null == g)
         ? null

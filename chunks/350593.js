@@ -10,7 +10,7 @@ function o(e) {
         let t = 0 > e.indexOf("\u200D") ? e.replace("\uFE0F", "") : e;
         return n(874629)(`./${i.A.convert.toCodePoint(t)}.svg`);
     } catch (t) {
-        return console.warn(t, "no emoji for", e), "";
+        return (console.warn(t, "no emoji for", e), "");
     }
 }
 async function d(e) {
@@ -29,7 +29,7 @@ let c = {
             let t = new Map();
             return (n) => {
                 let i = t.get(n);
-                return void 0 === i && ((i = e(n)), t.set(n, i)), i;
+                return (void 0 === i && ((i = e(n)), t.set(n, i)), i);
             };
         },
     }.makeMemoizer(o),

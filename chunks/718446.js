@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { parseSettingsUrl: () => E, settingsPathToRoute: () => d, trackParseSettingsUrl: () => _ });
+(n.r(t), n.d(t, { parseSettingsUrl: () => E, settingsPathToRoute: () => d, trackParseSettingsUrl: () => _ }));
 var i = n(492462),
     r = n(174459),
     a = n(780964),

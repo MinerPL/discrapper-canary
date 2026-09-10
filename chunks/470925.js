@@ -21,7 +21,7 @@ var l = i(194226),
                 isNaN(t) || isNaN(e))
             )
                 throw Error(`Point is invalid: (${t}, ${e})`);
-            (this.x = +t), (this.y = +e), (this.pressure = i || 0), (this.time = n || Date.now());
+            ((this.x = +t), (this.y = +e), (this.pressure = i || 0), (this.time = n || Date.now()));
         }
         distanceTo(t) {
             return Math.sqrt(Math.pow(this.x - t.x, 2) + Math.pow(this.y - t.y, 2));
@@ -35,12 +35,12 @@ var l = i(194226),
     },
     p = class t {
         constructor(t, e, i, n, s, o) {
-            (this.startPoint = t),
+            ((this.startPoint = t),
                 (this.control2 = e),
                 (this.control1 = i),
                 (this.endPoint = n),
                 (this.startWidth = s),
-                (this.endWidth = o);
+                (this.endWidth = o));
         }
         static fromPoints(e, i) {
             let n = this.calculateControlPoints(e[0], e[1], e[2]).c2,
@@ -77,7 +77,7 @@ var l = i(194226),
                         s = r - e;
                     i += Math.sqrt(n * n + s * s);
                 }
-                (t = o), (e = r);
+                ((t = o), (e = r));
             }
             return i;
         }
@@ -111,7 +111,7 @@ var l = i(194226),
     },
     m = class t extends g {
         constructor(e, i = {}) {
-            super(),
+            (super(),
                 (0, u.t)(this, "dotSize", void 0),
                 (0, u.t)(this, "minWidth", void 0),
                 (0, u.t)(this, "maxWidth", void 0),
@@ -152,7 +152,7 @@ var l = i(194226),
                               o = 0,
                               r = null,
                               a = () => {
-                                  (o = Date.now()), (r = null), (i = t.apply(n, s)), r || ((n = null), (s = []));
+                                  ((o = Date.now()), (r = null), (i = t.apply(n, s)), r || ((n = null), (s = [])));
                               };
                           return function (...h) {
                               let l = Date.now(),
@@ -184,11 +184,11 @@ var l = i(194226),
                 (this._handleTouchCancel = this._handleTouchCancel.bind(this)),
                 (this._ctx = e.getContext("2d", this.canvasContextOptions)),
                 this.clear(),
-                this.on();
+                this.on());
         }
         clear() {
             let { _ctx: t, canvas: e } = this;
-            (t.fillStyle = this.backgroundColor),
+            ((t.fillStyle = this.backgroundColor),
                 t.clearRect(0, 0, e.width, e.height),
                 t.fillRect(0, 0, e.width, e.height),
                 (this._data = []),
@@ -196,13 +196,13 @@ var l = i(194226),
                 (this._isEmpty = !0),
                 (this._dataUrl = void 0),
                 (this._dataUrlOptions = void 0),
-                (this._strokePointerId = void 0);
+                (this._strokePointerId = void 0));
         }
         redraw() {
             let t = this._data,
                 e = this._dataUrl,
                 i = this._dataUrlOptions;
-            this.clear(), e && this.fromDataURL(e, i), this.fromData(t, { clear: !1 });
+            (this.clear(), e && this.fromDataURL(e, i), this.fromData(t, { clear: !1 }));
         }
         fromDataURL(t, e = {}) {
             return new Promise((i, n) => {
@@ -212,9 +212,9 @@ var l = i(194226),
                     a = e.height || this.canvas.height / o,
                     h = e.xOffset || 0,
                     l = e.yOffset || 0;
-                this._reset(this._getPointGroupOptions()),
+                (this._reset(this._getPointGroupOptions()),
                     (s.onload = () => {
-                        this._ctx.drawImage(s, h, l, r, a), i();
+                        (this._ctx.drawImage(s, h, l, r, a), i());
                     }),
                     (s.onerror = (t) => {
                         n(t);
@@ -223,7 +223,7 @@ var l = i(194226),
                     (s.src = t),
                     (this._isEmpty = !1),
                     (this._dataUrl = t),
-                    (this._dataUrlOptions = { ...e });
+                    (this._dataUrlOptions = { ...e }));
             });
         }
         toDataURL(t = "image/png", e) {
@@ -232,24 +232,24 @@ var l = i(194226),
                 : ("number" != typeof e && (e = void 0), this.canvas.toDataURL(t, e));
         }
         on() {
-            (this.canvas.style.touchAction = "none"),
+            ((this.canvas.style.touchAction = "none"),
                 (this.canvas.style.msTouchAction = "none"),
                 (this.canvas.style.userSelect = "none"),
-                (this.canvas.style.webkitUserSelect = "none");
+                (this.canvas.style.webkitUserSelect = "none"));
             let t = /Macintosh/.test(navigator.userAgent) && "ontouchstart" in document;
             window.PointerEvent && !t
                 ? this._handlePointerEvents()
                 : (this._handleMouseEvents(), "ontouchstart" in window && this._handleTouchEvents());
         }
         off() {
-            (this.canvas.style.touchAction = "auto"),
+            ((this.canvas.style.touchAction = "auto"),
                 (this.canvas.style.msTouchAction = "auto"),
                 (this.canvas.style.userSelect = "auto"),
                 (this.canvas.style.webkitUserSelect = "auto"),
                 this.canvas.removeEventListener("pointerdown", this._handlePointerDown),
                 this.canvas.removeEventListener("mousedown", this._handleMouseDown),
                 this.canvas.removeEventListener("touchstart", this._handleTouchStart),
-                this._removeMoveUpEventListeners();
+                this._removeMoveUpEventListeners());
         }
         _getListenerFunctions() {
             let t =
@@ -260,22 +260,22 @@ var l = i(194226),
         }
         _removeMoveUpEventListeners() {
             let { removeEventListener: t } = this._getListenerFunctions();
-            t("pointermove", this._handlePointerMove),
+            (t("pointermove", this._handlePointerMove),
                 t("pointerup", this._handlePointerUp),
                 t("pointercancel", this._handlePointerCancel),
                 t("mousemove", this._handleMouseMove),
                 t("mouseup", this._handleMouseUp),
                 t("touchmove", this._handleTouchMove),
                 t("touchend", this._handleTouchEnd),
-                t("touchcancel", this._handleTouchCancel);
+                t("touchcancel", this._handleTouchCancel));
         }
         isEmpty() {
             return this._isEmpty;
         }
         fromData(t, { clear: e = !0 } = {}) {
-            e && this.clear(),
+            (e && this.clear(),
                 this._fromData(t, this._drawCurve.bind(this), this._drawDot.bind(this)),
-                (this._data = this._data.concat(t));
+                (this._data = this._data.concat(t)));
         }
         toData() {
             return this._data;
@@ -323,7 +323,7 @@ var l = i(194226),
             this._allowPointerId(t) && (t.preventDefault(), this._strokeEnd(this._pointerEventToSignatureEvent(t), !1));
         }
         _handleTouchCancel(t) {
-            t.cancelable && t.preventDefault(), this._strokeEnd(this._touchEventToSignatureEvent(t), !1);
+            (t.cancelable && t.preventDefault(), this._strokeEnd(this._touchEventToSignatureEvent(t), !1));
         }
         _getPointerId(t) {
             return t.persistentDeviceId || t.pointerId;
@@ -343,7 +343,7 @@ var l = i(194226),
             if (this._allowPointerId(t)) {
                 if (!this._isLeftButtonPressed(t, !0) || !this._drawingStroke)
                     return void this._strokeEnd(this._pointerEventToSignatureEvent(t), !1);
-                t.preventDefault(), this._strokeMoveUpdate(this._pointerEventToSignatureEvent(t));
+                (t.preventDefault(), this._strokeMoveUpdate(this._pointerEventToSignatureEvent(t)));
             }
         }
         _handlePointerUp(t) {
@@ -367,23 +367,23 @@ var l = i(194226),
             let { addEventListener: e } = this._getListenerFunctions();
             switch (t.event.type) {
                 case "mousedown":
-                    e("mousemove", this._handleMouseMove, { passive: !1 }),
-                        e("mouseup", this._handleMouseUp, { passive: !1 });
+                    (e("mousemove", this._handleMouseMove, { passive: !1 }),
+                        e("mouseup", this._handleMouseUp, { passive: !1 }));
                     break;
                 case "touchstart":
-                    e("touchmove", this._handleTouchMove, { passive: !1 }),
+                    (e("touchmove", this._handleTouchMove, { passive: !1 }),
                         e("touchend", this._handleTouchEnd, { passive: !1 }),
-                        e("touchcancel", this._handleTouchCancel, { passive: !1 });
+                        e("touchcancel", this._handleTouchCancel, { passive: !1 }));
                     break;
                 case "pointerdown":
-                    e("pointermove", this._handlePointerMove, { passive: !1 }),
+                    (e("pointermove", this._handlePointerMove, { passive: !1 }),
                         e("pointerup", this._handlePointerUp, { passive: !1 }),
-                        e("pointercancel", this._handlePointerCancel, { passive: !1 });
+                        e("pointercancel", this._handlePointerCancel, { passive: !1 }));
             }
             this._drawingStroke = !0;
             let i = this._getPointGroupOptions(),
                 n = { ...i, points: [] };
-            this._data.push(n), this._reset(i), this._strokeUpdate(t);
+            (this._data.push(n), this._reset(i), this._strokeUpdate(t));
         }
         _strokeUpdate(t) {
             if (!this._drawingStroke) return;
@@ -397,36 +397,36 @@ var l = i(194226),
                 r = this._getPointGroupOptions(i);
             if (!s || !(s && o)) {
                 let t = this._addPoint(e, r);
-                s ? t && this._drawCurve(t, r) : this._drawDot(e, r),
-                    n.push({ time: e.time, x: e.x, y: e.y, pressure: e.pressure });
+                (s ? t && this._drawCurve(t, r) : this._drawDot(e, r),
+                    n.push({ time: e.time, x: e.x, y: e.y, pressure: e.pressure }));
             }
             this.dispatchEvent(new CustomEvent("afterUpdateStroke", { detail: t }));
         }
         _strokeEnd(t, e = !0) {
-            this._removeMoveUpEventListeners(),
+            (this._removeMoveUpEventListeners(),
                 this._drawingStroke &&
                     (e && this._strokeUpdate(t),
                     (this._drawingStroke = !1),
                     (this._strokePointerId = void 0),
-                    this.dispatchEvent(new CustomEvent("endStroke", { detail: t })));
+                    this.dispatchEvent(new CustomEvent("endStroke", { detail: t }))));
         }
         _handlePointerEvents() {
-            (this._drawingStroke = !1),
-                this.canvas.addEventListener("pointerdown", this._handlePointerDown, { passive: !1 });
+            ((this._drawingStroke = !1),
+                this.canvas.addEventListener("pointerdown", this._handlePointerDown, { passive: !1 }));
         }
         _handleMouseEvents() {
-            (this._drawingStroke = !1),
-                this.canvas.addEventListener("mousedown", this._handleMouseDown, { passive: !1 });
+            ((this._drawingStroke = !1),
+                this.canvas.addEventListener("mousedown", this._handleMouseDown, { passive: !1 }));
         }
         _handleTouchEvents() {
             this.canvas.addEventListener("touchstart", this._handleTouchStart, { passive: !1 });
         }
         _reset(t) {
-            (this._lastPoints = []),
+            ((this._lastPoints = []),
                 (this._lastVelocity = 0),
                 (this._lastWidth = (t.minWidth + t.maxWidth) / 2),
                 (this._ctx.fillStyle = t.penColor),
-                (this._ctx.globalCompositeOperation = t.compositeOperation);
+                (this._ctx.globalCompositeOperation = t.compositeOperation));
         }
         _createPoint(t, e, i) {
             let n = this.canvas.getBoundingClientRect();
@@ -438,7 +438,7 @@ var l = i(194226),
                 3 === i.length && i.unshift(i[0]);
                 let t = this._calculateCurveWidths(i[1], i[2], e),
                     n = p.fromPoints(i, t);
-                return i.shift(), n;
+                return (i.shift(), n);
             }
             return null;
         }
@@ -446,20 +446,20 @@ var l = i(194226),
             let n = i.velocityFilterWeight * e.velocityFrom(t) + (1 - i.velocityFilterWeight) * this._lastVelocity,
                 s = this._strokeWidth(n, i),
                 o = { end: s, start: this._lastWidth };
-            return (this._lastVelocity = n), (this._lastWidth = s), o;
+            return ((this._lastVelocity = n), (this._lastWidth = s), o);
         }
         _strokeWidth(t, e) {
             return Math.max(e.maxWidth / (t + 1), e.minWidth);
         }
         _drawCurveSegment(t, e, i) {
             let n = this._ctx;
-            n.moveTo(t, e), n.arc(t, e, i, 0, 2 * Math.PI, !1), (this._isEmpty = !1);
+            (n.moveTo(t, e), n.arc(t, e, i, 0, 2 * Math.PI, !1), (this._isEmpty = !1));
         }
         _drawCurve(t, e) {
             let i = this._ctx,
                 n = t.endWidth - t.startWidth,
                 s = 2 * Math.ceil(t.length());
-            i.beginPath(), (i.fillStyle = e.penColor);
+            (i.beginPath(), (i.fillStyle = e.penColor));
             for (let i = 0; i < s; i += 1) {
                 let o = i / s,
                     r = o * o,
@@ -474,12 +474,12 @@ var l = i(194226),
                 let v = Math.min(t.startWidth + a * n, e.maxWidth);
                 this._drawCurveSegment(c, u, v);
             }
-            i.closePath(), i.fill();
+            (i.closePath(), i.fill());
         }
         _drawDot(t, e) {
             let i = this._ctx,
                 n = e.dotSize > 0 ? e.dotSize : (e.minWidth + e.maxWidth) / 2;
-            i.beginPath(), this._drawCurveSegment(t.x, t.y, n), i.closePath(), (i.fillStyle = e.penColor), i.fill();
+            (i.beginPath(), this._drawCurveSegment(t.x, t.y, n), i.closePath(), (i.fillStyle = e.penColor), i.fill());
         }
         _fromData(t, e, i) {
             for (let n of t) {
@@ -493,7 +493,7 @@ var l = i(194226),
                         let r = this._addPoint(o, s);
                         r && e(r, s);
                     }
-                else this._reset(s), i(t[0], s);
+                else (this._reset(s), i(t[0], s));
             }
         }
         toSVG({ includeBackgroundColor: t = !1, includeDataUrl: e = !1 } = {}) {
@@ -511,10 +511,10 @@ var l = i(194226),
                 t && this.backgroundColor)
             ) {
                 let t = document.createElement("rect");
-                t.setAttribute("width", "100%"),
+                (t.setAttribute("width", "100%"),
                     t.setAttribute("height", "100%"),
                     t.setAttribute("fill", this.backgroundColor),
-                    r.appendChild(t);
+                    r.appendChild(t));
             }
             if (e && this._dataUrl) {
                 let t = this._dataUrlOptions?.ratio || window.devicePixelRatio || 1,
@@ -523,13 +523,13 @@ var l = i(194226),
                     n = this._dataUrlOptions?.xOffset || 0,
                     s = this._dataUrlOptions?.yOffset || 0,
                     o = document.createElement("image");
-                o.setAttribute("x", n.toString()),
+                (o.setAttribute("x", n.toString()),
                     o.setAttribute("y", s.toString()),
                     o.setAttribute("width", e.toString()),
                     o.setAttribute("height", i.toString()),
                     o.setAttribute("preserveAspectRatio", "none"),
                     o.setAttribute("href", this._dataUrl),
-                    r.appendChild(o);
+                    r.appendChild(o));
             }
             return (
                 this._fromData(
@@ -543,21 +543,21 @@ var l = i(194226),
                             !isNaN(t.control2.y)
                         ) {
                             let n = `M ${t.startPoint.x.toFixed(3)},${t.startPoint.y.toFixed(3)} C ${t.control1.x.toFixed(3)},${t.control1.y.toFixed(3)} ${t.control2.x.toFixed(3)},${t.control2.y.toFixed(3)} ${t.endPoint.x.toFixed(3)},${t.endPoint.y.toFixed(3)}`;
-                            i.setAttribute("d", n),
+                            (i.setAttribute("d", n),
                                 i.setAttribute("stroke-width", (2.25 * t.endWidth).toFixed(3)),
                                 i.setAttribute("stroke", e),
                                 i.setAttribute("fill", "none"),
                                 i.setAttribute("stroke-linecap", "round"),
-                                r.appendChild(i);
+                                r.appendChild(i));
                         }
                     },
                     (t, { penColor: e, dotSize: i, minWidth: n, maxWidth: s }) => {
                         let o = document.createElement("circle");
-                        o.setAttribute("r", (i > 0 ? i : (n + s) / 2).toString()),
+                        (o.setAttribute("r", (i > 0 ? i : (n + s) / 2).toString()),
                             o.setAttribute("cx", t.x.toString()),
                             o.setAttribute("cy", t.y.toString()),
                             o.setAttribute("fill", e),
-                            r.appendChild(o);
+                            r.appendChild(o));
                     },
                 ),
                 r.outerHTML
@@ -593,10 +593,10 @@ var l = i(194226),
                     { width: o, height: r } = t.getBoundingClientRect();
                 if (0 === o || 0 === r || !s) return;
                 let a = i.isEmpty() ? null : i.toData();
-                (e.width = Math.floor(o * n)),
+                ((e.width = Math.floor(o * n)),
                     (e.height = Math.floor(r * n)),
                     s.setTransform(n, 0, 0, n, 0, 0),
-                    a ? i.fromData(a, { clear: !0 }) : i.clear();
+                    a ? i.fromData(a, { clear: !0 }) : i.clear());
             }, []);
             return (
                 (0, s.u)(
@@ -615,7 +615,7 @@ var l = i(194226),
                             let t = c.current;
                             if (!t) return null;
                             let e = document.createElement("canvas");
-                            (e.width = t.width), (e.height = t.height);
+                            ((e.width = t.width), (e.height = t.height));
                             let i = e.getContext("2d");
                             if (!i) throw Error("Canvas 2D context is not available");
                             return (
@@ -647,10 +647,10 @@ var l = i(194226),
                             ((t) => {
                                 if ("u" < typeof document) return null;
                                 let e = document.createElement("div");
-                                (e.style.color = t),
+                                ((e.style.color = t),
                                     (e.style.position = "absolute"),
                                     (e.style.visibility = "hidden"),
-                                    document.body.appendChild(e);
+                                    document.body.appendChild(e));
                                 let i = getComputedStyle(e).color;
                                 if ((document.body.removeChild(e), !i || "transparent" === i)) return null;
                                 let n = i.match(/\d+/g);
@@ -669,21 +669,21 @@ var l = i(194226),
                         s = new m(e, { ...(n ? { penColor: n } : {}), ...(r ? { maxWidth: r } : {}) });
                     u.current = s;
                     let a = () => v.current?.();
-                    s.addEventListener("beginStroke", a), _();
+                    (s.addEventListener("beginStroke", a), _());
                     let h = new ResizeObserver(() => {
                         null === i &&
                             (i = requestAnimationFrame(() => {
-                                (i = null), _();
+                                ((i = null), _());
                             }));
                     });
                     return (
                         h.observe(t),
                         () => {
-                            null !== i && cancelAnimationFrame(i),
+                            (null !== i && cancelAnimationFrame(i),
                                 h.disconnect(),
                                 s.removeEventListener("beginStroke", a),
                                 s.off(),
-                                (u.current = null);
+                                (u.current = null));
                         }
                     );
                 }, [_, o, r]),
@@ -716,10 +716,10 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
                 E.current &&
                     (E.current.on(), E.current.clear(), m(!1), y(u("signature.cleared")), p.setSignatureValid(!1));
             }, [p, u]);
-        (0, o.c)({ status: "finished" === _.status ? "finished" : "loading", onFinish: e }),
+        ((0, o.c)({ status: "finished" === _.status ? "finished" : "loading", onFinish: e }),
             (0, s._)(() => {
                 x && (i?.(x), E.current?.on());
-            }, [x, i]);
+            }, [x, i]));
         let k = async () => {
                 let e = E.current;
                 if (!e) return;
@@ -758,7 +758,7 @@ var f = ({ config: t, onFinish: e, onError: i }) => {
                                     ref: E,
                                     hasDrawing: g,
                                     onBeginStroke: () => {
-                                        m(!0), y(u("signature.captured")), p.setSignatureValid(!0);
+                                        (m(!0), y(u("signature.captured")), p.setSignatureValid(!0));
                                     },
                                     placeholder: u("signature.fullSignaturePlaceholder"),
                                     ariaLabel: u("signature.canvasAriaLabel"),

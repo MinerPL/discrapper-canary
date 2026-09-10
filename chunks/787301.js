@@ -15,14 +15,14 @@ function A() {
     return null == e ? null : `AgeVerificationStore_${e}`;
 }
 function h() {
-    (_ = "unchecked"), (E = null);
+    ((_ = "unchecked"), (E = null));
 }
 function I() {
     let e = A();
     null != e && r.w.set(e, { reactiveCheckStatus: _, reactiveCheckMissAt: E });
 }
 function f() {
-    (o = null), (d = null), (c = null);
+    ((o = null), (d = null), (c = null));
 }
 function p() {
     return "miss" === _ && null != E && Date.now() - E < 864e5;
@@ -66,18 +66,18 @@ let m = new T(a.h, {
     },
     AGE_VERIFICATION_METHODS_LOAD_SUCCESS: function (e) {
         let { methods: t } = e;
-        (l = t), (u = !1);
+        ((l = t), (u = !1));
     },
     AGE_VERIFICATION_METHODS_LOAD_FAILURE: function () {
         u = !1;
     },
     AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS: function (e) {
         let { methods: t, footerMessage: n, outageBannerMessage: i } = e;
-        (o = t), (d = n), (c = i);
+        ((o = t), (d = n), (c = i));
     },
     INITIATE_AGE_VERIFICATION: f,
     CONNECTION_OPEN: function () {
-        !(function () {
+        (!(function () {
             let e = A();
             if (null == e) return h();
             let t = r.w.get(e);
@@ -86,13 +86,13 @@ let m = new T(a.h, {
                 i = t.reactiveCheckMissAt ?? null;
             "miss" === n && null != i && Date.now() - i >= 864e5 ? h() : ((_ = n), (E = i));
         })(),
-            f();
+            f());
     },
     AGE_VERIFICATION_CHECK_RESULT_SET: function (e) {
         let { status: t } = e;
-        (_ = t), (E = "miss" === t ? Date.now() : null), I();
+        ((_ = t), (E = "miss" === t ? Date.now() : null), I());
     },
     AGE_VERIFICATION_RESET: function () {
-        (_ = "suppress"), (E = null), I(), f();
+        ((_ = "suppress"), (E = null), I(), f());
     },
 });

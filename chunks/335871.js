@@ -15,7 +15,7 @@ class d extends o.G {
     now() {
         let e = this.create(),
             t = Date.now();
-        return (e.seconds = l.h.from(Math.floor(t / 1e3)).toString()), (e.nanos = (t % 1e3) * 1e6), e;
+        return ((e.seconds = l.h.from(Math.floor(t / 1e3)).toString()), (e.nanos = (t % 1e3) * 1e6), e);
     }
     toDate(e) {
         return new Date(1e3 * l.h.from(e.seconds).toNumber() + Math.ceil(e.nanos / 1e6));
@@ -23,7 +23,7 @@ class d extends o.G {
     fromDate(e) {
         let t = this.create(),
             n = e.getTime();
-        return (t.seconds = l.h.from(Math.floor(n / 1e3)).toString()), (t.nanos = (n % 1e3) * 1e6), t;
+        return ((t.seconds = l.h.from(Math.floor(n / 1e3)).toString()), (t.nanos = (n % 1e3) * 1e6), t);
     }
     internalJsonWrite(e, t) {
         let n = 1e3 * l.h.from(e.seconds).toNumber();
@@ -75,7 +75,7 @@ class d extends o.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -95,10 +95,10 @@ class d extends o.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.seconds && t.tag(1, i.O0.Varint).int64(e.seconds),
-            0 !== e.nanos && t.tag(2, i.O0.Varint).int32(e.nanos);
+        ("0" !== e.seconds && t.tag(1, i.O0.Varint).int64(e.seconds),
+            0 !== e.nanos && t.tag(2, i.O0.Varint).int32(e.nanos));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let c = new d();

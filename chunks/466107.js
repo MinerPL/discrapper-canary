@@ -60,7 +60,7 @@ var n = r(589841),
                     v = c[p],
                     y = v.indexOf("]="),
                     g = -1 === y ? v.indexOf("=") : y + 1;
-                -1 === g
+                (-1 === g
                     ? ((h = t.decoder(v, a.decoder, d, "key")), (m = t.strictNullHandling ? null : ""))
                     : ((h = t.decoder(v.slice(0, g), a.decoder, d, "key")),
                       (m = n.maybeMap(s(v.slice(g + 1), t, o(r[h]) ? r[h].length : 0), function (e) {
@@ -72,7 +72,7 @@ var n = r(589841),
                         (m = String(m).replace(/&#(\d+);/g, function (e, t) {
                             return String.fromCharCode(parseInt(t, 10));
                         })),
-                    v.indexOf("[]=") > -1 && (m = o(m) ? [m] : m);
+                    v.indexOf("[]=") > -1 && (m = o(m) ? [m] : m));
                 var b = i.call(r, h);
                 b && "combine" === t.duplicates
                     ? (r[h] = n.combine(r[h], m))
@@ -117,7 +117,7 @@ var n = r(589841),
                 if (!r.plainObjects && i.call(Object.prototype, l) && !r.allowPrototypes) return;
                 c.push(l);
             }
-            for (var f = 0; r.depth > 0 && null !== (s = a.exec(o)) && f < r.depth; ) {
+            for (var f = 0; r.depth > 0 && null !== (s = a.exec(o)) && f < r.depth;) {
                 if (((f += 1), !r.plainObjects && i.call(Object.prototype, s[1].slice(1, -1)) && !r.allowPrototypes))
                     return;
                 c.push(s[1]);

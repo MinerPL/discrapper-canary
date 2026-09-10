@@ -17,7 +17,7 @@ function w(i) {
             (0, g.A)({ channel: n });
         }, [n]),
         b = d.useCallback(() => {
-            (0, u.nK)({ guildId: n.guild_id, channelId: n.id }), (0, s.e2)(n.id);
+            ((0, u.nK)({ guildId: n.guild_id, channelId: n.id }), (0, s.e2)(n.id));
         }, [n.guild_id, n.id]);
     return (0, a.jsx)(l.W, {
         "data-menu-migrated": !0,

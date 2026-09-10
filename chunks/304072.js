@@ -11,7 +11,7 @@ function r(e, t) {
             n,
             (0, l.useCallback)(
                 (n) => {
-                    r(n), n !== e && a.start(t, () => r(e));
+                    (r(n), n !== e && a.start(t, () => r(e)));
                 },
                 [t, e, a],
             ),

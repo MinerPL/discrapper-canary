@@ -10,12 +10,16 @@ var a = e(17928),
     d = e(375708);
 function A(t, i) {
     let e = (0, a.bG)([c.A], () => t === c.A.getSelectedParticipantId(i), [i, t]);
-    return (0, a.bG)([c.A, l.A], () => {
-        let e = l.A.isInChannel(i, t) && l.A.hasVideo(i),
-            n = c.A.getLayout(i),
-            a = n === u.DUB.MINIMUM || n === u.DUB.NORMAL;
-        return !e || a;
-    }, [i, t])
+    return (0, a.bG)(
+        [c.A, l.A],
+        () => {
+            let e = l.A.isInChannel(i, t) && l.A.hasVideo(i),
+                n = c.A.getLayout(i),
+                a = n === u.DUB.MINIMUM || n === u.DUB.NORMAL;
+            return !e || a;
+        },
+        [i, t],
+    )
         ? null
         : (0, n.jsx)(r.Dr, {
               id: "focus-video",

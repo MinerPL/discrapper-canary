@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Cy: () => S,
     OH: () => y,
     Qd: () => g,
@@ -10,7 +10,7 @@ n.d(t, {
     rB: () => D,
     sg: () => M,
 }),
-    n(321073);
+    n(321073));
 var i = n(695497),
     r = n.n(i),
     a = n(435558),
@@ -22,10 +22,10 @@ var i = n(695497),
     u = n(650583);
 let _ = __OVERLAY__ ? u.Nu : (0, d.isLinux)() ? u.C8 : (0, d.isMac)() ? u.V8 : (0, d.isWindows)() ? u.Nu : {},
     E = s().invert(u.C8);
-(E["223"] = "`"), Object.freeze(E);
+((E["223"] = "`"), Object.freeze(E));
 let A = Object.freeze(s().invert(u.V8)),
     h = s().invert(u.Nu);
-(h["223"] = "`"), Object.freeze(h);
+((h["223"] = "`"), Object.freeze(h));
 let I = s().invert(_ ?? {});
 function f(e) {
     return "+" === e ? "plus" : e;
@@ -126,7 +126,7 @@ function N(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
-(0, d.isMac)() || (I["223"] = "`"), Object.freeze(I);
+((0, d.isMac)() || (I["223"] = "`"), Object.freeze(I));
 let C = [
     ["META", "\u2318"],
     ["CMD", "\u2318"],
@@ -165,12 +165,12 @@ function L(e) {
         : e.reduce((e, n) => {
               let i = g(n),
                   r = { ...t };
-              if (null == i) return e.push({ ...r, combo: n }), e;
+              if (null == i) return (e.push({ ...r, combo: n }), e);
               if (R.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
-                  return (t[i + "Key"] = !0), e.map((e) => ((e[i + "Key"] = !0), e));
+                  return ((t[i + "Key"] = !0), e.map((e) => ((e[i + "Key"] = !0), e)));
               {
                   let t = S(i, u.g$.BROWSER);
-                  return null != t && (r.keyCode = t), e.push(r), e;
+                  return (null != t && (r.keyCode = t), e.push(r), e);
               }
           }, []);
 }
@@ -192,7 +192,7 @@ function y(e) {
                 t,
                 n,
             );
-            return null != r && e.push([n, r, t]), e;
+            return (null != r && e.push([n, r, t]), e);
         }, []);
 }
 function D(e) {

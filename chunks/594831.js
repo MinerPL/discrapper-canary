@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => J, Dz: () => z, MV: () => P, S4: () => Y, qZ: () => X }), n(321073);
+(n.d(t, { Ay: () => J, Dz: () => z, MV: () => P, S4: () => Y, qZ: () => X }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -120,7 +120,7 @@ function Y() {
                         )
                         .reduce((e, t) => {
                             let n = k.default.getUser(t);
-                            return null != n && e.push(n), e;
+                            return (null != n && e.push(n), e);
                         }, []),
                 [],
             )),
@@ -145,25 +145,29 @@ function Y() {
                     ).filter(O.Vq),
                 [e],
             )),
-        n = (0, a.yK)([x.A, v.A, b.A], () => {
-            let e = x.A.getVoiceChannelHistory(),
-                n = new Set(t);
-            return Array.from(
-                new Set(
-                    e.reduce((e, t) => {
-                        let l = v.A.getChannel(t);
-                        return (
-                            null != l &&
-                                b.A.can(w.xBc.VIEW_CHANNEL, l) &&
-                                b.A.can(w.xBc.CONNECT, l) &&
-                                !n.has(t) &&
-                                e.push(t),
-                            e
-                        );
-                    }, []),
-                ),
-            );
-        }, [t]);
+        n = (0, a.yK)(
+            [x.A, v.A, b.A],
+            () => {
+                let e = x.A.getVoiceChannelHistory(),
+                    n = new Set(t);
+                return Array.from(
+                    new Set(
+                        e.reduce((e, t) => {
+                            let l = v.A.getChannel(t);
+                            return (
+                                null != l &&
+                                    b.A.can(w.xBc.VIEW_CHANNEL, l) &&
+                                    b.A.can(w.xBc.CONNECT, l) &&
+                                    !n.has(t) &&
+                                    e.push(t),
+                                e
+                            );
+                        }, []),
+                    ),
+                );
+            },
+            [t],
+        );
     return { friendVoiceChannelIds: t, recentVoiceChannelIds: n };
 }
 function K(e, t) {
@@ -415,7 +419,7 @@ function J(e) {
         ),
         h = i.useCallback(
             (e, t) => {
-                r(e, t), n();
+                (r(e, t), n());
             },
             [r, n],
         );

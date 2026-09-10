@@ -29,7 +29,7 @@ var i = d(252422),
                     baseId: m,
                     activeValue: h,
                     setActiveValue: (l) => {
-                        void 0 === t && u(l), d?.(l);
+                        (void 0 === t && u(l), d?.(l));
                     },
                     orientation: e,
                     activation: a,

@@ -46,11 +46,11 @@ let P = (t) => {
         O = P.toLocaleDateString(d, { month: "long", day: "numeric", year: "numeric" }),
         N = s.useMemo(() => (0, h.A)(), []);
     async function D() {
-        _(!0), w(!1);
+        (_(!0), w(!1));
         try {
-            await y.Ir(a, e), u(j.SUCCESS);
+            (await y.Ir(a, e), u(j.SUCCESS));
         } catch (t) {
-            w(!0), _(!1);
+            (w(!0), _(!1));
         }
     }
     s.useEffect(() => {

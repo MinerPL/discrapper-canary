@@ -2,16 +2,16 @@ d.d(t, { selfieMachine: () => o, y6: () => u });
 var i = d(522681);
 d(41851);
 var e = d(269882);
-d(528239), d(829601), d(489510), d(886347), d(219877);
+(d(528239), d(829601), d(489510), d(886347), d(219877));
 var c = d(646613),
     a = d(215628);
-d(867386), d(444064), d(880008), d(49954), d(154676);
+(d(867386), d(444064), d(880008), d(49954), d(154676));
 var s = d(985346),
     n = d(377689),
     Z = d(327487);
-d(280366), d(693160), d(97669), d(614235), d(888091), d(453080), d(660125);
+(d(280366), d(693160), d(97669), d(614235), d(888091), d(453080), d(660125));
 var b = d(588936);
-d(689280), d(974916), d(159126), d(934350), d(132680), Object.values(b.t);
+(d(689280), d(974916), d(159126), d(934350), d(132680), Object.values(b.t));
 let m = ({ config: l, response: t }) =>
         t
             ? 0 !== t.confidence
@@ -93,7 +93,7 @@ async function h(l, t) {
     if (!a) throw Error("selfieCaptureOnly: failed to build image blob");
     return { imageBase64: c, blob: a.blob, url: a.url, metadata: e, videoBase64: d };
 }
-d(788783),
+(d(788783),
     a.t.provide({
         actors: {
             prepareFaceUpload: (0, c.a)(async () => ({ encryptedBase64Image: "", recordingId: null })),
@@ -102,4 +102,4 @@ d(788783),
         },
         actions: { setUploadResponseFromEvent: (0, c.r)({ captureOnlyResult: ({ event: l }) => l.output }) },
         guards: { hasUploadValidationError: () => !1, isTerminalUploadError: () => !1 },
-    });
+    }));

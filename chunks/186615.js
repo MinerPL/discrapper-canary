@@ -14,7 +14,7 @@ function o(e) {
                         r,
                         u = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
                         c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, i.isValidElement)(u)) return o(u, c), u;
+                    if (!(0, i.isValidElement)(u)) return (o(u, c), u);
                     if ("string" != typeof u.type) {
                         var s = u.type.displayName || u.type.name || "the component";
                         throw Error(
@@ -38,7 +38,7 @@ function o(e) {
                         r)
                             ? (0, i.cloneElement)(e, {
                                   ref: function (e) {
-                                      a(r, e), a(t, e);
+                                      (a(r, e), a(t, e));
                                   },
                               })
                             : (0, i.cloneElement)(e, { ref: t })

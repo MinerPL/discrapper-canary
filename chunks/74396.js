@@ -20,7 +20,7 @@ class c extends i.Ay.PersistedStore {
     static displayName = "SavedCustomThemeStore";
     static persistKey = "SavedCustomThemeStore";
     initialize(e) {
-        null != e && (l = e.savedCustomThemes), (o = 0);
+        (null != e && (l = e.savedCustomThemes), (o = 0));
     }
     getState() {
         return { savedCustomThemes: l ?? [] };
@@ -50,7 +50,7 @@ let u = new c(r.h, {
     },
     SAVED_CUSTOM_THEMES_FETCH_SUCCESS: function (e) {
         let { themes: t } = e;
-        (o = 2),
+        ((o = 2),
             (l = t.filter(d).map((e) => {
                 let t = s.dP;
                 return {
@@ -59,10 +59,10 @@ let u = new c(r.h, {
                     base_mix: e.base_mix,
                     base_theme: t[e.base_theme],
                 };
-            }));
+            })));
     },
     SAVED_CUSTOM_THEMES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (o = 3), a.A.captureException(t, { tags: { app_context: "SavedCustomThemeStore" } });
+        ((o = 3), a.A.captureException(t, { tags: { app_context: "SavedCustomThemeStore" } }));
     },
 });

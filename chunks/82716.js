@@ -13,7 +13,7 @@ function p() {
     let e = (0, c.Y_)(),
         t = r.useCallback(
             (t) => {
-                t.stopPropagation(), t.preventDefault(), (0, o.XK)(e);
+                (t.stopPropagation(), t.preventDefault(), (0, o.XK)(e));
             },
             [e],
         );

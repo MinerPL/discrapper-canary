@@ -10,7 +10,7 @@ if (o) {
             throw u;
         },
         f = { toString: c, valueOf: c };
-    "symbol" == typeof Symbol.toPrimitive && (f[Symbol.toPrimitive] = c),
+    ("symbol" == typeof Symbol.toPrimitive && (f[Symbol.toPrimitive] = c),
         (n = function (e) {
             if (!e || "object" != typeof e) return !1;
             var t = s(e, "lastIndex");
@@ -20,7 +20,7 @@ if (o) {
             } catch (e) {
                 return e === u;
             }
-        });
+        }));
 } else {
     var d = i("Object.prototype.toString");
     n = function (e) {

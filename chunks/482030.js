@@ -82,14 +82,14 @@ function _(e) {
             locationObject: v.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                f && A.k(E.Se.ACTIVITY),
+                (f && A.k(E.Se.ACTIVITY),
                     (0, d.zV)(I.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: s,
                         action: N,
                         source: _,
-                    });
+                    }));
             },
             launchingComponentId: p,
             commandOrigin: m.iw.APPLICATION_LAUNCHER,

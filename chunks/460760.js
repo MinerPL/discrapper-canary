@@ -56,7 +56,7 @@ async function c(t) {
                 socialLinks: D,
                 about: d,
             };
-        return a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: t, metadata: h }), h;
+        return (a.h.dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: t, metadata: h }), h);
     } catch (t) {
         a.h.dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
     }

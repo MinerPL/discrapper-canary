@@ -17,11 +17,11 @@ class u extends i.AbstractParserWithWordBoundaryChecking {
             s = n.TIME_UNIT_DICTIONARY[i];
         if ("next" == r || r.startsWith("after")) {
             let t = {};
-            return (t[s] = 1), a.ParsingComponents.createRelativeFromReference(e.reference, t);
+            return ((t[s] = 1), a.ParsingComponents.createRelativeFromReference(e.reference, t));
         }
         if ("last" == r || "past" == r) {
             let t = {};
-            return (t[s] = -1), a.ParsingComponents.createRelativeFromReference(e.reference, t);
+            return ((t[s] = -1), a.ParsingComponents.createRelativeFromReference(e.reference, t));
         }
         let o = e.createParsingComponents(),
             u = new Date(e.reference.instant.getTime());

@@ -43,7 +43,7 @@ function E(t) {
                 text: A.intl.string(x ? v.default.PprSsy : v.default["+dSwhE"]),
                 variant: "secondary",
                 onClick: () => {
-                    e(), (0, u.mv)("upsell_modal"), (0, c.uh)(_.YYv);
+                    (e(), (0, u.mv)("upsell_modal"), (0, c.uh)(_.YYv));
                 },
             },
             {
@@ -51,7 +51,7 @@ function E(t) {
                 variant: "expressive",
                 icon: s.t,
                 onClick: () => {
-                    e(), (0, l.A)({ subscriptionTier: h.pe.TIER_2, analyticsLocations: m });
+                    (e(), (0, l.A)({ subscriptionTier: h.pe.TIER_2, analyticsLocations: m }));
                 },
             },
         ],

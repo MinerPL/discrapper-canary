@@ -17,28 +17,28 @@ n.d(t, {
                     return t.apply(this, i);
                 } catch (e) {
                     throw (
-                        (c++,
+                        c++,
                         setTimeout(() => {
                             c--;
                         }),
                         (0, o.v4)((t) => {
-                            t.addEventProcessor(
+                            (t.addEventProcessor(
                                 (e) => (
                                     n.mechanism && ((0, a.gO)(e, void 0, void 0), (0, a.M6)(e, n.mechanism)),
                                     (e.extra = { ...e.extra, arguments: r }),
                                     e
                                 ),
                             ),
-                                (0, s.Cp)(e);
+                                (0, s.Cp)(e));
                         }),
-                        e)
+                        e
                     );
                 }
             };
             try {
                 for (let e in t) Object.prototype.hasOwnProperty.call(t, e) && (r[e] = t[e]);
             } catch (e) {}
-            (0, i.pO)(r, t), (0, i.my)(t, "__sentry_wrapped__", r);
+            ((0, i.pO)(r, t), (0, i.my)(t, "__sentry_wrapped__", r));
             try {
                 Object.getOwnPropertyDescriptor(r, "name").configurable &&
                     Object.defineProperty(r, "name", { get: () => t.name });

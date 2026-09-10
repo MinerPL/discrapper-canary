@@ -9,6 +9,6 @@ let a = Date.now(),
         u = ((c - a) / 1e3).toFixed(3),
         _ = ((c - s) / 1e3).toFixed(3),
         E = `\u{3A3}:${u}s, \u{394}:${_}s`;
-    (s = c), r.z8({ name: e, timing: E }, n, ...o), (0, i.gZ)(e, t, n, ...o);
+    ((s = c), r.z8({ name: e, timing: E }, n, ...o), (0, i.gZ)(e, t, n, ...o));
 });
 let l = i.Vy;

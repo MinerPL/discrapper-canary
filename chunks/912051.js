@@ -1,6 +1,6 @@
 let l;
 function s() {
-    return void 0 === l && (l = void 0 === Intl?.Segmenter ? null : new Intl.Segmenter()), l;
+    return (void 0 === l && (l = void 0 === Intl?.Segmenter ? null : new Intl.Segmenter()), l);
 }
 function a(e) {
     let t = s();

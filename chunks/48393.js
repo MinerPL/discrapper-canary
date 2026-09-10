@@ -20,7 +20,7 @@ class d extends u.AbstractParserWithWordBoundaryChecking {
     innerExtract(e, t) {
         let r = a.MONTH_DICTIONARY[t[3].toLowerCase()],
             o = (0, i.parseOrdinalNumberPattern)(t[1]);
-        if (o > 31) return (t.index = t.index + t[1].length), null;
+        if (o > 31) return ((t.index = t.index + t[1].length), null);
         let u = e.createParsingComponents({ day: o, month: r });
         if (t[4]) {
             let e = (0, s.parseYear)(t[4]);
@@ -32,7 +32,7 @@ class d extends u.AbstractParserWithWordBoundaryChecking {
         if (!t[2]) return u;
         let l = (0, i.parseOrdinalNumberPattern)(t[2]),
             d = e.createParsingResult(t.index, t[0]);
-        return (d.start = u), (d.end = u.clone()), d.end.assign("day", l), d;
+        return ((d.start = u), (d.end = u.clone()), d.end.assign("day", l), d);
     }
 }
 t.default = d;

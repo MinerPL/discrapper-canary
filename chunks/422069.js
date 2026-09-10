@@ -47,11 +47,11 @@ let s = new R(_.h, {
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS: function (e) {
         let { collectionId: n, skuIds: t } = e;
-        (l[n] = t), (u[n] = !0), (r[n] = !1);
+        ((l[n] = t), (u[n] = !0), (r[n] = !1));
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_ERROR: function (e) {
         let { collectionId: n } = e;
-        (u[n] = !0), (r[n] = !1);
+        ((u[n] = !0), (r[n] = !1));
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_START: function (e) {
         let { gameId: n } = e;
@@ -59,11 +59,11 @@ let s = new R(_.h, {
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS: function (e) {
         let { gameId: n, messages: t, channelId: E, guildId: _ } = e;
-        (c[n] = { messages: t, channelId: E, guildId: _ }), (S[n] = !0), (o[n] = !1);
+        ((c[n] = { messages: t, channelId: E, guildId: _ }), (S[n] = !0), (o[n] = !1));
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR: function (e) {
         let { gameId: n } = e;
-        (S[n] = !0), (o[n] = !1);
+        ((S[n] = !0), (o[n] = !1));
     },
     GAME_PROFILE_SET_PENDING_RETURN: function (e) {
         let { gameId: n, channelId: t, initialScrollOffset: E } = e;

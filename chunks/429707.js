@@ -31,13 +31,13 @@ function d() {
         let c = r.body?.id ?? null;
         if (null != c && c !== i) {
             let t = { expected_user_id: i, actual_user_id: c };
-            T.log("Found per-user token authentication mismatch", t),
+            (T.log("Found per-user token authentication mismatch", t),
                 A.default.track(l.HAw.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, t),
-                u.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: i });
+                u.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: i }));
             return;
         }
-        t !== i && u.h.dispatch({ type: "USER_UPDATE", user: r.body }),
-            u.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: i });
+        (t !== i && u.h.dispatch({ type: "USER_UPDATE", user: r.body }),
+            u.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: i }));
     });
 }
 function _(t, e, r) {

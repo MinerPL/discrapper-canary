@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => R }), n(321073);
+(n.d(t, { A: () => R }), n(321073));
 var r = n(812729),
     a = n.n(r),
     s = n(17928),
@@ -21,16 +21,16 @@ function T(e) {
 function m(e) {
     let t = Math.floor(e);
     try {
-        return p.willOverflowNext() && p.reset(), d.default.fromTimestampWithSequence(t, p);
+        return (p.willOverflowNext() && p.reset(), d.default.fromTimestampWithSequence(t, p));
     } catch {
-        return p.reset(), d.default.fromTimestampWithSequence(t, p);
+        return (p.reset(), d.default.fromTimestampWithSequence(t, p));
     }
 }
 let g = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = T(e);
-            return null != n && t.push(n), t;
+            return (null != n && t.push(n), t);
         },
         function (e) {
             return -e.timestamp;
@@ -91,7 +91,7 @@ let O = new C(
                   },
                   OVERLAY_RENDER_DEBUG_MODE: function (e) {
                       let { enabled: t, mode: n } = e;
-                      t ? h.add(n) : h.delete(n), (h = new Set(h));
+                      (t ? h.add(n) : h.delete(n), (h = new Set(h)));
                   },
                   OVERLAY_SET_DETAILED_LOGGING: function (e) {
                       let { enabled: t } = e;

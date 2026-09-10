@@ -20,8 +20,8 @@ function u(e) {
                 memberIdsPreview: e.memberIdsPreview ?? [],
             }),
         d[e.id]);
-    null != e.memberCount && (t.memberCount = e.memberCount),
-        null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
+    (null != e.memberCount && (t.memberCount = e.memberCount),
+        null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview));
 }
 function _(e) {
     let { channel: t } = e;
@@ -37,14 +37,14 @@ function A(e) {
     return (
         t.forEach((e) => {
             let { threads: t, messages: i } = e;
-            i.forEach((e) => {
+            (i.forEach((e) => {
                 e.forEach((e) => {
                     n = h(e.thread) || n;
                 });
             }),
                 t.forEach((e) => {
                     n = h(e) || n;
-                });
+                }));
         }),
         n
     );
@@ -52,7 +52,7 @@ function A(e) {
 function h(e) {
     if (null != e && !(e.id in d)) {
         let t = o.A.getChannel(e.id);
-        if (null != t) return u(t), !0;
+        if (null != t) return (u(t), !0);
     }
     return !1;
 }
@@ -73,7 +73,7 @@ class I extends a.Ay.Store {
 }
 let f = new I(s.h, {
     CONNECTION_OPEN: function (e) {
-        (d = {}), e.guilds.forEach(c);
+        ((d = {}), e.guilds.forEach(c));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { threadMembers: t } = e;
@@ -86,12 +86,12 @@ let f = new I(s.h, {
     GUILD_DELETE: function (e) {
         var t;
         let { guild: n } = e;
-        (t = n.id), (d = r().omitBy(d, (e) => e.guildId === t));
+        ((t = n.id), (d = r().omitBy(d, (e) => e.guildId === t)));
     },
     CHANNEL_DELETE: function (e) {
         var t;
         let { channel: n } = e;
-        (t = n.id), (d = r().omitBy(d, (e) => e.parentId === t));
+        ((t = n.id), (d = r().omitBy(d, (e) => e.parentId === t)));
     },
     THREAD_CREATE: _,
     THREAD_UPDATE: _,
@@ -102,7 +102,7 @@ let f = new I(s.h, {
     THREAD_MEMBERS_UPDATE: function (e) {
         let t = d[e.id];
         if (null == t) return !1;
-        null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
+        (null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount));
     },
     SEARCH_MESSAGES_SUCCESS: A,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: A,

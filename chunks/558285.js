@@ -8,9 +8,9 @@ async function r(e) {
     try {
         let { width: t, height: a } = await new Promise((t, a) => {
             let i = new Image();
-            (i.onload = () => t({ width: i.naturalWidth, height: i.naturalHeight })),
+            ((i.onload = () => t({ width: i.naturalWidth, height: i.naturalHeight })),
                 (i.onerror = () => a(Error("measureImage: the image failed to load"))),
-                (i.src = e);
+                (i.src = e));
         });
         return t > 0 && a > 0 ? { width: t, height: a } : s;
     } catch {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => h }), n(321073);
+(n.d(t, { A: () => h }), n(321073));
 var i = n(17928),
     r = n(228366);
 let a = 3 * n(927813).A.Millis.DAY;
@@ -21,15 +21,15 @@ function E() {
         if (r < n) t = e + 1;
         else break;
     }
-    t > 0 && (l.itemImpressions = l.itemImpressions.slice(t)),
-        l.itemImpressions.length > 2048 && (l.itemImpressions = l.itemImpressions.slice(-2048));
+    (t > 0 && (l.itemImpressions = l.itemImpressions.slice(t)),
+        l.itemImpressions.length > 2048 && (l.itemImpressions = l.itemImpressions.slice(-2048)));
     let i = _ ? 1e3 : a,
         r = new Set(),
         s = new Set(),
         E = Date.now() - i,
         A = null;
-    for (let [e, t] of l.itemImpressions) t < E ? r.add(e) : null == A && (A = t + i), s.add(e);
-    (o = r), (d = s), (c = A ?? 1 / 0), (u = !0);
+    for (let [e, t] of l.itemImpressions) (t < E ? r.add(e) : null == A && (A = t + i), s.add(e));
+    ((o = r), (d = s), (c = A ?? 1 / 0), (u = !0));
 }
 class A extends i.Ay.PersistedStore {
     static displayName = "ContentInventoryPersistedStore";
@@ -41,7 +41,7 @@ class A extends i.Ay.PersistedStore {
         return l;
     }
     getImpressionCappedItemIds() {
-        return E(), o;
+        return (E(), o);
     }
     getDebugFastImpressionCappingEnabled() {
         return _;
@@ -60,13 +60,13 @@ let h = new A(r.h, {
         let n = Date.now(),
             i = !1;
         for (let e of t) d.has(e) || (l.itemImpressions.push([e, n]), (i = !0));
-        return E(i), i;
+        return (E(i), i);
     },
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function () {
-        (l.itemImpressions = []), E(!0);
+        ((l.itemImpressions = []), E(!0));
     },
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function () {
-        return console.log("Item impressions:", l.itemImpressions), !1;
+        return (console.log("Item impressions:", l.itemImpressions), !1);
     },
     CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function () {
         _ = !_;

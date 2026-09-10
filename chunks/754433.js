@@ -19,7 +19,7 @@ function s(e) {
                           s = a && a.filename,
                           l = t[i];
                       if (s && l) {
-                          (n[s] = l), (r[i] = [s, l]);
+                          ((n[s] = l), (r[i] = [s, l]));
                           break;
                       }
                   }

@@ -36,7 +36,7 @@ let I = {
                 let [e, t] = (0, c.Ay)(m);
                 e && ((m = t), (T = (0, s.UI)(T, A.pr7.SUPPRESS_NOTIFICATIONS)));
             }
-            await l.A.sendMessage(i.id, f, !1, {
+            (await l.A.sendMessage(i.id, f, !1, {
                 messageReference: p,
                 location: h.Hx.FORWARDING,
                 eagerDispatch: !1,
@@ -45,7 +45,7 @@ let I = {
                 null == m ||
                     "" === m ||
                     (0, E.lP)(i, _.A) ||
-                    (await l.A.sendMessage(i.id, d.Ay.parse(i, m), !1, { location: h.Hx.FORWARDING, flags: T }));
+                    (await l.A.sendMessage(i.id, d.Ay.parse(i, m), !1, { location: h.Hx.FORWARDING, flags: T })));
         },
         sendForwards: (e, t, n) => r()(t.map((t) => I.sendForward(e, t, n))),
     },

@@ -31,7 +31,7 @@ function m(t) {
         [G, T] = n.useState(""),
         f = n.useCallback(
             (t) => {
-                F(t), m?.(t);
+                (F(t), m?.(t));
             },
             [m],
         ),

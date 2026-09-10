@@ -14,7 +14,7 @@ var s = (function () {
     var e;
     function t(e, r) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        c(this, "spec", void 0), c(this, "monitor", void 0), (this.spec = e), (this.monitor = r);
+        (c(this, "spec", void 0), c(this, "monitor", void 0), (this.spec = e), (this.monitor = r));
     }
     return (
         (e = [
@@ -46,10 +46,10 @@ var s = (function () {
         (function (e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         })(t.prototype, e),
         t
@@ -123,7 +123,7 @@ function v(e, t) {
         (I = S.accept),
         (D = (0, u.useMemo)(
             function () {
-                return (0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(I) ? I : [I];
+                return ((0, a.V)(null != S.accept, "accept must be defined"), Array.isArray(I) ? I : [I]);
             },
             [I],
         )),
@@ -149,7 +149,7 @@ function v(e, t) {
                                         o = !0
                                     );
                                 } catch (e) {
-                                    (a = !0), (r = e);
+                                    ((a = !0), (r = e));
                                 } finally {
                                     try {
                                         o || null == n.return || n.return();
@@ -180,7 +180,7 @@ function v(e, t) {
                         })(),
                     r = t[0],
                     i = t[1];
-                return O.receiveHandlerId(r), k.receiveHandlerId(r), i;
+                return (O.receiveHandlerId(r), k.receiveHandlerId(r), i);
             },
             [
                 y,

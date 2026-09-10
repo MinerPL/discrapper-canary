@@ -34,7 +34,7 @@ let v = (t) => {
         { analyticsLocations: O } = (0, y.Ay)(p.A.PREMIUM_UNCANCEL_MODAL),
         j = (0, c.bG)([C.default], () => {
             let t = C.default.getCurrentUser();
-            return a()(null != t, "ProfileItem: currentUser cannot be undefined"), t;
+            return (a()(null != t, "ProfileItem: currentUser cannot be undefined"), t);
         }),
         G = (0, c.bG)([S.A], () => (l?.paymentSourceId != null ? S.A.getPaymentSource(l.paymentSourceId) : null), [l]),
         W = l.items[0].planId,

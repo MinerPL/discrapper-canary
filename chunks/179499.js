@@ -15,7 +15,7 @@ function y(t) {
         { isLoading: y, downloadAttachment: _ } = (0, h.A)(n, e),
         T = r.useCallback(() => {
             let t = a?.attachments?.[0]?.id;
-            i()(null != t, "No attachment"), _(t);
+            (i()(null != t, "No attachment"), _(t));
         }, [_, a?.attachments]),
         p = r.useCallback(() => u.A.open({ guildId: n, productId: e }), [n, e]);
     return (a?.attachments?.length ?? 0) > 1

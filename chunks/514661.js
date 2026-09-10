@@ -5,14 +5,14 @@ var e = t(582128),
 function i(a, s) {
     let [t, i] = e.useState(!1),
         l = e.useCallback(async () => {
-            null != a && (i(!0), await (0, u.m)(a, !0), i(!1)), s?.();
+            (null != a && (i(!0), await (0, u.m)(a, !0), i(!1)), s?.());
         }, [a, s]),
         n = (0, c.A)(a);
     return {
         isAdopting: t,
         onAdoptTag: l,
         onEditProfile: e.useCallback(() => {
-            s?.(), n();
+            (s?.(), n());
         }, [n, s]),
     };
 }

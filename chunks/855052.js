@@ -12,11 +12,11 @@ class d extends i.A {
     items;
     applications;
     constructor(t) {
-        super(),
+        (super(),
             (this.id = t.id),
             (this.userId = t.userId),
             (this.items = t.items),
-            (this.applications = t.applications ?? void 0);
+            (this.applications = t.applications ?? void 0));
     }
     static fromServer(t) {
         let { user_id: e, wishlist_items: r, ...i } = t,

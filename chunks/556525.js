@@ -43,6 +43,6 @@ function c(e) {
             let a = h ? "Highlight" : "var(--status-speaking)";
             e.boxShadow = `0 0 0 ${t}px ${a}, inset 0 0 0 ${n}px ${a}, inset 0 0 0 ${r}px var(--background-base-lower)`;
         }
-        return I && (e.transition = "box-shadow 50ms ease-out"), e;
+        return (I && (e.transition = "box-shadow 50ms ease-out"), e);
     }, [t, I, A, h, i, d, c, u, _]);
 }

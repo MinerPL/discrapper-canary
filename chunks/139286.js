@@ -57,10 +57,10 @@ function C(e) {
             }
         );
     }
-    (0, c.Ay)(() => {
+    ((0, c.Ay)(() => {
         if (n.trackOnInitialLoad) return d();
     }),
         i.useEffect(() => {
             if (!n.trackOnInitialLoad) return d();
-        });
+        }));
 }

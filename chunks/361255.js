@@ -15,37 +15,47 @@ function p(e) {
     let { guild: i, onClose: t, canSetNewRole: p } = e,
         [v, b] = n.useState(i.verificationRoleId ?? void 0),
         [R, C] = n.useState(null),
-        k = (0, o.bG)([u.A], () => {
-            function e(e) {
-                var i;
-                let t;
-                return {
-                    label: e.name,
-                    value: e.id,
-                    id: e.id,
-                    leading:
-                        ((t = 0 !== (i = e.color) ? (0, r.Hl)(i) : g.TpD),
-                        (0, l.jsx)("div", {
-                            style: { width: 12, height: 12, borderRadius: "50%", backgroundColor: t, flexShrink: 0 },
-                        })),
-                };
-            }
-            if (!p) {
-                if (null != i.verificationRoleId) {
-                    let t = u.A.getRole(i.id, i.verificationRoleId);
-                    if (null != t) return [e(t)];
+        k = (0, o.bG)(
+            [u.A],
+            () => {
+                function e(e) {
+                    var i;
+                    let t;
+                    return {
+                        label: e.name,
+                        value: e.id,
+                        id: e.id,
+                        leading:
+                            ((t = 0 !== (i = e.color) ? (0, r.Hl)(i) : g.TpD),
+                            (0, l.jsx)("div", {
+                                style: {
+                                    width: 12,
+                                    height: 12,
+                                    borderRadius: "50%",
+                                    backgroundColor: t,
+                                    flexShrink: 0,
+                                },
+                            })),
+                    };
                 }
-                return [];
-            }
-            return u.A.getSortedRoles(i.id)
-                .filter((e) => !(0, c.Oy)(e) && (!e.managed || e.tags?.guild_connections === null))
-                .map(e);
-        }, [i.id, i.verificationRoleId, p]),
+                if (!p) {
+                    if (null != i.verificationRoleId) {
+                        let t = u.A.getRole(i.id, i.verificationRoleId);
+                        if (null != t) return [e(t)];
+                    }
+                    return [];
+                }
+                return u.A.getSortedRoles(i.id)
+                    .filter((e) => !(0, c.Oy)(e) && (!e.managed || e.tags?.guild_connections === null))
+                    .map(e);
+            },
+            [i.id, i.verificationRoleId, p],
+        ),
         x = n.useCallback(async () => {
             C(null);
             try {
                 let e = v ?? null;
-                await s.A.saveGuild(i.id, { verificationRoleId: e }), t();
+                (await s.A.saveGuild(i.id, { verificationRoleId: e }), t());
             } catch (e) {
                 C(new d.LG(e).getAnyErrorMessage());
             }

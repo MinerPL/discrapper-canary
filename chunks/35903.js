@@ -43,7 +43,7 @@ function I(e) {
             variant: s,
             size: "sm",
             onClick: () => {
-                a.handleRequestToStream("request to stream button"), i?.();
+                (a.handleRequestToStream("request to stream button"), i?.());
             },
             fullWidth: !0,
             disabled: d,
@@ -66,7 +66,7 @@ function M(e) {
         ? null
         : (0, n.jsx)(y.$, {
               onClick: function () {
-                  s?.(), (0, k.A)({ platformType: t.type, location: "Activity Action" });
+                  (s?.(), (0, k.A)({ platformType: t.type, location: "Activity Action" }));
               },
               variant: l,
               size: i,
@@ -103,7 +103,7 @@ function R(e) {
                     size: "sm",
                     fullWidth: !0,
                     onClick: () => {
-                        s?.(), r(t, l.id, c);
+                        (s?.(), r(t, l.id, c));
                     },
                     ...a,
                 },
@@ -124,7 +124,7 @@ let H = function (e) {
         text: S.intl.string(S.t.ZYO5OK),
         disabled: o,
         onClick: function () {
-            a?.(), D.CH(t, l);
+            (a?.(), D.CH(t, l));
         },
         fullWidth: !0,
         ...r,
@@ -141,7 +141,7 @@ function X(e) {
               variant: i,
               size: "sm",
               onClick: function () {
-                  s?.(), new Y.A("UserActivityActions").log("notify", l.id, t);
+                  (s?.(), new Y.A("UserActivityActions").log("notify", l.id, t));
               },
               fullWidth: !0,
               ...a,
@@ -172,7 +172,7 @@ function J(e) {
             text: d,
             fullWidth: r,
             onClick: function () {
-                c?.(), p();
+                (c?.(), p());
             },
             disabled: A,
             loading: m,
@@ -209,7 +209,7 @@ function en(e) {
             size: r,
             variant: c,
             onClick: function () {
-                o?.(), p();
+                (o?.(), p());
             },
             disabled: A,
             loading: m,
@@ -314,7 +314,7 @@ let ey = (0, m.A)((e) => {
         } = e,
         S = (0, c.bG)([E.default], () => {
             let e = E.default.getCurrentUser();
-            return r()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
+            return (r()(null != e, "UserActivityActions: currentUser cannot be undefined"), e);
         }),
         k = N === G.O.STREAM_PREVIEW || null != a,
         z = (0, _.A)(t),

@@ -6,17 +6,17 @@ function s(e, u) {
         t = a.useRef(new n.J_(u, () => s(!1))),
         r = a.useRef(new n.J_(e, () => s(!0))),
         l = a.useCallback(() => {
-            t.current.cancel(), r.current.cancel();
+            (t.current.cancel(), r.current.cancel());
         }, []);
     a.useEffect(() => l, [l]);
     let d = a.useCallback(() => {
-        l(), t.current.delay();
+        (l(), t.current.delay());
     }, [l]);
     return {
         isHovered: c,
         setIsHovered: s,
         onMouseEnter: a.useCallback(() => {
-            l(), r.current.delay();
+            (l(), r.current.delay());
         }, [l]),
         onMouseLeave: d,
         cancelTimers: l,

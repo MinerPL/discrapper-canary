@@ -57,7 +57,7 @@ let q = {
     action: E().debounce(
         () => {
             if (m._.hasSubscribers(f.jej.MARK_TOP_INBOX_CHANNEL_READ))
-                return m._.dispatch(f.jej.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                return (m._.dispatch(f.jej.MARK_TOP_INBOX_CHANNEL_READ), !1);
         },
         100,
         { leading: !0 },
@@ -165,14 +165,16 @@ let eE = {
                 n = I.A.getChannel(t),
                 i = null != t && n?.isVocalThread() === !0 && en.A.getUserParticipantCount(t) > 0;
             if (null != t && null != n && (n.type === $.r.GUILD_VOICE || i))
-                return ee.A.updateChatOpen(t, !en.A.getChatOpen(t)), !1;
+                return (ee.A.updateChatOpen(t, !en.A.getChatOpen(t)), !1);
             if (null != t && null != n && n.type === $.r.DM) {
                 let e = er.Ay.getSection(t, n?.isDM()),
                     i = (0, el.AP)(n.getRecipientId()),
                     l = e === f.YvQ.PROFILE;
-                return (0, ei.am)({ displayProfile: i, isProfileOpen: !l }), et.A.toggleUserProfileSidebarSection(), !1;
+                return (
+                    (0, ei.am)({ displayProfile: i, isProfileOpen: !l }), et.A.toggleUserProfileSidebarSection(), !1
+                );
             }
-            return et.A.toggleMembersSection(), !1;
+            return (et.A.toggleMembersSection(), !1);
         },
     },
     [f.IWg.TOGGLE_HELP]: {
@@ -206,7 +208,7 @@ let eE = {
         comboKeysBindGlobal: !0,
         action() {
             if (r.A.isOpen()) return !1;
-            if (!c.A.isEnabled()) return s.A.hasLayers() || (0, l.WU)(), !1;
+            if (!c.A.isEnabled()) return (s.A.hasLayers() || (0, l.WU)(), !1);
             let e = a.Ay.getCurrentlySelectedChannelId();
             return null != e && ((0, d.D5)(e, o.A.getGuildId() ?? null), !1);
         },
@@ -216,7 +218,7 @@ let eE = {
         comboKeysBindGlobal: !0,
         action() {
             let e = c.A.getActiveTab();
-            if (null != e) return (0, d.RL)(e.id, !e.pinned), !1;
+            if (null != e) return ((0, d.RL)(e.id, !e.pinned), !1);
         },
     },
     [f.IWg.SEARCH_EMOJIS]: B.L,
@@ -238,7 +240,7 @@ let eE = {
         comboKeysBindGlobal: !0,
         action() {
             let e = I.A.getChannel(a.Ay.getChannelId());
-            return null == e || e.isManaged() || m._.dispatch(f.jej.UPLOAD_FILE, { channelId: e.id }), !1;
+            return (null == e || e.isManaged() || m._.dispatch(f.jej.UPLOAD_FILE, { channelId: e.id }), !1);
         },
     },
     [f.IWg.RETURN_TO_AUDIO_CHANNEL]: j.u,
@@ -250,17 +252,17 @@ let eE = {
         action(e, t) {
             if (s.A.hasLayers() || (0, O.hasAnyModalOpen)()) return;
             let n = !t.includes("shift");
-            return m._.dispatch(f.jej.FOCUS_SEARCH, { prefillCurrentChannel: n }), !1;
+            return (m._.dispatch(f.jej.FOCUS_SEARCH, { prefillCurrentChannel: n }), !1);
         },
     },
     [f.IWg.JUMP_TO_CURRENT_CALL]: {
         binds: ["mod+shift+alt+v"],
         comboKeysBindGlobal: !0,
         action(e) {
-            e.preventDefault(), e.stopPropagation();
+            (e.preventDefault(), e.stopPropagation());
             let t = U.A.getGuildId(),
                 n = U.A.getChannelId();
-            return null != n && (0, L.i)(t ?? f.ME, n), !1;
+            return (null != n && (0, L.i)(t ?? f.ME, n), !1);
         },
     },
     [f.IWg.ZOOM_IN]: ed.Ur,
@@ -281,7 +283,7 @@ let eE = {
         binds: ["mod+alt+i"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if ((0, R.isWeb)() && "discord.com" === location.host) return e.preventDefault(), e.stopPropagation(), !1;
+            if ((0, R.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
         },
     },
     [f.IWg.OPEN_CONTEXT_MENU]: {
@@ -315,7 +317,7 @@ let eE = {
             if (null == t) return !1;
             let n = I.A.getChannel(t.parent_id),
                 i = (0, T.af)(t, n);
-            return (0, p.C)(i, N), !1;
+            return ((0, p.C)(i, N), !1);
         },
     },
 };

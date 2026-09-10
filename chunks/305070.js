@@ -86,7 +86,7 @@ let V = i.forwardRef(function (e, t) {
                     function o(e) {
                         if ((n.current?.scrollToBottom(), e && null != l.query && l.query.resultCount > 0)) {
                             let e = l.query.resultCount - 1;
-                            u.setFocus(e.toString()), s?.(e);
+                            (u.setFocus(e.toString()), s?.(e));
                         }
                     }
                     let u = (0, L.Ay)({
@@ -96,7 +96,7 @@ let V = i.forwardRef(function (e, t) {
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = r.document.querySelector(e);
-                                null != l && n.current?.scrollIntoViewNode({ node: l }), s?.(+t);
+                                (null != l && n.current?.scrollIntoViewNode({ node: l }), s?.(+t));
                             },
                             onNavigateNextAtEnd: () => a(!0),
                             onNavigatePreviousAtStart: () => o(!0),
@@ -158,7 +158,7 @@ let V = i.forwardRef(function (e, t) {
                         U.on("change", e),
                         U.on("update", u),
                         () => {
-                            U.off("change", e), U.off("update", u);
+                            (U.off("change", e), U.off("update", u));
                         }
                     );
                 }, [u, U]),
@@ -181,11 +181,15 @@ let V = i.forwardRef(function (e, t) {
         $ = (0, f.aI)(Z.selectedIndex);
     (0, p.gf)(W, Z.isVisible, $);
     let X = (0, I.l)({ editorHeight: V, type: s, state: Z }),
-        Q = (0, o.bG)([h.Ay], () => {
-            let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
-                t = h.Ay.getActivityPanelMode();
-            return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
-        }, [n]),
+        Q = (0, o.bG)(
+            [h.Ay],
+            () => {
+                let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
+                    t = h.Ay.getActivityPanelMode();
+                return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
+            },
+            [n],
+        ),
         ee = i.useMemo(
             () =>
                 X?.top == null && X?.left == null && X?.bottom == null && X?.right == null ? "" : String(Date.now()),
@@ -229,7 +233,7 @@ let V = i.forwardRef(function (e, t) {
                     return (0, l.jsx)(u.Ch, {
                         id: W,
                         ref: (e) => {
-                            (t.current = e?.getScrollerNode() ?? null), (z.current = e);
+                            ((t.current = e?.getScrollerNode() ?? null), (z.current = e));
                         },
                         orientation: "vertical",
                         overflow: "auto",

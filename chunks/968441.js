@@ -5,7 +5,7 @@ class r {
     changeCallback;
     storeVersionHandled;
     constructor(e, t) {
-        (this.stores = e), (this.changeCallback = t);
+        ((this.stores = e), (this.changeCallback = t));
     }
     attach(e) {
         let { stores: t } = this;

@@ -5,7 +5,7 @@ function n(...e) {
               let r = !1,
                   n = e.map((e) => {
                       let n = i(e, t);
-                      return (r ||= "function" == typeof n), n;
+                      return ((r ||= "function" == typeof n), n);
                   });
               if (r)
                   return () => {

@@ -33,7 +33,7 @@ function T() {
 function h(_, t) {
     let E = t ? l.Rsh.DELETE_ACCOUNT : l.Rsh.DISABLE_ACCOUNT;
     return e.Bo.post({ url: E, body: { password: _ }, oldFormErrors: !0, rejectWithError: (0, e.fT)() }).then(() => {
-        S.A.logoutInternal(), (0, o.pX)(l.BVt.DEFAULT_LOGGED_OUT);
+        (S.A.logoutInternal(), (0, o.pX)(l.BVt.DEFAULT_LOGGED_OUT));
     });
 }
 async function u(_) {
@@ -48,11 +48,11 @@ async function u(_) {
         i = E.body;
     if (i.token) {
         let t = i.token;
-        delete i.token,
+        (delete i.token,
             n.h.dispatch({ type: "UPDATE_TOKEN", token: t, userId: i.id }),
-            _?.password != null && _?.new_password != null && n.h.dispatch({ type: "PASSWORD_UPDATED", userId: i.id });
+            _?.password != null && _?.new_password != null && n.h.dispatch({ type: "PASSWORD_UPDATED", userId: i.id }));
     }
-    return n.h.dispatch({ type: "CURRENT_USER_UPDATE", user: i }), E;
+    return (n.h.dispatch({ type: "CURRENT_USER_UPDATE", user: i }), E);
 }
 function R(_) {
     let {
@@ -88,7 +88,7 @@ function R(_) {
         legacy_username: A,
         new_password: c,
     };
-    void 0 !== R && (L.avatar_decoration_sku_id = R?.skuId ?? null),
+    (void 0 !== R && (L.avatar_decoration_sku_id = R?.skuId ?? null),
         void 0 !== U && (L.nameplate_sku_id = U?.skuId ?? null),
         void 0 !== N && (L.primary_guild_id = N),
         null != y
@@ -97,7 +97,7 @@ function R(_) {
               (L.display_name_colors = y.colors))
             : null === y &&
               ((L.display_name_font_id = null), (L.display_name_effect_id = null), (L.display_name_colors = null)),
-        void 0 !== f && (L.typing_indicator_style = null != f ? (0, r.El)(f) : null);
+        void 0 !== f && (L.typing_indicator_style = null != f ? (0, r.El)(f) : null));
     let O = i.w.get(l.Xlh),
         C = (0, s.oH)();
     null != C && null != O && ((L.push_provider = C), (L.push_token = O));

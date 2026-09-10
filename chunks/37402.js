@@ -1,4 +1,4 @@
-n.d(t, { Gy: () => N, k7: () => u.k });
+n.d(t, { Gy: () => R, k7: () => u.k });
 var a = n(477900),
     l = n(582128),
     s = n(503698),
@@ -18,12 +18,12 @@ function k(e) {
     let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: s, getDuration: r } = e,
         i = r(),
         u = null != i ? 1e3 * i : 3e3;
-    (0, l.useEffect)(() => {
+    ((0, l.useEffect)(() => {
         null !== t && t !== n.current && ((n.current = t), s());
     }, [t, s, n]),
         (0, l.useEffect)(() => {
             a(u);
-        }, [a, u]);
+        }, [a, u]));
 }
 function v(e) {
     var t;
@@ -110,10 +110,10 @@ let A = function (e) {
     return (0, f.q)(t) ? (0, a.jsx)(g, { ...e }) : (0, a.jsx)(v, { ...e });
 };
 var C = n(375708);
-function R() {
+function N() {
     return (0, a.jsx)("div", { className: h.V8 });
 }
-let N = (0, l.forwardRef)(function (e, t) {
+let R = (0, l.forwardRef)(function (e, t) {
     let {
             id: n,
             balance: s,
@@ -126,28 +126,28 @@ let N = (0, l.forwardRef)(function (e, t) {
             className: k,
         } = e,
         [v, g] = (0, l.useState)(!1),
-        N = (0, l.useMemo)(() => (o === u.k.SELECTED ? h.wH : v ? h.mr : h.Ay), [o, v]),
-        [E, b] = (0, l.useState)(!1),
+        R = (0, l.useMemo)(() => (o === u.k.SELECTED ? h.wH : v ? h.mr : h.Ay), [o, v]),
+        [b, E] = (0, l.useState)(!1),
         [p, y] = (0, l.useState)(!1),
         [O, S] = (0, l.useState)(2700),
         T = null === s;
-    (0, l.useEffect)(() => {
+    ((0, l.useEffect)(() => {
         T &&
-            !E &&
-            (b(!0),
+            !b &&
+            (E(!0),
             setTimeout(() => {
                 y(!0);
             }, 500));
-    }, [T, b, E]),
+    }, [T, E, b]),
         (0, l.useEffect)(() => {
-            p && !T && b(!1);
-        }, [T, p]);
-    let _ = T || E,
-        L = E ? null : s,
+            p && !T && E(!1);
+        }, [T, p]));
+    let _ = T || b,
+        L = b ? null : s,
         [M, D] = (0, l.useState)(null),
         w = (0, l.useRef)(null),
         B = (0, l.useCallback)(() => {
-            (w.current = null), D(null);
+            ((w.current = null), D(null));
         }, []),
         P = (0, l.useCallback)(
             (e) => {
@@ -167,7 +167,7 @@ let N = (0, l.forwardRef)(function (e, t) {
             onMouseEnter: x ? void 0 : () => g(!0),
             onMouseLeave: x ? void 0 : () => g(!1),
             ref: t,
-            className: r()(h.kL, N, k, { [h.En]: _, [h.dA]: j, [h.r9]: x }),
+            className: r()(h.kL, R, k, { [h.En]: _, [h.dA]: j, [h.r9]: x }),
             children: [
                 (0, a.jsx)("div", {
                     className: r()(h.hr, _ ? h.nr : void 0),
@@ -184,7 +184,7 @@ let N = (0, l.forwardRef)(function (e, t) {
                     targetTotalCounterTime: O,
                     className: _ ? h.F : void 0,
                 }),
-                d && (0, a.jsx)(R, {}),
+                d && (0, a.jsx)(N, {}),
             ],
         }),
     });

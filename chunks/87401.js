@@ -25,12 +25,12 @@ let o = new r(i.h, {
         let { guildScheduledEvent: n } = e;
         if ((n.status !== s.XG.CANCELED && n.status !== s.XG.COMPLETED) || null == a[n.id]) return !1;
         let t = { ...a };
-        delete t[n.id], (a = t);
+        (delete t[n.id], (a = t));
     },
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: n } = e;
         if (null == a[n.id]) return !1;
         let t = { ...a };
-        delete t[n.id], (a = t);
+        (delete t[n.id], (a = t));
     },
 });

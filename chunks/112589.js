@@ -1,4 +1,4 @@
-i.d(t, { A: () => s }), i(938796);
+(i.d(t, { A: () => s }), i(938796));
 var l = i(315069);
 function r(e) {
     return { id: e.id, filename: e.filename, size: e.size, width: e.width, height: e.height, mimeType: e.mime_type };
@@ -73,7 +73,7 @@ class s extends l.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.applicationId = e.applicationId),
             (this.skuId = e.skuId),
@@ -98,7 +98,7 @@ class s extends l.A {
             (this.heroVideo = e.heroVideo ?? null),
             (this.entitlementBranchId = e.entitlementBranchId ?? null),
             (this.benefits = e.benefits),
-            (this.published = !!e.published);
+            (this.published = !!e.published));
     }
     isSlimDirectoryVersion() {
         return null == this.description;

@@ -37,7 +37,7 @@ function v(e) {
                 let { assetNode: t, nodeId: l, errorPrefix: n, errorMessage: s } = e;
                 if (r || null == v) return;
                 let c = (0, u.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
-                a.default.track(o.HAw.AD_ASSET_LOADING_FAILURE, {
+                (a.default.track(o.HAw.AD_ASSET_LOADING_FAILURE, {
                     source: v,
                     ad_creative_id: f,
                     ad_creative_type: g,
@@ -47,14 +47,14 @@ function v(e) {
                     i.A.captureException(Error(`${n}: ${null != s ? `${s}, ` : ""}${m(t)}, ${l}`), {
                         tags: { source: v },
                     }),
-                    L(!0);
+                    L(!0));
             },
             [r, v, f, g],
         ),
         S = n.useCallback((e) => {
             A((t) => {
                 let r = new Set(t);
-                return r.delete(e), r;
+                return (r.delete(e), r);
             });
         }, []),
         T = n.useCallback(
@@ -68,17 +68,17 @@ function v(e) {
                     l = new AbortController(),
                     n = new s.A();
                 function a() {
-                    n.succeed(), S(e), e.removeEventListener(r, a);
+                    (n.succeed(), S(e), e.removeEventListener(r, a));
                 }
                 function i(r) {
-                    c(),
+                    (c(),
                         S(e),
                         w({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: "Error loading asset",
                             errorMessage: "message" in r ? r.message : null,
-                        });
+                        }));
                 }
                 function o(t) {
                     n.fails < 3 && (0, u.vq)(e, HTMLVideoElement)
@@ -91,7 +91,7 @@ function v(e) {
                     (d(e) ||
                         (A((t) => {
                             let r = new Set(t);
-                            return r.add(e), r;
+                            return (r.add(e), r);
                         }),
                         e.addEventListener(r, a)),
                     e.addEventListener("error", i, { signal: l.signal }),
@@ -139,7 +139,7 @@ function f(e) {
             return (
                 null != r && (e = l(r, t)),
                 () => {
-                    e?.(), null != r && s(r);
+                    (e?.(), null != r && s(r));
                 }
             );
         }, [l, s, t]),

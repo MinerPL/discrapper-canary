@@ -22,7 +22,7 @@ function s(l, t) {
                 (document.querySelector(".IncodeComponent") ?? document.body).appendChild(d),
                 e(d),
                 () => {
-                    d.remove(), e(null);
+                    (d.remove(), e(null));
                 }
             );
         }, [l, t]),
@@ -47,7 +47,7 @@ function Z(l, t, d) {
         let i = (l) => {
             "Escape" === l.key && (l.preventDefault(), d());
         };
-        return document.addEventListener("keydown", i), () => document.removeEventListener("keydown", i);
+        return (document.addEventListener("keydown", i), () => document.removeEventListener("keydown", i));
     }, [l, t, d]);
 }
 function b(l, t, d = !0, e) {
@@ -92,7 +92,7 @@ function m(l, t) {
             d.addEventListener("resize", i),
             d.addEventListener("scroll", i),
             () => {
-                d.removeEventListener("resize", i), d.removeEventListener("scroll", i);
+                (d.removeEventListener("resize", i), d.removeEventListener("scroll", i));
             }
         );
     }, [l, t]);
@@ -112,6 +112,6 @@ function o(l, t) {
                 ? document.activeElement === e && (l.preventDefault(), c.focus())
                 : document.activeElement === c && (l.preventDefault(), e.focus());
         };
-        return document.addEventListener("keydown", d), () => document.removeEventListener("keydown", d);
+        return (document.addEventListener("keydown", d), () => document.removeEventListener("keydown", d));
     }, [l, t]);
 }

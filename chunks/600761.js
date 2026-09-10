@@ -26,11 +26,11 @@ function o(e) {
         let e = t.current;
         if (null == e) return;
         if (!(!0 === h && (y?.itemType === r || v === r) && !d)) {
-            null !== a.current && cancelAnimationFrame(a.current),
+            (null !== a.current && cancelAnimationFrame(a.current),
                 (a.current = null),
                 (e.style.overflowAnchor = "auto"),
                 (e.style.overscrollBehavior = "auto"),
-                (s.current = 0);
+                (s.current = 0));
             return;
         }
         let n = e.getBoundingClientRect();
@@ -63,14 +63,14 @@ function o(e) {
                 }
             })),
             () => {
-                null !== a.current && cancelAnimationFrame(a.current),
+                (null !== a.current && cancelAnimationFrame(a.current),
                     (a.current = null),
                     (s.current = 0),
-                    null != e && ((e.style.overflowAnchor = "auto"), (e.style.overscrollBehavior = "auto"));
+                    null != e && ((e.style.overflowAnchor = "auto"), (e.style.overscrollBehavior = "auto")));
             }
         );
     }, [t, h, y?.itemType, v, r, o, c, i, d]);
 }
 function c(e) {
-    return o(e), null;
+    return (o(e), null);
 }

@@ -29,10 +29,10 @@ function d() {
 let c = {
     setUser(e, t, n, i) {
         let r = { id: e, username: t, email: n, staff: i };
-        window.DiscordSentry?.getCurrentScope().setUser(r), d(r);
+        (window.DiscordSentry?.getCurrentScope().setUser(r), d(r));
     },
     clearUser() {
-        window.DiscordSentry?.getCurrentScope().setUser(null), d();
+        (window.DiscordSentry?.getCurrentScope().setUser(null), d());
     },
     setTags(e) {
         window.DiscordSentry?.getCurrentScope().setTags(e);
@@ -45,9 +45,9 @@ let c = {
             i = s(t);
         return (
             window.DiscordSentry?.withScope((t) => {
-                null != i.tags && t.setTags(i.tags),
+                (null != i.tags && t.setTags(i.tags),
                     t.setExtras(i.extra),
-                    (n = window.DiscordSentry?.captureException(e));
+                    (n = window.DiscordSentry?.captureException(e)));
             }),
             n
         );
@@ -57,14 +57,14 @@ let c = {
             i = s(t);
         return (
             window.DiscordSentry?.withScope((t) => {
-                t.setExtras(i.extra),
+                (t.setExtras(i.extra),
                     t.setTag("crash", "true"),
                     t.setLevel("fatal"),
                     t.addEventProcessor((e) => {
                         let t = e.exception?.values?.[0];
-                        return null != t && (t.mechanism = { ...t.mechanism, handled: !1 }), e;
+                        return (null != t && (t.mechanism = { ...t.mechanism, handled: !1 }), e);
                     }),
-                    (n = window.DiscordSentry?.captureException(e));
+                    (n = window.DiscordSentry?.captureException(e)));
             }),
             n
         );
@@ -72,11 +72,11 @@ let c = {
     captureMessage(e, t, n) {
         let i = s(t);
         window.DiscordSentry?.withScope((t) => {
-            null != i.tags && t.setTags(i.tags),
+            (null != i.tags && t.setTags(i.tags),
                 null != i.fingerprint &&
                     (t.setFingerprint(i.fingerprint), t.addEventProcessor((e) => ((e.exception = void 0), e))),
                 t.setExtras(i.extra),
-                window.DiscordSentry?.captureMessage(e, n);
+                window.DiscordSentry?.captureMessage(e, n));
         });
     },
     addFeatureFlag(e, t) {

@@ -3,7 +3,7 @@ var o =
     function (r) {
         return r && r.__esModule ? r : { default: r };
     };
-Object.defineProperty(e, "__esModule", { value: !0 }), (e.decodeHTML = e.decodeHTMLStrict = e.decodeXML = void 0);
+(Object.defineProperty(e, "__esModule", { value: !0 }), (e.decodeHTML = e.decodeHTMLStrict = e.decodeXML = void 0));
 var a = o(t(164565)),
     n = o(t(271689)),
     c = o(t(300115)),
@@ -15,7 +15,7 @@ function l(r) {
         return String(r).replace(s, e);
     };
 }
-(e.decodeXML = l(c.default)), (e.decodeHTMLStrict = l(a.default));
+((e.decodeXML = l(c.default)), (e.decodeHTMLStrict = l(a.default)));
 var u = function (r, e) {
     return r < e ? 1 : -1;
 };
@@ -34,7 +34,7 @@ e.decodeHTML = (function () {
     var c = RegExp("&(?:" + e.join("|") + "|#[xX][\\da-fA-F]+;?|#\\d+;?)", "g"),
         i = p(a.default);
     function s(r) {
-        return ";" !== r.substr(-1) && (r += ";"), i(r);
+        return (";" !== r.substr(-1) && (r += ";"), i(r));
     }
     return function (r) {
         return String(r).replace(c, s);

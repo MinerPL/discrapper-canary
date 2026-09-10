@@ -28,14 +28,14 @@ class E extends i.A {
     lastSubscriptionStateSignature = null;
     hasPendingSubscriptionRefetch = !1;
     _terminate() {
-        (this.hasPendingSubscriptionRefetch = !1), (this.lastSubscriptionStateSignature = null);
+        ((this.hasPendingSubscriptionRefetch = !1), (this.lastSubscriptionStateSignature = null));
     }
     onLocaleChanged() {
         null == d.A.lastFetchedActivePromotions ||
             (d.A.lastFetchedActivePromotionsLocale !== r.default.locale && (0, o.BE)(!1));
     }
     async onPostConnectionOpen() {
-        (0, o.BE)(), await this.maybeFetchBogoPromotion();
+        ((0, o.BE)(), await this.maybeFetchBogoPromotion());
     }
     maybeFetchBogoPromotion = async () => {
         let e = a.default.getCurrentUser();

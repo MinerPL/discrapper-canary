@@ -9,10 +9,10 @@ function a(e) {
     i.h.dispatch({ type: "TUTORIAL_INDICATOR_HIDE", tutorialId: e });
 }
 function o(e) {
-    i.h.dispatch({ type: "TUTORIAL_INDICATOR_DISMISS", tutorialId: e }),
-        l.Bo.put({ url: s.Rsh.TUTORIAL_INDICATOR(e), oldFormErrors: !0, rejectWithError: !0 });
+    (i.h.dispatch({ type: "TUTORIAL_INDICATOR_DISMISS", tutorialId: e }),
+        l.Bo.put({ url: s.Rsh.TUTORIAL_INDICATOR(e), oldFormErrors: !0, rejectWithError: !0 }));
 }
 function u() {
-    i.h.dispatch({ type: "TUTORIAL_INDICATOR_SUPPRESS_ALL" }),
-        l.Bo.post({ url: s.Rsh.TUTORIAL_INDICATORS_SUPPRESS, oldFormErrors: !0, rejectWithError: !0 });
+    (i.h.dispatch({ type: "TUTORIAL_INDICATOR_SUPPRESS_ALL" }),
+        l.Bo.post({ url: s.Rsh.TUTORIAL_INDICATORS_SUPPRESS, oldFormErrors: !0, rejectWithError: !0 }));
 }

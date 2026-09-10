@@ -1,4 +1,4 @@
-n.d(t, { y0: () => K, Ni: () => $, t4: () => q, Q9: () => z, y$: () => Z });
+n.d(t, { y0: () => K, Ni: () => $, t4: () => X, Q9: () => z, y$: () => q });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -30,13 +30,13 @@ class _ extends a.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.quantity = e.quantity),
             (this.price = e.price),
             (this.total = e.total),
             (this.addOnPlans = e.addOnPlans ?? []),
-            (this.discount = e.discount ?? null);
+            (this.discount = e.discount ?? null));
     }
     getPlanQuantities() {
         let e = new Map([[this.id, this.quantity]]);
@@ -93,11 +93,11 @@ class E extends a.A {
               });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.paymentSources = e.paymentSources ?? []),
             (this.storeCountry = e.storeCountry ?? null),
             (this.allowedCurrencies = e.allowedCurrencies ?? []),
-            (this.availablePlans = e.availablePlans ?? []);
+            (this.availablePlans = e.availablePlans ?? []));
     }
     getAvailablePlanForItems(e) {
         return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
@@ -139,11 +139,11 @@ class A extends a.A {
               });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.subscriptionId = e.subscriptionId ?? null),
             (this.subscriptionPreview = e.subscriptionPreview ?? null),
             (this.updateType = e.updateType ?? null),
-            (this.resetBillingCycle = e.resetBillingCycle ?? !1);
+            (this.resetBillingCycle = e.resetBillingCycle ?? !1));
     }
 }
 var h = n(818348);
@@ -164,11 +164,11 @@ class I extends a.A {
               });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.paymentGateway = e.paymentGateway),
             (this.paymentSourceId = e.paymentSourceId ?? null),
             (this.currency = e.currency ?? null),
-            (this.invoicePreview = e.invoicePreview ?? null);
+            (this.invoicePreview = e.invoicePreview ?? null));
     }
     get fiatCurrency() {
         return this.paymentGateway === h.kM.VIRTUAL_CURRENCY ? null : this.currency;
@@ -202,7 +202,7 @@ class f extends a.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.status = e.status),
             (this.revision = e.revision),
@@ -213,7 +213,7 @@ class f extends a.A {
             (this.subscriptionFacet = e.subscriptionFacet ?? null),
             (this.checkoutContextRecord = e.checkoutContextRecord ?? null),
             (this.createdAt = e.createdAt),
-            (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []);
+            (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []));
     }
     getInvoicePreview() {
         return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
@@ -263,24 +263,24 @@ async function F(e) {
     let { error: t } = await (0, G.ap)(e);
     null != t && (0, w.pM)(Error(t), { extra: { authenticationError: t } });
 }
-let V = {
+let B = {
     paymentAuthError: null,
     isAwaitingPaymentAuthentication: !1,
     awaitingPaymentId: null,
     paymentAuthWasCancelled: !1,
 };
-var B = n(811315),
-    H = n.n(B),
+var V = n(811315),
+    H = n.n(V),
     j = n(75304),
     W = n(403362),
     Y = n(427262);
 let K = 1,
     [$, z] = (0, m.A)();
-function q(e) {
+function X(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return z()(e, t);
 }
-function Z(e) {
+function q(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -403,7 +403,7 @@ function Z(e) {
                 },
             },
             ...{
-                ...V,
+                ...B,
                 handlePaymentFailure: (t) => {
                     let { error: n } = t,
                         { code: r, paymentId: a } = n;
@@ -432,9 +432,9 @@ function Z(e) {
                             });
                             return;
                         }
-                        e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
+                        (e({ isAwaitingPaymentAuthentication: !1, awaitingPaymentId: null, paymentAuthError: null }),
                             b.h.wait(M.ET),
-                            b.h.wait(P.T3);
+                            b.h.wait(P.T3));
                     }
                 },
                 handlePaymentAuthenticationError: (t) => {
@@ -449,7 +449,7 @@ function Z(e) {
                         paymentAuthWasCancelled: !0,
                     });
                 },
-                resetPaymentAuthentication: () => e({ ...V }),
+                resetPaymentAuthentication: () => e({ ...B }),
             },
             ...{
                 expressCheckoutSubmitting: !1,
@@ -516,7 +516,7 @@ function Z(e) {
                     try {
                         let n = (0, N.Tm)({ skuId: e, isPremium: r, defaultPlanId: t });
                         if (H()(n, c.premiumPlanOptions)) return c.premiumPlanOptions;
-                        return (c.premiumPlanOptions = n), n;
+                        return ((c.premiumPlanOptions = n), n);
                     } catch (e) {
                         return null;
                     }

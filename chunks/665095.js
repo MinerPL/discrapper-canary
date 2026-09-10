@@ -11,8 +11,8 @@ var i = n(477900),
     h = n(475743),
     m = n(775121),
     p = n(139286),
-    g = n(80556),
-    f = n(557722),
+    f = n(80556),
+    g = n(557722),
     A = n(363195),
     x = n(870570),
     v = n(446868),
@@ -140,7 +140,7 @@ function L() {
         [C, T] = l.useState(0),
         _ = (0, h.Ay)(E);
     function S() {
-        (0, u.Cw)(),
+        ((0, u.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("647999"), n.e("689913"), n.e("25467")]).then(
@@ -148,8 +148,8 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: g.Ay },
-            );
+                { modalKey: P.H1, Layer: f.Ay },
+            ));
     }
     return (
         (0, p.A)(
@@ -184,7 +184,7 @@ function L() {
                                 confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: g.Ay, onCloseCallback: S },
+                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: S },
                 );
         }, [E, _]),
         (0, i.jsx)(k, {
@@ -216,9 +216,9 @@ function L() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: g.OH, reason: f.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: O.V, Layer: g.Ay },
+                          { modalKey: O.V, Layer: f.Ay },
                       );
             },
             onLogout: function () {
@@ -235,7 +235,7 @@ function L() {
                                 ...t,
                             });
                     },
-                    { Layer: g.Ay },
+                    { Layer: f.Ay },
                 );
             },
         })

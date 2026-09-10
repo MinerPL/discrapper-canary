@@ -23,7 +23,7 @@ var r = n(550601),
     k = n(195588);
 function x(e) {
     let t = [(0, r.D)(), (0, i.Z)(), (0, y.G)(), (0, _.F)(), (0, b.L)(), (0, w.p)(), (0, o.s)(), (0, S.M)()];
-    return !1 !== e.autoSessionTracking && t.push((0, v.p)()), t;
+    return (!1 !== e.autoSessionTracking && t.push((0, v.p)()), t);
 }
 function C(e = {}) {
     let t = (function (e = {}) {
@@ -38,7 +38,7 @@ function C(e = {}) {
             autoSessionTracking: !0,
             sendClientReports: !0,
         };
-        return null == e.defaultIntegrations && delete e.defaultIntegrations, { ...t, ...e };
+        return (null == e.defaultIntegrations && delete e.defaultIntegrations, { ...t, ...e });
     })(e);
     if (
         !t.skipBrowserExtensionCheck &&
@@ -94,7 +94,7 @@ function T(e = {}) {
         t && (e.eventId = t);
     }
     let i = g.jf.document.createElement("script");
-    (i.async = !0), (i.crossOrigin = "anonymous"), (i.src = (0, h.k)(r, e)), e.onLoad && (i.onload = e.onLoad);
+    ((i.async = !0), (i.crossOrigin = "anonymous"), (i.src = (0, h.k)(r, e)), e.onLoad && (i.onload = e.onLoad));
     let { onClose: o } = e;
     if (o) {
         let e = (t) => {

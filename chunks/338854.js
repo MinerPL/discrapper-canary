@@ -58,17 +58,17 @@ function k(e) {
         null != L.current && (!D.enabled && T ? L.current?.play().catch(I.tE) : L.current?.pause());
     }, [T, D.enabled]);
     let H = r.useCallback(() => {
-            null !== L.current && L.current.pause(), w?.();
+            (null !== L.current && L.current.pause(), w?.());
         }, [w]),
         U = r.useCallback(() => {
-            null !== L.current && L.current.pause(), w?.();
+            (null !== L.current && L.current.pause(), w?.());
         }, [w]),
         G = r.useCallback(() => {
             null !== L.current && L.current.pause();
             let e = W();
-            (0, m.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
+            ((0, m.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
                 w?.(),
-                j?.();
+                j?.());
         }, [W, j, w]),
         z = (0, a.jsxs)(a.Fragment, {
             children: [

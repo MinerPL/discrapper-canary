@@ -51,7 +51,7 @@ function x(e) {
                 let { ref: t, ...n } = e;
                 return (0, a.jsx)(M.OZ, {
                     ref: (e) => {
-                        (g.current = e), (t.current = e?.getScrollerNode() ?? null);
+                        ((g.current = e), (t.current = e?.getScrollerNode() ?? null));
                     },
                     ...n,
                     ...c,
@@ -87,7 +87,7 @@ function k() {
                 });
                 if (-1 !== n) {
                     let t = [...e];
-                    t.splice(n, 1), i(t);
+                    (t.splice(n, 1), i(t));
                     return;
                 }
                 i([...e, t]);
@@ -147,7 +147,7 @@ let R = () => {
     }, [n, u]);
     let d = l.useCallback(
             (t, n, a) => {
-                o({ textValue: n, richValue: a }), y.A.saveDraft(e.channel_id, n, H.C.ChannelMessage);
+                (o({ textValue: n, richValue: a }), y.A.saveDraft(e.channel_id, n, H.C.ChannelMessage));
             },
             [e],
         ),
@@ -242,11 +242,11 @@ let J = (e) => {
         v = l.useMemo(() => (0, d.createChannelRecord)({ id: "1", type: s.r.DM }), []),
         D = l.useMemo(() => (0, o.rh)({ ...(0, u.Ay)({ channelId: v.id, content: "" }) }), [v]);
     (0, l.useEffect)(() => {
-        x(D), S(v), k(!0);
+        (x(D), S(v), k(!0));
     }, [D, v, x, S]);
     let H = l.useCallback(async () => {
         if (!b()) return Promise.reject();
-        await Z(m, T, M), h.default.track(z.HAw.CUSTOM_THEME_SHARED, { num_destinations: m.length }), await n();
+        (await Z(m, T, M), h.default.track(z.HAw.CUSTOM_THEME_SHARED, { num_destinations: m.length }), await n());
     }, [T, m, M, b, n]);
     return ((0, l.useEffect)(() => {
         E(H);

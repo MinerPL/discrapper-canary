@@ -4,7 +4,7 @@ let r = new WeakMap(),
     a = new Map(),
     s = new WeakMap();
 function l(e, t, n) {
-    r.set(t, e), a.set(e, n);
+    (r.set(t, e), a.set(e, n));
     let l = t.ownerDocument?.defaultView ?? window,
         o = s.get(l);
     return (
@@ -31,5 +31,5 @@ function d(e, t) {
     e.unobserve(t);
 }
 function c(e, t) {
-    a.delete(e), null != t && r.delete(t);
+    (a.delete(e), null != t && r.delete(t));
 }

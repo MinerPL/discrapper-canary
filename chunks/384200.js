@@ -9,7 +9,7 @@ let d = {},
     c = {},
     u = new Set();
 function _() {
-    (d = {}), (c = {});
+    ((d = {}), (c = {}));
 }
 class E extends a.Ay.Store {
     static displayName = "ApplicationStreamPreviewStore";
@@ -38,15 +38,15 @@ let A = new E(s.h, {
     LOGOUT: _,
     STREAM_PREVIEW_FETCH_START: function (e) {
         let { streamKey: t } = e;
-        (c[t] = (c[t] ?? 0) + 1), u.add(t);
+        ((c[t] = (c[t] ?? 0) + 1), u.add(t));
     },
     STREAM_PREVIEW_FETCH_SUCCESS: function (e) {
         let { streamKey: t, previewURL: n } = e;
-        (d[t] = { url: n, expires: Date.now() + 12e4 }), (c[t] = 0), u.delete(t);
+        ((d[t] = { url: n, expires: Date.now() + 12e4 }), (c[t] = 0), u.delete(t));
     },
     STREAM_PREVIEW_FETCH_FAIL: function (e) {
         let { streamKey: t, retryAfter: n } = e;
-        (d[t] = { url: null, expires: Date.now() + (null != n ? n : 1e4 * c[t]) }), u.delete(t);
+        ((d[t] = { url: null, expires: Date.now() + (null != n ? n : 1e4 * c[t]) }), u.delete(t));
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
@@ -61,7 +61,7 @@ let A = new E(s.h, {
                     channelId: r,
                     ownerId: n,
                 });
-                return delete d[s], delete c[s], !0;
+                return (delete d[s], delete c[s], !0);
             }, !1)
         );
     },

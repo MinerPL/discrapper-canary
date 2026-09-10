@@ -19,7 +19,7 @@ function b(t) {
         C = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
         v = C?.phone ?? "",
         y = a.useCallback(() => {
-            e(),
+            (e(),
                 (0, s.openModalLazy)(
                     async () => {
                         let { default: t } = await Promise.all([
@@ -33,7 +33,7 @@ function b(t) {
                         return (e) => (0, n.jsx)(t, { reason: u.d.USER_SETTINGS_UPDATE, ...e });
                     },
                     { modalKey: x.V },
-                );
+                ));
         }, [e]),
         j = a.useCallback(() => {
             null != C &&

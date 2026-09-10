@@ -38,11 +38,11 @@ class m extends i.Ay.PersistedStore {
     static displayName = "CategoryCollapseStore";
     static persistKey = "collapsedCategories";
     initialize(e) {
-        this.waitFor(d.A, c.A, u.Ay, l.A),
+        (this.waitFor(d.A, c.A, u.Ay, l.A),
             this.removeChangeListener(h),
             this.addChangeListener(h),
             (E = e ?? {}),
-            this.syncWith([l.A], T);
+            this.syncWith([l.A], T));
     }
     getState() {
         return E;

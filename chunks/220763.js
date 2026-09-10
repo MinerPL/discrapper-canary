@@ -9,7 +9,7 @@ function o(t) {
     let { onClose: e, ...n } = t,
         o = a.intl.format(a.t.AVVUse, {
             onLearnMore: function () {
-                e(), (0, r.e)();
+                (e(), (0, r.e)());
             },
         });
     return (0, i.jsx)(s.A, {

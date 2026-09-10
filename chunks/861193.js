@@ -23,8 +23,8 @@ let i = function (t, r) {
         var l = f[c];
         "." === l ? o(f, c) : ".." === l ? (o(f, c), p++) : p && (o(f, c), p--);
     }
-    if (!a) for (; p--; ) f.unshift("..");
+    if (!a) for (; p--;) f.unshift("..");
     !a || "" === f[0] || (f[0] && n(f[0])) || f.unshift("");
     var y = f.join("/");
-    return e && "/" !== y.substr(-1) && (y += "/"), y;
+    return (e && "/" !== y.substr(-1) && (y += "/"), y);
 };

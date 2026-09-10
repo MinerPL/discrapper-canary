@@ -9,11 +9,11 @@ function a(e, t) {
 }
 function s(e) {
     let t = i.get(e);
-    return null == t && ((t = new IntersectionObserver(a, e)), i.set(e, t), r.set(t, new WeakMap())), t;
+    return (null == t && ((t = new IntersectionObserver(a, e)), i.set(e, t), r.set(t, new WeakMap())), t);
 }
 function l(e, t, n) {
     let i = r.get(e) ?? new WeakMap();
-    i.has(t) || e.observe(t), i.set(t, n), r.set(e, i);
+    (i.has(t) || e.observe(t), i.set(t, n), r.set(e, i));
 }
 function o(e, t) {
     let n = r.get(e) ?? new WeakMap();

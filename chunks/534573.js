@@ -22,13 +22,13 @@ function d(e, t) {
         if (null == n || !o(n)) return e;
         if (null != t.size) {
             let e = l(t.size);
-            n.searchParams.set("width", e), n.searchParams.set("height", e);
+            (n.searchParams.set("width", e), n.searchParams.set("height", e));
         }
         return (
             !(function (e, t) {
                 let { keepAspectRatio: n, format: i } = t;
-                null != n && e.searchParams.set("keep_aspect_ratio", String(n)),
-                    null != i && e.searchParams.set("format", i);
+                (null != n && e.searchParams.set("keep_aspect_ratio", String(n)),
+                    null != i && e.searchParams.set("format", i));
             })(n, t),
             n.toString()
         );

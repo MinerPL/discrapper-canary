@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => ej });
+(s.r(t), s.d(t, { default: () => ej }));
 var l = s(477900),
     r = s(582128),
     n = s(503698),
@@ -83,7 +83,7 @@ function J(e) {
         j = C === c.M.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         T = r.useCallback(
             (e) => {
-                null != e && j && b(Z.i.USER_DISMISS), I(e);
+                (null != e && j && b(Z.i.USER_DISMISS), I(e));
             },
             [j, b, I],
         ),
@@ -94,7 +94,7 @@ function J(e) {
             [b],
         ),
         v = r.useCallback(() => {
-            T(null), y.A.openSearchFiltersModal(s);
+            (T(null), y.A.openSearchFiltersModal(s));
         }, [T, s]),
         L = r.useMemo(() => (f > 0 ? X.intl.format(X.t.uaR4sI, { filterCount: f }) : X.intl.string(X.t.UdhTtk)), [f]),
         k = !(0, U.DZ)() && (s.type === V.I4_.DMS || s.type === V.I4_.CHANNEL);
@@ -223,7 +223,7 @@ function en(e) {
                         let e = { type: V.I4_.CHANNEL, channelId: s };
                         y.A.transitionStateToSearchContext(t, e);
                     }
-                    a(null), m.Hu.updateSetting(e);
+                    (a(null), m.Hu.updateSetting(e));
                 }
             },
             [u, a, t, s],
@@ -316,7 +316,7 @@ function ea(e) {
         ),
         o = r.useCallback(
             (e) => {
-                a(null), s(e);
+                (a(null), s(e));
             },
             [a, s],
         );
@@ -400,13 +400,13 @@ let ef = function (e) {
     }, [t]);
     let a = r.useCallback(
         (e) => {
-            n(),
+            (n(),
                 (0, ex.openModalLazy)(async () => {
                     let { default: r } = await Promise.all([s.e("36395"), s.e("155925"), s.e("444908")]).then(
                         s.bind(s, 774567),
                     );
                     return (s) => (0, l.jsx)(r, { ...s, searchContext: t, rating: e });
-                });
+                }));
         },
         [n, t],
     );
@@ -448,9 +448,9 @@ class eA extends r.Component {
                 r = 0,
                 n = 0;
             e.props.messages.forEach((e) => {
-                null != e.content && "" !== e.content && (s++, /https?:\/\/[^\s]+/.test(e.content) && n++),
+                (null != e.content && "" !== e.content && (s++, /https?:\/\/[^\s]+/.test(e.content) && n++),
                     null != e.embeds && e.embeds.length > 0 && r++,
-                    null != e.attachments && e.attachments.length > 0 && l++;
+                    null != e.attachments && e.attachments.length > 0 && l++);
             });
             let a = (0, S.bS)(e.props.searchContext);
             0 === s
@@ -636,7 +636,7 @@ let eE = [],
             ),
             z = r.useCallback(
                 (e) => {
-                    (0, k.kq)({ searchContext: t, searchRequestAnalyticsId: a, newPageIndex: e }), E(e);
+                    ((0, k.kq)({ searchContext: t, searchRequestAnalyticsId: a, newPageIndex: e }), E(e));
                 },
                 [E, t, a],
             ),
@@ -778,7 +778,7 @@ function eb(e) {
                         return (
                             l.forEach((e) => {
                                 let t = new T.Ay(e);
-                                (t = (t = (function (e, t) {
+                                ((t = (t = (function (e, t) {
                                     let [s] = t,
                                         l = s.getMessage(e.id, e.channel_id);
                                     return (
@@ -793,7 +793,7 @@ function eb(e) {
                                         allowGameMentions: !0,
                                     }),
                                 )),
-                                    n.push(t);
+                                    n.push(t));
                             }),
                             n
                         );

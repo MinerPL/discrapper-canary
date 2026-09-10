@@ -9,7 +9,7 @@ class d extends n.PureComponent {
     state = { loaded: !1 };
     static defaultProps = { width: 0, height: 0, alt: "" };
     constructor(t) {
-        super(t), this.initialize();
+        (super(t), this.initialize());
     }
     componentDidUpdate(t) {
         t.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
@@ -20,7 +20,7 @@ class d extends n.PureComponent {
         new Promise((s, e) => {
             null == t && e(Error("No image src passed"));
             let i = new Image();
-            (i.src = t), (i.onload = () => s(i)), (i.onerror = (t) => e(t));
+            ((i.src = t), (i.onload = () => s(i)), (i.onerror = (t) => e(t)));
         })).then(() => {
             this.unmounting || this.setState({ loaded: !0 });
         });

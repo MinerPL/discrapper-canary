@@ -1,4 +1,4 @@
-n.d(t, { H: () => f, r: () => p }), n(321073);
+(n.d(t, { H: () => f, r: () => p }), n(321073));
 var l = n(477900),
     r = n(582128),
     a = n(503698),
@@ -639,7 +639,7 @@ function p(e) {
                                     newValue: E,
                                     change: u,
                                 } = e;
-                                if (null == t) return console.warn("No change string for", u), null;
+                                if (null == t) return (console.warn("No change string for", u), null);
                                 let o = L.intl.format(t, {
                                     oldValue: s,
                                     newValue: E,

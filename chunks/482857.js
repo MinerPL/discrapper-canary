@@ -39,10 +39,10 @@ function w(e) {
         Q = (0, c.H)(H),
         W = (0, k.A)(V, T);
     function Y(e) {
-        e.stopPropagation(), (0, m.A)(T, V, H);
+        (e.stopPropagation(), (0, m.A)(T, V, H));
     }
     async function Z(e) {
-        e.stopPropagation(),
+        (e.stopPropagation(),
             await s.A.joinGuild(H),
             E.A.addConditionalChangeListener(() => {
                 let n;
@@ -55,12 +55,12 @@ function w(e) {
                     (0, g.uh)(H, n?.id),
                     !1)
                 );
-            });
+            }));
     }
     return {
         onDeleteClick: O
             ? function (e) {
-                  e.stopPropagation(),
+                  (e.stopPropagation(),
                       O &&
                           !N &&
                           (0, l.A)({
@@ -68,11 +68,11 @@ function w(e) {
                               subtitle: I.intl.string(I.t.v2GWNQ),
                               confirmText: I.intl.string(I.t.oyYWHE),
                               onConfirm: () => h.default.deleteGuildEvent(T, H),
-                          });
+                          }));
               }
             : void 0,
         onContextMenu: function (e) {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 null != n &&
                     (0, u.L3)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -87,13 +87,13 @@ function w(e) {
                             t.e("80168"),
                         ]).then(t.bind(t, 399893));
                         return (t) => (0, i.jsx)(e, { guildEventId: T, recurrenceId: V, channel: w, guild: n, ...t });
-                    });
+                    }));
         },
         onJoinClick:
             J || Q
                 ? function (e) {
                       if ((e.stopPropagation(), Q)) {
-                          j?.(), (0, r.Ze)(H);
+                          (j?.(), (0, r.Ze)(H));
                           return;
                       }
                       w?.isGuildStageVoice()
@@ -105,7 +105,7 @@ function w(e) {
         onStartClick:
             O && B && !W?.is_canceled
                 ? function (e) {
-                      e.stopPropagation(),
+                      (e.stopPropagation(),
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   t.e("998835"),
@@ -117,7 +117,7 @@ function w(e) {
                                   t.e("69772"),
                               ]).then(t.bind(t, 914119));
                               return (n) => (0, i.jsx)(e, { ...n, event: x, onSuccess: j });
-                          });
+                          }));
                   }
                 : void 0,
         onInviteClick: function (e, o) {
@@ -125,12 +125,12 @@ function w(e) {
                 if (!(0, b.y)(R, U, w)) {
                     let e = (0, b.d)({ guildId: H, guildEventId: T });
                     (0, _.C)(e, () => {
-                        d.O.announce(I.intl.string(I.t.t5VZ88)),
+                        (d.O.announce(I.intl.string(I.t.t5VZ88)),
                             o?.(),
                             A.default.track(D.HAw.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
                                 guild_id: H,
                                 guild_scheduled_event_id: T,
-                            });
+                            }));
                     });
                     return;
                 }
@@ -169,16 +169,16 @@ function w(e) {
         onEndClick:
             O && M === L.Ps.EXTERNAL && N
                 ? function (e) {
-                      e.stopPropagation(),
+                      (e.stopPropagation(),
                           O &&
                               (0, l.A)({
                                   title: I.intl.string(I.t.qaYzPA),
                                   subtitle: I.intl.string(I.t.bnDQ7E),
                                   confirmText: I.intl.string(I.t.mjB9pd),
                                   onConfirm: function () {
-                                      h.default.endEvent(T, H), (0, a.closeAllModals)();
+                                      (h.default.endEvent(T, H), (0, a.closeAllModals)());
                                   },
-                              });
+                              }));
                   }
                 : void 0,
         onJoinGuildClick: Z,

@@ -123,10 +123,10 @@ var t = {
                 : i * Math.pow(2, -10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - o)) / a) * 0.5 + u + t;
     },
     easeInBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t;
+        return (void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t);
     },
     easeOutBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * ((e = e / r - 1) * e * ((i + 1) * e + i) + 1) + t;
+        return (void 0 === i && (i = 1.70158), (n - t) * ((e = e / r - 1) * e * ((i + 1) * e + i) + 1) + t);
     },
     easeInOutBack: function (e, t, n, r, i) {
         var a = n - t;
@@ -137,7 +137,7 @@ var t = {
     easeInBounce: function (e, n, r, i) {
         var a,
             o = r - n;
-        return (a = t.easeOutBounce(i - e, 0, o, i)), o - a + n;
+        return ((a = t.easeOutBounce(i - e, 0, o, i)), o - a + n);
     },
     easeOutBounce: function (e, t, n, r) {
         var i = n - t;

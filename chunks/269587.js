@@ -74,9 +74,9 @@ function Y(t) {
                             id: "connect-spotify",
                             label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: M.HD }),
                             action: () => {
-                                a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
+                                (a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
                                     (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
-                                    r?.();
+                                    r?.());
                             },
                         });
                     if (s) return null;
@@ -87,8 +87,8 @@ function Y(t) {
                               id: "play-on-spotify",
                               label: h.intl.string(h.t.rRffNz),
                               action: () => {
-                                  a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, C.n)(M.M0.TRACK, c.external_id);
+                                  (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
+                                      (0, C.n)(M.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
@@ -103,7 +103,7 @@ function Y(t) {
                               id: "view-activity",
                               label: h.intl.string(h.t.GDWYR8),
                               action: () => {
-                                  l?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s();
+                                  (l?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s());
                               },
                           })
                         : null;
@@ -120,9 +120,9 @@ function Y(t) {
                                 platform: N.A.get(S.fg2.CRUNCHYROLL).name,
                             }),
                             action: () => {
-                                a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
+                                (a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
                                     (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
-                                    r?.();
+                                    r?.());
                             },
                         });
                     if ("recent" !== l || !(0, I.CU)(e)) return null;
@@ -133,7 +133,7 @@ function Y(t) {
                               id: "watch-on-crunchyroll",
                               label: h.intl.string(h.t.OpxQVH),
                               action: () => {
-                                  a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o);
+                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o));
                               },
                           });
                 })(t),
@@ -148,7 +148,7 @@ function Y(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  w({ action: "OPEN_MENU" }), H(!0);
+                  (w({ action: "OPEN_MENU" }), H(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
@@ -158,7 +158,7 @@ function Y(t) {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              n(), H(!1);
+                              (n(), H(!1));
                           },
                           "aria-label": h.intl.string(h.t.PlAQz1),
                           onSelect: o,
@@ -185,10 +185,10 @@ function W(t) {
                     innerRef: n,
                     "aria-label": h.intl.string(h.t["UKOtz+"]),
                     onClick: (n) => {
-                        n.stopPropagation(), t.onClick(n);
+                        (n.stopPropagation(), t.onClick(n));
                     },
                     onContextMenu: (n) => {
-                        n.preventDefault(), t.onClick(n);
+                        (n.preventDefault(), t.onClick(n));
                     },
                     className: k.He,
                     children: (0, i.jsx)(s.MoreHorizontalIcon, {

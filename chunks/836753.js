@@ -12,13 +12,13 @@ var r = n(192308),
 let _ = "INVITE_MODAL_KEY";
 class E extends s.A {
     _initialize() {
-        a.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            a.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+        (a.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            a.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal));
     }
     _terminate() {
-        (0, r.closeModal)(_),
+        ((0, r.closeModal)(_),
             a.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            a.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+            a.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal));
     }
     handleOpenModal(e) {
         let { context: t } = e;
@@ -53,8 +53,8 @@ class E extends s.A {
                     onCloseRequest: () => {
                         let e = (0, l.p9)(),
                             t = (0, l.xD)();
-                        o.default.track(u.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }),
-                            d.A.close(c.A.getProps().invite?.code ?? e);
+                        (o.default.track(u.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }),
+                            d.A.close(c.A.getProps().invite?.code ?? e));
                     },
                 },
             );

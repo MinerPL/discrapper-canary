@@ -28,7 +28,7 @@ class o extends a.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.userId = e.userId),
             (this.subscriptionId = e.subscriptionId),
             (this.oldCurrency = e.oldCurrency),
@@ -37,7 +37,7 @@ class o extends a.A {
             (this.newPrice = e.newPrice),
             (this.priceChangeMode = e.priceChangeMode),
             (this.expectedChargeTime = e.expectedChargeTime),
-            (this.priceChangeId = e.priceChangeId);
+            (this.priceChangeId = e.priceChangeId));
     }
     get isPriceIncrease() {
         return "PRICE_INCREASE" === this.priceChangeMode || "OPT_OUT_PRICE_INCREASE" === this.priceChangeMode;
@@ -127,7 +127,7 @@ class I extends a.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.type = e.type),
             (this.items = e.items),
@@ -153,7 +153,7 @@ class I extends a.A {
             (this.userId = e.userId),
             (this.streakStartedAt = e.streakStartedAt),
             (this.eligiblePaymentGateways = e.eligiblePaymentGateways),
-            (this.priceChange = e.priceChange);
+            (this.priceChange = e.priceChange));
         const t = this.renewalMutations;
         let n = e.items[0].planId,
             i = null;
@@ -161,11 +161,11 @@ class I extends a.A {
             const r = A.hd[e.items[0].planId],
                 a = r.interval,
                 s = r.intervalCount;
-            (n = (0, l.a9)(e.items, a, s)), null != t && (i = (0, l.a9)(t.items, a, s));
+            ((n = (0, l.a9)(e.items, a, s)), null != t && (i = (0, l.a9)(t.items, a, s)));
         } else null != t && t.items.length > 0 && (i = t.items[0].planId);
-        (this.planId = n),
+        ((this.planId = n),
             (this.additionalPlans = e.items.filter((e) => e.planId !== n)),
-            null != t && null != i && ((t.planId = i), (t.additionalPlans = t.items.filter((e) => e.planId !== i)));
+            null != t && null != i && ((t.planId = i), (t.additionalPlans = t.items.filter((e) => e.planId !== i))));
     }
     getCurrentSubscriptionPlanIdForGroup(e) {
         return this.items.find((t) => e.includes(t.planId))?.planId;

@@ -1,4 +1,4 @@
-n.d(t, { Br: () => k, oS: () => x, fr: () => V, tm: () => G, Bf: () => w, m4: () => U });
+n.d(t, { Br: () => k, oS: () => x, fr: () => B, tm: () => G, Bf: () => w, m4: () => U });
 var i = n(435558),
     r = n.n(i),
     a = JSON.parse(
@@ -80,19 +80,19 @@ let U = { start: 10, end: 15 },
         (e) =>
             new Promise((t) => {
                 let n = new Image();
-                (n.src = e),
+                ((n.src = e),
                     (n.crossOrigin = "Anonymous"),
                     (n.onload = () => {
                         let i = 32 * (0, y.mZ)();
                         if (n.width === i && n.height === i) t(e);
                         else {
                             let e = document.createElement("canvas");
-                            (e.width = i),
+                            ((e.width = i),
                                 (e.height = i),
                                 e.getContext("2d")?.drawImage(n, 0, 0),
-                                t(e.toDataURL("image/png"));
+                                t(e.toDataURL("image/png")));
                         }
-                    });
+                    }));
             }),
     );
 function x(e, t) {
@@ -117,7 +117,7 @@ function F(e, t) {
         .uniq()
         .value();
 }
-function V(e) {
+function B(e) {
     if (e.length < 1) return "";
     let t = F(e, "userId"),
         n = F(e, "emojiName"),

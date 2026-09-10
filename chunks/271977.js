@@ -90,7 +90,7 @@ function d({ actor: s, trackElementClicked: t }) {
             s.send({ type: "SET_BUSINESS_NAME", value: t });
         },
         submit() {
-            t?.("submit"), s.send({ type: "SUBMIT" });
+            (t?.("submit"), s.send({ type: "SUBMIT" }));
         },
     };
 }

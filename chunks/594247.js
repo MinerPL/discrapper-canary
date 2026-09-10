@@ -22,7 +22,7 @@ function l(e) {
 }
 function u(e, a, t, r, n, i, o) {
     let l = new Date();
-    return l.setUTCHours(r, n, i, o), l.setUTCFullYear(e, a - 1, t), l.getTime();
+    return (l.setUTCHours(r, n, i, o), l.setUTCFullYear(e, a - 1, t), l.getTime());
 }
 function s(e, a) {
     if ("UTC" === a) return 0;
@@ -66,7 +66,9 @@ function m(e, a, t = "compatible") {
         d = g(d, new (0, i.FG)());
         let e = new Date(),
             a = (0, i.LA)(d.era, d.year);
-        return e.setFullYear(a, d.month - 1, d.day), e.setHours(d.hour, d.minute, d.second, d.millisecond), e.getTime();
+        return (
+            e.setFullYear(a, d.month - 1, d.day), e.setHours(d.hour, d.minute, d.second, d.millisecond), e.getTime()
+        );
     }
     let h = l(d),
         y = s(h - 864e5, a),
@@ -142,7 +144,9 @@ function g(e, a) {
     if ((0, o.Jg)(e.calendar, a)) return e;
     let t = a.fromJulianDay(e.calendar.toJulianDay(e)),
         r = e.copy();
-    return (r.calendar = a), (r.era = t.era), (r.year = t.year), (r.month = t.month), (r.day = t.day), (0, n.AU)(r), r;
+    return (
+        (r.calendar = a), (r.era = t.era), (r.year = t.year), (r.month = t.month), (r.day = t.day), (0, n.AU)(r), r
+    );
 }
 function f(e, a, t) {
     return e instanceof r.Ip ? (e.timeZone === a ? e : b(e, a)) : y(m(e, a, t), a);

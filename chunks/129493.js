@@ -99,13 +99,13 @@ function V(e) {
         N = (0, r.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(h, g));
     return (
         s.useEffect(() => {
-            (0, _.mO)(W.HAw.SAFETY_WARNING_MODAL_VIEWED, {
+            ((0, _.mO)(W.HAw.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: h,
                 warningId: g,
                 senderId: p,
                 warningType: N?.type,
             }),
-                o.A.increment({ name: a.K.SAFETY_WARNING_MODAL_VIEW });
+                o.A.increment({ name: a.K.SAFETY_WARNING_MODAL_VIEW }));
         }, [h, g, p, N]),
         (0, i.jsx)(l.k, {
             onClose: n,

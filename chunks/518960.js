@@ -36,7 +36,7 @@ function C(e, t, i) {
         E = d.length;
     if (g > s) {
         let t = i?.reduce((e, t) => e + t, 0);
-        (0, p.zV)(
+        ((0, p.zV)(
             I.HAw.FILE_SIZE_LIMIT_EXCEEDED,
             (0, c.s)({
                 channelId: e.id,
@@ -60,7 +60,7 @@ function C(e, t, i) {
                 kestrelBeta: a.enabled && !a.isGA,
                 kestrelGA: a.isGA,
                 effectiveMaxSize: a.enabled ? s : void 0,
-            });
+            }));
         return;
     }
     (0, o.openUploadError)({
@@ -101,14 +101,14 @@ async function P(e, t, i) {
         b = P.map((e) => e.file);
     if ((0, _.fJ)(b, S)) return void C(t, b);
     if (E.A.getUploadCount(t.id, i) + P.length > I.XgB) {
-        (0, o.openUploadError)({
+        ((0, o.openUploadError)({
             title: z.intl.string(z.t.wOr6hB),
             help: z.intl.formatToPlainString(z.t["qqyp/e"], { limit: I.XgB }),
         }),
             A.default.track(I.HAw.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: E.A.getUploadCount(t.id, i),
                 new_count: P.length,
-            });
+            }));
         return;
     }
     if (

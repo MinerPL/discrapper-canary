@@ -203,7 +203,7 @@ let eg = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                     "aria-label": I,
                                                     className: r()(ep._0, { [ep.ND]: E, [ep.Ms]: !c && g && E }),
                                                     onClick: () => {
-                                                        x.type === ee.Z2.PACK &&
+                                                        (x.type === ee.Z2.PACK &&
                                                             K.default.track(
                                                                 eh.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED,
                                                                 {
@@ -213,7 +213,7 @@ let eg = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                                     guild_id: o,
                                                                 },
                                                             ),
-                                                            a();
+                                                            a());
                                                     },
                                                     children: y,
                                                 }),
@@ -256,7 +256,7 @@ let eg = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             }),
             C = i.useCallback(
                 (e) => {
-                    e(d), s.current?.scrollTo(h);
+                    (e(d), s.current?.scrollTo(h));
                 },
                 [d, h],
             );
@@ -325,12 +325,12 @@ function eU(e) {
     let { analyticsLocations: s } = (0, D.Ay)(P.A.EMPTY_STATE),
         a = (0, d.yK)([b.A], () => ew.vX.map((e) => b.A.getStickerById(e)));
     i.useEffect(() => {
-        K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
+        (K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
             type: eP.e.EMPTY_STICKER_PICKER_UPSELL,
             source: { section: eh.JJy.EMPTY_STICKER_PICKER_UPSELL },
             location_stack: s,
         }),
-            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eb.uq)(eP.e.EMPTY_STICKER_PICKER_UPSELL));
+            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, eb.uq)(eP.e.EMPTY_STICKER_PICKER_UPSELL)));
     }, [s]);
     let o = (0, H.V)(),
         u = (0, eR.O)(),
@@ -454,7 +454,7 @@ let eX = function (e) {
                           variant: "primary",
                           text: ef.intl.string(ef.t.bwNjug),
                           onClick: function () {
-                              (0, G.v8)(), eZ.A.open(n, eh.BEX.STICKERS, u);
+                              ((0, G.v8)(), eZ.A.open(n, eh.BEX.STICKERS, u));
                           },
                       }),
                   ],
@@ -645,8 +645,8 @@ let tn = i.memo(function (e) {
                             onClick: function (t) {
                                 if (h?.current === !0 || p?.current === !0) return;
                                 let n = t.altKey;
-                                n && e.type === ee.op.STICKER && !(0, ec.o1)(e.sticker.id) && M(e.sticker.id),
-                                    x?.(e, n);
+                                (n && e.type === ee.op.STICKER && !(0, ec.o1)(e.sticker.id) && M(e.sticker.id),
+                                    x?.(e, n));
                             },
                             onContextMenu: function (e) {
                                 (0, e6.L3)(e, async () => {
@@ -784,9 +784,9 @@ let tI = i.forwardRef(function (e, t) {
                         return {
                             handleStickerInspect: i.useCallback((e) => {
                                 let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: l } = e;
-                                U.bM.setActiveCategoryIndex(l),
+                                (U.bM.setActiveCategoryIndex(l),
                                     U.bM.setInspectedExpressionPosition(n, t, en.t.MOUSE_EVENT),
-                                    e.type === ee.op.STICKER && U.bM.setSearchPlaceholder(e.sticker.name);
+                                    e.type === ee.op.STICKER && U.bM.setSearchPlaceholder(e.sticker.name));
                             }, []),
                             handleSelect: i.useCallback(
                                 (e, i) => {
@@ -800,8 +800,8 @@ let tI = i.forwardRef(function (e, t) {
                                     };
                                     if (null != a && !(0, X.G7)(a, l, n)) {
                                         let e = (0, ec.Xw)(a);
-                                        (0, X.W$)(a, l, n) === X.Ux.SENDABLE_WITH_PREMIUM && $(!0),
-                                            e && X.Ux.SENDABLE_WITH_BOOSTED_GUILD;
+                                        ((0, X.W$)(a, l, n) === X.Ux.SENDABLE_WITH_PREMIUM && $(!0),
+                                            e && X.Ux.SENDABLE_WITH_BOOSTED_GUILD);
                                         return;
                                     }
                                     i
@@ -858,14 +858,14 @@ let tI = i.forwardRef(function (e, t) {
                                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                                 l = new Set(t),
                                 i = t.has(e);
-                            i ? l.delete(e) : l.add(e),
+                            (i ? l.delete(e) : l.add(e),
                                 K.default.track(eh.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                     location: C?.location,
                                     tab: em.kx.STICKER,
                                     collapsed: !i,
                                     sticker_pack_id: n ? e : null,
                                 }),
-                                N(l);
+                                N(l));
                         },
                         [C, t, N],
                     ),
@@ -1126,11 +1126,11 @@ let t_ = i.forwardRef(function (e, t) {
         [h, m] = U.bM.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], L.x),
         f = i.useCallback(
             (e) => {
-                U.bM.setActiveCategoryIndex("" === e ? 0 : -1),
+                (U.bM.setActiveCategoryIndex("" === e ? 0 : -1),
                     U.bM.setInspectedExpressionPosition(0, 0),
                     U.bM.setSearchPlaceholder(null),
                     (0, G.Ri)(e),
-                    s.current?.scrollTo(0);
+                    s.current?.scrollTo(0));
             },
             [s],
         ),
@@ -1177,12 +1177,12 @@ function tk(e) {
     let { onLearnMore: t } = e,
         { analyticsLocations: n } = (0, D.Ay)(P.A.PREMIUM_UPSELL);
     (0, i.useEffect)(() => {
-        K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
+        (K.default.track(eh.HAw.PREMIUM_UPSELL_VIEWED, {
             location_section: eh.JJy.STICKER_PICKER_UPSELL,
             type: eP.e.STICKER_PICKER_UPSELL,
             location_stack: n,
         }),
-            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eb.uq)(eP.e.STICKER_PICKER_UPSELL));
+            (0, eT.sq)(eh.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, eb.uq)(eP.e.STICKER_PICKER_UPSELL)));
     }, [n]);
     let s = (0, i.useRef)(null);
     (0, tb.Ay)(() => {
@@ -1301,7 +1301,7 @@ let tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             Y = z.length + Z.length,
             q = i.useCallback(
                 (e) => {
-                    "" === C ? (0, Q.ry)(e) : (0, Q.nQ)(e, C, Y), a(e.sticker, ee.D6.STICKER_PICKER);
+                    ("" === C ? (0, Q.ry)(e) : (0, Q.nQ)(e, C, Y), a(e.sticker, ee.D6.STICKER_PICKER));
                 },
                 [a, C, Y],
             ),
@@ -1396,7 +1396,7 @@ let tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         let { location: i } = t;
                         switch (e.type) {
                             case ee.op.CREATE_STICKER:
-                                K.default.track(eh.HAw.OPEN_MODAL, { type: eh.JJy.CREATE_STICKER_MODAL, location: c }),
+                                (K.default.track(eh.HAw.OPEN_MODAL, { type: eh.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, m.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
                                             n.e("860350"),
@@ -1413,7 +1413,7 @@ let tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                             n.e("429143"),
                                         ]).then(n.bind(n, 445002));
                                         return (n) => (0, l.jsx)(t, { guildId: e.guild_id, ...n });
-                                    });
+                                    }));
                                 break;
                             case ee.op.STICKER: {
                                 if (null == e.sticker) break;
@@ -1433,7 +1433,7 @@ let tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 t = [];
             null !== e && (t = b.A.getStickersByGuildId(e) ?? []);
             let n = 0;
-            null != k &&
+            (null != k &&
                 [...k.values()].forEach((e) => {
                     n += e.length;
                 }),
@@ -1443,22 +1443,22 @@ let tP = (0, z.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     frequentlyUsedStickers: M,
                     guildStickers: t,
                     stickersTotal: n,
-                });
+                }));
         }
-        i.useEffect(() => U.bM.resetStoreState, []),
+        (i.useEffect(() => U.bM.resetStoreState, []),
             i.useEffect(() => {
-                "" === I.current && "" !== C && (0, Q.Fg)(), (I.current = C);
+                ("" === I.current && "" !== C && (0, Q.Fg)(), (I.current = C));
             }, [C]),
             i.useEffect(() => {
                 0 === Y ? tB(C) : tW(C, Y, E);
             }, [C, Y, E]),
             i.useLayoutEffect(() => {
                 x.current?.focus();
-            }, []);
+            }, []));
         let eg = i.useCallback(() => {
-            o(),
+            (o(),
                 K.default.track(eh.HAw.PREMIUM_PROMOTION_OPENED, { location_section: eh.JJy.STICKER_PICKER_UPSELL }),
-                (0, F.e)();
+                (0, F.e)());
         }, [o]);
         return (0, l.jsxs)(D.f5, {
             value: h,
@@ -1533,7 +1533,7 @@ let t0 = 498 + t$.as.MEDIUM,
             "aria-controls": t ? a : void 0,
             ...o,
             onClick: () => {
-                E.Ay.trackWithMetadata(eh.HAw.EXPRESSION_PICKER_TAB_CLICKED, { tab: i, badged: !1 }), (0, G.U)(i);
+                (E.Ay.trackWithMetadata(eh.HAw.EXPRESSION_PICKER_TAB_CLICKED, { tab: i, badged: !1 }), (0, G.U)(i));
             },
             "aria-current": t ? "page" : void 0,
             className: r()(n, tQ.oi, tQ.pc, { [tQ.Mv]: t }),
@@ -1577,9 +1577,9 @@ let t0 = 498 + t$.as.MEDIUM,
                     m = i.useCallback(
                         (e) => {
                             let t = e >= r ? em.wp.MAX : e <= 498 ? em.wp.MIN : e;
-                            null == t && null != n.current && (n.current.style.width = ""),
+                            (null == t && null != n.current && (n.current.style.width = ""),
                                 x.Ay.updatedUnsyncedSettings({ expressionPickerWidth: t }),
-                                c(t);
+                                c(t));
                         },
                         [n, r],
                     ),
@@ -1610,7 +1610,7 @@ let t0 = 498 + t$.as.MEDIUM,
                         drawerWidth: h,
                         handleDrawerResizeHandleMouseDown: i.useCallback(
                             (e) => {
-                                e.stopPropagation(), null != t.current && a(t.current.offsetWidth), f(e);
+                                (e.stopPropagation(), null != t.current && a(t.current.offsetWidth), f(e));
                             },
                             [t, f],
                         ),
@@ -1637,7 +1637,7 @@ let t0 = 498 + t$.as.MEDIUM,
                     if ((!X && (0, m.hasAnyModalOpen)()) || (X && !(Q && P)) || $ || e.defaultPrevented) return;
                     let { target: t } = e;
                     if ((0, c.vq)(t) && null != t.closest("." + em.VQ)) return;
-                    for (; (0, c.vq)(t); ) {
+                    for (; (0, c.vq)(t);) {
                         if (
                             t === H.current ||
                             "true" === t.getAttribute("data-menu-item") ||
@@ -1656,7 +1656,7 @@ let t0 = 498 + t$.as.MEDIUM,
             ei = i.useCallback(() => {
                 (0, G.v8)();
             }, []);
-        i.useLayoutEffect(() => {
+        (i.useLayoutEffect(() => {
             function e() {
                 K === em.kx.GIF && (0, G.v8)();
             }
@@ -1666,17 +1666,17 @@ let t0 = 498 + t$.as.MEDIUM,
                 Y.subscribe(eh.jej.POPOUT_CLOSE, ei),
                 tq._.subscribe(eh.jej.CLOSE_GIF_PICKER, e),
                 () => {
-                    Z.removeEventListener("mousedown", el),
+                    (Z.removeEventListener("mousedown", el),
                         Z.removeEventListener("contextmenu", el),
                         Y.unsubscribe(eh.jej.POPOUT_CLOSE, ei),
-                        tq._.unsubscribe(eh.jej.CLOSE_GIF_PICKER, e);
+                        tq._.unsubscribe(eh.jej.CLOSE_GIF_PICKER, e));
                 }
             );
         }, [K, ei, el, Z, Y]),
-            (0, p.tj)(U);
+            (0, p.tj)(U));
         let [es, er] = (0, I.kn)(J ? [h.M.SOUNDMOJI_BADGE] : [], void 0, !1),
             [ea, eo] = i.useState(!1);
-        i.useEffect(() => {
+        (i.useEffect(() => {
             K === em.kx.SOUNDBOARD && eo(!0);
         }, [K]),
             i.useEffect(
@@ -1704,7 +1704,7 @@ let t0 = 498 + t$.as.MEDIUM,
                                 badged: !1,
                             }),
                             (V.current = !0)));
-            });
+            }));
         let eu = i.useCallback((e, t) => R?.(e, "emoji_picker", t), [R]),
             ec = i.useCallback((e, t) => R?.(e, "soundboard_picker", t), [R]),
             ed = L.soundmoji?.allowSending === !0 && null != R,

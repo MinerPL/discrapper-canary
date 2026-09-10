@@ -21,10 +21,14 @@ var d = l(503698),
 function b(i) {
     let { guildId: a, ...l } = i,
         d = (0, s.bG)([p.A], () => p.A.getGuild(a)),
-        b = (0, s.bG)([h.default], () => {
-            let i = h.default.getCurrentUser()?.primaryGuild;
-            return i?.identityGuildId === a && i?.identityEnabled === !0;
-        }, [a]),
+        b = (0, s.bG)(
+            [h.default],
+            () => {
+                let i = h.default.getCurrentUser()?.primaryGuild;
+                return i?.identityGuildId === a && i?.identityEnabled === !0;
+            },
+            [a],
+        ),
         { isAdopting: C, onAdoptTag: k, onEditProfile: y } = (0, j.A)(a, l.onClose);
     if (null != d && (0, x.Rg)(d) && (0, x.q0)(d))
         return (0, e.jsxs)(t.EO, {

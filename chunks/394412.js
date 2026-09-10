@@ -10,19 +10,19 @@ var i = t(17928),
     u = t(87401),
     d = t(707592),
     A = t(698441),
-    m = t(935159),
-    h = t(508654),
+    h = t(935159),
+    m = t(508654),
     C = t(974930),
     E = t(47868),
     p = t(375708),
     g = t(410476);
 function f(e) {
     let { channelId: n, showDismiss: f = !0 } = e,
-        x = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
-        I = (0, h.RO)(n),
-        v = null != (0, h.Qs)(n),
-        { canManageGuildEvent: T } = (0, o.nr)(x),
-        _ = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
+        I = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
+        x = (0, m.RO)(n),
+        v = null != (0, m.Qs)(n),
+        { canManageGuildEvent: T } = (0, o.nr)(I),
+        _ = (0, i.bG)([u.A], () => x.filter((e) => !u.A.isEventDismissed(e.id)), [x]),
         j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             _,
         ]);
@@ -64,7 +64,7 @@ function f(e) {
                           onDismiss: f
                               ? () => {
                                     var n;
-                                    return (n = e.id), void (0, m.Nt)(n);
+                                    return ((n = e.id), void (0, h.Nt)(n));
                                 }
                               : void 0,
                           userCount: j[e.id],

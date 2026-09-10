@@ -73,8 +73,8 @@ let A = {
         r.h.dispatch({ type: "FORUM_SEARCH_START", channelId: t });
         try {
             let l = await s.A.searchThreads(e, t, n, i, a);
-            (0, c.Sc)({ guildId: e, channelId: t, numSearchResults: l.length }),
-                r.h.dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: t, threadIds: l });
+            ((0, c.Sc)({ guildId: e, channelId: t, numSearchResults: l.length }),
+                r.h.dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: t, threadIds: l }));
         } catch {
             r.h.dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: t });
         }

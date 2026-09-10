@@ -1,5 +1,5 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.AbstractParserWithLeftRightBoundaryChecking = t.AbstractParserWithLeftBoundaryChecking = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.AbstractParserWithLeftRightBoundaryChecking = t.AbstractParserWithLeftBoundaryChecking = void 0));
 let n = r(167385),
     a = r(579782);
 class i extends n.AbstractParserWithWordBoundaryChecking {
@@ -13,9 +13,9 @@ class i extends n.AbstractParserWithWordBoundaryChecking {
         return !1;
     }
 }
-(t.AbstractParserWithLeftBoundaryChecking = i),
+((t.AbstractParserWithLeftBoundaryChecking = i),
     (t.AbstractParserWithLeftRightBoundaryChecking = class extends i {
         innerPattern(e) {
             return RegExp(`${this.innerPatternString(e)}${a.REGEX_PARTS.rightBoundary}`, a.REGEX_PARTS.flags);
         }
-    });
+    }));

@@ -17,7 +17,7 @@ let c = function (t) {
             {
                 text: l.intl.string(l.t.saZaRb),
                 onClick: function () {
-                    (0, e.OE)(i), s.default.disconnect(), c();
+                    ((0, e.OE)(i), s.default.disconnect(), c());
                 },
                 variant: "critical-primary",
             },

@@ -51,15 +51,15 @@ async function v(t) {
     try {
         await g.A.unarchiveThreadIfNecessary(a.id);
     } catch {
-        n(!1), r();
+        (n(!1), r());
         return;
     }
     try {
-        await s.Bo.patch({ url: x.Rsh.MESSAGE(a.id, d), body: { attachments: f }, rejectWithError: (0, s.fT)() }),
+        (await s.Bo.patch({ url: x.Rsh.MESSAGE(a.id, d), body: { attachments: f }, rejectWithError: (0, s.fT)() }),
             r(),
-            o.A.clearAll(a.id, E.C.ChannelMessage);
+            o.A.clearAll(a.id, E.C.ChannelMessage));
     } catch (t) {
-        n(!1),
+        (n(!1),
             t.body?.code === x.t02.EXPLICIT_CONTENT &&
                 (r(),
                 c.A.sendExplicitMediaClydeError(
@@ -67,7 +67,7 @@ async function v(t) {
                     t.body?.attachments,
                     h.SW.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
                 ),
-                o.A.clearAll(a.id, E.C.ChannelMessage));
+                o.A.clearAll(a.id, E.C.ChannelMessage)));
     }
 }
 function F(t) {
@@ -86,7 +86,7 @@ function F(t) {
                 : null,
         [T, I] = n.useState(!1),
         _ = n.useCallback(() => {
-            (0, f.jh)({ added: !1 }), s(), o();
+            ((0, f.jh)({ added: !1 }), s(), o());
         }, [s, o]),
         S = n.useCallback(() => {
             null != u &&

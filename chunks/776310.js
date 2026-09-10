@@ -12,7 +12,7 @@ function o(e, t, n, i) {
 }
 var u = (function () {
         function e(e) {
-            (this.id = e.id),
+            ((this.id = e.id),
                 (this.position = e.position),
                 (this.velocity = e.velocity),
                 (this.rotation = e.rotation),
@@ -24,7 +24,7 @@ var u = (function () {
                 (this.spriteY = e.spriteY),
                 (this.spriteWidth = e.spriteWidth),
                 (this.spriteHeight = e.spriteHeight),
-                (this._lastUpdatedAt = Date.now());
+                (this._lastUpdatedAt = Date.now()));
         }
         return (
             (e.prototype.getNewForces = function (e, t) {
@@ -38,11 +38,11 @@ var u = (function () {
             (e.prototype.update = function (e) {
                 var t = Date.now(),
                     n = (t - this._lastUpdatedAt) / 100;
-                this.rotation.update(n), this.dragCoefficient.update(n);
+                (this.rotation.update(n), this.dragCoefficient.update(n));
                 var i = this.getNewForces(e, n),
                     r = i.x,
                     a = i.y;
-                this.velocity.update(n),
+                (this.velocity.update(n),
                     (this.velocity.x += r),
                     (this.velocity.y += a),
                     this.position.update(n),
@@ -51,7 +51,7 @@ var u = (function () {
                     this.size.update(n),
                     this.opacity.update(n),
                     (this.opacity.value = Math.max(this.opacity.value, 0)),
-                    (this._lastUpdatedAt = t);
+                    (this._lastUpdatedAt = t));
             }),
             (e.prototype.previewPositionUpdate = function (e, t) {
                 var n = t / 100,
@@ -59,12 +59,12 @@ var u = (function () {
                     r = this.getNewForces(e, n),
                     a = r.x,
                     o = r.y;
-                (i.x += a), (i.y += o);
+                ((i.x += a), (i.y += o));
                 var u = this.position.previewUpdate(n);
-                return (u.x += i.x * n), (u.y += i.y * n), u;
+                return ((u.x += i.x * n), (u.y += i.y * n), u);
             }),
             (e.prototype.draw = function (e, t) {
-                t.save(),
+                (t.save(),
                     (t.globalAlpha = this.opacity.value),
                     t.setTransform(
                         new DOMMatrix()
@@ -85,7 +85,7 @@ var u = (function () {
                         this.width * n.g.devicePixelRatio,
                         this.height * n.g.devicePixelRatio,
                     ),
-                    t.restore();
+                    t.restore());
             }),
             (e.prototype.shouldDestroy = function (e, t) {
                 return (
@@ -111,7 +111,7 @@ var u = (function () {
                 configurable: !0,
             }),
             (e.prototype.addForce = function (e) {
-                (this.velocity.x += e.x), (this.velocity.y += e.y);
+                ((this.velocity.x += e.x), (this.velocity.y += e.y));
             }),
             e
         );
@@ -128,12 +128,12 @@ var u = (function () {
             n = t.gravity,
             i = t.wind,
             r = t.density;
-        (this.gravity = -9.8),
+        ((this.gravity = -9.8),
             (this.wind = 0),
             (this.density = 1.2041),
             (this.gravity = null != n ? n : this.gravity),
             (this.wind = null != i ? i : this.wind),
-            (this.density = null != r ? r : this.density);
+            (this.density = null != r ? r : this.density));
     },
     c = function (e, t) {
         return (c =
@@ -152,7 +152,7 @@ function d(e, t) {
     function n() {
         this.constructor = e;
     }
-    c(e, t), (e.prototype = null === t ? Object.create(t) : ((n.prototype = t.prototype), new n()));
+    (c(e, t), (e.prototype = null === t ? Object.create(t) : ((n.prototype = t.prototype), new n())));
 }
 var f = function () {
         return (f =
@@ -168,11 +168,11 @@ var f = function () {
     },
     p = (function () {
         function e(e, t, n) {
-            (this._x = e), (this._y = n ? e : t);
+            ((this._x = e), (this._y = n ? e : t));
         }
         return (
             (e.prototype.update = function (e) {
-                this._x.update(e), this._y.update(e);
+                (this._x.update(e), this._y.update(e));
             }),
             (e.prototype.previewUpdate = function (e) {
                 return { x: this._x.previewUpdate(e), y: this._y.previewUpdate(e) };
@@ -203,12 +203,12 @@ var f = function () {
     y = (function (e) {
         function t(t, n, i, r) {
             var a = e.call(this, t, n, r) || this;
-            return (a._z = r ? t : i), a;
+            return ((a._z = r ? t : i), a);
         }
         return (
             d(t, e),
             (t.prototype.update = function (t) {
-                e.prototype.update.call(this, t), this._z.update(t);
+                (e.prototype.update.call(this, t), this._z.update(t));
             }),
             (t.prototype.previewUpdate = function (t) {
                 var n = e.prototype.previewUpdate.call(this, t);
@@ -243,7 +243,7 @@ var f = function () {
     m = (function (e) {
         function t(t, n) {
             var i = e.call(this, t) || this;
-            return (i.addValue = n), i;
+            return ((i.addValue = n), i);
         }
         return (
             d(t, e),
@@ -259,10 +259,12 @@ var f = function () {
     w = (function (e) {
         function t(t, n, i, r, a, o) {
             var u = e.call(this, t) || this;
-            (u.min = n), (u.max = i), (u.duration = r);
+            ((u.min = n), (u.max = i), (u.duration = r));
             var s = (u.value / (u.max - u.min)) * u.duration,
                 l = isNaN(s) ? 0 : s;
-            return (u.timePassed = l < 0 ? u.duration - l : l), (u.directionMultiplier = a), (u.easingFunction = o), u;
+            return (
+                (u.timePassed = l < 0 ? u.duration - l : l), (u.directionMultiplier = a), (u.easingFunction = o), u
+            );
         }
         return (
             d(t, e),
@@ -271,7 +273,7 @@ var f = function () {
                     n = t[0],
                     i = t[1],
                     r = t[2];
-                (this.value = n), (this.directionMultiplier = r), (this.timePassed = i);
+                ((this.value = n), (this.directionMultiplier = r), (this.timePassed = i));
             }),
             (t.prototype.previewUpdate = function (e) {
                 return this.doUpdate(e)[0];
@@ -318,7 +320,7 @@ function V(e) {
                 var r = R(e.addValue);
                 return new p(new m(t.x, r.x), new m(t.y, r.y), e.uniformVectorValues);
             case "linear-random":
-                (n = R(e.minValue)), (i = R(e.maxValue));
+                ((n = R(e.minValue)), (i = R(e.maxValue)));
                 var a = R(e.minAddValue),
                     o = R(e.maxAddValue);
                 return new p(new m(x(n.x, i.x), x(a.x, o.x)), new m(x(n.y, i.y), x(a.x, o.x)), e.uniformVectorValues);
@@ -334,7 +336,7 @@ function V(e) {
                     e.uniformVectorValues,
                 );
             case "oscillating-random":
-                (n = R(e.minValue)), (i = R(e.maxValue));
+                ((n = R(e.minValue)), (i = R(e.maxValue)));
                 var d = R(e.minStart),
                     f = R(e.maxStart),
                     h = R(e.minFinal),
@@ -372,13 +374,13 @@ function z() {
                     isReady: e.current,
                     addReadyListener: function (n) {
                         var i = (0, r.A)();
-                        return (t.current[i] = n), e.current && n(e.current), i;
+                        return ((t.current[i] = n), e.current && n(e.current), i);
                     },
                     removeReadyListener: function (e) {
                         delete t.current[e];
                     },
                     setIsReady: function (t) {
-                        (e.current = t), n(t);
+                        ((e.current = t), n(t));
                     },
                 };
             },
@@ -438,19 +440,19 @@ var k = i.forwardRef(function (e, t) {
                     if (null != e) {
                         var t = e.getContext("2d");
                         if (null != t) {
-                            t.clearRect(0, 0, e.width, e.height),
+                            (t.clearRect(0, 0, e.width, e.height),
                                 null == R || R(t),
                                 S.current.forEach(function (n, i) {
                                     var r = n.confetti,
                                         a = n.spriteCanvas;
-                                    r.update(l), r.draw(a, t), r.shouldDestroy(e, l) && S.current.delete(i);
+                                    (r.update(l), r.draw(a, t), r.shouldDestroy(e, l) && S.current.delete(i));
                                 }),
                                 null == k || k(t),
                                 S.current.size > 0
                                     ? (j.current = A(W))
-                                    : (t.clearRect(0, 0, e.width, e.height), (j.current = null));
+                                    : (t.clearRect(0, 0, e.width, e.height), (j.current = null)));
                             var n = Date.now();
-                            0 !== I.current && (N.current = 1e3 / (n - I.current)), (I.current = n);
+                            (0 !== I.current && (N.current = 1e3 / (n - I.current)), (I.current = n));
                         }
                     }
                 },
@@ -464,7 +466,7 @@ var k = i.forwardRef(function (e, t) {
         );
         var T = i.useCallback(
                 function (e, t) {
-                    S.current.set(e.id, { confetti: e, spriteCanvas: t }), null == j.current && W();
+                    (S.current.set(e.id, { confetti: e, spriteCanvas: t }), null == j.current && W());
                 },
                 [W],
             ),
@@ -533,7 +535,7 @@ var k = i.forwardRef(function (e, t) {
                                                     e.uniformVectorValues,
                                                 );
                                             case "linear-random":
-                                                (n = C(e.minValue)), (i = C(e.maxValue));
+                                                ((n = C(e.minValue)), (i = C(e.maxValue)));
                                                 var a = C(e.minAddValue),
                                                     o = C(e.maxAddValue);
                                                 return new y(
@@ -555,7 +557,7 @@ var k = i.forwardRef(function (e, t) {
                                                     e.uniformVectorValues,
                                                 );
                                             case "oscillating-random":
-                                                (n = C(e.minValue)), (i = C(e.maxValue));
+                                                ((n = C(e.minValue)), (i = C(e.maxValue)));
                                                 var d = C(e.minStart),
                                                     f = C(e.maxStart),
                                                     h = C(e.minFinal),
@@ -632,7 +634,7 @@ var k = i.forwardRef(function (e, t) {
                                 spriteWidth: n.spriteWidth,
                                 spriteHeight: n.spriteHeight,
                             }));
-                    return T(k, t), k;
+                    return (T(k, t), k);
                 },
                 [T],
             ),
@@ -739,10 +741,10 @@ var k = i.forwardRef(function (e, t) {
                         e("mousemove", Q, h),
                         e("mouseup", Z, p),
                         function () {
-                            window.removeEventListener("click", K),
+                            (window.removeEventListener("click", K),
                                 window.removeEventListener("mousedown", J),
                                 window.removeEventListener("mousemove", Q),
-                                window.removeEventListener("mouseup", Q);
+                                window.removeEventListener("mouseup", Q));
                         }
                     );
                 },
@@ -752,15 +754,15 @@ var k = i.forwardRef(function (e, t) {
                 function () {
                     var e = O.current,
                         t = new ResizeObserver(function () {
-                            !(function (e) {
+                            (!(function (e) {
                                 if (null != e) {
                                     var t = e.getBoundingClientRect(),
                                         i = t.width,
                                         r = t.height;
-                                    (e.width = i * n.g.devicePixelRatio), (e.height = r * n.g.devicePixelRatio);
+                                    ((e.width = i * n.g.devicePixelRatio), (e.height = r * n.g.devicePixelRatio));
                                 }
                             })(O.current),
-                                H(!0);
+                                H(!0));
                         });
                     return (
                         null != e && t.observe(e),
@@ -833,7 +835,7 @@ var k = i.forwardRef(function (e, t) {
                                         h < d.data.length;
                                         h += 4
                                     )
-                                        (d.data[h] = f.r), (d.data[h + 1] = f.g), (d.data[h + 2] = f.b);
+                                        ((d.data[h] = f.r), (d.data[h + 1] = f.g), (d.data[h + 2] = f.b));
                                     t.putImageData(d, a, o);
                                 }
                             };
@@ -904,7 +906,7 @@ var k = i.forwardRef(function (e, t) {
                                     return function (s) {
                                         var l = [u, s];
                                         if (n) throw TypeError("Generator is already executing.");
-                                        for (; a && ((a = 0), l[0] && (o = 0)), o; )
+                                        for (; a && ((a = 0), l[0] && (o = 0)), o;)
                                             try {
                                                 if (
                                                     ((n = 1),
@@ -924,12 +926,12 @@ var k = i.forwardRef(function (e, t) {
                                                         r = l;
                                                         break;
                                                     case 4:
-                                                        return o.label++, { value: l[1], done: !1 };
+                                                        return (o.label++, { value: l[1], done: !1 });
                                                     case 5:
-                                                        o.label++, (i = l[1]), (l = [0]);
+                                                        (o.label++, (i = l[1]), (l = [0]));
                                                         continue;
                                                     case 7:
-                                                        (l = o.ops.pop()), o.trys.pop();
+                                                        ((l = o.ops.pop()), o.trys.pop());
                                                         continue;
                                                     default:
                                                         if (
@@ -944,19 +946,19 @@ var k = i.forwardRef(function (e, t) {
                                                             break;
                                                         }
                                                         if (6 === l[0] && o.label < r[1]) {
-                                                            (o.label = r[1]), (r = l);
+                                                            ((o.label = r[1]), (r = l));
                                                             break;
                                                         }
                                                         if (r && o.label < r[2]) {
-                                                            (o.label = r[2]), o.ops.push(l);
+                                                            ((o.label = r[2]), o.ops.push(l));
                                                             break;
                                                         }
-                                                        r[2] && o.ops.pop(), o.trys.pop();
+                                                        (r[2] && o.ops.pop(), o.trys.pop());
                                                         continue;
                                                 }
                                                 l = t.call(e, o);
                                             } catch (e) {
-                                                (l = [6, e]), (i = 0);
+                                                ((l = [6, e]), (i = 0));
                                             } finally {
                                                 n = r = 0;
                                             }
@@ -969,7 +971,7 @@ var k = i.forwardRef(function (e, t) {
                                     case 0:
                                         return [4, m()];
                                     case 1:
-                                        return e.sent(), v(), y(!0), [2];
+                                        return (e.sent(), v(), y(!0), [2]);
                                 }
                             });
                         }),
@@ -1031,7 +1033,7 @@ function P(e, t) {
         s = i.useState(null != (r = null == e ? void 0 : e.isReady) && r),
         l = s[0],
         c = s[1];
-    i.useEffect(
+    (i.useEffect(
         function () {
             var e = null == t ? void 0 : t.addReadyListener(u);
             return function () {
@@ -1048,7 +1050,7 @@ function P(e, t) {
                 };
             },
             [e],
-        );
+        ));
     var d = i.useCallback(
             function (n, i) {
                 var r = void 0 === i ? {} : i,

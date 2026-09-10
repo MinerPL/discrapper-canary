@@ -1,4 +1,4 @@
-n.d(t, { A: () => T }), n(321073);
+(n.d(t, { A: () => T }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(435558),
@@ -11,19 +11,19 @@ class o {
     _unacknowledgedRequests = new Set();
     _guildMemberExists;
     constructor(e, t) {
-        (this._guildId = e), (this._guildMemberExists = (n) => t(e, n));
+        ((this._guildId = e), (this._guildMemberExists = (n) => t(e, n)));
     }
     acknowledge(e) {
-        this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e);
+        (this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e));
     }
     flushRequests(e) {
         if (0 === this._pendingRequests.size) return;
         let t = [];
-        this._pendingRequests.forEach((e) => {
+        (this._pendingRequests.forEach((e) => {
             this._guildMemberExists(e) || (this._unacknowledgedRequests.add(e), this._sentRequests.add(e), t.push(e));
         }),
             t.length > 0 && e(this._guildId, t),
-            this._pendingRequests.clear();
+            this._pendingRequests.clear());
     }
     requestUnacknowledged() {
         return (
@@ -45,10 +45,10 @@ class d {
     _guildStates = {};
     _flush = new l.J_(0, () => this.flushRequests());
     constructor(e, t) {
-        (this._guildMemberExists = e), (this._onChange = t);
+        ((this._guildMemberExists = e), (this._onChange = t));
     }
     reset() {
-        (this._guildStates = {}), this._flush.cancel();
+        ((this._guildStates = {}), this._flush.cancel());
     }
     request(e, t) {
         !1 !== this._getGuildState(e).request(t) && this._flush.delay(!1);
@@ -64,7 +64,7 @@ class d {
     }
     _getGuildState(e) {
         let t = this._guildStates[e];
-        return null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t;
+        return (null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t);
     }
     getDebugState(e) {
         let t = [],
@@ -72,9 +72,9 @@ class d {
             i = [];
         return (
             s().forEach(this._guildStates, (r) => {
-                r._pendingRequests.has(e) && t.push(r._guildId),
+                (r._pendingRequests.has(e) && t.push(r._guildId),
                     r._unacknowledgedRequests.has(e) && n.push(r._guildId),
-                    r._sentRequests.has(e) && i.push(r._guildId);
+                    r._sentRequests.has(e) && i.push(r._guildId));
             }),
             { pendingRequestGuildIds: t, unacknowledgedRequestGuildIds: n, sentRequestGuildIds: i }
         );
@@ -89,13 +89,13 @@ function E() {
     _.reset();
 }
 function A(e, t) {
-    return _.request(e, t), !1;
+    return (_.request(e, t), !1);
 }
 function h(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: i } = t;
-            null != n && A(e, n.id), i?.forEach((t) => A(e, t.id));
+            (null != n && A(e, n.id), i?.forEach((t) => A(e, t.id)));
         }),
         !1
     );
@@ -137,15 +137,15 @@ let T = new p(r.h, {
     CONNECTION_CLOSED: E,
     CONNECTION_OPEN: E,
     CONNECTION_RESUMED: function () {
-        return _.requestUnacknowledged(), !1;
+        return (_.requestUnacknowledged(), !1);
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         let { chunks: t } = e;
         for (let e of t)
-            e.members.forEach((t) => {
+            (e.members.forEach((t) => {
                 _.acknowledge(e.guildId, t.user.id);
             }),
-                null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t));
+                null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t)));
         return !1;
     },
     SEARCH_MESSAGES_SUCCESS: f,

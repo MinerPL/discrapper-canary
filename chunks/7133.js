@@ -1,4 +1,4 @@
-i.d(e, { A: () => u }), i(938796);
+(i.d(e, { A: () => u }), i(938796));
 var s = i(536637),
     r = i.n(s),
     n = i(665260),
@@ -52,7 +52,7 @@ class u extends o.A {
         });
     }
     constructor(t) {
-        super(),
+        (super(),
             (this.userId = t.userId),
             (this.code = t.code),
             (this.skuId = t.skuId),
@@ -69,7 +69,7 @@ class u extends o.A {
             (this.flags = t.flags),
             (this.subscriptionTrial = t.subscriptionTrial),
             (this.promotion = t.promotion),
-            (this.giftStyle = t.giftStyle);
+            (this.giftStyle = t.giftStyle));
     }
     isExpired() {
         let t = this.expiresAt;

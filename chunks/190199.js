@@ -41,7 +41,7 @@ function k(e) {
         [y, R] = a.useState(""),
         _ = a.useCallback(
             (e) => {
-                R(e), E?.(e);
+                (R(e), E?.(e));
             },
             [E],
         ),
@@ -174,7 +174,7 @@ function g(e) {
         children: (0, n.jsx)(f.Provider, { value: l, children: t }),
     });
 }
-(g.Colors = S),
+((g.Colors = S),
     (g.Label = function (e) {
         let { children: l } = e;
         return (0, n.jsx)("span", { className: b.IR, children: l });
@@ -201,4 +201,4 @@ function g(e) {
                   children: (0, n.jsx)(h.y, { size: "custom", color: "currentColor", width: 20, height: 20 }),
               })
             : null;
-    });
+    }));

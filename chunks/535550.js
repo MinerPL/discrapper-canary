@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,7 +41,7 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         });
 Object.defineProperty(t, "__esModule", { value: !0 });
 let o = s(r(767130)),
@@ -56,7 +56,7 @@ t.default = class {
                     if (t.start.isOnlyTime() && e.reference.instant > t.start.date()) {
                         let r = e.reference.getDateWithAdjustedTimezone(),
                             n = new Date(r);
-                        n.setDate(n.getDate() + 1),
+                        (n.setDate(n.getDate() + 1),
                             o.implySimilarDate(t.start, n),
                             e.debug(() => {
                                 console.log(
@@ -67,7 +67,7 @@ t.default = class {
                                 t.end.isOnlyTime() &&
                                 (o.implySimilarDate(t.end, n),
                                 t.start.date() > t.end.date() &&
-                                    (n.setDate(n.getDate() + 1), o.implySimilarDate(t.end, n)));
+                                    (n.setDate(n.getDate() + 1), o.implySimilarDate(t.end, n))));
                     }
                     if (t.start.isOnlyWeekdayComponent() && r > t.start.date()) {
                         let n = t.start.get("weekday") - r.getDay();
@@ -81,17 +81,17 @@ t.default = class {
                             t.end && t.end.isOnlyWeekdayComponent())
                         ) {
                             let n = t.end.get("weekday") - r.getDay();
-                            n <= 0 && (n += 7),
+                            (n <= 0 && (n += 7),
                                 (r = (0, l.addDuration)(r, { day: n })),
                                 (0, u.implySimilarDate)(t.end, r),
                                 e.debug(() => {
                                     console.log(`${this.constructor.name} adjusted ${t} weekday (${t.end})`);
-                                });
+                                }));
                         }
                     }
                     if (t.start.isDateWithUnknownYear() && r > t.start.date())
                         for (let n = 0; n < 3 && r > t.start.date(); n++)
-                            t.start.imply("year", t.start.get("year") + 1),
+                            (t.start.imply("year", t.start.get("year") + 1),
                                 e.debug(() => {
                                     console.log(`${this.constructor.name} adjusted ${t} year (${t.start})`);
                                 }),
@@ -100,7 +100,7 @@ t.default = class {
                                     (t.end.imply("year", t.end.get("year") + 1),
                                     e.debug(() => {
                                         console.log(`${this.constructor.name} adjusted ${t} month (${t.start})`);
-                                    }));
+                                    })));
                 }),
             t
         );

@@ -63,7 +63,7 @@ function m(e) {
                     ...P,
                     onChange: (e) => {
                         let { onChange: t } = P;
-                        t?.(e.currentTarget.value), F.setShouldValidate(!0);
+                        (t?.(e.currentTarget.value), F.setShouldValidate(!0));
                     },
                     ref: C,
                 }),

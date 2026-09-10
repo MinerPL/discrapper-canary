@@ -1,4 +1,4 @@
-i.d(t, { A: () => N }), i(321073);
+(i.d(t, { A: () => N }), i(321073));
 var s = i(90644),
     n = i(382483),
     r = i(385113),
@@ -15,7 +15,7 @@ var s = i(90644),
 async function f() {
     let e = o.Q_.getSetting(),
         t = [(0, n.Wq)()];
-    e && t.push((0, n.i$)()), await Promise.allSettled(t);
+    (e && t.push((0, n.i$)()), await Promise.allSettled(t));
 }
 async function m(e) {
     let t = new Set(

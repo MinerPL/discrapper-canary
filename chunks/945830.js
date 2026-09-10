@@ -1,4 +1,4 @@
-t.d(s, { A: () => K }), t(134528), t(947204);
+(t.d(s, { A: () => K }), t(134528), t(947204));
 var i = t(477900),
     n = t(582128),
     l = t(837381),
@@ -46,7 +46,7 @@ function K(e) {
         k = b !== y.e.LOADING && 0 === f.length,
         D = n.useMemo(() => f.map((e) => e.message), [f]),
         C = (0, a.bG)([S.Ay], () => S.Ay.hasUnreadPins(s.id));
-    n.useEffect(() => {
+    (n.useEffect(() => {
         C && j.A.ackPins(s.id);
     }, [C, s.id]),
         (0, p.Ay)(() => {
@@ -57,7 +57,7 @@ function K(e) {
         }, [s.id]),
         (0, p.Ay)(() => {
             T.default.track(_.HAw.OPEN_POPOUT, { type: M });
-        });
+        }));
     let O = n.useCallback(() => {
         let e = r.current?.getScrollerState();
         null != e &&
@@ -95,7 +95,7 @@ function K(e) {
                                 let { ref: n, ...l } = e;
                                 return (0, i.jsxs)(m.Ch, {
                                     ref: (e) => {
-                                        (r.current = e), (n.current = e?.getScrollerNode() ?? null);
+                                        ((r.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },
                                     className: L.m4,
                                     onScroll: b === y.e.LOADED_HAS_MORE ? O : void 0,

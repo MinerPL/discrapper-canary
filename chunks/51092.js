@@ -32,14 +32,14 @@ let v = s.memo(function (e) {
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [N, b] = s.useState(!0),
-        [y, R] = s.useState(null),
-        k = s.useCallback(
+        [y, k] = s.useState(null),
+        D = s.useCallback(
             (e) => {
-                "cover-landscape" === A && R(e), n?.(e);
+                ("cover-landscape" === A && k(e), n?.(e));
             },
             [A, n],
         ),
-        D = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
+        R = "cover-landscape" === A ? (null == y || y.width >= y.height ? "cover" : "contain") : A;
     !(function (e) {
         let { location: t, videoSpinnerContext: n, userId: l, streamId: i, loading: r, paused: a = !1 } = e,
             [o] = s.useState(() => new d.M(t));
@@ -66,22 +66,22 @@ let v = s.memo(function (e) {
                 }, [a, t, r, p, i, n]),
                 {
                     onReady: s.useCallback(() => {
-                        o.current.stop(), (0, g.W)(p, n);
+                        (o.current.stop(), (0, g.W)(p, n));
                     }, [n, p]),
                 }
             );
         })({ streamId: t, userId: I, loading: N, videoSpinnerContext: j, streamKey: S, paused: E }),
         w = s.useCallback(() => {
-            b(!1), T();
+            (b(!1), T());
         }, [T]);
     return (0, i.jsxs)("div", {
         className: a()(h.wrapper, l),
         children: [
             null != t &&
                 (0, i.jsx)(r, {
-                    className: a()(h.video, (0, x.t)(h, "video", D), { [h.mirror]: v }, p),
+                    className: a()(h.video, (0, x.t)(h, "video", R), { [h.mirror]: v }, p),
                     streamId: t,
-                    onResize: k,
+                    onResize: D,
                     onReady: w,
                     paused: E,
                 }),

@@ -137,10 +137,10 @@ function M(e) {
         { disabled: L, reason: P } = (0, b.A)(a, l, A),
         { onActivate: R, isLoading: M, error: z } = (0, C.A)(a, l),
         Q = (0, y.A)(a, l);
-    s.useEffect(() => {
+    (s.useEffect(() => {
         I(z);
     }, [z]),
-        (0, u.Z)(a, l, u.q.DETAIL);
+        (0, u.Z)(a, l, u.q.DETAIL));
     let U = { type: "rive", rive: w.T[l.skuId], aspectRatio: "16/9" },
         $ = !_ && D,
         B =

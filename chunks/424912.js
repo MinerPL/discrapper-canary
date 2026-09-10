@@ -44,12 +44,12 @@ function A(e) {
     let B = n.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != t)) {
-                    R(!0), I(null);
+                    (R(!0), I(null));
                     try {
                         if (null != y) y(D, L);
                         else {
                             let e = await v.A.createGuildFromTemplate(D, L, t, S, q);
-                            x.A.transitionToGuildSync(e.id), C?.(e.id);
+                            (x.A.transitionToGuildSync(e.id), C?.(e.id));
                         }
                     } catch (e) {
                         I(e);

@@ -1,5 +1,5 @@
 let n, i, l, o, a, E, s, d, u, _;
-t.d(r, { A: () => eA }), t(321073), t(938796);
+(t.d(r, { A: () => eA }), t(321073), t(938796));
 var I = t(435558),
     c = t.n(I),
     S = t(536637),
@@ -115,7 +115,7 @@ function e_(e) {
         u = y.A.getGuild(r);
     if (null == u) return eI();
     let I = p.A.getProfile(r);
-    (o = a = u),
+    ((o = a = u),
         (E = s = I),
         (K = J),
         (Z = q),
@@ -128,10 +128,10 @@ function e_(e) {
         (_ = null),
         (Q = {}),
         (er = l),
-        ec({ section: t ?? n ?? (0, P.x)(), subsection: i ?? null });
+        ec({ section: t ?? n ?? (0, P.x)(), subsection: i ?? null }));
 }
 function eI() {
-    (W = !1),
+    ((W = !1),
         (H = B.XlH.CLOSED),
         (o = a = null),
         (j = !1),
@@ -147,7 +147,7 @@ function eI() {
         (l = null),
         (ee = B.EkJ.NONE),
         (Q = {}),
-        (u = void 0);
+        (u = void 0));
 }
 function ec(e) {
     if (null == a) return !1;
@@ -303,7 +303,7 @@ let eA = new eD(
         : {
               GUILD_SETTINGS_INIT: e_,
               GUILD_SETTINGS_OPEN: function (e) {
-                  (W = !0), e_(e);
+                  ((W = !0), e_(e));
               },
               GUILD_SETTINGS_CLOSE: eI,
               GUILD_SETTINGS_UPDATE: function (e) {
@@ -331,50 +331,50 @@ let eA = new eD(
               },
               GUILD_SETTINGS_CANCEL_CHANGES: function (e) {
                   let { guildId: r } = e;
-                  (X = {}), (Q = {});
+                  ((X = {}), (Q = {}));
                   let t = y.A.getGuild(r);
                   null != t && (o = a = t);
               },
               GUILD_SETTINGS_SAVE_ROUTE_STACK: function (e) {
                   let { state: r } = e;
-                  return (u = r), !1;
+                  return ((u = r), !1);
               },
               GUILD_SETTINGS_SUBMIT: function () {
-                  (H = B.XlH.SUBMITTING), (X = {});
+                  ((H = B.XlH.SUBMITTING), (X = {}));
               },
               GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
-                  (H = B.XlH.OPEN),
+                  ((H = B.XlH.OPEN),
                       (Q = {}),
-                      null != e.guild && null != a && a.id === e.guild.id && (o = a = (0, O.Y1)(e.guild, o));
+                      null != e.guild && null != a && a.id === e.guild.id && (o = a = (0, O.Y1)(e.guild, o)));
               },
               GUILD_SETTINGS_SUBMIT_FAILURE: function (e) {
-                  (H = B.XlH.OPEN), (n = n ?? (0, P.x)()), (i = null), (X = e.errors ?? {});
+                  ((H = B.XlH.OPEN), (n = n ?? (0, P.x)()), (i = null), (X = e.errors ?? {}));
               },
               GUILD_SETTINGS_SET_SECTION: ec,
               GUILD_SETTINGS_SET_SEARCH_QUERY: function (e) {
                   l = e.searchQuery;
               },
               GUILD_SETTINGS_LOADED_BANS: function (e) {
-                  (eo = e.bans.reduce(
+                  ((eo = e.bans.reduce(
                       (e, r) => (null != r.user && null != r.user.id && e.set(r.user.id, r), e),
                       new Map(),
                   )),
-                      ea++;
+                      ea++);
               },
               GUILD_SETTINGS_LOADED_BANS_BATCH: function (e) {
                   let { bans: r, guildId: t } = e;
-                  (eE !== t || null == eo) && ((eE = t), (eo = new Map())),
+                  ((eE !== t || null == eo) && ((eE = t), (eo = new Map())),
                       (eo = r.reduce((e, r) => (null != r.user && null != r.user.id && e.set(r.user.id, r), e), eo)),
-                      ea++;
+                      ea++);
               },
               GUILD_SETTINGS_LOADED_INVITES: function (e) {
                   es = e.invites.reduce((e, r) => ((e[r.code] = eS(r)), e), {});
               },
               GUILD_SETTINGS_SET_WIDGET: function (e) {
-                  (j = !0), (J = K = e.enabled), (q = Z = e.channelId);
+                  ((j = !0), (J = K = e.enabled), (q = Z = e.channelId));
               },
               GUILD_SETTINGS_SET_VANITY_URL: function (e) {
-                  (z = e.code ?? null), ($ = e.uses);
+                  ((z = e.code ?? null), ($ = e.uses));
               },
               GUILD_SETTINGS_SET_MFA_SUCCESS: function (e) {
                   let { level: r } = e;
@@ -408,12 +408,12 @@ let eA = new eD(
               GUILD_BAN_ADD: function (e) {
                   let { user: r, guildId: t } = e;
                   if (null == eo || null == a || a.id !== t) return !1;
-                  eo.set(r.id, { user: r, reason: null }), ea++;
+                  (eo.set(r.id, { user: r, reason: null }), ea++);
               },
               GUILD_BAN_REMOVE: function (e) {
                   let { user: r, guildId: t } = e;
                   if (null == eo || null == a || a.id !== t) return !1;
-                  eo.delete(r.id), ea++;
+                  (eo.delete(r.id), ea++);
               },
               GUILD_ROLE_CREATE: function (e) {
                   let { guildId: r } = e;
@@ -438,12 +438,12 @@ let eA = new eD(
                           n === B.BEX.PROFILE || n === B.BEX.TAG || (0, b.HU)(s, E) || (s = E),
                           n === B.BEX.PROFILE)
                       ) {
-                          (o = e), (a = e);
+                          ((o = e), (a = e));
                           return;
                       }
                       let r = (o = e),
                           t = { ...a };
-                      w.forEach((n) => {
+                      (w.forEach((n) => {
                           if (
                               !Y.has(n) &&
                               (("rulesChannelId" !== n && "publicUpdatesChannelId" !== n) || t[n] !== v.SP) &&
@@ -456,7 +456,7 @@ let eA = new eD(
                               r = (0, L.hZ)(r, n, t[n]);
                           }
                       }),
-                          (a = r);
+                          (a = r));
                   }
               },
               GUILD_DELETE: function (e) {
@@ -485,7 +485,7 @@ let eA = new eD(
               USER_CONNECTIONS_UPDATE: eT,
               GUILD_INTEGRATIONS_UPDATE: eT,
               INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
-                  (es = { ...es }), delete es[e.code];
+                  ((es = { ...es }), delete es[e.code]);
               },
               INSTANT_INVITE_CREATE_SUCCESS: function (e) {
                   es = { ...es, [e.invite.code]: eS(e.invite) };
@@ -525,10 +525,10 @@ let eA = new eD(
                       { guildId: t, categoryId: n } = e;
                   if (null == a || t !== a.id) return;
                   let i = el.secondaryCategoryIds.indexOf(n);
-                  -1 !== i &&
+                  (-1 !== i &&
                       ((r = [...el.secondaryCategoryIds]).splice(i, 1), (el = { ...el, secondaryCategoryIds: r })),
                       -1 !== (i = ei.secondaryCategoryIds.indexOf(n)) &&
-                          ((r = [...ei.secondaryCategoryIds]).splice(i, 1), (ei = { ...ei, secondaryCategoryIds: r }));
+                          ((r = [...ei.secondaryCategoryIds]).splice(i, 1), (ei = { ...ei, secondaryCategoryIds: r })));
               },
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: function (e) {
                   let { guildId: r, errors: t } = e;
@@ -573,7 +573,7 @@ let eA = new eD(
               GUILD_SETTINGS_WIDGET_UPDATE: function (e) {
                   let { guildId: r, enabled: t, channelId: n } = e;
                   if (null == a || a.id !== r) return !1;
-                  (K = t), (Z = n);
+                  ((K = t), (Z = n));
               },
           },
 );

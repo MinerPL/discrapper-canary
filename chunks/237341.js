@@ -1,13 +1,13 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.dataFormatterCache = void 0),
     (t.dataFormatterCache = new (class {
         constructor() {
-            (this.dateTime = new Map()),
+            ((this.dateTime = new Map()),
                 (this.duration = new Map()),
                 (this.list = new Map()),
                 (this.number = new Map()),
                 (this.pluralRules = new Map()),
-                (this.relativeTime = new Map());
+                (this.relativeTime = new Map()));
         }
         getDateTimeFormatter(...e) {
             return this._getCached(this.dateTime, e, (e) => new Intl.DateTimeFormat(...e));
@@ -32,9 +32,9 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
                 i = e.get(n);
             if (i) return i;
             let o = r(t);
-            return e.set(n, o), o;
+            return (e.set(n, o), o);
         }
         _getKey(...e) {
             return JSON.stringify(e);
         }
-    })());
+    })()));

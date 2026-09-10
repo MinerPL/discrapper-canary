@@ -21,7 +21,7 @@ function u(e) {
         }
         if (null != u.current && u.current.src === e) return;
         let t = new (await (0, r.A)(e))();
-        (t.src = e), (u.current = t);
+        ((t.src = e), (u.current = t));
     }, [u, e]);
     return (
         l.useEffect(() => {
@@ -33,7 +33,7 @@ function u(e) {
                 async function () {
                     let { volume: e, outputChannel: l = o.a.DEFAULT } =
                         arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    await h(), n.current?.pause();
+                    (await h(), n.current?.pause());
                     let { current: i } = u;
                     return (
                         null != i &&

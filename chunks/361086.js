@@ -1,4 +1,4 @@
-r.r(a), r.d(a, { default: () => i });
+(r.r(a), r.d(a, { default: () => i }));
 var i = {
     payButton: "Pl\u0103ti\u021Bi",
     "payButton.redirecting": "Se redirec\u021Bioneaz\u0103...",

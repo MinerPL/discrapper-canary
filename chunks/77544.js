@@ -15,7 +15,7 @@ function u(n, e) {
               id: "watch-stream",
               label: o.intl.string(o.t["7Xq/nV"]),
               action: () => {
-                  e?.(), window.open(t, "_blank");
+                  (e?.(), window.open(t, "_blank"));
               },
           });
 }

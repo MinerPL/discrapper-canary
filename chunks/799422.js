@@ -1,4 +1,4 @@
-n.d(t, { A: () => r }), n(205816);
+(n.d(t, { A: () => r }), n(205816));
 var i = n(136722);
 class r {
     static cache = {};
@@ -9,6 +9,6 @@ class r {
         return i.pG(24, e);
     }
     static asBigFlag(e) {
-        return Object.hasOwn(this.cache, e) || (this.cache[e] = i.iu(e)), this.cache[e];
+        return (Object.hasOwn(this.cache, e) || (this.cache[e] = i.iu(e)), this.cache[e]);
     }
 }

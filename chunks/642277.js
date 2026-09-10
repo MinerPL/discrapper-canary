@@ -6,7 +6,7 @@ function r() {
     let e = location.pathname + location.search;
     return (0, s.T2)(e, !1);
 }
-n(652215), n(436317);
+(n(652215), n(436317));
 let a =
     221552 == n.j
         ? function () {

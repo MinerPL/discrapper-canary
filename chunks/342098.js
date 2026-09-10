@@ -1,4 +1,4 @@
-n.d(t, { A: () => C, l: () => f }), n(938796);
+(n.d(t, { A: () => C, l: () => f }), n(938796));
 var e = n(284009),
     a = n.n(e),
     i = n(339048),
@@ -44,7 +44,7 @@ function C(o) {
         modalAPIOptions: {
             modalKey: "application-payment-modal",
             onCloseCallback: () => {
-                (0, l.ET)(), (0, d.z)();
+                ((0, l.ET)(), (0, d.z)());
             },
         },
     });
@@ -61,7 +61,7 @@ async function f(o) {
         s = c.A.getForSKU(n);
     a()(null != d, "Failed to find SKU");
     let r = (0, u.bg)(d.flags);
-    a()(r, "Guild application subscriptions unsupported!"),
+    (a()(r, "Guild application subscriptions unsupported!"),
         await h(t, n),
         C({
             initialPlanId: e ?? s[0]?.id,
@@ -74,5 +74,5 @@ async function f(o) {
             guildId: null,
             showBenefitsFirst: !1,
             applicationId: t,
-        });
+        }));
 }

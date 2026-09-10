@@ -13,14 +13,14 @@ let c = r.createContext({ inDialog: void 0 }),
             f = r.useRef(null),
             [p, T] = r.useState(!1),
             m = p ? f : I;
-        (0, s.tj)(m, { returnRef: A }),
+        ((0, s.tj)(m, { returnRef: A }),
             r.useContext(d.A)(
                 { type: u, name: _?.impressionName, properties: _?.impressionProperties },
                 { disableTrack: E },
-            );
+            ));
         let g = r.useCallback(
                 (e) => {
-                    (I.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e);
+                    ((I.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e));
                 },
                 [t],
             ),

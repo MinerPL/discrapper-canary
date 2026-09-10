@@ -5,7 +5,7 @@ r(
     {
         reject: function (e) {
             var t = a.f(this);
-            return (0, t.reject)(e), t.promise;
+            return ((0, t.reject)(e), t.promise);
         },
     },
 );

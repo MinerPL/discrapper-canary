@@ -1,4 +1,4 @@
-t.d(l, { Ay: () => en, rr: () => es }), t(321073);
+(t.d(l, { Ay: () => en, rr: () => es }), t(321073));
 var r = t(477900),
     s = t(582128),
     i = t(503698),
@@ -31,7 +31,7 @@ function w(e) {
         o = null;
     try {
         let e = h.parse(t, !0);
-        (i = e.host), (a = e.pathname), (o = e.query.i ?? null), Array.isArray(o) && (o = o[0]);
+        ((i = e.host), (a = e.pathname), (o = e.query.i ?? null), Array.isArray(o) && (o = o[0]));
     } catch (e) {
         return null;
     }
@@ -63,7 +63,7 @@ function S(e) {
         t = null,
         r = null;
     try {
-        (l = (r = h.parse(e, !0)).host), (t = r.pathname);
+        ((l = (r = h.parse(e, !0)).host), (t = r.pathname));
     } catch (e) {
         return null;
     }
@@ -207,7 +207,7 @@ function V(e) {
         i = null;
     try {
         let e = h.parse(t.replace(/intl-[^/]+\//, ""), !0);
-        (s = e.host), (i = e.pathname);
+        ((s = e.host), (i = e.pathname));
     } catch (e) {
         return null;
     }
@@ -325,13 +325,13 @@ function es(e) {
         _ = null != d && null == d.proxyURL,
         H = s.useCallback(() => k(!1), [k]);
     function V(e) {
-        e.preventDefault(),
+        (e.preventDefault(),
             e.stopPropagation(),
             j?.(!1),
             k(!0),
             _ &&
                 (G._.dispatch(c.jej.VIDEO_EMBED_PLAYBACK_STARTED),
-                G._.subscribeOnce(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H));
+                G._.subscribeOnce(c.jej.VIDEO_EMBED_PLAYBACK_STARTED, H)));
     }
     s.useEffect(
         () => () => {
@@ -342,7 +342,7 @@ function es(e) {
     let { width: D, height: U } = o;
     null != d && ((D = d.width), (U = d.height));
     let $ = (0, K.Uj)({ width: D, height: U, maxWidth: i, maxHeight: a });
-    (D = Math.max($.width, 150)), (U = Math.max($.height, 144));
+    ((D = Math.max($.width, 150)), (U = Math.max($.height, 144)));
     let B = (0, O.E)(o);
     if (null != d && null != d.proxyURL)
         return (0, r.jsx)("div", {
@@ -378,9 +378,9 @@ function es(e) {
             c = { width: D, height: U };
         if (m) {
             let l = 0 !== D ? U / D : 1;
-            (o = { maxWidth: i, maxHeight: a, width: void 0, height: void 0 }),
+            ((o = { maxWidth: i, maxHeight: a, width: void 0, height: void 0 }),
                 (c = { paddingBottom: `${100 * l}%`, maxWidth: D }),
-                (e = { position: "absolute", top: 0, left: 0, maxWidth: D, maxHeight: U });
+                (e = { position: "absolute", top: 0, left: 0, maxWidth: D, maxHeight: U }));
         }
         return (0, r.jsx)("div", {
             className: l,
@@ -661,10 +661,10 @@ class en extends s.PureComponent {
         let t = [],
             s = null;
         for (let { rawName: r, rawValue: i, inline: n } of l)
-            n || null == s || (t.push(s), (s = null)),
+            (n || null == s || (t.push(s), (s = null)),
                 null == s && (s = []),
                 s.push([this.props.renderTitle(e, r), this.props.renderDescription(e, i, !0)]),
-                (3 !== s.length && n) || (t.push(s), (s = null));
+                (3 !== s.length && n) || (t.push(s), (s = null)));
         return (
             null != s && t.push(s),
             (0, r.jsx)("div", {

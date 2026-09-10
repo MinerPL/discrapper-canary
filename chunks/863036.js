@@ -1,5 +1,5 @@
 let r, l, i, a, u, o;
-n.d(t, { A: () => W }), n(938796);
+(n.d(t, { A: () => W }), n(938796));
 var s = n(435558),
     d = n.n(s),
     E = n(536637),
@@ -74,20 +74,20 @@ function D(e, t, n) {
     }
 }
 function b(e) {
-    (r = e.section),
+    ((r = e.section),
         (l = e.subsection),
         null != a &&
             r === g.p_A.INSTANT_INVITES &&
             ((R = !0),
             N.Bo.get({ url: g.Rsh.INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
-                    (R = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body });
+                    ((R = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body }));
                 },
                 () => (R = !1),
-            ));
+            )));
 }
 function M() {
-    (U = !1), (v = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {});
+    ((U = !1), (v = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {}));
 }
 let P = d().debounce(() => {
     if (null == a || null == i) return !1;
@@ -127,16 +127,16 @@ function V(e) {
             if (i === a) {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                (a = i = t), (u = L.A.getChannel(a.parent_id));
+                ((a = i = t), (u = L.A.getChannel(a.parent_id)));
             } else {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                (i = t),
+                ((i = t),
                     null != a &&
                         ((a = a
                             .set("permissionOverwrites", i.permissionOverwrites)
                             .set("availableTags", i.availableTags)),
-                        (u = L.A.getChannel(a.parent_id)));
+                        (u = L.A.getChannel(a.parent_id))));
             }
             return !0;
         })(e) &&
@@ -195,28 +195,28 @@ let k = new F(h.h, {
         CHANNEL_SETTINGS_INIT: function (e) {
             let t = L.A.getChannel(e.channelId);
             if (null == t) return M();
-            (v = g.XlH.OPEN),
+            ((v = g.XlH.OPEN),
                 (a = i = t),
                 (G = "location" in e && null != e.location ? e.location : null),
                 (l = "subsection" in e ? e.subsection : null),
                 null != a && (a = a.set("nsfw", a.isNSFW())),
                 (u = L.A.getChannel(a.parent_id)),
-                (o = a.getGuildId());
+                (o = a.getGuildId()));
             let n = a.isModeratorReportChannel() ? g.p_A.PERMISSIONS : g.p_A.OVERVIEW;
-            return (H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0;
+            return ((H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0);
         },
         CHANNEL_SETTINGS_SUBMIT: function () {
-            (v = g.XlH.SUBMITTING), (H = {});
+            ((v = g.XlH.SUBMITTING), (H = {}));
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-            (i = a), (v = g.XlH.OPEN);
+            ((i = a), (v = g.XlH.OPEN));
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
-            (v = g.XlH.OPEN),
+            ((v = g.XlH.OPEN),
                 (H = Object.keys(e.errors ?? {}).reduce((t, n) => {
                     let r = e.errors[n];
-                    return (0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
-                }, {}));
+                    return ((0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t);
+                }, {})));
         },
         CHANNEL_SETTINGS_CLOSE: M,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: B,
@@ -253,7 +253,7 @@ let k = new F(h.h, {
                 applicationId: g,
             } = e;
             if (null == a) return !1;
-            null != t && (a = a.set("name", t)),
+            (null != t && (a = a.set("name", t)),
                 null != r && (a = a.set("topic", r)),
                 null != l && (a = a.set("bitrate", l)),
                 null != i && (a = a.set("userLimit", i)),
@@ -277,14 +277,14 @@ let k = new F(h.h, {
                 void 0 !== p && (a = a.set("iconEmoji", p)),
                 null != L && (a = a.set("themeColor", L)),
                 null != g && (a = a.set("application_id", g)),
-                P();
+                P());
         },
         CHANNEL_SETTINGS_SET_SECTION: b,
         CHANNEL_SETTINGS_LOADED_INVITES: function (e) {
-            (O = {}),
+            ((O = {}),
                 e.invites.forEach((e) => {
                     O[e.code] = w(e);
-                });
+                }));
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -305,7 +305,7 @@ let k = new F(h.h, {
             v = g.XlH.CLOSED;
         },
         INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
-            (O = { ...O }), delete O[e.code];
+            ((O = { ...O }), delete O[e.code]);
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
             O = { ...O, [e.invite.code]: w(e.invite) };

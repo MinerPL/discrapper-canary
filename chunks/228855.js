@@ -23,7 +23,7 @@ function v(t) {
         _ = (0, a.bG)([h.A], () => h.A.getGuild(n));
     if (
         (s.useEffect(() => {
-            (0, A.Q)(n), (0, f.$)(f.s.MODAL_VIEWED, n), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW });
+            ((0, A.Q)(n), (0, f.$)(f.s.MODAL_VIEWED, n), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW }));
         }, [n]),
         null == _)
     )
@@ -31,10 +31,10 @@ function v(t) {
     function b(t) {
         t.preventDefault();
         let i = (0, p.Tb)();
-        i.add(n),
+        (i.add(n),
             D.$s.updateSetting(Array.from(i)).then(() => (0, d.P0)((0, c.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
             v(),
-            (0, f.$)(f.s.MODAL_DISABLED_DMS, n);
+            (0, f.$)(f.s.MODAL_DISABLED_DMS, n));
     }
     return (0, e.jsx)("form", {
         onSubmit: b,
@@ -47,7 +47,7 @@ function v(t) {
                 {
                     text: E.intl.string(E.t.PsWbcp),
                     onClick: function () {
-                        v(), (0, f.$)(f.s.MODAL_DISMISSED, n);
+                        (v(), (0, f.$)(f.s.MODAL_DISMISSED, n));
                     },
                     variant: "secondary",
                 },

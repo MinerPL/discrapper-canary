@@ -1,4 +1,4 @@
-(r.read = function (t, r, e, n, o) {
+((r.read = function (t, r, e, n, o) {
     var i,
         f,
         u = 8 * o - n - 1,
@@ -13,7 +13,7 @@
     if (0 === i) i = 1 - a;
     else {
         if (i === s) return f ? NaN : (1 / 0) * (l ? -1 : 1);
-        (f += Math.pow(2, n)), (i -= a);
+        ((f += Math.pow(2, n)), (i -= a));
     }
     return (l ? -1 : 1) * f * Math.pow(2, i - n);
 }),
@@ -45,4 +45,4 @@
         );
         for (f = (f << o) | u, a += o; a > 0; t[e + l] = 255 & f, l += y, f /= 256, a -= 8);
         t[e + l - y] |= 128 * g;
-    });
+    }));

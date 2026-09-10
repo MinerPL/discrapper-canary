@@ -43,7 +43,7 @@ function A(e) {
         [A, b] = n.useState(!1),
         y = { onClick: () => t(), text: p.intl.string(p.t.cpT0Cq) },
         E = n.useCallback(() => {
-            b(!0), t();
+            (b(!0), t());
         }, [t]);
     return null == r
         ? null
@@ -96,7 +96,7 @@ function G(e) {
     let { onOpen: t } = e,
         a = (0, u.bG)([k.A], () => (0, U.RZ)(k.A.getGuildsArray(), "VibegrationsCustomWidgetAddOption").length > 0, []),
         s = n.useCallback(() => {
-            t?.(),
+            (t?.(),
                 (0, C.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
@@ -111,7 +111,7 @@ function G(e) {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     { stackingBehavior: "stack" },
-                );
+                ));
         }, [t]);
     return a
         ? (0, i.jsxs)(P.D, {
@@ -315,7 +315,7 @@ function Q(e) {
         ),
         [I, k] = n.useState(!1),
         U = n.useCallback(() => {
-            k(!0), l();
+            (k(!0), l());
         }, [l]);
     if (null == c) return null;
     let R = p.intl.string(p.t["grUgR+"]),

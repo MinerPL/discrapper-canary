@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => O, openDevToolsPopout: () => I });
+(a.r(t), a.d(t, { default: () => R, openDevToolsPopout: () => I }));
 var n = a(477900),
     l = a(582128),
     i = a(503698),
@@ -43,7 +43,7 @@ function I() {
                 windowKey: C.MLl.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, n.jsx)(O, { mobile: !1, isPopout: !0 }),
+                children: (0, n.jsx)(R, { mobile: !1, isPopout: !0 }),
             }),
         { width: 800, height: 600 },
     );
@@ -120,7 +120,7 @@ function T() {
               ],
           });
 }
-function R() {
+function O() {
     return (0, o.bG)([b.A], () => b.A.displayTools)
         ? (0, n.jsx)("div", {
               className: s()(N.kL, N.PQ),
@@ -141,10 +141,10 @@ function R() {
               }),
           });
 }
-function O(e) {
+function R(e) {
     let { mobile: t, isPopout: a = !1 } = e;
     return t
-        ? (0, n.jsx)(R, {})
+        ? (0, n.jsx)(O, {})
         : a
           ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(D, { isPopout: !0 }) })
           : (0, n.jsx)(T, {});

@@ -2,7 +2,7 @@ n.d(r, { du: () => d, qt: () => c, zJ: () => I });
 var e = n(536637),
     s = n.n(e),
     i = n(334465);
-n(723702), n(371794);
+(n(723702), n(371794));
 var A = n(652215),
     l = n(375708);
 let a = {},
@@ -159,7 +159,7 @@ function d(t) {
 Object.keys(H).forEach((t) => {
     let r = t.toLowerCase().replace(/_/g, "-"),
         n = H[t];
-    (a[r] = n), (u[n] = r);
+    ((a[r] = n), (u[n] = r));
 });
 let g = [
     ["YYYY-MM-DD", "MMMM DD, Y"],

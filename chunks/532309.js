@@ -28,13 +28,13 @@ let A = new (class {
         this.fetchState = "loading";
     }
     setValue(e) {
-        (this.value = e), (this.fetchState = "success"), (this.fetchedAt = Date.now());
+        ((this.value = e), (this.fetchState = "success"), (this.fetchedAt = Date.now()));
     }
     setError() {
         this.fetchState = "error";
     }
     clear() {
-        (this.value = null), (this.fetchState = "idle"), (this.fetchedAt = null);
+        ((this.value = null), (this.fetchState = "idle"), (this.fetchedAt = null));
     }
     getValue() {
         return this.value;
@@ -198,11 +198,11 @@ let f = new I(o.h, {
         let { programRewards: t } = e;
         if (!A.isLoading()) return !1;
         let n = new Map();
-        t.forEach((e) => {
+        (t.forEach((e) => {
             n.set(e.reward_program, e);
         }),
             A.setValue(n),
-            h();
+            h());
     },
     PROGRAM_REWARDS_FETCH_FAILURE: function () {
         if (!A.isLoading()) return !1;

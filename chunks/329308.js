@@ -45,12 +45,12 @@ class c extends r.A {
         }
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = null != e.collectionId ? `${e.type}_${e.collectionId}` : e.type),
             (this.path = e.path),
             (this.type = e.type),
             (this.label = e.label),
             (this.collectionId = e.collectionId),
-            (this.IconComponent = e.IconComponent);
+            (this.IconComponent = e.IconComponent));
     }
 }

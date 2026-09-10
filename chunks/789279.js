@@ -30,7 +30,7 @@ class a {
         maxVelocity: s = 1 / 0,
         getNodeWindow: l = () => window,
     }) {
-        (this.callback = e),
+        ((this.callback = e),
             (this.from = 0),
             (this.tension = t),
             (this.friction = n),
@@ -38,7 +38,7 @@ class a {
             (this.maxVelocity = s),
             (this.threshold = r),
             (this.clamp = a),
-            (this.getNodeWindow = l);
+            (this.getNodeWindow = l));
     }
     to(e) {
         let { to: t, from: n, animate: i = !1, callback: r } = e;
@@ -50,20 +50,20 @@ class a {
         let { to: t, callback: n } = e;
         this.animating || (null != n && this.callbacks.push(n), this.stop(t));
         let i = t - this.from;
-        (this.from = t), (this.target = this.target + i), this.callback(this.from, this.abort), null != n && n();
+        ((this.from = t), (this.target = this.target + i), this.callback(this.from, this.abort), null != n && n());
     };
     cancel() {
-        return this.stop(this.from), this;
+        return (this.stop(this.from), this);
     }
     abort = () => {
         this.animating = !1;
     };
     start() {
-        (this.animating = !0),
+        ((this.animating = !0),
             (this.vel = 0),
             (this.last = null),
             (this.nodeWindow = this.getNodeWindow()),
-            (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1);
+            (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1));
     }
     getUpdates(e, t) {
         let n = (-this.tension * (t - this.target) + -this.friction * e) / this.mass;
@@ -74,10 +74,10 @@ class a {
     }
     update = (e) => {
         if (null == this.last) {
-            (this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1);
+            ((this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1));
             return;
         }
-        for (this.accumulator = Math.min((e - this.last) / 1e3 + this.accumulator, 2); this.accumulator > r; ) {
+        for (this.accumulator = Math.min((e - this.last) / 1e3 + this.accumulator, 2); this.accumulator > r;) {
             this.accumulator -= r;
             let { vel: e, from: t, accel: n } = this.getUpdates(this.vel, this.from);
             if (
@@ -97,16 +97,16 @@ class a {
                 n = (e - t) * (this.accumulator / r);
             t += n;
         }
-        this.callback(t, this.abort),
+        (this.callback(t, this.abort),
             this.animating &&
-                ((this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1));
+                ((this.last = e), (this.nextTick = this.nodeWindow?.requestAnimationFrame(this.update) ?? -1)));
     };
     stop(e) {
-        this.nodeWindow?.cancelAnimationFrame(this.nextTick),
+        (this.nodeWindow?.cancelAnimationFrame(this.nextTick),
             (this.animating = !1),
             (this.accumulator = 0),
             null != e && ((this.target = this.from = e), this.callback(e, this.abort)),
-            this.callbacks.length > 0 && (this.callbacks.forEach((e) => e()), (this.callbacks.length = 0));
+            this.callbacks.length > 0 && (this.callbacks.forEach((e) => e()), (this.callbacks.length = 0)));
     }
 }
 function s(e) {

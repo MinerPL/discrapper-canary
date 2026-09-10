@@ -16,8 +16,8 @@ t.exports = function (t, e) {
         (a =
             2 === g
                 ? (function (t, n) {
-                      for (var e = t.length + n.length, a = new Float32Array(e), r = 0, i = 0; r < e; )
-                          (a[r++] = t[i]), (a[r++] = n[i]), i++;
+                      for (var e = t.length + n.length, a = new Float32Array(e), r = 0, i = 0; r < e;)
+                          ((a[r++] = t[i]), (a[r++] = n[i]), i++);
                       return a;
                   })(t.getChannelData(0), t.getChannelData(1))
                 : t.getChannelData(0)),

@@ -1,4 +1,4 @@
-n.d(e, { default: () => S }), n(321073);
+(n.d(e, { default: () => S }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(91871),
@@ -42,7 +42,7 @@ function G(t) {
             }, []),
         );
     function G() {
-        l(), (0, m.jH)(), (0, x.pX)(y.BVt.GUILD_DISCOVERY);
+        (l(), (0, m.jH)(), (0, x.pX)(y.BVt.GUILD_DISCOVERY));
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [

@@ -9,7 +9,7 @@ let n = r(474726),
     o = RegExp("(" + n.TIME_UNITS_PATTERN + ")(dopo|pi\xf9 tardi)(?=(?:\\W|$))", "i");
 class u extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     innerPattern() {
         return this.strictMode ? o : s;

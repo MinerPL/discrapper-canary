@@ -1,4 +1,4 @@
-n.d(l, { Ql: () => q, YR: () => F, g1: () => J }), n(321073);
+(n.d(l, { Ql: () => q, YR: () => F, g1: () => J }), n(321073));
 var t = n(477900),
     i = n(582128),
     r = n(503698),
@@ -87,7 +87,7 @@ function W(e) {
         c = (0, M.GV)(),
         x = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), r?.(l);
+                (e.preventDefault(), e.stopPropagation(), r?.(l));
             },
             [r, l],
         ),
@@ -145,7 +145,7 @@ function $(e) {
                 o?.();
                 let t = P.Ay.getMember(n.id, l),
                     i = t?.roles ?? [];
-                i.includes(e) || (i = [...i, e]), S.A.updateMemberRoles(n.id, l, i, [e], []);
+                (i.includes(e) || (i = [...i, e]), S.A.updateMemberRoles(n.id, l, i, [e], []));
             },
             [n.id, l, o],
         );
@@ -343,7 +343,7 @@ function q(e) {
         w = i.useRef(null),
         k = i.useRef(null),
         I = i.useRef(0);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         I.current = 0;
     }, [r]),
         i.useLayoutEffect(() => {
@@ -363,11 +363,11 @@ function q(e) {
                     }
                     let o = Math.min(s.getBoundingClientRect().width, l);
                     if (e + o > l) break;
-                    (e += o + 4), n.push(i);
+                    ((e += o + 4), n.push(i));
                 }
             }
-            p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), I.current++;
-        }, [r, A, M]);
+            (p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), I.current++);
+        }, [r, A, M]));
     let E = M ? r : A;
     function L() {
         M ? (c?.(), S(!1)) : (u?.(), S(!0));

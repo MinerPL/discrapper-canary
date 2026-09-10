@@ -67,13 +67,13 @@ function H(e) {
         A = a.useCallback(() => x(!1), []),
         b = a.useCallback(
             (e, n, l) => {
-                u({ textValue: n, richValue: l }),
-                    null != t && (p.A.saveDraft(t.channel_id, n, P.C.ForwardContextMessage), h(t.channel_id, t.id));
+                (u({ textValue: n, richValue: l }),
+                    null != t && (p.A.saveDraft(t.channel_id, n, P.C.ForwardContextMessage), h(t.channel_id, t.id)));
             },
             [h, t, u],
         ),
         j = a.useCallback(() => {
-            null != t && p.A.clearDraft(t.channel_id, P.C.ForwardContextMessage), r(m);
+            (null != t && p.A.clearDraft(t.channel_id, P.C.ForwardContextMessage), r(m));
         }, [t, r, m]),
         v = a.useCallback(
             () => (s || !n || m.length > c || j(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
@@ -175,7 +175,7 @@ function ed(e) {
         let e = (0, i.countBy)(u, (e) => (0, el.NI)(e, !0)),
             t = e.IMAGE ?? 0,
             n = e.VIDEO ?? 0;
-        t > 0 && n > 0
+        (t > 0 && n > 0
             ? ((A = G.intl.formatToPlainString(G.t.Lr0Top, { image_count: t, video_count: n })), (b = J.s))
             : n > 0
               ? ((A = G.intl.formatToPlainString(G.t.SJ6pPX, { count: n })), (b = K.S))
@@ -199,7 +199,7 @@ function ed(e) {
                     (j = (0, l.jsx)("div", {
                         className: ec.cR,
                         children: (0, l.jsx)(en.Ay, { src: d[0].thumbnail.proxyURL, width: 56, height: 56 }),
-                    }));
+                    })));
     }
     return (
         p > 1 &&
@@ -333,13 +333,13 @@ function ef(e) {
         }),
         eP = a.useCallback(
             (e) => {
-                ey(e), eR(e);
+                (ey(e), eR(e));
             },
             [eR],
         ),
         eM = a.useCallback(
             (e) => {
-                eP(e), (eo.current += 1), "" !== e && null != Z && null != $ && es(Z, $);
+                (eP(e), (eo.current += 1), "" !== e && null != Z && null != $ && es(Z, $));
             },
             [Z, $, es, eP],
         ),
@@ -347,7 +347,7 @@ function ef(e) {
             eP("");
         }, [eP]),
         eN = a.useCallback(async () => {
-            null != Z &&
+            (null != Z &&
                 null != $ &&
                 (0, _.hH)({
                     channelId: Z,
@@ -355,7 +355,7 @@ function ef(e) {
                     numDestinationChanges: er.current,
                     numQueryChanges: eo.current,
                 }),
-                await T();
+                await T());
         }, [Z, $, T]),
         eI = a.useRef(null);
     a.useEffect(() => {
@@ -384,7 +384,7 @@ function ef(e) {
                         let e = n ? G.t.u2qHzE : G.t["+yF0ds"];
                         u.O.announce(G.intl.formatToPlainString(e, { name: t, count: n ? ef + 1 : ef - 1 }), "polite");
                     }
-                    (er.current += 1),
+                    ((er.current += 1),
                         n && eP(""),
                         ec((t) => {
                             let n = t.findIndex((t) => {
@@ -393,8 +393,8 @@ function ef(e) {
                             });
                             if (-1 === n) return [e, ...t];
                             let l = [...t];
-                            return l.splice(n, 1), l;
-                        });
+                            return (l.splice(n, 1), l);
+                        }));
                 }
             },
             [Z, ef, ex, $, ew, eu, eP, ei],
@@ -434,11 +434,11 @@ function ef(e) {
                     }))
                 )
                     return void en(!1);
-                s && (0, U.Be)(),
+                (s && (0, U.Be)(),
                     O?.(),
                     i &&
                         (await v.A.fetchMessages({ channelId: o[0] }),
-                        (0, w.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 }));
+                        (0, w.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 })));
                 let u = await N.A.sendForwards(r, o, { ...D, withMessage: a }),
                     c = o.some((e) => {
                         let t = R.A.getChannel(e);
@@ -450,7 +450,7 @@ function ef(e) {
                         return "fulfilled" === t;
                     })
                 ) {
-                    (0, _.TA)({
+                    ((0, _.TA)({
                         channelId: Z,
                         messageId: $,
                         hasError: !1,
@@ -460,7 +460,7 @@ function ef(e) {
                         numQueryChanges: eo.current,
                         anyDestinationHasSlowmode: c,
                     }),
-                        e_();
+                        e_());
                     return;
                 }
                 (0, _.TA)({
@@ -485,7 +485,7 @@ function ef(e) {
             [eF, eu],
         ),
         eL = a.useCallback(() => {
-            null != el && p.A.clearDraft(el.channel_id, P.C.ForwardContextMessage), eT(eb.textValue);
+            (null != el && p.A.clearDraft(el.channel_id, P.C.ForwardContextMessage), eT(eb.textValue));
         }, [el, eb.textValue, eT]),
         eO = (0, eh.s)({
             rowData: eS,
@@ -583,7 +583,7 @@ function ef(e) {
                         ...n,
                         innerRole: void 0,
                         ref: (e) => {
-                            (eV.current = e), (t.current = e?.getScrollerNode() ?? null);
+                            ((eV.current = e), (t.current = e?.getScrollerNode() ?? null));
                         },
                     },
                 });

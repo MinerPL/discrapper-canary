@@ -1,4 +1,4 @@
-n.d(t, { A: () => E }), n(321073);
+(n.d(t, { A: () => E }), n(321073));
 var i = n(439372),
     r = n(736056),
     a = n(710195),
@@ -11,7 +11,7 @@ function o(e, t) {
 }
 let d = new Set();
 function c(e, t) {
-    for (let n of (e.sort(), e)) l.A.addFeatureFlag(n, !0), t?.add(n);
+    for (let n of (e.sort(), e)) (l.A.addFeatureFlag(n, !0), t?.add(n));
 }
 function u() {
     for (let e of d) l.A.addFeatureFlag(e, !1);
@@ -64,7 +64,7 @@ function u() {
                 (o(h[n], r) ? i : _).push(a);
             }
     }
-    c(e), c(t, d), c(n), c(i, d), c(u), c(_, d);
+    (c(e), c(t, d), c(n), c(i, d), c(u), c(_, d));
 }
 class _ extends i.A {
     stores = new Map().set(r.A, u).set(a.A, u).set(s.A, u);

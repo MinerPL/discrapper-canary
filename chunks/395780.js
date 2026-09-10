@@ -23,7 +23,7 @@ class h extends r.EventEmitter {
     alreadyStarted = !1;
     _cancel;
     constructor() {
-        super(),
+        (super(),
             (this.id = s().uniqueId("Uploader")),
             (this._file = {
                 id: this.id,
@@ -36,7 +36,7 @@ class h extends r.EventEmitter {
                 hasVideo: !1,
                 attachmentsCount: 0,
                 items: void 0,
-            });
+            }));
     }
     _fileSize() {
         return this.files.reduce((e, t) => (e += t.currentSize ?? 0), 0);
@@ -59,7 +59,7 @@ class h extends r.EventEmitter {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        A.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        (A.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: n,
@@ -68,7 +68,7 @@ class h extends r.EventEmitter {
                 hasImage: e,
                 attachmentsCount: this.files.length,
                 items: this.files,
-            });
+            }));
     }
     _recomputeProgress() {
         let { loaded: e, total: t } = this._recomputeProgressTotal(),
@@ -94,20 +94,20 @@ class h extends r.EventEmitter {
         return s().set(i, t, r);
     }
     _handleStart = (e) => {
-        (this._cancel = e), this.alreadyStarted || this.emit("start", this._file), (this.alreadyStarted = !0);
+        ((this._cancel = e), this.alreadyStarted || this.emit("start", this._file), (this.alreadyStarted = !0));
     };
     _handleProgress = (e, t, n) => {
         let i = Date.now(),
             r = (0, u.YL)(e, t),
             a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
-        null != n &&
+        (null != n &&
             this._file.items?.forEach((e) => {
                 e.item.progress = n[e.id];
             }),
             (this._lastUpdate = i),
             (this._loaded = e),
             (this._file = { ...this._file, currentSize: t, progress: r, rate: a }),
-            this.emit("progress", this._file);
+            this.emit("progress", this._file));
     };
     _handleException = (e) => {
         this._handleError({ reason: { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
@@ -117,43 +117,46 @@ class h extends r.EventEmitter {
     };
     _handleError = (e) => {
         let { code: t, reason: n, body: i } = e;
-        this.clearProcessingMessageInterval(),
+        (this.clearProcessingMessageInterval(),
             this._aborted ||
                 ((this._errored = !0),
                 A.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
                 this.emit("error", this._file, t, i, n),
-                this.removeAllListeners());
+                this.removeAllListeners()));
     };
     _handleComplete = (e) => {
-        this.clearProcessingMessageInterval(),
+        (this.clearProcessingMessageInterval(),
             A.log(`_handleComplete for ${this.id}`),
             this.emit("complete", this._file, e),
-            this.removeAllListeners();
+            this.removeAllListeners());
     };
     clearProcessingMessageInterval() {
         null != this.processingMessageChangeInterval &&
             (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        A.log(`cancel() for ${this.id}`),
+        (A.log(`cancel() for ${this.id}`),
             this._aborted ||
-                ((this._aborted = !0), this._cancel?.(), this.files.forEach((e) => e.cancel()), this._handleComplete());
+                ((this._aborted = !0),
+                this._cancel?.(),
+                this.files.forEach((e) => e.cancel()),
+                this._handleComplete()));
     }
     async cancelItem(e) {
         A.log(`Cancel called for ${this.id} for item ${e}`);
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
-        (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
+        ((this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = { ...this._file, items: this.files }),
             await (0, d.sm)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
-            0 === this.files.length && this.cancel();
+            0 === this.files.length && this.cancel());
     }
     upload(e) {
         if (null != this._cancel) throw Error("Uploader.upload(...): An upload is already in progress.");
-        (this._lastUpdate = Date.now()),
+        ((this._lastUpdate = Date.now()),
             (this._loaded = 0),
             (this._file = {
                 id: this.id,
@@ -166,7 +169,7 @@ class h extends r.EventEmitter {
                 hasVideo: !1,
                 attachmentsCount: 0,
                 items: e,
-            });
+            }));
     }
 }
 var I = n(358579);
@@ -174,12 +177,12 @@ class f extends h {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
-                this.once("error", (e, n, i, r) => {
+                (this.once("error", (e, n, i, r) => {
                     t({ file: e, code: n, responseBody: i, reason: r });
                 }),
                     this.once("complete", () => {
                         this._errored || e(this.files);
-                    });
+                    }));
             }),
             n = new AbortController();
         try {
@@ -188,7 +191,7 @@ class f extends h {
                 this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))
             )
                 return t;
-            this.setUploadingTextForUI(), await (0, I.A)(this.files, !0, this._recomputeProgress.bind(this));
+            (this.setUploadingTextForUI(), await (0, I.A)(this.files, !0, this._recomputeProgress.bind(this)));
         } catch (a) {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,
@@ -196,6 +199,6 @@ class f extends h {
                 r = { type: E.ty.ERROR_SOURCE_UNKNOWN, msg: n };
             throw (this._handleError({ code: t, reason: r }), { file: this._file, code: t, reason: r });
         }
-        return this._handleComplete(), this.files;
+        return (this._handleComplete(), this.files);
     }
 }

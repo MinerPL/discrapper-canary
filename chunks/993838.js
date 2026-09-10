@@ -91,7 +91,7 @@ function f(e) {
     return !l.Ay.isModerator(t, e) && (n > 0 || i > 0);
 }
 function p(e, t) {
-    t !== e.id && (0, o.ek)(!0), (0, a.iN)(e.id);
+    (t !== e.id && (0, o.ek)(!0), (0, a.iN)(e.id));
 }
 function T(e, t) {
     return (

@@ -29,7 +29,7 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t));
+                (I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
             },
             placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,

@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(938796);
+(n.d(t, { A: () => A }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(665260),
@@ -246,7 +246,7 @@ class A extends s.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.type = e.type),
             (this.applicationId = e.applicationId),
@@ -289,7 +289,7 @@ class A extends s.A {
             (this.description = e.description),
             (this.orbsReward = e.orbsReward),
             (this.eligibleOffers = e.eligibleOffers),
-            (this.previewAssetPaths = e.previewAssetPaths);
+            (this.previewAssetPaths = e.previewAssetPaths));
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];

@@ -34,7 +34,7 @@ let f = new u(s.h, {
     CONNECTION_OPEN: h,
     VOICE_CHANNEL_START_TIME_UPDATE: function (a) {
         let { guildId: l, id: e, voiceStartTime: t } = a;
-        null == r[l] && (r[l] = {}), (r[l][e] = null != t ? d(t) : void 0);
+        (null == r[l] && (r[l] = {}), (r[l][e] = null != t ? d(t) : void 0));
     },
     CHANNEL_INFO: function (a) {
         let { guildId: l, channels: e } = a;

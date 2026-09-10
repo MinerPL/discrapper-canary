@@ -5,7 +5,7 @@ function a(e) {
     let [t, n] = i.useState(!1),
         a = i.useRef(null),
         s = i.useCallback(() => {
-            n(!1), null != a.current && clearTimeout(a.current), (a.current = setTimeout(() => n(!0), e));
+            (n(!1), null != a.current && clearTimeout(a.current), (a.current = setTimeout(() => n(!0), e)));
         }, [e]);
     return (
         i.useEffect(() => {
@@ -36,7 +36,7 @@ function s() {
                 window.addEventListener("focus", e),
                 window.addEventListener("blur", n),
                 () => {
-                    window.removeEventListener("focus", e), window.removeEventListener("blur", n);
+                    (window.removeEventListener("focus", e), window.removeEventListener("blur", n));
                 }
             );
         }, []),

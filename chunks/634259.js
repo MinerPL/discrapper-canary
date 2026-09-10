@@ -1,7 +1,7 @@
 var a = t(151502),
     l = t(632661),
     o = t(258509);
-(e.exports = function (e, r) {
+((e.exports = function (e, r) {
     if (e) {
         if ("string" == typeof e) return o(e, r);
         var t,
@@ -17,4 +17,4 @@ var a = t(151502),
     }
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

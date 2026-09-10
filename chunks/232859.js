@@ -1,4 +1,4 @@
-(e.exports = a), (a.default = a), (a.stable = u), (a.stableStringify = u);
+((e.exports = a), (a.default = a), (a.stable = u), (a.stableStringify = u));
 var t = "[...]",
     r = "[Circular]",
     n = [],
@@ -7,7 +7,7 @@ function o() {
     return { depthLimit: Number.MAX_SAFE_INTEGER, edgesLimit: Number.MAX_SAFE_INTEGER };
 }
 function a(e, a, l, u) {
-    void 0 === u && (u = o()),
+    (void 0 === u && (u = o()),
         (function e(n, i, o, a, l, u, c) {
             if (((u += 1), "object" == typeof n && null !== n)) {
                 for (f = 0; f < a.length; f++) if (a[f] === n) return void s(r, n, i, l);
@@ -24,13 +24,13 @@ function a(e, a, l, u) {
                 }
                 a.pop();
             }
-        })(e, "", 0, [], void 0, 0, u);
+        })(e, "", 0, [], void 0, 0, u));
     try {
         f = 0 === i.length ? JSON.stringify(e, a, l) : JSON.stringify(e, c(a), l);
     } catch (e) {
         return JSON.stringify("[unable to serialize, circular reference is too complex to analyze]");
     } finally {
-        for (; 0 !== n.length; ) {
+        for (; 0 !== n.length;) {
             var f,
                 d = n.pop();
             4 === d.length ? Object.defineProperty(d[0], d[1], d[3]) : (d[0][d[1]] = d[2]);
@@ -73,10 +73,10 @@ function u(e, a, u, f) {
                             m = Object.keys(i).sort(l);
                         for (p = 0; p < m.length; p++) {
                             var v = m[p];
-                            e(i[v], v, p, u, i, f, d), (h[v] = i[v]);
+                            (e(i[v], v, p, u, i, f, d), (h[v] = i[v]));
                         }
                         if (void 0 === c) return h;
-                        n.push([c, o, i]), (c[o] = h);
+                        (n.push([c, o, i]), (c[o] = h));
                     }
                     u.pop();
                 }
@@ -86,7 +86,7 @@ function u(e, a, u, f) {
     } catch (e) {
         return JSON.stringify("[unable to serialize, circular reference is too complex to analyze]");
     } finally {
-        for (; 0 !== n.length; ) {
+        for (; 0 !== n.length;) {
             var h = n.pop();
             4 === h.length ? Object.defineProperty(h[0], h[1], h[3]) : (h[0][h[1]] = h[2]);
         }
@@ -106,7 +106,7 @@ function c(e) {
                 for (var n = 0; n < i.length; n++) {
                     var o = i[n];
                     if (o[1] === t && o[0] === r) {
-                        (r = o[2]), i.splice(n, 1);
+                        ((r = o[2]), i.splice(n, 1));
                         break;
                     }
                 }

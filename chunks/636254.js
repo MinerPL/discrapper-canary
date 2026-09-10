@@ -16,17 +16,21 @@ function p(e, t) {
         loadState: n,
         defaultChangelog: o,
         defaultLoadState: a,
-    } = (0, d.cf)([u.A], () => {
-        let l = null != e ? u.A.getChangelog(e, t) : null,
-            n = null != e ? u.A.getChangelog(e, "en-US") : null,
-            r = null != e && u.A.getChangelogLoadStatus(e, "en-US");
-        return {
-            changelog: l,
-            loadState: null != e && u.A.getChangelogLoadStatus(e, t),
-            defaultChangelog: n,
-            defaultLoadState: r,
-        };
-    }, [e, t]);
+    } = (0, d.cf)(
+        [u.A],
+        () => {
+            let l = null != e ? u.A.getChangelog(e, t) : null,
+                n = null != e ? u.A.getChangelog(e, "en-US") : null,
+                r = null != e && u.A.getChangelogLoadStatus(e, "en-US");
+            return {
+                changelog: l,
+                loadState: null != e && u.A.getChangelogLoadStatus(e, t),
+                defaultChangelog: n,
+                defaultLoadState: r,
+            };
+        },
+        [e, t],
+    );
     return (r.useEffect(() => {
         null != e && null == l && n === g._f.NOT_LOADED && s.A.fetchChangelog(e, t);
     }, [e, l, n, t]),
@@ -180,7 +184,7 @@ class G extends r.PureComponent {
     maxScrolledPercentage = 0;
     mountedAt = 0;
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(N.HAw.CHANGE_LOG_OPENED, {}, !0);
+        ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(N.HAw.CHANGE_LOG_OPENED, {}, !0));
     }
     close = () => ((0, i.closeModal)(g.lb), Promise.resolve());
     handleScroll = (e) => {
@@ -195,13 +199,13 @@ class G extends r.PureComponent {
                 { changeLog: r } = e.props,
                 { date: o, revision: a } = r,
                 i = { change_log_id: `${o}:${a}`, ...l };
-            n ||
+            (n ||
                 (i = {
                     seconds_open: Math.round((Date.now() - e.mountedAt) / 1e3),
                     max_scrolled_percentage: 100 * parseInt(e.maxScrolledPercentage.toPrecision(4), 10),
                     ...i,
                 }),
-                c.default.track(t, i);
+                c.default.track(t, i));
         };
     })();
     componentWillUnmount() {

@@ -33,7 +33,7 @@ function g(e) {
         s = (0, c.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
         g = r.useRef(!1),
         S = r.useCallback(() => {
-            (g.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours");
+            ((g.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
         }, []);
     r.useEffect(() => {
         n || g.current || t();
@@ -83,5 +83,5 @@ function C() {
     N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => O() }), { layerKey: S.Uy, Layer: s.Ay }));
 }
 function O() {
-    (N = !1), (0, a.dF)(S.Uy);
+    ((N = !1), (0, a.dF)(S.Uy));
 }

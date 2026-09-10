@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.EmptyDuration = void 0),
     (t.addDuration = function (e, t) {
         var r, n, a, i, s, o, u;
@@ -75,4 +75,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         for (let r in e) t[r] = -e[r];
         return t;
     }),
-    (t.EmptyDuration = { day: 0, second: 0, millisecond: 0 });
+    (t.EmptyDuration = { day: 0, second: 0, millisecond: 0 }));

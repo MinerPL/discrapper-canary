@@ -79,7 +79,7 @@ function a(e) {
     };
 }
 var s = function () {};
-(s.thatReturns = a),
+((s.thatReturns = a),
     (s.thatReturnsFalse = a(!1)),
     (s.thatReturnsTrue = a(!0)),
     (s.thatReturnsNull = a(null)),
@@ -88,7 +88,7 @@ var s = function () {};
     }),
     (s.thatReturnsArgument = function (e) {
         return e;
-    });
+    }));
 var l = !1;
 if (o.canUseDOM) {
     var u = document.createElement("div").style;

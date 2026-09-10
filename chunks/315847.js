@@ -7,20 +7,20 @@ function r(e, t) {
             : function (e, t) {
                   var n, r;
                   let o = 1 === e.length ? i : a;
-                  return (n = t.cache.create()), (r = t.serializer), o.bind(this, e, n, r);
+                  return ((n = t.cache.create()), (r = t.serializer), o.bind(this, e, n, r));
               }
     )(e, { cache: n, serializer: r });
 }
 function i(e, t, n, r) {
     let i = null == r || "number" == typeof r || "boolean" == typeof r ? r : n(r),
         a = t.get(i);
-    return void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a;
+    return (void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a);
 }
 function a(e, t, n) {
     let r = Array.prototype.slice.call(arguments, 3),
         i = n(r),
         a = t.get(i);
-    return void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a;
+    return (void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a);
 }
 n.d(t, { B: () => r, W: () => l });
 let o = function () {
@@ -46,10 +46,10 @@ let s = {
     l = {
         variadic: function (e, t) {
             var n, r;
-            return (n = t.cache.create()), (r = t.serializer), a.bind(this, e, n, r);
+            return ((n = t.cache.create()), (r = t.serializer), a.bind(this, e, n, r));
         },
         monadic: function (e, t) {
             var n, r;
-            return (n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r);
+            return ((n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r));
         },
     };

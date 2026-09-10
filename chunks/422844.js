@@ -16,13 +16,13 @@ class d {
     get;
     channelStates = {};
     constructor(t, e) {
-        (this.set = t), (this.get = e);
+        ((this.set = t), (this.get = e));
     }
     setChannelState = (t, e) => {
         let n = this.get(),
             a = this.getChannelState(t),
             s = { ...n.channelStates };
-        (s[t] = { ...a, ...e }), (0, g.r)(() => this.set({ channelStates: s }));
+        ((s[t] = { ...a, ...e }), (0, g.r)(() => this.set({ channelStates: s })));
     };
     getChannelState = (t) => {
         if (null == t) return T;
@@ -30,31 +30,31 @@ class d {
             n = e[t];
         if (null == n) {
             let e = S.A.getChannel(t);
-            s()(null != e, "[Forum Channel Store] The channel should not be missing."),
+            (s()(null != e, "[Forum Channel Store] The channel should not be missing."),
                 (n = {
                     layoutType: e.getDefaultLayout(),
                     sortOrder: e.getDefaultSortOrder(),
                     tagFilter: C,
                     tagSetting: e.getDefaultTagSetting(),
-                });
+                }));
         }
         return n;
     };
     toggleTagFilter = (t, e) => {
         let n = new Set(this.getChannelState(t).tagFilter);
-        n.has(e) ? n.delete(e) : n.add(e), this.setTagFilter(t, n);
+        (n.has(e) ? n.delete(e) : n.add(e), this.setTagFilter(t, n));
     };
     setTagFilter = (t, e) => {
-        this.setChannelState(t, { tagFilter: e }), o.A.setFilterTagIds(e);
+        (this.setChannelState(t, { tagFilter: e }), o.A.setFilterTagIds(e));
     };
     setSortOrder = (t, e) => {
-        this.setChannelState(t, { sortOrder: e }), o.A.setSortOrder(e);
+        (this.setChannelState(t, { sortOrder: e }), o.A.setSortOrder(e));
     };
     setLayoutType = (t, e) => {
-        this.setChannelState(t, { layoutType: e }), o.A.setLayout(e);
+        (this.setChannelState(t, { layoutType: e }), o.A.setLayout(e));
     };
     setTagSetting = (t, e) => {
-        this.setChannelState(t, { tagSetting: e }), o.A.setTagSetting(e);
+        (this.setChannelState(t, { tagSetting: e }), o.A.setTagSetting(e));
     };
 }
 let c = (0, l.v)((t, e) => new d(t, e));

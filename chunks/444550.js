@@ -173,7 +173,7 @@ let M = r.forwardRef(function (e, l) {
     let eQ = r.useCallback((e, l) => {
             let n = document.querySelector(e),
                 t = eE.current;
-            eN(l), null != t && null != n && t.scrollIntoViewNode({ node: n });
+            (eN(l), null != t && null != n && t.scrollIntoViewNode({ node: n }));
         }, []),
         e$ = r.useCallback(
             () =>
@@ -206,7 +206,7 @@ let M = r.forwardRef(function (e, l) {
         }),
         eW = (0, f.A)(ez),
         eX = (0, f.A)(eA);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         let e = eX.current,
             l = eM.current;
         eC &&
@@ -228,13 +228,13 @@ let M = r.forwardRef(function (e, l) {
                 if (null != l) {
                     l.focus();
                     let { value: e } = l;
-                    (l.value = " "), (l.value = e);
+                    ((l.value = " "), (l.value = e));
                 }
                 eN(e.focusedItemId() ?? null);
             } else {
                 let l = eM.current,
                     n = null != l ? String(l.value) : null;
-                e.setFocus(n), eN(null);
+                (e.setFocus(n), eN(null));
             }
         }, [eC, eF, eW, eM]),
         r.useLayoutEffect(() => {
@@ -242,7 +242,7 @@ let M = r.forwardRef(function (e, l) {
         }, [j, eL, eC]),
         r.useLayoutEffect(() => {
             j && eD("");
-        }, [j, eR.length]);
+        }, [j, eR.length]));
     let eY = r.useCallback(
         function (e) {
             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -251,10 +251,10 @@ let M = r.forwardRef(function (e, l) {
                 r = t ? eA.find((l) => l.value === e) : e;
             if (j) {
                 let n = i ?? [];
-                n.some((l) => (t ? l.value : l) === e) ? o(n.filter((l) => (t ? l.value : l) !== e)) : o([...n, r]),
-                    l && ew.current?.focus();
+                (n.some((l) => (t ? l.value : l) === e) ? o(n.filter((l) => (t ? l.value : l) !== e)) : o([...n, r]),
+                    l && ew.current?.focus());
             } else o(r);
-            eN(null), (!j || N) && eB(!1), eI(!1), es && eD("");
+            (eN(null), (!j || N) && eB(!1), eI(!1), es && eD(""));
         },
         [n, eA, j, N, es, o, i, eB],
     );
@@ -262,7 +262,7 @@ let M = r.forwardRef(function (e, l) {
         K && ew.current?.focus();
     }, [K]);
     let eG = r.useCallback(() => {
-            eD(""), eY(null), eB(!0);
+            (eD(""), eY(null), eB(!0));
         }, [eY, eB]),
         eJ = r.useCallback(
             (e) => {
@@ -278,14 +278,14 @@ let M = r.forwardRef(function (e, l) {
             [eB, eC],
         ),
         eZ = eA;
-    eS && null != ek && !1 !== $ && (eZ = "function" == typeof $ ? $(eA, ek) : (0, s.Ht)(eA, ek, ea ?? T)),
+    (eS && null != ek && !1 !== $ && (eZ = "function" == typeof $ ? $(eA, ek) : (0, s.Ht)(eA, ek, ea ?? T)),
         r.useEffect(() => {
             let e = eE.current;
             e?.scrollToTop();
         }, [ek]),
         r.useEffect(() => {
             !eF && eS && null !== ek && requestAnimationFrame(() => ez.focusFirstVisibleItem());
-        }, [eF, eS, ek, ez]);
+        }, [eF, eS, ek, ez]));
     let e0 = j ? z : H,
         e1 = r.useRef(null),
         { focusPreviousItem: e4, focusNextItem: e8 } = _(e1, ew, eR);
@@ -328,7 +328,7 @@ let M = r.forwardRef(function (e, l) {
                         s = i ? g.t : x.a,
                         { ref: o, onKeyDown: u } = ez.containerProps;
                     function c(e) {
-                        ep.onKeyDown?.(e), u(e), eJ(e);
+                        (ep.onKeyDown?.(e), u(e), eJ(e));
                     }
                     return (0, t.jsx)(m.D, {
                         ...ef,
@@ -355,13 +355,13 @@ let M = r.forwardRef(function (e, l) {
                                             onClick: O
                                                 ? void 0
                                                 : (e) => {
-                                                      e.stopPropagation(), e.preventDefault(), eD(""), eB(!0);
+                                                      (e.stopPropagation(), e.preventDefault(), eD(""), eB(!0));
                                                   },
                                             onMouseDown: (e) => {
                                                 e.preventDefault();
                                             },
                                             ref: (e) => {
-                                                (ev.current = e), (eU.current = e);
+                                                ((ev.current = e), (eU.current = e));
                                             },
                                             className: a()(R.Lt, R.Vk, { [R.m3]: j }),
                                             children: (0, t.jsx)("div", {
@@ -383,13 +383,13 @@ let M = r.forwardRef(function (e, l) {
                                                     "aria-labelledby": el ?? eg,
                                                     "aria-expanded": n,
                                                     setInputRef: (e) => {
-                                                        (o.current = e), (ew.current = e);
+                                                        ((o.current = e), (ew.current = e));
                                                     },
                                                     onFocus: (e) => {
-                                                        ew.current?.setSelectionRange(0, ek?.length ?? 0), ei?.(e);
+                                                        (ew.current?.setSelectionRange(0, ek?.length ?? 0), ei?.(e));
                                                     },
                                                     onChange: (e) => {
-                                                        eq(e), Y?.(e), eD(e), eB(!0), eI(!0);
+                                                        (eq(e), Y?.(e), eD(e), eB(!0), eI(!0));
                                                     },
                                                     onKeyDown: c,
                                                     activeDescendant: ej,
@@ -556,7 +556,7 @@ function V(e) {
         j = r.useRef(null),
         P = r.useCallback(
             (e) => {
-                l(e), v && n();
+                (l(e), v && n());
             },
             [v, n, l],
         );
@@ -586,7 +586,7 @@ function V(e) {
                         ref: (e) => {
                             f.current = e;
                             let n = e?.getScrollerNode() ?? null;
-                            (j.current = n), (l.current = n);
+                            ((j.current = n), (l.current = n));
                         },
                         ...r,
                         role: void 0,
@@ -686,9 +686,9 @@ function U(e) {
                 if (null != i.current)
                     switch (e.key) {
                         case "ArrowRight":
-                            return e.stopPropagation(), e.preventDefault(), s();
+                            return (e.stopPropagation(), e.preventDefault(), s());
                         case "ArrowLeft":
-                            return e.stopPropagation(), e.preventDefault(), a();
+                            return (e.stopPropagation(), e.preventDefault(), a());
                     }
             },
             [i, a, s],

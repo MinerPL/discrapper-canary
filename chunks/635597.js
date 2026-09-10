@@ -5,14 +5,14 @@ function i() {
         t = (0, n.useCallback)((t, r, n, i) => {
             let o = i?.once
                 ? (...t) => {
-                      e.current.delete(n), n(...t);
+                      (e.current.delete(n), n(...t));
                   }
                 : n;
-            e.current.set(n, { type: r, eventTarget: t, fn: o, options: i }), t.addEventListener(r, o, i);
+            (e.current.set(n, { type: r, eventTarget: t, fn: o, options: i }), t.addEventListener(r, o, i));
         }, []),
         r = (0, n.useCallback)((t, r, n, i) => {
             let o = e.current.get(n)?.fn || n;
-            t.removeEventListener(r, o, i), e.current.delete(n);
+            (t.removeEventListener(r, o, i), e.current.delete(n));
         }, []),
         i = (0, n.useCallback)(() => {
             e.current.forEach((e, t) => {

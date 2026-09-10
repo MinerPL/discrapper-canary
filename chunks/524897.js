@@ -17,7 +17,7 @@ function o(e) {
         case r.Plural:
             return (function (e) {
                 let [t, n, o, a, s] = e;
-                for (let e in o) i(o[e]), (o[e] = { value: o[e] });
+                for (let e in o) (i(o[e]), (o[e] = { value: o[e] }));
                 return t === r.Plural
                     ? { type: t, value: n, options: o, offset: a, pluralType: s }
                     : { type: t, value: n, options: o, offset: a };
@@ -26,13 +26,13 @@ function o(e) {
             return t.FORMAT_JS_POUND;
         case r.Tag: {
             let [t, r, n, o] = e;
-            return i(n), null != o && i(o), { type: t, value: r, children: n, control: o };
+            return (i(n), null != o && i(o), { type: t, value: r, children: n, control: o });
         }
         default:
             throw Error(`FormatJS keyless JSON encountered an unknown type: ${n}`);
     }
 }
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.FORMAT_JS_POUND = t.FormatJsNodeType = void 0),
     (t.hydrateFormatJsAst = function (e) {
         return "string" == typeof e
@@ -84,4 +84,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (n[(n.Plural = 6)] = "Plural"),
     (n[(n.Pound = 7)] = "Pound"),
     (n[(n.Tag = 8)] = "Tag"),
-    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));
+    (t.FORMAT_JS_POUND = Object.freeze({ type: 7 })));

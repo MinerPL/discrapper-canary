@@ -9,7 +9,7 @@ var n = function (e) {
         var n = e.name && e.names;
         e.push && !t[e.push] ? (t[e.push] = []) : n && !t[e.name] && (t[e.name] = {});
         var o = e.push ? {} : n ? t[e.name] : t;
-        i(r.match(e.reg), o, e.names, e.name), e.push && t[e.push].push(o);
+        (i(r.match(e.reg), o, e.names, e.name), e.push && t[e.push].push(o));
     },
     a = r(150594),
     s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
@@ -36,9 +36,9 @@ t.parse = function (e) {
 };
 var l = function (e, t) {
     var r = t.split(/=(.+)/, 2);
-    return 2 === r.length ? (e[r[0]] = n(r[1])) : 1 === r.length && t.length > 1 && (e[r[0]] = void 0), e;
+    return (2 === r.length ? (e[r[0]] = n(r[1])) : 1 === r.length && t.length > 1 && (e[r[0]] = void 0), e);
 };
-(t.parseParams = function (e) {
+((t.parseParams = function (e) {
     return e.split(/;\s?/).reduce(l, {});
 }),
     (t.parseFmtpConfig = t.parseParams),
@@ -68,4 +68,4 @@ var l = function (e, t) {
                 );
             });
         });
-    });
+    }));

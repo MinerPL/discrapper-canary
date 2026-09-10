@@ -12,24 +12,24 @@ function o(e, t, n, o, u, s) {
             for (let n of t) {
                 let t = n.replace(r.KB, ""),
                     o = (0, a.q)(e, t);
-                if (o) return (i.locale = o), n !== t && (i.extension = n.slice(t.length, n.length)), i;
+                if (o) return ((i.locale = o), n !== t && (i.extension = n.slice(t.length, n.length)), i);
             }
-            return (i.locale = n()), i;
+            return ((i.locale = n()), i);
         })(Array.from(e), t, s);
     else {
         var c;
         let n, i, a, o, u;
-        (c = Array.from(e)),
+        ((c = Array.from(e)),
             (a = []),
             (o = t.reduce((e, t) => {
                 let n = t.replace(r.KB, "");
-                return a.push(n), (e[n] = t), e;
+                return (a.push(n), (e[n] = t), e);
             }, {})),
             (u = (0, r.B4)(a, c)).matchedSupportedLocale &&
                 u.matchedDesiredLocale &&
                 ((n = u.matchedSupportedLocale),
                 (i = o[u.matchedDesiredLocale].slice(u.matchedDesiredLocale.length) || void 0)),
-            (l = n ? { locale: n, extension: i } : { locale: s() });
+            (l = n ? { locale: n, extension: i } : { locale: s() }));
     }
     null == l && (l = { locale: s(), extension: "" });
     let f = l.locale,
@@ -38,18 +38,18 @@ function o(e, t, n, o, u, s) {
     d = l.extension
         ? (function (e) {
               let t;
-              (0, r.V1)(e === e.toLowerCase(), "Expected extension to be lowercase"),
-                  (0, r.V1)("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension");
+              ((0, r.V1)(e === e.toLowerCase(), "Expected extension to be lowercase"),
+                  (0, r.V1)("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
               let n = [],
                   i = [],
                   a = e.length,
                   o = 3;
-              for (; o < a; ) {
+              for (; o < a;) {
                   let u,
                       s = e.indexOf("-", o);
                   u = -1 === s ? a - o : s - o;
                   let l = e.slice(o, o + u);
-                  (0, r.V1)(u >= 2, "Expected a subtag to have at least 2 characters"),
+                  ((0, r.V1)(u >= 2, "Expected a subtag to have at least 2 characters"),
                       void 0 === t && 2 != u
                           ? -1 === n.indexOf(l) && n.push(l)
                           : 2 === u
@@ -57,7 +57,7 @@ function o(e, t, n, o, u, s) {
                             : t?.value === ""
                               ? (t.value = l)
                               : ((0, r.V1)(void 0 !== t, "Expected keyword to be defined"), (t.value += "-" + l)),
-                      (o += u + 1);
+                      (o += u + 1));
               }
               return { attributes: n, keywords: i };
           })(l.extension).keywords
@@ -77,17 +77,17 @@ function o(e, t, n, o, u, s) {
                 : i.indexOf("true") > -1 && (t = { key: e, value: (a = "true") });
         }
         let u = n[e];
-        (0, r.V1)(null == u || "string" == typeof u, "optionsValue must be a string or undefined"),
+        ((0, r.V1)(null == u || "string" == typeof u, "optionsValue must be a string or undefined"),
             "string" == typeof u &&
                 "" ===
                     (u = (function (e, t) {
                         let n = t.toLowerCase();
-                        return (0, r.V1)(void 0 !== e, "ukey must be defined"), n;
+                        return ((0, r.V1)(void 0 !== e, "ukey must be defined"), n);
                     })(e.toLowerCase(), u)) &&
                 (u = "true"),
             u !== a && i.indexOf(u) > -1 && ((a = u), (t = void 0)),
             t && m.push(t),
-            (p[e] = a);
+            (p[e] = a));
     }
     return (
         m.length > 0 &&
@@ -97,7 +97,7 @@ function o(e, t, n, o, u, s) {
                 for (let e of t) a += `-${e}`;
                 for (let e of n) {
                     let { key: t, value: n } = e;
-                    (a += `-${t}`), "" !== n && (a += `-${n}`);
+                    ((a += `-${t}`), "" !== n && (a += `-${n}`));
                 }
                 if ("-u" === a) return i(e);
                 let o = e.indexOf("-x-");

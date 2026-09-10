@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_PATTERN =
         t.YEAR_PATTERN =
         t.ORDINAL_NUMBER_PATTERN =
@@ -28,15 +28,15 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         let r = {},
             n = e,
             a = o.exec(n);
-        for (; a; )
-            (function (e, r) {
+        for (; a;)
+            ((function (e, r) {
                 let n = i(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length).trim()),
-                (a = o.exec(n));
+                (a = o.exec(n)));
         return r;
-    });
+    }));
 let n = r(798401),
     a = r(574253);
 function i(e) {
@@ -49,7 +49,7 @@ function i(e) {
     else if (r.match(/molti/)) return 7;
     return parseFloat(r);
 }
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     domenica: 0,
     dom: 0,
     "luned\xec": 1,
@@ -179,7 +179,7 @@ function i(e) {
     }),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}un?)?|un?\\b(?:\\s{0,2}qualcuno)?|qualcuno|molti|a?\\s{0,2}alcuni\\s{0,2}(?:of)?)`),
     (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_WORD_DICTIONARY)}|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)`),
-    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])");
+    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])"));
 let s = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
     o = RegExp(s, "i");
 t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", s);

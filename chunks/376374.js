@@ -31,7 +31,7 @@ function g(t) {
               appId: n,
               skuId: r,
               onClick: function (t) {
-                  e(t), i?.();
+                  (e(t), i?.());
               },
               loading: d,
               icon: a,
@@ -64,7 +64,7 @@ function v(t) {
                 appId: n,
                 skuId: r.id,
                 onClick: function (t) {
-                    (
+                    ((
                         e ??
                         function () {
                             (0, c.k)({
@@ -75,7 +75,7 @@ function v(t) {
                             });
                         }
                     )(t),
-                        i?.();
+                        i?.());
                 },
                 text: h.intl.format(h.t.Xp5WTn, { price: (0, I.$g)(m.amount, m.currency) }),
                 icon: s,
@@ -88,7 +88,7 @@ function x(t) {
         ...a,
         onClick: function (t) {
             if ((p.default.track(f.HAw.STOREFRONT_PURCHASE_CLICKED, { application_id: n, sku_id: e }), !u)) {
-                t.preventDefault(), t.stopPropagation();
+                (t.preventDefault(), t.stopPropagation());
                 let i = f.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, e),
                     l = (0, r.T2)(i, !1);
                 (0, A.pX)(l);

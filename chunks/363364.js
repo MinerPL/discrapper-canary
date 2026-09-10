@@ -2,7 +2,7 @@ var n = r(315646),
     i = r(741623),
     o = function (e, t, r) {
         for (var n, i = e; null != (n = i.next); i = n)
-            if (n.key === t) return (i.next = n.next), r || ((n.next = e.next), (e.next = n)), n;
+            if (n.key === t) return ((i.next = n.next), r || ((n.next = e.next), (e.next = n)), n);
     },
     a = function (e, t) {
         if (e) {
@@ -26,7 +26,7 @@ e.exports = function () {
             delete: function (t) {
                 var r = e && e.next,
                     n = l(e, t);
-                return n && r && r === n && (e = void 0), !!n;
+                return (n && r && r === n && (e = void 0), !!n);
             },
             get: function (t) {
                 return a(e, t);
@@ -36,7 +36,7 @@ e.exports = function () {
                 return !!(r = e) && !!o(r, t);
             },
             set: function (t, r) {
-                e || (e = { next: void 0 }), s(e, t, r);
+                (e || (e = { next: void 0 }), s(e, t, r));
             },
         };
     return t;

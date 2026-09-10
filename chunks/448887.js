@@ -53,7 +53,7 @@ function D(e) {
         [j, y] = n.useState(!1),
         [S, C] = n.useState(!1),
         [g, A] = n.useState(!1);
-    n.useEffect(() => {
+    (n.useEffect(() => {
         j && S && g && s();
     }, [j, S, g, s]),
         n.useEffect(() => {
@@ -62,7 +62,7 @@ function D(e) {
                 setTimeout(() => {
                     p.current?.play();
                 }, 200);
-        }, [t, l]);
+        }, [t, l]));
     let R = n.useCallback(() => {
         l || (i(!1), f.current?.play());
     }, [l]);
@@ -156,13 +156,13 @@ function B(e) {
                 size: "sm",
                 text: T.intl.string(T.t.WYchde),
                 onClick: function () {
-                    (0, j.Y)({
+                    ((0, j.Y)({
                         pageType: v.liQ.GLOBAL_DISCOVERY_QUESTS,
                         sectionType: v.JJy.ORBS_REWARD_MODAL,
                         ctaObject: v.ZSU.CTA_TO_ORBS_SHOP,
                     }),
                         (0, r.closeAllModals)(),
-                        (0, f.Cz)({ tab: L.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_REWARD_MODAL });
+                        (0, f.Cz)({ tab: L.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_REWARD_MODAL }));
                 },
                 fullWidth: !0,
             }),

@@ -1,4 +1,4 @@
-s.d(t, { A: () => d }), s(321073);
+(s.d(t, { A: () => d }), s(321073));
 var i = s(284009),
     p = s.n(i),
     r = s(515029),
@@ -7,9 +7,9 @@ var i = s(284009),
 let n = [h.fS.WINDOW, h.fS.SCREEN];
 function d(e, t, s, i) {
     let r = window.DiscordNative;
-    p()(null != r, "Can't get desktop sources outside of native app"),
+    (p()(null != r, "Can't get desktop sources outside of native app"),
         (s = s?.filter((e) => n.includes(e)) ?? n),
-        (i = i ?? { width: 150, height: 150 });
+        (i = i ?? { width: 150, height: 150 }));
     let d = [];
     return (
         s.includes(h.fS.SCREEN) &&

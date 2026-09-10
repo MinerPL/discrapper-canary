@@ -44,12 +44,12 @@ let r = +M.A.Millis.DAY,
             a.h.dispatch({ type: "COMMANDS_MIGRATION_NOTICE_DISMISSED", guildId: t });
         },
         dismissOverviewTooltip(t, e) {
-            a.h.dispatch({ type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED", guildId: t, integrationId: e.id }),
+            (a.h.dispatch({ type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED", guildId: t, integrationId: e.id }),
                 l.default.track(O.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
                     ...(0, I.H$)(t),
                     application_id: e.application?.id,
                     location: "overview",
-                });
+                }));
         },
         dismissToggleTooltip(t, e) {
             void 0 !== e &&

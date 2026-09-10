@@ -1,4 +1,4 @@
-t.d(l, { A: () => Z, M: () => K }), t(938796);
+(t.d(l, { A: () => Z, M: () => K }), t(938796));
 var n = t(477900),
     i = t(582128),
     s = t(503698),
@@ -165,7 +165,7 @@ let Z = function (e) {
         K = (0, u.Lt)(s.flags ?? 0, a.Q.IS_GUEST_INVITE),
         Z = !1;
     if (null != I)
-        A &&
+        (A &&
             ((P =
                 null == k
                     ? C.intl.string(C.t["3rE1P8"])
@@ -200,7 +200,7 @@ let Z = function (e) {
                             ],
                         }),
                     ],
-                })));
+                }))));
     else if (null != S) {
         if (null == k) throw Error("no inviter in group DM invite");
         let e = U.Ay.getFormattedName(k);
@@ -211,7 +211,7 @@ let Z = function (e) {
             : ((P = C.intl.string(C.t.OsdY8B)), (t = e));
     } else if (null != k) {
         let e = U.Ay.getFormattedName(k, !0);
-        (t = C.intl.formatToPlainString(C.t["4aF92R"], { username: e })),
+        ((t = C.intl.formatToPlainString(C.t["4aF92R"], { username: e })),
             (Z = !0),
             (i =
                 null != j
@@ -221,7 +221,7 @@ let Z = function (e) {
                           children: _
                               ? C.intl.format(C.t["6r4JiR"], { username: e })
                               : C.intl.format(C.t.Quj7HX, { username: e }),
-                      }));
+                      })));
     }
     return (0, n.jsxs)(d.B, {
         direction: "vertical",

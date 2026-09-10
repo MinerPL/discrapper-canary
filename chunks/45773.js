@@ -22,10 +22,10 @@ class d extends i.Ay.Store {
         );
     }
     initialize() {
-        this.waitFor(l.default),
+        (this.waitFor(l.default),
             this.carefullySpeculativelyOpen(null),
             this.handleAuthenticationStoreChanged(),
-            l.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
+            l.default.addChangeListener(() => this.handleAuthenticationStoreChanged()));
     }
     databaseName(e) {
         return (function (e) {
@@ -46,36 +46,36 @@ class d extends i.Ay.Store {
     replaceDisableAllDatabases(e) {
         for (let t of (o.info(`disabling and nulling all databases (reason: ${e})`), this.databases.keys())) {
             let n = this.databases.get(t);
-            n?.disable(e), n?.close(), this.databases.set(t, null);
+            (n?.disable(e), n?.close(), this.databases.set(t, null));
         }
         this.emitChange();
     }
     remove(e) {
         let t = this.databases.get(e);
-        o.log(`removing database (user: ${e}, database: ${t})`),
+        (o.log(`removing database (user: ${e}, database: ${t})`),
             t?.close(),
             this.databases.delete(e),
-            this.emitChange();
+            this.emitChange());
     }
     handleClearCaches(e) {
-        e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0),
-            this.replaceDisableAllDatabases(`DatabaseManager (${e.reason})`);
+        (e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0),
+            this.replaceDisableAllDatabases(`DatabaseManager (${e.reason})`));
     }
     handleConnectionOpen() {
         let e = l.default.getId(),
             t = this.databases.get(e),
             n = t?.state();
-        null == t && n !== r.z9.Open && this.remove(e), this.carefullyOpenDatabase(e);
+        (null == t && n !== r.z9.Open && this.remove(e), this.carefullyOpenDatabase(e));
     }
     handleAuthenticationStoreChanged() {
         let e = l.default.getId(),
             t = this.activeUserId;
         if (e !== t) {
             let n = this.databases.get(t);
-            o.verbose(`active user changed (now: ${e}, was: ${t}, was: ${n})`),
+            (o.verbose(`active user changed (now: ${e}, was: ${t}, was: ${n})`),
                 n?.close(),
                 (this.activeUserId = e),
-                this.databases.delete(t);
+                this.databases.delete(t));
         }
     }
     async carefullySpeculativelyOpen(e) {

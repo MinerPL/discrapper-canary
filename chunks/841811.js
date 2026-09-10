@@ -39,7 +39,7 @@ function y(e) {
             H(!0);
             try {
                 let e;
-                await ((e = Object.values(b)
+                (await ((e = Object.values(b)
                     .filter((e) => {
                         let { row: t } = e;
                         return null != t.id;
@@ -49,10 +49,10 @@ function y(e) {
                         return t.rowType === v.T6.ROLE ? w(t.id, u.r2.ROLE) : w(t.id, u.r2.MEMBER);
                     })),
                 (0, c.R$)(y.id, e, !0)),
-                    r();
+                    r());
             } catch (t) {
                 let e = new d.LG(t);
-                H(!1), O(e);
+                (H(!1), O(e));
             }
         }
     }

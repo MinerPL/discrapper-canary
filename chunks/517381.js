@@ -1,4 +1,4 @@
-n.d(t, { A: () => g }), n(321073);
+(n.d(t, { A: () => g }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(913122),
@@ -21,34 +21,34 @@ class _ {
     isInitialFetchComplete = !1;
     cursor = null;
     handleSearchStart() {
-        (this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null);
+        ((this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null));
     }
     handleSearchIndexing() {
-        (this.isInitialFetchComplete = !0),
+        ((this.isInitialFetchComplete = !0),
             (this.isIndexing = !0),
             (this.isHistoricalIndexing = !0),
             (this.isFetching = !1),
-            (this.error = null);
+            (this.error = null));
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1),
+        ((this.isFetching = !1),
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
             (this.isHistoricalIndexing = !1),
             (this.error = new a.LG(e)),
             (this.analyticsId = null),
-            (this.documentsIndexed = 0);
+            (this.documentsIndexed = 0));
     }
     handleSearchSuccess(e, t) {
         let { analyticsId: n, cursor: i, totalResults: r, doingHistoricalIndex: a, documentsIndexed: s } = e;
-        (this.analyticsId = n),
+        ((this.analyticsId = n),
             (this.isFetching = !1),
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
             (this.isHistoricalIndexing = a),
             (this.error = null),
             (this.documentsIndexed = s),
-            (this.cursor = i);
+            (this.cursor = i));
         let l = [...(this.messages ?? [])],
             o = [];
         return (
@@ -69,13 +69,13 @@ function I(e) {
 }
 function f(e) {
     let t = I(e);
-    return E.set(e, t), t;
+    return (E.set(e, t), t);
 }
 function p(e, t) {
     let n = A.get(e);
     if (null == n) return !1;
     let i = t(n);
-    return A.set(e, i), !0;
+    return (A.set(e, i), !0);
 }
 function T(e) {
     let { type: t, messageId: n, userId: i, emoji: r, channelId: a } = e;
@@ -164,14 +164,14 @@ let g = new m(r.h, {
     SEARCH_MESSAGES_CLEAR: function (e) {
         let t = E.get(e.id);
         if (null == t) return !1;
-        t.messageIds.forEach((e) => {
+        (t.messageIds.forEach((e) => {
             let t = h.get(e) ?? 0;
             t <= 1 ? (A.delete(e), h.delete(e)) : h.set(e, t - 1);
         }),
-            E.delete(e.id);
+            E.delete(e.id));
     },
     SEARCH_MESSAGES_CLEAR_ALL: function (e) {
-        (E = new Map()), (A = new Map()), (h = new Map());
+        ((E = new Map()), (A = new Map()), (h = new Map()));
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.id;
@@ -197,6 +197,6 @@ let g = new m(r.h, {
         return p(t, (e) => e.removeReactionsForEmoji(n));
     },
     CONNECTION_OPEN: function () {
-        (E = new Map()), (A = new Map()), (h = new Map());
+        ((E = new Map()), (A = new Map()), (h = new Map()));
     },
 });

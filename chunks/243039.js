@@ -28,7 +28,7 @@ class d extends u.AbstractParserWithWordBoundaryChecking {
         if (!t[3]) return u;
         let l = (0, i.parseOrdinalNumberPattern)(t[3]),
             d = e.createParsingResult(t.index, t[0]);
-        return (d.start = u), (d.end = u.clone()), d.end.assign("day", l), d;
+        return ((d.start = u), (d.end = u.clone()), d.end.assign("day", l), d);
     }
 }
 t.default = d;

@@ -24,7 +24,7 @@ function C(e, t) {
     let n = r.useContext(A.cK);
     return (
         r.useEffect(() => {
-            n.setHasValue?.((null != t && "" !== t) || (null != e && "" !== e)), n.setIsFocused?.(!1);
+            (n.setHasValue?.((null != t && "" !== t) || (null != e && "" !== e)), n.setIsFocused?.(!1));
         }, []),
         r.useEffect(() => {
             null != e && "" !== e && n.setHasValue?.(!0);
@@ -110,9 +110,9 @@ function L(e) {
         }),
         { setShouldValidate: k } = x,
         F = C(h, f),
-        V = "object" == typeof L && "type" in L && "tags" === L.type,
-        B = r.useRef(null),
-        H = (0, l.A)(B, a),
+        B = "object" == typeof L && "type" in L && "tags" === L.type,
+        V = r.useRef(null),
+        H = (0, l.A)(V, a),
         j = r.useRef(null),
         W = w.readOnly;
     null == W && !1 === n && (W = !0);
@@ -121,10 +121,10 @@ function L(e) {
         ? (Y = (0, i.jsx)(R, {
               inputSize: b,
               onClick: function (e) {
-                  null != w.onClear ? w.onClear(e) : w.onChange?.("", d),
+                  (null != w.onClear ? w.onClear(e) : w.onChange?.("", d),
                       requestAnimationFrame(() => {
-                          B.current?.focus();
-                      });
+                          V.current?.focus();
+                      }));
               },
           }))
         : null != D && (Y = (0, i.jsx)(O, { accessory: D, inputSize: b }));
@@ -144,7 +144,7 @@ function L(e) {
             className: s()(N.container, N[b], {
                 [N.hasLeading]: null != K,
                 [N.hasTrailing]: null != Y,
-                [N.hasTags]: V,
+                [N.hasTags]: B,
             }),
             children: [
                 K,
@@ -167,13 +167,13 @@ function L(e) {
                         ...w,
                         onChange: function (e) {
                             let t = e.currentTarget.value;
-                            w.onChange?.(t, d), k(!0), F.setHasValue?.("" !== t);
+                            (w.onChange?.(t, d), k(!0), F.setHasValue?.("" !== t));
                         },
                         onBlur: (e) => {
-                            w.onBlur?.(e), F.setIsFocused?.(!1);
+                            (w.onBlur?.(e), F.setIsFocused?.(!1));
                         },
                         onFocus: (e) => {
-                            w.onFocus?.(e), F.setIsFocused?.(!0);
+                            (w.onFocus?.(e), F.setIsFocused?.(!0));
                         },
                         ref: H,
                     }),

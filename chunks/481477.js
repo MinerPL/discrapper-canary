@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ey });
+(n.r(t), n.d(t, { default: () => ey }));
 var i = n(477900),
     l = n(17928),
     a = n(627363),
@@ -54,7 +54,7 @@ function S(e) {
         iconComponent: E.MoreHorizontalIcon,
         tooltipPosition: "bottom",
         onClick: (e) => {
-            (0, U.X)(l, U.O.MORE), t(e);
+            ((0, U.X)(l, U.O.MORE), t(e));
         },
         ...n,
     });
@@ -259,8 +259,8 @@ function el(e) {
                                                   popoutOpen: !0,
                                                   onOpenPopout: () => {},
                                                   onClosePopout: () => {
-                                                      (0, N.zV)(ee.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
-                                                          (0, J.A)({ onConfirm: u });
+                                                      ((0, N.zV)(ee.HAw.ACTIVITY_POPOUT_POP_IN_BUTTON_CLICKED),
+                                                          (0, J.A)({ onConfirm: u }));
                                                   },
                                               })
                                             : null,
@@ -305,7 +305,7 @@ function ea(e) {
     let { application: t, channelId: n } = e,
         a = (0, l.bG)([f.Ay], () => f.Ay.getSelfEmbeddedActivities().get(t.id)),
         r = o.useCallback(async () => {
-            await (0, $.od)(t.id, n ?? null), X.A.popInActivity();
+            (await (0, $.od)(t.id, n ?? null), X.A.popInActivity());
         }, [t.id, n]);
     return (0, i.jsx)(el, {
         application: t,
@@ -396,7 +396,7 @@ var ec = n(625180),
 function em(e) {
     let { frame: t, application: n } = e,
         l = o.useCallback(async () => {
-            await ec.A.refreshProxyTicket(t.id), eu.A.popInFrame();
+            (await ec.A.refreshProxyTicket(t.id), eu.A.popInFrame());
         }, [t.id]);
     return (0, i.jsx)(el, { application: n, isRichPresenceInvite: !0, onConfirmClosePopout: l, channelId: void 0 });
 }

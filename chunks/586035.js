@@ -43,13 +43,13 @@ function q(t) {
         u = (0, _.go)(),
         x = (0, I.E0)(e.config);
     async function f() {
-        await l?.(),
+        (await l?.(),
             (0, T.pu)(e, {
                 content: m.uF.REWARD_MODAL,
                 ctaContent: M.Cy.OPEN_GAME_LINK,
                 impressionId: d(),
                 sourceQuestContent: i,
-            });
+            }));
     }
     let q = n.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
@@ -214,7 +214,7 @@ function Z(t) {
         p = e.config.features.some((t) => P.Tz.has(t)),
         A = n.useCallback(async () => {
             if (p) {
-                c(), (0, o.closeAllModals)();
+                (c(), (0, o.closeAllModals)());
                 return;
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (c(), (0, o.closeAllModals)());

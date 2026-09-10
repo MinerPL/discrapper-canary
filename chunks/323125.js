@@ -7,7 +7,7 @@ function i(e) {
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
             r = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : "",
             a = null != t ? `?redirect_to=${encodeURIComponent(t)}` : "";
-        return 0 !== i.length && (i = 0 === a.length ? `?${i}` : `&${i}`), `${n ? r : ""}/${e}${a}${i}`;
+        return (0 !== i.length && (i = 0 === a.length ? `?${i}` : `&${i}`), `${n ? r : ""}/${e}${a}${i}`);
     })("login", e, t, n);
 }
 n.d(t, { T2: () => i, dN: () => a, x: () => r });

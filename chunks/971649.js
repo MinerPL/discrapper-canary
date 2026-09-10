@@ -21,7 +21,7 @@ function d(e) {
             let { adContentIds: t, questContent: n } = e;
             return `${[...t].sort().join("_")}_${n}`;
         })({ adContentIds: s, questContent: e.questContent });
-        return r.p.QUEST, { adContentIds: s, adCreativeType: o, key: t };
+        return (r.p.QUEST, { adContentIds: s, adCreativeType: o, key: t });
     }, [s, e.questContent, o]);
 }
 function c(e) {

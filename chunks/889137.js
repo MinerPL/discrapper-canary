@@ -7,7 +7,7 @@ let n = Symbol.for("@ts-pattern/matcher"),
     l = (e, t, r) => {
         if (s(e)) {
             let { matched: i, selections: o } = e[n]().match(t);
-            return i && o && Object.keys(o).forEach((e) => r(e, o[e])), i;
+            return (i && o && Object.keys(o).forEach((e) => r(e, o[e])), i);
         }
         if (a(e)) {
             if (!a(t)) return !1;
@@ -105,7 +105,7 @@ function h(...e) {
                     n = (e, t) => {
                         r[e] = t;
                     };
-                return c(e, u).forEach((e) => n(e, void 0)), { matched: e.some((e) => l(e, t, n)), selections: r };
+                return (c(e, u).forEach((e) => n(e, void 0)), { matched: e.some((e) => l(e, t, n)), selections: r });
             },
             getSelectionKeys: () => c(e, u),
             matcherType: "or",
@@ -325,7 +325,7 @@ var H = {
                     if (0 === e.length) return { matched: !0 };
                     if (1 === e.length)
                         throw Error(
-                            `\`P.map\` wasn't given enough arguments. Expected (key, value), received ${null == ((r = e[0])) ? void 0 : r.toString()}`,
+                            `\`P.map\` wasn't given enough arguments. Expected (key, value), received ${null == (r = e[0]) ? void 0 : r.toString()}`,
                         );
                     let [o, a] = e;
                     return {
@@ -410,7 +410,7 @@ function q(e) {
 }
 class Y {
     constructor(e, t) {
-        (this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t);
+        ((this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t));
     }
     with(...e) {
         let t;
@@ -423,7 +423,7 @@ class Y {
         let i = !1,
             a = {},
             s = (e, t) => {
-                (i = !0), (a[e] = t);
+                ((i = !0), (a[e] = t));
             },
             u =
                 n.some((e) => l(e, this.input, s)) && (!t || t(this.input))

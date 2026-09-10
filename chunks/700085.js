@@ -16,7 +16,7 @@ function d(t) {
             {
                 variant: "primary",
                 onClick: () => {
-                    n(), (0, l.openUserSettings)(a.X.ACCOUNT_STANDING_PANEL);
+                    (n(), (0, l.openUserSettings)(a.X.ACCOUNT_STANDING_PANEL));
                 },
                 text: o.intl.string(o.t.hvVgAZ),
             },

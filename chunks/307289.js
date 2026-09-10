@@ -1,17 +1,17 @@
 t.d(e, { loadDeepsightSession: () => c });
 var n = t(522681);
-t(580607), t(41851), t(269882), t(528239), t(829601);
+(t(580607), t(41851), t(269882), t(528239), t(829601));
 var s = t(924260);
-t(489510), t(886347), t(219877), t(309076);
+(t(489510), t(886347), t(219877), t(309076));
 var a = t(867386),
     r = t(880008);
-t(154676), t(693160), t(614235), t(888091);
+(t(154676), t(693160), t(614235), t(888091));
 var d = t(453080),
     o = class {
         constructor() {
-            (this._wasBackgrounded = !1),
+            ((this._wasBackgrounded = !1),
                 (this.visibilityChangeHandler = this.onVisibilityChange.bind(this)),
-                document.addEventListener("visibilitychange", this.visibilityChangeHandler);
+                document.addEventListener("visibilitychange", this.visibilityChangeHandler));
         }
         get wasBackgrounded() {
             return this._wasBackgrounded;
@@ -38,5 +38,5 @@ async function c(i) {
         }),
         t = i.disableIpify ?? (0, s.t)(),
         c = i.disableFingerprint ?? !(0, s.n)();
-    return await e.initialize(t, c), await e.startMotionSensors(), e;
+    return (await e.initialize(t, c), await e.startMotionSensors(), e);
 }

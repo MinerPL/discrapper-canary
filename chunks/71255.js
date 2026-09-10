@@ -1,11 +1,11 @@
 var o = r(462539);
 function n(t, e) {
     if (void 0 == t.length) throw Error(t.length + "/" + e);
-    for (var r = 0; r < t.length && 0 == t[r]; ) r++;
+    for (var r = 0; r < t.length && 0 == t[r];) r++;
     this.num = Array(t.length - r + e);
     for (var o = 0; o < t.length - r; o++) this.num[o] = t[o + r];
 }
-(n.prototype = {
+((n.prototype = {
     get: function (t) {
         return this.num[t];
     },
@@ -29,4 +29,4 @@ function n(t, e) {
         return new n(r, 0).mod(t);
     },
 }),
-    (t.exports = n);
+    (t.exports = n));

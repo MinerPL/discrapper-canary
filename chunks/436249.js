@@ -57,7 +57,7 @@ var n = e(834647),
     ts = !X || !X[B] || !X[B].findChild,
     ti = function (t, r, e) {
         var n = Z(V, r);
-        n && delete V[r], $(t, r, e), n && t !== V && $(V, r, n);
+        (n && delete V[r], $(t, r, e), n && t !== V && $(V, r, n));
     },
     tu =
         c &&
@@ -77,10 +77,10 @@ var n = e(834647),
             : $,
     tc = function (t, r) {
         var e = (te[t] = g(H));
-        return W(e, { type: U, tag: t, description: r }), c || (e.description = r), e;
+        return (W(e, { type: U, tag: t, description: r }), c || (e.description = r), e);
     },
     ta = function (t, r, e) {
-        t === V && ta(tn, r, e), v(t);
+        (t === V && ta(tn, r, e), v(t));
         var n = h(r);
         return (v(e), p(te, n))
             ? (e.enumerable
@@ -112,7 +112,7 @@ var n = e(834647),
             n = h(r);
         if (!(e === V && p(te, n)) || p(tn, n)) {
             var o = Z(e, n);
-            return o && p(te, n) && !(p(e, G) && e[G][n]) && (o.enumerable = !0), o;
+            return (o && p(te, n) && !(p(e, G) && e[G][n]) && (o.enumerable = !0), o);
         }
     },
     tv = function (t) {
@@ -136,7 +136,7 @@ var n = e(834647),
             n
         );
     };
-!a &&
+(!a &&
     (T(
         (H = (K = function () {
             if (l(H, this)) throw new q("Symbol is not a constructor");
@@ -144,7 +144,7 @@ var n = e(834647),
                 r = D(t),
                 e = function (t) {
                     var n = void 0 === this ? o : this;
-                    n === V && s(e, tn, t), p(n, G) && p(n[G], r) && (n[G][r] = !1);
+                    (n === V && s(e, tn, t), p(n, G) && p(n[G], r) && (n[G][r] = !1));
                     var i = d(1, t);
                     try {
                         tu(n, r, i);
@@ -153,7 +153,7 @@ var n = e(834647),
                         ti(n, r, i);
                     }
                 };
-            return c && ts && tu(V, r, { configurable: !0, set: e }), tc(r, t);
+            return (c && ts && tu(V, r, { configurable: !0, set: e }), tc(r, t));
         })[B]),
         "toString",
         function () {
@@ -209,4 +209,4 @@ var n = e(834647),
     n({ target: "Object", stat: !0, forced: !a }, { getOwnPropertyNames: tv }),
     C(),
     N(K, U),
-    (F[G] = !0);
+    (F[G] = !0));

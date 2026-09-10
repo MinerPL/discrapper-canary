@@ -1,4 +1,4 @@
-n.d(t, { A: () => s, a: () => i }), n(134528), n(947204);
+(n.d(t, { A: () => s, a: () => i }), n(134528), n(947204));
 let i = "NativeAppStartup";
 function r(e, t, n, i, r) {
     return `${e}:${t}:${n}:${i}:${r}`;
@@ -9,14 +9,14 @@ class a {
     channelsFetchedNetwork = new Set();
     fetchLogs = new Map();
     recordChannelFetchStart(e, t, n, i, a) {
-        this.channelsFetchStarted.add(e),
+        (this.channelsFetchStarted.add(e),
             this.fetchLogs.set(r(e, t, n ?? null, i ?? null, a), {
                 channelId: e,
                 before: n ?? null,
                 after: i ?? null,
                 limit: a,
                 startTime: Date.now(),
-            });
+            }));
     }
     recordChannelFetchedLocal(e, t, n, i, a, s) {
         this.channelsFetchedWithLocalMessages.add(e);

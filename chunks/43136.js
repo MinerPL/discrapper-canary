@@ -65,12 +65,16 @@ function R(e) {
 function M(e) {
     let { guild: t, subscriptionsSettings: n } = e,
         s = t.id,
-        { nickname: o, nickcolor: g } = (0, r.cf)([f.Ay, E.default], () => {
-            let e = E.default.getCurrentUser();
-            a()(null != e, "user cannot be null");
-            let t = f.Ay.getMember(s, e.id);
-            return { nickname: t?.nick ?? C.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
-        }, [s]),
+        { nickname: o, nickcolor: g } = (0, r.cf)(
+            [f.Ay, E.default],
+            () => {
+                let e = E.default.getCurrentUser();
+                a()(null != e, "user cannot be null");
+                let t = f.Ay.getMember(s, e.id);
+                return { nickname: t?.nick ?? C.Ay.getName(e), nickcolor: t?.colorString ?? void 0 };
+            },
+            [s],
+        ),
         { isTruncated: A, ExpandableTextContainer: x } = (0, v.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
         [_, M] = l.useState(1),

@@ -36,17 +36,17 @@ function L(e) {
 class y extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], O);
+        (this.waitFor(s.default), this.syncWith([s.default], O));
     }
     checkAndFetchReferralsRemaining() {
         null == d && !_ && I < 6 && (null == f || f < Date.now()) && (0, l.xM)();
     }
     getReferralsRemaining() {
         let { bypassFetch: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return e || this.checkAndFetchReferralsRemaining(), d;
+        return (e || this.checkAndFetchReferralsRemaining(), d);
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), Array.from(c.values());
+        return (this.checkAndFetchReferralsRemaining(), Array.from(c.values()));
     }
     isFetchingReferralsRemaining() {
         return _;
@@ -92,7 +92,7 @@ let D = new y(a.h, {
     },
     BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
         let {} = e;
-        (N = null), (_ = !0);
+        ((N = null), (_ = !0));
     },
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
         let {
@@ -103,21 +103,21 @@ let D = new y(a.h, {
             has_eligible_friends: a,
             reminder_state_id: s,
         } = e;
-        (g = !0), (S = a), (_ = !1), (d = t), (c = new Set(n)), (N = i), (u = r), (C = s), (I = 0), (f = null);
+        ((g = !0), (S = a), (_ = !1), (d = t), (c = new Set(n)), (N = i), (u = r), (C = s), (I = 0), (f = null));
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        (g = !1), (S = !1), (N = null), (_ = !1);
+        ((g = !1), (S = !1), (N = null), (_ = !1));
         let t = (I += 1) <= 3 ? 1e3 * Math.pow(2, I) : 8e3 * Math.pow(4, I - 3);
         f = Date.now() + Math.min(3e5, t);
     },
     BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        (0, l.xM)(), h.set(t.id, t), c.add(t.userId);
+        ((0, l.xM)(), h.set(t.id, t), c.add(t.userId));
     },
     CREATE_REFERRALS_SUCCESS: function (e) {
         let { userTrialOffers: t } = e;
-        for (let e of ((0, l.xM)(), t)) h.set(e.id, e), c.add(e.userId);
+        for (let e of ((0, l.xM)(), t)) (h.set(e.id, e), c.add(e.userId));
     },
     BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
@@ -125,14 +125,14 @@ let D = new y(a.h, {
     },
     BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
         let { userTrialOfferId: t } = e;
-        E.delete(t), A.add(t);
+        (E.delete(t), A.add(t));
     },
     REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
         T = !0;
     },
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function (e) {
         let { users: t, nextIndex: n } = e;
-        (T = !1), (p = t), (m = n);
+        ((T = !1), (p = t), (m = n));
     },
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
         T = !1;
@@ -144,7 +144,7 @@ let D = new y(a.h, {
     },
     LOAD_MESSAGES_AROUND_SUCCESS: R,
     LOGOUT: function () {
-        (d = null),
+        ((d = null),
             (c = new Set()),
             (_ = !1),
             (E = new Set()),
@@ -159,6 +159,6 @@ let D = new y(a.h, {
             (S = !1),
             (N = null),
             (u = new Map()),
-            (C = null);
+            (C = null));
     },
 });

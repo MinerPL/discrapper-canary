@@ -15,14 +15,14 @@ class o {
     customId;
     constructor(e) {
         const t = (0, a.t)(e.link_id);
-        (this.type = t?.type ?? null),
+        ((this.type = t?.type ?? null),
             (this.applicationId = e.application_id),
             (this.linkId = e.link_id),
             (this.assetId = "asset_id" in e ? e.asset_id : void 0),
             (this.assetPath = "asset_path" in e ? e.asset_path : void 0),
             (this.title = e.title),
             (this.description = e.description),
-            (this.customId = e.custom_id);
+            (this.customId = e.custom_id));
     }
     getAssetURL() {
         return this.type === a.G.MANAGED
@@ -42,7 +42,7 @@ class c extends i.Ay.Store {
 let u = new c(r.h, {
     CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function (e) {
         let { applicationId: t, link: n } = e;
-        null == d[t] && (d[t] = Object.create(null)), (d[t][n.link_id] = new o(n));
+        (null == d[t] && (d[t] = Object.create(null)), (d[t][n.link_id] = new o(n)));
     },
     LOGOUT: function () {
         d = {};

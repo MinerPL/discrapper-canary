@@ -23,7 +23,7 @@ function d(t) {
                 value: 100 * t.opacity,
                 maxValue: 100,
                 onChange: (i) => {
-                    (0, p.Ju)({ widgetId: t.id, opacity: i / 100 }), a(Math.floor(i));
+                    ((0, p.Ju)({ widgetId: t.id, opacity: i / 100 }), a(Math.floor(i)));
                 },
                 "aria-label": c.intl.string(c.t.kbFsAD),
             }),

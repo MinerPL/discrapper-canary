@@ -40,10 +40,10 @@ function A(e) {
         isAnimating: p,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {
-                R.onMouseEnter(), _.onMouseEnter();
+                (R.onMouseEnter(), _.onMouseEnter());
             }, [R, _]),
             onMouseLeave: r.useCallback(() => {
-                R.onMouseLeave(), _.onMouseLeave();
+                (R.onMouseLeave(), _.onMouseLeave());
             }, [R, _]),
         },
     };

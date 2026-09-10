@@ -5,7 +5,7 @@ var l = n(636537),
 async function a(e) {
     let { skuId: t, paymentSourceId: n, paymentGateway: a, loadId: s, testMode: o } = e,
         u = {};
-    null != n && (u.payment_source_id = n), null != a && (u.payment_gateway = a);
+    (null != n && (u.payment_source_id = n), null != a && (u.payment_gateway = a));
     let c = { order_line_items: [{ sku_id: t, quantity: 1, purchase_type: i.BM.ONE_TIME }], billing_facet: u };
     o && (c.application_facet = { test_mode: !0 });
     let d = (
@@ -22,9 +22,9 @@ async function a(e) {
 async function s(e) {
     let { orderId: t, updates: n, expectedRevision: i } = e,
         a = {};
-    "paymentSourceId" in n && (a.billing_facet = { ...a.billing_facet, payment_source_id: n.paymentSourceId }),
+    ("paymentSourceId" in n && (a.billing_facet = { ...a.billing_facet, payment_source_id: n.paymentSourceId }),
         "currency" in n && (a.billing_facet = { ...a.billing_facet, currency: n.currency }),
-        null != i && (a.expected_revision = i);
+        null != i && (a.expected_revision = i));
     let s = (await l.Bo.patch({ url: r.Rsh.ORDER_UPDATE(t), body: a, rejectWithError: !0 })).body;
     if (null == s || null == s.id || "" === s.id) throw Error("Invalid order response");
     return s;

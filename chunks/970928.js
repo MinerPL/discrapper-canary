@@ -1,4 +1,4 @@
-n.d(t, { RG: () => y, Di: () => C, uD: () => O, Y: () => R }), n(323874), n(14289), n(35956);
+(n.d(t, { RG: () => y, Di: () => C, uD: () => O, Y: () => R }), n(323874), n(14289), n(35956));
 var i = n(284009),
     r = n.n(i),
     a = n(636537),
@@ -13,7 +13,7 @@ function _(e) {
         n = { ...c };
     for (let e in t) {
         let i = t[e];
-        (n[e] = 2), (u[e] = { assets: o().keyBy(i, "name") ?? {}, lastUpdated: Date.now() });
+        ((n[e] = 2), (u[e] = { assets: o().keyBy(i, "name") ?? {}, lastUpdated: Date.now() }));
     }
     c = n;
 }
@@ -81,7 +81,7 @@ let p = "https://i.scdn.co/image/",
         [f.fg2.YOUTUBE]: {
             deserialize: (e) => {
                 let t;
-                return (t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`;
+                return ((t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`);
             },
             serialize: (e) => {
                 let t = e.match(m);
@@ -113,7 +113,9 @@ let p = "https://i.scdn.co/image/",
     S = new Map();
 async function N(e) {
     let { body: t } = await a.Bo.get({ url: f.Rsh.APPLICATION_ASSETS(e), oldFormErrors: !0, rejectWithError: !1 });
-    return s.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), A.getApplicationAssets(e);
+    return (
+        s.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), A.getApplicationAssets(e)
+    );
 }
 function C(e, t) {
     let n = g[e].serialize(t);
@@ -176,7 +178,7 @@ async function y(e, t) {
             return n === e.length;
         })(t, i))
     )
-        return s.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i;
+        return (s.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i);
     let a = await R(e);
     return (s.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: a }),
     (function (e, t, n, i) {

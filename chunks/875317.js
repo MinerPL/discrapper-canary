@@ -29,13 +29,17 @@ function I(e) {
     return e?.enabled !== !0 ? null : A(e.themeSettings);
 }
 function f(e, t) {
-    let n = (0, r.bG)([o.A, _.A], () => {
-        if (null == e || !t) return null;
-        let n = o.A.getGuild(e);
-        if (null == n || !n.features.has(E.GuildFeatures.GUILD_THEME)) return null;
-        let i = _.A.getGuildThemeSnapshot(e);
-        return void 0 !== i ? i : n.guildTheme;
-    }, [e, t]);
+    let n = (0, r.bG)(
+        [o.A, _.A],
+        () => {
+            if (null == e || !t) return null;
+            let n = o.A.getGuild(e);
+            if (null == n || !n.features.has(E.GuildFeatures.GUILD_THEME)) return null;
+            let i = _.A.getGuildThemeSnapshot(e);
+            return void 0 !== i ? i : n.guildTheme;
+        },
+        [e, t],
+    );
     return i.useMemo(() => I(n), [n]);
 }
 function p(e) {
@@ -61,9 +65,14 @@ function m() {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useActiveGuildThemeForGuildId",
             n = (0, s.OS)(t),
-            o = (0, r.bG)([u.Ay], () => {
-                if (null != e && n && u.Ay.isActive && u.Ay.guildId === e) return u.Ay.draftEnabled ? u.Ay.draft : null;
-            }, [e, n]),
+            o = (0, r.bG)(
+                [u.Ay],
+                () => {
+                    if (null != e && n && u.Ay.isActive && u.Ay.guildId === e)
+                        return u.Ay.draftEnabled ? u.Ay.draft : null;
+                },
+                [e, n],
+            ),
             d = f(e, n),
             c = (0, r.bG)([l.A], () => (null != e && n ? l.A.resolveGuildThemeSourcePreference(e) : a.tI.PERSONAL), [
                 e,

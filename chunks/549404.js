@@ -42,7 +42,7 @@ class f extends i.PureComponent {
                   confirmText: M.intl.string(M.t.MwSEoz),
                   cancelText: M.intl.string(M.t["ETE/oC"]),
                   onConfirm: () => {
-                      C.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), e();
+                      (C.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }), e());
                   },
                   children: t,
               });
@@ -61,7 +61,7 @@ class f extends i.PureComponent {
         });
     }
     handleAddPasskey = () => {
-        this.props.onClose(), (0, g.A)();
+        (this.props.onClose(), (0, g.A)());
     };
     renderPasskeyCTASection() {
         return x.A.hasCredentials

@@ -5,7 +5,7 @@ var r = n(284009),
     l = n(287809);
 function a() {
     let e = (0, s.bG)([l.default], () => l.default.getCurrentUser());
-    return i()(null != e, "user has to be signed in before accessing shop"), e;
+    return (i()(null != e, "user has to be signed in before accessing shop"), e);
 }
 function o() {
     return (0, s.bG)([l.default], () => l.default.getCurrentUser());

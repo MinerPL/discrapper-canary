@@ -1,4 +1,4 @@
-n.d(t, { A: () => h }), n(321073);
+(n.d(t, { A: () => h }), n(321073));
 var l = n(477900),
     i = n(582128),
     a = n(661531),
@@ -79,11 +79,11 @@ function h(e) {
         j = i.useCallback(
             (e) => {
                 let t = [];
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     let n = x.get(e);
                     null != n && t.push(n);
                 }),
-                    h(t);
+                    h(t));
             },
             [h, x],
         );

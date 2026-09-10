@@ -21,7 +21,7 @@ function d(t) {
     return null != e
         ? (0, i.jsx)(a.D, {
               onClick: (t) => {
-                  t.stopPropagation(), e(t);
+                  (t.stopPropagation(), e(t));
               },
               className: u.sd,
               children: x(),

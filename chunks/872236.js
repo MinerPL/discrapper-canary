@@ -38,7 +38,7 @@ function b(e) {
             if (r.isLink(b)) {
                 if ("selection" === T && w.current) {
                     let t = r.getItemProps(b);
-                    M.open(w.current, e, t.href, t.routerOptions), r.setSelectedKeys(r.selectedKeys);
+                    (M.open(w.current, e, t.href, t.routerOptions), r.setSelectedKeys(r.selectedKeys));
                     return;
                 } else if ("override" === T || "none" === T) return;
             }
@@ -54,14 +54,14 @@ function b(e) {
                     : r.replaceSelection(b);
         }
     };
-    (0, g.useEffect)(() => {
+    ((0, g.useEffect)(() => {
         b === r.focusedKey &&
             r.isFocused &&
             (S ? (0, c.vX)(w.current) : x ? x() : (0, o.bq)() !== w.current && w.current && (0, i.l)(w.current));
     }, [w, b, r.focusedKey, r.childFocusStrategy, r.isFocused, S]),
-        (E = E || r.isDisabled(b));
+        (E = E || r.isDisabled(b)));
     let A = {};
-    S || E
+    (S || E
         ? E &&
           (A.onMouseDown = (e) => {
               e.preventDefault();
@@ -74,7 +74,7 @@ function b(e) {
           }),
         (0, g.useEffect)(() => {
             E && r.focusedKey === b && r.setFocusedKey(null);
-        }, [r, E, b]);
+        }, [r, E, b]));
     let I = r.isLink(b) && "override" === T,
         O = k && "action" === e.UNSTABLE_itemBehavior,
         D = r.isLink(b) && "selection" !== T && "none" !== T,
@@ -89,15 +89,15 @@ function b(e) {
         V = (0, g.useRef)(!1),
         U = r.getItemProps(b),
         z = (e) => {
-            k && (k(), w.current?.dispatchEvent(new CustomEvent("react-aria-item-action", { bubbles: !0 }))),
-                D && w.current && M.open(w.current, e, U.href, U.routerOptions);
+            (k && (k(), w.current?.dispatchEvent(new CustomEvent("react-aria-item-action", { bubbles: !0 }))),
+                D && w.current && M.open(w.current, e, U.href, U.routerOptions));
         },
         W = { ref: w };
     _
         ? ((W.onPressStart = (e) => {
-              (B.current = e.pointerType),
+              ((B.current = e.pointerType),
                   ($.current = K),
-                  "keyboard" !== e.pointerType || (j && " " !== e.key) || P(e);
+                  "keyboard" !== e.pointerType || (j && " " !== e.key) || P(e));
           }),
           C
               ? ((W.onPressUp = F
@@ -116,12 +116,12 @@ function b(e) {
                         : "keyboard" !== e.pointerType && R && P(e);
                 }))
         : ((W.onPressStart = (e) => {
-              (B.current = e.pointerType),
+              ((B.current = e.pointerType),
                   ($.current = K),
                   (V.current = F),
                   !R ||
                       (("mouse" !== e.pointerType || F) && ("keyboard" !== e.pointerType || (L && " " !== e.key))) ||
-                      P(e);
+                      P(e));
           }),
           (W.onPress = (e) => {
               ("touch" === e.pointerType ||
@@ -171,15 +171,15 @@ function b(e) {
                 { pressProps: b } = (0, d.d)({
                     isDisabled: t,
                     onPressStart(e) {
-                        e.continuePropagation(),
+                        (e.continuePropagation(),
                             p(e) &&
                                 (n && n({ ...e, type: "longpressstart" }),
                                 (l.current = setTimeout(() => {
-                                    e.target.dispatchEvent(new PointerEvent("pointercancel", { bubbles: !0 })),
+                                    (e.target.dispatchEvent(new PointerEvent("pointercancel", { bubbles: !0 })),
                                         c(e.target, "click", (e) => e.preventDefault(), { once: !0 }),
                                         (0, m.TW)(e.target).activeElement !== e.target && (0, h.e)(e.target),
                                         o && o({ ...e, type: "longpress" }),
-                                        (l.current = void 0);
+                                        (l.current = void 0));
                                 }, a)),
                                 "touch" === e.pointerType &&
                                     c(e.target, "contextmenu", (e) => e.preventDefault(), { once: !0 }),
@@ -192,10 +192,10 @@ function b(e) {
                                         }, 100);
                                     },
                                     { once: !0 },
-                                ));
+                                )));
                     },
                     onPressEnd(e) {
-                        l.current && clearTimeout(l.current), i && p(e) && i({ ...e, type: "longpressend" });
+                        (l.current && clearTimeout(l.current), i && p(e) && i({ ...e, type: "longpressend" }));
                     },
                 }),
                 w = (0, v.I)(o && !t ? s : void 0);
@@ -228,7 +228,7 @@ function b(e) {
         ),
         Z = (e) => {
             let t = e;
-            for (; t && t !== w.current; ) {
+            for (; t && t !== w.current;) {
                 let e = t.getAttribute("data-collection");
                 if (null != e) return e !== H;
                 t = t.parentElement;

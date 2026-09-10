@@ -22,7 +22,7 @@ let o = function (e) {
                     });
                 } catch (e) {
                 } finally {
-                    (0, a.H1)(null), l?.();
+                    ((0, a.H1)(null), l?.());
                 }
             },
             [e, t],

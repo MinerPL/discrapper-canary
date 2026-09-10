@@ -12,7 +12,7 @@ function h(t, ...e) {
 function a(t) {
     if ("function" != typeof t || "function" != typeof t.create)
         throw Error("Hash should be wrapped by utils.wrapConstructor");
-    o(t.outputLen), o(t.blockLen);
+    (o(t.outputLen), o(t.blockLen));
 }
 function f(t, e = !0) {
     if (t.destroyed) throw Error("Hash instance has been destroyed");
@@ -62,7 +62,7 @@ let E = (t, e, r) => (t & e) ^ (~t & r),
     H = (t, e, r) => (t & e) ^ (t & r) ^ (e & r);
 class I extends A {
     constructor(t, e, r, s) {
-        super(),
+        (super(),
             (this.blockLen = t),
             (this.outputLen = e),
             (this.padOffset = r),
@@ -72,25 +72,25 @@ class I extends A {
             (this.pos = 0),
             (this.destroyed = !1),
             (this.buffer = new Uint8Array(t)),
-            (this.view = l(this.buffer));
+            (this.view = l(this.buffer)));
     }
     update(t) {
         f(this);
         let { view: e, buffer: r, blockLen: s } = this,
             n = (t = w(t)).length;
-        for (let i = 0; i < n; ) {
+        for (let i = 0; i < n;) {
             let o = Math.min(s - this.pos, n - i);
             if (o === s) {
                 let e = l(t);
                 for (; s <= n - i; i += s) this.process(e, i);
                 continue;
             }
-            r.set(t.subarray(i, i + o), this.pos),
+            (r.set(t.subarray(i, i + o), this.pos),
                 (this.pos += o),
                 (i += o),
-                this.pos === s && (this.process(e, 0), (this.pos = 0));
+                this.pos === s && (this.process(e, 0), (this.pos = 0)));
         }
-        return (this.length += t.length), this.roundClean(), this;
+        return ((this.length += t.length), this.roundClean(), this);
     }
     digestInto(t) {
         f(this);
@@ -100,9 +100,9 @@ class I extends A {
         this.finished = !0;
         let { buffer: r, view: s, blockLen: n, isLE: i } = this,
             { pos: o } = this;
-        (r[o++] = 128), this.buffer.subarray(o).fill(0), this.padOffset > n - o && (this.process(s, 0), (o = 0));
+        ((r[o++] = 128), this.buffer.subarray(o).fill(0), this.padOffset > n - o && (this.process(s, 0), (o = 0)));
         for (let t = o; t < n; t++) r[t] = 0;
-        !(function (t, e, r, s) {
+        (!(function (t, e, r, s) {
             if ("function" == typeof t.setBigUint64) return t.setBigUint64(e, r, s);
             let n = BigInt(32),
                 i = BigInt(0xffffffff),
@@ -110,9 +110,9 @@ class I extends A {
                 h = Number(r & i),
                 a = 4 * !!s,
                 f = 4 * !s;
-            t.setUint32(e + a, o, s), t.setUint32(e + f, h, s);
+            (t.setUint32(e + a, o, s), t.setUint32(e + f, h, s));
         })(s, n - 8, BigInt(8 * this.length), i),
-            this.process(s, 0);
+            this.process(s, 0));
         let a = l(t),
             c = this.outputLen;
         if (c % 4) throw Error("_sha2: outputLen should be aligned to 32bit");
@@ -125,12 +125,12 @@ class I extends A {
         let { buffer: t, outputLen: e } = this;
         this.digestInto(t);
         let r = t.slice(0, e);
-        return this.destroy(), r;
+        return (this.destroy(), r);
     }
     _cloneInto(t) {
-        t || (t = new this.constructor()), t.set(...this.get());
+        (t || (t = new this.constructor()), t.set(...this.get()));
         let { blockLen: e, buffer: r, length: s, finished: n, destroyed: i, pos: o } = this;
-        return (t.length = s), (t.pos = o), (t.finished = n), (t.destroyed = i), s % e && t.buffer.set(r), t;
+        return ((t.length = s), (t.pos = o), (t.finished = n), (t.destroyed = i), s % e && t.buffer.set(r), t);
     }
 }
 let k = new Uint32Array([
@@ -149,7 +149,7 @@ let k = new Uint32Array([
     m = new Uint32Array(64);
 class v extends I {
     constructor() {
-        super(64, 32, 8, !1),
+        (super(64, 32, 8, !1),
             (this.A = 0 | C[0]),
             (this.B = 0 | C[1]),
             (this.C = 0 | C[2]),
@@ -157,21 +157,21 @@ class v extends I {
             (this.E = 0 | C[4]),
             (this.F = 0 | C[5]),
             (this.G = 0 | C[6]),
-            (this.H = 0 | C[7]);
+            (this.H = 0 | C[7]));
     }
     get() {
         let { A: t, B: e, C: r, D: s, E: n, F: i, G: o, H: h } = this;
         return [t, e, r, s, n, i, o, h];
     }
     set(t, e, r, s, n, i, o, h) {
-        (this.A = 0 | t),
+        ((this.A = 0 | t),
             (this.B = 0 | e),
             (this.C = 0 | r),
             (this.D = 0 | s),
             (this.E = 0 | n),
             (this.F = 0 | i),
             (this.G = 0 | o),
-            (this.H = 0 | h);
+            (this.H = 0 | h));
     }
     process(t, e) {
         for (let r = 0; r < 16; r++, e += 4) m[r] = t.getUint32(e, !1);
@@ -186,9 +186,9 @@ class v extends I {
         for (let t = 0; t < 64; t++) {
             let e = (f + (u(o, 6) ^ u(o, 11) ^ u(o, 25)) + E(o, h, a) + k[t] + m[t]) | 0,
                 c = ((u(r, 2) ^ u(r, 13) ^ u(r, 22)) + H(r, s, n)) | 0;
-            (f = a), (a = h), (h = o), (o = (i + e) | 0), (i = n), (n = s), (s = r), (r = (e + c) | 0);
+            ((f = a), (a = h), (h = o), (o = (i + e) | 0), (i = n), (n = s), (s = r), (r = (e + c) | 0));
         }
-        (r = (r + this.A) | 0),
+        ((r = (r + this.A) | 0),
             (s = (s + this.B) | 0),
             (n = (n + this.C) | 0),
             (i = (i + this.D) | 0),
@@ -196,13 +196,13 @@ class v extends I {
             (h = (h + this.F) | 0),
             (a = (a + this.G) | 0),
             (f = (f + this.H) | 0),
-            this.set(r, s, n, i, o, h, a, f);
+            this.set(r, s, n, i, o, h, a, f));
     }
     roundClean() {
         m.fill(0);
     }
     destroy() {
-        this.set(0, 0, 0, 0, 0, 0, 0, 0), this.buffer.fill(0);
+        (this.set(0, 0, 0, 0, 0, 0, 0, 0), this.buffer.fill(0));
     }
 }
 let B =
@@ -213,34 +213,34 @@ let B =
     n);
 class O extends A {
     constructor(t, e) {
-        super(), (this.finished = !1), (this.destroyed = !1), a(t);
+        (super(), (this.finished = !1), (this.destroyed = !1), a(t));
         const r = w(e);
         if (((this.iHash = t.create()), "function" != typeof this.iHash.update))
             throw Error("Expected instance of class which extends utils.Hash");
-        (this.blockLen = this.iHash.blockLen), (this.outputLen = this.iHash.outputLen);
+        ((this.blockLen = this.iHash.blockLen), (this.outputLen = this.iHash.outputLen));
         const s = this.blockLen,
             n = new Uint8Array(s);
         n.set(r.length > s ? t.create().update(r).digest() : r);
         for (let t = 0; t < n.length; t++) n[t] ^= 54;
-        this.iHash.update(n), (this.oHash = t.create());
+        (this.iHash.update(n), (this.oHash = t.create()));
         for (let t = 0; t < n.length; t++) n[t] ^= 106;
-        this.oHash.update(n), n.fill(0);
+        (this.oHash.update(n), n.fill(0));
     }
     update(t) {
-        return f(this), this.iHash.update(t), this;
+        return (f(this), this.iHash.update(t), this);
     }
     digestInto(t) {
-        f(this),
+        (f(this),
             h(t, this.outputLen),
             (this.finished = !0),
             this.iHash.digestInto(t),
             this.oHash.update(t),
             this.oHash.digestInto(t),
-            this.destroy();
+            this.destroy());
     }
     digest() {
         let t = new Uint8Array(this.oHash.outputLen);
-        return this.digestInto(t), t;
+        return (this.digestInto(t), t);
     }
     _cloneInto(t) {
         t || (t = Object.create(Object.getPrototypeOf(this), {}));
@@ -256,7 +256,7 @@ class O extends A {
         );
     }
     destroy() {
-        (this.destroyed = !0), this.oHash.destroy(), this.iHash.destroy();
+        ((this.destroyed = !0), this.oHash.destroy(), this.iHash.destroy());
     }
 }
 let _ = (t, e, r) => new O(t, e).update(r).digest();
@@ -285,13 +285,13 @@ function j(t, e, r, s) {
         p = new Uint8Array(u.outputLen);
     for (let t = 1, e = 0; e < f; t++, e += u.outputLen) {
         let r = c.subarray(e, e + u.outputLen);
-        b.setInt32(0, t, !1), (i = d._cloneInto(i)).update(x).digestInto(p), r.set(p.subarray(0, r.length));
+        (b.setInt32(0, t, !1), (i = d._cloneInto(i)).update(x).digestInto(p), r.set(p.subarray(0, r.length)));
         for (let t = 1; t < h; t++) {
             u._cloneInto(i).update(p).digestInto(p);
             for (let t = 0; t < r.length; t++) r[t] ^= p[t];
         }
     }
-    return (n = i), u.destroy(), d.destroy(), n && n.destroy(), p.fill(0), c;
+    return ((n = i), u.destroy(), d.destroy(), n && n.destroy(), p.fill(0), c);
 }
 function D(t, e, r, s, n, i) {
     let o = t[e++] ^ r[s++],
@@ -327,7 +327,7 @@ function D(t, e, r, s, n, i) {
         N = L,
         F = U;
     for (let t = 0; t < 8; t += 2)
-        (C ^= d((E + S) | 0, 7)),
+        ((C ^= d((E + S) | 0, 7)),
             (O ^= d((C + E) | 0, 9)),
             (S ^= d((O + C) | 0, 13)),
             (E ^= d((S + O) | 0, 18)),
@@ -358,8 +358,8 @@ function D(t, e, r, s, n, i) {
             (S ^= d((F + N) | 0, 7)),
             ($ ^= d((S + F) | 0, 9)),
             (N ^= d(($ + S) | 0, 13)),
-            (F ^= d((N + $) | 0, 18));
-    (n[i++] = (o + E) | 0),
+            (F ^= d((N + $) | 0, 18)));
+    ((n[i++] = (o + E) | 0),
         (n[i++] = (h + H) | 0),
         (n[i++] = (a + I) | 0),
         (n[i++] = (f + k) | 0),
@@ -374,13 +374,14 @@ function D(t, e, r, s, n, i) {
         (n[i++] = (w + S) | 0),
         (n[i++] = (A + $) | 0),
         (n[i++] = (L + N) | 0),
-        (n[i++] = (U + F) | 0);
+        (n[i++] = (U + F) | 0));
 }
 function S(t, e, r, s, n) {
     let i = s + 0,
         o = s + 16 * n;
     for (let s = 0; s < 16; s++) r[o + s] = t[e + (2 * n - 1) * 16 + s];
-    for (let s = 0; s < n; s++, i += 16, e += 16) D(r, o, t, e, r, i), s > 0 && (o += 16), D(r, i, t, (e += 16), r, o);
+    for (let s = 0; s < n; s++, i += 16, e += 16)
+        (D(r, o, t, e, r, i), s > 0 && (o += 16), D(r, i, t, (e += 16), r, o));
 }
 async function $(t, e, r) {
     let s,
@@ -428,7 +429,7 @@ async function $(t, e, r) {
                     e = Math.max(Math.floor(t / 1e4), 1),
                     r = 0;
                 w = () => {
-                    r++, l && (!(r % e) || r === t) && l(r / t);
+                    (r++, l && (!(r % e) || r === t) && l(r / t));
                 };
             }
             return {
@@ -450,17 +451,17 @@ async function $(t, e, r) {
         let e = f * t;
         for (let t = 0; t < f; t++) l[t] = u[e + t];
         let r = 0;
-        await g(n - 1, w, () => {
-            S(l, r, l, (r += f), i), y();
+        (await g(n - 1, w, () => {
+            (S(l, r, l, (r += f), i), y());
         }),
             S(l, (n - 1) * f, u, e, i),
             y(),
             await g(n, w, () => {
                 let t = u[e + f - 16] % n;
                 for (let r = 0; r < f; r++) b[r] = u[e + r] ^ l[t * f + r];
-                S(b, 0, u, e, i), y();
-            });
+                (S(b, 0, u, e, i), y());
+            }));
     }
-    return x || p(u), (s = j(B, t, d, { c: 1, dkLen: a })), d.fill(0), l.fill(0), b.fill(0), s;
+    return (x || p(u), (s = j(B, t, d, { c: 1, dkLen: a })), d.fill(0), l.fill(0), b.fill(0), s);
 }
 _.create = (t, e) => new O(t, e);

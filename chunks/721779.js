@@ -1,10 +1,10 @@
-n.d(t, { br: () => en, rL: () => X, Ay: () => Q, $9: () => ee, l7: () => et, tl: () => q, ts: () => J, st: () => G }),
-    n(321073);
+(n.d(t, { br: () => en, rL: () => Z, Ay: () => Q, $9: () => ee, l7: () => et, tl: () => X, ts: () => J, st: () => G }),
+    n(321073));
 var i = n(492462),
     r = n(567243),
     a = n(179771),
     s = n(121401);
-n(380610), n(100392);
+(n(380610), n(100392));
 var l = n(842241);
 n(346542);
 var o = n(123677),
@@ -44,8 +44,8 @@ let m = /^\/([a-zA-Z0-9-]+)$/,
     x = K(window.GLOBAL_ENV.INVITE_HOST),
     k = K(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
     F = K(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${p.U2_}`),
-    V = K(`//canary.${p.U2_}`),
-    B = K(`//ptb.${p.U2_}`),
+    B = K(`//canary.${p.U2_}`),
+    V = K(`//ptb.${p.U2_}`),
     H = K("discordapp.com"),
     j = K("discord.com"),
     W = [
@@ -75,10 +75,10 @@ function z(e, t) {
     let r = n.substring(i.length);
     return "" === r ? null : r;
 }
-function q(e) {
-    return z(F, e) ?? z(V, e) ?? z(B, e) ?? z(H, e) ?? z(j, e);
+function X(e) {
+    return z(F, e) ?? z(B, e) ?? z(V, e) ?? z(H, e) ?? z(j, e);
 }
-function Z(e) {
+function q(e) {
     let t = et(e);
     if (null == t || null == t.pathname)
         return {
@@ -89,15 +89,15 @@ function Z(e) {
         };
     let n = z(x, t),
         i = z(k, t),
-        r = z(F, t) ?? z(V, t) ?? z(B, t) ?? z(H, t) ?? z(j, t);
+        r = z(F, t) ?? z(B, t) ?? z(V, t) ?? z(H, t) ?? z(j, t);
     return { url: t, inviteHostRemainingPath: n, templateHostRemainingPath: i, primaryHostRemainingPath: r };
 }
-function X(e) {
+function Z(e) {
     if (e.includes("\\")) {
         let t = et(e);
         if (null == t) return !1;
         if ($(x, t)) return !0;
-        if ([F, V, B, H, j].some((e) => $(e, t))) return t.pathname?.toUpperCase().includes(u.I.INVITE) ?? !1;
+        if ([F, B, V, H, j].some((e) => $(e, t))) return t.pathname?.toUpperCase().includes(u.I.INVITE) ?? !1;
     }
     return !1;
 }
@@ -118,7 +118,7 @@ function Q(e) {
                 inviteHostRemainingPath: _,
                 templateHostRemainingPath: E,
                 primaryHostRemainingPath: A,
-            } = Z(c);
+            } = q(c);
             if (null == e || null == e.pathname) continue;
             let h = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function r(e, i) {
@@ -189,10 +189,10 @@ function Q(e) {
             null != k && r(u.I.SERVER_SHOP, k[1]);
             let F = A?.match(y);
             null != F && r(u.I.SOCIAL_LAYER_STOREFRONT, `${F[3]}-${F[1] ?? F[2]}`);
-            let V = J(c);
-            null != V && r(u.I.QUESTS_EMBED, V);
-            let B = A?.match(M);
-            null != B && r(u.I.GAME_PROFILE, B[1]);
+            let B = J(c);
+            null != B && r(u.I.QUESTS_EMBED, B);
+            let V = A?.match(M);
+            null != V && r(u.I.GAME_PROFILE, V[1]);
             let H = A?.match(b);
             null != H && r(u.I.GAME_SERVER_SHARE, H[1]);
             let j = A?.match(P);
@@ -213,12 +213,12 @@ function Q(e) {
     })((n = n.concat(r ?? []))).slice(0, 10);
 }
 function J(e) {
-    let t = Z(e),
+    let t = q(e),
         n = t?.primaryHostRemainingPath?.match(v);
     return n?.[1] ?? null;
 }
 function ee(e) {
-    let t = Z(e),
+    let t = q(e),
         n = t?.primaryHostRemainingPath?.match(b);
     return n?.[1] ?? null;
 }

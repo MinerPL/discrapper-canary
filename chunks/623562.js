@@ -48,8 +48,8 @@ async function I(e) {
     if (c.A.isListFetchPending(t, E)) return;
     a.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: i, requestKey: E, isJump: d ?? !1 });
     let A = { limit: l };
-    null != s && ("before" === i ? (A.before = s) : "after" === i ? (A.after = s) : (A.around = s)),
-        null != _ && ((A.include_messages = !0), (A.message_limit = _.limit ?? void 0));
+    (null != s && ("before" === i ? (A.before = s) : "after" === i ? (A.after = s) : (A.around = s)),
+        null != _ && ((A.include_messages = !0), (A.message_limit = _.limit ?? void 0)));
     try {
         let e = (
             await r.Bo.get({ url: h.Rsh.CHANNEL_CONVERSATIONS(t), query: A, oldFormErrors: !0, rejectWithError: !0 })
@@ -77,8 +77,8 @@ function f() {
 }
 function p(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }),
-        g(e, t, n, { includeReactions: !0, includeMessageReferences: !0 });
+    (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }),
+        g(e, t, n, { includeReactions: !0, includeMessageReferences: !0 }));
     let r = c.A.getConversationMetadata(e, n);
     i &&
         r?.conversation.startMessageId != null &&
@@ -118,7 +118,7 @@ async function g(e, t, n, i) {
     }
 }
 function S(e, t) {
-    d.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
+    (d.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
         A.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
-        a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
+        a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" }));
 }

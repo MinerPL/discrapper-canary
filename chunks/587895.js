@@ -1,4 +1,4 @@
-n.d(t, { A: () => N }), n(321073);
+(n.d(t, { A: () => N }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(395671);
@@ -130,7 +130,7 @@ class S extends i.Ay.PersistedStore {
 }
 let N = new S(r.h, {
     LOGOUT: function () {
-        l.clear(), o.clear(), d.clear(), c.clear(), u.clear(), _.clear(), E.clear();
+        (l.clear(), o.clear(), d.clear(), c.clear(), u.clear(), _.clear(), E.clear());
     },
     OVERLAY_INITIALIZE: function (e) {
         let { applications: t } = e;
@@ -139,36 +139,36 @@ let N = new S(r.h, {
     APPLICATION_FETCH: function (e) {
         let { applicationId: t } = e,
             n = _.get(t);
-        return _.set(t, !0), !0 !== n;
+        return (_.set(t, !0), !0 !== n);
     },
     APPLICATION_FETCH_SUCCESS: function (e) {
         let { application: t, isHydrated: n } = e;
-        !0 === n && E.add(t.id), f(t);
+        (!0 === n && E.add(t.id), f(t));
     },
     APPLICATION_FETCH_FAIL: function (e) {
         let { applicationId: t } = e,
             n = _.get(t);
-        return _.set(t, !1), !1 !== n;
+        return (_.set(t, !1), !1 !== n);
     },
     APPLICATIONS_FETCH: function (e) {
         let { applicationIds: t } = e,
             n = !1;
         for (let e of t) {
             let t = _.get(e);
-            _.set(e, !0), (n = !0 !== t);
+            (_.set(e, !0), (n = !0 !== t));
         }
         return n;
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { applications: t, isHydrated: n } = e;
-        for (let e of t) !0 === n && E.add(e.id), h(a.Ay.createFromServer(e));
+        for (let e of t) (!0 === n && E.add(e.id), h(a.Ay.createFromServer(e)));
     },
     APPLICATIONS_FETCH_FAIL: function (e) {
         let { applicationIds: t } = e,
             n = !1;
         for (let e of t) {
             let t = _.get(e);
-            _.set(e, !1), (n = !1 !== t);
+            (_.set(e, !1), (n = !1 !== t));
         }
         return n;
     },
@@ -182,16 +182,16 @@ let N = new S(r.h, {
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
-        for (let e of n) i.push(e.id), h(a.Ay.createFromServer(e));
+        for (let e of n) (i.push(e.id), h(a.Ay.createFromServer(e)));
         o.set(t, i);
     },
     GUILD_EMBEDDED_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, surface: n, items: i } = e,
             r = [];
         for (let { application: e, status: t } of i)
-            r.push({ applicationId: e.id, status: t }), h(a.Ay.createFromServer(e));
+            (r.push({ applicationId: e.id, status: t }), h(a.Ay.createFromServer(e)));
         let s = d.get(t);
-        null == s && ((s = new Map()), d.set(t, s)), s.set(n, r);
+        (null == s && ((s = new Map()), d.set(t, s)), s.set(n, r));
     },
     GUILD_INTEGRATIONS_UPDATE: g,
     INTEGRATION_CREATE: g,

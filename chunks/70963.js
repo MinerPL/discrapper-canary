@@ -50,10 +50,10 @@ function m(i) {
               })(t, _),
         fullWidth: !j,
         onClick: (i) => {
-            i.stopPropagation(),
+            (i.stopPropagation(),
                 l?.({ action: "PRESS_JOIN_CALL_BUTTON" }),
                 t.isGuildStageVoice() ? (0, o.av)(t) : (s.default.selectVoiceChannel(t.id), (0, d.iN)(t.id)),
-                m?.();
+                m?.());
         },
     });
 }

@@ -1,4 +1,4 @@
-t.d(l, { Ay: () => N, SP: () => j, cn: () => A }), t(938796);
+(t.d(l, { Ay: () => N, SP: () => j, cn: () => A }), t(938796));
 var i,
     n,
     s = t(582128),
@@ -34,17 +34,21 @@ function N(e, l, t) {
             validInviteKey: C,
             isBypassInvite: p,
             inviteRoles: b,
-        } = (0, o.cf)([v.A], () => {
-            let e = t ?? v.A.getInviteKeyForGuildId(i),
-                l = null != e ? v.A.getInvite(e) : null;
-            return null == l || l.state === I.elq.BANNED || l.state === I.elq.EXPIRED
-                ? { validInviteKey: null, isBypassInvite: !1, inviteRoles: null }
-                : {
-                      validInviteKey: e,
-                      isBypassInvite: (0, r.Lt)(l.flags ?? 0, a.Q.IS_APPLICATION_BYPASS),
-                      inviteRoles: l.roles,
-                  };
-        }, [i, t]),
+        } = (0, o.cf)(
+            [v.A],
+            () => {
+                let e = t ?? v.A.getInviteKeyForGuildId(i),
+                    l = null != e ? v.A.getInvite(e) : null;
+                return null == l || l.state === I.elq.BANNED || l.state === I.elq.EXPIRED
+                    ? { validInviteKey: null, isBypassInvite: !1, inviteRoles: null }
+                    : {
+                          validInviteKey: e,
+                          isBypassInvite: (0, r.Lt)(l.flags ?? 0, a.Q.IS_APPLICATION_BYPASS),
+                          inviteRoles: l.roles,
+                      };
+            },
+            [i, t],
+        ),
         E = (0, d.A)(),
         y = s.useMemo(() => {
             if (f) {

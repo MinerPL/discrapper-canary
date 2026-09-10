@@ -39,7 +39,7 @@ function j(e) {
     }, [w]);
     let P = i.useCallback(
             (e) => {
-                null == w && K(e), (0, h.cZ)(C, e);
+                (null == w && K(e), (0, h.cZ)(C, e));
             },
             [C, w],
         ),

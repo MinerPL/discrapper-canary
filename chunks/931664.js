@@ -21,6 +21,6 @@ let d = new o(r.h, {
         null != i[t] && delete i[t];
     },
     LOGOUT: function () {
-        (s = {}), (l = {});
+        ((s = {}), (l = {}));
     },
 });

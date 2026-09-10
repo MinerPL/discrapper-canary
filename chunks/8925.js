@@ -61,13 +61,13 @@ function p(t) {
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
                           onClick: function () {
-                              V(p),
+                              (V(p),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REACT_AVATAR" })
                                       : n === f.dS.STATUS
                                         ? k({ action: "PRESS_REACT_CUSTOM_STATUS" })
                                         : k({ action: "PRESS_REACT_ACTIVITY" }),
-                                  _?.({ interactionType: f.AQ.REACT, interactionSource: n, interactionSourceId: x });
+                                  _?.({ interactionType: f.AQ.REACT, interactionSource: n, interactionSourceId: x }));
                           },
                           className: R.x6,
                           "aria-label": I[n](),
@@ -83,13 +83,13 @@ function p(t) {
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
                           onClick: function () {
-                              V(p),
+                              (V(p),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REPLY_AVATAR" })
                                       : n === f.dS.STATUS
                                         ? k({ action: "PRESS_REPLY_CUSTOM_STATUS" })
                                         : k({ action: "PRESS_REPLY_ACTIVITY" }),
-                                  _?.({ interactionType: f.AQ.REPLY, interactionSource: n, interactionSourceId: x });
+                                  _?.({ interactionType: f.AQ.REPLY, interactionSource: n, interactionSourceId: x }));
                           },
                           className: R.x6,
                           "aria-label": b[n](),
@@ -108,7 +108,7 @@ function p(t) {
                               ref: E,
                               ...t,
                               onClick: function () {
-                                  V(E), t.onClick?.();
+                                  (V(E), t.onClick?.());
                               },
                               className: R.x6,
                               "aria-label": g.intl.string(g.t["UKOtz+"]),

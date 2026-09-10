@@ -1,4 +1,4 @@
-l.d(t, { A: () => A }), l(321073);
+(l.d(t, { A: () => A }), l(321073));
 var n = l(477900),
     i = l(582128),
     s = l(17928),
@@ -49,9 +49,9 @@ function A(e) {
         D = i.useCallback(() => {
             (0, p.openUserSettings)(u.X.AUTHORIZED_APPS_CATEGORY);
             let e = "";
-            null != A ? (e = A.name) : null != t && (e = t.username),
+            (null != A ? (e = A.name) : null != t && (e = t.username),
                 "" !== e && m.iU.setState({ searchQuery: e }),
-                I?.();
+                I?.());
         }, [A, I, t]);
     if (f === j.BRT.POPOUT) return null;
     let G = [];

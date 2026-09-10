@@ -11,15 +11,15 @@ var i,
     h = n(964486),
     m = n(847599),
     p = n(595746),
-    g = n(240248),
-    f = n(562708);
+    f = n(240248),
+    g = n(562708);
 n(181658);
 var A = n(499785),
     x = n(652215);
 async function v() {
     let e = await A.A.get({
         url: x.Rsh.SAFETY_FLOWS_TASK,
-        trackedActionData: { event: f.NetworkActionNames.USER_VERIFY },
+        trackedActionData: { event: g.NetworkActionNames.USER_VERIFY },
         rejectWithError: !0,
     });
     return 204 === e.status ? null : e.body;
@@ -29,7 +29,7 @@ async function E(e) {
         await A.A.post({
             url: x.Rsh.SAFETY_FLOWS_TASK,
             body: e,
-            trackedActionData: { event: f.NetworkActionNames.USER_VERIFY },
+            trackedActionData: { event: g.NetworkActionNames.USER_VERIFY },
             rejectWithError: !0,
         })
     ).body;
@@ -61,10 +61,10 @@ let j = {
     b = new Set(Object.values(j)),
     N = new Set([10]),
     y = new Set([11]);
-S.intl.string(_.default["Qm6K/s"]),
+(S.intl.string(_.default["Qm6K/s"]),
     S.intl.string(_.default["dSkE/A"]),
     S.intl.string(_.default.dMMSA0),
-    S.intl.string(_.default.Z87TFb);
+    S.intl.string(_.default.Z87TFb));
 var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"), l),
     R = n(627575),
     w = n(17928),
@@ -146,7 +146,7 @@ var er = n(191627),
     eh = n(789645),
     em = n(486020),
     ep = n(923531);
-let eg = () => ({
+let ef = () => ({
     seconds: S.intl.string(_.default.M4NOO3),
     minutes: _.default["9nem85"],
     hours: _.default.sJjWRY,
@@ -154,7 +154,7 @@ let eg = () => ({
     days: _.default.tVHevX,
     date: _.default.q6jzya,
 });
-var ef = n(513687),
+var eg = n(513687),
     eA = n(838131);
 function ex(e) {
     var t;
@@ -169,8 +169,8 @@ function ex(e) {
         } = e,
         m = (0, w.bG)([O.default], () => O.default.getUser(n.parent_id)),
         p = m?.globalName ?? m?.username ?? n.parent_username,
-        g = m?.username ?? n.parent_username,
-        f = g !== p,
+        f = m?.username ?? n.parent_username,
+        g = f !== p,
         A = m?.avatar ?? n.parent_avatar,
         { isConnected: x, isResolved: v } = (function (e) {
             let t = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers()[e]?.link_status),
@@ -191,14 +191,14 @@ function ex(e) {
                 o = "declined" === n;
             return { isConnected: r, isDeclined: o, isResolved: r || o };
         })(n.parent_id),
-        E = ((t = n.created_at), (0, ep.mV)(Date.parse(t), eg)),
+        E = ((t = n.created_at), (0, ep.mV)(Date.parse(t), ef)),
         C = em.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, eo.FT)(eo._3.SIZE_40));
     return (0, a.jsxs)("div", {
         className: eA.nM,
         children: [
             (0, a.jsx)("div", {
                 className: eA.R3,
-                children: (0, a.jsx)(ed.eu, { src: C, size: eo._3.SIZE_40, "aria-label": g }),
+                children: (0, a.jsx)(ed.eu, { src: C, size: eo._3.SIZE_40, "aria-label": f }),
             }),
             (0, a.jsxs)("div", {
                 className: eA.zH,
@@ -209,12 +209,12 @@ function ex(e) {
                         lineClamp: 1,
                         children: p,
                     }),
-                    f &&
+                    g &&
                         (0, a.jsx)(c.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             lineClamp: 1,
-                            children: g,
+                            children: f,
                         }),
                     (0, a.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: E }),
                 ],
@@ -230,7 +230,7 @@ function ex(e) {
                       children: [
                           !i &&
                               (0, a.jsx)(ec.D, {
-                                  "aria-label": S.intl.formatToPlainString(ef.default.jc1Ip7, {
+                                  "aria-label": S.intl.formatToPlainString(eg.default.jc1Ip7, {
                                       name: n.parent_username,
                                   }),
                                   className: U()(eA.hP, eA.xG),
@@ -240,7 +240,7 @@ function ex(e) {
                                       : (0, a.jsx)(eu.r, { className: eA.gE, color: "currentColor" }),
                               }),
                           (0, a.jsx)(ec.D, {
-                              "aria-label": S.intl.formatToPlainString(ef.default["4GtllP"], {
+                              "aria-label": S.intl.formatToPlainString(eg.default["4GtllP"], {
                                   name: n.parent_username,
                               }),
                               className: U()(eA.hP, eA.rr),
@@ -277,29 +277,29 @@ function ev(e) {
                 } = (0, et.A)({
                     onSuccess: () => r(null),
                     onError: () => {
-                        r(null), i();
+                        (r(null), i());
                     },
                 }),
                 h = c || u,
                 [m, p] = s.useState(() => new Set()),
-                g = s.useCallback((e) => {
+                f = s.useCallback((e) => {
                     p((t) => {
                         if (t.has(e)) return t;
                         let n = new Set(t);
-                        return n.add(e), n;
+                        return (n.add(e), n);
                     });
                 }, []),
-                f = s.useCallback(
+                g = s.useCallback(
                     (e) => {
-                        h || (g(e), r(e), o(e));
+                        h || (f(e), r(e), o(e));
                     },
-                    [h, g, o],
+                    [h, f, o],
                 ),
                 A = s.useCallback(
                     (e) => {
-                        h || (g(e), r(e), d(e));
+                        h || (f(e), r(e), d(e));
                     },
-                    [h, g, d],
+                    [h, f, d],
                 ),
                 [x, v] = s.useState(t),
                 [E, C] = s.useState(t),
@@ -328,7 +328,7 @@ function ev(e) {
                     isAcceptLoading: c,
                     isDeclineLoading: u,
                     actionsDisabled: h,
-                    handleAccept: f,
+                    handleAccept: g,
                     handleDecline: A,
                 }
             );
@@ -336,7 +336,7 @@ function ev(e) {
             pendingRequests: t,
             linkedUsersProcessed: n,
             onActionError: () => {
-                (0, Y.P0)((0, $.o)(S.intl.string(ef.default.Wu8BK2), X.Ck.FAILURE));
+                (0, Y.P0)((0, $.o)(S.intl.string(eg.default.Wu8BK2), X.Ck.FAILURE));
             },
         });
     return 0 === i.length
@@ -369,7 +369,7 @@ let eI = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
                 i = s.useCallback(async () => {
-                    await t({ type: M.Empty }), window.location.reload();
+                    (await t({ type: M.Empty }), window.location.reload());
                 }, [t]);
             return (0, a.jsxs)("div", {
                 className: eS.kL,
@@ -442,7 +442,7 @@ let eI = {
             (0, h.Ay)(() => {
                 (0, ee._z)();
             });
-            let g = s.useMemo(() => {
+            let f = s.useMemo(() => {
                     let e;
                     return {
                         link_code: "string" == typeof (e = l ?? {}).link_code ? e.link_code : "",
@@ -450,12 +450,12 @@ let eI = {
                         pending_requests: Array.isArray(e.pending_requests) ? e.pending_requests : [],
                     };
                 }, [l]),
-                f = (0, ei.VT)(),
+                g = (0, ei.VT)(),
                 A = (0, ei.Du)(),
                 x = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers()),
                 v = (0, w.bG)([Q.A], () => Q.A.getAreLinkedUsersProcessed()),
                 E =
-                    ((t = g.pending_requests),
+                    ((t = f.pending_requests),
                     (n = (0, w.bG)([Q.A], () => Q.A.getLinkedUsers())),
                     (i = (0, w.bG)([O.default], () => O.default.getCurrentUser()?.id)),
                     s.useMemo(() => {
@@ -475,12 +475,12 @@ let eI = {
                         }
                         return l;
                     }, [v, n, i, t])),
-                C = v ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
-                T = v ? f : g.pending_requests.length,
+                C = v ? Object.values(x).some((e) => null != e) : f.pending_requests.length > 0,
+                T = v ? g : f.pending_requests.length,
                 I = (0, w.bG)([Q.A], () => Q.A.getLinkCode()),
                 j = (0, w.bG)([Q.A], () => Q.A.getLinkCodeExpiresAt()),
-                b = I ?? g.link_code,
-                N = j ?? Date.parse(g.link_code_expires_at),
+                b = I ?? f.link_code,
+                N = j ?? Date.parse(f.link_code_expires_at),
                 y = s.useCallback(async () => {
                     try {
                         await r({ type: M.Empty });
@@ -492,7 +492,7 @@ let eI = {
             C && !k && P(!0);
             let [D, U] = s.useState(!1),
                 G = s.useCallback(() => {
-                    U(!1), p();
+                    (U(!1), p());
                 }, [p]);
             (0, en.A)(G);
             let F = !k || D,
@@ -708,15 +708,15 @@ function ek(e) {
 let eP = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = s.useState(null),
-        [f, A] = s.useState(!0),
+        [g, A] = s.useState(!0),
         [x, C] = s.useState(null),
         [T, y] = s.useState(!1),
         w = s.useCallback(async () => {
-            A(!0), C(null);
+            (A(!0), C(null));
             try {
                 let e = await v();
                 if (null == e) return void n();
-                !(0, g.uJ)(e.ui_component?.component.type) && b.has(e.ui_component.component.type)
+                !(0, f.uJ)(e.ui_component?.component.type) && b.has(e.ui_component.component.type)
                     ? l(e)
                     : l({
                           task_id: e.task_id,
@@ -737,7 +737,7 @@ let eP = function (e) {
                     y(!0);
                     try {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
-                        await E(t), w();
+                        (await E(t), w());
                     } catch (e) {
                         if (N.has(i.task_type)) throw e;
                         C(S.intl.string(_.default["+QRSxc"]));
@@ -771,7 +771,7 @@ let eP = function (e) {
                   ? (0, a.jsx)(ek, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? eE.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eR.nA,
-                        children: f
+                        children: g
                             ? (0, a.jsx)(r.y, { type: r.y.Type.SPINNING_CIRCLE })
                             : (0, a.jsx)("div", {
                                   className: eR.kL,

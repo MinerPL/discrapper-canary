@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(376728);
+(n.d(t, { A: () => p }), n(376728));
 var i = n(439372);
 n(993748);
 var r = n(292572),
@@ -27,10 +27,10 @@ function h(e, t) {
                 case c.I.INVITE:
                     break;
                 case c.I.TEMPLATE:
-                    (n = async () => {
+                    ((n = async () => {
                         null == a.A.getGuildTemplate(u) && (await r.A.resolveGuildTemplate(u));
                     }),
-                        E.add(n);
+                        E.add(n));
                     break;
                 case c.I.BUILD_OVERRIDE:
                 case c.I.MANUAL_BUILD_OVERRIDE:
@@ -54,14 +54,14 @@ function h(e, t) {
                 case c.I.USER_PROFILE:
                     if ((0, l.l)("MessageCodedLinkManager")) {
                         let e = null == t ? null : d.A.getChannel(t);
-                        (i = async () => {
+                        ((i = async () => {
                             await (0, o.A)(u, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,
                             });
                         }),
-                            E.add(i);
+                            E.add(i));
                     }
                     break;
                 case c.I.APP_DIRECTORY_PROFILE:
@@ -72,15 +72,15 @@ function h(e, t) {
         });
 }
 function I(e) {
-    h(e.content ?? null, e.channel_id),
+    (h(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
             return h(n.content, e.channel_id);
-        });
+        }));
 }
 class f extends i.A {
     constructor() {
-        super(), (0, s.A)(this, I);
+        (super(), (0, s.A)(this, I));
     }
 }
 let p = new f();

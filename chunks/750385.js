@@ -11,7 +11,7 @@ let o = new (n(626584).A)("GuildStickers"),
             let t = performance.now(),
                 n = await s.A.stickers(e).getMapEntries(),
                 i = performance.now();
-            return o.log(`asynchronously loaded in ${i - t}ms (guilds: ${n.length})`), n;
+            return (o.log(`asynchronously loaded in ${i - t}ms (guilds: ${n.length})`), n);
         }
         actions = {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
@@ -94,7 +94,7 @@ async function h() {
 class I extends r.Ay.Store {
     static displayName = "StickersStore";
     initialize() {
-        this.waitFor(c.A, _.A, u.A, E.A), this.syncWith([_.A, E.A], () => !0);
+        (this.waitFor(c.A, _.A, u.A, E.A), this.syncWith([_.A, E.A], () => !0));
     }
     get isLoaded() {
         return 0 !== A;
@@ -103,7 +103,7 @@ class I extends r.Ay.Store {
         return A;
     }
     getStickerMetadataArrays() {
-        return h(), [_.A.getStickerMetadataMap(), E.A.getStickerMetadataMap()];
+        return (h(), [_.A.getStickerMetadataMap(), E.A.getStickerMetadataMap()]);
     }
     get hasLoadedStickerPacks() {
         return E.A.hasLoadedStickerPacks;
@@ -112,7 +112,7 @@ class I extends r.Ay.Store {
         return E.A.isFetchingStickerPacks;
     }
     getStickerById(e) {
-        return h(), _.A.getStickerById(e) ?? E.A.getStickerById(e);
+        return (h(), _.A.getStickerById(e) ?? E.A.getStickerById(e));
     }
     getStickerPack(e) {
         return E.A.getStickerPack(e);
@@ -127,13 +127,13 @@ class I extends r.Ay.Store {
         return _.A.getAllGuildStickers();
     }
     getAllGuildStickers() {
-        return h(), _.A.getAllGuildStickers();
+        return (h(), _.A.getAllGuildStickers());
     }
     getAllPackStickers() {
         return E.A.getAllPackStickers();
     }
     getStickersByGuildId(e) {
-        return h(), _.A.getStickersByGuildId(e);
+        return (h(), _.A.getStickersByGuildId(e));
     }
 }
 let f = new I(a.h, {

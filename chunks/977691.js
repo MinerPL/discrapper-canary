@@ -1,4 +1,4 @@
-n.d(e, { startComposedHighlight: () => d, startOverrideAudit: () => m }), n(321073);
+(n.d(e, { startComposedHighlight: () => d, startOverrideAudit: () => m }), n(321073));
 var o = n(621466);
 let r = "data-mana-composed",
     l = "data-mana-overridden",
@@ -18,7 +18,7 @@ function s() {
                 }
             })(e.cssRules);
         } catch {}
-    return t.delete(i), t;
+    return (t.delete(i), t);
 }
 function c(t, e) {
     let { classList: n } = t;
@@ -68,13 +68,13 @@ function m() {
         let o = n.get(t);
         if (void 0 === o) {
             let r = document.createElement("span");
-            (r.className = t),
+            ((r.className = t),
                 r.setAttribute("style", "position:fixed;top:-9999px;visibility:hidden"),
                 (r.textContent = "x"),
                 document.body.appendChild(r),
                 (o = e(getComputedStyle(r))),
                 r.remove(),
-                n.set(t, o);
+                n.set(t, o));
         }
         return o;
     }
@@ -83,7 +83,7 @@ function m() {
     function m() {
         d = 0;
         let n = a;
-        (a = null),
+        ((a = null),
             null != n &&
                 (function (n) {
                     let o = document.documentElement.classList.contains(i),
@@ -98,17 +98,17 @@ function m() {
                         return [n, e(getComputedStyle(n)) !== r(o)];
                     }))
                         n ? t.setAttribute(l, "") : t.removeAttribute(l);
-                })(n);
+                })(n));
     }
     function f(t) {
         for (let e of ((a ??= new Set()), t)) a.add(e);
         0 === d && (d = requestAnimationFrame(m));
     }
-    document.documentElement.classList.contains(i) ||
+    (document.documentElement.classList.contains(i) ||
         console.warn(
             "[mana override audit] Enable the mana-type-consolidation experiment \u2014 without it, overrides pinned to the control font are indistinguishable and stay unflagged.",
         ),
-        f(document.querySelectorAll("[data-text-variant]"));
+        f(document.querySelectorAll("[data-text-variant]")));
     let b = new MutationObserver((t) => {
         for (let e of t) {
             if ("attributes" === e.type) {

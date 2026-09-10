@@ -335,12 +335,12 @@ function el(e) {
         ),
         O = r.useCallback(
             (e) => {
-                g(),
+                (g(),
                     (0, C.Cz)({
                         analyticsLocations: d,
                         analyticsSource: c.A.EDIT_PROFILE_FRAME_MODAL,
                         initialProductSkuId: e,
-                    });
+                    }));
             },
             [d, g],
         );
@@ -373,7 +373,7 @@ function el(e) {
             (0, s.jsx)(er, {
                 user: t,
                 onApply: function () {
-                    (0, I.p)({ guildId: i?.id, profileFrame: k ?? null }), g();
+                    ((0, I.p)({ guildId: i?.id, profileFrame: k ?? null }), g());
                 },
                 onClose: g,
                 onOpenShop: O,

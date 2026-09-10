@@ -31,7 +31,7 @@ async function m(e) {
     }
     let m = c.A.getActiveStreamForApplicationStream(e);
     if (null != m && m.state !== p.XYD.ENDED && m.ownerId === e.ownerId) {
-        l.A.selectParticipant(e.channelId, (0, r._z)(e)), (0, h.UV)(!0, e.channelId);
+        (l.A.selectParticipant(e.channelId, (0, r._z)(e)), (0, h.UV)(!0, e.channelId));
         return;
     }
     (0, a.A9)(e);

@@ -49,13 +49,13 @@ let f = function (e) {
         ),
         S = i.useCallback(
             (e) => {
-                f(e), r.current?.focus(), v(e, k);
+                (f(e), r.current?.focus(), v(e, k));
             },
             [k, v],
         ),
         M = i.useCallback(
             (e) => {
-                j(e), v(p, e);
+                (j(e), v(p, e));
             },
             [p, v],
         ),
@@ -106,7 +106,7 @@ let f = function (e) {
 var k = n(32910);
 class j extends i.PureComponent {
     constructor(e) {
-        super(e), (this.state = { phone: "" });
+        (super(e), (this.state = { phone: "" }));
     }
     handlePhoneChange = (e) => {
         this.setState({ phone: e });

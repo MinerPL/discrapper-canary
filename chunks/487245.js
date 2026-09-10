@@ -1,4 +1,4 @@
-n.d(t, { t6: () => e_, Zg: () => eu, ew: () => ec, v0: () => er, Ay: () => eA, X8: () => el }), n(801541);
+(n.d(t, { t6: () => e_, Zg: () => eu, ew: () => ec, v0: () => er, Ay: () => eA, X8: () => el }), n(801541));
 var i,
     r = n(477900),
     a = n(582128),
@@ -36,8 +36,8 @@ var i,
     x = n(366010),
     k = n(812993),
     F = n(736653),
-    V = n(826673),
-    B = n(74396),
+    B = n(826673),
+    V = n(74396),
     H = n(653523),
     j = n(558845),
     W = n(367727),
@@ -45,7 +45,7 @@ var i,
     K = n(72191),
     $ = n(375708),
     z = n(643790);
-function q() {
+function X() {
     return (0, r.jsxs)("svg", {
         className: z.JR,
         width: "68",
@@ -80,12 +80,12 @@ function q() {
         ],
     });
 }
-function Z(e) {
+function q(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = D.eh.useSetting().customUserThemeSettings,
         { shouldShowNewBadge: u, markNewBadgeAsDismissed: _ } =
-            ((t = (0, V.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE)),
+            ((t = (0, B.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE)),
             a.useEffect(() => {
                 if (!t)
                     return (
@@ -98,21 +98,21 @@ function Z(e) {
             {
                 shouldShowNewBadge: !t,
                 markNewBadgeAsDismissed: a.useCallback(() => {
-                    (0, V.Dr)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, { dismissAction: Y.i.TAKE_ACTION });
+                    (0, B.Dr)(w.M.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE, { dismissAction: Y.i.TAKE_ACTION });
                 }, []),
             }),
-        E = (0, V.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        E = (0, B.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         A = (0, F.Ay)(),
         h = (0, x.M)(A) ? z.Xu : z.VO,
         I = null != c && null != c.colors && c.colors.length > 0,
-        f = (0, d.bG)([B.A], () => B.A.getSavedCustomTheme()),
+        f = (0, d.bG)([V.A], () => V.A.getSavedCustomTheme()),
         p = I || null != f,
         T = a.useMemo(() => {
             let e, t;
-            if (I) (e = c.colors), (t = c.gradientAngle);
+            if (I) ((e = c.colors), (t = c.gradientAngle));
             else {
                 if (null === f) return;
-                (e = f.colors), (t = f.gradient_angle);
+                ((e = f.colors), (t = f.gradient_angle));
             }
             let n = e[0];
             return (
@@ -122,7 +122,7 @@ function Z(e) {
         }, [I, c, f]),
         m = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
         g = a.useCallback(() => {
-            u && _(), i?.();
+            (u && _(), i?.());
         }, [u, _, i]);
     return (0, r.jsxs)("div", {
         className: z.fC,
@@ -140,7 +140,7 @@ function Z(e) {
                 style: T,
                 ariaDescribedBy: o,
                 children: [
-                    !E && !p && (0, r.jsx)(q, {}),
+                    !E && !p && (0, r.jsx)(X, {}),
                     (0, r.jsx)("div", { className: z.JU }),
                     (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
                 ],
@@ -154,7 +154,7 @@ function Z(e) {
         ],
     });
 }
-var X = n(385803),
+var Z = n(385803),
     Q = n(652215),
     J = n(202541),
     ee = n(185928),
@@ -274,23 +274,23 @@ function eu(e) {
     }
     return (
         a.useEffect(() => {
-            ((N === X.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
+            ((N === Z.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: y, children: $.intl.string($.t.JIZSqz) }),
-                (0, r.jsx)(Z, {
+                (0, r.jsx)(q, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: b,
                     onSelect: () => {
-                        (0, m.nf)(m.HP.CUSTOM_THEME, {
+                        ((0, m.nf)(m.HP.CUSTOM_THEME, {
                             from: "SETTINGS" === s ? m.xv.SETTING : m.xv.CLIENT_THEMES_EDITOR,
                         }),
-                            "SETTINGS" === s && (0, v.default)();
+                            "SETTINGS" === s && (0, v.default)());
                     },
                 }),
-                X.Jm.filter(X.Qm).map((e, n) =>
+                Z.Jm.filter(Z.Qm).map((e, n) =>
                     (0, r.jsx)(
                         H.MX,
                         {
@@ -309,7 +309,7 @@ function eu(e) {
                 ),
                 (function () {
                     if (!h) return null;
-                    let e = X.ag[c.ju.EASTER_EGG];
+                    let e = Z.ag[c.ju.EASTER_EGG];
                     if (null == e) return null;
                     async function t() {
                         let { default: e } = await n.e("103408").then(n.t.bind(n, 707827, 19));
@@ -343,9 +343,9 @@ function e_(e) {
             y.Ay.useSystemTheme === ee.Q_.ON,
         ]);
     function _(e) {
-        (0, M.Py)(),
+        ((0, M.Py)(),
             el({ isPersisted: !0, analyticsLocations: l, themeName: `default ${e}` }),
-            (0, I.u_)({ theme: e }, s);
+            (0, I.u_)({ theme: e }, s));
     }
     let E = !i && !0 === n;
     return (0, r.jsxs)(r.Fragment, {
@@ -365,7 +365,7 @@ function e_(e) {
                 onSelect: () => _(en.NJ.LIGHT),
                 tabIndex: E ? void 0 : 0,
             }),
-            X.f5.map((e) =>
+            Z.f5.map((e) =>
                 (0, r.jsx)(H.zy, { size: t, theme: e, isSelected: c && !u && o === e, onSelect: () => _(e) }, e),
             ),
             !i && !n && (0, r.jsx)(H.zy, { size: t, theme: "system", isSelected: c && u, onSelect: () => _("system") }),
@@ -382,7 +382,7 @@ function eE(e) {
         children: (0, r.jsx)("div", { ref: s, ...l, className: ei.__invalid_container, children: n }),
     });
 }
-(eE.Basic = function (e) {
+((eE.Basic = function (e) {
     let { className: t, hideSystemSelector: n, iconSize: i } = e;
     return (0, r.jsx)("section", {
         className: t,
@@ -437,5 +437,5 @@ function eE(e) {
                 }),
             ],
         });
-    });
+    }));
 let eA = eE;

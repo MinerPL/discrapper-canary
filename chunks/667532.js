@@ -26,7 +26,7 @@ n(
                 n = arguments.length;
             if (n) {
                 p(e + n);
-                for (var c = e; c--; ) {
+                for (var c = e; c--;) {
                     var h = c + n;
                     c in t ? (t[h] = t[c]) : f(t, h);
                 }

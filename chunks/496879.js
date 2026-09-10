@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => k });
+(t.r(n), t.d(n, { default: () => k }));
 var a = t(477900),
     l = t(582128),
     r = t(17928),
@@ -27,7 +27,7 @@ function O(e) {
         [c, O] = l.useState(!1),
         k = l.useRef(null),
         P = l.useCallback(() => {
-            O(!1), r?.();
+            (O(!1), r?.());
         }, [r]),
         { handlePrimaryAction: S, handleContextMenu: v } = {
             handlePrimaryAction: l.useCallback(
@@ -73,13 +73,13 @@ function O(e) {
                             break;
                         case f.c.OPEN_FRIEND_MODAL:
                             if (null == e.userId) return;
-                            (0, p.openUserProfileModal)({
+                            ((0, p.openUserProfileModal)({
                                 userId: e.userId,
                                 guildId: e.guildId ?? void 0,
                                 channelId: e.channelId,
                                 appContext: R.BRT.APP,
                             }),
-                                P();
+                                P());
                             break;
                         case f.c.SEND_ACTIVITY_INVITE:
                             if (null == e.userId || null == e.activity) return;
@@ -384,7 +384,7 @@ function O(e) {
         m = l.useCallback(() => {
             O((e) => {
                 let t = !e;
-                return t ? n?.() : r?.(), t;
+                return (t ? n?.() : r?.(), t);
             });
         }, [r, n]),
         x = l.useCallback(

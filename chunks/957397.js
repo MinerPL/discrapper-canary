@@ -20,10 +20,10 @@ function f(e, t) {
         p = e.isDisabled ? {} : d,
         h = (0, u.useRef)(e.autoFocus);
     (0, u.useEffect)(() => {
-        h.current && t.current && (0, n.l)(t.current), (h.current = !1);
+        (h.current && t.current && (0, n.l)(t.current), (h.current = !1));
     }, [t]);
     let m = e.excludeFromTabOrder ? -1 : 0;
-    return e.isDisabled && (m = void 0), { focusableProps: (0, i.v)({ ...f, tabIndex: m }, p) };
+    return (e.isDisabled && (m = void 0), { focusableProps: (0, i.v)({ ...f, tabIndex: m }, p) });
 }
 u.forwardRef(function (e, t) {
     let { children: r, ...n } = e,

@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ });
+(r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ }));
 var n = r(582128),
     i = n.createContext(),
     o = n.createContext();
@@ -35,7 +35,7 @@ var s = function (e) {
         return e.reduce(function (e, t) {
             var r = t[0],
                 n = t[1];
-            return (e[r] = n), e;
+            return ((e[r] = n), e);
         }, {});
     },
     f = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect,
@@ -112,7 +112,7 @@ var s = function (e) {
                         return (
                             (y.current = n),
                             function () {
-                                n.destroy(), (y.current = null);
+                                (n.destroy(), (y.current = null));
                             }
                         );
                     }
@@ -201,7 +201,7 @@ function E(e) {
         i = n.useContext(o),
         a = n.useCallback(
             function (e) {
-                u(r, e), l(i, e);
+                (u(r, e), l(i, e));
             },
             [r, i],
         );

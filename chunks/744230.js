@@ -10,6 +10,6 @@ class a {
     detailCode;
     static Reasons = r;
     constructor(e, t) {
-        (this.reason = e), (this.detailCode = t);
+        ((this.reason = e), (this.detailCode = t));
     }
 }

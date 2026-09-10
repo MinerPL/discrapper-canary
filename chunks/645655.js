@@ -5,7 +5,7 @@ var n = l(477900),
 function s(e, t) {
     let { clips: s, onBeforeDelete: r, onAfterDelete: o } = t;
     if (e?.shiftKey) {
-        r?.(), s.forEach((e) => (0, i.oH)(e)), o?.();
+        (r?.(), s.forEach((e) => (0, i.oH)(e)), o?.());
         return;
     }
     (0, a.openModalLazy)(
@@ -17,7 +17,7 @@ function s(e, t) {
                     ...t,
                     onBeforeDelete: r,
                     onAfterDelete: async () => {
-                        await t.onClose(), o?.();
+                        (await t.onClose(), o?.());
                     },
                 });
         },

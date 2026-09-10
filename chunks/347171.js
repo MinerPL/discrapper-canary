@@ -86,14 +86,14 @@ function X(t) {
             claimStatus: d,
             handleActivationClick: h,
             cancelXboxPartnerPass: a.useCallback(() => {
-                (0, c.A)({
+                ((0, c.A)({
                     title: y.intl.string(P.default["/GObQk"]),
                     subtitle: y.intl.string(P.default["r/jeXi"]),
                     confirmText: y.intl.string(P.default.bVwQhX),
                     variant: "critical",
                     onConfirm: () => (0, v.RB)(E.n9.XGPP),
                 }),
-                    j(A.H.CANCEL);
+                    j(A.H.CANCEL));
             }, [j]),
             requestInProgress: u,
         });

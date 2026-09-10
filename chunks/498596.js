@@ -17,12 +17,12 @@ function l(e) {
         u = n + i,
         _ = r().contrast(l, o),
         E = 100;
-    for (; E-- > 0; ) {
+    for (; E-- > 0;) {
         let e = _ < n,
             t = _ > u;
         if (!e && !t) break;
         let i = c.luminance() > d;
-        (c = (t && i) || (e && !i) ? c.darken() : c.brighten()), (_ = r().contrast(l, c));
+        ((c = (t && i) || (e && !i) ? c.darken() : c.brighten()), (_ = r().contrast(l, c)));
     }
     return s(c);
 }

@@ -8,7 +8,7 @@ class s extends r.A {
     asset;
     label;
     constructor(e) {
-        super(e), (this.type = i.R.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
+        (super(e), (this.type = i.R.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label));
     }
     static fromServer(e) {
         return new s({ ...super.fromServer(e), ...e });

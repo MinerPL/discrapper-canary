@@ -1,4 +1,4 @@
-i.d(t, { I: () => a, U: () => r }), i(321073);
+(i.d(t, { I: () => a, U: () => r }), i(321073));
 var s = i(435558),
     n = i(652215);
 function r(e) {
@@ -16,5 +16,5 @@ function a(e) {
     let { stream: t, live: i = [], voiceChannel: s, voiceActivity: n, isPrivate: r = !1 } = e,
         a = [];
     for (let e of (null != t && a.push({ type: "stream", stream: t }), i)) a.push({ type: "live", activity: e });
-    return r || null != t || null != n || null == s || a.push({ type: "voice", voiceChannel: s }), a;
+    return (r || null != t || null != n || null == s || a.push({ type: "voice", voiceChannel: s }), a);
 }

@@ -15,7 +15,7 @@ function c() {
         e && (0, i.hU)().catch(() => t(!0));
     }, [c, e]);
     let m = l.useCallback(() => {
-            t(!1), d((e) => e + 1);
+            (t(!1), d((e) => e + 1));
         }, []),
         f = (0, a.bG)([o.A], () => o.A.getGameServers()),
         v = l.useMemo(() => f.map((e) => e.game_id), [f]);

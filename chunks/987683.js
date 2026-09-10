@@ -57,13 +57,13 @@ var b = class {
             "u" < typeof window)
         )
             return;
-        screen.orientation
+        (screen.orientation
             ? screen.orientation.addEventListener("change", this.orientationChangeHandler)
             : window.addEventListener("orientationchange", this.orientationChangeHandler),
             window.addEventListener("resize", this.resizeHandler),
             "function" == typeof window.matchMedia &&
                 ((this.mediaQueryList = window.matchMedia("(orientation: landscape)")),
-                this.mediaQueryList.addEventListener("change", this.mediaQueryHandler));
+                this.mediaQueryList.addEventListener("change", this.mediaQueryHandler)));
     }
     get current() {
         return this._current;
@@ -89,9 +89,9 @@ var b = class {
     }
     handleOrientationChange() {
         setTimeout(() => {
-            this.updateState(),
+            (this.updateState(),
                 document.activeElement instanceof HTMLElement && document.activeElement.blur(),
-                window.focus();
+                window.focus());
         }, 0);
     }
     handleResize() {

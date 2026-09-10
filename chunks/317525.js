@@ -82,22 +82,22 @@ let h = new _(
                 r = new Set(n.map((e) => e.id));
             for (let e of i) r.add(e);
             for (let e of t.getPartitionKeys()) r.has(e) || t.removePartition(e);
-            for (let { id: e, roles: i } of n) E(e, i, t), A("connection_open", e, t);
+            for (let { id: e, roles: i } of n) (E(e, i, t), A("connection_open", e, t));
         },
         CACHE_LOADED: (e, t) => {
             let { guilds: n } = e;
-            for (let { id: e, roles: i } of (t.clear(), n)) t.setPartition(e, d.lj(e, i)), A("cache_loaded", e, t);
+            for (let { id: e, roles: i } of (t.clear(), n)) (t.setPartition(e, d.lj(e, i)), A("cache_loaded", e, t));
         },
         CACHE_LOADED_LAZY: (e, t) => {
             if (0 !== e.guilds.length)
                 for (let { id: n, roles: i } of (t.clear(), e.guilds))
-                    t.setPartition(n, d.lj(n, i)), A("cache_loaded_lazy", n, t);
+                    (t.setPartition(n, d.lj(n, i)), A("cache_loaded_lazy", n, t));
         },
         GUILD_CREATE: (e, t) => {
             let {
                 guild: { id: n, roles: i },
             } = e;
-            E(n, i, t), A("guild_create", n, t);
+            (E(n, i, t), A("guild_create", n, t));
         },
         GUILD_UPDATE: (e, t) => {
             let {

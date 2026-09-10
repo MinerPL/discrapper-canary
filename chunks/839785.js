@@ -35,13 +35,13 @@ function R(t) {
                         o.Anchor,
                         {
                             onClick: function () {
-                                S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                (S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
                                     null != s
                                         ? s()
                                         : j
                                           ? (0, _.openUserProfileModal)({ userId: h.default.getId() })
                                           : (0, f.openUserSettings)(A.X.PROFILE_PANEL),
-                                    b();
+                                    b());
                             },
                             children: t,
                         },
@@ -55,7 +55,7 @@ function R(t) {
                 {
                     text: null != O ? I.intl.string(I.t["5911Lb"]) : I.intl.string(I.t.VkKicb),
                     onClick: function () {
-                        S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(e, i.id, b);
+                        (S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(e, i.id, b));
                     },
                     disabled: L,
                     variant: "critical-primary",

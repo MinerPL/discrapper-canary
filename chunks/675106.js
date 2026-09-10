@@ -1,4 +1,4 @@
-r.r(t),
+(r.r(t),
     r.d(t, {
         FluidValue: () => c.aq,
         FrameLoop: () => l.c,
@@ -20,7 +20,7 @@ r.r(t),
         useForceUpdate: () => a.CH,
         useOnce: () => a.H5,
         usePrev: () => a.NQ,
-    });
+    }));
 var n = r(672722),
     i = r(390593),
     o = {};

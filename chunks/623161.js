@@ -26,17 +26,17 @@ function A(e) {
     return (
         a.useEffect(() => {
             if (T)
-                k(
+                (k(
                     (0, n.jsx)(u.p, {
                         messageType: u.Y.ERROR,
                         className: h.u,
                         children: g.intl.format(g.t.HAuRSM, { maxNumAccounts: 5 }),
                     }),
                 ),
-                    U(f.dJq);
+                    U(f.dJq));
             else if (null != E) {
                 let e = d.default.getUser(E);
-                null != e &&
+                (null != e &&
                     k(
                         (0, n.jsx)(u.p, {
                             messageType: u.Y.POSITIVE,
@@ -44,7 +44,7 @@ function A(e) {
                             children: g.intl.format(g.t["09qide"], { username: e.username }),
                         }),
                     ),
-                    C(!1);
+                    C(!1));
             }
         }, [E, T]),
         a.useEffect(() => {
@@ -74,13 +74,13 @@ function A(e) {
                     onAction: (e, t) => {
                         switch (e) {
                             case m.X.LOGIN_REQUIRED:
-                                s(), (0, p.D)();
+                                (s(), (0, p.D)());
                                 break;
                             case m.X.SWITCHED:
                                 s();
                                 break;
                             case m.X.REMOVED:
-                                t === A?.id && s(), U(t);
+                                (t === A?.id && s(), U(t));
                         }
                     },
                 }),

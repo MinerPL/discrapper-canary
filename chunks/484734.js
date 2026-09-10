@@ -401,7 +401,7 @@ class Y extends l.Component {
             t,
             { link: n, children: l } = this.props;
         if (null != n.inviteCode)
-            (e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" }));
+            ((e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
             let l = (0, R.vu)(n.path);
             null == l || void 0 === l.messageId
@@ -441,27 +441,27 @@ class Z extends l.Component {
             { navigationRecord: n, children: l } = this.props;
         switch (n.type) {
             case I.t1.SHOP:
-                (e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" }));
+                ((e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SHOP_ORBS_TAB:
-                (e = P.intl.string(P.t.EBYkzk)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" }));
+                ((e = P.intl.string(P.t.EBYkzk)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_ORBS:
-                (e = `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`),
-                    (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" }));
+                ((e = `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`),
+                    (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.NITRO_HOME:
-                (e = P.intl.string(P.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" }));
+                ((e = P.intl.string(P.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_HOME:
-                (e = P.intl.string(P.t.JALI2K)), (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" }));
+                ((e = P.intl.string(P.t.JALI2K)), (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.APPS_HOME:
-                (e = P.intl.string(P.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" }));
+                ((e = P.intl.string(P.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SETTINGS:
-                (e = n.label ?? P.intl.string(P.t["3D5yo/"])),
-                    (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" }));
+                ((e = n.label ?? P.intl.string(P.t["3D5yo/"])),
+                    (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.PLAYGROUND:
                 if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {
@@ -470,7 +470,7 @@ class Z extends l.Component {
                 } else t = (0, i.jsx)(_.H, { size: "xs", color: "currentColor" });
                 break;
             default:
-                (e = n.id), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" }));
+                ((e = n.id), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })));
         }
         return (0, i.jsxs)("div", {
             className: w.xr,

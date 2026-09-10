@@ -6,7 +6,7 @@ var l = o(602853),
     n = o(661531),
     u = o(939249),
     c = o(417454);
-o(775602), o(967144);
+(o(775602), o(967144));
 var t = o(818348);
 function d(e) {
     let { guildId: r, role: o, className: d, canRemove: i = !1, onRemove: h = t.tE } = e,

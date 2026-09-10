@@ -25,11 +25,11 @@ function S(t) {
         [k, y] = s.useState(""),
         [E, w] = s.useState(!1);
     async function D(t) {
-        t.preventDefault(), w(!0), b(""), y("");
+        (t.preventDefault(), w(!0), b(""), y(""));
         try {
-            await (0, x.KD)({ email: e, password: v }), w(!1), C();
+            (await (0, x.KD)({ email: e, password: v }), w(!1), C());
         } catch (t) {
-            t?.body?.email && b(t.body.email), t?.body?.password && y(t.body.password), w(!1);
+            (t?.body?.email && b(t.body.email), t?.body?.password && y(t.body.password), w(!1));
         }
     }
     return (
@@ -91,7 +91,7 @@ function S(t) {
                                         children: (0, a.jsx)(m.Q, {
                                             text: A.intl.string(A.t["2jxGer"]),
                                             onClick: () => {
-                                                u.A.logout("claim_account_modal"), f();
+                                                (u.A.logout("claim_account_modal"), f());
                                             },
                                         }),
                                     }),
@@ -144,7 +144,7 @@ function b(t) {
                               variant: "primary",
                               fullWidth: !0,
                               onClick: function () {
-                                  window.open((0, C.SU)(), "_blank"),
+                                  (window.open((0, C.SU)(), "_blank"),
                                       p.default.track(f.HAw.DOWNLOAD_APP, {
                                           platform: (0, C.Vf)(),
                                           ptb: !1,
@@ -152,7 +152,7 @@ function b(t) {
                                           has_e_mail: !0,
                                           referring_location: "Claim Modal",
                                           qr_code: !1,
-                                      });
+                                      }));
                               },
                           }),
                       }),

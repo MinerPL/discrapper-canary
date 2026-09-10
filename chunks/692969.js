@@ -7,10 +7,10 @@ function o(n) {
         { gameId: o } = l;
     return l.shouldOpenGameProfile && null != o
         ? (a) => {
-              a?.stopPropagation(),
+              (a?.stopPropagation(),
                   a?.preventDefault(),
                   t.default.openGameProfileModal({ ...n, gameId: o, gameProfileModalChecks: l }),
-                  e?.();
+                  e?.());
           }
         : void 0;
 }

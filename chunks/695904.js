@@ -17,5 +17,5 @@ function f() {
 }
 function o(t) {
     let { location: e } = t;
-    return a.useConfig({ location: e }), null;
+    return (a.useConfig({ location: e }), null);
 }

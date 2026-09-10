@@ -35,7 +35,7 @@ class w extends r.Component {
         allowOverflow: !1,
     };
     constructor(t) {
-        super(t), (this.state = { dirty: t.defaultDirty ?? !1 });
+        (super(t), (this.state = { dirty: t.defaultDirty ?? !1 }));
     }
     getAriaDescribedBy = () => {
         let { maxLength: t, minLength: e, error: n } = this.props,
@@ -51,7 +51,7 @@ class w extends r.Component {
         let { maxLength: t, showCharacterCountFullPadding: e } = this.props;
         if (null == t) return 10;
         let n = `${t}`.length;
-        return e && (n += `${t} / `.length), 7.23 * n + 10;
+        return (e && (n += `${t} / `.length), 7.23 * n + 10);
     }
     getCharsLeftLength() {
         let { maxLength: t, value: e } = this.props;
@@ -184,7 +184,7 @@ class w extends r.Component {
     }
     onChange = (t) => {
         let { onChange: e, name: n } = this.props;
-        e?.(t.currentTarget.value, n), this.setState({ dirty: !0 });
+        (e?.(t.currentTarget.value, n), this.setState({ dirty: !0 }));
     };
     onFocus = (t) => {
         let { onFocus: e, name: n } = this.props;
@@ -366,7 +366,7 @@ function tf(t) {
                     } = t,
                     o = e.trim();
                 if (!(o.length > 0) && null == n) return H.G2.updateSetting(void 0);
-                H.G2.updateSetting({
+                (H.G2.updateSetting({
                     text: o.length > 0 ? o : "",
                     expiresAtMs:
                         null != l && l !== z.yt.DONT_CLEAR
@@ -393,11 +393,11 @@ function tf(t) {
                         clear_after: null != l ? `${l}` : null,
                         prompt_type: a?.value,
                         location_stack: s,
-                    });
+                    }));
             })({ text: T, emojiInfo: A, clearAfter: v, prompt: c, analyticsLocations: g }),
             n());
     }
-    r.useEffect(() => {
+    (r.useEffect(() => {
         let t = q.current;
         if (null == te || null == t) return;
         let e = te - 78;
@@ -414,9 +414,9 @@ function tf(t) {
             I.default.track(B.HAw.OPEN_MODAL, { type: R.A.CUSTOM_STATUS_MODAL, location_stack: g });
         }, [g]),
         (0, P.Ay)(() => {
-            L.current?.focus(), L.current?.setSelection(T.length, T.length);
+            (L.current?.focus(), L.current?.setSelection(T.length, T.length));
         }),
-        (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) });
+        (0, s.$)({ currentLength: T.length, maxLength: z.hp, message: x.intl.string(x.t.c2Jqed) }));
     let tl = x.intl.string(x.t.rp0ahn),
         tr = "custom-status-input";
     return (0, l.jsxs)(o.Modal, {
@@ -509,7 +509,7 @@ function tf(t) {
                                             closePopout: e,
                                             onSelectEmoji: (t) => {
                                                 let { emoji: n, willClose: l } = t;
-                                                null == n ||
+                                                (null == n ||
                                                     S(
                                                         null != n.id
                                                             ? { id: n.id, name: n.name, animated: n.animated }
@@ -519,7 +519,7 @@ function tf(t) {
                                                                   animated: !1,
                                                               },
                                                     ),
-                                                    l && e();
+                                                    l && e());
                                             },
                                             pickerIntention: tg.EmojiIntention.STATUS,
                                             onNavigateAway: n,
@@ -579,7 +579,7 @@ function tf(t) {
                                     "aria-label": x.intl.string(x.t.wfYTHe),
                                     className: tm.mt,
                                     onClick: function () {
-                                        y(""), S(null);
+                                        (y(""), S(null));
                                     },
                                     children: (0, l.jsx)(O.a, { size: "md", color: "currentColor", className: tm.hj }),
                                 }),

@@ -1,4 +1,4 @@
-n.d(t, { CI: () => C, XM: () => T, e0: () => N, fK: () => g, s: () => S, tu: () => m }), n(938796), n(321073);
+(n.d(t, { CI: () => C, XM: () => T, e0: () => N, fK: () => g, s: () => S, tu: () => m }), n(938796), n(321073));
 var i = n(477900),
     r = n(536637),
     a = n.n(r),
@@ -18,21 +18,21 @@ var i = n(477900),
 async function T(e) {
     let { scheduledMessageId: t, content: n, flags: i } = e;
     try {
-        await (0, u.Eg)({ scheduledMessageId: t, content: n, flags: i }), (0, _.kb)();
+        (await (0, u.Eg)({ scheduledMessageId: t, content: n, flags: i }), (0, _.kb)());
     } catch (e) {
         (0, _.xP)(e.message);
     }
 }
 async function m(e) {
     try {
-        await (0, u.mk)(e), (0, _.Re)();
+        (await (0, u.mk)(e), (0, _.Re)());
     } catch (e) {
         (0, _.kM)(e.message);
     }
 }
 async function g(e) {
     try {
-        await (0, u.fK)(e), (0, _.Ki)();
+        (await (0, u.fK)(e), (0, _.Ki)());
     } catch (e) {
         (0, _.Do)(e.message);
     }
@@ -105,13 +105,13 @@ function N(e) {
 }
 function C(e) {
     let { scheduledMessage: t } = e;
-    (0, A.q8)({ entryPoint: E.t.INBOX, isEditing: !0, channelId: t.createArgs.channelId }),
+    ((0, A.q8)({ entryPoint: E.t.INBOX, isEditing: !0, channelId: t.createArgs.channelId }),
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 23395));
                 return (n) => (0, i.jsx)(e, { ...n, scheduledMessage: t });
             },
             { modalKey: I.B },
-        );
+        ));
 }
 new c.A("Scheduled Messages");

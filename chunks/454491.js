@@ -16,13 +16,13 @@ function b(e) {
         j = (0, d.Pc)(l),
         _ = null != l.reward ? null : i.t,
         N = n.useCallback(() => {
-            p(),
+            (p(),
                 (0, o.A)({
                     subscriptionTier: x.pe.TIER_2,
                     applicationId: t,
                     analyticsLocations: b,
                     ...(0, c.zl)(l.rewardRequirements),
-                });
+                }));
         }, [p, t, b, l.rewardRequirements]);
     return null != l.endsAt && null == (0, u.ZH)(l.endsAt)
         ? null

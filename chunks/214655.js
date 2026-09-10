@@ -1,6 +1,6 @@
 var a,
     l = t(605685);
-t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
+(t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0));
 var o = l(t(442160)),
     s = l(t(520636)),
     i = l(t(36556)),
@@ -9,7 +9,7 @@ var o = l(t(442160)),
     d = l(t(747562)),
     c = l(t(358508)),
     p = new d.default([]);
-(0, u.default)((a = (0, n.default)((0, i.default)(c.default).call(c.default)))).call(a, function (e) {
+((0, u.default)((a = (0, n.default)((0, i.default)(c.default).call(c.default)))).call(a, function (e) {
     var r,
         t,
         a = c.default.get(e);
@@ -21,9 +21,9 @@ var o = l(t(442160)),
                 var t = r.concept;
                 if (t) {
                     var a = p.get(e) || new o.default([]);
-                    a.add(t), p.set(e, a);
+                    (a.add(t), p.set(e, a));
                 }
             }
         });
 }),
-    (r.default = p);
+    (r.default = p));

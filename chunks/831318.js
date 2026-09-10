@@ -56,7 +56,7 @@ let b = function (t) {
                         variant: "expressive",
                         size: "md",
                         onClick: async (t) => {
-                            await C(), l(t);
+                            (await C(), l(t));
                         },
                         icon: r.t,
                     },

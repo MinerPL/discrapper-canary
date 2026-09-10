@@ -35,7 +35,7 @@ function j(e) {
             analyticsLocation: w,
         } = e;
     a.useEffect(() => {
-        (0, b.z9)(C), (0, d.Xd)(C, !0), null == j && (0, b.cq)(C);
+        ((0, b.z9)(C), (0, d.Xd)(C, !0), null == j && (0, b.cq)(C));
     }, [C, j]);
     let O = (0, s.bG)([g.A], () => g.A.getStateForGuild(C)),
         E = (0, s.bG)([o.A], () => o.A.getGuild(C)),
@@ -63,13 +63,13 @@ function j(e) {
             (e) => {
                 K(e);
                 let t = O?.entitlements?.[e?.entitlementId ?? ""]?.sku?.product_id;
-                null != t && H(t), W(e?.planId), $(e?.name ?? ""), et(e?.regionId ?? "");
+                (null != t && H(t), W(e?.planId), $(e?.name ?? ""), et(e?.regionId ?? ""));
             },
             [O?.entitlements],
         ),
         V = a.useCallback(
             (e, t) => {
-                Q(void 0), H(e?.id), W(t ?? y(e));
+                (Q(void 0), H(e?.id), W(t ?? y(e)));
             },
             [Q],
         ),
@@ -83,14 +83,14 @@ function j(e) {
             let e = q.plans.find((e) => e.id === R);
             function t() {
                 if (null == E || null == q || null == R || ea.current) return;
-                (ea.current = !0), en(!0);
+                ((ea.current = !0), en(!0));
                 let e = new Promise((e) => {
                     setTimeout(() => e(void 0), S.PH);
                 });
                 Promise.all([null != F ? (0, b.pj)(E.id, F.entitlementId, R, U) : (0, b.jL)(E.id, R, U, ee), e])
                     .then(() => {
                         var e, t;
-                        x(),
+                        (x(),
                             F?.planId !== R &&
                                 ((e = E.id),
                                 (t = null == F ? "created" : "updated"),
@@ -105,16 +105,16 @@ function j(e) {
                                         l.e("413634"),
                                     ]).then(l.bind(l, 483225));
                                     return (l) => (0, n.jsx)(a, { gameServerGame: q, guildId: e, status: t, ...l });
-                                }));
+                                })));
                     })
                     .catch((e) => {
-                        X(e.body?.message ?? I.intl.string(h.default.gvNWWr)), (ea.current = !1);
+                        (X(e.body?.message ?? I.intl.string(h.default.gvNWWr)), (ea.current = !1));
                     })
                     .finally(() => {
                         en(!1);
                     });
             }
-            (0, f.Jh)({
+            ((0, f.Jh)({
                 guildId: E.id,
                 productId: q.id,
                 productName: q.name,
@@ -142,7 +142,7 @@ function j(e) {
                               e && t();
                           },
                       })
-                    : t();
+                    : t());
         }, [M, E, _, R, w, q, U, ee, x, Y, F]),
         ei = a.useCallback(
             (e) => {

@@ -11,14 +11,15 @@ function l(e) {
     let { createPromise: t, webpackId: n, renderLoader: l, name: o, memo: d = !1 } = e,
         c = r.lazy(() => (0, a.sq)({ createPromise: t, webpackId: n, name: o })),
         u = (e) => (0, i.jsx)(r.Suspense, { fallback: null != l ? l() : s()(), children: (0, i.jsx)(c, { ...e }) });
-    return d && (u = r.memo(u)), (u.displayName = `Suspense(${o || "Unknown"})`), u;
+    return (d && (u = r.memo(u)), (u.displayName = `Suspense(${o || "Unknown"})`), u);
 }
 function o(e) {
     let { createPromise: t, webpackId: n, renderLoader: l, name: o, memo: d = !1 } = e,
         c = null,
         u = null,
         _ = () => (
-            null == c && (c = (0, a.sq)({ createPromise: t, webpackId: n }).then((e) => ((u = e.default), e))), c
+            null == c && (c = (0, a.sq)({ createPromise: t, webpackId: n }).then((e) => ((u = e.default), e))),
+            c
         ),
         E = r.lazy(_),
         A = (e) => {
@@ -27,7 +28,7 @@ function o(e) {
                 ? (0, i.jsx)(t, { ...e })
                 : (0, i.jsx)(r.Suspense, { fallback: null != l ? l() : s()(), children: (0, i.jsx)(E, { ...e }) });
         };
-    d && (A = r.memo(A)), (A.displayName = `Suspense(${o || "Unknown"})`);
+    (d && (A = r.memo(A)), (A.displayName = `Suspense(${o || "Unknown"})`));
     let h = A;
     return (
         (h.preload = () => {

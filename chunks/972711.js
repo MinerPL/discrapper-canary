@@ -20,7 +20,7 @@ class d {
         return e instanceof File ? e.slice(t) : e;
     }
     doUpload(e, t) {
-        return t?.fileByteRange != null && (e.body = this.sliceBody(e.body, t.fileByteRange.start)), i.Bo.put(e);
+        return (t?.fileByteRange != null && (e.body = this.sliceBody(e.body, t.fileByteRange.start)), i.Bo.put(e));
     }
 }
 function c(e) {
@@ -47,7 +47,7 @@ class u {
             !(function r() {
                 if (null == i) return;
                 if (e.signal?.aborted) {
-                    n(Error("Request cancelled")), i.cancelHttpRequest(s);
+                    (n(Error("Request cancelled")), i.cancelHttpRequest(s));
                     return;
                 }
                 let a = i.getHttpRequestStatus(s);

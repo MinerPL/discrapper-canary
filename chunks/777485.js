@@ -1,8 +1,8 @@
-l.d(t, { h: () => f, i: () => j });
+l.d(t, { h: () => j, i: () => f });
 var n = l(477900),
     r = l(582128),
-    i = l(834730),
-    s = l(866665),
+    s = l(834730),
+    i = l(866665),
     a = l(290136),
     u = l(99018),
     c = l(407815),
@@ -21,7 +21,7 @@ function p(e) {
         children: (0, n.jsx)(o.$, {
             slot: "trigger",
             className: x.hZ,
-            children: (0, n.jsxs)(i.E, {
+            children: (0, n.jsxs)(s.E, {
                 ...l,
                 className: x.aQ,
                 children: [t, !r && (0, n.jsx)(m.a, { size: "xs", color: "currentColor", className: x.ai })],
@@ -30,39 +30,39 @@ function p(e) {
     });
 }
 var v = l(423389);
-function f(e) {
+function j(e) {
     let {
             label: t,
             defaultExpanded: l = !1,
-            onExpandedChange: i,
-            isDisabled: s = !1,
+            onExpandedChange: s,
+            isDisabled: i = !1,
             collapsedContent: a,
             children: c,
         } = e,
         [o, d] = r.useState(l),
         m = r.useCallback(
             (e) => {
-                d(e), null != i && i(e);
+                (d(e), null != s && s(e));
             },
-            [i],
+            [s],
         );
     return (0, n.jsxs)(u.EN, {
         defaultExpanded: l,
-        isDisabled: s,
+        isDisabled: i,
         onExpandedChange: m,
         children: [
             (0, n.jsxs)("div", {
                 className: v.wx,
                 children: [
                     (0, n.jsx)(p, { variant: "text-md/medium", color: o ? "text-strong" : "text-muted", children: t }),
-                    (!o || s) && a,
+                    (!o || i) && a,
                 ],
             }),
             (0, n.jsx)(h, { children: (0, n.jsx)("div", { className: v.CS, children: c }) }),
         ],
     });
 }
-function j(e) {
+function f(e) {
     let {
             label: t,
             labelSubText: l,
@@ -74,11 +74,11 @@ function j(e) {
             tooltip: x,
             tooltipAriaLabel: h,
             subText: p,
-            subTextColor: f = "text-muted",
-            subTextHasStrikethrough: j,
+            subTextColor: j = "text-muted",
+            subTextHasStrikethrough: f,
         } = e,
         g = r.useMemo(() => {
-            let e = (0, n.jsxs)(i.E, {
+            let e = (0, n.jsxs)(s.E, {
                 variant: "text-md/normal",
                 color: o,
                 className: v.U4,
@@ -90,15 +90,15 @@ function j(e) {
                       className: v.Lm,
                       children: [
                           e,
-                          (0, n.jsx)(i.E, {
+                          (0, n.jsx)(s.E, {
                               variant: "text-xs/medium",
-                              color: f,
-                              className: j ? v.tP : void 0,
+                              color: j,
+                              className: f ? v.tP : void 0,
                               children: p,
                           }),
                       ],
                   });
-        }, [u, d, p, j, o, f]),
+        }, [u, d, p, f, o, j]),
         N = r.useMemo(
             () =>
                 null == l
@@ -106,7 +106,7 @@ function j(e) {
                     : (0, n.jsxs)("div", {
                           children: [
                               t,
-                              (0, n.jsx)(i.E, { variant: "text-xs/normal", color: "text-subtle", children: l }),
+                              (0, n.jsx)(s.E, { variant: "text-xs/normal", color: "text-subtle", children: l }),
                           ],
                       }),
             [t, l],
@@ -114,7 +114,7 @@ function j(e) {
     return (0, n.jsxs)("div", {
         className: v.Yn,
         children: [
-            (0, n.jsxs)(i.E, {
+            (0, n.jsxs)(s.E, {
                 variant: "text-md/normal",
                 color: c,
                 className: v.yB,
@@ -122,7 +122,7 @@ function j(e) {
                     m,
                     N,
                     null != x &&
-                        (0, n.jsx)(s.m, {
+                        (0, n.jsx)(i.m, {
                             text: x,
                             children: (0, n.jsx)(a.CircleQuestionIcon, { size: "xs", "aria-label": h }),
                         }),

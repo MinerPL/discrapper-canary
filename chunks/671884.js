@@ -275,7 +275,7 @@ function e1(e) {
         if (!R || T || m) return;
         let e = window.setTimeout(() => L(!0), 150);
         return () => {
-            window.clearTimeout(e), L(!1);
+            (window.clearTimeout(e), L(!1));
         };
     }, [R, T, m]);
     let z = i.useRef(null),
@@ -329,12 +329,12 @@ function e1(e) {
                                     });
                                 },
                                 onEdit: () => {
-                                    o(d),
+                                    (o(d),
                                         eD.default.track(eo.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                             type: "edit",
                                             ...e_.lc(),
                                             ...e_.Zy(d),
-                                        });
+                                        }));
                                 },
                                 onBeforeDelete: O,
                                 onAfterDelete: () => {
@@ -359,16 +359,16 @@ function e1(e) {
         ),
         $ = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), K(e);
+                (e.preventDefault(), e.stopPropagation(), K(e));
             },
             [K],
         ),
         B = i.useCallback(
             (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.stopPropagation(),
                     o(d),
-                    eD.default.track(eo.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                    eD.default.track(eo.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" }));
             },
             [o, d],
         ),
@@ -547,11 +547,11 @@ function e8(e) {
         ),
         x = i.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     e.preventDefault(),
                     (m.current = !0),
                     e.currentTarget.setPointerCapture(e.pointerId),
-                    h(e.clientX);
+                    h(e.clientX));
             },
             [h],
         ),
@@ -562,8 +562,8 @@ function e8(e) {
             [h],
         ),
         p = i.useCallback((e) => {
-            (m.current = !1),
-                e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId);
+            ((m.current = !1),
+                e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId));
         }, []),
         j = (0, u.yK)([I.default], () => o.users.map((e) => I.default.getUser(e)).filter(eT.Vq)),
         v = (0, u.bG)([eI.A], () => (null != o.channelId ? eI.A.getChannel(o.channelId) : null)),
@@ -925,10 +925,10 @@ var tr = l(922016),
     tv = l(620409),
     ty = l(569737);
 function tb(e) {
-    return e.setHours(0, 0, 0, 0), e.getTime();
+    return (e.setHours(0, 0, 0, 0), e.getTime());
 }
 function tC(e) {
-    return e.setHours(23, 59, 59, 999), e.getTime();
+    return (e.setHours(23, 59, 59, 999), e.getTime());
 }
 function tA(e, t) {
     if (null == e && null == t) return null;
@@ -990,7 +990,7 @@ function tL(e) {
         f = i.useMemo(() => (0, tv.Ec)((0, tv.Xj)()), []),
         v = i.useCallback(
             (e) => {
-                a(
+                (a(
                     (function (e) {
                         let t = new Date();
                         switch (e) {
@@ -1005,7 +1005,9 @@ function tL(e) {
                             }
                             case "last-3-days": {
                                 let l = new Date(t);
-                                return l.setDate(l.getDate() - 2), { preset: e, after: tb(l), before: tC(new Date(t)) };
+                                return (
+                                    l.setDate(l.getDate() - 2), { preset: e, after: tb(l), before: tC(new Date(t)) }
+                                );
                             }
                             case "this-year": {
                                 let l = t.getFullYear();
@@ -1026,7 +1028,7 @@ function tL(e) {
                         }
                     })(e),
                 ),
-                    t();
+                    t());
             },
             [a, t],
         ),
@@ -1035,18 +1037,18 @@ function tL(e) {
         }, []),
         b = i.useCallback(
             (e) => {
-                u(e), a(tA(e, d));
+                (u(e), a(tA(e, d)));
             },
             [d, a],
         ),
         C = i.useCallback(
             (e) => {
-                m(e), a(tA(c, e));
+                (m(e), a(tA(c, e)));
             },
             [c, a],
         ),
         A = i.useCallback(() => {
-            u(null), m(null), a(null);
+            (u(null), m(null), a(null));
         }, [a]),
         k = null != c || null != d,
         N = i.useRef(null),
@@ -1056,7 +1058,7 @@ function tL(e) {
                 if ("ArrowDown" !== e.key && "ArrowUp" !== e.key) return;
                 let t = w();
                 if (0 === t.length) return;
-                e.preventDefault(), e.stopPropagation();
+                (e.preventDefault(), e.stopPropagation());
                 let l = t.indexOf(e.target);
                 if (-1 === l) return void ("ArrowDown" === e.key ? t[0] : t[t.length - 1])?.focus();
                 let n = Math.min(t.length - 1, Math.max(0, l + ("ArrowDown" === e.key ? 1 : -1)));
@@ -1366,7 +1368,7 @@ function tG() {
                             group: "sort",
                             label: eu.intl.string(eu.t["4LLKx3"]),
                             action: () => {
-                                t(K.mu.MOST_RECENT), i();
+                                (t(K.mu.MOST_RECENT), i());
                             },
                             checked: e === K.mu.MOST_RECENT,
                         }),
@@ -1375,7 +1377,7 @@ function tG() {
                             group: "sort",
                             label: eu.intl.string(eu.t["0gitSE"]),
                             action: () => {
-                                t(K.mu.OLDEST), i();
+                                (t(K.mu.OLDEST), i());
                             },
                             checked: e === K.mu.OLDEST,
                         }),
@@ -1410,7 +1412,7 @@ function tU() {
                             group: "method",
                             label: eu.intl.string(ec.default.lscwjQ),
                             action: () => {
-                                t("all"), i();
+                                (t("all"), i());
                             },
                             checked: "all" === e,
                         }),
@@ -1419,7 +1421,7 @@ function tU() {
                             group: "method",
                             label: eu.intl.string(ec.default.xrOIkz),
                             action: () => {
-                                t("auto"), i();
+                                (t("auto"), i());
                             },
                             checked: "auto" === e,
                         }),
@@ -1428,7 +1430,7 @@ function tU() {
                             group: "method",
                             label: eu.intl.string(ec.default.D7HSLJ),
                             action: () => {
-                                t("manual"), i();
+                                (t("manual"), i());
                             },
                             checked: "manual" === e,
                         }),
@@ -1524,7 +1526,7 @@ function tK(e) {
                         let t = eS.A.getGuild(e);
                         null != t && l.push({ key: e, label: t.name, guild: t });
                     }
-                    return l.sort((e, t) => e.label.toLowerCase().localeCompare(t.label.toLowerCase())), l;
+                    return (l.sort((e, t) => e.label.toLowerCase().localeCompare(t.label.toLowerCase())), l);
                 })(t),
             [t],
         ),
@@ -1545,8 +1547,10 @@ function tK(e) {
                     : (function (e) {
                           let t = new Set();
                           for (let l of e)
-                              l.activity?.state != null && "" !== l.activity.state && t.add(l.activity.state),
-                                  l.activity?.details != null && "" !== l.activity.details && t.add(l.activity.details);
+                              (l.activity?.state != null && "" !== l.activity.state && t.add(l.activity.state),
+                                  l.activity?.details != null &&
+                                      "" !== l.activity.details &&
+                                      t.add(l.activity.details));
                           return Array.from(t).sort((e, t) => e.toLowerCase().localeCompare(t.toLowerCase()));
                       })(t.filter((e) => e.applicationId === f)).map((e) => ({ key: e, label: e })),
             [t, f],
@@ -1564,7 +1568,7 @@ function tK(e) {
                                 avatarUrl: e.getAvatarURL(null, 32),
                             });
                     }
-                    return t.sort((e, t) => e.label.toLowerCase().localeCompare(t.label.toLowerCase())), t;
+                    return (t.sort((e, t) => e.label.toLowerCase().localeCompare(t.label.toLowerCase())), t);
                 })(a).map((e) => ({
                     key: e.key,
                     label: e.label,
@@ -1750,7 +1754,7 @@ function t0(e) {
                 [],
             );
             let a = i.useCallback((e) => {
-                null != l.current && (window.clearTimeout(l.current), (l.current = null)),
+                (null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                     null != e
                         ? t((t) => {
                               if (t.thumbnail === e) return t;
@@ -1758,9 +1762,9 @@ function t0(e) {
                               return { previousThumbnail: l !== e ? l : null, thumbnail: e };
                           })
                         : (l.current = window.setTimeout(() => {
-                              t((e) => ({ previousThumbnail: e.thumbnail ?? e.previousThumbnail, thumbnail: null })),
-                                  (l.current = null);
-                          }, 2e3));
+                              (t((e) => ({ previousThumbnail: e.thumbnail ?? e.previousThumbnail, thumbnail: null })),
+                                  (l.current = null));
+                          }, 2e3)));
             }, []);
             return {
                 backgroundComponent: (0, n.jsxs)(n.Fragment, {
@@ -1790,7 +1794,9 @@ function t0(e) {
         y = i.useCallback(
             (e) => {
                 if ("ArrowUp" === e.key || "ArrowDown" === e.key) {
-                    e.preventDefault(), e.stopPropagation(), a?.("ArrowUp" === e.key ? "up" : "down", e.currentTarget);
+                    (e.preventDefault(),
+                        e.stopPropagation(),
+                        a?.("ArrowUp" === e.key ? "up" : "down", e.currentTarget));
                     return;
                 }
                 j(e);
@@ -1945,7 +1951,7 @@ function t9(e) {
                                   ? "down"
                                   : null;
                     if (null != n) {
-                        e.preventDefault(), e.stopPropagation(), m(n, e.currentTarget);
+                        (e.preventDefault(), e.stopPropagation(), m(n, e.currentTarget));
                         return;
                     }
                 }
@@ -2113,7 +2119,7 @@ function t8(e) {
         v = i.useMemo(() => {
             let e = [],
                 t = 0;
-            for (let l of p) e.push(t), (t += Math.min(2, Math.ceil(l.clips.length / 3)));
+            for (let l of p) (e.push(t), (t += Math.min(2, Math.ceil(l.clips.length / 3))));
             return e;
         }, [p]),
         y = i.useRef(null),
@@ -2221,7 +2227,7 @@ function ls() {
             (0, en.openUserSettings)(el.X.CLIPS_PANEL);
         }, []),
         o = i.useCallback(() => {
-            l(null), a(null), t(K.oH.ALL_CLIPS), s(!0);
+            (l(null), a(null), t(K.oH.ALL_CLIPS), s(!0));
         }, [l, a, t, s]),
         c = null != e ? ea.dI(e.shortcut, !0) : null;
     return (0, n.jsxs)("div", {
@@ -2280,7 +2286,7 @@ function lr(e) {
             (s = (0, te.P)((e) => e.clearFilters)),
             i.useCallback(
                 (e) => {
-                    t(e), l(null), a(null), s();
+                    (t(e), l(null), a(null), s());
                 },
                 [t, l, a, s],
             )),
@@ -2402,7 +2408,7 @@ function lu(e) {
                     i = n.indexOf(l);
                 if (-1 !== i) {
                     if ("ArrowDown" === e.key || "ArrowUp" === e.key) {
-                        e.preventDefault(), e.stopPropagation();
+                        (e.preventDefault(), e.stopPropagation());
                         let t = Math.min(n.length - 1, Math.max(0, i + ("ArrowDown" === e.key ? 1 : -1)));
                         n[t]?.focus();
                         return;
@@ -2465,9 +2471,9 @@ function lh(e) {
         })().catch(() => {});
     }, [ea]);
     let { onShareClick: eo } = (0, G.A)(t);
-    i.useEffect(
+    (i.useEffect(
         () => () => {
-            te.P.getState().resetAll(), (0, T.Su)();
+            (te.P.getState().resetAll(), (0, T.Su)());
         },
         [],
     ),
@@ -2477,7 +2483,7 @@ function lh(e) {
         }, [B]),
         (0, o.l0)(() => {
             D.Ay.hasClips() && L.A.isDeveloper && E.Ay.fireSurveyAction(c.w.POPULATED_CLIP_GALLERY_CLOSED);
-        });
+        }));
     let ed = (0, u.bG)([D.Ay], () => D.Ay.getExportingClipIds().size > 0),
         [em, eh] = i.useState(null != q ? "editing" : "gallery"),
         [ex, eg] = i.useState(q ?? null),
@@ -2485,7 +2491,7 @@ function lh(e) {
         ep = (0, d.useIsModalAtTop)(eq.nm),
         { enabled: ej } = M._.useConfig({ location: "ClipsGalleryModal" }),
         ev = i.useRef(em);
-    (ev.current = em), (i.useRef(ex).current = ex);
+    ((ev.current = em), (i.useRef(ex).current = ex));
     let [ey, eb] = i.useState(null != q ? h.ip.ENTERED : h.ip.HIDDEN),
         eC = i.useRef(null),
         eA = (0, te.P)((e) => e.gameFacet),
@@ -2503,7 +2509,7 @@ function lh(e) {
             (t = requestAnimationFrame(function l() {
                 let n = eL.current?.querySelector('[role="grid"] [role="button"]');
                 if (null != n) {
-                    n.focus(), eE(!1);
+                    (n.focus(), eE(!1));
                     return;
                 }
                 if (e++ < 10) {
@@ -2559,24 +2565,24 @@ function lh(e) {
                     : { icon: null, title: eu.intl.string(eu.t.dPVrEv) };
         }, [eA, ek, eN, Z, eM, eD]),
         e_ = i.useCallback(() => {
-            eh("editing"), C.Ay.useReducedMotion && eb(h.ip.ENTERED);
+            (eh("editing"), C.Ay.useReducedMotion && eb(h.ip.ENTERED));
         }, []),
         eR = i.useCallback((e) => {
             X((t) => {
                 let l = new Set(t);
-                return l.has(e) ? l.delete(e) : l.add(e), l;
+                return (l.has(e) ? l.delete(e) : l.add(e), l);
             });
         }, []),
         eF = i.useCallback(
             (e) => {
-                eg(e.id), e_();
+                (eg(e.id), e_());
             },
             [e_],
         ),
         eH = i.useCallback(() => {
-            C.Ay.useReducedMotion && eg(null), eh("gallery");
+            (C.Ay.useReducedMotion && eg(null), eh("gallery"));
         }, []);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         function e(e) {
             "Escape" === e.key && "editing" === ev.current && ep && (e.stopPropagation(), eH());
         }
@@ -2598,11 +2604,11 @@ function lh(e) {
                     "gallery" !== ev.current
                 )
                     return;
-                e.preventDefault(), e.stopPropagation();
+                (e.preventDefault(), e.stopPropagation());
                 let t = te.P.getState();
-                t.currentPage === K.fB.HOME && t.setActiveMainLink(K.oH.ALL_CLIPS), t.setPendingSearchFocus(!0);
+                (t.currentPage === K.fB.HOME && t.setActiveMainLink(K.oH.ALL_CLIPS), t.setPendingSearchFocus(!0));
             }
-            return document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0);
+            return (document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0));
         }, [ep]),
         i.useEffect(
             () =>
@@ -2613,7 +2619,7 @@ function lh(e) {
                           (0, T.TE)();
                       }),
             [em, ex],
-        );
+        ));
     let ez = i.useCallback(() => {
             X(new Set());
         }, []),
@@ -2628,7 +2634,7 @@ function lh(e) {
                             ...l,
                             clips: e,
                             onAfterDelete: () => {
-                                ez(), l.onClose();
+                                (ez(), l.onClose());
                             },
                         });
                 },
@@ -2637,7 +2643,7 @@ function lh(e) {
         }, [ei, W, ez]),
         eU = i.useCallback(async () => {
             let e = ei.filter((e) => W.has(e.id));
-            await eo({ clips: e }), ez();
+            (await eo({ clips: e }), ez());
         }, [ei, W, eo, ez]),
         eK = i.useMemo(() => {
             let e = 0,
@@ -2797,7 +2803,7 @@ function lh(e) {
                             onTransitionEnd: () => {
                                 switch (em) {
                                     case "gallery":
-                                        eg(null), eb(h.ip.HIDDEN);
+                                        (eg(null), eb(h.ip.HIDDEN));
                                         break;
                                     case "editing":
                                         eb(h.ip.ENTERED);

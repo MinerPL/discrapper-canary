@@ -1,4 +1,4 @@
-t.d(e, { A: () => s }), t(323874), t(14289), t(35956);
+(t.d(e, { A: () => s }), t(323874), t(14289), t(35956));
 var l = t(582128),
     n = t(636537),
     r = t(676279);
@@ -64,16 +64,16 @@ function s(a) {
                     },
                 ),
                 () => {
-                    (t = !0), (o.current = !1);
+                    ((t = !0), (o.current = !1));
                 }
             );
         }, [a, e]),
         (0, l.useEffect)(
             () => () => {
-                null != t.celebrationEntry && window.URL.revokeObjectURL(t.celebrationEntry),
+                (null != t.celebrationEntry && window.URL.revokeObjectURL(t.celebrationEntry),
                     null != t.celebrationIdle && window.URL.revokeObjectURL(t.celebrationIdle),
                     null != t.activationEntry && window.URL.revokeObjectURL(t.activationEntry),
-                    null != t.activationIdle && window.URL.revokeObjectURL(t.activationIdle);
+                    null != t.activationIdle && window.URL.revokeObjectURL(t.activationIdle));
             },
             [t.celebrationEntry, t.celebrationIdle, t.activationEntry, t.activationIdle],
         ),

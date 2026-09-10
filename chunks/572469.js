@@ -133,7 +133,7 @@ function w(e) {
         j = f.intl.string(f.t.fZSi1D),
         S = l.useCallback(
             (e) => {
-                m(e), u(null);
+                (m(e), u(null));
             },
             [m, u],
         );
@@ -143,7 +143,7 @@ function w(e) {
         }, [r]),
         (0, n.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     c(!0),
                     s({ mfaType: "backup", data: h.replace(/-/g, "") })
                         .catch((e) => {
@@ -151,7 +151,7 @@ function w(e) {
                         })
                         .finally(() => {
                             c(!1);
-                        });
+                        }));
             },
             children: [
                 (0, n.jsx)(C, { onClose: a }),
@@ -188,7 +188,7 @@ function E(e) {
         }, [r]),
         (0, n.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     c(!0),
                     s({ mfaType: "password", data: h })
                         .catch((e) => {
@@ -196,7 +196,7 @@ function E(e) {
                         })
                         .finally(() => {
                             c(!1);
-                        });
+                        }));
             },
             children: [
                 (0, n.jsx)(C, { onClose: a }),
@@ -276,8 +276,8 @@ function T(e) {
         [g, j] = l.useState(null),
         [S, w] = l.useState(""),
         E = l.useRef(null);
-    l.useEffect(() => {
-        c(!0),
+    (l.useEffect(() => {
+        (c(!0),
             _.Bo.post({ url: D.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
                 .then((e) => {
                     u(e.body.phone);
@@ -287,15 +287,15 @@ function T(e) {
                 })
                 .finally(() => {
                     c(!1);
-                });
+                }));
     }, [t.ticket]),
         l.useEffect(() => {
             r && E.current?.focus();
-        }, [r]);
+        }, [r]));
     let R = null == d ? f.intl.string(f.t.LQdCQE) : f.intl.formatToPlainString(f.t["8r6h7+"], { phoneNumber: d });
     return (0, n.jsxs)("form", {
         onSubmit: (e) => {
-            e.preventDefault(),
+            (e.preventDefault(),
                 x(!0),
                 s({ mfaType: "sms", data: S })
                     .catch((e) => {
@@ -303,7 +303,7 @@ function T(e) {
                     })
                     .finally(() => {
                         x(!1);
-                    });
+                    }));
         },
         children: [
             (0, n.jsx)(C, { subtitle: R, onClose: a }),
@@ -368,7 +368,7 @@ function F(e) {
         }, [r]),
         (0, n.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     c(!0),
                     u(null),
                     s({ mfaType: "totp", data: h })
@@ -377,7 +377,7 @@ function F(e) {
                         })
                         .finally(() => {
                             c(!1);
-                        });
+                        }));
             },
             children: [
                 (0, n.jsx)(C, { onClose: a }),
@@ -420,7 +420,7 @@ function M(e) {
         [c, d] = l.useState(null),
         { challenge: u } = t.methods.find((e) => "webauthn" === e.type),
         h = l.useCallback(async () => {
-            o(!0), d(null);
+            (o(!0), d(null));
             let e = q.isPlatformEmbedded && z.Ay.supportsFeature(D.BYE.WEBAUTHN) ? z.Ay.webAuthnAuthenticate : W.J;
             try {
                 let t = await e(u);
@@ -433,7 +433,7 @@ function M(e) {
                         : ((0, O.Os)(e, {}), d(e.message));
                 }
             } catch (e) {
-                (0, O.Os)(e, { extra: { error_type: "webauthn_api_error" } }), d(f.intl.string(f.t.xSCvBf));
+                ((0, O.Os)(e, { extra: { error_type: "webauthn_api_error" } }), d(f.intl.string(f.t.xSCvBf)));
             } finally {
                 o(!1);
             }
@@ -462,7 +462,7 @@ function X(e) {
         [h, m] = l.useState(d);
     async function x(e) {
         let { mfaType: n, data: l } = e;
-        await s({ mfaType: n, data: l, ticket: t.ticket }), null != o && o();
+        (await s({ mfaType: n, data: l, ticket: t.ticket }), null != o && o());
     }
     let p = { mfaChallenge: t, finish: x, setSlide: u, onClose: i };
     return (0, n.jsxs)(j.Provider, {

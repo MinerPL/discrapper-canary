@@ -35,14 +35,14 @@ function D(t) {
                     variant: "secondary",
                     text: f.intl.string(f.t.L5eIZ2),
                     onClick: function () {
-                        E(), (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s });
+                        (E(), (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s }));
                     },
                 },
                 {
                     variant: "primary",
                     text: f.intl.string(f.t["5e8Mrp"]),
                     onClick: function () {
-                        E(),
+                        (E(),
                             (0, m.Dr)(I, { forceTrack: !0, dismissAction: h.i.PRIMARY, guildId: s }),
                             (0, u.transitionToGlobalDiscovery)({
                                 tab: N.GlobalDiscoveryTab.APPS,
@@ -50,7 +50,7 @@ function D(t) {
                                     guildId: s,
                                     entrypoint: { name: A.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
                                 },
-                            });
+                            }));
                     },
                 },
             ],

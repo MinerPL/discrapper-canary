@@ -28,9 +28,9 @@ function b(t) {
         A = n?.team?.id !== b,
         [j, { loading: k, error: I }] = (0, g.A)(h.Ay.transferApplication);
     async function w() {
-        s()(null != n, "no application"),
+        (s()(null != n, "no application"),
             s()(null != b, "no team selected"),
-            null != (await j({ applicationId: n.id, teamId: b })) && a();
+            null != (await j({ applicationId: n.id, teamId: b })) && a());
     }
     let E = n?.team != null;
     return (0, e.jsxs)(r.Modal, {

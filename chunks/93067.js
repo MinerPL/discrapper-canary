@@ -43,13 +43,13 @@ function v(e) {
                 !1,
             );
         }, [I, _]),
-        R = i.useCallback(() => {
-            I.stop(), _(!0);
-        }, [I, _]),
         k = i.useCallback(() => {
+            (I.stop(), _(!0));
+        }, [I, _]),
+        D = i.useCallback(() => {
             b(!0);
         }, []),
-        D = i.useCallback(() => {
+        R = i.useCallback(() => {
             b(!1);
         }, []);
     return (0, l.jsx)(o.Y, {
@@ -57,7 +57,7 @@ function v(e) {
             (0, l.jsx)(f.A, {
                 children: (0, l.jsxs)("div", {
                     className: A.SW,
-                    onMouseEnter: R,
+                    onMouseEnter: k,
                     onMouseLeave: y,
                     children: [
                         t,
@@ -80,10 +80,10 @@ function v(e) {
                     children: (0, l.jsx)("div", {
                         ref: v,
                         tabIndex: 0,
-                        onMouseEnter: R,
+                        onMouseEnter: k,
                         onMouseLeave: y,
-                        onFocus: k,
-                        onBlur: D,
+                        onFocus: D,
+                        onBlur: R,
                         className: r()(n, A.zr),
                         "aria-label": E,
                         ...e,

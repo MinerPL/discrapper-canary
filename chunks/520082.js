@@ -226,11 +226,17 @@ let H = Object.assign(
                         "error" !== f || G.pending || G.fail(() => (0, S.hF)());
                     }
                 }, [l, f]),
-                (0, d.bG)([L.Ay], () => {
-                    if (!l || null == t) return !1;
-                    let e = L.Ay.findProjectByApplicationId(t);
-                    return !!(null != e && (0, L.PV)(e)) || (L.Ay.getProjectsFetchState()?.type !== "success" && null);
-                }, [l, t])),
+                (0, d.bG)(
+                    [L.Ay],
+                    () => {
+                        if (!l || null == t) return !1;
+                        let e = L.Ay.findProjectByApplicationId(t);
+                        return (
+                            !!(null != e && (0, L.PV)(e)) || (L.Ay.getProjectsFetchState()?.type !== "success" && null)
+                        );
+                    },
+                    [l, t],
+                )),
             ee = (function (e, t) {
                 let { pending: n, refresh: r } = (0, R.A)(e);
                 return t

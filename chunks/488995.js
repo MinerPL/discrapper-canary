@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         GLOBAL_DISCOVERY_DEFAULT_TAB: () => _,
         GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => E,
@@ -10,7 +10,7 @@ n.r(t),
         GlobalDiscoverySharedTabId: () => u,
         GlobalDiscoveryTab: () => o,
         MOBILE_GLOBAL_DISCOVERY_TABS: () => c,
-    });
+    }));
 var i,
     r,
     a,

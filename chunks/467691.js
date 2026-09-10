@@ -45,9 +45,9 @@ let I = r().throttle(function (e, t) {
         f = e > 0 ? 0 : m.length - 1,
         O = _(N, S),
         b = O.indexOf(L) + e;
-    for (; null != N && "" !== N; ) {
+    for (; null != N && "" !== N;) {
         if (((h = O[b]), I(N)))
-            for (; null != h && "" !== h; ) {
+            for (; null != h && "" !== h;) {
                 if ("string" == typeof h) {
                     if (C(N, h)) return (0, E.i)(N, h, !1, p(N, h));
                 } else if ("object" == typeof h && T(h.resourceId, h.type))
@@ -82,10 +82,10 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                (b += e), (h = O[b]);
+                ((b += e), (h = O[b]));
             }
         if (((f += e), null == (N = m[f]) || "" === N)) break;
-        (O = _(N, S)), (b = e < 0 ? O.length - 1 : 0);
+        ((O = _(N, S)), (b = e < 0 ? O.length - 1 : 0));
     }
     A._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, g.ugG);

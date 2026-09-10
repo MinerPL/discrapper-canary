@@ -2,5 +2,5 @@ i.d(e, { k: () => r });
 var n = i(192308),
     l = i(830215);
 function r(t) {
-    (0, n.closeAllModals)(), l.A.logout(t);
+    ((0, n.closeAllModals)(), l.A.logout(t));
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A0: () => c,
     Ay: () => l,
     EE: () => A,
@@ -21,7 +21,7 @@ n.d(t, {
     i6: () => m,
     rJ: () => E,
 }),
-    n(938796);
+    n(938796));
 var i = n(665260),
     r = n(315069),
     a = n(403362),
@@ -160,7 +160,7 @@ class l extends r.A {
     constructor(e) {
         if ((super(), !Object.values(s.hes).includes(e.type)))
             throw Error(`Unrecognized payment source type ${e.type}`);
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.type = e.type),
             (this.paymentGateway = e.paymentGateway),
             (this.invalid = e.invalid ?? !1),
@@ -168,7 +168,7 @@ class l extends r.A {
             (this.isDefault = e.isDefault),
             (this.flags = e.flags ?? 0),
             (this.country = e.country ?? ""),
-            (this.pixMetadata = e.pixMetadata);
+            (this.pixMetadata = e.pixMetadata));
     }
     hasFlag(e) {
         return (0, i.Lt)(this.flags, e);
@@ -188,10 +188,10 @@ class o extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.CARD))
             throw Error(`Cannot instantiate CreditCardSourceRecord with type: ${e.type}, must be ${s.hes.CARD}`);
-        (this.brand = e.brand ?? ""),
+        ((this.brand = e.brand ?? ""),
             (this.last4 = e.last4 ?? ""),
             (this.expiresMonth = e.expiresMonth ?? 0),
-            (this.expiresYear = e.expiresYear ?? 0);
+            (this.expiresYear = e.expiresYear ?? 0));
     }
     get isStripeLinkBankAccount() {
         return "link" === this.brand && "0000" === this.last4;
@@ -226,7 +226,7 @@ class _ extends l {
     constructor(e) {
         if ((super(e), e.type !== s.hes.PRZELEWY24))
             throw Error(`Cannot instantiate Przelewy24SourceRecord with type: ${e.type}, must be ${s.hes.PRZELEWY24}`);
-        (this.email = e.email || ""), (this.bank = e.bank);
+        ((this.email = e.email || ""), (this.bank = e.bank));
     }
 }
 class E extends l {

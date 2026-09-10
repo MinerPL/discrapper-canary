@@ -67,7 +67,7 @@ function b(e) {
                 ? {
                       ...A,
                       onClick: () => {
-                          A.onClick(), E.current?.focus();
+                          (A.onClick(), E.current?.focus());
                       },
                   }
                 : void 0;

@@ -1,4 +1,4 @@
-n.d(t, { P7: () => A, aK: () => u, kZ: () => f, o: () => _, xM: () => h, xm: () => I }), n(321073);
+(n.d(t, { P7: () => A, aK: () => u, kZ: () => f, o: () => _, xM: () => h, xm: () => I }), n(321073));
 var i,
     r,
     a = n(636537),
@@ -20,16 +20,16 @@ let E = new (class {
     cache;
     expiration;
     constructor() {
-        (this.cache = new Map()), (this.expiration = Date.now() + 6e5);
+        ((this.cache = new Map()), (this.expiration = Date.now() + 6e5));
     }
     set(e, t) {
         this.cache.set(e, t);
     }
     get(e) {
-        return this._checkExpiration(), this.cache.get(e);
+        return (this._checkExpiration(), this.cache.get(e));
     }
     has(e) {
-        return this._checkExpiration(), this.cache.has(e);
+        return (this._checkExpiration(), this.cache.has(e));
     }
     _checkExpiration() {
         this.expiration < Date.now() && this.cache.clear();
@@ -47,7 +47,7 @@ async function A(e, t, n) {
             })
         ).body,
         l = { users: r.map((e) => new o.A(e)), nextIndex: s };
-    return E.set(i, l), l;
+    return (E.set(i, l), l);
 }
 function h() {
     return (
@@ -84,11 +84,11 @@ async function I(e) {
         try {
             let e = await a.Bo.post({ url: c.Rsh.CREATE_REFERRAL(i), oldFormErrors: !0, rejectWithError: !0 }),
                 r = null != e.body ? l.A.createFromServer(e.body) : null;
-            null != r && t.push(r), n.set(i, 1);
+            (null != r && t.push(r), n.set(i, 1));
         } catch (e) {
-            d.A.captureException(e), n.set(i, 2);
+            (d.A.captureException(e), n.set(i, 2));
         }
-    return s.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
+    return (s.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n);
 }
 async function f(e) {
     try {

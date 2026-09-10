@@ -13,13 +13,13 @@ function c(e, t, n, i) {
 }
 function u(e) {
     var t, n;
-    e.id, e.label, e.commonTriggerPoint;
+    (e.id, e.label, e.commonTriggerPoint);
     let u = new Map();
-    u.set(o.RE.NOT_ELIGIBLE, { description: "Not Eligible", config: e.defaultConfig }),
+    (u.set(o.RE.NOT_ELIGIBLE, { description: "Not Eligible", config: e.defaultConfig }),
         u.set(o.RE.CONTROL, { description: "Control Bucket", config: e.defaultConfig }),
         e.treatments.forEach((e) => {
             u.set(e.id, { description: `Treatment ${e.id}: ${e.label}`, config: e.config });
-        });
+        }));
     let _ =
         ((t = e.kind),
         (n = {

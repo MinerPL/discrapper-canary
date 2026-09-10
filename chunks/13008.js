@@ -1,4 +1,4 @@
-s.d(t, { A: () => p }), s(321073);
+(s.d(t, { A: () => p }), s(321073));
 var o = s(477900),
     h = s(582128),
     l = s(503698),
@@ -47,14 +47,14 @@ class u extends h.PureComponent {
     _codeBlockRefs = Array(this.props.count);
     static defaultProps = { count: 6 };
     constructor(e) {
-        super(e), (this.state = { codes: Array(e.count) });
+        (super(e), (this.state = { codes: Array(e.count) }));
     }
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: s } = this.state,
             h = [];
         for (let e = 0; e < s.length; e++)
-            e === s.length / 2 && h.push((0, o.jsx)("div", { className: i.j }, "spacer")),
+            (e === s.length / 2 && h.push((0, o.jsx)("div", { className: i.j }, "spacer")),
                 h.push(
                     (0, o.jsx)(
                         d,
@@ -68,7 +68,7 @@ class u extends h.PureComponent {
                         },
                         e,
                     ),
-                );
+                ));
         return (0, o.jsx)(c.A, { align: c.A.Align.CENTER, justify: c.A.Justify.CENTER, className: e, children: h });
     }
     setCodeBlockRef(e, t) {

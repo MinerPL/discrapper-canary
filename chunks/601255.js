@@ -16,7 +16,7 @@ function u(e) {
                     let o = 1e3 * e.expiresAt - Date.now();
                     if (!r && o > 0) {
                         let e = new a.Ep();
-                        e.start(Math.min(i.mnr, o), () => t()), (u.current = e);
+                        (e.start(Math.min(i.mnr, o), () => t()), (u.current = e));
                     }
                 })(),
                 () => u.current?.stop()

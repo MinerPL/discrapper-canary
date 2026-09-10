@@ -133,7 +133,7 @@ let ei = new Z.A("PremiumGroupPrice.tsx"),
         try {
             r = (0, A.sS)(u, l, !1, t, !1);
         } catch {
-            return ei.warn(`No price available for plan ${u.id} in currency ${l?.currency ?? "unknown"}`), en;
+            return (ei.warn(`No price available for plan ${u.id} in currency ${l?.currency ?? "unknown"}`), en);
         }
         let g = J.WT.MONTH;
         if (null != i && null != p) {

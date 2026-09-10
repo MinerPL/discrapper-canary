@@ -13,8 +13,8 @@ function s(e, t) {
         if (t.current) {
             let e = 100 * l,
                 r = "start" === u ? `${e}% 0px 0px 0px` : `0px ${e}% ${e}% ${e}%`;
-            (c.current = new IntersectionObserver(f, { root: (0, n.m)(t?.current), rootMargin: r })),
-                c.current.observe(t.current);
+            ((c.current = new IntersectionObserver(f, { root: (0, n.m)(t?.current), rootMargin: r })),
+                c.current.observe(t.current));
         }
         return () => {
             c.current && c.current.disconnect();

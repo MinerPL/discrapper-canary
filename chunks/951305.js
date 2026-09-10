@@ -97,10 +97,10 @@ function N(e) {
                     el(!0),
                     (0, o.UN)(C, ee)
                         .then(() => {
-                            el(!1), t?.(), en(!0);
+                            (el(!1), t?.(), en(!0));
                         })
                         .catch((e) => {
-                            el(!1), ea(e), en(!0);
+                            (el(!1), ea(e), en(!0));
                         })
                 );
             },
@@ -114,8 +114,8 @@ function N(e) {
             if (0 === e.length) return;
             let t = I.default.getCurrentUser();
             for (let n of e)
-                f.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
-                    eo.current.add(n);
+                (f.default.track(E.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: t?.id, reward_sku_id: n }),
+                    eo.current.add(n));
         }, [H, V]),
         (0, r.jsx)(R.Provider, {
             value: {

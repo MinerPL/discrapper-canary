@@ -25,7 +25,7 @@ function _(e) {
     switch (n) {
         case d.nu.SYSTEM_DM:
         case d.nu.OFFICIAL:
-            (_ = !0), (f = c.intl.string(c.t["7s687k"])), (I = c.intl.string(c.t.lKQ7Wt));
+            ((_ = !0), (f = c.intl.string(c.t["7s687k"])), (I = c.intl.string(c.t.lKQ7Wt)));
             break;
         case d.nu.SERVER:
             I = c.intl.string(c.t.PuJGuM);
@@ -37,7 +37,7 @@ function _(e) {
             I = c.intl.string(c.t.oMx98L);
             break;
         case d.nu.NOT_STAFF_WARNING:
-            (I = c.intl.string(c.t.UWhXbK)), (p = u.Zi);
+            ((I = c.intl.string(c.t.UWhXbK)), (p = u.Zi));
             break;
         case d.nu.BOT:
         default:

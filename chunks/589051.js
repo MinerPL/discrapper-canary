@@ -42,5 +42,5 @@ function u(e) {
     return d.useConfig({ location: e }).enabled;
 }
 function _() {
-    l("OVERLAY_INITIALIZED"), c("OVERLAY_INITIALIZED");
+    (l("OVERLAY_INITIALIZED"), c("OVERLAY_INITIALIZED"));
 }

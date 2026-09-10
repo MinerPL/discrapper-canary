@@ -34,21 +34,21 @@ function u(e, t) {
             (u = !0));
         if (0 !== o || "auto" !== c) {
             let e;
-            (m.numberingSystem = l.numberingSystem),
+            ((m.numberingSystem = l.numberingSystem),
                 "2-digit" === d && (m.minimumIntegerDigits = 2),
-                "2-digit" !== d && "numeric" !== d && ((m.style = "unit"), (m.unit = p), (m.unitDisplay = d));
+                "2-digit" !== d && "numeric" !== d && ((m.style = "unit"), (m.unit = p), (m.unitDisplay = d)));
             let t = (0, r.Nt)(l.locale, m);
-            s ? (e = n[n.length - 1]).push({ type: "literal", value: h }) : (e = []),
+            (s ? (e = n[n.length - 1]).push({ type: "literal", value: h }) : (e = []),
                 t.formatToParts(o).forEach(({ type: t, value: n }) => {
                     e.push({ type: t, value: n, unit: p });
                 }),
-                s || (("2-digit" === d || "numeric" === d) && (s = !0), n.push(e));
+                s || (("2-digit" === d || "numeric" === d) && (s = !0), n.push(e)));
         } else s = !1;
     }
     let p = Object.create(null);
     p.type = "unit";
     let m = l.style;
-    "digital" === m && (m = "short"), (p.style = m);
+    ("digital" === m && (m = "short"), (p.style = m));
     let v = (0, r.A4)(l.locale, p),
         _ = [];
     for (let e of n) {
@@ -64,7 +64,7 @@ function u(e, t) {
         if ("element" === e) {
             for (let e of ((0, r.V1)(y < b, "Index out of bounds"), n[y])) D.push(e);
             y++;
-        } else (0, r.V1)("literal" === e, "Type must be literal"), D.push({ type: "literal", value: t });
+        } else ((0, r.V1)("literal" === e, "Type must be literal"), D.push({ type: "literal", value: t }));
     return D;
 }
 n(632459);

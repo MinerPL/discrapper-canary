@@ -1,4 +1,4 @@
-n.d(t, { default: () => eZ }), n(321073);
+(n.d(t, { default: () => eZ }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(435558),
@@ -56,7 +56,7 @@ class ee extends l.PureComponent {
     state = { highlight: !1 };
     highlight() {
         this.setState({ highlight: !0 }, () => {
-            null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1e3));
+            (null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1e3)));
         });
     }
     unhighlight = () => {
@@ -82,7 +82,7 @@ class ee extends l.PureComponent {
     };
     handleDelete = () => {
         let { onDelete: e, channel: t } = this.props;
-        this.setMessageNotification(K.orn.NULL, !1, F.fd.OverrideDeleted), null != e && e(t.id);
+        (this.setMessageNotification(K.orn.NULL, !1, F.fd.OverrideDeleted), null != e && e(t.id));
     };
     getChannelNameForLabel() {
         return (0, M.m1)(this.props.channel, H.default, P.A);
@@ -491,7 +491,7 @@ function ex(e) {
                         checked: x === ec.N9.ALL_MESSAGES,
                         label: "",
                         onChange: () => {
-                            (0, ed.gN)(t.guild_id, t.id, ec.N9.ALL_MESSAGES), h(!1);
+                            ((0, ed.gN)(t.guild_id, t.id, ec.N9.ALL_MESSAGES), h(!1));
                         },
                     }),
                 }),
@@ -504,7 +504,7 @@ function ex(e) {
                         checked: x === ec.N9.MENTIONS,
                         label: "",
                         onChange: () => {
-                            (0, ed.gN)(t.guild_id, t.id, ec.N9.MENTIONS), h(!1);
+                            ((0, ed.gN)(t.guild_id, t.id, ec.N9.MENTIONS), h(!1));
                         },
                     }),
                 }),
@@ -517,7 +517,7 @@ function ex(e) {
                         checked: x === ec.N9.NOTHING,
                         label: "",
                         onChange: () => {
-                            (0, ed.gN)(t.guild_id, t.id, ec.N9.NOTHING), h(!1);
+                            ((0, ed.gN)(t.guild_id, t.id, ec.N9.NOTHING), h(!1));
                         },
                     }),
                 }),
@@ -745,7 +745,7 @@ function eO(e) {
                                 value: r,
                                 className: eM.hF,
                                 onChange: function (e) {
-                                    o(!1),
+                                    (o(!1),
                                         C.A.updateGuildNotificationSettings(
                                             n,
                                             {
@@ -757,7 +757,7 @@ function eO(e) {
                                                 ),
                                             },
                                             F.G_.unreads(e),
-                                        );
+                                        ));
                                 },
                                 options:
                                     ((t = { notificationSetting: a }),
@@ -801,10 +801,10 @@ function eO(e) {
                                 onChange: function (e) {
                                     o(!1);
                                     let t = { message_notifications: e };
-                                    e === K.orn.ALL_MESSAGES &&
+                                    (e === K.orn.ALL_MESSAGES &&
                                         r !== eL.e.ALL_MESSAGES &&
                                         (t.flags = (0, eo.md)(Y.Ay.getGuildFlags(n), eA.n3.UNREADS_ALL_MESSAGES)),
-                                        C.A.updateGuildNotificationSettings(n, t, F.G_.notifications(e));
+                                        C.A.updateGuildNotificationSettings(n, t, F.G_.notifications(e)));
                                 },
                                 options: [
                                     { label: X.intl.string(X.t["HVah/3"]), value: K.orn.ALL_MESSAGES },
@@ -1202,7 +1202,7 @@ function eV(e) {
             onChange: function (e) {
                 if (null == e) return;
                 let i = new Set(n);
-                i.add(e), t(i), l(e);
+                (i.add(e), t(i), l(e));
             },
             "data-migration-pending": !0,
         }),
@@ -1223,7 +1223,7 @@ function eF(e) {
         g = (0, f.r)(h.A.unsafe_rawColors.GREEN_360).hex();
     function m(e) {
         let n = new Set(t);
-        n.delete(e), d(n);
+        (n.delete(e), d(n));
     }
     let x = s
         .map((e) => {

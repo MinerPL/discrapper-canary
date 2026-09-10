@@ -1,8 +1,8 @@
 var n = r(225063),
     i = r(993001);
-(e.exports = function e(t, r) {
+((e.exports = function e(t, r) {
     var o;
-    this.next ||
+    (this.next ||
         (i(e.prototype),
         i(e.prototype, ("function" == typeof Symbol && Symbol.asyncIterator) || "@asyncIterator", function () {
             return this;
@@ -28,7 +28,7 @@ var n = r(225063),
                                       )
                                     : r.resolve(u).then(
                                           function (e) {
-                                              (l.value = e), a(l);
+                                              ((l.value = e), a(l));
                                           },
                                           function (t) {
                                               return e("throw", t, a, s);
@@ -43,7 +43,7 @@ var n = r(225063),
                 return (o = o ? o.then(s, s) : s());
             },
             !0,
-        );
+        ));
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

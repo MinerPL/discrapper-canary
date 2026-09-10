@@ -105,12 +105,12 @@ let B = r.forwardRef(function (e, l) {
         O = (0, m.xp)(Y, 0.6) ?? void 0,
         U = f.A.unsafe_rawColors.WHITE.css,
         $ = (0, m.LX)(Y);
-    null != $ && 0.3 > (0, m.OK)($) && (U = f.A.unsafe_rawColors.PRIMARY_630.css),
+    (null != $ && 0.3 > (0, m.OK)($) && (U = f.A.unsafe_rawColors.PRIMARY_630.css),
         (o = H
             ? (0, n.jsx)(P.A, { className: F.U4, iconClassName: i ? F.gD : void 0, color: Y, size: 14 })
             : "dot" === S
               ? (0, n.jsx)(A.W, { className: F.m4, color: Y, colors: k, background: !1, tooltip: !1 })
-              : (0, n.jsx)(A.R, { color: Y, colors: k }));
+              : (0, n.jsx)(A.R, { color: Y, colors: k })));
     let D = r.useMemo(() => ({ borderColor: g ? void 0 : O, ...(e.style ?? {}) }), [O, g, e.style]);
     return (0, n.jsx)(R.vN, {
         children: (0, n.jsxs)("div", {
@@ -226,7 +226,7 @@ function q(e) {
         p = r.useCallback(
             (e) => {
                 let l = i;
-                l.includes(e) || (l = [...l, e]), k.A.updateMemberRoles(o.id, s.id, l, [e], []);
+                (l.includes(e) || (l = [...l, e]), k.A.updateMemberRoles(o.id, s.id, l, [e], []));
             },
             [i, o.id, s.id],
         ),
@@ -267,7 +267,7 @@ function q(e) {
                     onRemove: () => R(e),
                     ref: (l) => {
                         var s;
-                        return (s = e.id), void (null != l ? (A.current[s] = l) : delete A.current[s]);
+                        return ((s = e.id), void (null != l ? (A.current[s] = l) : delete A.current[s]));
                     },
                     guildId: o.id,
                     disableBorderColor: b,

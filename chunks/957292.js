@@ -51,8 +51,8 @@ var M = n(795816),
     x = n(192552),
     k = n(395671),
     F = n(71393),
-    V = n(576705),
-    B = n(977997),
+    B = n(576705),
+    V = n(977997),
     H = n(62583),
     j = n(170148),
     W = n(550151),
@@ -122,8 +122,8 @@ async function K(e) {
             currentUser: u,
             isActivitiesEnabledForCurrentPlatform: (0, j.A)(),
             ChannelStore: T.A,
-            VoiceStateStore: B.A,
-            PermissionStore: V.A,
+            VoiceStateStore: V.A,
+            PermissionStore: B.A,
             GuildStore: F.A,
         }),
         handleCanJoin: _,
@@ -131,9 +131,9 @@ async function K(e) {
 }
 var $ = n(956549),
     z = n(907645),
-    q = n(969151),
-    Z = n(847381),
-    X = n(166352),
+    X = n(969151),
+    q = n(847381),
+    Z = n(166352),
     Q = n(108959),
     J = n(400115),
     ee = n(859007),
@@ -142,7 +142,7 @@ let en = {},
     ei = {},
     er = {};
 function ea(e) {
-    return { releasePhase: e?.activity?.client_platform_config[(0, Z.A)((0, O.getOS)())].release_phase };
+    return { releasePhase: e?.activity?.client_platform_config[(0, q.A)((0, O.getOS)())].release_phase };
 }
 function es(e) {
     let { applicationId: t, nonce: n, locations: i, source: r } = e;
@@ -150,7 +150,7 @@ function es(e) {
 }
 function el(e, t) {
     let n = ei[e];
-    if (null != n && n.nonce === t) return delete ei[e], n;
+    if (null != n && n.nonce === t) return (delete ei[e], n);
 }
 function eo(e, t) {
     setTimeout(() => el(e, t), 2e3);
@@ -172,8 +172,8 @@ async function ec(e) {
             rejectWithError: !1,
         }));
     let l = en[t],
-        o = (0, q.H)(n),
-        d = (0, q.D)(n),
+        o = (0, X.H)(n),
+        d = (0, X.D)(n),
         c = T.A.getChannel(o),
         u = S.default.getCurrentUser();
     if (null == l || null == u || null != l.connectedSince) return;
@@ -181,7 +181,7 @@ async function ec(e) {
         E = (0, U.A)({ applicationId: t, activityConfigs: _ }),
         { releasePhase: A } = ea(E),
         I = h.A.getRawThermalState();
-    N.default.track(et.HAw.ACTIVITY_SESSION_LEFT, {
+    (N.default.track(et.HAw.ACTIVITY_SESSION_LEFT, {
         channel_id: o,
         guild_id: d,
         media_session_id: l.mediaSessionIds[0],
@@ -208,7 +208,7 @@ async function ec(e) {
             duration_ms: r,
             embedded_activity_location_kind: n.kind,
         }),
-        delete en[t];
+        delete en[t]);
 }
 function eu(e) {
     let {
@@ -224,8 +224,8 @@ function eu(e) {
         return void (0, J.j)(t, {
             isStart: i,
             inviterUserId: d,
-            channelId: (0, q.H)(l),
-            guildId: (0, q.D)(l),
+            channelId: (0, X.H)(l),
+            guildId: (0, X.D)(l),
             locationKind: l.kind,
             launchId: s.launchId,
             compositeInstanceId: s.compositeInstanceId,
@@ -233,8 +233,8 @@ function eu(e) {
         });
     let c = p.default.getId(),
         u = a.find((e) => e.userId === c),
-        E = (0, q.H)(l),
-        f = (0, q.D)(l),
+        E = (0, X.H)(l),
+        f = (0, X.D)(l),
         g = T.A.getChannel(E);
     if ((i && null != g && g.isPrivate() && n && null == u && o.A.selectParticipant(g.id, null), null == u)) return;
     let C = m.A.getMediaSessionId(),
@@ -251,21 +251,21 @@ function eu(e) {
         x = 1 + w.findIndex((e) => e === t),
         { releasePhase: k } = ea(G),
         F = h.A.getRawThermalState(),
-        V = null != C ? [C] : [],
-        B = {
+        B = null != C ? [C] : [],
+        V = {
             activitySessionId: O,
             activityUserSessionId: y,
             launchId: s.launchId,
-            mediaSessionIds: V,
+            mediaSessionIds: B,
             activitiesInfraVersion: D,
         };
-    en[t] = B;
+    en[t] = V;
     let H = ei[t];
-    (0, R.uJ)(u.nonce) || u.nonce === H?.nonce || (H = void 0),
+    ((0, R.uJ)(u.nonce) || u.nonce === H?.nonce || (H = void 0),
         N.default.track(et.HAw.ACTIVITY_SESSION_JOINED, {
             channel_id: E,
             guild_id: f,
-            media_session_id: V[0],
+            media_session_id: B[0],
             activity_session_id: O,
             application_id: t,
             location_stack: H?.locations,
@@ -291,7 +291,7 @@ function eu(e) {
             guild_id: f,
             application_id: t,
             instance_id: s.launchId,
-            initial_media_session_id: V[0],
+            initial_media_session_id: B[0],
             activity_user_session_id: y,
             raw_thermal_state: F,
             is_activity_start: i,
@@ -299,7 +299,7 @@ function eu(e) {
             shelf_sorted_rank: x > 0 ? x : null,
             activities_infra_version: D,
             embedded_activity_location_kind: l.kind,
-        });
+        }));
 }
 function e_(e, t) {
     let n = (0, J.S)(e),
@@ -352,7 +352,7 @@ function eE(e, t) {
         M = 1 + D.findIndex((t) => t === e),
         { releasePhase: w } = ea(v),
         G = h.A.getRawThermalState();
-    N.default.track(et.HAw.ACTIVITY_SESSION_JOINED, {
+    (N.default.track(et.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: l,
         guild_id: g,
         media_session_id: R[0],
@@ -389,7 +389,7 @@ function eE(e, t) {
             shelf_sorted_rank: M > 0 ? M : null,
             activities_infra_version: c,
             embedded_activity_location_kind: C,
-        });
+        }));
 }
 function eA(e) {
     return en[e];
@@ -427,7 +427,7 @@ function eI(e) {
         { releasePhase: o } = ea(l),
         d = h.A.getRawThermalState(),
         c = null != t.connectedSince ? Date.now() - t.connectedSince : null;
-    N.default.track(et.HAw.ACTIVITY_SESSION_LEFT, {
+    (N.default.track(et.HAw.ACTIVITY_SESSION_LEFT, {
         channel_id: i,
         guild_id: r,
         media_session_id: t.mediaSessionIds[0],
@@ -454,11 +454,11 @@ function eI(e) {
             duration_ms: c,
             embedded_activity_location_kind: t.frameLocationKind,
         }),
-        delete en[e];
+        delete en[e]);
 }
 class ef extends c.A {
     _initialize() {
-        g.Ay.addChangeListener(this.handleSelectedChannelUpdate),
+        (g.Ay.addChangeListener(this.handleSelectedChannelUpdate),
             C._.subscribe(et.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             C._.subscribe(et.jej.OPEN_EMBEDDED_ACTIVITY, eu),
             l.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", ed),
@@ -475,10 +475,10 @@ class ef extends c.A {
             l.h.subscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
             l.h.subscribe("INTERACTION_CREATE", this.handleInteractionCreate),
             l.h.subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
-            l.h.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
+            l.h.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     _terminate() {
-        g.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
+        (g.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
             C._.unsubscribe(et.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             C._.unsubscribe(et.jej.OPEN_EMBEDDED_ACTIVITY, eu),
             l.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", ed),
@@ -495,12 +495,12 @@ class ef extends c.A {
             l.h.unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
             l.h.unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate),
             l.h.unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
-            l.h.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure);
+            l.h.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     handleSelectedChannelUpdate = () => {
         let e = g.Ay.getVoiceChannelId();
         for (let { location: t, applicationId: n } of P.Ay.getSelfEmbeddedActivities().values()) {
-            let i = (0, q.H)(t);
+            let i = (0, X.H)(t);
             null != i && (0, Q.A)(i) && i !== e && this.leaveActivity({ location: t, applicationId: n });
         }
         if (null != e) {
@@ -508,7 +508,7 @@ class ef extends c.A {
                 n = p.default.getId();
             t.forEach((e) => {
                 if (e.userIds.has(n)) {
-                    let t = (0, q.H)(e.location),
+                    let t = (0, X.H)(e.location),
                         n = P.Ay.getSelfEmbeddedActivityForChannel(t);
                     null == n
                         ? this.leaveActivity({ location: e.location, applicationId: e.applicationId })
@@ -523,7 +523,7 @@ class ef extends c.A {
     };
     handleActivityLaunchSuccess = (e) => {
         let { nonce: t, applicationId: n } = e;
-        eo(n, t), (0, w.sF)() && this.showDevShelfOverrideEnabled();
+        (eo(n, t), (0, w.sF)() && this.showDevShelfOverrideEnabled());
     };
     handleActivityLaunchFail = async (e) => {
         let { error: t, nonce: n, channelId: i, guildId: r, applicationId: a, isStart: s, locationKind: l } = e,
@@ -588,7 +588,7 @@ class ef extends c.A {
         if (l?.applicationId === n) return;
         let o = await E.Ay.fetchApplication(n);
         if (!(0, j.A)()) return void this.showLaunchErrorModal(Y.intl.string(Y.t.UXoQTp));
-        if (!(0, X.A)(o?.embedded_activity_config?.supported_platforms))
+        if (!(0, Z.A)(o?.embedded_activity_config?.supported_platforms))
             return void this.showLaunchErrorModal(Y.intl.string(Y.t.uGDCcw));
         let d = s?.getGuildId() ?? void 0,
             { activityConfigs: c, applications: u } = await (0, M.LV)({ guildId: d });
@@ -618,7 +618,7 @@ class ef extends c.A {
         let { guild: t } = e;
         P.Ay.getSelfEmbeddedActivities().forEach((e) => {
             let { location: n, applicationId: i } = e,
-                r = (0, q.D)(n);
+                r = (0, X.D)(n);
             t.id === r && this.leaveActivity({ location: n, applicationId: i });
         });
     };
@@ -631,12 +631,12 @@ class ef extends c.A {
         let { nonce: t, data: n } = e;
         if (null == ei[n.applicationId]) {
             let e;
-            n.interactionType === d.G4.APPLICATION_COMMAND
+            (n.interactionType === d.G4.APPLICATION_COMMAND
                 ? (e = [u.A.INTERACTION_APPLICATION_COMMAND])
                 : n.interactionType === d.G4.MESSAGE_COMPONENT
                   ? (e = [u.A.INTERACTION_MESSAGE_COMPONENT])
                   : n.interactionType === d.G4.MODAL_SUBMIT && (e = [u.A.INTERACTION_MODAL_SUBMIT]),
-                es({ applicationId: n.applicationId, nonce: t, locations: e }) && (er[t] = n.applicationId);
+                es({ applicationId: n.applicationId, nonce: t, locations: e }) && (er[t] = n.applicationId));
         }
     };
     handleInteractionCreate = (e) => {

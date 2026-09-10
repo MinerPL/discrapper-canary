@@ -13,17 +13,17 @@ class a {
     timer = -1;
     connected = !1;
     initialize() {
-        this.cleanup(), (this.unlistenHistory = (0, s.JK)().listen(this.handleRouteChange));
+        (this.cleanup(), (this.unlistenHistory = (0, s.JK)().listen(this.handleRouteChange)));
         let { pathname: e } = (0, s.JK)().location;
-        r.A.getState().resetPath(e),
+        (r.A.getState().resetPath(e),
             (this.unlistenKeyboardChange = r.A.subscribe(this.handleKeybindRouteChange)),
-            l.A.addChangeListener(this.handleConnectionChange);
+            l.A.addChangeListener(this.handleConnectionChange));
     }
     handleConnectionChange = () => {
         let e = l.A.isConnected(),
             t = e && !this.connected;
-        (this.connected = e),
-            t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, s.JK)().location, "REPLACE"));
+        ((this.connected = e),
+            t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, s.JK)().location, "REPLACE")));
     };
     handleRouteChange = (e, t) => {
         if ("POP" !== t && this.executeRouteRewrites(e, t)) return;
@@ -56,7 +56,7 @@ class a {
     }
     handleKeybindRouteChange = (e) => {
         let { path: t } = e;
-        -1 !== this.timer && clearTimeout(this.timer), null != t && (this.timer = setTimeout(this.flushRoute, 200));
+        (-1 !== this.timer && clearTimeout(this.timer), null != t && (this.timer = setTimeout(this.flushRoute, 200)));
     };
     flushRoute = () => {
         clearTimeout(this.timer);
@@ -64,11 +64,11 @@ class a {
         null != e.path && (0, s.pX)(e.path);
     };
     cleanup() {
-        this.unlistenHistory?.(),
+        (this.unlistenHistory?.(),
             (this.unlistenHistory = void 0),
             this.unlistenKeyboardChange?.(),
             (this.unlistenKeyboardChange = void 0),
-            l.A.removeChangeListener(this.handleConnectionChange);
+            l.A.removeChangeListener(this.handleConnectionChange));
     }
     addRouteChangeListener(e) {
         return (
@@ -82,7 +82,7 @@ class a {
             let t = e((0, s.JK)().location, (0, s.JK)().action);
             null != t && (0, s.bG)(t.path, t.state);
         }
-        return this.rewrites.add(e), () => this.removeRouteRewriter(e);
+        return (this.rewrites.add(e), () => this.removeRouteRewriter(e));
     }
     removeRouteChangeListener(e) {
         this.listeners.delete(e);

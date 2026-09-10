@@ -42,14 +42,14 @@ class l extends i.Ay.Store {
                 this.channels.set(e.id, e);
     }
     handleCacheLoadedLazyNoCache(e) {
-        this.guilds.clear(), this.channels.clear();
+        (this.guilds.clear(), this.channels.clear());
     }
     handleConnectionOpen(e) {
         let t = s.A.allGuildIds();
         for (let e of this.guilds.keys()) t.has(e) || this.delete(e);
     }
     handleLogout(e) {
-        this.guilds.clear(), this.channels.clear();
+        (this.guilds.clear(), this.channels.clear());
     }
     delete(e) {
         for (let t in this.guilds.get(e) ?? {}) this.channels.delete(t);

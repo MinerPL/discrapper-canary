@@ -1,4 +1,4 @@
-a.r(e), a.d(e, { BadgeImageWithProgressCircle: () => h, default: () => x });
+(a.r(e), a.d(e, { BadgeImageWithProgressCircle: () => h, default: () => x }));
 var s = a(477900);
 a(582128);
 var t = a(503698),

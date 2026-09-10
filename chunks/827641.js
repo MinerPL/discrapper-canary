@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { default: () => en });
+(t.r(l), t.d(l, { default: () => en }));
 var s = t(477900),
     n = t(582128),
     a = t(503698),

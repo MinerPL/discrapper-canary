@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(321073);
+(n.d(t, { A: () => p }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -13,7 +13,7 @@ let _ = [l.kc.CHAT, l.kc.PRIMARY_ENTRY_POINT],
     E = { pendingUsages: [] },
     A = new o.A({ computeBonus: () => 100, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
 function h(e) {
-    E.pendingUsages.push({ key: e, timestamp: Date.now() }), A.track(e), A.compute();
+    (E.pendingUsages.push({ key: e, timestamp: Date.now() }), A.track(e), A.compute());
 }
 function I() {
     let e = c.A.frecencyWithoutFetchingLatest,
@@ -27,7 +27,7 @@ class f extends a.Ay.PersistedStore {
     static displayName = "ApplicationFrecencyStore";
     static persistKey = "ApplicationFrecency";
     initialize(e) {
-        null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], I);
+        (null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], I));
     }
     getState() {
         return E;

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Dk: () => c,
     Lj: () => o,
     Mf: () => u,
@@ -12,7 +12,7 @@ n.d(t, {
     tf: () => h,
     v$: () => d,
 }),
-    n(321073);
+    n(321073));
 var i = n(781183);
 function r(e, t, n) {
     return e.map((e) => {
@@ -92,7 +92,7 @@ function E(e, t, n) {
                 i = -1;
             for (let r = 0; r <= e.length; r++) {
                 let a = r < e.length && e[r] >= t;
-                a && -1 === i && (i = r), a || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1));
+                (a && -1 === i && (i = r), a || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1)));
             }
             return n;
         })(e, t),
@@ -198,7 +198,7 @@ function f(e, t, n) {
         let r = 0;
         for (let a = 0; a < i; a++) (e[a][l] >= n.laughterEventThreshold || t[a][l] >= n.shoutingEventThreshold) && r++;
         let o = Math.max(0, r - 1);
-        (a[l] = o), (s += o);
+        ((a[l] = o), (s += o));
     }
     return { coOccurrenceScore: s, coContribPerChunk: a };
 }

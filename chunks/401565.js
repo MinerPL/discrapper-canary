@@ -25,12 +25,12 @@ class g extends i.Ay.Store {
         return !d.has(e);
     }
     getMessageRequestPreview(e) {
-        return e in u || (u[e] = { loaded: !1, error: !1, message: null }), u[e];
+        return (e in u || (u[e] = { loaded: !1, error: !1, message: null }), u[e]);
     }
 }
 let f = new g(l.h, {
     CONNECTION_OPEN: function () {
-        (u = {}), d.clear();
+        ((u = {}), d.clear());
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
@@ -42,7 +42,7 @@ let f = new g(l.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        d.delete(t.id), delete u[t.id];
+        (d.delete(t.id), delete u[t.id]);
     },
     MESSAGE_CREATE: function (e) {
         if (e.isPushNotification) return !1;
@@ -63,7 +63,7 @@ let f = new g(l.h, {
         let { requestedChannelIds: t, supplementalData: n } = e,
             i = new Set([...t]);
         for (let e of (n.forEach((e) => {
-            h(e.channel_id, e.message_preview), i.delete(e.channel_id);
+            (h(e.channel_id, e.message_preview), i.delete(e.channel_id));
         }),
         Array.from(i)))
             h(e, null);

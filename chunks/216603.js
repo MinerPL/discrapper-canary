@@ -12,7 +12,7 @@ var s = l(477900),
 function h(t) {
     let { text: e, target: l, onHeightUpdate: h, onSelect: x } = t,
         m = i.useCallback(() => {
-            (0, c.Z_)(), (0, r.vq)(l, HTMLElement) && (l.focus(), setTimeout(() => l.focus(), 0));
+            ((0, c.Z_)(), (0, r.vq)(l, HTMLElement) && (l.focus(), setTimeout(() => l.focus(), 0)));
         }, [l]),
         [C, b] = (0, u.A)({ text: e, target: l, onHeightUpdate: h });
     if (!o.isPlatformEmbedded || !((0, r.vq)(l, HTMLInputElement) || (0, r.vq)(l, HTMLTextAreaElement))) return null;

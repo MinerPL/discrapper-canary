@@ -31,7 +31,7 @@ function m() {
 class f extends i.Ay.Store {
     static displayName = "TutorialIndicatorStore";
     initialize() {
-        m(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(r.A);
+        (m(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(r.A));
     }
     shouldShow(e) {
         return !(!h || c || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
@@ -53,23 +53,23 @@ class f extends i.Ay.Store {
 let p = new f(s.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        (h = !0),
+        ((h = !0),
             (c = !0),
             (o = {}),
             null != t && ((c = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (o[e] = !1))),
-            m();
+            m());
     },
     CONNECTION_CLOSED: function () {
         h = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], m();
+        ((o = { ...o, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], m());
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
         u = { ...u, [e.tutorialId]: e.renderData };
     },
     TUTORIAL_INDICATOR_HIDE: function (e) {
-        (u = { ...u }), delete u[e.tutorialId];
+        ((u = { ...u }), delete u[e.tutorialId]);
     },
     TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
         c = !0;

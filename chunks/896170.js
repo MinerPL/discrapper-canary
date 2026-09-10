@@ -131,7 +131,7 @@ function l(e, t, r) {
                         : { rankedValue: l, rank: u(l, p, h), keyIndex: -1, keyThreshold: h.threshold }),
                 v = m.rank,
                 y = m.keyThreshold;
-            return v >= (void 0 === y ? c : y) && e.push((0, n.A)({}, m, { item: i, index: s })), e;
+            return (v >= (void 0 === y ? c : y) && e.push((0, n.A)({}, m, { item: i, index: s })), e);
         }, []),
     ).map(function (e) {
         return e.item;
@@ -167,7 +167,7 @@ function u(e, t, r) {
                                 i = 0,
                                 o = 0;
                             function s(e, t, r) {
-                                for (var n = r, o = t.length; n < o; n++) if (t[n] === e) return (i += 1), n + 1;
+                                for (var n = r, o = t.length; n < o; n++) if (t[n] === e) return ((i += 1), n + 1);
                                 return -1;
                             }
                             var l = s(t[0], e, 0);
@@ -175,10 +175,10 @@ function u(e, t, r) {
                             o = l;
                             for (var u = 1, c = t.length; u < c; u++)
                                 if (!((o = s(t[u], e, o)) > -1)) return a.NO_MATCH;
-                            return (r = o - l), (n = i / t.length), a.MATCHES + (1 / r) * n;
+                            return ((r = o - l), (n = i / t.length), a.MATCHES + (1 / r) * n);
                         })(e, t);
 }
 function c(e, t) {
-    return (e = "" + e), t.keepDiacritics || (e = o()(e)), e;
+    return ((e = "" + e), t.keepDiacritics || (e = o()(e)), e);
 }
 var f = { maxRanking: 1 / 0, minRanking: -1 / 0 };

@@ -344,7 +344,7 @@ var g = t(363015),
                 }),
             });
         }
-        return "finished" === f.status || f.status, null;
+        return ("finished" === f.status || f.status, null);
     },
     P = ({ config: e, manager: r, onFinish: t, onError: a }) =>
         (0, n.v)(u.t, { children: e || r ? (0, n.v)(I, { config: e, manager: r, onFinish: t, onError: a }) : null });

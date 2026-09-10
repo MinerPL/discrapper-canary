@@ -16,7 +16,7 @@ function h() {
 function o(s) {
     let { width: a, height: e, opacity: i, className: l } = s,
         c = { width: m(a), opacity: null != i ? i : r().random(0.02, 0.08) };
-    return null != e && (c.height = m(e)), (0, n.jsx)("div", { className: t()(l, { [d.av]: !0 }), style: c });
+    return (null != e && (c.height = m(e)), (0, n.jsx)("div", { className: t()(l, { [d.av]: !0 }), style: c }));
 }
 function u(s) {
     let a,

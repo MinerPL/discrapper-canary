@@ -1,4 +1,4 @@
-n.d(e, {
+(n.d(e, {
     $s: () => I,
     CZ: () => D,
     E: () => O,
@@ -10,7 +10,7 @@ n.d(e, {
     wm: () => F,
 }),
     n(321073),
-    n(938796);
+    n(938796));
 var i,
     l = n(582128),
     u = n(17928),
@@ -72,7 +72,7 @@ let O = () => {
     let [t, e] = l.useState(0);
     return (
         l.useEffect(() => {
-            e(1),
+            (e(1),
                 Promise.all([
                     (0, r.qw)({ withSku: !0, withApplication: !0, entitlementType: S.zF_.APPLICATION_SUBSCRIPTION }),
                     (0, r.qw)({ withSku: !0, withApplication: !0, entitlementType: S.zF_.PURCHASE }),
@@ -82,7 +82,7 @@ let O = () => {
                     })
                     .then(() => {
                         e(2);
-                    });
+                    }));
         }, []),
         { loadState: t }
     );

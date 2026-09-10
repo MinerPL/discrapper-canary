@@ -18,7 +18,8 @@ async function c() {
     if (!(0, a.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let { enabled: e } = l({ location: "updateSwitch" }),
         t = "DESKTOP_TTI_DNSTCP_WARMUP";
-    e !== (await window.DiscordNative.settings.get(t, !1)) && (await window.DiscordNative.settings.set(t, e)), (d = e);
+    (e !== (await window.DiscordNative.settings.get(t, !1)) && (await window.DiscordNative.settings.set(t, e)),
+        (d = e));
 }
 class u extends i.A {
     stores = new Map().set(r.A, () => {
@@ -32,7 +33,7 @@ class u extends i.A {
             o || window.DiscordNative?.settings?.set == null || ((0, a.isDesktop)() && ((o = !0), await c()));
         },
         LOGOUT: () => {
-            (o = !1), (d = null);
+            ((o = !1), (d = null));
         },
     };
 }

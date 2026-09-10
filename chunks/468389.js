@@ -1,4 +1,4 @@
-t.d(e, { A: () => w }), t(321073);
+(t.d(e, { A: () => w }), t(321073));
 var n = t(477900);
 t(582128);
 var l = t(17928),
@@ -52,15 +52,19 @@ function w(i, e) {
             O.A.getActivities().filter((i) => null == i.application_id || !H?.has(i.application_id)),
         ),
         Z = (0, l.yK)([m.A], () => (null != e ? m.A.getActivities(e.id, i?.getGuildId()) : []), [e, i]),
-        z = (0, l.yK)([G.Ay], () => {
-            let t = i?.id != null ? G.Ay.getEmbeddedActivitiesForChannel(i.id) : G.Am;
-            return null != e
-                ? t.filter((i) => {
-                      let { userIds: t } = i;
-                      return t.has(e.id);
-                  })
-                : t;
-        }, [e, i]),
+        z = (0, l.yK)(
+            [G.Ay],
+            () => {
+                let t = i?.id != null ? G.Ay.getEmbeddedActivitiesForChannel(i.id) : G.Am;
+                return null != e
+                    ? t.filter((i) => {
+                          let { userIds: t } = i;
+                          return t.has(e.id);
+                      })
+                    : t;
+            },
+            [e, i],
+        ),
         W = (0, l.bG)([T.A], () => null == i || i.isPrivate() || T.A.can(Q.xBc.SEND_MESSAGES, i), [i]),
         ii = (0, l.yK)(
             [j.A],
@@ -139,7 +143,7 @@ function w(i, e) {
         let t = (0, M.A)(i, Q.jUm.EMBEDDED),
             n = v.Ay.getVoiceChannelId(),
             l = b.A.getChannel(n);
-        await s.Ay.join({
+        (await s.Ay.join({
             userId: e.id,
             sessionId: i.session_id,
             applicationId: i.application_id,
@@ -161,7 +165,7 @@ function w(i, e) {
                     partyId: i.party?.id,
                     locationObject: io.location,
                     analyticsLocations: w,
-                });
+                }));
     }
     async function ip(e) {
         await (0, P.A)({
@@ -322,7 +326,7 @@ function w(i, e) {
                     if (il[l] !== J.o.CANNOT_JOIN) {
                         let i = q.intl.string(q.t.VJlc0S),
                             e = !1;
-                        ii[l]
+                        (ii[l]
                             ? ((i = q.intl.string(q.t.bf6Ci7)), (e = !0))
                             : il[l] === J.o.JOINED && ((i = q.intl.string(q.t.DPfdsq)), (e = !0)),
                             ic.push(
@@ -338,7 +342,7 @@ function w(i, e) {
                                     },
                                     l,
                                 ),
-                            );
+                            ));
                     } else
                         ic.push(
                             (0, n.jsx)(
@@ -400,7 +404,7 @@ function w(i, e) {
                     let e = i.userIds.has(B?.id ?? Q.dJq),
                         a = q.intl.string(q.t["4i2vj+"]),
                         o = !1;
-                    il[t] === J.o.JOINED
+                    (il[t] === J.o.JOINED
                         ? ((a = q.intl.string(q.t.DPfdsq)), (o = !0))
                         : e
                           ? ((a = q.intl.string(q.t["0OiwfH"])), (o = !0))
@@ -418,7 +422,7 @@ function w(i, e) {
                                 },
                                 `embedded-activity-${i.applicationId}`,
                             ),
-                        );
+                        ));
                 }
             })),
         ic

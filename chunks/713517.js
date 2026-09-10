@@ -17,10 +17,10 @@ function s(e) {
                 t.addEventListener("focusin", a),
                 t.addEventListener("focusout", s),
                 () => {
-                    t.removeEventListener("mouseenter", i),
+                    (t.removeEventListener("mouseenter", i),
                         t.removeEventListener("mouseleave", r),
                         t.removeEventListener("focusin", a),
-                        t.removeEventListener("focusout", s);
+                        t.removeEventListener("focusout", s));
                 }
             );
         function i() {
@@ -49,7 +49,7 @@ function l(e) {
                     t.addEventListener("mouseenter", i),
                     t.addEventListener("mouseleave", r),
                     () => {
-                        t.removeEventListener("mouseenter", i), t.removeEventListener("mouseleave", r);
+                        (t.removeEventListener("mouseenter", i), t.removeEventListener("mouseleave", r));
                     }
                 );
             function i() {

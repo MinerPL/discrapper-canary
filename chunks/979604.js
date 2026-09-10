@@ -97,7 +97,7 @@ class B extends r.Component {
     handleAddToLibrary = async () => {
         try {
             let { libraryApplication: t } = this.props;
-            await p.V(t.id, t.branchId, t.getFlags() & ~S.hM6.HIDDEN), (0, g.pX)(S.BVt.APPLICATION_LIBRARY);
+            (await p.V(t.id, t.branchId, t.getFlags() & ~S.hM6.HIDDEN), (0, g.pX)(S.BVt.APPLICATION_LIBRARY));
         } catch (t) {
             new h.A("LibraryApplicationButton").error(t);
         }
@@ -117,7 +117,7 @@ class B extends r.Component {
     };
     handleClick = (t, n) => {
         let { onClick: i } = this.props;
-        i?.(t), n(t);
+        (i?.(t), n(t));
     };
     getButtonState() {
         let { libraryApplication: t, dispatchState: n, actionState: i } = this.props;

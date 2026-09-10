@@ -44,7 +44,7 @@ function I(e) {
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(m);
-                g(m), v(e);
+                (g(m), v(e));
             }
         }, [r, m]),
         (0, l.jsx)("div", {

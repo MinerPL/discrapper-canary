@@ -1,4 +1,5 @@
 !(function (a) {
+    "use strict";
     var e = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         u = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", e[7], e[8], e[9]];
     function n(a, n, s, t) {
@@ -36,7 +37,7 @@
             case "yy":
                 l = t ? "vuoden" : "vuotta";
         }
-        return (i = a), (k = t), (i < 10 ? (k ? u[i] : e[i]) : i) + " " + l;
+        return ((i = a), (k = t), (i < 10 ? (k ? u[i] : e[i]) : i) + " " + l);
     }
     a.defineLocale("fi", {
         months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\xe4kuu_hein\xe4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split(

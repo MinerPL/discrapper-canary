@@ -128,7 +128,7 @@ class m extends i.A {
     }
     startHandler(e, t, n) {
         let i = n(o.Ts);
-        i.start(), this.activeHandlers.set(e, { handler: i, registration: t });
+        (i.start(), this.activeHandlers.set(e, { handler: i, registration: t }));
     }
     stopHandler(e) {
         let t = this.activeHandlers.get(e);
@@ -145,7 +145,7 @@ class m extends i.A {
         this.ensureInitialized();
     }
     _terminate() {
-        this.terminatedCount++, this.stopAllHandlers();
+        (this.terminatedCount++, this.stopAllHandlers());
     }
 }
 let g = new m();

@@ -1,4 +1,4 @@
-i.d(e, { default: () => W }), i(323874), i(14289), i(35956);
+(i.d(e, { default: () => W }), i(323874), i(14289), i(35956));
 var l = i(477900),
     n = i(582128),
     a = i(503698),
@@ -123,12 +123,12 @@ function W(t) {
             async (t, e, i) => {
                 let l,
                     { withMessage: n, closeAfterSend: a } = e;
-                i(!0),
+                (i(!0),
                     M(
                         new Promise((t) => {
                             l = t;
                         }),
-                    );
+                    ));
                 let r = 0,
                     o = 0;
                 try {
@@ -176,14 +176,14 @@ function W(t) {
                         }
                         null == e ? (o += 1) : (r += 1);
                     }
-                    o > 0
+                    (o > 0
                         ? (0, d.P0)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE))
                         : (0, d.P0)((0, u.o)(S.intl.string(S.t.kwmYkt), h.Ck.FORWARD)),
-                        a && r > 0 && N();
+                        a && r > 0 && N());
                 } catch {
                     (0, d.P0)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE));
                 } finally {
-                    l(r > 0), i(!1);
+                    (l(r > 0), i(!1));
                 }
             },
             [s, T, A, N, M],
@@ -196,7 +196,7 @@ function W(t) {
                     "aria-label": S.intl.string(S.t.WqhZss),
                     onClick: () => {
                         (0, U.C)(G, () => {
-                            _(), (0, d.P0)((0, u.o)(S.intl.string(S.t["L/PwZf"]), h.Ck.SUCCESS));
+                            (_(), (0, d.P0)((0, u.o)(S.intl.string(S.t["L/PwZf"]), h.Ck.SUCCESS)));
                         });
                     },
                     icon: m.LinkIcon,

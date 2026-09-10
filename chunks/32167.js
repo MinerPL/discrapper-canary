@@ -14,7 +14,7 @@ function C(t) {
         { title: f, subtitle: k, confirmText: S, toastContent: x } = (0, d.ae)(m, C),
         I = (0, r.useMemo)(
             () => () => {
-                (0, d.gF)(i, n), (0, s.P0)((0, a.o)(x, c.Ck.SUCCESS));
+                ((0, d.gF)(i, n), (0, s.P0)((0, a.o)(x, c.Ck.SUCCESS)));
             },
             [i, n, x],
         );

@@ -1,8 +1,8 @@
 l.d(t, { _: () => d });
 var n = l(477900),
     r = l(582128),
-    i = l(503698),
-    s = l.n(i),
+    s = l(503698),
+    i = l.n(s),
     a = l(834730),
     u = l(580630),
     c = l(777485),
@@ -11,16 +11,16 @@ function d(e) {
     let {
             label: t,
             totalLineItemLabel: l,
-            totalLineItemLabelSubText: i,
+            totalLineItemLabelSubText: s,
             totalLineItemValueSubText: d,
             showTotalWhenCollapsed: m = !1,
             lineItems: x,
             intervalType: h,
             intervalCount: p,
             currency: v,
-            defaultExpanded: f = !1,
+            defaultExpanded: j = !1,
         } = e,
-        [j, g] = r.useState(f),
+        [f, g] = r.useState(j),
         N = r.useMemo(() => {
             let e = x.reduce((e, t) => e + t.amount, 0),
                 t = (0, u.$g)(e, v);
@@ -28,7 +28,7 @@ function d(e) {
         }, [x, v, h, p]),
         b = (0, n.jsxs)(c.h, {
             label: t,
-            defaultExpanded: f,
+            defaultExpanded: j,
             isDisabled: x.length <= 0,
             onExpandedChange: g,
             collapsedContent: m
@@ -37,14 +37,14 @@ function d(e) {
             children: [
                 x.map((e) => {
                     let { formatWithoutRate: t, amount: l, ...r } = e,
-                        i = (0, u.$g)(l, v),
-                        s = t ? i : (0, u.CE)(i, h, p);
-                    return (0, n.jsx)(c.i, { value: s, ...r }, r.id);
+                        s = (0, u.$g)(l, v),
+                        i = t ? s : (0, u.CE)(s, h, p);
+                    return (0, n.jsx)(c.i, { value: i, ...r }, r.id);
                 }),
                 (0, n.jsx)("div", { className: o.m }),
                 (0, n.jsx)(c.i, {
                     label: l ?? t,
-                    labelSubText: i,
+                    labelSubText: s,
                     value: N,
                     subText: d,
                     color: "text-strong",
@@ -52,5 +52,5 @@ function d(e) {
                 }),
             ],
         });
-    return (0, n.jsx)("div", { className: s()({ [o.k]: j }), children: b });
+    return (0, n.jsx)("div", { className: i()({ [o.k]: f }), children: b });
 }

@@ -23,12 +23,12 @@ function h(t) {
         n && (e !== c || l || C) && (u(!1), d.stop());
     }, [e, c, l, C, n, d]);
     let r = a.useCallback(() => {
-            u(!0), d.start(N, () => u(!1));
+            (u(!0), d.start(N, () => u(!1)));
         }, [d]),
         A = a.useCallback(() => {
-            u(!1), d.stop();
+            (u(!1), d.stop());
         }, [d]);
-    return a.useEffect(() => () => d.stop(), [d]), { loading: n, startLoading: r, clearLoading: A };
+    return (a.useEffect(() => () => d.stop(), [d]), { loading: n, startLoading: r, clearLoading: A });
 }
 function f(t, e) {
     return (0, C.cf)([c.A, n.default], () => (0, o.A)(c.A, n.default, e, t), [t, e]);
@@ -38,7 +38,7 @@ function I(t, e, l) {
         { notPlayable: i, isCurrentUser: s, playingSameTrack: n } = C,
         { loading: u, startLoading: d, clearLoading: c } = h(C),
         o = a.useCallback(() => {
-            d(), (0, _.A)(C, p.Qp.USER_ACTIVITY_PLAY, l).catch(c);
+            (d(), (0, _.A)(C, p.Qp.USER_ACTIVITY_PLAY, l).catch(c));
         }, [C, l, d, c]);
     return {
         label: (0, r.A)(C, p.Qp.USER_ACTIVITY_PLAY),
@@ -55,7 +55,7 @@ function S(t, e, l, C) {
         { notPlayable: n, syncingWithUser: u, syncingWithParty: c, isCurrentUser: o } = s,
         { loading: _, startLoading: N, clearLoading: I } = h(s),
         S = a.useCallback(() => {
-            N(), (0, E.A)(s, p.Qp.USER_ACTIVITY_SYNC, l).catch(I);
+            (N(), (0, E.A)(s, p.Qp.USER_ACTIVITY_SYNC, l).catch(I));
         }, [s, l, N, I]);
     return {
         label: (0, r.A)(s, p.Qp.USER_ACTIVITY_SYNC),
@@ -71,7 +71,7 @@ function T(t, e, l) {
         { notPlayable: i, syncingWithUser: s, syncingWithParty: n, isCurrentUser: u } = C,
         { loading: d, startLoading: c, clearLoading: o } = h(C),
         _ = a.useCallback(() => {
-            c(), (0, E.A)(C, p.Qp.EMBED_SYNC, l).catch(o);
+            (c(), (0, E.A)(C, p.Qp.EMBED_SYNC, l).catch(o));
         }, [C, l, c, o]);
     return {
         label: (0, r.A)(C, p.Qp.EMBED_SYNC),

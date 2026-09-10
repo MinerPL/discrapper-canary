@@ -127,8 +127,8 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         className: T.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
-                            M(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
-                                (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: _.RP.WIDGETS });
+                            (M(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                                (0, A.openUserProfileModal)({ userId: t.author_id, tabSection: _.RP.WIDGETS }));
                         },
                     }),
             ],

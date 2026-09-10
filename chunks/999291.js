@@ -27,7 +27,7 @@ class f {
     _userProfile;
     _guildMemberProfile;
     constructor(e, i) {
-        (this.userId = e.userId),
+        ((this.userId = e.userId),
             (this.guildId = i?.guildId),
             (this.banner = i?.banner ?? e.banner),
             (this.bio = c(e.bio, i?.bio)),
@@ -40,7 +40,7 @@ class f {
             (this.fetchStartedAt = e.fetchStartedAt),
             (this.fetchEndedAt = e.fetchEndedAt),
             (this._userProfile = e),
-            (this._guildMemberProfile = i);
+            (this._guildMemberProfile = i));
     }
     get premiumSince() {
         return this._userProfile.premiumSince;

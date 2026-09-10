@@ -1,4 +1,4 @@
-n.d(t, { k: () => E, p: () => A }), n(321073);
+(n.d(t, { k: () => E, p: () => A }), n(321073));
 var i = n(280450),
     r = n(763827),
     a = n(174459),
@@ -17,11 +17,11 @@ function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (e) {
         let e = s.default.extractTimestamp(i.default.getId());
-        e !== c && (A(!1), (c = e)),
+        (e !== c && (A(!1), (c = e)),
             (u = (function () {
                 let { enabled: e } = o.getConfig({ location: "clickstream" });
                 return e;
-            })());
+            })()));
     }
     return u;
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A2: () => r,
     CA: () => _,
     IU: () => l,
@@ -19,7 +19,7 @@ n.d(t, {
     x5: () => p,
     yr: () => f,
 }),
-    n(938796);
+    n(938796));
 let i = 25,
     r = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 function a(e) {

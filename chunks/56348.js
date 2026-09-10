@@ -1,17 +1,17 @@
-e.d(i, { yX: () => d, Sk: () => o, C5: () => p, yg: () => s }), e(321073);
+(e.d(i, { yX: () => d, Sk: () => o, C5: () => p, yg: () => s }), e(321073));
 var a = e(575593),
     l = e(469054),
     t = e(287809),
     r = e(321191);
 function d(n, i) {
     let e = {};
-    void 0 !== n.pendingBanner &&
+    (void 0 !== n.pendingBanner &&
         ((e.banner = n.pendingBanner?.imageUri ?? null),
         null !== n.pendingBanner && (e.bannerOriginalMd5 = n.pendingBanner.originalMd5 ?? null)),
         null != n.pendingBio && (e.bio = n.pendingBio),
         null != n.pendingPronouns && (e.pronouns = n.pendingPronouns),
         void 0 !== n.pendingAccentColor && (e.accent_color = n.pendingAccentColor),
-        void 0 !== n.pendingThemeColors && (e.theme_colors = n.pendingThemeColors);
+        void 0 !== n.pendingThemeColors && (e.theme_colors = n.pendingThemeColors));
     let l = (function (n, i) {
         let e,
             { pendingProfileEffect: l, pendingProfileFrame: d } = n;
@@ -44,7 +44,7 @@ function d(n, i) {
             }
         );
     })(n, i);
-    return void 0 !== l.collectibles_sku_ids && (e.collectibles_sku_ids = l.collectibles_sku_ids), e;
+    return (void 0 !== l.collectibles_sku_ids && (e.collectibles_sku_ids = l.collectibles_sku_ids), e);
 }
 function o(n) {
     let i = {};
@@ -88,5 +88,5 @@ function p(n) {
 }
 function s(n) {
     let i = {};
-    return void 0 !== n.pendingPrimaryGuildId && (i.primaryGuildId = n.pendingPrimaryGuildId), i;
+    return (void 0 !== n.pendingPrimaryGuildId && (i.primaryGuildId = n.pendingPrimaryGuildId), i);
 }

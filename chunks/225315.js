@@ -10,7 +10,7 @@ async function E(e) {
     l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
     try {
         let t = await i.Bo.get({ url: a.Rsh.GUILD_WELCOME_SCREEN(e), oldFormErrors: !0, rejectWithError: !0 });
-        return l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
+        return (l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body);
     } catch (e) {
         l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
     }

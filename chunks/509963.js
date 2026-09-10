@@ -1,4 +1,4 @@
-n.d(t, { A: () => y, v: () => L }), n(321073);
+(n.d(t, { A: () => y, v: () => L }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -78,7 +78,7 @@ class R extends r.PureComponent {
     static defaultProps = { strokeSize: u.a.StrokeSizes.MEDIUM };
     state = { animationScale: new l.A.Value(0) };
     componentWillAppear(e) {
-        this.state.animationScale.setValue(1), e();
+        (this.state.animationScale.setValue(1), e());
     }
     componentWillEnter(e) {
         l.A.spring(this.state.animationScale, { toValue: 1, duration: 200 }).start(e);
@@ -88,7 +88,7 @@ class R extends r.PureComponent {
     }
     handleOnClick = (e) => {
         let { onClick: t } = this.props;
-        e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, I.pX)(g.BVt.APPLICATION_LIBRARY);
+        (e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, I.pX)(g.BVt.APPLICATION_LIBRARY));
     };
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
@@ -121,7 +121,7 @@ function L(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: r } = n,
             a = t.getState(i, r);
-        return null != a && e.push(a), e;
+        return (null != a && e.push(a), e);
     }, []);
 }
 let y = o.Ay.connectStores([p.A, f.A, A.A], () => {

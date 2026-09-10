@@ -1,4 +1,4 @@
-n.d(t, { A: () => h }), n(938796);
+(n.d(t, { A: () => h }), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -83,7 +83,7 @@ class A extends r.Ay.Store {
 let h = new A(a.h, {
     IMPERSONATE_UPDATE: function (e) {
         let { guildId: t, data: n } = e;
-        delete n.roles[d.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = { ...n, timestamp: Date.now() });
+        (delete n.roles[d.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = { ...n, timestamp: Date.now() }));
     },
     IMPERSONATE_STOP: function (e) {
         let { guildId: t } = e;
@@ -132,7 +132,7 @@ let h = new A(a.h, {
             (null != n &&
                 (r.roles = n.reduce((e, n) => {
                     let i = s.A.getRole(t, n);
-                    return null != i && (e[n] = i), e;
+                    return (null != i && (e[n] = i), e);
                 }, {})),
             null != i && r.type === c._.NEW_MEMBER && (r.memberOptions.flags = i),
             !0)

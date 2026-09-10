@@ -1,4 +1,4 @@
-n.d(t, { d: () => r }), n(321073);
+(n.d(t, { d: () => r }), n(321073));
 var i = n(509973);
 class r {
     digest = new i.Digest();
@@ -10,19 +10,19 @@ class r {
     }
     addSample(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        (this.total += e * t),
+        ((this.total += e * t),
             (this.totalWeight += t),
             this.samples++,
             i.TDigest.prototype.push.call(this.digest, e, t),
-            this.digest.check_continuous();
+            this.digest.check_continuous());
     }
     addSamples(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        (this.total += e.reduce((e, n) => e + n * t, 0)),
+        ((this.total += e.reduce((e, n) => e + n * t, 0)),
             (this.totalWeight += t * e.length),
             (this.samples += e.length),
             i.TDigest.prototype.push.call(this.digest, e, t),
-            this.digest.check_continuous();
+            this.digest.check_continuous());
     }
     getReport() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [25, 50, 75, 90, 95],

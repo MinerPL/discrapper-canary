@@ -21,7 +21,7 @@ function o(t) {
                 text: c.intl.string(c.t.BddRzS),
                 onClick: () => {
                     let t;
-                    null != (t = s.A.getDMFromUserId(a.K)) && r.default.selectPrivateChannel(t), i();
+                    (null != (t = s.A.getDMFromUserId(a.K)) && r.default.selectPrivateChannel(t), i());
                 },
             },
         ],

@@ -1,5 +1,5 @@
-n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
-    n(321073);
+(n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
+    n(321073));
 var i = n(582128),
     r = n(17928),
     a = n(155718),
@@ -80,14 +80,14 @@ function S(e) {
         };
         if (null != p) {
             let t = A.find((e) => e.section.id === p);
-            (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
+            ((e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []));
         }
         if (f) {
             let t = A[0];
             if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...m] }, ...A.slice(1)];
             else {
                 let t = o.gZ[h.Ik.BUILT_IN];
-                (e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: m }]);
+                ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: m }]));
             }
             e.commands = [...E, ...m];
         }

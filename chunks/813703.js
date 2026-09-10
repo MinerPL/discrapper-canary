@@ -55,10 +55,10 @@ class j extends s.Component {
             props: { direction: e },
             state: { translateY: t, height: r },
         } = this;
-        t.setValue(e > 0 ? 0 : -r / 2 + 12),
+        (t.setValue(e > 0 ? 0 : -r / 2 + 12),
             T.A.timing(t, { toValue: e > 0 ? -r / 2 + 12 : 0, duration: 800, easing: T.A.Easing.linear }).start(
                 this.animateSlide,
-            );
+            ));
     };
     getAnimatedStyle() {
         let {
@@ -241,42 +241,42 @@ function q(e) {
 class B extends s.PureComponent {
     state = { resultType: null };
     componentDidMount() {
-        m.V$(),
+        (m.V$(),
             document.addEventListener("keydown", this.backToFrontPage),
-            "" !== this.props.query && this.search(this.props.query, b.dD.SEARCH);
+            "" !== this.props.query && this.search(this.props.query, b.dD.SEARCH));
     }
     componentDidUpdate(e) {
-        "" === e.query &&
+        ("" === e.query &&
             "" !== this.props.query &&
             null == this.state.resultType &&
             this.search(this.props.query, b.dD.SEARCH),
             "" !== e.query &&
                 "" === this.props.query &&
                 this.state.resultType === b.dD.SEARCH &&
-                this.setState({ resultType: null });
+                this.setState({ resultType: null }));
     }
     componentWillUnmount() {
-        d.h.wait(() => m.Se()), document.removeEventListener("keydown", this.backToFrontPage);
+        (d.h.wait(() => m.Se()), document.removeEventListener("keydown", this.backToFrontPage));
     }
     search(e, t, r) {
-        m.$P(e, t, r),
+        (m.$P(e, t, r),
             "" === e
                 ? this.setState({ resultType: null })
-                : this.state.resultType !== b.dD.SEARCH && this.setState({ resultType: b.dD.SEARCH });
+                : this.state.resultType !== b.dD.SEARCH && this.setState({ resultType: b.dD.SEARCH }));
     }
     backToFrontPage = (e) => {
         let { resultType: t } = this.state;
         e.key !== Q.dh.ESCAPE || (null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery()));
     };
     handleChangeQuery = (e) => {
-        (0, g.Ri)(e), this.search(e, b.dD.SEARCH);
+        ((0, g.Ri)(e), this.search(e, b.dD.SEARCH));
     };
     handleSelectSuggestion = (e) => {
-        (0, g.Ri)(""), m.Se(), this.search(e, b.dD.SEARCH_SUGGESTION, !0);
+        ((0, g.Ri)(""), m.Se(), this.search(e, b.dD.SEARCH_SUGGESTION, !0));
     };
     handleClearQuery = () => {
         let { current: e } = this.props.searchBarRef;
-        (0, g.Ri)(""), m.Se(), this.setState({ resultType: null }), null != e && e.focus();
+        ((0, g.Ri)(""), m.Se(), this.setState({ resultType: null }), null != e && e.focus());
     };
     handleSelectGIF = (e) => {
         let { onSelectGIF: t } = this.props;

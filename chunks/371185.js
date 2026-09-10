@@ -20,10 +20,10 @@ function C(t) {
             });
         }, [a, s]),
         j = i.useCallback(() => {
-            v(), h(), g();
+            (v(), h(), g());
         }, [v, h, g]),
         w = i.useCallback(() => {
-            v(), (0, r.jJ)(x), f(), g();
+            (v(), (0, r.jJ)(x), f(), g());
         }, [x, v, f, g]),
         y = i.useCallback(() => (m?.(), g?.(), Promise.resolve()), [m, g]),
         z = (0, n.bG)([u.default], () => u.default.getUser(a)),

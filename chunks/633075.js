@@ -5,7 +5,7 @@ class r {
     type;
     applicationId;
     constructor({ id: e, applicationId: t }) {
-        (this.id = e), (this.type = i.x.APPLICATION), (this.applicationId = t);
+        ((this.id = e), (this.type = i.x.APPLICATION), (this.applicationId = t));
     }
     toSubmission() {
         return { id: this.id, data: { type: this.type, application_id: this.applicationId } };

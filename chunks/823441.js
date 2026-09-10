@@ -5,7 +5,7 @@ var i = n(573648),
 let s = "twitch:";
 class l extends r.Ay {
     constructor(e) {
-        super(e), (this.id = `${s}${e.url}`), (this.name = a.intl.string(a.t.JIPtgq));
+        (super(e), (this.id = `${s}${e.url}`), (this.name = a.intl.string(a.t.JIPtgq)));
     }
     getIconURL() {
         return i.A.get("twitch").icon.lightPNG;

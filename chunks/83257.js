@@ -1,4 +1,4 @@
-i.d(t, { A: () => x }), i(321073);
+(i.d(t, { A: () => x }), i(321073));
 var n = i(477900),
     s = i(582128),
     r = i(562708),
@@ -44,7 +44,7 @@ class N extends s.PureComponent {
             let { stores: i } = t;
             null != i &&
                 i.forEach((e) => {
-                    e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e);
+                    (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                 });
         });
     }
@@ -53,9 +53,9 @@ class N extends s.PureComponent {
         t !== this.props.section && (this._intensity = 1.4);
     }
     componentWillUnmount() {
-        (this._unmounted = !0),
+        ((this._unmounted = !0),
             this._subscribedStores.forEach((e) => e.removeChangeListener(this.handleNoticeStoreUpdate)),
-            this.props.sections.forEach((e) => e.onSettingsClose?.());
+            this.props.sections.forEach((e) => e.onSettingsClose?.()));
     }
     setPreventNavigation = (e, t) => {
         this.setState({ shouldPreventNavigation: e, onPreventNavigation: t });
@@ -80,17 +80,17 @@ class N extends s.PureComponent {
                 t?.(e);
                 let { notice: n } = i.find((t) => e === t.section) ?? {},
                     s = null != n ? n.stores : null;
-                null != s &&
+                (null != s &&
                     s.forEach((e) => {
                         this._subscribedStores.includes(e) ||
                             (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                     }),
-                    this.setState({ ...j, sidebarOpen: !1 });
+                    this.setState({ ...j, sidebarOpen: !1 }));
             };
-        this.validNavigation() &&
+        (this.validNavigation() &&
             !n &&
             (r(), b.A.addBreadcrumb({ category: "settings", message: `Set section: ${e}` })),
-            n && null != s && s(r);
+            n && null != s && s(r));
     };
     handleClose = () => {
         if (this.validNavigation()) {

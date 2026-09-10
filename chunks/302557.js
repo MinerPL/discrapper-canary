@@ -45,7 +45,7 @@ function Q(e, t) {
     return e.filter((e) => {
         let t = K.aH({ forceRoles: n, context: e }),
             i = P.xBc.VIEW_CHANNEL;
-        return e.isGuildVocal() && (i = J.WQ(i, P.xBc.CONNECT)), J.zy(t, i) && !K.MJ(i, e);
+        return (e.isGuildVocal() && (i = J.WQ(i, P.xBc.CONNECT)), J.zy(t, i) && !K.MJ(i, e));
     });
 }
 var q = n(417360),
@@ -174,17 +174,17 @@ function et(e) {
     function N(e, t) {
         x((n) => {
             let i = new Set(n);
-            return t ? i.add(e) : i.delete(e), i;
+            return (t ? i.add(e) : i.delete(e), i);
         });
     }
     function C(e) {
         e.preventDefault();
         let t = m.filter((e) => h.has(e));
-        o(
+        (o(
             t.filter(F.B1).filter((e) => !p.has(e)),
             t.filter(F.b1).filter((e) => !v.has(e)),
         ),
-            c();
+            c());
     }
     return (0, i.jsx)("form", {
         onSubmit: C,
@@ -351,12 +351,12 @@ function es(e) {
     function p(e, t) {
         f((n) => {
             let i = new Set(n);
-            return t ? i.add(e) : i.delete(e), i;
+            return (t ? i.add(e) : i.delete(e), i);
         });
     }
     return (0, i.jsxs)("form", {
         onSubmit: function (e) {
-            e.preventDefault(), a(h.map((e) => e.id).filter((e) => x.has(e))), t();
+            (e.preventDefault(), a(h.map((e) => e.id).filter((e) => x.has(e))), t());
         },
         className: V.ID,
         children: [

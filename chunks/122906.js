@@ -9,7 +9,7 @@ function d(e, t) {
     if (null == e) return;
     let n = l.get(e),
         i = null != n ? { ...n } : { code: e, state: s.QB.RESOLVING };
-    t(i), (l = new Map(l)).set(e, i);
+    (t(i), (l = new Map(l)).set(e, i));
 }
 function c(e) {
     u(e.guildTemplate);
@@ -64,7 +64,7 @@ let A = new E(r.h, {
     },
     GUILD_TEMPLATE_ACCEPT_SUCCESS: function (e) {
         return d(e.code, (e) => {
-            (e.state = s.QB.ACCEPTED), (e.usageCount = (e.usageCount ?? 0) + 1);
+            ((e.state = s.QB.ACCEPTED), (e.usageCount = (e.usageCount ?? 0) + 1));
         });
     },
     GUILD_TEMPLATE_ACCEPT_FAILURE: function (e) {

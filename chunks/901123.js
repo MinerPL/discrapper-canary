@@ -85,7 +85,7 @@ let s = "@me",
         SNOWSGIVING: "/snowsgiving",
         PLAYGROUND: (e, t) => {
             let n = "/playground";
-            return null != e && ((n += `/${e}`), null != t && (n += `/${t}`)), n;
+            return (null != e && ((n += `/${e}`), null != t && (n += `/${t}`)), n);
         },
         CHANGELOGS: (e) => `/settings/changelogs${null != e ? `/${e}` : ""}`,
         USERS: (e) => `/users/${e}`,
@@ -158,11 +158,11 @@ let s = "@me",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
         CHANNELS_GAME_SHOP: (e, t, n, i) => {
             let r = `/channels/${e}/game-shop`;
-            return (r += `/${t ?? 0}`), null != n && ((r += `/${n}`), null != i && (r += `/${i}`)), r;
+            return ((r += `/${t ?? 0}`), null != n && ((r += `/${n}`), null != i && (r += `/${i}`)), r);
         },
         GAME_SHOP: (e, t, n) => {
             let i = `/game-shop/${e}`;
-            return null != t && ((i += `/${t}`), null != n && (i += `/${n}`)), i;
+            return (null != t && ((i += `/${t}`), null != n && (i += `/${n}`)), i);
         },
         GUILD_PRODUCT: (e, t) => `/channels/${e}/shop/${t}`,
         REPORT: "/report",

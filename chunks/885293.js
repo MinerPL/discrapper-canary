@@ -36,22 +36,22 @@ function _(t) {
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: function () {
-                        E(),
+                        (E(),
                             d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: v,
                                 action_type: "cancel",
-                            });
+                            }));
                     },
                     variant: "secondary",
                 },
                 {
                     text: _ ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: function () {
-                        y(),
+                        (y(),
                             d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: v,
                                 action_type: "confirm",
-                            });
+                            }));
                     },
                     variant: "primary",
                 },

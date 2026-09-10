@@ -9,16 +9,16 @@ let d = {},
     a = {};
 function c(e) {
     let t = { ...d };
-    delete t[e], (d = t);
+    (delete t[e], (d = t));
     let n = { ...a };
-    delete n[e], (a = n);
+    (delete n[e], (a = n));
 }
 class A extends l.Ay.PersistedStore {
     static displayName = "UpcomingEventNoticesStore";
     static persistKey = "UpcomingEventNotices";
     initialize(e) {
-        this.waitFor(u.default, r.Ay),
-            null != e && ((d = e.upcomingEventDismissals ?? {}), (a = e.upcomingEventSeenTimestamps ?? {}));
+        (this.waitFor(u.default, r.Ay),
+            null != e && ((d = e.upcomingEventDismissals ?? {}), (a = e.upcomingEventSeenTimestamps ?? {})));
     }
     getGuildEventNoticeDismissalTime(e) {
         return d[e];
@@ -40,7 +40,7 @@ let N = new A(i.h, {
     UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
         let { eventId: t } = e,
             n = { ...d };
-        (n[t] = Date.now()), (d = n);
+        ((n[t] = Date.now()), (d = n));
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
@@ -58,12 +58,12 @@ let N = new A(i.h, {
         let i = a[n];
         if ((0, E.F)(l, void 0, i, !1) === s.w0.NEW_EVENT) {
             let e = { ...d };
-            (e[n] = Date.now()), (d = e);
+            ((e[n] = Date.now()), (d = e));
         }
     },
     UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (e) {
         let { guildEventId: t } = e,
             n = { ...a };
-        (n[t] = Date.now()), (a = n);
+        ((n[t] = Date.now()), (a = n));
     },
 });

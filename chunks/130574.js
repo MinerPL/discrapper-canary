@@ -16,14 +16,14 @@ function d(t) {
             {
                 text: o.intl.string(o.t["ETE/oC"]),
                 onClick: function () {
-                    i(), d();
+                    (i(), d());
                 },
                 variant: "secondary",
             },
             {
                 text: o.intl.string(o.t["3PatSz"]),
                 onClick: function () {
-                    h(), d();
+                    (h(), d());
                 },
                 variant: "primary",
             },

@@ -48,7 +48,7 @@ let l = (e) => {
                 "aria-label": g,
                 "aria-describedby": S,
                 onClick: (e) => {
-                    e.stopPropagation(), c?.(e);
+                    (e.stopPropagation(), c?.(e));
                 },
                 onKeyDown: A,
                 onFocus: h,

@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => k });
+(a.r(t), a.d(t, { playgroundConfig: () => L, guildSpaceCollection: () => k }));
 var l = a(477900),
     s = a(582128),
     r = a(503698),
@@ -21,7 +21,7 @@ let u = {
                 let h = s.useCallback(() => {
                     switch (a) {
                         case "success":
-                            return u(!0), Promise.resolve();
+                            return (u(!0), Promise.resolve());
                         case "failure":
                             return Promise.reject(Error("story"));
                         case "pending":

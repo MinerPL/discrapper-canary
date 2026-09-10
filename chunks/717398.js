@@ -15,7 +15,7 @@ var i = n(636537),
     I = n(235627),
     f = n(375708);
 function p(e) {
-    (0, A.Z_)(), E.A.show(e);
+    ((0, A.Z_)(), E.A.show(e));
 }
 function T(e, t, n) {
     let { status: i, body: r } = e,
@@ -42,7 +42,7 @@ function T(e, t, n) {
                 break;
             }
         default:
-            if (a === h.t02.USER_QUARANTINED) (0, A.Z_)(), (0, l.default)();
+            if (a === h.t02.USER_QUARANTINED) ((0, A.Z_)(), (0, l.default)());
             else if ((0, d.O)(i, a)) break;
             else if (a === h.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
@@ -157,20 +157,20 @@ let m = {
         ignoreUser: (e, t, n) =>
             i.Bo.put({ url: h.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, i.fT)() })
                 .then(() => {
-                    o.A.showIgnoreSuccessToast(e, n),
+                    (o.A.showIgnoreSuccessToast(e, n),
                         r.O.announce(f.intl.string(f.t.Us93Ca)),
-                        a.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() });
+                        a.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() }));
                 })
                 .catch(() => {
-                    o.A.showFailedToast(), r.O.announce(f.intl.string(f.t.n6Jo3E));
+                    (o.A.showFailedToast(), r.O.announce(f.intl.string(f.t.n6Jo3E)));
                 }),
         unignoreUser: (e, t, n) =>
             i.Bo.del({ url: h.Rsh.IGNORE_USER(e), context: { location: t }, rejectWithError: (0, i.fT)() })
                 .then(() => {
-                    o.A.showUnignoreSuccessToast(e, n), r.O.announce(f.intl.string(f.t.QlH5w6));
+                    (o.A.showUnignoreSuccessToast(e, n), r.O.announce(f.intl.string(f.t.QlH5w6)));
                 })
                 .catch(() => {
-                    o.A.showFailedToast(), r.O.announce(f.intl.string(f.t.n6Jo3E));
+                    (o.A.showFailedToast(), r.O.announce(f.intl.string(f.t.n6Jo3E)));
                 }),
     },
     g = m;

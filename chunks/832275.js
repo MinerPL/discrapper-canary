@@ -7,7 +7,7 @@ function i(t) {
         [n, i] = r.useState(!1),
         s = r.useRef(new Set()),
         c = r.useCallback(() => {
-            s.current.forEach(clearTimeout), s.current.clear();
+            (s.current.forEach(clearTimeout), s.current.clear());
         }, []),
         o = r.useCallback(
             function () {
@@ -28,7 +28,7 @@ function i(t) {
         );
     return (
         (0, l.l0)(() => {
-            e?.({ shouldIgnoreCloseRequest: !1 }), c();
+            (e?.({ shouldIgnoreCloseRequest: !1 }), c());
         }),
         { startAuthorization: o, shouldShowGoToGameHint: n }
     );

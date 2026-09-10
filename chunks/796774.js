@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     CX: () => P,
     E7: () => S,
     Rp: () => R,
@@ -12,7 +12,7 @@ n.d(t, {
     ty: () => O,
     xV: () => C,
 }),
-    n(321073);
+    n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(636537),
@@ -38,18 +38,18 @@ async function m() {
         );
         s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: e });
     } catch (e) {
-        s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" }), (0, d.o)(new o.A(e));
+        (s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" }), (0, d.o)(new o.A(e)));
     }
 }
 function g(e) {
     return new Promise((t) => {
         s.h.subscribe(e, function n() {
-            s.h.unsubscribe(e, n), setTimeout(t, 0);
+            (s.h.unsubscribe(e, n), setTimeout(t, 0));
         });
     });
 }
 async function S(e) {
-    if (__OVERLAY__) return s.h.dispatch({ type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST" }), Promise.all([]);
+    if (__OVERLAY__) return (s.h.dispatch({ type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST" }), Promise.all([]));
     let t = performance.now(),
         n = e?.disableAnalytics ?? !1,
         i = !T && !n;
@@ -59,7 +59,7 @@ async function S(e) {
             if (!E.A.shouldFetchDefaultSounds()) return Promise.resolve();
             s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
             let e = g("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
-            return m(), e;
+            return (m(), e);
         })(),
         (function () {
             let e = (0, h.I)();

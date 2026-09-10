@@ -52,8 +52,8 @@ var i = n(562708),
     x = n(287809),
     k = n(977997),
     F = n(174459),
-    V = n(403362),
-    B = n(499785),
+    B = n(403362),
+    V = n(499785),
     H = n(811024),
     j = n(933958),
     W = n(799061),
@@ -61,9 +61,9 @@ var i = n(562708),
     K = n(817636),
     $ = n(782091),
     z = n(108959),
-    q = n(400115),
-    Z = n(90804),
-    X = n(946255),
+    X = n(400115),
+    q = n(90804),
+    Z = n(946255),
     Q = n(859007),
     J = n(360469),
     ee = n(5867),
@@ -108,7 +108,7 @@ async function el(e) {
         }
         if ((!0 !== g && R.A.clearMainFrameSlot(), (0, Q.y)({ applicationId: i, customId: f, referrerId: I })))
             return (
-                (0, q.j)(i, {
+                (0, X.j)(i, {
                     isStart: a,
                     inviterUserId: T,
                     channelId: t ?? null,
@@ -139,7 +139,7 @@ async function el(e) {
         let E = x.default.getCurrentUser();
         if (
             (null != E &&
-                (0, X.A)({
+                (0, Z.A)({
                     type: a ? et.UqL.LAUNCH : et.UqL.JOIN,
                     userId: E?.id,
                     guildId: y,
@@ -238,7 +238,7 @@ async function eo(e) {
     }
     let _ = u.handler !== A.Ys.APP_HANDLER;
     if (!(_ || en.TR.includes(t))) {
-        null != i && (await (0, h.Zn)({ type: "channel", channelId: i })), await (0, h.Zn)({ type: "user" });
+        (null != i && (await (0, h.Zn)({ type: "channel", channelId: i })), await (0, h.Zn)({ type: "user" }));
         let e = U.A.getChannel(i),
             { isAuthorized: n } = await (0, T.q)({
                 applicationId: t,
@@ -283,10 +283,10 @@ async function eo(e) {
                 interactionLifecycleOptionsFactory: () => ({
                     nonce: n,
                     onSuccess: () => {
-                        o?.(), e();
+                        (o?.(), e());
                     },
                     onFailure: (e, n, a, s) => {
-                        o?.(),
+                        (o?.(),
                             F.default.track(et.HAw.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: i,
                                 guild_id: r,
@@ -302,7 +302,7 @@ async function eo(e) {
                                 ? d(new E.A({ status: a, body: { message: n, code: e } }))
                                 : null != s && s in O.A.ReasonCodes
                                   ? d(new O.A(s))
-                                  : d(new O.A(O.A.ReasonCodes.UNKNOWN));
+                                  : d(new O.A(O.A.ReasonCodes.UNKNOWN)));
                     },
                 }),
             });
@@ -357,7 +357,7 @@ async function ed(e) {
         let e = (0, z.A)(_.id),
             n = J.lk.includes(_.type);
         if (e) {
-            if (!(await (0, Z.A)({ channelId: _.id, bypassChangeModal: null != t })))
+            if (!(await (0, q.A)({ channelId: _.id, bypassChangeModal: null != t })))
                 return { result: "failure", reason: 8 };
         } else if (!(0, H.pE)(_) || !n) return { result: "failure", reason: 9 };
     }
@@ -371,7 +371,7 @@ async function ed(e) {
         rejectWithError: !0,
     };
     return null != r
-        ? (await B.A.post({
+        ? (await V.A.post({
               url: et.Rsh.ACTIVITY_CHANNEL_LAUNCH(r, n),
               body: { session_id: d, guild_id: l ?? void 0 },
               ...h,
@@ -409,8 +409,8 @@ async function eu() {
             }),
             t = e.body.applications,
             n = t.map((e) => M.Ay.createFromServer(e));
-        l.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS", applications: n, assets: e.body.assets }),
-            l.h.dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: t });
+        (l.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS", applications: n, assets: e.body.assets }),
+            l.h.dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: t }));
     } catch (e) {
         l.h.dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
     }
@@ -429,7 +429,7 @@ async function e_(e, t, n) {
             i.body.attachment
         );
     } catch (e) {
-        return l.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new E.A(e);
+        return (l.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new E.A(e));
     }
 }
 function eE(e, t, n) {
@@ -439,27 +439,27 @@ function eE(e, t, n) {
 async function eA(e) {
     let { guildId: t, force: n = !1 } = e,
         r = j.Ay.getShelfActivities(t),
-        a = r.map((e) => p.A.getApplication(e.application_id)).filter(V.Vq);
+        a = r.map((e) => p.A.getApplication(e.application_id)).filter(B.Vq);
     if (!n && !j.Ay.shouldFetchShelf(t)) {
         if (j.Ay.getShelfFetchStatus(t)?.isFetching) {
             let e,
                 n,
                 i = new Promise((n) => {
-                    (e = eE.bind(null, t, n)), l.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e);
+                    ((e = eE.bind(null, t, n)), l.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e));
                 }),
                 r = new Promise((e) => {
-                    (n = eE.bind(null, t, e)), l.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n);
+                    ((n = eE.bind(null, t, e)), l.h.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n));
                 });
-            await Promise.race([i, r]),
+            (await Promise.race([i, r]),
                 null != e && (l.h.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", e), (e = void 0)),
-                null != n && (l.h.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n), (n = void 0));
+                null != n && (l.h.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", n), (n = void 0)));
         }
         return { activityConfigs: r, applications: a };
     }
     try {
         l.h.dispatch({ type: "EMBEDDED_ACTIVITY_FETCH_SHELF", guildId: t });
         let e = void 0 !== t && "" !== t ? { guild_id: t } : void 0,
-            n = await B.A.get({
+            n = await V.A.get({
                 url: et.Rsh.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
@@ -503,7 +503,7 @@ async function eI(e) {
         let t,
             n = U.A.getChannel(e);
         if (null == n) throw Error("Private channel not found");
-        null != s && (t = y.Ay.parse(n, s).content), _.A.sendInvite(e, l.code, r, a, t);
+        (null != s && (t = y.Ay.parse(n, s).content), _.A.sendInvite(e, l.code, r, a, t));
     });
 }
 function ef() {
@@ -513,7 +513,7 @@ function ef() {
 async function ep(e) {
     let t = et.Rsh.ACTIVITY_TEST_MODE(e);
     try {
-        return await a.Bo.get({ url: t, oldFormErrors: !0, rejectWithError: !0 }), !0;
+        return (await a.Bo.get({ url: t, oldFormErrors: !0, rejectWithError: !0 }), !0);
     } catch (e) {
         return !1;
     }
@@ -525,7 +525,7 @@ function em(e) {
     l.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout: e });
 }
 function eg() {
-    eT(ee.Gd.ACTIVITY_POPOUT_WINDOW), l.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+    (eT(ee.Gd.ACTIVITY_POPOUT_WINDOW), l.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
 }
 async function eS(e, t) {
     let n = {};
@@ -538,13 +538,17 @@ async function eN(e, t) {
     l.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: e, refreshing: !0 });
     try {
         let n = await eS(e, t ?? void 0);
-        l.h.dispatch({
+        (l.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
             applicationId: e,
             channelId: t,
             proxyTicket: n,
         }),
-            l.h.dispatch({ type: "EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET", applicationId: e, proxyTicket: n });
+            l.h.dispatch({
+                type: "EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET",
+                applicationId: e,
+                proxyTicket: n,
+            }));
     } catch (s) {
         let n = U.A.getChannel(t),
             i = n?.guild_id ?? null,

@@ -29,7 +29,7 @@ let d = {
         let t = o(e);
         if (null != t) {
             let [e, n] = t;
-            return (0, a.LQ)(e, n), n;
+            return ((0, a.LQ)(e, n), n);
         }
     },
     getExperimentBucketName: function (e) {

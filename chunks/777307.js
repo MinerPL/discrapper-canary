@@ -46,12 +46,12 @@ function F(e) {
         { analyticsLocations: l, sourceAnalyticsLocations: s } = (0, p.Ay)(x.A.PREMIUM_UPSELL_TOOLTIP);
     return (
         n.useEffect(() => {
-            C.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
+            (C.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: w.e.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: G.liQ.NATIVE_INVITE_MODAL },
                 location_stack: s,
             }),
-                (0, V.sq)(G.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, q.uq)(w.e.GUILD_CAP_INLINE_INVITE_MODAL));
+                (0, V.sq)(G.U7l.PREMIUM_UPSELL_VIEWED, s, () => (0, q.uq)(w.e.GUILD_CAP_INLINE_INVITE_MODAL)));
         }, [s]),
         (0, t.jsxs)(U.D, {
             onClick: () =>
@@ -100,7 +100,7 @@ function H(e) {
         null != U && null != U.guild && (0, f.dR)(U.approximate_member_count ?? 0, U.code, U.guild.id);
     }, [U, U?.approximate_member_count, U?.code, U?.guild?.id]);
     let q = (0, f.uE)();
-    n.useEffect(() => {
+    (n.useEffect(() => {
         !__OVERLAY__ &&
             M.isPlatformEmbedded &&
             (document.hasFocus() || ((0, M.isWindows)() ? b.Ay.minimize() : b.Ay.restore(), b.Ay.focus()));
@@ -112,7 +112,7 @@ function H(e) {
                 invite_code: U?.code,
                 guild_id: U?.guild?.id,
             });
-        });
+        }));
     let z = (0, N.GV)(),
         { analyticsLocations: w } = (0, p.Ay)(x.A.INVITE_MODAL);
     if (null == U || null == k)
@@ -143,14 +143,14 @@ function H(e) {
         }) || D.A.acceptInvite(U, V);
     }
     function K() {
-        C.default.track(G.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: U?.code, guild_id: U?.guild?.id }),
-            D.A.close(U?.code);
+        (C.default.track(G.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: U?.code, guild_id: U?.guild?.id }),
+            D.A.close(U?.code));
     }
     let { guild: Y, channel: $, inviter: B, target_application: Q } = U,
         J = null == U.guild && null == U.channel && null != B,
         ee = null != Y;
-    if (null != Q) (i = Y?.name), (l = j.Ay.createFromServer(Q).getCoverImageURL(1024));
-    else if (null != Y) (i = Y.name), (l = y.Ay.getGuildSplashURL({ id: Y.id, splash: Y.splash }));
+    if (null != Q) ((i = Y?.name), (l = j.Ay.createFromServer(Q).getCoverImageURL(1024)));
+    else if (null != Y) ((i = Y.name), (l = y.Ay.getGuildSplashURL({ id: Y.id, splash: Y.splash })));
     else if (((null == (i = $.name) || "" === i) && null != B && (i = B.username), null == i))
         throw Error("no name for group DM invite");
     let ei = null != Y && (0, v.Sn)();

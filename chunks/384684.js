@@ -26,13 +26,13 @@ function T(e) {
         let a = l.Ay.getMember(e, t.id),
             d = new Set(a?.roles ?? []);
         for (let t of o.A.getSortedRoles(n.id))
-            (0, u.U)(t) && (i.add(t.id), (0, u.X)(t) && (r.add(t.id), d.has(t.id) && E.add(t.id))),
-                d.has(t.id) && (0, s._m)(t, _.xBc.ADMINISTRATOR) && f.set(e, !0);
+            ((0, u.U)(t) && (i.add(t.id), (0, u.X)(t) && (r.add(t.id), d.has(t.id) && E.add(t.id))),
+                d.has(t.id) && (0, s._m)(t, _.xBc.ADMINISTRATOR) && f.set(e, !0));
     }
-    return A.set(e, i), I.set(e, E), h.set(e, r), !0;
+    return (A.set(e, i), I.set(e, E), h.set(e, r), !0);
 }
 function m() {
-    A.clear(), I.clear(), h.clear(), f.clear(), (p = null);
+    (A.clear(), I.clear(), h.clear(), f.clear(), (p = null));
 }
 function g(e) {
     let {
@@ -44,11 +44,11 @@ function g(e) {
     let i = n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     if (i && !p.has(t)) {
         let e = new Set(p);
-        return e.add(t), (p = e), !0;
+        return (e.add(t), (p = e), !0);
     }
     if (!i && p.has(t)) {
         let e = new Set(p);
-        return e.delete(t), (p = e), !0;
+        return (e.delete(t), (p = e), !0);
     }
     return !1;
 }
@@ -66,22 +66,22 @@ class N extends i.Ay.Store {
         let e = d.A.getGuildsArray(),
             t = new Set();
         for (let n of e) n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
-        return (p = t), t;
+        return ((p = t), t);
     }
     buildRoles(e) {
         A.has(e) || T(e);
     }
     getSubscriptionRoles(e) {
-        return this.buildRoles(e), A.get(e) ?? E;
+        return (this.buildRoles(e), A.get(e) ?? E);
     }
     getPurchasableSubscriptionRoles(e) {
-        return this.buildRoles(e), h.get(e) ?? E;
+        return (this.buildRoles(e), h.get(e) ?? E);
     }
     getUserSubscriptionRoles(e) {
-        return this.buildRoles(e), I.get(e) ?? E;
+        return (this.buildRoles(e), I.get(e) ?? E);
     }
     getUserIsAdmin(e) {
-        return this.buildRoles(e), f.get(e) ?? !1;
+        return (this.buildRoles(e), f.get(e) ?? !1);
     }
 }
 let C = new N(r.h, {
@@ -94,7 +94,7 @@ let C = new N(r.h, {
         } = e;
         if (p?.has(t) !== !0) return !1;
         let n = new Set(p);
-        n.delete(t), (p = n);
+        (n.delete(t), (p = n));
     },
     GUILD_UPDATE: g,
     GUILD_ROLE_CREATE: S,

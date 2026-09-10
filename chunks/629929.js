@@ -6,7 +6,7 @@ let n = r(574253),
     );
 t.default = class {
     constructor(e) {
-        (this.groupNumberMonth = e ? 3 : 2), (this.groupNumberDay = e ? 2 : 3);
+        ((this.groupNumberMonth = e ? 3 : 2), (this.groupNumberDay = e ? 2 : 3));
     }
     pattern() {
         return a;

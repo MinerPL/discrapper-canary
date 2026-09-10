@@ -28,7 +28,7 @@ let O = null,
 function R() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId();
-    return (O = e), (b = t), v.clear();
+    return ((O = e), (b = t), v.clear());
 }
 function U(e) {
     let {
@@ -283,8 +283,8 @@ let F = new B(s.h, {
             n = P(),
             i = new Set();
         for (let { channelId: e, oldChannelId: l } of t)
-            null == l || i.has(l) || (v.nonPositionalChannelIdUpdate(l) && (n = !0), i.add(l)),
-                null == e || i.has(e) || (v.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
+            (null == l || i.has(l) || (v.nonPositionalChannelIdUpdate(l) && (n = !0), i.add(l)),
+                null == e || i.has(e) || (v.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e)));
         return n;
     },
     WINDOW_FOCUS: function () {

@@ -10,11 +10,11 @@ function l(e) {
             if (n.currentToastMap.has(t)) {
                 let i = new Map(n.queuedToastsMap),
                     r = i.get(t) ?? [];
-                return i.set(t, [...r, e]), { ...n, queuedToastsMap: i };
+                return (i.set(t, [...r, e]), { ...n, queuedToastsMap: i });
             }
             {
                 let i = new Map(n.currentToastMap);
-                return i.set(t, e), { ...n, currentToastMap: i };
+                return (i.set(t, e), { ...n, currentToastMap: i });
             }
         });
     });
@@ -25,13 +25,13 @@ function o() {
         s.setState((t) => {
             if (0 === (t.queuedToastsMap.get(e) ?? []).length) {
                 let n = new Map(t.currentToastMap);
-                return n.delete(e), { ...t, currentToastMap: n };
+                return (n.delete(e), { ...t, currentToastMap: n });
             }
             let n = new Map(t.currentToastMap),
                 i = new Map(t.queuedToastsMap),
                 r = i.get(e) ?? [],
                 a = r[0];
-            return n.set(e, a), i.set(e, r.slice(1)), { ...t, currentToastMap: n, queuedToastsMap: i };
+            return (n.set(e, a), i.set(e, r.slice(1)), { ...t, currentToastMap: n, queuedToastsMap: i });
         });
     });
 }

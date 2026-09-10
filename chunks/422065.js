@@ -62,7 +62,7 @@ function K(e) {
     let { item: t, index: i, isSelected: n, setSelected: a, label: l, trackedSkuId: c, onTrackClick: d } = e,
         o = r.useMemo(() => ({ skuId: t.skuId, type: t.type, items: [t] }), [t]),
         u = r.useCallback(() => {
-            d(V.sH.BUNDLE_VIEW_PRODUCT, c), a(i);
+            (d(V.sH.BUNDLE_VIEW_PRODUCT, c), a(i));
         }, [d, c, a, i]),
         m = !0 === Y[t.type];
     return (0, s.jsx)(U.D, {
@@ -170,7 +170,7 @@ function el(e) {
                 n.push(W.intl.formatToPlainString(W.t["3Y8q7a"], { itemName: e.name }));
                 break;
             case b.R.NAMEPLATE:
-                n.push(W.intl.formatToPlainString(W.t["2keXky"], { itemName: e.name })), (s = !0);
+                (n.push(W.intl.formatToPlainString(W.t["2keXky"], { itemName: e.name })), (s = !0));
         }
     if (s) {
         let e = n.join(", ").replace(/, ([^,]*)$/, " & $1");
@@ -758,7 +758,7 @@ let tp = function (e) {
         ? (0, s.jsx)(e5.$, {
               variant: "primary",
               onClick: () => {
-                  n?.(V.sH.USE_NOW), r();
+                  (n?.(V.sH.USE_NOW), r());
               },
               loading: a,
               text: W.intl.string(W.t.MAS7uK),
@@ -767,7 +767,7 @@ let tp = function (e) {
         : (0, s.jsx)(e5.$, {
               variant: "primary",
               onClick: () => {
-                  n?.(V.sH.EDIT_PROFILE), c(), i?.();
+                  (n?.(V.sH.EDIT_PROFILE), c(), i?.());
               },
               text: W.intl.string(W.t["2p2aYz"]),
               fullWidth: !0,
@@ -839,7 +839,8 @@ function tR(e) {
         className: tA.F,
         innerRef: a,
         onClick: () => {
-            i?.(V.sH.SUBSCRIBE_NOW), (0, tI.A)({ subscriptionTier: eM.pe.TIER_2, analyticsLocations: n, returnRef: a });
+            (i?.(V.sH.SUBSCRIBE_NOW),
+                (0, tI.A)({ subscriptionTier: eM.pe.TIER_2, analyticsLocations: n, returnRef: a }));
         },
         children: t,
     });
@@ -979,13 +980,13 @@ function tD(e) {
         K = r.useMemo(() => X.some((e) => e.currency === tk.Yr.DISCORD_ORB), [X]);
     (0, ti.W)({ disableFetch: !K });
     let $ = r.useCallback(() => {
-        g(V.sH.BUY_WITH_FIAT),
+        (g(V.sH.BUY_WITH_FIAT),
             (0, e7.A)({
                 skuId: n.skuId,
                 analyticsLocations: m,
                 discoverySessionId: h,
                 onClose: (e) => (e ? x() : (0, tk.tE)()),
-            });
+            }));
     }, [m, x, n.skuId, g, h]);
     return (0, s.jsxs)("div", {
         className: tb.iw,
@@ -1028,7 +1029,7 @@ function tD(e) {
                                 fullWidth: !0,
                                 buttonTextOverride: e,
                                 onClick: () => {
-                                    g(V.sH.UNLOCK_WITH_NITRO), (0, to.M)();
+                                    (g(V.sH.UNLOCK_WITH_NITRO), (0, to.M)());
                                 },
                                 onSubscribeModalClose: () => {
                                     (0, to.t)({
@@ -1073,14 +1074,14 @@ function tD(e) {
                                     loadingStartedLabel: W.intl.string(W.t["TYw+9s"]),
                                     loadingFinishedLabel: W.intl.string(W.t.Pg1UP5),
                                     onClick: async () => {
-                                        g(V.sH.ADD_TO_COLLECTION),
+                                        (g(V.sH.ADD_TO_COLLECTION),
                                             await (0, R.iJ)(n.skuId),
                                             x(),
                                             (0, tS.A)({
                                                 product: n,
                                                 analyticsLocations: m,
                                                 purchaseType: V.gs.PREMIUM_PURCHASE,
-                                            });
+                                            }));
                                     },
                                     text: W.intl.string(W.t.zp6caO),
                                     fullWidth: !0,
@@ -1109,11 +1110,11 @@ function tD(e) {
                                                           children: (0, s.jsx)(e5.$, {
                                                               variant: p ? "primary" : "secondary",
                                                               onClick: function () {
-                                                                  g(V.sH.BUY_WITH_ORBS),
+                                                                  (g(V.sH.BUY_WITH_ORBS),
                                                                       (0, j.B4)({
                                                                           skuId: n.skuId,
                                                                           onComplete: (e) => {
-                                                                              (0, R.gB)(),
+                                                                              ((0, R.gB)(),
                                                                                   x(),
                                                                                   (0, tS.A)({
                                                                                       product: n,
@@ -1122,11 +1123,11 @@ function tD(e) {
                                                                                           e?.entitlements?.[0]
                                                                                               ?.consumed,
                                                                                       purchaseType: V.gs.ORB,
-                                                                                  });
+                                                                                  }));
                                                                           },
                                                                           analyticsLocations: m,
                                                                           discoverySessionId: h,
-                                                                      });
+                                                                      }));
                                                               },
                                                               disabled: a,
                                                               "aria-label": c,
@@ -1309,7 +1310,7 @@ function tQ(e) {
             );
         })(),
         I = r.useCallback(() => {
-            h(V.sH.GO_TO_COLLECTION), v(), j(x, "go_to_collection_button");
+            (h(V.sH.GO_TO_COLLECTION), v(), j(x, "go_to_collection_button"));
         }, [x, v, h, j]),
         R = r.useCallback(() => {
             N <= 1 || o((e) => (e - 1 + N) % N);
@@ -1331,7 +1332,7 @@ function tQ(e) {
             [N, R, y],
         ),
         T = r.useCallback(() => {
-            h(V.sH.CLOSE_DETAIL), v();
+            (h(V.sH.CLOSE_DETAIL), v());
         }, [h, v]),
         L = r.useRef(null),
         S = r.useRef(!0);
@@ -1440,14 +1441,14 @@ let t1 = (0, u.FT)(u._3.SIZE_152),
         }, [z]);
         let ee = r.useMemo(() => (0, k.V6)(n.type, n.skuId), [n.type, n.skuId]);
         r.useEffect(() => {
-            A.default.track(O.HAw.OPEN_MODAL, {
+            (A.default.track(O.HAw.OPEN_MODAL, {
                 type: O.JJy.COLLECTIBLES_SHOP_DETAILS_MODAL,
                 source: b,
                 location_stack: $,
                 sku_id: K.skuId,
                 product_type: ee,
             }),
-                (0, R.RD)(K.skuId);
+                (0, R.RD)(K.skuId));
         }, [b, $, K.skuId, ee]);
         let { cardId: et, sessionId: ei, tilePosition: en } = (0, C.uM)() ?? {},
             es = r.useMemo(() => (0, L.v8)(n), [n]),

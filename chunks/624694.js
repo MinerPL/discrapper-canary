@@ -1,4 +1,4 @@
-n.d(t, { A: () => f }), n(321073);
+(n.d(t, { A: () => f }), n(321073));
 var i = n(17928),
     r = n(228366),
     a = n(652896),
@@ -35,7 +35,7 @@ function _(e, t, n, i, r) {
         o = u(a) ? (a.frameRateEncode ?? 0) : (a.frameRateDecode ?? 0),
         d = a.resolution?.height ?? 0,
         c = u(a) ? (a.videoEntropy ?? 0) : 0;
-    (n.numDatapoints += 1), (n.frameRateAggregated += o), (n.resolutionAggregated += d), (n.entropyAggregated += c);
+    ((n.numDatapoints += 1), (n.frameRateAggregated += o), (n.resolutionAggregated += d), (n.entropyAggregated += c));
     let _ = r?.find((e) => "video" === e.type);
     if (null != _ && t >= n.minVersion) {
         n.numDatapoints -= 1;
@@ -44,12 +44,12 @@ function _(e, t, n, i, r) {
             i = u(_) ? (_.frameRateEncode ?? 0) : (_.frameRateDecode ?? 0),
             r = u(_) ? (_.videoEntropy ?? 0) : 0,
             a = _.resolution?.height ?? 0;
-        (n.frameRateAggregated -= i),
+        ((n.frameRateAggregated -= i),
             (n.resolutionAggregated -= a),
             (n.entropyAggregated -= r),
             (n.packetsSentOrReceived = s - e),
-            (n.packetsLost = l - t);
-    } else (n.packetsSentOrReceived = s), (n.packetsLost = l);
+            (n.packetsLost = l - t));
+    } else ((n.packetsSentOrReceived = s), (n.packetsLost = l));
     return (
         (n.frameRate = n.frameRateAggregated / n.numDatapoints),
         (n.resolution = n.resolutionAggregated / n.numDatapoints),
@@ -66,7 +66,7 @@ function E(e, t, n, i) {
         e[t][a] = _(n.version, i?.version ?? 0, e[t][a], n.stats.rtp.inbound[a], i?.stats.rtp.inbound[a]);
 }
 function A(e, t) {
-    d[e]?.[t] != null && delete d[e][t], c[e]?.[t] != null && delete c[e][t];
+    (d[e]?.[t] != null && delete d[e][t], c[e]?.[t] != null && delete c[e][t]);
 }
 function h(e, t) {
     if (null == e) return null;

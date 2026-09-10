@@ -1,4 +1,4 @@
-n.d(t, { Tu: () => A, z8: () => p }), n(321073);
+(n.d(t, { Tu: () => A, z8: () => p }), n(321073));
 var i,
     r = n(811315),
     a = n.n(r),
@@ -17,7 +17,7 @@ var A =
     i);
 function h(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
-    return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t;
+    return (e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t);
 }
 function I(e) {
     return e.sort;
@@ -30,10 +30,10 @@ class p {
     _membersMap;
     newMemberTimestamp = Date.now();
     constructor(e) {
-        (this.guildId = e), (this._membersMap = f());
+        ((this.guildId = e), (this._membersMap = f()));
     }
     reset() {
-        this._membersMap.clear(), (this._membersMap = f()), this.resetNewMemberTimestamp();
+        (this._membersMap.clear(), (this._membersMap = f()), this.resetNewMemberTimestamp());
     }
     resetNewMemberTimestamp() {
         this.newMemberTimestamp = Date.now();

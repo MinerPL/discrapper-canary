@@ -43,7 +43,7 @@ function N(t) {
               id: "manage-privacy",
               label: m.intl.string(m.t.anfNPV),
               action: () => {
-                  x?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), C(), (0, A.A)(N), p?.();
+                  (x?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), C(), (0, A.A)(N), p?.());
               },
           });
 }

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIMEZONE_ABBR_MAP = void 0),
     (t.getNthWeekdayOfMonth = a),
     (t.getLastWeekdayOfMonth = i),
@@ -16,12 +16,12 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
                 : r > i.dstStart(r.getFullYear()) && !(r > i.dstEnd(r.getFullYear()))
                   ? i.timezoneOffsetDuringDst
                   : i.timezoneOffsetNonDst;
-    });
+    }));
 let n = r(115004);
 function a(e, t, r, n, i = 0) {
     let s = 0,
         o = 0;
-    for (; o < n; ) new Date(e, t - 1, ++s).getDay() === r && o++;
+    for (; o < n;) new Date(e, t - 1, ++s).getDay() === r && o++;
     return new Date(e, t - 1, s, i);
 }
 function i(e, t, r, n = 0) {

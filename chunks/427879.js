@@ -38,10 +38,10 @@ for (
     let e = i[n];
     r.prototype[e] = function () {
         for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
-        return this._defaults.push({ fn: e, args: r }), this;
+        return (this._defaults.push({ fn: e, args: r }), this);
     };
 }
-(r.prototype._setDefaults = function (e) {
+((r.prototype._setDefaults = function (e) {
     var r,
         n = (function (e) {
             var r = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
@@ -89,10 +89,10 @@ for (
                 },
                 n: function () {
                     var e = r.next();
-                    return (a = e.done), e;
+                    return ((a = e.done), e);
                 },
                 e: function (e) {
-                    (s = !0), (o = e);
+                    ((s = !0), (o = e));
                 },
                 f: function () {
                     try {
@@ -104,7 +104,7 @@ for (
             };
         })(this._defaults);
     try {
-        for (n.s(); !(r = n.n()).done; ) {
+        for (n.s(); !(r = n.n()).done;) {
             let t = r.value;
             e[t.fn](...t.args);
         }
@@ -114,4 +114,4 @@ for (
         n.f();
     }
 }),
-    (e.exports = r);
+    (e.exports = r));

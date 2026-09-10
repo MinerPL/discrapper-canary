@@ -61,7 +61,7 @@ function h(e) {
             assetLoader: R,
             onLoad: L,
         });
-    r.useImperativeHandle(
+    (r.useImperativeHandle(
         p,
         () => ({
             play: () => x?.play(),
@@ -124,14 +124,14 @@ function h(e) {
                             if (null == i || n?.aborted) return Promise.resolve(null);
                             let r = await i.arrayBuffer(),
                                 a = await (0, s.decodeImage)(new Uint8Array(r));
-                            return (t.current[e] = a), a;
+                            return ((t.current[e] = a), a);
                         }
                     }, [])),
                 T = r.useCallback((e, t) => {
                     let n = e?.[t];
                     return null == n ? null : "object" == typeof n && "value" in n ? n.value : n;
                 }, []);
-            (function (e) {
+            ((function (e) {
                 let { rive: t, artboard: n, artboardProperties: i, dynamicDataBinding: a, onDataBindingChange: s } = e,
                     l = null != a,
                     o = r.useCallback((e) => (l ? a?.[e]?.type : i[n ?? ""][e]), [l, a, i, n]);
@@ -199,7 +199,8 @@ function h(e) {
                                     case "trigger":
                                         let u = null != o && ("boolean" == typeof o ? o : 0 !== o),
                                             _ = T(f.current, r);
-                                        u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(), (f.current[r] = o);
+                                        (u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(),
+                                            (f.current[r] = o));
                                         break;
                                     case "string":
                                         let E = n.viewModelInstance?.string(r);
@@ -229,7 +230,7 @@ function h(e) {
                             e.abort("New data binding applied - aborting previous image fetches.");
                         }
                     );
-                }, [T, _, n, i, a, A, n?.viewModelInstance, h, I, p]);
+                }, [T, _, n, i, a, A, n?.viewModelInstance, h, I, p]));
         })({
             rive: x,
             artboard: I,
@@ -255,7 +256,7 @@ function h(e) {
                     x.on(s.EventType.Pause, t),
                     x.on(s.EventType.Stop, t),
                     () => {
-                        x.off(s.EventType.Play, e), x.off(s.EventType.Pause, t), x.off(s.EventType.Stop, t);
+                        (x.off(s.EventType.Play, e), x.off(s.EventType.Pause, t), x.off(s.EventType.Stop, t));
                     }
                 );
             }
@@ -276,10 +277,10 @@ function h(e) {
             let e = x.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
-                x.resizeDrawingSurfaceToCanvas(),
-                    x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering()));
+                (x.resizeDrawingSurfaceToCanvas(),
+                    x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering())));
             });
-            return t.observe(e), () => t.disconnect();
+            return (t.observe(e), () => t.disconnect());
         }, [x, D.reducedMotion.enabled]),
         r.useEffect(() => {
             null != x &&
@@ -288,9 +289,9 @@ function h(e) {
                 (w(x.stateMachineNames),
                 x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: I, autoBind: !0 }),
                 x.setupRiveListeners());
-        }, [x, n, U, I, y]);
+        }, [x, n, U, I, y]));
     let F = r.useRef(0);
-    r.useEffect(() => {
+    (r.useEffect(() => {
         if (null == x) return;
         let e = (t) => {
             null != t.data &&
@@ -310,22 +311,22 @@ function h(e) {
     }, [x, D.reducedMotion.enabled, f, n]),
         r.useEffect(() => {
             P();
-        }, [P, I, c, u, m, N, T]);
-    let V = b && !M,
-        B = r.useRef(!1);
+        }, [P, I, c, u, m, N, T]));
+    let B = b && !M,
+        V = r.useRef(!1);
     return (
         r.useEffect(() => {
             if (null != x)
                 return (
-                    !V && B.current && x.isPlaying && F.current > 0
+                    !B && V.current && x.isPlaying && F.current > 0
                         ? x.pause()
-                        : V && !x.isPlaying && B.current && x.play(),
+                        : B && !x.isPlaying && V.current && x.play(),
                     () => {
-                        null != x && V && (B.current = null != x.frameRequestId);
+                        null != x && B && (V.current = null != x.frameRequestId);
                     }
                 );
-        }, [x, V]),
+        }, [x, B]),
         (0, i.jsx)(k, { className: a, style: _, "aria-hidden": !0 })
     );
 }
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073), s.RuntimeLoader.setWasmUrl(a);
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073), s.RuntimeLoader.setWasmUrl(a));

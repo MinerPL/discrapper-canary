@@ -1,5 +1,5 @@
 var r;
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     ((r = t.Key || (t.Key = {})).Unidentified = "Unidentified"),
     (r.Alt = "Alt"),
     (r.AltGraph = "AltGraph"),
@@ -315,4 +315,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (r.Add = "Add"),
     (r.Divide = "Divide"),
     (r.Subtract = "Subtract"),
-    (r.Separator = "Separator");
+    (r.Separator = "Separator"));

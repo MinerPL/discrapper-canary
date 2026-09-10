@@ -79,7 +79,7 @@ let A = function (e) {
                 }
                 e = c;
             }
-            return (S.current = e), e;
+            return ((S.current = e), e);
         }, [g]),
         O = n.useCallback(() => {
             let e = H.current;
@@ -98,24 +98,24 @@ let A = function (e) {
         }, [G, g]),
         X = (0, f.w)((e) => {
             let { contentRect: t } = e;
-            (w.current = t.width), null != H.current && (j.current = H.current?.scrollLeft), $(), O(), V();
+            ((w.current = t.width), null != H.current && (j.current = H.current?.scrollLeft), $(), O(), V());
         }),
         H = n.useRef(null);
     n.useEffect(() => {
         let e = H.current;
         if (null == e) return;
         let t = new ResizeObserver(() => {
-            (W.current = e.scrollWidth), e.scrollLeft !== j.current && (e.scrollLeft = j.current), $(), O();
+            ((W.current = e.scrollWidth), e.scrollLeft !== j.current && (e.scrollLeft = j.current), $(), O());
         });
         Array.from(e.children).forEach((e) => {
             t.observe(e);
         });
         let r = new MutationObserver(() => {
-            t.disconnect(),
+            (t.disconnect(),
                 Array.from(e.children).forEach((e) => {
                     t.observe(e);
                 }),
-                null != N.current && N.current >= e.childElementCount && (N.current = null);
+                null != N.current && N.current >= e.childElementCount && (N.current = null));
         });
         function l() {
             null != e && (L === m.Uf.ITEM && (j.current = e.scrollLeft), O());
@@ -124,7 +124,7 @@ let A = function (e) {
             r.observe(e, { childList: !0 }),
             e.addEventListener("scrollend", l),
             () => {
-                t.disconnect(), r.disconnect(), e.removeEventListener("scrollend", l);
+                (t.disconnect(), r.disconnect(), e.removeEventListener("scrollend", l));
             }
         );
     }, [O, L]);
@@ -137,11 +137,11 @@ let A = function (e) {
                 if (g) {
                     let n = "right" === e ? t.clientWidth : -t.clientWidth,
                         c = Math.max(0, Math.min(l, j.current + n));
-                    (j.current = c),
+                    ((j.current = c),
                         (R.current = !0),
                         t.addEventListener("scrollend", () => (R.current = !1), { once: !0 }),
                         t.scrollTo({ left: c, behavior: r }),
-                        O();
+                        O());
                     return;
                 }
                 if (L === m.Uf.ITEM && null != t.firstElementChild) {
@@ -150,29 +150,29 @@ let A = function (e) {
                         u = t.children[c];
                     if (null != u) {
                         let e = Math.max(0, Math.min(l, u.offsetLeft));
-                        (j.current = e),
+                        ((j.current = e),
                             (R.current = !0),
                             t.addEventListener(
                                 "scrollend",
                                 () => {
-                                    (R.current = !1), (S.current = c), (N.current = c);
+                                    ((R.current = !1), (S.current = c), (N.current = c));
                                 },
                                 { once: !0 },
                             ),
                             t.scrollTo({ left: e, behavior: r }),
                             O(),
                             (S.current = c),
-                            (N.current = c);
+                            (N.current = c));
                     }
                     return;
                 }
                 let n = "right" === e ? w.current : -w.current,
                     c = Math.max(0, Math.min(l, j.current + n));
-                (j.current = c),
+                ((j.current = c),
                     (R.current = !0),
                     t.addEventListener("scrollend", () => (R.current = !1), { once: !0 }),
                     t.scrollTo({ left: c, behavior: r }),
-                    O();
+                    O());
                 let u = F();
                 null != u && (N.current = u);
             },
@@ -283,7 +283,7 @@ let A = function (e) {
                           }
                       },
                       onBlur: (e) => {
-                          e.preventDefault(), er();
+                          (e.preventDefault(), er());
                       },
                       onKeyDown: (e) => {
                           let t = H.current;
@@ -301,27 +301,27 @@ let A = function (e) {
                                   u.includes(e.key) && (l = Math.min(t.childElementCount - 1, l + 1)),
                                   null != (n = r[l]))
                               ) {
-                                  n.setAttribute("tabIndex", "0"),
+                                  (n.setAttribute("tabIndex", "0"),
                                       t.setAttribute("tabIndex", "-1"),
-                                      n.focus({ preventScroll: !0 });
+                                      n.focus({ preventScroll: !0 }));
                                   let e = n.offsetLeft - t.clientWidth / 2 + n.offsetWidth / 2,
                                       r = Math.max(0, Math.min(t.scrollWidth - t.clientWidth, e));
-                                  (j.current = r),
+                                  ((j.current = r),
                                       r !== t.scrollLeft &&
                                           ((R.current = !0),
                                           (T.current = !0),
                                           t.addEventListener(
                                               "scrollend",
                                               () => {
-                                                  (R.current = !1), (T.current = !1);
+                                                  ((R.current = !1), (T.current = !1));
                                               },
                                               { once: !0 },
                                           ),
                                           t.scrollTo({ left: r, behavior: D ? "auto" : "smooth" })),
                                       (S.current = l),
                                       (N.current = l),
-                                      V();
-                              } else t.setAttribute("tabIndex", "0"), F();
+                                      V());
+                              } else (t.setAttribute("tabIndex", "0"), F());
                       },
                       onScroll: (e) => {
                           R.current || ((j.current = e.target.scrollLeft), O());

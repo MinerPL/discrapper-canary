@@ -52,9 +52,9 @@ function N(i) {
                 l = _[s]?.permission ?? !0,
                 d = _[r]?.permission ?? !0,
                 o = Object.values(e).map((i) => ({ id: i.id, permission: i.permission, type: i.type }));
-            w(null), M(!0);
+            (w(null), M(!0));
             try {
-                await v.Ni({
+                (await v.Ni({
                     defaultEveryoneValue: l,
                     defaultEverywhereValue: d,
                     applicationId: t,
@@ -63,7 +63,7 @@ function N(i) {
                     permissions: o,
                 }),
                     M(!1),
-                    j();
+                    j());
             } catch (i) {
                 w(new y.A(i));
             }
@@ -71,7 +71,7 @@ function N(i) {
         }, [t, _, m.id, m.permissions, u, T, j, S, w, M]);
     s.useEffect(
         () => () => {
-            v.C8(m.id), g.A.stopEditingCommandPermissions(m.id);
+            (v.C8(m.id), g.A.stopEditingCommandPermissions(m.id));
         },
         [m.id],
     );

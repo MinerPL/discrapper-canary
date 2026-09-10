@@ -16,7 +16,7 @@ function o(t) {
               id: "edit-thread",
               label: t.isForumPost() ? s.intl.string(s.t.NP1yHG) : s.intl.string(s.t["2Mk1TP"]),
               action: () => {
-                  (0, l.closeAllModals)(), a.Ay.open(t.id);
+                  ((0, l.closeAllModals)(), a.Ay.open(t.id));
               },
           });
 }

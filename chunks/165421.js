@@ -13,7 +13,7 @@ n(
             var r = i(t);
             if (s(a, r)) return a[r];
             var e = o("Symbol")(r);
-            return (a[r] = e), (f[e] = r), e;
+            return ((a[r] = e), (f[e] = r), e);
         },
     },
 );

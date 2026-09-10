@@ -27,10 +27,10 @@ function h(e) {
             displayUserMode: m.default.getDisplayUserMode(),
         })),
         y = i.useRef(t);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         y.current = t;
     }),
-        i.useEffect(() => () => y.current?.(), []);
+        i.useEffect(() => () => y.current?.(), []));
     let M = (0, n.bG)([g.A, v.A], () => {
             let e = g.A.getWidgetByType(f.uss.VOICE_V3);
             if (null == e) return null;

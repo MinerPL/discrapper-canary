@@ -25,7 +25,7 @@ class A extends i.Ay.Store {
 }
 let f = new A(l.h, {
     CONNECTION_OPEN: function () {
-        (o = {}), (c = new Set());
+        ((o = {}), (c = new Set()));
     },
     THREAD_CREATE: function (e) {
         let { channel: t, isNewlyCreated: n } = e;

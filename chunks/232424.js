@@ -13,14 +13,14 @@ var n = e(860511),
     v = a.exportTypedArrayMethod,
     A = !u(function () {
         var r = new Uint8ClampedArray(2);
-        return o(d, r, { length: 1, 0: 3 }, 1), 3 !== r[1];
+        return (o(d, r, { length: 1, 0: 3 }, 1), 3 !== r[1]);
     }),
     g =
         A &&
         a.NATIVE_ARRAY_BUFFER_VIEWS &&
         u(function () {
             var r = new c(2);
-            return r.set(1), r.set("2", 1), 0 !== r[0] || 2 !== r[1];
+            return (r.set(1), r.set("2", 1), 0 !== r[0] || 2 !== r[1]);
         });
 v(
     "set",
@@ -33,7 +33,7 @@ v(
             a = i(e),
             u = 0;
         if (a + t > n) throw new y("Wrong length");
-        for (; u < a; ) this[t + u] = e[u++];
+        for (; u < a;) this[t + u] = e[u++];
     },
     !A || g,
 );

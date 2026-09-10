@@ -38,8 +38,8 @@ function f(e) {
     return (0, i.jsx)(I, {
         ...r,
         onClick: (e) => {
-            null != r.onClick && r.onClick(e),
-                null != n && u.default.track(_.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: n });
+            (null != r.onClick && r.onClick(e),
+                null != n && u.default.track(_.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: n }));
         },
         children: t,
     });
@@ -51,7 +51,7 @@ function p(e) {
         className: A.x6,
         href: n,
         onClick: (e) => {
-            a.onClick?.(e), u.default.track(_.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: n });
+            (a.onClick?.(e), u.default.track(_.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: n }));
         },
         children: t,
     });
@@ -62,7 +62,7 @@ function T(e) {
         focusProps: { offset: 6 },
         className: a()(A.b, r),
         onClick: () => {
-            t(), null != n && u.default.track(_.HAw.APP_NOTICE_CLOSED, { notice_type: n });
+            (t(), null != n && u.default.track(_.HAw.APP_NOTICE_CLOSED, { notice_type: n }));
         },
         "aria-label": E.intl.string(E.t.WAI6xu),
         children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: A.ut }),

@@ -1,5 +1,5 @@
 var e;
-r.d(n, { default: () => a }),
+(r.d(n, { default: () => a }),
     r(393431),
     r(532706),
     r(42231),
@@ -8,7 +8,7 @@ r.d(n, { default: () => a }),
     r(767709),
     r(65162),
     r(321073),
-    r(667532);
+    r(667532));
 let a =
     ((e = "u" > typeof document && document.currentScript ? document.currentScript.src : void 0),
     function (t) {
@@ -26,35 +26,37 @@ let a =
             g,
             y,
             p = void 0 !== (t = t || {}) ? t : {};
-        (p.ready = new Promise((t, n) => {
-            (a = t), (u = n);
+        ((p.ready = new Promise((t, n) => {
+            ((a = t), (u = n));
         })),
             (p.locateFile = function () {
                 return r(739236);
-            });
+            }));
         var _ = {};
         for (i in p) p.hasOwnProperty(i) && (_[i] = p[i]);
         var d = [],
             v = "./this.program",
             w = "";
-        (w = self.location.href),
+        ((w = self.location.href),
             e && (w = e),
             (w = 0 !== w.indexOf("blob:") ? w.substr(0, w.lastIndexOf("/") + 1) : ""),
             (o = function (t) {
                 var n = new XMLHttpRequest();
-                return n.open("GET", t, !1), (n.responseType = "arraybuffer"), n.send(null), new Uint8Array(n.response);
-            });
+                return (
+                    n.open("GET", t, !1), (n.responseType = "arraybuffer"), n.send(null), new Uint8Array(n.response)
+                );
+            }));
         var b = p.print || console.log.bind(console),
             A = p.printErr || console.warn.bind(console);
         for (i in _) _.hasOwnProperty(i) && (p[i] = _[i]);
-        (_ = null), p.arguments && (d = p.arguments), p.thisProgram && (v = p.thisProgram), p.quit && p.quit;
+        ((_ = null), p.arguments && (d = p.arguments), p.thisProgram && (v = p.thisProgram), p.quit && p.quit);
         var D = 0,
             M = function (t) {
                 D = t;
             };
-        p.wasmBinary && (c = p.wasmBinary),
+        (p.wasmBinary && (c = p.wasmBinary),
             p.noExitRuntime && p.noExitRuntime,
-            "object" != typeof WebAssembly && U("no native wasm support detected");
+            "object" != typeof WebAssembly && U("no native wasm support detected"));
         var S = !1;
         function F(t) {
             var n,
@@ -67,9 +69,9 @@ let a =
         }
         var R = "u" > typeof TextDecoder ? new TextDecoder("utf8") : void 0;
         function E(t, n, r) {
-            for (var e = n + r, a = n; t[a] && !(a >= e); ) ++a;
+            for (var e = n + r, a = n; t[a] && !(a >= e);) ++a;
             if (a - n > 16 && t.subarray && R) return R.decode(t.subarray(n, a));
-            for (var u = ""; n < a; ) {
+            for (var u = ""; n < a;) {
                 var i = t[n++];
                 if (!(128 & i)) {
                     u += String.fromCharCode(i);
@@ -110,22 +112,22 @@ let a =
                     n[r++] = o;
                 } else if (o <= 2047) {
                     if (r + 1 >= u) break;
-                    (n[r++] = 192 | (o >> 6)), (n[r++] = 128 | (63 & o));
+                    ((n[r++] = 192 | (o >> 6)), (n[r++] = 128 | (63 & o)));
                 } else if (o <= 65535) {
                     if (r + 2 >= u) break;
-                    (n[r++] = 224 | (o >> 12)), (n[r++] = 128 | ((o >> 6) & 63)), (n[r++] = 128 | (63 & o));
+                    ((n[r++] = 224 | (o >> 12)), (n[r++] = 128 | ((o >> 6) & 63)), (n[r++] = 128 | (63 & o)));
                 } else {
                     if (r + 3 >= u) break;
-                    (n[r++] = 240 | (o >> 18)),
+                    ((n[r++] = 240 | (o >> 18)),
                         (n[r++] = 128 | ((o >> 12) & 63)),
                         (n[r++] = 128 | ((o >> 6) & 63)),
-                        (n[r++] = 128 | (63 & o));
+                        (n[r++] = 128 | (63 & o)));
                 }
             }
-            return (n[r] = 0), r - a;
+            return ((n[r] = 0), r - a);
         }
         function k(t) {
-            (s = t),
+            ((s = t),
                 (p.HEAP8 = l = new Int8Array(t)),
                 (p.HEAP16 = new Int16Array(t)),
                 (p.HEAP32 = h = new Int32Array(t)),
@@ -133,7 +135,7 @@ let a =
                 (p.HEAPU16 = new Uint16Array(t)),
                 (p.HEAPU32 = new Uint32Array(t)),
                 (p.HEAPF32 = new Float32Array(t)),
-                (p.HEAPF64 = new Float64Array(t));
+                (p.HEAPF64 = new Float64Array(t)));
         }
         p.INITIAL_MEMORY;
         var x = [],
@@ -149,10 +151,10 @@ let a =
             T = null,
             W = null;
         function U(t) {
-            p.onAbort && p.onAbort(t),
+            (p.onAbort && p.onAbort(t),
                 A((t += "")),
                 (S = !0),
-                (t = "abort(" + t + "). Build with -s ASSERTIONS=1 for more info.");
+                (t = "abort(" + t + "). Build with -s ASSERTIONS=1 for more info."));
             var n = new WebAssembly.RuntimeError(t);
             throw (u(n), n);
         }
@@ -163,7 +165,7 @@ let a =
                 String.prototype.startsWith ? t.startsWith(n) : 0 === t.indexOf(n)
             );
         }
-        (p.preloadedImages = {}), (p.preloadedAudios = {});
+        ((p.preloadedImages = {}), (p.preloadedAudios = {}));
         var B = "index.wasm";
         function z(t) {
             try {
@@ -175,7 +177,7 @@ let a =
             }
         }
         function L(t) {
-            for (; t.length > 0; ) {
+            for (; t.length > 0;) {
                 var n = t.shift();
                 if ("function" == typeof n) {
                     n(p);
@@ -191,7 +193,7 @@ let a =
         }
         j(B) || ((n = B), (B = p.locateFile ? p.locateFile(n, w) : w + n));
         function G(t) {
-            (this.excPtr = t),
+            ((this.excPtr = t),
                 (this.ptr = t - 16),
                 (this.set_type = function (t) {
                     h[(this.ptr + 8) >> 2] = t;
@@ -209,23 +211,23 @@ let a =
                     h[(this.ptr + 4) >> 2] = t;
                 }),
                 (this.set_caught = function (t) {
-                    (t = +!!t), (l[(this.ptr + 12) | 0] = t);
+                    ((t = +!!t), (l[(this.ptr + 12) | 0] = t));
                 }),
                 (this.get_caught = function () {
                     return 0 != l[(this.ptr + 12) | 0];
                 }),
                 (this.set_rethrown = function (t) {
-                    (t = +!!t), (l[(this.ptr + 13) | 0] = t);
+                    ((t = +!!t), (l[(this.ptr + 13) | 0] = t));
                 }),
                 (this.get_rethrown = function () {
                     return 0 != l[(this.ptr + 13) | 0];
                 }),
                 (this.init = function (t, n) {
-                    this.set_type(t),
+                    (this.set_type(t),
                         this.set_destructor(n),
                         this.set_refcount(0),
                         this.set_caught(!1),
-                        this.set_rethrown(!1);
+                        this.set_rethrown(!1));
                 }),
                 (this.add_ref = function () {
                     var t = h[(this.ptr + 4) >> 2];
@@ -233,8 +235,8 @@ let a =
                 }),
                 (this.release_ref = function () {
                     var t = h[(this.ptr + 4) >> 2];
-                    return (h[(this.ptr + 4) >> 2] = t - 1), 1 === t;
-                });
+                    return ((h[(this.ptr + 4) >> 2] = t - 1), 1 === t);
+                }));
         }
         var N = 0,
             q = {
@@ -246,7 +248,7 @@ let a =
                 },
                 varargs: void 0,
                 get: function () {
-                    return (q.varargs += 4), h[(q.varargs - 4) >> 2];
+                    return ((q.varargs += 4), h[(q.varargs - 4) >> 2]);
                 },
                 getStr: function (t) {
                     return Y(t);
@@ -288,14 +290,14 @@ let a =
         var Z = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
             Q = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         function $(t, n) {
-            for (var r = new Date(t.getTime()); n > 0; ) {
+            for (var r = new Date(t.getTime()); n > 0;) {
                 var e = X(r.getFullYear()),
                     a = r.getMonth(),
                     u = (e ? Z : Q)[a];
                 if (n > u - r.getDate())
-                    (n -= u - r.getDate() + 1),
+                    ((n -= u - r.getDate() + 1),
                         r.setDate(1),
-                        a < 11 ? r.setMonth(a + 1) : (r.setMonth(0), r.setFullYear(r.getFullYear() + 1));
+                        a < 11 ? r.setMonth(a + 1) : (r.setMonth(0), r.setFullYear(r.getFullYear() + 1)));
                 else {
                     r.setDate(r.getDate() + n);
                     break;
@@ -319,10 +321,10 @@ let a =
                 throw (new G(t).init(n, r), N++, t);
             },
             m: function (t, n, r) {
-                return (q.varargs = r), 0;
+                return ((q.varargs = r), 0);
             },
             v: function (t, n, r) {
-                return (q.varargs = r), 0;
+                return ((q.varargs = r), 0);
             },
             w: function (t, n, r) {
                 q.varargs = r;
@@ -347,7 +349,7 @@ let a =
                         ((a = Math.min(a, t + 0x6000000)),
                         (function (t) {
                             try {
-                                return f.grow((t - s.byteLength + 65535) >>> 16), k(f.buffer), 1;
+                                return (f.grow((t - s.byteLength + 65535) >>> 16), k(f.buffer), 1);
                             } catch (t) {}
                         })(
                             Math.min(
@@ -367,7 +369,7 @@ let a =
                         var u = n + r;
                         h[(t + 4 * a) >> 2] = u;
                         for (var i = u, o = 0; o < e.length; ++o) l[0 | i++] = e.charCodeAt(o);
-                        (l[0 | i] = 0), (r += e.length + 1);
+                        ((l[0 | i] = 0), (r += e.length + 1));
                     }),
                     0
                 );
@@ -390,7 +392,7 @@ let a =
             u: function (t, n, r, e) {
                 var a = q.getStreamFromFD(t),
                     u = q.doReadv(a, n, r);
-                return (h[e >> 2] = u), 0;
+                return ((h[e >> 2] = u), 0);
             },
             o: function (t, n, r, e, a) {},
             l: function (t, n, r, e) {
@@ -399,7 +401,7 @@ let a =
                         q.printChar(t, m[i + c]);
                     a += o;
                 }
-                return (h[e >> 2] = a), 0;
+                return ((h[e >> 2] = a), 0);
             },
             c: function () {
                 return 0 | D;
@@ -511,7 +513,7 @@ let a =
                             "December",
                         ];
                     function _(t, n, r) {
-                        for (var e = "number" == typeof t ? t.toString() : t || ""; e.length < n; ) e = r[0] + e;
+                        for (var e = "number" == typeof t ? t.toString() : t || ""; e.length < n;) e = r[0] + e;
                         return e;
                     }
                     function d(t, n) {
@@ -592,7 +594,7 @@ let a =
                         },
                         "%I": function (t) {
                             var n = t.tm_hour;
-                            return 0 == n ? (n = 12) : n > 12 && (n -= 12), d(n, 2);
+                            return (0 == n ? (n = 12) : n > 12 && (n -= 12), d(n, 2));
                         },
                         "%j": function (t) {
                             return d(t.tm_mday + K(X(t.tm_year + 1900) ? Z : Q, t.tm_mon - 1), 3);
@@ -688,10 +690,10 @@ let a =
                             (function (t) {
                                 for (var n = 0, r = 0; r < t.length; ++r) {
                                     var e = t.charCodeAt(r);
-                                    e >= 55296 &&
+                                    (e >= 55296 &&
                                         e <= 57343 &&
                                         (e = (65536 + ((1023 & e) << 10)) | (1023 & t.charCodeAt(++r))),
-                                        e <= 127 ? ++n : e <= 2047 ? (n += 2) : e <= 65535 ? (n += 3) : (n += 4);
+                                        e <= 127 ? ++n : e <= 2047 ? (n += 2) : e <= 65535 ? (n += 3) : (n += 4));
                                 }
                                 return n;
                             })(a) + 1,
@@ -715,7 +717,7 @@ let a =
                     0 == P && (null !== T && (clearInterval(T), (T = null)), W))
                 ) {
                     var r = W;
-                    (W = null), r();
+                    ((W = null), r());
                 }
             }
             function r(t) {
@@ -734,14 +736,14 @@ let a =
                 )
                     .then((n) => WebAssembly.instantiate(n, t))
                     .then(n, (t) => {
-                        A("failed to asynchronously prepare wasm: " + t), U(t);
+                        (A("failed to asynchronously prepare wasm: " + t), U(t));
                     });
             }
             if ((P++, p.monitorRunDependencies && p.monitorRunDependencies(P), p.instantiateWasm))
                 try {
                     return p.instantiateWasm(t, n);
                 } catch (t) {
-                    return A("Module.instantiateWasm callback failed with error: " + t), !1;
+                    return (A("Module.instantiateWasm callback failed with error: " + t), !1);
                 }
             (!c && "function" == typeof WebAssembly.instantiateStreaming && !j(B) && "function" == typeof fetch
                 ? fetch(B, { credentials: "same-origin" }).then((n) =>
@@ -803,28 +805,28 @@ let a =
         function to(t) {
             if (((t = t || d), !(P > 0))) {
                 if (p.preRun)
-                    for ("function" == typeof p.preRun && (p.preRun = [p.preRun]); p.preRun.length; ) {
+                    for ("function" == typeof p.preRun && (p.preRun = [p.preRun]); p.preRun.length;) {
                         var n;
-                        (n = p.preRun.shift()), x.unshift(n);
+                        ((n = p.preRun.shift()), x.unshift(n));
                     }
-                L(x),
+                (L(x),
                     P > 0 ||
                         (p.setStatus
                             ? (p.setStatus("Running..."),
                               setTimeout(() => {
-                                  setTimeout(() => {
+                                  (setTimeout(() => {
                                       p.setStatus("");
                                   }, 1),
-                                      r();
+                                      r());
                               }, 1))
-                            : r());
+                            : r()));
             }
             function r() {
                 if (!y && ((y = !0), (p.calledRun = !0), !S)) {
                     if ((L(C), L(I), a(p), p.onRuntimeInitialized && p.onRuntimeInitialized(), p.postRun))
-                        for ("function" == typeof p.postRun && (p.postRun = [p.postRun]); p.postRun.length; ) {
+                        for ("function" == typeof p.postRun && (p.postRun = [p.postRun]); p.postRun.length;) {
                             var t;
-                            (t = p.postRun.shift()), H.unshift(t);
+                            ((t = p.postRun.shift()), H.unshift(t));
                         }
                     L(H);
                 }
@@ -845,7 +847,7 @@ let a =
                                               var r,
                                                   e,
                                                   a = (t.length << 2) + 1;
-                                              (r = t), (e = n = tu(a)), O(r, m, e, a);
+                                              ((r = t), (e = n = tu(a)), O(r, m, e, a));
                                           }
                                           return n;
                                       },
@@ -853,7 +855,7 @@ let a =
                                           var n,
                                               r,
                                               e = tu(t.length);
-                                          return (n = t), (r = e), l.set(n, r), e;
+                                          return ((n = t), (r = e), l.set(n, r), e);
                                       },
                                   },
                                   i = F(t),
@@ -872,11 +874,11 @@ let a =
                       };
             }),
             (W = function t() {
-                y || to(), y || (W = t);
+                (y || to(), y || (W = t));
             }),
             (p.run = to),
             p.preInit)
         )
-            for ("function" == typeof p.preInit && (p.preInit = [p.preInit]); p.preInit.length > 0; ) p.preInit.pop()();
-        return to(), t.ready;
+            for ("function" == typeof p.preInit && (p.preInit = [p.preInit]); p.preInit.length > 0;) p.preInit.pop()();
+        return (to(), t.ready);
     });

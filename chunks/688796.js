@@ -28,7 +28,7 @@ function u(t) {
               subtitle: n === o.HL.AVATAR ? c.intl.string(c.t.ifCRdB) : c.intl.string(c.t.yQAnf4),
               graphic: L,
               onSecondaryClick: () => {
-                  i?.(), (0, l.x)(A);
+                  (i?.(), (0, l.x)(A));
               },
               secondaryCTA: c.intl.string(c.t.PcTCB7),
               onClose: A,

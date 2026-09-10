@@ -13,11 +13,11 @@ let b = new Date(2026, 8, 11);
 function k(t) {
     let { transitionState: a, onClose: e } = t,
         k = n.useCallback(() => {
-            (0, s.closeAllModals)(), (0, d.I)();
+            ((0, s.closeAllModals)(), (0, d.I)());
         }, []),
         C = n.useCallback(() => {
-            (0, s.closeAllModals)(),
-                (0, r.Cz)({ tab: p.G2.HOME, analyticsLocations: [], analyticsSource: o.A.PREMIUM_MARKETING });
+            ((0, s.closeAllModals)(),
+                (0, r.Cz)({ tab: p.G2.HOME, analyticsLocations: [], analyticsSource: o.A.PREMIUM_MARKETING }));
         }, []);
     return (0, i.jsx)(l.k, {
         graphic: {

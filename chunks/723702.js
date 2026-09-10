@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         PlatformTypes: () => i.fg,
         getNativePlatform: () => i.r_,
@@ -20,5 +20,5 @@ n.r(t),
         isWindows: () => i.uF,
         platformPrefersDeepLink: () => i.tn,
         platformSupportsActivityJoin: () => i.Ls,
-    });
+    }));
 var i = n(574381);

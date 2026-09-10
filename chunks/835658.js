@@ -4,16 +4,17 @@ e.exports = function (e) {
         n = !1;
     if ("function" == typeof e) {
         try {
-            e.call("f", function (e, r, n) {
+            (e.call("f", function (e, r, n) {
                 "object" != typeof n && (t = !1);
             }),
                 e.call(
                     [null],
                     function () {
+                        "use strict";
                         r = "string" == typeof this;
                     },
                     "x",
-                );
+                ));
         } catch (e) {
             n = !0;
         }

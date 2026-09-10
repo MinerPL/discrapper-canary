@@ -73,7 +73,7 @@ function O(t) {
                     variant: "primary",
                     fullWidth: !0,
                     onClick: () => {
-                        i(F.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        (i(F.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION));
                     },
                 }),
                 (0, s.jsx)(m.$, {
@@ -81,7 +81,7 @@ function O(t) {
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => {
-                        i(F.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        (i(F.SAFETY_TIPS), e(o.Wm.USER_TAKEOVER_MODAL_SAFETY_TIPS));
                     },
                 }),
             ],
@@ -139,7 +139,7 @@ function D(t) {
             await (0, y.LF)(
                 _,
                 () => {
-                    W.A.showReportSuccessToast(n, e), r();
+                    (W.A.showReportSuccessToast(n, e), r());
                 },
                 () => {
                     W.A.showFailedToast();
@@ -286,7 +286,7 @@ let V = (t) => {
                         size: "sm",
                         text: j.intl.string(j.t.cpT0Cq),
                         onClick: function () {
-                            x.onClose(), (0, d.xi)(u, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS);
+                            (x.onClose(), (0, d.xi)(u, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS));
                         },
                         textVariant: "text-sm/normal",
                     }),

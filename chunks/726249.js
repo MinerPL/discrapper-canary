@@ -33,7 +33,7 @@ function A(e) {
     );
 }
 function h(e) {
-    return A(e), null;
+    return (A(e), null);
 }
 function I() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -53,7 +53,7 @@ function I() {
                         let t, n, i;
                         for (let r of e.titles) {
                             if (null != t && null != n) break;
-                            (t = t ?? r.base), (n = n ?? r.location), (i = i ?? r.subsection);
+                            ((t = t ?? r.base), (n = n ?? r.location), (i = i ?? r.subsection));
                         }
                         return [t, i, n];
                     })(e)
@@ -71,16 +71,16 @@ function I() {
         return (
             i.useEffect(() => {
                 if (null == t) {
-                    (s.current = 0), a(!1);
+                    ((s.current = 0), a(!1));
                     return;
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
-                    E(t.id), a(!1);
+                    (E(t.id), a(!1));
                     return;
                 }
                 let e = setInterval(() => {
                     if (s.current >= t.count) {
-                        E(t.id), a(!1);
+                        (E(t.id), a(!1));
                         return;
                     }
                     a((e) => !e || ((s.current += 1), !1));

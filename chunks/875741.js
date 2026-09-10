@@ -1,4 +1,4 @@
-n.d(t, { A: () => s, i: () => l }), n(582128);
+(n.d(t, { A: () => s, i: () => l }), n(582128));
 var i = n(940622);
 function l(e) {
     return {

@@ -165,7 +165,7 @@ class tx extends n.Component {
         let l = null != i || null != s.giftStyle,
             a = (0, R.hU)(s),
             r = null != n ? tr.Ay.getURL(n) : void 0;
-        this.setState({ isCustomGift: l, isCollectiblesGift: a, emojiURL: r, opened: a }), this.trackStepAnalytics();
+        (this.setState({ isCustomGift: l, isCollectiblesGift: a, emojiURL: r, opened: a }), this.trackStepAnalytics());
     }
     get step() {
         let { libraryApplication: t, accepting: e, giftCode: i } = this.props,
@@ -257,16 +257,16 @@ class tx extends n.Component {
         let { giftCode: t, channelContext: e, onAccept: i } = this.props;
         if (null == t) throw Error("GiftCode is null at acceptance.");
         try {
-            await h.Ay.redeemGiftCode({ code: t.code, options: { channelId: e } }),
+            (await h.Ay.redeemGiftCode({ code: t.code, options: { channelId: e } }),
                 this.setState({ accepted: !0 }),
-                i?.();
+                i?.());
         } catch (t) {
             this.setState({ error: t });
         }
     };
     handleGoToLibrary = () => {
         let { onClose: t, libraryApplication: e } = this.props;
-        (0, K.pX)(Z.BVt.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
+        ((0, K.pX)(Z.BVt.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t());
     };
     getDefaultAnimationStatus = () => (this.step === Z.frR.OPEN ? T.oA.IDLE : T.oA.ACTION);
     getIdleAnimationStatus = () => {
@@ -404,7 +404,7 @@ class tx extends n.Component {
                                     text: this.buttonText,
                                     loading: e,
                                     onClick: () => {
-                                        this.trackStepAnalytics(), this.handleClick();
+                                        (this.trackStepAnalytics(), this.handleClick());
                                     },
                                 }),
                             ],
@@ -453,7 +453,7 @@ let ty = o.Ay.connectStores([tn.A, ta.A, x.A, ts.A, tl.A, p.Ay, y.A], (t) => {
             f = null != e && (0, Q.bF)(e);
         return (n.useEffect(() => {
             if (f) {
-                ((t) => {
+                (((t) => {
                     let {
                             sku: e,
                             giftCode: n,
@@ -515,7 +515,7 @@ let ty = o.Ay.connectStores([tn.A, ta.A, x.A, ts.A, tl.A, p.Ay, y.A], (t) => {
                     emojiName: d,
                     soundId: c,
                 }),
-                    o();
+                    o());
                 return;
             }
         }, [e, f, a, r, l, o, u, d, c]),
@@ -545,7 +545,7 @@ let ty = o.Ay.connectStores([tn.A, ta.A, x.A, ts.A, tl.A, p.Ay, y.A], (t) => {
                   onAccept:
                       null != h
                           ? () => {
-                                r(), (0, B.A)({ product: h, analyticsLocations: f, purchaseType: th.gs.GIFT });
+                                (r(), (0, B.A)({ product: h, analyticsLocations: f, purchaseType: th.gs.GIFT }));
                             }
                           : void 0,
               });

@@ -1,4 +1,4 @@
-n.d(t, { A: () => c }), n(938796);
+(n.d(t, { A: () => c }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(665260),
@@ -46,7 +46,7 @@ class c extends s.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.createdAt = e.createdAt),
             (this.flags = e.flags),
@@ -54,7 +54,7 @@ class c extends s.A {
             (this.entitlements = e.entitlements),
             (this.branch = e.branch),
             (this.sku = e.sku),
-            (this.isTestMode = e.isTestMode || !1);
+            (this.isTestMode = e.isTestMode || !1));
     }
     getFlags() {
         return this.flags;

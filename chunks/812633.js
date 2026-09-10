@@ -45,7 +45,7 @@ function q(e) {
     return (0, a.jsxs)(A.D, {
         className: v.qd,
         onClick: function () {
-            t(), (0, O.pX)(M.BVt.GUILD_DISCOVERY);
+            (t(), (0, O.pX)(M.BVt.GUILD_DISCOVERY));
         },
         children: [
             (0, a.jsx)("img", { width: 40, height: 40, className: v.aL, alt: "", src: w }),
@@ -77,7 +77,7 @@ function H(e) {
         e.preventDefault();
         let t = s.trim();
         if ("" === t) return void u(y.intl.string(y.t.IRq5ah));
-        u(null), c(!0);
+        (u(null), c(!0));
         let n = t.split("/"),
             a = n[n.length - 1];
         try {
@@ -94,7 +94,7 @@ function H(e) {
                 inviteKey: e.code,
                 context: n,
                 callback: (e) => {
-                    i(), j.Ay.transitionToInvite(e);
+                    (i(), j.Ay.transitionToInvite(e));
                 },
             });
         } catch (e) {
@@ -204,19 +204,19 @@ function V(e) {
         [G, f] = l.useState(null),
         [j, U] = l.useState(null),
         [g, O] = l.useState(!1);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         T(i);
     }, [T, i]),
         l.useEffect(() => {
             d !== A && o(d);
-        }, [o, d, A]);
+        }, [o, d, A]));
     let k = l.useCallback((e) => {
-            T(J.oS.CREATION_INTENT),
+            (T(J.oS.CREATION_INTENT),
                 f(e),
-                c.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.id, template_code: e.code });
+                c.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.id, template_code: e.code }));
         }, []),
         y = l.useCallback((e) => {
-            O(e === J.IR.COMMUNITY), T(J.oS.CUSTOMIZE_GUILD);
+            (O(e === J.IR.COMMUNITY), T(J.oS.CUSTOMIZE_GUILD));
         }, []),
         v = l.useCallback(() => T(J.oS.JOIN_GUILD), [T]),
         R = l.useCallback(() => {
@@ -224,12 +224,12 @@ function V(e) {
         }, [d]),
         w = l.useCallback(
             (e) => {
-                U(e), n(e);
+                (U(e), n(e));
             },
             [n, U],
         ),
         b = l.useCallback(() => {
-            u()(null != j, "handleSuccess called before onGuildCreated"), n(j);
+            (u()(null != j, "handleSuccess called before onGuildCreated"), n(j));
         }, [n, j]),
         P = { impression_group: m.ImpressionGroups.GUILD_ADD_FLOW },
         $ = (0, p.r)(C.A.modules.modal.WIDTH_SMALL);
@@ -302,25 +302,25 @@ var Z = i(315290);
 function W(e, t, i, n) {
     return (0, a.jsx)(V, {
         onSuccess: (t) => {
-            r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.SUCCESS), e.onClose(), n?.(t);
+            (r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.SUCCESS), e.onClose(), n?.(t));
         },
         onSlideChange: (e) =>
             (function (e, t) {
                 switch (e) {
                     case J.oS.GUILD_TEMPLATES:
-                        r.A.flowStepOrStart(Z.do.CREATE_GUILD, Z.jC.GUILD_TEMPLATES),
-                            c.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Templates", location: t });
+                        (r.A.flowStepOrStart(Z.do.CREATE_GUILD, Z.jC.GUILD_TEMPLATES),
+                            c.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Templates", location: t }));
                         break;
                     case J.oS.CUSTOMIZE_GUILD:
-                        r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.GUILD_CREATE),
-                            c.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Step 2", location: t });
+                        (r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.GUILD_CREATE),
+                            c.default.track(M.HAw.OPEN_MODAL, { type: "Create Guild Step 2", location: t }));
                         break;
                     case J.oS.CREATION_INTENT:
                         c.default.track(M.HAw.OPEN_MODAL, { type: "Server Intent Discovery", location: t });
                         break;
                     case J.oS.JOIN_GUILD:
-                        r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.JOIN_GUILD),
-                            c.default.track(M.HAw.OPEN_MODAL, { type: "Join Guild", location: t });
+                        (r.A.flowStep(Z.do.CREATE_GUILD, Z.jC.JOIN_GUILD),
+                            c.default.track(M.HAw.OPEN_MODAL, { type: "Join Guild", location: t }));
                 }
             })(e, i),
         initialSlide: t,

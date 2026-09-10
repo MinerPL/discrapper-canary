@@ -4,16 +4,16 @@ var r,
     a = "ResizeObserver loop completed with undelivered notifications.",
     o = function () {
         var e;
-        "function" == typeof ErrorEvent
+        ("function" == typeof ErrorEvent
             ? (e = new ErrorEvent("error", { message: a }))
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = a)),
-            window.dispatchEvent(e);
+            window.dispatchEvent(e));
     },
     u = n(522816),
     s = n(916784),
     l = function (e) {
         if ((0, s.dK)(e)) return 1 / 0;
-        for (var t = 0, n = e.parentNode; n; ) (t += 1), (n = n.parentNode);
+        for (var t = 0, n = e.parentNode; n;) ((t += 1), (n = n.parentNode));
         return t;
     },
     d = n(623577),
@@ -23,15 +23,15 @@ var r,
         i.forEach(function (n) {
             if (0 !== n.activeTargets.length) {
                 var r = [];
-                n.activeTargets.forEach(function (t) {
+                (n.activeTargets.forEach(function (t) {
                     var n = new u.Z(t.target),
                         i = l(t.target);
-                    r.push(n), (t.lastReportedSize = (0, d.P)(t.target, t.observedBox)), i < e && (e = i);
+                    (r.push(n), (t.lastReportedSize = (0, d.P)(t.target, t.observedBox)), i < e && (e = i));
                 }),
                     t.push(function () {
                         n.callback.call(n.observer, r, n.observer);
                     }),
-                    n.activeTargets.splice(0, n.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length));
             }
         });
         for (var n = 0; n < t.length; n++) (0, t[n])();
@@ -39,11 +39,11 @@ var r,
     },
     f = function (e) {
         i.forEach(function (t) {
-            t.activeTargets.splice(0, t.activeTargets.length),
+            (t.activeTargets.splice(0, t.activeTargets.length),
                 t.skippedTargets.splice(0, t.skippedTargets.length),
                 t.observationTargets.forEach(function (n) {
                     n.isActive() && (l(n.target) > e ? t.activeTargets.push(n) : t.skippedTargets.push(n));
-                });
+                }));
         });
     },
     h = function () {
@@ -68,16 +68,16 @@ var r,
         if (!r) {
             var t = 0,
                 n = document.createTextNode("");
-            new MutationObserver(function () {
+            (new MutationObserver(function () {
                 return m.splice(0).forEach(function (e) {
                     return e();
                 });
             }).observe(n, { characterData: !0 }),
                 (r = function () {
                     n.textContent = "".concat(t ? t-- : t++);
-                });
+                }));
         }
-        m.push(e), r();
+        (m.push(e), r());
     },
     _ = function (e) {
         v(function () {
@@ -103,16 +103,16 @@ var r,
         "focus",
     ],
     D = function (e) {
-        return void 0 === e && (e = 0), Date.now() + e;
+        return (void 0 === e && (e = 0), Date.now() + e);
     },
     w = !1,
     E = new ((function () {
         function e() {
             var e = this;
-            (this.stopped = !0),
+            ((this.stopped = !0),
                 (this.listener = function () {
                     return e.schedule();
-                });
+                }));
         }
         return (
             (e.prototype.run = function (e) {
@@ -132,7 +132,7 @@ var r,
                 }
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run();
+                (this.stop(), this.run());
             }),
             (e.prototype.observe = function () {
                 var e = this,
@@ -164,14 +164,14 @@ var r,
         );
     })())(),
     C = function (e) {
-        !g && e > 0 && E.start(), (g += e) || E.stop();
+        (!g && e > 0 && E.start(), (g += e) || E.stop());
     },
     A = n(838259),
     B = (function () {
         function e(e, t) {
-            (this.target = e),
+            ((this.target = e),
                 (this.observedBox = t || A.U.CONTENT_BOX),
-                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
+                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 }));
         }
         return (
             (e.prototype.isActive = function () {
@@ -190,11 +190,11 @@ var r,
         );
     })(),
     k = function (e, t) {
-        (this.activeTargets = []),
+        ((this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
-            (this.callback = t);
+            (this.callback = t));
     },
     F = new WeakMap(),
     T = function (e, t) {
@@ -223,10 +223,10 @@ var r,
             (e.disconnect = function (e) {
                 var t = this,
                     n = F.get(e);
-                n.observationTargets.slice().forEach(function (n) {
+                (n.observationTargets.slice().forEach(function (n) {
                     return t.unobserve(e, n.target);
                 }),
-                    n.activeTargets.splice(0, n.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length));
             }),
             e
         );

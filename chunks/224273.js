@@ -29,6 +29,7 @@ e.exports = (function e(t, n, r) {
     {
         1: [
             function (e, t, n) {
+                "use strict";
                 var r = {};
                 function i(e) {
                     var t,
@@ -47,7 +48,7 @@ e.exports = (function e(t, n, r) {
                             i.setAttribute("data-".concat(e), "".concat(o[e]));
                         }),
                         (t = new Promise(function (t, n) {
-                            i.addEventListener("load", function () {
+                            (i.addEventListener("load", function () {
                                 t(i);
                             }),
                                 i.addEventListener("error", function () {
@@ -56,16 +57,16 @@ e.exports = (function e(t, n, r) {
                                 i.addEventListener("abort", function () {
                                     n(Error("".concat(e.src, " has aborted.")));
                                 }),
-                                a.appendChild(i);
+                                a.appendChild(i));
                         })),
                         (r[n] = t),
                         t
                     );
                 }
-                (i.clearCache = function () {
+                ((i.clearCache = function () {
                     r = {};
                 }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             {},
         ],
@@ -77,22 +78,25 @@ e.exports = (function e(t, n, r) {
         ],
         3: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /Android/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /Android/i.test(e));
                 };
             },
             {},
         ],
         4: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /CrOS/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /CrOS/i.test(e));
                 };
             },
             {},
         ],
         5: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-edge"),
                     i = e("./is-samsung"),
                     o = e("./is-duckduckgo"),
@@ -113,6 +117,7 @@ e.exports = (function e(t, n, r) {
         ],
         6: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("DuckDuckGo/");
                 };
@@ -121,6 +126,7 @@ e.exports = (function e(t, n, r) {
         ],
         7: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Edge/") || -1 !== e.indexOf("Edg/");
                 };
@@ -129,22 +135,25 @@ e.exports = (function e(t, n, r) {
         ],
         8: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /Firefox/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /Firefox/i.test(e));
                 };
             },
             {},
         ],
         9: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /FxiOS/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /FxiOS/i.test(e));
                 };
             },
             {},
         ],
         10: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios");
                 t.exports = function (e) {
                     var t;
@@ -155,6 +164,7 @@ e.exports = (function e(t, n, r) {
         ],
         11: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-firefox"),
                     o = /webkit/i;
@@ -173,6 +183,7 @@ e.exports = (function e(t, n, r) {
         ],
         12: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios"),
                     i = e("./is-ios-google-search-app");
                 t.exports = function (e) {
@@ -185,18 +196,20 @@ e.exports = (function e(t, n, r) {
         ],
         13: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ios-webview");
                 t.exports = function (e, t) {
-                    return (t = void 0 !== t ? t : window.statusbar.visible), r(e) && t;
+                    return ((t = void 0 !== t ? t : window.statusbar.visible), r(e) && t);
                 };
             },
             { "./is-ios-webview": 12 },
         ],
         14: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-ipados");
                 t.exports = function (e, t, n) {
-                    void 0 === t && (t = !0), (e = e || window.navigator.userAgent);
+                    (void 0 === t && (t = !0), (e = e || window.navigator.userAgent));
                     var i = /iPhone|iPod|iPad/i.test(e);
                     return t ? i || r(e, n) : i;
                 };
@@ -205,6 +218,7 @@ e.exports = (function e(t, n, r) {
         ],
         15: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (e = e || window.navigator.userAgent),
@@ -217,6 +231,7 @@ e.exports = (function e(t, n, r) {
         ],
         16: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return (
                         -1 !== (e = e || window.navigator.userAgent).indexOf("OPR/") ||
@@ -229,14 +244,16 @@ e.exports = (function e(t, n, r) {
         ],
         17: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    return (e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e);
+                    return ((e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e));
                 };
             },
             {},
         ],
         18: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("Silk/");
                 };
@@ -245,6 +262,7 @@ e.exports = (function e(t, n, r) {
         ],
         19: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./is-android"),
                     i = e("./is-ios-firefox"),
                     o = e("./is-ios-webview"),
@@ -340,6 +358,7 @@ e.exports = (function e(t, n, r) {
         ],
         30: [
             function (e, t, n) {
+                "use strict";
                 t.exports = (function () {
                     function e() {
                         this._events = {};
@@ -378,6 +397,7 @@ e.exports = (function e(t, n, r) {
         ],
         31: [
             function (e, t, n) {
+                "use strict";
                 var r = "u" > typeof Promise ? Promise : null;
                 t.exports = (function () {
                     function e(t) {
@@ -386,14 +406,14 @@ e.exports = (function e(t, n, r) {
                             this._promise = new e.Promise(t);
                             return;
                         }
-                        (this._promise = new e.Promise(function (e, t) {
-                            (n._resolveFunction = e), (n._rejectFunction = t);
+                        ((this._promise = new e.Promise(function (e, t) {
+                            ((n._resolveFunction = e), (n._rejectFunction = t));
                         })),
                             (t = t || {}),
                             (this._onResolve = t.onResolve || e.defaultOnResolve),
                             (this._onReject = t.onReject || e.defaultOnReject),
                             e.shouldCatchExceptions(t) && this._promise.catch(function () {}),
-                            this._resetState();
+                            this._resetState());
                     }
                     return (
                         (e.defaultOnResolve = function (t) {
@@ -446,7 +466,7 @@ e.exports = (function e(t, n, r) {
                                             n._resolveFunction(e);
                                         })
                                         .catch(function (e) {
-                                            n._resetState(), n.reject(e);
+                                            (n._resetState(), n.reject(e));
                                         })),
                                 this
                             );
@@ -461,7 +481,7 @@ e.exports = (function e(t, n, r) {
                                             return n._onReject(t);
                                         })
                                         .then(function (e) {
-                                            n._setResolved(), n._resolveFunction(e);
+                                            (n._setResolved(), n._resolveFunction(e));
                                         })
                                         .catch(function (e) {
                                             return n._rejectFunction(e);
@@ -470,13 +490,13 @@ e.exports = (function e(t, n, r) {
                             );
                         }),
                         (e.prototype._resetState = function () {
-                            (this.isFulfilled = !1), (this.isResolved = !1), (this.isRejected = !1);
+                            ((this.isFulfilled = !1), (this.isResolved = !1), (this.isRejected = !1));
                         }),
                         (e.prototype._setResolved = function () {
-                            (this.isFulfilled = !0), (this.isResolved = !0), (this.isRejected = !1);
+                            ((this.isFulfilled = !0), (this.isResolved = !0), (this.isRejected = !1));
                         }),
                         (e.prototype._setRejected = function () {
-                            (this.isFulfilled = !0), (this.isResolved = !1), (this.isRejected = !0);
+                            ((this.isFulfilled = !0), (this.isResolved = !1), (this.isRejected = !0));
                         }),
                         (e.Promise = r),
                         e
@@ -487,6 +507,7 @@ e.exports = (function e(t, n, r) {
         ],
         32: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/set-attributes"),
                     i = e("./lib/default-attributes"),
                     o = e("./lib/assign");
@@ -506,7 +527,8 @@ e.exports = (function e(t, n, r) {
         ],
         33: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.assign = void 0),
                     (n.assign = function (e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
@@ -519,26 +541,28 @@ e.exports = (function e(t, n, r) {
                             }),
                             e
                         );
-                    });
+                    }));
             },
             {},
         ],
         34: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.defaultAttributes = void 0),
                     (n.defaultAttributes = {
                         src: "about:blank",
                         frameBorder: 0,
                         allowtransparency: !0,
                         scrolling: "no",
-                    });
+                    }));
             },
             {},
         ],
         35: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.setAttributes = void 0),
                     (n.setAttributes = function (e, t) {
                         for (var n in t)
@@ -546,12 +570,13 @@ e.exports = (function e(t, n, r) {
                                 var r = t[n];
                                 null == r ? e.removeAttribute(n) : e.setAttribute(n, r);
                             }
-                    });
+                    }));
             },
             {},
         ],
         36: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -563,7 +588,8 @@ e.exports = (function e(t, n, r) {
         ],
         37: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.deferred = function (e) {
                         return function () {
                             for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -571,30 +597,32 @@ e.exports = (function e(t, n, r) {
                                 try {
                                     e.apply(void 0, t);
                                 } catch (e) {
-                                    console.log("Error in callback function"), console.log(e);
+                                    (console.log("Error in callback function"), console.log(e));
                                 }
                             }, 1);
                         };
-                    });
+                    }));
             },
             {},
         ],
         38: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.once = function (e) {
                         var t = !1;
                         return function () {
                             for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
                             t || ((t = !0), e.apply(void 0, n));
                         };
-                    });
+                    }));
             },
             {},
         ],
         39: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.promiseOrCallback = function (e, t) {
                         if (!t) return e;
                         e.then(function (e) {
@@ -602,12 +630,13 @@ e.exports = (function e(t, n, r) {
                         }).catch(function (e) {
                             return t(e);
                         });
-                    });
+                    }));
             },
             {},
         ],
         40: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/deferred"),
                     i = e("./lib/once"),
                     o = e("./lib/promise-or-callback");
@@ -620,7 +649,7 @@ e.exports = (function e(t, n, r) {
                         );
                     };
                 }
-                (a.wrapPrototype = function (e, t) {
+                ((a.wrapPrototype = function (e, t) {
                     void 0 === t && (t = {});
                     var n = t.ignoreMethods || [],
                         r = !0 === t.transformPrivateMethods;
@@ -630,7 +659,7 @@ e.exports = (function e(t, n, r) {
                                 var i,
                                     o = "constructor" !== t && "function" == typeof e.prototype[t],
                                     a = -1 === n.indexOf(t);
-                                return (i = !!r || "_" !== t.charAt(0)), o && i && a;
+                                return ((i = !!r || "_" !== t.charAt(0)), o && i && a);
                             })
                             .forEach(function (t) {
                                 var n = e.prototype[t];
@@ -639,15 +668,16 @@ e.exports = (function e(t, n, r) {
                         e
                     );
                 }),
-                    (t.exports = a);
+                    (t.exports = a));
             },
             { "./lib/deferred": 37, "./lib/once": 38, "./lib/promise-or-callback": 39 },
         ],
         41: [
             function (e, n, r) {
                 var i, o;
-                (i = this),
+                ((i = this),
                     (o = function (e) {
+                        "use strict";
                         function t(e, t, n, r) {
                             return new (n || (n = Promise))(function (i, o) {
                                 function a(e) {
@@ -704,7 +734,7 @@ e.exports = (function e(t, n, r) {
                                 return function (s) {
                                     var c = [o, s];
                                     if (n) throw TypeError("Generator is already executing.");
-                                    for (; a; )
+                                    for (; a;)
                                         try {
                                             if (
                                                 ((n = 1),
@@ -724,12 +754,12 @@ e.exports = (function e(t, n, r) {
                                                     i = c;
                                                     break;
                                                 case 4:
-                                                    return a.label++, { value: c[1], done: !1 };
+                                                    return (a.label++, { value: c[1], done: !1 });
                                                 case 5:
-                                                    a.label++, (r = c[1]), (c = [0]);
+                                                    (a.label++, (r = c[1]), (c = [0]));
                                                     continue;
                                                 case 7:
-                                                    (c = a.ops.pop()), a.trys.pop();
+                                                    ((c = a.ops.pop()), a.trys.pop());
                                                     continue;
                                                 default:
                                                     if (
@@ -744,19 +774,19 @@ e.exports = (function e(t, n, r) {
                                                         break;
                                                     }
                                                     if (6 === c[0] && a.label < i[1]) {
-                                                        (a.label = i[1]), (i = c);
+                                                        ((a.label = i[1]), (i = c));
                                                         break;
                                                     }
                                                     if (i && a.label < i[2]) {
-                                                        (a.label = i[2]), a.ops.push(c);
+                                                        ((a.label = i[2]), a.ops.push(c));
                                                         break;
                                                     }
-                                                    i[2] && a.ops.pop(), a.trys.pop();
+                                                    (i[2] && a.ops.pop(), a.trys.pop());
                                                     continue;
                                             }
                                             c = t.call(e, a);
                                         } catch (e) {
-                                            (c = [6, e]), (r = 0);
+                                            ((c = [6, e]), (r = 0));
                                         } finally {
                                             n = i = 0;
                                         }
@@ -786,7 +816,7 @@ e.exports = (function e(t, n, r) {
                                     r.setAttribute("data-".concat(e), "".concat(i[e]));
                                 }),
                                 (t = new Promise(function (t, n) {
-                                    r.addEventListener("load", function () {
+                                    (r.addEventListener("load", function () {
                                         t(r);
                                     }),
                                         r.addEventListener("error", function () {
@@ -795,17 +825,17 @@ e.exports = (function e(t, n, r) {
                                         r.addEventListener("abort", function () {
                                             n(Error("".concat(e.src, " has aborted.")));
                                         }),
-                                        o.appendChild(r);
+                                        o.appendChild(r));
                                 })),
                                 (a[n] = t),
                                 t
                             );
                         }
-                        (s.clearCache = function () {
+                        ((s.clearCache = function () {
                             a = {};
                         }),
                             Object.defineProperty(o, "__esModule", { value: !0 }),
-                            (o.loadStylesheet = c = o.loadScript = void 0);
+                            (o.loadStylesheet = c = o.loadScript = void 0));
                         var c = (o.loadScript = s);
                         o.loadStylesheet = function (e) {
                             var t = document.querySelector('link[href="'.concat(e.href, '"]'));
@@ -844,13 +874,13 @@ e.exports = (function e(t, n, r) {
                                                 return [2, !0];
                                             else
                                                 throw (
-                                                    ((s = null == (a = t[e.module]) ? void 0 : a.VERSION),
+                                                    (s = null == (a = t[e.module]) ? void 0 : a.VERSION),
                                                     Error(
                                                         ""
                                                             .concat(e.module, " already loaded with version ")
                                                             .concat(s, " cannot load version ")
                                                             .concat(r),
-                                                    ))
+                                                    )
                                                 );
                                         if (!r)
                                             throw Error(
@@ -931,7 +961,7 @@ e.exports = (function e(t, n, r) {
                                 ? "https://cdn-".concat(n, ".static.engineering.dev.paypalinc.com/").concat(t)
                                 : "".concat(u.CDNX_PROD, "/").concat(t);
                         }
-                        (e.constants = u),
+                        ((e.constants = u),
                             (e.loadAxo = function (e) {
                                 return t(this, void 0, void 0, function () {
                                     var t, r, i, o;
@@ -970,7 +1000,7 @@ e.exports = (function e(t, n, r) {
                                                 return [4, Promise.all([_(y.hostedFields, t, r), A(i, r)])];
                                             case 1:
                                             case 3:
-                                                return n.sent(), [3, 5];
+                                                return (n.sent(), [3, 5]);
                                             case 2:
                                                 if ("PPCP" !== e.platform) return [3, 4];
                                                 return [
@@ -984,18 +1014,19 @@ e.exports = (function e(t, n, r) {
                                         }
                                     });
                                 });
-                            });
+                            }));
                     }),
                     "object" == typeof r && void 0 !== n
                         ? o(r)
                         : "function" == typeof t && t.amd
                           ? t(["exports"], o)
-                          : o(((i = "u" > typeof globalThis ? globalThis : i || self).loadAxo = {}));
+                          : o(((i = "u" > typeof globalThis ? globalThis : i || self).loadAxo = {})));
             },
             {},
         ],
         42: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -1066,7 +1097,7 @@ e.exports = (function e(t, n, r) {
                     var n = (0, s.findBestMatch)(t);
                     return n ? [n] : t;
                 }
-                (h.getTypeInfo = function (e) {
+                ((h.getTypeInfo = function (e) {
                     return (0, c.clone)(_(e));
                 }),
                     (h.removeCard = function (e) {
@@ -1075,7 +1106,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (h.addCard = function (e) {
                         var t = E(e.type, !0);
-                        (d[e.type] = e), -1 === t && p.push(e.type);
+                        ((d[e.type] = e), -1 === t && p.push(e.type));
                     }),
                     (h.updateCard = function (e, t) {
                         var n = d[e] || i[e];
@@ -1086,13 +1117,13 @@ e.exports = (function e(t, n, r) {
                     }),
                     (h.changeOrder = function (e, t) {
                         var n = E(e);
-                        p.splice(n, 1), p.splice(t, 0, e);
+                        (p.splice(n, 1), p.splice(t, 0, e));
                     }),
                     (h.resetModifications = function () {
-                        (p = (0, c.clone)(u)), (d = {});
+                        ((p = (0, c.clone)(u)), (d = {}));
                     }),
                     (h.types = l),
-                    (t.exports = h);
+                    (t.exports = h));
             },
             {
                 "./lib/add-matching-cards-to-results": 43,
@@ -1104,7 +1135,8 @@ e.exports = (function e(t, n, r) {
         ],
         43: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.addMatchingCardsToResults = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.addMatchingCardsToResults = void 0));
                 var r = e("./clone"),
                     i = e("./matches");
                 n.addMatchingCardsToResults = function (e, t, n) {
@@ -1113,9 +1145,9 @@ e.exports = (function e(t, n, r) {
                         var s = t.patterns[o];
                         if ((0, i.matches)(e, s)) {
                             var c = (0, r.clone)(t);
-                            (a = Array.isArray(s) ? String(s[0]).length : String(s).length),
+                            ((a = Array.isArray(s) ? String(s[0]).length : String(s).length),
                                 e.length >= a && (c.matchStrength = a),
-                                n.push(c);
+                                n.push(c));
                             break;
                         }
                     }
@@ -1125,6 +1157,7 @@ e.exports = (function e(t, n, r) {
         ],
         44: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     visa: {
                         niceType: "Visa",
@@ -1277,17 +1310,19 @@ e.exports = (function e(t, n, r) {
         ],
         45: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.clone = void 0),
                     (n.clone = function (e) {
                         return e ? JSON.parse(JSON.stringify(e)) : null;
-                    });
+                    }));
             },
             {},
         ],
         46: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.findBestMatch = void 0),
                     (n.findBestMatch = function (e) {
                         var t;
@@ -1298,23 +1333,25 @@ e.exports = (function e(t, n, r) {
                                   return !e || Number(e.matchStrength) < Number(t.matchStrength) ? t : e;
                               })
                             : null;
-                    });
+                    }));
             },
             {},
         ],
         47: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isValidInputType = void 0),
                     (n.isValidInputType = function (e) {
                         return "string" == typeof e || e instanceof String;
-                    });
+                    }));
             },
             {},
         ],
         48: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.matches = void 0),
                     (n.matches = function (e, t) {
                         var n, r, i, o, a, s;
@@ -1327,18 +1364,19 @@ e.exports = (function e(t, n, r) {
                               (r = parseInt(String(r).substr(0, o.length), 10)),
                               a >= n && a <= r)
                             : (s = String((s = t))).substring(0, e.length) === e.substring(0, s.length);
-                    });
+                    }));
             },
             {},
         ],
         49: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.Framebus = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.Framebus = void 0));
                 var r = e("./lib"),
                     i = "u" > typeof window && window.Promise;
                 n.Framebus = (function () {
                     function e(e) {
-                        void 0 === e && (e = {}),
+                        (void 0 === e && (e = {}),
                             (this.origin = e.origin || "*"),
                             (this.channel = e.channel || ""),
                             (this.verifyDomain = e.verifyDomain),
@@ -1348,7 +1386,7 @@ e.exports = (function e(t, n, r) {
                             (this.listeners = []),
                             (this.hasAdditionalChecksForOnListeners = !!(
                                 this.verifyDomain || this.limitBroadcastToFramesArray
-                            ));
+                            )));
                     }
                     return (
                         (e.setPromise = function (t) {
@@ -1429,7 +1467,7 @@ e.exports = (function e(t, n, r) {
                             if ((0, r.subscriptionArgsInvalid)(e, n, a)) return !1;
                             var s = r.subscribers[a] && r.subscribers[a][e];
                             if (!s) return !1;
-                            for (var i = 0; i < s.length; i++) if (s[i] === n) return s.splice(i, 1), !0;
+                            for (var i = 0; i < s.length; i++) if (s[i] === n) return (s.splice(i, 1), !0);
                             return !1;
                         }),
                         (e.prototype.teardown = function () {
@@ -1490,29 +1528,32 @@ e.exports = (function e(t, n, r) {
         ],
         50: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib"),
                     i = e("./framebus");
-                (0, r.attach)(), (t.exports = i.Framebus);
+                ((0, r.attach)(), (t.exports = i.Framebus));
             },
             { "./framebus": 49, "./lib": 57 },
         ],
         51: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.detach = n.attach = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.detach = n.attach = void 0));
                 var r = e("./"),
                     i = !1;
-                (n.attach = function () {
+                ((n.attach = function () {
                     !i && "u" > typeof window && ((i = !0), window.addEventListener("message", r.onMessage, !1));
                 }),
                     (n.detach = function () {
-                        (i = !1), window.removeEventListener("message", r.onMessage, !1);
-                    });
+                        ((i = !1), window.removeEventListener("message", r.onMessage, !1));
+                    }));
             },
             { "./": 57 },
         ],
         52: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcastToChildWindows = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcastToChildWindows = void 0));
                 var r = e("./");
                 n.broadcastToChildWindows = function (e, t, n) {
                     for (var i = r.childWindows.length - 1; i >= 0; i--) {
@@ -1527,7 +1568,8 @@ e.exports = (function e(t, n, r) {
         ],
         53: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcast = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.broadcast = void 0));
                 var r = e("./");
                 n.broadcast = function e(t, n) {
                     var i,
@@ -1542,7 +1584,7 @@ e.exports = (function e(t, n, r) {
                                     e(t, { origin: a, frame: s.opener.top });
                             (i = s.frames[o]);
                         )
-                            e(t, { origin: a, frame: i }), o++;
+                            (e(t, { origin: a, frame: i }), o++);
                     } catch (e) {}
                 };
             },
@@ -1550,22 +1592,24 @@ e.exports = (function e(t, n, r) {
         ],
         54: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.subscribers = n.childWindows = n.prefix = void 0),
                     (n.prefix = "/*framebus*/"),
                     (n.childWindows = []),
-                    (n.subscribers = {});
+                    (n.subscribers = {}));
             },
             {},
         ],
         55: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.dispatch = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.dispatch = void 0));
                 var r = e("./");
                 n.dispatch = function (e, t, n, i, o) {
                     if (r.subscribers[e] && r.subscribers[e][t]) {
                         var a = [];
-                        n && a.push(n), i && a.push(i);
+                        (n && a.push(n), i && a.push(i));
                         for (var s = 0; s < r.subscribers[e][t].length; s++) r.subscribers[e][t][s].apply(o, a);
                     }
                 };
@@ -1574,33 +1618,35 @@ e.exports = (function e(t, n, r) {
         ],
         56: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.hasOpener = void 0),
                     (n.hasOpener = function (e) {
                         return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed;
-                    });
+                    }));
             },
             {},
         ],
         57: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__createBinding) ||
                         (Object.create
                             ? function (e, t, n, r) {
                                   void 0 === r && (r = n);
                                   var i = Object.getOwnPropertyDescriptor(t, n);
-                                  (!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
+                                  ((!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
                                       (i = {
                                           enumerable: !0,
                                           get: function () {
                                               return t[n];
                                           },
                                       }),
-                                      Object.defineProperty(e, r, i);
+                                      Object.defineProperty(e, r, i));
                               }
                             : function (e, t, n, r) {
-                                  void 0 === r && (r = n), (e[r] = t[n]);
+                                  (void 0 === r && (r = n), (e[r] = t[n]));
                               }),
                     i =
                         (this && this.__exportStar) ||
@@ -1608,7 +1654,7 @@ e.exports = (function e(t, n, r) {
                             for (var n in e)
                                 "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
                         };
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     i(e("./attach"), n),
                     i(e("./broadcast-to-child-windows"), n),
                     i(e("./broadcast"), n),
@@ -1622,7 +1668,7 @@ e.exports = (function e(t, n, r) {
                     i(e("./subscribe-replier"), n),
                     i(e("./subscription-args-invalid"), n),
                     i(e("./types"), n),
-                    i(e("./unpack-payload"), n);
+                    i(e("./unpack-payload"), n));
             },
             {
                 "./attach": 51,
@@ -1643,17 +1689,19 @@ e.exports = (function e(t, n, r) {
         ],
         58: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.isntString = void 0),
                     (n.isntString = function (e) {
                         return "string" != typeof e;
-                    });
+                    }));
             },
             {},
         ],
         59: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.onMessage = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.onMessage = void 0));
                 var r = e("./");
                 n.onMessage = function (e) {
                     if (!(0, r.isntString)(e.data)) {
@@ -1661,9 +1709,9 @@ e.exports = (function e(t, n, r) {
                         if (t) {
                             var n = t.eventData,
                                 i = t.reply;
-                            (0, r.dispatch)("*", t.event, n, i, e),
+                            ((0, r.dispatch)("*", t.event, n, i, e),
                                 (0, r.dispatch)(e.origin, t.event, n, i, e),
-                                (0, r.broadcastToChildWindows)(e.data, t.origin, e.source);
+                                (0, r.broadcastToChildWindows)(e.data, t.origin, e.source));
                         }
                     }
                 };
@@ -1672,12 +1720,13 @@ e.exports = (function e(t, n, r) {
         ],
         60: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.packagePayload = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.packagePayload = void 0));
                 var r = e("./");
                 n.packagePayload = function (e, t, n, i) {
                     var o,
                         a = { event: e, origin: t };
-                    "function" == typeof i && (a.reply = (0, r.subscribeReplier)(i, t)), (a.eventData = n);
+                    ("function" == typeof i && (a.reply = (0, r.subscribeReplier)(i, t)), (a.eventData = n));
                     try {
                         o = r.prefix + JSON.stringify(a);
                     } catch (e) {
@@ -1690,31 +1739,33 @@ e.exports = (function e(t, n, r) {
         ],
         61: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.sendMessage = void 0),
                     (n.sendMessage = function (e, t, n) {
                         try {
                             e.postMessage(t, n);
                         } catch (e) {}
-                    });
+                    }));
             },
             {},
         ],
         62: [
             function (e, t, n) {
+                "use strict";
                 var r =
                     (this && this.__importDefault) ||
                     function (e) {
                         return e && e.__esModule ? e : { default: e };
                     };
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscribeReplier = void 0);
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscribeReplier = void 0));
                 var i = e("../framebus"),
                     o = r(e("@braintree/uuid"));
                 n.subscribeReplier = function (e, t) {
                     var n = (0, o.default)();
                     return (
                         i.Framebus.target({ origin: t }).on(n, function r(o, a) {
-                            e(o, a), i.Framebus.target({ origin: t }).off(n, r);
+                            (e(o, a), i.Framebus.target({ origin: t }).off(n, r));
                         }),
                         n
                     );
@@ -1724,7 +1775,8 @@ e.exports = (function e(t, n, r) {
         ],
         63: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscriptionArgsInvalid = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.subscriptionArgsInvalid = void 0));
                 var r = e("./");
                 n.subscriptionArgsInvalid = function (e, t, n) {
                     return !!(0, r.isntString)(e) || "function" != typeof t || (0, r.isntString)(n);
@@ -1734,13 +1786,15 @@ e.exports = (function e(t, n, r) {
         ],
         64: [
             function (e, t, n) {
+                "use strict";
                 Object.defineProperty(n, "__esModule", { value: !0 });
             },
             {},
         ],
         65: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }), (n.unpackPayload = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }), (n.unpackPayload = void 0));
                 var r = e("./");
                 n.unpackPayload = function (e) {
                     var t;
@@ -1768,6 +1822,7 @@ e.exports = (function e(t, n, r) {
         ],
         66: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
                         var t = (16 * Math.random()) | 0;
@@ -1779,20 +1834,21 @@ e.exports = (function e(t, n, r) {
         ],
         67: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
-                    (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0);
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
+                    (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0));
                 var r = "u" > typeof window && window.navigator && window.navigator.userAgent,
                     i = e("@braintree/browser-detection/is-android"),
                     o = e("@braintree/browser-detection/is-chrome-os"),
                     a = e("@braintree/browser-detection/is-chrome");
-                (n.isIos = e("@braintree/browser-detection/is-ios")),
-                    (n.isIE9 = e("@braintree/browser-detection/is-ie9"));
+                ((n.isIos = e("@braintree/browser-detection/is-ios")),
+                    (n.isIE9 = e("@braintree/browser-detection/is-ie9")));
                 var s = /Version\/\d\.\d* Chrome\/\d*\.0\.0\.0/;
-                (n.isKitKatWebview = function (e) {
-                    return void 0 === e && (e = r), i(e) && s.test(e);
+                ((n.isKitKatWebview = function (e) {
+                    return (void 0 === e && (e = r), i(e) && s.test(e));
                 }),
                     (n.isAndroidChrome = function (e) {
-                        return void 0 === e && (e = r), (i(e) || o(e)) && a(e);
+                        return (void 0 === e && (e = r), (i(e) || o(e)) && a(e));
                     }),
                     (n.isSamsungBrowser = function (e) {
                         var t;
@@ -1800,7 +1856,7 @@ e.exports = (function e(t, n, r) {
                             void 0 === e && (e = r),
                             /SamsungBrowser/.test(e) || (!a((t = e)) && t.indexOf("Samsung") > -1)
                         );
-                    });
+                    }));
             },
             {
                 "@braintree/browser-detection/is-android": 80,
@@ -1812,6 +1868,7 @@ e.exports = (function e(t, n, r) {
         ],
         68: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./lib/device");
                 t.exports = function () {
                     return !(0, r.isSamsungBrowser)();
@@ -1851,6 +1908,7 @@ e.exports = (function e(t, n, r) {
         ],
         74: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 !== (e = e || window.navigator.userAgent).indexOf("MSIE 9");
                 };
@@ -1925,6 +1983,7 @@ e.exports = (function e(t, n, r) {
         ],
         86: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assign").assign,
@@ -1934,7 +1993,7 @@ e.exports = (function e(t, n, r) {
                 function d(e) {
                     this._client = e.client;
                 }
-                (d.prototype.getRewardsBalance = function (e) {
+                ((d.prototype.getRewardsBalance = function (e) {
                     var t,
                         n = e.nonce;
                     return n
@@ -1989,9 +2048,9 @@ e.exports = (function e(t, n, r) {
                               );
                     }),
                     (d.prototype.teardown = function () {
-                        return s(this, a(d.prototype)), Promise.resolve();
+                        return (s(this, a(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 "../lib/assign": 140,
@@ -2004,6 +2063,7 @@ e.exports = (function e(t, n, r) {
         ],
         87: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     AMEX_NONCE_REQUIRED: { type: r.types.MERCHANT, code: "AMEX_NONCE_REQUIRED" },
@@ -2014,6 +2074,7 @@ e.exports = (function e(t, n, r) {
         ],
         88: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./american-express"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -2033,7 +2094,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), new r(e);
+                                return ((e.client = t), new r(e));
                             });
                     }),
                     VERSION: "3.112.1",
@@ -2049,6 +2110,7 @@ e.exports = (function e(t, n, r) {
         ],
         89: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
@@ -2056,17 +2118,17 @@ e.exports = (function e(t, n, r) {
                     s = e("../lib/convert-methods-to-error"),
                     c = e("@braintree/wrap-promise");
                 function d(e) {
-                    (this._instantiatedWithClient = !e.useDeferredClient),
+                    ((this._instantiatedWithClient = !e.useDeferredClient),
                         (this._client = e.client),
                         (this._createPromise = e.createPromise),
-                        this._client && this._setMerchantIdentifier();
+                        this._client && this._setMerchantIdentifier());
                 }
-                (d.prototype._waitForClient = function () {
+                ((d.prototype._waitForClient = function () {
                     return this._client
                         ? Promise.resolve()
                         : this._createPromise.then(
                               function (e) {
-                                  (this._client = e), this._setMerchantIdentifier();
+                                  ((this._client = e), this._setMerchantIdentifier());
                               }.bind(this),
                           );
                 }),
@@ -2188,9 +2250,9 @@ e.exports = (function e(t, n, r) {
                             : Promise.reject(new r(o.APPLE_PAY_PAYMENT_TOKEN_REQUIRED));
                     }),
                     (d.prototype.teardown = function () {
-                        return s(this, a(d.prototype)), Promise.resolve();
+                        return (s(this, a(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 "../lib/analytics": 138,
@@ -2203,6 +2265,7 @@ e.exports = (function e(t, n, r) {
         ],
         90: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     APPLE_PAY_NOT_ENABLED: {
@@ -2241,6 +2304,7 @@ e.exports = (function e(t, n, r) {
         ],
         91: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./apple-pay"),
                     i = e("../lib/analytics"),
                     o = e("../lib/braintree-error"),
@@ -2271,7 +2335,7 @@ e.exports = (function e(t, n, r) {
                                 return ((e.createPromise = a), (n = new r(e)), e.useDeferredClient)
                                     ? n
                                     : a.then(function (e) {
-                                          return (n._client = e), n;
+                                          return ((n._client = e), n);
                                       });
                             });
                     }),
@@ -2291,6 +2355,7 @@ e.exports = (function e(t, n, r) {
         ],
         92: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants").BRAINTREE_VERSION,
                     i = e("./request/graphql"),
                     o = e("./request"),
@@ -2345,11 +2410,11 @@ e.exports = (function e(t, n, r) {
                         this._graphQL = new i({ graphQL: n.graphQL });
                     }
                 }
-                (v.initialize = function (e) {
+                ((v.initialize = function (e) {
                     var t,
                         n,
                         r = b[e.authorization];
-                    if (r) return m.sendEvent(r, "custom.client.load.cached"), r;
+                    if (r) return (m.sendEvent(r, "custom.client.load.cached"), r);
                     try {
                         n = l(e.authorization);
                     } catch (e) {
@@ -2357,16 +2422,16 @@ e.exports = (function e(t, n, r) {
                     }
                     return (
                         (r = d(n, e.sessionId).then(function (n) {
-                            return e.debug && (n.isDebug = !0), (n.authorization = e.authorization), (t = new v(n));
+                            return (e.debug && (n.isDebug = !0), (n.authorization = e.authorization), (t = new v(n)));
                         })),
                         (b[e.authorization] = r),
                         m.sendEvent(r, "custom.client.load.initialized"),
                         r
                             .then(function (e) {
-                                return m.sendEvent(t, "custom.client.load.succeeded"), e;
+                                return (m.sendEvent(t, "custom.client.load.succeeded"), e);
                             })
                             .catch(function (t) {
-                                return delete b[e.authorization], Promise.reject(t);
+                                return (delete b[e.authorization], Promise.reject(t));
                             })
                     );
                 }),
@@ -2379,7 +2444,7 @@ e.exports = (function e(t, n, r) {
                             r,
                             i,
                             o = document.querySelector('script[fncls="' + O + '"]');
-                        o ||
+                        (o ||
                             (((o = document.body.appendChild(document.createElement("script"))).type =
                                 "application/json"),
                             o.setAttribute("fncls", O)),
@@ -2393,7 +2458,7 @@ e.exports = (function e(t, n, r) {
                                     "customer_id" === t[0] && t.length > 1 && (n.cid = t[1]);
                                 }),
                             (i = { f: e.substr(0, 32), fp: n, bu: !1, s: g }),
-                            (o.text = JSON.stringify(i));
+                            (o.text = JSON.stringify(i)));
                     }),
                     (v.prototype.request = function (e, t) {
                         var n = this,
@@ -2427,9 +2492,9 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     "clientApi" === d)
                                 )
-                                    (l = n._clientApiBaseUrl), (p.data = u.addMetadata(n._configuration, e.data));
+                                    ((l = n._clientApiBaseUrl), (p.data = u.addMetadata(n._configuration, e.data)));
                                 else if ("graphQLApi" === d) {
-                                    (l = A[n._configuration.gatewayConfiguration.environment]),
+                                    ((l = A[n._configuration.gatewayConfiguration.environment]),
                                         (e.endpoint = ""),
                                         (p.method = "post"),
                                         (p.data = h(
@@ -2449,14 +2514,14 @@ e.exports = (function e(t, n, r) {
                                                 "Bearer " +
                                                 ((o = n._configuration).authorizationFingerprint || o.authorization),
                                             "Braintree-Version": r,
-                                        });
+                                        }));
                                 } else
                                     throw new s({
                                         type: f.CLIENT_OPTION_INVALID.type,
                                         code: f.CLIENT_OPTION_INVALID.code,
                                         message: "options.api is invalid.",
                                     });
-                                (p.url = l + e.endpoint),
+                                ((p.url = l + e.endpoint),
                                     (p.sendAnalyticsEvent = function (e) {
                                         m.sendEvent(n, e);
                                     }),
@@ -2483,7 +2548,7 @@ e.exports = (function e(t, n, r) {
                                                               })),
                                                 n)
                                             )
-                                                return (n.details = n.details || {}), (n.details.httpStatus = e), n;
+                                                return ((n.details = n.details || {}), (n.details.httpStatus = e), n);
                                         })(o, e))
                                             ? i(l)
                                             : "graphQLApi" === d && r.errors
@@ -2501,10 +2566,10 @@ e.exports = (function e(t, n, r) {
                                                     (n._findOrCreateFraudnetJSON(a.creditCards[0].nonce),
                                                     N.loadScript({ src: P, forceScriptReload: !0 })),
                                                 t(a));
-                                    });
+                                    }));
                             });
                         if ("function" == typeof t) {
-                            (t = _(E(t))),
+                            ((t = _(E(t))),
                                 i
                                     .then(function (e) {
                                         t(null, e, e._httpStatus);
@@ -2512,7 +2577,7 @@ e.exports = (function e(t, n, r) {
                                     .catch(function (e) {
                                         var n = e && e.details && e.details.httpStatus;
                                         t(e, null, n);
-                                    });
+                                    }));
                             return;
                         }
                         return i;
@@ -2528,7 +2593,7 @@ e.exports = (function e(t, n, r) {
                             delete b[this.getConfiguration().authorization], I(this, T(v.prototype)), Promise.resolve()
                         );
                     })),
-                    (t.exports = v);
+                    (t.exports = v));
             },
             {
                 "../lib/add-metadata": 137,
@@ -2554,12 +2619,14 @@ e.exports = (function e(t, n, r) {
         ],
         93: [
             function (e, t, n) {
+                "use strict";
                 t.exports = { BRAINTREE_VERSION: "2018-05-10" };
             },
             {},
         ],
         94: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     CLIENT_GATEWAY_CONFIGURATION_INVALID_DOMAIN: {
@@ -2620,6 +2687,7 @@ e.exports = (function e(t, n, r) {
         ],
         95: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./request"),
@@ -2646,7 +2714,7 @@ e.exports = (function e(t, n, r) {
                                     integrationType: s.INTEGRATION,
                                     sessionId: m,
                                 };
-                            (_ = e.attrs),
+                            ((_ = e.attrs),
                                 (E = e.configUrl),
                                 (_._meta = f),
                                 (_.braintreeLibraryVersion = s.BRAINTREE_LIBRARY_VERSION),
@@ -2687,7 +2755,7 @@ e.exports = (function e(t, n, r) {
                                               analyticsMetadata: f,
                                               gatewayConfiguration: t,
                                           });
-                                });
+                                }));
                         });
                     }),
                 };
@@ -2706,6 +2774,7 @@ e.exports = (function e(t, n, r) {
         ],
         96: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./client"),
                     o = e("@braintree/wrap-promise"),
@@ -2729,6 +2798,7 @@ e.exports = (function e(t, n, r) {
         ],
         97: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/querystring"),
                     i = e("../../lib/assign").assign,
                     o = e("./prep-body"),
@@ -2752,7 +2822,7 @@ e.exports = (function e(t, n, r) {
                                 I = t.timeout,
                                 N = s.getRequestObject(),
                                 O = !!(T && T.isGraphQLRequest(A, t.data));
-                            (t.headers = i({ "Content-Type": "application/json" }, t.headers)),
+                            ((t.headers = i({ "Content-Type": "application/json" }, t.headers)),
                                 (A = (E = O ? new d(t) : new l(t)).getUrl()),
                                 (h = E.getBody()),
                                 (m = E.getMethod()),
@@ -2762,7 +2832,7 @@ e.exports = (function e(t, n, r) {
                                     ? (N.onreadystatechange = function () {
                                           if (4 === N.readyState) {
                                               if (0 === N.status && O) {
-                                                  delete t.graphQL, e(t, n, u);
+                                                  (delete t.graphQL, e(t, n, u));
                                                   return;
                                               }
                                               if (
@@ -2782,7 +2852,7 @@ e.exports = (function e(t, n, r) {
                                                               y.errors[0].extensions.errorClass) ||
                                                           "INTERNAL" === r)
                                                   ) {
-                                                      delete t.graphQL, e(t, n, u);
+                                                      (delete t.graphQL, e(t, n, u));
                                                       return;
                                                   }
                                                   if (n < 1 && (!p || 408 === p)) return void e(t, ++n, u);
@@ -2800,19 +2870,19 @@ e.exports = (function e(t, n, r) {
                                       (N.onprogress = function () {}),
                                       (N.ontimeout = function () {
                                           u("timeout", null, -1);
-                                      }));
+                                      })));
                             try {
                                 N.open(m, A, !0);
                             } catch (r) {
                                 if (!O) throw r;
-                                delete t.graphQL, e(t, n, u);
+                                (delete t.graphQL, e(t, n, u));
                                 return;
                             }
-                            (N.timeout = I),
+                            ((N.timeout = I),
                                 c &&
                                     Object.keys(f).forEach(function (e) {
                                         N.setRequestHeader(e, f[e]);
-                                    });
+                                    }));
                             try {
                                 N.send(o(m, h));
                             } catch (e) {}
@@ -2832,10 +2902,14 @@ e.exports = (function e(t, n, r) {
         ],
         98: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
-                    (this._url = e.url), (this._data = e.data), (this._method = e.method), (this._headers = e.headers);
+                    ((this._url = e.url),
+                        (this._data = e.data),
+                        (this._method = e.method),
+                        (this._headers = e.headers));
                 }
-                (r.prototype.getUrl = function () {
+                ((r.prototype.getUrl = function () {
                     return this._url;
                 }),
                     (r.prototype.getBody = function () {
@@ -2853,12 +2927,13 @@ e.exports = (function e(t, n, r) {
                     (r.prototype.determineStatus = function (e) {
                         return e;
                     }),
-                    (t.exports = r);
+                    (t.exports = r));
             },
             {},
         ],
         99: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = e("../../../../lib/assign").assign,
                     o = {
@@ -2998,6 +3073,7 @@ e.exports = (function e(t, n, r) {
         ],
         100: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3064,6 +3140,7 @@ e.exports = (function e(t, n, r) {
         ],
         101: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./error"),
                     i = {
                         AMERICAN_EXPRESS: "American Express",
@@ -3128,6 +3205,7 @@ e.exports = (function e(t, n, r) {
         ],
         102: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     var t,
                         n,
@@ -3170,6 +3248,7 @@ e.exports = (function e(t, n, r) {
         ],
         103: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function () {
                     return {
                         query: "query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     fastlane {       enabled     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }",
@@ -3181,6 +3260,7 @@ e.exports = (function e(t, n, r) {
         ],
         104: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3273,6 +3353,7 @@ e.exports = (function e(t, n, r) {
         ],
         105: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../../lib/assign").assign;
                 t.exports = function (e) {
                     var t,
@@ -3336,12 +3417,13 @@ e.exports = (function e(t, n, r) {
         ],
         106: [
             function (e, t, n) {
+                "use strict";
                 var r = { tokenize_credit_cards: "payment_methods/credit_cards", configuration: "configuration" },
                     i = ["creditCard.options.unionPayEnrollment"];
                 function o(e) {
                     this._config = e.graphQL;
                 }
-                (o.prototype.getGraphQLEndpoint = function () {
+                ((o.prototype.getGraphQLEndpoint = function () {
                     return this._config.url;
                 }),
                     (o.prototype.isGraphQLRequest = function (e, t) {
@@ -3368,17 +3450,18 @@ e.exports = (function e(t, n, r) {
                     (o.prototype.getClientApiPath = function (e) {
                         var t,
                             n = e.split("/client_api/v1/");
-                        return n.length > 1 && (t = n[1].split("?")[0]), t;
+                        return (n.length > 1 && (t = n[1].split("?")[0]), t);
                     }),
                     (o.prototype._isGraphQLEnabled = function () {
                         return !!this._config;
                     }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             {},
         ],
         107: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../constants").BRAINTREE_VERSION,
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/snake-case-to-camel-case"),
@@ -3403,7 +3486,7 @@ e.exports = (function e(t, n, r) {
                     };
                 function h(e) {
                     var t = e.graphQL.getClientApiPath(e.url);
-                    (this._graphQL = e.graphQL),
+                    ((this._graphQL = e.graphQL),
                         (this._data = e.data),
                         (this._method = e.method),
                         (this._headers = e.headers),
@@ -3415,9 +3498,9 @@ e.exports = (function e(t, n, r) {
                         (this._sendAnalyticsEvent = e.sendAnalyticsEvent || Function.prototype),
                         (this._generator = _[t]),
                         (this._adapter = E[t]),
-                        this._sendAnalyticsEvent("graphql.init");
+                        this._sendAnalyticsEvent("graphql.init"));
                 }
-                (h.prototype.getUrl = function () {
+                ((h.prototype.getUrl = function () {
                     return this._graphQL.getGraphQLEndpoint();
                 }),
                     (h.prototype.getBody = function () {
@@ -3483,7 +3566,7 @@ e.exports = (function e(t, n, r) {
                             n
                         );
                     }),
-                    (t.exports = h);
+                    (t.exports = h));
             },
             {
                 "../../../lib/assign": 140,
@@ -3500,20 +3583,22 @@ e.exports = (function e(t, n, r) {
         ],
         108: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/once"),
                     i = e("./ajax-driver");
                 t.exports = function (e, t) {
-                    (t = r(t || Function.prototype)),
+                    ((t = r(t || Function.prototype)),
                         (e.method = (e.method || "GET").toUpperCase()),
                         (e.timeout = null == e.timeout ? 6e4 : e.timeout),
                         (e.data = e.data || {}),
-                        i.request(e, t);
+                        i.request(e, t));
                 };
             },
             { "../../lib/once": 176, "./ajax-driver": 97 },
         ],
         109: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     try {
                         e = JSON.parse(e);
@@ -3525,6 +3610,7 @@ e.exports = (function e(t, n, r) {
         ],
         110: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     if ("string" != typeof e) throw Error("Method must be a string");
                     return (
@@ -3536,6 +3622,7 @@ e.exports = (function e(t, n, r) {
         ],
         111: [
             function (e, t, n) {
+                "use strict";
                 var r =
                     "u" > typeof window && window.XMLHttpRequest && "withCredentials" in new window.XMLHttpRequest();
                 t.exports = {
@@ -3549,6 +3636,7 @@ e.exports = (function e(t, n, r) {
         ],
         112: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     DATA_COLLECTOR_KOUNT_NOT_ENABLED: {
@@ -3568,6 +3656,7 @@ e.exports = (function e(t, n, r) {
         ],
         113: [
             function (e, t, n) {
+                "use strict";
                 var r,
                     i = e("../lib/constants").FRAUDNET_FNCLS,
                     o = e("../lib/constants").FRAUDNET_SOURCE,
@@ -3577,7 +3666,7 @@ e.exports = (function e(t, n, r) {
                 function d(e) {
                     e && e.parentNode && e.parentNode.removeChild(e);
                 }
-                (c.prototype.initialize = function (e) {
+                ((c.prototype.initialize = function (e) {
                     var t,
                         n,
                         c,
@@ -3608,7 +3697,7 @@ e.exports = (function e(t, n, r) {
                             d)),
                         s({ src: a })
                             .then(function (e) {
-                                return (p._thirdPartyBlock = e), p;
+                                return ((p._thirdPartyBlock = e), p);
                             })
                             .catch(function () {
                                 return null;
@@ -3616,10 +3705,10 @@ e.exports = (function e(t, n, r) {
                     );
                 }),
                     (c.prototype.teardown = function () {
-                        d(document.querySelector('iframe[title="ppfniframe"]')),
+                        (d(document.querySelector('iframe[title="ppfniframe"]')),
                             d(document.querySelector('iframe[title="pbf"]')),
                             d(this._parameterBlock),
-                            d(this._thirdPartyBlock);
+                            d(this._thirdPartyBlock));
                     }),
                     (t.exports = {
                         setup: function (e) {
@@ -3631,12 +3720,13 @@ e.exports = (function e(t, n, r) {
                         clearSessionIdCache: function () {
                             r = null;
                         },
-                    });
+                    }));
             },
             { "../lib/assets": 139, "../lib/constants": 145 },
         ],
         114: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./kount"),
                     i = e("./fraudnet"),
                     o = e("../lib/braintree-error"),
@@ -3683,7 +3773,7 @@ e.exports = (function e(t, n, r) {
                                                     }),
                                                 );
                                             }
-                                            (t = i.deviceData), _._instances.push(i);
+                                            ((t = i.deviceData), _._instances.push(i));
                                         } else t = {};
                                         return Promise.resolve(n);
                                     })
@@ -3707,10 +3797,10 @@ e.exports = (function e(t, n, r) {
                                 (a = _),
                                 (_.teardown = u(function () {
                                     return a._createPromise.then(function () {
-                                        a._instances.forEach(function (e) {
+                                        (a._instances.forEach(function (e) {
                                             e && e.teardown();
                                         }),
-                                            l(a, d(a));
+                                            l(a, d(a)));
                                     });
                                 })),
                                 (E = _),
@@ -3747,6 +3837,7 @@ e.exports = (function e(t, n, r) {
         ],
         115: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./vendor/sjcl"),
                     i = e("../lib/camel-case-to-snake-case"),
                     o = "https://assets.qa.braintreepayments.com/data",
@@ -3760,17 +3851,17 @@ e.exports = (function e(t, n, r) {
                 function c(e) {
                     var t = c.getCachedDeviceData(e.merchantId);
                     if (t) {
-                        (this.deviceData = t), (this._isCached = !0);
+                        ((this.deviceData = t), (this._isCached = !0));
                         return;
                     }
-                    (this._currentEnvironment = this._initializeEnvironment(e)),
+                    ((this._currentEnvironment = this._initializeEnvironment(e)),
                         r.random.startCollectors(),
                         (this._deviceSessionId = this._generateDeviceSessionId()),
                         (this.deviceData = this._getDeviceData()),
                         c.setCachedDeviceData(e.merchantId, this.deviceData),
-                        (this._iframe = this._setupIFrame());
+                        (this._iframe = this._setupIFrame()));
                 }
-                (c.getCachedDeviceData = function (e) {
+                ((c.getCachedDeviceData = function (e) {
                     return s[e];
                 }),
                     (c.setCachedDeviceData = function (e, t) {
@@ -3790,7 +3881,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (c.prototype._generateDeviceSessionId = function () {
                         var e;
-                        return (e = r.random.randomWords(4, 0)), r.codec.hex.fromBits(e);
+                        return ((e = r.random.randomWords(4, 0)), r.codec.hex.fromBits(e));
                     }),
                     (c.prototype._setupIFrame = function () {
                         var e,
@@ -3810,9 +3901,9 @@ e.exports = (function e(t, n, r) {
                             t.setAttribute("aria-hidden", "true"),
                             document.body.appendChild(t),
                             setTimeout(function () {
-                                (t.src = n._currentEnvironment.url + "/logo.htm" + e),
+                                ((t.src = n._currentEnvironment.url + "/logo.htm" + e),
                                     (t.innerHTML =
-                                        '<img src="' + n._currentEnvironment.url + "/logo.gif" + e + '" alt="" />');
+                                        '<img src="' + n._currentEnvironment.url + "/logo.gif" + e + '" alt="" />'));
                             }, 10),
                             t
                         );
@@ -3828,12 +3919,13 @@ e.exports = (function e(t, n, r) {
                         },
                         Kount: c,
                         environmentUrls: a,
-                    });
+                    }));
             },
             { "../lib/camel-case-to-snake-case": 144, "./vendor/sjcl": 116 },
         ],
         116: [
             function (e, n, r) {
+                "use strict";
                 var i,
                     o,
                     a,
@@ -3848,28 +3940,28 @@ e.exports = (function e(t, n, r) {
                         codec: {},
                         exception: {
                             corrupt: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return "CORRUPT: " + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             invalid: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return "INVALID: " + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             bug: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return "BUG: " + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                             notReady: function (e) {
-                                (this.toString = function () {
+                                ((this.toString = function () {
                                     return "NOT READY: " + this.message;
                                 }),
-                                    (this.message = e);
+                                    (this.message = e));
                             },
                         },
                     };
@@ -3893,16 +3985,16 @@ e.exports = (function e(t, n, r) {
                         f = s[3],
                         y = s[4];
                     for (u = 0; u < p; u++)
-                        (s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]),
+                        ((s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]),
                             (c = e[o >>> 24] ^ h[(a >> 16) & 255] ^ m[(t >> 8) & 255] ^ f[255 & i] ^ r[_ + 1]),
                             (l = e[a >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ f[255 & o] ^ r[_ + 2]),
                             (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(o >> 8) & 255] ^ f[255 & a] ^ r[_ + 3]),
                             (_ += 4),
                             (i = s),
                             (o = c),
-                            (a = l);
+                            (a = l));
                     for (u = 0; 4 > u; u++)
-                        (E[n ? 3 & -u : u] =
+                        ((E[n ? 3 & -u : u] =
                             (y[i >>> 24] << 24) ^
                             (y[(o >> 16) & 255] << 16) ^
                             (y[(a >> 8) & 255] << 8) ^
@@ -3912,7 +4004,7 @@ e.exports = (function e(t, n, r) {
                             (i = o),
                             (o = a),
                             (a = t),
-                            (t = s);
+                            (t = s));
                     return E;
                 }
                 function u(e, t) {
@@ -3930,7 +4022,7 @@ e.exports = (function e(t, n, r) {
                         _ = o[6],
                         E = o[7];
                     for (n = 0; 64 > n; n++)
-                        16 > n
+                        (16 > n
                             ? (r = t[n])
                             : ((r = t[(n + 1) & 15]),
                               (i = t[(n + 14) & 15]),
@@ -3956,15 +4048,15 @@ e.exports = (function e(t, n, r) {
                                 (r +
                                     (((c = s) & d) ^ (l & (c ^ d))) +
                                     ((c >>> 2) ^ (c >>> 13) ^ (c >>> 22) ^ (c << 30) ^ (c << 19) ^ (c << 10))) |
-                                0);
-                    (o[0] = (o[0] + s) | 0),
+                                0));
+                    ((o[0] = (o[0] + s) | 0),
                         (o[1] = (o[1] + c) | 0),
                         (o[2] = (o[2] + d) | 0),
                         (o[3] = (o[3] + l) | 0),
                         (o[4] = (o[4] + u) | 0),
                         (o[5] = (o[5] + p) | 0),
                         (o[6] = (o[6] + _) | 0),
-                        (o[7] = (o[7] + E) | 0);
+                        (o[7] = (o[7] + E) | 0));
                 }
                 function p(e, t) {
                     var n,
@@ -3979,7 +4071,7 @@ e.exports = (function e(t, n, r) {
                         : e.addEntropy(new Date().valueOf(), t, "loadtime");
                 }
                 function E(e) {
-                    (e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b));
+                    ((e.b = h(e).concat(h(e))), (e.C = new d.cipher.aes(e.b)));
                 }
                 function h(e) {
                     for (var t = 0; 4 > t && ((e.g[t] = (e.g[t] + 1) | 0), !e.g[t]); t++);
@@ -3990,7 +4082,7 @@ e.exports = (function e(t, n, r) {
                         t.apply(e, arguments);
                     };
                 }
-                (d.cipher.aes = function (e) {
+                ((d.cipher.aes = function (e) {
                     this.l[0][0][0] || this.G();
                     var t,
                         n,
@@ -4002,7 +4094,7 @@ e.exports = (function e(t, n, r) {
                     var s = 1;
                     if (4 !== t && 6 !== t && 8 !== t) throw new d.exception.invalid("invalid aes key size");
                     for (this.b = [(r = e.slice(0)), (i = [])], e = t; e < 4 * t + 28; e++)
-                        (n = r[e - 1]),
+                        ((n = r[e - 1]),
                             (0 == e % t || (8 === t && 4 == e % t)) &&
                                 ((n =
                                     (o[n >>> 24] << 24) ^
@@ -4011,16 +4103,16 @@ e.exports = (function e(t, n, r) {
                                     o[255 & n]),
                                 0 == e % t &&
                                     ((n = (n << 8) ^ (n >>> 24) ^ (s << 24)), (s = (s << 1) ^ (283 * (s >> 7))))),
-                            (r[e] = r[e - t] ^ n);
+                            (r[e] = r[e - t] ^ n));
                     for (t = 0; e; t++, e--)
-                        (n = r[3 & t ? e : e - 4]),
+                        ((n = r[3 & t ? e : e - 4]),
                             (i[t] =
                                 4 >= e || 4 > t
                                     ? n
                                     : a[0][o[n >>> 24]] ^
                                       a[1][o[(n >> 16) & 255]] ^
                                       a[2][o[(n >> 8) & 255]] ^
-                                      a[3][o[255 & n]]);
+                                      a[3][o[255 & n]]));
                 }),
                     (d.cipher.aes.prototype = {
                         encrypt: function (e) {
@@ -4063,8 +4155,8 @@ e.exports = (function e(t, n, r) {
                                     4 > e;
                                     e++
                                 )
-                                    (s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8));
-                            for (e = 0; 5 > e; e++) (s[e] = s[e].slice(0)), (c[e] = c[e].slice(0));
+                                    ((s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8)));
+                            for (e = 0; 5 > e; e++) ((s[e] = s[e].slice(0)), (c[e] = c[e].slice(0)));
                         },
                     }),
                     (d.bitArray = {
@@ -4117,9 +4209,9 @@ e.exports = (function e(t, n, r) {
                         },
                         M: function (e, t, n, r) {
                             var i;
-                            for (i = 0, void 0 === r && (r = []); 32 <= t; t -= 32) r.push(n), (n = 0);
+                            for (i = 0, void 0 === r && (r = []); 32 <= t; t -= 32) (r.push(n), (n = 0));
                             if (0 === t) return r.concat(e);
-                            for (i = 0; i < e.length; i++) r.push(n | (e[i] >>> t)), (n = e[i] << (32 - t));
+                            for (i = 0; i < e.length; i++) (r.push(n | (e[i] >>> t)), (n = e[i] << (32 - t)));
                             return (
                                 (i = e.length ? e[e.length - 1] : 0),
                                 (e = d.bitArray.getPartial(i)),
@@ -4133,7 +4225,8 @@ e.exports = (function e(t, n, r) {
                         byteswapM: function (e) {
                             var t, n;
                             for (t = 0; t < e.length; ++t)
-                                (n = e[t]), (e[t] = (n >>> 24) | ((n >>> 8) & 65280) | ((65280 & n) << 8) | (n << 24));
+                                ((n = e[t]),
+                                    (e[t] = (n >>> 24) | ((n >>> 8) & 65280) | ((65280 & n) << 8) | (n << 24)));
                             return e;
                         },
                     }),
@@ -4144,9 +4237,9 @@ e.exports = (function e(t, n, r) {
                                 r = "",
                                 i = d.bitArray.bitLength(e);
                             for (t = 0; t < i / 8; t++)
-                                0 == (3 & t) && (n = e[t / 4]),
+                                (0 == (3 & t) && (n = e[t / 4]),
                                     (r += String.fromCharCode(((n >>> 8) >>> 8) >>> 8)),
-                                    (n <<= 8);
+                                    (n <<= 8));
                             return decodeURIComponent(escape(r));
                         },
                         toBits: function (e) {
@@ -4155,8 +4248,8 @@ e.exports = (function e(t, n, r) {
                                 n = [],
                                 r = 0;
                             for (t = 0; t < e.length; t++)
-                                (r = (r << 8) | e.charCodeAt(t)), 3 == (3 & t) && (n.push(r), (r = 0));
-                            return 3 & t && n.push(d.bitArray.partial(8 * (3 & t), r)), n;
+                                ((r = (r << 8) | e.charCodeAt(t)), 3 == (3 & t) && (n.push(r), (r = 0)));
+                            return (3 & t && n.push(d.bitArray.partial(8 * (3 & t), r)), n);
                         },
                     }),
                     (d.codec.hex = {
@@ -4176,8 +4269,8 @@ e.exports = (function e(t, n, r) {
                         },
                     }),
                     (d.hash.sha256 = function (e) {
-                        this.b[0] || this.G(),
-                            e ? ((this.u = e.u.slice(0)), (this.o = e.o.slice(0)), (this.h = e.h)) : this.reset();
+                        (this.b[0] || this.G(),
+                            e ? ((this.u = e.u.slice(0)), (this.o = e.o.slice(0)), (this.h = e.h)) : this.reset());
                     }),
                     (d.hash.sha256.hash = function (e) {
                         return new d.hash.sha256().update(e).finalize();
@@ -4185,7 +4278,7 @@ e.exports = (function e(t, n, r) {
                     (d.hash.sha256.prototype = {
                         blockSize: 512,
                         reset: function () {
-                            return (this.u = this.K.slice(0)), (this.o = []), (this.h = 0), this;
+                            return ((this.u = this.K.slice(0)), (this.o = []), (this.h = 0), this);
                         },
                         update: function (e) {
                             "string" == typeof e && (e = d.codec.utf8String.toBits(e));
@@ -4197,7 +4290,7 @@ e.exports = (function e(t, n, r) {
                                 var r = new Uint32Array(n),
                                     i = 0;
                                 for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512)
-                                    u(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1);
+                                    (u(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1));
                                 n.splice(0, 16 * i);
                             } else for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) u(this, n.splice(0, 16));
                             return this;
@@ -4208,9 +4301,9 @@ e.exports = (function e(t, n, r) {
                                 n = this.u,
                                 t = d.bitArray.concat(t, [d.bitArray.partial(1, 1)]);
                             for (e = t.length + 2; 15 & e; e++) t.push(0);
-                            for (t.push(Math.floor(this.h / 0x100000000)), t.push(0 | this.h); t.length; )
+                            for (t.push(Math.floor(this.h / 0x100000000)), t.push(0 | this.h); t.length;)
                                 u(this, t.splice(0, 16));
-                            return this.reset(), n;
+                            return (this.reset(), n);
                         },
                         K: [],
                         b: [],
@@ -4232,7 +4325,7 @@ e.exports = (function e(t, n, r) {
                         },
                     }),
                     (d.prng = function (e) {
-                        (this.c = [new d.hash.sha256()]),
+                        ((this.c = [new d.hash.sha256()]),
                             (this.i = [0]),
                             (this.H = 0),
                             (this.v = {}),
@@ -4251,7 +4344,7 @@ e.exports = (function e(t, n, r) {
                             (this.O = 65536),
                             (this.I = [0, 48, 64, 96, 128, 192, 256, 384, 512, 768, 1024]),
                             (this.P = 3e4),
-                            (this.N = 80);
+                            (this.N = 80));
                     }),
                     (d.prng.prototype = {
                         randomWords: function (e, t) {
@@ -4288,8 +4381,8 @@ e.exports = (function e(t, n, r) {
                                 );
                             }
                             for (n = 0; n < e; n += 4)
-                                0 == (n + 1) % this.O && E(this), r.push((o = h(this))[0], o[1], o[2], o[3]);
-                            return E(this), r.slice(0, e);
+                                (0 == (n + 1) % this.O && E(this), r.push((o = h(this))[0], o[1], o[2], o[3]));
+                            return (E(this), r.slice(0, e));
                         },
                         setDefaultParanoia: function (e, t) {
                             if (0 === e && "Setting paranoia=0 will ruin your security; use it only for testing" !== t)
@@ -4313,7 +4406,7 @@ e.exports = (function e(t, n, r) {
                                 typeof e)
                             ) {
                                 case "number":
-                                    void 0 === t && (t = 1), this.c[a].update([r, this.F++, 1, t, o, 1, 0 | e]);
+                                    (void 0 === t && (t = 1), this.c[a].update([r, this.F++, 1, t, o, 1, 0 | e]));
                                     break;
                                 case "object":
                                     if ("[object Uint32Array]" === (n = Object.prototype.toString.call(e))) {
@@ -4324,14 +4417,14 @@ e.exports = (function e(t, n, r) {
                                             "number" != typeof e[n] && (c = 1);
                                     if (!c) {
                                         if (void 0 === t)
-                                            for (n = t = 0; n < e.length; n++) for (i = e[n]; 0 < i; ) t++, (i >>>= 1);
+                                            for (n = t = 0; n < e.length; n++) for (i = e[n]; 0 < i;) (t++, (i >>>= 1));
                                         this.c[a].update([r, this.F++, 2, t, o, e.length].concat(e));
                                     }
                                     break;
                                 case "string":
-                                    void 0 === t && (t = e.length),
+                                    (void 0 === t && (t = e.length),
                                         this.c[a].update([r, this.F++, 3, t, o, e.length]),
-                                        this.c[a].update(e);
+                                        this.c[a].update(e));
                                     break;
                                 default:
                                     c = 1;
@@ -4340,11 +4433,11 @@ e.exports = (function e(t, n, r) {
                                 throw new d.exception.bug(
                                     "random: addEntropy only supports number, array of numbers or string",
                                 );
-                            (this.i[a] += t),
+                            ((this.i[a] += t),
                                 (this.f += t),
                                 s === this.m &&
                                     (this.isReady() !== this.m && p("seeded", Math.max(this.j, this.f)),
-                                    p("progress", this.getProgress()));
+                                    p("progress", this.getProgress())));
                         },
                         isReady: function (e) {
                             return (
@@ -4359,7 +4452,7 @@ e.exports = (function e(t, n, r) {
                             );
                         },
                         getProgress: function (e) {
-                            return (e = this.I[e || this.D]), this.j >= e || this.f > e ? 1 : this.f / e;
+                            return ((e = this.I[e || this.D]), this.j >= e || this.f > e ? 1 : this.f / e);
                         },
                         startCollectors: function () {
                             if (!this.s) {
@@ -4373,15 +4466,15 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     window.addEventListener)
                                 )
-                                    window.addEventListener("load", this.a.loadTimeCollector, !1),
+                                    (window.addEventListener("load", this.a.loadTimeCollector, !1),
                                         window.addEventListener("mousemove", this.a.mouseCollector, !1),
                                         window.addEventListener("keypress", this.a.keyboardCollector, !1),
                                         window.addEventListener("devicemotion", this.a.accelerometerCollector, !1),
-                                        window.addEventListener("touchmove", this.a.touchCollector, !1);
+                                        window.addEventListener("touchmove", this.a.touchCollector, !1));
                                 else if (document.attachEvent)
-                                    document.attachEvent("onload", this.a.loadTimeCollector),
+                                    (document.attachEvent("onload", this.a.loadTimeCollector),
                                         document.attachEvent("onmousemove", this.a.mouseCollector),
-                                        document.attachEvent("keypress", this.a.keyboardCollector);
+                                        document.attachEvent("keypress", this.a.keyboardCollector));
                                 else throw new d.exception.bug("can't attach event");
                                 this.s = !0;
                             }
@@ -4409,7 +4502,7 @@ e.exports = (function e(t, n, r) {
                                 i = this.B[e],
                                 o = [];
                             for (r in i) i.hasOwnProperty(r) && i[r] === t && o.push(r);
-                            for (n = 0; n < o.length; n++) (r = o[n]), delete i[r];
+                            for (n = 0; n < o.length; n++) ((r = o[n]), delete i[r]);
                         },
                         U: function () {
                             _(this, 1);
@@ -4417,16 +4510,16 @@ e.exports = (function e(t, n, r) {
                         W: function (e) {
                             var t, n;
                             try {
-                                (t = e.x || e.clientX || e.offsetX || 0), (n = e.y || e.clientY || e.offsetY || 0);
+                                ((t = e.x || e.clientX || e.offsetX || 0), (n = e.y || e.clientY || e.offsetY || 0));
                             } catch (e) {
                                 n = t = 0;
                             }
-                            0 != t && 0 != n && this.addEntropy([t, n], 2, "mouse"), _(this, 0);
+                            (0 != t && 0 != n && this.addEntropy([t, n], 2, "mouse"), _(this, 0));
                         },
                         X: function (e) {
-                            (e = e.touches[0] || e.changedTouches[0]),
+                            ((e = e.touches[0] || e.changedTouches[0]),
                                 this.addEntropy([e.pageX || e.clientX, e.pageY || e.clientY], 1, "touch"),
-                                _(this, 0);
+                                _(this, 0));
                         },
                         V: function () {
                             _(this, 2);
@@ -4442,10 +4535,10 @@ e.exports = (function e(t, n, r) {
                                 var t = window.orientation;
                                 "number" == typeof t && this.addEntropy(t, 1, "accelerometer");
                             }
-                            e && this.addEntropy(e, 2, "accelerometer"), _(this, 0);
+                            (e && this.addEntropy(e, 2, "accelerometer"), _(this, 0));
                         },
                     }),
-                    (d.random = new d.prng(6));
+                    (d.random = new d.prng(6)));
                 e: try {
                     if ((s = void 0 !== n && n.exports)) {
                         try {
@@ -4456,9 +4549,9 @@ e.exports = (function e(t, n, r) {
                         s = o = c;
                     }
                     if (s && o.randomBytes)
-                        (i = o.randomBytes(128)),
+                        ((i = o.randomBytes(128)),
                             (i = new Uint32Array(new Uint8Array(i).buffer)),
-                            d.random.addEntropy(i, 1024, "crypto['randomBytes']");
+                            d.random.addEntropy(i, 1024, "crypto['randomBytes']"));
                     else if ("u" > typeof window && "u" > typeof Uint32Array) {
                         if (((a = new Uint32Array(32)), window.crypto && window.crypto.getRandomValues))
                             window.crypto.getRandomValues(a);
@@ -4471,16 +4564,17 @@ e.exports = (function e(t, n, r) {
                         window.console &&
                         (console.log("There was an error collecting entropy from the browser:"), console.log(e));
                 }
-                void 0 !== n && n.exports && (n.exports = d),
+                (void 0 !== n && n.exports && (n.exports = d),
                     "function" == typeof t &&
                         t([], function () {
                             return d;
-                        });
+                        }));
             },
             { crypto: void 0 },
         ],
         117: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     FASTLANE_SDK_LOAD_ERROR: {
                         type: e("../lib/braintree-error").types.MERCHANT,
@@ -4492,6 +4586,7 @@ e.exports = (function e(t, n, r) {
         ],
         118: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./errors"),
                     o = e("../lib/assets").loadFastlane,
@@ -4543,6 +4638,7 @@ e.exports = (function e(t, n, r) {
         ],
         119: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("./fastlane"),
                     o = e("../lib/create-assets-url"),
@@ -4580,6 +4676,7 @@ e.exports = (function e(t, n, r) {
         ],
         120: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     GOOGLE_PAYMENT_NOT_ENABLED: {
@@ -4602,6 +4699,7 @@ e.exports = (function e(t, n, r) {
         ],
         121: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/convert-methods-to-error"),
@@ -4630,7 +4728,7 @@ e.exports = (function e(t, n, r) {
                             type: d.GOOGLE_PAYMENT_UNSUPPORTED_VERSION.type,
                         });
                 }
-                (_.prototype._waitForClient = function () {
+                ((_.prototype._waitForClient = function () {
                     return this._client
                         ? Promise.resolve()
                         : this._createPromise.then(
@@ -4657,7 +4755,7 @@ e.exports = (function e(t, n, r) {
                         var t = this._getDefaultConfig(),
                             n = e.cardRequirements && e.cardRequirements.allowedCardNetworks,
                             r = t.cardRequirements.allowedCardNetworks;
-                        return ((e = i({}, t, e)).cardRequirements.allowedCardNetworks = n || r), e;
+                        return (((e = i({}, t, e)).cardRequirements.allowedCardNetworks = n || r), e);
                     }),
                     (_.prototype._createV2PaymentDataRequest = function (e) {
                         var t = this._getDefaultConfig();
@@ -4751,9 +4849,9 @@ e.exports = (function e(t, n, r) {
                             });
                     }),
                     (_.prototype.teardown = function () {
-                        return o(this, l(_.prototype)), Promise.resolve();
+                        return (o(this, l(_.prototype)), Promise.resolve());
                     }),
-                    (t.exports = u.wrapPrototype(_));
+                    (t.exports = u.wrapPrototype(_)));
             },
             {
                 "../lib/analytics": 138,
@@ -4769,6 +4867,7 @@ e.exports = (function e(t, n, r) {
         ],
         122: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./google-payment"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-assets-url"),
@@ -4802,7 +4901,7 @@ e.exports = (function e(t, n, r) {
                                 e.useDeferredClient)
                                     ? s
                                     : n.then(function (e) {
-                                          return (s._client = e), s;
+                                          return ((s._client = e), s);
                                       });
                             });
                     }),
@@ -4821,6 +4920,7 @@ e.exports = (function e(t, n, r) {
         ],
         123: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../shared/constants").allowedAttributes;
@@ -4852,6 +4952,7 @@ e.exports = (function e(t, n, r) {
         ],
         124: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants"),
                     i = e("../../lib/use-min");
                 t.exports = function (e, t, n) {
@@ -4862,6 +4963,7 @@ e.exports = (function e(t, n, r) {
         ],
         125: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants").navigationDirections,
                     i = e("../shared/browser-detection"),
                     o = e("../shared/focus-intercept"),
@@ -4895,7 +4997,7 @@ e.exports = (function e(t, n, r) {
                             if (u) {
                                 if (((c = a(u, "form")[0]), document.forms.length < 1 || !c))
                                     return void t.onRemoveFocusIntercepts();
-                                (i = (c = [].slice.call(c.elements)).indexOf(u)),
+                                ((i = (c = [].slice.call(c.elements)).indexOf(u)),
                                     (l = (function (e, t) {
                                         switch (e) {
                                             case r.BACK:
@@ -4914,7 +5016,7 @@ e.exports = (function e(t, n, r) {
                                                 };
                                         }
                                         return {};
-                                    })(n.direction, c.length));
+                                    })(n.direction, c.length)));
                                 do {
                                     if (((i += l.indexChange), l.checkIndexBounds(i))) return;
                                     s = c[i];
@@ -4936,6 +5038,7 @@ e.exports = (function e(t, n, r) {
         ],
         126: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/constants").allowedStyles;
                 t.exports = function (e) {
                     var t,
@@ -4963,6 +5066,7 @@ e.exports = (function e(t, n, r) {
         ],
         127: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/assign").assign,
                     i = e("../../lib/create-assets-url"),
                     o = e("../../lib/is-verified-domain"),
@@ -5028,7 +5132,7 @@ e.exports = (function e(t, n, r) {
                             code: C.INSTANTIATION_OPTION_REQUIRED.code,
                             message: "options.fields is required when instantiating Hosted Fields.",
                         });
-                    T.call(this),
+                    (T.call(this),
                         (this._injectedNodes = []),
                         (this._destructor = new a()),
                         (this._fields = S),
@@ -5094,7 +5198,7 @@ e.exports = (function e(t, n, r) {
                                         message: "The value for minlength must be a number.",
                                         details: { fieldKey: t },
                                     });
-                                (o = s({
+                                ((o = s({
                                     type: t,
                                     name: "braintree-hosted-field-" + t,
                                     style: _.defaultIFrameStyle,
@@ -5122,7 +5226,7 @@ e.exports = (function e(t, n, r) {
                                     }),
                                     setTimeout(function () {
                                         o.src = O;
-                                    }, 0);
+                                    }, 0));
                             }.bind(this),
                         ),
                         this._merchantConfigurationOptions.styles &&
@@ -5156,21 +5260,21 @@ e.exports = (function e(t, n, r) {
                             b._emit("binAvailable", { bin: e });
                         }),
                         (t = setTimeout(function () {
-                            N.sendEvent(b._clientPromise, "custom.hosted-fields.load.timed-out"), b._emit("timeout");
+                            (N.sendEvent(b._clientPromise, "custom.hosted-fields.load.timed-out"), b._emit("timeout"));
                         }, h)),
                         Promise.all(U).then(function (e) {
                             var n,
                                 i = e[0];
-                            clearTimeout(t),
+                            (clearTimeout(t),
                                 i(
                                     (((n = r({}, b._merchantConfigurationOptions)).fields = r({}, n.fields)),
                                     Object.keys(n.fields).forEach(function (e) {
-                                        (n.fields[e] = r({}, n.fields[e])), delete n.fields[e].container;
+                                        ((n.fields[e] = r({}, n.fields[e])), delete n.fields[e].container);
                                     }),
                                     n),
                                 ),
                                 b._cleanUpFocusIntercepts(),
-                                b._emit("ready");
+                                b._emit("ready"));
                         }),
                         this._bus.on(A.FRAME_READY, function (e, t) {
                             D[e.field](t);
@@ -5182,7 +5286,7 @@ e.exports = (function e(t, n, r) {
                                     n = e.merchantPayload,
                                     r = n.emittedBy,
                                     i = S[r].containerElement;
-                                Object.keys(n.fields).forEach(function (e) {
+                                (Object.keys(n.fields).forEach(function (e) {
                                     n.fields[e].container = S[e].containerElement;
                                 }),
                                     (t = n.fields[r]),
@@ -5190,27 +5294,27 @@ e.exports = (function e(t, n, r) {
                                     i.classList.toggle(_.externalClasses.VALID, t.isValid),
                                     i.classList.toggle(_.externalClasses.INVALID, !t.isPotentiallyValid),
                                     (this._state = { cards: n.cards, fields: n.fields }),
-                                    this._emit(e.type, n);
+                                    this._emit(e.type, n));
                             }.bind(this),
                         ),
                         this._destructor.registerFunctionForTeardown(function () {
                             var e, t, n;
                             for (e = 0; e < b._injectedNodes.length; e++)
-                                (n = (t = b._injectedNodes[e]).parentNode).removeChild(t),
+                                ((n = (t = b._injectedNodes[e]).parentNode).removeChild(t),
                                     n.classList.remove(
                                         _.externalClasses.FOCUSED,
                                         _.externalClasses.INVALID,
                                         _.externalClasses.VALID,
-                                    );
+                                    ));
                         }),
                         this._destructor.registerFunctionForTeardown(function () {
                             L();
                         }),
                         this._destructor.registerFunctionForTeardown(function () {
                             v(b, g(M.prototype).concat(g(T.prototype)));
-                        });
+                        }));
                 }
-                T.createChild(M),
+                (T.createChild(M),
                     (M.prototype._setupLabelFocus = function (e, t) {
                         var n,
                             r,
@@ -5287,8 +5391,8 @@ e.exports = (function e(t, n, r) {
                         var e = this;
                         return new Promise(function (t, n) {
                             e._destructor.teardown(function (r) {
-                                N.sendEvent(e._clientPromise, "custom.hosted-fields.teardown-completed"),
-                                    r ? n(r) : t();
+                                (N.sendEvent(e._clientPromise, "custom.hosted-fields.teardown-completed"),
+                                    r ? n(r) : t());
                             });
                         });
                     }),
@@ -5473,7 +5577,9 @@ e.exports = (function e(t, n, r) {
                                   y.isIos() &&
                                       setTimeout(function () {
                                           var e, t, r;
-                                          (t = Math.floor((e = n.containerElement.getBoundingClientRect()).height / 2)),
+                                          ((t = Math.floor(
+                                              (e = n.containerElement.getBoundingClientRect()).height / 2,
+                                          )),
                                               (r = Math.floor(e.width / 2)),
                                               (e.top <
                                                   (window.innerHeight - t ||
@@ -5483,7 +5589,7 @@ e.exports = (function e(t, n, r) {
                                                   e.left <
                                                       (window.innerWidth - r ||
                                                           document.documentElement.clientWidth - r)) ||
-                                                  n.containerElement.scrollIntoView();
+                                                  n.containerElement.scrollIntoView());
                                       }, 5))
                                 : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
@@ -5508,7 +5614,7 @@ e.exports = (function e(t, n, r) {
                     (M.prototype.getState = function () {
                         return this._state;
                     }),
-                    (t.exports = D.wrapPrototype(M));
+                    (t.exports = D.wrapPrototype(M)));
             },
             {
                 "../../lib/analytics": 138,
@@ -5544,6 +5650,7 @@ e.exports = (function e(t, n, r) {
         ],
         128: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../shared/focus-intercept"),
                     i = e("../shared/constants").navigationDirections;
                 t.exports = function (e, t, n, o) {
@@ -5567,6 +5674,7 @@ e.exports = (function e(t, n, r) {
         ],
         129: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/hosted-fields"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/errors"),
@@ -5581,12 +5689,12 @@ e.exports = (function e(t, n, r) {
                             .then(function () {
                                 var t = new r(e);
                                 return new Promise(function (e, n) {
-                                    t.on("ready", function () {
+                                    (t.on("ready", function () {
                                         e(t);
                                     }),
                                         t.on("timeout", function () {
                                             n(new c(o.HOSTED_FIELDS_TIMEOUT));
-                                        });
+                                        }));
                                 });
                             });
                     }),
@@ -5604,6 +5712,7 @@ e.exports = (function e(t, n, r) {
         ],
         130: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome-os"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -5633,6 +5742,7 @@ e.exports = (function e(t, n, r) {
         ],
         131: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {
@@ -5764,7 +5874,7 @@ e.exports = (function e(t, n, r) {
                             "postal-code": "billing postal-code",
                         },
                     };
-                (o.events = r(
+                ((o.events = r(
                     [
                         "ADD_CLASS",
                         "AUTOFILL_DATA_AVAILABLE",
@@ -5788,12 +5898,13 @@ e.exports = (function e(t, n, r) {
                     ],
                     "hosted-fields:",
                 )),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             { "../../lib/enumerate": 153, "./errors": 132 },
         ],
         132: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     HOSTED_FIELDS_TIMEOUT: {
@@ -5868,9 +5979,10 @@ e.exports = (function e(t, n, r) {
         ],
         133: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
-                    for (var n = e.parentNode, r = []; null != n; )
-                        null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode);
+                    for (var n = e.parentNode, r = []; null != n;)
+                        (null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode));
                     return r;
                 };
             },
@@ -5878,6 +5990,7 @@ e.exports = (function e(t, n, r) {
         ],
         134: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./browser-detection"),
                     i = e("./constants"),
                     o = Object.keys(i.allowedFields),
@@ -5908,14 +6021,14 @@ e.exports = (function e(t, n, r) {
                                   ),
                                   o.classList.add("focus-intercept"),
                                   o.addEventListener("focus", function (e) {
-                                      i(e), r.hasSoftwareKeyboard() || o.blur();
+                                      (i(e), r.hasSoftwareKeyboard() || o.blur());
                                   }),
                                   o)
                                 : document.createDocumentFragment();
                         },
                         destroy: function (e) {
                             var t;
-                            e
+                            (e
                                 ? (t = [document.getElementById(e)])
                                 : ((t = document.querySelectorAll("[data-braintree-direction]")),
                                   (t = [].slice.call(t))),
@@ -5924,7 +6037,7 @@ e.exports = (function e(t, n, r) {
                                         1 === e.nodeType &&
                                         s.matchFocusElement(e.getAttribute("id")) &&
                                         e.parentNode.removeChild(e);
-                                });
+                                }));
                         },
                         matchFocusElement: function (e) {
                             var t, n, r, i;
@@ -5944,6 +6057,7 @@ e.exports = (function e(t, n, r) {
         ],
         135: [
             function (e, t, n) {
+                "use strict";
                 var r = e("credit-card-type");
                 t.exports = function (e) {
                     var t = r(e);
@@ -5959,6 +6073,7 @@ e.exports = (function e(t, n, r) {
         ],
         136: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./american-express"),
                     i = e("./apple-pay"),
                     o = e("./client"),
@@ -6021,6 +6136,7 @@ e.exports = (function e(t, n, r) {
         ],
         137: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./create-authorization-data"),
                     i = e("./json-clone"),
                     o = e("./constants");
@@ -6071,6 +6187,7 @@ e.exports = (function e(t, n, r) {
         ],
         138: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants"),
                     i = e("./add-metadata");
                 t.exports = {
@@ -6108,6 +6225,7 @@ e.exports = (function e(t, n, r) {
         ],
         139: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     loadScript: e("@braintree/asset-loader/load-script"),
                     loadFastlane: e("@paypal/accelerated-checkout-loader").loadAxo,
@@ -6117,6 +6235,7 @@ e.exports = (function e(t, n, r) {
         ],
         140: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     var t, n, r;
                     for (t = 1; t < arguments.length; t++)
@@ -6129,6 +6248,7 @@ e.exports = (function e(t, n, r) {
         ],
         141: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors"),
                     o = "3.112.1";
@@ -6174,6 +6294,7 @@ e.exports = (function e(t, n, r) {
         ],
         142: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./once");
                 t.exports = function (e, t) {
                     var n,
@@ -6185,25 +6306,26 @@ e.exports = (function e(t, n, r) {
                     function c(e) {
                         e ? s(e) : 0 == (a -= 1) && s(null);
                     }
-                    for (i = 0; i < o; i++) (n = e[i]), 0 === n.length ? (n(), c(null)) : n(c);
+                    for (i = 0; i < o; i++) ((n = e[i]), 0 === n.length ? (n(), c(null)) : n(c));
                 };
             },
             { "./once": 176 },
         ],
         143: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./enumerate");
                 function i(e) {
                     if (!i.types.hasOwnProperty(e.type)) throw Error(e.type + " is not a valid type.");
                     if (!e.code) throw Error("Error code required.");
                     if (!e.message) throw Error("Error message required.");
-                    (this.name = "BraintreeError"),
+                    ((this.name = "BraintreeError"),
                         (this.code = e.code),
                         (this.message = e.message),
                         (this.type = e.type),
-                        (this.details = e.details);
+                        (this.details = e.details));
                 }
-                (i.prototype = Object.create(Error.prototype)),
+                ((i.prototype = Object.create(Error.prototype)),
                     (i.prototype.constructor = i),
                     (i.types = r(["CUSTOMER", "MERCHANT", "NETWORK", "INTERNAL", "UNKNOWN"])),
                     (i.findRootError = function (e) {
@@ -6211,12 +6333,13 @@ e.exports = (function e(t, n, r) {
                             ? i.findRootError(e.details.originalError)
                             : e;
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { "./enumerate": 153 },
         ],
         144: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function e(t) {
                     var n;
                     return (
@@ -6234,7 +6357,7 @@ e.exports = (function e(t, n, r) {
                                                   .replace(/([a-z\d])([A-Z])/g, "$1_$2")
                                                   .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2")
                                                   .toLowerCase();
-                                              return "object" == typeof t[r] ? (n[i] = e(t[r])) : (n[i] = t[r]), n;
+                                              return ("object" == typeof t[r] ? (n[i] = e(t[r])) : (n[i] = t[r]), n);
                                           }, {})
                                         : t),
                         n
@@ -6245,6 +6368,7 @@ e.exports = (function e(t, n, r) {
         ],
         145: [
             function (e, t, n) {
+                "use strict";
                 var r = "3.112.1";
                 t.exports = {
                     ANALYTICS_PREFIX: "web.",
@@ -6278,6 +6402,7 @@ e.exports = (function e(t, n, r) {
         ],
         146: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./errors");
                 t.exports = function (e, t) {
@@ -6296,6 +6421,7 @@ e.exports = (function e(t, n, r) {
         ],
         147: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error");
                 t.exports = function (e, t) {
                     return e instanceof r
@@ -6307,6 +6433,7 @@ e.exports = (function e(t, n, r) {
         ],
         148: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants").ASSETS_URLS;
                 t.exports = {
                     create: function (e) {
@@ -6318,6 +6445,7 @@ e.exports = (function e(t, n, r) {
         ],
         149: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/vendor/polyfill").atob,
                     i = e("../lib/constants").CLIENT_API_URLS;
                 t.exports = function (e) {
@@ -6345,6 +6473,7 @@ e.exports = (function e(t, n, r) {
         ],
         150: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error"),
                     i = e("./assets"),
                     o = e("./errors"),
@@ -6395,6 +6524,7 @@ e.exports = (function e(t, n, r) {
         ],
         151: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return function () {
                         var t = arguments;
@@ -6408,11 +6538,12 @@ e.exports = (function e(t, n, r) {
         ],
         152: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./batch-execute-functions");
                 function i() {
-                    (this._teardownRegistry = []), (this._isTearingDown = !1);
+                    ((this._teardownRegistry = []), (this._isTearingDown = !1));
                 }
-                (i.prototype.registerFunctionForTeardown = function (e) {
+                ((i.prototype.registerFunctionForTeardown = function (e) {
                     "function" == typeof e && this._teardownRegistry.push(e);
                 }),
                     (i.prototype.teardown = function (e) {
@@ -6422,23 +6553,24 @@ e.exports = (function e(t, n, r) {
                               r(
                                   this._teardownRegistry,
                                   function (t) {
-                                      (this._teardownRegistry = []),
+                                      ((this._teardownRegistry = []),
                                           (this._isTearingDown = !1),
-                                          "function" == typeof e && e(t);
+                                          "function" == typeof e && e(t));
                                   }.bind(this),
                               ));
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { "./batch-execute-functions": 142 },
         ],
         153: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     return (
                         (t = null == t ? "" : t),
                         e.reduce(function (e, n) {
-                            return (e[n] = t + n), e;
+                            return ((e[n] = t + n), e);
                         }, {})
                     );
                 };
@@ -6447,6 +6579,7 @@ e.exports = (function e(t, n, r) {
         ],
         154: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./braintree-error");
                 t.exports = {
                     INVALID_USE_OF_INTERNAL_FUNCTION: {
@@ -6467,8 +6600,9 @@ e.exports = (function e(t, n, r) {
         ],
         155: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
-                    for (; e.parentNode; ) e = e.parentNode;
+                    for (; e.parentNode;) e = e.parentNode;
                     return e;
                 };
             },
@@ -6476,6 +6610,7 @@ e.exports = (function e(t, n, r) {
         ],
         156: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t, n) {
                     var r;
                     for (r = 0; r < e.length; r++) if (e[r].hasOwnProperty(t) && e[r][t] === n) return e[r];
@@ -6486,6 +6621,7 @@ e.exports = (function e(t, n, r) {
         ],
         157: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./strategies/popup"),
                     i = e("./strategies/popup-bridge"),
                     o = e("./strategies/modal"),
@@ -6510,7 +6646,7 @@ e.exports = (function e(t, n, r) {
                         !/^[\w_]+$/.test(e.name))
                     )
                         throw Error("A valid frame name must be provided");
-                    (this._serviceId = l().replace(/-/g, "")),
+                    ((this._serviceId = l().replace(/-/g, "")),
                         (this._options = {
                             name: e.name + "_" + this._serviceId,
                             dispatchFrameUrl: e.dispatchFrameUrl,
@@ -6522,18 +6658,18 @@ e.exports = (function e(t, n, r) {
                         }),
                         (this.state = e.state || {}),
                         (this._bus = new a({ channel: this._serviceId })),
-                        this._setBusEvents();
+                        this._setBusEvents());
                 }
-                (y.prototype.initialize = function (e) {
+                ((y.prototype.initialize = function (e) {
                     var t = function () {
-                        e(), this._bus.off(s.DISPATCH_FRAME_READY, t);
+                        (e(), this._bus.off(s.DISPATCH_FRAME_READY, t));
                     }.bind(this);
-                    this._bus.on(s.DISPATCH_FRAME_READY, t), this._writeDispatchFrame();
+                    (this._bus.on(s.DISPATCH_FRAME_READY, t), this._writeDispatchFrame());
                 }),
                     (y.prototype._writeDispatchFrame = function () {
                         var e = d.DISPATCH_FRAME_NAME + "_" + this._serviceId,
                             t = this._options.dispatchFrameUrl;
-                        (this._dispatchFrame = u({
+                        ((this._dispatchFrame = u({
                             "aria-hidden": !0,
                             name: e,
                             title: e,
@@ -6543,16 +6679,16 @@ e.exports = (function e(t, n, r) {
                             width: 0,
                             style: { position: "absolute", left: "-9999px" },
                         })),
-                            document.body.appendChild(this._dispatchFrame);
+                            document.body.appendChild(this._dispatchFrame));
                     }),
                     (y.prototype._setBusEvents = function () {
-                        this._bus.on(
+                        (this._bus.on(
                             s.DISPATCH_FRAME_REPORT,
                             function (e, t) {
-                                this._onCompleteCallback && this._onCompleteCallback.call(null, e.err, e.payload),
+                                (this._onCompleteCallback && this._onCompleteCallback.call(null, e.err, e.payload),
                                     this._frame.close(),
                                     (this._onCompleteCallback = null),
-                                    t && t();
+                                    t && t());
                             }.bind(this),
                         ),
                             this._bus.on(
@@ -6560,7 +6696,7 @@ e.exports = (function e(t, n, r) {
                                 function (e) {
                                     e(this.state);
                                 }.bind(this),
-                            );
+                            ));
                     }),
                     (y.prototype.open = function (e, t) {
                         if (
@@ -6575,7 +6711,7 @@ e.exports = (function e(t, n, r) {
                                 this._frame.open(),
                                 this.isFrameClosed())
                             ) {
-                                this._cleanupFrame(), t && t(new p(c.FRAME_SERVICE_FRAME_OPEN_FAILED));
+                                (this._cleanupFrame(), t && t(new p(c.FRAME_SERVICE_FRAME_OPEN_FAILED)));
                                 return;
                             }
                             this._pollForPopupClose();
@@ -6595,10 +6731,10 @@ e.exports = (function e(t, n, r) {
                             (e = e || {}),
                             {
                                 close: function () {
-                                    e.beforeClose && e.beforeClose(), this.close();
+                                    (e.beforeClose && e.beforeClose(), this.close());
                                 }.bind(this),
                                 focus: function () {
-                                    e.beforeFocus && e.beforeFocus(), this.focus();
+                                    (e.beforeFocus && e.beforeFocus(), this.focus());
                                 }.bind(this),
                             }
                         );
@@ -6607,16 +6743,16 @@ e.exports = (function e(t, n, r) {
                         return { close: f, focus: f };
                     }),
                     (y.prototype.teardown = function () {
-                        this.close(),
+                        (this.close(),
                             this._dispatchFrame.parentNode.removeChild(this._dispatchFrame),
                             (this._dispatchFrame = null),
-                            this._cleanupFrame();
+                            this._cleanupFrame());
                     }),
                     (y.prototype.isFrameClosed = function () {
                         return null == this._frame || this._frame.isClosed();
                     }),
                     (y.prototype._cleanupFrame = function () {
-                        (this._frame = null), clearInterval(this._popupInterval), (this._popupInterval = null);
+                        ((this._frame = null), clearInterval(this._popupInterval), (this._popupInterval = null));
                     }),
                     (y.prototype._pollForPopupClose = function () {
                         return (
@@ -6638,7 +6774,7 @@ e.exports = (function e(t, n, r) {
                             a = E({}, this._options, e);
                         return n ? new i(a) : t ? new r(a) : new o(a);
                     }),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 "../../braintree-error": 143,
@@ -6658,6 +6794,7 @@ e.exports = (function e(t, n, r) {
         ],
         158: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./frame-service");
                 t.exports = {
                     create: function (e, t) {
@@ -6672,6 +6809,7 @@ e.exports = (function e(t, n, r) {
         ],
         159: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/iframer"),
                     i = e("../../../assign").assign,
                     o = e("../../shared/browser-detection"),
@@ -6689,12 +6827,12 @@ e.exports = (function e(t, n, r) {
                     };
                 function s() {}
                 function c(e) {
-                    (this._closed = null),
+                    ((this._closed = null),
                         (this._frame = null),
                         (this._options = e || {}),
-                        (this._container = this._options.container || document.body);
+                        (this._container = this._options.container || document.body));
                 }
-                (c.prototype.initialize = s),
+                ((c.prototype.initialize = s),
                     (c.prototype.open = function () {
                         var e = {
                             src: this._options.openFrameUrl,
@@ -6705,7 +6843,7 @@ e.exports = (function e(t, n, r) {
                             style: i({}, a),
                             title: "Lightbox Frame",
                         };
-                        o.isIos()
+                        (o.isIos()
                             ? (o.isIosWKWebview() && (this._lockScrolling(), (e.style = {})),
                               (this._el = document.createElement("div")),
                               i(this._el.style, a, {
@@ -6718,14 +6856,14 @@ e.exports = (function e(t, n, r) {
                               this._el.appendChild(this._frame))
                             : (this._el = this._frame = r(e)),
                             (this._closed = !1),
-                            this._container.appendChild(this._el);
+                            this._container.appendChild(this._el));
                     }),
                     (c.prototype.focus = s),
                     (c.prototype.close = function () {
-                        this._container.removeChild(this._el),
+                        (this._container.removeChild(this._el),
                             (this._frame = null),
                             (this._closed = !0),
-                            o.isIosWKWebview() && this._unlockScrolling();
+                            o.isIosWKWebview() && this._unlockScrolling());
                     }),
                     (c.prototype.isClosed = function () {
                         return !!this._closed;
@@ -6734,14 +6872,14 @@ e.exports = (function e(t, n, r) {
                         this._frame.src = e;
                     }),
                     (c.prototype._unlockScrolling = function () {
-                        (document.body.style.overflow = this._savedBodyProperties.overflowStyle),
+                        ((document.body.style.overflow = this._savedBodyProperties.overflowStyle),
                             (document.body.style.position = this._savedBodyProperties.positionStyle),
                             window.scrollTo(this._savedBodyProperties.left, this._savedBodyProperties.top),
-                            delete this._savedBodyProperties;
+                            delete this._savedBodyProperties);
                     }),
                     (c.prototype._lockScrolling = function () {
                         var e = document.documentElement;
-                        (this._savedBodyProperties = {
+                        ((this._savedBodyProperties = {
                             left: (window.pageXOffset || e.scrollLeft) - (e.clientLeft || 0),
                             top: (window.pageYOffset || e.scrollTop) - (e.clientTop || 0),
                             overflowStyle: document.body.style.overflow,
@@ -6749,21 +6887,22 @@ e.exports = (function e(t, n, r) {
                         }),
                             (document.body.style.overflow = "hidden"),
                             (document.body.style.position = "fixed"),
-                            window.scrollTo(0, 0);
+                            window.scrollTo(0, 0));
                     }),
-                    (t.exports = c);
+                    (t.exports = c));
             },
             { "../../../assign": 140, "../../shared/browser-detection": 164, "@braintree/iframer": 32 },
         ],
         160: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../braintree-error"),
                     i = e("../../shared/errors");
                 function o() {}
                 function a(e) {
-                    (this._closed = null), (this._options = e);
+                    ((this._closed = null), (this._options = e));
                 }
-                (a.prototype.initialize = function (e) {
+                ((a.prototype.initialize = function (e) {
                     var t = this;
                     window.popupBridge.onComplete = function (n, o) {
                         var a = !o && !n;
@@ -6772,9 +6911,9 @@ e.exports = (function e(t, n, r) {
                 }),
                     (a.prototype.open = function (e) {
                         var t;
-                        (t = (e = e || {}).openFrameUrl || this._options.openFrameUrl),
+                        ((t = (e = e || {}).openFrameUrl || this._options.openFrameUrl),
                             (this._closed = !1),
-                            window.popupBridge.open(t);
+                            window.popupBridge.open(t));
                     }),
                     (a.prototype.focus = o),
                     (a.prototype.close = o),
@@ -6784,12 +6923,13 @@ e.exports = (function e(t, n, r) {
                     (a.prototype.redirect = function (e) {
                         this.open({ openFrameUrl: e });
                     }),
-                    (t.exports = a);
+                    (t.exports = a));
             },
             { "../../../braintree-error": 143, "../../shared/errors": 166 },
         ],
         161: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../shared/constants"),
                     i = e("./position");
                 function o(e, t, n) {
@@ -6807,11 +6947,12 @@ e.exports = (function e(t, n, r) {
         ],
         162: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./compose-options");
                 function i(e) {
-                    (this._frame = null), (this._options = e || {});
+                    ((this._frame = null), (this._options = e || {}));
                 }
-                (i.prototype.initialize = function () {}),
+                ((i.prototype.initialize = function () {}),
                     (i.prototype.open = function () {
                         this._frame = window.open(this._options.openFrameUrl, this._options.name, r(this._options));
                     }),
@@ -6827,12 +6968,13 @@ e.exports = (function e(t, n, r) {
                     (i.prototype.redirect = function (e) {
                         this._frame.location.href = e;
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { "./compose-options": 161 },
         ],
         163: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     top: function (e) {
                         var t;
@@ -6857,6 +6999,7 @@ e.exports = (function e(t, n, r) {
         ],
         164: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     isIos: e("@braintree/browser-detection/is-ios"),
                     isIosWKWebview: e("@braintree/browser-detection/is-ios-wkwebview"),
@@ -6871,6 +7014,7 @@ e.exports = (function e(t, n, r) {
         ],
         165: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     DISPATCH_FRAME_NAME: "dispatch",
                     DISPATCH_FRAME_CLASS: "braintree-dispatch-frame",
@@ -6885,6 +7029,7 @@ e.exports = (function e(t, n, r) {
         ],
         166: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../braintree-error");
                 t.exports = {
                     FRAME_SERVICE_FRAME_CLOSED: {
@@ -6903,12 +7048,14 @@ e.exports = (function e(t, n, r) {
         ],
         167: [
             function (e, t, n) {
+                "use strict";
                 t.exports = e("../../enumerate")(["DISPATCH_FRAME_READY", "DISPATCH_FRAME_REPORT"], "frameService:");
             },
             { "../../enumerate": 153 },
         ],
         168: [
             function (e, t, n) {
+                "use strict";
                 var r = "3.112.1",
                     i = e("./assign").assign;
                 function o(e, t) {
@@ -7006,6 +7153,7 @@ e.exports = (function e(t, n, r) {
         ],
         169: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     e = e || window;
                     try {
@@ -7019,6 +7167,7 @@ e.exports = (function e(t, n, r) {
         ],
         170: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
                     var t = e.split("-");
                     return new Date(t[0], t[1], t[2]);
@@ -7031,6 +7180,7 @@ e.exports = (function e(t, n, r) {
         ],
         171: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return e && e.hasOwnProperty("fastlane") && e.fastlane;
                 };
@@ -7039,6 +7189,7 @@ e.exports = (function e(t, n, r) {
         ],
         172: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     isHTTPS: function (e) {
                         return "https:" === (e = e || window.location.protocol);
@@ -7049,6 +7200,7 @@ e.exports = (function e(t, n, r) {
         ],
         173: [
             function (e, t, n) {
+                "use strict";
                 var r,
                     i = {
                         "paypal.com": 1,
@@ -7071,6 +7223,7 @@ e.exports = (function e(t, n, r) {
         ],
         174: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return JSON.parse(JSON.stringify(e));
                 };
@@ -7079,6 +7232,7 @@ e.exports = (function e(t, n, r) {
         ],
         175: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return Object.keys(e).filter(function (t) {
                         return "function" == typeof e[t];
@@ -7089,6 +7243,7 @@ e.exports = (function e(t, n, r) {
         ],
         176: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     var t = !1;
                     return function () {
@@ -7100,8 +7255,9 @@ e.exports = (function e(t, n, r) {
         ],
         177: [
             function (e, t, n) {
+                "use strict";
                 function r(e) {
-                    return (e = e || window.location.href), /\?/.test(e);
+                    return ((e = e || window.location.href), /\?/.test(e));
                 }
                 function i(e, t) {
                     var n,
@@ -7134,7 +7290,7 @@ e.exports = (function e(t, n, r) {
                                       var n = t.split("="),
                                           r = decodeURIComponent(n[0]),
                                           i = decodeURIComponent(n[1]);
-                                      return (e[r] = i), e;
+                                      return ((e[r] = i), e);
                                   }, {})
                             : {};
                     },
@@ -7162,6 +7318,7 @@ e.exports = (function e(t, n, r) {
         ],
         178: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/uuid"),
                     i = e("./find-root-node");
                 function o(e) {
@@ -7196,6 +7353,7 @@ e.exports = (function e(t, n, r) {
         ],
         179: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return -1 === e.indexOf("_")
                         ? e
@@ -7208,6 +7366,7 @@ e.exports = (function e(t, n, r) {
         ],
         180: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./querystring");
                 t.exports = {
                     getUrlParams: function () {
@@ -7219,6 +7378,7 @@ e.exports = (function e(t, n, r) {
         ],
         181: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e) {
                     return e ? "" : ".min";
                 };
@@ -7227,6 +7387,7 @@ e.exports = (function e(t, n, r) {
         ],
         182: [
             function (e, t, n) {
+                "use strict";
                 var r = "function" == typeof atob ? atob : i;
                 function i(e) {
                     var t,
@@ -7245,7 +7406,7 @@ e.exports = (function e(t, n, r) {
                     if (!d.test(e)) throw Error("Non base64 encoded input passed to window.atob polyfill");
                     c = 0;
                     do
-                        (i = l.indexOf(e.charAt(c++))),
+                        ((i = l.indexOf(e.charAt(c++))),
                             (o = l.indexOf(e.charAt(c++))),
                             (a = l.indexOf(e.charAt(c++))),
                             (s = l.indexOf(e.charAt(c++))),
@@ -7255,7 +7416,7 @@ e.exports = (function e(t, n, r) {
                             (u +=
                                 String.fromCharCode(t) +
                                 (n ? String.fromCharCode(n) : "") +
-                                (r ? String.fromCharCode(r) : ""));
+                                (r ? String.fromCharCode(r) : "")));
                     while (c < e.length);
                     return u;
                 }
@@ -7270,6 +7431,7 @@ e.exports = (function e(t, n, r) {
         ],
         183: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS_FOR_START_PAYMENT: [
                         "givenName",
@@ -7315,6 +7477,7 @@ e.exports = (function e(t, n, r) {
         ],
         184: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/use-min"),
@@ -7330,7 +7493,7 @@ e.exports = (function e(t, n, r) {
                     h = e("../shared/errors"),
                     m = e("../../lib/assign").assign;
                 function f(e) {
-                    (this._client = e.client),
+                    ((this._client = e.client),
                         (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + "/web/3.112.1"),
                         (this._isDebug = e.client.getConfiguration().isDebug),
                         (this._loadingFrameUrl =
@@ -7338,7 +7501,7 @@ e.exports = (function e(t, n, r) {
                         (this._authorizationInProgress = !1),
                         (this._paymentType = "unknown"),
                         (this._merchantAccountId = e.merchantAccountId),
-                        e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0));
+                        e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0)));
                 }
                 function y(e) {
                     var t = e.blikOptions || {},
@@ -7347,7 +7510,7 @@ e.exports = (function e(t, n, r) {
                         ? t.hasOwnProperty("level_0") || t.hasOwnProperty("oneClick")
                         : ["pay_upon_invoice", "mbway", "bancomatpay"].includes(n);
                 }
-                (u.suppressUnhandledPromiseMessage = !0),
+                ((u.suppressUnhandledPromiseMessage = !0),
                     (f.prototype._initialize = function () {
                         var e = this,
                             t = this._client,
@@ -7362,10 +7525,10 @@ e.exports = (function e(t, n, r) {
                                     openFrameUrl: e._loadingFrameUrl,
                                 },
                                 function (r) {
-                                    (e._frameService = r),
+                                    ((e._frameService = r),
                                         clearTimeout(n),
                                         s.sendEvent(t, "local-payment.load.succeeded"),
-                                        i(e);
+                                        i(e));
                                 },
                             );
                         });
@@ -7587,7 +7750,7 @@ e.exports = (function e(t, n, r) {
                                     .request({ method: "post", endpoint: "local_payments/create", data: c })
                                     .then(function (t) {
                                         var n = t.paymentResource.redirectUrl;
-                                        O._isRedirectFlow
+                                        (O._isRedirectFlow
                                             ? s.sendEvent(
                                                   O._client,
                                                   O._paymentType + ".local-payment.start-payment.redirected",
@@ -7619,7 +7782,7 @@ e.exports = (function e(t, n, r) {
                                                         function () {
                                                             O._frameService.redirect(t.paymentResource.redirectUrl);
                                                         },
-                                                    );
+                                                    ));
                                     })
                                     .catch(function (e) {
                                         var t = e.details && e.details.httpStatus;
@@ -7701,12 +7864,12 @@ e.exports = (function e(t, n, r) {
                                     });
                     }),
                     (f.prototype.closeWindow = function () {
-                        this._authoriztionInProgress &&
+                        (this._authoriztionInProgress &&
                             s.sendEvent(
                                 this._client,
                                 this._paymentType + ".local-payment.start-payment.closed.by-merchant",
                             ),
-                            this._frameService.close();
+                            this._frameService.close());
                     }),
                     (f.prototype.focusWindow = function () {
                         this._frameService.focus();
@@ -7718,12 +7881,12 @@ e.exports = (function e(t, n, r) {
                             if (((n._authorizationInProgress = !1), o))
                                 if ("FRAME_SERVICE_FRAME_CLOSED" === o.code) {
                                     if (a && "processing_error" === a.errorcode) {
-                                        s.sendEvent(r, n._paymentType + ".local-payment.failed-in-window"),
-                                            t(new i(h.LOCAL_PAYMENT_START_PAYMENT_FAILED));
+                                        (s.sendEvent(r, n._paymentType + ".local-payment.failed-in-window"),
+                                            t(new i(h.LOCAL_PAYMENT_START_PAYMENT_FAILED)));
                                         return;
                                     }
-                                    s.sendEvent(r, n._paymentType + ".local-payment.tokenization.closed.by-user"),
-                                        t(new i(h.LOCAL_PAYMENT_WINDOW_CLOSED));
+                                    (s.sendEvent(r, n._paymentType + ".local-payment.tokenization.closed.by-user"),
+                                        t(new i(h.LOCAL_PAYMENT_WINDOW_CLOSED)));
                                 } else
                                     o.code &&
                                         o.code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1 &&
@@ -7784,7 +7947,7 @@ e.exports = (function e(t, n, r) {
                             Promise.resolve()
                         );
                     }),
-                    (t.exports = _.wrapPrototype(f));
+                    (t.exports = _.wrapPrototype(f)));
             },
             {
                 "../../lib/analytics": 138,
@@ -7805,6 +7968,7 @@ e.exports = (function e(t, n, r) {
         ],
         185: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -7839,10 +8003,10 @@ e.exports = (function e(t, n, r) {
                                           ? n
                                                 .tokenize(i)
                                                 .then(function (e) {
-                                                    return (n.tokenizePayload = e), n;
+                                                    return ((n.tokenizePayload = e), n);
                                                 })
                                                 .catch(function (e) {
-                                                    return console.log("Error while tokenizing: ", e), n;
+                                                    return (console.log("Error while tokenizing: ", e), n);
                                                 })
                                           : n
                                       : n._initialize();
@@ -7865,6 +8029,7 @@ e.exports = (function e(t, n, r) {
         ],
         186: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     LOCAL_PAYMENT_NOT_ENABLED: {
@@ -7924,6 +8089,7 @@ e.exports = (function e(t, n, r) {
         ],
         187: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -7936,16 +8102,16 @@ e.exports = (function e(t, n, r) {
                     p = e("../../lib/constants").INTEGRATION_TIMEOUT_MS;
                 function _(e) {
                     var t = e.client.getConfiguration();
-                    (this._client = e.client),
+                    ((this._client = e.client),
                         (this._assetsUrl = t.gatewayConfiguration.assetsUrl + "/web/3.112.1"),
                         (this._isDebug = t.isDebug),
                         (this._authInProgress = !1),
                         window.popupBridge && "function" == typeof window.popupBridge.getReturnUrlPrefix
                             ? (this._callbackUrl = window.popupBridge.getReturnUrlPrefix() + "return")
                             : (this._callbackUrl =
-                                  this._assetsUrl + "/html/redirect-frame" + (this._isDebug ? "" : ".min") + ".html");
+                                  this._assetsUrl + "/html/redirect-frame" + (this._isDebug ? "" : ".min") + ".html"));
                 }
-                (_.prototype._initialize = function () {
+                ((_.prototype._initialize = function () {
                     var e = this;
                     return new Promise(function (t) {
                         var n = setTimeout(function () {
@@ -7965,10 +8131,10 @@ e.exports = (function e(t, n, r) {
                                     ".html",
                             },
                             function (r) {
-                                (e._frameService = r),
+                                ((e._frameService = r),
                                     clearTimeout(n),
                                     c.sendEvent(e._client, "masterpass.load.succeeded"),
-                                    t(e);
+                                    t(e));
                             },
                         );
                     });
@@ -7986,8 +8152,8 @@ e.exports = (function e(t, n, r) {
                             : t._authInProgress
                               ? Promise.reject(new i(o.MASTERPASS_TOKENIZATION_ALREADY_IN_PROGRESS))
                               : new Promise(function (n, r) {
-                                    t._navigateFrameToLoadingPage(e).catch(r),
-                                        t._frameService.open(e.frameOptions, t._createFrameOpenHandler(n, r));
+                                    (t._navigateFrameToLoadingPage(e).catch(r),
+                                        t._frameService.open(e.frameOptions, t._createFrameOpenHandler(n, r)));
                                 });
                     }),
                     (_.prototype._navigateFrameToLoadingPage = function (e) {
@@ -8016,7 +8182,7 @@ e.exports = (function e(t, n, r) {
                                             ".html?",
                                         o = t._client.getConfiguration().gatewayConfiguration,
                                         a = e.config || {};
-                                    (r = {
+                                    ((r = {
                                         environment: o.environment,
                                         requestToken: n.requestToken,
                                         callbackUrl: t._callbackUrl,
@@ -8032,7 +8198,7 @@ e.exports = (function e(t, n, r) {
                                                 return e + "=" + r[e];
                                             })
                                             .join("&")),
-                                        t._frameService.redirect(i);
+                                        t._frameService.redirect(i));
                                 })
                                 .catch(function (e) {
                                     var n = e.details && e.details.httpStatus;
@@ -8047,13 +8213,13 @@ e.exports = (function e(t, n, r) {
                         return window.popupBridge
                             ? function (r, a) {
                                   if (((n._authInProgress = !1), r)) {
-                                      c.sendEvent(n._client, "masterpass.tokenization.closed-popupbridge.by-user"),
-                                          t(l(r, o.MASTERPASS_POPUP_CLOSED));
+                                      (c.sendEvent(n._client, "masterpass.tokenization.closed-popupbridge.by-user"),
+                                          t(l(r, o.MASTERPASS_POPUP_CLOSED)));
                                       return;
                                   }
                                   if (!a.queryItems) {
-                                      c.sendEvent(n._client, "masterpass.tokenization.failed-popupbridge"),
-                                          t(new i(o.MASTERPASS_FLOW_FAILED));
+                                      (c.sendEvent(n._client, "masterpass.tokenization.failed-popupbridge"),
+                                          t(new i(o.MASTERPASS_FLOW_FAILED)));
                                       return;
                                   }
                                   n._tokenizeMasterpass(a.queryItems).then(e).catch(t);
@@ -8061,12 +8227,12 @@ e.exports = (function e(t, n, r) {
                             : function (r, a) {
                                   if (r) {
                                       if (((n._authInProgress = !1), "FRAME_SERVICE_FRAME_CLOSED" === r.code)) {
-                                          c.sendEvent(n._client, "masterpass.tokenization.closed.by-user"),
-                                              t(new i(o.MASTERPASS_POPUP_CLOSED));
+                                          (c.sendEvent(n._client, "masterpass.tokenization.closed.by-user"),
+                                              t(new i(o.MASTERPASS_POPUP_CLOSED)));
                                           return;
                                       }
                                       if (r.code && r.code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1) {
-                                          c.sendEvent(n._client, "masterpass.tokenization.failed.to-open"),
+                                          (c.sendEvent(n._client, "masterpass.tokenization.failed.to-open"),
                                               t(
                                                   new i({
                                                       code: o.MASTERPASS_POPUP_OPEN_FAILED.code,
@@ -8074,12 +8240,12 @@ e.exports = (function e(t, n, r) {
                                                       message: o.MASTERPASS_POPUP_OPEN_FAILED.message,
                                                       details: { originalError: r },
                                                   }),
-                                              );
+                                              ));
                                           return;
                                       }
-                                      c.sendEvent(n._client, "masterpass.tokenization.failed"),
+                                      (c.sendEvent(n._client, "masterpass.tokenization.failed"),
                                           n._closeWindow(),
-                                          t(l(r, o.MASTERPASS_FLOW_FAILED));
+                                          t(l(r, o.MASTERPASS_FLOW_FAILED)));
                                       return;
                                   }
                                   n._tokenizeMasterpass(a).then(e).catch(t);
@@ -8130,18 +8296,18 @@ e.exports = (function e(t, n, r) {
                                     });
                     }),
                     (_.prototype._closeWindow = function () {
-                        (this._authInProgress = !1), this._frameService.close();
+                        ((this._authInProgress = !1), this._frameService.close());
                     }),
                     (_.prototype.teardown = function () {
                         var e = this;
                         return new Promise(function (t) {
-                            e._frameService.teardown(),
+                            (e._frameService.teardown(),
                                 d(e, a(_.prototype)),
                                 c.sendEvent(e._client, "masterpass.teardown-completed"),
-                                t();
+                                t());
                         });
                     }),
-                    (t.exports = s.wrapPrototype(_));
+                    (t.exports = s.wrapPrototype(_)));
             },
             {
                 "../../lib/analytics": 138,
@@ -8158,6 +8324,7 @@ e.exports = (function e(t, n, r) {
         ],
         188: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./shared/browser-detection"),
@@ -8210,12 +8377,14 @@ e.exports = (function e(t, n, r) {
         ],
         189: [
             function (e, t, n) {
+                "use strict";
                 t.exports = { supportsPopups: e("@braintree/browser-detection/supports-popups") };
             },
             { "@braintree/browser-detection/supports-popups": 29 },
         ],
         190: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreemasterpasslanding",
                     POPUP_WIDTH: 450,
@@ -8228,6 +8397,7 @@ e.exports = (function e(t, n, r) {
         ],
         191: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     MASTERPASS_BROWSER_NOT_SUPPORTED: {
@@ -8288,6 +8458,7 @@ e.exports = (function e(t, n, r) {
         ],
         192: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/assign").assign,
                     o = e("framebus"),
@@ -8315,7 +8486,7 @@ e.exports = (function e(t, n, r) {
                     };
                 function A(e) {
                     var t = e.enabledPaymentMethods || {};
-                    p.call(this),
+                    (p.call(this),
                         (this._componentId = d()),
                         (this._client = e.client),
                         (this._enabledPaymentMethods = {
@@ -8330,9 +8501,9 @@ e.exports = (function e(t, n, r) {
                                 return this._supportedPaymentMethods[e];
                             }.bind(this),
                         )),
-                        (this._bus = new o({ channel: this._componentId }));
+                        (this._bus = new o({ channel: this._componentId })));
                 }
-                p.createChild(A),
+                (p.createChild(A),
                     (A.prototype._constructDefaultSupportedPaymentMethods = function () {
                         var e = this._client.getConfiguration(),
                             t = e.gatewayConfiguration.androidPay,
@@ -8346,7 +8517,7 @@ e.exports = (function e(t, n, r) {
                                     supportedMethods: "basic-card",
                                     data: {
                                         supportedNetworks: n.supportedCardTypes.reduce(function (e, t) {
-                                            return t in y && e.push(y[t]), e;
+                                            return (t in y && e.push(y[t]), e);
                                         }, []),
                                     },
                                 }),
@@ -8376,11 +8547,11 @@ e.exports = (function e(t, n, r) {
                             ? Promise.reject(new _(m.PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS))
                             : new Promise(function (n) {
                                   var i, o;
-                                  t._bus.on(h.FRAME_READY, function (e) {
+                                  (t._bus.on(h.FRAME_READY, function (e) {
                                       e(t._client);
                                   }),
                                       t._bus.on(h.FRAME_CAN_MAKE_REQUESTS, function () {
-                                          r.sendEvent(t._client, "payment-request.initialized"),
+                                          (r.sendEvent(t._client, "payment-request.initialized"),
                                               t._bus.on(h.SHIPPING_ADDRESS_CHANGE, function (e) {
                                                   var n = {
                                                       target: { shippingAddress: e },
@@ -8388,8 +8559,8 @@ e.exports = (function e(t, n, r) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_ADDRESS, e);
                                                       },
                                                   };
-                                                  t._emit("shippingAddressChange", n),
-                                                      t._emit("shippingaddresschange", n);
+                                                  (t._emit("shippingAddressChange", n),
+                                                      t._emit("shippingaddresschange", n));
                                               }),
                                               t._bus.on(h.SHIPPING_OPTION_CHANGE, function (e) {
                                                   var n = {
@@ -8398,16 +8569,16 @@ e.exports = (function e(t, n, r) {
                                                           t._bus.emit(h.UPDATE_SHIPPING_OPTION, e);
                                                       },
                                                   };
-                                                  t._emit("shippingOptionChange", n),
-                                                      t._emit("shippingoptionchange", n);
+                                                  (t._emit("shippingOptionChange", n),
+                                                      t._emit("shippingoptionchange", n));
                                               }),
-                                              n(t);
+                                              n(t));
                                       }),
                                       (t._frame.src =
                                           ((i = e.gatewayConfiguration.assetsUrl),
                                           (o = t._componentId),
                                           i + "/web/3.112.1/html/payment-request-frame" + l(e.isDebug) + ".html#" + o)),
-                                      document.body.appendChild(t._frame);
+                                      document.body.appendChild(t._frame));
                               });
                     }),
                     (A.prototype.createSupportedPaymentMethodsConfiguration = function (e, t) {
@@ -8420,7 +8591,7 @@ e.exports = (function e(t, n, r) {
                             throw new _(
                                 m.PAYMENT_REQUEST_CREATE_SUPPORTED_PAYMENT_METHODS_CONFIGURATION_TYPE_NOT_ENABLED,
                             );
-                        return ((n = i({}, this._supportedPaymentMethods[e])).data = i({}, n.data, t)), n;
+                        return (((n = i({}, this._supportedPaymentMethods[e])).data = i({}, n.data, t)), n);
                     }),
                     (A.prototype.tokenize = function (e) {
                         var t = this;
@@ -8549,7 +8720,7 @@ e.exports = (function e(t, n, r) {
                                     details: { originalError: e },
                                 });
                         }
-                        return r.sendEvent(this._client, "payment-request.tokenize.failed"), t;
+                        return (r.sendEvent(this._client, "payment-request.tokenize.failed"), t);
                     }),
                     (A.prototype._formatCanMakePaymentError = function (e) {
                         var t;
@@ -8578,9 +8749,9 @@ e.exports = (function e(t, n, r) {
                                     details: { originalError: e },
                                 });
                         }
-                        return r.sendEvent(this._client, "payment-request.can-make-payment.failed"), t;
+                        return (r.sendEvent(this._client, "payment-request.can-make-payment.failed"), t);
                     }),
-                    (t.exports = f.wrapPrototype(A));
+                    (t.exports = f.wrapPrototype(A)));
             },
             {
                 "../../lib/analytics": 138,
@@ -8600,6 +8771,7 @@ e.exports = (function e(t, n, r) {
         ],
         193: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/payment-request"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -8619,7 +8791,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), new r(e).initialize();
+                                return ((e.client = t), new r(e).initialize());
                             });
                     }),
                     VERSION: "3.112.1",
@@ -8635,10 +8807,11 @@ e.exports = (function e(t, n, r) {
         ],
         194: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/enumerate"),
                     i = e("./errors"),
                     o = {};
-                (o.events = r(
+                ((o.events = r(
                     [
                         "CAN_MAKE_PAYMENT",
                         "FRAME_READY",
@@ -8653,12 +8826,13 @@ e.exports = (function e(t, n, r) {
                 )),
                     (o.errors = i),
                     (o.SUPPORTED_METHODS = { "basic-card": !0, "https://google.com/pay": !0 }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             { "../../lib/enumerate": 153, "./errors": 195 },
         ],
         195: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYMENT_REQUEST_NO_VALID_SUPPORTED_PAYMENT_METHODS: {
@@ -8721,6 +8895,7 @@ e.exports = (function e(t, n, r) {
         ],
         196: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -8790,6 +8965,7 @@ e.exports = (function e(t, n, r) {
         ],
         197: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("@braintree/wrap-promise"),
                     o = e("./paypal-checkout");
@@ -8811,6 +8987,7 @@ e.exports = (function e(t, n, r) {
         ],
         198: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/assign").assign,
                     o = e("../lib/create-deferred-client"),
@@ -8831,10 +9008,10 @@ e.exports = (function e(t, n, r) {
                     T = e("../lib/constants").INTEGRATION_TIMEOUT_MS,
                     I = ["amount", "currency", "vaultInitiatedCheckoutPaymentMethodToken"];
                 function N(e) {
-                    (this._merchantAccountId = e.merchantAccountId),
-                        (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken);
+                    ((this._merchantAccountId = e.merchantAccountId),
+                        (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken));
                 }
-                (s.suppressUnhandledPromiseMessage = !0),
+                ((s.suppressUnhandledPromiseMessage = !0),
                     (N.prototype._initialize = function (e) {
                         var t;
                         return (e.client
@@ -8885,8 +9062,8 @@ e.exports = (function e(t, n, r) {
                         var t = new s(),
                             n = e.getConfiguration(),
                             i = setTimeout(function () {
-                                r.sendEvent(e, "paypal-checkout.frame-service.timed-out"),
-                                    t.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
+                                (r.sendEvent(e, "paypal-checkout.frame-service.timed-out"),
+                                    t.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED)));
                             }, T);
                         return (
                             (this._assetsUrl = n.gatewayConfiguration.paypal.assetsUrl + "/web/3.112.1"),
@@ -8901,7 +9078,7 @@ e.exports = (function e(t, n, r) {
                                     openFrameUrl: this._loadingFrameUrl,
                                 },
                                 function (e) {
-                                    (this._frameService = e), clearTimeout(i), t.resolve();
+                                    ((this._frameService = e), clearTimeout(i), t.resolve());
                                 }.bind(this),
                             ),
                             t
@@ -8934,7 +9111,7 @@ e.exports = (function e(t, n, r) {
                                             data: n._formatPaymentResourceData(e, t),
                                         })
                                         .then(function (t) {
-                                            return (n.intentFromCreatePayment = e.intent), t;
+                                            return ((n.intentFromCreatePayment = e.intent), t);
                                         });
                                 })
                                 .catch(function (e) {
@@ -9045,9 +9222,9 @@ e.exports = (function e(t, n, r) {
                                                 })
                                                 .then(function (e) {
                                                     var r = e.paymentResource.redirectUrl;
-                                                    return n._frameService.redirect(r), t;
+                                                    return (n._frameService.redirect(r), t);
                                                 });
-                                        return n._frameService.open({}, n._createFrameServiceCallback(t)), r;
+                                        return (n._frameService.open({}, n._createFrameServiceCallback(t)), r);
                                     })
                                     .catch(function (e) {
                                         return ((n._vaultInitiatedCheckoutInProgress = !1),
@@ -9255,7 +9432,7 @@ e.exports = (function e(t, n, r) {
                             ),
                             (e["client-id"] ? Promise.resolve(e["client-id"]) : this.getClientId()).then(
                                 function (t) {
-                                    (e["client-id"] = t),
+                                    ((e["client-id"] = t),
                                         this._autoSetDataUserIdToken &&
                                             r &&
                                             (this._paypalScript.setAttribute("data-user-id-token", r),
@@ -9267,7 +9444,10 @@ e.exports = (function e(t, n, r) {
                                                 merchantId: e["merchant-id"],
                                             })),
                                         (this._paypalScript.src = y.queryify("https://www.paypal.com/sdk/js?", e)),
-                                        document.head.insertBefore(this._paypalScript, document.head.firstElementChild);
+                                        document.head.insertBefore(
+                                            this._paypalScript,
+                                            document.head.firstElementChild,
+                                        ));
                                 }.bind(this),
                             ),
                             t.then(
@@ -9287,11 +9467,11 @@ e.exports = (function e(t, n, r) {
                                 "production" === i ? "" : "sandbox.",
                             ),
                             a = { "client-id": n, "user-id-token": r };
-                        e.amount && (a.amount = e.amount),
+                        (e.amount && (a.amount = e.amount),
                             e.currency && (a.currency = e.currency),
                             e.merchantId && (a["merchant-id"] = e.merchantId),
                             (t = new XMLHttpRequest()).open("GET", y.queryify(o, a)),
-                            t.send();
+                            t.send());
                     }),
                     (N.prototype._formatPaymentResourceData = function (e, t) {
                         var n,
@@ -9327,11 +9507,11 @@ e.exports = (function e(t, n, r) {
                             e.hasOwnProperty("billingAgreementDetails") &&
                                 (o.billingAgreementDetails = e.billingAgreementDetails);
                         } else
-                            (o.shippingAddress = e.shippingAddressOverride),
+                            ((o.shippingAddress = e.shippingAddressOverride),
                                 e.billingAgreementDescription && (o.description = e.billingAgreementDescription),
                                 e.planType &&
                                     ((o.plan_type = e.planType),
-                                    e.planMetadata && (o.plan_metadata = A(e.planMetadata)));
+                                    e.planMetadata && (o.plan_metadata = A(e.planMetadata))));
                         return (
                             (this._riskCorrelationId = e.riskCorrelationId),
                             e.riskCorrelationId && (o.correlationId = this._riskCorrelationId),
@@ -9439,7 +9619,7 @@ e.exports = (function e(t, n, r) {
                                 })
                         );
                     }),
-                    (t.exports = c.wrapPrototype(N));
+                    (t.exports = c.wrapPrototype(N)));
             },
             {
                 "../lib/analytics": 138,
@@ -9464,6 +9644,7 @@ e.exports = (function e(t, n, r) {
         ],
         199: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/braintree-error"),
                     o = e("../../lib/convert-to-braintree-error"),
@@ -9480,15 +9661,15 @@ e.exports = (function e(t, n, r) {
                     m = e("../../lib/querystring"),
                     f = e("@braintree/wrap-promise");
                 function y(e) {
-                    (this._client = e.client),
+                    ((this._client = e.client),
                         (this._assetsUrl =
                             e.client.getConfiguration().gatewayConfiguration.paypal.assetsUrl + "/web/" + c),
                         (this._isDebug = e.client.getConfiguration().isDebug),
                         (this._loadingFrameUrl =
                             this._assetsUrl + "/html/paypal-landing-frame" + a(this._isDebug) + ".html"),
-                        (this._authorizationInProgress = !1);
+                        (this._authorizationInProgress = !1));
                 }
-                (y.prototype._initialize = function () {
+                ((y.prototype._initialize = function () {
                     var e = this,
                         t = this._client,
                         n = setTimeout(function () {
@@ -9502,7 +9683,7 @@ e.exports = (function e(t, n, r) {
                                 openFrameUrl: e._loadingFrameUrl,
                             },
                             function (r) {
-                                (e._frameService = r), clearTimeout(n), u.sendEvent(t, "paypal.load.succeeded"), i(e);
+                                ((e._frameService = r), clearTimeout(n), u.sendEvent(t, "paypal.load.succeeded"), i(e));
                             },
                         );
                     });
@@ -9546,14 +9727,14 @@ e.exports = (function e(t, n, r) {
                         return window.popupBridge
                             ? function (a, s) {
                                   var c = s && s.path && "/cancel" === s.path.substring(0, 7);
-                                  (r._authorizationInProgress = !1),
+                                  ((r._authorizationInProgress = !1),
                                       a || c
                                           ? (u.sendEvent(o, "paypal.tokenization.closed-popupbridge.by-user"),
                                             n(new i(E.PAYPAL_POPUP_CLOSED)))
-                                          : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n);
+                                          : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n));
                               }
                             : function (a, s) {
-                                  (r._authorizationInProgress = !1),
+                                  ((r._authorizationInProgress = !1),
                                       a
                                           ? "FRAME_SERVICE_FRAME_CLOSED" === a.code
                                               ? (u.sendEvent(o, "paypal.tokenization.closed.by-user"),
@@ -9568,7 +9749,7 @@ e.exports = (function e(t, n, r) {
                                                         details: { originalError: a },
                                                     }),
                                                 )
-                                          : s && r._tokenizePayPal(e, s).then(t).catch(n);
+                                          : s && r._tokenizePayPal(e, s).then(t).catch(n));
                               };
                     }),
                     (y.prototype._tokenizePayPal = function (e, t) {
@@ -9651,13 +9832,13 @@ e.exports = (function e(t, n, r) {
                             .request({ endpoint: r, method: "post", data: this._formatPaymentResourceData(e) })
                             .then(function (r) {
                                 var i;
-                                (i =
+                                ((i =
                                     "checkout" === e.flow
                                         ? r.paymentResource.redirectUrl
                                         : r.agreementSetup.approvalUrl),
                                     "commit" === e.useraction && (i = m.queryify(i, { useraction: "commit" })),
                                     window.popupBridge && u.sendEvent(n, "paypal.tokenization.opened-popupbridge"),
-                                    t._frameService.redirect(i);
+                                    t._frameService.redirect(i));
                             })
                             .catch(function (e) {
                                 var n = e.details && e.details.httpStatus;
@@ -9723,14 +9904,14 @@ e.exports = (function e(t, n, r) {
                             e.shippingAddressOverride))
                                 e.shippingAddressOverride.hasOwnProperty(t) && (i[t] = e.shippingAddressOverride[t]);
                         else
-                            (i.shippingAddress = e.shippingAddressOverride),
-                                e.billingAgreementDescription && (i.description = e.billingAgreementDescription);
+                            ((i.shippingAddress = e.shippingAddressOverride),
+                                e.billingAgreementDescription && (i.description = e.billingAgreementDescription));
                         return i;
                     }),
                     (y.prototype.closeWindow = function () {
-                        this._authorizationInProgress &&
+                        (this._authorizationInProgress &&
                             u.sendEvent(this._client, "paypal.tokenize.closed.by-merchant"),
-                            this._frameService.close();
+                            this._frameService.close());
                     }),
                     (y.prototype.focusWindow = function () {
                         this._frameService.focus();
@@ -9743,7 +9924,7 @@ e.exports = (function e(t, n, r) {
                             Promise.resolve()
                         );
                     })),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 "../../lib/analytics": 138,
@@ -9764,6 +9945,7 @@ e.exports = (function e(t, n, r) {
         ],
         200: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -9811,6 +9993,7 @@ e.exports = (function e(t, n, r) {
         ],
         201: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreepaypallanding",
                     FLOW_ENDPOINTS: { checkout: "create_payment_resource", vault: "setup_billing_agreement" },
@@ -9821,6 +10004,7 @@ e.exports = (function e(t, n, r) {
         ],
         202: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     PAYPAL_NOT_ENABLED: {
@@ -9869,6 +10053,7 @@ e.exports = (function e(t, n, r) {
         ],
         203: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/basic-component-verification"),
                     o = e("./preferred-payment-methods");
@@ -9895,12 +10080,13 @@ e.exports = (function e(t, n, r) {
         ],
         204: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../lib/analytics"),
                     o = e("../lib/create-assets-url"),
                     a = e("../lib/create-deferred-client");
                 function s() {}
-                (s.prototype.initialize = function (e) {
+                ((s.prototype.initialize = function (e) {
                     var t = this;
                     return (
                         (this._clientPromise = a
@@ -9912,7 +10098,7 @@ e.exports = (function e(t, n, r) {
                                 name: "PreferredPaymentMethods",
                             })
                             .catch(function (e) {
-                                return (t._setupError = e), Promise.reject(e);
+                                return ((t._setupError = e), Promise.reject(e));
                             })),
                         i.sendEvent(this._clientPromise, "preferred-payment-methods.initialized"),
                         Promise.resolve(this)
@@ -9946,7 +10132,7 @@ e.exports = (function e(t, n, r) {
                                       { paypalPreferred: !1, venmoPreferred: !1 });
                             });
                     }),
-                    (t.exports = r.wrapPrototype(s));
+                    (t.exports = r.wrapPrototype(s)));
             },
             {
                 "../lib/analytics": 138,
@@ -9957,6 +10143,7 @@ e.exports = (function e(t, n, r) {
         ],
         205: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error"),
                     i = e("../shared/errors"),
                     o = e("../../lib/frame-service/external"),
@@ -10051,7 +10238,7 @@ e.exports = (function e(t, n, r) {
                                     width: 400,
                                 },
                                 function (n) {
-                                    a.sendEvent(e, "sepa.popup.initialized"),
+                                    (a.sendEvent(e, "sepa.popup.initialized"),
                                         n.open({}, function (e, t) {
                                             var o, a, s;
                                             return (o = t) && o.success
@@ -10062,7 +10249,7 @@ e.exports = (function e(t, n, r) {
                                                   ? (n.close(), l(new r(i.SEPA_CUSTOMER_CANCELED)))
                                                   : (n.close(), l(new r(i.SEPA_TOKENIZATION_FAILED)));
                                         }),
-                                        n.redirect(t.approvalUrl);
+                                        n.redirect(t.approvalUrl));
                                 },
                             );
                         });
@@ -10090,12 +10277,12 @@ e.exports = (function e(t, n, r) {
                                 );
                             })
                             .then(function (t) {
-                                return a.sendEvent(e, "sepa.redirect.tokenization.success"), t;
+                                return (a.sendEvent(e, "sepa.redirect.tokenization.success"), t);
                             })
                             .catch(function () {
                                 throw (
-                                    (a.sendEvent(e, "sepa.redirect.handle-approval.failed"),
-                                    new r(i.SEPA_TRANSACTION_FAILED))
+                                    a.sendEvent(e, "sepa.redirect.handle-approval.failed"),
+                                    new r(i.SEPA_TRANSACTION_FAILED)
                                 );
                             });
                     },
@@ -10114,6 +10301,7 @@ e.exports = (function e(t, n, r) {
         ],
         206: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/braintree-error"),
                     o = e("../shared/errors"),
@@ -10124,7 +10312,7 @@ e.exports = (function e(t, n, r) {
                     l = e("../../lib/assign").assign;
                 function u(e) {
                     var t = e.client.getConfiguration();
-                    (this._client = e.client),
+                    ((this._client = e.client),
                         (this._assetsUrl = t.gatewayConfiguration.assetsUrl + "/web/3.112.1"),
                         (this._isDebug = t.isDebug),
                         e.redirectUrl
@@ -10134,9 +10322,9 @@ e.exports = (function e(t, n, r) {
                             : ((this._returnUrl = this._assetsUrl + "/html/redirect-frame.html?success=1"),
                               (this._cancelUrl = this._assetsUrl + "/html/redirect-frame.html?cancel=1")),
                         e.tokenizePayload && (this.tokenizePayload = e.tokenizePayload),
-                        d.sendEvent(this._client, "sepa.component.initialized");
+                        d.sendEvent(this._client, "sepa.component.initialized"));
                 }
-                (u.prototype.tokenize = function (e) {
+                ((u.prototype.tokenize = function (e) {
                     var t,
                         n = this,
                         r = l({ cancelUrl: n._cancelUrl, returnUrl: n._returnUrl }, e);
@@ -10167,7 +10355,9 @@ e.exports = (function e(t, n, r) {
                                         );
                                     })
                                     .then(function (e) {
-                                        return d.sendEvent(n._client, "sepa.tokenization.success"), Promise.resolve(e);
+                                        return (
+                                            d.sendEvent(n._client, "sepa.tokenization.success"), Promise.resolve(e)
+                                        );
                                     })
                                     .catch(function (e) {
                                         return (
@@ -10177,7 +10367,7 @@ e.exports = (function e(t, n, r) {
                           : (d.sendEvent(n._client, "sepa.input-validation.invalid-mandate"),
                             Promise.reject(new i(o.SEPA_INVALID_MANDATE_TYPE)));
                 }),
-                    (t.exports = r.wrapPrototype(u));
+                    (t.exports = r.wrapPrototype(u)));
             },
             {
                 "../../lib/analytics": 138,
@@ -10192,6 +10382,7 @@ e.exports = (function e(t, n, r) {
         ],
         207: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./external/sepa"),
                     o = e("../lib/create-assets-url"),
@@ -10217,7 +10408,7 @@ e.exports = (function e(t, n, r) {
                                 });
                             })
                             .then(function (t) {
-                                return (e.client = t), r.sendEvent(t, "sepa.client.initialized"), new i(e);
+                                return ((e.client = t), r.sendEvent(t, "sepa.client.initialized"), new i(e));
                             })
                             .then(function (t) {
                                 return n.success && "true" === n.success && n.cart_id
@@ -10225,7 +10416,7 @@ e.exports = (function e(t, n, r) {
                                       u
                                           .handleApprovalForFullPageRedirect(e.client, e)
                                           .then(function (e) {
-                                              return (t.tokenizePayload = e), t;
+                                              return ((t.tokenizePayload = e), t);
                                           })
                                           .catch(function (e) {
                                               console.error("Problem while finishing tokenizing: ", e);
@@ -10250,6 +10441,7 @@ e.exports = (function e(t, n, r) {
         ],
         208: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     REQUIRED_OPTIONS: [
                         "iban",
@@ -10273,6 +10465,7 @@ e.exports = (function e(t, n, r) {
         ],
         209: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     SEPA_CREATE_MANDATE_FAILED: {
@@ -10315,6 +10508,7 @@ e.exports = (function e(t, n, r) {
         ],
         210: [
             function (e, t, n) {
+                "use strict";
                 t.exports = function (e, t) {
                     var n, r;
                     for (n = 0, t = t || []; n < t.length; n++) if (((r = t[n]), !e.hasOwnProperty(r))) return !0;
@@ -10325,6 +10519,7 @@ e.exports = (function e(t, n, r) {
         ],
         211: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../../lib/assign").assign,
                     i = e("../../../lib/analytics"),
                     o = e("../../../lib/braintree-error"),
@@ -10341,7 +10536,7 @@ e.exports = (function e(t, n, r) {
                     m = e("../../../lib/constants").BUS_CONFIGURATION_REQUEST_EVENT,
                     f = "3.112.1";
                 function y(e) {
-                    c.call(this),
+                    (c.call(this),
                         (this._client = e.client),
                         (this._createPromise = e.createPromise),
                         (this._createOptions = e),
@@ -10349,9 +10544,9 @@ e.exports = (function e(t, n, r) {
                             ? ((this._isDebug = this._client.getConfiguration().isDebug),
                               (this._assetsUrl = this._client.getConfiguration().gatewayConfiguration.assetsUrl))
                             : ((this._isDebug = !!e.isDebug), (this._assetsUrl = e.assetsUrl)),
-                        (this._assetsUrl = this._assetsUrl + "/web/" + f);
+                        (this._assetsUrl = this._assetsUrl + "/web/" + f));
                 }
-                (s.suppressUnhandledPromiseMessage = !0),
+                ((s.suppressUnhandledPromiseMessage = !0),
                     c.createChild(y),
                     (y.prototype._waitForClient = function () {
                         return this._client
@@ -10418,9 +10613,9 @@ e.exports = (function e(t, n, r) {
                         throw new o(d.THREEDS_FRAMEWORK_METHOD_NOT_IMPLEMENTED);
                     }),
                     (y.prototype._resetVerificationState = function () {
-                        (this._verifyCardInProgress = !1),
+                        ((this._verifyCardInProgress = !1),
                             (this._verifyCardPromisePlus = null),
-                            "function" == typeof this._reloadThreeDSecure && this._reloadThreeDSecure();
+                            "function" == typeof this._reloadThreeDSecure && this._reloadThreeDSecure());
                     }),
                     (y.prototype._performLookup = function (e, t) {
                         var n = this,
@@ -10499,7 +10694,7 @@ e.exports = (function e(t, n, r) {
                     (y.prototype._handleLookupResponse = function (e, t) {
                         var n,
                             r = !!(e.lookup && e.lookup.acsUrl);
-                        i.sendEvent(
+                        (i.sendEvent(
                             this._createPromise,
                             "three-d-secure.verification-flow.challenge-presented." + String(r),
                         ),
@@ -10509,7 +10704,7 @@ e.exports = (function e(t, n, r) {
                                       e.paymentMethod,
                                       e.threeDSecureInfo,
                                   )).verificationDetails = e.threeDSecureInfo),
-                                  this._verifyCardPromisePlus.resolve(n));
+                                  this._verifyCardPromisePlus.resolve(n)));
                     }),
                     (y.prototype._onLookupComplete = function (e) {
                         return (
@@ -10626,15 +10821,15 @@ e.exports = (function e(t, n, r) {
                         });
                     }),
                     (y.prototype._setupV1Elements = function (e) {
-                        (this._v1Bus = this._setupV1Bus(e)), (this._v1Iframe = this._setupV1Iframe(e));
+                        ((this._v1Bus = this._setupV1Bus(e)), (this._v1Iframe = this._setupV1Iframe(e)));
                     }),
                     (y.prototype._teardownV1Elements = function () {
-                        this._v1Bus && (this._v1Bus.teardown(), (this._v1Bus = null)),
+                        (this._v1Bus && (this._v1Bus.teardown(), (this._v1Bus = null)),
                             this._v1Iframe &&
                                 this._v1Iframe.parentNode &&
                                 (this._v1Iframe.parentNode.removeChild(this._v1Iframe), (this._v1Iframe = null)),
                             this._onV1Keyup &&
-                                (document.removeEventListener("keyup", this._onV1Keyup), (this._onV1Keyup = null));
+                                (document.removeEventListener("keyup", this._onV1Keyup), (this._onV1Keyup = null)));
                     }),
                     (y.prototype.teardown = function () {
                         return (
@@ -10643,7 +10838,7 @@ e.exports = (function e(t, n, r) {
                             Promise.resolve()
                         );
                     }),
-                    (t.exports = y);
+                    (t.exports = y));
             },
             {
                 "../../../lib/analytics": 138,
@@ -10664,11 +10859,12 @@ e.exports = (function e(t, n, r) {
         ],
         212: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird");
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                ((i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div");
                         return (
@@ -10680,19 +10876,20 @@ e.exports = (function e(t, n, r) {
                     }),
                     (i.prototype._createCardinalConfigurationOptions = function (e) {
                         var t = r.prototype._createCardinalConfigurationOptions.call(this, e);
-                        return (t.payment.framework = "bootstrap3"), t;
+                        return ((t.payment.framework = "bootstrap3"), t);
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { "./songbird": 217 },
         ],
         213: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird");
                 function i(e) {
                     r.call(this, e);
                 }
-                (i.prototype = Object.create(r.prototype, { constructor: r })),
+                ((i.prototype = Object.create(r.prototype, { constructor: r })),
                     (i.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div"),
                             n = !!(
@@ -10709,12 +10906,13 @@ e.exports = (function e(t, n, r) {
                             t
                         );
                     }),
-                    (t.exports = i);
+                    (t.exports = i));
             },
             { "./songbird": 217 },
         ],
         214: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     legacy: e("./legacy"),
                     "cardinal-modal": e("./cardinal-modal"),
@@ -10726,6 +10924,7 @@ e.exports = (function e(t, n, r) {
         ],
         215: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./songbird"),
                     i = e("../../../lib/braintree-error"),
                     o = e("../../shared/errors"),
@@ -10733,17 +10932,17 @@ e.exports = (function e(t, n, r) {
                 function s(e) {
                     r.call(this, e);
                 }
-                (s.prototype = Object.create(r.prototype, { constructor: r })),
+                ((s.prototype = Object.create(r.prototype, { constructor: r })),
                     (s.events = a(["AUTHENTICATION_IFRAME_AVAILABLE"], "inline-iframe-framework:")),
                     (s.prototype.setUpEventListeners = function (e) {
-                        r.prototype.setUpEventListeners.call(this, e),
+                        (r.prototype.setUpEventListeners.call(this, e),
                             this.on(s.events.AUTHENTICATION_IFRAME_AVAILABLE, function (t, n) {
                                 e("authentication-iframe-available", t, n);
-                            });
+                            }));
                     }),
                     (s.prototype._createCardinalConfigurationOptions = function (e) {
                         var t = r.prototype._createCardinalConfigurationOptions.call(this, e);
-                        return (t.payment.framework = "inline"), t;
+                        return ((t.payment.framework = "inline"), t);
                     }),
                     (s.prototype._addV1IframeToPage = function () {
                         this._emit(
@@ -10772,7 +10971,7 @@ e.exports = (function e(t, n, r) {
                                         n();
                                     }));
                     }),
-                    (t.exports = s);
+                    (t.exports = s));
             },
             {
                 "../../../lib/braintree-error": 143,
@@ -10783,12 +10982,13 @@ e.exports = (function e(t, n, r) {
         ],
         216: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/deferred");
                 function o(e) {
                     r.call(this, e);
                 }
-                (o.prototype = Object.create(r.prototype, { constructor: o })),
+                ((o.prototype = Object.create(r.prototype, { constructor: o })),
                     (o.prototype.setUpEventListeners = function () {}),
                     (o.prototype.transformV1CustomerBillingAddress = function (e) {
                         return (
@@ -10820,13 +11020,13 @@ e.exports = (function e(t, n, r) {
                         );
                     }),
                     (o.prototype._handleAuthResponse = function (e, t) {
-                        this._v1Bus.teardown(),
+                        (this._v1Bus.teardown(),
                             t.removeFrame(),
                             i(
                                 function () {
                                     this._handleV1AuthResponse(e);
                                 }.bind(this),
-                            )();
+                            )());
                     }),
                     (o.prototype._checkForFrameworkSpecificVerifyCardErrors = function (e) {
                         var t;
@@ -10868,12 +11068,13 @@ e.exports = (function e(t, n, r) {
                             }),
                         );
                     }),
-                    (t.exports = o);
+                    (t.exports = o));
             },
             { "../../../lib/deferred": 151, "./base": 211 },
         ],
         217: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./base"),
                     i = e("../../../lib/assign").assign,
                     o = e("../../../lib/deferred"),
@@ -10891,24 +11092,24 @@ e.exports = (function e(t, n, r) {
                     f = ["ui.close", "ui.render", "ui.renderHidden", "ui.loading.close", "ui.loading.render"],
                     y = ["low_value", "transaction_risk_analysis"];
                 function A(e) {
-                    r.call(this, e),
+                    (r.call(this, e),
                         (this._songbirdInitFailed = !1),
                         (this._clientMetadata = { requestedThreeDSecureVersion: "2", sdkVersion: h + "/" + m }),
                         (this.originalSetupOptions = e),
                         (this._getDfReferenceIdPromisePlus = new _()),
                         this.setupSongbird(e),
-                        (this._cardinalEvents = []);
+                        (this._cardinalEvents = []));
                 }
                 function T(e, t, n) {
-                    (t[n + "Line1"] = e.streetAddress),
+                    ((t[n + "Line1"] = e.streetAddress),
                         (t[n + "Line2"] = e.extendedAddress),
                         (t[n + "Line3"] = e.line3),
                         (t[n + "City"] = e.locality),
                         (t[n + "State"] = e.region),
                         (t[n + "PostalCode"] = e.postalCode),
-                        (t[n + "CountryCode"] = e.countryCodeAlpha2);
+                        (t[n + "CountryCode"] = e.countryCodeAlpha2));
                 }
-                (_.suppressUnhandledPromiseMessage = !0),
+                ((_.suppressUnhandledPromiseMessage = !0),
                     (A.prototype = Object.create(r.prototype, { constructor: A })),
                     (A.events = u(
                         [
@@ -10923,7 +11124,7 @@ e.exports = (function e(t, n, r) {
                         "songbird-framework:",
                     )),
                     (A.prototype.setUpEventListeners = function (e) {
-                        this.on(A.events.LOOKUP_COMPLETE, function (t, n) {
+                        (this.on(A.events.LOOKUP_COMPLETE, function (t, n) {
                             e("lookup-complete", t, n);
                         }),
                             this.on(A.events.CUSTOMER_CANCELED, function () {
@@ -10943,7 +11144,7 @@ e.exports = (function e(t, n, r) {
                             }),
                             this.on(A.events["UI.LOADING.RENDER"], function () {
                                 e("authentication-modal-loader-render");
-                            });
+                            }));
                     }),
                     (A.prototype.prepareLookup = function (e) {
                         var t = i({}, e),
@@ -10977,17 +11178,17 @@ e.exports = (function e(t, n, r) {
                         );
                     }),
                     (A.prototype.handleSongbirdError = function (e) {
-                        (this._songbirdInitFailed = !0),
+                        ((this._songbirdInitFailed = !0),
                             this._removeSongbirdListeners(),
                             c.sendEvent(this._createPromise, "three-d-secure.cardinal-sdk.songbird-error." + e),
-                            this._songbirdPromise && this._songbirdPromise.resolve();
+                            this._songbirdPromise && this._songbirdPromise.resolve());
                     }),
                     (A.prototype._triggerCardinalBinProcess = function (e) {
                         var t = this,
                             n = Date.now();
                         return window.Cardinal.trigger("bin.process", e).then(function (e) {
-                            (t._clientMetadata.issuerDeviceDataCollectionTimeElapsed = Date.now() - n),
-                                (t._clientMetadata.issuerDeviceDataCollectionResult = e && e.Status);
+                            ((t._clientMetadata.issuerDeviceDataCollectionTimeElapsed = Date.now() - n),
+                                (t._clientMetadata.issuerDeviceDataCollectionResult = e && e.Status));
                         });
                     }),
                     (A.prototype.transformBillingAddress = function (e, t) {
@@ -11002,7 +11203,7 @@ e.exports = (function e(t, n, r) {
                     }),
                     (A.prototype.transformShippingAddress = function (e) {
                         var t = e.shippingAddress;
-                        return t && (T(t, e, "shipping"), delete e.shippingAddress), e;
+                        return (t && (T(t, e, "shipping"), delete e.shippingAddress), e);
                     }),
                     (A.prototype._createV1IframeModalElement = function (e) {
                         var t = document.createElement("div");
@@ -11019,10 +11220,10 @@ e.exports = (function e(t, n, r) {
                             r = t.querySelector("[data-braintree-v1-fallback-backdrop]"),
                             i = this;
                         function o() {
-                            t.parentNode.removeChild(t),
+                            (t.parentNode.removeChild(t),
                                 i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED),
                                 document.removeEventListener("keyup", i._onV1Keyup),
-                                (i._onV1Keyup = null);
+                                (i._onV1Keyup = null));
                         }
                         return (
                             (this._onV1Keyup = function (e) {
@@ -11059,12 +11260,12 @@ e.exports = (function e(t, n, r) {
                                             code: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.code,
                                             message: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.message,
                                         });
-                                        t._getDfReferenceIdPromisePlus.reject(n),
+                                        (t._getDfReferenceIdPromisePlus.reject(n),
                                             window.clearTimeout(t._songbirdSetupTimeoutReference),
                                             c.sendEvent(t._client, "three-d-secure.cardinal-sdk.init.setup-failed"),
                                             t.handleSongbirdError(
                                                 "cardinal-sdk-setup-failed." + t._v2SetupFailureReason,
-                                            );
+                                            ));
                                     })),
                             this._songbirdPromise
                         );
@@ -11080,7 +11281,7 @@ e.exports = (function e(t, n, r) {
                                     i = e.setupOptions,
                                     o = e.setupStartTime,
                                     a = t._createCardinalConfigurationOptions(i);
-                                f.forEach(function (e) {
+                                (f.forEach(function (e) {
                                     t.setCardinalListener(e, function () {
                                         t._emit(A.events[e.toUpperCase()]);
                                     });
@@ -11093,7 +11294,7 @@ e.exports = (function e(t, n, r) {
                                     window.Cardinal.configure(a),
                                     window.Cardinal.setup("init", { jwt: r }),
                                     (t._clientMetadata.cardinalDeviceDataCollectionTimeElapsed = Date.now() - o),
-                                    t.setCardinalListener("payments.validated", t._createPaymentsValidatedCallback());
+                                    t.setCardinalListener("payments.validated", t._createPaymentsValidatedCallback()));
                             })
                             .catch(function (e) {
                                 return (
@@ -11102,7 +11303,7 @@ e.exports = (function e(t, n, r) {
                             });
                     }),
                     (A.prototype.setCardinalListener = function (e, t) {
-                        this._cardinalEvents.push(e), window.Cardinal.on(e, t);
+                        (this._cardinalEvents.push(e), window.Cardinal.on(e, t));
                     }),
                     (A.prototype._setupFrameworkSpecificListeners = function () {}),
                     (A.prototype._createCardinalConfigurationOptions = function (e) {
@@ -11124,8 +11325,8 @@ e.exports = (function e(t, n, r) {
                                 var n = t._getCardinalScriptSource();
                                 return (
                                     (t._songbirdSetupTimeoutReference = window.setTimeout(function () {
-                                        c.sendEvent(t._client, "three-d-secure.cardinal-sdk.init.setup-timeout"),
-                                            t.handleSongbirdError("cardinal-sdk-setup-timeout");
+                                        (c.sendEvent(t._client, "three-d-secure.cardinal-sdk.init.setup-timeout"),
+                                            t.handleSongbirdError("cardinal-sdk-setup-timeout"));
                                     }, e.timeout || E)),
                                     d.loadScript({ src: n })
                                 );
@@ -11146,10 +11347,10 @@ e.exports = (function e(t, n, r) {
                     (A.prototype._createPaymentsSetupCompleteCallback = function () {
                         var e = this;
                         return function (t) {
-                            e._getDfReferenceIdPromisePlus.resolve(t.sessionId),
+                            (e._getDfReferenceIdPromisePlus.resolve(t.sessionId),
                                 window.clearTimeout(e._songbirdSetupTimeoutReference),
                                 c.sendEvent(e._createPromise, "three-d-secure.cardinal-sdk.init.setup-completed"),
-                                e._songbirdPromise.resolve();
+                                e._songbirdPromise.resolve());
                         };
                     }),
                     (A.prototype.getDfReferenceId = function () {
@@ -11259,16 +11460,16 @@ e.exports = (function e(t, n, r) {
                                             r = new a(l.THREEDS_CARDINAL_SDK_BAD_JWT);
                                             break;
                                         case 10011:
-                                            c.sendEvent(e._createPromise, "three-d-secure.verification-flow.canceled"),
-                                                (r = new a(l.THREEDS_CARDINAL_SDK_CANCELED));
+                                            (c.sendEvent(e._createPromise, "three-d-secure.verification-flow.canceled"),
+                                                (r = new a(l.THREEDS_CARDINAL_SDK_CANCELED)));
                                             break;
                                         default:
                                             r = new a(l.THREEDS_CARDINAL_SDK_ERROR);
                                     }
-                                    (r.details = {
+                                    ((r.details = {
                                         originalError: { code: t.ErrorNumber, description: t.ErrorDescription },
                                     }),
-                                        e._verifyCardPromisePlus.reject(r);
+                                        e._verifyCardPromisePlus.reject(r));
                             }
                         };
                     }),
@@ -11310,11 +11511,11 @@ e.exports = (function e(t, n, r) {
                                 function o() {
                                     r(e);
                                 }
-                                (e.requiresUserAuthentication = !!(e.lookup && e.lookup.acsUrl)),
+                                ((e.requiresUserAuthentication = !!(e.lookup && e.lookup.acsUrl)),
                                     n._verifyCardPromisePlus.catch(i),
                                     t.onLookupComplete
                                         ? t.onLookupComplete(e, o)
-                                        : n._emit(A.events.LOOKUP_COMPLETE, e, o);
+                                        : n._emit(A.events.LOOKUP_COMPLETE, e, o));
                             });
                         });
                     }),
@@ -11374,13 +11575,13 @@ e.exports = (function e(t, n, r) {
                         });
                     }),
                     (A.prototype._removeSongbirdListeners = function () {
-                        this._cardinalEvents.forEach(function (e) {
+                        (this._cardinalEvents.forEach(function (e) {
                             window.Cardinal.off(e);
                         }),
-                            (this._cardinalEvents = []);
+                            (this._cardinalEvents = []));
                     }),
                     (A.prototype.teardown = function () {
-                        return window.Cardinal && this._removeSongbirdListeners(), r.prototype.teardown.call(this);
+                        return (window.Cardinal && this._removeSongbirdListeners(), r.prototype.teardown.call(this));
                     }),
                     (A.prototype._reloadThreeDSecure = function () {
                         var e = this,
@@ -11389,7 +11590,7 @@ e.exports = (function e(t, n, r) {
                             e._configureCardinalSdk({ setupOptions: e.originalSetupOptions, setupStartTime: t });
                         });
                     }),
-                    (t.exports = A);
+                    (t.exports = A));
             },
             {
                 "../../../lib/analytics": 138,
@@ -11408,6 +11609,7 @@ e.exports = (function e(t, n, r) {
         ],
         218: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/wrap-promise"),
                     i = e("../../lib/methods"),
                     o = e("../../lib/convert-methods-to-error"),
@@ -11416,13 +11618,13 @@ e.exports = (function e(t, n, r) {
                 function c(e) {
                     var t = this,
                         n = s[e.framework];
-                    a.call(this),
+                    (a.call(this),
                         (this._framework = new n(e)),
                         this._framework.setUpEventListeners(function () {
                             t._emit.apply(t, arguments);
-                        });
+                        }));
                 }
-                a.createChild(c),
+                (a.createChild(c),
                     (c.prototype.verifyCard = function (e) {
                         var t;
                         return (
@@ -11445,9 +11647,9 @@ e.exports = (function e(t, n, r) {
                         return this._framework.cancelVerifyCard();
                     }),
                     (c.prototype.teardown = function () {
-                        return o(this, i(c.prototype).concat(i(a.prototype))), this._framework.teardown();
+                        return (o(this, i(c.prototype).concat(i(a.prototype))), this._framework.teardown());
                     }),
-                    (t.exports = r.wrapPrototype(c));
+                    (t.exports = r.wrapPrototype(c)));
             },
             {
                 "../../lib/convert-methods-to-error": 146,
@@ -11459,6 +11661,7 @@ e.exports = (function e(t, n, r) {
         ],
         219: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./external/three-d-secure"),
                     i = e("../lib/is-https").isHTTPS,
                     o = e("../lib/basic-component-verification"),
@@ -11561,6 +11764,7 @@ e.exports = (function e(t, n, r) {
         ],
         220: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     LANDING_FRAME_NAME: "braintreethreedsecurelanding",
                     CARDINAL_SCRIPT_SOURCE: {
@@ -11573,6 +11777,7 @@ e.exports = (function e(t, n, r) {
         ],
         221: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     THREEDS_NOT_ENABLED: {
@@ -11710,12 +11915,14 @@ e.exports = (function e(t, n, r) {
         ],
         222: [
             function (e, t, n) {
+                "use strict";
                 t.exports = e("../../lib/enumerate")(["AUTHENTICATION_COMPLETE"], "threedsecure:");
             },
             { "../../lib/enumerate": 153 },
         ],
         223: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./shared/unionpay"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/braintree-error"),
@@ -11761,6 +11968,7 @@ e.exports = (function e(t, n, r) {
         ],
         224: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     events: e("../../lib/enumerate")(
                         ["HOSTED_FIELDS_FETCH_CAPABILITIES", "HOSTED_FIELDS_ENROLL", "HOSTED_FIELDS_TOKENIZE"],
@@ -11773,6 +11981,7 @@ e.exports = (function e(t, n, r) {
         ],
         225: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     UNIONPAY_NOT_ENABLED: {
@@ -11842,6 +12051,7 @@ e.exports = (function e(t, n, r) {
         ],
         226: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/analytics"),
                     i = e("../../lib/braintree-error"),
                     o = e("framebus"),
@@ -11859,7 +12069,7 @@ e.exports = (function e(t, n, r) {
                 function f(e) {
                     this._options = e;
                 }
-                (f.prototype.fetchCapabilities = function (e) {
+                ((f.prototype.fetchCapabilities = function (e) {
                     var t = this,
                         n = this._options.client,
                         o = e.card ? e.card.number : null,
@@ -11874,7 +12084,7 @@ e.exports = (function e(t, n, r) {
                                     data: { _meta: { source: "unionpay" }, creditCard: { number: o } },
                                 })
                                 .then(function (e) {
-                                    return r.sendEvent(n, "unionpay.capabilities-received"), e;
+                                    return (r.sendEvent(n, "unionpay.capabilities-received"), e);
                                 })
                                 .catch(function (e) {
                                     var t = e.details && e.details.httpStatus;
@@ -11946,8 +12156,8 @@ e.exports = (function e(t, n, r) {
                                 if (!a.expirationMonth || !a.expirationYear)
                                     return Promise.reject(new i(l.UNIONPAY_EXPIRATION_DATE_INCOMPLETE));
                                 else
-                                    (t.unionPayEnrollment.expirationYear = a.expirationYear),
-                                        (t.unionPayEnrollment.expirationMonth = a.expirationMonth);
+                                    ((t.unionPayEnrollment.expirationYear = a.expirationYear),
+                                        (t.unionPayEnrollment.expirationMonth = a.expirationMonth));
                             return o
                                 .request({ method: "post", endpoint: "union_pay_enrollments", data: t })
                                 .then(function (e) {
@@ -12057,7 +12267,7 @@ e.exports = (function e(t, n, r) {
                         return (
                             this._hostedFieldsInitializePromise ||
                                 (this._hostedFieldsInitializePromise = new Promise(function (i) {
-                                    (e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
+                                    ((e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
                                         (t = r._options.client.getConfiguration().isDebug),
                                         (r._bus = new o({ channel: n, verifyDomain: s })),
                                         (r._hostedFieldsFrame = p({
@@ -12067,14 +12277,14 @@ e.exports = (function e(t, n, r) {
                                             width: 0,
                                         })),
                                         r._bus.on(m, function (e) {
-                                            e(r._options.client), i();
+                                            (e(r._options.client), i());
                                         }),
-                                        document.body.appendChild(r._hostedFieldsFrame);
+                                        document.body.appendChild(r._hostedFieldsFrame));
                                 })),
                             this._hostedFieldsInitializePromise
                         );
                     }),
-                    (t.exports = h.wrapPrototype(f));
+                    (t.exports = h.wrapPrototype(f)));
             },
             {
                 "../../lib/analytics": 138,
@@ -12094,12 +12304,14 @@ e.exports = (function e(t, n, r) {
         ],
         227: [
             function (e, t, n) {
+                "use strict";
                 t.exports = { PLAID_LINK_JS: "https://cdn.plaid.com/link/v2/stable/link-initialize.js" };
             },
             {},
         ],
         228: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     US_BANK_ACCOUNT_OPTION_REQUIRED: {
@@ -12151,6 +12363,7 @@ e.exports = (function e(t, n, r) {
         ],
         229: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -12192,6 +12405,7 @@ e.exports = (function e(t, n, r) {
         ],
         230: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("./constants"),
                     o = e("./errors"),
@@ -12204,9 +12418,9 @@ e.exports = (function e(t, n, r) {
                     p = T("UsBankAccount"),
                     _ = T("UsBankLogin");
                 function E(e) {
-                    (this._client = e.client),
+                    ((this._client = e.client),
                         (this._isTokenizingBankLogin = !1),
-                        s.sendEvent(this._client, "usbankaccount.initialized");
+                        s.sendEvent(this._client, "usbankaccount.initialized"));
                 }
                 function h(e) {
                     var t,
@@ -12242,11 +12456,11 @@ e.exports = (function e(t, n, r) {
                             t(null, window.Plaid));
                     }
                     function i() {
-                        e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
+                        (e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED)));
                     }
-                    e.addEventListener("error", i),
+                    (e.addEventListener("error", i),
                         e.addEventListener("load", n),
-                        e.addEventListener("readystatechange", n);
+                        e.addEventListener("readystatechange", n));
                 }
                 function y(e) {
                     return {
@@ -12273,7 +12487,7 @@ e.exports = (function e(t, n, r) {
                         "(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}"
                     );
                 }
-                (E.prototype.tokenize = function (e) {
+                ((E.prototype.tokenize = function (e) {
                     return (e = e || {}).mandateText
                         ? e.bankDetails && e.bankLogin
                             ? Promise.reject(
@@ -12358,12 +12572,12 @@ e.exports = (function e(t, n, r) {
                                                             product: "auth",
                                                             selectAccount: !0,
                                                             onExit: function () {
-                                                                (t._isTokenizingBankLogin = !1),
+                                                                ((t._isTokenizingBankLogin = !1),
                                                                     s.sendEvent(
                                                                         n,
                                                                         "usbankaccount.banklogin.tokenization.closed.by-user",
                                                                     ),
-                                                                    d(new r(o.US_BANK_ACCOUNT_LOGIN_CLOSED));
+                                                                    d(new r(o.US_BANK_ACCOUNT_LOGIN_CLOSED)));
                                                             },
                                                             onSuccess: function (r, o) {
                                                                 var c = e.bankLogin,
@@ -12376,7 +12590,7 @@ e.exports = (function e(t, n, r) {
                                                                         achMandate: e.mandateText,
                                                                         billingAddress: y(c.billingAddress || {}),
                                                                     };
-                                                                A(l, c),
+                                                                (A(l, c),
                                                                     n
                                                                         .request({
                                                                             api: "graphQLApi",
@@ -12388,23 +12602,23 @@ e.exports = (function e(t, n, r) {
                                                                             },
                                                                         })
                                                                         .then(function (e) {
-                                                                            (t._isTokenizingBankLogin = !1),
+                                                                            ((t._isTokenizingBankLogin = !1),
                                                                                 s.sendEvent(
                                                                                     n,
                                                                                     "usbankaccount.banklogin.tokenization.succeeded",
                                                                                 ),
-                                                                                i(m(e, "tokenizeUsBankLogin"));
+                                                                                i(m(e, "tokenizeUsBankLogin")));
                                                                         })
                                                                         .catch(function (e) {
                                                                             var r;
-                                                                            (t._isTokenizingBankLogin = !1),
+                                                                            ((t._isTokenizingBankLogin = !1),
                                                                                 (r = h(e)),
                                                                                 s.sendEvent(
                                                                                     n,
                                                                                     "usbankaccount.banklogin.tokenization.failed",
                                                                                 ),
-                                                                                d(r);
-                                                                        });
+                                                                                d(r));
+                                                                        }));
                                                             },
                                                         })
                                                         .open(),
@@ -12439,7 +12653,7 @@ e.exports = (function e(t, n, r) {
                             Promise.resolve()
                         );
                     }),
-                    (t.exports = u.wrapPrototype(E));
+                    (t.exports = u.wrapPrototype(E)));
             },
             {
                 "../lib/analytics": 138,
@@ -12455,6 +12669,7 @@ e.exports = (function e(t, n, r) {
         ],
         231: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN: {
@@ -12476,6 +12691,7 @@ e.exports = (function e(t, n, r) {
         ],
         232: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/create-deferred-client"),
                     o = e("../lib/create-assets-url"),
@@ -12510,6 +12726,7 @@ e.exports = (function e(t, n, r) {
         ],
         233: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/braintree-error"),
                     o = e("./errors"),
@@ -12527,9 +12744,9 @@ e.exports = (function e(t, n, r) {
                         hasSubscription: e.hasSubscription,
                         type: e.type,
                     };
-                    return e.description && (t.description = e.description), e.binData && (t.binData = e.binData), t;
+                    return (e.description && (t.description = e.description), e.binData && (t.binData = e.binData), t);
                 }
-                (d.prototype.fetchPaymentMethods = function (e) {
+                ((d.prototype.fetchPaymentMethods = function (e) {
                     var t;
                     return (
                         (t = +(!0 === (e = e || {}).defaultFirst)),
@@ -12604,9 +12821,9 @@ e.exports = (function e(t, n, r) {
                         });
                     }),
                     (d.prototype.teardown = function () {
-                        return a(this, s(d.prototype)), Promise.resolve();
+                        return (a(this, s(d.prototype)), Promise.resolve());
                     }),
-                    (t.exports = c.wrapPrototype(d));
+                    (t.exports = c.wrapPrototype(d)));
             },
             {
                 "../lib/analytics": 138,
@@ -12619,6 +12836,7 @@ e.exports = (function e(t, n, r) {
         ],
         234: [
             function (e, t, n) {
+                "use strict";
                 var r = (
                     (this && this.__importDefault) ||
                     function (e) {
@@ -12633,7 +12851,8 @@ e.exports = (function e(t, n, r) {
         ],
         235: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         n.UPDATE_PAYMENT_CONTEXT_QUERY =
@@ -12652,12 +12871,13 @@ e.exports = (function e(t, n, r) {
                     (n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
                         "query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoQRCodePaymentContext {\n      status\n      paymentMethodId\n      userName\n    }\n  }\n}"),
                     (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY =
-                        "query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoPaymentContext {\n      status\n      paymentMethodId\n      userName\n      payerInfo {\n        firstName\n        lastName\n        phoneNumber\n        email\n        externalId\n        userName\n        billingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n        shippingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n      }\n    }\n  }\n}");
+                        "query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoPaymentContext {\n      status\n      paymentMethodId\n      userName\n      payerInfo {\n        firstName\n        lastName\n        phoneNumber\n        email\n        externalId\n        userName\n        billingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n        shippingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n      }\n    }\n  }\n}"));
             },
             {},
         ],
         236: [
             function (e, t, n) {
+                "use strict";
                 var r =
                         (this && this.__assign) ||
                         function () {
@@ -12683,15 +12903,15 @@ e.exports = (function e(t, n, r) {
                     d = e("./queries");
                 n.default = (function () {
                     function e(e) {
-                        (this.isHidden = !0),
+                        ((this.isHidden = !0),
                             (this.env = e.environment),
                             (this.id = s.default()),
                             (this.profileId = e.profileId),
                             (this.displayName = e.displayName),
                             (this.paymentMethodUsage = e.paymentMethodUsage),
-                            (this.shouldUseLegacyQRCodeMutation = !this.paymentMethodUsage);
+                            (this.shouldUseLegacyQRCodeMutation = !this.paymentMethodUsage));
                         var t = e.url + "#" + this.env + "_" + this.id;
-                        (this.bus = new o.default({
+                        ((this.bus = new o.default({
                             channel: this.id,
                             verifyDomain: e.verifyDomain,
                             targetFrames: [],
@@ -12724,21 +12944,21 @@ e.exports = (function e(t, n, r) {
                                 },
                                 title: "Venmo Desktop",
                             })),
-                            this.bus.addTargetFrame(this.iframe);
+                            this.bus.addTargetFrame(this.iframe));
                     }
                     return (
                         (e.prototype.initialize = function () {
                             var e = this;
                             return new this.Promise(function (t) {
-                                e.bus.on(c.VENMO_DESKTOP_IFRAME_READY, function () {
+                                (e.bus.on(c.VENMO_DESKTOP_IFRAME_READY, function () {
                                     t(e);
                                 }),
                                     e.bus.on(c.VENMO_DESKTOP_REQUEST_NEW_QR_CODE, function () {
-                                        e.sendEvent("venmo.tokenize.desktop.restarted-from-error-view"),
-                                            e.startPolling();
+                                        (e.sendEvent("venmo.tokenize.desktop.restarted-from-error-view"),
+                                            e.startPolling());
                                     }),
                                     document.body.appendChild(e.iframe),
-                                    document.body.appendChild(e.alertBox);
+                                    document.body.appendChild(e.alertBox));
                             });
                         }),
                         (e.prototype.launchDesktopFlow = function () {
@@ -12747,25 +12967,25 @@ e.exports = (function e(t, n, r) {
                             var t = new this.Promise(function (t, n) {
                                 e.launchDesktopPromiseRejectFunction = n;
                                 var r = function () {
-                                        e.bus.off(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o),
-                                            e.bus.off(c.VENMO_DESKTOP_UNKNOWN_ERROR, i);
+                                        (e.bus.off(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o),
+                                            e.bus.off(c.VENMO_DESKTOP_UNKNOWN_ERROR, i));
                                     },
                                     i = function (t) {
-                                        r(),
+                                        (r(),
                                             e.sendEvent("venmo.tokenize.desktop.unknown-error"),
-                                            n({ allowUIToHandleError: !1, reason: "UNKNOWN_ERROR", err: t });
+                                            n({ allowUIToHandleError: !1, reason: "UNKNOWN_ERROR", err: t }));
                                     },
                                     o = function () {
-                                        r(),
+                                        (r(),
                                             e.updateVenmoDesktopPaymentContext("CANCELED"),
                                             e.sendEvent("venmo.tokenize.desktop.status-change.canceled-from-modal"),
-                                            n({ allowUIToHandleError: !1, reason: "CUSTOMER_CANCELED" });
+                                            n({ allowUIToHandleError: !1, reason: "CUSTOMER_CANCELED" }));
                                     };
-                                (e.completedHandler = function (e) {
-                                    r(), t(e);
+                                ((e.completedHandler = function (e) {
+                                    (r(), t(e));
                                 }),
                                     e.bus.on(c.VENMO_DESKTOP_CUSTOMER_CANCELED, o),
-                                    e.bus.on(c.VENMO_DESKTOP_UNKNOWN_ERROR, i);
+                                    e.bus.on(c.VENMO_DESKTOP_UNKNOWN_ERROR, i));
                             });
                             return (
                                 (this.iframe.style.display = "block"),
@@ -12774,7 +12994,9 @@ e.exports = (function e(t, n, r) {
                                 this.startPolling(),
                                 t
                                     .then(function (t) {
-                                        return delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, t;
+                                        return (
+                                            delete e.venmoContextId, delete e.launchDesktopPromiseRejectFunction, t
+                                        );
                                     })
                                     .catch(function (t) {
                                         return (
@@ -12789,17 +13011,17 @@ e.exports = (function e(t, n, r) {
                             var t = this;
                             this.isHidden ||
                                 setTimeout(function () {
-                                    t.completedHandler && t.completedHandler(e), delete t.completedHandler;
+                                    (t.completedHandler && t.completedHandler(e), delete t.completedHandler);
                                 }, 2e3);
                         }),
                         (e.prototype.triggerRejected = function (e) {
                             this.launchDesktopPromiseRejectFunction && this.launchDesktopPromiseRejectFunction(e);
                         }),
                         (e.prototype.hideDesktopFlow = function () {
-                            this.setAlert(""),
+                            (this.setAlert(""),
                                 (this.iframe.style.display = "none"),
                                 this.bus.emit(c.VENMO_DESKTOP_CLOSED_FROM_PARENT),
-                                (this.isHidden = !0);
+                                (this.isHidden = !0));
                         }),
                         (e.prototype.displayError = function (e) {
                             this.isHidden ||
@@ -12825,18 +13047,18 @@ e.exports = (function e(t, n, r) {
                                 .then(function (t) {
                                     var n = new Date(t.expiresAt).getTime() - new Date(t.createdAt).getTime(),
                                         r = Date.now() + n;
-                                    return e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r);
+                                    return (e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r));
                                 })
                                 .then(function (t) {
                                     if (t) {
                                         var n = t.userName || "";
-                                        (n = "@" + n.replace("@", "")),
+                                        ((n = "@" + n.replace("@", "")),
                                             e.triggerCompleted({
                                                 paymentMethodNonce: t.paymentMethodId,
                                                 username: n,
                                                 payerInfo: t.payerInfo,
                                                 id: e.venmoContextId || "",
-                                            });
+                                            }));
                                     }
                                 })
                                 .catch(function (t) {
@@ -12883,7 +13105,7 @@ e.exports = (function e(t, n, r) {
                                                       n.authorizing();
                                                       break;
                                                   case "APPROVED":
-                                                      return n.authorize(), n.Promise.resolve(r);
+                                                      return (n.authorize(), n.Promise.resolve(r));
                                               }
                                           return new n.Promise(function (r, i) {
                                               setTimeout(function () {
@@ -12894,12 +13116,12 @@ e.exports = (function e(t, n, r) {
                                 : this.Promise.resolve();
                         }),
                         (e.prototype.teardown = function () {
-                            this.bus.teardown(),
+                            (this.bus.teardown(),
                                 this.iframe.parentNode && this.iframe.parentNode.removeChild(this.iframe),
-                                this.alertBox.parentNode && this.alertBox.parentNode.removeChild(this.alertBox);
+                                this.alertBox.parentNode && this.alertBox.parentNode.removeChild(this.alertBox));
                         }),
                         (e.prototype.setAlert = function (e) {
-                            (this.alertBox.style.display = e ? "block" : "none"), (this.alertBox.textContent = e);
+                            ((this.alertBox.style.display = e ? "block" : "none"), (this.alertBox.textContent = e));
                         }),
                         (e.prototype.createPaymentContextFromGraphqlLegacyQRCodeMutation = function (e) {
                             return this.apiRequest(d.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY, {
@@ -12971,6 +13193,7 @@ e.exports = (function e(t, n, r) {
         ],
         237: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("../lib/basic-component-verification"),
                     o = e("../lib/create-deferred-client"),
@@ -13033,6 +13256,7 @@ e.exports = (function e(t, n, r) {
         ],
         238: [
             function (e, t, n) {
+                "use strict";
                 var r = e("@braintree/browser-detection/is-android"),
                     i = e("@braintree/browser-detection/is-chrome"),
                     o = e("@braintree/browser-detection/is-ios"),
@@ -13074,6 +13298,7 @@ e.exports = (function e(t, n, r) {
         ],
         239: [
             function (e, t, n) {
+                "use strict";
                 t.exports = {
                     DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500,
                     DEFAULT_PROCESS_RESULTS_DELAY: 1e3,
@@ -13086,6 +13311,7 @@ e.exports = (function e(t, n, r) {
         ],
         240: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/braintree-error");
                 t.exports = {
                     VENMO_NOT_ENABLED: {
@@ -13200,7 +13426,8 @@ e.exports = (function e(t, n, r) {
         ],
         241: [
             function (e, t, n) {
-                Object.defineProperty(n, "__esModule", { value: !0 }),
+                "use strict";
+                (Object.defineProperty(n, "__esModule", { value: !0 }),
                     (n.VENMO_DESKTOP_UNKNOWN_ERROR =
                         n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE =
                         n.VENMO_DESKTOP_CLOSED_FROM_PARENT =
@@ -13221,12 +13448,13 @@ e.exports = (function e(t, n, r) {
                     (n.VENMO_DESKTOP_IFRAME_READY = "VENMO_DESKTOP_IFRAME_READY"),
                     (n.VENMO_DESKTOP_CLOSED_FROM_PARENT = "VENMO_DESKTOP_CLOSED_FROM_PARENT"),
                     (n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = "VENMO_DESKTOP_REQUEST_NEW_QR_CODE"),
-                    (n.VENMO_DESKTOP_UNKNOWN_ERROR = "VENMO_DESKTOP_UNKNOWN_ERROR");
+                    (n.VENMO_DESKTOP_UNKNOWN_ERROR = "VENMO_DESKTOP_UNKNOWN_ERROR"));
             },
             {},
         ],
         242: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./constants");
                 t.exports = function (e) {
                     return e.useAllowDesktopWebLogin
@@ -13240,6 +13468,7 @@ e.exports = (function e(t, n, r) {
         ],
         243: [
             function (e, t, n) {
+                "use strict";
                 var r = e("./browser-detection"),
                     i = e("../../lib/in-iframe");
                 t.exports = {
@@ -13269,6 +13498,7 @@ e.exports = (function e(t, n, r) {
         ],
         244: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../../lib/frame-service/external"),
                     i = e("../../lib/use-min"),
                     o = e("@braintree/extended-promise"),
@@ -13292,10 +13522,10 @@ e.exports = (function e(t, n, r) {
                             t.focus();
                         }),
                         document.getElementById(l).addEventListener("click", function () {
-                            t.close(), i(), h();
+                            (t.close(), i(), h());
                         }),
                         t.open({}, function (e) {
-                            e
+                            (e
                                 ? d.reject(e)
                                 : r(1)
                                       .then(function (e) {
@@ -13309,7 +13539,7 @@ e.exports = (function e(t, n, r) {
                                           });
                                       }),
                                 t.close(),
-                                h();
+                                h());
                         }),
                         t.redirect(n),
                         d
@@ -13318,7 +13548,7 @@ e.exports = (function e(t, n, r) {
                 function h() {
                     document.getElementById("venmo-desktop-web-backdrop").classList.add("hidden");
                 }
-                (o.suppressUnhandledPromiseMessage = !0),
+                ((o.suppressUnhandledPromiseMessage = !0),
                     (t.exports = {
                         runWebLogin: function (e) {
                             var t, n, r, i, o, a, s, h, m;
@@ -13477,7 +13707,7 @@ e.exports = (function e(t, n, r) {
                         },
                         POPUP_WIDTH: 400,
                         POPUP_HEIGHT: 570,
-                    });
+                    }));
             },
             {
                 "../../lib/braintree-error": 143,
@@ -13489,6 +13719,7 @@ e.exports = (function e(t, n, r) {
         ],
         245: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/analytics"),
                     i = e("./shared/supports-venmo"),
                     o = e("./shared/browser-detection"),
@@ -13511,7 +13742,7 @@ e.exports = (function e(t, n, r) {
                     N = "3.112.1";
                 function O(e) {
                     var t = this;
-                    (this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
+                    ((this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
                         (this._mobileWebFallBack = e.mobileWebFallBack || !1),
                         (this._createPromise = e.createPromise),
                         (this._allowNewBrowserTab = !1 !== e.allowNewBrowserTab),
@@ -13610,7 +13841,7 @@ e.exports = (function e(t, n, r) {
                                         (n = t
                                             ._createVenmoPaymentContext(e)
                                             .then(function () {
-                                                return r.sendEvent(t._createPromise, "venmo." + o + ".presented"), e;
+                                                return (r.sendEvent(t._createPromise, "venmo." + o + ".presented"), e);
                                             })
                                             .catch(function (e) {
                                                 var n;
@@ -13646,16 +13877,16 @@ e.exports = (function e(t, n, r) {
                                                 return Promise.reject(e);
                                             })
                                     );
-                                })));
+                                }))));
                 }
                 function g(e) {
                     var t = (e || window.location.hash.substring(1)).split("&").reduce(function (e, t) {
                         var n = t.split("="),
                             r = y(decodeURIComponent(n[0]).replace(/\W/g, "")),
                             i = decodeURIComponent(n[1]);
-                        return (e[r] = i), e;
+                        return ((e[r] = i), e);
                     }, {});
-                    return t.resourceId && (t.id = t.resourceId), t;
+                    return (t.resourceId && (t.id = t.resourceId), t);
                 }
                 function P(e) {
                     return "@" + (e = e || "").replace("@", "");
@@ -13671,7 +13902,7 @@ e.exports = (function e(t, n, r) {
                         e
                     );
                 }
-                (h.suppressUnhandledPromiseMessage = !0),
+                ((h.suppressUnhandledPromiseMessage = !0),
                     (O.prototype._createVenmoPaymentContext = function (e, t) {
                         var n,
                             r,
@@ -13703,7 +13934,7 @@ e.exports = (function e(t, n, r) {
                                 !o.enrichedCustomerDataEnabled
                             )
                                 return Promise.reject(new _(s.VENMO_ECD_DISABLED));
-                            this._lineItems &&
+                            (this._lineItems &&
                                 this._lineItems.forEach(function (e) {
                                     e.unitTaxAmount = e.unitTaxAmount || "0";
                                 }),
@@ -13744,16 +13975,16 @@ e.exports = (function e(t, n, r) {
                                     })
                                     .then(function (e) {
                                         return e.data.createVenmoPaymentContext.venmoPaymentContext;
-                                    }));
+                                    })));
                         }
                         return n.then(function (n) {
                             var r = new Date(n.expiresAt) - new Date(n.createdAt);
-                            clearTimeout(i._refreshPaymentContextTimeout),
+                            (clearTimeout(i._refreshPaymentContextTimeout),
                                 (i._refreshPaymentContextTimeout = setTimeout(function () {
                                     i._tokenizationInProgress || i._createVenmoPaymentContext(e, !0);
                                 }, 0.6666 * r)),
                                 (t && i._tokenizationInProgress) ||
-                                    ((i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id));
+                                    ((i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id)));
                         });
                     }),
                     (O.prototype.appSwitch = function (e) {
@@ -13889,7 +14120,7 @@ e.exports = (function e(t, n, r) {
                                               return t._createVenmoPaymentContext(e);
                                           })
                                           .then(function () {
-                                              return (t._tokenizationInProgress = !1), Promise.reject(e);
+                                              return ((t._tokenizationInProgress = !1), Promise.reject(e));
                                           });
                                   }));
                     }),
@@ -13918,17 +14149,17 @@ e.exports = (function e(t, n, r) {
                                             checkPaymentContextStatus: e._checkPaymentContextStatus.bind(e),
                                         })
                                         .then(function (t) {
-                                            r.sendEvent(e._createPromise, "venmo.tokenize.web-login.success"),
+                                            (r.sendEvent(e._createPromise, "venmo.tokenize.web-login.success"),
                                                 e._tokenizePromise.resolve({
                                                     paymentMethodNonce: t.paymentMethodId,
                                                     username: t.userName,
                                                     payerInfo: t.payerInfo,
                                                     id: e._venmoPaymentContextId,
-                                                });
+                                                }));
                                         })
                                         .catch(function (t) {
-                                            r.sendEvent(e._createPromise, "venmo.tokenize.web-login.failure"),
-                                                e._tokenizePromise.reject(t);
+                                            (r.sendEvent(e._createPromise, "venmo.tokenize.web-login.failure"),
+                                                e._tokenizePromise.reject(t));
                                         }),
                                     e._tokenizePromise
                                 );
@@ -14038,20 +14269,20 @@ e.exports = (function e(t, n, r) {
                             (this._tokenizePromise = new h()),
                             this._pollForStatusChange()
                                 .then(function (t) {
-                                    r.sendEvent(e._createPromise, "venmo.tokenize.manual-return.success"),
+                                    (r.sendEvent(e._createPromise, "venmo.tokenize.manual-return.success"),
                                         e._tokenizePromise.resolve({
                                             paymentMethodNonce: t.paymentMethodId,
                                             username: t.userName,
                                             payerInfo: t.payerInfo,
                                             id: e._venmoPaymentContextId,
-                                        });
+                                        }));
                                 })
                                 .catch(function (t) {
-                                    r.sendEvent(e._createPromise, "venmo.tokenize.manual-return.failure"),
-                                        e._tokenizePromise.reject(t);
+                                    (r.sendEvent(e._createPromise, "venmo.tokenize.manual-return.failure"),
+                                        e._tokenizePromise.reject(t));
                                 }),
                             this.getUrl().then(function (t) {
-                                return e.appSwitch(t), e._tokenizePromise;
+                                return (e.appSwitch(t), e._tokenizePromise);
                             })
                         );
                     }),
@@ -14070,12 +14301,12 @@ e.exports = (function e(t, n, r) {
                                     t = e;
                                 })
                                 .then(function (e) {
-                                    i._ignoreHistoryChanges ||
+                                    (i._ignoreHistoryChanges ||
                                         window.location.hash === i._previousHash ||
                                         (window.location.hash = i._previousHash),
                                         i._removeVisibilityEventListener(),
                                         t ? i._tokenizePromise.reject(t) : i._tokenizePromise.resolve(e),
-                                        delete i._tokenizePromise;
+                                        delete i._tokenizePromise);
                                 });
                         }
                         return (
@@ -14112,9 +14343,9 @@ e.exports = (function e(t, n, r) {
                                     return e._venmoDesktopInstance.launchDesktopFlow();
                                 })
                                 .then(function (t) {
-                                    e._venmoDesktopInstance.hideDesktopFlow(),
+                                    (e._venmoDesktopInstance.hideDesktopFlow(),
                                         r.sendEvent(e._createPromise, "venmo.tokenize.desktop.success"),
-                                        e._tokenizePromise.resolve(t);
+                                        e._tokenizePromise.resolve(t));
                                 })
                                 .catch(function (t) {
                                     (r.sendEvent(e._createPromise, "venmo.tokenize.desktop.failure"),
@@ -14167,25 +14398,25 @@ e.exports = (function e(t, n, r) {
                             this._removeVisibilityEventListener(),
                             this._createPromise.then(
                                 function () {
-                                    e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(),
+                                    (e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(),
                                         clearTimeout(e._refreshPaymentContextTimeout),
                                         e._cancelMobilePaymentContext(),
-                                        u(this, l(O.prototype));
+                                        u(this, l(O.prototype)));
                                 }.bind(this),
                             )
                         );
                     }),
                     (O.prototype._removeVisibilityEventListener = function () {
-                        window.removeEventListener("hashchange", this._onHashChangeListener),
+                        (window.removeEventListener("hashchange", this._onHashChangeListener),
                             window.document.removeEventListener(b(), this._visibilityChangeListener),
                             delete this._visibilityChangeListener,
-                            delete this._onHashChangeListener;
+                            delete this._onHashChangeListener);
                     }),
                     (O.prototype.processHashChangeFlowResults = function (e) {
                         var t = this,
                             n = g(e);
                         return new Promise(function (e, i) {
-                            t._shouldUseLegacyFlow
+                            (t._shouldUseLegacyFlow
                                 ? n.venmoSuccess
                                     ? (r.sendEvent(t._createPromise, "venmo.appswitch.handle.success"), e(n))
                                     : n.venmoError
@@ -14225,14 +14456,14 @@ e.exports = (function e(t, n, r) {
                                           );
                                       })
                                       .catch(function (o) {
-                                          o.type === s.VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED.type && i(o),
+                                          (o.type === s.VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED.type && i(o),
                                               r.sendEvent(
                                                   t._createPromise,
                                                   "venmo.process-results.payment-context-status-query-failed",
                                               ),
-                                              e(n);
+                                              e(n));
                                       }),
-                                t._clearFragmentParameters();
+                                t._clearFragmentParameters());
                         });
                     }),
                     (O.prototype._clearFragmentParameters = function () {
@@ -14241,7 +14472,7 @@ e.exports = (function e(t, n, r) {
                             window.location.hash &&
                             history.pushState({}, "", window.location.href.slice(0, window.location.href.indexOf("#")));
                     }),
-                    (t.exports = p.wrapPrototype(O));
+                    (t.exports = p.wrapPrototype(O)));
             },
             {
                 "../lib/analytics": 138,
@@ -14267,6 +14498,7 @@ e.exports = (function e(t, n, r) {
         ],
         246: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error");
                 t.exports = {
                     VISA_CHECKOUT_NOT_ENABLED: {
@@ -14295,6 +14527,7 @@ e.exports = (function e(t, n, r) {
         ],
         247: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/basic-component-verification"),
                     i = e("../lib/braintree-error"),
                     o = e("../lib/create-deferred-client"),
@@ -14338,6 +14571,7 @@ e.exports = (function e(t, n, r) {
         ],
         248: [
             function (e, t, n) {
+                "use strict";
                 var r = e("../lib/braintree-error"),
                     i = e("../lib/analytics"),
                     o = e("./errors"),
@@ -14349,7 +14583,7 @@ e.exports = (function e(t, n, r) {
                 function u(e) {
                     this._client = e.client;
                 }
-                (u.prototype.createInitOptions = function (e) {
+                ((u.prototype.createInitOptions = function (e) {
                     var t,
                         n = this._client.getConfiguration().gatewayConfiguration,
                         i = n.visaCheckout;
@@ -14406,9 +14640,9 @@ e.exports = (function e(t, n, r) {
                             : Promise.reject(new r(o.VISA_CHECKOUT_PAYMENT_REQUIRED));
                     }),
                     (u.prototype.teardown = function () {
-                        return c(this, s(u.prototype)), Promise.resolve();
+                        return (c(this, s(u.prototype)), Promise.resolve());
                     }),
-                    (t.exports = d.wrapPrototype(u));
+                    (t.exports = d.wrapPrototype(u)));
             },
             {
                 "../lib/analytics": 138,

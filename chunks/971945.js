@@ -13,7 +13,7 @@ let n = r(288534),
     );
 class l extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e = !0) {
-        super(), (this.allowAbbreviations = e);
+        (super(), (this.allowAbbreviations = e));
     }
     innerPattern() {
         return this.allowAbbreviations ? o : u;

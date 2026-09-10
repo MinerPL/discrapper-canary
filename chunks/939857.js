@@ -15,7 +15,7 @@ class c extends r.PureComponent {
     static defaultProps = { fullscreenOnMobile: !0, size: d.SMALL, tag: "div" };
     _scroller = null;
     constructor(e) {
-        super(e), (this.state = { hideSeparator: !1 });
+        (super(e), (this.state = { hideSeparator: !1 }));
     }
     calculateScroll() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
@@ -25,7 +25,7 @@ class c extends r.PureComponent {
         0 !== t || n ? t > 0 && n && this.setState({ hideSeparator: !1 }) : this.setState({ hideSeparator: !0 });
     }
     setRef = (e) => {
-        (this._scroller = e), null != e && this.calculateScroll();
+        ((this._scroller = e), null != e && this.calculateScroll());
     };
     getScroller() {
         return this._scroller;

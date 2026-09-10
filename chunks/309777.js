@@ -109,7 +109,7 @@ function J(e) {
                         }),
                         (0, n.jsx)(o.K, {
                             onClick: function (e) {
-                                ei(),
+                                (ei(),
                                     (0, E.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
                                             l.e("249169"),
@@ -137,7 +137,7 @@ function J(e) {
                                                 onAfterDelete: J,
                                                 displayConfiguration: Y,
                                             });
-                                    });
+                                    }));
                             },
                             variant: "icon-only",
                             "aria-label": X.intl.string(X.t.PdRCRg),
@@ -289,7 +289,7 @@ function J(e) {
                                   ef({
                                       clips: [Q()],
                                       onShareComplete: () => {
-                                          $?.(), J();
+                                          ($?.(), J());
                                       },
                                   }),
                               text: X.intl.string(X.t["R3BPH+"]),

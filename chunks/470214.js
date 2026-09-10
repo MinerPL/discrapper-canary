@@ -27,7 +27,7 @@ class A extends c.Ay.PersistedStore {
 let h = new A(r.h, {
     FRIEND_ONLINE_TIMER_REPORTED: function (e) {
         let { timestampMs: t } = e;
-        return (E.lastReportedAtMs = t), !0;
+        return ((E.lastReportedAtMs = t), !0);
     },
 });
 var I = n(652215),
@@ -64,7 +64,7 @@ class g extends a.A {
             null == this.timerId &&
             m(l.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
-                (this.timerId = null), !m(l.A.getStatus()) || (h.isCooldownElapsed() && T());
+                ((this.timerId = null), !m(l.A.getStatus()) || (h.isCooldownElapsed() && T()));
             }, p));
     };
     clear = () => {

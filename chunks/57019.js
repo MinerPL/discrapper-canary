@@ -22,7 +22,7 @@ class h {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
-        (this.locked = t), this.computeLayout(n);
+        ((this.locked = t), this.computeLayout(n));
     }
     initialize(e) {
         if (null == this.resizeObserver) {
@@ -33,7 +33,7 @@ class h {
         }
     }
     cleanUp() {
-        this.resizeObserver?.disconnect(), (this.resizeObserver = void 0), this.listeners.clear();
+        (this.resizeObserver?.disconnect(), (this.resizeObserver = void 0), this.listeners.clear());
     }
     queueCompute() {
         this.queuedCompute || ((this.queuedCompute = !0), Promise.resolve().then(() => this.computeLayout()));
@@ -50,13 +50,13 @@ class h {
             let r = this.listeners.get(i.notification.id);
             if (null == r) continue;
             let { offsetHeight: l } = r.element;
-            (r.top !== t || r.height !== l || r.index !== n) && (e = !0),
+            ((r.top !== t || r.height !== l || r.index !== n) && (e = !0),
                 (r.top = t),
                 (r.height = l),
                 (r.index = n),
                 0 === t && (this.matchHeight !== l && (e = !0), (this.matchHeight = l)),
                 (t += l + 8),
-                n++;
+                n++);
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -74,9 +74,9 @@ class h {
         }
     }
     subscribe(e, t, n) {
-        this.listeners.set(e, { notificationId: e, callback: n, element: t, height: 0, top: 0, index: 0 }),
+        (this.listeners.set(e, { notificationId: e, callback: n, element: t, height: 0, top: 0, index: 0 }),
             this.resizeObserver?.observe(t),
-            this.queueCompute();
+            this.queueCompute());
     }
     unsubscribe(e) {
         let t = this.listeners.get(e);
@@ -123,7 +123,7 @@ function E(e, t, n) {
                                   contentOpacity: i && h > 0 ? 0 : 1,
                                   height: i ? r : l,
                               };
-                          m({
+                          (m({
                               from: t
                                   ? void 0
                                   : {
@@ -136,7 +136,7 @@ function E(e, t, n) {
                               to: b,
                               config: f,
                           }),
-                              (t = !0);
+                              (t = !0));
                       });
             };
         }, [e, b]);
@@ -145,7 +145,7 @@ function E(e, t, n) {
             if (t === l.wL.YEETED) {
                 let t = b.getLayoutSpecs(e);
                 if (null == t) return void n();
-                E.current({
+                (E.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
@@ -153,7 +153,7 @@ function E(e, t, n) {
                     },
                     config: f,
                 }),
-                    setTimeout(n, 300);
+                    setTimeout(n, 300));
             }
         }, [t, n, e, b]),
         { ref: p, springs: s }

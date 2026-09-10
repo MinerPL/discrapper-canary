@@ -111,7 +111,7 @@ function m({ actor: l, trackElementClicked: t, trackCaptureAttemptFinished: d })
         {
             load() {
                 let { config: t } = l.getSnapshot().context;
-                !0 === t.ds && (0, a.t)(!0), l.send({ type: "LOAD" });
+                (!0 === t.ds && (0, a.t)(!0), l.send({ type: "LOAD" }));
             },
             async nextStep() {
                 t?.("nextStep");
@@ -123,25 +123,25 @@ function m({ actor: l, trackElementClicked: t, trackCaptureAttemptFinished: d })
                 l.send({ type: "NEXT_STEP" });
             },
             requestPermission() {
-                t?.("requestPermission"), l.send({ type: "REQUEST_PERMISSION" });
+                (t?.("requestPermission"), l.send({ type: "REQUEST_PERMISSION" }));
             },
             goToLearnMore() {
-                t?.("goToLearnMore"), l.send({ type: "GO_TO_LEARN_MORE" });
+                (t?.("goToLearnMore"), l.send({ type: "GO_TO_LEARN_MORE" }));
             },
             back() {
-                t?.("back"), l.send({ type: "BACK" });
+                (t?.("back"), l.send({ type: "BACK" }));
             },
             close() {
-                t?.("close"), l.send({ type: "QUIT" });
+                (t?.("close"), l.send({ type: "QUIT" }));
             },
             reset() {
                 l.send({ type: "RESET" });
             },
             retryCapture() {
-                t?.("retryCapture"), l.send({ type: "RETRY_CAPTURE" });
+                (t?.("retryCapture"), l.send({ type: "RETRY_CAPTURE" }));
             },
             capture() {
-                t?.("capture"), l.send({ type: "MANUAL_CAPTURE" });
+                (t?.("capture"), l.send({ type: "MANUAL_CAPTURE" }));
             },
         }
     );

@@ -1,4 +1,4 @@
-(t.parse = function (r, t) {
+((t.parse = function (r, t) {
     if ("string" != typeof r) throw TypeError("argument str must be a string");
     var e = {},
         a = r.split(n),
@@ -9,7 +9,7 @@
             if (!(t < 0)) {
                 var i = r.substr(0, t).trim(),
                     n = r.substr(++t, r.length).trim();
-                '"' == n[0] && (n = n.slice(1, -1)),
+                ('"' == n[0] && (n = n.slice(1, -1)),
                     void 0 == e[i] &&
                         (e[i] = (function (r, t) {
                             try {
@@ -17,7 +17,7 @@
                             } catch (t) {
                                 return r;
                             }
-                        })(n, o));
+                        })(n, o)));
             }
         }),
         e
@@ -50,7 +50,7 @@
             n.firstPartyOnly && p.push("First-Party-Only"),
             p.join("; ")
         );
-    });
+    }));
 var i = decodeURIComponent,
     e = encodeURIComponent,
     n = /; */,

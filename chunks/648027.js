@@ -1,4 +1,4 @@
-i.d(t, { A: () => g }), i(321073);
+(i.d(t, { A: () => g }), i(321073));
 var l = i(582128),
     n = i(17928),
     a = i(10716),
@@ -86,7 +86,7 @@ function g(e) {
                         let t = l.findIndex((t) => t.application.id === e);
                         if (-1 !== t) {
                             let e = l[t];
-                            l.splice(t, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]), ++n;
+                            (l.splice(t, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]), ++n);
                         }
                     }),
                     l
@@ -108,7 +108,7 @@ function g(e) {
                                         : i;
                             if (n < i) {
                                 let e = l[i];
-                                l.splice(i, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]);
+                                (l.splice(i, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]));
                             }
                         }),
                     l

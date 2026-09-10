@@ -7,18 +7,18 @@ var r = Object.create,
     u = Object.prototype.hasOwnProperty,
     d = function (e, t) {
         return function () {
-            return e && (t = e((e = 0))), t;
+            return (e && (t = e((e = 0))), t);
         };
     },
     l = function (e, t) {
         return function () {
-            return t || e((t = { exports: {} }).exports, t), t.exports;
+            return (t || e((t = { exports: {} }).exports, t), t.exports);
         };
     },
     c = function (e, t, a, r) {
         if ((t && "object" == typeof t) || "function" == typeof t)
             for (var s, d = o(t), l = 0, c = d.length; l < c; l++)
-                (s = d[l]),
+                ((s = d[l]),
                     u.call(e, s) ||
                         s === a ||
                         i(e, s, {
@@ -26,7 +26,7 @@ var r = Object.create,
                                 return t[e];
                             }.bind(null, s),
                             enumerable: !(r = n(t, s)) || r.enumerable,
-                        });
+                        }));
         return e;
     },
     _ = function (e, t, a) {
@@ -51,7 +51,7 @@ var y = d(function () {}),
     g = l(function (e, t) {
         var a = Array.prototype.slice;
         t.exports = function (e, t) {
-            for (("length" in e) || (e = [e]), e = a.call(e); e.length; ) {
+            for (("length" in e) || (e = [e]), e = a.call(e); e.length;) {
                 var r = e.shift(),
                     i = t(r);
                 if (i) return i;
@@ -62,22 +62,22 @@ var y = d(function () {}),
     b = l(function (e, t) {
         function a(e, t) {
             if (!h(this, a)) return new a(e, t);
-            (this.data = e), (this.nodeValue = e), (this.length = e.length), (this.ownerDocument = t || null);
+            ((this.data = e), (this.nodeValue = e), (this.length = e.length), (this.ownerDocument = t || null));
         }
-        f(),
+        (f(),
             (t.exports = a),
             (a.prototype.nodeType = 8),
             (a.prototype.nodeName = "#comment"),
             (a.prototype.toString = function () {
                 return "[object Comment]";
-            });
+            }));
     }),
     w = l(function (e, t) {
         function a(e, t) {
             if (!h(this, a)) return new a(e);
-            (this.data = e || ""), (this.length = this.data.length), (this.ownerDocument = t || null);
+            ((this.data = e || ""), (this.length = this.data.length), (this.ownerDocument = t || null));
         }
-        f(),
+        (f(),
             (t.exports = a),
             (a.prototype.type = "DOMTextNode"),
             (a.prototype.nodeType = 3),
@@ -89,27 +89,27 @@ var y = d(function () {}),
                 var r = this.data,
                     i = r.substring(0, e),
                     n = r.substring(e + t, r.length);
-                (this.data = i + a + n), (this.length = this.data.length);
-            });
+                ((this.data = i + a + n), (this.length = this.data.length));
+            }));
     }),
     T = l(function (e, t) {
         t.exports = function (e) {
             var t = this,
                 a = e.type;
-            e.target || (e.target = t), t.listeners || (t.listeners = {});
+            (e.target || (e.target = t), t.listeners || (t.listeners = {}));
             var r = t.listeners[a];
             if (r)
                 return r.forEach(function (a) {
-                    (e.currentTarget = t), "function" == typeof a ? a(e) : a.handleEvent(e);
+                    ((e.currentTarget = t), "function" == typeof a ? a(e) : a.handleEvent(e));
                 });
             t.parentNode && t.parentNode.dispatchEvent(e);
         };
     }),
     k = l(function (e, t) {
         t.exports = function (e, t) {
-            this.listeners || (this.listeners = {}),
+            (this.listeners || (this.listeners = {}),
                 this.listeners[e] || (this.listeners[e] = []),
-                -1 === this.listeners[e].indexOf(t) && this.listeners[e].push(t);
+                -1 === this.listeners[e].indexOf(t) && this.listeners[e].push(t));
         };
     }),
     E = l(function (e, t) {
@@ -122,7 +122,7 @@ var y = d(function () {}),
         };
     }),
     x = l(function (e, t) {
-        y(),
+        (y(),
             (t.exports = function e(t) {
                 switch (t.nodeType) {
                     case 3:
@@ -186,7 +186,7 @@ var y = d(function () {}),
                             o.join("")
                         );
                 }
-            });
+            }));
         var a = [
             "area",
             "base",
@@ -211,22 +211,22 @@ var y = d(function () {}),
                 e.forEach(function (e) {
                     var a = e.name,
                         r = e.value;
-                    "style" === a &&
+                    ("style" === a &&
                         (r = (function (e) {
                             if ("string" == typeof e) return e;
                             var t = "";
                             return (
                                 Object.keys(e).forEach(function (a) {
                                     var r = e[a];
-                                    (a = a.replace(/[A-Z]/g, function (e) {
+                                    ((a = a.replace(/[A-Z]/g, function (e) {
                                         return "-" + e.toLowerCase();
                                     })),
-                                        (t += a + ":" + r + ";");
+                                        (t += a + ":" + r + ";"));
                                 }),
                                 t
                             );
                         })(r)),
-                        t.push(a + '="' + i(r).replace(/"/g, "&quot;") + '"');
+                        t.push(a + '="' + i(r).replace(/"/g, "&quot;") + '"'));
                 }),
                 t.length ? " " + t.join(" ") : ""
             );
@@ -250,7 +250,7 @@ var y = d(function () {}),
         function u(e, t, a) {
             if (!h(this, u)) return new u(e);
             var r = void 0 === a ? s : a || null;
-            (this.tagName = r === s ? String(e).toUpperCase() : e),
+            ((this.tagName = r === s ? String(e).toUpperCase() : e),
                 (this.nodeName = this.tagName),
                 (this.className = ""),
                 (this.dataset = {}),
@@ -260,27 +260,27 @@ var y = d(function () {}),
                 (this.ownerDocument = t || null),
                 (this.namespaceURI = r),
                 (this._attributes = {}),
-                "INPUT" === this.tagName && (this.type = "text");
+                "INPUT" === this.tagName && (this.type = "text"));
         }
-        (t.exports = u),
+        ((t.exports = u),
             (u.prototype.type = "DOMElement"),
             (u.prototype.nodeType = 1),
             (u.prototype.appendChild = function (e) {
-                return e.parentNode && e.parentNode.removeChild(e), this.childNodes.push(e), (e.parentNode = this), e;
+                return (e.parentNode && e.parentNode.removeChild(e), this.childNodes.push(e), (e.parentNode = this), e);
             }),
             (u.prototype.replaceChild = function (e, t) {
                 e.parentNode && e.parentNode.removeChild(e);
                 var a = this.childNodes.indexOf(t);
-                return (t.parentNode = null), (this.childNodes[a] = e), (e.parentNode = this), t;
+                return ((t.parentNode = null), (this.childNodes[a] = e), (e.parentNode = this), t);
             }),
             (u.prototype.removeChild = function (e) {
                 var t = this.childNodes.indexOf(e);
-                return this.childNodes.splice(t, 1), (e.parentNode = null), e;
+                return (this.childNodes.splice(t, 1), (e.parentNode = null), e);
             }),
             (u.prototype.insertBefore = function (e, t) {
                 e.parentNode && e.parentNode.removeChild(e);
                 var a = null == t ? -1 : this.childNodes.indexOf(t);
-                return a > -1 ? this.childNodes.splice(a, 0, e) : this.childNodes.push(e), (e.parentNode = this), e;
+                return (a > -1 ? this.childNodes.splice(a, 0, e) : this.childNodes.push(e), (e.parentNode = this), e);
             }),
             (u.prototype.setAttributeNS = function (e, t, a) {
                 var r = null,
@@ -353,16 +353,16 @@ var y = d(function () {}),
                         return e === t;
                     }) || !1
                 );
-            });
+            }));
     }),
     q = l(function (e, t) {
         f();
         var a = D();
         function r(e) {
             if (!h(this, r)) return new r();
-            (this.childNodes = []), (this.parentNode = null), (this.ownerDocument = e || null);
+            ((this.childNodes = []), (this.parentNode = null), (this.ownerDocument = e || null));
         }
-        (t.exports = r),
+        ((t.exports = r),
             (r.prototype.type = "DocumentFragment"),
             (r.prototype.nodeType = 11),
             (r.prototype.nodeName = "#document-fragment"),
@@ -375,15 +375,15 @@ var y = d(function () {}),
                         return String(e);
                     })
                     .join("");
-            });
+            }));
     }),
     P = l(function (e, t) {
         function a(e) {}
-        (t.exports = a),
+        ((t.exports = a),
             (a.prototype.initEvent = function (e, t, a) {
-                (this.type = e), (this.bubbles = t), (this.cancelable = a);
+                ((this.type = e), (this.bubbles = t), (this.cancelable = a));
             }),
-            (a.prototype.preventDefault = function () {});
+            (a.prototype.preventDefault = function () {}));
     }),
     O = l(function (e, t) {
         f();
@@ -398,17 +398,17 @@ var y = d(function () {}),
             l = E();
         function c() {
             if (!h(this, c)) return new c();
-            (this.head = this.createElement("head")),
+            ((this.head = this.createElement("head")),
                 (this.body = this.createElement("body")),
                 (this.documentElement = this.createElement("html")),
                 this.documentElement.appendChild(this.head),
                 this.documentElement.appendChild(this.body),
                 (this.childNodes = [this.documentElement]),
-                (this.nodeType = 9);
+                (this.nodeType = 9));
         }
         t.exports = c;
         var _ = c.prototype;
-        (_.createTextNode = function (e) {
+        ((_.createTextNode = function (e) {
             return new i(e, this);
         }),
             (_.createElementNS = function (e, t) {
@@ -439,7 +439,7 @@ var y = d(function () {}),
             (_.contains = n.prototype.contains),
             (_.removeEventListener = l),
             (_.addEventListener = d),
-            (_.dispatchEvent = u);
+            (_.dispatchEvent = u));
     }),
     A = l(function (e, t) {
         t.exports = new (O())();
@@ -448,10 +448,10 @@ var y = d(function () {}),
         var a,
             r = "u" > typeof global ? global : "u" > typeof window ? window : {},
             i = A();
-        "u" > typeof document
+        ("u" > typeof document
             ? (a = document)
             : (a = r["__GLOBAL_DOCUMENT_CACHE@4"]) || (a = r["__GLOBAL_DOCUMENT_CACHE@4"] = i),
-            (t.exports = a);
+            (t.exports = a));
     });
 function R(e, t) {
     (null == t || t > e.length) && (t = e.length);
@@ -487,7 +487,7 @@ function I(e, t) {
                         o = !0
                     );
                 } catch (e) {
-                    (s = !0), (i = e);
+                    ((s = !0), (i = e));
                 } finally {
                     try {
                         o || null == a.return || a.return();
@@ -517,7 +517,7 @@ var N = _(p()),
     },
     B = function () {
         if ("function" == typeof (null == (e = C.default.crypto) ? void 0 : e.getRandomValues)) {
-            (a = new Uint8Array(32)), C.default.crypto.getRandomValues(a);
+            ((a = new Uint8Array(32)), C.default.crypto.getRandomValues(a));
             for (var e, t, a, r = 0; r < 32; r++) a[r] = a[r] % 16;
         } else {
             a = [];
@@ -526,7 +526,7 @@ var N = _(p()),
         var n = 0;
         t = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (e) {
             var t = "x" === e ? a[n] : (3 & a[n]) | 8;
-            return n++, t.toString(16);
+            return (n++, t.toString(16));
         });
         var o = H(),
             s = null == o ? void 0 : o.toString(16).substring(3);
@@ -537,11 +537,11 @@ var N = _(p()),
     },
     U = function (e) {
         var t;
-        if (e && void 0 !== e.nodeName) return e.muxId || (e.muxId = M()), e.muxId;
+        if (e && void 0 !== e.nodeName) return (e.muxId || (e.muxId = M()), e.muxId);
         try {
             t = document.querySelector(e);
         } catch (e) {}
-        return t && !t.muxId && (t.muxId = e), (null == t ? void 0 : t.muxId) || e;
+        return (t && !t.muxId && (t.muxId = e), (null == t ? void 0 : t.muxId) || e);
     },
     F = function (e) {
         e && void 0 !== e.nodeName ? (e = U((t = e))) : (t = document.querySelector(e));
@@ -622,14 +622,14 @@ function J(e, t) {
 function K(e, t) {
     for (var a = 0; a < t.length; a++) {
         var r = t[a];
-        (r.enumerable = r.enumerable || !1),
+        ((r.enumerable = r.enumerable || !1),
             (r.configurable = !0),
             "value" in r && (r.writable = !0),
-            Object.defineProperty(e, r.key, r);
+            Object.defineProperty(e, r.key, r));
     }
 }
 function Y(e, t, a) {
-    return t && K(e.prototype, t), a && K(e, a), e;
+    return (t && K(e.prototype, t), a && K(e, a), e);
 }
 function X(e, t, a) {
     return (
@@ -650,7 +650,7 @@ function Z(e, t, a) {
             ? Reflect.get
             : function (e, t, a) {
                   var r = (function (e, t) {
-                      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = $(e)); );
+                      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = $(e)););
                       return e;
                   })(e, t);
                   if (r) {
@@ -663,10 +663,10 @@ function ee(e, t) {
     return (ee =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
-f(), y();
+(f(), y());
 var et = function (e) {
         return ea(e)[0];
     },
@@ -674,7 +674,7 @@ var et = function (e) {
         if ("string" != typeof e || "" === e) return ["localhost"];
         var t,
             a = (e.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [])[4];
-        return a && (t = (a.match(/[^\.]+\.[^\.]+$/) || [])[0]), [a, t];
+        return (a && (t = (a.match(/[^\.]+\.[^\.]+$/) || [])[0]), [a, t]);
     },
     er = _(p()),
     ei = function () {
@@ -692,13 +692,13 @@ var et = function (e) {
         return t && t.navigationStart;
     };
 function es(e, t, a) {
-    (a = void 0 === a ? 1 : a), (e[t] = e[t] || 0), (e[t] += a);
+    ((a = void 0 === a ? 1 : a), (e[t] = e[t] || 0), (e[t] += a));
 }
 function eu(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(a);
-        "function" == typeof Object.getOwnPropertySymbols &&
+        ("function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
                 Object.getOwnPropertySymbols(a).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(a, e).enumerable;
@@ -706,7 +706,7 @@ function eu(e) {
             )),
             r.forEach(function (t) {
                 X(e, t, a[t]);
-            });
+            }));
     }
     return e;
 }
@@ -808,12 +808,12 @@ var eh = function (e) {
                     u = t.sessionData,
                     d = {},
                     l = {};
-                a.forEach(function (e, t) {
+                (a.forEach(function (e, t) {
                     d[t] = { width: e.width, height: e.height, bitrate: e.bitrate, attrs: e.attrs };
                 }),
                     r.forEach(function (e, t) {
                         l[t] = { name: e.name, language: e.lang, bitrate: e.bitrate };
-                    });
+                    }));
                 var c = ef(n),
                     _ = c.bytesLoaded,
                     p = c.requestStart,
@@ -903,14 +903,14 @@ var eh = function (e) {
                     request_media_duration: n.duration,
                     request_url: null == i ? void 0 : i.responseURL,
                 };
-            "main" === n.type
+            ("main" === n.type
                 ? ((p.request_type = "media"),
                   (p.request_current_level = n.level),
                   (p.request_video_width = (a.levels[n.level] || {}).width),
                   (p.request_video_height = (a.levels[n.level] || {}).height),
                   (p.request_labeled_bitrate = (a.levels[n.level] || {}).bitrate))
                 : (p.request_type = n.type),
-                s("requestcompleted", p);
+                s("requestcompleted", p));
         };
         a.on(r.Events.FRAG_LOADED, c);
         var _ = function (e, t) {
@@ -929,7 +929,7 @@ var eh = function (e) {
                 l = t.networkDetails,
                 c = (null == d ? void 0 : d.url) || t.url || "",
                 _ = l ? em(l) : void 0;
-            (n === r.ErrorDetails.MANIFEST_LOAD_ERROR ||
+            ((n === r.ErrorDetails.MANIFEST_LOAD_ERROR ||
                 n === r.ErrorDetails.MANIFEST_LOAD_TIMEOUT ||
                 n === r.ErrorDetails.FRAG_LOAD_ERROR ||
                 n === r.ErrorDetails.FRAG_LOAD_TIMEOUT ||
@@ -978,7 +978,7 @@ var eh = function (e) {
                             "".concat(
                                 t.err ? "error message: ".concat(null == (a = t.err) ? void 0 : a.message, "\n") : "",
                             ),
-                    });
+                    }));
         };
         a.on(r.Events.ERROR, p);
         var h = function (e, t) {
@@ -999,7 +999,7 @@ var eh = function (e) {
                 var o,
                     u = n.attrs.BANDWIDTH,
                     d = parseFloat(n.attrs["FRAME-RATE"]);
-                isNaN(d) || (o = d),
+                (isNaN(d) || (o = d),
                     u
                         ? s("renditionchange", {
                               video_source_fps: o,
@@ -1009,12 +1009,12 @@ var eh = function (e) {
                               video_source_rendition_name: n.name,
                               video_source_codec: null == n ? void 0 : n.videoCodec,
                           })
-                        : i.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js");
+                        : i.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js"));
             }
         };
-        a.on(r.Events.LEVEL_SWITCHED, f),
+        (a.on(r.Events.LEVEL_SWITCHED, f),
             (a._stopMuxMonitor = function () {
-                a.off(r.Events.MANIFEST_LOADED, u),
+                (a.off(r.Events.MANIFEST_LOADED, u),
                     a.off(r.Events.LEVEL_LOADED, d),
                     a.off(r.Events.AUDIO_TRACK_LOADED, l),
                     a.off(r.Events.FRAG_LOADED, c),
@@ -1023,9 +1023,9 @@ var eh = function (e) {
                     a.off(r.Events.FRAG_LOAD_EMERGENCY_ABORTED, h),
                     a.off(r.Events.LEVEL_SWITCHED, f),
                     a.off(r.Events.DESTROYING, a._stopMuxMonitor),
-                    delete a._stopMuxMonitor;
+                    delete a._stopMuxMonitor);
             }),
-            a.on(r.Events.DESTROYING, a._stopMuxMonitor);
+            a.on(r.Events.DESTROYING, a._stopMuxMonitor));
     },
     ey = function (e) {
         e && "function" == typeof e._stopMuxMonitor && e._stopMuxMonitor();
@@ -1123,14 +1123,14 @@ var eh = function (e) {
                     u = o.type,
                     d = o.bitrateList,
                     l = {};
-                (d = d || []).forEach(function (e, t) {
-                    (l[t] = {}),
+                ((d = d || []).forEach(function (e, t) {
+                    ((l[t] = {}),
                         (l[t].width = e.width),
                         (l[t].height = e.height),
                         (l[t].bitrate = e.bandwidth),
-                        (l[t].attrs = {});
+                        (l[t].attrs = {}));
                 }),
-                    "video" === u ? (s.video = l) : "audio" === u ? (s.audio = l) : (s.media = l);
+                    "video" === u ? (s.video = l) : "audio" === u ? (s.audio = l) : (s.media = l));
                 var c = eg(i, a),
                     _ = c.requestStart,
                     p = c.requestResponseStart,
@@ -1285,16 +1285,16 @@ var eh = function (e) {
                 player_error_context: s,
             });
         };
-        a.on("error", f),
+        (a.on("error", f),
             (a._stopMuxMonitor = function () {
-                a.off("manifestLoaded", o),
+                (a.off("manifestLoaded", o),
                     a.off("initFragmentLoaded", d),
                     a.off("mediaFragmentLoaded", l),
                     a.off("qualityChangeRendered", p),
                     a.off("error", f),
                     a.off("fragmentLoadingAbandoned", h),
-                    delete a._stopMuxMonitor;
-            });
+                    delete a._stopMuxMonitor);
+            }));
     },
     eE = function (e) {
         e && "function" == typeof e._stopMuxMonitor && e._stopMuxMonitor();
@@ -1302,7 +1302,7 @@ var eh = function (e) {
     ex = 0,
     eD = (function () {
         function e() {
-            J(this, e), X(this, "_listeners", void 0);
+            (J(this, e), X(this, "_listeners", void 0));
         }
         return (
             Y(e, [
@@ -1335,9 +1335,9 @@ var eh = function (e) {
                         var r = this;
                         t._eventEmitterGuid = t._eventEmitterGuid || ++ex;
                         var i = function () {
-                            r.off(e, i), t.apply(a || this, arguments);
+                            (r.off(e, i), t.apply(a || this, arguments));
                         };
-                        (i._eventEmitterGuid = t._eventEmitterGuid), this.on(e, i);
+                        ((i._eventEmitterGuid = t._eventEmitterGuid), this.on(e, i));
                     },
                 },
                 {
@@ -1355,7 +1355,7 @@ var eh = function (e) {
                                         t.call(a, { type: e }, r);
                                     });
                                 };
-                            s(r, t), s(i, t), s(n, t), s(o, t);
+                            (s(r, t), s(i, t), s(n, t), s(o, t));
                         }
                     },
                 },
@@ -1367,7 +1367,7 @@ var eh = function (e) {
     eP = (function () {
         function e(t) {
             var a = this;
-            J(this, e),
+            (J(this, e),
                 X(this, "_playbackHeartbeatInterval", void 0),
                 X(this, "_playheadShouldBeProgressing", void 0),
                 X(this, "pm", void 0),
@@ -1404,7 +1404,7 @@ var eh = function (e) {
                         (eq.default.clearInterval(a._playbackHeartbeatInterval),
                         t.emit("playbackheartbeatend", { viewer_time: r.viewer_time }),
                         (a._playbackHeartbeatInterval = null));
-                });
+                }));
         }
         return (
             Y(e, [
@@ -1422,11 +1422,11 @@ var eh = function (e) {
                 {
                     key: "_stopPlaybackHeartbeatInterval",
                     value: function () {
-                        (this._playheadShouldBeProgressing = !1),
+                        ((this._playheadShouldBeProgressing = !1),
                             null !== this._playbackHeartbeatInterval &&
                                 (eq.default.clearInterval(this._playbackHeartbeatInterval),
                                 this.pm.emit("playbackheartbeatend"),
-                                (this._playbackHeartbeatInterval = null));
+                                (this._playbackHeartbeatInterval = null)));
                     },
                 },
             ]),
@@ -1435,7 +1435,7 @@ var eh = function (e) {
     })(),
     eO = function e(t) {
         var a = this;
-        J(this, e),
+        (J(this, e),
             X(this, "viewErrored", void 0),
             t.on("viewinit", function () {
                 a.viewErrored = !1;
@@ -1458,27 +1458,27 @@ var eh = function (e) {
                             i.player_error_business_exception || r.player_error_business_exception),
                         (a.viewErrored = !0));
                 } catch (e) {
-                    t.mux.log.warn("Exception in error translator callback.", e), (a.viewErrored = !0);
+                    (t.mux.log.warn("Exception in error translator callback.", e), (a.viewErrored = !0));
                 }
             }),
             t.on("aftererror", function () {
                 var e, a, r, i, n;
-                null == (e = t.data) || delete e.player_error_code,
+                (null == (e = t.data) || delete e.player_error_code,
                     null == (a = t.data) || delete a.player_error_message,
                     null == (r = t.data) || delete r.player_error_context,
                     null == (i = t.data) || delete i.player_error_severity,
-                    null == (n = t.data) || delete n.player_error_business_exception;
-            });
+                    null == (n = t.data) || delete n.player_error_business_exception);
+            }));
     },
     eA = (function () {
         function e(t) {
-            J(this, e),
+            (J(this, e),
                 X(this, "_watchTimeTrackerLastCheckedTime", void 0),
                 X(this, "pm", void 0),
                 (this.pm = t),
                 (this._watchTimeTrackerLastCheckedTime = null),
                 t.on("playbackheartbeat", this._updateWatchTime.bind(this)),
-                t.on("playbackheartbeatend", this._clearWatchTimeState.bind(this));
+                t.on("playbackheartbeatend", this._clearWatchTimeState.bind(this)));
         }
         return (
             Y(e, [
@@ -1486,15 +1486,15 @@ var eh = function (e) {
                     key: "_updateWatchTime",
                     value: function (e, t) {
                         var a = t.viewer_time;
-                        null === this._watchTimeTrackerLastCheckedTime && (this._watchTimeTrackerLastCheckedTime = a),
+                        (null === this._watchTimeTrackerLastCheckedTime && (this._watchTimeTrackerLastCheckedTime = a),
                             es(this.pm.data, "view_watch_time", a - this._watchTimeTrackerLastCheckedTime),
-                            (this._watchTimeTrackerLastCheckedTime = a);
+                            (this._watchTimeTrackerLastCheckedTime = a));
                     },
                 },
                 {
                     key: "_clearWatchTimeState",
                     value: function (e, t) {
-                        this._updateWatchTime(e, t), (this._watchTimeTrackerLastCheckedTime = null);
+                        (this._updateWatchTime(e, t), (this._watchTimeTrackerLastCheckedTime = null));
                     },
                 },
             ]),
@@ -1504,7 +1504,7 @@ var eh = function (e) {
     eS = (function () {
         function e(t) {
             var a = this;
-            J(this, e),
+            (J(this, e),
                 X(this, "_playbackTimeTrackerLastPlayheadPosition", void 0),
                 X(this, "_lastTime", void 0),
                 X(this, "_isAdPlaying", void 0),
@@ -1517,11 +1517,11 @@ var eh = function (e) {
                 (this._callbackUpdatePlaybackTime = null),
                 t.on("viewinit", function () {
                     a.pm.data.view_playing_time_ms_cumulative = 0;
-                });
+                }));
             var r = this._startPlaybackTimeTracking.bind(this);
-            t.on("playing", r), t.on("adplaying", r), t.on("seeked", r), t.on("rebufferend", r);
+            (t.on("playing", r), t.on("adplaying", r), t.on("seeked", r), t.on("rebufferend", r));
             var i = this._stopPlaybackTimeTracking.bind(this);
-            t.on("playbackheartbeatend", i),
+            (t.on("playbackheartbeatend", i),
                 t.on("seeking", i),
                 t.on("rebufferstart", i),
                 t.on("adplaying", function () {
@@ -1543,11 +1543,11 @@ var eh = function (e) {
                     a._isAdPlaying = !1;
                 }),
                 t.on("viewinit", function () {
-                    (a._playbackTimeTrackerLastPlayheadPosition = -1),
+                    ((a._playbackTimeTrackerLastPlayheadPosition = -1),
                         (a._lastTime = H()),
                         (a._isAdPlaying = !1),
-                        (a._callbackUpdatePlaybackTime = null);
-                });
+                        (a._callbackUpdatePlaybackTime = null));
+                }));
         }
         return (
             Y(e, [
@@ -1578,7 +1578,7 @@ var eh = function (e) {
                             t = H(),
                             a = t - this._lastTime,
                             r = -1;
-                        this._playbackTimeTrackerLastPlayheadPosition >= 0 &&
+                        (this._playbackTimeTrackerLastPlayheadPosition >= 0 &&
                         e > this._playbackTimeTrackerLastPlayheadPosition
                             ? (r = e - this._playbackTimeTrackerLastPlayheadPosition)
                             : this._isAdPlaying && (r = a),
@@ -1589,7 +1589,7 @@ var eh = function (e) {
                                 (this._isAdPlaying && es(this.pm.data, "ad_playing_time_ms_cumulative", a),
                                 es(this.pm.data, "view_playing_time_ms_cumulative", a)),
                             (this._playbackTimeTrackerLastPlayheadPosition = e),
-                            (this._lastTime = t);
+                            (this._lastTime = t));
                     },
                 },
             ]),
@@ -1598,14 +1598,14 @@ var eh = function (e) {
     })(),
     eR = (function () {
         function e(t) {
-            J(this, e), X(this, "pm", void 0), (this.pm = t);
+            (J(this, e), X(this, "pm", void 0), (this.pm = t));
             var a = this._updatePlayheadTime.bind(this);
-            t.on("playbackheartbeat", a),
+            (t.on("playbackheartbeat", a),
                 t.on("playbackheartbeatend", a),
                 t.on("timeupdate", a),
                 t.on("destroy", function () {
                     t.off("timeupdate", a);
-                });
+                }));
         }
         return (
             Y(e, [
@@ -1631,9 +1631,9 @@ var eh = function (e) {
                                         a.pm.currentFragmentStart);
                             };
                         if (t && t.player_playhead_time)
-                            (this.pm.data.player_playhead_time = t.player_playhead_time),
+                            ((this.pm.data.player_playhead_time = t.player_playhead_time),
                                 r(),
-                                this._updateMaxPlayheadPosition();
+                                this._updateMaxPlayheadPosition());
                         else if (this.pm.getPlayheadTime) {
                             var i = this.pm.getPlayheadTime();
                             void 0 !== i &&
@@ -1649,12 +1649,12 @@ var eh = function (e) {
         if ((J(this, e), !t.disableRebufferTracking)) {
             var a,
                 r = function (e, t) {
-                    i(t), (a = void 0);
+                    (i(t), (a = void 0));
                 },
                 i = function (e) {
                     if (a) {
                         var r = e.viewer_time - a;
-                        es(t.data, "view_rebuffer_duration", r),
+                        (es(t.data, "view_rebuffer_duration", r),
                             (a = e.viewer_time),
                             t.data.view_rebuffer_duration > 3e5 &&
                                 (t.emit("viewend"),
@@ -1664,28 +1664,28 @@ var eh = function (e) {
                                         3e5,
                                         "ms, future events will be ignored unless a programchange or videochange occurs.",
                                     ),
-                                ));
+                                )));
                     }
                     t.data.view_watch_time >= 0 &&
                         t.data.view_rebuffer_count > 0 &&
                         ((t.data.view_rebuffer_frequency = t.data.view_rebuffer_count / t.data.view_watch_time),
                         (t.data.view_rebuffer_percentage = t.data.view_rebuffer_duration / t.data.view_watch_time));
                 };
-            t.on("playbackheartbeat", function (e, t) {
+            (t.on("playbackheartbeat", function (e, t) {
                 return i(t);
             }),
                 t.on("rebufferstart", function (e, i) {
                     a || (es(t.data, "view_rebuffer_count", 1), (a = i.viewer_time), t.one("rebufferend", r));
                 }),
                 t.on("viewinit", function () {
-                    (a = void 0), t.off("rebufferend", r);
-                });
+                    ((a = void 0), t.off("rebufferend", r));
+                }));
         }
     },
     eI = (function () {
         function e(t) {
             var a = this;
-            J(this, e),
+            (J(this, e),
                 X(this, "_lastCheckedTime", void 0),
                 X(this, "_lastPlayheadTime", void 0),
                 X(this, "_lastPlayheadTimeUpdatedTime", void 0),
@@ -1701,7 +1701,7 @@ var eh = function (e) {
                     t.on("playbackheartbeatend", this._cleanupRebufferTracker.bind(this)),
                     t.on("seeking", function () {
                         a._cleanupRebufferTracker(null, { viewer_time: H() });
-                    }));
+                    })));
         }
         return (
             Y(e, [
@@ -1719,28 +1719,28 @@ var eh = function (e) {
                         if (this._lastPlayheadTime !== this.pm.data.player_playhead_time)
                             return void this._cleanupRebufferTracker(e, t, !0);
                         var a = t.viewer_time - this._lastPlayheadTimeUpdatedTime;
-                        "number" == typeof this.pm.sustainedRebufferThreshold &&
+                        ("number" == typeof this.pm.sustainedRebufferThreshold &&
                             a >= this.pm.sustainedRebufferThreshold &&
                             (this._rebuffering ||
                                 ((this._rebuffering = !0),
                                 this.pm.emit("rebufferstart", { viewer_time: this._lastPlayheadTimeUpdatedTime }))),
-                            (this._lastCheckedTime = t.viewer_time);
+                            (this._lastCheckedTime = t.viewer_time));
                     },
                 },
                 {
                     key: "_clearRebufferTrackerState",
                     value: function () {
-                        (this._lastCheckedTime = null),
+                        ((this._lastCheckedTime = null),
                             (this._lastPlayheadTime = null),
-                            (this._lastPlayheadTimeUpdatedTime = null);
+                            (this._lastPlayheadTimeUpdatedTime = null));
                     },
                 },
                 {
                     key: "_prepareRebufferTrackerState",
                     value: function (e) {
-                        (this._lastCheckedTime = e),
+                        ((this._lastCheckedTime = e),
                             (this._lastPlayheadTime = this.pm.data.player_playhead_time),
-                            (this._lastPlayheadTimeUpdatedTime = e);
+                            (this._lastPlayheadTimeUpdatedTime = e));
                     },
                 },
                 {
@@ -1748,7 +1748,7 @@ var eh = function (e) {
                     value: function (e, t) {
                         var a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                         if (this._rebuffering)
-                            (this._rebuffering = !1), this.pm.emit("rebufferend", { viewer_time: t.viewer_time });
+                            ((this._rebuffering = !1), this.pm.emit("rebufferend", { viewer_time: t.viewer_time }));
                         else {
                             if (null === this._lastCheckedTime) return;
                             var r = this.pm.data.player_playhead_time - this._lastPlayheadTime,
@@ -1772,7 +1772,7 @@ var eh = function (e) {
     eN = (function () {
         function e(t) {
             var a = this;
-            J(this, e),
+            (J(this, e),
                 X(this, "pm", void 0),
                 (this.pm = t),
                 t.on("viewinit", function () {
@@ -1787,13 +1787,13 @@ var eh = function (e) {
                                   (void 0 === t.data.view_time_to_first_frame || a._inPrerollPosition()) &&
                                   a.calculateTimeToFirstFrame(n || H(), r);
                         };
-                        t.one("playing", i),
+                        (t.one("playing", i),
                             t.one("adplaying", i),
                             t.one("viewend", function () {
-                                t.off("playing", i), t.off("adplaying", i);
-                            });
+                                (t.off("playing", i), t.off("adplaying", i));
+                            }));
                     }
-                });
+                }));
         }
         return (
             Y(e, [
@@ -1824,7 +1824,7 @@ var eh = function (e) {
     })(),
     eC = function e(t) {
         var a = this;
-        J(this, e),
+        (J(this, e),
             X(this, "_lastPlayerHeight", void 0),
             X(this, "_lastPlayerWidth", void 0),
             X(this, "_lastPlayheadPosition", void 0),
@@ -1865,63 +1865,63 @@ var eh = function (e) {
                             ),
                             i = Math.max(0, r - 1),
                             n = Math.max(0, 1 - r);
-                        (t.data.view_max_upscale_percentage = Math.max(t.data.view_max_upscale_percentage || 0, i)),
+                        ((t.data.view_max_upscale_percentage = Math.max(t.data.view_max_upscale_percentage || 0, i)),
                             (t.data.view_max_downscale_percentage = Math.max(
                                 t.data.view_max_downscale_percentage || 0,
                                 n,
                             )),
                             es(t.data, "view_total_content_playback_time", e),
                             es(t.data, "view_total_upscaling", i * e),
-                            es(t.data, "view_total_downscaling", n * e);
+                            es(t.data, "view_total_downscaling", n * e));
                     }
                     a._lastPlayheadPosition = -1;
                 });
             }),
             ["playing", "hb", "renditionchange", "orientationchange", "playbackmodechange"].forEach(function (e) {
                 t.on(e, function () {
-                    (a._lastPlayheadPosition = t.data.player_playhead_time),
+                    ((a._lastPlayheadPosition = t.data.player_playhead_time),
                         (a._lastPlayerWidth = t.data.player_width),
                         (a._lastPlayerHeight = t.data.player_height),
                         (a._lastSourceWidth = t.data.video_source_width),
-                        (a._lastSourceHeight = t.data.video_source_height);
+                        (a._lastSourceHeight = t.data.video_source_height));
                 });
-            });
+            }));
     },
     ej = function e(t) {
         var a = this;
-        J(this, e), X(this, "isSeeking", void 0), (this.isSeeking = !1);
+        (J(this, e), X(this, "isSeeking", void 0), (this.isSeeking = !1));
         var r = -1,
             i = function () {
                 var e = H(),
                     i = (t.data.viewer_time || e) - (r || e);
-                es(t.data, "view_seek_duration", i),
+                (es(t.data, "view_seek_duration", i),
                     (t.data.view_max_seek_time = Math.max(t.data.view_max_seek_time || 0, i)),
                     (a.isSeeking = !1),
-                    (r = -1);
+                    (r = -1));
             };
-        t.on("seeking", function (e, n) {
+        (t.on("seeking", function (e, n) {
             if ((Object.assign(t.data, n), a.isSeeking && n.viewer_time - r <= 2e3)) {
                 r = n.viewer_time;
                 return;
             }
-            a.isSeeking && i(),
+            (a.isSeeking && i(),
                 (a.isSeeking = !0),
                 (r = n.viewer_time),
                 es(t.data, "view_seek_count", 1),
-                t.send("seeking");
+                t.send("seeking"));
         }),
             t.on("seeked", function () {
                 i();
             }),
             t.on("viewend", function () {
-                a.isSeeking && (i(), t.send("seeked")), (a.isSeeking = !1), (r = -1);
-            });
+                (a.isSeeking && (i(), t.send("seeked")), (a.isSeeking = !1), (r = -1));
+            }));
     },
     eH = function (e, t) {
-        e.push(t),
+        (e.push(t),
             e.sort(function (e, t) {
                 return e.viewer_time - t.viewer_time;
-            });
+            }));
     },
     eB = [
         "adbreakstart",
@@ -1939,7 +1939,7 @@ var eh = function (e) {
     eM = (function () {
         function e(t) {
             var a = this;
-            J(this, e),
+            (J(this, e),
                 X(this, "_adHasPlayed", void 0),
                 X(this, "_adRequests", void 0),
                 X(this, "_adResponses", void 0),
@@ -1951,43 +1951,43 @@ var eh = function (e) {
                 X(this, "pm", void 0),
                 (this.pm = t),
                 t.on("viewinit", function () {
-                    (a.isAdBreak = !1),
+                    ((a.isAdBreak = !1),
                         (a._currentAdRequestNumber = 0),
                         (a._currentAdResponseNumber = 0),
                         (a._adRequests = []),
                         (a._adResponses = []),
                         (a._adHasPlayed = !1),
                         (a._wouldBeNewAdPlay = !0),
-                        (a._prerollPlayTime = void 0);
+                        (a._prerollPlayTime = void 0));
                 }),
                 eB.forEach(function (e) {
                     return t.on(e, a._updateAdData.bind(a));
-                });
+                }));
             var r = function () {
                 a.isAdBreak = !1;
             };
-            t.on("adbreakstart", function () {
+            (t.on("adbreakstart", function () {
                 a.isAdBreak = !0;
             }),
                 t.on("play", r),
                 t.on("playing", r),
                 t.on("viewend", r),
                 t.on("adrequest", function (e, r) {
-                    (r = Object.assign({ ad_request_id: "generatedAdRequestId" + a._currentAdRequestNumber++ }, r)),
+                    ((r = Object.assign({ ad_request_id: "generatedAdRequestId" + a._currentAdRequestNumber++ }, r)),
                         eH(a._adRequests, r),
                         es(t.data, "view_ad_request_count"),
                         a.inPrerollPosition() &&
                             ((t.data.view_preroll_requested = !0),
-                            a._adHasPlayed || es(t.data, "view_preroll_request_count"));
+                            a._adHasPlayed || es(t.data, "view_preroll_request_count")));
                 }),
                 t.on("adresponse", function (e, r) {
-                    (r = Object.assign({ ad_request_id: "generatedAdRequestId" + a._currentAdResponseNumber++ }, r)),
-                        eH(a._adResponses, r);
+                    ((r = Object.assign({ ad_request_id: "generatedAdRequestId" + a._currentAdResponseNumber++ }, r)),
+                        eH(a._adResponses, r));
                     var i = a.findAdRequest(r.ad_request_id);
                     i && es(t.data, "view_ad_request_time", Math.max(0, r.viewer_time - i.viewer_time));
                 }),
                 t.on("adplay", function (e, r) {
-                    (a._adHasPlayed = !0),
+                    ((a._adHasPlayed = !0),
                         a._wouldBeNewAdPlay && ((a._wouldBeNewAdPlay = !1), es(t.data, "view_ad_played_count")),
                         a.inPrerollPosition() &&
                             !t.data.view_preroll_played &&
@@ -2002,7 +2002,7 @@ var eh = function (e) {
                                     0,
                                     r.viewer_time - t.data.view_start,
                                 )),
-                            (a._prerollPlayTime = r.viewer_time));
+                            (a._prerollPlayTime = r.viewer_time)));
                 }),
                 t.on("adplaying", function (e, r) {
                     a.inPrerollPosition() &&
@@ -2022,7 +2022,7 @@ var eh = function (e) {
                 }),
                 t.on("aderror", function () {
                     a._wouldBeNewAdPlay = !0;
-                });
+                }));
         }
         return (
             Y(e, [
@@ -2050,24 +2050,24 @@ var eh = function (e) {
                                 var a = I(ea(t.ad_tag_url), 2),
                                     r = a[0],
                                     i = a[1];
-                                (this.pm.data.view_preroll_ad_tag_domain = i),
-                                    (this.pm.data.view_preroll_ad_tag_hostname = r);
+                                ((this.pm.data.view_preroll_ad_tag_domain = i),
+                                    (this.pm.data.view_preroll_ad_tag_hostname = r));
                             }
                             if (!this.pm.data.view_preroll_ad_asset_hostname && t.ad_asset_url) {
                                 var n = I(ea(t.ad_asset_url), 2),
                                     o = n[0],
                                     s = n[1];
-                                (this.pm.data.view_preroll_ad_asset_domain = s),
-                                    (this.pm.data.view_preroll_ad_asset_hostname = o);
+                                ((this.pm.data.view_preroll_ad_asset_domain = s),
+                                    (this.pm.data.view_preroll_ad_asset_hostname = o));
                             }
                             this.pm.data.ad_type = "preroll";
                         }
-                        (this.pm.data.ad_asset_url = null == t ? void 0 : t.ad_asset_url),
+                        ((this.pm.data.ad_asset_url = null == t ? void 0 : t.ad_asset_url),
                             (this.pm.data.ad_tag_url = null == t ? void 0 : t.ad_tag_url),
                             (this.pm.data.ad_creative_id = null == t ? void 0 : t.ad_creative_id),
                             (this.pm.data.ad_id = null == t ? void 0 : t.ad_id),
                             (this.pm.data.ad_universal_id = null == t ? void 0 : t.ad_universal_id),
-                            null != t && t.ad_type && (this.pm.data.ad_type = null == t ? void 0 : t.ad_type);
+                            null != t && t.ad_type && (this.pm.data.ad_type = null == t ? void 0 : t.ad_type));
                     },
                 },
             ]),
@@ -2076,26 +2076,26 @@ var eh = function (e) {
     })(),
     eU = function e(t) {
         var a = this;
-        J(this, e), X(this, "lastWallClockTime", void 0);
+        (J(this, e), X(this, "lastWallClockTime", void 0));
         var r = function () {
-                (a.lastWallClockTime = H()), t.on("before*", i);
+                ((a.lastWallClockTime = H()), t.on("before*", i));
             },
             i = function (e) {
                 var r = H(),
                     i = a.lastWallClockTime;
-                (a.lastWallClockTime = r),
+                ((a.lastWallClockTime = r),
                     r - i > 3e4 &&
                         (t.emit("devicesleep", { viewer_time: i }),
                         Object.assign(t.data, { viewer_time: i }),
                         t.send("devicesleep"),
                         t.emit("devicewake", { viewer_time: r }),
                         Object.assign(t.data, { viewer_time: r }),
-                        t.send("devicewake"));
+                        t.send("devicewake")));
             };
-        t.one("playbackheartbeat", r),
+        (t.one("playbackheartbeat", r),
             t.on("playbackheartbeatend", function () {
-                t.off("before*", i), t.one("playbackheartbeat", r);
-            });
+                (t.off("before*", i), t.one("playbackheartbeat", r));
+            }));
     },
     eF = _(p()),
     eQ =
@@ -2113,10 +2113,10 @@ var eh = function (e) {
                     if (arguments.length > 1) {
                         if ("number" == typeof (i = ts({ path: "/" }, a.defaults, i)).expires) {
                             var o = new Date();
-                            o.setMilliseconds(o.getMilliseconds() + 864e5 * i.expires), (i.expires = o);
+                            (o.setMilliseconds(o.getMilliseconds() + 864e5 * i.expires), (i.expires = o));
                         }
                         try {
-                            (n = JSON.stringify(r)), /^[\{\[]/.test(n) && (r = n);
+                            ((n = JSON.stringify(r)), /^[\{\[]/.test(n) && (r = n));
                         } catch (e) {}
                         return (
                             (r = t.write
@@ -2190,7 +2190,7 @@ var eh = function (e) {
                     r = a[0],
                     i = a[1],
                     n = +i;
-                return (e[r] = i && n == i ? n : i), e;
+                return ((e[r] = i && n == i ? n : i), e);
             }, {});
         } catch (t) {
             e = {};
@@ -2475,16 +2475,16 @@ function e1(e) {
                 var n = r.split("_"),
                     o = n[0],
                     s = e$[o];
-                s || (W.info("Data key word `" + n[0] + "` not expected in " + r), (s = o + "_")),
+                (s || (W.info("Data key word `" + n[0] + "` not expected in " + r), (s = o + "_")),
                     n.splice(1).forEach(function (e) {
-                        "url" === e && (i = !0),
+                        ("url" === e && (i = !0),
                             eZ[e]
                                 ? (s += eZ[e])
                                 : Number.isInteger(Number(e))
                                   ? (s += e)
-                                  : (W.info("Data key word `" + e + "` not expected in " + r), (s += "_" + e + "_"));
+                                  : (W.info("Data key word `" + e + "` not expected in " + r), (s += "_" + e + "_")));
                     }),
-                    i ? (a[s] = e[r]) : (t[s] = e[r]);
+                    i ? (a[s] = e[r]) : (t[s] = e[r]));
             }
         }),
         Object.assign(t, a)
@@ -2496,15 +2496,15 @@ var e3 = _(p()),
     e5 = ["hb", "requestcompleted", "requestfailed", "requestcanceled"],
     e6 = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        (this._beaconUrl = e || "https://img.litix.io"),
+        ((this._beaconUrl = e || "https://img.litix.io"),
             (this._eventQueue = []),
             (this._postInFlight = !1),
             (this._resendAfterPost = !1),
             (this._failureCount = 0),
             (this._sendTimeout = !1),
-            (this._options = Object.assign({}, e4, t));
+            (this._options = Object.assign({}, e4, t)));
     };
-(e6.prototype.queueEvent = function (e, t) {
+((e6.prototype.queueEvent = function (e, t) {
     var a = Object.assign({}, t);
     return (
         (this._eventQueue.length <= this._options.maxQueueLength || "eventrateexceeded" === e) &&
@@ -2521,9 +2521,9 @@ var e3 = _(p()),
     }),
     (e6.prototype.destroy = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (this.destroyed = !0),
+        ((this.destroyed = !0),
             e ? this._clearBeaconQueue() : this.flushEvents(),
-            e3.default.clearTimeout(this._sendTimeout);
+            e3.default.clearTimeout(this._sendTimeout));
     }),
     (e6.prototype._clearBeaconQueue = function () {
         var e =
@@ -2542,18 +2542,18 @@ var e3 = _(p()),
             return;
         }
         var t = this._eventQueue.slice(0, this._options.maxBeaconSize);
-        (this._eventQueue = this._eventQueue.slice(this._options.maxBeaconSize)), (this._postInFlight = !0);
+        ((this._eventQueue = this._eventQueue.slice(this._options.maxBeaconSize)), (this._postInFlight = !0));
         var a = this._createPayload(t),
             r = H();
         e9(this._beaconUrl, a, !1, function (a, i) {
-            i
+            (i
                 ? ((e._eventQueue = t.concat(e._eventQueue)),
                   (e._failureCount += 1),
                   W.info("Error sending beacon: " + i))
                 : (e._failureCount = 0),
                 (e._roundTripTime = H() - r),
                 (e._postInFlight = !1),
-                e._resendAfterPost && ((e._resendAfterPost = !1), e._eventQueue.length > 0 && e._sendBeaconQueue());
+                e._resendAfterPost && ((e._resendAfterPost = !1), e._eventQueue.length > 0 && e._sendBeaconQueue()));
         });
     }),
     (e6.prototype._getNextBeaconTime = function () {
@@ -2563,11 +2563,11 @@ var e3 = _(p()),
     }),
     (e6.prototype._startBeaconSending = function () {
         var e = this;
-        e3.default.clearTimeout(this._sendTimeout),
+        (e3.default.clearTimeout(this._sendTimeout),
             this.destroyed ||
                 (this._sendTimeout = e3.default.setTimeout(function () {
-                    e._eventQueue.length && e._sendBeaconQueue(), e._startBeaconSending();
-                }, this._getNextBeaconTime()));
+                    (e._eventQueue.length && e._sendBeaconQueue(), e._startBeaconSending());
+                }, this._getNextBeaconTime())));
     }),
     (e6.prototype._createPayload = function (e) {
         var t = this,
@@ -2601,7 +2601,7 @@ var e3 = _(p()),
                 o()),
             r
         );
-    });
+    }));
 var e8 =
         "function" == typeof e2.default.exitPictureInPicture
             ? function (e) {
@@ -2623,12 +2623,12 @@ var e8 =
                 });
         if (e3.default.XMLHttpRequest) {
             var i = new e3.default.XMLHttpRequest();
-            (i.onreadystatechange = function () {
+            ((i.onreadystatechange = function () {
                 if (4 === i.readyState) return r(null, 200 !== i.status ? "error" : void 0);
             }),
                 i.open("POST", e),
                 i.setRequestHeader("Content-Type", "text/plain"),
-                i.send(t);
+                i.send(t));
             return;
         }
         r();
@@ -2688,7 +2688,7 @@ var e8 =
                 w,
                 T,
                 k = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            J(this, e),
+            (J(this, e),
                 X(this, "mux", void 0),
                 X(this, "envKey", void 0),
                 X(this, "options", void 0),
@@ -2743,7 +2743,7 @@ var e8 =
                             ? void 0
                             : g.href,
                 }),
-                (this.viewerData = this.disableCookies ? {} : ez());
+                (this.viewerData = this.disableCookies ? {} : ez()));
         }
         return (
             Y(e, [
@@ -2818,9 +2818,9 @@ var e8 =
                             !this.previousBeaconData ||
                             this.mux.utils.now() - this.lastEventTime >= 6e5
                         )
-                            (r = eu({}, t)),
+                            ((r = eu({}, t)),
                                 i && (this.previousBeaconData = r),
-                                i && "viewend" === e && (this.previousBeaconData = null);
+                                i && "viewend" === e && (this.previousBeaconData = null));
                         else {
                             var n = 0 === e.indexOf("request");
                             Object.entries(t).forEach(function (t) {
@@ -2873,7 +2873,7 @@ var e8 =
             o = 0,
             s = 0,
             u = 0;
-        t.on("requestcompleted", function (e, s) {
+        (t.on("requestcompleted", function (e, s) {
             var u,
                 d,
                 l = s.request_start,
@@ -2888,7 +2888,7 @@ var e8 =
                 d > 0 && p && p > 0)
             ) {
                 var h = (p / d) * 8e3;
-                o++,
+                (o++,
                     (r += p),
                     (i += d),
                     (t.data.view_min_request_throughput = Math.min(t.data.view_min_request_throughput || 1 / 0, h)),
@@ -2897,19 +2897,19 @@ var e8 =
                     u > 0 &&
                         ((a += u),
                         (t.data.view_max_request_latency = Math.max(t.data.view_max_request_latency || 0, u)),
-                        (t.data.view_average_request_latency = a / o));
+                        (t.data.view_average_request_latency = a / o)));
             }
         }),
             t.on("requestfailed", function (e, a) {
-                n++, s++, (t.data.view_request_count = n), (t.data.view_request_failed_count = s);
+                (n++, s++, (t.data.view_request_count = n), (t.data.view_request_failed_count = s));
             }),
             t.on("requestcanceled", function (e, a) {
-                n++, u++, (t.data.view_request_count = n), (t.data.view_request_canceled_count = u);
-            });
+                (n++, u++, (t.data.view_request_count = n), (t.data.view_request_canceled_count = u));
+            }));
     },
     tn = function e(t) {
         var a = this;
-        J(this, e),
+        (J(this, e),
             X(this, "_lastEventTime", void 0),
             t.on("before*", function (e, r) {
                 var i = r.viewer_time,
@@ -2921,15 +2921,15 @@ var e8 =
                     }, {});
                     t.mux.log.info("Received event after at least an hour inactivity, creating a new view");
                     var u = t.playbackHeartbeat._playheadShouldBeProgressing;
-                    t._resetView(Object.assign({ viewer_time: i }, s)),
+                    (t._resetView(Object.assign({ viewer_time: i }, s)),
                         (t.playbackHeartbeat._playheadShouldBeProgressing = u),
                         t.playbackHeartbeat._playheadShouldBeProgressing &&
                             "play" !== e.type &&
                             "adbreakstart" !== e.type &&
                             (t.emit("play", { viewer_time: i }),
-                            "playing" !== e.type && t.emit("playing", { viewer_time: i }));
+                            "playing" !== e.type && t.emit("playing", { viewer_time: i })));
                 }
-            });
+            }));
     };
 function to(e, t) {
     return (null == e ? void 0 : e.toLowerCase()) === (null == t ? void 0 : t.toLowerCase());
@@ -2964,8 +2964,8 @@ var ts,
             i = null,
             n = null,
             o = 0;
-        t.on("viewinit", function () {
-            (r = null), (i = null), (n = null), (o = 0);
+        (t.on("viewinit", function () {
+            ((r = null), (i = null), (n = null), (o = 0));
         }),
             t.on("beforecdnchange", function (e, t) {
                 var a = null == t ? void 0 : t.video_cdn;
@@ -2977,18 +2977,18 @@ var ts,
             }),
             t.on("requestcompleted", function (e, t) {
                 a(t);
-            });
+            }));
     },
     tl = function (e) {
         try {
-            return JSON.parse(e), !0;
+            return (JSON.parse(e), !0);
         } catch (e) {
             return !1;
         }
     },
     tc = function e(t) {
         var a = this;
-        J(this, e),
+        (J(this, e),
             X(this, "_emittingAutomaticEvent", !1),
             X(this, "_hasInitialized", !1),
             t.on("viewstart", function () {
@@ -3010,7 +3010,7 @@ var ts,
                         : (r.player_playback_mode_data = "{}"),
                     (t.data.player_playback_mode_data = r.player_playback_mode_data),
                     (t.data.player_playback_mode = r.player_playback_mode));
-            });
+            }));
     },
     t_ = [
         "viewstart",
@@ -3048,15 +3048,15 @@ var ts,
     tp = new Set(["requestcompleted", "requestfailed", "requestcanceled"]),
     th = (function (e) {
         if ("function" != typeof e && null !== e) throw TypeError("Super expression must either be null or a function");
-        (r.prototype = Object.create(e && e.prototype, { constructor: { value: r, writable: !0, configurable: !0 } })),
-            e && ee(r, e);
+        ((r.prototype = Object.create(e && e.prototype, { constructor: { value: r, writable: !0, configurable: !0 } })),
+            e && ee(r, e));
         var t,
             a =
                 ((t = (function () {
                     if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                     if ("function" == typeof Proxy) return !0;
                     try {
-                        return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                     } catch (e) {
                         return !1;
                     }
@@ -3070,7 +3070,7 @@ var ts,
                     );
                 });
         function r(e, t, i) {
-            J(this, r),
+            (J(this, r),
                 X(z((n = a.call(this))), "pageLoadEndTime", void 0),
                 X(z(n), "pageLoadInitTime", void 0),
                 X(z(n), "_destroyed", void 0),
@@ -3163,7 +3163,7 @@ var ts,
                     beacon_domain: i.beaconCollectionDomain || i.beaconDomain,
                 }),
                 (n.data.view_sequence_number = 1),
-                (n.data.player_sequence_number = 1);
+                (n.data.player_sequence_number = 1));
             var n,
                 o = function () {
                     void 0 === this.data.view_start &&
@@ -3171,31 +3171,31 @@ var ts,
                 }.bind(z(n));
             if (
                 (n.on("viewinit", function (e, t) {
-                    this._resetVideoData(),
+                    (this._resetVideoData(),
                         this._resetViewData(),
                         this._resetErrorData(),
                         this._updateStateData(),
                         Object.assign(this.data, t),
                         this._initializeViewData(),
                         this.one("play", o),
-                        this.one("adbreakstart", o);
+                        this.one("adbreakstart", o));
                 }),
                 n.on("videochange", function (e, t) {
                     this._resetView(t);
                 }),
                 n.on("programchange", function (e, t) {
-                    this.data.player_is_paused &&
+                    (this.data.player_is_paused &&
                         this.mux.log.warn(
                             "The `programchange` event is intended to be used when the content changes mid playback without the video source changing, however the video is not currently playing. If the video source is changing please use the videochange event otherwise you will lose startup time information.",
                         ),
                         this._resetView(Object.assign(t, { view_program_changed: !0 })),
                         o(),
                         this.emit("play"),
-                        this.emit("playing");
+                        this.emit("playing"));
                 }),
                 n.on("fragmentchange", function (e, t) {
-                    (this.currentFragmentPDT = t.currentFragmentPDT),
-                        (this.currentFragmentStart = t.currentFragmentStart);
+                    ((this.currentFragmentPDT = t.currentFragmentPDT),
+                        (this.currentFragmentStart = t.currentFragmentStart));
                 }),
                 n.on("destroy", n.destroy),
                 "u" > typeof window &&
@@ -3204,38 +3204,38 @@ var ts,
             ) {
                 var s = function () {
                     var e = void 0 !== n.data.view_start;
-                    (n.mux.WINDOW_HIDDEN = "hidden" === document.visibilityState),
-                        e && n.mux.WINDOW_HIDDEN && (n.data.player_is_paused || n.emit("hb"));
+                    ((n.mux.WINDOW_HIDDEN = "hidden" === document.visibilityState),
+                        e && n.mux.WINDOW_HIDDEN && (n.data.player_is_paused || n.emit("hb")));
                 };
                 window.addEventListener("visibilitychange", s, !1);
                 var u = function (e) {
                     e.persisted || n.destroy();
                 };
-                window.addEventListener("pagehide", u, !1),
+                (window.addEventListener("pagehide", u, !1),
                     n.on("destroy", function () {
-                        window.removeEventListener("visibilitychange", s), window.removeEventListener("pagehide", u);
-                    });
+                        (window.removeEventListener("visibilitychange", s), window.removeEventListener("pagehide", u));
+                    }));
             }
             return (
                 n.on("playerready", function (e, t) {
                     Object.assign(this.data, t);
                 }),
                 t_.forEach(function (e) {
-                    n.on(e, function (t, a) {
-                        0 !== e.indexOf("ad") && this._updateStateData(),
+                    (n.on(e, function (t, a) {
+                        (0 !== e.indexOf("ad") && this._updateStateData(),
                             Object.assign(this.data, a),
-                            this._sanitizeData();
+                            this._sanitizeData());
                     }),
                         n.on("after" + e, function () {
                             ("error" !== e || this.errorTracker.viewErrored) && this.send(e);
-                        });
+                        }));
                 }),
                 n.on("viewend", function (e, t) {
                     Object.assign(n.data, t);
                 }),
                 n.one("playerready", function (e) {
                     var t = this.mux.utils.now();
-                    this.data.player_init_time && (this.data.player_startup_time = t - this.data.player_init_time),
+                    (this.data.player_init_time && (this.data.player_startup_time = t - this.data.player_init_time),
                         (this.pageLoadInitTime = this.data.page_load_init_time || this.pageLoadInitTime),
                         (this.pageLoadEndTime = this.data.page_load_end_time || this.pageLoadEndTime),
                         !this.mux.PLAYER_TRACKED &&
@@ -3247,7 +3247,7 @@ var ts,
                                     this.pageLoadInitTime)),
                         this.send("playerready"),
                         delete this.data.player_startup_time,
-                        delete this.data.page_load_time;
+                        delete this.data.page_load_time);
                 }),
                 (n.longResumeTracker = new tn(z(n))),
                 (n.errorTracker = new eO(z(n))),
@@ -3331,21 +3331,21 @@ var ts,
                             ) {
                                 var a = I(ea(t.video_source_url), 2),
                                     r = a[0];
-                                (t.video_source_domain = a[1]), (t.video_source_hostname = r);
+                                ((t.video_source_domain = a[1]), (t.video_source_hostname = r));
                             }
-                            delete t.ad_request_id,
+                            (delete t.ad_request_id,
                                 this.playbackEventDispatcher.send(e, t),
                                 this.data.view_sequence_number++,
                                 this.data.player_sequence_number++,
                                 tp.has(e) || this._restartHeartBeat(),
-                                "viewend" === e && delete this.data.view_id;
+                                "viewend" === e && delete this.data.view_id);
                         }
                     },
                 },
                 {
                     key: "_resetView",
                     value: function (e) {
-                        this.emit("viewend"), this.send("viewend"), this.emit("viewinit", e);
+                        (this.emit("viewend"), this.send("viewend"), this.emit("viewinit", e));
                     },
                 },
                 {
@@ -3359,7 +3359,7 @@ var ts,
                             } catch (e) {
                                 this.mux.log.warn("Exception in stateDataTranslator translator callback.", e);
                             }
-                        null != (e = this.data) &&
+                        (null != (e = this.data) &&
                             e.video_cdn &&
                             null != t &&
                             t.video_cdn &&
@@ -3374,29 +3374,29 @@ var ts,
                                             r,
                                             i = {},
                                             n = Object.keys(e);
-                                        for (r = 0; r < n.length; r++) (a = n[r]), t.indexOf(a) >= 0 || (i[a] = e[a]);
+                                        for (r = 0; r < n.length; r++) ((a = n[r]), t.indexOf(a) >= 0 || (i[a] = e[a]));
                                         return i;
                                     })(e, t);
                                 if (Object.getOwnPropertySymbols) {
                                     var n = Object.getOwnPropertySymbols(e);
                                     for (r = 0; r < n.length; r++)
-                                        (a = n[r]),
+                                        ((a = n[r]),
                                             !(t.indexOf(a) >= 0) &&
                                                 Object.prototype.propertyIsEnumerable.call(e, a) &&
-                                                (i[a] = e[a]);
+                                                (i[a] = e[a]));
                                 }
                                 return i;
                             })(t, ["video_cdn"]))),
                             Object.assign(this.data, t),
                             this.playheadTime._updatePlayheadTime(),
-                            this._sanitizeData();
+                            this._sanitizeData());
                     },
                 },
                 {
                     key: "_sanitizeData",
                     value: function () {
                         var e = this;
-                        [
+                        ([
                             "player_width",
                             "player_height",
                             "video_source_width",
@@ -3413,7 +3413,7 @@ var ts,
                                     (0 === a.indexOf("data:") || 0 === a.indexOf("blob:")) &&
                                         (e.data[t] = "MSE style URL");
                                 }
-                            });
+                            }));
                     },
                 },
                 {
@@ -3429,20 +3429,20 @@ var ts,
                     key: "_resetViewData",
                     value: function () {
                         var e = this;
-                        Object.keys(this.data).forEach(function (t) {
+                        (Object.keys(this.data).forEach(function (t) {
                             0 === t.indexOf("view_") && delete e.data[t];
                         }),
-                            (this.data.view_sequence_number = 1);
+                            (this.data.view_sequence_number = 1));
                     },
                 },
                 {
                     key: "_resetErrorData",
                     value: function () {
-                        delete this.data.player_error_code,
+                        (delete this.data.player_error_code,
                             delete this.data.player_error_message,
                             delete this.data.player_error_context,
                             delete this.data.player_error_severity,
-                            delete this.data.player_error_business_exception;
+                            delete this.data.player_error_business_exception);
                     },
                 },
                 {
@@ -3460,10 +3460,10 @@ var ts,
                     key: "_restartHeartBeat",
                     value: function () {
                         var e = this;
-                        window.clearTimeout(this._heartBeatTimeout),
+                        (window.clearTimeout(this._heartBeatTimeout),
                             (this._heartBeatTimeout = window.setTimeout(function () {
                                 e.data.player_is_paused || e.emit("hb");
-                            }, 1e4));
+                            }, 1e4)));
                     },
                 },
                 {
@@ -3531,10 +3531,10 @@ var tg = function (e) {
         this.manifest
     );
 };
-(tg.prototype.process = function (e) {
+((tg.prototype.process = function (e) {
     var t;
     for (this.buffer += e, t = this.buffer.indexOf("\n"); t > -1; t = this.buffer.indexOf("\n"))
-        this.processLine(this.buffer.substring(0, t)), (this.buffer = this.buffer.substring(t + 1));
+        (this.processLine(this.buffer.substring(0, t)), (this.buffer = this.buffer.substring(t + 1)));
 }),
     (tg.prototype.processLine = function (e) {
         var t = e.indexOf(":"),
@@ -3542,36 +3542,36 @@ var tg = function (e) {
             r = a[0],
             i = 2 === a.length ? tT(a[1]) : void 0;
         if ("#" !== r[0])
-            (this.currentUri.uri = r),
+            ((this.currentUri.uri = r),
                 this.manifest.segments.push(this.currentUri),
                 !this.manifest.targetDuration ||
                     "duration" in this.currentUri ||
                     (this.currentUri.duration = this.manifest.targetDuration),
-                (this.currentUri = {});
+                (this.currentUri = {}));
         else
             switch (r) {
                 case "#EXT-X-TARGETDURATION":
                     if (!isFinite(i) || i < 0) return;
-                    (this.manifest.targetDuration = i), this.setHoldBack();
+                    ((this.manifest.targetDuration = i), this.setHoldBack());
                     break;
                 case "#EXT-X-PART-INF":
-                    tb(this.manifest, a),
+                    (tb(this.manifest, a),
                         this.manifest.partInf.partTarget &&
                             (this.manifest.partTargetDuration = this.manifest.partInf.partTarget),
-                        this.setHoldBack();
+                        this.setHoldBack());
                     break;
                 case "#EXT-X-SERVER-CONTROL":
-                    tb(this.manifest, a), this.setHoldBack();
+                    (tb(this.manifest, a), this.setHoldBack());
                     break;
                 case "#EXTINF":
                     0 === i ? (this.currentUri.duration = 0.01) : i > 0 && (this.currentUri.duration = i);
                     break;
                 case "#EXT-X-PROGRAM-DATE-TIME":
                     var n = new Date(i);
-                    this.manifest.dateTimeString ||
+                    (this.manifest.dateTimeString ||
                         ((this.manifest.dateTimeString = i), (this.manifest.dateTimeObject = n)),
                         (this.currentUri.dateTimeString = i),
-                        (this.currentUri.dateTimeObject = n);
+                        (this.currentUri.dateTimeObject = n));
                     break;
                 case "#EXT-X-VERSION":
                     tb(this.manifest, a);
@@ -3591,16 +3591,16 @@ var tg = function (e) {
                 n = "partHoldBack",
                 o = a && 3 * a,
                 s = r && 2 * r;
-            a && !t.hasOwnProperty(i) && (t[i] = o),
+            (a && !t.hasOwnProperty(i) && (t[i] = o),
                 o && t[i] < o && (t[i] = o),
                 r && !t.hasOwnProperty(n) && (t[n] = 3 * r),
-                r && t[n] < s && (t[n] = s);
+                r && t[n] < s && (t[n] = s));
         }
-    });
+    }));
 var tb = function (e, t) {
         var a,
             r = tw(t[0].replace("#EXT-X-", ""));
-        tx(t[1]) ? ((a = {}), (a = Object.assign(tE(t[1]), a))) : (a = tT(t[1])), (e[r] = a);
+        (tx(t[1]) ? ((a = {}), (a = Object.assign(tE(t[1]), a))) : (a = tT(t[1])), (e[r] = a));
     },
     tw = function (e) {
         return e.toLowerCase().replace(/-(\w)/g, function (e) {
@@ -3615,7 +3615,7 @@ var tb = function (e, t) {
     tk = function (e) {
         var t = {},
             a = e.split("=");
-        return a.length > 1 && (t[tw(a[0])] = tT(a[1])), t;
+        return (a.length > 1 && (t[tw(a[0])] = tT(a[1])), t);
     },
     tE = function (e) {
         for (var t = e.split(","), a = {}, r = 0; t.length > r; r++) a = Object.assign(tk(t[r]), a);
@@ -3634,7 +3634,7 @@ var tb = function (e, t) {
             return (
                 [e.slice(0, a), e.slice(a + 1)].forEach(function (e, a) {
                     for (var r = e.replace(/['"]+/g, "").split("="), i = 0; i < r.length; i++)
-                        "DATA-ID" === r[i] && (t["DATA-ID"] = r[1 - i]), "VALUE" === r[i] && (t.VALUE = r[1 - i]);
+                        ("DATA-ID" === r[i] && (t["DATA-ID"] = r[1 - i]), "VALUE" === r[i] && (t.VALUE = r[1 - i]));
                 }),
                 { data: t }
             );
@@ -3680,7 +3680,7 @@ var tb = function (e, t) {
         "string" == typeof e
             ? tA.hasOwnProperty(e)
                 ? N.default.setTimeout(function () {
-                      (t = Array.prototype.splice.call(t, 1)), tA[e].apply(null, t);
+                      ((t = Array.prototype.splice.call(t, 1)), tA[e].apply(null, t));
                   }, 0)
                 : W.warn("`" + e + "` is an unknown task")
             : "function" == typeof e
@@ -3707,7 +3707,7 @@ var tb = function (e, t) {
                 if (!i) return s.error("No element was found with the `" + n + "` query selector.");
                 if ("video" !== o && "audio" !== o)
                     return s.error("The element of `" + n + "` was not a media element.");
-                i.mux &&
+                (i.mux &&
                     (i.mux.destroy(),
                     delete i.mux,
                     s.warn("Already monitoring this video element, replacing existing event listeners")),
@@ -3753,10 +3753,10 @@ var tb = function (e, t) {
                                 var s = i.getStartDate();
                                 if (s && "function" == typeof s.getTime && s.getTime()) {
                                     var l = s.getTime();
-                                    (o.player_program_time = l + a),
+                                    ((o.player_program_time = l + a),
                                         i.seekable.length > 0 &&
                                             (o.player_live_edge_program_time =
-                                                l + i.seekable.end(i.seekable.length - 1));
+                                                l + i.seekable.end(i.seekable.length - 1)));
                                 }
                             }
                             return o;
@@ -3776,12 +3776,12 @@ var tb = function (e, t) {
                     }),
                     (i.mux.updateData = function (e) {
                         i.mux.emit("hb", e);
-                    });
+                    }));
                 var l = function () {
                     s.error("The monitor for this video element has already been destroyed.");
                 };
-                (i.mux.destroy = function () {
-                    Object.keys(i.mux.listeners).forEach(function (e) {
+                ((i.mux.destroy = function () {
+                    (Object.keys(i.mux.listeners).forEach(function (e) {
                         i.removeEventListener(e, i.mux.listeners[e], !1);
                     }),
                         delete i.mux.listeners,
@@ -3797,7 +3797,7 @@ var tb = function (e, t) {
                         (i.mux.setStateDataTranslator = l),
                         (i.mux.setGetPlayheadTime = l),
                         (i.mux.deleted = !0),
-                        e.emit(n, "destroy");
+                        e.emit(n, "destroy"));
                 }),
                     (i.mux.swapElement = function (t) {
                         var a = I(F(t), 3),
@@ -3813,8 +3813,8 @@ var tb = function (e, t) {
                                   (r.mux.listeners = Object.assign({}, i.mux.listeners)),
                                   delete i.mux.listeners,
                                   Object.keys(r.mux.listeners).forEach(function (e) {
-                                      i.removeEventListener(e, r.mux.listeners[e], !1),
-                                          r.addEventListener(e, r.mux.listeners[e], !1);
+                                      (i.removeEventListener(e, r.mux.listeners[e], !1),
+                                          r.addEventListener(e, r.mux.listeners[e], !1));
                                   }),
                                   (r.mux.swapElement = i.mux.swapElement),
                                   (r.mux.destroy = i.mux.destroy),
@@ -3841,7 +3841,7 @@ var tb = function (e, t) {
                         e.setStateDataTranslator(n, t);
                     }),
                     (i.mux.setGetPlayheadTime = function (t) {
-                        t || (t = a.getPlayheadTime), e.setGetPlayheadTime(n, t);
+                        (t || (t = a.getPlayheadTime), e.setGetPlayheadTime(n, t));
                     }),
                     e.init(n, a),
                     e.emit(n, "playerready"),
@@ -3853,13 +3853,13 @@ var tb = function (e, t) {
                                 var a = {};
                                 if ("error" === t) {
                                     if (!i.error || 1 === i.error.code) return;
-                                    (a.player_error_code = i.error.code),
-                                        (a.player_error_message = tv[i.error.code] || i.error.message);
+                                    ((a.player_error_code = i.error.code),
+                                        (a.player_error_message = tv[i.error.code] || i.error.message));
                                 }
                                 e.emit(n, t, a);
                             }),
                             i.addEventListener(t, i.mux.listeners[t], !1));
-                    });
+                    }));
             })(tA, e, t);
         },
         destroyMonitor: function (e) {
@@ -3955,7 +3955,7 @@ var tb = function (e, t) {
         WINDOW_HIDDEN: !1,
         WINDOW_UNLOADING: !1,
     };
-Object.assign(tA, tS),
+(Object.assign(tA, tS),
     void 0 !== N.default &&
         "function" == typeof N.default.addEventListener &&
         N.default.addEventListener(
@@ -3964,5 +3964,5 @@ Object.assign(tA, tS),
                 e.persisted || (tA.WINDOW_UNLOADING = !0);
             },
             !1,
-        );
+        ));
 var tR = tA;

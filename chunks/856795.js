@@ -9,7 +9,7 @@ function a(e) {
         n.useEffect(() => {
             if ("exit" !== a) return;
             let e = setTimeout(() => {
-                l(i), s("enter");
+                (l(i), s("enter"));
             }, 150);
             return () => clearTimeout(e);
         }, [a, i]),
@@ -20,7 +20,7 @@ function a(e) {
                     e = requestAnimationFrame(() => s("idle"));
                 });
             return () => {
-                cancelAnimationFrame(t), cancelAnimationFrame(e);
+                (cancelAnimationFrame(t), cancelAnimationFrame(e));
             };
         }, [a]),
         { text: t, phase: a }

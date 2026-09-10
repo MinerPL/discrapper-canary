@@ -20,7 +20,7 @@ let x = function (s) {
         parentComponent: "HubStudyRoomSuppressModal",
         children: (0, e.jsxs)("form", {
             onSubmit: function (s) {
-                s?.preventDefault(), o.A.clearSuppressWarning(), t?.();
+                (s?.preventDefault(), o.A.clearSuppressWarning(), t?.());
             },
             className: u.Zd,
             children: [

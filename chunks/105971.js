@@ -1,4 +1,4 @@
-n.d(t, { k: () => c }), n(321073);
+(n.d(t, { k: () => c }), n(321073));
 var i = n(681154),
     r = n(174459),
     a = n(557740),
@@ -94,11 +94,11 @@ let c = {
             n = [],
             i = [],
             a = [];
-        e.unreadFeedItems.forEach((e) => {
-            t.push(e.id), i.push(d(e));
+        (e.unreadFeedItems.forEach((e) => {
+            (t.push(e.id), i.push(d(e)));
         }),
             e.readFeedItems.forEach((e) => {
-                n.push(e.id), a.push(d(e));
+                (n.push(e.id), a.push(d(e)));
             }),
             r.default.track(l.HAw.FEED_LOADED, {
                 ...e.newTrackingProps,
@@ -108,7 +108,7 @@ let c = {
                 read_feed_item_ids: n,
                 unread_feed_item_types: i,
                 read_feed_item_types: a,
-            });
+            }));
     },
     trackFeedShown(e) {
         r.default.track(l.HAw.FEED_SHOWN, {

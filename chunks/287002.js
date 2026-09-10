@@ -1,4 +1,4 @@
-e.r(n), e.d(n, { default: () => C });
+(e.r(n), e.d(n, { default: () => C }));
 var i = e(477900);
 e(582128);
 var a = e(702841),
@@ -19,7 +19,7 @@ function C(t) {
         m = h.attachments.map((t) => t.filename),
         { reportFalsePositive: x, isReportFalsePositiveLoading: S } = (0, I.d)({
             onSuccess: () => {
-                (0, E.o)(p), r.A.disableFalsePositiveButton(n, e);
+                ((0, E.o)(p), r.A.disableFalsePositiveButton(n, e));
             },
             onError: () => {
                 (0, l.P0)((0, s.o)(_.intl.string(_.t.R0RpRX), o.Ck.FAILURE));

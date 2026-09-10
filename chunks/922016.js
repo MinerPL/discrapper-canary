@@ -24,12 +24,12 @@ function p(e) {
         T = s.useRef(null);
     return (
         s.useLayoutEffect(() => {
-            T.current?.addEventListener("transitionend", () => {
+            (T.current?.addEventListener("transitionend", () => {
                 p(!1);
             }),
                 setTimeout(() => {
                     p(!1);
-                }, 200);
+                }, 200));
         }, []),
         s.useEffect(() => () => c.stop(), [c]),
         s.useEffect(() => {
@@ -139,24 +139,24 @@ function N(e) {
         i = s.useRef(null),
         [r, d] = s.useState(0);
     function c() {
-        return _(), (0, a.jsx)(a.Fragment, {});
+        return (_(), (0, a.jsx)(a.Fragment, {}));
     }
-    s.useLayoutEffect(() => {
+    (s.useLayoutEffect(() => {
         r > 0 && i.current?.ref?.current?.layerRef?.current?.updatePosition();
     }, [r]),
         (0, o.Ay)(() => {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
-        });
+        }));
     let u = s.useRef(!1);
     async function _() {
         if (!u.current) {
             u.current = !0;
             let e = setTimeout(() => {
-                    h(() => E), d((e) => e + 1);
+                    (h(() => E), d((e) => e + 1));
                 }, 300),
                 n = await t();
-            h(() => n), d((e) => e + 1), clearTimeout(e);
+            (h(() => n), d((e) => e + 1), clearTimeout(e));
         }
     }
     function E() {
@@ -173,7 +173,7 @@ function N(e) {
         s.useEffect(() => {
             u.current
                 ? t().then((e) => {
-                      h(() => e), d((e) => e + 1);
+                      (h(() => e), d((e) => e + 1));
                   })
                 : h(() => I.current);
         }, [t]),

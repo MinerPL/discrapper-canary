@@ -10,13 +10,13 @@ e.exports = function (e, t, n) {
     for (o = 0; o < i.length; ++o) {
         if (i[o].seq) {
             if (i[o].level !== u) continue;
-            (c = !0), (l[i[o].seq] = 1), this.fireCallback(i[o].callback, n, i[o].combo, i[o].seq);
+            ((c = !0), (l[i[o].seq] = 1), this.fireCallback(i[o].callback, n, i[o].combo, i[o].seq));
             continue;
         }
         c || this.fireCallback(i[o].callback, n, i[o].combo);
     }
-    (s = "keypress" === n.type && this.ignoreNextKeypress),
+    ((s = "keypress" === n.type && this.ignoreNextKeypress),
         (a = r(921194)),
         n.type !== this.nextExpectedAction || a(e) || s || this.resetSequences(l),
-        (this.ignoreNextKeypress = c && "keydown" === n.type);
+        (this.ignoreNextKeypress = c && "keydown" === n.type));
 };

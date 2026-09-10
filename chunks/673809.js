@@ -1,5 +1,5 @@
 let l;
-t.r(s), t.d(s, { default: () => eo });
+(t.r(s), t.d(s, { default: () => eo }));
 var a = t(477900),
     i = t(582128),
     n = t(503698),
@@ -102,9 +102,9 @@ class E extends i.PureComponent {
     state = { animateBackground: !1, isMobile: null, token: null, isAppCompatible: !0 };
     ref = i.createRef();
     constructor(e) {
-        super(e),
+        (super(e),
             null != e.locale && O.A.setLocale(e.locale),
-            (l = (s) => (0, a.jsx)(A, { track: e.track, trackOutboundLink: e.trackOutboundLink, ...s }));
+            (l = (s) => (0, a.jsx)(A, { track: e.track, trackOutboundLink: e.trackOutboundLink, ...s })));
     }
     componentDidMount() {
         this.setState({ token: (0, c.getToken)(), isAppCompatible: m.VP });
@@ -894,7 +894,7 @@ class W extends i.PureComponent {
                 ),
             ),
             i = this.getAppButton();
-        return null != i && l.push(i), l;
+        return (null != i && l.push(i), l);
     };
     render() {
         let {
@@ -1021,9 +1021,9 @@ var K = t(489997);
 let J = null;
 class Q extends i.PureComponent {
     constructor(e) {
-        super(e),
+        (super(e),
             null != e.locale && O.A.setLocale(e.locale),
-            (J = (s) => (0, a.jsx)(A, { track: e.track, trackOutboundLink: e.trackOutboundLink, ...s }));
+            (J = (s) => (0, a.jsx)(A, { track: e.track, trackOutboundLink: e.trackOutboundLink, ...s })));
     }
     render() {
         let {

@@ -41,7 +41,7 @@ function E(e) {
             {
                 backdropStyle: c.F.BLUR,
                 onCloseCallback: function () {
-                    (0, u.xi)(t, [i]),
+                    ((0, u.xi)(t, [i]),
                         (0, _._$)({
                             channelId: t,
                             senderId: r,
@@ -49,7 +49,7 @@ function E(e) {
                             warningType: a,
                             cta: _.Wm.USER_TAKEOVER_MODAL_DISMISS,
                             isNudgeWarning: !1,
-                        });
+                        }));
                 },
             },
         );

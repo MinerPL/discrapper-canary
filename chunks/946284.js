@@ -25,7 +25,7 @@ let u = (0, o.t)({
             let e = s.t.getInstance(),
                 r = 30,
                 n = e.setInterval(() => {
-                    (r -= 1), t({ type: "TICK" }), r <= 0 && e.clearInterval(n);
+                    ((r -= 1), t({ type: "TICK" }), r <= 0 && e.clearInterval(n));
                 }, 1e3);
             return () => e.clearInterval(n);
         }),
@@ -216,13 +216,13 @@ function m({ actor: t, trackElementClicked: e }) {
             t.send({ type: "VALIDATE_OTP" });
         },
         submitOtp(r) {
-            e?.("submitOtp"), t.send({ type: "OTP_CHANGED", code: r }), t.send({ type: "SUBMIT_OTP" });
+            (e?.("submitOtp"), t.send({ type: "OTP_CHANGED", code: r }), t.send({ type: "SUBMIT_OTP" }));
         },
         resendOtp() {
-            e?.("resendOtp"), t.send({ type: "RESEND_OTP" });
+            (e?.("resendOtp"), t.send({ type: "RESEND_OTP" }));
         },
         retry() {
-            e?.("retry"), t.send({ type: "RETRY" });
+            (e?.("retry"), t.send({ type: "RETRY" }));
         },
     };
 }

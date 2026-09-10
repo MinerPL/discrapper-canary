@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => W }), n(321073);
+(n.d(t, { A: () => W }), n(321073));
 var l = n(17928),
     r = n(228366),
     s = n(450827),
@@ -27,13 +27,13 @@ let _ = !1,
     D = new Set(),
     R = null;
 function x() {
-    (N = ""), (T = 0), (v = []), (D = new Set()), (_ = !1), (R = null), (y = !1);
+    ((N = ""), (T = 0), (v = []), (D = new Set()), (_ = !1), (R = null), (y = !1));
 }
 function O(e) {
     return y !== e && ((y = e), !0);
 }
 function U(e) {
-    return (N = e), (T = 0), w();
+    return ((N = e), (T = 0), w());
 }
 function w() {
     let e, t, n;
@@ -74,7 +74,7 @@ function w() {
                         if (0 === i.length && !(l.isStaff() && e?.isStaff())) return t;
                         i.length > 0 && (r.mutualGuilds = i);
                     }
-                    return t.push(r), t;
+                    return (t.push(r), t);
                 }, [])
                 .sort(L)),
             O(!1),
@@ -82,7 +82,7 @@ function w() {
         );
     }
     let s = S.default.getCurrentUser();
-    s?.isStaff(), c.A.requestMembers(null, N);
+    (s?.isStaff(), c.A.requestMembers(null, N));
     let a = null != l ? l.recipients : [];
     return (
         null != i &&
@@ -155,21 +155,21 @@ function G(e) {
         }
         l.push(s);
     }
-    (v = l), Y.emitChange();
+    ((v = l), Y.emitChange());
 }
 function F() {
-    return null != i && (i.destroy(), (i = null)), s.A.getUserSearchContext(G, 1e3);
+    return (null != i && (i.destroy(), (i = null)), s.A.getUserSearchContext(G, 1e3));
 }
 function j(e) {
     if (e.key !== C.TLS) return !1;
-    (_ = !0), P(), (i = F()), (R = null), U("");
+    ((_ = !0), P(), (i = F()), (R = null), U(""));
 }
 function V(e) {
     if (e.key !== C.TLS) return !1;
     k();
 }
 function k() {
-    null != i && (i.destroy(), (i = null)), x();
+    (null != i && (i.destroy(), (i = null)), x());
 }
 function H() {
     return !!_ && w();
@@ -177,10 +177,10 @@ function H() {
 class B extends l.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
     initialize() {
-        this.waitFor(f.A, A.A, a.A, E.A, p.Ay, m.A, I.A, o.A, S.default),
+        (this.waitFor(f.A, A.A, a.A, E.A, p.Ay, m.A, I.A, o.A, S.default),
             this.syncWith([S.default, f.A], w),
             this.syncWith([o.A], H),
-            this.syncWith([I.A], P);
+            this.syncWith([I.A], P));
     }
     getResults() {
         return v;
@@ -213,29 +213,29 @@ let Y = new B(r.h, {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let i = _;
-            return x(), (_ = i), (R = n), w();
+            return (x(), (_ = i), (R = n), w());
         },
         MODAL_PUSH: j,
         SHOW_ACTION_SHEET: j,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (_ = !0), P(), (i = F()), (R = e.channelId), U("");
+            ((_ = !0), P(), (i = F()), (R = e.channelId), U(""));
         },
         MODAL_POP: V,
         HIDE_ACTION_SHEET: V,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (R = e.channelId), U(e.query);
+            ((R = e.channelId), U(e.query));
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             T = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            D.add(t), (D = new Set(D));
+            (D.add(t), (D = new Set(D)));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            D.delete(t), (D = new Set(D));
+            (D.delete(t), (D = new Set(D)));
         },
     }),
     W = Y;

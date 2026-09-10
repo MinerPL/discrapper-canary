@@ -25,7 +25,7 @@ function E() {
 }
 function m(t) {
     let e = t.wishlist_items.map((t) => t.sku).filter(h.Vq);
-    y(e), g(t.storefront_pricing, e);
+    (y(e), g(t.storefront_pricing, e));
 }
 function y(t) {
     l.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: t });
@@ -53,8 +53,8 @@ let T = {
             let u = p.Ay.fromServer(s);
             l.h.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: t, wishlistData: u, updatedAt: e });
         } catch (e) {
-            l.h.dispatch({ type: "WISHLIST_FETCH_FAILURE", wishlistId: t, error: new u.LG(e) }),
-                A.A.captureException(e);
+            (l.h.dispatch({ type: "WISHLIST_FETCH_FAILURE", wishlistId: t, error: new u.LG(e) }),
+                A.A.captureException(e));
         }
     },
     async addSkuToWishlist(t, e) {
@@ -114,7 +114,7 @@ let T = {
                 } catch (t) {}
         } catch (r) {
             throw (
-                (l.h.dispatch({ type: "WISHLIST_REMOVE_SKU_FAILURE", wishlistId: t, skuId: e, error: new u.LG(r) }), r)
+                l.h.dispatch({ type: "WISHLIST_REMOVE_SKU_FAILURE", wishlistId: t, skuId: e, error: new u.LG(r) }), r
             );
         }
     },
@@ -129,13 +129,13 @@ let T = {
                         rejectWithError: !0,
                     })
                 ).body;
-                m(i), l.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: t, visibility: e });
+                (m(i), l.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: t, visibility: e }));
                 try {
                     await (0, s.fetchProfile)(r.id);
                 } catch {}
             } catch (e) {
                 throw (
-                    (l.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_FAILURE", wishlistId: t, error: new u.LG(e) }), e)
+                    l.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_FAILURE", wishlistId: t, error: new u.LG(e) }), e
                 );
             }
     },
@@ -171,8 +171,8 @@ let T = {
                     });
                 } catch (t) {}
         } catch (r) {
-            l.h.dispatch({ type: "WISHLIST_REORDER_FAILURE", wishlistId: t, skuId: e, error: new u.LG(r) }),
-                A.A.captureException(r);
+            (l.h.dispatch({ type: "WISHLIST_REORDER_FAILURE", wishlistId: t, skuId: e, error: new u.LG(r) }),
+                A.A.captureException(r));
         }
     },
     async fetchWishlistRecommendations(t, e) {
@@ -187,12 +187,12 @@ let T = {
                     rejectWithError: !0,
                 })
             ).body;
-            y(s.skus), g(s.storefront_pricing, s.skus);
+            (y(s.skus), g(s.storefront_pricing, s.skus));
             let u = f.A.fromServer(s);
             l.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: e, applicationIds: t, data: u });
         } catch (r) {
-            A.A.captureException(r),
-                l.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: e, applicationIds: t });
+            (A.A.captureException(r),
+                l.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: e, applicationIds: t }));
         }
     },
 };

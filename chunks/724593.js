@@ -11,19 +11,19 @@ class i extends a.AbstractParserWithWordBoundaryChecking {
         switch (r) {
             case "apr\xe8s-midi":
             case "aprem":
-                a.imply("hour", 14), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.PM);
+                (a.imply("hour", 14), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.PM));
                 break;
             case "soir":
-                a.imply("hour", 18), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.PM);
+                (a.imply("hour", 18), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.PM));
                 break;
             case "matin":
-                a.imply("hour", 8), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.AM);
+                (a.imply("hour", 8), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.AM));
                 break;
             case "a midi":
-                a.imply("hour", 12), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.AM);
+                (a.imply("hour", 12), a.imply("minute", 0), a.imply("meridiem", n.Meridiem.AM));
                 break;
             case "\xe0 minuit":
-                a.imply("hour", 0), a.imply("meridiem", n.Meridiem.AM);
+                (a.imply("hour", 0), a.imply("meridiem", n.Meridiem.AM));
         }
         return a;
     }

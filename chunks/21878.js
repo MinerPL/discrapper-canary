@@ -10,7 +10,7 @@ var s = n(477900),
 let u = i.createContext(void 0);
 function h(e) {
     let t = i.useContext(u) ?? e;
-    return r()(null != t, "Using PollReferenceMessageContext without a provider (or a fallback)"), t;
+    return (r()(null != t, "Using PollReferenceMessageContext without a provider (or a fallback)"), t);
 }
 function m(e) {
     let { message: t, children: n } = e,

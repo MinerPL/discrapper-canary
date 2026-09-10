@@ -1,7 +1,7 @@
-n.d(t, {
+(n.d(t, {
     Yd: () => W,
     lq: () => Q,
-    ok: () => X,
+    ok: () => Z,
     v1: () => er,
     Ay: () => eu,
     If: () => ed,
@@ -11,7 +11,7 @@ n.d(t, {
     nD: () => eo,
 }),
     n(321073),
-    n(667532);
+    n(667532));
 var i,
     r = n(91871),
     a = n.n(r),
@@ -92,11 +92,11 @@ function x() {
 }
 let k = RegExp("(?:\\s*(([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})|([0-9]{4})-([0-9]{1,2})|\\d{4}|([^\\d\\s]+)))", "i"),
     F = RegExp("\\s*(true|false)", "i");
-function V(e) {
+function B(e) {
     return `${e}:`;
 }
-function B(e) {
-    return RegExp(V(e), "i");
+function V(e) {
+    return RegExp(B(e), "i");
 }
 function H(e) {
     let t,
@@ -142,7 +142,7 @@ function j(e, t) {
 function W(e, t) {
     var n, i, r;
     let a = e.getMatch(1);
-    if (D.Ut1.test(a)) return e.setData("channelIds", [a]), !0;
+    if (D.Ut1.test(a)) return (e.setData("channelIds", [a]), !0);
     if (
         (a.startsWith('"') && a.endsWith('"') && (a = a.substring(1, a.length - 1).replaceAll(/\\(.)/g, (e, t) => t)),
         (0, S._B)(t))
@@ -226,14 +226,14 @@ function $(e, t) {
 function z(e) {
     return y("has", Y(), e);
 }
-function q(e) {
+function X(e) {
     return y("author_type", K(), e);
 }
-function Z(e) {
+function q(e) {
     let t = e.getMatch(1);
     return "true" === t ? (e.setData("pinned", !0), !0) : "false" === t && (e.setData("pinned", !1), !0);
 }
-function X(e) {
+function Z(e) {
     return $(e, Y());
 }
 function Q(e) {
@@ -318,7 +318,7 @@ function et(e) {
             })(r ?? []);
             if (null != o && o.length > 0) {
                 let e = f.default.getCurrentUser();
-                null != e && o.push(e), (s = p.Ay.queryUsers({ ...a, users: o }));
+                (null != e && o.push(e), (s = p.Ay.queryUsers({ ...a, users: o })));
             } else s = p.Ay.queryAllUsers({ ...a });
             break;
         default:
@@ -336,7 +336,7 @@ function et(e) {
                 let { record: t } = e;
                 return { text: T.Ay.getUserTag(t), user: t };
             });
-    return E && I.unshift({ text: D.ME, user: d }), I;
+    return (E && I.unshift({ text: D.ME, user: d }), I);
 }
 function en(e) {
     let { query: t, searchContext: n, maxResults: i } = e;
@@ -379,7 +379,7 @@ function en(e) {
               let r = E.Ay.getTextChannelNameDisambiguations(t);
               return l()(i)
                   .take(n)
-                  .map((e) => ({ text: `${r[e.id]?.name ?? ((0, u.m1))(e, f.default, A.A)}`, channel: e, key: e.id }))
+                  .map((e) => ({ text: `${r[e.id]?.name ?? (0, u.m1)(e, f.default, A.A)}`, channel: e, key: e.id }))
                   .value();
           })(t, n.guildId, i)
         : n.type !== D.I4_.DMS || I.A.hidePersonalInformation
@@ -405,7 +405,7 @@ function en(e) {
                         });
                         if (-1 !== n) {
                             let e = a[n];
-                            a.splice(n, 1), a.unshift(e);
+                            (a.splice(n, 1), a.unshift(e));
                         } else if (t.isGroupDM()) {
                             let e = (0, u.m1)(t, f.default, A.A);
                             a.unshift({ text: e, channel: t, key: t.id });
@@ -439,9 +439,9 @@ function ea(e) {
         ];
     return {
         [D.LWr.FILTER_FROM]: {
-            regex: B(v.intl.string(v.t["1TUdFo"])),
+            regex: V(v.intl.string(v.t["1TUdFo"])),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t["1TUdFo"])),
+            key: B(v.intl.string(v.t["1TUdFo"])),
             plainText: v.intl.string(v.t["1TUdFo"]),
             validator: () => (0, N.Q6)(),
             getAutocompletions: et,
@@ -455,9 +455,9 @@ function ea(e) {
             queryKey: "author_id",
         },
         [D.LWr.FILTER_MENTIONS]: {
-            regex: B(v.intl.string(v.t["i96lO+"])),
+            regex: V(v.intl.string(v.t["i96lO+"])),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t["i96lO+"])),
+            key: B(v.intl.string(v.t["i96lO+"])),
             plainText: v.intl.string(v.t["i96lO+"]),
             validator: () => (0, N.tH)(),
             getAutocompletions: et,
@@ -471,9 +471,9 @@ function ea(e) {
             queryKey: "mentions",
         },
         [D.LWr.FILTER_HAS]: {
-            regex: B(v.intl.string(v.t.CqCvir)),
+            regex: V(v.intl.string(v.t.CqCvir)),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t.CqCvir)),
+            key: B(v.intl.string(v.t.CqCvir)),
             plainText: v.intl.string(v.t.CqCvir),
             getAutocompletions(e) {
                 let { query: t, maxResults: i } = e;
@@ -488,8 +488,8 @@ function ea(e) {
             queryKey: "has",
         },
         [D.LWr.FILTER_LINK_FROM]: {
-            regex: B(v.intl.string(v.t.RpRAZD)),
-            key: V(v.intl.string(v.t.RpRAZD)),
+            regex: V(v.intl.string(v.t.RpRAZD)),
+            key: B(v.intl.string(v.t.RpRAZD)),
             plainText: v.intl.string(v.t.RpRAZD),
             componentType: "FILTER",
         },
@@ -501,8 +501,8 @@ function ea(e) {
             queryKey: "link_hostname",
         },
         [D.LWr.FILTER_FILE_TYPE]: {
-            regex: B(v.intl.string(v.t.TMNjFm)),
-            key: V(v.intl.string(v.t.TMNjFm)),
+            regex: V(v.intl.string(v.t.TMNjFm)),
+            key: B(v.intl.string(v.t.TMNjFm)),
             plainText: v.intl.string(v.t.TMNjFm),
             componentType: "FILTER",
         },
@@ -514,8 +514,8 @@ function ea(e) {
             queryKey: "attachment_extension",
         },
         [D.LWr.FILTER_FILE_NAME]: {
-            regex: B(v.intl.string(v.t["5xtLRC"])),
-            key: V(v.intl.string(v.t["5xtLRC"])),
+            regex: V(v.intl.string(v.t["5xtLRC"])),
+            key: B(v.intl.string(v.t["5xtLRC"])),
             plainText: v.intl.string(v.t["5xtLRC"]),
             componentType: "FILTER",
         },
@@ -527,9 +527,9 @@ function ea(e) {
             queryKey: "attachment_filename",
         },
         [D.LWr.FILTER_BEFORE]: {
-            regex: B(v.intl.string(v.t["qZ+7BA"])),
+            regex: V(v.intl.string(v.t["qZ+7BA"])),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t["qZ+7BA"])),
+            key: B(v.intl.string(v.t["qZ+7BA"])),
             plainText: v.intl.string(v.t["qZ+7BA"]),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
@@ -537,9 +537,9 @@ function ea(e) {
             },
         },
         [D.LWr.FILTER_ON]: {
-            regex: B(`(${v.intl.string(v.t.tIxkOo)}|${v.intl.string(v.t.h2NzSd)})`),
+            regex: V(`(${v.intl.string(v.t.tIxkOo)}|${v.intl.string(v.t.h2NzSd)})`),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t.h2NzSd)),
+            key: B(v.intl.string(v.t.h2NzSd)),
             plainText: v.intl.string(v.t.h2NzSd),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
@@ -547,9 +547,9 @@ function ea(e) {
             },
         },
         [D.LWr.FILTER_AFTER]: {
-            regex: B(v.intl.string(v.t.KSDx7M)),
+            regex: V(v.intl.string(v.t.KSDx7M)),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t.KSDx7M)),
+            key: B(v.intl.string(v.t.KSDx7M)),
             plainText: v.intl.string(v.t.KSDx7M),
             getAutocompletions(e) {
                 let { query: t, maxResults: n } = e;
@@ -578,9 +578,9 @@ function ea(e) {
             validator: (e) => j(e, "after"),
         },
         [D.LWr.FILTER_IN]: {
-            regex: B(v.intl.string(v.t.WNpFHa)),
+            regex: V(v.intl.string(v.t.WNpFHa)),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t.WNpFHa)),
+            key: B(v.intl.string(v.t.WNpFHa)),
             plainText: v.intl.string(v.t.WNpFHa),
             validator: () => {
                 let t = e ?? m.A.getSelectedSearchContext();
@@ -600,9 +600,9 @@ function ea(e) {
             queryKey: "channel_id",
         },
         [D.LWr.FILTER_PINNED]: {
-            regex: B(v.intl.string(v.t["0B74eY"])),
+            regex: V(v.intl.string(v.t["0B74eY"])),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t["0B74eY"])),
+            key: B(v.intl.string(v.t["0B74eY"])),
             plainText: v.intl.string(v.t["0B74eY"]),
             getAutocompletions: () => [{ text: "true" }, { text: "false" }],
         },
@@ -611,12 +611,12 @@ function ea(e) {
             componentType: "ANSWER",
             follows: [D.LWr.FILTER_PINNED],
             queryKey: "pinned",
-            validator: Z,
+            validator: q,
         },
         [D.LWr.FILTER_AUTHOR_TYPE]: {
-            regex: B(v.intl.string(v.t.us8IQi)),
+            regex: V(v.intl.string(v.t.us8IQi)),
             componentType: "FILTER",
-            key: V(v.intl.string(v.t.us8IQi)),
+            key: B(v.intl.string(v.t.us8IQi)),
             plainText: v.intl.string(v.t.us8IQi),
             getAutocompletions(e) {
                 let { query: n, maxResults: i } = e;
@@ -626,7 +626,7 @@ function ea(e) {
         [D.LWr.ANSWER_AUTHOR_TYPE]: {
             regex: L(t),
             follows: [D.LWr.FILTER_AUTHOR_TYPE],
-            validator: q,
+            validator: X,
             componentType: "ANSWER",
             queryKey: "author_type",
         },
@@ -647,10 +647,10 @@ function ec(e) {
     let t = e.toLowerCase().replace(/^@/, "");
     return v.intl.string(v.t.Qf3ptv).startsWith(t) || D.ME.substring(1).startsWith(t);
 }
-D.LWr.FILTER_HAS,
+(D.LWr.FILTER_HAS,
     D.LWr.ANSWER_HAS,
     D.LWr.FILTER_AUTHOR_TYPE,
     D.LWr.ANSWER_AUTHOR_TYPE,
     D.LWr.FILTER_PINNED,
-    D.LWr.ANSWER_PINNED;
+    D.LWr.ANSWER_PINNED);
 let eu = es;

@@ -1,4 +1,4 @@
-t.d(l, { A_: () => U, Op: () => _, TK: () => N, de: () => f, ed: () => v, n3: () => b, wq: () => S }), t(321073);
+(t.d(l, { A_: () => U, Op: () => _, TK: () => N, de: () => f, ed: () => v, n3: () => b, wq: () => S }), t(321073));
 var e = t(435558),
     i = t.n(e),
     n = t(885386),
@@ -12,14 +12,14 @@ function v(a, l) {
         e = t.findIndex((a) => a.value === l);
     if (e > -1) {
         let a = t[e];
-        t.splice(e, 1), t.push(a);
+        (t.splice(e, 1), t.push(a));
     }
     return t;
 }
 function b(a) {
     let { feedbackType: l, location: t } = a;
-    E.default.track(O.HAw.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, { feedback_type: u.MW[l], opted_out_until: u.fs }),
-        n.Yt.updateSetting((a) => ({ ...a, [l]: { ...a[l], optOutExpiryTime: u.fs } }));
+    (E.default.track(O.HAw.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, { feedback_type: u.MW[l], opted_out_until: u.fs }),
+        n.Yt.updateSetting((a) => ({ ...a, [l]: { ...a[l], optOutExpiryTime: u.fs } })));
 }
 function s(a) {
     return a

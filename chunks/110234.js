@@ -11,10 +11,10 @@ function s(e, t) {
         case i.lp.ACTIVITY:
             break;
         case i.lp.USER:
-            (n = e.streamId), (r = e.voiceState), (a = e.speaking), (o = e.ringing);
+            ((n = e.streamId), (r = e.voiceState), (a = e.speaking), (o = e.ringing));
             break;
         case i.lp.STREAM:
-            (n = e.streamId), (s = e.stream);
+            ((n = e.streamId), (s = e.stream));
     }
     return {
         streamId: n,

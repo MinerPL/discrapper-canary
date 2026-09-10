@@ -44,9 +44,9 @@ class D extends i.Ay.PersistedStore {
     static displayName = "GuildRoomStore";
     static persistKey = "GuildRoomStore";
     initialize(e) {
-        this.waitFor(a.default, s.A, l.Ay),
+        (this.waitFor(a.default, s.A, l.Ay),
             this.syncWith([l.Ay], y),
-            (m = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1));
+            (m = (g = e?.rememberVideoOverlayVisibility ?? !1) && (e?.videoOverlayVisibility ?? !1)));
     }
     getState() {
         return { videoOverlayVisibility: m, rememberVideoOverlayVisibility: g };
@@ -92,35 +92,35 @@ let v = new D(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, objects: r, ...a } = t;
-        (E[t.roomId] = a),
+        ((E[t.roomId] = a),
             (A[t.roomId] = i),
             (h[t.roomId] = r),
             L(t.roomId, r),
-            null != n && (null != I && (I = null), null != f && (f = null));
+            null != n && (null != I && (I = null), null != f && (f = null)));
     },
     GUILD_ROOM_CONNECT_FAILURE: function (e) {
         let { roomId: t } = e;
         if (null == E[t]) return !1;
         let n = a.default.getId(),
             i = new Map(A[t]);
-        i.delete(n), (A[t] = i);
+        (i.delete(n), (A[t] = i));
     },
     GUILD_ROOM_DISCONNECT: function (e) {
         let { userId: t, roomId: n } = e;
         if (null == E[n]) return !1;
         let i = new Map(A[n]);
-        i.delete(t),
+        (i.delete(t),
             (A[n] = i),
             S && t === a.default.getId() && ((p[n] = !0), (S = !1)),
-            t === a.default.getId() && (delete N[n], delete C[n], g || (m = !1));
+            t === a.default.getId() && (delete N[n], delete C[n], g || (m = !1)));
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, objects: i, ...r } = t;
-        (E[t.roomId] = r), (h[t.roomId] = i), L(t.roomId, i);
+        ((E[t.roomId] = r), (h[t.roomId] = i), L(t.roomId, i));
         let s = a.default.getId(),
             l = A[t.roomId]?.get(s);
-        (A[t.roomId] = n), null != l && A[t.roomId]?.set(s, l);
+        ((A[t.roomId] = n), null != l && A[t.roomId]?.set(s, l));
     },
     GUILD_ROOM_UPDATE_FAILURE: function (e) {
         let { originalRoom: t, originalRoomUsers: n } = e,
@@ -131,24 +131,24 @@ let v = new D(r.h, {
             s = n.get(r);
         if (null == s) {
             let e = new Map(A[t.roomId]);
-            e.delete(r), (A[t.roomId] = e);
+            (e.delete(r), (A[t.roomId] = e));
         } else A[t.roomId]?.set(r, s);
     },
     GUILD_ROOM_FETCH_SUCCESS: function (e) {
         let { room: t } = e,
             { users: n, ...i } = t;
-        (E[t.roomId] = i), (A[t.roomId] = n);
+        ((E[t.roomId] = i), (A[t.roomId] = n));
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t, seat: n } = e;
-        (I = t), (f = n);
+        ((I = t), (f = n));
     },
     GUILD_ROOM_LOCAL_POSITION_CLEARED: function () {
-        (I = null), (f = null);
+        ((I = null), (f = null));
     },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t, clearLayout: n } = e;
-        (p[t] = !p[t]), n && (S = !0);
+        ((p[t] = !p[t]), n && (S = !0));
     },
     GUILD_ROOM_LOCAL_UPDATE: function (e) {
         let { roomId: t, background: n, position: i, seat: r, statusId: s, statusText: l } = e;
@@ -158,14 +158,14 @@ let v = new D(r.h, {
             let e = A[t].get(o);
             if (null != e) {
                 let n = new Map(A[t]);
-                n.set(o, {
+                (n.set(o, {
                     ...e,
                     position: i ?? e.position,
                     seat: r ?? e.seat,
                     statusId: s ?? e.statusId,
                     statusText: l ?? e.statusText,
                 }),
-                    (A[t] = n);
+                    (A[t] = n));
             }
         }
     },

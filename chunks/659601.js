@@ -1,4 +1,4 @@
-t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162), t(508300), t(321073);
+(t(393431), t(532706), t(42231), t(232424), t(949626), t(767709), t(65162), t(508300), t(321073));
 var o = t(344390);
 self.addEventListener("message", (e) => {
     let r,
@@ -53,7 +53,7 @@ self.addEventListener("message", (e) => {
                         for (let e = 0, r = 0; e < 3; e++)
                             for (let t = +!e, o = 2 * E[e]; t < 3 - e; t++, r++) {
                                 let e = _[t] * o;
-                                (s += k[r] * e), (p += P[r] * e);
+                                ((s += k[r] * e), (p += P[r] * e));
                             }
                         if (b)
                             for (let e = 0, r = 0; e < 5; e++)
@@ -61,10 +61,10 @@ self.addEventListener("message", (e) => {
                         let O = n - (2 / 3) * s,
                             m = (3 * n - O + p) / 2,
                             w = m - p;
-                        (U[t] = f(0, 255 * l(1, m))),
+                        ((U[t] = f(0, 255 * l(1, m))),
                             (U[t + 1] = f(0, 255 * l(1, w))),
                             (U[t + 2] = f(0, 255 * l(1, O))),
-                            (U[t + 3] = f(0, 255 * l(1, h)));
+                            (U[t + 3] = f(0, 255 * l(1, h))));
                     }
                 return { w: M, h: T, rgba: U };
             })(

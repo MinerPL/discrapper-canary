@@ -100,7 +100,7 @@ function k(e) {
             c(!0);
         },
         onSubscribeModalClose: (e) => {
-            c(!1), e && n?.();
+            (c(!1), e && n?.());
         },
         textOptions: { textOverride: u },
     });
@@ -115,7 +115,7 @@ function F(e) {
         children: (0, O.tS)({ intervalType: t?.interval, intervalCount: t?.intervalCount }),
     });
 }
-function V(e) {
+function B(e) {
     let { subscriptionTier: t, onClose: n, analyticsLocationObject: r, trialOffer: a, discountOffer: s } = e;
     return (0, i.jsxs)("div", {
         className: U.qr,
@@ -139,7 +139,7 @@ function V(e) {
         ],
     });
 }
-function B(e) {
+function V(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
         r = (0, y.V)();
     return (0, i.jsxs)("div", {
@@ -220,7 +220,7 @@ function j(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(V, {
+                    (0, i.jsx)(B, {
                         subscriptionTier: c,
                         onClose: l,
                         analyticsLocationObject: { section: M.JJy.EXPRESSION_PICKER, object: M.ZSU.BUTTON_CTA },
@@ -253,7 +253,7 @@ function j(e) {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(V, {
+                        (0, i.jsx)(B, {
                             subscriptionTier: c,
                             onClose: l,
                             analyticsLocationObject: { section: M.JJy.EXPRESSION_PICKER, object: M.ZSU.BUTTON_CTA },
@@ -287,7 +287,7 @@ function j(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(V, {
+                    (0, i.jsx)(B, {
                         subscriptionTier: c,
                         onClose: l,
                         analyticsLocationObject: { section: M.JJy.EMOJI_PICKER_POPOUT, object: M.ZSU.BUTTON_CTA },
@@ -306,7 +306,7 @@ function j(e) {
                         planName: (0, O.Zw)(c),
                         premiumMaxSize: c === b.pe.TIER_0 ? P.intl.string(P.t["C/Rhb9"]) : y,
                         onClick: () => {
-                            (0, S.pX)(M.BVt.APPLICATION_STORE), l?.();
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), l?.());
                         },
                     });
                     break;
@@ -314,7 +314,7 @@ function j(e) {
                     v = P.intl.format(P.t.poib9C, {
                         planName: (0, O.Zw)(c),
                         onClick: () => {
-                            (0, S.pX)(M.BVt.APPLICATION_STORE), l?.();
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), l?.());
                         },
                     });
                     break;
@@ -322,7 +322,7 @@ function j(e) {
                     v = P.intl.format(P.t.GUHtE3, {
                         premiumMaxMessageLength: M.CS1,
                         onClick: () => {
-                            (0, S.pX)(M.BVt.APPLICATION_STORE), l?.();
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), l?.());
                         },
                     });
             }
@@ -369,7 +369,7 @@ function j(e) {
                     discountOffer: N,
                     children: P.intl.format(P.t["5KMAnK"], {
                         onClick: () => {
-                            (0, S.pX)(M.BVt.APPLICATION_STORE), (0, g.D)();
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), (0, g.D)());
                         },
                     }),
                 })
@@ -394,7 +394,7 @@ function j(e) {
                         children: P.intl.format(P.t.GUHtE3, {
                             premiumMaxMessageLength: M.CS1,
                             onClick: () => {
-                                (0, S.pX)(M.BVt.APPLICATION_STORE), l?.();
+                                ((0, S.pX)(M.BVt.APPLICATION_STORE), l?.());
                             },
                         }),
                     }),
@@ -409,7 +409,7 @@ function j(e) {
             });
         case b.e.CUSTOM_PROFILE_TRY_OUT_UPSELL:
         case b.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-            return (0, i.jsx)(B, {});
+            return (0, i.jsx)(V, {});
         case b.e.GUILD_CAP_MODAL_UPSELL:
         case b.e.PREMIUM_GUILD_IDENTITY_MODAL:
         case b.e.CUSTOM_PROFILE_UPSELL:

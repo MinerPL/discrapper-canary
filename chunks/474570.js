@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { collectNonHeapMetrics: () => s, initWasmTracking: () => a }), n(321073);
+(n.r(t), n.d(t, { collectNonHeapMetrics: () => s, initWasmTracking: () => a }), n(321073));
 let i = [],
     r = !1;
 function a() {

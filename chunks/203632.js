@@ -16,7 +16,7 @@ class o extends a.A {
     animationType;
     staticFrameSrc;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.type = r.R.PROFILE_EFFECT),
             (this.title = e.title),
             (this.description = e.description),
@@ -25,7 +25,7 @@ class o extends a.A {
             (this.thumbnailPreviewSrc = e.thumbnailPreviewSrc),
             (this.effects = e.effects),
             (this.animationType = e.animationType),
-            (this.staticFrameSrc = e.staticFrameSrc);
+            (this.staticFrameSrc = e.staticFrameSrc));
     }
     static fromServer(e) {
         return new o({ ...super.fromServer(e), ...e });

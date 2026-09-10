@@ -43,7 +43,7 @@ function I(n) {
         descriptionText: k,
         infoRows: D,
         onDismissAndStay: function () {
-            (h.current = !0),
+            ((h.current = !0),
                 T(),
                 (0, A.$Y)(e),
                 N.default.track(C.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -52,10 +52,10 @@ function I(n) {
                     blocked_user_ids: L ? [e] : [],
                     ignored_user_ids: L ? [] : [e],
                     warning_surface: O.gD.POST_JOIN_MODAL,
-                });
+                }));
         },
         onDismissAndLeave: function () {
-            (h.current = !0),
+            ((h.current = !0),
                 T(),
                 d.default.disconnect(),
                 N.default.track(C.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -64,7 +64,7 @@ function I(n) {
                     blocked_user_ids: L ? [e] : [],
                     ignored_user_ids: L ? [] : [e],
                     warning_surface: O.gD.POST_JOIN_MODAL,
-                });
+                }));
         },
         leaveButtonText: f.intl.string(f.t["Hi1/aQ"]),
         stayButtonText: f.intl.string(f.t["Z+/hfb"]),

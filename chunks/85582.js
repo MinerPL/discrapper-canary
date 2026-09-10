@@ -1,4 +1,4 @@
-r.r(n),
+(r.r(n),
     r.d(n, {
         HeicConversionFailureReason: () => l,
         ImageConversionFailureReason: () => l,
@@ -7,7 +7,7 @@ r.r(n),
         maybeConvertHeicToJpeg: () => v,
         maybeConvertJxrToJpeg: () => f,
         renameToJpegExtension: () => a.DP,
-    });
+    }));
 var i,
     o = r(77729),
     t = r(626584),
@@ -33,9 +33,9 @@ async function m(e, n, r, i) {
         return { success: !1, originalFile: e, sizeBefore: e.size, sizeAfter: e.size, reason: n, compressTimeMs: u() };
     }
     let v = o.A?.sysimg;
-    if (null == v) return s.verbose("sysimg not available (not Electron)"), m("native_module_unavailable");
-    if (!(await l(v))) return s.verbose(`platform does not support ${t} conversion`), m("platform_unsupported");
-    if (null != i && e.size > i) return s.verbose(`file too large: ${e.size} > ${i}`), m("size_limit_exceeded");
+    if (null == v) return (s.verbose("sysimg not available (not Electron)"), m("native_module_unavailable"));
+    if (!(await l(v))) return (s.verbose(`platform does not support ${t} conversion`), m("platform_unsupported"));
+    if (null != i && e.size > i) return (s.verbose(`file too large: ${e.size} > ${i}`), m("size_limit_exceeded"));
     try {
         let n = await e.arrayBuffer(),
             i = JSON.stringify({ format: "jpeg", quality: Math.min(100, Math.max(1, r)) }),
@@ -53,7 +53,7 @@ async function m(e, n, r, i) {
             }
         );
     } catch (n) {
-        return s.warn(`${t} conversion failed for ${e.name}:`, n), m("conversion_failed");
+        return (s.warn(`${t} conversion failed for ${e.name}:`, n), m("conversion_failed"));
     }
 }
 function v(e) {

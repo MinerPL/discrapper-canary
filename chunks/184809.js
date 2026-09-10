@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => es });
+(n.r(t), n.d(t, { default: () => es }));
 var i = n(17928),
     r = n(506774),
     a = n(228366),
@@ -30,7 +30,7 @@ function m() {
 class g extends i.Ay.Store {
     static displayName = "OverlayRPCLogStore";
     initialize() {
-        this.waitFor(A.A), A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) && m();
+        (this.waitFor(A.A), A.A.hasRenderDebugMode(E.x7.LegacyOverlayLogging) && m());
     }
     getAllLogs() {
         return f;
@@ -45,7 +45,7 @@ class g extends i.Ay.Store {
 new g(a.h, {
     OVERLAY_RENDER_DEBUG_MODE: function (e) {
         let { enabled: t, mode: n } = e;
-        return n === E.x7.LegacyOverlayLogging && (t ? m() : null != T && (clearInterval(T), (T = null))), !1;
+        return (n === E.x7.LegacyOverlayLogging && (t ? m() : null != T && (clearInterval(T), (T = null))), !1);
     },
     OVERLAY_ADD_LOGS_BATCH: function (e) {
         let { logs: t } = e;
@@ -114,7 +114,7 @@ async function D(e, t) {
         payload: { level: n, message: i, timestamp: Date.now(), context: a },
     };
     try {
-        await l.tN(s), (y = 0);
+        (await l.tN(s), (y = 0));
     } catch (e) {
         ++y <= 3 &&
             (N.error(`Failed to send log to main app (failure ${y}):`, e),
@@ -128,7 +128,7 @@ function v(e) {
         let i = e[n];
         if ("string" == typeof i && i.includes("%c")) {
             let e = i.replace(/%c/g, "");
-            "" !== e.trim() && t.push(e), (n += (i.match(/%c/g) ?? []).length);
+            ("" !== e.trim() && t.push(e), (n += (i.match(/%c/g) ?? []).length));
             continue;
         }
         ("string" == typeof i && /^\s*(font-weight|color|background|padding|margin|border)/.test(i)) || t.push(i);
@@ -171,8 +171,8 @@ var M = n(761821),
     x = n(38502),
     k = n(967198),
     F = n(531685),
-    V = n(672396);
-let B = Object.freeze({
+    B = n(672396);
+let V = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
         displayUserMode: S.f5z.ALWAYS,
@@ -183,7 +183,7 @@ let B = Object.freeze({
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         disableClickableRegions: !1,
-        textWidgetOpacity: V.Li.LOWER,
+        textWidgetOpacity: B.Li.LOWER,
         showGameInviteNotification: !0,
         customInviteMessage: void 0,
     }),
@@ -194,17 +194,17 @@ let B = Object.freeze({
     K = !1,
     $ = !1,
     z = !1,
-    q = new Set(),
-    Z = !1;
-function X(e) {
+    X = new Set(),
+    q = !1;
+function Z(e) {
     let t = j[e];
-    return null == t && (t = j[e] = { ...B }), t;
+    return (null == t && (t = j[e] = { ...V }), t);
 }
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
             if (O) return L.warn("Overlay logger already set up, skipping duplicate setup");
-            (O = !0),
+            ((O = !0),
                 (C = {
                     log: (t, n) => D({ level: "log", message: t, context: n }, e),
                     info: (t, n) => D({ level: "info", message: t, context: n }, e),
@@ -292,12 +292,12 @@ __OVERLAY__ &&
                         try {
                             let t = "Unhandled promise rejection",
                                 n = {};
-                            e.reason instanceof Error
+                            (e.reason instanceof Error
                                 ? ((t = `Unhandled promise rejection: ${e.reason.message}`),
                                   (n = { name: e.reason.name, message: e.reason.message, stack: e.reason.stack }))
                                 : ("string" == typeof e.reason && (t = `Unhandled promise rejection: ${e.reason}`),
                                   (n = { reason: e.reason })),
-                                C.crash(t, n);
+                                C.crash(t, n));
                         } catch (t) {
                             L.error("[Failed to log rejection]", t, e);
                         }
@@ -318,7 +318,7 @@ __OVERLAY__ &&
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    null != C && C.info("Overlay unloading"), null != R && clearInterval(R);
+                    (null != C && C.info("Overlay unloading"), null != R && clearInterval(R));
                 }),
                 (R = window.setInterval(() => {
                     if (null != C)
@@ -336,10 +336,10 @@ __OVERLAY__ &&
                             L.error("[Heartbeat Error]", e);
                         }
                 }, 1e4)),
-                L.log("Overlay error handlers and console interception set up");
+                L.log("Overlay error handlers and console interception set up"));
         }
     })((0, u.getRPCAuthToken)());
-let Q = { ...B },
+let Q = { ...V },
     J = new Set([
         "AUDIO_SET_INPUT_DEVICE",
         "AUDIO_SET_INPUT_VOLUME",
@@ -435,12 +435,12 @@ let Q = { ...B },
 function et() {
     if (!__OVERLAY__) return !1;
     let e = H === (0, u.getPID)(),
-        t = Y.has((0, u.getPID)()) || q.size > 0;
+        t = Y.has((0, u.getPID)()) || X.size > 0;
     e && t ? (0, s.XC)(window, !0) : (0, s.XC)(window, !1);
 }
 function en() {
     if (H !== (0, u.getPID)()) return !1;
-    q.clear();
+    X.clear();
 }
 function ei(e) {
     let t = (0, u.getPID)();
@@ -479,10 +479,10 @@ function ei(e) {
                                         });
                                         break;
                                     case "CONNECTION_OPEN_SUPPLEMENTAL":
-                                        (e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) =>
+                                        ((e.lazyPrivateChannels = (e.lazyPrivateChannels ?? []).map((e) =>
                                             (0, P.createChannelRecord)(e),
                                         )),
-                                            a.h.dispatch(e);
+                                            a.h.dispatch(e));
                                         break;
                                     case "THREAD_LIST_SYNC":
                                         a.h.dispatch({
@@ -529,7 +529,7 @@ class ea extends i.Ay.PersistedStore {
     static migrations = [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: i, ...a } = { ...r.w.get("OverlayStore") };
-            return { ...B, ...(5 === i ? a : null) };
+            return { ...V, ...(5 === i ? a : null) };
         },
         (e) => {
             let t = U.default.getId();
@@ -541,7 +541,7 @@ class ea extends i.Ay.PersistedStore {
             (this.waitFor(U.default, w.A, G.Ay, x.A, k.A, F.A),
             this.syncWith([U.default], () => {
                 let e = U.default.getId();
-                Q = null != e ? X(e) : { ...B };
+                Q = null != e ? Z(e) : { ...V };
             }),
             __OVERLAY__ && Y.delete((0, u.getPID)()),
             null != e)
@@ -549,9 +549,9 @@ class ea extends i.Ay.PersistedStore {
             j = e;
             let t = U.default.getId();
             null != t &&
-                (null == (Q = X(t)).textChatNotifications && (Q.textChatNotifications = B.textChatNotifications),
-                null == Q.textWidgetOpacity && (Q.textWidgetOpacity = B.textWidgetOpacity),
-                null == Q.disableClickableRegions && (Q.disableClickableRegions = B.disableClickableRegions));
+                (null == (Q = Z(t)).textChatNotifications && (Q.textChatNotifications = V.textChatNotifications),
+                null == Q.textWidgetOpacity && (Q.textWidgetOpacity = V.textWidgetOpacity),
+                null == Q.disableClickableRegions && (Q.disableClickableRegions = V.disableClickableRegions));
         }
     }
     getState() {
@@ -623,13 +623,13 @@ class ea extends i.Ay.PersistedStore {
         return K;
     }
     getActiveRegions() {
-        return q;
+        return X;
     }
     getTextWidgetOpacity() {
         return Q.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return Z;
+        return q;
     }
     getTrackedGame(e) {
         return er.get(e) ?? null;
@@ -646,7 +646,7 @@ let es = new ea(a.h, {
         Y.clear();
     },
     OVERLAY_START_SESSION: function () {
-        a.h.addInterceptor((e) => {
+        (a.h.addInterceptor((e) => {
             if ($ || !ee.has(e.type)) return !1;
             if ("CHANNEL_SELECT" === e.type) {
                 let { guildId: t, channelId: n } = e;
@@ -676,16 +676,16 @@ let es = new ea(a.h, {
         }),
             (0, l.QZ)(ei, (0, u.getRPCAuthToken)()),
             (0, l.Ng)(),
-            (0, l.tN)({ type: S.kGV.CONNECT, pid: (0, u.getPID)(), token: (0, u.getRPCAuthToken)() });
+            (0, l.tN)({ type: S.kGV.CONNECT, pid: (0, u.getPID)(), token: (0, u.getRPCAuthToken)() }));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { focusedPID: t, trackedGames: n, overlayStoredSettings: i } = e;
-        (H = t),
+        ((H = t),
             __OVERLAY__ &&
                 (n.forEach((e) => {
                     er.set(e.pid, e);
                 }),
-                o.x.update({ legacyEnabled: i.legacyEnabled, oopEnabled: i.oopEnabled }));
+                o.x.update({ legacyEnabled: i.legacyEnabled, oopEnabled: i.oopEnabled })));
     },
     OVERLAY_READY: function () {
         let e = Q.selectedGuildId,
@@ -701,15 +701,15 @@ let es = new ea(a.h, {
             let n = G.Ay.getDefaultChannel(e);
             null != n && (t = n.id);
         }
-        (Q.selectedGuildId = e), (Q.selectedChannelId = t);
+        ((Q.selectedGuildId = e), (Q.selectedChannelId = t));
     },
     OVERLAY_FOCUSED: function (e) {
         let { pid: t } = e;
-        (H = t), et();
+        ((H = t), et());
     },
     OVERLAY_SELECT_CHANNEL: function (e) {
         let { guildId: t, channelId: n } = e;
-        (Q.selectedGuildId = t), (Q.selectedChannelId = n);
+        ((Q.selectedGuildId = t), (Q.selectedChannelId = n));
     },
     OVERLAY_SELECT_CALL: function (e) {
         let { callId: t } = e;
@@ -745,17 +745,17 @@ let es = new ea(a.h, {
     OVERLAY_SET_INVITE_MESSAGE: function (e) {
         let { message: t } = e,
             n = Q.customInviteMessage !== t;
-        return (Q.customInviteMessage = t), n;
+        return ((Q.customInviteMessage = t), n);
     },
     OVERLAY_SET_GAME_INVITE_NOTIFICATION: function (e) {
         let { shouldShow: t } = e,
             n = Q.showGameInviteNotification !== t;
-        return (Q.showGameInviteNotification = t), n;
+        return ((Q.showGameInviteNotification = t), n);
     },
     OVERLAY_SET_TEXT_WIDGET_OPACITY: function (e) {
         let { opacity: t } = e,
             n = Q.textWidgetOpacity !== t;
-        return (Q.textWidgetOpacity = t), n;
+        return ((Q.textWidgetOpacity = t), n);
     },
     OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: function () {
         Q.disableExternalLinkAlert = !0;
@@ -765,21 +765,21 @@ let es = new ea(a.h, {
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t, pid: n } = e;
-        t ? Y.delete(n) : Y.add(n), en(), et(), (Z = !1);
+        (t ? Y.delete(n) : Y.add(n), en(), et(), (q = !1));
     },
     OVERLAY_ACTIVATE_REGION: function (e) {
         let { region: t } = e;
-        if (H !== (0, u.getPID)() || q.has(t)) return !1;
-        q.add(t);
+        if (H !== (0, u.getPID)() || X.has(t)) return !1;
+        X.add(t);
     },
     OVERLAY_DEACTIVATE_ALL_REGIONS: en,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
-        Z = e.isPreviewingInGame;
+        q = e.isPreviewingInGame;
     },
     WINDOW_RESIZED: function () {
         if (__OVERLAY__) {
             let e = F.A.windowSize();
-            (0, u.validResolution)(e) || (Z = !1);
+            (0, u.validResolution)(e) || (q = !1);
         }
     },
     OVERLAY_SET_ASSOCIATED_GAME: function (e) {

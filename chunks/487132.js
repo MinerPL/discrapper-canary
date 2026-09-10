@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => c });
+(n.r(t), n.d(t, { default: () => c }));
 var i = n(981737),
     a = {
         1: "\u0967",

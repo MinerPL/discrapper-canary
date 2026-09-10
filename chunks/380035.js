@@ -19,10 +19,10 @@ function g(t) {
 function b(t) {
     let { transitionState: i, widget: n, userId: u, onClose: b, trackUserProfileEditAction: j } = t,
         m = l.useCallback(() => {
-            (0, o.qA)(n),
+            ((0, o.qA)(n),
                 j({ action: "WIDGET_REMOVED", ...n.getProfileEditAnalyticsOptions() }),
                 b(),
-                (0, x.XA)(E.jM.WIDGET_REMOVED);
+                (0, x.XA)(E.jM.WIDGET_REMOVED));
         }, [n, b, j]),
         C = (0, a.bG)([c.default], () => c.default.getUser(u));
     return null == C

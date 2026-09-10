@@ -1,5 +1,5 @@
-n.d(t, { FV: () => y, M3: () => f, O7: () => g, SQ: () => x, cd: () => v, ke: () => N, n$: () => h, pY: () => E }),
-    n(321073);
+(n.d(t, { FV: () => y, M3: () => f, O7: () => g, SQ: () => x, cd: () => v, ke: () => N, n$: () => h, pY: () => E }),
+    n(321073));
 var l = n(155718),
     i = n(721768),
     r = n(861382),
@@ -58,8 +58,8 @@ function y(e, t, n, i) {
         return { type: "text", text: (0, c.IQ)(n, { mode: "raw" }) };
     });
     if (t.type !== l.n4.STRING) {
-        for (; r.length > 0 && "text" === r[0].type && "" === r[0].text.trim(); ) r.shift();
-        for (; r.length > 0 && "text" === r[r.length - 1].type && "" === r[r.length - 1].text.trim(); ) r.pop();
+        for (; r.length > 0 && "text" === r[0].type && "" === r[0].text.trim();) r.shift();
+        for (; r.length > 0 && "text" === r[r.length - 1].type && "" === r[r.length - 1].text.trim();) r.pop();
     }
     return r;
 }
@@ -71,7 +71,7 @@ function v(e, t, n, l, r) {
             a.J({ option: e, content: l[e.name] ?? null, guildId: t, channelId: n, allowEmptyValues: r }),
         ]),
     );
-    return i._y(n, s), s;
+    return (i._y(n, s), s);
 }
 function N(e, t, n, l, s) {
     let [o] = l,
@@ -80,7 +80,7 @@ function N(e, t, n, l, s) {
     if (null == c) return;
     let d = y(e, c, o, n),
         p = a.J({ option: c, content: d, guildId: t, channelId: n, allowEmptyValues: s });
-    return i.H2(n, { [o.optionName]: { lastValidationResult: p } }), p;
+    return (i.H2(n, { [o.optionName]: { lastValidationResult: p } }), p);
 }
 function E(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
@@ -89,7 +89,7 @@ function E(e, t) {
         i = new Set(g(e)),
         r = {},
         a = new Set();
-    for (let e of t.options) (r[e.displayName] = e), i.has(e.name) || a.add(e.displayName);
+    for (let e of t.options) ((r[e.displayName] = e), i.has(e.name) || a.add(e.displayName));
     let s = null;
     for (let t = 0; t < n.length; t++) {
         let i = n[t];
@@ -107,7 +107,7 @@ function E(e, t) {
                     continue;
                 }
                 if (d.l5.isText(p))
-                    for (m.lastIndex = 0; null != (u = m.exec(p.text)); ) {
+                    for (m.lastIndex = 0; null != (u = m.exec(p.text));) {
                         if (0 !== u.index && null == p.text.charAt(u.index - 1).match(/(\t|\s)/)) continue;
                         let e = u[1];
                         if (!a.has(e)) continue;
@@ -125,11 +125,11 @@ function E(e, t) {
                                 valueRange: { anchor: d, focus: d },
                                 text: "",
                             };
-                        null != s &&
+                        (null != s &&
                             ((s.valueRange.focus = m.keyRange.anchor),
                             (s.text = (0, c.WO)(n, { mode: "raw", range: s.valueRange }).trim()),
                             l.push(s)),
-                            (s = m);
+                            (s = m));
                     }
             }
     }

@@ -11,26 +11,26 @@ class s extends a.AbstractParserWithWordBoundaryChecking {
             a = e.createParsingComponents();
         switch (t[1].toLowerCase()) {
             case "tarde":
-                a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 15);
+                (a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 15));
                 break;
             case "noite":
-                a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 22);
+                (a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 22));
                 break;
             case "manha":
             case "manh\xe3":
-                a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 6);
+                (a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 6));
                 break;
             case "meia-noite":
                 let s = new Date(r.getTime());
-                s.setDate(s.getDate() + 1),
+                (s.setDate(s.getDate() + 1),
                     (0, i.assignSimilarDate)(a, s),
                     (0, i.implySimilarTime)(a, s),
                     a.imply("hour", 0),
                     a.imply("minute", 0),
-                    a.imply("second", 0);
+                    a.imply("second", 0));
                 break;
             case "meio-dia":
-                a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 12);
+                (a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 12));
         }
         return a;
     }

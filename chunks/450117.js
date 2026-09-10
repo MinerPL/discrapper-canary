@@ -14,7 +14,7 @@ let d = function (e) {
         className: u.rJ,
         onClick: p
             ? (e) => {
-                  e.preventDefault(), (0, a.pX)(h);
+                  (e.preventDefault(), (0, a.pX)(h));
               }
             : void 0,
         children: [

@@ -19,7 +19,7 @@ function c(e) {
         [v, p] = a.useState(null),
         g = a.useCallback(
             (e) => {
-                c(s.Y.NONE), p(e);
+                (c(s.Y.NONE), p(e));
             },
             [c],
         ),
@@ -28,7 +28,7 @@ function c(e) {
         }, [d]),
         b = a.useCallback(
             (e) => {
-                m(e), p((t) => (t === e ? null : t));
+                (m(e), p((t) => (t === e ? null : t)));
             },
             [m],
         ),

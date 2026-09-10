@@ -26,7 +26,7 @@ var n = r(672722),
             p = function () {
                 if (!t)
                     try {
-                        v(), e(p);
+                        (v(), e(p));
                     } catch (e) {
                         console.error(e);
                     }
@@ -47,7 +47,7 @@ var n = r(672722),
                     return e.time > r;
                 }),
                 a = { time: r, handler: e, cancel: i };
-            return m.splice(o, 0, a), h(), a;
+            return (m.splice(o, 0, a), h(), a);
         };
         var v = (this.advance = function () {
             var e = n.now();
@@ -65,12 +65,12 @@ var n = r(672722),
                 e > o)
             ) {
                 var t = Math.min(64, e - o);
-                (o = e),
+                ((o = e),
                     n.batchedUpdates(function () {
-                        a.length &&
+                        (a.length &&
                             (n.willAdvance(a),
                             (a = a.filter(function (e) {
-                                return (l = e.priority), e.idle || e.advance(t), !e.idle;
+                                return ((l = e.priority), e.idle || e.advance(t), !e.idle);
                             })),
                             (l = 0)),
                             c.size &&
@@ -84,23 +84,23 @@ var n = r(672722),
                                     return t(e);
                                 }),
                                 f.clear(),
-                                (r = !1));
-                    });
+                                (r = !1)));
+                    }));
             }
         });
-        (this.start = function (e) {
+        ((this.start = function (e) {
             l > e.priority ? u.add(e) : (d(e), h());
         }),
             (this.onFrame = function (e) {
-                c.add(e), h();
+                (c.add(e), h());
             }),
             (this.onWrite = function (e) {
                 r ? e(o) : f.add(e);
-            });
+            }));
     };
 class a extends o {
     constructor() {
-        super(...arguments),
+        (super(...arguments),
             (this._requestAnimationFrame = (e) => i(e)),
             (this._cancelAnimationFrame = (e) => cancelAnimationFrame(e)),
             (this.writing = !1),
@@ -149,9 +149,9 @@ class a extends o {
                     e > this.lastTime)
                 ) {
                     let t = Math.min(64, e - this.lastTime);
-                    (this.lastTime = e),
+                    ((this.lastTime = e),
                         n.batchedUpdates(() => {
-                            this.animations.length > 0 &&
+                            (this.animations.length > 0 &&
                                 (n.willAdvance(this.animations),
                                 (this.animations = this.animations.filter(
                                     (e) => ((this.priority = e.priority), e.idle || e.advance(t), !e.idle),
@@ -163,8 +163,8 @@ class a extends o {
                                     ((this.writing = !0),
                                     this.writeQueue.forEach((t) => t(e)),
                                     this.writeQueue.clear(),
-                                    (this.writing = !1));
-                        });
+                                    (this.writing = !1)));
+                        }));
                 }
             }),
             (this.start = (e) => {
@@ -178,20 +178,20 @@ class a extends o {
                     },
                     o = s(this.timeoutQueue, (e) => e.time > r),
                     a = { time: r, handler: e, cancel: i };
-                return this.timeoutQueue.splice(o, 0, a), this.startLoop(), a;
+                return (this.timeoutQueue.splice(o, 0, a), this.startLoop(), a);
             }),
             (this.onFrame = (e) => {
-                this.frameQueue.add(e), this.startLoop();
+                (this.frameQueue.add(e), this.startLoop());
             }),
             (this.onWrite = (e) => {
                 this.writing ? e(this.lastTime) : this.writeQueue.add(e);
-            });
+            }));
     }
     setRAF(e, t) {
-        0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)),
+        (0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)),
             (this._requestAnimationFrame = e),
             (this._cancelAnimationFrame = t),
-            this.loop();
+            this.loop());
     }
 }
 function s(e, t) {

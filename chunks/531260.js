@@ -96,7 +96,7 @@ function S() {
         );
     return (
         (0, u.Ay)(() => {
-            m(e, r) && (0, c.qw)({ entitlementType: f.zF_.FRACTIONAL_REDEMPTION }), g(r) && (0, c.LM)(p.tv);
+            (m(e, r) && (0, c.qw)({ entitlementType: f.zF_.FRACTIONAL_REDEMPTION }), g(r) && (0, c.LM)(p.tv));
         }),
         i.useEffect(() => {
             let e = T({

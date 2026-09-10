@@ -51,7 +51,7 @@ async function u(t, e, n) {
     l.h.dispatch({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: t, entry: i.body });
 }
 function h(t, e) {
-    o.A.delete({
+    (o.A.delete({
         url: s.Rsh.DIRECTORY_CHANNEL_ENTRY(t, e),
         trackedActionData: {
             event: c.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
@@ -59,7 +59,7 @@ function h(t, e) {
         },
         rejectWithError: !0,
     }),
-        l.h.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: t, guildId: e });
+        l.h.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: t, guildId: e }));
 }
 let C = i()(async (t, e) => {
     if (!E.A.shouldFetch(t, e))

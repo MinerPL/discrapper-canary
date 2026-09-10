@@ -18,15 +18,19 @@ function g(e) {
             loaded: i,
             message: a,
             error: r,
-        } = (0, s.cf)([d.A, o.A, c.Ay], () => {
-            let e = c.Ay.lastMessageId(n),
-                t = d.A.getMessageRequestPreview(n);
-            if (null == t.message && null != e) {
-                let t = o.A.getMessage(n, e);
-                if (null != t) return { loaded: !0, error: !1, message: t };
-            }
-            return t;
-        }, [n]),
+        } = (0, s.cf)(
+            [d.A, o.A, c.Ay],
+            () => {
+                let e = c.Ay.lastMessageId(n),
+                    t = d.A.getMessageRequestPreview(n);
+                if (null == t.message && null != e) {
+                    let t = o.A.getMessage(n, e);
+                    if (null != t) return { loaded: !0, error: !1, message: t };
+                }
+                return t;
+            },
+            [n],
+        ),
         u = (0, s.bG)([d.A], () => d.A.shouldLoadMessageRequestPreview(n), [n]);
     return (
         l && !i && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(A, 0))),
@@ -35,7 +39,7 @@ function g(e) {
 }
 async function A() {
     try {
-        for (; !i().isEmpty(h); ) await p();
+        for (; !i().isEmpty(h);) await p();
     } finally {
         m = null;
     }

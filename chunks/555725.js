@@ -1,4 +1,4 @@
-s.d(e, { bh: () => x, QB: () => I, _k: () => D, aO: () => g }), s(582128);
+(s.d(e, { bh: () => x, QB: () => I, _k: () => D, aO: () => g }), s(582128));
 var n = s(661531),
     i = s(628284),
     r = s(695366),
@@ -71,10 +71,10 @@ function x() {
         case d.PN.ALL_GOOD:
             return u.intl.format(u.t.pEdBD4, {
                 termsOfService: (t) => {
-                    t.stopPropagation(), (0, c.A)(h.d$.TOS_LINK);
+                    (t.stopPropagation(), (0, c.A)(h.d$.TOS_LINK));
                 },
                 communityGuidelines: (t) => {
-                    t.stopPropagation(), (0, c.A)(h.d$.COMMUNITY_GUIDELINES);
+                    (t.stopPropagation(), (0, c.A)(h.d$.COMMUNITY_GUIDELINES));
                 },
             });
         case d.PN.LIMITED:

@@ -10,7 +10,7 @@ class d extends r.A {
         OVERLAY_SET_INPUT_LOCKED: () => {
             null != s.A.getContextMenu() && (0, i.Z_)();
             let e = (0, a.rH)();
-            null != e && e.windowDispatch.dispatch(o.jej.POPOUT_CLOSE), l._.dispatch(o.jej.MODAL_CLOSE);
+            (null != e && e.windowDispatch.dispatch(o.jej.POPOUT_CLOSE), l._.dispatch(o.jej.MODAL_CLOSE));
         },
     };
 }

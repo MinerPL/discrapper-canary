@@ -30,7 +30,7 @@ function p(e) {
                 stickerIds: i,
                 attachmentsToUpload: n,
                 onAttachmentUploadError: (i, l, a, o) => {
-                    (0, d.openUploadError)({
+                    ((0, d.openUploadError)({
                         title: x.intl.string(x.t.B3vFdU),
                         help: o?.message ?? x.intl.string(x.t.zMEjJg),
                     }),
@@ -38,7 +38,7 @@ function p(e) {
                             "" === h.A.getDraft(e.id, h.C.FirstThreadMessage) &&
                             s.A.saveDraft(e.id, t, h.C.FirstThreadMessage),
                         0 === A.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
-                            r.A.setUploads({ channelId: e.id, uploads: n, draftType: h.C.FirstThreadMessage });
+                            r.A.setUploads({ channelId: e.id, uploads: n, draftType: h.C.FirstThreadMessage }));
                 },
             });
         }, []);

@@ -80,7 +80,7 @@ function w(e) {
                 actions: {
                     onEnableMFAClick: u.Ay.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, t.closeModal)(_.m), h.A.open(x, f.BEX.SAFETY, void 0, f.nd0.SAFETY_PERMISSIONS);
+                        ((0, t.closeModal)(_.m), h.A.open(x, f.BEX.SAFETY, void 0, f.nd0.SAFETY_PERMISSIONS));
                     },
                 },
             }),

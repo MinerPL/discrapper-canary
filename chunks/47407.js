@@ -4,7 +4,7 @@ var i = n(573648),
 let a = "xbox:";
 class s extends r.Ay {
     constructor(e) {
-        super(e), (this.id = `${a}${e.name}`), (this.name = e.name);
+        (super(e), (this.id = `${a}${e.name}`), (this.name = e.name));
     }
     getIconURL() {
         return i.A.get("xbox").icon.lightPNG;

@@ -10,7 +10,7 @@ function d(t) {
     return (0, a.bG)([c.A], () => c.A.isIgnored(i))
         ? (0, e.jsx)(r.Q, {
               onClick: function () {
-                  n.j0.updateSetting(!0), s();
+                  (n.j0.updateSetting(!0), s());
               },
               variant: "primary",
               size: "sm",

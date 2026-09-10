@@ -98,7 +98,7 @@ function j(e) {
                     ? (0, i.jsx)(c.$, {
                           text: L.intl.string(L.t["4i2vj+"]),
                           onClick: function (e) {
-                              e.stopPropagation(),
+                              (e.stopPropagation(),
                                   null != S &&
                                       (0, f.A)({
                                           applicationId: S.applicationId,
@@ -106,7 +106,7 @@ function j(e) {
                                           locationObject: _.location,
                                           analyticsLocations: C,
                                           componentId: D,
-                                      });
+                                      }));
                           },
                           loading: G,
                           size: 2 === E ? "md" : "sm",

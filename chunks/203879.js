@@ -21,7 +21,7 @@ function a(t) {
                 return (
                     (0, i.wB)(s, t, o.current),
                     () => {
-                        (0, i.$v)(s, t), (r.current = null);
+                        ((0, i.$v)(s, t), (r.current = null));
                     }
                 );
         }, [n, e]),

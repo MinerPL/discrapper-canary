@@ -66,6 +66,6 @@ async function A(e, t, n) {
         trackedActionData: { event: i.D3.WEBAUTHN_REGISTER },
         rejectWithError: !0,
     });
-    a.h.dispatch({ type: "AUTHENTICATOR_CREATE", credential: r.body }),
-        a.h.dispatch({ type: "MFA_ENABLE_SUCCESS", codes: r.body.backup_codes });
+    (a.h.dispatch({ type: "AUTHENTICATOR_CREATE", credential: r.body }),
+        a.h.dispatch({ type: "MFA_ENABLE_SUCCESS", codes: r.body.backup_codes }));
 }

@@ -28,21 +28,21 @@ function v(e, t) {
         a.current = n ?? window;
     }, [n]);
     let o = s.useCallback(() => {
-            null != i.current && a.current.clearInterval(i.current),
+            (null != i.current && a.current.clearInterval(i.current),
                 null != r.current && a.current.cancelIdleCallback(r.current),
-                null != l.current && a.current.cancelAnimationFrame(l.current);
+                null != l.current && a.current.cancelAnimationFrame(l.current));
         }, []),
         d = s.useCallback(() => {
             i.current = a.current.setTimeout(() => {
-                (r.current = a.current.requestIdleCallback(e)),
+                ((r.current = a.current.requestIdleCallback(e)),
                     (l.current = a.current.requestAnimationFrame(() => {
-                        t(), d();
-                    }));
+                        (t(), d());
+                    })));
             }, 12);
         }, [e, t]);
     return [
         s.useCallback(() => {
-            o(), d();
+            (o(), d());
         }, [o, d]),
         o,
     ];
@@ -65,20 +65,20 @@ function j(e) {
             s.useCallback(function () {
                 let e = performance.now(),
                     s = e - n.current;
-                (n.current = e),
+                ((n.current = e),
                     o.current ||
                         ((i.current -= t.current[l.current]),
                         (t.current[l.current] = s),
                         (i.current += s),
                         r.current < I && (r.current += 1),
-                        (l.current = (l.current + 1) % I));
+                        (l.current = (l.current + 1) % I)));
             }, []),
             function (e, t) {
                 let n = r.current ?? 1;
                 return Math.abs(e * t - (i.current / n) * n) / t;
             },
             function () {
-                (i.current = 0), (r.current = 0), t.current.fill(0), (n.current = performance.now()), (l.current = 0);
+                ((i.current = 0), (r.current = 0), t.current.fill(0), (n.current = performance.now()), (l.current = 0));
             },
         ]
     );
@@ -94,13 +94,13 @@ function T(e, t) {
         u = s.useRef(0),
         c = s.useRef(0),
         h = s.useCallback(() => {
-            i.current.fill(0),
+            (i.current.fill(0),
                 (l.current = 0),
                 (a.current = 0),
                 (d.current = 0),
                 (u.current = 0),
                 (r.current = performance.now()),
-                (o.current = 0);
+                (o.current = 0));
         }, []),
         m = s.useCallback(
             function () {
@@ -118,7 +118,7 @@ function T(e, t) {
                     let t = 0 === d.current ? x : a.current / d.current,
                         n = Math.min(2 * x, t),
                         i = Math.floor(h / (e ? n : x));
-                    i > 0 && (c.current = performance.now()), (l.current += i);
+                    (i > 0 && (c.current = performance.now()), (l.current += i));
                 }
                 let m = 0 === d.current ? x : a.current / d.current;
                 o.current += h / m;
@@ -175,7 +175,7 @@ function y(e) {
         ),
     );
     let M = s.useCallback(() => {
-        g(), w(), N();
+        (g(), w(), N());
     }, [g, w, N]);
     return (0, i.jsxs)("div", {
         className: p.st,
@@ -325,7 +325,7 @@ function b(e) {
                     checked: l,
                     onChange: () => {
                         var e;
-                        return (e = !l), void (t.dispatcher.toggleRequestIdleCallback(e), a(e));
+                        return ((e = !l), void (t.dispatcher.toggleRequestIdleCallback(e), a(e)));
                     },
                 }),
             ],
@@ -400,7 +400,7 @@ function N(e) {
         [r, a] = s.useState(n.isTelemetryEnabled),
         [d, h] = s.useState(n.isTelemetryEnabled);
     function m(e) {
-        h(e), n.toggleTelemetry(e);
+        (h(e), n.toggleTelemetry(e));
     }
     return (0, i.jsxs)("div", {
         className: p.st,
@@ -414,7 +414,7 @@ function N(e) {
                     onChange: function () {
                         a((e) => {
                             let t = !e;
-                            return t && m(!0), t;
+                            return (t && m(!0), t);
                         });
                     },
                 }),

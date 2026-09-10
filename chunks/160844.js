@@ -19,7 +19,7 @@ let h = (0, c.createContext)({}),
         m = (function (e, t) {
             if (t) {
                 for (let t in e) t.startsWith("on") && !v.test(t) && (e[t] = void 0);
-                (e.href = void 0), (e.target = void 0);
+                ((e.href = void 0), (e.target = void 0));
             }
             return e;
         })(m, s);
@@ -41,8 +41,8 @@ let h = (0, c.createContext)({}),
         let M = (0, c.useRef)(s);
         (0, c.useEffect)(() => {
             let e = { "aria-labelledby": T || k };
-            !M.current && b && s ? (0, o.iP)(e, "assertive") : M.current && b && !s && (0, o.iP)(e, "assertive"),
-                (M.current = s);
+            (!M.current && b && s ? (0, o.iP)(e, "assertive") : M.current && b && !s && (0, o.iP)(e, "assertive"),
+                (M.current = s));
         }, [s, b, T, k]);
         let P = (0, l.$)(e, { global: !0 });
         return (

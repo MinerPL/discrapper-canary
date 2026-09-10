@@ -44,7 +44,7 @@ let k = {
     LOCKED: P.yg,
 };
 function w(e) {
-    e.preventDefault(), e.stopPropagation();
+    (e.preventDefault(), e.stopPropagation());
 }
 let H = y.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
 function K(e) {

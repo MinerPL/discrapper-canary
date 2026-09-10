@@ -63,8 +63,8 @@ function j() {
                 } = (function () {
                     let { hasAccess: e } = (0, d.TW)(),
                         t = r.useCallback(() => {
-                            e && (0, c.tV)(!1, "server_context_menu"),
-                                (0, x.ai)(A.A.getGuildId()) && (0, p.pX)(k.BVt.ME);
+                            (e && (0, c.tV)(!1, "server_context_menu"),
+                                (0, x.ai)(A.A.getGuildId()) && (0, p.pX)(k.BVt.ME));
                         }, [e]);
                     return {
                         isPreview: !e,
@@ -82,7 +82,7 @@ function j() {
                 icon: s,
                 leadingAccessory: { type: "icon", icon: s },
                 action: function () {
-                    (0, v.Z)(!1), a();
+                    ((0, v.Z)(!1), a());
                 },
             });
         })(),
@@ -96,7 +96,7 @@ function j() {
                 let e = T.Q_.useSetting(),
                     { hasAccess: t } = (0, d.TW)(),
                     n = r.useCallback(() => {
-                        (0, x.ai)(A.A.getGuildId()) && (0, p.pX)(k.BVt.ME), (0, c.uM)();
+                        ((0, x.ai)(A.A.getGuildId()) && (0, p.pX)(k.BVt.ME), (0, c.uM)());
                     }, []);
                 return {
                     isAvailable: e && t,
@@ -114,7 +114,7 @@ function j() {
                       icon: y.TrashIcon,
                       leadingAccessory: { type: "icon", icon: y.TrashIcon },
                       action: function () {
-                          (0, v.Z)(!1), a();
+                          ((0, v.Z)(!1), a());
                       },
                   })
                 : null;

@@ -66,12 +66,12 @@ class h extends i.Ay.Store {
 }
 let I = new h(r.h, {
     LOGOUT: function () {
-        (l = new Map()), (o = new Set()), (d = new Set()), (c = new Set());
+        ((l = new Map()), (o = new Set()), (d = new Set()), (c = new Set()));
     },
     GAME_FETCH: function (e) {
         let { gameIds: t } = e;
         t.forEach((e) => {
-            o.add(e), d.delete(e);
+            (o.add(e), d.delete(e));
         });
     },
     GAME_FETCH_CANCELLED: function (e) {
@@ -81,20 +81,20 @@ let I = new h(r.h, {
     GAME_FETCH_SUCCESS: function (e) {
         let { gameIds: t, games: n } = e,
             i = new Set(t);
-        t.forEach((e) => {
-            o.delete(e), d.delete(e);
+        (t.forEach((e) => {
+            (o.delete(e), d.delete(e));
         }),
             n.forEach((e) => {
-                i.delete(e.id), l.set(e.id, new s.A(e));
+                (i.delete(e.id), l.set(e.id, new s.A(e)));
             }),
             i.forEach((e) => {
                 l.has(e) || c.add(e);
-            });
+            }));
     },
     GAME_FETCH_FAILURE: function (e) {
         let { gameIds: t } = e;
         t.forEach((e) => {
-            o.delete(e), d.add(e);
+            (o.delete(e), d.add(e));
         });
     },
     SEARCH_MESSAGES_SUCCESS: E,
@@ -138,7 +138,7 @@ let I = new h(r.h, {
         return (
             Object.values(t).forEach((e) => {
                 let { first_message: t, most_recent_message: i } = e;
-                null != t && (n = u(t) || n), null != i && (n = u(i) || n);
+                (null != t && (n = u(t) || n), null != i && (n = u(i) || n));
             }),
             n
         );

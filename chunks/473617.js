@@ -15,12 +15,12 @@ function u(e) {
             setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
             setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
         }));
-    l.useEffect(() => {
+    (l.useEffect(() => {
         (i || null != t) && r(t);
     }, [t, r, i]),
         l.useEffect(() => {
             (i || null != n) && a(n);
-        }, [n, a, i]);
+        }, [n, a, i]));
 }
 function c(e) {
     let { items: t, preventFetch: n, priceOptions: i, trialId: r, subscriptionMetadata: a } = e,

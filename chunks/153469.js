@@ -1,4 +1,4 @@
-o.d(t, { Gc: () => c, V9: () => h, dY: () => u, hK: () => i, hm: () => m }), o(321073);
+(o.d(t, { Gc: () => c, V9: () => h, dY: () => u, hK: () => i, hm: () => m }), o(321073));
 var r = o(310784),
     l = o.n(r),
     s = o(661531),
@@ -87,5 +87,5 @@ function m(e, t) {
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         o = e.slice();
-    return 1 === e.length && o.push(e[0]), `linear-gradient(${t}deg, ${o.join(", ")})`;
+    return (1 === e.length && o.push(e[0]), `linear-gradient(${t}deg, ${o.join(", ")})`);
 }

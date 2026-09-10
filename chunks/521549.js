@@ -11,7 +11,7 @@ function c(t) {
         d = (0, s.Qs)(n.id);
     if (null == d) return null;
     function o() {
-        a.default.selectVoiceChannel(null), c();
+        (a.default.selectVoiceChannel(null), c());
     }
     return (0, l.jsx)(e.Modal, {
         transitionState: i,

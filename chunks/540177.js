@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => f });
+(n.r(t), n.d(t, { default: () => f }));
 var o = n(477900),
     s = n(582128),
     r = n(980707),
@@ -31,12 +31,12 @@ function f(e) {
         [a, c] = s.useState(0),
         p = s.useRef(null);
     function h(e) {
-        clearTimeout(a),
+        (clearTimeout(a),
             c(
                 setTimeout(() => {
                     r(e);
                 }, 100),
-            );
+            ));
     }
     return (0, o.jsx)("div", {
         onMouseEnter: () => h(!0),

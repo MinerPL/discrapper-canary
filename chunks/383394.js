@@ -7,7 +7,7 @@ class l extends i.Ay.PersistedStore {
     static displayName = "ExpandedGuildFolderStore";
     static persistKey = "ExpandedGuildFolderStore";
     initialize(e) {
-        null != e && (s = new Set(e.expandedFolders)), this.waitFor(a.A);
+        (null != e && (s = new Set(e.expandedFolders)), this.waitFor(a.A));
     }
     getState() {
         return { expandedFolders: Array.from(s) };
@@ -26,7 +26,7 @@ let o = new l(r.h, {
     },
     SET_GUILD_FOLDER_EXPANDED: function (e) {
         let { folderId: t, expanded: n } = e;
-        (s = new Set(s)), n ? s.add(t) : s.has(t) && s.delete(t);
+        ((s = new Set(s)), n ? s.add(t) : s.has(t) && s.delete(t));
     },
     USER_SETTINGS_PROTO_UPDATE: function () {
         let e = a.A.getGuildFolders();

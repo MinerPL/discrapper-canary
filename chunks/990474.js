@@ -50,8 +50,8 @@ function S(e, t, n, l, i) {
                           application: a,
                       }
                     : null;
-            u.Gf({ channelId: e, command: null, section: null }),
-                u.Gf({ channelId: e, command: r, section: t, location: l });
+            (u.Gf({ channelId: e, command: null, section: null }),
+                u.Gf({ channelId: e, command: r, section: t, location: l }));
         }
     }
 }
@@ -74,11 +74,11 @@ function v(e) {
         }, [a, C, o, u, t.commandName, y]),
         N = i.useCallback(
             (e) => {
-                e?.stopPropagation(),
+                (e?.stopPropagation(),
                     null != a &&
                         null != t.commandName &&
                         null != t.commandKey &&
-                        S(a.id, t.commandName, t.commandKey, d.Oh.MENTION);
+                        S(a.id, t.commandName, t.commandKey, d.Oh.MENTION));
             },
             [a, t.commandKey, t.commandName],
         );
@@ -96,7 +96,7 @@ function N(e) {
             size: "sm",
             variant: "secondary",
             onClick: function (e) {
-                e?.stopPropagation(), S(c, n, t, d.Oh.POPULAR_COMMANDS, r), u?.(t);
+                (e?.stopPropagation(), S(c, n, t, d.Oh.POPULAR_COMMANDS, r), u?.(t));
             },
             text: `/${n}`,
         }),

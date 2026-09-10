@@ -7,9 +7,9 @@ let n = r(177335),
 e.exports = (e, t, r, u) => {
     switch (t) {
         case "===":
-            return "object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e === r;
+            return ("object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e === r);
         case "!==":
-            return "object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e !== r;
+            return ("object" == typeof e && (e = e.version), "object" == typeof r && (r = r.version), e !== r);
         case "":
         case "=":
         case "==":

@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = a);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = a));
 let n = r(856117),
     i = {
         $b: (e) => "**" + e.join("") + "**",
@@ -10,7 +10,7 @@ let n = r(856117),
     };
 class o extends n.StringBuilder {
     constructor() {
-        super(...arguments), (this.result = "");
+        (super(...arguments), (this.result = ""));
     }
     pushRichTextTag(e, t, r) {
         this.result += i[e](t, "", r);

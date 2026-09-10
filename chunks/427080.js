@@ -43,18 +43,22 @@ function F(e, n) {
             };
         case R.Ps.VOICE:
             return (l) => {
-                l.stopPropagation(), v.default.selectVoiceChannel(e.channel_id, !1), n?.(l);
+                (l.stopPropagation(), v.default.selectVoiceChannel(e.channel_id, !1), n?.(l));
             };
     }
     return () => {};
 }
 let U = a.memo(function (e) {
         let { guild: n, guildScheduledEvent: l, channel: t, isMember: s } = e,
-            m = (0, r.bG)([C.A], () => {
-                if (null == n) return null;
-                let e = C.A.getGuild(n.id);
-                return null != e ? e : (0, A.fh)(n) ? n : (0, A.DY)(n);
-            }, [n]),
+            m = (0, r.bG)(
+                [C.A],
+                () => {
+                    if (null == n) return null;
+                    let e = C.A.getGuild(n.id);
+                    return null != e ? e : (0, A.fh)(n) ? n : (0, A.DY)(n);
+                },
+                [n],
+            ),
             h = (0, P.L)(l, t),
             x = a.useCallback(
                 (e) => {
@@ -141,10 +145,10 @@ let U = a.memo(function (e) {
             v = (0, r.bG)([k.Ay], () => k.Ay.isInterestedInEventRecurrence(l, t), [l, t]),
             N = (0, r.bG)([f.A], () => null != a && f.A.getChannelId() === a, [a]);
         function j(e) {
-            e.stopPropagation(), (0, T.A)(l, t, n);
+            (e.stopPropagation(), (0, T.A)(l, t, n));
         }
         function g(e) {
-            e.stopPropagation(), u ? s && p() : o();
+            (e.stopPropagation(), u ? s && p() : o());
         }
         return u
             ? s

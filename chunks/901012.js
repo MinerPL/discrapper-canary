@@ -1,4 +1,4 @@
-(e.exports = function (e, t) {
+((e.exports = function (e, t) {
     if (null == e) return {};
     var r = {};
     for (var n in e)
@@ -9,4 +9,4 @@
     return r;
 }),
     (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+    (e.exports.default = e.exports));

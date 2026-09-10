@@ -1,4 +1,4 @@
-n.d(t, { A: () => S }), n(321073);
+(n.d(t, { A: () => S }), n(321073));
 var i = n(247775),
     r = n(17928),
     a = n(228366),
@@ -49,7 +49,7 @@ class g extends r.Ay.Store {
 }
 let S = new g(a.h, {
     MULTI_ACCOUNT_SWITCH_START: function (e) {
-        (E = e.targetUserId), (A = e.location);
+        ((E = e.targetUserId), (A = e.location));
     },
     MULTI_ACCOUNT_SWITCH_TIMEOUT: function () {
         return (
@@ -67,7 +67,7 @@ let S = new g(a.h, {
         );
     },
     LOGOUT: function (e) {
-        (h = !!e.isSwitchingAccount),
+        ((h = !!e.isSwitchingAccount),
             e.isSwitchingAccount
                 ? ((_ = u),
                   (f = !!e.goHomeAfterSwitching),
@@ -77,7 +77,7 @@ let S = new g(a.h, {
                       fast_connect_user_id: null,
                       switch_origin: A,
                   }))
-                : ((f = !1), i.removeToken(u));
+                : ((f = !1), i.removeToken(u)));
     },
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
@@ -96,25 +96,25 @@ let S = new g(a.h, {
                     is_token_mismatch: a,
                     is_user_mismatch: r,
                 };
-                c.log("Token mismatch on account switch connection open", s),
-                    l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, s);
+                (c.log("Token mismatch on account switch connection open", s),
+                    l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, s));
             })(t.id);
             let e = _ !== t.id;
             if (e) {
                 let e;
-                (e = T(t.id)),
+                ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, e),
-                    m() && c.log("Account switch success", e);
+                    m() && c.log("Account switch success", e));
             } else {
                 let e;
-                (e = T(t.id)),
+                ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, e),
-                    m() && c.log("Account switch failure", e);
+                    m() && c.log("Account switch failure", e));
             }
             p = { success: e, navigateHome: f };
         } else p = null;
         let n = i.getToken();
-        null != n &&
+        (null != n &&
             "" !== n &&
             (!(function (e, t) {
                 if (!m()) return;
@@ -128,26 +128,26 @@ let S = new g(a.h, {
                 let r = i.getToken(e) === t,
                     a = n.length >= 2,
                     s = { ...T(e), colliding_user_ids: n, is_already_corrupted: r || a };
-                c.log("setToken about to introduce per-user token collision", s),
-                    l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, s);
+                (c.log("setToken about to introduce per-user token collision", s),
+                    l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, s));
             })(t.id, n),
             i.setToken(n, t.id)),
             (function (e) {
                 if (!m()) return;
                 let t = new Map();
-                o.A.getUsers().forEach((e) => {
+                (o.A.getUsers().forEach((e) => {
                     let { id: n } = e,
                         r = i.getToken(n);
                     if (null == r || "" === r) return;
                     let a = t.get(r) ?? [];
-                    a.push(n), t.set(r, a);
+                    (a.push(n), t.set(r, a));
                 }),
                     t.forEach((t) => {
                         if (t.length < 2) return;
                         let n = { ...T(e), colliding_user_ids: t };
-                        c.log("Per-user token collision detected", n),
-                            l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION, n);
-                    });
+                        (c.log("Per-user token collision detected", n),
+                            l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION, n));
+                    }));
             })(t.id),
             (_ = null),
             (E = null),
@@ -155,10 +155,10 @@ let S = new g(a.h, {
             (h = !1),
             (f = !1),
             (I = !0),
-            (u = t.id);
+            (u = t.id));
     },
     CONNECTION_CLOSED: function (e) {
         if (40004 !== e.code || !h) return !1;
-        (_ = null), (E = null), (A = null), (f = !1);
+        ((_ = null), (E = null), (A = null), (f = !1));
     },
 });

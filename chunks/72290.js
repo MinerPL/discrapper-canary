@@ -20,7 +20,7 @@ try {
 }
 function c(e) {
     if (t === setTimeout) return setTimeout(e, 0);
-    if ((t === o || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
+    if ((t === o || !t) && setTimeout) return ((t = setTimeout), setTimeout(e, 0));
     try {
         return t(e, 0);
     } catch (r) {
@@ -41,15 +41,15 @@ function h() {
     if (!a) {
         var e = c(f);
         a = !0;
-        for (var t = s.length; t; ) {
-            for (n = s, s = []; ++l < t; ) n && n[l].run();
-            (l = -1), (t = s.length);
+        for (var t = s.length; t;) {
+            for (n = s, s = []; ++l < t;) n && n[l].run();
+            ((l = -1), (t = s.length));
         }
-        (n = null),
+        ((n = null),
             (a = !1),
             (function (e) {
                 if (r === clearTimeout) return clearTimeout(e);
-                if ((r === u || !r) && clearTimeout) return (r = clearTimeout), clearTimeout(e);
+                if ((r === u || !r) && clearTimeout) return ((r = clearTimeout), clearTimeout(e));
                 try {
                     r(e);
                 } catch (t) {
@@ -59,17 +59,17 @@ function h() {
                         return r.call(this, e);
                     }
                 }
-            })(e);
+            })(e));
     }
 }
 function p(e, t) {
-    (this.fun = e), (this.array = t);
+    ((this.fun = e), (this.array = t));
 }
 function m() {}
-(i.nextTick = function (e) {
+((i.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-    s.push(new p(e, t)), 1 !== s.length || a || c(h);
+    (s.push(new p(e, t)), 1 !== s.length || a || c(h));
 }),
     (p.prototype.run = function () {
         this.fun.apply(null, this.array);
@@ -103,4 +103,4 @@ function m() {}
     }),
     (i.umask = function () {
         return 0;
-    });
+    }));

@@ -36,7 +36,7 @@ function v(e) {
                       "data-menu-migrated": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, _.Z_)(), i();
+                          ((0, _.Z_)(), i());
                       },
                       "aria-label": C.intl.string(h.default["yb+ork"]),
                       onSelect: void 0,

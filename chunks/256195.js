@@ -57,7 +57,7 @@ function b(e) {
                                             icon: c.v,
                                             "aria-label": g.intl.string(g.t.wCrzut),
                                             onClick: (e) => {
-                                                e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 });
+                                                (e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 }));
                                             },
                                         }),
                                     }),

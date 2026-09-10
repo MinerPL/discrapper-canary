@@ -51,7 +51,8 @@ function O(t, e) {
             rejectWithError: (0, c.fT)(),
         }).catch(
             (t) => (
-                t.code === g.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && a.A.showFailedToast(U.OB.GENERIC_ERROR), t
+                t.code === g.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && a.A.showFailedToast(U.OB.GENERIC_ERROR),
+                t
             ),
         )
     );
@@ -94,7 +95,8 @@ function C(t, e, r) {
             rejectWithError: (0, c.fT)(),
         }).catch(
             (t) => (
-                t.code === g.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && a.A.showFailedToast(U.OB.GENERIC_ERROR), t
+                t.code === g.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && a.A.showFailedToast(U.OB.GENERIC_ERROR),
+                t
             ),
         )
     );
@@ -117,16 +119,16 @@ function N(t, e, r) {
     n()(null != i, "Channel cannot be guildless");
     let c = t.permissionOverwrites[i],
         _ = { id: i, type: s.r2.ROLE, allow: T.x3, deny: T.x3, ...c };
-    r
+    (r
         ? ((_.allow = E.WQ(_.allow, e)), (_.deny = E.TF(_.deny, e)))
         : ((_.allow = E.TF(_.allow, e)), (_.deny = E.WQ(_.deny, e))),
-        l.A.updatePermissionOverwrite(t.id, _);
+        l.A.updatePermissionOverwrite(t.id, _));
 }
 async function M(t, e, r, i) {
     if ("" === e) return;
     A.Ay.getVoiceChannelId() !== t.id && (0, I.cy)(t);
     let n = await (0, o.yG)(t.id, e, r, i);
-    return L(t, !1, !0), n;
+    return (L(t, !1, !0), n);
 }
 async function f(t, e, r) {
     if ("" !== e) return await (0, o.RY)(t.id, e, r);

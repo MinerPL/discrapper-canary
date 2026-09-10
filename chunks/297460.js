@@ -18,12 +18,16 @@ function f(e, n) {
         f = "DM_USER" === e.kind ? e.userId : null,
         N = (0, l.bG)([u.A], () => (null != f ? (u.A.getDMFromUserId(f) ?? null) : null), [f]),
         g = "CHANNEL" === e.kind ? e.channel.id : N,
-        S = (0, l.bG)([d.A], () => {
-            if (null == g) return !1;
-            let [e] = d.A.getSessionEntries();
-            for (let n of e) if (n.channelId === g) return !0;
-            return d.A.getSelectedChannelId() === g;
-        }, [g]),
+        S = (0, l.bG)(
+            [d.A],
+            () => {
+                if (null == g) return !1;
+                let [e] = d.A.getSessionEntries();
+                for (let n of e) if (n.channelId === g) return !0;
+                return d.A.getSelectedChannelId() === g;
+            },
+            [g],
+        ),
         D = "CHANNEL" === e.kind ? e.channel : null,
         h = (0, l.bG)(
             [s.A],
@@ -37,7 +41,7 @@ function f(e, n) {
               id: "close-chat",
               label: v.intl.string(I.default.ERApc4),
               action: () => {
-                  (0, o.lu)({ channelId: g, widgetType: n, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)();
+                  ((0, o.lu)({ channelId: g, widgetType: n, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)());
               },
           })
         : t && h

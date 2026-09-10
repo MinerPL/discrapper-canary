@@ -96,7 +96,7 @@ let x = "_sentryChildSpans",
     C = "_sentryRootSpan";
 function T(e, t) {
     let n = e[C] || e;
-    (0, c.my)(t, C, n), e[x] ? e[x].add(t) : (0, c.my)(e, x, new Set([t]));
+    ((0, c.my)(t, C, n), e[x] ? e[x].add(t) : (0, c.my)(e, x, new Set([t])));
 }
 function I(e, t) {
     e[x] && e[x].delete(t);
@@ -132,5 +132,5 @@ function A() {
         (g = !0));
 }
 function N(e, t) {
-    e.updateName(t), e.setAttributes({ [s.i_]: "custom", [s.Le]: t });
+    (e.updateName(t), e.setAttributes({ [s.i_]: "custom", [s.Le]: t }));
 }

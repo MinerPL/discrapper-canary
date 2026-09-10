@@ -19,8 +19,12 @@ function A(n) {
     return (0, e.bG)([r.A, i.A], () => l(n, r.A, i.A), [n]);
 }
 function a(n) {
-    return (0, e.bG)([r.A], () => {
-        let t = r.A.getGuild(n);
-        return t?.features.has(c.GuildFeatures.COMMUNITY) || !1;
-    }, [n]);
+    return (0, e.bG)(
+        [r.A],
+        () => {
+            let t = r.A.getGuild(n);
+            return t?.features.has(c.GuildFeatures.COMMUNITY) || !1;
+        },
+        [n],
+    );
 }

@@ -8,7 +8,7 @@ function r(e, t) {
     });
     null != t && n.length > t && (n = (n = n.substring(0, t)).substring(0, Math.min(n.length, n.lastIndexOf(" "))));
     let l = new SpeechSynthesisUtterance(n);
-    return (l.rate = i.A.speechRate), l;
+    return ((l.rate = i.A.speechRate), l);
 }
 function s(e, t) {
     l && ((e.voice = t), speechSynthesis.speak(e));

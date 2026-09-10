@@ -22,7 +22,7 @@ function C(e) {
             return [
                 e,
                 l.useCallback((e) => {
-                    o.w.set(g, e), t(e);
+                    (o.w.set(g, e), t(e));
                 }, []),
             ];
         })(),

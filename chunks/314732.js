@@ -33,10 +33,10 @@ let a = "version",
             this.hasSuccessfullyConnected = !0;
         }
         handleWrite(e) {
-            (this.hasSuccessfullyConnected = !0),
+            ((this.hasSuccessfullyConnected = !0),
                 r.A.cacheTransaction(e).put("hello", "\uD83D\uDC4B"),
                 r.A.cacheTransaction(e).put(a, 3),
-                r.A.forceResyncVersionTransaction(e).put(s, { version: l });
+                r.A.forceResyncVersionTransaction(e).put(s, { version: l }));
         }
         resetInMemoryState() {
             this.hasSuccessfullyConnected = !1;

@@ -124,9 +124,9 @@ function M({
                             }, 5e3)));
                 }),
                 () => {
-                    (d = !1),
+                    ((d = !1),
                         void 0 !== t && window.clearTimeout(t),
-                        l && (s && l.removeEventListener("complete", s), l.destroy());
+                        l && (s && l.removeEventListener("complete", s), l.destroy()));
                 }
             );
         }, [s, i, n, Z]),
@@ -544,7 +544,7 @@ var T = ({
                                         : (0, c.v)(C, {
                                               ref: I,
                                               onClick: () => {
-                                                  Y(!0), l.capture();
+                                                  (Y(!0), l.capture());
                                               },
                                               disabled: y,
                                           }),
@@ -555,7 +555,7 @@ var T = ({
                                       error: h,
                                       attemptsRemaining: o,
                                       onTryAgain: () => {
-                                          l.retryCapture(), Y(!1);
+                                          (l.retryCapture(), Y(!1));
                                       },
                                   })
                                 : null,
@@ -583,7 +583,7 @@ var T = ({
                           error: h,
                           attemptsRemaining: o,
                           onTryAgain: () => {
-                              l.retryCapture(), Y(!1);
+                              (l.retryCapture(), Y(!1));
                           },
                       })
                     : "success" === d
@@ -618,7 +618,7 @@ var T = ({
                 });
         }, []);
         let b = async () => {
-            s(!0), await l.nextStep();
+            (s(!0), await l.nextStep());
         };
         return (0, c.v)(T, {
             animationData: n,

@@ -1,4 +1,4 @@
-t.r(a), t.d(a, { default: () => p });
+(t.r(a), t.d(a, { default: () => p }));
 var c = t(477900);
 t(582128);
 var n = t(192308),

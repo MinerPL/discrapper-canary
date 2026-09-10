@@ -22,10 +22,10 @@ function a(e, t, r) {
                           let i = t.key,
                               o = e.getKeyAfter(i),
                               a = null != o ? e.getItem(o) : null;
-                          for (; null != a && "item" !== a.type; )
+                          for (; null != a && "item" !== a.type;)
                               a = null != (o = e.getKeyAfter(a.key)) ? e.getItem(o) : null;
                           let s = null != t.nextKey ? e.getItem(t.nextKey) : null;
-                          for (; null != s && "item" !== s.type; ) s = null != s.nextKey ? e.getItem(s.nextKey) : null;
+                          for (; null != s && "item" !== s.type;) s = null != s.nextKey ? e.getItem(s.nextKey) : null;
                           let l = [];
                           if (null == s) {
                               let i = t;
@@ -34,8 +34,9 @@ function a(e, t, r) {
                                   i?.type === "item" && (!a || (i.parentKey !== a.parentKey && a.level < i.level));
                               ) {
                                   let t = r({ type: "item", key: i.key, dropPosition: "after" });
-                                  (0, n.isValidElement)(t) && l.push((0, n.cloneElement)(t, { key: `${i.key}-after` })),
-                                      (i = null != i.parentKey ? e.getItem(i.parentKey) : null);
+                                  ((0, n.isValidElement)(t) &&
+                                      l.push((0, n.cloneElement)(t, { key: `${i.key}-after` })),
+                                      (i = null != i.parentKey ? e.getItem(i.parentKey) : null));
                               }
                           }
                           return l;

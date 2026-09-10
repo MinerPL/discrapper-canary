@@ -55,7 +55,7 @@ function c(e, t, l, o, c) {
                     maskImage: `linear-gradient(to right, rgba(0, 0, 0, .3) ${t}px, rgba(0, 0, 0, 1) ${t + 50}px)`,
                 });
             });
-            return t.observe(e.current), () => t.disconnect();
+            return (t.observe(e.current), () => t.disconnect());
         }, [e, m, I]),
         d
     );

@@ -20,18 +20,18 @@ function k(t) {
         E = C?.[0] ?? null,
         _ = i.useCallback(async () => {
             if (null != a) {
-                y(null), j(!0);
+                (y(null), j(!0));
                 try {
-                    await r.A.unbanUser(a.id, k.id),
+                    (await r.A.unbanUser(a.id, k.id),
                         A(),
                         u.default.track(h.HAw.GUILD_BAN_REMOVED, {
                             ...(0, d.H$)(a.id),
                             target_user_id: k.id,
                             reason: p.reason,
                             location: E,
-                        });
+                        }));
                 } catch (t) {
-                    y(new c.A(t)), j(!1);
+                    (y(new c.A(t)), j(!1));
                 }
             }
         }, [p.reason, a, E, A, k.id]);

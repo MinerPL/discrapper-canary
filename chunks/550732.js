@@ -78,10 +78,10 @@ function p(s) {
                                         icon: () => (0, e.jsx)(u.LinkIcon, { size: "xs", color: "currentColor" }),
                                         onClick: () => {
                                             let s = `${location.protocol}//${location.host}${I.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, l)}`;
-                                            (0, A.C)(s, () =>
+                                            ((0, A.C)(s, () =>
                                                 (0, m.P0)((0, h.o)(N.intl.string(N.t["L/PwZf"]), j.Ck.SUCCESS)),
                                             ),
-                                                (0, _.K)(t, _.C.DETAILS_MODAL, l);
+                                                (0, _.K)(t, _.C.DETAILS_MODAL, l));
                                         },
                                         variant: "icon-only",
                                     }),

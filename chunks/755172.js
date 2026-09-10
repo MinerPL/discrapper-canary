@@ -44,10 +44,10 @@ function u(e, t, a) {
                             ((o = null),
                             e.forEach((e) => {
                                 let t = null;
-                                e.type === d.g.IMMERSIVE_BANNER
+                                (e.type === d.g.IMMERSIVE_BANNER
                                     ? (t = null != e.endTime ? e.endTime.getTime() : null)
                                     : e.type === d.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
-                                    (null == o || (null != t && t < o)) && (o = t);
+                                    (null == o || (null != t && t < o)) && (o = t));
                             }),
                             o);
                     if (t || a || null == l) return void s(!1);

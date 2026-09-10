@@ -13,7 +13,7 @@ function d(t) {
         subtitle: d,
         graphic: l,
         onSecondaryClick: () => {
-            p(), (0, e.x)(o);
+            (p(), (0, e.x)(o));
         },
         secondaryCTA: a.intl.string(a.t.PcTCB7),
         onClose: o,

@@ -4,12 +4,12 @@ var r = n(978862),
 let o = null;
 function a(e) {
     let t = "unhandledrejection";
-    (0, i.s5)(t, e), (0, i.AS)(t, s);
+    ((0, i.s5)(t, e), (0, i.AS)(t, s));
 }
 function s() {
-    (o = r.O.onunhandledrejection),
+    ((o = r.O.onunhandledrejection),
         (r.O.onunhandledrejection = function (e) {
-            return (0, i.aj)("unhandledrejection", e), !o || o.apply(this, arguments);
+            return ((0, i.aj)("unhandledrejection", e), !o || o.apply(this, arguments));
         }),
-        (r.O.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
+        (r.O.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0));
 }

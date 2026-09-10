@@ -48,13 +48,13 @@ function g(t) {
                       text: C.intl.string(C.t.hvVgAZ),
                       variant: "primary",
                       onClick: function () {
-                          i(),
+                          (i(),
                               U
                                   ? (0, d.n)()
                                   : window.open(
                                         M.A.getArticleURL(R.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
                                         "_blank",
-                                    );
+                                    ));
                       },
                   },
               ]
@@ -63,7 +63,7 @@ function g(t) {
                       text: C.intl.string(C.t.PcTCB7),
                       variant: "secondary",
                       onClick: () => {
-                          i(), (0, A.pX)(R.BVt.NITRO_HOME);
+                          (i(), (0, A.pX)(R.BVt.NITRO_HOME));
                       },
                   },
                   {
@@ -71,7 +71,7 @@ function g(t) {
                       variant: "expressive",
                       icon: a.t,
                       onClick: () => {
-                          i(), (0, _.A)({ subscriptionTier: k.pe.TIER_2, analyticsLocations: T });
+                          (i(), (0, _.A)({ subscriptionTier: k.pe.TIER_2, analyticsLocations: T }));
                       },
                   },
               ],

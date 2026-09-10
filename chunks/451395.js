@@ -50,7 +50,7 @@ function f(e) {
         collect: (e) => {
             let l = e.getItem(),
                 t = null;
-            return null != l && e.isOver({ shallow: !0 }) && e.canDrop() && (t = l.index), { dragSourcePosition: t };
+            return (null != l && e.isOver({ shallow: !0 }) && e.canDrop() && (t = l.index), { dragSourcePosition: t });
         },
     });
     return (
@@ -59,7 +59,7 @@ function f(e) {
                 w(l),
                 D(t),
                 () => {
-                    D(null), w(null);
+                    (D(null), w(null));
                 }
             ),
             [w, l, D, t],

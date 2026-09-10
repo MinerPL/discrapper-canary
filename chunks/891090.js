@@ -26,7 +26,7 @@ function u(e) {
 function c(e) {
     let t,
         { sticker: n, location: i } = e;
-    n.type === s.NL.GUILD && (t = n.guild_id),
+    (n.type === s.NL.GUILD && (t = n.guild_id),
         l.Ay.trackWithMetadata(r.HAw.EXPRESSION_FAVORITED, {
             location: i,
             expression_type: a.kx.STICKER,
@@ -35,7 +35,7 @@ function c(e) {
             expression_guild_id: t,
             is_animated: (0, s.Tw)(n.format_type),
             is_custom: (0, s.zN)(n.type),
-        });
+        }));
 }
 function d() {
     i.default.track(r.HAw.SEARCH_STARTED, { search_type: r.I4_.STICKER });
@@ -51,7 +51,7 @@ function h(e, t, n) {
 function m(e, t, n) {
     let i,
         { sticker: a } = e;
-    a.type === s.NL.GUILD && (i = a.guild_id),
+    (a.type === s.NL.GUILD && (i = a.guild_id),
         l.Ay.trackWithMetadata(r.HAw.SEARCH_RESULT_SELECTED, {
             load_id: a.id,
             search_type: r.I4_.STICKER,
@@ -60,12 +60,12 @@ function m(e, t, n) {
             expression_guild_id: i,
             sticker_id: a.id,
             query: t,
-        });
+        }));
 }
 function f(e) {
     let t,
         { sticker: n, category: i } = e;
-    n.type === s.NL.GUILD && (t = n.guild_id),
+    (n.type === s.NL.GUILD && (t = n.guild_id),
         l.Ay.trackWithMetadata(r.HAw.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
             type: o.e.EMOJI_PICKER_STICKER_CLICKED,
             expression_id: n.id,
@@ -74,7 +74,7 @@ function f(e) {
             expression_guild_id: t,
             is_animated: (0, s.Tw)(n.format_type),
             is_custom: (0, s.zN)(n.type),
-        });
+        }));
 }
 function p(e) {
     null != e &&

@@ -42,23 +42,23 @@ class h extends a.Ay.Store {
 }
 let I = new h(s.h, {
     COLLECTIBLES_SHOP_HOME_FETCH: function (e) {
-        _.set(e.tab, !0),
+        (_.set(e.tab, !0),
             u.set(e.tab, void 0),
             c.set(e.tab, e.options),
             c.set(e.tab, e.options),
             d.set(e.tab, void 0),
-            E.set(e.tab, !1);
+            E.set(e.tab, !1));
     },
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
-        A.set(e.tab, e.shopHome.shopBlocks),
+        (A.set(e.tab, e.shopHome.shopBlocks),
             o.set(e.tab, Date.now()),
             _.set(e.tab, !1),
             u.set(e.tab, void 0),
             d.set(e.tab, void 0),
-            E.set(e.tab, !1);
+            E.set(e.tab, !1));
     },
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: function (e) {
-        A.set(e.tab, l), _.set(e.tab, !1), u.set(e.tab, e.error), d.set(e.tab, Date.now()), E.set(e.tab, !0);
+        (A.set(e.tab, l), _.set(e.tab, !1), u.set(e.tab, e.error), d.set(e.tab, Date.now()), E.set(e.tab, !0));
     },
     COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: function (e) {
         i = e.shopHomeConfigOverride;
@@ -67,6 +67,6 @@ let I = new h(s.h, {
         r = e.shopLayoutUrlOverride;
     },
     LOGOUT: function () {
-        A.clear(), c.clear(), u.clear(), _.clear(), o.clear(), d.clear(), E.clear(), (i = void 0), (r = void 0);
+        (A.clear(), c.clear(), u.clear(), _.clear(), o.clear(), d.clear(), E.clear(), (i = void 0), (r = void 0));
     },
 });

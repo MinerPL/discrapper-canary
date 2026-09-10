@@ -48,8 +48,8 @@ class _ extends i.Ay.PersistedStore {
     static persistKey = "OverlaySettingsStore";
     initialize(e) {
         let t = d();
-        (c = { ...t, ...(e ?? {}), notificationSettings: new Set(e?.notificationSettings ?? t.notificationSettings) }),
-            this.waitFor(a.default);
+        ((c = { ...t, ...(e ?? {}), notificationSettings: new Set(e?.notificationSettings ?? t.notificationSettings) }),
+            this.waitFor(a.default));
     }
     getInitialOverlayState() {
         return {
@@ -88,7 +88,7 @@ let E = new _(r.h, {
     },
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: function (e) {
         let { applicationId: t, enabled: n } = e;
-        return (c.gameSettings[t] = { limitedInteractionOverride: n }), !0;
+        return ((c.gameSettings[t] = { limitedInteractionOverride: n }), !0);
     },
     OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: function (e) {
         let { setting: t, disabled: n } = e;

@@ -92,9 +92,9 @@ let E = (0, h.createContext)(null),
                     },
                     setInvalid(e, t) {
                         let r = new Map(o.current);
-                        t.isInvalid ? r.set(e, t) : r.delete(e),
+                        (t.isInvalid ? r.set(e, t) : r.delete(e),
                             (o.current = r),
-                            a.updateValidation((0, v.cX)(...r.values()));
+                            a.updateValidation((0, v.cX)(...r.values())));
                     },
                     validationState: e.validationState ?? (s ? "invalid" : null),
                     isInvalid: s,
@@ -196,7 +196,7 @@ let E = (0, h.createContext)(null),
                                   isSelected: t.isSelected(e.value),
                                   defaultSelected: t.defaultValue.includes(e.value),
                                   onChange(r) {
-                                      r ? t.addValue(e.value) : t.removeValue(e.value), e.onChange && e.onChange(r);
+                                      (r ? t.addValue(e.value) : t.removeValue(e.value), e.onChange && e.onChange(r));
                                   },
                               }),
                               {
@@ -235,7 +235,7 @@ let E = (0, h.createContext)(null),
                                           resetValidation: t.resetValidation,
                                           commitValidation: t.commitValidation,
                                           updateValidation(e) {
-                                              (f.current = e), d();
+                                              ((f.current = e), d());
                                           },
                                       },
                                   },

@@ -24,13 +24,13 @@ function _(e) {
                   });
         },
         (e) => {
-            d.A.captureException(e, { tags: { feature: "gift_intent" } }),
-                r.h.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+            (d.A.captureException(e, { tags: { feature: "gift_intent" } }),
+                r.h.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" }));
         },
     );
 }
 function E(e, t, n) {
-    o.default.track(u.HAw.GIFT_INTENT_DISMISSED, {
+    (o.default.track(u.HAw.GIFT_INTENT_DISMISSED, {
         gift_intent_type: e,
         dismiss_type: n,
         affinity: a.A.getUserAffinity(t)?.dmProbability,
@@ -43,14 +43,14 @@ function E(e, t, n) {
                 rejectWithError: !0,
             }).catch((e) => {
                 d.A.captureException(e, { tags: { feature: "gift_intent" } });
-            });
+            }));
 }
 function A() {
     r.h.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
 }
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
-    r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), E(t, e, "shown");
+    (r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), E(t, e, "shown"));
 }
 function I(e, t) {
     let n = l.A.getMessage(e, t)?.giftingPrompt;
@@ -58,5 +58,5 @@ function I(e, t) {
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
-    r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), E(t, e, "gift_sent");
+    (r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), E(t, e, "gift_sent"));
 }

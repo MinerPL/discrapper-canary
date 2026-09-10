@@ -34,7 +34,7 @@ function M(e) {
     let t = Math.floor(e / 60),
         l = Math.floor(e % 60),
         n = Math.floor((e % 1) * 100);
-    return (t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`;
+    return ((t = t < 10 ? "0" + t : t), (l = l < 10 ? "0" + l : l), (n = n < 10 ? "0" + n : n), `${t}:${l}.${n}`);
 }
 function S(e) {
     let t = Math.floor(e / 60),
@@ -71,7 +71,7 @@ function D(e) {
         () =>
             _({
                 onPlay: () => {
-                    V(null), X(!1);
+                    (V(null), X(!1));
                 },
             }),
         [_],
@@ -79,7 +79,7 @@ function D(e) {
     let { ref: J, width: Q = 0, height: q = 0 } = (0, N.Ay)(),
         ee = (0, x.bG)([E.A], () => E.A.windowSize());
     a.useMemo(() => {
-        ee.width, ee.height;
+        (ee.width, ee.height);
         let e = J.current;
         null != e && Y(e.getBoundingClientRect());
     }, [ee.width, ee.height, Q, J, l]);
@@ -90,8 +90,8 @@ function D(e) {
                 let l = (((0, f.clamp)(e, Z.left, Z.right) - Z.left) / Z.width) * s,
                     n = (0, f.clamp)(l, 0, s),
                     a = H;
-                null == a && t && ((a = n <= o ? "start" : n >= c ? "end" : "playhead"), r && (P(), X(!0)), V(a)),
-                    "start" === a ? m(n) : "end" === a ? D(n) : "playhead" === a && z((0, f.clamp)(n, o, c));
+                (null == a && t && ((a = n <= o ? "start" : n >= c ? "end" : "playhead"), r && (P(), X(!0)), V(a)),
+                    "start" === a ? m(n) : "end" === a ? D(n) : "playhead" === a && z((0, f.clamp)(n, o, c)));
             },
             [s, Z, H, o, c, r, P, m, D, z],
         ),
@@ -102,10 +102,10 @@ function D(e) {
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        (l = !0), m(o - t);
+                        ((l = !0), m(o - t));
                         break;
                     case "ArrowRight":
-                        (l = !0), m(o + t);
+                        ((l = !0), m(o + t));
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
@@ -118,10 +118,10 @@ function D(e) {
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        (l = !0), D(c - t);
+                        ((l = !0), D(c - t));
                         break;
                     case "ArrowRight":
-                        (l = !0), D(c + t);
+                        ((l = !0), D(c + t));
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
@@ -140,14 +140,14 @@ function D(e) {
             [et],
         ),
         es = a.useCallback(() => {
-            W && O(), X(!1), V(null);
+            (W && O(), X(!1), V(null));
         }, [W, O]);
     a.useEffect(
         () => (
             document.addEventListener("mousemove", ei),
             document.addEventListener("mouseup", es),
             () => {
-                document.removeEventListener("mousemove", ei), document.removeEventListener("mouseup", es);
+                (document.removeEventListener("mousemove", ei), document.removeEventListener("mouseup", es));
             }
         ),
         [ei, es],
@@ -161,14 +161,14 @@ function D(e) {
         if (0 === er || 0 === eo) return;
         let e = J.current;
         if (null == e) return;
-        (e.height = q), (e.width = Q);
+        ((e.height = q), (e.width = Q));
         let t = e.getContext("2d");
         if (null == t) return;
-        (t.fillStyle = "transparent"), t.fillRect(0, 0, Q, q);
+        ((t.fillStyle = "transparent"), t.fillRect(0, 0, Q, q));
         let l = [];
         for (let e = 0; e < er; e++) l.push((eo / Q) * s * e);
         return $(l, eo, q, (e) => {
-            for (let l = 0; l < e.length; l++) t.drawImage(e[l], eo * l, 0, eo, q), e[l].close();
+            for (let l = 0; l < e.length; l++) (t.drawImage(e[l], eo * l, 0, eo, q), e[l].close());
         });
     }, [q, J, s, er, eo, $, Q]);
     let ec = G - o,
@@ -297,7 +297,7 @@ function P(e) {
         { cropStart: l, cropEnd: m, videoPlayerRef: h, videoURL: f, audioTracks: x, clip: v } = (0, k.T)(),
         p = v.type === L.nQ.SCREENSHOT;
     a.useEffect(() => {
-        if (!p) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+        if (!p) return (document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e));
         function e(e) {
             if ((0, i.Cw)(document.activeElement)) return;
             let t = h.current;
@@ -308,13 +308,13 @@ function P(e) {
                 s = !1;
             switch (e.key) {
                 case " ":
-                    (s = !0), n.paused ? t.play() : t.pause();
+                    ((s = !0), n.paused ? t.play() : t.pause());
                     break;
                 case "ArrowLeft":
-                    (s = !0), t.seek(Math.max(l, n.currentTime - a));
+                    ((s = !0), t.seek(Math.max(l, n.currentTime - a)));
                     break;
                 case "ArrowRight":
-                    (s = !0), t.seek(Math.min(m, n.currentTime + a));
+                    ((s = !0), t.seek(Math.min(m, n.currentTime + a)));
             }
             s && (e.stopPropagation(), e.preventDefault());
         }

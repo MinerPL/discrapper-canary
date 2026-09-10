@@ -50,8 +50,8 @@ function g(t) {
             isApplicationConnected: U,
             canStartAuthorization: z,
         });
-    e.useEffect(() => {
-        (J.current.isLaunchable = H), (J.current.isApplicationConnected = U), (J.current.canStartAuthorization = z);
+    (e.useEffect(() => {
+        ((J.current.isLaunchable = H), (J.current.isApplicationConnected = U), (J.current.canStartAuthorization = z));
     }, [H, U, z]),
         (0, u.Ay)(() => {
             f.default.track(R.HAw.OPEN_MODAL, { location_stack: W, type: I.e2, sku_id: j.id, application_id: D.id });
@@ -67,26 +67,26 @@ function g(t) {
                 is_account_linked: G,
                 can_start_authorization: n,
             });
-        }, [Y, G]);
+        }, [Y, G]));
     let B = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i, applicationId: a } = J.current;
-            f.default.track(R.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            (f.default.track(R.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: a,
                 is_gift: !1,
             }),
-                F({ analyticsLocations: t });
+                F({ analyticsLocations: t }));
         }, [F]),
         V = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i } = J.current;
-            f.default.track(R.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+            (f.default.track(R.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: D.id,
                 is_gift: !1,
             }),
-                h.A.launchGame(D.id);
+                h.A.launchGame(D.id));
         }, [D.id]),
         q = e.useCallback(() => {
             let {
@@ -96,7 +96,7 @@ function g(t) {
                 isLaunchable: e,
                 isApplicationConnected: r,
             } = J.current;
-            f.default.track(R.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+            (f.default.track(R.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: n,
@@ -104,7 +104,7 @@ function g(t) {
                 is_launchable: e ?? !1,
                 is_application_connected: r,
             }),
-                a();
+                a());
         }, [a]),
         X = (0, L.G)(v, { isGift: !1 }),
         Q = e.useMemo(() => (0, S.dI)(D), [D]);

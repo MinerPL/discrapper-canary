@@ -1,4 +1,4 @@
-i.r(t), i.d(t, { default: () => Z });
+(i.r(t), i.d(t, { default: () => Z }));
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -51,7 +51,7 @@ function G(e) {
             A.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             A.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
-    l.useEffect(() => {
+    (l.useEffect(() => {
         x((e) => {
             let t = _().uniq(c);
             return (0, T.v)(e, t) ? e : t;
@@ -62,7 +62,7 @@ function G(e) {
                 let t = _().uniq(o);
                 return (0, T.v)(e, t) ? e : t;
             });
-        }, [o]);
+        }, [o]));
     let G = (0, d.bG)([O.default], () => (1 === p.length ? O.default.getUser(p[0]) : void 0), [p]),
         M = (0, d.yK)([O.default], () => m.map((e) => O.default.getUser(e)).filter(k.Vq), [m]),
         P = l.useCallback(() => {

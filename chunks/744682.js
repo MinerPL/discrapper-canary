@@ -47,11 +47,11 @@ let m = r.forwardRef(function (e, t) {
                     let t = null == N.current;
                     if (((N.current = e), j)) {
                         let t = S[e];
-                        w.current.resetSegments(!0),
+                        (w.current.resetSegments(!0),
                             w.current.setSegment(t.start + t.duration, t.start + t.duration),
-                            w.current.stop();
+                            w.current.stop());
                     } else {
-                        w.current.setLoop(!_ && e.includes("hover")), w.current.resetSegments(!0);
+                        (w.current.setLoop(!_ && e.includes("hover")), w.current.resetSegments(!0));
                         let n = t && null != x && x >= S[e].start && x <= S[e].start + S[e].duration ? x : S[e].start;
                         w.current.playSegments([n, S[e].start + S[e].duration], !0);
                     }

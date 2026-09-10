@@ -18,7 +18,7 @@ r.exports = function (r, n, t) {
     function m(n) {
         var t = c,
             i = f;
-        return (c = f = void 0), (l = n), (p = r.apply(i, t));
+        return ((c = f = void 0), (l = n), (p = r.apply(i, t)));
     }
     function T(r) {
         var t = r - s,
@@ -41,10 +41,10 @@ r.exports = function (r, n, t) {
             t = e(),
             i = T(t);
         if (((c = arguments), (f = this), (s = t), i)) {
-            if (void 0 === d) return (l = r = s), (d = setTimeout(y, n)), x ? m(r) : p;
-            if (h) return clearTimeout(d), (d = setTimeout(y, n)), m(s);
+            if (void 0 === d) return ((l = r = s), (d = setTimeout(y, n)), x ? m(r) : p);
+            if (h) return (clearTimeout(d), (d = setTimeout(y, n)), m(s));
         }
-        return void 0 === d && (d = setTimeout(y, n)), p;
+        return (void 0 === d && (d = setTimeout(y, n)), p);
     }
     return (
         (n = o(n) || 0),
@@ -53,7 +53,7 @@ r.exports = function (r, n, t) {
             (v = (h = "maxWait" in t) ? u(o(t.maxWait) || 0, n) : v),
             (g = "trailing" in t ? !!t.trailing : g)),
         (w.cancel = function () {
-            void 0 !== d && clearTimeout(d), (l = 0), (c = s = f = d = void 0);
+            (void 0 !== d && clearTimeout(d), (l = 0), (c = s = f = d = void 0));
         }),
         (w.flush = function () {
             return void 0 === d ? p : k(e());

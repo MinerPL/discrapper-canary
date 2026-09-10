@@ -38,11 +38,11 @@ function E(a) {
                 if (((a = await (0, h.d)(e, { twoWayLinkType: i.I.DESKTOP })), null == a))
                     throw Error("missing authorizeURL");
             } catch (a) {
-                v.error("Error opening provider authorize page", a), k();
+                (v.error("Error opening provider authorize page", a), k());
                 return;
             }
             let { state: t } = (0, N.vA)(a);
-            l()(null != t, "Authorize URL state query parameter must be present"), s?.(t);
+            (l()(null != t, "Authorize URL state query parameter must be present"), s?.(t));
         }, [e, k, s]),
         _ = n.useCallback(
             (a) => {

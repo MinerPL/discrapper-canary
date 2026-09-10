@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "hr",
     pluralRuleFunction: function (e, t) {
         var r = String(e).split("."),
@@ -18,4 +18,4 @@ IntlMessageFormat.__addLocaleData({
                 : "other";
     },
 }),
-    IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" });
+    IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" }));

@@ -43,13 +43,13 @@ function c(e) {
             hasUnsavedAttachmentChanges: c,
         } = e,
         d = {};
-    t?.name !== n && "" !== n.trim() && (d.name = n),
+    (t?.name !== n && "" !== n.trim() && (d.name = n),
         (t?.description ?? "") !== l && (d.description = l),
         t?.price_tier !== i && null != i && (d.priceTier = i),
         null != o && "" !== o.name.trim() ? (d.createNewRole = !0) : null === o && (d.unlinkRole = !0),
         s.startsWith("data:") &&
             (r || (null == t && (Object.keys(d).length > 0 || c))) &&
-            ((d.image = s), (d.imageName = a));
+            ((d.image = s), (d.imageName = a)));
     let u = Object.keys(d).length > 0 || c;
     return {
         changes: d,

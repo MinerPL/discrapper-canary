@@ -15,12 +15,12 @@ function E() {
 }
 class A extends d.A {
     _initialize() {
-        o.h.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.h.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        (o.h.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            o.h.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose));
     }
     _terminate() {
-        o.h.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.h.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        (o.h.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            o.h.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose));
     }
     handleModalOpen(e) {
         let { activity: t, isPrivate: o, context: d } = e,

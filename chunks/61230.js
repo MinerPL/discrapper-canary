@@ -129,14 +129,14 @@ function O(e) {
         let e = u.current,
             n = m.current;
         return () => {
-            e.cancel(), n.cancel();
+            (e.cancel(), n.cancel());
         };
     }, []);
     let h = i.useCallback(() => {
-            m.current.cancel(), u.current.delay();
+            (m.current.cancel(), u.current.delay());
         }, []),
         g = i.useCallback(() => {
-            u.current.cancel(), m.current.delay();
+            (u.current.cancel(), m.current.delay());
         }, []);
     return (0, t.jsx)(r.Y, {
         targetElementRef: o,

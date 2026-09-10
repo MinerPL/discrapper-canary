@@ -59,7 +59,7 @@ function p(e, t, r) {
             onClick: P,
             onPress(n) {
                 if ("keyboard" === n.pointerType || "virtual" === n.pointerType) return void n.continuePropagation();
-                T?.(n), t.toggle(), r.current?.focus();
+                (T?.(n), t.toggle(), r.current?.focus());
                 let { [d.Lf]: i } = e,
                     { commitValidation: o } = i || A;
                 o();
@@ -84,7 +84,7 @@ function p(e, t, r) {
             "aria-readonly": h || void 0,
             "aria-describedby": [V.id, U.id, x].filter(Boolean).join(" ") || void 0,
             onChange: (e) => {
-                e.stopPropagation(), t.setSelected((0, i.wt)(e).checked);
+                (e.stopPropagation(), t.setSelected((0, i.wt)(e).checked));
             },
             disabled: p,
             ...(null == m ? {} : { value: m }),

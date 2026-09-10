@@ -38,7 +38,7 @@ function c(e) {
         s = i.h.dispatch({ type: "LAYOUT_SET_PINNED", widgetId: e, pinned: t });
     if (!n) return s;
     let l = a.A.getWidget(e);
-    return null == l || (0, r.xp)(l.type, { pinned: t ?? !l.pinned }), s;
+    return (null == l || (0, r.xp)(l.type, { pinned: t ?? !l.pinned }), s);
 }
 function u(e) {
     i.h.dispatch({ type: "LAYOUT_DELETE_WIDGET", widgetId: e });

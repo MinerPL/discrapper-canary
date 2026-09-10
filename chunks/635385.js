@@ -159,10 +159,10 @@ function u({ actor: l, trackElementClicked: t }) {
             l.send({ type: "TOGGLE_CHECKBOX", checkboxId: t });
         },
         submit() {
-            t?.("submit"), l.send({ type: "SUBMIT" });
+            (t?.("submit"), l.send({ type: "SUBMIT" }));
         },
         retry() {
-            t?.("retry"), l.send({ type: "RETRY" });
+            (t?.("retry"), l.send({ type: "RETRY" }));
         },
         reset() {
             l.send({ type: "RESET" });

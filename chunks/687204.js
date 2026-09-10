@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_PATTERN =
         t.YEAR_PATTERN =
         t.NUMBER_PATTERN =
@@ -18,15 +18,15 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         let r = {},
             n = e,
             a = o.exec(n);
-        for (; a; )
-            (function (e, r) {
+        for (; a;)
+            ((function (e, r) {
                 let n = i(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length)),
-                (a = o.exec(n));
+                (a = o.exec(n)));
         return r;
-    });
+    }));
 let n = r(798401),
     a = r(574253);
 function i(e) {
@@ -39,7 +39,7 @@ function i(e) {
     else if (r.match(/mehreren/)) return 7;
     return parseFloat(r);
 }
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     sonntag: 0,
     so: 0,
     montag: 1,
@@ -153,7 +153,7 @@ function i(e) {
     }),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)`),
     (t.YEAR_PATTERN =
-        "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)");
+        "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)"));
 let s = `(${t.NUMBER_PATTERN})\\s{0,5}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})\\s{0,5}`,
     o = RegExp(s, "i");
 t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("", s);

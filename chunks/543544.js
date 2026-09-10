@@ -3,7 +3,7 @@ var n =
     function (e) {
         return e && e.__esModule ? e : { default: e };
     };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.strict =
         t.casual =
         t.hant =
@@ -21,7 +21,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         return t.casual.parseDate(e, r, n);
     }),
     (t.createCasualConfiguration = y),
-    (t.createConfiguration = T);
+    (t.createConfiguration = T));
 let a = n(r(888234)),
     i = r(550550),
     s = r(329454);
@@ -32,7 +32,7 @@ Object.defineProperty(t, "Chrono", {
     },
 });
 let o = r(115835);
-Object.defineProperty(t, "ParsingResult", {
+(Object.defineProperty(t, "ParsingResult", {
     enumerable: !0,
     get: function () {
         return o.ParsingResult;
@@ -49,9 +49,9 @@ Object.defineProperty(t, "ParsingResult", {
         get: function () {
             return o.ReferenceWithTimezone;
         },
-    });
+    }));
 let u = r(115004);
-Object.defineProperty(t, "Meridiem", {
+(Object.defineProperty(t, "Meridiem", {
     enumerable: !0,
     get: function () {
         return u.Meridiem;
@@ -62,7 +62,7 @@ Object.defineProperty(t, "Meridiem", {
         get: function () {
             return u.Weekday;
         },
-    });
+    }));
 let l = n(r(195858)),
     d = n(r(232415)),
     c = n(r(521556)),
@@ -73,13 +73,13 @@ let l = n(r(195858)),
     p = n(r(451698));
 function y() {
     let e = T();
-    return e.parsers.unshift(new l.default()), e;
+    return (e.parsers.unshift(new l.default()), e);
 }
 function T() {
     let e = (0, i.includeCommonConfiguration)({
         parsers: [new d.default(), new m.default(), new g.default(), new f.default(), new c.default()],
         refiners: [new h.default(), new p.default()],
     });
-    return (e.refiners = e.refiners.filter((e) => !(e instanceof a.default))), e;
+    return ((e.refiners = e.refiners.filter((e) => !(e instanceof a.default))), e);
 }
-(t.hant = new s.Chrono(y())), (t.casual = new s.Chrono(y())), (t.strict = new s.Chrono(T()));
+((t.hant = new s.Chrono(y())), (t.casual = new s.Chrono(y())), (t.strict = new s.Chrono(T())));

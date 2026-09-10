@@ -103,7 +103,7 @@ function M(a) {
                                       case x.V1.Scenes.IDLE:
                                           return T(x.V1.Scenes.SUCCESS);
                                       case x.V1.Scenes.SUCCESS:
-                                          return R(!0), T(x.V1.Scenes.IDLE);
+                                          return (R(!0), T(x.V1.Scenes.IDLE));
                                   }
                           },
                           pauseWhileUnfocused: !1,

@@ -1,4 +1,4 @@
-n.d(t, { J: () => u }), n(321073);
+(n.d(t, { J: () => u }), n(321073));
 var i = n(749884),
     r = n(976860),
     a = n(345942),
@@ -19,7 +19,7 @@ let u = {
             u = parseInt(t.split("+")[1], 10);
         if ((0 === u && (u = 10), l.A.isTabBarVisible())) {
             let e = l.A.getTabs()[u - 1];
-            return null != e && (0, s.ZD)(e.id), !1;
+            return (null != e && (0, s.ZD)(e.id), !1);
         }
         if (
             !isNaN(u) &&
@@ -34,6 +34,6 @@ let u = {
                               : d.Ay.getFlattenedGuildIds()[u - 3]
                           : d.Ay.getFlattenedGuildIds()[u - 2])
         )
-            return n === c.ME && null == o.A.getGuildId() ? (0, r.pX)(c.BVt.CHANNEL(n)) : (0, a.u)(n), !1;
+            return (n === c.ME && null == o.A.getGuildId() ? (0, r.pX)(c.BVt.CHANNEL(n)) : (0, a.u)(n), !1);
     },
 };

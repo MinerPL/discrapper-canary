@@ -47,9 +47,11 @@ function g(t, e, r, a) {
     )
         if ((0, i.iT)()) {
             if (l.A.isOriginalContentTypeDifferent(e, r)) return n.toString();
-            (n.host = "localhost"),
+            ((n.host = "localhost"),
                 (n.port = "3000"),
-                n.pathname.startsWith("/attachments/") && (n.pathname = "/channels/" + n.pathname.substring(13));
+                n.pathname.startsWith("/attachments/") && (n.pathname = "/channels/" + n.pathname.substring(13)));
         } else n.host = u;
-    return n.searchParams.delete("format"), null == s && null != a && n.searchParams.append("format", a), n.toString();
+    return (
+        n.searchParams.delete("format"), null == s && null != a && n.searchParams.append("format", a), n.toString()
+    );
 }

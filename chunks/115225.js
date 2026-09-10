@@ -19,10 +19,10 @@ let f = function (t) {
         [A, N] = (0, a.useState)(!1),
         [S, T] = (0, a.useState)(!1);
     async function U() {
-        o.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED, { subscription_id: i, invited_user_id: e.id }),
-            T(!0);
+        (o.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED, { subscription_id: i, invited_user_id: e.id }),
+            T(!0));
         let t = await (0, _.kE)(i, e.id, f);
-        T(!1), t.ok ? g() : t.body?.code === C.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED ? m(!0) : N(!0);
+        (T(!1), t.ok ? g() : t.body?.code === C.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED ? m(!0) : N(!0));
     }
     return ((0, r.Ay)(() => {
         o.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED, { subscription_id: i, invited_user_id: e.id });
@@ -37,7 +37,7 @@ let f = function (t) {
                       text: p.intl.string(E.default["+YO9kw"]),
                       variant: "secondary",
                       onClick: () => {
-                          (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL), g();
+                          ((0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL), g());
                       },
                   },
               ],

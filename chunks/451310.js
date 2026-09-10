@@ -39,10 +39,10 @@ function M(e) {
         [A, P] = a.useState(!1),
         [I, N] = a.useState(!1),
         _ = a.useCallback((e, t) => {
-            N(!1), C((l) => ({ ...l, values: { ...l.values, [e]: t } }));
+            (N(!1), C((l) => ({ ...l, values: { ...l.values, [e]: t } })));
         }, []),
         F = a.useCallback((e, t) => {
-            N(!1), C((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } }));
+            (N(!1), C((l) => ({ ...l, secrets: { ...l.secrets, [e]: t } })));
         }, []),
         O = a.useMemo(() => y?.schema ?? [], [y]),
         z = a.useMemo(() => y?.values ?? {}, [y]),
@@ -79,15 +79,15 @@ function M(e) {
         $ = a.useCallback(
             async (e) => {
                 if ((e.preventDefault(), Y && !A)) {
-                    P(!0), N(!1);
+                    (P(!0), N(!1));
                     try {
                         let { rebuildRequired: e } = await (0, j.nU)(t, Q);
-                        f || k.Ay.hasPendingSettingsRequest(t)
+                        (f || k.Ay.hasPendingSettingsRequest(t)
                             ? (0, j.dv)(t, E.intl.string(S.default.gqJFu0))
                             : e
                               ? (0, j.ss)(t)
                               : (0, b.Eo)(t),
-                            await v();
+                            await v());
                     } catch {
                         N(!0);
                     } finally {

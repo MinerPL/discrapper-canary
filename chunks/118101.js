@@ -8,7 +8,7 @@ var a = n(189213),
 function l(t) {
     let { channel: i, transitionState: n, onClose: l } = t;
     function o() {
-        r.default.disconnect(), l();
+        (r.default.disconnect(), l());
     }
     return (0, s.jsx)(a.Modal, {
         transitionState: n,
@@ -20,7 +20,7 @@ function l(t) {
             {
                 text: e.intl.string(e.t["sBP/1s"]),
                 onClick: function () {
-                    (0, c.OE)(i), o();
+                    ((0, c.OE)(i), o());
                 },
                 variant: "critical-primary",
             },

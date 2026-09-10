@@ -23,10 +23,10 @@ function u(e) {
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: function () {
-                    (0, d.ef)(n, t.gameId),
+                    ((0, d.ef)(n, t.gameId),
                         l.O.announce(c.intl.string(c.t["08HmMj"])),
                         m({ action: "GAME_REMOVED", gameId: t.gameId, widgetEdited: n }),
-                        g?.();
+                        g?.());
                 },
             }),
         }),

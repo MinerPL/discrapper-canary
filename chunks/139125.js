@@ -57,7 +57,7 @@ var r = n(834647),
                 r < v.length;
                 r++
             )
-                (t = v[r].k.charAt(0)), a.charAt(a.length - 1) !== t && (a += t);
+                ((t = v[r].k.charAt(0)), a.charAt(a.length - 1) !== t && (a += t));
             return "DGBEFHACIJK" !== a;
         }
     });
@@ -82,7 +82,7 @@ r(
                 n < t;
             )
                 r[n] = a[n++];
-            for (; n < u; ) l(r, n++);
+            for (; n < u;) l(r, n++);
             return r;
         },
     },

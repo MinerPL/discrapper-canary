@@ -11,10 +11,10 @@ function u(e, t) {
     s.h.dispatch({ type: "SURVEY_OVERRIDE", id: e, isActionTriggered: t });
 }
 function _(e, t) {
-    s.h.dispatch({ type: "SURVEY_HIDE", key: e }),
+    (s.h.dispatch({ type: "SURVEY_HIDE", key: e }),
         t
             ? o.default.track(c.HAw.APP_NOTICE_CLOSED, { notice_type: c.kqX.SURVEY, survey_id: e, dismissed: t })
-            : o.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kqX.SURVEY });
+            : o.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kqX.SURVEY }));
 }
 function E(e, t) {
     var n = {};

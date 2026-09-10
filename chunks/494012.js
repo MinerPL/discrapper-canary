@@ -13,7 +13,7 @@ function l() {
             o,
             (e) => {
                 let { width: t, height: n } = e;
-                l(n), a(t);
+                (l(n), a(t));
             },
             t,
         ),
@@ -26,7 +26,7 @@ function o() {
         o = (0, s.A)((e) => {
             if (!(0, r.vq)(e.target, HTMLElement)) return { scrollWidth: void 0, scrollHeight: void 0 };
             let n = e.target;
-            l(n.scrollHeight), t(n.scrollWidth);
+            (l(n.scrollHeight), t(n.scrollWidth));
         });
     return { ref: (0, a.w)(o, [], { fireOnMount: !0 }), scrollWidth: e, scrollHeight: n };
 }
@@ -40,7 +40,7 @@ function d(e, t) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        null == i && (i = parseFloat(e.width ?? "0")), null == r && (r = parseFloat(e.height ?? "0"));
+                        (null == i && (i = parseFloat(e.width ?? "0")), null == r && (r = parseFloat(e.height ?? "0")));
                     }
                 }
                 t({ width: i, height: r });

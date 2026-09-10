@@ -40,20 +40,20 @@ class E extends i.Ay.Store {
 let A = new E(r.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t, sessionId: n } = e;
-        (l = t.id), (o = n);
+        ((l = t.id), (o = n));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { user: t, sessionId: n } = e;
-        (l = t.id), (o = n);
+        ((l = t.id), (o = n));
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { userId: t, guildId: n, streamId: i, context: r } = e;
         if (null != i) {
             let e;
-            t in d || (d[t] = {}),
+            (t in d || (d[t] = {}),
                 (e = d[t][n ?? a.eGj] ?? {}),
                 (d[t][n ?? a.eGj] = { ...e, [r]: { streamId: i } }),
-                delete c[u(r, t)];
+                delete c[u(r, t)]);
         } else _(t, n, r);
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -62,7 +62,7 @@ let A = new E(r.h, {
             let { userId: n, sessionId: i, channelId: r, guildId: s } = t;
             if (null == r && n === l)
                 if (i !== o) return e;
-                else (d = {}), (c = {});
+                else ((d = {}), (c = {}));
             else {
                 if (null != r || d[n]?.[s ?? a.eGj] == null) return e;
                 _(n, s);

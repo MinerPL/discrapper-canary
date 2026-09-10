@@ -421,7 +421,7 @@ function F(e) {
     let { channelId: t } = e;
     !p.default.isAnyOverlayRendering() || null == t || ((0, I.isOverlayCurrentlyVisibleAndUnlocked)() && k(t));
 }
-async function V(e) {
+async function B(e) {
     if (e.locked) {
         let e = A.A.getSelectedChannelId();
         null != e && i.A.ackTextChatChannel(e);
@@ -435,14 +435,14 @@ async function V(e) {
         a = t.getMostRecentNotificationChannelId();
     (null != a ? (r = a) : L || (r = c.Ay.getChannelId() ?? null), null != r && (k(r), v(r)));
 }
-class B extends r.A {
+class V extends r.A {
     actions = {
         CHANNEL_SELECT: C(F),
         SIDEBAR_VIEW_CHANNEL: C(F),
         MESSAGE_CREATE: C(M),
         VOICE_STATE_UPDATES: C(b),
         VOICE_CHANNEL_SELECT: C(b),
-        OVERLAY_SET_INPUT_LOCKED: C(V),
+        OVERLAY_SET_INPUT_LOCKED: C(B),
         OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(P),
         OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(U),
         OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: C(w),
@@ -450,4 +450,4 @@ class B extends r.A {
         OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: C(x),
     };
 }
-let H = new B();
+let H = new V();

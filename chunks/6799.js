@@ -6,7 +6,7 @@ class a {
     constructor(...e) {
         if (1 === e.length) {
             let t = e[0];
-            (this.collection = t.collection),
+            ((this.collection = t.collection),
                 (this.ref = t.ref),
                 (this.collator = t.collator),
                 (this.disabledKeys = t.disabledKeys || new Set()),
@@ -14,16 +14,16 @@ class a {
                 (this.orientation = t.orientation || "vertical"),
                 (this.direction = t.direction),
                 (this.layout = t.layout || "stack"),
-                (this.layoutDelegate = t.layoutDelegate || new (0, n.K)(t.ref));
+                (this.layoutDelegate = t.layoutDelegate || new (0, n.K)(t.ref)));
         } else
-            (this.collection = e[0]),
+            ((this.collection = e[0]),
                 (this.disabledKeys = e[1]),
                 (this.ref = e[2]),
                 (this.collator = e[3]),
                 (this.layout = "stack"),
                 (this.orientation = "vertical"),
                 (this.disabledBehavior = "all"),
-                (this.layoutDelegate = new (0, n.K)(this.ref));
+                (this.layoutDelegate = new (0, n.K)(this.ref)));
         "stack" === this.layout &&
             "vertical" === this.orientation &&
             ((this.getKeyLeftOf = void 0), (this.getKeyRightOf = void 0));
@@ -37,7 +37,7 @@ class a {
     }
     findNextNonDisabled(e, t, r = !1) {
         let n = e;
-        for (; null != n; ) {
+        for (; null != n;) {
             let e = this.collection.getItem(n);
             if (e?.type === "item" && (r || !this.isDisabled(e))) return n;
             n = t(n);
@@ -147,12 +147,12 @@ class a {
         let i = e;
         if ("horizontal" === this.orientation) {
             let e = Math.max(0, r.x + r.width - this.layoutDelegate.getVisibleRect().width);
-            for (; r && r.x > e && null != i; )
+            for (; r && r.x > e && null != i;)
                 r = null == (i = this.getKeyAbove(i)) ? null : this.layoutDelegate.getItemRect(i);
         } else {
             let e = this.layoutDelegate.getVisibleRect(),
                 t = n ? r.y - e.height : Math.max(0, r.y + r.height - e.height);
-            for (; r && r.y > t && null != i; )
+            for (; r && r.y > t && null != i;)
                 r = null == (i = this.getKeyAbove(i)) ? null : this.layoutDelegate.getItemRect(i);
         }
         return i ?? (n ? this.getLastKey() : this.getFirstKey());
@@ -169,14 +169,14 @@ class a {
                 this.layoutDelegate.getContentSize().width,
                 r.x - r.width + this.layoutDelegate.getVisibleRect().width,
             );
-            for (; r && r.x < e && null != i; )
+            for (; r && r.x < e && null != i;)
                 r = null == (i = this.getKeyBelow(i)) ? null : this.layoutDelegate.getItemRect(i);
         } else {
             let e = Math.min(
                 this.layoutDelegate.getContentSize().height,
                 r.y - r.height + this.layoutDelegate.getVisibleRect().height,
             );
-            for (; r && r.y < e && null != i; )
+            for (; r && r.y < e && null != i;)
                 r = null == (i = this.getKeyBelow(i)) ? null : this.layoutDelegate.getItemRect(i);
         }
         return i ?? (n ? this.getFirstKey() : this.getLastKey());
@@ -185,7 +185,7 @@ class a {
         if (!this.collator) return null;
         let r = this.collection,
             n = t || this.getFirstKey();
-        for (; null != n; ) {
+        for (; null != n;) {
             let t = r.getItem(n);
             if (!t) break;
             let i = t.textValue.slice(0, e.length);

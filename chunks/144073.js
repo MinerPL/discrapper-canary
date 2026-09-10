@@ -1,4 +1,4 @@
-n.d(t, { Ms: () => x, Ay: () => V, Wl: () => k });
+n.d(t, { Ms: () => x, Ay: () => B, Wl: () => k });
 var i,
     r = n(812729),
     a = n.n(r),
@@ -96,20 +96,20 @@ function b(e) {
 }
 function M(e) {
     let t = b(e);
-    return null == t && v(e, (t = y(1))), t;
+    return (null == t && v(e, (t = y(1))), t);
 }
 async function P(e) {
-    await (0, d.yy)(200), null != b(e) && v(e, { requestState: 3, abortController: null, lastUpdated: Date.now() });
+    (await (0, d.yy)(200), null != b(e) && v(e, { requestState: 3, abortController: null, lastUpdated: Date.now() }));
 }
 function U(e) {
     var t;
-    (t = L(e)),
+    ((t = L(e)),
         (0, o.r)(() => {
             D.setState((e) => {
                 let n = { ...e };
-                return delete n[t], n;
+                return (delete n[t], n);
             });
-        });
+        }));
 }
 function w(e, t) {
     return Math.floor(Math.max(e - 1, 0) / t);
@@ -182,7 +182,7 @@ async function G(e) {
                     { query: i } = e;
                 if (null != i && i.length > 1) {
                     let [e, n] = (0, h.H)(i);
-                    e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n });
+                    (e.length > 0 && (t.usernames = { or_query: e }), n.length > 0 && (t.user_id = { or_query: n }));
                 }
                 let {
                         requireUnusualDmActivity: r,
@@ -191,11 +191,11 @@ async function G(e) {
                         requireUsernameQuarantined: l,
                     } = e,
                     o = {};
-                r && (o.unusual_dm_activity_until = { range: { gte: Date.now() - I.tX } }),
+                (r && (o.unusual_dm_activity_until = { range: { gte: Date.now() - I.tX } }),
                     a && (o.communication_disabled_until = { range: { gte: Date.now() } }),
                     s && (o.unusual_account_activity = s),
                     l && (o.automod_quarantined_username = l),
-                    Object.keys(o).length > 0 && (n.safety_signals = o);
+                    Object.keys(o).length > 0 && (n.safety_signals = o));
                 let { selectedRoleIds: d } = e;
                 d.size > 0 && (t.role_ids = { and_query: Array.from(d) });
                 let { selectedJoinDateOption: c } = e;
@@ -218,7 +218,7 @@ async function G(e) {
                 null != A && (t.join_source_type = { or_query: [A] });
                 let f = { or_query: n, and_query: t },
                     { selectedSort: p } = e;
-                return null != p && (f.sort = p), f;
+                return (null != p && (f.sort = p), f);
             })(r)),
             null == u ? t : { ...t, ...u }),
         p = r.selectedSort ?? I.mF.ORDER_BY_GUILD_JOINED_AT_DESC;
@@ -270,7 +270,7 @@ class F extends c.A {
     };
     handleInitialize(e) {
         let { guildId: t } = e;
-        return U(t), G(t);
+        return (U(t), G(t));
     }
     handleGuildDelete(e) {
         let { guild: t } = e;
@@ -297,4 +297,4 @@ class F extends c.A {
         return G(t);
     }
 }
-let V = new F();
+let B = new F();

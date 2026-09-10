@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Bu: () => g,
     D1: () => T,
     Ii: () => x,
@@ -25,7 +25,7 @@ n.d(t, {
     vK: () => G,
     wZ: () => O,
 }),
-    n(321073);
+    n(321073));
 var i,
     r,
     a,
@@ -159,17 +159,17 @@ function x(e) {
     let t = [];
     switch (e.connection_type) {
         case 0:
-            (0, d.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
-                (0, d.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections");
+            ((0, d.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
+                (0, d.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections"));
             break;
         case 1:
-            (0, d.uJ)(e.provider_id)
+            ((0, d.uJ)(e.provider_id)
                 ? t.push("Platform ID is required for platform connections")
                 : U.includes(e.provider_id) || t.push("Invalid platform ID"),
-                (0, d.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections");
+                (0, d.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections"));
             break;
         default:
-            return e.connection_type, t.push("Invalid connection type"), t;
+            return (e.connection_type, t.push("Invalid connection type"), t);
     }
     return (
         null != e.description && e.description.length > p && t.push(`Description must be ${p} characters or less`), t
@@ -182,7 +182,7 @@ function k(e) {
         let e = x(r);
         t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
         let a = w(r);
-        n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
+        (n.has(a) && t.push("Duplicate connection configuration"), n.add(a));
     }
     return t;
 }

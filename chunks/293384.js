@@ -8,8 +8,8 @@ var i,
                 t == this.debug ? (s = 1) : t == this.info ? (s = 2) : t == this.warn ? (s = 3) : (this.error, (s = 4));
             },
             debug: function (t, e) {
-                void 0 === console.debug && (console.debug = console.log),
-                    1 >= s && console.debug("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
+                (void 0 === console.debug && (console.debug = console.log),
+                    1 >= s && console.debug("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e));
             },
             log: function (t, e) {
                 this.debug(t.msg);
@@ -24,9 +24,9 @@ var i,
                 4 >= s && console.error("[" + r.getDurationString(new Date() - i, 1e3) + "]", "[" + t + "]", e);
             },
         });
-(r.getDurationString = function (t, e) {
+((r.getDurationString = function (t, e) {
     function i(t, e) {
-        for (var i = ("" + t).split("."); i[0].length < e; ) i[0] = "0" + i[0];
+        for (var i = ("" + t).split("."); i[0].length < e;) i[0] = "0" + i[0];
         return i.join(".");
     }
     t < 0 ? ((s = !0), (t = -t)) : (s = !1);
@@ -45,17 +45,17 @@ var i,
         var e = t.length;
         if (!(e > 0)) return "(empty)";
         for (var i = "", s = 0; s < e; s++)
-            s > 0 && (i += ","),
-                (i += "[" + r.getDurationString(t.start(s)) + "," + r.getDurationString(t.end(s)) + "]");
+            (s > 0 && (i += ","),
+                (i += "[" + r.getDurationString(t.start(s)) + "," + r.getDurationString(t.end(s)) + "]"));
         return i;
     }),
-    (e.Log = r);
+    (e.Log = r));
 var n = function (t) {
-    if (t instanceof ArrayBuffer) (this.buffer = t), (this.dataview = new DataView(t));
+    if (t instanceof ArrayBuffer) ((this.buffer = t), (this.dataview = new DataView(t)));
     else throw "Needs an array buffer";
     this.position = 0;
 };
-(n.prototype.getPosition = function () {
+((n.prototype.getPosition = function () {
     return this.position;
 }),
     (n.prototype.getEndPosition = function () {
@@ -66,7 +66,7 @@ var n = function (t) {
     }),
     (n.prototype.seek = function (t) {
         var e = Math.max(0, Math.min(this.buffer.byteLength, t));
-        return (this.position = isNaN(e) || !isFinite(e) ? 0 : e), !0;
+        return ((this.position = isNaN(e) || !isFinite(e) ? 0 : e), !0);
     }),
     (n.prototype.isEos = function () {
         return this.getPosition() >= this.getEndPosition();
@@ -98,7 +98,7 @@ var n = function (t) {
                 default:
                     throw "readInt method not implemented for size: " + t;
             }
-            return (this.position += t), i;
+            return ((this.position += t), i);
         }
         throw "Not enough bytes in buffer";
     }),
@@ -125,7 +125,7 @@ var n = function (t) {
         throw "Not enough bytes in buffer";
     }),
     (n.prototype.readCString = function () {
-        for (var t = []; ; ) {
+        for (var t = []; ;) {
             var e = this.readUint8();
             if (0 !== e) t.push(e);
             else break;
@@ -164,18 +164,18 @@ var n = function (t) {
         for (var e = new Int32Array(t), i = 0; i < t; i++) e[i] = this.readInt32();
         return e;
     }),
-    (e.MP4BoxStream = n);
+    (e.MP4BoxStream = n));
 var a = function (t, e, i) {
-    (this._byteOffset = e || 0),
+    ((this._byteOffset = e || 0),
         t instanceof ArrayBuffer
             ? (this.buffer = t)
             : "object" == typeof t
               ? ((this.dataView = t), e && (this._byteOffset += e))
               : (this.buffer = new ArrayBuffer(t || 0)),
         (this.position = 0),
-        (this.endianness = null == i ? a.LITTLE_ENDIAN : i);
+        (this.endianness = null == i ? a.LITTLE_ENDIAN : i));
 };
-(a.prototype = {}),
+((a.prototype = {}),
     (a.prototype.getPosition = function () {
         return this.position;
     }),
@@ -187,10 +187,10 @@ var a = function (t, e, i) {
                 e > this._byteLength && (this._byteLength = e);
                 return;
             }
-            for (i < 1 && (i = 1); e > i; ) i *= 2;
+            for (i < 1 && (i = 1); e > i;) i *= 2;
             var s = new ArrayBuffer(i),
                 r = new Uint8Array(this._buffer);
-            new Uint8Array(s, 0, r.length).set(r), (this.buffer = s), (this._byteLength = e);
+            (new Uint8Array(s, 0, r.length).set(r), (this.buffer = s), (this._byteLength = e));
         }
     }),
     (a.prototype._trimAlloc = function () {
@@ -198,7 +198,7 @@ var a = function (t, e, i) {
             var t = new ArrayBuffer(this._byteLength),
                 e = new Uint8Array(t),
                 i = new Uint8Array(this._buffer, 0, e.length);
-            e.set(i), (this.buffer = t);
+            (e.set(i), (this.buffer = t));
         }
     }),
     (a.BIG_ENDIAN = !1),
@@ -211,12 +211,12 @@ var a = function (t, e, i) {
     }),
     Object.defineProperty(a.prototype, "buffer", {
         get: function () {
-            return this._trimAlloc(), this._buffer;
+            return (this._trimAlloc(), this._buffer);
         },
         set: function (t) {
-            (this._buffer = t),
+            ((this._buffer = t),
                 (this._dataView = new DataView(this._buffer, this._byteOffset)),
-                (this._byteLength = this._buffer.byteLength);
+                (this._byteLength = this._buffer.byteLength));
         },
     }),
     Object.defineProperty(a.prototype, "byteOffset", {
@@ -224,9 +224,9 @@ var a = function (t, e, i) {
             return this._byteOffset;
         },
         set: function (t) {
-            (this._byteOffset = t),
+            ((this._byteOffset = t),
                 (this._dataView = new DataView(this._buffer, this._byteOffset)),
-                (this._byteLength = this._buffer.byteLength);
+                (this._byteLength = this._buffer.byteLength));
         },
     }),
     Object.defineProperty(a.prototype, "dataView", {
@@ -234,10 +234,10 @@ var a = function (t, e, i) {
             return this._dataView;
         },
         set: function (t) {
-            (this._byteOffset = t.byteOffset),
+            ((this._byteOffset = t.byteOffset),
                 (this._buffer = t.buffer),
                 (this._dataView = new DataView(this._buffer, this._byteOffset)),
-                (this._byteLength = this._byteOffset + t.byteLength);
+                (this._byteLength = this._byteOffset + t.byteLength));
         },
     }),
     (a.prototype.seek = function (t) {
@@ -250,7 +250,7 @@ var a = function (t, e, i) {
     (a.prototype.mapUint8Array = function (t) {
         this._realloc(+t);
         var e = new Uint8Array(this._buffer, this.byteOffset + this.position, t);
-        return (this.position += +t), e;
+        return ((this.position += +t), e);
     }),
     (a.prototype.readInt32Array = function (t, e) {
         var i = new Int32Array((t = null == t ? this.byteLength - this.position / 4 : t));
@@ -324,35 +324,35 @@ var a = function (t, e, i) {
     }),
     (a.prototype.readInt32 = function (t) {
         var e = this._dataView.getInt32(this.position, null == t ? this.endianness : t);
-        return (this.position += 4), e;
+        return ((this.position += 4), e);
     }),
     (a.prototype.readInt16 = function (t) {
         var e = this._dataView.getInt16(this.position, null == t ? this.endianness : t);
-        return (this.position += 2), e;
+        return ((this.position += 2), e);
     }),
     (a.prototype.readInt8 = function () {
         var t = this._dataView.getInt8(this.position);
-        return (this.position += 1), t;
+        return ((this.position += 1), t);
     }),
     (a.prototype.readUint32 = function (t) {
         var e = this._dataView.getUint32(this.position, null == t ? this.endianness : t);
-        return (this.position += 4), e;
+        return ((this.position += 4), e);
     }),
     (a.prototype.readUint16 = function (t) {
         var e = this._dataView.getUint16(this.position, null == t ? this.endianness : t);
-        return (this.position += 2), e;
+        return ((this.position += 2), e);
     }),
     (a.prototype.readUint8 = function () {
         var t = this._dataView.getUint8(this.position);
-        return (this.position += 1), t;
+        return ((this.position += 1), t);
     }),
     (a.prototype.readFloat32 = function (t) {
         var e = this._dataView.getFloat32(this.position, null == t ? this.endianness : t);
-        return (this.position += 4), e;
+        return ((this.position += 4), e);
     }),
     (a.prototype.readFloat64 = function (t) {
         var e = this._dataView.getFloat64(this.position, null == t ? this.endianness : t);
-        return (this.position += 8), e;
+        return ((this.position += 8), e);
     }),
     (a.endianness = new Int8Array(new Int16Array([1]).buffer)[0] > 0),
     (a.memcpy = function (t, e, i, s, r) {
@@ -374,7 +374,7 @@ var a = function (t, e, i) {
         )
             for (var s = i + t.BYTES_PER_ELEMENT - 1, r = i; s > r; s--, r++) {
                 var n = e[r];
-                (e[r] = e[s]), (e[s] = n);
+                ((e[r] = e[s]), (e[s] = n));
             }
         return t;
     }),
@@ -397,7 +397,7 @@ var a = function (t, e, i) {
         null != t && (s = Math.min(t, e));
         for (var r = 0; r < s && 0 !== i[r]; r++);
         var n = String.fromCharCodeUint8.apply(null, [this.mapUint8Array(r)]);
-        return null != t ? (this.position += s - r) : r != e && (this.position += 1), n;
+        return (null != t ? (this.position += s - r) : r != e && (this.position += 1), n);
     }),
     (a.prototype.readInt64 = function () {
         return 0x100000000 * this.readInt32() + this.readUint32();
@@ -417,12 +417,12 @@ var a = function (t, e, i) {
         if (window.URL && URL.createObjectURL) {
             var i = window.URL.createObjectURL(e),
                 s = document.createElement("a");
-            document.body.appendChild(s),
+            (document.body.appendChild(s),
                 s.setAttribute("href", i),
                 s.setAttribute("download", t),
                 s.setAttribute("target", "_self"),
                 s.click(),
-                window.URL.revokeObjectURL(i);
+                window.URL.revokeObjectURL(i));
         } else throw "DataStream.save: Can't create object URL.";
     }),
     (a.prototype._dynamicSize = !0),
@@ -431,22 +431,22 @@ var a = function (t, e, i) {
             return this._dynamicSize;
         },
         set: function (t) {
-            t || this._trimAlloc(), (this._dynamicSize = t);
+            (t || this._trimAlloc(), (this._dynamicSize = t));
         },
     }),
     (a.prototype.shift = function (t) {
         var e = new ArrayBuffer(this._byteLength - t),
             i = new Uint8Array(e),
             s = new Uint8Array(this._buffer, t, i.length);
-        i.set(s), (this.buffer = e), (this.position -= t);
+        (i.set(s), (this.buffer = e), (this.position -= t));
     }),
     (a.prototype.writeInt32Array = function (t, e) {
         if (
             (this._realloc(4 * t.length),
             t instanceof Int32Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapInt32Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapInt32Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeInt32(t[i], e);
     }),
     (a.prototype.writeInt16Array = function (t, e) {
@@ -454,8 +454,8 @@ var a = function (t, e, i) {
             (this._realloc(2 * t.length),
             t instanceof Int16Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapInt16Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapInt16Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeInt16(t[i], e);
     }),
     (a.prototype.writeInt8Array = function (t) {
@@ -463,8 +463,8 @@ var a = function (t, e, i) {
             (this._realloc(+t.length),
             t instanceof Int8Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapInt8Array(t.length);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapInt8Array(t.length));
         else for (var e = 0; e < t.length; e++) this.writeInt8(t[e]);
     }),
     (a.prototype.writeUint32Array = function (t, e) {
@@ -472,8 +472,8 @@ var a = function (t, e, i) {
             (this._realloc(4 * t.length),
             t instanceof Uint32Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapUint32Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapUint32Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeUint32(t[i], e);
     }),
     (a.prototype.writeUint16Array = function (t, e) {
@@ -481,8 +481,8 @@ var a = function (t, e, i) {
             (this._realloc(2 * t.length),
             t instanceof Uint16Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapUint16Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapUint16Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeUint16(t[i], e);
     }),
     (a.prototype.writeUint8Array = function (t) {
@@ -490,8 +490,8 @@ var a = function (t, e, i) {
             (this._realloc(+t.length),
             t instanceof Uint8Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapUint8Array(t.length);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapUint8Array(t.length));
         else for (var e = 0; e < t.length; e++) this.writeUint8(t[e]);
     }),
     (a.prototype.writeFloat64Array = function (t, e) {
@@ -499,8 +499,8 @@ var a = function (t, e, i) {
             (this._realloc(8 * t.length),
             t instanceof Float64Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapFloat64Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapFloat64Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeFloat64(t[i], e);
     }),
     (a.prototype.writeFloat32Array = function (t, e) {
@@ -508,45 +508,45 @@ var a = function (t, e, i) {
             (this._realloc(4 * t.length),
             t instanceof Float32Array && this.byteOffset + (this.position % t.BYTES_PER_ELEMENT) === 0)
         )
-            a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
-                this.mapFloat32Array(t.length, e);
+            (a.memcpy(this._buffer, this.byteOffset + this.position, t.buffer, 0, t.byteLength),
+                this.mapFloat32Array(t.length, e));
         else for (var i = 0; i < t.length; i++) this.writeFloat32(t[i], e);
     }),
     (a.prototype.writeInt32 = function (t, e) {
-        this._realloc(4),
+        (this._realloc(4),
             this._dataView.setInt32(this.position, t, null == e ? this.endianness : e),
-            (this.position += 4);
+            (this.position += 4));
     }),
     (a.prototype.writeInt16 = function (t, e) {
-        this._realloc(2),
+        (this._realloc(2),
             this._dataView.setInt16(this.position, t, null == e ? this.endianness : e),
-            (this.position += 2);
+            (this.position += 2));
     }),
     (a.prototype.writeInt8 = function (t) {
-        this._realloc(1), this._dataView.setInt8(this.position, t), (this.position += 1);
+        (this._realloc(1), this._dataView.setInt8(this.position, t), (this.position += 1));
     }),
     (a.prototype.writeUint32 = function (t, e) {
-        this._realloc(4),
+        (this._realloc(4),
             this._dataView.setUint32(this.position, t, null == e ? this.endianness : e),
-            (this.position += 4);
+            (this.position += 4));
     }),
     (a.prototype.writeUint16 = function (t, e) {
-        this._realloc(2),
+        (this._realloc(2),
             this._dataView.setUint16(this.position, t, null == e ? this.endianness : e),
-            (this.position += 2);
+            (this.position += 2));
     }),
     (a.prototype.writeUint8 = function (t) {
-        this._realloc(1), this._dataView.setUint8(this.position, t), (this.position += 1);
+        (this._realloc(1), this._dataView.setUint8(this.position, t), (this.position += 1));
     }),
     (a.prototype.writeFloat32 = function (t, e) {
-        this._realloc(4),
+        (this._realloc(4),
             this._dataView.setFloat32(this.position, t, null == e ? this.endianness : e),
-            (this.position += 4);
+            (this.position += 4));
     }),
     (a.prototype.writeFloat64 = function (t, e) {
-        this._realloc(8),
+        (this._realloc(8),
             this._dataView.setFloat64(this.position, t, null == e ? this.endianness : e),
-            (this.position += 8);
+            (this.position += 8));
     }),
     (a.prototype.writeUCS2String = function (t, e, i) {
         null == i && (i = t.length);
@@ -675,54 +675,54 @@ var a = function (t, e, i) {
     }),
     (a.prototype.writeUint64 = function (t) {
         var e = Math.floor(t / 0x100000000);
-        this.writeUint32(e), this.writeUint32(0 | t);
+        (this.writeUint32(e), this.writeUint32(0 | t));
     }),
     (a.prototype.writeUint24 = function (t) {
-        this.writeUint8((0xff0000 & t) >> 16), this.writeUint8((65280 & t) >> 8), this.writeUint8(255 & t);
+        (this.writeUint8((0xff0000 & t) >> 16), this.writeUint8((65280 & t) >> 8), this.writeUint8(255 & t));
     }),
     (a.prototype.adjustUint32 = function (t, e) {
         var i = this.position;
-        this.seek(t), this.writeUint32(e), this.seek(i);
+        (this.seek(t), this.writeUint32(e), this.seek(i));
     }),
     (a.prototype.mapInt32Array = function (t, e) {
         this._realloc(4 * t);
         var i = new Int32Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i;
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i);
     }),
     (a.prototype.mapInt16Array = function (t, e) {
         this._realloc(2 * t);
         var i = new Int16Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 2 * t), i;
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 2 * t), i);
     }),
     (a.prototype.mapInt8Array = function (t) {
         this._realloc(+t);
         var e = new Int8Array(this._buffer, this.byteOffset + this.position, t);
-        return (this.position += +t), e;
+        return ((this.position += +t), e);
     }),
     (a.prototype.mapUint32Array = function (t, e) {
         this._realloc(4 * t);
         var i = new Uint32Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i;
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i);
     }),
     (a.prototype.mapUint16Array = function (t, e) {
         this._realloc(2 * t);
         var i = new Uint16Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 2 * t), i;
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 2 * t), i);
     }),
     (a.prototype.mapFloat64Array = function (t, e) {
         this._realloc(8 * t);
         var i = new Float64Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 8 * t), i;
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 8 * t), i);
     }),
     (a.prototype.mapFloat32Array = function (t, e) {
         this._realloc(4 * t);
         var i = new Float32Array(this._buffer, this.byteOffset + this.position, t);
-        return a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i;
-    });
+        return (a.arrayToNative(i, null == e ? this.endianness : e), (this.position += 4 * t), i);
+    }));
 var o = function (t) {
-    (this.buffers = []), (this.bufferIndex = -1), t && (this.insertBuffer(t), (this.bufferIndex = 0));
+    ((this.buffers = []), (this.bufferIndex = -1), t && (this.insertBuffer(t), (this.bufferIndex = 0)));
 };
-(o.prototype = new a(new ArrayBuffer(), 0, a.BIG_ENDIAN)),
+((o.prototype = new a(new ArrayBuffer(), 0, a.BIG_ENDIAN)),
     (o.prototype.initialized = function () {
         var t;
         return (
@@ -742,7 +742,7 @@ var o = function (t) {
     (ArrayBuffer.concat = function (t, e) {
         r.debug("ArrayBuffer", "Trying to create a new buffer of size: " + (t.byteLength + e.byteLength));
         var i = new Uint8Array(t.byteLength + e.byteLength);
-        return i.set(new Uint8Array(t), 0), i.set(new Uint8Array(e), t.byteLength), i.buffer;
+        return (i.set(new Uint8Array(t), 0), i.set(new Uint8Array(e), t.byteLength), i.buffer);
     }),
     (o.prototype.reduceBuffer = function (t, e, i) {
         var s;
@@ -759,7 +759,7 @@ var o = function (t) {
             if (t.fileStart <= s.fileStart) {
                 if (t.fileStart === s.fileStart)
                     if (t.byteLength > s.byteLength) {
-                        this.buffers.splice(i, 1), i--;
+                        (this.buffers.splice(i, 1), i--);
                         continue;
                     } else
                         r.warn(
@@ -771,14 +771,14 @@ var o = function (t) {
                                 ") already appended, ignoring",
                         );
                 else
-                    t.fileStart + t.byteLength <= s.fileStart ||
+                    (t.fileStart + t.byteLength <= s.fileStart ||
                         (t = this.reduceBuffer(t, 0, s.fileStart - t.fileStart)),
                         r.debug(
                             "MultiBufferStream",
                             "Appending new buffer (fileStart: " + t.fileStart + " - Length: " + t.byteLength + ")",
                         ),
                         this.buffers.splice(i, 0, t),
-                        0 === i && (this.buffer = t);
+                        0 === i && (this.buffer = t));
                 e = !1;
                 break;
             }
@@ -809,7 +809,7 @@ var o = function (t) {
             o = [],
             h = "";
         for (e = 0, s = 0, n = 0; e < this.buffers.length; e++)
-            (i = this.buffers[e]),
+            ((i = this.buffers[e]),
                 0 === e
                     ? (o.push((a = {})),
                       (a.start = i.fileStart),
@@ -822,8 +822,8 @@ var o = function (t) {
                         (a.end = i.fileStart + i.byteLength),
                         o.push(a)),
                 (s += i.usedBytes),
-                (n += i.byteLength);
-        o.length > 0 && (h += a.end - 1 + "]"),
+                (n += i.byteLength));
+        (o.length > 0 && (h += a.end - 1 + "]"),
             (t ? r.info : r.debug)(
                 "MultiBufferStream",
                 0 === this.buffers.length
@@ -836,7 +836,7 @@ var o = function (t) {
                           n +
                           " bytes), continuous ranges: " +
                           h,
-            );
+            ));
     }),
     (o.prototype.cleanBuffers = function () {
         var t, e;
@@ -871,12 +871,12 @@ var o = function (t) {
         var s,
             n = null,
             a = -1;
-        for (s = !0 === t ? 0 : this.bufferIndex; s < this.buffers.length && (n = this.buffers[s]).fileStart <= e; )
-            (a = s),
+        for (s = !0 === t ? 0 : this.bufferIndex; s < this.buffers.length && (n = this.buffers[s]).fileStart <= e;)
+            ((a = s),
                 i &&
                     (n.fileStart + n.byteLength <= e ? (n.usedBytes = n.byteLength) : (n.usedBytes = e - n.fileStart),
                     this.logBufferLevel()),
-                s++;
+                s++);
         return -1 === a
             ? -1
             : (n = this.buffers[a]).fileStart + n.byteLength >= e
@@ -899,10 +899,10 @@ var o = function (t) {
         return -1 !== e ? this.findEndContiguousBuf(e) : t;
     }),
     (o.prototype.addUsedBytes = function (t) {
-        (this.buffer.usedBytes += t), this.logBufferLevel();
+        ((this.buffer.usedBytes += t), this.logBufferLevel());
     }),
     (o.prototype.setAllUsedBytes = function () {
-        (this.buffer.usedBytes = this.buffer.byteLength), this.logBufferLevel();
+        ((this.buffer.usedBytes = this.buffer.byteLength), this.logBufferLevel());
     }),
     (o.prototype.seek = function (t, e, i) {
         var s;
@@ -927,16 +927,16 @@ var o = function (t) {
             throw "Error accessing position in the MultiBufferStream";
         return this.buffers[this.bufferIndex].fileStart + this.byteLength;
     }),
-    (e.MultiBufferStream = o);
+    (e.MultiBufferStream = o));
 var h = function () {
     var t = [];
-    (t[3] = "ES_Descriptor"),
+    ((t[3] = "ES_Descriptor"),
         (t[4] = "DecoderConfigDescriptor"),
         (t[5] = "DecoderSpecificInfo"),
         (t[6] = "SLConfigDescriptor"),
         (this.getDescriptorName = function (e) {
             return t[e];
-        });
+        }));
     var e = this,
         i = {};
     return (
@@ -946,8 +946,8 @@ var h = function () {
                 a,
                 o = 0,
                 h = 0;
-            for (s = e.readUint8(), o++, a = e.readUint8(), o++; 128 & a; )
-                (h = (127 & a) << 7), (a = e.readUint8()), o++;
+            for (s = e.readUint8(), o++, a = e.readUint8(), o++; 128 & a;)
+                ((h = (127 & a) << 7), (a = e.readUint8()), o++);
             return (
                 (h += 127 & a),
                 r.debug(
@@ -959,7 +959,7 @@ var h = function () {
             );
         }),
         (i.Descriptor = function (t, e) {
-            (this.tag = t), (this.size = e), (this.descs = []);
+            ((this.tag = t), (this.size = e), (this.descs = []));
         }),
         (i.Descriptor.prototype.parse = function (t) {
             this.data = t.readUint8Array(this.size);
@@ -969,7 +969,7 @@ var h = function () {
             return null;
         }),
         (i.Descriptor.prototype.parseRemainingDescriptors = function (t) {
-            for (var i = t.position; t.position < i + this.size; ) {
+            for (var i = t.position; t.position < i + this.size;) {
                 var s = e.parseOneDescriptor(t);
                 this.descs.push(s);
             }
@@ -989,10 +989,10 @@ var h = function () {
                 64 & this.flags)
             ) {
                 var e = t.readUint8();
-                (this.URL = t.readString(e)), (this.size -= e + 1);
+                ((this.URL = t.readString(e)), (this.size -= e + 1));
             } else this.URL = "";
-            32 & this.flags ? ((this.OCR_ES_ID = t.readUint16()), (this.size -= 2)) : (this.OCR_ES_ID = 0),
-                this.parseRemainingDescriptors(t);
+            (32 & this.flags ? ((this.OCR_ES_ID = t.readUint16()), (this.size -= 2)) : (this.OCR_ES_ID = 0),
+                this.parseRemainingDescriptors(t));
         }),
         (i.ES_Descriptor.prototype.getOTI = function (t) {
             var e = this.findDescriptor(4);
@@ -1004,20 +1004,20 @@ var h = function () {
             var i = e.findDescriptor(5);
             if (!i || !i.data) return null;
             var s = (248 & i.data[0]) >> 3;
-            return 31 === s && i.data.length >= 2 && (s = 32 + ((7 & i.data[0]) << 3) + ((224 & i.data[1]) >> 5)), s;
+            return (31 === s && i.data.length >= 2 && (s = 32 + ((7 & i.data[0]) << 3) + ((224 & i.data[1]) >> 5)), s);
         }),
         (i.DecoderConfigDescriptor = function (t) {
             i.Descriptor.call(this, 4, t);
         }),
         (i.DecoderConfigDescriptor.prototype = new i.Descriptor()),
         (i.DecoderConfigDescriptor.prototype.parse = function (t) {
-            (this.oti = t.readUint8()),
+            ((this.oti = t.readUint8()),
                 (this.streamType = t.readUint8()),
                 (this.bufferSize = t.readUint24()),
                 (this.maxBitrate = t.readUint32()),
                 (this.avgBitrate = t.readUint32()),
                 (this.size -= 13),
-                this.parseRemainingDescriptors(t);
+                this.parseRemainingDescriptors(t));
         }),
         (i.DecoderSpecificInfo = function (t) {
             i.Descriptor.call(this, 5, t);
@@ -1074,7 +1074,7 @@ var d = {
     UUIDBoxes: {},
     UUIDs: [],
     initialize: function () {
-        (d.FullBox.prototype = new d.Box()),
+        ((d.FullBox.prototype = new d.Box()),
             (d.ContainerBox.prototype = new d.Box()),
             (d.SampleEntry.prototype = new d.Box()),
             (d.TrackGroupTypeBox.prototype = new d.FullBox()),
@@ -1086,19 +1086,19 @@ var d = {
             }),
             d.CONTAINER_BOXES.forEach(function (t) {
                 d.createContainerBoxCtor(t[0], null, t[1]);
-            });
+            }));
     },
     Box: function (t, e, i) {
-        (this.type = t), (this.size = e), (this.uuid = i);
+        ((this.type = t), (this.size = e), (this.uuid = i));
     },
     FullBox: function (t, e, i) {
-        d.Box.call(this, t, e, i), (this.flags = 0), (this.version = 0);
+        (d.Box.call(this, t, e, i), (this.flags = 0), (this.version = 0));
     },
     ContainerBox: function (t, e, i) {
-        d.Box.call(this, t, e, i), (this.boxes = []);
+        (d.Box.call(this, t, e, i), (this.boxes = []));
     },
     SampleEntry: function (t, e, i, s) {
-        d.ContainerBox.call(this, t, e), (this.hdr_size = i), (this.start = s);
+        (d.ContainerBox.call(this, t, e), (this.hdr_size = i), (this.start = s));
     },
     SampleGroupEntry: function (t) {
         this.grouping_type = t;
@@ -1107,21 +1107,21 @@ var d = {
         d.FullBox.call(this, t, e);
     },
     createBoxCtor: function (t, e) {
-        d.boxCodes.push(t),
+        (d.boxCodes.push(t),
             (d[t + "Box"] = function (e) {
                 d.Box.call(this, t, e);
             }),
             (d[t + "Box"].prototype = new d.Box()),
-            e && (d[t + "Box"].prototype.parse = e);
+            e && (d[t + "Box"].prototype.parse = e));
     },
     createFullBoxCtor: function (t, e) {
-        (d[t + "Box"] = function (e) {
+        ((d[t + "Box"] = function (e) {
             d.FullBox.call(this, t, e);
         }),
             (d[t + "Box"].prototype = new d.FullBox()),
             (d[t + "Box"].prototype.parse = function (t) {
-                this.parseFullHeader(t), e && e.call(this, t);
-            });
+                (this.parseFullHeader(t), e && e.call(this, t));
+            }));
     },
     addSubBoxArrays: function (t) {
         if (t) {
@@ -1130,47 +1130,47 @@ var d = {
         }
     },
     createContainerBoxCtor: function (t, e, i) {
-        (d[t + "Box"] = function (e) {
-            d.ContainerBox.call(this, t, e), d.addSubBoxArrays.call(this, i);
+        ((d[t + "Box"] = function (e) {
+            (d.ContainerBox.call(this, t, e), d.addSubBoxArrays.call(this, i));
         }),
             (d[t + "Box"].prototype = new d.ContainerBox()),
-            e && (d[t + "Box"].prototype.parse = e);
+            e && (d[t + "Box"].prototype.parse = e));
     },
     createMediaSampleEntryCtor: function (t, e, i) {
-        (d.sampleEntryCodes[t] = []),
+        ((d.sampleEntryCodes[t] = []),
             (d[t + "SampleEntry"] = function (t, e) {
-                d.SampleEntry.call(this, t, e), d.addSubBoxArrays.call(this, i);
+                (d.SampleEntry.call(this, t, e), d.addSubBoxArrays.call(this, i));
             }),
             (d[t + "SampleEntry"].prototype = new d.SampleEntry()),
-            e && (d[t + "SampleEntry"].prototype.parse = e);
+            e && (d[t + "SampleEntry"].prototype.parse = e));
     },
     createSampleEntryCtor: function (t, e, i, s) {
-        d.sampleEntryCodes[t].push(e),
+        (d.sampleEntryCodes[t].push(e),
             (d[e + "SampleEntry"] = function (i) {
-                d[t + "SampleEntry"].call(this, e, i), d.addSubBoxArrays.call(this, s);
+                (d[t + "SampleEntry"].call(this, e, i), d.addSubBoxArrays.call(this, s));
             }),
             (d[e + "SampleEntry"].prototype = new d[t + "SampleEntry"]()),
-            i && (d[e + "SampleEntry"].prototype.parse = i);
+            i && (d[e + "SampleEntry"].prototype.parse = i));
     },
     createEncryptedSampleEntryCtor: function (t, e, i) {
         d.createSampleEntryCtor.call(this, t, e, i, ["sinf"]);
     },
     createSampleGroupCtor: function (t, e) {
-        (d[t + "SampleGroupEntry"] = function (e) {
+        ((d[t + "SampleGroupEntry"] = function (e) {
             d.SampleGroupEntry.call(this, t, e);
         }),
             (d[t + "SampleGroupEntry"].prototype = new d.SampleGroupEntry()),
-            e && (d[t + "SampleGroupEntry"].prototype.parse = e);
+            e && (d[t + "SampleGroupEntry"].prototype.parse = e));
     },
     createTrackGroupCtor: function (t, e) {
-        (d[t + "TrackGroupTypeBox"] = function (e) {
+        ((d[t + "TrackGroupTypeBox"] = function (e) {
             d.TrackGroupTypeBox.call(this, t, e);
         }),
             (d[t + "TrackGroupTypeBox"].prototype = new d.TrackGroupTypeBox()),
-            e && (d[t + "TrackGroupTypeBox"].prototype.parse = e);
+            e && (d[t + "TrackGroupTypeBox"].prototype.parse = e));
     },
     createUUIDBox: function (t, e, i, s) {
-        d.UUIDs.push(t),
+        (d.UUIDs.push(t),
             (d.UUIDBoxes[t] = function (s) {
                 e
                     ? d.FullBox.call(this, "uuid", s, t)
@@ -1182,12 +1182,12 @@ var d = {
             s &&
                 (e
                     ? (d.UUIDBoxes[t].prototype.parse = function (t) {
-                          this.parseFullHeader(t), s && s.call(this, t);
+                          (this.parseFullHeader(t), s && s.call(this, t));
                       })
-                    : (d.UUIDBoxes[t].prototype.parse = s));
+                    : (d.UUIDBoxes[t].prototype.parse = s)));
     },
 };
-d.initialize(),
+(d.initialize(),
     (d.TKHD_FLAG_ENABLED = 1),
     (d.TKHD_FLAG_IN_MOVIE = 2),
     (d.TKHD_FLAG_IN_PREVIEW = 4),
@@ -1208,14 +1208,14 @@ d.initialize(),
         return this.addBox(new d[t + "Box"]());
     }),
     (d.Box.prototype.addBox = function (t) {
-        return this.boxes.push(t), this[t.type + "s"] ? this[t.type + "s"].push(t) : (this[t.type] = t), t;
+        return (this.boxes.push(t), this[t.type + "s"] ? this[t.type + "s"].push(t) : (this[t.type] = t), t);
     }),
     (d.Box.prototype.set = function (t, e) {
-        return (this[t] = e), this;
+        return ((this[t] = e), this);
     }),
     (d.Box.prototype.addEntry = function (t, e) {
         var i = e || "entries";
-        return this[i] || (this[i] = []), this[i].push(t), this;
+        return (this[i] || (this[i] = []), this[i].push(t), this);
     }),
     (e.BoxParser = d),
     (d.parseUUID = function (t) {
@@ -1258,7 +1258,7 @@ d.initialize(),
                     r.debug("BoxParser", "Not enough bytes left in the parent box to parse a UUID box"),
                     { code: d.ERR_NOT_ENOUGH_DATA }
                 );
-            (a = d.parseUUID(t)), (h += 16), (f = a);
+            ((a = d.parseUUID(t)), (h += 16), (f = a));
         }
         if (1 == p) {
             if (t.getEndPosition() - t.getPosition() < 8 || (i && i - h < 8))
@@ -1267,7 +1267,7 @@ d.initialize(),
                     r.warn("BoxParser", 'Not enough data in stream to parse the extended size of the "' + l + '" box'),
                     { code: d.ERR_NOT_ENOUGH_DATA }
                 );
-            (p = t.readUint64()), (h += 8);
+            ((p = t.readUint64()), (h += 8));
         } else if (0 === p) {
             if (i) p = i;
             else if ("mdat" !== l)
@@ -1344,22 +1344,22 @@ d.initialize(),
               : t.seek(this.start + this.size);
     }),
     (d.Box.prototype.parseDataAndRewind = function (t) {
-        (this.data = t.readUint8Array(this.size - this.hdr_size)), (t.position -= this.size - this.hdr_size);
+        ((this.data = t.readUint8Array(this.size - this.hdr_size)), (t.position -= this.size - this.hdr_size));
     }),
     (d.FullBox.prototype.parseDataAndRewind = function (t) {
-        this.parseFullHeader(t),
+        (this.parseFullHeader(t),
             (this.data = t.readUint8Array(this.size - this.hdr_size)),
             (this.hdr_size -= 4),
-            (t.position -= this.size - this.hdr_size);
+            (t.position -= this.size - this.hdr_size));
     }),
     (d.FullBox.prototype.parseFullHeader = function (t) {
-        (this.version = t.readUint8()), (this.flags = t.readUint24()), (this.hdr_size += 4);
+        ((this.version = t.readUint8()), (this.flags = t.readUint24()), (this.hdr_size += 4));
     }),
     (d.FullBox.prototype.parse = function (t) {
-        this.parseFullHeader(t), (this.data = t.readUint8Array(this.size - this.hdr_size));
+        (this.parseFullHeader(t), (this.data = t.readUint8Array(this.size - this.hdr_size)));
     }),
     (d.ContainerBox.prototype.parse = function (t) {
-        for (; t.getPosition() < this.start + this.size; ) {
+        for (; t.getPosition() < this.start + this.size;) {
             if ((e = d.parseOneBox(t, !1, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
             if (((i = e.box), this.boxes.push(i), this.subBoxNames && -1 != this.subBoxNames.indexOf(i.type)))
                 this[this.subBoxNames[this.subBoxNames.indexOf(i.type)] + "s"].push(i);
@@ -1374,10 +1374,10 @@ d.initialize(),
     (d.Box.prototype.parseLanguage = function (t) {
         this.language = t.readUint16();
         var e = [];
-        (e[0] = (this.language >> 10) & 31),
+        ((e[0] = (this.language >> 10) & 31),
             (e[1] = (this.language >> 5) & 31),
             (e[2] = 31 & this.language),
-            (this.languageString = String.fromCharCode(e[0] + 96, e[1] + 96, e[2] + 96));
+            (this.languageString = String.fromCharCode(e[0] + 96, e[1] + 96, e[2] + 96)));
     }),
     (d.SAMPLE_ENTRY_TYPE_VISUAL = "Visual"),
     (d.SAMPLE_ENTRY_TYPE_AUDIO = "Audio"),
@@ -1387,16 +1387,16 @@ d.initialize(),
     (d.SAMPLE_ENTRY_TYPE_SYSTEM = "System"),
     (d.SAMPLE_ENTRY_TYPE_TEXT = "Text"),
     (d.SampleEntry.prototype.parseHeader = function (t) {
-        t.readUint8Array(6), (this.data_reference_index = t.readUint16()), (this.hdr_size += 8);
+        (t.readUint8Array(6), (this.data_reference_index = t.readUint16()), (this.hdr_size += 8));
     }),
     (d.SampleEntry.prototype.parse = function (t) {
-        this.parseHeader(t), (this.data = t.readUint8Array(this.size - this.hdr_size));
+        (this.parseHeader(t), (this.data = t.readUint8Array(this.size - this.hdr_size)));
     }),
     (d.SampleEntry.prototype.parseDataAndRewind = function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.data = t.readUint8Array(this.size - this.hdr_size)),
             (this.hdr_size -= 8),
-            (t.position -= this.size - this.hdr_size);
+            (t.position -= this.size - this.hdr_size));
     }),
     (d.SampleEntry.prototype.parseFooter = function (t) {
         d.ContainerBox.prototype.parse.call(this, t);
@@ -1408,7 +1408,7 @@ d.initialize(),
     d.createMediaSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_TEXT),
     d.createMediaSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_VISUAL, function (t) {
         var e;
-        this.parseHeader(t),
+        (this.parseHeader(t),
             t.readUint16(),
             t.readUint16(),
             t.readUint32Array(3),
@@ -1423,17 +1423,17 @@ d.initialize(),
             e < 31 && t.readString(31 - e),
             (this.depth = t.readUint16()),
             t.readUint16(),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createMediaSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_AUDIO, function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             t.readUint32Array(2),
             (this.channel_count = t.readUint16()),
             (this.samplesize = t.readUint16()),
             t.readUint16(),
             t.readUint16(),
             (this.samplerate = t.readUint32() / 65536),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_VISUAL, "avc1"),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_VISUAL, "avc2"),
@@ -1516,32 +1516,32 @@ d.initialize(),
             e < this.nb_SPS_nalus;
             e++
         )
-            (this.SPS[e] = {}),
+            ((this.SPS[e] = {}),
                 (this.SPS[e].length = t.readUint16()),
                 (this.SPS[e].nalu = t.readUint8Array(this.SPS[e].length)),
-                (i -= 2 + this.SPS[e].length);
+                (i -= 2 + this.SPS[e].length));
         for (this.nb_PPS_nalus = t.readUint8(), i--, this.PPS = [], e = 0; e < this.nb_PPS_nalus; e++)
-            (this.PPS[e] = {}),
+            ((this.PPS[e] = {}),
                 (this.PPS[e].length = t.readUint16()),
                 (this.PPS[e].nalu = t.readUint8Array(this.PPS[e].length)),
-                (i -= 2 + this.PPS[e].length);
+                (i -= 2 + this.PPS[e].length));
         i > 0 && (this.ext = t.readUint8Array(i));
     }),
     d.createBoxCtor("btrt", function (t) {
-        (this.bufferSizeDB = t.readUint32()), (this.maxBitrate = t.readUint32()), (this.avgBitrate = t.readUint32());
+        ((this.bufferSizeDB = t.readUint32()), (this.maxBitrate = t.readUint32()), (this.avgBitrate = t.readUint32()));
     }),
     d.createBoxCtor("clap", function (t) {
-        (this.cleanApertureWidthN = t.readUint32()),
+        ((this.cleanApertureWidthN = t.readUint32()),
             (this.cleanApertureWidthD = t.readUint32()),
             (this.cleanApertureHeightN = t.readUint32()),
             (this.cleanApertureHeightD = t.readUint32()),
             (this.horizOffN = t.readUint32()),
             (this.horizOffD = t.readUint32()),
             (this.vertOffN = t.readUint32()),
-            (this.vertOffD = t.readUint32());
+            (this.vertOffD = t.readUint32()));
     }),
     d.createBoxCtor("clli", function (t) {
-        (this.max_content_light_level = t.readUint16()), (this.max_pic_average_light_level = t.readUint16());
+        ((this.max_content_light_level = t.readUint16()), (this.max_pic_average_light_level = t.readUint16()));
     }),
     d.createFullBoxCtor("co64", function (t) {
         var e, i;
@@ -1549,13 +1549,13 @@ d.initialize(),
             for (i = 0; i < e; i++) this.chunk_offsets.push(t.readUint64());
     }),
     d.createFullBoxCtor("CoLL", function (t) {
-        (this.maxCLL = t.readUint16()), (this.maxFALL = t.readUint16());
+        ((this.maxCLL = t.readUint16()), (this.maxFALL = t.readUint16()));
     }),
     d.createBoxCtor("colr", function (t) {
         if (((this.colour_type = t.readString(4)), "nclx" === this.colour_type)) {
-            (this.colour_primaries = t.readUint16()),
+            ((this.colour_primaries = t.readUint16()),
                 (this.transfer_characteristics = t.readUint16()),
-                (this.matrix_coefficients = t.readUint16());
+                (this.matrix_coefficients = t.readUint16()));
             var e = t.readUint8();
             this.full_range_flag = e >> 7;
         } else
@@ -1564,7 +1564,7 @@ d.initialize(),
                 : "prof" === this.colour_type && (this.ICC_profile = t.readUint8Array(this.size - 4));
     }),
     d.createFullBoxCtor("cprt", function (t) {
-        this.parseLanguage(t), (this.notice = t.readCString());
+        (this.parseLanguage(t), (this.notice = t.readCString()));
     }),
     d.createFullBoxCtor("cslg", function (t) {
         0 === this.version &&
@@ -1581,39 +1581,39 @@ d.initialize(),
                 var e,
                     i,
                     s = t.readInt32();
-                s < 0 && r.warn("BoxParser", "ctts box uses negative values without using version 1"),
-                    this.sample_offsets.push(s);
+                (s < 0 && r.warn("BoxParser", "ctts box uses negative values without using version 1"),
+                    this.sample_offsets.push(s));
             }
         else if (1 == this.version)
-            for (i = 0; i < e; i++) this.sample_counts.push(t.readUint32()), this.sample_offsets.push(t.readInt32());
+            for (i = 0; i < e; i++) (this.sample_counts.push(t.readUint32()), this.sample_offsets.push(t.readInt32()));
     }),
     d.createBoxCtor("dac3", function (t) {
         var e = t.readUint8(),
             i = t.readUint8(),
             s = t.readUint8();
-        (this.fscod = e >> 6),
+        ((this.fscod = e >> 6),
             (this.bsid = (e >> 1) & 31),
             (this.bsmod = ((1 & e) << 2) | ((i >> 6) & 3)),
             (this.acmod = (i >> 3) & 7),
             (this.lfeon = (i >> 2) & 1),
-            (this.bit_rate_code = (3 & i) | ((s >> 5) & 7));
+            (this.bit_rate_code = (3 & i) | ((s >> 5) & 7)));
     }),
     d.createBoxCtor("dec3", function (t) {
         var e = t.readUint16();
-        (this.data_rate = e >> 3), (this.num_ind_sub = 7 & e), (this.ind_subs = []);
+        ((this.data_rate = e >> 3), (this.num_ind_sub = 7 & e), (this.ind_subs = []));
         for (var i = 0; i < this.num_ind_sub + 1; i++) {
             var s = {};
             this.ind_subs.push(s);
             var r = t.readUint8(),
                 n = t.readUint8(),
                 a = t.readUint8();
-            (s.fscod = r >> 6),
+            ((s.fscod = r >> 6),
                 (s.bsid = (r >> 1) & 31),
                 (s.bsmod = ((1 & r) << 4) | ((n >> 4) & 15)),
                 (s.acmod = (n >> 1) & 7),
                 (s.lfeon = 1 & n),
                 (s.num_dep_sub = (a >> 1) & 15),
-                s.num_dep_sub > 0 && (s.chan_loc = ((1 & a) << 8) | t.readUint8());
+                s.num_dep_sub > 0 && (s.chan_loc = ((1 & a) << 8) | t.readUint8()));
         }
     }),
     d.createFullBoxCtor("dfLa", function (t) {
@@ -1628,7 +1628,7 @@ d.initialize(),
                 "PICTURE",
                 "RESERVED",
             ];
-        for (this.parseFullHeader(t); ; ) {
+        for (this.parseFullHeader(t); ;) {
             var s = t.readUint8(),
                 r = Math.min(127 & s, i.length - 1);
             if (
@@ -1661,7 +1661,7 @@ d.initialize(),
             (this.ChannelMappingFamily = t.readUint8()),
             0 !== this.ChannelMappingFamily)
         ) {
-            (this.StreamCount = t.readUint8()), (this.CoupledCount = t.readUint8()), (this.ChannelMapping = []);
+            ((this.StreamCount = t.readUint8()), (this.CoupledCount = t.readUint8()), (this.ChannelMapping = []));
             for (var e = 0; e < this.OutputChannelCount; e++) this.ChannelMapping[e] = t.readUint8();
         }
     }),
@@ -1669,7 +1669,7 @@ d.initialize(),
         this.entries = [];
         for (var e, i, s = t.readUint32(), r = 0; r < s; r++) {
             if ((e = d.parseOneBox(t, !1, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            (i = e.box), this.entries.push(i);
+            ((i = e.box), this.entries.push(i));
         }
     }),
     d.createBoxCtor("drep", function (t) {
@@ -1682,12 +1682,12 @@ d.initialize(),
         this.entries = [];
         for (var e = t.readUint32(), i = 0; i < e; i++) {
             var s = {};
-            this.entries.push(s),
+            (this.entries.push(s),
                 1 === this.version
                     ? ((s.segment_duration = t.readUint64()), (s.media_time = t.readInt64()))
                     : ((s.segment_duration = t.readUint32()), (s.media_time = t.readInt32())),
                 (s.media_rate_integer = t.readInt16()),
-                (s.media_rate_fraction = t.readInt16());
+                (s.media_rate_fraction = t.readInt16()));
         }
     }),
     d.createFullBoxCtor("emsg", function (t) {
@@ -1705,7 +1705,7 @@ d.initialize(),
               (this.event_duration = t.readUint32()),
               (this.id = t.readUint32()));
         var e = this.size - this.hdr_size - (16 + (this.scheme_id_uri.length + 1) + (this.value.length + 1));
-        1 == this.version && (e -= 4), (this.message_data = t.readUint8Array(e));
+        (1 == this.version && (e -= 4), (this.message_data = t.readUint8Array(e)));
     }),
     d.createFullBoxCtor("esds", function (t) {
         var e = t.readUint8Array(this.size - this.hdr_size);
@@ -1715,18 +1715,18 @@ d.initialize(),
         }
     }),
     d.createBoxCtor("fiel", function (t) {
-        (this.fieldCount = t.readUint8()), (this.fieldOrdering = t.readUint8());
+        ((this.fieldCount = t.readUint8()), (this.fieldOrdering = t.readUint8()));
     }),
     d.createBoxCtor("frma", function (t) {
         this.data_format = t.readString(4);
     }),
     d.createBoxCtor("ftyp", function (t) {
         var e = this.size - this.hdr_size;
-        (this.major_brand = t.readString(4)),
+        ((this.major_brand = t.readString(4)),
             (this.minor_version = t.readUint32()),
             (e -= 8),
-            (this.compatible_brands = []);
-        for (var i = 0; e >= 4; ) (this.compatible_brands[i] = t.readString(4)), (e -= 4), i++;
+            (this.compatible_brands = []));
+        for (var i = 0; e >= 4;) ((this.compatible_brands[i] = t.readString(4)), (e -= 4), i++);
     }),
     d.createFullBoxCtor("hdlr", function (t) {
         0 === this.version &&
@@ -1737,7 +1737,7 @@ d.initialize(),
             "\0" === this.name[this.name.length - 1] && (this.name = this.name.slice(0, -1)));
     }),
     d.createBoxCtor("hvcC", function (t) {
-        (this.configurationVersion = t.readUint8()),
+        ((this.configurationVersion = t.readUint8()),
             (r = t.readUint8()),
             (this.general_profile_space = r >> 6),
             (this.general_tier_flag = (32 & r) >> 5),
@@ -1756,7 +1756,7 @@ d.initialize(),
             (this.numTemporalLayers = (13 & r) >> 3),
             (this.temporalIdNested = (4 & r) >> 2),
             (this.lengthSizeMinusOne = 3 & r),
-            (this.nalu_arrays = []);
+            (this.nalu_arrays = []));
         var e,
             i,
             s,
@@ -1764,32 +1764,32 @@ d.initialize(),
             n = t.readUint8();
         for (e = 0; e < n; e++) {
             var a = [];
-            this.nalu_arrays.push(a), (a.completeness = (128 & (r = t.readUint8())) >> 7), (a.nalu_type = 63 & r);
+            (this.nalu_arrays.push(a), (a.completeness = (128 & (r = t.readUint8())) >> 7), (a.nalu_type = 63 & r));
             var o = t.readUint16();
             for (i = 0; i < o; i++) {
                 var h = {};
-                a.push(h), (s = t.readUint16()), (h.data = t.readUint8Array(s));
+                (a.push(h), (s = t.readUint16()), (h.data = t.readUint8Array(s)));
             }
         }
     }),
     d.createFullBoxCtor("iinf", function (t) {
         var e;
-        0 === this.version ? (this.entry_count = t.readUint16()) : (this.entry_count = t.readUint32()),
-            (this.item_infos = []);
+        (0 === this.version ? (this.entry_count = t.readUint16()) : (this.entry_count = t.readUint32()),
+            (this.item_infos = []));
         for (var i = 0; i < this.entry_count; i++) {
             if ((e = d.parseOneBox(t, !1, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            "infe" !== e.box.type && r.error("BoxParser", "Expected 'infe' box, got " + e.box.type),
-                (this.item_infos[i] = e.box);
+            ("infe" !== e.box.type && r.error("BoxParser", "Expected 'infe' box, got " + e.box.type),
+                (this.item_infos[i] = e.box));
         }
     }),
     d.createFullBoxCtor("iloc", function (t) {
-        (e = t.readUint8()),
+        ((e = t.readUint8()),
             (this.offset_size = (e >> 4) & 15),
             (this.length_size = 15 & e),
             (e = t.readUint8()),
             (this.base_offset_size = (e >> 4) & 15),
             1 === this.version || 2 === this.version ? (this.index_size = 15 & e) : (this.index_size = 0),
-            (this.items = []);
+            (this.items = []));
         var e,
             i = 0;
         if (this.version < 2) i = t.readUint16();
@@ -1868,7 +1868,7 @@ d.initialize(),
     }),
     d.createBoxCtor("imir", function (t) {
         var e = t.readUint8();
-        (this.reserved = e >> 7), (this.axis = 1 & e);
+        ((this.reserved = e >> 7), (this.axis = 1 & e));
     }),
     d.createFullBoxCtor("infe", function (t) {
         if (
@@ -1880,9 +1880,9 @@ d.initialize(),
                 (this.content_encoding = t.readCString())),
             1 === this.version)
         ) {
-            (this.extension_type = t.readString(4)),
+            ((this.extension_type = t.readString(4)),
                 r.warn("BoxParser", "Cannot parse extension type"),
-                t.seek(this.start + this.size);
+                t.seek(this.start + this.size));
             return;
         }
         this.version >= 2 &&
@@ -1900,24 +1900,24 @@ d.initialize(),
         var e, i;
         for (e = 0, entry_count = t.readUint32(), this.associations = []; e < entry_count; e++) {
             var s = {};
-            this.associations.push(s), this.version < 1 ? (s.id = t.readUint16()) : (s.id = t.readUint32());
+            (this.associations.push(s), this.version < 1 ? (s.id = t.readUint16()) : (s.id = t.readUint32()));
             var r = t.readUint8();
             for (i = 0, s.props = []; i < r; i++) {
                 var n = t.readUint8(),
                     a = {};
-                s.props.push(a),
+                (s.props.push(a),
                     (a.essential = (128 & n) >> 7 == 1),
                     1 & this.flags
                         ? (a.property_index = ((127 & n) << 8) | t.readUint8())
-                        : (a.property_index = 127 & n);
+                        : (a.property_index = 127 & n));
             }
         }
     }),
     d.createFullBoxCtor("iref", function (t) {
         var e, i;
-        for (this.references = []; t.getPosition() < this.start + this.size; ) {
+        for (this.references = []; t.getPosition() < this.start + this.size;) {
             if ((e = d.parseOneBox(t, !0, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            (i =
+            ((i =
                 0 === this.version
                     ? new d.SingleItemTypeReferenceBox(e.type, e.size, e.hdr_size, e.start)
                     : new d.SingleItemTypeReferenceBoxLarge(e.type, e.size, e.hdr_size, e.start)).write ===
@@ -1929,31 +1929,31 @@ d.initialize(),
                 ),
                 i.parseDataAndRewind(t)),
                 i.parse(t),
-                this.references.push(i);
+                this.references.push(i));
         }
     }),
     d.createBoxCtor("irot", function (t) {
         this.angle = 3 & t.readUint8();
     }),
     d.createFullBoxCtor("ispe", function (t) {
-        (this.image_width = t.readUint32()), (this.image_height = t.readUint32());
+        ((this.image_width = t.readUint32()), (this.image_height = t.readUint32()));
     }),
     d.createFullBoxCtor("kind", function (t) {
-        (this.schemeURI = t.readCString()), (this.value = t.readCString());
+        ((this.schemeURI = t.readCString()), (this.value = t.readCString()));
     }),
     d.createFullBoxCtor("leva", function (t) {
         var e = t.readUint8();
         this.levels = [];
         for (var i = 0; i < e; i++) {
             var s = {};
-            (this.levels[i] = s), (s.track_ID = t.readUint32());
+            ((this.levels[i] = s), (s.track_ID = t.readUint32()));
             var n = t.readUint8();
             switch (((s.padding_flag = n >> 7), (s.assignment_type = 127 & n), s.assignment_type)) {
                 case 0:
                     s.grouping_type = t.readString(4);
                     break;
                 case 1:
-                    (s.grouping_type = t.readString(4)), (s.grouping_type_parameter = t.readUint32());
+                    ((s.grouping_type = t.readString(4)), (s.grouping_type_parameter = t.readUint32()));
                     break;
                 case 2:
                 case 3:
@@ -1970,10 +1970,10 @@ d.initialize(),
         this.layer_id = t.readUint16();
     }),
     d.createBoxCtor("maxr", function (t) {
-        (this.period = t.readUint32()), (this.bytes = t.readUint32());
+        ((this.period = t.readUint32()), (this.bytes = t.readUint32()));
     }),
     d.createBoxCtor("mdcv", function (t) {
-        (this.display_primaries = []),
+        ((this.display_primaries = []),
             (this.display_primaries[0] = {}),
             (this.display_primaries[0].x = t.readUint16()),
             (this.display_primaries[0].y = t.readUint16()),
@@ -1987,10 +1987,10 @@ d.initialize(),
             (this.white_point.x = t.readUint16()),
             (this.white_point.y = t.readUint16()),
             (this.max_display_mastering_luminance = t.readUint32()),
-            (this.min_display_mastering_luminance = t.readUint32());
+            (this.min_display_mastering_luminance = t.readUint32()));
     }),
     d.createFullBoxCtor("mdhd", function (t) {
-        1 == this.version
+        (1 == this.version
             ? ((this.creation_time = t.readUint64()),
               (this.modification_time = t.readUint64()),
               (this.timescale = t.readUint32()),
@@ -2000,16 +2000,16 @@ d.initialize(),
               (this.timescale = t.readUint32()),
               (this.duration = t.readUint32())),
             this.parseLanguage(t),
-            t.readUint16();
+            t.readUint16());
     }),
     d.createFullBoxCtor("mehd", function (t) {
-        1 & this.flags &&
+        (1 & this.flags &&
             (r.warn("BoxParser", "mehd box incorrectly uses flags set to 1, converting version to 1"),
             (this.version = 1)),
-            1 == this.version ? (this.fragment_duration = t.readUint64()) : (this.fragment_duration = t.readUint32());
+            1 == this.version ? (this.fragment_duration = t.readUint64()) : (this.fragment_duration = t.readUint32()));
     }),
     d.createFullBoxCtor("meta", function (t) {
-        (this.boxes = []), d.ContainerBox.prototype.parse.call(this, t);
+        ((this.boxes = []), d.ContainerBox.prototype.parse.call(this, t));
     }),
     d.createFullBoxCtor("mfhd", function (t) {
         this.sequence_number = t.readUint32();
@@ -2018,7 +2018,7 @@ d.initialize(),
         this._size = t.readUint32();
     }),
     d.createFullBoxCtor("mvhd", function (t) {
-        1 == this.version
+        (1 == this.version
             ? ((this.creation_time = t.readUint64()),
               (this.modification_time = t.readUint64()),
               (this.timescale = t.readUint32()),
@@ -2033,7 +2033,7 @@ d.initialize(),
             t.readUint32Array(2),
             (this.matrix = t.readUint32Array(9)),
             t.readUint32Array(6),
-            (this.next_track_id = t.readUint32());
+            (this.next_track_id = t.readUint32()));
     }),
     d.createBoxCtor("npck", function (t) {
         this.packetssent = t.readUint32();
@@ -2047,7 +2047,7 @@ d.initialize(),
         for (var i = 0; i < Math.floor((e + 1) / 2); i++) this.padbits = t.readUint8();
     }),
     d.createBoxCtor("pasp", function (t) {
-        (this.hSpacing = t.readUint32()), (this.vSpacing = t.readUint32());
+        ((this.hSpacing = t.readUint32()), (this.vSpacing = t.readUint32()));
     }),
     d.createBoxCtor("payl", function (t) {
         this.text = t.readString(this.size - this.hdr_size);
@@ -2059,8 +2059,8 @@ d.initialize(),
     }),
     d.createFullBoxCtor("pdin", function (t) {
         var e = (this.size - this.hdr_size) / 8;
-        (this.rate = []), (this.initial_delay = []);
-        for (var i = 0; i < e; i++) (this.rate[i] = t.readUint32()), (this.initial_delay[i] = t.readUint32());
+        ((this.rate = []), (this.initial_delay = []));
+        for (var i = 0; i < e; i++) ((this.rate[i] = t.readUint32()), (this.initial_delay[i] = t.readUint32()));
     }),
     d.createFullBoxCtor("pitm", function (t) {
         0 === this.version ? (this.item_id = t.readUint16()) : (this.item_id = t.readUint32());
@@ -2074,9 +2074,9 @@ d.initialize(),
         this.bytes = t.readUint32();
     }),
     d.createFullBoxCtor("prft", function (t) {
-        (this.ref_track_id = t.readUint32()),
+        ((this.ref_track_id = t.readUint32()),
             (this.ntp_timestamp = t.readUint64()),
-            0 === this.version ? (this.media_time = t.readUint32()) : (this.media_time = t.readUint64());
+            0 === this.version ? (this.media_time = t.readUint32()) : (this.media_time = t.readUint64()));
     }),
     d.createFullBoxCtor("pssh", function (t) {
         if (((this.system_id = d.parseHex16(t)), this.version > 0)) {
@@ -2088,17 +2088,17 @@ d.initialize(),
         s > 0 && (this.data = t.readUint8Array(s));
     }),
     d.createFullBoxCtor("clef", function (t) {
-        (this.width = t.readUint32()), (this.height = t.readUint32());
+        ((this.width = t.readUint32()), (this.height = t.readUint32()));
     }),
     d.createFullBoxCtor("enof", function (t) {
-        (this.width = t.readUint32()), (this.height = t.readUint32());
+        ((this.width = t.readUint32()), (this.height = t.readUint32()));
     }),
     d.createFullBoxCtor("prof", function (t) {
-        (this.width = t.readUint32()), (this.height = t.readUint32());
+        ((this.width = t.readUint32()), (this.height = t.readUint32()));
     }),
     d.createContainerBoxCtor("tapt", null, ["clef", "prof", "enof"]),
     d.createBoxCtor("rtp ", function (t) {
-        (this.descriptionformat = t.readString(4)), (this.sdptext = t.readString(this.size - this.hdr_size - 4));
+        ((this.descriptionformat = t.readString(4)), (this.sdptext = t.readString(this.size - this.hdr_size - 4)));
     }),
     d.createFullBoxCtor("saio", function (t) {
         1 & this.flags && ((this.aux_info_type = t.readUint32()), (this.aux_info_type_parameter = t.readUint32()));
@@ -2108,56 +2108,56 @@ d.initialize(),
             0 === this.version ? (this.offset[i] = t.readUint32()) : (this.offset[i] = t.readUint64());
     }),
     d.createFullBoxCtor("saiz", function (t) {
-        1 & this.flags && ((this.aux_info_type = t.readUint32()), (this.aux_info_type_parameter = t.readUint32())),
-            (this.default_sample_info_size = t.readUint8());
+        (1 & this.flags && ((this.aux_info_type = t.readUint32()), (this.aux_info_type_parameter = t.readUint32())),
+            (this.default_sample_info_size = t.readUint8()));
         var e = t.readUint32();
         if (((this.sample_info_size = []), 0 === this.default_sample_info_size))
             for (var i = 0; i < e; i++) this.sample_info_size[i] = t.readUint8();
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_METADATA, "mett", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.content_encoding = t.readCString()),
             (this.mime_format = t.readCString()),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_METADATA, "metx", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.content_encoding = t.readCString()),
             (this.namespace = t.readCString()),
             (this.schema_location = t.readCString()),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_SUBTITLE, "sbtt", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.content_encoding = t.readCString()),
             (this.mime_format = t.readCString()),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_SUBTITLE, "stpp", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.namespace = t.readCString()),
             (this.schema_location = t.readCString()),
             (this.auxiliary_mime_types = t.readCString()),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_SUBTITLE, "stxt", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.content_encoding = t.readCString()),
             (this.mime_format = t.readCString()),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_SUBTITLE, "tx3g", function (t) {
-        this.parseHeader(t),
+        (this.parseHeader(t),
             (this.displayFlags = t.readUint32()),
             (this.horizontal_justification = t.readInt8()),
             (this.vertical_justification = t.readInt8()),
             (this.bg_color_rgba = t.readUint8Array(4)),
             (this.box_record = t.readInt16Array(4)),
             (this.style_record = t.readUint8Array(12)),
-            this.parseFooter(t);
+            this.parseFooter(t));
     }),
     d.createSampleEntryCtor(d.SAMPLE_ENTRY_TYPE_METADATA, "wvtt", function (t) {
-        this.parseHeader(t), this.parseFooter(t);
+        (this.parseHeader(t), this.parseFooter(t));
     }),
     d.createSampleGroupCtor("alst", function (t) {
         var e,
@@ -2166,31 +2166,31 @@ d.initialize(),
             this.sample_offset[e] = t.readUint32();
         var s = this.description_length - 4 - 4 * i;
         for (e = 0, this.num_output_samples = [], this.num_total_samples = []; e < s / 4; e++)
-            (this.num_output_samples[e] = t.readUint16()), (this.num_total_samples[e] = t.readUint16());
+            ((this.num_output_samples[e] = t.readUint16()), (this.num_total_samples[e] = t.readUint16()));
     }),
     d.createSampleGroupCtor("avll", function (t) {
-        (this.layerNumber = t.readUint8()),
+        ((this.layerNumber = t.readUint8()),
             (this.accurateStatisticsFlag = t.readUint8()),
             (this.avgBitRate = t.readUint16()),
-            (this.avgFrameRate = t.readUint16());
+            (this.avgFrameRate = t.readUint16()));
     }),
     d.createSampleGroupCtor("avss", function (t) {
-        (this.subSequenceIdentifier = t.readUint16()), (this.layerNumber = t.readUint8());
+        ((this.subSequenceIdentifier = t.readUint16()), (this.layerNumber = t.readUint8()));
         var e = t.readUint8();
-        (this.durationFlag = e >> 7),
+        ((this.durationFlag = e >> 7),
             (this.avgRateFlag = (e >> 6) & 1),
             this.durationFlag && (this.duration = t.readUint32()),
             this.avgRateFlag &&
                 ((this.accurateStatisticsFlag = t.readUint8()),
                 (this.avgBitRate = t.readUint16()),
                 (this.avgFrameRate = t.readUint16())),
-            (this.dependency = []);
+            (this.dependency = []));
         for (var i = t.readUint8(), s = 0; s < i; s++) {
             var r = {};
-            this.dependency.push(r),
+            (this.dependency.push(r),
                 (r.subSeqDirectionFlag = t.readUint8()),
                 (r.layerNumber = t.readUint8()),
-                (r.subSequenceIdentifier = t.readUint16());
+                (r.subSequenceIdentifier = t.readUint16()));
         }
     }),
     d.createSampleGroupCtor("dtrt", function (t) {
@@ -2204,33 +2204,33 @@ d.initialize(),
     }),
     d.createSampleGroupCtor("rap ", function (t) {
         var e = t.readUint8();
-        (this.num_leading_samples_known = e >> 7), (this.num_leading_samples = 127 & e);
+        ((this.num_leading_samples_known = e >> 7), (this.num_leading_samples = 127 & e));
     }),
     d.createSampleGroupCtor("rash", function (t) {
         if (
             ((this.operation_point_count = t.readUint16()),
             this.description_length !== 2 + (1 === this.operation_point_count ? 2 : 6 * this.operation_point_count) + 9)
         )
-            r.warn("BoxParser", "Mismatch in " + this.grouping_type + " sample group length"),
-                (this.data = t.readUint8Array(this.description_length - 2));
+            (r.warn("BoxParser", "Mismatch in " + this.grouping_type + " sample group length"),
+                (this.data = t.readUint8Array(this.description_length - 2)));
         else {
             if (1 === this.operation_point_count) this.target_rate_share = t.readUint16();
             else {
-                (this.target_rate_share = []), (this.available_bitrate = []);
+                ((this.target_rate_share = []), (this.available_bitrate = []));
                 for (var e = 0; e < this.operation_point_count; e++)
-                    (this.available_bitrate[e] = t.readUint32()), (this.target_rate_share[e] = t.readUint16());
+                    ((this.available_bitrate[e] = t.readUint32()), (this.target_rate_share[e] = t.readUint16()));
             }
-            (this.maximum_bitrate = t.readUint32()),
+            ((this.maximum_bitrate = t.readUint32()),
                 (this.minimum_bitrate = t.readUint32()),
-                (this.discard_priority = t.readUint8());
+                (this.discard_priority = t.readUint8()));
         }
     }),
     d.createSampleGroupCtor("roll", function (t) {
         this.roll_distance = t.readInt16();
     }),
     (d.SampleGroupEntry.prototype.parse = function (t) {
-        r.warn("BoxParser", "Unknown Sample Group type: " + this.grouping_type),
-            (this.data = t.readUint8Array(this.description_length));
+        (r.warn("BoxParser", "Unknown Sample Group type: " + this.grouping_type),
+            (this.data = t.readUint8Array(this.description_length)));
     }),
     d.createSampleGroupCtor("scif", function (t) {
         r.warn("BoxParser", "Sample Group type: " + this.grouping_type + " not fully parsed");
@@ -2241,7 +2241,7 @@ d.initialize(),
     d.createSampleGroupCtor("seig", function (t) {
         this.reserved = t.readUint8();
         var e = t.readUint8();
-        (this.crypt_byte_block = e >> 4),
+        ((this.crypt_byte_block = e >> 4),
             (this.skip_byte_block = 15 & e),
             (this.isProtected = t.readUint8()),
             (this.Per_Sample_IV_Size = t.readUint8()),
@@ -2250,7 +2250,8 @@ d.initialize(),
             (this.constant_IV = 0),
             1 === this.isProtected &&
                 0 === this.Per_Sample_IV_Size &&
-                ((this.constant_IV_size = t.readUint8()), (this.constant_IV = t.readUint8Array(this.constant_IV_size)));
+                ((this.constant_IV_size = t.readUint8()),
+                (this.constant_IV = t.readUint8Array(this.constant_IV_size))));
     }),
     d.createSampleGroupCtor("stsa", function (t) {
         r.warn("BoxParser", "Sample Group type: " + this.grouping_type + " not fully parsed");
@@ -2273,18 +2274,18 @@ d.initialize(),
         r.warn("BoxParser", "Sample Group type: " + this.grouping_type + " not fully parsed");
     }),
     d.createFullBoxCtor("sbgp", function (t) {
-        (this.grouping_type = t.readString(4)),
+        ((this.grouping_type = t.readString(4)),
             1 === this.version ? (this.grouping_type_parameter = t.readUint32()) : (this.grouping_type_parameter = 0),
-            (this.entries = []);
+            (this.entries = []));
         for (var e = t.readUint32(), i = 0; i < e; i++) {
             var s = {};
-            this.entries.push(s), (s.sample_count = t.readInt32()), (s.group_description_index = t.readInt32());
+            (this.entries.push(s), (s.sample_count = t.readInt32()), (s.group_description_index = t.readInt32()));
         }
     }),
     d.createFullBoxCtor("schm", function (t) {
-        (this.scheme_type = t.readString(4)),
+        ((this.scheme_type = t.readString(4)),
             (this.scheme_version = t.readUint32()),
-            1 & this.flags && (this.scheme_uri = t.readString(this.size - this.hdr_size - 8));
+            1 & this.flags && (this.scheme_uri = t.readString(this.size - this.hdr_size - 8)));
     }),
     d.createBoxCtor("sdp ", function (t) {
         this.sdptext = t.readString(this.size - this.hdr_size);
@@ -2292,26 +2293,26 @@ d.initialize(),
     d.createFullBoxCtor("sdtp", function (t) {
         var e,
             i = this.size - this.hdr_size;
-        (this.is_leading = []),
+        ((this.is_leading = []),
             (this.sample_depends_on = []),
             (this.sample_is_depended_on = []),
-            (this.sample_has_redundancy = []);
+            (this.sample_has_redundancy = []));
         for (var s = 0; s < i; s++)
-            (e = t.readUint8()),
+            ((e = t.readUint8()),
                 (this.is_leading[s] = e >> 6),
                 (this.sample_depends_on[s] = (e >> 4) & 3),
                 (this.sample_is_depended_on[s] = (e >> 2) & 3),
-                (this.sample_has_redundancy[s] = 3 & e);
+                (this.sample_has_redundancy[s] = 3 & e));
     }),
     d.createFullBoxCtor("senc"),
     d.createFullBoxCtor("sgpd", function (t) {
-        (this.grouping_type = t.readString(4)),
+        ((this.grouping_type = t.readString(4)),
             r.debug("BoxParser", "Found Sample Groups of type " + this.grouping_type),
             1 === this.version ? (this.default_length = t.readUint32()) : (this.default_length = 0),
             this.version >= 2 && (this.default_group_description_index = t.readUint32()),
-            (this.entries = []);
+            (this.entries = []));
         for (var e, i = t.readUint32(), s = 0; s < i; s++)
-            (e = d[this.grouping_type + "SampleGroupEntry"]
+            ((e = d[this.grouping_type + "SampleGroupEntry"]
                 ? new d[this.grouping_type + "SampleGroupEntry"](this.grouping_type)
                 : new d.SampleGroupEntry(this.grouping_type)),
                 this.entries.push(e),
@@ -2327,30 +2328,30 @@ d.initialize(),
                     ),
                     (e.data = t.readUint8Array(e.description_length)),
                     (t.position -= e.description_length)),
-                e.parse(t);
+                e.parse(t));
     }),
     d.createFullBoxCtor("sidx", function (t) {
-        (this.reference_ID = t.readUint32()),
+        ((this.reference_ID = t.readUint32()),
             (this.timescale = t.readUint32()),
             0 === this.version
                 ? ((this.earliest_presentation_time = t.readUint32()), (this.first_offset = t.readUint32()))
                 : ((this.earliest_presentation_time = t.readUint64()), (this.first_offset = t.readUint64())),
             t.readUint16(),
-            (this.references = []);
+            (this.references = []));
         for (var e = t.readUint16(), i = 0; i < e; i++) {
             var s = {};
             this.references.push(s);
             var r = t.readUint32();
-            (s.reference_type = (r >> 31) & 1),
+            ((s.reference_type = (r >> 31) & 1),
                 (s.referenced_size = 0x7fffffff & r),
                 (s.subsegment_duration = t.readUint32()),
                 (s.starts_with_SAP = ((r = t.readUint32()) >> 31) & 1),
                 (s.SAP_type = (r >> 28) & 7),
-                (s.SAP_delta_time = 0xfffffff & r);
+                (s.SAP_delta_time = 0xfffffff & r));
         }
     }),
     (d.SingleItemTypeReferenceBox = function (t, e, i, s) {
-        d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s);
+        (d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s));
     }),
     (d.SingleItemTypeReferenceBox.prototype = new d.Box()),
     (d.SingleItemTypeReferenceBox.prototype.parse = function (t) {
@@ -2360,7 +2361,7 @@ d.initialize(),
         for (var i = 0; i < e; i++) this.references[i] = t.readUint16();
     }),
     (d.SingleItemTypeReferenceBoxLarge = function (t, e, i, s) {
-        d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s);
+        (d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s));
     }),
     (d.SingleItemTypeReferenceBoxLarge.prototype = new d.Box()),
     (d.SingleItemTypeReferenceBoxLarge.prototype.parse = function (t) {
@@ -2370,7 +2371,7 @@ d.initialize(),
         for (var i = 0; i < e; i++) this.references[i] = t.readUint32();
     }),
     d.createFullBoxCtor("SmDm", function (t) {
-        (this.primaryRChromaticity_x = t.readUint16()),
+        ((this.primaryRChromaticity_x = t.readUint16()),
             (this.primaryRChromaticity_y = t.readUint16()),
             (this.primaryGChromaticity_x = t.readUint16()),
             (this.primaryGChromaticity_y = t.readUint16()),
@@ -2379,19 +2380,19 @@ d.initialize(),
             (this.whitePointChromaticity_x = t.readUint16()),
             (this.whitePointChromaticity_y = t.readUint16()),
             (this.luminanceMax = t.readUint32()),
-            (this.luminanceMin = t.readUint32());
+            (this.luminanceMin = t.readUint32()));
     }),
     d.createFullBoxCtor("smhd", function (t) {
-        (this.balance = t.readUint16()), t.readUint16();
+        ((this.balance = t.readUint16()), t.readUint16());
     }),
     d.createFullBoxCtor("ssix", function (t) {
         this.subsegments = [];
         for (var e = t.readUint32(), i = 0; i < e; i++) {
             var s = {};
-            this.subsegments.push(s), (s.ranges = []);
+            (this.subsegments.push(s), (s.ranges = []));
             for (var r = t.readUint32(), n = 0; n < r; n++) {
                 var a = {};
-                s.ranges.push(a), (a.level = t.readUint8()), (a.range_size = t.readUint24());
+                (s.ranges.push(a), (a.level = t.readUint8()), (a.range_size = t.readUint24()));
             }
         }
     }),
@@ -2407,9 +2408,9 @@ d.initialize(),
     }),
     d.createFullBoxCtor("sthd"),
     d.createFullBoxCtor("stri", function (t) {
-        (this.switch_group = t.readUint16()),
+        ((this.switch_group = t.readUint16()),
             (this.alternate_group = t.readUint16()),
-            (this.sub_track_id = t.readUint32());
+            (this.sub_track_id = t.readUint32()));
         var e = (this.size - this.hdr_size - 8) / 4;
         this.attribute_list = [];
         for (var i = 0; i < e; i++) this.attribute_list[i] = t.readUint32();
@@ -2424,15 +2425,15 @@ d.initialize(),
             0 === this.version)
         )
             for (i = 0; i < e; i++)
-                this.first_chunk.push(t.readUint32()),
+                (this.first_chunk.push(t.readUint32()),
                     this.samples_per_chunk.push(t.readUint32()),
-                    this.sample_description_index.push(t.readUint32());
+                    this.sample_description_index.push(t.readUint32()));
     }),
     d.createFullBoxCtor("stsd", function (t) {
         var e, i, s, n;
         for (e = 1, this.entries = [], s = t.readUint32(); e <= s; e++) {
             if ((i = d.parseOneBox(t, !0, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            d[i.type + "SampleEntry"]
+            (d[i.type + "SampleEntry"]
                 ? (((n = new d[i.type + "SampleEntry"](i.size)).hdr_size = i.hdr_size), (n.start = i.start))
                 : (r.warn("BoxParser", "Unknown sample entry type: " + i.type),
                   (n = new d.SampleEntry(i.type, i.size, i.hdr_size, i.start))),
@@ -2445,7 +2446,7 @@ d.initialize(),
                     ),
                     n.parseDataAndRewind(t)),
                 n.parse(t),
-                this.entries.push(n);
+                this.entries.push(n));
         }
     }),
     d.createFullBoxCtor("stsg", function (t) {
@@ -2463,7 +2464,7 @@ d.initialize(),
             0 === this.version)
         )
             for (i = 0; i < e; i++)
-                this.shadowed_sample_numbers.push(t.readUint32()), this.sync_sample_numbers.push(t.readUint32());
+                (this.shadowed_sample_numbers.push(t.readUint32()), this.sync_sample_numbers.push(t.readUint32()));
     }),
     d.createFullBoxCtor("stss", function (t) {
         var e, i;
@@ -2486,27 +2487,27 @@ d.initialize(),
         var e, i, s;
         if (((e = t.readUint32()), (this.sample_counts = []), (this.sample_deltas = []), 0 === this.version))
             for (i = 0; i < e; i++)
-                this.sample_counts.push(t.readUint32()),
+                (this.sample_counts.push(t.readUint32()),
                     (s = t.readInt32()) < 0 &&
                         (r.warn(
                             "BoxParser",
                             "File uses negative stts sample delta, using value 1 instead, sync may be lost!",
                         ),
                         (s = 1)),
-                    this.sample_deltas.push(s);
+                    this.sample_deltas.push(s));
     }),
     d.createFullBoxCtor("stvi", function (t) {
         var e,
             i,
             s = t.readUint32();
-        (this.single_view_allowed = 3 & s), (this.stereo_scheme = t.readUint32());
+        ((this.single_view_allowed = 3 & s), (this.stereo_scheme = t.readUint32()));
         var r = t.readUint32();
         for (
             this.stereo_indication_type = t.readString(r), this.boxes = [];
             t.getPosition() < this.start + this.size;
         ) {
             if ((e = d.parseOneBox(t, !1, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            (i = e.box), this.boxes.push(i), (this[i.type] = i);
+            ((i = e.box), this.boxes.push(i), (this[i.type] = i));
         }
     }),
     d.createBoxCtor("styp", function (t) {
@@ -2524,7 +2525,7 @@ d.initialize(),
                     var e,
                         i,
                         s = t.readUint8();
-                    (this.sample_sizes[e] = (s >> 4) & 15), (this.sample_sizes[e + 1] = 15 & s);
+                    ((this.sample_sizes[e] = (s >> 4) & 15), (this.sample_sizes[e + 1] = 15 & s));
                 }
             else if (8 === this.field_size) for (e = 0; e < i; e++) this.sample_sizes[e] = t.readUint8();
             else if (16 === this.field_size) for (e = 0; e < i; e++) this.sample_sizes[e] = t.readUint16();
@@ -2545,11 +2546,11 @@ d.initialize(),
             )
                 for (i = 0; i < r; i++) {
                     var a = {};
-                    n.subsamples.push(a),
+                    (n.subsamples.push(a),
                         1 == this.version ? (a.size = t.readUint32()) : (a.size = t.readUint16()),
                         (a.priority = t.readUint8()),
                         (a.discardable = t.readUint8()),
-                        (a.codec_specific_parameters = t.readUint32());
+                        (a.codec_specific_parameters = t.readUint32()));
                 }
         }
     }),
@@ -2557,22 +2558,22 @@ d.initialize(),
         if ((t.readUint8(), 0 === this.version)) t.readUint8();
         else {
             var e = t.readUint8();
-            (this.default_crypt_byte_block = (e >> 4) & 15), (this.default_skip_byte_block = 15 & e);
+            ((this.default_crypt_byte_block = (e >> 4) & 15), (this.default_skip_byte_block = 15 & e));
         }
-        (this.default_isProtected = t.readUint8()),
+        ((this.default_isProtected = t.readUint8()),
             (this.default_Per_Sample_IV_Size = t.readUint8()),
             (this.default_KID = d.parseHex16(t)),
             1 === this.default_isProtected &&
                 0 === this.default_Per_Sample_IV_Size &&
                 ((this.default_constant_IV_size = t.readUint8()),
-                (this.default_constant_IV = t.readUint8Array(this.default_constant_IV_size)));
+                (this.default_constant_IV = t.readUint8Array(this.default_constant_IV_size))));
     }),
     d.createFullBoxCtor("tfdt", function (t) {
         1 == this.version ? (this.baseMediaDecodeTime = t.readUint64()) : (this.baseMediaDecodeTime = t.readUint32());
     }),
     d.createFullBoxCtor("tfhd", function (t) {
         var e = 0;
-        (this.track_id = t.readUint32()),
+        ((this.track_id = t.readUint32()),
             this.size - this.hdr_size > e && this.flags & d.TFHD_FLAG_BASE_DATA_OFFSET
                 ? ((this.base_data_offset = t.readUint64()), (e += 8))
                 : (this.base_data_offset = 0),
@@ -2587,25 +2588,25 @@ d.initialize(),
                 : (this.default_sample_size = 0),
             this.size - this.hdr_size > e && this.flags & d.TFHD_FLAG_SAMPLE_FLAGS
                 ? ((this.default_sample_flags = t.readUint32()), (e += 4))
-                : (this.default_sample_flags = 0);
+                : (this.default_sample_flags = 0));
     }),
     d.createFullBoxCtor("tfra", function (t) {
-        (this.track_ID = t.readUint32()), t.readUint24();
+        ((this.track_ID = t.readUint32()), t.readUint24());
         var e = t.readUint8();
-        (this.length_size_of_traf_num = (e >> 4) & 3),
+        ((this.length_size_of_traf_num = (e >> 4) & 3),
             (this.length_size_of_trun_num = (e >> 2) & 3),
             (this.length_size_of_sample_num = 3 & e),
-            (this.entries = []);
+            (this.entries = []));
         for (var i = t.readUint32(), s = 0; s < i; s++)
-            1 === this.version
+            (1 === this.version
                 ? ((this.time = t.readUint64()), (this.moof_offset = t.readUint64()))
                 : ((this.time = t.readUint32()), (this.moof_offset = t.readUint32())),
                 (this.traf_number = t["readUint" + 8 * (this.length_size_of_traf_num + 1)]()),
                 (this.trun_number = t["readUint" + 8 * (this.length_size_of_trun_num + 1)]()),
-                (this.sample_number = t["readUint" + 8 * (this.length_size_of_sample_num + 1)]());
+                (this.sample_number = t["readUint" + 8 * (this.length_size_of_sample_num + 1)]()));
     }),
     d.createFullBoxCtor("tkhd", function (t) {
-        1 == this.version
+        (1 == this.version
             ? ((this.creation_time = t.readUint64()),
               (this.modification_time = t.readUint64()),
               (this.track_id = t.readUint32()),
@@ -2623,7 +2624,7 @@ d.initialize(),
             t.readUint16(),
             (this.matrix = t.readInt32Array(9)),
             (this.width = t.readUint32()),
-            (this.height = t.readUint32());
+            (this.height = t.readUint32()));
     }),
     d.createBoxCtor("tmax", function (t) {
         this.time = t.readUint32();
@@ -2641,20 +2642,20 @@ d.initialize(),
         this.bytessent = t.readUint64();
     }),
     (d.TrackGroupTypeBox.prototype.parse = function (t) {
-        this.parseFullHeader(t), (this.track_group_id = t.readUint32());
+        (this.parseFullHeader(t), (this.track_group_id = t.readUint32()));
     }),
     d.createTrackGroupCtor("msrc"),
     (d.TrackReferenceTypeBox = function (t, e, i, s) {
-        d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s);
+        (d.Box.call(this, t, e), (this.hdr_size = i), (this.start = s));
     }),
     (d.TrackReferenceTypeBox.prototype = new d.Box()),
     (d.TrackReferenceTypeBox.prototype.parse = function (t) {
         this.track_ids = t.readUint32Array((this.size - this.hdr_size) / 4);
     }),
     (d.trefBox.prototype.parse = function (t) {
-        for (var e, i; t.getPosition() < this.start + this.size; ) {
+        for (var e, i; t.getPosition() < this.start + this.size;) {
             if ((e = d.parseOneBox(t, !0, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            (i = new d.TrackReferenceTypeBox(e.type, e.size, e.hdr_size, e.start)).write === d.Box.prototype.write &&
+            ((i = new d.TrackReferenceTypeBox(e.type, e.size, e.hdr_size, e.start)).write === d.Box.prototype.write &&
                 "mdat" !== i.type &&
                 (r.info(
                     "BoxParser",
@@ -2664,21 +2665,21 @@ d.initialize(),
                 ),
                 i.parseDataAndRewind(t)),
                 i.parse(t),
-                this.boxes.push(i);
+                this.boxes.push(i));
         }
     }),
     d.createFullBoxCtor("trep", function (t) {
-        for (this.track_ID = t.readUint32(), this.boxes = []; t.getPosition() < this.start + this.size; ) {
+        for (this.track_ID = t.readUint32(), this.boxes = []; t.getPosition() < this.start + this.size;) {
             if ((ret = d.parseOneBox(t, !1, this.size - (t.getPosition() - this.start))).code !== d.OK) return;
-            (box = ret.box), this.boxes.push(box);
+            ((box = ret.box), this.boxes.push(box));
         }
     }),
     d.createFullBoxCtor("trex", function (t) {
-        (this.track_id = t.readUint32()),
+        ((this.track_id = t.readUint32()),
             (this.default_sample_description_index = t.readUint32()),
             (this.default_sample_duration = t.readUint32()),
             (this.default_sample_size = t.readUint32()),
-            (this.default_sample_flags = t.readUint32());
+            (this.default_sample_flags = t.readUint32()));
     }),
     d.createBoxCtor("trpy", function (t) {
         this.bytessent = t.readUint64();
@@ -2701,13 +2702,13 @@ d.initialize(),
             this.size - this.hdr_size > e)
         )
             for (var i = 0; i < this.sample_count; i++)
-                this.flags & d.TRUN_FLAGS_DURATION && (this.sample_duration[i] = t.readUint32()),
+                (this.flags & d.TRUN_FLAGS_DURATION && (this.sample_duration[i] = t.readUint32()),
                     this.flags & d.TRUN_FLAGS_SIZE && (this.sample_size[i] = t.readUint32()),
                     this.flags & d.TRUN_FLAGS_FLAGS && (this.sample_flags[i] = t.readUint32()),
                     this.flags & d.TRUN_FLAGS_CTS_OFFSET &&
                         (0 === this.version
                             ? (this.sample_composition_time_offset[i] = t.readUint32())
-                            : (this.sample_composition_time_offset[i] = t.readInt32()));
+                            : (this.sample_composition_time_offset[i] = t.readInt32())));
     }),
     d.createFullBoxCtor("tsel", function (t) {
         this.switch_group = t.readUint32();
@@ -2722,8 +2723,8 @@ d.initialize(),
         1 !== this.flags && (this.location = t.readCString());
     }),
     d.createFullBoxCtor("urn ", function (t) {
-        (this.name = t.readCString()),
-            this.size - this.hdr_size - this.name.length - 1 > 0 && (this.location = t.readCString());
+        ((this.name = t.readCString()),
+            this.size - this.hdr_size - this.name.length - 1 > 0 && (this.location = t.readCString()));
     }),
     d.createUUIDBox("a5d40b30e81411ddba2f0800200c9a66", !0, !1, function (t) {
         this.LiveServerManifest = t
@@ -2741,22 +2742,22 @@ d.initialize(),
     }),
     d.createUUIDBox("a2394f525a9b4f14a2446c427c648df4", !0, !1),
     d.createUUIDBox("8974dbce7be74c5184f97148f9882554", !0, !1, function (t) {
-        (this.default_AlgorithmID = t.readUint24()),
+        ((this.default_AlgorithmID = t.readUint24()),
             (this.default_IV_size = t.readUint8()),
-            (this.default_KID = d.parseHex16(t));
+            (this.default_KID = d.parseHex16(t)));
     }),
     d.createUUIDBox("d4807ef2ca3946958e5426cb9e46a79f", !0, !1, function (t) {
-        (this.fragment_count = t.readUint8()), (this.entries = []);
+        ((this.fragment_count = t.readUint8()), (this.entries = []));
         for (var e = 0; e < this.fragment_count; e++) {
             var i = {},
                 s = 0,
                 r = 0;
-            1 === this.version
+            (1 === this.version
                 ? ((s = t.readUint64()), (r = t.readUint64()))
                 : ((s = t.readUint32()), (r = t.readUint32())),
                 (i.absolute_time = s),
                 (i.absolute_duration = r),
-                this.entries.push(i);
+                this.entries.push(i));
         }
     }),
     d.createUUIDBox("6d1d9b0542d544e680e2141daff757b2", !0, !1, function (t) {
@@ -2765,11 +2766,11 @@ d.initialize(),
             : ((this.absolute_time = t.readUint32()), (this.duration = t.readUint32()));
     }),
     d.createFullBoxCtor("vmhd", function (t) {
-        (this.graphicsmode = t.readUint16()), (this.opcolor = t.readUint16Array(3));
+        ((this.graphicsmode = t.readUint16()), (this.opcolor = t.readUint16Array(3)));
     }),
     d.createFullBoxCtor("vpcC", function (t) {
         var e;
-        1 === this.version
+        (1 === this.version
             ? ((this.profile = t.readUint8()),
               (this.level = t.readUint8()),
               (e = t.readUint8()),
@@ -2789,7 +2790,7 @@ d.initialize(),
               (this.transferFunction = (e >> 1) & 7),
               (this.videoFullRangeFlag = 1 & e)),
             (this.codecIntializationDataSize = t.readUint16()),
-            (this.codecIntializationData = t.readUint8Array(this.codecIntializationDataSize));
+            (this.codecIntializationData = t.readUint8Array(this.codecIntializationDataSize)));
     }),
     d.createBoxCtor("vttC", function (t) {
         this.text = t.readString(this.size - this.hdr_size);
@@ -2801,14 +2802,14 @@ d.initialize(),
                 held_bits: void 0,
                 num_held_bits: 0,
                 stream_read_1_bytes: function (t) {
-                    (this.held_bits = t.readUint8()), (this.num_held_bits = 8);
+                    ((this.held_bits = t.readUint8()), (this.num_held_bits = 8));
                 },
                 stream_read_2_bytes: function (t) {
-                    (this.held_bits = t.readUint16()), (this.num_held_bits = 16);
+                    ((this.held_bits = t.readUint16()), (this.num_held_bits = 16));
                 },
                 extract_bits: function (t) {
                     var e = (this.held_bits >> (this.num_held_bits - t)) & ((1 << t) - 1);
-                    return (this.num_held_bits -= t), e;
+                    return ((this.num_held_bits -= t), e);
                 },
             };
         if (
@@ -2864,19 +2865,19 @@ d.initialize(),
                 this.ptl_num_sub_profiles)
             )
                 for (e = 0; e < this.ptl_num_sub_profiles; e++) this.general_sub_profile_idc.push(t.readUint32());
-            (this.max_picture_width = t.readUint16()),
+            ((this.max_picture_width = t.readUint16()),
                 (this.max_picture_height = t.readUint16()),
-                (this.avg_frame_rate = t.readUint16());
+                (this.avg_frame_rate = t.readUint16()));
         }
         this.nalu_arrays = [];
         var o = t.readUint8();
         for (e = 0; e < o; e++) {
             var h = [];
-            this.nalu_arrays.push(h),
+            (this.nalu_arrays.push(h),
                 s.stream_read_1_bytes(t),
                 (h.completeness = s.extract_bits(1)),
                 s.extract_bits(2),
-                (h.nalu_type = s.extract_bits(5));
+                (h.nalu_type = s.extract_bits(5)));
             var d = 1;
             for (13 != h.nalu_type && 12 != h.nalu_type && (d = t.readUint16()), i = 0; i < d; i++) {
                 var p = t.readUint16();
@@ -2950,7 +2951,7 @@ d.initialize(),
     }),
     (d.decimalToHex = function (t, e) {
         var i = Number(t).toString(16);
-        for (e = null == e ? (e = 2) : e; i.length < e; ) i = "0" + i;
+        for (e = null == e ? (e = 2) : e; i.length < e;) i = "0" + i;
         return i;
     }),
     (d.avc1SampleEntry.prototype.getCodec =
@@ -2985,14 +2986,14 @@ d.initialize(),
                     case 3:
                         e += "C";
                 }
-                (e += this.hvcC.general_profile_idc), (e += ".");
+                ((e += this.hvcC.general_profile_idc), (e += "."));
                 var i = this.hvcC.general_profile_compatibility,
                     s = 0;
-                for (t = 0; t < 32 && ((s |= 1 & i), 31 != t); t++) (s <<= 1), (i >>= 1);
-                (e += d.decimalToHex(s, 0)),
+                for (t = 0; t < 32 && ((s |= 1 & i), 31 != t); t++) ((s <<= 1), (i >>= 1));
+                ((e += d.decimalToHex(s, 0)),
                     (e += "."),
                     0 === this.hvcC.general_tier_flag ? (e += "L") : (e += "H"),
-                    (e += this.hvcC.general_level_idc);
+                    (e += this.hvcC.general_level_idc));
                 var r = !1,
                     n = "";
                 for (t = 5; t >= 0; t--)
@@ -3006,9 +3007,9 @@ d.initialize(),
         function () {
             var t = d.SampleEntry.prototype.getCodec.call(this);
             if (this.vvcC) {
-                (t += "." + this.vvcC.general_profile_idc),
+                ((t += "." + this.vvcC.general_profile_idc),
                     this.vvcC.general_tier_flag ? (t += ".H") : (t += ".L"),
-                    (t += this.vvcC.general_level_idc);
+                    (t += this.vvcC.general_level_idc));
                 var e = "";
                 if (this.vvcC.general_constraint_info) {
                     var i,
@@ -3020,10 +3021,10 @@ d.initialize(),
                         s < this.vvcC.general_constraint_info.length;
                         ++s
                     )
-                        (i |= (this.vvcC.general_constraint_info[s] >> 2) & 63),
+                        ((i |= (this.vvcC.general_constraint_info[s] >> 2) & 63),
                             n.push(i),
                             i && (r = s),
-                            (i = (this.vvcC.general_constraint_info[s] >> 2) & 3);
+                            (i = (this.vvcC.general_constraint_info[s] >> 2) & 3));
                     if (void 0 === r) e = ".CA";
                     else {
                         e = ".C";
@@ -3031,8 +3032,8 @@ d.initialize(),
                             o = 0,
                             h = 0;
                         for (s = 0; s <= r; ++s)
-                            for (o = (o << 8) | n[s], h += 8; h >= 5; )
-                                (e += a[(o >> (h - 5)) & 31]), (h -= 5), (o &= (1 << h) - 1);
+                            for (o = (o << 8) | n[s], h += 8; h >= 5;)
+                                ((e += a[(o >> (h - 5)) & 31]), (h -= 5), (o &= (1 << h) - 1));
                         h && ((o <<= 5 - h), (e += a[31 & o]));
                     }
                 }
@@ -3057,7 +3058,7 @@ d.initialize(),
                 e = this.vpcC.level;
             0 == e && (e = "00");
             var i = this.vpcC.bitDepth;
-            return 8 == i && (i = "08"), t + ".0" + this.vpcC.profile + "." + e + "." + i;
+            return (8 == i && (i = "08"), t + ".0" + this.vpcC.profile + "." + e + "." + i);
         }),
     (d.av01SampleEntry.prototype.getCodec = function () {
         var t,
@@ -3072,7 +3073,7 @@ d.initialize(),
         );
     }),
     (d.Box.prototype.writeHeader = function (t, e) {
-        (this.size += 8),
+        ((this.size += 8),
             this.size > 0x100000000 && (this.size += 8),
             "uuid" === this.type && (this.size += 16),
             r.debug(
@@ -3084,13 +3085,13 @@ d.initialize(),
                 : ((this.sizePosition = t.getPosition()), t.writeUint32(this.size)),
             t.writeString(this.type, null, 4),
             "uuid" === this.type && t.writeUint8Array(this.uuid),
-            this.size > 0x100000000 && t.writeUint64(this.size);
+            this.size > 0x100000000 && t.writeUint64(this.size));
     }),
     (d.FullBox.prototype.writeHeader = function (t) {
-        (this.size += 4),
+        ((this.size += 4),
             d.Box.prototype.writeHeader.call(this, t, " v=" + this.version + " f=" + this.flags),
             t.writeUint8(this.version),
-            t.writeUint24(this.flags);
+            t.writeUint24(this.flags));
     }),
     (d.Box.prototype.write = function (t) {
         "mdat" === this.type
@@ -3100,14 +3101,14 @@ d.initialize(),
               this.data && t.writeUint8Array(this.data));
     }),
     (d.ContainerBox.prototype.write = function (t) {
-        (this.size = 0), this.writeHeader(t);
+        ((this.size = 0), this.writeHeader(t));
         for (var e = 0; e < this.boxes.length; e++)
             this.boxes[e] && (this.boxes[e].write(t), (this.size += this.boxes[e].size));
-        r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
-            t.adjustUint32(this.sizePosition, this.size);
+        (r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
+            t.adjustUint32(this.sizePosition, this.size));
     }),
     (d.TrackReferenceTypeBox.prototype.write = function (t) {
-        (this.size = 4 * this.track_ids.length), this.writeHeader(t), t.writeUint32Array(this.track_ids);
+        ((this.size = 4 * this.track_ids.length), this.writeHeader(t), t.writeUint32Array(this.track_ids));
     }),
     (d.avcCBox.prototype.write = function (t) {
         var e;
@@ -3126,9 +3127,9 @@ d.initialize(),
             e < this.SPS.length;
             e++
         )
-            t.writeUint16(this.SPS[e].length), t.writeUint8Array(this.SPS[e].nalu);
+            (t.writeUint16(this.SPS[e].length), t.writeUint8Array(this.SPS[e].nalu));
         for (t.writeUint8(this.PPS.length), e = 0; e < this.PPS.length; e++)
-            t.writeUint16(this.PPS[e].length), t.writeUint8Array(this.PPS[e].nalu);
+            (t.writeUint16(this.PPS[e].length), t.writeUint8Array(this.PPS[e].nalu));
         this.ext && t.writeUint8Array(this.ext);
     }),
     (d.co64Box.prototype.write = function (t) {
@@ -3146,7 +3147,7 @@ d.initialize(),
             t.writeUint64(this.chunk_offsets[e]);
     }),
     (d.cslgBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 20),
             this.writeHeader(t),
@@ -3154,7 +3155,7 @@ d.initialize(),
             t.writeInt32(this.leastDecodeToDisplayDelta),
             t.writeInt32(this.greatestDecodeToDisplayDelta),
             t.writeInt32(this.compositionStartTime),
-            t.writeInt32(this.compositionEndTime);
+            t.writeInt32(this.compositionEndTime));
     }),
     (d.cttsBox.prototype.write = function (t) {
         var e;
@@ -3168,38 +3169,42 @@ d.initialize(),
             e < this.sample_counts.length;
             e++
         )
-            t.writeUint32(this.sample_counts[e]),
-                1 === this.version ? t.writeInt32(this.sample_offsets[e]) : t.writeUint32(this.sample_offsets[e]);
+            (t.writeUint32(this.sample_counts[e]),
+                1 === this.version ? t.writeInt32(this.sample_offsets[e]) : t.writeUint32(this.sample_offsets[e]));
     }),
     (d.drefBox.prototype.write = function (t) {
-        (this.version = 0), (this.flags = 0), (this.size = 4), this.writeHeader(t), t.writeUint32(this.entries.length);
-        for (var e = 0; e < this.entries.length; e++) this.entries[e].write(t), (this.size += this.entries[e].size);
-        r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
-            t.adjustUint32(this.sizePosition, this.size);
+        ((this.version = 0),
+            (this.flags = 0),
+            (this.size = 4),
+            this.writeHeader(t),
+            t.writeUint32(this.entries.length));
+        for (var e = 0; e < this.entries.length; e++) (this.entries[e].write(t), (this.size += this.entries[e].size));
+        (r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
+            t.adjustUint32(this.sizePosition, this.size));
     }),
     (d.elngBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = this.extended_language.length),
             this.writeHeader(t),
-            t.writeString(this.extended_language);
+            t.writeString(this.extended_language));
     }),
     (d.elstBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 4 + 12 * this.entries.length),
             this.writeHeader(t),
-            t.writeUint32(this.entries.length);
+            t.writeUint32(this.entries.length));
         for (var e = 0; e < this.entries.length; e++) {
             var i = this.entries[e];
-            t.writeUint32(i.segment_duration),
+            (t.writeUint32(i.segment_duration),
                 t.writeInt32(i.media_time),
                 t.writeInt16(i.media_rate_integer),
-                t.writeInt16(i.media_rate_fraction);
+                t.writeInt16(i.media_rate_fraction));
         }
     }),
     (d.emsgBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 16 + this.message_data.length + (this.scheme_id_uri.length + 1) + (this.value.length + 1)),
             this.writeHeader(t),
@@ -3209,17 +3214,17 @@ d.initialize(),
             t.writeUint32(this.presentation_time_delta),
             t.writeUint32(this.event_duration),
             t.writeUint32(this.id),
-            t.writeUint8Array(this.message_data);
+            t.writeUint8Array(this.message_data));
     }),
     (d.ftypBox.prototype.write = function (t) {
-        (this.size = 8 + 4 * this.compatible_brands.length),
+        ((this.size = 8 + 4 * this.compatible_brands.length),
             this.writeHeader(t),
             t.writeString(this.major_brand, null, 4),
-            t.writeUint32(this.minor_version);
+            t.writeUint32(this.minor_version));
         for (var e = 0; e < this.compatible_brands.length; e++) t.writeString(this.compatible_brands[e], null, 4);
     }),
     (d.hdlrBox.prototype.write = function (t) {
-        (this.size = 20 + this.name.length + 1),
+        ((this.size = 20 + this.name.length + 1),
             (this.version = 0),
             (this.flags = 0),
             this.writeHeader(t),
@@ -3228,18 +3233,18 @@ d.initialize(),
             t.writeUint32(0),
             t.writeUint32(0),
             t.writeUint32(0),
-            t.writeCString(this.name);
+            t.writeCString(this.name));
     }),
     (d.kindBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = this.schemeURI.length + 1 + (this.value.length + 1)),
             this.writeHeader(t),
             t.writeCString(this.schemeURI),
-            t.writeCString(this.value);
+            t.writeCString(this.value));
     }),
     (d.mdhdBox.prototype.write = function (t) {
-        (this.size = 20),
+        ((this.size = 20),
             (this.flags = 0),
             (this.version = 0),
             this.writeHeader(t),
@@ -3248,20 +3253,24 @@ d.initialize(),
             t.writeUint32(this.timescale),
             t.writeUint32(this.duration),
             t.writeUint16(this.language),
-            t.writeUint16(0);
+            t.writeUint16(0));
     }),
     (d.mehdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 4),
             this.writeHeader(t),
-            t.writeUint32(this.fragment_duration);
+            t.writeUint32(this.fragment_duration));
     }),
     (d.mfhdBox.prototype.write = function (t) {
-        (this.version = 0), (this.flags = 0), (this.size = 4), this.writeHeader(t), t.writeUint32(this.sequence_number);
+        ((this.version = 0),
+            (this.flags = 0),
+            (this.size = 4),
+            this.writeHeader(t),
+            t.writeUint32(this.sequence_number));
     }),
     (d.mvhdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 96),
             this.writeHeader(t),
@@ -3281,10 +3290,10 @@ d.initialize(),
             t.writeUint32(0),
             t.writeUint32(0),
             t.writeUint32(0),
-            t.writeUint32(this.next_track_id);
+            t.writeUint32(this.next_track_id));
     }),
     (d.SampleEntry.prototype.writeHeader = function (t) {
-        (this.size = 8),
+        ((this.size = 8),
             d.Box.prototype.writeHeader.call(this, t),
             t.writeUint8(0),
             t.writeUint8(0),
@@ -3292,22 +3301,22 @@ d.initialize(),
             t.writeUint8(0),
             t.writeUint8(0),
             t.writeUint8(0),
-            t.writeUint16(this.data_reference_index);
+            t.writeUint16(this.data_reference_index));
     }),
     (d.SampleEntry.prototype.writeFooter = function (t) {
-        for (var e = 0; e < this.boxes.length; e++) this.boxes[e].write(t), (this.size += this.boxes[e].size);
-        r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
-            t.adjustUint32(this.sizePosition, this.size);
+        for (var e = 0; e < this.boxes.length; e++) (this.boxes[e].write(t), (this.size += this.boxes[e].size));
+        (r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
+            t.adjustUint32(this.sizePosition, this.size));
     }),
     (d.SampleEntry.prototype.write = function (t) {
-        this.writeHeader(t),
+        (this.writeHeader(t),
             t.writeUint8Array(this.data),
             (this.size += this.data.length),
             r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
-            t.adjustUint32(this.sizePosition, this.size);
+            t.adjustUint32(this.sizePosition, this.size));
     }),
     (d.VisualSampleEntry.prototype.write = function (t) {
-        this.writeHeader(t),
+        (this.writeHeader(t),
             (this.size += 70),
             t.writeUint16(0),
             t.writeUint16(0),
@@ -3324,10 +3333,10 @@ d.initialize(),
             t.writeString(this.compressorname, null, 31),
             t.writeUint16(this.depth),
             t.writeInt16(-1),
-            this.writeFooter(t);
+            this.writeFooter(t));
     }),
     (d.AudioSampleEntry.prototype.write = function (t) {
-        this.writeHeader(t),
+        (this.writeHeader(t),
             (this.size += 20),
             t.writeUint32(0),
             t.writeUint32(0),
@@ -3336,38 +3345,38 @@ d.initialize(),
             t.writeUint16(0),
             t.writeUint16(0),
             t.writeUint32(this.samplerate << 16),
-            this.writeFooter(t);
+            this.writeFooter(t));
     }),
     (d.stppSampleEntry.prototype.write = function (t) {
-        this.writeHeader(t),
+        (this.writeHeader(t),
             (this.size +=
                 this.namespace.length + 1 + this.schema_location.length + 1 + this.auxiliary_mime_types.length + 1),
             t.writeCString(this.namespace),
             t.writeCString(this.schema_location),
             t.writeCString(this.auxiliary_mime_types),
-            this.writeFooter(t);
+            this.writeFooter(t));
     }),
     (d.SampleGroupEntry.prototype.write = function (t) {
         t.writeUint8Array(this.data);
     }),
     (d.sbgpBox.prototype.write = function (t) {
-        (this.version = 1),
+        ((this.version = 1),
             (this.flags = 0),
             (this.size = 12 + 8 * this.entries.length),
             this.writeHeader(t),
             t.writeString(this.grouping_type, null, 4),
             t.writeUint32(this.grouping_type_parameter),
-            t.writeUint32(this.entries.length);
+            t.writeUint32(this.entries.length));
         for (var e = 0; e < this.entries.length; e++) {
             var i = this.entries[e];
-            t.writeInt32(i.sample_count), t.writeInt32(i.group_description_index);
+            (t.writeInt32(i.sample_count), t.writeInt32(i.group_description_index));
         }
     }),
     (d.sgpdBox.prototype.write = function (t) {
         var e, i;
         for (e = 0, this.flags = 0, this.size = 12; e < this.entries.length; e++)
-            (i = this.entries[e]),
-                1 === this.version && (0 === this.default_length && (this.size += 4), (this.size += i.data.length));
+            ((i = this.entries[e]),
+                1 === this.version && (0 === this.default_length && (this.size += 4), (this.size += i.data.length)));
         for (
             this.writeHeader(t),
                 t.writeString(this.grouping_type, null, 4),
@@ -3378,12 +3387,12 @@ d.initialize(),
             e < this.entries.length;
             e++
         )
-            (i = this.entries[e]),
+            ((i = this.entries[e]),
                 1 === this.version && 0 === this.default_length && t.writeUint32(i.description_length),
-                i.write(t);
+                i.write(t));
     }),
     (d.sidxBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 20 + 12 * this.references.length),
             this.writeHeader(t),
@@ -3392,29 +3401,29 @@ d.initialize(),
             t.writeUint32(this.earliest_presentation_time),
             t.writeUint32(this.first_offset),
             t.writeUint16(0),
-            t.writeUint16(this.references.length);
+            t.writeUint16(this.references.length));
         for (var e = 0; e < this.references.length; e++) {
             var i = this.references[e];
-            t.writeUint32((i.reference_type << 31) | i.referenced_size),
+            (t.writeUint32((i.reference_type << 31) | i.referenced_size),
                 t.writeUint32(i.subsegment_duration),
-                t.writeUint32((i.starts_with_SAP << 31) | (i.SAP_type << 28) | i.SAP_delta_time);
+                t.writeUint32((i.starts_with_SAP << 31) | (i.SAP_type << 28) | i.SAP_delta_time));
         }
     }),
     (d.smhdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 1),
             (this.size = 4),
             this.writeHeader(t),
             t.writeUint16(this.balance),
-            t.writeUint16(0);
+            t.writeUint16(0));
     }),
     (d.stcoBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 4 + 4 * this.chunk_offsets.length),
             this.writeHeader(t),
             t.writeUint32(this.chunk_offsets.length),
-            t.writeUint32Array(this.chunk_offsets);
+            t.writeUint32Array(this.chunk_offsets));
     }),
     (d.stscBox.prototype.write = function (t) {
         var e;
@@ -3428,9 +3437,9 @@ d.initialize(),
             e < this.first_chunk.length;
             e++
         )
-            t.writeUint32(this.first_chunk[e]),
+            (t.writeUint32(this.first_chunk[e]),
                 t.writeUint32(this.samples_per_chunk[e]),
-                t.writeUint32(this.sample_description_index[e]);
+                t.writeUint32(this.sample_description_index[e]));
     }),
     (d.stsdBox.prototype.write = function (t) {
         var e;
@@ -3445,9 +3454,9 @@ d.initialize(),
             e < this.entries.length;
             e++
         )
-            this.entries[e].write(t), (this.size += this.entries[e].size);
-        r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
-            t.adjustUint32(this.sizePosition, this.size);
+            (this.entries[e].write(t), (this.size += this.entries[e].size));
+        (r.debug("BoxWriter", "Adjusting box " + this.type + " with new size " + this.size),
+            t.adjustUint32(this.sizePosition, this.size));
     }),
     (d.stshBox.prototype.write = function (t) {
         var e;
@@ -3461,32 +3470,32 @@ d.initialize(),
             e < this.shadowed_sample_numbers.length;
             e++
         )
-            t.writeUint32(this.shadowed_sample_numbers[e]), t.writeUint32(this.sync_sample_numbers[e]);
+            (t.writeUint32(this.shadowed_sample_numbers[e]), t.writeUint32(this.sync_sample_numbers[e]));
     }),
     (d.stssBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 4 + 4 * this.sample_numbers.length),
             this.writeHeader(t),
             t.writeUint32(this.sample_numbers.length),
-            t.writeUint32Array(this.sample_numbers);
+            t.writeUint32Array(this.sample_numbers));
     }),
     (d.stszBox.prototype.write = function (t) {
         var e,
             i = !0;
         if (((this.version = 0), (this.flags = 0), this.sample_sizes.length > 0))
-            for (e = 0; e + 1 < this.sample_sizes.length; )
+            for (e = 0; e + 1 < this.sample_sizes.length;)
                 if (this.sample_sizes[e + 1] !== this.sample_sizes[0]) {
                     i = !1;
                     break;
                 } else e++;
         else i = !1;
-        (this.size = 8),
+        ((this.size = 8),
             i || (this.size += 4 * this.sample_sizes.length),
             this.writeHeader(t),
             i ? t.writeUint32(this.sample_sizes[0]) : t.writeUint32(0),
             t.writeUint32(this.sample_sizes.length),
-            i || t.writeUint32Array(this.sample_sizes);
+            i || t.writeUint32Array(this.sample_sizes));
     }),
     (d.sttsBox.prototype.write = function (t) {
         var e;
@@ -3500,18 +3509,18 @@ d.initialize(),
             e < this.sample_counts.length;
             e++
         )
-            t.writeUint32(this.sample_counts[e]), t.writeUint32(this.sample_deltas[e]);
+            (t.writeUint32(this.sample_counts[e]), t.writeUint32(this.sample_deltas[e]));
     }),
     (d.tfdtBox.prototype.write = function (t) {
-        (this.version = +(this.baseMediaDecodeTime > 0xffffffff)),
+        ((this.version = +(this.baseMediaDecodeTime > 0xffffffff)),
             (this.flags = 0),
             (this.size = 4),
             1 === this.version && (this.size += 4),
             this.writeHeader(t),
-            1 === this.version ? t.writeUint64(this.baseMediaDecodeTime) : t.writeUint32(this.baseMediaDecodeTime);
+            1 === this.version ? t.writeUint64(this.baseMediaDecodeTime) : t.writeUint32(this.baseMediaDecodeTime));
     }),
     (d.tfhdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.size = 4),
             this.flags & d.TFHD_FLAG_BASE_DATA_OFFSET && (this.size += 8),
             this.flags & d.TFHD_FLAG_SAMPLE_DESC && (this.size += 4),
@@ -3524,10 +3533,10 @@ d.initialize(),
             this.flags & d.TFHD_FLAG_SAMPLE_DESC && t.writeUint32(this.default_sample_description_index),
             this.flags & d.TFHD_FLAG_SAMPLE_DUR && t.writeUint32(this.default_sample_duration),
             this.flags & d.TFHD_FLAG_SAMPLE_SIZE && t.writeUint32(this.default_sample_size),
-            this.flags & d.TFHD_FLAG_SAMPLE_FLAGS && t.writeUint32(this.default_sample_flags);
+            this.flags & d.TFHD_FLAG_SAMPLE_FLAGS && t.writeUint32(this.default_sample_flags));
     }),
     (d.tkhdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.size = 80),
             this.writeHeader(t),
             t.writeUint32(this.creation_time),
@@ -3543,10 +3552,10 @@ d.initialize(),
             t.writeUint16(0),
             t.writeInt32Array(this.matrix),
             t.writeUint32(this.width),
-            t.writeUint32(this.height);
+            t.writeUint32(this.height));
     }),
     (d.trexBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = 20),
             this.writeHeader(t),
@@ -3554,10 +3563,10 @@ d.initialize(),
             t.writeUint32(this.default_sample_description_index),
             t.writeUint32(this.default_sample_duration),
             t.writeUint32(this.default_sample_size),
-            t.writeUint32(this.default_sample_flags);
+            t.writeUint32(this.default_sample_flags));
     }),
     (d.trunBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.size = 4),
             this.flags & d.TRUN_FLAGS_DATA_OFFSET && (this.size += 4),
             this.flags & d.TRUN_FLAGS_FIRST_FLAG && (this.size += 4),
@@ -3569,50 +3578,50 @@ d.initialize(),
             t.writeUint32(this.sample_count),
             this.flags & d.TRUN_FLAGS_DATA_OFFSET &&
                 ((this.data_offset_position = t.getPosition()), t.writeInt32(this.data_offset)),
-            this.flags & d.TRUN_FLAGS_FIRST_FLAG && t.writeUint32(this.first_sample_flags);
+            this.flags & d.TRUN_FLAGS_FIRST_FLAG && t.writeUint32(this.first_sample_flags));
         for (var e = 0; e < this.sample_count; e++)
-            this.flags & d.TRUN_FLAGS_DURATION && t.writeUint32(this.sample_duration[e]),
+            (this.flags & d.TRUN_FLAGS_DURATION && t.writeUint32(this.sample_duration[e]),
                 this.flags & d.TRUN_FLAGS_SIZE && t.writeUint32(this.sample_size[e]),
                 this.flags & d.TRUN_FLAGS_FLAGS && t.writeUint32(this.sample_flags[e]),
                 this.flags & d.TRUN_FLAGS_CTS_OFFSET &&
                     (0 === this.version
                         ? t.writeUint32(this.sample_composition_time_offset[e])
-                        : t.writeInt32(this.sample_composition_time_offset[e]));
+                        : t.writeInt32(this.sample_composition_time_offset[e])));
     }),
     (d["url Box"].prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             this.location
                 ? ((this.flags = 0), (this.size = this.location.length + 1))
                 : ((this.flags = 1), (this.size = 0)),
             this.writeHeader(t),
-            this.location && t.writeCString(this.location);
+            this.location && t.writeCString(this.location));
     }),
     (d["urn Box"].prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 0),
             (this.size = this.name.length + 1 + (this.location ? this.location.length + 1 : 0)),
             this.writeHeader(t),
             t.writeCString(this.name),
-            this.location && t.writeCString(this.location);
+            this.location && t.writeCString(this.location));
     }),
     (d.vmhdBox.prototype.write = function (t) {
-        (this.version = 0),
+        ((this.version = 0),
             (this.flags = 1),
             (this.size = 8),
             this.writeHeader(t),
             t.writeUint16(this.graphicsmode),
-            t.writeUint16Array(this.opcolor);
+            t.writeUint16Array(this.opcolor));
     }),
     (d.cttsBox.prototype.unpack = function (t) {
         var e, i, s;
         for (e = 0, s = 0; e < this.sample_counts.length; e++)
-            for (i = 0; i < this.sample_counts[e]; i++) (t[s].pts = t[s].dts + this.sample_offsets[e]), s++;
+            for (i = 0; i < this.sample_counts[e]; i++) ((t[s].pts = t[s].dts + this.sample_offsets[e]), s++);
     }),
     (d.sttsBox.prototype.unpack = function (t) {
         var e, i, s;
         for (e = 0, s = 0; e < this.sample_counts.length; e++)
             for (i = 0; i < this.sample_counts[e]; i++)
-                0 === s ? (t[s].dts = 0) : (t[s].dts = t[s - 1].dts + this.sample_deltas[e]), s++;
+                (0 === s ? (t[s].dts = 0) : (t[s].dts = t[s - 1].dts + this.sample_deltas[e]), s++);
     }),
     (d.stcoBox.prototype.unpack = function (t) {
         var e;
@@ -3624,7 +3633,7 @@ d.initialize(),
             for (i = 0; i < (e + 1 < this.first_chunk.length ? this.first_chunk[e + 1] : 1 / 0); i++)
                 for (n++, s = 0; s < this.samples_per_chunk[e]; s++) {
                     if (!t[r]) return;
-                    (t[r].description_index = this.sample_description_index[e]), (t[r].chunk_index = n), r++;
+                    ((t[r].description_index = this.sample_description_index[e]), (t[r].chunk_index = n), r++);
                 }
     }),
     (d.stszBox.prototype.unpack = function (t) {
@@ -3694,18 +3703,18 @@ d.initialize(),
             if (t[s] && e[s] && !d.boxEqual(t[s], e[s])) return !1;
         }
         return !0;
-    });
+    }));
 var p = function () {};
-(p.prototype.parseSample = function (t) {
+((p.prototype.parseSample = function (t) {
     var e,
         i,
         s = new n(t.buffer);
-    for (e = []; !s.isEos(); ) (i = d.parseOneBox(s, !1)).code === d.OK && "vttc" === i.box.type && e.push(i.box);
+    for (e = []; !s.isEos();) (i = d.parseOneBox(s, !1)).code === d.OK && "vttc" === i.box.type && e.push(i.box);
     return e;
 }),
     (p.prototype.getText = function (t, e, i) {
         function s(t, e, i) {
-            return (i = i || "0"), (t += "").length >= e ? t : Array(e - t.length + 1).join(i) + t;
+            return ((i = i || "0"), (t += "").length >= e ? t : Array(e - t.length + 1).join(i) + t);
         }
         function r(t) {
             var e = Math.floor(t / 3600),
@@ -3716,10 +3725,10 @@ var p = function () {};
         }
         for (var n = this.parseSample(i), a = "", o = 0; o < n.length; o++) {
             var h = n[o];
-            (a += r(t) + " --\x3e " + r(e) + "\r\n"), (a += h.payl.text);
+            ((a += r(t) + " --\x3e " + r(e) + "\r\n"), (a += h.payl.text));
         }
         return a;
-    });
+    }));
 var l = function () {};
 l.prototype.parseSample = function (t) {
     var e,
@@ -3735,17 +3744,17 @@ l.prototype.parseSample = function (t) {
     );
 };
 var f = function () {};
-(f.prototype.parseSample = function (t) {
+((f.prototype.parseSample = function (t) {
     return new n(t.data.buffer).readString(t.data.length);
 }),
     (f.prototype.parseConfig = function (t) {
         var e = new n(t.buffer);
-        return e.readUint32(), e.readCString();
+        return (e.readUint32(), e.readCString());
     }),
     (e.XMLSubtitlein4Parser = l),
-    (e.Textin4Parser = f);
+    (e.Textin4Parser = f));
 var u = function (t) {
-    (this.stream = t || new o()),
+    ((this.stream = t || new o()),
         (this.boxes = []),
         (this.mdats = []),
         (this.moofs = []),
@@ -3766,13 +3775,13 @@ var u = function (t) {
         (this.nextMoofNumber = 0),
         (this.itemListBuilt = !1),
         (this.onSidx = null),
-        (this.sidxSent = !1);
+        (this.sidxSent = !1));
 };
-(u.prototype.setSegmentOptions = function (t, e, i) {
+((u.prototype.setSegmentOptions = function (t, e, i) {
     var s = this.getTrackById(t);
     if (s) {
         var r = {};
-        this.fragmentedTracks.push(r),
+        (this.fragmentedTracks.push(r),
             (r.id = t),
             (r.user = e),
             (r.trak = s),
@@ -3780,7 +3789,7 @@ var u = function (t) {
             (r.segmentStream = null),
             (r.nb_samples = 1e3),
             (r.rapAlignement = !0),
-            i && (i.nbSamples && (r.nb_samples = i.nbSamples), i.rapAlignement && (r.rapAlignement = i.rapAlignement));
+            i && (i.nbSamples && (r.nb_samples = i.nbSamples), i.rapAlignement && (r.rapAlignement = i.rapAlignement)));
     }
 }),
     (u.prototype.unsetSegmentOptions = function (t) {
@@ -3791,14 +3800,14 @@ var u = function (t) {
         var s = this.getTrackById(t);
         if (s) {
             var r = {};
-            this.extractedTracks.push(r),
+            (this.extractedTracks.push(r),
                 (r.id = t),
                 (r.user = e),
                 (r.trak = s),
                 (s.nextSample = 0),
                 (r.nb_samples = 1e3),
                 (r.samples = []),
-                i && i.nbSamples && (r.nb_samples = i.nbSamples);
+                i && i.nbSamples && (r.nb_samples = i.nbSamples));
         }
     }),
     (u.prototype.unsetExtractionOptions = function (t) {
@@ -3828,11 +3837,11 @@ var u = function (t) {
                             this.moofs.push(e);
                             break;
                         case "moov":
-                            (this.moovStartFound = !0), 0 === this.mdats.length && (this.isProgressive = !0);
+                            ((this.moovStartFound = !0), 0 === this.mdats.length && (this.isProgressive = !0));
                         default:
-                            void 0 !== this[i] &&
+                            (void 0 !== this[i] &&
                                 r.warn("ISOFile", "Duplicate Box of type: " + i + ", overriding previous occurrence"),
-                                (this[i] = e);
+                                (this[i] = e));
                     }
                     this.updateUsedBytes && this.updateUsedBytes(e, t);
                 }
@@ -3933,11 +3942,11 @@ var u = function (t) {
                     i.tref)
                 )
                     for (e = 0; e < i.tref.boxes.length; e++)
-                        (r = {}),
+                        ((r = {}),
                             s.references.push(r),
                             (r.type = i.tref.boxes[e].type),
-                            (r.track_ids = i.tref.boxes[e].track_ids);
-                i.edts && (s.edits = i.edts.elst.entries),
+                            (r.track_ids = i.tref.boxes[e].track_ids));
+                (i.edts && (s.edits = i.edts.elst.entries),
                     (s.created = new Date(o + 1e3 * i.tkhd.creation_time)),
                     (s.modified = new Date(o + 1e3 * i.tkhd.modification_time)),
                     (s.movie_duration = i.tkhd.duration),
@@ -3977,7 +3986,7 @@ var u = function (t) {
                               ? ((s.type = "metadata"), a.hintTracks.push(s))
                               : n.isMetadata()
                                 ? ((s.type = "metadata"), a.metadataTracks.push(s))
-                                : ((s.type = "metadata"), a.otherTracks.push(s));
+                                : ((s.type = "metadata"), a.otherTracks.push(s)));
             }
         else a.hasMoov = !1;
         if (((a.mime = ""), a.hasMoov && a.tracks)) {
@@ -3991,8 +4000,8 @@ var u = function (t) {
                 t < a.tracks.length;
                 t++
             )
-                0 !== t && (a.mime += ","), (a.mime += a.tracks[t].codec);
-            (a.mime += '"; profiles="'), (a.mime += this.ftyp.compatible_brands.join()), (a.mime += '"');
+                (0 !== t && (a.mime += ","), (a.mime += a.tracks[t].codec));
+            ((a.mime += '"; profiles="'), (a.mime += this.ftyp.compatible_brands.join()), (a.mime += '"'));
         }
         return a;
     }),
@@ -4003,10 +4012,10 @@ var u = function (t) {
                     var e,
                         i,
                         s = this.fragmentedTracks[e];
-                    for (i = s.trak; i.nextSample < i.samples.length && this.sampleProcessingStarted; ) {
+                    for (i = s.trak; i.nextSample < i.samples.length && this.sampleProcessingStarted;) {
                         r.debug("ISOFile", "Creating media fragment on track #" + s.id + " for sample " + i.nextSample);
                         var n = this.createFragment(s.id, i.nextSample, s.segmentStream);
-                        if (n) (s.segmentStream = n), i.nextSample++;
+                        if (n) ((s.segmentStream = n), i.nextSample++);
                         else break;
                         if (
                             (i.nextSample % s.nb_samples == 0 || t || i.nextSample >= i.samples.length) &&
@@ -4038,10 +4047,10 @@ var u = function (t) {
             if (null !== this.onSamples)
                 for (e = 0; e < this.extractedTracks.length; e++) {
                     var a = this.extractedTracks[e];
-                    for (i = a.trak; i.nextSample < i.samples.length && this.sampleProcessingStarted; ) {
+                    for (i = a.trak; i.nextSample < i.samples.length && this.sampleProcessingStarted;) {
                         r.debug("ISOFile", "Exporting on track #" + a.id + " sample #" + i.nextSample);
                         var o = this.getSample(i, i.nextSample);
-                        if (o) i.nextSample++, a.samples.push(o);
+                        if (o) (i.nextSample++, a.samples.push(o));
                         else break;
                         if (
                             (i.nextSample % a.nb_samples == 0 || i.nextSample >= i.samples.length) &&
@@ -4061,7 +4070,7 @@ var u = function (t) {
     }),
     (u.prototype.getBoxes = function (t, e) {
         var i = [];
-        return u._sweep.call(this, t, i, e), i;
+        return (u._sweep.call(this, t, i, e), i);
     }),
     (u._sweep = function (t, e, i) {
         for (var s in (this.type && this.type == t && e.push(this), this.boxes)) {
@@ -4082,7 +4091,7 @@ var u = function (t) {
             s = this.getTrackById(t);
         s.lastValidSample || (s.lastValidSample = 0);
         for (var n = s.lastValidSample; n < e; n++) i += this.releaseSample(s, n);
-        r.info(
+        (r.info(
             "ISOFile",
             "Track #" +
                 t +
@@ -4094,20 +4103,20 @@ var u = function (t) {
                 this.samplesDataSize +
                 ")",
         ),
-            (s.lastValidSample = e);
+            (s.lastValidSample = e));
     }),
     (u.prototype.start = function () {
-        (this.sampleProcessingStarted = !0), this.processSamples(!1);
+        ((this.sampleProcessingStarted = !0), this.processSamples(!1));
     }),
     (u.prototype.stop = function () {
         this.sampleProcessingStarted = !1;
     }),
     (u.prototype.flush = function () {
-        r.info("ISOFile", "Flushing remaining samples"),
+        (r.info("ISOFile", "Flushing remaining samples"),
             this.updateSampleLists(),
             this.processSamples(!0),
             this.stream.cleanBuffers(),
-            this.stream.logBufferLevel(!0);
+            this.stream.logBufferLevel(!0));
     }),
     (u.prototype.seekTrack = function (t, e, i) {
         var s,
@@ -4125,7 +4134,7 @@ var u = function (t) {
                 { offset: 0, time: 0 }
             );
         for (s = 0; s < i.samples.length; s++) {
-            if (((n = i.samples[s]), 0 === s)) (d = 0), (a = n.timescale);
+            if (((n = i.samples[s]), 0 === s)) ((d = 0), (a = n.timescale));
             else if (n.cts > t * n.timescale) {
                 d = s - 1;
                 break;
@@ -4163,9 +4172,9 @@ var u = function (t) {
             o = { offset: 1 / 0, time: 1 / 0 };
         if (this.moov) {
             for (n = 0; n < a.traks.length; n++)
-                (i = a.traks[n]),
+                ((i = a.traks[n]),
                     (s = this.seekTrack(t, e, i)).offset < o.offset && (o.offset = s.offset),
-                    s.time < o.time && (o.time = s.time);
+                    s.time < o.time && (o.time = s.time));
             return (
                 r.info(
                     "ISOFile",
@@ -4184,7 +4193,7 @@ var u = function (t) {
         throw "Cannot seek: moov not received!";
     }),
     (u.prototype.equal = function (t) {
-        for (var e = 0; e < this.boxes.length && e < t.boxes.length; ) {
+        for (var e = 0; e < this.boxes.length && e < t.boxes.length;) {
             var i = this.boxes[e],
                 s = t.boxes[e];
             if (!d.boxEqual(i, s)) return !1;
@@ -4273,12 +4282,12 @@ var u = function (t) {
     (u.prototype.addTrack = function (t) {
         this.moov || this.init(t);
         var e = t || {};
-        (e.width = e.width || 320),
+        ((e.width = e.width || 320),
             (e.height = e.height || 320),
             (e.id = e.id || this.moov.mvhd.next_track_id),
-            (e.type = e.type || "avc1");
+            (e.type = e.type || "avc1"));
         var i = this.moov.add("trak");
-        (this.moov.mvhd.next_track_id = e.id + 1),
+        ((this.moov.mvhd.next_track_id = e.id + 1),
             i
                 .add("tkhd")
                 .set("flags", d.TKHD_FLAG_ENABLED | d.TKHD_FLAG_IN_MOVIE | d.TKHD_FLAG_IN_PREVIEW)
@@ -4291,9 +4300,9 @@ var u = function (t) {
                 .set("volume", 1)
                 .set("matrix", [0, 0, 0, 0, 0, 0, 0, 0, 0])
                 .set("width", e.width << 16)
-                .set("height", e.height << 16);
+                .set("height", e.height << 16));
         var s = i.add("mdia");
-        s
+        (s
             .add("mdhd")
             .set("creation_time", 0)
             .set("modification_time", 0)
@@ -4304,7 +4313,7 @@ var u = function (t) {
                 .add("hdlr")
                 .set("handler", e.hdlr || "vide")
                 .set("name", e.name || "Track created with MP4Box.js"),
-            s.add("elng").set("extended_language", e.language || "fr-FR");
+            s.add("elng").set("extended_language", e.language || "fr-FR"));
         var r = s.add("minf");
         if (void 0 !== d[e.type + "SampleEntry"]) {
             var a = new d[e.type + "SampleEntry"]();
@@ -4332,36 +4341,36 @@ var u = function (t) {
                     ) {
                         var f = new d.avcCBox(),
                             u = new n(e.avcDecoderConfigRecord);
-                        f.parse(u), a.addBox(f);
+                        (f.parse(u), a.addBox(f));
                     }
                     break;
                 case "Audio":
-                    r.add("smhd").set("balance", e.balance || 0),
+                    (r.add("smhd").set("balance", e.balance || 0),
                         a
                             .set("channel_count", e.channel_count || 2)
                             .set("samplesize", e.samplesize || 16)
-                            .set("samplerate", e.samplerate || 65536);
+                            .set("samplerate", e.samplerate || 65536));
                     break;
                 case "Hint":
                     r.add("hmhd");
                     break;
                 case "Subtitle":
-                    r.add("sthd"),
+                    (r.add("sthd"),
                         "stpp" === e.type &&
                             a
                                 .set("namespace", e.namespace || "nonamespace")
                                 .set("schema_location", e.schema_location || "")
-                                .set("auxiliary_mime_types", e.auxiliary_mime_types || "");
+                                .set("auxiliary_mime_types", e.auxiliary_mime_types || ""));
                     break;
                 default:
                     r.add("nmhd");
             }
-            e.description && a.addBox(e.description),
+            (e.description && a.addBox(e.description),
                 e.description_boxes &&
                     e.description_boxes.forEach(function (t) {
                         a.addBox(t);
                     }),
-                r.add("dinf").add("dref").addEntry(new d["url Box"]().set("flags", 1));
+                r.add("dinf").add("dref").addEntry(new d["url Box"]().set("flags", 1)));
             var _ = r.add("stbl");
             return (
                 _.add("stsd").addEntry(a),
@@ -4383,14 +4392,14 @@ var u = function (t) {
     }),
     (d.Box.prototype.computeSize = function (t) {
         var e = t || new a();
-        (e.endianness = a.BIG_ENDIAN), this.write(e);
+        ((e.endianness = a.BIG_ENDIAN), this.write(e));
     }),
     (u.prototype.addSample = function (t, e, i) {
         var s = i || {},
             r = {},
             n = this.getTrackById(t);
         if (null !== n) {
-            (r.number = n.samples.length),
+            ((r.number = n.samples.length),
                 (r.track_id = n.tkhd.track_id),
                 (r.timescale = n.mdia.mdhd.timescale),
                 (r.description_index = s.sample_description_index ? s.sample_description_index - 1 : 0),
@@ -4413,7 +4422,7 @@ var u = function (t) {
                 (n.samples_size += r.size),
                 (n.samples_duration += r.duration),
                 n.first_dts || (n.first_dts = s.dts),
-                this.processSamples();
+                this.processSamples());
             var a = this.createSingleSampleMoof(r);
             return (
                 this.addBox(a),
@@ -4428,7 +4437,7 @@ var u = function (t) {
         var e = 0;
         e = t.is_sync ? 0x2000000 : 65536;
         var i = new d.moofBox();
-        i.add("mfhd").set("sequence_number", this.nextMoofNumber), this.nextMoofNumber++;
+        (i.add("mfhd").set("sequence_number", this.nextMoofNumber), this.nextMoofNumber++);
         var s = i.add("traf"),
             r = this.getTrackById(t.track_id);
         return (
@@ -4462,7 +4471,7 @@ var u = function (t) {
             t < this.moov.traks.length;
             t++
         ) {
-            ((e = this.moov.traks[t]).tkhd.duration = 0),
+            (((e = this.moov.traks[t]).tkhd.duration = 0),
                 (e.mdia.mdhd.duration = 0),
                 ((e.mdia.minf.stbl.stco || e.mdia.minf.stbl.co64).chunk_offsets = []),
                 ((i = e.mdia.minf.stbl.stsc).first_chunk = []),
@@ -4471,7 +4480,7 @@ var u = function (t) {
                 ((e.mdia.minf.stbl.stsz || e.mdia.minf.stbl.stz2).sample_sizes = []),
                 ((s = e.mdia.minf.stbl.stts).sample_counts = []),
                 (s.sample_deltas = []),
-                (r = e.mdia.minf.stbl.ctts) && ((r.sample_counts = []), (r.sample_offsets = []));
+                (r = e.mdia.minf.stbl.ctts) && ((r.sample_counts = []), (r.sample_offsets = [])));
             var t,
                 e,
                 i,
@@ -4485,11 +4494,11 @@ var u = function (t) {
     (u.initSampleGroups = function (t, e, i, s, r) {
         var n, a, o, h;
         function d(t, e, i) {
-            (this.grouping_type = t),
+            ((this.grouping_type = t),
                 (this.grouping_type_parameter = e),
                 (this.sbgp = i),
                 (this.last_sample_in_run = -1),
-                (this.entry_index = -1);
+                (this.entry_index = -1));
         }
         for (
             e && (e.sample_groups_info = []), t.sample_groups_info || (t.sample_groups_info = []), a = 0;
@@ -4530,7 +4539,7 @@ var u = function (t) {
     (u.setSampleGroupProperties = function (t, e, i, s) {
         var r, n, a;
         for (r in ((e.sample_groups = []), s))
-            (e.sample_groups[r] = {}),
+            ((e.sample_groups[r] = {}),
                 (e.sample_groups[r].grouping_type = s[r].grouping_type),
                 (e.sample_groups[r].grouping_type_parameter = s[r].grouping_type_parameter),
                 i >= s[r].last_sample_in_run &&
@@ -4553,7 +4562,7 @@ var u = function (t) {
                         : a &&
                           a.version >= 2 &&
                           a.default_group_description_index > 0 &&
-                          (e.sample_groups[r].description = a.entries[a.default_group_description_index - 1]));
+                          (e.sample_groups[r].description = a.entries[a.default_group_description_index - 1])));
     }),
     (u.process_sdtp = function (t, e, i) {
         e &&
@@ -4566,7 +4575,7 @@ var u = function (t) {
     }),
     (u.prototype.buildSampleLists = function () {
         var t, e;
-        for (t = 0; t < this.moov.traks.length; t++) (e = this.moov.traks[t]), this.buildTrakSampleLists(e);
+        for (t = 0; t < this.moov.traks.length; t++) ((e = this.moov.traks[t]), this.buildTrakSampleLists(e));
     }),
     (u.prototype.buildTrakSampleLists = function (t) {
         if (
@@ -4620,7 +4629,7 @@ var u = function (t) {
                     w,
                     E,
                     B = {};
-                (B.number = e),
+                ((B.number = e),
                     (B.track_id = t.tkhd.track_id),
                     (B.timescale = t.mdia.mdhd.timescale),
                     (B.alreadyRead = 0),
@@ -4668,7 +4677,7 @@ var u = function (t) {
                     d &&
                         d.entries[w].sample_delta + E == e &&
                         ((B.subsamples = d.entries[w].subsamples), (E += d.entries[w].sample_delta)),
-                    (p.length > 0 || l.length > 0) && u.setSampleGroupProperties(t, B, e, t.sample_groups_info);
+                    (p.length > 0 || l.length > 0) && u.setSampleGroupProperties(t, B, e, t.sample_groups_info));
             }
             e > 0 &&
                 ((t.samples[e - 1].duration = Math.max(t.mdia.mdhd.duration - t.samples[e - 1].dts, 0)),
@@ -4677,7 +4686,7 @@ var u = function (t) {
     }),
     (u.prototype.updateSampleLists = function () {
         if (void 0 !== this.moov) {
-            for (; this.lastMoofIndex < this.moofs.length; )
+            for (; this.lastMoofIndex < this.moofs.length;)
                 if (((h = this.moofs[this.lastMoofIndex]), this.lastMoofIndex++, "moof" == h.type))
                     for (t = 0; t < h.trafs.length; t++) {
                         for (
@@ -4731,7 +4740,7 @@ var u = function (t) {
                                 c,
                                 m = p.truns[e];
                             for (i = 0; i < m.sample_count; i++) {
-                                ((_ = {}).moof_number = this.lastMoofIndex),
+                                (((_ = {}).moof_number = this.lastMoofIndex),
                                     (_.number_in_traf = p.sample_number),
                                     p.sample_number++,
                                     (_.number = l.samples.length),
@@ -4765,12 +4774,12 @@ var u = function (t) {
                                     (_.depends_on = (c >> 24) & 3),
                                     (_.is_depended_on = (c >> 22) & 3),
                                     (_.has_redundancy = (c >> 20) & 3),
-                                    (_.degradation_priority = 65535 & c);
+                                    (_.degradation_priority = 65535 & c));
                                 var g = !!(p.tfhd.flags & d.TFHD_FLAG_BASE_DATA_OFFSET),
                                     y = !!(p.tfhd.flags & d.TFHD_FLAG_DEFAULT_BASE_IS_MOOF),
                                     U = !!(m.flags & d.TRUN_FLAGS_DATA_OFFSET),
                                     b = 0;
-                                (b = g ? p.tfhd.base_data_offset : y || 0 === e ? h.start : o),
+                                ((b = g ? p.tfhd.base_data_offset : y || 0 === e ? h.start : o),
                                     0 === e && 0 === i
                                         ? U
                                             ? (_.offset = b + m.data_offset)
@@ -4781,15 +4790,15 @@ var u = function (t) {
                                         p.sgpds.length > 0 ||
                                         l.mdia.minf.stbl.sbgps.length > 0 ||
                                         l.mdia.minf.stbl.sgpds.length > 0) &&
-                                        u.setSampleGroupProperties(l, _, _.number_in_traf, p.sample_groups_info);
+                                        u.setSampleGroupProperties(l, _, _.number_in_traf, p.sample_groups_info));
                             }
                         }
                         if (p.subs) {
                             l.has_fragment_subsamples = !0;
                             var S = p.first_sample_index;
                             for (e = 0; e < p.subs.entries.length; e++)
-                                (S += p.subs.entries[e].sample_delta),
-                                    ((_ = l.samples[S - 1]).subsamples = p.subs.entries[e].subsamples);
+                                ((S += p.subs.entries[e].sample_delta),
+                                    ((_ = l.samples[S - 1]).subsamples = p.subs.entries[e].subsamples));
                         }
                     }
         }
@@ -4801,7 +4810,7 @@ var u = function (t) {
         if (s.data) {
             if (s.alreadyRead == s.size) return s;
         } else
-            (s.data = new Uint8Array(s.size)),
+            ((s.data = new Uint8Array(s.size)),
                 (s.alreadyRead = 0),
                 (this.samplesDataSize += s.size),
                 r.debug(
@@ -4815,7 +4824,7 @@ var u = function (t) {
                         " (total: " +
                         this.samplesDataSize +
                         ")",
-                );
+                ));
         for (;;) {
             var n = this.stream.findPosition(!0, s.offset + s.alreadyRead, !1);
             if (!(n > -1)) return null;
@@ -4849,7 +4858,7 @@ var u = function (t) {
                     s
                 );
             if (0 === o) return null;
-            r.debug(
+            (r.debug(
                 "ISOFile",
                 "Getting sample #" +
                     e +
@@ -4866,7 +4875,7 @@ var u = function (t) {
                 a.memcpy(s.data.buffer, s.alreadyRead, i, s.offset + s.alreadyRead - i.fileStart, o),
                 (s.alreadyRead += o),
                 (i.usedBytes += o),
-                this.stream.logBufferLevel();
+                this.stream.logBufferLevel());
         }
     }),
     (u.prototype.releaseSample = function (t, e) {
@@ -4881,7 +4890,7 @@ var u = function (t) {
             e = "";
         for (t = 0; t < this.moov.traks.length; t++) {
             var i = this.moov.traks[t];
-            t > 0 && (e += ","), (e += i.mdia.minf.stbl.stsd.entries[0].getCodec());
+            (t > 0 && (e += ","), (e += i.mdia.minf.stbl.stsd.entries[0].getCodec()));
         }
         return e;
     }),
@@ -4912,7 +4921,7 @@ var u = function (t) {
             n = this.meta;
         if (null != n && void 0 !== n.hdlr && void 0 !== n.iinf) {
             for (t = 0; t < n.iinf.item_infos.length; t++)
-                ((i = {}).id = n.iinf.item_infos[t].item_ID),
+                (((i = {}).id = n.iinf.item_infos[t].item_ID),
                     (s[i.id] = i),
                     (i.ref_to = []),
                     (i.name = n.iinf.item_infos[t].item_name),
@@ -4920,7 +4929,7 @@ var u = function (t) {
                         (i.protection = n.ipro.protections[n.iinf.item_infos[t].protection_index - 1]),
                     n.iinf.item_infos[t].item_type ? (i.type = n.iinf.item_infos[t].item_type) : (i.type = "mime"),
                     (i.content_type = n.iinf.item_infos[t].content_type),
-                    (i.content_encoding = n.iinf.item_infos[t].content_encoding);
+                    (i.content_encoding = n.iinf.item_infos[t].content_encoding));
             if (n.iloc)
                 for (t = 0; t < n.iloc.items.length; t++) {
                     var a = n.iloc.items[t];
@@ -4938,11 +4947,11 @@ var u = function (t) {
                             r.warn("Item storage with construction_method : not supported");
                     }
                     for (e = 0, i.extents = [], i.size = 0; e < a.extents.length; e++)
-                        (i.extents[e] = {}),
+                        ((i.extents[e] = {}),
                             (i.extents[e].offset = a.extents[e].extent_offset + a.base_offset),
                             (i.extents[e].length = a.extents[e].extent_length),
                             (i.extents[e].alreadyRead = 0),
-                            (i.size += i.extents[e].length);
+                            (i.size += i.extents[e].length));
                 }
             if ((n.pitm && (s[n.pitm.item_id].primary = !0), n.iref))
                 for (t = 0; t < n.iref.references.length; t++) {
@@ -4964,7 +4973,7 @@ var u = function (t) {
                             var l = p.props[e];
                             if (l.property_index > 0 && l.property_index - 1 < n.iprp.ipco.boxes.length) {
                                 var f = n.iprp.ipco.boxes[l.property_index - 1];
-                                (i.properties[f.type] = f), i.properties.boxes.push(f);
+                                ((i.properties[f.type] = f), i.properties.boxes.push(f));
                             }
                         }
                     }
@@ -4974,13 +4983,13 @@ var u = function (t) {
     (u.prototype.getItem = function (t) {
         if (!this.meta) return null;
         if (!(i = this.items[t]).data && i.size)
-            (i.data = new Uint8Array(i.size)),
+            ((i.data = new Uint8Array(i.size)),
                 (i.alreadyRead = 0),
                 (this.itemsDataSize += i.size),
                 r.debug(
                     "ISOFile",
                     "Allocating item #" + t + " of size " + i.size + " (total: " + this.itemsDataSize + ")",
-                );
+                ));
         else if (i.alreadyRead === i.size) return i;
         for (var e, i, s = 0; s < i.extents.length; s++) {
             var n = i.extents[s];
@@ -5015,7 +5024,7 @@ var u = function (t) {
                         this.stream.logBufferLevel(),
                         null
                     );
-                r.debug(
+                (r.debug(
                     "ISOFile",
                     "Getting item #" +
                         t +
@@ -5043,7 +5052,7 @@ var u = function (t) {
                     (e.usedBytes += n.length - n.alreadyRead),
                     this.stream.logBufferLevel(),
                     (i.alreadyRead += n.length - n.alreadyRead),
-                    (n.alreadyRead = n.length);
+                    (n.alreadyRead = n.length));
             }
         }
         return i.alreadyRead === i.size ? i : null;
@@ -5051,14 +5060,14 @@ var u = function (t) {
     (u.prototype.releaseItem = function (t) {
         var e = this.items[t];
         if (!e.data) return 0;
-        (this.itemsDataSize -= e.size), (e.data = null), (e.alreadyRead = 0);
+        ((this.itemsDataSize -= e.size), (e.data = null), (e.alreadyRead = 0));
         for (var i = 0; i < e.extents.length; i++) e.extents[i].alreadyRead = 0;
         return e.size;
     }),
     (u.prototype.processItems = function (t) {
         for (var e in this.items) {
             var i = this.items[e];
-            this.getItem(i.id), t && !i.sent && (t(i), (i.sent = !0), (i.data = null));
+            (this.getItem(i.id), t && !i.sent && (t(i), (i.sent = !0), (i.data = null)));
         }
     }),
     (u.prototype.hasItem = function (t) {
@@ -5102,18 +5111,18 @@ var u = function (t) {
         var o = i || new a();
         o.endianness = a.BIG_ENDIAN;
         var h = this.createSingleSampleMoof(n);
-        h.write(o),
+        (h.write(o),
             (h.trafs[0].truns[0].data_offset = h.size + 8),
             r.debug("MP4Box", "Adjusting data_offset with new value " + h.trafs[0].truns[0].data_offset),
-            o.adjustUint32(h.trafs[0].truns[0].data_offset_position, h.trafs[0].truns[0].data_offset);
+            o.adjustUint32(h.trafs[0].truns[0].data_offset_position, h.trafs[0].truns[0].data_offset));
         var p = new d.mdatBox();
-        return (p.data = n.data), p.write(o), o;
+        return ((p.data = n.data), p.write(o), o);
     }),
     (u.writeInitializationSegment = function (t, e, i, s) {
         r.debug("ISOFile", "Generating initialization segment");
         var n,
             o = new a();
-        (o.endianness = a.BIG_ENDIAN), t.write(o);
+        ((o.endianness = a.BIG_ENDIAN), t.write(o));
         var h = e.add("mvex");
         for (i && h.add("mehd").set("fragment_duration", i), n = 0; n < e.traks.length; n++)
             h.add("trex")
@@ -5122,15 +5131,15 @@ var u = function (t) {
                 .set("default_sample_duration", s)
                 .set("default_sample_size", 0)
                 .set("default_sample_flags", 65536);
-        return e.write(o), o.buffer;
+        return (e.write(o), o.buffer);
     }),
     (u.prototype.save = function (t) {
         var e = new a();
-        (e.endianness = a.BIG_ENDIAN), this.write(e), e.save(t);
+        ((e.endianness = a.BIG_ENDIAN), this.write(e), e.save(t));
     }),
     (u.prototype.getBuffer = function () {
         var t = new a();
-        return (t.endianness = a.BIG_ENDIAN), this.write(t), t.buffer;
+        return ((t.endianness = a.BIG_ENDIAN), this.write(t), t.buffer);
     }),
     (u.prototype.initializeSegmentation = function () {
         for (
@@ -5147,7 +5156,7 @@ var u = function (t) {
                 i,
                 s,
                 n = new d.moovBox();
-            (n.mvhd = this.moov.mvhd),
+            ((n.mvhd = this.moov.mvhd),
                 n.boxes.push(n.mvhd),
                 (i = this.getTrackById(this.fragmentedTracks[t].id)),
                 n.boxes.push(i),
@@ -5160,22 +5169,22 @@ var u = function (t) {
                     this.moov.mvex && this.moov.mvex.mehd ? this.moov.mvex.mehd.fragment_duration : void 0,
                     this.moov.traks[t].samples.length > 0 ? this.moov.traks[t].samples[0].duration : 0,
                 )),
-                e.push(s);
+                e.push(s));
         }
         return e;
     }),
     (d.Box.prototype.printHeader = function (t) {
-        (this.size += 8),
+        ((this.size += 8),
             this.size > 0x100000000 && (this.size += 8),
             "uuid" === this.type && (this.size += 16),
             t.log(t.indent + "size:" + this.size),
-            t.log(t.indent + "type:" + this.type);
+            t.log(t.indent + "type:" + this.type));
     }),
     (d.FullBox.prototype.printHeader = function (t) {
-        (this.size += 4),
+        ((this.size += 4),
             d.Box.prototype.printHeader.call(this, t),
             t.log(t.indent + "version:" + this.version),
-            t.log(t.indent + "flags:" + this.flags);
+            t.log(t.indent + "flags:" + this.flags));
     }),
     (d.Box.prototype.print = function (t) {
         this.printHeader(t);
@@ -5185,7 +5194,7 @@ var u = function (t) {
         for (var e = 0; e < this.boxes.length; e++)
             if (this.boxes[e]) {
                 var i = t.indent;
-                (t.indent += " "), this.boxes[e].print(t), (t.indent = i);
+                ((t.indent += " "), this.boxes[e].print(t), (t.indent = i));
             }
     }),
     (u.prototype.print = function (t) {
@@ -5193,7 +5202,7 @@ var u = function (t) {
         for (var e = 0; e < this.boxes.length; e++) this.boxes[e] && this.boxes[e].print(t);
     }),
     (d.mvhdBox.prototype.print = function (t) {
-        d.FullBox.prototype.printHeader.call(this, t),
+        (d.FullBox.prototype.printHeader.call(this, t),
             t.log(t.indent + "creation_time: " + this.creation_time),
             t.log(t.indent + "modification_time: " + this.modification_time),
             t.log(t.indent + "timescale: " + this.timescale),
@@ -5201,10 +5210,10 @@ var u = function (t) {
             t.log(t.indent + "rate: " + this.rate),
             t.log(t.indent + "volume: " + (this.volume >> 8)),
             t.log(t.indent + "matrix: " + this.matrix.join(", ")),
-            t.log(t.indent + "next_track_id: " + this.next_track_id);
+            t.log(t.indent + "next_track_id: " + this.next_track_id));
     }),
     (d.tkhdBox.prototype.print = function (t) {
-        d.FullBox.prototype.printHeader.call(this, t),
+        (d.FullBox.prototype.printHeader.call(this, t),
             t.log(t.indent + "creation_time: " + this.creation_time),
             t.log(t.indent + "modification_time: " + this.modification_time),
             t.log(t.indent + "track_id: " + this.track_id),
@@ -5214,11 +5223,11 @@ var u = function (t) {
             t.log(t.indent + "layer: " + this.layer),
             t.log(t.indent + "alternate_group: " + this.alternate_group),
             t.log(t.indent + "width: " + this.width),
-            t.log(t.indent + "height: " + this.height);
-    });
+            t.log(t.indent + "height: " + this.height));
+    }));
 var _ = {};
-(_.createFile = function (t, e) {
+((_.createFile = function (t, e) {
     var i = new u(e);
-    return (i.discardMdatData = !(void 0 === t || t)), i;
+    return ((i.discardMdatData = !(void 0 === t || t)), i);
 }),
-    (e.createFile = _.createFile);
+    (e.createFile = _.createFile));

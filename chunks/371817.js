@@ -24,7 +24,7 @@ e.exports = function (e, t, r, y, w, m, _) {
         var M = s(x),
             S = !M && c(x),
             k = !M && !S && v(x);
-        (j = x),
+        ((j = x),
             M || S || k
                 ? s(O)
                     ? (j = O)
@@ -37,7 +37,7 @@ e.exports = function (e, t, r, y, w, m, _) {
                           : (j = [])
                 : h(x) || l(x)
                   ? ((j = O), l(O) ? (j = g(O)) : (!d(O) || f(O)) && (j = u(x)))
-                  : (E = !1);
+                  : (E = !1));
     }
-    E && (_.set(x, j), w(j, x, y, m, _), _.delete(x)), n(e, r, j);
+    (E && (_.set(x, j), w(j, x, y, m, _), _.delete(x)), n(e, r, j));
 };

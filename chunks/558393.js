@@ -133,7 +133,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(E, {
                                   setUpAutomod: () => {
-                                      d || (0, S.El)(), A.A.open(t, I.BEX.GUILD_AUTOMOD);
+                                      (d || (0, S.El)(), A.A.open(t, I.BEX.GUILD_AUTOMOD));
                                   },
                               })
                             : void 0,

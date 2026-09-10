@@ -1,4 +1,4 @@
-a.d(t, { i: () => c }), a(321073);
+(a.d(t, { i: () => c }), a(321073));
 var s = a(582128),
     r = a(284009),
     n = a.n(r),
@@ -26,7 +26,7 @@ function c(e) {
                         r.push(t);
                     }
                 let n = await (0, u.P7)(e, t, s);
-                w((t) => {
+                (w((t) => {
                     r = r.filter((e) => !a.has(e.id));
                     let s = new Set(r.map((e) => e.id)),
                         i = n.users.filter((e) => !a.has(e.id) && !s.has(e.id));
@@ -37,7 +37,7 @@ function c(e) {
                         for (let e of r) t.set(e.id, e);
                         return t;
                     }),
-                    d(n.nextIndex);
+                    d(n.nextIndex));
             } catch (e) {
                 b(!0);
             } finally {
@@ -55,7 +55,7 @@ function c(e) {
                         let a = await (0, l.getUser)(t);
                         e.set(a.id, a);
                     }
-                y(e), w(Array.from(e.values()));
+                (y(e), w(Array.from(e.values())));
             },
         },
         k = s.useRef(E);

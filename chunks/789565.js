@@ -106,7 +106,7 @@ var n = i(775162),
                     showErrorIcon: !!o,
                     disabled: i,
                     onChange: (t, i) => {
-                        a(e.questionId, t), d?.(e.questionId, i);
+                        (a(e.questionId, t), d?.(e.questionId, i));
                     },
                 }),
             });
@@ -161,7 +161,7 @@ var n = i(775162),
                       required: F,
                       disabled: i,
                       onEmailChange: (t, i) => {
-                          a(e.questionId, t), d?.(e.questionId, i);
+                          (a(e.questionId, t), d?.(e.questionId, i));
                       },
                       onBlur: () => u?.(e.questionId),
                   }),
@@ -184,7 +184,7 @@ var n = i(775162),
                         disabled: i,
                         onInput: (t) => {
                             let i = (0, g.bb)(t.target.value);
-                            (t.target.value = i), a(e.questionId, i), d?.(e.questionId, (0, g.uG)(i));
+                            ((t.target.value = i), a(e.questionId, i), d?.(e.questionId, (0, g.uG)(i)));
                         },
                         onBlur: () => u?.(e.questionId),
                     }),
@@ -265,7 +265,7 @@ var n = i(775162),
                 (0, s.v)("form", {
                     class: "IncodeDynamicFormsForm",
                     onSubmit: (e) => {
-                        e.preventDefault(), v();
+                        (e.preventDefault(), v());
                     },
                     "aria-labelledby": q ? p : void 0,
                     "aria-label": q ? void 0 : g,

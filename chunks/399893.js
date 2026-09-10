@@ -362,10 +362,10 @@ function tt(t) {
             function B() {
                 if (null == u) return;
                 let t = c()();
-                t.createEvent({ start: g, end: C, summary: u.name, description: I, location: r, repeating: X }),
+                (t.createEvent({ start: g, end: C, summary: u.name, description: I, location: r, repeating: X }),
                     E.isPlatformEmbedded
                         ? h.A.fileManager.saveWithDialog(t.toString(), "discord-event.ics")
-                        : window.open(t.toURL(), "_blank");
+                        : window.open(t.toURL(), "_blank"));
             }
             return (0, l.jsxs)(d.Dr, {
                 id: T.intl.string(T.t.k5pvjo),

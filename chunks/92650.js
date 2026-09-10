@@ -28,7 +28,7 @@ function C(e) {
                 if (!R) {
                     I(!0);
                     try {
-                        await (0, h.RK)(e), T(!0), i?.();
+                        (await (0, h.RK)(e), T(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         x?.(e);
@@ -44,7 +44,7 @@ function C(e) {
                 if (!R) {
                     j(!0);
                     try {
-                        await (0, h.UK)(e), M(!0), C?.();
+                        (await (0, h.UK)(e), M(!0), C?.());
                     } catch (t) {
                         let e = new a.LG(t);
                         x?.(e);
@@ -62,7 +62,7 @@ function C(e) {
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
-                    M(!0), C?.();
+                    (M(!0), C?.());
                 } catch (t) {
                     let e = new a.LG(t);
                     x?.(e);
@@ -89,11 +89,11 @@ function C(e) {
                     }
                     !(function (e) {
                         let { channelId: t, onConfirm: l, onCancel: i } = e;
-                        u.default.track(p.HAw.OPEN_MODAL, { type: A.PY, channel_id: t }),
+                        (u.default.track(p.HAw.OPEN_MODAL, { type: A.PY, channel_id: t }),
                             (0, g.openModalLazy)(async () => {
                                 let { default: e } = await n.e("661841").then(n.bind(n, 987176));
                                 return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
-                            });
+                            }));
                     })({
                         channelId: e,
                         onConfirm: l,
@@ -110,13 +110,13 @@ function C(e) {
                 }
                 async function l() {
                     let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
-                    u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
+                    (u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
                         action: A.LD.ACCEPT_CONFIRMATION_PROMPT,
                         channel_id: e,
                         mutual_guild_ids: n ?? [],
                         other_user_id: t?.id,
                     }),
-                        await D(e);
+                        await D(e));
                 }
             },
             [D, R, t],
@@ -124,7 +124,7 @@ function C(e) {
         O = l.useCallback(
             (e, t, l) => {
                 function i(n, i) {
-                    i && d.WY.updateSetting(n),
+                    (i && d.WY.updateSetting(n),
                         n && null != t && (0, r.tJ)(t),
                         D(e.id),
                         u.default.track(p.HAw.MESSAGE_REQUEST_ACTION, {
@@ -133,7 +133,7 @@ function C(e) {
                             is_dont_show_again_checked: i,
                             non_spam_retraining_opt_in: n,
                         }),
-                        null != l && l();
+                        null != l && l());
                 }
                 let s = d.WY.getSetting();
                 null == s

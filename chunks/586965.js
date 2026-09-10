@@ -16,7 +16,7 @@ class l extends o.AbstractParserWithWordBoundaryChecking {
         let r = t[2].toLowerCase();
         if (t[0].length <= 3 && !n.FULL_MONTH_NAME_DICTIONARY[r]) return null;
         let i = e.createParsingResult(t.index + (t[1] || "").length, t.index + t[0].length);
-        i.start.imply("day", 1), i.start.addTag("parser/ENMonthNameParser");
+        (i.start.imply("day", 1), i.start.addTag("parser/ENMonthNameParser"));
         let o = n.MONTH_DICTIONARY[r];
         if ((i.start.assign("month", o), t[3])) {
             let e = (0, s.parseYear)(t[3]);

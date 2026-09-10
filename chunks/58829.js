@@ -167,7 +167,7 @@ function A(n) {
         children: [
             (0, t.jsx)(N, {
                 onComplete: function (n) {
-                    e(n), i();
+                    (e(n), i());
                 },
                 excludedPlatformTypes: s,
                 includedPlatformTypes: c,
@@ -178,7 +178,7 @@ function A(n) {
                 onCompleteApplication:
                     null != o
                         ? function (n) {
-                              o?.(n), i();
+                              (o?.(n), i());
                           }
                         : void 0,
             }),
@@ -187,7 +187,7 @@ function A(n) {
                 onCompleteIdentityApplication:
                     null != u
                         ? function (n) {
-                              u?.(n), i();
+                              (u?.(n), i());
                           }
                         : void 0,
             }),

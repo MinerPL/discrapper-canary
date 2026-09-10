@@ -16,7 +16,7 @@ var i = n(132500),
     a = n(174459),
     s = n(403362),
     l = n(449054);
-n(688713), n(351022);
+(n(688713), n(351022));
 var o = n(324580),
     d = n(652215),
     c = n(375708);
@@ -163,14 +163,14 @@ function T() {
 async function m(e) {
     let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: s, options: o } = e,
         c = { ...o, loadId: t };
-    await l.Z2(n, s, c),
+    (await l.Z2(n, s, c),
         a.default.track(d.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: i,
             category_id: r,
             location: s,
-        });
+        }));
 }
 function g() {
     return (0, i.A)().replace(/-/g, "");

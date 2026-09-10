@@ -30,9 +30,9 @@ class c extends s.Ay.DeviceSettingsStore {
         let { state: t, permissionType: n } = e,
             r = d.permissionStates,
             a = r[n];
-        (r[n] = t),
+        ((r[n] = t),
             a !== t &&
-                i.default.track(o.HAw.PERMISSIONS_ACKED, { type: n, action: t, previous_action: a ?? l.hL.NONE });
+                i.default.track(o.HAw.PERMISSIONS_ACKED, { type: n, action: t, previous_action: a ?? l.hL.NONE }));
     }
 }
 var u = n(375708);
@@ -44,7 +44,7 @@ class _ {
         let r = await t(),
             s = r === l.F5.AUTHORIZED || r === l.F5.LIMITED,
             d = s ? l.hL.ACCEPTED : l.hL.DENIED;
-        return a.setPermission(e, d), !s && n.showAuthorizationError && this.showAlert(e), s;
+        return (a.setPermission(e, d), !s && n.showAuthorizationError && this.showAlert(e), s);
     }
     requestPermission(e, t) {
         let n = _.defaultNativePermissionsRequestOptions(t);

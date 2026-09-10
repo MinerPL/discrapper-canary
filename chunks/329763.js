@@ -11,7 +11,7 @@ try {
 let a = { degree: { narrow: { default: "\xb0", "ja-JP": " \u5EA6", "zh-TW": "\u5EA6", "sl-SI": " \xb0" } } };
 class s {
     constructor(e, t = {}) {
-        (this.numberFormatter = (function (e, t = {}) {
+        ((this.numberFormatter = (function (e, t = {}) {
             let { numberingSystem: r } = t;
             if (
                 (r && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${r}`)),
@@ -31,9 +31,9 @@ class s {
                     : "");
             if (n.has(i)) return n.get(i);
             let s = new Intl.NumberFormat(e, t);
-            return n.set(i, s), s;
+            return (n.set(i, s), s);
         })(e, t)),
-            (this.options = t);
+            (this.options = t));
     }
     format(e) {
         let t = "";

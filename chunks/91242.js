@@ -37,8 +37,8 @@ let A = new E(r.h, {
     FRAME_LAUNCH_START: function (e) {
         let { applicationId: t, frameId: n, surface: i } = e,
             r = (0, s.Yf)(i);
-        d.set(n, { id: n, applicationId: t, intent: r, surface: i, state: "loading", data: null }),
-            r === s.sV.MAIN && (c = n);
+        (d.set(n, { id: n, applicationId: t, intent: r, surface: i, state: "loading", data: null }),
+            r === s.sV.MAIN && (c = n));
     },
     FRAME_LAUNCH: function (e) {
         let { frameId: t, proxyTicket: n, customId: i, referrerId: r } = e,
@@ -46,7 +46,7 @@ let A = new E(r.h, {
         if (null == o) return;
         let u = (0, a.Ay)(o.applicationId);
         if (null == u) {
-            d.delete(t), c === t && (c = null);
+            (d.delete(t), c === t && (c = null));
             return;
         }
         d.set(t, {
@@ -70,11 +70,11 @@ let A = new E(r.h, {
     },
     FRAME_LAUNCH_FAIL: function (e) {
         let { frameId: t } = e;
-        d.delete(t), c === t && (c = null);
+        (d.delete(t), c === t && (c = null));
     },
     FRAME_STOP: function (e) {
         let { frameId: t } = e;
-        d.delete(t), c === t && (c = null);
+        (d.delete(t), c === t && (c = null));
     },
     FRAME_CLEAR_MAIN_SLOT: function (e) {
         let { frameId: t } = e;

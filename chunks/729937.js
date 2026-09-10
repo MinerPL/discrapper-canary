@@ -23,5 +23,5 @@ async function d(t, n) {
         oldFormErrors: !0,
         rejectWithError: (0, e.fT)(),
     });
-    return l.h.dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: u, userId: n }), u;
+    return (l.h.dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: u, userId: n }), u);
 }

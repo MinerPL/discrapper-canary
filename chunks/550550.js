@@ -3,7 +3,7 @@ var n =
     function (e) {
         return e && e.__esModule ? e : { default: e };
     };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.includeCommonConfiguration = function (e, t = !1) {
         return (
             e.parsers.unshift(new l.default()),
@@ -16,7 +16,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             e.refiners.push(new u.default(t)),
             e
         );
-    });
+    }));
 let a = n(r(833418)),
     i = n(r(888234)),
     s = n(r(913912)),

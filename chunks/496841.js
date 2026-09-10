@@ -15,7 +15,7 @@ function p(n) {
         _ = e ? u.l : u.A,
         h = t.isManaged() || !t.isPrivate() ? d.intl.string(d.t.S0W8Z5) : d.intl.string(d.t["0D/6Rz"]),
         j = s.useCallback(() => {
-            p?.(), (0, a.X)(b, a.O.JOIN_CALL), o.default.selectVoiceChannel(t.id);
+            (p?.(), (0, a.X)(b, a.O.JOIN_CALL), o.default.selectVoiceChannel(t.id));
         }, [t.id, p, b]);
     return (
         s.useEffect(

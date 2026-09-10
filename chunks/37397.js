@@ -378,10 +378,10 @@ function eS(e) {
             });
         }, [t, s]),
         T = l.useCallback(async () => {
-            m(!0), await (0, F.Ir)(t, s), m(!1);
+            (m(!0), await (0, F.Ir)(t, s), m(!1));
         }, [t, s]);
     function p() {
-        v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
+        (v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
             (0, V.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("76283"),
@@ -391,7 +391,7 @@ function eS(e) {
                     n.e("485579"),
                 ]).then(n.bind(n, 785606));
                 return (n) => (0, i.jsx)(e, { ...n, subscription: t });
-            });
+            }));
     }
     let x = l.useMemo(() => !ed.BE.includes(t.status) && o > 0, [t.status, o]),
         {
@@ -498,14 +498,14 @@ function eS(e) {
                         canInvite: x,
                         onInvite: p,
                         onRemoveMember: function (e) {
-                            v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED, {
+                            (v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED, {
                                 subscription_id: t.id,
                                 member_user_id: e.id,
                             }),
                                 (0, V.openModalLazy)(async () => {
                                     let { default: l } = await n.e("521305").then(n.bind(n, 391040));
                                     return (n) => (0, i.jsx)(l, { ...n, subscriptionId: t.id, member: e });
-                                });
+                                }));
                         },
                         onRemoveInvitedUser: function (e) {
                             v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_CANCEL_INVITE_CLICKED, {
@@ -762,17 +762,17 @@ let ez = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
             [o, u] = l.useState(!1),
             [d, c] = l.useState(!1);
         async function g() {
-            u(!0), c(!1);
+            (u(!0), c(!1));
             try {
-                await (0, eM.M2)(s.id, r, a),
+                (await (0, eM.M2)(s.id, r, a),
                     v.default.track(ec.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
                         subscription_id: s.id,
                         location_stack: r,
                     }),
                     (0, eM.hP)(),
-                    n();
+                    n());
             } catch (e) {
-                c(!0), u(!1);
+                (c(!0), u(!1));
             }
         }
         l.useEffect(() => {
@@ -812,7 +812,7 @@ function eY(e) {
         } = e,
         d = (0, u.bG)([y.default], () => {
             let e = y.default.getCurrentUser();
-            return eR()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
+            return (eR()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e);
         }),
         { analyticsLocations: c } = (0, f.Ay)(x.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER);
     if (0 === (0, O.bx)(n.additionalPlans)) return null;
@@ -924,7 +924,7 @@ function eq(e) {
                     ? null
                     : (0, i.jsx)(eW.Anchor, {
                           onClick: (e) => {
-                              e.preventDefault(),
+                              (e.preventDefault(),
                                   (0, V.openModalLazy)(async () => {
                                       let { default: e } = await n.e("865975").then(n.bind(n, 702698));
                                       return (n) =>
@@ -934,7 +934,7 @@ function eq(e) {
                                               renewalMutations: l,
                                               analyticsLocation: a,
                                           });
-                                  });
+                                  }));
                           },
                           className: eZ.Lu,
                           children: et.intl.string(et.t["ETE/oC"]),
@@ -1216,7 +1216,7 @@ function e4(e) {
         I = (0, G.p)(),
         _ = null != s ? s.slice(1) : [],
         [N, C] = l.useState(0);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         if (g)
             return (
                 T.h.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
@@ -1238,7 +1238,7 @@ function e4(e) {
                     T.h.unsubscribe("BILLING_USER_OFFER_REDEEMED", e);
                 }
             );
-        });
+        }));
     let [v] = (0, R.YV)({
             subscriptionId: n.id,
             renewal: !0,

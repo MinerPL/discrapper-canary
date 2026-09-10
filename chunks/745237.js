@@ -15,10 +15,10 @@ class s {
     extract(e, t) {
         let r = e.createParsingResult(t.index + t[1].length, t[0].substring(t[1].length));
         if (r.text.match(/^\d{4}$/) || ((r.start = s.extractTimeComponent(r.start.clone(), t)), !r.start))
-            return (t.index += t[0].length), null;
+            return ((t.index += t[0].length), null);
         let n = e.text.substring(t.index + t[0].length),
             a = i.exec(n);
-        return a && ((r.end = s.extractTimeComponent(r.start.clone(), a)), r.end && (r.text += a[0])), r;
+        return (a && ((r.end = s.extractTimeComponent(r.start.clone(), a)), r.end && (r.text += a[0])), r);
     }
     static extractTimeComponent(e, t) {
         let r = 0,
@@ -28,8 +28,8 @@ class s {
         if ((r >= 12 && (i = n.Meridiem.PM), null != t[5])) {
             if (r > 12) return null;
             let e = t[5][0].toLowerCase();
-            "a" == e && ((i = n.Meridiem.AM), 12 == r && (r = 0)),
-                "p" == e && ((i = n.Meridiem.PM), 12 != r && (r += 12));
+            ("a" == e && ((i = n.Meridiem.AM), 12 == r && (r = 0)),
+                "p" == e && ((i = n.Meridiem.PM), 12 != r && (r += 12)));
         }
         if (
             (e.assign("hour", r),

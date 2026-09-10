@@ -5,5 +5,5 @@ function r(e) {
     let t = (0, l.A)(e),
         [n, r] = i.useState(e),
         [s, c] = i.useState(null != e && null == t);
-    return n !== e && (r(e), c(null != e && null == t)), s;
+    return (n !== e && (r(e), c(null != e && null == t)), s);
 }

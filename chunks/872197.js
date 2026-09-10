@@ -15,7 +15,7 @@ function u(e) {
     );
 }
 function c(e, t) {
-    Object.defineProperty(e, "target", { value: t }), Object.defineProperty(e, "currentTarget", { value: t });
+    (Object.defineProperty(e, "target", { value: t }), Object.defineProperty(e, "currentTarget", { value: t }));
 }
 function f(e) {
     let t = (0, l.useRef)({ isFocused: !1, observer: null });
@@ -49,8 +49,8 @@ function f(e) {
                         if (t.current.isFocused && n.disabled) {
                             t.current.observer?.disconnect();
                             let e = n === (0, i.bq)() ? null : (0, i.bq)();
-                            n.dispatchEvent(new FocusEvent("blur", { relatedTarget: e })),
-                                n.dispatchEvent(new FocusEvent("focusout", { bubbles: !0, relatedTarget: e }));
+                            (n.dispatchEvent(new FocusEvent("blur", { relatedTarget: e })),
+                                n.dispatchEvent(new FocusEvent("focusout", { bubbles: !0, relatedTarget: e })));
                         }
                     })),
                     t.current.observer.observe(n, { attributes: !0, attributeFilter: ["disabled"] }));
@@ -61,7 +61,7 @@ function f(e) {
 }
 let d = !1;
 function p(e) {
-    for (; e && !(0, a.t)(e, { skipVisibilityCheck: !0 }); ) e = e.parentElement;
+    for (; e && !(0, a.t)(e, { skipVisibilityCheck: !0 });) e = e.parentElement;
     let t = (0, o.mD)(e),
         r = t.document.activeElement;
     if (!r || r === e) return;
@@ -79,18 +79,18 @@ function p(e) {
         f = (t) => {
             ((0, i.wt)(t) === e || s) && (t.stopImmediatePropagation(), s || ((s = !0), (0, n.e)(r), p()));
         };
-    t.addEventListener("blur", l, !0),
+    (t.addEventListener("blur", l, !0),
         t.addEventListener("focusout", u, !0),
         t.addEventListener("focusin", f, !0),
-        t.addEventListener("focus", c, !0);
+        t.addEventListener("focus", c, !0));
     let p = () => {
-            cancelAnimationFrame(h),
+            (cancelAnimationFrame(h),
                 t.removeEventListener("blur", l, !0),
                 t.removeEventListener("focusout", u, !0),
                 t.removeEventListener("focusin", f, !0),
                 t.removeEventListener("focus", c, !0),
                 (d = !1),
-                (s = !1);
+                (s = !1));
         },
         h = requestAnimationFrame(p);
     return p;

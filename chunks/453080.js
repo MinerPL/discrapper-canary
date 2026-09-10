@@ -39,7 +39,7 @@ function u(l) {
             (e = l.ipLookup),
             {
                 async initialize(l, d = !1, s = !1) {
-                    t.setSdkPlatform("WEBAPP"), t.setSdkVersion(l);
+                    (t.setSdkPlatform("WEBAPP"), t.setSdkVersion(l));
                     let n = (0, a.t)(),
                         Z = (0, c.r)(n),
                         m = /Android|iPhone|iPad|iPod/i.test(n),
@@ -110,7 +110,7 @@ function u(l) {
                     t.setMotionStatus(l);
                 },
                 setBackgroundMode(l) {
-                    t.setBackgroundMode(l || d.wasBackgrounded), d.reset();
+                    (t.setBackgroundMode(l || d.wasBackgrounded), d.reset());
                 },
                 estimatePerformance: () => t.estimatePerformance(),
                 getMetadata: () => t.getMetadata(),
@@ -142,14 +142,14 @@ function u(l) {
         metadata: m,
         motion: u,
         async initialize(t = !1, d = !1) {
-            await m.initialize(l.sdkVersion, t, d), m.estimatePerformance();
+            (await m.initialize(l.sdkVersion, t, d), m.estimatePerformance());
         },
         requestMotionPermission: async () => u.requestPermission(),
         async startMotionSensors() {
             await u.start();
         },
         async primeWasmMotionSensor() {
-            await l.wasmUtil.rsp(), l.wasmUtil.ssl();
+            (await l.wasmUtil.rsp(), l.wasmUtil.ssl());
         },
         stopMotionSensors() {
             u.stop();
@@ -164,13 +164,13 @@ function u(l) {
             try {
                 await l.wasmUtil.prc();
             } finally {
-                i.dispose(), (0, s.a)(d);
+                (i.dispose(), (0, s.a)(d));
             }
         },
         async analyzeFrame(l) {
-            await u.start(), await m.analyzeFrame(l), m.preparePipelineState();
+            (await u.start(), await m.analyzeFrame(l), m.preparePipelineState());
             let t = u.check();
-            m.setMotionStatus(t), m.getCheck(), m.setBackgroundMode(!1);
+            (m.setMotionStatus(t), m.getCheck(), m.setBackgroundMode(!1));
         },
         getMetadata: () => m.getMetadata(),
         getMotionStatus: () => u.check(),

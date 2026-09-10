@@ -22,9 +22,9 @@ function i(e, t) {
             i = t[Symbol.iterator](),
             o = r.next(),
             a = i.next();
-        for (; !o.done && !a.done; ) {
+        for (; !o.done && !a.done;) {
             if (!Object.is(o.value, a.value)) return !1;
-            (o = r.next()), (a = i.next());
+            ((o = r.next()), (a = i.next()));
         }
         return !!o.done && !!a.done;
     }

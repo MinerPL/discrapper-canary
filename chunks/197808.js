@@ -112,23 +112,23 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
                     ? (C.A.pipFrameWindow ?? C.A.pipVideoWindow ?? C.A.pipActivityWindow)
                     : (C.A.pipVideoWindow ?? C.A.pipActivityWindow ?? C.A.pipFrameWindow)
               : null;
-    let V = Array.from(C.A.pipWindows.values()),
-        B = C.A.pipWidth(v.R8.VIDEO),
-        H = V.find((e) => e.component === y.o1q.VIDEO),
-        j = V.find((e) => e.component === y.o1q.ACTIVITY),
-        W = [H, j, V.find((e) => e.component === y.o1q.FRAME)].filter(L.Vq),
+    let B = Array.from(C.A.pipWindows.values()),
+        V = C.A.pipWidth(v.R8.VIDEO),
+        H = B.find((e) => e.component === y.o1q.VIDEO),
+        j = B.find((e) => e.component === y.o1q.ACTIVITY),
+        W = [H, j, B.find((e) => e.component === y.o1q.FRAME)].filter(L.Vq),
         Y = g.Ay.callChatSidebarWidth,
         K = O.Ay.getVoiceChannelId(),
         $ = O.Ay.getChannelId() === K,
         z = null != K && _.A.getChatOpen(K),
-        q = f || S,
-        Z = q && null != s && (0, o.q)(s.applicationId),
-        X = !q && null != t && $;
+        X = f || S,
+        q = X && null != s && (0, o.q)(s.applicationId),
+        Z = !X && null != t && $;
     return {
         selectedPIPWindow: t,
         pipWindows: 0 === W.length ? w : W,
-        pipWidth: B,
-        maxX: k.width - (X && z ? Y : 0),
+        pipWidth: V,
+        maxX: k.width - (Z && z ? Y : 0),
         maxY: k.height,
         theme: m.A.theme,
         dockedRect: C.A.getDockedRect(t?.id ?? ""),
@@ -136,7 +136,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
             return U && (0, p.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e;
         },
         appContext: F,
-        roundCorners: !Z,
+        roundCorners: !q,
         windowSize: k,
         inPopoutWindow: U,
         activityPIPWindow: j,

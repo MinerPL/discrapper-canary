@@ -10,7 +10,7 @@ class s extends i.Ay.Store {
     getCurrentRoute() {
         var e;
         let t;
-        return (t = null != (e = r) && null != e.search ? e.search : ""), null != e ? `${e.pathname}${t}` : null;
+        return ((t = null != (e = r) && null != e.search ? e.search : ""), null != e ? `${e.pathname}${t}` : null);
     }
     reset() {
         throw Error("Should not reset the store this way outside of a test environment");

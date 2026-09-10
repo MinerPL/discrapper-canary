@@ -18,10 +18,10 @@ class A extends o.A {
     queue = new Set();
     isFetchEnabled = !1;
     handleConnectionOpen = () => {
-        (this.isFetchEnabled = !0),
+        ((this.isFetchEnabled = !0),
             this.queue.forEach((e) => {
                 e === _.Iq ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
-            });
+            }));
     };
     fetchFeaturedGuilds = async (e) => {
         if (!this.isFetchEnabled) return void this.queue.add(_.Iq);
@@ -45,8 +45,8 @@ class A extends o.A {
                     total: t,
                 });
             } catch (e) {
-                l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: _.Iq, error: e }),
-                    d.uf({ categoryId: _.Iq });
+                (l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: _.Iq, error: e }),
+                    d.uf({ categoryId: _.Iq }));
             }
         }
     };
@@ -67,8 +67,8 @@ class A extends o.A {
                     i = e.body.guilds.map(u.MC);
                 l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: t, guilds: i, total: n });
             } catch (e) {
-                l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: t, error: e }),
-                    d.uf({ categoryId: t });
+                (l.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE", categoryId: t, error: e }),
+                    d.uf({ categoryId: t }));
             }
         }
     };

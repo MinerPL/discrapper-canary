@@ -33,10 +33,10 @@ function a(e) {
             s,
             u,
             o = e.target;
-        for (; null != o; )
-            "src" in o && null != o.src && (s = o.src),
+        for (; null != o;)
+            ("src" in o && null != o.src && (s = o.src),
                 "href" in o && null != o.href && ((i = o.href), (u = o.textContent)),
-                (o = o?.parentNode);
+                (o = o?.parentNode));
         if (null != s)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -71,7 +71,7 @@ function a(e) {
                 return (n) => (0, l.jsx)(e, { ...n, text: t });
             });
     }
-    return e.preventDefault(), null;
+    return (e.preventDefault(), null);
 }
 function s(e) {
     let t = !1,
@@ -83,10 +83,10 @@ function s(e) {
         let n,
             l,
             r = e.target;
-        for (; null != r; )
-            "src" in r && null != r.src && (l = r.src),
+        for (; null != r;)
+            ("src" in r && null != r.src && (l = r.src),
                 "href" in r && null != r.href && (n = r.href),
-                (r = r?.parentNode);
+                (r = r?.parentNode));
         (null != n || null != l) && (t = !0);
     }
     t || e.preventDefault();

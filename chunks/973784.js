@@ -1,5 +1,5 @@
 e.exports = function (e, t, r, n) {
-    (t = t || "&"), (r = r || "=");
+    ((t = t || "&"), (r = r || "="));
     var i = {};
     if ("string" != typeof e || 0 === e.length) return i;
     var o = /\+/g;

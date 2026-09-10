@@ -89,7 +89,7 @@ function k(t) {
                                   descriptionVariant: "text-xs/medium",
                                   buttonText: A.intl.string(A.t.mxJOd9),
                                   onButtonPress: () => {
-                                      C.default.track(v.HAw.USER_REMEDIATION_ACTION, {
+                                      (C.default.track(v.HAw.USER_REMEDIATION_ACTION, {
                                           action: p.p.GOTO_IGNORE,
                                           location: r,
                                       }),
@@ -104,7 +104,7 @@ function k(t) {
                                                   onBlock: n,
                                                   location: r,
                                               }),
-                                          );
+                                          ));
                                   },
                               }),
                           }),
@@ -143,13 +143,13 @@ function M(t) {
             confirmText: A.intl.string(A.t.l4Emac),
             cancelText: A.intl.string(A.t["ETE/oC"]),
             onCancel: function () {
-                C.default.track(v.HAw.USER_REMEDIATION_ACTION, { action: p.p.CANCEL_BLOCK, location: c }), l?.();
+                (C.default.track(v.HAw.USER_REMEDIATION_ACTION, { action: p.p.CANCEL_BLOCK, location: c }), l?.());
             },
             onConfirm: () => {
-                n?.(),
+                (n?.(),
                     I.A.blockUser(i.id, { location: c }).then(() => {
-                        C.default.track(v.HAw.BLOCK_USER_CONFIRMED), h.A.showBlockSuccessToast(i.id, x ?? void 0);
-                    });
+                        (C.default.track(v.HAw.BLOCK_USER_CONFIRMED), h.A.showBlockSuccessToast(i.id, x ?? void 0));
+                    }));
             },
             impression: { impressionName: r.ImpressionNames.BLOCK_USER_CONFIRMATION },
             ...u,

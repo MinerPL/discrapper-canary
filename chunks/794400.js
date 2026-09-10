@@ -9,10 +9,10 @@ class i extends Error {
         errorHandlingBehavior: n = "close-and-alert",
         skipReportingToSentry: i = !1,
     }) {
-        super(e),
+        (super(e),
             (this.name = new.target.name),
             (this.extraSentryInformation = t),
             (this.errorHandlingBehavior = n),
-            (this.skipReportingToSentry = i);
+            (this.skipReportingToSentry = i));
     }
 }

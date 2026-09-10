@@ -1,5 +1,5 @@
-n.d(t, { $P: () => c, Kh: () => u, Oy: () => _, RJ: () => s, al: () => d, cZ: () => o, gA: () => l, wu: () => a }),
-    n(582128);
+(n.d(t, { $P: () => c, Kh: () => u, Oy: () => _, RJ: () => s, al: () => d, cZ: () => o, gA: () => l, wu: () => a }),
+    n(582128));
 let i = ["gif", "webp", "png", "apng"],
     r = ["png", "jpg", "jpeg", "webp", "svg"];
 function a(e) {

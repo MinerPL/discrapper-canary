@@ -53,14 +53,14 @@ async function h(e) {
         } catch (r) {
             let e = new i.LG(r);
             throw (
-                (a.h.dispatch({
+                a.h.dispatch({
                     type: "LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE",
                     tenantId: t,
                     templateId: n,
                     requestParams: o,
                     apiError: e,
                 }),
-                e)
+                e
             );
         }
 }

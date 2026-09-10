@@ -41,10 +41,10 @@ function o(r, e) {
         },
         n: function () {
             var r = t.next();
-            return (i = r.done), r;
+            return ((i = r.done), r);
         },
         e: function (r) {
-            (s = !0), (c = r);
+            ((s = !0), (c = r));
         },
         f: function () {
             try {
@@ -96,7 +96,7 @@ var n,
                                 t = [],
                                 a = o(r);
                             try {
-                                for (a.s(); !(e = a.n()).done; ) {
+                                for (a.s(); !(e = a.n()).done;) {
                                     var n = e.value;
                                     t.push(s(n));
                                 }
@@ -117,7 +117,7 @@ var n,
             n),
     };
 function s(r) {
-    for (var e = r.toString(16); e.length < 2; ) e = "0" + e;
+    for (var e = r.toString(16); e.length < 2;) e = "0" + e;
     return e;
 }
 function l(r, e, t, o) {
@@ -242,7 +242,7 @@ function d(r) {
     );
 }
 function f(r, e, t) {
-    return t || (t = ""), r.push(e), "<".concat(e).concat(t ? ' style="'.concat(t, '"') : "", ">");
+    return (t || (t = ""), r.push(e), "<".concat(e).concat(t ? ' style="'.concat(t, '"') : "", ">"));
 }
 function g(r, e) {
     return f(r, "span", e);
@@ -261,10 +261,10 @@ r.exports = (function () {
     var r;
     function e(r) {
         if (!(this instanceof e)) throw TypeError("Cannot call a class as a function");
-        (r = r || {}).colors && (r.colors = Object.assign({}, i.colors, r.colors)),
+        ((r = r || {}).colors && (r.colors = Object.assign({}, i.colors, r.colors)),
             (this.options = Object.assign({}, i, r)),
             (this.stack = []),
-            (this.stickyStack = []);
+            (this.stickyStack = []));
     }
     return (
         (r = [
@@ -287,7 +287,7 @@ r.exports = (function () {
                                 return "";
                             }
                             function c(r) {
-                                return e.newline ? t("display", -1) : t("text", r), "";
+                                return (e.newline ? t("display", -1) : t("text", r), "");
                             }
                             var i = [
                                     { pattern: /^\x08+/, sub: n },
@@ -296,19 +296,19 @@ r.exports = (function () {
                                     {
                                         pattern: /^\x1b\[[34]8;2;\d+;\d+;\d+m/,
                                         sub: function (r) {
-                                            return t("rgb", r), "";
+                                            return (t("rgb", r), "");
                                         },
                                     },
                                     {
                                         pattern: /^\x1b\[38;5;(\d+)m/,
                                         sub: function (r, e) {
-                                            return t("xterm256Foreground", e), "";
+                                            return (t("xterm256Foreground", e), "");
                                         },
                                     },
                                     {
                                         pattern: /^\x1b\[48;5;(\d+)m/,
                                         sub: function (r, e) {
-                                            return t("xterm256Background", e), "";
+                                            return (t("xterm256Background", e), "");
                                         },
                                     },
                                     { pattern: /^\n/, sub: c },
@@ -317,11 +317,11 @@ r.exports = (function () {
                                     {
                                         pattern: /^\x1b\[((?:\d{1,3};?)+|)m/,
                                         sub: function (r, e) {
-                                            (a = !0), 0 === e.trim().length && (e = "0");
+                                            ((a = !0), 0 === e.trim().length && (e = "0"));
                                             var n,
                                                 c = o((e = e.trimRight(";").split(";")));
                                             try {
-                                                for (c.s(); !(n = c.n()).done; ) {
+                                                for (c.s(); !(n = c.n()).done;) {
                                                     var i = n.value;
                                                     t("display", i);
                                                 }
@@ -339,13 +339,13 @@ r.exports = (function () {
                                     {
                                         pattern: /^(([^\x1b\x08\r\n])+)/,
                                         sub: function (r) {
-                                            return t("text", r), "";
+                                            return (t("text", r), "");
                                         },
                                     },
                                 ],
                                 s = [],
                                 l = r.length;
-                            r: for (; l > 0; ) {
+                            r: for (; l > 0;) {
                                 for (var u, p = 0, d = 0, f = i.length; d < f; p = ++d)
                                     if (
                                         ((u = i[p]),
@@ -356,11 +356,11 @@ r.exports = (function () {
                                         continue r;
                                     }
                                 if (r.length === l) break;
-                                s.push(0), (l = r.length);
+                                (s.push(0), (l = r.length));
                             }
                         })(r.join(""), a, function (r, o) {
                             var c = l(t, r, o, a);
-                            c && n.push(c),
+                            (c && n.push(c),
                                 a.stream &&
                                     (e.stickyStack = (function (r, e, t) {
                                         if ("text" !== e) {
@@ -373,7 +373,7 @@ r.exports = (function () {
                                             )).push({ token: e, data: t, category: d(t) });
                                         }
                                         return r;
-                                    })(e.stickyStack, r, o));
+                                    })(e.stickyStack, r, o)));
                         }),
                         t.length && n.push(u(t)),
                         n.join("")
@@ -384,10 +384,10 @@ r.exports = (function () {
         (function (r, e) {
             for (var t = 0; t < e.length; t++) {
                 var o = e[t];
-                (o.enumerable = o.enumerable || !1),
+                ((o.enumerable = o.enumerable || !1),
                     (o.configurable = !0),
                     "value" in o && (o.writable = !0),
-                    Object.defineProperty(r, o.key, o);
+                    Object.defineProperty(r, o.key, o));
             }
         })(e.prototype, r),
         e

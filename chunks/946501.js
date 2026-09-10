@@ -10,7 +10,7 @@ var t = Object.prototype.toString,
         return r;
     },
     o = function (e, t) {
-        for (var r = "", n = 0; n < e.length; n += 1) (r += e[n]), n + 1 < e.length && (r += t);
+        for (var r = "", n = 0; n < e.length; n += 1) ((r += e[n]), n + 1 < e.length && (r += t));
         return r;
     };
 e.exports = function (e) {
@@ -33,7 +33,7 @@ e.exports = function (e) {
         s.prototype)
     ) {
         var d = function () {};
-        (d.prototype = s.prototype), (a.prototype = new d()), (d.prototype = null);
+        ((d.prototype = s.prototype), (a.prototype = new d()), (d.prototype = null));
     }
     return a;
 };

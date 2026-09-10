@@ -130,10 +130,10 @@ let X =
                   ? null
                   : (0, i.jsxs)(j.T0, {
                         onClick: () => {
-                            t(),
+                            (t(),
                                 k.default.track(b.HAw.APP_NOTICE_CLOSED, {
                                     notice_type: b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING,
-                                });
+                                }));
                         },
                         children: [
                             (0, i.jsx)(j.In, { children: (0, v.rn)(s, Number(r.discount.amount), (0, G.hm)(r)) }),
@@ -188,14 +188,14 @@ function Y(e) {
             if (n === b.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(B.A, {
                     dismissCurrentNotice: () => {
-                        u(P.i.USER_DISMISS), (0, U.w)(E);
+                        (u(P.i.USER_DISMISS), (0, U.w)(E));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
             if (n === b.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
                 return (0, i.jsx)(X, {
                     dismissCurrentNotice: () => {
-                        u(P.i.USER_DISMISS), (0, U.w)(E);
+                        (u(P.i.USER_DISMISS), (0, U.w)(E));
                     },
                     subscriptionTier: q.pe.TIER_2,
                 });
@@ -204,7 +204,7 @@ function Y(e) {
             return (0, i.jsx)(g, {
                 noticeType: b.kqX.RIOT_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    ((0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
@@ -216,7 +216,7 @@ function Y(e) {
             return (0, i.jsx)(h.Ay, {
                 noticeType: b.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
+                    ((0, H.Dr)(a.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
@@ -227,7 +227,7 @@ function Y(e) {
             return (0, i.jsx)(g, {
                 noticeType: b.kqX.BATTLENET_MIGRATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
+                    ((0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);
@@ -239,7 +239,7 @@ function Y(e) {
             return (0, i.jsx)(h.Ay, {
                 noticeType: b.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
                 markAsDismissed: (e) => {
-                    (0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
+                    ((0, H.Dr)(a.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e));
                 },
                 recurringDismiss: (e) => {
                     u(e);

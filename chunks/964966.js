@@ -29,7 +29,7 @@ function f(r, t, e) {
                     try {
                         for (n = n.call(r); !(a = (t = n.next()).done) && (o.push(t.value), 2 !== o.length); a = !0);
                     } catch (r) {
-                        (u = !0), (e = r);
+                        ((u = !0), (e = r));
                     } finally {
                         try {
                             a || null == n.return || n.return();
@@ -63,5 +63,5 @@ function f(r, t, e) {
             },
             [c, r, e],
         );
-    return (0, u.E)(s), [c, s];
+    return ((0, u.E)(s), [c, s]);
 }

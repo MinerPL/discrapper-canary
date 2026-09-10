@@ -1,4 +1,4 @@
-n.d(t, { I: () => g }), n(323874), n(14289), n(35956);
+(n.d(t, { I: () => g }), n(323874), n(14289), n(35956));
 var i = n(582128),
     r = n(806163),
     a = n(323889),
@@ -10,7 +10,7 @@ var i = n(582128),
 let u = new Map();
 function _(e) {
     let t = u.get(e);
-    return null == t && ((t = new Set()), u.set(e, t)), t;
+    return (null == t && ((t = new Set()), u.set(e, t)), t);
 }
 function E() {
     let e = d.A.quests,

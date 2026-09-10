@@ -1,4 +1,4 @@
-e.r(t), e.d(t, { MemberVerificationPreviewDisabled: () => q, default: () => z });
+(e.r(t), e.d(t, { MemberVerificationPreviewDisabled: () => q, default: () => z }));
 var l = e(477900),
     n = e(582128),
     s = e(17928),
@@ -230,14 +230,14 @@ function q(i) {
             hasFetchedRequestToJoinGuilds: j.A.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: j.A.getJoinRequestGuild(t),
         }));
-    n.useEffect(() => {
+    (n.useEffect(() => {
         null != h && (0, u.pX)(G.BVt.CHANNEL(t));
     }, [h, t]),
         n.useEffect(() => {
             A || x.A.fetchRequestToJoinGuilds();
-        }, [A]);
+        }, [A]));
     let v = n.useCallback(() => {
-        x.A.removeGuildJoinRequest(t), (0, u.pX)(G.BVt.ME);
+        (x.A.removeGuildJoinRequest(t), (0, u.pX)(G.BVt.ME));
     }, [t]);
     function E(i, t) {
         return () => {
@@ -251,7 +251,7 @@ function q(i) {
         };
     }
     async function T() {
-        await x.A.resetGuildJoinRequest(t), (0, g.Ze)(t);
+        (await x.A.resetGuildJoinRequest(t), (0, g.Ze)(t));
     }
     function b(i) {
         i ? E(N.intl.format(N.t["9ZezpN"], { name: p?.name }), v)() : v();

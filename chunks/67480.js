@@ -21,35 +21,35 @@ function A(e) {
                 null == t.orbsReward && null != n.orbsReward && (t.orbsReward = n.orbsReward),
                 0 === t.eligibleOffers.length && n.eligibleOffers.length > 0 && (t.eligibleOffers = n.eligibleOffers)),
             t);
-    u.set(e.id, i),
+    (u.set(e.id, i),
         d.delete(e.id),
         c.delete(e.id),
         e.bundled_sku_ids?.forEach((t) => {
             o.set(t, e.id);
         }),
         _.has(e.application_id) || _.set(e.application_id, new Set()),
-        _.get(e.application_id).add(e.id);
+        _.get(e.application_id).add(e.id));
 }
 function h(e) {
-    A(e.sku),
+    (A(e.sku),
         null != e.child_skus && e.child_skus.forEach((e) => A(e)),
-        null != e.alternative_skus && e.alternative_skus.forEach((e) => A(e));
+        null != e.alternative_skus && e.alternative_skus.forEach((e) => A(e)));
 }
 function I(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && A(e.sku);
 }
 function f() {
-    (o = new Map()), (d = new Set()), (c = new Set()), (u = new Map()), (_ = new Map()), (E = new Map());
+    ((o = new Map()), (d = new Set()), (c = new Set()), (u = new Map()), (_ = new Map()), (E = new Map()));
 }
 function p() {
     if (i === l.default.locale) return !1;
-    (i = l.default.locale), f();
+    ((i = l.default.locale), f());
 }
 class T extends r.il {
     static displayName = "SKUStore";
     initialize() {
-        this.waitFor(l.default), this.syncWith([l.default], p), (i = l.default.locale);
+        (this.waitFor(l.default), this.syncWith([l.default], p), (i = l.default.locale));
     }
     get(e) {
         return u.get(e);
@@ -82,7 +82,7 @@ let m = new T(a.h, {
     },
     STORE_LISTINGS_FETCH_FAIL: function (e) {
         let { skuId: t } = e;
-        d.delete(t), c.add(t);
+        (d.delete(t), c.add(t));
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
@@ -107,7 +107,7 @@ let m = new T(a.h, {
     },
     SKU_FETCH_FAIL: function (e) {
         let { skuId: t } = e;
-        d.delete(t), c.add(t);
+        (d.delete(t), c.add(t));
     },
     SKUS_FETCH_SUCCESS: function (e) {
         let { guildId: t, skus: n } = e;

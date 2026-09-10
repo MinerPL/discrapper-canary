@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         DEFAULT_EMOJI_SLOTS: () => i,
         EMOJI_MAX_FILESIZE: () => o,
@@ -12,7 +12,7 @@ n.r(t),
         EmojiInteractionPoint: () => p,
         EmojiSprites: () => A,
         isExternalEmojiAllowedForIntention: () => T,
-    });
+    }));
 let i = 50,
     r = 200,
     a = 32,

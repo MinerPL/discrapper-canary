@@ -18,7 +18,7 @@ function p(a) {
         A = m(E) || (null != p && E <= p),
         v = m(E) || (null != x && E >= x);
     function g(a) {
-        t(m(a) ? (p ?? 0) : a), C(a);
+        (t(m(a) ? (p ?? 0) : a), C(a));
     }
     return (0, l.jsxs)("div", {
         className: s()(u.o, r),
@@ -28,7 +28,7 @@ function p(a) {
                 size: "sm",
                 icon: c.MinusIcon,
                 onClick: function (a) {
-                    a.stopPropagation(), A || g(E - 1);
+                    (a.stopPropagation(), A || g(E - 1));
                 },
                 "aria-label": h.intl.string(h.t["k+ohJm"]),
                 disabled: A,
@@ -49,7 +49,7 @@ function p(a) {
                 variant: "icon-only",
                 icon: d.j,
                 onClick: function (a) {
-                    a.stopPropagation(), v || g(E + 1);
+                    (a.stopPropagation(), v || g(E + 1));
                 },
                 "aria-label": h.intl.string(h.t.w8Sc4B),
                 disabled: v,

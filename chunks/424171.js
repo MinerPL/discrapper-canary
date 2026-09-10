@@ -223,7 +223,7 @@ function ee(e) {
         tt = (0, L.W)(eM, eR),
         { giftCardBalance: tn, giftCardCurrency: ti } = (0, _.h)(),
         tl = null != eL ? eL.getDiscountIdIfExists() : void 0;
-    l.useEffect(() => {
+    (l.useEffect(() => {
         te((e) => {
             let n = null != eK ? (0, W.y8)(eK.id, !1, eB, { paymentSourceId: ex.paymentSourceId }) : void 0;
             return {
@@ -242,7 +242,7 @@ function ee(e) {
         (0, c.Ay)(() => {
             !(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                k.default.track(M.HAw.PAYMENT_FLOW_STARTED, e, t), C.trigger();
+                (k.default.track(M.HAw.PAYMENT_FLOW_STARTED, e, t), C.trigger());
             })({
                 ...e7,
                 continue_session_initial_step: eP,
@@ -252,9 +252,9 @@ function ee(e) {
             });
         }),
         l.useEffect(() => {
-            null == eK && (null != eH && null != eP ? eg(eH) : eg(V)),
-                null != ep ? eN(ep) : null != V && eN(G.A.get(V)?.skuId);
-        }, [eg, eK, eN, V, ep, eH, eP]);
+            (null == eK && (null != eH && null != eP ? eg(eH) : eg(V)),
+                null != ep ? eN(ep) : null != V && eN(G.A.get(V)?.skuId));
+        }, [eg, eK, eN, V, ep, eH, eP]));
     let ts = l.useCallback(() => {
             let e = (0, H.lo)(eQ) === H.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
@@ -282,7 +282,7 @@ function ee(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: s } = t,
                     a = Date.now();
                 if (e === U.pn.CONFIRM && (ts(), z?.(l), ta(), eI)) return void tu();
-                e8(e), eE?.(e), eU(null), e === U.pn.ADD_PAYMENT_STEPS && (o.h.wait(r.ET), o.h.wait(d.T3));
+                (e8(e), eE?.(e), eU(null), e === U.pn.ADD_PAYMENT_STEPS && (o.h.wait(r.ET), o.h.wait(d.T3)));
                 let u = null != n ? n : e5;
                 null === u || s
                     ? k.default.track(M.HAw.PAYMENT_FLOW_LOADED, {

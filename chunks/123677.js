@@ -1,4 +1,4 @@
-n.d(t, { _: () => _, e: () => u }), n(321073);
+(n.d(t, { _: () => _, e: () => u }), n(321073));
 var i = n(492462),
     r = n(179771),
     a = n(136722),
@@ -9,7 +9,7 @@ var i = n(492462),
     c = n(652215);
 function u(e) {
     let t = e.filter((e) => !d.A8.includes(e));
-    return t.includes(r.F.BOT) && !t.includes(r.F.APPLICATIONS_COMMANDS) && t.push(r.F.APPLICATIONS_COMMANDS), t;
+    return (t.includes(r.F.BOT) && !t.includes(r.F.APPLICATIONS_COMMANDS) && t.push(r.F.APPLICATIONS_COMMANDS), t);
 }
 function _(e) {
     let t = (0, i.parse)(e, { arrayFormat: "bracket" }),

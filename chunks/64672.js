@@ -17,13 +17,13 @@ let { MAX_SAFE_COMPONENT_LENGTH: n, MAX_SAFE_BUILD_LENGTH: i, MAX_LENGTH: o } = 
                 return e;
             })(t),
             i = f++;
-        a(e, i, t),
+        (a(e, i, t),
             (c[e] = i),
             (u[i] = t),
             (s[i] = new RegExp(t, r ? "g" : void 0)),
-            (l[i] = new RegExp(n, r ? "g" : void 0));
+            (l[i] = new RegExp(n, r ? "g" : void 0)));
     };
-h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
+(h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
     h("NUMERICIDENTIFIERLOOSE", "\\d+"),
     h("NONNUMERICIDENTIFIER", `\\d*[a-zA-Z-]${d}*`),
     h("MAINVERSION", `(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})\\.(${u[c.NUMERICIDENTIFIER]})`),
@@ -77,4 +77,4 @@ h("NUMERICIDENTIFIER", "0|[1-9]\\d*"),
     h("HYPHENRANGELOOSE", `^\\s*(${u[c.XRANGEPLAINLOOSE]})\\s+-\\s+(${u[c.XRANGEPLAINLOOSE]})\\s*$`),
     h("STAR", "(<|>)?=?\\s*\\*"),
     h("GTE0", "^\\s*>=\\s*0\\.0\\.0\\s*$"),
-    h("GTE0PRE", "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
+    h("GTE0PRE", "^\\s*>=\\s*0\\.0\\.0-0\\s*$"));

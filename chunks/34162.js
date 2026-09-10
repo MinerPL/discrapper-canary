@@ -1,4 +1,4 @@
-n.d(t, { A: () => B }), n(321073);
+(n.d(t, { A: () => V }), n(321073));
 var i = n(478437),
     r = n(17928),
     a = n(52133),
@@ -65,13 +65,13 @@ function k(e, t, n, r) {
 function F(e) {
     let { guild: t } = e,
         n = w();
-    return v.delete(t.id), n;
+    return (v.delete(t.id), n);
 }
-class V extends r.Ay.Store {
+class B extends r.Ay.Store {
     static displayName = "GuildMediaStateStore";
     initialize() {
-        this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay, O.A),
-            this.syncWith([_.A, f.A, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay], w);
+        (this.waitFor(_.A, f.A, p.default, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay, O.A),
+            this.syncWith([_.A, f.A, T.A, o.Ay, E.Ay, m.A, g.A, S.A, N.Ay, h.A, C.Ay], w));
     }
     getGuildMediaState(e) {
         let t = v.get(e);
@@ -161,10 +161,10 @@ class V extends r.Ay.Store {
                 };
             })(e),
             i = null != t && (0, a.A)(t.value, n) ? t.value : n;
-        return v.set(e, { value: i, version: b }), i;
+        return (v.set(e, { value: i, version: b }), i);
     }
 }
-let B = new V(s.h, {
+let V = new B(s.h, {
     CONNECTION_OPEN: x,
     CONNECTION_OPEN_SUPPLEMENTAL: x,
     CONNECTION_CLOSED: x,

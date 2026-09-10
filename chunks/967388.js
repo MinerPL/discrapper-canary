@@ -48,7 +48,7 @@ function R(e) {
                       "aria-label": _.intl.formatToPlainString(b.default.w5Latp, { userName: U }),
                       className: S.kL,
                       onClick: () => {
-                          R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), L(!R);
+                          (R || (0, I.Ql)({ channelId: t, interactionType: "note_opened" }), L(!R));
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                       ...D,

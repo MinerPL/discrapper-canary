@@ -132,7 +132,7 @@ let p = [
     m = { name: "", firstLastName: "", secondLastName: "", gender: "", birthDate: "", birthState: "" },
     v = (e, r, t) => {
         let a = { ...(e ?? {}) };
-        return t ? (a[r] = t) : delete a[r], Object.keys(a).length > 0 ? a : void 0;
+        return (t ? (a[r] = t) : delete a[r], Object.keys(a).length > 0 ? a : void 0);
     },
     h = (0, o.t)({
         types: { context: {}, events: {}, input: {} },
@@ -148,7 +148,7 @@ let p = [
                 enterCurpValidationErrors: ((e, r) => {
                     if (!e?.[r]) return e;
                     let t = { ...e };
-                    return delete t[r], Object.keys(t).length > 0 ? t : void 0;
+                    return (delete t[r], Object.keys(t).length > 0 ? t : void 0);
                 })(e.enterCurpValidationErrors, "curp"),
             })),
             validateEnterCurpFieldAction: (0, o.r)(({ context: e }) => ({
@@ -186,7 +186,7 @@ let p = [
                         (t = f()),
                         p.reduce((e, a) => {
                             let i = E(C(r[a.key]), a.validation, t);
-                            return i && (e[a.key] = i), e;
+                            return (i && (e[a.key] = i), e);
                         }, {}));
                 return { generateCurpValidationErrors: Object.keys(a).length > 0 ? a : void 0 };
             }),
@@ -434,25 +434,25 @@ function G({ actor: e, trackElementClicked: r }) {
             e.send({ type: "VALIDATE_FIELD", field: r });
         },
         verify() {
-            r?.("verify"), e.send({ type: "VERIFY" });
+            (r?.("verify"), e.send({ type: "VERIFY" }));
         },
         switchToGenerate() {
-            r?.("switchToGenerate"), e.send({ type: "SWITCH_TO_GENERATE" });
+            (r?.("switchToGenerate"), e.send({ type: "SWITCH_TO_GENERATE" }));
         },
         setGenerateForm(r) {
             e.send({ type: "SET_GENERATE_FORM", form: r });
         },
         generate() {
-            r?.("generate"), e.send({ type: "GENERATE" });
+            (r?.("generate"), e.send({ type: "GENERATE" }));
         },
         confirmGenerated() {
-            r?.("confirmGenerated"), e.send({ type: "CONFIRM" });
+            (r?.("confirmGenerated"), e.send({ type: "CONFIRM" }));
         },
         retry() {
-            r?.("retry"), e.send({ type: "RETRY" });
+            (r?.("retry"), e.send({ type: "RETRY" }));
         },
         close() {
-            r?.("close"), e.send({ type: "CLOSE" });
+            (r?.("close"), e.send({ type: "CLOSE" }));
         },
     };
 }

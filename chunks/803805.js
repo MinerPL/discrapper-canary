@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     Do: () => T,
     F1: () => x,
     Q8: () => N,
@@ -14,7 +14,7 @@ n.d(t, {
     uz: () => E,
     zT: () => L,
 }),
-    n(321073);
+    n(321073));
 var i,
     r = n(852015),
     a = n(144367),
@@ -51,7 +51,7 @@ class c extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -104,7 +104,7 @@ class c extends l.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && o.u.internalBinaryWrite(e.versions, t.tag(1, r.O0.LengthDelimited).fork(), n).join(),
+        (e.versions && o.u.internalBinaryWrite(e.versions, t.tag(1, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteStickers &&
                 f.internalBinaryWrite(e.favoriteStickers, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
@@ -126,9 +126,9 @@ class c extends l.G {
             e.guildAndChannelFrecency &&
                 x.internalBinaryWrite(e.guildAndChannelFrecency, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
             e.emojiReactionFrecency &&
-                N.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.O0.LengthDelimited).fork(), n).join();
+                N.internalBinaryWrite(e.emojiReactionFrecency, t.tag(13, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let u = new c();
@@ -150,7 +150,7 @@ class _ extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -174,7 +174,7 @@ class _ extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -193,13 +193,13 @@ class _ extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.gifs))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 h.internalBinaryWrite(e.gifs[i], t, n),
-                t.join().join();
+                t.join().join());
         !1 !== e.hideTooltip && t.tag(2, r.O0.Varint).bool(e.hideTooltip);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let E = new _();
@@ -224,7 +224,7 @@ class A extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -253,13 +253,13 @@ class A extends l.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.format && t.tag(1, r.O0.Varint).int32(e.format),
+        (0 !== e.format && t.tag(1, r.O0.Varint).int32(e.format),
             "" !== e.src && t.tag(2, r.O0.LengthDelimited).string(e.src),
             0 !== e.width && t.tag(3, r.O0.Varint).uint32(e.width),
             0 !== e.height && t.tag(4, r.O0.Varint).uint32(e.height),
-            0 !== e.order && t.tag(5, r.O0.Varint).uint32(e.order);
+            0 !== e.order && t.tag(5, r.O0.Varint).uint32(e.order));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let h = new A();
@@ -280,11 +280,11 @@ class I extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t)
                 if (i === r.O0.LengthDelimited)
-                    for (let t = e.int32() + e.pos; e.pos < t; ) a.stickerIds.push(e.fixed64().toString());
+                    for (let t = e.int32() + e.pos; e.pos < t;) a.stickerIds.push(e.fixed64().toString());
                 else a.stickerIds.push(e.fixed64().toString());
             else {
                 let s = n.readUnknownField;
@@ -303,7 +303,7 @@ class I extends l.G {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let f = new I();
@@ -324,7 +324,7 @@ class p extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.stickers, e, n);
             else {
@@ -342,7 +342,7 @@ class p extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -361,12 +361,12 @@ class p extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.stickers))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.stickers[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let T = new p();
@@ -387,7 +387,7 @@ class m extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) a.emojis.push(e.string());
             else {
@@ -403,7 +403,7 @@ class m extends l.G {
     internalBinaryWrite(e, t, n) {
         for (let n = 0; n < e.emojis.length; n++) t.tag(1, r.O0.LengthDelimited).string(e.emojis[n]);
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let g = new m();
@@ -424,7 +424,7 @@ class S extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.emojis, e, n);
             else {
@@ -442,7 +442,7 @@ class S extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -461,12 +461,12 @@ class S extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.emojis))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.emojis[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let N = new S();
@@ -487,7 +487,7 @@ class C extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.applicationCommands, e, n);
             else {
@@ -505,7 +505,7 @@ class C extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -524,12 +524,12 @@ class C extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applicationCommands))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.applicationCommands[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let O = new C();
@@ -553,7 +553,7 @@ class R extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
@@ -561,7 +561,7 @@ class R extends l.G {
                     break;
                 case 2:
                     if (i === r.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) a.recentUses.push(e.uint64().toString());
+                        for (let t = e.int32() + e.pos; e.pos < t;) a.recentUses.push(e.uint64().toString());
                     else a.recentUses.push(e.uint64().toString());
                     break;
                 case 3:
@@ -586,10 +586,10 @@ class R extends l.G {
             for (let n = 0; n < e.recentUses.length; n++) t.uint64(e.recentUses[n]);
             t.join();
         }
-        0 !== e.frecency && t.tag(3, r.O0.Varint).int32(e.frecency),
-            0 !== e.score && t.tag(4, r.O0.Varint).int32(e.score);
+        (0 !== e.frecency && t.tag(3, r.O0.Varint).int32(e.frecency),
+            0 !== e.score && t.tag(4, r.O0.Varint).int32(e.score));
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let L = new R();
@@ -610,11 +610,11 @@ class y extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t)
                 if (i === r.O0.LengthDelimited)
-                    for (let t = e.int32() + e.pos; e.pos < t; ) a.soundIds.push(e.fixed64().toString());
+                    for (let t = e.int32() + e.pos; e.pos < t;) a.soundIds.push(e.fixed64().toString());
                 else a.soundIds.push(e.fixed64().toString());
             else {
                 let s = n.readUnknownField;
@@ -633,7 +633,7 @@ class y extends l.G {
             t.join();
         }
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let D = new y();
@@ -654,7 +654,7 @@ class v extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.heardSounds, e, n);
             else {
@@ -672,7 +672,7 @@ class v extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -691,12 +691,12 @@ class v extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.heardSounds))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.heardSounds[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let b = new v();
@@ -717,7 +717,7 @@ class M extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.playedSounds, e, n);
             else {
@@ -735,7 +735,7 @@ class M extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -754,12 +754,12 @@ class M extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.playedSounds))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.playedSounds[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let P = new M();
@@ -780,7 +780,7 @@ class U extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.applications, e, n);
             else {
@@ -798,7 +798,7 @@ class U extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -817,12 +817,12 @@ class U extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applications))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.LengthDelimited).string(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.applications[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let w = new U();
@@ -843,7 +843,7 @@ class G extends l.G {
     internalBinaryRead(e, t, n, i) {
         let a = i ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, i] = e.tag();
             if (1 === t) this.binaryReadMap1(a.guildAndChannels, e, n);
             else {
@@ -861,7 +861,7 @@ class G extends l.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, i] = t.tag();
             switch (e) {
                 case 1:
@@ -880,12 +880,12 @@ class G extends l.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.guildAndChannels))
-            t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
+            (t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 L.internalBinaryWrite(e.guildAndChannels[i], t, n),
-                t.join().join();
+                t.join().join());
         let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let x = new G();

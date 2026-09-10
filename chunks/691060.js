@@ -11,10 +11,14 @@ function u(e) {
     let t,
         n =
             ((t = e?.parent_id),
-            (0, r.cf)([s.A], () => {
-                let e = s.A.getChannel(t);
-                return (e?.availableTags ?? []).reduce((e, t) => ({ ...e, [t.id]: t }), {});
-            }, [t]));
+            (0, r.cf)(
+                [s.A],
+                () => {
+                    let e = s.A.getChannel(t);
+                    return (e?.availableTags ?? []).reduce((e, t) => ({ ...e, [t.id]: t }), {});
+                },
+                [t],
+            ));
     return i.useMemo(() => {
         let t = e?.appliedTags?.map((e) => n[e])?.filter(o.Vq) ?? c;
         return e?.isModeratorReportChannel() ? (0, a.Yj)(t) : t;
@@ -24,7 +28,7 @@ function _(e) {
     let t = (0, r.bG)([l.A], () => l.A.can(d.xB.MANAGE_THREADS, e));
     return i.useMemo(() => {
         let n = [...(e?.availableTags ?? [])];
-        return t || (n = n.filter((e) => !e.moderated)), n;
+        return (t || (n = n.filter((e) => !e.moderated)), n);
     }, [t, e?.availableTags]);
 }
 function E(e, t) {

@@ -115,14 +115,18 @@ function W(e) {
 var B = n(652215);
 function Q(e) {
     let { guildId: t } = e;
-    return (0, x.bG)([f.A, v.A], () => {
-        let e = f.A.get(t),
-            n = e?.guild,
-            i = v.A.getGuild(t),
-            l = i?.verificationLevel,
-            s = n?.verification_level;
-        return l ?? s ?? B.PvD.NONE;
-    }, [t]);
+    return (0, x.bG)(
+        [f.A, v.A],
+        () => {
+            let e = f.A.get(t),
+                n = e?.guild,
+                i = v.A.getGuild(t),
+                l = i?.verificationLevel,
+                s = n?.verification_level;
+            return l ?? s ?? B.PvD.NONE;
+        },
+        [t],
+    );
 }
 var Z = n(849516),
     J = n(31457),
@@ -135,7 +139,7 @@ function et() {
         if (!e) {
             t(!0);
             try {
-                await P.A.verifyResend(), i(!0), a(!0);
+                (await P.A.verifyResend(), i(!0), a(!0));
             } catch (e) {
             } finally {
                 t(!1);
@@ -508,12 +512,12 @@ let eA = function (e) {
             eh = ex ?? u?.guild?.approximate_presence_count,
             eC = em ?? u?.guild?.approximate_member_count,
             eA = Z ?? !1;
-        s.useEffect(() => {
+        (s.useEffect(() => {
             null != u && ee(u.formFields);
         }, [u]),
             s.useEffect(() => {
                 null != c && X.default.track(B.HAw.OPEN_MODAL, { type: eg.mk, guild_id: c });
-            }, [c]);
+            }, [c]));
         let eI = (0, x.bG)([$.default], () => $.default.getCurrentUser()),
             { currentStep: eb, setCurrentStep: eE } = (function (e) {
                 let t = !e?.isClaimed(),
@@ -529,7 +533,7 @@ let eA = function (e) {
                     { currentStep: i, setCurrentStep: l }
                 );
             })(eI);
-        (a = (0, m.YN)((e) => e.hasUnsubmittedChanges)),
+        ((a = (0, m.YN)((e) => e.hasUnsubmittedChanges)),
             s.useEffect(
                 () => (
                     (0, m.Yb)(!1),
@@ -542,7 +546,7 @@ let eA = function (e) {
             s.useEffect(() => {
                 let e = J.some((e) => e.field_type !== N.rX.TERMS && (0, A.Ge)(e));
                 e && !a ? (0, m.Yb)(!0) : !e && a && (0, m.Yb)(!1);
-            }, [J, a]);
+            }, [J, a]));
         let eF = eI?.verified,
             eM = eI?.isPhoneVerified(),
             { invalidFormFields: eR, hasInvalidTermsFormField: ey } = s.useMemo(
@@ -582,21 +586,21 @@ let eA = function (e) {
                 `linear-gradient(-45deg, ${o}, ${n})`);
         if (null == M) return (0, l.jsx)(O.y, {});
         async function eP() {
-            en(!0), ed(null), ef(null);
+            (en(!0), ed(null), ef(null));
             try {
-                await (0, L.KD)({ email: es, password: ea }), en(!1), eE(b.EMAIL_CONFIRMATION);
+                (await (0, L.KD)({ email: es, password: ea }), en(!1), eE(b.EMAIL_CONFIRMATION));
             } catch (e) {
-                ed(e?.body?.email), ef(e?.body?.password);
+                (ed(e?.body?.email), ef(e?.body?.password));
             } finally {
                 en(!1);
             }
         }
         async function eL() {
-            en(!0), el(null);
+            (en(!0), el(null));
             let e = null != eI ? z.Ay.getMember(c, eI.id) : null;
             if (null != e && !e.isPending) return void g?.(!0);
             try {
-                await j?.({ ...(u ?? f.U), formFields: J }), g?.(!0);
+                (await j?.({ ...(u ?? f.U), formFields: J }), g?.(!0));
             } catch (t) {
                 let e = t?.body;
                 e?.errors?.version != null || e?.errors?.form_fields != null

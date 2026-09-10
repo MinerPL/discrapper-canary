@@ -24,10 +24,10 @@ function g(t) {
                 false_alarm_other_reason: S,
                 guild_id: e,
             };
-            (0, r.zV)(_.HAw.GUILD_RAID_FEEDBACK, t),
+            ((0, r.zV)(_.HAw.GUILD_RAID_FEEDBACK, t),
                 (0, c.xE)(e, l, (0, d.W_)(p)),
                 E(),
-                u.A.showSuccessToast(C.OB.SAFETY_FEEDBACK_SUCCESS);
+                u.A.showSuccessToast(C.OB.SAFETY_FEEDBACK_SUCCESS));
         }, [E, l, e, S, p]),
         v = [
             { label: h.intl.string(h.t.yeaXw5), value: d.no.LEGITIMATE_ACTIVITY },

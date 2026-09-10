@@ -22,9 +22,9 @@ function _() {
                     }, 0);
                 })),
                 () => {
-                    null != n.current && cancelAnimationFrame(n.current),
+                    (null != n.current && cancelAnimationFrame(n.current),
                         null != s.current && clearTimeout(s.current),
-                        a.O.remove?.(e);
+                        a.O.remove?.(e));
                 }
             ),
             [e],
@@ -77,7 +77,7 @@ function I(e) {
             ...c
         } = e,
         _ = r.useRef(null);
-    r.useImperativeHandle(t, () => _.current),
+    (r.useImperativeHandle(t, () => _.current),
         r.useEffect(
             () => (
                 s?.(_.current),
@@ -86,7 +86,7 @@ function I(e) {
                 }
             ),
             [],
-        );
+        ));
     let { trackImpression: E } = (0, u.G9)();
     return (
         r.useEffect(() => {

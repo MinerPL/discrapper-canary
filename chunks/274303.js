@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => I, U: () => u }), n(321073);
+(n.d(t, { A: () => I, U: () => u }), n(321073));
 var a,
     s = n(247775),
     l = n(17928),
@@ -11,11 +11,11 @@ var u =
     (((a = {})[(a.INVALID = 0)] = "INVALID"), (a[(a.VALIDATING = 1)] = "VALIDATING"), (a[(a.VALID = 2)] = "VALID"), a);
 let _ = [];
 function E(e) {
-    (_ = _.filter((t) => {
+    ((_ = _.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
-        s.removeToken(e);
+        s.removeToken(e));
 }
 function A(e, t) {
     let n = _.slice(),
@@ -68,13 +68,13 @@ class h extends l.Ay.PersistedStore {
 let I = new h(o.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
-        (i = t.id), !r && (0, d.A)(t) && (r = !0);
+        ((i = t.id), !r && (0, d.A)(t) && (r = !0));
         let n = _.slice(),
             a = n.findIndex((e) => {
                 let { id: n } = e;
                 return n === t.id;
             });
-        a > -1
+        (a > -1
             ? ((_[a].avatar = t.avatar),
               (_[a].username = t.username),
               (_[a].discriminator = t.discriminator),
@@ -91,15 +91,15 @@ let I = new h(o.h, {
                 _.splice(5).forEach((e) => {
                     let { id: t } = e;
                     E(t);
-                });
+                }));
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount ||
+        (e.isSwitchingAccount ||
             (_ = _.filter((e) => {
                 let { id: t } = e;
                 return t !== i;
             })),
-            (i = null);
+            (i = null));
     },
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => A(e.userId, 1),
     MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => A(e.userId, 2),

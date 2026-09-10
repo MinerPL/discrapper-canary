@@ -72,10 +72,10 @@ let p = new f(r.h, {
     MESSAGE_NOTIFICATION_SHOWN: function (e) {
         let { guildId: t, mentioned: n, roleMentioned: i, everyoneMentioned: r } = e,
             a = Date.now();
-        (d = a),
+        ((d = a),
             null != t && (E[t] = a),
             n && ((c = a), null != t && (A[t] = a)),
             i && ((u = a), null != t && (I[t] = a)),
-            r && ((_ = a), null != t && (h[t] = a));
+            r && ((_ = a), null != t && (h[t] = a)));
     },
 });

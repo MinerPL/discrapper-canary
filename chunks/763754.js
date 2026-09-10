@@ -12,7 +12,7 @@ var i = n(284009),
     E = n(427262);
 function A(e, t) {
     let n = h(e);
-    return r()(null != n, "Result cannot be null because the message is not null"), t ?? n;
+    return (r()(null != n, "Result cannot be null because the message is not null"), t ?? n);
 }
 function h(e) {
     let t = (0, a.bG)([l.A], () => (null == e ? null : l.A.getChannel(e.channel_id))),
@@ -45,7 +45,7 @@ function I(e) {
 }
 function f(e, t) {
     let n = p(e, t);
-    return r()(null != n, "Result cannot be null because user and channel are not null"), n;
+    return (r()(null != n, "Result cannot be null because user and channel are not null"), n);
 }
 function p(e, t) {
     let n = e?.id,

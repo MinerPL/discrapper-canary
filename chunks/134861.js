@@ -31,7 +31,7 @@ let d = new o(s.h, {
         let { application: t } = e;
         if (null == t.id) return !1;
         let n = t.id;
-        null == l[n] &&
+        (null == l[n] &&
             (l[n] = {
                 count: 0,
                 id: t.id,
@@ -41,7 +41,7 @@ let d = new o(s.h, {
                 coverImage: t.coverImage,
                 authenticated: !1,
             }),
-            l[n].count++;
+            l[n].count++);
     },
     RPC_APP_AUTHENTICATED: function (e) {
         let { application: t } = e;

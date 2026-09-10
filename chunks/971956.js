@@ -1,10 +1,10 @@
-n.r(e), n.d(e, { createSession: () => tV, default: () => tF });
+(n.r(e), n.d(e, { createSession: () => tV, default: () => tF }));
 let i = class t {
     constructor() {
         this.t = !1;
     }
     static get instance() {
-        return t.i || (t.i = new t()), t.i;
+        return (t.i || (t.i = new t()), t.i);
     }
     get DEBUG() {
         return this.t;
@@ -35,7 +35,7 @@ function r(t, e, n) {
         r = e;
     if ("devicepixelratiochange" === e) {
         let t = window.devicePixelRatio;
-        (i = window.matchMedia(`(resolution: ${t}dppx)`)), (r = "change");
+        ((i = window.matchMedia(`(resolution: ${t}dppx)`)), (r = "change"));
     }
     i.addEventListener(r, n, { capture: !0, passive: !0 });
 }
@@ -44,7 +44,7 @@ function o(t, e, n) {
         r = e;
     if ("devicepixelratiochange" === e) {
         let t = window.devicePixelRatio;
-        (i = window.matchMedia(`(resolution: ${t}dppx)`)), (r = "change");
+        ((i = window.matchMedia(`(resolution: ${t}dppx)`)), (r = "change"));
     }
     i.removeEventListener(r, n, { capture: !0 });
 }
@@ -176,7 +176,7 @@ function L(t) {
                 (function (t) {
                     if (URL.prototype)
                         try {
-                            return new URL(t, location.href), !1;
+                            return (new URL(t, location.href), !1);
                         } catch (t) {
                             if (t instanceof Error && "TypeError" === t.name) return !0;
                             throw t;
@@ -190,15 +190,15 @@ function L(t) {
                     return null == (t = i.parentNode) ? void 0 : t.removeChild(i);
                 },
                 o = document.head || document.getElementsByTagName("head")[0];
-            (i.onload = () => {
-                r(), e();
+            ((i.onload = () => {
+                (r(), e());
             }),
                 (i.onerror = () => {
-                    r(), n(Error(C));
+                    (r(), n(Error(C)));
                 }),
                 (i.async = !0),
                 (i.src = t),
-                o.appendChild(i);
+                o.appendChild(i));
         })),
     (i = document),
     (r = "securitypolicyviolation"),
@@ -216,7 +216,7 @@ function L(t) {
             (t) =>
                 new Promise((t) => {
                     let e = new MessageChannel();
-                    (e.port1.onmessage = () => t()), e.port2.postMessage(null);
+                    ((e.port1.onmessage = () => t()), e.port2.postMessage(null));
                 }).then(() => {
                     if ((a(), n)) throw Error(A);
                     throw t;
@@ -323,12 +323,12 @@ async function O(t) {
                                                 (t, e) => {
                                                     let n,
                                                         i = e instanceof Error ? e.message : "";
-                                                    if (i === A || i === M) o.exclude(), (n = 0);
+                                                    if (i === A || i === M) (o.exclude(), (n = 0));
                                                     else if (i === D) o.exclude();
                                                     else if (i === C) {
                                                         let e = Date.now() - t.getTime() < 50,
                                                             i = o.current();
-                                                        i && e && !s.has(i) && (s.add(i), (n = 0)), o.postpone();
+                                                        (i && e && !s.has(i) && (s.add(i), (n = 0)), o.postpone());
                                                     } else o.postpone();
                                                     let r = o.current();
                                                     return void 0 === r
@@ -517,11 +517,11 @@ let K = {
                     T(n, "dblclick") && r(document, "dblclick", i),
                     T(n, "contextmenu") && r(document, "contextmenu", i),
                     () => {
-                        o(document, "pointerdown", i),
+                        (o(document, "pointerdown", i),
                             o(document, "pointerup", i),
                             o(document, "click", i),
                             o(document, "dblclick", i),
-                            o(document, "contextmenu", i);
+                            o(document, "contextmenu", i));
                     }
                 );
             },
@@ -533,7 +533,7 @@ let K = {
                 let e = null,
                     n = null,
                     i = c((i) => {
-                        e && e.id !== i.pointerId && (t.push(e), (e = null)),
+                        (e && e.id !== i.pointerId && (t.push(e), (e = null)),
                             e
                                 ? e.samples.ts.length >= 50
                                     ? (t.push(e), (e = a(i)))
@@ -547,17 +547,17 @@ let K = {
                                           e.samples.radius?.push(Math.max(i.width, i.height))))
                                 : (e = a(i)),
                             (function (t) {
-                                n && clearTimeout(n),
+                                (n && clearTimeout(n),
                                     (n = setTimeout(() => {
-                                        e && (t.push(e), (e = null)), (n = null);
-                                    }, 2e3));
-                            })(t);
+                                        (e && (t.push(e), (e = null)), (n = null));
+                                    }, 2e3)));
+                            })(t));
                     });
                 function a(t) {
                     let e = (function (t) {
                         if ("mouse" === t.pointerType) return null;
                         let e = { force: [t.pressure], radius: [Math.max(t.width, t.height)] };
-                        return "pen" === t.pointerType && ((e.tiltX = [t.tiltX]), (e.tiltY = [t.tiltY])), e;
+                        return ("pen" === t.pointerType && ((e.tiltX = [t.tiltX]), (e.tiltY = [t.tiltY])), e);
                     })(t);
                     return {
                         name: "pointer",
@@ -573,7 +573,9 @@ let K = {
                 return (
                     r(document, "pointermove", i),
                     () => {
-                        o(document, "pointermove", i), n && (clearTimeout(n), (n = null)), e && (t.push(e), (e = null));
+                        (o(document, "pointermove", i),
+                            n && (clearTimeout(n), (n = null)),
+                            e && (t.push(e), (e = null)));
                     }
                 );
             },
@@ -596,7 +598,7 @@ let K = {
                     r(document, "focusin", e),
                     r(document, "focusout", e),
                     () => {
-                        o(document, "focusin", e), o(document, "focusout", e);
+                        (o(document, "focusin", e), o(document, "focusout", e));
                     }
                 );
             },
@@ -607,7 +609,7 @@ let K = {
                 let e = c((e) => {
                     var n;
                     let i, r;
-                    t.push({
+                    (t.push({
                         name: "keystroke",
                         type: "input",
                         timestamp: Date.now(),
@@ -641,7 +643,7 @@ let K = {
                                 (r = 0),
                                 B(i) && (r = i.value.length),
                                 { name: "autofill", timestamp: Date.now(), element: t.resolveElement(i), length: r }),
-                            );
+                            ));
                 });
                 return (
                     r(document, "input", e),
@@ -669,7 +671,7 @@ let K = {
                                         let t = n.keys().next().value;
                                         void 0 !== t && n.delete(t);
                                     }
-                                    return n.set(t, r), r;
+                                    return (n.set(t, r), r);
                                 }
                                 let r = n.get(t);
                                 return void 0 !== r ? (n.delete(t), r) : ++e;
@@ -698,7 +700,7 @@ let K = {
                     r(document, "keyup", s),
                     r(window, "blur", l),
                     () => {
-                        o(document, "keydown", s), o(document, "keyup", s), o(window, "blur", l);
+                        (o(document, "keydown", s), o(document, "keyup", s), o(window, "blur", l));
                     }
                 );
             },
@@ -730,7 +732,7 @@ let K = {
                     T(n, "cut") && r(document, "cut", i),
                     T(n, "copy") && r(document, "copy", i),
                     () => {
-                        o(document, "paste", i), o(document, "cut", i), o(document, "copy", i);
+                        (o(document, "paste", i), o(document, "cut", i), o(document, "copy", i));
                     }
                 );
             },
@@ -753,7 +755,7 @@ let K = {
                     T(n, "submit") && r(document, "submit", i),
                     T(n, "invalid") && r(document, "invalid", i),
                     () => {
-                        o(document, "submit", i), o(document, "invalid", i);
+                        (o(document, "submit", i), o(document, "invalid", i));
                     }
                 );
             },
@@ -791,12 +793,12 @@ let K = {
                     a && (clearTimeout(a), (a = null));
                 }
                 function h() {
-                    u(),
+                    (u(),
                         s ||
                             l ||
                             (a = setTimeout(() => {
-                                (a = null), n && d("timeout");
-                            }, 250));
+                                ((a = null), n && d("timeout"));
+                            }, 250)));
                 }
                 function d(i) {
                     let r, o, a;
@@ -852,7 +854,7 @@ let K = {
                         "hidden" === document.visibilityState && ((s = !1), (l = !1), n && d("timeout"));
                     }),
                     b = c(() => {
-                        (s = !1), n && d("pointer");
+                        ((s = !1), n && d("pointer"));
                     });
                 return (
                     r(document, "selectionchange", p),
@@ -864,7 +866,7 @@ let K = {
                     r(document, "visibilitychange", v),
                     r(document, "dragend", b),
                     () => {
-                        u(),
+                        (u(),
                             o(document, "selectionchange", p),
                             o(document, "pointerdown", f),
                             o(document, "pointerup", m),
@@ -872,7 +874,7 @@ let K = {
                             o(document, "keyup", y),
                             o(document, "contextmenu", g),
                             o(document, "visibilitychange", v),
-                            o(document, "dragend", b);
+                            o(document, "dragend", b));
                     }
                 );
             },
@@ -900,7 +902,7 @@ let K = {
             create: function (t) {
                 let e = t.sanitizeUrl(document.referrer || "");
                 function n(n) {
-                    t.push(n), (e = n.to ?? "");
+                    (t.push(n), (e = n.to ?? ""));
                 }
                 let i = c(() => {
                         let [e] = performance.getEntriesByType("navigation");
@@ -953,11 +955,11 @@ let K = {
                     p = history.replaceState,
                     f = function (...t) {
                         let e = d.apply(this, t);
-                        return l(() => h("push")), e;
+                        return (l(() => h("push")), e);
                     },
                     m = function (...t) {
                         let e = p.apply(this, t);
-                        return l(() => h("replace")), e;
+                        return (l(() => h("replace")), e);
                     };
                 return (
                     window.navigation
@@ -968,13 +970,13 @@ let K = {
                           r(window, "hashchange", u)),
                     "complete" === document.readyState ? i(new Event("load")) : r(window, "load", i),
                     () => {
-                        window.navigation
+                        (window.navigation
                             ? o(window.navigation, "currententrychange", a)
                             : (history.pushState === f && (history.pushState = d),
                               history.replaceState === m && (history.replaceState = p),
                               o(window, "popstate", s),
                               o(window, "hashchange", u)),
-                            o(window, "load", i);
+                            o(window, "load", i));
                     }
                 );
             },
@@ -995,7 +997,7 @@ let K = {
                     r(window, "online", e),
                     r(window, "offline", e),
                     () => {
-                        o(window, "online", e), o(window, "offline", e);
+                        (o(window, "online", e), o(window, "offline", e));
                     }
                 );
             },
@@ -1015,10 +1017,10 @@ let K = {
                                       e.samples.ts.push(i.timeStamp))
                                 : (e = a(i)),
                             void (function (t) {
-                                n && clearTimeout(n),
+                                (n && clearTimeout(n),
                                     (n = setTimeout(() => {
-                                        e && (t.push(e), (e = null)), (n = null);
-                                    }, 2e3));
+                                        (e && (t.push(e), (e = null)), (n = null));
+                                    }, 2e3)));
                             })(t)
                         ),
                     );
@@ -1038,7 +1040,7 @@ let K = {
                 return (
                     r(window, "scroll", i),
                     () => {
-                        o(window, "scroll", i), n && (clearTimeout(n), (n = null)), e && (t.push(e), (e = null));
+                        (o(window, "scroll", i), n && (clearTimeout(n), (n = null)), e && (t.push(e), (e = null)));
                     }
                 );
             },
@@ -1061,10 +1063,10 @@ let K = {
                                       e.samples.dpr.push(window.devicePixelRatio))
                                 : (e = a(i)),
                             void (function (t) {
-                                n && clearTimeout(n),
+                                (n && clearTimeout(n),
                                     (n = setTimeout(() => {
-                                        e && (t.push(e), (e = null)), (n = null);
-                                    }, 2e3));
+                                        (e && (t.push(e), (e = null)), (n = null));
+                                    }, 2e3)));
                             })(t)
                         ),
                     );
@@ -1086,7 +1088,7 @@ let K = {
                 return (
                     r(window, "resize", i),
                     () => {
-                        o(window, "resize", i), n && (clearTimeout(n), (n = null)), e && (t.push(e), (e = null));
+                        (o(window, "resize", i), n && (clearTimeout(n), (n = null)), e && (t.push(e), (e = null)));
                     }
                 );
             },
@@ -1119,7 +1121,7 @@ let K = {
                     T(n, "orientationchange") && r(window, "orientationchange", i),
                     T(n, "devicepixelratiochange") && r(window, "devicepixelratiochange", a),
                     () => {
-                        o(window, "orientationchange", i), o(window, "devicepixelratiochange", a);
+                        (o(window, "orientationchange", i), o(window, "devicepixelratiochange", a));
                     }
                 );
             },
@@ -1134,16 +1136,16 @@ let K = {
                     l = null,
                     u = !1;
                 function d() {
-                    l && p(l),
+                    (l && p(l),
                         (l = setTimeout(
                             h(() => {
-                                f(), (l = null);
+                                (f(), (l = null));
                             }),
                             2e3,
-                        ));
+                        )));
                 }
                 function f() {
-                    i && (t.push(i), (i = null)), a && (t.push(a), (a = null)), s && (t.push(s), (s = null));
+                    (i && (t.push(i), (i = null)), a && (t.push(a), (a = null)), s && (t.push(s), (s = null)));
                 }
                 let m = c((e) => {
                         let n = e.timeStamp,
@@ -1209,7 +1211,7 @@ let K = {
                                 void d()
                             );
                         let s = i.samples;
-                        s.ax.push(r?.x ?? 0),
+                        (s.ax.push(r?.x ?? 0),
                             s.ay.push(r?.y ?? 0),
                             s.az.push(r?.z ?? 0),
                             s.agx.push(o?.x ?? 0),
@@ -1219,7 +1221,7 @@ let K = {
                             s.rrBeta.push(a?.beta ?? 0),
                             s.rrGamma.push(a?.gamma ?? 0),
                             s.ts.push(n),
-                            d();
+                            d());
                     }),
                     w = c((e) => {
                         if (null == e.alpha && null == e.beta && null == e.gamma) return;
@@ -1261,18 +1263,18 @@ let K = {
                                 void d()
                             );
                         let r = a.samples;
-                        r.alpha.push(e.alpha ?? 0),
+                        (r.alpha.push(e.alpha ?? 0),
                             r.beta.push(e.beta ?? 0),
                             r.gamma.push(e.gamma ?? 0),
                             r.compassHeading.push(i),
                             r.ts.push(n),
-                            d();
+                            d());
                     }),
                     y = c((e) => {
                         let n = e.value;
                         if (null == n) return;
                         let i = e.timeStamp;
-                        s
+                        (s
                             ? s.samples.ts.length >= 50
                                 ? (t.push(s),
                                   (s = {
@@ -1288,7 +1290,7 @@ let K = {
                                   timestamp: Date.now(),
                                   samples: { lux: [n], ts: [i] },
                               }),
-                            d();
+                            d());
                     });
                 return (
                     T(n, "motion") && r(window, "devicemotion", m),
@@ -1298,11 +1300,11 @@ let K = {
                             : r(window, "deviceorientation", w)),
                     T(n, "light") && r(window, "devicelight", y),
                     function () {
-                        o(window, "devicemotion", m),
+                        (o(window, "devicemotion", m),
                             o(window, u ? "deviceorientationabsolute" : "deviceorientation", w),
                             o(window, "devicelight", y),
                             l && (p(l), (l = null)),
-                            f();
+                            f());
                     }
                 );
             },
@@ -1364,10 +1366,10 @@ let K = {
                                         ));
                         })).observe({ type: "resource", buffered: !0 });
                     } catch {
-                        return i.warn("network-request", "PerformanceObserver failed to start"), w;
+                        return (i.warn("network-request", "PerformanceObserver failed to start"), w);
                     }
                     return function () {
-                        o?.disconnect(), (o = null);
+                        (o?.disconnect(), (o = null));
                     };
                 })(
                     function (e) {
@@ -1420,7 +1422,7 @@ let K = {
                         }
                     );
                 });
-                return e && t.push(e), () => {};
+                return (e && t.push(e), () => {});
             },
             layer: "session",
         },
@@ -1442,10 +1444,10 @@ let K = {
 function G(t) {
     try {
         let e = new URL(t, location.href);
-        (e.username = ""), (e.password = ""), (e.hash = "");
+        ((e.username = ""), (e.password = ""), (e.hash = ""));
         let n = [...e.searchParams.keys()],
             i = n.length > 0 ? "?" + n.map((t) => `${encodeURIComponent(t)}=<redacted>`).join("&") : "";
-        (e.search = ""),
+        ((e.search = ""),
             (e.pathname = e.pathname
                 .split("/")
                 .map((t) =>
@@ -1457,7 +1459,7 @@ function G(t) {
                         ? ":param"
                         : t,
                 )
-                .join("/"));
+                .join("/")));
         let r = e.origin + e.pathname + i;
         return r.length > 2048 ? r.slice(0, 2048) : r;
     } catch {
@@ -1498,7 +1500,7 @@ let to = "__tri",
     tu = "__tri_activity_lock";
 var tc = class {
     constructor(t) {
-        (this.context = t), (this.l = null), (this.u = null), (this.h = null), (this.p = null), (this.m = !1);
+        ((this.context = t), (this.l = null), (this.u = null), (this.h = null), (this.p = null), (this.m = !1));
     }
     getToken() {
         return this.l;
@@ -1510,10 +1512,10 @@ var tc = class {
         return "ACTIVE" === this.h && null !== this.l;
     }
     async start() {
-        return (this.m = !0), this.p || (this.p = this.v()), this.p;
+        return ((this.m = !0), this.p || (this.p = this.v()), this.p);
     }
     async stop() {
-        (this.m = !1), this.k(null), (this.p = null), this.l && (await this.context.stopActivity()), this.T(null);
+        ((this.m = !1), this.k(null), (this.p = null), this.l && (await this.context.stopActivity()), this.T(null));
     }
     async refresh() {
         if (!this.m) return;
@@ -1543,17 +1545,17 @@ var tc = class {
         let e = await this.context.startActivity();
         if (!e.ok || !e.data.token) return;
         let n = e.data;
-        this.T(n), this.A(n);
+        (this.T(n), this.A(n));
     }
     _() {
         let [t, e, n] = [P.get(ta), P.get(ts), P.get(tl)];
         return t && e && n ? { token: t, activityId: e, activityStatus: n } : ((t || e || n) && this.I(), null);
     }
     A(t) {
-        P.set(ta, t.token), P.set(ts, t.activityId), P.set(tl, t.activityStatus);
+        (P.set(ta, t.token), P.set(ts, t.activityId), P.set(tl, t.activityStatus));
     }
     I() {
-        this.k(null), this.T(null);
+        (this.k(null), this.T(null));
     }
     k(t) {
         t
@@ -1623,11 +1625,11 @@ function ty() {
     return crypto.randomUUID();
 }
 function tg() {
-    return crypto.getRandomValues(tm), (tm[6] = (15 & tm[6]) | 64), (tm[8] = (63 & tm[8]) | 128), tw(tm);
+    return (crypto.getRandomValues(tm), (tm[6] = (15 & tm[6]) | 64), (tm[8] = (63 & tm[8]) | 128), tw(tm));
 }
 function tv() {
     for (let t = 0; t < 16; t++) tm[t] = (256 * Math.random()) | 0;
-    return (tm[6] = (15 & tm[6]) | 64), (tm[8] = (63 & tm[8]) | 128), tw(tm);
+    return ((tm[6] = (15 & tm[6]) | 64), (tm[8] = (63 & tm[8]) | 128), tw(tm));
 }
 let tb = (function () {
     if ("u" > typeof crypto) {
@@ -1638,7 +1640,7 @@ let tb = (function () {
 })();
 var tk = class {
     constructor(t, e) {
-        (this.M = t),
+        ((this.M = t),
             (this.D = e),
             (this.C = []),
             (this.P = null),
@@ -1648,7 +1650,7 @@ var tk = class {
             (this.$ = !0),
             (this.U = 0),
             (this.B = 0),
-            (this.O = t.flush.intervalMs);
+            (this.O = t.flush.intervalMs));
     }
     push(t) {
         if (this.m) {
@@ -1664,12 +1666,12 @@ var tk = class {
                 if ("lifecycle" === t) return void this.N();
                 if (0 === this.C.length) return;
                 let e = this.F(t);
-                this.D.ingest(e, !1)
+                (this.D.ingest(e, !1)
                     .then((t) => this.X(t, e))
                     .catch(() => {
                         i.warn("Transport", "ingest threw unexpectedly \u2014 batch dropped");
                     }),
-                    this.C.length > 0 && this.H();
+                    this.C.length > 0 && this.H());
             } catch (t) {
                 i.warn("Transport", "flush() threw unexpectedly:", t);
             }
@@ -1679,15 +1681,15 @@ var tk = class {
     }
     stop() {
         if (!this.m) return Promise.resolve();
-        p(this.P), (this.P = null), p(this.R), (this.R = null);
+        (p(this.P), (this.P = null), p(this.R), (this.R = null));
         let t = this.N();
-        return (this.m = !1), t;
+        return ((this.m = !1), t);
     }
     onConnectionChange() {
         let t = "u" < typeof navigator || navigator.onLine;
         if (t !== this.$) {
-            if (((this.$ = t), !this.$)) return p(this.P), (this.P = null), p(this.R), void (this.R = null);
-            this.C.length > 0 && this.H(), this.L.length > 0 && this.K();
+            if (((this.$ = t), !this.$)) return (p(this.P), (this.P = null), p(this.R), void (this.R = null));
+            (this.C.length > 0 && this.H(), this.L.length > 0 && this.K());
         }
     }
     H() {
@@ -1695,7 +1697,7 @@ var tk = class {
             this.$ &&
             null === this.P &&
             (this.P = d(() => {
-                (this.P = null), this.flush("interval");
+                ((this.P = null), this.flush("interval"));
             }, this.O));
     }
     K() {
@@ -1703,7 +1705,7 @@ var tk = class {
             this.$ &&
             null === this.R &&
             (this.R = d(() => {
-                (this.R = null), this.V();
+                ((this.R = null), this.V());
             }, this.O));
     }
     V() {
@@ -1712,20 +1714,20 @@ var tk = class {
         this.D.ingest(t.batch, !1)
             .then((e) => this.Y(e, t))
             .catch(() => {
-                i.warn("Transport", "retry drain ingest threw unexpectedly \u2014 batch dropped"),
-                    this.L.length > 0 && this.K();
+                (i.warn("Transport", "retry drain ingest threw unexpectedly \u2014 batch dropped"),
+                    this.L.length > 0 && this.K());
             });
     }
     J(t, e) {
-        this.L.length >= 5 && (this.L.shift(), i.warn("Transport", "retry queue full \u2014 oldest batch evicted")),
+        (this.L.length >= 5 && (this.L.shift(), i.warn("Transport", "retry queue full \u2014 oldest batch evicted")),
             this.L.push({ batch: t, attempts: e }),
-            this.K();
+            this.K());
     }
     X(t, e) {
         t.ok ? this.G() : this.Z(t) && this.J(e, 1);
     }
     Y(t, e) {
-        if (t.ok) return this.G(), void (this.L.length > 0 && this.K());
+        if (t.ok) return (this.G(), void (this.L.length > 0 && this.K()));
         if (this.Z(t)) {
             if (e.attempts >= 3)
                 return (
@@ -1733,16 +1735,16 @@ var tk = class {
                     i.warn("Transport", "batch dropped after MAX_RETRY_ATTEMPTS", e.batch.batchId),
                     void (this.L.length > 0 && this.K())
                 );
-            this.W(), this.J(e.batch, e.attempts + 1);
+            (this.W(), this.J(e.batch, e.attempts + 1));
         } else this.L.length > 0 && this.K();
     }
     W() {
-        this.U++,
+        (this.U++,
             this.U % this.M.flush.backoffFailureThreshold == 0 &&
-                (this.O = Math.min(2 * this.O, this.M.flush.maxIntervalMs));
+                (this.O = Math.min(2 * this.O, this.M.flush.maxIntervalMs)));
     }
     G() {
-        (this.U = 0), (this.O = this.M.flush.intervalMs);
+        ((this.U = 0), (this.O = this.M.flush.intervalMs));
     }
     q() {
         return this.M.queue.size * (this.$ ? 1 : 2);
@@ -1771,7 +1773,7 @@ var tk = class {
         for (let n = 0; n < this.C.length; n++)
             if (tp(this.C[n]) < e) {
                 for (let t = n; t < this.C.length - 1; t++) this.C[t] = this.C[t + 1];
-                (this.C.length -= 1), this.C.push(t);
+                ((this.C.length -= 1), this.C.push(t));
                 return;
             }
     }
@@ -1811,7 +1813,7 @@ let tT = "tri:bcast:",
                         let t = "__tri_bcast_probe__";
                         localStorage.setItem(t, "1");
                         let e = "1" === localStorage.getItem(t);
-                        return localStorage.removeItem(t), e;
+                        return (localStorage.removeItem(t), e);
                     } catch {
                         return !1;
                     }
@@ -1830,7 +1832,7 @@ let tT = "tri:bcast:",
                 }
               : class {
                     constructor(t) {
-                        (this.seq = 0),
+                        ((this.seq = 0),
                             (this.closed = !1),
                             (this.listeners = new Set()),
                             (this.onStorageEvent = (t) => {
@@ -1853,13 +1855,13 @@ let tT = "tri:bcast:",
                             }),
                             (this.channelName = t),
                             (this.senderId = tb()),
-                            window.addEventListener("storage", this.onStorageEvent);
+                            window.addEventListener("storage", this.onStorageEvent));
                     }
                     postMessage(t) {
                         if (this.closed) return;
                         let e = `${tT}${this.channelName}:${this.senderId}:${this.seq++}`;
                         l(() => {
-                            P.set(e, t), P.remove(e);
+                            (P.set(e, t), P.remove(e));
                         });
                     }
                     addEventListener(t, e) {
@@ -1878,7 +1880,7 @@ let tT = "tri:bcast:",
     tS = "__tri_tabId";
 var tE = class {
     constructor(t) {
-        (this.context = t),
+        ((this.context = t),
             (this.tt = ""),
             (this.m = !1),
             (this.nt = null),
@@ -1886,7 +1888,7 @@ var tE = class {
             (this.it = null),
             (this.ot = new Map()),
             (this.rt = -1),
-            (this.st = null);
+            (this.st = null));
     }
     async start() {
         this.m ||
@@ -1916,9 +1918,9 @@ var tE = class {
     }
     lt() {
         try {
-            (this.nt = new tI("__tri_tab_channel")),
+            ((this.nt = new tI("__tri_tab_channel")),
                 (this.st = this.kt.bind(this)),
-                this.nt.addEventListener("message", this.st);
+                this.nt.addEventListener("message", this.st));
         } catch (t) {
             i.warn("TabManager", "failed to open broadcast channel:", t);
         }
@@ -1926,10 +1928,10 @@ var tE = class {
     gt() {
         try {
             if (!this.nt) return;
-            this.st && this.nt.removeEventListener("message", this.st), this.nt.close();
+            (this.st && this.nt.removeEventListener("message", this.st), this.nt.close());
         } catch {
         } finally {
-            (this.nt = null), (this.st = null);
+            ((this.nt = null), (this.st = null));
         }
     }
     dt() {
@@ -1942,12 +1944,12 @@ var tE = class {
         null != this.et && (clearInterval(this.et), (this.et = null));
     }
     ft() {
-        null != this.it && clearTimeout(this.it),
+        (null != this.it && clearTimeout(this.it),
             (this.it = setTimeout(() => {
                 this.it = null;
                 let t = this.yt() + 1;
                 t !== this.rt && ((this.rt = t), this.wt(t));
-            }, 1e3));
+            }, 1e3)));
     }
     bt() {
         null != this.it && (clearTimeout(this.it), (this.it = null));
@@ -1982,7 +1984,7 @@ var tE = class {
         let t = _.get(tS);
         if (t) return t;
         let e = tb();
-        return _.set(tS, e), e;
+        return (_.set(tS, e), e);
     }
     yt(t = Date.now()) {
         let e = 0;
@@ -2001,7 +2003,7 @@ async function tD(t) {
         try {
             return await new tA(new tM([tL.encode(t)]).stream().pipeThrough(new tx("gzip"))).arrayBuffer();
         } catch (t) {
-            return i.warn("compression", "Native gzip failed:", t), null;
+            return (i.warn("compression", "Native gzip failed:", t), null);
         }
     })(t);
     return null !== e
@@ -2014,7 +2016,7 @@ async function tD(t) {
                               let n = null,
                                   r = new Promise((t) => {
                                       n = d(() => {
-                                          i.warn("import", `Import timed out after ${e}ms`), t(null);
+                                          (i.warn("import", `Import timed out after ${e}ms`), t(null));
                                       }, e);
                                   }),
                                   o = Promise.resolve()
@@ -2024,13 +2026,13 @@ async function tD(t) {
                                   p(n);
                               });
                           })(() => n.e("813524").then(n.bind(n, 883903)), 1e4);
-                          (tC = t),
+                          ((tC = t),
                               t.then((e) => {
                                   null === e &&
                                       d(() => {
                                           tC === t && (tC = null);
                                       }, 1e4);
-                              });
+                              }));
                       }
                       return tC;
                   })();
@@ -2039,7 +2041,7 @@ async function tD(t) {
                       o = r(tL.encode(t));
                   return o.buffer.slice(o.byteOffset, o.byteOffset + o.byteLength);
               } catch (t) {
-                  return i.warn("compression", "fflate gzip failed:", t), null;
+                  return (i.warn("compression", "fflate gzip failed:", t), null);
               }
           })(t);
 }
@@ -2249,7 +2251,7 @@ function tX(t) {
 }
 var tj = class {
     constructor(t) {
-        (this.capacity = t), (this.cache = new Map());
+        ((this.capacity = t), (this.cache = new Map()));
     }
     get(t) {
         return this.cache.get(t);
@@ -2281,7 +2283,7 @@ async function tY(t, e) {
     try {
         var f;
         let t, m, w;
-        (f = {
+        ((f = {
             api: { version: a.api.version, url: a.api.url },
             getSdkToken: () => a.token,
             getProfileId: () => e.getProfileId(),
@@ -2306,7 +2308,7 @@ async function tY(t, e) {
                         c = null,
                         h = !1;
                     c = d(() => {
-                        (h = !0), u.abort();
+                        ((h = !0), u.abort());
                     }, e);
                     let f = o?.signal,
                         m,
@@ -2315,7 +2317,8 @@ async function tY(t, e) {
                         if (f.aborted) u.abort();
                         else {
                             let t = () => u.abort();
-                            f.addEventListener("abort", t, { once: !0 }), (w = () => f.removeEventListener("abort", t));
+                            (f.addEventListener("abort", t, { once: !0 }),
+                                (w = () => f.removeEventListener("abort", t)));
                         }
                     if (null != o && "body" in o && null != o.body) {
                         let t = (function (t) {
@@ -2336,7 +2339,7 @@ async function tY(t, e) {
                                 return { ok: !1 };
                             }
                         })(o.body);
-                        if (!t.ok) return p(c), w(), { ok: !1, kind: "serialize" };
+                        if (!t.ok) return (p(c), w(), { ok: !1, kind: "serialize" });
                         m = t.body;
                     }
                     try {
@@ -2395,7 +2398,7 @@ async function tY(t, e) {
                               ? { ok: !1, kind: "abort" }
                               : { ok: !1, kind: "network" };
                     } finally {
-                        p(c), w();
+                        (p(c), w());
                     }
                 }
                 return {
@@ -2422,9 +2425,9 @@ async function tY(t, e) {
                         let l = await (r ||
                             (r = (async function () {
                                 try {
-                                    return await n(), e();
+                                    return (await n(), e());
                                 } catch (t) {
-                                    return i.warn("AuthMiddleware", "auth refresh failed", t), null;
+                                    return (i.warn("AuthMiddleware", "auth refresh failed", t), null);
                                 }
                             })().finally(() => {
                                 r = null;
@@ -2497,15 +2500,15 @@ async function tY(t, e) {
                         );
                     },
                 },
-            });
+            }));
         let y = await s.api.collectionStatus();
         if (!y.ok || !0 !== y.data.eventsCollectionEnabled) return { status: "collection-disabled" };
-        (l = new tc({ startActivity: () => s.api.startActivity(), stopActivity: () => s.api.stopActivity() })),
+        ((l = new tc({ startActivity: () => s.api.startActivity(), stopActivity: () => s.api.stopActivity() })),
             (u = new tk(te, {
                 ingest: (t, e) => s.api.ingest(t, e),
                 getTabId: () => h?.getTabId() ?? "unknown",
                 isActivityActive: () => l?.isActive() ?? !1,
-            }));
+            })));
         let k = n.tab;
         h = new tE({
             push: (t) => u?.push(t),
@@ -2516,21 +2519,21 @@ async function tY(t, e) {
                     "hidden" === document.visibilityState && t.flush();
                 }
                 function n(e) {
-                    t.flush(), t.stopTab(), t.getShouldSkipStopActivity() || t.stopActivity();
+                    (t.flush(), t.stopTab(), t.getShouldSkipStopActivity() || t.stopActivity());
                 }
                 let i = c(() => t.onConnectionChange());
                 return {
                     start: function () {
-                        r(document, "visibilitychange", e),
+                        (r(document, "visibilitychange", e),
                             r(window, "pagehide", n),
                             r(window, "online", i),
-                            r(window, "offline", i);
+                            r(window, "offline", i));
                     },
                     stop: function () {
-                        o(document, "visibilitychange", e),
+                        (o(document, "visibilitychange", e),
                             o(window, "pagehide", n),
                             o(window, "online", i),
-                            o(window, "offline", i);
+                            o(window, "offline", i));
                     },
                 };
             })({
@@ -2558,9 +2561,9 @@ async function tY(t, e) {
                                     let e = [],
                                         n = t,
                                         i = -1;
-                                    for (; n; ) {
+                                    for (; n;) {
                                         if (v(n)) return { chain: [], redaction: { level: "ignore", index: -1 } };
-                                        b(n) && (i = e.length), e.push(n);
+                                        (b(n) && (i = e.length), e.push(n));
                                         let t = n.parentNode;
                                         if (!t || g(n, "body")) break;
                                         if (t && t.nodeType === Node.DOCUMENT_FRAGMENT_NODE) n = t.host;
@@ -2699,15 +2702,15 @@ async function tY(t, e) {
             },
         };
     } catch (t) {
-        return i.warn("IncodeTRI", "setup() failed during construction:", t), { status: "init-failed" };
+        return (i.warn("IncodeTRI", "setup() failed during construction:", t), { status: "init-failed" });
     }
 }
 let tK = class t {
     constructor() {
-        (this.Tt = 0), (this._t = null), (this.It = W);
+        ((this.Tt = 0), (this._t = null), (this.It = W));
     }
     static get instance() {
-        return t.i || (t.i = new t()), t.i;
+        return (t.i || (t.i = new t()), t.i);
     }
     async setup(t) {
         if (this.It !== W)
@@ -2723,10 +2726,10 @@ let tK = class t {
             let e = (function (t) {
                 var e;
                 if ("u" < typeof document)
-                    return i.fatal("error", "IncodeTRI", "TRI is not available in a non-browser environment."), null;
-                if (!t?.token) return i.fatal("error", "SDK", "token is required."), null;
+                    return (i.fatal("error", "IncodeTRI", "TRI is not available in a non-browser environment."), null);
+                if (!t?.token) return (i.fatal("error", "SDK", "token is required."), null);
                 if (!t.apiURL)
-                    return i.fatal("error", "SDK", "Couldn't initialise SDK \u2014 apiURL isn't provided."), null;
+                    return (i.fatal("error", "SDK", "Couldn't initialise SDK \u2014 apiURL isn't provided."), null);
                 let { element: n, content: r } = t.capture ?? {},
                     o = {
                         token: t.token,
@@ -2769,7 +2772,7 @@ let tK = class t {
                             })(t.layers),
                         };
             })(t);
-            if (!e) return (this.It = tt), tt;
+            if (!e) return ((this.It = tt), tt);
             i.DEBUG = e.sdk.DEBUG;
             let n = await tY(e, { getProfileId: () => null });
             return "collection-disabled" === n.status
@@ -2778,17 +2781,19 @@ let tK = class t {
                   ? ((this.It = tt), tt)
                   : ((this._t = n.managers), (this.It = J), !1 !== t.autostart ? this.start() : J);
         } catch (t) {
-            return i.warn("setup()", "failed:", t), (this.It = tt), tt;
+            return (i.warn("setup()", "failed:", t), (this.It = tt), tt);
         }
     }
     async start() {
         if (this.It === W)
-            return i.warn("start()", "start() requires a prior successful setup() \u2014 ignoring."), this.It;
+            return (i.warn("start()", "start() requires a prior successful setup() \u2014 ignoring."), this.It);
         if (this.It !== J)
-            return i.fatal("warn", "start()", "TRI is either already started or isn't ready \u2014 ignoring."), this.It;
+            return (
+                i.fatal("warn", "start()", "TRI is either already started or isn't ready \u2014 ignoring."), this.It
+            );
         this.It = "starting";
         let t = ++this.Tt;
-        return await this.v(t), this.It;
+        return (await this.v(t), this.It);
     }
     async stop() {
         i.warn("stop()", "called");
@@ -2805,7 +2810,7 @@ let tK = class t {
     }
     async reset() {
         let t = this.stop();
-        return (this.It = W), (this._t = null), t.then(() => this.It);
+        return ((this.It = W), (this._t = null), t.then(() => this.It));
     }
     async xt(t) {
         var e;
@@ -2830,9 +2835,9 @@ let tK = class t {
                     t !== this.Tt || (e.transportManager.start(), await e.tabManager.start(), t !== this.Tt))
                 )
                     return;
-                e.lifecycleManager.start(), e.collectorManager.autocapture();
+                (e.lifecycleManager.start(), e.collectorManager.autocapture());
             } catch (e) {
-                i.warn("start()", "failed during monitoring start:", e), t === this.Tt && (this.It = J);
+                (i.warn("start()", "failed during monitoring start:", e), t === this.Tt && (this.It = J));
                 return;
             }
             t === this.Tt && (this.It = Z);
@@ -2840,12 +2845,12 @@ let tK = class t {
     }
     async linkInterview(t) {
         if (this.It !== Z || !this._t)
-            return i.warn("linkInterview()", "linkInterview() called before start() completed \u2014 ignoring."), !1;
-        if (!t) return i.warn("linkInterview()", "linkInterview() called without sessionToken \u2014 ignoring."), !1;
+            return (i.warn("linkInterview()", "linkInterview() called before start() completed \u2014 ignoring."), !1);
+        if (!t) return (i.warn("linkInterview()", "linkInterview() called without sessionToken \u2014 ignoring."), !1);
         try {
             return (await this._t.falconServiceManager.api.linkInterview(t)).ok;
         } catch (t) {
-            return i.warn("linkInterview()", "failed:", t), !1;
+            return (i.warn("linkInterview()", "failed:", t), !1);
         }
     }
 };
@@ -2858,14 +2863,14 @@ async function tV(t, e) {
         s = () => {};
     i &&
         (o = d(() => {
-            (a = !0), r.abort();
+            ((a = !0), r.abort());
         }, i));
     let l = e?.signal;
     if (l)
         if (l.aborted) r.abort();
         else {
             let t = () => r.abort();
-            l.addEventListener("abort", t, { once: !0 }), (s = () => l.removeEventListener("abort", t));
+            (l.addEventListener("abort", t, { once: !0 }), (s = () => l.removeEventListener("abort", t)));
         }
     try {
         let e = await fetch(`${n}/api/v1/sdk/init`, {
@@ -2898,7 +2903,7 @@ async function tV(t, e) {
     } catch (t) {
         throw Error((a ? "[TRI] createSession timed out" : "[TRI] Failed to create session:") + " " + t.message);
     } finally {
-        p(o), s();
+        (p(o), s());
     }
 }
 tK.i = null;

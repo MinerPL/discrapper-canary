@@ -11,7 +11,7 @@ function d(e) {
 }
 function c() {
     let e = {};
-    for (let t of Object.values(o)) (e[t.id] = t), (t.subscription = a.A.getSubscriptionById(t.subscriptionId));
+    for (let t of Object.values(o)) ((e[t.id] = t), (t.subscription = a.A.getSubscriptionById(t.subscriptionId)));
     o = e;
 }
 class u extends i.Ay.Store {
@@ -38,17 +38,17 @@ let _ = new u(r.h, {
     },
     GUILD_BOOST_SLOTS_FETCH_SUCCESS: function (e) {
         let { guildBoostSlots: t } = e;
-        (o = {}),
+        ((o = {}),
             t.forEach((e) => {
                 o[e.id] = e;
             }),
             (l = !1),
-            (s = !0);
+            (s = !0));
     },
     GUILD_BOOST_SLOT_UPDATE_SUCCESS: d,
     GUILD_BOOST_SLOT_CREATE: d,
     GUILD_BOOST_SLOT_UPDATE: d,
     LOGOUT: function () {
-        (o = {}), (s = !1), (l = !1);
+        ((o = {}), (s = !1), (l = !1));
     },
 });

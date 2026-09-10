@@ -136,7 +136,7 @@ function ec(e) {
     let { guild: n, onClick: t, onClose: r } = e,
         i = s.useCallback(
             (e) => {
-                t?.(e), null != t && r?.(e);
+                (t?.(e), null != t && r?.(e));
             },
             [t, r],
         ),
@@ -212,14 +212,14 @@ function eh(e) {
         j = (0, E.A)(n.guild_id, n.id, o),
         v = s.useCallback(
             (e) => {
-                e.stopPropagation(), null != n && (0, Y.rq)(n);
+                (e.stopPropagation(), null != n && (0, Y.rq)(n));
             },
             [n],
         ),
         A = (0, en.A)(o, n.id),
         I = (0, ee.A)(n);
     s.useEffect(() => {
-        N.A.getGuildEventUserCounts(t.id, n.id, null != o ? [o] : []), N.A.getGuildEventsForCurrentUser(t.id);
+        (N.A.getGuildEventUserCounts(t.id, n.id, null != o ? [o] : []), N.A.getGuildEventsForCurrentUser(t.id));
     }, [t.id, n.id, o]);
     let _ = (0, el.Sn)(n.recurrence_rule),
         y = n?.scheduled_start_time != null ? (0, b.j)(A, g, new Date(n?.scheduled_start_time)) : null;
@@ -521,7 +521,7 @@ let eM = function (e) {
                 function u(e) {
                     s.has(e.user_id) || (i.push(e), s.add(e.user_id));
                 }
-                return t.forEach(u), l.forEach(u), i;
+                return (t.forEach(u), l.forEach(u), i);
             }, [n, r])),
         H = null != D ? (0, k.A)(D) : null,
         q = s.useCallback(
@@ -548,7 +548,7 @@ let eM = function (e) {
         let e = new ResizeObserver((e) => {
             e.length > 0 && J(e[0].contentRect.width);
         });
-        return null != W.current && e.observe(W.current), () => e.disconnect();
+        return (null != W.current && e.observe(W.current), () => e.disconnect());
     }, [W]);
     let ee = s.useRef(null),
         [en, et] = s.useState(0);

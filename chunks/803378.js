@@ -8,7 +8,7 @@ let d = {},
     u = {},
     m = !1;
 function g() {
-    (i = void 0), (d = {}), (u = {}), (l = void 0), (s = void 0), (m = !1);
+    ((i = void 0), (d = {}), (u = {}), (l = void 0), (s = void 0), (m = !1));
 }
 class h extends a.Ay.Store {
     static displayName = "IntegrationPermissionStore";
@@ -44,7 +44,7 @@ let x = new h(r.h, {
     INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
         let { applicationId: t } = e;
-        g(), (i = t);
+        (g(), (i = t));
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         let { applicationId: t, commandId: n, permissions: l } = e;
@@ -80,7 +80,7 @@ let x = new h(r.h, {
             if (e.application_id === i) {
                 let t = (0, o.Oe)({ rootCommand: e, command: e, applicationId: e.application_id }),
                     n = s[e.id];
-                null != n && (t.permissions = (0, c.UZ)(n)), (a[e.id] = t);
+                (null != n && (t.permissions = (0, c.UZ)(n)), (a[e.id] = t));
             }
         u = a;
     },

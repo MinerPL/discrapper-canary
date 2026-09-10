@@ -11,9 +11,9 @@ var o = l(477900),
     g = l(375708);
 function p(n) {
     let e = t.useCallback(() => {
-        c()(null != n, "text cannot be null"),
+        (c()(null != n, "text cannot be null"),
             d.default.track(u.HAw.MESSAGE_MENU_GOOGLE_SEARCHED),
-            window.open(`https://www.google.com/search?q=${encodeURIComponent(n)}`, "_blank");
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(n)}`, "_blank"));
     }, [n]);
     return r.isPlatformEmbedded && null != n && n?.length !== 0
         ? [

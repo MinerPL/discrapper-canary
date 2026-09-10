@@ -269,13 +269,13 @@ class ep extends u.Ay.Store {
     initialize() {
         var e;
         let t = eh.w.get(ex);
-        t?.history != null &&
+        (t?.history != null &&
             (Object.keys((e = t.history)).forEach((t) => {
-                Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && "" !== e.trim())),
-                    (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
+                (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && "" !== e.trim())),
+                    (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
             }),
             (ef = e)),
-            (em = !!eh.w.get("tokenized"));
+            (em = !!eh.w.get("tokenized")));
     }
     isTokenized() {
         return em;
@@ -287,7 +287,7 @@ class ep extends u.Ay.Store {
 let eI = new ep(ed.h, {
     SEARCH_HISTORY_WEB_CLEAR_ITEMS: function (e) {
         let { id: t } = e;
-        delete ef[t], eh.w.set(Q.nC, { history: ef });
+        (delete ef[t], eh.w.set(Q.nC, { history: ef }));
     },
     SEARCH_HISTORY_WEB_REMOVE_ITEM: function (e) {
         let { id: t, query: r } = e;
@@ -298,16 +298,16 @@ let eI = new ep(ed.h, {
         if ("string" != typeof r || "" === (r = r.trim())) return;
         let l = (ef[t] = ef[t] ?? []),
             n = l.indexOf(r);
-        -1 !== n
+        (-1 !== n
             ? (l.splice(n, 1), l.unshift(r))
             : null != l[0] && "" !== l[0] && r.startsWith(l[0])
               ? (l[0] = r)
               : l.unshift(r),
             l.length > 5 && l.splice(5, l.length),
-            eh.w.set(Q.nC, { history: ef });
+            eh.w.set(Q.nC, { history: ef }));
     },
     LOGOUT: function () {
-        eh.w.remove(Q.nC), (ef = {});
+        (eh.w.remove(Q.nC), (ef = {}));
     },
 });
 var eg = r(65600),
@@ -356,7 +356,7 @@ let eL = s.forwardRef(function (e, t) {
             [o, x] = s.useState(-1),
             m = s.useCallback(
                 (e) => {
-                    x(e), i(e);
+                    (x(e), i(e));
                     let t = document.getElementById(`${l}-${e}`);
                     null != t && t.scrollIntoView({ block: "nearest", inline: "nearest" });
                 },
@@ -365,14 +365,14 @@ let eL = s.forwardRef(function (e, t) {
             p = s.useCallback(
                 (e) => {
                     let { query: t, performSearch: r, replace: l } = e;
-                    g.A.setSearchQuery({
+                    (g.A.setSearchQuery({
                         query: t,
                         performSearch: r,
                         replace: l,
                         resultsState: a,
                         searchQuerySource: Q.Q_.SEARCH_POPOUT,
                     }),
-                        m(-1);
+                        m(-1));
                 },
                 [a, m],
             ),
@@ -397,7 +397,7 @@ let eL = s.forwardRef(function (e, t) {
                                         }
                                         s += o.length;
                                         let e = n({ group: c, rows: t });
-                                        a.push(e), i.push(...t);
+                                        (a.push(e), i.push(...t));
                                     }
                                 }
                                 return { autocompleteCount: s, autocompleteGroups: a, allAutocompleteRows: i };
@@ -447,7 +447,7 @@ let eL = s.forwardRef(function (e, t) {
                                             let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
                                                 i = L.Ay[c]?.key ?? "",
                                                 o = (0, I.bS)(r);
-                                            (0, eS.kc)({
+                                            ((0, eS.kc)({
                                                 searchContext: r,
                                                 searchQuery: eg.A.getSearchResultsQuery(o),
                                                 searchQueryString: g.A.getSearchInputText(r),
@@ -462,7 +462,7 @@ let eL = s.forwardRef(function (e, t) {
                                                 isInFilterForSelectedChannel: !1,
                                                 searchAutocompleteSelectAction: a,
                                             }),
-                                                t({ query: `${i} `, performSearch: !1, replace: !1 });
+                                                t({ query: `${i} `, performSearch: !1, replace: !1 }));
                                         },
                                     });
                                 });
@@ -593,12 +593,12 @@ let eL = s.forwardRef(function (e, t) {
                                             ariaLabel: P.intl.formatToPlainString(P.t.WoiGrV, { suggestion: s }),
                                             resultText: e,
                                             onSelect: () => {
-                                                (0, eS.oR)({
+                                                ((0, eS.oR)({
                                                     searchContext: r,
                                                     searchHistoryIndex: t,
                                                     searchHistoryTotalResults: d.length,
                                                 }),
-                                                    a({ query: e, performSearch: !0, replace: !1 });
+                                                    a({ query: e, performSearch: !0, replace: !1 }));
                                             },
                                         });
                                     }),
@@ -720,14 +720,14 @@ let eL = s.forwardRef(function (e, t) {
                                         resultText: i,
                                         onSelect: function (e) {
                                             let { selectedIndex: l, searchAutocompleteSelectAction: n } = e;
-                                            x({
+                                            (x({
                                                 selectedIndex: l,
                                                 searchAutocompleteSelectAction: n,
                                                 selectedAutocomplete: t,
                                                 selectedAutocompleteGroup: s,
                                                 autocompleteCount: r,
                                             }),
-                                                a({ query: i, performSearch: !1, replace: !1 });
+                                                a({ query: i, performSearch: !1, replace: !1 }));
                                         },
                                     });
                                 },
@@ -744,7 +744,7 @@ let eL = s.forwardRef(function (e, t) {
                                 let t = m({ hasOtherSearchFiltersVisible: !1 });
                                 e.push(t);
                             }
-                            return r > 0 && e.push(...l), e;
+                            return (r > 0 && e.push(...l), e);
                         },
                         [G.o$q.FILTER]: () => {
                             let { autocompleteCount: e, autocompleteGroups: t } = o({
@@ -806,14 +806,14 @@ let eL = s.forwardRef(function (e, t) {
                                         resultText: i,
                                         onSelect: function (t) {
                                             let { selectedIndex: l, searchAutocompleteSelectAction: n } = t;
-                                            x({
+                                            (x({
                                                 selectedIndex: l,
                                                 searchAutocompleteSelectAction: n,
                                                 selectedAutocomplete: r,
                                                 selectedAutocompleteGroup: s,
                                                 autocompleteCount: e,
                                             }),
-                                                a({ query: i, performSearch: !0, replace: !1 });
+                                                a({ query: i, performSearch: !0, replace: !1 }));
                                         },
                                     });
                                 },
@@ -855,7 +855,7 @@ let eL = s.forwardRef(function (e, t) {
         }
         function F(e) {
             let t;
-            (t = o + e) > N.length - 1 ? (t = 0) : t < 0 && (t = N.length - 1), m(t);
+            ((t = o + e) > N.length - 1 ? (t = 0) : t < 0 && (t = N.length - 1), m(t));
         }
         let M = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
         s.useEffect(() => {
@@ -899,7 +899,7 @@ let eL = s.forwardRef(function (e, t) {
             })),
             (0, n.jsx)(d.d_, {
                 onMouseDown: function (e) {
-                    e.stopPropagation(), e.preventDefault();
+                    (e.stopPropagation(), e.preventDefault());
                 },
                 role: "listbox",
                 id: l,
@@ -921,7 +921,7 @@ let eL = s.forwardRef(function (e, t) {
             })),
             (0, n.jsx)(d.d_, {
                 onMouseDown: function (e) {
-                    e.stopPropagation(), e.preventDefault();
+                    (e.stopPropagation(), e.preventDefault());
                 },
                 role: "listbox",
                 id: r,
@@ -931,7 +931,7 @@ let eL = s.forwardRef(function (e, t) {
                 children: (0, n.jsx)(x.CalendarPicker, {
                     onSelect: function (e) {
                         let t = (0, I.bS)(a);
-                        (0, eS.kc)({
+                        ((0, eS.kc)({
                             searchContext: a,
                             searchQuery: eg.A.getSearchResultsQuery(t),
                             searchQueryString: g.A.getSearchInputText(a),
@@ -949,7 +949,7 @@ let eL = s.forwardRef(function (e, t) {
                                 replace: !1,
                                 resultsState: l,
                                 searchQuerySource: Q.Q_.SEARCH_POPOUT,
-                            });
+                            }));
                     },
                     maxDate: o()().local(),
                     minDate: ej,

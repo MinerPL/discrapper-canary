@@ -52,7 +52,7 @@ function P(t) {
                             size: _.Ay.Sizes.SMOL,
                             className: S.$f,
                             onClick: (t) => {
-                                t.stopPropagation(), (0, T.u)(e.id), v?.({ action: "OPEN_VOICE_GUILD" }), R?.();
+                                (t.stopPropagation(), (0, T.u)(e.id), v?.({ action: "OPEN_VOICE_GUILD" }), R?.());
                             },
                         }),
                     }),
@@ -69,11 +69,11 @@ function P(t) {
                             D
                                 ? (0, i.jsx)(c.D, {
                                       onClick: (t) => {
-                                          t.stopPropagation(),
+                                          (t.stopPropagation(),
                                               x.default.selectVoiceChannel(P.id),
                                               (0, m.iN)(P.id),
                                               v?.({ action: "OPEN_VOICE_CHANNEL" }),
-                                              R?.();
+                                              R?.());
                                       },
                                       className: S.sd,
                                       "aria-label": (0, p.Ay)({ channel: P }),
@@ -101,7 +101,7 @@ function P(t) {
                         overflowCountColor: "text-subtle",
                         overflowCountClassName: S.NS,
                         onClickOverflow: (t) => {
-                            t.stopPropagation(), v?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                            (t.stopPropagation(), v?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
                         },
                         onUserClick: (t) => t.stopPropagation(),
                         disableUserPopout: !!G || ((t) => t === n.id),

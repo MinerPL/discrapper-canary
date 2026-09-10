@@ -23,7 +23,7 @@ class o extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -46,12 +46,12 @@ class o extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.id && t.tag(1, i.O0.LengthDelimited).string(e.id),
+        ("" !== e.id && t.tag(1, i.O0.LengthDelimited).string(e.id),
             "" !== e.linkText && t.tag(2, i.O0.LengthDelimited).string(e.linkText),
             e.linkTextLocalized &&
-                l.X.internalBinaryWrite(e.linkTextLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join();
+                l.X.internalBinaryWrite(e.linkTextLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let d = new o();

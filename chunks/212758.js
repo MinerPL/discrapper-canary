@@ -23,7 +23,7 @@ function d(e) {
     return (0, r.jsx)(o.k, {
         transitionState: f,
         onClose: function () {
-            return d(), Promise.resolve();
+            return (d(), Promise.resolve());
         },
         trackingProps: { impression: p },
         graphic: { type: "image", src: m.A },

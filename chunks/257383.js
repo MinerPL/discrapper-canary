@@ -20,7 +20,7 @@ e.exports = function (e) {
         };
     function s(e, t) {
         let a = [{ begin: e, end: t }];
-        return (a[0].contains = a), a;
+        return ((a[0].contains = a), a);
     }
     let l = {
             className: "string",
@@ -138,5 +138,7 @@ e.exports = function (e) {
                 relevance: 0,
             },
         ];
-    return (i.contains = d), (o.contains = d.slice(1)), { name: "Crystal", aliases: ["cr"], keywords: r, contains: d };
+    return (
+        (i.contains = d), (o.contains = d.slice(1)), { name: "Crystal", aliases: ["cr"], keywords: r, contains: d }
+    );
 };

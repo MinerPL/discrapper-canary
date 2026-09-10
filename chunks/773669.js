@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => A });
+(n.r(t), n.d(t, { default: () => A }));
 var i = n(17928),
     r = n(228366),
     a = n(724066),
@@ -24,7 +24,7 @@ d().then((e) => {
 class E extends i.Ay.Store {
     static displayName = "LocaleStore";
     initialize() {
-        this.waitFor(l.A), _(), (0, a.Av)(c);
+        (this.waitFor(l.A), _(), (0, a.Av)(c));
     }
     get locale() {
         return c;
@@ -39,6 +39,6 @@ let A = new E(r.h, {
     CONNECTION_OPEN: _,
     USER_SETTINGS_PROTO_UPDATE: _,
     USER_SETTINGS_LOCALE_OVERRIDE: function (e) {
-        (c = e.locale), (0, a.Av)(c);
+        ((c = e.locale), (0, a.Av)(c));
     },
 });

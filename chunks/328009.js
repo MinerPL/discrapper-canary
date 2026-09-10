@@ -1,4 +1,4 @@
-n.d(e, { RegisterWebAuthnCredentialModal: () => P }), n(321073);
+(n.d(e, { RegisterWebAuthnCredentialModal: () => P }), n(321073));
 var s,
     a = n(477900),
     i = n(582128),
@@ -57,13 +57,13 @@ function P(t) {
         [L, U] = i.useState(null),
         [K, R] = i.useState(!1),
         D = i.useCallback(async () => {
-            U(null), R(!0);
+            (U(null), R(!0));
             let t =
                 h.isPlatformEmbedded && C.Ay.supportsFeature(k.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(P) : (0, N.v)(P);
             try {
-                return w(await t), !0;
+                return (w(await t), !0);
             } catch (t) {
-                return m.A.captureException(t), U(A.intl.string(A.t.xSCvBf)), !1;
+                return (m.A.captureException(t), U(A.intl.string(A.t.xSCvBf)), !1);
             } finally {
                 R(!1);
             }
@@ -71,7 +71,7 @@ function P(t) {
         F = i.useCallback(async () => {
             try {
                 if ((await S.AF(v, o, z), j)) return !0;
-                return await (0, p.sy)(!1), s(), !1;
+                return (await (0, p.sy)(!1), s(), !1);
             } catch (t) {
                 return (
                     t instanceof r.oh && t.status >= 400 && t.status < 500 && E.A.signalUnknownCredential(z),
@@ -155,12 +155,12 @@ function P(t) {
             nextButtonProps: {
                 text: A.intl.string(A.t.MubYG8),
                 onClick: () => {
-                    s(), (0, x.openUserSettings)(g.X.ACCOUNT_PANEL);
+                    (s(), (0, x.openUserSettings)(g.X.ACCOUNT_PANEL));
                 },
             },
         });
     let O = i.useCallback((t) => {
-        U(null), M(t);
+        (U(null), M(t));
     }, []);
     return (0, a.jsx)(l.t, { transitionState: e, onClose: s, steps: J, currentStepKey: f, onStepChange: O });
 }

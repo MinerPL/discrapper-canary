@@ -1,4 +1,4 @@
-l.d(t, { default: () => V }), l(321073);
+(l.d(t, { default: () => V }), l(321073));
 var s = l(477900),
     i = l(582128),
     n = l(503698),
@@ -104,10 +104,10 @@ function V(e) {
                         switch (e.type) {
                             case O.nQ.CLIP:
                             case O.nQ.VOICE_CLIP:
-                                s.push(new File([t], l, { type: "video/mp4" })), d.push({ clip: e });
+                                (s.push(new File([t], l, { type: "video/mp4" })), d.push({ clip: e }));
                                 break;
                             case O.nQ.SCREENSHOT:
-                                s.push(new File([t], l, { type: "image/jpeg" })), d.push({});
+                                (s.push(new File([t], l, { type: "image/jpeg" })), d.push({}));
                                 break;
                             default:
                                 e.type;
@@ -115,7 +115,7 @@ function V(e) {
                     }
                     let g = (await Promise.all(e.map(k.pk))).filter(N.Vq).filter((e) => (0, I.t)(e));
                     if (0 === g.length) {
-                        (0, h.P0)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE)), i(!1);
+                        ((0, h.P0)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE)), i(!1));
                         return;
                     }
                     for (let e of (o && l(), g)) {

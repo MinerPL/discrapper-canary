@@ -22,7 +22,7 @@ class l extends i.Ay.DeviceSettingsStore {
 let o = new l(r.h, {
     STAGE_MUSIC_MUTE: function (e) {
         let { muted: t } = e;
-        (a = t), (s = !1);
+        ((a = t), (s = !1));
     },
     STAGE_MUSIC_PLAY: function (e) {
         let { play: t } = e;

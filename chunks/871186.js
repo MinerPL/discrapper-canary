@@ -91,13 +91,13 @@ function x(e) {
             ...e,
         }),
         p = n.getSession();
-    return p && "ok" === p.status && (0, a.qO)(p, { status: "exited" }), C(), n.setSession(d), o.setSession(d), d;
+    return (p && "ok" === p.status && (0, a.qO)(p, { status: "exited" }), C(), n.setSession(d), o.setSession(d), d);
 }
 function C() {
     let e = (0, i.rm)(),
         t = (0, i.o5)(),
         n = t.getSession() || e.getSession();
-    n && (0, a.Vu)(n), T(), e.setSession(), t.setSession();
+    (n && (0, a.Vu)(n), T(), e.setSession(), t.setSession());
 }
 function T() {
     let e = (0, i.rm)(),

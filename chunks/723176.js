@@ -4,7 +4,7 @@ var i = n(17928),
     a = n(228366),
     s = n(280450),
     l = n(45773);
-r.CV.KvCache, r.CV.KvCache;
+(r.CV.KvCache, r.CV.KvCache);
 class o extends i.Ay.Store {
     database = (e) => l.A.database(e ?? s.default.getId());
     channels = d((e) => new r.Be("guild_channels", r.CV.KvCache, e));

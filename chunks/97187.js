@@ -20,7 +20,7 @@ function E(t) {
         h = (0, d.A)({ id: i.id, label: m.intl.string(m.t["94lLD7"]) }),
         C = (0, l.bG)([p.A], () => p.A.getRequest(E));
     function b() {
-        u.A.removeGuildJoinRequest(E), A.A.getGuildId() === E && (0, g.pX)(f.BVt.ME);
+        (u.A.removeGuildJoinRequest(E), A.A.getGuildId() === E && (0, g.pX)(f.BVt.ME));
     }
     return (0, e.jsxs)(r.W, {
         "data-menu-migrated-auto": !0,

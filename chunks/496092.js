@@ -17,7 +17,7 @@ let h = {
     endEvent: (e, t) =>
         i.Bo.patch({ url: A.Rsh.GUILD_EVENT(t, e), body: { status: E.XG.COMPLETED }, rejectWithError: (0, i.fT)() }),
     joinVoiceEvent(e, t) {
-        a.default.selectVoiceChannel(t), (0, s.pX)(A.BVt.CHANNEL(e, t));
+        (a.default.selectVoiceChannel(t), (0, s.pX)(A.BVt.CHANNEL(e, t)));
     },
     saveEvent(e, t, n) {
         let r = E.GW.has(t.entityType) ? t.channelId : null,
@@ -54,12 +54,12 @@ let h = {
     },
     async fetchGuildEvent(e, t) {
         let { body: n } = await (0, d.aP)({ url: A.Rsh.GUILD_EVENT(e, t), rejectWithError: (0, i.fT)() });
-        return r.h.dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: n }), n;
+        return (r.h.dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: n }), n);
     },
     async fetchGuildEventsForGuild(e) {
         let t = { url: A.Rsh.GUILD_EVENTS_FOR_GUILD(e), rejectWithError: (0, i.fT)() },
             { body: n } = await (0, d.aP)(t);
-        return r.h.dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: e, guildScheduledEvents: n }), n;
+        return (r.h.dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: e, guildScheduledEvents: n }), n);
     },
     async fetchGuildEventUserCounts(e, t, n) {
         let a = {
@@ -112,7 +112,7 @@ let h = {
             );
         } catch (i) {
             throw (
-                (r.h.dispatch({
+                r.h.dispatch({
                     type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
                     userId: s,
                     guildId: n,
@@ -120,7 +120,7 @@ let h = {
                     guildEventExceptionId: t,
                     response: a,
                 }),
-                i)
+                i
             );
         }
     },
@@ -142,7 +142,7 @@ let h = {
                 );
             } catch (i) {
                 throw (
-                    (r.h.dispatch({
+                    r.h.dispatch({
                         type: "GUILD_SCHEDULED_EVENT_USER_ADD",
                         userId: a,
                         guildId: n,
@@ -150,20 +150,20 @@ let h = {
                         guildEventExceptionId: t,
                         response: s.response,
                     }),
-                    i)
+                    i
                 );
             }
     },
     async updateRsvp(e, t, n, i, r) {
         if (null != (0, _.TS)(e, t))
             try {
-                await this.deleteRsvpForGuildEvent(e, t, n), r?.();
+                (await this.deleteRsvpForGuildEvent(e, t, n), r?.());
             } catch (e) {
                 r?.(e);
             }
         else
             try {
-                await this.createRsvpForGuildEvent(e, t, n, i), r?.();
+                (await this.createRsvpForGuildEvent(e, t, n, i), r?.());
             } catch (e) {
                 r?.(e);
             }

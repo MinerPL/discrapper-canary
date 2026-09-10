@@ -8,5 +8,5 @@ var n = e(860511),
     s = o("wks"),
     p = c ? f.for || f : (f && f.withoutSetter) || u;
 r.exports = function (r) {
-    return i(s, r) || (s[r] = a && i(f, r) ? f[r] : p("Symbol." + r)), s[r];
+    return (i(s, r) || (s[r] = a && i(f, r) ? f[r] : p("Symbol." + r)), s[r]);
 };

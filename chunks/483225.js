@@ -21,7 +21,7 @@ function f(t) {
         V = x.intl.string("created" === f ? h.default["4lLdBM"] : h.default.VPDgHa),
         C = x.intl.formatToPlainString(h.default.yL6BiH, { provider: (0, p.A)(a.provider) });
     function A() {
-        (0, d.pX)(u.BVt.CHANNEL(i, m.VV.GAME_SERVERS)), k.onClose();
+        ((0, d.pX)(u.BVt.CHANNEL(i, m.VV.GAME_SERVERS)), k.onClose());
     }
     return "control" !== j
         ? (0, e.jsx)(r.k, {

@@ -36,7 +36,7 @@ function u(t) {
                 : null;
     return (0, s.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(),
+            (t.preventDefault(),
                 j(!0),
                 h(f)
                     .then(
@@ -52,7 +52,7 @@ function u(t) {
                                         : t.body.message && (w(t.body.message), j(!1))));
                         },
                     )
-                    .finally(() => j(!1));
+                    .finally(() => j(!1)));
         },
         children: (0, s.jsxs)(l.Modal, {
             title: e,
@@ -74,7 +74,7 @@ function u(t) {
                             autoFocus: !0,
                             value: f,
                             onChange: function (t) {
-                                x?.(t), k(t);
+                                (x?.(t), k(t));
                             },
                             required: !0,
                         }),

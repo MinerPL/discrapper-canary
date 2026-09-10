@@ -59,7 +59,7 @@ function A(e, t) {
     let P = null != f ? S?.profileEffect : g?.profileEffect;
     null != P && (0, s.RE)(P.skuId);
     let U = null != f ? S?.profileFrame : g?.profileFrame;
-    null != U && (0, s.RE)(U.skuId), null != t && (0, a.l0)(t);
+    (null != U && (0, s.RE)(U.skuId), null != t && (0, a.l0)(t));
     let w = {
         type: n,
         withMutualGuilds: u,
@@ -71,7 +71,7 @@ function A(e, t) {
         connectionsRoleId:
             null == f ? void 0 : (0, l._g)({ guildMember: d.Ay.getMember(f, e), channel: o.A.getChannel(p) })?.id,
     };
-    if (h) return i.h.wait(() => (0, r.fetchProfile)(e, w, E)), Promise.resolve();
+    if (h) return (i.h.wait(() => (0, r.fetchProfile)(e, w, E)), Promise.resolve());
     let G = (0, r.fetchProfile)(e, w, E);
     return M && !I ? Promise.resolve() : G;
 }

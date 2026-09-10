@@ -1,4 +1,4 @@
-Object.defineProperty(e, "__esModule", { value: !0 }),
+(Object.defineProperty(e, "__esModule", { value: !0 }),
     (e.decodeXMLStrict =
         e.decodeHTML5Strict =
         e.decodeHTML4Strict =
@@ -17,10 +17,10 @@ Object.defineProperty(e, "__esModule", { value: !0 }),
         e.encode =
         e.decodeStrict =
         e.decode =
-            void 0);
+            void 0));
 var o = t(770883),
     a = t(634303);
-(e.decode = function (r, e) {
+((e.decode = function (r, e) {
     return (!e || e <= 0 ? o.decodeXML : o.decodeHTML)(r);
 }),
     (e.decodeStrict = function (r, e) {
@@ -28,9 +28,9 @@ var o = t(770883),
     }),
     (e.encode = function (r, e) {
         return (!e || e <= 0 ? a.encodeXML : a.encodeHTML)(r);
-    });
+    }));
 var n = t(634303);
-Object.defineProperty(e, "encodeXML", {
+(Object.defineProperty(e, "encodeXML", {
     enumerable: !0,
     get: function () {
         return n.encodeXML;
@@ -71,9 +71,9 @@ Object.defineProperty(e, "encodeXML", {
         get: function () {
             return n.encodeHTML;
         },
-    });
+    }));
 var c = t(770883);
-Object.defineProperty(e, "decodeXML", {
+(Object.defineProperty(e, "decodeXML", {
     enumerable: !0,
     get: function () {
         return c.decodeXML;
@@ -120,4 +120,4 @@ Object.defineProperty(e, "decodeXML", {
         get: function () {
             return c.decodeXML;
         },
-    });
+    }));

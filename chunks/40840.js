@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.TIME_UNITS_NO_ABBR_PATTERN =
         t.TIME_UNITS_PATTERN =
         t.YEAR_PATTERN =
@@ -30,16 +30,16 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         let r = {},
             n = e,
             a = o.exec(n);
-        for (; a; )
-            (function (e, r) {
+        for (; a;)
+            ((function (e, r) {
                 if (r[0].match(/^[a-zA-Z]+$/)) return;
                 let n = i(r[1]);
                 e[t.TIME_UNIT_DICTIONARY[r[2].toLowerCase()]] = n;
             })(r, a),
                 (n = n.substring(a[0].length).trim()),
-                (a = o.exec(n));
+                (a = o.exec(n)));
         return 0 == Object.keys(r).length ? null : r;
-    });
+    }));
 let n = r(798401),
     a = r(574253);
 function i(e) {
@@ -52,7 +52,7 @@ function i(e) {
     else if (r.match(/several/)) return 7;
     return parseFloat(r);
 }
-(t.WEEKDAY_DICTIONARY = {
+((t.WEEKDAY_DICTIONARY = {
     sunday: 0,
     sun: 0,
     "sun.": 0,
@@ -233,10 +233,10 @@ function i(e) {
     )),
     (t.NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.INTEGER_WORD_DICTIONARY)}|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)`),
     (t.ORDINAL_NUMBER_PATTERN = `(?:${(0, n.matchAnyPattern)(t.ORDINAL_WORD_DICTIONARY)}|[0-9]{1,2}(?:st|nd|rd|th)?)`),
-    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])");
+    (t.YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])"));
 let s = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY)})`,
     o = RegExp(s, "i"),
     u = `(${t.NUMBER_PATTERN})\\s{0,3}(${(0, n.matchAnyPattern)(t.TIME_UNIT_DICTIONARY_NO_ABBR)})`,
     l = "\\s{0,5},?(?:\\s*and)?\\s{0,5}";
-(t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", s, l)),
-    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", u, l));
+((t.TIME_UNITS_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", s, l)),
+    (t.TIME_UNITS_NO_ABBR_PATTERN = (0, n.repeatedTimeunitPattern)("(?:(?:about|around)\\s{0,3})?", u, l)));

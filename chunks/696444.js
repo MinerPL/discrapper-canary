@@ -8,12 +8,12 @@ class r {
     skuId;
     summary;
     constructor(e) {
-        (this.prices = e.prices),
+        ((this.prices = e.prices),
             (this.type = e.type),
             (this.premiumType = e.premiumType),
             (this.name = e.name),
             (this.skuId = e.skuId),
-            (this.summary = e.summary);
+            (this.summary = e.summary));
     }
     static fromServer(e) {
         let { prices: t, type: n, premium_type: a, name: s, sku_id: l, summary: o } = e;

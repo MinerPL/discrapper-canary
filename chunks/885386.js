@@ -8,10 +8,10 @@ n.d(t, {
     Pf: () => ee,
     Vd: () => e8,
     CY: () => eM,
-    NO: () => V,
+    NO: () => B,
     D_: () => R,
     pK: () => tr,
-    JI: () => eV,
+    JI: () => eB,
     HZ: () => e6,
     vf: () => ep,
     Vv: () => e7,
@@ -20,7 +20,7 @@ n.d(t, {
     SY: () => M,
     _8: () => te,
     j7: () => e_,
-    JG: () => eZ,
+    JG: () => eq,
     XZ: () => em,
     Q_: () => ej,
     Yt: () => tl,
@@ -44,13 +44,13 @@ n.d(t, {
     WY: () => es,
     Zk: () => e3,
     vL: () => eu,
-    hV: () => X,
+    hV: () => Z,
     tz: () => ey,
     on: () => eO,
     b0: () => Y,
     Zt: () => el,
     gY: () => U,
-    Jr: () => B,
+    Jr: () => V,
     Sy: () => Q,
     dG: () => eA,
     dm: () => e1,
@@ -63,16 +63,16 @@ n.d(t, {
     Zr: () => er,
     eh: () => eY,
     uB: () => J,
-    wv: () => Z,
+    wv: () => q,
     jP: () => eb,
     tP: () => W,
     PZ: () => tn,
     H1: () => ef,
     TA: () => e5,
     Q$: () => ew,
-    Pw: () => eX,
+    Pw: () => eZ,
     rs: () => ek,
-    uh: () => q,
+    uh: () => X,
     S0: () => ez,
     Zp: () => P,
     qN: () => tt,
@@ -254,7 +254,7 @@ let P = f(
     (e) => e ?? s.Tz.NOTIFICATIONS_ENABLED,
     (e) => e,
 );
-f(
+(f(
     "notifications",
     "customStatusPushNotifications",
     (e) => e ?? s.DQ.STATUS_PUSH_UNSET,
@@ -265,7 +265,7 @@ f(
         "enableSummaryReminderNotifications",
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: !!e }),
-    );
+    ));
 let U = f(
     "notifications",
     "enableScreenDowntimeScheduleNotifications",
@@ -314,13 +314,13 @@ let F = f(
         (e) => e?.value ?? !0,
         (e) => l._t.create({ value: !!e }),
     ),
-    V = f(
+    B = f(
         "notifications",
         "quietMode",
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: !!e }),
     ),
-    B = f(
+    V = f(
         "notifications",
         "focusModeExpiresAtMs",
         (e) => e ?? "0",
@@ -363,19 +363,19 @@ let F = f(
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    q = f(
+    X = f(
         "voiceAndVideo",
         "disableStreamPreviews",
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    Z = f(
+    q = f(
         "notifications",
         "notifyFriendsOnGoLive",
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    X = f(
+    Z = f(
         "notifications",
         "notifyFriendsOnComeOnline",
         (e) => e?.value ?? !0,
@@ -703,17 +703,17 @@ p(
     "text",
     "defaultReactionEmoji",
 );
-let eV = f(
+let eB = f(
         "localization",
         "timezoneOffset",
         (e) => e?.value ?? null,
         (e) => l.as.create({ value: e ?? 0 }),
     ),
-    eB = new Set([I.YP.AUTO, d.b.COZY, d.b.COMPACT]);
+    eV = new Set([I.YP.AUTO, d.b.COZY, d.b.COMPACT]);
 f(
     "appearance",
     "channelListLayout",
-    (e) => (null != e && eB.has(e.value) ? e.value : d.b.COZY),
+    (e) => (null != e && eV.has(e.value) ? e.value : d.b.COZY),
     (e) => l.hU.create({ value: e }),
 );
 let eH = new Set([d.P.ALL, d.P.UNREADS, d.P.NONE]);
@@ -820,17 +820,17 @@ let ej = p(
         () => S.A.getOverride("animateStickers")?.value,
         () => (0, a.bG)([S.A], () => S.A.getOverride("animateStickers")?.value),
     ),
-    eq = [],
+    eX = [],
+    eq = f(
+        "privacy",
+        "activityRestrictedGuildIds",
+        (e) => e ?? eX,
+        (e) => e,
+    ),
     eZ = f(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eq,
-        (e) => e,
-    ),
-    eX = f(
-        "privacy",
-        "activityRestrictedGuildIds",
-        (e) => e ?? eq,
+        (e) => e ?? eX,
         (e) => e,
         { delay: I.Sb.FREQUENT_USER_ACTION },
     ),
@@ -925,7 +925,7 @@ function te(e) {
     return { goreContentGuilds: t ?? void 0, goreContentFriendDm: n ?? void 0, goreContentNonFriendDm: i ?? void 0 };
 }
 let tt = f("textAndImages", "goreContentSettings", e9, te);
-f(
+(f(
     "appearance",
     "searchResultExactCountEnabled",
     (e) => e?.value ?? !1,
@@ -936,7 +936,7 @@ f(
         "happeningNowCardsDisabled",
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
-    );
+    ));
 let tn = f(
         "appearance",
         "timestampHourCycle",
@@ -944,7 +944,7 @@ let tn = f(
         (e) => e,
     ),
     ti = f("appearance", "defaultGuildThemePreference", u.v, (e) => e);
-f(
+(f(
     "appearance",
     "launchPadMode",
     (e) => e ?? s.Ar.LAUNCH_PAD_DISABLED,
@@ -955,7 +955,7 @@ f(
         "swipeRightToLeftMode",
         (e) => e ?? s.kW.SWIPE_RIGHT_TO_LEFT_UNSET,
         (e) => e,
-    );
+    ));
 let tr = f(
         "userContent",
         "lastReceivedChangelogId",

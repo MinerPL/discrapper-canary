@@ -1,4 +1,4 @@
-n.d(t, { Lu: () => o, cE: () => c, le: () => p }), n(938796), n(321073);
+(n.d(t, { Lu: () => o, cE: () => c, le: () => p }), n(938796), n(321073));
 var r = n(665260);
 n(873298);
 var i = n(669953);
@@ -36,5 +36,5 @@ function p(e) {
                 let { channel: t } = e;
                 return t.id;
             });
-    t.forEach((e) => s.push(e)), i.A.onboardExistingMember(e, new Set(s));
+    (t.forEach((e) => s.push(e)), i.A.onboardExistingMember(e, new Set(s)));
 }

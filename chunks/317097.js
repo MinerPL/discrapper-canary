@@ -72,7 +72,9 @@ function u(e) {
     return n.alpha(t ?? n.alpha()).css();
 }
 function _(e, t) {
-    return null == t && (t = ((e >> 24) & 255) / 255), `rgba(${(e >> 16) & 255}, ${(e >> 8) & 255}, ${255 & e}, ${t})`;
+    return (
+        null == t && (t = ((e >> 24) & 255) / 255), `rgba(${(e >> 16) & 255}, ${(e >> 8) & 255}, ${255 & e}, ${t})`
+    );
 }
 function E(e) {
     return 1 - (0.299 * ((e >> 16) & 255) + 0.587 * ((e >> 8) & 255) + 0.114 * (255 & e)) / 255;

@@ -17,8 +17,8 @@ function g() {
         id: "voice-and-video-settings",
         label: l.intl.string(l.t.dsXapM),
         action: function () {
-            (0, a.A)(null, n === u.BRT.POPOUT),
-                (0, p.openUserSettings)(d.X.VOICE_AND_VIDEO_PANEL, { analyticsLocations: i });
+            ((0, a.A)(null, n === u.BRT.POPOUT),
+                (0, p.openUserSettings)(d.X.VOICE_AND_VIDEO_PANEL, { analyticsLocations: i }));
         },
         icon: c.SettingsIcon,
         leadingAccessory: { type: "icon", icon: c.SettingsIcon },

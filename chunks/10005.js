@@ -20,7 +20,7 @@ function h(e) {
                 if (!I) {
                     u(!0);
                     try {
-                        await (0, n.nt)(e, s.Ef.ACTIVE), a?.();
+                        (await (0, n.nt)(e, s.Ef.ACTIVE), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);
@@ -36,7 +36,7 @@ function h(e) {
                 if (!I) {
                     d(!0);
                     try {
-                        await (0, n.nt)(e, s.Ef.DECLINED), a?.();
+                        (await (0, n.nt)(e, s.Ef.DECLINED), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);
@@ -52,7 +52,7 @@ function h(e) {
                 if (!I) {
                     f(!0);
                     try {
-                        await (0, n.nt)(e, s.Ef.INACTIVE), a?.();
+                        (await (0, n.nt)(e, s.Ef.INACTIVE), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);
@@ -68,7 +68,7 @@ function h(e) {
                 if (!I) {
                     o(!0);
                     try {
-                        await (0, n.e$)(e), a?.();
+                        (await (0, n.e$)(e), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);
@@ -83,7 +83,7 @@ function h(e) {
             if (!v) {
                 A(!0);
                 try {
-                    await (0, n.HB)(), a?.();
+                    (await (0, n.HB)(), a?.());
                 } catch (a) {
                     let e = new i.LG(a);
                     t?.(e);
@@ -97,7 +97,7 @@ function h(e) {
                 if (!k) {
                     p(!0);
                     try {
-                        await n.Ay.fetchTeenActivity(e), a?.();
+                        (await n.Ay.fetchTeenActivity(e), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);
@@ -120,7 +120,7 @@ function h(e) {
                 if (!L) {
                     C(!0);
                     try {
-                        await n.Ay.requestLink(e, l), a?.();
+                        (await n.Ay.requestLink(e, l), a?.());
                     } catch (a) {
                         let e = new i.LG(a);
                         t?.(e);

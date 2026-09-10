@@ -9,7 +9,7 @@ function i(e) {
             let e = new l.Ay((e, s) => {
                 i({ results: e, query: s });
             });
-            return e.setLimit(20), e.search(""), e;
+            return (e.setLimit(20), e.search(""), e);
         });
     return (
         r.useEffect(() => () => a.destroy(), [a]),
@@ -21,9 +21,10 @@ function i(e) {
                 (e) => {
                     var s;
                     let { query: t, resultTypes: r } = e;
-                    (null != a.resultTypes && ((s = a.resultTypes), r.length === s.size && r.every((e) => s.has(e)))) ||
+                    ((null != a.resultTypes &&
+                        ((s = a.resultTypes), r.length === s.size && r.every((e) => s.has(e)))) ||
                         (a.setResultTypes(r), a.setLimit(1 === r.length ? 50 : 20)),
-                        a.search("" === t.trim() ? "" : t);
+                        a.search("" === t.trim() ? "" : t));
                 },
                 [a],
             ),

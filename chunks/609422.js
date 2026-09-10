@@ -14,9 +14,9 @@ function p(t) {
         [f, m] = a.useState(i),
         b = a.useRef(null);
     async function k(t) {
-        t.preventDefault(), x(!0);
+        (t.preventDefault(), x(!0));
         try {
-            await o.A.updateRelationship(n.id, f), h();
+            (await o.A.updateRelationship(n.id, f), h());
         } catch (t) {
         } finally {
             x(!1);
@@ -48,7 +48,7 @@ function p(t) {
                     }),
                     (0, e.jsx)(u.Q, {
                         onClick: function () {
-                            m(null), b.current?.focus();
+                            (m(null), b.current?.focus());
                         },
                         text: d.intl.string(d.t["9qSBvB"]),
                         textVariant: "text-sm/medium",

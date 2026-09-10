@@ -30,11 +30,11 @@ let c = new d(r.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { consents: t } = e;
-        (l = { ...t }), (a = !0);
+        ((l = { ...t }), (a = !0));
     },
     UPDATE_CONSENTS: function (e) {
         let { consents: t } = e;
-        (l = { ...t }), (a = !0);
+        ((l = { ...t }), (a = !0));
     },
     SET_CONSENT_REQUIRED: function (e) {
         o = e.consentRequired;

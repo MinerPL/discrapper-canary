@@ -144,22 +144,22 @@ function p(e) {
 }
 function g(e) {
     let { searchContext: t } = e;
-    u.A.initialize(t),
+    (u.A.initialize(t),
         n.Ay.trackWithMetadata(l.HAw.SEARCH_OPENED, {
             search_id: d(t),
             search_session_id: u.A.getSessionId(t),
             search_type: t.type,
-        });
+        }));
 }
 function R(e) {
     let { searchContext: t } = e;
-    n.Ay.trackWithMetadata(l.HAw.SEARCH_CLOSED, {
+    (n.Ay.trackWithMetadata(l.HAw.SEARCH_CLOSED, {
         search_id: d(t),
         search_session_id: u.A.getSessionId(t),
         search_query_id: u.A.getQueryId(t),
         search_type: t.type,
     }),
-        u.A.terminate(t);
+        u.A.terminate(t));
 }
 function T(e) {
     let { searchContext: t } = e;

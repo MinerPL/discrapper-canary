@@ -13,7 +13,7 @@ class l extends u.AbstractParserWithLeftRightBoundaryChecking {
         let r = e.createParsingResult(t.index, t[0]),
             o = a.MONTH_DICTIONARY[t[3].toLowerCase()],
             u = (0, s.parseOrdinalNumberPattern)(t[1]);
-        if (u > 31) return (t.index = t.index + t[1].length), null;
+        if (u > 31) return ((t.index = t.index + t[1].length), null);
         if ((r.start.assign("month", o), r.start.assign("day", u), t[4])) {
             let e = (0, i.parseYear)(t[4]);
             r.start.assign("year", e);
@@ -23,7 +23,7 @@ class l extends u.AbstractParserWithLeftRightBoundaryChecking {
         }
         if (t[2]) {
             let e = (0, s.parseOrdinalNumberPattern)(t[2]);
-            (r.end = r.start.clone()), r.end.assign("day", e);
+            ((r.end = r.start.clone()), r.end.assign("day", e));
         }
         return r;
     }

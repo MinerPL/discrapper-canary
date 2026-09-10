@@ -205,7 +205,7 @@ function k(t) {
             },
             [C],
         );
-    r.useLayoutEffect(() => {
+    (r.useLayoutEffect(() => {
         M || $(R.states[R.firstState].getHeights(T.current));
     }, [$, R, M]),
         (e = r.useRef(R.firstState)),
@@ -213,7 +213,7 @@ function k(t) {
         (a = !M),
         r.useEffect(() => {
             if (!a) return;
-            (e.current = R.firstState), (n.current = null);
+            ((e.current = R.firstState), (n.current = null));
             let t = null,
                 i = !1;
             n.current = { now: Date.now(), stateEnterTime: Date.now(), stateEndTime: 0 };
@@ -230,19 +230,19 @@ function k(t) {
             return (
                 null != u && l(u),
                 (function n(a) {
-                    s(),
+                    (s(),
                         i ||
                             (t = setTimeout(
                                 () => {
-                                    (t = null),
+                                    ((t = null),
                                         i ||
                                             (function () {
                                                 if (i) return;
-                                                (t = null), (r.now = Date.now());
+                                                ((t = null), (r.now = Date.now()));
                                                 let a = e.current,
                                                     s = R.states[a];
                                                 if (null == s) {
-                                                    (e.current = R.firstState), n(0);
+                                                    ((e.current = R.firstState), n(0));
                                                     return;
                                                 }
                                                 try {
@@ -259,16 +259,16 @@ function k(t) {
                                                     null != n && l(n);
                                                 }
                                                 n(s.getAnimationDelay());
-                                            })();
+                                            })());
                                 },
                                 Math.max(0, a),
-                            ));
+                            )));
                 })(0),
                 () => {
-                    (i = !0), s();
+                    ((i = !0), s());
                 }
             );
-        }, [$, a, R, T]);
+        }, [$, a, R, T]));
     let G = x ? `url(#${v})` : void 0;
     return (0, i.jsx)("span", {
         ref: y,

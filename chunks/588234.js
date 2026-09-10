@@ -1,5 +1,5 @@
 p.exports = function (p) {
-    for (var r = -1, n = null == p ? 0 : p.length, a = 0, h = []; ++r < n; ) {
+    for (var r = -1, n = null == p ? 0 : p.length, a = 0, h = []; ++r < n;) {
         var s = p[r];
         s && (h[a++] = s);
     }

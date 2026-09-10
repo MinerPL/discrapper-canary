@@ -1,4 +1,4 @@
-s.d(t, { Ay: () => j }), s(321073);
+(s.d(t, { Ay: () => j }), s(321073));
 var i = s(435558),
     n = s.n(i),
     a = s(17928),
@@ -63,7 +63,7 @@ class S extends o.A {
     applicationId;
     isGameRelationship;
     constructor(e) {
-        super(),
+        (super(),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -81,7 +81,7 @@ class S extends o.A {
             (this.giftIntentType = e.giftIntentType),
             (this.ignoredUser = e.ignoredUser),
             (this.applicationId = e.applicationId),
-            (this.isGameRelationship = e.isGameRelationship ?? !1);
+            (this.isGameRelationship = e.isGameRelationship ?? !1));
     }
     get comparator() {
         return [this.type, this.nickname?.toLowerCase() ?? this.user?.globalName?.toLowerCase() ?? this.usernameLower];
@@ -155,7 +155,7 @@ class D {
         for (let s = 0; s < this._rows.length; s++) {
             let i = this._rows[s],
                 n = i.merge(e(i.userId));
-            (t = t || n !== i), (this._rows[s] = n);
+            ((t = t || n !== i), (this._rows[s] = n));
         }
         return t;
     }
@@ -237,14 +237,14 @@ function T(e) {
 class b extends a.Ay.Store {
     static displayName = "FriendsStore";
     initialize() {
-        this.waitFor(c.A, m.A, u.A, h.A, d.A, p.Ay, N.A, A.Ay, I.A, E.A, g.default),
+        (this.waitFor(c.A, m.A, u.A, h.A, d.A, p.Ay, N.A, A.Ay, I.A, E.A, g.default),
             this.syncWith([E.A], F),
             this.syncWith([d.A], F),
             this.syncWith([h.A], F),
             this.syncWith([A.Ay], F),
             this.syncWith([g.default], T(v)),
             this.syncWith([I.A, m.A], T(C)),
-            M();
+            M());
     }
     getState() {
         return { fetching: G, section: _, rows: x };
@@ -255,22 +255,22 @@ class b extends a.Ay.Store {
 }
 let j = new b(r.h, {
     CONNECTION_OPEN: function () {
-        M(), (P = !0);
+        (M(), (P = !0));
     },
     FRIENDS_SET_SECTION: function (e) {
-        (_ = e.section), k();
+        ((_ = e.section), k());
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (R = null != t), F(), !R;
+        return ((R = null != t), F(), !R);
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         G = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (w = !0), (G = !0);
+        ((w = !0), (G = !0));
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (_ = e.section), (O = !0);
+        ((_ = e.section), (O = !0));
     },
 });

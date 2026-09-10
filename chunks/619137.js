@@ -54,13 +54,13 @@ var c = r(194226),
                         inputMode: "numeric",
                         "aria-label": "CPF",
                         onInput: (e) => {
-                            g(!0), f.setCpf(e.target.value);
+                            (g(!0), f.setCpf(e.target.value));
                         },
                         onFocus: () => {
                             b(!0);
                         },
                         onBlur: () => {
-                            b(!1), h(!0);
+                            (b(!1), h(!0));
                         },
                         error: F,
                         showErrorIcon: !0,

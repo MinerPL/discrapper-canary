@@ -1,4 +1,4 @@
-t.d(l, { default: () => K }), t(321073);
+(t.d(l, { default: () => K }), t(321073));
 var s = t(477900),
     n = t(582128),
     a = t(503698),
@@ -120,14 +120,14 @@ function D(e) {
         r = (0, c.bG)([E.default], () => E.default.getUser(l.id), [l]),
         o = U.Ay.useName(t.guild_id, t.id, l);
     async function d() {
-        await (0, _.A)(l, { guildId: t.guild_id, channelId: t.id }),
+        (await (0, _.A)(l, { guildId: t.guild_id, channelId: t.id }),
             (0, y.openUserProfileModal)({
                 userId: l.id,
                 guildId: t.guild_id,
                 channelId: t.id,
                 messageId: n,
                 sourceAnalyticsLocations: a,
-            });
+            }));
     }
     let u = (0, s.jsxs)(s.Fragment, {
         children: [
@@ -179,7 +179,7 @@ function F(e) {
             let e = u.current;
             h(!0);
             let s = await S.ao({ channelId: a.id, messageId: l.id, emoji: t.emoji, limit: q.WxW, after: e, type: B });
-            (u.current = s[s.length - 1].id), h(!1);
+            ((u.current = s[s.length - 1].id), h(!1));
         }, [a.id, l.id, t.emoji]);
     (0, N.Ay)(() => {
         g();
@@ -210,7 +210,7 @@ function F(e) {
         ),
         w = n.useMemo(() => {
             let e = [];
-            return 0 === i.length && m ? e.push(1) : (e.push(i.length), o && e.push(1)), e;
+            return (0 === i.length && m ? e.push(1) : (e.push(i.length), o && e.push(1)), e);
         }, [o, m, i.length]);
     return (0, s.jsx)(r.Ei, {
         className: W.Ov,

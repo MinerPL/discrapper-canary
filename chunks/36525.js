@@ -26,7 +26,7 @@ let h = function (s) {
     return (
         l.useEffect(() => {
             function s() {
-                L(!0), setTimeout(() => L(!1), 1e3);
+                (L(!0), setTimeout(() => L(!1), 1e3));
             }
             return (
                 a._.subscribe(d.jej.EMPHASIZE_NOTICE, s),

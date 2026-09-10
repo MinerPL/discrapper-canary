@@ -13,7 +13,7 @@ let h = i.memo(
         let { disabled: n, type: s, className: h, onClick: m, channel: f } = e,
             [p, g, x] = (0, u.RQ)((e) => [e.activeView, e.activeViewType, e.activeChannelId], a.x),
             A = i.useCallback(() => {
-                (0, u.ed)(s, f.id), m?.();
+                ((0, u.ed)(s, f.id), m?.());
             }, [s, m, f.id]);
         return n
             ? null

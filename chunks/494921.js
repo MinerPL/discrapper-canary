@@ -54,13 +54,13 @@ function L(t) {
             transitionState: d,
             onClose: p,
             handleLearnMore: function () {
-                (0, a.A)(),
+                ((0, a.A)(),
                     p(),
                     O.default.track(f.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_section: f.JJy.FILE_UPLOAD_UPSELL_MODAL,
                         location_object: f.ZSU.NAVIGATION_LINK,
                     }),
-                    (0, _.pX)(f.BVt.APPLICATION_STORE);
+                    (0, _.pX)(f.BVt.APPLICATION_STORE));
             },
             kestrelBeta: r,
             kestrelGA: s,

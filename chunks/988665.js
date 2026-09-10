@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => d, dL: () => r, ou: () => o }), n(938796), n(321073);
+(n.d(t, { Ay: () => d, dL: () => r, ou: () => o }), n(938796), n(321073));
 let i = /.+/g,
     r = "NON_TOKEN";
 function a(e, t, n) {
@@ -21,7 +21,7 @@ function a(e, t, n) {
 function s(e, t) {
     if (null == e) return null;
     let n = [...e];
-    return (n.index = t), n;
+    return ((n.index = t), n);
 }
 class l {
     static NON_TOKEN_TYPE;
@@ -30,10 +30,10 @@ class l {
     _followers = {};
     _nonTokenType = r;
     constructor(e = []) {
-        this.reset(), e.forEach((e) => this.addRule(e));
+        (this.reset(), e.forEach((e) => this.addRule(e)));
     }
     reset() {
-        (this._rules = []), (this._followers = {}), (this._nonTokenType = r);
+        ((this._rules = []), (this._followers = {}), (this._nonTokenType = r));
     }
     addRule(e) {
         let t,
@@ -42,8 +42,8 @@ class l {
         ("^" !== a.source.charAt(0) && (a = RegExp(`^${a.source}`, a.flags)), null != r && (t = new Map()), null == i)
             ? this._rules.push({ regex: a, type: n, validator: r, cache: t })
             : i.forEach((e) => {
-                  null == this._followers[e] && (this._followers[e] = []),
-                      this._followers[e].push({ regex: a, type: n, validator: r, cache: t });
+                  (null == this._followers[e] && (this._followers[e] = []),
+                      this._followers[e].push({ regex: a, type: n, validator: r, cache: t }));
               });
     }
     tokenize(e) {
@@ -52,7 +52,7 @@ class l {
             r = "",
             a = 0,
             l = [];
-        for (; n.length > 0; ) {
+        for (; n.length > 0;) {
             let e = this._getMatch(n, t, a + r.length);
             null != e
                 ? (null != r && "" !== r && l.push(new o(s(r.match(i), a), this._nonTokenType)),
@@ -63,7 +63,7 @@ class l {
                   (r = ""))
                 : ((r += n[0]), (n = n.substring(1)));
         }
-        return null != r && "" !== r && l.push(new o(s(r.match(i), a), this._nonTokenType)), l;
+        return (null != r && "" !== r && l.push(new o(s(r.match(i), a), this._nonTokenType)), l);
     }
     clearCache() {
         for (let e in (this._rules.forEach((e) => e.cache?.clear()), this._followers))
@@ -72,7 +72,7 @@ class l {
     _getMatch(e, t, n) {
         let i,
             r = null != t ? t.type : null;
-        return t?.end === n && (i = a(e, this._followers[String(r)], n)), null == i && (i = a(e, this._rules, n)), i;
+        return (t?.end === n && (i = a(e, this._followers[String(r)], n)), null == i && (i = a(e, this._rules, n)), i);
     }
 }
 class o {
@@ -108,11 +108,11 @@ class o {
         return this.match[e];
     }
     setData(e, t) {
-        null == this._data && (this._data = new Map()), this._data.set(e, t);
+        (null == this._data && (this._data = new Map()), this._data.set(e, t));
     }
     getData(e) {
         if (null != this._data) return this._data.get(e);
     }
 }
-(l.NON_TOKEN_TYPE = r), (l.Token = o);
+((l.NON_TOKEN_TYPE = r), (l.Token = o));
 let d = l;

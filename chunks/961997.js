@@ -35,7 +35,7 @@ function m(t) {
     });
 }
 function x(t) {
-    c.A.pop(), (0, I.r)({ id: "explicit-media-false-positive-modal", text: C.intl.string(C.t.gFsTKu) }), t();
+    (c.A.pop(), (0, I.r)({ id: "explicit-media-false-positive-modal", text: C.intl.string(C.t.gFsTKu) }), t());
 }
 function S(t) {
     let {
@@ -50,22 +50,22 @@ function S(t) {
             onClose: I,
         } = t,
         _ = a.useCallback(() => {
-            (0, E.hv)({
+            ((0, E.hv)({
                 action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: n,
                 messageId: e,
                 context: s,
             }),
-                I();
+                I());
         }, [n, e, s, I]),
         p = a.useCallback(() => {
-            d?.(),
+            (d?.(),
                 (0, E.hv)({
                     action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: n,
                     messageId: e,
                     context: s,
-                });
+                }));
         }, [n, e, s, d]);
     return (
         a.useEffect(() => {

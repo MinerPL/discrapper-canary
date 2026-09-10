@@ -19,7 +19,7 @@ function h(e) {
         children: t,
     });
 }
-(h.ButtonFooter = function (e) {
+((h.ButtonFooter = function (e) {
     let { children: t } = e;
     return (0, r.jsx)("div", { className: u.qr, children: t });
 }),
@@ -53,5 +53,5 @@ function h(e) {
                 (0, r.jsx)(a.E, { variant: "text-sm/normal", color: "text-default", children: t }),
             ],
         });
-    });
+    }));
 let x = h;

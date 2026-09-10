@@ -1,4 +1,4 @@
-r.d(t, { A: () => A }), r(938796);
+(r.d(t, { A: () => A }), r(938796));
 var i = r(562708),
     n = r(636537),
     a = r(933681),
@@ -46,7 +46,7 @@ let A = {
             r === c.rbe.GUILD_STORE)
         ) {
             if (null == y) throw Error("Unexpected missing SKU");
-            (g.sku_id = y), (g.branch_id = b);
+            ((g.sku_id = y), (g.branch_id = b));
         }
         if (r === c.rbe.GUILD_APP) {
             if (null == C) throw Error("Unexpected missing application");

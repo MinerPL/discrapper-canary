@@ -53,7 +53,7 @@ function p(e) {
                 ),
             });
         default:
-            return l.type, null;
+            return (l.type, null);
     }
 }
 function b(e) {
@@ -73,7 +73,7 @@ function b(e) {
         [y, j] = r.useState(null),
         [k, x] = r.useState(null),
         I = r.useCallback((e) => {
-            j(Math.round(e.contentRect.width)), x(Math.round(e.contentRect.height));
+            (j(Math.round(e.contentRect.width)), x(Math.round(e.contentRect.height)));
         }, []);
     return (
         (0, d.g)(b, I, [], {

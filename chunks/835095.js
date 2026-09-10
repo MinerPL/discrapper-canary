@@ -1,4 +1,4 @@
-n.d(t, { A: () => l }), n(938796);
+(n.d(t, { A: () => l }), n(938796));
 var i = n(665260),
     r = n(315069),
     a = n(822571),
@@ -66,7 +66,7 @@ class l extends r.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.trialId = e.trialId),
             (this.startDate = e.startDate),
@@ -91,7 +91,7 @@ class l extends r.A {
             (this.rewardSkuIds = e.rewardSkuIds),
             (this.bogoRewardEnabled = e.bogoRewardEnabled ?? !1),
             (this.boostBogoMaxCredits = e.boostBogoMaxCredits ?? null),
-            (this.promotionKey = e.promotionKey);
+            (this.promotionKey = e.promotionKey));
     }
     get isBogo() {
         return this.promotionType === s.pt.BOGO;

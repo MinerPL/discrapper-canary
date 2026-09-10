@@ -12,11 +12,11 @@ let u = { friction: 7, tension: 40, clamp: !0 };
 class h extends a.PureComponent {
     _animated;
     constructor(t) {
-        super(t), (this._animated = new o.A.Value(-1 * t.direction));
+        (super(t), (this._animated = new o.A.Value(-1 * t.direction)));
     }
     componentWillEnter(t) {
-        this._animated.setValue(-this.props.direction),
-            o.A.spring(this._animated, { toValue: 0, ...this.props.springSettings }).start(t);
+        (this._animated.setValue(-this.props.direction),
+            o.A.spring(this._animated, { toValue: 0, ...this.props.springSettings }).start(t));
     }
     componentDidAppear() {
         this._animated.setValue(0);

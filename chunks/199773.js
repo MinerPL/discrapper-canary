@@ -27,14 +27,14 @@ class A extends i.Ay.PersistedStore {
     static persistKey = "DismissibleContentFrameworkStore";
     static migrations = [(e) => ({ ...e })];
     initialize(e) {
-        null != e &&
+        (null != e &&
             ((_.numberOfDCsShownToday = e.numberOfDCsShownToday ?? 0),
             (_.dailyCapPeriodStart = e.dailyCapPeriodStart),
             (_.dailyCapOverridden = e.dailyCapOverridden ?? !1),
             (_.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1)),
             (_.dismissibleContentSeenDuringSession = new Set()),
             (_.seenForGuildId = new Map()),
-            (_.lastDismissed = null);
+            (_.lastDismissed = null));
     }
     getState() {
         return _;
@@ -58,10 +58,10 @@ class A extends i.Ay.PersistedStore {
             if ((n && null != t && E(e, t)) || (!n && _.dismissibleContentSeenDuringSession.has(e))) return !1;
         }
         let n = new Date();
-        n.setHours(0, 0, 0, 0),
+        (n.setHours(0, 0, 0, 0),
             null != _.dailyCapPeriodStart &&
                 _.dailyCapPeriodStart < n.getTime() &&
-                ((_.numberOfDCsShownToday = 0), (_.dailyCapPeriodStart = null), (u = !1));
+                ((_.numberOfDCsShownToday = 0), (_.dailyCapPeriodStart = null), (u = !1)));
         let i = _.numberOfDCsShownToday >= 3;
         return (
             i &&
@@ -76,13 +76,13 @@ class A extends i.Ay.PersistedStore {
 }
 let h = new A(r.h, {
     LOGOUT: function () {
-        (u = !1),
+        ((u = !1),
             (_ = {
                 ..._,
                 dismissibleContentSeenDuringSession: new Set(),
                 renderedAtTimestamps: new Map(),
                 seenForGuildId: new Map(),
-            });
+            }));
     },
     DCF_DAILY_CAP_OVERRIDE: function (e) {
         let { value: t } = e;
@@ -101,13 +101,13 @@ let h = new A(r.h, {
             if (!(r && E(t, n))) {
                 if (r) {
                     let e = _.seenForGuildId.get(n) ?? new Set();
-                    e.add(t), _.seenForGuildId.set(n, e);
+                    (e.add(t), _.seenForGuildId.set(n, e));
                 } else _.dismissibleContentSeenDuringSession.add(t);
                 if (null == _.dailyCapPeriodStart) {
                     let e = new Date();
-                    e.setHours(0, 0, 0, 0), (_.dailyCapPeriodStart = e.getTime());
+                    (e.setHours(0, 0, 0, 0), (_.dailyCapPeriodStart = e.getTime()));
                 }
-                (_.numberOfDCsShownToday += 1),
+                ((_.numberOfDCsShownToday += 1),
                     3 === _.numberOfDCsShownToday &&
                         c.info("Daily cap reached", { dismissible_content: t, shown_dcs: _.numberOfDCsShownToday }),
                     _.numberOfDCsShownToday > 3 &&
@@ -115,24 +115,24 @@ let h = new A(r.h, {
                             cap_type: "daily_cap",
                             dismissible_content: t,
                             shown_dcs: _.numberOfDCsShownToday,
-                        });
+                        }));
             }
         }
     },
     DCF_HANDLE_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;
-        (_.lastDismissed = { content: t, guildId: n }), _.renderedAtTimestamps.delete(t);
+        ((_.lastDismissed = { content: t, guildId: n }), _.renderedAtTimestamps.delete(t));
     },
     DCF_OVERRIDE_LAST_DC_DISMISSED: function (e) {
         let { dismissibleContent: t, guildId: n } = e;
         _.lastDismissed = null != t ? { content: t, guildId: n } : null;
     },
     DCF_RESET: function () {
-        (u = !1),
+        ((u = !1),
             (_.dailyCapPeriodStart = null),
             (_.numberOfDCsShownToday = 0),
             (_.dismissibleContentSeenDuringSession = new Set()),
             (_.seenForGuildId = new Map()),
-            (_.lastDismissed = null);
+            (_.lastDismissed = null));
     },
 });

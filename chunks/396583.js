@@ -5,7 +5,7 @@ var i = n(582128),
 function s(e, t) {
     let n = (0, i.useRef)(e),
         r = (0, i.useRef)(null);
-    (0, i.useEffect)(() => {
+    ((0, i.useEffect)(() => {
         n.current = e;
     }, [e]),
         (0, i.useEffect)(() => {
@@ -15,9 +15,9 @@ function s(e, t) {
             }
             return (
                 (r.current = setInterval(function () {
-                    a()(null != n.current, "Missing callback"), n.current();
+                    (a()(null != n.current, "Missing callback"), n.current());
                 }, t)),
                 () => clearInterval(r.current)
             );
-        }, [t]);
+        }, [t]));
 }

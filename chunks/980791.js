@@ -88,7 +88,7 @@ function y(e) {
                                   ? n
                                   : n.filter((e) => {
                                         let i = s[e];
-                                        return r()(null != i, "guild should not be null"), t(i, a);
+                                        return (r()(null != i, "guild should not be null"), t(i, a));
                                     })
                               ).map((e) => {
                                   let t = s[e];
@@ -144,13 +144,13 @@ function B(e) {
         let e = await new Promise((e) => {
             p.A.openCreateGuildModal({ onSuccess: e });
         });
-        await new Promise((t) => {
+        (await new Promise((t) => {
             h.A.addChangeListener(function i() {
                 null != h.A.getGuild(e) && (h.A.removeChangeListener(i), t());
             });
         }),
             C.A.open(e, d, void 0, m),
-            i?.();
+            i?.());
     }
     return (0, n.jsx)(a.Modal, {
         transitionState: t,
@@ -177,10 +177,10 @@ function B(e) {
                                     variant: "primary",
                                     text: S,
                                     onClick: function () {
-                                        r()(null != j, "Guild ID must not be null on click"),
+                                        (r()(null != j, "Guild ID must not be null on click"),
                                             g.A.hasSeenCreatorOnboardingForGuild(j) || (0, G.G)(j),
                                             C.A.open(j, d, void 0, m),
-                                            i?.();
+                                            i?.());
                                     },
                                     disabled: null == j,
                                 }),

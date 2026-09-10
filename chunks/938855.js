@@ -1,28 +1,28 @@
 let r;
-l.d(t, { F: () => u, Q4: () => f, W9: () => m });
-var s = l(926890);
-let n = new Map(),
-    a = new Map(),
-    c = new Set();
+l.d(t, { F: () => m, Q4: () => p, W9: () => h });
+var n = l(926890);
+let s = new Map(),
+    i = new Map(),
+    a = new Set();
 function o(e) {
-    let t = n.get(e);
+    let t = s.get(e);
     if (null != t) return t;
-    if (!(e in s.pb)) {
+    if (!(e in n.pb)) {
         let t = Promise.resolve(null);
-        return n.set(e, t), t;
+        return (s.set(e, t), t);
     }
     return (
-        (t = (null == r && (r = (0, s.A)()), r)
-            .then((t) => t.loadGrammar(s.pb[e]))
+        (t = (null == r && (r = (0, n.A)()), r)
+            .then((t) => t.loadGrammar(n.pb[e]))
             .then((t) => {
-                for (let l of (a.set(e, t), c)) l(e);
+                for (let l of (i.set(e, t), a)) l(e);
                 return t;
             })),
-        n.set(e, t),
+        s.set(e, t),
         t
     );
 }
-function p(e) {
+function c(e) {
     return {
         highlightToHtml(t) {
             let l = e.createSession();
@@ -36,23 +36,23 @@ function p(e) {
         },
     };
 }
-let i = new Map();
-async function h(e) {
+let d = new Map();
+async function u(e) {
     try {
         let t = await o(e);
-        return null == t ? null : p(t);
+        return null == t ? null : c(t);
     } catch (t) {
-        throw (i.delete(e), t);
+        throw (d.delete(e), t);
     }
 }
+function h(e) {
+    let t = d.get(e);
+    return (null == t && ((t = u(e)), d.set(e, t)), t);
+}
 function m(e) {
-    let t = i.get(e);
-    return null == t && ((t = h(e)), i.set(e, t)), t;
+    let t = i.has(e) ? (i.get(e) ?? null) : (o(e), null);
+    return null != t ? c(t) : null;
 }
-function u(e) {
-    let t = a.has(e) ? (a.get(e) ?? null) : (o(e), null);
-    return null != t ? p(t) : null;
-}
-function f(e) {
-    return c.add(e), () => c.delete(e);
+function p(e) {
+    return (a.add(e), () => a.delete(e));
 }

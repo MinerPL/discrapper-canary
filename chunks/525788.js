@@ -111,29 +111,33 @@ function w(e) {
         S = (0, g.A)(),
         [R, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
-        w = (0, d.yK)([N.A, C.default], () => {
-            if (l.type === L.lp.STREAM) {
-                let e = N.A.getViewerIds(l.id);
-                return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
-            }
-            return l.type === L.lp.ACTIVITY && l.participants.length > 0
-                ? Array.from(l.participants)
-                      .map((e) => C.default.getUser(e.userId))
-                      .filter(O.Vq)
-                : U;
-        }, [l]);
+        w = (0, d.yK)(
+            [N.A, C.default],
+            () => {
+                if (l.type === L.lp.STREAM) {
+                    let e = N.A.getViewerIds(l.id);
+                    return e.length > 0 ? e.map((e) => C.default.getUser(e)).filter(O.Vq) : U;
+                }
+                return l.type === L.lp.ACTIVITY && l.participants.length > 0
+                    ? Array.from(l.participants)
+                          .map((e) => C.default.getUser(e.userId))
+                          .filter(O.Vq)
+                    : U;
+            },
+            [l],
+        );
     r.useEffect(() => {
         S && (b.current.cancel(), D(!1));
     }, [S]);
     let G = r.useCallback(() => {
-            b.current.cancel(), D(!0);
+            (b.current.cancel(), D(!0));
         }, []),
         x = r.useCallback(() => {
             b.current.delay();
         }, []),
         k = r.useCallback(
             (e, t) => {
-                G(),
+                (G(),
                     (0, T.L3)(
                         e,
                         async () => {
@@ -173,7 +177,7 @@ function w(e) {
                             return (n) => (0, i.jsx)(e, { ...n, user: t });
                         },
                         { onClose: x },
-                    );
+                    ));
             },
             [x, G],
         );

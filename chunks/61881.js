@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(321073);
+(n.d(t, { A: () => p }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -98,27 +98,27 @@ let p = new f(s.h, {
         _ = !0;
     },
     WIDGET_PENDING_SAVE_SUCCESS: function (e) {
-        (_ = !1), null !== c && ((u = null), (c = null));
+        ((_ = !1), null !== c && ((u = null), (c = null)));
     },
     WIDGET_PENDING_SAVE_FAILURE: function (e) {
         _ = !1;
     },
     WIDGET_SUGGESTED_FETCH_SUCCESS: function (e) {
         let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-        (E.suggestedGamesIds = t), (E.suggestedWishlistGamesIds = n), (h = !1), (A = !1);
+        ((E.suggestedGamesIds = t), (E.suggestedWishlistGamesIds = n), (h = !1), (A = !1));
     },
     WIDGET_SUGGESTED_FETCH_FAILURE: function () {
-        (A = !0), (h = !1);
+        ((A = !0), (h = !1));
     },
     WIDGET_SUGGESTED_FETCH_START: function () {
-        (h = !0), (A = !1), (I = !0);
+        ((h = !0), (A = !1), (I = !0));
     },
     WIDGET_PENDING_CLEAR: function () {
-        (c = null), (u = null);
+        ((c = null), (u = null));
     },
     WIDGET_SUGGESTED_REMOVE_GAME: function (e) {
         let { applicationId: t } = e;
-        (E.suggestedGamesIds = E.suggestedGamesIds.filter((e) => e !== t)),
-            (E.suggestedWishlistGamesIds = E.suggestedWishlistGamesIds.filter((e) => e !== t));
+        ((E.suggestedGamesIds = E.suggestedGamesIds.filter((e) => e !== t)),
+            (E.suggestedWishlistGamesIds = E.suggestedWishlistGamesIds.filter((e) => e !== t)));
     },
 });

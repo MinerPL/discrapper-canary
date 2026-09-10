@@ -15,7 +15,7 @@ function _(e) {
     return a.useCallback(
         (t) => {
             let n;
-            (n = { guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }), u(c.HAw.MOD_DASH_SEARCH_MEMBERS, n);
+            ((n = { guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }), u(c.HAw.MOD_DASH_SEARCH_MEMBERS, n));
         },
         [e],
     );
@@ -24,8 +24,8 @@ function E(e) {
     return a.useCallback(
         (t) => {
             let n;
-            (n = { selected_role_count: t.size, guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }),
-                u(c.HAw.MOD_DASH_FILTER_ROLES, n);
+            ((n = { selected_role_count: t.size, guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }),
+                u(c.HAw.MOD_DASH_FILTER_ROLES, n));
         },
         [e],
     );
@@ -40,8 +40,8 @@ function h(e) {
     return a.useCallback(
         (t) => {
             let n;
-            (n = { flag_type: t, guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }),
-                u(c.HAw.MOD_DASH_FILTER_SAFETY_FLAGS, n);
+            ((n = { flag_type: t, guild_id: e, location: s.A.MEMBER_SAFETY_PAGE }),
+                u(c.HAw.MOD_DASH_FILTER_SAFETY_FLAGS, n));
         },
         [e],
     );

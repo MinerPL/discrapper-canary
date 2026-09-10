@@ -37,7 +37,7 @@ class u extends a.Ay.Store {
 }
 let _ = new u(s.h, {
     LOGOUT: function () {
-        o.reset(), (d = new Set()), c.reset();
+        (o.reset(), (d = new Set()), c.reset());
     },
     GAME_AUTOCOMPLETE_FETCH: function (e) {
         let { query: t } = e;

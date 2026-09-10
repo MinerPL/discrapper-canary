@@ -18,7 +18,7 @@ function g(e, t) {
     for (let r of p) r(e, t);
 }
 function b(e) {
-    (m = !0),
+    ((m = !0),
         u.Fe.isOpening ||
             e.metaKey ||
             (!(0, s.cX)() && e.altKey) ||
@@ -26,12 +26,12 @@ function b(e) {
             "Control" === e.key ||
             "Shift" === e.key ||
             "Meta" === e.key ||
-            ((d = "keyboard"), g("keyboard", e));
+            ((d = "keyboard"), g("keyboard", e)));
 }
 function w(e) {
-    (d = "pointer"),
+    ((d = "pointer"),
         "pointerType" in e && e.pointerType,
-        ("mousedown" === e.type || "pointerdown" === e.type) && ((m = !0), g("pointer", e));
+        ("mousedown" === e.type || "pointerdown" === e.type) && ((m = !0), g("pointer", e)));
 }
 function _(e) {
     !u.Fe.isOpening && (0, l.Y)(e) && ((m = !0), (d = "virtual"));
@@ -54,11 +54,11 @@ function E(e) {
         r = (0, o.TW)(e);
     if (h.get(t)) return;
     let n = t.HTMLElement.prototype.focus;
-    Reflect.defineProperty(t.HTMLElement.prototype, "focus", {
+    (Reflect.defineProperty(t.HTMLElement.prototype, "focus", {
         configurable: !0,
         writable: !0,
         value: function () {
-            (m = !0), n.apply(this, arguments);
+            ((m = !0), n.apply(this, arguments));
         },
     }),
         r.addEventListener("keydown", b, !0),
@@ -77,12 +77,12 @@ function E(e) {
             },
             { once: !0 },
         ),
-        h.set(t, { focus: n });
+        h.set(t, { focus: n }));
 }
 let k = (e, t) => {
     let r = (0, o.mD)(e),
         n = (0, o.TW)(e);
-    t && n.removeEventListener("DOMContentLoaded", t),
+    (t && n.removeEventListener("DOMContentLoaded", t),
         h.has(r) &&
             (Reflect.defineProperty(r.HTMLElement.prototype, "focus", {
                 configurable: !0,
@@ -98,7 +98,7 @@ let k = (e, t) => {
                 (n.removeEventListener("pointerdown", w, !0),
                 n.removeEventListener("pointermove", w, !0),
                 n.removeEventListener("pointerup", w, !0)),
-            h.delete(r));
+            h.delete(r)));
 };
 function C() {
     return "pointer" !== d;
@@ -107,7 +107,7 @@ function T() {
     return d;
 }
 function M(e) {
-    (d = e), g(e, null);
+    ((d = e), g(e, null));
 }
 function P() {
     E();
@@ -135,13 +135,13 @@ function P() {
           }));
 let A = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
 function I(e, t, r) {
-    E(),
+    (E(),
         (0, f.useEffect)(() => {
             if (r?.enabled === !1) return;
             let t = (t, n) => {
                 var a;
                 let s, l, u, c, f, d, p, h;
-                (a = !!r?.isTextInput),
+                ((a = !!r?.isTextInput),
                     (s = n ? (0, i.wt)(n) : void 0),
                     (l = (0, o.TW)(s)),
                     (c = void 0 !== (u = (0, o.mD)(s)) ? u.HTMLInputElement : HTMLInputElement),
@@ -157,7 +157,7 @@ function I(e, t, r) {
                         "keyboard" === t &&
                         n instanceof p &&
                         !y[n.key]) ||
-                        e(C());
+                        e(C()));
             };
             return (
                 p.add(t),
@@ -165,5 +165,5 @@ function I(e, t, r) {
                     p.delete(t);
                 }
             );
-        }, t);
+        }, t));
 }

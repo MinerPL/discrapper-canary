@@ -23,10 +23,10 @@ function _(e) {
     let u = l.default.getCurrentUser(),
         _ = null != u && u.id === r;
     if (s && !_) return !1;
-    (d[n] = { ...c }),
+    ((d[n] = { ...c }),
         "MESSAGE_REACTION_ADD" === t
             ? (d[n].firstMessage = c.firstMessage.addReaction(a, _, { colors: e.colors, reactionType: o }))
-            : (d[n].firstMessage = c.firstMessage.removeReaction(a, _, o));
+            : (d[n].firstMessage = c.firstMessage.removeReaction(a, _, o)));
 }
 class E extends i.Ay.Store {
     static displayName = "ForumPostMessagesStore";
@@ -37,7 +37,7 @@ class E extends i.Ay.Store {
         return d[e]?.loaded !== !0;
     }
     getMessage(e) {
-        return e in d || (d[e] = { loaded: !1, firstMessage: null }), d[e];
+        return (e in d || (d[e] = { loaded: !1, firstMessage: null }), d[e]);
     }
 }
 let A = new E(r.h, {

@@ -44,10 +44,10 @@ function m(e) {
         (0, i.useEffect)(() => {
             null != t.current && clearInterval(t.current);
             let i = l ? _ : E;
-            g(n, e, "questBar-open"),
+            (g(n, e, "questBar-open"),
                 (t.current = setInterval(() => {
                     g(r.A.deliveryAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
-                }, i));
+                }, i)));
             let s = t.current;
             return () => {
                 null != s && clearInterval(s);

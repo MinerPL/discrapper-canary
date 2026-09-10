@@ -33,7 +33,7 @@ n(
             )
                 return v(l, g, b);
             for (p = 0, n = new (void 0 === e ? x : e)(d(b - g, 0)); g < b; g++, p++) g in l && f(n, p, l[g]);
-            return (n.length = p), n;
+            return ((n.length = p), n);
         },
     },
 );

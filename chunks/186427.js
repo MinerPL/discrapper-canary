@@ -33,7 +33,7 @@ class u extends i.A {
             o || ((0, a.isWindows)() && ((o = !0), await c()));
         },
         LOGOUT: () => {
-            (o = !1), (d = null);
+            ((o = !1), (d = null));
         },
     };
     getOverlayFPSLimit() {

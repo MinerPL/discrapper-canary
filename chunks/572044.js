@@ -14,7 +14,7 @@ class o extends i.A {
             o = a.A.getChannel(n),
             d = o?.getGuildId(),
             c = this.tempMutedChannel === n;
-        r && null != d && (c ? (this.tempMutedChannel = null) : (0, s.fh)(d)), (this.prevConnected = i);
+        (r && null != d && (c ? (this.tempMutedChannel = null) : (0, s.fh)(d)), (this.prevConnected = i));
     };
     handleMute = (e) => {
         let { channelId: t } = e;

@@ -73,7 +73,7 @@ function T(t) {
     return (0, l.jsxs)(E.s, {
         className: s()(G.kL, { [G.aD]: h, [G.vk]: null != a, [G.vu]: u }),
         onClick: function (t) {
-            t.stopPropagation(), h || a?.(e);
+            (t.stopPropagation(), h || a?.(e));
         },
         onContextMenu: P,
         "aria-label": (0, S.o)({ timeData: p, status: z ?? L, eventType: c.entity_type, isCanceled: h }),
@@ -124,7 +124,7 @@ function L(t) {
                 [s, a] = i.useState(
                     null != n && null != l ? (0, C.er)(4, (0, C.X7)(n), new Date(l.scheduled_start_time)) : [],
                 );
-            i.useEffect(() => {
+            (i.useEffect(() => {
                 if (null == r || null == n || null == l || m().isEqual(r, n)) return;
                 let t = (0, C.X7)(n);
                 a((0, C.er)(s.length, t, new Date(l.scheduled_start_time)));
@@ -135,7 +135,7 @@ function L(t) {
                         d.default.fromTimestamp(Math.floor(t.getTime() / v.A.Millis.SECOND) * v.A.Millis.SECOND),
                     );
                     p.A.getGuildEventUserCounts(e, t, n);
-                }, [t, e, s]);
+                }, [t, e, s]));
             let u = i.useMemo(() => {
                 if (null == n || 0 === s.length || l?.scheduled_start_time == null) return !1;
                 let t = new Date();
@@ -182,7 +182,7 @@ function L(t) {
                             className: w.UD,
                             children: (0, l.jsx)(c.Q, {
                                 onClick: function (t) {
-                                    t.stopPropagation(), x();
+                                    (t.stopPropagation(), x());
                                 },
                                 text: N.intl.string(N.t["8O7Hpy"]),
                                 size: "sm",

@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $x: () => N,
     AO: () => S,
     MO: () => R,
@@ -11,7 +11,7 @@ n.d(t, {
     x5: () => w,
     zk: () => C,
 }),
-    n(321073);
+    n(321073));
 var l = n(435558),
     r = n.n(l),
     i = n(636537),
@@ -31,7 +31,7 @@ var l = n(435558),
     v = n(375708);
 async function C(e, t) {
     let { body: n } = await (0, p.aP)({ url: y.Rsh.STICKER_PACK(e), rejectWithError: (0, i.fT)() });
-    return a.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n;
+    return (a.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n);
 }
 async function x() {
     let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -120,7 +120,7 @@ function b(e) {
     d.bW.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
+            ((t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds)));
         },
         E.Sb.INFREQUENT_USER_ACTION,
     );

@@ -59,9 +59,9 @@ let X = l.memo(function (e) {
             ((t = c?.application_command?.id),
             (n = l.useRef(null)),
             (s = l.useCallback((e, t) => {
-                e.preventDefault(),
+                (e.preventDefault(),
                     e.clipboardData.setData("application/x-discord-interaction-data", JSON.stringify(t)),
-                    e.clipboardData.setData("text/plain", n.current?.textContent?.trim() ?? "");
+                    e.clipboardData.setData("text/plain", n.current?.textContent?.trim() ?? ""));
             }, [])),
             D.D3({ channel: r, type: "channel" }, t),
             { onCopy: s, copyRef: n }),
@@ -374,7 +374,7 @@ function ei(e) {
         return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "user");
     }
     if (n?.activityInstance === null || (0, N.V)(n))
-        (t = z.intl.format(z.t["rg7U+C"], {
+        ((t = z.intl.format(z.t["rg7U+C"], {
             userHook: B,
             commandHook: function () {
                 let t = (function (e, t, n) {
@@ -458,15 +458,15 @@ function ei(e) {
                               return (0, i.jsxs)(l.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],
-                  }));
+                  })));
     else {
         function J() {
-            (0, _.A)({
+            ((0, _.A)({
                 context: null != s ? { type: "channel", channel: s } : { type: "contextless" },
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
-                (0, f.LV)({ guildId: s.guild_id });
+                (0, f.LV)({ guildId: s.guild_id }));
         }
         t = F
             ? z.intl.format(z.t.kfV8WM, {

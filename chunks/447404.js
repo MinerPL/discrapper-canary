@@ -20,7 +20,7 @@ function s(e) {
         { preventIdle: u, allowIdle: o } = a("interact-focus");
     r.useEffect(
         () => () => {
-            s(), o();
+            (s(), o());
         },
         [s, o],
     );

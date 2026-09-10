@@ -81,21 +81,21 @@ let p = new f(l.h, {
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n } = e,
             i = h.peek(t) ?? I();
-        (i.badges = new Map(n.map((e) => [e.badge_id, e]))),
+        ((i.badges = new Map(n.map((e) => [e.badge_id, e]))),
             (i.catalogFetched = !0),
             (i.fetchError = !1),
             (i.fetchedAt = Date.now()),
-            h.set(t, i);
+            h.set(t, i));
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
         let { userId: t } = e,
             n = h.peek(t) ?? I();
-        (n.fetchError = !0), h.set(t, n);
+        ((n.fetchError = !0), h.set(t, n));
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
             i = h.peek(t) ?? I();
-        i.badges.set(n.badge_id, n), h.set(t, i);
+        (i.badges.set(n.badge_id, n), h.set(t, i));
     },
     USER_PROFILE_FETCH_SUCCESS: function (e) {
         let { userProfile: t } = e,
@@ -109,9 +109,9 @@ let p = new f(l.h, {
                 let e = i.driftFetchGateUntil ?? 0;
                 if (Date.now() >= e) {
                     let e = i.driftBackoff ?? new a.A(d.A.Millis.MINUTE, A, !0);
-                    (i.driftBackoff = e), (i.driftFetchGateUntil = Date.now() + e.fail()), (0, c.RS)(n);
+                    ((i.driftBackoff = e), (i.driftFetchGateUntil = Date.now() + e.fail()), (0, c.RS)(n));
                 }
-            } else i.driftBackoff?.succeed(), (i.driftFetchGateUntil = null);
+            } else (i.driftBackoff?.succeed(), (i.driftFetchGateUntil = null));
         return !1;
     },
     LOGOUT: function () {

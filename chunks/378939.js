@@ -40,8 +40,8 @@ let s = {
         );
     },
     deleteRecentMention(e) {
-        i.Bo.del({ url: a.Rsh.MENTIONS_MESSAGE_ID(e), retries: 2, oldFormErrors: !0, rejectWithError: !0 }),
-            r.h.dispatch({ type: "RECENT_MENTION_DELETE", id: e });
+        (i.Bo.del({ url: a.Rsh.MENTIONS_MESSAGE_ID(e), retries: 2, oldFormErrors: !0, rejectWithError: !0 }),
+            r.h.dispatch({ type: "RECENT_MENTION_DELETE", id: e }));
     },
     setRecentMentionsStale() {
         r.h.dispatch({ type: "SET_RECENT_MENTIONS_STALE" });

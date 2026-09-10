@@ -25,7 +25,7 @@ function d(t) {
                 if (null == s) continue;
                 let a = i[s];
                 if (null != a) {
-                    (l = a), (e = n);
+                    ((l = a), (e = n));
                     break;
                 }
             }

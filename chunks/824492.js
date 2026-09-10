@@ -7,7 +7,7 @@ class l extends i.Ay.DeviceSettingsStore {
     static displayName = "ChannelSpoilerAgreeStore";
     static persistKey = "ChannelSpoilerAgreeStore";
     initialize(e) {
-        this.waitFor(a.default), (s = null != e && null != e.users ? { users: e.users } : { users: {} });
+        (this.waitFor(a.default), (s = null != e && null != e.users ? { users: e.users } : { users: {} }));
     }
     didAgree(e) {
         if (null == e) return !1;
@@ -26,7 +26,7 @@ let o = new l(r.h, {
         let { channelId: t } = e,
             n = a.default.getId();
         if (null == n) return !1;
-        null == s.users[n] && (s.users[n] = { channels: {} }), (s.users[n].channels[t] = !0);
+        (null == s.users[n] && (s.users[n] = { channels: {} }), (s.users[n].channels[t] = !0));
     },
     CHANNEL_SPOILER_AGREE_CLEAR: function (e) {
         let { channelId: t } = e,

@@ -12,7 +12,7 @@ function d(e) {
         p = (0, u.Y_)(),
         m = r.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     e.preventDefault(),
                     (function (e) {
                         let { clips: t, onBeforeDelete: r, onAfterDelete: a } = e;
@@ -25,13 +25,13 @@ function d(e) {
                                         ...n,
                                         onBeforeDelete: r,
                                         onAfterDelete: async () => {
-                                            await n.onClose(), a?.();
+                                            (await n.onClose(), a?.());
                                         },
                                     });
                             },
                             { stackingBehavior: "stack" },
                         );
-                    })({ clips: [p], onAfterDelete: d, onBeforeDelete: t });
+                    })({ clips: [p], onAfterDelete: d, onBeforeDelete: t }));
             },
             [p, d, t],
         );

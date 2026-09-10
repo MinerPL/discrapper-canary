@@ -11,7 +11,7 @@ function u(t) {
 function d(t) {
     return `__section_header__${t}`;
 }
-i(321073), i(667532);
+(i(321073), i(667532));
 let a = () => 0;
 class c {
     visibleSections = {};
@@ -122,21 +122,21 @@ class c {
                 removeEdgeItemGutters: r,
             } = this,
             o = "rtl" === this.dir ? "right" : "left";
-        (this.coordsMap = {}),
+        ((this.coordsMap = {}),
             (this.gridData = { boundaries: [], coordinates: {} }),
             (this.currentRow = 0),
-            (this.lastColumnIndex = 0);
+            (this.lastColumnIndex = 0));
         let h = this.getPaddingTop(),
             a = this.getPaddingBottom(),
             c = this.getPaddingLeft(),
             g = this.getPaddingRight(),
             m = this.marginLeft ?? 0;
-        (this.columnHeights = Array(t).fill(h)),
+        ((this.columnHeights = Array(t).fill(h)),
             (this.columnWidth = (l - g - c - s * (t - 1) - (r ? s : 0)) / t),
-            (this.itemGrid = []);
+            (this.itemGrid = []));
         let p = 0;
-        for (; p < this.sections.length; ) {
-            (this.gridData.boundaries[p] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0);
+        for (; p < this.sections.length;) {
+            ((this.gridData.boundaries[p] = this.currentRow), (this.currentRow = 0), (this.lastColumnIndex = 0));
             let l = this.sections[p],
                 r = 0,
                 h = n(p),
@@ -144,7 +144,7 @@ class c {
             p > 0 && (a = a - s + this.getSectionGutter());
             let b = h > 0 ? h + s : 0;
             for (let t = 0; t < this.columnHeights.length; t++) this.columnHeights[t] = a + b;
-            for (; r < l; ) {
+            for (; r < l;) {
                 var f;
                 let t = e(p, r);
                 if (null == t) {
@@ -152,7 +152,7 @@ class c {
                     continue;
                 }
                 let [n, l] = (f = this.columnHeights).reduce((t, e, i) => (e < t[0] ? [e, i] : t), [f[0], 0]);
-                l < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = l);
+                (l < this.lastColumnIndex && this.currentRow++, (this.lastColumnIndex = l));
                 let h = i(p, r, this.columnWidth),
                     u = {
                         position: "absolute",
@@ -162,14 +162,14 @@ class c {
                         height: h,
                     },
                     d = { section: p, row: this.currentRow, column: l };
-                (this.coordsMap[t] = u),
+                ((this.coordsMap[t] = u),
                     (this.gridData.coordinates[t] = d),
                     (this.columnHeights[l] = n + h + s),
                     (this.itemGrid[l] = this.itemGrid[l] ?? []),
                     this.itemGrid[l].push(t),
-                    r++;
+                    r++);
             }
-            h > 0 &&
+            (h > 0 &&
                 (this.coordsMap[d(p)] = {
                     position: "sticky",
                     [o]: c,
@@ -184,19 +184,19 @@ class c {
                     top: a,
                     height: this.getMaxColumnHeight(this.columnHeights) - a,
                 }),
-                p++;
+                p++);
         }
-        (this.columnHeights = this.columnHeights.map((t) => t - s + a)),
+        ((this.columnHeights = this.columnHeights.map((t) => t - s + a)),
             (this.totalHeight = this.getMaxColumnHeight()),
             (this.visibleSections = {}),
-            (this.needsFullCompute = !1);
+            (this.needsFullCompute = !1));
     }
     computeVisibleSections(t, e) {
         this.computeFullCoords();
         let { getItemKey: i, coordsMap: s } = this;
         this.visibleSections = {};
         let n = 0;
-        for (; n < this.sections.length; ) {
+        for (; n < this.sections.length;) {
             let l = this.sections[n],
                 r = u(n),
                 o = s[r];
@@ -213,7 +213,7 @@ class c {
             }
             let a = 0,
                 c = 1;
-            for (d < e && d > t && ((a = l - 1), (c = -1)), this.visibleSections[r] = []; a >= 0 && a < l; ) {
+            for (d < e && d > t && ((a = l - 1), (c = -1)), this.visibleSections[r] = []; a >= 0 && a < l;) {
                 let l = i(n, a),
                     o = null != l ? s[l] : null;
                 if (null == l || null == o) {
@@ -221,10 +221,10 @@ class c {
                     continue;
                 }
                 let { top: u, height: d } = o;
-                u + h > t - d &&
+                (u + h > t - d &&
                     u + h < e &&
                     (-1 === c ? this.visibleSections[r].unshift([l, n, a]) : this.visibleSections[r].push([l, n, a])),
-                    (a += c);
+                    (a += c));
             }
             if (h < t && d > e) break;
             n++;
@@ -382,7 +382,7 @@ function w(t, e, i) {
                 maxBufferWidth: O,
             });
         l.useEffect(() => {
-            null != B &&
+            (null != B &&
                 (function (t, e, i) {
                     let s = {},
                         n = {};
@@ -413,12 +413,12 @@ function w(t, e, i) {
                             }
                         }
                 })(tn, U.current, B),
-                (U.current = tn);
+                (U.current = tn));
         }, [tn, B]);
         let th = (0, l.useCallback)(
                 function () {
                     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    t > Y.current.dirty && (Y.current.dirty = t), 2 === t ? tr() : te(1);
+                    (t > Y.current.dirty && (Y.current.dirty = t), 2 === t ? tr() : te(1));
                 },
                 [te, Y, tr],
             ),
@@ -426,7 +426,7 @@ function w(t, e, i) {
             td = (0, l.useCallback)(() => to.itemGrid, [to]),
             ta = (0, l.useCallback)(() => to.coordsMap, [to]),
             tc = l.useCallback(() => th(), [th]);
-        (0, b.A)({ ref: X, key: "container", onUpdate: tc, resizeObserver: r, listenerMap: s }),
+        ((0, b.A)({ ref: X, key: "container", onUpdate: tc, resizeObserver: r, listenerMap: s }),
             (0, l.useImperativeHandle)(
                 u,
                 () => ({
@@ -437,15 +437,15 @@ function w(t, e, i) {
                     ...(0, H.A)(X, tt, tu),
                 }),
                 [X, tt, td, tu, ta],
-            );
+            ));
         let tg = (0, l.useCallback)(
             (t) => {
-                th(1),
+                (th(1),
                     null == $.current ? J(!0) : clearTimeout($.current),
                     ($.current = setTimeout(() => {
-                        ($.current = null), J(!1);
+                        (($.current = null), J(!1));
                     }, 200)),
-                    null != a && a(t);
+                    null != a && a(t));
             },
             [a, th],
         );

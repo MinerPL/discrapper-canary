@@ -34,10 +34,10 @@ class m extends s.PureComponent {
     static defaultProps = { autoFocus: !1, disabled: !1, autoCorrect: "off" };
     _textArea;
     constructor(e) {
-        super(e), (this.state = { height: void 0 });
+        (super(e), (this.state = { height: void 0 }));
     }
     componentDidMount() {
-        this.props.onResize?.(void 0), Promise.resolve().then(() => this.calculateSize());
+        (this.props.onResize?.(void 0), Promise.resolve().then(() => this.calculateSize()));
     }
     componentDidUpdate(e, t) {
         if (this.state.height !== t.height) {
@@ -55,11 +55,11 @@ class m extends s.PureComponent {
             return void this.setState({ height: void 0 });
         null == l && null != document.body && ((l = document.createElement("textarea")), document.body.appendChild(l));
         let { paddingSize: s, borderSize: r, boxSizing: a, sizingStyle: o } = this.calculateNodeStyling(e);
-        l.setAttribute("style", o + ";" + d),
+        (l.setAttribute("style", o + ";" + d),
             (l.value = i),
-            null != n ? l.setAttribute("rows", `${n}`) : l.removeAttribute("rows");
+            null != n ? l.setAttribute("rows", `${n}`) : l.removeAttribute("rows"));
         let u = l.scrollHeight;
-        "border-box" === a ? (u += r) : "content-box" === a && (u -= s), this.setState({ height: u });
+        ("border-box" === a ? (u += r) : "content-box" === a && (u -= s), this.setState({ height: u }));
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -80,7 +80,7 @@ class m extends s.PureComponent {
         };
     }
     clear() {
-        null != this._textArea && (this._textArea.value = ""), this.calculateSize();
+        (null != this._textArea && (this._textArea.value = ""), this.calculateSize());
     }
     blur() {
         let { _textArea: e } = this;
@@ -121,6 +121,6 @@ class m extends s.PureComponent {
     };
     handleChange = (e) => {
         let { onChange: t } = this.props;
-        t?.(e), this.calculateSize();
+        (t?.(e), this.calculateSize());
     };
 }

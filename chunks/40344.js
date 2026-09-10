@@ -327,12 +327,12 @@ function el(e) {
         V = void 0 === E ? b?.skuId === _?.skuId : b?.skuId === E?.skuId,
         K = n.useCallback(
             (e) => {
-                x(),
+                (x(),
                     (0, S.Cz)({
                         analyticsLocations: c,
                         analyticsSource: d.A.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: e,
-                    });
+                    }));
             },
             [c, x],
         );
@@ -358,7 +358,7 @@ function el(e) {
                         pendingAvatarDecoration: b,
                         selectedAvatarDecorationRef: U,
                         onSelect: function (e) {
-                            T(e), null != e && G(e);
+                            (T(e), null != e && G(e));
                         },
                         onOpenShop: K,
                     }),
@@ -380,7 +380,7 @@ function el(e) {
                               variant: "primary",
                               text: O.intl.string(O.t.Jh8fJz),
                               onClick: function () {
-                                  D(b), x();
+                                  (D(b), x());
                               },
                               disabled: V,
                           })
@@ -452,7 +452,7 @@ function eu(e) {
                                 modalHeadingId: f,
                                 initialSelectedDecoration: o,
                                 onClose: function () {
-                                    u(), s?.();
+                                    (u(), s?.());
                                 },
                             }),
                   }),

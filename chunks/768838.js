@@ -292,13 +292,13 @@ function eu(e) {
         }),
         u = (0, n.useCallback)(
             (e) => {
-                t([e]), A.default.track(O.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: e === l, colors: [e] });
+                (t([e]), A.default.track(O.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: e === l, colors: [e] }));
             },
             [t, l],
         ),
         g = (0, n.useCallback)(
             (e) => {
-                t(e), A.default.track(O.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: !1, colors: e });
+                (t(e), A.default.track(O.HAw.DISPLAY_NAME_STYLES_COLOR_SELECTED, { default: !1, colors: e }));
             },
             [t],
         );
@@ -429,7 +429,7 @@ function eA(e) {
                             showNewDot: s,
                             isFlywheelEnabled: u,
                             onClick: () => {
-                                l(e), s && m(e);
+                                (l(e), s && m(e));
                             },
                         },
                         e,
@@ -506,7 +506,7 @@ function ej(e) {
                                 children: (0, a.jsxs)($.D, {
                                     className: i()(eC.SO, { [eC.wH]: n, [eC.j4]: S }),
                                     onClick: () => {
-                                        l(e), r && g(e);
+                                        (l(e), r && g(e));
                                     },
                                     "aria-label": d,
                                     children: [
@@ -592,7 +592,7 @@ function eO(e) {
                             className: ek.h_,
                             children: z.intl.format(H.default.PWf0xS, {
                                 onClickNitro: () => {
-                                    A.default.track(O.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, ey.x)(n);
+                                    (A.default.track(O.HAw.DISPLAY_NAME_STYLES_NITRO_CLICKED), (0, ey.x)(n));
                                 },
                             }),
                         }),
@@ -678,10 +678,10 @@ function e1(e) {
         X = (0, eG.WK)(J);
     E && !h ? (g = O.NJ8.DARK) : !E && h && (g = O.NJ8.LIGHT);
     let V = (0, n.useCallback)(() => {
-            A.default.track(O.HAw.DISPLAY_NAME_STYLES_CLOSED), f();
+            (A.default.track(O.HAw.DISPLAY_NAME_STYLES_CLOSED), f());
         }, [f]),
         $ = (0, n.useCallback)((e) => {
-            N(e === O.NJ8.DARK), A.default.track(O.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.NJ8.DARK });
+            (N(e === O.NJ8.DARK), A.default.track(O.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.NJ8.DARK }));
         }, []),
         Z = (0, n.useMemo)(
             () => ({ ...(0, eK.FT)(s, null), nick: l, displayNameStyles: { fontId: r, effectId: d, colors: o } }),
@@ -830,10 +830,14 @@ function e9(e) {
         R = (0, c.bG)([x.default], () => x.default.getCurrentUser()),
         B =
             ((s = P.Ay.useName(R)),
-            (0, c.bG)([w.A, F.Ay], () => {
-                let e = w.A.getPendingChanges(_);
-                return null != _ ? (e.pendingNickname ?? F.Ay.getNick(_, R?.id)) : e.pendingGlobalName;
-            }, [_, R]) ??
+            (0, c.bG)(
+                [w.A, F.Ay],
+                () => {
+                    let e = w.A.getPendingChanges(_);
+                    return null != _ ? (e.pendingNickname ?? F.Ay.getNick(_, R?.id)) : e.pendingGlobalName;
+                },
+                [_, R],
+            ) ??
                 s ??
                 ""),
         Y = (0, c.bG)([N.A], () => N.A.getGuild(_)),
@@ -880,13 +884,13 @@ function e9(e) {
                     let e = l;
                     a === d.z.SOLID && l.length > 0 && l[0] === i && (e = []);
                     let s = { fontId: t, effectId: a, colors: e };
-                    c ? (0, M.EW)(s) : (0, k.p)({ guildId: r, displayNameStyles: s }),
+                    (c ? (0, M.EW)(s) : (0, k.p)({ guildId: r, displayNameStyles: s }),
                         A.default.track(O.HAw.DISPLAY_NAME_STYLES_APPLIED, {
                             font_name: o.x[t],
                             effect_name: d.z[a],
                             colors: l,
                         }),
-                        m?.();
+                        m?.());
                 }
             }, [s, t, a, l, i, m, r, c]);
         })({
@@ -901,10 +905,10 @@ function e9(e) {
         }),
         eE = n.useCallback(() => {
             let { fontId: e, effectId: s, colors: t } = (0, y.gN)(ef, eg);
-            $(e),
+            ($(e),
                 q(s),
                 (0, y.as)(s) > 1 ? ei((e) => ({ ...e, [s]: t })) : en(t[0]),
-                A.default.track(O.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME);
+                A.default.track(O.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME));
         }, [ef, eg, ei, en]),
         eS = n.useCallback(
             (e) => {

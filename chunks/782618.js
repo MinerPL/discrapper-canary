@@ -111,7 +111,7 @@ let L = r.forwardRef(function (e, t) {
         x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
         k = null != y || null != D,
         F = !(0, T.Ir)(v, n, a, !1),
-        [V, B] = r.useState(!1),
+        [B, V] = r.useState(!1),
         H = r.useCallback(
             (e) => {
                 F ? m?.(e) : b(S);
@@ -125,7 +125,7 @@ let L = r.forwardRef(function (e, t) {
         children: (0, i.jsx)(u.m, {
             text: L,
             position: "top",
-            shouldShow: !V,
+            shouldShow: !B,
             delay: 500,
             children: (0, i.jsxs)(A.s, {
                 buttonProps: x,
@@ -147,7 +147,7 @@ let L = r.forwardRef(function (e, t) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(R, { sound: n, disabled: F, setIsChildTooltipShowing: B, previewSound: M }),
+                    (0, i.jsx)(R, { sound: n, disabled: F, setIsChildTooltipShowing: V, previewSound: M }),
                 ],
             }),
         }),

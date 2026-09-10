@@ -22,22 +22,22 @@ function E(e) {
         r = t.userIgnored;
     if (t.type === c.eA$.PENDING_INCOMING && !r) {
         var a;
-        i.O.announce(u.intl.formatToPlainString(u.t.zH0kC7, { username: t.user.username })),
+        (i.O.announce(u.intl.formatToPlainString(u.t.zH0kC7, { username: t.user.username })),
             _((a = t.user), u.intl.string(u.t["t3+Af3"]), () => {
                 {
                     let { openUserProfileModal: e } = n(402860);
                     e({ userId: a.id, sourceAnalyticsLocations: [o.A.FRIEND_REQUEST_NOTIFICATION] });
                 }
                 s.A.transitionToSection(c.m3P.PENDING, { explicit: !0 });
-            });
+            }));
     }
 }
 function A(e) {
     let { user: t } = e;
-    i.O.announce(u.intl.formatToPlainString(u.t["/+7xky"], { username: t.username })),
+    (i.O.announce(u.intl.formatToPlainString(u.t["/+7xky"], { username: t.username })),
         _(t, u.intl.string(u.t.MYr3Ka), () => {
             a.A.openPrivateChannel({ recipientIds: t.id });
-        });
+        }));
 }
 class h extends r.A {
     actions = { RELATIONSHIP_ADD: E, FRIEND_REQUEST_ACCEPTED: A };

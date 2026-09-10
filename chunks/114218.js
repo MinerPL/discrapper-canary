@@ -15,19 +15,19 @@ function f(e) {
                 (0, s.v)(() => {
                     if ("restoring" === l) {
                         let t = (0, o.TW)(e);
-                        "none" === t.documentElement.style.webkitUserSelect &&
+                        ("none" === t.documentElement.style.webkitUserSelect &&
                             (t.documentElement.style.webkitUserSelect = u || ""),
                             (u = ""),
-                            (l = "default");
+                            (l = "default"));
                     }
                 });
             }, 300));
     else if ((e instanceof HTMLElement || e instanceof SVGElement) && e && c.has(e)) {
         let t = c.get(e),
             r = "userSelect" in e.style ? "userSelect" : "webkitUserSelect";
-        "none" === e.style[r] && (e.style[r] = t),
+        ("none" === e.style[r] && (e.style[r] = t),
             "" === e.getAttribute("style") && e.removeAttribute("style"),
-            c.delete(e);
+            c.delete(e));
     }
 }
 var d = r(346711),
@@ -57,7 +57,7 @@ class E {
             s = 0,
             l,
             u = null;
-        null != r.clientX && null != r.clientY && ((l = r.clientX), (u = r.clientY)),
+        (null != r.clientX && null != r.clientY && ((l = r.clientX), (u = r.clientY)),
             o &&
                 (null != l && null != u
                     ? ((a = l - o.left), (s = u - o.top))
@@ -71,7 +71,7 @@ class E {
             (this.altKey = r.altKey),
             (this.x = a),
             (this.y = s),
-            (this.key = r.key);
+            (this.key = r.key));
     }
     continuePropagation() {
         this.#l = !1;
@@ -102,9 +102,9 @@ function M(e) {
             let t = (0, b.useContext)(w);
             if (t) {
                 let { register: r, ref: n, ...i } = t;
-                (e = (0, y.v)(i, e)), r();
+                ((e = (0, y.v)(i, e)), r());
             }
-            return (0, x.w)(t, e.ref), e;
+            return ((0, x.w)(t, e.ref), e);
         })(e),
         [V, U] = (0, b.useState)(!1),
         z = (0, b.useRef)({
@@ -126,9 +126,9 @@ function M(e) {
                 let i = !0;
                 if (((n.isTriggeringEvent = !0), s)) {
                     let r = new E("pressstart", t, e);
-                    s(r), (i = r.shouldStopPropagation);
+                    (s(r), (i = r.shouldStopPropagation));
                 }
-                return r && r(!0), (n.isTriggeringEvent = !1), (n.didFirePressStart = !0), U(!0), i;
+                return (r && r(!0), (n.isTriggeringEvent = !1), (n.didFirePressStart = !0), U(!0), i);
             },
             [L, s, r],
         ),
@@ -136,17 +136,17 @@ function M(e) {
             (e, n, i = !0) => {
                 let o = z.current;
                 if (!o.didFirePressStart) return !1;
-                (o.didFirePressStart = !1), (o.isTriggeringEvent = !0);
+                ((o.didFirePressStart = !1), (o.isTriggeringEvent = !0));
                 let a = !0;
                 if (M) {
                     let t = new E("pressend", n, e);
-                    M(t), (a = t.shouldStopPropagation);
+                    (M(t), (a = t.shouldStopPropagation));
                 }
                 if ((r && r(!1), U(!1), t && i && !L)) {
                     let r = new E("press", n, e);
-                    t(r), (a &&= r.shouldStopPropagation);
+                    (t(r), (a &&= r.shouldStopPropagation));
                 }
-                return (o.isTriggeringEvent = !1), a;
+                return ((o.isTriggeringEvent = !1), a);
             },
             [L, M, r, t],
         ),
@@ -158,7 +158,7 @@ function M(e) {
                 if (D) {
                     r.isTriggeringEvent = !0;
                     let n = new E("pressup", t, e);
-                    return D(n), (r.isTriggeringEvent = !1), n.shouldStopPropagation;
+                    return (D(n), (r.isTriggeringEvent = !1), n.shouldStopPropagation);
                 }
                 return !0;
             },
@@ -205,7 +205,7 @@ function M(e) {
             (e, t) => {
                 if (!L && R) {
                     let r = new MouseEvent("click", e);
-                    (0, i.o1)(r, t), R((0, i.eg)(r));
+                    ((0, i.o1)(r, t), R((0, i.eg)(r)));
                 }
             },
             [L, R],
@@ -224,7 +224,7 @@ function M(e) {
                                 (e.pointerType = "keyboard"),
                                 (i = G(t, "keyboard")));
                             let s = t.currentTarget;
-                            W(
+                            (W(
                                 (0, o.TW)(t.currentTarget),
                                 "keyup",
                                 (0, n.c)((t) => {
@@ -237,7 +237,7 @@ function M(e) {
                                 !0,
                             ),
                                 i && t.stopPropagation(),
-                                t.metaKey && (0, a.cX)() && e.metaKeyEvents?.set(t.key, t.nativeEvent);
+                                t.metaKey && (0, a.cX)() && e.metaKeyEvents?.set(t.key, t.nativeEvent));
                         } else "Meta" === t.key && (e.metaKeyEvents = new Map());
                     },
                     onClick(t) {
@@ -258,14 +258,14 @@ function M(e) {
                                 let e = G(t, "virtual"),
                                     n = J(t, "virtual"),
                                     i = Y(t, "virtual");
-                                et(t), (r = e && n && i);
+                                (et(t), (r = e && n && i));
                             } else if (e.isPressed && "keyboard" !== e.pointerType) {
                                 let n = e.pointerType || t.nativeEvent.pointerType || "virtual",
                                     i = J(I(t.currentTarget, t), n),
                                     o = Y(I(t.currentTarget, t), n, !0);
-                                (r = i && o), (e.isOverTarget = !1), et(t), Z(t);
+                                ((r = i && o), (e.isOverTarget = !1), et(t), Z(t));
                             }
-                            (e.ignoreEmulatedMouseEvents = !1), r && t.stopPropagation();
+                            ((e.ignoreEmulatedMouseEvents = !1), r && t.stopPropagation());
                         }
                     },
                 },
@@ -274,7 +274,7 @@ function M(e) {
                         O((0, p.wt)(t), t.key) && t.preventDefault();
                         let r = (0, p.wt)(t),
                             n = (0, p.sD)(e.target, r);
-                        Y(I(e.target, t), "keyboard", n),
+                        (Y(I(e.target, t), "keyboard", n),
                             n && er(t, e.target),
                             H(),
                             "Enter" !== t.key &&
@@ -283,7 +283,7 @@ function M(e) {
                                 !t[k] &&
                                 ((t[k] = !0), (0, g.Fe)(e.target, t, !1)),
                             (e.isPressed = !1),
-                            e.metaKeyEvents?.delete(t.key);
+                            e.metaKeyEvents?.delete(t.key));
                     } else if ("Meta" === t.key && e.metaKeyEvents?.size) {
                         let t = e.metaKeyEvents;
                         for (let r of ((e.metaKeyEvents = void 0), t.values()))
@@ -291,7 +291,7 @@ function M(e) {
                     }
                 };
             if ("u" > typeof PointerEvent) {
-                (t.onPointerDown = (t) => {
+                ((t.onPointerDown = (t) => {
                     if (0 !== t.button || !(0, p.sD)(t.currentTarget, (0, p.wt)(t))) return;
                     if ((0, v.P)(t.nativeEvent)) {
                         e.pointerType = "virtual";
@@ -300,7 +300,7 @@ function M(e) {
                     e.pointerType = t.pointerType;
                     let i = !0;
                     if (!e.isPressed) {
-                        (e.isPressed = !0),
+                        ((e.isPressed = !0),
                             (e.isOverTarget = !0),
                             (e.activePointerId = t.pointerId),
                             (e.target = t.currentTarget),
@@ -309,23 +309,23 @@ function M(e) {
                                     if ((0, a.un)() && (0, a.Tc)()) {
                                         if ("default" === l) {
                                             let t = (0, o.TW)(e);
-                                            (u = t.documentElement.style.webkitUserSelect),
-                                                (t.documentElement.style.webkitUserSelect = "none");
+                                            ((u = t.documentElement.style.webkitUserSelect),
+                                                (t.documentElement.style.webkitUserSelect = "none"));
                                         }
                                         l = "disabled";
                                     } else if (e instanceof HTMLElement || e instanceof SVGElement) {
                                         let t = "userSelect" in e.style ? "userSelect" : "webkitUserSelect";
-                                        c.set(e, e.style[t]), (e.style[t] = "none");
+                                        (c.set(e, e.style[t]), (e.style[t] = "none"));
                                     }
                                 })(e.target),
-                            (i = G(t, e.pointerType));
+                            (i = G(t, e.pointerType)));
                         let s = (0, p.wt)(t);
-                        "releasePointerCapture" in s &&
+                        ("releasePointerCapture" in s &&
                             ("hasPointerCapture" in s
                                 ? s.hasPointerCapture(t.pointerId) && s.releasePointerCapture(t.pointerId)
                                 : s.releasePointerCapture(t.pointerId)),
                             W((0, o.TW)(t.currentTarget), "pointerup", r, !1),
-                            W((0, o.TW)(t.currentTarget), "pointercancel", n, !1);
+                            W((0, o.TW)(t.currentTarget), "pointercancel", n, !1));
                     }
                     i && t.stopPropagation();
                 }),
@@ -356,7 +356,7 @@ function M(e) {
                             e.isOverTarget &&
                             null != e.pointerType &&
                             ((e.isOverTarget = !1), Y(I(e.target, t), e.pointerType, !1), ee(t));
-                    });
+                    }));
                 let r = (t) => {
                         if (t.pointerId === e.activePointerId && e.isPressed && 0 === t.button && e.target) {
                             if ((0, p.sD)(e.target, (0, p.wt)(t)) && null != e.pointerType) {
@@ -366,8 +366,8 @@ function M(e) {
                                             e.target instanceof HTMLElement &&
                                             (r ? Z(t) : ((0, d.e)(e.target), e.target.click()));
                                     }, 80);
-                                W(t.currentTarget, "click", () => (r = !0), !0),
-                                    e.disposables.push(() => clearTimeout(n));
+                                (W(t.currentTarget, "click", () => (r = !0), !0),
+                                    e.disposables.push(() => clearTimeout(n)));
                             } else Z(t);
                             e.isOverTarget = !1;
                         }
@@ -394,9 +394,9 @@ function M(e) {
                 if (m.has(t)) return m.get(t);
                 let r = t.querySelector('meta[property="csp-nonce"]'),
                     n = (r && r instanceof (0, o.mD)(r).HTMLMetaElement && (r.nonce || r.content)) || h(t) || void 0;
-                return void 0 !== n && m.set(t, n), n;
+                return (void 0 !== n && m.set(t, n), n);
             })(e);
-            r && (t.nonce = r),
+            (r && (t.nonce = r),
                 (t.textContent = `
 @layer {
   [${T}] {
@@ -404,7 +404,7 @@ function M(e) {
   }
 }
     `.trim()),
-                e.head.prepend(t);
+                e.head.prepend(t));
         }, [K]),
         (0, b.useEffect)(() => {
             let e = z.current;

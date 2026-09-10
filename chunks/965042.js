@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { openPlayground: () => d, openPlaygroundFromParsedUrl: () => c });
+(n.r(t), n.d(t, { openPlayground: () => d, openPlaygroundFromParsedUrl: () => c }));
 var i = n(398590),
     r = n(790271),
     a = n(186111),

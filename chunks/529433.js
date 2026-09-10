@@ -127,7 +127,7 @@ let g = {
                 if (null != n) return n / 1e3 / 60;
                 let i = Date.now(),
                     l = 0;
-                return null != e ? (l = i - e) : null != t && (l = i - t), Math.abs(l) / 1e3 / 60;
+                return (null != e ? (l = i - e) : null != t && (l = i - t), Math.abs(l) / 1e3 / 60);
             }
             update = () => {
                 this.setState({ time: this.getDiff() });

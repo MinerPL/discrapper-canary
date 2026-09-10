@@ -1,4 +1,4 @@
-n.d(t, { L7: () => o, qr: () => c, uG: () => d }), n(174459), n(652215);
+(n.d(t, { L7: () => o, qr: () => c, uG: () => d }), n(174459), n(652215));
 let i = ["COLD_START"],
     r = !0,
     a = new Map();
@@ -16,12 +16,12 @@ function o() {
 function d(e) {
     u(() => {
         let t;
-        (t = a.get(e) ?? 0), a.set(e, t + 1), s(`BRIDGE:${e}`);
+        ((t = a.get(e) ?? 0), a.set(e, t + 1), s(`BRIDGE:${e}`));
     });
 }
 function c(e) {
     u(() => s(e));
 }
 function u(e) {
-    l(), (r = !1), e(), l();
+    (l(), (r = !1), e(), l());
 }

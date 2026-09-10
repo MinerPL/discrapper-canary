@@ -26,9 +26,9 @@ let p = function (t) {
     }
     async function S() {
         if (I) {
-            k(!0), N(!1);
+            (k(!0), N(!1));
             try {
-                await (0, u.RT)(i.id, { defaultReactionEmoji: x }), n();
+                (await (0, u.RT)(i.id, { defaultReactionEmoji: x }), n());
             } catch (t) {
                 N(!0);
             } finally {
@@ -67,7 +67,7 @@ let p = function (t) {
                                 closePopout: n,
                                 onSelectEmoji: (t) => {
                                     let { emoji: i, willClose: e } = t;
-                                    b(i), e && n();
+                                    (b(i), e && n());
                                 },
                                 pickerIntention: j.EmojiIntention.COMMUNITY_CONTENT,
                                 channel: i,

@@ -9,7 +9,7 @@ function c(e) {
         [o, u] = (0, n.useState)(null),
         h = (0, n.useCallback)(
             (e) => {
-                u(e), d?.(e);
+                (u(e), d?.(e));
             },
             [d],
         ),
@@ -25,7 +25,7 @@ function c(e) {
         C = (0, n.useCallback)(
             async function () {
                 let { loadId: e, errorExtra: r } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if (null == t) return h(new a.Ay("Order not created yet")), { type: "failed" };
+                if (null == t) return (h(new a.Ay("Order not created yet")), { type: "failed" });
                 u(null);
                 try {
                     let r = await (0, i.Ub)({ orderId: t.id, loadId: e });
@@ -36,8 +36,8 @@ function c(e) {
                     }
                     return { type: "signed", order: r };
                 } catch (e) {
-                    if (e instanceof i.FY) return c?.(e.order), h(e), { type: "failed" };
-                    return _(e, { ...r, orderId: t.id }), { type: "failed" };
+                    if (e instanceof i.FY) return (c?.(e.order), h(e), { type: "failed" });
+                    return (_(e, { ...r, orderId: t.id }), { type: "failed" });
                 }
             },
             [t, c, _, h],

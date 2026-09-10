@@ -21,7 +21,7 @@ class g extends n.Component {
     close = async () => {
         let { step: t } = this.state,
             { onClose: e, pendingPayment: i } = this.props;
-        0 === t && (await (0, l.N)(i.id)), e();
+        (0 === t && (await (0, l.N)(i.id)), e());
     };
     cancelPayment = async () => {
         let { pendingPayment: t } = this.props;
@@ -36,8 +36,8 @@ class g extends n.Component {
         let { pendingPayment: t } = this.props;
         this.setState({ isAwaitingAuthentication: !0 });
         let { error: e } = await (0, o.ap)(t.id);
-        this.setState({ isAwaitingAuthentication: !1 }),
-            null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 });
+        (this.setState({ isAwaitingAuthentication: !1 }),
+            null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 }));
     };
     getTitle() {
         let { step: t } = this.state;

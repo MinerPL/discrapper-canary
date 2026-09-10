@@ -43,11 +43,11 @@ function O(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (n = n.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            r.push.apply(r, n));
     }
     return r;
 }
@@ -57,12 +57,12 @@ function w(e) {
         t % 2
             ? O(Object(r), !0).forEach(function (t) {
                   var n, i, o;
-                  (n = e),
+                  ((n = e),
                       (i = t),
                       (o = r[t]),
                       i in n
                           ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
-                          : (n[i] = o);
+                          : (n[i] = o));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -77,7 +77,7 @@ var E = (function () {
     function t(e, r) {
         var n = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        (this.isSetUp = !1),
+        ((this.isSetUp = !1),
             (this.handleRefCountChange = function () {
                 var e = n.store.getState().refCount > 0;
                 n.backend &&
@@ -87,7 +87,7 @@ var E = (function () {
             }),
             (this.store = e),
             (this.monitor = r),
-            e.subscribe(this.handleRefCountChange);
+            e.subscribe(this.handleRefCountChange));
     }
     return (
         (e = [
@@ -144,14 +144,14 @@ var E = (function () {
                                         f = s.getSourceClientOffset,
                                         h = e.getMonitor(),
                                         g = e.getRegistry();
-                                    e.dispatch(p(d)),
+                                    (e.dispatch(p(d)),
                                         (t = a),
                                         (r = h),
                                         (n = g),
                                         (0, u.V)(!r.isDragging(), "Cannot call beginDrag while dragging."),
                                         t.forEach(function (e) {
                                             (0, u.V)(n.getSource(e), "Expected sourceIds to be registered.");
-                                        });
+                                        }));
                                     var v = (function (e, t) {
                                         for (var r = null, n = e.length - 1; n >= 0; n--)
                                             if (t.canDragSource(e[n])) {
@@ -164,12 +164,12 @@ var E = (function () {
                                     var m = null;
                                     if (d) {
                                         if (!f) throw Error("getSourceClientOffset must be defined");
-                                        (i = f),
+                                        ((i = f),
                                             (0, u.V)(
                                                 "function" == typeof i,
                                                 "When clientOffset is provided, getSourceClientOffset must be a function.",
                                             ),
-                                            (m = f(v));
+                                            (m = f(v)));
                                     }
                                     e.dispatch(p(d, m));
                                     var O = g.getSource(v).beginDrag(h, v);
@@ -206,14 +206,14 @@ var E = (function () {
                                         o,
                                         a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                                         s = a.clientOffset;
-                                    (t = e), (0, u.V)(Array.isArray(t), "Expected targetIds to be an array.");
+                                    ((t = e), (0, u.V)(Array.isArray(t), "Expected targetIds to be an array."));
                                     var c = e.slice(0),
                                         l = r.getMonitor(),
                                         d = r.getRegistry();
                                     return (
                                         (function (e, t, r) {
-                                            (0, u.V)(t.isDragging(), "Cannot call hover while not dragging."),
-                                                (0, u.V)(!t.didDrop(), "Cannot call hover after drop.");
+                                            ((0, u.V)(t.isDragging(), "Cannot call hover while not dragging."),
+                                                (0, u.V)(!t.didDrop(), "Cannot call hover after drop."));
                                             for (var n = 0; n < e.length; n++) {
                                                 var i = e[n];
                                                 (0, u.V)(
@@ -248,7 +248,7 @@ var E = (function () {
                                         i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                                         o = n.getMonitor(),
                                         a = n.getRegistry();
-                                    (e = o),
+                                    ((e = o),
                                         (0, u.V)(e.isDragging(), "Cannot call drop while not dragging."),
                                         (0, u.V)(!e.didDrop(), "Cannot call drop twice during one drag operation."),
                                         ((r = (t = o).getTargetIds().filter(t.canDropOnTarget, t)).reverse(),
@@ -274,7 +274,7 @@ var E = (function () {
                                                     f),
                                                 v = { type: h, payload: { dropResult: w(w({}, i), p) } };
                                             n.dispatch(v);
-                                        });
+                                        }));
                                 }),
                             endDrag:
                                 ((i = this),
@@ -282,7 +282,7 @@ var E = (function () {
                                     var e,
                                         t = i.getMonitor(),
                                         r = i.getRegistry();
-                                    (e = t), (0, u.V)(e.isDragging(), "Cannot call endDrag while not dragging.");
+                                    ((e = t), (0, u.V)(e.isDragging(), "Cannot call endDrag while not dragging."));
                                     var n = t.getSourceId();
                                     return (
                                         null != n && (r.getSource(n, !0).endDrag(t, n), r.unpinSource()), { type: g }
@@ -312,10 +312,10 @@ var E = (function () {
         (function (e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         })(t.prototype, e),
         t
@@ -349,11 +349,11 @@ function C(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (n = n.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            r.push.apply(r, n));
     }
     return r;
 }
@@ -363,12 +363,12 @@ function P(e) {
         t % 2
             ? C(Object(r), !0).forEach(function (t) {
                   var n, i, o;
-                  (n = e),
+                  ((n = e),
                       (i = t),
                       (o = r[t]),
                       i in n
                           ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
-                          : (n[i] = o);
+                          : (n[i] = o));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -387,11 +387,11 @@ function R(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (n = n.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            r.push.apply(r, n));
     }
     return r;
 }
@@ -401,12 +401,12 @@ function _(e) {
         t % 2
             ? R(Object(r), !0).forEach(function (t) {
                   var n, i, o;
-                  (n = e),
+                  ((n = e),
                       (i = t),
                       (o = r[t]),
                       i in n
                           ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
-                          : (n[i] = o);
+                          : (n[i] = o));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -431,11 +431,11 @@ function H(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var n = Object.getOwnPropertySymbols(e);
-        t &&
+        (t &&
             (n = n.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, n);
+            r.push.apply(r, n));
     }
     return r;
 }
@@ -445,12 +445,12 @@ function W(e) {
         t % 2
             ? H(Object(r), !0).forEach(function (t) {
                   var n, i, o;
-                  (n = e),
+                  ((n = e),
                       (i = t),
                       (o = r[t]),
                       i in n
                           ? Object.defineProperty(n, i, { value: o, enumerable: !0, configurable: !0, writable: !0 })
-                          : (n[i] = o);
+                          : (n[i] = o));
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -513,7 +513,7 @@ function B() {
                 return V;
             var l = u[u.length - 1],
                 d = a[a.length - 1];
-            return l !== d && (l && c.push(l), d && c.push(d)), c;
+            return (l !== d && (l && c.push(l), d && c.push(d)), c);
         })(t.dirtyHandlerIds, {
             type: r.type,
             payload: W(
@@ -638,12 +638,12 @@ function B() {
 function G(e, t) {
     return { x: e.x - t.x, y: e.y - t.y };
 }
-(V.__IS_NONE__ = !0), (U.__IS_ALL__ = !0);
+((V.__IS_NONE__ = !0), (U.__IS_ALL__ = !0));
 var X = (function () {
         var e;
         function t(e, r) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            (this.store = e), (this.registry = r);
+            ((this.store = e), (this.registry = r));
         }
         return (
             (e = [
@@ -653,11 +653,11 @@ var X = (function () {
                         var t = this,
                             r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
                             n = r.handlerIds;
-                        (0, u.V)("function" == typeof e, "listener must be a function."),
+                        ((0, u.V)("function" == typeof e, "listener must be a function."),
                             (0, u.V)(
                                 void 0 === n || Array.isArray(n),
                                 "handlerIds, when specified, must be an array of strings.",
-                            );
+                            ));
                         var i = this.store.getState().stateId;
                         return this.store.subscribe(function () {
                             var r = t.store.getState(),
@@ -840,10 +840,10 @@ var X = (function () {
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t
@@ -874,7 +874,7 @@ function q(e, t) {
                   : "Type can only be a string or a symbol.",
           );
 }
-((i = o || (o = {})).SOURCE = "SOURCE"), (i.TARGET = "TARGET");
+(((i = o || (o = {})).SOURCE = "SOURCE"), (i.TARGET = "TARGET"));
 let K = "u" > typeof global ? global : self,
     z = K.MutationObserver || K.WebKitMutationObserver;
 function J(e) {
@@ -882,7 +882,7 @@ function J(e) {
         let t = setTimeout(n, 0),
             r = setInterval(n, 50);
         function n() {
-            clearTimeout(t), clearInterval(r), e();
+            (clearTimeout(t), clearInterval(r), e());
         }
     };
 }
@@ -907,52 +907,52 @@ class Q {
         } catch (e) {
             this.onError(e);
         } finally {
-            (this.task = null), this.release(this);
+            ((this.task = null), this.release(this));
         }
     }
     constructor(e, t) {
-        (this.onError = e), (this.release = t), (this.task = null);
+        ((this.onError = e), (this.release = t), (this.task = null));
     }
 }
 let Z = new (class {
         enqueueTask(e) {
             let { queue: t, requestFlush: r } = this;
-            t.length || (r(), (this.flushing = !0)), (t[t.length] = e);
+            (t.length || (r(), (this.flushing = !0)), (t[t.length] = e));
         }
         constructor() {
-            (this.queue = []),
+            ((this.queue = []),
                 (this.pendingErrors = []),
                 (this.flushing = !1),
                 (this.index = 0),
                 (this.capacity = 1024),
                 (this.flush = () => {
                     let { queue: e } = this;
-                    for (; this.index < e.length; ) {
+                    for (; this.index < e.length;) {
                         let t = this.index;
                         if ((this.index++, e[t].call(), this.index > this.capacity)) {
                             for (let t = 0, r = e.length - this.index; t < r; t++) e[t] = e[t + this.index];
-                            (e.length -= this.index), (this.index = 0);
+                            ((e.length -= this.index), (this.index = 0));
                         }
                     }
-                    (e.length = 0), (this.index = 0), (this.flushing = !1);
+                    ((e.length = 0), (this.index = 0), (this.flushing = !1));
                 }),
                 (this.registerPendingError = (e) => {
-                    this.pendingErrors.push(e), this.requestErrorThrow();
+                    (this.pendingErrors.push(e), this.requestErrorThrow());
                 }),
                 (this.requestFlush = $(this.flush)),
                 (this.requestErrorThrow = J(() => {
                     if (this.pendingErrors.length) throw this.pendingErrors.shift();
-                }));
+                })));
         }
     })(),
     ee = new (class {
         create(e) {
             let t = this.freeTasks,
                 r = t.length ? t.pop() : new Q(this.onError, (e) => (t[t.length] = e));
-            return (r.task = e), r;
+            return ((r.task = e), r);
         }
         constructor(e) {
-            (this.onError = e), (this.freeTasks = []);
+            ((this.onError = e), (this.freeTasks = []));
         }
     })(Z.registerPendingError);
 function et(e, t) {
@@ -994,7 +994,7 @@ function en(e, t) {
                                 r = !0
                             );
                         } catch (e) {
-                            (n = !0), (i = e);
+                            ((n = !0), (i = e));
                         } finally {
                             try {
                                 r || null == a.return || a.return();
@@ -1029,35 +1029,35 @@ var ei = (function () {
         var e;
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            (this.types = new Map()),
+            ((this.types = new Map()),
                 (this.dragSources = new Map()),
                 (this.dropTargets = new Map()),
                 (this.pinnedSourceId = null),
                 (this.pinnedSource = null),
-                (this.store = e);
+                (this.store = e));
         }
         return (
             (e = [
                 {
                     key: "addSource",
                     value: function (e, t) {
-                        q(e),
+                        (q(e),
                             (0, u.V)("function" == typeof t.canDrag, "Expected canDrag to be a function."),
                             (0, u.V)("function" == typeof t.beginDrag, "Expected beginDrag to be a function."),
-                            (0, u.V)("function" == typeof t.endDrag, "Expected endDrag to be a function.");
+                            (0, u.V)("function" == typeof t.endDrag, "Expected endDrag to be a function."));
                         var r = this.addHandler(o.SOURCE, e, t);
-                        return this.store.dispatch({ type: N, payload: { sourceId: r } }), r;
+                        return (this.store.dispatch({ type: N, payload: { sourceId: r } }), r);
                     },
                 },
                 {
                     key: "addTarget",
                     value: function (e, t) {
-                        q(e, !0),
+                        (q(e, !0),
                             (0, u.V)("function" == typeof t.canDrop, "Expected canDrop to be a function."),
                             (0, u.V)("function" == typeof t.hover, "Expected hover to be a function."),
-                            (0, u.V)("function" == typeof t.drop, "Expected beginDrag to be a function.");
+                            (0, u.V)("function" == typeof t.drop, "Expected beginDrag to be a function."));
                         var r = this.addHandler(o.TARGET, e, t);
-                        return this.store.dispatch({ type: j, payload: { targetId: r } }), r;
+                        return (this.store.dispatch({ type: j, payload: { targetId: r } }), r);
                     },
                 },
                 {
@@ -1079,19 +1079,19 @@ var ei = (function () {
                 {
                     key: "getTarget",
                     value: function (e) {
-                        return (0, u.V)(this.isTargetId(e), "Expected a valid target ID."), this.dropTargets.get(e);
+                        return ((0, u.V)(this.isTargetId(e), "Expected a valid target ID."), this.dropTargets.get(e));
                     },
                 },
                 {
                     key: "getSourceType",
                     value: function (e) {
-                        return (0, u.V)(this.isSourceId(e), "Expected a valid source ID."), this.types.get(e);
+                        return ((0, u.V)(this.isSourceId(e), "Expected a valid source ID."), this.types.get(e));
                     },
                 },
                 {
                     key: "getTargetType",
                     value: function (e) {
-                        return (0, u.V)(this.isTargetId(e), "Expected a valid target ID."), this.types.get(e);
+                        return ((0, u.V)(this.isTargetId(e), "Expected a valid target ID."), this.types.get(e));
                     },
                 },
                 {
@@ -1110,37 +1110,39 @@ var ei = (function () {
                     key: "removeSource",
                     value: function (e) {
                         var t = this;
-                        (0, u.V)(this.getSource(e), "Expected an existing source."),
+                        ((0, u.V)(this.getSource(e), "Expected an existing source."),
                             this.store.dispatch({ type: A, payload: { sourceId: e } }),
                             Z.enqueueTask(
                                 ee.create(function () {
-                                    t.dragSources.delete(e), t.types.delete(e);
+                                    (t.dragSources.delete(e), t.types.delete(e));
                                 }),
-                            );
+                            ));
                     },
                 },
                 {
                     key: "removeTarget",
                     value: function (e) {
-                        (0, u.V)(this.getTarget(e), "Expected an existing target."),
+                        ((0, u.V)(this.getTarget(e), "Expected an existing target."),
                             this.store.dispatch({ type: L, payload: { targetId: e } }),
                             this.dropTargets.delete(e),
-                            this.types.delete(e);
+                            this.types.delete(e));
                     },
                 },
                 {
                     key: "pinSource",
                     value: function (e) {
                         var t = this.getSource(e);
-                        (0, u.V)(t, "Expected an existing source."), (this.pinnedSourceId = e), (this.pinnedSource = t);
+                        ((0, u.V)(t, "Expected an existing source."),
+                            (this.pinnedSourceId = e),
+                            (this.pinnedSource = t));
                     },
                 },
                 {
                     key: "unpinSource",
                     value: function () {
-                        (0, u.V)(this.pinnedSource, "No source is pinned at the time."),
+                        ((0, u.V)(this.pinnedSource, "No source is pinned at the time."),
                             (this.pinnedSourceId = null),
-                            (this.pinnedSource = null);
+                            (this.pinnedSource = null));
                     },
                 },
                 {
@@ -1168,10 +1170,10 @@ var ei = (function () {
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t
@@ -1206,16 +1208,16 @@ var eu = 0,
                                         n,
                                         i = {},
                                         o = Object.keys(e);
-                                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
                                     return i;
                                 })(e, t);
                             if (Object.getOwnPropertySymbols) {
                                 var o = Object.getOwnPropertySymbols(e);
                                 for (n = 0; n < o.length; n++)
-                                    (r = o[n]),
+                                    ((r = o[n]),
                                         !(t.indexOf(r) >= 0) &&
                                             Object.prototype.propertyIsEnumerable.call(e, r) &&
-                                            (i[r] = e[r]);
+                                            (i[r] = e[r]));
                             }
                             return i;
                         })(e, ea))
@@ -1289,9 +1291,9 @@ var eu = 0,
                                                                           function () {
                                                                               if (t) {
                                                                                   if (c) throw Error(S(6));
-                                                                                  (t = !1), l();
+                                                                                  ((t = !1), l());
                                                                                   var r = u.indexOf(e);
-                                                                                  u.splice(r, 1), (s = null);
+                                                                                  (u.splice(r, 1), (s = null));
                                                                               }
                                                                           }
                                                                       );
@@ -1313,7 +1315,7 @@ var eu = 0,
                                                                       if (void 0 === e.type) throw Error(S(8));
                                                                       if (c) throw Error(S(9));
                                                                       try {
-                                                                          (c = !0), (a = o(a, e));
+                                                                          ((c = !0), (a = o(a, e)));
                                                                       } finally {
                                                                           c = !1;
                                                                       }
@@ -1330,7 +1332,7 @@ var eu = 0,
                                                                           replaceReducer: function (e) {
                                                                               if ("function" != typeof e)
                                                                                   throw Error(S(10));
-                                                                              (o = e), h({ type: I.REPLACE });
+                                                                              ((o = e), h({ type: I.REPLACE }));
                                                                           },
                                                                       })[D] = function () {
                                                                           var e;
@@ -1345,7 +1347,9 @@ var eu = 0,
                                                                                       function t() {
                                                                                           e.next && e.next(d());
                                                                                       }
-                                                                                      return t(), { unsubscribe: f(t) };
+                                                                                      return (
+                                                                                          t(), { unsubscribe: f(t) }
+                                                                                      );
                                                                                   },
                                                                               })[D] = function () {
                                                                                   return this;
@@ -1364,7 +1368,7 @@ var eu = 0,
                                                           s = new X(a, new ei(a)),
                                                           u = new E(a, s),
                                                           c = e(u, n, i);
-                                                      return u.receiveBackend(c), u;
+                                                      return (u.receiveBackend(c), u);
                                                   })(e, t, r, n),
                                               }),
                                           t[ec]
@@ -1388,7 +1392,7 @@ var eu = 0,
                                 o = !0
                             );
                         } catch (e) {
-                            (a = !0), (r = e);
+                            ((a = !0), (r = e));
                         } finally {
                             try {
                                 o || null == n.return || n.return();
@@ -1443,7 +1447,7 @@ function eh(e, t) {
     var r,
         n,
         i = eg(e, t, "get");
-    return (r = e), (n = i).get ? n.get.call(r) : n.value;
+    return ((r = e), (n = i).get ? n.get.call(r) : n.value);
 }
 function eg(e, t, r) {
     if (!t.has(e)) throw TypeError("attempted to " + r + " private field on non-instance");
@@ -1452,18 +1456,18 @@ function eg(e, t, r) {
 var ep = new WeakMap();
 class ev {
     constructor() {
-        !(function (e, t, r) {
-            (function (e, t) {
+        (!(function (e, t, r) {
+            ((function (e, t) {
                 if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
             })(e, t),
-                t.set(e, r);
+                t.set(e, r));
         })(this, ep, { writable: !0, value: void 0 }),
             ef(this, "register", (e) => {
                 eh(this, ep).push(e);
             }),
             ef(this, "unregister", (e) => {
                 let t;
-                for (; -1 !== (t = eh(this, ep).indexOf(e)); ) eh(this, ep).splice(t, 1);
+                for (; -1 !== (t = eh(this, ep).indexOf(e));) eh(this, ep).splice(t, 1);
             }),
             ef(this, "backendChanged", (e) => {
                 for (let t of eh(this, ep)) t.backendChanged(e);
@@ -1478,14 +1482,14 @@ class ev {
                     if (!o.writable) throw TypeError("attempted to set read only private field");
                     o.value = a;
                 }
-            })(this, ep, []);
+            })(this, ep, []));
     }
 }
 function ey(e, t, r) {
-    (function (e, t) {
+    ((function (e, t) {
         if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
     })(e, t),
-        t.set(e, r);
+        t.set(e, r));
 }
 function eb(e, t, r) {
     return (
@@ -1497,7 +1501,7 @@ function em(e, t) {
     var r,
         n,
         i = ew(e, t, "get");
-    return (r = e), (n = i).get ? n.get.call(r) : n.value;
+    return ((r = e), (n = i).get ? n.get.call(r) : n.value);
 }
 function eO(e, t, r) {
     var n = ew(e, t, "set");
@@ -1576,7 +1580,7 @@ class eA {
             eb(this, "setup", () => {
                 if ("u" > typeof window) {
                     if (eA.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
-                    (eA.isSetUp = !0), em(this, eC).call(this, window), em(this, eD)[em(this, eE)].instance.setup();
+                    ((eA.isSetUp = !0), em(this, eC).call(this, window), em(this, eD)[em(this, eE)].instance.setup());
                 }
             }),
             eb(this, "teardown", () => {
@@ -1621,12 +1625,12 @@ class eA {
                         em(this, eE) !== t)
                     ) {
                         var r;
-                        em(this, eD)[t].instance.teardown(),
+                        (em(this, eD)[t].instance.teardown(),
                             Object.keys(em(this, eI)).forEach((e) => {
                                 let t = em(this, eI)[e];
-                                t.unsubscribe(), (t.unsubscribe = em(this, eN).call(this, t.func, ...t.args));
+                                (t.unsubscribe(), (t.unsubscribe = em(this, eN).call(this, t.func, ...t.args)));
                             }),
-                            em(this, eS).backendChanged(this);
+                            em(this, eS).backendChanged(this));
                         let n = em(this, eD)[em(this, eE)];
                         if ((n.instance.setup(), n.skipDispatchOnTransition)) return;
                         let i = new e.constructor(e.type, e);
@@ -1643,7 +1647,7 @@ class eA {
                     return (
                         (em(this, eI)[i] = { func: e, args: [t, r, n], unsubscribe: o }),
                         () => {
-                            em(this, eI)[i].unsubscribe(), delete em(this, eI)[i];
+                            (em(this, eI)[i].unsubscribe(), delete em(this, eI)[i]);
                         }
                     );
                 },
@@ -1653,15 +1657,15 @@ class eA {
             throw Error(
                 "You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx",
             );
-        eO(this, eS, new ev()),
+        (eO(this, eS, new ev()),
             eO(this, eD, {}),
             eO(this, eT, []),
             r.backends.forEach((r) => {
                 let n = em(this, ek).call(this, e, t, r);
-                (em(this, eD)[n.id] = n), em(this, eT).push(n);
+                ((em(this, eD)[n.id] = n), em(this, eT).push(n));
             }),
             eO(this, eE, em(this, eT)[0].id),
-            eO(this, eI, {});
+            eO(this, eI, {}));
     }
 }
 eb(eA, "isSetUp", !1);
@@ -1696,14 +1700,14 @@ var eM = (0, a.createContext)(null),
                             n,
                             i = {},
                             o = Object.keys(e);
-                        for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
                         return i;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var o = Object.getOwnPropertySymbols(e);
                     for (n = 0; n < o.length; n++)
-                        (r = o[n]),
-                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                        ((r = o[n]),
+                            !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
                 }
                 return i;
             })(e, ["portal"]),
@@ -1724,7 +1728,7 @@ var eM = (0, a.createContext)(null),
                                 r = !0
                             );
                         } catch (e) {
-                            (n = !0), (i = e);
+                            ((n = !0), (i = e));
                         } finally {
                             try {
                                 r || null == a.return || a.return();

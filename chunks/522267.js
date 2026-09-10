@@ -1,8 +1,8 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.InternalIntlMessage = void 0));
 let n = r(524897);
 t.InternalIntlMessage = class {
     constructor(e, t) {
-        (this.locale = t), (this.ast = (0, n.isCompressedAst)(e) ? e : (0, n.compressFormatJsToAst)(e));
+        ((this.locale = t), (this.ast = (0, n.isCompressedAst)(e) ? e : (0, n.compressFormatJsToAst)(e)));
     }
     reserialize() {
         if ("string" == typeof this.ast) return this.ast;
@@ -19,26 +19,26 @@ t.InternalIntlMessage = class {
                             r.value += "{" + i[1] + "}";
                             break;
                         case n.FormatJsNodeType.Date:
-                            (r.value += "{" + i[1] + ", date"),
+                            ((r.value += "{" + i[1] + ", date"),
                                 null != i[2] && (r.value += ", " + i[2]),
-                                (r.value += "}");
+                                (r.value += "}"));
                             break;
                         case n.FormatJsNodeType.Time:
-                            (r.value += "{" + i[1] + ", time"),
+                            ((r.value += "{" + i[1] + ", time"),
                                 null != i[2] && (r.value += ", " + i[2]),
-                                (r.value += "}");
+                                (r.value += "}"));
                             break;
                         case n.FormatJsNodeType.Number:
-                            (r.value += "{" + i[1] + ", number"),
+                            ((r.value += "{" + i[1] + ", number"),
                                 null != i[2] && (r.value += ", " + i[2]),
-                                (r.value += "}");
+                                (r.value += "}"));
                             break;
                         case n.FormatJsNodeType.Plural: {
                             let t = "ordinal" == i[4] ? "selectordinal" : "plural";
                             for (let [n, o] of ((r.value += "{" + i[1] + ", " + t + ","),
                             i[3] && (r.value += " offset:" + i[3]),
                             Object.entries(i[2])))
-                                (r.value += " " + n + " {"), e(o, r), (r.value += "}");
+                                ((r.value += " " + n + " {"), e(o, r), (r.value += "}"));
                             r.value += "}";
                             break;
                         }
@@ -47,35 +47,35 @@ t.InternalIntlMessage = class {
                             break;
                         case n.FormatJsNodeType.Select:
                             for (let [t, n] of ((r.value += "{" + i[1] + ", select,"), Object.entries(i[2])))
-                                (r.value += " " + t + " {"), e(n, r), (r.value += "}");
+                                ((r.value += " " + t + " {"), e(n, r), (r.value += "}"));
                             r.value += "}";
                             break;
                         case n.FormatJsNodeType.Tag:
                             !(function (t, r) {
                                 switch (t[1]) {
                                     case "$b":
-                                        (r.value += "**"), e(t[2], r), (r.value += "**");
+                                        ((r.value += "**"), e(t[2], r), (r.value += "**"));
                                         break;
                                     case "$i":
-                                        (r.value += "*"), e(t[2], r), (r.value += "*");
+                                        ((r.value += "*"), e(t[2], r), (r.value += "*"));
                                         break;
                                     case "$code":
-                                        (r.value += "`"), e(t[2], r), (r.value += "`");
+                                        ((r.value += "`"), e(t[2], r), (r.value += "`"));
                                         break;
                                     case "$p":
-                                        e(t[2], r), (r.value += "\n\n");
+                                        (e(t[2], r), (r.value += "\n\n"));
                                         break;
                                     case "$link":
                                         let n = t[2],
                                             i = t[3];
-                                        (r.value += "["),
+                                        ((r.value += "["),
                                             e(n, r),
                                             (r.value += "]("),
                                             null != i && e(i, r),
-                                            (r.value += ")");
+                                            (r.value += ")"));
                                         break;
                                     default:
-                                        (r.value += "$["), e(t[2], r), (r.value += "](" + t[1] + ")");
+                                        ((r.value += "$["), e(t[2], r), (r.value += "](" + t[1] + ")"));
                                 }
                             })(i, r);
                     }

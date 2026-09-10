@@ -17,6 +17,6 @@ class d extends i.Ay.Store {
 let c = new d(a.h, {
     GUILD_NSFW_AGREE: function (e) {
         let { guildId: t } = e;
-        (o[t] = !0), r.w.set(l, o);
+        ((o[t] = !0), r.w.set(l, o));
     },
 });

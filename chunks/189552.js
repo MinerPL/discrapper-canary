@@ -51,11 +51,15 @@ function A(e, t, n) {
     );
 }
 function g(e) {
-    return (0, a.bG)([u.A, E.A], () => {
-        if (null == e) return null;
-        let t = u.A.getGuild(e.guildId);
-        return null == t || null == e.highestRoleId ? null : (E.A.getRole(t.id, e.highestRoleId) ?? null);
-    }, [e]);
+    return (0, a.bG)(
+        [u.A, E.A],
+        () => {
+            if (null == e) return null;
+            let t = u.A.getGuild(e.guildId);
+            return null == t || null == e.highestRoleId ? null : (E.A.getRole(t.id, e.highestRoleId) ?? null);
+        },
+        [e],
+    );
 }
 var T =
     (((l = {})[(l.LOADING = 0)] = "LOADING"),

@@ -19,7 +19,7 @@ function a(n) {
         m = t.useMemo(() => {
             if (null == u) return;
             let n = { "--custom-background-static": `url(${u.toString()}` };
-            return o || null == d || (n["--custom-background-animated"] = `url(${d.toString()})`), n;
+            return (o || null == d || (n["--custom-background-animated"] = `url(${d.toString()})`), n);
         }, [d, u, o]);
     return (0, l.jsxs)("div", {
         className: r.iE,
@@ -108,7 +108,7 @@ function h(n) {
                                     null != u &&
                                         (0, l.jsx)(u, {
                                             onClick: (n) => {
-                                                n.stopPropagation(), a?.();
+                                                (n.stopPropagation(), a?.());
                                             },
                                         }),
                                     null != h && (0, l.jsx)(h, {}),

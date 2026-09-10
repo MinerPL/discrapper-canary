@@ -16,18 +16,18 @@ function h(e) {
     null != d[e] && (clearTimeout(d[e]), delete d[e]);
 }
 function T(e) {
-    h(e),
+    (h(e),
         (d[e] = setTimeout(() => {
             let t = c[e];
-            null != t && ((c[e] = { ...t, style: "GENTLE_AMBIENT" }), A.emitChange()), delete d[e];
-        }, 2e3));
+            (null != t && ((c[e] = { ...t, style: "GENTLE_AMBIENT" }), A.emitChange()), delete d[e]);
+        }, 2e3)));
 }
 function E() {
     for (let e of Object.keys(d)) clearTimeout(d[e]);
-    (d = {}), (c = {});
+    ((d = {}), (c = {}));
 }
 function N() {
-    return E(), !0;
+    return (E(), !0);
 }
 class I extends i.Ay.Store {
     static displayName = "VoiceChannelAnimationStateStore";
@@ -70,7 +70,7 @@ let A = new I(r.h, {
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
             if (t === u || null == t) return !1;
-            (u = t), E();
+            ((u = t), E());
             let l = a.A.getVoiceStates(t),
                 n = {};
             for (let e of Object.values(l)) null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1);

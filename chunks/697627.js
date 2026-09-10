@@ -20,18 +20,18 @@ class E extends l.Ay.Store {
 }
 let c = new E(r.h, {
     CONNECTION_OPEN: function () {
-        s.clear(), a.clear();
+        (s.clear(), a.clear());
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function (e) {
         let { guildId: t, priceTierType: n } = e;
-        a.has(t) || a.set(t, new Map()), a.get(t).set(n, 1);
+        (a.has(t) || a.set(t, new Map()), a.get(t).set(n, 1));
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function (e) {
         let { guildId: t, priceTierType: n, priceTiers: i } = e;
-        a.has(t) || a.set(t, new Map()), a.get(t).set(n, 2), s.has(t) || s.set(t, new Map()), s.get(t).set(n, i);
+        (a.has(t) || a.set(t, new Map()), a.get(t).set(n, 2), s.has(t) || s.set(t, new Map()), s.get(t).set(n, i));
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function (e) {
         let { guildId: t, priceTierType: n } = e;
-        a.has(t) || a.set(t, new Map()), a.get(t).set(n, 2);
+        (a.has(t) || a.set(t, new Map()), a.get(t).set(n, 2));
     },
 });

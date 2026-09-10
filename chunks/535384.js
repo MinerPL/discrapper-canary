@@ -198,14 +198,14 @@ class p {
         var e;
         if (void 0 === this.fMap)
             for (let t of ((this.fMap = {}), null != (e = this.info.fields) ? e : []))
-                (this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
+                ((this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t));
     }
     assert(e, t, r) {
         if (!e) {
             let e = (0, o.V)(r);
             throw (
-                (("number" == e || "boolean" == e) && (e = r.toString()),
-                Error(`Cannot parse JSON ${e} for ${this.info.typeName}#${t}`))
+                ("number" == e || "boolean" == e) && (e = r.toString()),
+                Error(`Cannot parse JSON ${e} for ${this.info.typeName}#${t}`)
             );
         }
     }
@@ -228,7 +228,7 @@ class p {
                     throw Error(
                         `Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`,
                     );
-                i.push(l.oneof), (e = t[l.oneof] = { oneofKind: u });
+                (i.push(l.oneof), (e = t[l.oneof] = { oneofKind: u }));
             } else e = t;
             if ("map" == l.kind) {
                 if (null === s) continue;
@@ -248,8 +248,8 @@ class p {
                     }
                     this.assert(void 0 !== o, l.name + " map value", i);
                     let a = e;
-                    l.K == n.LN.BOOL && (a = "true" == a || ("false" != a && a)),
-                        (t[(a = this.scalar(a, l.K, n.rO.STRING, l.name).toString())] = o);
+                    (l.K == n.LN.BOOL && (a = "true" == a || ("false" != a && a)),
+                        (t[(a = this.scalar(a, l.K, n.rO.STRING, l.name).toString())] = o));
                 }
             } else if (l.repeat) {
                 if (null === s) continue;
@@ -267,7 +267,7 @@ class p {
                         case "scalar":
                             n = this.scalar(e, l.T, l.L, l.name);
                     }
-                    this.assert(void 0 !== n, l.name, s), t.push(n);
+                    (this.assert(void 0 !== n, l.name, s), t.push(n));
                 }
             } else
                 switch (l.kind) {
@@ -347,7 +347,7 @@ class p {
                         o = "too large or small";
                         break;
                     }
-                    return t == n.LN.FLOAT && f(i), i;
+                    return (t == n.LN.FLOAT && f(i), i);
                 case n.LN.INT32:
                 case n.LN.FIXED32:
                 case n.LN.SFIXED32:
@@ -365,7 +365,7 @@ class p {
                         void 0 === l)
                     )
                         break;
-                    return t == n.LN.UINT32 ? c(l) : u(l), l;
+                    return (t == n.LN.UINT32 ? c(l) : u(l), l);
                 case n.LN.INT64:
                 case n.LN.SFIXED64:
                 case n.LN.SINT64:
@@ -424,7 +424,7 @@ class h {
                         ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 })
                         : t,
                 a = this.field(n, i[n.localName], o);
-            l(void 0 !== a), (r[t.useProtoFieldName ? n.name : n.jsonName] = a);
+            (l(void 0 !== a), (r[t.useProtoFieldName ? n.name : n.jsonName] = a));
         }
         return r;
     }
@@ -437,14 +437,14 @@ class h {
                 case "scalar":
                     for (let [r, n] of Object.entries(t)) {
                         let t = this.scalar(e.V.T, n, e.name, !1, !0);
-                        l(void 0 !== t), (i[r.toString()] = t);
+                        (l(void 0 !== t), (i[r.toString()] = t));
                     }
                     break;
                 case "message":
                     let o = e.V.T();
                     for (let [n, a] of Object.entries(t)) {
                         let t = this.message(o, a, e.name, r);
-                        l(void 0 !== t), (i[n.toString()] = t);
+                        (l(void 0 !== t), (i[n.toString()] = t));
                     }
                     break;
                 case "enum":
@@ -452,7 +452,7 @@ class h {
                     for (let [n, o] of Object.entries(t)) {
                         l(void 0 === o || "number" == typeof o);
                         let t = this.enum(a, o, e.name, !1, !0, r.enumAsInteger);
-                        l(void 0 !== t), (i[n.toString()] = t);
+                        (l(void 0 !== t), (i[n.toString()] = t));
                     }
             }
             (r.emitDefaultValues || Object.keys(i).length > 0) && (n = i);
@@ -463,7 +463,7 @@ class h {
                 case "scalar":
                     for (let r = 0; r < t.length; r++) {
                         let n = this.scalar(e.T, t[r], e.name, e.opt, !0);
-                        l(void 0 !== n), i.push(n);
+                        (l(void 0 !== n), i.push(n));
                     }
                     break;
                 case "enum":
@@ -471,14 +471,14 @@ class h {
                     for (let n = 0; n < t.length; n++) {
                         l(void 0 === t[n] || "number" == typeof t[n]);
                         let a = this.enum(o, t[n], e.name, e.opt, !0, r.enumAsInteger);
-                        l(void 0 !== a), i.push(a);
+                        (l(void 0 !== a), i.push(a));
                     }
                     break;
                 case "message":
                     let a = e.T();
                     for (let n = 0; n < t.length; n++) {
                         let o = this.message(a, t[n], e.name, r);
-                        l(void 0 !== o), i.push(o);
+                        (l(void 0 !== o), i.push(o));
                     }
             }
             (r.emitDefaultValues || i.length > 0 || r.emitDefaultValues) && (n = i);
@@ -519,11 +519,11 @@ class h {
             case n.LN.SFIXED32:
             case n.LN.SINT32:
                 if (0 === t) return d ? 0 : void 0;
-                return u(t), t;
+                return (u(t), t);
             case n.LN.FIXED32:
             case n.LN.UINT32:
                 if (0 === t) return d ? 0 : void 0;
-                return c(t), t;
+                return (c(t), t);
             case n.LN.FLOAT:
                 f(t);
             case n.LN.DOUBLE:
@@ -534,10 +534,10 @@ class h {
                 return t;
             case n.LN.STRING:
                 if ("" === t) return d ? "" : void 0;
-                return l("string" == typeof t), t;
+                return (l("string" == typeof t), t);
             case n.LN.BOOL:
                 if (!1 === t) return !d && void 0;
-                return l("boolean" == typeof t), t;
+                return (l("boolean" == typeof t), t);
             case n.LN.UINT64:
             case n.LN.FIXED64:
                 l("number" == typeof t || "string" == typeof t || "bigint" == typeof t);
@@ -594,7 +594,7 @@ class y {
     read(e, t, r, i) {
         this.prepare();
         let o = void 0 === i ? e.len : e.pos + i;
-        for (; e.pos < o; ) {
+        for (; e.pos < o;) {
             let [i, o] = e.tag(),
                 a = this.fieldNoToField.get(i);
             if (!a) {
@@ -616,7 +616,7 @@ class y {
                         let t = s[u];
                         if (o == m.O0.LengthDelimited && c != n.LN.STRING && c != n.LN.BYTES) {
                             let r = e.uint32() + e.pos;
-                            for (; e.pos < r; ) t.push(this.scalar(e, c, f));
+                            for (; e.pos < r;) t.push(this.scalar(e, c, f));
                         } else t.push(this.scalar(e, c, f));
                     } else s[u] = this.scalar(e, c, f);
                     break;
@@ -638,7 +638,7 @@ class y {
             o,
             a = t.uint32(),
             s = t.pos + a;
-        for (; t.pos < s; ) {
+        for (; t.pos < s;) {
             let [a, s] = t.tag();
             switch (a) {
                 case 1:
@@ -731,8 +731,8 @@ class g {
             if (i.oneof) {
                 let t = e[i.oneof];
                 if (t.oneofKind !== u) continue;
-                (o = t[u]), (a = !0);
-            } else (o = e[u]), (a = !1);
+                ((o = t[u]), (a = !0));
+            } else ((o = e[u]), (a = !1));
             switch (i.kind) {
                 case "scalar":
                 case "enum":
@@ -755,7 +755,7 @@ class g {
         !1 !== i && (!0 === i ? m.f$.onWrite : i)(this.info.typeName, e, t);
     }
     mapEntry(e, t, r, i, o) {
-        e.tag(r.no, m.O0.LengthDelimited), e.fork();
+        (e.tag(r.no, m.O0.LengthDelimited), e.fork());
         let a = i;
         switch (r.K) {
             case n.LN.INT32:
@@ -766,7 +766,7 @@ class g {
                 a = Number.parseInt(i);
                 break;
             case n.LN.BOOL:
-                l("true" == i || "false" == i), (a = "true" == i);
+                (l("true" == i || "false" == i), (a = "true" == i));
         }
         switch ((this.scalar(e, r.K, 1, a, !0), r.V.kind)) {
             case "scalar":
@@ -789,7 +789,7 @@ class g {
     }
     packed(e, t, r, i) {
         if (!i.length) return;
-        l(t !== n.LN.BYTES && t !== n.LN.STRING), e.tag(r, m.O0.LengthDelimited), e.fork();
+        (l(t !== n.LN.BYTES && t !== n.LN.STRING), e.tag(r, m.O0.LengthDelimited), e.fork());
         let [, o] = this.scalarInfo(t);
         for (let t = 0; t < i.length; t++) e[o](i[t]);
         e.join();
@@ -804,46 +804,46 @@ class g {
                 r = "int32";
                 break;
             case n.LN.STRING:
-                (a = o || !t.length), (i = m.O0.LengthDelimited), (r = "string");
+                ((a = o || !t.length), (i = m.O0.LengthDelimited), (r = "string"));
                 break;
             case n.LN.BOOL:
-                (a = !1 === t), (r = "bool");
+                ((a = !1 === t), (r = "bool"));
                 break;
             case n.LN.UINT32:
                 r = "uint32";
                 break;
             case n.LN.DOUBLE:
-                (i = m.O0.Bit64), (r = "double");
+                ((i = m.O0.Bit64), (r = "double"));
                 break;
             case n.LN.FLOAT:
-                (i = m.O0.Bit32), (r = "float");
+                ((i = m.O0.Bit32), (r = "float"));
                 break;
             case n.LN.INT64:
-                (a = o || s.h.from(t).isZero()), (r = "int64");
+                ((a = o || s.h.from(t).isZero()), (r = "int64"));
                 break;
             case n.LN.UINT64:
-                (a = o || s.e.from(t).isZero()), (r = "uint64");
+                ((a = o || s.e.from(t).isZero()), (r = "uint64"));
                 break;
             case n.LN.FIXED64:
-                (a = o || s.e.from(t).isZero()), (i = m.O0.Bit64), (r = "fixed64");
+                ((a = o || s.e.from(t).isZero()), (i = m.O0.Bit64), (r = "fixed64"));
                 break;
             case n.LN.BYTES:
-                (a = o || !t.byteLength), (i = m.O0.LengthDelimited), (r = "bytes");
+                ((a = o || !t.byteLength), (i = m.O0.LengthDelimited), (r = "bytes"));
                 break;
             case n.LN.FIXED32:
-                (i = m.O0.Bit32), (r = "fixed32");
+                ((i = m.O0.Bit32), (r = "fixed32"));
                 break;
             case n.LN.SFIXED32:
-                (i = m.O0.Bit32), (r = "sfixed32");
+                ((i = m.O0.Bit32), (r = "sfixed32"));
                 break;
             case n.LN.SFIXED64:
-                (a = o || s.h.from(t).isZero()), (i = m.O0.Bit64), (r = "sfixed64");
+                ((a = o || s.h.from(t).isZero()), (i = m.O0.Bit64), (r = "sfixed64"));
                 break;
             case n.LN.SINT32:
                 r = "sint32";
                 break;
             case n.LN.SINT64:
-                (a = o || s.h.from(t).isZero()), (r = "sint64");
+                ((a = o || s.h.from(t).isZero()), (r = "sint64"));
         }
         return [i, r, o || a];
     }
@@ -873,7 +873,10 @@ var T = r(679314);
 let M = { writeUnknownFields: !0, writerFactory: () => new P() };
 class P {
     constructor(e) {
-        (this.stack = []), (this.textEncoder = null != e ? e : new TextEncoder()), (this.chunks = []), (this.buf = []);
+        ((this.stack = []),
+            (this.textEncoder = null != e ? e : new TextEncoder()),
+            (this.chunks = []),
+            (this.buf = []));
     }
     finish() {
         this.chunks.push(new Uint8Array(this.buf));
@@ -881,17 +884,17 @@ class P {
         for (let t = 0; t < this.chunks.length; t++) e += this.chunks[t].length;
         let t = new Uint8Array(e),
             r = 0;
-        for (let e = 0; e < this.chunks.length; e++) t.set(this.chunks[e], r), (r += this.chunks[e].length);
-        return (this.chunks = []), t;
+        for (let e = 0; e < this.chunks.length; e++) (t.set(this.chunks[e], r), (r += this.chunks[e].length));
+        return ((this.chunks = []), t);
     }
     fork() {
-        return this.stack.push({ chunks: this.chunks, buf: this.buf }), (this.chunks = []), (this.buf = []), this;
+        return (this.stack.push({ chunks: this.chunks, buf: this.buf }), (this.chunks = []), (this.buf = []), this);
     }
     join() {
         let e = this.finish(),
             t = this.stack.pop();
         if (!t) throw Error("invalid state, fork stack empty");
-        return (this.chunks = t.chunks), (this.buf = t.buf), this.uint32(e.byteLength), this.raw(e);
+        return ((this.chunks = t.chunks), (this.buf = t.buf), this.uint32(e.byteLength), this.raw(e));
     }
     tag(e, t) {
         return this.uint32(((e << 3) | t) >>> 0);
@@ -902,76 +905,76 @@ class P {
         );
     }
     uint32(e) {
-        for (c(e); e > 127; ) this.buf.push((127 & e) | 128), (e >>>= 7);
-        return this.buf.push(e), this;
+        for (c(e); e > 127;) (this.buf.push((127 & e) | 128), (e >>>= 7));
+        return (this.buf.push(e), this);
     }
     int32(e) {
-        return u(e), (0, T.f7)(e, this.buf), this;
+        return (u(e), (0, T.f7)(e, this.buf), this);
     }
     bool(e) {
-        return this.buf.push(+!!e), this;
+        return (this.buf.push(+!!e), this);
     }
     bytes(e) {
-        return this.uint32(e.byteLength), this.raw(e);
+        return (this.uint32(e.byteLength), this.raw(e));
     }
     string(e) {
         let t = this.textEncoder.encode(e);
-        return this.uint32(t.byteLength), this.raw(t);
+        return (this.uint32(t.byteLength), this.raw(t));
     }
     float(e) {
         f(e);
         let t = new Uint8Array(4);
-        return new DataView(t.buffer).setFloat32(0, e, !0), this.raw(t);
+        return (new DataView(t.buffer).setFloat32(0, e, !0), this.raw(t));
     }
     double(e) {
         let t = new Uint8Array(8);
-        return new DataView(t.buffer).setFloat64(0, e, !0), this.raw(t);
+        return (new DataView(t.buffer).setFloat64(0, e, !0), this.raw(t));
     }
     fixed32(e) {
         c(e);
         let t = new Uint8Array(4);
-        return new DataView(t.buffer).setUint32(0, e, !0), this.raw(t);
+        return (new DataView(t.buffer).setUint32(0, e, !0), this.raw(t));
     }
     sfixed32(e) {
         u(e);
         let t = new Uint8Array(4);
-        return new DataView(t.buffer).setInt32(0, e, !0), this.raw(t);
+        return (new DataView(t.buffer).setInt32(0, e, !0), this.raw(t));
     }
     sint32(e) {
-        return u(e), (e = ((e << 1) ^ (e >> 31)) >>> 0), (0, T.f7)(e, this.buf), this;
+        return (u(e), (e = ((e << 1) ^ (e >> 31)) >>> 0), (0, T.f7)(e, this.buf), this);
     }
     sfixed64(e) {
         let t = new Uint8Array(8),
             r = new DataView(t.buffer),
             n = s.h.from(e);
-        return r.setInt32(0, n.lo, !0), r.setInt32(4, n.hi, !0), this.raw(t);
+        return (r.setInt32(0, n.lo, !0), r.setInt32(4, n.hi, !0), this.raw(t));
     }
     fixed64(e) {
         let t = new Uint8Array(8),
             r = new DataView(t.buffer),
             n = s.e.from(e);
-        return r.setInt32(0, n.lo, !0), r.setInt32(4, n.hi, !0), this.raw(t);
+        return (r.setInt32(0, n.lo, !0), r.setInt32(4, n.hi, !0), this.raw(t));
     }
     int64(e) {
         let t = s.h.from(e);
-        return (0, T.cV)(t.lo, t.hi, this.buf), this;
+        return ((0, T.cV)(t.lo, t.hi, this.buf), this);
     }
     sint64(e) {
         let t = s.h.from(e),
             r = t.hi >> 31,
             n = (t.lo << 1) ^ r,
             i = ((t.hi << 1) | (t.lo >>> 31)) ^ r;
-        return (0, T.cV)(n, i, this.buf), this;
+        return ((0, T.cV)(n, i, this.buf), this);
     }
     uint64(e) {
         let t = s.e.from(e);
-        return (0, T.cV)(t.lo, t.hi, this.buf), this;
+        return ((0, T.cV)(t.lo, t.hi, this.buf), this);
     }
 }
 var A = r(638504);
 class I {
     constructor(e, t, r) {
-        (this.defaultCheckDepth = 16),
+        ((this.defaultCheckDepth = 16),
             (this.typeName = e),
             (this.fields = t.map(n.mS)),
             (this.options = null != r ? r : {}),
@@ -979,7 +982,7 @@ class I {
             (this.refJsonReader = new p(this)),
             (this.refJsonWriter = new h(this)),
             (this.refBinReader = new y(this)),
-            (this.refBinWriter = new g(this));
+            (this.refBinWriter = new g(this)));
     }
     create(e) {
         let t = (function (e) {
@@ -1003,11 +1006,11 @@ class I {
             }
             return t;
         })(this);
-        return void 0 !== e && (0, w.x)(this, t, e), t;
+        return (void 0 !== e && (0, w.x)(this, t, e), t);
     }
     clone(e) {
         let t = this.create();
-        return (0, w.x)(this, t, e), t;
+        return ((0, w.x)(this, t, e), t);
     }
     equals(e, t) {
         return (function (e, t, r) {
@@ -1073,7 +1076,7 @@ class I {
     internalJsonRead(e, t, r) {
         if (null !== e && "object" == typeof e && !Array.isArray(e)) {
             let n = null != r ? r : this.create();
-            return this.refJsonReader.read(e, n, t), n;
+            return (this.refJsonReader.read(e, n, t), n);
         }
         throw Error(`Unable to parse message ${this.typeName} from JSON ${(0, o.V)(e)}.`);
     }
@@ -1081,10 +1084,10 @@ class I {
         return this.refJsonWriter.write(e, t);
     }
     internalBinaryWrite(e, t, r) {
-        return this.refBinWriter.write(e, t, r), t;
+        return (this.refBinWriter.write(e, t, r), t);
     }
     internalBinaryRead(e, t, r, n) {
         let i = null != n ? n : this.create();
-        return this.refBinReader.read(e, i, r, t), i;
+        return (this.refBinReader.read(e, i, r, t), i);
     }
 }

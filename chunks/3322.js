@@ -23,7 +23,7 @@ function N(e) {
         { shouldShowPopover: x, markPopoverAsDismissed: _ } = (0, o.zO)(u && m.has(n));
     if (
         (r.useEffect(() => {
-            if (x) return g?.(!0), () => g?.(!1);
+            if (x) return (g?.(!0), () => g?.(!1));
         }, [x, g]),
         r.useLayoutEffect(() => {
             if (x && null != t.current)
@@ -32,21 +32,21 @@ function N(e) {
                     window.addEventListener("resize", e),
                     window.addEventListener("scroll", e, !0),
                     () => {
-                        null != h.current && (window.cancelAnimationFrame(h.current), (h.current = null)),
+                        (null != h.current && (window.cancelAnimationFrame(h.current), (h.current = null)),
                             window.removeEventListener("resize", e),
-                            window.removeEventListener("scroll", e, !0);
+                            window.removeEventListener("scroll", e, !0));
                     }
                 );
             function e() {
                 null == h.current &&
                     (h.current = window.requestAnimationFrame(() => {
-                        (h.current = null),
+                        ((h.current = null),
                             (function () {
                                 let e = t.current?.getBoundingClientRect();
                                 if (null == e) return;
                                 let n = p.current?.getBoundingClientRect().height ?? 0;
                                 v(window.innerHeight - e.top < n ? "bottom" : "top");
-                            })();
+                            })());
                     }));
             }
         }, [x, t]),

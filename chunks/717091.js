@@ -3,7 +3,7 @@ var n =
     function (e) {
         return e && e.__esModule ? e : { default: e };
     };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.GB = t.strict = t.casual = void 0),
     (t.parse = function (e, r, n) {
         return t.casual.parse(e, r, n);
@@ -12,7 +12,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         return t.casual.parseDate(e, r, n);
     }),
     (t.createCasualConfiguration = O),
-    (t.createConfiguration = A);
+    (t.createConfiguration = A));
 let a = n(r(223255)),
     i = n(r(435798)),
     s = n(r(243039)),
@@ -64,4 +64,4 @@ function A(e = !0, t = !1) {
         e,
     );
 }
-(t.casual = new P.Chrono(O(!1))), (t.strict = new P.Chrono(A(!0, !1))), (t.GB = new P.Chrono(A(!1, !0)));
+((t.casual = new P.Chrono(O(!1))), (t.strict = new P.Chrono(A(!0, !1))), (t.GB = new P.Chrono(A(!1, !0))));

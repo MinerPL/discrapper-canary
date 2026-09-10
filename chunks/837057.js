@@ -1,4 +1,4 @@
-a.d(t, {
+(a.d(t, {
     transitionToGlobalDiscovery: () =>
         function e(t) {
             let a = t.tab;
@@ -94,7 +94,7 @@ a.d(t, {
 }),
     a(323874),
     a(14289),
-    a(35956);
+    a(35956));
 var r = a(310419),
     l = a(965660),
     n = a(601193),

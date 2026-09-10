@@ -14,5 +14,5 @@ function o(e, t) {
                 : (0, i.jsx)(s.A, {})
             : (0, i.jsx)(e, { ...(n.passProps ? o : null) });
     }
-    return (o.displayName = `Authenticated(${e.displayName ?? e.name ?? "<Unknown>"})`), o;
+    return ((o.displayName = `Authenticated(${e.displayName ?? e.name ?? "<Unknown>"})`), o);
 }

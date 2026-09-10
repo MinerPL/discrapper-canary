@@ -11,7 +11,7 @@ class n {
     host;
     abi;
     constructor(e, a) {
-        (this.host = e), (this.abi = a);
+        ((this.host = e), (this.abi = a));
     }
     async loadGrammar(e) {
         if (!e.languageId)
@@ -57,7 +57,7 @@ class n {
         try {
             h = this.abi.arborium_rt_register_grammar(g, p, o, c, l, b, m, w, d);
         } finally {
-            p && this.host._free(p), c && this.host._free(c), b && this.host._free(b), w && this.host._free(w);
+            (p && this.host._free(p), c && this.host._free(c), b && this.host._free(b), w && this.host._free(w));
         }
         if (0 === h)
             throw new t.gT(
@@ -74,7 +74,7 @@ class i {
     languageId;
     #e = !1;
     constructor(e, a, s, t) {
-        (this.runtime = e), (this.id = a), (this.languagePtr = s), (this.languageId = t);
+        ((this.runtime = e), (this.id = a), (this.languagePtr = s), (this.languageId = t));
     }
     createSession() {
         this.#a();
@@ -94,7 +94,7 @@ class g {
     id;
     #s = !1;
     constructor(e, a) {
-        (this.grammar = e), (this.id = a);
+        ((this.grammar = e), (this.id = a));
     }
     setText(e) {
         this.#a();
@@ -171,7 +171,7 @@ class g {
         }
     }
     cancel() {
-        this.#a(), this.grammar.runtime.abi.arborium_rt_cancel(this.id);
+        (this.#a(), this.grammar.runtime.abi.arborium_rt_cancel(this.id));
     }
     free() {
         this.#s || (this.grammar.runtime.abi.arborium_rt_free_session(this.id), (this.#s = !0));
@@ -195,7 +195,7 @@ class g {
                 n.arborium_rt_free(o, c);
             }
         } finally {
-            r._free(i), r._free(g);
+            (r._free(i), r._free(g));
         }
     }
 }

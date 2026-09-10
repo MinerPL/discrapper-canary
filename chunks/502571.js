@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => l, getAttachmentImageLadderConfig: () => s });
+(n.r(t), n.d(t, { default: () => l, getAttachmentImageLadderConfig: () => s }));
 var i = n(945810);
 n(459830);
 let r = { enabled: !1, maxUpscale: 1.1, minSnapDownDpr: 2 },

@@ -1,4 +1,4 @@
-n.d(t, { lx: () => z, kY: () => q, TB: () => ee, Wv: () => $, q1: () => Z, nR: () => X }), n(938796);
+(n.d(t, { lx: () => z, kY: () => X, TB: () => ee, Wv: () => $, q1: () => q, nR: () => Z }), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(155718),
@@ -134,24 +134,24 @@ var w = n(287809),
     k = n(427262);
 n(970931);
 var F = n(228366),
-    V = n(280450);
-let B = {};
+    B = n(280450);
+let V = {};
 class H extends r.Ay.Store {
     initialize() {
-        this.waitFor(V.default);
+        this.waitFor(B.default);
     }
     static displayName = "RpcNotificationSettingsStore";
     areSlayerNotificationsSuppressed() {
-        for (let e in B) if (B[e] === V.default.getId()) return !0;
+        for (let e in V) if (V[e] === B.default.getId()) return !0;
         return !1;
     }
 }
 let j = new H(F.h, {
     RPC_APP_DISCONNECTED: function (e) {
-        delete B[e.socketId];
+        delete V[e.socketId];
     },
     SET_RPC_NOTIFICATION_SETTINGS: function (e) {
-        delete B[e.socketId], e.suppressNotifications && (B[e.socketId] = e.targetUserId);
+        (delete V[e.socketId], e.suppressNotifications && (V[e.socketId] = e.targetUserId));
     },
 });
 var W = n(652215);
@@ -214,7 +214,7 @@ function z(e, t) {
         return (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
-function q(e, t) {
+function X(e, t) {
     if (c.Ay.getChannelId(u.A.getGuildId()) !== t) return !1;
     let n = y.A.getChannel(t);
     e.type === W.lAJ.THREAD_STARTER_MESSAGE && (n = y.A.getChannel(n?.parent_id));
@@ -233,7 +233,7 @@ function q(e, t) {
         U.Ay.allowNoMessages(n)
     );
 }
-function Z(e, t) {
+function q(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = w.default.getCurrentUser(),
@@ -249,7 +249,7 @@ function Z(e, t) {
         ) && U.Ay.getNewForumThreadsCreated(t)
     );
 }
-function X(e) {
+function Z(e) {
     let { message: t, channel: n, reactor: i, includeSelectedChannel: r } = e,
         a = w.default.getCurrentUser(),
         s = w.default.getUser(t.author?.id);
@@ -315,10 +315,10 @@ function ee(e, t, n) {
     let d = t.content;
     if ((0, g.A)(t) && null == (d = x.A.stringify(t, e)))
         throw (
-            (new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
+            new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,
             }),
-            Error("failed to stringify system message"))
+            Error("failed to stringify system message")
         );
     let c = "sticker_items" in t ? t.sticker_items : "stickerItems" in t ? t.stickerItems : t.stickers,
         u = [];

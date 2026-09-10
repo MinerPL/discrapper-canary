@@ -232,7 +232,7 @@ function el(e) {
                                 case R.rV.GUILD:
                                     p(e.guild);
                             }
-                        c(!1), A.current?.();
+                        (c(!1), A.current?.());
                     }
                     (A.current?.(), o) ? e() : A.current?.();
                 }, [t, o]),
@@ -329,12 +329,12 @@ function ei(e) {
             isDiscoverable: q,
             shouldHideRoleSubscriptionCTA: ea,
             onOpenPremiumSettings: () => {
-                _(),
+                (_(),
                     W.default.track(O.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_page: et.page,
                         location_section: et.section,
                     }),
-                    (0, U.e)();
+                    (0, U.e)());
             },
         }),
         ed = z && ei && !ea && ((F && el) || !F),
@@ -360,7 +360,7 @@ function ei(e) {
                     _();
                     let e = x.id;
                     try {
-                        await A.A.joinGuild(e), A.A.transitionToGuildSync(e);
+                        (await A.A.joinGuild(e), A.A.transitionToGuildSync(e));
                     } catch {}
                 }
                 let t = !z && q;
@@ -420,7 +420,7 @@ function ei(e) {
                                 size: "sm",
                                 fullWidth: !0,
                                 onClick: function () {
-                                    _(),
+                                    (_(),
                                         v?.id != null &&
                                             A.A.transitionToGuildSync(
                                                 v.id,
@@ -430,7 +430,7 @@ function ei(e) {
                                                     ],
                                                 },
                                                 X.VV.ROLE_SUBSCRIPTIONS,
-                                            );
+                                            ));
                                 },
                             }),
                     ],

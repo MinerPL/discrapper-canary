@@ -25,7 +25,7 @@ function _(e) {
     };
 }
 function E(e) {
-    delete d[e], o === e && (o = null);
+    (delete d[e], o === e && (o = null));
 }
 function A(e) {
     let { guildId: t, request: n } = e;
@@ -61,13 +61,13 @@ class h extends i.Ay.Store {
 let I = new h(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guildJoinRequests: t } = e;
-        (c = !1),
+        ((c = !1),
             (u = {}),
             (d = {}),
             t.forEach((e) => {
                 let { guild_id: t } = e;
                 null != t && (d[t] = _(e));
-            });
+            }));
     },
     GUILD_JOIN_REQUEST_UPDATE: A,
     GUILD_JOIN_REQUEST_CREATE: A,
@@ -87,11 +87,11 @@ let I = new h(r.h, {
     },
     USER_JOIN_REQUEST_GUILDS_FETCH: function (e) {
         let { guilds: t } = e;
-        (c = !0),
+        ((c = !0),
             t.forEach((e) => {
                 let { id: t, name: n, features: i, icon: r, splash: a } = e;
                 u[t] = { id: t, name: n, features: i, icon: r, splash: a };
-            });
+            }));
     },
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
         let { form: t, guildId: n } = e;

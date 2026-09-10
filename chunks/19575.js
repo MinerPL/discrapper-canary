@@ -1,4 +1,4 @@
-n.d(t, { kw: () => W, Ay: () => z, _0: () => V }), n(321073);
+(n.d(t, { kw: () => W, Ay: () => z, _0: () => B }), n(321073));
 var i,
     r,
     a,
@@ -215,8 +215,8 @@ let b = new Set([
     x = /(\.[a-zA-Z0-9]+)%3A.+$/,
     k = /[^a-zA-Z0-9]/g,
     F = /\.[^.]*$/;
-var V = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
-function B(e) {
+var B = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
+function V(e) {
     try {
         let t = decodeURIComponent(e);
         return (t = (t = t.replace(G, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(w, "_");
@@ -231,14 +231,14 @@ async function H(e) {
     let t = await fetch(new Request(e, { method: "GET", mode: "cors" }));
     l()(200 === t.status, "Data fetch unsuccessful");
     let n = await t.arrayBuffer();
-    return l()(null != n, "Data is null"), n;
+    return (l()(null != n, "Data is null"), n);
 }
 async function j(e, t) {
     let n = await createImageBitmap(new Blob([e], { type: t }));
     try {
         let e = new OffscreenCanvas(n.width, n.height),
             t = e.getContext("2d");
-        l()(null != t, "Failed to acquire 2d context for image transcode"), t.drawImage(n, 0, 0);
+        (l()(null != t, "Failed to acquire 2d context for image transcode"), t.drawImage(n, 0, 0));
         let i = await e.convertToBlob({ type: "image/png" });
         return await i.arrayBuffer();
     } finally {
@@ -288,7 +288,7 @@ let $ = {
         requireModule(e) {
             if (D && v.hasOwnProperty(e) && null != v[e]) return v[e];
             let t = g.nativeModules.requireModule(e);
-            return D && (v[e] = t), t;
+            return (D && (v[e] = t), t);
         },
         ensureModule: (e) =>
             f.isPlatformEmbedded
@@ -306,7 +306,7 @@ let $ = {
             try {
                 e = this.requireModule("discord_overlay2");
             } catch (e) {}
-            e && e.reset && e.reset(),
+            (e && e.reset && e.reset(),
                 e &&
                     e.disconnectAllProcesses &&
                     e.destroyHostProcess &&
@@ -315,7 +315,7 @@ let $ = {
                 window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
                     !0 !== E.w.get(o.qx) &&
                     this.supportsFeature(T.BYE.USER_DATA_CACHE) &&
-                    g.userDataCache.cacheUserData(E.w.stringify());
+                    g.userDataCache.cacheUserData(E.w.stringify()));
         },
         inputEventRegister(e, t, n, i) {
             this.getDiscordUtils().inputEventRegister(
@@ -344,16 +344,16 @@ let $ = {
                     s = this.getDiscordUtils(),
                     l = e.map((e) => {
                         let t = ++a;
-                        return null != e.id && (y[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
+                        return (null != e.id && (y[t] = e.id), { ...e, cmdline: e.cmdLine, id: t });
                     }),
                     o = y;
                 function r(e) {
                     return n(e.map((e) => Y(e, o)));
                 }
-                null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
+                (null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
                     t && null != s.setObservedGamesCallback2
                         ? s.setObservedGamesCallback2(l, r)
-                        : s.setObservedGamesCallback(l, r);
+                        : s.setObservedGamesCallback(l, r));
             } catch (e) {}
         },
         setProcessObserverCollectExecutableFingerprint(e) {
@@ -441,7 +441,7 @@ let $ = {
         setBadge(e) {
             if ("darwin" === (0, f.getPlatformName)()) {
                 let t = "";
-                -1 === e ? (t = "\u2022") : e > 0 && (t = `${e}`), g.app.dock.setBadge(t);
+                (-1 === e ? (t = "\u2022") : e > 0 && (t = `${e}`), g.app.dock.setBadge(t));
             } else
                 "win32" === (0, f.getPlatformName)()
                     ? this.sendIPC(c.APP_BADGE_SET, e)
@@ -492,12 +492,12 @@ let $ = {
             f.isPlatformEmbedded && g.clipboard.copy(e);
         },
         async copyImage(e, t) {
-            l()(f.isPlatformEmbedded, "Copy image method called outside native app"),
-                l()("function" == typeof g.clipboard.copyImage, "Copy image not supported");
+            (l()(f.isPlatformEmbedded, "Copy image method called outside native app"),
+                l()("function" == typeof g.clipboard.copyImage, "Copy image not supported"));
             let n = await H(e),
                 i = (0, I.U)(e, t);
             if (null != i && N.has(i)) {
-                (n = await j(n, t ?? `image/${i}`)), g.clipboard.copyImage(m.from(n), "image.png");
+                ((n = await j(n, t ?? `image/${i}`)), g.clipboard.copyImage(m.from(n), "image.png"));
                 return;
             }
             let r = null != i && S.has(i) ? `image.${i}` : e;
@@ -518,7 +518,7 @@ let $ = {
             let a = p.A.toURLSafe(e);
             if (null == a) return "errored";
             let s = a.pathname.split("/").pop() ?? "unknown";
-            s = B(s);
+            s = V(s);
             let o = a.searchParams.get("format");
             if (null != o) {
                 let e = o.replace(k, "").toLowerCase();
@@ -550,7 +550,7 @@ let $ = {
             let n = p.A.toURLSafe(e);
             if (null == n) return null;
             let i = t ?? n.pathname.split("/").pop() ?? "unknown";
-            null == t && (i = B(i));
+            null == t && (i = V(i));
             let r = await H(e),
                 a = m.from(r),
                 s = await g.fileManager.saveWithDialog(a, i, void 0);
@@ -648,7 +648,7 @@ let $ = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5e3,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : window,
                 n = Date.now();
-            for (; Date.now() - n < e; ) {
+            for (; Date.now() - n < e;) {
                 if (this.isIPCReady()) return !0;
                 await new Promise((e) => t.requestAnimationFrame(e));
             }
@@ -658,10 +658,12 @@ let $ = {
             g.window.flashFrame(e);
         },
         webAuthnRegister: async (e) => (
-            await g.nativeModules.ensureModule("discord_webauthn"), await g.webAuthn.webAuthnRegister(e)
+            await g.nativeModules.ensureModule("discord_webauthn"),
+            await g.webAuthn.webAuthnRegister(e)
         ),
         webAuthnAuthenticate: async (e) => (
-            await g.nativeModules.ensureModule("discord_webauthn"), await g.webAuthn.webAuthnAuthenticate(e)
+            await g.nativeModules.ensureModule("discord_webauthn"),
+            await g.webAuthn.webAuthnAuthenticate(e)
         ),
         minimize(e) {
             g.window.minimize(e);
@@ -674,7 +676,7 @@ let $ = {
         },
         focus(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            t && (0, f.isWindows)() && this.minimize(null), g.window.focus(t, e);
+            (t && (0, f.isWindows)() && this.minimize(null), g.window.focus(t, e));
         },
         blur() {
             f.isPlatformEmbedded && null != g.window.blur ? g.window.blur() : window.blur();
@@ -693,7 +695,7 @@ let $ = {
         },
         async isAlwaysOnTop(e) {
             let t = !1;
-            return "function" == typeof g.window.isAlwaysOnTop && (t = await g.window.isAlwaysOnTop(e)), t;
+            return ("function" == typeof g.window.isAlwaysOnTop && (t = await g.window.isAlwaysOnTop(e)), t);
         },
         showInactive(e) {
             "function" == typeof g?.window?.showInactive && g.window.showInactive(e);
@@ -941,7 +943,7 @@ let $ = {
         GetWindowFullscreenTypeByPid(e, t, n) {
             let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
                 r = 0 !== e && null != i && null != t ? i(e, t) : null;
-            return -1 === r && (r = null), r ?? n ?? A.aI.UNKNOWN;
+            return (-1 === r && (r = null), r ?? n ?? A.aI.UNKNOWN);
         },
         GetWindowFullscreenTypeExtraByPid(e, t) {
             let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();

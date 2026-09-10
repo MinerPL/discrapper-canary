@@ -1,4 +1,4 @@
-n.d(t, { ih: () => T }), n(321073);
+(n.d(t, { ih: () => T }), n(321073));
 var i = n(852015),
     r = n(144367),
     a = n(428420),
@@ -31,7 +31,7 @@ class c extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -72,7 +72,7 @@ class c extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
+        ("" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.pill && t.tag(2, i.O0.LengthDelimited).string(e.pill),
             "" !== e.body && t.tag(3, i.O0.LengthDelimited).string(e.body),
             "" !== e.imageLink && t.tag(4, i.O0.LengthDelimited).string(e.imageLink),
@@ -83,9 +83,9 @@ class c extends s.G {
                 d.X.internalBinaryWrite(e.pillLocalized, t.tag(7, i.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
                 d.X.internalBinaryWrite(e.bodyLocalized, t.tag(8, i.O0.LengthDelimited).fork(), n).join(),
-            e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(9, i.O0.LengthDelimited).fork(), n).join();
+            e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(9, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let u = new c();
@@ -124,7 +124,7 @@ class _ extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -151,7 +151,7 @@ class _ extends s.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -173,7 +173,7 @@ class _ extends s.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -195,7 +195,7 @@ class _ extends s.G {
             r = t.pos + i,
             a,
             s;
-        for (; t.pos < r; ) {
+        for (; t.pos < r;) {
             let [e, n] = t.tag();
             switch (e) {
                 case 1:
@@ -238,7 +238,7 @@ class _ extends s.G {
                 .string(e.heroArtVideoSubtitleLinks[n])
                 .join();
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let E = new _();
@@ -261,7 +261,7 @@ class A extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -284,11 +284,11 @@ class A extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.link && t.tag(1, i.O0.LengthDelimited).string(e.link),
+        ("" !== e.link && t.tag(1, i.O0.LengthDelimited).string(e.link),
             "" !== e.locale && t.tag(2, i.O0.LengthDelimited).string(e.locale),
-            !1 !== e.isDefault && t.tag(3, i.O0.Varint).bool(e.isDefault);
+            !1 !== e.isDefault && t.tag(3, i.O0.Varint).bool(e.isDefault));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let h = new A();
@@ -311,7 +311,7 @@ class I extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -334,13 +334,13 @@ class I extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.disclaimerText && t.tag(1, i.O0.LengthDelimited).string(e.disclaimerText),
+        ("" !== e.disclaimerText && t.tag(1, i.O0.LengthDelimited).string(e.disclaimerText),
             e.disclaimerHelpArticle &&
                 o.O.internalBinaryWrite(e.disclaimerHelpArticle, t.tag(2, i.O0.LengthDelimited).fork(), n).join(),
             e.disclaimerTextLocalized &&
-                d.X.internalBinaryWrite(e.disclaimerTextLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join();
+                d.X.internalBinaryWrite(e.disclaimerTextLocalized, t.tag(3, i.O0.LengthDelimited).fork(), n).join());
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let f = new I();
@@ -392,7 +392,7 @@ class p extends s.G {
     internalBinaryRead(e, t, n, r) {
         let a = r ?? this.create(),
             s = e.pos + t;
-        for (; e.pos < s; ) {
+        for (; e.pos < s;) {
             let [t, r] = e.tag();
             switch (t) {
                 case 1:
@@ -463,20 +463,20 @@ class p extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
+        ("" !== e.header && t.tag(1, i.O0.LengthDelimited).string(e.header),
             "" !== e.subheader && t.tag(2, i.O0.LengthDelimited).string(e.subheader),
             "" !== e.videoLink && t.tag(3, i.O0.LengthDelimited).string(e.videoLink),
-            "" !== e.helpArticleId && t.tag(4, i.O0.LengthDelimited).string(e.helpArticleId);
+            "" !== e.helpArticleId && t.tag(4, i.O0.LengthDelimited).string(e.helpArticleId));
         for (let r = 0; r < e.featureCards.length; r++)
             u.internalBinaryWrite(e.featureCards[r], t.tag(5, i.O0.LengthDelimited).fork(), n).join();
-        e.button && l.$.internalBinaryWrite(e.button, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
+        (e.button && l.$.internalBinaryWrite(e.button, t.tag(6, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.heroArtVideoLinkLightTheme && t.tag(8, i.O0.LengthDelimited).string(e.heroArtVideoLinkLightTheme),
             "" !== e.heroArtImageLinkDarkTheme && t.tag(9, i.O0.LengthDelimited).string(e.heroArtImageLinkDarkTheme),
             "" !== e.heroArtImageLinkLightTheme && t.tag(10, i.O0.LengthDelimited).string(e.heroArtImageLinkLightTheme),
-            "" !== e.modalTopPill && t.tag(11, i.O0.LengthDelimited).string(e.modalTopPill);
+            "" !== e.modalTopPill && t.tag(11, i.O0.LengthDelimited).string(e.modalTopPill));
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++)
             h.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.O0.LengthDelimited).fork(), n).join();
-        e.storage && E.internalBinaryWrite(e.storage, t.tag(14, i.O0.LengthDelimited).fork(), n).join(),
+        (e.storage && E.internalBinaryWrite(e.storage, t.tag(14, i.O0.LengthDelimited).fork(), n).join(),
             e.disclaimer && f.internalBinaryWrite(e.disclaimer, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
             e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(18, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
@@ -486,9 +486,9 @@ class p extends s.G {
             e.modalTopPillLocalized &&
                 d.X.internalBinaryWrite(e.modalTopPillLocalized, t.tag(21, i.O0.LengthDelimited).fork(), n).join(),
             "" !== e.dismissKey && t.tag(7, i.O0.LengthDelimited).string(e.dismissKey),
-            "" !== e.body && t.tag(12, i.O0.LengthDelimited).string(e.body);
+            "" !== e.body && t.tag(12, i.O0.LengthDelimited).string(e.body));
         let r = n.writeUnknownFields;
-        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+        return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
 let T = new p();

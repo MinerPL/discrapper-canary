@@ -355,12 +355,12 @@ function b(e) {
     }, [i, b]);
     let N = {
             applyAnimation: function () {
-                (O.current = c(f, A)), w((e) => e + 1);
+                ((O.current = c(f, A)), w((e) => e + 1));
             },
             idleAnimationState: i,
             isChanging: S,
             resetAnimation: function () {
-                L(!1), D(!0), w(-1), k(b);
+                (L(!1), D(!0), w(-1), k(b));
             },
             versionKey: p,
         },

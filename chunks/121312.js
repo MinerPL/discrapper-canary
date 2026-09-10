@@ -42,9 +42,9 @@ function a(e) {
     }
     return i[e];
 }
-(r.keys = function () {
+((r.keys = function () {
     return Object.keys(i);
 }),
     (r.resolve = a),
     (e.exports = r),
-    (r.id = 121312);
+    (r.id = 121312));

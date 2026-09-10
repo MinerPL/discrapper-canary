@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => N }), n(321073);
+(n.d(t, { A: () => N }), n(321073));
 var a,
     s = n(435558),
     l = n.n(s),
@@ -13,7 +13,7 @@ class E extends _.A {
     widgets;
     version;
     constructor(e) {
-        super(), (this.version = Number(e.version) ?? 0), (this.id = e.id || ""), (this.widgets = e.widgets || []);
+        (super(), (this.version = Number(e.version) ?? 0), (this.id = e.id || ""), (this.widgets = e.widgets || []));
     }
 }
 class A extends _.A {
@@ -29,7 +29,7 @@ class A extends _.A {
     opacity;
     meta;
     constructor(e) {
-        super(), (this.id = e.id || ""), (this.layoutId = e.layoutId || ""), (this.type = e.type);
+        (super(), (this.id = e.id || ""), (this.layoutId = e.layoutId || ""), (this.type = e.type));
         const t = e.anchor ?? {},
             n = e.size ?? {};
         let i = "number" == typeof t.top ? t.top : void 0,
@@ -37,7 +37,7 @@ class A extends _.A {
             a = "number" == typeof t.left ? t.left : void 0,
             s = "number" == typeof t.right ? t.right : void 0;
         const l = null != i && null != r && "auto" === n.height;
-        l || (null != r ? (i = void 0) : (r = void 0)),
+        (l || (null != r ? (i = void 0) : (r = void 0)),
             (null != a && null != s && "auto" === n.width) || (null != s ? (a = void 0) : (s = void 0)),
             null == i && null == r && (i = 0),
             null == a && null == s && (a = 0),
@@ -48,7 +48,7 @@ class A extends _.A {
             (this.zIndex = e.zIndex || 0),
             (this.opacity = e.opacity ?? 1),
             (this.meta = { ...e.meta }),
-            null != e.showExtrasHintTimestamp && (this.showExtrasHintTimestamp = e.showExtrasHintTimestamp);
+            null != e.showExtrasHintTimestamp && (this.showExtrasHintTimestamp = e.showExtrasHintTimestamp));
     }
 }
 var h = n(5463),
@@ -276,7 +276,7 @@ class S extends d.Ay.PersistedStore {
                                 pinned: !0,
                                 zIndex: 0,
                             };
-                        return i.push([s.id, s]), s.id;
+                        return (i.push([s.id, s]), s.id);
                     });
                 return { layouts: [[p, { id: p, widgets: r }]], widgets: i };
             }
@@ -327,11 +327,11 @@ class S extends d.Ay.PersistedStore {
             return {
                 layouts: t.reduce((e, t) => {
                     let [n, i] = t;
-                    return (e[n] = i), e;
+                    return ((e[n] = i), e);
                 }, {}),
                 widgets: n.reduce((e, t) => {
                     let [n, i] = t;
-                    return (e[n] = i), e;
+                    return ((e[n] = i), e);
                 }, {}),
             };
         },
@@ -349,7 +349,7 @@ class S extends d.Ay.PersistedStore {
         if (null != e && null != e.layouts && null != e.widgets) {
             var t, n;
             let a, s;
-            (t = e.layouts),
+            ((t = e.layouts),
                 (a = {}),
                 l().forEach(t, (e, t) => {
                     a[t] = new E(e);
@@ -360,11 +360,11 @@ class S extends d.Ay.PersistedStore {
                 l().forEach(n, (e, t) => {
                     s[t] = new A(e);
                 }),
-                (r = s);
-        } else (i = {}), (r = {});
+                (r = s));
+        } else ((i = {}), (r = {}));
         let a = !1,
             s = [];
-        l().forEach(T, (e, t) => {
+        (l().forEach(T, (e, t) => {
             e.layoutPolicy === I.REQUIRED && s.push(t);
         }),
             l().forEach(i, (e, t) => {
@@ -377,9 +377,9 @@ class S extends d.Ay.PersistedStore {
                     let d = (0, o.A)(),
                         c = g(i);
                     if (null == c) return;
-                    (s = new A({ ...c, type: i, id: d, layoutId: t, zIndex: n.length })),
+                    ((s = new A({ ...c, type: i, id: d, layoutId: t, zIndex: n.length })),
                         n.push(s),
-                        (r = { ...r, [d]: s });
+                        (r = { ...r, [d]: s }));
                 }
                 l &&
                     ((e = e.set(
@@ -395,7 +395,7 @@ class S extends d.Ay.PersistedStore {
                 let n = i[e.layoutId];
                 (null == n || 0 > n.widgets.indexOf(t)) && ((r = { ...r }), delete r[t], (a = !0));
             }),
-            a && (this.persist(), this.emitChange());
+            a && (this.persist(), this.emitChange()));
     }
     getState() {
         return { layouts: i, widgets: r };
@@ -418,7 +418,7 @@ class S extends d.Ay.PersistedStore {
             ? []
             : t.widgets.reduce((e, t) => {
                   let n = this.getWidget(t);
-                  return null != n && e.push(n), e;
+                  return (null != n && e.push(n), e);
               }, []);
     }
     getAllUnpinnedPinnedWidgets(e) {
@@ -479,7 +479,7 @@ let N = new S(u.h, {
         let { layoutId: t, widgets: n, version: a, defaultResolution: s } = e;
         if (null != i[t] && i[t].version === a) return !1;
         let l = [];
-        n.forEach((e, t) => {
+        (n.forEach((e, t) => {
             let n = (function (e) {
                     let t = i[p];
                     if (null != t)
@@ -490,21 +490,21 @@ let N = new S(u.h, {
                     return null;
                 })(e.type),
                 a = { ...e, zIndex: t };
-            "" === a.id && (a.id = (0, o.A)()),
+            ("" === a.id && (a.id = (0, o.A)()),
                 null != n &&
                     ((a.pinned = n.pinned),
                     -1 !== n.anchor.left && (a.anchor = (0, h.NO)(n.anchor, s)),
                     -1 !== n.size.width && (a.size = (0, h.R9)(n.size, s))),
                 (r = { ...r, [a.id]: new A(a) }),
-                l.push(a.id);
+                l.push(a.id));
         }),
-            (i = { ...i, [t]: new E({ id: t, widgets: l, version: a }) });
+            (i = { ...i, [t]: new E({ id: t, widgets: l, version: a }) }));
     },
     LAYOUT_SET_PINNED: function (e) {
         let { widgetId: t, pinned: n } = e;
         return m(t, (e, t) => {
             var i, a;
-            (i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) });
+            ((i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) }));
         });
     },
     LAYOUT_UPDATE_WIDGET: function (e) {
@@ -548,7 +548,7 @@ let N = new S(u.h, {
                 i.push(i.splice(a, 1)[0]);
                 for (let e = 0; e < i.length; e++) {
                     var s, l;
-                    (s = i[e]), (l = e), (r = { ...r, [s.id]: s.set("zIndex", l) });
+                    ((s = i[e]), (l = e), (r = { ...r, [s.id]: s.set("zIndex", l) }));
                 }
                 return !0;
             })(t, e.id),
@@ -556,25 +556,25 @@ let N = new S(u.h, {
     },
     LAYOUT_DELETE_WIDGET: function (e) {
         let { widgetId: t } = e;
-        (r = { ...r }),
+        ((r = { ...r }),
             delete r[t],
             l().forEach(i, (e, n) => {
                 if (n === p) return;
                 let r = e.widgets.indexOf(t);
                 if (r >= 0) {
                     let t = [...e.widgets];
-                    t.splice(r, 1), (i = { ...i, [n]: e.set("widgets", t) });
+                    (t.splice(r, 1), (i = { ...i, [n]: e.set("widgets", t) }));
                 }
-            });
+            }));
     },
     LAYOUT_DELETE_ALL_WIDGETS: function (e) {
         let { layoutId: t } = e,
             n = i[t];
         if (null == n) return !1;
-        n.widgets.forEach((e) => {
-            (r = { ...r }), delete r[e];
+        (n.widgets.forEach((e) => {
+            ((r = { ...r }), delete r[e]);
         }),
-            (i = { ...i, [n.id]: n.set("widgets", []) });
+            (i = { ...i, [n.id]: n.set("widgets", []) }));
     },
     LAYOUT_CREATE_WIDGETS: function (e) {
         let { widgetConfigs: t } = e;
@@ -582,7 +582,7 @@ let N = new S(u.h, {
             let t = new A(e),
                 n = i[t.layoutId];
             if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
-            (t = t.set("zIndex", n.widgets.length)), (r = { ...r, [t.id]: t });
+            ((t = t.set("zIndex", n.widgets.length)), (r = { ...r, [t.id]: t }));
             let a = [...n.widgets, t.id];
             i = { ...i, [n.id]: n.set("widgets", a) };
         });
@@ -591,7 +591,7 @@ let N = new S(u.h, {
         let { widgetId: t, meta: n } = e;
         return m(t, (e, t) => {
             var i, a;
-            (i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) });
+            ((i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) }));
         });
     },
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: function (e) {

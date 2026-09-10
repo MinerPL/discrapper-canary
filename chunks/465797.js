@@ -12,7 +12,7 @@ var s = n(17928),
 class h extends s.Ay.Store {
     static displayName = "CloudSyncStore";
     initialize() {
-        this.waitFor(c.A, d.Ay), _.isPlatformEmbedded && E.T(), (i = {}), (r = new Set()), (a = []);
+        (this.waitFor(c.A, d.Ay), _.isPlatformEmbedded && E.T(), (i = {}), (r = new Set()), (a = []));
     }
     getState(e, t) {
         return i[(0, u.gW)(e, t)];
@@ -35,17 +35,17 @@ let I = new h(l.h, {
     GAME_CLOUD_SYNC_COMPLETE: function (e) {
         let { applicationId: t, branchId: n } = e,
             a = (0, u.gW)(t, n);
-        return r.delete(a), (i[a] = { type: A.VX0.DONE, timestamp: Date.now() }), !0;
+        return (r.delete(a), (i[a] = { type: A.VX0.DONE, timestamp: Date.now() }), !0);
     },
     GAME_CLOUD_SYNC_CONFLICT: function (e) {
         let { applicationId: t, branchId: n, next: a, remote: s } = e,
             l = (0, u.gW)(t, n);
-        (i[l] = { type: A.VX0.CONFLICT, next: a, remote: s }), r.delete(l);
+        ((i[l] = { type: A.VX0.CONFLICT, next: a, remote: s }), r.delete(l));
     },
     GAME_CLOUD_SYNC_ERROR: function (e) {
         let { applicationId: t, branchId: n } = e,
             a = (0, u.gW)(t, n);
-        (i[a] = { type: A.VX0.ERROR }), r.delete(a);
+        ((i[a] = { type: A.VX0.ERROR }), r.delete(a));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = d.Ay.getRunningDiscordApplicationIds();
@@ -58,6 +58,6 @@ let I = new h(l.h, {
                     } catch (e) {}
                 });
         }
-        return (a = e), !1;
+        return ((a = e), !1);
     },
 });

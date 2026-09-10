@@ -87,7 +87,9 @@ let W = { skuId: "None" },
                         n = t.get(s.skuId),
                         a = null != l ? (0, k.gA)(l) : (0, k.G0)(n),
                         r = n?.isCategoryReward ?? !1;
-                    return a ? i.premium_purchase.push(s) : null != l ? i.purchase.push(s) : r || i.preview.push(s), i;
+                    return (
+                        a ? i.premium_purchase.push(s) : null != l ? i.purchase.push(s) : r || i.preview.push(s), i
+                    );
                 },
                 { purchase: [], premium_purchase: [], preview: [] },
             );
@@ -239,12 +241,12 @@ function et(e) {
         D = void 0 === E ? _?.skuId === f?.skuId : _?.skuId === E?.skuId,
         L = (0, n.useCallback)(
             (e) => {
-                A(),
+                (A(),
                     (0, v.Cz)({
                         analyticsLocations: u,
                         analyticsSource: o.A.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e,
-                    });
+                    }));
             },
             [u, A],
         );
@@ -277,7 +279,7 @@ function et(e) {
                               variant: "primary",
                               text: w.intl.string(w.t.Jh8fJz),
                               onClick: function () {
-                                  (0, x.p)({ guildId: C, nameplate: _ }), A();
+                                  ((0, x.p)({ guildId: C, nameplate: _ }), A());
                               },
                               disabled: D,
                           })

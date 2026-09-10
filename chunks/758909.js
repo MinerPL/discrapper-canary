@@ -10,7 +10,7 @@ var n = a(477900),
 function d(t) {
     let { onClose: i, guildId: a, ...d } = t,
         p = s.useCallback(() => {
-            (0, l.Dr)(r.M.EMPTY_GAME_SERVER_TAB), i(), (0, o.u)(a);
+            ((0, l.Dr)(r.M.EMPTY_GAME_SERVER_TAB), i(), (0, o.u)(a));
         }, [i, a]);
     return (0, n.jsx)(e.Modal, {
         title: u.intl.string(c.default["6/Uhx+"]),

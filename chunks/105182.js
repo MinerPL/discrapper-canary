@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { collectiblesCollection: () => j, playgroundConfig: () => I });
+(a.r(t), a.d(t, { collectiblesCollection: () => j, playgroundConfig: () => I }));
 var o = a(34188),
     l = a(477900),
     s = a(582128),
@@ -216,7 +216,7 @@ let j = {
                             let [e, t] = s.useState("home"),
                                 a = s.useCallback(
                                     (e, a) => () => {
-                                        window.history.pushState(null, "", a), t(e);
+                                        (window.history.pushState(null, "", a), t(e));
                                     },
                                     [],
                                 ),

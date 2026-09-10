@@ -422,7 +422,7 @@ e.exports = function (e) {
             if (-1 === n) throw Error("can not find mode to replace");
             e.contains.splice(n, 1, a);
         };
-    Object.assign(k.keywords, G), k.exports.PARAMS_CONTAINS.push(Y);
+    (Object.assign(k.keywords, G), k.exports.PARAMS_CONTAINS.push(Y));
     let H = k.contains.find((e) => "attr" === e.scope),
         q = Object.assign({}, H, { match: P.concat(t, P.lookahead(/\s*\?:/)) });
     return (

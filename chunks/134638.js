@@ -118,21 +118,25 @@ function R(e) {
             guildForIcon: $,
         } = (function (e) {
             let { skuId: t } = e;
-            return (0, r.cf)([a.A, S.A, f.A, E.A], () => {
-                let e = S.A.get(t);
-                if (null == e) return {};
-                let n = e.productLine;
-                if (n === v.EZt.PREMIUM) return {};
-                let l = a.A.getApplication(e.applicationId);
-                if (null == l) return {};
-                if (n === v.EZt.GUILD_ROLE) {
-                    let e = E.A.getGuildId(),
-                        t = f.A.getGuild(e);
-                    return null != t ? { header: t.name, guildForIcon: t } : {};
-                }
-                let i = y.Ay.getApplicationIconURL({ id: l.id, icon: l.icon });
-                return { header: l.name, headerIconSrc: i };
-            }, [t]);
+            return (0, r.cf)(
+                [a.A, S.A, f.A, E.A],
+                () => {
+                    let e = S.A.get(t);
+                    if (null == e) return {};
+                    let n = e.productLine;
+                    if (n === v.EZt.PREMIUM) return {};
+                    let l = a.A.getApplication(e.applicationId);
+                    if (null == l) return {};
+                    if (n === v.EZt.GUILD_ROLE) {
+                        let e = E.A.getGuildId(),
+                            t = f.A.getGuild(e);
+                        return null != t ? { header: t.name, guildForIcon: t } : {};
+                    }
+                    let i = y.Ay.getApplicationIconURL({ id: l.id, icon: l.icon });
+                    return { header: l.name, headerIconSrc: i };
+                },
+                [t],
+            );
         })({ skuId: c.skuId }),
         J = null != $ ? (0, l.jsx)(m.Ay, { guild: $, size: m.Ay.Sizes.SMOL }) : void 0,
         { premiumGroupDiscountOffer: X } = (0, o.i)(),
@@ -167,35 +171,35 @@ function R(e) {
                         x = S,
                         b = o?.discountOffer;
                     if (m)
-                        (y = (0, h.O7)(n, { amount: f, currency: l.currency })),
-                            (x = (0, P.ib)(l.currency, { includeNowSuffix: !0 }));
+                        ((y = (0, h.O7)(n, { amount: f, currency: l.currency })),
+                            (x = (0, P.ib)(l.currency, { includeNowSuffix: !0 })));
                     else if (d) {
                         if (((x = E), n.interval === _.WT.YEAR && (0, I.xq)(n.id))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            (y = null != e ? (0, A.$g)(e * u, l.currency) : null), (v = !0);
+                            ((y = null != e ? (0, A.$g)(e * u, l.currency) : null), (v = !0));
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
                             let t = (0, A.$g)(f - e, l.currency);
-                            (x = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
+                            ((x = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
                                 (y = T.intl.format(N.default.JsSin7, {
                                     priceRate: (0, A.CE)(E, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
-                                }));
+                                })));
                         }
                     } else if ((0, I.xq)(n.id) && null != b) {
                         let e = (0, p.pg)(l, n.id);
                         if ((0, C.Ro)(l, b.discount.id) && null != e) {
                             let t = (0, A.$g)(f - e, l.currency);
-                            (x = T.intl.format(T.t.hXcaLT, { price: t })),
+                            ((x = T.intl.format(T.t.hXcaLT, { price: t })),
                                 (g = E),
                                 (y = (0, p.hm)(b)
                                     ? T.intl.format(T.t.VZ8Tvh, { regularPrice: E })
                                     : T.intl.format(N.default.JsSin7, {
                                           priceRate: S,
                                           intervalCount: b.discount.intervalCount,
-                                      }));
+                                      })));
                         }
                     }
                     return { price: x, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: v };

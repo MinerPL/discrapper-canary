@@ -11,7 +11,7 @@ function a(e) {
               className: r.n,
               href: n,
               onClick: (e) => {
-                  e.stopPropagation(), s.h({ href: n }, e);
+                  (e.stopPropagation(), s.h({ href: n }, e));
               },
               target: "_blank",
               rel: "noopener noreferrer",

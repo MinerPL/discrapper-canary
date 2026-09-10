@@ -56,30 +56,30 @@ let C = function (t) {
         C = r.useRef(0),
         E = r.useRef(0);
     function M(t, e) {
-        u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
+        (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STEP, {
             subscription_id: n,
             from_step: p[t],
             to_step: e,
             step_duration_ms: Date.now() - E.current,
             flow_duration_ms: Date.now() - C.current,
         }),
-            (E.current = Date.now());
+            (E.current = Date.now()));
     }
     async function R() {
-        M(c, null), await o();
+        (M(c, null), await o());
     }
     async function T() {
-        _(!0),
+        (_(!0),
             (await (0, l.oO)(n, e.id)).ok &&
                 (u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_COMPLETED, { subscription_id: n }), o()),
-            _(!1);
+            _(!1));
     }
     switch (
         ((0, a.Ay)(() => {
             let t = Date.now();
-            (C.current = t),
+            ((C.current = t),
                 (E.current = t),
-                u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: n });
+                u.default.track(f.HAw.PREMIUM_GROUP_MEMBER_CANCELLATION_STARTED, { subscription_id: n }));
         }),
         c)
     ) {
@@ -87,7 +87,7 @@ let C = function (t) {
             return (0, i.jsx)(P, {
                 ...s,
                 onNext: function () {
-                    M(c, p[2]), d(2);
+                    (M(c, p[2]), d(2));
                 },
                 currentUser: e,
                 onClose: R,

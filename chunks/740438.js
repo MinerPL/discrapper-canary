@@ -54,7 +54,7 @@ function D(n) {
                         (0, i.jsx)(n, {
                             ...e,
                             onConfirm: () => {
-                                e.onClose(), (0, M.fv)(s.id);
+                                (e.onClose(), (0, M.fv)(s.id));
                             },
                             channel: s,
                         });

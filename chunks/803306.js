@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         acceptAgreements: () => f,
         fetchCurrentUser: () => I,
@@ -8,7 +8,7 @@ n.r(t),
         insertStaticUser: () => m,
         setFlag: () => p,
     }),
-    n(938796);
+    n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(239947),
@@ -70,7 +70,7 @@ function T(e) {
           );
 }
 function m(e) {
-    return l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id);
+    return (l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id));
 }
 async function g(e) {
     let {
@@ -102,15 +102,15 @@ async function g(e) {
                 signal: u,
                 rejectWithError: !0,
             });
-        _?.(h.body, a),
+        (_?.(h.body, a),
             l.h.dispatch({ type: "USER_UPDATE", user: h.body.user }),
             l.h.dispatch({ type: "USER_PROFILE_FETCH_SUCCESS", userProfile: h.body, fetchStartedAt: I, guildId: a }),
             null != a &&
                 null != h.body.guild_member &&
-                l.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: a, guildMember: h.body.guild_member });
+                l.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: a, guildMember: h.body.guild_member }));
     } catch (t) {
         throw (
-            (null != t && t?.body != null && h.warn(`fetchProfile error: ${t.body.code} - ${t.body.message}`),
+            null != t && t?.body != null && h.warn(`fetchProfile error: ${t.body.code} - ${t.body.message}`),
             l.h.dispatch({
                 type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: new o.LG(t),
@@ -118,7 +118,7 @@ async function g(e) {
                 userId: e,
                 guildId: a,
             }),
-            t)
+            t
         );
     }
 }
@@ -134,9 +134,9 @@ async function S(e, t) {
         l.h.dispatch({ type: "MUTUAL_FRIENDS_FETCH_SUCCESS", userId: e, mutualFriends: n.body });
     } catch (t) {
         throw (
-            (t?.body != null && h.warn(`fetchMutualFriends error: ${t.body.code} - ${t.body.message}`),
+            t?.body != null && h.warn(`fetchMutualFriends error: ${t.body.code} - ${t.body.message}`),
             l.h.dispatch({ type: "MUTUAL_FRIENDS_FETCH_FAILURE", userId: e }),
-            t)
+            t
         );
     }
 }

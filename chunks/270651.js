@@ -1,7 +1,7 @@
 r.d(t, { p: () => l, Z: () => u });
 class n {
     constructor(e) {
-        (this.keyMap = new Map()), (this.firstKey = null), (this.lastKey = null), (this.iterable = e);
+        ((this.keyMap = new Map()), (this.firstKey = null), (this.lastKey = null), (this.iterable = e));
         let t = (e) => {
             if ((this.keyMap.set(e.key, e), e.childNodes && "section" === e.type)) for (let r of e.childNodes) t(r);
         };
@@ -10,11 +10,11 @@ class n {
             n = 0,
             i = 0;
         for (let [e, t] of this.keyMap)
-            r ? ((r.nextKey = e), (t.prevKey = r.key)) : ((this.firstKey = e), (t.prevKey = void 0)),
+            (r ? ((r.nextKey = e), (t.prevKey = r.key)) : ((this.firstKey = e), (t.prevKey = void 0)),
                 "item" === t.type && (t.index = n++),
                 ("section" === t.type || "item" === t.type) && i++,
-                ((r = t).nextKey = void 0);
-        (this._size = i), (this.lastKey = r?.key ?? null);
+                ((r = t).nextKey = void 0));
+        ((this._size = i), (this.lastKey = r?.key ?? null));
     }
     *[Symbol.iterator]() {
         yield* this.iterable;
@@ -66,12 +66,12 @@ function l(e) {
         ),
         p = (0, a.G)(e, f, d),
         h = (0, s.useMemo)(() => new (0, o.Y)(p, l, { layoutDelegate: r }), [p, l, r]);
-    return c(p, h), { collection: p, disabledKeys: u, selectionManager: h };
+    return (c(p, h), { collection: p, disabledKeys: u, selectionManager: h });
 }
 function u(e, t) {
     let r = (0, s.useMemo)(() => (t ? e.collection.filter(t) : e.collection), [e.collection, t]),
         n = e.selectionManager.withCollection(r);
-    return c(r, n), { collection: r, selectionManager: n, disabledKeys: e.disabledKeys };
+    return (c(r, n), { collection: r, selectionManager: n, disabledKeys: e.disabledKeys });
 }
 function c(e, t) {
     let r = (0, s.useRef)(null);
@@ -79,7 +79,7 @@ function c(e, t) {
         if (null != t.focusedKey && !e.getItem(t.focusedKey) && r.current) {
             let n = r.current.getKeyAfter(t.focusedKey),
                 i = null;
-            for (; null != n; ) {
+            for (; null != n;) {
                 let o = e.getItem(n);
                 if (o && "item" === o.type && !t.isDisabled(n)) {
                     i = n;
@@ -88,7 +88,7 @@ function c(e, t) {
                 n = r.current.getKeyAfter(n);
             }
             if (null == i)
-                for (n = r.current.getKeyBefore(t.focusedKey); null != n; ) {
+                for (n = r.current.getKeyBefore(t.focusedKey); null != n;) {
                     let o = e.getItem(n);
                     if (o && "item" === o.type && !t.isDisabled(n)) {
                         i = n;

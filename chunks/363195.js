@@ -12,13 +12,13 @@ var i = n(17928),
     E = n(652215),
     A = n(185928),
     h = n(661531),
-    f = n(353835),
-    I = n(723702);
+    I = n(353835),
+    f = n(723702);
 function p(e) {
-    if (!__OVERLAY__ && I.isPlatformEmbedded)
+    if (!__OVERLAY__ && f.isPlatformEmbedded)
         try {
             let t = h.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: o.Ay.saturation }).hex();
-            f.A.setApplicationBackgroundColor(t);
+            I.A.setApplicationBackgroundColor(t);
         } catch {}
 }
 var T = n(594061),

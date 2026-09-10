@@ -27,9 +27,9 @@ function i(e) {
                 return t.current;
             },
             set current(value) {
-                (t.current = value),
+                ((t.current = value),
                     r.current && (r.current(), (r.current = void 0)),
-                    null != value && (r.current = i(value));
+                    null != value && (r.current = i(value)));
             },
         }),
         [i],

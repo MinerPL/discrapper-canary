@@ -7,7 +7,7 @@ r(
     { target: "Array", proto: !0, forced: String(s) === String(s.reverse()) },
     {
         reverse: function () {
-            return o(this) && (this.length = this.length), i(this);
+            return (o(this) && (this.length = this.length), i(this));
         },
     },
 );

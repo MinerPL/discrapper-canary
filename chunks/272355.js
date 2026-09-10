@@ -1,4 +1,4 @@
-n.d(t, { A: () => i }), n(423034);
+(n.d(t, { A: () => i }), n(423034));
 class i {
     isInitialized = !1;
     initialize() {

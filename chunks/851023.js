@@ -12,7 +12,7 @@ function c(e) {
         text: s,
         children: (0, l.jsx)(o.$n, {
             onClick: (e) => {
-                e.stopPropagation(), t(e);
+                (e.stopPropagation(), t(e));
             },
             dangerous: c,
             "aria-label": h ?? s,

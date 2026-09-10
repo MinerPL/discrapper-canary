@@ -18,7 +18,7 @@ var n = e(53635),
 function s(t) {
     return n.isMemo(t) ? f : u[t.$$typeof] || o;
 }
-(u[n.ForwardRef] = { $$typeof: !0, render: !0, defaultProps: !0, displayName: !0, propTypes: !0 }), (u[n.Memo] = f);
+((u[n.ForwardRef] = { $$typeof: !0, render: !0, defaultProps: !0, displayName: !0, propTypes: !0 }), (u[n.Memo] = f));
 var a = Object.defineProperty,
     h = Object.getOwnPropertyNames,
     p = Object.getOwnPropertySymbols,

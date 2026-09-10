@@ -5,7 +5,7 @@ var r = n(272469),
     a = n(873326);
 function s(e) {
     let t = "console";
-    (0, a.s5)(t, e), (0, a.AS)(t, l);
+    ((0, a.s5)(t, e), (0, a.AS)(t, l));
 }
 function l() {
     "console" in o.O &&

@@ -32,7 +32,7 @@ class u {
     }
     getPanelOrThrow(e) {
         let t = this.get(e);
-        return a()(t?.type === o.Z6.PANEL, `[SettingsDirectory] key is not for a panel: ${e}`), t;
+        return (a()(t?.type === o.Z6.PANEL, `[SettingsDirectory] key is not for a panel: ${e}`), t);
     }
 }
 function d(e, t, n) {
@@ -52,11 +52,11 @@ function d(e, t, n) {
         );
     }
     let l = i;
-    e.type === o.Z6.SIDEBAR_ITEM && (l = { sidebarItem: e.key, panel: e.layout[0] }),
+    (e.type === o.Z6.SIDEBAR_ITEM && (l = { sidebarItem: e.key, panel: e.layout[0] }),
         e.type === o.Z6.PANEL && (l = { sidebarItem: i.sidebarItem, panel: e }),
         e.type === o.Z6.NESTED_PANEL_NAVIGATOR && (l = { ...i, panel: e.layout[0] }),
         e.type === o.Z6.CATEGORY && (l = { ...i, category: e }),
-        e.type === o.Z6.ACCORDION && (l = { ...i, accordion: e });
+        e.type === o.Z6.ACCORDION && (l = { ...i, accordion: e }));
     let s = e.layout.map((e) => d(e, t, n, l)).filter((e) => null != e);
     if (
         0 === s.length &&
@@ -94,7 +94,7 @@ function S(e, t) {
     return i.useMemo(() => {
         let e = new u(),
             t = new u();
-        return d(n, r, t), { node: d(n, l, e) ?? { ...n, layout: [] }, visibleDirectory: e, accessibleDirectory: t };
+        return (d(n, r, t), { node: d(n, l, e) ?? { ...n, layout: [] }, visibleDirectory: e, accessibleDirectory: t });
     }, [l, r, n]);
 }
 function T(e, t) {
@@ -123,9 +123,9 @@ function T(e, t) {
                             })(e, t, a) || r,
                         d = !1;
                     if ((0, o.nW)(e)) for (let t of e.layout) d = l(t, a, u) || d;
-                    return !a && (u || d) && i.add(e.key), u || d;
+                    return (!a && (u || d) && i.add(e.key), u || d);
                 };
-            return l(e), i;
+            return (l(e), i);
         })(e, t, h()),
         [l, s] = i.useState(n),
         r = (function (e, t) {

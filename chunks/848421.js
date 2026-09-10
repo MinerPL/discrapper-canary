@@ -63,7 +63,7 @@ let T = c.createElement(function () {
 }, null);
 class S extends c.Component {
     constructor(e) {
-        super(e), (this.state = { location: e.location, revalidation: e.revalidation, error: e.error });
+        (super(e), (this.state = { location: e.location, revalidation: e.revalidation, error: e.error }));
     }
     static getDerivedStateFromError(e) {
         return { error: e };
@@ -162,7 +162,7 @@ function A(e) {
         if (t) {
             var l;
             let e = "string" == typeof t ? (0, p.Rr)(t) : t;
-            "/" === s || (null == (l = e.pathname) ? void 0 : l.startsWith(s)) || (0, p.Oi)(!1), (r = e);
+            ("/" === s || (null == (l = e.pathname) ? void 0 : l.startsWith(s)) || (0, p.Oi)(!1), (r = e));
         } else r = u;
         let d = r.pathname || "/",
             f = d;
@@ -192,7 +192,7 @@ function A(e) {
                     s = null == (i = r) ? void 0 : i.errors;
                 if (null != s) {
                     let e = a.findIndex((e) => e.route.id && (null == s ? void 0 : s[e.route.id]) !== void 0);
-                    e >= 0 || (0, p.Oi)(!1), (a = a.slice(0, Math.min(a.length, e + 1)));
+                    (e >= 0 || (0, p.Oi)(!1), (a = a.slice(0, Math.min(a.length, e + 1))));
                 }
                 let u = !1,
                     l = -1;
@@ -203,7 +203,7 @@ function A(e) {
                             let { loaderData: e, errors: n } = r,
                                 i = t.route.loader && void 0 === e[t.route.id] && (!n || void 0 === n[t.route.id]);
                             if (t.route.lazy || i) {
-                                (u = !0), (a = l >= 0 ? a.slice(0, l + 1) : [a[0]]);
+                                ((u = !0), (a = l >= 0 ? a.slice(0, l + 1) : [a[0]]));
                                 break;
                             }
                         }
@@ -295,7 +295,7 @@ function A(e) {
                     if (!c.isValidElement(t)) return;
                     let o = [...r, i];
                     if (t.type === c.Fragment) return void n.push.apply(n, e(t.props.children, o));
-                    t.type !== D && (0, p.Oi)(!1), t.props.index && t.props.children && (0, p.Oi)(!1);
+                    (t.type !== D && (0, p.Oi)(!1), t.props.index && t.props.children && (0, p.Oi)(!1));
                     let a = {
                         id: t.props.id || o.join("-"),
                         caseSensitive: t.props.caseSensitive,
@@ -312,7 +312,7 @@ function A(e) {
                         handle: t.props.handle,
                         lazy: t.props.lazy,
                     };
-                    t.props.children && (a.children = e(t.props.children, o)), n.push(a);
+                    (t.props.children && (a.children = e(t.props.children, o)), n.push(a));
                 }),
                 n
             );
@@ -323,12 +323,12 @@ function A(e) {
 l.startTransition;
 var I =
     (((i = I || {})[(i.pending = 0)] = "pending"), (i[(i.success = 1)] = "success"), (i[(i.error = 2)] = "error"), i);
-new Promise(() => {}), c.Component;
+(new Promise(() => {}), c.Component);
 var P = r(806163);
 try {
     window.__reactRouterVersion = "6";
 } catch (e) {}
-l.startTransition,
+(l.startTransition,
     f.flushSync,
     l.useId,
     "u" > typeof window && void 0 !== window.document && window.document.createElement,
@@ -339,7 +339,7 @@ l.startTransition,
     (o.useViewTransitionState = "useViewTransitionState"),
     ((a = u || (u = {})).UseFetcher = "useFetcher"),
     (a.UseFetchers = "useFetchers"),
-    (a.UseScrollRestoration = "useScrollRestoration");
+    (a.UseScrollRestoration = "useScrollRestoration"));
 let j =
     "u" > typeof window && void 0 !== window.document && void 0 !== window.document.createElement
         ? c.useLayoutEffect

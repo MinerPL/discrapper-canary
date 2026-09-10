@@ -53,7 +53,7 @@ function g(e) {
         g = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
         f = r.useCallback(async () => {
             let e = await o.AN(g);
-            d.A.trackLinkClicked(e), (0, c.A)(e);
+            (d.A.trackLinkClicked(e), (0, c.A)(e));
         }, [g]),
         p = r.useCallback(
             (e) => {

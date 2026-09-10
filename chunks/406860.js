@@ -1,24 +1,24 @@
-i.d(t, { A: () => l });
-var s = i(582128),
-    n = i(435558),
-    r = i(174459),
-    a = i(652215);
+n.d(t, { A: () => l });
+var i = n(582128),
+    a = n(435558),
+    r = n(174459),
+    s = n(652215);
 function l(e) {
-    let { boxType: t, thirdPartyPartner: i } = e,
-        l = s.useRef(null),
-        o = s.useRef(!1);
+    let { boxType: t, thirdPartyPartner: n } = e,
+        l = i.useRef(null),
+        o = i.useRef(!1);
     return {
         sectionRef: l,
-        handleVisibilityChange: s.useCallback(
+        handleVisibilityChange: i.useCallback(
             (e) => {
                 if (e && !o.current) {
                     o.current = !0;
-                    let e = { box_type: (0, n.snakeCase)(t) };
-                    null != i && (e.third_party_partner = i),
-                        r.default.track(a.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e);
+                    let e = { box_type: (0, a.snakeCase)(t) };
+                    (null != n && (e.third_party_partner = n),
+                        r.default.track(s.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e));
                 }
             },
-            [t, i],
+            [t, n],
         ),
     };
 }

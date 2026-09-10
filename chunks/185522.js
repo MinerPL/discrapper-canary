@@ -23,9 +23,9 @@ class E extends r.A {
             let i = a.A.getChannel(n)?.guild_id;
             if (null == i || !(0, d.Lc)(i, "visible_messages")) return;
             let r = this.visibleTopMessageId !== t;
-            (this.visibleTopMessageId = t ?? null),
+            ((this.visibleTopMessageId = t ?? null),
                 this.isBackoffPending(n) ||
-                    ((r || (null == t && this.hasMoreConversations(n, "after"))) && this.fetchForViewport(n, i, r));
+                    ((r || (null == t && this.hasMoreConversations(n, "after"))) && this.fetchForViewport(n, i, r)));
         },
         CONVERSATIONS_FETCH_SUCCESS: (e) => {
             let { channelId: t } = e;
@@ -93,7 +93,7 @@ class E extends r.A {
         t.fail(n);
     }
     clearBackoff(e) {
-        this.backoffStateByChannel.get(e)?.backoff.cancel(), this.backoffStateByChannel.delete(e);
+        (this.backoffStateByChannel.get(e)?.backoff.cancel(), this.backoffStateByChannel.delete(e));
     }
     retryAfterBackoff(e) {
         if (l.Ay.getChannelId() !== e) return;

@@ -1,11 +1,11 @@
-i.d(t, { A: () => a });
-var s = i(582128),
-    n = i(287809),
-    r = i(402860);
-function a() {
+n.d(t, { A: () => s });
+var i = n(582128),
+    a = n(287809),
+    r = n(402860);
+function s() {
     let { analyticsLocations: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return (0, s.useCallback)(() => {
-        let t = n.default.getCurrentUser();
+    return (0, i.useCallback)(() => {
+        let t = a.default.getCurrentUser();
         null != t && (0, r.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: e });
     }, [e]);
 }

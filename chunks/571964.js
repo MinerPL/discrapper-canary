@@ -1,4 +1,4 @@
-l.d(n, { A: () => p }), l(321073);
+(l.d(n, { A: () => p }), l(321073));
 var r = l(477900);
 l(582128);
 var a = l(17928),
@@ -32,7 +32,7 @@ function p(e) {
                                           id: `add-${e.id}`,
                                           label: e.name,
                                           action: () => {
-                                              l?.(), i.A.addUsersToGroup(e.id, g);
+                                              (l?.(), i.A.addUsersToGroup(e.id, g));
                                           },
                                       },
                                       e.id,
@@ -45,7 +45,7 @@ function p(e) {
                                       id: "create-new-group",
                                       label: c.intl.string(c.t["3hF1W4"]),
                                       action: () => {
-                                          l?.(), (0, s.R)({ initialUserIds: [g] });
+                                          (l?.(), (0, s.R)({ initialUserIds: [g] }));
                                       },
                                   },
                                   "create-new-group",
@@ -63,7 +63,7 @@ function p(e) {
                           id: "create-new-group",
                           label: c.intl.string(c.t["3hF1W4"]),
                           action: () => {
-                              l?.(), (0, s.R)({ initialUserIds: [g] });
+                              (l?.(), (0, s.R)({ initialUserIds: [g] }));
                           },
                       },
                       "create-new-group",
@@ -77,7 +77,7 @@ function p(e) {
                         id: "remove-from-group",
                         label: "Remove from Group",
                         action: () => {
-                            l?.(), i.A.removeUsersFromGroup(p, g);
+                            (l?.(), i.A.removeUsersFromGroup(p, g));
                         },
                     },
                     "remove-from-group",

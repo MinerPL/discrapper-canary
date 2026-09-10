@@ -32,12 +32,12 @@ var n = r(150594),
     s = ["v", "o", "s", "i", "u", "e", "p", "c", "b", "t", "r", "z", "a"],
     l = ["i", "c", "b", "a"];
 e.exports = function (e, t) {
-    (t = t || {}),
+    ((t = t || {}),
         null == e.version && (e.version = 0),
         null == e.name && (e.name = " "),
         e.media.forEach(function (e) {
             null == e.payloads && (e.payloads = "");
-        });
+        }));
     var r = t.outerOrder || s,
         i = t.innerOrder || l,
         o = [];
@@ -54,7 +54,7 @@ e.exports = function (e, t) {
             });
         }),
         e.media.forEach(function (e) {
-            o.push(a("m", n.m[0], e)),
+            (o.push(a("m", n.m[0], e)),
                 i.forEach(function (t) {
                     n[t].forEach(function (r) {
                         r.name in e && null != e[r.name]
@@ -65,7 +65,7 @@ e.exports = function (e, t) {
                                   o.push(a(t, r, e));
                               });
                     });
-                });
+                }));
         }),
         o.join("\r\n") + "\r\n"
     );

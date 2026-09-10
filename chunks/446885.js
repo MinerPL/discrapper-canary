@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { default: () => N });
+(a.r(t), a.d(t, { default: () => N }));
 var l,
     i = a(158390),
     n = a(31048);
@@ -90,7 +90,7 @@ class g {
                         }),
                     );
                 }
-                return t.push(u(s.d.MatchEnd, { hiddenFromTimeline: !0 })), t;
+                return (t.push(u(s.d.MatchEnd, { hiddenFromTimeline: !0 })), t);
             }
             case r.MatchDestroyed:
                 return [u(s.d.MatchEnd, { hiddenFromTimeline: !0 })];
@@ -107,7 +107,7 @@ class g {
                         ]
                     );
                 if (this.isLocal(t?.Assister)) return [u(s.d.Assist, { title: c.intl.string(d.default.qlCPiQ) })];
-                return o.nx.info(`[RL] goal by ${t?.Scorer?.Name} ignored (localPlayer=${this.localPlayerName})`), [];
+                return (o.nx.info(`[RL] goal by ${t?.Scorer?.Name} ignored (localPlayer=${this.localPlayerName})`), []);
             }
             case r.StatfeedEvent: {
                 let t = e.Data,
@@ -150,7 +150,7 @@ function N(e) {
         let a = (function (e) {
             try {
                 let t = JSON.parse(e);
-                return "string" == typeof t?.Data && (t.Data = JSON.parse(t.Data)), t;
+                return ("string" == typeof t?.Data && (t.Data = JSON.parse(t.Data)), t);
             } catch (e) {
                 return null;
             }
@@ -158,7 +158,7 @@ function N(e) {
         if (null == a) return;
         let i = (0, n.l)();
         for (let t of l.processMessage(a))
-            o.nx.info(`[RL] emit event: ${t.eventName} score=${t.score} importance=${t.importance}`), e(t, i);
+            (o.nx.info(`[RL] emit event: ${t.eventName} score=${t.score} importance=${t.importance}`), e(t, i));
     }
     return {
         start() {
@@ -169,9 +169,9 @@ function N(e) {
                 (function e() {
                     if (!t) return;
                     let l = new WebSocket(h.Q);
-                    (a = l),
+                    ((a = l),
                         (l.onopen = () => {
-                            r.succeed(), o.nx.info("[RL] stats API connected");
+                            (r.succeed(), o.nx.info("[RL] stats API connected"));
                         }),
                         (l.onmessage = s),
                         (l.onclose = () => {
@@ -186,14 +186,14 @@ function N(e) {
                                         r.fail(e);
                                     }
                                 })());
-                        });
+                        }));
                 })());
         },
         stop() {
             if (!t) return;
-            (t = !1), o.nx.info("[RL] stopping stats API listener"), r.cancel();
+            ((t = !1), o.nx.info("[RL] stopping stats API listener"), r.cancel());
             let e = a;
-            (a = null), e?.close(), (l = new g());
+            ((a = null), e?.close(), (l = new g()));
         },
         getState: () => null,
     };

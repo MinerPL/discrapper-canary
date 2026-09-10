@@ -40,10 +40,10 @@ function V(e) {
     let { guildId: n, instance: t } = e,
         [l, a] = s.useState(!1),
         r = s.useCallback(() => {
-            a(!0),
+            (a(!0),
                 (0, T.as)(n, t.id).finally(() => {
                     a(!1);
-                });
+                }));
         }, [n, t.id]);
     return (0, i.jsx)(c.$, {
         fullWidth: !0,
@@ -80,10 +80,10 @@ function $(e) {
     let { guildId: n } = e,
         [t, l] = s.useState(!1),
         a = s.useCallback(() => {
-            l(!0),
+            (l(!0),
                 (0, T.cq)(n).finally(() => {
                     l(!1);
-                });
+                }));
         }, [n]);
     return (0, i.jsx)(c.$, {
         fullWidth: !0,
@@ -113,21 +113,21 @@ function W(e) {
         { data: W } = (0, C.I)(t.gameId),
         B = (0, P.A)(t.providerType, t.gameServerPanelUrl),
         Y = s.useCallback(() => {
-            (0, A.Ai)(n, t.gameId, W?.name ?? "", t.id),
+            ((0, A.Ai)(n, t.gameId, W?.name ?? "", t.id),
                 T || null == t.providerType
                     ? (0, b.A)(n, t)
                     : (0, G.A)({
                           provider: t.providerType,
                           onAccept: () => {
-                              u(D.i.TAKE_ACTION), (0, b.A)(n, t);
+                              (u(D.i.TAKE_ACTION), (0, b.A)(n, t));
                           },
-                      });
+                      }));
         }, [t, T, u, n, W?.name]),
         { handleCopyServerIp: q, animateCopyIcon: H } = (0, _.A)(n, t.id, h.A.GAME_SERVER_GAME, l ?? ""),
         X = (0, y.A)(t.gameId, "cover"),
         Q = (0, N.A)(n),
         J = s.useCallback(() => {
-            (0, A.f7)(n, t.id), (0, S.h)({ href: t.gameServerPanelUrl ?? "" });
+            ((0, A.f7)(n, t.id), (0, S.h)({ href: t.gameServerPanelUrl ?? "" }));
         }, [t.gameServerPanelUrl, n, t.id]),
         ee = s.useMemo(() => {
             switch (t.status) {
@@ -267,7 +267,7 @@ function W(e) {
                                                                 (0, G.A)({
                                                                     provider: t.providerType,
                                                                     onAccept: () => {
-                                                                        u(D.i.TAKE_ACTION), q();
+                                                                        (u(D.i.TAKE_ACTION), q());
                                                                     },
                                                                 });
                                                             },

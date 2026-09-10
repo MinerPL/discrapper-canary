@@ -12,7 +12,7 @@ r(
             if ((o(this), a(t), l(this, e))) return s(this, e);
             0 === e && 1 / e == -1 / 0 && (e = 0);
             var n = t(e);
-            return c(this, e, n), n;
+            return (c(this, e, n), n);
         },
     },
 );

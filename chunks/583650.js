@@ -24,10 +24,10 @@ let o = r.forwardRef(function (e, t) {
             size: "sm",
             disabled: d,
             onChange: function (e) {
-                o(e), _?.(s.Q.SEARCH);
+                (o(e), _?.(s.Q.SEARCH));
             },
             onClear: function () {
-                o(""), _?.(s.Q.SEARCH);
+                (o(""), _?.(s.Q.SEARCH));
             },
             query: n,
             placeholder: c,

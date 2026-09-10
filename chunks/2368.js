@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, eF: () => E, lE: () => S }), n(321073);
+(n.d(t, { Ay: () => C, eF: () => E, lE: () => S }), n(321073));
 var l = n(284009),
     i = n.n(l),
     s = n(155718),
@@ -29,19 +29,19 @@ let m =
     A = new Set(["applicationCommandOption"]);
 function C(e, t, n) {
     let { isInline: l, isVoid: i, onChange: s } = e;
-    (e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e));
+    ((e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
     let r = null,
         a = !0;
     return (
         (e.onChange = () => {
             let l = h.VW.richValue(e);
-            (l !== r || e.previewMarkdown !== a) &&
+            ((l !== r || e.previewMarkdown !== a) &&
                 (o.o.withMergedEntry(e, () => {
                     h.VW.withoutNormalizing(e, () => E(e, t, n));
                 }),
                 (r = l),
                 (a = e.previewMarkdown)),
-                s();
+                s());
         }),
         e
     );
@@ -64,7 +64,7 @@ function E(e, t, n) {
 function I(e, t, n, l) {
     let s = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         r = h.cv.markdown(t[0], n);
-    y(e, t, s, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
+    (y(e, t, s, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
         !s &&
             ((function (e, t, n, l, s) {
                 let [r, o] = t,
@@ -76,7 +76,7 @@ function I(e, t, n, l) {
                     if (!h.l5.isText(g)) continue;
                     let x = h.PW.child(o, f),
                         A = [];
-                    for (m.lastIndex = 0; null != (p = m.exec(g.text)); ) {
+                    for (m.lastIndex = 0; null != (p = m.exec(g.text));) {
                         if (0 !== p.index && null == g.text.charAt(p.index - 1).match(/(\t|\s)/)) {
                             m.lastIndex = p.index + 1;
                             continue;
@@ -88,11 +88,11 @@ function I(e, t, n, l) {
                             : (m.lastIndex = p.index + 1);
                     }
                     for (let t of A.reverse())
-                        (function (e, t, n, l, s) {
+                        ((function (e, t, n, l, s) {
                             let [r, a] = t,
                                 o = { path: a, offset: n },
                                 u = { path: a, offset: n + l };
-                            i()(
+                            (i()(
                                 o.offset >= 0 && o.offset <= r.text.length,
                                 "Failed to find valid start position for raw mention replace",
                             ),
@@ -100,13 +100,13 @@ function I(e, t, n, l) {
                                     u.offset >= 0 && u.offset <= r.text.length,
                                     "Failed to find valid end position for raw mention replace",
                                 ),
-                                d.b.textToVoid(e, s, { anchor: o, focus: u });
+                                d.b.textToVoid(e, s, { anchor: o, focus: u }));
                         })(e, [g, h.PW.child(o, f)], t.index, t.length, t.node),
-                            (u = !0);
+                            (u = !0));
                 }
                 return u;
             })(e, t, n, l, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
-            S(e, t, l, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))));
+            S(e, t, l, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n)))));
 }
 function y(e, t, n, l) {
     let [i, s] = t,
@@ -130,7 +130,7 @@ function y(e, t, n, l) {
             }
             if (l) {
                 let l = h.PW.child(s, t + 1);
-                d.b.voidToText(e, (0, c.IQ)(n, { mode: "plain", preventEmojiSurrogates: !0 }), l), (r = !0);
+                (d.b.voidToText(e, (0, c.IQ)(n, { mode: "plain", preventEmojiSurrogates: !0 }), l), (r = !0));
             }
         } else if (h.cv.isElement(o) && e.isVoid(o)) {
             let i = h.PW.child(s, t),
@@ -224,7 +224,7 @@ function S(e, t, n, l) {
         if (!j(e, n, t[0], h)) continue;
         let p = (0, u.Q)(e, i, l.serializedChildren, m.start),
             g = (0, u.Q)(e, i, l.serializedChildren, m.start + m.text.length);
-        d.b.textToVoid(e, h, { anchor: p, focus: g }), (s = !0);
+        (d.b.textToVoid(e, h, { anchor: p, focus: g }), (s = !0));
     }
     return s;
 }
@@ -235,7 +235,7 @@ function N(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
-    for (let [e, t] of l) n.set(v(t), i), (i += h.l5.isText(e) ? e.text.length : 1);
+    for (let [e, t] of l) (n.set(v(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
 function _(e, t, n) {

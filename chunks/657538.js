@@ -1,4 +1,4 @@
-t.d(a, { A: () => ed }), t(321073);
+(t.d(a, { A: () => ed }), t(321073));
 var i = t(477900),
     l = t(582128),
     s = t(176999),
@@ -76,10 +76,10 @@ function z(e) {
             [a],
         ),
         c = l.useCallback((e) => {
-            window.clearTimeout(n.current), (n.current = window.setTimeout(() => s(e), 150));
+            (window.clearTimeout(n.current), (n.current = window.setTimeout(() => s(e), 150)));
         }, []),
         o = l.useCallback(() => {
-            window.clearTimeout(n.current), s(null);
+            (window.clearTimeout(n.current), s(null));
         }, []);
     l.useEffect(() => () => window.clearTimeout(n.current), []);
     let [d, ...u] = a;
@@ -272,7 +272,7 @@ function et(e) {
         }, [r, n.id]),
         (0, i.jsx)(S.D, {
             onClick: function () {
-                r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), t?.();
+                (r({ action: "PRESS_PERSONAL_WIDGET_PREVIEW" }), t?.());
             },
             "aria-label": V.intl.string(V.t["2sdfeb"]),
             children: (0, i.jsx)(w.A.Overlay, {
@@ -343,7 +343,7 @@ function er(e) {
         (0, i.jsx)(S.D, {
             "aria-label": V.intl.string(V.t.JjiwFx),
             onClick: () => {
-                c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
+                (c({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n());
             },
             className: en.QF,
             children: (0, i.jsxs)(w.A.Overlay, {
@@ -402,7 +402,7 @@ function ed(e) {
                     a?.({ tabSection: eo.RP.WIDGETS });
                 }, [a]),
                 n = l.useCallback(() => {
-                    i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: t }), s();
+                    (i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: t }), s());
                 }, [i, t, s]);
             return {
                 openModal: s,
@@ -477,7 +477,7 @@ function ed(e) {
                             ),
                         );
                     } else if (n instanceof v.Yy && !s)
-                        l.push((0, i.jsx)(er, { widgets: t, onClick: k, ...e }, "collection-breadcrumb")), (s = !0);
+                        (l.push((0, i.jsx)(er, { widgets: t, onClick: k, ...e }, "collection-breadcrumb")), (s = !0));
                     else if (n instanceof E.Tu)
                         l.push(
                             (0, i.jsx)(et, { userId: a.id, widget: n, onClick: k, ...e }, n.id ?? "personal-widget"),

@@ -27,7 +27,7 @@ n(
     { target: "Map", stat: !0, forced: a || x },
     {
         groupBy: function (t, r) {
-            i(t), s(r);
+            (i(t), s(r));
             var e = new p(),
                 n = 0;
             return (

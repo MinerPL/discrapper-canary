@@ -1,4 +1,4 @@
-e.r(i), e.d(i, { ItemDetailsModal: () => m });
+(e.r(i), e.d(i, { ItemDetailsModal: () => m }));
 var n = e(477900);
 e(582128);
 var d = e(423090),

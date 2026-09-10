@@ -104,14 +104,14 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                     })),
                 c.each(a, function (e, t) {
                     if ("transform" === t)
-                        s.push([e || ""]),
+                        (s.push([e || ""]),
                             l.push(function (e) {
                                 return [e, "" === e];
-                            });
+                            }));
                     else if (v.test(t)) {
                         if ((delete a[t], c.is.und(e))) return;
                         var r = y.test(t) ? "px" : g.test(t) ? "deg" : "";
-                        s.push(c.toArray(e)),
+                        (s.push(c.toArray(e)),
                             l.push(
                                 "rotate3d" === t
                                     ? function (e) {
@@ -134,14 +134,14 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                                               w(e, +!!t.startsWith("scale")),
                                           ];
                                       },
-                            );
+                            ));
                     }
                 }),
                 s.length && (a.transform = new S(s, l)),
                 e.call(this, a) || this
             );
         }
-        return f(t, e), t;
+        return (f(t, e), t);
     })(u.AnimatedObject),
     S = (function (e) {
         function t(t, r) {
@@ -170,38 +170,38 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                             a = e.transforms[i](c.is.arr(o) ? o : n.map(c.getFluidValue)),
                             s = a[0],
                             l = a[1];
-                        (t += " " + s), (r = r && l);
+                        ((t += " " + s), (r = r && l));
                     }),
                     r ? "none" : t
                 );
             }),
             (r.addChild = function (e) {
                 var t = this;
-                this._children.size ||
+                (this._children.size ||
                     c.each(this.inputs, function (e) {
                         return c.each(e, function (e) {
                             var r = c.getFluidConfig(e);
                             r && r.addChild(t);
                         });
                     }),
-                    this._children.add(e);
+                    this._children.add(e));
             }),
             (r.removeChild = function (e) {
                 var t = this;
-                this._children.delete(e),
+                (this._children.delete(e),
                     this._children.size ||
                         c.each(this.inputs, function (e) {
                             return c.each(e, function (e) {
                                 var r = c.getFluidConfig(e);
                                 r && r.removeChild(t);
                             });
-                        });
+                        }));
             }),
             (r.onParentChange = function (e) {
-                "change" == e.type && (this._value = null),
+                ("change" == e.type && (this._value = null),
                     c.each(this._children, function (t) {
                         t.onParentChange(e);
-                    });
+                    }));
             }),
             t
         );
@@ -379,22 +379,22 @@ var x = u.createHost(
                                       : i + "px");
                         "float" === t ? (t = "cssFloat") : d.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                     }
-                f.forEach(function (t, r) {
+                (f.forEach(function (t, r) {
                     e.setAttribute(t, u[r]);
                 }),
                     void 0 !== a && (e.scrollTop = a),
-                    void 0 !== s && (e.scrollLeft = s);
+                    void 0 !== s && (e.scrollLeft = s));
             });
         },
         createAnimatedStyle: function (e) {
             return new _(e);
         },
         getComponentProps: function (e) {
-            return e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]);
+            return (e.scrollTop, e.scrollLeft, i(e, ["scrollTop", "scrollLeft"]));
         },
     },
 ).animated;
-Object.keys(o).forEach(function (e) {
+(Object.keys(o).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
@@ -404,4 +404,4 @@ Object.keys(o).forEach(function (e) {
         });
 }),
     (t.a = x),
-    (t.animated = x);
+    (t.animated = x));

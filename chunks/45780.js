@@ -1,4 +1,4 @@
-n.d(t, { G$: () => m, _$: () => g, hk: () => f, zs: () => h });
+n.d(t, { G$: () => m, _$: () => f, hk: () => g, zs: () => h });
 var i = n(17928),
     l = n(554146),
     a = n(594061),
@@ -16,7 +16,7 @@ function m(e, t) {
     return (0, i.bG)([s.A], () => h(e, t));
 }
 function p(e, t, n, i, s) {
-    (0, a.TG)(
+    ((0, a.TG)(
         n,
         (i) => {
             let l = h(t, n);
@@ -30,11 +30,11 @@ function p(e, t, n, i, s) {
                 type: l.V[t],
                 guild_id: n,
                 action: s ?? c.i.UNKNOWN,
-            });
+            }));
 }
-function g(e, t, n, i) {
+function f(e, t, n, i) {
     p(!0, e, t, n, i);
 }
-function f(e, t) {
+function g(e, t) {
     p(!1, e, t);
 }

@@ -15,7 +15,7 @@ function c(e, t) {
         : ((a += n), (l = a / 100), (s.volume = r()(l, 0, 0.5)));
 }
 function u(e) {
-    null != d && clearInterval(d), (o = 0);
+    (null != d && clearInterval(d), (o = 0));
     let t = (function () {
         return 0.2 * (o - l);
     })();
@@ -24,7 +24,7 @@ function u(e) {
     }, 100);
 }
 function _() {
-    null != d && clearInterval(d), s.loop(), (o = 0.5);
+    (null != d && clearInterval(d), s.loop(), (o = 0.5));
     let e = (function () {
         return 0.2 * (o - l);
     })();

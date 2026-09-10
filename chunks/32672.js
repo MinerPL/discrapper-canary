@@ -88,8 +88,8 @@ function y(t) {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        L.default.track(v.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
-                            (0, h.C)(w(e, r), () => (0, s.P0)((0, o.o)(P.intl.string(P.t["L/PwZf"]), c.Ck.SUCCESS)));
+                        (L.default.track(v.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
+                            (0, h.C)(w(e, r), () => (0, s.P0)((0, o.o)(P.intl.string(P.t["L/PwZf"]), c.Ck.SUCCESS))));
                     },
                     icon: d.LinkIcon,
                 },

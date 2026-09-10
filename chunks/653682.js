@@ -1,4 +1,4 @@
-e.d(a, { default: () => M }), e(321073);
+(e.d(a, { default: () => M }), e(321073));
 var n = e(477900),
     s = e(582128),
     i = e(224640),
@@ -443,7 +443,7 @@ function M(t) {
             variant: "primary",
             text: p.intl.string(p.t["1X8SK/"]),
             onClick: function () {
-                (0, d.openModalLazy)(async () => {
+                ((0, d.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         e.e("377476"),
                         e.e("766811"),
@@ -471,7 +471,7 @@ function M(t) {
                             prefillChannelName: h ? p.intl.string(p.t["5z1Xat"]) : void 0,
                         });
                 }),
-                    j(T.i.PRIMARY);
+                    j(T.i.PRIMARY));
             },
         });
     let I = p.intl.string(p.t["6S6WCQ"]);
@@ -488,7 +488,7 @@ function M(t) {
                         selectedItem: C,
                         type: "top",
                         onItemSelect: function (t) {
-                            P(t), (0, x.Bd)({ forumDemoId: t });
+                            (P(t), (0, x.Bd)({ forumDemoId: t }));
                         },
                         className: H._,
                         children: S.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),

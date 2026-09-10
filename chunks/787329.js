@@ -27,7 +27,7 @@ var s = i(775162),
                 value: s,
                 onInput: (t) => {
                     let s = t.target.value;
-                    a(s), i(e.name, s);
+                    (a(s), i(e.name, s));
                 },
             }),
         });
@@ -102,7 +102,7 @@ var s = i(775162),
             children: (0, n.v)("form", {
                 class: "IncodeCustomFieldsForm",
                 onSubmit: (e) => {
-                    e.preventDefault(), v.submit();
+                    (e.preventDefault(), v.submit());
                 },
                 autoComplete: "off",
                 children: [

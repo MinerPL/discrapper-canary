@@ -163,7 +163,7 @@ e.exports = function (e) {
                 relevance: 0,
             },
         ].concat(s, l);
-    (c.contains = u), (p.contains = u);
+    ((c.contains = u), (p.contains = u));
     let g = [
         { begin: /^\s*=>/, starts: { end: "$", contains: u } },
         {

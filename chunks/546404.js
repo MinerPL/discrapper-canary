@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => s });
+(t.r(n), t.d(n, { default: () => s }));
 var o = {
         lessThanXSeconds: {
             one: {

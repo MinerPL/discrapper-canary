@@ -1,11 +1,11 @@
 function t(e, t, r, n) {
     Object.defineProperty(e, t, { get: r, set: n, enumerable: !0, configurable: !0 });
 }
-t(e.exports, "announce", () => i),
+(t(e.exports, "announce", () => i),
     t(e.exports, "createAnnouncer", () => n),
     t(e.exports, "clearAnnouncer", () => o),
     t(e.exports, "destroyAnnouncer", () => a),
-    t(e.exports, "moveAnnouncer", () => s);
+    t(e.exports, "moveAnnouncer", () => s));
 let r = null;
 function n(e = null) {
     r || (r = new u(e));
@@ -53,7 +53,7 @@ class u {
         var n, i;
         if (!this.node) return;
         let o = document.createElement("div");
-        "object" == typeof e
+        ("object" == typeof e
             ? (o.setAttribute("role", "img"), o.setAttribute("aria-labelledby", e["aria-labelledby"]))
             : (o.textContent = e),
             "assertive" === t
@@ -62,7 +62,7 @@ class u {
             "" !== e &&
                 setTimeout(() => {
                     o.remove();
-                }, r);
+                }, r));
     }
     clear(e) {
         this.node &&
@@ -70,7 +70,7 @@ class u {
             (!e || "polite" === e) && this.politeLog && (this.politeLog.innerHTML = ""));
     }
     constructor(e = null) {
-        (this.node = null),
+        ((this.node = null),
             (this.parentNode = null),
             (this.assertiveLog = null),
             (this.politeLog = null),
@@ -94,6 +94,6 @@ class u {
                 this.node.appendChild(this.assertiveLog),
                 (this.politeLog = this.createLog("polite")),
                 this.node.appendChild(this.politeLog),
-                this.parentNode.prepend(this.node));
+                this.parentNode.prepend(this.node)));
     }
 }

@@ -14,7 +14,7 @@ let A = {},
     T = {},
     I = {};
 function N(e) {
-    null != A[e] && delete A[e], d++;
+    (null != A[e] && delete A[e], d++);
 }
 function R(e) {
     let t,
@@ -51,7 +51,7 @@ class S extends i.Ay.PersistedStore {
     static displayName = "GuildAutomodMessageStore";
     static persistKey = "GuildAutomodMessages";
     initialize(e) {
-        this.waitFor(a.A, o.A), null != e && ((A = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild));
+        (this.waitFor(a.A, o.A), null != e && ((A = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild)));
     }
     getState() {
         return { automodFailedMessages: A, mentionRaidDetectionByGuild: T, lastIncidentAlertMessage: I };
@@ -85,7 +85,7 @@ let O = new S(l.h, {
     MESSAGE_EDIT_FAILED_AUTOMOD: R,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return N(t), !0;
+        return (N(t), !0);
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
@@ -96,10 +96,10 @@ let O = new S(l.h, {
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
-        return (T[t] = { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i }), !0;
+        return ((T[t] = { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i }), !0);
     },
     AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
         let { guildId: t } = e;
-        return delete T[t], !0;
+        return (delete T[t], !0);
     },
 });

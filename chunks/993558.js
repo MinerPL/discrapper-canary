@@ -8,7 +8,7 @@ let a = (0, o.createContext)({
         if (e instanceof HTMLAnchorElement) l(e, t);
         else if (e.hasAttribute("data-href")) {
             let r = document.createElement("a");
-            (r.href = e.getAttribute("data-href")),
+            ((r.href = e.getAttribute("data-href")),
                 e.hasAttribute("data-target") && (r.target = e.getAttribute("data-target")),
                 e.hasAttribute("data-rel") && (r.rel = e.getAttribute("data-rel")),
                 e.hasAttribute("data-download") && (r.download = e.getAttribute("data-download")),
@@ -16,7 +16,7 @@ let a = (0, o.createContext)({
                 e.hasAttribute("data-referrer-policy") && (r.referrerPolicy = e.getAttribute("data-referrer-policy")),
                 e.appendChild(r),
                 l(r, t),
-                e.removeChild(r);
+                e.removeChild(r));
         }
     },
     useHref: (e) => e,
@@ -43,7 +43,7 @@ function l(e, t, r = !0) {
                   bubbles: !0,
                   cancelable: !0,
               });
-    (l.isOpening = r), (0, n.e)(e), e.dispatchEvent(c), (l.isOpening = !1);
+    ((l.isOpening = r), (0, n.e)(e), e.dispatchEvent(c), (l.isOpening = !1));
 }
 function u(e) {
     let t = s().useHref(e.href ?? "");

@@ -52,7 +52,7 @@ function d(e) {
         "Page Break" === i.Type
             ? n.length > 0 && (t.push(n), (n = []))
             : "Question" === i.Type && null != i.QuestionID && n.push(i.QuestionID);
-    return n.length > 0 && t.push(n), t;
+    return (n.length > 0 && t.push(n), t);
 }
 n(321073);
 var T = n(503698),
@@ -107,7 +107,7 @@ function D(e) {
                     children: (0, i.jsx)(S.k, {
                         value: a ?? "",
                         onChange: function (e) {
-                            l || r(t), E?.(t, e);
+                            (l || r(t), E?.(t, e));
                         },
                         disabled: !l,
                     }),
@@ -124,7 +124,7 @@ function p(e) {
             let t = e.split(":TEXT:", 2),
                 n = t[0],
                 i = {};
-            return t.length > 1 && (i[n] = t[1]), { selectedChoice: n, textInputs: i };
+            return (t.length > 1 && (i[n] = t[1]), { selectedChoice: n, textInputs: i });
         })(l);
     function E(e) {
         let i = a[e];
@@ -180,7 +180,7 @@ function f(e) {
                 t.forEach((e) => {
                     let t = e.split(":TEXT:", 2),
                         l = t[0];
-                    n.push(l), t.length > 1 && (i[l] = t[1]);
+                    (n.push(l), t.length > 1 && (i[l] = t[1]));
                 }),
                 { selectedChoices: n, textInputs: i }
             );
@@ -196,7 +196,7 @@ function f(e) {
     function c(e) {
         let t = s.includes(e) ? s.filter((t) => t !== e) : [...s, e],
             i = { ...a };
-        t.includes(e) || delete i[e], r(n, E(t, i));
+        (t.includes(e) || delete i[e], r(n, E(t, i)));
     }
     function u(e, t) {
         r(n, E(s, { ...a, [e]: t }));
@@ -314,7 +314,7 @@ function j(e) {
                                       variant: "critical-primary",
                                       text: x.intl.string(x.t.p89ACt),
                                       onClick: () => {
-                                          e.onClose(), s();
+                                          (e.onClose(), s());
                                       },
                                   },
                               ],
@@ -475,7 +475,7 @@ function j(e) {
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
             })(n, { blockId: S, pageIndex: D, responses: R });
-            N(t, g), e.isComplete && E.Ay.submitSurveyResponse(t, R), O(e.blockId), m(e.pageIndex), p(e.isComplete);
+            (N(t, g), e.isComplete && E.Ay.submitSurveyResponse(t, R), O(e.blockId), m(e.pageIndex), p(e.isComplete));
         }, [n, S, D, R, t, g, N]);
     l.useEffect(() => {
         0 === g.length && h();

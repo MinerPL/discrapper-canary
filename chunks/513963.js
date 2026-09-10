@@ -10,7 +10,7 @@ function c(t) {
     let { type: n, onConfirm: i, onClose: c, ...p } = t,
         [u, S] = a.useState(!1),
         g = a.useCallback(() => {
-            u && l.Ay.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), i(), c();
+            (u && l.Ay.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), i(), c());
         }, [i, u, c]),
         C = n === d.f.STREAM ? o.intl.string(o.t["/lFMWr"]) : o.intl.string(o.t.xzxhZS),
         h = n === d.f.STREAM ? o.intl.string(o.t.xaOX7d) : o.intl.string(o.t.oU1p9O);

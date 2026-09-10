@@ -1,11 +1,11 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS: () => l,
         APPLICATION_IDENTITY_CONNECTIONS_INCENTIVIZED_APPLICATIONS: () => o,
         APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS: () => d,
         ApplicationIdentityAppIds: () => a,
         getMigratedApplicationIdentityConnectionsScreenApplications: () => c,
-    });
+    }));
 var i,
     r = n(472636),
     a =

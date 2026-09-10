@@ -20,11 +20,11 @@ class i extends n.AbstractParserWithWordBoundaryChecking {
             n = parseInt(t[2]);
         if ((isNaN(n) && (n = (0, a.zhStringToNumber)(t[2])), r.start.assign("month", n), t[3])) {
             let e = parseInt(t[3]);
-            isNaN(e) && (e = (0, a.zhStringToNumber)(t[3])), r.start.assign("day", e);
+            (isNaN(e) && (e = (0, a.zhStringToNumber)(t[3])), r.start.assign("day", e));
         } else r.start.imply("day", e.refDate.getDate());
         if (t[1]) {
             let e = parseInt(t[1]);
-            isNaN(e) && (e = (0, a.zhStringToYear)(t[1])), r.start.assign("year", e);
+            (isNaN(e) && (e = (0, a.zhStringToYear)(t[1])), r.start.assign("year", e));
         } else r.start.imply("year", e.refDate.getFullYear());
         return r;
     }

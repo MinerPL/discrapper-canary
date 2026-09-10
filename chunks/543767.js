@@ -161,7 +161,7 @@ function p(e, t) {
         (0, i.useCallback)(() => {
             let e = n.current,
                 t = r.current ? e : { ...e, paymentSourceId: null };
-            return (r.current = !0), h(t);
+            return ((r.current = !0), h(t));
         }, [a]),
         t,
     );
@@ -212,7 +212,7 @@ function T(e, t) {
         _ = (0, i.useCallback)(() => {
             let e = s.current,
                 t = l.current ? e : { ...e, paymentSourceId: null };
-            if ("subscriptionId" in t) return (l.current = !0), A(t);
+            if ("subscriptionId" in t) return ((l.current = !0), A(t));
             if (!("items" in t)) return null;
             {
                 l.current = !0;

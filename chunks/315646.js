@@ -74,7 +74,7 @@ function z(e) {
     if ("symbol" == typeof e) return !0;
     if (!e || "object" != typeof e || !P) return !1;
     try {
-        return P.call(e), !0;
+        return (P.call(e), !0);
     } catch (e) {}
     return !1;
 }
@@ -116,7 +116,7 @@ e.exports = function e(t, n, i, s) {
                 return e(g.call(t, 0, r.maxStringLength), r) + ("... " + n) + " more character" + (n > 1 ? "s" : "");
             }
             var i = B[r.quoteStyle || "single"];
-            return (i.lastIndex = 0), K(b.call(b.call(t, i, "\\$1"), /[\x00-\x1f]/g, Y), "single", r);
+            return ((i.lastIndex = 0), K(b.call(b.call(t, i, "\\$1"), /[\x00-\x1f]/g, Y), "single", r));
         })(t, M);
     if ("number" == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? "0" : "-0";
@@ -143,7 +143,7 @@ e.exports = function e(t, n, i, s) {
     function eo(t, r, n) {
         if ((r && (s = k.call(s)).push(r), n)) {
             var o = { depth: M.depth };
-            return H(M, "quoteStyle") && (o.quoteStyle = M.quoteStyle), e(t, o, i + 1, s);
+            return (H(M, "quoteStyle") && (o.quoteStyle = M.quoteStyle), e(t, o, i + 1, s));
         }
         return e(t, M, i + 1, s);
     }
@@ -287,7 +287,7 @@ e.exports = function e(t, n, i, s) {
         (function (e) {
             if (!p || !e || "object" != typeof e) return !1;
             try {
-                return p.call(e), !0;
+                return (p.call(e), !0);
             } catch (e) {}
             return !1;
         })(t)
@@ -298,7 +298,7 @@ e.exports = function e(t, n, i, s) {
         (function (e) {
             if (!e || "object" != typeof e || !T) return !1;
             try {
-                return T.call(e), !0;
+                return (T.call(e), !0);
             } catch (e) {}
             return !1;
         })(t)

@@ -225,7 +225,7 @@ var d = {
     yellow: 0xffff00ff,
     yellowgreen: 0x9acd32ff,
 };
-(t.rgba = function (e) {
+((t.rgba = function (e) {
     return {
         r: Math.round((0xff000000 & e) >>> 24),
         g: Math.round((0xff0000 & e) >>> 16),
@@ -233,4 +233,4 @@ var d = {
         a: ((255 & e) >>> 0) / 255,
     };
 }),
-    (e.exports = t);
+    (e.exports = t));

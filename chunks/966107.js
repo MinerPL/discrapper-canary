@@ -5,12 +5,12 @@ var n = E(636537),
     u = E(961523),
     c = E(652215);
 async function s(t) {
-    await n.Bo.put({
+    (await n.Bo.put({
         url: c.Rsh.CHANNEL_RECIPIENT_ME(t),
         body: { consent_status: u.w.ACCEPTED },
         rejectWithError: (0, n.fT)(),
     }),
-        o.h.dispatch({ type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: t });
+        o.h.dispatch({ type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: t }));
 }
 function i(t) {
     return n.Bo.put({

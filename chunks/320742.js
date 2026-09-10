@@ -33,23 +33,24 @@ let T = function (t) {
         w = (0, v.VT)(),
         H = n.useRef(w);
     function Q() {
-        T(
+        (T(
             (t) => (
-                N.default.track(E.HAw.FAMILY_CENTER_ACTION, { action: r ? A.qb.HideQRCode : A.qb.RevealQRCode }), !t
+                N.default.track(E.HAw.FAMILY_CENTER_ACTION, { action: r ? A.qb.HideQRCode : A.qb.RevealQRCode }),
+                !t
             ),
         ),
             r ||
                 setTimeout(() => {
                     s();
-                }, A.nz);
+                }, A.nz));
     }
-    o()(!a, "FamilyCenterQRCodeModal should only be rendered for teens."),
+    (o()(!a, "FamilyCenterQRCodeModal should only be rendered for teens."),
         (0, C.Ay)(() => {
             z();
         }),
         n.useEffect(() => {
             w > H.current && s();
-        }, [H, w, s]);
+        }, [H, w, s]));
     let S = r && !I && null != _;
     return (0, l.jsxs)(c.d, {
         transitionState: e,

@@ -25,7 +25,7 @@ function a(e) {
             })
             .forEach((e) => {
                 let [n, l] = e;
-                return (t = !0), r.set(n, { ...r.get(n), ...Object.fromEntries(l.map((e) => [e.key, e])) });
+                return ((t = !0), r.set(n, { ...r.get(n), ...Object.fromEntries(l.map((e) => [e.key, e])) }));
             }),
         t
     );

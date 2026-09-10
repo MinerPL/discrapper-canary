@@ -90,7 +90,7 @@ function K(t) {
         soundId: u,
         skuId: i.id,
     });
-    (0, A.Ay)(() => {
+    ((0, A.Ay)(() => {
         let { analyticsLocations: t, skuId: e } = X.current;
         y.default.track(F.HAw.OPEN_MODAL, { location_stack: t, type: P.Nu, sku_id: e, application_id: R?.id });
     }),
@@ -115,7 +115,7 @@ function K(t) {
                 sound_id: s,
                 product_line: l,
             });
-        }, [m.state]);
+        }, [m.state]));
     let Z = n.useCallback(async () => {
         let {
             analyticsLocations: t,
@@ -137,7 +137,7 @@ function K(t) {
             sound_id: s,
         });
         try {
-            I(!0), await C.A.redeemGiftCode({ code: l.code, options: { channelId: o } }), k({ state: "SUCCESS" });
+            (I(!0), await C.A.redeemGiftCode({ code: l.code, options: { channelId: o } }), k({ state: "SUCCESS" }));
         } catch (t) {
             k({ state: "ERROR", error: t });
         } finally {
@@ -236,7 +236,7 @@ function z(t) {
         } = A,
         { isLaunchable: L, isLaunchableLoading: I, isApplicationConnected: R, handleLaunchGame: T } = k,
         N = n.useRef({ analyticsLocations: C, skuId: i.id, applicationId: l.id, canStartAuthorization: g });
-    n.useEffect(() => {
+    (n.useEffect(() => {
         N.current.canStartAuthorization = g;
     }, [g]),
         n.useEffect(() => {
@@ -250,16 +250,16 @@ function z(t) {
                 is_account_linked: x,
                 can_start_authorization: a,
             });
-        }, [E, x]);
+        }, [E, x]));
     let j = n.useCallback(() => {
             let { analyticsLocations: t, skuId: e, applicationId: i } = N.current;
-            y.default.track(F.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            (y.default.track(F.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: i,
                 is_gift: !0,
             }),
-                S({ analyticsLocations: t });
+                S({ analyticsLocations: t }));
         }, [S]),
         O = n.useMemo(() => (0, G.x0)(l, { hasAlreadyLinked: x }), [l, x]);
     return !E || I
@@ -314,7 +314,7 @@ function V(t) {
         });
     if (
         (n.useEffect(() => {
-            (O.current.isLaunchable = h), (O.current.isApplicationConnected = I);
+            ((O.current.isLaunchable = h), (O.current.isApplicationConnected = I));
         }, [h, I]),
         L)
     )
@@ -330,7 +330,7 @@ function V(t) {
                   variant: "primary",
                   text: H.intl.string(H.t.cpT0Cq),
                   onClick: () => {
-                      y.default.track(F.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+                      (y.default.track(F.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                           location_stack: A,
                           sku_id: l.id,
                           application_id: u.id,
@@ -338,7 +338,7 @@ function V(t) {
                           is_launchable: h ?? !1,
                           is_application_connected: I,
                       }),
-                          i();
+                          i());
                   },
               };
     return (0, a.jsxs)(s.d, {

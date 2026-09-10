@@ -31,7 +31,7 @@ async function S(t) {
             let t = d.A.getProduct(s.sku_id);
             if (t?.items.some(u.g) === !0) throw new n.eR("Client update required to redeem this gift");
         }
-        return r.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: s }), { giftCode: s };
+        return (r.h.dispatch({ type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: s }), { giftCode: s });
     } catch (e) {
         throw (r.h.dispatch({ type: "GIFT_CODE_RESOLVE_FAILURE", code: t, error: e }), e);
     }
@@ -84,7 +84,7 @@ let g = {
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            return r.h.dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: n.body }), n.body;
+            return (r.h.dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: n.body }), n.body);
         } catch (i) {
             r.h.dispatch({ type: "GIFT_CODE_CREATE_FAILURE", skuId: t, subscriptionPlanId: e });
         }
@@ -92,8 +92,8 @@ let g = {
     async revokeGiftCode(t) {
         r.h.dispatch({ type: "GIFT_CODE_REVOKE", code: t });
         try {
-            await s.Bo.del({ url: h.Rsh.USER_GIFT_CODE_REVOKE(t), oldFormErrors: !0, rejectWithError: !0 }),
-                r.h.dispatch({ type: "GIFT_CODE_REVOKE_SUCCESS", code: t });
+            (await s.Bo.del({ url: h.Rsh.USER_GIFT_CODE_REVOKE(t), oldFormErrors: !0, rejectWithError: !0 }),
+                r.h.dispatch({ type: "GIFT_CODE_REVOKE_SUCCESS", code: t }));
         } catch (e) {
             r.h.dispatch({ type: "GIFT_CODE_REVOKE_FAILURE", code: t });
         }

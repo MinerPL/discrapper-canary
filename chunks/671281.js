@@ -62,11 +62,11 @@ let x = new A(l.h, {
     },
     LAYOUT_SYSTEM_FETCH_SUCCESS: function (e) {
         let { tenantId: t, layout: n } = e;
-        ((h[t] ??= {})[n.id] = n), delete p[d(t, n.id)], m.delete(d(t, n.id));
+        (((h[t] ??= {})[n.id] = n), delete p[d(t, n.id)], m.delete(d(t, n.id)));
     },
     LAYOUT_SYSTEM_FETCH_FAILURE: function (e) {
         let { tenantId: t, layoutId: n, apiError: r } = e;
-        (p[d(t, n)] = r), m.delete(d(t, n));
+        ((p[d(t, n)] = r), m.delete(d(t, n)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH: function (e) {
         let { tenantId: t, templateId: n, requestParams: r } = e;
@@ -75,14 +75,14 @@ let x = new A(l.h, {
     LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS: function (e) {
         let { tenantId: t, templateId: n, requestParams: r, layout: l } = e,
             a = v(n, r);
-        ((f[t] ??= {})[a] = l), delete E[d(t, a)], g.delete(d(t, a));
+        (((f[t] ??= {})[a] = l), delete E[d(t, a)], g.delete(d(t, a)));
     },
     LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE: function (e) {
         let { tenantId: t, templateId: n, requestParams: r, apiError: l } = e,
             a = v(n, r);
-        (E[d(t, a)] = l), g.delete(d(t, a));
+        ((E[d(t, a)] = l), g.delete(d(t, a)));
     },
     LOGOUT: function () {
-        (h = {}), (m = new Set()), (p = {}), (f = {}), (g = new Set()), (E = {});
+        ((h = {}), (m = new Set()), (p = {}), (f = {}), (g = new Set()), (E = {}));
     },
 });

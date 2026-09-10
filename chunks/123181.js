@@ -82,10 +82,10 @@ function f(e) {
                 if (t) {
                     let t = Object.values(u.Pb).find((t) => t.tags.includes(e));
                     if (null == t) return;
-                    t.tags.forEach((e) => {
+                    (t.tags.forEach((e) => {
                         i.delete(e);
                     }),
-                        i.add(e);
+                        i.add(e));
                 } else i.has(e) ? (i.delete(e), (l = "removed")) : i.add(e);
                 n(Array.from(i), l);
             },
@@ -94,10 +94,10 @@ function f(e) {
         E = (0, l.useCallback)(
             (e) => {
                 let t = new Set(j);
-                e.forEach((e) => {
+                (e.forEach((e) => {
                     t.delete(e);
                 }),
-                    n(Array.from(t), "removed");
+                    n(Array.from(t), "removed"));
             },
             [j, n],
         );
@@ -116,7 +116,7 @@ function f(e) {
                 ref: (e) => (
                     null != e && ((I.current = e), (h.current = e)),
                     () => {
-                        (I.current = null), (h.current = null);
+                        ((I.current = null), (h.current = null));
                     }
                 ),
                 children: (0, i.jsxs)(r.D, {

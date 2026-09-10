@@ -12,7 +12,7 @@ class r extends i.Ay.Store {
 let o = new r(l.h, {
     MESSAGE_CREATE: function (e) {
         let { message: t, sendMessageOptions: n } = e;
-        null != n && (a[t.id] = { ...n, location: n.location ?? s.Hx.OTHER }),
-            null != t.nonce && t.nonce !== t.id && t.nonce in a && delete a[t.nonce];
+        (null != n && (a[t.id] = { ...n, location: n.location ?? s.Hx.OTHER }),
+            null != t.nonce && t.nonce !== t.id && t.nonce in a && delete a[t.nonce]);
     },
 });

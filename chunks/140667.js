@@ -1,4 +1,5 @@
 !(function (t) {
+    "use strict";
     var r,
         n = Object.prototype,
         i = n.hasOwnProperty,
@@ -28,7 +29,7 @@
                     if ("throw" === e) throw t;
                     return P();
                 }
-                for (s.method = e, s.arg = t; ; ) {
+                for (s.method = e, s.arg = t; ;) {
                     var n = s.delegate;
                     if (n) {
                         var i = (function e(t, n) {
@@ -40,14 +41,14 @@
                                         ((n.method = "return"), (n.arg = r), e(t, n), "throw" === n.method)
                                     )
                                         return m;
-                                    (n.method = "throw"),
-                                        (n.arg = TypeError("The iterator does not provide a 'throw' method"));
+                                    ((n.method = "throw"),
+                                        (n.arg = TypeError("The iterator does not provide a 'throw' method")));
                                 }
                                 return m;
                             }
                             var o = f(i, t.iterator, n.arg);
                             if ("throw" === o.type)
-                                return (n.method = "throw"), (n.arg = o.arg), (n.delegate = null), m;
+                                return ((n.method = "throw"), (n.arg = o.arg), (n.delegate = null), m);
                             var a = o.arg;
                             return a
                                 ? a.done
@@ -136,7 +137,7 @@
                                   )
                                 : Promise.resolve(u).then(
                                       function (e) {
-                                          (l.value = e), o(l);
+                                          ((l.value = e), o(l));
                                       },
                                       function (e) {
                                           return t("throw", e, o, a);
@@ -151,14 +152,16 @@
     }
     function k(e) {
         var t = { tryLoc: e[0] };
-        1 in e && (t.catchLoc = e[1]), 2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])), this.tryEntries.push(t);
+        (1 in e && (t.catchLoc = e[1]),
+            2 in e && ((t.finallyLoc = e[2]), (t.afterLoc = e[3])),
+            this.tryEntries.push(t));
     }
     function C(e) {
         var t = e.completion || {};
-        (t.type = "normal"), delete t.arg, (e.completion = t);
+        ((t.type = "normal"), delete t.arg, (e.completion = t));
     }
     function T(e) {
-        (this.tryEntries = [{ tryLoc: "root" }]), e.forEach(k, this), this.reset(!0);
+        ((this.tryEntries = [{ tryLoc: "root" }]), e.forEach(k, this), this.reset(!0));
     }
     function M(e) {
         if (e) {
@@ -168,8 +171,8 @@
             if (!isNaN(e.length)) {
                 var n = -1,
                     o = function t() {
-                        for (; ++n < e.length; ) if (i.call(e, n)) return (t.value = e[n]), (t.done = !1), t;
-                        return (t.value = r), (t.done = !0), t;
+                        for (; ++n < e.length;) if (i.call(e, n)) return ((t.value = e[n]), (t.done = !1), t);
+                        return ((t.value = r), (t.done = !0), t);
                     };
                 return (o.next = o);
             }
@@ -179,7 +182,7 @@
     function P() {
         return { value: r, done: !0 };
     }
-    (y.prototype = S.constructor = g),
+    ((y.prototype = S.constructor = g),
         (g.constructor = y),
         (g[l] = y.displayName = "GeneratorFunction"),
         (u.isGeneratorFunction = function (e) {
@@ -225,11 +228,11 @@
             return (
                 t.reverse(),
                 function r() {
-                    for (; t.length; ) {
+                    for (; t.length;) {
                         var n = t.pop();
-                        if (n in e) return (r.value = n), (r.done = !1), r;
+                        if (n in e) return ((r.value = n), (r.done = !1), r);
                     }
-                    return (r.done = !0), r;
+                    return ((r.done = !0), r);
                 }
             );
         }),
@@ -260,7 +263,9 @@
                 if (this.done) throw e;
                 var t = this;
                 function n(n, i) {
-                    return (s.type = "throw"), (s.arg = e), (t.next = n), i && ((t.method = "next"), (t.arg = r)), !!i;
+                    return (
+                        (s.type = "throw"), (s.arg = e), (t.next = n), i && ((t.method = "next"), (t.arg = r)), !!i
+                    );
                 }
                 for (var o = this.tryEntries.length - 1; o >= 0; --o) {
                     var a = this.tryEntries[o],
@@ -308,7 +313,7 @@
             finish: function (e) {
                 for (var t = this.tryEntries.length - 1; t >= 0; --t) {
                     var r = this.tryEntries[t];
-                    if (r.finallyLoc === e) return this.complete(r.completion, r.afterLoc), C(r), m;
+                    if (r.finallyLoc === e) return (this.complete(r.completion, r.afterLoc), C(r), m);
                 }
             },
             catch: function (e) {
@@ -332,7 +337,7 @@
                     m
                 );
             },
-        });
+        }));
 })(
     (function () {
         return this || ("object" == typeof self && self);

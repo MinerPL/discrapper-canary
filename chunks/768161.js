@@ -122,7 +122,7 @@ function U(l) {
                 };
         }, [G]),
         $ = a.useCallback((l) => {
-            j(l), w(null), N(null);
+            (j(l), w(null), N(null));
         }, []),
         z = a.useCallback(async () => {
             let l = E.trim(),
@@ -133,19 +133,19 @@ function U(l) {
                 e && (D(O ? y.intl.string(y.t["+bm+zE"]) : y.intl.string(y.t.LRlhb1)), (n = !0)),
                 !n)
             ) {
-                v(!0), N(null);
+                (v(!0), N(null));
                 try {
                     let e = await (0, f.Ng)(l, O ? void 0 : A.trim(), O ? (_ ?? void 0) : void 0);
-                    (0, f.Ey)(e, Y),
+                    ((0, f.Ey)(e, Y),
                         r?.(e),
                         t(),
                         o && (0, f.cV)({ amountRedeemed: e.amount, currencyCode: e.currency, loadId: Y.loadId }),
                         (0, C.$o)().then((l) => {
                             let e = (l?.body ?? []).find((l) => l.type === R.he.TDS_WALLET);
                             null != e && (0, C.YP)(e.id);
-                        });
+                        }));
                 } catch (l) {
-                    N((0, f.tn)(l)), (0, f.k$)(Y);
+                    (N((0, f.tn)(l)), (0, f.k$)(Y));
                     return;
                 } finally {
                     v(!1);
@@ -153,10 +153,10 @@ function U(l) {
             }
         }, [E, O, _, A, r, t, o, Y]),
         F = a.useCallback((l) => {
-            I(l), D(null), N(null);
+            (I(l), D(null), N(null));
         }, []),
         Q = a.useCallback((l) => {
-            k(l), D(null), N(null);
+            (k(l), D(null), N(null));
         }, []);
     return (0, n.jsx)(i.Modal, {
         transitionState: e,

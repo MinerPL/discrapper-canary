@@ -24,7 +24,7 @@ function E(e) {
         source: A,
         commandOrigin: h,
     } = e;
-    null != n && r()(n.inputType !== u.y$.PLACEHOLDER, "command should not be placeholder"),
+    (null != n && r()(n.inputType !== u.y$.PLACEHOLDER, "command should not be placeholder"),
         s.h.dispatch({
             type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
             channelId: t,
@@ -39,7 +39,7 @@ function E(e) {
             searchResultsPosition: E,
             source: A,
             commandOrigin: h,
-        });
+        }));
 }
 function A(e, t) {
     s.h.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: e, commandId: t });

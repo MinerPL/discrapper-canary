@@ -96,7 +96,7 @@ function x(e) {
                                           return p(
                                               {
                                                   onClick: (e) => {
-                                                      w && null != e && e.stopPropagation(), n(e);
+                                                      (w && null != e && e.stopPropagation(), n(e));
                                                   },
                                                   ...r,
                                               },

@@ -73,10 +73,14 @@ function en(e) {
         ec,
         { guild: eu, onSelect: eg, hideSettings: eh } = e,
         eA = eu.id,
-        eE = (0, r.bG)([p.default], () => {
-            let e = p.default.getCurrentUser();
-            return l()(null != e, "GuildContextMenu: user cannot be undefined"), (0, _.bM)(eu, e);
-        }, [eu]),
+        eE = (0, r.bG)(
+            [p.default],
+            () => {
+                let e = p.default.getCurrentUser();
+                return (l()(null != e, "GuildContextMenu: user cannot be undefined"), (0, _.bM)(eu, e));
+            },
+            [eu],
+        ),
         e_ = (0, et.A)({ guild: eu, source: R.PE1.GUILD_CONTEXT_MENU, channel: null }),
         eS = (0, ei.A)(eA),
         ep = (0, j.A)(eu),
@@ -218,7 +222,7 @@ function en(e) {
                 })(e);
             if (__OVERLAY__ || !l) return null;
             function d(i) {
-                Q.A.open(e.id, i), s.dispatch(R.jej.POPOUT_CLOSE), (0, a.closeAllModals)();
+                (Q.A.open(e.id, i), s.dispatch(R.jej.POPOUT_CLOSE), (0, a.closeAllModals)());
             }
             return (0, n.jsx)(o.Dr, {
                 id: "guild-settings",
@@ -323,10 +327,10 @@ function en(e) {
                         function u(i) {
                             l(!1);
                             let t = { message_notifications: i };
-                            i === R.orn.ALL_MESSAGES &&
+                            (i === R.orn.ALL_MESSAGES &&
                                 a !== C.e.ALL_MESSAGES &&
                                 (t.flags = (0, k.md)(O.Ay.getGuildFlags(e), H.n3.UNREADS_ALL_MESSAGES)),
-                                D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i));
+                                D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i)));
                         }
                         function g(i) {
                             l(!1);

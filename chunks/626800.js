@@ -19,4 +19,4 @@ var n = r(581070)(),
     s = (function () {
         return o(arguments);
     })();
-(o.isLegacyArguments = a), (e.exports = s ? o : a);
+((o.isLegacyArguments = a), (e.exports = s ? o : a));

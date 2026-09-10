@@ -1,4 +1,4 @@
-e.d(n, { A: () => v }), e(938796);
+(e.d(n, { A: () => v }), e(938796));
 var i = e(582128),
     l = e(284009),
     r = e.n(l),
@@ -67,7 +67,7 @@ function v(t) {
         }, [_, l, M]),
         {
             openModal: i.useCallback(() => {
-                r()(null != O, "No application"),
+                (r()(null != O, "No application"),
                     r()(null != l, "No SKU ID"),
                     r()(_, "Cannot purchase this unpublished plan"),
                     (0, g.w)({
@@ -80,7 +80,7 @@ function v(t) {
                         analyticsLocation: e,
                     }).then(() => {
                         v?.();
-                    });
+                    }));
             }, [O, l, _, E, P, T, n, x, R, e, v]),
             subscriptionPurchaseButtonState: z,
             isGuildSubscribed: U,

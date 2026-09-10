@@ -1,4 +1,4 @@
-n.d(t, { A: () => a }), n(321073);
+(n.d(t, { A: () => a }), n(321073));
 var l = n(22098),
     i = n(820066);
 let s = new Set(["line", "blockQuote"]),
@@ -23,9 +23,9 @@ function a(e, t, n) {
                 else if ("syntaxAfter" === e && null != s) for (let e of s.attributes) o(e) || (f[`after_${e}`] = !0);
             for (let [t, n] of m) {
                 let t = { anchor: i.VW.start(e, n), focus: i.VW.end(e, n) };
-                i.Kh.isBefore(t.anchor, a.anchor) && (t.anchor = a.anchor),
+                (i.Kh.isBefore(t.anchor, a.anchor) && (t.anchor = a.anchor),
                     i.Kh.isAfter(t.focus, a.focus) && (t.focus = a.focus),
-                    h.push({ ...f, ...t });
+                    h.push({ ...f, ...t }));
             }
         }
     }

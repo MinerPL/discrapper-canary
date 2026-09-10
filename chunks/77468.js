@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => A }), n(323874), n(14289), n(35956));
 var i = n(562708),
     r = n(636537),
     a = n(228366),
@@ -36,16 +36,16 @@ let A = {
         d.default.track(u.HAw.CONNECTED_ACCOUNT_INITIATED, { platform_type: e, location: t });
         let _ = u.Rsh.CONNECTIONS_AUTHORIZE(e),
             E = new URLSearchParams();
-        null != i && E.append("two_way_user_code", i),
+        (null != i && E.append("two_way_user_code", i),
             null != l && E.append("success_redirect", l),
             null != n
                 ? (E.append("two_way_link_type", n), E.append("two_way_link", "true"))
                 : null != a && E.append("two_way_link", String(a)),
             null != c && E.append("handle", c),
-            (_ = _ + "?" + E.toString());
+            (_ = _ + "?" + E.toString()));
         let A = await r.Bo.get({ url: _, oldFormErrors: !0, rejectWithError: (0, r.fT)() }),
             { state: h } = (0, s.vA)(A.body.url ?? "");
-        return null != h && o.A.addPendingAuthorizedState(h), A;
+        return (null != h && o.A.addPendingAuthorizedState(h), A);
     },
     callback: E,
     connect: (e, t, n, a, s) =>
@@ -84,17 +84,17 @@ let A = {
             rejectWithError: (0, r.fT)(),
         }),
     joinServer(e, t) {
-        a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !0 }),
+        (a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !0 }),
             r.Bo.post({ url: u.Rsh.INTEGRATION_JOIN(e), oldFormErrors: !0, rejectWithError: (0, r.fT)() }, (n) => {
-                a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !1 }),
+                (a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !1 }),
                     n.ok ||
                         (a.h.dispatch({
                             type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR",
                             integrationId: e,
                             error: n.hasErr ? void 0 : n.body.message,
                         }),
-                        t?.());
-            });
+                        t?.()));
+            }));
     },
     async refreshAccessToken(e, t) {
         try {
@@ -105,12 +105,12 @@ let A = {
                 oldFormErrors: !0,
                 rejectWithError: (0, r.fT)(),
             });
-            return a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, accessToken: n }), n;
+            return (a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, accessToken: n }), n);
         } catch (n) {
             throw (
-                (n.body.code === u.t02.CONNECTION_REVOKED &&
+                n.body.code === u.t02.CONNECTION_REVOKED &&
                     a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, revoked: !0 }),
-                n)
+                n
             );
         }
     },

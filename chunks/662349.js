@@ -33,7 +33,7 @@ function m(e) {
     let { spec: s, label: t, icon: l, onClick: a, isHoveringOrFocusing: c, fullWidth: d = !1 } = e,
         o = n.useCallback(
             (e) => {
-                e.stopPropagation(), a();
+                (e.stopPropagation(), a());
             },
             [a],
         );

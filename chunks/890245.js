@@ -30,6 +30,5 @@ if (
         null == window.GLOBAL_ENV.NATIVE_WEBSOCKET_ORIGIN)
 )
     throw (
-        (window.alert("Global environment variables not set!"),
-        Error("Global environment variables not set! Aborting."))
+        window.alert("Global environment variables not set!"), Error("Global environment variables not set! Aborting.")
     );

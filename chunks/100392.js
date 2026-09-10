@@ -25,7 +25,7 @@ function u(e, t) {
         case r.l5.APEX:
             return `Variant ${t.variantId}`;
         default:
-            return e.system, null;
+            return (e.system, null);
     }
 }
 function _(e) {

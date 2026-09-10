@@ -27,7 +27,7 @@ function x(t) {
         children: (0, s.jsx)(o.D, {
             "aria-label": C,
             onClick: function () {
-                _({ action: "PRESS_ADD_NOTE" }), r?.({ tabSection: h.RP.USER_INFO, scrollTarget: h.bk.NOTE });
+                (_({ action: "PRESS_ADD_NOTE" }), r?.({ tabSection: h.RP.USER_INFO, scrollTarget: h.bk.NOTE }));
             },
             className: a()(k.x, n && k.R),
             children: (0, s.jsx)(g, { size: "xs", color: "currentColor" }),

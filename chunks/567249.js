@@ -1,4 +1,4 @@
-n.d(t, { A: () => G }), n(323874), n(14289), n(35956), n(596829);
+(n.d(t, { A: () => G }), n(323874), n(14289), n(35956), n(596829));
 var i = n(284009),
     r = n.n(i),
     a = n(435558),
@@ -45,17 +45,17 @@ function D(e, t, i) {
         o = URL.canParse(n.p) ? new URL(n.p).origin : "";
     if (s !== l && s !== o) return void p.warn("Not injecting stylesheet, unrecognized origin", s);
     let d = a.createElement("link");
-    (d.href = t),
+    ((d.href = t),
         (d.rel = "stylesheet"),
         (d.integrity = i),
         r()(null != a.head, "Document head was null"),
-        a.head.appendChild(d);
+        a.head.appendChild(d));
 }
 function v(e) {
     let t = g[e];
     if (null != t) {
         let n, i;
-        t.closed || y(e),
+        (t.closed || y(e),
             p.info("Unmounting popout window", e),
             (n = g[e]),
             r()(null != n, "Popout window was null during unmount"),
@@ -72,7 +72,7 @@ function v(e) {
             setTimeout(() => {
                 M(t);
             }, 100),
-            w.emitChange();
+            w.emitChange());
     }
 }
 function b(e) {
@@ -92,14 +92,14 @@ function b(e) {
                                 n = N[e];
                             if (null == t) return p.warn("Failed to open window", e);
                             let i = t.document;
-                            (0, I.a3)(i, R),
+                            ((0, I.a3)(i, R),
                                 t.addEventListener("focus", R),
                                 t.addEventListener("blur", R),
-                                t.addEventListener("resize", L);
+                                t.addEventListener("resize", L));
                             for (let e of document.querySelectorAll('link[rel="stylesheet"]'))
                                 D(t, e.href, e.integrity);
                             let a = (0, l.createRoot)(i.getElementById(O));
-                            r()(null != a, "No render target for popout!"), (S[e] = a), a.render(n(e));
+                            (r()(null != a, "No render target for popout!"), (S[e] = a), a.render(n(e)));
                         })(i),
                         C.delete(i),
                         w.emitChange())
@@ -127,10 +127,10 @@ class U extends o.Ay.PersistedStore {
     static displayName = "PopoutWindowStore";
     static persistKey = "PopoutWindowStore";
     initialize(e) {
-        this.waitFor(E.default),
+        (this.waitFor(E.default),
             window.addEventListener("message", b),
             window.addEventListener("beforeunload", P),
-            (T = e ?? {});
+            (T = e ?? {}));
     }
     getWindow(e) {
         return g[e];
@@ -180,22 +180,22 @@ let w = new U(d.h, {
             let r = !0 === n.outOfProcessOverlay,
                 a = g[t],
                 s = null != a && !a.closed;
-            if (s && !r) return A.isPlatformEmbedded ? h.Ay.focus(t) : null != a && a.focus(), !1;
-            if (s && r) return p.info("Already has open window, skipping focus"), !1;
+            if (s && !r) return (A.isPlatformEmbedded ? h.Ay.focus(t) : null != a && a.focus(), !1);
+            if (s && r) return (p.info("Already has open window, skipping focus"), !1);
             let { defaultWidth: l, defaultHeight: o, defaultAlwaysOnTop: d = !1, ...c } = n,
                 E = { ...c, width: l ?? c.width, height: o ?? c.height },
                 I = d,
                 S = T[t];
             if (null != S) {
                 let { width: e, height: t, x: n, y: i, alwaysOnTop: r } = S;
-                (I = null != r ? r : d),
+                ((I = null != r ? r : d),
                     (E = {
                         ...E,
                         width: null != e && 0 !== e ? e : l,
                         height: null != t && 0 !== t ? t : o,
                         left: E.left ?? n,
                         top: E.top ?? i,
-                    });
+                    }));
             }
             let O = (function (e) {
                 let t = "";
@@ -212,7 +212,7 @@ let w = new U(d.h, {
                 R.windowKey = t;
             } catch (e) {
                 throw (
-                    ((0, u.pj)(e, r ? _.Ue.OutOfProcess : null, {
+                    (0, u.pj)(e, r ? _.Ue.OutOfProcess : null, {
                         extra: {
                             windowKey: t,
                             totalWindowCount: Object.keys(g).length,
@@ -221,15 +221,15 @@ let w = new U(d.h, {
                             isPlatformEmbedded: A.isPlatformEmbedded,
                         },
                     }),
-                    e)
+                    e
                 );
             }
-            r ? p.verbose("Opening out of process overlay window", t) : R.focus(),
+            (r ? p.verbose("Opening out of process overlay window", t) : R.focus(),
                 (g[t] = R),
                 (N[t] = i),
                 A.isPlatformEmbedded &&
                     (h.Ay.setAlwaysOnTop(t, I), (m[t] = I), h.Ay.isAlwaysOnTop(t).then((e) => (m[t] = e))),
-                C.add(t);
+                C.add(t));
         },
         POPOUT_WINDOW_ADD_STYLESHEET: function (e) {
             let { url: t, integrity: n } = e;

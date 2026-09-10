@@ -39,7 +39,7 @@ function u(e) {
     else if (e <= E.F_X.GUILD_MEMBER_VERIFICATION_UPDATE) return E.GaG.GUILD_MEMBER_VERIFICATION;
     else if (e <= E.F_X.GUILD_PROFILE_UPDATE) return E.GaG.GUILD_PROFILE;
     else if (e <= E.F_X.GUILD_MIGRATE_BYPASS_SLOWMODE_PERMISSION) return E.GaG.GUILD;
-    return i.A.captureMessage(`Unknown target type for: ${e}`), E.GaG.UNKNOWN;
+    return (i.A.captureMessage(`Unknown target type for: ${e}`), E.GaG.UNKNOWN);
 }
 function o(e) {
     switch (e) {
@@ -133,7 +133,7 @@ class c {
     newValue;
     subtarget;
     constructor(e, t, n) {
-        (this.key = e), (this.oldValue = t), (this.newValue = n);
+        ((this.key = e), (this.oldValue = t), (this.newValue = n));
     }
 }
 class _ extends a.A {
@@ -150,7 +150,7 @@ class _ extends a.A {
     user;
     options;
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.action = e.action),
             (this.actionType = o(this.action)),
@@ -162,7 +162,7 @@ class _ extends a.A {
             (this.targetType = u(this.action)),
             (this.options = e.options ?? {}),
             (this.target = e.target ?? e.id),
-            (this.user = e.user ?? null);
+            (this.user = e.user ?? null));
     }
 }
 let d = _;

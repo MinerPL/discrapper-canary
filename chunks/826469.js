@@ -1,4 +1,4 @@
-n.d(t, { A: () => r }), n(938796);
+(n.d(t, { A: () => r }), n(938796));
 var i = n(202613);
 class r {
     source;
@@ -9,13 +9,13 @@ class r {
     relocationCurrencyCode;
     willForfeitGiftCardBalance;
     constructor(e, t, n, i, r = null) {
-        (this.source = e),
+        ((this.source = e),
             (this.enabled = t),
             (this.disabledReason = r),
             (this.allowedCurrencies = n),
             (this.relocationCountry = i?.country ?? null),
             (this.relocationCurrencyCode = i?.currencyCode ?? null),
-            (this.willForfeitGiftCardBalance = i?.willForfeitGiftCardBalance ?? !1);
+            (this.willForfeitGiftCardBalance = i?.willForfeitGiftCardBalance ?? !1));
     }
     get id() {
         return this.source.id;

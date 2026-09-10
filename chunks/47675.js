@@ -1,4 +1,4 @@
-t.d(i, {
+(t.d(i, {
     XH: () => b,
     Wn: () => T,
     CD: () => I,
@@ -11,7 +11,7 @@ t.d(i, {
     UI: () => v,
     am: () => k,
 }),
-    t(321073);
+    t(321073));
 var r = t(95561),
     l = t(982240),
     n = t(733110),
@@ -272,7 +272,7 @@ function M(e) {
         numCharacters: a,
         applicationId: d,
     } = e;
-    T({ ...e, action: n }),
+    (T({ ...e, action: n }),
         c.default.track(A.HAw.USER_PROFILE_EDIT_ACTION, {
             ...(0, r.H$)(i),
             ...(0, r.Ou)(t),
@@ -285,7 +285,7 @@ function M(e) {
             num_results: s,
             num_characters: a,
             application_id: d,
-        });
+        }));
 }
 function w(e) {
     let {
@@ -298,7 +298,7 @@ function w(e) {
         numCharactersCommentary: s,
         isWidgetRemoved: a,
     } = e;
-    T({ ...e, action: "EDIT_SAVED" }),
+    (T({ ...e, action: "EDIT_SAVED" }),
         c.default.track(A.HAw.USER_PROFILE_EDIT_SAVED, {
             ...(0, r.H$)(i),
             ...(0, r.Ou)(t),
@@ -309,11 +309,11 @@ function w(e) {
             tags: u,
             num_characters_commentary: s,
             is_widget_removed: a,
-        });
+        }));
 }
 function R(e) {
     let { guildId: i, channelId: t, analyticsLocations: l, action: n, wishlistId: o, skuId: u, productLines: s } = e;
-    T({ ...e, action: n }),
+    (T({ ...e, action: n }),
         c.default.track(A.HAw.USER_PROFILE_WISHLIST_ACTION, {
             ...(0, r.H$)(i),
             ...(0, r.Ou)(t),
@@ -323,5 +323,5 @@ function R(e) {
             wishlist_id: o,
             sku_id: u,
             product_lines: null != s ? Array.from(s) : [],
-        });
+        }));
 }

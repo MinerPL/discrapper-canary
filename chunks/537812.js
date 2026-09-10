@@ -7,14 +7,14 @@ let n = (e) => (t, r, n) => {
             if (t) {
                 let i = (null == r ? void 0 : r.equalityFn) || Object.is,
                     a = e(n.getState());
-                (o = (r) => {
+                ((o = (r) => {
                     let n = e(r);
                     if (!i(a, n)) {
                         let e = a;
                         t((a = n), e);
                     }
                 }),
-                    (null == r ? void 0 : r.fireImmediately) && t(a, a);
+                    (null == r ? void 0 : r.fireImmediately) && t(a, a));
             }
             return i(o);
         }),
@@ -74,10 +74,10 @@ let o = (e) => (t) => {
         if (!d)
             return e(
                 (...e) => {
-                    console.warn(
+                    (console.warn(
                         `[zustand persist middleware] Unable to update item '${l.name}', the given storage is currently unavailable.`,
                     ),
-                        r(...e);
+                        r(...e));
                 },
                 n,
                 a,
@@ -93,11 +93,11 @@ let o = (e) => (t) => {
         let v = () => {
             var e, t;
             if (!d) return;
-            (u = !1),
+            ((u = !1),
                 c.forEach((e) => {
                     var t;
                     return e(null != (t = n()) ? t : m);
-                });
+                }));
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = n()) ? e : m)) || void 0;
             return o(d.getItem.bind(d))(l.name)
                 .then((e) => {
@@ -120,7 +120,7 @@ let o = (e) => (t) => {
                     if ((r((s = l.merge(o, null != (t = n()) ? t : m)), !0), i)) return p();
                 })
                 .then(() => {
-                    null == i || i(s, void 0), (s = n()), (u = !0), f.forEach((e) => e(s));
+                    (null == i || i(s, void 0), (s = n()), (u = !0), f.forEach((e) => e(s)));
                 })
                 .catch((e) => {
                     null == i || i(void 0, e);
@@ -129,7 +129,7 @@ let o = (e) => (t) => {
         return (
             (a.persist = {
                 setOptions: (e) => {
-                    (l = { ...l, ...e }), e.storage && (d = e.storage);
+                    ((l = { ...l, ...e }), e.storage && (d = e.storage));
                 },
                 clearStorage: () => {
                     null == d || d.removeItem(l.name);

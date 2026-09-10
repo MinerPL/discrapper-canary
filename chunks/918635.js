@@ -22,10 +22,10 @@ r(
                         s = 0,
                         l = 1,
                         h = !1;
-                    c(e, function (e) {
+                    (c(e, function (e) {
                         var o = s++,
                             c = !1;
-                        l++,
+                        (l++,
                             a(r, t, e).then(
                                 function (e) {
                                     c || h || ((h = !0), u(e));
@@ -33,11 +33,11 @@ r(
                                 function (e) {
                                     !c && !h && ((c = !0), (i[o] = e), --l || p(new n(i, d)));
                                 },
-                            );
+                            ));
                     }),
-                        --l || p(new n(i, d));
+                        --l || p(new n(i, d)));
                 });
-            return h.error && p(h.value), r.promise;
+            return (h.error && p(h.value), r.promise);
         },
     },
 );

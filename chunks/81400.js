@@ -1,4 +1,4 @@
-l.d(e, { EC: () => U, j8: () => b, uZ: () => O }), l(938796);
+(l.d(e, { EC: () => U, j8: () => b, uZ: () => O }), l(938796));
 var n = l(582128),
     i = l(702841),
     u = l(159001),
@@ -16,32 +16,40 @@ var n = l(582128),
     _ = l(355097),
     N = l(375708);
 function O(t) {
-    return (0, i.bG)([a.default, s.Ay], () => {
-        if (null == t) return !1;
-        let e = a.default.getId();
-        return (0, E.TR)(s.Ay.getMember(t, e));
-    }, [t]);
+    return (0, i.bG)(
+        [a.default, s.Ay],
+        () => {
+            if (null == t) return !1;
+            let e = a.default.getId();
+            return (0, E.TR)(s.Ay.getMember(t, e));
+        },
+        [t],
+    );
 }
 function U(t) {
-    return (0, i.cf)([a.default, s.Ay, o.A, c.A], () => {
-        let e = { nick: void 0, bio: void 0 },
-            l = o.A.getGuildId(),
-            n = t ?? l,
-            i = c.A.getGuild(n);
-        if (null == i || null == n) return e;
-        let u = a.default.getId(),
-            r = s.Ay.getMember(n, u),
-            d = (0, E.wR)(r?.flags);
-        return (
-            0 === d.size ||
-                (d.has(g.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) &&
-                    (null == t
-                        ? (e.nick = [N.intl.formatToPlainString(N.t.WBUh3O, { guildName: i.name ?? "" })])
-                        : (e.nick = [N.intl.string(N.t.EPZCrM)])),
-                d.has(g.D.AUTOMOD_QUARANTINED_BIO) && (e.bio = [N.intl.string(N.t.dZh1vz)])),
-            e
-        );
-    }, [t]);
+    return (0, i.cf)(
+        [a.default, s.Ay, o.A, c.A],
+        () => {
+            let e = { nick: void 0, bio: void 0 },
+                l = o.A.getGuildId(),
+                n = t ?? l,
+                i = c.A.getGuild(n);
+            if (null == i || null == n) return e;
+            let u = a.default.getId(),
+                r = s.Ay.getMember(n, u),
+                d = (0, E.wR)(r?.flags);
+            return (
+                0 === d.size ||
+                    (d.has(g.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) &&
+                        (null == t
+                            ? (e.nick = [N.intl.formatToPlainString(N.t.WBUh3O, { guildName: i.name ?? "" })])
+                            : (e.nick = [N.intl.string(N.t.EPZCrM)])),
+                    d.has(g.D.AUTOMOD_QUARANTINED_BIO) && (e.bio = [N.intl.string(N.t.dZh1vz)])),
+                e
+            );
+        },
+        [t],
+    );
 }
 function b(t) {
     let { guildId: e, scrollPosition: s, analyticsLocations: o } = t,
@@ -58,7 +66,7 @@ function b(t) {
                 t({ userId: a.default.getId(), guildId: E.id, sourceAnalyticsLocations: o });
             } else {
                 let { openUserSettings: e } = l(766075);
-                r.A.setState({ subsection: t, scrollPosition: s }), e(A.X.PROFILE_PANEL, { analyticsLocations: o });
+                (r.A.setState({ subsection: t, scrollPosition: s }), e(A.X.PROFILE_PANEL, { analyticsLocations: o }));
             }
         }, [g, s, o, E, N]),
         g,

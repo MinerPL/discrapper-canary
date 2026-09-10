@@ -66,7 +66,7 @@ let t = (function () {
                                       l,
                                       v,
                                       k = (function e(s, n) {
-                                          for (var t, i, a = s.childNodes, o = a.length; o--; )
+                                          for (var t, i, a = s.childNodes, o = a.length; o--;)
                                               3 === (i = (t = a[o]).nodeType)
                                                   ? n.push(t)
                                                   : 1 !== i ||
@@ -96,13 +96,13 @@ let t = (function () {
                                                   0 !== i.indexOf("on") &&
                                                   !h.hasAttribute(i) &&
                                                   h.setAttribute(i, t[i]);
-                                          (h.className = s.className),
+                                          ((h.className = s.className),
                                               (h.alt = p),
                                               (h.src = v),
                                               (a = !0),
-                                              o.appendChild(h);
+                                              o.appendChild(h));
                                       }
-                                      h || o.appendChild(_(p, !1)), (h = null);
+                                      (h || o.appendChild(_(p, !1)), (h = null));
                                   }
                                   a &&
                                       (c < m.length && o.appendChild(_(m.slice(c), !0)),
@@ -124,7 +124,7 @@ let t = (function () {
             test: function (e) {
                 n.lastIndex = 0;
                 var s = n.test(e);
-                return (n.lastIndex = 0), s;
+                return ((n.lastIndex = 0), s);
             },
         },
         s = { "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" },
@@ -155,13 +155,13 @@ let t = (function () {
         return String(e).replace(n, s);
     }
     function f(e, s) {
-        for (var n = [], t = 0, i = 0, a = 0; a < e.length; )
-            (t = e.charCodeAt(a++)),
+        for (var n = [], t = 0, i = 0, a = 0; a < e.length;)
+            ((t = e.charCodeAt(a++)),
                 i
                     ? (n.push((65536 + ((i - 55296) << 10) + (t - 56320)).toString(16)), (i = 0))
                     : 55296 <= t && t <= 56319
                       ? (i = t)
-                      : n.push(t.toString(16));
+                      : n.push(t.toString(16)));
         return n.join(s || "-");
     }
 })();

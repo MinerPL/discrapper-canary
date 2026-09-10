@@ -52,7 +52,7 @@ let k = i.forwardRef(function (e, t) {
         c((t) => {
             let n = [...t],
                 l = n.findIndex((t) => t.id === e);
-            return n.splice(l, 1), n;
+            return (n.splice(l, 1), n);
         });
     }, []);
     return a || !h
@@ -98,7 +98,7 @@ function J(e) {
         tooltipPosition: s,
         disabled: i,
         onClick: function (e) {
-            D.default.track(W.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
+            (D.default.track(W.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
                 sound_id: t.soundId,
                 sound_name: t.name,
                 sound_guild_id: t.guildId,
@@ -106,7 +106,7 @@ function J(e) {
             }),
                 e.stopPropagation(),
                 e.currentTarget.blur(),
-                n();
+                n());
         },
         text: Z.intl.formatToPlainString(Z.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
         children: (0, l.jsx)(m.H, { size: "md", color: "currentColor", className: Y.Wo }),
@@ -118,12 +118,12 @@ function $(e) {
         a = (0, o.bG)([G.A], () => G.A.isFavoriteSound(t.soundId), [t.soundId]),
         u = i.useCallback(
             (e) => {
-                e.stopPropagation(),
+                (e.stopPropagation(),
                     e.currentTarget.blur(),
                     a
                         ? (0, U.eS)(t.soundId)
                         : ((0, F.Ni)({ sound: t, location: { ...s, object: W.ZSU.SOUNDBOARD_SOUND } }),
-                          (0, U.Rp)(t.soundId));
+                          (0, U.Rp)(t.soundId)));
             },
             [a, t, s],
         );

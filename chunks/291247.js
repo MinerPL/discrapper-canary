@@ -1,4 +1,4 @@
-i.d(t, { A: () => v }), i(938796);
+(i.d(t, { A: () => v }), i(938796));
 var n = i(477900),
     a = i(582128),
     l = i(665260),
@@ -31,7 +31,7 @@ var n = i(477900),
 function v(e, t, v, P, T) {
     let j = a.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
         p = null != P ? [P] : [];
-    (0, g.Eq)(j, "useAdminActionItems"), (0, r.bG)([C.A], () => C.A.getGuildVersion(t), [t]);
+    ((0, g.Eq)(j, "useAdminActionItems"), (0, r.bG)([C.A], () => C.A.getGuildVersion(t), [t]));
     let O = (0, r.bG)([x.A], () => x.A.getGuild(t), [t]),
         k = (0, r.bG)([y.default], () => y.default.getCurrentUser()?.id === e.id, [e.id]),
         L = (0, r.bG)([h.Ay], () => h.Ay.isGuestOrLurker(t, e.id), [t, e.id]),
@@ -68,7 +68,7 @@ function v(e, t, v, P, T) {
                                     checked: W,
                                     color: "danger",
                                     action: () => {
-                                        !1 === W && Q(b.Nj.MUTE), E.A.setServerMute(t, e.id, !W);
+                                        (!1 === W && Q(b.Nj.MUTE), E.A.setServerMute(t, e.id, !W));
                                     },
                                 },
                                 "voice-mute",
@@ -104,7 +104,7 @@ function v(e, t, v, P, T) {
     async function J(t, i, n) {
         if (t.ctrlKey || t.metaKey)
             try {
-                await A.A.setCommunicationDisabledDuration(
+                (await A.A.setCommunicationDisabledDuration(
                     i,
                     n,
                     N.DisableCommunicationDuration.DURATION_60_SEC,
@@ -117,7 +117,7 @@ function v(e, t, v, P, T) {
                             U.intl.formatToPlainString(U.t.O9C3Nt, { user: D.Ay.getName(i, null, e) ?? "" }),
                             u.Ck.SUCCESS,
                         ),
-                    );
+                    ));
             } catch (e) {
                 (0, d.P0)((0, o.o)(U.intl.string(U.t.epyCuh), u.Ck.FAILURE));
             }

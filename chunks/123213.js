@@ -52,12 +52,12 @@ function h(e) {
         }, [t, N, f, d, r, m, A]),
         b = n.useCallback(
             async (e) => {
-                e.stopPropagation(), j(!0);
+                (e.stopPropagation(), j(!0));
                 try {
                     await p?.();
                 } catch {
                 } finally {
-                    h?.(), j(!1);
+                    (h?.(), j(!1));
                 }
             },
             [p, h],

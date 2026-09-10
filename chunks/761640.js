@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => V, JU: () => U, fe: () => N });
+n.d(t, { Ay: () => B, JU: () => U, fe: () => N });
 var i = n(607399),
     r = n(17928),
     a = n(228366),
@@ -48,9 +48,9 @@ function G(e) {
         n = !1;
     b && ((b = !1), (n = !0));
     let i = P(f.Ay.getChannelId());
-    null != i && i in D && (delete D[i], (n = !0)), t && y && w() && (n = !0);
+    (null != i && i in D && (delete D[i], (n = !0)), t && y && w() && (n = !0));
     let r = n && e ? e : !e;
-    return r && t && (y = !1), r;
+    return (r && t && (y = !1), r);
 }
 function x() {
     let e = !1;
@@ -83,7 +83,7 @@ class F extends r.Ay.PersistedStore {
         }),
     ];
     initialize(e) {
-        null != e &&
+        (null != e &&
             ((C = e.isMembersOpen ?? !1),
             (O = e.isSummariesOpen ?? !1),
             (L = e.isProfileOpen ?? !0),
@@ -92,7 +92,7 @@ class F extends r.Ay.PersistedStore {
             (v = e.guildSidebars ?? {})),
             this.syncWith([d.A], k),
             this.syncWith([I.A], x),
-            this.waitFor(A.A, s.A, l.Bt, h.A, I.A, d.A, f.Ay, p.A, T.default);
+            this.waitFor(A.A, s.A, l.Bt, h.A, I.A, d.A, f.Ay, p.A, T.default));
     }
     getState() {
         return {
@@ -148,21 +148,21 @@ class F extends r.Ay.PersistedStore {
         return M;
     }
 }
-let V = new F(a.h, {
+let B = new F(a.h, {
     SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: function (e) {
-        return (M = e.searchContextId), k();
+        return ((M = e.searchContextId), k());
     },
     CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-        b && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), O && (O = G(O)), R && (R = G(R)), (C = G(C, !0));
+        (b && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), O && (O = G(O)), R && (R = G(R)), (C = G(C, !0)));
     },
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function () {
-        L || _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (L = G(L, !0));
+        (L || _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (L = G(L, !0)));
     },
     CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
-        C && (C = G(C)), R && (R = G(R)), (O = G(O, !0));
+        (C && (C = G(C)), R && (R = G(R)), (O = G(O, !0)));
     },
     CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function () {
-        b && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = G(R, !0));
+        (b && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = G(R, !0)));
     },
     CHANNEL_OPEN_CONVERSATIONS_SECTION: function () {
         return !R && (b && _._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = !1), (O = !1), (R = !0), (y = !1), !0);
@@ -173,7 +173,7 @@ let V = new F(a.h, {
         let a = P(n);
         if (null == a) return !1;
         let s = { type: t, channelId: i, details: r };
-        return t === c.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (D[a] = s), !0;
+        return (t === c.PE.VIEW_MOD_REPORT && (s = { ...s, baseChannelId: n }), (D[a] = s), !0);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { sidebarType: t, guildId: n, baseChannelId: i, details: r } = e;
@@ -200,7 +200,7 @@ let V = new F(a.h, {
         let { collapsed: t } = e;
         if (((y = !t), !t)) {
             let e = f.Ay.getChannelId();
-            null != e && delete D[e], b && (_._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (b = !1));
+            (null != e && delete D[e], b && (_._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (b = !1)));
         }
     },
     CHANNEL_DELETE: function (e) {

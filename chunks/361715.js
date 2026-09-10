@@ -1,4 +1,4 @@
-IntlMessageFormat.__addLocaleData({
+(IntlMessageFormat.__addLocaleData({
     locale: "da",
     pluralRuleFunction: function (e, t) {
         var r = String(e).split("."),
@@ -7,4 +7,4 @@ IntlMessageFormat.__addLocaleData({
         return t || (1 != e && (i || (0 != n && 1 != n))) ? "other" : "one";
     },
 }),
-    IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });
+    IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" }));

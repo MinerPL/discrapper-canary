@@ -58,7 +58,7 @@ let d = {
     removeGuildJoinRequest: async function e(e) {
         try {
             let t = await i.Bo.del({ url: _.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e), rejectWithError: (0, i.fT)() });
-            return l.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: null }), t;
+            return (l.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: null }), t);
         } catch (e) {
             throw e;
         }
@@ -93,7 +93,7 @@ let d = {
                 url: _.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 rejectWithError: (0, i.fT)(),
             });
-            return l.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: t }), t;
+            return (l.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: t }), t);
         } catch (e) {
             throw e;
         }
@@ -109,18 +109,18 @@ let d = {
         l.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId: e, sortOrder: t, applicationStatus: n });
     },
     setSelectedGuildJoinRequest: function (e, t) {
-        null != t && (0, o.gH)({ guildId: e, applicationStatus: t.applicationStatus, applicationUserId: t.userId }),
-            l.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId: e, request: t });
+        (null != t && (0, o.gH)({ guildId: e, applicationStatus: t.applicationStatus, applicationUserId: t.userId }),
+            l.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId: e, request: t }));
     },
     fetchJoinRequestForInterview: async function (e) {
         let t = await i.Bo.get({ url: _.Rsh.JOIN_REQUEST(e), rejectWithError: (0, i.fT)() }),
             n = (0, u.j)(t.body);
-        return l.h.dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: n }), t;
+        return (l.h.dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: n }), t);
     },
     createOrEnterJoinRequestInterview: async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = await i.Bo.post({ url: _.Rsh.JOIN_REQUEST_INTERVIEW(e), rejectWithError: (0, i.fT)() }),
             r = (0, a.UE)(n.body);
-        return l.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), t && s.default.selectPrivateChannel(r.id), r.id;
+        return (l.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), t && s.default.selectPrivateChannel(r.id), r.id);
     },
 };

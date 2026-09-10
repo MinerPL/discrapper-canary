@@ -11,14 +11,14 @@ var i = n(477900),
 function p(t) {
     let { automodDecision: e, transitionState: n, onClose: p } = t,
         k = s.useCallback(() => {
-            (0, d.zV)(r.HAw.GUILD_AUTOMOD_FEEDBACK, {
+            ((0, d.zV)(r.HAw.GUILD_AUTOMOD_FEEDBACK, {
                 feedback_type: c.Gb.BUG,
                 decision_id: e.decisionId,
                 message_id: e.messageId,
                 content: e.messageContent,
             }),
                 (0, l.E5)(e.messageId, e.channel, o.G.SUBMIT_FEEDBACK),
-                p();
+                p());
         }, [e, p]);
     return (0, i.jsx)(a.Modal, {
         onClose: p,

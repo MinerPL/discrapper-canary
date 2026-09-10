@@ -1,6 +1,6 @@
 b.a(_, async function (_, c) {
     try {
-        b.r(e),
+        (b.r(e),
             b.d(e, {
                 BlockedDomainsStore: () => w.nx,
                 ExperimentCacher: () => w.eT,
@@ -129,10 +129,10 @@ b.a(_, async function (_, c) {
                 initLibdiscore: () => w.Ph,
                 installLogCallback: () => w.rf,
                 rustMultiply: () => w.t7,
-            });
+            }));
         var w = b(78815),
             a = _([w]);
-        (w = (a.then ? (await a)() : a)[0]), c();
+        ((w = (a.then ? (await a)() : a)[0]), c());
     } catch (_) {
         c(_);
     }

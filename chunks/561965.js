@@ -1,4 +1,4 @@
-l.d(t, { default: () => A }), l(321073);
+(l.d(t, { default: () => A }), l(321073));
 var n = l(477900),
     r = l(582128),
     i = l(536637),
@@ -319,7 +319,7 @@ function A(e) {
                 let e = ex(C.LWr.FILTER_AUTHOR_TYPE);
                 null != e && n.push(e);
             }
-            return null != l && n.push(l), [...n].join(" ");
+            return (null != l && n.push(l), [...n].join(" "));
         }, [L, w, W, X, A, ec, en, eI, M, ex, eO]),
         { validateFilter: eM, validateDateFilter: eQ } = (0, m.dY)({ nonFilterQueryString: Q, filterQueryString: eA }),
         eP = r.useMemo(
@@ -337,11 +337,11 @@ function A(e) {
         ),
         eD = r.useCallback(() => {
             if (0 === eA.length && 0 === Q.trim().length) {
-                y._.dispatch(C.jej.SEARCH_RESULTS_CLOSE), l();
+                (y._.dispatch(C.jej.SEARCH_RESULTS_CLOSE), l());
                 return;
             }
             let e = `${eA} ${Q}`.trim();
-            _.A.dispatchSetSearchQuery({
+            (_.A.dispatchSetSearchQuery({
                 query: e,
                 anchor: 0,
                 focus: 0,
@@ -349,7 +349,7 @@ function A(e) {
                 replace: !0,
                 searchQuerySource: x.Q_.SEARCH_FILTERS_MODAL,
             }),
-                l();
+                l());
         }, [eA, Q, l]),
         eH = r.useMemo(() => {
             if (0 === ej) return b.intl.string(b.t.YfwFu1);
@@ -357,7 +357,7 @@ function A(e) {
             return `${b.intl.string(b.t.YfwFu1)} ${e}`;
         }, [ej]),
         ek = r.useCallback(() => {
-            L && q(), W && J(), A && eu(), M && em(), el(), eS(), eN();
+            (L && q(), W && J(), A && eu(), M && em(), el(), eS(), eN());
         }, [L, W, el, A, eS, q, J, eu, M, em, eN]);
     return (0, n.jsx)(o.Modal, {
         transitionState: t,

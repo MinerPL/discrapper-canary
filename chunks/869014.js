@@ -25,23 +25,23 @@ let p = null,
 function S(e) {
     try {
         let t = a.A.getWindow(_.f);
-        if (null == t || "function" != typeof t.requestAnimationFrame) return (p = "OverlayNotAvailable"), A(e);
-        if (!m) return (p = "MainWindowFocused"), A(e);
-        if (!f(!0)) return (p = "NoOverlayRendering"), A(e);
+        if (null == t || "function" != typeof t.requestAnimationFrame) return ((p = "OverlayNotAvailable"), A(e));
+        if (!m) return ((p = "MainWindowFocused"), A(e));
+        if (!f(!0)) return ((p = "NoOverlayRendering"), A(e));
         let n = null !== u.A.getFocusedRunningGame(),
             i = s.A.isFocused((0, l.Q2)(t));
         if ((s.A.isFocused() && E.error("Main window is reported as focused when it should not be!"), n || i)) {
             p = n ? "OverlayGameFocused" : "OverlayWindowFocused";
             let i = t.requestAnimationFrame((t) => {
-                delete g[i], e(t);
+                (delete g[i], e(t));
             });
-            return (g[i] = e), i;
+            return ((g[i] = e), i);
         }
     } catch (e) {
-        E.error("RAF redirect failed, falling back to original. Cause:", e),
-            (0, o.pj)(e, c.default.getOverlayMethod(u.A.getTargetPID()));
+        (E.error("RAF redirect failed, falling back to original. Cause:", e),
+            (0, o.pj)(e, c.default.getOverlayMethod(u.A.getTargetPID())));
     }
-    return (p = "None"), A(e);
+    return ((p = "None"), A(e));
 }
 function N() {
     return !s.A.isFocused() || !s.A.isVisible();
@@ -54,7 +54,7 @@ function C() {
     } catch (e) {
         E.warn("Unable to access overlay window cancelAnimationFrame, falling back to main window RAF callbacks", e);
     }
-    Object.entries(g)
+    (Object.entries(g)
         .map((e) => {
             let [t, n] = e;
             return { timeoutId: Number(t), callback: n };
@@ -65,17 +65,17 @@ function C() {
                 try {
                     e.cancelAnimationFrame(i);
                 } catch (e) {
-                    (t = !1),
-                        E.warn("Unable to cancel overlay RAF callback, continuing with main window RAF callbacks", e);
+                    ((t = !1),
+                        E.warn("Unable to cancel overlay RAF callback, continuing with main window RAF callbacks", e));
                 }
             A(r);
         }),
-        (g = {});
+        (g = {}));
 }
 function O(e) {
     if (e === m) return;
     let t = !e && m;
-    (m = e), t && C();
+    ((m = e), t && C());
 }
 class R extends i.A {
     _initialize() {
@@ -90,10 +90,10 @@ class R extends i.A {
     handleUpdateOverlayMethod() {
         if (!__OVERLAY__) {
             if (!T && !f(!1)) {
-                (window.requestAnimationFrame = A), (p = "NoOverlayRendering"), C();
+                ((window.requestAnimationFrame = A), (p = "NoOverlayRendering"), C());
                 return;
             }
-            E.info("Patching window RAF to use overlay window"), (window.requestAnimationFrame = S);
+            (E.info("Patching window RAF to use overlay window"), (window.requestAnimationFrame = S));
         }
     }
     handleWindowStateChage() {

@@ -8,12 +8,12 @@ class l {
     sinkWants;
     framerateReductionTimeout;
     constructor(e, t) {
-        (this.connection = e),
+        ((this.connection = e),
             (this.sinkWants = t),
             s.enableNativeLogger(!0),
             e.on(r.yq.Speaking, this.handleSpeaking),
             e.on(r.yq.Mute, this.handleSelfMute),
-            this.initialize();
+            this.initialize());
     }
     initialize() {
         this.userSpeakingChange(!0);

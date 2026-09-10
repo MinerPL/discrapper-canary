@@ -14,32 +14,32 @@ var n,
     g = a.WeakMap;
 if (u || p.state) {
     var h = p.state || (p.state = new g());
-    (h.get = h.get),
+    ((h.get = h.get),
         (h.has = h.has),
         (h.set = h.set),
         (n = function (r, t) {
             if (h.has(r)) throw new b(y);
-            return (t.facade = r), h.set(r, t), t;
+            return ((t.facade = r), h.set(r, t), t);
         }),
         (o = function (r) {
             return h.get(r) || {};
         }),
         (i = function (r) {
             return h.has(r);
-        });
+        }));
 } else {
     var x = l("state");
-    (v[x] = !0),
+    ((v[x] = !0),
         (n = function (r, t) {
             if (s(r, x)) throw new b(y);
-            return (t.facade = r), f(r, x, t), t;
+            return ((t.facade = r), f(r, x, t), t);
         }),
         (o = function (r) {
             return s(r, x) ? r[x] : {};
         }),
         (i = function (r) {
             return s(r, x);
-        });
+        }));
 }
 r.exports = {
     set: n,

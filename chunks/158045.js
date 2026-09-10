@@ -1,18 +1,18 @@
-n.d(t, {
+(n.d(t, {
     ki: () => ts,
-    Ke: () => eB,
+    Ke: () => eV,
     FY: () => tE,
     ff: () => td,
     aZ: () => tR,
     Nc: () => te,
     Rr: () => tu,
     YE: () => a.YE,
-    OU: () => eX,
+    OU: () => eZ,
     qn: () => tN,
     CC: () => a.CC,
     iv: () => tG,
     RH: () => e$,
-    z_: () => tB,
+    z_: () => tV,
     FJ: () => ej,
     ee: () => tT,
     $k: () => ti,
@@ -24,7 +24,7 @@ n.d(t, {
     l6: () => eU,
     y8: () => eG,
     re: () => th,
-    nB: () => eZ,
+    nB: () => eq,
     pb: () => ex,
     Zb: () => e6,
     Pr: () => ew,
@@ -64,12 +64,12 @@ n.d(t, {
     z4: () => e3,
     LE: () => tA,
     ys: () => e5,
-    U8: () => eV,
+    U8: () => eB,
     tS: () => t_,
     EJ: () => tC,
 }),
     n(667532),
-    n(321073);
+    n(321073));
 var i,
     r,
     a = n(474090),
@@ -107,17 +107,17 @@ class O {
     description;
     getFeatureValue;
     constructor(e, t, n) {
-        (this.name = e),
+        ((this.name = e),
             (this.description = n),
             (this.getFeatureValue = t),
-            Object.defineProperty(this, "getFeatureValue", { value: t, configurable: !1, writable: !1 });
+            Object.defineProperty(this, "getFeatureValue", { value: t, configurable: !1, writable: !1 }));
     }
 }
 class R {
     skuId;
     skuFeatures;
     constructor(e, t) {
-        (this.skuId = e), (this.skuFeatures = t);
+        ((this.skuId = e), (this.skuFeatures = t));
     }
 }
 var L = n(945810),
@@ -173,8 +173,8 @@ let P = new M(T.w.ANIMATED_EMOJIS),
     x = new M(T.w.CUSTOM_CALL_SOUNDS),
     k = new M(T.w.PREMIUM_VOICE_FILTERS),
     F = new M(T.w.ANIMATED_AVATAR),
-    V = new M(T.w.CUSTOM_DISCRIMINATOR),
-    B = new M(T.w.PREMIUM_GUILD_MEMBER_PROFILE),
+    B = new M(T.w.CUSTOM_DISCRIMINATOR),
+    V = new M(T.w.PREMIUM_GUILD_MEMBER_PROFILE),
     H = new M("profileBadges"),
     j = new M(T.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
     W = new M("collectibles"),
@@ -182,9 +182,9 @@ let P = new M(T.w.ANIMATED_EMOJIS),
     K = new M(T.w.CLIENT_THEMES),
     $ = new M("boostDiscount"),
     z = new M("freeBoosts"),
-    q = new M(T.w.STREAM_MID_QUALITY),
-    Z = new M(T.w.STREAM_HIGH_QUALITY),
-    X = new M(T.w.CUSTOM_NOTIFICATION_SOUNDS),
+    X = new M(T.w.STREAM_MID_QUALITY),
+    q = new M(T.w.STREAM_HIGH_QUALITY),
+    Z = new M(T.w.CUSTOM_NOTIFICATION_SOUNDS),
     Q = new M("fancyVoiceChannelReactions"),
     J = new M("installPremiumApplications"),
     ee = new M("redeemPremiumPerks"),
@@ -197,7 +197,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
     es = new M(T.w.QUEST_ORB_MULTIPLIER),
     el = Object.freeze({
         [N.pe.TIER_0]: new R(N.pe.TIER_0, [P, U, w, H, et, er, ea, Y]),
-        [N.pe.TIER_1]: new R(N.pe.TIER_1, [P, U, F, V, H, $, q, Q, er, ea, Y]),
+        [N.pe.TIER_1]: new R(N.pe.TIER_1, [P, U, F, B, H, $, X, Q, er, ea, Y]),
         [N.pe.TIER_2]: new R(N.pe.TIER_2, [
             P,
             U,
@@ -205,15 +205,15 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
             G,
             x,
             F,
-            V,
             B,
+            V,
             H,
             j,
             K,
             $,
             z,
+            X,
             q,
-            Z,
             Q,
             J,
             ee,
@@ -224,7 +224,7 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
             ea,
             Y,
             W,
-            X,
+            Z,
             k,
             es,
         ]),
@@ -240,13 +240,13 @@ let en = new M(T.w.INCREASED_GUILD_LIMIT),
         [x, _.bb.CUSTOM_CALL_SOUNDS],
         [k, _.bb.PREMIUM_VOICE_FILTERS],
         [F, _.bb.ANIMATED_AVATAR],
-        [V, _.bb.CUSTOM_DISCRIMINATOR],
-        [B, _.bb.PREMIUM_GUILD_MEMBER_PROFILE],
+        [B, _.bb.CUSTOM_DISCRIMINATOR],
+        [V, _.bb.PREMIUM_GUILD_MEMBER_PROFILE],
         [j, _.bb.PROFILE_PREMIUM_FEATURES],
         [W, _.bb.PREMIUM_COLLECTIBLES],
         [K, _.bb.CLIENT_THEMES],
-        [q, _.bb.STREAM_MID_QUALITY],
-        [Z, _.bb.STREAM_HIGH_QUALITY],
+        [X, _.bb.STREAM_MID_QUALITY],
+        [q, _.bb.STREAM_HIGH_QUALITY],
         [et, _.bb.VIDEO_FILTER_ASSETS],
         [en, _.bb.INCREASED_GUILD_LIMIT],
         [ei, _.bb.INCREASED_MESSAGE_LENGTH],
@@ -376,12 +376,12 @@ function eG(e) {
         if (null == l) {
             let t = Error("Couldn't find price");
             throw (
-                (r &&
+                r &&
                     (0, eT.pM)(t, {
                         extra: { paymentSourceId: a },
                         tags: { purchaseType: i.toString(), planId: e, currency: s ?? "unknown" },
                     }),
-                t)
+                t
             );
         }
         return l;
@@ -402,16 +402,16 @@ function ex(e) {
             let i = n.prices[t];
             if (null == i)
                 throw (
-                    (ev.info(`Purchase types: ${JSON.stringify(Object.keys(n.prices))}`),
-                    Error(`No prices returned for purchase type ${t} for plan ${e}`))
+                    ev.info(`Purchase types: ${JSON.stringify(Object.keys(n.prices))}`),
+                    Error(`No prices returned for purchase type ${t} for plan ${e}`)
                 );
             return i;
         })(e, n);
     if (null != t) {
         let r = i.paymentSourcePrices[t];
         if (null == r) {
-            ev.info(`Payment sources IDs: ${JSON.stringify(Object.keys(i.paymentSourcePrices))}`),
-                ev.info(`prices: ${r}`);
+            (ev.info(`Payment sources IDs: ${JSON.stringify(Object.keys(i.paymentSourcePrices))}`),
+                ev.info(`prices: ${r}`));
             let a = Error("Missing prices for payment source on subscription plan");
             (0, eT.pM)(a, { extra: { paymentSourceId: t }, tags: { purchaseType: n.toString(), planId: e } });
         } else if (0 !== r.length) return r;
@@ -436,18 +436,18 @@ function eF(e, t, n) {
         d = (0, a.CC)(i, N.PremiumTypes.TIER_2);
     for (let i of e) {
         let e;
-        (r = N.pW.has(i.planId) ? d : !N.JM.has(i.planId) && o),
+        ((r = N.pW.has(i.planId) ? d : !N.JM.has(i.planId) && o),
             (e = void 0 === n ? eP(i.planId, r, !1, t) : eG(i.planId, r, !1, { paymentSourceId: n, currency: t })),
-            (s.amount += e.amount * i.quantity);
+            (s.amount += e.amount * i.quantity));
     }
     return ek(s);
 }
-function eV(e, t, n, i) {
+function eB(e, t, n, i) {
     return (
         null === t && (o()(null !== e, "Subscription can't be null"), (t = [])), eF(null !== e ? tp(e, t) : tT(t), n, i)
     );
 }
-function eB(e) {
+function eV(e) {
     switch (e) {
         case N.Ff.MONTH:
             return eR.intl.string(eR.t.FPybU7);
@@ -591,7 +591,7 @@ function ez(e) {
             return eR.intl.string(eR.t.lG6a5x);
     }
 }
-function eq(e) {
+function eX(e) {
     let {
             subscription: t,
             planId: n,
@@ -768,7 +768,7 @@ function eq(e) {
             throw Error(`Invalid planId ${n}`);
     }
 }
-function eZ(e) {
+function eq(e) {
     var t, n, i;
     let r,
         a,
@@ -786,7 +786,7 @@ function eZ(e) {
         I = ef.A.get(c);
     return (
         o()(null != I, "Missing plan"),
-        eq({
+        eX({
             subscription: d,
             planId: I.id,
             price:
@@ -808,7 +808,7 @@ function eZ(e) {
         })
     );
 }
-function eX(e) {
+function eZ(e) {
     let { planId: t, additionalPlans: n } = e,
         i = (0, eE.m1)(t) ? null : eY(t),
         r = n?.find((e) => {
@@ -850,7 +850,7 @@ function eQ(e) {
     }
     if (void 0 !== r) {
         let e = a.indexOf(r);
-        a.splice(e, 1), a.unshift(r);
+        (a.splice(e, 1), a.unshift(r));
     }
     return a;
 }
@@ -928,7 +928,7 @@ function e4(e) {
 }
 function e7(e, t) {
     let n = new Date(e.currentPeriodEnd);
-    return null == t || e.isBoostOnly || e.hasAnyPremiumGroup || (n = e8(n, t.unactivatedUnits)), n;
+    return (null == t || e.isBoostOnly || e.hasAnyPremiumGroup || (n = e8(n, t.unactivatedUnits)), n);
 }
 function e8(e, t, n, i) {
     let r = c()(i ? void 0 : e);
@@ -1059,7 +1059,7 @@ function ta(e, t, n) {
         }
     else i = eP(e.id, !1, r, void 0, a);
     let s = (0, eN.$g)(i.amount, i.currency);
-    return e.currency !== eO.Yr.USD && !0 === n && (s = s.concat("*")), s;
+    return (e.currency !== eO.Yr.USD && !0 === n && (s = s.concat("*")), s);
 }
 function ts(e) {
     let { status: t, renewalMutations: n } = e;
@@ -1134,7 +1134,7 @@ function td(e, t, n) {
 function tc(e) {
     let t = e.invoiceItems[0].subscriptionPlanId,
         n = ef.A.get(t);
-    return o()(null != n, "Missing subscriptionPlan"), { intervalType: n.interval, intervalCount: n.intervalCount };
+    return (o()(null != n, "Missing subscriptionPlan"), { intervalType: n.interval, intervalCount: n.intervalCount });
 }
 function tu() {
     let e = eO.Yr.USD;
@@ -1251,7 +1251,7 @@ function tm(e, t, n, i) {
     if (!r) {
         let i = { planId: t, quantity: n },
             r = e.items.find((e) => e.planId === t);
-        null != r && (i.id = r.id), a.push(i);
+        (null != r && (i.id = r.id), a.push(i));
     }
     return a.filter((e) => 0 !== e.quantity);
 }
@@ -1265,15 +1265,15 @@ function tN(e) {
     let t = e.find((e) => !("id" in e)) ?? e.find((e) => N.JM.has(e.planId));
     if (null != t) {
         let n = ef.A.get(t.planId);
-        o()(null != n, "Missing plan"),
+        (o()(null != n, "Missing plan"),
             (e = e.map((e) => {
                 if (e === t) return e;
                 let i = ef.A.get(e.planId);
                 if ((o()(null != i, "Missing plan"), n.interval === i.interval && n.intervalCount === i.intervalCount))
                     return e;
                 let r = ef.A.getForSkuAndInterval(i.skuId, n.interval, n.intervalCount);
-                return o()(null != r, "Missing planForInterval"), { ...e, planId: r.id };
-            }));
+                return (o()(null != r, "Missing planForInterval"), { ...e, planId: r.id });
+            })));
     }
     return e;
 }
@@ -1351,7 +1351,7 @@ function tx(e) {
 function tk(e) {
     let { planId: t, isGift: n, priceOptions: i, subscriptionPlan: r } = e,
         a = N.XE[t];
-    return null != r && (a = tV(r, n, i)), a;
+    return (null != r && (a = tB(r, n, i)), a);
 }
 function tF(e) {
     let { subscriptionPlan: t, isGift: n = !1, priceOptions: i = {} } = e;
@@ -1361,7 +1361,7 @@ function tF(e) {
     let a = t.interval === N.WT.MONTH ? t.intervalCount : 12 * t.intervalCount;
     return r.amount * a;
 }
-function tV(e) {
+function tB(e) {
     let t,
         n,
         i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -1376,7 +1376,7 @@ function tV(e) {
         if (0 !== t.amount) return Math.floor(100 * (1 - n.amount / (12 * t.amount)));
     }
 }
-function tB(e) {
+function tV(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = tF({ subscriptionPlan: e, isGift: t, priceOptions: n });
@@ -1422,7 +1422,7 @@ let tW = Object.freeze({
         if (e === N.WT.MONTH) return eR.intl.string(eR.t.FPybU7);
         throw Error(`Invalid interval type: ${e}`);
     },
-    getPlanDescription: eq,
+    getPlanDescription: eX,
     isPremiumSku: function (e) {
         return e === N.pe.TIER_0 || e === N.pe.TIER_1 || e === N.pe.TIER_2;
     },
@@ -1573,7 +1573,7 @@ let tW = Object.freeze({
             let { subscriptionPlanId: t } = e;
             return e2(t);
         });
-        return (null == i || (0, eE.m1)(i.subscriptionPlanId)) && (n = S.Dmq.CANCELED), n;
+        return ((null == i || (0, eE.m1)(i.subscriptionPlanId)) && (n = S.Dmq.CANCELED), n);
     },
     isBaseSubscriptionCanceled: ts,
     getPremiumGuildIntervalPrice: to,
@@ -1614,8 +1614,8 @@ let tW = Object.freeze({
     },
     getUnactivatedFractionalPremiumHours: tw,
     castPremiumSubscriptionAsSkuId: tb,
-    calculateDiscountPercentageForYearlyPlan: tV,
-    calculateYearlyPlanDollarSavingsAmount: tB,
+    calculateDiscountPercentageForYearlyPlan: tB,
+    calculateYearlyPlanDollarSavingsAmount: tV,
     calculateYearlyPlanMonthlyRateAmount: tH,
     getDaysSincePremium: tj,
     getDaysRemainingUntilSubscriptionCurrentPeriodEnds: function (e) {
@@ -1643,7 +1643,7 @@ let tW = Object.freeze({
         return e_(er, e);
     },
     canEditDiscriminator: function (e) {
-        return e_(V, e);
+        return e_(B, e);
     },
     hasBoostDiscount: function (e) {
         return e_($, e);
@@ -1670,13 +1670,13 @@ let tW = Object.freeze({
         return e_(Y, e);
     },
     canUsePremiumGuildMemberProfile: function (e) {
-        return e_(B, e);
+        return e_(V, e);
     },
     canUseClientThemes: function (e) {
         return e_(K, e);
     },
     canStreamQuality: function (e, t) {
-        return "high" === e ? e_(Z, t) : e_(q, t);
+        return "high" === e ? e_(q, t) : e_(X, t);
     },
     canUseQuestOrbMultiplier: ty,
     hasFreeBoosts: function (e) {

@@ -47,7 +47,7 @@ function H(e) {
             null == B || K.length <= 0 || (R(M(B, K, P, G)), l());
         }, [R, l, K, B, G, P]),
         Y = i.useCallback(() => {
-            U?.(), l();
+            (U?.(), l());
         }, [U, l]),
         _ = i.useCallback(
             (e) => {

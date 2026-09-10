@@ -1,4 +1,4 @@
-r.d(t, { E6: () => i, Uf: () => c, oV: () => u }), r(582128);
+(r.d(t, { E6: () => i, Uf: () => c, oV: () => u }), r(582128));
 var l,
     n,
     c = (((l = {}).PAGE = "page"), (l.ITEM = "item"), l),

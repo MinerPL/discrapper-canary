@@ -1,4 +1,4 @@
-s.r(l), s.d(l, { default: () => g });
+(s.r(l), s.d(l, { default: () => g }));
 var t = s(477900),
     n = s(582128),
     a = s(503698),
@@ -95,23 +95,23 @@ function g(e) {
         [E, S] = n.useState(() => m ?? [a, j.TGz]),
         [T, H] = n.useState(null);
     n.useEffect(() => {
-        z(y(a) ? a : null), S(m ?? [a, j.TGz]);
+        (z(y(a) ? a : null), S(m ?? [a, j.TGz]));
     }, [a, y, m]);
     let P = n.useCallback(
             (e) => {
-                i?.(e), z(null);
+                (i?.(e), z(null));
             },
             [i, z],
         ),
         X = n.useCallback(
             (e) => {
-                i?.(e), z(e);
+                (i?.(e), z(e));
             },
             [i, z],
         ),
         q = n.useCallback(
             (e) => {
-                S(e), C?.(e);
+                (S(e), C?.(e));
             },
             [C],
         ),

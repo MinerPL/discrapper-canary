@@ -21,7 +21,7 @@ var r = n(477900),
     g = n(49999),
     O = n(375708),
     x = n(696918);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var b = n(503698),
     I = n.n(b),
     L = n(562708),
@@ -116,7 +116,7 @@ function W(e) {
             t = e - eu.current,
             n = em.current,
             r = e_.current;
-        return ep.current && (ea((n += t)), eE.current || ei((r += t))), en(e), [n, r];
+        return (ep.current && (ea((n += t)), eE.current || ei((r += t))), en(e), [n, r]);
     }
     return (
         a.useEffect(() => {
@@ -139,7 +139,7 @@ function W(e) {
                 a.observe(e),
                 r(),
                 () => {
-                    e.removeEventListener("scroll", r), a.disconnect();
+                    (e.removeEventListener("scroll", r), a.disconnect());
                 }
             );
         }, [t, n]),
@@ -157,10 +157,10 @@ function W(e) {
                     });
                     eN(await Promise.all(e));
                 } catch (e) {
-                    _.A.captureException(e), eN(B);
+                    (_.A.captureException(e), eN(B));
                 }
             }
-            !0 !== eA.current && e(), (eA.current = !0);
+            (!0 !== eA.current && e(), (eA.current = !0));
         }, [c, eh]),
         a.useEffect(
             () => () => {
@@ -172,20 +172,20 @@ function W(e) {
             [eh],
         ),
         a.useEffect(() => {
-            (eu.current = et), (em.current = er), (e_.current = eo), (ep.current = el), (eE.current = ec);
+            ((eu.current = et), (em.current = er), (e_.current = eo), (ep.current = el), (eE.current = ec));
         }, [et, er, eo, el, ec]),
         a.useEffect(
             () => () => {
                 if ("video" === c.type || "embed" === c.type) {
                     let [e, t] = eg();
-                    A.default.track(f.HAw.CHANGE_LOG_VIDEO_PLAYED, {
+                    (A.default.track(f.HAw.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: T,
                         seconds_played: Math.round(e / 1e3),
                     }),
                         A.default.track(f.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: T,
                             seconds_unmuted: Math.round(t / 1e3),
-                        });
+                        }));
                 }
             },
             [T, c.type],
@@ -197,7 +197,7 @@ function W(e) {
             return (
                 A.default.track(f.HAw.CHANGE_LOG_OPENED, { change_log_id: T }),
                 () => {
-                    A.default.track(f.HAw.CHANGE_LOG_CLOSED, {
+                    (A.default.track(f.HAw.CHANGE_LOG_CLOSED, {
                         change_log_id: T,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
@@ -208,7 +208,7 @@ function W(e) {
                             type: "PREMIUM_MARKETING_ANNOUNCEMENT_MODAL_DISMISSED",
                             promotionId: n,
                             promotionKey: eM,
-                        });
+                        }));
                 }
             );
         }, [T, n, eM]),
@@ -246,21 +246,21 @@ function W(e) {
                                             src: c.src,
                                             poster: c.poster,
                                             onPlay: (e) => {
-                                                A.default.track(f.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                (A.default.track(f.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
                                                     change_log_id: T,
                                                 }),
                                                     en(Date.now()),
                                                     es(!0),
-                                                    ed(e.currentTarget.muted);
+                                                    ed(e.currentTarget.muted));
                                             },
                                             onEnded: (e) => {
-                                                eg(), ed(e.currentTarget.muted), es(!1);
+                                                (eg(), ed(e.currentTarget.muted), es(!1));
                                             },
                                             onVolumeChange: (e) => {
-                                                eg(), ed(e.currentTarget.muted);
+                                                (eg(), ed(e.currentTarget.muted));
                                             },
                                             onPause: (e) => {
-                                                eg(), ed(e.currentTarget.muted), es(!1);
+                                                (eg(), ed(e.currentTarget.muted), es(!1));
                                             },
                                             disablePictureInPicture: !0,
                                             children: eh?.map((e) => {

@@ -19,7 +19,7 @@ function l(o) {
             modalKey: "premium-apps-otp-checkout-modal",
             contextKey: c,
             onCloseCallback() {
-                (0, e.ET)(), (0, a.z)();
+                ((0, e.ET)(), (0, a.z)());
             },
         },
         checkoutConfiguration: { applicationId: n, skuId: l },

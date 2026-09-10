@@ -57,25 +57,25 @@ let E = {
                 },
                 rejectWithError: !1,
             });
-            a.body.taken &&
+            (a.body.taken &&
                 o.default.track(l.HAw.POMELO_ERRORS, {
                     reason: "already_taken",
                     username_error: !0,
                     location: t,
                     one_click_flow: s,
                 }),
-                r.h.dispatch({ type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS", username: e, taken: a.body.taken });
+                r.h.dispatch({ type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS", username: e, taken: a.body.taken }));
         } catch (u) {
             let i = new a.LG(u),
                 n = i.getAnyErrorMessage() ?? void 0;
-            o.default.track(l.HAw.POMELO_ERRORS, { reason: n, username_error: !0, location: t, one_click_flow: s }),
+            (o.default.track(l.HAw.POMELO_ERRORS, { reason: n, username_error: !0, location: t, one_click_flow: s }),
                 r.h.dispatch({
                     username: e,
                     type: "UNIQUE_USERNAME_ATTEMPT_FAILURE",
                     error: null != i.status && i.status < 500 && 401 !== i.status ? n : void 0,
                     statusCode: i.status,
                     retryAfter: i.retryAfter,
-                });
+                }));
         }
     },
 };

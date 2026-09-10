@@ -29,7 +29,7 @@ function I(e) {
     let f = setTimeout(() => {
         r.h.dispatch({ type: "TYPING_STOP", channelId: o, userId: u, guildId: c });
     }, m);
-    (h[u] = f),
+    ((h[u] = f),
         (p[o] = h),
         null != c &&
             ((t = c),
@@ -40,7 +40,7 @@ function I(e) {
             (a[l] = i),
             (s[n] = a),
             (g[t] = s)),
-        void 0 !== d && x[u] !== d && (x = { ...x, [u]: d });
+        void 0 !== d && x[u] !== d && (x = { ...x, [u]: d }));
 }
 function y(e) {
     let { channelId: t, userId: n, guildId: l } = e,
@@ -60,17 +60,17 @@ function y(e) {
                 let s = { ...i };
                 delete s[n];
                 let r = { ...l };
-                0 === Object.keys(s).length ? delete r[t] : (r[t] = s),
-                    0 === Object.keys(r).length ? delete g[e] : (g[e] = r);
+                (0 === Object.keys(s).length ? delete r[t] : (r[t] = s),
+                    0 === Object.keys(r).length ? delete g[e] : (g[e] = r));
             })(l, t, n),
         n in x && !Object.values(p).some((e) => n in e))
     ) {
         let e = { ...x };
-        delete e[n], (x = e);
+        (delete e[n], (x = e));
     }
 }
 function S() {
-    (p = {}), (g = {}), (x = {});
+    ((p = {}), (g = {}), (x = {}));
 }
 class v extends i.Ay.Store {
     initialize() {
@@ -114,7 +114,7 @@ let N = new v(r.h, {
                             if (200 === e.status) {
                                 let n = e.body.message_send_cooldown_ms ?? 0,
                                     l = e.body.thread_create_cooldown_ms ?? 0;
-                                n > 0 &&
+                                (n > 0 &&
                                     r.h.dispatch({
                                         type: "SLOWMODE_SET_COOLDOWN",
                                         channelId: t,
@@ -127,13 +127,13 @@ let N = new v(r.h, {
                                             channelId: t,
                                             slowmodeType: d.R.CreateThread,
                                             cooldownMs: l,
-                                        });
+                                        }));
                             }
                         }));
             },
             null == l || l.prevSend > i - 2 * o ? f : 0,
         );
-        return (l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: E(t) });
+        return ((l = { channelId: t, timeout: c, prevSend: i }), I({ channelId: t, userId: n, guildId: E(t) }));
     },
     TYPING_STOP_LOCAL: function (e) {
         let { channelId: t } = e,

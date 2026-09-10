@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     dD: () => S,
     oF: () => O,
     _0: () => L,
@@ -9,7 +9,7 @@ n.d(t, {
     Tc: () => y,
     mB: () => N,
 }),
-    n(667532);
+    n(667532));
 var i = n(882035),
     r = n(121894),
     a = n(17928),
@@ -20,10 +20,10 @@ var i = n(882035),
 let c = new (class {
     timeoutId = null;
     schedule(e, t) {
-        this.unschedule(),
+        (this.unschedule(),
             (this.timeoutId = setTimeout(() => {
-                (this.timeoutId = null), e();
-            }, t));
+                ((this.timeoutId = null), e());
+            }, t)));
     }
     unschedule() {
         this.scheduled() && (clearTimeout(this.timeoutId), (this.timeoutId = null));
@@ -82,7 +82,7 @@ function I(e, t) {
     );
 }
 function f(e, t) {
-    return e.candidates.delete(t.content), e;
+    return (e.candidates.delete(t.content), e);
 }
 function p(e, t) {
     let n = [...e.candidates.keys()].filter((e) => e !== t?.content);
@@ -158,19 +158,19 @@ function O() {
     return [_.getState().currentlyShown.size, e];
 }
 function R() {
-    (0, r.r)(() => {
+    ((0, r.r)(() => {
         _.setState(() => {
             let e = u();
-            return (e.postConnectionOpen = !0), e;
+            return ((e.postConnectionOpen = !0), e);
         });
     }),
-        c.unschedule();
+        c.unschedule());
 }
 function L() {
     (0, r.r)(() => {
         _.setState((e) => {
             let t = A(e);
-            return (t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t;
+            return ((t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t);
         });
     });
 }
@@ -180,7 +180,7 @@ function y() {
 class D extends a.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
-        this.waitFor(l.A, o.A), this.syncWith([l.A, o.A], () => this.setHasRequiredAction());
+        (this.waitFor(l.A, o.A), this.syncWith([l.A, o.A], () => this.setHasRequiredAction()));
     }
     setHasRequiredAction() {
         E = (function () {

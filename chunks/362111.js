@@ -31,7 +31,7 @@ function A(e) {
                 l();
             },
             onComplete: (e, t) => {
-                s()(null != t, "paymentSource missing"), u?.(t), l();
+                (s()(null != t, "paymentSource missing"), u?.(t), l());
             },
             onStepChange: () => {},
             header: (0, i.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),

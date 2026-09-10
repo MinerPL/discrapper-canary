@@ -35,12 +35,12 @@ function h(t) {
                   {
                       text: _.intl.string(_.t.nAt0rE),
                       onClick: function () {
-                          (0, o.zV)(c.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                          ((0, o.zV)(c.HAw.GUILD_RAID_LOCKDOWN_FEEDBACK, {
                               raid_lockdown_feedback_type: b,
                               raid_lockdown_feedback_other_reason: C,
                               guild_id: n,
                           }),
-                              h();
+                              h());
                       },
                       disabled: 0 === b.length,
                   },

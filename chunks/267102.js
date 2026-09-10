@@ -60,7 +60,7 @@ function p(e) {
                     function e() {
                         _.delete(n);
                     }
-                    return _.set(n, o), t.addEventListener("unload", e), () => t.removeEventListener("unload", e);
+                    return (_.set(n, o), t.addEventListener("unload", e), () => t.removeEventListener("unload", e));
                 }, [o, t, n]),
                 o
             );

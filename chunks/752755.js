@@ -24,7 +24,7 @@ class E extends l.Ay.Store {
 }
 let c = new E(r.h, {
     CONNECTION_OPEN: function () {
-        (a = {}), (o = {});
+        ((a = {}), (o = {}));
     },
     MEDIA_POST_EMBED_FETCH: function (e) {
         let { threadId: t } = e;
@@ -32,7 +32,7 @@ let c = new E(r.h, {
     },
     MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
         let { threadId: t, mediaPostEmbed: n } = e;
-        (a = { ...a, [t]: n }), (o[t] = 2);
+        ((a = { ...a, [t]: n }), (o[t] = 2));
     },
     MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
         let { threadId: t } = e;

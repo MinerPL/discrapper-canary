@@ -100,7 +100,7 @@ let S = [
     { primary: "#5d1d47", secondary: "#c58fbb" },
     { primary: "#222222", secondary: "#cccccc" },
 ];
-S[0].primary, S[0].secondary;
+(S[0].primary, S[0].secondary);
 let f = {
     0: 2,
     1: 1,

@@ -1,5 +1,5 @@
 let i;
-n.r(t), n.d(t, { default: () => tV, errors: () => tz, load: () => tW, loadView: () => t$ });
+(n.r(t), n.d(t, { default: () => tV, errors: () => tz, load: () => tW, loadView: () => t$ }));
 class r {
     constructor(e) {
         if (
@@ -18,7 +18,7 @@ class r {
             })(e)
         )
             throw Error("DataView: Passed buffer type is unsupported.");
-        (this.buffer = e), (this.byteLength = this.buffer.length);
+        ((this.buffer = e), (this.byteLength = this.buffer.length));
     }
     getUint8(e) {
         return this.buffer.readUInt8(e);
@@ -49,10 +49,10 @@ function s(e, t, n) {
 function l(e, t) {
     let n = [],
         i = 0;
-    for (; t + i < e.byteLength; ) {
+    for (; t + i < e.byteLength;) {
         let r = e.getUint8(t + i);
         if (0 === r) break;
-        n.push(r), i++;
+        (n.push(r), i++);
     }
     return c(n);
 }
@@ -142,7 +142,7 @@ let v = function (e, t) {
             u,
             c,
             p = 2;
-        for (; p + 4 + 5 <= e.byteLength; ) {
+        for (; p + 4 + 5 <= e.byteLength;) {
             var f, d, m, g, h, y;
             if (((f = e), (d = p), 65472 !== f.getUint16(d))) {
                 if (((m = e), (g = p), 65474 !== m.getUint16(g)))
@@ -152,33 +152,33 @@ let v = function (e, t) {
                             return 65504 === e.getUint16(t) && s(e, t + 4, n) === S && 0 === e.getUint8(t + 4 + n);
                         })(e, p)
                     )
-                        (t = e.getUint16(p + 2)), (r = p + 2);
+                        ((t = e.getUint16(p + 2)), (r = p + 2));
                     else if (
                         (function (e, t) {
                             let n = k.length;
                             return 65505 === e.getUint16(t) && s(e, t + 4, n) === k && 0 === e.getUint8(t + 4 + n);
                         })(e, p)
                     )
-                        (t = e.getUint16(p + 2)), (o = p + 10);
+                        ((t = e.getUint16(p + 2)), (o = p + 10));
                     else if (
                         (function (e, t) {
                             return 65505 === e.getUint16(t) && s(e, t + 4, A.length) === A;
                         })(e, p)
                     )
-                        l || (l = []), (t = e.getUint16(p + 2)), l.push({ dataOffset: p + 33, length: t - 31 });
+                        (l || (l = []), (t = e.getUint16(p + 2)), l.push({ dataOffset: p + 33, length: t - 31 }));
                     else if (
                         (function (e, t) {
                             return 65505 === e.getUint16(t) && s(e, t + 4, M.length) === M;
                         })(e, p)
                     )
-                        l || (l = []), (t = e.getUint16(p + 2)), l.push({ dataOffset: p + 79, length: t - 77 });
+                        (l || (l = []), (t = e.getUint16(p + 2)), l.push({ dataOffset: p + 79, length: t - 77 }));
                     else if (
                         (function (e, t) {
                             let n = w.length;
                             return 65517 === e.getUint16(t) && s(e, t + 4, n) === w && 0 === e.getUint8(t + 4 + n);
                         })(e, p)
                     )
-                        (t = e.getUint16(p + 2)), (a = p + 18);
+                        ((t = e.getUint16(p + 2)), (a = p + 18));
                     else if (
                         (function (e, t) {
                             let n = T.length;
@@ -190,14 +190,14 @@ let v = function (e, t) {
                             i = t - 16,
                             r = e.getUint8(p + F),
                             o = e.getUint8(p + x);
-                        u || (u = []), u.push({ offset: n, length: i, chunkNumber: r, chunksTotal: o });
+                        (u || (u = []), u.push({ offset: n, length: i, chunkNumber: r, chunksTotal: o }));
                     } else if (
                         (function (e, t) {
                             let n = I.length;
                             return 65506 === e.getUint16(t) && s(e, t + 4, n) === I;
                         })(e, p)
                     )
-                        (t = e.getUint16(p + 2)), (c = p + 8);
+                        ((t = e.getUint16(p + 2)), (c = p + 8));
                     else if (
                         (function (e, t) {
                             let n = e.getUint16(t);
@@ -220,8 +220,8 @@ let v = function (e, t) {
                             continue;
                         } else break;
                     }
-                else (t = e.getUint16(p + 2)), (i = p + 2);
-            } else (t = e.getUint16(p + 2)), (n = p + 2);
+                else ((t = e.getUint16(p + 2)), (i = p + 2));
+            } else ((t = e.getUint16(p + 2)), (n = p + 2));
             p += 2 + t;
         }
         return {
@@ -247,7 +247,7 @@ let v = function (e, t) {
     O = function (e, t) {
         let n = { hasAppMarkers: !1 },
             i = E.length;
-        for (; i + 4 + 4 <= e.byteLength; ) {
+        for (; i + 4 + 4 <= e.byteLength;) {
             if ("IHDR" !== s(e, i + 4, 4)) {
                 var r, o;
                 if (s((r = e), (o = i) + 4, 4) !== R || s(r, o + U, D.length) !== D)
@@ -259,9 +259,9 @@ let v = function (e, t) {
                     ) {
                         n.hasAppMarkers = !0;
                         let t = s(e, i + 4, 4);
-                        n.pngTextChunks || (n.pngTextChunks = []),
-                            n.pngTextChunks.push({ length: e.getUint32(i + 0), type: t, offset: i + U });
-                    } else if ("eXIf" === s(e, i + 4, 4)) (n.hasAppMarkers = !0), (n.tiffHeaderOffset = i + U);
+                        (n.pngTextChunks || (n.pngTextChunks = []),
+                            n.pngTextChunks.push({ length: e.getUint32(i + 0), type: t, offset: i + U }));
+                    } else if ("eXIf" === s(e, i + 4, 4)) ((n.hasAppMarkers = !0), (n.tiffHeaderOffset = i + U));
                     else if (t && "iCCP" === s(e, i + 4, 4)) {
                         n.hasAppMarkers = !0;
                         let t = e.getUint32(i + 0),
@@ -281,7 +281,7 @@ let v = function (e, t) {
                                     }
                                 );
                             })(e, r);
-                        n.iccChunks || (n.iccChunks = []),
+                        (n.iccChunks || (n.iccChunks = []),
                             n.iccChunks.push({
                                 offset: s,
                                 length: t - (s - r),
@@ -289,7 +289,7 @@ let v = function (e, t) {
                                 chunksTotal: 1,
                                 profileName: o,
                                 compressionMethod: a,
-                            });
+                            }));
                     } else
                         [N, _].includes(s(e, i + 4, 4)) &&
                             ((n.hasAppMarkers = !0),
@@ -299,14 +299,14 @@ let v = function (e, t) {
                     let t = (function (e, t) {
                         t += U + D.length + 1 + 1;
                         let n = 0;
-                        for (; n < 2 && t < e.byteLength; ) 0 === e.getUint8(t) && n++, t++;
+                        for (; n < 2 && t < e.byteLength;) (0 === e.getUint8(t) && n++, t++);
                         if (!(n < 2)) return t;
                     })(e, i);
                     void 0 !== t &&
                         ((n.hasAppMarkers = !0),
                         (n.xmpChunks = [{ dataOffset: t, length: e.getUint32(i + 0) - (t - (i + U)) }]));
                 }
-            } else (n.hasAppMarkers = !0), (n.pngHeaderOffset = i + U);
+            } else ((n.hasAppMarkers = !0), (n.pngHeaderOffset = i + U));
             i += e.getUint32(i + 0) + 4 + 4 + 4;
         }
         return n;
@@ -345,13 +345,13 @@ function j(e, t) {
     if (U < 8) return;
     let L = e.getUint32(t + 4);
     if (0x66747970 === L) {
-        return (a = e), (u = D), (c = U), { type: "ftyp", majorBrand: s(a, u, 4), length: c };
+        return ((a = e), (u = D), (c = U), { type: "ftyp", majorBrand: s(a, u, 4), length: c });
     }
     if (0x69707270 === L) {
-        return (p = e), (f = t), { type: "iprp", subBoxes: z(p, (d = D), (m = U) - (d - f)), length: m };
+        return ((p = e), (f = t), { type: "iprp", subBoxes: z(p, (d = D), (m = U) - (d - f)), length: m });
     }
     if (0x6970636f === L) {
-        return (g = e), (h = t), { type: "ipco", properties: z(g, (y = D), (b = U) - (y - h)), length: b };
+        return ((g = e), (h = t), { type: "ipco", properties: z(g, (y = D), (b = U) - (y - h)), length: b });
     }
     if (0x636f6c72 === L) {
         return (
@@ -412,7 +412,7 @@ function j(e, t) {
                         for (let n = 0; n < s; n++) {
                             var c, p, f;
                             let n = { extents: [] };
-                            (c = e),
+                            ((c = e),
                                 (p = u),
                                 (n.itemId = (f = t) < 2 ? c.getUint16(p) : 2 === f ? c.getUint32(p) : void 0),
                                 (u += i.item.itemId),
@@ -422,16 +422,16 @@ function j(e, t) {
                                 (n.baseOffset = G(e, (u += i.item.dataReferenceIndex), i.item.baseOffset)),
                                 (u += i.item.baseOffset),
                                 (n.extentCount = e.getUint16(u)),
-                                (u += i.item.extentCount);
+                                (u += i.item.extentCount));
                             for (let s = 0; s < n.extentCount; s++) {
                                 let s = {};
-                                (s.extentIndex = (function (e, t, n, i) {
+                                ((s.extentIndex = (function (e, t, n, i) {
                                     if ((1 === t || 2 === t) && i > 0) return G(e, n, i);
                                 })(e, t, u, a)),
                                     (s.extentOffset = G(e, (u += i.item.extent.extentIndex), r)),
                                     (s.extentLength = G(e, (u += i.item.extent.extentOffset), o)),
                                     (u += i.item.extent.extentLength),
-                                    n.extents.push(s);
+                                    n.extents.push(s));
                             }
                             l.push(n);
                         }
@@ -490,7 +490,7 @@ function q(e) {
         let t = {},
             n = (function (e) {
                 let t = 0;
-                for (; t + 4 + 4 <= e.byteLength; ) {
+                for (; t + 4 + 4 <= e.byteLength;) {
                     let n = j(e, t);
                     if (void 0 === n) break;
                     if ("meta" === n.type) return n;
@@ -506,7 +506,7 @@ function q(e) {
                               .itemInfos.find((e) => 0x45786966 === e.itemType).itemId,
                           o = V(t, r),
                           a = o.baseOffset + o.extents[0].extentOffset;
-                      return (n = e), (i = a) + 4 + n.getUint32(i);
+                      return ((n = e), (i = a) + 4 + n.getUint32(i));
                   } catch (e) {
                       return;
                   }
@@ -546,10 +546,10 @@ function z(e, t, n) {
     let i = [0x45786966, 0x6d696d65],
         r = [],
         o = t;
-    for (; o < t + n; ) {
+    for (; o < t + n;) {
         let t = j(e, o);
         if (void 0 === t) break;
-        void 0 !== t.type && (void 0 === t.itemType || -1 !== i.indexOf(t.itemType)) && r.push(t), (o += t.length);
+        (void 0 !== t.type && (void 0 === t.itemType || -1 !== i.indexOf(t.itemType)) && r.push(t), (o += t.length));
     }
     return r;
 }
@@ -587,24 +587,24 @@ let W = function (e) {
             o = "Exif\0\0",
             a = 12,
             l = !1;
-        for (; a + 8 < e.byteLength; ) {
+        for (; a + 8 < e.byteLength;) {
             let u = s(e, a, 4),
                 c = e.getUint32(a + 4, !0);
-            "EXIF" === u
+            ("EXIF" === u
                 ? ((l = !0), (t = s(e, a + 8, o.length) === o ? a + 8 + o.length : a + 8))
                 : "XMP " === u
                   ? ((l = !0), (n = [{ dataOffset: a + 8, length: c }]))
                   : "ICCP" === u
                     ? ((l = !0), (i = [{ offset: a + 8, length: c, chunkNumber: 1, chunksTotal: 1 }]))
                     : "VP8X" === u && ((l = !0), (r = a + 8)),
-                (a += 8 + (c % 2 == 0 ? c : c + 1));
+                (a += 8 + (c % 2 == 0 ? c : c + 1)));
         }
         return { hasAppMarkers: l, tiffHeaderOffset: t, xmpChunks: n, iccChunks: i, vp8xChunkOffset: r };
     },
     J = ["GIF87a", "GIF89a"],
     Z = function (e) {
         let t = [];
-        return t.push({ dataOffset: 0, length: e.byteLength }), { xmpChunks: t };
+        return (t.push({ dataOffset: 0, length: e.byteLength }), { xmpChunks: t });
     },
     K = "<?xpacket begin",
     Y = function (e, t) {
@@ -1377,7 +1377,7 @@ function ev(e, t, n, i, r, o) {
                 v = ef(e, i + g, r),
                 C = ed(e, i + h, r);
             if (void 0 === eu[v] || (!o && void 0 === el[t][b])) return;
-            ((a = v), (s = C), eu[a] * s <= em("LONG"))
+            (((a = v), (s = C), eu[a] * s <= em("LONG"))
                 ? (d = eC(e, (m = i + y), v, C, r))
                 : ((m = ed(e, i + y, r)),
                   (l = e),
@@ -1402,11 +1402,11 @@ function ev(e, t, n, i, r, o) {
                                     n++;
                                     continue;
                                 }
-                                void 0 === t[n] && (t[n] = ""), (t[n] += e[i]);
+                                (void 0 === t[n] && (t[n] = ""), (t[n] += e[i]));
                             }
                             return t;
                         })(d)),
-                    ));
+                    )));
             let P = `undefined-${b}`,
                 T = d;
             if (void 0 !== el[t][b])
@@ -1423,10 +1423,10 @@ function ev(e, t, n, i, r, o) {
                         : ((P = el[t][b]), (T = eP(d)));
             return { id: b, name: P, value: d, description: T, __offset: m };
         })(e, t, n, i, r, o);
-        void 0 !== a &&
+        (void 0 !== a &&
             ((c[a.name] = { id: a.id, value: a.value, description: a.description }),
             ("MakerNote" === a.name || (t === es && "LevelInfo" === a.name)) && (c[a.name].__offset = a.__offset)),
-            (i += 12);
+            (i += 12));
     }
     if (i < e.byteLength - em("LONG")) {
         let a = ed(e, i, r);
@@ -1437,8 +1437,8 @@ function ev(e, t, n, i, r, o) {
 function eC(e, t, n, i, r, o = !1) {
     let a = [];
     o && ((i *= eu[n]), (n = ec.BYTE));
-    for (let o = 0; o < i; o++) a.push(eb[n](e, t, r)), (t += eu[n]);
-    return n === ec.ASCII ? (a = a.map((e) => String.fromCharCode(e))) : 1 === a.length && (a = a[0]), a;
+    for (let o = 0; o < i; o++) (a.push(eb[n](e, t, r)), (t += eu[n]));
+    return (n === ec.ASCII ? (a = a.map((e) => String.fromCharCode(e))) : 1 === a.length && (a = a[0]), a);
 }
 function eP(e) {
     return e instanceof Array ? e.join(", ") : e;
@@ -1484,7 +1484,7 @@ let eT = "Exif IFD Pointer",
             for (let o = 0; o < Math.ceil(n.MPEntry.value.length / 16); o++) {
                 r[o] = {};
                 let a = ek(n.MPEntry.value, 16 * o, em("LONG"), i);
-                (r[o].ImageFlags = (function (e) {
+                ((r[o].ImageFlags = (function (e) {
                     let t = [(e >> 31) & 1, (e >> 30) & 1, (e >> 29) & 1],
                         n = [];
                     return (
@@ -1513,7 +1513,7 @@ let eT = "Exif IFD Pointer",
                                     0: "Undefined",
                                 }[t] || "Unknown",
                         };
-                    })(a));
+                    })(a)));
                 let s = ek(n.MPEntry.value, 16 * o + 4, em("LONG"), i);
                 r[o].ImageSize = { value: s, description: "" + s };
                 let l = (function (e, t, n, i) {
@@ -1523,13 +1523,13 @@ let eT = "Exif IFD Pointer",
                 let u = ek(n.MPEntry.value, 16 * o + 12, em("SHORT"), i);
                 r[o].DependentImage1EntryNumber = { value: u, description: "" + u };
                 let c = ek(n.MPEntry.value, 16 * o + 14, em("SHORT"), i);
-                (r[o].DependentImage2EntryNumber = { value: c, description: "" + c }),
+                ((r[o].DependentImage2EntryNumber = { value: c, description: "" + c }),
                     (r[o].image = e.buffer.slice(l, l + s)),
                     f(r[o], "base64", function () {
                         return d(this.image);
-                    });
+                    }));
             }
-            return (n.Images = r), n;
+            return ((n.Images = r), n);
         })(e, t, r, i);
     };
 function ek(e, t, n, i) {
@@ -1937,7 +1937,7 @@ let eD = function () {
         try {
             if (Array.isArray(e)) return eB(new DataView(Uint8Array.from(e).buffer), { size: e.length }, 0, n);
             let { naaBlock: i, dataOffset: r } = (function (e, t) {
-                for (; t + 12 <= e.byteLength; ) {
+                for (; t + 12 <= e.byteLength;) {
                     var n, i;
                     let r = (function (e, t) {
                         if (0x3842494d !== e.getUint32(t, !1)) throw Error("Not an IPTC resource block.");
@@ -1959,7 +1959,7 @@ function eB(e, t, n, i) {
     let r,
         o = {},
         a = n + t.size;
-    for (; n < a && n < e.byteLength; ) {
+    for (; n < a && n < e.byteLength;) {
         let { tag: t, tagSize: a } = (function (e, t, n, i, r) {
             var o, a, s, l;
             if (((o = e), (a = t), 28 !== o.getUint8(a))) return { tag: null, tagSize: 0 };
@@ -1999,14 +1999,14 @@ function eB(e, t, n, i) {
             );
         })(e, n, o, r, i);
         if (null === t) break;
-        t &&
+        (t &&
             ("encoding" in t && (r = t.encoding),
             void 0 === o[t.name] || void 0 === t.repeatable
                 ? (o[t.name] = { id: t.id, value: t.value, description: t.description })
                 : (o[t.name] instanceof Array ||
                       (o[t.name] = [{ id: o[t.name].id, value: o[t.name].value, description: o[t.name].description }]),
                   o[t.name].push({ id: t.id, value: t.value, description: t.description }))),
-            (n += 5 + a);
+            (n += 5 + a));
     }
     return o;
 }
@@ -2099,11 +2099,11 @@ let eq = function (e) {
     },
     ez = function (e, t, n) {
         let i = {};
-        if ("string" == typeof e) return e$(i, e, n), i;
+        if ("string" == typeof e) return (e$(i, e, n), i);
         let [r, o] = (function (e, t) {
                 if (0 === t.length) return [];
                 let n = [eH(e, t.slice(0, 1))];
-                return t.length > 1 && n.push(eH(e, t.slice(1))), n;
+                return (t.length > 1 && n.push(eH(e, t.slice(1))), n);
             })(e, t),
             a = e$(i, r, n);
         if (o) {
@@ -2114,7 +2114,7 @@ let eq = function (e) {
     };
 class eW extends Error {
     constructor(e) {
-        super(e), (this.name = "ParseError");
+        (super(e), (this.name = "ParseError"));
     }
 }
 function eH(e, t) {
@@ -2123,7 +2123,7 @@ function eH(e, t) {
     for (let r = 0; r < t.length; r++) {
         let o = t[r],
             a = e.buffer.slice(o.dataOffset, o.dataOffset + o.length);
-        n.set(new Uint8Array(a), i), (i += o.length);
+        (n.set(new Uint8Array(a), i), (i += o.length));
     }
     return new DataView(n.buffer);
 }
@@ -2133,8 +2133,8 @@ function e$(e, t, n) {
             let n = eq(t);
             if (!n)
                 throw (
-                    (console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags."),
-                    Error())
+                    console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags."),
+                    Error()
                 );
             let i = "string" == typeof e ? e : s(e, 0, e.byteLength);
             return {
@@ -2171,14 +2171,14 @@ function e$(e, t, n) {
                                             let t,
                                                 n = [],
                                                 i = /xmlns:([\w-]+)=["'][^"']+["']/g;
-                                            for (; null !== (t = i.exec(e)); ) -1 === n.indexOf(t[1]) && n.push(t[1]);
+                                            for (; null !== (t = i.exec(e));) -1 === n.indexOf(t[1]) && n.push(t[1]);
                                             return n;
                                         })(e),
                                         l = (function (e) {
                                             let t,
                                                 n = [],
                                                 i = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
-                                            for (; null !== (t = i.exec(e)); ) {
+                                            for (; null !== (t = i.exec(e));) {
                                                 let e = t[1];
                                                 "xmlns" !== e && "xml" !== e && -1 === n.indexOf(e) && n.push(e);
                                             }
@@ -2267,10 +2267,10 @@ function eX(e) {
     if ("string" == typeof e) return e;
     for (let n in e) {
         let i = e[n];
-        Array.isArray(i) || (i = [i]),
+        (Array.isArray(i) || (i = [i]),
             i.forEach((e) => {
-                p(t, eJ(e.attributes)), "object" == typeof e.value && p(t, eQ(e.value));
-            });
+                (p(t, eJ(e.attributes)), "object" == typeof e.value && p(t, eQ(e.value)));
+            }));
     }
     return t;
 }
@@ -2279,10 +2279,10 @@ function eJ(e) {
     for (let i in e)
         try {
             var n;
-            (n = i),
+            ((n = i),
                 "rdf:parseType" === n ||
                     eZ(n) ||
-                    (t[eK(i)] = { value: e[i], attributes: {}, description: eY(e[i], i) });
+                    (t[eK(i)] = { value: e[i], attributes: {}, description: eY(e[i], i) }));
         } catch (e) {}
     return t;
 }
@@ -2303,7 +2303,7 @@ function eY(e, t) {
         let t = [];
         for (let e in i) {
             t.push(
-                `${"CiAdrCity" === ((n = e)) ? "CreatorCity" : "CiAdrCtry" === n ? "CreatorCountry" : "CiAdrExtadr" === n ? "CreatorAddress" : "CiAdrPcode" === n ? "CreatorPostalCode" : "CiAdrRegion" === n ? "CreatorRegion" : "CiEmailWork" === n ? "CreatorWorkEmail" : "CiTelWork" === n ? "CreatorWorkPhone" : "CiUrlWork" === n ? "CreatorWorkUrl" : n}: ${eY(i[e].value)}`,
+                `${"CiAdrCity" === (n = e) ? "CreatorCity" : "CiAdrCtry" === n ? "CreatorCountry" : "CiAdrExtadr" === n ? "CreatorAddress" : "CiAdrPcode" === n ? "CreatorPostalCode" : "CiAdrRegion" === n ? "CreatorRegion" : "CiEmailWork" === n ? "CreatorWorkEmail" : "CiTelWork" === n ? "CreatorWorkPhone" : "CiUrlWork" === n ? "CreatorWorkUrl" : n}: ${eY(i[e].value)}`,
             );
         }
         return t.join("; ");
@@ -2366,7 +2366,7 @@ function e0(e) {
 function e1(e, t) {
     var n;
     let i = e2(e);
-    void 0 !== e.value["rdf:Description"] && (e = e.value["rdf:Description"]),
+    (void 0 !== e.value["rdf:Description"] && (e = e.value["rdf:Description"]),
         p(
             i,
             e2(e),
@@ -2375,7 +2375,7 @@ function e1(e, t) {
                 for (let n in e.value) "rdf:value" === n || eZ(n) || (t[eK(n)] = e.value[n].value);
                 return t;
             })(e),
-        );
+        ));
     let r = e9((n = e).value["rdf:value"]) || n.value["rdf:value"].value;
     return { value: r, attributes: i, description: eY(r, t) };
 }
@@ -2491,7 +2491,7 @@ let tr = function (e, t) {
         let n = a(new Uint8Array(e).buffer),
             i = {},
             r = 0;
-        for (; r < e.length; ) {
+        for (; r < e.length;) {
             let e = s(n, r, ta),
                 o = ef(n, (r += ta)),
                 { tagName: l, tagNameSize: c } = (function (e, t) {
@@ -2592,7 +2592,7 @@ let tr = function (e, t) {
             name: "ICC Signature",
             value: (e, t) => {
                 var n;
-                return (n = e.buffer.slice(t, t + 4)), String.fromCharCode.apply(null, new Uint8Array(n));
+                return ((n = e.buffer.slice(t, t + 4)), String.fromCharCode.apply(null, new Uint8Array(n)));
             },
         },
         40: { name: "Primary Platform", value: (e, t) => s(e, t, 4), description: (e) => tu(e) },
@@ -2662,7 +2662,7 @@ let tc = function (e, t, n) {
                       if (!n) throw Error(`ICC chunk ${e} not found`);
                       let i = a.slice(n.offset, n.offset + n.length),
                           s = new Uint8Array(i);
-                      r.set(s, o), (o += s.length);
+                      (r.set(s, o), (o += s.length));
                   }
                   return tp(new DataView(r.buffer));
               } catch (e) {
@@ -2682,7 +2682,7 @@ function tp(e) {
             o = tl[n],
             a = o.value(e, parseInt(n, 10)),
             s = a;
-        o.description && (s = o.description(a)), (i[o.name] = { value: a, description: s });
+        (o.description && (s = o.description(a)), (i[o.name] = { value: a, description: s }));
     }
     if ("acsp" !== tf(t.slice(36, 40))) throw Error("ICC profile: missing signature");
     if (t.length < 132) return i;
@@ -2713,9 +2713,9 @@ function tp(e) {
                     p = (function (e, t, n) {
                         let i = [];
                         for (let r = 0; r < n && t + r < e.byteLength; r += 2) i.push(e.getUint16(t + r));
-                        return 0 === i[i.length - 1] && i.pop(), c(i);
+                        return (0 === i[i.length - 1] && i.pop(), c(i));
                     })(e, r + u, i);
-                l.push({ languageCode: t, countryCode: n, text: p }), (a += o);
+                (l.push({ languageCode: t, countryCode: n, text: p }), (a += o));
             }
             if (1 === t) td(i, n, l[0].text);
             else {
@@ -2809,7 +2809,7 @@ let tm = function (e, t, n, i, r) {
                         let a = e.getInt16(t + ty, 18761 === n);
                         r.RollAngle = { value: a, description: "" + -0.5 * a };
                         let s = e.getInt16(t + tb, 18761 === n);
-                        return (r.PitchAngle = { value: s, description: "" + -0.5 * s }), r;
+                        return ((r.PitchAngle = { value: s, description: "" + -0.5 * s }), r);
                     })(e, a + s.LevelInfo.__offset, o),
                 )),
                 delete s.LevelInfo),
@@ -2831,14 +2831,14 @@ let tm = function (e, t, n, i, r) {
                         f = i;
                     for (let o = 0; o < n && t + o < e.byteLength; o++) {
                         if (p === tT) {
-                            (f = (function ({ type: e, dataView: t, offset: n }) {
+                            ((f = (function ({ type: e, dataView: t, offset: n }) {
                                 if (e === R) {
                                     if (1 === t.getUint8(n)) return t.getUint8(n + 1);
                                 } else if (e === B) return t.getUint8(n);
                                 return i;
                             })({ type: r, dataView: e, offset: t + o })),
                                 r === R && (o += 1),
-                                (p = tS(r, p));
+                                (p = tS(r, p)));
                             continue;
                         }
                         if (p === tI) {
@@ -2982,10 +2982,10 @@ let tR = [6, 7, 99],
         ) {
             t.type = "image/jpeg";
             let i = n + t.JPEGInterchangeFormat.value;
-            (t.image = e.buffer.slice(i, i + t.JPEGInterchangeFormatLength.value)),
+            ((t.image = e.buffer.slice(i, i + t.JPEGInterchangeFormatLength.value)),
                 f(t, "base64", function () {
                     return d(this.image);
-                });
+                }));
         }
         return t;
     },
@@ -3045,7 +3045,7 @@ function t_(e, t, n, i) {
     return i && e[t] && e[t][n] ? e[t][n].value : !i && e[n] ? e[n].value : void 0;
 }
 function tG(e) {
-    (this.name = "MetadataMissingError"), (this.message = e || "No Exif data"), (this.stack = Error().stack);
+    ((this.name = "MetadataMissingError"), (this.message = e || "No Exif data"), (this.stack = Error().stack));
 }
 tG.prototype = Error();
 let tj = { MetadataMissingError: tG };
@@ -3071,21 +3071,21 @@ function tW(e, t = {}) {
                             return new Promise((n, i) => {
                                 var r;
                                 let o = {};
-                                Number.isInteger(t) && t >= 0 && (o.headers = { range: `bytes=0-${t - 1}` }),
+                                (Number.isInteger(t) && t >= 0 && (o.headers = { range: `bytes=0-${t - 1}` }),
                                     ((r = e), /^https:\/\//.test(r) ? require("https").get : require("http").get)(
                                         e,
                                         o,
                                         (e) => {
                                             if (e.statusCode >= 200 && e.statusCode <= 299) {
                                                 let t = [];
-                                                e.on("data", (e) => t.push(tq.from(e))),
+                                                (e.on("data", (e) => t.push(tq.from(e))),
                                                     e.on("error", (e) => i(e)),
-                                                    e.on("end", () => n(tq.concat(t)));
+                                                    e.on("end", () => n(tq.concat(t))));
                                             } else
-                                                i(`Could not fetch file: ${e.statusCode} ${e.statusMessage}`),
-                                                    e.resume();
+                                                (i(`Could not fetch file: ${e.statusCode} ${e.statusMessage}`),
+                                                    e.resume());
                                         },
-                                    ).on("error", (e) => i(e));
+                                    ).on("error", (e) => i(e)));
                             });
                         })(e, t);
               return ((n = e), /^data:[^;,]*(;base64)?,/.test(n))
@@ -3129,7 +3129,7 @@ function tW(e, t = {}) {
                                                   t
                                                       ? i(t)
                                                       : r.close(a, (t) => {
-                                                            t && console.warn(`Could not close file ${e}:`, t), n(l);
+                                                            (t && console.warn(`Could not close file ${e}:`, t), n(l));
                                                         });
                                               });
                                           }
@@ -3143,7 +3143,7 @@ function tW(e, t = {}) {
             ((i = e),
             new Promise((e, t) => {
                 let n = new FileReader();
-                (n.onload = (t) => e(t.target.result)), (n.onerror = () => t(n.error)), n.readAsArrayBuffer(i);
+                ((n.onload = (t) => e(t.target.result)), (n.onerror = () => t(n.error)), n.readAsArrayBuffer(i));
             })).then((e) => tH(e, t)))
           : tH(e, t);
 }
@@ -3217,23 +3217,23 @@ function t$(
                       if (e.exif) {
                           if (e.exif.GPSLatitude && e.exif.GPSLatitudeRef)
                               try {
-                                  (e.gps = e.gps || {}),
+                                  ((e.gps = e.gps || {}),
                                       (e.gps.Latitude = b(e.exif.GPSLatitude.value)),
                                       "S" === e.exif.GPSLatitudeRef.value.join("") &&
-                                          (e.gps.Latitude = -e.gps.Latitude);
+                                          (e.gps.Latitude = -e.gps.Latitude));
                               } catch (e) {}
                           if (e.exif.GPSLongitude && e.exif.GPSLongitudeRef)
                               try {
-                                  (e.gps = e.gps || {}),
+                                  ((e.gps = e.gps || {}),
                                       (e.gps.Longitude = b(e.exif.GPSLongitude.value)),
                                       "W" === e.exif.GPSLongitudeRef.value.join("") &&
-                                          (e.gps.Longitude = -e.gps.Longitude);
+                                          (e.gps.Longitude = -e.gps.Longitude));
                               } catch (e) {}
                           if (e.exif.GPSAltitude && e.exif.GPSAltitudeRef)
                               try {
-                                  (e.gps = e.gps || {}),
+                                  ((e.gps = e.gps || {}),
                                       (e.gps.Altitude = e.exif.GPSAltitude.value[0] / e.exif.GPSAltitude.value[1]),
-                                      1 === e.exif.GPSAltitudeRef.value && (e.gps.Altitude = -e.gps.Altitude);
+                                      1 === e.exif.GPSAltitudeRef.value && (e.gps.Altitude = -e.gps.Altitude));
                               } catch (e) {}
                       }
                   })(m))
@@ -3352,7 +3352,7 @@ function t$(
     if (void 0 !== S) {
         d = !0;
         let { readTags: t, readTagsPromise: r } = tC(e, S, n, i);
-        U(t), r && g.push(r.then((e) => e.forEach(U)));
+        (U(t), r && g.push(r.then((e) => e.forEach(U))));
     }
     if (void 0 !== k) {
         d = !0;
@@ -3420,8 +3420,9 @@ function t$(
                 let n = `__${t}`;
                 e[n] && ((m[t] = m[t] ? p({}, m.exif, e[n]) : e[n]), delete e[n]);
             }
-            (m.png = m.png ? p({}, m.png, e) : e), (m.pngText = m.pngText ? p({}, m.png, e) : e);
-        } else (m = p({}, m, e.__exif ? e.__exif : {}, e.__iptc ? e.__iptc : {}, e)), delete m.__exif, delete m.__iptc;
+            ((m.png = m.png ? p({}, m.png, e) : e), (m.pngText = m.pngText ? p({}, m.png, e) : e));
+        } else
+            ((m = p({}, m, e.__exif ? e.__exif : {}, e.__iptc ? e.__iptc : {}, e)), delete m.__exif, delete m.__iptc);
     }
 }
 function tX(e) {

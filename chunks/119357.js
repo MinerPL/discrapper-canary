@@ -82,7 +82,7 @@ function K(n, i) {
               id: "open-chat",
               label: I.intl.string(I.t.ZXxLQg),
               action: () => {
-                  Y.A.updateChatOpen(n.id, !0), (0, q.uh)(i.id, n.id);
+                  (Y.A.updateChatOpen(n.id, !0), (0, q.uh)(i.id, n.id));
               },
           })
         : null;

@@ -13,12 +13,12 @@ function d(t, e) {
     return {
         trackView() {
             let i = c();
-            n.A.track(u.HAw.NOTIFICATION_VIEWED, { ...e, location: i }), n.A.notificationEvent(t, o.uj.Viewed);
+            (n.A.track(u.HAw.NOTIFICATION_VIEWED, { ...e, location: i }), n.A.notificationEvent(t, o.uj.Viewed));
         },
         trackClick(i) {
             let l = c();
-            n.A.track(u.HAw.NOTIFICATION_CLICKED, { ...e, location: l, action_type: i }),
-                n.A.notificationEvent(t, o.uj.Clicked);
+            (n.A.track(u.HAw.NOTIFICATION_CLICKED, { ...e, location: l, action_type: i }),
+                n.A.notificationEvent(t, o.uj.Clicked));
         },
     };
 }

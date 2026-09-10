@@ -114,9 +114,9 @@ function eo() {
               hook: (e) =>
                   (0, i.jsx)(Z.Anchor, {
                       onClick: (e) => {
-                          e.preventDefault(),
+                          (e.preventDefault(),
                               e.stopPropagation(),
-                              (0, el.A)(ea.A.getArticleURL(eu.MVz.TIGGER_PAWTECT_LEARN_MORE));
+                              (0, el.A)(ea.A.getArticleURL(eu.MVz.TIGGER_PAWTECT_LEARN_MORE)));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -126,9 +126,9 @@ function eo() {
               hook: (e) =>
                   (0, i.jsx)(Z.Anchor, {
                       onClick: (e) => {
-                          e.preventDefault(),
+                          (e.preventDefault(),
                               e.stopPropagation(),
-                              ei.A.showAgeVerificationGetStartedModal({ entryPoint: er.q1.START_STAGE_PROMPT });
+                              ei.A.showAgeVerificationGetStartedModal({ entryPoint: er.q1.START_STAGE_PROMPT }));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
@@ -319,7 +319,7 @@ function e_(e) {
 function eR(e, t) {
     return (n) => {
         let l = { entityType: n, scheduledEndTime: void 0 };
-        eG(n) && (l.scheduledEndTime = (F()(t.scheduledStartTime) ?? F()()).add(2, "hour").toISOString()), e(l);
+        (eG(n) && (l.scheduledEndTime = (F()(t.scheduledStartTime) ?? F()()).add(2, "hour").toISOString()), e(l));
     };
 }
 function ek(e) {
@@ -330,7 +330,7 @@ function ek(e) {
         x = r.useRef(void 0);
     r.useEffect(() => {
         let e = s && !x.current;
-        (x.current = s), e && eG(d) && o.current?.focus();
+        ((x.current = s), e && eG(d) && o.current?.focus());
     }, [s, d]);
     let g = (e) => {
             l({ channelId: e?.id ?? null });
@@ -445,7 +445,7 @@ function eL(e) {
             f
                 ? (0, i.jsx)(eI, {
                       onClick: function () {
-                          v(eS.Ps.STAGE_INSTANCE),
+                          (v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("377476"),
@@ -470,7 +470,7 @@ function eL(e) {
                                   ]).then(n.bind(n, 684343));
                                   return (n) =>
                                       (0, i.jsx)(e, { ...n, channelType: eu.rbe.GUILD_STAGE_VOICE, guildId: t });
-                              });
+                              }));
                       },
                   })
                 : null,
@@ -691,12 +691,12 @@ function eK(e) {
                             onScheduleChange: function (e) {
                                 let { startDate: t, endDate: n } = e,
                                     l = { scheduledStartTime: t?.toISOString(), scheduledEndTime: n?.toISOString() };
-                                null != t &&
+                                (null != t &&
                                     null != j &&
                                     n?.isBefore(t) &&
                                     (l.scheduledEndTime = t.add(1, "hour").toISOString()),
                                     null != t && null != I && (l.recurrenceRule = (0, V.nG)(I, t)),
-                                    u(l);
+                                    u(l));
                             },
                             onRecurrenceChange: function (e) {
                                 let t = b.startDate;
@@ -828,11 +828,15 @@ function tn(e) {
         r = (0, a.bG)([C.Ay], () => (null != l ? C.Ay.getDefaultChannel(l)?.id : null), [l]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
-        c = (0, a.bG)([e2.A], () => {
-            let e = d ?? r;
-            return null == e ? null : e2.A.getInvite(e);
-        }, [d, r]);
-    if (null == n) return t(), null;
+        c = (0, a.bG)(
+            [e2.A],
+            () => {
+                let e = d ?? r;
+                return null == e ? null : e2.A.getInvite(e);
+            },
+            [d, r],
+        );
+    if (null == n) return (t(), null);
     let o = s?.vanityURLCode ?? c?.code,
         x = null != o ? (0, e7.WU)({ baseCode: o, guildScheduledEventId: u }) : null,
         h = null == x || null == c,
@@ -920,7 +924,7 @@ function ta(e) {
             let e = t?.getScrollerNode();
             if (null == e) return;
             let l = e.getBoundingClientRect();
-            n(
+            (n(
                 {
                     position: {
                         type: "static-random",
@@ -941,7 +945,7 @@ function ta(e) {
                         velocity: { type: "static-random", minValue: { x: 20, y: -20 }, maxValue: { x: 60, y: -60 } },
                     },
                     80,
-                );
+                ));
         }, [n, t]),
         null
     );
@@ -1002,7 +1006,7 @@ function td(e) {
     let F = (0, a.bG)([m.Ay], () => m.Ay.useReducedMotion),
         O = r.useRef(null);
     function w(e) {
-        M(!1), D(R(e));
+        (M(!1), D(R(e)));
     }
     let B = r.useRef(w);
     function H() {
@@ -1011,12 +1015,12 @@ function td(e) {
     function q() {
         w(k - 1);
     }
-    r.useEffect(() => {
+    (r.useEffect(() => {
         B.current = w;
     }),
         r.useEffect(() => {
             A?.id != null && B.current(3);
-        }, [A?.id]);
+        }, [A?.id]));
     let X = ec.intl.string(ec.t.PDTjLN);
     return (
         2 === V && (X = x ? ec.intl.string(ec.t.e5VEcE) : ec.intl.string(ec.t["60lJ0C"])),
@@ -1141,7 +1145,7 @@ function tu(e) {
             var e;
             let n, i;
             if (null != E) return;
-            if (f && null != l) return await G.default.saveEvent(l, m, t), d();
+            if (f && null != l) return (await G.default.saveEvent(l, m, t), d());
             let r = await G.default.createGuildEvent(m, t);
             return (
                 (e = r.body),
@@ -1197,8 +1201,8 @@ function tu(e) {
         onChange: function (e) {
             if (null != e.entityType) {
                 let [n] = D(t, (0, P.dy)(e.entityType));
-                (e.channelId = n?.id ?? null),
-                    e.entityType !== eS.Ps.EXTERNAL && m.entityType === eS.Ps.EXTERNAL && (e.entityMetadata = null);
+                ((e.channelId = n?.id ?? null),
+                    e.entityType !== eS.Ps.EXTERNAL && m.entityType === eS.Ps.EXTERNAL && (e.entityMetadata = null));
             }
             v((t) => ({ ...t, ...e }));
         },

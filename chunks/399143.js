@@ -1,4 +1,4 @@
-n.d(e, { GuildSubscriptionSelectionModal: () => h }), n(667532), n(321073);
+(n.d(e, { GuildSubscriptionSelectionModal: () => h }), n(667532), n(321073));
 var i = n(477900),
     l = n(582128),
     r = n(189213),

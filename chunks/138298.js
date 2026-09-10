@@ -13,7 +13,7 @@ var i = a(228366),
 let _ = {
     openPrivateChannelAsSidebar(e) {
         let { channelId: s, messageId: a, baseChannelId: p, hasSingleMessageRequest: E } = e;
-        i.h.dispatch({
+        (i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
             sidebarType: h.PE.VIEW_MESSAGE_REQUEST,
             baseChannelId: p,
@@ -22,11 +22,11 @@ let _ = {
         }),
             null != a
                 ? t.A.jumpToMessage({ channelId: s, messageId: a, flash: !0 })
-                : d.A.fetchMessages({ channelId: s });
+                : d.A.fetchMessages({ channelId: s }));
     },
     openChannelAsSidebar(e) {
         let { guildId: s, channelId: a, baseChannelId: E, flash: l = !0, details: A } = e;
-        i.h.dispatch({
+        (i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
             sidebarType: h.PE.VIEW_CHANNEL,
             guildId: s,
@@ -36,7 +36,7 @@ let _ = {
         }),
             null != A.initialMessageId
                 ? t.A.jumpToMessage({ channelId: a, messageId: A.initialMessageId, flash: l, jumpType: p.vx.INSTANT })
-                : d.A.fetchMessages({ guildId: s, channelId: a });
+                : d.A.fetchMessages({ guildId: s, channelId: a }));
     },
     openResourceChannelAsSidebar(e) {
         let { guildId: s, channelId: a } = e;
@@ -53,7 +53,7 @@ let _ = {
     },
     openModReportAsSidebar(e) {
         let { guildId: s, baseChannelId: a, channelId: E, flash: l = !0, details: A } = e;
-        i.h.dispatch({
+        (i.h.dispatch({
             type: "SIDEBAR_VIEW_CHANNEL",
             sidebarType: h.PE.VIEW_MOD_REPORT,
             baseChannelId: a,
@@ -62,7 +62,7 @@ let _ = {
         }),
             A?.initialMessageId != null
                 ? t.A.jumpToMessage({ channelId: E, messageId: A.initialMessageId, flash: l, jumpType: p.vx.INSTANT })
-                : d.A.fetchMessages({ guildId: s, channelId: E });
+                : d.A.fetchMessages({ guildId: s, channelId: E }));
     },
     openThreadAsSidebar(e) {
         let { guildId: s, baseChannelId: a, channelId: E, flash: S = !0, details: _ } = e,

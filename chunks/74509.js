@@ -4,7 +4,7 @@ class i {
         if (((t = a(t)), e instanceof i))
             if (!!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease) return e;
             else return new i(e.raw, t);
-        if (e instanceof s) return (this.raw = e.value), (this.set = [[e]]), (this.formatted = void 0), this;
+        if (e instanceof s) return ((this.raw = e.value), (this.set = [[e]]), (this.formatted = void 0), this);
         if (
             ((this.options = t),
             (this.loose = !!t.loose),
@@ -37,7 +37,7 @@ class i {
                 e > 0 && (this.formatted += "||");
                 let t = this.set[e];
                 for (let e = 0; e < t.length; e++)
-                    e > 0 && (this.formatted += " "), (this.formatted += t[e].toString().trim());
+                    (e > 0 && (this.formatted += " "), (this.formatted += t[e].toString().trim()));
             }
         }
         return this.formatted;
@@ -54,18 +54,18 @@ class i {
         if (r) return r;
         let n = this.options.loose,
             i = n ? c[f.HYPHENRANGELOOSE] : c[f.HYPHENRANGE];
-        l("hyphen replace", (e = e.replace(i, A(this.options.includePrerelease)))),
+        (l("hyphen replace", (e = e.replace(i, A(this.options.includePrerelease)))),
             l("comparator trim", (e = e.replace(c[f.COMPARATORTRIM], d))),
             l("tilde trim", (e = e.replace(c[f.TILDETRIM], p))),
-            l("caret trim", (e = e.replace(c[f.CARETTRIM], h)));
+            l("caret trim", (e = e.replace(c[f.CARETTRIM], h))));
         let a = e
             .split(" ")
             .map((e) => w(e, this.options))
             .join(" ")
             .split(/\s+/)
             .map((e) => P(e, this.options));
-        n && (a = a.filter((e) => (l("loose invalid filter", e, this.options), !!e.match(c[f.COMPARATORLOOSE])))),
-            l("range list", a);
+        (n && (a = a.filter((e) => (l("loose invalid filter", e, this.options), !!e.match(c[f.COMPARATORLOOSE])))),
+            l("range list", a));
         let u = new Map();
         for (let e of a.map((e) => new s(e, this.options))) {
             if (y(e)) return [e];
@@ -73,7 +73,7 @@ class i {
         }
         u.size > 1 && u.has("") && u.delete("");
         let g = [...u.values()];
-        return o.set(t, g), g;
+        return (o.set(t, g), g);
     }
     intersects(e, t) {
         if (!(e instanceof i)) throw TypeError("a Range is required");
@@ -107,7 +107,7 @@ let o = new (r(678884))(),
         let r = !0,
             n = e.slice(),
             i = n.pop();
-        for (; r && n.length; ) (r = n.every((e) => i.intersects(e, t))), (i = n.pop());
+        for (; r && n.length;) ((r = n.every((e) => i.intersects(e, t))), (i = n.pop()));
         return r;
     },
     w = (e, t) => (

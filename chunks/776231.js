@@ -23,7 +23,7 @@ function T(e, t, n) {
     if (e) p.del(r);
     else {
         let { width: e, height: i } = n;
-        (t = { url: r, loaded: !0, width: e, height: i }), p.set(r, t);
+        ((t = { url: r, loaded: !0, width: e, height: i }), p.set(r, t));
     }
     null != i && i.forEach((n) => n(e, t));
 }
@@ -53,23 +53,23 @@ function g(e, t) {
                 p.set(e, n),
                 (function e(t) {
                     let n = new Image();
-                    (n.onerror = (function (t, n) {
+                    ((n.onerror = (function (t, n) {
                         null == t.backoff && (t.backoff = new o.A());
                         let { backoff: i } = t;
                         return async () => {
-                            await c.A.isOnline(),
+                            (await c.A.isOnline(),
                                 i.fails < 5
                                     ? i.fail(() => {
                                           e(t);
                                       })
-                                    : T(!0, t, n);
+                                    : T(!0, t, n));
                         };
                     })(t, n)),
                         (n.onload = () => {
                             let { backoff: e } = t;
-                            null != e && e.succeed(), T(!1, t, n);
+                            (null != e && e.succeed(), T(!1, t, n));
                         }),
-                        (n.src = t.url);
+                        (n.src = t.url));
                 })(n)),
             null != t && ((i = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(i)),
             () => {
@@ -103,9 +103,9 @@ function N(e) {
         } = e,
         g = i,
         S = a;
-    c < 1 && ((g = Math.round(i * c)), (S = Math.round(a * c))),
+    (c < 1 && ((g = Math.round(i * c)), (S = Math.round(a * c))),
         null != s && (g = Math.min(g, s)),
-        null != o && (S = Math.min(S, o));
+        null != o && (S = Math.min(S, o)));
     let N = (0, _.A)();
     return (function (e) {
         let {
@@ -124,10 +124,10 @@ function N(e) {
             let [t, n] = e.split("?");
             return [t, l.parse(n)];
         })(t);
-        null != c && (g.format = c),
+        (null != c && (g.format = c),
             null != f && (g.quality = f),
             p && T && (h.test(t) || I.test(t)) && (g.animated = !0),
-            I.test(t) && (g.format = "webp");
+            I.test(t) && (g.format = "webp"));
         let S = (0, d.Uj)({ width: s, height: o, maxWidth: A.uJv, maxHeight: A.uJv });
         if (((s = S.width), (o = S.height), s !== i || o !== a)) {
             let e = (function (e) {
@@ -140,7 +140,7 @@ function N(e) {
                     }
                 })("ImageLoaderUtils.getSrcWithWidthAndHeight"),
                 t = { width: s, height: o };
-            null != e &&
+            (null != e &&
                 (t = (0, E.v7)({
                     targetWidth: s,
                     targetHeight: o,
@@ -148,9 +148,9 @@ function N(e) {
                     sourceHeight: a,
                     maxUpscale: (0, E.iE)(e, (0, _.A)()),
                 })),
-                (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height));
+                (t.width !== i || t.height !== a) && ((g.width = 0 | t.width), (g.height = 0 | t.height)));
         }
-        return r().isEmpty(g) || (m += "?" + l.stringify(g)), m;
+        return (r().isEmpty(g) || (m += "?" + l.stringify(g)), m);
     })({
         src: t,
         sourceWidth: i,

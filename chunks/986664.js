@@ -14,7 +14,7 @@ let c = (0, o.forwardRef)(function (e, t) {
         [m, v] = (0, o.useState)(u ? "visible" : "hidden"),
         y = (0, o.useContext)(l);
     if (!y) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
-    u && "hidden" === m && v("visible"),
+    (u && "hidden" === m && v("visible"),
         (t = (0, s.U)(t)),
         (0, a.N)(() => {
             let e = t.current,
@@ -36,15 +36,15 @@ let c = (0, o.forwardRef)(function (e, t) {
                         return [t, n];
                     });
                 for (let r of e.getAnimations()) t.includes(r) || r.cancel();
-                (a = requestAnimationFrame(() => {
+                ((a = requestAnimationFrame(() => {
                     for (let [t, r] of ((a = null), i)) e.style[t] = r;
                 })),
-                    delete n[r];
+                    delete n[r]);
             } else
                 e && u && !o
                     ? (queueMicrotask(() => (0, i.flushSync)(() => v("entering"))),
                       (a = requestAnimationFrame(() => {
-                          (a = null), v("visible");
+                          ((a = null), v("visible"));
                       })))
                     : e &&
                       !u &&
@@ -66,7 +66,7 @@ let c = (0, o.forwardRef)(function (e, t) {
                     }
                 }
             };
-        }, [t, y, r, u]);
+        }, [t, y, r, u]));
     let g = (0, n.Sl)({
         children: c,
         className: f,

@@ -22,4 +22,4 @@ var o = i
             for (i in ((a.prototype = e), (r = new a()), t)) n.hop.call(t, i) && o(r, i, t[i]);
             return r;
         };
-(t.defineProperty = o), (t.objCreate = a);
+((t.defineProperty = o), (t.objCreate = a));

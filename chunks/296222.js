@@ -12,7 +12,7 @@ function M(t) {
     let { guildId: n, transitionState: e, onClose: M } = t,
         [C, E] = s.useState([]),
         g = s.useCallback(() => {
-            (0, a.G1)(n, C), (0, a.B)(n), M();
+            ((0, a.G1)(n, C), (0, a.B)(n), M());
         }, [n, M, C]),
         A = s.useCallback((t) => {
             E(t);

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, UD: () => d }), n(321073);
+(n.d(t, { Ay: () => m, UD: () => d }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(192308),
@@ -11,14 +11,14 @@ async function c(e) {
         let t = await new Promise((t, n) => {
                 if (null != e) {
                     let l = new FileReader();
-                    (l.onload = (e) => {
+                    ((l.onload = (e) => {
                         "string" == typeof e.target?.result ? t(e.target.result) : n(Error("Failed to read file"));
                     }),
-                        l.readAsDataURL(e);
+                        l.readAsDataURL(e));
                 }
             }),
             n = new Image();
-        return (n.src = t), await n.decode(), { image: n, dataURI: t };
+        return ((n.src = t), await n.decode(), { image: n, dataURI: t });
     } catch {
         throw o.o.WRONG_TYPE;
     }
@@ -58,7 +58,7 @@ let h = i.forwardRef((e, t) => {
         A = i.useRef(null),
         [C, E] = i.useState(!1);
     async function I(e) {
-        g?.(!0), await d(e, o), E(!0), g?.(!1);
+        (g?.(!0), await d(e, o), E(!0), g?.(!1));
     }
     async function y(e) {
         if (

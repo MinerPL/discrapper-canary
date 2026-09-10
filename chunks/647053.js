@@ -1,4 +1,4 @@
-n.d(t, { A8: () => o, O_: () => a, RM: () => c, gX: () => l, i4: () => u, k$: () => s, rY: () => d }), n(321073);
+(n.d(t, { A8: () => o, O_: () => a, RM: () => c, gX: () => l, i4: () => u, k$: () => s, rY: () => d }), n(321073));
 var i = n(179771),
     r = n(375708);
 let a = [
@@ -159,7 +159,7 @@ function d(e, t) {
                 r.intl.string(r.t.F7J4NE),
                 r.intl.string(r.t.syJLx9),
             ];
-            return t.includes(i.F.APPLICATION_IDENTITIES_WRITE) || e.push(r.intl.string(r.t["1zioRF"])), e;
+            return (t.includes(i.F.APPLICATION_IDENTITIES_WRITE) || e.push(r.intl.string(r.t["1zioRF"])), e);
         }
         case i.F.SDK_SOCIAL_LAYER: {
             let e = [
@@ -169,7 +169,7 @@ function d(e, t) {
                 r.intl.string(r.t.F7J4NE),
                 r.intl.string(r.t["2wxXX9"]),
             ];
-            return t.includes(i.F.APPLICATION_IDENTITIES_WRITE) || e.push(r.intl.string(r.t["1zioRF"])), e;
+            return (t.includes(i.F.APPLICATION_IDENTITIES_WRITE) || e.push(r.intl.string(r.t["1zioRF"])), e);
         }
         default:
             return [e];

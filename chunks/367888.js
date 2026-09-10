@@ -11,7 +11,7 @@ function a(e, t, n) {
     if (null == a) {
         if (e.length > 0) {
             let r = i.hd[e[0].planId];
-            (t = r.interval), (n = r.intervalCount);
+            ((t = r.interval), (n = r.intervalCount));
         }
         return (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;

@@ -10,7 +10,7 @@ class i extends n.MergingRefiner {
     }
     mergeResults(e, t, r) {
         let n = t.start.isOnlyDate() ? (0, a.mergeDateTimeResult)(t, r) : (0, a.mergeDateTimeResult)(r, t);
-        return (n.index = t.index), (n.text = t.text + e + r.text), n;
+        return ((n.index = t.index), (n.text = t.text + e + r.text), n);
     }
 }
 t.default = i;

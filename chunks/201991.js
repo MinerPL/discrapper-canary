@@ -134,7 +134,7 @@ function P(e) {
     return (
         (0, m.Ay)(() => {
             setTimeout(() => {
-                (v.current = !0), t();
+                ((v.current = !0), t());
             }, 3e3);
         }),
         (0, a.jsx)("div", {

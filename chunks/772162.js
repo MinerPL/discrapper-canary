@@ -9,10 +9,10 @@ let o = null,
     c = null;
 class u extends i.A {
     _initialize() {
-        (o = null), d.clear(), (c = null);
+        ((o = null), d.clear(), (c = null));
     }
     _terminate() {
-        (o = null), d.clear(), (c = null);
+        ((o = null), d.clear(), (c = null));
     }
     handleOverlayMounted = (e) => {
         o = Date.now();
@@ -21,7 +21,7 @@ class u extends i.A {
         if (e.action !== s.uj.Viewed) return;
         let t = Date.now(),
             n = e.notificationType;
-        (c = { timestamp: t, notificationType: n }), d.set(n, t);
+        ((c = { timestamp: t, notificationType: n }), d.set(n, t));
     };
     handleSetNotificationDisabledSetting = (e) => {
         let { shouldTrack: t, setting: n, disabled: i } = e;

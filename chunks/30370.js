@@ -19,7 +19,7 @@ class o extends l.A {
     metadata;
     metadataVisibility;
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.type = e.type),
             (this.name = e.name),
@@ -32,7 +32,7 @@ class o extends l.A {
             (this.accessToken = e.access_token || null),
             (this.twoWayLink = e.two_way_link || !1),
             (this.metadata = e.metadata || null),
-            (this.metadataVisibility = e.metadata_visibility || 0);
+            (this.metadataVisibility = e.metadata_visibility || 0));
     }
     toString() {
         return this.name;
@@ -48,7 +48,7 @@ let c = new Set([n(652215).fg2.CONTACTS]),
     I = {},
     f = {};
 function p(e) {
-    (_ = e.filter((e) => !c.has(e.type) && s.A.isSupported(e.type))), (E = e.filter((e) => c.has(e.type))), (u = !1);
+    ((_ = e.filter((e) => !c.has(e.type) && s.A.isSupported(e.type))), (E = e.filter((e) => c.has(e.type))), (u = !1));
 }
 class T extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
@@ -113,7 +113,7 @@ let m = new T(r.h, {
         let { platformType: t, id: n, revoked: i, accessToken: r } = e,
             a = _.find((e) => e.id === n && e.type === t);
         if (null == a) return !1;
-        null != i && (a.revoked = i), null != r && (a.accessToken = r);
+        (null != i && (a.revoked = i), null != r && (a.accessToken = r));
     },
     USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
         f[e.integrationId] = void 0 !== e.error ? e.error : "";

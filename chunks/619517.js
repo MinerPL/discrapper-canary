@@ -102,7 +102,7 @@ class v extends i.Component {
             }),
             g = performance.now();
         return (0, d.yt)(p, (e, n) => {
-            v.trackLoadingCompleted({
+            (v.trackLoadingCompleted({
                 error: e,
                 imageData: n,
                 trigger: "PRELOAD",
@@ -112,7 +112,7 @@ class v extends i.Component {
                 quality: f,
                 imageProps: { src: t, width: i, height: s, sourceMetadata: u, original: a },
             }),
-                h?.(e, n);
+                h?.(e, n));
         });
     }
     static async trackLoadingCompleted(e) {
@@ -161,8 +161,8 @@ class v extends i.Component {
     _unmounted = !1;
     _imageRef = i.createRef();
     constructor(e) {
-        super(e),
-            (0, d.LE)(this.getSrc(this.getRatio(), v.isAnimated(this.props))) && (this.state.readyState = A.Rv1.READY);
+        (super(e),
+            (0, d.LE)(this.getSrc(this.getRatio(), v.isAnimated(this.props))) && (this.state.readyState = A.Rv1.READY));
     }
     componentDidMount() {
         let { readyState: e } = this.state;
@@ -182,10 +182,10 @@ class v extends i.Component {
     componentWillUnmount() {
         this._unmounted = !0;
         let e = this._imageRef.current;
-        null != e && (v._lazyLoadIO?.unobserve(e), v._lazyLoadTargets.delete(e)),
+        (null != e && (v._lazyLoadIO?.unobserve(e), v._lazyLoadTargets.delete(e)),
             v.isAnimated(this.props) && this.unobserveVisibility(),
             this._cancellers.forEach((e) => e()),
-            this._cancellers.clear();
+            this._cancellers.clear());
     }
     observeVisibility = () => {
         v.visibilityObserver.observe(this, this._imageRef);
@@ -236,7 +236,7 @@ class v extends i.Component {
         let { width: n, height: l } = this.props;
         if (((this.startLoadingTime = performance.now()), 1 === n && 1 === l)) return;
         let i = (0, d.yt)(e, (e, n) => {
-            null != i && this._cancellers.delete(i), t?.(e, n);
+            (null != i && this._cancellers.delete(i), t?.(e, n));
         });
         null != i && this._cancellers.add(i);
     }
@@ -365,14 +365,14 @@ class v extends i.Component {
                 if (v.isAnimated(this.props)) {
                     H.onMouseLeave = this.onMouseLeave;
                     let e = (a || w || P) && (null == f || f) && v.visibilityObserver.isVisible(this);
-                    e
+                    (e
                         ? ((H.src = this.getSrc(U, p)), (H.renderAccessory = N))
                         : ((H.src = this.getSrc(U, p || !m || !a)), (H.renderAccessory = this.renderAccessory)),
                         null != h &&
                             (H.children = (t) => {
                                 let { src: n, size: l, alt: i, mediaLayoutType: s } = t;
                                 return h({ src: n, size: l, animating: e, alt: i, mediaLayoutType: s });
-                            });
+                            }));
                 } else H.src = this.getSrc(U);
         }
         return (0, l.jsx)(o._, { disableLoadingSpinner: F, ref: this._imageRef, ...H });

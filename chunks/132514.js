@@ -1,4 +1,4 @@
-t.d(n, { A: () => C }), t(323874), t(14289), t(35956);
+(t.d(n, { A: () => C }), t(323874), t(14289), t(35956));
 var s = t(435558),
     r = t.n(s),
     l = t(17928),
@@ -13,39 +13,39 @@ let u = { enabled: !1 },
     N = {};
 function a(e) {
     try {
-        return new URL(e ?? ""), !0;
+        return (new URL(e ?? ""), !0);
     } catch (e) {
         return !1;
     }
 }
 function T() {
-    (c = null),
+    ((c = null),
         (I = Object.assign({}, u)),
         (o = !1),
         (N = {}),
         (c = E.A.getGuildId()),
-        (I = r().cloneDeep(Object.assign({}, _.h.getSettings(c))));
+        (I = r().cloneDeep(Object.assign({}, _.h.getSettings(c)))));
 }
 function A(e, n) {
     if (null == I.newMemberActions) return !1;
     let t = I.newMemberActions.findIndex((n) => n.channelId === e);
     if (t < 0) return !1;
-    (I.newMemberActions[t] = { ...n }), (I.newMemberActions = [...I.newMemberActions]);
+    ((I.newMemberActions[t] = { ...n }), (I.newMemberActions = [...I.newMemberActions]));
 }
 function D(e, n) {
     if (null == I.resourceChannels) return !1;
     let t = I.resourceChannels.findIndex((n) => n.channelId === e);
     if (t < 0) return !1;
-    (I.resourceChannels[t] = { ...n }), (I.resourceChannels = [...I.resourceChannels]);
+    ((I.resourceChannels[t] = { ...n }), (I.resourceChannels = [...I.resourceChannels]));
 }
 function G() {
-    (o = !1), (I = r().cloneDeep(Object.assign({}, _.h.getSettings(c))));
+    ((o = !1), (I = r().cloneDeep(Object.assign({}, _.h.getSettings(c)))));
 }
 class O extends l.Ay.PersistedStore {
     static displayName = "GuildSettingsOnboardingHomeSettingsStore";
     static persistKey = "GuildSettingsOnboardingHomeSettingsStore";
     initialize(e) {
-        null != e && (S = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(E.A, _.h);
+        (null != e && (S = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(E.A, _.h));
     }
     getState() {
         return { dismissedSuggestedChannelIdsByGuildId: S };
@@ -120,9 +120,9 @@ let C = new O(i.h, {
     },
     GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION: function (e) {
         let { action: n, pendingData: t } = e;
-        (I.newMemberActions = I.newMemberActions ?? []),
+        ((I.newMemberActions = I.newMemberActions ?? []),
             (I.newMemberActions = [...I.newMemberActions, n]),
-            (N[n.channelId] = { iconData: t.icon, isUrl: a(t.icon), emoji: t.emoji });
+            (N[n.channelId] = { iconData: t.icon, isUrl: a(t.icon), emoji: t.emoji }));
     },
     GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION_PENDING_DATA: function (e) {
         let { channelId: n, pendingData: t } = e;
@@ -135,7 +135,7 @@ let C = new O(i.h, {
     GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION: function (e) {
         let { channelId: n } = e;
         if (null == I.newMemberActions) return !1;
-        (I.newMemberActions = [...I.newMemberActions.filter((e) => e.channelId !== n)]), delete N[n];
+        ((I.newMemberActions = [...I.newMemberActions.filter((e) => e.channelId !== n)]), delete N[n]);
     },
     GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION: function (e) {
         let { actions: n } = e;
@@ -147,8 +147,8 @@ let C = new O(i.h, {
     },
     GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL: function (e) {
         let { resourceChannel: n } = e;
-        (I.resourceChannels = (I.resourceChannels ?? []).filter((e) => e.channelId !== n.channelId)),
-            (I.resourceChannels = [...I.resourceChannels, n]);
+        ((I.resourceChannels = (I.resourceChannels ?? []).filter((e) => e.channelId !== n.channelId)),
+            (I.resourceChannels = [...I.resourceChannels, n]));
     },
     GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL: function (e) {
         let { resourceChannelId: n } = e;

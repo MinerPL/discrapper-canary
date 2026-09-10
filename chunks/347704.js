@@ -30,15 +30,15 @@ function y(e) {
         w = f.nextEnabled ?? !0,
         B = a.useCallback(
             (e) => {
-                N(null), x?.(e, C);
+                (N(null), x?.(e, C));
             },
             [x, C],
         ),
         _ = a.useCallback(async () => {
-            await h?.(), j(!0), P();
+            (await h?.(), j(!0), P());
         }, [h, P]),
         M = a.useCallback(async () => {
-            k(!0), N(null);
+            (k(!0), N(null));
             try {
                 if (null != f.onNext && !(await f.onNext())) return void k(!1);
                 T ? await _() : B(l[m + 1].stepKey);

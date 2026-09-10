@@ -13,7 +13,7 @@ function E(e) {
     let t = c.indexOf(e);
     if (t > -1) {
         let n = [...c];
-        return n.splice(t, 1), (c = n), delete u[e], delete _[e], !0;
+        return (n.splice(t, 1), (c = n), delete u[e], delete _[e], !0);
     }
     return !1;
 }
@@ -50,10 +50,10 @@ class I extends i.Ay.Store {
 }
 let f = new I(r.h, {
     CONNECTION_OPEN: function () {
-        (c = l.A.getGuildsArray()
+        ((c = l.A.getGuildsArray()
             .filter((e) => (0, a.DG)(e))
             .map((e) => e.id)),
-            (_ = {});
+            (_ = {}));
     },
     GUILD_JOIN: function (e) {
         let { guildId: t, lurker: n, source: i, directoryChannelId: r, loadId: a } = e;
@@ -78,11 +78,11 @@ let f = new I(r.h, {
     GUILD_STOP_LURKING: function (e) {
         let t,
             { ignoredGuildIds: n } = e;
-        return (t = new Set([...(n ?? [])])), [...c].reduce((e, n) => (t.has(n) ? e : E(n) || e), !1);
+        return ((t = new Set([...(n ?? [])])), [...c].reduce((e, n) => (t.has(n) ? e : E(n) || e), !1));
     },
     GUILD_STOP_LURKING_FAILURE: function (e) {
         let { lurkingGuildId: t, lurkingSource: n } = e;
-        return A(t), h(t, n), !0;
+        return (A(t), h(t, n), !0);
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;

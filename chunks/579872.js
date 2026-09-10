@@ -1,4 +1,4 @@
-n.d(t, { A: () => s }), n(321073);
+(n.d(t, { A: () => s }), n(321073));
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -27,14 +27,14 @@ let s = {
                             r.push({
                                 text: d,
                                 onClick: async () => {
-                                    u?.(), await n.onClose();
+                                    (u?.(), await n.onClose());
                                 },
                                 variant: "secondary",
                             }),
                         r.push({
                             text: null != l ? l : a.intl.string(a.t.BddRzS),
                             onClick: async () => {
-                                c?.(), await n.onClose();
+                                (c?.(), await n.onClose());
                             },
                             variant: o,
                         }),

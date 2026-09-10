@@ -22,14 +22,14 @@ var i = n(477900),
     _ = n(17456);
 async function N(e, t, n, i) {
     let l = (0, p.aE)(e, t);
-    await (0, c.Ey)(n),
+    (await (0, c.Ey)(n),
         await (0, h.nV)(
             e,
             { items: l },
             { amount: 0, currency: e.currency },
             (0, p.UC)(l, e.currency, e.paymentSourceId),
             i,
-        );
+        ));
 }
 function C(e) {
     let { errorMsg: t } = e;
@@ -73,17 +73,18 @@ function v(e) {
         j = l.useCallback(async () => {
             if (null != d)
                 try {
-                    C(!0), v(null);
+                    (C(!0), v(null));
                     let e = (0, S.v)(d, 1);
-                    r()(
+                    (r()(
                         (0, p.bx)(e) <= (0, p.bx)(d.additionalPlans),
                         "Uncanceling should not increase the number of guild subscriptions",
                     ),
                         await N(d, e, t, u),
-                        x(2);
+                        x(2));
                 } catch (t) {
                     let e = t instanceof g.Ey ? t : new g.Ey(t, t.code);
-                    v(I.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? I.t.dq4vq7 : I.t["5mlOCW"])), C(!1);
+                    (v(I.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? I.t.dq4vq7 : I.t["5mlOCW"])),
+                        C(!1));
                 }
         }, [d, t, u]);
     return (0, i.jsx)(E.f5, {

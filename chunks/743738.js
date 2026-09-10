@@ -35,15 +35,15 @@ async function p(e) {
     } catch {
         return;
     }
-    (0, u.tU)(m, {
+    ((0, u.tU)(m, {
         messageId: n,
         data: { interactionType: l.G4.MESSAGE_COMPONENT, applicationId: A, customId: a, componentId: E },
         onFailure: (e, t) => {
             var n, i;
-            return (n = I), (i = e), void (null == t && null != i && s.A.sendClydeError(n, i));
+            return ((n = I), (i = e), void (null == t && null != i && s.A.sendClydeError(n, i)));
         },
     }),
-        null != p && (0, u.Sw)(n, m, p, E);
+        null != p && (0, u.Sw)(n, m, p, E));
     let g = {
         type: l.G4.MESSAGE_COMPONENT,
         nonce: m,
@@ -95,7 +95,7 @@ function T(e, t, n, i, r) {
                         if (i !== A && null != r && "object" == typeof r) return e(r, n ?? i);
                     return null;
                 })(t.body.errors, void 0);
-                null != s &&
+                (null != s &&
                     ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code ||
                         "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) &&
                     a.h.dispatch({
@@ -104,7 +104,7 @@ function T(e, t, n, i, r) {
                         channelId: i,
                         guildId: r ?? null,
                     }),
-                    (0, u.C1)(e, void 0, s?.message);
+                    (0, u.C1)(e, void 0, s?.message));
                 return;
             } else
                 return t.body.code !== h.t02.UNKNOWN_INTEGRATION
@@ -146,7 +146,7 @@ function g(e, t) {
 }
 function S(e) {
     let t = e.options;
-    for (; t?.length === 1 && (t[0].type === l.n4.SUB_COMMAND_GROUP || t[0].type === l.n4.SUB_COMMAND); )
+    for (; t?.length === 1 && (t[0].type === l.n4.SUB_COMMAND_GROUP || t[0].type === l.n4.SUB_COMMAND);)
         t = t[0].options;
     for (let e of t ?? []) if (e.type === l.n4.ATTACHMENT) return !1;
     return !0;

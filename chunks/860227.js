@@ -50,7 +50,7 @@ function u(t, e, n) {
         let e = m(t);
         O += ` ${s.l6} ${e}`;
     }
-    return C && (O += ` ${s.zV}`), O.trim();
+    return (C && (O += ` ${s.zV}`), O.trim());
 }
 function p(t) {
     if (0 === t.reactions.length) return;

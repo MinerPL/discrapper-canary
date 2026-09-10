@@ -13,22 +13,22 @@ function d(e) {
             dismissed: t,
             onDismiss: d,
             renderComponent: A,
-            nudgeAlignIntoViewport: m = !1,
-            skipForceHide: h = !1,
+            nudgeAlignIntoViewport: h = !1,
+            skipForceHide: m = !1,
         } = e,
         C = i.useContext(c.vG),
         [E, p] = i.useState(""),
         [g, f] = i.useState(!1),
-        x = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
-        I = i.useRef(null),
+        I = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        x = i.useRef(null),
         v = i.useRef(0);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         let e = n.current;
-        if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
+        if (null != e) return (e.addEventListener("click", d), () => e.removeEventListener("click", d));
     }),
         i.useEffect(() => {
-            h || (p(String(v.current)), f(void 0 !== x && x < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
-        }, [x, I, h]);
+            m || (p(String(v.current)), f(void 0 !== I && I < (x.current?.clientHeight ?? 300) + 24), (v.current += 1));
+        }, [I, x, m]));
     let { preventIdle: T, allowIdle: _ } = (0, u.o)("popup");
     return n?.current == null
         ? null
@@ -39,10 +39,10 @@ function d(e) {
                   align: "center",
                   spacing: 0,
                   positionKey: E,
-                  nudgeAlignIntoViewport: m,
+                  nudgeAlignIntoViewport: h,
                   children: () =>
                       (0, l.jsx)("div", {
-                          ref: I,
+                          ref: x,
                           onMouseOver: T,
                           onFocus: T,
                           onBlur: _,

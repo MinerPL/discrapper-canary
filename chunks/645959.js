@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, { A: () => L }), n(321073);
+(n.d(t, { A: () => L }), n(321073));
 var s = n(536637),
     l = n.n(s),
     o = n(17928),
@@ -47,10 +47,10 @@ function S(e) {
     };
 }
 function N() {
-    g.clear(),
+    (g.clear(),
         Object.values(h.A.getMutablePrivateChannels()).forEach((e) => {
             g.set(e.id, S(e));
-        });
+        }));
 }
 function C() {
     let e = h.A.getMutablePrivateChannels();
@@ -82,7 +82,7 @@ let O =
 class R extends o.Ay.Store {
     static displayName = "PrivateChannelSortStore";
     initialize() {
-        this.waitFor(h.A, I.A, _.A, f.Ay, E.A, p.Ay, T.default), this.syncWith([p.Ay, _.A], N);
+        (this.waitFor(h.A, I.A, _.A, f.Ay, E.A, p.Ay, T.default), this.syncWith([p.Ay, _.A], N));
     }
     getPrivateChannelIds() {
         return O();

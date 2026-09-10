@@ -1,6 +1,6 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.VideoTypes = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.VideoTypes = void 0));
 class n {}
-(t.VideoTypes = n),
+((t.VideoTypes = n),
     (n.AVI = {
         extension: "avi",
         mimeType: "video/x-msvideo",
@@ -110,4 +110,4 @@ class n {}
         description:
             "WebM is a royalty-free, open-source media file format optimized for web delivery, using efficient VP8 video and Vorbis audio codecs",
         signatures: [{ sequence: [26, 69, 223, 163], description: "EBML identifier", compatibleExtensions: ["mkv"] }],
-    });
+    }));

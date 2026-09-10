@@ -40,7 +40,7 @@ let _ = new u(r.h, {
         let { channelId: t, messageId: n, content: i, source: r } = e,
             o = l.D_.getSetting(),
             u = s.Ay.unparse(i, t);
-        (d[t] = { channelId: t, messageId: n, textValue: u, richValue: (0, a.x7)(o ? u : i) }), (c[t] = r);
+        ((d[t] = { channelId: t, messageId: n, textValue: u, richValue: (0, a.x7)(o ? u : i) }), (c[t] = r));
     },
     MESSAGE_UPDATE_EDIT: function (e) {
         let { channelId: t, textValue: n, richValue: i } = e,
@@ -51,13 +51,13 @@ let _ = new u(r.h, {
     MESSAGE_END_EDIT: function (e) {
         let { channelId: t } = e;
         if (null == t || null == d[t]) return !1;
-        delete d[t], delete c[t];
+        (delete d[t], delete c[t]);
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
         d[t]?.messageId === n && (delete d[t], delete c[t]);
     },
     LOGOUT: function () {
-        (d = {}), (c = {});
+        ((d = {}), (c = {}));
     },
 });

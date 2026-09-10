@@ -1,4 +1,4 @@
-t.d(r, { ZK: () => g, pF: () => v, wu: () => d }), t(323874), t(14289), t(35956), t(321073);
+(t.d(r, { ZK: () => g, pF: () => v, wu: () => d }), t(323874), t(14289), t(35956), t(321073));
 var n = t(582128);
 if (588245 != t.j) var a = t(462180);
 var l = t(882035),
@@ -14,13 +14,13 @@ let f = "__DEBUG_PROFILE_EFFECTS_STORE",
         try {
             o.w.set(f, e.profileEffects);
         } catch (e) {
-            console.error(e),
+            (console.error(e),
                 (0, s.P0)(
                     (0, u.o)(
                         "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
                         c.Ck.FAILURE,
                     ),
-                );
+                ));
         }
     },
     d = (0, l.h)((e) => ({
@@ -29,14 +29,14 @@ let f = "__DEBUG_PROFILE_EFFECTS_STORE",
             (0, i.r)(() => {
                 e((e) => {
                     let t = { ...e };
-                    return (t.profileEffects[r.skuId] = r), _(t), t;
+                    return ((t.profileEffects[r.skuId] = r), _(t), t);
                 });
             }),
         deleteProfileEffect: (r) =>
             (0, i.r)(() => {
                 e((e) => {
                     let t = { ...e };
-                    return delete t.profileEffects[r], _(t), t;
+                    return (delete t.profileEffects[r], _(t), t);
                 });
             }),
         clearAll: () =>
@@ -56,10 +56,10 @@ let g = (e) => {
     return (
         n.useEffect(
             () => () => {
-                t.current.forEach((e) => {
+                (t.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (t.current = []);
+                    (t.current = []));
             },
             [],
         ),
@@ -74,7 +74,7 @@ let g = (e) => {
                         ...r,
                         src: (function (e) {
                             let r = (0, p.fB)(e);
-                            return t.current.push(r), r;
+                            return (t.current.push(r), r);
                         })(r.base64),
                     });
             }

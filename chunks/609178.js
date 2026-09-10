@@ -46,11 +46,11 @@ function D(e) {
             isEmojiPickerOverlay: H = !1,
         } = e;
     i.useEffect(() => {
-        C.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
+        (C.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, U),
             (0, y.sq)(R.U7l.PREMIUM_UPSELL_VIEWED, U.location_stack, () =>
                 (0, S.uq)(U.type, U.has_premium_stream_fps, U.has_premium_stream_resolution),
             ),
-            V?.();
+            V?.());
     }, [V, U]);
     let B = (0, v.V)(),
         W = i.useCallback(() => (0, I.LE)(B, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [B]),
@@ -121,7 +121,7 @@ function D(e) {
                                         (0, l.jsx)(p.$, {
                                             variant: "secondary",
                                             onClick: function () {
-                                                C.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                (C.default.track(R.HAw.PREMIUM_PROMOTION_OPENED, {
                                                     location_section: D,
                                                     location_object: R.ZSU.NAVIGATION_LINK,
                                                 }),
@@ -129,7 +129,7 @@ function D(e) {
                                                     (0, x.A)(),
                                                     G(),
                                                     (0, g.jH)(),
-                                                    (0, A.pX)(R.BVt.APPLICATION_STORE);
+                                                    (0, A.pX)(R.BVt.APPLICATION_STORE));
                                             },
                                             text: L.intl.string(L.t.ZnqyZ2),
                                             fullWidth: !0,
@@ -138,7 +138,7 @@ function D(e) {
                                             premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
                                             subscriptionTier: b.pe.TIER_2,
                                             onClick: () => {
-                                                G(), F?.();
+                                                (G(), F?.());
                                             },
                                             defaultTextOverride: W(),
                                             fullWidth: !0,

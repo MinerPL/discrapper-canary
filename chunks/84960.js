@@ -104,7 +104,7 @@ function P(n) {
         { analyticsLocations: nh } = (0, L.Ay)(E.A.PREMIUM_UPSELL_MODAL),
         nA = { analyticsLocation: S, analyticsLocations: nh, analyticsSource: I, guildBoostProps: a, type: s },
         ng = l.useRef(nA);
-    l.useEffect(() => {
+    (l.useEffect(() => {
         ng.current = nA;
     }),
         l.useEffect(() => {
@@ -132,7 +132,7 @@ function P(n) {
                       sku_id: (0, h.mH)(nn),
                   }),
                   (0, A.sq)(O.U7l.PREMIUM_UPSELL_VIEWED, e, () => (0, g.uq)(l)));
-        }, [nL, nn, ne]);
+        }, [nL, nn, ne]));
     let nN = (0, N.b)(),
         nf =
             nN.length > 1 &&
@@ -254,7 +254,7 @@ function P(n) {
                                             size: r.$n.Sizes.SMALL,
                                             color: nl || na ? r.$n.Colors.CUSTOM : r.$n.Colors.GREEN,
                                             onClick: () => {
-                                                G?.(), Q();
+                                                (G?.(), Q());
                                             },
                                             onSubscribeModalClose: q,
                                             textOptions: { textOverride: J ?? n },

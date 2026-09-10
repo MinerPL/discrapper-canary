@@ -1,4 +1,4 @@
-n.d(t, { A: () => h }), n(321073);
+(n.d(t, { A: () => h }), n(321073));
 var i = n(17928),
     l = n(228366),
     r = n(427358),
@@ -11,7 +11,7 @@ class c extends i.Ay.PersistedStore {
     static displayName = "FriendGroupsStore";
     static persistKey = "FriendGroupsStoreV2";
     initialize(e) {
-        this.waitFor(s.A, a.A, r.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1));
+        (this.waitFor(s.A, a.A, r.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1)));
     }
     getGroups() {
         return u;
@@ -39,7 +39,7 @@ class c extends i.Ay.PersistedStore {
 let h = new c(l.h, {
     POST_CONNECTION_OPEN: function () {
         if (d || u.length > 0) return !1;
-        (u = []), (d = !0);
+        ((u = []), (d = !0));
     },
     CREATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e;

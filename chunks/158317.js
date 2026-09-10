@@ -8,7 +8,7 @@ new a.A("OrderActionCreators");
 class l extends r.Ay {
     order;
     constructor(e) {
-        super("Order signing failed due to unsatisfied constraints"), (this.order = e);
+        (super("Order signing failed due to unsatisfied constraints"), (this.order = e));
     }
 }
 class o extends r.Ay {
@@ -57,7 +57,7 @@ async function _(e) {
     let t = await c(e);
     for (let n of u) {
         if (t.length > 0) break;
-        await new Promise((e) => setTimeout(e, n)), (t = await c(e));
+        (await new Promise((e) => setTimeout(e, n)), (t = await c(e)));
     }
     return t;
 }

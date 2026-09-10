@@ -11,23 +11,23 @@ e.exports = function (e, o) {
                 if (o.constructor !== a.constructor) return !1;
                 if (Array.isArray(o)) {
                     if ((s = o.length) != a.length) return !1;
-                    for (l = s; 0 != l--; ) if (!e(o[l], a[l])) return !1;
+                    for (l = s; 0 != l--;) if (!e(o[l], a[l])) return !1;
                     return !0;
                 }
                 if (r && o instanceof Map && a instanceof Map) {
                     if (o.size !== a.size) return !1;
-                    for (c = o.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
-                    for (c = o.entries(); !(l = c.next()).done; ) if (!e(l.value[1], a.get(l.value[0]))) return !1;
+                    for (c = o.entries(); !(l = c.next()).done;) if (!a.has(l.value[0])) return !1;
+                    for (c = o.entries(); !(l = c.next()).done;) if (!e(l.value[1], a.get(l.value[0]))) return !1;
                     return !0;
                 }
                 if (n && o instanceof Set && a instanceof Set) {
                     if (o.size !== a.size) return !1;
-                    for (c = o.entries(); !(l = c.next()).done; ) if (!a.has(l.value[0])) return !1;
+                    for (c = o.entries(); !(l = c.next()).done;) if (!a.has(l.value[0])) return !1;
                     return !0;
                 }
                 if (i && ArrayBuffer.isView(o) && ArrayBuffer.isView(a)) {
                     if ((s = o.length) != a.length) return !1;
-                    for (l = s; 0 != l--; ) if (o[l] !== a[l]) return !1;
+                    for (l = s; 0 != l--;) if (o[l] !== a[l]) return !1;
                     return !0;
                 }
                 if (o.constructor === RegExp) return o.source === a.source && o.flags === a.flags;
@@ -44,9 +44,9 @@ e.exports = function (e, o) {
                 )
                     return o.toString() === a.toString();
                 if ((s = (u = Object.keys(o)).length) !== Object.keys(a).length) return !1;
-                for (l = s; 0 != l--; ) if (!Object.prototype.hasOwnProperty.call(a, u[l])) return !1;
+                for (l = s; 0 != l--;) if (!Object.prototype.hasOwnProperty.call(a, u[l])) return !1;
                 if (t && o instanceof Element) return !1;
-                for (l = s; 0 != l--; )
+                for (l = s; 0 != l--;)
                     if (
                         (("_owner" !== u[l] && "__v" !== u[l] && "__o" !== u[l]) || !o.$$typeof) &&
                         !e(o[u[l]], a[u[l]])
@@ -58,7 +58,7 @@ e.exports = function (e, o) {
         })(e, o);
     } catch (e) {
         if ((e.message || "").match(/stack|recursion/i))
-            return console.warn("react-fast-compare cannot handle circular refs"), !1;
+            return (console.warn("react-fast-compare cannot handle circular refs"), !1);
         throw e;
     }
 };

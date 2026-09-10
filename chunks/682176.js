@@ -1,4 +1,4 @@
-i.d(t, { A: () => x }), i(938796), i(321073);
+(i.d(t, { A: () => x }), i(938796), i(321073));
 var l = i(477900),
     a = i(582128),
     n = i(503698),
@@ -65,7 +65,7 @@ function x(e) {
     (0, b.A)(t.id, z, K);
     let $ = Math.min(Y > 0 ? Y : T, V),
         ee = $ / X;
-    ee > B && ($ = (ee = B) * X), $ < T && (ee = ($ = T) / X);
+    (ee > B && ($ = (ee = B) * X), $ < T && (ee = ($ = T) / X));
     let et = Math.round(Math.min($, V)),
         ei = Math.round(Math.min(ee, B)),
         el = Y > 0 && q > 0 ? Math.min(et / Y, ei / q, 1) : 1,
@@ -82,7 +82,7 @@ function x(e) {
             [eu, G],
         ),
         ev = a.useCallback((e, t) => {
-            (ep.current = e), Number.isFinite(t) && t > 0 && eh((e) => (e === t ? e : t));
+            ((ep.current = e), Number.isFinite(t) && t > 0 && eh((e) => (e === t ? e : t)));
         }, []),
         eg = a.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
         eC = (0, s.Lt)(t.flags ?? 0, M.sbO.HAS_TIMELINE_COMMENTS),

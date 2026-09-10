@@ -17,9 +17,9 @@ async function c(l, t = i) {
     for (let i = 0; i < t.length; i++) {
         let e = t[i],
             c = { ...d };
-        e.width && (c.width = { ideal: e.width }),
+        (e.width && (c.width = { ideal: e.width }),
             e.height && (c.height = { ideal: e.height }),
-            e.width || e.height || (delete c.width, delete c.height);
+            e.width || e.height || (delete c.width, delete c.height));
         try {
             return await navigator.mediaDevices.getUserMedia({ ...l, video: c });
         } catch (l) {

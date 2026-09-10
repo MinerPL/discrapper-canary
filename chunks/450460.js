@@ -8,7 +8,7 @@ try {
 if (i && n) {
     var o = {},
         a = {};
-    i(a, "length", {
+    (i(a, "length", {
         "[[Get]]": function () {
             throw o;
         },
@@ -20,7 +20,7 @@ if (i && n) {
             } catch (e) {
                 return e === o;
             }
-        });
+        }));
 } else
     e.exports = function (e) {
         return "function" == typeof e && !!e.prototype;

@@ -27,7 +27,7 @@ function g(t) {
         e = (0, l.bG)([p.A], () => p.A.getAction()),
         [a, g] = n.useState(!1);
     async function f() {
-        return g(!0), e === E.a3B.AGREEMENTS && g(await (0, x.acceptAgreements)()), null;
+        return (g(!0), e === E.a3B.AGREEMENTS && g(await (0, x.acceptAgreements)()), null);
     }
     return (
         (0, d.A)(

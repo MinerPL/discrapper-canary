@@ -34,14 +34,14 @@ function S(e) {
 }
 function N(e) {
     let { skus: t, skusType: n } = e;
-    t.forEach((e) => {
+    (t.forEach((e) => {
         A.set(e.identifier, e);
     }),
         (E = Array.from(A.values())?.filter((e) => null != e)),
         E?.forEach((e) => {
             let t = e?.offerIds;
             null != t && t.forEach((e) => h.add(e));
-        });
+        }));
     try {
         E = E?.map(S);
     } catch (e) {

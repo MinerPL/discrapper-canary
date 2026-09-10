@@ -1,4 +1,4 @@
-n.d(t, { A: () => ec }), n(321073), n(938796);
+(n.d(t, { A: () => ec }), n(321073), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(575593),
@@ -24,7 +24,7 @@ function N(e) {
     if (e?.collectibles == null) return { collectibles: void 0, profileEffect: void 0, profileFrame: void 0 };
     let i = [];
     for (let r of e.collectibles)
-        i.push({ skuId: r.sku_id, type: r.type, expiresAt: null != r.expires_at ? new Date(r.expires_at) : void 0 }),
+        (i.push({ skuId: r.sku_id, type: r.type, expiresAt: null != r.expires_at ? new Date(r.expires_at) : void 0 }),
             r.type === a.R.PROFILE_EFFECT
                 ? (t = {
                       skuId: r.sku_id,
@@ -35,7 +35,7 @@ function N(e) {
                       skuId: r.sku_id,
                       type: a.R.PROFILE_FRAME,
                       expiresAt: null != r.expires_at ? new Date(r.expires_at) : void 0,
-                  });
+                  }));
     return { collectibles: i, profileEffect: t, profileFrame: n };
 }
 var C = n(652215),
@@ -117,12 +117,12 @@ function k(e) {
     }
 }
 let F = !1,
-    V = null;
-function B(e, t) {
+    B = null;
+function V(e, t) {
     let n = null != t ? v.get(e)?.get(t) : D.get(e);
     if (n?.collectibles == null) return;
     let i = [];
-    n.collectibles.forEach((n) => {
+    (n.collectibles.forEach((n) => {
         if (null == n.expiresAt) return;
         let r = n.expiresAt.getTime() - Date.now();
         r <= 0
@@ -131,22 +131,22 @@ function B(e, t) {
               null == b[e][t ?? R] && (b[e][t ?? R] = {}),
               null == b[e][t ?? R][n.skuId] && (b[e][t ?? R][n.skuId] = new l.Ep()),
               b[e][t ?? R][n.skuId].start(Math.min(C.mnr, r), () => {
-                  B(e, t);
+                  V(e, t);
               }));
     }),
         0 !== i.length &&
             ((n.collectibles = n.collectibles.filter((e) => !i.includes(e))),
             i.forEach((i) => {
-                i.type === a.R.PROFILE_EFFECT
+                (i.type === a.R.PROFILE_EFFECT
                     ? (n.profileEffect = void 0)
                     : i.type === a.R.PROFILE_FRAME && (n.profileFrame = void 0),
-                    delete b[e]?.[t ?? R]?.[i.skuId];
+                    delete b[e]?.[t ?? R]?.[i.skuId]);
             }),
             "guildId" in n ? v.get(e)?.set(n.guildId, n) : D.set(e, n),
-            ed.emitChange());
+            ed.emitChange()));
 }
 function H() {
-    L.clear(), y.clear(), D.clear(), v.clear(), M.clear(), P.clear(), U.clear(), (F = !1);
+    (L.clear(), y.clear(), D.clear(), v.clear(), M.clear(), P.clear(), U.clear(), (F = !1));
 }
 function j(e) {
     let { userId: t } = e;
@@ -170,14 +170,14 @@ function Y(e) {
         .value();
 }
 function K(e) {
-    y.delete(e.userId), M.set(e.userId, Y(e.mutualFriends)), P.set(e.userId, e.mutualFriends.length);
+    (y.delete(e.userId), M.set(e.userId, Y(e.mutualFriends)), P.set(e.userId, e.mutualFriends.length));
 }
 function $(e) {
     let { userProfile: t, fetchStartedAt: n, guildId: i } = e,
         r = i ?? t.guild_member_profile?.guild_id ?? R;
     if ((L.get(t.user.id)?.delete(r), y.delete(t.user.id), null != t.mutual_guilds)) {
         let e = {};
-        t.mutual_guilds.forEach((t) => {
+        (t.mutual_guilds.forEach((t) => {
             let { id: n, nick: i } = t,
                 r = E.A.getGuild(n);
             null != r && (e[n] = { guild: r, nick: i });
@@ -187,11 +187,11 @@ function $(e) {
                 I.Ay.getFlattenedGuildIds()
                     .filter((t) => null != e[t])
                     .map((t) => ({ guild: e[t].guild, nick: e[t].nick })),
-            );
+            ));
     }
     if (null != t.mutual_friends_count) {
         let e = t.mutual_friends_count;
-        P.set(t.user.id, e), 0 === e && M.set(t.user.id, w);
+        (P.set(t.user.id, e), 0 === e && M.set(t.user.id, w));
     }
     null != t.mutual_friends && (M.set(t.user.id, Y(t.mutual_friends)), P.set(t.user.id, t.mutual_friends.length));
     let a = null != t.premium_since ? new Date(t.premium_since) : null,
@@ -213,7 +213,7 @@ function $(e) {
                           : e;
                   })
                 : [];
-    null != V && V.userId === t.user.id && (Date.now() > V.expiresAtMs ? (V = null) : z(d, V));
+    null != B && B.userId === t.user.id && (Date.now() > B.expiresAtMs ? (B = null) : z(d, B));
     let c = Date.now();
     if (
         (D.set(t.user.id, {
@@ -254,7 +254,7 @@ function $(e) {
             wishlistSettings: t.wishlist_settings,
             private: t.private,
         }),
-        B(t.user.id),
+        V(t.user.id),
         null != t.guild_member_profile)
     ) {
         let e = {
@@ -275,31 +275,31 @@ function $(e) {
         if (null != i) i.set(t.guild_member_profile.guild_id, e);
         else {
             let n = new Map();
-            n.set(t.guild_member_profile.guild_id, e), v.set(t.user.id, n);
+            (n.set(t.guild_member_profile.guild_id, e), v.set(t.user.id, n));
         }
-        B(t.user.id, t.guild_member_profile.guild_id);
+        V(t.user.id, t.guild_member_profile.guild_id);
     }
 }
 function z(e, t) {
     if (null == e) return;
     let n = new Set(e.map((e) => e.id)),
         i = t?.badges.filter((e) => !n.has(e.id));
-    return i.length > 0 && e.push(...i), e;
+    return (i.length > 0 && e.push(...i), e);
 }
-function q(e) {
+function X(e) {
     let { userId: t, guildId: n, withMutualFriends: i } = e,
         r = n ?? R,
         a = L.get(t);
     if (null != a) a.add(r);
     else {
         let e = new Set();
-        e.add(r), L.set(t, e);
+        (e.add(r), L.set(t, e));
     }
     i && y.add(t);
 }
-function Z(e) {
+function q(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
-    L.get(t)?.delete(n ?? R), y.delete(t);
+    (L.get(t)?.delete(n ?? R), y.delete(t));
     let a = D.get(t) ?? {
             connectedAccounts: [],
             applicationRoleConnections: [],
@@ -324,11 +324,11 @@ function Z(e) {
     }
     i?.status === 404 && (P.set(t, 0), M.set(t, w), U.set(t, G));
 }
-function X(e) {
+function Z(e) {
     F = !0;
 }
 function Q(e) {
-    (F = !1),
+    ((F = !1),
         null != e.guild_id
             ? (function (e) {
                   let {
@@ -356,7 +356,7 @@ function Q(e) {
                           popoutAnimationParticleType: l,
                           themeColors: o,
                       }),
-                      B(t, n));
+                      V(t, n));
               })(e)
             : (function (e) {
                   let {
@@ -381,8 +381,8 @@ function Q(e) {
                           popoutAnimationParticleType: s,
                           themeColors: l,
                       }),
-                      B(t));
-              })(e);
+                      V(t));
+              })(e));
 }
 function J(e) {
     F = !1;
@@ -395,11 +395,11 @@ function ee(e) {
 }
 function et(e) {
     let { badges: t, ttlInSeconds: n, userId: i } = e;
-    V = { userId: i, badges: t, expiresAtMs: Date.now() + 1e3 * n };
+    B = { userId: i, badges: t, expiresAtMs: Date.now() + 1e3 * n };
     let r = D.get(i);
     if (null != r) {
         let e = r.badges ?? [];
-        z(e, V), D.set(i, { ...r, badges: e });
+        (z(e, B), D.set(i, { ...r, badges: e }));
     }
 }
 function en(e) {
@@ -416,15 +416,15 @@ function ea(e) {
     return el(e.relationship.id);
 }
 function es() {
-    L.clear(), y.clear(), D.clear(), v.clear();
+    (L.clear(), y.clear(), D.clear(), v.clear());
 }
 function el(e) {
     if (null == e) return !1;
     let t = D.get(e);
     if (null == t) return !1;
-    (t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0);
+    ((t.fetchStartedAt = 0), (t.fetchEndedAt = 0), (t.fetchError = void 0));
     let n = v.get(e);
-    if (null != n) for (let e of n.values()) (e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0);
+    if (null != n) for (let e of n.values()) ((e.fetchStartedAt = 0), (e.fetchEndedAt = 0), (e.fetchError = void 0));
 }
 class eo extends A.A {
     static displayName = "UserProfileStore";
@@ -432,10 +432,10 @@ class eo extends A.A {
     constructor() {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            USER_PROFILE_FETCH_START: q,
-            USER_PROFILE_FETCH_FAILURE: Z,
+            USER_PROFILE_FETCH_START: X,
+            USER_PROFILE_FETCH_FAILURE: q,
             USER_PROFILE_FETCH_SUCCESS: $,
-            USER_PROFILE_UPDATE_START: X,
+            USER_PROFILE_UPDATE_START: Z,
             USER_PROFILE_UPDATE_SUCCESS: Q,
             USER_PROFILE_UPDATE_FAILURE: J,
             WIDGET_PENDING_SAVE_SUCCESS: ee,
@@ -457,7 +457,7 @@ class eo extends A.A {
         });
     }
     initialize() {
-        this.waitFor(I.Ay), this.syncWith([c.default], es);
+        (this.waitFor(I.Ay), this.syncWith([c.default], es));
     }
     isFetchingProfile(e, t) {
         let n = L.get(e);

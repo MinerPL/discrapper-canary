@@ -4,10 +4,10 @@ var i = d(41851),
     c = d(761969),
     a = class extends Error {
         constructor(l, t) {
-            super(`POST ${e.t.qrValidateUuid} failed: ${l} ${t}`),
+            (super(`POST ${e.t.qrValidateUuid} failed: ${l} ${t}`),
                 (this.name = "QrValidationError"),
                 (this.status = l),
-                (this.statusText = t);
+                (this.statusText = t));
         }
     };
 async function s(l, t, d) {
@@ -49,7 +49,7 @@ async function n(l, t) {
 async function Z(l, t) {
     if ("string" != typeof l.urlUuid || 0 === l.urlUuid.length) return;
     let d = await n({ onboardingId: l.onboardingId ?? null, urlUuid: l.urlUuid }, t);
-    return l.onRefreshed?.(d.urlUuid), d.urlUuid;
+    return (l.onRefreshed?.(d.urlUuid), d.urlUuid);
 }
 async function b(l, t, d) {
     let { onUrlUuidRefreshed: i, ...e } = t,

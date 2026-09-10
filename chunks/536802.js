@@ -1,4 +1,4 @@
-n.d(t, { A: () => o }), n(321073);
+(n.d(t, { A: () => o }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(17928),
@@ -10,11 +10,11 @@ class o extends a.Ay.Store {
         o.allStores.forEach((e) => e.clear());
     }
     constructor(e, t) {
-        super(l.h, { ...e, CLEAR_CACHES: () => (this.clear(), !1), WRITE_CACHES: () => (this.save(), !1) }, t),
+        (super(l.h, { ...e, CLEAR_CACHES: () => (this.clear(), !1), WRITE_CACHES: () => (this.save(), !1) }, t),
             r()(null != this.getClass().displayName, "Snapshot stores need a display name"),
             r()(!("CLEAR_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action"),
             r()(!("WRITE_CACHES" in e), "MobileCacheSnapshotStores cannot use the 'WRITE_CACHES' action"),
-            o.allStores.push(this);
+            o.allStores.push(this));
     }
     get persistKey() {
         return `${this.getClass().displayName}-snapshot`;

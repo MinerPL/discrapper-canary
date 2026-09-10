@@ -35,7 +35,7 @@ let u = new c(a.h, {
     },
     FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: function (e) {
         let { userId: t, settings: n, consents: i } = e;
-        null != n && (o[t] = (0, s.Gd)(n)), null != i && (d[t] = i), (l = !1);
+        (null != n && (o[t] = (0, s.Gd)(n)), null != i && (d[t] = i), (l = !1));
     },
     FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: function (e) {
         let { userId: t, consents: n } = e;
@@ -47,6 +47,6 @@ let u = new c(a.h, {
         o[t] = (0, s.RK)(r.nT, o[t], i);
     },
     LOGOUT: function () {
-        (o = {}), (d = {}), (l = !1);
+        ((o = {}), (d = {}), (l = !1));
     },
 });

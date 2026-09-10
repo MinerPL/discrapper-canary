@@ -12,26 +12,26 @@ class o extends a.AbstractParserWithWordBoundaryChecking {
             a = e.createParsingComponents();
         switch (t[1].toLowerCase()) {
             case "pomeriggio":
-                a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 15);
+                (a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 15));
                 break;
             case "sera":
             case "notte":
-                a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 20);
+                (a.imply("meridiem", n.Meridiem.PM), a.imply("hour", 20));
                 break;
             case "mezzanotte":
                 let s = new Date(r.getTime());
-                s.setDate(s.getDate() + 1),
+                (s.setDate(s.getDate() + 1),
                     (0, i.assignSimilarDate)(a, s),
                     (0, i.implySimilarTime)(a, s),
                     a.imply("hour", 0),
                     a.imply("minute", 0),
-                    a.imply("second", 0);
+                    a.imply("second", 0));
                 break;
             case "mattina":
-                a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 6);
+                (a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 6));
                 break;
             case "mezzogiorno":
-                a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 12);
+                (a.imply("meridiem", n.Meridiem.AM), a.imply("hour", 12));
         }
         return a;
     }

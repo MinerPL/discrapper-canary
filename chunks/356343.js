@@ -33,8 +33,8 @@ function a(e) {
             return (
                 l.useEffect(
                     () => () => {
-                        r.current && ((r.current = !1), C.current?.(!1)),
-                            null != n.current && (window.removeEventListener("focus", n.current), (n.current = null));
+                        (r.current && ((r.current = !1), C.current?.(!1)),
+                            null != n.current && (window.removeEventListener("focus", n.current), (n.current = null)));
                     },
                     [],
                 ),
@@ -43,7 +43,7 @@ function a(e) {
         })(),
         o = l.useCallback(
             (e, r) => {
-                d(), n(e, r);
+                (d(), n(e, r));
             },
             [n, d],
         );

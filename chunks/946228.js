@@ -262,9 +262,9 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
             L = i.useCallback(() => {
                 let e = `@${eL.Ay.getUserTag(c, { decoration: "never" })}`,
                     t = `<@${c.id}>`;
-                eR._.dispatch(G.jej.TEXTAREA_FOCUS, { channelId: g.id }),
+                (eR._.dispatch(G.jej.TEXTAREA_FOCUS, { channelId: g.id }),
                     eR._.dispatchToLastSubscribed(G.jej.INSERT_TEXT, { plainText: e, rawText: t }),
-                    E.A.startTyping(g.id);
+                    E.A.startTyping(g.id));
             }, [c, g.id]),
             M = i.useCallback(
                 (e) => {
@@ -397,15 +397,15 @@ class eF extends i.Component {
         );
     }
     componentDidMount() {
-        this.updateSubscription(), this.trackMemberListViewed();
+        (this.updateSubscription(), this.trackMemberListViewed());
     }
     componentDidUpdate(e) {
-        e.channel.id !== this.props.channel.id && this.updateSubscription(),
+        (e.channel.id !== this.props.channel.id && this.updateSubscription(),
             this.trackMemberListViewed(),
-            this.updateMaxContentFeedRowSeen();
+            this.updateMaxContentFeedRowSeen());
     }
     setList = (e) => {
-        (this._list = e), (this.props.listRef.current = e);
+        ((this._list = e), (this.props.listRef.current = e));
     };
     renderSection = (e) => {
         let { section: t } = e,
@@ -453,7 +453,7 @@ class eF extends i.Component {
                     n.has(t) || (n.add(t), l.add(e.id));
                 }
             }
-        return (this._firstApplicationIdOccurrences = l), (this._lastRowsVersion = t), l;
+        return ((this._firstApplicationIdOccurrences = l), (this._lastRowsVersion = t), l);
     };
     renderRow = (e) => {
         let { section: t, row: n, rowIndex: i } = e,
@@ -512,7 +512,7 @@ class eF extends i.Component {
         return (0, l.jsx)(eV, { index: i }, `placeholder-${t}:${n}`);
     };
     handleScroll = () => {
-        this.updateSubscription(), this.updateMaxContentFeedRowSeen();
+        (this.updateSubscription(), this.updateMaxContentFeedRowSeen());
     };
     updateMaxContentFeedRowSeen = o().debounce(() => {
         let e = this._list;
@@ -600,8 +600,8 @@ class eF extends i.Component {
                 num_users_visible_with_nameplate: 0,
             },
         );
-        (this.lastReportedAnalyticsChannel = this.props.channel.id),
-            v.Ay.trackWithMetadata(G.HAw.MEMBER_LIST_VIEWED, { ...l });
+        ((this.lastReportedAnalyticsChannel = this.props.channel.id),
+            v.Ay.trackWithMetadata(G.HAw.MEMBER_LIST_VIEWED, { ...l }));
     };
     render() {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
@@ -630,9 +630,9 @@ class eF extends i.Component {
                                                 role: o,
                                                 "aria-label": V.intl.string(V.t["9Oq93m"]),
                                                 ref: (e) => {
-                                                    (this._list = e),
+                                                    ((this._list = e),
                                                         (this.props.listRef.current = e),
-                                                        (a.current = e?.getScrollerNode() ?? null);
+                                                        (a.current = e?.getScrollerNode() ?? null));
                                                 },
                                                 className: r()(H.ol, { [H.Ij]: d.Fr }),
                                                 paddingTop: 0,
@@ -688,7 +688,7 @@ function eH(e) {
                             r = i.useRef(new Set()),
                             a = i.useMemo(() => {
                                 let e = new Set(t?.map((e) => e.author_id));
-                                return (0, ei.v)([...r.current], [...e]) || (r.current = e), r.current;
+                                return ((0, ei.v)([...r.current], [...e]) || (r.current = e), r.current);
                             }, [t]);
                         i.useEffect(() => {
                             null != s &&
@@ -696,12 +696,16 @@ function eH(e) {
                                     es.A.requestMember(s, e);
                                 });
                         }, [a, s]);
-                        let o = (0, h.yK)([er.Ay], () => {
-                                if (null == s) return eu;
-                                let e = [];
-                                for (let t of a) er.Ay.isMember(s, t) && e.push(t);
-                                return e;
-                            }, [a, s]),
+                        let o = (0, h.yK)(
+                                [er.Ay],
+                                () => {
+                                    if (null == s) return eu;
+                                    let e = [];
+                                    for (let t of a) er.Ay.isMember(s, t) && e.push(t);
+                                    return e;
+                                },
+                                [a, s],
+                            ),
                             u = i.useMemo(() => {
                                 if (null == l || 0 === o.length) return ec;
                                 let e = new Set();
@@ -715,12 +719,16 @@ function eH(e) {
                     })({ entries: l, channelId: e });
                     let { entries: s, filteredIds: r } =
                         ((t = l = i.useMemo(() => l?.filter((e) => ep.has(e.content_type)), [l])),
-                        (n = (0, h.bG)([k.A, en.A], () => {
-                            let e = en.A.getDebugImpressionCappingDisabled();
-                            return !(0, X.sE)("useFilterImpressionCappedContent") || e
-                                ? eh
-                                : k.A.getImpressionCappedItemIds();
-                        }, [t])),
+                        (n = (0, h.bG)(
+                            [k.A, en.A],
+                            () => {
+                                let e = en.A.getDebugImpressionCappingDisabled();
+                                return !(0, X.sE)("useFilterImpressionCappedContent") || e
+                                    ? eh
+                                    : k.A.getImpressionCappedItemIds();
+                            },
+                            [t],
+                        )),
                         i.useMemo(() => {
                             if (null == t) return { entries: t, filteredIds: eh };
                             let e = new Set();

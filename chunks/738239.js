@@ -1,5 +1,5 @@
 let t = {};
-(t.isSafari = function () {
+((t.isSafari = function () {
     return (
         navigator?.vendor &&
         navigator?.vendor?.indexOf("Apple") > -1 &&
@@ -24,4 +24,4 @@ let t = {};
     }),
     (e.exports = function () {
         return !(0, t.isSafari)() && !(0, t.isMobile)();
-    });
+    }));

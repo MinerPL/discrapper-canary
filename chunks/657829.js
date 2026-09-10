@@ -6,7 +6,7 @@ var i = s(75109),
 class a {
     constructor(t, e) {
         let s, i;
-        (s = t || new n.H()), (i = e || new n.H()), (this._stack = [{ scope: s }]), (this._isolationScope = i);
+        ((s = t || new n.H()), (i = e || new n.H()), (this._stack = [{ scope: s }]), (this._isolationScope = i));
     }
     withScope(t) {
         let e,
@@ -39,7 +39,7 @@ class a {
     }
     _pushScope() {
         let t = this.getScope().clone();
-        return this._stack.push({ client: this.getClient(), scope: t }), t;
+        return (this._stack.push({ client: this.getClient(), scope: t }), t);
     }
     _popScope() {
         return !(this._stack.length <= 1) && !!this._stack.pop();

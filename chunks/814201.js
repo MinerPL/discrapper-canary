@@ -23,17 +23,17 @@ class d extends s.Ay.Store {
 }
 let u = new d(n.h, {
     LOGOUT: function () {
-        (l = []), (a = r.qL);
+        ((l = []), (a = r.qL));
     },
     GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function (e) {
         let { gameServers: t, maxServers: i } = e;
-        (l = t.map((e) =>
+        ((l = t.map((e) =>
             o(
                 e,
                 l.find((t) => t.id === e.id),
             ),
         )),
-            (a = i ?? r.qL);
+            (a = i ?? r.qL));
     },
     GAME_SERVER_CREATE: c,
     GAME_SERVER_UPDATE: c,

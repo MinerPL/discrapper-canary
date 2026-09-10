@@ -32,7 +32,7 @@ function M(e) {
     let { hasSetEmoji: t, onClick: n, children: s, className: a, buttonClassName: r } = e,
         [o, c] = i.useState(!1),
         d = i.useCallback(() => {
-            n(), c(!1);
+            (n(), c(!1));
         }, [n, c]);
     return (0, l.jsxs)("div", {
         className: P()(T.k, a),
@@ -118,7 +118,7 @@ function z(e) {
                     (i = c).title.length <= 0 && (r.title = L.intl.string(L.t.p3PKzA)),
                     null != (o = (0, b.fO)(e, t, l, i)) && (r.roles = o),
                     r);
-            G(d), a().isEmpty(d) && (s(c), n());
+            (G(d), a().isEmpty(d) && (s(c), n()));
         }, [M, R, A, C, n, s, x?.id, I, z, y]),
         U = i.useMemo(
             () => [
@@ -136,7 +136,7 @@ function z(e) {
         actionBarInput: (0, l.jsx)(d.Q, {
             text: L.intl.string(L.t.N86XcP),
             onClick: function () {
-                g(), n();
+                (g(), n());
             },
             variant: "critical",
         }),

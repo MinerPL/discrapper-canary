@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     ET: () => L,
     Wn: () => I,
     aV: () => C,
@@ -10,7 +10,7 @@ n.d(t, {
     tH: () => O,
     yo: () => f,
 }),
-    n(321073);
+    n(321073));
 var i,
     r,
     a,
@@ -392,7 +392,7 @@ class R {
         return this.videoStoppedWatch.elapsed();
     }
     constructor(e) {
-        (this.startTime = e.now()),
+        ((this.startTime = e.now()),
             (this.videoStoppedWatch = new l.W0(e)),
             c.forEach((e) => {
                 this.bitrateBuckets[e] = 0;
@@ -402,7 +402,7 @@ class R {
             }),
             _.forEach((e) => {
                 this.resolutionBuckets[e] = 0;
-            });
+            }));
     }
     collectAggregationStats(e, t) {
         let n = h.some((n) => {
@@ -420,11 +420,11 @@ class R {
     }
     setVideoStopped(e, t) {
         if (e) {
-            (this.videoStoppedReason |= t), this.videoStoppedWatch.start();
+            ((this.videoStoppedReason |= t), this.videoStoppedWatch.start());
             return;
         }
-        (this.videoStoppedReason &= ~t),
-            0 === this.videoStoppedReason && (this.statsWindow.splice(0), this.videoStoppedWatch.stop());
+        ((this.videoStoppedReason &= ~t),
+            0 === this.videoStoppedReason && (this.statsWindow.splice(0), this.videoStoppedWatch.stop()));
     }
     appendAndIncrementStats(e) {
         if (
@@ -498,7 +498,7 @@ class R {
         let g = (a - m) / 1e3,
             S = ((i - p) * 8) / g,
             N = (r - T) / g;
-        c.forEach((e) => {
+        (c.forEach((e) => {
             S <= e && (this.bitrateBuckets[e] += f);
         }),
             u.forEach((e) => {
@@ -508,7 +508,7 @@ class R {
             this.bitrateHistogram.addSample(S),
             this.fpsHistogram.addSample(N),
             this.localWantHistogram.addSample(h),
-            this.statsWindow.shift();
+            this.statsWindow.shift());
     }
     addSystemResources() {
         this.systemResources.takeSample();
@@ -552,16 +552,16 @@ class L extends R {
     consecutiveStaticColorFramesMax = 0;
     appendTargetRates(e, t, n, i) {
         if (this.statsWindow.length < 2) return;
-        (e = e ?? 0), (t = t ?? 0), (n = n ?? 0), (i = i ?? 0);
+        ((e = e ?? 0), (t = t ?? 0), (n = n ?? 0), (i = i ?? 0));
         let r =
             (this.statsWindow[this.statsWindow.length - 1].timestamp -
                 this.statsWindow[this.statsWindow.length - 2].timestamp) /
             1e3;
-        (this.targetFrames = this.targetFrames + e * r),
+        ((this.targetFrames = this.targetFrames + e * r),
             (this.targetBytesNetwork = this.targetBytesNetwork + (t / 8) * r),
             (this.targetBytesMax = this.targetBytesMax + (n / 8) * r),
             (this.outboundBytesAvailable = this.outboundBytesAvailable + (i / 8) * r),
             this.targetBitrateHistogram.addSample(t),
-            this.outboundBandwidthSurplus.addSample(i - t);
+            this.outboundBandwidthSurplus.addSample(i - t));
     }
 }

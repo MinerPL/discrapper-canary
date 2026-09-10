@@ -10,7 +10,7 @@ function d(t) {
     let { url: n, onClose: i, ...d } = t,
         [u, p] = a.useState(!1),
         k = a.useCallback(() => {
-            u && r.A.disableExternalLinkAlert(), c.Ay.send("OPEN_EXTERNAL_URL", n), i();
+            (u && r.A.disableExternalLinkAlert(), c.Ay.send("OPEN_EXTERNAL_URL", n), i());
         }, [u, n, i]);
     return (0, e.jsx)(s.Modal, {
         onClose: i,

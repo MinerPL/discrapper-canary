@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => s }), n(321073), (i = n(4472).A);
+(n.d(t, { A: () => s }), n(321073), (i = n(4472).A));
 let r = [],
     a = !1,
     s = {
@@ -7,11 +7,11 @@ let r = [],
         awaitOnline: () =>
             new Promise((e) => {
                 if (i.isOnline()) return e();
-                r.push(e),
+                (r.push(e),
                     a ||
                         ((a = !0),
                         i.addOnlineCallback(function e() {
-                            r.forEach((e) => e()), (r.length = 0), (a = !1), i.removeOnlineCallback(e);
-                        }));
+                            (r.forEach((e) => e()), (r.length = 0), (a = !1), i.removeOnlineCallback(e));
+                        })));
             }),
     };

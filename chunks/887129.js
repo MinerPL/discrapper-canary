@@ -17,7 +17,7 @@ function l(e, t) {
                     }
                     l > t && ((t = l), (r = o.getAttribute(s.eM)));
                 }
-                i.disconnect(), n(r);
+                (i.disconnect(), n(r));
             },
             { root: e },
         );
@@ -78,7 +78,7 @@ function c(e) {
                 if (((S.current = e), null == e)) return void (0, a.T)(t, null, f);
                 let n = (0, s.Mz)(e),
                     i = (0, s.HP)(e);
-                y(n, i), (0, a.T)(t, i, f);
+                (y(n, i), (0, a.T)(t, i, f));
             },
             [t, f, y],
         ),
@@ -94,7 +94,7 @@ function c(e) {
         ),
         [M, P] = i.useState(!1),
         U = i.useRef(M);
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         U.current = M;
     }, [M]),
         i.useLayoutEffect(() => {
@@ -106,10 +106,10 @@ function c(e) {
                     e.addEventListener("focus", r),
                     e.addEventListener("scroll", a, { passive: !0 }),
                     () => {
-                        e.removeEventListener("focusin", n),
+                        (e.removeEventListener("focusin", n),
                             e.removeEventListener("focusout", i),
                             e.removeEventListener("focus", r),
-                            e.removeEventListener("scroll", a);
+                            e.removeEventListener("scroll", a));
                     }
                 );
             function n() {
@@ -139,7 +139,7 @@ function c(e) {
                                     let r = new IntersectionObserver(
                                         (e) => {
                                             let t = e[0];
-                                            r.disconnect(), i(t.intersectionRatio >= n);
+                                            (r.disconnect(), i(t.intersectionRatio >= n));
                                         },
                                         { root: e },
                                     );
@@ -156,7 +156,7 @@ function c(e) {
             function a() {
                 N.current = !0;
             }
-        }, [c, t, f, y, I, D, v]);
+        }, [c, t, f, y, I, D, v]));
     let w = i.useMemo(
             () => ({
                 wrap: T,
@@ -186,28 +186,28 @@ function c(e) {
                     i = m === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
                 switch (e.key) {
                     case n:
-                        e.stopPropagation(), e.preventDefault(), G();
+                        (e.stopPropagation(), e.preventDefault(), G());
                         return;
                     case i:
-                        e.stopPropagation(), e.preventDefault(), x();
+                        (e.stopPropagation(), e.preventDefault(), x());
                         return;
                     case o.D$.HOME:
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             e.preventDefault(),
                             u().then(() => {
                                 let e = d(t, C),
                                     n = e[0]?.getAttribute(s.eM);
                                 null != n && v(n);
-                            });
+                            }));
                         return;
                     case o.D$.END:
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             e.preventDefault(),
                             _().then(() => {
                                 let e = d(t, C),
                                     n = e[e.length - 1]?.getAttribute(s.eM);
                                 null != n && v(n);
-                            });
+                            }));
                         return;
                     case o.D$.SPACE:
                     case o.D$.ENTER: {
@@ -226,7 +226,7 @@ function c(e) {
         ),
         F = i.useCallback(
             (e) => {
-                (S.current = null != e ? (0, s.t$)(t, e) : null), (0, a.T)(t, e, f);
+                ((S.current = null != e ? (0, s.t$)(t, e) : null), (0, a.T)(t, e, f));
             },
             [t, f],
         );
@@ -254,7 +254,7 @@ function c(e) {
                                 }
                                 o > n && ((n = o), (r = d.getAttribute(s.eM)));
                             }
-                            i.disconnect(), t(r);
+                            (i.disconnect(), t(r));
                         },
                         { root: e },
                     );

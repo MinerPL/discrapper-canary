@@ -22,12 +22,12 @@ class d extends i.Ay.Store {
 }
 let c = new d(r.h, {
     LOGOUT: function () {
-        (l = []), (s = !1), (o = !1);
+        ((l = []), (s = !1), (o = !1));
     },
     MFA_WEBAUTHN_CREDENTIALS_LOADED: function (e) {
         let { credentials: t } = e,
             n = !1;
-        return l !== t && ((l = t), (n = !0)), s || ((s = !0), (n = !0)), n;
+        return (l !== t && ((l = t), (n = !0)), s || ((s = !0), (n = !0)), n);
     },
     AUTHENTICATOR_CREATE: function (e) {
         let { credential: t } = e;
@@ -37,12 +37,12 @@ let c = new d(r.h, {
     },
     AUTHENTICATOR_UPDATE: function (e) {
         let { credential: t } = e;
-        if (t.type !== a.Wq.WEBAUTHN) return t.type, !1;
+        if (t.type !== a.Wq.WEBAUTHN) return (t.type, !1);
         l = l.map((e) => (e.id === t.id ? t : e));
     },
     AUTHENTICATOR_DELETE: function (e) {
         let { credential: t } = e;
-        if (t.type !== a.Wq.WEBAUTHN) return t.type, !1;
+        if (t.type !== a.Wq.WEBAUTHN) return (t.type, !1);
         l = l.filter((e) => e.id !== t.id);
     },
     WEBAUTHN_TRIGGER_REGISTER: function () {

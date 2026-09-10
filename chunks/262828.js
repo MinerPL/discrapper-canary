@@ -11,7 +11,7 @@ function s(t, e) {
         [h, o] = u.useState(!1),
         A = u.useCallback(async () => {
             if (null == a && null != t) {
-                o(!0), p(!0);
+                (o(!0), p(!0));
                 try {
                     await c.Ay.getApplicationsForGuild(t, { type: e, includeTeam: !0 });
                 } catch (t) {

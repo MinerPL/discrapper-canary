@@ -18,7 +18,7 @@ function Z() {
     return null !== i;
 }
 function b() {
-    (i = null), (e = null);
+    ((i = null), (e = null));
 }
 function m(l) {
     return e ? { ...l, headers: { "X-Incode-Hardware-Id": e, ...l?.headers } } : (l ?? {});

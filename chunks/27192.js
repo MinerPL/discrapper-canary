@@ -83,15 +83,15 @@ function v(e) {
                     case "ghost":
                         if (o.startsWith("var(--")) {
                             let e = `${o.slice(0, -1)}-hsl)`;
-                            (s.borderColor = `rgba(${e}, 0.15)`), (s.backgroundColor = `rgba(${e}, 0.15)`);
+                            ((s.borderColor = `rgba(${e}, 0.15)`), (s.backgroundColor = `rgba(${e}, 0.15)`));
                         } else
-                            i()((0, d.qt)(o), `Checkbox: ${o} is not a valid hex color`),
+                            (i()((0, d.qt)(o), `Checkbox: ${o} is not a valid hex color`),
                                 (s.borderColor = (0, d.xp)(o, 0.15)),
-                                (s.backgroundColor = (0, d.xp)(o, 0.15));
+                                (s.backgroundColor = (0, d.xp)(o, 0.15)));
                         break;
                     case "row":
                     case "inverted":
-                        (s.backgroundColor = o), (s.borderColor = o);
+                        ((s.backgroundColor = o), (s.borderColor = o));
                 }
             return s;
         })(e),

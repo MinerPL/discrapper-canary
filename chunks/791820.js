@@ -8,10 +8,10 @@ var i = d(231433),
 async function Z(l, t, d) {
     let i = d / l.getViewport({ scale: 1 }).width,
         e = l.getViewport({ scale: i * n });
-    (t.width = Math.ceil(e.width)),
+    ((t.width = Math.ceil(e.width)),
         (t.height = Math.ceil(e.height)),
         (t.style.width = `${Math.ceil(e.width / n)}px`),
-        (t.style.height = `${Math.ceil(e.height / n)}px`);
+        (t.style.height = `${Math.ceil(e.height / n)}px`));
     let c = t.getContext("2d");
     c && (await l.render({ canvasContext: c, viewport: e, canvas: t }).promise);
 }
@@ -70,7 +70,7 @@ var m = ({ url: l, mode: t = "full", "aria-label": i, className: s, onError: n }
                                 if (i) return;
                                 if (l) {
                                     let t = document.createElement("div");
-                                    (t.className = "IncodePdfViewerTextPage"), (t.textContent = l), h.appendChild(t);
+                                    ((t.className = "IncodePdfViewerTextPage"), (t.textContent = l), h.appendChild(t));
                                 }
                             }
                             t.cleanup();
@@ -78,11 +78,11 @@ var m = ({ url: l, mode: t = "full", "aria-label": i, className: s, onError: n }
                         i || W("ready");
                     } catch (l) {
                         if (i) return;
-                        W("error"), G.current?.(l);
+                        (W("error"), G.current?.(l));
                     }
                 })(),
                 () => {
-                    (i = !0), e?.destroy(), c?.destroy();
+                    ((i = !0), e?.destroy(), c?.destroy());
                 }
             );
         }, [l, t]),

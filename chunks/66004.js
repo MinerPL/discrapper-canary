@@ -24,8 +24,8 @@ function g(e) {
                 let e = (0, c.Br)(r),
                     l = null != r.id && !r.animated,
                     d = { id: (0, s.A)(), animationType: a, animationId: o, shouldResize: l, url: e, userId: i };
-                A((e) => [...e, d]),
-                    u.Ay.trackWithMetadata(m.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: n });
+                (A((e) => [...e, d]),
+                    u.Ay.trackWithMetadata(m.HAw.VOICE_CHANNEL_EFFECT_VIEWED, { channel_id: t, guild_id: n }));
             }
         }
         return (
@@ -39,7 +39,7 @@ function g(e) {
         A((t) => {
             let n = [...t],
                 l = n.findIndex((t) => t.id === e);
-            return n.splice(l, 1), n;
+            return (n.splice(l, 1), n);
         });
     }, []);
     return x

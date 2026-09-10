@@ -1,4 +1,4 @@
-l.d(n, { A: () => R }), l(321073);
+(l.d(n, { A: () => R }), l(321073));
 var i = l(477900),
     a = l(582128),
     t = l(503698),
@@ -207,7 +207,7 @@ function T(e) {
         children: (0, i.jsx)("span", { className: y.guildName, children: n.serializedSourceGuild.name }),
     });
 }
-(B.Header = k),
+((B.Header = k),
     (B.Body = E),
     (B.Icon = _),
     (B.Info = b),
@@ -224,5 +224,5 @@ function T(e) {
     (G.displayName = "InviteButton.Channel"),
     (D.displayName = "InviteButton.GuildSplash"),
     (P.displayName = "InviteButton.GuildName"),
-    (T.displayName = "InviteButton.GuildTemplateName");
+    (T.displayName = "InviteButton.GuildTemplateName"));
 let R = B;

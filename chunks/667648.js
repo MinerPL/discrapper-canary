@@ -156,7 +156,7 @@ function M(e) {
         G = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    s && null != l && l.log("PaymentElements onChange event:", e), g(e.complete), b(t);
+                    (s && null != l && l.log("PaymentElements onChange event:", e), g(e.complete), b(t));
                 },
                 onReady: () => {
                     _(!0);
@@ -174,7 +174,7 @@ function M(e) {
                             value: { address: n, name: i },
                         } = e,
                         r = (0, f.ZB)(n);
-                    s &&
+                    (s &&
                         null != l &&
                         l.log("AddressElement onChange event:", {
                             complete: t,
@@ -183,7 +183,7 @@ function M(e) {
                             addressElementOnChangeFired: j,
                             isAddressSubstantial: r,
                         }),
-                        M(!0);
+                        M(!0));
                     let o = {
                             name: i,
                             country: n.country,
@@ -198,7 +198,7 @@ function M(e) {
                             let t = o[e];
                             return null != t && "" !== t;
                         });
-                    !t ||
+                    (!t ||
                         u ||
                         C.has(n.country) ||
                         I.A.captureMessage(
@@ -221,25 +221,25 @@ function M(e) {
                                 },
                             },
                         ),
-                        a(o, u && t);
+                        a(o, u && t));
                 },
             }),
             [a, s, l, j, M],
         ),
         B = i.useCallback(() => {
             let e;
-            a({ name: "", country: "", city: "", line1: "", line2: "", state: "", postalCode: "" }, !1),
+            (a({ name: "", country: "", city: "", line1: "", line2: "", state: "", postalCode: "" }, !1),
                 null !=
                     (e = (function (e) {
                         if (null == e) return;
                         let t = e.getElement(r.AddressElement);
                         if (null != t) return t;
-                    })(c.current)) && e.clear();
+                    })(c.current)) && e.clear());
         }, [c, a]),
         H = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                void 0 !== e && b(e), n(y.pn.PAYMENT_ELEMENT, t), M(!1), null != N && (0, h.R8)(N) && B();
+                (void 0 !== e && b(e), n(y.pn.PAYMENT_ELEMENT, t), M(!1), null != N && (0, h.R8)(N) && B());
             },
             [n, B, N],
         );

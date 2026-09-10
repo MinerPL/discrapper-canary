@@ -23,18 +23,18 @@ let m = function (t) {
                 [r, s] = l.useState(null),
                 c = l.useCallback(async () => {
                     if (!i) {
-                        e(!0), s(null);
+                        (e(!0), s(null));
                         try {
-                            await n(), a();
+                            (await n(), a());
                         } catch (t) {
-                            s(new u.LG(t).getAnyErrorMessage()), e(!1);
+                            (s(new u.LG(t).getAnyErrorMessage()), e(!1));
                         }
                     }
                 }, [a, n, i]);
             return { submitting: i, errorMessage: r, onSubmit: c };
         })({ onSubmit: E, onClose: m }),
         S = l.useCallback(() => {
-            m(), c.A.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS));
+            (m(), c.A.close(), (0, o.pX)(d.BVt.CHANNEL(n, x.VV.MEMBER_APPLICATIONS)));
         }, [n, m]);
     return (0, i.jsxs)(e.Modal, {
         transitionState: C,

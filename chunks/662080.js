@@ -116,7 +116,7 @@ function F(e) {
             },
         }),
         r.useEffect(() => {
-            R.E7(), g.bW.loadIfNecessary();
+            (R.E7(), g.bW.loadIfNecessary());
         }, []),
         (0, i.jsx)(f.f5, {
             value: h,

@@ -126,7 +126,7 @@ function H(e) {
                 t = "" !== y ? n.filter((e) => o()(y, e.display.toLocaleLowerCase())) : n,
                 i = [],
                 l = [];
-            return (i[0] = e), (l[0] = e.length), (i[1] = t), (l[1] = t.length), { sections: i, sectionCounts: l };
+            return ((i[0] = e), (l[0] = e.length), (i[1] = t), (l[1] = t.length), { sections: i, sectionCounts: l });
         }, [y, s, n]),
         J = l.useCallback(
             (e) => {
@@ -148,10 +148,10 @@ function H(e) {
             [m],
         );
     function Q() {
-        w(!1), H(!1);
+        (w(!1), H(!1));
     }
     function Z(e, t, n) {
-        n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e));
+        (n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e)));
     }
     l.useEffect(() => {
         let e = setTimeout(() => {
@@ -164,7 +164,7 @@ function H(e) {
     let $ = l.useCallback(
             (e) => {
                 let t = { ..._ };
-                k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
+                (k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
                     J(t),
                     R(""),
                     Q(),
@@ -172,7 +172,7 @@ function H(e) {
                         let e = Y.current?.containerRef.current,
                             t = e?.firstChild;
                         null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
-                    }, 16);
+                    }, 16));
             },
             [J, _],
         ),
@@ -185,7 +185,7 @@ function H(e) {
                     {
                         className: r()(G.Xs, G.iw),
                         onClick: (e) => {
-                            e.stopPropagation(), $(s);
+                            (e.stopPropagation(), $(s));
                         },
                         children: (0, i.jsx)("div", { className: G.qd, children: B(s, t, G.Dq) }),
                     },
@@ -198,7 +198,7 @@ function H(e) {
             () =>
                 v.map((e) => {
                     var n;
-                    return (n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) };
+                    return ((n = _[e]), { ...n.tag, label: B(n.row, t, G.yS) });
                 }),
             [_, v, t],
         );
@@ -218,7 +218,7 @@ function H(e) {
                         onRemoveTag: (e) => {
                             let t = v[e],
                                 { [t]: n, ...i } = _;
-                            J(i), R(""), Q();
+                            (J(i), R(""), Q());
                         },
                         onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());

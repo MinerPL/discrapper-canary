@@ -11,7 +11,7 @@ let p = function (e) {
     let { onClose: a, onComplete: t, onCancel: p, transitionState: u, webviewUrl: m } = e,
         f = (0, o.W$)(),
         h = s.useCallback(() => {
-            t(), a();
+            (t(), a());
         }, [t, a]),
         k = s.useCallback(() => {
             (0, i.hasModalOpen)(l.SW) && h();

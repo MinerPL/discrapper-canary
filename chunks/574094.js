@@ -25,7 +25,7 @@ function o(e) {
                     return a(t, n) ?? e;
                 });
             }
-            return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+            return (window.addEventListener("resize", e), () => window.removeEventListener("resize", e));
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [

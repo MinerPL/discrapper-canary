@@ -20,7 +20,7 @@ class A {
         return (u[i] = u[i] ?? new A());
     }
     constructor() {
-        (this.fetched = !1), (this.users = new Map());
+        ((this.fetched = !1), (this.users = new Map()));
     }
 }
 function h(e) {
@@ -51,7 +51,7 @@ class I extends i.Ay.Store {
             let o = d.A.getChannel(e),
                 c = null != o ? o.getGuildId() : null;
             if (null != c && a.A.isLurking(c)) return;
-            l.ao({ channelId: e, messageId: t, emoji: n, limit: i, type: r }), (s.fetched = !0);
+            (l.ao({ channelId: e, messageId: t, emoji: n, limit: i, type: r }), (s.fetched = !0));
         }
         return s.users;
     }

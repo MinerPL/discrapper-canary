@@ -85,7 +85,7 @@ function f(e) {
 }
 class w extends r.Component {
     constructor(e) {
-        super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 });
+        (super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 }));
     }
     handleResize = () => {
         this.setState({ isMobileWidth: window.innerWidth <= 485 });

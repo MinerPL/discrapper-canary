@@ -26,8 +26,8 @@ var i,
     E = n(746080);
 function A(e, t) {
     let n = o.A.getChannel(e);
-    null != n && n.isGuildVocal() && a.A.updateChatOpen(e, !0),
-        null != t ? (0, s.pX)(_.BVt.CHANNEL(t, e), { openChannel: !0 }) : (0, l.iN)(e);
+    (null != n && n.isGuildVocal() && a.A.updateChatOpen(e, !0),
+        null != t ? (0, s.pX)(_.BVt.CHANNEL(t, e), { openChannel: !0 }) : (0, l.iN)(e));
 }
 function h(e) {
     "route" === e.kind ? (0, s.pX)(e.routePath) : A(e.channelId, e.guildId);

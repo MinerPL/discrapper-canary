@@ -5,7 +5,7 @@ function i() {
     for (let n of l) n();
 }
 function c(n) {
-    (e = { ...n }), i();
+    ((e = { ...n }), i());
 }
 function f(n) {
     null != e && (null == n || e.iframeId === n) && ((e = null), i());

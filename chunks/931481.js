@@ -22,7 +22,7 @@ function g(t) {
         r = (0, E.bG)([j.A], () => j.A.getNote(e)),
         [c, d] = i.useState(!1),
         m = i.useCallback(() => {
-            d(!0), (0, h.Yq)({ analyticsLocation: s, noteLength: r?.length ?? 0 });
+            (d(!0), (0, h.Yq)({ analyticsLocation: s, noteLength: r?.length ?? 0 }));
         }, [s, r]);
     return a || null == r || "" === r
         ? null
@@ -69,10 +69,10 @@ function _(t) {
             location: R,
         }),
         b = i.useCallback(() => {
-            k(), _({ action: E ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" });
+            (k(), _({ action: E ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
         }, [k, E, _]),
         S = i.useCallback(() => {
-            P(), _({ action: E ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
+            (P(), _({ action: E ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
         }, [P, E, _]),
         L = null != u,
         T = (0, d.h)(u);

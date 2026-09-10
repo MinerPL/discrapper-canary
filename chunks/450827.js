@@ -1,4 +1,4 @@
-n.d(t, { A: () => R }), n(938796), n(321073), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => R }), n(938796), n(321073), n(323874), n(14289), n(35956));
 var i = n(435558),
     r = n.n(i),
     a = n(132500),
@@ -49,7 +49,7 @@ function g(e) {
     return (
         n.forEach((n) => {
             let i = T(E.default.getUser(n));
-            null != e && m(i, e.id), t.push(i);
+            (null != e && m(i, e.id), t.push(i));
         }),
         t
     );
@@ -90,17 +90,17 @@ class C {
     _nextQuery;
     _subscribed;
     constructor(e, t, n = 10) {
-        (this._worker = e),
+        ((this._worker = e),
             (this._uuid = (0, a.A)()),
             (this._callback = t),
             (this._limit = n),
             (this._currentQuery = null),
             (this._nextQuery = null),
             (this._subscribed = !1),
-            this.subscribe();
+            this.subscribe());
     }
     setLimit(e) {
-        (this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e);
+        ((this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e));
     }
     subscribe() {
         null == this._worker ||
@@ -124,18 +124,18 @@ class C {
             this._setNextQuery());
     };
     destroy() {
-        this.clearQuery(), this.unsubscribe();
+        (this.clearQuery(), this.unsubscribe());
     }
     clearQuery() {
-        (this._currentQuery = !1),
+        ((this._currentQuery = !1),
             (this._nextQuery = null),
             null != this._worker &&
                 this._subscribed &&
-                this._worker.postMessage({ uuid: this._uuid, type: "QUERY_CLEAR" });
+                this._worker.postMessage({ uuid: this._uuid, type: "QUERY_CLEAR" }));
     }
     setQuery(e) {
         let { query: t, filters: n, blacklist: i, boosters: r, boosterFallback: a } = e;
-        (this._nextQuery = {
+        ((this._nextQuery = {
             query: t,
             filters: n,
             blacklist: i,
@@ -143,7 +143,7 @@ class C {
             boosterFallback: a ?? 1,
             limit: this._limit,
         }),
-            this._setNextQuery();
+            this._setNextQuery());
     }
     _setNextQuery() {
         (null == this._currentQuery || !1 === this._currentQuery) &&
@@ -192,8 +192,8 @@ class O extends l.A {
         null != this._worker && (this._worker.terminate(), (this._worker = null));
     }
     rebootWebworker() {
-        null != this._worker && (this._worker.terminate(), (this._worker = null)),
-            (this._worker = new Worker(new URL("/assets/" + n.u("167470"), n.b)));
+        (null != this._worker && (this._worker.terminate(), (this._worker = null)),
+            (this._worker = new Worker(new URL("/assets/" + n.u("167470"), n.b))));
     }
     updateUsers(e, t) {
         let { _worker: n } = this;
@@ -234,7 +234,7 @@ class O extends l.A {
             ? Promise.resolve(null)
             : new Promise((t) => {
                   let n = (0, a.A)();
-                  e.addEventListener(
+                  (e.addEventListener(
                       "message",
                       function i(r) {
                           if (null == e) return;
@@ -248,7 +248,7 @@ class O extends l.A {
                       },
                       !1,
                   ),
-                      e.postMessage({ type: "REQUEST_DEBUG_STATE", uuid: n });
+                      e.postMessage({ type: "REQUEST_DEBUG_STATE", uuid: n }));
               });
     }
     _handleLogout = () => {
@@ -308,7 +308,7 @@ class O extends l.A {
                     null != r && null != a && null != a.nick && (m(r, e, a.nick), i.set(n, r));
                 }
         }
-        this.updateUsers(Array.from(i.values()), "overlay_initialize"), i.clear();
+        (this.updateUsers(Array.from(i.values()), "overlay_initialize"), i.clear());
     };
     _handleCurrentUserUpdate = (e) => {
         let { user: t } = e,
@@ -353,7 +353,7 @@ class O extends l.A {
             n = g(c.A.getChannel(t));
         if (0 === n.length) return;
         let i = T(E.default.getCurrentUser());
-        m(i, t), n.push(i), this.updateUsers(n, "dm_create");
+        (m(i, t), n.push(i), this.updateUsers(n, "dm_create"));
     };
     _handleDMUpdates = (e) => {
         let { channels: t } = e;
@@ -361,34 +361,34 @@ class O extends l.A {
             let t = g(c.A.getChannel(e.id));
             if (0 === t.length) continue;
             let n = T(E.default.getCurrentUser());
-            m(n, e.id), t.push(n), this.updateUsers(t, "dm_updates");
+            (m(n, e.id), t.push(n), this.updateUsers(t, "dm_updates"));
         }
     };
     _handleRecipientChanges = (e) => {
         let { channelId: t, user: n, isMember: i } = e;
         if (!i) return;
         let r = T(n);
-        m(r, t), this.updateUsers([r], "recipient_changes");
+        (m(r, t), this.updateUsers([r], "recipient_changes"));
     };
     _handleThreadListSync = (e) => {
         let { guildId: t, mostRecentMessages: n } = e;
         if (null == n) return;
         let i = [];
-        n.forEach((e) => {
+        (n.forEach((e) => {
             N({ message: e, nicknameContextId: t }).forEach((e) => i.push(e));
         }),
-            this.updateUsers(i, "thread_list_sync");
+            this.updateUsers(i, "thread_list_sync"));
     };
     _handleLoadForumPosts = (e) => {
         let { guildId: t, threads: n } = e,
             i = [];
-        Object.values(n).forEach((e) => {
+        (Object.values(n).forEach((e) => {
             let { first_message: n, most_recent_message: r, owner: a } = e;
-            null != n && N({ message: n, nicknameContextId: t }).forEach((e) => i.push(e)),
+            (null != n && N({ message: n, nicknameContextId: t }).forEach((e) => i.push(e)),
                 null != r && N({ message: r, nicknameContextId: t }).forEach((e) => i.push(e)),
-                null != a && S([a], t).forEach((e) => i.push(e));
+                null != a && S([a], t).forEach((e) => i.push(e)));
         }),
-            this.updateUsers(i, "load_forum_posts");
+            this.updateUsers(i, "load_forum_posts"));
     };
     _handleLoadMessagesSuccess = (e) => {
         let { messages: t } = e,
@@ -398,16 +398,16 @@ class O extends l.A {
     _handleLoadPinnedMessagesSuccess = (e) => {
         let { pins: t } = e,
             n = [];
-        t.forEach((e) => {
+        (t.forEach((e) => {
             let { message: t } = e;
             N({ message: t }).forEach((e) => n.push(e));
         }),
-            this.updateUsers(n, "load_pinned_messages_success");
+            this.updateUsers(n, "load_pinned_messages_success"));
     };
     _handleSearchMessagesSuccess = (e) => {
         let { data: t } = e,
             n = [];
-        t.forEach((e) => {
+        (t.forEach((e) => {
             let { messages: t } = e;
             t.forEach((e) => {
                 e.forEach((e) => {
@@ -415,19 +415,19 @@ class O extends l.A {
                 });
             });
         }),
-            this.updateUsers(n, "search_messages_success");
+            this.updateUsers(n, "search_messages_success"));
     };
     _handleLoadThreadsSuccess = (e) => {
         let { guildId: t, firstMessages: n, mostRecentMessages: i, owners: r } = e,
             a = [];
-        n?.forEach((e) => {
+        (n?.forEach((e) => {
             N({ message: e, nicknameContextId: t }).forEach((e) => a.push(e));
         }),
             i?.forEach((e) => {
                 N({ message: e, nicknameContextId: t }).forEach((e) => a.push(e));
             }),
             null != r && S(r, t).forEach((e) => a.push(e)),
-            this.updateUsers(a, "load_threads_success");
+            this.updateUsers(a, "load_threads_success"));
     };
     _handleMessageCreateOrUpdate = (e) => {
         let t = N({ message: e.message });
@@ -436,12 +436,12 @@ class O extends l.A {
     _handleGuildScheduledEventUsersFetchSuccess = (e) => {
         let { guildId: t, guildScheduledEventUsers: n } = e,
             i = [];
-        n.forEach((e) => {
+        (n.forEach((e) => {
             let { user: n, member: r } = e,
                 a = T(n);
             null != a && (m(a, t, r?.nick), i.push(a));
         }),
-            this.updateUsers(i, "guild_scheduled_event_users_fetch_success");
+            this.updateUsers(i, "guild_scheduled_event_users_fetch_success"));
     };
 }
 let R = new O();

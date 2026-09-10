@@ -81,7 +81,7 @@ function N(e) {
     let { channelId: t, messageId: n, attachmentIds: i, embedIds: r } = e;
     if (null == t || null == n || ((i?.length ?? 0) === 0 && (r?.length ?? 0) === 0)) return;
     let a = _.A.getChannel(t);
-    E.default.track(f.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+    (E.default.track(f.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
         channel_id: t,
         guild_id: a?.guild_id,
         message_id: n,
@@ -94,7 +94,7 @@ function N(e) {
         d.A.distribution(
             { name: l.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION },
             (i?.length ?? 0) + (r?.length ?? 0),
-        );
+        ));
 }
 function C(e) {
     let {
@@ -184,7 +184,7 @@ function L(e) {
                 : t.map((e) => {
                       let { message: t } = e,
                           { attachments: n, embeds: i } = y(t);
-                      return (t = t.merge({ attachments: n, embeds: i })), (e = e.merge({ message: t }));
+                      return ((t = t.merge({ attachments: n, embeds: i })), (e = e.merge({ message: t })));
                   });
         })(e);
     return e.merge({ attachments: t, embeds: n, messageSnapshots: i });

@@ -11,13 +11,13 @@ function o(t) {
         y = l.useCallback(async () => {
             u(!0);
             try {
-                i?.(),
+                (i?.(),
                     await Promise.all(
                         c.map(async (t) => {
                             await s.oH(t);
                         }),
                     ),
-                    o();
+                    o());
             } finally {
                 u(!1);
             }

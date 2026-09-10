@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         addStylesheet: () => c,
         close: () => o,
@@ -6,7 +6,7 @@ n.r(t),
         openCallTilePopout: () => l,
         openChannelCallPopout: () => s,
         setAlwaysOnTop: () => d,
-    });
+    }));
 var i = n(228366);
 let r = { menubar: !1, toolbar: !1, location: !1, directories: !1 };
 function a(e, t, n) {

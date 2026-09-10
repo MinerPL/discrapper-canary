@@ -136,14 +136,14 @@ function p(t) {
                         o = "text-default";
                     switch (n) {
                         case 3:
-                            (u = r), (o = null != a ? void 0 : "text-feedback-positive");
+                            ((u = r), (o = null != a ? void 0 : "text-feedback-positive"));
                             break;
                         case 4:
                             c = m.ClockIcon;
                             break;
                         case 2:
                         case 1:
-                            (o = "text-brand"), (e = s);
+                            ((o = "text-brand"), (e = s));
                             break;
                         case 5:
                             u = i;

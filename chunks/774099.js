@@ -19,7 +19,7 @@ let f = (0, r._C)((e = {}) => {
         },
         setup(e) {
             var n, r;
-            t.onerror &&
+            (t.onerror &&
                 ((n = e),
                 (0, i.L)((e) => {
                     var t, r, i, s;
@@ -44,8 +44,8 @@ let f = (0, r._C)((e = {}) => {
                             (y = (0, l.Kg)(r) && r.length > 0 ? r : (0, c.$N)()),
                             0 === _.length && _.push({ colno: s, filename: y, function: "?", in_app: !0, lineno: i }),
                             t);
-                    (C.level = "error"),
-                        (0, a.r)(C, { originalException: x, mechanism: { handled: !1, type: "onerror" } });
+                    ((C.level = "error"),
+                        (0, a.r)(C, { originalException: x, mechanism: { handled: !1, type: "onerror" } }));
                 }),
                 m("onerror")),
                 t.onunhandledrejection &&
@@ -75,13 +75,13 @@ let f = (0, r._C)((e = {}) => {
                                       },
                                   })
                                 : (0, p.H7)(n, s, void 0, i, !0);
-                        (c.level = "error"),
+                        ((c.level = "error"),
                             (0, a.r)(c, {
                                 originalException: s,
                                 mechanism: { handled: !1, type: "onunhandledrejection" },
-                            });
+                            }));
                     }),
-                    m("onunhandledrejection"));
+                    m("onunhandledrejection")));
         },
     };
 });

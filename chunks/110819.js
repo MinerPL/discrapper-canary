@@ -117,23 +117,23 @@ function N(t) {
         return s.Bo.post({ url: g.Rsh.CONNECTION(g.fg2.DOMAIN, l), body: {}, rejectWithError: !1 });
     }
     async function k() {
-        if ("" === l) return c(m.intl.string(m.t.eJEUvD)), !1;
-        h(!0), c(null);
+        if ("" === l) return (c(m.intl.string(m.t.eJEUvD)), !1);
+        (h(!0), c(null));
         try {
-            return await P(), n(), !1;
+            return (await P(), n(), !1);
         } catch (t) {
-            if (t.body?.proof != null) return u(t.body.proof), !0;
-            return c(v(t)), !1;
+            if (t.body?.proof != null) return (u(t.body.proof), !0);
+            return (c(v(t)), !1);
         } finally {
             h(!1);
         }
     }
     async function B() {
-        h(!0), c(null);
+        (h(!0), c(null));
         try {
-            return await P(), !0;
+            return (await P(), !0);
         } catch (t) {
-            return c(v(t)), !1;
+            return (c(v(t)), !1);
         } finally {
             h(!1);
         }
@@ -166,7 +166,7 @@ function N(t) {
             secondaryActionButtonProps: {
                 text: "DNS" === b ? m.intl.string(m.t.CkfdNx) : m.intl.string(m.t.RhJMVQ),
                 onClick: () => {
-                    C("DNS" === b ? "HTTP" : "DNS"), c(null);
+                    (C("DNS" === b ? "HTTP" : "DNS"), c(null));
                 },
             },
             nextButtonProps: { text: m.intl.string(m.t["13ofGu"]) },
@@ -179,7 +179,7 @@ function N(t) {
         steps: O,
         currentStepKey: f,
         onStepChange: function (t) {
-            c(null), N(t);
+            (c(null), N(t));
         },
     });
 }

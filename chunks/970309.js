@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => tI });
+(n.r(t), n.d(t, { default: () => tI }));
 var s = n(477900),
     l = n(582128),
     i = n(503698),
@@ -67,7 +67,7 @@ function J(e) {
         u = z("ViewMessageRequestSidebar") && c && !d,
         E = (0, L.D)(t.id, t.getRecipientId()),
         x = l.useCallback(() => {
-            V.A.closeChannelSidebar(O.fe), c && a && (0, q.iN)(t.id), d && r && (0, q.iN)(t.id);
+            (V.A.closeChannelSidebar(O.fe), c && a && (0, q.iN)(t.id), d && r && (0, q.iN)(t.id));
         }, [t.id, d, r, c, a]),
         S = l.useCallback(() => {
             (0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE));
@@ -179,7 +179,7 @@ let eP = function (e) {
         [A, E] = l.useState(!1),
         [x, S] = l.useState(!1);
     function f() {
-        E(!0), !u || h || x || m?.();
+        (E(!0), !u || h || x || m?.());
     }
     function j() {
         E(!1);
@@ -452,7 +452,7 @@ function tr(e) {
             V.A.closeChannelSidebar(O.fe);
         }, []),
         d = l.useCallback(() => {
-            V.A.closeChannelSidebar(O.fe), r && (0, q.iN)(i.id);
+            (V.A.closeChannelSidebar(O.fe), r && (0, q.iN)(i.id));
         }, [i.id, r]),
         {
             acceptMessageRequest: u,
@@ -479,7 +479,7 @@ function tr(e) {
                             size: "sm",
                             text: B.intl.string(a ? B.t.BVN4pL : B.t.B2nygW),
                             onClick: function (e) {
-                                e.stopPropagation(), A(i.id);
+                                (e.stopPropagation(), A(i.id));
                             },
                             disabled: p,
                             loading: x || j,
@@ -493,7 +493,7 @@ function tr(e) {
                             size: "sm",
                             text: B.intl.string(B.t.Kz8Pwr),
                             onClick: function (e) {
-                                e.stopPropagation(), u(i.id);
+                                (e.stopPropagation(), u(i.id));
                             },
                             disabled: p,
                             loading: E || S || f,
@@ -514,7 +514,7 @@ function tc(e) {
         channel: l,
         user: i,
         onClick: function (e) {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 V.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: O.fe, hasSingleMessageRequest: a }),
                 eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
@@ -523,7 +523,7 @@ function tc(e) {
                 }),
                 setTimeout(() => {
                     eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
-                }, 0);
+                }, 0));
         },
         children: (e) => (0, s.jsx)(tr, { active: e, user: i, channel: l, isRestricted: r }),
     });
@@ -535,14 +535,14 @@ function tu(e) {
         { error: r, loaded: c, message: o } = (0, eX.I)(t);
     if (null == o && (c || r)) return null;
     function d() {
-        l?.(), to.A.closePrivateChannel(t.id);
+        (l?.(), to.A.closePrivateChannel(t.id));
     }
     return (0, s.jsx)(N.$, {
         variant: "critical-primary",
         size: "sm",
         disabled: null == o,
         onClick: function (e) {
-            e.stopPropagation(), n?.(), null != o && (0, td.b8)(o, d);
+            (e.stopPropagation(), n?.(), null != o && (0, td.b8)(o, d));
         },
         onMouseEnter: i,
         onMouseLeave: a,
@@ -554,14 +554,14 @@ function tm(e) {
     let { active: t, user: n, channel: i } = e,
         a = (0, W.r)(),
         r = l.useCallback(() => {
-            (0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE)),
-                es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            ((0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE)),
+                es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW }));
         }, []),
         o = l.useCallback(() => {
             V.A.closeChannelSidebar(O.fe);
         }, []),
         d = l.useCallback(() => {
-            V.A.closeChannelSidebar(O.fe), a && (0, q.iN)(i.id);
+            (V.A.closeChannelSidebar(O.fe), a && (0, q.iN)(i.id));
         }, [i.id, a]),
         {
             acceptMessageRequest: u,
@@ -583,7 +583,7 @@ function tm(e) {
                         size: "sm",
                         text: B.intl.string(B.t.vicfl6),
                         onClick: function (e) {
-                            u(i.id), e.stopPropagation();
+                            (u(i.id), e.stopPropagation());
                         },
                         disabled: f,
                         loading: S,
@@ -603,7 +603,7 @@ function tg(e) {
         channel: l,
         user: i,
         onClick: function (e) {
-            e.stopPropagation(),
+            (e.stopPropagation(),
                 V.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: O.fe, hasSingleMessageRequest: a }),
                 eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
@@ -612,7 +612,7 @@ function tg(e) {
                 }),
                 setTimeout(() => {
                     eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
-                }, 0);
+                }, 0));
         },
         children: (e) => (0, s.jsx)(tm, { active: e, user: i, channel: l }),
     });
@@ -625,24 +625,32 @@ function tE() {
         i = l.useRef(null),
         d =
             ((e = (0, o.bG)([eo.A], () => eo.A.getPrivateChannelsVersion())),
-            (t = (0, o.yK)([eo.A, y.A], () => {
-                let e = eo.A.getMutablePrivateChannels();
-                return ep(
-                    Array.from(y.A.getSpamChannelIds())
-                        .map((t) => e[t])
-                        .filter((e) => null != e),
-                );
-            }, [e])),
-            (n = (0, o.cf)([em.default], () => {
-                let e = {};
-                return (
-                    t.forEach((t) => {
-                        let n = em.default.getUser(t.recipients[0]);
-                        null != n && (e[t.id] = n);
-                    }),
-                    e
-                );
-            }, [t])),
+            (t = (0, o.yK)(
+                [eo.A, y.A],
+                () => {
+                    let e = eo.A.getMutablePrivateChannels();
+                    return ep(
+                        Array.from(y.A.getSpamChannelIds())
+                            .map((t) => e[t])
+                            .filter((e) => null != e),
+                    );
+                },
+                [e],
+            )),
+            (n = (0, o.cf)(
+                [em.default],
+                () => {
+                    let e = {};
+                    return (
+                        t.forEach((t) => {
+                            let n = em.default.getUser(t.recipients[0]);
+                            null != n && (e[t.id] = n);
+                        }),
+                        e
+                    );
+                },
+                [t],
+            )),
             l.useMemo(() => t.map((e) => ({ channel: e, user: n[e.id] })), [t, n])),
         u = (0, eC.I)(),
         S = (0, W.r)(),
@@ -657,8 +665,8 @@ function tE() {
             b(d.map((e) => e.channel.id));
         }, [d, b]);
     (0, I.Ay)(() => {
-        eu.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
-            es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW });
+        (eu.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
+            es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW }));
     });
     let R = l.useCallback(
             (e) => {
@@ -727,7 +735,7 @@ function tE() {
                               innerRole: n,
                               innerAriaLabel: B.intl.string(B.t.e7GWjQ),
                               ref: (e) => {
-                                  (i.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                  ((i.current = e), (t.current = e?.getScrollerNode() ?? null));
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
@@ -757,24 +765,32 @@ function tj() {
         d = (0, ef.W)(),
         u =
             ((e = (0, o.bG)([eo.A], () => eo.A.getPrivateChannelsVersion())),
-            (t = (0, o.yK)([eo.A, k.A], () => {
-                let e = eo.A.getMutablePrivateChannels();
-                return ep(
-                    Array.from(k.A.getMessageRequestChannelIds())
-                        .map((t) => e[t])
-                        .filter((e) => null != e),
-                );
-            }, [e])),
-            (n = (0, o.cf)([em.default], () => {
-                let e = {};
-                return (
-                    t.forEach((t) => {
-                        let n = em.default.getUser(t.recipients[0]);
-                        null != n && (e[t.id] = n);
-                    }),
-                    e
-                );
-            }, [t])),
+            (t = (0, o.yK)(
+                [eo.A, k.A],
+                () => {
+                    let e = eo.A.getMutablePrivateChannels();
+                    return ep(
+                        Array.from(k.A.getMessageRequestChannelIds())
+                            .map((t) => e[t])
+                            .filter((e) => null != e),
+                    );
+                },
+                [e],
+            )),
+            (n = (0, o.cf)(
+                [em.default],
+                () => {
+                    let e = {};
+                    return (
+                        t.forEach((t) => {
+                            let n = em.default.getUser(t.recipients[0]);
+                            null != n && (e[t.id] = n);
+                        }),
+                        e
+                    );
+                },
+                [t],
+            )),
             l.useMemo(() => t.map((e) => ({ channel: e, user: n[e.id] })), [t, n])),
         S = (0, W.k)(),
         f = eE(),
@@ -857,7 +873,7 @@ function tj() {
                               innerRole: n,
                               innerAriaLabel: B.intl.string(B.t.e7GWjQ),
                               ref: (e) => {
-                                  (i.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                  ((i.current = e), (t.current = e?.getScrollerNode() ?? null));
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
@@ -928,11 +944,11 @@ function tC(e) {
                                               {
                                                   text: B.intl.string(B.t.JN6EOJ),
                                                   onClick: (e) => {
-                                                      e.stopPropagation(),
+                                                      (e.stopPropagation(),
                                                           (0, ec.openUserSettings)(
                                                               er.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING,
                                                           ),
-                                                          i(tx.i.TAKE_ACTION);
+                                                          i(tx.i.TAKE_ACTION));
                                                   },
                                               },
                                               {
@@ -956,10 +972,10 @@ let tI = (0, b.A)(function (e) {
     let { width: t } = e,
         n = (0, ef.W)();
     (0, I.Ay)(() => {
-        C.I(e2.BVt.MESSAGE_REQUESTS),
+        (C.I(e2.BVt.MESSAGE_REQUESTS),
             (0, ei.d0)("message-requests"),
             eu.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
-            es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
+            es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW }));
     });
     let i = (0, o.bG)([ea.A], () => ea.A.theme),
         r = (0, eC.I)(),

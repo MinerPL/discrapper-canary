@@ -40,12 +40,12 @@ function R(e) {
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            N.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
+            (N.default.track(_.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
                 location: { location_page: s, location_section: _.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, I.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, y.uq)("longer messages inline"));
+                (0, I.sq)(_.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, y.uq)("longer messages inline")));
         }, [s, a]),
         n
             ? (0, l.jsx)(C.D, {

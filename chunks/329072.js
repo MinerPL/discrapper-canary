@@ -23,7 +23,7 @@ function U(e) {
         { analyticsLocations: x } = (0, l.Ay)(),
         I = (0, s.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
-            return c()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
+            return (c()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e);
         }),
         j = (0, u.H)({ deviceType: T.oh.VIDEO_INPUT, analyticsLocations: x, asSubmenu: r }),
         y = (0, A.A)(I.id, U),
@@ -33,8 +33,8 @@ function U(e) {
                 id: "video-settings",
                 label: S.intl.string(S.t.LKzQSF),
                 action: () => {
-                    (0, b.openUserSettings)(v.X.CAMERA_CATEGORY, { analyticsLocations: n }),
-                        (0, h.A)(e, e === C.BRT.POPOUT);
+                    ((0, b.openUserSettings)(v.X.CAMERA_CATEGORY, { analyticsLocations: n }),
+                        (0, h.A)(e, e === C.BRT.POPOUT));
                 },
                 icon: g.SettingsIcon,
                 leadingAccessory: { type: "icon", icon: g.SettingsIcon },

@@ -18,7 +18,7 @@ function x(t) {
         f = d.A.getNickname(e),
         [g, y] = i.useState(f ?? "");
     function j(t) {
-        t.preventDefault(), (0, h.w6)(e, g), n();
+        (t.preventDefault(), (0, h.w6)(e, g), n());
     }
     return (0, a.jsx)("form", {
         onSubmit: j,

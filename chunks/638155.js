@@ -80,7 +80,7 @@ function v(t) {
         })(v);
     async function G() {
         try {
-            await D(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n();
+            (await D(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n());
         } catch {
             (0, d.P0)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
         }

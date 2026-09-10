@@ -827,7 +827,7 @@ function tf(e) {
             }
         })(t, tg),
         o = a.useCallback(() => {
-            n(s), l(t.url);
+            (n(s), l(t.url));
         }, [s, l, n, t.url]);
     return (0, i.jsx)(x.m, {
         text: c,
@@ -1381,7 +1381,7 @@ function na(e) {
                                 let r = i.findIndex((e) => e.getUniqueKey() === s.getUniqueKey());
                                 if (-1 === r) return [s, ...i];
                                 let c = [...i];
-                                return (c[r] = s), c;
+                                return ((c[r] = s), c);
                             }),
                             null == l)
                         )
@@ -1492,7 +1492,7 @@ function na(e) {
                         return (0, i.jsx)(tU.W, {
                             navId: "game-profile-add-to-profile",
                             onClose: () => {
-                                (0, tK.Z_)(), t();
+                                ((0, tK.Z_)(), t());
                             },
                             "aria-label": ex.intl.string(ex.t.sidPSo),
                             onSelect: () => {},
@@ -1544,7 +1544,7 @@ function na(e) {
                         return (0, i.jsx)(tU.W, {
                             navId: "game-profile-context",
                             onClose: () => {
-                                (0, tK.Z_)(), t();
+                                ((0, tK.Z_)(), t());
                             },
                             "aria-label": ex.intl.string(ex.t.PNeFgW),
                             onSelect: () => {},
@@ -1668,7 +1668,7 @@ let nx = function (e) {
         let l = (function (e, t) {
             let n = 0,
                 l = e;
-            for (; null != l && l !== t; ) (n += l.offsetTop), (l = l.offsetParent);
+            for (; null != l && l !== t;) ((n += l.offsetTop), (l = l.offsetParent));
             return n;
         })(t, e);
         l > 0 && n?.(l);
@@ -1739,7 +1739,7 @@ function nA(e) {
         } = H(),
         x = (0, u.bG)([z.default], () => z.default.getCurrentUser()),
         g = a.useCallback(() => {
-            t(_.GameProfileTrackActionActions.LinkAccount), c({ analyticsLocations: n });
+            (t(_.GameProfileTrackActionActions.LinkAccount), c({ analyticsLocations: n }));
         }, [t, c, n]);
     return !d || m || null == x
         ? null
@@ -1914,7 +1914,7 @@ function nL(e) {
             (e) => {
                 let t = f[j],
                     n = f[e];
-                t?.type === "IMAGE" && n?.type === "IMAGE" && t.url !== n.url ? c(t.url) : c(null), s(e);
+                (t?.type === "IMAGE" && n?.type === "IMAGE" && t.url !== n.url ? c(t.url) : c(null), s(e));
             },
             [f, j],
         ),
@@ -1945,11 +1945,11 @@ function nL(e) {
                     let e = x.current,
                         t = I.current,
                         n = null != e ? !e.paused : l;
-                    e?.pause(),
+                    (e?.pause(),
                         null != t && null != e
                             ? (t.setTime(e.currentTime, !1), n && t.setPlay(!0), t.setMuted(e.muted))
                             : n && t?.setPlay(!0),
-                        N(n);
+                        N(n));
                 },
             });
         }, [n, f, j, p]),
@@ -2102,7 +2102,7 @@ function nU(e) {
         d = nO(s, r, "recent" === c),
         u = n_(d),
         m = a.useCallback(() => {
-            n(_.GameProfileTrackActionActions.SteamReviews), o(t);
+            (n(_.GameProfileTrackActionActions.SteamReviews), o(t));
         }, [o, n, t]);
     return (0, i.jsx)(Q.D, {
         onClick: m,
@@ -2196,7 +2196,7 @@ function nF(e) {
         u = (o <= 0 || d <= 0) && null == c,
         m = (0, tx.A)(),
         x = a.useCallback(() => {
-            l(_.GameProfileTrackActionActions.OpenCriticReviews), m(n);
+            (l(_.GameProfileTrackActionActions.OpenCriticReviews), m(n));
         }, [m, l, n]);
     return (0, i.jsx)(Q.D, {
         onClick: x,
@@ -2400,7 +2400,7 @@ function n5(e) {
         c = a.useRef(null),
         o = a.useCallback(
             (e) => {
-                r(_.GameProfileTrackActionActions.DiscordCollectiblesShopItem),
+                (r(_.GameProfileTrackActionActions.DiscordCollectiblesShopItem),
                     null != l &&
                         ((c.current = e.currentTarget),
                         (0, nK.B)({
@@ -2409,7 +2409,7 @@ function n5(e) {
                             analyticsSource: N.A.GAME_PROFILE,
                             shouldCheckoutWithOrbs: (0, nq.A)({ product: l }),
                             returnRef: c,
-                        }));
+                        })));
             },
             [r, t, l],
         );
@@ -2459,13 +2459,13 @@ function n6(e) {
         })(s),
         d = (0, nX.D)(r, !0),
         m = a.useCallback(() => {
-            n(_.GameProfileTrackActionActions.DiscordCollectiblesShop),
+            (n(_.GameProfileTrackActionActions.DiscordCollectiblesShop),
                 l(),
                 (0, nB.Cz)({
                     analyticsLocations: [N.A.GAME_PROFILE],
                     analyticsSource: N.A.GAME_PROFILE,
                     tab: n0.G2.CATALOG,
-                });
+                }));
         }, [n, l]),
         x = a.useMemo(() => ({ trackAction: n }), [n]);
     return null != s && (!c || o || (r.length > 0 && d))
@@ -2506,8 +2506,8 @@ function li(e) {
             source: _.GameProfileSources.SimilarGames,
         }),
         m = a.useCallback(() => {
-            n(_.GameProfileTrackActionActions.ClickSimilarGame, t.id),
-                d && null != u && l(u, _.GameProfileSources.SimilarGames);
+            (n(_.GameProfileTrackActionActions.ClickSimilarGame, t.id),
+                d && null != u && l(u, _.GameProfileSources.SimilarGames));
         }, [t.id, u, n, d, l]),
         h = a.useCallback(() => c(s), [s]);
     return (0, i.jsx)(x.m, {
@@ -2543,13 +2543,17 @@ function la(e) {
                     () => a.some((e) => null == n7.A.getGame(e) && !n7.A.hasNoData(e) && !n7.A.didFetchingFail(e)),
                     [a],
                 ),
-                r = (0, u.yK)([n7.A, z.default], () => {
-                    let e = z.default.getCurrentUser()?.nsfwAllowed;
-                    return a
-                        .map((e) => n7.A.getGame(e))
-                        .filter((e) => null != e)
-                        .filter((t) => (0, n3.T_)(t) && !(0, V.b)(t, e));
-                }, [a]);
+                r = (0, u.yK)(
+                    [n7.A, z.default],
+                    () => {
+                        let e = z.default.getCurrentUser()?.nsfwAllowed;
+                        return a
+                            .map((e) => n7.A.getGame(e))
+                            .filter((e) => null != e)
+                            .filter((t) => (0, n3.T_)(t) && !(0, V.b)(t, e));
+                    },
+                    [a],
+                );
             return t
                 ? { isFetching: (null == i && null == n) || l || s, similarGames: r }
                 : { isFetching: !1, similarGames: le };
@@ -2598,7 +2602,7 @@ function lu(e) {
             if (null != l)
                 return (e, t) => {
                     let { skuId: n, applicationId: i } = t;
-                    e.preventDefault(), l(n, i);
+                    (e.preventDefault(), l(n, i));
                 };
         }, [l]);
     return null == t || 0 === t.length
@@ -2775,7 +2779,7 @@ function lS(e) {
                     e.some((e) => e.category === e7.V.STEAM) ||
                     e.push({ category: e7.V.STEAM, url: t });
                 let a = e.sort((e, t) => (e.category === e7.V.STEAM ? -1 : +(t.category === e7.V.STEAM)));
-                return null != n && a.unshift({ category: "XBOX_GAME_PASS", url: n }), a;
+                return (null != n && a.unshift({ category: "XBOX_GAME_PASS", url: n }), a);
             }, [t, i, l, s, n]));
     return { storeWebsites: r, showsStoreLinks: r.length > 0 && null != e };
 }
@@ -2787,7 +2791,7 @@ function lT(e) {
         text: t.text,
         "aria-label": t.ariaLabel,
         onClick: () => {
-            n(t.action), l(t.url);
+            (n(t.action), l(t.url));
         },
     });
 }
@@ -2839,7 +2843,7 @@ function lL(e) {
                     null != t &&
                         l((e) => ("expanded" === e ? e : t.scrollHeight - t.clientHeight > 1 ? "collapsed" : "full"));
                 });
-                return n.observe(t), () => n.disconnect();
+                return (n.observe(t), () => n.disconnect());
             }, [e]);
             let i = a.useCallback(() => {
                 "expanded" === n
@@ -2923,7 +2927,7 @@ function lP(e) {
         properties: { location_stack: n },
     });
     let r = a.useCallback(() => {
-        l(_.GameProfileTrackActionActions.CloudPlay), s(), t();
+        (l(_.GameProfileTrackActionActions.CloudPlay), s(), t());
     }, [s, t, l]);
     return (0, i.jsx)(x.m, {
         text: ex.intl.string(ex.t.JVwWva),
@@ -3063,8 +3067,8 @@ function lM(e) {
             },
             [en, t, K, n],
         );
-    (0, p.Ay)(() => {
-        (0, _.trackGameProfileOpen)({
+    ((0, p.Ay)(() => {
+        ((0, _.trackGameProfileOpen)({
             source: n,
             viewId: K,
             gameId: t,
@@ -3072,7 +3076,7 @@ function lM(e) {
             authorId: l,
             profileType: _.GameProfileTypes.FullProfile,
         }),
-            (0, C.He)();
+            (0, C.He)());
     }),
         (0, p.Ay)(() => () => {
             let { isVerified: e, guildId: n } = (0, _.getGuildIdAndVerifiedFromInvite)(ei.current),
@@ -3091,7 +3095,7 @@ function lM(e) {
                 guildId: n,
                 isVerified: e,
             });
-        });
+        }));
     let ef = a.useCallback((e) => {
             E(e.contentRect.width >= 800);
         }, []),

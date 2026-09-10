@@ -89,7 +89,7 @@ function T(e) {
         });
     if (null == u) return i;
     let d = (0, g.H)(r?.location);
-    return null != s && d === s.id && o?.id === u.id ? (i = 2) : null != c && (i = 1), i;
+    return (null != s && d === s.id && o?.id === u.id ? (i = 2) : null != c && (i = 1), i);
 }
 function b(e) {
     let {
@@ -122,7 +122,7 @@ function b(e) {
             return async () => {
                 if (b) {
                     try {
-                        await u.A.launchFrame({
+                        (await u.A.launchFrame({
                             applicationId: S,
                             surface: v.sd,
                             analyticsContext: {
@@ -132,7 +132,7 @@ function b(e) {
                                 channelId: "channel" === l.type ? l.channel.id : void 0,
                             },
                         }),
-                            o?.({ applicationId: S });
+                            o?.({ applicationId: S }));
                     } catch (e) {}
                     return;
                 }

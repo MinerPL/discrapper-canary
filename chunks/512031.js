@@ -33,12 +33,12 @@ let g = i.kg(
         a.xBc.MANAGE_WEBHOOKS,
         a.xBc.SEND_TTS_MESSAGES,
     );
-i.WQ(x, a.xBc.VIEW_GUILD_ANALYTICS),
+(i.WQ(x, a.xBc.VIEW_GUILD_ANALYTICS),
     (0, l.dE)("BRAND_500"),
     s.x3,
     (0, l.dE)("GREEN_360"),
     (0, l.dE)("YELLOW_300"),
-    (0, l.dE)("RED_400");
+    (0, l.dE)("RED_400"));
 let h = [
     {
         id: r.y.SOLID,

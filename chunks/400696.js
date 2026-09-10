@@ -2,7 +2,7 @@ var n = r(906046),
     i = n("String.prototype.valueOf"),
     o = function (e) {
         try {
-            return i(e), !0;
+            return (i(e), !0);
         } catch (e) {
             return !1;
         }

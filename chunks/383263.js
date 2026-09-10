@@ -15,10 +15,10 @@ class s {
     extract(e, t) {
         let r = e.createParsingResult(t.index + t[1].length, t[0].substring(t[1].length));
         if (r.text.match(/^\d{4}$/) || ((r.start = s.extractTimeComponent(r.start.clone(), t)), !r.start))
-            return (t.index += t[0].length), null;
+            return ((t.index += t[0].length), null);
         let n = e.text.substring(t.index + t[0].length),
             a = i.exec(n);
-        return a && ((r.end = s.extractTimeComponent(r.start.clone(), a)), r.end && (r.text += a[0])), r;
+        return (a && ((r.end = s.extractTimeComponent(r.start.clone(), a)), r.end && (r.text += a[0])), r);
     }
     static extractTimeComponent(e, t) {
         let r = 0,
@@ -28,14 +28,14 @@ class s {
         if ((r >= 12 && (i = n.Meridiem.PM), null != t[5])) {
             if (r > 12) return null;
             let e = t[5].toLowerCase();
-            e.match(/morgen|vormittag/) && ((i = n.Meridiem.AM), 12 == r && (r = 0)),
+            (e.match(/morgen|vormittag/) && ((i = n.Meridiem.AM), 12 == r && (r = 0)),
                 e.match(/nachmittag|abend/) && ((i = n.Meridiem.PM), 12 != r && (r += 12)),
                 e.match(/nacht/) &&
                     (12 == r
                         ? ((i = n.Meridiem.AM), (r = 0))
                         : r < 6
                           ? (i = n.Meridiem.AM)
-                          : ((i = n.Meridiem.PM), (r += 12)));
+                          : ((i = n.Meridiem.PM), (r += 12))));
         }
         if (
             (e.assign("hour", r),

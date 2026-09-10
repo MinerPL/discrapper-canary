@@ -45,7 +45,7 @@ async function p(e, t) {
                 u = await r.Bo.get({ url: t, query: i, rejectWithError: !0, retries: 3 }),
                 _ = u.body,
                 E = (0, c.sq)(_);
-            null != E.storefrontPricing &&
+            (null != E.storefrontPricing &&
                 a.h.dispatch({
                     type: "SKUS_PRICING_FETCH_SUCCESS",
                     priceId: { type: "application", applicationId: E.applicationId },
@@ -58,7 +58,7 @@ async function p(e, t) {
                     storefrontMetadata: (0, c.NE)(_),
                 }),
                 a.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: u.body.store_listings ?? [] }),
-                d && (0, s.Fs)(E.applicationId) && (await p(e, t, { forceFetch: !0 }));
+                d && (0, s.Fs)(E.applicationId) && (await p(e, t, { forceFetch: !0 })));
         } catch (t) {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildOrApplicationId: e, eager: i });
         }
@@ -77,14 +77,14 @@ async function g(e, t) {
     try {
         a.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: e });
         let n = {};
-        i && (n.with_google_sku_ids = !0), (0, d.uJ)(s) || (n.country_code = s), null != o && (n.payment_gateway = o);
+        (i && (n.with_google_sku_ids = !0), (0, d.uJ)(s) || (n.country_code = s), null != o && (n.payment_gateway = o));
         let u = l.A.getPromotionIdOverride();
         null != u && (n.promotion_id_override = u);
         let _ = await r.Bo.get({ url: t, query: n, rejectWithError: !0 });
         if (null == _.body) throw Error("Failed to fetch social layer storefront SKU");
         let E = _.body.store_listing,
             A = _.body.storefront_metadata;
-        a.h.dispatch({
+        (a.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
             assets: Object.fromEntries(_.body.assets.map((e) => [e.id, e])),
         }),
@@ -94,7 +94,7 @@ async function g(e, t) {
                     applicationId: E.sku.application_id,
                     storefrontMetadata: (0, c.NE)(A),
                 }),
-            a.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: E });
+            a.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: E }));
     } catch (t) {
         a.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: e });
     }
@@ -111,7 +111,7 @@ let C = 5 * o.A.Millis.MINUTE,
     R = 5 * o.A.Millis.MINUTE;
 function L(e, t) {
     let n = e.get(t);
-    return null == n && ((n = new i.A(O, R)), e.set(t, n)), n;
+    return (null == n && ((n = new i.A(O, R)), e.set(t, n)), n);
 }
 let y = new Map(),
     D = new Map();
@@ -127,14 +127,14 @@ async function v(e) {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId: e });
             let t = (await r.Bo.get({ url: _.Rsh.SOCIAL_LAYER_STOREFRONTS_ALL(e), rejectWithError: !0, retries: 3 }))
                 .body;
-            n.succeed(),
+            (n.succeed(),
                 a.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_SUCCESS",
                     applicationId: e,
                     entries: t.map(c.S4),
-                });
+                }));
         } catch (t) {
-            n.fail(), a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE", applicationId: e });
+            (n.fail(), a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_FAILURE", applicationId: e }));
         }
 }
 async function b(e, t) {
@@ -159,7 +159,7 @@ async function b(e, t) {
                 }),
                 u = d.body,
                 E = (0, c.sq)(u);
-            null != E.storefrontPricing &&
+            (null != E.storefrontPricing &&
                 a.h.dispatch({
                     type: "SKUS_PRICING_FETCH_SUCCESS",
                     priceId: { type: "application", applicationId: E.applicationId },
@@ -172,11 +172,11 @@ async function b(e, t) {
                     storefrontMetadata: (0, c.NE)(u),
                 }),
                 a.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: d.body.store_listings ?? [] }),
-                i.succeed();
+                i.succeed());
         } catch (n) {
-            i.fail(),
+            (i.fail(),
                 a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD_FAILURE", storefrontId: t }),
-                u.A.getPreviewStorefrontId(e) === t && M(e, null);
+                u.A.getPreviewStorefrontId(e) === t && M(e, null));
         }
 }
 function M(e, t) {
@@ -245,7 +245,7 @@ async function U() {
                         );
                     }) ?? [],
                 i = null;
-            null != e.announcement_modal_config &&
+            (null != e.announcement_modal_config &&
                 (i = {
                     version: e.announcement_modal_config.version,
                     applicationId: e.announcement_modal_config.application_id,
@@ -258,7 +258,7 @@ async function U() {
                         storefronts: n,
                         announcementModalConfig: i,
                     },
-                });
+                }));
         } catch {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
         }
@@ -299,7 +299,7 @@ async function G() {
                 (await r.Bo.get({ url: _.Rsh.SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT, rejectWithError: !0 }))
                     .body ?? null,
             t = null;
-        null != e &&
+        (null != e &&
             (t = {
                 applicationId: e.application_id,
                 lightThemeLogoUrl: e.light_theme_logo_url ?? null,
@@ -311,7 +311,7 @@ async function G() {
                     e.features?.map((e) => ({ assetUrl: e.asset_url, title: e.title, subtitle: e.subtitle })) ?? null,
                 buttonText: e.button_text ?? null,
             }),
-            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: t });
+            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: t }));
     } catch (e) {
         a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
     }

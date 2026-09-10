@@ -11,7 +11,7 @@ class u extends i.A {
     stores = new Map().set(r.A, () => this.handleExperimentUpdated());
     actions = { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone };
     handleExperimentUpdated = () => {
-        this.updateSoundpack(), this.updateRingtone();
+        (this.updateSoundpack(), this.updateRingtone());
     };
     updateSoundpack() {
         let e = s.A.getSoundpack(),

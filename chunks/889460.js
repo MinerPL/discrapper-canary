@@ -1,4 +1,4 @@
-n.d(e, { A: () => b }), n(321073);
+(n.d(e, { A: () => b }), n(321073));
 var i = n(477900),
     l = n(582128),
     d = n(17928),
@@ -24,17 +24,21 @@ function m(t, e) {
 function b(t) {
     let { user: e, guildId: n, onAction: a } = t,
         o = (0, d.bG)([h.default], () => h.default.getCurrentUser(), []),
-        c = (0, d.yK)([I.Ay, g.A, f.A], () => {
-            let t = I.Ay.getFlattenedGuildIds(),
-                e = [];
-            return (
-                t.forEach((t) => {
-                    let i = g.A.getGuild(t);
-                    null != i && (0, u.K)(f.A, i) && i.id !== n && e.push(i);
-                }),
-                e
-            );
-        }, [n]),
+        c = (0, d.yK)(
+            [I.Ay, g.A, f.A],
+            () => {
+                let t = I.Ay.getFlattenedGuildIds(),
+                    e = [];
+                return (
+                    t.forEach((t) => {
+                        let i = g.A.getGuild(t);
+                        null != i && (0, u.K)(f.A, i) && i.id !== n && e.push(i);
+                    }),
+                    e
+                );
+            },
+            [n],
+        ),
         [b, p] = l.useState({});
     return o?.id === e.id || e.bot || 0 === c.length || x.A.isBlockedOrIgnored(e.id)
         ? null
@@ -50,7 +54,7 @@ function b(t) {
                                 id: t.id,
                                 label: t.name,
                                 action: () => {
-                                    a?.(),
+                                    (a?.(),
                                         (function (t, e) {
                                             let n = A.Ay.getDefaultChannel(t.id, !0, C.xBc.CREATE_INSTANT_INVITE);
                                             if (null != n) {
@@ -65,7 +69,7 @@ function b(t) {
                                                     "User Invite Context Menu",
                                                 ).then((t) => m(e, t.code));
                                             }
-                                        })(t, e.id);
+                                        })(t, e.id));
                                 },
                             },
                             t.id,

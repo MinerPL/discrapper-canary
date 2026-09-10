@@ -60,7 +60,7 @@ function D(n) {
     if (k) return null;
     let [[E], O] = a().partition(e, (n) => "null" === n.channel.id);
     function z(e) {
-        Y(), (0, p.S_)({ channelIds: [n.id], parentId: e, source: "channel_context_menu" });
+        (Y(), (0, p.S_)({ channelIds: [n.id], parentId: e, source: "channel_context_menu" }));
     }
     if (0 === O.length) return w(o.StarIcon, () => z(null));
     let S = y.intl.string(j.default.CgmkFJ);
@@ -113,7 +113,7 @@ function F(n) {
                                 (0, t.jsx)(e, {
                                     ...l,
                                     onConfirm: () => {
-                                        l.onClose(), (0, p.i_)(n.id);
+                                        (l.onClose(), (0, p.i_)(n.id));
                                     },
                                     channel: n,
                                 });

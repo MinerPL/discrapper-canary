@@ -59,7 +59,7 @@ let C =
                   p = u.A.getArticleURL(S.trialId === I.yo ? N.MVz.NITRO_TRIAL_FOR_ALL : N.MVz.PREMIUM_TRIAL);
               return (0, i.jsxs)(d.T0, {
                   onClick: () => {
-                      t(), c.default.track(N.HAw.APP_NOTICE_CLOSED, { notice_type: m, trial_id: S.trialId });
+                      (t(), c.default.track(N.HAw.APP_NOTICE_CLOSED, { notice_type: m, trial_id: S.trialId }));
                   },
                   children: [
                       (0, i.jsx)(d.In, { children: (0, T.GZ)(n, O, P, p) }),

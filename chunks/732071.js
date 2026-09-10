@@ -1,4 +1,4 @@
-n.d(t, { A: () => h, K: () => _ }), n(321073);
+(n.d(t, { A: () => h, K: () => _ }), n(321073));
 var i,
     r = n(635377),
     a = n.n(r),
@@ -30,10 +30,10 @@ class A extends l.A {
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < 6e4) return;
         let i = setTimeout(() => {
-            delete this.currentlyVisibleMessageTimers[t],
+            (delete this.currentlyVisibleMessageTimers[t],
                 this.viewsInCurrentChannel.add(t),
                 this.recentViewTimes.set(t, Date.now()),
-                this.bufferViewTrack(e);
+                this.bufferViewTrack(e));
         }, 1e3);
         this.currentlyVisibleMessageTimers[t] = i;
     }
@@ -56,7 +56,7 @@ class A extends l.A {
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
-        (this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer();
+        ((this.currentlyVisibleMessageTimers = {}), this.viewsInCurrentChannel.clear(), this.drainBuffer());
     }
     drainBuffer() {
         for (let e of this.batchBuffer) {
@@ -110,13 +110,13 @@ class A extends l.A {
             })(e);
             d.default.track(t.event, t.properties);
         }
-        (this.batchBuffer = []),
-            null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
+        ((this.batchBuffer = []),
+            null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null)));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= 10 && this.drainBuffer(),
+        (this.batchBuffer.length >= 10 && this.drainBuffer(),
             this.batchBuffer.push(e),
-            null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
+            null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3)));
     }
 }
 let h = new A();

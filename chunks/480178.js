@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => iy });
+(s.r(t), s.d(t, { default: () => iy }));
 var e = s(477900),
     l = s(582128),
     r = s(503698),
@@ -163,16 +163,16 @@ function G(i) {
                     let s, e;
                     switch (t) {
                         case E.p$.NAME:
-                            (s = (i) => i.name.toLowerCase()), (e = "asc");
+                            ((s = (i) => i.name.toLowerCase()), (e = "asc"));
                             break;
                         case E.p$.PRICE_ASC:
-                            (s = "price_tier"), (e = "asc");
+                            ((s = "price_tier"), (e = "asc"));
                             break;
                         case E.p$.PRICE_DESC:
-                            (s = "price_tier"), (e = "desc");
+                            ((s = "price_tier"), (e = "desc"));
                             break;
                         case E.p$.NEWEST_ARRIVALS:
-                            (s = "published_at"), (e = "desc");
+                            ((s = "published_at"), (e = "desc"));
                             break;
                         default:
                             return i;
@@ -415,7 +415,7 @@ function ip(i) {
                             body: k.intl.string(k.t["827i8I"]),
                             selected: l === N.B.GUILD_PRODUCTS_PREVIEW,
                             onClick: () => {
-                                r(N.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true");
+                                (r(N.B.GUILD_PRODUCTS_PREVIEW), Y.w.set(ix.Db, "true"));
                             },
                             onPreviewDismiss: d,
                             isNew: a,

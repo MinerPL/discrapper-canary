@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { isOverlayChannelVisible: () => c, isOverlayCurrentlyVisibleAndUnlocked: () => d });
+(n.r(t), n.d(t, { isOverlayChannelVisible: () => c, isOverlayCurrentlyVisibleAndUnlocked: () => d }));
 var i = n(567249),
     r = n(9302),
     a = n(140069),

@@ -118,12 +118,12 @@ function J(e) {
                           icon: _.t,
                           text: g.intl.string(g.t["0Q61kF"]),
                           onClick: () => {
-                              (0, h.pX)(G.BVt.APPLICATION_STORE), (0, m.closeUserProfileModal)(), l?.();
+                              ((0, h.pX)(G.BVt.APPLICATION_STORE), (0, m.closeUserProfileModal)(), l?.());
                           },
                       })
                     : (0, i.jsx)(x.A, {
                           onClick: () => {
-                              c({ action: z.pt.GET_PREMIUM }), l?.();
+                              (c({ action: z.pt.GET_PREMIUM }), l?.());
                           },
                           textOptions: { textOverride: g.intl.string(g.t.x6rkDp) },
                           subscriptionTier: H.pe.TIER_2,
@@ -146,7 +146,7 @@ function J(e) {
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        (0, S.Cz)({ analyticsLocations: r, analyticsSource: s }), l?.();
+                        ((0, S.Cz)({ analyticsLocations: r, analyticsSource: s }), l?.());
                     },
                 }),
             }),

@@ -1,4 +1,4 @@
-a.r(e), a.d(e, { createProvider: () => b });
+(a.r(e), a.d(e, { createProvider: () => b }));
 var i = a(614235),
     s = a(678410);
 function r(t) {
@@ -48,11 +48,11 @@ let c = {
     }),
 };
 function u(t, e, a) {
-    (t[0] += (e[0] - t[0]) * a), (t[1] += (e[1] - t[1]) * a), (t[2] += (e[2] - t[2]) * a);
+    ((t[0] += (e[0] - t[0]) * a), (t[1] += (e[1] - t[1]) * a), (t[2] += (e[2] - t[2]) * a));
 }
 var p = class {
     constructor(t = 512) {
-        (this.ctx = null),
+        ((this.ctx = null),
             (this.presence = 0),
             (this.faceState = "detecting"),
             (this.eased = (function (t) {
@@ -67,7 +67,7 @@ var p = class {
             (this.size = t),
             (this.canvas = document.createElement("canvas")),
             (this.canvas.width = t),
-            (this.canvas.height = t);
+            (this.canvas.height = t));
     }
     init() {
         this.ctx = this.canvas.getContext("2d");
@@ -92,10 +92,10 @@ var p = class {
             this.faceState;
         !(function (t, e) {
             for (let a = 0; a < 4; a += 1) u(t.stops[a], e.stops[a], 0.08);
-            u(t.occlusion, e.occlusion, 0.08),
+            (u(t.occlusion, e.occlusion, 0.08),
                 u(t.contact, e.contact, 0.08),
                 u(t.feature, e.feature, 0.08),
-                u(t.halo, e.halo, 0.08);
+                u(t.halo, e.halo, 0.08));
         })(this.eased, c[s]);
         let r = +!!t.tracked;
         this.presence += (r - this.presence) * 0.12;
@@ -115,30 +115,30 @@ var p = class {
             a.translate(-256, -256),
             h > 0.02)
         ) {
-            (a.globalAlpha = h),
+            ((a.globalAlpha = h),
                 this.drawBall(a),
                 a.save(),
                 a.translate(256, 256),
                 a.scale(1 - 0.24 * Math.abs(m), 1 - 0.12 * Math.abs(y)),
                 a.translate(-256, -256),
-                a.translate(90 * m, 72 * y);
+                a.translate(90 * m, 72 * y));
             let e = n(this.eased.feature),
                 i = l(t.blink.left, 0, 1),
                 r = l(t.blink.right, 0, 1);
-            "success" === s && ((i = 0), (r = 0.85)),
+            ("success" === s && ((i = 0), (r = 0.85)),
                 this.drawEye(a, 200, 218, i, e),
                 this.drawEye(a, 312, 218, r, e),
-                this.drawNose(a, e);
+                this.drawNose(a, e));
             let o = Math.max(0.35, l(t.smile ?? 0, 0, 1));
-            "success" === s ? (o = 1) : "error" === s && (o = -0.55),
+            ("success" === s ? (o = 1) : "error" === s && (o = -0.55),
                 this.drawMouth(a, o, e),
                 a.restore(),
-                (a.globalAlpha = 1);
+                (a.globalAlpha = 1));
         }
         a.restore();
     }
     drawHalo(t, e, a, i, s, r) {
-        t.save(),
+        (t.save(),
             t.translate(e / 2 + s, e / 2 + r),
             t.scale(i, i),
             (t.globalAlpha = 0.9),
@@ -150,62 +150,62 @@ var p = class {
             t.arc(0, 0, 178 * a, 0, 2 * Math.PI),
             t.stroke(),
             t.setLineDash([]),
-            t.restore();
+            t.restore());
     }
     drawBall(t) {
         let e = this.eased,
             a = t.createRadialGradient(256, 424, 0, 256, 424, 122);
-        a.addColorStop(0, o(e.contact, 0.28)),
+        (a.addColorStop(0, o(e.contact, 0.28)),
             a.addColorStop(1, o(e.contact, 0)),
             (t.fillStyle = a),
             t.beginPath(),
             t.ellipse(256, 424, 122, 26, 0, 0, 2 * Math.PI),
-            t.fill();
+            t.fill());
         let i = t.createRadialGradient(214, 205, 12, 256, 256, 157.5);
-        i.addColorStop(0, n(e.stops[0])),
+        (i.addColorStop(0, n(e.stops[0])),
             i.addColorStop(0.45, n(e.stops[1])),
             i.addColorStop(0.8, n(e.stops[2])),
             i.addColorStop(1, n(e.stops[3])),
             (t.fillStyle = i),
             t.beginPath(),
             t.arc(256, 256, 150, 0, 2 * Math.PI),
-            t.fill();
+            t.fill());
         let s = t.createRadialGradient(256, 256, 102.00000000000001, 256, 256, 150);
-        s.addColorStop(0, o(e.occlusion, 0)),
+        (s.addColorStop(0, o(e.occlusion, 0)),
             s.addColorStop(1, o(e.occlusion, 0.22)),
             (t.fillStyle = s),
             t.beginPath(),
             t.arc(256, 256, 150, 0, 2 * Math.PI),
-            t.fill();
+            t.fill());
         let r = t.createRadialGradient(200, 190, 0, 200, 190, 64);
-        r.addColorStop(0, "rgba(255, 255, 255, 0.85)"),
+        (r.addColorStop(0, "rgba(255, 255, 255, 0.85)"),
             r.addColorStop(1, "rgba(255, 255, 255, 0)"),
             (t.fillStyle = r),
             t.beginPath(),
             t.ellipse(200, 190, 64, 48, 0, 0, 2 * Math.PI),
-            t.fill();
+            t.fill());
     }
     drawEye(t, e, a, i, s) {
-        (t.fillStyle = s), t.beginPath(), t.ellipse(e, a, 12, 2.5 + (1 - i) * 14, 0, 0, 2 * Math.PI), t.fill();
+        ((t.fillStyle = s), t.beginPath(), t.ellipse(e, a, 12, 2.5 + (1 - i) * 14, 0, 0, 2 * Math.PI), t.fill());
     }
     drawNose(t, e) {
-        (t.strokeStyle = e),
+        ((t.strokeStyle = e),
             (t.lineWidth = 8),
             (t.lineCap = "round"),
             t.beginPath(),
             t.moveTo(256, 258),
             t.lineTo(256, 292),
-            t.stroke();
+            t.stroke());
     }
     drawMouth(t, e, a) {
         let i = 10 * e;
-        (t.strokeStyle = a),
+        ((t.strokeStyle = a),
             (t.lineWidth = 11),
             (t.lineCap = "round"),
             t.beginPath(),
             t.moveTo(212, 330 - i),
             t.quadraticCurveTo(256, 330 + (2 + 32 * e), 300, 330 - i),
-            t.stroke();
+            t.stroke());
     }
 };
 let f = {
@@ -254,7 +254,7 @@ var g = class {
     },
     k = class {
         constructor() {
-            (this.renderer = new p(512)),
+            ((this.renderer = new p(512)),
                 (this.videoHandle = null),
                 (this.landmarker = null),
                 (this.inputCanvas = document.createElement("canvas")),
@@ -298,23 +298,23 @@ var g = class {
                         s > 0 &&
                         (this.inputCtx || (this.inputCtx = this.inputCanvas.getContext("2d")), this.inputCtx)
                     ) {
-                        (this.inputCanvas.width !== i || this.inputCanvas.height !== s) &&
+                        ((this.inputCanvas.width !== i || this.inputCanvas.height !== s) &&
                             ((this.inputCanvas.width = i), (this.inputCanvas.height = s)),
-                            this.inputCtx.drawImage(a, 0, 0, i, s);
+                            this.inputCtx.drawImage(a, 0, 0, i, s));
                         let e = null;
                         try {
-                            (e = this.landmarker.detectForVideo(this.inputCanvas, t)), (this.detectFailures = 0);
+                            ((e = this.landmarker.detectForVideo(this.inputCanvas, t)), (this.detectFailures = 0));
                         } catch {
-                            (e = null),
+                            ((e = null),
                                 (this.detectFailures += 1),
-                                this.detectFailures >= 30 && this.recreateLandmarker();
+                                this.detectFailures >= 30 && this.recreateLandmarker());
                         }
                         e && this.ingest(e, i, s, t);
                     }
-                    t - this.lastFaceAt > 600 && (this.target = v(f)),
+                    (t - this.lastFaceAt > 600 && (this.target = v(f)),
                         this.smoothTowardTarget(e),
-                        this.renderer.render(this.current);
-                });
+                        this.renderer.render(this.current));
+                }));
         }
         getCanvas() {
             return this.renderer.getCanvas();
@@ -340,18 +340,18 @@ var g = class {
                             ? a.faceLandmarkerModelPath
                             : "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
                     });
-            (this.mediapipeModulePath = h.mediapipeModulePath),
+            ((this.mediapipeModulePath = h.mediapipeModulePath),
                 (this.mediapipeWasmPath = h.mediapipeWasmPath),
                 (this.faceLandmarkerModelPath = h.faceLandmarkerModelPath),
                 (this.minFrameIntervalMs = 1e3 / (e.maxFps ?? 30)),
-                (this.videoHandle = (0, i.t)(t, { keepStreamAlive: !0 }));
+                (this.videoHandle = (0, i.t)(t, { keepStreamAlive: !0 })));
             try {
                 if ((this.renderer.init(), (this.landmarker = await this.createLandmarker()), this.stopped)) {
-                    this.landmarker?.close(), (this.landmarker = null);
+                    (this.landmarker?.close(), (this.landmarker = null));
                     return;
                 }
                 let t = this.videoHandle?.element;
-                (this.usingRvfc = !!(t && (0, s.n)(t))), this.scheduleNextFrame();
+                ((this.usingRvfc = !!(t && (0, s.n)(t))), this.scheduleNextFrame());
             } catch (t) {
                 throw (this.stop(), t);
             }
@@ -365,16 +365,16 @@ var g = class {
                 : (this.rafId = requestAnimationFrame(this.loop));
         }
         stop() {
-            (this.stopped = !0), null != this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null));
+            ((this.stopped = !0), null != this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = null)));
             let t = this.videoHandle?.element;
-            t &&
+            (t &&
                 null != this.rvfcHandle &&
                 ((0, s.n)(t)?.cancelVideoFrameCallback(this.rvfcHandle), (this.rvfcHandle = null)),
                 this.landmarker?.close(),
                 (this.landmarker = null),
                 this.renderer.dispose(),
                 this.videoHandle?.dispose(),
-                (this.videoHandle = null);
+                (this.videoHandle = null));
         }
         createLandmarker() {
             return (0, s.r)({
@@ -436,7 +436,7 @@ var g = class {
                             h = -1 / 0;
                         for (let e = 0; e < s.length; e += 1) {
                             let a = s[e];
-                            a.x < t && (t = a.x), a.x > l && (l = a.x), a.y < r && (r = a.y), a.y > h && (h = a.y);
+                            (a.x < t && (t = a.x), a.x > l && (l = a.x), a.y < r && (r = a.y), a.y > h && (h = a.y));
                         }
                         let n = (l - t) * e,
                             o = (h - r) * a;
@@ -463,7 +463,7 @@ var g = class {
                         (Math.abs(b.yaw - this.prevCalYaw) > 0.012 ||
                             Math.abs(b.pitch - this.prevCalPitch) > 0.012 ||
                             Math.abs(t) > 0.02);
-                (this.prevCalYaw = b.yaw), (this.prevCalPitch = b.pitch), (this.prevCalRoll = b.roll);
+                ((this.prevCalYaw = b.yaw), (this.prevCalPitch = b.pitch), (this.prevCalRoll = b.roll));
                 let a = this.calAttempts >= 60;
                 if (
                     ((!e || a) &&
@@ -478,7 +478,7 @@ var g = class {
                     this.nFrames >= 20)
                 ) {
                     let t = this.nFrames;
-                    (this.neutral = {
+                    ((this.neutral = {
                         yaw: y(this.sum.yaw / t, -0.06, 0.06),
                         pitch: this.sum.pitch / t,
                         roll: y(this.sum.roll / t, -0.05, 0.05),
@@ -487,7 +487,7 @@ var g = class {
                         dist: this.sum.dist / t || 1,
                         faceH: this.sum.faceH / t || 1,
                     }),
-                        (this.calibrated = !0);
+                        (this.calibrated = !0));
                 }
                 return;
             }
@@ -537,7 +537,7 @@ var g = class {
                                   : "mouthSmileRight" === t.categoryName && (l = t.score);
                     return { blink: { left: a, right: i }, mouthOpen: s, smile: (r + l) / 2 };
                 })(t);
-            (this.target = {
+            ((this.target = {
                 tracked: !0,
                 headEuler: { ...x.headEuler },
                 rootOffset: { ...x.rootOffset },
@@ -558,7 +558,7 @@ var g = class {
                     (r.blink.right = l.blink.right),
                     (r.mouthOpen = l.mouthOpen),
                     (r.smile = l.smile),
-                    (this.seeded = !0));
+                    (this.seeded = !0)));
         }
         applyMedian(t) {
             return void 0 !== t.faceSizeRatio && t.faceSizeRatio < 0.35
@@ -577,7 +577,7 @@ var g = class {
                 r = (0, s.i)(0.35, t),
                 l = (0, s.i)(0.2, t),
                 h = (0, s.i)(0.5, t);
-            (e.tracked = a.tracked),
+            ((e.tracked = a.tracked),
                 (e.headEuler.x += (a.headEuler.x - e.headEuler.x) * i),
                 (e.headEuler.y += (a.headEuler.y - e.headEuler.y) * i),
                 (e.headEuler.z += (a.headEuler.z - e.headEuler.z) * i),
@@ -587,17 +587,17 @@ var g = class {
                 (e.blink.left += (a.blink.left - e.blink.left) * h),
                 (e.blink.right += (a.blink.right - e.blink.right) * h),
                 (e.mouthOpen += (a.mouthOpen - e.mouthOpen) * h),
-                (e.smile += (a.smile - e.smile) * h);
+                (e.smile += (a.smile - e.smile) * h));
         }
         recreateLandmarker() {
-            (this.detectFailures = 0),
+            ((this.detectFailures = 0),
                 this.landmarker?.close(),
                 (this.landmarker = null),
                 this.createLandmarker()
                     .then((t) => {
                         this.stopped ? t.close() : (this.landmarker = t);
                     })
-                    .catch(() => {});
+                    .catch(() => {}));
         }
     };
 function v(t) {

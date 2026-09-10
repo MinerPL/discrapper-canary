@@ -37,7 +37,7 @@ let c = r.forwardRef(function (e, t) {
                 ? { padding: u(n) }
                 : Object.entries(n).reduce((e, t) => {
                       let [n, i] = t;
-                      return (e[`padding${o()(n)}`] = u(i)), e;
+                      return ((e[`padding${o()(n)}`] = u(i)), e);
                   }, {})),
         },
         ...T,

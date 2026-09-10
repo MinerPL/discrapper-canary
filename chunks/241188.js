@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => eD });
+(n.r(t), n.d(t, { default: () => eD }));
 var a = n(477900),
     i = n(582128),
     l = n(503698),
@@ -22,11 +22,11 @@ var a = n(477900),
     j = n(105971);
 function E(e) {
     return i.useCallback(async () => {
-        j.k.trackFeedShown({ variant: e ? "DotShown" : "NoDotShown", homeSessionId: "gravity_refresh" }),
+        (j.k.trackFeedShown({ variant: e ? "DotShown" : "NoDotShown", homeSessionId: "gravity_refresh" }),
             await b.A.fetchDehydrated({ isReloading: !0 }),
             await b.A.reloadICYMITab(),
             await b.A.getGuildChannelScores(),
-            b.A.getRecommendedGuilds();
+            b.A.getRecommendedGuilds());
     }, [e]);
 }
 n(321073);
@@ -774,12 +774,12 @@ let eM = function (e) {
                             let t = a[e];
                             null != t && n.push({ id: t.id, type: (0, w.xG)(t), timestamp: i++ });
                         }
-                        n.length > 0 && b.A.ackGravityItems(n, !0),
+                        (n.length > 0 && b.A.ackGravityItems(n, !0),
                             j.k.trackItemShortImpression(
                                 t,
                                 a.map((e) => ({ id: e.id, type: (0, w.xG)(e) })),
                                 o,
-                            );
+                            ));
                     },
                     [o, l],
                 ),
@@ -788,7 +788,7 @@ let eM = function (e) {
                         let { viewableItems: t } = e;
                         if (0 === t.length) return;
                         let n = (0, I.P0)(t);
-                        j.k.trackItemLongImpression(
+                        (j.k.trackItemLongImpression(
                             t,
                             n.map((e) => ({ id: e.id, type: (0, w.xG)(e) })),
                             o,
@@ -811,7 +811,7 @@ let eM = function (e) {
                                             isInitiallyVisible: !1,
                                         };
                                     }),
-                            );
+                            ));
                     },
                     [o],
                 ),
@@ -932,7 +932,7 @@ let eM = function (e) {
             (s = i.useRef(G)),
             (r = i.useRef(x)),
             i.useEffect(() => {
-                (s.current = G), (r.current = x);
+                ((s.current = G), (r.current = x));
             }, [G, x]),
             i.useEffect(
                 () => (
@@ -970,7 +970,7 @@ let eM = function (e) {
             ),
             {
                 registerItemRef: i.useCallback((e, a) => {
-                    if (null != a) n.current.set(e, a), null != t.current && t.current.observe(a);
+                    if (null != a) (n.current.set(e, a), null != t.current && t.current.observe(a));
                     else {
                         let a = n.current.get(e);
                         null != a && (t.current?.unobserve(a), n.current.delete(e));
@@ -1007,7 +1007,7 @@ let eM = function (e) {
             c.current?.scrollTo({ top: 0, behavior: "smooth" });
         }, [c]),
         V = i.useCallback(() => {
-            f(), U();
+            (f(), U());
         }, [f, U]),
         O = i.useCallback(
             (e) =>
@@ -1096,7 +1096,7 @@ var eG = n(534515),
 let eD = (0, h.A)(function (e) {
     let { width: t } = e,
         n = (0, A.c)("ICYMIPage");
-    i.useEffect(() => {
+    (i.useEffect(() => {
         n || (0, r.pX)(eA.BVt.ME);
     }, [n]),
         i.useLayoutEffect(() => {
@@ -1104,7 +1104,7 @@ let eD = (0, h.A)(function (e) {
         }, [n]),
         (0, g.Ay)(() => {
             n && (0, v.d0)("icymi");
-        });
+        }));
     let l = (0, d.bG)([f.A], () => f.A.theme),
         h = (0, d.bG)([y.A], () => y.A.isRefreshing()),
         b = i.useRef(null);
@@ -1125,9 +1125,9 @@ let eD = (0, h.A)(function (e) {
             window.addEventListener("keyup", t),
             window.addEventListener("blur", n),
             () => {
-                window.removeEventListener("keydown", e),
+                (window.removeEventListener("keydown", e),
                     window.removeEventListener("keyup", t),
-                    window.removeEventListener("blur", n);
+                    window.removeEventListener("blur", n));
             }
         );
     }, []);

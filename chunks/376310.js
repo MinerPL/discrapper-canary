@@ -69,7 +69,7 @@ function C(e) {
                 x,
             ),
             onClick: function (e) {
-                f?.(e), C?.(l), D || null == w.current || w.current.blur();
+                (f?.(e), C?.(l), D || null == w.current || w.current.blur());
             },
             onContextMenu: (e) => {
                 let n;

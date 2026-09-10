@@ -66,7 +66,7 @@ function C(e) {
     if (null != c) return { churnUserDiscountOffer: c, isFetchingChurnDiscountOffer: !1 };
     if (e) return { churnUserDiscountOffer: o, isFetchingChurnDiscountOffer: r };
     function m() {
-        s(!0), a(!1);
+        (s(!0), a(!1));
     }
     return (
         r ||
@@ -74,7 +74,7 @@ function C(e) {
             (a(!0),
             (0, d.qz)()
                 .then((e) => {
-                    u(e), m();
+                    (u(e), m());
                 })
                 .catch((e) => {
                     m();

@@ -37,7 +37,7 @@ async function y(e) {
         performance.now() - g >= 9e5)
     )
         try {
-            await (0, v.a)(_.Umv.WEB_APP), (g = performance.now());
+            (await (0, v.a)(_.Umv.WEB_APP), (g = performance.now()));
         } catch (e) {}
     return m.Bo.post({
         url: _.Rsh.CLIP_FEEDBACK,
@@ -63,7 +63,7 @@ function k(e) {
         if (null != m) {
             S(!0);
             try {
-                await y({
+                (await y({
                     clip: a,
                     rating: m,
                     description: _,
@@ -72,10 +72,10 @@ function k(e) {
                     },
                 }),
                     (0, r.P0)((0, u.o)("Thanks for your feedback!", c.Ck.SUCCESS)),
-                    h();
+                    h());
             } catch (e) {
-                C.nx.error("Failed to submit clip feedback", e),
-                    (0, r.P0)((0, u.o)("Failed to submit clip feedback. Please try again.", c.Ck.FAILURE));
+                (C.nx.error("Failed to submit clip feedback", e),
+                    (0, r.P0)((0, u.o)("Failed to submit clip feedback. Please try again.", c.Ck.FAILURE)));
             } finally {
                 S(!1);
             }

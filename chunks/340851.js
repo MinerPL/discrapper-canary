@@ -99,22 +99,22 @@ let M = (0, h.J)(function (e) {
         eh();
     }
     function eh() {
-        clearTimeout(em.current), Q?.(s.id);
+        (clearTimeout(em.current), Q?.(s.id));
     }
     let ep = $
         ? null
         : {
               draggable: !0,
               onDragStart: function (e) {
-                  e.preventDefault(), e.stopPropagation();
+                  (e.preventDefault(), e.stopPropagation());
               },
           };
     function ef() {
         if (!H || !(0, _.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
         let e = { streamType: k.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
-        C.default.getId() !== s.id && A.default.selectVoiceChannel(r.id),
+        (C.default.getId() !== s.id && A.default.selectVoiceChannel(r.id),
             W ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, S._z)(e))) : (0, g.Nl)(e),
-            Q?.(s.id);
+            Q?.(s.id));
     }
     function eI(e) {
         (0, m.L3)(e, async () => {

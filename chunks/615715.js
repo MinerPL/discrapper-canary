@@ -22,11 +22,11 @@ let A = l.forwardRef(function (e, t) {
             async (e) => {
                 j(!0);
                 try {
-                    d.A.isPhoneReverification(C, P)
+                    (d.A.isPhoneReverification(C, P)
                         ? await u.A.beginReverifyPhone(e, y)
                         : await u.A.beginAddPhone(e, y),
                         R(null),
-                        k(e);
+                        k(e));
                 } catch (e) {
                     R(new r.A(e));
                 }
@@ -40,7 +40,7 @@ let A = l.forwardRef(function (e, t) {
                     j(!0);
                     try {
                         let { token: t } = await u.A.verifyPhone(g, e);
-                        R(null), v(t);
+                        (R(null), v(t));
                     } catch (e) {
                         R(new r.A(e));
                     }

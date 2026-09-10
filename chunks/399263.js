@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(142703);
+(n.d(t, { A: () => p }), n(142703));
 var l = n(17928),
     i = n(228366),
     s = n(232835);
@@ -51,7 +51,7 @@ let p = new f(i.h, {
         if (((o[n.id] = l), (a[t] = [...s, n]), null == i)) return;
         u[n.id] = i;
         let { items: d } = n;
-        null != d && (c[i.id] = { ...n, items: d }), i.nonce ?? i.id;
+        (null != d && (c[i.id] = { ...n, items: d }), i.nonce ?? i.id);
     },
     UPLOAD_COMPRESSION_PROGRESS: function (e) {
         let { channelId: t, file: n } = e;
@@ -84,7 +84,7 @@ let p = new f(i.h, {
     UPLOAD_FILE_UPDATE: function (e) {
         let { channelId: t, file: n } = e,
             l = u[n.id];
-        null != l && (l.nonce ?? l.id), m(t, n);
+        (null != l && (l.nonce ?? l.id), m(t, n));
     },
     UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
         let { file: t, messageId: n } = e;

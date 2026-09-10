@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => w, W$: () => c, zT: () => N }), n(321073);
+(n.d(t, { Ay: () => w, W$: () => c, zT: () => N }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(833272),
@@ -116,7 +116,7 @@ function C(e) {
     let t = d.get(e);
     if (null != t) return t;
     let n = new N(e);
-    return d.set(e, n), n;
+    return (d.set(e, n), n);
 }
 function O(e) {
     let t = g(e);
@@ -141,11 +141,11 @@ function M(e, t) {
     for (let e = 0; e < r.length; e++) {
         let t = r[e];
         if (null != n && "" !== n)
-            if (t === D) (t = n + t), (n = "");
+            if (t === D) ((t = n + t), (n = ""));
             else if (b.test(t)) {
                 n += t;
                 continue;
-            } else i.push(y(n)), (n = "");
+            } else (i.push(y(n)), (n = ""));
         else if (t === v) {
             n = t;
             continue;
@@ -160,7 +160,7 @@ function M(e, t) {
         }
         i.push(a);
     }
-    return null != n && "" !== n && i.push(y(n)), i;
+    return (null != n && "" !== n && i.push(y(n)), i);
 }
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
@@ -187,7 +187,7 @@ let w = {
         let t = R.get(e);
         if (null == t) {
             let n = I[e];
-            (t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t);
+            ((t = s.Ay.filterUnsupportedEmojis(h.slice(n[0], n[1])).map(C)), R.set(e, t));
         }
         return t;
     },
@@ -214,7 +214,7 @@ let w = {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "",
             i = n;
-        return Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? `:${i}:` : i;
+        return (Object.prototype.hasOwnProperty.call(_, e) && (i = _[e]), t ? `:${i}:` : i);
     },
     convertSurrogateToBase: function (e) {
         return O(

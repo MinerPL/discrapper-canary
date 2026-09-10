@@ -59,12 +59,12 @@ function _() {
     );
 }
 function N() {
-    p.clear(), m.clear(), I.clear();
+    (p.clear(), m.clear(), I.clear());
 }
 class T extends i.Ay.Store {
     static displayName = "RTCConnectionDesyncStore";
     initialize() {
-        this.waitFor(g.A, h.default, d.A, c.A), this.syncWith([h.default], _);
+        (this.waitFor(g.A, h.default, d.A, c.A), this.syncWith([h.default], _));
     }
     get desyncedVoiceStatesCount() {
         return p.size();

@@ -1,4 +1,4 @@
-n.d(e, { Zq: () => p, jD: () => f }), n(321073);
+(n.d(e, { Zq: () => p, jD: () => f }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(451988),
@@ -52,7 +52,7 @@ function p(t) {
                         icon: o ? a.CheckmarkLargeIcon : u.LinkIcon,
                         onClick: function (t) {
                             e?.(t, () => {
-                                g(!0), d.start(1e3, () => g(!1));
+                                (g(!0), d.start(1e3, () => g(!1)));
                             });
                         },
                         disabled: o,

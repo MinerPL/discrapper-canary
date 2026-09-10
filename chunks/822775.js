@@ -58,7 +58,7 @@ function E(t) {
                                   label: x.intl.string(x.t["PKQB/H"]),
                                   subtext: x.intl.string(x.t.VYHWKJ),
                                   action: () => {
-                                      _({ action: "EDIT_GUILD_PROFILE" }), R?.(), j(), (0, c.A)(F);
+                                      (_({ action: "EDIT_GUILD_PROFILE" }), R?.(), j(), (0, c.A)(F));
                                   },
                               }),
                               (0, e.jsx)(d.Dr, {
@@ -66,7 +66,7 @@ function E(t) {
                                   label: x.intl.string(x.t.HmFaFB),
                                   subtext: x.intl.string(x.t["+EERMk"]),
                                   action: () => {
-                                      _({ action: "EDIT_PROFILE" }), R?.(), m(), (0, c.A)(F);
+                                      (_({ action: "EDIT_PROFILE" }), R?.(), m(), (0, c.A)(F));
                                   },
                               }),
                           ],

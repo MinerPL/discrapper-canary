@@ -28,15 +28,15 @@ class h extends i.Component {
     _progressId;
     componentDidMount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
-        (this._previewId = e.addListener(this.handlePreviewChange)),
-            (this._progressId = t.addListener(this.handleAnimatedChange));
+        ((this._previewId = e.addListener(this.handlePreviewChange)),
+            (this._progressId = t.addListener(this.handleAnimatedChange)));
     }
     componentWillUnmount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
-        e.removeListener(this._previewId),
+        (e.removeListener(this._previewId),
             t.removeListener(this._progressId),
             window.removeEventListener("mouseup", this.handleDragEnd, !1),
-            window.removeEventListener("mousemove", this.handleDragMove, !1);
+            window.removeEventListener("mousemove", this.handleDragMove, !1));
     }
     handlePreviewChange = () => {
         let {
@@ -89,20 +89,20 @@ class h extends i.Component {
         if ((e.preventDefault(), null == this.wrapper)) return;
         let { left: a, width: o } = this.wrapper.getBoundingClientRect();
         this.setState({ dragging: !0, offsetLeft: a, offsetWidth: o }, () => {
-            t(l),
+            (t(l),
                 n(this.calculatePercentage(s, r), l),
                 i.removeEventListener("mouseup", this.handleDragEnd, !1),
                 i.removeEventListener("mousemove", this.handleDragMove, !1),
                 i.addEventListener("mouseup", this.handleDragEnd, !1),
-                i.addEventListener("mousemove", this.handleDragMove, !1);
+                i.addEventListener("mousemove", this.handleDragMove, !1));
         });
     };
     handleDragEnd = () => {
         let { onDragEnd: e, currentWindow: t } = this.props;
-        e(),
+        (e(),
             t.removeEventListener("mouseup", this.handleDragEnd, !1),
             t.removeEventListener("mousemove", this.handleDragMove, !1),
-            this.setState({ dragging: !1 });
+            this.setState({ dragging: !1 }));
     };
     setBubbleRef = (e) => {
         null == e

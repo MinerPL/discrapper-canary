@@ -42,7 +42,7 @@ class G extends n.PureComponent {
     passwordRef;
     codeRef;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.state = {
                 loginPrefix: "",
                 login: "",
@@ -54,29 +54,29 @@ class G extends n.PureComponent {
                 undelete: !1,
                 errors: {},
                 conditionalMediationAbortController: new AbortController(),
-            });
+            }));
     }
     componentDidMount() {
-        window.addEventListener("keydown", this.handleTabOrEnter),
+        (window.addEventListener("keydown", this.handleTabOrEnter),
             (0, j.a)({
                 abortController: this.state.conditionalMediationAbortController,
                 loginSource: "multi-account",
                 isMultiAccount: !0,
-            });
+            }));
     }
     componentDidUpdate(e, t) {
         let { authenticated: s, transitionTo: r } = this.props;
-        s && !e.authenticated && (r(v.BVt.APP), this.state.conditionalMediationAbortController.abort()),
+        (s && !e.authenticated && (r(v.BVt.APP), this.state.conditionalMediationAbortController.abort()),
             t.errors !== this.state.errors &&
                 (this.hasError("password")
                     ? this.passwordRef?.focus()
                     : this.hasError("email") || this.hasError("login")
                       ? this.loginRef?.focus()
-                      : this.hasError("code") && this.codeRef?.focus());
+                      : this.hasError("code") && this.codeRef?.focus()));
     }
     componentWillUnmount() {
-        window.removeEventListener("keydown", this.handleTabOrEnter),
-            this.state.conditionalMediationAbortController.abort();
+        (window.removeEventListener("keydown", this.handleTabOrEnter),
+            this.state.conditionalMediationAbortController.abort());
     }
     handleQRAuthSuccess = (e) => {
         D.default.track(v.HAw.LOGIN_SUCCESSFUL, {
@@ -89,16 +89,16 @@ class G extends n.PureComponent {
         });
     };
     handleAuthToken = async (e) => {
-        this.setState({ errors: {} }), await m.A.loginToken(e, !1);
+        (this.setState({ errors: {} }), await m.A.loginToken(e, !1));
     };
     handleTabOrEnter = (e) => {
-        "Tab" !== e.key ||
+        ("Tab" !== e.key ||
             e.shiftKey ||
             e.target !== this.loginRef ||
             (this.passwordRef?.focus(), e.stopPropagation(), e.preventDefault()),
             "Enter" === e.key &&
                 (e.target === this.loginRef || e.target === this.passwordRef) &&
-                (this.handleLogin(), e.stopPropagation(), e.preventDefault());
+                (this.handleLogin(), e.stopPropagation(), e.preventDefault()));
     };
     setLoginRef = (e) => {
         this.loginRef = e;
@@ -125,7 +125,7 @@ class G extends n.PureComponent {
         return null;
     };
     handleForgotPassword = async (e) => {
-        e?.preventDefault(), this.loginRef?.focus();
+        (e?.preventDefault(), this.loginRef?.focus());
         let t = this.getFullLogin();
         this.setState({ errors: {} });
         try {
@@ -270,7 +270,7 @@ class G extends n.PureComponent {
         return (0, r.jsx)(E.A, {
             resetToken: e,
             onLoginSuccess: (e) => {
-                this.setState({ errors: {} }), m.A.switchAccountToken(e);
+                (this.setState({ errors: {} }), m.A.switchAccountToken(e));
             },
             ...this.props,
         });
@@ -309,7 +309,7 @@ class G extends n.PureComponent {
     }
     handleLogin = async (e) => {
         let { password: t, undelete: s } = this.state;
-        e?.preventDefault(), this.setState({ errors: {} });
+        (e?.preventDefault(), this.setState({ errors: {} }));
         try {
             await m.A.login({ login: this.getFullLogin(), password: t, undelete: s, isMultiAccount: !0 });
         } catch (t) {
@@ -334,7 +334,7 @@ class G extends n.PureComponent {
         y.A.resendCode(this.getFullLogin());
     };
     handleReset = (e) => {
-        e?.preventDefault(),
+        (e?.preventDefault(),
             m.A.loginReset(!0),
             this.setState({
                 password: "",
@@ -345,7 +345,7 @@ class G extends n.PureComponent {
                 undelete: !1,
                 resetPasswordPhoneToken: null,
                 errors: {},
-            });
+            }));
     };
     handleCancelAccountDeletion = () => {
         this.setState({ undelete: !0 }, this.handleLogin);
@@ -365,7 +365,7 @@ let B = function (e) {
         }));
     (0, R.A)({ type: o.ImpressionTypes.MODAL, name: o.ImpressionNames.USER_LOGIN });
     let h = n.useCallback(() => {
-        t(), i();
+        (t(), i());
     }, [t, i]);
     return (
         n.useEffect(() => {

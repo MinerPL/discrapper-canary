@@ -58,15 +58,15 @@ class V extends i.Ay.Store {
 }
 let B = new V(k.h, {
     RECENT_AVATARS_FETCH_START: function () {
-        (z.isFetching = !0), (z.error = null);
+        ((z.isFetching = !0), (z.error = null));
     },
     RECENT_AVATARS_FETCH_SUCCESS: function (e) {
         let { avatars: t } = e;
-        (G = t), (z.isFetching = !1), (z.lastFetchedAt = Date.now());
+        ((G = t), (z.isFetching = !1), (z.lastFetchedAt = Date.now()));
     },
     RECENT_AVATARS_FETCH_FAILURE: function (e) {
         let { error: t } = e;
-        (z.isFetching = !1), (z.error = t);
+        ((z.isFetching = !1), (z.error = t));
     },
     RECENT_AVATARS_UPDATE: function () {
         z.lastFetchedAt = 0;
@@ -76,7 +76,7 @@ let B = new V(k.h, {
         G = G.filter((e) => e.id !== t);
     },
     LOGOUT: function () {
-        (G = []), (z = O());
+        ((G = []), (z = O()));
     },
 });
 var q = a(652215),
@@ -100,9 +100,9 @@ async function X() {
 }
 async function K(e) {
     try {
-        await U.Bo.del({ url: q.Rsh.RECENT_AVATARS_DELETE(e), rejectWithError: !0 }),
+        (await U.Bo.del({ url: q.Rsh.RECENT_AVATARS_DELETE(e), rejectWithError: !0 }),
             await k.h.dispatch({ type: "RECENT_AVATAR_DELETE", avatarId: e }),
-            w.O.announce(J.intl.string(J.t.YJPieI));
+            w.O.announce(J.intl.string(J.t.YJPieI)));
     } catch (e) {
         D.A.show({ title: J.intl.string(J.t.iufib1), body: J.intl.string(J.t["/ZNT+0"]) });
     }
@@ -184,7 +184,7 @@ function en(e) {
         v = l.useCallback(
             async (e) => {
                 if (null == d || C) return;
-                p(!0), c(null);
+                (p(!0), c(null));
                 let { id: t, storageHash: l, description: s } = e,
                     i = (0, H.Xp)({ userId: d.id, avatarId: t, storageHash: l, size: q.XAf, canAnimate: !0 });
                 try {
@@ -266,7 +266,7 @@ function en(e) {
         y = l.useCallback(
             (e, l, r, s, i) => {
                 let c = l + 1 < t.length ? l + 1 : l - 1;
-                (x.current = c >= 0 ? A.current[c] : m.current),
+                ((x.current = c >= 0 ? A.current[c] : m.current),
                     e.shiftKey
                         ? K(r)
                         : (T(!0),
@@ -282,15 +282,15 @@ function en(e) {
                                       avatarDescription: i,
                                       onConfirmDelete: () => K(r),
                                       onClose: async () => {
-                                          await a(),
+                                          (await a(),
                                               requestAnimationFrame(() => {
                                                   T(!1);
-                                              });
+                                              }));
                                       },
                                       ...l,
                                   });
                               };
-                          }));
+                          })));
             },
             [t],
         );
@@ -597,7 +597,7 @@ function ep(e) {
                     originalAsset: i,
                     isFromTenor: c = !1,
                 } = e;
-                r(), s({ assetOrigin: t, imageUri: a, staticImageUri: n, file: l, originalAsset: i, isFromTenor: c });
+                (r(), s({ assetOrigin: t, imageUri: a, staticImageUri: n, file: l, originalAsset: i, isFromTenor: c }));
             },
             [r, s],
         ),
@@ -746,7 +746,7 @@ function ep(e) {
             );
         }, [C?.page, U, O, S, A, d]);
     l.useEffect(() => {
-        k &&
+        (k &&
             (ec.default.track(q.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: q.JJy.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: P,
@@ -757,7 +757,7 @@ function ep(e) {
                 location: C,
                 location_stack: P,
                 upload_type: d,
-            });
+            }));
     }, [k, C, P, d]);
     let B = A && D,
         X = L && d === ee.HL.AVATAR;

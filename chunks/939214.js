@@ -2,7 +2,7 @@ Object.defineProperty(t, "__esModule", { value: !0 });
 let n = r(88559);
 class a extends n.Filter {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     isValid(e, t) {
         return t.text.replace(" ", "").match(/^\d*(\.\d*)?$/)

@@ -19,8 +19,8 @@ async function f() {
         a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH" });
         let { body: e } = await E.Bo.get({ url: I.Rsh.CHECKOUT_RECOVERY, rejectWithError: !0 }),
             t = e?.is_eligible === !0;
-        t && !h.A.hasFetchedPaymentSources && (await (0, A.$o)()),
-            a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS", isTargeted: t });
+        (t && !h.A.hasFetchedPaymentSources && (await (0, A.$o)()),
+            a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS", isTargeted: t }));
     } catch (e) {
         a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE" });
     }
@@ -81,11 +81,11 @@ class m extends s.A {
     };
     _handlePremiumPaymentModalClose = (e) => {
         let { didSucceed: t } = e;
-        t && null != this._premiumPaymentModalCloseResolve
+        (t && null != this._premiumPaymentModalCloseResolve
             ? this._premiumPaymentModalCloseResolve()
             : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(),
             (this._premiumPaymentModalCloseResolve = null),
-            (this._premiumPaymentModalCloseReject = null);
+            (this._premiumPaymentModalCloseReject = null));
     };
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
@@ -102,7 +102,7 @@ class m extends s.A {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: i, analyticsObject: r } = e ?? {};
         return new Promise((e, s) => {
-            (this._premiumPaymentModalCloseResolve = e),
+            ((this._premiumPaymentModalCloseResolve = e),
                 (this._premiumPaymentModalCloseReject = s),
                 a.h.dispatch({
                     type: "PREMIUM_PAYMENT_MODAL_OPEN",
@@ -110,7 +110,7 @@ class m extends s.A {
                     subscriptionTier: n,
                     followupSKUInfo: i,
                     analyticsObject: r,
-                });
+                }));
         });
     }
 }

@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => m });
+(t.r(n), t.d(n, { default: () => m }));
 var o = t(477900),
     i = t(582128),
     s = t(837381),
@@ -102,7 +102,7 @@ function m() {
                         ref: e,
                         selectedOverride: i,
                         onClick: () => {
-                            t(), n();
+                            (t(), n());
                         },
                         popoutProps: s,
                     }),
@@ -118,7 +118,7 @@ function m() {
                           ref: e,
                           selectedOverride: i,
                           onClick: () => {
-                              t(), n();
+                              (t(), n());
                           },
                           popoutProps: s,
                       }),

@@ -44,7 +44,7 @@ function f(e) {
         E = (0, u.px)(s, c, d),
         S = i.useMemo(() => {
             let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;
-            return f && (e = a.pn.REVIEW), E && (e = a.pn.SELECT_FREE_SKU), e;
+            return (f && (e = a.pn.REVIEW), E && (e = a.pn.SELECT_FREE_SKU), e);
         }, [f, E, t]);
     return (0, l.jsx)(h, { paymentModalStepProps: e, returnStep: a.pn.REVIEW, returnStepIfNoPaymentSources: S });
 }

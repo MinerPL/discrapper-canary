@@ -19,7 +19,7 @@ function d(t) {
             label: i,
             action: function (t) {
                 let i = null != d && t.shiftKey ? d : n;
-                r()(null != i, "cannot copy null text"), (0, c.C)(i, l);
+                (r()(null != i, "cannot copy null text"), (0, c.C)(i, l));
             },
             icon: s ? void 0 : o.L,
             iconLeft: s ? o.L : void 0,

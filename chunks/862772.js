@@ -19,11 +19,11 @@ function A(e, t) {
 let p = {};
 function g() {
     if (n === I.default.locale) return !1;
-    (p = {}), (n = I.default.locale);
+    ((p = {}), (n = I.default.locale));
 }
 class R extends o.Ay.Store {
     initialize() {
-        this.waitFor(I.default), this.syncWith([I.default], g), (n = I.default.locale);
+        (this.waitFor(I.default), this.syncWith([I.default], g), (n = I.default.locale));
     }
     getRecommendations(e, t) {
         if (0 !== e.length && 0 !== t.length) return p[A(e, t)];

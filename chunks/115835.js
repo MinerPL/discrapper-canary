@@ -1,11 +1,11 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.ParsingResult = t.ParsingComponents = t.ReferenceWithTimezone = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.ParsingResult = t.ParsingComponents = t.ReferenceWithTimezone = void 0));
 let n = r(767130),
     a = r(180774),
     i = r(628403);
 class s {
     constructor(e, t) {
-        (this.instant = null != e ? e : new Date()), (this.timezoneOffset = null != t ? t : null);
+        ((this.instant = null != e ? e : new Date()), (this.timezoneOffset = null != t ? t : null));
     }
     static fromDate(e) {
         return new s(e);
@@ -43,13 +43,13 @@ class o {
         if (((this._tags = new Set()), (this.reference = e), (this.knownValues = {}), (this.impliedValues = {}), t))
             for (const e in t) this.knownValues[e] = t[e];
         const r = e.getDateWithAdjustedTimezone();
-        this.imply("day", r.getDate()),
+        (this.imply("day", r.getDate()),
             this.imply("month", r.getMonth() + 1),
             this.imply("year", r.getFullYear()),
             this.imply("hour", 12),
             this.imply("minute", 0),
             this.imply("second", 0),
-            this.imply("millisecond", 0);
+            this.imply("millisecond", 0));
     }
     static createRelativeFromReference(e, t = i.EmptyDuration) {
         let r = (0, i.addDuration)(e.getDateWithAdjustedTimezone(), t),
@@ -91,10 +91,10 @@ class o {
         return Object.keys(this.knownValues);
     }
     imply(e, t) {
-        return e in this.knownValues || (this.impliedValues[e] = t), this;
+        return (e in this.knownValues || (this.impliedValues[e] = t), this);
     }
     assign(e, t) {
-        return (this.knownValues[e] = t), delete this.impliedValues[e], this;
+        return ((this.knownValues[e] = t), delete this.impliedValues[e], this);
     }
     addDurationAsImplied(e) {
         let t = this.dateWithoutTimezoneAdjustment(),
@@ -115,7 +115,8 @@ class o {
         );
     }
     delete(e) {
-        for (let t of ("string" == typeof e && (e = [e]), e)) delete this.knownValues[t], delete this.impliedValues[t];
+        for (let t of ("string" == typeof e && (e = [e]), e))
+            (delete this.knownValues[t], delete this.impliedValues[t]);
     }
     clone() {
         let e = new o(this.reference);
@@ -161,7 +162,7 @@ class o {
         return new Date(e.getTime() + 6e4 * t);
     }
     addTag(e) {
-        return this._tags.add(e), this;
+        return (this._tags.add(e), this);
     }
     addTags(e) {
         for (let t of e) this._tags.add(t);
@@ -180,31 +181,31 @@ class o {
             this.get("second"),
             this.get("millisecond"),
         );
-        return e.setFullYear(this.get("year")), e;
+        return (e.setFullYear(this.get("year")), e);
     }
 }
 t.ParsingComponents = o;
 class u {
     constructor(e, t, r, n, a) {
-        (this.reference = e),
+        ((this.reference = e),
             (this.refDate = e.instant),
             (this.index = t),
             (this.text = r),
             (this.start = n || new o(e)),
-            (this.end = a);
+            (this.end = a));
     }
     clone() {
         let e = new u(this.reference, this.index, this.text);
-        return (e.start = this.start ? this.start.clone() : null), (e.end = this.end ? this.end.clone() : null), e;
+        return ((e.start = this.start ? this.start.clone() : null), (e.end = this.end ? this.end.clone() : null), e);
     }
     date() {
         return this.start.date();
     }
     addTag(e) {
-        return this.start.addTag(e), this.end && this.end.addTag(e), this;
+        return (this.start.addTag(e), this.end && this.end.addTag(e), this);
     }
     addTags(e) {
-        return this.start.addTags(e), this.end && this.end.addTags(e), this;
+        return (this.start.addTags(e), this.end && this.end.addTags(e), this);
     }
     tags() {
         let e = new Set(this.start.tags());

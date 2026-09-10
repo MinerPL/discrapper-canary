@@ -19,7 +19,7 @@ class f extends s.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         RUNNING_GAMES_CHANGE: (e) => {
-            this.fetchRunningGameRecords(e), this.prefetchSdkApplications();
+            (this.fetchRunningGameRecords(e), this.prefetchSdkApplications());
         },
         LOCAL_ACTIVITY_UPDATE: () =>
             i.h.wait(() => {
@@ -41,12 +41,12 @@ class f extends s.A {
         l.YY.fetchMany(...t);
     }
     handlePostConnectionOpen() {
-        (0, A.isDesktop)() && !c.A.fetched && (0, a.Yq)(),
+        ((0, A.isDesktop)() && !c.A.fetched && (0, a.Yq)(),
             r.Ay.getDetectableGames(),
             r.Ay.getDetectableBlocklist(),
             (this.intervalId = setInterval(
                 () => {
-                    r.Ay.getDetectableGames(), r.Ay.getDetectableBlocklist();
+                    (r.Ay.getDetectableGames(), r.Ay.getDetectableBlocklist());
                 },
                 d.A.detectableGamesTtl + Math.random() * _.A.Millis.HOUR,
             )),
@@ -54,12 +54,12 @@ class f extends s.A {
             (this.nonGameIntervalId = setInterval(
                 r.Ay.getDetectableNonGames,
                 h.A.ttl + Math.random() * _.A.Millis.HOUR,
-            ));
+            )));
     }
     _terminate() {
-        null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
+        (null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
             null != this.nonGameIntervalId &&
-                (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0));
+                (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0)));
     }
 }
 let p = new f();

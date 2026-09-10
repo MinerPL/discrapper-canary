@@ -86,7 +86,7 @@ function i(e) {
             (0, s.jsx)(r, {
                 ...e,
                 onClose: () => {
-                    e.closePopout(), i?.();
+                    (e.closePopout(), i?.());
                 },
                 guildId: a,
                 name: n,

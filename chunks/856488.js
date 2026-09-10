@@ -1,4 +1,4 @@
-n.d(t, { A: () => f }), n(321073);
+(n.d(t, { A: () => f }), n(321073));
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -68,7 +68,7 @@ function f() {
                                 label: A.intl.string(A.t.Jqj4cZ),
                                 checked: !e,
                                 action: () => {
-                                    E.hH.updateSetting(!1), (0, l.AC)();
+                                    (E.hH.updateSetting(!1), (0, l.AC)());
                                 },
                             }),
                             (0, i.jsx)(a.iD, {
@@ -77,7 +77,7 @@ function f() {
                                 label: A.intl.string(A.t["1JNcPS"]),
                                 checked: e,
                                 action: () => {
-                                    E.hH.updateSetting(!0), (0, l.AC)();
+                                    (E.hH.updateSetting(!0), (0, l.AC)());
                                 },
                             }),
                         ],
@@ -210,8 +210,8 @@ function f() {
                         label: A.intl.string(I.default["2gFUEw"]),
                         checked: S,
                         action: function () {
-                            c.default.track(h.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
-                                (0, l.Dm)(!S);
+                            (c.default.track(h.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
+                                (0, l.Dm)(!S));
                         },
                     }),
                 },

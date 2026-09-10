@@ -16,7 +16,7 @@ if (u) var m = s(Symbol.prototype.valueOf);
 function v(e, t) {
     if ("object" != typeof e) return !1;
     try {
-        return t(e), !0;
+        return (t(e), !0);
     } catch (e) {
         return !1;
     }
@@ -45,7 +45,7 @@ function x(e) {
 function E(e) {
     return !("u" < typeof DataView) && (x.working ? x(e) : e instanceof DataView);
 }
-(t.isArgumentsObject = n),
+((t.isArgumentsObject = n),
     (t.isGeneratorFunction = i),
     (t.isTypedArray = a),
     (t.isPromise = function (e) {
@@ -109,7 +109,7 @@ function E(e) {
     (_.working = "u" > typeof ArrayBuffer && _(new ArrayBuffer())),
     (t.isArrayBuffer = S),
     (x.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && x(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = E);
+    (t.isDataView = E));
 var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function C(e) {
     return "[object SharedArrayBuffer]" === c(e);
@@ -132,7 +132,7 @@ function I(e) {
 function O(e) {
     return u && v(e, m);
 }
-(t.isSharedArrayBuffer = T),
+((t.isSharedArrayBuffer = T),
     (t.isAsyncFunction = function (e) {
         return "[object AsyncFunction]" === c(e);
     }),
@@ -166,4 +166,4 @@ function O(e) {
                 throw Error(e + " is not supported in userland");
             },
         });
-    });
+    }));

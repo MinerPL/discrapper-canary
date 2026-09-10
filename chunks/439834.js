@@ -2,14 +2,14 @@ var n = (function () {
     function e(e, t) {
         for (var r = 0; r < t.length; r++) {
             var n = t[r];
-            (n.enumerable = n.enumerable || !1),
+            ((n.enumerable = n.enumerable || !1),
                 (n.configurable = !0),
                 "value" in n && (n.writable = !0),
-                Object.defineProperty(e, n.key, n);
+                Object.defineProperty(e, n.key, n));
         }
     }
     return function (t, r, n) {
-        return r && e(t.prototype, r), n && e(t, n), t;
+        return (r && e(t.prototype, r), n && e(t, n), t);
     };
 })();
 r(562210);
@@ -26,7 +26,7 @@ e.exports = (function (e) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (n._parent = e), (n._interpolation = r), (n._listeners = {}), n;
+        return ((n._parent = e), (n._interpolation = r), (n._listeners = {}), n);
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
@@ -53,7 +53,7 @@ e.exports = (function (e) {
                             for (var e in t._listeners) t._listeners[e]({ value: t.__getValue() });
                         }));
                     var r = s();
-                    return (this._listeners[r] = e), r;
+                    return ((this._listeners[r] = e), r);
                 },
             },
             {
@@ -77,8 +77,8 @@ e.exports = (function (e) {
             {
                 key: "__detach",
                 value: function () {
-                    this._parent.__removeChild(this),
-                        (this._parentListener = this._parent.removeListener(this._parentListener));
+                    (this._parent.__removeChild(this),
+                        (this._parentListener = this._parent.removeListener(this._parentListener)));
                 },
             },
         ]),

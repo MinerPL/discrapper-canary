@@ -45,7 +45,7 @@
                         e = e.replace(o, "").replace(a, "").toLowerCase();
                         var t,
                             r = !1;
-                        if (A[e]) (e = A[e]), (r = !0);
+                        if (A[e]) ((e = A[e]), (r = !0));
                         else if ("transparent" == e) return { r: 0, g: 0, b: 0, a: 0, format: "name" };
                         return (t = B.rgb.exec(e))
                             ? { r: t[1], g: t[2], b: t[3] }
@@ -133,7 +133,7 @@
                                 else {
                                     var s = r < 0.5 ? r * (1 + t) : r + t - r * t,
                                         l = 2 * r - s;
-                                    (n = a(l, s, e + 1 / 3)), (i = a(l, s, e)), (o = a(l, s, e - 1 / 3));
+                                    ((n = a(l, s, e + 1 / 3)), (i = a(l, s, e)), (o = a(l, s, e - 1 / 3)));
                                 }
                                 return { r: 255 * n, g: 255 * i, b: 255 * o };
                             })(n.h, p, m)),
@@ -149,7 +149,7 @@
                     b: u(255, c(i.b, 0)),
                     a: f,
                 });
-        (this._originalInput = e),
+        ((this._originalInput = e),
             (this._r = I.r),
             (this._g = I.g),
             (this._b = I.b),
@@ -161,7 +161,7 @@
             this._g < 1 && (this._g = l(this._g)),
             this._b < 1 && (this._b = l(this._b)),
             (this._ok = I.ok),
-            (this._tc_id = s++);
+            (this._tc_id = s++));
     }
     function p(e, t, r) {
         e = D(e, 255);
@@ -224,12 +224,12 @@
     function y(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
-        return (r.s -= t / 100), (r.s = R(r.s)), d(r);
+        return ((r.s -= t / 100), (r.s = R(r.s)), d(r));
     }
     function g(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
-        return (r.s += t / 100), (r.s = R(r.s)), d(r);
+        return ((r.s += t / 100), (r.s = R(r.s)), d(r));
     }
     function b(e) {
         return d(e).desaturate(100);
@@ -237,7 +237,7 @@
     function w(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
-        return (r.l += t / 100), (r.l = R(r.l)), d(r);
+        return ((r.l += t / 100), (r.l = R(r.l)), d(r));
     }
     function _(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -252,16 +252,16 @@
     function S(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = d(e).toHsl();
-        return (r.l -= t / 100), (r.l = R(r.l)), d(r);
+        return ((r.l -= t / 100), (r.l = R(r.l)), d(r));
     }
     function x(e, t) {
         var r = d(e).toHsl(),
             n = (r.h + t) % 360;
-        return (r.h = n < 0 ? 360 + n : n), d(r);
+        return ((r.h = n < 0 ? 360 + n : n), d(r));
     }
     function E(e) {
         var t = d(e).toHsl();
-        return (t.h = (t.h + 180) % 360), d(t);
+        return ((t.h = (t.h + 180) % 360), d(t));
     }
     function k(e) {
         var t = d(e).toHsl(),
@@ -284,20 +284,20 @@
         return [d(e), d({ h: (r + 72) % 360, s: t.s, l: t.l }), d({ h: (r + 216) % 360, s: t.s, l: t.l })];
     }
     function M(e, t, r) {
-        (t = t || 6), (r = r || 30);
+        ((t = t || 6), (r = r || 30));
         var n = d(e).toHsl(),
             i = 360 / r,
             o = [d(e)];
-        for (n.h = (n.h - ((i * t) >> 1) + 720) % 360; --t; ) (n.h = (n.h + i) % 360), o.push(d(n));
+        for (n.h = (n.h - ((i * t) >> 1) + 720) % 360; --t;) ((n.h = (n.h + i) % 360), o.push(d(n)));
         return o;
     }
     function P(e, t) {
         t = t || 6;
-        for (var r = d(e).toHsv(), n = r.h, i = r.s, o = r.v, a = [], s = 1 / t; t--; )
-            a.push(d({ h: n, s: i, v: o })), (o = (o + s) % 1);
+        for (var r = d(e).toHsv(), n = r.h, i = r.s, o = r.v, a = [], s = 1 / t; t--;)
+            (a.push(d({ h: n, s: i, v: o })), (o = (o + s) % 1));
         return a;
     }
-    (d.prototype = {
+    ((d.prototype = {
         isDark: function () {
             return 128 > this.getBrightness();
         },
@@ -337,7 +337,7 @@
             );
         },
         setAlpha: function (e) {
-            return (this._a = O(e)), (this._roundA = l(100 * this._a) / 100), this;
+            return ((this._a = O(e)), (this._roundA = l(100 * this._a) / 100), this);
         },
         toHsv: function () {
             var e = h(this._r, this._g, this._b);
@@ -467,7 +467,7 @@
         },
         _applyModification: function (e, t) {
             var r = e.apply(null, [this].concat([].slice.call(t)));
-            return (this._r = r._r), (this._g = r._g), (this._b = r._b), this.setAlpha(r._a), this;
+            return ((this._r = r._r), (this._g = r._g), (this._b = r._b), this.setAlpha(r._a), this);
         },
         lighten: function () {
             return this._applyModification(w, arguments);
@@ -579,12 +579,12 @@
                 a,
                 s = null,
                 l = 0;
-            (i = (r = r || {}).includeFallbackColors), (o = r.level), (a = r.size);
+            ((i = (r = r || {}).includeFallbackColors), (o = r.level), (a = r.size));
             for (var u = 0; u < t.length; u++) (n = d.readability(e, t[u])) > l && ((l = n), (s = d(t[u])));
             return d.isReadable(e, s, { level: o, size: a }) || !i
                 ? s
                 : ((r.includeFallbackColors = !1), d.mostReadable(e, ["#fff", "#000"], r));
-        });
+        }));
     var A = (d.names = {
             aliceblue: "f0f8ff",
             antiquewhite: "faebd7",
@@ -742,7 +742,7 @@
             return t;
         })(A));
     function O(e) {
-        return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
+        return ((isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e);
     }
     function D(e, r) {
         "string" == typeof (n = e) && -1 != n.indexOf(".") && 1 === parseFloat(n) && (e = "100%");
@@ -763,7 +763,7 @@
         return 1 == e.length ? "0" + e : "" + e;
     }
     function N(e) {
-        return e <= 1 && (e = 100 * e + "%"), e;
+        return (e <= 1 && (e = 100 * e + "%"), e);
     }
     function j(e) {
         return t.round(255 * parseFloat(e)).toString(16);

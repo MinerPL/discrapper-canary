@@ -19,7 +19,7 @@ function o(t) {
         }
     }
     function k() {
-        return r(), o();
+        return (r(), o());
     }
     return (0, a.jsx)(c.Modal, {
         transitionState: n,

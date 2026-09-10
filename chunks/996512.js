@@ -43,7 +43,7 @@ function u(e) {
         background: e.background,
         objects: Object.entries(e.objects).reduce((e, t) => {
             let [n, i] = t;
-            return e.set(+n, i.map(c)), e;
+            return (e.set(+n, i.map(c)), e);
         }, new Map()),
     };
 }

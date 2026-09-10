@@ -10,23 +10,23 @@ function o() {
 function p(e, t) {
     if (null != e) {
         let i = new FileReader();
-        (i.onload = (i) => {
+        ((i.onload = (i) => {
             "string" == typeof i.target?.result && t(i.target.result, e);
         }),
-            i.readAsDataURL(e);
+            i.readAsDataURL(e));
     }
 }
 function h(e, t, i) {
     p(e, (n) => {
         if (e.type === l.a.MP4) return t(n, e);
         let a = new Image();
-        (a.src = n),
+        ((a.src = n),
             (a.onload = () => {
                 t(n, e);
             }),
             (a.onerror = () => {
                 i();
-            });
+            }));
     });
 }
 class d extends a.PureComponent {

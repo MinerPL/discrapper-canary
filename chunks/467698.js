@@ -1,4 +1,4 @@
-t.r(e),
+(t.r(e),
     Intl.ListFormat && "function" == typeof Intl.ListFormat.__addLocaleData
         ? Intl.ListFormat.__addLocaleData({
               data: {
@@ -39,4 +39,4 @@ t.r(e),
                   },
               },
               locale: "nb",
-          });
+          }));

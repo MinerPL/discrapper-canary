@@ -16,10 +16,10 @@ let p = function (t) {
         [f, b] = (0, a.useState)(!1),
         [h, k] = (0, a.useState)(!1);
     async function w() {
-        s.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, { subscription_id: i, member_user_id: e.id }),
-            b(!0);
+        (s.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, { subscription_id: i, member_user_id: e.id }),
+            b(!0));
         let t = await (0, c.oO)(i, e.id);
-        b(!1), t.ok ? p() : k(!0);
+        (b(!1), t.ok ? p() : k(!0));
     }
     return (
         (0, d.Ay)(() => {

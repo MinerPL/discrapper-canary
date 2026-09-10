@@ -11,7 +11,7 @@ async function c(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        (t = await (0, o.A)(e.targetApplicationId, e.channelId)), (n = (0, a.f)());
+        ((t = await (0, o.A)(e.targetApplicationId, e.channelId)), (n = (0, a.f)()));
     } catch {
         return !1;
     }

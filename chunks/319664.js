@@ -62,11 +62,11 @@ function g(s) {
                                         iconPosition: "end",
                                         size: "md",
                                         onClick: function () {
-                                            m.default.track(h.HAw.GUILD_SHOP_PREVIEW_CLICK, {
+                                            (m.default.track(h.HAw.GUILD_SHOP_PREVIEW_CLICK, {
                                                 ...(0, d.H$)(t),
                                                 action_taken: v.hN.GET_STARTED_CLICK,
                                             }),
-                                                o.A.open(t, h.BEX.GUILD_PRODUCTS);
+                                                o.A.open(t, h.BEX.GUILD_PRODUCTS));
                                         },
                                     }),
                             ],

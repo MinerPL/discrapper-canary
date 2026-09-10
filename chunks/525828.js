@@ -1,4 +1,4 @@
-n.d(e, { default: () => E }), n(667532);
+(n.d(e, { default: () => E }), n(667532));
 var t = n(477900);
 n(582128);
 var s = n(562708),
@@ -77,7 +77,7 @@ function E(i) {
                   return u;
               })({ channelId: p, blockedUsers: k, ignoredUsers: T }),
               onDismissAndStay: function () {
-                  x(),
+                  (x(),
                       L(),
                       (0, c.Cs)(new Set([...C, ...I])),
                       d.default.track(N.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
@@ -86,17 +86,17 @@ function E(i) {
                           blocked_user_ids: Array.from(C),
                           ignored_user_ids: Array.from(I),
                           warning_surface: m.gD.PRE_JOIN_MODAL,
-                      });
+                      }));
               },
               onDismissAndLeave: function () {
-                  L(),
+                  (L(),
                       d.default.track(N.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                           action: m.Qi.CLICK_TO_LEAVE,
                           channel_id: p,
                           blocked_user_ids: Array.from(C),
                           ignored_user_ids: Array.from(I),
                           warning_surface: m.gD.PRE_JOIN_MODAL,
-                      });
+                      }));
               },
               leaveButtonText: f.intl.string(f.t.rOXspL),
               stayButtonText: f.intl.string(f.t.VJlc0S),

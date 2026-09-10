@@ -5,17 +5,17 @@ var n,
             ? function (e, t, r, n) {
                   void 0 === n && (n = r);
                   var a = Object.getOwnPropertyDescriptor(t, r);
-                  (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
+                  ((!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) &&
                       (a = {
                           enumerable: !0,
                           get: function () {
                               return t[r];
                           },
                       }),
-                      Object.defineProperty(e, n, a);
+                      Object.defineProperty(e, n, a));
               }
             : function (e, t, r, n) {
-                  void 0 === n && (n = r), (e[n] = t[r]);
+                  (void 0 === n && (n = r), (e[n] = t[r]));
               }),
     i =
         (this && this.__setModuleDefault) ||
@@ -41,14 +41,14 @@ var n,
             if (e && e.__esModule) return e;
             var t = {};
             if (null != e) for (var r = n(e), s = 0; s < r.length; s++) "default" !== r[s] && a(t, e, r[s]);
-            return i(t, e), t;
+            return (i(t, e), t);
         }),
     o =
         (this && this.__importDefault) ||
         function (e) {
             return e && e.__esModule ? e : { default: e };
         };
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.strict =
         t.casual =
         t.Weekday =
@@ -67,7 +67,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         return t.casual.parseDate(e, r, n);
     }),
     (t.createCasualConfiguration = N),
-    (t.createConfiguration = E);
+    (t.createConfiguration = E));
 let u = r(550550),
     l = r(329454);
 Object.defineProperty(t, "Chrono", {
@@ -77,7 +77,7 @@ Object.defineProperty(t, "Chrono", {
     },
 });
 let d = r(115835);
-Object.defineProperty(t, "ParsingResult", {
+(Object.defineProperty(t, "ParsingResult", {
     enumerable: !0,
     get: function () {
         return d.ParsingResult;
@@ -94,9 +94,9 @@ Object.defineProperty(t, "ParsingResult", {
         get: function () {
             return d.ReferenceWithTimezone;
         },
-    });
+    }));
 let c = r(115004);
-Object.defineProperty(t, "Meridiem", {
+(Object.defineProperty(t, "Meridiem", {
     enumerable: !0,
     get: function () {
         return c.Meridiem;
@@ -107,7 +107,7 @@ Object.defineProperty(t, "Meridiem", {
         get: function () {
             return c.Weekday;
         },
-    });
+    }));
 let m = o(r(888234)),
     f = o(r(952421)),
     g = o(r(546778)),
@@ -124,7 +124,7 @@ let m = o(r(888234)),
     A = o(r(451698));
 function N() {
     let e = E();
-    return e.parsers.unshift(new T.default()), e;
+    return (e.parsers.unshift(new T.default()), e);
 }
 function E() {
     let e = (0, u.includeCommonConfiguration)({
@@ -142,6 +142,6 @@ function E() {
         ],
         refiners: [new O.default(), new A.default()],
     });
-    return (e.refiners = e.refiners.filter((e) => !(e instanceof m.default))), e;
+    return ((e.refiners = e.refiners.filter((e) => !(e instanceof m.default))), e);
 }
-(t.hant = s(r(543544))), (t.hans = s(r(735277))), (t.casual = new l.Chrono(N())), (t.strict = new l.Chrono(E()));
+((t.hant = s(r(543544))), (t.hans = s(r(735277))), (t.casual = new l.Chrono(N())), (t.strict = new l.Chrono(E())));

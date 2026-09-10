@@ -39,8 +39,8 @@ var h = r(452767),
         return (
             y(t, r, e) || {
                 start: function (e) {
-                    t.stopTracking(),
-                        r.toValue instanceof o ? t.track(new d(t, r.toValue, h, r, e)) : t.animate(new h(r), e);
+                    (t.stopTracking(),
+                        r.toValue instanceof o ? t.track(new d(t, r.toValue, h, r, e)) : t.animate(new h(r), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -80,7 +80,7 @@ var h = r(452767),
                     e.forEach(function (a, s) {
                         var l = function (a) {
                             if (((n[s] = !0), ++r === e.length)) {
-                                (r = 0), t && t(a);
+                                ((r = 0), t && t(a));
                                 return;
                             }
                             !a.finished && i && o.stop();
@@ -90,7 +90,7 @@ var h = r(452767),
                 },
                 stop: function () {
                     e.forEach(function (e, t) {
-                        n[t] || e.stop(), (n[t] = !0);
+                        (n[t] || e.stop(), (n[t] = !0));
                     });
                 },
             };
@@ -106,7 +106,7 @@ e.exports = {
         return (
             y(t, r, e) || {
                 start: function (e) {
-                    t.stopTracking(), t.animate(new m(r), e);
+                    (t.stopTracking(), t.animate(new m(r), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -119,8 +119,8 @@ e.exports = {
         return (
             y(t, r, e) || {
                 start: function (e) {
-                    t.stopTracking(),
-                        r.toValue instanceof o ? t.track(new d(t, r.toValue, v, r, e)) : t.animate(new v(r), e);
+                    (t.stopTracking(),
+                        r.toValue instanceof o ? t.track(new d(t, r.toValue, v, r, e)) : t.animate(new v(r), e));
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -156,11 +156,11 @@ e.exports = {
             for (var r = arguments.length, n = Array(r), o = 0; o < r; o++) n[o] = arguments[o];
             var s = function e(t, r, n) {
                 if ("number" == typeof r) {
-                    i(
+                    (i(
                         t instanceof a,
                         "Bad mapping of type " + typeof t + " for key " + n + ", event value must map to AnimatedValue",
                     ),
-                        t.setValue(r);
+                        t.setValue(r));
                     return;
                 }
                 for (var n in (i("object" == typeof t, "Bad mapping of type " + typeof t + " for key " + n),
@@ -168,10 +168,10 @@ e.exports = {
                 t))
                     e(t[n], r[n], n);
             };
-            e.forEach(function (e, t) {
+            (e.forEach(function (e, t) {
                 s(e, n[t], "arg" + t);
             }),
-                t && t.listener && t.listener.apply(null, n);
+                t && t.listener && t.listener.apply(null, n));
         };
     },
     isAnimated: p,

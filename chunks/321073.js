@@ -26,8 +26,8 @@ n(
                 e = a(t),
                 n = arguments.length;
             p(e + n);
-            for (var f = 0; f < n; f++) (t[e] = arguments[f]), e++;
-            return i(t, e), e;
+            for (var f = 0; f < n; f++) ((t[e] = arguments[f]), e++);
+            return (i(t, e), e);
         },
     },
 );

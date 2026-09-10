@@ -233,7 +233,7 @@ function H(t) {
 function J(t) {
     let { transitionState: e, onClose: n, userId: s, linkCode: o, teenIdentity: c, onSent: f, onError: C } = t,
         m = (0, S.A)(() => {
-            y.Ay.clearPendingConnection(), f();
+            (y.Ay.clearPendingConnection(), f());
         }),
         R = (0, S.A)((t) => {
             C((0, O.Nv)(t));
@@ -303,7 +303,7 @@ function Z(t) {
         a.useEffect(() => {
             if (!u.current) {
                 if (o) {
-                    (u.current = !0), d();
+                    ((u.current = !0), d());
                     return;
                 }
                 c === I.Tk.UNVERIFIED && ((u.current = !0), E());
@@ -325,7 +325,7 @@ function K(t) {
         [d, E] = a.useState(void 0),
         f = a.useCallback(function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.vW.GENERIC_ERROR;
-            u(t), o(T.ERROR);
+            (u(t), o(T.ERROR));
         }, []),
         C = a.useCallback(
             (t) => {

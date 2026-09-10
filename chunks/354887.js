@@ -25,14 +25,14 @@ class s extends n.AbstractParserWithWordBoundaryChecking {
         let u = new Date(e.refDate.getTime()),
             l = !1,
             d = u.getDay();
-        if ("last" == s || "past" == s) u.setDate(u.getDate() + (i - 7 - d)), (l = !0);
-        else if ("next" == s) u.setDate(u.getDate() + (i + 7 - d)), (l = !0);
+        if ("last" == s || "past" == s) (u.setDate(u.getDate() + (i - 7 - d)), (l = !0));
+        else if ("next" == s) (u.setDate(u.getDate() + (i + 7 - d)), (l = !0));
         else if ("this" == s) u.setDate(u.getDate() + (i - d));
         else {
             let e = i - d;
-            Math.abs(e - 7) < Math.abs(e) && (e -= 7),
+            (Math.abs(e - 7) < Math.abs(e) && (e -= 7),
                 Math.abs(e + 7) < Math.abs(e) && (e += 7),
-                u.setDate(u.getDate() + e);
+                u.setDate(u.getDate() + e));
         }
         return (
             r.start.assign("weekday", i),

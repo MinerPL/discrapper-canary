@@ -17,7 +17,7 @@ class c extends n.A {
         return { ...t, summary: t.summary.default, description: t.description?.default };
     }
     constructor(t) {
-        super(), (this.subscriptions = t.subscriptions), (this.otps = t.otps);
+        (super(), (this.subscriptions = t.subscriptions), (this.otps = t.otps));
     }
 }
 var u = r(67480),
@@ -49,7 +49,7 @@ class C extends o.Ay.Store {
 let O = new C(i.h, {
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (t) {
         let { applicationId: e, layout: r } = t;
-        p.set(e, c.createFromServer(r)), T.delete(e);
+        (p.set(e, c.createFromServer(r)), T.delete(e));
     },
     APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (t) {
         let { applicationId: e } = t;

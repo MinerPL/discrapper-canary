@@ -44,7 +44,7 @@ function m(e, t) {
                         type: a.Ck.SUCCESS,
                     });
                 }
-                (0, l.closeModal)(f),
+                ((0, l.closeModal)(f),
                     A(!1),
                     g &&
                         ("visible" === document.visibilityState
@@ -52,7 +52,7 @@ function m(e, t) {
                             : document.addEventListener("visibilitychange", function t() {
                                   "visible" === document.visibilityState &&
                                       (e(), document.removeEventListener("visibilitychange", t));
-                              }));
+                              })));
             }
         }, [E, t, _, g]),
         C

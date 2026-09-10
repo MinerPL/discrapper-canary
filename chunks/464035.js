@@ -78,14 +78,14 @@ class B extends s.PureComponent {
             (this.setState({ submitting: !0 }),
             C.A.createChannelFollower(s, e.id)
                 .then(() => {
-                    A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
+                    (A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
                         t(),
                         (0, o.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([l.e("418319"), l.e("628907")]).then(
                                 l.bind(l, 209674),
                             );
                             return (t) => (0, n.jsx)(e, { ...t });
-                        });
+                        }));
                 })
                 .catch((e) => {
                     e.body.code === L.t02.TOO_MANY_WEBHOOKS
@@ -247,7 +247,7 @@ let z = r.Ay.connectStores(
                         let t = E.A.getChannel(e.parent_id);
                         return { channel: e, category: null != t ? (0, j.m1)(t, I.default, F.A) : null };
                     });
-                return l.length > 0 && (e[t.id] = { guild: t, channels: l }), e;
+                return (l.length > 0 && (e[t.id] = { guild: t, channels: l }), e);
             }, {}),
             s = k.Ay.getLastChannelFollowingDestination();
         return {

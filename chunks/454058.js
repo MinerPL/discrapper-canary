@@ -78,10 +78,10 @@ function N() {
 class R extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
-        this.waitFor(d.default, o.A, h.Ay, u.Ay, c.A, g.Ay, C.Ay, a.A), this.syncWith([C.Ay], N);
+        (this.waitFor(d.default, o.A, h.Ay, u.Ay, c.A, g.Ay, C.Ay, a.A), this.syncWith([C.Ay], N));
     }
     getNewChannelIds(e) {
-        return null != e && null == f[e] && m(e), null != e ? (f[e] ?? y) : y;
+        return (null != e && null == f[e] && m(e), null != e ? (f[e] ?? y) : y);
     }
     shouldIndicateNewChannel(e, t) {
         if (null == e) return !1;
@@ -97,7 +97,7 @@ let L = new R(s.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == f[t]) return !1;
-        n.forEach((e) => f[t].delete(e)), 0 === f[t].size && delete f[t];
+        (n.forEach((e) => f[t].delete(e)), 0 === f[t].size && delete f[t]);
     },
     CHANNEL_ACK: () => !0,
     CHANNEL_SELECT: function (e) {
@@ -105,7 +105,7 @@ let L = new R(s.h, {
         if (null == t) return !1;
         let i = f[t],
             s = !1;
-        return (null == i || S[t] < Date.now() - p.A.Millis.HOUR) && (m(t), (s = !0)), null != n && w(t, n), s;
+        return ((null == i || S[t] < Date.now() - p.A.Millis.HOUR) && (m(t), (s = !0)), null != n && w(t, n), s);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
@@ -119,7 +119,7 @@ let L = new R(s.h, {
     CACHE_LOADED: v,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return _(t.id) && E.add(t.id), !1;
+        return (_(t.id) && E.add(t.id), !1);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -140,11 +140,11 @@ let L = new R(s.h, {
                 !0
             );
         }
-        return n || E.delete(t.id), !1;
+        return (n || E.delete(t.id), !1);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete f[t.id], E.delete(t.id);
+        (delete f[t.id], E.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;

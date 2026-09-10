@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     EW: () => m,
     LZ: () => N,
     NN: () => C,
@@ -22,7 +22,7 @@ n.d(t, {
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var i = n(284009),
     r = n.n(i),
     a = n(435558),
@@ -35,7 +35,7 @@ function d(e) {
         let e = t > i ? i / t : 1;
         t = Math.max(Math.round(t * e), a);
         let l = (n = Math.max(Math.round(n * e), s)) > r ? r / n : 1;
-        (t = Math.max(Math.round(t * l), a)), (n = Math.max(Math.round(n * l), s));
+        ((t = Math.max(Math.round(t * l), a)), (n = Math.max(Math.round(n * l), s)));
     }
     return { width: t, height: n };
 }
@@ -51,9 +51,9 @@ function c(e, t) {
 function u(e) {
     let { width: t, height: n, maxWidth: i, maxHeight: r } = e,
         a = 1;
-    t > i && (a = i / t), (t = Math.round(t * a));
+    (t > i && (a = i / t), (t = Math.round(t * a)));
     let s = 1;
-    return (n = Math.round(n * a)) > r && (s = r / n), Math.min(a * s, 1);
+    return ((n = Math.round(n * a)) > r && (s = r / n), Math.min(a * s, 1));
 }
 function _(e) {
     let { width: t, height: n, maxWidth: i, maxHeight: r } = e;
@@ -77,10 +77,10 @@ function I(e, t, n) {
     let l = (function (e, t, n) {
             let i = [];
             for (let r = 0, a, s, l, o, d; r < t; r += n)
-                (s = e[(a = 4 * r) + 0]),
+                ((s = e[(a = 4 * r) + 0]),
                     (l = e[a + 1]),
                     (o = e[a + 2]),
-                    (void 0 === (d = e[a + 3]) || d >= 125) && !(s > 250 && l > 250 && o > 250) && i.push([s, l, o]);
+                    (void 0 === (d = e[a + 3]) || d >= 125) && !(s > 250 && l > 250 && o > 250) && i.push([s, l, o]));
             return i;
         })(r.getImageData(0, 0, a, s).data, a * s, n),
         d = o()(l, t);
@@ -93,29 +93,29 @@ let p = s().memoize(
     (e) =>
         new Promise((t, n) => {
             let i = new Image();
-            (i.crossOrigin = "Anonymous"),
+            ((i.crossOrigin = "Anonymous"),
                 (i.onerror = (e) => {
-                    n(e), (i.onerror = i.onload = null), (i = null);
+                    (n(e), (i.onerror = i.onload = null), (i = null));
                 }),
                 (i.onload = () => {
-                    t(I(i, 5, 10)), (i.onerror = i.onload = null), (i = null);
+                    (t(I(i, 5, 10)), (i.onerror = i.onload = null), (i = null));
                 }),
-                (i.src = e);
+                (i.src = e));
         }),
 );
 function T(e) {
     return new Promise((t, n) => {
         let i = new FileReader();
-        i.readAsDataURL(e),
+        (i.readAsDataURL(e),
             (i.onload = () => {
-                r()("string" == typeof i.result, "Result must be a string"), t(i.result);
+                (r()("string" == typeof i.result, "Result must be a string"), t(i.result));
             }),
-            (i.onerror = (e) => n(e));
+            (i.onerror = (e) => n(e)));
     });
 }
 function m(e) {
     let t = e.split(";base64,");
-    return r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length;
+    return (r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length);
 }
 async function g(e, t, n) {
     let i = S(e);
@@ -138,6 +138,6 @@ async function N(e) {
 function C(e) {
     return new Promise((t, n) => {
         let i = new Image();
-        i.addEventListener("load", t), i.addEventListener("error", n), (i.src = e);
+        (i.addEventListener("load", t), i.addEventListener("error", n), (i.src = e));
     });
 }

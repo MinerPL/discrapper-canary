@@ -75,7 +75,7 @@ var a = d(41851),
                 throw "a";
             } catch (l) {
                 try {
-                    return l.toSource(), !0;
+                    return (l.toSource(), !0);
                 } catch {
                     return !1;
                 }
@@ -87,7 +87,7 @@ var a = d(41851),
                 let d = new AbortController(),
                     i = setTimeout(() => d.abort(), t),
                     e = await fetch(l, { signal: d.signal });
-                return clearTimeout(i), await e.json();
+                return (clearTimeout(i), await e.json());
             } catch {
                 return null;
             }
@@ -205,14 +205,14 @@ async function X() {
     }
     let d = new Promise((d, i) => {
             l = setTimeout(() => {
-                t.abort(), i(Error("Request timeout"));
+                (t.abort(), i(Error("Request timeout")));
             }, 3e3);
         }),
         i = fetch("https://api.ipify.org?format=json", { signal: t.signal })
             .then((l) => l.json())
             .then((l) => l.ip),
         e = await Promise.race([i, d]);
-    return clearTimeout(l), e;
+    return (clearTimeout(l), e);
 }
 var r = class {
     async getIp() {
@@ -222,9 +222,9 @@ var r = class {
                   (e = (async () => {
                       try {
                           let l = await X();
-                          return (i = l), l;
+                          return ((i = l), l);
                       } catch {
-                          return (i = ""), "";
+                          return ((i = ""), "");
                       } finally {
                           e = void 0;
                       }
@@ -283,8 +283,8 @@ async function g(l = {}) {
                       a,
                       n = !1;
                   try {
-                      (l = (e = await Y(i)).features),
-                          (n = l?.find((l) => "DISABLE_IPIFY" === l.feature)?.enabled ?? !1);
+                      ((l = (e = await Y(i)).features),
+                          (n = l?.find((l) => "DISABLE_IPIFY" === l.feature)?.enabled ?? !1));
                   } catch {
                       e = { sessionIdentifier: "" };
                   }
@@ -294,12 +294,12 @@ async function g(l = {}) {
                       try {
                           let l = new M(new r()),
                               t = new o();
-                          (a = await T(
+                          ((a = await T(
                               { disableIpify: b, hostingApp: d, signal: i },
                               { fingerprintProvider: l, browserEnv: t },
                           )),
                               (m = !0),
-                              (0, Z.n)();
+                              (0, Z.n)());
                       } catch (l) {
                           console.warn("Failed to submit device fingerprint:", l);
                       }
@@ -330,7 +330,7 @@ async function g(l = {}) {
                       { features: e, disableIpify: b, fingerprintSuccess: m, fingerprintResult: a }
                   );
               })().finally(() => {
-                  (x = null), (0, s._)()?.start();
+                  ((x = null), (0, s._)()?.start());
               }));
 }
 function D() {
@@ -343,7 +343,7 @@ function U() {
     return w;
 }
 function F() {
-    (V = !1),
+    ((V = !1),
         (L = null),
         (I = !1),
         (C = !1),
@@ -352,5 +352,5 @@ function F() {
         (y = null),
         (i = void 0),
         (e = void 0),
-        (0, Z.r)();
+        (0, Z.r)());
 }

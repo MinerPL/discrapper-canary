@@ -206,12 +206,12 @@ function ee(e) {
         { analyticsLocations: l } = (0, T.Ay)(D.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, y.Ay)(() => {
-            R.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
+            (R.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: z.e.VIDEO_BACKGROUNDS_INLINE,
                 location: s.location,
                 location_stack: l,
             }),
-                (0, M.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, B.uq)(z.e.VIDEO_BACKGROUNDS_INLINE));
+                (0, M.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, l, () => (0, B.uq)(z.e.VIDEO_BACKGROUNDS_INLINE)));
         }),
         (0, n.jsx)(X, { onClick: t, tooltipText: J.intl.string(J.t["IqE0T/"]) })
     );
@@ -392,12 +392,12 @@ function el(e) {
         U = { isVideoBackgroundSupported: h, onSelectBackgroundOption: E, selectedBackgroundOption: g },
         y = l.useRef(U);
     function D(e) {
-        E(e),
+        (E(e),
             (0, A.S1)(e, _, { location: S.location })
                 .then(() => I(null))
                 .catch(() => {
-                    I(J.intl.string(J.t.ejrSLe)), (0, A.S1)(null, _, { location: S.location });
-                });
+                    (I(J.intl.string(J.t.ejrSLe)), (0, A.S1)(null, _, { location: S.location }));
+                }));
     }
     return (
         l.useEffect(() => {
@@ -455,7 +455,7 @@ function el(e) {
                               return new Promise(async (n) => {
                                   try {
                                       let n = await (0, u.F9)(e, H.yZ.BACKGROUND);
-                                      D(n), (0, x.D1)(n, t.type === en.a.MP4, s), I(null);
+                                      (D(n), (0, x.D1)(n, t.type === en.a.MP4, s), I(null));
                                   } catch (e) {
                                       I(e.message);
                                   }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => w }), n(321073);
+(n.d(t, { A: () => w }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -57,7 +57,7 @@ function P() {
 class U extends a.Ay.Store {
     static displayName = "ApplicationBuildStore";
     initialize() {
-        this.syncWith([A.A], b), this.waitFor(u.A, h.A, I.A, A.A, E.A);
+        (this.syncWith([A.A], b), this.waitFor(u.A, h.A, I.A, A.A, E.A));
     }
     getTargetBuildId(e, t) {
         return null == g[t] ? null : g[t].id;
@@ -101,11 +101,11 @@ let w = new U(l.h, {
                 return t;
             }),
             s = r.id;
-        S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), M(t, n);
+        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), M(t, n));
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
-        m.delete(t), S.add(t);
+        (m.delete(t), S.add(t));
     },
     APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
         let { buildId: t } = e;

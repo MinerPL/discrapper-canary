@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, D: () => h }), n(321073);
+(n.d(t, { A: () => N, D: () => h }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -66,9 +66,9 @@ class S extends a.Ay.PersistedStore {
     static displayName = "FrecencyStore";
     static persistKey = "FrecencyStore";
     initialize(e) {
-        this.waitFor(d.A, c.A, u.Ay, _.A, o.A),
+        (this.waitFor(d.A, c.A, u.Ay, _.A, o.A),
             null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && E.Ut1.test(e.key))), (g = e)),
-            this.syncWith([o.A], m);
+            this.syncWith([o.A], m));
     }
     getState() {
         return g;

@@ -25,7 +25,7 @@ function v(e) {
     t !== i && (u(t), l(!1));
     let c = n.useCallback(() => {
             (0, j.C)(t, () => {
-                l(!0), o.O.announce(p.intl.string(p.t["+5kSoW"])), a.start(1e3, () => l(!1));
+                (l(!0), o.O.announce(p.intl.string(p.t["+5kSoW"])), a.start(1e3, () => l(!1)));
             });
         }, [t, a]),
         d = p.intl.string(r ? p.t["+5kSoW"] : p.t.WqhZss);

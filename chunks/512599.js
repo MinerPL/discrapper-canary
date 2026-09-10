@@ -68,7 +68,7 @@ let h = o().throttle((e) => {
     });
 }, 5e3);
 function I(e) {
-    i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), h({ ...a.A.getState(), ...e });
+    (i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), h({ ...a.A.getState(), ...e }));
 }
 function f(e) {
     i.h.dispatch({ type: "POGGERMODE_UPDATE_COMBO", ...e });

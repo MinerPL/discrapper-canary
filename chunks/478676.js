@@ -1,4 +1,5 @@
 e.exports = (function () {
+    "use strict";
     var e,
         t,
         r,
@@ -48,15 +49,15 @@ e.exports = (function () {
                     ? o.push(s)
                     : u.map((e) => {
                           let t = e.charCodeAt(0);
-                          i.has(t) || i.set(t, []), i.get(t).push(s);
+                          (i.has(t) || i.set(t, []), i.get(t).push(s));
                       });
             }
             var c = function (t, a) {
                     var s = [];
                     r = a = a || r;
                     var u = (a._parseDepth ?? 0) + 1;
-                    if (u > 1e3) return t && s.push({ type: "text", content: t }), s;
-                    for (r = a = Object.assign({}, a, { _parseDepth: u }); t; ) {
+                    if (u > 1e3) return (t && s.push({ type: "text", content: t }), s);
+                    for (r = a = Object.assign({}, a, { _parseDepth: u }); t;) {
                         for (
                             var l = null, d = null, f = null, p = -1e5, h = 1e5, g = [i.get(t.charCodeAt(0)), o], v = 0;
                             v < g.length;
@@ -89,11 +90,11 @@ e.exports = (function () {
                                 "`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?",
                             );
                         var x = d.parse(f, c, a);
-                        Array.isArray(x)
+                        (Array.isArray(x)
                             ? Array.prototype.push.apply(s, x)
                             : (null == x.type && (x.type = l), s.push(x)),
                             (a.prevCapture = f),
-                            (t = t.substring(a.prevCapture[0].length));
+                            (t = t.substring(a.prevCapture[0].length)));
                     }
                     return s;
                 },
@@ -104,25 +105,25 @@ e.exports = (function () {
                         c(d(e), r)
                     );
                 };
-            return (c.rules = e), (l.rules = e), l;
+            return ((c.rules = e), (l.rules = e), l);
         },
         h = function (e) {
             var t = function (t, r) {
                 return r.inline ? e.exec(t) : null;
             };
-            return (t.regex = e), t;
+            return ((t.regex = e), t);
         },
         g = function (e) {
             var t = function (t, r) {
                 return r.inline ? null : e.exec(t);
             };
-            return (t.regex = e), t;
+            return ((t.regex = e), t);
         },
         v = function (e) {
             var t = function (t, r) {
                 return e.exec(t);
             };
-            return (t.regex = e), t;
+            return ((t.regex = e), t);
         },
         y = ("function" == typeof Symbol && Symbol.for && Symbol.for("react.transitional.element")) || 60103,
         m = function (e, t, r) {
@@ -165,7 +166,7 @@ e.exports = (function () {
             var n = r.inline || !1;
             r.inline = !0;
             var i = e(t, r);
-            return (r.inline = n), i;
+            return ((r.inline = n), i);
         },
         k = function (e, t, r) {
             return { content: D(t, e[1], r) };
@@ -225,7 +226,7 @@ e.exports = (function () {
                                     .map(function (e) {
                                         return a(e, n, i, t);
                                     }));
-                        return (i.inline = !1), { type: "table", header: c, align: l, cells: d };
+                        return ((i.inline = !1), { type: "table", header: c, align: l, cells: d });
                     };
                 })(!0),
                 parseNpTable: s(!1),
@@ -239,13 +240,13 @@ e.exports = (function () {
             var n = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[n]) {
                 var i = t._defs[n];
-                (r.target = i.target), (r.title = i.title);
+                ((r.target = i.target), (r.title = i.title));
             }
-            return (t._refs = t._refs || {}), (t._refs[n] = t._refs[n] || []), t._refs[n].push(r), r;
+            return ((t._refs = t._refs || {}), (t._refs[n] = t._refs[n] || []), t._refs[n].push(r), r);
         },
         W = !1;
     try {
-        RegExp("(?<=a)"), RegExp("(?<!a)"), (W = !1);
+        (RegExp("(?<=a)"), RegExp("(?<!a)"), (W = !1));
     } catch (e) {}
     var $ = 0,
         Y = {
@@ -263,7 +264,7 @@ e.exports = (function () {
                                 s.content += e[o + 1].content;
                         i.push(t(s, r));
                     }
-                    return (r.key = n), i;
+                    return ((r.key = n), i);
                 },
                 html: function (e, t, r) {
                     for (var n = "", i = 0; i < e.length; i++) {
@@ -379,12 +380,12 @@ e.exports = (function () {
                             s = d;
                             var f = r.inline,
                                 p = r._list;
-                            (r._list = !0),
+                            ((r._list = !0),
                                 d
                                     ? ((r.inline = !1), (i = c.replace(_, "\n\n")))
-                                    : ((r.inline = !0), (i = c.replace(_, "")));
+                                    : ((r.inline = !0), (i = c.replace(_, ""))));
                             var h = t(i, r);
-                            return (r.inline = f), (r._list = p), h;
+                            return ((r.inline = f), (r._list = p), h);
                         }),
                     };
                 },
@@ -416,7 +417,7 @@ e.exports = (function () {
                         r._refs &&
                             r._refs[n] &&
                             r._refs[n].forEach(function (e) {
-                                (e.target = i), (e.title = o);
+                                ((e.target = i), (e.title = o));
                             }),
                         (r._defs = r._defs || {}),
                         (r._defs[n] = { target: i, title: o }),
@@ -734,11 +735,11 @@ e.exports = (function () {
         },
         G = p(Y),
         X = function (e, t) {
-            return ((t = t || {}).inline = !1), G(e, t);
+            return (((t = t || {}).inline = !1), G(e, t));
         },
         K = function (e, t) {
             var r = R.test(e);
-            return ((t = t || {}).inline = !r), G(e, t);
+            return (((t = t || {}).inline = !r), G(e, t));
         },
         J = z(Y, "react"),
         Z = z(Y, "html"),
@@ -757,7 +758,7 @@ e.exports = (function () {
             var n = r.inline || !1;
             r.inline = !1;
             var i = e(t + "\n\n", r);
-            return (r.inline = n), i;
+            return ((r.inline = n), i);
         },
         markdownToReact: Q,
         markdownToHtml: function (e, t) {
@@ -766,11 +767,11 @@ e.exports = (function () {
         ReactMarkdown: function (e) {
             var t = {};
             for (var r in e) "source" !== r && Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
-            return (t.children = Q(e.source)), m("div", null, t);
+            return ((t.children = Q(e.source)), m("div", null, t));
         },
         defaultBlockParse: X,
         defaultInlineParse: function (e, t) {
-            return ((t = t || {}).inline = !0), G(e, t);
+            return (((t = t || {}).inline = !0), G(e, t));
         },
         defaultImplicitParse: K,
         defaultReactOutput: J,
@@ -802,7 +803,7 @@ e.exports = (function () {
                         ? ((a += u), (o[o.length - 1] = a))
                         : (o.push(u), (a = u));
                 }
-                return (n.key = i), o;
+                return ((n.key = i), o);
             };
             return t;
         },

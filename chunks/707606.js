@@ -8,5 +8,5 @@ function r(e) {
             children: (i) => (0, l.jsx)(e, { ...t, ref: n, analyticsContext: i }),
         }),
     );
-    return (t.displayName = `withAnalyticsContext(${e.displayName ?? e.name})`), t;
+    return ((t.displayName = `withAnalyticsContext(${e.displayName ?? e.name})`), t);
 }

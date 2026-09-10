@@ -69,7 +69,7 @@ function p(t) {
               id: "game-profile",
               label: d.intl.string(d.t.ajHoOr),
               action: (t) => {
-                  r?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), f(t);
+                  (r?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), f(t));
               },
           });
 }

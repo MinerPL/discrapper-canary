@@ -27,24 +27,24 @@ class N extends n.PureComponent {
         ]).start(e);
     }
     componentWillEnter(e) {
-        this.state.opacity.setValue(0),
+        (this.state.opacity.setValue(0),
             this.state.height.setValue(0),
             l.A.parallel([
                 l.A.timing(this.state.opacity, { toValue: 1, duration: 200 }),
                 l.A.timing(this.state.height, { toValue: this.props.height ?? 61, duration: 200 }),
-            ]).start(e);
+            ]).start(e));
     }
     handleMouseEnter = () => {
         let { isFocused: e, isActive: t, onOtherHover: s } = this.props,
             { isContextMenuActive: i } = this.state;
-        this.setState({ hovered: e }), !e || t || i || s?.();
+        (this.setState({ hovered: e }), !e || t || i || s?.());
     };
     handleMouseLeave = () => {
         this.setState({ hovered: !1 });
     };
     handleContextMenu = (e, t) => {
         let { analyticsLocations: n } = this.props;
-        this.setState({ isContextMenuActive: !0 }),
+        (this.setState({ isContextMenuActive: !0 }),
             (0, h.L3)(
                 e,
                 async () => {
@@ -80,7 +80,7 @@ class N extends n.PureComponent {
                         this.setState({ isContextMenuActive: !1 });
                     },
                 },
-            );
+            ));
     };
     render() {
         let { height: e, opacity: t, hovered: s, isContextMenuActive: n } = this.state,

@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(321073);
+(n.d(t, { A: () => m }), n(321073));
 var i = n(17928),
     r = n(713402),
     a = n(228366),
@@ -11,7 +11,7 @@ let o = (e, t) => `${t}-${e}`,
     _ = new r.J(
         function (e) {
             let t = [];
-            return t.push(d(e.applicationId)), t.push(c(e.id)), t.push(u(e.type)), t;
+            return (t.push(d(e.applicationId)), t.push(c(e.id)), t.push(u(e.type)), t);
         },
         (e) => `${e.since}`,
     ),
@@ -22,7 +22,7 @@ function I() {
     let e = 0,
         t = 0,
         n = 0;
-    _.values().forEach((i) => {
+    (_.values().forEach((i) => {
         let { type: r, id: a } = i;
         if (r === l.eA$.FRIEND) n += 1;
         else if (r === l.eA$.PENDING_OUTGOING) t += 1;
@@ -33,7 +33,7 @@ function I() {
     }),
         (E = e),
         (A = t),
-        (h = n);
+        (h = n));
 }
 function f(e) {
     _.set(o(e.id, e.applicationId), e);
@@ -82,7 +82,7 @@ class T extends i.Ay.Store {
 }
 let m = new T(a.h, {
     CONNECTION_OPEN: function (e) {
-        _.clear(),
+        (_.clear(),
             e.gameRelationships.forEach((e) => {
                 f({
                     id: e.id,
@@ -92,13 +92,13 @@ let m = new T(a.h, {
                     dmAccessType: e.dm_access_type,
                 });
             }),
-            I();
+            I());
     },
     GAME_RELATIONSHIP_ADD: function (e) {
-        f(e.gameRelationship), I();
+        (f(e.gameRelationship), I());
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
-        p(e.userId, e.applicationId), I();
+        (p(e.userId, e.applicationId), I());
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;

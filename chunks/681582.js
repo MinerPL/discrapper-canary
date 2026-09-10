@@ -16,7 +16,7 @@ function u(e) {
         [m, A] = i.useState(!1),
         v = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         y = i.useCallback((e) => {
-            p.current.delete(e), A(p.current.size > 0);
+            (p.current.delete(e), A(p.current.size > 0));
         }, []),
         x = i.useCallback((e) => (p.current.add(e), A(!0), () => y(e)), [y]),
         w = i.useCallback((e, t) => {
@@ -26,17 +26,17 @@ function u(e) {
         h?.clearConfetti();
     }, [h, v]);
     let E = i.useCallback((e) => {
-            window.clearTimeout(g.current),
+            (window.clearTimeout(g.current),
                 (g.current = window.setTimeout(() => {
-                    (e.width = 0), (e.height = 0);
-                }, 1e4));
+                    ((e.width = 0), (e.height = 0));
+                }, 1e4)));
         }, []),
         C = i.useCallback((e) => {
             window.clearTimeout(g.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
                 let { width: e, height: n } = t.getBoundingClientRect();
-                (t.width = e * window.devicePixelRatio), (t.height = n * window.devicePixelRatio);
+                ((t.width = e * window.devicePixelRatio), (t.height = n * window.devicePixelRatio));
             }
         }, []),
         b = i.useCallback(
@@ -53,7 +53,7 @@ function u(e) {
             return (
                 t.observe(e),
                 () => {
-                    t.disconnect(), window.clearTimeout(g.current);
+                    (t.disconnect(), window.clearTimeout(g.current));
                 }
             );
         }, [h, E]),

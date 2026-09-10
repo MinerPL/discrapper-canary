@@ -18,6 +18,6 @@ class l extends i.Ay.Store {
 let o = new l(r.h, {
     APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function (e) {
         let { categories: t } = e;
-        (a = t), (s = Date.now());
+        ((a = t), (s = Date.now()));
     },
 });

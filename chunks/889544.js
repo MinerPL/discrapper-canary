@@ -24,7 +24,7 @@ class f {
             (this.canvas = (function (t, e) {
                 if ("function" == typeof OffscreenCanvas) return new OffscreenCanvas(t, e);
                 let i = document.createElement("canvas");
-                return (i.width = t), (i.height = e), i;
+                return ((i.width = t), (i.height = e), i);
             })(a, s)),
             (this.context = this.canvas.getContext("2d")),
             (this.cells = r),
@@ -39,12 +39,12 @@ class f {
             throw Error("couldn't create 2d canvas context.");
     }
     drawInto(t, e, i, n) {
-        (e %= this.frameCount), this.requireFrame(e);
+        ((e %= this.frameCount), this.requireFrame(e));
         let [r, a, s, h] = p(e, this.frameWidth, this.frameHeight, this.cells);
         t.drawImage(this.canvas, r, a, s, h, 0, 0, i, n);
     }
     drop() {
-        this.native?.drop(), (this.native = null);
+        (this.native?.drop(), (this.native = null));
     }
     requireFrame(t) {
         null != this.native &&
@@ -66,11 +66,11 @@ class f {
 function p(t, e, i, n) {
     return [Math.floor(t / n) * e, (t % n) * i, e, i];
 }
-i(393431), i(532706), i(42231), i(232424), i(949626), i(767709), i(65162);
+(i(393431), i(532706), i(42231), i(232424), i(949626), i(767709), i(65162));
 let v = (0, i(795521).u)(async () => {
     let t = await Promise.all([i.e("563197"), i.e("545082")]).then(i.bind(i, 145025)),
         e = await t.default();
-    (a = e.cwrap("lottie_create", "number", ["string"])),
+    ((a = e.cwrap("lottie_create", "number", ["string"])),
         (s = e._lottie_destroy),
         (h = e._lottie_draw_into_bgra),
         (o = e._lottie_draw_into_rgba),
@@ -78,7 +78,7 @@ let v = (0, i(795521).u)(async () => {
         (c = e._lottie_frame_rate),
         (m = e._memory_create),
         (n = e),
-        (r = m(409600));
+        (r = m(409600)));
 });
 function w(t, e) {
     return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4);
@@ -128,7 +128,7 @@ let A = new (class {
         entries;
         referenceCounts;
         constructor() {
-            (this.entries = []), (this.referenceCounts = new Map());
+            ((this.entries = []), (this.referenceCounts = new Map()));
         }
         create(t, e, i, n, r) {
             let a = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5];
@@ -199,7 +199,7 @@ class C {
         onError: h,
     }) {
         const o = t.getContext("2d");
-        d()(null != o, "couldn't get canvas 2d context."),
+        (d()(null != o, "couldn't get canvas 2d context."),
             (this.canvas = t),
             (this.canvasContext = o),
             (this.animation = null),
@@ -225,36 +225,36 @@ class C {
                 })
                 .catch((t) => {
                     h?.();
-                });
+                }));
     }
     setState(t, e) {
-        null != e && (t || e === this.currentFrame || this.draw(e), (this.currentFrame = e)),
+        (null != e && (t || e === this.currentFrame || this.draw(e), (this.currentFrame = e)),
             t && !this.animate && this.resumeAnimation(),
             (this.animate = t),
-            this.scheduleOrCancelTick();
+            this.scheduleOrCancelTick());
     }
     setVisibility(t) {
         let e = this.visible;
-        (this.visible = t), this.visible && !e && this.resumeAnimation(), this.scheduleOrCancelTick();
+        ((this.visible = t), this.visible && !e && this.resumeAnimation(), this.scheduleOrCancelTick());
     }
     resumeAnimation() {
         this.currentFrameTime = performance.now();
     }
     onInitialAnimationTick = (t) => {
-        (this.requestAnimationFrameId = null),
+        ((this.requestAnimationFrameId = null),
             (performance.now() - t < 30 || k) &&
                 this.draw(0) &&
                 (this.resumeAnimation(), this.onInitialDraw?.(), (this.hasInitialFrame = !0)),
-            this.scheduleOrCancelTick();
+            this.scheduleOrCancelTick());
     };
     onAnimationTick = (t) => {
         this.requestAnimationFrameId = null;
         let e = performance.now(),
             i = Math.floor(((k ? e : t) - this.currentFrameTime) / this.frameDuration);
-        i > 0 &&
+        (i > 0 &&
             ((e - t < 12 || k) && (this.draw(this.currentFrame), (this.currentFrame += i)),
             (this.currentFrameTime += i * this.frameDuration)),
-            this.scheduleOrCancelTick();
+            this.scheduleOrCancelTick());
     };
     clear() {
         this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -266,11 +266,11 @@ class C {
         );
     }
     drop() {
-        (this.animate = !1),
+        ((this.animate = !1),
             this.scheduleOrCancelTick(),
             A.drop(this.key),
             (this.animation = null),
-            (this.dropped = !0);
+            (this.dropped = !0));
     }
     scheduleOrCancelTick() {
         this.dropped ||
@@ -279,13 +279,13 @@ class C {
                 : this.requestAnimationFrame(this.onInitialAnimationTick));
     }
     requestAnimationFrame(t) {
-        null != t && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(t)),
+        (null != t && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(t)),
             null != t &&
                 null != this.requestAnimationFrameId &&
                 (cancelAnimationFrame(this.requestAnimationFrameId),
                 (this.requestAnimationFrameId = requestAnimationFrame(t))),
             null == t &&
                 null != this.requestAnimationFrameId &&
-                (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = null));
+                (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = null)));
     }
 }

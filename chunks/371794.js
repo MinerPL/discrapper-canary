@@ -1,4 +1,4 @@
-n.d(t, { QB: () => h, YE: () => I, aP: () => f }), n(321073);
+(n.d(t, { QB: () => h, YE: () => I, aP: () => f }), n(321073));
 var i = n(975975),
     r = n.n(i),
     a = n(607399),
@@ -12,7 +12,7 @@ var i = n(975975),
     E = n(676279);
 n(723702);
 var A = n(652215);
-n(375708), r().shim();
+(n(375708), r().shim());
 let h = !a.Fr && !a.v1 && -1 !== (0, E.Z5)();
 function I(e, t, n, i) {
     let r,
@@ -46,7 +46,7 @@ async function f(e) {
         n = d.default.isAuthenticated();
     if (t && n) {
         let e = [];
-        u.A.hasFetchedPaymentSources || e.push(c.A.paymentSourcesFetchRequest ?? (0, l.$o)()),
+        (u.A.hasFetchedPaymentSources || e.push(c.A.paymentSourcesFetchRequest ?? (0, l.$o)()),
             c.A.ipCountryCodeLoaded || e.push((0, l.xe)()),
             e.push(
                 new Promise(async (e) => {
@@ -59,12 +59,12 @@ async function f(e) {
                           : (await (0, l.hP)(), e());
                 }),
             ),
-            await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 1e4))]);
+            await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 1e4))]));
     }
     let i = u.A.getDefaultBillingCountryCode(),
         r = u.A.defaultPaymentSource?.id ?? null,
         a = _.A.getPremiumTypeSubscription();
-    null != a && null != a.paymentSourceId && (r = a.paymentSourceId), null === i && (i = c.A.ipCountryCode ?? null);
+    (null != a && null != a.paymentSourceId && (r = a.paymentSourceId), null === i && (i = c.A.ipCountryCode ?? null));
     let o = {};
     if ((null != i && (o.country_code = i), null != r && (o.payment_source_id = r), null != i || null != r)) {
         if (

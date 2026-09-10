@@ -7,7 +7,7 @@ let l = new Map(),
     o = new Map();
 function d(e, t) {
     let n = new Map(t.map((e) => [e.application_id, e]));
-    l.set(e, { identities: t, byApplication: n }), o.set(e, "FETCHED");
+    (l.set(e, { identities: t, byApplication: n }), o.set(e, "FETCHED"));
 }
 class c extends r.Ay.Store {
     getUserIdentities(e) {
@@ -28,7 +28,7 @@ let u = new c(a.h, {
         o.set(e.userId, "FETCHING");
     },
     USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS: function (e) {
-        o.set(e.userId, "FETCHED"), d(e.userId, e.identities);
+        (o.set(e.userId, "FETCHED"), d(e.userId, e.identities));
     },
     USER_APPLICATION_IDENTITY_FETCH_USER_FAILURE: function (e) {
         o.set(e.userId, "FETCHED");

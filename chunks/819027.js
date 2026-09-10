@@ -15,8 +15,8 @@ function h(e) {
         id: "voice-settings",
         label: c.intl.string(c.t.NiTd0e),
         action: () => {
-            (0, u.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
-                (0, a.A)(e, e === d.BRT.POPOUT);
+            ((0, u.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
+                (0, a.A)(e, e === d.BRT.POPOUT));
         },
         icon: r.SettingsIcon,
         leadingAccessory: { type: "icon", icon: r.SettingsIcon },

@@ -22,7 +22,7 @@ function c(l, t = {}) {
             return (
                 e && d && a.load && a.load(),
                 () => {
-                    l(), e && a.stop?.();
+                    (l(), e && a.stop?.());
                 }
             );
         }, [a, d, e]),
@@ -55,11 +55,11 @@ function Z({ status: l, onFinish: t, onError: d, error: e, errorCode: c, moduleE
     (0, i._)(() => {
         if (!n.current) {
             if ("finished" === l) {
-                (n.current = !0), t?.();
+                ((n.current = !0), t?.());
                 return;
             }
             if ("closed" === l) {
-                (n.current = !0), d?.(void 0);
+                ((n.current = !0), d?.(void 0));
                 return;
             }
             (s ?? ["error"]).includes(l) && ((n.current = !0), void 0 !== a ? d?.(e, c, a) : d?.(e, c));
@@ -75,7 +75,7 @@ function b(l, t) {
             let d = () => e(t.scrollHeight > t.clientHeight);
             d();
             let i = new ResizeObserver(d);
-            return i.observe(t), () => i.disconnect();
+            return (i.observe(t), () => i.disconnect());
         }, [t, l]),
         d
     );
@@ -88,7 +88,7 @@ function m() {
                 if ("u" < typeof window) return;
                 let t = window.matchMedia(l),
                     i = () => d(t.matches);
-                return t.addEventListener("change", i), () => t.removeEventListener("change", i);
+                return (t.addEventListener("change", i), () => t.removeEventListener("change", i));
             }, [l]),
             t
         );
@@ -103,7 +103,7 @@ function u(l, t) {
         if (!d || "u" < typeof ResizeObserver) return void t();
         t();
         let i = new ResizeObserver(t);
-        return i.observe(d), () => i.disconnect();
+        return (i.observe(d), () => i.disconnect());
     }, [l, t]);
 }
 function h(l, t) {
@@ -122,9 +122,9 @@ function W() {
         }, []),
         d = (0, i.h)(
             (d, i) => {
-                t(), (l.current = window.setTimeout(d, i));
+                (t(), (l.current = window.setTimeout(d, i)));
             },
             [t],
         );
-    return (0, i._)(() => t, [t]), (0, i.d)(() => ({ schedule: d, clear: t }), [d, t]);
+    return ((0, i._)(() => t, [t]), (0, i.d)(() => ({ schedule: d, clear: t }), [d, t]));
 }

@@ -25,7 +25,7 @@ function b(n) {
                               id: n.id,
                               label: n.name,
                               action: (a) => {
-                                  n.id !== t && l.Wp(b.id, b.branchId, n.id), o?.(a);
+                                  (n.id !== t && l.Wp(b.id, b.branchId, n.id), o?.(a));
                               },
                           },
                           n.id,

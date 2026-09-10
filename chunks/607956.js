@@ -9,14 +9,14 @@ var l = t(477900),
 function s(e) {
     let { groupId: a, onSelect: s } = e,
         c = n.useCallback(() => {
-            (0, d.openModalLazy)(async () => {
+            ((0, d.openModalLazy)(async () => {
                 let { default: e } = await t.e("51080").then(t.bind(t, 297147));
                 return (t) => (0, l.jsx)(e, { ...t, groupId: a });
             }),
-                (0, u.Z_)();
+                (0, u.Z_)());
         }, [a]),
         p = n.useCallback(() => {
-            i.A.deleteGroup(a), (0, u.Z_)();
+            (i.A.deleteGroup(a), (0, u.Z_)());
         }, [a]);
     return (0, l.jsxs)(r.W, {
         "data-menu-migrated": !0,

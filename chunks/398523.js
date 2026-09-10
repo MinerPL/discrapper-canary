@@ -1,7 +1,7 @@
-i.d(t, { A: () => s, b: () => a });
-var n = i(945810);
+n.d(t, { A: () => r, b: () => a });
+var i = n(945810);
 let a = 20,
-    s = (0, n.mj)({
+    r = (0, i.mj)({
         name: "2026-03-steelseries-3p-recurring",
         kind: "user",
         defaultConfig: { enabled: !1 },

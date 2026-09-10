@@ -6,7 +6,7 @@ let l = function (e) {
         isFocused: t,
         handleFocus: s.useCallback(
             (t) => {
-                e(t), n(!0);
+                (e(t), n(!0));
             },
             [e, n],
         ),

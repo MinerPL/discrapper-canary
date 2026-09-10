@@ -24,7 +24,7 @@ function c(e) {
                           try {
                               return t(e.config);
                           } catch (e) {
-                              return a.error(`Failed to parse dynamic config for experiment ${o}`, e), null;
+                              return (a.error(`Failed to parse dynamic config for experiment ${o}`, e), null);
                           }
                       })(e))),
                   _);

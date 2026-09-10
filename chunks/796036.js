@@ -51,19 +51,19 @@ function _() {
         p.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
-                (n.className = h.tF),
+                ((n.className = h.tF),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
                     v(n, s.A.isBuilderPreviewMobile()),
-                    document.body.appendChild(n);
+                    document.body.appendChild(n));
                 let i = { frameId: t, element: n, unregisterLookup: () => {} };
-                p.set(e, i),
+                (p.set(e, i),
                     (i.unregisterLookup = (0, c.mn)(e, () => (0, u.F)(n, t))),
-                    l.A.registerFrameTarget(t, n, r.A.Backstage);
+                    l.A.registerFrameTarget(t, n, r.A.Backstage));
             })(t, n);
     let g = s.A.isBuilderPreviewMobile();
     for (let e of p.values()) v(e.element, g);
 }
 function v(e, t) {
-    e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t);
+    (e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t));
 }

@@ -28,12 +28,12 @@ function b(e) {
         y = t.useMemo(() => (null != E && null != M && (0, g.c)(E, M) ? M : null), [E, M]),
         L = (0, r.bG)([N.default], () => N.default.getCurrentUser()),
         _ = t.useMemo(() => C?.authorIds ?? [], [C]);
-    t.useEffect(() => {
+    (t.useEffect(() => {
         x.A.requestMembersById(b, _);
     }, [b, _]),
         t.useEffect(() => {
             null != y && (0, j.A)(y.id, y.getAvatarURL(b, 48), { guildId: b });
-        }, [y, b]);
+        }, [y, b]));
     let k = f.Ay.useName(b, null, y),
         U = (0, v.tx)(L);
     if (null == y || null == L || null == C) return null;

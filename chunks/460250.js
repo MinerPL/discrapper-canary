@@ -2,14 +2,14 @@ var n = (function () {
     function e(e, t) {
         for (var r = 0; r < t.length; r++) {
             var n = t[r];
-            (n.enumerable = n.enumerable || !1),
+            ((n.enumerable = n.enumerable || !1),
                 (n.configurable = !0),
                 "value" in n && (n.writable = !0),
-                Object.defineProperty(e, n.key, n);
+                Object.defineProperty(e, n.key, n));
         }
     }
     return function (t, r, n) {
-        return r && e(t.prototype, r), n && e(t, n), t;
+        return (r && e(t.prototype, r), n && e(t, n), t);
     };
 })();
 r(562210);
@@ -49,19 +49,19 @@ e.exports = (function (e) {
             {
                 key: "setValue",
                 value: function (e) {
-                    this.x.setValue(e.x), this.y.setValue(e.y);
+                    (this.x.setValue(e.x), this.y.setValue(e.y));
                 },
             },
             {
                 key: "setOffset",
                 value: function (e) {
-                    this.x.setOffset(e.x), this.y.setOffset(e.y);
+                    (this.x.setOffset(e.x), this.y.setOffset(e.y));
                 },
             },
             {
                 key: "flattenOffset",
                 value: function () {
-                    this.x.flattenOffset(), this.y.flattenOffset();
+                    (this.x.flattenOffset(), this.y.flattenOffset());
                 },
             },
             {
@@ -73,7 +73,7 @@ e.exports = (function (e) {
             {
                 key: "stopAnimation",
                 value: function (e) {
-                    this.x.stopAnimation(), this.y.stopAnimation(), e && e(this.__getValue());
+                    (this.x.stopAnimation(), this.y.stopAnimation(), e && e(this.__getValue()));
                 },
             },
             {
@@ -82,17 +82,17 @@ e.exports = (function (e) {
                     var t = this,
                         r = s(),
                         n = function (r) {
-                            r.value, e(t.__getValue());
+                            (r.value, e(t.__getValue()));
                         };
-                    return (this._listeners[r] = { x: this.x.addListener(n), y: this.y.addListener(n) }), r;
+                    return ((this._listeners[r] = { x: this.x.addListener(n), y: this.y.addListener(n) }), r);
                 },
             },
             {
                 key: "removeListener",
                 value: function (e) {
-                    this.x.removeListener(this._listeners[e].x),
+                    (this.x.removeListener(this._listeners[e].x),
                         this.y.removeListener(this._listeners[e].y),
-                        delete this._listeners[e];
+                        delete this._listeners[e]);
                 },
             },
             {

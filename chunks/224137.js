@@ -7,7 +7,7 @@ let n = r(793277),
     u = RegExp("(" + n.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
 class l extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     innerPattern() {
         return this.strictMode ? u : o;

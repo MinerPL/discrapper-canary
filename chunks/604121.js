@@ -27,7 +27,7 @@ class o extends a.Component {
             "object" == typeof o && null != o && "default" in o && "string" == typeof o.default
                 ? { path: o.default }
                 : { animationData: o };
-        (this.animation = d.loadAnimation({
+        ((this.animation = d.loadAnimation({
             container: this.animationRef.current,
             renderer: a,
             loop: t,
@@ -40,7 +40,7 @@ class o extends a.Component {
                       this.animation?.play();
                   })
                 : this.playOrPauseAnimation(),
-            this.animation?.addEventListener("complete", this.handleComplete);
+            this.animation?.addEventListener("complete", this.handleComplete));
     };
     componentDidMount() {
         (null != this.props.versionKey && this.props.versionKey < 0) || this.loadAnimation();
@@ -52,8 +52,8 @@ class o extends a.Component {
                 : this.playOrPauseAnimation(e));
     }
     componentWillUnmount() {
-        null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)),
-            this.delayTimeout.stop();
+        (null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)),
+            this.delayTimeout.stop());
     }
     playOrPauseAnimation(e) {
         null != this.animation &&

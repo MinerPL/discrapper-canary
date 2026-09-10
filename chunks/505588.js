@@ -16,12 +16,12 @@ var r = n(834647),
     g = function (e, t) {
         var n,
             r = a(b, this);
-        i ? (n = i(new y(), r ? o(this) : b)) : c((n = r ? this : l(b)), m, "Error"),
+        (i ? (n = i(new y(), r ? o(this) : b)) : c((n = r ? this : l(b)), m, "Error"),
             void 0 !== t && c(n, "message", f(t)),
             p(n, g, n.stack, 1),
-            arguments.length > 2 && d(n, arguments[2]);
+            arguments.length > 2 && d(n, arguments[2]));
         var s = [];
-        return h(e, v, { that: s }), c(n, "errors", s), n;
+        return (h(e, v, { that: s }), c(n, "errors", s), n);
     };
 i ? i(g, y) : s(g, y, { name: !0 });
 var b = (g.prototype = l(y.prototype, { constructor: u(1, g), message: u(1, ""), name: u(1, "AggregateError") }));

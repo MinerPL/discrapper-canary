@@ -18,7 +18,7 @@ class a {
     badgeOverride;
     hideBadge;
     constructor(e) {
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.skuIds = e.skuIds),
             (this.name = e.name),
             (this.summary = e.summary),
@@ -32,7 +32,7 @@ class a {
             (this.primaryCollectionWillUnpublishAt = e.primaryCollectionWillUnpublishAt),
             (this.gameApplicationId = e.gameApplicationId),
             (this.badgeOverride = e.badgeOverride),
-            (this.hideBadge = e.hideBadge);
+            (this.hideBadge = e.hideBadge));
     }
     static fromServer(e) {
         let { sku_ids: t, options: n, created_at: s, updated_at: l, skus: o, tenant_metadata: d, ...c } = e;

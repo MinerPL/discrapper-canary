@@ -22,7 +22,7 @@ function c(e, n) {
                                 if (0 !== n || null == t.icon || "" === t.icon || null == t.name || "" === t.name)
                                     return void l(void 0);
                                 let s = `data:image/png;base64,${t.icon}`;
-                                a.set(e, s), l(s);
+                                (a.set(e, s), l(s));
                             });
                     })
                     .catch(() => {

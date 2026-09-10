@@ -1,14 +1,14 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.AbstractTimeExpressionParser = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.AbstractTimeExpressionParser = void 0));
 let n = r(115004);
 t.AbstractTimeExpressionParser = class {
     constructor(e = !1) {
-        (this.cachedPrimaryPrefix = null),
+        ((this.cachedPrimaryPrefix = null),
             (this.cachedPrimarySuffix = null),
             (this.cachedPrimaryTimePattern = null),
             (this.cachedFollowingPhase = null),
             (this.cachedFollowingSuffix = null),
             (this.cachedFollowingTimePatten = null),
-            (this.strictMode = e);
+            (this.strictMode = e));
     }
     patternFlags() {
         return "i";
@@ -27,7 +27,7 @@ t.AbstractTimeExpressionParser = class {
     }
     extract(e, t) {
         let r = this.extractPrimaryTimeComponents(e, t);
-        if (!r) return t[0].match(/^\d{4}/) ? (t.index += 4) : (t.index += t[0].length), null;
+        if (!r) return (t[0].match(/^\d{4}/) ? (t.index += 4) : (t.index += t[0].length), null);
         let n = t.index + t[1].length,
             a = t[0].substring(t[1].length),
             i = e.createParsingResult(n, a, r);
@@ -51,7 +51,7 @@ t.AbstractTimeExpressionParser = class {
             o = parseInt(t[2]);
         if (o > 100) {
             if ((4 == t[2].length && null == t[3] && !t[6]) || this.strictMode || null != t[3]) return null;
-            (i = o % 100), (o = Math.floor(o / 100));
+            ((i = o % 100), (o = Math.floor(o / 100)));
         }
         if (o > 24) return null;
         if (null != t[3]) {
@@ -62,8 +62,8 @@ t.AbstractTimeExpressionParser = class {
         if ((o > 12 && (s = n.Meridiem.PM), null != t[6])) {
             if (o > 12) return null;
             let e = t[6][0].toLowerCase();
-            "a" == e && ((s = n.Meridiem.AM), 12 == o && (o = 0)),
-                "p" == e && ((s = n.Meridiem.PM), 12 != o && (o += 12));
+            ("a" == e && ((s = n.Meridiem.AM), 12 == o && (o = 0)),
+                "p" == e && ((s = n.Meridiem.PM), 12 != o && (o += 12)));
         }
         if (
             (a.assign("hour", o),
@@ -109,7 +109,7 @@ t.AbstractTimeExpressionParser = class {
         if ((i >= 12 && (o = n.Meridiem.PM), null != t[6])) {
             if (i > 12) return null;
             let e = t[6][0].toLowerCase();
-            "a" == e &&
+            ("a" == e &&
                 ((o = n.Meridiem.AM), 12 == i && ((i = 0), a.isCertain("day") || a.imply("day", a.get("day") + 1))),
                 "p" == e && ((o = n.Meridiem.PM), 12 != i && (i += 12)),
                 r.start.isCertain("meridiem") ||
@@ -117,7 +117,7 @@ t.AbstractTimeExpressionParser = class {
                         ? (r.start.imply("meridiem", n.Meridiem.AM),
                           12 == r.start.get("hour") && r.start.assign("hour", 0))
                         : (r.start.imply("meridiem", n.Meridiem.PM),
-                          12 != r.start.get("hour") && r.start.assign("hour", r.start.get("hour") + 12)));
+                          12 != r.start.get("hour") && r.start.assign("hour", r.start.get("hour") + 12))));
         }
         return (
             a.assign("hour", i),

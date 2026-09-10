@@ -40,33 +40,33 @@ class S extends n.Ay.Store {
 }
 let _ = new S(s.h, {
     CONNECTION_OPEN: function (e) {
-        (d = {}),
+        ((d = {}),
             (o = e.friendSuggestionCount) > 0
                 ? ((f = !0), !u && f && ((u = !0), (f = !1), h.A.fetch()))
                 : (function () {
                       arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  })();
+                  })());
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         let t = p(e.suggestion);
         if (null != d[t.key]) return !1;
-        o++, (d = { ...d, [t.key]: t });
+        (o++, (d = { ...d, [t.key]: t }));
     },
     FRIEND_SUGGESTION_DELETE: function (e) {
-        (o = Math.max(0, --o)), delete d[e.suggestedUserId];
+        ((o = Math.max(0, --o)), delete d[e.suggestedUserId]);
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        (u = !1),
+        ((u = !1),
             (t = e.suggestions),
             (d = a()
                 .chain(t)
                 .map((e) => p(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (o = a().keys(d).length);
+            (o = a().keys(d).length));
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        (u = !1), (d = {});
+        ((u = !1), (d = {}));
     },
 });

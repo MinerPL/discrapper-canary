@@ -34,7 +34,7 @@ function f(e) {
         }),
         u = r.useCallback(
             (e) => {
-                e.stopPropagation(), c(e);
+                (e.stopPropagation(), c(e));
             },
             [c],
         );
@@ -60,10 +60,10 @@ class p extends r.PureComponent {
     componentDidUpdate(e) {
         if (null != this.props.width && null != this.props.resizeConfig && e.width !== this.props.width) {
             let t = this._width ?? e.width ?? this.props.width;
-            (this._width = this.props.width),
+            ((this._width = this.props.width),
                 null != this._innerDivRef.current &&
                     (Math.abs(t - this._width) > 40 && (this._innerDivRef.current.style.transition = "none"),
-                    (this._innerDivRef.current.style.width = `${this.props.width}px`));
+                    (this._innerDivRef.current.style.width = `${this.props.width}px`)));
         }
         (e.edgeOffsetTop !== this.props.edgeOffsetTop ||
             e.edgeOffsetLeft !== this.props.edgeOffsetLeft ||
@@ -82,7 +82,7 @@ class p extends r.PureComponent {
         let t = this._innerDivRef.current;
         if (null != t) {
             let e = t.getBoundingClientRect();
-            (this._boundWidth = e.width), (this._boundHeight = e.height);
+            ((this._boundWidth = e.width), (this._boundHeight = e.height));
         }
         let {
                 edgeOffsetTop: n,
@@ -168,21 +168,21 @@ class p extends r.PureComponent {
         this._draggable = e;
     };
     handleResize = (e) => {
-        (this._width = e), this.state.isResizing || this.setState({ isResizing: !0 });
+        ((this._width = e), this.state.isResizing || this.setState({ isResizing: !0 }));
     };
     handleResizeEnd = (e) => {
         let { onResize: t, resizeConfig: n } = this.props;
         if (null == n) return;
         let i = I(e, n);
-        (this._width = i), t?.(i), this.setState({ isResizing: !1 }), this.ensureWidth();
+        ((this._width = i), t?.(i), this.setState({ isResizing: !1 }), this.ensureWidth());
     };
     handleDragStart = (e, t) => {
-        (this._velocityX = 0),
+        ((this._velocityX = 0),
             (this._velocityY = 0),
             (this._lastMoveX = e),
             (this._lastMoveY = t),
             (this._lastMoveTime = new Date()),
-            this.props.onDragStart?.(e, t);
+            this.props.onDragStart?.(e, t));
     };
     handleDrag = (e, t) => {
         let n = new Date(),

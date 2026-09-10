@@ -3,8 +3,8 @@ var r = n(596479),
     o = function (e, t) {
         var n = e.length;
         if (n < 8)
-            for (var i, s, l = 1; l < n; ) {
-                for (s = l, i = e[l]; s && t(e[s - 1], i) > 0; ) e[s] = e[--s];
+            for (var i, s, l = 1; l < n;) {
+                for (s = l, i = e[l]; s && t(e[s - 1], i) > 0;) e[s] = e[--s];
                 s !== l++ && (e[s] = i);
             }
         else

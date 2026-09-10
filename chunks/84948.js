@@ -16,13 +16,13 @@ function s(e) {
             .replace(/=/g, "")
     );
 }
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300);
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300));
 let l = new r.A("SignalHelpers.web"),
     o = window.GLOBAL_ENV.WEBAUTHN_ORIGIN;
 async function d(e, t, n) {
     if (!a.d4) return null;
     if (i.Av && (0, i.cX)() && window.DiscordNative?.webAuthn?.[e] != null)
-        return await window.DiscordNative.nativeModules.ensureModule("discord_webauthn"), t;
+        return (await window.DiscordNative.nativeModules.ensureModule("discord_webauthn"), t);
     let r = await PublicKeyCredential.getClientCapabilities?.();
     return void 0 !== r && r[e] ? n : null;
 }
@@ -41,8 +41,8 @@ let c = class {
         if (null == n) return;
         let i = s(t),
             r = e.map((e) => e.cred_id).filter((e) => "" !== e);
-        l.info("signalAllAcceptedCredentials", { rpId: o, encodedUserId: i, allAcceptedCredentialIds: r }),
-            await n(o, i, r).catch(l.warn);
+        (l.info("signalAllAcceptedCredentials", { rpId: o, encodedUserId: i, allAcceptedCredentialIds: r }),
+            await n(o, i, r).catch(l.warn));
     }
     static async signalCurrentUserDetails(e) {
         let t = await d(
@@ -55,8 +55,8 @@ let c = class {
         let n = e.email ?? e.global_name ?? e.username,
             i = e.username,
             r = s(e.id);
-        l.info("signalCurrentUserDetails", { rpId: o, userId: r, name: n, displayName: i }),
-            await t(o, r, n, i).catch(l.warn);
+        (l.info("signalCurrentUserDetails", { rpId: o, userId: r, name: n, displayName: i }),
+            await t(o, r, n, i).catch(l.warn));
     }
     static async signalUnknownCredential(e) {
         let t = await d(
@@ -66,6 +66,6 @@ let c = class {
         );
         if (null == t) return;
         let n = "string" == typeof e ? JSON.parse(e).id : e.cred_id;
-        l.info("signalUnknownCredential", { rpId: o, credentialId: n }), await t(o, n).catch(l.warn);
+        (l.info("signalUnknownCredential", { rpId: o, credentialId: n }), await t(o, n).catch(l.warn));
     }
 };

@@ -10,14 +10,14 @@ class l extends i.A {
     sku;
     addedAt;
     constructor(t) {
-        super(),
+        (super(),
             (this.skuId = t.sku_id),
             (this.skuProductLine = t.sku_product_line),
             (this.skuName = t.sku_name),
             (this.isOwned = t.is_owned),
             (this.gifterUserId = t.gifter_user_id),
             (this.sku = t.sku),
-            (this.addedAt = t.added_at);
+            (this.addedAt = t.added_at));
     }
     static fromServer(t) {
         let { sku_id: e, sku_product_line: r, sku_name: i, is_owned: s, gifter_user_id: u, sku: a, ...o } = t;

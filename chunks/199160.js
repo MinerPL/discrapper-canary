@@ -12,7 +12,7 @@ function o(e) {
 function d(e) {
     let { scheduledMessageId: t } = e;
     if (!l.has(t) && null == s[t]) return !1;
-    (l = new Set(l)).delete(t), (s = { ...s }), delete s[t];
+    ((l = new Set(l)).delete(t), (s = { ...s }), delete s[t]);
 }
 function c(e) {
     let { scheduledMessageId: t } = e;
@@ -20,7 +20,7 @@ function c(e) {
     (l = new Set(l)).delete(t);
 }
 function u() {
-    (a = !1), (s = {}), (l = new Set());
+    ((a = !1), (s = {}), (l = new Set()));
 }
 class _ extends i.Ay.Store {
     static displayName = "scheduledMessageStore";

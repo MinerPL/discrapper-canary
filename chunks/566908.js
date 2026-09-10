@@ -1,10 +1,10 @@
-n.d(t, {
-    Lg: () => V,
+(n.d(t, {
+    Lg: () => B,
     Sc: () => v,
     UF: () => L,
     US: () => P,
     Vf: () => U,
-    Y8: () => B,
+    Y8: () => V,
     ZG: () => x,
     _O: () => w,
     dx: () => C,
@@ -15,7 +15,7 @@ n.d(t, {
     yz: () => k,
     zs: () => y,
 }),
-    n(938796);
+    n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(536637),
@@ -42,7 +42,7 @@ class O {
     enabled = !1;
     limit = 0;
     constructor(e, t) {
-        r()(null != t.limit, "Config is missing scheduled message limit"), (this.enabled = e), (this.limit = t.limit);
+        (r()(null != t.limit, "Config is missing scheduled message limit"), (this.enabled = e), (this.limit = t.limit));
     }
 }
 let R = (0, c.mj)({
@@ -108,7 +108,7 @@ function F(e, t) {
             : { limit: e.limit, isUpgradable: !0 }
         : { limit: 0, isUpgradable: !1 };
 }
-function V(e) {
+function B(e) {
     var t;
     return {
         userId: e.user_id,
@@ -131,7 +131,7 @@ function V(e) {
         record: (0, u.rh)({ ...e.message_preview, timestamp: e.send_at_timestamp }),
     };
 }
-function B(e) {
+function V(e) {
     switch (e) {
         case T.A.SCHEDULED:
             return { isError: !1, stateMessage: N.intl.string(N.t.Fn6Odn) };

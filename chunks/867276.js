@@ -11,7 +11,7 @@ let o = function (t) {
         [f, C] = a.useState();
     async function g() {
         try {
-            await r.A.updateGuildJoinRequest(n, e, o, u.B5.REJECTED, f), d?.();
+            (await r.A.updateGuildJoinRequest(n, e, o, u.B5.REJECTED, f), d?.());
         } catch (t) {
             h?.();
         }

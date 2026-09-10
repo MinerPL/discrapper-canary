@@ -21,14 +21,14 @@ var a = d(313209),
     s = d(487171),
     n = d(64902),
     Z = d(425052);
-d(845368), d(188775);
+(d(845368), d(188775));
 var b = d(194226),
     m = d(847998),
     o = d(843990),
     u = d(202103),
     h = d(749297),
     W = d(643793);
-d(767288), d(276822), d(446220), d(34766), d(117247), d(656472), d(981067), d(159460), d(153114), d(353100);
+(d(767288), d(276822), d(446220), d(34766), d(117247), d(656472), d(981067), d(159460), d(153114), d(353100));
 var G = d(931426);
 d(17970);
 var p = ({ className: l, ...t }) =>
@@ -223,7 +223,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                     (l = { mm: null, dd: null, yyyy: null }),
                     (t = { mm: null, dd: null, yyyy: null }),
                     D.forEach((d, i) => {
-                        (l[d] = D[i + 1] ?? null), (t[d] = D[i - 1] ?? null);
+                        ((l[d] = D[i + 1] ?? null), (t[d] = D[i - 1] ?? null));
                     }),
                     { next: l, prev: t }
                 );
@@ -233,7 +233,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
             O = (0, e.l)(null),
             J = { mm: (0, e.l)(null), dd: (0, e.l)(null), yyyy: (0, e.l)(null) },
             [k, E] = (0, e.p)(() => V(p));
-        (0, e._)(() => {
+        ((0, e._)(() => {
             E((l) => (L(l) === (p ?? "") ? l : V(p)));
         }, [p]),
             (0, e._)(() => {
@@ -241,7 +241,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                 if (!l) return;
                 let t = p ?? "";
                 l.value !== t && (l.value = t);
-            }, [p]);
+            }, [p]));
         let v = `${l}-label`,
             K = `${l}-helper`,
             H = `${l}-error`,
@@ -256,7 +256,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                     d = F.current;
                 d && (d.value = t);
                 let i = new Event("input", { bubbles: !0 });
-                Object.defineProperty(i, "target", { value: d, enumerable: !0, configurable: !0 }), N(i);
+                (Object.defineProperty(i, "target", { value: d, enumerable: !0, configurable: !0 }), N(i));
             },
             A = (l, t) => {
                 let d = { ...k, [l]: t };
@@ -270,7 +270,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                         t = Number(d.dd);
                     Number.isFinite(t) && t > l && (d = { ...d, dd: w("dd", l) });
                 }
-                E(d), B(d);
+                (E(d), B(d));
             },
             _ = (l) => {
                 if (!l) return;
@@ -294,14 +294,14 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                 let d = y.exec(t),
                     i = Y.exec(t),
                     e = null;
-                d
+                (d
                     ? (e = { yyyy: d[1], mm: d[2], dd: d[3] })
                     : i && (e = { mm: i[1].padStart(2, "0"), dd: i[2].padStart(2, "0"), yyyy: i[3] }),
-                    e && (l.preventDefault(), E(e), B(e), _("yyyy"));
+                    e && (l.preventDefault(), E(e), B(e), _("yyyy")));
             },
             ll = (l) => {
                 let t = l.target;
-                E(V(t.value)), N(l);
+                (E(V(t.value)), N(l));
                 let d = O.current;
                 if (d && document.activeElement === t)
                     try {
@@ -412,9 +412,9 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                                                         ) {
                                                             let l = Number(e),
                                                                 { max: d } = I[t];
-                                                            Number.isFinite(l) && l > d && (e = w(t, d)), (c = !0);
+                                                            (Number.isFinite(l) && l > d && (e = w(t, d)), (c = !0));
                                                         }
-                                                        e !== i.value && (i.value = e), A(t, e), c && _(j.next[t]);
+                                                        (e !== i.value && (i.value = e), A(t, e), c && _(j.next[t]));
                                                     },
                                                     onKeyDown: (l) => {
                                                         let d = l.target,
@@ -431,9 +431,11 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                                                                     let c = Number(t);
                                                                     if (Number.isNaN(c)) return w(l, i);
                                                                     let a = c + d;
-                                                                    return a > e && (a = i), a < i && (a = e), w(l, a);
+                                                                    return (
+                                                                        a > e && (a = i), a < i && (a = e), w(l, a)
+                                                                    );
                                                                 })(t, d.value, i);
-                                                            (d.value = e), A(t, e);
+                                                            ((d.value = e), A(t, e));
                                                             try {
                                                                 d.select();
                                                             } catch {}
@@ -454,9 +456,9 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                                                         let e = i.padStart(d, "0"),
                                                             c = Number(e),
                                                             { min: a, max: s } = I[t];
-                                                        Number.isFinite(c) &&
+                                                        (Number.isFinite(c) &&
                                                             (c < a ? (e = w(t, a)) : c > s && (e = w(t, s))),
-                                                            e !== i && A(t, e);
+                                                            e !== i && A(t, e));
                                                     },
                                                     onFocus: $,
                                                     onPaste: q,
@@ -482,7 +484,7 @@ var X = ({ children: l, "aria-labelledby": t, class: d }) =>
                         }),
                         (0, e.v)("input", {
                             ref: (l) => {
-                                (F.current = l), "function" == typeof x ? x(l) : x && (x.current = l);
+                                ((F.current = l), "function" == typeof x ? x(l) : x && (x.current = l));
                             },
                             id: l,
                             type: "date",
@@ -983,7 +985,7 @@ var g = ({ children: l, className: t }) => (0, e.v)("div", { class: (0, a.n)("In
                             (0, e.v)(b.t, {
                                 variant: "link",
                                 onClick: () => {
-                                    d(), t();
+                                    (d(), t());
                                 },
                                 class: "IncodeCommonIssuesTakeManually",
                                 children: a("commonIssues.takeManually"),
@@ -1320,12 +1322,12 @@ function q(l) {
             d.e("473652").then(d.bind(d, 431647)),
         ])
             .then(([t, d, i, e, c]) => {
-                _.set("blur", t.default),
+                (_.set("blur", t.default),
                     _.set("glare", d.default),
                     _.set("align", i.default),
                     _.set("front", e.default),
                     _.set("back", c.default),
-                    l?.();
+                    l?.());
             })
             .catch(() => {}));
 }
@@ -1397,10 +1399,10 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                     (clearTimeout(o.current),
                     (i.textContent = ""),
                     (u.current = setTimeout(() => {
-                        (i.textContent = l),
+                        ((i.textContent = l),
                             (o.current = setTimeout(() => {
                                 i.textContent = "";
-                            }, 3e3));
+                            }, 3e3)));
                     }, 50)));
             }, []),
             y = (0, e.h)(
@@ -1420,14 +1422,14 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                 }
                 if (m.current || !h) return;
                 let l = setTimeout(() => {
-                    (m.current = !0), r(y());
+                    ((m.current = !0), r(y()));
                 }, 500);
                 return () => clearTimeout(l);
             }, [h, G, r, y]),
             (0, e._)(() => {
                 let t = b.current;
-                (b.current = l),
-                    "manualCapture" !== t && G && r(c("idv2.capture.manualCapture.modeSwitchAriaAnnouncement"));
+                ((b.current = l),
+                    "manualCapture" !== t && G && r(c("idv2.capture.manualCapture.modeSwitchAriaAnnouncement")));
             }, [r, l, G, c]),
             (0, e._)(() => {
                 if (!d) {
@@ -1447,7 +1449,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
             }, [r, X, d, N, M, h, p, t, c, y]),
             (0, e._)(
                 () => () => {
-                    clearTimeout(u.current), clearTimeout(o.current);
+                    (clearTimeout(u.current), clearTimeout(o.current));
                 },
                 [],
             ),
@@ -1517,7 +1519,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                 };
                 e();
                 let c = new ResizeObserver(e);
-                return c.observe(d), () => c.disconnect();
+                return (c.observe(d), () => c.disconnect());
             }, [l, t]),
             (0, e.v)("div", {
                 ref: i,
@@ -1579,18 +1581,18 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
             (0, e._)(() => {
                 if ("idNotDetected" === d) {
                     if (W.current) return;
-                    (W.current = !0), N(!0);
+                    ((W.current = !0), N(!0));
                     return;
                 }
                 p && N(!1);
             }, [d, p]);
             let [M, X] = (0, e.p)(!1);
-            (0, e._)(() => {
+            ((0, e._)(() => {
                 n || X(!1);
             }, [n]),
                 (0, e._)(() => {
                     n && o && o.current?.focus();
-                }, [n, o]);
+                }, [n, o]));
             let r = (0, e.d)(() => {
                     if (s || "capturing" === d)
                         return { title: h("idv2.capture.takingPhoto"), subtitle: h("idv2.capture.dontMove") };
@@ -1717,7 +1719,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                 let i = t.getBoundingClientRect();
                 l.updateDetectionArea({ x: i.left, y: i.top, width: i.width, height: i.height });
             }, [l]);
-        (0, c.i)("resize", m), (0, c.r)(d, m);
+        ((0, c.i)("resize", m), (0, c.r)(d, m));
         let o = "capturing" === t.captureStatus || "capturing" === t.detectionStatus,
             u = t.detectionStatus,
             h =
@@ -1756,13 +1758,13 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                 (0, e.v)(k, {
                     open: Z,
                     onClose: () => {
-                        b(!1),
+                        (b(!1),
                             requestAnimationFrame(() => {
                                 a.current ? a.current.focus() : i.current?.focus();
-                            });
+                            }));
                     },
                     onTakeManually: () => {
-                        b(!1), l.switchToManualCapture();
+                        (b(!1), l.switchToManualCapture());
                     },
                     portalContainer: n.current,
                 }),
@@ -1801,7 +1803,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
             h = c(m ? "idv2.capture.passport.subtitle" : o ? "idv2.backTutorial.subtitle" : "idv2.tutorial.subtitle"),
             G = c(o ? "idv2.backTutorial.disclaimer" : "idv2.tutorial.v2.autocapture"),
             p = async () => {
-                n(!0), await l.nextStep();
+                (n(!0), await l.nextStep());
             };
         return (0, e.v)(W.r, {
             animationData: Z,
@@ -2811,7 +2813,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                     t.availableDocumentTypes
                         .reduce((l, t) => {
                             let d = lh[t];
-                            return d && l.push(d), l;
+                            return (d && l.push(d), l);
                         }, [])
                         .sort((l, t) => l.weight - t.weight),
                 [t.availableDocumentTypes],
@@ -2833,7 +2835,7 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                                 tag: t.tag ? d(t.tag) : void 0,
                                 onClick: () => {
                                     var d;
-                                    return (d = t.type), void l.selectDocument(d);
+                                    return ((d = t.type), void l.selectDocument(d));
                                 },
                             },
                             t.type,
@@ -2855,9 +2857,9 @@ var ll = ({ detectionStatus: l, mode: t, isCapturing: d }) => {
                 });
         }, []);
         let u = (0, e.h)(async () => {
-            await new Promise((l) => setTimeout(l, 1e3)),
+            (await new Promise((l) => setTimeout(l, 1e3)),
                 "toBack" === t ? l.continueToBack() : l.continueToFront(),
-                m(!0);
+                m(!0));
         }, [t, l]);
         return b
             ? (0, e.v)(Z.t, { size: "large", title: `${o("webcam.loading")}...` })

@@ -1,4 +1,4 @@
-i.d(r, { ConversionFailureReason: () => p, maybeConvertToWebP: () => b }),
+(i.d(r, { ConversionFailureReason: () => p, maybeConvertToWebP: () => b }),
     i(393431),
     i(532706),
     i(42231),
@@ -8,7 +8,7 @@ i.d(r, { ConversionFailureReason: () => p, maybeConvertToWebP: () => b }),
     i(65162),
     i(323874),
     i(14289),
-    i(35956);
+    i(35956));
 var t,
     n = i(181370),
     a = i.n(n),
@@ -20,7 +20,7 @@ class u {
     img;
     originalBuffer;
     constructor(e, r) {
-        (this.img = e), (this.originalBuffer = r);
+        ((this.img = e), (this.originalBuffer = r));
     }
     static create(e) {
         let r = null;
@@ -62,7 +62,7 @@ class d {
     static create(e) {
         let r = null,
             i = f(new Uint8Array(e, 0, Math.min(64, e.byteLength)));
-        return "image/png" === i?.mimeType && (r = u.create(e)), r;
+        return ("image/png" === i?.mimeType && (r = u.create(e)), r);
     }
 }
 let h = new o.A("WebP");
@@ -82,35 +82,36 @@ var p =
     t);
 async function m(e) {
     let r, i;
-    if ("image/webp" === e.type) return h.verbose("[WebP] File already WebP format"), "already_webp";
-    if (!["image/png"].includes(e.type)) return h.verbose(`[WebP] Unsupported format: ${e.type}`), "unsupported_format";
+    if ("image/webp" === e.type) return (h.verbose("[WebP] File already WebP format"), "already_webp");
+    if (!["image/png"].includes(e.type))
+        return (h.verbose(`[WebP] Unsupported format: ${e.type}`), "unsupported_format");
     try {
         r =
             "function" == typeof e.arrayBuffer
                 ? await e.arrayBuffer()
                 : await new Promise((r, i) => {
                       let t = new FileReader();
-                      (t.onload = () => r(t.result)),
+                      ((t.onload = () => r(t.result)),
                           (t.onerror = () => i(Error("Failed to read file as ArrayBuffer"))),
-                          t.readAsArrayBuffer(e);
+                          t.readAsArrayBuffer(e));
                   });
     } catch (e) {
-        return h.warn("[WebP] Failed to read file data:", e), "conversion_failed";
+        return (h.warn("[WebP] Failed to read file data:", e), "conversion_failed");
     }
     try {
         if (((i = d.create(r)), null == i)) throw Error("DiscordImage.create returned null");
         if (i.hasTransparency())
-            return h.verbose("[webp] png uses actual transparency - skipping conversion"), "has_transparency";
-        if (i.isAnimated()) return h.verbose("[webp] png is animated (apng) - skipping conversion"), "animated_image";
+            return (h.verbose("[webp] png uses actual transparency - skipping conversion"), "has_transparency");
+        if (i.isAnimated()) return (h.verbose("[webp] png is animated (apng) - skipping conversion"), "animated_image");
         if (i.isPng8())
-            return h.verbose("[webp] png is PNG8 format (indexed color) - skipping conversion"), "png8_format";
+            return (h.verbose("[webp] png is PNG8 format (indexed color) - skipping conversion"), "png8_format");
     } catch (e) {
-        return h.warn("[WebP] PNG analysis failed:", e), "corrupted_file";
+        return (h.warn("[WebP] PNG analysis failed:", e), "corrupted_file");
     }
     try {
         if (!(await i.hasSrgbIccProfile())) return "icc_non_srgb_profile";
     } catch (e) {
-        return h.warn("[WebP] ICC profile detection failed:", e), "icc_detection_failed";
+        return (h.warn("[WebP] ICC profile detection failed:", e), "icc_detection_failed");
     }
     return null;
 }
@@ -125,12 +126,12 @@ async function w(e) {
     let t = new Image(),
         n = URL.createObjectURL(e);
     try {
-        await new Promise((e, r) => {
-            (t.onload = () => e()), (t.onerror = () => r(Error("failed to load image"))), (t.src = n);
+        (await new Promise((e, r) => {
+            ((t.onload = () => e()), (t.onerror = () => r(Error("failed to load image"))), (t.src = n));
         }),
             (r.width = t.width),
             (r.height = t.height),
-            i.drawImage(t, 0, 0);
+            i.drawImage(t, 0, 0));
     } finally {
         URL.revokeObjectURL(n);
     }
@@ -144,10 +145,10 @@ async function w(e) {
     let c = new Image(),
         l = URL.createObjectURL(a);
     try {
-        await new Promise((e, r) => {
-            (c.onload = () => e()), (c.onerror = () => r(Error("failed to load image"))), (c.src = l);
+        (await new Promise((e, r) => {
+            ((c.onload = () => e()), (c.onerror = () => r(Error("failed to load image"))), (c.src = l));
         }),
-            i.drawImage(c, 0, 0);
+            i.drawImage(c, 0, 0));
     } finally {
         URL.revokeObjectURL(l);
     }
@@ -182,7 +183,7 @@ async function b(e) {
     }
     try {
         let n = await m(e);
-        if (null != n) return h.verbose(`[WebP] Conversion rejected: ${n}`), t(n);
+        if (null != n) return (h.verbose(`[WebP] Conversion rejected: ${n}`), t(n));
         let a = await w(e);
         if (!a.success || null == a.webpBlob) return t(a.reason ?? "unknown_error");
         let o = a.webpBlob,
@@ -208,6 +209,6 @@ async function b(e) {
             }
         );
     } catch (r) {
-        return h.error(`[WebP] Conversion failed for ${e.name}:`, r), t("conversion_failed");
+        return (h.error(`[WebP] Conversion failed for ${e.name}:`, r), t("conversion_failed"));
     }
 }

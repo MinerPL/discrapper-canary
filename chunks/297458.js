@@ -50,11 +50,11 @@ function h(e) {
 }
 function f(e, t, n, r) {
     let i = g(e, t, (n && n.syntheticException) || void 0, r);
-    return (0, a.M6)(i), (i.level = "error"), n && n.event_id && (i.event_id = n.event_id), (0, s.XW)(i);
+    return ((0, a.M6)(i), (i.level = "error"), n && n.event_id && (i.event_id = n.event_id), (0, s.XW)(i));
 }
 function m(e, t, n = "info", r, i) {
     let o = _(e, t, (r && r.syntheticException) || void 0, i);
-    return (o.level = n), r && r.event_id && (o.event_id = r.event_id), (0, s.XW)(o);
+    return ((o.level = n), r && r.event_id && (o.event_id = r.event_id), (0, s.XW)(o));
 }
 function g(e, t, n, s, p) {
     let h;
@@ -64,9 +64,9 @@ function g(e, t, n, s, p) {
         else {
             let r = t.name || ((0, o.BD)(t) ? "DOMError" : "DOMException"),
                 i = t.message ? `${r}: ${t.message}` : r;
-            (h = _(e, i, n, s)), (0, a.gO)(h, i);
+            ((h = _(e, i, n, s)), (0, a.gO)(h, i));
         }
-        return "code" in t && (h.tags = { ...h.tags, "DOMException.code": `${t.code}` }), h;
+        return ("code" in t && (h.tags = { ...h.tags, "DOMException.code": `${t.code}` }), h);
     }
     return (0, o.bJ)(t)
         ? u(e, t)
@@ -123,12 +123,12 @@ function _(e, t, n, r) {
     let i = {};
     if (r && n) {
         let r = d(e, n);
-        r.length && (i.exception = { values: [{ value: t, stacktrace: { frames: r } }] }),
-            (0, a.M6)(i, { synthetic: !0 });
+        (r.length && (i.exception = { values: [{ value: t, stacktrace: { frames: r } }] }),
+            (0, a.M6)(i, { synthetic: !0 }));
     }
     if ((0, o.NF)(t)) {
         let { __sentry_template_string__: e, __sentry_template_values__: n } = t;
-        return (i.logentry = { message: e, params: n }), i;
+        return ((i.logentry = { message: e, params: n }), i);
     }
-    return (i.message = t), i;
+    return ((i.message = t), i);
 }

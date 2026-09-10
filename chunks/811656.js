@@ -10,7 +10,7 @@ var i = n(477900),
     u = n(607470),
     _ = n(174459),
     E = n(625494);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var A = n(671325),
     h = n(636537),
     I = n(799226),
@@ -46,7 +46,7 @@ let T = function (e) {
                 ),
                 A = (0, r.useCallback)(async () => {
                     if (!E() && !d) {
-                        c(!0), o(!1), s(!1);
+                        (c(!0), o(!1), s(!1));
                         try {
                             let e = Date.now(),
                                 [n, r, a] = await Promise.all([
@@ -95,9 +95,9 @@ let T = function (e) {
                 }, [e, A]),
                 (0, r.useEffect)(
                     () => () => {
-                        null != n.modalGlowEntry && window.URL.revokeObjectURL(n.modalGlowEntry),
+                        (null != n.modalGlowEntry && window.URL.revokeObjectURL(n.modalGlowEntry),
                             null != n.modalGlowIdle && window.URL.revokeObjectURL(n.modalGlowIdle),
-                            null != n.modalGlowExit && window.URL.revokeObjectURL(n.modalGlowExit);
+                            null != n.modalGlowExit && window.URL.revokeObjectURL(n.modalGlowExit));
                     },
                     [n.modalGlowEntry, n.modalGlowIdle, n.modalGlowExit],
                 ),
@@ -155,7 +155,7 @@ let g = 1e3,
         }, [h, a, n, y, G, U]),
         (0, r.useEffect)(() => {
             function e() {
-                b(!0), C();
+                (b(!0), C());
             }
             return (
                 E._.subscribe(p.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),

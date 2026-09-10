@@ -15,7 +15,7 @@ class E extends o.A {
     animated;
     available;
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.managed = e.managed),
@@ -23,7 +23,7 @@ class E extends o.A {
             (this.requiredColons = e.requiredColons),
             (this.user = new l.A(e.user)),
             (this.animated = e.animated),
-            (this.available = e.available);
+            (this.available = e.available));
     }
 }
 var d = t(967198),

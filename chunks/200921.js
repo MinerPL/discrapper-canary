@@ -18,5 +18,5 @@ async function o(e) {
         if (0 === e.length) return;
     } else e = [e];
     let t = await i.Bo.post({ url: s.Rsh.AUTH_SESSIONS_LOGOUT, body: { session_id_hashes: e }, rejectWithError: !1 });
-    return l.h.dispatch({ type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: e }), t;
+    return (l.h.dispatch({ type: "LOGOUT_AUTH_SESSIONS_SUCCESS", sessionIdHashes: e }), t);
 }

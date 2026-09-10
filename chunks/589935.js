@@ -125,7 +125,7 @@ function y(e) {
         _ = (0, D.gn)(c?.guildId, c?.userId, c?.colorStrings ?? null),
         d = r.useCallback(
             (e) => {
-                e.stopPropagation(), e.preventDefault(), null != n && o?.(n);
+                (e.stopPropagation(), e.preventDefault(), null != n && o?.(n));
             },
             [n, o],
         );

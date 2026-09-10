@@ -6,10 +6,10 @@ function s(e, n) {
     let l, s;
     if (null == e) return null;
     let r = (0, t.oF)(e);
-    if (null != r) (l = i.B), (s = r);
+    if (null != r) ((l = i.B), (s = r));
     else {
         if (null == n) return null;
-        (l = (0, a._U)(n.type)), (s = n.name);
+        ((l = (0, a._U)(n.type)), (s = n.name));
     }
     return { IconComponent: l, locationName: s };
 }

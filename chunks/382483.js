@@ -13,21 +13,21 @@ async function j() {
     a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START" });
     try {
         let e = await r.Bo.get({ url: d.Rsh.WIDGET_CONFIGS_FEATURED, rejectWithError: !0 });
-        a.h.dispatch({
+        (a.h.dispatch({
             type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS",
             applications: e.body.applications,
             configs: e.body.configs,
         }),
-            u.succeed();
+            u.succeed());
     } catch (e) {
         throw (
-            (a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }),
+            a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }),
             u.pending ||
                 u.fail(() => {
                     h.one(void 0, j).catch(() => {});
                 }),
             c.A.captureException(e),
-            e)
+            e
         );
     }
 }
@@ -72,9 +72,9 @@ async function A(e) {
         });
     } catch (t) {
         throw (
-            (a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
+            a.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
             c.A.captureException(t),
-            t)
+            t
         );
     }
 }

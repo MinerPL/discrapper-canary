@@ -20,7 +20,7 @@ function o(e) {
     return (
         i.useLayoutEffect(() => {
             if (null == o.current) return;
-            (c.current.length = n.length), (a.current = o.current.getBoundingClientRect().width ?? 0);
+            ((c.current.length = n.length), (a.current = o.current.getBoundingClientRect().width ?? 0));
             let e = (function (e) {
                 let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: l, overflowWidth: u } = e,
                     s = 0,
@@ -33,9 +33,9 @@ function o(e) {
                         h = e === t.length - 1;
                     if (!(Math.round(c + d + (o && !h ? u + i : 0)) < Math.round(l))) {
                         if (o) break;
-                        s++, (c = 0);
+                        (s++, (c = 0));
                     }
-                    (a = e), (c += d + i);
+                    ((a = e), (c += d + i));
                 }
                 return a;
             })({

@@ -1,4 +1,4 @@
-n.d(t, { A: () => d }), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => d }), n(323874), n(14289), n(35956));
 var l = n(582128),
     i = n(975807),
     s = n(853022),
@@ -39,10 +39,10 @@ function d(e) {
             else if (null != r) {
                 var a;
                 let e;
-                (a = r),
+                ((a = r),
                     (e = setTimeout(() => n(!0), 5e3)),
                     window.addEventListener("blur", () => clearTimeout(e), { once: !0 }),
-                    (0, i.A)(a);
+                    (0, i.A)(a));
             } else (0, i.A)(l);
         },
         [e, t],

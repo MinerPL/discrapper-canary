@@ -51,7 +51,7 @@ function w(t) {
         { startConsoleQuest: Y, startingConsoleQuest: G } = (0, Q.Wj)({
             questId: e.id,
             beforeRequest: () => {
-                V.startAnimation(),
+                (V.startAnimation(),
                     (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_console_connection_errors_modal")
                         ? (0, L.r)({
                               type: y.F.CLICK_INTERNAL,
@@ -67,7 +67,7 @@ function w(t) {
                               questContent: S.uF.CONNECTIONS_MODAL,
                               questContentCTA: v.Cy.DEFIBRILLATOR,
                               sourceQuestContent: I,
-                          });
+                          }));
             },
             afterRequest: () => {
                 V.stopAnimation();

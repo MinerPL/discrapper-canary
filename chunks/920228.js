@@ -5,8 +5,8 @@ function l(e) {
         i = r.useRef(l),
         u = r.useRef(a),
         s = r.useRef(!1);
-    r.useEffect(() => {
-        (i.current = l), (u.current = a);
+    (r.useEffect(() => {
+        ((i.current = l), (u.current = a));
     }, [l, a]),
         r.useEffect(() => {
             if (!n) return;
@@ -17,9 +17,9 @@ function l(e) {
                     e.addEventListener("play", l),
                     e.addEventListener("pause", a),
                     () => {
-                        e.removeEventListener("enterpictureinpicture", r),
+                        (e.removeEventListener("enterpictureinpicture", r),
                             e.removeEventListener("play", l),
-                            e.removeEventListener("pause", a);
+                            e.removeEventListener("pause", a));
                     }
                 );
             function r() {
@@ -35,5 +35,5 @@ function l(e) {
             function a() {
                 s.current = !0;
             }
-        }, [t, n]);
+        }, [t, n]));
 }

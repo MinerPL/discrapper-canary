@@ -113,7 +113,7 @@ let N = new S(o.h, {
         let i = f.get(n);
         if (null == i) {
             var r, a;
-            (r = e.channelId),
+            ((r = e.channelId),
                 (a = e.sortOrder),
                 (i = {
                     loading: !1,
@@ -126,9 +126,9 @@ let N = new S(o.h, {
                     sortOrder: a,
                     tagFilter: t,
                     tagSetting: e.tagSetting,
-                });
-        } else (i.tagFilter = t), (i.failed = !1);
-        (i.loading = !0), (i.isInitialLoad = !1);
+                }));
+        } else ((i.tagFilter = t), (i.failed = !1));
+        ((i.loading = !0), (i.isInitialLoad = !1));
         var s = i;
         if ((f.delete(n), f.set(n, s), !(f.size <= 50)))
             for (let [e, t] of f) {
@@ -144,7 +144,7 @@ let N = new S(o.h, {
         let r = e.threads.filter((e) => u.A_.has(e.type)).map((e) => e.id);
         i.threads = i.threads.concat(r);
         let a = _.A.getChannel(i.channelId);
-        null != a &&
+        (null != a &&
             a.isForumLikeChannel() &&
             (0, c._Z)({
                 guildId: a.guild_id,
@@ -158,14 +158,14 @@ let N = new S(o.h, {
             (i.hasMore = e.hasMore),
             (i.nextOffset = e.offset + I),
             (i.loading = !1),
-            (i.isInitialLoad = !1);
+            (i.isInitialLoad = !1));
     },
     LOAD_ARCHIVED_THREADS_FAIL: function (e) {
         let t = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter),
             n = p(e.channelId, e.sortOrder, t, e.tagSetting),
             i = f.get(n);
         if (null == i) return !1;
-        (i.loading = !1), (i.failed = !0), (i.isInitialLoad = !1);
+        ((i.loading = !1), (i.failed = !0), (i.isInitialLoad = !1));
     },
     RESORT_THREADS: function (e) {
         let t = !1;

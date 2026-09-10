@@ -47,7 +47,7 @@ function k(t) {
                   {
                       text: S,
                       onClick: function () {
-                          D(), i();
+                          (D(), i());
                       },
                   },
               ],

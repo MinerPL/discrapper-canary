@@ -9,7 +9,7 @@ function o(e) {
 }
 function d() {
     let e = l;
-    return (l = "manual_browsing"), e;
+    return ((l = "manual_browsing"), e);
 }
 function c(e, t, n) {
     r.default.track(s.HAw.FAVORITES_GUILD_ADD_TO_FAVORITES, { source: e, channel_type: t, total_favorites: n });

@@ -11,12 +11,12 @@ class s {
     localWant;
     constructor(e) {
         if (null == e.capture && null == e.encode) throw Error("Invalid arguments.");
-        (this.capture = null == e.capture ? void 0 : new l(e.capture)),
+        ((this.capture = null == e.capture ? void 0 : new l(e.capture)),
             (this.encode = null == e.encode ? void 0 : new l(e.encode)),
             (this.bitrateMin = e.bitrateMin),
             (this.bitrateMax = e.bitrateMax),
             (this.bitrateTarget = e.bitrateTarget),
-            (this.localWant = e.localWant);
+            (this.localWant = e.localWant));
     }
 }
 class l {
@@ -25,10 +25,10 @@ class l {
     framerate;
     pixelCount;
     constructor(e) {
-        (this.width = e.width),
+        ((this.width = e.width),
             (this.height = e.height),
             (this.framerate = e.framerate),
-            (this.pixelCount = e.width * e.height);
+            (this.pixelCount = e.width * e.height));
     }
     static equals(e, t) {
         return (
@@ -55,13 +55,13 @@ class o {
     ladder;
     lastGoLivePixelCount;
     constructor(e, t, n = r.eQ) {
-        (this.contextType = e),
+        ((this.contextType = e),
             (this.connection = t),
             (this.options = n),
             (this.isStreamContext = this.contextType === r.x.STREAM),
             (this.ladder = new i.r(n)),
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
-            (this.lastGoLivePixelCount = {});
+            (this.lastGoLivePixelCount = {}));
     }
     getQuality(e) {
         let t = this.connection.getLocalWant(e),

@@ -3,11 +3,11 @@ let o = (0, r(231433).t)((t, e) => {
     var r = ("u" > typeof globalThis && globalThis) || ("u" > typeof self && self) || ("u" > typeof global && global),
         o = (function () {
             function t() {
-                (this.fetch = !1), (this.DOMException = r.DOMException);
+                ((this.fetch = !1), (this.DOMException = r.DOMException));
             }
-            return (t.prototype = r), new t();
+            return ((t.prototype = r), new t());
         })();
-    (function (t) {
+    ((function (t) {
         var e = (void 0 !== o && o) || ("u" > typeof self && self) || (void 0 !== e && e),
             r = {
                 searchParams: "URLSearchParams" in e,
@@ -17,7 +17,7 @@ let o = (0, r(231433).t)((t, e) => {
                     "Blob" in e &&
                     (function () {
                         try {
-                            return new Blob(), !0;
+                            return (new Blob(), !0);
                         } catch (t) {
                             return !1;
                         }
@@ -48,7 +48,7 @@ let o = (0, r(231433).t)((t, e) => {
             return t.toLowerCase();
         }
         function a(t) {
-            return "string" != typeof t && (t = String(t)), t;
+            return ("string" != typeof t && (t = String(t)), t);
         }
         function h(t) {
             var e = {
@@ -66,7 +66,7 @@ let o = (0, r(231433).t)((t, e) => {
             );
         }
         function f(t) {
-            (this.map = {}),
+            ((this.map = {}),
                 t instanceof f
                     ? t.forEach(function (t, e) {
                           this.append(e, t);
@@ -78,7 +78,7 @@ let o = (0, r(231433).t)((t, e) => {
                       : t &&
                         Object.getOwnPropertyNames(t).forEach(function (e) {
                             this.append(e, t[e]);
-                        }, this);
+                        }, this));
         }
         function u(t) {
             if (t.bodyUsed) return Promise.reject(TypeError("Already read"));
@@ -86,23 +86,23 @@ let o = (0, r(231433).t)((t, e) => {
         }
         function c(t) {
             return new Promise(function (e, r) {
-                (t.onload = function () {
+                ((t.onload = function () {
                     e(t.result);
                 }),
                     (t.onerror = function () {
                         r(t.error);
-                    });
+                    }));
             });
         }
         function d(t) {
             var e = new FileReader(),
                 r = c(e);
-            return e.readAsArrayBuffer(t), r;
+            return (e.readAsArrayBuffer(t), r);
         }
         function y(t) {
             if (t.slice) return t.slice(0);
             var e = new Uint8Array(t.byteLength);
-            return e.set(new Uint8Array(t)), e.buffer;
+            return (e.set(new Uint8Array(t)), e.buffer);
         }
         function l() {
             return (
@@ -164,7 +164,7 @@ let o = (0, r(231433).t)((t, e) => {
                         o = u(this);
                     if (o) return o;
                     if (this._bodyBlob)
-                        return (t = this._bodyBlob), (r = c((e = new FileReader()))), e.readAsText(t), r;
+                        return ((t = this._bodyBlob), (r = c((e = new FileReader()))), e.readAsText(t), r);
                     if (this._bodyArrayBuffer)
                         return Promise.resolve(
                             (function (t) {
@@ -186,8 +186,8 @@ let o = (0, r(231433).t)((t, e) => {
                 this
             );
         }
-        (f.prototype.append = function (t, e) {
-            (t = s(t)), (e = a(e));
+        ((f.prototype.append = function (t, e) {
+            ((t = s(t)), (e = a(e)));
             var r = this.map[t];
             this.map[t] = r ? r + ", " + e : e;
         }),
@@ -195,7 +195,7 @@ let o = (0, r(231433).t)((t, e) => {
                 delete this.map[s(t)];
             }),
             (f.prototype.get = function (t) {
-                return (t = s(t)), this.has(t) ? this.map[t] : null;
+                return ((t = s(t)), this.has(t) ? this.map[t] : null);
             }),
             (f.prototype.has = function (t) {
                 return this.map.hasOwnProperty(s(t));
@@ -233,7 +233,7 @@ let o = (0, r(231433).t)((t, e) => {
                     h(t)
                 );
             }),
-            r.iterable && (f.prototype[Symbol.iterator] = f.prototype.entries);
+            r.iterable && (f.prototype[Symbol.iterator] = f.prototype.entries));
         var p = ["DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT"];
         function b(t, e) {
             if (!(this instanceof b))
@@ -245,13 +245,13 @@ let o = (0, r(231433).t)((t, e) => {
                 n = (e = e || {}).body;
             if (t instanceof b) {
                 if (t.bodyUsed) throw TypeError("Already read");
-                (this.url = t.url),
+                ((this.url = t.url),
                     (this.credentials = t.credentials),
                     e.headers || (this.headers = new f(t.headers)),
                     (this.method = t.method),
                     (this.mode = t.mode),
                     (this.signal = t.signal),
-                    n || null == t._bodyInit || ((n = t._bodyInit), (t.bodyUsed = !0));
+                    n || null == t._bodyInit || ((n = t._bodyInit), (t.bodyUsed = !0)));
             } else this.url = String(t);
             if (
                 ((this.credentials = e.credentials || this.credentials || "same-origin"),
@@ -295,16 +295,16 @@ let o = (0, r(231433).t)((t, e) => {
                 throw TypeError(
                     'Please use the "new" operator, this DOM object constructor cannot be called as a function.',
                 );
-            e || (e = {}),
+            (e || (e = {}),
                 (this.type = "default"),
                 (this.status = void 0 === e.status ? 200 : e.status),
                 (this.ok = this.status >= 200 && this.status < 300),
                 (this.statusText = void 0 === e.statusText ? "" : "" + e.statusText),
                 (this.headers = new f(e.headers)),
                 (this.url = e.url || ""),
-                this._initBody(t);
+                this._initBody(t));
         }
-        (b.prototype.clone = function () {
+        ((b.prototype.clone = function () {
             return new b(this, { body: this._bodyInit });
         }),
             l.call(b.prototype),
@@ -319,22 +319,22 @@ let o = (0, r(231433).t)((t, e) => {
             }),
             (w.error = function () {
                 var t = new w(null, { status: 0, statusText: "" });
-                return (t.type = "error"), t;
-            });
+                return ((t.type = "error"), t);
+            }));
         var E = [301, 302, 303, 307, 308];
-        (w.redirect = function (t, e) {
+        ((w.redirect = function (t, e) {
             if (-1 === E.indexOf(e)) throw RangeError("Invalid status code");
             return new w(null, { status: e, headers: { location: t } });
         }),
-            (t.DOMException = e.DOMException);
+            (t.DOMException = e.DOMException));
         try {
             new t.DOMException();
         } catch (e) {
-            (t.DOMException = function (t, e) {
-                (this.message = t), (this.name = e), (this.stack = Error(t).stack);
+            ((t.DOMException = function (t, e) {
+                ((this.message = t), (this.name = e), (this.stack = Error(t).stack));
             }),
                 (t.DOMException.prototype = Object.create(Error.prototype)),
-                (t.DOMException.prototype.constructor = t.DOMException);
+                (t.DOMException.prototype.constructor = t.DOMException));
         }
         function v(o, n) {
             return new Promise(function (i, s) {
@@ -344,7 +344,7 @@ let o = (0, r(231433).t)((t, e) => {
                 function c() {
                     u.abort();
                 }
-                (u.onload = function () {
+                ((u.onload = function () {
                     var t,
                         e,
                         r = {
@@ -423,23 +423,23 @@ let o = (0, r(231433).t)((t, e) => {
                         (u.onreadystatechange = function () {
                             4 === u.readyState && h.signal.removeEventListener("abort", c);
                         })),
-                    u.send(void 0 === h._bodyInit ? null : h._bodyInit);
+                    u.send(void 0 === h._bodyInit ? null : h._bodyInit));
             });
         }
-        (v.polyfill = !0),
+        ((v.polyfill = !0),
             e.fetch || ((e.fetch = v), (e.Headers = f), (e.Request = b), (e.Response = w)),
             (t.Headers = f),
             (t.Request = b),
             (t.Response = w),
-            (t.fetch = v);
+            (t.fetch = v));
     })({}),
         (o.fetch.ponyfill = !0),
-        delete o.fetch.polyfill;
+        delete o.fetch.polyfill);
     var n = r.fetch ? r : o;
-    ((t = n.fetch).default = n.fetch),
+    (((t = n.fetch).default = n.fetch),
         (t.fetch = n.fetch),
         (t.Headers = n.Headers),
         (t.Request = n.Request),
         (t.Response = n.Response),
-        (e.exports = t);
+        (e.exports = t));
 })();

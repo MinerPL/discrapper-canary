@@ -1,5 +1,5 @@
-n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
-    n(801541);
+(n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
+    n(801541));
 var i = n(889137),
     r = n(440703),
     a = n(738822);
@@ -109,7 +109,7 @@ function _(e) {
             .with({ config_version: 2 }, () => !0)
             .exhaustive();
     } catch (t) {
-        return console.error(`Unknown config version '${e?.config?.config_version}'`, t), !1;
+        return (console.error(`Unknown config version '${e?.config?.config_version}'`, t), !1);
     }
 }
 function E(e) {

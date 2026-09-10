@@ -117,7 +117,7 @@ function f({ actor: t, trackElementClicked: e }) {
             t.send({ type: "ANIMATION_COMPLETE" });
         },
         continue() {
-            e?.("continue"), t.send({ type: "CONTINUE" });
+            (e?.("continue"), t.send({ type: "CONTINUE" }));
         },
         reset() {
             t.send({ type: "RESET" });

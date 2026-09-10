@@ -1,6 +1,6 @@
-I.r(e),
+(I.r(e),
     I.d(e, {
-        INVITE_OPTIONS_100_TIMES: () => r,
+        INVITE_OPTIONS_100_TIMES: () => N,
         INVITE_OPTIONS_10_TIMES: () => T,
         INVITE_OPTIONS_12_HOURS: () => P,
         INVITE_OPTIONS_14_DAYS: () => m,
@@ -9,18 +9,18 @@ I.r(e),
         INVITE_OPTIONS_25_TIMES: () => O,
         INVITE_OPTIONS_30_DAYS: () => V,
         INVITE_OPTIONS_30_MINUTES: () => S,
-        INVITE_OPTIONS_50_TIMES: () => N,
+        INVITE_OPTIONS_50_TIMES: () => r,
         INVITE_OPTIONS_5_TIMES: () => u,
         INVITE_OPTIONS_60_DAYS: () => g,
         INVITE_OPTIONS_6_HOURS: () => E,
         INVITE_OPTIONS_7_DAYS: () => d,
         INVITE_OPTIONS_8_HOURS: () => o,
         INVITE_OPTIONS_FOREVER: () => D,
-        INVITE_OPTIONS_ONCE: () => l,
-        INVITE_OPTIONS_UNLIMITED: () => _,
+        INVITE_OPTIONS_ONCE: () => _,
+        INVITE_OPTIONS_UNLIMITED: () => l,
         MAX_AGE_OPTIONS: () => A,
         MAX_USES_OPTIONS: () => a,
-    });
+    }));
 var n = I(375708);
 function i(t, e) {
     return {
@@ -30,14 +30,14 @@ function i(t, e) {
         },
     };
 }
-let _ = i(0, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 0 })),
-    l = i(1, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 1 })),
+let l = i(0, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 0 })),
+    _ = i(1, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 1 })),
     u = i(5, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 5 })),
     T = i(10, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 10 })),
     O = i(25, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 25 })),
-    N = i(50, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 50 })),
-    r = i(100, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 100 })),
-    a = [_, l, u, T, O, N, r],
+    r = i(50, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 50 })),
+    N = i(100, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 100 })),
+    a = [l, _, u, T, O, r, N],
     S = i(1800, () => n.intl.formatToPlainString(n.t.iXLF9W, { minutes: 30 })),
     s = i(3600, () => n.intl.formatToPlainString(n.t.xCjYxK, { hours: 1 })),
     E = i(21600, () => n.intl.formatToPlainString(n.t.xCjYxK, { hours: 6 })),

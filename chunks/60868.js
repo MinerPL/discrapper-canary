@@ -1,4 +1,4 @@
-t.d(e, { F: () => g, n: () => E }), t(321073);
+(t.d(e, { F: () => g, n: () => E }), t(321073));
 var i = t(136722),
     r = t(157559),
     o = t(468689),
@@ -54,12 +54,12 @@ async function E(n, e, t) {
             body: g
                 ? A.intl.format(A.t.r0UjOO, {
                       onClick: () => {
-                          r.A.close(), o.A.open(l, c.BEX.ONBOARDING);
+                          (r.A.close(), o.A.open(l, c.BEX.ONBOARDING));
                       },
                   })
                 : A.intl.format(A.t["Zaz+un"], {
                       onClick: () => {
-                          r.A.close(), o.A.open(l, c.BEX.ONBOARDING);
+                          (r.A.close(), o.A.open(l, c.BEX.ONBOARDING));
                       },
                   }),
         }),

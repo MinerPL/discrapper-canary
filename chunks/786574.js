@@ -1,4 +1,4 @@
-a.d(t, { N: () => d }), a(321073);
+(a.d(t, { N: () => d }), a(321073));
 var n = a(477900),
     l = a(582128),
     i = a(84571),
@@ -52,11 +52,11 @@ function d(e, t) {
                         let t = new Map();
                         for (let a of e) {
                             let e = t.get(a.group) ?? [];
-                            e.push(a), t.set(a.group, e);
+                            (e.push(a), t.set(a.group, e));
                         }
                         return t;
                     })(c.filter((e) => e.group !== o.fu.NONE));
-                l.forEach((a) => {
+                (l.forEach((a) => {
                     let { id: l, name: r } = a;
                     return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
                 }),
@@ -109,7 +109,7 @@ function d(e, t) {
                                       ),
                                   );
                         }
-                    });
+                    }));
             }
             return e;
         }, [c, a, t]),

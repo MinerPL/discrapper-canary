@@ -1,4 +1,4 @@
-a.r(d),
+(a.r(d),
     Intl.ListFormat && "function" == typeof Intl.ListFormat.__addLocaleData
         ? Intl.ListFormat.__addLocaleData({
               data: {
@@ -109,4 +109,4 @@ a.r(d),
                   },
               },
               locale: "hi",
-          });
+          }));

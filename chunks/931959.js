@@ -1,4 +1,4 @@
-n.d(t, { A: () => p }), n(321073);
+(n.d(t, { A: () => p }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -34,7 +34,7 @@ class f extends a.Ay.PersistedStore {
     static displayName = "StickersPersistedStore";
     static persistKey = "StickersPersistedStoreV2";
     initialize(e) {
-        this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], h), this.syncWith([o.A], I);
+        (this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], h), this.syncWith([o.A], I));
     }
     getState() {
         return _;
@@ -49,10 +49,10 @@ class f extends a.Ay.PersistedStore {
 let p = new f(s.h, {
     STICKER_TRACK_USAGE: function (e) {
         let { stickerIds: t } = e;
-        t?.forEach((e) => {
-            E.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() });
+        (t?.forEach((e) => {
+            (E.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() }));
         }),
-            A();
+            A());
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {

@@ -30,7 +30,7 @@ function x(e) {
     }, [w, x]);
     let C = i.useCallback(() => {
             let e = !w;
-            S || g(e), o?.(e), e && null != f && f();
+            (S || g(e), o?.(e), e && null != f && f());
         }, [w, S, o, f]),
         D = i.useMemo(() => {
             if (w) {

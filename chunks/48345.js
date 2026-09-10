@@ -11,21 +11,21 @@ class u extends i.A {
     shouldEnable = !1;
     enabled = !1;
     setContentProtection = (e) => {
-        (this.shouldEnable = e), this.flushContentProtection();
+        ((this.shouldEnable = e), this.flushContentProtection());
     };
     resetWindowState = (() => {
         var e = this;
         return function () {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-            (e.enabled = !1), t && e.flushContentProtection();
+            ((e.enabled = !1), t && e.flushContentProtection());
         };
     })();
     flushContentProtection = () => {
         try {
             if (this.enabled === this.shouldEnable) return;
-            r.A?.window.setWindowContentProtection?.(d.f, this.shouldEnable), (this.enabled = this.shouldEnable);
+            (r.A?.window.setWindowContentProtection?.(d.f, this.shouldEnable), (this.enabled = this.shouldEnable));
         } catch (e) {
-            c.error("Error setting content protection:", e), (0, l.pj)(e, o.Ue.OutOfProcess);
+            (c.error("Error setting content protection:", e), (0, l.pj)(e, o.Ue.OutOfProcess));
         }
     };
     actions = {

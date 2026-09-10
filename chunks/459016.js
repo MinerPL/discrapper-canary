@@ -1,5 +1,5 @@
 let i, r, a;
-n.r(t),
+(n.r(t),
     n.d(t, {
         getBoolean: () => E,
         getUserId: () => f,
@@ -14,7 +14,7 @@ n.r(t),
         getInitialValuesFromInteractionOptions: () => C,
         getString: () => g,
         getChannelId: () => h,
-    });
+    }));
 var s = n(284009),
     l = n.n(s),
     o = n(155718);
@@ -136,7 +136,7 @@ function N(e, t) {
     if (e !== a) {
         a = e;
         let { group: t, decimal: n } = d[e] ?? d["en-US"];
-        (i = RegExp(c.A.escape(t), "g")), (r = RegExp(c.A.escape(n), "g"));
+        ((i = RegExp(c.A.escape(t), "g")), (r = RegExp(c.A.escape(n), "g")));
     }
     return t.replace(i, "").replace(r, ".");
 }

@@ -80,7 +80,7 @@ let n = r(74509),
     };
 e.exports = (e, t, r = {}) => {
     if (e === t) return !0;
-    (e = new n(e, r)), (t = new n(t, r));
+    ((e = new n(e, r)), (t = new n(t, r)));
     let i = !1;
     n: for (let n of e.set) {
         for (let e of t.set) {

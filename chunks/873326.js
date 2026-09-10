@@ -5,7 +5,7 @@ var r = n(780755),
 let a = {},
     s = {};
 function l(e, t) {
-    (a[e] = a[e] || []), a[e].push(t);
+    ((a[e] = a[e] || []), a[e].push(t));
 }
 function c(e, t) {
     if (!s[e]) {

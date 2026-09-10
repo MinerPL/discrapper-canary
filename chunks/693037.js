@@ -41,7 +41,7 @@ function o(e, t = {}) {
             })(o, c)),
             "html" !== n && (!(s > 1) || !(l + 3 * a.length + n.length >= u)));
         )
-            a.push(n), (l += n.length), (o = o.parentNode);
+            (a.push(n), (l += n.length), (o = o.parentNode));
         return a.reverse().join(" > ");
     } catch (e) {
         return "<unknown>";

@@ -24,7 +24,7 @@ function d(e) {
                             variant: "secondary",
                             size: "md",
                             onClick: (e) => {
-                                e.stopPropagation(), s.A.toggleVoiceParticipantsHidden(t, !1);
+                                (e.stopPropagation(), s.A.toggleVoiceParticipantsHidden(t, !1));
                             },
                             text: o.intl.string(o.t.kLQySL),
                         }),

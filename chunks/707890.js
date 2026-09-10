@@ -1,4 +1,4 @@
-r.d(t, { A: () => y }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+(r.d(t, { A: () => y }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 var n = r(17928),
     E = r(459838),
     i = r(228366),
@@ -19,7 +19,7 @@ function o() {
         let { ownerId: r } = (0, u.Iy)(t),
             n = !0 === S.get(r),
             E = c.get(t) !== n;
-        return c.set(t, n), !!E || e;
+        return (c.set(t, n), !!E || e);
     }, !1);
 }
 function C() {
@@ -32,7 +32,7 @@ function C() {
             break;
         }
     let n = r !== R;
-    return (R = r), n;
+    return ((R = r), n);
 }
 function I(e) {
     let { userId: t } = e;
@@ -45,14 +45,14 @@ function I(e) {
                 E = (0, _.m8)(e, [s.A, a.A]),
                 i = n && !E,
                 u = i !== S.get(e);
-            return S.set(e, i), u;
+            return (S.set(e, i), u);
         })(t),
         n = o(),
         E = C();
     return r || n || E;
 }
 function N() {
-    S.clear(), c.clear(), (R = !1);
+    (S.clear(), c.clear(), (R = !1));
 }
 class g extends n.Ay.Store {
     static displayName = "SecureFramesVerifiedStore";
@@ -74,7 +74,7 @@ let y = new g(i.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (t === T) return !1;
-        (T = t), N();
+        ((T = t), N());
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: r, context: n } = e;
@@ -82,7 +82,7 @@ let y = new g(i.h, {
         switch (n) {
             case E.x.STREAM:
                 if (null == t) return !1;
-                return c.delete(t), C();
+                return (c.delete(t), C());
             case E.x.DEFAULT:
                 N();
         }

@@ -21,7 +21,7 @@ function o(e) {
         f = h.INLINE_NOTICE_GENERIC_ERROR,
         [p, T] = r.useState(!1),
         m = r.useRef(u);
-    r.useLayoutEffect(() => {
+    (r.useLayoutEffect(() => {
         m.current = u;
     }),
         r.useLayoutEffect(
@@ -29,7 +29,7 @@ function o(e) {
                 m.current?.();
             },
             [],
-        );
+        ));
     let [g, S] = r.useState(void 0);
     function N(e) {
         S(e);
@@ -40,16 +40,16 @@ function o(e) {
                 text: n ?? I,
                 variant: "secondary",
                 onClick: () => {
-                    c?.(), A.onClose();
+                    (c?.(), A.onClose());
                 },
             },
             {
                 text: t,
                 variant: "critical" === _ ? "critical-primary" : _,
                 onClick: async () => {
-                    S(void 0), T(!0);
+                    (S(void 0), T(!0));
                     try {
-                        await d?.(N), A.onClose();
+                        (await d?.(N), A.onClose());
                     } catch (e) {
                         throw (T(!1), S((e) => e ?? f), e);
                     }

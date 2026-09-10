@@ -11,7 +11,7 @@ let d =
                   binds: ["right"],
                   comboKeysBindGlobal: !0,
                   action() {
-                      if (!t()) return c._.dispatch(o.jej.CAROUSEL_NEXT), !1;
+                      if (!t()) return (c._.dispatch(o.jej.CAROUSEL_NEXT), !1);
                   },
               }
             : null,
@@ -21,7 +21,7 @@ let d =
                   binds: ["left"],
                   comboKeysBindGlobal: !0,
                   action() {
-                      if (!t()) return c._.dispatch(o.jej.CAROUSEL_PREV), !1;
+                      if (!t()) return (c._.dispatch(o.jej.CAROUSEL_PREV), !1);
                   },
               }
             : null,
@@ -35,6 +35,6 @@ let d =
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-            if (c._.hasSubscribers(o.jej.MODAL_CLOSE)) return c._.dispatch(o.jej.MODAL_CLOSE), !1;
+            if (c._.hasSubscribers(o.jej.MODAL_CLOSE)) return (c._.dispatch(o.jej.MODAL_CLOSE), !1);
         },
     };

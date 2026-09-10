@@ -32,7 +32,7 @@ var E =
     (r.THREADS = "threads"),
     r);
 let A = { recent: 1, media: 1, pins: 4, messages: 0, links: 2, files: 3 };
-l.I4_.THREAD,
+(l.I4_.THREAD,
     l.I4_.CHANNEL,
     l.I4_.GUILD_CHANNEL,
     l.I4_.GUILD,
@@ -42,7 +42,7 @@ l.I4_.THREAD,
     l.I4_.GUILD_CHANNEL,
     l.I4_.GUILD,
     l.I4_.DMS,
-    s.b.COZY;
+    s.b.COZY);
 var h =
     (((a = {}).SEARCH_TEXT_INPUT = "search_text_input"),
     (a.SEARCH_POPOUT = "search_popout"),

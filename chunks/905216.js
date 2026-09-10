@@ -13,14 +13,14 @@ function o(e) {
         ...c,
         isTrayButton: !1,
         onClick: function () {
-            n?.(), a.default.disconnect();
+            (n?.(), a.default.disconnect());
         },
         iconComponent: _,
         onMouseEnter: (e) => {
-            o?.(e), E.onMouseEnter();
+            (o?.(e), E.onMouseEnter());
         },
         onMouseLeave: (e) => {
-            d?.(e), E.onMouseLeave();
+            (d?.(e), E.onMouseLeave());
         },
         label: l.intl.string(l.t["6vrfgt"]),
     });

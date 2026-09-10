@@ -77,17 +77,17 @@ function S(e) {
         T = (0, l.A)(p),
         m = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
         { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
-    (0, d.Ay)(() => {
-        !(function (e) {
+    ((0, d.Ay)(() => {
+        (!(function (e) {
             let { variant: t, viewId: n, entrypoint: i } = e;
             c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
         })({ variant: t, viewId: s, entrypoint: n }),
-            (I.current = Date.now());
+            (I.current = Date.now()));
     }),
         a.useEffect(() => {
             if (null != I.current && (i?.length > 0 || r?.length > 0) && !f.current) {
                 let e = Date.now() - I.current;
-                (f.current = !0),
+                ((f.current = !0),
                     (function (e) {
                         let {
                             timeToLoad: t,
@@ -118,7 +118,7 @@ function S(e) {
                         unreadMessageItemsCount: h.UNREAD.length,
                         unreadMentionsCount: h.UNREAD.filter((e) => e.every((e) => e.kind === E.yL.MENTION)).length,
                         viewId: s,
-                    });
+                    }));
             }
         }, [i, r, s, N, S, h]),
         a.useEffect(() => {
@@ -154,5 +154,5 @@ function S(e) {
                 totalItemsCount: h.TODAY.length + h.YESTERDAY.length + h.OLDER.length,
                 viewId: s,
             });
-        });
+        }));
 }

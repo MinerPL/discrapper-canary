@@ -8,6 +8,6 @@ var n = r(381265),
     c = r(255733),
     f = a("Array.prototype.slice"),
     d = function (e, t) {
-        return i(e), u(e, f(arguments, 1));
+        return (i(e), u(e, f(arguments, 1)));
     };
-n(d, { getPolyfill: l, implementation: s, shim: c }), (e.exports = d);
+(n(d, { getPolyfill: l, implementation: s, shim: c }), (e.exports = d));

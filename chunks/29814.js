@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => eO }), n(321073);
+(n.d(t, { Ay: () => eO }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(478676),
@@ -61,7 +61,7 @@ function w(e) {
     };
 }
 function G(e, t) {
-    let n = V((0, D.EJ)(e.name, 32));
+    let n = B((0, D.EJ)(e.name, 32));
     return {
         type: "channel",
         content: ["italics" === t ? { type: "em", content: [n] } : n],
@@ -70,7 +70,7 @@ function G(e, t) {
     };
 }
 function x(e) {
-    return { type: "channel", content: [V("")], iconType: e ? "post" : "message" };
+    return { type: "channel", content: [B("")], iconType: e ? "post" : "message" };
 }
 function k(e, t) {
     let n = u.A.getChannel(e),
@@ -112,10 +112,10 @@ function k(e, t) {
 function F(e) {
     return { type: "link", content: [{ type: "text", content: e }], target: e, title: void 0 };
 }
-function V(e) {
+function B(e) {
     return { type: "text", content: e };
 }
-function B(e, t, n, i, r) {
+function V(e, t, n, i, r) {
     let a = E.A.getGuild(e),
         s = a?.id === i;
     return {
@@ -136,19 +136,19 @@ function H(e, t, n, i) {
         return (
             (n = {
                 type: "channel",
-                content: [V(e.roleSubscriptionGated ? e.name : P.intl.string(P.t["/YzI63"]))],
+                content: [B(e.roleSubscriptionGated ? e.name : P.intl.string(P.t["/YzI63"]))],
                 channelType: e.roleSubscriptionGated ? e.type : M.rbe.UNKNOWN,
                 iconType: "locked",
             }),
             { type: "channelMention", guildId: e.guildId, channelId: e.id, messageId: t, inContent: null, content: [n] }
         );
     }
-    if (!e.isMentionable) return V(`#${e.name}`);
+    if (!e.isMentionable) return B(`#${e.name}`);
     let r = { type: "channelMention", channelId: e.id, guildId: e.guildId, messageId: t, originalLink: i },
         a = E.A.getGuild(e.guildId);
     if (null == a)
         if (e.isDm) return { ...r, guildId: M.ME, inContent: [G(e)], content: [x(!1)] };
-        else return null != i ? F(i) : V(`#${P.intl.string(P.t.J90oLW)}`);
+        else return null != i ? F(i) : B(`#${P.intl.string(P.t.J90oLW)}`);
     let s = e.guildId === n;
     return {
         ...r,
@@ -191,7 +191,7 @@ let j = {
             let i = e[1];
             if (n.returnMentionIds) return { type: "channelMention", id: i };
             let r = k(i, n.mentionChannels);
-            return null == r ? B(null, i, null, U(n.channelId)) : H(r, null, U(n.channelId));
+            return null == r ? V(null, i, null, U(n.channelId)) : H(r, null, U(n.channelId));
         },
     },
     W = {
@@ -208,7 +208,7 @@ let j = {
                 s = e[3];
             if (null == a) return F(i);
             let l = k(a, null);
-            return null == l ? B(r, a, s, U(n.channelId), i) : H(l, s, U(n.channelId), i);
+            return null == l ? V(r, a, s, U(n.channelId), i) : H(l, s, U(n.channelId), i);
         },
     },
     Y = {
@@ -225,15 +225,15 @@ let j = {
             let o = k(s, null);
             if (null != o) return H(o, l, U(n.channelId), i);
             let d = k(a, null);
-            return null != d ? H(d, l, U(n.channelId), i) : B(r, a, l, U(n.channelId), i);
+            return null != d ? H(d, l, U(n.channelId), i) : V(r, a, l, U(n.channelId), i);
         },
     };
 var K = n(223637),
     $ = n(694403),
     z = n(873879),
-    q = n(683412),
-    Z = n(236285),
-    X = n(690521);
+    X = n(683412),
+    q = n(236285),
+    Z = n(690521);
 let Q = {
     s: { requiredFirstCharacters: ["~"], match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/) },
     highlight: { order: b.Ay.order, match: () => null },
@@ -249,7 +249,7 @@ let Q = {
                 i = l.Ay.convertNameToSurrogate(n);
             return null == i || "" === i
                 ? { type: "text", content: t }
-                : { name: `:${n}:`, surrogate: i, src: X.Ay.getURL(i) };
+                : { name: `:${n}:`, surrogate: i, src: Z.Ay.getURL(i) };
         },
     },
     customEmoji: {
@@ -259,9 +259,9 @@ let Q = {
         parse(e, t, n) {
             let [i, r, a, s] = e,
                 { guildId: l } = n,
-                o = Z.Ay.getDisambiguatedEmojiContext(l).getById(s),
+                o = q.Ay.getDisambiguatedEmojiContext(l).getById(s),
                 d = null == o || o.require_colons;
-            return null != o && (a = o.name), { emojiId: s, name: d ? `:${a}:` : a, animated: "a" === r };
+            return (null != o && (a = o.name), { emojiId: s, name: d ? `:${a}:` : a, animated: "a" === r });
         },
     },
     text: {
@@ -271,7 +271,7 @@ let Q = {
             return t.map((e) => {
                 if ("text" === e.type) {
                     let t = { index: n, 0: e.text };
-                    return (n += e.text.length), { type: "text", content: e.text, originalMatch: t };
+                    return ((n += e.text.length), { type: "text", content: e.text, originalMatch: t });
                 }
                 {
                     let t = { index: n, 0: e.surrogate };
@@ -281,7 +281,7 @@ let Q = {
                             type: "emoji",
                             name: e.emojiName,
                             surrogate: e.surrogate,
-                            src: X.Ay.getURL(e.surrogate),
+                            src: Z.Ay.getURL(e.surrogate),
                             originalMatch: t,
                         }
                     );
@@ -346,7 +346,7 @@ let e_ = {
                     s = i.replace(a, ""),
                     l = n.inQuote || !1,
                     o = n.inline || !1;
-                (n.inQuote = !0), r || (n.inline = !0);
+                ((n.inQuote = !0), r || (n.inline = !0));
                 let d = t(s, n);
                 return (
                     (n.inQuote = l),
@@ -617,7 +617,7 @@ let e_ = {
         },
         heading: K.A,
         list: z.A,
-        subtext: q.A,
+        subtext: X.A,
     },
     eE = (0, et.A)([e_, Q]),
     eA = r().omit(eE, ["inlineCode", "codeBlock", "br", "blockQuote", "subtext", "soundboard"]),
@@ -703,8 +703,8 @@ let eC = (0, et.A)([
                     let i = !eS(e, n) || !eN(e, n, t.highlightWord.length);
                     if (i)
                         do
-                            (n = e.indexOf(t.highlightWord, n + 1)),
-                                (i = !eS(e, n) || !eN(e, n, t.highlightWord.length));
+                            ((n = e.indexOf(t.highlightWord, n + 1)),
+                                (i = !eS(e, n) || !eN(e, n, t.highlightWord.length)));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),

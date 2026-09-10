@@ -50,7 +50,7 @@ function w(e) {
 function M(e) {
     return w(e) === y;
 }
-(r.AsyncMode = i),
+((r.AsyncMode = i),
     (r.ConcurrentMode = y),
     (r.ContextConsumer = u),
     (r.ContextProvider = a),
@@ -123,4 +123,4 @@ function M(e) {
                     e.$$typeof === S))
         );
     }),
-    (r.typeOf = w);
+    (r.typeOf = w));

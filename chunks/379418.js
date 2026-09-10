@@ -39,7 +39,7 @@ function c(e) {
         i = r()(Number(t) * s.A.Millis.SECOND);
     if (!i.isValid()) return null;
     let a = null != n ? l[n] : void 0;
-    return null == a && (a = l.f), { timestamp: t, format: n, parsed: i, full: l.F(i), formatted: a(i) };
+    return (null == a && (a = l.f), { timestamp: t, format: n, parsed: i, full: l.F(i), formatted: a(i) });
 }
 function u(e, t) {
     return c({ timestamp: e, format: t });

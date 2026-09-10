@@ -1,5 +1,5 @@
 let i;
-n.d(t, { I: () => c, Av: () => u, hs: () => d, QO: () => h }), n(321073);
+(n.d(t, { I: () => c, Av: () => u, hs: () => d, QO: () => h }), n(321073));
 var r = n(632296),
     a = n(874373),
     s = n(882035),
@@ -97,11 +97,11 @@ async function u(e) {
     let t = d.getState();
     t.setLoadingStarted(e);
     let a = [];
-    l.intl.setLocale(e),
+    (l.intl.setLocale(e),
         a.push(),
         a.push(
             (async () => {
-                await o(), await (0, r.loadAllMessagesInLocale)(e);
+                (await o(), await (0, r.loadAllMessagesInLocale)(e));
             })(),
         ),
         null != i && (i.setLocale(e), a.push(i.loadPromise)),
@@ -111,11 +111,11 @@ async function u(e) {
         a.push(
             (function (e) {
                 let { setTags: t } = n(38405).A;
-                return t({ locale: e }), Promise.resolve();
+                return (t({ locale: e }), Promise.resolve());
             })(e),
         ),
         await Promise.all(a).catch((n) => t.setLoadingFailed(n, e)),
-        t.setLoadingSucceeded(e);
+        t.setLoadingSucceeded(e));
 }
 async function _(e) {
     let t = d.getState(),
@@ -134,8 +134,8 @@ async function A(e) {
     null != t && (await t());
     let i = [],
         r = ("no" === e ? "nb" : e).split("-");
-    for (; r.length > 0; ) i.push(r.join("-")), r.pop();
-    i.push("en-US"), n(536637).locale(i);
+    for (; r.length > 0;) (i.push(r.join("-")), r.pop());
+    (i.push("en-US"), n(536637).locale(i));
 }
 function h() {
     return d((e) => e.localeData) ?? a.default;

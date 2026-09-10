@@ -1,4 +1,4 @@
-n.d(t, { Op: () => E, R7: () => c, sk: () => u }), n(477900);
+(n.d(t, { Op: () => E, R7: () => c, sk: () => u }), n(477900));
 var i = n(582128),
     r = n(52724),
     a = n(621466),
@@ -21,9 +21,9 @@ async function _(e) {
     let n = null,
         i = null,
         d = e.target;
-    for (; null != d; ) {
+    for (; null != d;) {
         if (d.hasAttribute(l)) {
-            (n = d.getAttribute(l)), (i = d);
+            ((n = d.getAttribute(l)), (i = d));
             break;
         }
         d = d.parentElement;

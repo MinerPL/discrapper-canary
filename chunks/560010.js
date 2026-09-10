@@ -14,7 +14,7 @@ let a = new o(l.h, {
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (s) {
         let { channelId: e, stats: t } = s;
-        (t = null != t ? t : {}),
+        ((t = null != t ? t : {}),
             (i[e] = {
                 loadingStatus: "succeeded",
                 lastFetched: Date.now(),
@@ -24,7 +24,7 @@ let a = new o(l.h, {
                 usersSeenEver: t.users_seen_ever,
                 subscribersGainedSinceLastPost: t.subscribers_gained_since_last_post,
                 subscribersLostSinceLastPost: t.subscribers_lost_since_last_post,
-            });
+            }));
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (s) {
         let { channelId: e } = s;

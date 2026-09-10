@@ -62,9 +62,9 @@ class C extends l.A {
                     t && null != e)
                 ) {
                     let t;
-                    a.A.fetchMessages({ channelId: e, limit: m.EMb }),
+                    (a.A.fetchMessages({ channelId: e, limit: m.EMb }),
                         (t = E.A.getChannel(e)),
-                        (t?.type === m.rbe.GUILD_FORUM || t?.type === m.rbe.GUILD_MEDIA) && (0, c.kB)(t);
+                        (t?.type === m.rbe.GUILD_FORUM || t?.type === m.rbe.GUILD_MEDIA) && (0, c.kB)(t));
                 }
             }
         } catch (e) {

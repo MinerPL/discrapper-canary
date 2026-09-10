@@ -8,6 +8,6 @@ function i(e, t) {
         if (n.has(i)) return i;
         let e = i.lastIndexOf("-");
         if (!~e) return;
-        e >= 2 && "-" === i[e - 2] && (e -= 2), (i = i.slice(0, e));
+        (e >= 2 && "-" === i[e - 2] && (e -= 2), (i = i.slice(0, e)));
     }
 }

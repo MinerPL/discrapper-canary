@@ -15,7 +15,7 @@ class E extends d.A {
         MULTI_ACCOUNT_SWITCH_START: (e) => this.handleMultiAccountSwitchStart(e),
     };
     _initialize() {
-        o.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), this.handleConnectionOpen();
+        (o.h.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), this.handleConnectionOpen());
     }
     _terminate() {
         o.h.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
@@ -43,14 +43,14 @@ let f = new (class extends E {
     onSwitchStart() {}
     onSwitchSuccess(e, t) {
         setTimeout(() => {
-            t && (0, l.pX)(h.BVt.ME),
-                (0, i.P0)((0, r.o)(I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }), a.Ck.SUCCESS));
+            (t && (0, l.pX)(h.BVt.ME),
+                (0, i.P0)((0, r.o)(I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }), a.Ck.SUCCESS)));
         }, 100);
     }
     onSwitchError() {
         (0, i.P0)((0, r.o)(I.intl.string(I.t.pqvKWA), a.Ck.FAILURE));
     }
     onSwitchComplete() {
-        (0, s.closeModal)(A.ov), (0, s.closeModal)(A.Gl);
+        ((0, s.closeModal)(A.ov), (0, s.closeModal)(A.Gl));
     }
 })();

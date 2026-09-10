@@ -1,9 +1,9 @@
-n.d(t, {
+(n.d(t, {
     A_: () => g,
     B4: () => en,
     Do: () => b,
     Gw: () => P,
-    IY: () => X,
+    IY: () => Z,
     JT: () => z,
     LE: () => Q,
     Le: () => H,
@@ -19,12 +19,12 @@ n.d(t, {
     ZV: () => er,
     Z_: () => $,
     ay: () => D,
-    bk: () => q,
+    bk: () => X,
     cq: () => eD,
     createChannelRecord: () => eG,
     fT: () => Y,
     gV: () => F,
-    ig: () => B,
+    ig: () => V,
     jb: () => eg,
     k: () => ee,
     k3: () => G,
@@ -41,10 +41,10 @@ n.d(t, {
     tr: () => m,
     uL: () => R,
     wE: () => W,
-    xR: () => Z,
+    xR: () => q,
     zy: () => L,
 }),
-    n(938796);
+    n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -137,7 +137,7 @@ let C = new Set([
 function L(e) {
     return R.has(e);
 }
-f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP;
+(f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP);
 let y = new Set([f.rbe.GUILD_VOICE, f.rbe.GUILD_STAGE_VOICE]);
 function D(e) {
     return "SELECTABLE" !== e && y.has(e);
@@ -179,7 +179,7 @@ let k = new Set([
 function F(e) {
     return k.has(e);
 }
-let V = new Set([
+let B = new Set([
     f.rbe.GUILD_TEXT,
     f.rbe.GUILD_ANNOUNCEMENT,
     f.rbe.ANNOUNCEMENT_THREAD,
@@ -192,8 +192,8 @@ let V = new Set([
     f.rbe.DM,
     f.rbe.GROUP_DM,
 ]);
-function B(e) {
-    return V.has(e);
+function V(e) {
+    return B.has(e);
 }
 let H = new Set([f.rbe.ANNOUNCEMENT_THREAD, f.rbe.PUBLIC_THREAD, f.rbe.PRIVATE_THREAD, f.rbe.MEDIA_THREAD]),
     j = new Set([f.rbe.PUBLIC_THREAD, f.rbe.PRIVATE_THREAD]),
@@ -233,7 +233,7 @@ let z = new Set([
         f.rbe.GUILD_MEDIA,
         f.rbe.GUILD_APP,
     ]),
-    q = new Set([
+    X = new Set([
         f.rbe.GUILD_ANNOUNCEMENT,
         f.rbe.GUILD_CATEGORY,
         f.rbe.GUILD_STORE,
@@ -245,8 +245,8 @@ let z = new Set([
         f.rbe.GUILD_MEDIA,
         f.rbe.GUILD_APP,
     ]),
-    Z = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT]),
-    X = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP]),
+    q = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT]),
+    Z = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP]),
     Q = new Set([
         f.rbe.GUILD_TEXT,
         f.rbe.GUILD_ANNOUNCEMENT,
@@ -276,7 +276,7 @@ let z = new Set([
         f.rbe.GUILD_ANNOUNCEMENT,
         f.rbe.GUILD_APP,
     ]);
-f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_VOICE, f.rbe.GUILD_APP;
+(f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_VOICE, f.rbe.GUILD_APP);
 let ei = new Set([f.rbe.GUILD_APP]);
 function er(e) {
     return (0, h.Eo)(e, ei);
@@ -382,10 +382,10 @@ class ef {
     lastNonMessageActivityTimestamp;
     gameId;
     constructor(e) {
-        (this.id = e.id),
+        ((this.id = e.id),
             (this.type = e.type ?? f.rbe.GUILD_TEXT),
             (this.name = e.name ?? ""),
-            (this.guild_id = e.guild_id ?? null);
+            (this.guild_id = e.guild_id ?? null));
     }
 }
 function ep(e) {
@@ -589,7 +589,7 @@ class em extends ef {
 }
 class eg extends em {
     constructor(e) {
-        super(e),
+        (super(e),
             (this.application_id = e.application_id),
             (this.appliedTags = e.appliedTags),
             (this.availableTags = e.availableTags),
@@ -640,7 +640,7 @@ class eg extends em {
             (this.linkedLobby = e.linkedLobby),
             (this.hdStreamingUntil = e.hdStreamingUntil),
             (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
-            (this.voiceHangout = e.voiceHangout);
+            (this.voiceHangout = e.voiceHangout));
     }
     static fromServer(e, t) {
         let n = {
@@ -730,7 +730,7 @@ class eg extends em {
 }
 class eS extends em {
     constructor(e) {
-        super(e),
+        (super(e),
             (this.application_id = e.application_id),
             (this.bitrate_ = e.bitrate_),
             (this.flags_ = e.flags_),
@@ -752,7 +752,7 @@ class eS extends em {
             (this.videoQualityMode = e.videoQualityMode),
             (this.hdStreamingUntil = e.hdStreamingUntil),
             (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
-            (this.voiceHangout = e.voiceHangout);
+            (this.voiceHangout = e.voiceHangout));
     }
     static fromServer(e, t) {
         return ew({
@@ -787,7 +787,7 @@ class eS extends em {
 }
 class eN extends em {
     constructor(e) {
-        super(e),
+        (super(e),
             (this.application_id = e.application_id),
             (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration),
             (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
@@ -806,7 +806,7 @@ class eN extends em {
             (this.version = e.version),
             (this.linkedLobby = e.linkedLobby),
             (this.hdStreamingBuyerId = e.hdStreamingBuyerId),
-            (this.hdStreamingUntil = e.hdStreamingUntil);
+            (this.hdStreamingUntil = e.hdStreamingUntil));
     }
     static fromServer(e, t) {
         return ew({
@@ -839,7 +839,7 @@ class eN extends em {
 class eC extends eN {}
 class eO extends em {
     constructor(e) {
-        super(e),
+        (super(e),
             (this.availableTags = e.availableTags ?? []),
             (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration),
             (this.defaultForumLayout = e.defaultForumLayout),
@@ -861,7 +861,7 @@ class eO extends em {
             (this.template = e.template),
             (this.themeColor = e.themeColor),
             (this.topic_ = e.topic_),
-            (this.version = e.version);
+            (this.version = e.version));
     }
     static fromServer(e, t) {
         let n = {
@@ -911,7 +911,7 @@ class eR {
         if (null != t) return t;
         {
             let t = parseInt(e, 10);
-            return this.cache.set(e, t), t;
+            return (this.cache.set(e, t), t);
         }
     }
 }
@@ -923,7 +923,7 @@ class eD extends em {
         return [...(e ?? [])].sort((e, t) => (ey.getOrCompute(e.id) ^ n) - (ey.getOrCompute(t.id) ^ n));
     }
     constructor(e) {
-        super(e),
+        (super(e),
             (this.application_id = e.application_id),
             (this.flags_ = e.flags_),
             (this.icon = e.icon),
@@ -938,7 +938,7 @@ class eD extends em {
             (this.recipients = [...(e.recipients ?? [])].sort(I.default.compare)),
             (this.recipientFlags = e.recipientFlags),
             (this.safetyWarnings = e.safetyWarnings ?? []),
-            (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
+            (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed));
     }
     static fromServer(e) {
         let t = eD.sortRecipients(e.recipients, e.id),
@@ -990,7 +990,7 @@ class eD extends em {
 }
 class ev extends em {
     constructor(e) {
-        super(e),
+        (super(e),
             (this.appliedTags = e.appliedTags ?? []),
             (this.bitrate_ = e.bitrate_),
             (this.flags_ = e.flags_),
@@ -1009,7 +1009,7 @@ class ev extends em {
             (this.threadMetadata = e.threadMetadata),
             (this.userLimit_ = e.userLimit_),
             (this.videoQualityMode = e.videoQualityMode),
-            (this.lastNonMessageActivityTimestamp = e.lastNonMessageActivityTimestamp);
+            (this.lastNonMessageActivityTimestamp = e.lastNonMessageActivityTimestamp));
     }
     static fromServer(e, t) {
         let n = {

@@ -61,7 +61,7 @@ function f(e, t) {
     return n;
 }
 function p(e, t) {
-    s.o.withSingleEntry(e, () => {
+    (s.o.withSingleEntry(e, () => {
         a.VW.withoutNormalizing(e, () => {
             i()(null != e.selection, "Editor has no selection");
             let [n, l] = a.ZF.edges(e.selection),
@@ -75,19 +75,20 @@ function p(e, t) {
             if (null != o && null != d) {
                 let t = { path: n.path, offset: o.location },
                     i = { path: l.path, offset: d.location };
-                r.b.delete(e, { at: i, distance: d.chars.length }), r.b.delete(e, { at: t, distance: o.chars.length });
+                (r.b.delete(e, { at: i, distance: d.chars.length }),
+                    r.b.delete(e, { at: t, distance: o.chars.length }));
                 let s = n.offset,
                     u = l.offset;
-                a.Kh.isBefore(n, t) || (s -= o.chars.length),
+                (a.Kh.isBefore(n, t) || (s -= o.chars.length),
                     f && !a.Kh.isBefore(l, t) && (u -= o.chars.length),
                     a.Kh.isAfter(l, i) && (u -= d.chars.length),
                     r.b.select(e, {
                         anchor: { path: n.path, offset: Math.max(0, s) },
                         focus: { path: l.path, offset: Math.max(0, u) },
-                    });
+                    }));
             } else {
                 let i = u[t];
-                r.b.insertText(e, i, { at: l }), r.b.insertText(e, i, { at: n });
+                (r.b.insertText(e, i, { at: l }), r.b.insertText(e, i, { at: n }));
                 let s = h[0].text.length + i.length,
                     a = m[0].text.length + (f ? 2 * i.length : i.length);
                 r.b.select(e, {
@@ -97,7 +98,7 @@ function p(e, t) {
             }
         });
     }),
-        a.VW.focus(e);
+        a.VW.focus(e));
 }
 function g(e, t) {
     let n = e.selection;
@@ -105,12 +106,12 @@ function g(e, t) {
     let l = !0;
     for (let [i, s] of a.VW.blocks(e))
         ("line" === i.type || i.type === t) && a.ZF.includes(n, s) && (l = l && i.type === t);
-    a.VW.withoutNormalizing(e, () => {
+    (a.VW.withoutNormalizing(e, () => {
         for (let [i, s] of a.VW.blocks(e))
             a.ZF.includes(n, s) &&
                 (l || "line" !== i.type
                     ? l && i.type === t && r.b.setNodes(e, { type: "line" }, { at: s })
                     : r.b.setNodes(e, { type: t }, { at: s }));
     }),
-        a.VW.focus(e);
+        a.VW.focus(e));
 }

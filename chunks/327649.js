@@ -25,7 +25,7 @@ function o(e, t, n, o, d, c) {
                         default:
                             e.quality;
                     }
-                return null != e.guildPremiumTier && (i = i || (0, r.yS)(n, e.guildPremiumTier)), i;
+                return (null != e.guildPremiumTier && (i = i || (0, r.yS)(n, e.guildPremiumTier)), i);
             })(i, o, d)
         )
             return !0;

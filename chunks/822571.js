@@ -31,7 +31,7 @@ class d extends s.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.componentType = e.componentType),
             (this.properties = e.properties),
@@ -39,7 +39,7 @@ class d extends s.A {
             (this.startDate = e.startDate),
             (this.endDate = e.endDate),
             (this.effectiveStartDate = e.effectiveStartDate),
-            (this.effectiveEndDate = e.effectiveEndDate);
+            (this.effectiveEndDate = e.effectiveEndDate));
     }
     get isTimed() {
         return null != this.startDate || null != this.endDate;

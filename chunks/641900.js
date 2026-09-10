@@ -22,7 +22,7 @@ e.exports = function (e, t, n, i, o, a) {
         ) {
             var p = !i && l.combo === o,
                 h = i && l.seq === i && l.level === a;
-            (p || h) && this.callbacks[e].splice(s, 1), f.push(l);
+            ((p || h) && this.callbacks[e].splice(s, 1), f.push(l));
         }
     return f;
 };

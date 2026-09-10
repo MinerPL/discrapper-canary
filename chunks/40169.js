@@ -55,11 +55,11 @@ class T extends l.A {
 }
 function m(e) {
     let t = h.A.getGuild(e.guild_id)?.name;
-    p.fileOnly(`received deleted guild entities (id: ${e.guild_id}, name: ${t})`),
+    (p.fileOnly(`received deleted guild entities (id: ${e.guild_id}, name: ${t})`),
         a.Ay.Emitter.batched(() => {
             var t, n, i, r, a, l, o, d;
             let c, h, f, T, m;
-            null != e.channels &&
+            (null != e.channels &&
                 ((t = e.guild_id),
                 (n = new Set(e.channels)),
                 (c = I.default.keys(E.A.getMutableBasicGuildChannelsForGuild(t))),
@@ -83,8 +83,8 @@ function m(e) {
                     ((o = e.guild_id),
                     (d = new Set(e.stickers)),
                     (m = (T = _.A.getStickersByGuildId(o) ?? []).filter((e) => d.has(e.id))),
-                    T.length !== m.length && s.h.dispatch({ type: "GUILD_STICKERS_UPDATE", guildId: o, stickers: m }));
-        });
+                    T.length !== m.length && s.h.dispatch({ type: "GUILD_STICKERS_UPDATE", guildId: o, stickers: m })));
+        }));
 }
 function g() {
     d.getAll().then((e) => {

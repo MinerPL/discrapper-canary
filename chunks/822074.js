@@ -1,5 +1,5 @@
 let l, i, s, r;
-n.d(t, { A: () => w }), n(321073);
+(n.d(t, { A: () => w }), n(321073));
 var a = n(435558),
     o = n.n(a),
     u = n(17928),
@@ -50,9 +50,9 @@ class k extends u.Ay.PersistedStore {
         return { shouldShowTopicsBar: l };
     }
     initialize(e) {
-        (l = e?.shouldShowTopicsBar ?? !0),
+        ((l = e?.shouldShowTopicsBar ?? !0),
             this.waitFor(p.A, m.A, g.A, f.A, x.Ay, A.Ay, C.Ay, E.default),
-            this.syncWith([f.A], M);
+            this.syncWith([f.A], M));
     }
     allSummaries() {
         return N;
@@ -151,7 +151,7 @@ let w = new k(c.h, {
             let e = S(t, n),
                 l = [...(N[n] ?? [])],
                 i = l.findIndex((t) => t.id === e?.id);
-            i > -1 ? (l[i] = e) : l.push(e), (N[n] = l);
+            (i > -1 ? (l[i] = e) : l.push(e), (N[n] = l));
         }
         let s = { ...(_[n] ?? { fetching: !1 }), summaryId: void 0, summaryIdLastReceivedAt: i, summaryIdError: l };
         _[n] = s;
@@ -169,7 +169,7 @@ let w = new k(c.h, {
         }
         N[n] = (0, a.sortBy)(s, (e) => y.default.extractTimestamp(e.startId)).reverse();
         let o = { ..._[n], fetching: !1, error: void 0, lastReceivedAt: i };
-        null != l && (o.error = l), (_[n] = o);
+        (null != l && (o.error = l), (_[n] = o));
     },
     REQUEST_CHANNEL_SUMMARIES(e) {
         _[e.channelId] = { ...(_[e.channelId] ?? {}), fetching: !0, lastRequestedAt: e.requestedAt };
@@ -221,18 +221,18 @@ let w = new k(c.h, {
     RECEIVE_CHANNEL_AFFINITIES(e) {
         let { affinities: t, error: n } = e;
         if (null != n) {
-            (T = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() });
+            ((T = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() }));
             return;
         }
-        (T = t ?? []),
+        ((T = t ?? []),
             (b = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
-            (R = { ...R, status: "ok", lastResponse: Date.now() });
+            (R = { ...R, status: "ok", lastResponse: Date.now() }));
     },
     REQUEST_CHANNEL_SUMMARIES_BULK(e) {
         let { channelIds: t, requestedAt: n } = e,
             l = t.reduce((e, t) => {
                 let l = _[t] ?? {};
-                return (e[t] = { ...l, fetching: !0, lastRequestedAt: n, error: void 0 }), e;
+                return ((e[t] = { ...l, fetching: !0, lastRequestedAt: n, error: void 0 }), e);
             }, {});
         _ = { ..._, ...l };
     },
@@ -254,7 +254,7 @@ let w = new k(c.h, {
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
                             .value();
-                    return (e[n] = i), e;
+                    return ((e[n] = i), e);
                 }, {}),
             r = i.reduce(
                 (e, t) => {
@@ -268,7 +268,7 @@ let w = new k(c.h, {
                 },
                 { summariesByChannel: {}, summaryFetchStatusByChannel: {} },
             );
-        (N = { ...N, ...r.summariesByChannel }), (_ = { ..._, ...r.summaryFetchStatusByChannel });
+        ((N = { ...N, ...r.summariesByChannel }), (_ = { ..._, ...r.summaryFetchStatusByChannel }));
     },
     CONVERSATION_SUMMARY_UPDATE(e) {
         let { channel_id: t, summaries: n, guild_id: l } = e,
@@ -289,10 +289,10 @@ let w = new k(c.h, {
                 .uniqBy("id")
                 .reverse()
                 .value();
-        (N[t] = a), (_[t] = { ..._[t], error: void 0, fetching: _[t]?.fetching ?? !1, lastReceivedAt: i });
+        ((N[t] = a), (_[t] = { ..._[t], error: void 0, fetching: _[t]?.fetching ?? !1, lastReceivedAt: i }));
     },
     CLEAR_CONVERSATION_SUMMARIES() {
-        (N = {}), (_ = {});
+        ((N = {}), (_ = {}));
     },
     DELETE_SUMMARY(e) {
         let t = e.summary.channelId,

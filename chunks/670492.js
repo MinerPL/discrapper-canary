@@ -30,7 +30,7 @@ class C extends i.Ay.Store {
 let a = new C(r.h, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
-        void 0 !== t && c.setToken(t), (S = n);
+        (void 0 !== t && c.setToken(t), (S = n));
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -47,7 +47,7 @@ let a = new C(r.h, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (S = o().sortBy(t, "code")), (u = n);
+        ((S = o().sortBy(t, "code")), (u = n));
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;

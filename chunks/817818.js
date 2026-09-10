@@ -1,4 +1,4 @@
-n.d(t, { Tg: () => h, h9: () => f, jx: () => I, l8: () => T, sy: () => p }), n(938796);
+(n.d(t, { Tg: () => h, h9: () => f, jx: () => I, l8: () => T, sy: () => p }), n(938796));
 var i = n(665260),
     r = n(636537),
     a = n(228366),
@@ -36,7 +36,7 @@ async function f(e) {
     if (null == r || !r.features.has(E.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
     let a = u.A.shouldFetchPrompts(e),
         s = u.A.getOnboardingPrompts(e);
-    if (!a && s.length > 0) return s.every((e) => !e.inOnboarding) ? m(e) : n || p(e), Promise.resolve();
+    if (!a && s.length > 0) return (s.every((e) => !e.inOnboarding) ? m(e) : n || p(e), Promise.resolve());
     let c = await I(e);
     return Array.isArray(c) && c.every((e) => !e.inOnboarding) ? (m(e), Promise.resolve()) : (n || p(e), c);
 }
@@ -45,12 +45,12 @@ function p(e) {
 }
 let T = -3;
 function m(e) {
-    c.default.track(E.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, s.H$)(e), step: -2, required: !0 }),
+    (c.default.track(E.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, s.H$)(e), step: -2, required: !0 }),
         c.default.track(E.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
             ...(0, s.H$)(e),
             step: -2,
             skipped: !1,
             is_final_step: !0,
             in_onboarding: !0,
-        });
+        }));
 }

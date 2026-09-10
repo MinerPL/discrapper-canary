@@ -1,4 +1,5 @@
 !(function (t, e) {
+    "use strict";
     if (
         "IntersectionObserver" in t &&
         "IntersectionObserverEntry" in t &&
@@ -14,12 +15,12 @@
     }
     var n = [];
     function i(t) {
-        (this.time = t.time),
+        ((this.time = t.time),
             (this.target = t.target),
             (this.rootBounds = t.rootBounds),
             (this.boundingClientRect = t.boundingClientRect),
             (this.intersectionRect = t.intersectionRect || c()),
-            (this.isIntersecting = !!t.intersectionRect);
+            (this.isIntersecting = !!t.intersectionRect));
         var e = this.boundingClientRect,
             n = e.width * e.height,
             i = this.intersectionRect,
@@ -33,14 +34,14 @@
             r = e || {};
         if ("function" != typeof t) throw Error("callback must be a function");
         if (r.root && 1 != r.root.nodeType) throw Error("root must be an Element");
-        (this._checkForIntersections =
+        ((this._checkForIntersections =
             ((n = this._checkForIntersections.bind(this)),
             (i = this.THROTTLE_TIMEOUT),
             (o = null),
             function () {
                 o ||
                     (o = setTimeout(function () {
-                        n(), (o = null);
+                        (n(), (o = null));
                     }, i));
             })),
             (this._callback = t),
@@ -53,7 +54,7 @@
                 .map(function (t) {
                     return t.value + t.unit;
                 })
-                .join(" "));
+                .join(" ")));
     }
     function r(t, e, n, i) {
         "function" == typeof t.addEventListener
@@ -87,7 +88,7 @@
         return { top: 0, bottom: 0, left: 0, right: 0, width: 0, height: 0 };
     }
     function a(t, e) {
-        for (var n = e; n; ) {
+        for (var n = e; n;) {
             if (n == t) return !0;
             n = u(n);
         }
@@ -97,7 +98,7 @@
         var e = t.parentNode;
         return e && 11 == e.nodeType && e.host ? e.host : e;
     }
-    (o.prototype.THROTTLE_TIMEOUT = 100),
+    ((o.prototype.THROTTLE_TIMEOUT = 100),
         (o.prototype.POLL_INTERVAL = null),
         (o.prototype.USE_MUTATION_OBSERVER = !0),
         (o.prototype.observe = function (t) {
@@ -107,24 +108,24 @@
                 })
             ) {
                 if (!(t && 1 == t.nodeType)) throw Error("target must be an Element");
-                this._registerInstance(),
+                (this._registerInstance(),
                     this._observationTargets.push({ element: t, entry: null }),
                     this._monitorIntersections(),
-                    this._checkForIntersections();
+                    this._checkForIntersections());
             }
         }),
         (o.prototype.unobserve = function (t) {
-            (this._observationTargets = this._observationTargets.filter(function (e) {
+            ((this._observationTargets = this._observationTargets.filter(function (e) {
                 return e.element != t;
             })),
-                this._observationTargets.length || (this._unmonitorIntersections(), this._unregisterInstance());
+                this._observationTargets.length || (this._unmonitorIntersections(), this._unregisterInstance()));
         }),
         (o.prototype.disconnect = function () {
-            (this._observationTargets = []), this._unmonitorIntersections(), this._unregisterInstance();
+            ((this._observationTargets = []), this._unmonitorIntersections(), this._unregisterInstance());
         }),
         (o.prototype.takeRecords = function () {
             var t = this._queuedEntries.slice();
-            return (this._queuedEntries = []), t;
+            return ((this._queuedEntries = []), t);
         }),
         (o.prototype._initThresholds = function (t) {
             var e = t || [0];
@@ -143,7 +144,7 @@
                 if (!e) throw Error("rootMargin must be specified in pixels or percent");
                 return { value: parseFloat(e[1]), unit: e[2] };
             });
-            return (e[1] = e[1] || e[0]), (e[2] = e[2] || e[0]), (e[3] = e[3] || e[1]), e;
+            return ((e[1] = e[1] || e[0]), (e[2] = e[2] || e[0]), (e[3] = e[3] || e[1]), e);
         }),
         (o.prototype._monitorIntersections = function () {
             !this._monitoringIntersections &&
@@ -174,7 +175,7 @@
         (o.prototype._checkForIntersections = function () {
             var e = this._rootIsInDom(),
                 n = e ? this._getRootRect() : c();
-            this._observationTargets.forEach(function (o) {
+            (this._observationTargets.forEach(function (o) {
                 var r = o.element,
                     s = h(r),
                     c = this._rootContainsTarget(r),
@@ -193,11 +194,11 @@
                         : a && a.isIntersecting && this._queuedEntries.push(p)
                     : this._queuedEntries.push(p);
             }, this),
-                this._queuedEntries.length && this._callback(this.takeRecords(), this);
+                this._queuedEntries.length && this._callback(this.takeRecords(), this));
         }),
         (o.prototype._computeTargetAndRootIntersection = function (n, i) {
             if ("none" != t.getComputedStyle(n).display) {
-                for (var o = h(n), r = u(n), s = !1; !s; ) {
+                for (var o = h(n), r = u(n), s = !1; !s;) {
                     var c = null,
                         a = 1 == r.nodeType ? t.getComputedStyle(r) : {};
                     if ("none" == a.display) return;
@@ -246,7 +247,7 @@
                     return "px" == e.unit ? e.value : (e.value * (n % 2 ? t.width : t.height)) / 100;
                 }),
                 n = { top: t.top - e[0], right: t.right + e[1], bottom: t.bottom + e[2], left: t.left - e[3] };
-            return (n.width = n.right - n.left), (n.height = n.bottom - n.top), n;
+            return ((n.width = n.right - n.left), (n.height = n.bottom - n.top), n);
         }),
         (o.prototype._hasCrossedThreshold = function (t, e) {
             var n = t && t.isIntersecting ? t.intersectionRatio || 0 : -1,
@@ -271,5 +272,5 @@
             -1 != t && n.splice(t, 1);
         }),
         (t.IntersectionObserver = o),
-        (t.IntersectionObserverEntry = i);
+        (t.IntersectionObserverEntry = i));
 })(window, document);

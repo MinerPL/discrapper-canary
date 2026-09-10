@@ -23,12 +23,12 @@ let d = function (e) {
         C = i.useMemo(() => s.V.getDefaultLinkInterceptor(t), [t]),
         E = i.useCallback(
             (e) => {
-                o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+                (o.default.track(u.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: f?.[0],
                     attachment_subtype: f?.[1],
                 }),
                     x?.(),
-                    C?.(e);
+                    C?.(e));
             },
             [C, f, x],
         );

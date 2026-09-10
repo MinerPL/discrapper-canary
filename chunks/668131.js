@@ -11,13 +11,13 @@ let i = (0, n(196765).v)((e, t) => ({
             let n = { ...e.responses };
             delete n[t];
             let i = { ...e.displayedQuestions };
-            return delete i[t], { responses: n, displayedQuestions: i };
+            return (delete i[t], { responses: n, displayedQuestions: i });
         });
     },
     trackDisplayedQuestions: (t, n) => {
         e((e) => {
             let i = new Set(e.displayedQuestions[t] ?? new Set());
-            return n.forEach((e) => i.add(e)), { displayedQuestions: { ...e.displayedQuestions, [t]: i } };
+            return (n.forEach((e) => i.add(e)), { displayedQuestions: { ...e.displayedQuestions, [t]: i } });
         });
     },
     getDisplayedQuestions: (e) => {

@@ -1,4 +1,4 @@
-s.d(r, { Ay: () => A, DN: () => I, mt: () => _ }), s(321073);
+(s.d(r, { Ay: () => A, DN: () => I, mt: () => _ }), s(321073));
 var t = s(477900),
     n = s(582128),
     l = s(503698),
@@ -101,10 +101,10 @@ class U extends n.PureComponent {
             u = e.length === r ? e.length : r - 1,
             a = this.renderMoreUsers(u),
             c = 0;
-        for (; c < u && c < e.length; ) {
+        for (; c < u && c < e.length;) {
             let r = null == a && null == l && c === e.length - 1,
                 u = s(e[c], r, c);
-            i.push(
+            (i.push(
                 r
                     ? (0, t.jsx)("div", { className: p.H, children: u }, g(e[c] ?? null, c))
                     : (0, t.jsx)(
@@ -119,9 +119,9 @@ class U extends n.PureComponent {
                           g(e[c], c),
                       ),
             ),
-                c++;
+                c++);
         }
-        return null != l ? i.push(l) : null != a && i.push(a), i;
+        return (null != l ? i.push(l) : null != a && i.push(a), i);
     }
     renderMoreUsers(e) {
         let { max: r, count: s, hideMoreUsers: l, renderMoreUsers: i, users: u, dimEmptyUsers: a } = this.props,

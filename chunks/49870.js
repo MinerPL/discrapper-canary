@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => b });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -62,7 +62,7 @@ function A(e, t) {
     return t >= e.startSec && t < e.startSec + e.durationSec;
 }
 var C = n(340710);
-function I(e) {
+function b(e) {
     let {
             ref: t,
             src: n,
@@ -75,43 +75,43 @@ function I(e) {
             onLoadedMetadata: g,
             onError: h,
             children: v,
-            original: I,
-            subSources: b,
-            ...j
+            original: b,
+            subSources: j,
+            ...I
         } = e,
         y = l.useRef(null),
-        [E, T] = l.useState(I.durationSec ?? 0),
-        [_, M] = l.useState(I.id),
+        [E, _] = l.useState(b.durationSec ?? 0),
+        [T, M] = l.useState(b.id),
         [N, L] = l.useState(0),
         [R, w] = l.useState("hidden"),
         [k, P] = l.useState("contain"),
-        D = l.useMemo(() => [{ ...I, startSec: 0, durationSec: E }, ...b], [I, b, E]),
-        O = D.find((e) => e.id === _) ?? D[0],
+        O = l.useMemo(() => [{ ...b, startSec: 0, durationSec: E }, ...j], [b, j, E]),
+        D = O.find((e) => e.id === T) ?? O[0],
         U = l.useRef(null),
-        H = l.useRef(null),
-        V = l.useRef(null);
-    function $(e, t) {
-        let n = D.find((t) => t.id === e);
+        V = l.useRef(null),
+        $ = l.useRef(null);
+    function H(e, t) {
+        let n = O.find((t) => t.id === e);
         if (null == n) return;
         let r = u()(t, 0, E),
             l = y.current;
-        if (n.id === z.current.activeSource.id) {
-            (H.current = null), null != l && (l.currentTime = r - n.startSec);
+        if (n.id === F.current.activeSource.id) {
+            ((V.current = null), null != l && (l.currentTime = r - n.startSec));
             return;
         }
-        !(function () {
+        (!(function () {
             let e = y.current,
-                t = V.current;
+                t = $.current;
             if (null == e || null == t || 0 === e.videoWidth) return;
             let n = t.getContext("2d");
             if (null != n) {
-                (t.width = e.videoWidth), (t.height = e.videoHeight);
+                ((t.width = e.videoWidth), (t.height = e.videoHeight));
                 try {
                     n.drawImage(e, 0, 0);
                 } catch {
                     return;
                 }
-                P(window.getComputedStyle(e).objectFit), w("holding");
+                (P(window.getComputedStyle(e).objectFit), w("holding"));
             }
         })(),
             (U.current = {
@@ -119,26 +119,26 @@ function I(e) {
                 resumePlayback: null != l && !l.paused,
                 playbackRate: l?.playbackRate ?? 1,
             }),
-            (H.current = r),
-            (z.current = { ...z.current, activeSource: n }),
+            (V.current = r),
+            (F.current = { ...F.current, activeSource: n }),
             M(n.id),
-            L(r);
+            L(r));
     }
-    function G(e) {
-        $(I.id, e);
+    function z(e) {
+        H(b.id, e);
     }
-    let z = l.useRef({ activeSource: O, masterDurationSec: E, isScrubbing: d, revertToOriginal: G });
+    let F = l.useRef({ activeSource: D, masterDurationSec: E, isScrubbing: d, revertToOriginal: z });
     l.useLayoutEffect(() => {
-        z.current = { ...z.current, activeSource: O, masterDurationSec: E, isScrubbing: d, revertToOriginal: G };
+        F.current = { ...F.current, activeSource: D, masterDurationSec: E, isScrubbing: d, revertToOriginal: z };
     });
-    let F = l.useRef(null);
+    let G = l.useRef(null);
     l.useLayoutEffect(
         () => (
-            (F.current ??= (function (e) {
+            (G.current ??= (function (e) {
                 let t = null;
                 function n() {
                     let n = e.getElement();
-                    return null != n && (t = n), t;
+                    return (null != n && (t = n), t);
                 }
                 return new Proxy(
                     {},
@@ -169,9 +169,9 @@ function I(e) {
                             return "function" == typeof s ? s.bind(l) : s;
                         },
                         set(t, r, l) {
-                            if ("currentTime" === r) return e.seekTo(l), !0;
+                            if ("currentTime" === r) return (e.seekTo(l), !0);
                             let i = n();
-                            return null != i && Reflect.set(i, r, l), !0;
+                            return (null != i && Reflect.set(i, r, l), !0);
                         },
                         has(e, t) {
                             let r = n();
@@ -181,37 +181,37 @@ function I(e) {
                 );
             })({
                 getElement: () => y.current,
-                getDurationSec: () => z.current.masterDurationSec,
-                getActiveStartSec: () => z.current.activeSource.startSec,
+                getDurationSec: () => F.current.masterDurationSec,
+                getActiveStartSec: () => F.current.activeSource.startSec,
                 getCurrentTimeSec: () => {
-                    let e = H.current;
-                    return null != e ? e : z.current.activeSource.startSec + (y.current?.currentTime ?? 0);
+                    let e = V.current;
+                    return null != e ? e : F.current.activeSource.startSec + (y.current?.currentTime ?? 0);
                 },
                 seekTo: (e) => {
-                    let t = u()(e, 0, z.current.masterDurationSec);
-                    if ((L(t), A(z.current.activeSource, t))) {
-                        H.current = null;
+                    let t = u()(e, 0, F.current.masterDurationSec);
+                    if ((L(t), A(F.current.activeSource, t))) {
+                        V.current = null;
                         let e = y.current;
-                        null != e && (e.currentTime = t - z.current.activeSource.startSec);
+                        null != e && (e.currentTime = t - F.current.activeSource.startSec);
                         return;
                     }
-                    (H.current = t), z.current.isScrubbing || z.current.revertToOriginal(t);
+                    ((V.current = t), F.current.isScrubbing || F.current.revertToOriginal(t));
                 },
             })),
-            t(F.current),
+            t(G.current),
             () => {
                 t(null);
             }
         ),
         [t],
     );
-    let Z = l.useRef(_);
+    let Z = l.useRef(T);
     function K(e) {
-        e.id !== O.id && $(e.id, N);
+        e.id !== D.id && H(e.id, N);
     }
-    l.useEffect(() => {
-        Z.current !== _ && ((Z.current = _), y.current?.load());
-    }, [_]),
+    (l.useEffect(() => {
+        Z.current !== T && ((Z.current = T), y.current?.load());
+    }, [T]),
         l.useEffect(() => {
             if ("releasing" !== R) return;
             let e = y.current;
@@ -224,48 +224,48 @@ function I(e) {
             if ("function" == typeof e.requestVideoFrameCallback) {
                 let l = e.requestVideoFrameCallback(n);
                 return () => {
-                    (t = !0), clearTimeout(r), e.cancelVideoFrameCallback(l);
+                    ((t = !0), clearTimeout(r), e.cancelVideoFrameCallback(l));
                 };
             }
             return (
                 e.addEventListener("seeked", n),
                 () => {
-                    (t = !0), clearTimeout(r), e.removeEventListener("seeked", n);
+                    ((t = !0), clearTimeout(r), e.removeEventListener("seeked", n));
                 }
             );
         }, [R]),
         l.useEffect(() => {
             if (d) return;
-            let e = H.current;
-            null == e || null != U.current || A(z.current.activeSource, e) || z.current.revertToOriginal(e);
-        }, [d]);
-    let B = !A(O, N);
+            let e = V.current;
+            null == e || null != U.current || A(F.current.activeSource, e) || F.current.revertToOriginal(e);
+        }, [d]));
+    let Y = !A(D, N);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(o.A, {
-                ...j,
+                ...I,
                 ref: y,
-                className: a()(s, { [C._b]: B }),
-                poster: O.poster ?? i,
+                className: a()(s, { [C._b]: Y }),
+                poster: D.poster ?? i,
                 onTimeUpdate: function (e) {
                     let t = y.current;
-                    if (null != t && null == U.current && null == H.current) {
-                        let e = O.startSec + t.currentTime;
-                        L(e), O.id !== I.id && e >= O.startSec + O.durationSec - 0.12 && G(e);
+                    if (null != t && null == U.current && null == V.current) {
+                        let e = D.startSec + t.currentTime;
+                        (L(e), D.id !== b.id && e >= D.startSec + D.durationSec - 0.12 && z(e));
                     }
                     m?.(e);
                 },
                 onEnded: function (e) {
-                    O.id !== I.id ? G(O.startSec + O.durationSec) : f?.(e);
+                    D.id !== b.id ? z(D.startSec + D.durationSec) : f?.(e);
                 },
                 onLoadedMetadata: function (e) {
                     let t = y.current,
                         n = U.current;
                     if (null == n) {
-                        null != t &&
+                        (null != t &&
                             Number.isFinite(t.duration) &&
-                            (T(t.duration), (z.current = { ...z.current, masterDurationSec: t.duration })),
-                            g?.(e);
+                            (_(t.duration), (F.current = { ...F.current, masterDurationSec: t.duration })),
+                            g?.(e));
                         return;
                     }
                     if (((U.current = null), null != t)) {
@@ -275,31 +275,31 @@ function I(e) {
                         } catch {}
                         n.resumePlayback && t.play().catch(() => {});
                     }
-                    (H.current = null), w((e) => ("holding" === e ? "releasing" : e));
+                    ((V.current = null), w((e) => ("holding" === e ? "releasing" : e)));
                 },
                 onError: function (e) {
-                    O.id !== I.id ? G(O.startSec + (y.current?.currentTime ?? 0)) : h?.(e);
+                    D.id !== b.id ? z(D.startSec + (y.current?.currentTime ?? 0)) : h?.(e);
                 },
-                children: [v, (0, r.jsx)("source", { onError: c, src: O.url })],
+                children: [v, (0, r.jsx)("source", { onError: c, src: D.url })],
             }),
             (0, r.jsx)("canvas", {
-                ref: V,
+                ref: $,
                 className: C.bQ,
                 style: { objectFit: k },
                 hidden: "hidden" === R,
                 "aria-hidden": !0,
             }),
-            D.length > 1 &&
+            O.length > 1 &&
                 (0, r.jsx)("div", {
                     className: C.c2,
                     "data-testid": "discord-web-multi-video-player-povs",
-                    children: D.map((e) =>
+                    children: O.map((e) =>
                         (0, r.jsx)(
                             S,
                             {
                                 source: e,
-                                label: e.id === I.id ? (e.label ?? x.intl.string(p.default["9tdsDk"])) : e.label,
-                                isActive: e.id === O.id,
+                                label: e.id === b.id ? (e.label ?? x.intl.string(p.default["9tdsDk"])) : e.label,
+                                isActive: e.id === D.id,
                                 isInRange: A(e, N),
                                 onSelect: K,
                             },

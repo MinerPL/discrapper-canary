@@ -15,14 +15,14 @@ var n = i(477900),
 function _(t) {
     let { transitionState: e, onClose: _ } = t,
         b = a.useCallback(() => {
-            _(), u.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.ACCOUNT_AGE_GROUP });
+            (_(), u.A.showAgeVerificationGetStartedModal({ entryPoint: p.q1.ACCOUNT_AGE_GROUP }));
         }, [_]),
         h = a.useCallback(() => {
-            _(),
+            (_(),
                 (0, o.openModalLazy)(async () => {
                     let { default: t } = await i.e("500956").then(i.bind(i, 253463));
                     return (e) => (0, n.jsx)(t, { ...e });
-                });
+                }));
         }, [_]),
         C = a.useCallback(() => {
             u.A.openUrl(d.A.getArticleURL(A.MVz.TIGGER_PAWTECT_LEARN_MORE));

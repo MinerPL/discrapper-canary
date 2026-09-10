@@ -24,7 +24,7 @@ var l,
     k = n(566908),
     v = n(970244),
     I = n(969632);
-n(323874), n(14289), n(35956);
+(n(323874), n(14289), n(35956));
 var S = n(744593),
     P = n(608461),
     N = n(412136);
@@ -39,7 +39,7 @@ var D = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLO
 async function _(e, t, n) {
     let l = y(t, n),
         a = await fetch(n);
-    return U(e, t, new File([await a.blob()], l, { type: "image/gif" })), n;
+    return (U(e, t, new File([await a.blob()], l, { type: "image/gif" })), n);
 }
 function U(e, t, n) {
     let l = { id: t, channelId: e, file: n, platform: T.xz.WEB, origin: "unknown:poll_attachment" };
@@ -190,7 +190,7 @@ function ef(e) {
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: l } = e;
-                            null != n && r(n, s), l && t();
+                            (null != n && r(n, s), l && t());
                         },
                     }),
                 });
@@ -291,10 +291,10 @@ function eg(e) {
                     a = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
                 switch (e.key.toLowerCase()) {
                     case "enter":
-                        r &&
+                        (r &&
                             (e.preventDefault(),
                             ((0, I.ND)(n) || "macos" !== (0, E.getOS)() ? t : a) ? (e.stopPropagation(), f()) : d()),
-                            C.current[l + 1]?.focusInput();
+                            C.current[l + 1]?.focusInput());
                         break;
                     case "e":
                         ("macos" === (0, E.getOS)() ? a : t) && (e.preventDefault(), e.stopPropagation(), w());
@@ -431,27 +431,27 @@ function eA(e) {
                 v = r.length < N.Lu,
                 O = r.length > N.FW,
                 T = i.useCallback((e) => {
-                    b((e) => {
+                    (b((e) => {
                         let t = { ...e };
-                        return delete t.question, t;
+                        return (delete t.question, t);
                     }),
-                        c(e);
+                        c(e));
                 }, []),
                 L = i.useCallback((e) => {
                     let { text: t, index: n, localCreationAnswerId: l } = e;
-                    b((e) => {
+                    (b((e) => {
                         let t = { ...e };
-                        return delete t[`answer-${l}`], t;
+                        return (delete t[`answer-${l}`], t);
                     }),
                         o((e) => {
                             let l = [...e];
-                            return (l[n] = { ...l[n], text: t }), l;
-                        });
+                            return ((l[n] = { ...l[n], text: t }), l);
+                        }));
                 }, []),
                 q = i.useCallback((e, t) => {
                     o((n) => {
                         let l = [...n];
-                        return (l[t] = { ...l[t], image: e }), l;
+                        return ((l[t] = { ...l[t], image: e }), l);
                     });
                 }, []),
                 G = i.useCallback(
@@ -477,20 +477,20 @@ function eA(e) {
                     (e, t, n) => {
                         let l = r[t].localCreationAnswerId,
                             a = URL.createObjectURL(n);
-                        G(e, t), q(M(a, D.PREPARING), t), U(e, l, n), q(M(a, D.READY_TO_UPLOAD), t);
+                        (G(e, t), q(M(a, D.PREPARING), t), U(e, l, n), q(M(a, D.READY_TO_UPLOAD), t));
                     },
                     [r, q, G],
                 ),
                 H = i.useCallback(
                     (e, t) => {
-                        G(a, t), q({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t);
+                        (G(a, t), q({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t));
                     },
                     [a, q, G],
                 ),
                 V = i.useCallback((e) => {
                     o((t) => {
                         let n = [...t];
-                        return (n[e] = { ...n[e], image: void 0 }), n;
+                        return ((n[e] = { ...n[e], image: void 0 }), n);
                     });
                 }, []),
                 $ = i.useCallback(() => {
@@ -500,12 +500,12 @@ function eA(e) {
                     (e) => {
                         if (!O) return;
                         let t = r.length;
-                        G(a, e),
+                        (G(a, e),
                             o((t) => {
                                 let n = [...t];
-                                return n.splice(e, 1), n;
+                                return (n.splice(e, 1), n);
                             }),
-                            n?.({ indexToRemove: e, numberOfAnswers: t });
+                            n?.({ indexToRemove: e, numberOfAnswers: t }));
                     },
                     [r.length, O, a, n, G],
                 );
@@ -589,7 +589,7 @@ function eA(e) {
                 let e = 0,
                     t = 0,
                     n = 0;
-                H.forEach((l) => {
+                (H.forEach((l) => {
                     let a = l.image;
                     null != a &&
                         (null != a.emoji
@@ -605,13 +605,13 @@ function eA(e) {
                         stickers_count: n,
                         allow_multiselect: $,
                         layout_type: S.Z.DEFAULT,
-                    });
+                    }));
             }, [H, $]),
         },
         ew = (0, k.Sc)(),
         eE = i.useRef(H.length),
         ex = i.useCallback(() => {
-            ej(), u();
+            (ej(), u());
         }, [u, ej]),
         ek = i.useCallback(() => {
             (0, I.Wn)(V, H)
@@ -627,11 +627,11 @@ function eA(e) {
                       },
                   });
         }, [ex, H, V]);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         (0, d.updateModal)(N.sm, (e) => (0, a.jsx)(eA, { ...e, channel: l }), ek);
     }, [ek, l]),
         i.useEffect(() => {
-            H.length > eE.current && z.current[H.length - 1]?.focusInput(), (eE.current = H.length);
+            (H.length > eE.current && z.current[H.length - 1]?.focusInput(), (eE.current = H.length));
         }, [H.length]),
         i.useEffect(() => {
             if (ef) {
@@ -642,7 +642,7 @@ function eA(e) {
                 }
                 eR(!1);
             }
-        }, [em, H, ef, eR, z]);
+        }, [em, H, ef, eR, z]));
     let ev = i.useCallback(() => {
             r === f.ip.ENTERED && eu();
         }, [eu, r]),

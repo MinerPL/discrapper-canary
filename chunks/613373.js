@@ -29,7 +29,7 @@ var r = n(664111),
     i = n(565164);
 n(408121);
 var u = n(931853);
-n(246047), n(91034), n(710434), n(634156);
+(n(246047), n(91034), n(710434), n(634156));
 var s = n(876230),
     o = n(831056),
     c = n(582128);
@@ -62,7 +62,7 @@ function f(e) {
             let e = t();
             if (null != e && d && f) {
                 let t = Date.now();
-                i({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (x.current = !0);
+                (i({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (x.current = !0));
             }
         }, [t, d, f]),
         b = (0, c.useCallback)(() => {
@@ -75,32 +75,32 @@ function f(e) {
                 i({ startTimeMs: n, endTimeMs: n, segmentStartSec: e, segmentEndSec: e }),
                 (v.current = n));
         }, [a, g, r, l, t]);
-    (0, c.useEffect)(() => {
+    ((0, c.useEffect)(() => {
         (d && f) || (i(null), (x.current = !1));
     }, [d, f]),
         (0, c.useEffect)(() => {
             if (u && d && f)
-                x.current || E(),
+                (x.current || E(),
                     (p.current = window.setInterval(() => {
                         b();
-                    }, 200));
+                    }, 200)));
             else {
                 let e = t();
                 if (null != a && null != e) {
                     let t = Date.now();
                     e - a.segmentStartSec > 0.2 && g({ ...a, endTimeMs: t, segmentEndSec: e });
                 }
-                i(null), (x.current = !1), null != p.current && (clearInterval(p.current), (p.current = null));
+                (i(null), (x.current = !1), null != p.current && (clearInterval(p.current), (p.current = null)));
             }
             return () => {
                 null != p.current && (clearInterval(p.current), (p.current = null));
             };
-        }, [u, d, f, a, b, g, E, t]);
+        }, [u, d, f, a, b, g, E, t]));
     let S = (0, c.useCallback)(() => {
             let e = t();
             if (null != a && null != e) {
                 let t = Date.now();
-                e - a.segmentStartSec > 0.2 && g({ ...a, endTimeMs: t, segmentEndSec: e }), i(null), (x.current = !1);
+                (e - a.segmentStartSec > 0.2 && g({ ...a, endTimeMs: t, segmentEndSec: e }), i(null), (x.current = !1));
             }
         }, [a, g, t]),
         C = (0, c.useRef)(S);
@@ -112,7 +112,7 @@ function f(e) {
                     break;
                 case s.Q6.PAUSED:
                 case s.Q6.ENDED:
-                    C.current(), o(!1);
+                    (C.current(), o(!1));
             }
         }, []),
         w = (0, c.useCallback)((e) => {

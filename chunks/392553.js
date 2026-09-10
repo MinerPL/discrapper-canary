@@ -1,4 +1,4 @@
-n.d(t, { A: () => ey }), n(321073), n(323874), n(14289), n(35956);
+(n.d(t, { A: () => ey }), n(321073), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -42,12 +42,12 @@ class G extends i.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
-        Promise.resolve().then(() => {
+        (Promise.resolve().then(() => {
             let { value: e } = this.props;
             this._ref?.setSelection(e.length, e.length);
         }),
             null != p.A.getActiveCommand(this.props.channel.id) &&
-                L.Gf({ channelId: this.props.channel.id, command: null, section: null });
+                L.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
         this.state.nextSelection !== t.nextSelection &&
@@ -61,9 +61,9 @@ class G extends i.PureComponent {
         if (0 === t.trim().length) return { word: null, fullWord: null, isAtStart: !1 };
         let n = e.selectionStart,
             l = e.selectionEnd;
-        for (; n > 0 && !U.test(t[n - 1]); ) n--;
+        for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
-        for (; i < t.length && !U.test(t[i]); ) i++;
+        for (; i < t.length && !U.test(t[i]);) i++;
         let s = (0, M.h3)(t.slice(n, l), t.slice(n, i));
         return { word: s.word, fullWord: s.fullWord, isAtStart: 0 === n && !s.didTrimPrefix };
     }
@@ -76,7 +76,7 @@ class G extends i.PureComponent {
         null != e && e.blur();
     }
     submit(e) {
-        return e?.preventDefault(), this.props.onSubmit(this.props.value);
+        return (e?.preventDefault(), this.props.onSubmit(this.props.value));
     }
     insertAutocomplete(e, t) {
         let { addSpace: n = !0, replaceFullWord: l = !1 } =
@@ -180,7 +180,7 @@ class G extends i.PureComponent {
             !this.hasOpenCodeBlock() &&
             (!this.props.disableEnterToSubmit || e.ctrlKey)
         )
-            return e.preventDefault(), this.props.onSubmit(this.props.value);
+            return (e.preventDefault(), this.props.onSubmit(this.props.value));
     };
     handleKeyDown = (e) => {
         switch (e.which) {
@@ -229,7 +229,7 @@ class G extends i.PureComponent {
     };
     handlePaste = (e) => {
         let t = this.props.onPaste(e);
-        return t && e.preventDefault(), t;
+        return (t && e.preventDefault(), t);
     };
     handleClick = () => {
         this.props.maybeShowAutocomplete();
@@ -296,7 +296,7 @@ function eu(e) {
         return Z.VW.toDOMNode(e, e);
     } catch (t) {
         let e = Error(`Unable to find Slate EditorDOMNode: ${t.message}`);
-        return (e.stack = t.stack), ea.A.captureException(e), null;
+        return ((e.stack = t.stack), ea.A.captureException(e), null);
     }
 }
 var ec = n(870748),
@@ -459,13 +459,13 @@ let eC = i.forwardRef(function (e, t) {
                 if (void 0 !== l && l !== s) {
                     if (((e.children = l), "parent" === t && !e.previewMarkdown && e.chatInputType === y.oU.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, et.eF)(e, f.guild_id, f.id);
+                            ((e.previewMarkdown = !0), (0, et.eF)(e, f.guild_id, f.id));
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, et.eF)(e, f.guild_id, f.id), (i = void 0);
+                        ((0, et.eF)(e, f.guild_id, f.id), (i = void 0));
                     }
-                    "undo" !== t && void 0 !== l && l !== s && B.o.insertEntry(e, "other", !1, s, r), (a = !0);
+                    ("undo" !== t && void 0 !== l && l !== s && B.o.insertEntry(e, "other", !1, s, r), (a = !0));
                 }
                 if ((null == i || Z.Ot.isValid(e, i) || (i = void 0), (a || !Z.Ot.isValid(e, r)) && void 0 === i)) {
                     let t = Z.VW.end(e, []);
@@ -475,7 +475,7 @@ let eC = i.forwardRef(function (e, t) {
                 if (null != i && o) {
                     e.selection = i;
                     let t = B.o.currentEntry(e);
-                    null != t && (t.selection = i), (a = !0);
+                    (null != t && (t.selection = i), (a = !0));
                 }
                 let u = H.n$(e);
                 if (
@@ -488,7 +488,7 @@ let eC = i.forwardRef(function (e, t) {
                 )
                     if ("parent" === t)
                         try {
-                            (eP.current = !1), e.onChange();
+                            ((eP.current = !1), e.onChange());
                         } finally {
                             eP.current = !0;
                         }
@@ -527,31 +527,31 @@ let eC = i.forwardRef(function (e, t) {
                     !e.required || e.name in t.values || (z.b.insertCommandOption(eF, e), n.push(e));
                 if (n.length > 0) {
                     let e = n[0];
-                    z.b.selectCommandOption(eF, e.name),
+                    (z.b.selectCommandOption(eF, e.name),
                         (i = !0),
                         (0, V.zV)(P.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: l?.applicationId,
                             command_id: l?.rootCommand?.id,
                             argument_type: m.n4[e?.type ?? 3],
                             is_required: e?.required,
-                        });
+                        }));
                 }
             }
             if (null != n)
                 for (let [e, t] of n)
-                    z.b.setNodes(eF, { error: !0 }, { at: t }), i || z.b.select(eF, Z.VW.end(eF, t)), (i = !0);
+                    (z.b.setNodes(eF, { error: !0 }, { at: t }), i || z.b.select(eF, Z.VW.end(eF, t)), (i = !0));
             if (i) {
-                F._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), $?.();
+                (F._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), $?.());
                 return;
             }
             G?.((0, K.WO)(Z.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
         }, [f.id, eF, G, $, eH, eE]);
-    i.useImperativeHandle(
+    (i.useImperativeHandle(
         t,
         () => ({
             getSlateEditor: () => eF,
             submit(e) {
-                e?.preventDefault(), eB();
+                (e?.preventDefault(), eB());
             },
             focus() {
                 Z.VW.focus(eF);
@@ -589,10 +589,10 @@ let eC = i.forwardRef(function (e, t) {
                 let o = r,
                     u = e.anchor.offset,
                     [c] = Z.VW.node(eF, e.anchor.path);
-                for (; Z.l5.isText(c) && !(u >= c.text.length); ) {
+                for (; Z.l5.isText(c) && !(u >= c.text.length);) {
                     let e = c.text[u];
                     if (en.ug.test(e)) break;
-                    (o += e), u++;
+                    ((o += e), u++);
                 }
                 let d = (0, M.h3)(r, o);
                 return {
@@ -631,7 +631,7 @@ let eC = i.forwardRef(function (e, t) {
                             let t = Z.cv.markdown(e[0], f.guild_id);
                             (0, et.lE)(eF, l, f.id, t) && (l = Z.cv.updateElement(eF, l));
                         }
-                        H.ke(eF, f.guild_id, f.id, Z.cv.updateElement(eF, l), !1), z.b.selectNextCommandOption(eF);
+                        (H.ke(eF, f.guild_id, f.id, Z.cv.updateElement(eF, l), !1), z.b.selectNextCommandOption(eF));
                     }
                 });
             },
@@ -642,40 +642,42 @@ let eC = i.forwardRef(function (e, t) {
                 B.o.withSingleEntry(eF, () => {
                     let i = H.M3(eF),
                         s = null != i && el(f, i[0]);
-                    if (s) z.b.removeInlineChildren(eF, i), (n = !1);
+                    if (s) (z.b.removeInlineChildren(eF, i), (n = !1));
                     else {
                         let { word: e, fullWord: t } = this.getCurrentWord();
-                        null != e &&
+                        (null != e &&
                             e.length > 0 &&
                             z.b.delete(eF, { distance: e.length, unit: "character", reverse: !0 }),
                             l &&
                                 null != e &&
                                 null != t &&
                                 t.length - e.length > 0 &&
-                                z.b.delete(eF, { distance: t.length - e.length, unit: "character" });
+                                z.b.delete(eF, { distance: t.length - e.length, unit: "character" }));
                     }
-                    ei(eF, e, t, n), s && z.b.selectNextCommandOption(eF);
+                    (ei(eF, e, t, n), s && z.b.selectNextCommandOption(eF));
                 });
             },
             insertInlineAutocompleteInput(e) {
                 B.o.withSingleEntry(eF, () => {
                     let { word: t } = this.getCurrentWord();
-                    null != t && t.length > 0 && z.b.delete(eF, { distance: t.length, unit: "character", reverse: !0 }),
-                        z.b.insertNodes(eF, [{ type: e, children: [{ text: "" }] }]);
+                    (null != t &&
+                        t.length > 0 &&
+                        z.b.delete(eF, { distance: t.length, unit: "character", reverse: !0 }),
+                        z.b.insertNodes(eF, [{ type: e, children: [{ text: "" }] }]));
                 });
             },
             replaceInlineAutocompleteInput(e, t, n) {
                 B.o.withSingleEntry(eF, () => {
                     var t, l, i;
                     let s = Z.VW.getSelectedParentOfType(eF, [e]);
-                    X()(null != s, `Cannot replace inline input of type ${e} when none is selected`),
+                    (X()(null != s, `Cannot replace inline input of type ${e} when none is selected`),
                         z.b.removeNodes(eF, { at: s[1] }),
                         (t = eF),
                         (l = n),
                         (i = !0),
                         B.o.withSingleEntry(t, () => {
                             z.b.insertText(t, i ? l + " " : l);
-                        });
+                        }));
                 });
             },
             insertEmoji(e) {
@@ -693,12 +695,12 @@ let eC = i.forwardRef(function (e, t) {
         (s = i.useRef(null)),
         (a = i.useRef(null)),
         i.useLayoutEffect(() => {
-            (s.current = eu(eF)),
+            ((s.current = eu(eF)),
                 null == s.current &&
                     null == a.current &&
                     (a.current = setTimeout(() => {
                         s.current = eu(eF);
-                    }, 100));
+                    }, 100)));
         }, [eF]),
         i.useEffect(() => {
             let e = a.current;
@@ -718,7 +720,7 @@ let eC = i.forwardRef(function (e, t) {
             if (e?.ResizeObserver == null) return;
             let t = eu(eF);
             null != t && ((n.current = t.offsetHeight), T?.(n.current));
-        }, [eM, eF, T]);
+        }, [eM, eF, T]));
     let { handleKeyDown: eW, handleKeyUp: eK } = (function (e) {
             let {
                 editor: t,
@@ -755,38 +757,38 @@ let eC = i.forwardRef(function (e, t) {
                                 break;
                             case P.Ks6.TAB:
                                 if ((0, es.j)(e, {}) && a?.()) {
-                                    e.preventDefault(), e.stopPropagation();
+                                    (e.preventDefault(), e.stopPropagation());
                                     return;
                                 }
                                 if (null != p.A.getActiveCommand(n.id)) {
-                                    e.preventDefault(),
+                                    (e.preventDefault(),
                                         e.stopPropagation(),
                                         e.shiftKey
                                             ? z.b.selectPreviousCommandOption(t)
-                                            : z.b.selectNextCommandOption(t);
+                                            : z.b.selectNextCommandOption(t));
                                     return;
                                 }
                                 break;
                             case P.Ks6.ENTER:
                                 if ((0, es.j)(e, {}) && o?.(e)) {
-                                    e.preventDefault(), e.stopPropagation();
+                                    (e.preventDefault(), e.stopPropagation());
                                     return;
                                 }
                                 break;
                             case P.Ks6.SPACE:
                                 if ((0, es.j)(e, {}) && u?.()) {
-                                    e.preventDefault(), e.stopPropagation();
+                                    (e.preventDefault(), e.stopPropagation());
                                     return;
                                 }
                         }
                         if (t.onKeyDown?.(e) === !0) {
-                            e.preventDefault(), e.stopPropagation();
+                            (e.preventDefault(), e.stopPropagation());
                             return;
                         }
-                        e.key !== D.dh.ENTER ||
+                        (e.key !== D.dh.ENTER ||
                             ((e.altKey || e.shiftKey || (l && !e.ctrlKey) || (0, ee.Q9)(t)) && c) ||
                             (e.preventDefault(), e.stopPropagation(), d()),
-                            s?.(e);
+                            s?.(e));
                     },
                     [c, n.id, l, t, h, m, o, s, u, a, d],
                 ),
@@ -817,7 +819,7 @@ let eC = i.forwardRef(function (e, t) {
                     if (eD) return !0;
                     if (!0 === e.defaultPrevented) return !1;
                     let t = j(e);
-                    return t && (e.preventDefault(), e.stopPropagation()), t;
+                    return (t && (e.preventDefault(), e.stopPropagation()), t);
                 },
                 [eD, j],
             )),
@@ -844,7 +846,7 @@ let eC = i.forwardRef(function (e, t) {
             },
             [ea, _],
         );
-    i.useLayoutEffect(() => {
+    (i.useLayoutEffect(() => {
         ew.current && ((ek.current = d), eU(eF, "parent", { value: d }));
     }, [eF, d, eU]),
         i.useEffect(() => {
@@ -852,8 +854,8 @@ let eC = i.forwardRef(function (e, t) {
                 let e = p.A.getActiveCommand(f.id) ?? null;
                 null !== e && null != e.options && eH(e, !0);
             }
-            return A.A.addChangeListener(e), () => A.A.removeChangeListener(e);
-        }, [f, eF, eH]);
+            return (A.A.addChangeListener(e), () => A.A.removeChangeListener(e));
+        }, [f, eF, eH]));
     let eJ = i.useCallback(
             (e) => [
                 ...(0, q.A)(eF, e, f.guild_id),
@@ -894,11 +896,11 @@ let eC = i.forwardRef(function (e, t) {
                             let c = {};
                             if (o > 0) {
                                 let e;
-                                (e =
+                                ((e =
                                     u > 0
                                         ? em.intl.formatToPlainString(em.t.BP8N0K, { count: o })
                                         : em.intl.formatToPlainString(em.t.lziVC9, { count: o })),
-                                    (c["data-trailing-placeholder"] = e);
+                                    (c["data-trailing-placeholder"] = e));
                             }
                             return (0, l.jsx)("div", { className: ef.uB, ...i, ...c, children: s });
                         case "applicationCommandOption":
@@ -994,13 +996,13 @@ class ey extends i.Component {
     _cachedEditorWindow = null;
     _emptyRichValue = (0, S.x7)("");
     constructor(e) {
-        super(e),
+        (super(e),
             (this._unsubscribe = v.Y0.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
             })),
-            (this.state = { focused: !1, submitting: !1, popup: v.Y0.getState() });
+            (this.state = { focused: !1, submitting: !1, popup: v.Y0.getState() }));
     }
     _getEditorWindow() {
         let e = this.ref?.current?.getSlateEditor?.()?.windowContext?.renderWindow;
@@ -1011,29 +1013,29 @@ class ey extends i.Component {
         return this._cachedEditorWindow;
     }
     componentDidMount() {
-        this.props.focused && requestAnimationFrame(() => this.focus()),
+        (this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
             (this._initTimeoutId = setTimeout(() => {
                 this._getEditorWindow();
-            }, 1e3));
+            }, 1e3)));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, K.WO)(this.props.richValue, { mode: "plain" })),
-                this.props.onChange?.(null, e, (0, S.x7)(e));
+            ((e = this.props.useSlate ? this.props.textValue : (0, K.WO)(this.props.richValue, { mode: "plain" })),
+                this.props.onChange?.(null, e, (0, S.x7)(e)));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
-        this.saveCurrentText(),
+        (this.saveCurrentText(),
             this._unsubscribe?.(),
             window.removeEventListener("beforeunload", this.handleBeforeUnload),
             document.removeEventListener("selectionchange", this.handleSelectionChange),
             (this._focusBlurQueue = null),
             (this._unsubscribe = null),
             (this._cachedEditorWindow = null),
-            null != this._initTimeoutId && clearTimeout(this._initTimeoutId);
+            null != this._initTimeoutId && clearTimeout(this._initTimeoutId));
     }
     handleSelectionChange = () => {
         this.props.focused && this.props.onSelectionChanged(document.getSelection?.()?.toString());
@@ -1076,7 +1078,7 @@ class ey extends i.Component {
     }
     clearValue() {
         let { channel: e, type: t } = this.props;
-        this.setState({ focused: !0, submitting: !1 }), c.A.saveDraft(e.id, "", t.drafts.type);
+        (this.setState({ focused: !0, submitting: !1 }), c.A.saveDraft(e.id, "", t.drafts.type));
     }
     getCurrentWord() {
         let e = this.ref.current;
@@ -1245,12 +1247,12 @@ class ey extends i.Component {
     handleFocus = (e) => {
         let { onFocus: t } = this.props,
             { focused: n } = this.state;
-        t?.(e), n || this.setState({ focused: !0 });
+        (t?.(e), n || this.setState({ focused: !0 }));
     };
     handleBlur = (e) => {
         let { onBlur: t } = this.props,
             { focused: n } = this.state;
-        t?.(e), n && this.setState({ focused: !1 });
+        (t?.(e), n && this.setState({ focused: !1 }));
     };
     handlePaste = (e) => {
         let t,

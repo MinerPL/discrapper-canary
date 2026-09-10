@@ -1,4 +1,7 @@
-n.d(t, { Bn: () => I, R4: () => f, ev: () => _, h: () => h, sW: () => A, tS: () => E }), n(323874), n(14289), n(35956);
+(n.d(t, { Bn: () => I, R4: () => f, ev: () => _, h: () => h, sW: () => A, tS: () => E }),
+    n(323874),
+    n(14289),
+    n(35956));
 var i,
     r,
     a = n(839214),
@@ -49,7 +52,7 @@ function f() {
         let r = Number(e.get("category_id"));
         Number.isInteger(r) && r !== d.lj && (n.categoryId = r.toString());
         let a = Number(e.get("page"));
-        return null != a && a > 1 && (n.page = a), n;
+        return (null != a && a > 1 && (n.page = a), n);
     }
     let n = (0, s.B)(e, { path: [u.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
         { categoryId: i } = n?.params ?? {};

@@ -18,9 +18,9 @@ function C(t) {
         [C, g] = a.useState(!1),
         [E, S] = a.useState(null);
     async function y() {
-        S(null), g(!0);
+        (S(null), g(!0));
         try {
-            await d.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e();
+            (await d.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e());
         } catch (t) {
             S(new s.A(t).getAnyErrorMessage());
         } finally {
@@ -28,7 +28,7 @@ function C(t) {
         }
     }
     function b() {
-        (0, f.openUserSettings)(u.X.FAMILY_CENTER_PANEL), e();
+        ((0, f.openUserSettings)(u.X.FAMILY_CENTER_PANEL), e());
     }
     return (0, i.jsx)(l.Modal, {
         transitionState: n,

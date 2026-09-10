@@ -5,8 +5,8 @@ for (
                 return e.LOG_TABLE[t];
             },
             gexp: function (t) {
-                for (; t < 0; ) t += 255;
-                for (; t >= 256; ) t -= 255;
+                for (; t < 0;) t += 255;
+                for (; t >= 256;) t -= 255;
                 return e.EXP_TABLE[t];
             },
             EXP_TABLE: Array(256),

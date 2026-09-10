@@ -49,13 +49,13 @@ function p(t) {
         s = 0;
     switch (t) {
         case h.TVA.TIER_1:
-            (i = 15), (s = 100);
+            ((i = 15), (s = 100));
             break;
         case h.TVA.TIER_2:
-            (i = 30), (s = 150);
+            ((i = 30), (s = 150));
             break;
         case h.TVA.TIER_3:
-            (i = 60), (s = 250);
+            ((i = 60), (s = 250));
     }
     return {
         color: n,

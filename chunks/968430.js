@@ -1,15 +1,15 @@
 var n, i;
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.astFormatter = t.RichTextNodeType = void 0),
-    (t.formatToAst = l);
+    (t.formatToAst = l));
 let o = r(668317);
-((i = n || (t.RichTextNodeType = n = {})).Text = "text"),
+(((i = n || (t.RichTextNodeType = n = {})).Text = "text"),
     (i.Strong = "strong"),
     (i.Emphasis = "em"),
     (i.Strikethrough = "s"),
     (i.Code = "inlineCode"),
     (i.Link = "link"),
-    (i.Paragraph = "paragraph");
+    (i.Paragraph = "paragraph"));
 let a = {
     $b: (e) => ({ type: n.Strong, content: e }),
     $i: (e) => ({ type: n.Emphasis, content: e }),
@@ -20,7 +20,7 @@ let a = {
 };
 class s extends o.FormatBuilder {
     constructor() {
-        super(...arguments), (this.result = []);
+        (super(...arguments), (this.result = []));
     }
     pushRichTextTag(e, t, r) {
         if (!(e in a)) throw `${e} is not a known rich text formatting tag`;

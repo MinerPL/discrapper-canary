@@ -55,7 +55,7 @@ class d extends r.A {
         return this.type === o.zF_.USER_GIFT && null == this.gifterId;
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.skuId = e.skuId),
             (this.applicationId = e.applicationId),
@@ -75,7 +75,7 @@ class d extends r.A {
             (this.guildId = e.guildId),
             (this.deleted = e.deleted),
             (this.sourceType = e.sourceType),
-            (this.fulfillmentStatus = e.fulfillmentStatus);
+            (this.fulfillmentStatus = e.fulfillmentStatus));
     }
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;

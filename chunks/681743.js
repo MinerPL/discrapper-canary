@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.now = function (e) {
         let t = e.getDateWithAdjustedTimezone(),
             r = new n.ParsingComponents(e, {});
@@ -52,7 +52,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     }),
     (t.evening = function (e, t = 20) {
         let r = new n.ParsingComponents(e, {});
-        return r.imply("meridiem", i.Meridiem.PM), r.imply("hour", t), r.addTag("casualReference/evening"), r;
+        return (r.imply("meridiem", i.Meridiem.PM), r.imply("hour", t), r.addTag("casualReference/evening"), r);
     }),
     (t.yesterdayEvening = function (e, t = 20) {
         let r = e.getDateWithAdjustedTimezone(),
@@ -114,7 +114,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             t.addTag("casualReference/noon"),
             t
         );
-    });
+    }));
 let n = r(115835),
     a = r(767130),
     i = r(115004);

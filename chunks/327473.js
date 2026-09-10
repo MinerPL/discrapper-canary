@@ -100,10 +100,10 @@ function g({ actor: t, trackElementClicked: r }) {
             t.send({ type: "SET_CPF", cpf: r });
         },
         submit() {
-            r?.("continue"), t.send({ type: "SUBMIT" });
+            (r?.("continue"), t.send({ type: "SUBMIT" }));
         },
         retry() {
-            r?.("retry"), t.send({ type: "RETRY" });
+            (r?.("retry"), t.send({ type: "RETRY" }));
         },
     };
 }

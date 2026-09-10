@@ -40,7 +40,7 @@ function f(e) {
             duration: 100,
         });
     function z(e) {
-        s?.(e), O(!1);
+        (s?.(e), O(!1));
     }
     return (0, l.jsx)(j.D, {
         ...A,

@@ -17,7 +17,7 @@ let C = function (t) {
         [b, f] = i.useState(!1),
         g = i.useCallback(() => (e?.(), Promise.resolve()), [e]),
         h = i.useCallback(() => {
-            e?.(),
+            (e?.(),
                 (0, c.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         n.e("279385"),
@@ -32,13 +32,13 @@ let C = function (t) {
                         n.e("465861"),
                     ]).then(n.bind(n, 97060));
                     return (e) => (0, a.jsx)(t, { ...e });
-                });
+                }));
         }, [e]),
         x = i.useCallback(() => {
-            e?.(),
+            (e?.(),
                 r()(null != C, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 f(!0),
-                (0, u.S)(C).finally(() => f(!1));
+                (0, u.S)(C).finally(() => f(!1)));
         }, [C, e]),
         v = i.useMemo(
             () =>

@@ -36,7 +36,7 @@ class i extends a.AbstractTimeExpressionParser {
     }
     extractFollowingTimeComponents(e, t, r) {
         let n = super.extractFollowingTimeComponents(e, t, r);
-        return n && n.addTag("parser/ENTimeExpressionParser"), n;
+        return (n && n.addTag("parser/ENTimeExpressionParser"), n);
     }
 }
 t.default = i;

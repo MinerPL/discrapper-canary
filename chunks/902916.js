@@ -1,7 +1,7 @@
-r.d(t, { _: () => s }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+(r.d(t, { _: () => s }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 var a = r(582128),
     n = r(626584);
-r(323874), r(14289), r(35956), r(321073);
+(r(323874), r(14289), r(35956), r(321073));
 let i = null;
 function o(e, t, r) {
     let a = e._malloc(t);
@@ -26,19 +26,17 @@ async function h(e) {
     t.HEAPU8.set(e, r);
     let a = t._malloc(8);
     if (0 === a) throw (t._free(r), Error("Failed to allocate 8 bytes for WebPData struct - out of WASM memory"));
-    (t.HEAPU32[a >> 2] = r), (t.HEAPU32[(a >> 2) + 1] = e.length);
+    ((t.HEAPU32[a >> 2] = r), (t.HEAPU32[(a >> 2) + 1] = e.length));
     let n = t._malloc(32);
     if (0 === n)
         throw (
-            (t._free(r),
-            t._free(a),
-            Error("Failed to allocate 32 bytes for WebPAnimDecoderOptions - out of WASM memory"))
+            t._free(r), t._free(a), Error("Failed to allocate 32 bytes for WebPAnimDecoderOptions - out of WASM memory")
         );
     t._WebPAnimDecoderOptionsInitInternal(n, 263);
     let i = t._WebPAnimDecoderNewInternal(a, n, 263);
     if ((t._free(n), 0 === i))
         throw (
-            (t._free(r), t._free(a), Error("Failed to create WebP decoder - file may be corrupt or not a valid WebP"))
+            t._free(r), t._free(a), Error("Failed to create WebP decoder - file may be corrupt or not a valid WebP")
         );
     try {
         let e = o(t, 32, "WebPAnimInfo");
@@ -49,7 +47,7 @@ async function h(e) {
         t._free(e);
         let l = [],
             h = r * a * 4;
-        for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i); ) {
+        for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i);) {
             let e = t._malloc(4);
             if (0 === e) throw Error("Failed to allocate 4 bytes for frame buffer pointer - out of WASM memory");
             let n = t._malloc(4);
@@ -57,17 +55,17 @@ async function h(e) {
                 throw (t._free(e), Error("Failed to allocate 4 bytes for timestamp pointer - out of WASM memory"));
             let o = t._WebPAnimDecoderGetNext(i, e, n);
             if (0 === o) {
-                t._free(e), t._free(n);
+                (t._free(e), t._free(n));
                 break;
             }
             let u = t.HEAPU32[e >> 2],
                 c = t.HEAP32[n >> 2],
                 s = new Uint8Array(t.HEAPU8.buffer, u, h).slice();
-            l.push({ data: s, timestamp: c, width: r, height: a }), t._free(e), t._free(n);
+            (l.push({ data: s, timestamp: c, width: r, height: a }), t._free(e), t._free(n));
         }
         return { frames: l, width: r, height: a, frameCount: n };
     } finally {
-        t._WebPAnimDecoderDelete(i), t._free(r), t._free(a);
+        (t._WebPAnimDecoderDelete(i), t._free(r), t._free(a));
     }
 }
 async function u(e) {

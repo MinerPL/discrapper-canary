@@ -50,7 +50,7 @@ function j(t) {
                 text: m.intl.format(m.t.pX74jh, { totalEmoji: v.size }),
                 variant: "primary",
                 onClick: function () {
-                    l(v), x();
+                    (l(v), x());
                 },
                 disabled: !C,
             },
@@ -79,7 +79,7 @@ function j(t) {
                                                   (e = t.id),
                                                   void g((t) => {
                                                       let i = new Set(t);
-                                                      return v.has(e) ? i.delete(e) : i.add(e), i;
+                                                      return (v.has(e) ? i.delete(e) : i.add(e), i);
                                                   })
                                               );
                                           },

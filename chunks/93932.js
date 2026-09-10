@@ -37,10 +37,10 @@ var s = r(582128),
                 i
             );
         }
-        (0, o.A)(t, e),
+        ((0, o.A)(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
                 return e.in && t.status === d ? { status: f } : null;
-            });
+            }));
         var r = t.prototype;
         return (
             (r.componentDidMount = function () {
@@ -93,12 +93,12 @@ var s = r(582128),
                 (e || r) && 1
                     ? (this.props.onEnter(o, a),
                       this.safeSetState({ status: p }, function () {
-                          t.props.onEntering(o, a),
+                          (t.props.onEntering(o, a),
                               t.onTransitionEnd(c, function () {
                                   t.safeSetState({ status: h }, function () {
                                       t.props.onEntered(o, a);
                                   });
-                              });
+                              }));
                       }))
                     : this.safeSetState({ status: h }, function () {
                           t.props.onEntered(o);
@@ -112,12 +112,12 @@ var s = r(582128),
                 t
                     ? (this.props.onExit(n),
                       this.safeSetState({ status: g }, function () {
-                          e.props.onExiting(n),
+                          (e.props.onExiting(n),
                               e.onTransitionEnd(r.exit, function () {
                                   e.safeSetState({ status: f }, function () {
                                       e.props.onExited(n);
                                   });
-                              });
+                              }));
                       }))
                     : this.safeSetState({ status: f }, function () {
                           e.props.onExited(n);
@@ -127,7 +127,7 @@ var s = r(582128),
                 null !== this.nextCallback && (this.nextCallback.cancel(), (this.nextCallback = null));
             }),
             (r.safeSetState = function (e, t) {
-                (t = this.setNextCallback(t)), this.setState(e, t);
+                ((t = this.setNextCallback(t)), this.setState(e, t));
             }),
             (r.setNextCallback = function (e) {
                 var t = this,
@@ -204,7 +204,7 @@ var s = r(582128),
         );
     })(s.Component);
 function y() {}
-(v.contextType = c.A),
+((v.contextType = c.A),
     (v.propTypes = {}),
     (v.defaultProps = {
         in: !1,
@@ -224,7 +224,7 @@ function y() {}
     (v.EXITED = f),
     (v.ENTERING = p),
     (v.ENTERED = h),
-    (v.EXITING = g);
+    (v.EXITING = g));
 var m = function (e, t) {
         return (
             e &&
@@ -247,36 +247,38 @@ var m = function (e, t) {
                     var n = t.resolveArguments(e, r),
                         i = n[0],
                         o = n[1];
-                    t.removeClasses(i, "exit"),
+                    (t.removeClasses(i, "exit"),
                         t.addClass(i, o ? "appear" : "enter", "base"),
-                        t.props.onEnter && t.props.onEnter(e, r);
+                        t.props.onEnter && t.props.onEnter(e, r));
                 }),
                 (t.onEntering = function (e, r) {
                     var n = t.resolveArguments(e, r),
                         i = n[0],
                         o = n[1];
-                    t.addClass(i, o ? "appear" : "enter", "active"), t.props.onEntering && t.props.onEntering(e, r);
+                    (t.addClass(i, o ? "appear" : "enter", "active"), t.props.onEntering && t.props.onEntering(e, r));
                 }),
                 (t.onEntered = function (e, r) {
                     var n = t.resolveArguments(e, r),
                         i = n[0],
                         o = n[1] ? "appear" : "enter";
-                    t.removeClasses(i, o), t.addClass(i, o, "done"), t.props.onEntered && t.props.onEntered(e, r);
+                    (t.removeClasses(i, o), t.addClass(i, o, "done"), t.props.onEntered && t.props.onEntered(e, r));
                 }),
                 (t.onExit = function (e) {
                     var r = t.resolveArguments(e)[0];
-                    t.removeClasses(r, "appear"),
+                    (t.removeClasses(r, "appear"),
                         t.removeClasses(r, "enter"),
                         t.addClass(r, "exit", "base"),
-                        t.props.onExit && t.props.onExit(e);
+                        t.props.onExit && t.props.onExit(e));
                 }),
                 (t.onExiting = function (e) {
                     var r = t.resolveArguments(e)[0];
-                    t.addClass(r, "exit", "active"), t.props.onExiting && t.props.onExiting(e);
+                    (t.addClass(r, "exit", "active"), t.props.onExiting && t.props.onExiting(e));
                 }),
                 (t.onExited = function (e) {
                     var r = t.resolveArguments(e)[0];
-                    t.removeClasses(r, "exit"), t.addClass(r, "exit", "done"), t.props.onExited && t.props.onExited(e);
+                    (t.removeClasses(r, "exit"),
+                        t.addClass(r, "exit", "done"),
+                        t.props.onExited && t.props.onExited(e));
                 }),
                 (t.resolveArguments = function (e, r) {
                     return t.props.nodeRef ? [t.props.nodeRef.current, e] : [e, r];
@@ -300,7 +302,7 @@ var m = function (e, t) {
                 var n,
                     i = this.getClassNames(t)[r + "ClassName"],
                     o = this.getClassNames("enter").doneClassName;
-                "appear" === t && "done" === r && o && (i += " " + o),
+                ("appear" === t && "done" === r && o && (i += " " + o),
                     "active" === r && e && l(e),
                     i &&
                         ((this.appliedClasses[t][r] = i),
@@ -322,14 +324,14 @@ var m = function (e, t) {
                                                 "class",
                                                 ((e.className && e.className.baseVal) || "") + " " + t,
                                             ));
-                            }));
+                            })));
             }),
             (r.removeClasses = function (e, t) {
                 var r = this.appliedClasses[t],
                     n = r.base,
                     i = r.active,
                     o = r.done;
-                (this.appliedClasses[t] = {}), n && m(e, n), i && m(e, i), o && m(e, o);
+                ((this.appliedClasses[t] = {}), n && m(e, n), i && m(e, i), o && m(e, o));
             }),
             (r.render = function () {
                 var e = this.props,
@@ -349,5 +351,5 @@ var m = function (e, t) {
             t
         );
     })(s.Component);
-(b.defaultProps = { classNames: "" }), (b.propTypes = {});
+((b.defaultProps = { classNames: "" }), (b.propTypes = {}));
 let E = b;

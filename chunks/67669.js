@@ -7,7 +7,7 @@ function s(e) {
     let { isDisabled: t, onFocus: r, onBlur: s, onFocusChange: l } = e,
         u = (0, a.useCallback)(
             (e) => {
-                if ((0, n.wt)(e) === e.currentTarget) return s && s(e), l && l(!1), !0;
+                if ((0, n.wt)(e) === e.currentTarget) return (s && s(e), l && l(!1), !0);
             },
             [s, l],
         ),

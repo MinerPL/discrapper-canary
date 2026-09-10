@@ -19,7 +19,7 @@ async function c() {
         null == s.A.getWindow(o.f) && e?.();
     }
     let i = new Promise((t) => {
-        (e = t), s.A.addChangeListener(n);
+        ((e = t), s.A.addChangeListener(n));
     });
     try {
         await Promise.race([t, i]);
@@ -32,7 +32,7 @@ async function u() {
     let e,
         t = l.A.isModuleLoaded,
         n = l.A.getNativeModule();
-    if (t && null != n) return await (0, r.yy)(1e3), n;
+    if (t && null != n) return (await (0, r.yy)(1e3), n);
     if (t && null == n) throw Error("Native module loaded but not found in store");
     let i = new Promise((e) => {
         setTimeout(() => {
@@ -43,15 +43,15 @@ async function u() {
         e?.();
     }
     let o = new Promise((t) => {
-        (e = t),
+        ((e = t),
             a.h.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", s),
-            a.h.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", s);
+            a.h.subscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", s));
     });
     try {
         await Promise.race([i, o]);
     } finally {
-        a.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", s),
-            a.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", s);
+        (a.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS", s),
+            a.h.unsubscribe("OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED", s));
     }
     return l.A.getNativeModule();
 }

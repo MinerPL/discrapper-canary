@@ -11,7 +11,7 @@ function r(e, t, n) {
             if (void 0 === i) throw Error("Out of bounds access from data array");
             t = (t << 8n) | BigInt(i);
         }
-        (t %= r), (i += t.toString().padStart(n, "0"));
+        ((t %= r), (i += t.toString().padStart(n, "0")));
     }
     return i;
 }
@@ -24,16 +24,16 @@ async function i(e, t, n) {
     let i = new Uint8Array(2 + t.byteLength + 8);
     i.set(t, 2);
     let a = new DataView(i.buffer);
-    return a.setUint16(0, e), a.setBigUint64(2 + t.byteLength, r), i;
+    return (a.setUint16(0, e), a.setBigUint64(2 + t.byteLength, r), i);
 }
-n.d(t, { uo: () => s, _x: () => c, DB: () => r }),
+(n.d(t, { uo: () => s, _x: () => c, DB: () => r }),
     n(393431),
     n(532706),
     n(42231),
     n(232424),
     n(949626),
     n(767709),
-    n(65162);
+    n(65162));
 var a = n(495142);
 let o = Uint8Array.of(36, 202, 177, 122, 122, 248, 236, 43, 130, 180, 18, 185, 45, 171, 25, 46),
     l = { N: 16384, r: 8, p: 2, dkLen: 64 };
@@ -45,7 +45,7 @@ async function c(e, t, n, r, c) {
     let E = await Promise.all([i(e, t, n), i(e, r, c)]);
     E.sort(u);
     let s = new Uint8Array(E[0].byteLength + E[1].byteLength);
-    return s.set(E[0], 0), s.set(E[1], E[0].byteLength), new Uint8Array(await (0, a.Q)(s, o, l));
+    return (s.set(E[0], 0), s.set(E[1], E[0].byteLength), new Uint8Array(await (0, a.Q)(s, o, l)));
 }
 var E = n(85526);
 function s(e) {

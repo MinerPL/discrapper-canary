@@ -1,4 +1,4 @@
-r.d(t, { documentCaptureMachine: () => h, D: () => M }), r(522681);
+(r.d(t, { documentCaptureMachine: () => h, D: () => M }), r(522681));
 var a = r(41851),
     i = r(269882),
     o = r(528239);
@@ -508,46 +508,46 @@ function D(e) {
 function R({ actor: e, trackElementClicked: t }) {
     return {
         capture() {
-            t?.("capture"), e.send({ type: "CAPTURE" });
+            (t?.("capture"), e.send({ type: "CAPTURE" }));
         },
         setFile(t, r) {
             e.send({ type: "FILE_SELECTED", file: t, imageBase64: r, fileType: t.type });
         },
         accept() {
-            t?.("accept"), e.send({ type: "ACCEPT" });
+            (t?.("accept"), e.send({ type: "ACCEPT" }));
         },
         retake() {
-            t?.("retake"), e.send({ type: "RETAKE" });
+            (t?.("retake"), e.send({ type: "RETAKE" }));
         },
         retry() {
-            t?.("retry"), e.send({ type: "RETRY" });
+            (t?.("retry"), e.send({ type: "RETRY" }));
         },
         continue() {
-            t?.("continue"), e.send({ type: "CONTINUE" });
+            (t?.("continue"), e.send({ type: "CONTINUE" }));
         },
         skip() {
-            t?.("skip"), e.send({ type: "SKIP" });
+            (t?.("skip"), e.send({ type: "SKIP" }));
         },
         close() {
-            t?.("close"), e.send({ type: "CLOSE" });
+            (t?.("close"), e.send({ type: "CLOSE" }));
         },
         requestPermission() {
-            t?.("requestPermission"), e.send({ type: "REQUEST_PERMISSION" });
+            (t?.("requestPermission"), e.send({ type: "REQUEST_PERMISSION" }));
         },
         goToLearnMore() {
-            t?.("goToLearnMore"), e.send({ type: "GO_TO_LEARN_MORE" });
+            (t?.("goToLearnMore"), e.send({ type: "GO_TO_LEARN_MORE" }));
         },
         back() {
-            t?.("back"), e.send({ type: "BACK" });
+            (t?.("back"), e.send({ type: "BACK" }));
         },
         captureNextPageFromCamera() {
-            t?.("captureNextPageFromCamera"), e.send({ type: "NEXT_PAGE_CAMERA" });
+            (t?.("captureNextPageFromCamera"), e.send({ type: "NEXT_PAGE_CAMERA" }));
         },
         captureNextPageFromFile() {
-            t?.("captureNextPageFromFile"), e.send({ type: "NEXT_PAGE_PHOTO_LIBRARY" });
+            (t?.("captureNextPageFromFile"), e.send({ type: "NEXT_PAGE_PHOTO_LIBRARY" }));
         },
         finishPageCapture() {
-            t?.("finishPageCapture"), e.send({ type: "ALL_PAGES_CAPTURED" });
+            (t?.("finishPageCapture"), e.send({ type: "ALL_PAGES_CAPTURED" }));
         },
     };
 }

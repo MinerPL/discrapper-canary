@@ -9,11 +9,11 @@ var n = r(264572).Buffer;
         if (t.fatal) throw Error("Failed to construct 'TextDecoder': the 'fatal' option is unsupported.");
     }
     function i(e) {
-        for (var t = 0, r = Math.min(65536, e.length + 1), n = new Uint16Array(r), i = [], o = 0; ; ) {
+        for (var t = 0, r = Math.min(65536, e.length + 1), n = new Uint16Array(r), i = [], o = 0; ;) {
             var a = t < e.length;
             if (!a || o >= r - 1) {
                 if ((i.push(String.fromCharCode.apply(null, n.subarray(0, o))), !a)) return i.join("");
-                (e = e.subarray(t)), (o = t = 0);
+                ((e = e.subarray(t)), (o = t = 0));
             }
             if (0 == (128 & (a = e[t++]))) n[o++] = a;
             else if (192 == (224 & a)) {
@@ -33,7 +33,7 @@ var n = r(264572).Buffer;
     }
     if (!e.TextEncoder || !e.TextDecoder) {
         var o = ["utf-8", "utf8", "unicode-1-1-utf-8"];
-        Object.defineProperty(t.prototype, "encoding", { value: "utf-8" }),
+        (Object.defineProperty(t.prototype, "encoding", { value: "utf-8" }),
             (t.prototype.encode = function (e, t) {
                 if ((t = void 0 === t ? { stream: !1 } : t).stream)
                     throw Error("Failed to encode: the 'stream' option is unsupported.");
@@ -62,12 +62,12 @@ var n = r(264572).Buffer;
                     else {
                         if (0 == (0xfffff800 & a)) o[n++] = ((a >>> 6) & 31) | 192;
                         else if (0 == (0xffff0000 & a))
-                            (o[n++] = ((a >>> 12) & 15) | 224), (o[n++] = ((a >>> 6) & 63) | 128);
+                            ((o[n++] = ((a >>> 12) & 15) | 224), (o[n++] = ((a >>> 6) & 63) | 128));
                         else {
                             if (0 != (0xffe00000 & a)) continue;
-                            (o[n++] = ((a >>> 18) & 7) | 240),
+                            ((o[n++] = ((a >>> 18) & 7) | 240),
                                 (o[n++] = ((a >>> 12) & 63) | 128),
-                                (o[n++] = ((a >>> 6) & 63) | 128);
+                                (o[n++] = ((a >>> 6) & 63) | 128));
                         }
                         o[n++] = (63 & a) | 128;
                     }
@@ -76,9 +76,9 @@ var n = r(264572).Buffer;
             }),
             Object.defineProperty(r.prototype, "encoding", { value: "utf-8" }),
             Object.defineProperty(r.prototype, "fatal", { value: !1 }),
-            Object.defineProperty(r.prototype, "ignoreBOM", { value: !1 });
+            Object.defineProperty(r.prototype, "ignoreBOM", { value: !1 }));
         var a = i;
-        "function" == typeof n && n.from
+        ("function" == typeof n && n.from
             ? (a = function (e) {
                   return n.from(e.buffer, e.byteOffset, e.byteLength).toString("utf-8");
               })
@@ -89,7 +89,7 @@ var n = r(264572).Buffer;
                   var t = URL.createObjectURL(new Blob([e], { type: "text/plain;charset=UTF-8" }));
                   try {
                       var r = new XMLHttpRequest();
-                      return r.open("GET", t, !1), r.send(), r.responseText;
+                      return (r.open("GET", t, !1), r.send(), r.responseText);
                   } catch (t) {
                       return i(e);
                   } finally {
@@ -105,6 +105,6 @@ var n = r(264572).Buffer;
                 );
             }),
             (e.TextEncoder = t),
-            (e.TextDecoder = r);
+            (e.TextDecoder = r));
     }
 })("u" > typeof window ? window : void 0 !== r.g ? r.g : this);

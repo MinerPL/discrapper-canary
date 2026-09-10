@@ -14,6 +14,6 @@ class s extends n.Ay.Store {
 }
 let c = new s(d.h, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
-        (p = e.enabled), e.enabled && (r = e.keepOpen ?? !1);
+        ((p = e.enabled), e.enabled && (r = e.keepOpen ?? !1));
     },
 });

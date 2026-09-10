@@ -10,7 +10,7 @@ function a(e) {
 }
 function s(e) {
     let t = i.useRef(e);
-    i.useEffect(() => {
+    (i.useEffect(() => {
         t.current = e;
     }),
         i.useEffect(
@@ -18,5 +18,5 @@ function s(e) {
                 t.current();
             },
             [],
-        );
+        ));
 }

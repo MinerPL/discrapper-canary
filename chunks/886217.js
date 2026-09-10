@@ -22,7 +22,7 @@ class i extends n.AbstractParserWithWordBoundaryChecking {
             if (t[9]) {
                 let r = parseInt(t[9]),
                     n = 0;
-                null != t[10] && (n = parseInt(t[10])), (e = 60 * r) < 0 ? (e -= n) : (e += n);
+                (null != t[10] && (n = parseInt(t[10])), (e = 60 * r) < 0 ? (e -= n) : (e += n));
             }
             r.assign("timezoneOffset", e);
         }

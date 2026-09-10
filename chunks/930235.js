@@ -24,12 +24,12 @@ var c = (function () {
         var e;
         function t(e, r, n) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            u(this, "spec", void 0),
+            (u(this, "spec", void 0),
                 u(this, "monitor", void 0),
                 u(this, "connector", void 0),
                 (this.spec = e),
                 (this.monitor = r),
-                (this.connector = n);
+                (this.connector = n));
         }
         return (
             (e = [
@@ -71,17 +71,17 @@ var c = (function () {
                             t = this.monitor,
                             r = this.connector,
                             n = e.end;
-                        n && n(t.getItem(), t), r.reconnect();
+                        (n && n(t.getItem(), t), r.reconnect());
                     },
                 },
             ]),
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t
@@ -174,7 +174,7 @@ function p(e, t) {
         (D = (0, o.useMemo)(
             function () {
                 var e = S.type;
-                return (0, l.V)(null != e, "spec.type must be defined"), e;
+                return ((0, l.V)(null != e, "spec.type must be defined"), e);
             },
             [S],
         )),
@@ -204,7 +204,7 @@ function p(e, t) {
                                             o = !0
                                         );
                                     } catch (e) {
-                                        (a = !0), (r = e);
+                                        ((a = !0), (r = e));
                                     } finally {
                                         try {
                                             o || null == n.return || n.return();
@@ -235,7 +235,7 @@ function p(e, t) {
                             })(),
                         r = t[0],
                         i = t[1];
-                    return O.receiveHandlerId(r), k.receiveHandlerId(r), i;
+                    return (O.receiveHandlerId(r), k.receiveHandlerId(r), i);
                 }
             },
             [b, O, k, I, D],

@@ -53,13 +53,13 @@ let u = function (e) {
                 if (null == n.current) return null;
                 let i = e(l),
                     a = t(i);
-                S(a), v.current || ((v.current = !0), o?.(a)), r(a, i);
+                (S(a), v.current || ((v.current = !0), o?.(a)), r(a, i));
             }
             function I(n) {
                 y(!1);
                 let l = e(n),
                     r = t(l);
-                S(r), u(r, l), c?.(r), (v.current = !1);
+                (S(r), u(r, l), c?.(r), (v.current = !1));
             }
             let T = h ? "pointerup" : "mouseup",
                 R = h ? "pointermove" : "mousemove",
@@ -68,16 +68,16 @@ let u = function (e) {
                 N.addEventListener(T, I),
                 N.addEventListener(R, A),
                 () => {
-                    N.removeEventListener(T, I), N.removeEventListener(R, A), r.cancel();
+                    (N.removeEventListener(T, I), N.removeEventListener(R, A), r.cancel());
                 }
             );
         }, [g, u, a, l, f, n, d, c, h, p, o, m]),
         r.useCallback(
             (e) => {
                 let t = 1 === s(f);
-                null != n.current && (C.current = t ? n.current.offsetWidth : n.current.offsetHeight),
+                (null != n.current && (C.current = t ? n.current.offsetWidth : n.current.offsetHeight),
                     (E.current = t ? e.screenX : e.screenY),
-                    y(!0);
+                    y(!0));
             },
             [f, n],
         )

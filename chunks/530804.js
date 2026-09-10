@@ -1,4 +1,4 @@
-t.d(n, { $n: () => b, uy: () => C, vp: () => m }), t(321073);
+(t.d(n, { $n: () => b, uy: () => C, vp: () => m }), t(321073));
 var u = t(582128),
     l = t(435558),
     r = t(17928),
@@ -36,7 +36,7 @@ function b(e, n) {
                 if ((null == e || 0 === e.length) && 0 === t.length) return n;
                 let u = [],
                     r = new Set();
-                for (let e of n) u.push(e), r.add(e.user.id);
+                for (let e of n) (u.push(e), r.add(e.user.id));
                 return (
                     e?.forEach((e) => {
                         u.splice(
@@ -122,11 +122,11 @@ function C(e, n) {
             () => (
                 g && null == i.current
                     ? (i.current = setTimeout(() => {
-                          (i.current = null), a(!0);
+                          ((i.current = null), a(!0));
                       }, 250))
                     : (clearTimeout(i.current), (i.current = null), a(!1)),
                 () => {
-                    clearTimeout(i.current), (i.current = null);
+                    (clearTimeout(i.current), (i.current = null));
                 }
             ),
             [g],

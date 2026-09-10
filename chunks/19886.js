@@ -42,10 +42,14 @@ function p(e) {
 function g() {
     let e = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
         u = (0, s.YE)(e, f.PremiumTypes.TIER_2),
-        t = (0, r.bG)([d.A], () => {
-            let e = d.A.getPremiumSubscription();
-            return null != e && u ? e.premiumSince : null;
-        }, [u]),
+        t = (0, r.bG)(
+            [d.A],
+            () => {
+                let e = d.A.getPremiumSubscription();
+                return null != e && u ? e.premiumSince : null;
+            },
+            [u],
+        ),
         n = p(e?.id);
     return t ?? n;
 }

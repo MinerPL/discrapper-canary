@@ -445,7 +445,7 @@ class B extends i.PureComponent {
             default:
                 l.offsetY = -n;
         }
-        (l.offsetX += this.props.offset.x ?? 0), (l.offsetY += this.props.offset.y ?? 0), this.setState(l);
+        ((l.offsetX += this.props.offset.x ?? 0), (l.offsetY += this.props.offset.y ?? 0), this.setState(l));
     }
     handleSkipTips() {
         f.n7();

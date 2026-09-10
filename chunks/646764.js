@@ -59,7 +59,7 @@ let L = function (e) {
         H = n.useMemo(() => (0, N.tW)(i, N.fY.REWARD_IMAGE), [i]),
         K = n.useCallback(
             (t) => {
-                (0, o.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                ((0, o.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_tile")
                         ? (0, A.r)({
                               type: T.F.CLICK_INTERNAL,
@@ -79,7 +79,7 @@ let L = function (e) {
                               sourceQuestContent: S,
                           }),
                     (0, v.mA)({ fromContent: e.questContent, questId: i.id }),
-                    e.onClick?.(t);
+                    e.onClick?.(t));
             },
             [V, i.id, e, S, Y],
         ),
@@ -90,13 +90,13 @@ let L = function (e) {
         (n.useEffect(() => {
             if (null != X.current) {
                 if (!G.isAnimated || U) {
-                    (X.current.currentTime = 0), X.current.pause();
+                    ((X.current.currentTime = 0), X.current.pause());
                     return;
                 }
-                L && !F.current
+                (L && !F.current
                     ? X.current.play()
                     : !L && F.current && ((X.current.currentTime = 0), X.current.pause()),
-                    (F.current = L);
+                    (F.current = L));
             }
         }, [L, G, U]),
         (0, q.A)(X),
@@ -131,7 +131,7 @@ let L = function (e) {
                         null != s && (0, r.jsx)("img", { alt: w.intl.string(w.t.UMclVN), className: M.XM, src: s }),
                         (0, r.jsx)(R.A, {
                             ref: (e) => {
-                                (t.current = e), (X.current = e);
+                                ((t.current = e), (X.current = e));
                             },
                             autoPlay: !U && L,
                             loop: !0,

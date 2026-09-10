@@ -56,7 +56,7 @@ function I(t) {
                             null != l
                                 ? l({
                                       onClick: (t) => {
-                                          t.stopPropagation(), I?.();
+                                          (t.stopPropagation(), I?.());
                                       },
                                   })
                                 : null,

@@ -15,7 +15,7 @@ function l(t) {
         cancelText: a.intl.string(a.t["ETE/oC"]),
         onConfirm: n,
         onClose: function () {
-            return c && o.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i();
+            return (c && o.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i());
         },
         checkboxProps: { checked: c, onChange: (t) => d(t), label: a.intl.string(a.t["JdIQ/Y"]) },
         ...l,

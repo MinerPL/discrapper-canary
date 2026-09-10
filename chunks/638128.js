@@ -16,7 +16,7 @@ class p extends i.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
         let e = a.w.get(c);
-        null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, u.I)(o.Av);
+        (null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, u.I)(o.Av));
     }
     isEnabled() {
         return d;
@@ -33,14 +33,14 @@ class p extends i.Ay.Store {
 }
 let m = new p(s.h, {
     SPELLCHECK_TOGGLE() {
-        (d = !d), (0, o.kv)(d), h();
+        ((d = !d), (0, o.kv)(d), h());
     },
     SPELLCHECK_LEARN_WORD(e) {
         let { word: t } = e;
-        f.add(t.toLocaleLowerCase()), (0, o.d1)(f), h();
+        (f.add(t.toLocaleLowerCase()), (0, o.d1)(f), h());
     },
     SPELLCHECK_UNLEARN_WORD(e) {
         let { word: t } = e;
-        f.delete(t.toLocaleLowerCase()), (0, o.d1)(f), h();
+        (f.delete(t.toLocaleLowerCase()), (0, o.d1)(f), h());
     },
 });

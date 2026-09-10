@@ -7,20 +7,20 @@ class i {
         if (((t = o(t)), e instanceof i))
             if (!!t.loose === e.loose) return e;
             else e = e.value;
-        u("comparator", (e = e.trim().split(/\s+/).join(" ")), t),
+        (u("comparator", (e = e.trim().split(/\s+/).join(" ")), t),
             (this.options = t),
             (this.loose = !!t.loose),
             this.parse(e),
             this.semver === n ? (this.value = "") : (this.value = this.operator + this.semver.version),
-            u("comp", this);
+            u("comp", this));
     }
     parse(e) {
         let t = this.options.loose ? a[s.COMPARATORLOOSE] : a[s.COMPARATOR],
             r = e.match(t);
         if (!r) throw TypeError(`Invalid comparator: ${e}`);
-        (this.operator = void 0 !== r[1] ? r[1] : ""),
+        ((this.operator = void 0 !== r[1] ? r[1] : ""),
             "=" === this.operator && (this.operator = ""),
-            r[2] ? (this.semver = new c(r[2], this.options.loose)) : (this.semver = n);
+            r[2] ? (this.semver = new c(r[2], this.options.loose)) : (this.semver = n));
     }
     toString() {
         return this.value;

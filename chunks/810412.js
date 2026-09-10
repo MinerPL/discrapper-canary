@@ -24,7 +24,7 @@ async function A(e, t, i) {
         { default: a } = n(296027),
         s = a?.getMostRecentOverlayRenderMethod() ?? void 0,
         d = null != s ? u.Ue[s] : void 0;
-    __OVERLAY__ && (d = u.Ue[u.Ue.Hook]),
+    (__OVERLAY__ && (d = u.Ue[u.Ue.Hook]),
         c.default.track(_.HAw.OVERLAY_TOGGLED, {
             enabled: e,
             setting_type: (function (e) {
@@ -43,7 +43,7 @@ async function A(e, t, i) {
             application_name: r?.name ?? void 0,
             most_recent_overlay_render_method: d,
             hardware_display_count: (await l.A?.hardware?.getDisplayCount?.()) ?? null,
-        });
+        }));
 }
 function h(e, t) {
     let [n, i] = s.useState(e()),

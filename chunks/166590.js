@@ -6,7 +6,7 @@ function a(e) {
 }
 class s extends r.A {
     constructor(e) {
-        super(e), (this.type = i.R.NONE);
+        (super(e), (this.type = i.R.NONE));
     }
     static fromServer(e) {
         return new s({ ...super.fromServer(e), type: i.R.NONE });

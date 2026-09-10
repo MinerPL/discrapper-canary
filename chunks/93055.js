@@ -1,6 +1,6 @@
-n.d(t, { Af: () => f, DZ: () => T, TW: () => A, ad: () => h, e4: () => m, ft: () => I, m_: () => p }),
+(n.d(t, { Af: () => f, DZ: () => T, TW: () => A, ad: () => h, e4: () => m, ft: () => I, m_: () => p }),
     n(321073),
-    n(97378);
+    n(97378));
 var i = n(17928),
     r = n(873298),
     a = n(967198),
@@ -54,7 +54,7 @@ function p() {
         let i = e[n];
         i.type === r.Ip.CATEGORY && t.push({ id: i.id, name: i.nickname ?? "" });
     }
-    return t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t;
+    return (t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t);
 }
 function T() {
     let e = (0, i.bG)([a.A], () => a.A.getGuildId());

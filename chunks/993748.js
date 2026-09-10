@@ -23,7 +23,7 @@ async function S(e) {
     let t = Date.now(),
         n = g.get(e) ?? 0;
     if (A.A.getApplicationFetchState(e) === A.e.FETCHING || A.A.isInvalidApplication(e) || t < n + 6e5) return;
-    g.set(e, t), c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
+    (g.set(e, t), c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e }));
     let i = new r.A(1e3, 5e3),
         a = (e, t) =>
             429 === e.status &&
@@ -176,7 +176,7 @@ async function R(e) {
                 },
                 rejectWithError: !0,
             });
-            c.h.dispatch({
+            (c.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS",
                 query: t,
                 guildId: n,
@@ -198,7 +198,7 @@ async function R(e) {
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
                 source: p,
             }),
-                r?.(e.body.result_count);
+                r?.(e.body.result_count));
         } catch (e) {
             c.h.dispatch({
                 type: "APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE",

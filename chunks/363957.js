@@ -1,4 +1,4 @@
-l.d(t, { A: () => x }), l(321073);
+(l.d(t, { A: () => x }), l(321073));
 var i = l(158390),
     n = l(17928),
     a = l(228366),
@@ -11,7 +11,7 @@ let r = s.A.Millis.SECOND,
     f = {};
 function h(e, t) {
     let l = e.entriesByWidgetId.get(t);
-    return null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l;
+    return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
 function m(e, t, l, n) {
     if (0 === l.length) {
@@ -19,14 +19,14 @@ function m(e, t, l, n) {
         return;
     }
     let s = [];
-    l.forEach((t) => {
+    (l.forEach((t) => {
         let l = h(e, t);
         n && l.attempts < 3 ? s.push(t) : (l.state = o);
     }),
         0 !== s.length &&
             ((e.backoff ??= new i.A(r, d, !0)),
             e.backoff.pending ||
-                e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t })));
+                e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
 class g extends n.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
@@ -47,19 +47,19 @@ let x = new g(a.h, {
         let t,
             { guildId: l, requestId: i, widgetIds: n } = e,
             a = (null == (t = f[l]) && ((t = { entriesByWidgetId: new Map() }), (f[l] = t)), t);
-        (a.activeRequestId = i),
+        ((a.activeRequestId = i),
             (a.activeWidgetIds = n),
             n.forEach((e) => {
                 let t = h(a, e);
-                (t.state = u), (t.attempts += 1);
-            });
+                ((t.state = u), (t.attempts += 1));
+            }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {
         let { guildId: t, requestId: l, widgets: i } = e,
             n = f[t];
         if (n?.activeRequestId !== l) return !1;
         let a = n.activeWidgetIds ?? [];
-        delete n.activeRequestId, delete n.activeWidgetIds;
+        (delete n.activeRequestId, delete n.activeWidgetIds);
         let s = new Map(
                 i.map((e) => {
                     let { id: t, data: l } = e;
@@ -67,21 +67,21 @@ let x = new g(a.h, {
                 }),
             ),
             r = [];
-        a.forEach((e) => {
+        (a.forEach((e) => {
             let t = s.get(e);
             if (null != t) {
                 let l = h(n, e);
-                (l.state = { status: "success", data: t }), (l.attempts = 0);
+                ((l.state = { status: "success", data: t }), (l.attempts = 0));
             } else r.push(e);
         }),
-            m(n, t, r, !0);
+            m(n, t, r, !0));
     },
     GUILD_SPACE_HYDRATE_FAILURE: function (e) {
         let { guildId: t, requestId: l, retryable: i } = e,
             n = f[t];
         if (n?.activeRequestId !== l) return !1;
         let a = n.activeWidgetIds ?? [];
-        delete n.activeRequestId, delete n.activeWidgetIds, m(n, t, a, i);
+        (delete n.activeRequestId, delete n.activeWidgetIds, m(n, t, a, i));
     },
     GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED: function (e) {
         let { guildId: t } = e,
@@ -129,16 +129,16 @@ let x = new g(a.h, {
         let { guildId: t } = e,
             l = f[t];
         if (null == l || (0 === l.entriesByWidgetId.size && null == l.activeRequestId)) return !1;
-        l.entriesByWidgetId.clear(), delete l.activeRequestId, delete l.activeWidgetIds;
+        (l.entriesByWidgetId.clear(), delete l.activeRequestId, delete l.activeWidgetIds);
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t, unavailable: l },
         } = e;
         if (l) return !1;
-        f[t]?.backoff?.cancel(), delete f[t];
+        (f[t]?.backoff?.cancel(), delete f[t]);
     },
     LOGOUT: function () {
-        Object.values(f).forEach((e) => e?.backoff?.cancel()), (f = {});
+        (Object.values(f).forEach((e) => e?.backoff?.cancel()), (f = {}));
     },
 });

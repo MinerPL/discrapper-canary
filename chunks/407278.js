@@ -26,7 +26,7 @@ let g = "legacyGameInviteChannelChatBannerDismissed",
         dismissChannel: (e) => {
             x.setState((t) => {
                 let i = [...t.dismissedChannelIds, e];
-                return d.w.set(g, i), { dismissedChannelIds: i };
+                return (d.w.set(g, i), { dismissedChannelIds: i });
             });
         },
     }));
@@ -51,7 +51,7 @@ function v() {
                   channelIconHook: () => (0, n.jsx)(a.t, { size: "xs", color: "currentColor" }),
                   channelName: t,
                   onChannelClick: () => {
-                      (0, u.pX)(h.BVt.CHANNEL(e.guild_id, e.id)), i();
+                      ((0, u.pX)(h.BVt.CHANNEL(e.guild_id, e.id)), i());
                   },
                   onDismissClick: () => i(),
               }),

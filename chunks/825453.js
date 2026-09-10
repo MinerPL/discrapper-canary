@@ -1,4 +1,4 @@
-n.d(t, { A: () => N }), n(321073);
+(n.d(t, { A: () => N }), n(321073));
 var i = n(582128),
     l = n(284009),
     s = n.n(l),
@@ -32,11 +32,15 @@ function N(e, t, n) {
                 n
             );
         }, [l, e]),
-        N = (0, o.bG)([f.A], () => {
-            if (null == n) return;
-            let e = f.A.getCommand(n);
-            return e?.permissions ?? {};
-        }, [n]),
+        N = (0, o.bG)(
+            [f.A],
+            () => {
+                if (null == n) return;
+                let e = f.A.getCommand(n);
+                return e?.permissions ?? {};
+            },
+            [n],
+        ),
         E = (0, o.bG)([f.A], () => (null == n ? f.A.getEditedApplication() : f.A.getEditedCommand()?.permissions), [n]),
         C = n ?? t,
         v = null != n ? N : a,
@@ -125,19 +129,19 @@ function N(e, t, n) {
                             case d.RA.CHANNEL: {
                                 let e = o.id === i,
                                     n = N[o.id];
-                                (t = e || x.A.can(j.xBc.VIEW_CHANNEL, n)), (c = !0);
+                                ((t = e || x.A.can(j.xBc.VIEW_CHANNEL, n)), (c = !0));
                                 break;
                             }
                             case d.RA.ROLE: {
                                 let i = o.id === e,
                                     s = E[o.id];
-                                (t = i || null != s), (c = r || i || x.A.isRoleHigher(n, l, s));
+                                ((t = i || null != s), (c = r || i || x.A.isRoleHigher(n, l, s)));
                                 break;
                             }
                             case d.RA.USER: {
                                 let e = C[o.id];
-                                (t = null != e),
-                                    (c = null != e && (r || x.A.canManageUser(j.xBc.USE_APPLICATION_COMMANDS, e, n)));
+                                ((t = null != e),
+                                    (c = null != e && (r || x.A.canManageUser(j.xBc.USE_APPLICATION_COMMANDS, e, n))));
                                 break;
                             }
                             default:

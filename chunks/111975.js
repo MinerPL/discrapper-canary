@@ -28,10 +28,10 @@ var n =
     u = function (e, t, r) {
         if (s(e)) return [];
         var i = Array.prototype.slice.apply(e.querySelectorAll(n));
-        return t && o.call(e, n) && i.unshift(e), (i = i.filter(r));
+        return (t && o.call(e, n) && i.unshift(e), (i = i.filter(r)));
     },
     c = function e(t, r, i) {
-        for (var a = [], l = Array.from(t); l.length; ) {
+        for (var a = [], l = Array.from(t); l.length;) {
             var u = l.shift();
             if (!s(u, !1))
                 if ("SLOT" === u.tagName) {
@@ -139,7 +139,7 @@ var n =
             if ("non-zero-area" === r) return w(e);
         } else {
             if ("function" == typeof n) {
-                for (var s = e; e; ) {
+                for (var s = e; e;) {
                     var l = e.parentElement,
                         u = a(e);
                     if (l && !l.shadowRoot && !0 === n(l)) return w(e);
@@ -154,7 +154,7 @@ var n =
     },
     S = function (e) {
         if (/^(INPUT|BUTTON|SELECT|TEXTAREA)$/.test(e.tagName))
-            for (var t = e.parentElement; t; ) {
+            for (var t = e.parentElement; t;) {
                 if ("FIELDSET" === t.tagName && t.disabled) {
                     for (var r = 0; r < t.children.length; r++) {
                         var n = t.children.item(r);
@@ -204,7 +204,7 @@ var n =
             n
                 .sort(h)
                 .reduce(function (e, t) {
-                    return t.isScope ? e.push.apply(e, t.content) : e.push(t.content), e;
+                    return (t.isScope ? e.push.apply(e, t.content) : e.push(t.content), e);
                 }, [])
                 .concat(r)
         );

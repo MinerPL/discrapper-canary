@@ -14,10 +14,10 @@ var n = a(477900),
 function x(t) {
     let { guildId: e, channel: x, keybind: m, transitionState: y, onClose: C } = t,
         j = i.useCallback(async () => {
-            (0, d.sF)(d._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await C();
+            ((0, d.sF)(d._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await C());
         }, [C]),
         w = i.useCallback(async () => {
-            await j(),
+            (await j(),
                 (0, l.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         a.e("161411"),
@@ -26,7 +26,7 @@ function x(t) {
                         a.e("912618"),
                     ]).then(a.bind(a, 29681));
                     return (e) => (0, n.jsx)(t, { ...e });
-                });
+                }));
         }, [j]),
         b = i.useMemo(
             () => [

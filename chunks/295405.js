@@ -8,7 +8,7 @@ let s = {},
     d = !1;
 function c(e) {
     let { paymentSource: t } = e;
-    (s = { ...s, [t.id]: t }), (t.isDefault || 1 === Object.keys(s).length) && (l = t.id);
+    ((s = { ...s, [t.id]: t }), (t.isDefault || 1 === Object.keys(s).length) && (l = t.id));
 }
 class u extends i.Ay.Store {
     static displayName = "PaymentSourceStore";
@@ -44,8 +44,8 @@ let _ = new u(r.h, {
     BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: c,
     BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: function (e) {
         let { paymentSources: t } = e;
-        for (let e of ((s = {}), (l = null), t)) (s[e.id] = a.Ay.createFromServer(e)), e.default && (l = e.id);
-        null == l && t.length > 0 && (l = t[0].id), (o = !0), (d = !1);
+        for (let e of ((s = {}), (l = null), t)) ((s[e.id] = a.Ay.createFromServer(e)), e.default && (l = e.id));
+        (null == l && t.length > 0 && (l = t[0].id), (o = !0), (d = !1));
     },
     BILLING_PAYMENT_SOURCES_FETCH_FAIL: function () {
         d = !0;
@@ -58,6 +58,6 @@ let _ = new u(r.h, {
         }
     },
     LOGOUT: function () {
-        (s = {}), (l = null), (o = !1), (d = !1);
+        ((s = {}), (l = null), (o = !1), (d = !1));
     },
 });

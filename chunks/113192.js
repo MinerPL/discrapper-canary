@@ -54,12 +54,12 @@ function g(e) {
                                   className: T.BD,
                                   popoutOpen: !1,
                                   onOpenPopout: function () {
-                                      (0, d.X)(R, d.O.POPOUT, !0),
+                                      ((0, d.X)(R, d.O.POPOUT, !0),
                                           (0, s.A)({
                                               onConfirm: async () => {
-                                                  await h.A.refreshProxyTicket(t.id), (0, a.jp)();
+                                                  (await h.A.refreshProxyTicket(t.id), (0, a.jp)());
                                               },
-                                          });
+                                          }));
                                   },
                                   onClosePopout: p.FXj,
                               }),

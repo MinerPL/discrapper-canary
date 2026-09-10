@@ -3,7 +3,7 @@ var s = c(582128),
     r = c(228366);
 function t(e) {
     let u = (0, s.useRef)(e);
-    (0, s.useEffect)(() => {
+    ((0, s.useEffect)(() => {
         u.current = e;
     }, [e]),
         (0, s.useEffect)(() => {
@@ -18,5 +18,5 @@ function t(e) {
                     }
                 );
             }
-        }, []);
+        }, []));
 }

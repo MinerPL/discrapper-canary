@@ -1,4 +1,4 @@
-s.r(o), s.d(o, { default: () => I });
+(s.r(o), s.d(o, { default: () => I }));
 var t = s(477900),
     n = s(582128),
     i = s(503698),
@@ -62,7 +62,7 @@ function z(e) {
                         C(!1);
                     },
                     onClick: () => {
-                        o?.(), i?.onClick?.();
+                        (o?.(), i?.onClick?.());
                     },
                     children: [
                         (0, t.jsx)("div", {
@@ -99,7 +99,7 @@ function I() {
     return s === C.U5.SIDEBAR
         ? (0, t.jsx)(z, {
               onClick: () => {
-                  r(), (0, l.pX)(c);
+                  (r(), (0, l.pX)(c));
               },
               focusSectionProps: e,
           })
@@ -114,7 +114,7 @@ function I() {
                         ref: o,
                         selectedOverride: n,
                         onClick: () => {
-                            r(), s();
+                            (r(), s());
                         },
                         popoutProps: i,
                         focusSectionProps: e,

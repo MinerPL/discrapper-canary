@@ -27,12 +27,12 @@ class E extends s.A {
                       ]).then(n.bind(n, 398177));
                       return function (t) {
                           async function n() {
-                              await t.onClose(), a.A.logout("login_required_account_manager", u.BVt.LOGIN);
+                              (await t.onClose(), a.A.logout("login_required_account_manager", u.BVt.LOGIN));
                           }
                           return (0, i.jsx)(e, {
                               ...t,
                               onSuccess: function () {
-                                  o.default.track(u.HAw.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
+                                  (o.default.track(u.HAw.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose());
                               },
                               onClose: n,
                               requirementsUpdated: !0,

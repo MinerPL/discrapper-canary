@@ -17,7 +17,7 @@ var t = a(693655),
             if (r && void 0 === a) return v(this, e);
             var t = u(this, e);
             o(r, 1);
-            for (var n = i(a), h = 0; h < t.length; ) if (t[h++] === n) return !0;
+            for (var n = i(a), h = 0; h < t.length;) if (t[h++] === n) return !0;
             return !1;
         },
         { enumerable: !0, unsafe: !0 },

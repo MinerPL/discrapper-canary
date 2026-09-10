@@ -14,10 +14,10 @@ class E {
     _set;
     _defaultValueFunc;
     constructor(e) {
-        (this._set = {}), (this._defaultValueFunc = e);
+        ((this._set = {}), (this._defaultValueFunc = e));
     }
     get(e) {
-        return this._set.hasOwnProperty(e) || (this._set[e] = this._defaultValueFunc()), this._set[e];
+        return (this._set.hasOwnProperty(e) || (this._set[e] = this._defaultValueFunc()), this._set[e]);
     }
     delete(e) {
         delete this._set[e];
@@ -42,7 +42,7 @@ let A = new (class {
         }
         finishRequesting(e, t) {
             let n = this.requested.get(e);
-            t.forEach((e) => n.delete(e)), A.compact(e);
+            (t.forEach((e) => n.delete(e)), A.compact(e));
         }
         getRequested(e) {
             return this.requested.get(e);
@@ -85,18 +85,18 @@ function I(e) {
 }
 function f(e, t) {
     let n = !1;
-    t.forEach((t) => {
+    (t.forEach((t) => {
         let { loaded: i, firstMessage: r } = u.A.getMessage(t);
         i || null != r || (A.request(e.id, t), (n = !0));
     }),
-        n && null == h && (h = setTimeout(T, 0));
+        n && null == h && (h = setTimeout(T, 0)));
 }
 function p(e) {
     f(e, (0, c.S)(e.id).slice(0, 10));
 }
 async function T() {
     try {
-        for (; A.hasNext(); ) await m(A.next());
+        for (; A.hasNext();) await m(A.next());
     } finally {
         h = null;
     }

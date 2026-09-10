@@ -1,4 +1,4 @@
-n.d(t, { A: () => D, a: () => A }), n(321073);
+(n.d(t, { A: () => D, a: () => A }), n(321073));
 var i,
     r = n(635377),
     a = n.n(r),
@@ -25,9 +25,9 @@ class f {
             ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
     }
     set(e, t) {
-        this._cachedMessages.set(e, t),
+        (this._cachedMessages.set(e, t),
             this._cachedMessageIds.has(e) ||
-                ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e));
+                ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e)));
     }
     has(e) {
         return this._cachedMessageIds.has(e);
@@ -49,7 +49,7 @@ class p {
     }
     set(e, t, n) {
         let i = this._channelCaches.get(e);
-        null == i && ((i = new f()), this._channelCaches.set(e, i)), i.set(t, n);
+        (null == i && ((i = new f()), this._channelCaches.set(e, i)), i.set(t, n));
     }
     updateExistingMessageIfCached(e) {
         let t = this._channelCaches.get(e.channel_id);
@@ -131,14 +131,14 @@ class y extends s.Ay.Store {
     }
     getMessageByReference(e) {
         let t;
-        return null != e && (t = T.get(e.channel_id, e.message_id)), t ?? h;
+        return (null != e && (t = T.get(e.channel_id, e.message_id)), t ?? h);
     }
     getMessage(e, t) {
         return T.get(e, t) ?? h;
     }
     getReplyIdsForChannel(e) {
         let t;
-        return null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I;
+        return (null != e && (t = T.getCachedMessageIdsForChannel(e)), t ?? I);
     }
 }
 let D = new y(l.h, {

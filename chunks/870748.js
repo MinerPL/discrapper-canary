@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, t: () => O }), n(321073), n(667532);
+(n.d(t, { A: () => R, t: () => O }), n(321073), n(667532));
 var l = n(485845),
     i = n(465532),
     s = n(155718),
@@ -37,7 +37,7 @@ function R(e, t) {
         deleteForward: _,
         deleteFragment: R,
     } = e;
-    (e.insertData = (l) => {
+    ((e.insertData = (l) => {
         if (null != t && v.VW.isEditorEmpty(e) && l.types.includes("application/x-discord-interaction-data")) {
             let e = JSON.parse(l.getData("application/x-discord-interaction-data")),
                 { commandKey: n, interactionOptions: i } = (0, d.Ez)(e),
@@ -77,7 +77,7 @@ function R(e, t) {
         }),
         (e.deleteFragment = (t) => {
             w(e, () => R(t));
-        });
+        }));
     let D = null,
         U = null,
         G = null,
@@ -119,14 +119,14 @@ function R(e, t) {
                                     null
                                 );
                             if (null != h) {
-                                if (v.VW.isEditorEmpty(t) || null == A) return O(t, a.id, A, !1), null;
+                                if (v.VW.isEditorEmpty(t) || null == A) return (O(t, a.id, A, !1), null);
                                 let e = `/${h.displayName}`;
                                 if (
                                     null == g ||
                                     !g.startsWith(e) ||
                                     (0 === E.O7(t).length && (g.length < e.length + 1 || " " !== g[e.length]))
                                 )
-                                    return i.A.clearDraftCommand(a.id, x.C.ChannelMessage), O(t, a.id, A, !0), null;
+                                    return (i.A.clearDraftCommand(a.id, x.C.ChannelMessage), O(t, a.id, A, !0), null);
                             } else {
                                 if (null != A && u) {
                                     let e = (function (e, t, n) {
@@ -164,7 +164,7 @@ function R(e, t) {
                                                                 optionType: l.type,
                                                                 children: [{ text: i }],
                                                             };
-                                                        h.push(s), 0 === l.text.length && null == m && (m = s);
+                                                        (h.push(s), 0 === l.text.length && null == m && (m = s));
                                                     }
                                                 for (let l of s.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
@@ -179,18 +179,18 @@ function R(e, t) {
                                                             optionType: l.type,
                                                             children: [{ text: e }],
                                                         };
-                                                        h.push(s),
+                                                        (h.push(s),
                                                             0 === e.length && null == m && (m = s),
-                                                            null == i && (f = s);
+                                                            null == i && (f = s));
                                                     }
                                             }
-                                            (l =
+                                            ((l =
                                                 o.length > 0
                                                     ? `/${s.displayName} ${o.replace(/\r|\n/g, " ")}`
                                                     : 0 === h.length
                                                       ? `/${s.displayName} `
                                                       : `/${s.displayName}`),
-                                                h.unshift({ text: l });
+                                                h.unshift({ text: l }));
                                             let p = {
                                                 type: "applicationCommand",
                                                 children: h,
@@ -233,7 +233,7 @@ function R(e, t) {
                                     );
                                 }
                                 if (null != A && !u)
-                                    return r.Gf({ channelId: a.id, command: null, section: null }), null;
+                                    return (r.Gf({ channelId: a.id, command: null, section: null }), null);
                                 let e = v.VW.richValue(t)[0],
                                     l = e.children[0];
                                 if (b.has(e.type) && v.l5.isText(l)) {
@@ -264,7 +264,9 @@ function R(e, t) {
                                         return null;
                                     })(l.text, a);
                                     if (null != e)
-                                        return r.Gf({ channelId: a.id, command: e.command, section: e.section }), null;
+                                        return (
+                                            r.Gf({ channelId: a.id, command: e.command, section: e.section }), null
+                                        );
                                 }
                             }
                             if (null != A && null != h) {
@@ -331,9 +333,9 @@ function R(e, t) {
                     );
                     if (null != u) {
                         let t = I.o.currentEntry(e);
-                        null != t && (t.commandId = u.commandId), (V = u.optionValues);
+                        (null != t && (t.commandId = u.commandId), (V = u.optionValues));
                     } else V = null;
-                    (D = v.VW.richValue(e)), (U = e.selection), (G = n.activeCommand), (F = a);
+                    ((D = v.VW.richValue(e)), (U = e.selection), (G = n.activeCommand), (F = a));
                 }
             }
             A();

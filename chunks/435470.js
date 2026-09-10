@@ -201,14 +201,14 @@ function et(e, t, n) {
         s = r.useRef(new Set());
     r.useEffect(() => {
         if (null == l && null != d.current) {
-            G.A.clearForumSearch(e.id), (d.current = null);
+            (G.A.clearForumSearch(e.id), (d.current = null));
             return;
         }
         if (null == l || 0 === l.length || u) return;
         if (!a) return void G.A.clearForumSearch(e.id);
         if ((d.current === l && s.current === t) || i) return;
         let r = setTimeout(async () => {
-            (d.current = l), (s.current = t);
+            ((d.current = l), (s.current = t));
             try {
                 await G.A.searchForumPosts(e.guild_id, e.id, l, t, n);
             } catch {}

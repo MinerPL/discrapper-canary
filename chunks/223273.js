@@ -21,7 +21,7 @@ class l extends a.A {
     themes;
     content_classification;
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.description = e.description),
@@ -37,7 +37,7 @@ class l extends a.A {
             (this.supportsOutOfProcessOverlay = e.supportsOutOfProcessOverlay || !1),
             (this.thirdPartySkus = e.thirdPartySkus || []),
             (this.themes = e.themes || []),
-            (this.content_classification = e.content_classification);
+            (this.content_classification = e.content_classification));
     }
     getIconURL(e) {
         return null == this.icon

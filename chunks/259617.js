@@ -69,7 +69,7 @@ let O = (0, s.t)({
                 o = t.seconds;
             if (o <= 0) return () => {};
             let i = r.setInterval(() => {
-                e({ type: "TICK" }), (o -= 1) <= 0 && r.clearInterval(i);
+                (e({ type: "TICK" }), (o -= 1) <= 0 && r.clearInterval(i));
             }, 1e3);
             return () => r.clearInterval(i);
         }),
@@ -389,7 +389,7 @@ function P({ actor: t, trackElementClicked: e }) {
             t.send({ type: "OPT_IN_CHANGED", granted: e });
         },
         submit() {
-            e?.("submit"), t.send({ type: "SUBMIT" });
+            (e?.("submit"), t.send({ type: "SUBMIT" }));
         },
         setOtpCode(e) {
             t.send({ type: "OTP_CHANGED", code: e });
@@ -398,13 +398,13 @@ function P({ actor: t, trackElementClicked: e }) {
             t.send({ type: "VALIDATE_OTP" });
         },
         submitOtp(r) {
-            e?.("submitOtp"), t.send({ type: "OTP_CHANGED", code: r }), t.send({ type: "VERIFY_OTP" });
+            (e?.("submitOtp"), t.send({ type: "OTP_CHANGED", code: r }), t.send({ type: "VERIFY_OTP" }));
         },
         resendOtp() {
-            e?.("resendOtp"), t.send({ type: "RESEND_OTP" });
+            (e?.("resendOtp"), t.send({ type: "RESEND_OTP" }));
         },
         back() {
-            e?.("back"), t.send({ type: "BACK" });
+            (e?.("back"), t.send({ type: "BACK" }));
         },
         reset() {
             t.send({ type: "RESET" });

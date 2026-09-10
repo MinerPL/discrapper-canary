@@ -30,23 +30,23 @@ function A(e) {
             headingColor: o = "text-default",
             headingIcon: c,
             hideHeading: A = !1,
-            introText: v,
-            className: N,
+            introText: N,
+            className: v,
             scrollTargetId: R,
         } = e,
-        j = (0, E.GV)(),
-        I = l.useRef(null),
+        I = (0, E.GV)(),
+        j = l.useRef(null),
         y = (0, b.g)(),
         C = null != R && y === R;
-    (0, p.A)(I, C);
+    (0, p.A)(j, C);
     let T = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
-        ref: C ? I : void 0,
-        className: s()(h.uW, N),
-        "aria-labelledby": j,
+        ref: C ? j : void 0,
+        className: s()(h.uW, v),
+        "aria-labelledby": I,
         children: [
             A
-                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: j, children: n }) })
+                ? (0, a.jsx)(u.A, { children: (0, a.jsx)(m.H, { id: I, children: n }) })
                 : (0, a.jsxs)("div", {
                       className: h.so,
                       children: [
@@ -58,13 +58,13 @@ function A(e) {
                                       variant: i,
                                       color: "currentColor",
                                       className: r,
-                                      id: j,
+                                      id: I,
                                       children: n,
                                   }),
                                   null != T && (0, a.jsx)(_, { ...T }),
                               ],
                           }),
-                          null != v && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: v }),
+                          null != N && (0, a.jsx)(g.E, { variant: "text-xs/normal", children: N }),
                       ],
                   }),
             (0, a.jsx)(m.F, { children: t }),

@@ -1,5 +1,5 @@
 let i, l, s, a, r, o;
-n.d(t, { default: () => tg }), n(938796);
+(n.d(t, { default: () => tg }), n(938796));
 var u = n(477900),
     d = n(582128),
     c = n(284009),
@@ -122,7 +122,7 @@ class X extends x.Ay.Store {
 let ee = new X(w.h, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: l, applicationId: u, inviteTargetType: d } = e;
-        (s = n),
+        ((s = n),
             (a = l),
             (r = u),
             (o = d),
@@ -133,11 +133,11 @@ let ee = new X(w.h, {
                 ...(0, D.Uo)({ channel: a, applicationId: r, inviteTargetType: d }),
             ])),
             (W = Z()),
-            (i = z.length);
+            (i = z.length));
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;
-        (Y = t), Z();
+        ((Y = t), Z());
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         let { chunks: t } = e,
@@ -341,7 +341,7 @@ function eF(e) {
                 variant: "primary",
                 text: eV.intl.string(eV.t.pz1lRG),
                 onClick: () => {
-                    l(), t();
+                    (l(), t());
                 },
             },
         ],
@@ -488,7 +488,7 @@ let ti = d.memo(
                                   inviteAnalyticsMetadata: tn(r, o),
                               },
                               (e) => {
-                                  A(!1), I(e);
+                                  (A(!1), I(e));
                               },
                           ))
                         : null != i &&
@@ -502,7 +502,7 @@ let ti = d.memo(
                                   inviteAnalyticsMetadata: tn(r, o),
                               },
                               (e) => {
-                                  A(!1), I(e);
+                                  (A(!1), I(e));
                               },
                           )));
             }, [s, l, i, a, r, o]),
@@ -672,7 +672,7 @@ class tu extends d.PureComponent {
         if (l) {
             let n = e?.id;
             if (null == n) return;
-            p({ networkError: void 0 }),
+            (p({ networkError: void 0 }),
                 R.Ay.createInvite(
                     n,
                     {
@@ -686,7 +686,7 @@ class tu extends d.PureComponent {
                         flags: x,
                     },
                     i,
-                ).catch((e) => p({ networkError: e }));
+                ).catch((e) => p({ networkError: e })));
         }
         if (
             (g &&
@@ -753,14 +753,14 @@ class tu extends d.PureComponent {
     handleQueryChange = (e) => {
         let { modalState: t, setModalState: n } = this.props,
             i = { query: e };
-        "" === e && "" !== t.query
+        ("" === e && "" !== t.query
             ? ((i.sectionVisibility = { ...t.defaultSectionVisibility }), (i.defaultSectionVisibility = {}))
             : "" !== e &&
               "" === t.query &&
               ((i.defaultSectionVisibility = { ...t.sectionVisibility }), (i.sectionVisibility = {})),
             this._scroller?.scrollTo({ to: 0 }),
             w.h.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query: e }),
-            n(i);
+            n(i));
     };
     handleClearSearch = () => {
         this.handleQueryChange("");
@@ -998,7 +998,7 @@ class tu extends d.PureComponent {
             d = (0, eN.A)(this.getInviteKey() ?? "");
         if (t) {
             let e = eV.intl.string(eV.t.MLkj7N);
-            null != i
+            (null != i
                 ? (e = eV.intl.string(eV.t["1b9neu"]))
                 : null != l
                   ? (e = eV.intl.string(eV.t.iI1gMg))
@@ -1012,7 +1012,7 @@ class tu extends d.PureComponent {
                         setInviteFlags: this.handleSetInviteFlags,
                         copyValue: d,
                     }),
-                }));
+                })));
         } else
             e ||
                 (o = (0, u.jsxs)("div", {
@@ -1106,17 +1106,21 @@ let tc = d.forwardRef(function (e, t) {
             analyticsLocation: I,
         } = e,
         { analyticsLocations: v } = (0, ei.Ay)(en.A.INSTANT_INVITE_MODAL),
-        S = (0, x.bG)([ev.Ay, L.A, em.Ay, k.A], () => {
-            if (null != l) return l;
-            let e = ev.Ay.getChannelId(),
-                t = null == e || (0, tl.jq)(e) ? void 0 : L.A.getChannel(e);
-            return (
-                t?.isThread() && (t = L.A.getChannel(t.parent_id)),
-                t?.guild_id === s.id && null != t && k.A.can(H.xBc.VIEW_CHANNEL, t)
-                    ? t
-                    : em.Ay.getDefaultChannel(s.id, !0, H.xBc.CREATE_INSTANT_INVITE)
-            );
-        }, [l, s.id]),
+        S = (0, x.bG)(
+            [ev.Ay, L.A, em.Ay, k.A],
+            () => {
+                if (null != l) return l;
+                let e = ev.Ay.getChannelId(),
+                    t = null == e || (0, tl.jq)(e) ? void 0 : L.A.getChannel(e);
+                return (
+                    t?.isThread() && (t = L.A.getChannel(t.parent_id)),
+                    t?.guild_id === s.id && null != t && k.A.can(H.xBc.VIEW_CHANNEL, t)
+                        ? t
+                        : em.Ay.getDefaultChannel(s.id, !0, H.xBc.CREATE_INSTANT_INVITE)
+                );
+            },
+            [l, s.id],
+        ),
         f = (0, ea.Ay)(S),
         y = null;
     null != o ? (y = K.yV.STREAM) : null != c && (y = K.yV.EMBEDDED_APPLICATION);
@@ -1150,10 +1154,14 @@ let tc = d.forwardRef(function (e, t) {
                 a = l?.defaultMaxAge !== eC ? l : s;
             return D.Ay.getMaxAgeOptions({ includeExperimentalValues: [a?.defaultMaxAge] });
         })({ guildId: E, location: "InstantInviteModalConnected" }),
-        b = (0, x.bG)([eI.A], () => {
-            let e = null != S ? S.id : null;
-            return null == e ? null : eI.A.getInvite(e, { targetType: y, targetUserId: o, targetApplicationId: c });
-        }, [S, y, o, c]),
+        b = (0, x.bG)(
+            [eI.A],
+            () => {
+                let e = null != S ? S.id : null;
+                return null == e ? null : eI.A.getInvite(e, { targetType: y, targetUserId: o, targetApplicationId: c });
+            },
+            [S, y, o, c],
+        ),
         [T, M, N, G] = (0, x.yK)(
             [ee, ef.Ay],
             () => [
@@ -1284,7 +1292,7 @@ let tc = d.forwardRef(function (e, t) {
         eq = d.useCallback(
             (e) => {
                 let t = new Set(ek);
-                t.delete(e) || t.add(e), ex({ roleIds: t });
+                (t.delete(e) || t.add(e), ex({ roleIds: t }));
             },
             [ek, ex],
         ),
@@ -1294,7 +1302,7 @@ let tc = d.forwardRef(function (e, t) {
         }, [ey, eh, h]),
         eQ = d.useCallback(() => {
             let e = S?.id;
-            0 === eD && 0 === eV && !eB && er
+            (0 === eD && 0 === eV && !eB && er
                 ? ex({ networkError: void 0, showVanityURL: !0 })
                 : U &&
                   null != e &&
@@ -1313,7 +1321,7 @@ let tc = d.forwardRef(function (e, t) {
                       },
                       a,
                   ).catch((e) => ex({ networkError: e, showVanityURL: er }))),
-                eV !== ta.value && eP !== ta.value && ex({ savedMaxAge: ta.value });
+                eV !== ta.value && eP !== ta.value && ex({ savedMaxAge: ta.value }));
         }, [er, U, S, a, Q?.id, y, o, eV, eD, eB, ex, eP, eF, ek]),
         eW = (0, et.Ay)(S),
         eY = (0, et.Ay)((0, m.Lt)(eF, A.Q.IS_APPLICATION_BYPASS)),

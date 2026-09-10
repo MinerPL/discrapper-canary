@@ -9,19 +9,19 @@ let o = new a.A("FileSystemStore"),
 class c extends i.Ay.Store {
     isLowDisk = !1;
     constructor() {
-        super(r.h, {
+        (super(r.h, {
             APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
             POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         }),
             this.refresh(),
             this.waitFor(l.A),
-            setInterval(() => this.refresh(), d);
+            setInterval(() => this.refresh(), d));
     }
     handlePostConnectionOpen() {
-        return this.refresh(), !1;
+        return (this.refresh(), !1);
     }
     handleAppStateUpdate(e) {
-        return "active" !== e.state && this.refresh(), !1;
+        return ("active" !== e.state && this.refresh(), !1);
     }
     async refresh() {
         let e = await l.A.database()

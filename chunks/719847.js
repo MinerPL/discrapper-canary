@@ -50,8 +50,8 @@ function U(t) {
                   icon: () => (0, l.jsx)(u.LinkIcon, { size: "sm" }),
                   onClick: () => {
                       let t = `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(U, P.GlobalDiscoveryAppsSections.STORE)}`;
-                      (0, v.C)(t, () => (0, d.P0)((0, h.o)(b.intl.string(b.t["L/PwZf"]), x.Ck.SUCCESS))),
-                          (0, C.K)(U, C.C.STORE_MODAL);
+                      ((0, v.C)(t, () => (0, d.P0)((0, h.o)(b.intl.string(b.t["L/PwZf"]), x.Ck.SUCCESS))),
+                          (0, C.K)(U, C.C.STORE_MODAL));
                   },
                   variant: "icon-only",
               })

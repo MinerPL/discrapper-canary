@@ -44,9 +44,9 @@ var n = (l, t) =>
                         t.textContent = l;
                     }, 50)));
             }, []);
-        (0, e._)(() => {
+        ((0, e._)(() => {
             let l = !L.current;
-            return (L.current = Z), l && Z && w(r("otp.resendCodeAvailable")), () => clearTimeout(z.current);
+            return ((L.current = Z), l && Z && w(r("otp.resendCodeAvailable")), () => clearTimeout(z.current));
         }, [Z, w, r]),
             (0, e._)(() => {
                 b &&
@@ -54,7 +54,7 @@ var n = (l, t) =>
                     setTimeout(() => {
                         y.current?.focus();
                     }, 0));
-            }, [b]);
+            }, [b]));
         let R = (0, e.h)(
             (l) => {
                 let d = n(l, t);
@@ -64,7 +64,7 @@ var n = (l, t) =>
         );
         (0, e._)(() => {
             let d = l.length === t && Y.current < t;
-            (Y.current = l.length), d && R(l);
+            ((Y.current = l.length), d && R(l));
         }, [l, t, R]);
         let S = b ?? m;
         return (
@@ -74,7 +74,7 @@ var n = (l, t) =>
                     return;
                 }
                 if (!I.current) {
-                    (I.current = !0), w(r("otp.timerStarted", { time: String(d) }));
+                    ((I.current = !0), w(r("otp.timerStarted", { time: String(d) })));
                     return;
                 }
                 10 === d ? w(r("otp.timerTenSeconds")) : 5 === d && w(r("otp.timerFiveSeconds"));
@@ -112,7 +112,7 @@ var n = (l, t) =>
                     (0, e.v)(a.t, {
                         onClick: () => {
                             if (l.length < t) {
-                                W?.(), y.current?.focus();
+                                (W?.(), y.current?.focus());
                                 return;
                             }
                             R(l);
@@ -147,7 +147,7 @@ var n = (l, t) =>
                                         variant: "link",
                                         size: "inline",
                                         onClick: () => {
-                                            (T.current = null), h(""), G();
+                                            ((T.current = null), h(""), G());
                                         },
                                         disabled: M || !Z,
                                         "data-testid": "otp-resend",
@@ -158,7 +158,7 @@ var n = (l, t) =>
                                         variant: "link",
                                         size: "inline",
                                         onClick: () => {
-                                            (T.current = null), h(""), p();
+                                            ((T.current = null), h(""), p());
                                         },
                                         disabled: M,
                                         "data-testid": "otp-back",

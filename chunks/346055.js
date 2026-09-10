@@ -12,9 +12,9 @@ function d(e, t) {
                             e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
                     }),
                     r = t.currentNode;
-                for (; null != r; ) {
+                for (; null != r;) {
                     let e = r;
-                    e.setAttribute(l, String(e.tabIndex)), (e.tabIndex = -1), (r = t.nextNode());
+                    (e.setAttribute(l, String(e.tabIndex)), (e.tabIndex = -1), (r = t.nextNode()));
                 }
             },
             [l],
@@ -28,10 +28,10 @@ function d(e, t) {
             },
             [l],
         );
-    n.useLayoutEffect(() => {
+    (n.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
-            if (null != t) return d(t), () => a(t);
+            if (null != t) return (d(t), () => a(t));
         }
     }, [t, e, d, a]),
         n.useEffect(() => {
@@ -41,11 +41,11 @@ function d(e, t) {
             let l = new MutationObserver((e) => {
                 e.some((e) => e.addedNodes.length > 0) && d(r);
             });
-            return l.observe(r, { childList: !0, subtree: !0 }), () => l.disconnect();
-        }, [t, e, d]);
+            return (l.observe(r, { childList: !0, subtree: !0 }), () => l.disconnect());
+        }, [t, e, d]));
 }
 function a(e) {
     let { children: t, className: r, enabled: u = !0, "aria-hidden": a } = e,
         i = n.useRef(null);
-    return d(i, u), (0, l.jsx)("div", { ref: i, className: r, "aria-hidden": a, children: t });
+    return (d(i, u), (0, l.jsx)("div", { ref: i, className: r, "aria-hidden": a, children: t }));
 }

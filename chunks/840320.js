@@ -4,18 +4,18 @@ function r(e, t, r, n) {
         s = {},
         l = {};
     return function u(c) {
-        (a[c] = !0), o.push(c), (l[c] = !0);
+        ((a[c] = !0), o.push(c), (l[c] = !0));
         for (let t = 0; t < e[c].length; t++) {
             let r = e[c][t];
             if (a[r]) {
                 if (l[r] && (o.push(r), !n)) throw new i(o);
             } else u(r);
         }
-        o.pop(), delete l[c], (t && 0 !== e[c].length) || s[c] || (r.push(c), (s[c] = !0));
+        (o.pop(), delete l[c], (t && 0 !== e[c].length) || s[c] || (r.push(c), (s[c] = !0)));
     };
 }
 var n = (t.DepGraph = function (e) {
-    (this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular);
+    ((this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular));
 });
 n.prototype = {
     size: function () {
@@ -61,17 +61,17 @@ n.prototype = {
     },
     removeDependency: function (e, t) {
         var r;
-        this.hasNode(e) && (r = this.outgoingEdges[e].indexOf(t)) >= 0 && this.outgoingEdges[e].splice(r, 1),
-            this.hasNode(t) && (r = this.incomingEdges[t].indexOf(e)) >= 0 && this.incomingEdges[t].splice(r, 1);
+        (this.hasNode(e) && (r = this.outgoingEdges[e].indexOf(t)) >= 0 && this.outgoingEdges[e].splice(r, 1),
+            this.hasNode(t) && (r = this.incomingEdges[t].indexOf(e)) >= 0 && this.incomingEdges[t].splice(r, 1));
     },
     clone: function () {
         var e = this,
             t = new n();
         return (
             Object.keys(e.nodes).forEach(function (r) {
-                (t.nodes[r] = e.nodes[r]),
+                ((t.nodes[r] = e.nodes[r]),
                     (t.outgoingEdges[r] = e.outgoingEdges[r].slice(0)),
-                    (t.incomingEdges[r] = e.incomingEdges[r].slice(0));
+                    (t.incomingEdges[r] = e.incomingEdges[r].slice(0)));
             }),
             t
         );
@@ -81,7 +81,7 @@ n.prototype = {
             var n = [];
             r(this.outgoingEdges, t, n, this.circular)(e);
             var i = n.indexOf(e);
-            return i >= 0 && n.splice(i, 1), n;
+            return (i >= 0 && n.splice(i, 1), n);
         }
         throw Error("Node does not exist: " + e);
     },
@@ -90,7 +90,7 @@ n.prototype = {
             var n = [];
             r(this.incomingEdges, t, n, this.circular)(e);
             var i = n.indexOf(e);
-            return i >= 0 && n.splice(i, 1), n;
+            return (i >= 0 && n.splice(i, 1), n);
         }
         throw Error("Node does not exist: " + e);
     },
@@ -125,7 +125,7 @@ var i = function (e) {
         t
     );
 };
-(i.prototype = Object.create(Error.prototype, {
+((i.prototype = Object.create(Error.prototype, {
     constructor: { value: Error, enumerable: !1, writable: !0, configurable: !0 },
 })),
-    Object.setPrototypeOf(i, Error);
+    Object.setPrototypeOf(i, Error));

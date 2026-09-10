@@ -1,4 +1,4 @@
-n.d(t, { A: () => s }), n(321073);
+(n.d(t, { A: () => s }), n(321073));
 var i = n(582128),
     r = n(451988);
 class a extends i.Component {
@@ -15,7 +15,7 @@ class a extends i.Component {
         };
     }
     componentDidMount() {
-        this.update(), this._interval.start(this.props.updateInterval, this.update);
+        (this.update(), this._interval.start(this.props.updateInterval, this.update));
     }
     componentWillUnmount() {
         this._interval.stop();
@@ -30,14 +30,14 @@ class a extends i.Component {
         for (; a < t + i; a++) {
             let t,
                 i = r - (a + 1) * n;
-            for (; s < e.length; )
+            for (; s < e.length;)
                 if ((t = e[s]).timestamp > i) s++;
                 else break;
             if (s === e.length) break;
             null != t && (l.push(o - t.bytes), (o = t.bytes));
         }
         for (; a < t + i; a++) l.push(0);
-        return l.reverse(), l;
+        return (l.reverse(), l);
     }
     smoothDeltaBytes(e) {
         let { pointsToSmooth: t } = this.props,

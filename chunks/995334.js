@@ -28,10 +28,10 @@ function f(e, a, t) {
         { focusWithinProps: S } = (0, d.R)({
             ...e,
             onFocusWithin(t) {
-                (k.current = a.value), e.onFocus?.(t);
+                ((k.current = a.value), e.onFocus?.(t));
             },
             onBlurWithin: (t) => {
-                a.confirmPlaceholder(), a.value !== k.current && a.commitValidation(), e.onBlur?.(t);
+                (a.confirmPlaceholder(), a.value !== k.current && a.commitValidation(), e.onBlur?.(t));
             },
             onFocusWithinChange: e.onFocusChange,
         }),
@@ -54,12 +54,12 @@ function f(e, a, t) {
         focusManager: T,
     });
     let N = (0, y.useRef)(e.autoFocus);
-    (v =
+    ((v =
         "presentation" === e[p]
             ? { role: "presentation" }
             : (0, o.v)(w, { role: "group", "aria-disabled": e.isDisabled || void 0, "aria-describedby": I })),
         (0, y.useEffect)(() => {
-            N.current && T.focusFirst(), (N.current = !1);
+            (N.current && T.focusFirst(), (N.current = !1));
         }, [T]),
         (0, c.F)(e.inputRef, a.defaultValue, a.setValue),
         (0, m.X)(
@@ -71,7 +71,7 @@ function f(e, a, t) {
             },
             a,
             e.inputRef,
-        );
+        ));
     let Z = { type: "hidden", name: e.name, form: e.form, value: a.value?.toString() || "", disabled: e.isDisabled };
     "native" === e.validationBehavior &&
         ((Z.type = "text"), (Z.hidden = !0), (Z.required = e.isRequired), (Z.onChange = () => {}));

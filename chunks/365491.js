@@ -9,7 +9,7 @@ var s = r(582128),
     f = r(856686);
 function c(e, t) {
     let r = new Set(e);
-    return r.has(t) ? r.delete(t) : r.add(t), r;
+    return (r.has(t) ? r.delete(t) : r.add(t), r);
 }
 let g = { sortType: n.$.RECENCY, sortDirection: o.A.DESC },
     y = { sortType: n.$.POPULARITY, sortDirection: o.A.DESC },
@@ -58,39 +58,39 @@ let b = (0, i.v)(
             e((e) => {
                 let r = c(e.itemTypeFilters, t),
                     s = { ...e, itemTypeFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = d(s)), s;
+                return (e.userHasSelectedSort || (s.sort = d(s)), s);
             });
         },
         onToggleColor: (t) => {
             e((e) => {
                 let r = c(e.colorFilters, t),
                     s = { ...e, colorFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = d(s)), s;
+                return (e.userHasSelectedSort || (s.sort = d(s)), s);
             });
         },
         onToggleTheme: (t) => {
             e((e) => {
                 let r = c(e.themeFilters, t),
                     s = { ...e, themeFilters: r, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (s.sort = d(s)), s;
+                return (e.userHasSelectedSort || (s.sort = d(s)), s);
             });
         },
         onToggleOrbEligible: () => {
             e((e) => {
                 let t = { ...e, orbEligible: !e.orbEligible, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = d(t)), t;
+                return (e.userHasSelectedSort || (t.sort = d(t)), t);
             });
         },
         onToggleThirdPartyOnly: () => {
             e((e) => {
                 let t = { ...e, thirdPartyOnly: !e.thirdPartyOnly, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = d(t)), t;
+                return (e.userHasSelectedSort || (t.sort = d(t)), t);
             });
         },
         onToggleOfferEligible: () => {
             e((e) => {
                 let t = { ...e, offerEligible: !e.offerEligible, queryPageOffset: 0 };
-                return e.userHasSelectedSort || (t.sort = d(t)), t;
+                return (e.userHasSelectedSort || (t.sort = d(t)), t);
             });
         },
         onSetSort: (t) => {
@@ -129,7 +129,7 @@ let b = (0, i.v)(
                         itemTypeFilters: r,
                         queryPageOffset: 0,
                     };
-                return e.userHasSelectedSort || (s.sort = d(s)), s;
+                return (e.userHasSelectedSort || (s.sort = d(s)), s);
             });
         },
         setThirdPartyOnlyFilter: () => {
@@ -144,7 +144,7 @@ let b = (0, i.v)(
                     itemTypeFilters: new Set(),
                     queryPageOffset: 0,
                 };
-                return e.userHasSelectedSort || (t.sort = d(t)), t;
+                return (e.userHasSelectedSort || (t.sort = d(t)), t);
             });
         },
         setOfferEligibleFilter: () => {
@@ -159,7 +159,7 @@ let b = (0, i.v)(
                     itemTypeFilters: new Set(),
                     queryPageOffset: 0,
                 };
-                return e.userHasSelectedSort || (t.sort = d(t)), t;
+                return (e.userHasSelectedSort || (t.sort = d(t)), t);
             });
         },
         clearFilters: () => {
@@ -253,7 +253,7 @@ function p(e) {
                 },
             );
         return () => {
-            n(), u();
+            (n(), u());
         };
     }, [t, r, i, e, l]);
 }

@@ -19,13 +19,13 @@ function a(e, t, n) {
     function l(e) {
         let { start: n, end: i, shouldScrollToStart: l = !1, padding: o = 0, animate: d, callback: c } = e,
             { scrollPosition: u, offsetSize: _ } = r(t(), a);
-        (n -= o),
+        ((n -= o),
             (i += o),
             n >= u && i <= u + _ && !l
                 ? null != c && c()
                 : n < u || l
                   ? s({ to: n, animate: d, callback: c })
-                  : s({ to: i - _, animate: d, callback: c });
+                  : s({ to: i - _, animate: d, callback: c }));
     }
     return {
         spring: n,
@@ -40,10 +40,10 @@ function a(e, t, n) {
                 let r = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
                     a = "horizontal" === t ? e.offsetLeft : e.offsetTop,
                     s = e.offsetParent;
-                for (; null != s && s !== n; )
+                for (; null != s && s !== n;)
                     if ((0, i.vq)(s, HTMLElement)) {
                         let e = s;
-                        (a += "horizontal" === t ? e.offsetLeft : e.offsetTop), (s = e.offsetParent);
+                        ((a += "horizontal" === t ? e.offsetLeft : e.offsetTop), (s = e.offsetParent));
                     } else s = s.parentNode;
                 return { offset: a, offsetSize: r };
             })(n, a, c);

@@ -60,7 +60,7 @@ var r = n(838259),
     }),
     v = function (e, t) {
         if ((void 0 === t && (t = !1), l.has(e) && !t)) return l.get(e);
-        if ((0, u.dK)(e)) return l.set(e, m), m;
+        if ((0, u.dK)(e)) return (l.set(e, m), m);
         var n = getComputedStyle(e),
             r = (0, u.XJ)(e) && e.ownerSVGElement && e.getBBox(),
             i = !f && "border-box" === n.boxSizing,
@@ -91,7 +91,7 @@ var r = n(838259),
                 contentBoxSize: p(P, O, s),
                 contentRect: new o(D, g, P, O),
             });
-        return l.set(e, R), R;
+        return (l.set(e, R), R);
     },
     _ = function (e, t, n) {
         var i = v(e, n),

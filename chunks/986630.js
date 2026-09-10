@@ -25,7 +25,7 @@ class c extends l.A {
     baseVariantName;
     variantLabel;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.summary = e.summary),
             (this.type = e.type),
             (this.premiumType = e.premiumType),
@@ -42,7 +42,7 @@ class c extends l.A {
             (this.hideBadge = e.hideBadge),
             (this.isFirstParty = e.isFirstParty),
             (this.baseVariantName = e.baseVariantName),
-            (this.variantLabel = e.variantLabel);
+            (this.variantLabel = e.variantLabel));
     }
     static fromServer(e) {
         let {
@@ -185,11 +185,11 @@ class u extends c {
     variantLabel;
     variantValue;
     constructor(e) {
-        super(e),
+        (super(e),
             (this.baseVariantName = e.baseVariantName),
             (this.baseVariantSkuId = e.baseVariantSkuId),
             (this.variantLabel = e.variantLabel),
-            (this.variantValue = e.variantValue);
+            (this.variantValue = e.variantValue));
     }
     static fromServer(e) {
         let { base_variant_name: t, base_variant_sku_id: n, variant_label: i, variant_value: r, ...a } = e;

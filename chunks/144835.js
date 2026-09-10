@@ -28,8 +28,8 @@ function c(t) {
         cancelText: _ ?? m.intl.string(m.t["ETE/oC"]),
         confirmText: g ?? m.intl.string(m.t["+78Pfm"]),
         onConfirm: function () {
-            o.default.track(u.HAw.TNS_SKU_REPORT_SUBMITTED, { sku_id: r, guild_id: f, user_id: C?.id }),
-                s.A.show({ title: m.intl.string(m.t.sUvCKU), body: m.intl.format(m.t["7KJnk0"], { skuName: c }) });
+            (o.default.track(u.HAw.TNS_SKU_REPORT_SUBMITTED, { sku_id: r, guild_id: f, user_id: C?.id }),
+                s.A.show({ title: m.intl.string(m.t.sUvCKU), body: m.intl.format(m.t["7KJnk0"], { skuName: c }) }));
         },
         transitionState: k,
         onClose: T,

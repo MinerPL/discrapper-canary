@@ -1,7 +1,7 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.isZIP = t.isRAR = t.isLZH = t.is7Z = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.isZIP = t.isRAR = t.isLZH = t.is7Z = void 0));
 let i = n(835986),
     r = n(817762);
-(t.is7Z = function (e) {
+((t.is7Z = function (e) {
     let t = (0, r.getFileChunk)(e);
     return i.FileTypes.checkByFileType(t, "_7z");
 }),
@@ -16,4 +16,4 @@ let i = n(835986),
     (t.isZIP = function (e, t) {
         let n = (0, r.getFileChunk)(e, (null == t ? void 0 : t.chunkSize) || 64);
         return i.FileTypes.checkByFileType(n, "zip");
-    });
+    }));

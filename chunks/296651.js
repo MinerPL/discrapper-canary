@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => V });
+(l.r(t), l.d(t, { default: () => V }));
 var r = l(477900),
     s = l(582128),
     n = l(979186);
@@ -9,13 +9,13 @@ var a = l(17928),
     c = l(723702),
     u = l(321034),
     d = l(832213);
-l(134528), l(947204);
+(l(134528), l(947204));
 var m = l(111159),
     h = l(661531),
     f = l(602853),
     p = l(769015),
     x = l(569926);
-l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162);
+(l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162));
 var g = l(229659),
     w = l(257327);
 class v {
@@ -32,7 +32,7 @@ class v {
         this.pinnedState || e === this.value || ((this.value = e), this.emit());
     }
     togglePin(e) {
-        (this.pinnedState = !this.pinnedState), (this.value = e), this.emit();
+        ((this.pinnedState = !this.pinnedState), (this.value = e), this.emit());
     }
     subscribe(e) {
         return (
@@ -175,7 +175,7 @@ function S(e) {
                     g = window.devicePixelRatio ?? 1,
                     w = d.width,
                     v = d.height;
-                m.setTransform(1, 0, 0, 1, 0, 0), (m.fillStyle = l), m.fillRect(0, 0, w, v);
+                (m.setTransform(1, 0, 0, 1, 0, 0), (m.fillStyle = l), m.fillRect(0, 0, w, v));
                 let M = h.slice().sort((e, t) => e.stackOrder - t.stackOrder),
                     j = M.length,
                     y = Date.now(),
@@ -212,7 +212,7 @@ function S(e) {
                         1,
                     ),
                     R = c.current;
-                (R = R <= 0 ? D : R + (D - R) * 0.2) < Math.max(p, 1) && (R = Math.max(p, 1)), (c.current = R);
+                ((R = R <= 0 ? D : R + (D - R) * 0.2) < Math.max(p, 1) && (R = Math.max(p, 1)), (c.current = R));
                 let C = Math.ceil(11 * g) + Math.round(4 * g),
                     P = Math.max(1, v - C),
                     E = Math.max(1, Math.ceil(w / b));
@@ -223,10 +223,10 @@ function S(e) {
                         let s = S[r * b + e];
                         if (s <= 0) continue;
                         let n = (s / R) * P;
-                        (m.fillStyle = M[r].color), m.fillRect(t, l - n, E, n), (l -= n);
+                        ((m.fillStyle = M[r].color), m.fillRect(t, l - n, E, n), (l -= n));
                     }
                 }
-                (m.strokeStyle = n),
+                ((m.strokeStyle = n),
                     (m.lineWidth = g),
                     m.beginPath(),
                     m.moveTo(0, C),
@@ -244,21 +244,21 @@ function S(e) {
                         if (o < 0 || o > 1) return;
                         let c = window.devicePixelRatio ?? 1,
                             u = Math.round(t.width * o);
-                        e.save(),
+                        (e.save(),
                             (e.strokeStyle = a),
                             (e.lineWidth = c),
                             e.beginPath(),
                             e.moveTo(u, 0),
                             e.lineTo(u, Math.max(0, t.height - i)),
                             e.stroke(),
-                            e.restore();
+                            e.restore());
                     })(m, d, {
                         time: i.current.hoverStore?.time ?? null,
                         now: y,
                         windowMs: f,
                         color: a,
                         bottomReserve: 0,
-                    });
+                    }));
             })),
             () => cancelAnimationFrame(e)
         );
@@ -307,13 +307,13 @@ function _(e) {
                         ((l = s),
                         null == t &&
                             (t = requestAnimationFrame(() => {
-                                (t = null), d(l);
+                                ((t = null), d(l));
                             })));
                 });
             return (
                 r.observe(e),
                 () => {
-                    null != t && cancelAnimationFrame(t), r.disconnect();
+                    (null != t && cancelAnimationFrame(t), r.disconnect());
                 }
             );
         }, []),
@@ -360,12 +360,12 @@ class F {
     count = 0;
     capacity;
     constructor(e) {
-        (this.capacity = e), (this.storage = Array(e));
+        ((this.capacity = e), (this.storage = Array(e)));
     }
     push(e, t) {
-        (this.storage[this.head] = { value: e, time: t }),
+        ((this.storage[this.head] = { value: e, time: t }),
             (this.head = (this.head + 1) % this.capacity),
-            this.count < this.capacity && this.count++;
+            this.count < this.capacity && this.count++);
     }
     at(e) {
         if (!(e < 0) && !(e >= this.count))
@@ -410,13 +410,13 @@ function B(e) {
                         ((l = s),
                         null == t &&
                             (t = requestAnimationFrame(() => {
-                                (t = null), h(l);
+                                ((t = null), h(l));
                             })));
                 });
             return (
                 r.observe(e),
                 () => {
-                    null != t && cancelAnimationFrame(t), r.disconnect();
+                    (null != t && cancelAnimationFrame(t), r.disconnect());
                 }
             );
         }, []),
@@ -473,7 +473,7 @@ function G(e) {
         })),
         c = 0,
         u = 0;
-    for (let e of n) (c += T(e.gpu)), (u += T(e.vram));
+    for (let e of n) ((c += T(e.gpu)), (u += T(e.vram)));
     let d = new Map(n.map((e) => [e.process.pid, e.process.name])),
         m = n.slice().sort((e, t) => {
             let l = t.process.lastSampleAt - e.process.lastSampleAt;
@@ -556,7 +556,7 @@ function z(e) {
                             for (let e of (null != o && c.push({ pid: o, isDiscord: !0 }),
                             R.Ay.getVisibleRunningGames()))
                                 c.push({ pid: e.pid, isDiscord: !1, game: e });
-                            Promise.all(
+                            (Promise.all(
                                 c.map((e) =>
                                     E.Ay.GetSystemGpuStats(e.pid)
                                         .catch(() => [])
@@ -616,9 +616,9 @@ function z(e) {
                                         let c = n.current.get(e);
                                         for (let [l, r] of (null == c && ((c = new Map()), n.current.set(e, c)), i)) {
                                             let e = c.get(l);
-                                            null == e && ((e = { gpu: new F(300), vram: new F(300) }), c.set(l, e)),
+                                            (null == e && ((e = { gpu: new F(300), vram: new F(300) }), c.set(l, e)),
                                                 e.gpu.push(r.utilization_percent, t),
-                                                e.vram.push(r.memory_bytes / 1048576, t);
+                                                e.vram.push(r.memory_bytes / 1048576, t));
                                         }
                                     }
                                     for (let [e, l] of o)
@@ -627,7 +627,7 @@ function z(e) {
                                             !(t - l.lastSampleAt > 3e5) ||
                                             (o.delete(e), n.current.delete(e));
                                     for (let e of n.current.keys()) i.has(e) || o.has(e) || n.current.delete(e);
-                                    (r.current = o),
+                                    ((r.current = o),
                                         l(
                                             (function (e, t) {
                                                 let l = new Map();
@@ -636,8 +636,8 @@ function z(e) {
                                                     if (null != e)
                                                         for (let [t, s] of e) {
                                                             let e = l.get(t);
-                                                            null == e && ((e = []), l.set(t, e)),
-                                                                e.push({ process: r, gpu: s.gpu, vram: s.vram });
+                                                            (null == e && ((e = []), l.set(t, e)),
+                                                                e.push({ process: r, gpu: s.gpu, vram: s.vram }));
                                                         }
                                                 }
                                                 return Array.from(l.entries())
@@ -651,13 +651,13 @@ function z(e) {
                                                         return { adapterName: t, entries: l };
                                                     });
                                             })(o, n.current),
-                                        );
+                                        ));
                                 })
                                 .catch(() => {}),
-                                (t = setTimeout(e, 1e3));
+                                (t = setTimeout(e, 1e3)));
                         })(),
                         () => {
-                            (s = !0), null != t && clearTimeout(t);
+                            ((s = !0), null != t && clearTimeout(t));
                         }
                     );
                 }, [e]),
@@ -716,19 +716,19 @@ function K() {
                         ((l = s),
                         null == t &&
                             (t = requestAnimationFrame(() => {
-                                (t = null), M(l);
+                                ((t = null), M(l));
                             })));
                 });
             return (
                 r.observe(e),
                 () => {
-                    null != t && cancelAnimationFrame(t), r.disconnect();
+                    (null != t && cancelAnimationFrame(t), r.disconnect());
                 }
             );
         }, []),
         s.useEffect(() => {
             let e = requestAnimationFrame(function t() {
-                (C.current += 1), (e = requestAnimationFrame(t));
+                ((C.current += 1), (e = requestAnimationFrame(t)));
             });
             return () => cancelAnimationFrame(e);
         }, []),
@@ -755,25 +755,25 @@ function K() {
                             let t = o[e];
                             if (null == t) continue;
                             let l = b.get(e);
-                            null == l && ((l = new F(120)), b.set(e, l)), l.push(q(t), n);
+                            (null == l && ((l = new F(120)), b.set(e, l)), l.push(q(t), n));
                         }
                     if (null != m)
                         for (let e of Object.keys(m)) {
                             let t = m[e];
                             if (null == t) continue;
                             let l = N.get(e);
-                            null == l && ((l = new F(120)), N.set(e, l)), l.push(W(t), n);
+                            (null == l && ((l = new F(120)), N.set(e, l)), l.push(W(t), n));
                         }
                     let h = performance.now(),
                         f = (h - t) / 1e3;
                     if (r && f > 0) {
                         let e = C.current / f;
-                        R(e), A.push(e, n);
+                        (R(e), A.push(e, n));
                     }
-                    (C.current = 0), (t = h), (r = !0), setTimeout(s, 1e3);
+                    ((C.current = 0), (t = h), (r = !0), setTimeout(s, 1e3));
                 })(),
                 () => {
-                    (e = !0), s?.();
+                    ((e = !0), s?.());
                 }
             );
         }, [y, b, N, A]),
@@ -864,7 +864,7 @@ function K() {
                                                 onClick: () => {
                                                     p((e) => {
                                                         let l = new Set(e);
-                                                        return l.has(t) ? l.delete(t) : l.add(t), l;
+                                                        return (l.has(t) ? l.delete(t) : l.add(t), l);
                                                     });
                                                 },
                                                 children: [

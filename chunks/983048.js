@@ -296,7 +296,7 @@ let ee = function (e) {
                 });
             else {
                 let e, s;
-                a()(null != r, "Expected renewalInvoicePreview"),
+                (a()(null != r, "Expected renewalInvoicePreview"),
                     a()(null != l, "Expected currentInvoicePreview"),
                     (e = (0, o.uniqueId)("premium-resubscribe-modal")),
                     (s = !1),
@@ -340,7 +340,7 @@ let ee = function (e) {
                             },
                             modalKey: e,
                         },
-                    );
+                    ));
             }
         }
     }

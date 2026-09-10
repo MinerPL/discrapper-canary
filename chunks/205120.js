@@ -43,7 +43,7 @@ class p extends i.PureComponent {
                       let t = o.Ay.parse(this.props.channel, e);
                       t.content !== this.props.message.content && c(this.props.channel.id, this.props.message.id, t);
                   }
-                  return i(n.id), Promise.resolve({ shouldClear: !0, shouldRefocus: !0 });
+                  return (i(n.id), Promise.resolve({ shouldClear: !0, shouldRefocus: !0 }));
               });
     };
     onChange = (e, t, n) => {
@@ -53,7 +53,7 @@ class p extends i.PureComponent {
     onKeyDown = (e) => {
         if (e.key === c.dh.ESCAPE && !e.shiftKey) {
             let { channel: t, onCancel: n } = this.props;
-            e.preventDefault(), e.stopPropagation(), n(t.id);
+            (e.preventDefault(), e.stopPropagation(), n(t.id));
         }
     };
     render() {

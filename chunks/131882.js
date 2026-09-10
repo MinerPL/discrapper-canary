@@ -35,17 +35,17 @@ let y = function (t) {
     let { onClose: e, channelId: n } = t,
         [s, r] = l.useState(!1),
         a = l.useCallback(() => {
-            (0, h.openUserSettings)(O.X.DM_SAFETY_ALERTS_SETTING), e();
+            ((0, h.openUserSettings)(O.X.DM_SAFETY_ALERTS_SETTING), e());
         }, [e]),
         o = l.useCallback(() => {
             s ||
                 (r(!0),
                 (0, j.XR)(n)
                     .then(() => {
-                        e(), (0, C.r)({ text: U.intl.string(U.t.FhgVWi), id: "safety-tools-report-false-positive" });
+                        (e(), (0, C.r)({ text: U.intl.string(U.t.FhgVWi), id: "safety-tools-report-false-positive" }));
                     })
                     .catch(() => {
-                        r(!1), (0, _.P0)((0, A.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE));
+                        (r(!1), (0, _.P0)((0, A.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE)));
                     }));
         }, [n, e, s]);
     return (0, i.jsxs)(I, {
@@ -142,13 +142,13 @@ let J = function (t) {
             [s, r, e, a, _],
         ),
         g = l.useCallback(() => {
-            (0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
+            ((0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CONFIRM));
         }, [x]),
         m = l.useCallback(() => {
-            P.A.unblockUser(e, { location: G.Ht }), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK);
+            (P.A.unblockUser(e, { location: G.Ht }), x(u.Wm.USER_SAFETY_TOOLS_UNBLOCK));
         }, [e, x]),
         O = l.useCallback(() => {
-            (0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
+            ((0, v.closeModal)(G.V), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM));
         }, [x]),
         h = l.useMemo(
             () => [
@@ -182,7 +182,7 @@ let J = function (t) {
                                           onBlock: g,
                                           onBlockAndReport: O,
                                           onCancel: () => {
-                                              r?.(), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CANCEL);
+                                              (r?.(), x(u.Wm.USER_SAFETY_TOOLS_BLOCK_CANCEL));
                                           },
                                           onClose: r,
                                           userId: e,
@@ -198,7 +198,7 @@ let J = function (t) {
                     subTitle: U.intl.string(U.t["0tydOa"]),
                     buttonText: U.intl.string(U.t.X27yhD),
                     onPress: () => {
-                        (0, v.closeModal)(G.V), (0, W.jJ)(S), x(u.Wm.USER_SAFETY_TOOLS_REPORT);
+                        ((0, v.closeModal)(G.V), (0, W.jJ)(S), x(u.Wm.USER_SAFETY_TOOLS_REPORT));
                     },
                 },
             ],
@@ -210,7 +210,7 @@ let J = function (t) {
                     subTitle: U.intl.string(U.t.iNcsrW),
                     buttonText: U.intl.string(U.t.rK4Gqv),
                     onPress: () => {
-                        (0, M.A)(G.x7), x(u.Wm.USER_SAFETY_TOOLS_CTL);
+                        ((0, M.A)(G.x7), x(u.Wm.USER_SAFETY_TOOLS_CTL));
                     },
                 },
                 e = {
@@ -218,7 +218,7 @@ let J = function (t) {
                     subTitle: U.intl.string(U.t.g5uwC5),
                     buttonText: U.intl.string(U.t.rK4Gqv),
                     onPress: () => {
-                        (0, M.A)(G.jR), x(u.Wm.USER_SAFETY_TOOLS_NO_FILTR);
+                        ((0, M.A)(G.jR), x(u.Wm.USER_SAFETY_TOOLS_NO_FILTR));
                     },
                 },
                 n = {
@@ -226,7 +226,7 @@ let J = function (t) {
                     subTitle: U.intl.string(U.t.S9O1ZZ),
                     buttonText: U.intl.string(U.t.rK4Gqv),
                     onPress: () => {
-                        (0, M.A)(G.CL), x(u.Wm.USER_SAFETY_TOOLS_THROUGHLINE);
+                        ((0, M.A)(G.CL), x(u.Wm.USER_SAFETY_TOOLS_THROUGHLINE));
                     },
                 };
             return [
@@ -236,8 +236,8 @@ let J = function (t) {
                     subTitle: U.intl.string(U.t.LLBnNk),
                     buttonText: U.intl.string(U.t.rzvzyZ),
                     onPress: () => {
-                        (0, K.A)({ source: V.y.KEYBIND, onClose: v.closeAllModals }),
-                            x(u.Wm.USER_SAFETY_TOOLS_VIBING_WUMPUS);
+                        ((0, K.A)({ source: V.y.KEYBIND, onClose: v.closeAllModals }),
+                            x(u.Wm.USER_SAFETY_TOOLS_VIBING_WUMPUS));
                     },
                 },
                 {
@@ -245,7 +245,7 @@ let J = function (t) {
                     title: U.intl.string(U.t["7LgVmt"]),
                     subTitle: U.intl.string(U.t.pwoRjc),
                     onPress: () => {
-                        o(te.SAFETY_TIPS), x(u.Wm.USER_SAFETY_TOOLS_SAFETY_TIPS);
+                        (o(te.SAFETY_TIPS), x(u.Wm.USER_SAFETY_TOOLS_SAFETY_TIPS));
                     },
                 },
                 { type: 0, ...(T ? t : c ? n : e) },
@@ -257,7 +257,7 @@ let J = function (t) {
                     type: 1,
                     title: U.intl.string(U.t.otdt24),
                     onPress: () => {
-                        o(te.ABOUT_SAFETY_ALERTS), x(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
+                        (o(te.ABOUT_SAFETY_ALERTS), x(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS));
                     },
                 },
             ],
@@ -278,7 +278,7 @@ let J = function (t) {
                 return (0, i.jsx)(H, { type: e, title: n, subTitle: s, onPress: l }, n);
             }
             default:
-                return t.type, null;
+                return (t.type, null);
         }
     }
     return (0, i.jsxs)(I, {
@@ -373,7 +373,7 @@ let tn = (t) => {
                             children: (0, i.jsx)(y, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), O(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    (e(), O(u.Wm.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS));
                                 },
                             }),
                         }),
@@ -388,7 +388,7 @@ let tn = (t) => {
                     (0, i.jsx)(h, {
                         text: U.intl.string(U.t.cpT0Cq),
                         onClick: () => {
-                            e(), O(u.Wm.USER_SAFETY_TOOLS_DISMISS);
+                            (e(), O(u.Wm.USER_SAFETY_TOOLS_DISMISS));
                         },
                     }),
                     b(),

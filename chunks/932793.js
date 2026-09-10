@@ -103,7 +103,7 @@ function N(e) {
                         max: t,
                         onChange: p,
                         onBlur: () => {
-                            c(!1), p(void 0);
+                            (c(!1), p(void 0));
                         },
                         onKeyUp: function (e) {
                             "Enter" === e.key && null != g && P && (i(g), c(!1), p(void 0));

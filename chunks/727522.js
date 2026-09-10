@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => o, useMemo: () => a, useMemoOne: () => i });
+(r.r(t), r.d(t, { useCallback: () => s, useCallbackOne: () => o, useMemo: () => a, useMemoOne: () => i }));
 var n = r(582128);
 function i(e, t) {
     var r = (0, n.useState)(function () {
@@ -20,7 +20,7 @@ function i(e, t) {
     return (
         (0, n.useEffect)(
             function () {
-                (i.current = !1), (o.current = a);
+                ((i.current = !1), (o.current = a));
             },
             [a],
         ),

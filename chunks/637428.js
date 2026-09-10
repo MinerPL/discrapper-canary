@@ -11,14 +11,14 @@ function u(e, t) {
 function d(e, t) {
     for (var r = 0; r < t.length; r++) {
         var n = t[r];
-        (n.enumerable = n.enumerable || !1),
+        ((n.enumerable = n.enumerable || !1),
             (n.configurable = !0),
             "value" in n && (n.writable = !0),
-            Object.defineProperty(e, n.key, n);
+            Object.defineProperty(e, n.key, n));
     }
 }
 function p(e, t, r) {
-    return t && d(e.prototype, t), r && d(e, r), e;
+    return (t && d(e.prototype, t), r && d(e, r), e);
 }
 function f(e, t, r) {
     return (
@@ -28,7 +28,7 @@ function f(e, t, r) {
 }
 var l = (function () {
     function e(t) {
-        u(this, e), f(this, "isDisposed", !1), f(this, "action", void 0), (this.action = (0, c.Tn)(t) ? t : c.lQ);
+        (u(this, e), f(this, "isDisposed", !1), f(this, "action", void 0), (this.action = (0, c.Tn)(t) ? t : c.lQ));
     }
     return (
         p(
@@ -68,7 +68,7 @@ var l = (function () {
 f(l, "empty", { dispose: c.lQ });
 var h = (function () {
         function e() {
-            u(this, e), f(this, "isDisposed", !1), f(this, "disposables", void 0);
+            (u(this, e), f(this, "isDisposed", !1), f(this, "disposables", void 0));
             for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
             this.disposables = r;
         }
@@ -120,7 +120,7 @@ var h = (function () {
     })(),
     v = (function () {
         function e() {
-            u(this, e), f(this, "isDisposed", !1), f(this, "current", void 0);
+            (u(this, e), f(this, "isDisposed", !1), f(this, "current", void 0));
         }
         return (
             p(e, [
@@ -136,7 +136,7 @@ var h = (function () {
                         var t = this.isDisposed;
                         if (!t) {
                             var r = this.current;
-                            (this.current = e), r && r.dispose();
+                            ((this.current = e), r && r.dispose());
                         }
                         t && e && e.dispose();
                     },
@@ -147,7 +147,7 @@ var h = (function () {
                         if (!this.isDisposed) {
                             this.isDisposed = !0;
                             var e = this.current;
-                            (this.current = void 0), e && e.dispose();
+                            ((this.current = void 0), e && e.dispose());
                         }
                     },
                 },
@@ -178,7 +178,7 @@ function D(e, t) {
     return (D =
         Object.setPrototypeOf ||
         function (e, t) {
-            return (e.__proto__ = t), e;
+            return ((e.__proto__ = t), e);
         })(e, t);
 }
 function k(e) {
@@ -213,10 +213,10 @@ function C(e) {
         R = (function (e) {
             if ("function" != typeof e && null !== e)
                 throw TypeError("Super expression must either be null or a function");
-            (R.prototype = Object.create(e && e.prototype, {
+            ((R.prototype = Object.create(e && e.prototype, {
                 constructor: { value: R, writable: !0, configurable: !0 },
             })),
-                e && D(R, e);
+                e && D(R, e));
             var f,
                 g,
                 I =
@@ -224,7 +224,7 @@ function C(e) {
                         if ("u" < typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                         if ("function" == typeof Proxy) return !0;
                         try {
-                            return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0;
+                            return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
                         } catch (e) {
                             return !1;
                         }
@@ -294,10 +294,10 @@ function C(e) {
                     {
                         key: "componentDidMount",
                         value: function () {
-                            (this.disposable = new v()),
+                            ((this.disposable = new v()),
                                 (this.currentType = void 0),
                                 this.receiveProps(this.props),
-                                this.handleChange();
+                                this.handleChange());
                         },
                     },
                     {
@@ -309,8 +309,8 @@ function C(e) {
                     {
                         key: "componentWillUnmount",
                         value: function () {
-                            void 0 !== this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = void 0)),
-                                this.dispose();
+                            (void 0 !== this.rafId && (cancelAnimationFrame(this.rafId), (this.rafId = void 0)),
+                                this.dispose());
                         },
                     },
                     {
@@ -353,7 +353,7 @@ function C(e) {
                                                         i = !0
                                                     );
                                                 } catch (e) {
-                                                    (a = !0), (r = e);
+                                                    ((a = !0), (r = e));
                                                 } finally {
                                                     try {
                                                         i || null == n.return || n.return();
@@ -387,9 +387,9 @@ function C(e) {
                                         })(),
                                     n = r[0],
                                     o = r[1];
-                                (this.handlerId = n),
+                                ((this.handlerId = n),
                                     this.handlerMonitor.receiveHandlerId(n),
-                                    this.handlerConnector.receiveHandlerId(n);
+                                    this.handlerConnector.receiveHandlerId(n));
                                 var i = this.manager
                                     .getMonitor()
                                     .subscribeToStateChange(this.handleChange, { handlerIds: [n] });
@@ -400,8 +400,8 @@ function C(e) {
                     {
                         key: "dispose",
                         value: function () {
-                            this.disposable.dispose(),
-                                this.handlerConnector && this.handlerConnector.receiveHandlerId(null);
+                            (this.disposable.dispose(),
+                                this.handlerConnector && this.handlerConnector.receiveHandlerId(null));
                         },
                     },
                     {
@@ -467,14 +467,14 @@ function C(e) {
                 (function (e, t) {
                     for (var r = 0; r < t.length; r++) {
                         var n = t[r];
-                        (n.enumerable = n.enumerable || !1),
+                        ((n.enumerable = n.enumerable || !1),
                             (n.configurable = !0),
                             "value" in n && (n.writable = !0),
-                            Object.defineProperty(e, n.key, n);
+                            Object.defineProperty(e, n.key, n));
                     }
                 })(R.prototype, g),
                 R
             );
         })(o.Component);
-    return j(R, "DecoratedComponent", t), j(R, "displayName", "".concat(f, "(").concat(P, ")")), g()(R, t);
+    return (j(R, "DecoratedComponent", t), j(R, "displayName", "".concat(f, "(").concat(P, ")")), g()(R, t));
 }

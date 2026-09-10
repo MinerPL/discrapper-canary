@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => N, D3: () => S, RT: () => T, Ts: () => d, VN: () => E, c4: () => _, fy: () => c }), n(938796);
+(n.d(t, { Ay: () => N, D3: () => S, RT: () => T, Ts: () => d, VN: () => E, c4: () => _, fy: () => c }), n(938796));
 var r = n(636537),
     l = n(228366),
     i = n(568185);
@@ -148,7 +148,7 @@ async function T(e, t) {
             (t) => {
                 l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
                 let n = D?.getGuildId();
-                return null == n || D?.isThread() || i.A.checkGuildTemplateDirty(n), t;
+                return (null == n || D?.isThread() || i.A.checkGuildTemplateDirty(n), t);
             },
             (e) => (l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
         )
@@ -158,12 +158,12 @@ async function S(e) {
     let t = u.A.getChannel(e);
     await r.Bo.del({ url: s.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
     let n = t?.getGuildId();
-    null == n || t?.isThread() || i.A.checkGuildTemplateDirty(n), E();
+    (null == n || t?.isThread() || i.A.checkGuildTemplateDirty(n), E());
 }
 let N = {
     init: d,
     open: function (e, t, n) {
-        d(e, t, n), (0, o.id)(s.zgK.CHANNEL_SETTINGS);
+        (d(e, t, n), (0, o.id)(s.zgK.CHANNEL_SETTINGS));
     },
     close: E,
     setSection: _,

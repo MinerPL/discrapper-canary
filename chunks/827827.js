@@ -16,12 +16,12 @@ async function E(e) {
     await s.wc.updateAsync(
         "status",
         (e) => {
-            (e.status = r.hU.create({ value: t })),
+            ((e.status = r.hU.create({ value: t })),
                 (e.statusExpiresAtMs = I),
                 (e.statusCreatedAtMs =
                     n === t && null != e.statusCreatedAtMs
                         ? e.statusCreatedAtMs
-                        : r.ol.create({ value: `${Date.now()}` }));
+                        : r.ol.create({ value: `${Date.now()}` })));
         },
         s.Sb.INFREQUENT_USER_ACTION,
     );
@@ -35,7 +35,7 @@ async function E(e) {
     })(t, I);
     if ((i.O.announce(f), h)) return;
     let p = { next_status: t, prev_status: n, ...a.A.getGlobalStats() };
-    null != A && (p = { ...p, expire_duration_minutes: null != A ? A / 6e4 : null }),
+    (null != A && (p = { ...p, expire_duration_minutes: null != A ? A / 6e4 : null }),
         null != E && (p = { ...p, ...E }),
-        o.default.track(u.HAw.USER_STATUS_UPDATED, p);
+        o.default.track(u.HAw.USER_STATUS_UPDATED, p));
 }

@@ -91,11 +91,11 @@ let C = function (e) {
                         let i = s(n);
                         if (null != i) {
                             let e = f(s) ?? g.current;
-                            C(i, null == e || i >= e), (g.current = i);
+                            (C(i, null == e || i >= e), (g.current = i));
                         }
                         let r = document.querySelector(e);
                         if (null != r) {
-                            (x.current += 1), r.focus();
+                            ((x.current += 1), r.focus());
                             return;
                         }
                         null != i && p(t, l(i), x);
@@ -104,17 +104,17 @@ let C = function (e) {
                 ),
                 I = i.useCallback(
                     (e, n) => {
-                        C(e, n), (g.current = e), p(t, l(e), x);
+                        (C(e, n), (g.current = e), p(t, l(e), x));
                     },
                     [l, t, C],
                 ),
                 y = i.useCallback(
                     () =>
                         new Promise((e) => {
-                            n.current?.scrollTo(0),
+                            (n.current?.scrollTo(0),
                                 requestAnimationFrame(() => {
                                     requestAnimationFrame(() => e());
-                                });
+                                }));
                         }),
                     [n],
                 ),
@@ -122,10 +122,10 @@ let C = function (e) {
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
-                            n.current?.scrollTo(t),
+                            (n.current?.scrollTo(t),
                                 requestAnimationFrame(() => {
                                     requestAnimationFrame(() => e());
-                                });
+                                }));
                         }),
                     [n],
                 ),
@@ -155,11 +155,11 @@ let C = function (e) {
                     let t = 0,
                         i = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                (g.current = a), j(l(a));
+                                ((g.current = a), j(l(a)));
                             });
                         });
                     return () => {
-                        cancelAnimationFrame(i), cancelAnimationFrame(t);
+                        (cancelAnimationFrame(i), cancelAnimationFrame(t));
                     };
                 }, [a, n, u, l, j, r]),
                 _
@@ -186,14 +186,14 @@ let C = function (e) {
                     if (null == n.current) return;
                     let e = t > (r.current ?? -1),
                         i = null != l ? l(t, e) : 0;
-                    n.current.scrollRowIntoView(t, { animate: !0, offset: i }), (s.current = x.An1), (r.current = t);
+                    (n.current.scrollRowIntoView(t, { animate: !0, offset: i }), (s.current = x.An1), (r.current = t));
                 })));
         }, [t, n, l]);
     })({ activeIndex: O, categoryListRef: t, getScrollOffsetForIndex: S });
     let P = i.useCallback(
             (e) => {
                 let { searchQuery: t } = u.RQ.getState();
-                d.setActiveCategoryIndex(e), "" !== t ? (0, u.Ri)("") : n.current?.scrollToSectionTop(e);
+                (d.setActiveCategoryIndex(e), "" !== t ? (0, u.Ri)("") : n.current?.scrollToSectionTop(e));
             },
             [n, d],
         ),

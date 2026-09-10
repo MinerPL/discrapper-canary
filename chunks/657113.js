@@ -174,7 +174,7 @@ function X(t) {
         { startingConsoleQuest: L, startConsoleQuest: y } = (0, o.Wj)({
             questId: e.id,
             beforeRequest: () => {
-                c ? T.startAnimation() : _(!0),
+                (c ? T.startAnimation() : _(!0),
                     (0, j.E5)(j.kI.STEP_2_CLICKED_INTERNAL, "quest_primary_cta_enrolled_play_quest")
                         ? (0, P.r)({
                               type: h.F.CLICK_INTERNAL,
@@ -194,7 +194,7 @@ function X(t) {
                               questContentPosition: a,
                               questContentRowIndex: l,
                               sourceQuestContent: r,
-                          });
+                          }));
             },
             afterRequest: () => {
                 c ? T.stopAnimation() : _(!1);
@@ -257,7 +257,7 @@ function tC(t) {
         { xboxAccounts: A, playstationAccounts: O } = (0, o.Du)(),
         _ = Q.useMemo(() => {
             let t = new Set();
-            return A.length > 0 && t.add(tc.fg2.XBOX), O.length > 0 && t.add(tc.fg2.PLAYSTATION), t;
+            return (A.length > 0 && t.add(tc.fg2.XBOX), O.length > 0 && t.add(tc.fg2.PLAYSTATION), t);
         }, [A.length, O.length]),
         L = Q.useContext(tn.q),
         [y, N] = (0, o.tZ)(e.id),
@@ -280,17 +280,17 @@ function tC(t) {
         M = Q.useCallback(
             (t) => {
                 if (t === T.fO.DESKTOP) {
-                    S(null),
+                    (S(null),
                         N(T.fO.DESKTOP),
                         (0, b.pu)(e, {
                             content: l,
                             ctaContent: d.Cy.OPEN_GAME_LINK,
                             impressionId: D,
                             sourceQuestContent: u,
-                        });
+                        }));
                     return;
                 }
-                _.has(t) ||
+                (_.has(t) ||
                     (0, b.Ps)(
                         { quest: e },
                         {
@@ -304,7 +304,7 @@ function tC(t) {
                         t,
                     ),
                     S(t),
-                    N(T.fO.CONSOLE);
+                    N(T.fO.CONSOLE));
             },
             [_, N, e, l, C, E, u, D],
         ),
@@ -347,10 +347,10 @@ function tC(t) {
               position: "bottom",
               shouldShow: m,
               onRequestOpen: () => {
-                  L?.onMenuOpen(), R(!0);
+                  (L?.onMenuOpen(), R(!0));
               },
               onRequestClose: () => {
-                  L?.onMenuClose(), R(!1), P(null);
+                  (L?.onMenuClose(), R(!1), P(null));
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
@@ -936,7 +936,7 @@ let ty = function (t) {
             variant: (0, c.wX)(u, "primary"),
             onClick: () => {
                 if (O) {
-                    D({
+                    (D({
                         questId: R,
                         questContent: _,
                         questContentCTA: d.Cy.QUEST_ACCESS_SUSPENDED,
@@ -944,10 +944,10 @@ let ty = function (t) {
                         questContentRowIndex: S,
                         sourceQuestContent: L,
                     }),
-                        (0, I.FS)();
+                        (0, I.FS)());
                     return;
                 }
-                x?.(), w();
+                (x?.(), w());
             },
             text: M,
             icon: P,

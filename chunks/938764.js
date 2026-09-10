@@ -1,4 +1,4 @@
-n.d(e, { A: () => R }), n(321073);
+(n.d(e, { A: () => R }), n(321073));
 var r = n(17928),
     i = n(228366),
     c = n(370876);
@@ -27,11 +27,11 @@ let R = new E(i.h, {
         let { channelId: e, query: n, results: r } = t;
         l[e] = { ...l[e], fetching: !1 };
         let i = [];
-        r.forEach((t) => {
+        (r.forEach((t) => {
             let e = (0, c.mR)(t);
             i.push(e);
         }),
-            (o[e] = { ...o[e], [n]: { results: (0, c.DN)(i), lastSearchedAt: Date.now() } });
+            (o[e] = { ...o[e], [n]: { results: (0, c.DN)(i), lastSearchedAt: Date.now() } }));
     },
     GUILD_DIRECTORY_SEARCH_FAILURE: function (t) {
         let { channelId: e } = t;

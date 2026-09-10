@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     A4: () => er,
     Ay: () => et,
     ON: () => ei,
@@ -7,10 +7,10 @@ n.d(t, {
     Sx: () => ef,
     XC: () => ea,
     ZA: () => el,
-    Zn: () => q,
+    Zn: () => X,
 }),
     n(321073),
-    n(938796);
+    n(938796));
 var i = n(582128),
     r = n(91871),
     a = n.n(r),
@@ -48,12 +48,12 @@ let w = new A.A("ApplicationCommandIndexStore"),
     x = Symbol("stale"),
     k = Symbol("current"),
     F = Object.freeze({ descriptors: [], commands: [], sectionedCommands: [], loading: !0 }),
-    V = Object.freeze({
+    B = Object.freeze({
         serverVersion: k,
         fetchState: { fetching: !1 },
         result: { sections: {}, sectionIdsByBotId: {}, version: k },
     }),
-    B = Object.freeze({ serverVersion: x, fetchState: { fetching: !1 } }),
+    V = Object.freeze({ serverVersion: x, fetchState: { fetching: !1 } }),
     H = { sensitivity: "accent", numeric: !0 },
     j = !1,
     W = [];
@@ -88,35 +88,35 @@ function K(e, t) {
 function $(e) {
     let t = Y(e),
         n = ee.indices[t];
-    n?.fetchState.fetching && n.fetchState.abort.abort(), delete ee.indices[t];
+    (n?.fetchState.fetching && n.fetchState.abort.abort(), delete ee.indices[t]);
 }
 function z() {
     for (let e of Object.values(ee.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
     ee.indices = {};
 }
-async function q(e) {
+async function X(e) {
     let t = Y(e),
-        n = ee.indices[t] ?? B;
+        n = ee.indices[t] ?? V;
     if (!eu(n)) {
         if (n.fetchState.fetching) {
             let e = n.fetchState.promise;
-            return await e, ee.indices[t] ?? B;
+            return (await e, ee.indices[t] ?? V);
         }
         return n;
     }
-    return await Z(e), ee.indices[t] ?? B;
+    return (await q(e), ee.indices[t] ?? V);
 }
-async function Z(e) {
+async function q(e) {
     let t = new AbortController(),
         n = new o.K();
-    K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
-        await (0, L.E)(e, t).then(n.resolve).catch(n.reject);
+    (K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
+        await (0, L.E)(e, t).then(n.resolve).catch(n.reject));
 }
-function X(e) {
+function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { target: n, index: i } = e,
         r = S.default.getCurrentUser()?.id;
-    if (null == r) return j || W.push(e), !1;
+    if (null == r) return (j || W.push(e), !1);
     let a = {},
         s = {},
         l = new Set();
@@ -195,7 +195,7 @@ class J extends d.Ay.Store {
     oldLocale = I.default.locale;
     collator = new Intl.Collator(I.default.locale, H);
     initialize() {
-        this.waitFor(I.default),
+        (this.waitFor(I.default),
             this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
             this.syncWith([I.default], () => {
                 let e;
@@ -203,10 +203,10 @@ class J extends d.Ay.Store {
                     (z(),
                     (ee.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
                     (ee.oldLocale = e));
-            });
+            }));
     }
     getContextState(e) {
-        return "contextless" !== e.type && ec(e.channel) ? (this.indices[e.channel.guild_id ?? e.channel.id] ?? B) : V;
+        return "contextless" !== e.type && ec(e.channel) ? (this.indices[e.channel.guild_id ?? e.channel.id] ?? V) : B;
     }
     hasContextStateApplication(e) {
         let { applicationId: t, channelId: n, guildId: i } = e,
@@ -214,17 +214,17 @@ class J extends d.Ay.Store {
         return null != (r?.result?.sections ?? {})[t];
     }
     getGuildState(e) {
-        return null == e ? V : (this.indices[e] ?? B);
+        return null == e ? B : (this.indices[e] ?? V);
     }
     getUserState() {
-        return this.indices[G] ?? B;
+        return this.indices[G] ?? V;
     }
     hasUserStateApplication(e) {
         let t = this.indices[G];
         return null != (t?.result?.sections ?? {})[e];
     }
     getApplicationState(e) {
-        return null == e ? V : (this.indices[e] ?? B);
+        return null == e ? B : (this.indices[e] ?? V);
     }
     getApplicationStates() {
         return this.applicationIndices;
@@ -276,7 +276,7 @@ class J extends d.Ay.Store {
             singleApplicationId: n.applicationId,
             installOnDemand: n.installOnDemand,
         });
-        return (_.loading = _.loading || u), _;
+        return ((_.loading = _.loading || u), _);
     }
     queryInstallOnDemandApp(e, t) {
         let n = T.A.getChannel(t);
@@ -292,25 +292,25 @@ let ee = new J(c.h, {
         LOGOUT: z,
         CONNECTION_OPEN: function () {
             for (let e of Object.values(ee.indices)) e.serverVersion = x;
-            for (let e of W) X(e);
-            (W = []), (j = !0);
+            for (let e of W) Z(e);
+            ((W = []), (j = !0));
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
             let { target: t } = e,
                 n = Y(t);
-            eu(ee.indices[n] ?? B) && Z(t);
+            eu(ee.indices[n] ?? V) && q(t);
         },
-        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: X,
+        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: Z,
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
             let { target: t } = e;
             K(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });
         },
         APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function (e) {
             let { applicationId: t, channelId: n, guildId: i } = e;
-            ee.hasContextStateApplication({ applicationId: t, channelId: n, guildId: i }) &&
+            (ee.hasContextStateApplication({ applicationId: t, channelId: n, guildId: i }) &&
                 K(null != i ? { type: "guild", guildId: i } : { type: "channel", channelId: n }, { serverVersion: x }),
                 ee.hasUserStateApplication(t) && K({ type: "user" }, { serverVersion: x }),
-                ee.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x });
+                ee.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x }));
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
@@ -349,13 +349,13 @@ let ee = new J(c.h, {
                                 let a = i.sectionIdsByBotId[t.id];
                                 if (null == a) return;
                                 let s = i.sections[a];
-                                l()(null != s, "Bot has no matching index section"),
+                                (l()(null != s, "Bot has no matching index section"),
                                     l()(
                                         null != s.descriptor.application,
                                         "Bot's index section has no application info",
-                                    );
+                                    ));
                                 let o = (0, v.bq)({ ...s.descriptor.application, bot: t }, !1, n);
-                                (s.descriptor = { ...s.descriptor, ...o }), (r = !0);
+                                ((s.descriptor = { ...s.descriptor, ...o }), (r = !0));
                             }),
                             r
                         );
@@ -374,7 +374,7 @@ function en(e, t, n) {
                     n && eu(s) && (0, L.$)({ type: "user" });
                     return;
                 }
-                n &&
+                (n &&
                     t &&
                     ec(e.channel) &&
                     (N.default.track(U.HAw.APPLICATION_COMMAND_CACHE_FETCH, {
@@ -385,7 +385,7 @@ function en(e, t, n) {
                         (null != e.channel.guild_id
                             ? (0, L.$)({ type: "guild", guildId: e.channel.guild_id })
                             : (0, L.$)({ type: "channel", channelId: e.channel.id }))),
-                    a(!1);
+                    a(!1));
             }
         }, [s, n, e, t, r]),
         s
@@ -393,7 +393,7 @@ function en(e, t, n) {
 }
 function ei(e, t) {
     let [n, r] = i.useState(!0),
-        a = (0, d.cf)([ee], () => ee.indices[e] ?? B);
+        a = (0, d.cf)([ee], () => ee.indices[e] ?? V);
     return (
         i.useEffect(() => {
             n &&
@@ -547,7 +547,7 @@ function eo(e) {
     for (let [e, t] of r)
         if (null == d || e === d) {
             let e = t.result?.sections;
-            if (null != e) for (let t of Object.keys(e)) D.add(t), v.set(t, e[t]);
+            if (null != e) for (let t of Object.keys(e)) (D.add(t), v.set(t, e[t]));
         }
     for (let e of Array.from(D)) {
         let t,
@@ -573,8 +573,8 @@ function eo(e) {
                 : null != r
                   ? ((t = r.descriptor), (n = Object.values(r.commands)))
                   : null != a && ((t = a.descriptor), (n = Object.values(a.commands)));
-        l()(null != t, "Failed to select application descriptor"),
-            l()(null != n, "Failed to select list of application commands");
+        (l()(null != t, "Failed to select application descriptor"),
+            l()(null != n, "Failed to select list of application commands"));
         let d = ed(t, n, s, o, N);
         null != d && S.push(d);
     }
@@ -670,7 +670,7 @@ function ed(e, t, n, i, r) {
                           d = t.slice(1).join(" ");
                       for (let t of n) {
                           let n;
-                          (r === y.M.COMMAND_ONLY || r === y.M.COMMAND_OR_APPLICATION) &&
+                          ((r === y.M.COMMAND_ONLY || r === y.M.COMMAND_OR_APPLICATION) &&
                               (n = (function (e, t, n, i) {
                                   let r = e.untranslatedName.toLocaleLowerCase(),
                                       s = e.displayName.toLocaleLowerCase();
@@ -705,7 +705,7 @@ function ed(e, t, n, i, r) {
                                   if (a()(t, o) || a()(t, d)) return 12;
                               })(t, e, o, d)),
                               (void 0 === n || (void 0 !== s && s < n)) && (n = s),
-                              void 0 !== n && l.push({ ...t, score: n });
+                              void 0 !== n && l.push({ ...t, score: n }));
                       }
                       return l;
                   })(l, o, T, e, c)
@@ -742,7 +742,7 @@ function e_(e) {
 }
 function eE(e) {
     let t = { ...e, name: e.name_default ?? e.name };
-    return e.name !== e.name_default && (t.name_localized = e.name), t;
+    return (e.name !== e.name_default && (t.name_localized = e.name), t);
 }
 function eA(e, t) {
     let n = [];

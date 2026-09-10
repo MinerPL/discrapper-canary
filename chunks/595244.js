@@ -1,6 +1,6 @@
-n.d(t, { Ay: () => v, Sm: () => U, bc: () => k, dR: () => M, gz: () => G, i8: () => x, jX: () => b, xb: () => w }),
+(n.d(t, { Ay: () => v, Sm: () => U, bc: () => k, dR: () => M, gz: () => G, i8: () => x, jX: () => b, xb: () => w }),
     n(142703),
-    n(321073);
+    n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -68,7 +68,7 @@ function M(e) {
         }, [s, n?.id, t?.id]),
         o = I.h.getField("entrypoint"),
         d = r.useCallback(() => {
-            s?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: n?.id });
+            (s?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: n?.id }));
         }, [s, n?.id]),
         u = window.location.pathname.startsWith(L.BVt.APPLICATION_DIRECTORY),
         _ = r.useCallback(() => {
@@ -76,8 +76,8 @@ function M(e) {
                 (s?.(),
                 null != o && (0, f.pX)(""),
                 setImmediate(() => {
-                    C._.dispatchToLastSubscribed(L.jej.OPEN_APP_LAUNCHER, { applicationId: n.id }),
-                        S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                    (C._.dispatchToLastSubscribed(L.jej.OPEN_APP_LAUNCHER, { applicationId: n.id }),
+                        S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [n?.id, s, o]),
         E = (0, c.bG)([g.Ay, T.A], () => T.A.getChannel(g.Ay.getChannelId())),
@@ -126,7 +126,7 @@ function U(e) {
         S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });
     }, [t.id]);
     let s = r.useCallback(() => {
-        a?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id });
+        (a?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id }));
     }, [a, t.id]);
     return (0, i.jsx)(R.f, {
         ...n,

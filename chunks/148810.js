@@ -14,7 +14,7 @@ async function d(e) {
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return await o(r), r;
+        return (await o(r), r);
     } catch (e) {
         return e;
     }
@@ -27,14 +27,14 @@ async function s(e) {
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return await o(r), r;
+        return (await o(r), r);
     } catch (e) {
         return e;
     }
 }
 async function c() {
     let e = await i.Bo.del({ url: (0, a.i_)(u), oldFormErrors: !0, rejectWithError: !1 });
-    return await o(e), e;
+    return (await o(e), e);
 }
 function h(e) {
     return i.Bo.post({

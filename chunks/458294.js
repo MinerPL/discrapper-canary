@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ep }), n(938796);
+(n.r(t), n.d(t, { default: () => ep }), n(938796));
 var i = n(435558),
     r = n.n(i),
     a = n(5180),
@@ -44,7 +44,7 @@ function v(e) {
 }
 function b(e) {
     let t = v(e);
-    t.sentinel++, y++;
+    (t.sentinel++, y++);
 }
 function M(e, t, n) {
     return null != e.guild_id && n && !((0, u.fT)(e.type) || m.Ay.isChannelRecordOrParentOptedIn(e)) && 0 === t;
@@ -82,10 +82,10 @@ function w(e, t) {
 }
 function G(e, t) {
     let n = D(e);
-    return (n.mentionCounts = { ...t.mentionCounts }), (n.unreadByType = { ...t.unreadByType }), n;
+    return ((n.mentionCounts = { ...t.mentionCounts }), (n.unreadByType = { ...t.unreadByType }), n);
 }
 function x(e) {
-    return (e.unread = Object.values(e.unreadByType).some((e) => e)), e;
+    return ((e.unread = Object.values(e.unreadByType).some((e) => e)), e);
 }
 function k(e, t) {}
 function F(e, t, n) {
@@ -103,7 +103,7 @@ function F(e, t, n) {
             ((R[e ?? O] = t), null != e && (t.unread ? L.add(e) : L.delete(e)), y++, b(e ?? O), k(t, n), !0)
     );
 }
-function V(e, t) {
+function B(e, t) {
     let n = U(e),
         i = v(n),
         r = G(n, i),
@@ -114,25 +114,25 @@ function V(e, t) {
             if (null == t) return void delete r.mentionCounts[e];
             if (t.getGuildId() !== n) return;
             let i = p.Ay.getMentionCount(e);
-            null !== n && !a && p.Ay.hasUnread(t.id) && P(t, i, !0) && ((a = !0), (r.unreadChannelId = t.id)),
+            (null !== n && !a && p.Ay.hasUnread(t.id) && P(t, i, !0) && ((a = !0), (r.unreadChannelId = t.id)),
                 i > 0 && P(t, i)
                     ? (r.mentionCounts[t.id] = { count: i, isMentionLowImportance: p.Ay.getIsMentionLowImportance(e) })
-                    : delete r.mentionCounts[t.id];
+                    : delete r.mentionCounts[t.id]);
         }),
         (r.unreadByType[C.P.CHANNEL] = a),
         r.unreadByType[C.P.CHANNEL] !== i.unreadByType[C.P.CHANNEL] && !r.unreadByType[C.P.CHANNEL])
     ) {
         let e = A.A.getChannel(i.unreadChannelId);
         if (!(null != e && !t.includes(e.id) && p.Ay.hasUnread(e.id) && P(e))) return H(n);
-        null != n && L.add(n), (r.unreadByType[C.P.CHANNEL] = !0);
+        (null != n && L.add(n), (r.unreadByType[C.P.CHANNEL] = !0));
     }
     return F(n, r, i);
 }
-function B(e, t) {
+function V(e, t) {
     if (null == e) return;
     let n = v(e),
         i = G(e, n);
-    return (i.unreadByType[C.P.GUILD_EVENT] = w(e, t)), F(e, i, n);
+    return ((i.unreadByType[C.P.GUILD_EVENT] = w(e, t)), F(e, i, n));
 }
 function H(e, t) {
     let n = U(e),
@@ -206,7 +206,7 @@ function H(e, t) {
 }
 function j(e) {
     let { guilds: t } = e;
-    (R = {}), (y = 0), (L = new Set()), H(null);
+    ((R = {}), (y = 0), (L = new Set()), H(null));
     let { length: n } = t;
     for (let e = 0; e < n; e++) {
         let n = t[e];
@@ -215,7 +215,7 @@ function j(e) {
 }
 function W(e) {
     let { guilds: t, readState: n } = e;
-    (R = {}), (y = 0), (L = new Set());
+    ((R = {}), (y = 0), (L = new Set()));
     let i = n.entries.length < 500,
         r = new Set();
     for (let e of (i &&
@@ -245,20 +245,20 @@ function z(e) {
     let {
         channel: { id: t, guild_id: n },
     } = e;
-    return V(n, [t]);
+    return B(n, [t]);
 }
-function q() {
+function X() {
     let e = A.A.getChannel(T.Ay.getChannelId());
-    return null != e && V(e.getGuildId(), [e.id]);
+    return null != e && B(e.getGuildId(), [e.id]);
 }
-function Z(e) {
+function q(e) {
     let { user: t, guildId: n } = e;
     return t.id === E.default.getId() && H(n);
 }
-function X(e) {
+function Z(e) {
     let { channelId: t } = e,
         n = A.A.getChannel(t);
-    return null != n && V(n.getGuildId(), [n.id]);
+    return null != n && B(n.getGuildId(), [n.id]);
 }
 function Q(e) {
     let { channelId: t } = e,
@@ -275,15 +275,15 @@ function Q(e) {
         )
             return !1;
     }
-    return V(n.getGuildId(), [n.id]);
+    return B(n.getGuildId(), [n.id]);
 }
 function J(e) {
     let { channelId: t, guildId: n } = e;
-    return !(0, a.ai)(n) && null != t && V(n, [t]);
+    return !(0, a.ai)(n) && null != t && B(n, [t]);
 }
 function ee(e) {
     let { channel: t } = e;
-    return V(t.getGuildId(), [t.id]);
+    return B(t.getGuildId(), [t.id]);
 }
 function et(e) {
     let { channels: t } = e;
@@ -291,7 +291,7 @@ function et(e) {
         .groupBy((e) => e.getGuildId())
         .reduce(
             (e, t, n) =>
-                V(
+                B(
                     n,
                     t.map((e) => e.id),
                 ) || e,
@@ -307,34 +307,34 @@ function en(e) {
         })
         .filter((e) => null != A.A.getChannel(e))
         .groupBy((e) => A.A.getChannel(e)?.getGuildId())
-        .reduce((e, t, n) => V(n, t) || e, !1);
+        .reduce((e, t, n) => B(n, t) || e, !1);
 }
 function ei(e) {
     let { channel: t } = e;
-    return V(t.getGuildId(), [t.id, t.parent_id]);
+    return B(t.getGuildId(), [t.id, t.parent_id]);
 }
 function er(e) {
     let { guildScheduledEvent: t } = e;
-    return B(t.guild_id, C.P.GUILD_EVENT);
+    return V(t.guild_id, C.P.GUILD_EVENT);
 }
 function ea(e) {
     let { guildScheduledEvent: t } = e;
-    return B(t.guild_id, C.P.GUILD_EVENT);
+    return V(t.guild_id, C.P.GUILD_EVENT);
 }
 function es(e) {
     let { id: t, ackType: n } = e;
-    return B(t, n);
+    return V(t, n);
 }
 function el(e) {
     let { id: t, guildId: n } = e;
-    return V(n, [t]);
+    return B(n, [t]);
 }
 function eo(e) {
-    return (0, c.k)(e) && V(e.guildId, [e.id]);
+    return (0, c.k)(e) && B(e.guildId, [e.id]);
 }
 function ed(e) {
     let { threads: t, guildId: n } = e;
-    return V(
+    return B(
         n,
         t.filter((e) => d.A.hasJoined(e.id)).map((e) => e.id),
     );
@@ -342,7 +342,7 @@ function ed(e) {
 function ec(e) {
     return (
         e.channels.length > 0 &&
-        V(
+        B(
             e.guildId,
             e.channels.map((e) => e.id),
         )
@@ -372,7 +372,7 @@ function eI(e) {
     let { messages: t } = e;
     new Set(t.map((e) => e.channel_id)).forEach((e) => {
         let t = A.A.getChannel(e);
-        null != t && V(t.getGuildId(), [e]);
+        null != t && B(t.getGuildId(), [e]);
     });
 }
 class ef extends I.A {
@@ -386,12 +386,12 @@ class ef extends I.A {
             GUILD_CREATE: K,
             GUILD_DELETE: $,
             MESSAGE_CREATE: Q,
-            MESSAGE_ACK: X,
+            MESSAGE_ACK: Z,
             BULK_ACK: en,
-            UPDATE_CHANNEL_DIMENSIONS: X,
+            UPDATE_CHANNEL_DIMENSIONS: Z,
             CHANNEL_SELECT: J,
             CHANNEL_DELETE: z,
-            WINDOW_FOCUS: q,
+            WINDOW_FOCUS: X,
             GUILD_ACK: eu,
             GUILD_ROLE_CREATE: e_,
             GUILD_ROLE_DELETE: e_,
@@ -405,7 +405,7 @@ class ef extends I.A {
             THREAD_MEMBER_UPDATE: el,
             THREAD_MEMBERS_UPDATE: eo,
             PASSIVE_UPDATE_V2: ec,
-            GUILD_MEMBER_UPDATE: Z,
+            GUILD_MEMBER_UPDATE: q,
             USER_GUILD_SETTINGS_FULL_UPDATE: eE,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE: eh,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eh,
@@ -415,17 +415,17 @@ class ef extends I.A {
             GUILD_SCHEDULED_EVENT_CREATE: er,
             GUILD_SCHEDULED_EVENT_UPDATE: er,
             GUILD_SCHEDULED_EVENT_DELETE: ea,
-            CHANNEL_RTC_UPDATE_CHAT_OPEN: X,
-            LOAD_MESSAGES_SUCCESS: X,
-            CHANNEL_ACK: X,
-            CHANNEL_LOCAL_ACK: X,
+            CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
+            LOAD_MESSAGES_SUCCESS: Z,
+            CHANNEL_ACK: Z,
+            CHANNEL_LOCAL_ACK: Z,
             NOTIFICATION_SETTINGS_UPDATE: Y,
             RECOMPUTE_READ_STATES: Y,
-            VOICE_CHANNEL_SELECT: X,
-            ENABLE_AUTOMATIC_ACK: X,
-            RESORT_THREADS: X,
+            VOICE_CHANNEL_SELECT: Z,
+            ENABLE_AUTOMATIC_ACK: Z,
+            RESORT_THREADS: Z,
             NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eA,
-            TRY_ACK: X,
+            TRY_ACK: Z,
             LOAD_RECENT_MENTIONS_SUCCESS: eI,
         });
     }

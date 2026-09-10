@@ -54,7 +54,7 @@ async function A(e) {
 }
 async function h(e, t) {
     let n = await c.aC(e, t);
-    return r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: n }), n;
+    return (r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: n }), n);
 }
 async function I(e) {
     r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: e });
@@ -64,7 +64,7 @@ async function I(e) {
         n.subscription_plans[0].id === e && (await a.ur(n.id, void 0, void 0, !0));
 }
 async function f(e, t, n) {
-    await c.wJ(e, t, n), r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING", listingId: n });
+    (await c.wJ(e, t, n), r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING", listingId: n }));
 }
 async function p(e, t, n) {
     let i = await c.PC(e, t, n);
@@ -77,7 +77,7 @@ async function T(e, t, n) {
 async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = await c.WV(e, t, n);
-    return r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: i }), i;
+    return (r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: i }), i);
 }
 async function g(e) {
     let { guildId: t, groupListingId: n, data: i, analyticsContext: a, onBeforeDispatchNewListing: l } = e,
@@ -114,12 +114,12 @@ async function N(e) {
                 return void r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED", guildId: e });
             r.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS", guildId: e });
             let { restrictions: i } = await c.iG(e, { signal: t });
-            r.h.dispatch({
+            (r.h.dispatch({
                 type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
                 guildId: e,
                 restrictions: i ?? [],
             }),
-                (n = !0);
+                (n = !0));
             break;
         } catch (e) {
             await (0, i.yy)((a + 1) * d.A.Millis.SECOND);

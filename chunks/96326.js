@@ -26,7 +26,7 @@ function c(e) {
         e
     );
 }
-r.d(t, { sA: () => o, LN: () => n, rO: () => i, mS: () => c }),
+(r.d(t, { sA: () => o, LN: () => n, rO: () => i, mS: () => c }),
     ((a = n || (n = {}))[(a.DOUBLE = 1)] = "DOUBLE"),
     (a[(a.FLOAT = 2)] = "FLOAT"),
     (a[(a.INT64 = 3)] = "INT64"),
@@ -47,4 +47,4 @@ r.d(t, { sA: () => o, LN: () => n, rO: () => i, mS: () => c }),
     (s[(s.NUMBER = 2)] = "NUMBER"),
     ((l = o || (o = {}))[(l.NO = 0)] = "NO"),
     (l[(l.PACKED = 1)] = "PACKED"),
-    (l[(l.UNPACKED = 2)] = "UNPACKED");
+    (l[(l.UNPACKED = 2)] = "UNPACKED"));

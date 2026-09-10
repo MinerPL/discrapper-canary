@@ -1,4 +1,4 @@
-n.d(t, { A: () => en }), n(321073);
+(n.d(t, { A: () => en }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(607399),
@@ -45,7 +45,7 @@ let b = i.forwardRef(function (e, t) {
             );
         }, [d, u]);
         let h = i.useCallback(() => {
-                a ? y.k(v.Se.DISMISSED) : (y.R(v.s4.TEXT, n, void 0, s), I.LK()), c();
+                (a ? y.k(v.Se.DISMISSED) : (y.R(v.s4.TEXT, n, void 0, s), I.LK()), c());
             }, [a, n, s, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
@@ -120,11 +120,11 @@ let Y = i.memo(
             [d, h, m, f] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], w.x),
             g = i.useRef(0),
             x = i.useCallback(() => {
-                u(!0),
+                (u(!0),
                     clearTimeout(g.current),
                     (g.current = setTimeout(() => {
-                        u(!1), (g.current = 0);
-                    }, 2e3));
+                        (u(!1), (g.current = 0));
+                    }, 2e3)));
             }, []);
         (0, z.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
         let C = i.useCallback(() => {
@@ -145,7 +145,7 @@ let Y = i.memo(
                     onMouseEnter: I.onMouseEnter,
                     onMouseLeave: I.onMouseLeave,
                     onClick: () => {
-                        C(), y();
+                        (C(), y());
                     },
                     isActive: S,
                     pulse: o,
@@ -241,7 +241,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                           className: A()(V.x6, V.KE),
                           ...I,
                           onClick: () => {
-                              C(), y();
+                              (C(), y());
                           },
                           isActive: x,
                           "aria-label": j.intl.string(j.t.rZpidU),
@@ -304,13 +304,17 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                                 let e = f.default.getCurrentUser();
                                 return (null != t && null != e ? h.Ay.getMember(t, e.id)?.isPending : null) ?? !1;
                             }),
-                            { messagesDisabled: l } = (0, r.cf)([m.A], () => {
-                                let t = e.isPrivate(),
-                                    l = m.A.computePermissions(e),
-                                    i = c.zy(l, p.xBc.SEND_MESSAGES),
-                                    s = (0, d.UJ)(e);
-                                return { messagesDisabled: n || (!t && !i) || s };
-                            }, [e, n]);
+                            { messagesDisabled: l } = (0, r.cf)(
+                                [m.A],
+                                () => {
+                                    let t = e.isPrivate(),
+                                        l = m.A.computePermissions(e),
+                                        i = c.zy(l, p.xBc.SEND_MESSAGES),
+                                        s = (0, d.UJ)(e);
+                                    return { messagesDisabled: n || (!t && !i) || s };
+                                },
+                                [e, n],
+                            );
                         return !l;
                     })(t),
                     { activeCommand: s } = (0, r.cf)([u.A], () => ({

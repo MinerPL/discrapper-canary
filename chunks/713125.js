@@ -24,7 +24,7 @@ class _ extends r.Ay.Store {
         return c[e];
     }
     resetOnboardingStatus(e) {
-        (c[e] = "started"), (u[e] = "cover");
+        ((c[e] = "started"), (u[e] = "cover"));
     }
     getCurrentOnboardingStep(e) {
         return u[e] ?? "cover";
@@ -32,11 +32,11 @@ class _ extends r.Ay.Store {
 }
 let E = new _(a.h, {
     LOGOUT: function () {
-        (c = {}), (u = {});
+        ((c = {}), (u = {}));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete c[t.id], delete u[t.id];
+        (delete c[t.id], delete u[t.id]);
     },
     GUILD_ONBOARDING_START: function (e) {
         let { guildId: t } = e;

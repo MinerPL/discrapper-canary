@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => k });
+(r.r(t), r.d(t, { default: () => k }));
 var a = r(626584),
     i = r(719129),
     n = r(572009),
@@ -59,13 +59,13 @@ class m {
         try {
             let t = await i.GH(e);
             if (null != t) {
-                c.warn("Steam game events watcher failed to attach", { pid: e, error: t }),
-                    this.trackedProcesses.delete(e);
+                (c.warn("Steam game events watcher failed to attach", { pid: e, error: t }),
+                    this.trackedProcesses.delete(e));
                 return;
             }
-            c.info("Steam game events watcher attached successfully", { pid: e }), this.setupGameEventsListener(e);
+            (c.info("Steam game events watcher attached successfully", { pid: e }), this.setupGameEventsListener(e));
         } catch (t) {
-            c.error("Steam game events watcher error", { pid: e, error: t }), this.trackedProcesses.delete(e);
+            (c.error("Steam game events watcher error", { pid: e, error: t }), this.trackedProcesses.delete(e));
         }
     }
     setupGameEventsListener(e) {
@@ -114,8 +114,8 @@ class m {
     }
     updateConfig(e) {
         let t = this.config.enabled;
-        (this.config = { ...this.config, ...e }),
-            !t && this.config.enabled ? this.initialize() : t && !this.config.enabled && this.destroy();
+        ((this.config = { ...this.config, ...e }),
+            !t && this.config.enabled ? this.initialize() : t && !this.config.enabled && this.destroy());
     }
     addTimelineEventCallback(e) {
         this.timelineEventCallbacks.add(e);
@@ -327,7 +327,7 @@ function k(e) {
                 score: void 0 ?? +!!a,
                 importance: n,
             };
-        v.info("Converting Steam timeline event to clip signal", {
+        (v.info("Converting Steam timeline event to clip signal", {
             gameId: r.gameId?.toString(),
             icon: r.icon,
             eventName: s.eventName,
@@ -337,7 +337,7 @@ function k(e) {
             isUserMarker: a,
             timestamp: r.timestamp,
         }),
-            e(s, r.timestamp);
+            e(s, r.timestamp));
     }
     return {
         start() {

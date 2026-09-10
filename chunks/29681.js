@@ -21,11 +21,11 @@ function C(t) {
         C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),
         [y, N] = s.useState(C?.shortcut ?? []),
         f = s.useCallback(() => {
-            if (0 === y.length) return null != C && u.A.deleteKeybind(C.id), n();
-            null == C
+            if (0 === y.length) return (null != C && u.A.deleteKeybind(C.id), n());
+            (null == C
                 ? u.A.addKeybind({ action: m.hCu.SOUNDBOARD_HOLD, shortcut: y, enabled: !0, params: {} })
                 : u.A.setKeybind({ ...C, shortcut: y }),
-                n();
+                n());
         }, [C, n, y]);
     s.useEffect(
         () => (

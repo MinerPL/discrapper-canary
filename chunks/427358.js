@@ -14,9 +14,9 @@ class _ extends i.Ay.PersistedStore {
     static displayName = "UserAffinitiesV2Store";
     static persistKey = "UserAffinitiesStoreV2";
     initialize(e) {
-        this.waitFor(a.A),
+        (this.waitFor(a.A),
             e?.userAffinities != null && ((c.userAffinities = e.userAffinities), (c.lastFetched = e.lastFetched), u()),
-            this.syncWith([a.A], u);
+            this.syncWith([a.A], u));
     }
     shouldFetch() {
         if (!o) return Date.now() - c.lastFetched > s;
@@ -52,12 +52,12 @@ let E = new _(r.h, {
     },
     LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
         let { affineUsers: t } = e;
-        (c.lastFetched = Date.now()), (o = !1), (c.userAffinities = t), u();
+        ((c.lastFetched = Date.now()), (o = !1), (c.userAffinities = t), u());
     },
     LOAD_USER_AFFINITIES_V2_FAILURE: function () {
         o = !1;
     },
     LOGOUT: function () {
-        (c = { ...d }), (l = new Map()), (o = !1);
+        ((c = { ...d }), (l = new Map()), (o = !1));
     },
 });

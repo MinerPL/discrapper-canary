@@ -1,11 +1,11 @@
-n.d(t, { Ay: () => I, RG: () => _ }), n(321073);
+(n.d(t, { Ay: () => I, RG: () => _ }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
     s = n(228366),
     l = n(283047),
     o = n(617617);
-n(73510), n(705751);
+(n(73510), n(705751));
 var d = n(355097);
 let c = { pendingUsages: [] },
     u = new l.A({ computeBonus: () => 1, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
@@ -34,7 +34,7 @@ class h extends a.Ay.PersistedStore {
     static displayName = "ApplicationCommandFrecencyStore";
     static persistKey = "ApplicationCommandFrecencyV2";
     initialize(e) {
-        null != e && (c = e), this.syncWith([o.A], A);
+        (null != e && (c = e), this.syncWith([o.A], A));
     }
     getState() {
         return c;
@@ -56,7 +56,7 @@ let I = new h(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t, context: n } = e,
             i = E(n, t);
-        c.pendingUsages.push({ key: i, timestamp: Date.now() }), u.track(i), u.compute();
+        (c.pendingUsages.push({ key: i, timestamp: Date.now() }), u.track(i), u.compute());
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {

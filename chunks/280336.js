@@ -17,7 +17,7 @@ function l(e) {
             enter: { scale: 1, opacity: 1 },
             leave: o.enabled ? c : d,
             onRest: (e, i) => {
-                t || n?.(), l?.(e, i);
+                (t || n?.(), l?.(e, i));
             },
         },
         "animate-always",

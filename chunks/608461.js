@@ -10,7 +10,7 @@ function a(e) {
             async function () {
                 for (var t = arguments.length, l = Array(t), a = 0; a < t; a++) l[a] = arguments[a];
                 try {
-                    return s(null), n(!0), await e(...l);
+                    return (s(null), n(!0), await e(...l));
                 } catch (e) {
                     e.message !== r.intl.string(r.t.N2yb9a) && s(e instanceof i.A ? e : new i.A(e));
                 } finally {

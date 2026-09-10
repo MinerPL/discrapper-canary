@@ -33,7 +33,7 @@ var i = n(284009),
     g = n(927813),
     S = n(650338),
     N = n(499785);
-n(387755), n(308528);
+(n(387755), n(308528));
 var C = n(367513);
 n(730852);
 var O = n(652215),
@@ -54,7 +54,7 @@ function y(e, t) {
 }
 function D(e, t) {
     let n = I.A.getChannel(t);
-    return r()(null != n, "Cannot join a null voice channel"), !T.A.isInChannel(t) && (0, m.Pd)(n, T.A, f.A);
+    return (r()(null != n, "Cannot join a null voice channel"), !T.A.isInChannel(t) && (0, m.Pd)(n, T.A, f.A));
 }
 function v(e, t) {
     if (null != o.default.getRemoteSessionId()) return;
@@ -67,9 +67,9 @@ function v(e, t) {
                 let { ownerId: t } = e;
                 return t !== h.default.getId();
             }).length >= 2;
-    l.h.dispatch({ type: "STREAM_WATCH", streamKey: r, allowMultiple: a }),
+    (l.h.dispatch({ type: "STREAM_WATCH", streamKey: r, allowMultiple: a }),
         null != n && (0, u.c6)(!0, n, i),
-        (t?.forceFocus !== !0 && (a || t?.noFocus)) || C.A.selectParticipant(e.channelId, r);
+        (t?.forceFocus !== !0 && (a || t?.noFocus)) || C.A.selectParticipant(e.channelId, r));
 }
 function b(e, t) {
     l.h.dispatch({ type: "STREAM_UPDATE_SELF_HIDDEN", channelId: e, selfStreamHidden: t });
@@ -85,8 +85,8 @@ function M(e, t) {
 function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    n && U(e, t),
-        l.h.dispatch({ type: "STREAM_STOP", streamKey: e, appContext: __OVERLAY__ ? O.BRT.OVERLAY : O.BRT.APP });
+    (n && U(e, t),
+        l.h.dispatch({ type: "STREAM_STOP", streamKey: e, appContext: __OVERLAY__ ? O.BRT.OVERLAY : O.BRT.APP }));
 }
 function U(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -106,8 +106,8 @@ async function w(e, t, n) {
         l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_SUCCESS", streamKey: i, previewURL: e.body.url });
     } catch (t) {
         let e;
-        429 === t.status && (e = t.body.retry_after * g.A.Millis.SECOND),
-            l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: i, retryAfter: e });
+        (429 === t.status && (e = t.body.retry_after * g.A.Millis.SECOND),
+            l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_FAIL", streamKey: i, retryAfter: e }));
     }
 }
 async function G(e) {
@@ -121,8 +121,8 @@ async function G(e) {
     } catch (e) {}
 }
 function x(e) {
-    !0 !== e.noTrack && (0, S.K2)(e.preset, e.resolution, e.frameRate, e.soundshareEnabled),
-        l.h.dispatch({ type: "STREAM_UPDATE_SETTINGS", ...e });
+    (!0 !== e.noTrack && (0, S.K2)(e.preset, e.resolution, e.frameRate, e.soundshareEnabled),
+        l.h.dispatch({ type: "STREAM_UPDATE_SETTINGS", ...e }));
 }
 function k(e, t) {
     s.Bo.patch({ url: O.Rsh.STREAM(e), body: { region: t }, oldFormErrors: !0, rejectWithError: !0 });

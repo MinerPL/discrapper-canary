@@ -25,7 +25,7 @@ function l(e) {
                     r = (0, o.TW)(t),
                     a = (0, i.bq)(r);
                 if (!c.current.isFocusWithin && a === t) {
-                    l && l(e), u && u(!0), (c.current.isFocusWithin = !0), h(e);
+                    (l && l(e), u && u(!0), (c.current.isFocusWithin = !0), h(e));
                     let t = e.currentTarget;
                     f(
                         r,
@@ -34,7 +34,7 @@ function l(e) {
                             let o = (0, i.wt)(e);
                             if (c.current.isFocusWithin && !(0, i.sD)(t, o)) {
                                 let e = new r.defaultView.FocusEvent("blur", { relatedTarget: o });
-                                (0, n.o1)(e, t), p((0, n.eg)(e));
+                                ((0, n.o1)(e, t), p((0, n.eg)(e)));
                             }
                         },
                         { capture: !0 },

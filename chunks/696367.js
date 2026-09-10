@@ -29,7 +29,7 @@ if (r(912877)() || r(640847)()) {
                 next: function () {
                     var r,
                         n = t >= e.length;
-                    return n || ((r = e[t]), (t += 1)), { done: n, value: r };
+                    return (n || ((r = e[t]), (t += 1)), { done: n, value: r });
                 },
             };
         },
@@ -41,7 +41,7 @@ if (r(912877)() || r(640847)()) {
                     next: function () {
                         var t = v(e, r),
                             n = m(e, r, t);
-                        return (r = t), { done: t > e.length, value: n };
+                        return ((r = t), { done: t > e.length, value: n });
                     },
                 };
             }

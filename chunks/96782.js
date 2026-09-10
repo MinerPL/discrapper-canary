@@ -1,4 +1,4 @@
-i.d(t, { Ay: () => T, rC: () => E, zB: () => O }), i(938796), i(321073);
+(i.d(t, { Ay: () => T, rC: () => E, zB: () => O }), i(938796), i(321073));
 var s = i(477900),
     n = i(582128),
     l = i(503698),
@@ -59,7 +59,7 @@ function O(e) {
     });
     let I = "CLIP" === p && j,
         N = [];
-    null == r ||
+    (null == r ||
         I ||
         N.push(
             (0, s.jsx)(
@@ -123,7 +123,7 @@ function O(e) {
                     },
                     "download",
                 ),
-            );
+            ));
     let A = Math.max(0, N.length - f);
     return (0, s.jsxs)(s.Fragment, {
         children: [

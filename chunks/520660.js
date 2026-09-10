@@ -53,7 +53,7 @@ function E(e) {
                 j(p),
                 v(y(g)),
                 () => {
-                    j(null), y(null);
+                    (j(null), y(null));
                 }
             ),
             [j, y, v],
@@ -109,7 +109,8 @@ let H = function (e) {
         null != h && f(null);
         let t = a.indexOf(e),
             i = [...a];
-        null != l && l !== t && (i.splice(t, 1), i.splice(l, 0, e), d(i)), n ? null !== l && k(null) : l !== C && k(l);
+        (null != l && l !== t && (i.splice(t, 1), i.splice(l, 0, e), d(i)),
+            n ? null !== l && k(null) : l !== C && k(l));
     }
     async function I() {
         null != h && f(null);
@@ -118,7 +119,7 @@ let H = function (e) {
         if (0 === a.map((e) => e.trim()).filter((e) => "" !== e).length) return void f(N.intl.string(N.t.jZoHgI));
         let l = { field_type: j.rX.MULTIPLE_CHOICE, label: e, choices: a, required: !0 };
         try {
-            await n(l), s();
+            (await n(l), s());
         } catch (e) {
             f(new p.LG(e).getAnyErrorMessage());
         }
@@ -137,7 +138,7 @@ let H = function (e) {
                     onChange: function (e) {
                         null != h && f(null);
                         let l = e.replace(/(\r\n|\n|\r)/g, " ");
-                        l.length > y.Ty && (l = e.slice(0, y.Ty)), c(l);
+                        (l.length > y.Ty && (l = e.slice(0, y.Ty)), c(l));
                     },
                     placeholder: N.intl.string(N.t.fqVmbL),
                     value: r,
@@ -177,7 +178,7 @@ let H = function (e) {
                     children: (0, t.jsxs)(m.D, {
                         className: b.bK,
                         onClick: function () {
-                            null != h && f(null), a.length !== y.Hz && d([...a, ""]);
+                            (null != h && f(null), a.length !== y.Hz && d([...a, ""]));
                         },
                         children: [
                             (0, t.jsx)(x.U, {

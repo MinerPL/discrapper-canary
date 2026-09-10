@@ -8,7 +8,7 @@ function a(e) {
         let e = t.current,
             r = n.current;
         if (null == e || null == r) return;
-        (r.width = i), (r.height = u);
+        ((r.width = i), (r.height = u));
         let s = r.getContext("2d");
         if (null == s) return;
         let o = !1;
@@ -34,13 +34,13 @@ function a(e) {
                 e.addEventListener("loadeddata", c),
                 e.paused ? e.readyState >= 2 && c() : (t = e.requestVideoFrameCallback(d)),
                 () => {
-                    (o = !0),
+                    ((o = !0),
                         e.cancelVideoFrameCallback(t),
                         e.removeEventListener("play", m),
                         e.removeEventListener("pause", f),
                         e.removeEventListener("ended", f),
                         e.removeEventListener("seeked", c),
-                        e.removeEventListener("loadeddata", c);
+                        e.removeEventListener("loadeddata", c));
                 }
             );
         }
@@ -63,13 +63,13 @@ function a(e) {
                 e.addEventListener("loadeddata", c),
                 e.paused ? e.readyState >= 2 && c() : (t = requestAnimationFrame(h)),
                 () => {
-                    (o = !0),
+                    ((o = !0),
                         cancelAnimationFrame(t),
                         e.removeEventListener("play", p),
                         e.removeEventListener("pause", v),
                         e.removeEventListener("ended", v),
                         e.removeEventListener("seeked", c),
-                        e.removeEventListener("loadeddata", c);
+                        e.removeEventListener("loadeddata", c));
                 }
             );
         }

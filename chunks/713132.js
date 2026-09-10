@@ -1,4 +1,4 @@
-n.d(t, { A: () => g }), n(321073), n(938796);
+(n.d(t, { A: () => g }), n(321073), n(938796));
 var i = n(665260),
     r = n(17928),
     a = n(228366),
@@ -105,7 +105,7 @@ let g = new m(a.h, {
                 a = null != r ? { ...e.messages } : {};
             for (let e of n) {
                 let n = (0, u.rh)(e);
-                null == a[n.id] && t.push(n.id), (a[n.id] = n);
+                (null == a[n.id] && t.push(n.id), (a[n.id] = n));
             }
             return { ids: t, messages: a, hasMore: i, loading: !1, loaded: !0, error: !1 };
         });
@@ -119,7 +119,7 @@ let g = new m(a.h, {
         let { guild: t } = e;
         if (null == E[t.id]) return !1;
         let n = { ...E };
-        delete n[t.id], (E = n);
+        (delete n[t.id], (E = n));
     },
     CHANNEL_DELETE: p,
     THREAD_DELETE: p,
@@ -146,7 +146,7 @@ let g = new m(a.h, {
             let e = t.id;
             h(r, (t) => {
                 let n = { ...t.messages };
-                return delete n[e], { ids: t.ids.filter((t) => t !== e), messages: n };
+                return (delete n[e], { ids: t.ids.filter((t) => t !== e), messages: n });
             });
             return;
         }
@@ -189,7 +189,7 @@ let g = new m(a.h, {
         if (null == n || E[n]?.messages[t] == null) return !1;
         h(n, (e) => {
             let n = { ...e.messages };
-            return delete n[t], { ids: e.ids.filter((e) => e !== t), messages: n };
+            return (delete n[t], { ids: e.ids.filter((e) => e !== t), messages: n });
         });
     },
     MESSAGE_DELETE_BULK: function (e) {

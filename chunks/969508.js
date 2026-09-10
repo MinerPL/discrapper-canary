@@ -1,4 +1,4 @@
-n.d(e, { FG: () => D, aV: () => B, uD: () => M }), n(323874), n(14289), n(35956);
+(n.d(e, { FG: () => D, aV: () => B, uD: () => M }), n(323874), n(14289), n(35956));
 var l = n(582128),
     i = n(284009),
     a = n.n(i),
@@ -73,11 +73,11 @@ function M(t, e) {
                 e)
             ) {
                 let e = y.default.fromTimestamp(Date.now());
-                m(e), await w(t, o, e);
+                (m(e), await w(t, o, e));
             }
         }, [o, t, S]);
     l.useEffect(() => {
-        C === v.Z.SUCCEEDED &&
+        (C === v.Z.SUCCEEDED &&
             (r.h.dispatch({ type: "CLEAR_INTERACTION_MODAL_STATE", customId: i }),
             d.A.removeFiles(
                 t.channelId,
@@ -85,7 +85,7 @@ function M(t, e) {
                 A.C.InteractionModal,
             ),
             e()),
-            C === v.Z.ERRORED && I(b.intl.string(b.t.uJgdEu));
+            C === v.Z.ERRORED && I(b.intl.string(b.t.uJgdEu)));
     }, [E, C, e, i, t.channelId]);
     let { applicationIconURL: f, applicationName: h } = P(n);
     return {
@@ -122,8 +122,8 @@ async function w(t, e, n) {
     a()(null != i, "expected channel");
     let u = G(l, t.customId),
         r = u.length > 0 ? (0, I.A)(u) : void 0;
-    (0, m.tU)(n, { data: { interactionType: s.G4.MODAL_SUBMIT, applicationId: t.application.id }, preflight: r }),
-        await r;
+    ((0, m.tU)(n, { data: { interactionType: s.G4.MODAL_SUBMIT, applicationId: t.application.id }, preflight: r }),
+        await r);
     let d = u.map((t, e) => (0, L.OW)(t, e)),
         c = (function t(e, n, l) {
             return n.map((n) => {

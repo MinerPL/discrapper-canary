@@ -61,10 +61,10 @@ function N(e) {
         [Z, _] = i.useState(1 === z.length ? z[0] : null),
         [M, Q] = i.useState(null),
         [X, J] = i.useState("");
-    (0, f.Ay)(() => a?.()),
+    ((0, f.Ay)(() => a?.()),
         (0, f.l0)(() => {
             s({ rating: U, category: Z?.value ?? null, problem: M, dontShowAgain: I, feedback: X });
-        });
+        }));
     let W = !0,
         Y = !1;
     return (
@@ -78,7 +78,7 @@ function N(e) {
                               emojiKind: E,
                               selectedRating: U,
                               onChangeRating: function (e) {
-                                  V(e), e === O.P0.GOOD && N();
+                                  (V(e), e === O.P0.GOOD && N());
                               },
                           }),
                       }),
@@ -113,7 +113,7 @@ function N(e) {
                           children: (0, t.jsx)(C.A, {
                               options: Z.problemOptions,
                               onClick: function (e) {
-                                  Q(e), null != Z && null != e && Z.freeformConfig?.value !== e.value && N();
+                                  (Q(e), null != Z && null != e && Z.freeformConfig?.value !== e.value && N());
                               },
                               hideCaret: (e) => {
                                   let { value: n } = e;
@@ -139,7 +139,7 @@ function N(e) {
                       }),
                   })),
                   (l = () => {
-                      J(""), Q(null);
+                      (J(""), Q(null));
                   }),
                   (Y = !0)),
         (0, t.jsxs)(d.EO, {

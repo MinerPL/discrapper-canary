@@ -56,7 +56,7 @@ var I = n(636950);
 function A() {
     let [e, t] = i.useState(!1);
     async function n() {
-        t(!0), await (0, d.lo)();
+        (t(!0), await (0, d.lo)());
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -176,7 +176,7 @@ function Z(e) {
     );
     let j = (0, W.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: A }));
     return (i.useEffect(() => {
-        b || (0, P.LM)(V.tv),
+        (b || (0, P.LM)(V.tv),
             T ||
                 f ||
                 (null == s || h
@@ -191,7 +191,7 @@ function Z(e) {
                             : null != t
                               ? a(r.pn.PLAN_SELECT)
                               : a(r.pn.SKU_SELECT)
-                    : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s }));
+                    : a(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: s })));
     }, [h, s, o, p, f, b, n, T, a, t, d, m, A, C, I, j, u]),
     T)
         ? (0, l.jsx)(L.A, {})

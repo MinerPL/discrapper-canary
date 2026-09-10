@@ -14,14 +14,14 @@ class d extends i.Ay.PersistedStore {
     static persistKey = "ReportToModStore";
     static migrations = [(e) => ({ reportedMessages: e?.reportedMessages ?? {} })];
     initialize(e) {
-        null != e &&
+        (null != e &&
             (o.reportedMessages = Object.fromEntries(
                 Object.entries(e.reportedMessages).map((e) => {
                     let [t, n] = e;
                     return [t, new Set(n)];
                 }),
             )),
-            this.syncWith([a.A], c);
+            this.syncWith([a.A], c));
     }
     getState() {
         return o;
@@ -39,7 +39,7 @@ class d extends i.Ay.PersistedStore {
 let u = new d(l.h, {
     REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: function (e) {
         let { channelId: t, messageId: n } = e;
-        null == o.reportedMessages[t] && (o.reportedMessages[t] = new Set()), o.reportedMessages[t].add(n);
+        (null == o.reportedMessages[t] && (o.reportedMessages[t] = new Set()), o.reportedMessages[t].add(n));
     },
     GUILD_BAN_ADD: function (e) {
         let { user: t, guildId: n } = e;
@@ -54,15 +54,15 @@ let u = new d(l.h, {
         if (n !== r) return;
         let l = new Set(t.map((e) => e.user?.id)),
             a = Array.from(new Set(i ?? [])).filter((e) => !l.has(e));
-        null == s && (s = new Map()),
+        (null == s && (s = new Map()),
             l.forEach((e) => {
                 s?.set(e, !0);
             }),
             a.forEach((e) => {
                 s?.set(e, !1);
-            });
+            }));
     },
     LOGOUT: function () {
-        (r = null), (s = null), (o.reportedMessages = {});
+        ((r = null), (s = null), (o.reportedMessages = {}));
     },
 });

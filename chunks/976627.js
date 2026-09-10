@@ -19,12 +19,12 @@ function b(e) {
     let g = i.useCallback((e) => {
         let { rating: t, problem: i, feedback: s } = e,
             a = null == t;
-        (0, u.mf)(t, s, i?.value ?? null, a),
+        ((0, u.mf)(t, s, i?.value ?? null, a),
             a ||
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await n.e("137836").then(n.bind(n, 845671));
                     return (t) => (0, l.jsx)(e, { body: p.intl.string(p.t["d9+vQ8"]), ...t });
-                });
+                }));
     }, []);
     return (0, l.jsx)(a.A, {
         modalType: "ignore_user",

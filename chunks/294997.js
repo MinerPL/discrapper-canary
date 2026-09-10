@@ -1,4 +1,4 @@
-n.d(t, { T: () => l }), n(321073);
+(n.d(t, { T: () => l }), n(321073));
 var i = n(143236),
     r = n(941426),
     a = n(179689);
@@ -7,7 +7,7 @@ class l extends i.EventEmitter {
     logs = [];
     persist;
     constructor({ persist: e = !1 } = {}) {
-        super(), (this.persist = e);
+        (super(), (this.persist = e));
     }
     log(e, t) {
         let n = new d(e),
@@ -18,7 +18,9 @@ class l extends i.EventEmitter {
                 try {
                     r = i();
                 } finally {
-                    (s.time = a.FO.now() - l), this.persist && n.traces.push(s), this.emit("trace", e.type, t, s.time);
+                    ((s.time = a.FO.now() - l),
+                        this.persist && n.traces.push(s),
+                        this.emit("trace", e.type, t, s.time));
                 }
                 return r;
             };
@@ -28,10 +30,10 @@ class l extends i.EventEmitter {
         } catch (e) {
             throw ((n.error = e), e);
         } finally {
-            (n.totalTime = a.FO.now() - n.startTime),
+            ((n.totalTime = a.FO.now() - n.startTime),
                 this.persist && n.totalTime > 0 && this.logs.push(n),
                 this.logs.length > 1e3 && this.logs.shift(),
-                this.emit("log", e);
+                this.emit("log", e));
         }
         return n;
     }
@@ -40,18 +42,18 @@ class l extends i.EventEmitter {
             i = [];
         for (let t of this.logs)
             if (null == e || t.name === e) for (let e of t.traces) i.push([e.name, t.name, e.time]);
-        i.sort((e, t) => t[2] - e[2]), i.length > t && (i.length = t);
+        (i.sort((e, t) => t[2] - e[2]), i.length > t && (i.length = t));
         let r = 0,
             a = 0,
             l = i
                 .map((t) => {
                     let [n, i, a] = t,
                         s = `${n}`;
-                    return null == e && (s += `<${i}>`), (r = Math.max(s.length, r)), [s, a];
+                    return (null == e && (s += `<${i}>`), (r = Math.max(s.length, r)), [s, a]);
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (a += n), `${t.padEnd(r + 1, " ")} - ${n}ms`;
+                    return ((a += n), `${t.padEnd(r + 1, " ")} - ${n}ms`);
                 })
                 .join("\n");
         return (
@@ -77,17 +79,17 @@ ${l}
             i = {};
         for (let e of this.logs) for (let t of e.traces) i[t.name] = [t.name, e.name, t.time];
         let r = Object.values(i);
-        r.sort((e, t) => t[2] - e[2]), r.length > t && (r.length = t);
+        (r.sort((e, t) => t[2] - e[2]), r.length > t && (r.length = t));
         let a = 0,
             l = 0,
             o = r
                 .map((e) => {
                     let [t, n, i] = e;
-                    return (a = Math.max(t.length, a)), [t, i];
+                    return ((a = Math.max(t.length, a)), [t, i]);
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (l += n), `${t.padEnd(a + 1, " ")} - ${n}ms`;
+                    return ((l += n), `${t.padEnd(a + 1, " ")} - ${n}ms`);
                 })
                 .join("\n");
         return (
@@ -119,7 +121,7 @@ class d {
     traces = [];
     error;
     constructor(e) {
-        (this.id = o++), (this.action = e), (this.createdAt = new Date());
+        ((this.id = o++), (this.action = e), (this.createdAt = new Date()));
     }
     get name() {
         return this.action.type;

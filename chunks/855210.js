@@ -190,7 +190,7 @@ function D(e) {
             null != e && (0, h.openUserProfileModal)({ userId: e.id });
         }, [i]),
         f = s.useCallback(() => {
-            i(), o();
+            (i(), o());
         }, [i, o]);
     return (0, l.jsx)(c.Modal, {
         transitionState: t,

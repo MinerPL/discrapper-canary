@@ -21,7 +21,7 @@ let E = function (t) {
         [E, v] = l.useState(null),
         [A, j] = l.useState(!1);
     async function p(t) {
-        t.preventDefault(), v(null), j(!0);
+        (t.preventDefault(), v(null), j(!0));
         try {
             let t = o?.guild?.id ?? f.A.getChannel(o?.channel?.id)?.getGuildId() ?? void 0;
             t === x.TA && (t = void 0);
@@ -158,9 +158,9 @@ let R = function (t) {
                                             onClick:
                                                 ((l = t.id),
                                                 async () => {
-                                                    c(null), s(l), I(l);
+                                                    (c(null), s(l), I(l));
                                                     try {
-                                                        await m.A.sendVerificationEmail(i, !0, l), e(x.Di.VERIFY_PIN);
+                                                        (await m.A.sendVerificationEmail(i, !0, l), e(x.Di.VERIFY_PIN));
                                                     } catch (t) {
                                                         c(new h.LG(t));
                                                     } finally {
@@ -200,9 +200,9 @@ let G = function (t) {
         [c, g] = l.useState(null),
         [f, y] = l.useState(!1);
     async function I() {
-        g(null), y(!0);
+        (g(null), y(!0));
         try {
-            await m.A.signup(e, s), i(x.Di.EMAIL_WAITLIST);
+            (await m.A.signup(e, s), i(x.Di.EMAIL_WAITLIST));
         } catch (t) {
             g(new h.LG(t));
         } finally {
@@ -334,6 +334,6 @@ function J(t) {
         case x.Di.EMAIL_WAITLIST:
             return (0, n.jsx)(Y, { setStep: C, school: S, ...i });
         default:
-            return i.onClose(), null;
+            return (i.onClose(), null);
     }
 }

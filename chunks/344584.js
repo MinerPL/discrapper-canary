@@ -11,7 +11,7 @@ var i = n(339048),
 class _ extends r.A {
     actions = {
         POST_CONNECTION_OPEN: () => {
-            this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription();
+            (this.maybeFetchSubscriptions(), this.maybeFetchCountryCode(), this.maybeFetchMostRecentSubscription());
         },
     };
     maybeFetchSubscriptions = async () => {
@@ -34,7 +34,7 @@ class _ extends r.A {
         (0, c.ki)(e) && !l.A.ipCountryCodeLoaded && (await this.fetchCountryCode());
     };
     fetchCountryCode = async () => {
-        await (0, a.xe)(), null != l.A.ipCountryCode && (await (0, a.$o)());
+        (await (0, a.xe)(), null != l.A.ipCountryCode && (await (0, a.$o)()));
     };
 }
 let E = new _();

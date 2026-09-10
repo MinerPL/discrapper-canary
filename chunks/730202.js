@@ -77,12 +77,12 @@ let O = new a(o.h, {
         let { collectionIds: t, collections: l } = e,
             c = Date.now(),
             o = new Set();
-        l.forEach((e) => {
-            o.add(e.id), (n[e.id] = { state: "success", collection: e, fetchedAt: c });
+        (l.forEach((e) => {
+            (o.add(e.id), (n[e.id] = { state: "success", collection: e, fetchedAt: c }));
         }),
             t.forEach((e) => {
                 o.has(e) || delete n[e];
-            });
+            }));
     },
     STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE: function (e) {
         let { collectionIds: t, apiError: l } = e,
@@ -98,10 +98,10 @@ let O = new a(o.h, {
     STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function (e) {
         let { applicationId: t, collections: l, includePricing: c, skuTypes: o } = e,
             i = Date.now();
-        (r[t] = { state: "success", collections: l, fetchedAt: i, includePricing: c, skuTypes: o }),
+        ((r[t] = { state: "success", collections: l, fetchedAt: i, includePricing: c, skuTypes: o }),
             l.forEach((e) => {
                 n[e.id] = { state: "success", collection: e, fetchedAt: i };
-            });
+            }));
     },
     STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE: function (e) {
         let { applicationId: t, apiError: l } = e;
@@ -114,11 +114,11 @@ let O = new a(o.h, {
     STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function (e) {
         let { pageKey: t, listKey: l, collections: c, total: o } = e,
             r = Date.now();
-        (i[t] = { state: "success", collectionIds: c.map((e) => e.id), fetchedAt: r }),
+        ((i[t] = { state: "success", collectionIds: c.map((e) => e.id), fetchedAt: r }),
             (_[l] = o),
             c.forEach((e) => {
                 n[e.id] = { state: "success", collection: e, fetchedAt: r };
-            });
+            }));
     },
     STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function (e) {
         let { pageKey: t, apiError: l } = e;
@@ -130,16 +130,16 @@ let O = new a(o.h, {
     },
     STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function (e) {
         let { requestKey: t, collections: l } = e;
-        (u[t] = { state: "success", collectionIds: l.map((e) => e.id), fetchedAt: Date.now() }),
+        ((u[t] = { state: "success", collectionIds: l.map((e) => e.id), fetchedAt: Date.now() }),
             l.forEach((e) => {
                 s[e.id] = e;
-            });
+            }));
     },
     STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE: function (e) {
         let { requestKey: t, apiError: l } = e;
         u[t] = { state: "error", fetchedAt: Date.now(), fetchError: l };
     },
     LOGOUT: function (e) {
-        (n = {}), (r = {}), (i = {}), (_ = {}), (u = {}), (s = {});
+        ((n = {}), (r = {}), (i = {}), (_ = {}), (u = {}), (s = {}));
     },
 });

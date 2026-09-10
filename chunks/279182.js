@@ -1,4 +1,4 @@
-n.d(t, { A: () => en }), n(321073);
+(n.d(t, { A: () => en }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -131,7 +131,7 @@ function B(e) {
                 }, []),
                 u = l.useCallback(
                     (e) => {
-                        o(!0), d(e);
+                        (o(!0), d(e));
                     },
                     [d],
                 );
@@ -157,9 +157,9 @@ function B(e) {
                 children: (0, i.jsx)(o.D, {
                     innerRef: E,
                     onClick: (e) => {
-                        e.stopPropagation(),
+                        (e.stopPropagation(),
                             u ? (0, H.r7)(n, t) : (0, H.wF)(n, t, R.r.REACTION_BUTTON),
-                            I && C(P.i.TAKE_ACTION);
+                            I && C(P.i.TAKE_ACTION));
                     },
                     className: a()(N.reactionBtn, N.bookmarkBtn, { [N.visible]: u || x }, r),
                     children: (0, i.jsx)(j, { size: "sm", color: "currentColor", className: N.icon }),
@@ -205,7 +205,7 @@ let Q = l.memo(function (e) {
         if (E && null != C) {
             let { accentColor: e, backgroundColor: i, opacity: l } = C,
                 s = (0, K.xp)(i ?? "", l) ?? "";
-            I && (j.borderColor = i), (j.background = s), (t = e), (n = e);
+            (I && (j.borderColor = i), (j.background = s), (t = e), (n = e));
         }
         let T = { minWidth: N, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
@@ -301,7 +301,7 @@ class et extends l.PureComponent {
                       f > 0 &&
                           (0, i.jsx)(o.D, {
                               onClick: (t) => {
-                                  t.stopPropagation(), (0, d.$)(e);
+                                  (t.stopPropagation(), (0, d.$)(e));
                               },
                               className: a()(_.reaction, p, _.remainingReactions),
                               "aria-label": D.intl.string(D.t.lfIHs4),
@@ -338,9 +338,9 @@ let en = function (e) {
                 r = i.length;
             return (
                 l.forEach((t) => {
-                    t.burst_count > 0 && e.push({ ...t, type: u.v.BURST }),
+                    (t.burst_count > 0 && e.push({ ...t, type: u.v.BURST }),
                         t.count > 0 && e.push({ ...t, type: u.v.NORMAL }),
-                        null != t.me_vote && --r;
+                        null != t.me_vote && --r);
                 }),
                 { combinedReactions: e, visibleReactionsCount: r, remainingReactions: a }
             );

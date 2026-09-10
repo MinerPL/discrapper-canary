@@ -38,27 +38,27 @@ function m(t) {
                 [g, T] = n.useState(!1),
                 R = null !== m ? m : E;
             n.useEffect(() => {
-                y(null), T(!1);
+                (y(null), T(!1));
             }, [r]);
             let L = n.useCallback(async () => {
                 if (!g)
                     if ((T(!0), R && null != c)) {
                         y(!1);
                         try {
-                            await I.A.removeSkuFromWishlist(c, r, o), d.O.announce(_.intl.string(_.t.DSXOiP)), s?.();
+                            (await I.A.removeSkuFromWishlist(c, r, o), d.O.announce(_.intl.string(_.t.DSXOiP)), s?.());
                         } catch (t) {
                             u?.(t);
                         } finally {
-                            y(null), T(!1);
+                            (y(null), T(!1));
                         }
                     } else {
                         y(!0);
                         try {
-                            await I.A.addSkuToWishlist(r, o), a || d.O.announce(_.intl.string(_.t["3T2jbf"])), l?.();
+                            (await I.A.addSkuToWishlist(r, o), a || d.O.announce(_.intl.string(_.t["3T2jbf"])), l?.());
                         } catch (t) {
                             u?.(t);
                         } finally {
-                            y(null), T(!1);
+                            (y(null), T(!1));
                         }
                     }
             }, [g, R, c, r, o, l, s, u, a]);
@@ -68,7 +68,7 @@ function m(t) {
             skuId: u,
             location: m,
             onAddSuccess: n.useCallback(() => {
-                v &&
+                (v &&
                     null != a &&
                     (o?.(),
                     (0, s.openModalLazy)(async () => {
@@ -76,7 +76,7 @@ function m(t) {
                         return (e) => (0, i.jsx)(t, { ...e, graphic: a });
                     }),
                     L(E.i.USER_DISMISS)),
-                    g?.();
+                    g?.());
             }, [L, a, o, v, g]),
             onError: T ?? y,
         }),
@@ -84,5 +84,5 @@ function m(t) {
     };
 }
 function y() {
-    (0, u.P0)((0, a.o)(_.intl.string(_.t.F8FvUy), o.Ck.FAILURE)), d.O.announce(_.intl.string(_.t.F8FvUy));
+    ((0, u.P0)((0, a.o)(_.intl.string(_.t.F8FvUy), o.Ck.FAILURE)), d.O.announce(_.intl.string(_.t.F8FvUy)));
 }

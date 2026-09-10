@@ -12,7 +12,7 @@ var o = !1,
         var e;
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            i(this, "internalMonitor", void 0), i(this, "sourceId", null), (this.internalMonitor = e.getMonitor());
+            (i(this, "internalMonitor", void 0), i(this, "sourceId", null), (this.internalMonitor = e.getMonitor()));
         }
         return (
             (e = [
@@ -36,7 +36,7 @@ var o = !1,
                             "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (o = !0), this.internalMonitor.canDragSource(this.sourceId);
+                            return ((o = !0), this.internalMonitor.canDragSource(this.sourceId));
                         } finally {
                             o = !1;
                         }
@@ -51,7 +51,7 @@ var o = !1,
                             "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (a = !0), this.internalMonitor.isDraggingSource(this.sourceId);
+                            return ((a = !0), this.internalMonitor.isDraggingSource(this.sourceId));
                         } finally {
                             a = !1;
                         }
@@ -169,10 +169,10 @@ var o = !1,
             (function (e, t) {
                 for (var r = 0; r < t.length; r++) {
                     var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
+                    ((n.enumerable = n.enumerable || !1),
                         (n.configurable = !0),
                         "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                        Object.defineProperty(e, n.key, n));
                 }
             })(t.prototype, e),
             t

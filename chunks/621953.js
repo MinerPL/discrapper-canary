@@ -61,7 +61,7 @@ function U(n) {
                 p = (0, d.bG)([G.Ay], () => i.some((n) => G.Ay.isClipExporting(n.id)));
             async function f() {
                 if (((0, a.Z_)(), null != c)) {
-                    c(), l?.();
+                    (c(), l?.());
                     return;
                 }
                 let n = (0, M.t)(e);
@@ -92,7 +92,7 @@ function U(n) {
                       leadingAccessory: { type: "icon", icon: D.A },
                       disabled: l,
                       action: function () {
-                          (0, a.Z_)(), e?.();
+                          ((0, a.Z_)(), e?.());
                       },
                   });
         })({ clips: i, onEdit: Y, actionsDisabled: J }),
@@ -106,7 +106,7 @@ function U(n) {
                       leadingAccessory: { type: "icon", icon: m.y },
                       disabled: e,
                       action: function () {
-                          (0, a.Z_)(), i.forEach((n) => (0, j.XK)(n));
+                          ((0, a.Z_)(), i.forEach((n) => (0, j.XK)(n)));
                       },
                   });
         })({ clips: i, actionsDisabled: J }),
@@ -122,7 +122,7 @@ function U(n) {
                 s = i[0];
             if (i.length > 1 || !c || s.type === S.nQ.SCREENSHOT) return null;
             async function u() {
-                (0, a.Z_)(), await (0, L.n)(s, { analyticsLocations: l, channelId: e });
+                ((0, a.Z_)(), await (0, L.n)(s, { analyticsLocations: l, channelId: e }));
             }
             return (0, t.jsx)(o.Dr, {
                 id: "clips-export-soundboard",
@@ -141,9 +141,9 @@ function U(n) {
                       label: E.intl.string(b.default.tv7emB),
                       leadingAccessory: { type: "icon", icon: A.CopyIcon },
                       action: function () {
-                          (0, a.Z_)(),
+                          ((0, a.Z_)(),
                               _.A.clipboard.copyFile(e.filepath),
-                              (0, y.P0)((0, g.o)(E.intl.string(E.t.mGZ66D), h.Ck.SUCCESS));
+                              (0, y.P0)((0, g.o)(E.intl.string(E.t.mGZ66D), h.Ck.SUCCESS)));
                       },
                   });
         })({ clips: i }),
@@ -154,7 +154,7 @@ function U(n) {
             if (i.length > 1) return null;
             let s = l.type === S.nQ.SCREENSHOT;
             async function d() {
-                (0, a.Z_)(), (0, j.H1)([l.id]);
+                ((0, a.Z_)(), (0, j.H1)([l.id]));
                 try {
                     let n = await (0, j.VO)(l, { analyticsLocations: [...e, c.A.CLIPS_EXPORT_TO_FILE] }),
                         i = await n.arrayBuffer(),
@@ -167,7 +167,7 @@ function U(n) {
                 }
             }
             async function u() {
-                (0, a.Z_)(), (0, j.H1)([l.id]);
+                ((0, a.Z_)(), (0, j.H1)([l.id]));
                 try {
                     let n = await (0, j.VO)(l, { analyticsLocations: [...e, c.A.CLIPS_EXPORT_TO_SOUND_FILE] }),
                         i = await (0, O.R_)(n),
@@ -212,7 +212,7 @@ function U(n) {
                       color: "danger",
                       disabled: e,
                       action: function () {
-                          (0, a.Z_)(), i.forEach((n) => (0, j.XK)(n));
+                          ((0, a.Z_)(), i.forEach((n) => (0, j.XK)(n)));
                       },
                   });
         })({ clips: i, actionsDisabled: J }),
@@ -225,7 +225,7 @@ function U(n) {
                 color: "danger",
                 disabled: c,
                 action: function (n) {
-                    (0, a.Z_)(), (0, x.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l });
+                    ((0, a.Z_)(), (0, x.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l }));
                 },
             });
         })({ clips: i, onBeforeDelete: q, onAfterDelete: z, actionsDisabled: J }),
@@ -236,7 +236,7 @@ function U(n) {
                 id: "show-in-folder",
                 label: "Show in Folder",
                 action: function () {
-                    (0, a.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath);
+                    ((0, a.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath));
                 },
             });
         })({ clips: i }),
@@ -248,7 +248,7 @@ function U(n) {
                       id: "open-in-inspector",
                       label: "Open in Inspector",
                       action: function () {
-                          (0, a.Z_)(), (0, u.closeAllModals)(), (0, k.h)(i[0].filepath);
+                          ((0, a.Z_)(), (0, u.closeAllModals)(), (0, k.h)(i[0].filepath));
                       },
                   })
                 : null;
@@ -263,7 +263,7 @@ function U(n) {
                       label: "Submit Clip Feedback",
                       leadingAccessory: { type: "icon", icon: p.FlagIcon },
                       action: function () {
-                          (0, a.Z_)(),
+                          ((0, a.Z_)(),
                               (0, u.openModalLazy)(
                                   async () => {
                                       let { default: n } = await Promise.all([
@@ -274,7 +274,7 @@ function U(n) {
                                       return (e) => (0, t.jsx)(n, { ...e, clip: i[0] });
                                   },
                                   { stackingBehavior: "stack" },
-                              );
+                              ));
                       },
                   });
         })({ clips: i }),

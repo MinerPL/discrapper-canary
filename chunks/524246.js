@@ -18,7 +18,7 @@ let u = function (t) {
                     (t = t.map((i, a) =>
                         setTimeout(() => {
                             var i, l;
-                            a === t.length - 1 && f(!0),
+                            (a === t.length - 1 && f(!0),
                                 d.createMultipleConfetti(
                                     ((i = e.getBoundingClientRect()),
                                     (l = (l = u) ?? 1),
@@ -37,7 +37,7 @@ let u = function (t) {
                                         dragCoefficient: { type: "static", value: 0.166 },
                                     }),
                                     50,
-                                );
+                                ));
                         }, 100 * a),
                     )),
                 () => {

@@ -8,7 +8,7 @@ var l = n(192308),
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (!(0, s.W)()) {
-        (0, l.closeModal)(r.y), e.onClose?.();
+        ((0, l.closeModal)(r.y), e.onClose?.());
         return;
     }
     !(function (e) {
@@ -26,7 +26,7 @@ function u() {
         });
     })({
         onConfirm: () => {
-            (0, l.closeModal)(r.y), e.onClose?.();
+            ((0, l.closeModal)(r.y), e.onClose?.());
         },
     });
 }
@@ -47,7 +47,7 @@ async function c(e) {
     return {
         data: await new Promise((e, t) => {
             let n = new FileReader();
-            (n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(l);
+            ((n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(l));
         }),
         file: r,
         image: null,

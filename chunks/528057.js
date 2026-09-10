@@ -13,10 +13,10 @@ function l(e) {
         isTrayButton: !1,
         iconComponent: u,
         onMouseEnter: (e) => {
-            l?.(e), _.onMouseEnter();
+            (l?.(e), _.onMouseEnter());
         },
         onMouseLeave: (e) => {
-            o?.(e), _.onMouseLeave();
+            (o?.(e), _.onMouseLeave());
         },
         ...d,
     });

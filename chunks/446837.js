@@ -6,14 +6,14 @@ var n,
     s = "ResizeObserver loop completed with undelivered notifications.",
     l = function () {
         var e;
-        "function" == typeof ErrorEvent
+        ("function" == typeof ErrorEvent
             ? (e = new ErrorEvent("error", { message: s }))
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = s)),
-            window.dispatchEvent(e);
+            window.dispatchEvent(e));
     };
-((n = i || (i = {})).BORDER_BOX = "border-box"),
+(((n = i || (i = {})).BORDER_BOX = "border-box"),
     (n.CONTENT_BOX = "content-box"),
-    (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
+    (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box"));
 var u = (function () {
         function e(e, t, r, n) {
             return (
@@ -105,7 +105,7 @@ var u = (function () {
     }),
     S = function (e) {
         if (m.has(e)) return m.get(e);
-        if (f(e)) return m.set(e, _), _;
+        if (f(e)) return (m.set(e, _), _);
         var t = getComputedStyle(e),
             r = c(e) && e.ownerSVGElement && e.getBBox(),
             n = !g && "border-box" === t.boxSizing,
@@ -136,7 +136,7 @@ var u = (function () {
                 contentBoxSize: w(I, O, i),
                 contentRect: new u(p, s, I, O),
             });
-        return m.set(e, L), L;
+        return (m.set(e, L), L);
     },
     x = function (e, t) {
         var r = S(e),
@@ -154,15 +154,15 @@ var u = (function () {
     },
     E = function (e) {
         var t = S(e);
-        (this.target = e),
+        ((this.target = e),
             (this.contentRect = t.contentRect),
             (this.borderBoxSize = [t.borderBoxSize]),
             (this.contentBoxSize = [t.contentBoxSize]),
-            (this.devicePixelContentBoxSize = [t.devicePixelContentBoxSize]);
+            (this.devicePixelContentBoxSize = [t.devicePixelContentBoxSize]));
     },
     k = function (e) {
         if (f(e)) return 1 / 0;
-        for (var t = 0, r = e.parentNode; r; ) (t += 1), (r = r.parentNode);
+        for (var t = 0, r = e.parentNode; r;) ((t += 1), (r = r.parentNode));
         return t;
     },
     C = function () {
@@ -171,29 +171,29 @@ var u = (function () {
         a.forEach(function (r) {
             if (0 !== r.activeTargets.length) {
                 var n = [];
-                r.activeTargets.forEach(function (t) {
+                (r.activeTargets.forEach(function (t) {
                     var r = new E(t.target),
                         i = k(t.target);
-                    n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), i < e && (e = i);
+                    (n.push(r), (t.lastReportedSize = x(t.target, t.observedBox)), i < e && (e = i));
                 }),
                     t.push(function () {
                         r.callback.call(r.observer, n, r.observer);
                     }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    r.activeTargets.splice(0, r.activeTargets.length));
             }
         });
         for (var r = 0; r < t.length; r++) (0, t[r])();
         return e;
     },
     T = function (e) {
-        m.clear(),
+        (m.clear(),
             a.forEach(function (t) {
-                t.activeTargets.splice(0, t.activeTargets.length),
+                (t.activeTargets.splice(0, t.activeTargets.length),
                     t.skippedTargets.splice(0, t.skippedTargets.length),
                     t.observationTargets.forEach(function (r) {
                         r.isActive() && (k(r.target) > e ? t.activeTargets.push(r) : t.skippedTargets.push(r));
-                    });
-            });
+                    }));
+            }));
     },
     M = function () {
         var e = 0;
@@ -216,16 +216,16 @@ var u = (function () {
         if (!o) {
             var t = 0,
                 r = document.createTextNode("");
-            new MutationObserver(function () {
+            (new MutationObserver(function () {
                 return P.splice(0).forEach(function (e) {
                     return e();
                 });
             }).observe(r, { characterData: !0 }),
                 (o = function () {
                     r.textContent = "" + (t ? t-- : t++);
-                });
+                }));
         }
-        P.push(e), o();
+        (P.push(e), o());
     },
     I = function (e) {
         A(function () {
@@ -254,10 +254,10 @@ var u = (function () {
     F = new ((function () {
         function e() {
             var e = this;
-            (this.stopped = !0),
+            ((this.stopped = !0),
                 (this.listener = function () {
                     return e.schedule();
-                });
+                }));
         }
         return (
             (e.prototype.run = function (e) {
@@ -275,7 +275,7 @@ var u = (function () {
                     }));
             }),
             (e.prototype.schedule = function () {
-                this.stop(), this.run(12);
+                (this.stop(), this.run(12));
             }),
             (e.prototype.observe = function () {
                 var e = this,
@@ -307,13 +307,13 @@ var u = (function () {
         );
     })())(),
     N = function (e) {
-        !O && e > 0 && F.start(), (O += e) || F.stop();
+        (!O && e > 0 && F.start(), (O += e) || F.stop());
     },
     j = (function () {
         function e(e, t) {
-            (this.target = e),
+            ((this.target = e),
                 (this.observedBox = t || i.CONTENT_BOX),
-                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
+                (this.lastReportedSize = { inlineSize: 0, blockSize: 0 }));
         }
         return (
             (e.prototype.isActive = function () {
@@ -331,11 +331,11 @@ var u = (function () {
         );
     })(),
     B = function (e, t) {
-        (this.activeTargets = []),
+        ((this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
-            (this.callback = t);
+            (this.callback = t));
     },
     K = new Map(),
     $ = function (e, t) {
@@ -347,7 +347,7 @@ var u = (function () {
         return (
             (e.connect = function (e, t) {
                 var r = new B(e, t);
-                a.push(r), K.set(e, r);
+                (a.push(r), K.set(e, r));
             }),
             (e.observe = function (e, t, r) {
                 if (K.has(e)) {
@@ -366,7 +366,7 @@ var u = (function () {
             (e.disconnect = function (e) {
                 if (K.has(e)) {
                     var t = K.get(e);
-                    a.splice(a.indexOf(t), 1), K.delete(e), N(-t.observationTargets.length);
+                    (a.splice(a.indexOf(t), 1), K.delete(e), N(-t.observationTargets.length));
                 }
             }),
             e

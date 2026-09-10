@@ -3,10 +3,10 @@ var i = d(522681),
     e = d(693160),
     c = class extends i.n {
         constructor() {
-            super(i.d.IdBlurGlarePipeline),
+            (super(i.d.IdBlurGlarePipeline),
                 (this.lastProcessResult = null),
                 (this.capturedCanvas = null),
-                (this.originalCapturedCanvas = null);
+                (this.originalCapturedCanvas = null));
         }
         async initialize(l) {
             !0 === l.videoSelfie
@@ -14,7 +14,7 @@ var i = d(522681),
                 : await this.initializeBase(l, "idCapture");
         }
         setCallbacks(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setIdCaptureCallbacks(
                     this.getPipelineType(),
                     l.onFarAway ?? (() => {}),
@@ -34,10 +34,10 @@ var i = d(522681),
                     l.onIdTypeChange ? (t) => l.onIdTypeChange?.(t) : () => {},
                     l.onIdSideChange ? (t) => l.onIdSideChange?.(t) : () => {},
                     l.onCapturingCounterValueChange ? (t) => l.onCapturingCounterValueChange?.(t) : () => {},
-                );
+                ));
         }
         setThresholds(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setIdCaptureThresholds(
                     this.getPipelineType(),
                     l.blurThreshold,
@@ -49,10 +49,10 @@ var i = d(522681),
                     l.idDetectedTimeout,
                     l.autocaptureTimeout,
                     l.framesAggregationInterval,
-                );
+                ));
         }
         setGeometry(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setIdCaptureGeometryParams(
                     this.getPipelineType(),
                     l.areaDown,
@@ -67,10 +67,10 @@ var i = d(522681),
                     l.windowOuterHeight,
                     l.windowInnerWidth,
                     l.windowInnerHeight,
-                );
+                ));
         }
         setSettings(l) {
-            this.ensureInitialized(),
+            (this.ensureInitialized(),
                 i.a.setIdCaptureConfigParams(
                     this.getPipelineType(),
                     l.isFixedMask,
@@ -81,7 +81,7 @@ var i = d(522681),
                     l.faceQualityCheckEnabled,
                     l.iouCheckEnabled,
                     l.fpsLimitEnabled,
-                );
+                ));
         }
         setModelType(l) {
             let t;
@@ -147,7 +147,7 @@ var i = d(522681),
                 s = Math.max(1, Math.min(t.w, d - c)),
                 n = Math.max(1, Math.min(t.h, i - a)),
                 Z = document.createElement("canvas");
-            (Z.width = s), (Z.height = n);
+            ((Z.width = s), (Z.height = n));
             let b = Z.getContext("2d");
             return b ? (b.drawImage(l.canvas, c, a, s, n, 0, 0, s, n), new e.t(Z)) : null;
         }
@@ -158,13 +158,13 @@ var i = d(522681),
             return this.originalCapturedCanvas;
         }
         setCapturedCanvases(l, t) {
-            (this.originalCapturedCanvas = l), (this.capturedCanvas = t);
+            ((this.originalCapturedCanvas = l), (this.capturedCanvas = t));
         }
         reset() {
-            super.reset(),
+            (super.reset(),
                 (this.lastProcessResult = null),
                 (this.capturedCanvas = null),
-                (this.originalCapturedCanvas = null);
+                (this.originalCapturedCanvas = null));
         }
     };
 let a = {

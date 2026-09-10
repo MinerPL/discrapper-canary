@@ -1,4 +1,4 @@
-n.d(t, {
+(n.d(t, {
     $o: () => p,
     Gd: () => A,
     Mr: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     ob: () => I,
     vI: () => g,
 }),
-    n(321073);
+    n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(803805),
@@ -43,17 +43,17 @@ function I(e, t) {
 }
 function f(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
-    return e.mergePartial(t, n), t;
+    return (e.mergePartial(t, n), t);
 }
 function p(e, t, n) {
-    return (null == t || "null" === t) && (t = c.D0I), t in e.guilds || (e.guilds[t] = s.nx.create()), n(e.guilds[t]);
+    return ((null == t || "null" === t) && (t = c.D0I), t in e.guilds || (e.guilds[t] = s.nx.create()), n(e.guilds[t]));
 }
 function T(e, t, n, i) {
     var r;
-    return (r = (e) => m(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r);
+    return ((r = (e) => m(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
 }
 function m(e, t, n) {
-    return t in e.channels || (e.channels[t] = s.Ju.create()), n(e.channels[t]);
+    return (t in e.channels || (e.channels[t] = s.Ju.create()), n(e.channels[t]));
 }
 function g(e, t) {
     null == e.versions && (e.versions = l.u.create());
@@ -75,7 +75,7 @@ function g(e, t) {
             n.cleanup?.();
             continue;
         }
-        (r = !0), null != n.cleanup && a.push(n.cleanup);
+        ((r = !0), null != n.cleanup && a.push(n.cleanup));
     }
     return { proto: e, isDirty: r, cleanupFuncs: a };
 }
@@ -95,11 +95,11 @@ function S(e, t) {
     let i = {};
     for (let [e, t] of n) {
         let n = a.zT.create();
-        (n.frecency = t.frecency),
+        ((n.frecency = t.frecency),
             (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)),
             (n.score = Math.round(t.score)),
             (n.totalUses = t.totalUses),
-            (i[e] = n);
+            (i[e] = n));
     }
     return i;
 }

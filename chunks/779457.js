@@ -113,14 +113,14 @@ function I(t) {
     i.useEffect(() => {
         !(async function () {
             try {
-                f(!0), await (0, A.py)(r, s), f(!1);
+                (f(!0), await (0, A.py)(r, s), f(!1));
             } catch (t) {
-                e(),
+                (e(),
                     (0, u.A)({
                         title: C.intl.string(C.t.OCwKlu),
                         subtitle: C.intl.string(C.t.VQ0lXY),
                         confirmText: C.intl.string(C.t["NX+WJN"]),
-                    });
+                    }));
             }
         })();
     }, [r, s, e]);

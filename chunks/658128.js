@@ -10,7 +10,7 @@ var i = n(181079),
     u = n(808728),
     _ = n(71393),
     E = n(309010);
-n(645959), n(652215);
+(n(645959), n(652215));
 var A = n(746080);
 function h(e) {
     let t = E.Ay.getChannelId(e),

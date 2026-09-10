@@ -24,6 +24,6 @@ r.exports = function (r, t) {
                 if (typeof l == typeof p) continue;
                 c(l, p);
             }
-            (r.sham || (p && p.sham)) && i(l, "sham", !0), u(e, s, l, r);
+            ((r.sham || (p && p.sham)) && i(l, "sham", !0), u(e, s, l, r));
         }
 };

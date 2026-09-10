@@ -86,10 +86,10 @@ function E(t) {
         { onClose: N } = A,
         L = l.useCallback(
             (t) => {
-                t.stopPropagation(),
+                (t.stopPropagation(),
                     T().then(() => {
                         N?.();
-                    });
+                    }));
             },
             [N, T],
         ),
@@ -130,7 +130,7 @@ function E(t) {
                         t = k.intl.formatToPlainString(f.default["4jSvr1"], { perk: y.title, memberCount: e ?? 0 });
                 }
                 let a = [{ text: t, critical: y.skuId === o.FB }];
-                return n && y.skuId === o.YG && a.push({ text: k.intl.string(f.default.M4XL5n), critical: !0 }), a;
+                return (n && y.skuId === o.YG && a.push({ text: k.intl.string(f.default.M4XL5n), critical: !0 }), a);
             }, [y, s, e, n])),
             l.useMemo(
                 () =>

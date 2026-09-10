@@ -71,10 +71,10 @@ function x(e) {
         v = i.useCallback(
             (e) => {
                 let n = (0, d.clamp)(e, 450, t);
-                (y.current = n), null != g.current && (g.current.style.width = `${n}px`);
+                ((y.current = n), null != g.current && (g.current.style.width = `${n}px`));
                 let r = j || N ? n : n + D;
-                null != x.current && (x.current.style.minWidth = `${r}px`),
-                    null != E.current && (E.current.style.width = `${r}px`);
+                (null != x.current && (x.current.style.minWidth = `${r}px`),
+                    null != E.current && (E.current.style.width = `${r}px`));
             },
             [450, t, j, N, D],
         ),
@@ -85,7 +85,7 @@ function x(e) {
             o.Ay.updatedUnsyncedSettings({ [A]: y.current });
         }, [A]);
     i.useLayoutEffect(() => {
-        v(y.current), P();
+        (v(y.current), P());
     }, [v, P]);
     let W = b ?? i.Fragment;
     return (0, a.jsxs)(a.Fragment, {

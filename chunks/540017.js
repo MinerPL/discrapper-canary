@@ -11,14 +11,14 @@ var n =
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     o = r(297920),
@@ -67,7 +67,7 @@ var n =
                         var p = e.outputRange;
                         f("outputRange", p);
                         var h = e.inputRange;
-                        f("inputRange", h),
+                        (f("inputRange", h),
                             (function (e) {
                                 a(e.length >= 2, "inputRange must have at least 2 elements");
                                 for (var t = 1; t < e.length; ++t)
@@ -80,7 +80,7 @@ var n =
                                     ") and outputRange (" +
                                     p.length +
                                     ") must have the same length",
-                            );
+                            ));
                         var m = e.easing || s,
                             v = "extend";
                         void 0 !== e.extrapolateLeft
@@ -140,7 +140,7 @@ function u(e) {
 }
 var c = /[0-9\.-]+/g;
 function f(e, t) {
-    a(t.length >= 2, e + " must have at least 2 elements"),
-        a(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + "cannot be ]-infinity;+infinity[ " + t);
+    (a(t.length >= 2, e + " must have at least 2 elements"),
+        a(2 !== t.length || t[0] !== -1 / 0 || t[1] !== 1 / 0, e + "cannot be ]-infinity;+infinity[ " + t));
 }
 e.exports = l;

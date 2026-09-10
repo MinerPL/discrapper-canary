@@ -19,8 +19,8 @@ function l(e) {
         ));
 }
 function o(e, t) {
-    r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" }),
-        null != e && null != t && r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: e, emojiId: t });
+    (r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" }),
+        null != e && null != t && r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: e, emojiId: t }));
 }
 function d(e, t) {
     null != e && null != t && r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId: e, emojiId: t });

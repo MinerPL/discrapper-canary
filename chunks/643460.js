@@ -38,7 +38,7 @@ function v(t) {
                 text: u.intl.format(u.t.wBlJCr, {
                     recentActivityURL: m.A.getArticleURL(x.MVz.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {
-                        e(), (0, d.A)(h.J.ACTIVITY_PRIVACY);
+                        (e(), (0, d.A)(h.J.ACTIVITY_PRIVACY));
                     },
                 }),
             },

@@ -20,6 +20,6 @@ let l = new s(r.h, {
     },
     WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION: function (e) {
         let { value: t, isAnimated: n } = e;
-        (a.isDisplayingWowMomentConfirmation = t), (a.isAnimated = n);
+        ((a.isDisplayingWowMomentConfirmation = t), (a.isAnimated = n));
     },
 });

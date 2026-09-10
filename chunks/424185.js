@@ -30,14 +30,14 @@ function f(t) {
         T = l.useRef(0),
         C = l.useRef(!1);
     (0, _.Ay)(() => {
-        (T.current = Date.now()),
+        ((T.current = Date.now()),
             E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
                 sku_id: j,
                 guild_id: R,
                 application_id: k,
                 eligibility_state: A?.state ?? "none",
                 location_stack: m,
-            });
+            }));
     });
     let I = l.useCallback(
         (t) => {
@@ -64,7 +64,7 @@ function f(t) {
         l.useEffect(() => {
             if (null != S && "checking" !== S) {
                 if ("ineligible" === S) return void I("ineligible");
-                I(S), f();
+                (I(S), f());
             }
         }, [S, f, I]),
         (0, n.jsx)(r.d, {

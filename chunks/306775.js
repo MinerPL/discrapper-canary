@@ -42,7 +42,7 @@ function g() {
                         throw Error(
                             "braintree client missing _navigateFrameToAuth. did someone upgrade the braintree library?",
                         );
-                    (e._navigateFrameToAuth = function (e) {
+                    ((e._navigateFrameToAuth = function (e) {
                         let t = this._formatPaymentResourceData(e);
                         return C.Bo.post({
                             url: I.Rsh.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
@@ -70,7 +70,7 @@ function g() {
                                 ),
                             );
                     }),
-                        p.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS", paypalClient: e });
+                        p.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS", paypalClient: e }));
                 })
                 .catch(() => p.h.dispatch({ type: "BRAINTREE_CREATE_PAYPAL_CLIENT_FAIL" }));
         });
@@ -80,7 +80,7 @@ function P() {
     if (null == e) throw Error("braintree paypal client must be initialized before calling this");
     p.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" });
     let t = Promise.resolve("");
-    (0, y.isDesktop)() && (t = (0, h.jf)(I.hes.PAYPAL)),
+    ((0, y.isDesktop)() && (t = (0, h.jf)(I.hes.PAYPAL)),
         t
             .then(() => e.tokenize({ flow: "vault" }))
             .then((e) => {
@@ -106,12 +106,12 @@ function P() {
                     ? p.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL_WINDOW_CLOSED" })
                     : (p.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_FAIL", message: t, code: n }),
                       E.pM(Error(`Braintree Paypal Error: ${t} ${n} ${l}`)));
-            });
+            }));
 }
 function v() {
     let e = f.A.getVenmoClient();
     if (null == e) throw Error("Braintree Venmo client must be initialized before calling tokenize.");
-    p.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
+    (p.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_START" }),
         e
             .tokenize()
             .then((e) => {
@@ -124,7 +124,7 @@ function v() {
                     ? p.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_FAIL_CANCELED" })
                     : (p.h.dispatch({ type: "BRAINTREE_TOKENIZE_VENMO_FAIL", message: t, code: n }),
                       E.pM(Error(`Braintree Venmo Error: ${t} ${n} ${l}`)));
-            });
+            }));
 }
 function _(e, t) {
     if (null == e) return Promise.resolve();
@@ -374,7 +374,7 @@ class ey extends o.Ay.Store {
 }
 let eI = new ey(p.h, {
     USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (e) {
-        (eh = 1), (ef = e.loadId);
+        ((eh = 1), (ef = e.loadId));
     },
     USER_PAYMENT_BROWSER_CHECKOUT_DONE: function (e) {
         ef === e.loadId && ((eE = e.skuId ?? null), (eS = e.skuSubscriptionPlanId ?? null), (eh = 2));
@@ -434,9 +434,9 @@ function eP(e) {
             return () => clearTimeout(e);
         }, [f, E, c, i, y, S, t]),
         a.useEffect(() => {
-            null !== p && (eA.oz.includes(p) && ((0, eu.ur)(p), (0, h.hP)()), s(p)),
+            (null !== p && (eA.oz.includes(p) && ((0, eu.ur)(p), (0, h.hP)()), s(p)),
                 null !== C && u(C),
-                m === c.loadId && d === eC.DONE && l();
+                m === c.loadId && d === eC.DONE && l());
         }, [s, u, d, m, p, C, c, l]),
         (0, r.jsxs)("div", {
             className: eg.rf,
@@ -502,10 +502,10 @@ async function ew() {
                 analytics: { enabled: !1 },
                 paymentMethodsResponse: e.body,
             });
-        p.h.dispatch({ type: "ADYEN_CREATE_CLIENT_SUCCESS", client: l }),
+        (p.h.dispatch({ type: "ADYEN_CREATE_CLIENT_SUCCESS", client: l }),
             (function (e) {
                 if (null != eL.cashAppPayComponent) {
-                    eD(), eU();
+                    (eD(), eU());
                     return;
                 }
                 let t = e
@@ -530,7 +530,7 @@ async function ew() {
                                     case "Something went wrong during customerRequest creation":
                                     case "Error during initialization":
                                     case "Error rendering CashAppPay button":
-                                        (n = !1), (t = j.intl.string(j.t.TJ8dDB));
+                                        ((n = !1), (t = j.intl.string(j.t.TJ8dDB)));
                                 }
                                 (0, h.i0)(e.message, n, t);
                             }
@@ -538,9 +538,9 @@ async function ew() {
                     })
                     .mount(`#${ej.h}`);
                 p.h.dispatch({ type: "ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS", component: t });
-            })(l);
+            })(l));
     } catch (e) {
-        (0, E.pM)(e), p.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" });
+        ((0, E.pM)(e), p.h.dispatch({ type: "ADYEN_CREATE_CLIENT_FAIL" }));
     }
 }
 function eU() {
@@ -609,7 +609,7 @@ function eW(e) {
         i = t;
     null != t && (i = eH(t));
     let a = n;
-    return null != n && (a = eH(n)), (0, r.jsx)(ea.Ay, { ...l, onPrimary: i, onBack: a });
+    return (null != n && (a = eH(n)), (0, r.jsx)(ea.Ay, { ...l, onPrimary: i, onBack: a }));
 }
 var eY = n(683071),
     eV = n(503698),
@@ -635,33 +635,33 @@ let eX = function (e) {
                     case "cardNumber": {
                         let e = I.getElement(s.CardNumberElement);
                         if (null == e) return;
-                        e.off("change"), e.off("focus"), e.off("blur");
+                        (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardExpiry": {
                         let e = I.getElement(s.CardExpiryElement);
                         if (null == e) return;
-                        e.off("change"), e.off("focus"), e.off("blur");
+                        (e.off("change"), e.off("focus"), e.off("blur"));
                         break;
                     }
                     case "cardCvc": {
                         let e = I.getElement(s.CardCvcElement);
                         if (null == e) return;
-                        e.off("change"), e.off("focus"), e.off("blur");
+                        (e.off("change"), e.off("focus"), e.off("blur"));
                     }
                 }
         }, [I, n]),
         g = a.useCallback(
             (e) => {
-                C || e.empty || h(!0), null != i && i(e.complete), null != e.error && p(!1);
+                (C || e.empty || h(!0), null != i && i(e.complete), null != e.error && p(!1));
             },
             [C, i],
         ),
         P = a.useCallback(() => {
-            p(!0), o?.();
+            (p(!0), o?.());
         }, [o]),
         v = a.useCallback(() => {
-            p(!1), u?.();
+            (p(!1), u?.());
         }, [u]),
         _ = a.useCallback(() => {
             if (null != I)
@@ -669,37 +669,37 @@ let eX = function (e) {
                     case "cardNumber": {
                         let e = I.getElement(s.CardNumberElement);
                         if (null == e) return;
-                        e.on("change", (e) => {
-                            c !== e.brand && d(e.brand),
+                        (e.on("change", (e) => {
+                            (c !== e.brand && d(e.brand),
                                 e.empty && C
                                     ? E(j.intl.string(j.t.eOIfuy))
                                     : null != e.error
                                       ? E(j.intl.string(j.t.x4pWtJ))
                                       : E(null),
-                                g(e);
+                                g(e));
                         }),
                             e.on("focus", P),
-                            e.on("blur", v);
+                            e.on("blur", v));
                         break;
                     }
                     case "cardExpiry": {
                         let e = I.getElement(s.CardExpiryElement);
                         if (null == e) return;
-                        e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t["9/zZdl"])) : E(null), g(e);
+                        (e.on("change", (e) => {
+                            (null != e.error || (e.empty && C) ? E(j.intl.string(j.t["9/zZdl"])) : E(null), g(e));
                         }),
                             e.on("focus", P),
-                            e.on("blur", v);
+                            e.on("blur", v));
                         break;
                     }
                     case "cardCvc": {
                         let e = I.getElement(s.CardCvcElement);
                         if (null == e) return;
-                        e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? E(j.intl.string(j.t.ro4isZ)) : E(null), g(e);
+                        (e.on("change", (e) => {
+                            (null != e.error || (e.empty && C) ? E(j.intl.string(j.t.ro4isZ)) : E(null), g(e));
                         }),
                             e.on("focus", P),
-                            e.on("blur", v);
+                            e.on("blur", v));
                     }
                 }
         }, [v, g, P, c, I, C, n]);
@@ -791,7 +791,7 @@ let e2 = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || m.name) && "" === c.name && (t.name = j.intl.string(j.t.lIkVsi)), t;
+            return ((e || m.name) && "" === c.name && (t.name = j.intl.string(j.t.lIkVsi)), t);
         },
         [m, c],
     );
@@ -870,7 +870,7 @@ let e2 = function (e) {
                                             stripeType: "cardCvc",
                                             updateCompleted: (e) => S("cardCvc", e),
                                             onFocus: () => {
-                                                E(), s(!0);
+                                                (E(), s(!0));
                                             },
                                             onBlur: () => {
                                                 s(!1);
@@ -901,12 +901,12 @@ let e2 = function (e) {
                         let n = { ...c },
                             l = { ...m },
                             i = { name: C.name };
-                        m[t] || "" === e || (l[t] = !0),
+                        (m[t] || "" === e || (l[t] = !0),
                             (n[t] = e),
                             l[t] && "" === e ? "name" === t && (i.name = j.intl.string(j.t.lIkVsi)) : delete i[t],
                             d(n),
                             p(l),
-                            h(i);
+                            h(i));
                     },
                     onFieldBlur: function () {
                         h(y());
@@ -1074,9 +1074,9 @@ function to(e) {
                 createSetupIntent: h,
                 overwriteSubscriptionPaymentSource: i,
             });
-            "redirect-url" === e.responseType ? I(e.hasRedirectURL) : s(e.paymentSource), y || S(!1);
+            ("redirect-url" === e.responseType ? I(e.hasRedirectURL) : s(e.paymentSource), y || S(!1));
         } catch (e) {
-            S(!1), tl.warn(`Error confirming submitting Address Step for Payment Source Type: ${P}`, e);
+            (S(!1), tl.warn(`Error confirming submitting Address Step for Payment Source Type: ${P}`, e));
         }
     }
     let P = o.methodType,
@@ -1146,13 +1146,13 @@ function tm(e) {
                 s({ steps: e, methodType: n === Z.he.UNKNOWN ? C : n });
                 let l = tn.F[C];
                 if (null != l && null != l.submitPaymentElementStepHandler) {
-                    await l.submitPaymentElementStepHandler({
+                    (await l.submitPaymentElementStepHandler({
                         stripe: t,
                         stripeElements: f.current,
                         remountAddressElement: E,
                         setBillingAddressState: p,
                     }),
-                        i(l.stepAfterPaymentElement ?? el.pn.ADDRESS);
+                        i(l.stepAfterPaymentElement ?? el.pn.ADDRESS));
                     return;
                 }
                 let r = (0, tc.eI)(C);
@@ -1341,7 +1341,7 @@ function tN(e) {
         ed = (0, o.bG)([eL], () => eL.cashAppPayComponent),
         em = { completeSteps: eH, setIsSubmittingCurrentStep: l.setIsSubmittingCurrentStep },
         ep = a.useRef(em);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         ep.current = em;
     }),
         a.useEffect(() => {
@@ -1352,11 +1352,11 @@ function tN(e) {
                 let n = e_.A.getPaymentSource(ec);
                 null != n && (e(n), t(!1), b.A.clearRedirectedPaymentSourceId());
             })();
-        }, [ec]);
+        }, [ec]));
     let eC = a.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                en(e), t && A({ currentStep: q, toStep: e });
+                (en(e), t && A({ currentStep: q, toStep: e }));
             },
             [q, A],
         ),
@@ -1376,7 +1376,7 @@ function tN(e) {
         eE = a.useRef(ef);
     a.useEffect(() => {
         let e = eE.current;
-        (eE.current = ef),
+        ((eE.current = ef),
             null != ef &&
                 ef !== e &&
                 eT.default.track(I.HAw.PAYMENT_FLOW_ADD_SOURCE_ERROR, {
@@ -1385,18 +1385,18 @@ function tN(e) {
                     payment_source_type: eo.methodType,
                     error_code: ef.code,
                     error_message: ef.message,
-                });
+                }));
     }, [ef, D.loadId, x, eo.methodType]);
     let eS = a.useCallback(
             (e) => {
-                eh(e),
+                (eh(e),
                     (0, u.P0)(
                         (0, c.o)(void 0 !== M ? M : j.intl.string(j.t["VJPg+l"]), d.Ck.SUCCESS, {
                             position: d.xJ.BOTTOM,
                         }),
                     ),
                     y(q, e),
-                    eC(H, !1);
+                    eC(H, !1));
             },
             [eC, H, q, y, M, eh],
         ),
@@ -1419,7 +1419,7 @@ function tN(e) {
             setP24BankState: eB,
         } = l;
     function eH(e) {
-        ey(e.id), eS(e);
+        (ey(e.id), eS(e));
     }
     let eY = a.useCallback(
             (e, t) => {
@@ -1449,7 +1449,7 @@ function tN(e) {
             addressElementKey: e2,
         } = eV,
         e3 = a.useCallback(() => {
-            eC(el.pn.ADDRESS), tS.Ky.includes(q) && e1();
+            (eC(el.pn.ADDRESS), tS.Ky.includes(q) && e1());
         }, [eC, e1, q]),
         e4 = a.useCallback(
             (e) => {
@@ -1460,7 +1460,7 @@ function tN(e) {
         e7 = T ? (0, r.jsx)(er.A, { className: ty._8 }) : null;
     switch (q) {
         case el.pn.PAYMENT_ELEMENT:
-            (t = null),
+            ((t = null),
                 (n = (0, r.jsx)(tm, {
                     handleStepChange: eC,
                     shouldUseManaModal: k,
@@ -1468,19 +1468,19 @@ function tN(e) {
                     primarySubmitting: ex,
                     primaryDisabled: !eZ,
                     onBack: () => {
-                        e$(), S?.();
+                        (e$(), S?.());
                     },
                     paymentModalArgs: l,
                     PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: K,
                     ...eV,
-                }));
+                })));
             break;
         case el.pn.CREDIT_CARD_INFORMATION:
             let e6 = async (e) => {
                 eR(!0);
                 try {
                     let t = await (0, h.YJ)(w, e);
-                    eg({ token: t }), eC(el.pn.ADDRESS);
+                    (eg({ token: t }), eC(el.pn.ADDRESS));
                 } catch (e) {
                     tI.error(e.message ?? JSON.stringify(e));
                 } finally {
@@ -1489,7 +1489,7 @@ function tN(e) {
             };
             t = (0, r.jsx)(tP, {
                 onCardInfoChange: (e, t) => {
-                    eA({ info: e, isValid: t }), ej((t) => ({ ...t, info: { ...t.info, name: e.name } }));
+                    (eA({ info: e, isValid: t }), ej((t) => ({ ...t, info: { ...t.info, name: e.name } })));
                 },
             });
             let e5 = !eI.isValid;
@@ -1513,18 +1513,18 @@ function tN(e) {
         case el.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
         case el.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
             let e8 = () => {
-                eu(Y), eC(el.pn.PAYMENT_ELEMENT);
+                (eu(Y), eC(el.pn.PAYMENT_ELEMENT));
             };
-            (t = (0, r.jsx)(eP, { step: q, onPurchaseComplete: () => y(q), onHandoffFailure: e8 })),
+            ((t = (0, r.jsx)(eP, { step: q, onPurchaseComplete: () => y(q), onHandoffFailure: e8 })),
                 (n = (0, r.jsx)(ev, {
                     onPrimaryClick: e8,
                     onBackClick: () => {
-                        e$(), null != S && S();
+                        (e$(), null != S && S());
                     },
-                }));
+                })));
             break;
         case el.pn.EPS_INFORMATION:
-            (t = (0, r.jsx)(z, {
+            ((t = (0, r.jsx)(z, {
                 type: Z.he.EPS,
                 onAccountHolderNameChange: (e) => ej({ info: { ...eb.info, name: e }, isValid: eb.isValid }),
                 onEPSBankChange: (e) => eD(e),
@@ -1538,10 +1538,10 @@ function tN(e) {
                     primaryDisabled: void 0 === eU || "" === eU || "" === eb.info.name,
                     onPrimary: () => e3(),
                     shouldUseManaModal: k,
-                }));
+                })));
             break;
         case el.pn.PRZELEWY24_INFORMATION:
-            (t = (0, r.jsx)(z, {
+            ((t = (0, r.jsx)(z, {
                 type: Z.he.PRZELEWY24,
                 onNameChange: (e) => ej({ info: { ...eb.info, name: e }, isValid: eb.isValid }),
                 onEmailChange: (e) => ej({ info: { ...eb.info, email: e }, isValid: eb.isValid }),
@@ -1564,11 +1564,11 @@ function tN(e) {
                         "" === eF,
                     onPrimary: () => e3(),
                     shouldUseManaModal: k,
-                }));
+                })));
             break;
         case el.pn.PAYPAL_INFORMATION:
             let e9 = 0 !== eM.length && null != eO;
-            (t = (0, r.jsx)(tv, {})),
+            ((t = (0, r.jsx)(tv, {})),
                 (n = (0, r.jsx)(eW, {
                     onBack: () => e4(Z.he.PAYPAL),
                     primaryCTA: ea.Ay.CTAType.CONTINUE,
@@ -1582,22 +1582,22 @@ function tN(e) {
                                   : (p.h.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e)));
                     },
                     shouldUseManaModal: k,
-                }));
+                })));
             break;
         case el.pn.VENMO_INFORMATION:
             let te = 0 !== ek.length && null != eO;
-            (t = (0, r.jsx)(t_, {})),
+            ((t = (0, r.jsx)(t_, {})),
                 (n = (0, r.jsx)(eW, {
                     onBack: () => e4(Z.he.VENMO),
                     primaryCTA: ea.Ay.CTAType.CONTINUE,
                     primaryText: te ? j.intl.string(j.t.PDTjLN) : j.intl.string(j.t["4KoTLM"]),
                     onPrimary: () => (te ? e3() : void v()),
                     shouldUseManaModal: k,
-                }));
+                })));
             break;
         case el.pn.CASH_APP_INFORMATION:
             let tt = null != ew;
-            (t = (0, r.jsx)(tx, {})),
+            ((t = (0, r.jsx)(tx, {})),
                 (n = (0, r.jsx)(eW, {
                     onBack: () => e4(Z.he.CASH_APP),
                     primaryCTA: ea.Ay.CTAType.CONTINUE,
@@ -1605,11 +1605,11 @@ function tN(e) {
                     onPrimary: () => (tt ? e3() : eG()),
                     primaryDisabled: null == ed,
                     shouldUseManaModal: k,
-                }));
+                })));
             break;
         case el.pn.ADDRESS:
             let tn = null != ez;
-            (t = (0, r.jsx)(ts, {
+            ((t = (0, r.jsx)(ts, {
                 paymentModalArgs: l,
                 paymentSourceType: eo.methodType ?? Z.he.CARD,
                 shouldUsePaymentElement: tn,
@@ -1624,7 +1624,7 @@ function tN(e) {
                     paymentMethodSteps: eo,
                     shouldUsePaymentElement: tn,
                     ...eV,
-                }));
+                })));
             break;
         case el.pn.AWAITING_AUTHENTICATION:
             t = (0, r.jsx)(tT, {});
@@ -1654,9 +1654,9 @@ function tN(e) {
                         addressElementKey: e2,
                         billingAddressInfo: eb.info,
                         onSetupError: () => {
-                            e$(),
+                            (e$(),
                                 eu({ steps: [...C, ...ti, ...E], methodType: Z.he.CARD }),
-                                eC(el.pn.CREDIT_CARD_INFORMATION);
+                                eC(el.pn.CREDIT_CARD_INFORMATION));
                         },
                         paymentElementFooter: eq
                             ? (0, r.jsx)(X.Z4, {
@@ -1694,12 +1694,12 @@ function tb(e) {
         })),
         i = (0, o.bG)([eL], () => eL.cashAppPayComponent),
         r = (0, o.bG)([B.A], () => B.A.data?.allowed_payment_source_types ?? null);
-    (0, G.Ay)(() => {
-        (0, S.j)().then((e) => {
+    ((0, G.Ay)(() => {
+        ((0, S.j)().then((e) => {
             e.client
                 .create({ authorization: I.Gg3.BRAINTREE.KEY })
                 .then((e) => {
-                    new Promise((e, t) => {
+                    (new Promise((e, t) => {
                         let n = Date.now();
                         function l() {
                             Date.now() - n >= 5e3
@@ -1709,24 +1709,24 @@ function tb(e) {
                                   : setTimeout(l, 1e3);
                         }
                         p.h.subscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", function e() {
-                            p.h.unsubscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", e), setTimeout(l, 0);
+                            (p.h.unsubscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", e), setTimeout(l, 0));
                         });
                     })
                         .then(() => {
-                            g(), A();
+                            (g(), A());
                         })
                         .catch((e) => {
                             E.pM(e);
                         }),
-                        p.h.dispatch({ type: "BRAINTREE_CREATE_CLIENT_SUCCESS", client: e });
+                        p.h.dispatch({ type: "BRAINTREE_CREATE_CLIENT_SUCCESS", client: e }));
                 })
                 .catch(() => p.h.dispatch({ type: "BRAINTREE_CREATE_CLIENT_FAIL" }));
         }),
-            l || (0, h.$o)();
+            l || (0, h.$o)());
     }),
         a.useEffect(() => {
             null == i && null != r && r.includes(Z.he.CASH_APP) && ew();
-        }, [r, i]);
+        }, [r, i]));
     let [s, u] = a.useState(t),
         c = (0, F.Ay)(t);
     t !== c && null != t && null == s && u(t);
@@ -1754,7 +1754,7 @@ function tb(e) {
         return (
             p.h.subscribe("BRAINTREE_TOKENIZE_PAYPAL_SUCCESS", e),
             () => {
-                p.h.unsubscribe("BRAINTREE_TOKENIZE_PAYPAL_SUCCESS", e), (0, x.ET)();
+                (p.h.unsubscribe("BRAINTREE_TOKENIZE_PAYPAL_SUCCESS", e), (0, x.ET)());
             }
         );
     }, []);

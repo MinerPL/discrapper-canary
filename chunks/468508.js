@@ -19,7 +19,7 @@ var r = t(594247),
 function i(e, a) {
     let t = e.copy(),
         r = "hour" in t ? p(t, a) : 0;
-    o(t, a.years || 0),
+    (o(t, a.years || 0),
         t.calendar.balanceYearMonth && t.calendar.balanceYearMonth(t, e),
         (t.month += a.months || 0),
         l(t),
@@ -28,15 +28,17 @@ function i(e, a) {
         (t.day += a.days || 0),
         (t.day += r),
         (function (e) {
-            for (; e.day < 1; ) e.month--, l(e), (e.day += e.calendar.getDaysInMonth(e));
-            for (; e.day > e.calendar.getDaysInMonth(e); ) (e.day -= e.calendar.getDaysInMonth(e)), e.month++, l(e);
+            for (; e.day < 1;) (e.month--, l(e), (e.day += e.calendar.getDaysInMonth(e)));
+            for (; e.day > e.calendar.getDaysInMonth(e);) ((e.day -= e.calendar.getDaysInMonth(e)), e.month++, l(e));
         })(t),
         t.calendar.balanceDate && t.calendar.balanceDate(t),
-        t.year < 1 && ((t.year = 1), (t.month = 1), (t.day = 1));
+        t.year < 1 && ((t.year = 1), (t.month = 1), (t.day = 1)));
     let n = t.calendar.getYearsInEra(t);
     if (t.year > n) {
         let e = t.calendar.isInverseEra?.(t);
-        (t.year = n), (t.month = e ? 1 : t.calendar.getMonthsInYear(t)), (t.day = e ? 1 : t.calendar.getDaysInMonth(t));
+        ((t.year = n),
+            (t.month = e ? 1 : t.calendar.getMonthsInYear(t)),
+            (t.day = e ? 1 : t.calendar.getDaysInMonth(t)));
     }
     t.month < 1 && ((t.month = 1), (t.day = 1));
     let i = t.calendar.getMonthsInYear(t);
@@ -47,21 +49,21 @@ function i(e, a) {
     );
 }
 function o(e, a) {
-    e.calendar.isInverseEra?.(e) && (a = -a), (e.year += a);
+    (e.calendar.isInverseEra?.(e) && (a = -a), (e.year += a));
 }
 function l(e) {
-    for (; e.month < 1; ) o(e, -1), (e.month += e.calendar.getMonthsInYear(e));
+    for (; e.month < 1;) (o(e, -1), (e.month += e.calendar.getMonthsInYear(e)));
     let a = 0;
-    for (; e.month > (a = e.calendar.getMonthsInYear(e)); ) (e.month -= a), o(e, 1);
+    for (; e.month > (a = e.calendar.getMonthsInYear(e));) ((e.month -= a), o(e, 1));
 }
 function u(e) {
-    (e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))),
-        (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
+    ((e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))),
+        (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day))));
 }
 function s(e) {
-    e.calendar.constrainDate && e.calendar.constrainDate(e),
+    (e.calendar.constrainDate && e.calendar.constrainDate(e),
         (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))),
-        u(e);
+        u(e));
 }
 function d(e) {
     let a = {};
@@ -94,14 +96,14 @@ function h(e, a) {
     );
 }
 function y(e) {
-    (e.millisecond = Math.max(0, Math.min(e.millisecond, 999))),
+    ((e.millisecond = Math.max(0, Math.min(e.millisecond, 999))),
         (e.second = Math.max(0, Math.min(e.second, 59))),
         (e.minute = Math.max(0, Math.min(e.minute, 59))),
-        (e.hour = Math.max(0, Math.min(e.hour, 23)));
+        (e.hour = Math.max(0, Math.min(e.hour, 23))));
 }
 function D(e, a) {
     let t = e % a;
-    return t < 0 && (t += a), t;
+    return (t < 0 && (t += a), t);
 }
 function p(e, a) {
     let t;
@@ -123,7 +125,7 @@ function p(e, a) {
 }
 function g(e, a) {
     let t = e.copy();
-    return p(t, a), t;
+    return (p(t, a), t);
 }
 function f(e, a) {
     return g(e, d(a));
@@ -135,14 +137,14 @@ function v(e, a, t, r) {
             let a = e.calendar.getEras(),
                 i = a.indexOf(e.era);
             if (i < 0) throw Error("Invalid era: " + e.era);
-            (i = $(i, t, 0, a.length - 1, r?.round)), (n.era = a[i]), s(n);
+            ((i = $(i, t, 0, a.length - 1, r?.round)), (n.era = a[i]), s(n));
             break;
         }
         case "year":
-            n.calendar.isInverseEra?.(n) && (t = -t),
+            (n.calendar.isInverseEra?.(n) && (t = -t),
                 (n.year = $(e.year, t, -1 / 0, 9999, r?.round)),
                 n.year === -1 / 0 && (n.year = 1),
-                n.calendar.balanceYearMonth && n.calendar.balanceYearMonth(n, e);
+                n.calendar.balanceYearMonth && n.calendar.balanceYearMonth(n, e));
             break;
         case "month":
             n.month = $(e.month, t, 1, e.calendar.getMonthsInYear(e), r?.round);
@@ -153,7 +155,7 @@ function v(e, a, t, r) {
         default:
             throw Error("Unsupported field " + a);
     }
-    return e.calendar.balanceDate && e.calendar.balanceDate(n), s(n), n;
+    return (e.calendar.balanceDate && e.calendar.balanceDate(n), s(n), n);
 }
 function b(e, a, t, r) {
     let n = e.copy();
@@ -164,7 +166,7 @@ function b(e, a, t, r) {
                 o = 23;
             if (r?.hourCycle === 12) {
                 let e = a >= 12;
-                (i = 12 * !!e), (o = e ? 23 : 11);
+                ((i = 12 * !!e), (o = e ? 23 : 11));
             }
             n.hour = $(a, t, i, o, r?.round);
             break;
@@ -202,10 +204,10 @@ function R(e, a) {
         let n = i((0, r.tR)(e), { years: a.years, months: a.months, weeks: a.weeks, days: a.days });
         t = (0, r.Tr)(n, e.timeZone);
     } else t = (0, r.oU)(e) - e.offset;
-    (t += a.milliseconds || 0),
+    ((t += a.milliseconds || 0),
         (t += 1e3 * (a.seconds || 0)),
         (t += 6e4 * (a.minutes || 0)),
-        (t += 36e5 * (a.hours || 0));
+        (t += 36e5 * (a.hours || 0)));
     let n = (0, r.Yd)(t, e.timeZone);
     return (0, r.yP)(n, e.calendar);
 }
@@ -219,7 +221,7 @@ function w(e, a, t, i) {
                 o = 23;
             if (i?.hourCycle === 12) {
                 let t = e.hour >= 12;
-                (a = 12 * !!t), (o = t ? 23 : 11);
+                ((a = 12 * !!t), (o = t ? 23 : 11));
             }
             let l = (0, r.tR)(e),
                 u = (0, r.yP)(h(l, { hour: a }), new (0, n.FG)()),

@@ -5,7 +5,7 @@ class r {
     static get() {
         if (null == r.cached) {
             let e = i.A?.processUtils?.getMainArgvSync?.();
-            null != e && e.length > 1 && e.shift(), (r.cached = e ?? []);
+            (null != e && e.length > 1 && e.shift(), (r.cached = e ?? []));
         }
         return r.cached;
     }

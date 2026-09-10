@@ -10,6 +10,6 @@
           if (t) {
               e.super_ = t;
               var r = function () {};
-              (r.prototype = t.prototype), (e.prototype = new r()), (e.prototype.constructor = e);
+              ((r.prototype = t.prototype), (e.prototype = new r()), (e.prototype.constructor = e));
           }
       });

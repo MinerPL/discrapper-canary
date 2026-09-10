@@ -13,9 +13,9 @@ function f(e) {
         [l, f] = n.useState(!1),
         [h, m] = n.useState(!1),
         g = n.useCallback(async () => {
-            f(!0), m(!1);
+            (f(!0), m(!1));
             try {
-                await t(), a.O.announce(u.intl.string(c.default.pDzipI));
+                (await t(), a.O.announce(u.intl.string(c.default.pDzipI)));
             } catch {
                 m(!0);
             } finally {

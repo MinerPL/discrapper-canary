@@ -156,7 +156,7 @@ class a extends i.A {
         });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.applicationId = e.applicationId),
             (this.name = e.name),
@@ -169,7 +169,7 @@ class a extends i.A {
             (this.includeBundles = e.includeBundles),
             (this.startsAt = e.startsAt),
             (this.endsAt = e.endsAt),
-            (this.tenantMetadata = e.tenantMetadata);
+            (this.tenantMetadata = e.tenantMetadata));
     }
 }
 function s(e) {

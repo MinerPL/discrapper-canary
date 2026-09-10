@@ -12,5 +12,5 @@ function t() {
           console.log("Meticulous session recording started"));
 }
 function d() {
-    (0, n.B5)(), null != window.DiscordDevSession && (window.DiscordDevSession.started = !1);
+    ((0, n.B5)(), null != window.DiscordDevSession && (window.DiscordDevSession.started = !1));
 }

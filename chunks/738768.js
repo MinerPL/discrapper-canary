@@ -1,4 +1,4 @@
-n.d(e, { wG: () => p }), n(321073);
+(n.d(e, { wG: () => p }), n(321073));
 var r = n(435558),
     i = n.n(r);
 n(309613);
@@ -64,7 +64,7 @@ function p(t) {
             else if ("string" == typeof e.content && "codeBlock" !== e.type) {
                 let t = [],
                     i = "";
-                e.content.split(/(\W+)/g).forEach((e) => {
+                (e.content.split(/(\W+)/g).forEach((e) => {
                     !(function (t, e) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                         if (a((t = c(s(t)))) || l(t)) return !1;
@@ -82,7 +82,7 @@ function p(t) {
                 }),
                     t.length > 0 &&
                         (i.length > 0 && t.push({ type: "text", content: i }),
-                        "text" === e.type ? (e.content = t) : (e.content = [{ type: "text", content: t }]));
+                        "text" === e.type ? (e.content = t) : (e.content = [{ type: "text", content: t }])));
             } else null != e.content && t(e.content, n, r);
             return e;
         })(t, r, n);

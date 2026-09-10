@@ -102,7 +102,7 @@ async function G(e, t) {
     let n = (0, d.FM)(e);
     if (null != n) {
         let { guildId: e, channelId: r, diceCount: s, diceSides: l } = n;
-        (0, i.t)(r, s, l), (0, a.pX)(M.BVt.CHANNEL(e, r), t);
+        ((0, i.t)(r, s, l), (0, a.pX)(M.BVt.CHANNEL(e, r), t));
         return;
     }
     let c = (0, d.vu)(e);

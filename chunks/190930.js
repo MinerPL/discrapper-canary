@@ -80,11 +80,11 @@ function q(e) {
         }),
         es = i.useCallback(
             (e) => {
-                et(e), er(e);
+                (et(e), er(e));
             },
             [er],
         );
-    i.useEffect(() => {
+    (i.useEffect(() => {
         !(async function () {
             let e = N.A.toURLSafe(n);
             if (null == e) return;
@@ -93,7 +93,7 @@ function q(e) {
                 i = new File([await a.arrayBuffer()], t);
             J(i);
             let l = new FileReader();
-            (l.onload = () => X(l?.result?.toString())), l.readAsDataURL(i);
+            ((l.onload = () => X(l?.result?.toString())), l.readAsDataURL(i));
         })();
     }, [n, J]),
         i.useEffect(() => {
@@ -107,18 +107,18 @@ function q(e) {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [Z]);
+        }, [Z]));
     let eo = i.useCallback(async () => {
             await E();
         }, [E]),
         ec = i.useCallback(async () => {
-            R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
+            (R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
                 user_id: W?.id,
                 application_id: t,
                 activity_session_id: Y?.compositeInstanceId,
             }),
                 await L.Ay.copyImage(n),
-                $(!0);
+                $(!0));
         }, [Y?.compositeInstanceId, t, n, W?.id]),
         ed = i.useCallback(
             (e) => {
@@ -129,7 +129,7 @@ function q(e) {
                     });
                     if (-1 !== n) {
                         let e = [...t];
-                        return e.splice(n, 1), e;
+                        return (e.splice(n, 1), e);
                     }
                     return t.length >= 10 || null == z ? t : (es(""), [...t, e]);
                 });
@@ -159,7 +159,7 @@ function q(e) {
                     });
                 }
                 let i = b.A.getUploads(n, k.C.ChannelMessage);
-                y.A.sendMessage(
+                (y.A.sendMessage(
                     n,
                     null != Q
                         ? w.Ay.parse(a, O.intl.formatToPlainString(O.t.jQULqL, { applicationName: `**${Q.name}**` }))
@@ -181,7 +181,7 @@ function q(e) {
                         },
                     },
                 ),
-                    C.A.clearAll(n, k.C.ChannelMessage);
+                    C.A.clearAll(n, k.C.ChannelMessage));
             }
             R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_SEND, {
                 user_id: W?.id,
@@ -192,11 +192,11 @@ function q(e) {
                 n_channels: a,
             });
             try {
-                await Promise.all(en.map(i)),
+                (await Promise.all(en.map(i)),
                     null != Q &&
                         (0, d.P0)(
                             (0, u.o)(O.intl.formatToPlainString(O.t.jQULqL, { applicationName: Q.name }), p.Ck.SUCCESS),
-                        );
+                        ));
             } catch (e) {
                 throw ((0, d.P0)((0, u.o)(O.intl.string(O.t.PanA4J), p.Ck.FAILURE)), e);
             }
@@ -269,7 +269,7 @@ function q(e) {
                               ...i,
                               innerRole: void 0,
                               ref: (e) => {
-                                  (em.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                  ((em.current = e), (t.current = e?.getScrollerNode() ?? null));
                               },
                           },
                           ...q,

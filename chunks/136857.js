@@ -84,7 +84,7 @@ function I(e) {
         if (!Array.isArray(e?.body?.errors) && e?.body?.errors?.billing_address != null) {
             for (let t in e.body.errors.billing_address) {
                 let n = e.body.errors.billing_address[t];
-                delete e.body.errors.billing_address[t], (e.body.errors[t] = n);
+                (delete e.body.errors.billing_address[t], (e.body.errors[t] = n));
             }
             delete e.body.errors.billing_address;
         }
@@ -138,7 +138,7 @@ class f extends l.A {
             const e = u[n] || _[n];
             if (null != e) {
                 const t = this.fields[n];
-                delete this.fields[n], (this.fields[e] = t);
+                (delete this.fields[n], (this.fields[e] = t));
             }
         }
         null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);

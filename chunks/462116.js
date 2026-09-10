@@ -17,14 +17,14 @@ function c(t) {
 }
 async function A(t, e) {
     let l = new Set(t.features);
-    l.has(I.GuildFeatures.COMMUNITY)
+    (l.has(I.GuildFeatures.COMMUNITY)
         ? e
             ? l.delete(I.GuildFeatures.RAID_ALERTS_DISABLED)
             : l.add(I.GuildFeatures.RAID_ALERTS_DISABLED)
         : e
           ? l.add(I.GuildFeatures.NON_COMMUNITY_RAID_ALERTS)
           : l.delete(I.GuildFeatures.NON_COMMUNITY_RAID_ALERTS),
-        await i.A.saveGuild(t.id, { features: l }, { throwErr: !0 });
+        await i.A.saveGuild(t.id, { features: l }, { throwErr: !0 }));
 }
 async function R(t, e, l, u) {
     let a = e || l,

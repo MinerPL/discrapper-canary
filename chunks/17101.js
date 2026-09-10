@@ -41,10 +41,10 @@ function r(e, t) {
         },
         n: function () {
             var e = r.next();
-            return (s = e.done), e;
+            return ((s = e.done), e);
         },
         e: function (e) {
-            (l = !0), (a = e);
+            ((l = !0), (a = e));
         },
         f: function () {
             try {
@@ -60,13 +60,13 @@ function n(e, t) {
     for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
     return n;
 }
-(t.type = (e) => e.split(/ *; */).shift()),
+((t.type = (e) => e.split(/ *; */).shift()),
     (t.params = (e) => {
         let t = {};
         var n,
             i = r(e.split(/ *; */));
         try {
-            for (i.s(); !(n = i.n()).done; ) {
+            for (i.s(); !(n = i.n()).done;) {
                 let e = n.value.split(/ *= */),
                     r = e.shift(),
                     i = e.shift();
@@ -84,7 +84,7 @@ function n(e, t) {
         var n,
             i = r(e.split(/ *, */));
         try {
-            for (i.s(); !(n = i.n()).done; ) {
+            for (i.s(); !(n = i.n()).done;) {
                 let e = n.value.split(/ *; */),
                     r = e[0].slice(1, -1);
                 t[e[1].split(/ *= */)[1].slice(1, -1)] = r;
@@ -113,4 +113,4 @@ function n(e, t) {
         }),
     (t.mixin = (e, r) => {
         for (let n in r) t.hasOwn(r, n) && (e[n] = r[n]);
-    });
+    }));

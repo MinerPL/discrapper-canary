@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => A });
+(n.r(t), n.d(t, { default: () => A }));
 var s = n(477900),
     i = n(582128),
     u = n(621466),
@@ -29,7 +29,7 @@ let A = function (e) {
                 if ((!m && (0, r.hasAnyModalOpen)()) || (m && !(S && n)) || l.A.isOpen() || e.defaultPrevented) return;
                 let { target: t } = e;
                 if ((0, u.vq)(t) && null != t.closest("." + L.Wx)) return;
-                for (; (0, u.vq)(t); ) {
+                for (; (0, u.vq)(t);) {
                     if (t === A.current) return;
                     if (t.classList.contains(L.KG) || t.classList.contains(L.Gu)) return void e.preventDefault();
                     if (t.classList.contains(L.qp)) return;
@@ -43,15 +43,15 @@ let A = function (e) {
             },
             [n, S, m],
         );
-    i.useLayoutEffect(
+    (i.useLayoutEffect(
         () => (
             T.addEventListener("mousedown", y),
             T.addEventListener("contextmenu", y),
             j.subscribe(O.jej.POPOUT_CLOSE, h),
             () => {
-                T.removeEventListener("mousedown", y),
+                (T.removeEventListener("mousedown", y),
                     T.removeEventListener("contextmenu", y),
-                    j.unsubscribe(O.jej.POPOUT_CLOSE, h);
+                    j.unsubscribe(O.jej.POPOUT_CLOSE, h));
             }
         ),
         [y, T, j],
@@ -59,7 +59,7 @@ let A = function (e) {
         (0, a.tj)(A),
         i.useEffect(() => {
             ((!m && (0, r.hasAnyModalOpen)()) || (m && !S)) && h();
-        }, [S, m]);
+        }, [S, m]));
     let C = (0, E.A)();
     return (0, s.jsx)(v.A, { ref: A, context: { channel: t, type: "channel" }, entrypoint: p.s4.TEXT, initHistory: C });
 };

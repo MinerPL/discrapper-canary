@@ -1,4 +1,4 @@
-n.r(e), n.d(e, { default: () => S });
+(n.r(e), n.d(e, { default: () => S }));
 var l = n(324029),
     i = n(779559),
     r = n(31048);
@@ -135,7 +135,7 @@ class A {
                 a = l?.name ?? "";
             for (let t = 0; t < c - p; t++) {
                 let t = (0, s.A)();
-                this.roundKillIds.push(t),
+                (this.roundKillIds.push(t),
                     (n = t),
                     i.push(K(u.C.Kill, o.rb.KILL, { id: t, weaponType: r, weaponName: a })),
                     null != this.lastKillMs && e - this.lastKillMs <= 5e3
@@ -143,7 +143,9 @@ class A {
                         : (this.multiKillChain = [t]),
                     (this.lastKillMs = e),
                     this.multiKillChain.length >= 2 &&
-                        i.push(K(u.C.MultiKill, o.rb.MULTIKILL, { id: (0, s.A)(), killIds: [...this.multiKillChain] }));
+                        i.push(
+                            K(u.C.MultiKill, o.rb.MULTIKILL, { id: (0, s.A)(), killIds: [...this.multiKillChain] }),
+                        ));
             }
         }
         m &&
@@ -156,7 +158,7 @@ class A {
             S = t.player?.match_stats?.deaths;
         if (m && "number" == typeof A && "number" == typeof S && S > A) {
             for (let t = 0; t < S - A; t++) i.push(K(u.C.Death, o.rb.DEATH, { id: (0, s.A)() }));
-            (this.multiKillChain = []), (this.lastKillMs = null);
+            ((this.multiKillChain = []), (this.lastKillMs = null));
         }
         let v = a?.match_stats?.assists,
             M = t.player?.match_stats?.assists;
@@ -166,11 +168,11 @@ class A {
         if (w && b(t, ["round", "win_team"]) && t.round?.win_team != null) {
             let e = (b(t, ["map", "round"]) ? d?.round : t.map?.round) ?? 0,
                 r = t.round.win_team === this.myTeam;
-            (l = (0, s.A)()),
+            ((l = (0, s.A)()),
                 i.push(K(u.C.RoundEnd, o.rb.UNCLASSIFIED, { id: l, round: e, win: r }, !0)),
                 null != n &&
                     r &&
-                    i.push(K(u.C.RoundWinningKill, o.rb.KILL, { id: (0, s.A)(), killId: n, roundEndId: l }));
+                    i.push(K(u.C.RoundWinningKill, o.rb.KILL, { id: (0, s.A)(), killId: n, roundEndId: l })));
         }
         t.map?.phase === "gameover" &&
             null != n &&
@@ -187,15 +189,15 @@ class A {
             _ = b(t, ["map", "round"]) && "number" == typeof t.map?.round;
         if (w && (L || _) && t.map?.phase !== "gameover") {
             let e = t.map.round ?? 0;
-            i.push(K(u.C.RoundStart, o.rb.UNCLASSIFIED, { id: (0, s.A)(), round: e }, !0)),
+            (i.push(K(u.C.RoundStart, o.rb.UNCLASSIFIED, { id: (0, s.A)(), round: e }, !0)),
                 (this.bombPlanterIsMe = !1),
-                (this.roundKillIds = []);
+                (this.roundKillIds = []));
         }
         if (C(t) && b(t, ["round", "bomb"]) && t.round?.bomb === "planting") {
             let e = y(t.player);
             e?.type === "C4" && (this.bombPlanterIsMe = !0);
         }
-        C(t) && I(f(t.previously?.player)?.weapons) && !I(t.player?.weapons) && (this.bombPlanterIsMe = !0),
+        (C(t) && I(f(t.previously?.player)?.weapons) && !I(t.player?.weapons) && (this.bombPlanterIsMe = !0),
             b(t, ["round", "bomb"]) &&
                 (t.round?.bomb === "planted"
                     ? i.push(K(u.C.BombPlant, o.rb.UNCLASSIFIED, { id: (0, s.A)(), byMe: this.bombPlanterIsMe }))
@@ -207,7 +209,7 @@ class A {
                     t.round?.bomb === "exploded" ||
                     t.round?.bomb === "dropped" ||
                     t.round?.bomb === "carried") &&
-                    (this.bombPlanterIsMe = !1));
+                    (this.bombPlanterIsMe = !1)));
         let E = C(t),
             P = t.map?.phase,
             D = t.player?.activity,
@@ -232,7 +234,7 @@ function S(t) {
     function s(e) {
         let l = (0, r.l)();
         for (let i of n.processPayload(e, l))
-            o.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), t(i, l);
+            (o.nx.info(`[CS2] emit event: ${i.eventName} score=${i.score} importance=${i.importance}`), t(i, l));
     }
     return {
         start() {

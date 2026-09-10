@@ -1,8 +1,8 @@
 n.d(t, { A: () => y, j: () => S });
 var r = n(477900),
     l = n(582128),
-    o = n(192308),
-    i = n(28863),
+    i = n(192308),
+    o = n(28863),
     a = n(683071),
     s = n(308528),
     u = n(913122),
@@ -27,7 +27,7 @@ function S(e) {
     null != y ? (x = y) : null != n && null == (0, f.ou)(n) ? (x = n) : null != S ? (x = S) : null != t && (x = t);
     let _ = (0, m.vx)(),
         I = l.useCallback(() => {
-            (0, o.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: _ });
+            ((0, i.closeAllModals)(), s.A.openPrivateChannel({ recipientIds: _ }));
         }, [_]),
         A = a.length > 1,
         k = null != x ? x.message : "";
@@ -42,7 +42,7 @@ function S(e) {
             (k = E.intl.format(E.t["mv/fF2"], {
                 guardianHook: (e, t) =>
                     _.length > 0
-                        ? (0, r.jsx)(i.Anchor, { onClick: I, children: e }, t)
+                        ? (0, r.jsx)(o.Anchor, { onClick: I, children: e }, t)
                         : (0, r.jsx)(l.Fragment, { children: e }, t),
             })),
         x.code === c.tG.INVALID_BILLING_ADDRESS)
@@ -56,8 +56,8 @@ function S(e) {
 }
 function y(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: l } = e,
-        { error: o, errorMessage: i } = S({ planError: t });
-    return null == o
+        { error: i, errorMessage: o } = S({ planError: t });
+    return null == i
         ? null
-        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(a.w, { type: "critical", children: i }) });
+        : (0, r.jsx)("div", { ref: n, className: l, children: (0, r.jsx)(a.w, { type: "critical", children: o }) });
 }

@@ -15,5 +15,5 @@ function c(l) {
 }
 function a(l) {
     let t = ["videoSelfie"];
-    return l.checkIdScan && t.push("videoSelfieId"), t;
+    return (l.checkIdScan && t.push("videoSelfieId"), t);
 }

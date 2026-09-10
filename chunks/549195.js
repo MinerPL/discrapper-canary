@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isWEBP =
         t.isPSD =
         t.isPPM =
@@ -14,10 +14,10 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.isBPG =
         t.isBMP =
         t.isAVIF =
-            void 0);
+            void 0));
 let i = n(835986),
     r = n(817762);
-(t.isAVIF = function (e) {
+((t.isAVIF = function (e) {
     let t = (0, r.getFileChunk)(e);
     return !!i.FileTypes.checkByFileType(t, "avif") && (0, r.isAvifStringIncluded)(t);
 }),
@@ -76,4 +76,4 @@ let i = n(835986),
     (t.isWEBP = function (e) {
         let t = (0, r.getFileChunk)(e);
         return i.FileTypes.checkByFileType(t, "webp");
-    });
+    }));

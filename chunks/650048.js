@@ -12,7 +12,7 @@ class c extends i.Ay.PersistedStore {
     static migrations = [
         () => {
             let e = r.w.get(d, null);
-            return r.w.remove(d), { lastViewedPath: e };
+            return (r.w.remove(d), { lastViewedPath: e });
         },
     ];
     initialize() {
@@ -35,11 +35,11 @@ class c extends i.Ay.PersistedStore {
 let u = new c(a.h, {
     SAVE_LAST_ROUTE: function (e) {
         let { path: t } = e;
-        return (o.lastViewedPath = t), !0;
+        return ((o.lastViewedPath = t), !0);
     },
     SAVE_LAST_NON_VOICE_ROUTE: function (e) {
         let { path: t } = e;
-        return (o.lastViewedNonVoicePath = t), !0;
+        return ((o.lastViewedNonVoicePath = t), !0);
     },
     LOGOUT: function () {
         o = { lastViewedPath: null, lastViewedNonVoicePath: null };

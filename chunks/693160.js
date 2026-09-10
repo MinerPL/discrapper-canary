@@ -2,16 +2,16 @@ d.d(t, { t: () => i });
 var i = class l {
     static fromImageData(t) {
         let d = document.createElement("canvas");
-        (d.width = t.width), (d.height = t.height);
+        ((d.width = t.width), (d.height = t.height));
         let i = d.getContext("2d", { willReadFrequently: !0 });
-        return i && "putImageData" in i && i.putImageData(t, 0, 0), new l(d);
+        return (i && "putImageData" in i && i.putImageData(t, 0, 0), new l(d));
     }
     constructor(l) {
-        (this.base64Image = null),
+        ((this.base64Image = null),
             (this.blobData = null),
             (this.canvas = document.createElement("canvas")),
             (this.canvas.width = l.width),
-            (this.canvas.height = l.height);
+            (this.canvas.height = l.height));
         const t = this.canvas.getContext("2d");
         t && t.drawImage(l, 0, 0);
     }
@@ -19,8 +19,8 @@ var i = class l {
         return this.canvas && this.canvas.width > 1 && this.canvas.height > 1;
     }
     dispose() {
-        this.blobData?.url && (URL.revokeObjectURL(this.blobData.url), (this.blobData = null)),
-            (this.base64Image = null);
+        (this.blobData?.url && (URL.revokeObjectURL(this.blobData.url), (this.blobData = null)),
+            (this.base64Image = null));
     }
     release() {
         this.checkCanvas() &&
@@ -49,7 +49,7 @@ var i = class l {
     clone() {
         if (!this.checkCanvas()) return null;
         let t = new l(this.canvas);
-        return t.setBase64Image(this.base64Image), t;
+        return (t.setBase64Image(this.base64Image), t);
     }
     async deepClone() {
         let l = this.clone();
@@ -114,7 +114,7 @@ var i = class l {
         let a = c / d,
             s = window.innerWidth,
             n = window.innerHeight;
-        e.setWidth(s), e.setHeight(n);
+        (e.setWidth(s), e.setHeight(n));
         let Z = e.getContext("2d");
         return Z ? (Z.drawImage(this.canvas, (a * i) / 2, 0, a * s, a * n, 0, 0, s, n), e) : null;
     }

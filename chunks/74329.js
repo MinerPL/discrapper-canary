@@ -28,7 +28,7 @@ function h(e, t, h) {
         color: "danger",
         label: A.intl.string(A.t.sdnCxV),
         action: function () {
-            h?.(),
+            (h?.(),
                 null != e &&
                     (0, l.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([n.e("617171"), n.e("186889")]).then(n.bind(n, 292208));
@@ -40,7 +40,7 @@ function h(e, t, h) {
                                 analyticsData: b,
                                 ...n,
                             });
-                    });
+                    }));
         },
         icon: a.E,
         leadingAccessory: { type: "icon", icon: a.E },

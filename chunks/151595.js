@@ -16,7 +16,7 @@ let f = function (e) {
     let { type: t, text: n, buttonText: i, buttonLoading: f, hideClose: E, onClose: S } = e,
         y = (0, a.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
-            return r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
+            return (r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e);
         }),
         I = (0, m.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"

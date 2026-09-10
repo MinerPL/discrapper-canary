@@ -1,4 +1,4 @@
-n.d(t, { A: () => ee }), n(321073);
+(n.d(t, { A: () => ee }), n(321073));
 var r,
     l = n(477900),
     a = n(582128),
@@ -102,7 +102,7 @@ class H extends a.PureComponent {
             let n = window?.getSelection();
             if (null != n && !n.isCollapsed) return !0;
             if (null == e || null == t) return !1;
-            for (; (0, G.vq)(e) && e !== t; ) {
+            for (; (0, G.vq)(e) && e !== t;) {
                 let { tagName: t } = e;
                 if ("A" === t || "BUTTON" === t || ("IMG" === t && "true" !== e.getAttribute("aria-hidden"))) return !0;
                 e = e.parentNode;
@@ -200,7 +200,7 @@ function Y(e) {
         ? (0, l.jsx)(E.D, {
               className: i()(Q.rg, Q.fj),
               onClick: (e) => {
-                  e.stopPropagation(), n(t.id);
+                  (e.stopPropagation(), n(t.id));
               },
               children: s,
           })
@@ -321,10 +321,10 @@ let ee = a.memo(function (e) {
                 function n() {
                     let t = M.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    T.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: S }),
-                        (0, j.pX)(q.BVt.CHANNEL(n, e.channel_id, e.id));
+                    (T.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: S }),
+                        (0, j.pX)(q.BVt.CHANNEL(n, e.channel_id, e.id)));
                 }
-                C?.(e, t), (0, D.A)(e, n) && n();
+                (C?.(e, t), (0, D.A)(e, n) && n());
             },
             [C, S],
         ),
@@ -388,7 +388,7 @@ let ee = a.memo(function (e) {
                             }
                             return e;
                         })(e, t);
-                        return null != C && C(e, n, t), n;
+                        return (null != C && C(e, n, t), n);
                     },
                     [C],
                 ),
@@ -417,7 +417,7 @@ let ee = a.memo(function (e) {
                         } = e,
                         N = a.useRef(n),
                         _ = a.useRef(A);
-                    (_.current = A), (N.current = n);
+                    ((_.current = A), (N.current = n));
                     let v = a.useRef(C);
                     a.useEffect(() => {
                         v.current = C;
@@ -445,7 +445,7 @@ let ee = a.memo(function (e) {
                             function () {
                                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                                     n = null != i ? i(r) : r;
-                                n !== r && g({ type: c.SET_FOCUSED_INDEX, index: n }), e && j(T(t, n), n);
+                                (n !== r && g({ type: c.SET_FOCUSED_INDEX, index: n }), e && j(T(t, n), n));
                             },
                             [T, r, i, g, t, j],
                         ),
@@ -457,7 +457,7 @@ let ee = a.memo(function (e) {
                                     !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                                     e.currentTarget === e.target
                                 ) {
-                                    e.preventDefault(), e.stopPropagation(), b();
+                                    (e.preventDefault(), e.stopPropagation(), b());
                                     return;
                                 }
                                 let n = (function (e) {
@@ -480,7 +480,7 @@ let ee = a.memo(function (e) {
                                     case u.X2.NAVIGATE_DOWN:
                                     case u.X2.NAVIGATE_START:
                                     case u.X2.NAVIGATE_END:
-                                        e.preventDefault(), e.stopPropagation(), g({ type: n });
+                                        (e.preventDefault(), e.stopPropagation(), g({ type: n }));
                                         return;
                                     case u.X2.SELECT_FOCUSED_ITEM:
                                         let a = h(f(T, t, r));
@@ -516,9 +516,9 @@ let ee = a.memo(function (e) {
                                 e.addEventListener("focus", M),
                                 e.addEventListener("focusout", U),
                                 () => {
-                                    e.removeEventListener("focusin", R),
+                                    (e.removeEventListener("focusin", R),
                                         e.removeEventListener("focus", M),
-                                        e.removeEventListener("focusout", U);
+                                        e.removeEventListener("focusout", U));
                                 }
                             );
                     }, [M, R, U]);

@@ -64,13 +64,13 @@ function l({ actor: t, trackElementClicked: e }) {
             t.send({ type: "FIELD_CHANGED", field: e, value: s });
         },
         submit() {
-            e?.("submit"), t.send({ type: "SUBMIT" });
+            (e?.("submit"), t.send({ type: "SUBMIT" }));
         },
         retry() {
-            e?.("retry"), t.send({ type: "RETRY" });
+            (e?.("retry"), t.send({ type: "RETRY" }));
         },
         skip() {
-            e?.("skip"), t.send({ type: "SKIP" });
+            (e?.("skip"), t.send({ type: "SKIP" }));
         },
     };
 }

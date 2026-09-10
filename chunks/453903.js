@@ -54,7 +54,7 @@ class C extends r.Component {
         this.shouldShowPopout(this.props, this.state) && this.setupShowPopout();
     }
     componentDidUpdate(e, t) {
-        e.shouldShow, this.props.shouldShow;
+        (e.shouldShow, this.props.shouldShow);
         let n = this.shouldShowPopout(this.props, this.state),
             i = this.shouldShowPopout(e, t);
         if (
@@ -66,19 +66,19 @@ class C extends r.Component {
         ) {
             let e = this.getDomElement();
             if (null == e) return;
-            e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
+            (e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
                 e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0),
                 "close" === this.props.scrollBehavior
                     ? e.ownerDocument?.addEventListener("scroll", this.handleScroll, !0)
                     : "sticky" === this.props.scrollBehavior &&
-                      e.ownerDocument?.addEventListener("scroll", this.handleStickyScroll, !0);
+                      e.ownerDocument?.addEventListener("scroll", this.handleStickyScroll, !0));
         }
     }
     getDomElement() {
         let e = this.props.targetElementRef?.current;
         if (!(0, c.vq)(e)) {
             let e = Error("Popout cannot find DOM node");
-            return console.error(e), T.A.captureException(e), null;
+            return (console.error(e), T.A.captureException(e), null);
         }
         return e;
     }
@@ -114,7 +114,7 @@ class C extends r.Component {
     };
     unsubscribe() {
         let e = this.domElementRef.current;
-        null != e &&
+        (null != e &&
             (e.ownerDocument?.removeEventListener("mousedown", this.handleDocumentMouseDown, !0),
             e.ownerDocument?.removeEventListener("mouseup", this.handleDocumentMouseUp, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
@@ -123,13 +123,13 @@ class C extends r.Component {
             this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
             this.resizeObserver?.disconnect(),
             this.unsubscribeModalChanges?.(),
-            (this.unsubscribeModalChanges = null);
+            (this.unsubscribeModalChanges = null));
     }
     componentWillUnmount() {
-        this.unsubscribe(),
+        (this.unsubscribe(),
             (this.domElementRef.current = null),
             this.loadingTimeout.stop(),
-            this.validClickTimeout.stop();
+            this.validClickTimeout.stop());
     }
     render() {
         let { children: e, useMouseEnter: t } = this.props,
@@ -233,22 +233,22 @@ class C extends r.Component {
         let { onShiftClick: t, shouldShow: n, onRequestOpen: i, onRequestClose: r } = this.props;
         if (e?.shiftKey && null != t) return void t(e);
         let a = null != n;
-        (a ? n : this.state.shouldShowPopout) ? r?.(e?.nativeEvent, "user:explicit") : i?.(),
+        ((a ? n : this.state.shouldShowPopout) ? r?.(e?.nativeEvent, "user:explicit") : i?.(),
             a ||
                 this.setState((e) => {
                     let { shouldShowPopout: t } = e;
                     return { shouldShowPopout: !t };
-                });
+                }));
     };
     handleMouseEnter = () => {
         let { onRequestOpen: e } = this.props;
-        e?.(), this.setState({ shouldShowPopout: !0 });
+        (e?.(), this.setState({ shouldShowPopout: !0 }));
     };
     handlePreload = async () => {
         let { preload: e } = this.props;
         if (null != e) {
-            this.setState({ isLoading: !0 }),
-                this.loadingTimeout.start(250, () => this.setState({ shouldShowLoadingState: !0 }), !1);
+            (this.setState({ isLoading: !0 }),
+                this.loadingTimeout.start(250, () => this.setState({ shouldShowLoadingState: !0 }), !1));
             try {
                 await e();
             } finally {

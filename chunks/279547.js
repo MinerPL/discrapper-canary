@@ -9,7 +9,7 @@ function l(t) {
             if (!s) {
                 o(!0);
                 try {
-                    await l(), e?.();
+                    (await l(), e?.());
                 } catch (e) {
                     let t = new a.LG(e);
                     n?.(t);

@@ -66,7 +66,7 @@ function v(t) {
                           variant: "primary",
                           text: T.intl.string(A.default.wTKEyX),
                           onClick: function () {
-                              v(), x();
+                              (v(), x());
                           },
                       }
                     : {
@@ -74,7 +74,7 @@ function v(t) {
                           text: T.intl.string(A.default.Gr02vu),
                           icon: o.GiftIcon,
                           onClick: function () {
-                              v(), S();
+                              (v(), S());
                           },
                       }),
           (0, e.jsx)(a.k, {
@@ -97,7 +97,7 @@ function v(t) {
                           iconAlign: "center",
                           children: T.intl.format(A.default.p0mYoH, {
                               onInventoryClick: function () {
-                                  v(), (0, f.openUserSettings)(g.X.GIFT_PANEL, { analyticsLocations: I });
+                                  (v(), (0, f.openUserSettings)(g.X.GIFT_PANEL, { analyticsLocations: I }));
                               },
                           }),
                       }),

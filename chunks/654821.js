@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => s, normalizeDOMPoint: () => r });
+(n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => s, normalizeDOMPoint: () => r }));
 var l = n(530795);
 {
     l.rL.toSlateRange = (e, t, n) => {
@@ -46,7 +46,7 @@ var l = n(530795);
 }
 function i(e, t) {
     if (null == t) return !1;
-    for (; null != e; ) {
+    for (; null != e;) {
         if (e === t) return !0;
         e = e.parentNode;
     }
@@ -88,14 +88,14 @@ function a(e, t, n) {
         (!a || !c);
     ) {
         if (r >= i.length) {
-            (a = !0), (r = t - 1), (n = "backward");
+            ((a = !0), (r = t - 1), (n = "backward"));
             continue;
         }
         if (r < 0) {
-            (c = !0), (r = t + 1), (n = "forward");
+            ((c = !0), (r = t + 1), (n = "forward"));
             continue;
         }
-        (s = i[r]), (t = r), (r += "forward" === n ? 1 : -1);
+        ((s = i[r]), (t = r), (r += "forward" === n ? 1 : -1));
     }
     return [s, t];
 }

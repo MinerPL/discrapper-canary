@@ -21,7 +21,7 @@ let d = {
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            return r.h.dispatch({ type: "WIDGET_PENDING_SAVE_SUCCESS", userId: t, widgets: e.body.widgets }), e.body;
+            return (r.h.dispatch({ type: "WIDGET_PENDING_SAVE_SUCCESS", userId: t, widgets: e.body.widgets }), e.body);
         } catch (e) {
             throw (r.h.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" }), e);
         }
@@ -72,13 +72,13 @@ let d = {
         r.h.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
         try {
             let e = await i.Bo.get({ url: o.Rsh.USER_PROFILE_SUGGESTED_GAMES, rejectWithError: !0 });
-            (e.body?.suggested_games == null || e.body?.suggested_wishlist_games == null) &&
+            ((e.body?.suggested_games == null || e.body?.suggested_wishlist_games == null) &&
                 s.A.captureMessage("Suggested games or wishlist games not found"),
                 r.h.dispatch({
                     type: "WIDGET_SUGGESTED_FETCH_SUCCESS",
                     suggestedGamesIds: e.body?.suggested_games ?? [],
                     suggestedWishlistGamesIds: e.body?.suggested_wishlist_games ?? [],
-                });
+                }));
         } catch (e) {
             throw (r.h.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" }), s.A.captureException(e), e);
         }

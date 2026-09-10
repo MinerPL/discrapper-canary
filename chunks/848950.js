@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.Alpha = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.Alpha = void 0));
 var n =
         Object.assign ||
         function (e) {
@@ -12,14 +12,14 @@ var n =
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
-                (n.enumerable = n.enumerable || !1),
+                ((n.enumerable = n.enumerable || !1),
                     (n.configurable = !0),
                     "value" in n && (n.writable = !0),
-                    Object.defineProperty(e, n.key, n);
+                    Object.defineProperty(e, n.key, n));
             }
         }
         return function (t, r, n) {
-            return r && e(t.prototype, r), n && e(t, n), t;
+            return (r && e(t.prototype, r), n && e(t, n), t);
         };
     })(),
     a = r(582128),
@@ -29,7 +29,7 @@ var n =
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
-        return (t.default = e), t;
+        return ((t.default = e), t);
     })(r(4135)),
     s = p(r(407544));
 function p(e) {
@@ -52,16 +52,16 @@ var f = (t.Alpha = (function (e) {
                 t && "function" == typeof n.props.onChange && n.props.onChange(t, e);
             }),
             (n.handleMouseDown = function (e) {
-                n.handleChange(e),
+                (n.handleChange(e),
                     window.addEventListener("mousemove", n.handleChange),
-                    window.addEventListener("mouseup", n.handleMouseUp);
+                    window.addEventListener("mouseup", n.handleMouseUp));
             }),
             (n.handleMouseUp = function () {
                 n.unbindEventListeners();
             }),
             (n.unbindEventListeners = function () {
-                window.removeEventListener("mousemove", n.handleChange),
-                    window.removeEventListener("mouseup", n.handleMouseUp);
+                (window.removeEventListener("mousemove", n.handleChange),
+                    window.removeEventListener("mouseup", n.handleMouseUp));
             }),
             c(n, r)
         );

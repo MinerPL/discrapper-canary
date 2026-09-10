@@ -64,10 +64,10 @@ let h = Object.entries(
                     value: a,
                     options: p,
                     onSelectionChange: function (e) {
-                        e !== T.HCAPTCHA_RQDATA && e !== T.SMITE_RQDATA && E(null),
+                        (e !== T.HCAPTCHA_RQDATA && e !== T.SMITE_RQDATA && E(null),
                             e !== T.HCAPTCHA_RQDATA && C(null),
                             i(e),
-                            D("");
+                            D(""));
                     },
                     selectionMode: "single",
                     fullWidth: !0,

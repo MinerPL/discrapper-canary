@@ -4,7 +4,7 @@ function t(e) {
         this._length = t;
     }
 }
-(t.prototype.toArray = function () {
+((t.prototype.toArray = function () {
     for (var e = this._length, t = Array(e), r = this._front, n = this._capacity, i = 0; i < e; ++i)
         t[i] = this[(r + i) & (n - 1)];
     return t;
@@ -18,24 +18,24 @@ function t(e) {
                 for (var i = 0; i < t; ++i) {
                     this._checkCapacity(r + 1);
                     var o = (this._front + r) & (this._capacity - 1);
-                    (this[o] = arguments[i]), r++, (this._length = r);
+                    ((this[o] = arguments[i]), r++, (this._length = r));
                 }
                 return r;
             }
-            for (var o = this._front, i = 0; i < t; ++i) (this[(o + r) & (n - 1)] = arguments[i]), o++;
-            return (this._length = r + t), r + t;
+            for (var o = this._front, i = 0; i < t; ++i) ((this[(o + r) & (n - 1)] = arguments[i]), o++);
+            return ((this._length = r + t), r + t);
         }
         if (0 === t) return r;
         this._checkCapacity(r + 1);
         var i = (this._front + r) & (this._capacity - 1);
-        return (this[i] = e), (this._length = r + 1), r + 1;
+        return ((this[i] = e), (this._length = r + 1), r + 1);
     }),
     (t.prototype.pop = function () {
         var e = this._length;
         if (0 !== e) {
             var t = (this._front + e - 1) & (this._capacity - 1),
                 r = this[t];
-            return (this[t] = void 0), (this._length = e - 1), r;
+            return ((this[t] = void 0), (this._length = e - 1), r);
         }
     }),
     (t.prototype.shift = function () {
@@ -43,7 +43,7 @@ function t(e) {
         if (0 !== e) {
             var t = this._front,
                 r = this[t];
-            return (this[t] = void 0), (this._front = (t + 1) & (this._capacity - 1)), (this._length = e - 1), r;
+            return ((this[t] = void 0), (this._front = (t + 1) & (this._capacity - 1)), (this._length = e - 1), r);
         }
     }),
     (t.prototype.unshift = function (e) {
@@ -56,21 +56,21 @@ function t(e) {
                     this._checkCapacity(t + 1);
                     var n = this._capacity,
                         o = (((this._front - 1) & (n - 1)) ^ n) - n;
-                    (this[o] = arguments[i]), t++, (this._length = t), (this._front = o);
+                    ((this[o] = arguments[i]), t++, (this._length = t), (this._front = o));
                 }
                 return t;
             }
             for (var a = this._front, i = r - 1; i >= 0; i--) {
                 var o = (((a - 1) & (n - 1)) ^ n) - n;
-                (this[o] = arguments[i]), (a = o);
+                ((this[o] = arguments[i]), (a = o));
             }
-            return (this._front = a), (this._length = t + r), t + r;
+            return ((this._front = a), (this._length = t + r), t + r);
         }
         if (0 === r) return t;
         this._checkCapacity(t + 1);
         var n = this._capacity,
             i = (((this._front - 1) & (n - 1)) ^ n) - n;
-        return (this[i] = e), (this._length = t + 1), (this._front = i), t + 1;
+        return ((this[i] = e), (this._length = t + 1), (this._front = i), t + 1);
     }),
     (t.prototype.peekBack = function () {
         var e = this._length;
@@ -90,7 +90,7 @@ function t(e) {
         return 0 === this._length;
     }),
     (t.prototype.clear = function () {
-        (this._length = 0), (this._front = 0), this._makeCapacity();
+        ((this._length = 0), (this._front = 0), this._makeCapacity());
     }),
     (t.prototype.toString = function () {
         return this.toArray().toString();
@@ -126,9 +126,9 @@ function t(e) {
             n(i, t, this, 0, o);
         else {
             var a = o - ((t + o) & (r - 1));
-            n(i, t, this, 0, a), n(i, 0, this, a, o - a);
+            (n(i, t, this, 0, a), n(i, 0, this, a, o - a));
         }
-    });
+    }));
 var r = Array.isArray;
 function n(e, t, r, n, i) {
     for (var o = 0; o < i; ++o) r[o + n] = e[o + t];

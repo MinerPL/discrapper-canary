@@ -41,7 +41,7 @@ function u() {
             let n = new ResizeObserver(() => {
                 let n = t.current.getBoundingClientRect().width,
                     r = getComputedStyle(t.current);
-                l(n + (parseFloat(r.marginLeft) + parseFloat(r.marginRight))),
+                (l(n + (parseFloat(r.marginLeft) + parseFloat(r.marginRight))),
                     e &&
                         i(
                             n -
@@ -49,9 +49,9 @@ function u() {
                                     parseFloat(r.paddingRight) +
                                     parseFloat(r.borderLeftWidth) +
                                     parseFloat(r.borderRightWidth)),
-                        );
+                        ));
             });
-            return n.observe(t.current), () => n.disconnect();
+            return (n.observe(t.current), () => n.disconnect());
         }, [e]),
         [t, n, a]
     );

@@ -1,4 +1,4 @@
-l.d(t, { o: () => d }), l(321073);
+(l.d(t, { o: () => d }), l(321073));
 var n = l(582128),
     a = l(806163),
     i = l(641150),
@@ -27,7 +27,7 @@ let u = {
             }, [e]),
             [S, m] = n.useState(E),
             [A, C] = n.useState(o.Pf.VISIBLE);
-        n.useEffect(() => {
+        (n.useEffect(() => {
             S !== o.G2.GAME_SERVERS && b(S);
         }, [S, b]),
             n.useEffect(() => {
@@ -38,7 +38,7 @@ let u = {
                     let l = u[e];
                     null != l ? t(l) : d();
                 }
-            }, [E, e, t, l, i, d]);
+            }, [E, e, t, l, i, d]));
         let { clearError: p } = (0, r.S)(),
             g = (0, a.W6)(),
             f = n.useCallback(
@@ -53,12 +53,12 @@ let u = {
                     if (S !== e) {
                         if (n) {
                             var a;
-                            C(o.Pf.OUT), await ((a = 1.1 * o.H1), new Promise((e) => setTimeout(e, a)));
+                            (C(o.Pf.OUT), await ((a = 1.1 * o.H1), new Promise((e) => setTimeout(e, a))));
                         }
-                        m(e === o.G2.HOME || e === o.G2.ORBS || e === o.G2.GAME_SERVERS ? e : o.G2.CATALOG),
+                        (m(e === o.G2.HOME || e === o.G2.ORBS || e === o.G2.GAME_SERVERS ? e : o.G2.CATALOG),
                             n && C(o.Pf.IN),
                             g.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            C(o.Pf.VISIBLE);
+                            C(o.Pf.VISIBLE));
                     }
                 },
                 [g, t, l, i, d, S, p],

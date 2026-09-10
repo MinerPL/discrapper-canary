@@ -124,7 +124,7 @@ function U(e) {
         let n = (0, x.A)(t, w.jUm.EMBEDDED),
             l = b.Ay.getVoiceChannelId(),
             i = m.A.getChannel(l);
-        await r.Ay.join({
+        (await r.Ay.join({
             userId: e.id,
             sessionId: eh,
             applicationId: Z,
@@ -146,13 +146,13 @@ function U(e) {
                     partyId: null != t ? t?.party?.id : "",
                     locationObject: ea.location,
                     analyticsLocations: W,
-                });
+                }));
     }
     async function ef() {
         let e = !1;
         async function t() {
             let e;
-            z(!0),
+            (z(!0),
                 null != n &&
                     (e = await s.A.sendActivityInviteUser({
                         type: w.xL.JOIN_REQUEST,
@@ -160,7 +160,7 @@ function U(e) {
                         activity: n,
                         location: w.ThZ.USER_ACTIVITY_ACTIONS,
                     })),
-                null != e && a.default.selectPrivateChannel(e.id);
+                null != e && a.default.selectPrivateChannel(e.id));
         }
         if (Y && !el) {
             if (null == Z) return;
@@ -177,7 +177,7 @@ function U(e) {
         }
         if (!e) {
             if (es === p.o.CAN_JOIN) {
-                V?.(), em(G, n), F?.();
+                (V?.(), em(G, n), F?.());
                 return;
             }
             await t();

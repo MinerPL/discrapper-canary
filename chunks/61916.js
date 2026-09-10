@@ -92,7 +92,7 @@ function w(e) {
         L = l?.name;
     if (s.isThread() || s.isForumPost()) {
         let e = s.isForumPost() ? u.b : o.N;
-        (p = (0, a.jsxs)("div", {
+        ((p = (0, a.jsxs)("div", {
             className: y.vr,
             children: [
                 (0, a.jsx)(e, { color: b.A.colors.TEXT_SUBTLE, className: y.Q9 }),
@@ -116,7 +116,7 @@ function w(e) {
                     : null,
             ],
         })),
-            (L = m);
+            (L = m));
     }
     let g = d ?? void 0,
         N = t["aria-label"] ?? G(g, i ?? L);

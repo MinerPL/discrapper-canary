@@ -3,7 +3,7 @@ var i = n(871633),
     r = n(760751),
     a = n(723702);
 function s(e) {
-    return (e = e.toLowerCase()).endsWith("/") && (e = e.slice(0, -1)), e;
+    return ((e = e.toLowerCase()).endsWith("/") && (e = e.slice(0, -1)), e);
 }
 function l(e) {
     return s(e).split("/").slice(-2).join("/");

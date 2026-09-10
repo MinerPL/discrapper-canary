@@ -29,7 +29,7 @@ function u(e, t) {
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.E;
     try {
-        return u(e, t), !0;
+        return (u(e, t), !0);
     } catch (e) {
         return !1;
     }

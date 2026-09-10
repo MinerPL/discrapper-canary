@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         ApplicationDirectoryProfileSections: () => _,
         EMPTY_QUERY: () => r,
@@ -7,7 +7,7 @@ n.r(t),
         GlobalDiscoveryAppsTabId: () => u,
         MAX_PAGES: () => a,
         PAGE_SIZE: () => s,
-    });
+    }));
 let i = 0,
     r = "",
     a = 100,

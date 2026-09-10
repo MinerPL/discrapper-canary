@@ -3,7 +3,7 @@ let n = new Map(),
     i = new Map();
 class o {
     constructor(e, t) {
-        (this.locale = e), (this.strings = t);
+        ((this.locale = e), (this.strings = t));
     }
     format(e, t) {
         let r = this.strings.getStringForLocale(e, this.locale);
@@ -21,7 +21,7 @@ class o {
     }
     number(e) {
         let t = i.get(this.locale);
-        return t || ((t = new Intl.NumberFormat(this.locale)), i.set(this.locale, t)), t.format(e);
+        return (t || ((t = new Intl.NumberFormat(this.locale)), i.set(this.locale, t)), t.format(e));
     }
     select(e, t) {
         let r = e[t] || e.other;

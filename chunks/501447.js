@@ -17,7 +17,7 @@ function s() {
                         (d.current = l),
                         t(l),
                         () => {
-                            l.remove(), (d.current = null);
+                            (l.remove(), (d.current = null));
                         }
                     );
                 }, []),

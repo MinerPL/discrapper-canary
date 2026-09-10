@@ -8,16 +8,16 @@ let o = {},
     d = {},
     c = null;
 async function u(e, t) {
-    null == o[e] && (o[e] = new Set()), o[e].add(t), null == d[e] && (d[e] = Date.now()), E(e) && (await _(e));
+    (null == o[e] && (o[e] = new Set()), o[e].add(t), null == d[e] && (d[e] = Date.now()), E(e) && (await _(e)));
 }
 function _(e) {
     if (null == o[e]) return;
     let t = Array.from(o[e]);
-    (o[e] = new Set()),
+    ((o[e] = new Set()),
         (d[e] = Date.now()),
         requestAnimationFrame(async () => {
             await i.h.dispatch({ type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH", guildId: e, userIds: t });
-        });
+        }));
 }
 function E(e) {
     let t = o[e];
@@ -30,7 +30,7 @@ function E(e) {
     return null != i && r >= ((a.A.getMemberCount(e) ?? 0) >= 75e3 ? 5e3 : 2e3);
 }
 function A(e) {
-    (o[e] = new Set()), (d[e] = null);
+    ((o[e] = new Set()), (d[e] = null));
 }
 class h extends r.A {
     actions = {

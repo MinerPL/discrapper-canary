@@ -33,7 +33,8 @@ function N(t) {
             value: r,
             options: l,
             onChange: (t) => {
-                o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), i(t);
+                (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }),
+                    i(t));
             },
         }),
     });
@@ -99,10 +100,10 @@ function T(t) {
         m = (0, i.bG)([O.A], () => O.A.getErrors()),
         I = r.useRef(null);
     async function M(t) {
-        t.preventDefault(), s(null), A(!0);
+        (t.preventDefault(), s(null), A(!0));
         try {
             let { token: t } = await L(C);
-            n(t), l();
+            (n(t), l());
         } catch (t) {
             s(new y.A(t).getAnyErrorMessage());
         } finally {
@@ -113,7 +114,7 @@ function T(t) {
         if (!S) {
             k(!0);
             try {
-                await v(!0), (0, d.P0)((0, h.o)(_.intl.string(_.t["84yeoz"]), x.Ck.SUCCESS));
+                (await v(!0), (0, d.P0)((0, h.o)(_.intl.string(_.t["84yeoz"]), x.Ck.SUCCESS)));
             } catch (e) {
                 let t = new y.A(e).getAnyErrorMessage();
                 null != t && (0, d.P0)((0, h.o)(t, x.Ck.FAILURE));
@@ -154,9 +155,9 @@ function j(t) {
         [o, E] = r.useState(!1),
         u = (0, i.bG)([l.default], () => l.default.getCurrentUser());
     async function A(t) {
-        t.preventDefault(), E(!0);
+        (t.preventDefault(), E(!0));
         try {
-            await v(), e();
+            (await v(), e());
         } catch (e) {
             let t = new y.A(e).getAnyErrorMessage();
             null != t && (0, d.P0)((0, h.o)(t, x.Ck.FAILURE));
@@ -189,9 +190,9 @@ function U(t) {
         m = (0, i.bG)([O.A], () => O.A.getErrors()),
         d = r.useRef(null);
     async function h(t) {
-        t.preventDefault(), k(!0);
+        (t.preventDefault(), k(!0));
         let n = await (0, s._L)({ email: u, emailToken: e, password: C });
-        k(!1), n?.ok ? o(u) : n?.body?.username != null ? (0, D.E)() : n?.body?.email_token != null && l?.();
+        (k(!1), n?.ok ? o(u) : n?.body?.username != null ? (0, D.E)() : n?.body?.email_token != null && l?.());
     }
     return (
         r.useEffect(() => {
@@ -292,8 +293,8 @@ function b(t) {
         case H.ko.CHANGE_EMAIL_WARNING:
             return (0, a.jsx)(G, {
                 onNext: () => {
-                    o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: p }),
-                        g(H.ko.EMAIL_AND_PASSWORD);
+                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: p }),
+                        g(H.ko.EMAIL_AND_PASSWORD));
                 },
                 onClose: n,
                 transitionState: e,
@@ -305,9 +306,9 @@ function b(t) {
                     ? () => g(null != p && u.qr.has(p) ? H.ko.CHANGE_EMAIL_WARNING : H.ko.CHANGE_EMAIL_REASONS)
                     : null,
                 onNext: (t) => {
-                    o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: p }),
+                    (o.default.track(C.HAw.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: p }),
                         f(t),
-                        g(H.ko.COMPLETE);
+                        g(H.ko.COMPLETE));
                 },
                 onClose: n,
                 transitionState: e,

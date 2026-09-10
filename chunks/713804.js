@@ -1,11 +1,11 @@
 let r;
-n.r(t),
+(n.r(t),
     n.d(t, {
         getOrParseBioAST: () => O,
         parseBioReact: () => f,
         parseBioReactWithCachedAST: () => R,
         parseBioReactWithoutScrolling: () => g,
-    });
+    }));
 var i = n(435558),
     a = n.n(i),
     l = n(635377),
@@ -30,7 +30,7 @@ function f(e, t, n, r) {
 }
 function O(e) {
     let t = k.get(e);
-    return null != t || ((t = r(e, !0)), k.set(e, t)), t;
+    return (null != t || ((t = r(e, !0)), k.set(e, t)), t);
 }
 function R(e) {
     if (0 === e.trim().length) return null;

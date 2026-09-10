@@ -73,6 +73,6 @@ var _ =
     (a.SLIDE_IN_OUT_REVERSE = "slide-in-out-reverse"),
     (a.FADE = "fade"),
     a);
-Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } }),
-    Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } });
+(Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } }),
+    Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } }));
 let E = /(\t|\s)/;

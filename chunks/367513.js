@@ -19,8 +19,8 @@ let o = {
     },
     updateLayout(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.BRT.APP;
-        a.default.track(l.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
-            i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId: e, layout: t, appContext: n });
+        (a.default.track(l.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
+            i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId: e, layout: t, appContext: n }));
     },
     toggleParticipants(e, t) {
         i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN", channelId: e, participantsOpen: t });
@@ -43,12 +43,12 @@ let o = {
         });
     },
     updateChatOpen(e, t) {
-        i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: e, chatOpen: t }),
+        (i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: e, chatOpen: t }),
             t
                 ? setTimeout(() => {
                       s._.dispatch(l.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : s._.dispatch(l.jej.FOCUS_CHAT_BUTTON);
+                : s._.dispatch(l.jej.FOCUS_CHAT_BUTTON));
     },
     jumpToVoiceChannelMessage(e, t, n, r) {
         i.h.dispatch({

@@ -1,4 +1,4 @@
-t.d(s, { Ay: () => Y, Kc: () => Q, Wr: () => X }), t(321073);
+(t.d(s, { Ay: () => Y, Kc: () => Q, Wr: () => X }), t(321073));
 var i = t(477900),
     n = t(582128),
     l = t(503698),
@@ -117,7 +117,7 @@ function Q(e) {
             }
             return o;
         })({ iconClassName: D, mute: t, localMute: n, serverMute: a, deaf: d, serverDeaf: p });
-    k &&
+    (k &&
         (l
             ? $.push(
                   (0, i.jsx)(
@@ -201,7 +201,7 @@ function Q(e) {
                         text: B.intl.string(B.t.ygslb0),
                         children: (0, i.jsx)(j.D, {
                             onClick: (e) => {
-                                e.stopPropagation(), C.A.stopRinging(W, [X.id]);
+                                (e.stopPropagation(), C.A.stopRinging(W, [X.id]));
                             },
                             children: (0, i.jsx)(o.z, {
                                 size: "sm",
@@ -212,7 +212,7 @@ function Q(e) {
                     },
                     "ring",
                 ),
-            );
+            ));
     let es = null != z && !(0, O.n)(z, Z.gfo.EMBEDDED);
     return 0 !== $.length || 0 !== ee.length || es || R
         ? (0, i.jsxs)("div", {
@@ -322,7 +322,7 @@ let Y = function (e) {
             E?.(e, et);
         },
         onMouseLeave: function (e) {
-            L?.(e, et), ec(!1);
+            (L?.(e, et), ec(!1));
         },
         onMouseDown: function (e) {
             C?.(e, et);

@@ -92,7 +92,7 @@ let I = l.forwardRef(function (e, n) {
             }
             if (k) return e();
             let n = requestIdleCallback(() => {
-                (j.current = null), e();
+                ((j.current = null), e());
             });
             return (
                 (j.current = n),

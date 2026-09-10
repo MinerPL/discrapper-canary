@@ -19,12 +19,12 @@ t.default = class {
         ) {
             let e = t[4],
                 r = "\u5143" == e ? 1 : parseInt((0, n.toHankaku)(e));
-            "\u4EE4\u548C" == t[3]
+            ("\u4EE4\u548C" == t[3]
                 ? (r += 2018)
                 : "\u5E73\u6210" == t[3]
                   ? (r += 1988)
                   : "\u662D\u548C" == t[3] && (r += 1925),
-                s.assign("year", r);
+                s.assign("year", r));
         } else {
             let t = (0, a.findYearClosestToRef)(e.refDate, i, r);
             s.imply("year", t);

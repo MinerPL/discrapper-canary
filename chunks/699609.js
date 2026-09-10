@@ -55,7 +55,7 @@ function F(e) {
         A = null != r ? s[(0, L.af)(r)] : null,
         [d, T] = l.useState(() => {
             let e = null == c ? [] : q.default.keys(c);
-            return null != A && e.push(A.id), e;
+            return (null != A && e.push(A.id), e);
         }),
         I = l.useRef(r);
     l.useEffect(() => {

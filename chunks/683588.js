@@ -5,7 +5,7 @@ class i {
     reject;
     constructor() {
         this.promise = new Promise((e, t) => {
-            (this.resolve = e), (this.reject = t);
+            ((this.resolve = e), (this.reject = t));
         });
     }
 }

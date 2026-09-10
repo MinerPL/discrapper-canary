@@ -24,7 +24,7 @@ function m(t) {
                     className: u.C,
                     tag: "span",
                     onClick: () => {
-                        a(), (0, d.e)();
+                        (a(), (0, d.e)());
                     },
                     children: t,
                 },

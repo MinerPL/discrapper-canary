@@ -172,11 +172,11 @@ function y(e) {
         O = L + 1,
         V = L > 0 && !k && !q,
         X = t.useCallback(() => {
-            (G.current = null), F(!1), P?.(!1);
+            ((G.current = null), F(!1), P?.(!1));
         }, [P]),
         Q = t.useCallback(
             (e) => {
-                (G.current = e ?? M.current), F(!0), P?.(!0);
+                ((G.current = e ?? M.current), F(!0), P?.(!0));
             },
             [P],
         );
@@ -206,7 +206,7 @@ function y(e) {
                                   className: E.x6,
                                   onFocus: A,
                                   onClick: (e) => {
-                                      R?.(e), Q();
+                                      (R?.(e), Q());
                                   },
                                   "aria-expanded": D,
                                   "aria-label": S.intl.formatToPlainString(S.t.R8Z8Qr, { count: O }),

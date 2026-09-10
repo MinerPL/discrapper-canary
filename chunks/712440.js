@@ -41,7 +41,7 @@ let s = {
                 p.queue(t).catch((t) => {
                     if (!(t instanceof a.bY)) throw t;
                 });
-            else p.reset(), i.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } }), E();
+            else (p.reset(), i.h.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } }), E());
     },
     delete(t) {
         l.Bo.del({ url: h.Rsh.OAUTH2_TOKEN(t), oldFormErrors: !0, rejectWithError: !0 }).then(() => {

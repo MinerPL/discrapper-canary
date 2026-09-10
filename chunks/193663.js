@@ -31,13 +31,13 @@ let m = function (e) {
         focusProps: j,
         ...T
     } = e;
-    (T.className = r()(T.className, h.kL, {
+    ((T.className = r()(T.className, h.kL, {
         [h.wH]: C,
         [h.mr]: _,
         [S ?? ""]: C,
         [h.vk]: !C && (null != I || null != x),
     })),
-        (T["aria-selected"] = T["aria-selected"] ?? C);
+        (T["aria-selected"] = T["aria-selected"] ?? C));
     let b = i.useRef(null),
         R = (0, l.jsxs)("div", {
             className: r()(h.sn, { [h.EY]: null != m }),

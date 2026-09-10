@@ -1,4 +1,4 @@
-n.d(t, { A: () => B }), n(321073), n(938796);
+(n.d(t, { A: () => V }), n(321073), n(938796));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -71,9 +71,9 @@ function F() {
         let e = O.A.getStreamerActiveStreamMetadata(),
             t = A.Ay.getVisibleRunningGames(),
             n = null;
-        e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
+        (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
-            null != n ? (null == k && (k = n.start ?? Date.now()), (o = n)) : (k = null);
+            null != n ? (null == k && (k = n.start ?? Date.now()), (o = n)) : (k = null));
     } else k = null;
     let d =
             null != o &&
@@ -108,12 +108,12 @@ function F() {
         });
     }
     let u = S.A.getActivity();
-    null != u && e.push({ type: b.$pd.LISTENING, ...u }), r()(M, e) || (M = e);
+    (null != u && e.push({ type: b.$pd.LISTENING, ...u }), r()(M, e) || (M = e));
 }
-class V extends o.Ay.Store {
+class B extends o.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        this.waitFor(_.A, O.A, R.A, c.Ay, y.A, T, L.A, A.Ay, D.Ay, v.A, S.A, C.A), this.syncWith([T], () => F());
+        (this.waitFor(_.A, O.A, R.A, c.Ay, y.A, T, L.A, A.Ay, D.Ay, v.A, S.A, C.A), this.syncWith([T], () => F()));
     }
     getActivities() {
         return M;
@@ -146,15 +146,15 @@ class V extends o.Ay.Store {
             }
     }
 }
-let B = new V(d.h, {
+let V = new B(d.h, {
     ROBLOX_SUBGAME_UPDATE: F,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: F,
     OVERLAY_INITIALIZE: function (e) {
         let { localActivities: t } = e;
-        (P = { ...t }), F();
+        ((P = { ...t }), F());
     },
     START_SESSION: function () {
-        (P = {}), (U = {}), (w = 0), (G = {}), (x = {}), F();
+        ((P = {}), (U = {}), (w = 0), (G = {}), (x = {}), F());
     },
     LOCAL_ACTIVITY_UPDATE: function (e) {
         let { socketId: t, pid: n, applicationId: i, activity: a, partyPrivacy: s } = e,
@@ -169,7 +169,7 @@ let B = new V(d.h, {
         let d = null == a ? null == P[t] : r()(P[t], [n, a, s]),
             c = null == i || r()(U[t], [n, i]);
         if (d && c && !o) return !1;
-        null != i && (U[t] = [n, i]), null != a ? (P[t] = [n, a, s]) : delete P[t], F();
+        (null != i && (U[t] = [n, i]), null != a ? (P[t] = [n, a, s]) : delete P[t], F());
     },
     RPC_APP_CONNECTED: function (e) {
         let { socketId: t } = e;
@@ -177,7 +177,7 @@ let B = new V(d.h, {
     },
     RPC_APP_DISCONNECTED: function (e) {
         let { socketId: t } = e;
-        delete P[t], delete U[t], F();
+        (delete P[t], delete U[t], F());
     },
     RUNNING_GAMES_CHANGE: F,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
@@ -188,7 +188,7 @@ let B = new V(d.h, {
     STREAM_START: F,
     STREAM_STOP: F,
     USER_SETTINGS_PROTO_UPDATE: function () {
-        !(function () {
+        (!(function () {
             let e = {},
                 t = !1;
             for (let [n, [i, r, a]] of Object.entries(P)) {
@@ -204,7 +204,7 @@ let B = new V(d.h, {
             }
             t && (P = e);
         })(),
-            F();
+            F());
     },
     EMBEDDED_ACTIVITY_CLOSE: F,
     RUNNING_GAME_TOGGLE_DETECTION: F,

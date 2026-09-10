@@ -77,7 +77,7 @@ function g(e) {
                     n.components.forEach((n) => e(t, n));
                     break;
                 case a.I5.SECTION:
-                    n.components.forEach((n) => e(t, n)), e(t, n.accessory);
+                    (n.components.forEach((n) => e(t, n)), e(t, n.accessory));
                     break;
                 case a.I5.CONTAINER:
                     n.components.forEach((n) => e(t, n));
@@ -139,7 +139,7 @@ function C(e, t) {
                     case a.I5.CHECKBOX:
                         return [];
                     default:
-                        return I.warn("getComponentChildren: Unknown component type", e.type), [];
+                        return (I.warn("getComponentChildren: Unknown component type", e.type), []);
                 }
             })(r);
             if (n.some((e) => e.id === t.id)) return [r, ...i];
@@ -460,7 +460,7 @@ function y(e) {
                     case a.I5.CHECKBOX:
                         return { type: t.type, id: D(n), customId: t.custom_id, default: t.default };
                     default:
-                        return I.warn("transformComponent: Unknown component type", t.type), null;
+                        return (I.warn("transformComponent: Unknown component type", t.type), null);
                 }
             })(e, [t]),
         )

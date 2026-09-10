@@ -17,7 +17,7 @@ function A(t, n, A) {
         E = y(b);
     if (null == t || !E || !g || b?.entity_type === u.Ps.EXTERNAL) return null;
     function h() {
-        A?.isGuildStageVoice() ? (0, c.OE)(A) : null != t && d.default.endEvent(t, n.id), (0, a.closeAllModals)();
+        (A?.isGuildStageVoice() ? (0, c.OE)(A) : null != t && d.default.endEvent(t, n.id), (0, a.closeAllModals)());
     }
     return (0, e.jsx)(r.Dr, {
         id: p.intl.string(p.t.qaYzPA),

@@ -83,11 +83,11 @@ class S extends r.PureComponent {
     static TextAlignments = E;
     static defaultProps = { textAlign: "left" };
     onClickComplete = (e) => {
-        e(), this.props.onComplete();
+        (e(), this.props.onComplete());
     };
     onClickSkipAll = (e) => {
         let { onSkipAll: t, uniqueId: n } = this.props;
-        e(), t(), g.default.track(x.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n });
+        (e(), t(), g.default.track(x.HAw.DISMISS_ALL_TUTORIALS, { tutorial: n }));
     };
     renderPopoutContent = (e) => {
         let { closePopout: t, position: n } = e,

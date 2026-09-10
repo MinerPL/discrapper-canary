@@ -7,10 +7,10 @@ var i = n(435558),
 let o = Object.freeze([]),
     d = {};
 function c(e) {
-    (d = {}),
+    ((d = {}),
         e.sessions.forEach((e) => {
             d[e.sessionId] = e;
-        });
+        }));
 }
 class u extends a.Ay.Store {
     static displayName = "SessionsStore";

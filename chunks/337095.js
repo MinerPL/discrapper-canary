@@ -25,7 +25,8 @@ function c(e, t) {
         i.Bo.get({ url: s.Rsh.APPLICATION_PUBLIC(e), signal: t, rejectWithError: (0, i.fT)() })
             .then(
                 (e) => (
-                    r.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e.body, isHydrated: !0 }), e.body
+                    r.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e.body, isHydrated: !0 }),
+                    e.body
                 ),
             )
             .catch(

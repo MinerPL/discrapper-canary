@@ -1,8 +1,8 @@
 l.d(t, { DH: () => w, JW: () => U, WH: () => $, a6: () => R, f7: () => G, jw: () => M, oo: () => F });
 var n = l(477900),
     r = l(582128),
-    i = l(503698),
-    s = l.n(i),
+    s = l(503698),
+    i = l.n(s),
     a = l(575593),
     u = l(17928),
     c = l(661531),
@@ -13,8 +13,8 @@ var n = l(477900),
     h = l(315629),
     p = l(403581),
     v = l(104510),
-    f = l(323384),
-    j = l(966327),
+    j = l(323384),
+    f = l(966327),
     g = l(14702),
     N = l(575926),
     b = l(548118),
@@ -33,7 +33,7 @@ function G(e) {
     let {
             header: t,
             headerIconSrc: l,
-            headerIconComponent: i,
+            headerIconComponent: s,
             bottomSubText: a,
             label: u,
             description: c,
@@ -41,8 +41,8 @@ function G(e) {
             price: h,
             priceStrikethroughText: p,
             PriceIcon: v,
-            priceTooltip: f,
-            priceSubText: j,
+            priceTooltip: j,
+            priceSubText: f,
             priceSubTextHasStrikethrough: g = !0,
             omitDefaultIconBackground: N,
             target: b,
@@ -68,22 +68,22 @@ function G(e) {
                     h,
                 ],
             });
-            return null != f
-                ? (0, n.jsx)(d.m, { text: f, asContainer: !0, position: "top", align: "center", children: e })
+            return null != j
+                ? (0, n.jsx)(d.m, { text: j, asContainer: !0, position: "top", align: "center", children: e })
                 : e;
-        }, [v, h, p, f]),
+        }, [v, h, p, j]),
         A = r.useMemo(
             () =>
-                null != i
-                    ? (0, n.jsx)("span", { className: _.nr, children: i })
+                null != s
+                    ? (0, n.jsx)("span", { className: _.nr, children: s })
                     : null != l
                       ? (0, n.jsx)("img", { alt: "", src: l, className: _.nr })
                       : null,
-            [l, i],
+            [l, s],
         ),
         C = (0, n.jsxs)(n.Fragment, {
             children: [
-                null != x && (0, n.jsx)("div", { className: s()(_.Kk, { [_.H9]: !N }), children: x }),
+                null != x && (0, n.jsx)("div", { className: i()(_.Kk, { [_.H9]: !N }), children: x }),
                 (0, n.jsxs)("div", {
                     className: _.Qs,
                     children: [
@@ -127,12 +127,12 @@ function G(e) {
                                     className: _.p6,
                                     children: [
                                         y,
-                                        null != j &&
+                                        null != f &&
                                             (0, n.jsx)(o.E, {
                                                 variant: g ? "text-xs/medium" : "text-sm/normal",
                                                 color: "text-muted",
-                                                className: s()(_.Jb, { [_.Nc]: g }),
-                                                children: j,
+                                                className: i()(_.Jb, { [_.Nc]: g }),
+                                                children: f,
                                             }),
                                     ],
                                 }),
@@ -145,8 +145,8 @@ function G(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             null != E
-                ? (0, n.jsx)(m.D, { className: s()(_.kL, _.vk, T), onClick: E, children: C })
-                : (0, n.jsx)("div", { className: s()(_.kL, T), children: C }),
+                ? (0, n.jsx)(m.D, { className: i()(_.kL, _.vk, T), onClick: E, children: C })
+                : (0, n.jsx)("div", { className: i()(_.kL, T), children: C }),
             null != a &&
                 (0, n.jsx)(o.E, { variant: "text-sm/medium", color: "text-muted", className: _.dx, children: a }),
         ],
@@ -159,7 +159,7 @@ function L(e) {
             return k.intl.format(P.default["2PiTTi"], {
                 username: C.Ay.getUserTag(t.user),
                 nickname: C.Ay.getName(t.user),
-                avatar: (0, n.jsx)(j.A, { user: t.user, size: x._3.SIZE_16, className: _.RG }),
+                avatar: (0, n.jsx)(f.A, { user: t.user, size: x._3.SIZE_16, className: _.RG }),
             });
         case "guildSubscription":
             return k.intl.format(P.default.mXvZt2, {
@@ -199,7 +199,7 @@ function R() {
     return (0, n.jsx)(O, { color: "pink", Icon: v._ });
 }
 function M() {
-    return (0, n.jsx)(f.k, { size: "lg", color: "var(--icon-muted)" });
+    return (0, n.jsx)(j.k, { size: "lg", color: "var(--icon-muted)" });
 }
 function F() {
     return (0, n.jsx)("div", { className: _.CX, children: (0, n.jsx)(p.t, { size: "lg", color: "var(--neutral-1)" }) });
@@ -210,8 +210,8 @@ let z = {
     [D.EZt.GUILD_PRODUCT]: { preferredAssetType: "thumbnail" },
 };
 function B(e) {
-    let { skuId: t, productLine: l, applicationId: i, storeListing: s } = e,
-        a = (0, u.bG)([S.A], () => s ?? S.A.getForSKU(t), [s, t]),
+    let { skuId: t, productLine: l, applicationId: s, storeListing: i } = e,
+        a = (0, u.bG)([S.A], () => i ?? S.A.getForSKU(t), [i, t]),
         c = z[l].preferredAssetType,
         o = r.useMemo(
             () =>
@@ -223,7 +223,7 @@ function B(e) {
             [c, a],
         );
     return null != o
-        ? (0, n.jsx)("img", { src: (0, A.YE)(i, o, 64), alt: "", className: _.gw })
+        ? (0, n.jsx)("img", { src: (0, A.YE)(s, o, 64), alt: "", className: _.gw })
         : l === D.EZt.APPLICATION
           ? (0, n.jsx)(M, {})
           : l === D.EZt.GUILD_ROLE
@@ -231,7 +231,7 @@ function B(e) {
             : null;
 }
 function $(e) {
-    let { sku: t, premiumType: l, product: r, storeListing: i } = e;
+    let { sku: t, premiumType: l, product: r, storeListing: s } = e;
     return l === I.PremiumTypes.TIER_0
         ? (0, n.jsx)(w, {})
         : l === I.PremiumTypes.TIER_2
@@ -245,7 +245,7 @@ function $(e) {
                       skuId: t.id,
                       productLine: t.productLine,
                       applicationId: t.applicationId,
-                      storeListing: i,
+                      storeListing: s,
                   })
                 : (0, n.jsx)(E.r$, { sku: t, slayerProductPreviewClassName: _.gw });
 }

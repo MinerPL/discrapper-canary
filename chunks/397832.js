@@ -1,4 +1,4 @@
-n.d(t, { _: () => $ }), n(321073);
+(n.d(t, { _: () => $ }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(517950),
@@ -212,12 +212,12 @@ function $(e) {
                             [v, _, y, t, s, p],
                         ),
                         N = i.useMemo(() => (y ? null : { type: "subscription_renewal_invoice", params: x }), [x, y]);
-                    i.useEffect(() => {
+                    (i.useEffect(() => {
                         o(T);
                     }, [T, o]),
                         i.useEffect(() => {
                             u(N);
-                        }, [N, u]);
+                        }, [N, u]));
                     let { proratedInvoicePreview: b } = i.useMemo(() => ({ proratedInvoicePreview: c }), [c]),
                         { discountInvoiceError: j } = (0, E.W)({ priceOptions: n, trialId: l, metadata: r }),
                         R = i.useMemo(() => S ?? j, [S, j]),

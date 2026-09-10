@@ -132,7 +132,7 @@ function G(e) {
             appliedTagIds: _,
             upload: f.Se,
             onThreadCreated: (e) => {
-                (0, g.JA)(e), o();
+                ((0, g.JA)(e), o());
             },
         }),
         $ = i.useCallback((e, t, n) => {
@@ -141,7 +141,7 @@ function G(e) {
         q = i.useCallback((e) => {
             R((t) => {
                 let n = new Set(t);
-                return n.has(e) ? n.delete(e) : n.add(e), n;
+                return (n.has(e) ? n.delete(e) : n.add(e), n);
             });
         }, []),
         K = i.useCallback(
@@ -149,7 +149,7 @@ function G(e) {
                 null != z &&
                     R((t) => {
                         let n = new Set(t);
-                        return e ? n.delete(z.id) : n.add(z.id), n;
+                        return (e ? n.delete(z.id) : n.add(z.id), n);
                     });
             },
             [z],

@@ -16,8 +16,8 @@ function _(e) {
             title: c.intl.string(c.t.aVwLfn),
             description: c.intl.format(c.t.n5vd1E, {
                 handleOnHelpUrlHook: () => {
-                    s.A.openUrl(a.A.getArticleURL(o.MVz.TIGGER_PAWTECT_SYSTEM_DMS)),
-                        (0, l.St)(e, l.WU.PRIMARY, l._7.SYSTEM_DMS_LEARN_MORE);
+                    (s.A.openUrl(a.A.getArticleURL(o.MVz.TIGGER_PAWTECT_SYSTEM_DMS)),
+                        (0, l.St)(e, l.WU.PRIMARY, l._7.SYSTEM_DMS_LEARN_MORE));
                 },
             }),
         },

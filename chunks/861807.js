@@ -18,13 +18,13 @@ class r extends i.Ay.PersistedStore {
 let a = new r(l.h, {
         GUARDIAN_CONNECT_REQUIRED: function (e) {
             let { shouldShowGuardianConnect: t } = e;
-            (s = !0 === t), a.persist();
+            ((s = !0 === t), a.persist());
         },
         GUARDIAN_CONNECT_CLEARED: function () {
-            (s = !1), a.persist();
+            ((s = !1), a.persist());
         },
         NUF_COMPLETE: function () {
-            (s = !1), a.persist();
+            ((s = !1), a.persist());
         },
     }),
     o = 221552 == n.j ? a : null;

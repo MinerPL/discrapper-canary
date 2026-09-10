@@ -63,10 +63,10 @@ function f(e) {
             "aria-label": x,
             submittingStartedLabel: k,
             submittingFinishedLabel: F,
-            ...V
+            ...B
         } = e,
-        B = T || m,
-        H = B && (null != v || null != b),
+        V = T || m,
+        H = V && (null != v || null != b),
         j =
             ((t = G?.offset),
             n === E.LINK || n === E.BLANK
@@ -83,19 +83,19 @@ function f(e) {
                       }),
         W = r.useRef(!1);
     r.useEffect(() => {
-        !0 === m && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
-            !1 === m && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY));
+        (!0 === m && ((W.current = !0), o.O.announce(k ?? u.intl.string(u.t.pfChQr))),
+            !1 === m && !0 === W.current && o.O.announce(F ?? u.intl.string(u.t.SVParY)));
     }, [m, k, F]);
     let Y = (0, i.jsx)(d.vN, {
         ...G,
         offset: j,
         children: (0, i.jsxs)("button", {
-            ...(B ? null : V),
+            ...(V ? null : B),
             "aria-label": x,
             "aria-busy": !!m || void 0,
             ref: w,
-            onClick: B ? (e) => e.preventDefault() : R,
-            onDoubleClick: B ? (e) => e.preventDefault() : L,
+            onClick: V ? (e) => e.preventDefault() : R,
+            onDoubleClick: V ? (e) => e.preventDefault() : L,
             onMouseUp: T ? void 0 : D,
             onMouseDown: T ? void 0 : y,
             onMouseEnter: v,
@@ -125,7 +125,7 @@ function f(e) {
           })
         : Y;
 }
-(f.Looks = E),
+((f.Looks = E),
     (f.Colors = A),
     (f.Sizes = h),
     (f.Link = function (e) {
@@ -157,4 +157,4 @@ function f(e) {
             className: s()(c, _.x6, t, n, r, { [_.Ij]: a, [_.wS]: o }),
             children: (0, i.jsx)("span", { className: s()(_.PG, u), children: m }),
         });
-    });
+    }));

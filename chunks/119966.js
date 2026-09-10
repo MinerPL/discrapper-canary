@@ -6,11 +6,11 @@ class i extends Error {
     message;
     name;
     constructor(e, t) {
-        super(t),
+        (super(t),
             "closeCode" in e
                 ? ((this.code = e.closeCode), (this.closeCode = e.closeCode))
                 : ((this.code = e.errorCode), (this.errorCode = e.errorCode)),
             (this.message = t),
-            (this.name = "RPCError");
+            (this.name = "RPCError"));
     }
 }

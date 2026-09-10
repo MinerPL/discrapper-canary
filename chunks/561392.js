@@ -45,7 +45,7 @@ function o(e) {
                     ...T(),
                     apply(e) {
                         let { rects: t, elements: n } = e;
-                        p.current &&
+                        (p.current &&
                             Object.assign(n.floating.style, {
                                 minWidth: `${t.reference.width}px`,
                                 width: `${t.reference.width}px`,
@@ -53,7 +53,7 @@ function o(e) {
                             null != f.current &&
                                 Object.assign(n.floating.style, { width: `${f.current(t.reference)}px` }),
                             null != I.current &&
-                                Object.assign(n.floating.style, { maxHeight: `${I.current(t.reference)}px` });
+                                Object.assign(n.floating.style, { maxHeight: `${I.current(t.reference)}px` }));
                     },
                 })),
                 (0, a.UU)(T),

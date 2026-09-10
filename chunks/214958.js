@@ -1,5 +1,6 @@
-(e = r.nmd(e)),
+((e = r.nmd(e)),
     function () {
+        "use strict";
         var n = { function: !0, object: !0 },
             i = (n[typeof window] && window) || this,
             o = n[typeof t] && t,
@@ -14,7 +15,7 @@
             return (e = String(e)).charAt(0).toUpperCase() + e.slice(1);
         }
         function p(e) {
-            return (e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : d(e);
+            return ((e = g(e)), /^(?:webOS|i(?:OS|P))/.test(e) ? e : d(e));
         }
         function h(e, t) {
             for (var r in e) c.call(e, r) && t(e[r], r, e);
@@ -32,7 +33,7 @@
                 },
                 i = -1,
                 o = e ? e.length : 0;
-            if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++i < o; ) n(e[i], i, e);
+            if ("number" == typeof o && o > -1 && o <= 0x1fffffffffffff) for (; ++i < o;) n(e[i], i, e);
             else h(e, n);
             return r;
         }
@@ -427,7 +428,7 @@
                     E)
                 ) {
                     try {
-                        (R = s.require("ringo/engine").version.join(".")), (F = "RingoJS");
+                        ((R = s.require("ringo/engine").version.join(".")), (F = "RingoJS"));
                     } catch (e) {
                         (o = s.system) && o.global.system == s.system && ((F = "Narwhal"), B || (B = o[0].os || null));
                     }
@@ -463,7 +464,7 @@
                 F = "Firefox Mobile";
             else if ("Maxthon" == F && R) R = R.replace(/\.[\d.]+/, ".x");
             else if (/\bXbox\b/i.test(N))
-                "Xbox 360" == N && (B = null), "Xbox 360" == N && /\bIEMobile\b/.test(e) && I.unshift("mobile mode");
+                ("Xbox 360" == N && (B = null), "Xbox 360" == N && /\bIEMobile\b/.test(e) && I.unshift("mobile mode"));
             else if (
                 (/^(?:Chrome|IE|Opera)$/.test(F) || (F && !N && !/Browser|Mobi/.test(F))) &&
                 ("Windows CE" == B || /Mobi/i.test(e))
@@ -503,7 +504,7 @@
                             D || (R = null)),
                       (L = ["Presto"]),
                       I.push(o));
-            (o = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(e) || 0)[1]) &&
+            ((o = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(e) || 0)[1]) &&
                 ((o = [parseFloat(o.replace(/\.(\d)$/, ".0$1")), o]),
                 "Safari" == F && "+" == o[1].slice(-1)
                     ? ((F = "WebKit Nightly"), (O = "alpha"), (R = o[1].slice(0, -1)))
@@ -648,7 +649,7 @@
                               (D && /\w(?:86|32)$/.test(c.cpuClass || c.platform) && !/\bWin64; x64\b/i.test(e))) &&
                           I.unshift("32-bit"))
                     : B && /^OS X/.test(B.family) && "Chrome" == F && parseFloat(R) >= 39 && (B.architecture = 64),
-                e || (e = null);
+                e || (e = null));
             var V = {};
             return (
                 (V.description = e),
@@ -692,4 +693,4 @@
                     o[t] = e;
                 })
               : (i.platform = w);
-    }.call(this);
+    }.call(this));

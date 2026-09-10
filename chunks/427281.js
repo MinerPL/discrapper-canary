@@ -1,4 +1,4 @@
-t.d(i, { ModifyMosaicAttachmentModal: () => y, default: () => k }), t(323874), t(14289), t(35956), t(938796);
+(t.d(i, { ModifyMosaicAttachmentModal: () => y, default: () => k }), t(323874), t(14289), t(35956), t(938796));
 var n = t(477900),
     s = t(582128),
     l = t(503698),
@@ -30,7 +30,7 @@ function S(e) {
             return (
                 l(e),
                 () => {
-                    l(void 0), URL.revokeObjectURL(e);
+                    (l(void 0), URL.revokeObjectURL(e));
                 }
             );
         }, [i]),
@@ -64,7 +64,7 @@ function E(e) {
         [y, R] = s.useState(a),
         L = s.useMemo(() => S.startsWith(j.MO), [S]);
     function M() {
-        I({ name: S, description: E, spoiler: y }), b();
+        (I({ name: S, description: E, spoiler: y }), b());
     }
     return (0, n.jsx)(o.Modal, {
         transitionState: x,

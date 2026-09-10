@@ -1,4 +1,4 @@
-n.d(t, { A: () => s }), n(667532), n(321073);
+(n.d(t, { A: () => s }), n(667532), n(321073));
 let i = globalThis.__getTotalRequireTime ?? (() => 0),
     r = "u" > typeof performance;
 class a {
@@ -15,13 +15,13 @@ class a {
         return this.endTime_;
     }
     set endTime(e) {
-        (this.endTime_ = e), (this.isTracing_ = !0);
+        ((this.endTime_ = e), (this.isTracing_ = !0));
     }
     resumeTracing() {
-        this.isTracing ||
+        (this.isTracing ||
             (this.logGroups.unshift({ index: this.logGroups.length, timestamp: Date.now(), logs: [], nativeLogs: [] }),
             (this.logs = this.logGroups[0].logs)),
-            (this.endTime = Date.now() + 1e4);
+            (this.endTime = Date.now() + 1e4));
     }
     mark(e, t, n) {
         this.isTracing &&
@@ -29,10 +29,10 @@ class a {
             this.addImportLogDetail());
     }
     markAndLog(e, t, n, i) {
-        e.log(n),
+        (e.log(n),
             this.isTracing &&
                 (this.logs.push({ emoji: t, prefix: this.prefix, log: n, delta: i, timestamp: Date.now() }),
-                this.addImportLogDetail());
+                this.addImportLogDetail()));
     }
     addImportLogDetail() {
         let e = i();
@@ -63,11 +63,11 @@ class a {
     time(e, t, n) {
         if (!this.isTracing) return n();
         let i = this.prefix;
-        this.mark(e, `Start ${t}`), (this.prefix += "| ");
+        (this.mark(e, `Start ${t}`), (this.prefix += "| "));
         let r = Date.now(),
             a = n(),
             s = Date.now() - r;
-        return (this.prefix = i), this.mark(e, `Finish ${t}`, s), a;
+        return ((this.prefix = i), this.mark(e, `Finish ${t}`, s), a);
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
@@ -75,7 +75,7 @@ class a {
         let i = Date.now(),
             r = await n(),
             a = Date.now() - i;
-        return this.mark(e, `Finish ${t}`, a), r;
+        return (this.mark(e, `Finish ${t}`, a), r);
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;

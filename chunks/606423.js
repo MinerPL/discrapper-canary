@@ -1,4 +1,4 @@
-e.d(n, { Z: () => D }), e(321073);
+(e.d(n, { Z: () => D }), e(321073));
 var i = e(477900),
     r = e(582128),
     l = e(284009),
@@ -37,7 +37,7 @@ function D() {
         } = (0, h.X)(),
         S = (0, o.bG)([d.default], () => {
             let t = d.default.getCurrentUser();
-            return a()(null != t, "ProfileItem: currentUser cannot be undefined"), t;
+            return (a()(null != t, "ProfileItem: currentUser cannot be undefined"), t);
         });
     r.useEffect(() => {
         (0, c.A)(S.id, S.getAvatarURL(null, 80));

@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => l });
+(r.r(t), r.d(t, { default: () => l }));
 var i = r(109624),
     s = r(696016);
 class a {

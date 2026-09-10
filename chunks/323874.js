@@ -9,7 +9,7 @@ var t = a(693655),
     f = n(s.forEach),
     p = n([].push),
     c = new h("a=1&a=2&b=3");
-c.delete("a", 1),
+(c.delete("a", 1),
     c.delete("b", void 0),
     c + "" != "a=2" &&
         t(
@@ -21,13 +21,13 @@ c.delete("a", 1),
                     t = a < 2 ? void 0 : arguments[1];
                 if (a && void 0 === t) return v(this, e);
                 var n = [];
-                f(this, function (e, r) {
+                (f(this, function (e, r) {
                     p(n, { key: r, value: e });
                 }),
-                    o(a, 1);
-                for (var h = i(e), s = i(t), c = 0, l = 0, d = !1, g = n.length; c < g; )
-                    (r = n[c++]), d || r.key === h ? ((d = !0), v(this, r.key)) : l++;
-                for (; l < g; ) ((r = n[l++]).key !== h || r.value !== s) && u(this, r.key, r.value);
+                    o(a, 1));
+                for (var h = i(e), s = i(t), c = 0, l = 0, d = !1, g = n.length; c < g;)
+                    ((r = n[c++]), d || r.key === h ? ((d = !0), v(this, r.key)) : l++);
+                for (; l < g;) ((r = n[l++]).key !== h || r.value !== s) && u(this, r.key, r.value);
             },
             { enumerable: !0, unsafe: !0 },
-        );
+        ));

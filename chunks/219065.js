@@ -1,4 +1,4 @@
-n.d(t, { A: () => C }), n(321073);
+(n.d(t, { A: () => C }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -23,10 +23,10 @@ class T {
     sections = {};
     allUserIds = new Set();
     constructor(e, t, n) {
-        (this.guildId = e), (this.parentId = t), (this.threadId = n);
+        ((this.guildId = e), (this.parentId = t), (this.threadId = n));
     }
     rebuild(e) {
-        this.version++, (this.sections = {}), null != e && (this.allUserIds = new Set(e));
+        (this.version++, (this.sections = {}), null != e && (this.allUserIds = new Set(e)));
         let t = l.A.getChannel(this.parentId);
         r()(Array.from(this.allUserIds))
             .map((e) => {
@@ -134,14 +134,14 @@ function S(e) {
 class N extends a.Ay.Store {
     static displayName = "ThreadMemberListStore";
     initialize() {
-        this.waitFor(l.A, o.Ay, d.A, c.A, u.A, _.default),
+        (this.waitFor(l.A, o.Ay, d.A, c.A, u.A, _.default),
             this.syncWith([d.A], () => {
                 let e = d.A.getSubscribedThreadIds(),
                     t = !1;
                 for (let n in p) e.has(n) || (delete p[n], (t = !0));
                 return t;
             }),
-            this.syncWith([u.A], () => g(_.default.getCurrentUser()?.id));
+            this.syncWith([u.A], () => g(_.default.getCurrentUser()?.id)));
     }
     getMemberListVersion(e) {
         return p[e]?.version;
@@ -162,11 +162,11 @@ let C = new N(s.h, {
     },
     THREAD_MEMBERS_UPDATE: function (e) {
         if (!(e.id in p)) return !1;
-        e.addedMembers?.forEach((t) => {
+        (e.addedMembers?.forEach((t) => {
             let { userId: n } = t;
             return p[e.id].addUserId(n);
         }),
-            e.removedMemberIds?.forEach((t) => p[e.id].removeUserId(t));
+            e.removedMemberIds?.forEach((t) => p[e.id].removeUserId(t)));
     },
     THREAD_UPDATE: function (e) {
         let { channel: t } = e;

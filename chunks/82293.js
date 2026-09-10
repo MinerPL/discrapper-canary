@@ -38,8 +38,8 @@ let E = new _(l.h, {
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function (e) {
         let { applicationId: t, guildId: n, similarApplications: i, loadId: r, page: a, totalPages: s } = e,
             l = d({ applicationId: t, guildId: n, page: a });
-        c.set(l, { lastFetchTimeMs: Date.now(), applications: i, loadId: r, page: a, totalPages: s }),
-            (u = { ...u, [l]: 2 });
+        (c.set(l, { lastFetchTimeMs: Date.now(), applications: i, loadId: r, page: a, totalPages: s }),
+            (u = { ...u, [l]: 2 }));
     },
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function (e) {
         let { applicationId: t, guildId: n, page: i } = e,

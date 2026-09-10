@@ -1,4 +1,4 @@
-n.d(t, { A: () => D }), n(321073);
+(n.d(t, { A: () => D }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(334279),
@@ -21,13 +21,13 @@ let A = {},
     S = new Set(),
     N = {};
 function C(e) {
-    (A[e.id] = o.A.createFromServer(e)),
+    ((A[e.id] = o.A.createFromServer(e)),
         null == I[e.sku_id] && (I[e.sku_id] = new Set()),
         null == f[e.application_id] && (f[e.application_id] = new Set()),
         null != e.subscription_id &&
             (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)),
         f[e.application_id].add(e.id),
-        I[e.sku_id].add(e.id);
+        I[e.sku_id].add(e.id));
 }
 function O(e) {
     h[e.id] = o.A.createFromServer(e);
@@ -147,7 +147,7 @@ let D = new y(l.h, {
     ENTITLEMENT_FETCH_APPLICATION_FAIL: function () {},
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
         let { entitlements: t } = e;
-        (h = {}), t.forEach(O);
+        ((h = {}), t.forEach(O));
     },
     SKU_PURCHASE_SUCCESS: R,
     VIRTUAL_CURRENCY_REDEEM_SUCCESS: R,
@@ -170,7 +170,7 @@ let D = new y(l.h, {
         })(e.entitlement);
     },
     LOGOUT: function () {
-        (A = {}), (I = {}), (f = {}), (p = !1), (T = !1), (m = !1), (g = new Set()), (S = new Set());
+        ((A = {}), (I = {}), (f = {}), (p = !1), (T = !1), (m = !1), (g = new Set()), (S = new Set()));
     },
     ENTITLEMENTS_FETCH_FOR_USER_START: function () {
         p = !0;
@@ -180,6 +180,6 @@ let D = new y(l.h, {
         for (let e of ((T = !0), (p = !1), (m = !n), t)) C(e);
     },
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: function () {
-        (T = !1), (p = !1), (m = !1);
+        ((T = !1), (p = !1), (m = !1));
     },
 });

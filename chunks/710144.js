@@ -3,7 +3,7 @@ var r = n(477900),
     i = n(582128);
 function o(t) {
     return (e) => {
-        e?.stopPropagation(), t();
+        (e?.stopPropagation(), t());
     };
 }
 function s(t) {

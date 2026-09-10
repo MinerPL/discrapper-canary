@@ -30,7 +30,7 @@ let v = function (t) {
         [P, D] = n.useState(!1),
         [F, H] = n.useState(!1),
         L = n.useCallback(() => {
-            H(!0), N(!1), D(!1);
+            (H(!0), N(!1), D(!1));
         }, []),
         { disconnectLinkRequest: W, isDisconnectLoading: _ } = (0, g.A)({ onSuccess: S, onError: L }),
         z = w ? b.intl.string(p.default["WH+Gba"]) : b.intl.format(p.default.F2lccv, { username: A }),
@@ -81,14 +81,14 @@ let v = function (t) {
                                     (0, i.jsx)(h.S, {
                                         checked: E,
                                         onChange: (t) => {
-                                            N(t), H(!1);
+                                            (N(t), H(!1));
                                         },
                                         label: O,
                                     }),
                                     (0, i.jsx)(h.S, {
                                         checked: P,
                                         onChange: (t) => {
-                                            D(t), H(!1);
+                                            (D(t), H(!1));
                                         },
                                         label: Q,
                                     }),
@@ -106,7 +106,7 @@ let v = function (t) {
                         variant: "critical-primary",
                         text: b.intl.string(p.default["c5L+sl"]),
                         onClick: function () {
-                            H(!1), W(l.id);
+                            (H(!1), W(l.id));
                         },
                         disabled: !E || !P || _,
                         loading: _,

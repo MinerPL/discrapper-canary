@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Ay: () => V }), n(321073);
+(n.d(t, { Ay: () => B }), n(321073));
 var r = n(812729),
     a = n.n(r),
     s = n(284009),
@@ -54,15 +54,15 @@ function N(e, t) {
     for (let e of Object.values(g.nodes)) e.type === d.PJ.FOLDER && 0 === e.children.length && g.removeNode(e);
     for (let e of f.A.getGuildIds()) {
         let t, n;
-        (t = e),
+        ((t = e),
             null != g.nodes[t] ||
                 c.A.isLurking(e) ||
                 I.Ay.isCurrentUserGuest(e) ||
-                ((n = e), g.addNode((0, d.EL)(n), g.root, !1));
+                ((n = e), g.addNode((0, d.EL)(n), g.root, !1)));
     }
     g.version = n.version;
     let i = a()(n, g);
-    return i ? (g = n) : (g.version = n.version + 1), !i;
+    return (i ? (g = n) : (g.version = n.version + 1), !i);
 }
 function C() {
     return N(u.A.getGuildFolders() ?? [], u.A.settings.guildFolders?.guildPositions ?? []);
@@ -102,11 +102,11 @@ function L(e) {
     let r = g.getNode(i);
     if (null == r) return !1;
     let a = g.convertToFolder(r);
-    (a.name = n),
+    ((a.name = n),
         t.forEach((e) => {
             let t = g.getNode(e);
             null != t && g.moveInto(t, a, !0);
-        });
+        }));
 }
 function y(e) {
     let { targetId: t, sourceIds: n, ...i } = e,
@@ -115,9 +115,9 @@ function y(e) {
     let a = "" === i.name ? void 0 : i.name;
     if (a !== r.name) {
         let e = g.cloneNode(r);
-        l()(e.id === r.id, "[SORTED GUILDS] Replacement folder node must have same id."),
+        (l()(e.id === r.id, "[SORTED GUILDS] Replacement folder node must have same id."),
             (e.name = a),
-            g.replaceNode(r, e);
+            g.replaceNode(r, e));
     }
     let s = g.getNode(t);
     if (null == s) return !1;
@@ -125,7 +125,7 @@ function y(e) {
         c = new Set(o),
         u = new Set(n),
         _ = new Set([...o].filter((e) => !u.has(e)));
-    n
+    (n
         .filter((e) => !c.has(e))
         .forEach((e) => {
             let t = g.getNode(e);
@@ -134,7 +134,7 @@ function y(e) {
         _.forEach((e) => {
             let t = g.getNode(e);
             null != t && g.moveNextTo(t, s, !0);
-        });
+        }));
 }
 function D(e) {
     let { targetId: t } = e,
@@ -174,9 +174,9 @@ function P() {
 }
 function U(e, t) {
     let n = g.cloneNode(e);
-    l()(n.id === e.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id."),
+    (l()(n.id === e.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id."),
         (n.expanded = t),
-        g.replaceNode(e, n);
+        g.replaceNode(e, n));
 }
 let w = (0, _.L_)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     G = (0, _.L_)((e, t) => e.getRoots().map(S)),
@@ -251,4 +251,4 @@ class F extends p.A {
         return { version: F.LATEST_SNAPSHOT_VERSION, data: { tree: g.getSnapshot() } };
     }
 }
-let V = new F();
+let B = new F();

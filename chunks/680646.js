@@ -12,9 +12,9 @@ var i,
 let o = { applicationIdToGuildIds: {}, lastFetchTimeMs: null, nextFetchRetryTimeMs: null, fetchState: 0 };
 function d(e) {
     let { applicationId: t, guildId: n } = e;
-    null == o.applicationIdToGuildIds[t] && (o.applicationIdToGuildIds[t] = new Set()),
+    (null == o.applicationIdToGuildIds[t] && (o.applicationIdToGuildIds[t] = new Set()),
         o.applicationIdToGuildIds[t].add(n),
-        (o.applicationIdToGuildIds[t] = new Set(o.applicationIdToGuildIds[t]));
+        (o.applicationIdToGuildIds[t] = new Set(o.applicationIdToGuildIds[t])));
 }
 class c extends r.Ay.PersistedStore {
     static displayName = "MyGuildApplicationsStore";
@@ -45,10 +45,10 @@ class c extends r.Ay.PersistedStore {
 }
 let u = new c(a.h, {
     LOGOUT: function () {
-        (o.applicationIdToGuildIds = {}),
+        ((o.applicationIdToGuildIds = {}),
             (o.lastFetchTimeMs = null),
             (o.nextFetchRetryTimeMs = null),
-            (o.fetchState = 0);
+            (o.fetchState = 0));
     },
     FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: function () {
         o.fetchState = 1;

@@ -16,7 +16,7 @@ let n = r(40840),
     );
 class l extends i.AbstractParserWithWordBoundaryChecking {
     constructor(e) {
-        super(), (this.strictMode = e);
+        (super(), (this.strictMode = e));
     }
     innerPattern(e) {
         return this.strictMode ? u : e.option.forwardDate ? s : o;

@@ -49,7 +49,7 @@ function h(e) {
                     );
                 }
             })(t, n, S, E);
-            return null == C && p(), e;
+            return (null == C && p(), e);
         });
     return (0, i.jsxs)(d.Modal, {
         transitionState: h,
@@ -63,8 +63,8 @@ function h(e) {
             (0, i.jsx)(_.A, {
                 onScheduleChange: function (e) {
                     let { startDate: t, endDate: n } = e;
-                    null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
-                        f({ startDate: t, endDate: n });
+                    (null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
+                        f({ startDate: t, endDate: n }));
                 },
                 schedule: S,
                 showEndDate: null != S.endDate,

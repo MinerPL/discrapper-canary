@@ -15,14 +15,14 @@ class a {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         if (!this.hasSubscribers(e)) {
             let [t] = n;
-            return (this._savedDispatches[e] = this._savedDispatches[e] ?? []).push(t), this;
+            return ((this._savedDispatches[e] = this._savedDispatches[e] ?? []).push(t), this);
         }
         return this.dispatch(e, ...n);
     }
     dispatch(e, t) {
         let n = Date.now();
         try {
-            return this.emitter.emit(e, t), this;
+            return (this.emitter.emit(e, t), this);
         } finally {
             this.options.enableDevtools &&
                 this.options.devtoolsReporter &&
@@ -33,7 +33,7 @@ class a {
         let n = Date.now();
         try {
             let n = this.emitter.listeners(e);
-            return n.length > 0 && n[n.length - 1](t), this;
+            return (n.length > 0 && n[n.length - 1](t), this);
         } finally {
             this.options.enableDevtools &&
                 this.options.devtoolsReporter &&
@@ -61,7 +61,7 @@ class a {
         );
     }
     subscribeOnce(e, t) {
-        return this.emitter.once(e, t), this._checkSavedDispatches(e), this;
+        return (this.emitter.once(e, t), this._checkSavedDispatches(e), this);
     }
     resubscribe(e, t) {
         return (
@@ -76,10 +76,10 @@ class a {
         );
     }
     unsubscribe(e, t) {
-        return this.emitter.removeListener(e, t), this;
+        return (this.emitter.removeListener(e, t), this);
     }
     reset() {
-        return this.emitter.removeAllListeners(), this;
+        return (this.emitter.removeAllListeners(), this);
     }
     dispatchKeyed(e, t) {
         for (var n = arguments.length, i = Array(n > 2 ? n - 2 : 0), r = 2; r < n; r++) i[r - 2] = arguments[r];

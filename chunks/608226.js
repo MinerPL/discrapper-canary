@@ -11,7 +11,7 @@ function t(e, n) {
             (0, r.jsx)(s, {
                 ...a,
                 onConfirm: () => {
-                    a.onClose(), n();
+                    (a.onClose(), n());
                 },
                 channel: e,
             });

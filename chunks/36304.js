@@ -16,7 +16,7 @@ function c(t) {
             {
                 text: d.intl.string(r.default.DxcYYG),
                 onClick: () => {
-                    l.O(s.v.MUTE_TUTORIAL), i();
+                    (l.O(s.v.MUTE_TUTORIAL), i());
                 },
             },
         ],

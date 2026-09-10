@@ -1,4 +1,4 @@
-n.d(t, { A: () => c }), n(321073);
+(n.d(t, { A: () => c }), n(321073));
 var i = n(17928),
     l = n(228366),
     r = n(636537),
@@ -13,7 +13,7 @@ class d extends i.Ay.PersistedStore {
     static displayName = "GuildAffinitiesStore";
     static persistKey = "GuildAffinitiesStore";
     initialize(e) {
-        null != e && (o = e), this.waitFor(a.A);
+        (null != e && (o = e), this.waitFor(a.A));
     }
     getState() {
         return o;
@@ -48,14 +48,14 @@ let c = new d(l.h, {
     },
     LOAD_GUILD_AFFINITIES_SUCCESS: function (e) {
         let { guildAffinities: t } = e;
-        (o.guildAffinities = []),
+        ((o.guildAffinities = []),
             (o.guildAffinitiesByGuildId = {}),
             (o.lastFetched = Date.now()),
             t.forEach((e, t) => {
                 let { affinity: n, guild_id: i } = e,
                     l = { score: n, guildId: i, index: t };
-                (o.guildAffinitiesByGuildId[i] = l), o.guildAffinities.push(l);
-            });
+                ((o.guildAffinitiesByGuildId[i] = l), o.guildAffinities.push(l));
+            }));
     },
     LOGOUT: function () {
         u();

@@ -14,7 +14,7 @@ var i = n(636537),
 let h = {
     call(e, t, n, r, a) {
         let s = (n) => {
-            _.default.selectVoiceChannel(e, t), n && this.ring(e), a?.(e);
+            (_.default.selectVoiceChannel(e, t), n && this.ring(e), a?.(e));
         };
         if (null != r) {
             if (l.A.isBlocked(r)) return;
@@ -24,7 +24,7 @@ let h = {
                     s(n && e.body.ringable);
                 },
                 () => {
-                    d.default.track(E.HAw.OPEN_POPOUT, { type: "Not Friend", source: "Call" }),
+                    (d.default.track(E.HAw.OPEN_POPOUT, { type: "Not Friend", source: "Call" }),
                         c.A.show({
                             title: A.intl.string(A.t.My50nf),
                             body: A.intl.format(A.t.IdKo2z, { username: null != t ? t.username : "" }),
@@ -33,7 +33,7 @@ let h = {
                             onConfirm() {
                                 u.A.addRelationship({ userId: r, context: { location: "Call" } });
                             },
-                        });
+                        }));
                 },
             );
         } else s(n);
@@ -44,7 +44,7 @@ let h = {
         let o = (0, a.pW)(l),
             d = E.kvI.CALLABLE.has(l.type);
         if (o) {
-            i.Bo.post({
+            (i.Bo.post({
                 url: E.Rsh.CALL_RING(e),
                 body: { recipients: t, analytics_location: n },
                 oldFormErrors: !0,
@@ -52,7 +52,7 @@ let h = {
             }),
                 l.type === E.rbe.GUILD_VOICE &&
                     null != t &&
-                    r.h.dispatch({ type: "GUILD_LOCAL_RING_START", ringing: t, guildId: l.guild_id });
+                    r.h.dispatch({ type: "GUILD_LOCAL_RING_START", ringing: t, guildId: l.guild_id }));
             return;
         }
         d && r.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });

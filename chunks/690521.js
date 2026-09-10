@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, D_: () => S, Ez: () => N, N: () => C }), n(321073);
+(n.d(t, { Ay: () => g, D_: () => S, Ez: () => N, N: () => C }), n(321073));
 var i = n(836039),
     r = n(770335),
     a = n(492494),
@@ -65,7 +65,7 @@ function m(e) {
 }
 let g = {
     sanitizeEmojiName(e) {
-        for (e = e.replace(A.EMOJI_RE, "").slice(0, A.EMOJI_MAX_LENGTH); e.length < 2; ) e += "_";
+        for (e = e.replace(A.EMOJI_RE, "").slice(0, A.EMOJI_MAX_LENGTH); e.length < 2;) e += "_";
         return e;
     },
     filterUnsupportedEmojis: c.A.filterUnsupportedEmojis,
@@ -85,10 +85,10 @@ let g = {
                 l.push(e);
                 continue;
             }
-            f.has(t) || l.push(e),
+            (f.has(t) || l.push(e),
                 I.has(t) &&
                     (null != e.id && s.add(e.id),
-                    h.has(t) && (d || t !== A.EmojiDisabledReasons.PREMIUM_LOCKED || (d = !0), o++));
+                    h.has(t) && (d || t !== A.EmojiDisabledReasons.PREMIUM_LOCKED || (d = !0), o++)));
         }
         return { emojisDisabled: s, emojisUnfiltered: l, emojisPremiumLockedCount: o, emojiNitroLocked: d };
     },

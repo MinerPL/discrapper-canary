@@ -34,7 +34,7 @@ function i(e, t, n, i) {
                 y = 0;
             if (0 !== A || 0 !== g) {
                 let e = p * x - f * m;
-                (C = (A * x - m * g) / e), (y = (p * g - f * A) / e);
+                ((C = (A * x - m * g) / e), (y = (p * g - f * A) / e));
             }
             let j = r + C * r,
                 I = u + y * u,

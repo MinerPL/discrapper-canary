@@ -22,11 +22,11 @@ function x(e) {
                 s = c[t]?.filter((t) => !e.has(t.config_id)) ?? [];
             c[t] = [...s, ...i];
         }
-        (c = { ...c }), (o = { ...o, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
+        ((c = { ...c }), (o = { ...o, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) }));
     }
 }
 function v() {
-    (c = {}), (o = {}), (d = "NOT_FETCHED"), (h = []), (u = "NOT_FETCHED"), (j = []);
+    ((c = {}), (o = {}), (d = "NOT_FETCHED"), (h = []), (u = "NOT_FETCHED"), (j = []));
 }
 class f extends n.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
@@ -62,7 +62,7 @@ let m = new f(r.h, {
         d = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (d = "SUCCESS"), (h = Object.keys(e.configs)), x(e.configs);
+        ((d = "SUCCESS"), (h = Object.keys(e.configs)), x(e.configs));
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         d = "FAILURE";
@@ -71,7 +71,7 @@ let m = new f(r.h, {
         u = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (u = "SUCCESS"), (j = Object.keys(e.configs)), x(e.configs);
+        ((u = "SUCCESS"), (j = Object.keys(e.configs)), x(e.configs));
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
         u = "FAILURE";

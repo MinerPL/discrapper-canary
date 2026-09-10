@@ -8,10 +8,10 @@ var n = r(435558),
 let E = {},
     c = {};
 function u(t, e) {
-    return null == e && (e = "guild"), `${t}:${e}`;
+    return (null == e && (e = "guild"), `${t}:${e}`);
 }
 function a(t) {
-    return null != E[t] || (E[t] = {}), E[t];
+    return (null != E[t] || (E[t] = {}), E[t]);
 }
 function d(t) {
     let { guildId: e, webhook: r } = t;
@@ -50,7 +50,7 @@ let p = new O(i.h, {
                 .filter((t) => t.channel_id !== r)
                 .value());
         let d = (E[e] = {});
-        i.concat(n).forEach((t) => (d[t.id] = t)), delete c[u(e, r)];
+        (i.concat(n).forEach((t) => (d[t.id] = t)), delete c[u(e, r)]);
     },
     WEBHOOKS_FETCHING: function (t) {
         let { guildId: e, channelId: r } = t;

@@ -48,7 +48,7 @@ var u = function (e, t) {
                       return e !== l;
                   };
     if (!r(e)) throw TypeError("Invalid target");
-    for (var f, h, p = document.scrollingElement || document.documentElement, m = [], v = e; r(v) && c(v); ) {
+    for (var f, h, p = document.scrollingElement || document.documentElement, m = [], v = e; r(v) && c(v);) {
         if ((v = null == (h = (f = v).parentElement) ? f.getRootNode().host || null : h) === p) {
             m.push(v);
             break;
@@ -96,7 +96,7 @@ var u = function (e, t) {
             q = "offsetWidth" in P ? (0 === P.offsetWidth ? 0 : z / P.offsetWidth) : 0,
             J = "offsetHeight" in P ? (0 === P.offsetHeight ? 0 : S / P.offsetHeight) : 0;
         if (p === P)
-            (W =
+            ((W =
                 "start" === u
                     ? F
                     : "end" === u
@@ -113,9 +113,9 @@ var u = function (e, t) {
                             ? T - _
                             : o(y, y + _, _, L, U, y + T, y + T + E, E)),
                 (W = Math.max(0, W + b)),
-                (G = Math.max(0, G + y));
+                (G = Math.max(0, G + y)));
         else {
-            (W =
+            ((W =
                 "start" === u
                     ? F - R - Z
                     : "end" === u
@@ -130,11 +130,11 @@ var u = function (e, t) {
                           ? T - (I + z / 2) + K / 2
                           : "end" === s
                             ? T - M + U + K
-                            : o(I, M, z, L, U + K, T, T + E, E));
+                            : o(I, M, z, L, U + K, T, T + E, E)));
             var Q = P.scrollLeft,
                 X = P.scrollTop;
-            (F += X - (W = Math.max(0, Math.min(X + W / J, P.scrollHeight - S / J + H)))),
-                (T += Q - (G = Math.max(0, Math.min(Q + G / q, P.scrollWidth - z / q + K))));
+            ((F += X - (W = Math.max(0, Math.min(X + W / J, P.scrollHeight - S / J + H)))),
+                (T += Q - (G = Math.max(0, Math.min(Q + G / q, P.scrollWidth - z / q + K)))));
         }
         V.push({ el: P, top: W, left: G });
     }

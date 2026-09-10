@@ -103,7 +103,7 @@ function ex(e) {
         let e;
         switch (a) {
             case er.so.EQUAL:
-                (e = ec.t["0BlpbA"]), l === eo.fg2.PAYPAL && i === er.pK.PAYPAL_VERIFIED && (e = ec.t.dcSDhW);
+                ((e = ec.t["0BlpbA"]), l === eo.fg2.PAYPAL && i === er.pK.PAYPAL_VERIFIED && (e = ec.t.dcSDhW));
                 break;
             case er.so.NOT_EQUAL:
                 e = ec.t.otcpTN;
@@ -145,7 +145,7 @@ function eh(e) {
     let f = r.application,
         v = i.useMemo(() => (f?.bot != null ? new B.A(f.bot) : null), [f]),
         y = r.result;
-    null != v && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: v.isVerifiedBot() })),
+    (null != v && (t = (0, n.jsx)(V.A, { className: eu.AO, verified: v.isVerifiedBot() })),
         (a = y
             ? (0, n.jsx)(g.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: eu.rA })
             : x
@@ -154,7 +154,7 @@ function eh(e) {
                     variant: "text-md/medium",
                     color: "text-muted",
                     children: ec.intl.string(ec.t.cEts68),
-                }));
+                })));
     let E = i.useCallback(() => {
         y ||
             !x ||
@@ -223,12 +223,12 @@ function eA(e) {
                 u().groupBy(C, (e) => `${e.connection_type}${null != e.application_id ? `:${e.application_id}` : ""}`),
             [C],
         );
-    i.useEffect(() => m(Date.now()), [C]),
+    (i.useEffect(() => m(Date.now()), [C]),
         i.useEffect(() => {
             if (null == x) return;
             let e = b[`${x}${null != f ? `:${f.id}` : ""}`];
             null == e || (e.every((e) => e.result) && a(e[0]?.identity_connected_account_type ?? x, f));
-        }, [b, x, f, a]);
+        }, [b, x, f, a]));
     let S = (0, v.r)(h.A.unsafe_rawColors.GREEN_330).hex();
     return (0, n.jsx)(n.Fragment, {
         children: Object.keys(b)
@@ -248,7 +248,7 @@ function eA(e) {
                         {
                             eligibilityState: u[0],
                             onAttempted: (e, t) => {
-                                A(e), N(t), l();
+                                (A(e), N(t), l());
                             },
                         },
                         e,
@@ -397,7 +397,7 @@ function ef(e) {
         [x, h] = i.useState(1 === s.metadataVisibility),
         [A, f] = i.useState(1 === s.visibility);
     (0, I.Ay)(() => {
-        r(!A), o(x);
+        (r(!A), o(x));
     });
     let p = G.A.get(s.type);
     return (
@@ -406,7 +406,7 @@ function ef(e) {
                 label: ec.intl.string(ec.t["+KCMSi"]),
                 checked: c,
                 onChange: (e) => {
-                    u(e), P.A.setFriendSync(s.type, s.id, e);
+                    (u(e), P.A.setFriendSync(s.type, s.id, e));
                 },
             })),
         eo.ewM.has(s.type) &&
@@ -414,7 +414,7 @@ function ef(e) {
                 label: ec.intl.format(ec.t["6u6J0q"], { platform: p.name }),
                 checked: d,
                 onChange: (e) => {
-                    m(e), P.A.setShowActivity(s.type, s.id, e);
+                    (m(e), P.A.setShowActivity(s.type, s.id, e));
                 },
             })),
         !0 === p.hasMetadata &&
@@ -423,7 +423,7 @@ function ef(e) {
                 checked: x,
                 disabled: !A,
                 onChange: (e) => {
-                    o(e), h(e), P.A.setMetadataVisibility(s.type, s.id, +!!e);
+                    (o(e), h(e), P.A.setMetadataVisibility(s.type, s.id, +!!e));
                 },
             })),
         (0, n.jsxs)("div", {
@@ -433,7 +433,7 @@ function ef(e) {
                     label: ec.intl.string(ec.t.f7yOAX),
                     checked: A,
                     onChange: (e) => {
-                        r(!e), f(e), P.A.setVisibility(s.type, s.id, +!!e);
+                        (r(!e), f(e), P.A.setVisibility(s.type, s.id, +!!e));
                     },
                 }),
                 a,
@@ -471,20 +471,20 @@ function ep(e) {
         );
     function ey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        u?.(), e && (0, C.closeModal)(es.CB, b.SY);
+        (u?.(), e && (0, C.closeModal)(es.CB, b.SY));
     }
     function eE() {
-        ey(!0), (0, Y.openUserSettings)($.X.AUTHORIZED_APPS_CATEGORY);
+        (ey(!0), (0, Y.openUserSettings)($.X.AUTHORIZED_APPS_CATEGORY));
     }
     function eN() {
-        ey(!0), (0, Y.openUserSettings)($.X.CONNECTIONS_CATEGORY);
+        (ey(!0), (0, Y.openUserSettings)($.X.CONNECTIONS_CATEGORY));
     }
     async function eC() {
-        M(!0), await T.A.assignGuildRoleConnection(d, h.id);
+        (M(!0), await T.A.assignGuildRoleConnection(d, h.id));
     }
-    i.useEffect(() => {
+    (i.useEffect(() => {
         T.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
-            j(e), N(e.some((e) => e.every((e) => e.result))), R(!1);
+            (j(e), N(e.some((e) => e.every((e) => e.result))), R(!1));
         });
     }, [d, h.id, B, J]),
         i.useEffect(() => {
@@ -497,13 +497,13 @@ function ep(e) {
                 (M(!1),
                 ev.length > 0 ? f(2) : u?.(),
                 ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, L.H$)(d) }));
-        }, [I, ev.length, ej, d, h.id, u]);
+        }, [I, ev.length, ej, d, h.id, u]));
     let eb = g?.flat().some((e) => null == e.application_id) ?? !1;
     switch (A) {
         case 0: {
             let e = null != g && g.length > 1,
                 i = null != g && 1 === g.length && 1 === g[0].length;
-            (t = ec.intl.string(ec.t.zOZh3R)),
+            ((t = ec.intl.string(ec.t.zOZh3R)),
                 (l =
                     P || null == g
                         ? (0, n.jsx)(S.y, { className: eu.NL })
@@ -529,7 +529,7 @@ function ep(e) {
                                           onPlatformConnected: function (e) {
                                               let t =
                                                   arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                                              ei(e),
+                                              (ei(e),
                                                   ed(t),
                                                   f(1),
                                                   null != t &&
@@ -537,7 +537,7 @@ function ep(e) {
                                                           .then((e) => {
                                                               eh(e);
                                                           })
-                                                          .catch(() => {});
+                                                          .catch(() => {}));
                                           },
                                       }),
                                   }),
@@ -564,7 +564,7 @@ function ep(e) {
                 (s = eb
                     ? (0, n.jsx)(_.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
                     : void 0),
-                (r = () => (ey(), Promise.resolve()));
+                (r = () => (ey(), Promise.resolve())));
             break;
         }
         case 1: {
@@ -578,7 +578,7 @@ function ep(e) {
                     let { application: t } = e;
                     return t.id === er?.id;
                 });
-            (t = ec.intl.formatToPlainString(ec.t.yQvgBO, { platformName: e })),
+            ((t = ec.intl.formatToPlainString(ec.t.yQvgBO, { platformName: e })),
                 (l = (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(p.E, {
@@ -673,11 +673,11 @@ function ep(e) {
                 })),
                 (a = [{ variant: "primary", text: ec.intl.string(ec.t.i4jeWR), onClick: () => f(0) }]),
                 (s = void 0),
-                (r = () => (ey(), Promise.resolve()));
+                (r = () => (ey(), Promise.resolve())));
             break;
         }
         case 2:
-            (t = ec.intl.string(ec.t.najNdz)),
+            ((t = ec.intl.string(ec.t.najNdz)),
                 (l = (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)("div", {
@@ -702,7 +702,7 @@ function ep(e) {
                 (s = eb
                     ? (0, n.jsx)(_.Q, { variant: "primary", text: ec.intl.string(ec.t.VXV55P), onClick: eN })
                     : void 0),
-                (r = () => (ey(!0), Promise.resolve()));
+                (r = () => (ey(!0), Promise.resolve())));
     }
     return (0, n.jsx)(m.Modal, {
         transitionState: c,

@@ -14,7 +14,7 @@ function d(t) {
             transitionState: e,
             user: f,
             onBlock: function () {
-                o(), r.default.track(c.HAw.BLOCK_USER_CONFIRMED);
+                (o(), r.default.track(c.HAw.BLOCK_USER_CONFIRMED));
             },
             onClose: a,
             onCancel: i,

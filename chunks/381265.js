@@ -18,4 +18,4 @@ var n = r(3528),
         i && (o = a.call(o, Object.getOwnPropertySymbols(t)));
         for (var s = 0; s < o.length; s += 1) u(e, o[s], t[o[s]], r[o[s]]);
     };
-(c.supportsDescriptors = !!l), (e.exports = c);
+((c.supportsDescriptors = !!l), (e.exports = c));

@@ -35,11 +35,11 @@ class E {
     bookmarkLimit = 0;
     reminderLimit = 0;
     constructor(e, t) {
-        r()(null != t.b, "Config is missing bookmark limit"),
+        (r()(null != t.b, "Config is missing bookmark limit"),
             r()(null != t.r, "Config is missing reminder limit"),
             (this.enabled = e),
             (this.bookmarkLimit = t.b),
-            (this.reminderLimit = t.r);
+            (this.reminderLimit = t.r));
     }
 }
 let A = (0, a.mj)({

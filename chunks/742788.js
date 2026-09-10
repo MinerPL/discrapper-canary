@@ -1,4 +1,4 @@
-l.d(t, { A: () => Q, E: () => M }), l(321073);
+(l.d(t, { A: () => Q, E: () => M }), l(321073));
 var r = l(477900),
     n = l(582128),
     a = l(503698),
@@ -45,7 +45,7 @@ function j(e, t) {
     for (let l of (0, A._o)(s.bP.string(e))) {
         let n = b.Ay[l.type];
         if (null != n && !0 !== n.mutable && (t ? r >= l.start && r < l.end : r > l.start && r <= l.end))
-            return s.gB.delete(e, { at: { anchor: D(e, l.start), focus: D(e, l.end) } }), !0;
+            return (s.gB.delete(e, { at: { anchor: D(e, l.start), focus: D(e, l.end) } }), !0);
     }
     return !1;
 }
@@ -95,7 +95,7 @@ let H = n.memo(function (e) {
             onFocus: c,
             onBlur: f,
             onPasteCapture: function (e) {
-                t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation();
+                (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation());
             },
             role: "combobox",
             "aria-expanded": u,
@@ -145,7 +145,7 @@ function Q(e) {
                     e
                 );
             })((0, i.o$)((0, s.ie)()));
-            return (e.children = [{ type: "line", children: [{ text: B }] }]), (e.selection = null), e;
+            return ((e.children = [{ type: "line", children: [{ text: B }] }]), (e.selection = null), e);
         }),
         [q] = n.useState(() => [...Q.children]),
         [Y, K] = n.useState(!1),
@@ -164,7 +164,7 @@ function Q(e) {
         et = n.useCallback(() => s.bP.string(Q), [Q]),
         el = n.useCallback(() => {
             Promise.resolve().then(() => {
-                null == Q.selection && s.gB.select(Q, s.KE.end(Q, [])), i.rL.focus(Q);
+                (null == Q.selection && s.gB.select(Q, s.KE.end(Q, [])), i.rL.focus(Q));
             });
         }, [Q]),
         er = n.useCallback(() => {
@@ -185,12 +185,12 @@ function Q(e) {
         ),
         eu = n.useCallback(
             (e) => {
-                s.KE.withoutNormalizing(Q, () => {
-                    s.gB.select(Q, { anchor: s.KE.start(Q, []), focus: s.KE.end(Q, []) }),
+                (s.KE.withoutNormalizing(Q, () => {
+                    (s.gB.select(Q, { anchor: s.KE.start(Q, []), focus: s.KE.end(Q, []) }),
                         s.gB.delete(Q),
-                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, M));
+                        s.gB.insertText(Q, e.replace(/\n/g, "").slice(0, M)));
                 }),
-                    s.gB.select(Q, s.KE.end(Q, []));
+                    s.gB.select(Q, s.KE.end(Q, [])));
             },
             [Q],
         ),
@@ -223,13 +223,13 @@ function Q(e) {
             if (!J.current) return;
             !ee.current && i.rL.isFocused(Q) && K(!0);
             let e = et();
-            Z(e.length > 0), I.A.updateSearchQueryText(l, e);
+            (Z(e.length > 0), I.A.updateSearchQueryText(l, e));
             let t = (0, A._o)(e),
                 { selection: r } = Q,
                 n = null != r ? s.Q6.end(r).offset : e.length,
                 a = null != r ? s.Q6.start(r).offset : e.length,
                 u = (0, A.zZ)(t, n, a);
-            T.A.updateAutocompleteQuery({ searchContext: l, tokens: t, cursorScope: u, queryString: e }),
+            (T.A.updateAutocompleteQuery({ searchContext: l, tokens: t, cursorScope: u, queryString: e }),
                 (function (e) {
                     let t;
                     try {
@@ -250,7 +250,7 @@ function Q(e) {
                             ? (t.scrollLeft = a - 10)
                             : a > t.scrollLeft + t.offsetWidth && (t.scrollLeft = a - t.offsetWidth + 3);
                     });
-                })(Q);
+                })(Q));
         }, [Q, et, l]),
         eo = n.useCallback(() => {
             !0 !== V.current?.selectOption({ searchAutocompleteSelectAction: C.oi.KEY_PRESS }) &&
@@ -260,20 +260,20 @@ function Q(e) {
             (e) => {
                 switch (e.key) {
                     case "Enter":
-                        e.preventDefault(), eo();
+                        (e.preventDefault(), eo());
                         return;
                     case "Escape":
-                        e.preventDefault(), e.stopPropagation(), 0 === et().length ? er() : (eu(""), K(!0));
+                        (e.preventDefault(), e.stopPropagation(), 0 === et().length ? er() : (eu(""), K(!0)));
                         return;
                     case "ArrowUp":
-                        e.preventDefault(), e.stopPropagation(), V.current?.focusPreviousOption();
+                        (e.preventDefault(), e.stopPropagation(), V.current?.focusPreviousOption());
                         return;
                     case "ArrowDown":
-                        e.preventDefault(), e.stopPropagation(), V.current?.focusNextOption();
+                        (e.preventDefault(), e.stopPropagation(), V.current?.focusNextOption());
                         return;
                     case "Tab":
                         if (F) return;
-                        e.stopPropagation(), (0, d.uS)();
+                        (e.stopPropagation(), (0, d.uS)());
                         return;
                 }
             },
@@ -283,12 +283,12 @@ function Q(e) {
             (e) => {
                 let { query: t, anchor: l, focus: r, performSearch: n, replace: a, searchQuerySource: u } = e,
                     o = et();
-                " " !== t.charAt(t.length - 1) && (t += " "),
+                (" " !== t.charAt(t.length - 1) && (t += " "),
                     null != l && 0 !== l && " " !== o.charAt(l - 1) && " " !== t.charAt(0) && (t = " " + t),
                     (t = t.replace(/\n/g, "")),
-                    (ee.current = !0);
+                    (ee.current = !0));
                 try {
-                    !0 !== n && i.rL.focus(Q),
+                    (!0 !== n && i.rL.focus(Q),
                         !0 === a
                             ? eu(t)
                             : null != l
@@ -296,7 +296,7 @@ function Q(e) {
                                 s.gB.insertText(Q, t.slice(0, M)))
                               : s.gB.insertText(Q, t),
                         !0 !== n && K(!0),
-                        !0 === n && es({ queryString: et(), searchQuerySource: u });
+                        !0 === n && es({ queryString: et(), searchQuerySource: u }));
                 } finally {
                     Promise.resolve().then(() => {
                         ee.current = !1;
@@ -315,12 +315,12 @@ function Q(e) {
                     ? el()
                     : ((0, k.Tf)({ searchContext: l }),
                       Promise.resolve().then(() => {
-                          i.rL.focus(Q),
+                          (i.rL.focus(Q),
                               ef({
                                   query: b.Ay[W.LWr.FILTER_IN].key + `${n} `,
                                   replace: !0,
                                   searchQuerySource: C.Q_.SEARCH_TEXT_INPUT,
-                              });
+                              }));
                       }));
             },
             [Q, el, ef, l],
@@ -329,7 +329,7 @@ function Q(e) {
         (0, A.Pe)();
     }, [l]);
     let eh = (0, o.bG)([y.A], () => y.A.getQueryText($) ?? "");
-    n.useEffect(() => {
+    (n.useEffect(() => {
         s.bP.string(Q) !== eh && eu(eh);
     }, [eh, Q, eu]),
         n.useEffect(() => {
@@ -337,9 +337,9 @@ function Q(e) {
             if (null == e) return;
             let t = s.bP.string(Q).length;
             (s.Q6.start(e).offset > t || s.Q6.end(e).offset > t) && s.gB.deselect(Q);
-        }, [$, Q]);
+        }, [$, Q]));
     let ed = (0, o.bG)([y.A], () => y.A.getIsSearchTokensInitialized());
-    n.useEffect(() => {
+    (n.useEffect(() => {
         ed && Q.onChange();
     }, [Q, ed]),
         n.useEffect(
@@ -348,13 +348,13 @@ function Q(e) {
                 p._.subscribe(W.jej.SET_SEARCH_QUERY, ef),
                 p._.subscribe(W.jej.FOCUS_SEARCH, eg),
                 () => {
-                    p._.unsubscribe(W.jej.PERFORM_SEARCH, es),
+                    (p._.unsubscribe(W.jej.PERFORM_SEARCH, es),
                         p._.unsubscribe(W.jej.SET_SEARCH_QUERY, ef),
-                        p._.unsubscribe(W.jej.FOCUS_SEARCH, eg);
+                        p._.unsubscribe(W.jej.FOCUS_SEARCH, eg));
                 }
             ),
             [eg, ef, es],
-        );
+        ));
     let eE = n.useCallback(
             (e) => {
                 (e.preventDefault(), e.stopPropagation(), 0 === et().length)
@@ -392,7 +392,7 @@ function Q(e) {
             [eR, eL, l],
         ),
         eT = n.useCallback(() => {
-            i.rL.toDOMNode(Q, Q).removeAttribute("aria-activedescendant"),
+            (i.rL.toDOMNode(Q, Q).removeAttribute("aria-activedescendant"),
                 (function (e) {
                     if (null != e.selection) return;
                     let t = i.rL.findDocumentOrShadowRoot(e),
@@ -410,7 +410,7 @@ function Q(e) {
                 })(Q),
                 K(!0),
                 _.A.setFocused(l, !0),
-                c.O.announce(m.intl.string(m.t["5h0QOP"]));
+                c.O.announce(m.intl.string(m.t["5h0QOP"])));
         }, [Q, l]),
         eA = w ?? m.intl.string(m.t["5h0QOP"]);
     return (0, r.jsx)(f.Y, {

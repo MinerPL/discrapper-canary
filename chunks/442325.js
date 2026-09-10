@@ -39,7 +39,7 @@ function T(e) {
     if (0 === c.filter((e) => n(e) && e.id !== u).length) return !1;
     let i = c.filter((e) => !n(e) || e.id === u);
     if (f(i)) {
-        (c = []), (u = null);
+        ((c = []), (u = null));
         return;
     }
     c = i;
@@ -49,7 +49,7 @@ class m extends r.Ay.PersistedStore {
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
     initialize(e) {
-        this.waitFor(s.Ay, l.A),
+        (this.waitFor(s.Ay, l.A),
             (E = e?.enabled ?? !1),
             (c = e?.tabs ?? []),
             (u = e?.activeTabId ?? null),
@@ -58,7 +58,7 @@ class m extends r.Ay.PersistedStore {
                     let n = Number(t.id);
                     return Number.isFinite(n) && n > e ? n : e;
                 }, 0) + 1),
-            null == u || c.some((e) => e.id === u) || (u = c[0]?.id ?? null);
+            null == u || c.some((e) => e.id === u) || (u = c[0]?.id ?? null));
     }
     getState() {
         return { tabs: c, activeTabId: u, enabled: E };
@@ -100,7 +100,7 @@ let g = new m(a.h, {
             let e = s.Ay.getCurrentlySelectedChannelId();
             if (null != e && !(0, d.jq)(e)) {
                 let t = h({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
-                (c = [t]), (u = t.id);
+                ((c = [t]), (u = t.id));
             }
         }
         let t = h(
@@ -108,7 +108,7 @@ let g = new m(a.h, {
                 ? { kind: "route", routePath: e.routePath, routeLabel: e.routeLabel }
                 : { kind: "channel", channelId: e.channelId, guildId: e.guildId },
         );
-        (c = [...c, t]), (!0 === e.active || null == u) && (u = t.id);
+        ((c = [...c, t]), (!0 === e.active || null == u) && (u = t.id));
     },
     CHANNEL_TABS_CLOSE: function (e) {
         let { tabId: t } = e,
@@ -116,7 +116,7 @@ let g = new m(a.h, {
         if (-1 === n || (A() && 1 === c.length)) return !1;
         let i = c[n].id === u;
         if (f((c = c.filter((e) => e.id !== t)))) {
-            (c = []), (u = null);
+            ((c = []), (u = null));
             return;
         }
         i && (u = c[Math.min(n, c.length - 1)].id);
@@ -133,7 +133,7 @@ let g = new m(a.h, {
         if (-1 === i || i === r) return !1;
         let a = [...c],
             [s] = a.splice(i, 1);
-        a.splice(r, 0, s), (c = a);
+        (a.splice(r, 0, s), (c = a));
     },
     CHANNEL_TABS_SET_PINNED: function (e) {
         let { tabId: t, pinned: n } = e,
@@ -151,7 +151,7 @@ let g = new m(a.h, {
         let { enabled: t } = e;
         if (E === t) return !1;
         if (!(E = t)) {
-            (c = []), (u = null);
+            ((c = []), (u = null));
             return;
         }
         !(function () {
@@ -159,7 +159,7 @@ let g = new m(a.h, {
             let e = s.Ay.getCurrentlySelectedChannelId();
             if (null != e && !(0, d.jq)(e)) {
                 let t = h({ kind: "channel", channelId: e, guildId: l.A.getGuildId() ?? null });
-                (c = [t]), (u = t.id);
+                ((c = [t]), (u = t.id));
             }
         })();
     },
@@ -172,7 +172,7 @@ let g = new m(a.h, {
         if (i.pinned) {
             if (c.length >= 25) return !1;
             let e = h(r);
-            return (c = [...c, e]), void (u = e.id);
+            return ((c = [...c, e]), void (u = e.id));
         }
         c = c.map((e) => {
             if (e.id !== u) return e;
@@ -186,7 +186,7 @@ let g = new m(a.h, {
         let i = { kind: "channel", channelId: t, guildId: n ?? null };
         if (0 === c.length) {
             let e = h(i);
-            (c = [e]), (u = e.id);
+            ((c = [e]), (u = e.id));
             return;
         }
         if (null == u) return !1;
@@ -195,7 +195,7 @@ let g = new m(a.h, {
         if (r.pinned) {
             if (c.length >= 25) return !1;
             let e = h(i);
-            return (c = [...c, e]), void (u = e.id);
+            return ((c = [...c, e]), void (u = e.id));
         }
         c = c.map((e) => {
             if (e.id !== u) return e;
@@ -207,6 +207,6 @@ let g = new m(a.h, {
     THREAD_DELETE: T,
     LOGOUT: function () {
         if (0 === c.length) return !1;
-        (c = []), (u = null);
+        ((c = []), (u = null));
     },
 });

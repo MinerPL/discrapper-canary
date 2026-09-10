@@ -30,7 +30,7 @@ var n = t(477900),
     I = t(462180),
     F = t(882035),
     D = t(121894);
-t(323874), t(14289), t(35956);
+(t(323874), t(14289), t(35956));
 var O = t(335416),
     P = t(375708);
 function R(e, l, t) {
@@ -51,10 +51,10 @@ async function U(e) {
     let l = new Audio(URL.createObjectURL(e));
     return (
         await new Promise((e) => {
-            l.addEventListener("canplaythrough", function t() {
-                e(), l.removeEventListener("canplaythrough", t);
+            (l.addEventListener("canplaythrough", function t() {
+                (e(), l.removeEventListener("canplaythrough", t));
             }),
-                l.load();
+                l.load());
         }),
         l
     );
@@ -135,18 +135,18 @@ let en = a.memo(function (e) {
                     c = a.useCallback(
                         (e, l) => {
                             var n;
-                            r(null),
+                            (r(null),
                                 ((n = l.offsetWidth),
                                 new Promise((l) => {
                                     let a = (0, X.A)();
-                                    Z?.addEventListener("message", function e(t) {
+                                    (Z?.addEventListener("message", function e(t) {
                                         let {
                                             data: { waveform: n, id: i, normalizedVolumeMultipler: s },
                                         } = t;
-                                        a === i && (l(n), o(s)), Z?.removeEventListener("message", e);
+                                        (a === i && (l(n), o(s)), Z?.removeEventListener("message", e));
                                     }),
-                                        Z?.postMessage({ id: a, options: t, config: el, width: n, rawBufferData: e });
-                                })).then(r);
+                                        Z?.postMessage({ id: a, options: t, config: el, width: n, rawBufferData: e }));
+                                })).then(r));
                         },
                         [t],
                     );
@@ -190,7 +190,7 @@ let en = a.memo(function (e) {
                 if (0 !== r.width && 0 !== r.height && null != f && f.length > 0) {
                     let e = t / f.length,
                         a = -(e * (O.Jh.waveformBarWidth - 1));
-                    l.clearRect(0, 0, t, n), (l.fillStyle = h);
+                    (l.clearRect(0, 0, t, n), (l.fillStyle = h));
                     for (let t = 0; t < f.length; t++) {
                         let i = f[t] * n,
                             s = t * e + a,
@@ -242,7 +242,7 @@ let es = a.memo(function (e) {
     a.useEffect(() => {
         if (null == o) return;
         let e = o.duration * A.A.Millis.SECOND;
-        g(0), v(0), j(e), k(e);
+        (g(0), v(0), j(e), k(e));
     }, [o]);
     let D = a.useCallback(
             (e, l) => {
@@ -278,7 +278,7 @@ let es = a.memo(function (e) {
                 if (null == o || !p) return;
                 let l = parseInt(e.target.value),
                     t = l > b ? b : l;
-                i(_(t)), g(t), v(t);
+                (i(_(t)), g(t), v(t));
             },
             [o, i, b, p],
         ),
@@ -295,7 +295,7 @@ let es = a.memo(function (e) {
                 if (null == o || !S) return;
                 let l = parseInt(e.target.value),
                     t = l > h ? l : h;
-                i(_(h)), v(h), j(t);
+                (i(_(h)), v(h), j(t));
             },
             [o, i, S, h],
         );
@@ -449,7 +449,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                 return (
                     c({ playheadPositionMs: 0, endPositionMs: r.duration * A.A.Millis.SECOND, startPositionMs: 0 }),
                     () => {
-                        r.pause(), o(!1);
+                        (r.pause(), o(!1));
                     }
                 );
         }, [r]);
@@ -462,12 +462,15 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
             j = a.useCallback(() => {
                 if (null != r) {
                     if (u) return void b();
-                    f >= m ? (r.currentTime = _(h)) : (r.currentTime = _(f)), (r.volume = (0, T.A)(t)), r.play(), o(!0);
+                    (f >= m ? (r.currentTime = _(h)) : (r.currentTime = _(f)),
+                        (r.volume = (0, T.A)(t)),
+                        r.play(),
+                        o(!0));
                 }
             }, [r, m, b, f, u, h, t]),
             p = a.useCallback(
                 (e) => {
-                    c(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs });
+                    (c(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs }));
                 },
                 [s],
             ),
@@ -606,14 +609,18 @@ function eF(e) {
             }
             return e;
         }),
-        o = (0, ev.cf)([ek.A], () => {
-            let e = {};
-            for (let [l, t] of eE.default.entries(u)) {
-                let n = (0, eM.tO)(t, ek.A.getSoundsForGuild(l) ?? er.pD, t.premiumTier);
-                e[l] = n;
-            }
-            return e;
-        }, [u]);
+        o = (0, ev.cf)(
+            [ek.A],
+            () => {
+                let e = {};
+                for (let [l, t] of eE.default.entries(u)) {
+                    let n = (0, eM.tO)(t, ek.A.getSoundsForGuild(l) ?? er.pD, t.premiumTier);
+                    e[l] = n;
+                }
+                return e;
+            },
+            [u],
+        );
     a.useEffect(() => {
         (0, y.E7)();
     }, []);
@@ -683,7 +690,7 @@ function eO(e) {
         [Y, Q] = a.useState(l);
     async function X(e) {
         try {
-            await R(e ?? null), W("ready"), V(null);
+            (await R(e ?? null), W("ready"), V(null));
         } catch (e) {
             K(e);
         }
@@ -699,7 +706,7 @@ function eO(e) {
         t?.file != null && e(t.file);
         async function e(e) {
             try {
-                await R(e), W("ready"), V(null);
+                (await R(e), W("ready"), V(null));
             } catch (e) {
                 K(e);
             }
@@ -731,7 +738,7 @@ function eO(e) {
             W("encoding");
             try {
                 let t = await (0, ex.Yo)(e, l);
-                return W("ready"), t;
+                return (W("ready"), t);
             } catch (e) {
                 throw (W("encoding-failed"), e);
             }
@@ -748,16 +755,16 @@ function eO(e) {
             let l = (0, ex.YK)(e);
             W("uploading");
             try {
-                await (0, ex.JX)({ readPromise: l, guildId: Y, name: M, volume: k, emojiId: T, emojiName: F }),
-                    W("ready");
+                (await (0, ex.JX)({ readPromise: l, guildId: Y, name: M, volume: k, emojiId: T, emojiName: F }),
+                    W("ready"));
             } catch (e) {
                 throw new v.A(e);
             }
         }, [O, Y, M, et, B, k, T, F]),
         ea = a.useCallback(async () => {
-            s()(null != Y, "Cannot submit soundboard sound with no guildId"), U(!0), V(null);
+            (s()(null != Y, "Cannot submit soundboard sound with no guildId"), U(!0), V(null));
             try {
-                ee
+                (ee
                     ? await (0, y.xV)({
                           guildId: Y,
                           soundId: i.soundId,
@@ -767,19 +774,19 @@ function eO(e) {
                           emojiName: F ?? null,
                       })
                     : (await en(), (0, f.P0)((0, m.o)(P.intl.string(P.t.T7dhBL), h.Ck.SUCCESS))),
-                    w();
+                    w());
             } catch (e) {
                 K(e);
             } finally {
-                W("ready"), U(!1), A(1), L(1);
+                (W("ready"), U(!1), A(1), L(1));
             }
         }, [ee, w, Y, i, M, k, T, F, en, L]);
-    (0, b.Ay)(() => {
-        R(null), C.default.track(eA.HAw.OPEN_MODAL, { type: "Soundboard Upload Sound", guild_id: Y });
+    ((0, b.Ay)(() => {
+        (R(null), C.default.track(eA.HAw.OPEN_MODAL, { type: "Soundboard Upload Sound", guild_id: Y }));
     }),
         a.useEffect(() => {
             A(Math.min(k, _));
-        }, [k, A, _]);
+        }, [k, A, _]));
     let ei = (0, n.jsx)(j.A, {
             guildId: Y,
             emojiId: T,

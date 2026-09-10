@@ -20,8 +20,8 @@ function u(e) {
         u = i.useRef(null);
     return (
         i.useEffect(() => {
-            "POLL_ANSWERS" === n && null != u.current && u.current?.ref?.focus(),
-                "ACTION_BUTTON" === n && null != a.current && a.current?.focus();
+            ("POLL_ANSWERS" === n && null != u.current && u.current?.ref?.focus(),
+                "ACTION_BUTTON" === n && null != a.current && a.current?.focus());
         }, [n]),
         (0, l.jsx)(o, {
             pollAnswerRef: u,

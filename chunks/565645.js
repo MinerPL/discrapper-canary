@@ -64,13 +64,13 @@ function h(e) {
         }, [D]),
         W = i.useCallback(
             (e) => {
-                y && N(!0), null == a && z(o), b?.(e);
+                (y && N(!0), null == a && z(o), b?.(e));
             },
             [y, o, b, z, a],
         ),
         q = i.useCallback(
             (e) => {
-                y && N(!1), null == a && L(o), E?.(e);
+                (y && N(!1), null == a && L(o), E?.(e));
             },
             [y, a, o, E, L],
         ),
@@ -89,7 +89,7 @@ function h(e) {
     i.useEffect(() => () => T.current?.(), []);
     let $ = i.useCallback(
             (e) => {
-                (Y.current = e), V?.(e), S?.(e);
+                ((Y.current = e), V?.(e), S?.(e));
             },
             [V, S],
         ),

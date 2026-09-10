@@ -43,7 +43,7 @@ let g = new u(l.h, {
     WELCOME_SCREEN_UPDATE: o,
     WELCOME_SCREEN_VIEW: function (e) {
         let { guildId: t, isLurking: n } = e;
-        (E[t] = !0), n && (s = !0);
+        ((E[t] = !0), n && (s = !0));
     },
     GUILD_STOP_LURKING: function () {
         s = !1;
@@ -55,14 +55,14 @@ let g = new u(l.h, {
         E[t] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
-        (d = !0), (h = !1);
+        ((d = !0), (h = !1));
     },
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-        (d = !1), (h = !1);
+        ((d = !1), (h = !1));
         let { welcomeScreen: t, guildId: n } = e;
         r[n] = t ?? a;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
-        (d = !1), (h = !0);
+        ((d = !1), (h = !0));
     },
 });

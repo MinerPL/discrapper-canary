@@ -45,23 +45,23 @@ function S() {
                 let i = await (0, h.GL)(e, n);
                 if (((l = l && (i?.ok ?? !1)), i?.ok)) {
                     let e = i.body;
-                    void 0 !== t.pendingAvatar &&
+                    (void 0 !== t.pendingAvatar &&
                         (0, d.t)({
                             isGuildProfile: !0,
                             avatarHash: e.avatar,
                             avatarId: n.avatarId,
                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                         }),
-                        (0, h.go)();
+                        (0, h.go)());
                 }
             }
             if (Object.keys(i).length > 0) {
                 let { bannerOriginalMd5: t, ...n } = i,
                     s = await (0, o.gi)(n, e, t);
-                (l = l && (s?.ok ?? !1)),
-                    s?.ok ? (0, h.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE));
+                ((l = l && (s?.ok ?? !1)),
+                    s?.ok ? (0, h.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE)));
             }
-            l && (0, h.x8)(), S(!1);
+            (l && (0, h.x8)(), S(!1));
         }, [e]),
         x = l.useCallback(() => {
             (0, h.IM)();
@@ -87,34 +87,34 @@ function I() {
                 let n = await (0, T._L)(t);
                 if (((l = l && (n?.ok ?? !1)), n?.ok)) {
                     let i = n.body;
-                    void 0 !== e.pendingAvatar &&
+                    (void 0 !== e.pendingAvatar &&
                         (0, d.t)({
                             avatarHash: i.avatar,
                             avatarId: t.avatarId,
                             avatarAssetOrigin: e.pendingAvatar?.assetOrigin,
                         }),
-                        (0, T.pZ)();
+                        (0, T.pZ)());
                 } else n?.body?.username != null && (0, f.E)();
             }
             if (Object.keys(n).length > 0) {
                 let { bannerOriginalMd5: e, ...t } = n,
                     i = await (0, o.gi)(t, void 0, e);
-                (l = l && (i?.ok ?? !1)), i?.ok ? (0, o.RE)() : E();
+                ((l = l && (i?.ok ?? !1)), i?.ok ? (0, o.RE)() : E());
             }
             if (void 0 !== e.pendingLegacyUsernameDisabled)
                 try {
-                    await x.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, T._e)();
+                    (await x.m$.updateSetting(e.pendingLegacyUsernameDisabled), (0, T._e)());
                 } catch {
-                    E(), (l = !1);
+                    (E(), (l = !1));
                 }
             if (Object.keys(i).length > 0) {
                 let { primaryGuildId: e } = i;
                 if (void 0 !== e) {
                     let t = await (0, p.m)(e, null !== e);
-                    (l = l && (t?.ok ?? !1)), t?.ok ? (0, T.fw)() : E();
+                    ((l = l && (t?.ok ?? !1)), t?.ok ? (0, T.fw)() : E());
                 }
             }
-            l && (0, T.x8)(), c(!1);
+            (l && (0, T.x8)(), c(!1));
         }, []),
         h = l.useCallback(() => {
             (0, T.IM)();

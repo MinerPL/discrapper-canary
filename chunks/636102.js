@@ -4,27 +4,27 @@ var i =
             ? function (e, t, n, i) {
                   void 0 === i && (i = n);
                   var r = Object.getOwnPropertyDescriptor(t, n);
-                  (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
+                  ((!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
                       (r = {
                           enumerable: !0,
                           get: function () {
                               return t[n];
                           },
                       }),
-                      Object.defineProperty(e, i, r);
+                      Object.defineProperty(e, i, r));
               }
             : function (e, t, n, i) {
-                  void 0 === i && (i = n), (e[i] = t[n]);
+                  (void 0 === i && (i = n), (e[i] = t[n]));
               }),
     r =
         (this && this.__exportStar) ||
         function (e, t) {
             for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || i(t, e, n);
         };
-Object.defineProperty(t, "__esModule", { value: !0 }), (t.validateFileType = void 0);
+(Object.defineProperty(t, "__esModule", { value: !0 }), (t.validateFileType = void 0));
 let o = n(835986),
     a = n(817762);
-r(n(524016), t),
+(r(n(524016), t),
     r(n(330821), t),
     r(n(549195), t),
     r(n(650624), t),
@@ -60,9 +60,9 @@ r(n(524016), t),
             u = [];
         for (let e of s) {
             let t = o.FileTypes.getSignaturesByName(e);
-            (l = l.concat(t)),
+            ((l = l.concat(t)),
                 o.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(e.toLowerCase()) &&
-                    u.push(o.FileTypes.getInfoByName(e));
+                    u.push(o.FileTypes.getInfoByName(e)));
         }
         let c = (0, a.getFileChunk)(e, (null == n ? void 0 : n.chunkSize) || 64),
             p = o.FileTypes.detectSignature(c, l);
@@ -75,4 +75,4 @@ r(n(524016), t),
             }
         }
         return !0;
-    });
+    }));

@@ -33,7 +33,7 @@ var x = n(414121),
     S = n(626584),
     j = n(751124),
     _ = n(625494);
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300);
+(n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300));
 var b = n(284009),
     T = n.n(b),
     k = n(889227);
@@ -107,13 +107,13 @@ let Q = n(906118);
 function q(e) {
     let { text: t = "" } = e,
         [n, s] = a.useState(!1);
-    a.useEffect(() => {
+    (a.useEffect(() => {
         let e = new Image();
-        (e.src = Q), (e.onload = () => s(!0)), (e.onerror = () => s(!0));
+        ((e.src = Q), (e.onload = () => s(!0)), (e.onerror = () => s(!0)));
     }, [Q]),
         a.useEffect(() => {
             n && c.O.announce(V.intl.string(V.t.j2p125));
-        }, [n]);
+        }, [n]));
     let i = "" !== t && n,
         l = (0, B.m6)() && !i;
     return (0, r.jsx)("div", {
@@ -269,18 +269,18 @@ function Y(e) {
                 d = a.useRef(null),
                 u = a.useMemo(() => new w.A(1500, 3e4), []),
                 h = (0, v.A)(() => {
-                    c({ step: I.INITIALIZING }),
+                    (c({ step: I.INITIALIZING }),
                         t
                             ? r((e) => e + 1)
                             : (M.info(
                                   "document is not visible, will defer reconnection when document becomes visible.",
                               ),
-                              l(!0));
+                              l(!0)));
                 }),
                 p = a.useCallback(() => {
-                    M.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
+                    (M.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
                         c({ step: I.INITIALIZING }),
-                        u.pending || u.fail(h);
+                        u.pending || u.fail(h));
                 }, [h, u]);
             return (
                 a.useEffect(() => {
@@ -322,21 +322,21 @@ function Y(e) {
                             case "nonce_proof": {
                                 let e = l.encrypted_nonce,
                                     t = await D.decryptNonce(f(), e);
-                                r("computed nonce proof"), i.send(JSON.stringify({ op: "nonce_proof", nonce: t }));
+                                (r("computed nonce proof"), i.send(JSON.stringify({ op: "nonce_proof", nonce: t })));
                                 return;
                             }
                             case "pending_remote_init": {
-                                u.succeed(), _._.dispatch(F.jej.WAVE_EMPHASIZE);
+                                (u.succeed(), _._.dispatch(F.jej.WAVE_EMPHASIZE));
                                 let e = await D.publicKeyFingerprint(f());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
-                                r("handshake complete awaiting remote auth."),
-                                    c({ step: I.PENDING_REMOTE_INIT, fingerprint: e });
+                                (r("handshake complete awaiting remote auth."),
+                                    c({ step: I.PENDING_REMOTE_INIT, fingerprint: e }));
                                 return;
                             }
                             case "pending_login": {
                                 let t = l.ticket;
                                 if (null == t) return void p();
-                                c({ step: I.PENDING_LOGIN, ticket: t }),
+                                (c({ step: I.PENDING_LOGIN, ticket: t }),
                                     C.Bo.post({
                                         url: F.Rsh.REMOTE_AUTH_LOGIN,
                                         body: { ticket: t },
@@ -347,28 +347,28 @@ function Y(e) {
                                             if (null == d.current) return void p();
                                             let s = await D.decryptEncodedCiphertext(d.current, t.body.encrypted_token),
                                                 r = await D.publicKeyFingerprint(d.current);
-                                            n ? await g.A.switchAccountToken(s) : await g.A.loginToken(s, !1), e(r);
+                                            (n ? await g.A.switchAccountToken(s) : await g.A.loginToken(s, !1), e(r));
                                         })
-                                        .catch(() => p());
+                                        .catch(() => p()));
                                 return;
                             }
                             case "pending_ticket": {
-                                _._.dispatch(F.jej.WAVE_EMPHASIZE),
-                                    r("remote auth handshake started, awaiting ticket/cancel.");
+                                (_._.dispatch(F.jej.WAVE_EMPHASIZE),
+                                    r("remote auth handshake started, awaiting ticket/cancel."));
                                 let e = l.encrypted_user_payload,
                                     t = await P(f(), e);
                                 c({ step: I.PENDING_TICKET, user: t });
                                 return;
                             }
                             case "cancel":
-                                r("remote auth handshake cancelled."), h();
+                                (r("remote auth handshake cancelled."), h());
                                 return;
                             case "hello": {
                                 r(`got hello, auth timeout=${l.timeout_ms}ms`);
                                 let e = l.heartbeat_interval;
                                 N = setTimeout(
                                     () => {
-                                        (N = null), y(), (m = setInterval(y, e));
+                                        ((N = null), y(), (m = setInterval(y, e)));
                                     },
                                     Math.floor(e * Math.random()),
                                 );
@@ -382,17 +382,17 @@ function Y(e) {
                         }
                     }
                     async function x() {
-                        (l = await D.generateRsaKeyPair()), (o = await D.serializePublicKey(l));
+                        ((l = await D.generateRsaKeyPair()), (o = await D.serializePublicKey(l)));
                         let e = await D.publicKeyFingerprint(l);
-                        r(`connected, handshaking with fingerprint: ${e}`),
+                        (r(`connected, handshaking with fingerprint: ${e}`),
                             i.send(JSON.stringify({ op: "init", encoded_public_key: o })),
-                            (d.current = l);
+                            (d.current = l));
                     }
                     function w(e) {
-                        r(`disconnected, code: ${e.code} ${e.reason}`), p();
+                        (r(`disconnected, code: ${e.code} ${e.reason}`), p());
                     }
                     function v(e) {
-                        r(`disconnected, error: ${JSON.stringify(e)}`), p();
+                        (r(`disconnected, error: ${JSON.stringify(e)}`), p());
                     }
                     return (
                         i.addEventListener("open", x),
@@ -400,7 +400,7 @@ function Y(e) {
                         i.addEventListener("close", w),
                         i.addEventListener("error", v),
                         () => {
-                            r("cleaning up"),
+                            (r("cleaning up"),
                                 i.removeEventListener("open", x),
                                 i.removeEventListener("message", A),
                                 i.removeEventListener("close", w),
@@ -409,7 +409,7 @@ function Y(e) {
                                 u.cancel(),
                                 D.release(),
                                 null != N && clearTimeout(N),
-                                null != m && clearInterval(m);
+                                null != m && clearInterval(m));
                         }
                     );
                 }, [h, e, s, u, p, n]),

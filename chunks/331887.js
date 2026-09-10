@@ -18,7 +18,7 @@ let o = new a(r.h, {
     },
     UPDATE_DATA_HARVEST_TYPE: function (e) {
         let { harvestType: t } = e;
-        (s = !1), (i = t);
+        ((s = !1), (i = t));
     },
     LOAD_DATA_HARVEST_TYPE_START: function () {
         s = !0;
@@ -27,6 +27,6 @@ let o = new a(r.h, {
         s = !1;
     },
     LOGOUT: function () {
-        (s = !1), (i = null);
+        ((s = !1), (i = null));
     },
 });

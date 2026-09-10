@@ -169,5 +169,5 @@ function C(e) {
               : { success: !1, error: (0, A.tE)(t) };
     let d = n.length > 1 ? { type: "text", text: u } : n[0],
         h = f[t.type](d, t, r, s, o);
-    return h.success || null != h.error || (h.error = (0, A.tE)(t)), h;
+    return (h.success || null != h.error || (h.error = (0, A.tE)(t)), h);
 }

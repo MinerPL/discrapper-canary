@@ -29,7 +29,7 @@ function c() {}
 function u(e) {
     if ("object" !== n(e) || null === e) return !1;
     if (null === Object.getPrototypeOf(e)) return !0;
-    for (var t = e; null !== Object.getPrototypeOf(t); ) t = Object.getPrototypeOf(t);
+    for (var t = e; null !== Object.getPrototypeOf(t);) t = Object.getPrototypeOf(t);
     return Object.getPrototypeOf(e) === t;
 }
 r.d(t, {

@@ -16,10 +16,10 @@ function g(t) {
         C = (0, c.Ay)(g);
     function k(t) {
         if (!t && (0, h.Cf)(g.id)) {
-            a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND }), e();
+            (a.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.STAGE_CHANNEL_RAISE_HAND }), e());
             return;
         }
-        (0, l.e7)(g, t), e();
+        ((0, l.e7)(g, t), e());
     }
     return (0, n.jsx)(r.k, {
         transitionState: i,

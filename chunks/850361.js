@@ -4,11 +4,11 @@ function t(r, n) {
             Object.setPrototypeOf
                 ? Object.setPrototypeOf.bind()
                 : function (e, t) {
-                      return (e.__proto__ = t), e;
+                      return ((e.__proto__ = t), e);
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
         t(r, n)
     );
 }
-(e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+((e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports));

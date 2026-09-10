@@ -123,13 +123,13 @@ function p(t) {
 function f({ actor: t, trackElementClicked: o }) {
     return {
         request() {
-            o?.("request"), t.send({ type: "REQUEST" });
+            (o?.("request"), t.send({ type: "REQUEST" }));
         },
         continue() {
-            o?.("continue"), t.send({ type: "CONTINUE" });
+            (o?.("continue"), t.send({ type: "CONTINUE" }));
         },
         skip() {
-            o?.("skip"), t.send({ type: "SKIP" });
+            (o?.("skip"), t.send({ type: "SKIP" }));
         },
         reset() {
             t.send({ type: "RESET" });

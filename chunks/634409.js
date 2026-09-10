@@ -1,4 +1,4 @@
-s.r(i), s.d(i, { default: () => F });
+(s.r(i), s.d(i, { default: () => F }));
 var d = s(477900),
     l = s(582128),
     t = s(477782),
@@ -56,9 +56,9 @@ function F(e) {
     let Q = l.useRef(null),
         Z = (0, h.M)(Q);
     function $() {
-        M?.(),
+        (M?.(),
             X.dispatch(C.jej.POPOUT_CLOSE),
-            (0, v.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...J });
+            (0, v.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...J }));
     }
     l.useEffect(() => {
         H?.(Q?.current);
@@ -96,12 +96,12 @@ function F(e) {
                                               id: "view-profile",
                                               label: N.intl.string(N.t["+Xp3hq"]),
                                               action: () => {
-                                                  $(),
+                                                  ($(),
                                                       (0, y.Wn)({
                                                           action: "PRESS_VIEW_PROFILE",
                                                           analyticsLocations: Y,
                                                           ...J,
-                                                      });
+                                                      }));
                                               },
                                           })
                                         : null,

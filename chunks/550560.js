@@ -29,7 +29,7 @@ function v(i) {
         [b, P] = a.useState(""),
         [T, f] = a.useState(!1);
     a.useEffect(() => {
-        P(L ?? ""), f(v === C.Iv.SOMETHING_ELSE);
+        (P(L ?? ""), f(v === C.Iv.SOMETHING_ELSE));
     }, [L, v, e]);
     let G = C.Qv.map((i) => ({ value: i, name: (0, _.l0)(i) }));
     return (0, n.jsxs)(n.Fragment, {
@@ -63,14 +63,14 @@ function v(i) {
                         value: v,
                         options: G,
                         onChange: (i) => {
-                            f(i === C.Iv.SOMETHING_ELSE),
+                            (f(i === C.Iv.SOMETHING_ELSE),
                                 i !== C.Iv.SOMETHING_ELSE &&
                                     (P(""),
                                     j.h.dispatch({
                                         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
                                         userInput: "",
                                     })),
-                                j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal: i });
+                                j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal: i }));
                         },
                     }),
                     e &&
@@ -108,16 +108,16 @@ function v(i) {
                             variant: "primary",
                             text: I.intl.string(I.t.PDTjLN),
                             onClick: function () {
-                                j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
-                                    r?.();
+                                (j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
+                                    r?.());
                             },
                         }),
                         (0, n.jsx)(h.$, {
                             variant: "secondary",
                             text: I.intl.string(I.t["13/7kX"]),
                             onClick: function () {
-                                j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
-                                    o?.();
+                                (j.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: b }),
+                                    o?.());
                             },
                         }),
                     ],
@@ -146,7 +146,7 @@ function f(i) {
         O = a.useCallback(async () => {
             if (null !== d)
                 try {
-                    y(""), await b.Gf(d, v, f), r?.();
+                    (y(""), await b.Gf(d, v, f), r?.());
                 } catch (i) {
                     y((0, _.Tk)(i.body?.code));
                 }
@@ -288,7 +288,7 @@ var O = e(975807),
 function F(i) {
     let { url: t, text: e, onClick: s } = i,
         l = a.useCallback(() => {
-            s?.(), (0, O.A)(t);
+            (s?.(), (0, O.A)(t));
         }, [s, t]);
     return (0, n.jsx)(B.PQ, { variant: "clickable", title: e, onButtonPress: l });
 }
@@ -477,7 +477,7 @@ function Q(i) {
         m(o);
     }, [m, o]);
     let A = a.useCallback(() => {
-            G.A.close(), d();
+            (G.A.close(), d());
         }, [d]),
         E = a.useCallback(() => {
             let i = C.A8[x]?.next;

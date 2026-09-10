@@ -24,11 +24,11 @@ function b(t) {
 }
 function p(t) {
     let a = s.useCallback(() => {
-            (0, c.closeAllModals)(), (0, e.I)();
+            ((0, c.closeAllModals)(), (0, e.I)());
         }, []),
         n = s.useCallback(() => {
-            (0, c.closeAllModals)(),
-                (0, r.Cz)({ tab: u.G2.ORBS, analyticsLocations: [], analyticsSource: l.A.PREMIUM_MARKETING });
+            ((0, c.closeAllModals)(),
+                (0, r.Cz)({ tab: u.G2.ORBS, analyticsLocations: [], analyticsSource: l.A.PREMIUM_MARKETING }));
         }, []);
     return (0, i.jsx)(b, {
         ...t,
@@ -41,11 +41,11 @@ function p(t) {
 function k(t) {
     let { onClose: a, openGiftingBadgePostPurchaseModal: n, ...o } = t,
         e = s.useCallback(async () => {
-            await a(), n();
+            (await a(), n());
         }, [a, n]),
         p = s.useCallback(() => {
-            (0, c.closeAllModals)(),
-                (0, r.Cz)({ tab: u.G2.ORBS, analyticsLocations: [], analyticsSource: l.A.PREMIUM_MARKETING });
+            ((0, c.closeAllModals)(),
+                (0, r.Cz)({ tab: u.G2.ORBS, analyticsLocations: [], analyticsSource: l.A.PREMIUM_MARKETING }));
         }, []);
     return (0, i.jsx)(b, {
         ...o,

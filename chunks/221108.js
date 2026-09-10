@@ -1,7 +1,7 @@
 function r(e) {
     return "IntlMessagesProxy" === e[Symbol.toStringTag];
 }
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.chainMessagesObjects = function (e, t) {
         let n = r(e),
             i = r(t),
@@ -37,4 +37,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             Object.defineProperty(n, "$$loader", { value: e, enumerable: !1, configurable: !1, writable: !1 }),
             n
         );
-    });
+    }));

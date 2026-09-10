@@ -1,4 +1,4 @@
-e.r(s), e.d(s, { default: () => j });
+(e.r(s), e.d(s, { default: () => j }));
 var l = e(477900),
     n = e(582128),
     r = e(189213),

@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         clearMainFrameSlot: () => A,
         launchFrame: () => E,
@@ -11,7 +11,7 @@ n.r(t),
         detachFrameIframe: () => S,
         updateFramePanelMode: () => T,
         promoteFrame: () => I,
-    });
+    }));
 var i = n(228366),
     r = n(795816),
     a = n(907645),
@@ -29,9 +29,9 @@ async function E(e) {
     let { applicationId: t, surface: n, customId: l, referrerId: c, analyticsContext: _ } = e,
         E = (0, u.VA)(t, n),
         h = d.A.getFrame(E);
-    if (null != h) return h.intent === u.sV.MAIN && (I(E), f({ frameId: E, layoutMode: u.y0.FOCUSED })), E;
-    (0, u.Yf)(n) === u.sV.MAIN && (o(), A()),
-        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: E, surface: n });
+    if (null != h) return (h.intent === u.sV.MAIN && (I(E), f({ frameId: E, layoutMode: u.y0.FOCUSED })), E);
+    ((0, u.Yf)(n) === u.sV.MAIN && (o(), A()),
+        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: E, surface: n }));
     try {
         let e = await (0, r.D2)(t, (0, u.h)(n));
         return (
@@ -51,9 +51,9 @@ async function E(e) {
         let e = (0, s.A)(),
             n = await (0, a.f)(r, t);
         throw (
-            (e.showLaunchErrorModal(n.message),
+            e.showLaunchErrorModal(n.message),
             i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: E, error: r, analyticsContext: _ }),
-            r)
+            r
         );
     }
 }
@@ -82,7 +82,7 @@ function T(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
 function m(e) {
-    f({ frameId: e, layoutMode: u.y0.FOCUSED }), T(e, _.Gd.PANEL);
+    (f({ frameId: e, layoutMode: u.y0.FOCUSED }), T(e, _.Gd.PANEL));
 }
 function g(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
@@ -101,7 +101,7 @@ async function N(e) {
     } catch (i) {
         let e = (0, s.A)(),
             t = await (0, a.f)(i, n);
-        return e.showLaunchErrorModal(t.message), !1;
+        return (e.showLaunchErrorModal(t.message), !1);
     } finally {
         i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !1 });
     }

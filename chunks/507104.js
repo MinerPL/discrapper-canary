@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => F, ZD: () => g, hb: () => S }), n(321073);
+(n.d(t, { Ay: () => F, ZD: () => g, hb: () => S }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -54,20 +54,20 @@ function P() {
                 r = new Set();
             if (n) {
                 let t = Math.ceil(e.length / 2);
-                e.slice(0, t).forEach((e) => {
+                (e.slice(0, t).forEach((e) => {
                     i.add(e);
                 }),
                     e.forEach((e) => {
                         r.add(e);
-                    });
+                    }));
             } else
                 for (let n of e) {
                     let e = t(n);
-                    null != e && e > 0.7 && i.add(n), null != e && e > 0.5 && r.add(n);
+                    (null != e && e > 0.7 && i.add(n), null != e && e > 0.5 && r.add(n));
                 }
             return { highestAffinity: i, highAffinity: r };
         })(O, (e) => d.A.getUserAffinity(e)?.dmProbability, e);
-    (R = t), (L = n);
+    ((R = t), (L = n));
 }
 function U() {
     if (null != D) return void x(D);
@@ -93,7 +93,7 @@ function U() {
     e ? (O.sort((e, t) => d.A.compareByDmProbability(e, t)), P()) : w();
 }
 function w() {
-    (O.length = 0), (R = new Set()), (L = new Set()), (y = {});
+    ((O.length = 0), (R = new Set()), (L = new Set()), (y = {}));
 }
 function G(e) {
     null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = M());
@@ -106,16 +106,16 @@ function x(e) {
     let n = E.A.getFriendIDs().filter((e) => !E.A.isIgnored(e)),
         i = new Set(n),
         a = null != v && v.length === e && v.every((e) => i.has(e)) ? v : r().sampleSize(n, e);
-    (v = a),
+    ((v = a),
         a.forEach((e) => {
             let t = E.A.getSince(e);
             if (null != t) {
                 let n = new Date(t);
-                O.push(e), (y[e] = { friendsSince: n });
+                (O.push(e), (y[e] = { friendsSince: n }));
             }
         }),
         O.sort((e, t) => d.A.compareByDmProbability(e, t)),
-        P(!0);
+        P(!0));
 }
 class k extends a.Ay.PersistedStore {
     static displayName = "PremiumGiftingIntentStore";
@@ -153,18 +153,18 @@ class k extends a.Ay.PersistedStore {
         (e) => {
             if (null == e) return e;
             let t = { ...e };
-            return delete t.giftUnreadNotificationLastDismissedTimes, t;
+            return (delete t.giftUnreadNotificationLastDismissedTimes, t);
         },
     ];
     initialize(e) {
-        (C = N()),
+        ((C = N()),
             null != e &&
                 ((C.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
                 (C.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
                 (C.messageGiftIntentLastShownMap = { ...e.messageGiftIntentLastShownMap }),
                 (C.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
             this.syncWith([E.A, d.A, _.A, l.A, o.A, u.A], U),
-            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, M(), 12096e5));
+            (C.messageGiftIntentLastShownMap = T(C.messageGiftIntentLastShownMap, M(), 12096e5)));
     }
     getState() {
         return C;
@@ -207,7 +207,7 @@ let F = new k(s.h, {
         w();
     },
     LOGOUT: function () {
-        (C = N()), w();
+        ((C = N()), w());
     },
     MESSAGE_GIFT_INTENT_SHOWN: function (e) {
         let { recipientUserId: t } = e;
@@ -227,7 +227,7 @@ let F = new k(s.h, {
             let t = i[e];
             i[e] = null == t ? n : Math.max(t, n);
         }
-        (C.messageGiftIntentLastShownMap = T(i, M(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n);
+        ((C.messageGiftIntentLastShownMap = T(i, M(), 1296e6)), (C.lastKnownGiftIntentDismissedAtMs = n));
     },
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
         C.lastShownFriendsListGiftIntents = [];
@@ -238,7 +238,7 @@ let F = new k(s.h, {
     DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: function (e) {
         let { total: t } = e;
         if (null == t) {
-            (D = null), (v = null), U();
+            ((D = null), (v = null), U());
             return;
         }
         x(t);

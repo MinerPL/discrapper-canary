@@ -231,7 +231,7 @@ function I(e) {
     }).then((t) => {
         let i = t.body.products.reduce((e, t) => {
             let i = h(t);
-            return (e[i.id] = i), e;
+            return ((e[i.id] = i), e);
         }, {});
         r.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: i });
     });
@@ -247,7 +247,7 @@ function N() {
     }).then((e) => {
         let t = e.body.products.reduce((e, t) => {
             let i = h(t);
-            return (e[i.id] = i), e;
+            return ((e[i.id] = i), e);
         }, {});
         r.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
     });

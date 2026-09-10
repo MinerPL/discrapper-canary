@@ -1,7 +1,7 @@
-l.d(t, { B4: () => o, C6: () => m, CT: () => f, GO: () => r, Lf: () => h, SY: () => u, WQ: () => i, lt: () => x }),
+(l.d(t, { B4: () => o, C6: () => m, CT: () => f, GO: () => r, Lf: () => h, SY: () => u, WQ: () => i, lt: () => x }),
     l(321073),
     l(134528),
-    l(947204);
+    l(947204));
 var n = l(50617),
     a = l(375708);
 let s = {
@@ -51,7 +51,7 @@ function r(e) {
         let l = a.get(e);
         if (null != l) return l;
         let n = { taskId: e, task: u("task", "task", t), steps: [] };
-        return a.set(e, n), n;
+        return (a.set(e, n), n);
     }
     function o(e, l, a, i) {
         if ("task" === a || "task" === l) return null != e ? d(e, i).task : (t = t ?? u("task", "task", i));
@@ -59,7 +59,7 @@ function r(e) {
             o = s.get(r);
         if (null != o) return o;
         let c = u(l, "step", i);
-        return s.set(r, c), null != e ? d(e, i).steps.push(c) : n.push(c), c;
+        return (s.set(r, c), null != e ? d(e, i).steps.push(c) : n.push(c), c);
     }
     let m = (function (e) {
         let t = new Set();
@@ -100,21 +100,21 @@ function r(e) {
                 null != t.append_detail)
             ) {
                 let e = t.driven_by ?? null;
-                (n.detail = [...n.detail, ...t.append_detail]),
-                    (n.detailDrivenBy = [...n.detailDrivenBy, ...t.append_detail.map(() => e)]);
+                ((n.detail = [...n.detail, ...t.append_detail]),
+                    (n.detailDrivenBy = [...n.detailDrivenBy, ...t.append_detail.map(() => e)]));
             }
-            null != t.status && (n.status = t.status),
+            (null != t.status && (n.status = t.status),
                 null != t.duration && (n.durationMs = t.duration),
                 null != t.screenshots && (n.screenshots = t.screenshots),
-                null != t.attachments && (n.attachments = t.attachments);
+                null != t.attachments && (n.attachments = t.attachments));
             continue;
         }
         if ("error" === l.kind || "terminal_error" === l.kind) {
             let n = o(void 0, `${l.kind}-${t}`, "step", e);
-            (n.touched = ++i),
+            ((n.touched = ++i),
                 (n.labelKey = "error"),
                 (n.status = "failed"),
-                null != l.message && "" !== l.message && (n.detail = [l.message]);
+                null != l.message && "" !== l.message && (n.detail = [l.message]));
         }
     }
     let f = [...a.values()];
@@ -172,7 +172,7 @@ function c(e) {
             if (null == n) {
                 s++;
                 let a = e ?? s;
-                (l[r] = a), (n = { type: "message", key: `message-${r}`, segment: a, content: o }), t.push(n);
+                ((l[r] = a), (n = { type: "message", key: `message-${r}`, segment: a, content: o }), t.push(n));
             } else n.content = o;
         !0 === u.message_finished && (n = null);
     }

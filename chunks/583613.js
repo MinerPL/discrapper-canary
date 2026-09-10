@@ -10,7 +10,7 @@ function r(e) {
         n = null;
     return function () {
         for (var r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
-        return i(t, a) || (n = e(...a)), (t = a), n;
+        return (i(t, a) || (n = e(...a)), (t = a), n);
     };
 }
 function a(e) {

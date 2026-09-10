@@ -6,6 +6,6 @@ e.exports = function (e) {
             n = arguments[1];
         if ("function" != typeof n) throw new t("`callback`, if provided, must be a function");
     }
-    for (var i = n || []; (r = e.next()) && !r.done; ) n ? n(r.value) : i.push(r.value);
+    for (var i = n || []; (r = e.next()) && !r.done;) n ? n(r.value) : i.push(r.value);
     if (!n) return i;
 };

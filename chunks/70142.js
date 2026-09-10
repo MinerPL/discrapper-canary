@@ -15,7 +15,7 @@ let c = null,
             return (0, s.TP)() + d.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(d.kM_.BRAINTREE, i);
         },
         open: (e) => {
-            (r = e), window.open(e), A.emitChange();
+            ((r = e), window.open(e), A.emitChange());
         },
     });
 class E extends a.Ay.Store {

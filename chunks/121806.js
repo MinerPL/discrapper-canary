@@ -1,4 +1,4 @@
-l.d(t, {
+(l.d(t, {
     CT: () => X,
     H3: () => Z,
     Ht: () => z,
@@ -13,7 +13,7 @@ l.d(t, {
     wf: () => V,
 }),
     l(321073),
-    l(667532);
+    l(667532));
 var r = l(477900),
     n = l(582128),
     a = l(435558),
@@ -100,7 +100,7 @@ function $(e, t) {
                 c.forEach((l) => {
                     let n = l.user,
                         u = w({ user: n, guildId: r, channelId: a });
-                    t.add(n.id), e.push(u);
+                    (t.add(n.id), e.push(u));
                 });
             else {
                 let { tokens: l } = g,
@@ -114,7 +114,7 @@ function $(e, t) {
                         u = k.default.getUser(l);
                     if (null != u) {
                         let l = w({ user: u, guildId: r, channelId: a });
-                        t.add(u.id), e.push(l);
+                        (t.add(u.id), e.push(l));
                     }
                 }
             }
@@ -125,13 +125,13 @@ function $(e, t) {
                         let n = k.default.getUser(l);
                         if (null == n) return;
                         let u = w({ user: n, guildId: r, channelId: a });
-                        t.add(l), e.unshift(u);
+                        (t.add(l), e.unshift(u));
                     }),
                 e
             );
         }, [g, c, u, r, a]),
         d = n.useCallback(() => {
-            s([]), o("");
+            (s([]), o(""));
         }, []),
         E = n.useCallback(() => {
             o("");
@@ -192,7 +192,7 @@ function H(e) {
                 s.forEach((e) => {
                     let l = e.channel,
                         n = B({ channel: l });
-                    r.add(l.id), t.push(n);
+                    (r.add(l.id), t.push(n));
                 });
             else {
                 let { tokens: l } = o,
@@ -205,7 +205,7 @@ function H(e) {
                             let l = y.A.getChannel(e);
                             if (null != l) {
                                 let e = B({ channel: l });
-                                r.add(l.id), t.push(e);
+                                (r.add(l.id), t.push(e));
                             }
                         });
                 }
@@ -217,13 +217,13 @@ function H(e) {
                         let l = y.A.getChannel(e);
                         if (null == l) return;
                         let n = B({ channel: l });
-                        r.add(e), t.unshift(n);
+                        (r.add(e), t.unshift(n));
                     }),
                 t
             );
         }, [o, s, l, e]),
         f = n.useCallback(() => {
-            r([]), u("");
+            (r([]), u(""));
         }, []),
         g = n.useCallback(() => {
             u("");
@@ -294,7 +294,7 @@ function q(e) {
             return (
                 l.length > 0 &&
                     l.forEach((l) => {
-                        t.add(l), e.push({ value: l, label: l, key: l, id: l, leading: Q(l) });
+                        (t.add(l), e.push({ value: l, label: l, key: l, id: l, leading: Q(l) }));
                     }),
                 a.length > 0 &&
                     a.forEach((l) => {
@@ -349,14 +349,14 @@ function K() {
             let { query: t, index: r } = e;
             l((e) => {
                 let l = [...e];
-                return (l[r] = { ...l[r], query: t }), l;
+                return ((l[r] = { ...l[r], query: t }), l);
             });
         }, []),
         E = n.useCallback((e) => {
             let { date: t, index: r } = e;
             l((e) => {
                 let l = [...e];
-                return (l[r] = { ...l[r], date: t }), l;
+                return ((l[r] = { ...l[r], date: t }), l);
             });
         }, []),
         L = n.useCallback(() => {
@@ -365,7 +365,7 @@ function K() {
         R = n.useCallback((e) => {
             l((t) => {
                 let l = [...t];
-                return l.splice(e, 1), l;
+                return (l.splice(e, 1), l);
             });
         }, []),
         p = n.useCallback(() => {
@@ -421,7 +421,7 @@ function Z(e) {
             return (
                 l.length > 0 &&
                     l.forEach((l) => {
-                        t.add(l), e.push({ value: l, label: l, key: l, id: l, leading: z(l) });
+                        (t.add(l), e.push({ value: l, label: l, key: l, id: l, leading: z(l) }));
                     }),
                 a.length > 0 &&
                     a.forEach((l) => {
@@ -498,58 +498,58 @@ function G(e, t) {
                         if (u.has(x.LWr.FILTER_FROM)) {
                             let l = t[x.LWr.FILTER_FROM],
                                 r = e.getData("userId");
-                            l.push(r), (o += 1);
+                            (l.push(r), (o += 1));
                         }
                         break;
                     case x.LWr.ANSWER_USERNAME_MENTIONS:
                         if (u.has(x.LWr.FILTER_MENTIONS)) {
                             let l = t[x.LWr.FILTER_MENTIONS],
                                 r = e.getData("userId");
-                            l.push(r), (o += 1);
+                            (l.push(r), (o += 1));
                         }
                         break;
                     case x.LWr.ANSWER_HAS:
                         let c = t[x.LWr.FILTER_HAS],
                             f = e.getData("has");
-                        c.push((0, O.ok)(f)), (o += 1);
+                        (c.push((0, O.ok)(f)), (o += 1));
                         break;
                     case x.LWr.ANSWER_IN:
                         if (u.has(x.LWr.FILTER_IN)) {
                             let l = t[x.LWr.FILTER_IN],
                                 r = e.getData("channelIds") ?? [];
-                            l.push(...r), (o += 1);
+                            (l.push(...r), (o += 1));
                         }
                         break;
                     case x.LWr.ANSWER_BEFORE:
                         let g = t[x.LWr.FILTER_BEFORE],
                             h = e.getData("end"),
                             d = { query: l, date: s()(h), id: (0, i.A)() };
-                        g.push(d), n.push(d), (o += 1);
+                        (g.push(d), n.push(d), (o += 1));
                         break;
                     case x.LWr.ANSWER_ON:
                         let E = t[x.LWr.FILTER_ON],
                             L = e.getData("start"),
                             R = { query: a, date: s()(L), id: (0, i.A)() };
-                        E.push(R), n.push(R), (o += 1);
+                        (E.push(R), n.push(R), (o += 1));
                         break;
                     case x.LWr.ANSWER_AFTER:
                         let p = t[x.LWr.FILTER_AFTER],
                             T = e.getData("start"),
                             A = { query: r, date: s()(T).subtract(1, "day"), id: (0, i.A)() };
-                        p.push(A), n.push(A), (o += 1);
+                        (p.push(A), n.push(A), (o += 1));
                         break;
                     case x.LWr.ANSWER_PINNED:
                         let _ = t[x.LWr.FILTER_PINNED],
                             b = e.getData("pinned").toString();
-                        null === _ ? (_ = b) : "true" !== _ && "true" === b && (_ = b),
+                        (null === _ ? (_ = b) : "true" !== _ && "true" === b && (_ = b),
                             (t[x.LWr.FILTER_PINNED] = _),
-                            (o += 1);
+                            (o += 1));
                         break;
                     case x.LWr.ANSWER_AUTHOR_TYPE:
                         if (u.has(x.LWr.FILTER_AUTHOR_TYPE)) {
                             let l = t[x.LWr.FILTER_AUTHOR_TYPE],
                                 r = e.getData("author_type");
-                            l.push((0, O.lq)(r)), (o += 1);
+                            (l.push((0, O.lq)(r)), (o += 1));
                         }
                 }
         });

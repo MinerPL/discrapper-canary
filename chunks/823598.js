@@ -6,18 +6,18 @@ function s(e) {
     i = e;
 }
 function l() {
-    return a(), i.supported();
+    return (a(), i.supported());
 }
 function o(e) {
-    return a(), i.supportsFeature(e);
+    return (a(), i.supportsFeature(e));
 }
 function d(e) {
-    a(), i.setProcessPriority(e);
+    (a(), i.setProcessPriority(e));
 }
 function c() {
-    return a(), r ?? (r = i.getVoiceEngine());
+    return (a(), r ?? (r = i.getVoiceEngine()));
 }
 function u() {
-    return a(), i.getOpenH264LibraryPath();
+    return (a(), i.getOpenH264LibraryPath());
 }
 n.d(t, { $b: () => o, $j: () => l, WQ: () => s, XH: () => u, i0: () => d, lE: () => c });

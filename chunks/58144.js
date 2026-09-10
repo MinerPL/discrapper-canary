@@ -65,7 +65,7 @@ let b = function (e) {
                             variant: "primary",
                             text: g.intl.string(k.default["wI/jo3"]),
                             onClick: function () {
-                                N(!1), E(n.id);
+                                (N(!1), E(n.id));
                             },
                             disabled: S,
                             loading: S,

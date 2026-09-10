@@ -48,17 +48,17 @@ var o = r(781094),
         G18: 7973,
         G15_MASK: 21522,
         getBCHTypeInfo: function (t) {
-            for (var e = t << 10; a.getBCHDigit(e) - a.getBCHDigit(a.G15) >= 0; )
+            for (var e = t << 10; a.getBCHDigit(e) - a.getBCHDigit(a.G15) >= 0;)
                 e ^= a.G15 << (a.getBCHDigit(e) - a.getBCHDigit(a.G15));
             return ((t << 10) | e) ^ a.G15_MASK;
         },
         getBCHTypeNumber: function (t) {
-            for (var e = t << 12; a.getBCHDigit(e) - a.getBCHDigit(a.G18) >= 0; )
+            for (var e = t << 12; a.getBCHDigit(e) - a.getBCHDigit(a.G18) >= 0;)
                 e ^= a.G18 << (a.getBCHDigit(e) - a.getBCHDigit(a.G18));
             return (t << 12) | e;
         },
         getBCHDigit: function (t) {
-            for (var e = 0; 0 != t; ) e++, (t >>>= 1);
+            for (var e = 0; 0 != t;) (e++, (t >>>= 1));
             return e;
         },
         getPatternPosition: function (t) {
@@ -147,11 +147,11 @@ var o = r(781094),
             for (var o = 0; o < e - 1; o++)
                 for (var n = 0; n < e - 1; n++) {
                     var l = 0;
-                    t.isDark(o, n) && l++,
+                    (t.isDark(o, n) && l++,
                         t.isDark(o + 1, n) && l++,
                         t.isDark(o, n + 1) && l++,
                         t.isDark(o + 1, n + 1) && l++,
-                        (0 == l || 4 == l) && (r += 3);
+                        (0 == l || 4 == l) && (r += 3));
                 }
             for (var o = 0; o < e; o++)
                 for (var n = 0; n < e - 6; n++)

@@ -45,7 +45,7 @@ var i = d(252422),
                         class: "IncodeCameraViewVideo",
                         children: (0, i.v)("video", {
                             ref: (l) => {
-                                (Z.current = l), "function" == typeof d ? d(l) : d && (d.current = l);
+                                ((Z.current = l), "function" == typeof d ? d(l) : d && (d.current = l));
                             },
                             autoplay: !0,
                             playsInline: !0,

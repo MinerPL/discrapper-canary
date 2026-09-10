@@ -49,7 +49,7 @@ function c(e) {
 }
 function f(e) {
     let t = e;
-    for (; null != t; ) {
+    for (; null != t;) {
         if (t instanceof (0, n.mD)(t).HTMLElement && t.inert) return !0;
         t = t.parentElement;
     }

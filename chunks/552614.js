@@ -43,9 +43,9 @@ t.exports =
         );
     })
         ? function (t, r) {
-              for (var e = f(t), o = arguments.length, i = 1, l = c.f, v = a.f; o > i; )
-                  for (var h, x = p(arguments[i++]), d = l ? y(u(x), l(x)) : u(x), g = d.length, b = 0; g > b; )
-                      (h = d[b++]), (!n || s(v, x, h)) && (e[h] = x[h]);
+              for (var e = f(t), o = arguments.length, i = 1, l = c.f, v = a.f; o > i;)
+                  for (var h, x = p(arguments[i++]), d = l ? y(u(x), l(x)) : u(x), g = d.length, b = 0; g > b;)
+                      ((h = d[b++]), (!n || s(v, x, h)) && (e[h] = x[h]));
               return e;
           }
         : l;

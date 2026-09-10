@@ -352,12 +352,12 @@ function ea(e) {
         ),
         w = r.useCallback(
             (e) => {
-                g(),
+                (g(),
                     (0, A.Cz)({
                         analyticsLocations: p,
                         analyticsSource: d.A.EDIT_PROFILE_EFFECT_MODAL,
                         initialProductSkuId: e,
-                    });
+                    }));
             },
             [p, g],
         );
@@ -390,7 +390,7 @@ function ea(e) {
             (0, s.jsx)(el, {
                 user: t,
                 onApply: function () {
-                    (0, f.p)({ guildId: n?.id, profileEffect: y ?? null }), g();
+                    ((0, f.p)({ guildId: n?.id, profileEffect: y ?? null }), g());
                 },
                 onClose: g,
                 onOpenShop: w,

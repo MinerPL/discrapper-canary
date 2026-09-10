@@ -7,7 +7,7 @@ var u = n(477900),
 let d = o.createContext(void 0);
 function p() {
     let t = o.useContext(d);
-    return i()(null != t, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), t;
+    return (i()(null != t, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), t);
 }
 function a(t) {
     let { children: e, defaultSortOption: n = s.p$.NEWEST_ARRIVALS } = t,

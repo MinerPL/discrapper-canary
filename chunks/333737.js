@@ -118,14 +118,14 @@ class b extends a.PureComponent {
     handleActivate = (t) => {
         t.preventDefault();
         let { totpSecret: e, code: s } = this.state;
-        this.setState({ isVerifying: !0 }),
+        (this.setState({ isVerifying: !0 }),
             o.A.enable({ code: s, secret: (0, x.cC)(e) }).then(this.handleActivateSuccess, (t) =>
                 this.setState({ error: t.body.message, isVerifying: !1 }),
-            );
+            ));
     };
     handleActivateSuccess = () => {
         let { onClose: t, handleEnableMFASuccess: e } = this.props;
-        this.setState({ isVerifying: !1 }), e(), t?.();
+        (this.setState({ isVerifying: !1 }), e(), t?.());
     };
 }
 let v = b;

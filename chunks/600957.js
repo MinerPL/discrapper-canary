@@ -1,4 +1,4 @@
-r(321073), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+(r(321073), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162));
 let o = null;
 async function n(e, t, r, o) {
     let n,
@@ -23,7 +23,7 @@ async function n(e, t, r, o) {
             o = Math.round((r.cts / s) * 1e6);
         u.set(o, r);
         let n = f.get(o) ?? [];
-        n.push(e), f.set(o, n);
+        (n.push(e), f.set(o, n));
     }
     let d = Array(t.length),
         p = [],
@@ -90,7 +90,7 @@ self.addEventListener("message", async (e) => {
                     function u(e) {
                         f || ((f = !0), r(e));
                     }
-                    (o.onError = (e) => u(Error(`mp4box error: ${e}`))),
+                    ((o.onError = (e) => u(Error(`mp4box error: ${e}`))),
                         (o.onReady = (e) => {
                             let r = e.videoTracks[0];
                             null == r
@@ -105,7 +105,7 @@ self.addEventListener("message", async (e) => {
                                                 let t = e.avcC ?? e.hvcC ?? e.vpcC ?? e.av1C;
                                                 if (null != t && "function" == typeof t.write) {
                                                     let e = new r(void 0, 0, r.BIG_ENDIAN);
-                                                    return t.write(e), new Uint8Array(e.buffer, 8);
+                                                    return (t.write(e), new Uint8Array(e.buffer, 8));
                                                 }
                                             }
                                             return null;
@@ -118,11 +118,11 @@ self.addEventListener("message", async (e) => {
                             if (((c += o.length), null != n && null != i && c >= l)) {
                                 var a;
                                 if (0 === s.length) return void u(Error("no sync samples found in video track"));
-                                (a = { videoTrack: n, syncSamples: s, description: i }), f || ((f = !0), e(a));
+                                ((a = { videoTrack: n, syncSamples: s, description: i }), f || ((f = !0), e(a)));
                             }
                         }),
                         o.appendBuffer(a),
-                        o.flush();
+                        o.flush());
                 });
             })))
             .then((e) => {

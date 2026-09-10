@@ -73,13 +73,13 @@ function P(e) {
                     {
                         text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
-                            null != c && (0, b.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION);
+                            (null != c && (0, b.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    s?.(), r(M.i.USER_DISMISS);
+                    (s?.(), r(M.i.USER_DISMISS));
                 },
             }),
         ],
@@ -114,13 +114,13 @@ function D(e) {
                         text: w.intl.string(k.default.DZnomS),
                         icon: f.GiftIcon,
                         onClick: () => {
-                            c(), n?.(), s(M.i.TAKE_ACTION);
+                            (c(), n?.(), s(M.i.TAKE_ACTION));
                         },
                     },
                 ],
                 caretConfig: { align: "center" },
                 onRequestClose: function () {
-                    n?.(), s(M.i.USER_DISMISS);
+                    (n?.(), s(M.i.USER_DISMISS));
                 },
             }),
         ],
@@ -169,7 +169,7 @@ function Y(e) {
         isActive: !1,
         noHover: !0,
         onClick: function () {
-            a(), i();
+            (a(), i());
         },
         ...r,
         children: [
@@ -194,7 +194,7 @@ function q(e) {
                   "aria-label": w.intl.string(i ? w.t.TW4JV0 : w.t.Z1RnTk),
                   "aria-haspopup": "dialog",
                   onClick: () => {
-                      s(), o();
+                      (s(), o());
                   },
                   ...a,
                   children: (0, l.jsx)(r, { size: "refresh_sm", color: "currentColor" }),
@@ -277,7 +277,7 @@ let J = i.memo(function (e) {
         hovered: $,
         isGenericGift: Q || ee,
         onClick: function () {
-            d(!1), K(M.i.TAKE_ACTION), J(M.i.TAKE_ACTION), X();
+            (d(!1), K(M.i.TAKE_ACTION), J(M.i.TAKE_ACTION), X());
         },
     });
     return (0, l.jsx)("div", {

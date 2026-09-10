@@ -32,13 +32,13 @@ var d =
         function t(t, r) {
             var n = e.call(this, t, r) || this,
                 i = n.handleExited.bind((0, o.A)(n));
-            return (n.state = { contextValue: { isMounting: !0 }, handleExited: i, firstRender: !0 }), n;
+            return ((n.state = { contextValue: { isMounting: !0 }, handleExited: i, firstRender: !0 }), n);
         }
         (0, a.A)(t, e);
         var r = t.prototype;
         return (
             (r.componentDidMount = function () {
-                (this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } });
+                ((this.mounted = !0), this.setState({ contextValue: { isMounting: !1 } }));
             }),
             (r.componentWillUnmount = function () {
                 this.mounted = !1;
@@ -64,7 +64,7 @@ var d =
                                   function r(r) {
                                       return r in t ? t[r] : e[r];
                                   }
-                                  (e = e || {}), (t = t || {});
+                                  ((e = e || {}), (t = t || {}));
                                   var n,
                                       i = Object.create(null),
                                       o = [];
@@ -119,7 +119,7 @@ var d =
                     this.mounted &&
                         this.setState(function (t) {
                             var r = (0, i.A)({}, t.children);
-                            return delete r[e.key], { children: r };
+                            return (delete r[e.key], { children: r });
                         }));
             }),
             (r.render = function () {
@@ -136,11 +136,11 @@ var d =
             t
         );
     })(s.Component);
-(f.propTypes = {}),
+((f.propTypes = {}),
     (f.defaultProps = {
         component: "div",
         childFactory: function (e) {
             return e;
         },
-    });
+    }));
 let p = f;

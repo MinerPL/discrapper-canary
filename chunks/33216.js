@@ -18,7 +18,7 @@ function o(t) {
             color: "text-default",
             children: r.intl.format(r.t.Ge0HUi, {
                 handleFalsePositiveHook: () => {
-                    o(), (0, s.Q)(i, n);
+                    (o(), (0, s.Q)(i, n));
                 },
             }),
         }),

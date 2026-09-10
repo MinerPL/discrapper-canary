@@ -10,7 +10,7 @@ var n = e(241091),
     l = e(858534),
     v = TypeError,
     y = function (t, r) {
-        (this.stopped = t), (this.result = r);
+        ((this.stopped = t), (this.result = r));
     },
     h = y.prototype;
 t.exports = function (t, r, e) {
@@ -28,7 +28,7 @@ t.exports = function (t, r, e) {
         T = !!(e && e.INTERRUPTED),
         P = n(r, O),
         k = function (t) {
-            return x && l(x, "normal", t), new y(!0, t);
+            return (x && l(x, "normal", t), new y(!0, t));
         },
         I = function (t) {
             return j ? (s(t), T ? P(t[0], t[1], k) : P(t[0], t[1])) : T ? P(t, k) : P(t);
@@ -43,7 +43,7 @@ t.exports = function (t, r, e) {
         }
         x = f(t, d);
     }
-    for (S = A ? t.next : x.next; !(w = o(S, x)).done; ) {
+    for (S = A ? t.next : x.next; !(w = o(S, x)).done;) {
         try {
             m = I(w.value);
         } catch (t) {

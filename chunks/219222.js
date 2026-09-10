@@ -19,7 +19,7 @@ function c(e) {
 function u(e) {
     s.setState((t) => {
         let n = new Map(t.localClips);
-        return n.delete(e), { localClips: n };
+        return (n.delete(e), { localClips: n });
     });
 }
 function _() {
@@ -44,7 +44,7 @@ function h(e) {
             cancelText: a.intl.string(a.t["3ilveh"]),
             onConfirm: () => {
                 for (let e of l.values()) e.abort();
-                l.clear(), s.setState({ localClips: new Map() }), e();
+                (l.clear(), s.setState({ localClips: new Map() }), e());
             },
         }),
         !0)

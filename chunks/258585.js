@@ -31,14 +31,14 @@ function h() {
     if (!e || t >= 1) return;
     let n = o.A.getState();
     if (n.preset !== d.jQ.PRESET_CUSTOM) {
-        (0, a.Xd)({
+        ((0, a.Xd)({
             preset: d.jQ.PRESET_AUTO,
             resolution: n.resolution,
             frameRate: n.fps,
             soundshareEnabled: n.soundshareEnabled,
             noTrack: !0,
         }),
-            r.w.set(u, 1);
+            r.w.set(u, 1));
         return;
     }
 }

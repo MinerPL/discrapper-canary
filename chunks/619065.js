@@ -1,4 +1,4 @@
-n.d(t, { A: () => P }), n(321073);
+(n.d(t, { A: () => P }), n(321073));
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
@@ -131,7 +131,7 @@ function R(e, t, n, i) {
     let a = r.hydratedMessages.findIndex((e) => e.id === n);
     if (-1 === a) return;
     let s = r.hydratedMessages.slice();
-    (s[a] = i), (r.hydratedMessages = s);
+    ((s[a] = i), (r.hydratedMessages = s));
 }
 function L(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
@@ -144,7 +144,7 @@ function L(e) {
             "MESSAGE_REACTION_ADD" === t
                 ? c.message.addReaction(a, u, { colors: e.colors, reactionType: s })
                 : c.message.removeReaction(a, u, s);
-    return R(l, c, i, _), !0;
+    return (R(l, c, i, _), !0);
 }
 function y() {
     let e = !1;
@@ -248,11 +248,11 @@ let P = new M(s.h, {
         var t;
         let n,
             { conversationId: i, full: r } = e;
-        (t = r ? "full" : "preview"), null != (n = N.get(i)) ? n.add(t) : N.set(i, new Set([t]));
+        ((t = r ? "full" : "preview"), null != (n = N.get(i)) ? n.add(t) : N.set(i, new Set([t])));
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, messageReferences: r, fullyHydrated: a } = e;
-        C(n, a ? "full" : "preview"), O(t, n, i, a, r);
+        (C(n, a ? "full" : "preview"), O(t, n, i, a, r));
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
         let { conversationId: t, full: n } = e;
@@ -261,7 +261,7 @@ let P = new M(s.h, {
     CONVERSATIONS_FETCH_START: function (e) {
         let t,
             { channelId: n, requestKey: i, isJump: r } = e;
-        r && g.delete(n), null == (t = g.get(n)) && ((t = new Set()), g.set(n, t)), t.add(i);
+        (r && g.delete(n), null == (t = g.get(n)) && ((t = new Set()), g.set(n, t)), t.add(i));
     },
     CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let t,
@@ -295,18 +295,18 @@ let P = new M(s.h, {
                 for (let t of e) n.set(t.id, t);
                 for (let e of t) n.set(e.id, e);
                 let i = Array.from(n.values());
-                return i.sort((e, t) => h.default.compare(e.startMessageId, t.startMessageId)), i;
+                return (i.sort((e, t) => h.default.compare(e.startMessageId, t.startMessageId)), i);
             })(t, u)).length > 50)
         )
-            if ("after" === a) (u = u.slice(u.length - 50)), (E = null);
-            else if ("before" === a) (u = u.slice(0, 50)), (I = null);
+            if ("after" === a) ((u = u.slice(u.length - 50)), (E = null));
+            else if ("before" === a) ((u = u.slice(0, 50)), (I = null));
             else {
                 let e = (function (e, t) {
                     if (null == t) return 0;
                     let n = e.findIndex((e) => h.default.compare(e.startMessageId, t) >= 0);
-                    return -1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50));
+                    return (-1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50)));
                 })(u, s);
-                e > 0 && (E = null), e + 50 < u.length && (I = null), (u = u.slice(e, e + 50));
+                (e > 0 && (E = null), e + 50 < u.length && (I = null), (u = u.slice(e, e + 50)));
             }
         let g = (function (e, t, n) {
             let i = n?.guildId ?? t[0]?.guildId ?? c.A.getChannel(e)?.guild_id ?? null,
@@ -328,7 +328,7 @@ let P = new M(s.h, {
                 for (let t of e.messageIds) {
                     let i = n?.messageMetadataByMessageId.get(t),
                         r = null;
-                    i?.moderationLabel == null &&
+                    (i?.moderationLabel == null &&
                         null != e.moderation &&
                         e.moderation.flaggedMessageIds.includes(t) &&
                         null != d &&
@@ -349,7 +349,7 @@ let P = new M(s.h, {
                             conversationId: e.id,
                             moderationLabel: i?.moderationLabel ?? r,
                             message: i?.message ?? null,
-                        });
+                        }));
                     let a = i?.message?.messageReference?.message_id;
                     if (null != a) {
                         let e = n?.messageMetadataByMessageId.get(a);
@@ -382,7 +382,7 @@ let P = new M(s.h, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return null != t && m.has(t) && m.get(t), !1;
+        return (null != t && m.has(t) && m.get(t), !1);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -429,7 +429,7 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(i);
         if (a?.message == null) return !1;
         let s = (0, l.IU)(a.message, t);
-        return R(r, a, i, s), !0;
+        return (R(r, a, i, s), !0);
     },
     MESSAGE_REACTION_ADD: L,
     MESSAGE_REACTION_REMOVE: L,
@@ -440,7 +440,7 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.addReactionBatch(i, d.default.getId());
-        return R(r, a, n, s), !0;
+        return (R(r, a, n, s), !0);
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { channelId: t, messageId: n } = e,
@@ -449,7 +449,7 @@ let P = new M(s.h, {
         let r = i.messageMetadataByMessageId.get(n);
         if (r?.message == null) return !1;
         let a = r.message.set("reactions", []);
-        return R(i, r, n, a), !0;
+        return (R(i, r, n, a), !0);
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
@@ -458,7 +458,7 @@ let P = new M(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.removeReactionsForEmoji(i);
-        return R(r, a, n, s), !0;
+        return (R(r, a, n, s), !0);
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
@@ -474,6 +474,6 @@ let P = new M(s.h, {
     RELATIONSHIP_UPDATE: y,
     RELATIONSHIP_REMOVE: y,
     LOGOUT: function () {
-        m.reset(), g.clear(), N.clear();
+        (m.reset(), g.clear(), N.clear());
     },
 });

@@ -108,7 +108,7 @@ function d({ actor: t, trackElementClicked: e }) {
             t.send({ type: "SIGNATURE_CHANGED", isValid: e });
         },
         submit(i) {
-            e?.("continue"), t.send({ type: "CONTINUE", image: i });
+            (e?.("continue"), t.send({ type: "CONTINUE", image: i }));
         },
     };
 }

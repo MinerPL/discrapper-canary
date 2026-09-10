@@ -39,12 +39,12 @@ class a extends i.A {
         return new a({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.total = e.total),
             (this.subtotal = e.subtotal),
             (this.tax = e.tax),
             (this.currency = e.currency),
-            (this.invoiceItems = e.invoiceItems ?? []);
+            (this.invoiceItems = e.invoiceItems ?? []));
     }
     getInvoicePreviewLineItemForSku(e) {
         return this.invoiceItems.find((t) => t.skuId === e) ?? null;
@@ -95,7 +95,7 @@ class s extends a {
         });
     }
     constructor(e) {
-        super(e),
+        (super(e),
             (this.id = e.id),
             (this.invoiceItems = e.invoiceItems ?? []),
             (this.taxInclusive = e.taxInclusive),
@@ -103,7 +103,7 @@ class s extends a {
             (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),
             (this.status = e.status),
             (this.orbsReward = e.orbsReward),
-            (this.checkoutContext = e.checkoutContext);
+            (this.checkoutContext = e.checkoutContext));
     }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;

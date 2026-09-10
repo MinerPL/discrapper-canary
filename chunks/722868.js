@@ -23,7 +23,7 @@ function m(e) {
                 label: g.intl.string(g.t.GISTta),
                 subtext: g.intl.formatToPlainString(g.t["mn/nW2"], { displayName: a.Ay.getName(void 0, void 0, n) }),
                 action: () => {
-                    p?.(),
+                    (p?.(),
                         (0, d.openUserProfileModal)({
                             userId: n.id,
                             ...v,
@@ -31,7 +31,7 @@ function m(e) {
                             originGuildId: l,
                             sourceAnalyticsLocations: h,
                         }),
-                        A({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: x, ...v });
+                        A({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: x, ...v }));
                 },
             })
           : f?.guildId != null
@@ -41,9 +41,9 @@ function m(e) {
                   label: g.intl.string(g.t.DisZzB),
                   subtext: g.intl.formatToPlainString(g.t["mn/nW2"], { displayName: a.Ay.getName(l, m, n) }),
                   action: () => {
-                      p?.(),
+                      (p?.(),
                           (0, d.openUserProfileModal)({ userId: n.id, ...v, guildId: l, sourceAnalyticsLocations: h }),
-                          A({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: x, ...v });
+                          A({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: x, ...v }));
                   },
               });
 }

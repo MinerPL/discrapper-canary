@@ -1,4 +1,4 @@
-Object.defineProperty(t, "__esModule", { value: !0 }),
+(Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.DEFAULT_FORMAT_CONFIG = void 0),
     (t.resolveFormatConfigOptions = function (e, t) {
         return "string" == typeof (null == t ? void 0 : t.format)
@@ -26,4 +26,4 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
             full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" },
         },
-    });
+    }));

@@ -31,7 +31,7 @@ class d extends i.Ay.PersistedStore {
 new d(a.h, {
     CONNECTION_OPEN: function (e) {
         let { notificationSettings: t } = e;
-        (l = t.declarativeSettings ?? l), (o = !0);
+        ((l = t.declarativeSettings ?? l), (o = !0));
     },
     NOTIFICATION_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e,
@@ -45,6 +45,6 @@ new d(a.h, {
         l = t;
     },
     LOGOUT: function () {
-        (l = r.ej.create()), (o = !1);
+        ((l = r.ej.create()), (o = !1));
     },
 });

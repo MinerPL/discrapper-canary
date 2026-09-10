@@ -9,12 +9,12 @@ let d = 20 * s.A.Millis.MINUTE;
 async function c(e) {
     let { applicationId: t, onSuccess: n, onError: r } = e;
     try {
-        await i.Bo.post({
+        (await i.Bo.post({
             url: o.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
             body: { application_id: t },
             rejectWithError: !0,
         }),
-            n?.();
+            n?.());
     } catch (e) {
         r?.(e);
     }
@@ -33,8 +33,8 @@ class u extends r.A {
         let t = Date.now();
         for (let [n, i] of e) {
             if (t - i.startedAt > d) {
-                l.A.deletePendingAuthorization(n),
-                    i.accountLinkCallbacks?.onError?.("Account link authorization timed out");
+                (l.A.deletePendingAuthorization(n),
+                    i.accountLinkCallbacks?.onError?.("Account link authorization timed out"));
                 continue;
             }
             null != a.default.getNewestTokenForApplication(n) &&

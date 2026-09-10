@@ -17,7 +17,7 @@ function I() {
 }
 async function m(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
-    await (0, h.JM)(n), await (0, h.Sh)(e);
+    (await (0, h.JM)(n), await (0, h.Sh)(e));
 }
 var _ = n(244696),
     C = n(49999),
@@ -32,32 +32,36 @@ function M(e) {
         [L, O] = s.useState("init"),
         R = g === c.tI.PERSONAL,
         D = (0, l.bG)([E.A], () => E.A.getGuildId()),
-        x = (0, l.bG)([_.A], () => {
-            let e = _.A.getGuildThemeSnapshot(t);
-            return null != e && e.enabled ? (e.themeSettings ?? null) : null;
-        }, [t]),
+        x = (0, l.bG)(
+            [_.A],
+            () => {
+                let e = _.A.getGuildThemeSnapshot(t);
+                return null != e && e.enabled ? (e.themeSettings ?? null) : null;
+            },
+            [t],
+        ),
         G = R ? null : x;
     s.useEffect(() => {
         D !== t && h();
     }, [t, h, D]);
     let U = s.useCallback((e) => {
-            f(null), p(e);
+            (f(null), p(e));
         }, []),
         b = s.useCallback(async () => {
             if ("init" === L) {
                 if (D !== t) return void (await h());
-                O("submitting"), f(null);
+                (O("submitting"), f(null));
                 try {
                     await m(t, R);
                 } catch (e) {
-                    T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), O("init");
+                    (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), O("init"));
                     return;
                 }
-                O("submitted"), n(C.i.TAKE_ACTION), await h();
+                (O("submitted"), n(C.i.TAKE_ACTION), await h());
             }
         }, [t, R, n, h, D, L]),
         y = s.useCallback(async () => {
-            "submitted" !== L && n(C.i.USER_DISMISS), await h();
+            ("submitted" !== L && n(C.i.USER_DISMISS), await h());
         }, [n, h, L]),
         H = s.useMemo(
             () => [

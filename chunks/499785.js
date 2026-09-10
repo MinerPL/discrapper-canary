@@ -8,13 +8,13 @@ function a(e, t, n) {
         e(a)
             .then((e) => {
                 let n = i.properties;
-                "function" == typeof i.properties && (n = i.properties(e)),
+                ("function" == typeof i.properties && (n = i.properties(e)),
                     (0, r.trackNetworkAction)(i.event, { status_code: e.status, ...s, ...n }),
-                    t(e);
+                    t(e));
             })
             .catch((e) => {
                 let t = i.properties;
-                "function" == typeof i.properties && (t = i.properties(e)),
+                ("function" == typeof i.properties && (t = i.properties(e)),
                     (0, r.trackNetworkAction)(i.event, {
                         status_code: e.status,
                         error_code: e.body?.code,
@@ -22,7 +22,7 @@ function a(e, t, n) {
                         ...s,
                         ...t,
                     }),
-                    n(e);
+                    n(e));
             });
     });
 }

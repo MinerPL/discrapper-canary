@@ -17,12 +17,12 @@ function o(t) {
                 text: c.intl.string(c.t.EbwFfR),
                 variant: "primary",
                 onClick: function () {
-                    (0, s.a)(l.Umv.RTC),
+                    ((0, s.a)(l.Umv.RTC),
                         e.default.track(l.HAw.DEBUG_LOG_UPLOADED, {
                             media_session_id: o ?? null,
                             rtc_connection_id: d ?? null,
                         }),
-                        n();
+                        n());
                 },
             },
         ],

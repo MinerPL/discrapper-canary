@@ -11,20 +11,20 @@ var i = n(636537),
     _ = n(652215);
 async function E(e) {
     let t = new Set();
-    e.forEach((e) => {
+    (e.forEach((e) => {
         if (null != e.invoice_items && e.invoice_items.length > 0) {
             let n = e.invoice_items[0];
             null != n.sku_id && t.add(n.sku_id);
         }
     }),
-        await Promise.all(Array.from(t).map((e) => (0, s.RE)(e)));
+        await Promise.all(Array.from(t).map((e) => (0, s.RE)(e))));
 }
 async function A(e) {
     let t = new Set();
-    e.forEach((e) => {
+    (e.forEach((e) => {
         null != e.sku_id && t.add(e.sku_id);
     }),
-        await Promise.all(Array.from(t).map((e) => (0, s.RE)(e)));
+        await Promise.all(Array.from(t).map((e) => (0, s.RE)(e))));
 }
 async function h(e, t) {
     await i.Bo.patch({
@@ -33,7 +33,7 @@ async function h(e, t) {
         rejectWithError: (0, i.fT)(),
     }).then((e) => {
         let { body: t } = e;
-        return a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t;
+        return (a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t);
     });
 }
 async function I(e) {
@@ -43,7 +43,9 @@ async function I(e) {
         rejectWithError: (0, i.fT)(),
     }).then((t) => {
         let { body: n } = t;
-        return a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: n, deletedUserId: e }), n;
+        return (
+            a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: n, deletedUserId: e }), n
+        );
     });
 }
 async function f() {
@@ -51,7 +53,7 @@ async function f() {
         let { body: t } = e,
             n = t.link_code,
             i = t.expires_at;
-        return a.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n, expiresAt: i }), n;
+        return (a.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n, expiresAt: i }), n);
     });
 }
 async function p() {
@@ -101,7 +103,7 @@ let T = {
     async fetchLinkedUsers() {
         let { body: e } = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINKED_USERS, rejectWithError: (0, i.fT)() }),
             t = { linkedUsers: e.linked_users, users: e.users };
-        return a.h.dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS", ...t }), t;
+        return (a.h.dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS", ...t }), t);
     },
     async getConnectionPrerequisites(e, t) {
         let { body: n } = await i.Bo.get({
@@ -124,7 +126,7 @@ let T = {
                 rejectWithError: (0, i.fT)(),
             }),
             r = { linkedUsers: n.linked_users, users: n.users };
-        return a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS", ...r }), r;
+        return (a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS", ...r }), r);
     },
     async fetchTeenActivity(e) {
         a.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });

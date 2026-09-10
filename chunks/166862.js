@@ -26,7 +26,7 @@ function E(e) {
     );
 }
 function A() {
-    return c.clear(), u.clear(), !0;
+    return (c.clear(), u.clear(), !0);
 }
 let h = (0, l.isDesktop)();
 function I(e) {
@@ -80,7 +80,7 @@ let T = new p(r.h, {
         if (a.optionNameToLastQuery.get(r) === i) return !1;
         a.optionNameToLastQuery.set(r, i);
         let s = a.optionNameToAutocompleteQueries.get(r)?.get(i);
-        if (null != s) return (a.lastErrored = !1), a.optionNameToLastResults.set(r, s), !0;
+        if (null != s) return ((a.lastErrored = !1), a.optionNameToLastResults.set(r, s), !0);
         let l = a.optionNameToNonce.get(r);
         if (
             (null != l && c.delete(l),
@@ -89,7 +89,7 @@ let T = new p(r.h, {
             a.optionNameToNonce.set(r, t),
             a.lastErrored)
         )
-            return (a.lastErrored = !1), !0;
+            return ((a.lastErrored = !1), !0);
     },
     APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function (e) {
         let { choices: t, nonce: n } = e,

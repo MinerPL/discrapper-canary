@@ -18,7 +18,7 @@ function d(e, t) {
         S = G && R,
         P = (0, r.bG)([s.A, o.A], () => s.A.can(a.xBc.MANAGE_GUILD, o.A.getGuild(e)));
     return u.useMemo(() => {
-        t?.allPowerups?.[l.SL], t?.unlockedPowerups?.[l.SL];
+        (t?.allPowerups?.[l.SL], t?.unlockedPowerups?.[l.SL]);
         let e = t?.allPowerups?.[l.d0] != null,
             u = t?.unlockedPowerups?.[l.d0] != null;
         if (S && e && !u) return E.QS.GUILD_THEME;

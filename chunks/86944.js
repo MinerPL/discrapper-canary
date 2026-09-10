@@ -24,7 +24,7 @@ function R(e, l, t, s) {
             if (null == e || "@" === s[0]) return [];
             if (R) return c.M2(e, g, l ?? null, t, (e) => T(s, e));
             let r = c.rT(e, g, l ?? null, t, (e) => T(s, e));
-            return 0 === r.length && "" === s.trim() && 1 === g.length && (r = c.Vl()), r;
+            return (0 === r.length && "" === s.trim() && 1 === g.length && (r = c.Vl()), r);
         }, [g, s, e, l, t, R]),
         y = r.useMemo(() => (null == e ? [] : c.Lq(M, l ?? null, e, t, { filter: (e) => T(s, e) })), [M, s, e, l, t]);
     return (

@@ -78,12 +78,12 @@ function h(e) {
                         hideMaxPage: !0,
                         currentPage: j.currentPage,
                         onPageChange: function (e) {
-                            l?.(e),
+                            (l?.(e),
                                 requestIdleCallback(() => {
                                     g(() => {
                                         (0, m.Cw)(t, { ...j, currentPage: e });
                                     });
-                                });
+                                }));
                         },
                         maxVisiblePages: o.NB,
                     }),

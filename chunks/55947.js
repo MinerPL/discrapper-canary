@@ -46,10 +46,10 @@ let _ = (0, o.A)(
                         o = l.useCallback(() => {
                             if (null != a) {
                                 let n, i;
-                                (n = `@${t}`),
+                                ((n = `@${t}`),
                                     (i = (0, T.KW)(e)),
                                     h._.dispatchToLastSubscribed(S.jej.INSERT_TEXT, { plainText: n, rawText: i }),
-                                    null != a && m.A.startTyping(a);
+                                    null != a && m.A.startTyping(a));
                             }
                         }, [a, e, t]);
                     return !s || c

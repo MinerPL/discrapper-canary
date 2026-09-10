@@ -25,12 +25,12 @@ for (var i in o)
         if (o[i].labels.length !== o[i].channels) throw Error("channel and label counts mismatch: " + i);
         var c = o[i].channels,
             l = o[i].labels;
-        delete o[i].channels,
+        (delete o[i].channels,
             delete o[i].labels,
             Object.defineProperty(o[i], "channels", { value: c }),
-            Object.defineProperty(o[i], "labels", { value: l });
+            Object.defineProperty(o[i], "labels", { value: l }));
     }
-(o.rgb.hsl = function (e) {
+((o.rgb.hsl = function (e) {
     var t,
         r,
         a = e[0] / 255,
@@ -159,12 +159,12 @@ for (var i in o)
             i = e[1] / 100,
             c = e[2] / 100;
         if (0 === i) return [(s = 255 * c), s, s];
-        (r = c < 0.5 ? c * (1 + i) : c + i - c * i), (t = 2 * c - r), (n = [0, 0, 0]);
+        ((r = c < 0.5 ? c * (1 + i) : c + i - c * i), (t = 2 * c - r), (n = [0, 0, 0]));
         for (var l = 0; l < 3; l++)
-            (a = o + -((1 / 3) * (l - 1))) < 0 && a++,
+            ((a = o + -((1 / 3) * (l - 1))) < 0 && a++,
                 a > 1 && a--,
                 (s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t),
-                (n[l] = 255 * s);
+                (n[l] = 255 * s));
         return n;
     }),
     (o.hsl.hsv = function (e) {
@@ -244,22 +244,22 @@ for (var i in o)
             default:
             case 6:
             case 0:
-                (s = r), (o = n), (i = l);
+                ((s = r), (o = n), (i = l));
                 break;
             case 1:
-                (s = n), (o = r), (i = l);
+                ((s = n), (o = r), (i = l));
                 break;
             case 2:
-                (s = l), (o = r), (i = n);
+                ((s = l), (o = r), (i = n));
                 break;
             case 3:
-                (s = l), (o = n), (i = r);
+                ((s = l), (o = n), (i = r));
                 break;
             case 4:
-                (s = n), (o = l), (i = r);
+                ((s = n), (o = l), (i = r));
                 break;
             case 5:
-                (s = r), (o = l), (i = n);
+                ((s = r), (o = l), (i = n));
         }
         return [255 * s, 255 * o, 255 * i];
     }),
@@ -318,7 +318,7 @@ for (var i in o)
             n = e[0],
             s = e[1],
             o = e[2];
-        (t = s / 500 + (r = (n + 16) / 116)), (a = r - o / 200);
+        ((t = s / 500 + (r = (n + 16) / 116)), (a = r - o / 200));
         var i = Math.pow(r, 3),
             c = Math.pow(t, 3),
             l = Math.pow(a, 3);
@@ -336,7 +336,7 @@ for (var i in o)
             r = e[0],
             a = e[1],
             n = e[2];
-        return (t = (360 * Math.atan2(n, a)) / 2 / Math.PI) < 0 && (t += 360), [r, Math.sqrt(a * a + n * n), t];
+        return ((t = (360 * Math.atan2(n, a)) / 2 / Math.PI) < 0 && (t += 360), [r, Math.sqrt(a * a + n * n), t]);
     }),
     (o.lch.lab = function (e) {
         var t,
@@ -351,7 +351,7 @@ for (var i in o)
             n = 1 in arguments ? arguments[1] : o.rgb.hsv(e)[2];
         if (0 === (n = Math.round(n / 50))) return 30;
         var s = 30 + ((Math.round(a / 255) << 2) | (Math.round(r / 255) << 1) | Math.round(t / 255));
-        return 2 === n && (s += 60), s;
+        return (2 === n && (s += 60), s);
     }),
     (o.hsv.ansi16 = function (e) {
         return o.rgb.ansi16(o.hsv.rgb(e), e[2]);
@@ -370,7 +370,7 @@ for (var i in o)
     }),
     (o.ansi16.rgb = function (e) {
         var t = e % 10;
-        if (0 === t || 7 === t) return e > 50 && (t += 3.5), [(t = (t / 10.5) * 255), t, t];
+        if (0 === t || 7 === t) return (e > 50 && (t += 3.5), [(t = (t / 10.5) * 255), t, t]);
         var r = (~~(e > 50) + 1) * 0.5;
         return [(1 & t) * r * 255, ((t >> 1) & 1) * r * 255, ((t >> 2) & 1) * r * 255];
     }),
@@ -436,7 +436,7 @@ for (var i in o)
             r = e[2] / 100,
             a = t * r,
             n = 0;
-        return a < 1 && (n = (r - a) / (1 - a)), [e[0], 100 * a, 100 * n];
+        return (a < 1 && (n = (r - a) / (1 - a)), [e[0], 100 * a, 100 * n]);
     }),
     (o.hcg.rgb = function (e) {
         var t = e[0] / 360,
@@ -450,30 +450,30 @@ for (var i in o)
             c = 0;
         switch (Math.floor(s)) {
             case 0:
-                (n[0] = 1), (n[1] = o), (n[2] = 0);
+                ((n[0] = 1), (n[1] = o), (n[2] = 0));
                 break;
             case 1:
-                (n[0] = i), (n[1] = 1), (n[2] = 0);
+                ((n[0] = i), (n[1] = 1), (n[2] = 0));
                 break;
             case 2:
-                (n[0] = 0), (n[1] = 1), (n[2] = o);
+                ((n[0] = 0), (n[1] = 1), (n[2] = o));
                 break;
             case 3:
-                (n[0] = 0), (n[1] = i), (n[2] = 1);
+                ((n[0] = 0), (n[1] = i), (n[2] = 1));
                 break;
             case 4:
-                (n[0] = o), (n[1] = 0), (n[2] = 1);
+                ((n[0] = o), (n[1] = 0), (n[2] = 1));
                 break;
             default:
-                (n[0] = 1), (n[1] = 0), (n[2] = i);
+                ((n[0] = 1), (n[1] = 0), (n[2] = i));
         }
-        return (c = (1 - r) * a), [(r * n[0] + c) * 255, (r * n[1] + c) * 255, (r * n[2] + c) * 255];
+        return ((c = (1 - r) * a), [(r * n[0] + c) * 255, (r * n[1] + c) * 255, (r * n[2] + c) * 255]);
     }),
     (o.hcg.hsv = function (e) {
         var t = e[1] / 100,
             r = t + (e[2] / 100) * (1 - t),
             a = 0;
-        return r > 0 && (a = t / r), [e[0], 100 * a, 100 * r];
+        return (r > 0 && (a = t / r), [e[0], 100 * a, 100 * r]);
     }),
     (o.hcg.hsl = function (e) {
         var t = e[1] / 100,
@@ -494,7 +494,7 @@ for (var i in o)
             r = 1 - e[2] / 100,
             a = r - t,
             n = 0;
-        return a < 1 && (n = (r - a) / (1 - a)), [e[0], 100 * a, 100 * n];
+        return (a < 1 && (n = (r - a) / (1 - a)), [e[0], 100 * a, 100 * n]);
     }),
     (o.apple.rgb = function (e) {
         return [(e[0] / 65535) * 255, (e[1] / 65535) * 255, (e[2] / 65535) * 255];
@@ -525,4 +525,4 @@ for (var i in o)
     }),
     (o.rgb.gray = function (e) {
         return [((e[0] + e[1] + e[2]) / 3 / 255) * 100];
-    });
+    }));

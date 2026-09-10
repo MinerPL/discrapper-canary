@@ -78,10 +78,10 @@ let p = r.forwardRef((e, t) => {
                     if (!e.paused) return;
                     e.currentTime = C.current;
                     let t = e.play();
-                    (b.current = t), t.catch(() => {});
+                    ((b.current = t), t.catch(() => {}));
                 } else {
                     let t = b.current;
-                    (b.current = null), null != t ? t.then(() => j.current || e.pause()).catch(() => {}) : e.pause();
+                    ((b.current = null), null != t ? t.then(() => j.current || e.pause()).catch(() => {}) : e.pause());
                 }
         }, [n, h, y, C]),
         r.useEffect(() => {
@@ -99,13 +99,13 @@ let p = r.forwardRef((e, t) => {
             function n() {
                 if (null == e || null == p) return;
                 if (e.paused || e.ended) {
-                    (t = null), p(0);
+                    ((t = null), p(0));
                     return;
                 }
                 let l = v.editMetadata?.start ?? 0,
                     r = v.editMetadata?.end ?? e.duration,
                     a = ((e.currentTime - l) / (r - l)) * 100;
-                p(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n));
+                (p(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n)));
             }
             function l() {
                 null == t && (t = requestAnimationFrame(n));
@@ -119,10 +119,10 @@ let p = r.forwardRef((e, t) => {
                 e.addEventListener("ended", r),
                 e.paused || l(),
                 () => {
-                    null != t && (cancelAnimationFrame(t), p(0)),
+                    (null != t && (cancelAnimationFrame(t), p(0)),
                         e.removeEventListener("play", l),
                         e.removeEventListener("pause", r),
-                        e.removeEventListener("ended", r);
+                        e.removeEventListener("ended", r));
                 }
             );
         }, [h, y, v.editMetadata, p]),

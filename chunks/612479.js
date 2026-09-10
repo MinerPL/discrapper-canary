@@ -109,7 +109,7 @@ function F(e) {
                             textLabels: T,
                             selectedRating: Q,
                             onChangeRating: function (e) {
-                                V(e), e === C.P0.GOOD && $();
+                                (V(e), e === C.P0.GOOD && $());
                             },
                         }),
                     }),
@@ -122,7 +122,7 @@ function F(e) {
                             children: (0, a.jsx)(b.A, {
                                 options: W,
                                 onClick: function (e) {
-                                    J(e), _.includes(e.value) || $();
+                                    (J(e), _.includes(e.value) || $());
                                 },
                                 hideCaret: (e) => {
                                     let { value: n } = e;

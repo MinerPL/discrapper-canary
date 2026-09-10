@@ -12,7 +12,7 @@ var t = n(775162),
     m = n(117247),
     g = n(791820),
     h = n(363015);
-n(41851), n(269882), n(528239), n(646613), n(225220), n(184054), n(761969);
+(n(41851), n(269882), n(528239), n(646613), n(225220), n(184054), n(761969));
 var f = n(931347),
     p = () =>
         (0, r.v)("svg", {
@@ -155,7 +155,7 @@ var w = ({ config: e, onFinish: i, onError: n }) => {
         let { t: l } = (0, t.n)(),
             [h, w] = (0, c.u)(() => (0, f.t)({ config: e })),
             I = (0, r.l)(null);
-        (0, r._)(() => {
+        ((0, r._)(() => {
             w.load();
         }, [w]),
             (0, c.c)({
@@ -163,19 +163,19 @@ var w = ({ config: e, onFinish: i, onError: n }) => {
                 onFinish: i,
                 onError: "closed" === h.status ? () => n?.("closed") : n,
                 errorStatuses: [],
-            });
+            }));
         let E = (0, r.h)(
                 (e) => {
                     let i = e.target.files?.[0];
                     if (!i) return;
                     let n = new FileReader();
-                    (n.onload = () => {
+                    ((n.onload = () => {
                         if (n.result instanceof ArrayBuffer) {
                             let e = URL.createObjectURL(new Blob([n.result], { type: "application/pdf" }));
                             w.selectFile(i.name, n.result, e);
                         }
                     }),
-                        n.readAsArrayBuffer(i);
+                        n.readAsArrayBuffer(i));
                 },
                 [w],
             ),

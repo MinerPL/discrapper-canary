@@ -30,11 +30,11 @@ function C(t) {
                 I.default.track(k.HAw.VIBING_WUMPUS_VIEWED, { source: n }),
                 N || (0, f.q0)(),
                 () => {
-                    I.default.track(k.HAw.VIBING_WUMPUS_CLOSED, {
+                    (I.default.track(k.HAw.VIBING_WUMPUS_CLOSED, {
                         duration_open_ms: new Date().getTime() - t.getTime(),
                         source: n,
                     }),
-                        (0, f.S9)();
+                        (0, f.S9)());
                 }
             );
         }, [n]),
@@ -57,14 +57,15 @@ function C(t) {
                         {
                             text: p.intl.string(p.t["8eKkaf"]),
                             onClick: function () {
-                                e(), I.default.track(k.HAw.VIBING_WUMPUS_ACTION, { action: _.r.BACK_TO_CONVERSATION });
+                                (e(),
+                                    I.default.track(k.HAw.VIBING_WUMPUS_ACTION, { action: _.r.BACK_TO_CONVERSATION }));
                             },
                             variant: "secondary",
                         },
                         {
                             text: p.intl.string(w ? p.t.RscU7I : p.t.ZcgDJX),
                             onClick: function () {
-                                w
+                                (w
                                     ? ((0, f.q0)(),
                                       I.default.track(k.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PLAY }),
                                       h.current?.play(),
@@ -73,7 +74,7 @@ function C(t) {
                                       I.default.track(k.HAw.VIBING_WUMPUS_ACTION, { action: _.r.PAUSE }),
                                       h.current?.pause(),
                                       S.current?.pause()),
-                                    U(!w);
+                                    U(!w));
                             },
                             icon: w ? o.PlayIcon : l.PauseIcon,
                         },

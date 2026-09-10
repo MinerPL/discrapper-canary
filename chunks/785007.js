@@ -150,12 +150,12 @@ function T() {
                     r = "vertical" === e ? E.dh.ARROW_DOWN : E.dh.ARROW_RIGHT;
                 switch (t.key) {
                     case r: {
-                        t.stopPropagation(), t.preventDefault();
+                        (t.stopPropagation(), t.preventDefault());
                         let e = await a.getNextFocusableElement({ wrap: !0 });
                         return e?.focus();
                     }
                     case n: {
-                        t.stopPropagation(), t.preventDefault();
+                        (t.stopPropagation(), t.preventDefault());
                         let e = await a.getPreviousFocusableElement({ wrap: !0 });
                         return e?.focus();
                     }

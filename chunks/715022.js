@@ -6,7 +6,7 @@ function i(e, t) {
 }
 function r(e, t, n) {
     let i = [...t];
-    return t.includes(n) ? (i = t.filter((e) => e.id !== n.id)) : "multiple" === e ? i.push(n) : (i = [n]), i;
+    return (t.includes(n) ? (i = t.filter((e) => e.id !== n.id)) : "multiple" === e ? i.push(n) : (i = [n]), i);
 }
 function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
@@ -28,4 +28,4 @@ function s(e) {
         0 !== i.options.length && (t.push(...i.options), n.push({ label: i.label, count: i.options.length }));
     return { flatOptions: t, groups: n };
 }
-n.d(t, { ZN: () => a, fI: () => i, qH: () => r, yG: () => s }), n(321073);
+(n.d(t, { ZN: () => a, fI: () => i, qH: () => r, yG: () => s }), n(321073));

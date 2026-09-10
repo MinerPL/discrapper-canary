@@ -11,12 +11,12 @@ var t = l(477900),
 function p(e) {
     let { groupId: a, onSelect: l } = e,
         p = o.useCallback(() => {
-            (0, c.R)({ groupId: a }), (0, n.Z_)();
+            ((0, c.R)({ groupId: a }), (0, n.Z_)());
         }, [a]),
         _ = o.useCallback(() => {
-            s.A.deleteGroup(a),
+            (s.A.deleteGroup(a),
                 (0, n.Z_)(),
-                (0, d.YX)(i.uss.FRIENDS, { type: d.Z5.GROUP_MANAGED, value: d.IP.REMOVED_FROM_FAVORITES });
+                (0, d.YX)(i.uss.FRIENDS, { type: d.Z5.GROUP_MANAGED, value: d.IP.REMOVED_FROM_FAVORITES }));
         }, [a]);
     return (0, t.jsxs)(r.W, {
         "aria-label": "Group Context Menu",

@@ -15,7 +15,7 @@ function _(e) {
         : new Promise((e, n) => {
               a.h.wait(async () => {
                   try {
-                      await (0, s.jv)(t), e();
+                      (await (0, s.jv)(t), e());
                   } catch (e) {
                       n(e);
                   }
@@ -36,5 +36,5 @@ function E(e, t, n) {
 }
 function A(e, t, n) {
     let i = l.A.get(e);
-    return r()(null != i, "plan is undefined"), E(i, n, !1).includes(t);
+    return (r()(null != i, "plan is undefined"), E(i, n, !1).includes(t));
 }

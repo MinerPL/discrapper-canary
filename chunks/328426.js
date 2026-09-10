@@ -1,4 +1,4 @@
-a.r(r), a.d(r, { default: () => t });
+(a.r(r), a.d(r, { default: () => t }));
 var t = {
     payButton: "\u03A0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
     "payButton.redirecting": "\u0391\u03BD\u03B1\u03BA\u03B1\u03C4\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7...",

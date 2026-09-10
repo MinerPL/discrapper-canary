@@ -1,4 +1,4 @@
-t.d(n, { A: () => m });
+t.d(n, { A: () => h });
 var l = t(477900),
     i = t(582128),
     s = t(503698),
@@ -38,16 +38,16 @@ function A(e) {
         ],
     });
 }
-function m(e) {
+function h(e) {
     let { className: n, unreadCount: t, mentionCount: i, isTyping: s, canBadge: r } = e,
         o = null != i && i > 0,
         c = (o ? i : t) ?? 0,
-        m = r && null != t && t > 0;
+        h = r && null != t && t > 0;
     return (0, l.jsxs)("div", {
         className: a()(d.Or, n),
         children: [
-            (0, l.jsx)(A, { isBadged: m, isTyping: s }),
-            m && (0, l.jsx)(u.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: d.qS }),
+            (0, l.jsx)(A, { isBadged: h, isTyping: s }),
+            h && (0, l.jsx)(u.A, { hasMentions: o, truncatedCount: c > 99 ? "99+" : c, className: d.qS }),
         ],
     });
 }

@@ -67,7 +67,7 @@ function c(e, t) {
         e.addEventListener(d, t),
         e.addEventListener("webkitfullscreenchange", t),
         () => {
-            e.removeEventListener(d, t), e.removeEventListener("webkitfullscreenchange", t);
+            (e.removeEventListener(d, t), e.removeEventListener("webkitfullscreenchange", t));
         }
     );
 }

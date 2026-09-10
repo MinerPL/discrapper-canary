@@ -219,10 +219,10 @@ async function Module(moduleArg = {}) {
         ENVIRONMENT_IS_WEB = !!globalThis.window,
         ENVIRONMENT_IS_WORKER = !!globalThis.WorkerGlobalScope,
         ENVIRONMENT_IS_NODE = globalThis.process?.versions?.node && globalThis.process?.type != "renderer";
-    (Module.currentQueryProgressCallback = null),
+    ((Module.currentQueryProgressCallback = null),
         (Module.currentProgressCallback = null),
         (Module.currentLogCallback = null),
-        (Module.currentParseCallback = null);
+        (Module.currentParseCallback = null));
     var arguments_ = [],
         thisProgram = "./this.program",
         quit_ = (e, _) => {
@@ -238,16 +238,18 @@ async function Module(moduleArg = {}) {
         try {
             scriptDirectory = new URL(".", _scriptName).href;
         } catch {}
-        ENVIRONMENT_IS_WORKER &&
+        (ENVIRONMENT_IS_WORKER &&
             (readBinary = (e) => {
                 var _ = new XMLHttpRequest();
-                return _.open("GET", e, !1), (_.responseType = "arraybuffer"), _.send(null), new Uint8Array(_.response);
+                return (
+                    _.open("GET", e, !1), (_.responseType = "arraybuffer"), _.send(null), new Uint8Array(_.response)
+                );
             }),
             (readAsync = async (e) => {
                 var _ = await fetch(e, { credentials: "same-origin" });
                 if (_.ok) return _.arrayBuffer();
                 throw Error(_.status + " : " + _.url);
-            });
+            }));
     }
     var out = console.log.bind(console),
         err = console.error.bind(console),
@@ -258,7 +260,7 @@ async function Module(moduleArg = {}) {
     var runtimeInitialized = !1;
     function updateMemoryViews() {
         var e = wasmMemory.buffer;
-        (Module.HEAP8 = HEAP8 = new Int8Array(e)),
+        ((Module.HEAP8 = HEAP8 = new Int8Array(e)),
             (Module.HEAP16 = HEAP16 = new Int16Array(e)),
             (Module.HEAPU8 = HEAPU8 = new Uint8Array(e)),
             (Module.HEAPU16 = HEAPU16 = new Uint16Array(e)),
@@ -269,34 +271,34 @@ async function Module(moduleArg = {}) {
             (Module.HEAP64 = HEAP64 = new BigInt64Array(e)),
             (Module.HEAPU64 = HEAPU64 = new BigUint64Array(e)),
             (Module.HEAP_DATA_VIEW = HEAP_DATA_VIEW = new DataView(e)),
-            LE_HEAP_UPDATE();
+            LE_HEAP_UPDATE());
     }
     var __RELOC_FUNCS__ = [];
     function preRun() {
         if (Module.preRun)
-            for ("function" == typeof Module.preRun && (Module.preRun = [Module.preRun]); Module.preRun.length; )
+            for ("function" == typeof Module.preRun && (Module.preRun = [Module.preRun]); Module.preRun.length;)
                 addOnPreRun(Module.preRun.shift());
         callRuntimeCallbacks(onPreRuns);
     }
     function initRuntime() {
-        (runtimeInitialized = !0),
+        ((runtimeInitialized = !0),
             callRuntimeCallbacks(__RELOC_FUNCS__),
             wasmExports.__wasm_call_ctors(),
-            callRuntimeCallbacks(onPostCtors);
+            callRuntimeCallbacks(onPostCtors));
     }
     function preMain() {}
     function postRun() {
         if (Module.postRun)
-            for ("function" == typeof Module.postRun && (Module.postRun = [Module.postRun]); Module.postRun.length; )
+            for ("function" == typeof Module.postRun && (Module.postRun = [Module.postRun]); Module.postRun.length;)
                 addOnPostRun(Module.postRun.shift());
         callRuntimeCallbacks(onPostRuns);
     }
     function abort(e) {
-        Module.onAbort?.(e),
+        (Module.onAbort?.(e),
             (e = `Aborted(${e})`),
             err(e),
             (ABORT = !0),
-            (e += ". Build with -sASSERTIONS for more info.");
+            (e += ". Build with -sASSERTIONS for more info."));
         var _ = new WebAssembly.RuntimeError(e);
         throw (readyPromiseReject?.(_), _);
     }
@@ -323,7 +325,7 @@ async function Module(moduleArg = {}) {
             var t = await getWasmBinary(e);
             return await WebAssembly.instantiate(t, _);
         } catch (e) {
-            err(`failed to asynchronously prepare wasm: ${e}`), abort(e);
+            (err(`failed to asynchronously prepare wasm: ${e}`), abort(e));
         }
     }
     async function instantiateAsync(e, _, t) {
@@ -332,7 +334,7 @@ async function Module(moduleArg = {}) {
                 var r = fetch(_, { credentials: "same-origin" });
                 return await WebAssembly.instantiateStreaming(r, t);
             } catch (e) {
-                err(`wasm streaming compile failed: ${e}`), err("falling back to ArrayBuffer instantiation");
+                (err(`wasm streaming compile failed: ${e}`), err("falling back to ArrayBuffer instantiation"));
             }
         return instantiateArrayBuffer(_, t);
     }
@@ -370,7 +372,7 @@ async function Module(moduleArg = {}) {
     class ExitStatus {
         name = "ExitStatus";
         constructor(e) {
-            (this.message = `Program terminated with exit(${e})`), (this.status = e);
+            ((this.message = `Program terminated with exit(${e})`), (this.status = e));
         }
     }
     var GOT = {},
@@ -398,7 +400,7 @@ async function Module(moduleArg = {}) {
         LE_HEAP_STORE_I64 = (e, _) => HEAP_DATA_VIEW.setBigInt64(e, _, !0),
         LE_HEAP_STORE_U32 = (e, _) => HEAP_DATA_VIEW.setUint32(e, _, !0),
         callRuntimeCallbacks = (e) => {
-            for (; e.length > 0; ) e.shift()(Module);
+            for (; e.length > 0;) e.shift()(Module);
         },
         onPostRuns = [],
         addOnPostRun = (e) => onPostRuns.push(e),
@@ -408,13 +410,13 @@ async function Module(moduleArg = {}) {
         findStringEnd = (e, _, t, r) => {
             var s = _ + t;
             if (r) return s;
-            for (; e[_] && !(_ >= s); ) ++_;
+            for (; e[_] && !(_ >= s);) ++_;
             return _;
         },
         UTF8ArrayToString = (e, _ = 0, t, r) => {
             var s = findStringEnd(e, _, t, r);
             if (s - _ > 16 && e.buffer && UTF8Decoder) return UTF8Decoder.decode(e.subarray(_, s));
-            for (var a = ""; _ < s; ) {
+            for (var a = ""; _ < s;) {
                 var n = e[_++];
                 if (!(128 & n)) {
                     a += String.fromCharCode(n);
@@ -447,7 +449,7 @@ async function Module(moduleArg = {}) {
                 return e[_++];
             }
             function s() {
-                for (var t = 0, r = 1; ; ) {
+                for (var t = 0, r = 1; ;) {
                     var s = e[_++];
                     if (((t += (127 & s) * r), (r *= 128), !(128 & s))) break;
                 }
@@ -455,10 +457,10 @@ async function Module(moduleArg = {}) {
             }
             function a() {
                 var t = s();
-                return (_ += t), UTF8ArrayToString(e, _ - t, t);
+                return ((_ += t), UTF8ArrayToString(e, _ - t, t));
             }
             function n() {
-                for (var e = s(), _ = []; e--; ) _.push(a());
+                for (var e = s(), _ = []; e--;) _.push(a());
                 return _;
             }
             function o(e, _) {
@@ -466,14 +468,14 @@ async function Module(moduleArg = {}) {
             }
             if (e instanceof WebAssembly.Module) {
                 var i = WebAssembly.Module.customSections(e, "dylink.0");
-                o(0 === i.length, "need dylink section"), (t = (e = new Uint8Array(i[0])).length);
+                (o(0 === i.length, "need dylink section"), (t = (e = new Uint8Array(i[0])).length));
             } else {
                 var u = new Uint32Array(new Uint8Array(e.subarray(0, 24)).buffer);
-                o(0x6d736100 != u[0] && 6386541 != u[0], "need to see wasm magic number"),
+                (o(0x6d736100 != u[0] && 6386541 != u[0], "need to see wasm magic number"),
                     o(0 !== e[8], "need the dylink section to be first"),
-                    (_ = 9);
+                    (_ = 9));
                 var d = s();
-                (t = _ + d), o("dylink.0" !== a());
+                ((t = _ + d), o("dylink.0" !== a()));
             }
             for (
                 var l = { neededDynlibs: [], tlsExports: new Set(), weakImports: new Set(), runtimePaths: [] },
@@ -489,16 +491,16 @@ async function Module(moduleArg = {}) {
             ) {
                 var h = r(),
                     v = s();
-                if (h === c) (l.memorySize = s()), (l.memoryAlign = s()), (l.tableSize = s()), (l.tableAlign = s());
+                if (h === c) ((l.memorySize = s()), (l.memoryAlign = s()), (l.tableSize = s()), (l.tableAlign = s()));
                 else if (h === m) l.neededDynlibs = n();
                 else if (h === f)
-                    for (var x = s(); x--; ) {
+                    for (var x = s(); x--;) {
                         var k = a(),
                             A = s();
                         A & g && l.tlsExports.add(k);
                     }
                 else if (h === p)
-                    for (var x = s(); x--; ) {
+                    for (var x = s(); x--;) {
                         a();
                         var k = a(),
                             A = s();
@@ -531,7 +533,7 @@ async function Module(moduleArg = {}) {
     }
     var newDSO = (e, _, t) => {
             var r = { refcount: 1 / 0, name: e, exports: t, global: !0 };
-            return (LDSO.loadedLibsByName[e] = r), void 0 != _ && (LDSO.loadedLibsByHandle[_] = r), r;
+            return ((LDSO.loadedLibsByName[e] = r), void 0 != _ && (LDSO.loadedLibsByHandle[_] = r), r);
         },
         LDSO = {
             loadedLibsByName: {},
@@ -545,7 +547,7 @@ async function Module(moduleArg = {}) {
             if (runtimeInitialized) return _calloc(e, 1);
             var _ = ___heap_base,
                 t = _ + alignMemory(e, 16);
-            return (___heap_base = t), LE_HEAP_STORE_U32((_emscripten_get_sbrk_ptr() >> 2) * 4, t), _;
+            return ((___heap_base = t), LE_HEAP_STORE_U32((_emscripten_get_sbrk_ptr() >> 2) * 4, t), _);
         },
         isInternalSym = (e) =>
             [
@@ -572,7 +574,7 @@ async function Module(moduleArg = {}) {
         wasmTableMirror = [],
         getWasmTableEntry = (e) => {
             var _ = wasmTableMirror[e];
-            return _ || (wasmTableMirror[e] = _ = wasmTable.get(e)), _;
+            return (_ || (wasmTableMirror[e] = _ = wasmTable.get(e)), _);
         },
         updateTableMap = (e, _) => {
             if (functionsInTableMap)
@@ -588,7 +590,7 @@ async function Module(moduleArg = {}) {
         freeTableIndexes = [],
         getEmptyTableSlot = () => (freeTableIndexes.length ? freeTableIndexes.pop() : wasmTable.grow(1)),
         setWasmTableEntry = (e, _) => {
-            wasmTable.set(e, _), (wasmTableMirror[e] = wasmTable.get(e));
+            (wasmTable.set(e, _), (wasmTableMirror[e] = wasmTable.get(e)));
         },
         uleb128EncodeWithLen = (e) => {
             let _ = e.length;
@@ -643,7 +645,7 @@ async function Module(moduleArg = {}) {
                 if (!(t instanceof TypeError)) throw t;
                 setWasmTableEntry(r, convertJsFunctionToWasm(e, _));
             }
-            return functionsInTableMap.set(e, r), r;
+            return (functionsInTableMap.set(e, r), r);
         },
         updateGOT = (e, _) => {
             for (var t in e)
@@ -657,7 +659,7 @@ async function Module(moduleArg = {}) {
                             if ("number" != typeof s.value) continue;
                             r = s;
                         }
-                        (GOT[t] ??= new WebAssembly.Global({ value: "i32", mutable: !0 })), (GOT[t].value = r);
+                        ((GOT[t] ??= new WebAssembly.Global({ value: "i32", mutable: !0 })), (GOT[t].value = r));
                     }
                 }
         },
@@ -724,15 +726,15 @@ async function Module(moduleArg = {}) {
                     tableBase = metadata.tableSize ? wasmTable.length : 0;
                 function resolveSymbol(e) {
                     var _ = resolveGlobalSymbol(e).sym;
-                    return !_ && localScope && (_ = localScope[e]), _ || (_ = moduleExports[e]), _;
+                    return (!_ && localScope && (_ = localScope[e]), _ || (_ = moduleExports[e]), _);
                 }
-                handle &&
+                (handle &&
                     ((HEAP8[handle + 8] = 1),
                     LE_HEAP_STORE_U32(((handle + 12) >> 2) * 4, memoryBase),
                     LE_HEAP_STORE_I32(((handle + 16) >> 2) * 4, metadata.memorySize),
                     LE_HEAP_STORE_U32(((handle + 20) >> 2) * 4, tableBase),
                     LE_HEAP_STORE_I32(((handle + 24) >> 2) * 4, metadata.tableSize)),
-                    metadata.tableSize && wasmTable.grow(metadata.tableSize);
+                    metadata.tableSize && wasmTable.grow(metadata.tableSize));
                 var proxyHandler = {
                         get(e, _) {
                             switch (_) {
@@ -745,7 +747,7 @@ async function Module(moduleArg = {}) {
                                 var t;
                                 return wasmImports[_];
                             }
-                            return _ in e || (e[_] = (...e) => (t ||= resolveSymbol(_))(...e)), e[_];
+                            return (_ in e || (e[_] = (...e) => (t ||= resolveSymbol(_))(...e)), e[_]);
                         },
                     },
                     proxy = new Proxy({}, proxyHandler),
@@ -774,7 +776,7 @@ async function Module(moduleArg = {}) {
                             start < stop;
                         ) {
                             var jsString = UTF8ToString(start);
-                            addEmAsm(start, jsString), (start = HEAPU8.indexOf(0, start) + 1);
+                            (addEmAsm(start, jsString), (start = HEAPU8.indexOf(0, start) + 1));
                         }
                     function addEmJs(name, cSig, body) {
                         var jsArgs = [];
@@ -791,12 +793,12 @@ async function Module(moduleArg = {}) {
                             var start = moduleExports[name].value,
                                 jsString = UTF8ToString(start),
                                 [sig, body] = jsString.split("<::>");
-                            addEmJs(name.replace("__em_js__", ""), sig, body), delete moduleExports[name];
+                            (addEmJs(name.replace("__em_js__", ""), sig, body), delete moduleExports[name]);
                         }
                     var applyRelocs = moduleExports.__wasm_apply_data_relocs;
                     applyRelocs && (runtimeInitialized ? applyRelocs() : __RELOC_FUNCS__.push(applyRelocs));
                     var init = moduleExports.__wasm_call_ctors;
-                    return init && (runtimeInitialized ? init() : addOnPostCtor(init)), moduleExports;
+                    return (init && (runtimeInitialized ? init() : addOnPostCtor(init)), moduleExports);
                 }
                 if (flags.loadAsync)
                     return (async () => {
@@ -829,7 +831,7 @@ async function Module(moduleArg = {}) {
                 };
                 e(t);
                 let _ = "__main_argc_argv";
-                "main" == t && e(_), t == _ && e("main");
+                ("main" == t && e(_), t == _ && e("main"));
             }
         },
         asyncLoad = async (e) => new Uint8Array(await readAsync(e));
@@ -866,7 +868,7 @@ async function Module(moduleArg = {}) {
                 : loadWebAssemblyModule(a(), _, e, t, r);
         }
         function o(_) {
-            s.global ? mergeLibSymbols(_, e) : t && Object.assign(t, _), (s.exports = _);
+            (s.global ? mergeLibSymbols(_, e) : t && Object.assign(t, _), (s.exports = _));
         }
         return (((s = newDSO(e, r, "loading")).refcount = _.nodelete ? 1 / 0 : 1), (s.global = _.global), _.loadAsync)
             ? n().then((e) => (o(e), !0))
@@ -895,17 +897,17 @@ async function Module(moduleArg = {}) {
                 0 == runDependencies && dependenciesFulfilled)
             ) {
                 var _ = dependenciesFulfilled;
-                (dependenciesFulfilled = null), _();
+                ((dependenciesFulfilled = null), _());
             }
         },
         addRunDependency = (e) => {
-            runDependencies++, Module.monitorRunDependencies?.(runDependencies);
+            (runDependencies++, Module.monitorRunDependencies?.(runDependencies));
         },
         loadDylibs = async () => {
             if (!dynamicLibraries.length) return void reportUndefinedSymbols();
             for (var e of (addRunDependency("loadDylibs"), dynamicLibraries))
                 await loadDynamicLibrary(e, { loadAsync: !0, global: !0, nodelete: !0, allowUndefined: !0 });
-            reportUndefinedSymbols(), removeRunDependency("loadDylibs");
+            (reportUndefinedSymbols(), removeRunDependency("loadDylibs"));
         },
         noExitRuntime = !0;
     function setValue(e, _, t = "i8") {
@@ -938,21 +940,21 @@ async function Module(moduleArg = {}) {
     }
     var SYSCALLS = { varargs: void 0 };
     function ___syscall_fcntl64(e, _, t) {
-        return (SYSCALLS.varargs = t), 0;
+        return ((SYSCALLS.varargs = t), 0);
     }
     ___syscall_fcntl64.sig = "iiip";
     var ___syscall_getcwd = (e, _) => {};
     function ___syscall_ioctl(e, _, t) {
-        return (SYSCALLS.varargs = t), 0;
+        return ((SYSCALLS.varargs = t), 0);
     }
-    (___syscall_getcwd.sig = "ipp"), (___syscall_ioctl.sig = "iiip");
+    ((___syscall_getcwd.sig = "ipp"), (___syscall_ioctl.sig = "iiip"));
     var __abort_js = () => abort("");
     __abort_js.sig = "v";
     var getHeapMax = () => 0x80000000,
         growMemory = (e) => {
             var _ = ((e - wasmMemory.buffer.byteLength + 65535) / 65536) | 0;
             try {
-                return wasmMemory.grow(_), updateMemoryViews(), 1;
+                return (wasmMemory.grow(_), updateMemoryViews(), 1);
             } catch (e) {}
         },
         _emscripten_resize_heap = (e) => {
@@ -997,20 +999,20 @@ async function Module(moduleArg = {}) {
                     _[t++] = o;
                 } else if (o <= 2047) {
                     if (t + 1 >= a) break;
-                    (_[t++] = 192 | (o >> 6)), (_[t++] = 128 | (63 & o));
+                    ((_[t++] = 192 | (o >> 6)), (_[t++] = 128 | (63 & o)));
                 } else if (o <= 65535) {
                     if (t + 2 >= a) break;
-                    (_[t++] = 224 | (o >> 12)), (_[t++] = 128 | ((o >> 6) & 63)), (_[t++] = 128 | (63 & o));
+                    ((_[t++] = 224 | (o >> 12)), (_[t++] = 128 | ((o >> 6) & 63)), (_[t++] = 128 | (63 & o)));
                 } else {
                     if (t + 3 >= a) break;
-                    (_[t++] = 240 | (o >> 18)),
+                    ((_[t++] = 240 | (o >> 18)),
                         (_[t++] = 128 | ((o >> 12) & 63)),
                         (_[t++] = 128 | ((o >> 6) & 63)),
                         (_[t++] = 128 | (63 & o)),
-                        n++;
+                        n++);
                 }
             }
-            return (_[t] = 0), t - s;
+            return ((_[t] = 0), t - s);
         },
         stringToUTF8 = (e, _, t) => stringToUTF8Array(e, HEAPU8, _, t),
         _environ_get = (e, _) => {
@@ -1018,7 +1020,7 @@ async function Module(moduleArg = {}) {
                 r = 0;
             for (var s of getEnvStrings()) {
                 var a = _ + t;
-                LE_HEAP_STORE_U32(((e + r) >> 2) * 4, a), (t += stringToUTF8(s, a, 1 / 0) + 1), (r += 4);
+                (LE_HEAP_STORE_U32(((e + r) >> 2) * 4, a), (t += stringToUTF8(s, a, 1 / 0) + 1), (r += 4));
             }
             return 0;
         };
@@ -1035,7 +1037,7 @@ async function Module(moduleArg = {}) {
             LE_HEAP_STORE_U32((e >> 2) * 4, t.length);
             var r = 0;
             for (var s of t) r += lengthBytesUTF8(s) + 1;
-            return LE_HEAP_STORE_U32((_ >> 2) * 4, r), 0;
+            return (LE_HEAP_STORE_U32((_ >> 2) * 4, r), 0);
         };
     _environ_sizes_get.sig = "ipp";
     var _fd_close = (e) => 52;
@@ -1046,7 +1048,7 @@ async function Module(moduleArg = {}) {
         INT53_MIN = -0x20000000000000,
         bigintToI53Checked = (e) => (e < INT53_MIN || e > INT53_MAX ? NaN : Number(e));
     function _fd_seek(e, _, t, r) {
-        return (_ = bigintToI53Checked(_)), 70;
+        return ((_ = bigintToI53Checked(_)), 70);
     }
     _fd_seek.sig = "iijip";
     var printCharBuffers = [null, [], []],
@@ -1062,7 +1064,7 @@ async function Module(moduleArg = {}) {
                 for (var i = 0; i < o; i++) printChar(e, HEAPU8[n + i]);
                 s += o;
             }
-            return LE_HEAP_STORE_U32((r >> 2) * 4, s), 0;
+            return (LE_HEAP_STORE_U32((r >> 2) * 4, s), 0);
         };
     _fd_write.sig = "iippp";
     var initRandomFill = () => (e) => (crypto.getRandomValues(e), 0),
@@ -1089,11 +1091,11 @@ async function Module(moduleArg = {}) {
     var runtimeKeepaliveCounter = 0,
         keepRuntimeAlive = () => noExitRuntime || runtimeKeepaliveCounter > 0,
         _proc_exit = (e) => {
-            (EXITSTATUS = e), keepRuntimeAlive() || (Module.onExit?.(e), (ABORT = !0)), quit_(e, new ExitStatus(e));
+            ((EXITSTATUS = e), keepRuntimeAlive() || (Module.onExit?.(e), (ABORT = !0)), quit_(e, new ExitStatus(e)));
         };
     _proc_exit.sig = "vi";
     var exitJS = (e, _) => {
-            (EXITSTATUS = e), _proc_exit(e);
+            ((EXITSTATUS = e), _proc_exit(e));
         },
         handleException = (e) => {
             if (e instanceof ExitStatus || "unwind" == e) return EXITSTATUS;
@@ -1103,10 +1105,10 @@ async function Module(moduleArg = {}) {
         stringToUTF8OnStack = (e) => {
             var _ = lengthBytesUTF8(e) + 1,
                 t = stackAlloc(_);
-            return stringToUTF8(e, t, _), t;
+            return (stringToUTF8(e, t, _), t);
         },
         AsciiToString = (e) => {
-            for (var _ = ""; ; ) {
+            for (var _ = ""; ;) {
                 var t = HEAPU8[e++];
                 if (!t) return _;
                 _ += String.fromCharCode(t);
@@ -1115,11 +1117,11 @@ async function Module(moduleArg = {}) {
         stringToUTF16 = (e, _, t) => {
             if ((t ??= 0x7fffffff) < 2) return 0;
             for (var r = _, s = (t -= 2) < 2 * e.length ? t / 2 : e.length, a = 0; a < s; ++a)
-                LE_HEAP_STORE_I16((_ >> 1) * 2, e.charCodeAt(a)), (_ += 2);
-            return LE_HEAP_STORE_I16((_ >> 1) * 2, 0), _ - r;
+                (LE_HEAP_STORE_I16((_ >> 1) * 2, e.charCodeAt(a)), (_ += 2));
+            return (LE_HEAP_STORE_I16((_ >> 1) * 2, 0), _ - r);
         };
     function LE_HEAP_UPDATE() {
-        (HEAPU16.unsigned = (e) => 65535 & e), (HEAPU32.unsigned = (e) => e >>> 0);
+        ((HEAPU16.unsigned = (e) => 65535 & e), (HEAPU32.unsigned = (e) => e >>> 0));
     }
     if (
         ((LE_ATOMICS_NATIVE_BYTE_ORDER =
@@ -1140,9 +1142,9 @@ async function Module(moduleArg = {}) {
         Module.thisProgram && (thisProgram = Module.thisProgram),
         Module.preInit)
     )
-        for ("function" == typeof Module.preInit && (Module.preInit = [Module.preInit]); Module.preInit.length > 0; )
+        for ("function" == typeof Module.preInit && (Module.preInit = [Module.preInit]); Module.preInit.length > 0;)
             Module.preInit.shift()();
-    (Module.setValue = setValue),
+    ((Module.setValue = setValue),
         (Module.getValue = getValue),
         (Module.UTF8ToString = UTF8ToString),
         (Module.stringToUTF8 = stringToUTF8),
@@ -1150,10 +1152,10 @@ async function Module(moduleArg = {}) {
         (Module.AsciiToString = AsciiToString),
         (Module.stringToUTF16 = stringToUTF16),
         (Module.loadWebAssemblyModule = loadWebAssemblyModule),
-        (Module.LE_HEAP_STORE_I64 = LE_HEAP_STORE_I64);
+        (Module.LE_HEAP_STORE_I64 = LE_HEAP_STORE_I64));
     var ASM_CONSTS = {};
     function assignWasmExports(e) {
-        (_malloc = Module._malloc = e.malloc),
+        ((_malloc = Module._malloc = e.malloc),
             (_abort = Module._abort = e.abort),
             (_calloc = Module._calloc = e.calloc),
             (_realloc = Module._realloc = e.realloc),
@@ -1393,7 +1395,7 @@ async function Module(moduleArg = {}) {
             (memory = wasmMemory = e.memory),
             (___stack_pointer = e.__stack_pointer),
             (__indirect_function_table = wasmTable = e.__indirect_function_table),
-            (___heap_base = e.__heap_base.value);
+            (___heap_base = e.__heap_base.value));
     }
     var wasmImports = {
         __syscall_fcntl64: ___syscall_fcntl64,
@@ -1420,11 +1422,11 @@ async function Module(moduleArg = {}) {
             var t = e.length,
                 r = stackAlloc((t + 1) * 4),
                 s = r;
-            for (var a of e) LE_HEAP_STORE_U32((s >> 2) * 4, stringToUTF8OnStack(a)), (s += 4);
+            for (var a of e) (LE_HEAP_STORE_U32((s >> 2) * 4, stringToUTF8OnStack(a)), (s += 4));
             LE_HEAP_STORE_U32((s >> 2) * 4, 0);
             try {
                 var n = _(t, r);
-                return exitJS(n, !0), n;
+                return (exitJS(n, !0), n);
             } catch (e) {
                 return handleException(e);
             }
@@ -1437,15 +1439,15 @@ async function Module(moduleArg = {}) {
         }
         function _() {
             if (((Module.calledRun = !0), !ABORT)) {
-                initRuntime(), readyPromiseResolve?.(Module), Module.onRuntimeInitialized?.();
+                (initRuntime(), readyPromiseResolve?.(Module), Module.onRuntimeInitialized?.());
                 var _ = Module.noInitialRun || !1;
-                _ || callMain(e), postRun();
+                (_ || callMain(e), postRun());
             }
         }
         Module.setStatus
             ? (Module.setStatus("Running..."),
               setTimeout(() => {
-                  setTimeout(() => Module.setStatus(""), 1), _();
+                  (setTimeout(() => Module.setStatus(""), 1), _());
               }, 1))
             : _();
     }
@@ -1455,7 +1457,7 @@ async function Module(moduleArg = {}) {
         (moduleRtn = runtimeInitialized
             ? Module
             : new Promise((e, _) => {
-                  (readyPromiseResolve = e), (readyPromiseReject = _);
+                  ((readyPromiseResolve = e), (readyPromiseReject = _));
               }))
     );
 }

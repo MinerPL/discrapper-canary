@@ -1,4 +1,4 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         transformAppliedForumTagChange: () => ei,
         transformAvailableForumTagChange: () => es,
@@ -16,7 +16,7 @@ n.r(t),
         findChangeByKey: () => K,
         transformLogs: () => el,
     }),
-    n(321073);
+    n(321073));
 var l,
     r = n(824120),
     a = n.n(r),
@@ -981,7 +981,7 @@ function el(e, t) {
                                 (e) => (0, g.m1)(e, C.default, L.A, !0),
                             );
                         default:
-                            return X.warn("Unknown targetType for log", e), null;
+                            return (X.warn("Unknown targetType for log", e), null);
                     }
                 })(e, t),
                 r = C.default.getUser(e.userId);
@@ -1043,7 +1043,7 @@ function el(e, t) {
                     )).changes
                 ) {
                     let n = [];
-                    e.changes.forEach((l) => {
+                    (e.changes.forEach((l) => {
                         let r = (function (e, t, n) {
                             if (t.action === k.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE) {
                                 let t = e.newValue || e.oldValue;
@@ -1140,7 +1140,7 @@ function el(e, t) {
                                                 s = [];
                                             for (let e in F.lx) {
                                                 let t = F.lx[e];
-                                                _.Lt(r, t) && i.push(t), _.Lt(a, t) && s.push(t);
+                                                (_.Lt(r, t) && i.push(t), _.Lt(a, t) && s.push(t));
                                             }
                                             return { added: i, removed: s };
                                         })(e.oldValue, e.newValue);
@@ -1272,7 +1272,7 @@ function el(e, t) {
                         })(l, e, t);
                         Array.isArray(r) ? r.forEach((e) => n.push(e)) : n.push(r);
                     }),
-                        (e = e.set("changes", n));
+                        (e = e.set("changes", n)));
                 }
                 n.push(e);
             }
@@ -1289,7 +1289,7 @@ function er(e, t) {
         s = [];
     for (let e in k.xBc) {
         let t = k.xBc[e];
-        o.zy(r, t) && i.push(t), o.zy(a, t) && s.push(t);
+        (o.zy(r, t) && i.push(t), o.zy(a, t) && s.push(t));
     }
     return { added: i, removed: s };
 }
@@ -1383,7 +1383,7 @@ function eu(e, t, n, l, r) {
 function eo(e, t, n) {
     let l = e,
         r = t(e);
-    return null != r && null != n && (l = n(r)), l;
+    return (null != r && null != n && (l = n(r)), l);
 }
 function ec(e, t) {
     return (n) => (null == n.oldValue ? e : t);

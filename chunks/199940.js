@@ -103,7 +103,9 @@ async function m(t, e, n) {
                 rejectWithError: (0, i.fT)(),
             }),
             E = (0, s.RR)(_.body);
-        return r.h.dispatch({ type: "GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS", guildId: t, resourceChannel: E }), _.body;
+        return (
+            r.h.dispatch({ type: "GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS", guildId: t, resourceChannel: E }), _.body
+        );
     } catch (e) {
         let t = E().flatMap(e.body ?? {}, (t) => t);
         o.A.show({
@@ -164,12 +166,12 @@ async function f(t, e) {
         );
     } catch (e) {
         let t = E().flatMap(e.body ?? {}, (t) => t);
-        D(),
+        (D(),
             r.h.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_FAIL" }),
             o.A.show({
                 title: T.intl.string(T.t["6nCZyG"]),
                 body: T.intl.format(T.t.dYCPD2, { errorMessage: t.join(", ") }),
-            });
+            }));
     }
 }
 async function b(t, e, n) {

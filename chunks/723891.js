@@ -3,10 +3,10 @@ r.exports = function (r, n) {
     var t = -1,
         e = r.length,
         o = e - 1;
-    for (n = void 0 === n ? e : n; ++t < n; ) {
+    for (n = void 0 === n ? e : n; ++t < n;) {
         var p = u(t, o),
             a = r[p];
-        (r[p] = r[t]), (r[t] = a);
+        ((r[p] = r[t]), (r[t] = a));
     }
-    return (r.length = n), r;
+    return ((r.length = n), r);
 };

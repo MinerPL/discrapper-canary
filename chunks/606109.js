@@ -78,7 +78,7 @@ function r(l, t, d) {
                         : l,
             t = n < 0.5 ? n * (1 + s) : n + s - n * s,
             d = 2 * n - t;
-        (i = l(d, t, a + 1 / 3)), (e = l(d, t, a)), (c = l(d, t, a - 1 / 3));
+        ((i = l(d, t, a + 1 / 3)), (e = l(d, t, a)), (c = l(d, t, a - 1 / 3)));
     }
     let Z = (l) => {
         let t = Math.round(255 * l).toString(16);
@@ -97,9 +97,9 @@ async function T(l) {
     let d = await (await fetch(l)).blob(),
         i = await new Promise((l, t) => {
             let i = new FileReader();
-            (i.onloadend = () => l(i.result)), (i.onerror = t), i.readAsDataURL(d);
+            ((i.onloadend = () => l(i.result)), (i.onerror = t), i.readAsDataURL(d));
         });
-    return Y.set(l, i), i;
+    return (Y.set(l, i), i);
 }
 async function V() {
     let l,
@@ -113,7 +113,7 @@ async function V() {
     } else l = (await M.t.get(d)).data;
     let i = t["logo.png"] || t["logo.svg"] || t["logo.jpg"] || t["logo.jpeg"] || t["logo.webp"] || l.logo,
         e = i;
-    return i && (e = await T(i)), { ...l, logo: e };
+    return (i && (e = await T(i)), { ...l, logo: e });
 }
 async function L() {
     let l = await V();
@@ -539,17 +539,17 @@ function S() {
         });
 }
 async function C(l) {
-    await (0, N.T7)({ token: l.token }), (0, c.r)() || (0, c.i)((0, c.a)(l.lang ? { lang: l.lang } : void 0));
+    (await (0, N.T7)({ token: l.token }), (0, c.r)() || (0, c.i)((0, c.a)(l.lang ? { lang: l.lang } : void 0)));
 }
 async function x(l) {
     let { token: t, lang: d, flowManager: i } = l;
-    await C({ token: t, lang: d }), i.load();
+    (await C({ token: t, lang: d }), i.load());
 }
 async function g() {
     try {
         let l = await L(),
             t = { logoSrc: l.logo, subtitle: l.subtitle, hideFooterBranding: l.hideFooterBranding };
-        return (0, s.t)(t), { theme: l, uiConfig: t };
+        return ((0, s.t)(t), { theme: l, uiConfig: t });
     } catch {
         return {};
     }
@@ -611,7 +611,7 @@ function H(l) {
         m = (0, a.l)(e);
     return (
         (0, a._)(() => {
-            (Z.current = d), (b.current = i), (m.current = e);
+            ((Z.current = d), (b.current = i), (m.current = e));
         }, [d, i, e]),
         n.current !== t && ((n.current = t), s(K(t))),
         (0, a._)(() => {
@@ -630,7 +630,7 @@ function H(l) {
                         .catch((t) => {
                             throw (E.delete(l), t);
                         });
-                    return E.set(l, i), i;
+                    return (E.set(l, i), i);
                 })(t)
                     .then((t) => {
                         l || (s({ status: "loaded", Component: t }), b.current?.());
@@ -638,7 +638,7 @@ function H(l) {
                     .catch((t) => {
                         if (!l) {
                             let l = t instanceof Error ? t.message : "Failed to load component";
-                            s({ status: "error", error: l }), m.current?.(l);
+                            (s({ status: "error", error: l }), m.current?.(l));
                         }
                     }),
                 () => {
@@ -691,7 +691,7 @@ function A(l) {
 }
 function _(l) {
     let t = A(l);
-    return t && B.delete(l), t;
+    return (t && B.delete(l), t);
 }
 function $(l) {
     l.getState().presentation.shouldPrefetchHome && S();
@@ -703,11 +703,11 @@ function q() {
             let l = R.REDIRECT_TO_MOBILE,
                 t = w("REDIRECT_TO_MOBILE"),
                 d = [];
-            l && d.push(l()),
+            (l && d.push(l()),
                 t && d.push(t()),
                 (e = Promise.all(d)).catch(() => {
                     e = void 0;
-                });
+                }));
         })();
 }
 var ll = (0, a.c)(() =>
@@ -758,7 +758,7 @@ var ll = (0, a.c)(() =>
                                                 return t;
                                             })(i.flowModules ?? []);
                                         for (let l of Object.keys(t)) delete t[l];
-                                        return Object.assign(t, c), i;
+                                        return (Object.assign(t, c), i);
                                     },
                                     getFinishStatus: async (l, t) => ({ ...(await (0, N.uR)(l, t)), ...c }),
                                     lazyModules: t,
@@ -793,8 +793,8 @@ var ll = (0, a.c)(() =>
                                 .catch((l) => {
                                     let t = l instanceof Error ? l.message : "Preload failed",
                                         d = j(l);
-                                    m({ status: "error", error: t, errorCode: d, flowManager: b.flowManager }),
-                                        e?.(t, d);
+                                    (m({ status: "error", error: t, errorCode: d, flowManager: b.flowManager }),
+                                        e?.(t, d));
                                 });
                         if (o.current) return;
                         o.current = !0;
@@ -805,7 +805,7 @@ var ll = (0, a.c)(() =>
                                 try {
                                     let i;
                                     if (f(l))
-                                        (i = l.token),
+                                        ((i = l.token),
                                             l.urlUuid &&
                                                 (await (0, N.jq)(
                                                     {
@@ -814,17 +814,17 @@ var ll = (0, a.c)(() =>
                                                         onRefreshed: l.onUrlUuidRefreshed,
                                                     },
                                                     a,
-                                                ));
+                                                )));
                                     else if (
                                         "string" == typeof l.configurationId &&
                                         ("string" == typeof l.apiKey || "string" == typeof l.clientId)
                                     ) {
                                         let t = await P(l, a);
-                                        (i = t.token),
+                                        ((i = t.token),
                                             b.flowManager.setEndScreenTexts(
                                                 t.endScreenTitle ?? null,
                                                 t.endScreenText ?? null,
-                                            );
+                                            ));
                                     } else
                                         throw Error("Flow requires token, or configurationId with apiKey or clientId");
                                     await x({ token: i, lang: t, flowManager: b.flowManager });
@@ -834,13 +834,13 @@ var ll = (0, a.c)(() =>
                                                   l.uiConfig && (0, s.t)(l.uiConfig);
                                               }),
                                         c = b.flowManager.waitForReady();
-                                    await Promise.all([c, e]), m({ status: "ready", flowManager: b.flowManager });
+                                    (await Promise.all([c, e]), m({ status: "ready", flowManager: b.flowManager }));
                                 } catch (d) {
                                     if (a.aborted) return;
                                     let l = d instanceof Error ? d.message : "Failed to initialize SDK",
                                         t = j(d);
-                                    m({ status: "error", error: l, errorCode: t, flowManager: b.flowManager }),
-                                        e?.(l, t);
+                                    (m({ status: "error", error: l, errorCode: t, flowManager: b.flowManager }),
+                                        e?.(l, t));
                                 }
                             })(),
                             () => c.abort()
@@ -906,7 +906,7 @@ var ll = (0, a.c)(() =>
                 "loading" === y.status,
             V = Q(!0 === u.presentation.isAwaitingReady, 150),
             L = Q("ready" === u.status && ("idle" === y.status || "loading" === y.status || "error" === y.status), 150);
-        (i = u?.status === "ready" ? u.steps : []),
+        ((i = u?.status === "ready" ? u.steps : []),
             (e = u?.status === "ready" ? u.currentStepIndex : -1),
             (Z = (0, a.l)(new Set())),
             (0, a._)(() => {
@@ -950,18 +950,18 @@ var ll = (0, a.c)(() =>
                         if (d.length > 0) {
                             let l = (0, W.Dz)({ ...(t ?? {}), pipelines: d }),
                                 i = { ...l, pipelines: l.pipelines ? [...l.pipelines] : void 0 };
-                            (0, W.hA)(i),
+                            ((0, W.hA)(i),
                                 (0, W.ZU)(l)
                                     .then(() => (0, W.fu)(i))
                                     .then(() => (0, W.Ri)(i))
                                     .catch((l) => {
                                         console.error("WASM warmup failed:", l);
-                                    });
+                                    }));
                         }
                     })(u, l.wasmConfig));
-            }, [u, l]);
+            }, [u, l]));
         let I = (0, a.l)(!1);
-        (0, a._)(() => {
+        ((0, a._)(() => {
             if (!I.current) {
                 if (u?.status === "finished") {
                     I.current = !0;
@@ -981,7 +981,7 @@ var ll = (0, a.c)(() =>
                     "ID" === u.currentStep &&
                     u.steps.includes("TUTORIAL_ID") &&
                     h.completeModule();
-            }, [u, h]);
+            }, [u, h]));
         let C = !(l.spinnerConfig?.title || l.spinnerConfig?.subtitle);
         if ("error" === o.status)
             return (0, a.v)("div", { class: "IncodeFlow", children: (0, a.v)(X, { message: o.error }) });

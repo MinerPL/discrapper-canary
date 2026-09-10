@@ -1,4 +1,4 @@
-a.r(i), a.d(i, { default: () => u });
+(a.r(i), a.d(i, { default: () => u }));
 var t = {
         lessThanXSeconds: { one: "moins d\u2019une seconde", other: "moins de {{count}} secondes" },
         xSeconds: { one: "1 seconde", other: "{{count}} secondes" },

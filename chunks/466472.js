@@ -20,9 +20,9 @@ function u(t) {
         null != p &&
             "string" == typeof p &&
             i.A.queryDirectory(p, (i, T) => {
-                ++e,
+                (++e,
                     null == i && null != T && (A[p] = T),
                     e === t.length &&
-                        n.h.dispatch({ type: "INSTALLATION_LOCATION_FETCH_METADATA", metadataPayload: A });
+                        n.h.dispatch({ type: "INSTALLATION_LOCATION_FETCH_METADATA", metadataPayload: A }));
             });
 }

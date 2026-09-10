@@ -7,9 +7,9 @@ class r {
     cachedKeys;
     cachedEntries;
     constructor() {
-        (this.cachedValues = (0, i.L_)((e) => Array.from(this.data.values()))),
+        ((this.cachedValues = (0, i.L_)((e) => Array.from(this.data.values()))),
             (this.cachedKeys = (0, i.L_)((e) => Array.from(this.data.keys()))),
-            (this.cachedEntries = (0, i.L_)((e) => Array.from(this.data.entries())));
+            (this.cachedEntries = (0, i.L_)((e) => Array.from(this.data.entries()))));
     }
     keys() {
         return this.cachedKeys(this.version);
@@ -31,7 +31,7 @@ class r {
     }
     delete(e) {
         let t = this.data.delete(e);
-        return t && this.version++, t;
+        return (t && this.version++, t);
     }
     clear() {
         0 !== this.data.size && (this.data.clear(), this.version++);

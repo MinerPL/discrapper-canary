@@ -74,7 +74,7 @@ function p(e = !0) {
     let [t, r] = (0, o.useState)(e),
         n = (0, o.useRef)(!1),
         i = (0, o.useCallback)((e) => {
-            (n.current = !0), r(!!e);
+            ((n.current = !0), r(!!e));
         }, []);
     return (
         (0, a.N)(() => {
@@ -104,7 +104,7 @@ let v = {},
             get(e, t) {
                 if ("string" != typeof t) return;
                 let r = v[t];
-                return r || ((r = (0, o.forwardRef)(m.bind(null, t))), (v[t] = r)), r;
+                return (r || ((r = (0, o.forwardRef)(m.bind(null, t))), (v[t] = r)), r);
             },
         },
     );

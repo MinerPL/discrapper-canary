@@ -17,7 +17,7 @@ class _ extends l.Ay.Store {
 let i = new _(u.h, {
     GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function (e) {
         let { guildId: t, roleMemberCount: n } = e;
-        (E[t] = n), (r[t] = Date.now());
+        ((E[t] = n), (r[t] = Date.now()));
     },
     GUILD_ROLE_MEMBER_COUNT_UPDATE: function (e) {
         let { guildId: t, roleId: n, count: l } = e,
@@ -46,10 +46,10 @@ let i = new _(u.h, {
     },
     GUILD_ROLE_CREATE: function (e) {
         let { guildId: t, role: n } = e;
-        null == E[t] && (E[t] = {}), (E[t][n.id] = 0);
+        (null == E[t] && (E[t] = {}), (E[t][n.id] = 0));
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete E[t.id], delete r[t.id];
+        (delete E[t.id], delete r[t.id]);
     },
 });

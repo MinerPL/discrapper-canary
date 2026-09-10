@@ -7,7 +7,7 @@ function a(e) {
         [n, a] = i.useState(!1),
         r = i.useRef(n),
         o = i.useCallback((e) => {
-            (r.current = e), a(e);
+            ((r.current = e), a(e));
         }, []),
         c = i.useMemo(() => ({ isFocused: n, isFocusedRef: r, setIsFocused: o }), [n, o]);
     return (0, l.jsx)(s.Provider, { value: c, children: t });

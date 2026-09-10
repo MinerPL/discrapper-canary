@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => u, NP: () => E, TA: () => c, YY: () => _ }), n(323874), n(14289), n(35956);
+(n.d(t, { Ay: () => u, NP: () => E, TA: () => c, YY: () => _ }), n(323874), n(14289), n(35956));
 var i = n(17928),
     r = n(636537),
     a = n(228366),
@@ -18,7 +18,7 @@ async function c(e) {
             signal: n,
             rejectWithError: (0, r.fT)(),
         });
-        return a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i.body, isHydrated: !0 }), i.body;
+        return (a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i.body, isHydrated: !0 }), i.body);
     } catch (t) {
         throw (a.h.dispatch({ type: "APPLICATION_FETCH_FAIL", applicationId: e }), t);
     }
@@ -33,7 +33,7 @@ let u = {
                         rejectWithError: (0, r.fT)(),
                     })
                 ).body;
-            return null != n && null != i && a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: l }), l;
+            return (null != n && null != i && a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: l }), l);
         },
         async getApplicationsForGuild(e) {
             let { includeTeam: t, ...n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -44,7 +44,7 @@ let u = {
                         rejectWithError: (0, r.fT)(),
                     })
                 ).body;
-            return a.h.dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: i }), i;
+            return (a.h.dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: i }), i);
         },
         async getEmbeddedApplicationsForGuild(e, t, n) {
             let { items: i } = (
@@ -67,7 +67,7 @@ let u = {
                         rejectWithError: (0, r.fT)(),
                     })
                 ).body;
-            return a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i }), i;
+            return (a.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: i }), i);
         },
         async fetchApplications(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -120,13 +120,17 @@ let u = {
 function E(e) {
     let { data: t, isLoading: n, error: r } = _(e);
     return {
-        app: (0, i.bG)([s.A], () => {
-            if (null == t) {
-                let t = s.A.getApplication(e);
-                if (null != t) return l.Ay.createFromServer(t);
-            }
-            return t;
-        }, [e, t]),
+        app: (0, i.bG)(
+            [s.A],
+            () => {
+                if (null == t) {
+                    let t = s.A.getApplication(e);
+                    if (null != t) return l.Ay.createFromServer(t);
+                }
+                return t;
+            },
+            [e, t],
+        ),
         isLoading: n,
         error: r ?? void 0,
     };

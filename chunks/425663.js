@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => el });
+(n.r(t), n.d(t, { default: () => el }));
 var a = n(477900),
     l = n(582128),
     i = n(503698),
@@ -66,7 +66,7 @@ function Y(e) {
                         color: e.applicationId === n ? "brand" : "default",
                         trailingIndicator: n === e.applicationId ? { type: "icon", icon: v.U } : void 0,
                         action: () => {
-                            (0, d.pX)(V.BVt.COLLECTIBLES_SHOP_GAME_SHOP(e.applicationId)), l();
+                            ((0, d.pX)(V.BVt.COLLECTIBLES_SHOP_GAME_SHOP(e.applicationId)), l());
                         },
                     },
                     e.applicationId,
@@ -102,7 +102,7 @@ function X(e) {
         m = (0, r.bG)([H.A], () => H.A.getApplication(s)),
         I = l.useCallback(
             (e) => {
-                x(), C(e);
+                (x(), C(e));
             },
             [x, C],
         ),
@@ -184,12 +184,12 @@ function K() {
 }
 function $() {
     let e = l.useCallback(() => {
-        (0, h.Y)({
+        ((0, h.Y)({
             pageType: V.liQ.COLLECTIBLES_SHOP,
             sectionType: V.JJy.ORBS_BALANCE_MENU,
             ctaObject: V.ZSU.CTA_TO_QUEST_HOME,
         }),
-            (0, _.mA)({ fromContent: C.u.ORBS_BALANCE_MENU });
+            (0, _.mA)({ fromContent: C.u.ORBS_BALANCE_MENU }));
     }, []);
     return (0, a.jsx)(O.SS, {
         analyticsPage: V.liQ.COLLECTIBLES_SHOP,
@@ -202,12 +202,12 @@ function ee() {
     let e = (0, N.jM)(),
         { analyticsLocations: t } = (0, I.Ay)(),
         n = l.useCallback(() => {
-            k.default.track(V.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+            (k.default.track(V.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: e?.sessionId,
                 cta_type: q.ST.LEARN_MORE,
                 location_stack: t,
             }),
-                window.open(T.A.getArticleURL(V.MVz.SOCIAL_LAYER_STOREFRONT), "_blank", "noopener,noreferrer");
+                window.open(T.A.getArticleURL(V.MVz.SOCIAL_LAYER_STOREFRONT), "_blank", "noopener,noreferrer"));
         }, [e, t]);
     return (0, a.jsx)(J, {
         content: (0, a.jsx)(S.CircleInformationIcon, { size: "xs", color: "currentColor" }),
@@ -263,12 +263,12 @@ function el(e) {
         })),
         E = (0, r.bG)([u.A], () => u.A.getStorefrontDataForApplicationId(t)),
         L = null != n ? parseInt(n, 10) : 0;
-    l.useEffect(() => {
+    (l.useEffect(() => {
         (0, c.I)(en.BV.COLLECTIBLES_SHOP);
     }, []),
         l.useEffect(() => {
             "idle" !== A.state && "loading" !== A.state && E?.state === "error" && (0, d.pX)(en.BV.COLLECTIBLES_SHOP);
-        }, [A.state, E?.state]);
+        }, [A.state, E?.state]));
     let x = l.useCallback((e, t) => (0, a.jsx)(et, { storefront: t, selectedPageIndex: e }), []),
         S = l.useCallback((e, n, a) => en.BV.COLLECTIBLES_SHOP_GAME_SHOP(t, e, n, a), [t]);
     return null == t || "success" !== A.state

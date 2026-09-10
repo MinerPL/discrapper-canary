@@ -1,4 +1,4 @@
-n.d(l, { Ay: () => P, Wc: () => S, wQ: () => w }), n(321073);
+(n.d(l, { Ay: () => P, Wc: () => S, wQ: () => w }), n(321073));
 var a = n(477900);
 n(582128);
 var t = n(503698),
@@ -59,7 +59,7 @@ function w(e) {
             case b.fg2.BLUESKY:
             case b.fg2.MASTODON:
             case b.fg2.TWITTER:
-                (l = (0, E.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = S), (P = O.intl.string(O.t.Jebrww)));
+                ((l = (0, E.ED)(k)), "1" === k[D.pK.TWITTER_VERIFIED] && ((n = S), (P = O.intl.string(O.t.Jebrww))));
                 break;
             case b.fg2.PAYPAL:
                 l = (0, E.gZ)(k);
@@ -87,9 +87,9 @@ function w(e) {
                       : `${h.name}, ${O.intl.string(O.t.q5jLJB)}`,
               onClick: (e) => {
                   var l;
-                  (l = h.type),
+                  ((l = h.type),
                       (0, j.zV)(b.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l, other_user_id: N }),
-                      (0, y.h)({ href: L, trusted: W?.type !== b.fg2.DOMAIN }, e);
+                      (0, y.h)({ href: L, trusted: W?.type !== b.fg2.DOMAIN }, e));
               },
               children: (0, a.jsx)(I.A, { className: R.yf, direction: I.A.Directions.RIGHT }),
           }));
@@ -156,12 +156,12 @@ function S(e) {
     let { applicationRoleConnection: l, className: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
         c = (0, E.VW)(l, t);
     function o() {
-        i?.(),
+        (i?.(),
             (0, N.transitionToGlobalDiscovery)({
                 tab: k.GlobalDiscoveryTab.APPS,
                 applicationId: l.application.id,
                 newSessionState: { entrypoint: { name: _.sW.APPLICATION_DIRECTORY_URL }, guildId: r },
-            });
+            }));
     }
     return (0, a.jsxs)("li", {
         className: s()(R.WD, null != c && c.length > 0 ? R.l1 : null, n),

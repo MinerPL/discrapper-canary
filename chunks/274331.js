@@ -10,26 +10,26 @@ var c = {};
 function l(e, t) {
     if (!(this instanceof l)) return new l(e, t);
     if ((t && t in o && (t = null), t && !(t in n))) throw Error("Unknown model: " + t);
-    if (null == e) (this.model = "rgb"), (this.color = [0, 0, 0]), (this.valpha = 1);
-    else if (e instanceof l) (this.model = e.model), (this.color = e.color.slice()), (this.valpha = e.valpha);
+    if (null == e) ((this.model = "rgb"), (this.color = [0, 0, 0]), (this.valpha = 1));
+    else if (e instanceof l) ((this.model = e.model), (this.color = e.color.slice()), (this.valpha = e.valpha));
     else if ("string" == typeof e) {
         var r,
             u,
             b = a.get(e);
         if (null === b) throw Error("Unable to parse color from string: " + e);
-        (this.model = b.model),
+        ((this.model = b.model),
             (u = n[this.model].channels),
             (this.color = b.value.slice(0, u)),
-            (this.valpha = "number" == typeof b.value[u] ? b.value[u] : 1);
+            (this.valpha = "number" == typeof b.value[u] ? b.value[u] : 1));
     } else if (e.length) {
-        (this.model = t || "rgb"), (u = n[this.model].channels);
+        ((this.model = t || "rgb"), (u = n[this.model].channels));
         var h = s.call(e, 0, u);
-        (this.color = f(h, u)), (this.valpha = "number" == typeof e[u] ? e[u] : 1);
+        ((this.color = f(h, u)), (this.valpha = "number" == typeof e[u] ? e[u] : 1));
     } else if ("number" == typeof e)
-        (e &= 0xffffff),
+        ((e &= 0xffffff),
             (this.model = "rgb"),
             (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]),
-            (this.valpha = 1);
+            (this.valpha = 1));
     else {
         this.valpha = 1;
         var d = Object.keys(e);
@@ -47,7 +47,7 @@ function l(e, t) {
             var m = c[this.model][r];
             m && (this.color[r] = m(this.color[r]));
         }
-    (this.valpha = Math.max(0, Math.min(1, this.valpha))), Object.freeze && Object.freeze(this);
+    ((this.valpha = Math.max(0, Math.min(1, this.valpha))), Object.freeze && Object.freeze(this));
 }
 function u(e, t, r) {
     return (
@@ -75,7 +75,7 @@ function f(e, t) {
     for (var r = 0; r < t; r++) "number" != typeof e[r] && (e[r] = 0);
     return e;
 }
-(l.prototype = {
+((l.prototype = {
     toString: function () {
         return this.string();
     },
@@ -98,15 +98,15 @@ function f(e, t) {
     object: function () {
         for (var e = {}, t = n[this.model].channels, r = n[this.model].labels, a = 0; a < t; a++)
             e[r[a]] = this.color[a];
-        return 1 !== this.valpha && (e.alpha = this.valpha), e;
+        return (1 !== this.valpha && (e.alpha = this.valpha), e);
     },
     unitArray: function () {
         var e = this.rgb().color;
-        return (e[0] /= 255), (e[1] /= 255), (e[2] /= 255), 1 !== this.valpha && e.push(this.valpha), e;
+        return ((e[0] /= 255), (e[1] /= 255), (e[2] /= 255), 1 !== this.valpha && e.push(this.valpha), e);
     },
     unitObject: function () {
         var e = this.rgb().object();
-        return (e.r /= 255), (e.g /= 255), (e.b /= 255), 1 !== this.valpha && (e.alpha = this.valpha), e;
+        return ((e.r /= 255), (e.g /= 255), (e.b /= 255), 1 !== this.valpha && (e.alpha = this.valpha), e);
     },
     round: function (e) {
         var t;
@@ -191,27 +191,27 @@ function f(e, t) {
     },
     lighten: function (e) {
         var t = this.hsl();
-        return (t.color[2] += t.color[2] * e), t;
+        return ((t.color[2] += t.color[2] * e), t);
     },
     darken: function (e) {
         var t = this.hsl();
-        return (t.color[2] -= t.color[2] * e), t;
+        return ((t.color[2] -= t.color[2] * e), t);
     },
     saturate: function (e) {
         var t = this.hsl();
-        return (t.color[1] += t.color[1] * e), t;
+        return ((t.color[1] += t.color[1] * e), t);
     },
     desaturate: function (e) {
         var t = this.hsl();
-        return (t.color[1] -= t.color[1] * e), t;
+        return ((t.color[1] -= t.color[1] * e), t);
     },
     whiten: function (e) {
         var t = this.hwb();
-        return (t.color[1] += t.color[1] * e), t;
+        return ((t.color[1] += t.color[1] * e), t);
     },
     blacken: function (e) {
         var t = this.hwb();
-        return (t.color[2] += t.color[2] * e), t;
+        return ((t.color[2] += t.color[2] * e), t);
     },
     grayscale: function () {
         var e = this.rgb().color,
@@ -227,7 +227,7 @@ function f(e, t) {
     rotate: function (e) {
         var t = this.hsl(),
             r = t.color[0];
-        return (r = (r = (r + e) % 360) < 0 ? 360 + r : r), (t.color[0] = r), t;
+        return ((r = (r = (r + e) % 360) < 0 ? 360 + r : r), (t.color[0] = r), t);
     },
     mix: function (e, t) {
         if (!e || !e.rgb)
@@ -250,7 +250,7 @@ function f(e, t) {
     Object.keys(n).forEach(function (e) {
         if (-1 === o.indexOf(e)) {
             var t = n[e].channels;
-            (l.prototype[e] = function () {
+            ((l.prototype[e] = function () {
                 if (this.model === e) return new l(this);
                 if (arguments.length) return new l(arguments, e);
                 var r,
@@ -258,8 +258,8 @@ function f(e, t) {
                 return new l((Array.isArray((r = n[this.model][e].raw(this.color))) ? r : [r]).concat(a), e);
             }),
                 (l[e] = function (r) {
-                    return "number" == typeof r && (r = f(s.call(arguments), t)), new l(r, e);
-                });
+                    return ("number" == typeof r && (r = f(s.call(arguments), t)), new l(r, e));
+                }));
         }
     }),
-    (e.exports = l);
+    (e.exports = l));

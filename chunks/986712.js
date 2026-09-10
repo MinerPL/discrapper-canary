@@ -140,10 +140,10 @@ function Y(i) {
         ? (0, e.jsxs)(M.D, {
               className: Q.vk,
               onClick: (i) => {
-                  i.stopPropagation(),
+                  (i.stopPropagation(),
                       l({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
                       d === y.d.POPOUT && s?.(),
-                      (0, w.A)({ channel: t, sourceAnalyticsLocations: o });
+                      (0, w.A)({ channel: t, sourceAnalyticsLocations: o }));
               },
               children: [
                   (0, e.jsx)(z.A, {

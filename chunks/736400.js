@@ -5,7 +5,7 @@ function r(e) {
         if (null != t)
             for (let e in t) {
                 let n = t[e];
-                (n.allow = i.iu(n.allow)), (n.deny = i.iu(n.deny));
+                ((n.allow = i.iu(n.allow)), (n.deny = i.iu(n.deny)));
             }
 }
 function a(e) {
@@ -16,7 +16,7 @@ function s(e) {
     if (null != t)
         for (let e in t) {
             let n = t[e];
-            (n.allow = i.iu(n.allow)), (n.deny = i.iu(n.deny));
+            ((n.allow = i.iu(n.allow)), (n.deny = i.iu(n.deny)));
         }
     return e;
 }

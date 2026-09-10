@@ -207,7 +207,7 @@ function x(e) {
         ],
     });
 }
-null == N && (N = () => null), (y.Sizes = f.Ay.Sizes), (D.Sizes = d._3);
+(null == N && (N = () => null), (y.Sizes = f.Ay.Sizes), (D.Sizes = d._3));
 let k = function (e) {
     let {
         className: t,

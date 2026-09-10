@@ -16,10 +16,10 @@ var n = e(991207),
 t.exports = {
     getConstructor: function (t, r, e, f) {
         var p = t(function (t, o) {
-                u(t, l),
+                (u(t, l),
                     x(t, { type: r, index: n(null), first: null, last: null, size: 0 }),
                     v || (t.size = 0),
-                    c(o) || a(o, t[f], { that: t, AS_ENTRIES: e });
+                    c(o) || a(o, t[f], { that: t, AS_ENTRIES: e }));
             }),
             l = p.prototype,
             h = d(r),
@@ -57,9 +57,9 @@ t.exports = {
         return (
             s(l, {
                 clear: function () {
-                    for (var t = h(this), r = t.first; r; )
-                        (r.removed = !0), r.previous && (r.previous = r.previous.next = null), (r = r.next);
-                    (t.first = t.last = null), (t.index = n(null)), v ? (t.size = 0) : (this.size = 0);
+                    for (var t = h(this), r = t.first; r;)
+                        ((r.removed = !0), r.previous && (r.previous = r.previous.next = null), (r = r.next));
+                    ((t.first = t.last = null), (t.index = n(null)), v ? (t.size = 0) : (this.size = 0));
                 },
                 delete: function (t) {
                     var r = h(this),
@@ -67,13 +67,13 @@ t.exports = {
                     if (e) {
                         var n = e.next,
                             o = e.previous;
-                        delete r.index[e.index],
+                        (delete r.index[e.index],
                             (e.removed = !0),
                             o && (o.next = n),
                             n && (n.previous = o),
                             r.first === e && (r.first = n),
                             r.last === e && (r.last = o),
-                            v ? r.size-- : this.size--;
+                            v ? r.size-- : this.size--);
                     }
                     return !!e;
                 },
@@ -82,7 +82,7 @@ t.exports = {
                         var r, e = h(this), n = i(t, arguments.length > 1 ? arguments[1] : void 0);
                         (r = r ? r.next : e.first);
                     )
-                        for (n(r.value, r.key, this); r && r.removed; ) r = r.previous;
+                        for (n(r.value, r.key, this); r && r.removed;) r = r.previous;
                 },
                 has: function (t) {
                     return !!b(this, t);
@@ -120,14 +120,14 @@ t.exports = {
         var n = r + " Iterator",
             o = d(r),
             s = d(n);
-        f(
+        (f(
             t,
             r,
             function (t, r) {
                 x(this, { type: n, target: t, state: o(t), kind: r, last: null });
             },
             function () {
-                for (var t = s(this), r = t.kind, e = t.last; e && e.removed; ) e = e.previous;
+                for (var t = s(this), r = t.kind, e = t.last; e && e.removed;) e = e.previous;
                 return t.target && (t.last = e = e ? e.next : t.state.first)
                     ? "keys" === r
                         ? p(e.key, !1)
@@ -140,6 +140,6 @@ t.exports = {
             !e,
             !0,
         ),
-            l(r);
+            l(r));
     },
 };

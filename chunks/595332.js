@@ -16,7 +16,7 @@ let r = new s(a.h, {
         let { channelId: n } = e,
             t = null != n && l.has(n) ? n : null;
         if (l.size === +(null != t)) return !1;
-        l.clear(), null != t && l.add(t);
+        (l.clear(), null != t && l.add(t));
     },
     CHANNEL_DELETE: function (e) {
         let {

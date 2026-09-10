@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => b, j: () => T }), n(321073);
+(n.d(t, { A: () => b, j: () => T }), n(321073));
 var l,
     r = n(17928),
     s = n(713402),
@@ -53,7 +53,7 @@ function R() {
     for (let t of o.A.getGroups())
         for (let n of t.userIds) {
             let i = e.get(n);
-            null == i && ((i = []), e.set(n, i)), i.push(t.id);
+            (null == i && ((i = []), e.set(n, i)), i.push(t.id));
         }
     D = e;
 }
@@ -207,7 +207,7 @@ function U(e) {
     return null == t ? v.delete(e) : v.set(e, t);
 }
 function w() {
-    v.clear(), R(), x();
+    (v.clear(), R(), x());
     let e = !1;
     for (let [t, n] of h.A.getMutableRelationships().entries())
         (n === N.eA$.PENDING_INCOMING || n === N.eA$.PENDING_OUTGOING) && (e = U(t) || e);
@@ -218,7 +218,7 @@ function w() {
 class P extends r.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, E.A), w();
+        (this.waitFor(d.A, o.A, S.A, c.A, h.A, g.Ay, f.A, u.A, A.default, E.A), w());
     }
     getRows(e) {
         return [v.values(e), v.version];
@@ -289,7 +289,7 @@ let b = new P(
                   return t;
               }),
               CREATE_FRIEND_GROUP: L(function (e) {
-                  return R(), !1;
+                  return (R(), !1);
               }),
               DELETE_FRIEND_GROUP: L(function (e) {
                   R();
@@ -325,7 +325,7 @@ let b = new P(
               }),
               LOGOUT: L(function () {
                   let e = v.size() > 0;
-                  return v.clear(), (i = void 0), (D = new Map()), e;
+                  return (v.clear(), (i = void 0), (D = new Map()), e);
               }),
           },
 );

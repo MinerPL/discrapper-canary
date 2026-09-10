@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => a, sF: () => s }), n(323874), n(14289), n(35956);
+(n.d(t, { Ay: () => a, sF: () => s }), n(323874), n(14289), n(35956));
 var i = n(147964),
     r = n(10716);
 function a(e) {
@@ -11,7 +11,7 @@ function a(e) {
                 if (null == t) return null;
                 if (t.startsWith("//")) {
                     let n = new URL(t, window.location.href);
-                    return (n.hostname = `${e}.${n.hostname}`), n.origin;
+                    return ((n.hostname = `${e}.${n.hostname}`), n.origin);
                 }
                 return `https://${e}.${t}`;
             })(e);

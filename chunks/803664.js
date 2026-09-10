@@ -43,7 +43,7 @@ function g(t) {
                                     confirmText: A.intl.string(A.t.cvSt1J),
                                     cancelText: A.intl.string(A.t["ETE/oC"]),
                                     onConfirm: () => {
-                                        s.A.removeFriend(v, { location: g }), D(!1), x?.();
+                                        (s.A.removeFriend(v, { location: g }), D(!1), x?.());
                                     },
                                     ...e,
                                 });

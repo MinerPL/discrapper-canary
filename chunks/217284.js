@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { getKrispModel: () => r, setKrispModelOverride: () => s, setKrispSuppressionLevel: () => a });
+(n.r(t), n.d(t, { getKrispModel: () => r, setKrispModelOverride: () => s, setKrispSuppressionLevel: () => a }));
 var i = n(19575);
 function r() {
     try {

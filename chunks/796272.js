@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { getForceSdrEmojisStickersConfig: () => r });
+(n.r(t), n.d(t, { getForceSdrEmojisStickersConfig: () => r }));
 let i = (0, n(945810).mj)({
     kind: "user",
     name: "2025-10-force-sdr-emojis-stickers",

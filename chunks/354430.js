@@ -22,7 +22,7 @@ class o extends i.Ay.PersistedStore {
 }
 let d = new o(r.h, {
     LOGOUT: function () {
-        (s = a), (l = {});
+        ((s = a), (l = {}));
     },
     TOP_EMOJIS_FETCH: function (e) {
         let { guildId: t } = e;
@@ -30,6 +30,6 @@ let d = new o(r.h, {
     },
     TOP_EMOJIS_FETCH_SUCCESS: function (e) {
         let { guildId: t, topEmojisMetadata: n } = e;
-        (s.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (l[t] = !1);
+        ((s.topEmojisByGuildId[t] = n.map((e) => e.emojiId)), (l[t] = !1));
     },
 });

@@ -21,14 +21,14 @@ function a() {
             o.clear();
         }
     };
-    document.body.addEventListener("transitionrun", (r) => {
+    (document.body.addEventListener("transitionrun", (r) => {
         let o = (0, n.wt)(r);
         if (!e(r) || !o) return;
         let a = i.get(o);
-        a || ((a = new Set()), i.set(o, a), o.addEventListener("transitioncancel", t, { once: !0 })),
-            a.add(r.propertyName);
+        (a || ((a = new Set()), i.set(o, a), o.addEventListener("transitioncancel", t, { once: !0 })),
+            a.add(r.propertyName));
     }),
-        document.body.addEventListener("transitionend", t);
+        document.body.addEventListener("transitionend", t));
 }
 function s(e) {
     requestAnimationFrame(() => {

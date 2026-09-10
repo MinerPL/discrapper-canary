@@ -1,4 +1,4 @@
-n.d(t, { IU: () => O, SP: () => C, ec: () => b, rh: () => N, ei: () => v }), n(938796);
+(n.d(t, { IU: () => O, SP: () => C, ec: () => b, rh: () => N, ei: () => v }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(721779),
@@ -19,12 +19,12 @@ class u extends d.A {
         return new u({ ...e, user: new c.A(e.user) });
     }
     constructor(e) {
-        super(),
+        (super(),
             (this.id = e.id),
             (this.name = e.name),
             (this.type = e.type),
             (this.user = e.user),
-            (this.displayName = e.name_localized ?? e.name);
+            (this.displayName = e.name_localized ?? e.name));
     }
 }
 var _ = n(383233),

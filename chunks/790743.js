@@ -1,4 +1,4 @@
-n.d(i, { default: () => r }), n(321073);
+(n.d(i, { default: () => r }), n(321073));
 var a = n(477900),
     e = n(582128),
     s = n(189213),
@@ -9,7 +9,7 @@ function r(t) {
     async function k() {
         h(!0);
         try {
-            await d(), n();
+            (await d(), n());
         } finally {
             h(!1);
         }

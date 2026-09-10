@@ -26,7 +26,7 @@ let v = function (e) {
                     className: s()(N.vW, v),
                     type: "button",
                     disabled: t,
-                    style: { backgroundImage: `url('${((0, l.M))(b) ? k.icon.darkSVG : k.icon.lightSVG}')` },
+                    style: { backgroundImage: `url('${(0, l.M)(b) ? k.icon.darkSVG : k.icon.lightSVG}')` },
                     onClick:
                         null != A
                             ? A

@@ -24,7 +24,7 @@ function A(e) {
                     maxDate: I,
                     value: t,
                     onSelect: (e) => {
-                        n(e), r();
+                        (n(e), r());
                     },
                     calendarClassName: E.a,
                     onClickOutside: r,
