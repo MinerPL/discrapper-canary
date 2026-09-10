@@ -31,12 +31,12 @@ function a(e) {
             return void e.preventDefault();
         let i,
             s,
-            o,
-            u = e.target;
-        for (; null != u; )
-            "src" in u && null != u.src && (s = u.src),
-                "href" in u && null != u.href && ((i = u.href), (o = u.textContent)),
-                (u = u?.parentNode);
+            u,
+            o = e.target;
+        for (; null != o; )
+            "src" in o && null != o.src && (s = o.src),
+                "href" in o && null != o.href && ((i = o.href), (u = o.textContent)),
+                (o = o?.parentNode);
         if (null != s)
             return (0, r.L3)(e, async () => {
                 let { default: e } = await Promise.all([
@@ -63,7 +63,7 @@ function a(e) {
                     n.e("944801"),
                     n.e("605905"),
                 ]).then(n.bind(n, 945896));
-                return (t) => (0, l.jsx)(e, { ...t, href: i, textContent: o });
+                return (t) => (0, l.jsx)(e, { ...t, href: i, textContent: u });
             });
         if (null != t && "" !== t)
             return (0, r.L3)(e, async () => {

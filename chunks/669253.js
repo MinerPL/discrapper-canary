@@ -5,8 +5,8 @@ var i = n(477900),
     r = n.n(s),
     a = n(17928),
     o = n(425763),
-    c = n(447453),
-    d = n(280450),
+    d = n(447453),
+    c = n(280450),
     u = n(591179),
     g = n(993165),
     m = n(403581),
@@ -41,8 +41,8 @@ function A() {
 }
 var E = n(803306),
     v = n(631670),
-    C = n(682618),
-    S = n(636537),
+    S = n(682618),
+    C = n(636537),
     b = n(228366),
     k = n(38405),
     T = n(652215);
@@ -51,7 +51,7 @@ async function N(e) {
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
     try {
-        let e = await S.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
+        let e = await C.Bo.patch({ url: T.Rsh.USER_BADGE_SETTINGS, body: i, rejectWithError: !0 });
         return b.h.dispatch({ type: "BADGE_SETTINGS_UPDATE", settings: e.body }), !0;
     } catch (e) {
         return k.A.captureException(e), !1;
@@ -76,9 +76,9 @@ function V(e) {
     let { guildId: t } = e,
         { trackUserProfileEditSaved: n } = (0, D.NJ)(),
         [s, r] = l.useState(!1),
-        [o, c] = l.useState(!1),
+        [o, d] = l.useState(!1),
         {
-            widgetsToSave: d,
+            widgetsToSave: c,
             changedWidgets: g,
             removedWidgets: m,
             hasUnsavedWidgets: x,
@@ -97,28 +97,28 @@ function V(e) {
         {
             hasUnsavedProfileChanges: I,
             canSubmitProfileChanges: A,
-            hasBadgeChangesToSave: S,
+            hasBadgeChangesToSave: C,
         } = (0, a.cf)([G.A], () => ({
             hasUnsavedProfileChanges: G.A.hasUnsavedChanges(),
             canSubmitProfileChanges: G.A.canSubmit(),
             hasBadgeChangesToSave: (0, y.gz)(G.A.getPendingChanges()),
         })),
         b = p && I,
-        k = x || b || S,
+        k = x || b || C,
         V = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
-            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : S && (0, y.Jp)();
-        }, [p, S]),
+            U.A.clearPendingWidgets(), p ? (0, P.XQ)() : C && (0, y.Jp)();
+        }, [p, C]),
         Y = l.useCallback(async () => {
             if (p && !G.A.canSubmit()) return;
-            c(!0);
+            d(!0);
             let e = !0;
-            if (S) {
+            if (C) {
                 let t = G.A.getPendingChanges(),
                     n = await N({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = _.default.getCurrentUser()?.id;
-                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, y.Jp)();
+                    null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, S.RS)(), (0, y.Jp)();
                 }
                 e = n;
             }
@@ -181,7 +181,7 @@ function V(e) {
                 }
             if (x)
                 try {
-                    for (let e of (await U.A.savePendingWidgets(d), g)) {
+                    for (let e of (await U.A.savePendingWidgets(c), g)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, M.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.gameId)),
@@ -193,8 +193,8 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), c(!1);
-        }, [p, b, S, x, d, g, m, n, t]);
+            e ? (0, v.x8)() : (0, H.XA)(B.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1);
+        }, [p, b, C, x, c, g, m, n, t]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -234,13 +234,13 @@ function K() {
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
 function X(e) {
-    let t = (0, a.bG)([d.default], () => d.default.getId() === e),
+    let t = (0, a.bG)([c.default], () => c.default.getId() === e),
         n = K();
     return t && null != n;
 }
 function q(e) {
     let { userId: t, guildId: n, className: s } = e,
-        o = (0, a.bG)([d.default], () => d.default.getId() === t),
+        o = (0, a.bG)([c.default], () => c.default.getId() === t),
         u = K(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
@@ -248,7 +248,7 @@ function q(e) {
               className: r()(Y.k, s),
               children:
                   "dnd" === g
-                      ? (0, i.jsx)(c.S, { className: Y.W })
+                      ? (0, i.jsx)(d.S, { className: Y.W })
                       : "premium-try-it-out" === g
                         ? (0, i.jsx)(A, {})
                         : "save" === g

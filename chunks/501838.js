@@ -1,4 +1,4 @@
-r.d(e, { mn: () => A, px: () => _, qx: () => p, rY: () => f, tR: () => h, w: () => I }), r(321073);
+r.d(e, { mn: () => h, px: () => _, qx: () => f, rY: () => p, tR: () => A, w: () => I }), r(321073);
 var i = r(582128),
     n = r(17928),
     l = r(517164),
@@ -9,7 +9,7 @@ var i = r(582128),
     d = r(290863),
     c = r(832163),
     S = r(533562);
-function A(t) {
+function h(t) {
     let { userIds: e } = t;
     return (0, n.yK)([l.A, c.A], () => {
         let t = [];
@@ -22,7 +22,7 @@ function A(t) {
         return t;
     }, [e]);
 }
-function h(t) {
+function A(t) {
     return (0, n.yK)([a.A, c.A], () => {
         let e = [];
         for (let r of t) {
@@ -53,7 +53,7 @@ function I(t) {
         l = (0, S.W)();
     return i.useMemo(() => (null != l ? [...r, l] : r), [r, l]);
 }
-function p() {
+function f() {
     return (0, n.yK)([u.Ay, c.A], () => {
         let t = [];
         for (let e of u.Ay.getGamesSeen(!1, !1))
@@ -64,7 +64,7 @@ function p() {
         return t;
     });
 }
-function f() {
+function p() {
     return (0, n.yK)([u.Ay, c.A], () => {
         let t = [];
         for (let e of u.Ay.getRunningGames())

@@ -4,7 +4,7 @@ l.d(t, {
     Ht: () => z,
     KD: () => Q,
     Ky: () => K,
-    TT: () => B,
+    TT: () => H,
     _2: () => J,
     dY: () => ee,
     ps: () => $,
@@ -38,15 +38,15 @@ var r = l(477900),
     S = l(713654),
     y = l(734057),
     k = l(287809),
-    F = l(403362),
-    N = l(562153),
+    N = l(403362),
+    F = l(562153),
     C = l(427262),
     W = l(256796),
     m = l(692986),
     v = l(822382),
     O = l(304578),
-    P = l(674142),
-    M = l(315059),
+    M = l(674142),
+    P = l(315059),
     D = l(742788),
     x = l(652215),
     j = l(375708);
@@ -78,7 +78,7 @@ function U(e) {
 }
 function w(e) {
     let { user: t, guildId: l, channelId: r } = e,
-        n = N.Ay.getName(l, r, t),
+        n = F.Ay.getName(l, r, t),
         a = t.getAvatarURL(l, (0, c.FT)(c._3.SIZE_24));
     return { value: t.id, label: n, key: t.id, id: t.id, leading: { type: "avatar", src: a }, trailing: t.username };
 }
@@ -147,7 +147,7 @@ function $(e, t) {
                         let r = C.Ay.getUserTag(l);
                         return "" === r ? null : `${t.key} ${r}`;
                     })
-                    .filter(F.Vq)
+                    .filter(N.Vq)
                     .join(" ");
             },
             [u],
@@ -163,7 +163,7 @@ function $(e, t) {
         handleBlurFilter: E,
     };
 }
-function H(e) {
+function B(e) {
     let t,
         { channel: l } = e;
     if (l.isDM()) {
@@ -172,11 +172,11 @@ function H(e) {
         null != r && (t = { type: "avatar", src: r.getAvatarURL(null, (0, c.FT)(c._3.SIZE_20)) });
     } else
         t = l.isGroupDM()
-            ? (0, r.jsx)(M.A, { channel: l, avatarSize: c._3.SIZE_20, iconSize: "refresh_sm" })
+            ? (0, r.jsx)(P.A, { channel: l, avatarSize: c._3.SIZE_20, iconSize: "refresh_sm" })
             : (0, S.gU)(l);
     return { value: l.id, label: (0, v.E3)(l), key: l.id, id: l.id, leading: t };
 }
-function B(e) {
+function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [l, r] = n.useState(t),
         [a, u] = n.useState(""),
@@ -191,7 +191,7 @@ function B(e) {
             if (s.length > 0)
                 s.forEach((e) => {
                     let l = e.channel,
-                        n = H({ channel: l });
+                        n = B({ channel: l });
                     r.add(l.id), t.push(n);
                 });
             else {
@@ -204,7 +204,7 @@ function B(e) {
                         e.forEach((e) => {
                             let l = y.A.getChannel(e);
                             if (null != l) {
-                                let e = H({ channel: l });
+                                let e = B({ channel: l });
                                 r.add(l.id), t.push(e);
                             }
                         });
@@ -216,7 +216,7 @@ function B(e) {
                         if (r.has(e)) return;
                         let l = y.A.getChannel(e);
                         if (null == l) return;
-                        let n = H({ channel: l });
+                        let n = B({ channel: l });
                         r.add(e), t.unshift(n);
                     }),
                 t
@@ -476,7 +476,7 @@ function X(e) {
 }
 function G(e, t) {
     let { beforeFilter: l, afterFilter: r, duringFilter: a } = Y(),
-        u = (0, P.o)(t);
+        u = (0, M.o)(t);
     return n.useMemo(() => {
         let t = {
                 [x.LWr.FILTER_FROM]: [],

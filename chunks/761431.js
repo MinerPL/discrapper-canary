@@ -5,13 +5,13 @@ var i = n(477900),
     r = n.n(s),
     a = n(103557),
     o = n(95477),
-    c = n(236408),
-    d = n(375226),
+    d = n(236408),
+    c = n(375226),
     u = n(231088),
     g = n(662101);
 function m(e) {
     let { isEditing: t, inputRef: n, ...i } = (0, u.Ww)(e),
-        { enabled: s } = d.A.useConfig({ location: "EditableTextField" });
+        { enabled: s } = c.A.useConfig({ location: "EditableTextField" });
     return (
         l.useEffect(() => {
             t && null != n.current && n.current.setSelectionRange(n.current.value.length, n.current.value.length);
@@ -24,7 +24,7 @@ function x(e) {
             isEditing: t,
             committedValue: n,
             editedValue: s,
-            setEditedValue: d,
+            setEditedValue: c,
             onCommit: m,
             editButtonRef: x,
             handleStartEditing: f,
@@ -35,8 +35,8 @@ function x(e) {
             inputRef: A,
             onInputKeyDown: E,
             preview: v,
-            placeholder: C,
-            editButtonAriaLabel: S,
+            placeholder: S,
+            editButtonAriaLabel: C,
             label: b,
             variant: k = "default",
             rows: T,
@@ -68,10 +68,10 @@ function x(e) {
             hideLabel: !0,
             inputRef: A,
             value: s,
-            onChange: d,
+            onChange: c,
             onKeyDown: E,
             maxLength: y,
-            placeholder: C,
+            placeholder: S,
             error: z,
             helperText: R,
             disabled: O,
@@ -80,12 +80,12 @@ function x(e) {
         J = H
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(c.A, {
+                      (0, i.jsx)(d.A, {
                           className: r()(g.u, W, { [g.N]: F }),
                           value: n,
                           preview: v,
                           trailing: null != _ ? (0, i.jsx)(u.RY, { ..._ }) : void 0,
-                          placeholder: C,
+                          placeholder: S,
                           "aria-label": b,
                           "aria-describedby": null != q ? X : void 0,
                           variant: M ?? "text-sm/normal",
@@ -96,7 +96,7 @@ function x(e) {
                           disabled: O,
                           spellCheck: U,
                           onFocus: f,
-                          onChange: d,
+                          onChange: c,
                           onBlur: h,
                           onCommit: m,
                           autoComplete: "off",
@@ -111,9 +111,9 @@ function x(e) {
         ...K,
         isEditing: H || t,
         preview: "function" == typeof v ? v(n, { focused: !1 }) : v,
-        placeholder: C,
+        placeholder: S,
         editButtonRef: x,
-        editButtonAriaLabel: S,
+        editButtonAriaLabel: C,
         onStartEditing: f,
         className: L,
         growWidth: P,

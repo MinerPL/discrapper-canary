@@ -12,8 +12,8 @@ function c(t) {
         r = (0, a.Ay)(e),
         c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
         S = (0, d.w)({ userIds: c }),
-        A = (0, d.mn)({ userIds: c }),
-        h = (0, d.tR)(c),
+        h = (0, d.mn)({ userIds: c }),
+        A = (0, d.tR)(c),
         I = (0, l.yK)([o.A], () => {
             if (r?.widgets == null) return [];
             let t = new Set();
@@ -30,7 +30,7 @@ function c(t) {
             return Array.from(t).sort();
         }, [r]);
     return i.useMemo(
-        () => (r?.application != null ? [] : (0, n.uniq)([...S, ...A, ...h, ...I])),
-        [r?.application, S, A, h, I],
+        () => (r?.application != null ? [] : (0, n.uniq)([...S, ...h, ...A, ...I])),
+        [r?.application, S, h, A, I],
     );
 }

@@ -17,19 +17,19 @@ function a(e) {
 function s(e) {
     let { children: t, className: n } = e,
         { preventIdle: i, allowIdle: s } = a("interact-hover"),
-        { preventIdle: o, allowIdle: u } = a("interact-focus");
+        { preventIdle: u, allowIdle: o } = a("interact-focus");
     r.useEffect(
         () => () => {
-            s(), u();
+            s(), o();
         },
-        [s, u],
+        [s, o],
     );
     let c = r.useCallback(
         (e) => {
             let t = e.target.ownerDocument ?? document;
-            e.currentTarget.contains(t.activeElement) || u();
+            e.currentTarget.contains(t.activeElement) || o();
         },
-        [u],
+        [o],
     );
-    return (0, l.jsx)("div", { className: n, onMouseEnter: i, onMouseLeave: s, onFocus: o, onBlur: c, children: t });
+    return (0, l.jsx)("div", { className: n, onMouseEnter: i, onMouseLeave: s, onFocus: u, onBlur: c, children: t });
 }

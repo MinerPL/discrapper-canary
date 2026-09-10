@@ -5,8 +5,8 @@ var i = n(477900),
     r = n(17928),
     a = n(425763),
     o = n(724834),
-    c = n(287809),
-    d = n(788593),
+    d = n(287809),
+    c = n(788593),
     u = n(943793),
     g = n(314531),
     m = n(159454),
@@ -22,7 +22,7 @@ function f(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        p = (0, r.bG)([c.default], () => c.default.getCurrentUser()),
+        p = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
         I = (0, a.VU)(),
         j = l.useMemo(
             () =>
@@ -49,7 +49,7 @@ function f(e) {
                                   a = r?.() ?? 90;
                               return (0, i.jsx)("div", {
                                   style: { width: a },
-                                  children: (0, i.jsx)(d.A, {
+                                  children: (0, i.jsx)(c.A, {
                                       className: x.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -117,8 +117,8 @@ function f(e) {
     )
         return null;
     null == A.current && E();
-    let { x: v, y: C } = A.current ?? { x: 0, y: 0 },
-        S = h.x - v - 60 * !!I,
-        b = h.y - C;
-    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: j });
+    let { x: v, y: S } = A.current ?? { x: 0, y: 0 },
+        C = h.x - v - 60 * !!I,
+        b = h.y - S;
+    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${C}px, ${b}px, 0)` }, children: j });
 }

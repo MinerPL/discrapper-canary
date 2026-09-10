@@ -1,26 +1,26 @@
-n.d(t, { P: () => p });
+n.d(t, { P: () => m });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
     a = n.n(i),
     s = n(480664),
-    o = n.n(s),
-    u = n(844222),
+    u = n.n(s),
+    o = n(844222),
     c = n(460890),
     d = n(260612),
     f = n(964486),
     h = n(354328),
-    m = n(162118);
-let p = r.forwardRef(function (e, t) {
+    p = n(162118);
+let m = r.forwardRef(function (e, t) {
     let {
             color: i,
             useLottieDefaultColors: s,
-            src: p,
+            src: m,
             size: g = "md",
             width: y,
-            height: v,
-            className: C,
-            initialAnimation: E,
+            height: E,
+            className: v,
+            initialAnimation: C,
             initialFrame: x,
             markers: S,
             onBeforeDismount: A,
@@ -29,12 +29,12 @@ let p = r.forwardRef(function (e, t) {
         R = r.useRef(null),
         N = r.useRef(null),
         w = r.useRef(null),
-        b = "custom" === g ? { width: y, height: v } : (0, d.J)(g),
+        L = "custom" === g ? { width: y, height: E } : (0, d.J)(g),
         _ = !(0, h.A)("lottie_hover_multiple_loop"),
-        k = r.useContext(u.C).reducedMotion.enabled,
-        L = (0, c.G9)().isMainWindowVisible?.() ?? !0,
-        j = k || !L,
-        O = r.useRef(E);
+        b = r.useContext(o.C).reducedMotion.enabled,
+        k = (0, c.G9)().isMainWindowVisible?.() ?? !0,
+        j = b || !k,
+        O = r.useRef(C);
     return (
         (0, f.l0)(() => {
             A?.({ finalFrame: w.current?.currentFrame ?? null });
@@ -73,8 +73,8 @@ let p = r.forwardRef(function (e, t) {
             [j, _, S, x],
         ),
         r.useEffect(() => {
-            null == I && p().then((e) => T(e.default));
-        }, [I, p]),
+            null == I && m().then((e) => T(e.default));
+        }, [I, m]),
         r.useEffect(
             () => (
                 n
@@ -95,7 +95,7 @@ let p = r.forwardRef(function (e, t) {
                             renderer: "svg",
                             loop: !1,
                             autoplay: !1,
-                            animationData: o()(I),
+                            animationData: u()(I),
                             initialSegment: t,
                         });
                     }),
@@ -106,8 +106,8 @@ let p = r.forwardRef(function (e, t) {
             [I, S, x],
         ),
         (0, l.jsx)("div", {
-            style: { "--__lottieIconColor": null != i && "string" == typeof i ? i : i?.css, display: "flex", ...b },
-            className: a()(m.f, s ? void 0 : m.P, C),
+            style: { "--__lottieIconColor": null != i && "string" == typeof i ? i : i?.css, display: "flex", ...L },
+            className: a()(p.f, s ? void 0 : p.P, v),
             ref: R,
         })
     );

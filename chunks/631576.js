@@ -7,9 +7,9 @@ n.d(t, {
     p9: () => T,
     sl: () => I,
     uK: () => _,
-    vr: () => k,
+    vr: () => b,
     x5: () => w,
-    zk: () => E,
+    zk: () => C,
 }),
     n(321073);
 var l = n(435558),
@@ -17,25 +17,25 @@ var l = n(435558),
     i = n(636537),
     a = n(228366),
     s = n(157559),
-    o = n(268429),
-    u = n(597643),
+    u = n(268429),
+    o = n(597643),
     c = n(773669),
     d = n(594061),
     f = n(919638),
     h = n(287809),
-    m = n(371794),
-    p = n(750385),
+    p = n(371794),
+    m = n(750385),
     g = n(68935),
     y = n(652215),
-    v = n(355097),
-    C = n(375708);
-async function E(e, t) {
-    let { body: n } = await (0, m.aP)({ url: y.Rsh.STICKER_PACK(e), rejectWithError: (0, i.fT)() });
+    E = n(355097),
+    v = n(375708);
+async function C(e, t) {
+    let { body: n } = await (0, p.aP)({ url: y.Rsh.STICKER_PACK(e), rejectWithError: (0, i.fT)() });
     return a.h.dispatch({ type: "STICKER_PACK_FETCH_SUCCESS", packId: e, pack: n, ingestStickers: t }), n;
 }
 async function x() {
     let { locale: e = c.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    if (p.A.isFetchingStickerPacks || p.A.hasLoadedStickerPacks) return;
+    if (m.A.isFetchingStickerPacks || m.A.hasLoadedStickerPacks) return;
     a.h.wait(() => {
         a.h.dispatch({ type: "STICKER_PACKS_FETCH_START" });
     });
@@ -78,7 +78,7 @@ async function T(e) {
                 "mobile" === e.platform
                     ? [{ name: "file", file: { uri: e.uri, name: e.name, type: e.mimeType } }]
                     : void 0,
-            headers: o.A.buildHeadersForMd5(e.originalMd5),
+            headers: u.A.buildHeadersForMd5(e.originalMd5),
             rejectWithError: (0, i.fT)(),
         });
     return (
@@ -99,29 +99,29 @@ function N(e, t, n) {
 function w(e, t) {
     a.h.dispatch({ type: "CLEAR_STICKER_PREVIEW", channelId: e, draftType: t });
 }
-function b(e) {
-    return f.A.totalUnavailableGuilds > 0 || !u.A.isConnected() ? e : e.filter((e) => null != p.A.getStickerById(e));
+function L(e) {
+    return f.A.totalUnavailableGuilds > 0 || !o.A.isConnected() ? e : e.filter((e) => null != m.A.getStickerById(e));
 }
 function _(e) {
     d.bW.updateAsync(
         "favoriteStickers",
         (t) =>
-            ((t.stickerIds = b(t.stickerIds)), r().size(t.stickerIds) >= 250)
+            ((t.stickerIds = L(t.stickerIds)), r().size(t.stickerIds) >= 250)
                 ? (s.A.show({
-                      title: C.intl.string(C.t["+XYXtZ"]),
-                      body: C.intl.formatToPlainString(C.t.JaIyFi, { count: 250 }),
+                      title: v.intl.string(v.t["+XYXtZ"]),
+                      body: v.intl.formatToPlainString(v.t.JaIyFi, { count: 250 }),
                   }),
                   !1)
                 : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
-        v.Sb.INFREQUENT_USER_ACTION,
+        E.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function k(e) {
+function b(e) {
     d.bW.updateAsync(
         "favoriteStickers",
         (t) => {
-            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = b(t.stickerIds));
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = L(t.stickerIds));
         },
-        v.Sb.INFREQUENT_USER_ACTION,
+        E.Sb.INFREQUENT_USER_ACTION,
     );
 }

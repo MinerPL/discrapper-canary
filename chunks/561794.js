@@ -5,7 +5,7 @@ r.d(e, {
     pE: () => v,
     uS: () => E,
     rJ: () => R,
-    pl: () => f,
+    pl: () => p,
     B5: () => m,
     fw: () => T,
 });
@@ -19,11 +19,11 @@ var i,
     d = r(321191),
     c = r(903209),
     S = r(280450),
-    A = r(287809),
-    h = r(808247),
+    h = r(287809),
+    A = r(808247),
     I = r(107563),
-    p = r(855052);
-let f = 5,
+    f = r(855052);
+let p = 5,
     _ = 350;
 var E = (((i = {}).WISHLIST = "wishlist"), (i.POPULAR = "popular"), i),
     m = (((n = {}).USER_PROFILE = "user_profile"), n);
@@ -82,7 +82,7 @@ function g(t) {
                 let e = I.A.getWishlist(t),
                     n = I.A.getUpdatedAt(t),
                     l = o[y(i, t)];
-                (null == e || (null != l && n !== l)) && h.A.fetchWishlist(t, l, r);
+                (null == e || (null != l && n !== l)) && A.A.fetchWishlist(t, l, r);
             }
         }, [e, r, o]),
         { wishlists: i, isFetching: n, errors: s }
@@ -95,9 +95,9 @@ function T(t) {
                 ? [null, "success", void 0, void 0]
                 : [I.A.getWishlist(e), I.A.getStatus(e), I.A.getError(e), I.A.getUpdatedAt(e)],
         ),
-        A = l.useMemo(() => (null == n ? [] : (0, s.uniq)((0, p.Lh)(n))), [n]);
-    (0, o.j)({ skuIds: A });
-    let f = (0, u.bG)([d.A], () => {
+        h = l.useMemo(() => (null == n ? [] : (0, s.uniq)((0, f.Lh)(n))), [n]);
+    (0, o.j)({ skuIds: h });
+    let p = (0, u.bG)([d.A], () => {
         if (null != e && null != r) return d.A.getWishlistSettings(r, e)?.updated_at;
     });
     return (
@@ -105,8 +105,8 @@ function T(t) {
             null == e ||
                 I.A.isFetching(e) ||
                 null != c ||
-                ((null == n || (null != f && S !== f)) && h.A.fetchWishlist(e, f, i));
-        }, [e, i, n, f, S, c]),
+                ((null == n || (null != p && S !== p)) && A.A.fetchWishlist(e, p, i));
+        }, [e, i, n, p, S, c]),
         { wishlist: n, isFetching: "fetching" === a, wasFetched: "success" === a || "error" === a, error: c }
     );
 }
@@ -126,7 +126,7 @@ function L(t) {
 }
 function v() {
     return (function (t) {
-        let e = (0, u.bG)([A.default], () => A.default.getUser(t)),
+        let e = (0, u.bG)([h.default], () => h.default.getUser(t)),
             { userProfile: r, wishlistId: i } = (0, u.cf)(
                 [d.A],
                 () => ({

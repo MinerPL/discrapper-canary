@@ -11,7 +11,7 @@ function a(t) {
             [r, a],
         ),
         S = c.skuId,
-        A = (0, u.c)({
+        h = (0, u.c)({
             userId: e,
             skuId: S,
             nuxGraphic: (function (t) {
@@ -37,6 +37,6 @@ function a(t) {
             location: o,
             onError: d,
         }),
-        { isPurchased: h } = (0, l.h)(c);
-    return { ...A, specificProductOrVariant: c, isPurchased: h };
+        { isPurchased: A } = (0, l.h)(c);
+    return { ...h, specificProductOrVariant: c, isPurchased: A };
 }

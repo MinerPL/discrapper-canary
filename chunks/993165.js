@@ -5,27 +5,27 @@ var i = n(477900),
     r = n(461797),
     a = n(287809),
     o = n(158045),
-    c = n(23722);
-let d = { id: "default" },
+    d = n(23722);
+let c = { id: "default" },
     u = l.createContext(null),
     g = l.createContext(null);
 function m(e) {
     let { children: t } = e,
-        [n, m] = l.useState(d),
+        [n, m] = l.useState(c),
         [x, f] = l.useState(null),
         [h] = l.useState(r.B$),
         p = l.useRef(h),
-        I = (0, c.A)((e) => {
+        I = (0, d.A)((e) => {
             m(e);
         }),
         j = l.useCallback(() => {
-            m(d);
+            m(c);
         }, []),
         A = l.useCallback(() => p.current, []),
         E = (0, s.bG)([a.default], () => o.Ay.canUsePremiumProfileCustomization(a.default.getCurrentUser())),
-        v = E ? d : n,
-        C = !E && x?.id === "premiumTryItOut",
-        S = l.useCallback(() => {
+        v = E ? c : n,
+        S = !E && x?.id === "premiumTryItOut",
+        C = l.useCallback(() => {
             f(v);
         }, [v]),
         b = l.useCallback((e) => {
@@ -35,15 +35,15 @@ function m(e) {
             () => ({
                 selectedPanel: v,
                 readyPanel: x,
-                handlePanelTransitionComplete: S,
+                handlePanelTransitionComplete: C,
                 navigate: I,
                 goBack: j,
                 getCurrentPreset: A,
                 cachePreset: b,
             }),
-            [v, x, S, I, j, A, b],
+            [v, x, C, I, j, A, b],
         );
-    return (0, i.jsx)(g.Provider, { value: C, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
+    return (0, i.jsx)(g.Provider, { value: S, children: (0, i.jsx)(u.Provider, { value: k, children: t }) });
 }
 function x() {
     let e = l.useContext(u);
