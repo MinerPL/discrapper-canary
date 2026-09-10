@@ -60,22 +60,28 @@
     padding: 2px
 }
 
-.hoverBarButton_f84418.hoverBarButton_f84418:hover {
+.hoverBarButton_f84418.hoverBarButton_f84418:hover:not([aria-disabled=true]) {
     background: var(--interactive-background-hover);
     cursor: pointer
 }
 
-.hoverBarButton_f84418.hoverBarButton_f84418:hover .icon_f84418 {
+.hoverBarButton_f84418.hoverBarButton_f84418:hover:not([aria-disabled=true]) .icon_f84418 {
     transform: scale(1.1)
 }
 
-.hoverBarButton_f84418.hoverBarButton_f84418:active {
+.hoverBarButton_f84418.hoverBarButton_f84418:active:not([aria-disabled=true]) {
     background: var(--interactive-background-active);
     padding: 2px
 }
 
-.hoverBarButton_f84418.hoverBarButton_f84418:active .icon_f84418 {
+.hoverBarButton_f84418.hoverBarButton_f84418:active:not([aria-disabled=true]) .icon_f84418 {
     transform: scale(1)
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true],
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true]:active,
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true]:hover {
+    padding: 2px
 }
 
 .icon_f84418 {
@@ -115,4 +121,4 @@
     width: 1px
 }
 
-/*# sourceMappingURL=982186.7b5a8121de5cffb9.css.map*/
+/*# sourceMappingURL=982186.b4f67907b863a440.css.map*/
