@@ -23,6 +23,7 @@ let A = function () {
                               type: _.FF.BADGE,
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
+                              badgeCountdownEndsAt: t.badgeCountdownEndsAt,
                               entrypointBackgroundStyle: t.refTargetBackground?.style,
                               entryPointBackgroundAssets: {
                                   srcDark: e.buttonBGRestingDark,
@@ -43,6 +44,7 @@ let A = function () {
                               buttonLabel: t.buttonLabel,
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
+                              badgeCountdownEndsAt: t.badgeCountdownEndsAt,
                               version: t.version,
                               entrypointBackgroundStyle: e?.style,
                               entryPointBackgroundAssets: {
@@ -59,6 +61,7 @@ let A = function () {
                                 asset: t.asset,
                                 badgeIcon: t.badgeIcon,
                                 badgeText: t.badgeText,
+                                badgeCountdownEndsAt: t.badgeCountdownEndsAt,
                                 entrypointBackgroundStyle: t.refTargetBackground?.style,
                                 entryPointBackgroundAssets: {
                                     srcDark: e.buttonBGRestingDark,

@@ -65,6 +65,7 @@ class C {
     refTargetBackground;
     badgeIcon;
     badgeText;
+    badgeCountdownEndsAt;
     showHoverGradient;
     constructor(e) {
         ((this.type = N.G.BADGE),
@@ -73,6 +74,7 @@ class C {
             (this.refTargetBackground = e.refTargetBackground),
             (this.badgeIcon = e.badgeIcon),
             (this.badgeText = e.badgeText),
+            (this.badgeCountdownEndsAt = e.badgeCountdownEndsAt),
             (this.showHoverGradient = e.showHoverGradient));
     }
     static fromServer(e) {
@@ -82,6 +84,7 @@ class C {
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,
+            badgeCountdownEndsAt: null != e.badge_countdown_ends_at ? new Date(e.badge_countdown_ends_at) : void 0,
             showHoverGradient: e.show_hover_gradient,
         });
     }
@@ -115,6 +118,7 @@ class R {
     refTargetBackground;
     badgeIcon;
     badgeText;
+    badgeCountdownEndsAt;
     buttonLabel;
     constructor(e) {
         ((this.type = N.G.COACHMARK),
@@ -126,6 +130,7 @@ class R {
             (this.refTargetBackground = e.refTargetBackground),
             (this.badgeIcon = e.badgeIcon),
             (this.badgeText = e.badgeText),
+            (this.badgeCountdownEndsAt = e.badgeCountdownEndsAt),
             (this.buttonLabel = e.buttonLabel));
     }
     static fromServer(e) {
@@ -136,6 +141,7 @@ class R {
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,
+            badgeCountdownEndsAt: null != e.badge_countdown_ends_at ? new Date(e.badge_countdown_ends_at) : void 0,
             buttonLabel: e.button_label,
         });
     }
@@ -149,6 +155,7 @@ class L {
     refTargetBackground;
     badgeIcon;
     badgeText;
+    badgeCountdownEndsAt;
     showHoverGradient;
     constructor(e) {
         ((this.type = N.G.TAB_TOOLTIP),
@@ -160,6 +167,7 @@ class L {
             (this.refTargetBackground = e.refTargetBackground),
             (this.badgeIcon = e.badgeIcon),
             (this.badgeText = e.badgeText),
+            (this.badgeCountdownEndsAt = e.badgeCountdownEndsAt),
             (this.showHoverGradient = e.showHoverGradient));
     }
     static fromServer(e) {
@@ -169,6 +177,7 @@ class L {
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,
+            badgeCountdownEndsAt: null != e.badge_countdown_ends_at ? new Date(e.badge_countdown_ends_at) : void 0,
             showHoverGradient: e.show_hover_gradient,
         });
     }
