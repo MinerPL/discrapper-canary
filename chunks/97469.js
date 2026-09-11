@@ -51,5 +51,5 @@ function E() {
     );
 }
 function A() {
-    return E() ? c.NJ8.DARK : void 0;
+    return E() ? c.NJ8.ASH : void 0;
 }
