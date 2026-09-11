@@ -363,13 +363,7 @@ class w extends O.Ay {
                         (this.currentSize = i.convertedFile.size),
                         this.setFilename(i.convertedFile.name),
                         null != n && (null == this.mimeType || "" === this.mimeType) && (this.mimeType = (0, y.II)(n))),
-                    null != i.convertedMimeType && (this.uploadAnalytics.convertedMimeType = i.convertedMimeType),
-                    null != i.conversionFailureReason &&
-                        (this.uploadAnalytics.conversionFailureReason = i.conversionFailureReason),
-                    (this.uploadAnalytics.timing.compressTimeMs = i.compressTimeMs),
-                    null != i.imageCompressionQuality &&
-                        (this.uploadAnalytics.imageCompressionQuality = i.imageCompressionQuality),
-                    null != i.imageEncoderType && (this.uploadAnalytics.imageEncoderType = i.imageEncoderType));
+                    this.applyConversionAnalytics(i.analytics));
             }
         }
         if (this.isCancelled()) return void this.handleComplete(this.id);
@@ -561,43 +555,16 @@ class w extends O.Ay {
     static async tryConvertHeicToJpeg(e, t, i, r, a) {
         if (null == e || t()) return null;
         try {
-            let { maybeConvertHeicToJpeg: s, ImageConversionFailureReason: l } = await n
-                    .e("86851")
-                    .then(n.bind(n, 85582)),
-                o = await s(e, r, a);
-            if (t() || null == o) return null;
-            if (o.success && null != o.convertedBlob)
-                return (
-                    v.log(`heic conversion worked for ${i}: ${o.sizeBefore} -> ${o.sizeAfter} bytes`),
-                    {
-                        convertedFile: new File([o.convertedBlob], (0, y.DP)(e.name), {
-                            type: "image/jpeg",
-                            lastModified: e.lastModified,
-                        }),
-                        convertedMimeType: "image/jpeg",
-                        conversionFailureReason: null,
-                        compressTimeMs: o.compressTimeMs,
-                        imageCompressionQuality: o.imageCompressionQuality,
-                        imageEncoderType: o.imageEncoderType,
-                    }
-                );
-            return (
-                v.log(`heic conversion skipped for ${i}: ${o.reason}`),
-                {
-                    convertedFile: null,
-                    convertedMimeType: null,
-                    conversionFailureReason: o.reason ?? l.UNKNOWN_ERROR,
-                    compressTimeMs: o.compressTimeMs,
-                }
-            );
+            let { convertFileToJpeg: i } = await n.e("86851").then(n.bind(n, 85582)),
+                s = await i(e, "heic", r, a);
+            if (t()) return null;
+            return s;
         } catch (e) {
             return (
                 v.warn(`heic conversion threw for ${i}:`, e),
                 {
                     convertedFile: null,
-                    convertedMimeType: null,
-                    conversionFailureReason: "unknown_error",
-                    compressTimeMs: 0,
+                    analytics: { convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 },
                 }
             );
         }
@@ -634,21 +601,25 @@ class w extends O.Ay {
     isCancelled() {
         return "CANCELED" === this.status || "REMOVED_FROM_MSG_DRAFT" === this.status;
     }
-    applyItemConversionAnalytics() {
-        let e = this.item;
-        if (e.platform !== O.xz.WEB || null == e.imageConversionAnalytics) return;
+    applyConversionAnalytics(e) {
         let {
             convertedMimeType: t,
             conversionFailureReason: n,
             compressTimeMs: i,
             imageCompressionQuality: r,
             imageEncoderType: a,
-        } = e.imageConversionAnalytics;
+        } = e;
         (null != t && (this.uploadAnalytics.convertedMimeType = t),
             null != n && (this.uploadAnalytics.conversionFailureReason = n),
             (this.uploadAnalytics.timing.compressTimeMs = i),
             null != r && (this.uploadAnalytics.imageCompressionQuality = r),
             null != a && (this.uploadAnalytics.imageEncoderType = a));
+    }
+    applyItemConversionAnalytics() {
+        let e = this.item;
+        e.platform === O.xz.WEB &&
+            null != e.imageConversionAnalytics &&
+            this.applyConversionAnalytics(e.imageConversionAnalytics);
     }
     resetState() {
         return (
