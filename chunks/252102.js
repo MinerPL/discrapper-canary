@@ -3002,22 +3002,22 @@ function rj(e) {
     let n,
         l,
         r,
-        a,
         o,
         d,
         u,
         c,
         g,
         m,
-        { user: f, displayProfile: p } = e,
-        { analyticsLocations: h } = (0, I.Ay)(),
-        v = p?.guildId != null,
-        A = p?.guildId ?? void 0,
-        b = W.Ay.canUsePremiumProfileCustomization(f),
-        j = (0, n4.ux)("UserProfileModalV2EditableDisplayName"),
-        { canChangeDisplayName: C, permissionsLoaded: y } = (0, s.cf)([rv.A, G.A], () => {
-            if (!v || null == A) return { canChangeDisplayName: !0, permissionsLoaded: !0 };
-            let e = G.A.getGuild(A);
+        f,
+        { user: p, displayProfile: h } = e,
+        { analyticsLocations: v } = (0, I.Ay)(),
+        A = h?.guildId != null,
+        b = h?.guildId ?? void 0,
+        j = W.Ay.canUsePremiumProfileCustomization(p),
+        C = (0, n4.ux)("UserProfileModalV2EditableDisplayName"),
+        { canChangeDisplayName: y, permissionsLoaded: N } = (0, s.cf)([rv.A, G.A], () => {
+            if (!A || null == b) return { canChangeDisplayName: !0, permissionsLoaded: !0 };
+            let e = G.A.getGuild(b);
             return null == e
                 ? { canChangeDisplayName: !1, permissionsLoaded: !1 }
                 : {
@@ -3026,21 +3026,21 @@ function rj(e) {
                   };
         }),
         {
-            value: N,
-            previewValue: E,
-            fallbackDisplayName: P,
-            onCommit: k,
-        } = ((l = null != (n = p?.guildId ?? null)),
+            value: E,
+            previewValue: P,
+            fallbackDisplayName: k,
+            onCommit: T,
+        } = ((l = null != (n = h?.guildId ?? null)),
         (r = (0, s.bG)([U.default], () => U.default.getCurrentUser()?.globalName ?? null)),
-        (a = (0, s.bG)([ef.Ay], () => (null != n ? (ef.Ay.getMember(n, f.id)?.nick ?? null) : null))),
-        (o = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(null).pendingGlobalName)),
-        (d = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(n).pendingNickname)),
-        (g = (c = void 0 !== (u = l ? d : o) ? u : l ? a : r) ?? ""),
-        (m = l ? (rb(r) ?? f.username) : f.username),
+        (o = (0, s.bG)([ef.Ay], () => (null != n ? (ef.Ay.getMember(n, p.id)?.nick ?? null) : null))),
+        (d = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(null).pendingGlobalName)),
+        (u = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(n).pendingNickname)),
+        (m = (g = void 0 !== (c = l ? u : d) ? c : l ? o : r) ?? ""),
+        (f = l ? (rb(r) ?? p.username) : p.username),
         {
-            value: g,
-            previewValue: rb(c) ?? m,
-            fallbackDisplayName: m,
+            value: m,
+            previewValue: rb(g) ?? f,
+            fallbackDisplayName: f,
             onCommit: i.useCallback(
                 (e) => {
                     l ? (0, ni.p)({ nickname: e.trim(), guildId: n ?? void 0 }) : (0, ni.p)({ globalName: e.trim() });
@@ -3048,46 +3048,46 @@ function rj(e) {
                 [l, n],
             ),
         }),
-        T = (0, i$.T)({ value: N, onCommit: k, disabled: !C }),
-        { isEditing: S, handleCommit: O } = T,
-        R = (0, s.bG)([ep.A], () => ep.A.getErrors(A ?? null)),
-        _ = (0, nt.EC)(A ?? null),
-        D = v ? R.nick?.[0] : R.global_name?.[0],
-        L = _?.nick?.[0],
-        M = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(A).pendingDisplayNameStyles),
-        w = (0, rx.A)({ userId: f.id, guildId: A, pendingDisplayNameStyles: M }),
-        F = (0, rh.a)({ displayNameStyles: w, compensateForSafari: !1 }),
-        B = eR.intl.string(v ? eR.t.mq6Cg9 : eR.t.XuZU7A),
-        V = v ? eR.intl.string(eR.t.YcDKr8) : f.username,
-        z = eR.intl.string(v ? eR.t["g7OSZ/"] : eR.t.kyfzzc),
-        H = i.useRef(null),
-        q = i.useCallback(
+        S = (0, i$.T)({ value: E, onCommit: T, disabled: !y }),
+        { isEditing: O, handleCommit: R } = S,
+        _ = (0, s.bG)([ep.A], () => ep.A.getErrors(b ?? null)),
+        D = (0, nt.EC)(b ?? null),
+        L = A ? _.nick?.[0] : _.global_name?.[0],
+        M = D?.nick?.[0],
+        w = (0, s.bG)([ep.A], () => ep.A.getPendingChanges(b).pendingDisplayNameStyles),
+        F = (0, rx.A)({ userId: p.id, guildId: b, pendingDisplayNameStyles: w }),
+        B = (0, rh.a)({ displayNameStyles: F, compensateForSafari: !1 }),
+        V = eR.intl.string(A ? eR.t.mq6Cg9 : eR.t.XuZU7A),
+        z = A ? eR.intl.string(eR.t.YcDKr8) : p.username,
+        H = eR.intl.string(A ? eR.t["g7OSZ/"] : eR.t.kyfzzc),
+        q = i.useRef(null),
+        K = i.useCallback(
             (e) => {
                 (e.stopPropagation(),
-                    S && O(),
-                    j &&
+                    O && R(),
+                    C &&
                         (0, rp.Dr)(eC.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE, {
                             dismissAction: eO.i.INDIRECT_ACTION,
                         }),
-                    (0, lC.L)({ analyticsLocations: h, guildId: A, stackingBehavior: "stack", returnRef: H }));
+                    (0, lC.L)({ analyticsLocations: v, guildId: b, stackingBehavior: "stack", returnRef: q }));
             },
-            [S, O, h, A, j],
+            [O, R, v, b, C],
         ),
-        K = {
+        Y = {
             icon: nZ.V,
             tooltip: eR.intl.string(eR.t.lqKKI2),
             "aria-label": eR.intl.string(eR.t["Wkg/CF"]),
             "aria-haspopup": "dialog",
-            onClick: q,
-            buttonRef: H,
+            onClick: K,
+            buttonRef: q,
         },
-        Y =
-            v && !C && y
+        X =
+            A && !y && N
                 ? (0, t.jsx)(nO.m, {
                       text: eR.intl.string(eR.t.gzjxQi),
                       children: (0, t.jsx)(eJ.D, {
                           tag: "span",
-                          className: rA.C,
+                          className: rA.Cs,
                           children: (0, t.jsx)(nQ.LockIcon, {
                               size: "refresh_sm",
                               color: x.A.colors.ICON_SUBTLE,
@@ -3097,30 +3097,30 @@ function rj(e) {
                   })
                 : null;
     return (0, t.jsx)(i$.y, {
-        ...T,
+        ...S,
         hugContents: !0,
         preview: (e, n) => {
             let { focused: l } = n;
             return (0, t.jsx)(rf.c$, {
-                user: f,
-                guildId: A,
-                displayName: l ? (rb(e) ?? P) : E,
+                user: p,
+                guildId: b,
+                displayName: l ? (rb(e) ?? k) : P,
                 size: "lg",
-                pendingDisplayNameStyles: M,
-                className: rA.d,
-                displayNameTrailing: Y,
+                pendingDisplayNameStyles: w,
+                className: a()(rA.dt, { [rA.jW]: l && "" === e }),
+                displayNameTrailing: X,
             });
         },
-        placeholder: V,
-        editButtonAriaLabel: z,
-        label: B,
+        placeholder: z,
+        editButtonAriaLabel: H,
+        label: V,
         maxLength: Q.zzC,
         textVariant: rf.gU.lg,
-        textClassName: F,
-        trailing: C && b ? K : void 0,
-        error: D,
-        warning: L,
-        disabled: !C,
+        textClassName: B,
+        trailing: y && j ? Y : void 0,
+        error: L,
+        warning: M,
+        disabled: !y,
     });
 }
 var rI = l(628072);
