@@ -67,7 +67,7 @@ let d = new Set(["darwin", "linux", "win32", "ios", "android"]),
                 let e = [...this._metrics];
                 r.Bo.post({
                     url: o.Rsh.METRICS_V2,
-                    body: { metrics: e, client_info: { built_at: "1789114332040", build_number: "611323" } },
+                    body: { metrics: e, client_info: { built_at: "1789122532116", build_number: "611342" } },
                     retries: 1,
                     rejectWithError: !0,
                 }).catch((t) => {
