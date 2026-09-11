@@ -3,16 +3,13 @@ function i(t) {
     let e = Date.parse(t);
     return Number.isNaN(e) ? null : e;
 }
-function n(t) {
-    return i(t?.updated_at);
-}
-function r(t, e) {
+function n(t, e) {
     let l = i(t);
     return null != l && null != e && l > e;
 }
-function s(t, e) {
-    if (e?.ackedWishlistUpdatedAt == null) return !1;
-    let l = n(t);
-    return null != l && l > e.ackedWishlistUpdatedAt;
+function r(t, e) {
+    if (null == e) return !1;
+    let l = i(t?.updated_at);
+    return null != l && l > e.lastViewedAt;
 }
-l.d(e, { SR: () => n, Wh: () => s, f3: () => r });
+l.d(e, { ds: () => r, f3: () => n });

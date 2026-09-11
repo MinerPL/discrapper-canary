@@ -16,12 +16,9 @@ class s extends i.Ay.PersistedStore {
     }
 }
 let u = new s(n.h, {
-    PROFILE_READ_STATE_ACK_WISHLIST: function (t) {
-        let e,
-            { userId: l, wishlistUpdatedAt: i } = t,
-            n = r[l],
-            s = n?.ackedWishlistUpdatedAt != null && n.ackedWishlistUpdatedAt >= i;
-        (null == (e = r[l]) &&
+    PROFILE_READ_STATE_MARK_VIEWED: function (t) {
+        let { userId: e } = t;
+        (null == r[e] &&
             (function () {
                 let t = Object.keys(r);
                 if (t.length < 500) return;
@@ -30,6 +27,6 @@ let u = new s(n.h, {
                 for (let t of e) l[t] = r[t];
                 r = l;
             })(),
-            (r = { ...r, [l]: { ...e, ...(s ? {} : { ackedWishlistUpdatedAt: i }), lastViewedAt: Date.now() } }));
+            (r = { ...r, [e]: { lastViewedAt: Date.now() } }));
     },
 });

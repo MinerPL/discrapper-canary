@@ -4343,7 +4343,7 @@ function rP(e) {
         { trackUserProfileAction: o, trackUserProfileWishlistAction: c } = (0, ar.NJ)(),
         u = (0, s.useId)(),
         { hasNewWishlistItems: h, newWishlistItemCount: m, shouldLogExposure: g } = (0, rL.A)(t),
-        x = (0, A.bG)([rT.A], () => rT.A.getEntry(t.id)?.ackedWishlistUpdatedAt ?? null, [t.id]),
+        x = (0, A.bG)([rT.A], () => rT.A.getEntry(t.id)?.lastViewedAt ?? null, [t.id]),
         p = (0, s.useCallback)(() => {
             (h && o({ action: "PRESS_NEW_CONTENT_WISHLIST", section: ay.RP.WISHLIST }), i());
         }, [h, i, o]),
