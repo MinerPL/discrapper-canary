@@ -5389,6 +5389,7 @@ var rb =
         (ew.EMOJI_STUDIO_ENDED = "emoji_studio_ended"),
         (ew.PASSWORD_RESET_ACTION = "password_reset_action"),
         (ew.HARDWARE_MUTE_GUESSED = "hardware_mute_guessed"),
+        (ew.HARDWARE_MUTE_DETECTED = "hardware_mute_detected"),
         (ew.HARDWARE_DETECTED = "hardware_detected"),
         (ew.GUILD_CHANNEL_RESYNC_REQUESTED = "guild_channel_resync_requested"),
         (ew.GUILD_CHANNEL_RESYNC_EXECUTED = "guild_channel_resync_executed"),

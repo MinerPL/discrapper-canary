@@ -2218,6 +2218,9 @@ class er extends d.A {
     setClipsSentryConfig(e, t, n) {
         (0, v.lE)().setClipsSentryConfig?.(e, t, n);
     }
+    watchDeviceHardwareMutedChange(e) {
+        (0, v.lE)().setDeviceHardwareMutedChangeCallback?.(e, this.handleDeviceHardwareMutedChange);
+    }
     hasClipsV3Support() {
         let e = (0, v.lE)();
         return null != e.setClipsModulePath && null != e.setClipsRecordingEnabled && null != e.exportClipToFile;
@@ -2680,6 +2683,9 @@ class er extends d.A {
     };
     handleSystemMicrophoneModeChangeCallback = (e) => {
         this.emit(u.bg.SystemMicrophoneModeChange, e);
+    };
+    handleDeviceHardwareMutedChange = (e, t) => {
+        this.emit(u.bg.DeviceHardwareMutedChange, e, t);
     };
     watchdogTick() {
         let e = !1;
