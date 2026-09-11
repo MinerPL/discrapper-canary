@@ -1,4 +1,4 @@
-n.d(t, { E: () => A, A: () => _ });
+n.d(t, { E: () => N, A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -35,8 +35,9 @@ var E = n(311016),
     p = n(692051),
     b = n(713804),
     h = n(900179),
-    x = n(165648);
-function _(e) {
+    x = n(165668),
+    _ = n(165648);
+function A(e) {
     let {
             userBio: t,
             className: n,
@@ -54,11 +55,12 @@ function _(e) {
     return null == f
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, x.PT),
+              className: s()(n, _.PT, x.z),
               children: (0, a.jsx)(i.E, {
                   variant: "text-sm/normal",
                   lineClamp: c ? d : void 0,
                   color: void 0 !== u ? u : void 0,
+                  className: x.w,
                   children: (0, a.jsx)(p.Y.Provider, {
                       value: { disableAnimations: r && !o, disableInteractions: !1 },
                       children: f,
@@ -66,9 +68,9 @@ function _(e) {
               }),
           });
 }
-function A(e) {
+function N(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(h.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(_, { ...e }) })
+        ? (0, a.jsx)(h.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
         : null;
 }

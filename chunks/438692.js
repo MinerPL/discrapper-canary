@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(146779),
     _ = n(284525),
     j = n(793574),
-    T = n(482030),
-    b = n(627363),
+    b = n(482030),
+    T = n(627363),
     R = n(403362),
     O = n(583846),
     L = n(506326),
@@ -197,8 +197,8 @@ var eC = n(47167),
     eN = n(409626),
     e_ = n(692969),
     ej = n(711589),
-    eT = n(607407),
-    eb = n(548118),
+    eb = n(607407),
+    eT = n(548118),
     eR = n(499211),
     eO = n(378570),
     eL = n(832163),
@@ -442,6 +442,7 @@ let tx = (0, ey.Fe)({
                 n.e("641877"),
                 n.e("866212"),
                 n.e("535308"),
+                n.e("762309"),
                 n.e("340341"),
                 n.e("918786"),
                 n.e("352421"),
@@ -658,7 +659,7 @@ function ty(e) {
         ),
         [v, N] = i.useState(!1),
         [_, j] = i.useState(!1),
-        { voiceBar: T, joinVoiceButton: b } = (function (e) {
+        { voiceBar: b, joinVoiceButton: T } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
                 { streamPreviewUrl: r, channel: a } = (0, e7.A)(n),
                 o = (0, eC.Ay)(a),
@@ -719,9 +720,9 @@ function ty(e) {
                                         },
                                         className: tg.I3,
                                         children: [
-                                            (0, l.jsx)(eb.Ay, {
+                                            (0, l.jsx)(eT.Ay, {
                                                 guild: h,
-                                                size: eb.Ay.Sizes.SMOL,
+                                                size: eT.Ay.Sizes.SMOL,
                                                 className: tg.O9,
                                                 active: !0,
                                             }),
@@ -806,9 +807,9 @@ function ty(e) {
                                       onClick: () => (0, eO.iN)(s.id),
                                       className: tg.I3,
                                       children: [
-                                          (0, l.jsx)(eb.Ay, {
+                                          (0, l.jsx)(eT.Ay, {
                                               guild: n,
-                                              size: eb.Ay.Sizes.SMOL,
+                                              size: eT.Ay.Sizes.SMOL,
                                               className: tg.O9,
                                               active: !0,
                                           }),
@@ -849,7 +850,7 @@ function ty(e) {
                       ],
                   })
                 : null),
-        L = null != b && 0 === f.length ? [b] : f,
+        L = null != T && 0 === f.length ? [T] : f,
         M = L.length > 0,
         k = L.length >= 2,
         [w, G] = i.useState(!M),
@@ -922,7 +923,7 @@ function ty(e) {
             }),
             l?.(i, n));
     }
-    let eo = p ?? T ?? O;
+    let eo = p ?? b ?? O;
     function eu() {
         (C((e) => !e), w && I?.focus());
     }
@@ -1260,8 +1261,8 @@ function tj(e) {
         y = A ? I : void 0,
         { activity: S, activityApplication: v, fallbackApplication: N } = (0, e6.A)(x),
         { largeImage: _, smallImage: j } = (0, e0.D8)(S, v ?? N),
-        { largeImage: T } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
-        b = (0, eM.w)({ location: "content_inventory" }),
+        { largeImage: b } = (0, e0.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
+        T = (0, eM.w)({ location: "content_inventory" }),
         R = (0, u.bG)([eL.A], () => eL.A.getDetectableIdsToApplicationIds()),
         O = i.useContext(tA);
     return (0, l.jsxs)("div", {
@@ -1269,7 +1270,7 @@ function tj(e) {
         children: [
             (0, l.jsx)(tv, { ...f, onUserPopoutClosed: h }),
             (0, l.jsxs)(tE, {
-                backgroundImgSrc: T?.src,
+                backgroundImgSrc: b?.src,
                 className: tg.uR,
                 children: [
                     (0, l.jsx)(tN, {
@@ -1281,7 +1282,7 @@ function tj(e) {
                         children: (0, l.jsxs)("div", {
                             className: tg.nh,
                             children: [
-                                (0, l.jsx)(eT.A, { className: tg.j7, stream: a }),
+                                (0, l.jsx)(eb.A, { className: tg.j7, stream: a }),
                                 g &&
                                     (0, l.jsx)("div", {
                                         className: tg.NE,
@@ -1339,7 +1340,7 @@ function tj(e) {
                     r,
                 ],
             }),
-            b && null != C && null != R[C]
+            T && null != C && null != R[C]
                 ? (0, l.jsx)(tx, {
                       className: tg.zu,
                       applicationId: C,
@@ -1354,14 +1355,14 @@ function tj(e) {
         ],
     });
 }
-var tT = n(299846);
-let tb = function (e) {
+var tb = n(299846);
+let tT = function (e) {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: s, disableActivityProfileLinks: r } = e,
-        { user: a, details: o, activity: u, embeddedActivity: c } = (0, tT.u)(n);
+        { user: a, details: o, activity: u, embeddedActivity: c } = (0, tb.u)(n);
     function d() {
-        (0, T.hg)(n.extra.application_id);
+        (0, b.hg)(n.extra.application_id);
     }
-    let { data: h } = (0, b.YY)(n.extra.application_id),
+    let { data: h } = (0, T.YY)(n.extra.application_id),
         m = (0, N.Ay)({ application: h, analyticsLocations: [j.A.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT] });
     if (null == a) return null;
     let f = (0, l.jsx)(L.iT, { location: L.N5.POPOUT, entry: n }),
@@ -1492,16 +1493,16 @@ let tq = [...tR.n, L.Yq],
                 onUserPopoutClosed: a,
                 trackRankingItemInteraction: o,
             } = e,
-            { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tT.u)(n),
+            { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tb.u)(n),
             { streamPreviewUrl: f, stream: p } = (0, e7.A)(n),
             g = n.extra.platform,
             x = n.extra.application_id,
             A = null != g ? tJ[g] : null,
             C = tZ(g === tO.Y.XBOX ? em.fg2.XBOX : g === tO.Y.PLAYSTATION ? em.fg2.PLAYSTATION : void 0),
-            { data: E } = (0, b.YY)(x),
+            { data: E } = (0, T.YY)(x),
             I = (0, tw.A)(x),
             { analyticsLocations: y } = (0, tD.Ay)(j.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
-            T = (0, N.JC)(E),
+            b = (0, N.JC)(E),
             M = (0, tH.o)(h?.application_id ?? m?.applicationId ?? E?.id);
         if (null == u) return null;
         let k = (0, l.jsx)(L.mG, {
@@ -1559,7 +1560,7 @@ let tq = [...tR.n, L.Yq],
                                   : null,
                       }),
             P =
-                !M && T
+                !M && b
                     ? (0, l.jsx)(
                           tG,
                           { application: E, analyticsLocation: j.A.MEMBER_LIST_GAMING_CONTENT_POPOUT },
@@ -1598,7 +1599,7 @@ let tq = [...tR.n, L.Yq],
     tX = (0, n(196765).v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) }));
 function tQ(e) {
     let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: s } = e,
-        { data: r } = (0, b.YY)(t.extra.application_id),
+        { data: r } = (0, T.YY)(t.extra.application_id),
         { analyticsLocations: a } = (0, tD.Ay)(j.A.CLOUD_PLAY_POPOVER),
         o = (0, N.Ay)({ application: r, analyticsLocations: a }),
         u = (0, eS.HX)(D.M.CLOUD_PLAY_NEW_BADGE),
@@ -1867,7 +1868,7 @@ let ng = function (e) {
 var nx = n(977001);
 let nA = function (e) {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: r } = e,
-        { user: a, details: o, appName: u } = (0, tT.u)(n),
+        { user: a, details: o, appName: u } = (0, tb.u)(n),
         c = (0, O.ty)(n),
         d = (0, O.TQ)(n);
     if (null == a || null == c || null == d || !(0, nx._E)(d)) return null;
@@ -1978,9 +1979,9 @@ function nj(e) {
           })
         : null;
 }
-function nT(e) {
+function nb(e) {
     let { closePopout: t, ...n } = e;
-    return (0, l.jsx)(nb, {
+    return (0, l.jsx)(nT, {
         onReaction: (e, l) => {
             (n.trackRankingItemInteraction(e, { destinationChannelId: l.id, destinationGuildId: l.guild_id }), t());
         },
@@ -1994,7 +1995,7 @@ function nT(e) {
         ...n,
     });
 }
-function nb(e) {
+function nT(e) {
     let { entry: t, ...n } = e;
     switch (t.content_type) {
         case o.ContentInventoryEntryType.PLAYED_GAME:
@@ -2008,7 +2009,7 @@ function nb(e) {
         case o.ContentInventoryEntryType.LISTENED_SESSION:
             return (0, l.jsx)(na, { ...n, entry: t });
         case o.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(tb, { ...n, entry: t });
+            return (0, l.jsx)(tT, { ...n, entry: t });
         default:
             return null;
     }
@@ -2021,7 +2022,7 @@ let nR = i.createContext(void 0),
             [E, I] = i.useState(!1),
             y = (0, a.rm)(`${t}`),
             S = g.default.getCurrentUser()?.isStaff(),
-            { isRich: v, appName: N } = (0, tT.u)(o.entry);
+            { isRich: v, appName: N } = (0, tb.u)(o.entry);
         (0, f.T2)(o.entry.id);
         let _ = i.useMemo(
                 () => ({
@@ -2034,12 +2035,12 @@ let nR = i.createContext(void 0),
                 [N, o.channel.guild_id, o.channel.id, o.entry, o.requestId, v],
             ),
             j = i.useRef(!1),
-            [T, b] = i.useState(!1),
+            [b, T] = i.useState(!1),
             [R, O] = i.useState(!1),
             L = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled);
         (i.useEffect(() => {
-            T && L && O(!0);
-        }, [T, L]),
+            b && L && O(!0);
+        }, [b, L]),
             i.useLayoutEffect(() => {
                 null != p.current && I(!0);
             }, []));
@@ -2079,7 +2080,7 @@ let nR = i.createContext(void 0),
         function D() {
             ((j.current = !1),
                 setTimeout(() => {
-                    j.current || (b(!1), O(L));
+                    j.current || (T(!1), O(L));
                 }, 100));
         }
         return (0, l.jsxs)(l.Fragment, {
@@ -2090,7 +2091,7 @@ let nR = i.createContext(void 0),
                     onMouseEnter: () => {
                         ((j.current = !0),
                             setTimeout(() => {
-                                (j.current && b(!0), P(_));
+                                (j.current && T(!0), P(_));
                             }, 100));
                     },
                     onMouseLeave: D,
@@ -2100,7 +2101,7 @@ let nR = i.createContext(void 0),
                             let { closePopout: t } = e;
                             return (0, l.jsx)(nR.Provider, {
                                 value: D,
-                                children: (0, l.jsx)(nT, {
+                                children: (0, l.jsx)(nb, {
                                     closePopout: t,
                                     updatePopoutPosition: k,
                                     trackRankingItemInteraction: w,
@@ -2109,7 +2110,7 @@ let nR = i.createContext(void 0),
                             });
                         },
                         position: "left",
-                        shouldShow: T,
+                        shouldShow: b,
                         positionKey: A,
                         onRequestOpen: () => P(_),
                         onRequestClose: () => {
@@ -2125,7 +2126,7 @@ let nR = i.createContext(void 0),
                                 innerRef: p,
                                 focusProps: { offset: { top: 4, bottom: 4, left: 4, right: 4 } },
                                 onClick: () => {
-                                    T || b(!0);
+                                    b || T(!0);
                                 },
                                 onContextMenu: M,
                                 children: (0, l.jsx)(n_, {

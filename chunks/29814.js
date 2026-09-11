@@ -675,7 +675,6 @@ let e_ = {
         "channel",
         "paragraph",
         "newline",
-        "subtext",
         "soundboard",
     ]),
     em = r().omit(eE, ["codeBlock", "blockQuote", "br"]),
