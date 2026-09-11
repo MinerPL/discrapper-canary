@@ -19006,24 +19006,27 @@ var Cc = n(307863),
     Cg = n(428031),
     Cm = n(954225);
 function CA() {
-    let e = (0, Cr.Tx)(),
-        t = (0, Cr.q9)(),
-        n = (0, Cc.e)();
-    return e === Cs.YG
-        ? n
-            ? R.intl.string(R.t.XXGmuB)
-            : R.intl.string(R.t.wbYDfT)
-        : t
-          ? R.intl.string(R.t.V0ka0Q)
-          : n
-            ? R.intl.string(R.t.F9WY3f)
-            : R.intl.string(R.t.G7c3Xo);
+    return (0, Cc.e)() ? R.intl.string(R.t.PMsfcH) : R.intl.string(R.t.RAQUSN);
 }
 function CE(e, t) {
     tt.default.track(S.HAw.GUILD_DEFAULT_DMS_UPDATED, { default_guilds_restricted: e, applied_to_existing_guilds: t });
 }
 let Ch = (0, d.zD)(c.X.PERMISSIONS_DMS_SETTING, {
     useTitle: CA,
+    useSubtitle: function () {
+        let e = (0, Cr.Tx)(),
+            t = (0, Cr.q9)(),
+            n = (0, Cc.e)();
+        return e === Cs.YG
+            ? n
+                ? R.intl.string(R.t.XXGmuB)
+                : R.intl.string(R.t.wbYDfT)
+            : t
+              ? R.intl.string(R.t.V0ka0Q)
+              : n
+                ? R.intl.string(R.t.F9WY3f)
+                : R.intl.string(R.t.G7c3Xo);
+    },
     useValue: function () {
         let e = (0, Cr.Tx)(),
             t = L.$s.useSetting().includes(e),
@@ -19072,11 +19075,17 @@ function CT(e, t) {
     });
 }
 function Cp() {
-    return (0, Cr.q9)() ? R.intl.string(R.t["982I7+"]) : R.intl.string(R.t["3yHM5i"]);
+    return R.intl.string(R.t["3o2ojh"]);
 }
 let Cx = (0, d.zD)(c.X.PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
         useTitle: Cp,
-        useSubtitle: () => R.intl.format(R.t.BoCjTy, { learnMoreUrl: ex.A.getArticleURL(S.MVz.MESSAGE_REQUESTS) }),
+        useSubtitle: function () {
+            let e = (0, Cr.q9)(),
+                t = ex.A.getArticleURL(S.MVz.MESSAGE_REQUESTS);
+            return e
+                ? R.intl.format(R.t.WpnWLc, { helpdeskArticle: t })
+                : R.intl.format(R.t.wkm9a3, { helpdeskArticle: t });
+        },
         useValue: function () {
             let e = (0, Cr.Tx)(),
                 t = (0, Cg.K)(),
