@@ -17,8 +17,8 @@ var n = l(477900),
     v = l(821609),
     E = l(157559),
     N = l(554375),
-    I = l(964486),
-    b = l(268429),
+    b = l(964486),
+    I = l(268429),
     A = l(61310),
     S = l(626584),
     M = l(691223),
@@ -32,20 +32,20 @@ var n = l(477900),
     R = l(339143),
     D = l(80569),
     T = l(834730),
-    L = l(691540),
-    G = l(857250),
+    G = l(691540),
+    L = l(857250),
     z = l(97483),
     F = l(565645),
     Z = l(927813),
     H = l(375708),
-    J = l(678058),
-    V = l(655214);
-let B = 6 * Z.A.Millis.SECOND;
+    V = l(678058),
+    B = l(655214);
+let J = 6 * Z.A.Millis.SECOND;
 function K(e) {
     let { emoji: t, guildId: l } = e,
         i = (0, u.bG)([_.A], () => _.A.getGuild(l)?.name);
     return (0, n.jsxs)("div", {
-        className: s()(V.oR, J.o),
+        className: s()(B.oR, V.o),
         children: [
             (0, n.jsx)(F.A, { emojiId: t.id, size: "default" }),
             (0, n.jsx)(T.E, {
@@ -261,8 +261,8 @@ var eo = l(830917),
     ev = l(424632),
     eE = l(818348),
     eN = l(162555);
-let eI = new S.A("ImageEditor"),
-    eb = { width: 288, height: 288 },
+let eb = new S.A("ImageEditor"),
+    eI = { width: 288, height: 288 },
     eA = i.forwardRef(function (e, t) {
         let l,
             { file: r, imageUri: a, onUpdate: u, onThrottledEdit: c } = e,
@@ -272,40 +272,40 @@ let eI = new S.A("ImageEditor"),
             [g, x] = i.useState(1),
             [j, v] = i.useState(null),
             [E, N] = i.useState(!1),
-            [I, b] = i.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
+            [b, I] = i.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
             [A, S] = i.useState(0),
             [M, p] = i.useState({ x: 0, y: 0 }),
             [_, C] = i.useState(!1),
             { isGIF: y, isWebP: w, isCheckingAnimation: k, isEditableAnimatedImage: R } = (0, O._)(r),
-            L = ("image/gif" === (l = r.type) || "image/webp" === l || "image/avif" === l) && !y && !w,
-            [G, z] = i.useState(null),
+            G = ("image/gif" === (l = r.type) || "image/webp" === l || "image/avif" === l) && !y && !w,
+            [L, z] = i.useState(null),
             F = (0, ej.I)(c ?? eE.tE, 500),
             Z = i.useRef(null),
-            J = i.useRef(0),
-            V = i.useCallback(
+            V = i.useRef(0),
+            B = i.useCallback(
                 function () {
                     let e =
                         arguments.length > 0 && void 0 !== arguments[0]
                             ? arguments[0]
                             : { x: o.current.x, y: o.current.y };
                     if (null == h.current) return;
-                    let { x: t, y: l } = (0, ev.F3)(e.x, e.y, I);
+                    let { x: t, y: l } = (0, ev.F3)(e.x, e.y, b);
                     ((o.current = { x: t, y: l }),
                         (h.current.style.transform = `translate3d(${t}px, ${l}px, 0) rotate(${A}deg) scaleX(${E ? "-1" : "1"})`),
                         m({ x: t, y: l }));
                 },
-                [h, A, I, E],
+                [h, A, b, E],
             );
         i.useEffect(() => {
-            null == j || k || b(eM(j, g, R));
+            null == j || k || I(eM(j, g, R));
         }, [j, g, R, k]);
-        let B = i.useCallback(
+        let J = i.useCallback(
                 (e) => {
                     if (null == j) return;
                     let t = eM(j, e, R);
-                    (x(e), b(t), V(), F?.());
+                    (x(e), I(t), B(), F?.());
                 },
-                [j, V, R, F],
+                [j, B, R, F],
             ),
             K = i.useCallback(() => {
                 if (null == h.current || null == j) return;
@@ -313,11 +313,11 @@ let eI = new S.A("ImageEditor"),
                     t = j.height,
                     l = j.width,
                     n = eM({ width: t, height: l }, g, R);
-                (S(e), v({ width: t, height: l }), b(n), V(), F?.());
-            }, [j, A, V, g, R, F]),
+                (S(e), v({ width: t, height: l }), I(n), B(), F?.());
+            }, [j, A, B, g, R, F]),
             P = i.useCallback(() => {
-                null != h.current && (N((e) => !e), V(), F?.());
-            }, [h, V, F]),
+                null != h.current && (N((e) => !e), B(), F?.());
+            }, [h, B, F]),
             U = i.useCallback(() => {
                 if (null == j) return {};
                 let { height: e, width: t } = eS(
@@ -335,7 +335,7 @@ let eI = new S.A("ImageEditor"),
             Y = i.useCallback(() => {
                 Z.current?.moveGrabber(0.025);
             }, []),
-            Q = i.useCallback((e) => {
+            $ = i.useCallback((e) => {
                 (p({ x: e.clientX - o.current.x, y: e.clientY - o.current.y }), C(!0));
             }, []);
         i.useEffect(() => {
@@ -344,20 +344,20 @@ let eI = new S.A("ImageEditor"),
             }
             return (window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e));
         }, []);
-        let X = i.useCallback(
+        let Q = i.useCallback(
             (e) => {
                 let { x: t, y: l } = o.current;
                 _ &&
                     (e.clientX !== t || e.clientY !== l) &&
-                    (V({ x: (t = e.clientX - M.x), y: (l = e.clientY - M.y) }), F?.());
+                    (B({ x: (t = e.clientX - M.x), y: (l = e.clientY - M.y) }), F?.());
             },
-            [_, M, V, F],
+            [_, M, B, F],
         );
         i.useEffect(() => {
-            if (_) return (window.addEventListener("mousemove", X), () => window.removeEventListener("mousemove", X));
-        }, [X, _]);
-        let q = i.useRef(null),
-            ee = i.useCallback(async () => {
+            if (_) return (window.addEventListener("mousemove", Q), () => window.removeEventListener("mousemove", Q));
+        }, [Q, _]);
+        let X = i.useRef(null),
+            q = i.useCallback(async () => {
                 let e;
                 if (null == h.current || null == j || k) return;
                 let t = Date.now(),
@@ -365,19 +365,7 @@ let eI = new S.A("ImageEditor"),
                     n = Math.min(128, Math.max(j.height, j.width)),
                     i = { height: n, width: n },
                     s = null;
-                null != q.current && (q.current(), (q.current = null));
-                let { x: c, y: d } = o.current;
-                if (
-                    0 === A &&
-                    !E &&
-                    1 === g &&
-                    0 === c &&
-                    0 === d &&
-                    j.width === j.height &&
-                    r.size <= $.EMOJI_MAX_FILESIZE
-                )
-                    e = a;
-                else if (R)
+                if ((null != X.current && (X.current(), (X.current = null)), R))
                     try {
                         let t = (function (e, t, l) {
                                 let { height: n, width: i } = eS(t, l),
@@ -395,7 +383,7 @@ let eI = new S.A("ImageEditor"),
                                 {
                                     file: r,
                                     image: l,
-                                    cropDimensions: eb,
+                                    cropDimensions: eI,
                                     cropOriginCoordinates: o.current,
                                     maxDimensions: i,
                                     imageRotation: A,
@@ -407,18 +395,18 @@ let eI = new S.A("ImageEditor"),
                                 g,
                             ),
                             { result: a, cancelFn: s } = await (0, ev.ny)(t);
-                        ((q.current = s), (e = await a));
+                        ((X.current = s), (e = await a));
                     } catch (e) {
-                        (eI.error("Error cropping animated image", e), (s = D.j.ANIMATED_CROPPING));
+                        (eb.error("Error cropping animated image", e), (s = D.j.ANIMATED_CROPPING));
                     } finally {
-                        (q.current?.(), (q.current = null));
+                        (X.current?.(), (X.current = null));
                     }
                 else
-                    e = L
+                    e = G
                         ? a
                         : (0, eo.iL)({
                               image: l,
-                              cropDimensions: eb,
+                              cropDimensions: eI,
                               cropOriginCoordinates: o.current,
                               maxDimensions: i,
                               imageRotation: A,
@@ -427,26 +415,26 @@ let eI = new S.A("ImageEditor"),
                 return (
                     u({ imageData: e, imageDataTimestamp: t, error: s, loading: !1 }),
                     () => {
-                        (q.current?.(), (q.current = null));
+                        (X.current?.(), (X.current = null));
                     }
                 );
-            }, [r, A, R, L, k, u, j, g, a, E]);
+            }, [r, A, R, G, k, u, j, g, a, E]);
         i.useEffect(() => {
-            _ || ee();
-        }, [ee, d, A, j, _, g, G, E]);
-        let et = i.useCallback(() => {
+            _ || q();
+        }, [q, d, A, j, _, g, L, E]);
+        let ee = i.useCallback(() => {
                 if (null == h.current) return;
                 let e = h.current.naturalWidth,
                     t = h.current.naturalHeight;
                 (v({ width: e, height: t }), S(0), N(!1));
                 let l = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-                (x(l), z(l), (J.current += 1), b(eM({ width: e, height: t }, l, R)), V({ x: 0, y: 0 }));
-            }, [h, R, V]),
-            el = i.useCallback(() => {
-                et();
-            }, [et]);
+                (x(l), z(l), (V.current += 1), I(eM({ width: e, height: t }, l, R)), B({ x: 0, y: 0 }));
+            }, [h, R, B]),
+            et = i.useCallback(() => {
+                ee();
+            }, [ee]);
         return (
-            i.useImperativeHandle(t, () => ({ reset: et })),
+            i.useImperativeHandle(t, () => ({ reset: ee })),
             (0, n.jsxs)("div", {
                 className: s()(eN.j0, { [eN.Id]: _ }),
                 style: { "--custom-image-editor-size": "288px" },
@@ -455,7 +443,7 @@ let eI = new S.A("ImageEditor"),
                         className: eN.oW,
                         children: [
                             (0, n.jsx)("img", {
-                                onLoad: el,
+                                onLoad: et,
                                 onError: () => {
                                     u({ error: D.j.IMAGE_LOAD, loading: !1 });
                                 },
@@ -469,14 +457,14 @@ let eI = new S.A("ImageEditor"),
                                 crossOrigin: "anonymous",
                                 alt: H.intl.string(H.t.EYR1Fa),
                                 ref: h,
-                                onMouseDown: Q,
+                                onMouseDown: $,
                                 draggable: !1,
                             }),
-                            !L &&
+                            !G &&
                                 !k &&
                                 (0, n.jsx)("div", {
                                     className: eN.Lw,
-                                    style: { opacity: +(null != j), width: eb.width, height: eb.height },
+                                    style: { opacity: +(null != j), width: eI.width, height: eI.height },
                                     children: (0, n.jsx)(T.E, {
                                         className: eN.TB,
                                         variant: "text-xs/normal",
@@ -486,7 +474,7 @@ let eI = new S.A("ImageEditor"),
                                 }),
                         ],
                     }),
-                    L
+                    G
                         ? (0, n.jsx)("div", {
                               className: eN.Nf,
                               children: (0, n.jsx)(T.E, {
@@ -548,22 +536,22 @@ let eI = new S.A("ImageEditor"),
                                                   }),
                                               }),
                                           }),
-                                          null != G &&
+                                          null != L &&
                                               (0, n.jsx)(
                                                   ef.A,
                                                   {
                                                       ref: Z,
                                                       className: eN.aw,
-                                                      initialValue: G,
+                                                      initialValue: L,
                                                       minValue: 1,
                                                       maxValue: 4,
                                                       keyboardStep: 0.025,
-                                                      asValueChanges: B,
+                                                      asValueChanges: J,
                                                       equidistant: !0,
                                                       hideBubble: !0,
                                                       "aria-label": H.intl.string(H.t["2hPcVJ"]),
                                                   },
-                                                  J.current,
+                                                  V.current,
                                               ),
                                           (0, n.jsx)(ed.m, {
                                               text: H.intl.string(H.t.Ch32tT),
@@ -611,7 +599,7 @@ let eO = new S.A("EmojiStudio"),
             S = "emoji" in e ? e.emoji : void 0,
             T = !!S,
             [F, Z] = i.useState(a ?? null),
-            [J, V] = i.useState(!1),
+            [V, B] = i.useState(!1),
             P = (0, u.bG)([_.A, y.A, C.A], () => {
                 let e = y.A.getGuildId(),
                     t = _.A.getGuild(e);
@@ -646,11 +634,11 @@ let eO = new S.A("EmojiStudio"),
                         l.current = null;
                         return;
                     }
-                    l.current = b.A.fromBlob(A.f.EMOJI, t);
+                    l.current = I.A.fromBlob(A.f.EMOJI, t);
                 }, [t]),
                 l),
-            { isEditableAnimatedImage: eI } = (0, O._)(F?.file),
-            eb = eI || F?.file?.type === "image/avif";
+            { isEditableAnimatedImage: eb } = (0, O._)(F?.file),
+            eI = eb || F?.file?.type === "image/avif";
         (i.useEffect(
             () => (
                 (0, R.O)(!1),
@@ -664,16 +652,16 @@ let eO = new S.A("EmojiStudio"),
                 if (null == S) return;
                 let e = M.A.getEmojiRawAsset(S.id);
                 if (null != e) {
-                    (Z(e), ed(e.data), eu(S.name), V(!1));
+                    (Z(e), ed(e.data), eu(S.name), B(!1));
                     return;
                 }
-                (V(!0),
+                (B(!0),
                     (0, W.$)(S)
                         .then((e) => {
-                            (Z(e), ed(e.data), eu(S.name), V(!1));
+                            (Z(e), ed(e.data), eu(S.name), B(!1));
                         })
                         .catch((e) => {
-                            (eO.error("Failed to fetch emoji image", e), ei(D.j.MISSING_IMAGE_DATA), V(!1));
+                            (eO.error("Failed to fetch emoji image", e), ei(D.j.MISSING_IMAGE_DATA), B(!1));
                         }));
             }, [S]));
         let eS = i.useCallback(
@@ -692,7 +680,7 @@ let eO = new S.A("EmojiStudio"),
             },
             [en, er, em, F, $],
         );
-        (0, I.l0)(() => {
+        (0, b.l0)(() => {
             ef.current || eS({ reason: "closed" });
         });
         let eM = i.useCallback(async () => {
@@ -731,11 +719,11 @@ let eO = new S.A("EmojiStudio"),
                     (ef.current = !0),
                     (function (e) {
                         let { emoji: t, guildId: l } = e;
-                        (0, L.P0)(
-                            (0, G.o)("", z.Ck.CUSTOM, {
+                        (0, G.P0)(
+                            (0, L.o)("", z.Ck.CUSTOM, {
                                 position: z.xJ.TOP,
                                 component: (0, n.jsx)(K, { emoji: t, guildId: l }),
-                                duration: B,
+                                duration: J,
                             }),
                         );
                     })({ emoji: t, guildId: $ }),
@@ -758,7 +746,7 @@ let eO = new S.A("EmojiStudio"),
                 (eg.current++, (0, R.O)(!0));
             }, []),
             eR = T ? H.intl.string(H.t.FOYn8U) : H.intl.string(H.t.iMJO37);
-        return J || null == F
+        return V || null == F
             ? (0, n.jsx)("main", {
                   className: ep.iW,
                   children: (0, n.jsxs)("div", {
@@ -894,7 +882,7 @@ let eO = new S.A("EmojiStudio"),
                                             selected: $,
                                             onError: (e) => ea(e),
                                             labelledBy: "guild-selector-label",
-                                            isEmojiAnimated: eb,
+                                            isEmojiAnimated: eI,
                                             errorMessage: null != er ? X(er) : void 0,
                                         }),
                                     }),
