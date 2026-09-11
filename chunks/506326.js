@@ -45,8 +45,8 @@ var l,
     N = n(246913),
     _ = n(291747),
     j = n(417270),
-    T = n(768622),
-    b = n(369606),
+    b = n(768622),
+    T = n(369606),
     R = n(825860),
     O = n(605323),
     L = n(748562),
@@ -203,7 +203,7 @@ function es(e) {
         l = (0, F.iy)(t);
     return (0, F.BZ)(t)
         ? (0, i.jsx)($, {
-              Icon: T.g,
+              Icon: b.g,
               showTooltip: 0 === n,
               text: W.intl.formatToPlainString(W.t["Klie/P"], { days: l }),
               tooltipText: W.intl.formatToPlainString(W.t.PwMe0s, { days: l }),
@@ -219,7 +219,7 @@ function er(e) {
     if (null == s) return null;
     let r = l ? W.t.C0AxoR : W.t.SDRHgr;
     return (0, i.jsx)($, {
-        Icon: b.TrophyIcon,
+        Icon: T.TrophyIcon,
         text: (0, i.jsxs)(i.Fragment, {
             children: [
                 W.intl.string(W.t["/50eHi"]),
@@ -237,7 +237,7 @@ function ea(e) {
     let s = (0, D.S1)(n, [1, 2, 5])
         ? W.intl.formatToPlainString(W.t.HtifnG, { count: l })
         : W.intl.formatToPlainString(W.t["jq/Bmu"], { count: l });
-    return (0, i.jsx)($, { Icon: b.TrophyIcon, text: s });
+    return (0, i.jsx)($, { Icon: T.TrophyIcon, text: s });
 }
 function eo(e) {
     let { entry: t } = e,

@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(598071),
     _ = n(60809),
     j = n(375708),
-    T = n(215837);
-let b = i.forwardRef(function (e, t) {
+    b = n(215837);
+let T = i.forwardRef(function (e, t) {
         let { type: n, channelId: s } = e,
             a = (0, r.bG)(
                 [S.A],
@@ -49,11 +49,11 @@ let b = i.forwardRef(function (e, t) {
             }, [a, n, s, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: A()(T.UD, _.KG),
+            className: A()(b.UD, _.KG),
             ref: t,
             children: (0, l.jsx)(C.D, {
                 tabIndex: 0,
-                className: A()(T.x6, { [T.rK]: a }),
+                className: A()(b.x6, { [b.rK]: a }),
                 onClick: h,
                 "aria-label": j.intl.string(j.t.erHFxI),
                 "aria-expanded": a,
@@ -66,7 +66,7 @@ let b = i.forwardRef(function (e, t) {
     }),
     R = i.memo(function (e) {
         let { type: t, channelId: n } = e;
-        return (0, l.jsx)(b, { type: t, channelId: n });
+        return (0, l.jsx)(T, { type: t, channelId: n });
     });
 var O = n(931664),
     L = n(951260),
@@ -275,8 +275,8 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             })),
             _ = N.isSubmitButtonEnabled,
             j = !v || N.isAppsButtonEnabled,
-            T = !v || N.isEmojiButtonEnabled,
-            b = !v || N.isGifButtonEnabled,
+            b = !v || N.isEmojiButtonEnabled,
+            T = !v || N.isGifButtonEnabled,
             w = !v || N.isStickerButtonEnabled,
             P =
                 ((t = C.id),
@@ -333,7 +333,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             x.gifs?.button != null &&
                 null == D &&
                 y &&
-                b &&
+                T &&
                 !S &&
                 B.push((0, l.jsx)(Y, { disabled: A, type: x, channel: C }, "gif")),
             x.stickers?.button != null &&
@@ -346,7 +346,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             !S &&
             J &&
             (y || S
-                ? T && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: C.id }, "emoji"))
+                ? b && B.push((0, l.jsx)(F, { disabled: A, type: x, channelId: C.id }, "emoji"))
                 : B.push((0, l.jsx)(H.A, { disabled: A, type: x, channel: C }, "expression"))),
         z && j && B.push((0, l.jsx)(R, { channelId: C.id, type: x }, "appLauncher")),
         Z && B.push((0, l.jsx)(X, { onClick: E, disabled: A || P }, "submit")),

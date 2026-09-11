@@ -516,7 +516,7 @@ function e5(e) {
     });
 }
 if (221552 != n.j) var X = n(43105);
-function e7(e) {
+function e3(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         r = l.useCallback(() => {
             n(er.i.USER_DISMISS);
@@ -533,7 +533,7 @@ function e7(e) {
         onRequestClose: r,
     });
 }
-var e3 = n(650583),
+var e7 = n(650583),
     e8 = n(872330);
 let e4 = (0, J.Ld)(),
     e6 = "PrivateChannelRecipientsInvite",
@@ -616,7 +616,7 @@ function ta(e) {
         [n, l] = (0, Z.kn)([d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
     return n !== d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
         ? null
-        : (0, i.jsx)(e7, { targetElementRef: t, markAsDismissed: l });
+        : (0, i.jsx)(e3, { targetElementRef: t, markAsDismissed: l });
 }
 class to extends l.PureComponent {
     state = { separator: !1, copied: !1, newChannelName: "", previewIcon: void 0, collapsedSections: new Set() };
@@ -815,18 +815,18 @@ class to extends l.PureComponent {
         let r = this.getDisplayedResults(),
             s = t;
         switch (e.key) {
-            case e3.dh.BACKSPACE:
+            case e7.dh.BACKSPACE:
                 (null == i || 0 === i.length) &&
                     n.size > 0 &&
                     (e.preventDefault(), e.stopPropagation(), this.handleRemoveTag(n.size - 1));
                 break;
-            case e3.dh.ARROW_DOWN:
+            case e7.dh.ARROW_DOWN:
                 (e.preventDefault(), e.stopPropagation(), ++s >= r.length && (s = 0), this.handleSelectionChange(s));
                 break;
-            case e3.dh.ARROW_UP:
+            case e7.dh.ARROW_UP:
                 (e.preventDefault(), e.stopPropagation(), --s < 0 && (s = r.length - 1), this.handleSelectionChange(s));
                 break;
-            case e3.dh.ENTER:
+            case e7.dh.ENTER:
                 (e.preventDefault(), e.stopPropagation(), r.length > s && this.handleSelect(s));
         }
     }
@@ -1644,7 +1644,7 @@ function tf(e) {
                 icon: s,
                 fullWidth: n,
             }),
-            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e7, { targetElementRef: h, markAsDismissed: E }),
+            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e3, { targetElementRef: h, markAsDismissed: E }),
         ],
     });
 }

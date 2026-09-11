@@ -31,8 +31,8 @@ var v = n(112107),
     N = n(930101),
     _ = n(976860),
     j = n(302031),
-    T = n(586172),
-    b = n(696451),
+    b = n(586172),
+    T = n(696451),
     R = n(317525),
     O = n(71393),
     L = n(957565),
@@ -190,15 +190,15 @@ var ev = n(881140),
     eN = n(746080),
     e_ = n(279538),
     ej = n(165648),
-    eT = n(969490);
-let eb = { display: "inline" };
+    eb = n(969490);
+let eT = { display: "inline" };
 function eR(e) {
     return e.stopPropagation();
 }
 function eO(e) {
     return {
         ...e,
-        react: (t, n, i) => (0, l.jsx)("span", { style: eb, onClick: eR, children: e.react(t, n, i) }, i.key),
+        react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eR, children: e.react(t, n, i) }, i.key),
     };
 }
 function eL(e) {
@@ -239,7 +239,7 @@ let eM = {
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eT.kw, "hljs"), children: (0, M.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(eb.kw, "hljs"), children: (0, M.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
@@ -250,11 +250,11 @@ let eM = {
                             L.p5
                                 ? (0, l.jsx)("div", { className: ej.lB, children: (0, l.jsx)(eL, { text: e.content }) })
                                 : null,
-                            (0, l.jsx)(T.l, {
+                            (0, l.jsx)(b.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: r()(eT.kw, "hljs"),
+                                className: r()(eb.kw, "hljs"),
                                 highlightedClassName: e_.H,
                                 children: (0, l.jsx)(f.c2, {
                                     createPromise: () =>
@@ -268,7 +268,7 @@ let eM = {
                                             return null == n
                                                 ? s()
                                                 : (0, l.jsx)("code", {
-                                                      className: r()(eT.kw, "hljs", n.language),
+                                                      className: r()(eb.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -336,7 +336,7 @@ let eM = {
                                               break;
                                           case "linked-roles":
                                               if (null != n) {
-                                                  let t = b.Ay.getSelfMember(e);
+                                                  let t = T.Ay.getSelfMember(e);
                                                   if (null == t) return;
                                                   let l = R.A.getRole(e, n);
                                                   null == l || t.roles.includes(l.id)

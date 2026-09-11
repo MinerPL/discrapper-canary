@@ -24,8 +24,8 @@ var A = n(442433),
     N = n(688810),
     _ = n(941726),
     j = n(449582),
-    T = n(900797),
-    b = n(847374),
+    b = n(900797),
+    T = n(847374),
     R = n(320448),
     O = n(939249),
     L = n(485947),
@@ -80,9 +80,9 @@ let B = i.memo(function (e) {
                         c <= 3 && !d
                             ? null
                             : ((t = d
-                                  ? (0, l.jsx)(T.t, { className: F.wT })
+                                  ? (0, l.jsx)(b.t, { className: F.wT })
                                   : o
-                                    ? (0, l.jsx)(b.a, { className: F.wT })
+                                    ? (0, l.jsx)(T.a, { className: F.wT })
                                     : (0, l.jsx)(R._, { className: F.wT })),
                               (0, l.jsx)(O.D, {
                                   ...p,
@@ -146,8 +146,8 @@ var ex = n(915089),
     eN = n(994500),
     e_ = n(309010),
     ej = n(741961),
-    eT = n(287809),
-    eb = n(977997),
+    eb = n(287809),
+    eT = n(977997),
     eR = n(625494),
     eO = n(403362),
     eL = n(427262),
@@ -178,7 +178,7 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
                 ..._
             } = e,
             j = i.useRef(null),
-            [T, b] = i.useState(!1),
+            [b, T] = i.useState(!1),
             R = null != v ? new Date(v) : null,
             O = i.useCallback(
                 (e) => {
@@ -253,7 +253,7 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
                                 n.e("717334"),
                                 n.e("184841"),
                             ]).then(n.bind(n, 107632)),
-                            t = eb.A.isInChannel(e_.Ay.getVoiceChannelId(), c.id);
+                            t = eT.A.isInChannel(e_.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, l.jsx)(e, { ...n, user: c, guildId: x, channel: g, showMediaItems: t });
                     });
                 },
@@ -286,9 +286,9 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
             position: d.Fr ? "window_center" : "left",
             spacing: 16,
             onShiftClick: L,
-            shouldShow: T,
+            shouldShow: b,
             onRequestClose: () => {
-                b(!1);
+                T(!1);
             },
             children: (e) => {
                 let { onClick: n, onMouseDown: i, ...a } = e;
@@ -314,14 +314,14 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
                     isMobile: y,
                     isVR: S,
                     onClickPremiumGuildIcon: M,
-                    selected: T,
+                    selected: b,
                     itemProps: _,
                     nameplate: N,
                     onClick: (e) => {
-                        e.shiftKey ? L?.() : b((e) => !e);
+                        e.shiftKey ? L?.() : T((e) => !e);
                     },
                     onMouseDown: (e) => {
-                        T ? e.stopPropagation() : i?.(e);
+                        b ? e.stopPropagation() : i?.(e);
                     },
                     ...a,
                 });
@@ -333,7 +333,7 @@ let ew = eM.Ay.getEnableHardwareAcceleration(),
             { channel: i, user: s, index: r } = e,
             a = (0, u.rm)(`${r}`),
             o = (0, h.bG)([ej.A], () => ej.A.isTyping(i.id, s.id)),
-            c = (0, h.bG)([eT.default], () => eT.default.getCurrentUser()),
+            c = (0, h.bG)([eb.default], () => eb.default.getCurrentUser()),
             d = (0, h.bG)([ev.A], () => (null != t ? ev.A.getRole(i.guild_id, t)?.name : void 0), [i, t]),
             m = (0, j.r)({ user: s, guildId: i.guild_id });
         return (0, l.jsx)(eD, { ...n, ...a, isTyping: o, currentUser: c, colorRoleName: d, nameplate: m });
@@ -617,7 +617,7 @@ class eF extends i.Component {
                                     children: (0, l.jsx)(p.H, {
                                         id: a,
                                         children: V.intl.format(V.t.JBQxV6, {
-                                            channel: (0, ek.m1)(n, eT.default, eN.A),
+                                            channel: (0, ek.m1)(n, eb.default, eN.A),
                                         }),
                                     }),
                                 }),

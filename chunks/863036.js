@@ -12,13 +12,13 @@ var s = n(435558),
     I = n(7584),
     f = n(815807),
     m = n(95701),
-    A = n(671759),
-    C = n(889227),
+    C = n(671759),
+    A = n(889227),
     p = n(149790),
     L = n(734057),
     g = n(652215),
-    y = n(37411);
-let v = g.XlH.CLOSED,
+    v = n(37411);
+let y = g.XlH.CLOSED,
     H = {},
     O = {},
     R = !1,
@@ -54,7 +54,7 @@ function D(e, t, n) {
         case "topic_":
             return t ?? "";
         case "defaultAutoArchiveDuration":
-            return t ?? y.cM;
+            return t ?? v.cM;
         case "defaultSortOrder":
             return t ?? T.T.LATEST_ACTIVITY;
         case "defaultForumLayout":
@@ -87,7 +87,7 @@ function b(e) {
             )));
 }
 function M() {
-    ((U = !1), (v = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {}));
+    ((U = !1), (y = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {}));
 }
 let P = d().debounce(() => {
     if (null == a || null == i) return !1;
@@ -105,11 +105,11 @@ let P = d().debounce(() => {
         ((a = i), k.emitChange());
 }, 500);
 function w(e) {
-    return new A.A({
+    return new C.A({
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new C.A(e.inviter) : null,
+        inviter: null != e.inviter ? new A.A(e.inviter) : null,
         channel: (0, m.OY)(e.channel),
         guild: null != e.guild ? (0, p.DY)(e.guild) : null,
         uses: e.uses,
@@ -172,14 +172,14 @@ class F extends S.Ay.Store {
         return a;
     }
     getFormState() {
-        return v;
+        return y;
     }
     getCategory() {
         return u;
     }
     getProps() {
         return {
-            submitting: v === g.XlH.SUBMITTING,
+            submitting: y === g.XlH.SUBMITTING,
             errors: H,
             channel: a,
             section: r,
@@ -195,7 +195,7 @@ let k = new F(h.h, {
         CHANNEL_SETTINGS_INIT: function (e) {
             let t = L.A.getChannel(e.channelId);
             if (null == t) return M();
-            ((v = g.XlH.OPEN),
+            ((y = g.XlH.OPEN),
                 (a = i = t),
                 (G = "location" in e && null != e.location ? e.location : null),
                 (l = "subsection" in e ? e.subsection : null),
@@ -206,13 +206,13 @@ let k = new F(h.h, {
             return ((H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0);
         },
         CHANNEL_SETTINGS_SUBMIT: function () {
-            ((v = g.XlH.SUBMITTING), (H = {}));
+            ((y = g.XlH.SUBMITTING), (H = {}));
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-            ((i = a), (v = g.XlH.OPEN));
+            ((i = a), (y = g.XlH.OPEN));
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
-            ((v = g.XlH.OPEN),
+            ((y = g.XlH.OPEN),
                 (H = Object.keys(e.errors ?? {}).reduce((t, n) => {
                     let r = e.errors[n];
                     return ((0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t);
@@ -246,8 +246,8 @@ let k = new F(h.h, {
                 videoQualityMode: I,
                 availableTags: f,
                 defaultSortOrder: m,
-                defaultForumLayout: A,
-                defaultTagSetting: C,
+                defaultForumLayout: C,
+                defaultTagSetting: A,
                 iconEmoji: p,
                 themeColor: L,
                 applicationId: g,
@@ -272,8 +272,8 @@ let k = new F(h.h, {
                 void 0 !== N && (a = a.set("defaultReactionEmoji", N)),
                 null != f && (a = a.set("availableTags", f)),
                 null != m && (a = a.set("defaultSortOrder", m)),
-                null != C && (a = a.set("defaultTagSetting", C)),
-                null != A && (a = a.set("defaultForumLayout", A)),
+                null != A && (a = a.set("defaultTagSetting", A)),
+                null != C && (a = a.set("defaultForumLayout", C)),
                 void 0 !== p && (a = a.set("iconEmoji", p)),
                 null != L && (a = a.set("themeColor", L)),
                 null != g && (a = a.set("application_id", g)),
@@ -302,7 +302,7 @@ let k = new F(h.h, {
                 channel: { id: t },
             } = e;
             if (null == a || a.id !== t) return !1;
-            v = g.XlH.CLOSED;
+            y = g.XlH.CLOSED;
         },
         INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
             ((O = { ...O }), delete O[e.code]);

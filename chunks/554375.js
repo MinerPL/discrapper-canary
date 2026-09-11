@@ -1,4 +1,4 @@
-(n.d(t, { Cp: () => _, Gf: () => v, Sw: () => R, V4: () => b, ak: () => N, dK: () => y, dZ: () => S }), n(321073));
+(n.d(t, { Cp: () => _, Gf: () => v, Sw: () => R, V4: () => T, ak: () => N, dK: () => y, dZ: () => S }), n(321073));
 var l = n(435558),
     i = n.n(l),
     s = n(636537),
@@ -82,11 +82,11 @@ function j(e) {
     let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? h.Ay.getByName(e)).filter(x.Vq);
     return [...(0, m.A)(t).keys()];
 }
-function T(e) {
+function b(e) {
     return null == e ? null : (e.id ?? h.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
 }
-function b(e) {
-    let t = T(e);
+function T(e) {
+    let t = b(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
@@ -102,7 +102,7 @@ function b(e) {
         );
 }
 function R(e) {
-    let t = T(e);
+    let t = b(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",

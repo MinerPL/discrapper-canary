@@ -36,9 +36,9 @@ function N(e) {
             ...y
         } = e,
         [N, _] = i.useState(!1),
-        [j, T] = i.useState(50),
-        b = N || s,
-        R = (0, C.t)(S, "emojiButton", b ? "Hovered" : "Normal"),
+        [j, b] = i.useState(50),
+        T = N || s,
+        R = (0, C.t)(S, "emojiButton", T ? "Hovered" : "Normal"),
         O = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 18;
             return {
@@ -48,10 +48,10 @@ function N(e) {
             };
         })(j, A),
         L = i.useCallback(() => {
-            if (b) return;
+            if (T) return;
             let e = Math.floor(77 * Math.random());
-            (_(!0), T(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered));
-        }, [b, _, T]),
+            (_(!0), b(e), (0, x.K)(I.EmojiInteractionPoint.EmojiButtonMouseEntered));
+        }, [T, _, b]),
         M = i.useCallback(() => {
             _(!1);
         }, [_]),
@@ -78,7 +78,7 @@ function N(e) {
                 ? n()
                 : (0, l.jsx)(d.c, {
                       config: v,
-                      to: { value: +!!b },
+                      to: { value: +!!T },
                       children: (e) => {
                           let { value: t } = e;
                           return (0, l.jsxs)(a.animated.div, {
@@ -86,13 +86,13 @@ function N(e) {
                               style: { ...O, transform: t.to([0, 1], [1, 1.14]).to((e) => `scale(${e})`) },
                               children: [
                                   (0, l.jsx)("div", {
-                                      className: r()(S.sprite, S.spriteColored, b ? S.active : S.inactive),
+                                      className: r()(S.sprite, S.spriteColored, T ? S.active : S.inactive),
                                   }),
                                   (0, l.jsx)("div", {
                                       className: r()(
                                           S.sprite,
                                           S.spriteGreyscale,
-                                          b ? S.inactive : S.active,
+                                          T ? S.inactive : S.active,
                                           { [S.reducedMotion]: w },
                                           g,
                                       ),
@@ -117,8 +117,8 @@ function _(e) {
         } = e,
         _ = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
         j = (0, A.k0)(),
-        [T, b] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        R = I && T === u.M.TRIAL_NUX_EMOJI_BUTTON,
+        [b, T] = (0, g.kn)(j ? [u.M.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        R = I && b === u.M.TRIAL_NUX_EMOJI_BUTTON,
         O = !a && R,
         L = i.useRef(null),
         M = x ?? L;
@@ -126,7 +126,7 @@ function _(e) {
         return (0, l.jsx)(N, {
             ref: M,
             onMouseLeave: () => {
-                R && b(E.i.USER_DISMISS);
+                R && T(E.i.USER_DISMISS);
             },
             onClick: (e) => {
                 c?.(e);

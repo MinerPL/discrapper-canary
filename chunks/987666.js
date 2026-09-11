@@ -26,27 +26,27 @@ function c(e) {
         }));
     if (d.type === a.u$.LOADING) return null;
     let { invoicePreview: I } = d,
-        A = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
-        g = (0, r.de)({
+        g = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+        A = (0, r.de)({
             overrideRenewalDate: m,
             currentInvoice: C ? I : void 0,
-            renewalInvoice: A,
+            renewalInvoice: g,
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(A, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: _ } = (0, i.QM)(g, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        _ = {
+        v = {
             purchaseButtonText: y,
             totalDue: C ? I.total : 0,
             renewalPrice: P,
-            multiPeriodDiscountAttributes: v,
+            multiPeriodDiscountAttributes: _,
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
-            startDate: g,
+            startDate: A,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: h, ...v }, paymentSourceType: n, immediateDelivery: S });
 }

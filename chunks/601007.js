@@ -52,7 +52,7 @@ function C(e) {
         0 === t.length)
     )
         return null;
-    function T(e, t, i, s) {
+    function b(e, t, i, s) {
         (!(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
@@ -70,11 +70,11 @@ function C(e) {
             text: e.getLabel(),
             fullWidth: E,
             onClick: (t) => {
-                (I && t.stopPropagation(), T(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY));
+                (I && t.stopPropagation(), b(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY));
             },
         });
     }
-    let b = t.flatMap((e, t) => {
+    let T = t.flatMap((e, t) => {
         let { ctaConfig: n, skuId: l } = e,
             s = [];
         return (
@@ -87,7 +87,7 @@ function C(e) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => T(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
+                        action: () => b(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -114,7 +114,7 @@ function C(e) {
                     onClose: t,
                     onSelect: void 0,
                     "aria-label": A.intl.string(A.t["3XhYOS"]),
-                    children: (0, i.jsx)(a.rX, { children: b }),
+                    children: (0, i.jsx)(a.rX, { children: T }),
                 }),
             });
         },

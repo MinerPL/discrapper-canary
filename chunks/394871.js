@@ -76,8 +76,8 @@ var v = n(748562),
     N = n(47167),
     _ = n(734057),
     j = n(864436),
-    T = n(200041),
-    b = n(375708);
+    b = n(200041),
+    T = n(375708);
 function R(e) {
     let {
             stream: t,
@@ -94,10 +94,10 @@ function R(e) {
         m = (0, u.bG)([_.A], () => _.A.getChannel(t.channelId)),
         f = (0, N.Ay)(m),
         p = n?.name === "" ? null : n?.name,
-        g = null != p ? p : b.intl.string(b.t.eXan7B),
+        g = null != p ? p : T.intl.string(T.t.eXan7B),
         x = null != f ? `${g} (${f})` : g,
         A = h ? x : g;
-    return (0, l.jsx)(T.A, {
+    return (0, l.jsx)(b.A, {
         icon: a ? void 0 : (0, l.jsx)(j.A, { icon: v.U, className: r }),
         text: A,
         tooltipText: c ? void 0 : o ? x : h ? void 0 : (f ?? void 0),
@@ -165,13 +165,13 @@ function U(e) {
         h = (0, N.Ay)(t),
         m = t.isDM() || t.isGroupDM(),
         f = m
-            ? b.intl.string(b.t["9FaEzi"])
+            ? T.intl.string(T.t["9FaEzi"])
             : t.isGuildStageVoice()
-              ? b.intl.string(b.t.QygGCN)
-              : b.intl.string(b.t.msxteM),
+              ? T.intl.string(T.t.QygGCN)
+              : T.intl.string(T.t.msxteM),
         p = null != h ? `${f} (${h})` : f,
         g = c ? p : f;
-    return (0, l.jsx)(T.A, {
+    return (0, l.jsx)(b.A, {
         icon: (0, l.jsx)(D.A, { size: "custom", color: d, channel: t, className: r()(A.Kk, s) }),
         text: g,
         tooltipText: o ? void 0 : a ? p : m || c ? void 0 : (h ?? void 0),
@@ -213,7 +213,7 @@ function F(e) {
     (0, h.A)(t?.id);
     let _ = s?.discoverable !== !1 ? s : null,
         j = (0, m.AO)(_),
-        T = i.useMemo(() => {
+        b = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
                 return t === P.$pd.CUSTOM_STATUS;
@@ -222,8 +222,8 @@ function F(e) {
             let t = e.state?.trim() ?? null;
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
-        b = (0, f.Uk)("ActivityStatus"),
-        O = i.useMemo(() => (null != T, null), [T, b]),
+        T = (0, f.Uk)("ActivityStatus"),
+        O = i.useMemo(() => (null != b, null), [b, T]),
         L = i.useMemo(
             () =>
                 (0, a.uniqWith)(
@@ -242,12 +242,12 @@ function F(e) {
         w = n?.find((e) => e.name === j?.name),
         D = t?.bot === !0,
         F = (0, u.bG)([E.A], () => E.A.isBlockedOrIgnored(t?.id)),
-        H = T?.state != null,
+        H = b?.state != null,
         B = null != _,
         W = !B && null != o,
         K = L.length + (B || W ? 1 : 0),
         z = K > 1,
-        Z = T?.state != null && "xs" === x;
+        Z = b?.state != null && "xs" === x;
     if (F) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -332,7 +332,7 @@ function F(e) {
                   null == O
                       ? null
                       : (0, l.jsx)(C, {
-                            customStatusActivity: T,
+                            customStatusActivity: b,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: v,
@@ -351,11 +351,11 @@ function F(e) {
               className: $,
               children: [
                   J(),
-                  null != T && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
-                  null == T
+                  null != b && K > 0 && (0, l.jsx)(V, { textVariant: `text-${x}/normal`, className: p }),
+                  null == b
                       ? null
                       : (0, l.jsx)(M, {
-                            customStatusActivity: T,
+                            customStatusActivity: b,
                             textSize: x,
                             animateEmoji: I,
                             hideEmoji: v,

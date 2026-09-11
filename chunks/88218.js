@@ -51,12 +51,12 @@ let C = function (e) {
             onScroll: N,
             renderCategoryListItem: _,
             rowCountBySection: j,
-            renderSection: T,
-            navId: b,
+            renderSection: b,
+            navId: T,
             itemIdPrefix: R,
         } = e,
         O = d.useStore((e) => e.activeCategoryIndex),
-        L = null != b && null != R,
+        L = null != T && null != R,
         { itemIdForIndex: M, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
         w = (function (e) {
             let {
@@ -165,7 +165,7 @@ let C = function (e) {
                 _
             );
         })({
-            navId: b ?? "expression-picker-categories-disabled",
+            navId: T ?? "expression-picker-categories-disabled",
             categoryListRef: t,
             itemIdForIndex: M,
             parseIndex: k,
@@ -208,7 +208,7 @@ let C = function (e) {
             rowHeight: U,
             hideScrollbar: !0,
             rowCountBySection: j,
-            renderSection: T,
+            renderSection: b,
             role: L ? "none presentation" : void 0,
         }),
         V = (0, l.jsxs)("div", {

@@ -36,14 +36,14 @@ function p(e) {
         }, []),
         _ = "username" === t,
         j = null != u && null != u.primaryColor && null != u.secondaryColor,
-        T = _ && j,
+        b = _ && j,
         {
-            gradientStyle: b,
+            gradientStyle: T,
             gradientClassname: R,
             gradientGlowClassname: O,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
         L = (0, h.CR)(n),
-        M = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: T }), children: L },
+        M = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: b }), children: L },
         k = { className: r()(f.lD, O, C), children: n },
         w =
             "dot" === t
@@ -63,12 +63,12 @@ function p(e) {
             "left" === d && w,
             (0, l.jsxs)("span", {
                 className: r()(f.VW, { [f.mO]: E }),
-                style: { color: _ && !j && null != s ? s : void 0, ...(T ? b : {}) },
+                style: { color: _ && !j && null != s ? s : void 0, ...(b ? T : {}) },
                 children: [
                     null != A
                         ? (0, l.jsx)(a.E, { tag: "span", color: "currentColor", variant: A, ...M })
                         : (0, l.jsx)("span", { ...M }),
-                    T &&
+                    b &&
                         (null != A
                             ? (0, l.jsx)(a.E, {
                                   tag: "span",

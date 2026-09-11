@@ -24,8 +24,8 @@ var l = n(582128),
     N = n(71393),
     _ = n(480595),
     j = n(576705),
-    T = n(994500),
-    b = n(309010),
+    b = n(994500),
+    T = n(309010),
     R = n(461213),
     O = n(287809),
     L = n(689168),
@@ -75,7 +75,7 @@ function U(e) {
         en = (0, I.h)(Z),
         el = (0, S.x)(en),
         ei = (0, g.vG)({ userId: G.id, activity: n, channelId: $, application: en }),
-        es = (0, i.bG)([m.A, N.A, v.A, T.A, b.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
+        es = (0, i.bG)([m.A, N.A, v.A, b.A, T.Ay, f.A, j.A, _.A, R.A, u.Ay], () =>
             null != U
                 ? ei === g.Gy.CAN_JOIN
                     ? p.o.CAN_JOIN
@@ -90,8 +90,8 @@ function U(e) {
                       ChannelStore: m.A,
                       GuildStore: N.A,
                       GuildMemberCountStore: v.A,
-                      RelationshipStore: T.A,
-                      SelectedChannelStore: b.Ay,
+                      RelationshipStore: b.A,
+                      SelectedChannelStore: T.Ay,
                       VoiceStateStore: f.A,
                       PermissionStore: j.A,
                       LocalActivityStore: _.A,
@@ -122,7 +122,7 @@ function U(e) {
     async function em(e, t) {
         if (null == eh || null == Z) return;
         let n = (0, x.A)(t, w.jUm.EMBEDDED),
-            l = b.Ay.getVoiceChannelId(),
+            l = T.Ay.getVoiceChannelId(),
             i = m.A.getChannel(l);
         (await r.Ay.join({
             userId: e.id,

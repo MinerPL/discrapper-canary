@@ -18,8 +18,8 @@ var i = n(477900),
     d = n(173936),
     c = n(99677),
     u = n(194261),
-    h = n(34188),
-    A = n(577473),
+    A = n(34188),
+    h = n(577473),
     E = n(403581),
     g = n(323384),
     C = n(625903),
@@ -40,11 +40,11 @@ let f = function (e) {
           : null;
 };
 var O = n(769015),
-    b = n(106191),
-    v = n(548118),
-    R = n(376943),
-    U = n(636585),
-    y = n(71393),
+    R = n(106191),
+    b = n(548118),
+    v = n(376943),
+    y = n(636585),
+    U = n(71393),
     D = n(994500),
     G = n(287809),
     M = n(147036),
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: w._C,
-            children: (0, i.jsx)(v.Ay, { tabIndex: -1, guild: e, size: v.Ay.Sizes.MINI, className: w.$f }),
+            children: (0, i.jsx)(b.Ay, { tabIndex: -1, guild: e, size: b.Ay.Sizes.MINI, className: w.$f }),
         });
     }
     renderName() {
@@ -175,7 +175,7 @@ class H extends l.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(U.A, {
+            : (0, i.jsx)(y.A, {
                   className: w.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -195,7 +195,7 @@ class H extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e } = this.props,
-            t = y.A.getGuild(this.props.channel.guild_id)?.name,
+            t = U.A.getGuild(this.props.channel.guild_id)?.name,
             n = (0, p.m1)(e, G.default, D.A),
             i = (0, M.Jg)(e);
         return P.intl.formatToPlainString(P.t["Vw/da+"], { name: n, type: i, guild: t });
@@ -371,7 +371,7 @@ function W(e) {
         children: (0, i.jsxs)("div", {
             className: w.xr,
             children: [
-                (0, i.jsx)("div", { className: w.zc, children: (0, i.jsx)(b.A, { game: t, iconClassName: w.bN }) }),
+                (0, i.jsx)("div", { className: w.zc, children: (0, i.jsx)(R.A, { game: t, iconClassName: w.bN }) }),
                 (0, i.jsxs)("div", {
                     className: w.UU,
                     children: [
@@ -403,10 +403,10 @@ class Y extends l.Component {
         if (null != n.inviteCode)
             ((e = P.intl.string(P.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, R.vu)(n.path);
+            let l = (0, v.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = P.intl.string(P.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, R.r9)(l)
+                : (0, v.r9)(l)
                   ? ((e = P.intl.string(P.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = P.intl.string(P.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));
@@ -441,20 +441,20 @@ class Z extends l.Component {
             { navigationRecord: n, children: l } = this.props;
         switch (n.type) {
             case I.t1.SHOP:
-                ((e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
+                ((e = P.intl.string(P.t.pWG4ze)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SHOP_ORBS_TAB:
-                ((e = P.intl.string(P.t.EBYkzk)), (t = (0, i.jsx)(h.U, { size: "xs", color: "currentColor" })));
+                ((e = P.intl.string(P.t.EBYkzk)), (t = (0, i.jsx)(A.U, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_ORBS:
                 ((e = `${P.intl.string(P.t.ElYQFS)} ${P.intl.string(P.t.JALI2K)}`),
-                    (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" })));
+                    (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.NITRO_HOME:
                 ((e = P.intl.string(P.t.Ipxkog)), (t = (0, i.jsx)(E.t, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.QUEST_HOME:
-                ((e = P.intl.string(P.t.JALI2K)), (t = (0, i.jsx)(A.r, { size: "xs", color: "currentColor" })));
+                ((e = P.intl.string(P.t.JALI2K)), (t = (0, i.jsx)(h.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.APPS_HOME:
                 ((e = P.intl.string(P.t.PHjkRE)), (t = (0, i.jsx)(g.k, { size: "xs", color: "currentColor" })));

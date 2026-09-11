@@ -59,7 +59,7 @@ function c(e) {
                 [y, S] = l.useState(!1),
                 [v, N] = l.useState(!1),
                 [_, j] = l.useState(!1),
-                [T] = l.useState(
+                [b] = l.useState(
                     () =>
                         new r.Lp((e) => {
                             let [t, n] = e.split(",").map(Number);
@@ -68,8 +68,8 @@ function c(e) {
                             };
                         }),
                 );
-            l.useEffect(() => () => T.clean(), [T]);
-            let b = l.useCallback(
+            l.useEffect(() => () => b.clean(), [b]);
+            let T = l.useCallback(
                     (e) => {
                         if (!E.current || !A) return !1;
                         e.focus();
@@ -81,10 +81,10 @@ function c(e) {
                         let l = o(t, e, n);
                         (null != m ? m(e, n, l) : Promise.resolve()).then(() => {
                             let e = u(l);
-                            null != e ? (b(e), N(!1)) : requestAnimationFrame(() => N(!0));
+                            null != e ? (T(e), N(!1)) : requestAnimationFrame(() => N(!0));
                         });
                     },
-                    [t, m, b],
+                    [t, m, T],
                 ),
                 O = l.useCallback(
                     function () {
@@ -93,25 +93,25 @@ function c(e) {
                         if ((n !== c || l !== d) && (p({ type: i.n.SET_FOCUSED_POSITION, x: n, y: l }), !e))
                             return void j(!0);
                         let s = u(o(t, n, l));
-                        null != s && (j(!0), b(s));
+                        null != s && (j(!0), T(s));
                     },
-                    [p, c, d, f, t, b],
+                    [p, c, d, f, t, T],
                 ),
                 [L, M] = l.useState(!1);
             l.useEffect(() => {
                 if (!L || !y) return;
                 M(!1);
                 let e = u(o(t, c, d));
-                if (null != e) return void b(e);
+                if (null != e) return void T(e);
                 S(!1);
                 let n = u(o(t));
-                null != n && b(n);
-            }, [t, L, y, b, c, d]);
+                null != n && T(n);
+            }, [t, L, y, T, c, d]);
             let k = l.useCallback((e) => {
                 E.current && null == e && M(!0);
             }, []);
             (l.useEffect(() => {
-                y && v && null != I && (b(I), N(!1));
+                y && v && null != I && (T(I), N(!1));
             }, [v, I]),
                 l.useEffect(() => {
                     y && (_ || R(c, d), j(!1));
@@ -209,11 +209,11 @@ function c(e) {
                             "aria-colindex": e + 1,
                             id: (0, r.Aq)(t, e, n),
                             tabIndex: g && e === c && n === d ? 0 : -1,
-                            onFocus: T.get(`${e},${n}`),
+                            onFocus: b.get(`${e},${n}`),
                         };
                         return (e === c && n === d && (l.ref = k), l);
                     },
-                    [t, g, c, d, T, k],
+                    [t, g, c, d, b, k],
                 ),
                 F = l.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
             return l.useMemo(

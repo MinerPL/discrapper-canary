@@ -1,4 +1,4 @@
-n.d(t, { Hp: () => j, UA: () => N, ZB: () => T, Zp: () => v, dM: () => b, eG: () => S, ik: () => R });
+n.d(t, { Hp: () => j, UA: () => N, ZB: () => b, Zp: () => v, dM: () => T, eG: () => S, ik: () => R });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -65,8 +65,8 @@ function j(e) {
         { displayParticipants: h, participant1: m, participant2: S, numOtherParticipants: v } = (0, E.A)(i, s),
         N = (0, r.bG)([g.Ay], () => g.Ay.getMember(t, a)),
         j = (0, f.a)({ displayNameStyles: o?.displayNameStyles }),
-        T = (0, r.bG)([x.A], () => (N?.colorRoleId != null ? x.A.getRole(t, N.colorRoleId)?.name : void 0), [t, N]),
-        b = (0, p.gn)(t, a, N?.colorStrings ?? null);
+        b = (0, r.bG)([x.A], () => (N?.colorRoleId != null ? x.A.getRole(t, N.colorRoleId)?.name : void 0), [t, N]),
+        T = (0, p.gn)(t, a, N?.colorStrings ?? null);
     if (null == o) return null;
     let R = N?.colorString,
         O = C.Ay.getName(t, n, o);
@@ -76,8 +76,8 @@ function j(e) {
             (0, l.jsx)(_, { users: h, guildId: t, "aria-hidden": !0 }),
             (0, l.jsx)(u.g, {
                 colorString: R ?? null,
-                roleName: T,
-                colorStrings: b,
+                roleName: b,
+                colorStrings: T,
                 name: O,
                 className: y.nT,
                 displayNameStylesFont: j,
@@ -108,7 +108,7 @@ function j(e) {
         ],
     });
 }
-function T(e) {
+function b(e) {
     let { children: t } = e;
     return (0, l.jsx)(h.D, {
         color: "text-default",
@@ -118,7 +118,7 @@ function T(e) {
         children: t,
     });
 }
-function b(e) {
+function T(e) {
     let { children: t, className: n, ref: i } = e;
     return (0, l.jsx)("div", { className: s()(y.RA, n), ref: i, children: t });
 }

@@ -1,38 +1,38 @@
-t.d(r, { K: () => m });
-var i = t(477900);
-t(582128);
-var n = t(877624),
-    l = t(834730),
-    a = t(28863),
-    s = t(549996),
-    o = t(807098),
-    c = t(637706),
-    d = t(788883),
-    u = t(592455);
+r.d(t, { K: () => m });
+var i = r(477900);
+r(582128);
+var n = r(877624),
+    l = r(834730),
+    a = r(28863),
+    s = r(549996),
+    c = r(807098),
+    d = r(637706),
+    o = r(788883),
+    u = r(592455);
 function m() {
     let e = (0, s.c)(n.C.PLAN_SELECT_CARD_BANNER),
-        r =
+        t =
             null != e && "planSelectCardBanner" === e.properties.properties.oneofKind
                 ? e.properties.properties.planSelectCardBanner
                 : null,
-        t = (0, o.T)(r?.asset);
-    if (null == e || null == r || "" === r.body) return null;
-    let m = (0, c.C)(r.helpArticle, "");
+        r = (0, c.T)(t?.asset);
+    if (null == e || null == t || "" === t.body) return null;
+    let m = (0, d.C)(t.helpArticle, "");
     return (0, i.jsxs)("div", {
         className: u.kL,
         children: [
-            (0, i.jsx)(d.A, {
+            (0, i.jsx)(o.A, {
                 componentType: n.C.PLAN_SELECT_CARD_BANNER,
                 componentId: e.id,
                 promotionId: e.promotionId,
             }),
-            null != t && (0, i.jsx)("img", { alt: "", className: u.Sl, src: t }),
+            null != r && (0, i.jsx)("img", { alt: "", className: u.Sl, src: r }),
             (0, i.jsxs)(l.E, {
                 variant: "text-md/normal",
                 color: "text-default",
                 className: u.rf,
                 children: [
-                    r.body,
+                    t.body,
                     null != m &&
                         (0, i.jsxs)(i.Fragment, {
                             children: ["\xa0", (0, i.jsx)(a.Anchor, { href: m.url, children: m.linkText })],

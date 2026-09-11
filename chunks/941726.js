@@ -37,8 +37,8 @@ function I(e) {
                         N,
                         _,
                         j,
-                        T,
                         b,
+                        T,
                         R,
                         O,
                         L,
@@ -98,13 +98,13 @@ function I(e) {
                                 ),
                             [k, _],
                         )),
-                        (T = i.useMemo(
+                        (b = i.useMemo(
                             () => [...new Set(S.filter((e) => e.extra.application_id in j).map((e) => e.author_id))],
                             [S, j],
                         )),
-                        { widgetApps: j, userIdsWhoMightHaveWidgetData: T, isFetchingApplications: N }),
+                        { widgetApps: j, userIdsWhoMightHaveWidgetData: b, isFetchingApplications: N }),
                         { identitiesByUserId: G, isLoadingIdentities: V } =
-                            ((b = (0, a.cf)([h.A], () =>
+                            ((T = (0, a.cf)([h.A], () =>
                                 Object.fromEntries(D.map((e) => [e, h.A.getUserIdentities(e)]).filter(x.QE)),
                             )),
                             (R = (0, a.bG)([h.A], () =>
@@ -113,7 +113,7 @@ function I(e) {
                             i.useEffect(() => {
                                 D.length > 0 && d.P.fetchMany(...D.map((e) => [e]));
                             }, [D]),
-                            { identitiesByUserId: b, isLoadingIdentities: R }),
+                            { identitiesByUserId: T, isLoadingIdentities: R }),
                         { profilesByUserId: F, isLoadingProfiles: H } =
                             ((O = (0, a.cf)([f.A], () =>
                                 Object.fromEntries(D.map((e) => [e, f.A.getUserProfile(e) ?? null]).filter(x.QE)),

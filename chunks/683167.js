@@ -1,4 +1,4 @@
-n.d(t, { a: () => R, A: () => b });
+n.d(t, { a: () => R, A: () => T });
 var l = n(582128),
     i = n(143236),
     s = n(719442),
@@ -73,15 +73,15 @@ function v(e, t, n) {
 var N = n(694403),
     _ = n(323350),
     j = n(530795),
-    T = n(551483);
-function b(e) {
+    b = n(551483);
+function T(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
         [i] = l.useState(() => {
             let l = (0, s.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: T.K, focus: T.K }),
+                (l.selection = { anchor: b.K, focus: b.K }),
                 R({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
@@ -120,7 +120,7 @@ function R(e) {
             updateState: A,
         } = e,
         C = n,
-        { onChange: b } = C;
+        { onChange: T } = C;
     ((C.chatInputType = l),
         (C.windowContext = a),
         (C.previewMarkdown = o),
@@ -128,7 +128,7 @@ function R(e) {
         (C.events = new i.EventEmitter()),
         (C.isMac = "MacIntel" === navigator.platform),
         (C.onChange = () => {
-            (C.events.emit("onChange"), b());
+            (C.events.emit("onChange"), T());
         }),
         ((t = C =
             (function (e, t) {
@@ -545,12 +545,12 @@ function R(e) {
                                     s = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !T.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !b.XR.includes(t[0].type);
                                 )
                                     ((l = p.VW.before(e, l, { unit: "offset" })), (s = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !T.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !b.XR.includes(n[0].type);
                                 )
                                     ((i = p.VW.after(e, i, { unit: "offset" })), (s = !0));
                                 s &&

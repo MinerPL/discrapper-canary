@@ -130,10 +130,10 @@ let j = {
                     : { type: "codeBlockSyntax", content: e[0], originalMatch: e },
         },
     },
-    T = /(-# +)/,
-    b = (0, p.A)([S, j]),
+    b = /(-# +)/,
+    T = (0, p.A)([S, j]),
     R = (0, p.A)([v, j]),
-    O = c.X(b),
+    O = c.X(T),
     L = c.X(R),
     M = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
     k = new (o())(M),
@@ -226,7 +226,7 @@ function P(e, t, n, l, s) {
             let { before: n, after: i } = (function (e, t, n, l) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
-                    if ("subtext" === t) return { before: T.exec(l.input)[1], after: "" };
+                    if ("subtext" === t) return { before: b.exec(l.input)[1], after: "" };
                     let i = C["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");

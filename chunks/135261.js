@@ -160,8 +160,8 @@ let N = i.forwardRef(function (e, t) {
         null == C || null == E)
     )
         return null;
-    let T = n();
-    return null == T
+    let b = n();
+    return null == b
         ? null
         : (0, l.jsx)(x.Ay, {
               children: (0, l.jsx)("div", {
@@ -175,7 +175,7 @@ let N = i.forwardRef(function (e, t) {
                   onMouseUp: (e) => {
                       e.stopPropagation();
                   },
-                  children: (0, l.jsx)(v, { slateEditor: T, options: r }),
+                  children: (0, l.jsx)(v, { slateEditor: b, options: r }),
               }),
           });
 });

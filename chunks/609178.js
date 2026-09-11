@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(369805),
     _ = n(989790),
     j = n(632150),
-    T = n(792656),
-    b = n(202541),
+    b = n(792656),
+    T = n(202541),
     R = n(652215),
     O = n(148155),
     L = n(375708),
@@ -53,8 +53,8 @@ function D(e) {
             V?.());
     }, [V, U]);
     let B = (0, v.V)(),
-        W = i.useCallback(() => (0, I.LE)(B, b.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [B]),
-        K = (0, N.A)(b.pe.TIER_2),
+        W = i.useCallback(() => (0, I.LE)(B, T.pe.TIER_2) ?? L.intl.string(L.t.pj0XBN), [B]),
+        K = (0, N.A)(T.pe.TIER_2),
         z = (0, _.O9)();
     return (
         (t = H
@@ -134,9 +134,9 @@ function D(e) {
                                             text: L.intl.string(L.t.ZnqyZ2),
                                             fullWidth: !0,
                                         }),
-                                        (0, l.jsx)(T.A, {
+                                        (0, l.jsx)(b.A, {
                                             premiumModalAnalyticsLocation: { section: D, object: R.ZSU.BUTTON_CTA },
-                                            subscriptionTier: b.pe.TIER_2,
+                                            subscriptionTier: T.pe.TIER_2,
                                             onClick: () => {
                                                 (G(), F?.());
                                             },

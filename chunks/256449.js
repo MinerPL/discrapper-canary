@@ -1,5 +1,5 @@
 (n.d(t, {
-    Gc: () => b,
+    Gc: () => T,
     Sr: () => y,
     Th: () => S,
     UT: () => R,
@@ -7,7 +7,7 @@
     ZO: () => N,
     Zq: () => O,
     _c: () => v,
-    ln: () => T,
+    ln: () => b,
     pD: () => L,
 }),
     n(321073),
@@ -127,12 +127,12 @@ function _() {
     }, []);
 }
 let j = [];
-function T() {
+function b() {
     let e = (0, r.k)();
     return e.favoriteStickers?.stickerIds ?? j;
 }
-function b() {
-    let e = T();
+function T() {
+    let e = b();
     return (0, i.yK)(
         [x.A],
         () => e.map((e) => x.A.getStickerById(e)).filter((e) => null != e && (!(0, C.Xw)(e) || (0, C.Y4)(e))),
@@ -187,7 +187,7 @@ function L(e) {
         let t,
             n,
             r,
-            a = b(),
+            a = T(),
             { packs: u, frequentlyUsedStickers: h } = (0, i.cf)(
                 [x.A, g.A],
                 () => ({

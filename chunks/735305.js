@@ -17,12 +17,12 @@ var l = n(284009),
     S = n(652215),
     y = n(202541);
 function I(e) {
-    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: A } = e,
-        { paymentSources: g } = (0, a.j)(),
+    let { analyticsData: t, initialPlanId: n, handleStepChange: l, onReturn: I, continueSessionToInitialStep: g } = e,
+        { paymentSources: A } = (0, a.j)(),
         {
             selectedSkuId: P,
-            setPurchaseState: v,
-            contextMetadata: _,
+            setPurchaseState: _,
+            contextMetadata: v,
             paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
@@ -45,7 +45,7 @@ function I(e) {
         { isGift: w } = (0, h.Pv)(),
         U = {
             ...(0, m._)(),
-            paymentSources: g,
+            paymentSources: A,
             paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
@@ -57,7 +57,7 @@ function I(e) {
         D =
             I ??
             function () {
-                l(Object.values(g).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                l(Object.values(A).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
                     trackedFromStep: f.pn.PAYMENT_ELEMENT,
                 });
             };
@@ -74,7 +74,7 @@ function I(e) {
         onReturn: O ? void 0 : D,
         onComplete: (e) => {
             f.l_.has(e)
-                ? (v(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))
+                ? (_(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))
                 : l(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -85,13 +85,13 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - G,
-                flow_duration_ms: i - _.startTime,
+                flow_duration_ms: i - v.startTime,
             });
         },
         isEligibleForTrial: L,
         allowDesktopRedirectPurchase:
             (0, C.isDesktop)() && null != P && [y.pe.TIER_0, y.pe.TIER_2].includes(P) && !w && null == j,
-        continueSessionToInitialStep: A,
+        continueSessionToInitialStep: g,
         shouldUseManaModal: !0,
     });
 }

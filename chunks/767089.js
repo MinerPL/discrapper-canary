@@ -80,8 +80,8 @@ let p = {
                 pulse: N,
                 sparkle: _,
                 notification: j,
-                "aria-label": T,
-                "aria-expanded": b,
+                "aria-label": b,
+                "aria-expanded": T,
                 "aria-haspopup": R,
                 "aria-controls": O,
                 noHover: L,
@@ -107,8 +107,8 @@ let p = {
         }
         return (0, l.jsxs)(u.D, {
             innerRef: t,
-            "aria-label": T,
-            "aria-expanded": b,
+            "aria-label": b,
+            "aria-expanded": T,
             "aria-haspopup": R,
             "aria-controls": O,
             "aria-disabled": i,

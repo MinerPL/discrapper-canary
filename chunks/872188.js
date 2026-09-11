@@ -12,7 +12,7 @@ function f(e) {
     let { onPublish: t } = e,
         [l, f] = n.useState(!1),
         [h, m] = n.useState(!1),
-        g = n.useCallback(async () => {
+        x = n.useCallback(async () => {
             (f(!0), m(!1));
             try {
                 (await t(), a.O.announce(u.intl.string(c.default.pDzipI)));
@@ -45,7 +45,7 @@ function f(e) {
                 size: "sm",
                 text: u.intl.string(c.default["yul+0g"]),
                 loading: l,
-                onClick: g,
+                onClick: x,
             }),
         ],
     });

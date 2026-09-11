@@ -25,8 +25,8 @@ var g = n(562708),
     N = n(358618),
     _ = n(983851),
     j = n(442433),
-    T = n(537652),
-    b = n(212245),
+    b = n(537652),
+    T = n(212245),
     R = n(139286),
     O = n(915089),
     L = n(724511),
@@ -78,7 +78,7 @@ let V = i.forwardRef(function (e, t) {
                 scrollOffset: 20,
                 searchQuery: v,
             }),
-            T = i.useCallback(
+            b = i.useCallback(
                 (e) => {
                     (j(e),
                         F({
@@ -95,8 +95,8 @@ let V = i.forwardRef(function (e, t) {
             );
         return (
             i.useEffect(() => {
-                null != S.current && T(S.current.getScrollerNode()?.scrollTop ?? 0);
-            }, [T, S]),
+                null != S.current && b(S.current.getScrollerNode()?.scrollTop ?? 0);
+            }, [b, S]),
             (0, k.FV)({ searchQuery: v, activeCategoryIndex: N, listRef: S }),
             i.useImperativeHandle(
                 t,
@@ -138,7 +138,7 @@ let V = i.forwardRef(function (e, t) {
                         : (0, l.jsx)(P.A, {
                               role: "none presentation",
                               listPadding: a,
-                              onScroll: T,
+                              onScroll: b,
                               renderRow: o,
                               renderSection: u,
                               renderSectionHeader: c,
@@ -268,8 +268,8 @@ function Y(e) {
             sectionFooterHeight: N,
             itemNodeWidth: _,
             listPaddingRight: j,
-            itemNodeMargin: T,
-            listPadding: b,
+            itemNodeMargin: b,
+            listPadding: T,
             gridNavigatorId: R,
             gridNotice: O,
             renderHeader: L,
@@ -294,7 +294,7 @@ function Y(e) {
             gridWidth: H,
             listPaddingRight: j,
             itemNodeWidth: _,
-            itemNodeMargin: T,
+            itemNodeMargin: b,
         }),
         {
             getItemProps: J,
@@ -376,7 +376,7 @@ function Y(e) {
                                             ref: P,
                                             store: r,
                                             hasSearchResults: c,
-                                            listPadding: b,
+                                            listPadding: T,
                                             renderRow: et,
                                             renderSection: g,
                                             renderSectionHeader: null != x ? en : void 0,
@@ -443,10 +443,10 @@ var eS = n(652215),
     eN = n(194567),
     e_ = n(980504),
     ej = n(202541);
-function eT(e, t) {
+function eb(e, t) {
     return (null != t && (e = t(e)), e.map((e, t) => ({ type: ea.uq.SOUND, sound: e, index: t })));
 }
-function eb(e) {
+function eT(e) {
     let { sections: t, guildIds: n, allSounds: l, potentialSoundIdsForSection: i, sectionType: s, sortSoundsFn: r } = e,
         a = {};
     for (let e of [...n, "0"])
@@ -456,7 +456,7 @@ function eb(e) {
         let t = a[e];
         null != t && o.push(t);
     }
-    let u = eT(o, r);
+    let u = eb(o, r);
     u.length > 0 && t.push({ key: s, categoryInfo: { type: s }, items: u });
 }
 function eR(e, t, n) {
@@ -469,11 +469,11 @@ function eR(e, t, n) {
         null != t && r.push(t);
     }
     0 !== r.length &&
-        e.push({ key: ea.Cx.TOP_SOUNDS, categoryInfo: { type: ea.Cx.TOP_SOUNDS, guild: t }, items: eT(r) });
+        e.push({ key: ea.Cx.TOP_SOUNDS, categoryInfo: { type: ea.Cx.TOP_SOUNDS, guild: t }, items: eb(r) });
 }
 function eO(e, t) {
     let n = t.get("0") ?? e_.pD;
-    e.push({ key: ea.Cx.DEFAULTS, categoryInfo: { type: ea.Cx.DEFAULTS }, items: eT(n, eN.U) });
+    e.push({ key: ea.Cx.DEFAULTS, categoryInfo: { type: ea.Cx.DEFAULTS }, items: eb(n, eN.U) });
 }
 var eL = n(837381),
     eM = n(866665),
@@ -606,8 +606,8 @@ var ez = n(554146),
     e2 = n(182922),
     e3 = n(532624),
     e8 = n(531685),
-    e5 = n(723702),
-    e6 = n(350535),
+    e6 = n(723702),
+    e5 = n(350535),
     e7 = n(115023);
 function e4(e) {
     let { soundboardSound: t, closePicker: i } = e,
@@ -642,9 +642,9 @@ function e4(e) {
     }
     let f = (0, e1.k8)(ez.M.SOUNDBOARD_KEYBIND_TIP),
         g =
-            null != c && (0, e5.isWindows)() && !f
+            null != c && (0, e6.isWindows)() && !f
                 ? eD.intl.format(eD.t.udMTth, {
-                      keybind: (0, e6.dI)(c.shortcut, !0),
+                      keybind: (0, e5.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, l.jsx)(eq.Anchor, { onClick: m, children: e }, t),
                   })
                 : null;
@@ -867,7 +867,7 @@ function th(e) {
     });
 }
 function tm() {
-    return (0, l.jsx)(T.A, { message: eD.intl.string(eD.t.bgDdNK) });
+    return (0, l.jsx)(b.A, { message: eD.intl.string(eD.t.bgDdNK) });
 }
 function tf(e) {
     let { className: t } = e,
@@ -890,11 +890,11 @@ function tp(e) {
             renderHeader: y,
             defaultSoundsOnly: v = !1,
             inExpressionPicker: N,
-            analyticsSource: T,
+            analyticsSource: b,
         } = e,
         { analyticsLocations: L } = (0, c.Ay)(),
         { analyticsLocations: k } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
-        { location: w } = (0, b.p)(),
+        { location: w } = (0, T.p)(),
         P = i.useMemo(() => ({ ...w, section: eS.JJy.SOUNDBOARD_SOUND_PICKER }), [w]),
         [U, G] = i.useState(null),
         V = (0, x.bG)([el.default], () => el.default.getCurrentUser()),
@@ -1004,7 +1004,7 @@ function tp(e) {
                           },
                       })
                     : (E && null != C && I && eR(i, C, { allSounds: r, topSoundIds: S }),
-                      eb({
+                      eT({
                           sections: i,
                           guildIds: d,
                           allSounds: r,
@@ -1013,7 +1013,7 @@ function tp(e) {
                           sortSoundsFn: eN.U,
                       }),
                       A.length > 0 &&
-                          eb({
+                          eT({
                               sections: i,
                               guildIds: d,
                               allSounds: r,
@@ -1030,7 +1030,7 @@ function tp(e) {
                                       sortSoundsFn: r,
                                   } = n,
                                   a = i.get(t.id) ?? [],
-                                  o = eT(a, r),
+                                  o = eb(a, r),
                                   u = a.length < (0, eg.fA)(t) && l,
                                   c = 0 === o.length;
                               ((u || c) && !s && o.push({ type: ea.uq.ADD_SOUND, guild: t }),
@@ -1058,7 +1058,7 @@ function tp(e) {
                           } = e;
                           for (let e of n) {
                               if (e.id === l) continue;
-                              let n = eT(i.get(e.id) ?? [], r);
+                              let n = eb(i.get(e.id) ?? [], r);
                               n.length > 0 &&
                                   t.push({
                                       categoryInfo: { type: ea.Cx.GUILD, guild: e, isNitroLocked: !s },
@@ -1086,7 +1086,7 @@ function tp(e) {
         })(s, void 0, v),
         [eI, eL] = i.useState([]),
         eM = i.useMemo(
-            () => (W.length > 0 ? [{ key: ea.Cx.SEARCH, categoryInfo: { type: ea.Cx.SEARCH }, items: eT(eI) }] : Z),
+            () => (W.length > 0 ? [{ key: ea.Cx.SEARCH, categoryInfo: { type: ea.Cx.SEARCH }, items: eb(eI) }] : Z),
             [Z, W.length, eI],
         ),
         ek = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
@@ -1253,7 +1253,7 @@ function tp(e) {
             [eU, eG, eV, ew.length],
         ),
         e8 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
-        e5 = i.useCallback(
+        e6 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
@@ -1262,7 +1262,7 @@ function tp(e) {
             },
             [L],
         ),
-        e6 = i.useCallback(
+        e5 = i.useCallback(
             () =>
                 N
                     ? (0, l.jsx)(J.Gq, {
@@ -1275,11 +1275,11 @@ function tp(e) {
                     : (0, l.jsx)(S.D, {
                           tabIndex: 0,
                           className: to.Jm,
-                          onClick: e5,
+                          onClick: e6,
                           "aria-label": eD.intl.string(eD.t.kbFsAD),
                           children: (0, l.jsx)(tf, { className: to.By }),
                       }),
-            [N, e5],
+            [N, e6],
         ),
         e7 = i.useCallback(
             (e) =>
@@ -1328,7 +1328,7 @@ function tp(e) {
             type: g.ImpressionTypes.POPOUT,
             name: g.ImpressionNames.SOUNDBOARD_POPOUT,
             properties: {
-                source: T,
+                source: b,
                 guild_id: t,
                 media_session_id: tn,
                 available_custom_sounds_count: es.unlockedCustomSoundCount,
@@ -1369,7 +1369,7 @@ function tp(e) {
                     renderSectionFooter: e3,
                     renderSection: e1,
                     renderCategoryList: e7,
-                    renderHeaderAccessories: e6,
+                    renderHeaderAccessories: e5,
                     rowHeight: 48,
                     sectionHeaderHeight: eQ,
                     sectionFooterHeight: e0,
@@ -1404,7 +1404,7 @@ function tx(e) {
             renderHeader: _,
             defaultSoundsOnly: j,
         } = e,
-        { fetching: T, maybeFetchData: b } = {
+        { fetching: b, maybeFetchData: T } = {
             fetching: (0, h.bG)([p.A], () => p.A.isFetchingAnySounds()),
             maybeFetchData: i.useCallback(() => {
                 (f.E7(), m.bW.loadIfNecessary());
@@ -1414,8 +1414,8 @@ function tx(e) {
         O = S ? void 0 : { height: 520 };
     return (
         i.useEffect(() => {
-            b();
-        }, [b]),
+            T();
+        }, [T]),
         i.useEffect(() => {
             S || (0, d.Ri)("");
         }, [S]),
@@ -1423,8 +1423,8 @@ function tx(e) {
             value: R,
             children: (0, l.jsx)(a.l, {
                 style: O,
-                className: r()(tg.Nz, { [tg.Bg]: T, [tg.yV]: S }),
-                children: T
+                className: r()(tg.Nz, { [tg.Bg]: b, [tg.yV]: S }),
+                children: b
                     ? (0, l.jsx)(o.y, {})
                     : (0, l.jsx)(tp, {
                           guildId: t,

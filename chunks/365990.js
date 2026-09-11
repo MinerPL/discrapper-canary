@@ -47,8 +47,8 @@ var m = n(604121),
     N = n(611881),
     _ = n(788833),
     j = n(40493),
-    T = n(43105),
-    b = n(402860),
+    b = n(43105),
+    T = n(402860),
     R = n(287809),
     O = n(427262),
     L = n(652215),
@@ -62,7 +62,7 @@ function P(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: u, children: a }),
-            (0, l.jsx)(T.A, {
+            (0, l.jsx)(b.A, {
                 targetElementRef: u,
                 shouldShow: !0,
                 position: "top",
@@ -73,7 +73,7 @@ function P(e) {
                     {
                         text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
-                            (null != c && (0, b.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION));
+                            (null != c && (0, T.openUserProfileModal)({ userId: c.id }), s?.(), r(M.i.TAKE_ACTION));
                         },
                     },
                 ],
@@ -99,7 +99,7 @@ function D(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: a, children: r }),
-            (0, l.jsx)(T.A, {
+            (0, l.jsx)(b.A, {
                 targetElementRef: a,
                 shouldShow: !0,
                 position: "top",
@@ -216,23 +216,23 @@ let J = i.memo(function (e) {
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        T = (0, o.bG)([G.A], () => {
+        b = (0, o.bG)([G.A], () => {
             let e = G.A.getMarketingComponentByType(a.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
-        b = x?.gradient,
+        T = x?.gradient,
         k =
-            null != b && null != b.colors && b.colors.length >= 2
-                ? (0, I.K5)({ gradient: b.colors, angle: b.angle ?? void 0 }, { defaultAngle: 180 })
+            null != T && null != T.colors && T.colors.length >= 2
+                ? (0, I.K5)({ gradient: T.colors, angle: T.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
         w = i.useMemo(() => {
             if (k?.background != null) return { "--custom-promotion-gradient": k.background };
         }, [k]),
         P = !(0, H.uJ)(x?.boxAnimationUrl) || !(0, H.uJ)(x?.trinketAnimationUrl),
         D = (0, o.bG)([G.A], () => G.A.getGiftPromotion()?.id),
-        V = null != T && !t && !h && f >= z && null != D,
+        V = null != b && !t && !h && f >= z && null != D,
         [B, K] = (0, E.Cc)(V ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, D ?? ""),
         Z = null != B,
         { showGiftingBadgeCoachmark: Y, markGiftingBadgeCoachmarkAsDismissed: J } = (function (e) {
@@ -294,7 +294,7 @@ let J = i.memo(function (e) {
                   onComplete: () => d(!1),
                   onCheckItOutClick: X,
                   markAsDismissed: K,
-                  coachmarkConfig: T,
+                  coachmarkConfig: b,
                   children: et,
               })
             : Y

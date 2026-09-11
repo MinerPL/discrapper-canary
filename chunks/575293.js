@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(101611),
     _ = n(473529),
     j = n(111487),
-    T = n(652215),
-    b = n(375708),
+    b = n(652215),
+    T = n(375708),
     R = n(160639);
 let O = { compact: 58, cozy: 74, default: 64 };
 function L(e) {
@@ -36,12 +36,12 @@ function L(e) {
         ? (0, l.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: b.intl.format(b.t.MkzlDL, { channelName: b.intl.string(b.t.J90oLW) }),
+              children: T.intl.format(T.t.MkzlDL, { channelName: T.intl.string(T.t.J90oLW) }),
           })
         : (0, l.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: b.intl.format(b.t.MkzlDL, { channelName: i }),
+              children: T.intl.format(T.t.MkzlDL, { channelName: i }),
           });
 }
 function M(e) {
@@ -64,13 +64,13 @@ function k(e) {
         I = c?.actionType === v.NewMemberActionTypes.VIEW,
         y = (0, d.r)(h.A.colors.WHITE),
         _ = O[(0, C.C)()],
-        [j, T] = i.useState(!1),
+        [j, b] = i.useState(!1),
         [k] = i.useState(new a.A.Value(0)),
         [w] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
             ? a.A.timing(k, { toValue: 0, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !I }).start(() =>
-                  T(!0),
+                  b(!0),
               )
             : a.A.timing(k, { toValue: 1, duration: E ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
     }, [x, k, I, E]),
@@ -103,7 +103,7 @@ function k(e) {
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: b.intl.format(b.t["/beONw"], { step: A.title }),
+                                                children: T.intl.format(T.t["/beONw"], { step: A.title }),
                                             }),
                                             (0, l.jsx)(L, { action: A }),
                                         ],
@@ -135,7 +135,7 @@ function k(e) {
                                         (0, l.jsx)(u.E, {
                                             variant: "text-xxs/normal",
                                             color: "text-muted",
-                                            children: b.intl.string(b.t["ElGg8+"]),
+                                            children: T.intl.string(T.t["ElGg8+"]),
                                         }),
                                     ],
                                 }),
@@ -158,6 +158,6 @@ function w(e) {
         s = (0, _.d)(t),
         r = (0, o.bG)([I.Ay], () => I.Ay.getSelfMember(t)?.isPending === !0),
         a = (0, N.jY)(t),
-        u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(T.GuildFeatures.GUILD_SERVER_GUIDE));
+        u = (0, o.bG)([y.A], () => y.A.getGuild(t)?.features.has(b.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || r || !s || !u ? null : (0, l.jsx)(k, { guildId: t, channel: n, className: i });
 }

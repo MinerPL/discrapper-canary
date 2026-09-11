@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__7a068",
     Qs: "content__7a068",
     C$: "nav__7a068",

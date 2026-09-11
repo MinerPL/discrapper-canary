@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(355622),
     _ = n(820066),
     j = n(696451),
-    T = n(576705),
-    b = n(351906),
+    b = n(576705),
+    T = n(351906),
     R = n(287809),
     O = n(31498),
     L = n(887129),
@@ -50,11 +50,11 @@ let V = i.forwardRef(function (e, t) {
                     return (null != l.guild_id && null != e ? j.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [T.A, b.A],
+                    [b.A, T.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || s === N.oU.RULES_INPUT || T.A.can(w.xBc.MENTION_EVERYONE, l),
-                        hidePersonalInformation: b.A.hidePersonalInformation,
+                            l.isPrivate() || c || s === N.oU.RULES_INPUT || b.A.can(w.xBc.MENTION_EVERYONE, l),
+                        hidePersonalInformation: T.A.hidePersonalInformation,
                     }),
                     [l, s, c],
                 ),

@@ -1,4 +1,4 @@
-(l.d(t, { A: () => x }), l(321073));
+(l.d(t, { A: () => g }), l(321073));
 var i = l(158390),
     n = l(17928),
     a = l(228366),
@@ -28,7 +28,7 @@ function m(e, t, l, n) {
             e.backoff.pending ||
                 e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
 }
-class g extends n.Ay.Store {
+class x extends n.Ay.Store {
     static displayName = "GuildSpaceHydrationStore";
     getHydration(e, t) {
         return f[e]?.entriesByWidgetId.get(t)?.state ?? c;
@@ -42,7 +42,7 @@ class g extends n.Ay.Store {
               : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? c).status);
     }
 }
-let x = new g(a.h, {
+let g = new x(a.h, {
     GUILD_SPACE_HYDRATE_START: function (e) {
         let t,
             { guildId: l, requestId: i, widgetIds: n } = e,

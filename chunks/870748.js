@@ -25,8 +25,8 @@ var l = n(485845),
     _ = n(652215);
 n(827669);
 let j = new Set(["applicationCommandOption"]),
-    T = new Set([s.n4.ATTACHMENT]),
-    b = new Set(["line", "applicationCommand"]);
+    b = new Set([s.n4.ATTACHMENT]),
+    T = new Set(["line", "applicationCommand"]);
 function R(e, t) {
     let {
         insertData: n,
@@ -68,7 +68,7 @@ function R(e, t) {
         return n(l);
     }),
         (e.isInline = (e) => !!j.has(e.type) || h(e)),
-        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && T.has(e.optionType)) || g(e)),
+        (e.isVoid = (e) => !!("applicationCommandOption" === e.type && b.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
             w(e, () => C(t));
         }),
@@ -169,7 +169,7 @@ function R(e, t) {
                                                 for (let l of s.options)
                                                     if (!e.has(l.name) && (l.required || null != i[l.name])) {
                                                         let e, i;
-                                                        o.length > 0 && !T.has(l.type)
+                                                        o.length > 0 && !b.has(l.type)
                                                             ? ((e = o), (o = ""))
                                                             : (e = (i = P(n, t, l.name)) ?? "");
                                                         let s = {
@@ -236,7 +236,7 @@ function R(e, t) {
                                     return (r.Gf({ channelId: a.id, command: null, section: null }), null);
                                 let e = v.VW.richValue(t)[0],
                                     l = e.children[0];
-                                if (b.has(e.type) && v.l5.isText(l)) {
+                                if (T.has(e.type) && v.l5.isText(l)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith("/")) return null;
                                         let n = (0, m.p)(t, e, x.A.getDraftCommand(t.id, x.C.ChannelMessage));
@@ -358,7 +358,7 @@ function L(e, t) {
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        T.has(t.options[0].type) ||
+        b.has(t.options[0].type) ||
         E.O7(e).length > 0 ||
         null == E.n$(e)
     )

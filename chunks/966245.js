@@ -43,18 +43,18 @@ var l,
     N = n(192308),
     _ = n(267102),
     j = n(619517),
-    T = n(256905),
-    b = n(536763),
+    b = n(256905),
+    T = n(536763),
     R = n(218394);
 class O extends s.PureComponent {
     static defaultProps = { shouldLink: !0, autoPlay: !1, animated: !1 };
     onMouseEnter = (e) => {
         let { src: t, width: n, height: l, onMouseEnter: i, handlePreloadImage: s } = this.props;
-        (i?.(e), null != s) ? s() : (0, b.A)({ src: t, width: n, height: l, options: this.props });
+        (i?.(e), null != s) ? s() : (0, T.A)({ src: t, width: n, height: l, options: this.props });
     };
     modalContext = (0, N.modalContextFromAppContext)(this.props.appContext);
     onCloseImage = () => {
-        (0, N.closeModal)(T.K, this.modalContext);
+        (0, N.closeModal)(b.K, this.modalContext);
     };
     onZoom = (e, t) => {
         let { zoomThumbnailPlaceholder: n, trigger: l } = t;
@@ -75,7 +75,7 @@ class O extends s.PureComponent {
             originalContentType: x,
         } = this.props;
         ((0, c.vq)(e.currentTarget) && e.currentTarget.blur(),
-            (0, T.R)({
+            (0, b.R)({
                 onClose: this.onCloseImage,
                 items: [
                     {
@@ -569,8 +569,8 @@ var ey = n(863922),
     eN = n(442433),
     e_ = n(640708),
     ej = n(941971),
-    eT = n(707539),
-    eb = n(576705),
+    eb = n(707539),
+    eT = n(576705),
     eR = n(573163),
     eO = n(340833),
     eL = n(913642),
@@ -663,12 +663,12 @@ var eK = n(652215),
 function eY(e) {
     let { summary: t, channel: l, members: r, guildId: a, unread: o, onClick: u } = e,
         [c, m] = s.useState(!1),
-        f = (0, eT.aK)(eM.default.extractTimestamp(t.startId)),
+        f = (0, eb.aK)(eM.default.extractTimestamp(t.startId)),
         p = (0, d.bG)([eS.A], () => eS.A.summaryFeedback(t));
     function g(e, n) {
         (e.stopPropagation(), (0, ek.A)({ summary: t, channel: l, rating: n }));
     }
-    let A = eb.A.can(eK.xBc.MANAGE_MESSAGES, l);
+    let A = eT.A.can(eK.xBc.MANAGE_MESSAGES, l);
     return (0, i.jsxs)(x.D, {
         className: eZ.kL,
         onClick: u,
@@ -812,8 +812,8 @@ let e2 = s.forwardRef(function (e, t) {
 });
 var e3 = n(20504),
     e8 = n(625494),
-    e5 = n(927813),
-    e6 = n(824744);
+    e6 = n(927813),
+    e5 = n(824744);
 n(508300);
 var e7 = n(661531),
     e4 = n(602853),
@@ -982,8 +982,8 @@ function tm(e) {
             backgroundFillColor: N,
             lastActiveFillColor: _,
             activeFillColor: j,
-            lastInactiveFillColor: T,
-            inactiveFillColor: b,
+            lastInactiveFillColor: b,
+            inactiveFillColor: T,
         } = (function (e, t) {
             let n = (0, e4.r)(e7.A.colors.BACKGROUND_MOD_MUTED).hex(),
                 l = (0, e4.r)(e7.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
@@ -1051,7 +1051,7 @@ function tm(e) {
                             constrainMin: !0,
                         });
                     i.fill();
-                    let [h, m] = th(T, b, n, y.current);
+                    let [h, m] = th(b, T, n, y.current);
                     r = r || m;
                     let [f, g] = th(_, j, n, y.current);
                     r = r || g;
@@ -1077,7 +1077,7 @@ function tm(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [p, S, C, g, o, u, c, d, v, N, _, j, T, b]));
+        }, [p, S, C, g, o, u, c, d, v, N, _, j, b, T]));
     let [, L] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: l, onDragEnd: i } = e,
             [r, a] = s.useState(!1);
@@ -1149,8 +1149,8 @@ let tx = s.memo(function (e) {
         y = (0, d.bG)([e1.Ay], () => e1.Ay.getPlaybackRate(e1.k0.VOICE_MESSAGE)),
         [S, v] = s.useState(I > 0),
         [N, _] = s.useState(I),
-        [j, T] = s.useState(c),
-        [b, R] = s.useState(!1),
+        [j, b] = s.useState(c),
+        [T, R] = s.useState(!1),
         [O, L] = s.useState(!1),
         [M, k] = s.useState(!1),
         [w, P] = s.useState(!1),
@@ -1165,7 +1165,7 @@ let tx = s.memo(function (e) {
         }, []),
         W = s.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || T(t);
+            isNaN(t) || b(t);
         }, []),
         K = s.useCallback(
             (e) => {
@@ -1197,14 +1197,14 @@ let tx = s.memo(function (e) {
         }, [A]),
         J = s.useCallback(
             (e) => {
-                let t = (0, e6.w)(e, 1);
+                let t = (0, e5.w)(e, 1);
                 (R(0 === t), V(t), r?.(t));
             },
             [r],
         ),
         $ = s.useCallback(() => {
-            (R(!b), o?.(!b));
-        }, [b, o]),
+            (R(!T), o?.(!T));
+        }, [T, o]),
         X = s.useCallback(() => {
             k(!0);
         }, []),
@@ -1237,7 +1237,7 @@ let tx = s.memo(function (e) {
                     !M &&
                     (e = setInterval(() => {
                         K(E.current?.currentTime ?? 0);
-                    }, e5.A.Millis.SECOND)),
+                    }, e6.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
@@ -1246,7 +1246,7 @@ let tx = s.memo(function (e) {
         s.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: l } = el.current;
             if (e || O)
-                if (O) ((et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e5.A.Millis.SECOND));
+                if (O) ((et.current = performance.now()), l?.(!1, t, (E.current?.duration ?? 0) * e6.A.Millis.SECOND));
                 else {
                     let e = performance.now(),
                         l = et.current;
@@ -1295,7 +1295,7 @@ let tx = s.memo(function (e) {
                       onEnded: Z,
                       onLoadedMetadata: W,
                       onError: q,
-                      muted: b,
+                      muted: T,
                       volume: G,
                       playbackRate: y,
                   }),
@@ -1308,7 +1308,7 @@ let tx = s.memo(function (e) {
                   onEnded: Z,
                   onLoadedMetadata: W,
                   onError: q,
-                  muted: b,
+                  muted: T,
                   volume: G,
                   playbackRate: y,
                   playing: O && !M,
@@ -1363,8 +1363,8 @@ let tx = s.memo(function (e) {
                 iconClassName: tf._j,
                 iconColor: "currentColor",
                 sliderWrapperClassName: tf.MQ,
-                muted: b,
-                value: (0, e6.M)(G, 1),
+                muted: T,
+                value: (0, e5.M)(G, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,
@@ -1391,12 +1391,12 @@ function tj(e) {
         (e?.(t), (0, tI.ls)(t));
     };
 }
-function tT(e) {
+function tb(e) {
     return (t) => {
         (e?.(t), (0, tI.y5)(t));
     };
 }
-function tb(e) {
+function tT(e) {
     let { altText: t, altButtonRef: n } = e;
     return (0, i.jsxs)("div", {
         role: "dialog",
@@ -1434,7 +1434,7 @@ function tR(e) {
               children: (0, i.jsx)(m.Y, {
                   targetElementRef: d,
                   animation: m.Y.Animation.FADE,
-                  renderPopout: () => (0, i.jsx)(tb, { altText: t, altButtonRef: d }),
+                  renderPopout: () => (0, i.jsx)(tT, { altText: t, altButtonRef: d }),
                   children: (e) =>
                       (0, i.jsx)(f.vN, {
                           offset: 4,
@@ -1470,7 +1470,7 @@ function tO(e) {
             ...g
         } = e,
         x = tj(t),
-        A = tT(n);
+        A = tb(n);
     ((l = null == l ? tI.v1 : l), (r = null == r ? tI.uj : r));
     let [C, E] = s.useState(!0),
         I = f === ty.dG.MOSAIC || !0 === m,
@@ -1525,7 +1525,7 @@ function tM(e) {
             ...u
         } = e,
         c = tj(t),
-        d = tT(l);
+        d = tb(l);
     return (
         (n = null == n ? tI.v1 : n),
         (0, i.jsxs)(s.Fragment, {
@@ -1550,7 +1550,7 @@ function tM(e) {
 function tk(e) {
     let { onVolumeChange: t, volume: n, onMute: l, ...s } = e,
         r = tj(t),
-        a = tT(l);
+        a = tb(l);
     return ((n = null == n ? tI.v1 : n), (0, i.jsx)(tx, { ...s, onVolumeChange: r, onMute: a, volume: n }));
 }
 function tw(e) {
@@ -1584,7 +1584,7 @@ function tw(e) {
                     children: (0, i.jsx)(m.Y, {
                         targetElementRef: C,
                         animation: m.Y.Animation.FADE,
-                        renderPopout: () => (0, i.jsx)(tb, { altText: t, altButtonRef: C }),
+                        renderPopout: () => (0, i.jsx)(tT, { altText: t, altButtonRef: C }),
                         children: (e) =>
                             (0, i.jsx)(f.vN, {
                                 offset: 4,
@@ -1777,14 +1777,14 @@ function tB(e) {
                 channel_type: t.type,
             });
     }, [_, j, t.guild_id, t.id, t.type]);
-    let T = (0, d.bG)(
+    let b = (0, d.bG)(
             [tA.default],
             () => _?.map((e) => e.people?.map((e) => tA.default.getUser(e) ?? null).filter(eU.Vq)) ?? [],
             [_],
             tW,
         ),
-        b = (0, d.bG)([eS.A], () => eS.A.visibleSummaryIndex()) ?? -1,
-        R = _?.[b]?.topic;
+        T = (0, d.bG)([eS.A], () => eS.A.visibleSummaryIndex()) ?? -1,
+        R = _?.[T]?.topic;
     null == R && null == o && _?.length >= 1 && (R = _[0]?.topic);
     let O = s.useMemo(
             () =>
@@ -1906,8 +1906,8 @@ function tB(e) {
             [B],
         ));
     let W = s.useMemo(
-            () => (0, i.jsx)(eq, { channel: t, summaries: _, summariesMembers: T, selectTopic: F, setOpen: H }),
-            [_, T, F, H, t],
+            () => (0, i.jsx)(eq, { channel: t, summaries: _, summariesMembers: b, selectTopic: F, setOpen: H }),
+            [_, b, F, H, t],
         ),
         K = s.useCallback(() => {
             let e = eR.Ay.ackMessageId(t.id);
@@ -2052,8 +2052,8 @@ function tK(e) {
         _ = (0, d.bG)([eS.A], () => eS.A.visibleSummaryIndex()) ?? -1,
         j = A?.[_]?.topic;
     null == j && null == r && A?.length >= 1 && (j = A[0]?.topic);
-    let T = s.useMemo(() => u().get(A, _ - 1), [_, A]),
-        b = s.useMemo(() => u().get(A, _ + 1), [_, A]),
+    let b = s.useMemo(() => u().get(A, _ - 1), [_, A]),
+        T = s.useMemo(() => u().get(A, _ + 1), [_, A]),
         R = s.useMemo(
             () =>
                 u().debounce((e) => {
@@ -2224,7 +2224,7 @@ function tK(e) {
                                       (0, i.jsx)(x.D, {
                                           "aria-label": ec.intl.string(ec.t["4huCnC"]),
                                           onClick: H,
-                                          className: a()(tN.ZMY, tN.vzA, { [tN.jfO]: null == b }),
+                                          className: a()(tN.ZMY, tN.vzA, { [tN.jfO]: null == T }),
                                           children: (0, i.jsx)(tC.A, {
                                               width: 16,
                                               height: 16,
@@ -2234,7 +2234,7 @@ function tK(e) {
                                       (0, i.jsx)(x.D, {
                                           "aria-label": ec.intl.string(ec.t["58KOoF"]),
                                           onClick: F,
-                                          className: a()(tN.ZMY, tN.mtW, { [tN.jfO]: null == T }),
+                                          className: a()(tN.ZMY, tN.mtW, { [tN.jfO]: null == b }),
                                           children: (0, i.jsx)(tC.A, {
                                               width: 16,
                                               height: 16,

@@ -161,13 +161,13 @@ class h extends l.EventEmitter {
         l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(x, m);
         let _ = !0 === S.isLoading,
             j = this.shouldShow(N, _, A),
-            T = this.state.selectedIndex;
-        (!j || _ ? (T = null) : null != T && T >= N && (T = N - 1),
+            b = this.state.selectedIndex;
+        (!j || _ ? (b = null) : null != b && b >= N && (b = N - 1),
             j && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
             this.setState({
                 query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: N, options: m, isLoading: _ },
                 isVisible: j,
-                selectedIndex: T,
+                selectedIndex: b,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             }));

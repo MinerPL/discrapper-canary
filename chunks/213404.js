@@ -33,10 +33,10 @@ function f(e) {
         j = i.useCallback(() => {
             (N(!1), E?.());
         }, [E]),
-        T = i.useCallback(() => {
+        b = i.useCallback(() => {
             (N(!0), I?.());
         }, [I]),
-        b = i.useCallback(() => {
+        T = i.useCallback(() => {
             (N(!1), y?.());
         }, [y]),
         R = (0, a.bG)([u.Ay], () =>
@@ -61,8 +61,8 @@ function f(e) {
         className: r()(h.iE, g, { [h.rb]: x, [h.wH]: x && s }),
         onFocus: _,
         onBlur: j,
-        onMouseOver: T,
-        onMouseLeave: b,
+        onMouseOver: b,
+        onMouseLeave: T,
         children: (0, l.jsx)(o.Ay, {
             className: h.dK,
             mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,

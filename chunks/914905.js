@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(375708),
     _ = n(268378),
     j = n(429955);
-let T = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
-function b(e) {
+let b = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
+function T(e) {
     let { alt: t, spoiler: n, renderContent: s, size: a } = e,
         [o, u] = i.useState(!1);
     return (0, l.jsx)(E.Bs.Provider, {
@@ -67,7 +67,7 @@ function R(e) {
         [h, m] = i.useState({ width: 0, height: 0 }),
         f = a === v.L.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === T.includes(t.type)) return;
+        if (null == t || !1 === b.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
@@ -123,7 +123,7 @@ function R(e) {
             className: j.clickableMedia,
             "aria-label": A,
             tabIndex: -1,
-            children: (0, l.jsx)(b, { size: a, alt: n, spoiler: s, renderContent: p }),
+            children: (0, l.jsx)(T, { size: a, alt: n, spoiler: s, renderContent: p }),
         }),
     });
 }
@@ -155,7 +155,7 @@ function O(e) {
             onMouseEnter: o,
             className: j.mediaContainer,
             children: [
-                (0, l.jsx)(b, {
+                (0, l.jsx)(T, {
                     size: a,
                     alt: n,
                     spoiler: s,
@@ -233,14 +233,14 @@ function M(e) {
             hideFileName: E = !1,
             clip: y,
         } = e,
-        T = null != y,
-        b = A === v.L.SMALL,
+        b = null != y,
+        T = A === v.L.SMALL,
         R = (0, a.bG)([I.A], () => I.A.getChannel(t)?.guild_id);
     function O() {
         p.A.remove(t, o.id, s);
     }
     function M(e) {
-        (e.stopPropagation(), T)
+        (e.stopPropagation(), b)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
                       n.e("440065"),
@@ -302,43 +302,43 @@ function M(e) {
             children: [
                 C
                     ? (0, l.jsx)(S.A, {
-                          className: r()({ [j.action]: b }),
-                          tooltip: T ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
+                          className: r()({ [j.action]: T }),
+                          tooltip: b ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => p.A.update(t, o.id, s, { spoiler: !o.spoiler }),
                           children: o.spoiler
                               ? (0, l.jsx)(c.EyeSlashIcon, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: r()({ [j.actionBarIcon]: b }),
+                                    className: r()({ [j.actionBarIcon]: T }),
                                 })
                               : (0, l.jsx)(d.EyeIcon, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: r()({ [j.actionBarIcon]: b }),
+                                    className: r()({ [j.actionBarIcon]: T }),
                                 }),
                       })
                     : null,
                 C
                     ? (0, l.jsx)(S.A, {
-                          className: r()({ [j.action]: b }),
-                          tooltip: T ? N.intl.string(_.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
+                          className: r()({ [j.action]: T }),
+                          tooltip: b ? N.intl.string(_.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
                           onClick: M,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
-                              className: r()({ [j.actionBarIcon]: b }),
+                              className: r()({ [j.actionBarIcon]: T }),
                           }),
                       })
                     : null,
                 (0, l.jsx)(S.A, {
-                    className: r()({ [j.action]: b }),
-                    tooltip: T ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
+                    className: r()({ [j.action]: T }),
+                    tooltip: b ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
                     onClick: O,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {
                         size: "md",
                         color: "currentColor",
-                        className: r()({ [j.actionBarIcon]: b }),
+                        className: r()({ [j.actionBarIcon]: T }),
                     }),
                 }),
             ],
@@ -349,7 +349,7 @@ function M(e) {
         handleEditModal: M,
         keyboardModeEnabled: g,
         size: A,
-        className: r()({ [j.attachmentItemSmall]: b }),
+        className: r()({ [j.attachmentItemSmall]: T }),
         children: [
             (0, l.jsx)(L, { upload: o, size: A, clip: y, guildId: R }),
             !E &&
@@ -359,7 +359,7 @@ function M(e) {
                     children: (0, l.jsx)(f.E, {
                         className: j.filename,
                         variant: "text-sm/normal",
-                        children: null != x ? x : T ? y.name : o.filename,
+                        children: null != x ? x : b ? y.name : o.filename,
                     }),
                 }),
         ],

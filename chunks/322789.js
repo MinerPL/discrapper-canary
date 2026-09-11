@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(424994),
     _ = n(518477),
     j = n(375708),
-    T = n(273783),
-    b = n(804779);
+    b = n(273783),
+    T = n(804779);
 let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
     O = i.memo(function (e) {
         let {
@@ -60,7 +60,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                 alt: k?.text ?? k?.alt,
                 src: k?.src,
                 size: 48,
-                className: b.xn,
+                className: T.xn,
                 showTooltip: k?.text != null,
             }),
             H = (0, l.jsx)(v.ZB, { children: t.extra.game_name });
@@ -78,7 +78,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                 (0, l.jsxs)(v.UA, {
                                     children: [
                                         (0, l.jsx)(v.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        null != G ? (0, l.jsx)(I.A, { className: T.N4, onClick: G, children: H }) : H,
+                                        null != G ? (0, l.jsx)(I.A, { className: b.N4, onClick: G, children: H }) : H,
                                         (0, l.jsx)(S.mG, {
                                             location: S.N5.CARD,
                                             children: R.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: O }, n)),
@@ -86,7 +86,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                                     ],
                                 }),
                                 null != G
-                                    ? (0, l.jsx)(a.D, { className: T.vi, onClick: G, "aria-label": V, children: F })
+                                    ? (0, l.jsx)(a.D, { className: b.vi, onClick: G, "aria-label": V, children: F })
                                     : F,
                             ],
                         }),
@@ -96,10 +96,10 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         children: [
                             (0, l.jsx)(v.ik, {}),
                             (0, l.jsxs)(v.dM, {
-                                className: T.DK,
+                                className: b.DK,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: T.tJ,
+                                        className: b.tJ,
                                         children: [
                                             (0, l.jsx)(o.h, { color: u.A.colors.ICON_SUBTLE, size: "xxs" }),
                                             (0, l.jsx)(c.E, {
@@ -124,7 +124,7 @@ let R = [S.iq, S.Zc, S.Xy, S.$X, S.tR, S.K7, S.fg, S.sp, S.MK],
                         userId: t.author_id,
                         widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
                         hasWidget: t.applicationWidgetPreview.hasWidget,
-                        className: T.AB,
+                        className: b.AB,
                         compactViewMore: !0,
                         onClickViewMore: () => {
                             (M(N.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),

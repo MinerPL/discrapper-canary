@@ -34,8 +34,8 @@ var v = n(521732);
 let N = {},
     _ = {},
     j = {},
-    T = [],
-    b = {},
+    b = [],
+    T = {},
     R = { status: "ok", lastRequest: null, lastResponse: null },
     O = [],
     L = [];
@@ -101,10 +101,10 @@ class k extends u.Ay.PersistedStore {
         return !n?.fetching && 0 === i;
     }
     channelAffinities() {
-        return T;
+        return b;
     }
     channelAffinitiesById() {
-        return b;
+        return T;
     }
     channelAffinitiesStatus() {
         return R;
@@ -120,7 +120,7 @@ class k extends u.Ay.PersistedStore {
             s = [];
         return (
             t && (s = s.concat(O)),
-            n && (s = s.concat(T.map((e) => e.channel_id))),
+            n && (s = s.concat(b.map((e) => e.channel_id))),
             l &&
                 (s = s.filter((e) => {
                     let t = p.A.getChannel(e);
@@ -221,11 +221,11 @@ let w = new k(c.h, {
     RECEIVE_CHANNEL_AFFINITIES(e) {
         let { affinities: t, error: n } = e;
         if (null != n) {
-            ((T = []), (b = {}), (R = { ...R, status: "error", lastResponse: Date.now() }));
+            ((b = []), (T = {}), (R = { ...R, status: "error", lastResponse: Date.now() }));
             return;
         }
-        ((T = t ?? []),
-            (b = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
+        ((b = t ?? []),
+            (T = t?.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {}) ?? {}),
             (R = { ...R, status: "ok", lastResponse: Date.now() }));
     },
     REQUEST_CHANNEL_SUMMARIES_BULK(e) {

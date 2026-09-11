@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => O, Bs: () => T });
+n.d(t, { Ay: () => O, Bs: () => b });
 var l,
     i = n(477900),
     s = n(582128),
@@ -75,8 +75,8 @@ function j(e) {
               }),
           });
 }
-let T = s.createContext(!1);
-class b extends s.PureComponent {
+let b = s.createContext(!1);
+class T extends s.PureComponent {
     state = { visible: !1 };
     removeObscurity = (e) => {
         let { visible: t } = this.state;
@@ -116,7 +116,7 @@ class b extends s.PureComponent {
                 isVerifiedTeen: c,
             } = this.props,
             { visible: h } = this.state,
-            m = (0, i.jsx)(T.Consumer, {
+            m = (0, i.jsx)(b.Consumer, {
                 children: (m) => {
                     let f = m || h || !s;
                     return C._K.has(r) && !t
@@ -168,7 +168,7 @@ class b extends s.PureComponent {
                 isVerifiedTeen: o,
             } = this.props,
             { visible: u } = this.state;
-        return (0, i.jsx)(T.Consumer, {
+        return (0, i.jsx)(b.Consumer, {
             children: (c) => {
                 let h = c || u;
                 return C._K.has(r)
@@ -211,7 +211,7 @@ class b extends s.PureComponent {
     renderObscuredText() {
         let { children: e, renderTextElement: t, className: n } = this.props,
             { visible: l } = this.state,
-            r = (0, i.jsx)(T.Consumer, {
+            r = (0, i.jsx)(b.Consumer, {
                 children: (r) => {
                     let o = r || l,
                         u = s.Children.toArray(e(o)),
@@ -280,7 +280,7 @@ class b extends s.PureComponent {
 function R(e) {
     let t = (0, A._R)() && null != e.reason && C.tY.has(e.reason),
         n = (0, x.yM)();
-    return (0, i.jsx)(b, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
+    return (0, i.jsx)(T, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
 ((R.Types = S), (R.Reasons = C.Oc));
 let O = R;

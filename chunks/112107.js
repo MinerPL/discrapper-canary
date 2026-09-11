@@ -42,16 +42,16 @@ var S = n(209932),
     N = n(805945),
     _ = n(734057),
     j = n(375708),
-    T = n(701144);
-function b(e) {
+    b = n(701144);
+function T(e) {
     let { playSound: t } = e;
     return (0, l.jsxs)(o.D, {
         title: "Risky Click",
         tag: "span",
         onClick: t,
-        className: T.Ls,
+        className: b.Ls,
         children: [
-            (0, l.jsx)(u.H, { size: "md", color: "currentColor", className: T.uA }),
+            (0, l.jsx)(u.H, { size: "md", color: "currentColor", className: b.uA }),
             (0, l.jsx)("span", { children: "Unknown" }),
         ],
     });
@@ -63,8 +63,8 @@ function R(e) {
         { isPlaying: s, playSound: r } = y(n);
     return i
         ? null == n
-            ? (0, l.jsx)(b, {})
-            : (0, l.jsx)(O, { className: T.wg, isPlaying: s, playSound: r, sound: n })
+            ? (0, l.jsx)(T, {})
+            : (0, l.jsx)(O, { className: b.wg, isPlaying: s, playSound: r, sound: n })
         : null;
 }
 function O(e) {
@@ -76,9 +76,9 @@ function O(e) {
               "aria-label": u,
               tag: "span",
               onClick: i,
-              className: r()(T.Ls, T.oR, { [T.he]: !0 === s }, t),
+              className: r()(b.Ls, b.oR, { [b.he]: !0 === s }, t),
               children: [
-                  a && (0, l.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: T.JS }),
+                  a && (0, l.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: b.JS }),
                   (0, l.jsx)("span", { children: ` ${n?.name} ` }),
               ],
           })
@@ -98,21 +98,21 @@ let L = function (e) {
         }, [I]);
     return x
         ? null == m
-            ? (0, l.jsx)(b, { playSound: j })
+            ? (0, l.jsx)(T, { playSound: j })
             : o && !u
               ? (0, l.jsx)(
                     N.Ay,
                     {
-                        containerClassName: T.Ti,
-                        className: T.UX,
+                        containerClassName: b.Ti,
+                        className: b.UX,
                         sound: m,
                         channel: g,
                         onSelectItem: j,
                         isPlayingSoundOverride: E,
                         isSoundmoji: !0,
                         buttonOverlay: v.If.SOUNDMOJI,
-                        tooltipClassName: T.YL,
-                        tooltipContentClassName: T.R3,
+                        tooltipClassName: b.YL,
+                        tooltipContentClassName: b.R3,
                         tooltipOverride: (0, l.jsx)(p.WE, { sound: m }),
                         soundmojiVisualEffectRef: A,
                     },

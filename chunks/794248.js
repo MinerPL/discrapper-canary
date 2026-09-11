@@ -129,7 +129,7 @@ function _(e) {
     });
 }
 var j = n(170118);
-function T(e) {
+function b(e) {
     let { small: t = !1 } = e,
         { surfaceConfig: n, resolveFieldValue: l } = en(),
         s = l(n.components.contained_image?.fields.image, [v.o.MEDIA]);
@@ -144,7 +144,7 @@ function T(e) {
         }),
     });
 }
-function b(e) {
+function T(e) {
     let { media: t, ...n } = e;
     return (0, i.jsx)("img", {
         ...n,
@@ -164,7 +164,7 @@ function L(e) {
             className: O.ZS,
             children:
                 null != l
-                    ? (0, i.jsx)(b, { alt: "", media: l.media, className: d()(O.c8, R.g) })
+                    ? (0, i.jsx)(T, { alt: "", media: l.media, className: d()(O.c8, R.g) })
                     : (0, i.jsx)(S, { className: O.pm }),
         }),
     });
@@ -227,7 +227,7 @@ function G() {
             null != n
                 ? (0, i.jsx)("div", {
                       className: U.Xr,
-                      children: (0, i.jsx)(b, { media: n.media, className: d()(U.c8, R.g) }),
+                      children: (0, i.jsx)(T, { media: n.media, className: d()(U.c8, R.g) }),
                   })
                 : (0, i.jsx)(S, { className: U.pm }),
     });
@@ -505,7 +505,7 @@ let el = {
     [a.m.ACTIVITY_ACCESSORY]: { [o.ACTIVITY_ACCESSORY_STAT]: (e) => (0, i.jsx)(I, { ...e }) },
     [a.m.ADD_WIDGET_PREVIEW]: {
         [o.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, i.jsx)(L, { ...e }),
-        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(T, { ...e }),
+        [o.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, i.jsx)(b, { ...e }),
     },
 };
 function ei(e) {

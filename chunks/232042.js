@@ -25,8 +25,8 @@ var i = n(503698),
     N = n(87221),
     _ = n(173936),
     j = n(323384),
-    T = n(367332),
-    b = n(91166),
+    b = n(367332),
+    T = n(91166),
     R = n(936755),
     O = n(375708),
     L = n(147190);
@@ -237,7 +237,7 @@ let M = function (e) {
             });
             break;
         case "app-nsfw":
-            i = (0, l.jsx)(T.c, {
+            i = (0, l.jsx)(b.c, {
                 size: "md",
                 color: "currentColor",
                 className: L.Kk,
@@ -245,7 +245,7 @@ let M = function (e) {
             });
             break;
         case "app-spoiler":
-            i = (0, l.jsx)(b.W, {
+            i = (0, l.jsx)(T.W, {
                 size: "md",
                 color: "currentColor",
                 className: L.Kk,

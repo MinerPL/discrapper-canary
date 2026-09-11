@@ -37,8 +37,8 @@ function v(e) {
 var N = n(174459),
     _ = n(927813),
     j = n(824744),
-    T = n(475815),
-    b = n(953584),
+    b = n(475815),
+    T = n(953584),
     R = n(122641),
     O = n(692051),
     L = n(375708),
@@ -1101,14 +1101,14 @@ class ef extends i.PureComponent {
             { type: l, src: i } = this.props;
         if (
             l === es.VIDEO &&
-            (b.Ay.addChangeListener(this.handleStatsStoreChange),
+            (T.Ay.addChangeListener(this.handleStatsStoreChange),
             (this._hasStatsListener = !0),
-            b.Ay.isVideoStatsEnabled(i) && !this.state.showStats)
+            T.Ay.isVideoStatsEnabled(i) && !this.state.showStats)
         )
             try {
                 this.toggleStats();
             } catch (e) {
-                b.Ay.setVideoStats(i, !1);
+                T.Ay.setVideoStats(i, !1);
             }
         let { current: s } = this.mediaRef;
         null != s && (t && (s.muted = t), e && (this.play(!0), this.handleUIUpdate()), (s.volume = n));
@@ -1120,8 +1120,8 @@ class ef extends i.PureComponent {
         } = this;
         if (s !== e.src && r === es.VIDEO) {
             (null != this._statsCollector && this._statsCollector.resetCodecInfo(this.props.fileSizeBytes),
-                b.Ay.clearVideoStats(e.src));
-            let t = b.Ay.isVideoStatsEnabled(s);
+                T.Ay.clearVideoStats(e.src));
+            let t = T.Ay.isVideoStatsEnabled(s);
             h !== t && (t ? this.toggleStats() : h && this.toggleStats());
         }
         let { current: m } = this.mediaRef,
@@ -1131,13 +1131,13 @@ class ef extends i.PureComponent {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && f?.pop(a))
             : !a && t.playing && (m.pause(), f?.pop(a), n?.()),
             a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability());
-        let p = (0, T.qf)(m.parentNode, m);
+        let p = (0, b.qf)(m.parentNode, m);
         (o && !t.fullscreen && null != p
-            ? ((0, T.tl)(p), p.addEventListener(T.Wb, this.handleFullScreenExit))
+            ? ((0, b.tl)(p), p.addEventListener(b.Wb, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != p &&
-              (p.removeEventListener(T.Wb, this.handleFullScreenExit), (0, T.sP)(p, p.ownerDocument)),
+              (p.removeEventListener(b.Wb, this.handleFullScreenExit), (0, b.sP)(p, p.ownerDocument)),
             c === R.A.Types.DURATION && t.dragging !== R.A.Types.DURATION && a
                 ? m.pause()
                 : c !== R.A.Types.DURATION && t.dragging === R.A.Types.DURATION && a && m.play(),
@@ -1148,13 +1148,13 @@ class ef extends i.PureComponent {
         ((this._unmounted = !0),
             null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
             this._hasStatsListener &&
-                (b.Ay.removeChangeListener(this.handleStatsStoreChange),
+                (T.Ay.removeChangeListener(this.handleStatsStoreChange),
                 (this._hasStatsListener = !1),
-                this.props.type === es.VIDEO && b.Ay.clearVideoStats(this.props.src)));
+                this.props.type === es.VIDEO && T.Ay.clearVideoStats(this.props.src)));
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, T.qf)(e.parentNode, e);
-        null != t && (t.removeEventListener(T.Wb, this.handleFullScreenExit), (0, T.sP)(t));
+        let t = (0, b.qf)(e.parentNode, e);
+        null != t && (t.removeEventListener(b.Wb, this.handleFullScreenExit), (0, b.sP)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1184,8 +1184,8 @@ class ef extends i.PureComponent {
     handleFullScreenExit = () => {
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, T.qf)(e.parentNode, e);
-        (null != t && (0, T._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
+        let t = (0, b.qf)(e.parentNode, e);
+        (null != t && (0, b._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
         if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
@@ -1357,7 +1357,7 @@ class ef extends i.PureComponent {
             (null != this._statsCollector && this._statsCollector.stopTracking(),
                 (this._isUpdatingStats = !0),
                 this.setState({ showStats: !1 }, () => {
-                    ((this._isUpdatingStats = !1), this._unmounted || b.Ay.setVideoStats(this.props.src, !1));
+                    ((this._isUpdatingStats = !1), this._unmounted || T.Ay.setVideoStats(this.props.src, !1));
                 }));
         else if (null != t && (0, c.vq)(t, HTMLVideoElement))
             try {
@@ -1365,14 +1365,14 @@ class ef extends i.PureComponent {
                     this._statsCollector.startTracking(this.handleStatsUpdate),
                     (this._isUpdatingStats = !0),
                     this.setState({ showStats: !0, videoStats: this._statsCollector.getStats() }, () => {
-                        ((this._isUpdatingStats = !1), this._unmounted || b.Ay.setVideoStats(this.props.src, !0));
+                        ((this._isUpdatingStats = !1), this._unmounted || T.Ay.setVideoStats(this.props.src, !0));
                     }));
             } catch (e) {
                 (null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
                     (this._isUpdatingStats = !1),
-                    this._unmounted || b.Ay.setVideoStats(this.props.src, !1));
+                    this._unmounted || T.Ay.setVideoStats(this.props.src, !1));
             }
-        else b.Ay.setVideoStats(n, !1);
+        else T.Ay.setVideoStats(n, !1);
     };
     handleStatsUpdate = (e) => {
         this.setState({ videoStats: e });
@@ -1381,7 +1381,7 @@ class ef extends i.PureComponent {
         let { src: e, type: t } = this.props;
         t !== es.VIDEO ||
             this._isUpdatingStats ||
-            (b.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
+            (T.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
     };
     renderVideo() {
         let { alt: e, src: t, poster: n, forceExternal: i, responsive: s, mediaLayoutType: r } = this.props,
@@ -1500,7 +1500,7 @@ class ef extends i.PureComponent {
                                 iconClassName: et.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, T.qf)(e?.parentNode, e),
+                                node: (0, b.qf)(e?.parentNode, e),
                             })
                           : null,
               })

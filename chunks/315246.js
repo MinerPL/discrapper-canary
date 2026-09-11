@@ -22,9 +22,9 @@ function I(e) {
         N = i.useRef(null),
         _ = i.useContext(x.Jd),
         j = (0, p.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
-        T = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
-        b = "application_id" in y.extra ? y.extra.application_id : null,
-        R = (0, h.A)({ id: b, label: A.intl.string(A.t["FfCL+6"]) }),
+        b = (0, h.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
+        T = "application_id" in y.extra ? y.extra.application_id : null,
+        R = (0, h.A)({ id: T, label: A.intl.string(A.t["FfCL+6"]) }),
         O = (0, g.zD)(y),
         L = (0, f.A)({
             location: "ContentPopoutContextMenu",
@@ -63,7 +63,7 @@ function I(e) {
                                     }),
                             ],
                         }),
-                        (0, l.jsxs)(a.rX, { children: [T, R] }),
+                        (0, l.jsxs)(a.rX, { children: [b, R] }),
                     ],
                 }),
             });

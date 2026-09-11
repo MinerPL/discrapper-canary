@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(850992),
     _ = n(319993),
     j = n(435558),
-    T = n(132500),
-    b = n(104142),
+    b = n(132500),
+    T = n(104142),
     R = n(407781),
     O = n(287809),
     L = n(194486),
@@ -39,11 +39,11 @@ let k = i.forwardRef(function (e, t) {
         h = n?.emojiId != null || n?.emojiName != null,
         m = i.useCallback(() => {
             if (!a && d && h && null != r) {
-                let e = (0, b.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
+                let e = (0, T.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
                     t = null != n.emojiId,
                     l = L.B.PREMIUM,
-                    i = (0, j.random)(b.Bf[l].length, !1),
-                    s = { id: (0, T.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
+                    i = (0, j.random)(T.Bf[l].length, !1),
+                    s = { id: (0, b.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: r.id };
                 c((e) => [...e, s]);
             }
         }, [a, d, h, r, n]);
@@ -149,8 +149,8 @@ let X = i.forwardRef(function (e, t) {
             containerClassName: p,
             className: S,
             focused: j,
-            forceSecondaryActions: T = !1,
-            interactive: b = !0,
+            forceSecondaryActions: b = !1,
+            interactive: T = !0,
             enableSecondaryActions: R = !1,
             suppressPlaySound: L,
             onMouseEnter: M,
@@ -197,17 +197,17 @@ let X = i.forwardRef(function (e, t) {
         eC = (0, a.rm)(eA),
         eE = null != ei || null != es,
         eI = !(0, F.Ir)(er, m, f) && !Q,
-        ey = T || (R && !eI),
+        ey = b || (R && !eI),
         eS = N.LW.useStore().bottomPosition ?? 0,
         ev = eh.current?.getBoundingClientRect().bottom ?? 0,
         [eN, e_] = i.useState(!1),
         ej = i.useCallback(() => {
             e_(!0);
         }, []),
-        eT = i.useCallback(() => {
+        eb = i.useCallback(() => {
             e_(!1);
         }, []),
-        eb = eI && G;
+        eT = eI && G;
     function eR(e) {
         (ex &&
             !ef &&
@@ -219,12 +219,12 @@ let X = i.forwardRef(function (e, t) {
     }
     let eO = (0, l.jsx)("div", {
         onMouseEnter: ej,
-        onMouseLeave: eT,
-        children: J({ sound: m, previewSound: eu, disabled: eI && !T }),
+        onMouseLeave: eb,
+        children: J({ sound: m, previewSound: eu, disabled: eI && !b }),
     });
     function eL(e) {
         return L || eI
-            ? eb
+            ? eT
                 ? (0, l.jsx)(x.LockIcon, {
                       size: "xs",
                       color: "currentColor",
@@ -235,8 +235,8 @@ let X = i.forwardRef(function (e, t) {
     }
     let eM = (0, l.jsx)("div", {
         onMouseEnter: ej,
-        onMouseLeave: eT,
-        children: (0, l.jsx)($, { sound: m, disabled: !b && !T }),
+        onMouseLeave: eb,
+        children: (0, l.jsx)($, { sound: m, disabled: !T && !b }),
     });
     i.useEffect(() => {
         let e = eg.current;
@@ -274,11 +274,11 @@ let X = i.forwardRef(function (e, t) {
                             [Y.CS]: q,
                             [Y.he]: X ?? ec,
                             [Y.ju]: L,
-                            [Y.wT]: b,
-                            [Y.$9]: !b && !T,
-                            [Y.Au]: eI && !T,
-                            [Y.fx]: !b && T,
-                            [Y.in]: b && j,
+                            [Y.wT]: T,
+                            [Y.$9]: !T && !b,
+                            [Y.Au]: eI && !b,
+                            [Y.fx]: !T && b,
+                            [Y.in]: T && j,
                         },
                         S,
                     ),
@@ -295,7 +295,7 @@ let X = i.forwardRef(function (e, t) {
                                 eE && (0, l.jsx)(I.A, { emojiId: ei, emojiName: es, className: Y.Zg }),
                                 (0, l.jsx)(C.E, {
                                     variant: "text-xs/medium",
-                                    color: b ? void 0 : "text-muted",
+                                    color: T ? void 0 : "text-muted",
                                     className: r()(Y.TW, { [Y.hn]: eE }),
                                     children: el,
                                 }),
@@ -337,7 +337,7 @@ let X = i.forwardRef(function (e, t) {
                                 case V.If.PLAY:
                                 case V.If.SOUNDMOJI:
                                 default:
-                                    return eb && !W
+                                    return eT && !W
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   (0, l.jsx)("div", { className: Y.LQ }),

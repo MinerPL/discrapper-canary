@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(174459),
     _ = n(652215),
     j = n(375708),
-    T = n(845210);
-function b() {
+    b = n(845210);
+function T() {
     (0, A.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
@@ -49,22 +49,22 @@ function R(e) {
         }, [s, a]),
         n
             ? (0, l.jsx)(C.D, {
-                  className: T.e7,
-                  onClick: () => b(),
+                  className: b.e7,
+                  onClick: () => T(),
                   children: (0, l.jsx)(u.m, {
                       text: j.intl.string(j.t["+eFIjX"]),
                       position: "top",
-                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: T.M2 }),
+                      children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: b.M2 }),
                   }),
               })
             : (0, l.jsxs)("div", {
-                  className: r()(T.zr, t),
+                  className: r()(b.zr, t),
                   children: [
-                      (0, l.jsx)(c.t, { size: "md", className: T.M2, color: E.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(c.t, { size: "md", className: b.M2, color: E.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
-                          className: T.Qq,
+                          className: b.Qq,
                           variant: "text-sm/normal",
-                          children: j.intl.format(j.t.BNAIBU, { onLearnMore: b }),
+                          children: j.intl.format(j.t.BNAIBU, { onLearnMore: T }),
                       }),
                   ],
               })
@@ -81,19 +81,19 @@ function M(e) {
         S = n.length,
         v = null != t.upsellLongMessages && (S ?? 0) > _.uvi && C,
         N = null != t.upsellLongMessages && !C,
-        T = I - S,
-        b = T > y;
+        b = I - S,
+        T = b > y;
     (0, a.$)({ currentLength: S, maxLength: I, message: j.intl.string(j.t.c2Jqed) });
     let M =
-            0 === T
+            0 === b
                 ? j.intl.string(j.t.tU6YQ7)
-                : T > 0
-                  ? j.intl.formatToPlainString(j.t.qH8uFW, { count: T })
+                : b > 0
+                  ? j.intl.formatToPlainString(j.t.qH8uFW, { count: b })
                   : j.intl.string(j.t.YSRIqa),
         { analyticsLocations: k } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: w } = (0, O.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s });
     if (!w) return null;
-    let P = T >= 0;
+    let P = b >= 0;
     return (0, l.jsx)(f.f5, {
         value: k,
         children: (0, l.jsxs)("div", {
@@ -109,7 +109,7 @@ function M(e) {
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: L.y }),
                               })
                             : null,
-                        b
+                        T
                             ? null
                             : (0, l.jsx)(u.m, {
                                   text: M,
@@ -119,14 +119,14 @@ function M(e) {
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: P ? "text-default" : "text-feedback-critical",
-                                      children: T,
+                                      children: b,
                                   }),
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: T }) }),
-                N && !b
-                    ? (0, l.jsx)(R, { className: L.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: T })
+                (0, l.jsx)(h.A, { "aria-live": "polite", children: j.intl.format(j.t.qH8uFW, { count: b }) }),
+                N && !T
+                    ? (0, l.jsx)(R, { className: L.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
                     : null,
             ],
         }),

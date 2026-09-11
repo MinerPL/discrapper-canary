@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => _, Hq: () => T, l$: () => j, o6: () => N, wK: () => b });
+n.d(t, { Ay: () => _, Hq: () => b, l$: () => j, o6: () => N, wK: () => T });
 var l,
     i = n(308528),
     s = n(155718),
@@ -49,8 +49,8 @@ function _(e) {
             let { embeddedActivity: t } = e;
             return m.id === t.applicationId;
         }),
-        N = T({ context: n, applicationId: m.id }),
-        _ = b({
+        N = b({ context: n, applicationId: m.id }),
+        _ = T({
             application: t.application,
             context: n,
             locationObject: l,
@@ -76,7 +76,7 @@ function j(e, t) {
     let n = t.client_platform_config[(0, x.A)((0, d.getOS)())].release_phase;
     return y.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function T(e) {
+function b(e) {
     let { context: t, applicationId: n, fetchesApplication: l = !0 } = e,
         i = 0,
         s = "channel" === t.type ? t.channel : void 0,
@@ -91,7 +91,7 @@ function T(e) {
     let d = (0, g.H)(r?.location);
     return (null != s && d === s.id && o?.id === u.id ? (i = 2) : null != c && (i = 1), i);
 }
-function b(e) {
+function T(e) {
     let {
             application: t,
             botUserIdForAppDM: n,
@@ -109,10 +109,10 @@ function b(e) {
             onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
         S = t?.id ?? "",
-        N = T({ context: l, applicationId: S, fetchesApplication: A }),
+        N = b({ context: l, applicationId: S, fetchesApplication: A }),
         { analyticsLocations: _ } = (0, r.Ay)(),
         j = (0, C.A)(),
-        b = (0, c.x)(t);
+        T = (0, c.x)(t);
     if (null == t)
         return () => {
             o?.({ applicationId: "" });
@@ -120,7 +120,7 @@ function b(e) {
     switch (N) {
         case 0:
             return async () => {
-                if (b) {
+                if (T) {
                     try {
                         (await u.A.launchFrame({
                             applicationId: S,

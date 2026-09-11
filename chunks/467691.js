@@ -1,4 +1,4 @@
-n.d(t, { US: () => R, BD: () => y, X8: () => D, mH: () => v });
+n.d(t, { US: () => v, BD: () => U, X8: () => D, mH: () => b });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -9,8 +9,8 @@ var l = n(435558),
     d = n(808728),
     c = n(967198),
     u = n(711014),
-    h = n(645959),
-    A = n(625494),
+    A = n(645959),
+    h = n(625494),
     E = n(265422),
     g = n(652215),
     C = n(790782);
@@ -18,7 +18,7 @@ function _(e, t) {
     return [
         { resourceId: e, type: C.P.GUILD_EVENT },
         ...(e === g.ME
-            ? h.A.getPrivateChannelIds()
+            ? A.A.getPrivateChannelIds()
             : (0, a.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }
@@ -26,7 +26,7 @@ let I = r().throttle(function (e, t) {
     var l;
     let r,
         a,
-        h,
+        A,
         {
             channelPredicate: C = () => !0,
             guildPredicate: I = () => !0,
@@ -44,13 +44,13 @@ let I = r().throttle(function (e, t) {
                 : (r.splice(a, 0, l), r.slice(a + 1).concat(r.slice(0, a + 1)))),
         f = e > 0 ? 0 : m.length - 1,
         O = _(N, S),
-        b = O.indexOf(L) + e;
+        R = O.indexOf(L) + e;
     for (; null != N && "" !== N;) {
-        if (((h = O[b]), I(N)))
-            for (; null != h && "" !== h;) {
-                if ("string" == typeof h) {
-                    if (C(N, h)) return (0, E.i)(N, h, !1, p(N, h));
-                } else if ("object" == typeof h && T(h.resourceId, h.type))
+        if (((A = O[R]), I(N)))
+            for (; null != A && "" !== A;) {
+                if ("string" == typeof A) {
+                    if (C(N, A)) return (0, E.i)(N, A, !1, p(N, A));
+                } else if ("object" == typeof A && T(A.resourceId, A.type))
                     return (
                         N !== c.A.getGuildId() && (0, E.i)(N, d.Ay.getDefaultChannel(N)?.id),
                         (0, s.openModalLazy)(async () => {
@@ -82,12 +82,12 @@ let I = r().throttle(function (e, t) {
                             return (t) => (0, i.jsx)(e, { ...t, guildId: N });
                         })
                     );
-                ((b += e), (h = O[b]));
+                ((R += e), (A = O[R]));
             }
         if (((f += e), null == (N = m[f]) || "" === N)) break;
-        ((O = _(N, S)), (b = e < 0 ? O.length - 1 : 0));
+        ((O = _(N, S)), (R = e < 0 ? O.length - 1 : 0));
     }
-    A._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
+    h._.dispatch(g.jej.SHAKE_APP, { duration: 200, intensity: 2 });
 }, g.ugG);
 var T = n(455234),
     p = n(95701),
@@ -106,7 +106,7 @@ let f = (e, t) => {
     },
     O = (e, t) =>
         t === C.P.GUILD_EVENT ? !m.Ay.isMuteScheduledEventsEnabled(e) && N.Ay.hasUnread(e, t) : N.Ay.hasUnread(e, t),
-    b = (e, t) => {
+    R = (e, t) => {
         let n = S.A.getChannel(t);
         return (
             null != n &&
@@ -114,7 +114,7 @@ let f = (e, t) => {
             (N.Ay.getMentionCount(t) > 0 || (L.Ay.getVoiceChannelId() === t && N.Ay.getUnreadCount(t) > 0))
         );
     },
-    v = {
+    b = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
@@ -124,14 +124,14 @@ let f = (e, t) => {
                     channelPredicate: f,
                     guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
                     guildFeaturePredicate: O,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: R,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    R = {
+    v = {
         binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {
@@ -141,21 +141,21 @@ let f = (e, t) => {
                     channelPredicate: f,
                     guildPredicate: (t) => t === e || !m.Ay.isMuted(t),
                     guildFeaturePredicate: O,
-                    ensureChatIsVisible: b,
+                    ensureChatIsVisible: R,
                     withVoiceChannels: !0,
                 }),
                 !1
             );
         },
     },
-    U = (e, t) => N.Ay.getMentionCount(t) > 0,
-    y = {
+    y = (e, t) => N.Ay.getMentionCount(t) > 0,
+    U = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (I(1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (I(1, { channelPredicate: y, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     },
     D = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (I(-1, { channelPredicate: U, ensureChatIsVisible: b, withVoiceChannels: !0 }), !1),
+        action: () => (I(-1, { channelPredicate: y, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     };

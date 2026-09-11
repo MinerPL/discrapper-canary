@@ -856,8 +856,8 @@ var eY = n(702841),
     e1 = n(43105),
     e8 = n(131607),
     e2 = n(518477),
-    e7 = n(49999);
-function e5() {
+    e5 = n(49999);
+function e7() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = eQ.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
         [n, i] = (0, e8.kn)(e && t ? [e0.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
@@ -881,7 +881,7 @@ function e3(e) {
               gradientColor: "nitro-pink",
               title: B.intl.string(B.t.KKGxNt),
               body: B.intl.string(B.t["IS+QTV"]),
-              onRequestClose: () => l(e7.i.USER_DISMISS),
+              onRequestClose: () => l(e5.i.USER_DISMISS),
               actions: [
                   {
                       text: B.intl.string(B.t.RCy7Px),
@@ -902,7 +902,7 @@ function e4(e) {
     let { buttonRef: t, isCoachmarkVisible: n, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: r } = (0, eJ.NJ)(),
         a = l.useCallback(() => {
-            n && s(e7.i.TAKE_ACTION);
+            n && s(e5.i.TAKE_ACTION);
             let e = (0, I.g0)();
             ((0, F.Y5)(e),
                 r({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
@@ -922,7 +922,7 @@ function e9(e) {
         { trackUserProfileEditAction: s } = (0, eJ.NJ)(),
         a = l.useRef(null),
         o = l.useRef(null),
-        [c, u] = e5(),
+        [c, u] = e7(),
         g = (function () {
             let e = (0, eY.bG)([G.default], () => G.default.getCurrentUser()?.id),
                 t = (0, R.A)(e),
@@ -934,7 +934,7 @@ function e9(e) {
         })(),
         m = (0, eZ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e7.i.TAKE_ACTION),
+            (c && u(e5.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -1466,7 +1466,7 @@ function t2() {
         }),
     });
 }
-function t7(e) {
+function t5(e) {
     let t,
         s,
         r,
@@ -1684,7 +1684,7 @@ function t7(e) {
                 : (0, i.jsx)(t2, {}),
     });
 }
-var t5 = n(704824),
+var t7 = n(704824),
     t3 = n(382483),
     t6 = n(385113),
     t4 = n(334074),
@@ -1720,7 +1720,7 @@ function nt(e) {
                             icon: tU.P,
                             "aria-label": B.intl.string(B.t.WAI6xu),
                             onClick: () => {
-                                s(e7.i.USER_DISMISS);
+                                s(e5.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1733,7 +1733,7 @@ function nt(e) {
                             icon: ne.U,
                             "aria-label": B.intl.formatToPlainString(B.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                (s(e7.i.TAKE_ACTION), o());
+                                (s(e5.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -1755,7 +1755,7 @@ function nn() {
         }, []);
         let t = (0, a.bG)([G.default], () => G.default.getCurrentUser()),
             n = (0, c.A)(e),
-            { tokens: i, fetched: s } = (0, t5.j)(e),
+            { tokens: i, fetched: s } = (0, t7.j)(e),
             r = (0, R.A)(t?.id),
             o = null == t || null == e || null == i || !s,
             d = l.useMemo(
@@ -2356,7 +2356,7 @@ function nQ(e) {
         r = l.useRef(!1),
         o = l.useRef(null),
         c = (0, a.bG)([td.A], () => td.A.getUserProfile(t)?.fetchError != null, [t]),
-        [u, g] = e5(!c),
+        [u, g] = e7(!c),
         m = (0, nq.A)();
     return (
         l.useEffect(() => {
@@ -2414,7 +2414,7 @@ function n0(e) {
           : (0, p.fu)(t)
             ? (0, i.jsx)(nY, { widget: t, ...n })
             : t instanceof h.k
-              ? (0, i.jsx)(t7, { widget: t, ...n })
+              ? (0, i.jsx)(t5, { widget: t, ...n })
               : null;
 }
 function n1() {

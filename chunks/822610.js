@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(914905),
     _ = n(650583),
     j = n(375708),
-    T = n(40974);
-function b(e) {
+    b = n(40974);
+function T(e) {
     let { channelId: t, option: n, keyboardModeEnabled: s } = e,
         a = i.useRef(null),
         [o, u] = i.useState(!1),
@@ -35,7 +35,7 @@ function b(e) {
         {
             allowedExtensions: p,
             typesFormattedString: x,
-            validateFilenames: b,
+            validateFilenames: T,
             showInvalidFileTypeAlert: R,
         } = (0, S.M1)(f),
         O = i.useCallback(() => {
@@ -46,11 +46,11 @@ function b(e) {
         }, []),
         M = i.useCallback(
             (e, l) => {
-                if (p.length > 0 && !b([e.name])) return R();
+                if (p.length > 0 && !T([e.name])) return R();
                 let i = { id: n.name, file: e, platform: y.xz.WEB, origin: l };
                 d.A.setFile({ channelId: t, id: n.name, file: i, draftType: v.C.SlashCommand, allowOptimization: !1 });
             },
-            [p.length, b, n.name, t, R],
+            [p.length, T, n.name, t, R],
         ),
         k = i.useCallback(
             (e) => {
@@ -100,20 +100,20 @@ function b(e) {
               onKeyDown: function (e) {
                   e.key === _.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
-              className: r()(T.xd, { [T.LB]: o }),
+              className: r()(b.xd, { [b.LB]: o }),
               draftType: v.C.SlashCommand,
               ref: m,
               children: [
-                  (0, l.jsx)("span", { className: r()(T.fS, { [T.Vg]: o }), children: n.displayName }),
+                  (0, l.jsx)("span", { className: r()(b.fS, { [b.Vg]: o }), children: n.displayName }),
                   (0, l.jsx)(E.D, {
-                      className: T.uN,
+                      className: b.uN,
                       onClick: () => a.current?.activateUploadDialogue(),
                       children: (0, l.jsxs)("div", {
-                          className: T.wi,
+                          className: b.wi,
                           children: [
-                              (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: T.H9, alt: "" }),
+                              (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: b.H9, alt: "" }),
                               (0, l.jsx)(C.E, {
-                                  className: T.L,
+                                  className: b.L,
                                   variant: "text-sm/normal",
                                   children:
                                       null != x ? j.intl.format(j.t.JJzx48, { types: x }) : j.intl.string(j.t.IJyOUf),
@@ -128,7 +128,7 @@ function b(e) {
                                   filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
-                                  className: T.Fg,
+                                  className: b.Fg,
                               }),
                           ],
                       }),
@@ -156,7 +156,7 @@ function k(e) {
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
         j = i.useMemo(() => v?.filter((e) => e.type === h.n4.ATTACHMENT && _?.[e.name]?.hasValue) ?? [], [v, _]),
-        [T, k] = i.useState([]);
+        [b, k] = i.useState([]);
     i.useEffect(() => {
         function e() {
             d.A.clearAll(t, n.drafts.type);
@@ -170,7 +170,7 @@ function k(e) {
         I.focusFirstVisibleItem();
     }, [I]);
     (0, x.Vo)({ event: R.jej.FOCUS_ATTACHMENT_AREA, handler: w });
-    let P = { isApplicationCommand: S, previousUploadOptions: T, uploadOptions: j },
+    let P = { isApplicationCommand: S, previousUploadOptions: b, uploadOptions: j },
         D = i.useRef(P);
     (i.useEffect(() => {
         D.current = P;
@@ -201,7 +201,7 @@ function k(e) {
                           ...s,
                           className: r()(O.I, L.KK),
                           children: S
-                              ? j.map((e) => (0, l.jsx)(b, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
+                              ? j.map((e) => (0, l.jsx)(T, { channelId: t, keyboardModeEnabled: E, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
                                         N.A,

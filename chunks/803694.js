@@ -180,25 +180,25 @@ function S(e) {
         { enabled: y } = (0, s.c)({ location: f }),
         {
             pendingPaymentSourceId: I,
-            hasInitialPaymentSourceSeed: A,
-            hasAddedPaymentSourceThisSession: g,
+            hasInitialPaymentSourceSeed: g,
+            hasAddedPaymentSourceThisSession: A,
         } = (0, r.t4)((e) => ({
             pendingPaymentSourceId: e.pendingPaymentSourceId,
             hasInitialPaymentSourceSeed: null != e.initialPaymentSourceId,
             hasAddedPaymentSourceThisSession: e.hasAddedPaymentSourceThisSession,
         })),
-        { dropdownPaymentSources: P, giftCardWallet: v } = l.useMemo(() => {
+        { dropdownPaymentSources: P, giftCardWallet: _ } = l.useMemo(() => {
             let e = i.filter((e) => e.type !== c.hes.TDS_WALLET);
             return y
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, u.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
         }, [i, y]),
-        [_, x] = l.useState(null),
-        T = null != v && a === v.id,
+        [v, x] = l.useState(null),
+        T = null != _ && a === _.id,
         N = l.useMemo(
             () =>
-                null != _ ? _ : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
-            [P, S, _],
+                null != v ? v : d({ giftCardWallet: null, dropdownPaymentSources: P, subscriptionPaymentSourceId: S }),
+            [P, S, v],
         ),
         b = l.useMemo(() => (T ? N : (a ?? null)), [N, T, a]),
         j = l.useMemo(
@@ -206,15 +206,15 @@ function S(e) {
                 checkoutPaymentSources: i,
                 dropdownPaymentSources: P,
                 subscriptionPaymentSourceId: S,
-                giftCardWallet: v,
+                giftCardWallet: _,
                 isReady: E,
                 pendingPaymentSourceId: I,
                 paymentSourceId: a,
                 giftCardsEnabled: y,
-                hasInitialPaymentSourceSeed: A,
-                hasAddedPaymentSourceThisSession: g,
+                hasInitialPaymentSourceSeed: g,
+                hasAddedPaymentSourceThisSession: A,
             }),
-            [i, P, S, v, E, I, a, y, A, g],
+            [i, P, S, _, E, I, a, y, g, A],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(j), [j])),
@@ -238,13 +238,13 @@ function S(e) {
         ),
         M = l.useCallback(
             (e) => {
-                if (e && null != v) {
-                    (a !== v.id && x(a ?? null), o(v.id));
+                if (e && null != _) {
+                    (a !== _.id && x(a ?? null), o(_.id));
                     return;
                 }
                 o(N);
             },
-            [o, v, a, N],
+            [o, _, a, N],
         ),
         {
             walletCoversSubtotal: O,
@@ -252,29 +252,29 @@ function S(e) {
             isWalletBalanceLoaded: k,
             isWalletCoverageLoading: w,
         } = h({ giftCardsEnabled: y, checkoutPaymentSources: i }),
-        U = null != S && null != v && S === v.id;
+        U = null != S && null != _ && S === _.id;
     l.useEffect(() => {
         !U && k && !O && T && o(N);
     }, [U, k, O, T, o, N]);
     let D = l.useMemo(
         () =>
-            null == v
+            null == _
                 ? null
                 : {
-                      giftCardWallet: v,
+                      giftCardWallet: _,
                       checked: T,
                       onChange: M,
                       loading: w,
                       disabled: !w && !O,
                       disabledTooltip: w || O ? void 0 : p.intl.string(C.default.ccWIdu),
                   },
-        [v, T, M, O, w],
+        [_, T, M, O, w],
     );
     return {
         giftCardsEnabled: y,
         dropdownPaymentSources: P,
         dropdownPaymentSourceId: b,
-        giftCardWallet: v,
+        giftCardWallet: _,
         isGiftCardCreditsChecked: T,
         isSubscriptionPaidByWallet: U,
         handleGiftCardCreditsToggle: M,

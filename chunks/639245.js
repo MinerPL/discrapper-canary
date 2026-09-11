@@ -24,8 +24,8 @@ var l = n(477900),
     N = n(836039),
     _ = n(702841),
     j = n(71393),
-    T = n(236285),
-    b = n(770335),
+    b = n(236285),
+    T = n(770335),
     R = n(624793),
     O = n(652215),
     L = n(731383),
@@ -196,14 +196,14 @@ function el(e) {
             isFetching: m,
         } = (function (e) {
             let { emojiId: t, refreshPositionKey: n } = e,
-                { joinedEmojiSourceGuildRecord: l, emoji: s } = (0, _.cf)([T.Ay, j.A], () => {
+                { joinedEmojiSourceGuildRecord: l, emoji: s } = (0, _.cf)([b.Ay, j.A], () => {
                     var e, n;
                     let l;
                     return (
-                        (e = T.Ay),
+                        (e = b.Ay),
                         (n = j.A),
                         (l = null != t ? e.getCustomEmojiById(t) : null),
-                        l?.type === b.i.GUILD
+                        l?.type === T.i.GUILD
                             ? { emoji: l, joinedEmojiSourceGuildRecord: n.getGuild(l?.guildId) }
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
@@ -276,8 +276,8 @@ function ei(e) {
             joinedEmojiSourceGuildRecord: v,
             closePopout: _,
             onToggleShowMoreEmojis: j,
-            guildEmoji: T,
-            demoMode: b = !1,
+            guildEmoji: b,
+            demoMode: T = !1,
             nonce: M,
         } = e,
         k = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
@@ -286,7 +286,7 @@ function ei(e) {
         K = null != V && (V === x?.id || V === v?.id),
         z = null != v,
         q = x?.isDiscoverable() ?? !1;
-    b && ((F = !0), (q = !0), (z = !1), (K = !1));
+    T && ((F = !0), (q = !0), (z = !1), (K = !1));
     let et = {
             page: null != (0, o.bG)([H.A], () => H.A.getGuildId()) ? O.liQ.GUILD_CHANNEL : O.liQ.DM_CHANNEL,
             section: O.JJy.EMOJI_UPSELL_POPOUT,
@@ -297,22 +297,22 @@ function ei(e) {
             userIsRoleSubscriber: er,
         } = i.useMemo(
             () =>
-                null == T
+                null == b
                     ? { isRoleSubscriptionEmoji: !1, isUnusableRoleSubscriptionEmoji: !1, userIsRoleSubscriber: !1 }
                     : {
-                          isRoleSubscriptionEmoji: w.kT(T),
-                          isUnusableRoleSubscriptionEmoji: w.JN(T, V ?? void 0),
-                          userIsRoleSubscriber: P.A.getUserSubscriptionRoles(T.guildId).size > 0,
+                          isRoleSubscriptionEmoji: w.kT(b),
+                          isUnusableRoleSubscriptionEmoji: w.JN(b, V ?? void 0),
+                          userIsRoleSubscriber: P.A.getUserSubscriptionRoles(b.guildId).size > 0,
                       },
-            [T, V],
+            [b, V],
         ),
-        ea = !!ei && (0, N.tE)(T?.guildId),
+        ea = !!ei && (0, N.tE)(b?.guildId),
         { analyticsLocations: eo } = (0, I.Ay)(E.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, y.A)(
         {
             type: a.ImpressionTypes.MODAL,
             name: a.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
-            properties: { location_stack: eo, emoji_guild_id: T?.guildId ?? null, emoji_id: T?.id ?? null },
+            properties: { location_stack: eo, emoji_guild_id: b?.guildId ?? null, emoji_id: b?.id ?? null },
         },
         { disableTrack: !el },
     );
@@ -345,7 +345,7 @@ function ei(e) {
             popoutData: ec,
             emojiSourceGuildId: x?.id,
             nonce: M,
-            demoMode: b,
+            demoMode: T,
         }),
         ef = ec.type === Y.u.JOIN_GUILD,
         ep = ec.type === Y.u.GET_PREMIUM,
@@ -356,7 +356,7 @@ function ei(e) {
         children: [
             (function () {
                 async function e() {
-                    if (b || null == x || z) return;
+                    if (T || null == x || z) return;
                     _();
                     let e = x.id;
                     try {
@@ -462,7 +462,7 @@ function ei(e) {
                                             n &&
                                                 (j?.(),
                                                 eg ||
-                                                    b ||
+                                                    T ||
                                                     W.default.track(O.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, em),
                                                 ex(!eg));
                                         },
