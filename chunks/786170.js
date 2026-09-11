@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611516, Version Hash: c1379b39af4be7e12e7dd44e75d9bb2f28bd8075`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611522, Version Hash: 2e664ccae7763be2034378396b3766352fff980a`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eI.A.initBasic(),
@@ -21308,7 +21308,7 @@ let NC = "isHideDevBanner",
                     className: ta()(NN.Wz, NN.mr),
                     children: [
                         (0, O.jsx)(NS, { className: NN.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611516" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611522" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -49961,9 +49961,9 @@ let Fy = (0, nZ.Fe)({
     FH = (0, nZ.Fe)({
         createPromise: () =>
             Promise.all([n.e("213217"), n.e("895359"), n.e("483518"), n.e("85216"), n.e("51194"), n.e("666708")]).then(
-                n.bind(n, 303174),
+                n.bind(n, 654423),
             ),
-        webpackId: 303174,
+        webpackId: 654423,
         name: "SuspendedUserSafetyHubPage",
     }),
     Fj = (0, nZ.Fe)({
