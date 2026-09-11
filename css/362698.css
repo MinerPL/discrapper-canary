@@ -3801,14 +3801,14 @@ screen and (max-width:485px) {
     justify-content: center;
     padding: calc(var(--custom-app-top-bar-height) + var(--space-24)) var(--space-24);
     pointer-events: none;
-    position: relative;
     width: calc(100vw - var(--devtools-sidebar-width, 0px))
 }
 
 .container__8a031,
 .outerContainer__8a031 {
     box-sizing: border-box;
-    display: flex
+    display: flex;
+    position: relative
 }
 
 .container__8a031 {
@@ -3822,6 +3822,10 @@ screen and (max-width:485px) {
     max-height: 100%;
     pointer-events: auto;
     width: 100%
+}
+
+.exiting__8a031 .focus-rings-ring {
+    visibility: hidden
 }
 
 .padding-size-sm__8a031 {
@@ -5170,4 +5174,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.e1dc56823499cf53.css.map*/
+/*# sourceMappingURL=362698.6a403c6f04210ef0.css.map*/
