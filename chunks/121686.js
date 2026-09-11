@@ -1840,7 +1840,7 @@ function n6(e) {
                                                                     (0, i.jsx)(e$, {
                                                                         action: "PRESS_VIEW_BADGES",
                                                                         icon: eF.q,
-                                                                        label: V.intl.string(V.t["9kPRi0"]),
+                                                                        label: V.intl.string(V.t.l6w3Vj),
                                                                         onClick: () => {
                                                                             (n(),
                                                                                 (0, B._)({
@@ -2674,7 +2674,7 @@ function ly(e) {
         (p(!1), s());
     }, [s]);
     if (null != a) {
-        let e = (0, lN.A)("1789100332853", !0);
+        let e = (0, lN.A)("1789100409552", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
