@@ -69,17 +69,19 @@ var R = n(268218),
     U = n(534400),
     G = n(531685),
     V = n(620141),
-    F = n(966598),
+    F = n(19309),
     H = n(224964);
 function B(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         l = (0, o.bG)([G.A], () => G.A.isFocused()),
-        i = (0, H.A)(),
-        r = (0, F.A)(t);
+        i = (0, H.A)();
     return (
         s.useEffect(() => {
-            l && n && null != r && i.fire(r.x, r.y);
-        }, [i, l, r, n]),
+            if (l && n) {
+                let e = (0, F.A)(t);
+                null != e && i.fire(e.x, e.y);
+            }
+        }, [i, t, l, n]),
         null
     );
 }

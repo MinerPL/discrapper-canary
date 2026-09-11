@@ -102,23 +102,25 @@ var k = n(891734),
     w = n(702841),
     G = n(3137),
     B = n(620141),
-    D = n(966598),
+    D = n(19309),
     H = n(224964),
     $ = n(31408);
 function W(e) {
     let { reactionRef: t, count: n } = e,
         i = l.useRef(n),
         a = (0, w.bG)([G.A], () => G.A.getState()),
-        r = (0, H.A)(),
-        o = (0, D.A)(t.current);
+        r = (0, H.A)();
     return (
         l.useEffect(() => {
-            if (n > i.current && null != o) {
-                let e = (0, U.clamp)(n, a.confettiCount / 2, 2 * a.confettiCount);
-                r.fire(o.x, o.y, { count: e });
+            if (n > i.current) {
+                let e = (0, D.A)(t.current);
+                if (null != e) {
+                    let t = (0, U.clamp)(n, a.confettiCount / 2, 2 * a.confettiCount);
+                    r.fire(e.x, e.y, { count: t });
+                }
             }
             i.current = n;
-        }, [n, o, r, a.confettiCount]),
+        }, [n, r, a.confettiCount, t]),
         null
     );
 }

@@ -2,20 +2,20 @@ n.d(t, { A: () => c });
 var l = n(477900),
     i = n(582128),
     s = n(620141),
-    r = n(966598),
+    r = n(19309),
     a = n(224964),
     o = n(31408);
 function u(e) {
     let { callTileRef: t, isFiring: n } = e,
-        l = (0, a.A)(),
-        s = (0, r.A)(t);
+        l = (0, a.A)();
     return (
         i.useEffect(() => {
-            n &&
-                null != s &&
-                null != t &&
-                l.fire(s.x + t.clientWidth / 2, s.y + t.clientHeight / 2, { countMultiplier: 4 });
-        }, [t, l, n, s]),
+            let e = t.current;
+            if (n && null != e) {
+                let t = (0, r.A)(e);
+                null != t && l.fire(t.x + e.clientWidth / 2, t.y + e.clientHeight / 2, { countMultiplier: 4 });
+            }
+        }, [t, l, n]),
         null
     );
 }
