@@ -20,8 +20,8 @@ var l = n(477900),
     g = n(717398),
     A = n(966327),
     P = n(674658),
-    _ = n(769015),
-    v = n(242874),
+    v = n(769015),
+    _ = n(242874),
     x = n(580194),
     T = n(531536),
     N = n(219271),
@@ -35,25 +35,25 @@ var l = n(477900),
     w = n(158045),
     U = n(427262),
     D = n(951305),
-    G = n(331322),
-    F = n(834730),
-    B = n(683071),
-    H = n(696208),
-    W = n(869038),
-    Y = n(793574),
+    G = n(482132),
+    F = n(331322),
+    B = n(834730),
+    H = n(683071),
+    W = n(696208),
+    Y = n(869038),
+    V = n(793574),
     K = n(688810),
-    V = n(590180),
-    Z = n(450047),
-    q = n(61750),
-    z = n(192308),
-    Q = n(780964),
-    $ = n(766075),
-    J = n(403362),
-    X = n(482132),
+    Z = n(590180),
+    q = n(450047),
+    z = n(61750),
+    Q = n(192308),
+    $ = n(780964),
+    J = n(766075),
+    X = n(403362),
     ee = n(758836),
     et = n(375708),
     en = n(341535),
-    el = n(757716);
+    el = n(863263);
 function ei(e) {
     let {
             giftCode: t,
@@ -67,7 +67,7 @@ function ei(e) {
             onClose: h,
         } = e,
         [E, S] = i.useState([]),
-        [P, _] = i.useState(!1),
+        [P, v] = i.useState(!1),
         { isLoading: x, potentialRecipients: T } = (function () {
             i.useEffect(() => {
                 (g.A.fetchRelationships(), (0, N.u)());
@@ -86,14 +86,14 @@ function ei(e) {
                     () =>
                         r
                             .map(O.default.getUser)
-                            .filter(J.Vq)
+                            .filter(X.Vq)
                             .filter((e) => !e.bot),
                     [r],
                 ),
             };
         })(),
-        { analyticsLocations: j } = (0, K.Ay)(Y.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        M = (0, c.yK)([O.default], () => E.map(O.default.getUser).filter(J.Vq), [E]),
+        { analyticsLocations: j } = (0, K.Ay)(V.A.PREMIUM_GIFT_SUCCESS_MODAL),
+        M = (0, c.yK)([O.default], () => E.map(O.default.getUser).filter(X.Vq), [E]),
         L = r > 1,
         k = L ? !s : null == t,
         w = 1 === E.length,
@@ -108,19 +108,19 @@ function ei(e) {
             disabled: L && E.length >= r && !E.includes(e.id),
         })),
         eo = i.useMemo(() => m.filter((e) => e !== u.a.SUMMER_2026_GOGO_FAKE_SKU_ID), [m]),
-        eu = (0, Z.D)(eo),
-        [ec, ...ed] = (0, c.yK)([V.A], () => eo.map((e) => V.A.getProduct(e)).filter((e) => null != e));
+        eu = (0, q.D)(eo),
+        [ec, ...ed] = (0, c.yK)([Z.A], () => eo.map((e) => Z.A.getProduct(e)).filter((e) => null != e));
     async function em() {
         var e;
         let i;
-        _(!0);
+        v(!0);
         try {
             if (w) {
                 let e = M[0];
-                (await (0, v.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
+                (await (0, _.UN)(e, t), (i = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == a) throw Error("Checkout session ID must be defined");
-                let e = await (0, W.kW)(E, a),
+                let e = await (0, Y.kW)(E, a),
                     t = new Set(e.successful_recipient_ids),
                     n = new Set(e.failed_recipient_ids);
                 i = { recipients: M.filter((e) => t.has(e.id)), failedRecipients: M.filter((e) => n.has(e.id)) };
@@ -128,7 +128,7 @@ function ei(e) {
         } catch {
             i = { recipients: [], failedRecipients: M };
         } finally {
-            _(!1);
+            v(!1);
         }
         (h(),
             (0, I.bz)(),
@@ -140,7 +140,7 @@ function ei(e) {
                 canShowGiftingBadgePostPurchase: p,
                 openGiftingBadgePostPurchaseModal: C,
             }),
-            (0, z.openModalLazy)(async () => {
+            (0, Q.openModalLazy)(async () => {
                 let { default: t } = await n.e("692318").then(n.bind(n, 150061));
                 return (n) => (0, l.jsx)(t, { ...n, ...e });
             }));
@@ -157,21 +157,21 @@ function ei(e) {
                         className: el.OA,
                         children: [
                             L
-                                ? (0, l.jsxs)(G.B, {
+                                ? (0, l.jsxs)(F.B, {
                                       gap: 8,
                                       children: [
-                                          (0, l.jsxs)(G.B, {
+                                          (0, l.jsxs)(F.B, {
                                               direction: "horizontal",
                                               align: "center",
                                               justify: "space-between",
                                               children: [
-                                                  (0, l.jsx)(F.E, {
+                                                  (0, l.jsx)(B.E, {
                                                       variant: "text-md/medium",
                                                       color: "text-strong",
                                                       "aria-hidden": !0,
                                                       children: et.intl.string(en.default.ZolTTE),
                                                   }),
-                                                  (0, l.jsx)(F.E, {
+                                                  (0, l.jsx)(B.E, {
                                                       variant: "text-md/medium",
                                                       color: "text-strong",
                                                       tabularNumbers: !0,
@@ -210,19 +210,19 @@ function ei(e) {
                         ],
                     }),
                     null != ec && (0, l.jsx)(er, { product: ec, moreCount: ed.length }),
-                    (0, l.jsx)(B.w, {
+                    (0, l.jsx)(H.w, {
                         type: "info",
                         children: et.intl.format(en.default.ZvgWUV, {
                             giftCount: r,
                             onInventoryClick: function () {
-                                (h(), (0, I.bz)(), (0, $.openUserSettings)(Q.X.GIFT_PANEL, { analyticsLocations: j }));
+                                (h(), (0, I.bz)(), (0, J.openUserSettings)($.X.GIFT_PANEL, { analyticsLocations: j }));
                             },
                         }),
                     }),
                 ],
             }),
-            (0, l.jsx)(X.UX, {
-                children: (0, l.jsx)(H.H, {
+            (0, l.jsx)(G.UX, {
+                children: (0, l.jsx)(W.H, {
                     actionsFullWidth: !0,
                     actions: [
                         {
@@ -233,7 +233,7 @@ function ei(e) {
                                 (h(),
                                     (0, I.bz)(),
                                     null != ec
-                                        ? (0, q.A)({
+                                        ? (0, z.A)({
                                               product: ec,
                                               remainingProducts: ed,
                                               shouldShowPromotionalExperience: !0,
@@ -269,7 +269,7 @@ function er(e) {
 }
 var ea = n(652215),
     es = n(202541),
-    eo = n(392309);
+    eo = n(815328);
 function eu(e) {
     let {
             giftCode: t,
@@ -281,37 +281,37 @@ function eu(e) {
             sku: y,
             subscriptionPlan: g,
             selectedGiftStyle: P,
-            onClose: v,
+            onClose: _,
             hasSentMessage: T,
             giftRecipient: N,
             giftMessageError: b,
             isSendingMessage: R,
         } = e,
-        [O, G] = i.useState(C.e.Modes.DEFAULT),
-        F = (0, c.bG)([M.A], () => M.A.enabled),
-        B = T || (null != P && null != N),
-        H = y?.productLine === ea.EZt.COLLECTIBLES,
+        [O, F] = i.useState(C.e.Modes.DEFAULT),
+        B = (0, c.bG)([M.A], () => M.A.enabled),
+        H = T || (null != P && null != N),
+        W = y?.productLine === ea.EZt.COLLECTIBLES,
         {
-            selectedGiftingPromotionRewards: W,
-            openGiftingBadgePostPurchaseModal: Y,
+            selectedGiftingPromotionRewards: Y,
+            openGiftingBadgePostPurchaseModal: V,
             canShowGiftingBadgePostPurchase: K,
         } = (0, D.Pv)(),
-        V = (0, x.Mq)(g) && W.length > 0,
-        Z = K && 0 === W.length;
-    function q() {
+        Z = (0, x.Mq)(g) && Y.length > 0,
+        q = K && 0 === Y.length;
+    function z() {
         return null != g ? g.skuId : null != y ? y.id : null;
     }
-    function z() {
+    function Q() {
         let e;
         return null != b
             ? et.intl.string(et.t.qB8aya)
             : null == g
               ? null
               : ((e =
-                    g.interval === es.WT.MONTH ? (B ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : B ? et.t.p0pZXP : et.t.bXqk3o),
+                    g.interval === es.WT.MONTH ? (H ? et.t["4ZJ+7Z"] : et.t["P+z55d"]) : H ? et.t.p0pZXP : et.t.bXqk3o),
                 et.intl.format(e, { skuName: (0, w.RH)(g.id), intervalCount: g.intervalCount }));
     }
-    function Q() {
+    function $() {
         let e;
         if (null == t) return null;
         switch (O) {
@@ -327,7 +327,7 @@ function eu(e) {
         return (0, l.jsx)(h.D, {
             label: et.intl.string(et.t["/dG4NA"]),
             children: (0, l.jsx)(C.e, {
-                hideMessage: F ? et.intl.string(et.t["0RLn47"]) : null,
+                hideMessage: B ? et.intl.string(et.t["0RLn47"]) : null,
                 value: (0, k.Zq)(t),
                 mode: O,
                 text: e,
@@ -335,11 +335,11 @@ function eu(e) {
                     (null != y && (0, k.AK)(new j.A({ code: t, maxUses: 1 }), y),
                         (0, L.C)(
                             e,
-                            () => G(C.e.Modes.SUCCESS),
-                            () => G(C.e.Modes.ERROR),
+                            () => F(C.e.Modes.SUCCESS),
+                            () => F(C.e.Modes.ERROR),
                         ),
                         setTimeout(() => {
-                            G(C.e.Modes.DEFAULT);
+                            F(C.e.Modes.DEFAULT);
                         }, 1500));
                 },
                 supportsCopy: L.p5,
@@ -354,7 +354,7 @@ function eu(e) {
               className: eo.EL,
               children: [
                   null != u
-                      ? (0, l.jsx)(_.A, { game: u, className: eo.__invalid_icon, size: _.M.LARGE, skuId: q() })
+                      ? (0, l.jsx)(v.A, { game: u, className: eo.__invalid_icon, size: v.M.LARGE, skuId: z() })
                       : null,
                   (0, l.jsx)(S.y, { type: S.t.PULSING_ELLIPSIS }),
               ],
@@ -365,28 +365,28 @@ function eu(e) {
                 giftCount: n,
                 checkoutSessionId: r,
                 deliveryReady: s,
-                privateGiftLink: 1 === n ? Q() : null,
-                rewardSkuIds: W,
+                privateGiftLink: 1 === n ? $() : null,
+                rewardSkuIds: Y,
                 canShowGiftingBadgePostPurchase: K,
-                openGiftingBadgePostPurchaseModal: Y,
-                onClose: v,
+                openGiftingBadgePostPurchaseModal: V,
+                onClose: _,
             })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsxs)("div", {
-                        className: a()(eo.EL, { [eo.L1]: V }),
+                        className: a()(eo.EL, { [eo.L1]: Z }),
                         children: [
                             null != u
-                                ? (0, l.jsx)(_.A, {
+                                ? (0, l.jsx)(v.A, {
                                       game: u,
                                       className: eo.__invalid_icon,
-                                      size: _.M.LARGE,
-                                      skuId: q(),
+                                      size: v.M.LARGE,
+                                      skuId: z(),
                                   })
                                 : null,
                             (0, l.jsx)(E.D, {
                                 variant: "heading-lg/semibold",
-                                className: a()({ [eo.wx]: null == P && !H, [eo.$A]: null != P && !H }),
+                                className: a()({ [eo.wx]: null == P && !W, [eo.$A]: null != P && !W }),
                                 children:
                                     null != N || (T && null == b)
                                         ? et.intl.string(et.t.zOmK9N)
@@ -394,7 +394,7 @@ function eu(e) {
                                           ? et.intl.string(et.t.d1lrmU)
                                           : et.intl.string(et.t["/s1xR7"]),
                             }),
-                            (T && null != N && null == b) || B
+                            (T && null != N && null == b) || H
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsxs)("div", {
@@ -407,24 +407,24 @@ function eu(e) {
                                                   }),
                                               ],
                                           }),
-                                          (0, l.jsx)("div", { className: eo._c, children: z() }),
+                                          (0, l.jsx)("div", { className: eo._c, children: Q() }),
                                       ],
                                   })
                                 : (0, l.jsxs)(l.Fragment, {
                                       children: [
-                                          (0, l.jsx)("div", { className: eo.I0, children: z() }),
+                                          (0, l.jsx)("div", { className: eo.I0, children: Q() }),
                                           null == b &&
                                               (0, l.jsx)(ed, {
                                                   giftCode: t,
                                                   onClose: () => {
-                                                      (v(), (0, I.bz)(), Z && Y());
+                                                      (_(), (0, I.bz)(), q && V());
                                                   },
                                               }),
                                           (0, l.jsx)("div", { className: eo.yF }),
                                           (0, l.jsxs)("div", {
                                               className: eo.PN,
                                               children: [
-                                                  Q(),
+                                                  $(),
                                                   (0, l.jsx)("div", {
                                                       className: eo.W$,
                                                       children: et.intl.string(et.t.QWKUpn),
@@ -433,11 +433,11 @@ function eu(e) {
                                           }),
                                       ],
                                   }),
-                            W.length > 0 && (0, l.jsx)(ec, { skuIds: W }),
+                            Y.length > 0 && (0, l.jsx)(ec, { skuIds: Y }),
                         ],
                     }),
-                    Z &&
-                        (0, l.jsx)(X.UX, {
+                    q &&
+                        (0, l.jsx)(G.UX, {
                             children: (0, l.jsx)(d.j, {
                                 children: (0, l.jsx)("div", {
                                     className: eo.pP,
@@ -446,7 +446,7 @@ function eu(e) {
                                         fullWidth: !0,
                                         text: et.intl.string(et.t.PDTjLN),
                                         onClick: () => {
-                                            (v(), Y());
+                                            (_(), V());
                                         },
                                     }),
                                 }),
@@ -491,9 +491,9 @@ function ed(e) {
         S = (0, c.bG)([R.A], () => R.A.getFriendIDs()),
         I = o().difference(S, E),
         P = [...E, ...I],
-        _ = (0, c.bG)([O.default], () => O.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
-    if (null == _ || 0 === _.length) return null;
-    let x = o().sortBy(_, (e) => P.indexOf(e.id));
+        v = (0, c.bG)([O.default], () => O.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
+    if (null == v || 0 === v.length) return null;
+    let x = o().sortBy(v, (e) => P.indexOf(e.id));
     return (0, l.jsxs)("div", {
         className: eo.vt,
         children: [
@@ -523,7 +523,7 @@ function ed(e) {
                             loading: d,
                             onClick: () => {
                                 (p(!0),
-                                    (0, v.UN)(r, t)
+                                    (0, _.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })

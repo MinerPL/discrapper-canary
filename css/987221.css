@@ -1,128 +1,128 @@
-.content__6f0cc {
+.content_a0704b {
     gap: var(--space-24)
 }
 
-.content__6f0cc,
-.fields__6f0cc {
+.content_a0704b,
+.fields_a0704b {
     display: flex;
     flex-direction: column;
     width: 100%
 }
 
-.fields__6f0cc {
+.fields_a0704b {
     gap: var(--space-16)
 }
 
-.giftingRewardBanner__6f0cc {
+.giftingRewardBanner_a0704b {
     align-self: stretch;
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-md);
     padding: var(--space-8)
 }
 
-.blurb_cd2ff7 {
+.blurb_fc90cf {
     color: var(--text-default);
     margin-top: 10px
 }
 
-.blurb_cd2ff7,
-.giftSentMessage_cd2ff7 {
+.blurb_fc90cf,
+.giftSentMessage_fc90cf {
     font-size: 16px;
     line-height: 1.44;
     max-width: 360px;
     text-align: center
 }
 
-.giftSentMessage_cd2ff7 {
+.giftSentMessage_fc90cf {
     color: var(--text-strong);
     margin-top: 20px
 }
 
-.giftRecipientTag_cd2ff7 {
+.giftRecipientTag_fc90cf {
     color: var(--text-default);
     font-size: 13px
 }
 
-.giftRecipientContainer_cd2ff7 {
+.giftRecipientContainer_fc90cf {
     align-items: flex-start;
     display: flex;
     gap: var(--space-8);
     margin-top: var(--space-4)
 }
 
-.giftRecipientTextContainer_cd2ff7 {
+.giftRecipientTextContainer_fc90cf {
     display: flex;
     flex-direction: column;
     gap: 2px
 }
 
-.divider_cd2ff7 {
+.divider_fc90cf {
     background-color: var(--border-subtle);
     height: 1px;
     margin: 20px 0;
     width: 100%
 }
 
-.subtext_cd2ff7 {
+.subtext_fc90cf {
     color: var(--channels-default);
     font-size: 12px;
     line-height: 14px;
     margin-top: 10px
 }
 
-.subtextError_cd2ff7 {
+.subtextError_fc90cf {
     color: var(--text-feedback-critical) !important
 }
 
-.header_cd2ff7 {
+.header_fc90cf {
     margin-top: 20px
 }
 
-.headerCustomGifting_cd2ff7 {
+.headerCustomGifting_fc90cf {
     margin-top: 24px
 }
 
-.giftRecipientSection_cd2ff7 {
+.giftRecipientSection_fc90cf {
     margin-top: 40px;
     width: 100%
 }
 
-.giftRecipient_cd2ff7 {
+.giftRecipient_fc90cf {
     display: flex;
     gap: var(--space-8);
     width: 100%
 }
 
-.giftRecipientButton_cd2ff7 {
+.giftRecipientButton_fc90cf {
     align-self: flex-end;
     margin-bottom: 2px
 }
 
-.giftRecipientInputWrapper_cd2ff7 {
+.giftRecipientInputWrapper_fc90cf {
     margin-inline-end: 8px;
     width: 100%
 }
 
-.giftRecipientInputError_cd2ff7 {
+.giftRecipientInputError_fc90cf {
     border-color: var(--text-feedback-critical) !important
 }
 
-.giftRecipientRowAvatar_cd2ff7 {
+.giftRecipientRowAvatar_fc90cf {
     margin-inline-end: 8px
 }
 
-.sendToRecipientButton_cd2ff7 {
+.sendToRecipientButton_fc90cf {
     height: 42px;
     margin-inline-start: 8px
 }
 
-.giftBox_cd2ff7 {
+.giftBox_fc90cf {
     position: absolute;
     top: -131px;
     width: 260px
 }
 
-.confirmation_cd2ff7 {
+.confirmation_fc90cf {
     align-items: center;
     border-radius: 4px;
     display: flex;
@@ -130,19 +130,19 @@
     padding: 0 16px 24px
 }
 
-.seasonalConfirmationPadding_cd2ff7 {
+.seasonalConfirmationPadding_fc90cf {
     padding: 0 16px
 }
 
-.giftCodeSection_cd2ff7 {
+.giftCodeSection_fc90cf {
     flex-direction: column
 }
 
-.giftingBadgeFooter_cd2ff7 {
+.giftingBadgeFooter_fc90cf {
     padding-bottom: var(--space-8)
 }
 
-.giftingRewardBanner_cd2ff7 {
+.giftingRewardBanner_fc90cf {
     align-self: stretch;
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-md);
@@ -150,4 +150,4 @@
     padding: var(--space-8)
 }
 
-/*# sourceMappingURL=276257.ebce7b6e7eeb3d6b.css.map*/
+/*# sourceMappingURL=987221.c255f5c6cadb035d.css.map*/
