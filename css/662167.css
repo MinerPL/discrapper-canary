@@ -591,20 +591,22 @@
 }
 
 .planOptionDiscount_b13085 {
+    background-color: var(--green-360);
     border-radius: 16px;
+    font-weight: var(--font-weight-semibold);
     margin-inline-start: 8px;
     padding: 2px 8px
 }
 
-.annualPlanOptionDiscount_b13085,
-.planOptionDiscount_b13085 {
-    background-color: var(--green-360);
-    font-weight: var(--font-weight-semibold)
+.mana-type-consolidation .planOptionDiscount_b13085 {
+    text-transform: uppercase
 }
 
 .annualPlanOptionDiscount_b13085 {
     align-content: center;
+    background-color: var(--green-360);
     border-radius: 8px;
+    font-weight: var(--font-weight-semibold);
     margin-top: 3px;
     margin-inline-end: 8px;
     padding: 0 6px;
@@ -886,4 +888,4 @@
     width: 40px
 }
 
-/*# sourceMappingURL=662167.1b4f3ea1b047a3fe.css.map*/
+/*# sourceMappingURL=662167.8d1da2690388cff5.css.map*/
