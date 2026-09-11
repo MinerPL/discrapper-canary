@@ -3898,6 +3898,27 @@ screen and (max-width:485px) {
     }
 }
 
+@media (max-height:550px) {
+    .container__8a031 {
+        overflow-y: auto
+    }
+
+    .container__8a031 .body__8a031 {
+        flex-shrink: 0;
+        scrollbar-gutter: auto
+    }
+
+    .container__8a031 .body__8a031::-webkit-scrollbar {
+        width: 0
+    }
+
+    .container__8a031 .headerGradient__8a031:before {
+        left: 0;
+        right: 0;
+        top: calc(var(--custom-modal-padding-top)*-1)
+    }
+}
+
 .section__8a031 {
     box-sizing: border-box;
     flex-grow: 0;
@@ -5174,4 +5195,4 @@ screen and (max-width:485px) {
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=362698.6a403c6f04210ef0.css.map*/
+/*# sourceMappingURL=362698.a895a8c451d6b436.css.map*/
