@@ -20,8 +20,8 @@ var l = n(477900),
     g = n(45938),
     A = n(158045),
     P = n(951305),
-    _ = n(166532),
-    v = n(652215),
+    v = n(166532),
+    _ = n(652215),
     x = n(202541),
     T = n(375708),
     N = n(341535),
@@ -47,18 +47,18 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, E.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, h.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        Y = U?.productLine === v.EZt.COLLECTIBLES,
-        K = U?.productLine === v.EZt.SOCIAL_LAYER_GAME_ITEM,
-        V = D === _.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, g.Ik)(B) && D === _.pn.CONFIRM && null != F && !Y && !K,
-        q = [_.pn.SKU_SELECT, _.pn.SELECT_FREE_SKU],
+        Y = U?.productLine === _.EZt.COLLECTIBLES,
+        V = U?.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM,
+        K = D === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
+        Z = G && (0, g.Ik)(B) && D === v.pn.CONFIRM && null != F && !Y && !V,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != D && !q.includes(D) && null != n,
         Q = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == D) return;
         let e = null;
         return (
-            V
+            K
                 ? (e = (0, l.jsx)(s.rQ, {
                       alignCenter: !0,
                       gradientColor: "nitro-pink",
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, Q, S, n, D, k, w, R, d, V, Z, H, z, G, B, O, M, L]);
+    }, [F, Q, S, n, D, k, w, R, d, K, Z, H, z, G, B, O, M, L]);
 }
 function M(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, m.t4)((e) => ({
@@ -139,5 +139,5 @@ function O() {
 }
 function L(e) {
     let { isGift: t } = (0, P.Pv)();
-    return e.step !== _.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(O, {});
+    return e.step !== v.pn.PLAN_SELECT || t ? (0, l.jsx)(R, { ...e }) : (0, l.jsx)(O, {});
 }

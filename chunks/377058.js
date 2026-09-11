@@ -46,8 +46,8 @@ function A(e) {
         : null;
 }
 var P = n(655857),
-    _ = n(87730),
-    v = n(165272),
+    v = n(87730),
+    _ = n(165272),
     x = n(451636),
     T = n(571852);
 function N(e) {
@@ -62,7 +62,7 @@ function N(e) {
             subscriptionPaymentSourceId: E,
             hideCurrencySelect: y,
             resolveInternalState: I,
-            renderCustomPaymentSourceSelectorContent: v,
+            renderCustomPaymentSourceSelectorContent: _,
         } = e,
         { setPaymentSourceId: N, paymentSourceId: b } = (function (e) {
             let { setPaymentSourceId: t, paymentSourceId: n } = (function () {
@@ -131,8 +131,8 @@ function N(e) {
                     walletCoversSubtotal: g,
                     isSubscriptionPaidByWallet: A,
                     giftCardWallet: P,
-                    isGiftCardCreditsChecked: _,
-                    isWalletBalanceLoaded: v,
+                    isGiftCardCreditsChecked: v,
+                    isWalletBalanceLoaded: _,
                     handleGiftCardCreditsToggle: x,
                 } = (0, o.Y0)({
                     checkoutPaymentSources: p,
@@ -177,9 +177,9 @@ function N(e) {
                 }, [c, t, m, n, l, r, s, o, d]);
             })({
                 giftCardWallet: P,
-                isWalletBalanceLoaded: v,
+                isWalletBalanceLoaded: _,
                 walletCoversSubtotal: g,
-                isGiftCardCreditsChecked: _,
+                isGiftCardCreditsChecked: v,
                 subscriptionPaymentSourceId: r,
                 handleGiftCardCreditsToggle: x,
                 pendingGiftCardWalletSelection: s,
@@ -229,23 +229,23 @@ function N(e) {
         })),
         { dropdownCurrencies: H, displayCurrency: W } = (0, P.Jn)(),
         Y = i.useCallback(() => R(!0), []),
-        K = i.useMemo(() => B || F || (p ?? !1), [B, F, p]),
-        { giftCardCheckboxProps: V, disabled: Z } = i.useMemo(
+        V = i.useMemo(() => B || F || (p ?? !1), [B, F, p]),
+        { giftCardCheckboxProps: K, disabled: Z } = i.useMemo(
             () =>
                 null != I
-                    ? I({ giftCardCheckboxProps: O, disabled: K }, { isSubscriptionPaidByWallet: w })
-                    : { giftCardCheckboxProps: O, disabled: K },
-            [K, I, O, w],
+                    ? I({ giftCardCheckboxProps: O, disabled: V }, { isSubscriptionPaidByWallet: w })
+                    : { giftCardCheckboxProps: O, disabled: V },
+            [V, I, O, w],
         ),
-        q = null != V && !0 === V.locked,
+        q = null != K && !0 === K.locked,
         z = i.useMemo(() => {
-            if (null != v)
-                return v({
+            if (null != _)
+                return _({
                     isSubscriptionPaidByWallet: w,
                     selectedSource: k.paymentSources.find((e) => e.id === k.selectedPaymentSourceId),
                     hidePersonalInformation: U,
                 });
-        }, [v, w, k, U]),
+        }, [_, w, k, U]),
         Q = i.useMemo(() => {
             if (!y)
                 return {
@@ -257,14 +257,14 @@ function N(e) {
                 };
         }, [y, D.currency, W, H, G, Z]),
         $ = i.useMemo(() => ({ ...k, ...m, onPaymentSourceAdd: f }), [k, f, m]),
-        J = null != V && V.checked,
+        J = null != K && K.checked,
         X = L || q,
         ee = i.useMemo(() => {
-            if (!M || null == V) return null;
+            if (!M || null == K) return null;
             let e = X ? T.r : T.K,
-                t = V.disabled || Z;
-            return (0, l.jsx)(_.o, { ...V, className: e, disabled: t });
-        }, [M, V, X, Z]),
+                t = K.disabled || Z;
+            return (0, l.jsx)(v.o, { ...K, className: e, disabled: t });
+        }, [M, K, X, Z]),
         et = X && M && J,
         en = null != z,
         el = i.useMemo(() => (null != z ? z : (0, l.jsx)(s.Ay, { ...$, disabled: Z })), [z, Z, $]);
@@ -320,7 +320,7 @@ function b(e) {
                 if (!a || t || null == r || null == n) return null;
                 let o = n instanceof c.A ? n.source : n,
                     { brand: u, label: d } = (0, s.Sm)(o, i);
-                return (0, l.jsx)(v.S, { label: d ?? "", icon: u ?? void 0, tooltipText: r });
+                return (0, l.jsx)(_.S, { label: d ?? "", icon: u ?? void 0, tooltipText: r });
             },
             [a, r],
         );

@@ -34,19 +34,19 @@ function c(e) {
             isSubscriptionUpdate: null != c,
             fractionalPremiumInfo: p,
         }),
-        { renewalPrice: P, multiPeriodDiscountAttributes: _ } = (0, i.QM)(g, t, {
+        { renewalPrice: P, multiPeriodDiscountAttributes: v } = (0, i.QM)(g, t, {
             discountOffer: f,
             subscriptionTrial: E,
         }),
-        v = {
+        _ = {
             purchaseButtonText: y,
             totalDue: C ? I.total : 0,
             renewalPrice: P,
-            multiPeriodDiscountAttributes: _,
+            multiPeriodDiscountAttributes: v,
             currency: I.currency,
             interval: t.interval,
             intervalCount: t.intervalCount,
             startDate: A,
         };
-    return (0, l.jsx)(o._P, { variant: { type: h, ...v }, paymentSourceType: n, immediateDelivery: S });
+    return (0, l.jsx)(o._P, { variant: { type: h, ..._ }, paymentSourceType: n, immediateDelivery: S });
 }

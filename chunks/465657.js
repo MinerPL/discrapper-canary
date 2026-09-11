@@ -27,8 +27,8 @@ function f(e) {
             analyticsLocation: P,
         } = e,
         {
-            paymentSourceId: _,
-            purchasePreviewError: v,
+            paymentSourceId: v,
+            purchasePreviewError: _,
             customCheckoutFlow: x,
             contextMetadata: T,
             purchaseError: N,
@@ -53,14 +53,14 @@ function f(e) {
     a()(null != L, "Step should be set");
     let k = i.useRef(null),
         { paymentSources: w } = (0, m.j)(),
-        U = (0, c.W)(w, _),
+        U = (0, c.W)(w, v),
         D = i.useMemo(() => {
-            if (null == _) return !1;
+            if (null == v) return !1;
             if (!M) return !0;
-            let e = R.find((e) => e.id === _);
+            let e = R.find((e) => e.id === v);
             return null != e && !e.enabled;
-        }, [R, M, _]),
-        G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: _, location: "CheckoutBaseReviewStep" }),
+        }, [R, M, v]),
+        G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
             let e = { disablePurchase: G || x === h.uH.DEV_STORYBOOK_CHECKOUT };
             return null != S
@@ -68,14 +68,14 @@ function f(e) {
                       { ...e },
                       {
                           paymentSource: U,
-                          paymentSourceId: _,
+                          paymentSourceId: v,
                           isSelectedPaymentSourceDisabled: D,
                           invoicePreview: O,
-                          purchasePreviewError: v,
+                          purchasePreviewError: _,
                       },
                   )
                 : e;
-        }, [S, U, _, D, O, v, G, x]);
+        }, [S, U, v, D, O, _, G, x]);
     i.useEffect(() => {
         null != N && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);

@@ -27,10 +27,10 @@ function I(e) {
             disableThemedBackground: I = !1,
         } = e,
         [g, A] = i.useState(r ?? m),
-        [P, _] = i.useState((0, c.x7)(g)),
-        v = i.useRef(!1);
+        [P, v] = i.useState((0, c.x7)(g)),
+        _ = i.useRef(!1);
     function x(e, t, l) {
-        t !== g && (A(t), _(l), n(t));
+        t !== g && (A(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -39,12 +39,12 @@ function I(e) {
     }
     return (
         i.useEffect(() => {
-            v.current = !0;
+            _.current = !0;
         }, []),
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(m);
-                (A(m), _(e));
+                (A(m), v(e));
             }
         }, [r, m]),
         (0, l.jsx)("div", {
@@ -66,12 +66,12 @@ function I(e) {
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    v.current = !1;
+                                    _.current = !1;
                                 },
                                 onFocus: () => {
-                                    v.current = !0;
+                                    _.current = !0;
                                 },
-                                focused: v.current,
+                                focused: _.current,
                                 onSubmit: T,
                                 disableThemedBackground: I,
                             }),

@@ -42,8 +42,8 @@ function A(e) {
             children: P,
         } = e,
         {
-            order: _,
-            isCreateOrderLoading: v,
+            order: v,
+            isCreateOrderLoading: _,
             createOrderError: x,
             shouldBlockOnOrderCreation: T,
         } = (function (e) {
@@ -64,8 +64,8 @@ function A(e) {
             t = y ? E : !!I && !0 !== s && S;
             let g = y && E,
                 A = null != n ? n[0] : void 0,
-                [P, _] = (0, i.useState)(null),
-                [v, x] = (0, i.useState)(null),
+                [P, v] = (0, i.useState)(null),
+                [_, x] = (0, i.useState)(null),
                 [T, N] = (0, i.useState)(g),
                 b = (0, i.useRef)(!1),
                 j = (0, i.useCallback)(
@@ -75,7 +75,7 @@ function A(e) {
                         try {
                             let e = null != l && (0, u.Fs)(l),
                                 n = await (0, c.fS)({ skuId: t, paymentGateway: r, loadId: o, testMode: e });
-                            (_(n), null != C && C(n));
+                            (v(n), null != C && C(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, p.gr)(n) ||
@@ -92,9 +92,9 @@ function A(e) {
                 );
             return (
                 (0, i.useEffect)(() => {
-                    t && null != A && (null != P || null != v || b.current || ((b.current = !0), j({ skuId: A })));
-                }, [A, t, P, j, v]),
-                { order: P, isCreateOrderLoading: T, createOrderError: v, shouldBlockOnOrderCreation: g }
+                    t && null != A && (null != P || null != _ || b.current || ((b.current = !0), j({ skuId: A })));
+                }, [A, t, P, j, _]),
+                { order: P, isCreateOrderLoading: T, createOrderError: _, shouldBlockOnOrderCreation: g }
             );
         })({
             skuIDs: n,
@@ -106,12 +106,12 @@ function A(e) {
             onOrderCreated: I,
         });
     if (T) {
-        if (v) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
+        if (_) return (0, l.jsx)(g, { renderModalProps: A, children: (0, l.jsx)(o.A, {}) });
         else if (null != x)
             return (0, l.jsx)(g, {
                 renderModalProps: A,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: S.intl.string(S.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(y.Provider, { value: _, children: P });
+    return (0, l.jsx)(y.Provider, { value: v, children: P });
 }

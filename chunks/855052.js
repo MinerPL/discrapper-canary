@@ -1,10 +1,10 @@
-r.d(e, { Ay: () => d, C3: () => S, Lh: () => c, y9: () => h });
+r.d(e, { Ay: () => d, C3: () => S, Lh: () => c, y9: () => I });
 var i = r(315069),
     n = r(395671),
-    l = r(520606),
-    s = r(872472),
-    u = r(394300),
-    a = r(721932),
+    s = r(520606),
+    l = r(872472),
+    a = r(394300),
+    u = r(721932),
     o = r(652215);
 class d extends i.A {
     id;
@@ -23,13 +23,13 @@ class d extends i.A {
             c = r.map((t) => {
                 switch (t.sku_product_line) {
                     case o.EZt.COLLECTIBLES:
-                        return s.A.fromServer(t);
-                    case o.EZt.SOCIAL_LAYER_GAME_ITEM:
-                        return a.A.fromServer(t);
-                    case o.EZt.PREMIUM:
-                        return u.A.fromServer(t);
-                    default:
                         return l.A.fromServer(t);
+                    case o.EZt.SOCIAL_LAYER_GAME_ITEM:
+                        return u.A.fromServer(t);
+                    case o.EZt.PREMIUM:
+                        return a.A.fromServer(t);
+                    default:
+                        return s.A.fromServer(t);
                 }
             });
         return new d({
@@ -46,6 +46,6 @@ function c(t) {
 function S(t, e) {
     return t.items.some((t) => t.skuId === e);
 }
-function h(t) {
+function I(t) {
     return new Set(t.items.map((t) => t.skuProductLine));
 }

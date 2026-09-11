@@ -20,7 +20,7 @@ let a = "",
     g = null,
     A = null,
     P = null;
-function _() {
+function v() {
     ((a = ""),
         (s = null),
         (o = ""),
@@ -40,7 +40,7 @@ function _() {
         (A = null),
         (P = null));
 }
-function v() {
+function _() {
     I = null;
 }
 function x(e) {
@@ -141,13 +141,13 @@ let b = new N(i.h, {
         let { data: t } = e;
         c = t;
     },
-    BILLING_PAYMENT_SOURCE_CREATE_START: v,
-    MODAL_POP: v,
-    NEW_PAYMENT_SOURCE_CLEAR_ERROR: v,
+    BILLING_PAYMENT_SOURCE_CREATE_START: _,
+    MODAL_POP: _,
+    NEW_PAYMENT_SOURCE_CLEAR_ERROR: _,
     BILLING_PAYMENT_SOURCE_CREATE_FAIL: x,
     STRIPE_TOKEN_FAILURE: x,
-    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: _,
-    LOGOUT: _,
+    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: v,
+    LOGOUT: v,
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { query: t } = e;
         t?.payment_id != null

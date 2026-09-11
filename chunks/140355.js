@@ -42,14 +42,14 @@ var i = n(477900),
     V = n(993401),
     B = n(375708),
     z = n(92795);
-let Y = [
+let K = [
         () => B.intl.string(B.t.madJdE),
         () => B.intl.string(B.t.NYmfoP),
         () => B.intl.string(B.t.R2PaCg),
         () => B.intl.string(B.t.laSR8h),
         () => B.intl.string(B.t.DnsJE8),
     ],
-    K = [
+    Y = [
         () => B.intl.string(B.t.nFSbeE),
         () => B.intl.string(B.t.gTcxOz),
         () => B.intl.string(B.t["8T0wYj"]),
@@ -107,12 +107,12 @@ function Z(e) {
 }
 function J() {
     let e = B.intl.string(B.t.RnD2yZ),
-        [t] = l.useState(() => ((0, _.sample)(Y) ?? Y[0])());
+        [t] = l.useState(() => ((0, _.sample)(K) ?? K[0])());
     return (0, i.jsx)(Z, { heading: e, bodyText: t });
 }
 function Q() {
     let e = B.intl.string(B.t.bFgqYJ),
-        [t] = l.useState(() => ((0, _.sample)(K) ?? K[0])());
+        [t] = l.useState(() => ((0, _.sample)(Y) ?? Y[0])());
     return (0, i.jsx)(Z, { heading: e, bodyText: t });
 }
 function $(e) {
@@ -417,8 +417,8 @@ var eP = n(721932),
     eV = n(855052),
     eB = n(287809),
     ez = n(639935),
-    eY = n(249203),
-    eK = n(321191),
+    eK = n(249203),
+    eY = n(321191),
     eX = n(600761),
     eq = n(389667),
     eZ = n(535089),
@@ -510,7 +510,7 @@ function tt(e) {
     var t;
     let { items: n, profileOwner: s, guildId: r, showEditingControls: a, lastViewedAt: o } = e,
         d = eB.default.getCurrentUser(),
-        { defaultWishlistId: c } = (0, I.cf)([eK.A], () => ({ defaultWishlistId: eK.A.getFirstWishlistId(s.id) })),
+        { defaultWishlistId: c } = (0, I.cf)([eY.A], () => ({ defaultWishlistId: eY.A.getFirstWishlistId(s.id) })),
         u = null != d && d.id !== s.id,
         g =
             ((t = u ? "UserProfileModalV2WishlistGrid" : "UserProfileModalV2WishlistGrid Own Profile Do Not Use"),
@@ -798,8 +798,8 @@ function tU(e) {
                 [r, a] = l.useState(!1);
             !i || s || r || a(!0);
             let o = (0, I.bG)(
-                    [eK.A],
-                    () => (null != n ? new Date(eK.A.getWishlistSettings(t, n.id)?.updated_at ?? 0).valueOf() : 0),
+                    [eY.A],
+                    () => (null != n ? new Date(eY.A.getWishlistSettings(t, n.id)?.updated_at ?? 0).valueOf() : 0),
                     [n, t],
                 ),
                 [d, c] = (0, tL.Wl)(
@@ -910,8 +910,8 @@ var tW = n(477782),
     tV = n(922016),
     tB = n(980707),
     tz = n(789645),
-    tY = n(847374),
-    tK = n(486020),
+    tK = n(847374),
+    tY = n(486020),
     tX = n(431194);
 function tq(e) {
     let {
@@ -929,7 +929,7 @@ function tq(e) {
             return l.useMemo(
                 () =>
                     t.filter(eD.Vq).map((e) => {
-                        let t = tK.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 20 });
+                        let t = tY.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 20 });
                         return {
                             id: `browse-social-layer-storefront-${e.id}`,
                             label: B.intl.formatToPlainString(B.t["HDT/rg"], { applicationName: e.name }),
@@ -995,7 +995,7 @@ function tq(e) {
                 buttonRef: d,
                 variant: n,
                 size: "sm",
-                icon: c ? tz.P : tY.a,
+                icon: c ? tz.P : tK.a,
                 iconPosition: "end",
                 text: t,
                 ...e,
@@ -1204,7 +1204,7 @@ function t5(e) {
             handleAddNitroToWishlist: c,
         } = e,
         u = r.id,
-        m = (0, I.bG)([eK.A], () => eK.A.getWishlistSettings(s.id, u)),
+        m = (0, I.bG)([eY.A], () => eY.A.getWishlistSettings(s.id, u)),
         { trackUserProfileWishlistAction: x } = (0, g.NJ)(),
         f = !1 === s.nsfwAllowed,
         [h, p] = l.useState(!0);
@@ -1290,12 +1290,12 @@ function t3(e) {
     let { profileOwner: t, guildId: n } = e,
         s = l.useRef(null);
     (0, eX.i)({ containerRef: s, itemType: "WISHLIST_ITEM" });
-    let { wishlistId: a, currentUser: o } = (0, I.cf)([eK.A, eB.default], () => ({
-            wishlistId: eK.A.getFirstWishlistId(t.id),
+    let { wishlistId: a, currentUser: o } = (0, I.cf)([eY.A, eB.default], () => ({
+            wishlistId: eY.A.getFirstWishlistId(t.id),
             currentUser: eB.default.getCurrentUser(),
         })),
         { analyticsLocations: d } = (0, ea.Ay)(),
-        c = (0, ey.A)(() => ((0, x.aS)()?.enabled === !0 ? (eY.A.getEntry(t.id)?.lastViewedAt ?? null) : null));
+        c = (0, ey.A)(() => ((0, x.aS)()?.enabled === !0 ? (eK.A.getEntry(t.id)?.lastViewedAt ?? null) : null));
     l.useEffect(() => {
         (0, ez.Z)(t.id);
     }, [t.id]);

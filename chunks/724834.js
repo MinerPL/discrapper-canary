@@ -177,13 +177,13 @@ function H(e) {
 var V = n(460442),
     B = n(662349),
     z = n(479026),
-    Y = n(636374),
-    K = n(699976),
+    K = n(636374),
+    Y = n(699976),
     X = n(202541),
     q = n(518477),
     Z = n(181554),
     J = n(880465);
-let Q = K.Z.SIZE_133;
+let Q = Y.Z.SIZE_133;
 function $(e) {
     var t;
     let n,
@@ -258,9 +258,9 @@ function $(e) {
             onOverlayClick: F,
             showOverlayButton: H,
             routesToGift: z,
-            label: K,
+            label: Y,
             icon: X,
-        } = (0, Y.P)({ wishlistOwner: a, isOwned: y, onDetailsClick: P, onPurchaseClick: D }),
+        } = (0, K.P)({ wishlistOwner: a, isOwned: y, onDetailsClick: P, onPurchaseClick: D }),
         J = p && H;
     return (0, i.jsxs)("div", {
         className: Z.kL,
@@ -283,7 +283,7 @@ function $(e) {
                 children: [
                     !0 === N && (0, i.jsx)(A.A, { className: Z.Pf }),
                     T,
-                    H && (0, i.jsx)(B.A, { spec: Q, onClick: F, isHoveringOrFocusing: p, label: K, icon: X }),
+                    H && (0, i.jsx)(B.A, { spec: Q, onClick: F, isHoveringOrFocusing: p, label: Y, icon: X }),
                     y && (0, i.jsx)(V.gS, { isHoveringOrFocusing: p }),
                     a.id === c.id &&
                         null != k &&

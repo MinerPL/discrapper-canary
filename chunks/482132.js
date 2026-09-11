@@ -26,24 +26,24 @@ function S(e) {
         { step: s, stepConfigs: S } = (0, m.Ay)(),
         { setBodyNode: y, setFooterNode: I, setModalOverlayNode: g } = (0, p.Gm)(),
         A = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: _ } = (0, C.t4)((e) => ({
+        { setReadySlideId: P, unifiedCheckoutFlow: v } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
-        v = S.find((e) => e.key === s);
+        _ = S.find((e) => e.key === s);
     if (
         (i.useEffect(() => {
             g(null);
         }, [s, g]),
-        null == v)
+        null == _)
     )
         throw new d.vd({
             message: "Unknown step for current payment flow (PaymentModalStep)",
-            extraSentryInformation: { stepConfig: v, step: s, unifiedCheckoutFlow: _, stepConfigs: S },
+            extraSentryInformation: { stepConfig: _, step: s, unifiedCheckoutFlow: v, stepConfigs: S },
         });
-    let x = v?.options?.hideSlider ?? !1,
-        T = v?.options?.hideDefaultModalBody ?? !1,
-        N = v?.options?.sliderBodyClassName,
+    let x = _?.options?.hideSlider ?? !1,
+        T = _?.options?.hideDefaultModalBody ?? !1,
+        N = _?.options?.sliderBodyClassName,
         b = s === f.pn.REVIEW,
         j = i.useCallback(
             (e, t) => {
@@ -53,8 +53,8 @@ function S(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (v?.options?.renderHeader ?? !0) ? t : null,
-            v.renderStep(r),
+            (_?.options?.renderHeader ?? !0) ? t : null,
+            _.renderStep(r),
             null == s || x
                 ? null
                 : (0, l.jsxs)(l.Fragment, {

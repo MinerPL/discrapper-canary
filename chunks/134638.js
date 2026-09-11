@@ -20,8 +20,8 @@ var l = n(477900),
     g = n(580630),
     A = n(166532),
     P = n(888751),
-    _ = n(652215),
-    v = n(202541),
+    v = n(652215),
+    _ = n(202541),
     x = n(88001),
     T = n(375708),
     N = n(583741),
@@ -52,10 +52,10 @@ function R(e) {
             shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
         Y = F && W,
-        K = i.useMemo(() => {
+        V = i.useMemo(() => {
             if (Y && null != G) return () => G(A.pn.PLAN_SELECT);
         }, [Y, G]),
-        V = (function (e) {
+        K = (function (e) {
             let {
                     invoiceSummaryType: t,
                     invoicePreview: n,
@@ -124,10 +124,10 @@ function R(e) {
                     let e = S.A.get(t);
                     if (null == e) return {};
                     let n = e.productLine;
-                    if (n === _.EZt.PREMIUM) return {};
+                    if (n === v.EZt.PREMIUM) return {};
                     let l = a.A.getApplication(e.applicationId);
                     if (null == l) return {};
-                    if (n === _.EZt.GUILD_ROLE) {
+                    if (n === v.EZt.GUILD_ROLE) {
                         let e = E.A.getGuildId(),
                             t = f.A.getGuild(e);
                         return null != t ? { header: t.name, guildForIcon: t } : {};
@@ -167,16 +167,16 @@ function R(e) {
                         S = (0, g.CE)(E, n.interval, n.intervalCount),
                         y = null,
                         A = null,
-                        _ = !1,
+                        v = !1,
                         x = S,
                         b = o?.discountOffer;
                     if (m)
                         ((y = (0, h.O7)(n, { amount: f, currency: l.currency })),
                             (x = (0, P.ib)(l.currency, { includeNowSuffix: !0 })));
                     else if (d) {
-                        if (((x = E), n.interval === v.WT.YEAR && (0, I.xq)(n.id))) {
+                        if (((x = E), n.interval === _.WT.YEAR && (0, I.xq)(n.id))) {
                             let e = (0, I.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
-                            ((y = null != e ? (0, g.$g)(e * u, l.currency) : null), (_ = !0));
+                            ((y = null != e ? (0, g.$g)(e * u, l.currency) : null), (v = !0));
                         }
                     } else if (r) {
                         let e = (0, p.pg)(l, n.id);
@@ -202,7 +202,7 @@ function R(e) {
                                       })));
                         }
                     }
-                    return { price: x, priceStrikethroughText: A, priceSubText: y, priceSubTextHasStrikethrough: _ };
+                    return { price: x, priceStrikethroughText: A, priceSubText: y, priceSubTextHasStrikethrough: v };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -215,9 +215,9 @@ function R(e) {
                 }),
             [t, c, n, H, k, X, ee, B],
         ),
-        er = ((0, I.ys)(c.id) ? (0, I.m6)(c.id) : void 0) === v.PremiumTypes.TIER_2;
+        er = ((0, I.ys)(c.id) ? (0, I.m6)(c.id) : void 0) === _.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
-        label: V,
+        label: K,
         description: q,
         price: et,
         priceStrikethroughText: en,
@@ -230,7 +230,7 @@ function R(e) {
         headerIconSrc: Q,
         headerIconComponent: J,
         bottomSubText: U,
-        onClick: K,
+        onClick: V,
     });
 }
 function M(e) {

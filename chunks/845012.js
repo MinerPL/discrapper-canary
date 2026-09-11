@@ -1,4 +1,4 @@
-n.d(t, { X: () => v });
+n.d(t, { X: () => _ });
 var l = n(477900),
     i = n(582128),
     r = n(284009),
@@ -20,13 +20,13 @@ var l = n(477900),
     g = n(202541),
     A = n(375708),
     P = n(583741),
-    _ = n(904541);
-function v(e) {
+    v = n(904541);
+function _(e) {
     let {
             selectedPlanId: t,
             priceOptions: n,
             planOptions: r,
-            subscriptionPeriodEnd: v,
+            subscriptionPeriodEnd: _,
             showPlanStatusSubText: x,
             disabled: T = !1,
             isInPlanSelectStep: N,
@@ -48,8 +48,8 @@ function v(e) {
             premiumSubscriptionPlan: H,
             thePriceOptions: W,
             skuId: Y,
-        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: v, showTotal: N }),
-        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: V } = i.useMemo(() => {
+        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: _, showTotal: N }),
+        { shouldShowPremiumSwitchPlanSelectText: V, premiumSwitchPlanSelectText: K } = i.useMemo(() => {
             let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: B });
             return {
                 shouldShowPremiumSwitchPlanSelectText: e,
@@ -57,8 +57,8 @@ function v(e) {
             };
         }, [H, B, Y]),
         Z = i.useMemo(
-            () => (N && F ? (0, C.Ct)(D, { subscriptionPeriodEnd: v, trialPeriodCopy: G }) : b),
-            [N, F, D, v, G, b],
+            () => (N && F ? (0, C.Ct)(D, { subscriptionPeriodEnd: _, trialPeriodCopy: G }) : b),
+            [N, F, D, _, G, b],
         ),
         q = i.useMemo(() => (r.length > 0 ? g.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, d.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
@@ -75,8 +75,8 @@ function v(e) {
                     isEligibleForDiscount: r,
                     priceOptions: s,
                     isEligibleForTrial: c,
-                    isEligibleForBOGOPromotion: _,
-                    showPlanStatusSubText: v,
+                    isEligibleForBOGOPromotion: v,
+                    showPlanStatusSubText: _,
                     isInPlanSelectStep: x,
                 } = t,
                 {
@@ -104,7 +104,7 @@ function v(e) {
                             w = (0, y.y8)(e, !1, N, s),
                             U = (0, h.gS)(T, b, {
                                 userLocale: j,
-                                isEligibleForBOGOPromotion: _,
+                                isEligibleForBOGOPromotion: v,
                                 shouldShowSavingsPercent: k,
                                 isGift: N,
                                 planId: e,
@@ -155,7 +155,7 @@ function v(e) {
                                       (o = A.intl.formatToPlainString(P.default.nsG1jw, {
                                           savingsText: (0, S.l9)(j, parseInt(R.discount.amount) / 100),
                                       })))),
-                            v &&
+                            _ &&
                                 (x && c
                                     ? (t = (0, h.O7)(b, w))
                                     : d
@@ -177,7 +177,7 @@ function v(e) {
                                 userLocale: j,
                                 discountOffer: R,
                                 yearlyPercentSavings: L,
-                                shouldHideYearlySavingsBadge: null != T || null != R || _,
+                                shouldHideYearlySavingsBadge: null != T || null != R || v,
                             }),
                         });
                         return {
@@ -191,7 +191,7 @@ function v(e) {
                             isDisabled: f || n,
                         };
                     }),
-                [l, e, r, s, c, _, v, x, T, M, O, R, N, j, n],
+                [l, e, r, s, c, v, _, x, T, M, O, R, N, j, n],
             );
         })(r, {
             disabled: T,
@@ -207,8 +207,8 @@ function v(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  K &&
-                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: _.S, children: V }),
+                  V &&
+                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(c.me, {
                       headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: q }),
                       headingSubText: Z,
@@ -225,7 +225,7 @@ function v(e) {
                             shouldShowTrialOrDiscountLayout: U,
                             showTotal: N,
                             shouldShowTotalInSubscriptionFlow: w,
-                            previewTotalSectionClassName: _.$,
+                            previewTotalSectionClassName: v.$,
                         })
                       : null,
               ],

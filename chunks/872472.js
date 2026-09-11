@@ -1,10 +1,10 @@
-(r.d(e, { A: () => h }), r(321073));
+(r.d(e, { A: () => I }), r(321073));
 var i = r(575593),
     n = r(898461),
-    l = r(474012),
-    s = r(837015),
-    u = r(203632),
-    a = r(892118),
+    s = r(474012),
+    l = r(837015),
+    a = r(203632),
+    u = r(892118),
     o = r(32731),
     d = r(520606),
     c = r(652215);
@@ -13,16 +13,16 @@ function S(t) {
         case i.R.AVATAR_DECORATION:
             return n.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
-            return u.Ay.fromServer(t);
+            return a.Ay.fromServer(t);
         case i.R.NAMEPLATE:
-            return s.A.fromServer(t);
+            return l.A.fromServer(t);
         case i.R.PROFILE_FRAME:
-            return a.A.fromServer(t);
+            return u.A.fromServer(t);
         default:
             return null;
     }
 }
-class h extends d.A {
+class I extends d.A {
     collectiblesItem;
     bundleItems;
     constructor(t) {
@@ -42,12 +42,12 @@ class h extends d.A {
             throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
     static fromServer(t) {
-        return new h({ ...t, sku: null != t.sku ? o.A.createFromServer(t.sku) : void 0 });
+        return new I({ ...t, sku: null != t.sku ? o.A.createFromServer(t.sku) : void 0 });
     }
     static fromSKU(t) {
-        let e = (0, l.T7)(t);
+        let e = (0, s.T7)(t);
         if (null == e) return null;
-        let r = new h({
+        let r = new I({
             sku_id: t.id,
             sku_product_line: c.EZt.COLLECTIBLES,
             sku_name: t.name,

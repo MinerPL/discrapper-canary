@@ -21,8 +21,8 @@ function I(e) {
         { paymentSources: A } = (0, a.j)(),
         {
             selectedSkuId: P,
-            setPurchaseState: _,
-            contextMetadata: v,
+            setPurchaseState: v,
+            contextMetadata: _,
             paymentSourceId: x,
             setPaymentSourceId: T,
             purchaseError: N,
@@ -74,7 +74,7 @@ function I(e) {
         onReturn: O ? void 0 : D,
         onComplete: (e) => {
             f.l_.has(e)
-                ? (_(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))
+                ? (v(E.h.COMPLETED), l(f.pn.CONFIRM, { trackedFromStep: e }))
                 : l(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
@@ -85,7 +85,7 @@ function I(e) {
                 from_step: n,
                 to_step: l,
                 step_duration_ms: i - G,
-                flow_duration_ms: i - v.startTime,
+                flow_duration_ms: i - _.startTime,
             });
         },
         isEligibleForTrial: L,

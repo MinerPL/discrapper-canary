@@ -1,4 +1,4 @@
-n.d(t, { A: () => K });
+n.d(t, { A: () => Y });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -235,7 +235,7 @@ function z(e) {
               ],
           });
 }
-function Y(e) {
+function K(e) {
     let { text: t, user: n, guildId: s, channelId: a, widgetType: o, gameId: d } = e,
         c = (0, x.GV)(),
         { trackUserProfileEditAction: u } = (0, j.NJ)(),
@@ -283,7 +283,7 @@ function Y(e) {
         ],
     });
 }
-function K(e) {
+function Y(e) {
     let {
             user: t,
             guildId: n,
@@ -337,7 +337,7 @@ function K(e) {
                             ? (0, i.jsx)(a.D, { ...N, children: y })
                             : (0, i.jsx)(H, { gameId: I, userId: t.id, gameName: y, ...N }),
                         _
-                            ? (0, i.jsx)(Y, { text: j, user: t, guildId: n, channelId: s, widgetType: d, gameId: I })
+                            ? (0, i.jsx)(K, { text: j, user: t, guildId: n, channelId: s, widgetType: d, gameId: I })
                             : (0, i.jsx)(z, { text: j, user: t, guildId: n, channelId: s }),
                         (0, i.jsx)(L, {
                             tags: v,

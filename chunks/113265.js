@@ -1,17 +1,17 @@
-r.d(e, { z: () => a });
+r.d(e, { z: () => u });
 var i = r(582128),
     n = r(575593),
-    l = r(466459),
-    s = r(116833),
-    u = r(152472);
-function a(t) {
-    let { userId: e, product: r, selectedVariantIndex: a, location: o, onError: d } = t,
+    s = r(466459),
+    l = r(116833),
+    a = r(152472);
+function u(t) {
+    let { userId: e, product: r, selectedVariantIndex: u, location: o, onError: d } = t,
         c = i.useMemo(
-            () => (r.type === n.R.VARIANTS_GROUP && null != a && r.variants?.[a] != null ? r.variants[a] : r),
-            [r, a],
+            () => (r.type === n.R.VARIANTS_GROUP && null != u && r.variants?.[u] != null ? r.variants[u] : r),
+            [r, u],
         ),
         S = c.skuId,
-        h = (0, u.c)({
+        I = (0, a.c)({
             userId: e,
             skuId: S,
             nuxGraphic: (function (t) {
@@ -29,7 +29,7 @@ function a(t) {
                 }
                 return {
                     type: "dynamic",
-                    component: s.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+                    component: l.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
                     aspectRatio: r,
                     props: { product: e, forCollectedModal: !0 },
                 };
@@ -37,6 +37,6 @@ function a(t) {
             location: o,
             onError: d,
         }),
-        { isPurchased: A } = (0, l.h)(c);
-    return { ...h, specificProductOrVariant: c, isPurchased: A };
+        { isPurchased: h } = (0, s.h)(c);
+    return { ...I, specificProductOrVariant: c, isPurchased: h };
 }

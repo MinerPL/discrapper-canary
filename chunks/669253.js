@@ -1,4 +1,4 @@
-n.d(t, { A: () => X, k: () => K });
+n.d(t, { A: () => X, k: () => Y });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -107,7 +107,7 @@ function V(e) {
         z = l.useCallback(() => {
             (G.A.clearPendingWidgets(), p ? (0, O.XQ)() : S && (0, T.Jp)());
         }, [p, S]),
-        Y = l.useCallback(async () => {
+        K = l.useCallback(async () => {
             if (p && !M.A.canSubmit()) return;
             d(!0);
             let e = !0;
@@ -218,28 +218,28 @@ function V(e) {
             isEmphasized: s,
             a11yAnnounceOnShow: j.intl.string(j.t["0Y/qkL"]),
             secondaryAction: { text: j.intl.string(j.t.yBZMsQ), onClick: z, disabled: !V || o },
-            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: Y, loading: o, disabled: !B || !V },
+            primaryAction: { text: j.intl.string(j.t["R3BPH+"]), onClick: K, loading: o, disabled: !B || !V },
         })
     );
 }
 var B = n(485745),
     z = n(893757);
-function Y() {
+function K() {
     let e = !(0, u.X)("useEditingFooterState"),
         t = (0, o.VU)(),
         n = (0, B.A)(e),
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
-function K(e) {
+function Y(e) {
     let t = (0, a.bG)([c.default], () => c.default.getId() === e),
-        n = Y();
+        n = K();
     return t && null != n;
 }
 function X(e) {
     let { userId: t, guildId: n, className: s } = e,
         o = (0, a.bG)([c.default], () => c.default.getId() === t),
-        u = Y(),
+        u = K(),
         [g, m] = l.useState(u);
     return (null != u && g !== u && m(u), o)
         ? (0, i.jsx)("div", {

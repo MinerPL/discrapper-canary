@@ -1,4 +1,4 @@
-(n.d(t, { RL: () => et, oO: () => q, dL: () => V }), n(321073));
+(n.d(t, { RL: () => et, oO: () => q, dL: () => K }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(575593),
@@ -20,8 +20,8 @@ var l = n(477900),
     g = n(151115),
     A = n(812095),
     P = n(287809),
-    _ = n(486020),
-    v = n(158045),
+    v = n(486020),
+    _ = n(158045),
     x = n(580630),
     T = n(240248),
     N = n(951305),
@@ -41,8 +41,8 @@ var l = n(477900),
     H = n(319820),
     W = n(52635),
     Y = n(583741),
-    K = n(181666);
-function V(e) {
+    V = n(181666);
+function K(e) {
     return e.name;
 }
 let Z = {
@@ -68,7 +68,7 @@ function z(e) {
             ...s
         } = e,
         o = (0, l.jsx)(C.WH, { sku: t, product: n }),
-        u = V(t);
+        u = K(t);
     return (0, l.jsx)(C.f7, {
         description: r,
         price: i,
@@ -83,7 +83,7 @@ function Q(e) {
         { isSocialLayerGameItem: i } = (0, H.AO)({ sku: n }),
         r = i ? B.intl.string(Y.default.qwSlCO) : B.intl.string(Y.default.iZe9Wy),
         a = i
-            ? { header: t.name, headerIconSrc: _.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
+            ? { header: t.name, headerIconSrc: v.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 16 }) }
             : {};
     return (0, l.jsx)(z, { ...e, description: r, ...a });
 }
@@ -99,14 +99,14 @@ function J(e) {
             null != n
                 ? (function (e) {
                       let t = P.default.getCurrentUser(),
-                          n = v.Ay.canUseShopDiscounts(t),
+                          n = _.Ay.canUseShopDiscounts(t),
                           l = (0, f.xM)(t),
                           i = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
                       if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
                           if (l === f.D0.NITRO)
                               return { PriceIcon: a.t, priceTooltip: B.intl.string(Y.default.YUNJJa) };
                           if (l === f.D0.THIRDPARTY)
-                              return { PriceIcon: s.TagIcon, priceTooltip: B.intl.string(K.default.DePOcS) };
+                              return { PriceIcon: s.TagIcon, priceTooltip: B.intl.string(V.default.DePOcS) };
                       }
                       return {};
                   })(n)
@@ -149,7 +149,7 @@ function ee(e) {
             sku: f,
             application: y,
             eligiblePaymentGateways: P,
-            disabled: _,
+            disabled: v,
         } = (function () {
             let { selectedSkuId: e, purchaseState: t } = (0, h.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
@@ -171,7 +171,7 @@ function ee(e) {
                 }
             );
         })(),
-        v = i.useMemo(
+        _ = i.useMemo(
             () =>
                 (function (e, t) {
                     let { skuId: n, paymentSourceType: i, isGift: r } = t;
@@ -186,7 +186,7 @@ function ee(e) {
                 })(n, { skuId: f.id, paymentSourceType: a, isGift: s }),
             [n, f.id, a, s],
         ),
-        { upperInlineNoticeProps: b, footerInlineNoticeProps: K } = (function (e) {
+        { upperInlineNoticeProps: b, footerInlineNoticeProps: V } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, R.bG)([M.A], () => M.A.getFetchState()),
                 { fetched: a, hasAlreadyLinked: s } = (0, O.RD)(n),
@@ -229,7 +229,7 @@ function ee(e) {
             location: "OneTimePurchaseReviewStepBody",
             onPaymentSourceAdd: t,
             additionalPaymentSourceDropdownProps: Z,
-            disabled: _,
+            disabled: v,
         }),
         { product: ee } = (0, H.AO)({ sku: f }),
         { unifiedInvoiceSummaryProps: et, priceText: en } = i.useMemo(
@@ -240,7 +240,7 @@ function ee(e) {
                     if (null != n) {
                         let { discount: e, basePrice: i, showTaxes: r } = (0, H.yh)({ invoicePreview: n });
                         return (
-                            l.push({ id: "sku", label: V(t), amount: i }),
+                            l.push({ id: "sku", label: K(t), amount: i }),
                             null != e &&
                                 l.push({
                                     id: "discount",
@@ -325,10 +325,10 @@ function ee(e) {
                 purchaseItemContent: ei,
                 invoiceSummaryContent: el,
                 paymentMethodContent: q,
-                legalContent: v,
+                legalContent: _,
                 promotionalNoticeContent: es,
                 upperInlineNoticeProps: b,
-                footerInlineNoticeProps: K,
+                footerInlineNoticeProps: V,
                 invoiceTotalDueLabel: B.intl.string(Y.default.Zxav97),
                 invoiceTotalDueValue: er,
             }),

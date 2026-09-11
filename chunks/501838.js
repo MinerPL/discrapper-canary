@@ -1,23 +1,23 @@
-(r.d(e, { mn: () => h, px: () => _, qx: () => f, rY: () => p, tR: () => A, w: () => I }), r(321073));
+(r.d(e, { mn: () => I, px: () => A, qx: () => _, rY: () => f, tR: () => h, w: () => p }), r(321073));
 var i = r(582128),
     n = r(17928),
-    l = r(517164),
-    s = r(20805),
-    u = r(952818),
-    a = r(321191),
+    s = r(517164),
+    l = r(20805),
+    a = r(952818),
+    u = r(321191),
     o = r(71393),
     d = r(290863),
     c = r(832163),
     S = r(533562);
-function h(t) {
+function I(t) {
     let { userIds: e } = t;
     return (0, n.yK)(
-        [l.A, c.A],
+        [s.A, c.A],
         () => {
             let t = [];
             for (let r of e)
-                for (let e of l.A.getUserOutbox(r)?.entries ?? [])
-                    if (null != e && (0, s.zD)(e)) {
+                for (let e of s.A.getUserOutbox(r)?.entries ?? [])
+                    if (null != e && (0, l.zD)(e)) {
                         let r = c.A.getApplicationIdFromDetectableId(e.extra.application_id);
                         null != r && t.push(r);
                     }
@@ -26,13 +26,13 @@ function h(t) {
         [e],
     );
 }
-function A(t) {
+function h(t) {
     return (0, n.yK)(
-        [a.A, c.A],
+        [u.A, c.A],
         () => {
             let e = [];
             for (let r of t) {
-                let t = a.A.getMutualGuilds(r);
+                let t = u.A.getMutualGuilds(r);
                 if (null != t) {
                     for (let r of t)
                         if (c.A.getStorefrontGuildIds().has(r.guild.id)) {
@@ -46,7 +46,7 @@ function A(t) {
         [t],
     );
 }
-function I(t) {
+function p(t) {
     let { userIds: e } = t,
         r = (0, n.yK)(
             [d.A, c.A],
@@ -62,13 +62,13 @@ function I(t) {
             },
             [e],
         ),
-        l = (0, S.W)();
-    return i.useMemo(() => (null != l ? [...r, l] : r), [r, l]);
+        s = (0, S.W)();
+    return i.useMemo(() => (null != s ? [...r, s] : r), [r, s]);
 }
-function f() {
-    return (0, n.yK)([u.Ay, c.A], () => {
+function _() {
+    return (0, n.yK)([a.Ay, c.A], () => {
         let t = [];
-        for (let e of u.Ay.getGamesSeen(!1, !1))
+        for (let e of a.Ay.getGamesSeen(!1, !1))
             if (null != e.id) {
                 let r = c.A.getApplicationIdFromDetectableId(e.id);
                 null != r && t.push(r);
@@ -76,13 +76,13 @@ function f() {
         return t;
     });
 }
-function p() {
+function f() {
     return (0, n.yK)(
-        [u.Ay, c.A],
+        [a.Ay, c.A],
         () => {
             let t = [];
-            for (let e of u.Ay.getRunningGames())
-                if (null != e.id && u.Ay.isDetectionEnabled(e)) {
+            for (let e of a.Ay.getRunningGames())
+                if (null != e.id && a.Ay.isDetectionEnabled(e)) {
                     let r = c.A.getApplicationIdFromDetectableId(e.id);
                     null != r && t.push(r);
                 }
@@ -91,7 +91,7 @@ function p() {
         [],
     );
 }
-function _() {
+function A() {
     let t = (0, n.bG)([o.A], () => o.A.getGuildIds());
     return (0, n.yK)(
         [c.A],
