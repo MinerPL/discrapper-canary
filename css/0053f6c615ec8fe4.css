@@ -74,7 +74,9 @@
     color: var(--text-brand);
     cursor: pointer;
     display: inline-flex;
-    gap: 4px
+    gap: 4px;
+    -webkit-text-decoration: var(--link-decoration);
+    text-decoration: var(--link-decoration)
 }
 
 .previewButton__50a36:hover {
@@ -201,4 +203,4 @@
     margin-inline-start: 16px
 }
 
-/*# sourceMappingURL=2105c5339c0a7d3c.css.map*/
+/*# sourceMappingURL=0053f6c615ec8fe4.css.map*/
