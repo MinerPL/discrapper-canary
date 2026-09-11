@@ -2497,7 +2497,8 @@
 .jumpToPresentBar__0f481 {
     bottom: 28px;
     color: var(--text-default);
-    padding-bottom: var(--space-8)
+    padding-bottom: var(--space-8);
+    padding-inline: var(--space-12)
 }
 
 .jumpToPresentBar__0f481:active {
@@ -3317,4 +3318,4 @@
     padding-bottom: 12px
 }
 
-/*# sourceMappingURL=554669.478eb47aeabec9ee.css.map*/
+/*# sourceMappingURL=554669.7fd59c8ce48204b5.css.map*/
