@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"au4mU4":["\u65B0\u589E\u597D\u53CB"],"7kJd9e":["\u597D\u53CB"]}');
+p.exports = JSON.parse(
+    '{"au4mU4":["\u65B0\u589E\u597D\u53CB"],"JZCSRZ":["\u6536\u8D77\u597D\u53CB\u540D\u55AE"],"Dr/+ku":["\u5C55\u958B\u597D\u53CB\u540D\u55AE"],"7kJd9e":["\u597D\u53CB"],"i+986w":["\u597D\u53CB\u540D\u55AE\u9078\u9805"],"F3+Xei":["\u8ABF\u6574\u597D\u53CB\u540D\u55AE"],"60M8Ae":["\u641C\u5C0B\u597D\u53CB"]}',
+);
