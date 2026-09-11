@@ -614,6 +614,7 @@ let ez = {
                                     isStale: !T || O.A.lastTimeConnectedChanged() >= m,
                                     truncate: _,
                                     avoidInitialScroll: A,
+                                    requestStartTime: m,
                                 }),
                                 B.A.recordChannelFetchedNetwork(t, I ?? m, n, i, r, s));
                         }),

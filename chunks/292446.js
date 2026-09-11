@@ -591,32 +591,48 @@ class f {
             s = e.jump ?? null,
             l = e.hasMoreBefore ?? !1,
             d = e.hasMoreAfter ?? !1,
-            c = e.avoidInitialScroll ?? !1,
-            u = e.cached ?? !1,
-            _ = r()(t)
+            u = e.avoidInitialScroll ?? !1,
+            _ = e.cached ?? !1,
+            h = r()(t)
                 .reverse()
                 .map((e) => (0, o.rh)(e))
                 .value(),
-            h = null;
-        if ((n || i) && null == s && this.ready) h = this.merge(_, n, !0);
+            I = null;
+        if ((n || i) && null == s && this.ready) I = this.merge(h, n, !0);
         else {
-            let e = this._array.filter((e) => e.state === E.cmJ.SENDING),
-                t = this._array.filter((e) => e.state === E.cmJ.SEND_FAILED),
-                r = e.length > 0 || t.length > 0;
-            ((h = this.reset(_)),
-                !r || n || i || s?.messageId != null || s?.offset != null
+            let t = this._array.filter((e) => e.state === E.cmJ.SENDING),
+                r = this._array.filter((e) => e.state === E.cmJ.SEND_FAILED),
+                a = h[h.length - 1]?.id,
+                l = e.requestStartTime,
+                o =
+                    null == a || null == l
+                        ? []
+                        : this._array.filter(
+                              (e) =>
+                                  e.state === E.cmJ.SENT &&
+                                  c.default.compare(e.id, a) > 0 &&
+                                  c.default.extractTimestamp(e.id) >= l,
+                          ),
+                d = t.length > 0 || r.length > 0 || o.length > 0;
+            ((I = this.reset(h)),
+                !d || n || i || s?.messageId != null || s?.offset != null
                     ? A.info(
-                          `loadComplete: resetting state for channelId=${this.channelId}, sending.length=${e.length}`,
+                          `loadComplete: resetting state for channelId=${this.channelId}, sending.length=${t.length}`,
                       )
-                    : (t.length > 0 &&
+                    : (o.length > 0 &&
+                          (A.info(
+                              `loadComplete: merging with ${o.length} message(s) received during the fetch for channelId=${this.channelId}`,
+                          ),
+                          (I = I.merge(o))),
+                      r.length > 0 &&
                           (A.info(`loadComplete: merging with SEND_FAILED messages for channelId=${this.channelId}`),
-                          (h = h.merge(t))),
-                      e.length > 0 &&
+                          (I = I.merge(r))),
+                      t.length > 0 &&
                           (A.info(`loadComplete: merging with SENDING messages for channelId=${this.channelId}`),
-                          (h = h.merge(e)))));
+                          (I = I.merge(t)))));
         }
-        let I = !u && h.cached && !c;
-        return h.mutate({
+        let f = !_ && I.cached && !u;
+        return I.mutate({
             ready: !0,
             loadingMore: !1,
             jumpType: s?.jumpType ?? a.vx.ANIMATED,
@@ -625,16 +641,16 @@ class f {
             jumpedToPresent: s?.present ?? !1,
             jumpTargetId: s?.messageId ?? null,
             jumpTargetOffset: null != s && null != s.messageId && null != s.offset ? s.offset : 0,
-            jumpSequenceId: null == s || c ? h.jumpSequenceId : h.jumpSequenceId + 1,
+            jumpSequenceId: null == s || u ? I.jumpSequenceId : I.jumpSequenceId + 1,
             jumpReturnTargetId: s?.returnMessageId ?? null,
             onJumpComplete: s?.onJumpComplete ?? null,
-            hasMoreBefore: null == s && i ? h.hasMoreBefore : l,
-            hasMoreAfter: null == s && n ? h.hasMoreAfter : d,
-            cached: u,
+            hasMoreBefore: null == s && i ? I.hasMoreBefore : l,
+            hasMoreAfter: null == s && n ? I.hasMoreAfter : d,
+            cached: _,
             hasFetched: e.hasFetched,
             error: !1,
-            initialScrollSequenceId: I ? h.initialScrollSequenceId + 1 : h.initialScrollSequenceId,
-            suppressRowAnimationSequenceId: I ? h.suppressRowAnimationSequenceId + 1 : h.suppressRowAnimationSequenceId,
+            initialScrollSequenceId: f ? I.initialScrollSequenceId + 1 : I.initialScrollSequenceId,
+            suppressRowAnimationSequenceId: f ? I.suppressRowAnimationSequenceId + 1 : I.suppressRowAnimationSequenceId,
         });
     }
     addCachedMessages(e, t) {

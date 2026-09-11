@@ -282,9 +282,10 @@ let Z = new q(l.h, {
                     isStale: o,
                     truncate: c,
                     avoidInitialScroll: u,
+                    requestStartTime: _,
                 } = e,
-                _ = d.A.getOrCreate(t);
-            for (let e of ((_ = _.loadComplete({
+                E = d.A.getOrCreate(t);
+            for (let e of ((E = E.loadComplete({
                 newMessages: l,
                 isBefore: n,
                 isAfter: i,
@@ -294,10 +295,11 @@ let Z = new q(l.h, {
                 cached: o,
                 hasFetched: !0,
                 avoidInitialScroll: u,
+                requestStartTime: _,
             })),
-            null != c && (n || i) && (!n || !i) && (_ = _.truncate(n, i)),
-            (_ = F(t, _)),
-            d.A.commit(_),
+            null != c && (n || i) && (!n || !i) && (E = E.truncate(n, i)),
+            (E = F(t, E)),
+            d.A.commit(E),
             l))
                 H(e);
         },
