@@ -1,4 +1,4 @@
-n.d(t, { A: () => K, k: () => X });
+n.d(t, { A: () => X, k: () => K });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -39,13 +39,13 @@ function A() {
         },
     });
 }
-var v = n(803306),
-    E = n(631670),
+var E = n(803306),
+    v = n(631670),
     C = n(682618),
     S = n(636537),
     b = n(38405),
     k = n(652215);
-async function T(e) {
+async function y(e) {
     let { displayOrder: t, hiddenBadges: n } = e,
         i = { ...(null != t ? { display_order: t } : {}), ...(null != n ? { hidden_badges: n } : {}) };
     if (0 === Object.keys(i).length) return !0;
@@ -55,8 +55,8 @@ async function T(e) {
         return (b.A.captureException(e), !1);
     }
 }
-var N = n(234e3),
-    y = n(159001),
+var T = n(234e3),
+    N = n(159001),
     w = n(933725),
     R = n(287809),
     _ = n(625494),
@@ -99,13 +99,13 @@ function V(e) {
         } = (0, a.cf)([M.A], () => ({
             hasUnsavedProfileChanges: M.A.hasUnsavedChanges(),
             canSubmitProfileChanges: M.A.canSubmit(),
-            hasBadgeChangesToSave: (0, N.gz)(M.A.getPendingChanges()),
+            hasBadgeChangesToSave: (0, T.gz)(M.A.getPendingChanges()),
         })),
         b = p && I,
         V = x || b || S,
         B = !(x && !f) && (!p || A),
         z = l.useCallback(() => {
-            (G.A.clearPendingWidgets(), p ? (0, O.XQ)() : S && (0, N.Jp)());
+            (G.A.clearPendingWidgets(), p ? (0, O.XQ)() : S && (0, T.Jp)());
         }, [p, S]),
         Y = l.useCallback(async () => {
             if (p && !M.A.canSubmit()) return;
@@ -113,10 +113,10 @@ function V(e) {
             let e = !0;
             if (S) {
                 let t = M.A.getPendingChanges(),
-                    n = await T({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
+                    n = await y({ displayOrder: t.pendingBadgeDisplayOrder, hiddenBadges: t.pendingBadgeHiddenBadges });
                 if (n) {
                     let e = R.default.getCurrentUser()?.id;
-                    (null != e && (await (0, v.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, N.Jp)());
+                    (null != e && (await (0, E.fetchProfile)(e).catch(() => {})), await (0, C.RS)(), (0, T.Jp)());
                 }
                 e = n;
             }
@@ -127,7 +127,7 @@ function V(e) {
                             n = (0, L.Sk)(t),
                             i = (0, L.yX)(t);
                         if (Object.keys(n).length > 0) {
-                            let i = await (0, E._L)(n);
+                            let i = await (0, v._L)(n);
                             ((e = e && (i?.ok ?? !1)),
                                 i?.ok &&
                                     (void 0 !== t.pendingAvatar &&
@@ -136,7 +136,7 @@ function V(e) {
                                             avatarId: n.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, E.pZ)()));
+                                    (0, v.pZ)()));
                         }
                         if (Object.keys(i).length > 0) {
                             let { bannerOriginalMd5: t, ...n } = i,
@@ -148,7 +148,7 @@ function V(e) {
                             i = (0, L.C5)(n),
                             l = (0, L.yX)(n, t);
                         if (Object.keys(i).length > 0) {
-                            let l = await (0, y.GL)(t, i);
+                            let l = await (0, N.GL)(t, i);
                             ((e = e && (l?.ok ?? !1)),
                                 l?.ok &&
                                     (void 0 !== n.pendingAvatar &&
@@ -158,7 +158,7 @@ function V(e) {
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: n.pendingAvatar?.assetOrigin,
                                         }),
-                                    (0, E.pZ)()));
+                                    (0, v.pZ)()));
                         }
                         if (Object.keys(l).length > 0) {
                             let { bannerOriginalMd5: n, ...i } = l,
@@ -171,7 +171,7 @@ function V(e) {
                         let { primaryGuildId: t } = n;
                         if (void 0 !== t) {
                             let n = await (0, w.m)(t, null !== t);
-                            ((e = e && (n?.ok ?? !1)), n?.ok && (0, E.fw)());
+                            ((e = e && (n?.ok ?? !1)), n?.ok && (0, v.fw)());
                         }
                     }
                 } catch {
@@ -191,7 +191,7 @@ function V(e) {
                 } catch {
                     e = !1;
                 }
-            (e ? (0, E.x8)() : (0, W.XA)(H.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
+            (e ? (0, v.x8)() : (0, W.XA)(H.jM.PROFILE_SAVE_GENERIC_FAILURE), d(!1));
         }, [p, b, S, x, c, g, m, n, t]);
     return (
         l.useEffect(() => {
@@ -231,12 +231,12 @@ function Y() {
         i = (0, g.YW)();
     return t ? "dnd" : i ? "premium-try-it-out" : n ? "save" : null;
 }
-function X(e) {
+function K(e) {
     let t = (0, a.bG)([c.default], () => c.default.getId() === e),
         n = Y();
     return t && null != n;
 }
-function K(e) {
+function X(e) {
     let { userId: t, guildId: n, className: s } = e,
         o = (0, a.bG)([c.default], () => c.default.getId() === t),
         u = Y(),

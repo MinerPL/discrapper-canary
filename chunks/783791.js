@@ -32,8 +32,8 @@ let A = new Map(),
     S = new Map(),
     E = new Map(),
     M = new Set(),
-    k = 0,
-    O = [],
+    O = 0,
+    k = [],
     N = 0;
 function C(e, t) {
     let {
@@ -223,7 +223,7 @@ class W extends i.Ay.Store {
         this.waitFor(l.A, a.A, u.Ay, d.A, c.A, h.Ay);
     }
     getMessages(e) {
-        return A.get(e) ?? O;
+        return A.get(e) ?? k;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -249,7 +249,7 @@ class W extends i.Ay.Store {
         return M.has(e);
     }
     getSidebarWidth() {
-        return k;
+        return O;
     }
     getActivityOrderedProjectIds() {
         return y.slice();
@@ -296,10 +296,10 @@ let U = new W(r.h, {
             0 === E.size &&
             0 === M.size &&
             0 === y.length &&
-            0 === k
+            0 === O
         )
             return !1;
-        (A.clear(), I.clear(), T.clear(), S.clear(), E.clear(), M.clear(), (y.length = 0), (k = 0));
+        (A.clear(), I.clear(), T.clear(), S.clear(), E.clear(), M.clear(), (y.length = 0), (O = 0));
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
@@ -427,8 +427,8 @@ let U = new W(r.h, {
     },
     VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET: function (e) {
         let { width: t } = e;
-        if (k === t) return !1;
-        k = t;
+        if (O === t) return !1;
+        O = t;
     },
     VIBEGRATIONS_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n, turnId: i } = e;

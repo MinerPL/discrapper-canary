@@ -1,5 +1,5 @@
 n.d(t, { mh: () => a });
-let i = (0, n(945810).mj)({
+let r = (0, n(945810).mj)({
     kind: "user",
     name: "2026-09-youtube-3p",
     defaultConfig: { enabled: !1 },
@@ -7,6 +7,6 @@ let i = (0, n(945810).mj)({
 });
 function a(e) {
     let { location: t } = e,
-        { enabled: n } = i.useConfig({ location: t });
+        { enabled: n } = r.useConfig({ location: t });
     return n;
 }

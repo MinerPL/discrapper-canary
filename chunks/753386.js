@@ -1,39 +1,39 @@
-n.d(t, { J$: () => p, WM: () => l.WM, cZ: () => A, eG: () => f, vd: () => T, vm: () => m, zh: () => E, zv: () => C });
+n.d(t, { J$: () => T, WM: () => a.WM, cZ: () => p, eG: () => f, vd: () => I, vm: () => E, zh: () => A, zv: () => C });
 var i = n(544180),
     r = n(396813),
     s = n(859703),
     o = n(405670),
-    a = n(561844),
-    l = n(546121),
-    u = n(710969),
+    u = n(561844),
+    a = n(546121),
+    l = n(710969),
     d = n(792620),
     c = n(652215);
 function C(e, t) {
-    (0, u.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, r.uI)(e.id, t);
+    (0, l.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, r.uI)(e.id, t);
 }
 n(375708);
 function f(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
-function E(e, t) {
+function A(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function m(e) {
+function E(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: r } = e;
     o.Ay.getState().setTranscriptEnabled(!1);
-    let l = o.Ay.getState().getVideoProgress(t);
-    if (null == l) return;
-    let u = s.A.getQuest(t);
-    null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && C(u, l.maxTimestampSec);
-    let d = E(l.maxTimestampSec, l.duration);
-    ((0, a.av)({
+    let a = o.Ay.getState().getVideoProgress(t);
+    if (null == a) return;
+    let l = s.A.getQuest(t);
+    null != l && l.userStatus?.enrolledAt != null && l.userStatus?.completedAt == null && C(l, a.maxTimestampSec);
+    let d = A(a.maxTimestampSec, a.duration);
+    ((0, u.av)({
         questId: t,
         event: c.HAw.QUEST_VIDEO_PROGRESSED,
-        properties: { progress: d, video_timestamp_seconds: l.maxTimestampSec, video_session_id: r },
+        properties: { progress: d, video_timestamp_seconds: a.maxTimestampSec, video_session_id: r },
         sourceQuestContent: n,
     }),
-        (0, a.av)({
+        (0, u.av)({
             questId: t,
             event: c.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {
@@ -44,12 +44,12 @@ function m(e) {
             sourceQuestContent: n,
         }));
 }
-function A(e) {
+function p(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function T(e, t) {
+function I(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
-function p(e) {
-    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(A(e.id));
+function T(e) {
+    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
 }

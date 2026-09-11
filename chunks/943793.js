@@ -1,4 +1,4 @@
-n.d(t, { A: () => X });
+n.d(t, { A: () => K });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -18,15 +18,15 @@ var a = n(297264),
     I = n(562153),
     j = n(183555),
     A = n(735321),
-    v = n(451395),
-    E = n(761431),
+    E = n(451395),
+    v = n(761431),
     C = n(823016),
     S = n(788593),
     b = n(492280),
     k = n(866665),
-    T = n(147925),
-    N = n(123181),
-    y = n(229087),
+    y = n(147925),
+    T = n(123181),
+    N = n(229087),
     w = n(753437),
     R = n(375708),
     _ = n(149253);
@@ -40,9 +40,9 @@ function L(e) {
         h = (0, l.useRef)(new Map()),
         p = (0, l.useRef)(null),
         I = (0, l.useRef)(null),
-        [v, E] = (0, l.useState)(0),
+        [E, v] = (0, l.useState)(0),
         [C, S] = (0, l.useState)(!1),
-        b = M(p, I, u, h, E),
+        b = M(p, I, u, h, v),
         k = (0, l.useCallback)(
             (e, t) => {
                 ((0, A.s1)(s, a, e),
@@ -50,7 +50,7 @@ function L(e) {
             },
             [s, a, f],
         ),
-        T = (0, l.useCallback)(() => {
+        y = (0, l.useCallback)(() => {
             f({ action: "PRESS_ADD_TAG", widgetEdited: s });
         }, [f, s]);
     if (
@@ -67,7 +67,7 @@ function L(e) {
         !g && !m)
     )
         return null;
-    let L = C ? u : u.slice(0, u.length - v);
+    let L = C ? u : u.slice(0, u.length - E);
     return (0, i.jsxs)("div", {
         className: r()(_.I4, o),
         children: [
@@ -79,7 +79,7 @@ function L(e) {
                             "aria-label": R.intl.string(R.t.EfjTi4),
                             children: L.map((e) =>
                                 (0, i.jsx)(
-                                    y.A,
+                                    N.A,
                                     {
                                         tag: e,
                                         onRemove: c
@@ -96,11 +96,11 @@ function L(e) {
                                 ),
                             ),
                         }),
-                        v > 0 &&
+                        E > 0 &&
                             (0, i.jsx)(D, {
                                 buttonRef: p,
                                 isExpanded: C,
-                                numberOfOverflowingTags: v,
+                                numberOfOverflowingTags: E,
                                 onExpandTags: () => {
                                     (S(!0), x({ action: "EXPAND_GAME_TAGS" }));
                                 },
@@ -111,7 +111,7 @@ function L(e) {
                             }),
                     ],
                 }),
-            m && (0, i.jsx)(N.A, { tags: t, onTagsChange: k, onOpen: T, ref: I }),
+            m && (0, i.jsx)(T.A, { tags: t, onTagsChange: k, onOpen: y, ref: I }),
         ],
     });
 }
@@ -120,7 +120,7 @@ function O(e) {
     return (0, i.jsx)(c.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
 }
 function P() {
-    return (0, i.jsx)(T.A, { direction: T.A.Directions.LEFT, width: 12, height: 12, className: _.OW });
+    return (0, i.jsx)(y.A, { direction: y.A.Directions.LEFT, width: 12, height: 12, className: _.OW });
 }
 function D(e) {
     let {
@@ -183,7 +183,7 @@ var G = n(858808),
 function W(e) {
     let { index: t, widgetType: n, game: l, children: s, getWidth: r } = e,
         { manageFocusOnReorder: a } = (0, C.r)();
-    return (0, i.jsx)(v.mG, {
+    return (0, i.jsx)(E.mG, {
         index: t,
         itemId: l.gameId,
         listType: n,
@@ -250,8 +250,8 @@ function Y(e) {
             },
             [o, d, h, u],
         ),
-        v = (0, E.T)({ value: h, onCommit: I }),
-        { handleStartEditing: C, isInlineSurface: S } = v,
+        E = (0, v.T)({ value: h, onCommit: I }),
+        { handleStartEditing: C, isInlineSurface: S } = E,
         b = l.useCallback(() => {
             (u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: o }), C());
         }, [o, u, C]),
@@ -266,8 +266,8 @@ function Y(e) {
         "aria-labelledby": c,
         children: [
             (0, i.jsx)(V, { user: n, guildId: s, channelId: a, id: c }),
-            (0, i.jsx)(E.y, {
-                ...v,
+            (0, i.jsx)(v.y, {
+                ...E,
                 handleStartEditing: b,
                 variant: "multiline",
                 rows: 3,
@@ -278,12 +278,12 @@ function Y(e) {
                 maxLength: 200,
                 textVariant: "text-sm/normal",
                 removeVerticalPadding: !0,
-                className: r()(F.Im, { [F.kS]: v.isEditing }),
+                className: r()(F.Im, { [F.kS]: E.isEditing }),
             }),
         ],
     });
 }
-function X(e) {
+function K(e) {
     let {
             user: t,
             guildId: n,
@@ -298,21 +298,21 @@ function X(e) {
             className: f,
         } = e,
         h = l.useRef(null),
-        { gameId: I, comment: j, tags: E } = o,
-        { coverImageUrl: k, gameName: T, isLoading: N } = (0, p.A)(I),
-        y = { variant: "heading-sm/medium", color: "text-default" },
+        { gameId: I, comment: j, tags: v } = o,
+        { coverImageUrl: k, gameName: y, isLoading: T } = (0, p.A)(I),
+        N = { variant: "heading-sm/medium", color: "text-default" },
         w = c && !u,
         R = 1 === (0, A.cv)(d),
         _ = w && (0, A.y9)(d),
         O = w && !R,
         { registerDragHandleRef: P } = (0, C.r)();
-    if (N) return (0, i.jsx)(b.E, {});
+    if (T) return (0, i.jsx)(b.E, {});
     function D() {
         return (0, i.jsx)(S.A, {
             coverRef: x,
             className: null == k || u ? void 0 : U.iL,
             imageSrc: k,
-            gameName: T,
+            gameName: y,
             gameId: I,
             userId: t.id,
             disableInteraction: u,
@@ -327,20 +327,20 @@ function X(e) {
                 O
                     ? (0, i.jsxs)("div", {
                           className: F.An,
-                          children: [D(), (0, i.jsx)(v.jV, { buttonRef: P(o.gameId), className: F.BU })],
+                          children: [D(), (0, i.jsx)(E.jV, { buttonRef: P(o.gameId), className: F.BU })],
                       })
                     : D(),
                 (0, i.jsxs)("div", {
                     className: F.zH,
                     children: [
                         u
-                            ? (0, i.jsx)(a.D, { ...y, children: T })
-                            : (0, i.jsx)(H, { gameId: I, userId: t.id, gameName: T, ...y }),
+                            ? (0, i.jsx)(a.D, { ...N, children: y })
+                            : (0, i.jsx)(H, { gameId: I, userId: t.id, gameName: y, ...N }),
                         _
                             ? (0, i.jsx)(Y, { text: j, user: t, guildId: n, channelId: s, widgetType: d, gameId: I })
                             : (0, i.jsx)(z, { text: j, user: t, guildId: n, channelId: s }),
                         (0, i.jsx)(L, {
-                            tags: E,
+                            tags: v,
                             allowEditing: c,
                             widgetType: d,
                             gameId: I,

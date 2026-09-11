@@ -91,7 +91,7 @@ function f(e) {
             },
             [j, n],
         ),
-        v = (0, l.useCallback)(
+        E = (0, l.useCallback)(
             (e) => {
                 let t = new Set(j);
                 (e.forEach((e) => {
@@ -109,7 +109,7 @@ function f(e) {
         onRequestClose: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: v, onClose: t });
+            return (0, i.jsx)(x, { currentTags: j, onTagSelect: A, onNoneSelect: E, onClose: t });
         },
         children: (e) =>
             (0, i.jsx)("div", {

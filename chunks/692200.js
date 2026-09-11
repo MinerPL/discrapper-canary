@@ -1,4 +1,4 @@
-n.d(t, { A: () => Q });
+n.d(t, { A: () => Y });
 var i = n(485845),
     r = n(179771),
     l = n(136722),
@@ -236,8 +236,8 @@ var T = n(120426),
     E = n(171936);
 (n(321073), n(667532));
 var M = n(809685),
-    k = n(777977),
-    O = n(112420),
+    O = n(777977),
+    k = n(112420),
     N = n(484697),
     C = n(652215);
 function R(e) {
@@ -330,13 +330,13 @@ function V(e, t, n) {
     let r = { iframeId: i, answers: t ?? {}, recorded: [] };
     return (
         n?.beneathBatches === !0 ? L.push(r) : L.unshift(r),
-        1 === L.length && (0, O.C)(B),
+        1 === L.length && (0, k.C)(B),
         {
             iframeId: i,
             drain: () => r.recorded.splice(0, r.recorded.length),
             end: () => {
                 let e = L.indexOf(r);
-                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, O.C)(null));
+                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, k.C)(null));
             },
         }
     );
@@ -477,11 +477,11 @@ function X(e, t) {
         console.error(`[vibegrations] preview native surfaces: ${e} failed`, t);
     }
 }
-function Y(e) {
+function Q(e) {
     let t = J.get(e);
     (null != t && (J.delete(e), X("closing the operation session", () => t.end())), (0, S.Rh)(e));
 }
-let Q = {
+let Y = {
     openVibegrationsAppInstallModal: U,
     isWindowFocused: function () {
         return u.A.isFocused();
@@ -523,13 +523,13 @@ let Q = {
                 let t = e.contentWindow;
                 if (null == t) return;
                 let n = (0, N.lw)(t);
-                null != n && ((0, M.ir)(n), (0, k.OR)(n));
+                null != n && ((0, M.ir)(n), (0, O.OR)(n));
             })(t),
         ),
             X("opening the operation session", () => {
                 let n = V(t, void 0, { beneathBatches: !0 }),
                     i = (0, S.FQ)(() => {
-                        (0, S.RW)(e) || Y(e);
+                        (0, S.RW)(e) || Q(e);
                     });
                 J.set(e, {
                     iframeId: n.iframeId,
@@ -540,7 +540,7 @@ let Q = {
                 });
             }));
     },
-    endPreviewOperation: Y,
+    endPreviewOperation: Q,
     releasePreviewControl: function (e) {
         (0, S.xm)(e);
     },

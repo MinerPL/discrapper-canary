@@ -3,7 +3,7 @@ var i = n(308528),
     r = n(956549),
     s = n(859007);
 async function o(e) {
-    let { appId: t, botId: n, analyticsLocations: o, customId: a, referrerId: l, commandOrigin: u } = e;
+    let { appId: t, botId: n, analyticsLocations: o, customId: u, referrerId: a, commandOrigin: l } = e;
     if ((0, s.y)({ applicationId: t, analyticsContext: { isStart: !0, analyticsLocations: o } }))
         return Promise.resolve(!0);
     let d = await i.A.openPrivateChannel({ recipientIds: n });
@@ -11,8 +11,8 @@ async function o(e) {
         targetApplicationId: t,
         channelId: d,
         analyticsLocations: o,
-        customId: a,
-        referrerId: l,
-        commandOrigin: u,
+        customId: u,
+        referrerId: a,
+        commandOrigin: l,
     });
 }
