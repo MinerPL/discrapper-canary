@@ -1,4 +1,4 @@
-(n.d(t, { A: () => p }), n(376728));
+(n.d(t, { A: () => I }), n(376728));
 var i = n(439372);
 n(993748);
 var r = n(292572),
@@ -9,28 +9,21 @@ var r = n(292572),
     d = n(734057);
 n(299091);
 var c = n(167189),
-    u = n(887924);
-let _ = new (n(626584).A)("codedLinkQueue"),
-    E = new u.default({ concurrency: 5, intervalCap: 10, interval: 2e3 });
-E.on("add", () => {
-    E.size > 0 && _.warn("Message link fetch queue backlog:", E.size);
-});
-var A = n(721779);
-function h(e, t) {
-    let n = (0, A.Ay)(e);
+    u = n(254160),
+    _ = n(721779);
+function E(e, t) {
+    let n = (0, _.Ay)(e);
     null != n &&
         0 !== n.length &&
         n.forEach((e) => {
-            var n, i;
-            let { type: s, code: u } = e;
-            switch (s) {
+            let { type: n, code: i } = e;
+            switch (n) {
                 case c.I.INVITE:
                     break;
                 case c.I.TEMPLATE:
-                    ((n = async () => {
-                        null == a.A.getGuildTemplate(u) && (await r.A.resolveGuildTemplate(u));
-                    }),
-                        E.add(n));
+                    (0, u.f)(async () => {
+                        null == a.A.getGuildTemplate(i) && (await r.A.resolveGuildTemplate(i));
+                    });
                     break;
                 case c.I.BUILD_OVERRIDE:
                 case c.I.MANUAL_BUILD_OVERRIDE:
@@ -54,33 +47,32 @@ function h(e, t) {
                 case c.I.USER_PROFILE:
                     if ((0, l.l)("MessageCodedLinkManager")) {
                         let e = null == t ? null : d.A.getChannel(t);
-                        ((i = async () => {
-                            await (0, o.A)(u, void 0, {
+                        (0, u.f)(async () => {
+                            await (0, o.A)(i, void 0, {
                                 guildId: e?.guild_id ?? void 0,
                                 withMutualGuilds: !0,
                                 withMutualFriends: !0,
                             });
-                        }),
-                            E.add(i));
+                        });
                     }
                     break;
                 case c.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:
-                    throw Error(`Unknown coded link type: ${s}`);
+                    throw Error(`Unknown coded link type: ${n}`);
             }
         });
 }
-function I(e) {
-    (h(e.content ?? null, e.channel_id),
+function A(e) {
+    (E(e.content ?? null, e.channel_id),
         e.message_snapshots?.forEach((t) => {
             let { message: n } = t;
-            return h(n.content, e.channel_id);
+            return E(n.content, e.channel_id);
         }));
 }
-class f extends i.A {
+class h extends i.A {
     constructor() {
-        (super(), (0, s.A)(this, I));
+        (super(), (0, s.A)(this, A));
     }
 }
-let p = new f();
+let I = new h();
