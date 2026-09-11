@@ -35,7 +35,7 @@ let A = {
         [C.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     k = (0, l.lazy)(() =>
-        Promise.all([n.e("339384"), n.e("793438"), n.e("154791"), n.e("725246"), n.e("414648"), n.e("208430")])
+        Promise.all([n.e("339384"), n.e("793438"), n.e("154791"), n.e("725246"), n.e("312665"), n.e("208430")])
             .then(n.bind(n, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
@@ -245,7 +245,7 @@ class N {
                         n.e("793438"),
                         n.e("154791"),
                         n.e("725246"),
-                        n.e("414648"),
+                        n.e("312665"),
                         n.e("208430"),
                     ]).then(n.bind(n, 427325));
                     return (t) => (0, r.jsx)(e, { ...R, renderModalProps: t });

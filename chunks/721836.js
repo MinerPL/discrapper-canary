@@ -1,4 +1,4 @@
-n.d(t, { y0: () => K, Ni: () => $, t4: () => X, Q9: () => z, y$: () => q });
+n.d(t, { y0: () => $, Ni: () => z, t4: () => q, Q9: () => X, y$: () => Z });
 var i = n(462180),
     r = n(882035),
     a = n(315069),
@@ -272,15 +272,16 @@ let B = {
 var V = n(811315),
     H = n.n(V),
     j = n(75304),
-    W = n(403362),
-    Y = n(427262);
-let K = 1,
-    [$, z] = (0, m.A)();
-function X(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return z()(e, t);
-}
+    W = n(442467),
+    Y = n(403362),
+    K = n(427262);
+let $ = 1,
+    [z, X] = (0, m.A)();
 function q(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return X()(e, t);
+}
+function Z(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -457,7 +458,7 @@ function q(e) {
                 getShouldUseStripeExpressCheckout: () => {
                     let e = i().getSharedTenantParams();
                     return (
-                        !!((0, Y.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, W.m6)()) &&
+                        !!((0, K.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, Y.m6)()) &&
                         null != e &&
                         !!e.shouldUseStripeExpressCheckout
                     );
@@ -522,6 +523,7 @@ function q(e) {
                     }
                 },
             }),
+            ...(0, W.d)(e, i),
             get: (e) => (null != u[e] ? u[e]() : null),
             contextMetadata: a,
             order: s,
@@ -532,14 +534,14 @@ function q(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: K };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: $ };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: K }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: $ }) : e({ selectedPlanId: i });
             },
-            quantity: K,
+            quantity: $,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: L(t, i) }),

@@ -1,74 +1,73 @@
-(n.d(t, { A: () => C, l: () => f }), n(938796));
+(n.d(t, { A: () => P, l: () => h }), n(938796));
 var e = n(284009),
     a = n.n(e),
     i = n(339048),
     l = n(391048),
-    d = n(636099),
-    s = n(529427),
-    r = n(675219),
-    u = n(163437),
-    c = n(97352),
-    p = n(67480),
-    P = n(652215);
-function C(o) {
+    d = n(529427),
+    s = n(675219),
+    r = n(163437),
+    u = n(97352),
+    c = n(67480),
+    p = n(652215);
+function P(o) {
     let {
         initialPlanId: t,
         activeSubscription: n,
         analyticsObject: e,
         analyticsLocation: a,
         analyticsLocations: i,
-        analyticsSubscriptionType: u,
-        planGroup: c,
-        skuId: p,
-        guildId: P,
-        reviewWarningMessage: C,
-        applicationId: h,
-        showBenefitsFirst: f,
-        onComplete: k,
-        forcesTransitionToGuild: g,
+        analyticsSubscriptionType: r,
+        planGroup: u,
+        skuId: c,
+        guildId: p,
+        reviewWarningMessage: P,
+        applicationId: C,
+        showBenefitsFirst: h,
+        onComplete: f,
+        forcesTransitionToGuild: k,
     } = o;
-    return new r.od({ checkoutFlow: s.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
-        checkoutConfiguration: { skuId: p, applicationId: h, activeSubscription: n },
-        checkoutHandlers: { onComplete: k },
+    return new s.od({ checkoutFlow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
+        checkoutConfiguration: { skuId: c, applicationId: C, activeSubscription: n },
+        checkoutHandlers: { onComplete: f },
         unifiedCheckoutProviderProps: { analyticsLocations: i },
         forwardedPaymentModalProps: {
             initialPlanId: t,
             analyticsLocation: a,
             analyticsObject: e,
-            analyticsSubscriptionType: u,
-            planGroup: c,
-            guildId: P ?? void 0,
-            reviewWarningMessage: C,
+            analyticsSubscriptionType: r,
+            planGroup: u,
+            guildId: p ?? void 0,
+            reviewWarningMessage: P,
         },
-        tenantParams: { forcesTransitionToGuild: g ?? !1, showBenefitsFirst: f, guildId: P },
+        tenantParams: { forcesTransitionToGuild: k ?? !1, showBenefitsFirst: h, guildId: p },
         modalAPIOptions: {
             modalKey: "application-payment-modal",
             onCloseCallback: () => {
-                ((0, l.ET)(), (0, d.z)());
+                (0, l.ET)();
             },
         },
     });
 }
-async function h(o, t) {
+async function C(o, t) {
     let n = (await (0, i.LM)(o))
         .filter((o) => null == o.ends_at || new Date(o.ends_at) > new Date())
         .find((o) => o.sku_id === t);
     a()(null == n, "User already has an active subscription to this SKU");
 }
-async function f(o) {
+async function h(o) {
     let { applicationId: t, skuId: n, initialPlanId: e, analyticsLocationObject: i, analyticsLocations: l } = o,
-        d = p.A.get(n),
-        s = c.A.getForSKU(n);
+        d = c.A.get(n),
+        s = u.A.getForSKU(n);
     a()(null != d, "Failed to find SKU");
-    let r = (0, u.bg)(d.flags);
-    (a()(r, "Guild application subscriptions unsupported!"),
-        await h(t, n),
-        C({
+    let h = (0, r.bg)(d.flags);
+    (a()(h, "Guild application subscriptions unsupported!"),
+        await C(t, n),
+        P({
             initialPlanId: e ?? s[0]?.id,
             activeSubscription: null,
             analyticsLocations: l,
             analyticsLocationObject: i,
-            analyticsSubscriptionType: P.rzx.APPLICATION,
+            analyticsSubscriptionType: p.rzx.APPLICATION,
             planGroup: [],
             skuId: n,
             guildId: null,

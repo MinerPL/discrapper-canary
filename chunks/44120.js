@@ -1,32 +1,31 @@
-o.d(n, { A: () => c });
+o.d(n, { A: () => C });
 var t = o(477900);
 o(582128);
 var a = o(192308),
     l = o(228366),
     i = o(391048),
-    s = o(636099),
-    u = o(529427),
-    r = o(839534),
-    d = o(287809),
-    p = o(166532);
-let C = new Set([p.pn.REVIEW, p.pn.CONFIRM, p.pn.GIFT_CUSTOMIZATION]);
-function c(e) {
+    s = o(529427),
+    u = o(839534),
+    r = o(287809),
+    d = o(166532);
+let p = new Set([d.pn.REVIEW, d.pn.CONFIRM, d.pn.GIFT_CUSTOMIZATION]);
+function C(e) {
     let n,
         {
-            discoverySessionId: p,
-            skuId: c,
-            analyticsLocations: h,
-            analyticsObject: f,
-            isGift: k = !1,
-            giftMessage: g,
-            giftingOrigin: m,
-            giftRecipient: M,
-            onClose: P,
-            onComplete: E,
+            discoverySessionId: d,
+            skuId: C,
+            analyticsLocations: c,
+            analyticsObject: h,
+            isGift: f = !1,
+            giftMessage: k,
+            giftingOrigin: g,
+            giftRecipient: m,
+            onClose: M,
+            onComplete: P,
         } = e,
-        O = k ? "gift-payment-modal" : "payment-modal",
-        w = d.default.getCurrentUser();
-    w?.verified
+        E = f ? "gift-payment-modal" : "payment-modal",
+        O = r.default.getCurrentUser();
+    O?.verified
         ? (l.h.wait(() => {
               l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
           }),
@@ -38,7 +37,7 @@ function c(e) {
                   analyticsObject: a,
                   onStepChange: l,
                   modalKey: i,
-                  isGift: s = !1,
+                  isGift: u = !1,
                   giftMessage: r,
                   giftingOrigin: d,
                   giftRecipient: p,
@@ -47,38 +46,38 @@ function c(e) {
                   onCloseRequest: h,
                   onComplete: f,
               } = e;
-              u.UnifiedCheckoutFlowManagerSingletons[u.CL.COLLECTIBLES_CHECKOUT]
+              s.UnifiedCheckoutFlowManagerSingletons[s.CL.COLLECTIBLES_CHECKOUT]
                   .get()
                   .openCheckoutModal({
                       unifiedCheckoutProviderProps: { analyticsLocations: t },
                       checkoutConfiguration: { skuId: o, discoverySessionId: n },
-                      giftContextProps: { isGift: s, giftMessage: r, giftingOrigin: d, giftRecipient: p },
+                      giftContextProps: { isGift: u, giftMessage: r, giftingOrigin: d, giftRecipient: p },
                       checkoutHandlers: { onClose: C, onComplete: f },
                       forwardedPaymentModalProps: { onStepChange: l, analyticsObject: a },
                       modalAPIOptions: { modalKey: i, onCloseCallback: c, onCloseRequest: h },
                   });
           })({
-              discoverySessionId: p,
-              skuId: c,
-              analyticsLocations: h,
-              analyticsObject: f,
+              discoverySessionId: d,
+              skuId: C,
+              analyticsLocations: c,
+              analyticsObject: h,
               onStepChange: function (e) {
                   n = e;
               },
-              modalKey: O,
-              isGift: k,
-              giftMessage: g,
-              giftingOrigin: m,
-              giftRecipient: M,
-              onClose: P,
+              modalKey: E,
+              isGift: f,
+              giftMessage: k,
+              giftingOrigin: g,
+              giftRecipient: m,
+              onClose: M,
               onCloseCallback: function (e) {
-                  ((0, i.ET)(), (0, s.z)(), e && (0, r.gB)());
+                  ((0, i.ET)(), e && (0, u.gB)());
               },
               onCloseRequest: function () {
-                  null != n && C.has(n) && (0, a.closeModal)(O);
+                  null != n && p.has(n) && (0, a.closeModal)(E);
               },
               onComplete: function () {
-                  null != E && E();
+                  null != P && P();
               },
           }))
         : (0, a.openModalLazy)(async () => {
@@ -90,7 +89,7 @@ function c(e) {
                   return (0, t.jsx)(e, {
                       ...a,
                       onClose: () => {
-                          (o(), P?.(!1));
+                          (o(), M?.(!1));
                       },
                   });
               };
