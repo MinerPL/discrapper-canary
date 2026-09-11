@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tE }), n(321073));
+(n.d(t, { A: () => tA }), n(321073));
 var i,
     r,
     a,
@@ -360,6 +360,7 @@ var eO =
     (r[(r.UNRESUMABLE = 4801)] = "UNRESUMABLE"),
     (r[(r.RESET_BACKOFF = 4802)] = "RESET_BACKOFF"),
     (r[(r.REPEATED_MLS_INVALID_MESSAGES = 4803)] = "REPEATED_MLS_INVALID_MESSAGES"),
+    (r[(r.DAVE_DOWNGRADE_REFUSED = 4804)] = "DAVE_DOWNGRADE_REFUSED"),
     r);
 let eR = 20 * eN.A.Millis.SECOND,
     eL = +eN.A.Millis.MINUTE,
@@ -928,6 +929,11 @@ class eP extends p.A {
         (this.logger.warn(`[MLS] ${e} consecutive invalid commit/welcome messages.`),
             this.cleanupWebSocket((e) => e.close(4803)),
             this.disconnect(!1, 4803, "Repeated invalid MLS commit/welcome messages."));
+    }
+    disconnectForRefusedDaveDowngrade(e) {
+        (this.logger.warn(`[DAVE] Refused protocol downgrade to version 0 at ${e}.`),
+            this.cleanupWebSocket((e) => e.close(4804)),
+            this.disconnect(!1, 4804, "Refused DAVE protocol downgrade."));
     }
     noRoute() {
         this.send(32, {});
@@ -2676,7 +2682,13 @@ function tc(e, t) {
 }
 let tu = 0,
     t_ = [];
-class tE extends p.A {
+function tE() {
+    let e = [],
+        t = (0, m.tB)();
+    for (let n of t_) e.push({ ...n, t: t - n.t });
+    return JSON.stringify(e);
+}
+class tA extends p.A {
     context;
     userId;
     sessionId;
@@ -2733,6 +2745,7 @@ class tE extends p.A {
     _rtcConnectionId;
     _connectCount;
     _connectionSerial;
+    _isStageChannel = null;
     _hasEverConnected;
     _connecting;
     _voiceConnectionSuccessTracked;
@@ -2786,6 +2799,7 @@ class tE extends p.A {
             (this.guildId = n),
             (this._channelId = i),
             (this.channelIds = new Set([i])),
+            this._latchIsStageChannel(),
             (this.streamServerId = a),
             (this.streamChannelId = s),
             (this.parentMediaSessionId = l),
@@ -2937,7 +2951,11 @@ class tE extends p.A {
             return void this.setState(ef.S7L.AWAITING_ENDPOINT);
         let r = this._socket;
         (null != r && this._cleanupSocket(),
-            null != this._nextChannelId && ((this._channelId = this._nextChannelId), (this._nextChannelId = void 0)),
+            null != this._nextChannelId &&
+                ((this._channelId = this._nextChannelId),
+                (this._nextChannelId = void 0),
+                (this._isStageChannel = null),
+                this._latchIsStageChannel()),
             (r = this._socket = new eP(this.endpoint, this.context)).on(
                 eM.Connecting,
                 this._handleConnecting.bind(this, r),
@@ -3295,7 +3313,7 @@ class tE extends p.A {
         let r = "Force Close" !== i;
         if (r) {
             let e =
-                n === eO.REPEATED_MLS_INVALID_MESSAGES
+                n === eO.REPEATED_MLS_INVALID_MESSAGES || n === eO.DAVE_DOWNGRADE_REFUSED
                     ? this._scheduleMLSFailureReconnect()
                     : this._scheduleReconnect();
             this.logger.warn(`Disconnect was not clean! reason=${i}. Reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
@@ -4177,32 +4195,33 @@ class tE extends p.A {
     _handleSecureFramesInit(e) {
         let t = (0, m.tB)();
         (this.recordEvent({ c: 11, v: e }),
-            e > 0
-                ? (this.logger.info(`DAVE protocol init with protocol version: ${e}`),
-                  (this._mlsInitReceivedTime = t),
-                  this._connection?.prepareSecureFramesEpoch("1", e, this.trueChannelId),
-                  this._sendMLSKeyPackage(),
-                  this._storeSecureFrameNextTransitionData({
-                      initReceivedTime: t,
-                      initFinishedTime: (0, m.tB)(),
-                      protocolVersion: e,
-                  }),
-                  this.recordEvent({ c: 10 }))
-                : this._connection?.prepareSecureFramesTransition(0, e, () => {
-                      let n = !1;
-                      try {
-                          this._connection?.executeSecureFramesTransition(0);
-                      } catch (e) {
-                          ((n = !0), ed.A.captureException(e));
-                      }
-                      (this._storeSecureFrameTransitionData(0, {
+            this._maybeRefuseDaveDowngrade("init", e) ||
+                (e > 0
+                    ? (this.logger.info(`DAVE protocol init with protocol version: ${e}`),
+                      (this._mlsInitReceivedTime = t),
+                      this._connection?.prepareSecureFramesEpoch("1", e, this.trueChannelId),
+                      this._sendMLSKeyPackage(),
+                      this._storeSecureFrameNextTransitionData({
                           initReceivedTime: t,
                           initFinishedTime: (0, m.tB)(),
                           protocolVersion: e,
-                          executeError: n,
                       }),
-                          this._trackSecureFrameTransition(0));
-                  }));
+                      this.recordEvent({ c: 10 }))
+                    : this._connection?.prepareSecureFramesTransition(0, e, () => {
+                          let n = !1;
+                          try {
+                              this._connection?.executeSecureFramesTransition(0);
+                          } catch (e) {
+                              ((n = !0), ed.A.captureException(e));
+                          }
+                          (this._storeSecureFrameTransitionData(0, {
+                              initReceivedTime: t,
+                              initFinishedTime: (0, m.tB)(),
+                              protocolVersion: e,
+                              executeError: n,
+                          }),
+                              this._trackSecureFrameTransition(0));
+                      })));
     }
     _handleSecureFramesRosterChange(e, t) {
         let n = [],
@@ -4221,11 +4240,40 @@ class tE extends p.A {
             }),
             this.emit(eI.q.RosterMapUpdate, n));
     }
+    _latchIsStageChannel() {
+        if (null == this._isStageChannel) {
+            let e = Z.A.getChannel(this._channelId);
+            null != e && (this._isStageChannel = e.type === ef.rbe.GUILD_STAGE_VOICE);
+        }
+        return this._isStageChannel;
+    }
+    _maybeRefuseDaveDowngrade(e, t, n) {
+        if (0 !== t) return !1;
+        let i = this._latchIsStageChannel();
+        return (
+            ("init" !== e || !0 !== i) &&
+            (this.logger.error(`Refusing DAVE protocol downgrade to version ${t} at ${e}, disconnecting.`),
+            this.recordEvent({ c: 12, s: e }),
+            er.default.track(ef.HAw.DAVE_DOWNGRADE_REFUSED, {
+                ...this._getAnalyticsProperties(),
+                media_session_id: this.getMediaSessionId(),
+                parent_media_session_id: this.parentMediaSessionId,
+                refused_at: e,
+                transition_id: n,
+                protocol_version: t,
+                channel_resolved: null != i,
+                event_history: tE(),
+                connection_serial: this._connectionSerial,
+            }),
+            this._socket?.disconnectForRefusedDaveDowngrade(e),
+            !0)
+        );
+    }
     _handleSecureFramesPrepareTransition(e, t) {
         (this.logger.info(`Preparing DAVE protocol transition: ${e}, protocol version: ${t}`),
             this._secureFramesTransitionPrepareCount++);
         let n = (0, m.tB)();
-        (0 === t && this._trackMLSFailures({ recovered: !0, downgraded: !0 }),
+        this._maybeRefuseDaveDowngrade("transition", t, e) ||
             this._connection?.prepareSecureFramesTransition(e, t, () => {
                 (this._maybeSendSecureFramesTransitionReady(e),
                     this._storeSecureFrameTransitionData(e, {
@@ -4233,12 +4281,13 @@ class tE extends p.A {
                         prepareReceivedTime: n,
                         prepareFinishedTime: (0, m.tB)(),
                     }));
-            }));
+            });
     }
     _handleSecureFramesPrepareEpoch(e, t) {
         this.logger.info(`Preparing DAVE protocol epoch: ${e}, protocol version: ${t}`);
         let n = e.toString();
-        (this._connection?.prepareSecureFramesEpoch(n, t, this.trueChannelId),
+        this._maybeRefuseDaveDowngrade("epoch", t) ||
+            (this._connection?.prepareSecureFramesEpoch(n, t, this.trueChannelId),
             "1" === n &&
                 ((this._mlsInitReceivedTime = (0, m.tB)()), this._sendMLSKeyPackage(), this.recordEvent({ c: 10 })));
     }
@@ -4370,12 +4419,7 @@ class tE extends p.A {
                 countDuringReset: +(null != this._mlsSessionResetStartTime),
                 firstOccurrence: n,
                 timeSinceInit: null != this._mlsInitReceivedTime ? n - this._mlsInitReceivedTime : void 0,
-                eventLog: (function () {
-                    let e = [],
-                        t = (0, m.tB)();
-                    for (let n of t_) e.push({ ...n, t: t - n.t });
-                    return JSON.stringify(e);
-                })(),
+                eventLog: tE(),
             }),
             e.includes("GetPersistedKeyPair")
                 ? S.A.show({ title: tl.intl.string(tl.t.fJUioH), body: tl.intl.string(tl.t.CQLWvo) })

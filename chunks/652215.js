@@ -4154,6 +4154,7 @@ var rb =
         (ew.AUDIO_EFFECTS_PROBE_COMPLETED = "audio_effects_probe_completed"),
         (ew.NOTIFY_STREAM_SETTING_UPDATE = "notify_stream_setting_update"),
         (ew.SECURE_FRAMES_TRANSITION = "secure_frames_transition"),
+        (ew.DAVE_DOWNGRADE_REFUSED = "dave_downgrade_refused"),
         (ew.MLS_FAILURES = "mls_failures"),
         (ew.AV_ERROR_REPORTED = "av_error_reported"),
         (ew.DEBUG_LOG_UPLOADED = "debug_log_uploaded"),
