@@ -1,3 +1,13 @@
+.imageWrapper_d9f811 {
+    margin: calc(var(--space-12)*-1) calc(var(--space-12)*-1) 0
+}
+
+.image_d9f811 {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    display: block;
+    width: 100%
+}
+
 .wrapper__553bf {
     isolation: isolate;
     position: relative
@@ -161,4 +171,4 @@
     width: 14px
 }
 
-/*# sourceMappingURL=907423.5de45a789ed91155.css.map*/
+/*# sourceMappingURL=390034.8a3e103c0c9d79f0.css.map*/

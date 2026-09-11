@@ -18,12 +18,12 @@ var i = n(477900),
     v = n(736653),
     _ = n(139286),
     P = n(531260),
-    C = n(914410),
-    R = n(174459),
+    R = n(914410),
+    C = n(174459),
     T = n(872725),
     A = n(721157),
-    y = n(555393),
-    E = n(51965),
+    E = n(555393),
+    y = n(51965),
     N = n(465794),
     j = n(202541),
     O = n(652215),
@@ -51,67 +51,72 @@ function U(e) {
             subscriptionRequired: X,
             isThirdPartyPerk: $ = !1,
             glowing: q = !1,
-            progressGlowing: J = !1,
-            featured: Z,
-            expired: Q = !1,
-            className: ee,
-            containerClassName: et,
-            tabIndex: en = 0,
-            blurTint: ei,
-            footerContent: ea,
-            analyticsOptions: er,
-            onFocus: es,
+            autoClickCta: J = !1,
+            progressGlowing: Z = !1,
+            featured: Q,
+            expired: ee = !1,
+            className: et,
+            containerClassName: en,
+            tabIndex: ei = 0,
+            blurTint: ea,
+            footerContent: er,
+            analyticsOptions: es,
+            onFocus: el,
         } = e,
-        el = (0, v.DP)(),
-        { fractionalState: eo } = (0, P.A)(),
-        ed = (0, y.N)(),
-        ec = { name: t };
-    (er?.thirdPartyPartner != null && (ec.third_party_partner = er.thirdPartyPartner),
-        (0, _.A)({ type: o.ImpressionTypes.VIEW, name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: ec }));
-    let eu = a.useMemo(
+        eo = (0, v.DP)(),
+        { fractionalState: ed } = (0, P.A)(),
+        ec = (0, E.N)(),
+        eu = { name: t };
+    (es?.thirdPartyPartner != null && (eu.third_party_partner = es.thirdPartyPartner),
+        (0, _.A)({ type: o.ImpressionTypes.VIEW, name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: eu }));
+    let em = a.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    R.default.track(O.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    C.default.track(O.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, l.snakeCase)(n),
-                        partner: er?.thirdPartyPartner ?? null,
+                        partner: es?.thirdPartyPartner ?? null,
                     });
                 }, 800),
-            [er?.thirdPartyPartner, n],
+            [es?.thirdPartyPartner, n],
         ),
-        em = a.useCallback(() => {
+        eb = a.useCallback(() => {
             null != W &&
                 (W(),
-                R.default.track(O.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                C.default.track(O.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, l.snakeCase)(n),
                     function_name: (0, l.snakeCase)(W.name),
                 }));
         }, [W, n]),
-        eb = !0 === X && ($ ? ed?.state === A.zE.UPSELL : eo === j.xc.FP_ONLY),
-        ep = !(0, l.isEmpty)(B),
-        ef = ep && (0, m.q)(el),
-        eg = (0, b.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
-        eh = eb || !(0, l.isEmpty)(H),
-        ex = z ?? (!ep && (0, m.q)(el) ? "primary" : "overlay-primary"),
-        ev = (0, l.isEmpty)(H)
+        ep = !0 === X && ($ ? ec?.state === A.zE.UPSELL : ed === j.xc.FP_ONLY),
+        ef = a.useRef(!1);
+    a.useEffect(() => {
+        !J || ef.current || F || ep || ((ef.current = !0), eb());
+    }, [J, F, eb, ep]);
+    let eg = !(0, l.isEmpty)(B),
+        eh = eg && (0, m.q)(eo),
+        ex = (0, b.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
+        ev = ep || !(0, l.isEmpty)(H),
+        e_ = z ?? (!eg && (0, m.q)(eo) ? "primary" : "overlay-primary"),
+        eP = (0, l.isEmpty)(H)
             ? null
-            : { icon: G, iconPosition: V, text: H, variant: ex, onClick: em, disabled: F, loading: K },
-        e_ = (0, i.jsx)(N.A, { fullWidth: !0, defaultTextOverride: I.intl.string(I.t.sEAnVH) }),
-        eP = null == ev ? null : $ ? (0, i.jsx)(E.A, { ...ev }) : (0, i.jsx)(d.$, { ...ev });
+            : { icon: G, iconPosition: V, text: H, variant: e_, onClick: eb, disabled: F, loading: K },
+        eR = (0, i.jsx)(N.A, { fullWidth: !0, defaultTextOverride: I.intl.string(I.t.sEAnVH) }),
+        eC = null == eP ? null : $ ? (0, i.jsx)(y.A, { ...eP }) : (0, i.jsx)(d.$, { ...eP });
     return (0, i.jsx)(c.N, {
-        theme: ef ? O.NJ8.DARK : void 0,
+        theme: eh ? O.NJ8.DARK : void 0,
         children: (e) =>
             (0, i.jsxs)(T.A, {
                 id: t,
-                tabIndex: en,
-                onMouseEnter: eu,
-                onFocus: es,
+                tabIndex: ei,
+                onMouseEnter: em,
+                onFocus: el,
                 cardType: f.s.PRIMARY,
                 glowing: q,
                 hueRotate: 25,
-                glowAmount: (0, m.M)(el) ? 2 : 8,
+                glowAmount: (0, m.M)(eo) ? 2 : 8,
                 blurAmount: 10,
-                className: s()(L.Ui, et, { [L.Tn]: ep }),
-                cardClassName: s()(L.Nr, e, ee, { [L.j8]: Z, [L._7]: Q }),
+                className: s()(L.Ui, en, { [L.Tn]: eg }),
+                cardClassName: s()(L.Nr, e, et, { [L.j8]: Q, [L._7]: ee }),
                 cardStyle: {
                     backgroundImage: null != B ? `url(${B})` : void 0,
                     backgroundSize: "cover",
@@ -123,14 +128,14 @@ function U(e) {
                     !(0, l.isEmpty)(w) &&
                         (0, i.jsx)(g.E, {
                             variant: "text-xs/bold",
-                            color: Q ? "badge-text-default" : "badge-expressive-text-default",
+                            color: ee ? "badge-text-default" : "badge-expressive-text-default",
                             className: L.Io,
                             children: w,
                         }),
                     (0, i.jsxs)("div", {
                         className: L.qh,
                         children: [
-                            Z &&
+                            Q &&
                                 (0, i.jsx)("div", {
                                     className: L.gW,
                                     "aria-hidden": "true",
@@ -144,13 +149,13 @@ function U(e) {
                         children: [
                             (0, i.jsx)("div", {
                                 className: L.u_,
-                                style: { "--custom-tint-color": ei ?? eg },
+                                style: { "--custom-tint-color": ea ?? ex },
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsxs)("div", {
                                 className: L.P_,
                                 children: [
-                                    eb &&
+                                    ep &&
                                         (0, i.jsxs)("div", {
                                             className: L.d_,
                                             children: [
@@ -206,18 +211,18 @@ function U(e) {
                                     null != Y &&
                                         (0, i.jsx)("div", {
                                             className: L.oU,
-                                            children: (0, i.jsx)(C.Ay, {
-                                                variant: C.qP.BLUE,
+                                            children: (0, i.jsx)(R.Ay, {
+                                                variant: R.qP.BLUE,
                                                 progress: (0, l.clamp)(Y, 0, 1),
                                                 maximum: 1,
-                                                glowing: J,
+                                                glowing: Z,
                                             }),
                                         }),
-                                    null != ea && (0, i.jsx)("div", { className: L.Gv, children: ea }),
-                                    eh && (0, i.jsx)("div", { className: L.Cj }),
+                                    null != er && (0, i.jsx)("div", { className: L.Gv, children: er }),
+                                    ev && (0, i.jsx)("div", { className: L.Cj }),
                                 ],
                             }),
-                            eh && (0, i.jsx)("div", { className: L.yk, children: eb ? e_ : eP }),
+                            ev && (0, i.jsx)("div", { className: L.yk, children: ep ? eR : eC }),
                         ],
                     }),
                 ],

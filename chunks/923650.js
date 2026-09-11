@@ -18,27 +18,27 @@ var i,
     v = n(962644),
     _ = n(35587),
     P = n(412260),
-    C = n(852218),
-    R = n(194261),
+    R = n(852218),
+    C = n(194261),
     T = n(297264),
     A = n(144165),
-    y = n(341973);
-function E(e) {
+    E = n(341973);
+function y(e) {
     let { title: t, body: n, asset: i } = e;
     return (0, a.jsx)("div", {
-        className: y.lA,
+        className: E.lA,
         children: (0, a.jsxs)("div", {
-            className: y.LV,
+            className: E.LV,
             children: [
                 (0, a.jsxs)("div", {
-                    className: y.JN,
+                    className: E.JN,
                     children: [
                         (0, a.jsx)("div", {
-                            className: y.MC,
-                            children: (0, a.jsx)(R.LockIcon, { size: "refresh_sm" }),
+                            className: E.MC,
+                            children: (0, a.jsx)(C.LockIcon, { size: "refresh_sm" }),
                         }),
                         (0, a.jsxs)("div", {
-                            className: y.yO,
+                            className: E.yO,
                             children: [
                                 (0, a.jsx)(T.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
                                 (0, a.jsx)(T.D, { variant: "heading-sm/medium", color: "text-subtle", children: n }),
@@ -48,14 +48,14 @@ function E(e) {
                 }),
                 null != i &&
                     (0, a.jsx)("div", {
-                        className: y.R4,
+                        className: E.R4,
                         children: (0, a.jsx)(A._, {
                             src: i,
-                            className: y.Ys,
+                            className: E.Ys,
                             width: 100,
                             height: 100,
                             zoomable: !1,
-                            imageClassName: y.EM,
+                            imageClassName: E.EM,
                         }),
                     }),
             ],
@@ -81,12 +81,12 @@ function H() {
     let e = (0, w.N5)(),
         t = (0, w.P6)();
     return (0, a.jsxs)("div", {
-        className: `${y.G9} ${y.sQ}`,
+        className: `${E.G9} ${E.sQ}`,
         children: [
             (0, a.jsx)(o.E, {
                 variant: "text-sm/normal",
                 color: "text-muted",
-                className: y.kT,
+                className: E.kT,
                 children: V.intl.format(G.default["65EEvD"], { days: t }),
             }),
             (0, a.jsx)(M.Ay, {
@@ -99,13 +99,13 @@ function H() {
 }
 function z(e) {
     let { children: t } = e;
-    return (0, a.jsx)("div", { className: y.oP, children: (0, a.jsx)("div", { className: y.t0, children: t }) });
+    return (0, a.jsx)("div", { className: E.oP, children: (0, a.jsx)("div", { className: E.t0, children: t }) });
 }
 let F = (e) => {
     let { recurrence: t, analyticsLocations: n = [] } = e,
         i = (0, a.jsx)(N.r, { color: S.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
         s = (0, a.jsx)("span", {
-            className: y.nP,
+            className: E.nP,
             children: (0, a.jsx)(j.K, {
                 icon: O.CopyIcon,
                 size: "sm",
@@ -127,12 +127,12 @@ let F = (e) => {
         [l, d] = r.useState(() => s);
     if (null != t.code)
         return (0, a.jsx)("div", {
-            className: y.oP,
+            className: E.oP,
             children: (0, a.jsxs)("div", {
-                className: y.t0,
+                className: E.t0,
                 children: [
                     (0, a.jsx)("div", {
-                        className: y.cD,
+                        className: E.cD,
                         children: (0, a.jsx)(o.E, {
                             variant: "text-md/medium",
                             color: "text-strong",
@@ -188,7 +188,7 @@ function K(e) {
             : (0, a.jsx)("div", {
                   className: l,
                   children: (0, a.jsx)(I.$, {
-                      icon: R.LockIcon,
+                      icon: C.LockIcon,
                       variant: "secondary",
                       size: "sm",
                       text: t.claimCtaText ?? V.intl.string(V.t.vwASIl),
@@ -227,17 +227,17 @@ function X(e) {
         [p, f] = r.useState(!1),
         g = null == m;
     return (0, a.jsxs)("div", {
-        className: y.lA,
+        className: E.lA,
         children: [
             (0, a.jsxs)("div", {
-                className: y.LV,
+                className: E.LV,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: y.JN,
+                        className: E.JN,
                         children: [
                             i,
                             (0, a.jsxs)("div", {
-                                className: null != n ? `${y.yO} ${n}` : y.yO,
+                                className: null != n ? `${E.yO} ${n}` : E.yO,
                                 children: [
                                     (0, a.jsx)(T.D, {
                                         variant: "secondary" === o ? "heading-md/semibold" : "heading-lg/semibold",
@@ -266,7 +266,7 @@ function X(e) {
                                                     variant: "heading-sm/medium",
                                                     color: "text-subtle",
                                                     children: V.intl.format(t.bodyNote, {
-                                                        partnerName: C.CD[t.partnerId].label,
+                                                        partnerName: R.CD[t.partnerId].label,
                                                         helpdeskArticle: k.A.getArticleURL(Y.MVz.RECURRING_PROMOTION),
                                                     }),
                                                 }),
@@ -287,11 +287,11 @@ function X(e) {
                     }),
                     s &&
                         (0, a.jsx)("div", {
-                            className: y.R4,
+                            className: E.R4,
                             children: (0, a.jsx)(A._, {
                                 src: t.asset ?? "",
-                                className: y.Ys,
-                                imageClassName: l || t.partnerId === C.XY ? y.Cy : void 0,
+                                className: E.Ys,
+                                imageClassName: l || t.partnerId === R.XY ? E.Cy : void 0,
                                 width: 100,
                                 height: 100,
                                 zoomable: !1,
@@ -310,7 +310,7 @@ function X(e) {
                         hasClaimError: p,
                         setCode: b,
                         setHasClaimError: f,
-                        className: y.qx,
+                        className: E.qx,
                         analyticsLocations: u,
                     }),
                 }),
@@ -348,7 +348,7 @@ function es() {
     return (0, q.i)("ThirdPartyPromotionPartnerConfigs") ? V.intl.string(V.t.nmvvaN) : V.intl.string(V.t.igiSKe);
 }
 let el = {
-    [C.KS]: {
+    [R.KS]: {
         getLockedPreview: () => ({ title: er(), body: es(), asset: ei }),
         landingUrl: "https://steelseries.com/",
         recurringCardAsset: ei,
@@ -357,7 +357,7 @@ let el = {
             config: { getTitle: er, getBody: es, getBodyClaimed: () => V.t.w8CXUl },
         },
     },
-    [C.XY]: {
+    [R.XY]: {
         getLockedPreview: () => ({
             title: (0, q.i)("ThirdPartyPromotionPartnerConfigs")
                 ? V.intl.formatToPlainString(G.default.PF1aT5, { discountPercentage: Q.aW })
@@ -387,7 +387,7 @@ let el = {
             },
         },
     },
-    [C.Bt]: {
+    [R.Bt]: {
         showSectionHeaders: !1,
         landingUrl: "https://www.callofduty.com/",
         outboundConfigs: {
@@ -402,13 +402,13 @@ let el = {
             },
         },
     },
-    [C.NC]: {
+    [R.NC]: {
         getLockedPreview: () => ({
             title: V.intl.string(et.default.CwMGMb),
             body: V.intl.string(et.default.TgHy6p),
             asset: en,
         }),
-        landingUrl: "https://www.youtube.com/premium",
+        landingUrl: "https://www.youtube.com/redeem",
         outboundConfigs: {
             type: "single_promo",
             config: {
@@ -422,7 +422,7 @@ let el = {
 };
 var eo = n(553875);
 function ed() {
-    return (0, a.jsx)(E, {
+    return (0, a.jsx)(y, {
         title: V.intl.string(eo.default.oDfh3O),
         body: V.intl.string(eo.default.nDEuO1),
         asset: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
@@ -495,7 +495,7 @@ function eb(e) {
             }),
             v &&
                 (0, a.jsx)(l.D, {
-                    className: y.K8,
+                    className: E.K8,
                     onClick: () => {
                         p(!0);
                     },
@@ -511,7 +511,7 @@ function eb(e) {
 function ep(e) {
     let { partnerId: t } = e,
         n = el[t]?.getLockedPreview?.() ?? null;
-    return null == n ? null : (0, a.jsx)(E, { title: n.title, body: n.body, asset: n.asset });
+    return null == n ? null : (0, a.jsx)(y, { title: n.title, body: n.body, asset: n.asset });
 }
 function ef(e) {
     let {
@@ -554,10 +554,10 @@ function eg(e) {
     if (null == t) return null;
     let n = t.icon ?? u.t;
     return (0, a.jsxs)("div", {
-        className: y.ar,
+        className: E.ar,
         children: [
             (0, a.jsxs)("div", {
-                className: y.Uv,
+                className: E.Uv,
                 children: [
                     (0, a.jsx)(n, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
                     (0, a.jsx)(o.E, { variant: "text-sm/semibold", color: "text-default", children: t.title }),
@@ -596,9 +596,9 @@ function eh(e) {
             .map((e) => el[e])
             .filter(Boolean)
             .every((e) => !1 !== e.showSectionHeaders),
-        C = v ? { recurring: V.intl.string(G.default["9Y2p6p"]), oneTime: V.intl.string(G.default.Wm58LR) } : void 0,
-        R = (0, a.jsx)("div", {
-            className: y.kR,
+        R = v ? { recurring: V.intl.string(G.default["9Y2p6p"]), oneTime: V.intl.string(G.default.Wm58LR) } : void 0,
+        C = (0, a.jsx)("div", {
+            className: E.kR,
             children: p.map((e) => {
                 let t = em(e, x[e.id] ?? null, u),
                     n = ea(el[e.partnerId ?? ""]?.outboundConfigs, e.outboundTitle);
@@ -620,19 +620,19 @@ function eh(e) {
         transitionState: s,
         onClose: l,
         children: (0, a.jsxs)("div", {
-            className: y.kL,
+            className: E.kL,
             children: [
                 b.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            null != C &&
+                            null != R &&
                                 (0, a.jsx)(o.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: C.recurring,
+                                    children: R.recurring,
                                 }),
                             (0, a.jsx)("div", {
-                                className: y.kR,
+                                className: E.kR,
                                 children: (0, a.jsx)(eb, { records: b, claimedOutboundPromotionCodeMap: x, theme: u }),
                             }),
                         ],
@@ -640,18 +640,18 @@ function eh(e) {
                 p.length > 0 &&
                     (v
                         ? (0, a.jsxs)("div", {
-                              className: y.E7,
+                              className: E.E7,
                               children: [
-                                  null != C &&
+                                  null != R &&
                                       (0, a.jsx)(o.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: C.oneTime,
+                                          children: R.oneTime,
                                       }),
-                                  R,
+                                  C,
                               ],
                           })
-                        : R),
+                        : C),
                 (0, a.jsx)(eg, { modalTeaser: r }),
             ],
         }),
