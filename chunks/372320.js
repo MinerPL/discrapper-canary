@@ -1,16 +1,14 @@
-n.d(l, { A: () => t });
-var r = n(582128),
-    i = n(839534),
-    a = n(32206),
-    s = n(77157);
-function t(e, l) {
-    let n = (0, a.c)(l),
-        t = (0, s.A)(e),
-        u = n && null != e && null == t;
+t.d(s, { A: () => p });
+var c = t(582128),
+    e = t(839534),
+    n = t(77157);
+function p(u) {
+    let s = (0, n.A)(u),
+        t = null != u && null == s;
     return (
-        r.useEffect(() => {
-            u && (0, i.RE)(e);
-        }, [u, e]),
-        n ? t : void 0
+        c.useEffect(() => {
+            t && (0, e.RE)(u);
+        }, [t, u]),
+        s
     );
 }

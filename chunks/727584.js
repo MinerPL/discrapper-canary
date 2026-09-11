@@ -2,8 +2,8 @@
 var s = l(477900),
     n = l(582128),
     r = l(207119),
-    o = l(17928),
-    d = l(717421),
+    d = l(17928),
+    o = l(717421),
     t = l(477782),
     a = l(305866),
     u = l(140735),
@@ -50,12 +50,12 @@ var s = l(477900),
     $ = l(486974),
     Q = l(375708);
 function Z(e) {
-    let { user: i, guildId: l, channelId: n, onClose: r, appContext: d } = e,
+    let { user: i, guildId: l, channelId: n, onClose: r, appContext: o } = e,
         { newestAnalyticsLocation: t } = (0, f.Ay)(),
         a = (0, y.aL)(),
-        u = (0, o.bG)([D.default], () => D.default.getId() === i?.id),
+        u = (0, d.bG)([D.default], () => D.default.getId() === i?.id),
         c = (0, H.q)(l ?? null),
-        p = (0, o.bG)([K.Ay], () => n ?? K.Ay.getChannelId(l, !0), [n, l]);
+        p = (0, d.bG)([K.Ay], () => n ?? K.Ay.getChannelId(l, !0), [n, l]);
     return null == l || !c || u
         ? null
         : (0, s.jsx)(J.br, {
@@ -65,7 +65,7 @@ function Z(e) {
               onClick: () => {
                   (q.A.close(),
                       null != p && (0, B.iN)(p),
-                      (0, z.A)(d),
+                      (0, z.A)(o),
                       a.dispatch(Y.jej.POPOUT_CLOSE),
                       (0, V.z)(l, i.id, p ?? X.VV.MEMBER_SAFETY, { modViewPanel: $.g.INFO, sourceLocation: t }),
                       r?.());
@@ -78,8 +78,8 @@ var ee = l(133385),
     es = l(695366),
     en = l(922590),
     er = l(93246),
-    eo = l(994500),
-    ed = l(351906),
+    ed = l(994500),
+    eo = l(351906),
     et = l(158045),
     ea = l(977059),
     eu = l(744753),
@@ -106,9 +106,9 @@ var ee = l(133385),
 function e_(e) {
     let { user: i, onOpenProfile: l } = e,
         { trackUserProfileAction: r } = (0, N.NJ)(),
-        { hasNewWishlistItems: o, newWishlistItemCount: d, shouldLogExposure: t } = (0, eN.A)(i),
+        { hasNewWishlistItems: d, newWishlistItemCount: o, shouldLogExposure: t } = (0, eN.A)(i),
         a = null != l,
-        u = a && o,
+        u = a && d,
         c = n.useRef(!1);
     n.useEffect(() => {
         u && !c.current && ((c.current = !0), r({ action: "VIEW_NEW_CONTENT_NOTICE" }));
@@ -123,7 +123,7 @@ function e_(e) {
                   u &&
                       (0, s.jsx)(eT.D, {
                           onClick: p,
-                          "aria-label": Q.intl.formatToPlainString(Q.t.wKJfIg, { count: d }),
+                          "aria-label": Q.intl.formatToPlainString(Q.t.wKJfIg, { count: o }),
                           className: eU.S4,
                           children: (0, s.jsxs)(F.A.Overlay, {
                               className: eU.Uq,
@@ -131,7 +131,7 @@ function e_(e) {
                                   (0, s.jsx)(eC.A, { className: eU.Pf }),
                                   (0, s.jsx)(ev.E, {
                                       variant: "text-xs/medium",
-                                      children: Q.intl.format(Q.t.wKJfIg, { count: d }),
+                                      children: Q.intl.format(Q.t.wKJfIg, { count: o }),
                                   }),
                               ],
                           }),
@@ -148,18 +148,18 @@ function eb(e) {
             currentUser: l,
             displayProfile: n,
             guild: r,
-            isHoveringOrFocusing: d,
+            isHoveringOrFocusing: o,
             onOpenProfile: t,
             channelId: a,
             onClose: u,
         } = e,
         c = E.Ay.useName(r?.id, a, i),
-        { relationshipType: p, originApplicationId: A } = (0, o.cf)([eo.A], () => ({
-            relationshipType: eo.A.getRelationshipType(i.id),
-            originApplicationId: eo.A.getOriginApplicationId(i.id),
+        { relationshipType: p, originApplicationId: A } = (0, d.cf)([ed.A], () => ({
+            relationshipType: ed.A.getRelationshipType(i.id),
+            originApplicationId: ed.A.getOriginApplicationId(i.id),
         })),
         f = (0, en.fi)(i.id),
-        I = (0, o.bG)([ed.A], () => ed.A.hidePersonalInformation),
+        I = (0, d.bG)([eo.A], () => eo.A.hidePersonalInformation),
         x = i.id === l.id,
         P = n?.widgets != null && n.widgets.length > 0,
         j = (0, et.TW)(l);
@@ -173,7 +173,7 @@ function eb(e) {
                 guildId: r?.id,
                 displayName: c,
                 onClickName: t,
-                displayNameTrailing: I ? null : (0, s.jsx)(eO.A, { userId: i.id, isVisible: d, onOpenProfile: t }),
+                displayNameTrailing: I ? null : (0, s.jsx)(eO.A, { userId: i.id, isVisible: o, onOpenProfile: t }),
                 pronouns: n?.pronouns,
                 onClose: u,
                 usernameIcon: i.hasAvatarForGuild(r?.id) && (0, s.jsx)(eg.A, { user: i, nickname: c }),
@@ -241,18 +241,18 @@ function eF(e) {
         { analyticsLocations: es } = (0, f.Ay)([...J, A.A.USER_PROFILE_POPOUT]),
         en = (0, y.aL)(),
         er = (0, N.pb)({ layout: "POPOUT", userId: i.id, guildId: W, channelId: V, messageId: H, roleId: q }),
-        eo = (0, o.bG)([v.A], () => (null != W ? v.A.getGuild(W) : null)),
-        ed = n.useMemo(() => (null != W ? { [W]: [i.id] } : {}), [W, i.id]);
-    (0, p.Eq)(ed, "UserProfilePopout");
+        ed = (0, d.bG)([v.A], () => (null != W ? v.A.getGuild(W) : null)),
+        eo = n.useMemo(() => (null != W ? { [W]: [i.id] } : {}), [W, i.id]);
+    (0, p.Eq)(eo, "UserProfilePopout");
     let et = n.useRef(null),
         ea = (0, U.Ay)(i.id, W);
     (0, T.A)(es, ea, eS.R7.POPOUT);
     let { isHoveringOrFocusing: eu, isHovering: ec } = (0, m.A)(et),
         ep = (0, _.fC)(),
-        eA = (0, P.A)(ea?.profileFrame?.skuId, "UserProfilePopout"),
+        eA = (0, P.A)(ea?.profileFrame?.skuId),
         ef = (0, x.A)(ea?.profileFrame?.skuId);
     (0, j.A)({ skuId: ea?.profileFrame?.skuId, openedAt: z, context: er, analyticsLocations: es });
-    let eI = (0, d.z)({ opacity: +(null != ep.interactionType), config: { duration: 150 } });
+    let eI = (0, o.z)({ opacity: +(null != ep.interactionType), config: { duration: 150 } });
     n.useEffect(() => {
         D?.(et?.current);
     }, [et, D, eA?.skuId]);
@@ -274,7 +274,7 @@ function eF(e) {
     }
     let em = $ ? "div" : a.l,
         eg = (0, O.GV)(),
-        ey = E.Ay.useName(eo?.id, V, i);
+        ey = E.Ay.useName(ed?.id, V, i);
     return (0, s.jsx)(f.f5, {
         value: es,
         children: (0, s.jsx)(N.of, {
@@ -372,7 +372,7 @@ function eF(e) {
                                         user: i,
                                         currentUser: l,
                                         displayProfile: ea,
-                                        guild: eo,
+                                        guild: ed,
                                         isHoveringOrFocusing: null == ep.interactionType && eu,
                                         onOpenProfile: K ? void 0 : eO,
                                         channelId: V,

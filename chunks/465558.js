@@ -175,7 +175,7 @@ function eb(e) {
 }
 function eL(e) {
     let { product: t } = e,
-        n = (0, eS.A)(t.skuId, "FamilyCenterActivityItemPreview");
+        n = (0, eS.A)(t.skuId);
     return null == n
         ? null
         : (0, l.jsx)("div", {
