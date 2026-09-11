@@ -127,12 +127,18 @@
 }
 
 .floatingEmojiButtonContainer_f08f8d.inlineEmojiButton_f08f8d {
+    aspect-ratio: 1;
     bottom: 0;
-    inset-inline-end: var(--space-6);
-    max-height: calc(var(--chat-markup-line-height) + var(--space-4)*2 + 4px);
+    inset-inline-end: 0;
+    max-height: var(--space-32);
     opacity: 0;
     top: 0;
     transition: opacity 50ms ease-in
+}
+
+.floatingEmojiButtonContainer_f08f8d.inlineEmojiButton_f08f8d .emojiButton_f08f8d {
+    height: 100%;
+    width: 100%
 }
 
 .inputWrapper_f08f8d.inline_f08f8d:focus-within .floatingEmojiButtonContainer_f08f8d.inlineEmojiButton_f08f8d,
@@ -165,6 +171,8 @@
     color: var(--control-icon-only-icon-active)
 }
 
+.inlineEmojiButton_f08f8d .emojiButton_f08f8d:active,
+.inlineEmojiButton_f08f8d .emojiButton_f08f8d:hover,
 .staticToolbar_f08f8d .emojiButton_f08f8d:active,
 .staticToolbar_f08f8d .emojiButton_f08f8d:hover {
     background-color: transparent;
@@ -175,4 +183,4 @@
     border-color: Highlight
 }
 
-/*# sourceMappingURL=986496acc77e2aa6.css.map*/
+/*# sourceMappingURL=3ccd2118e3efe345.css.map*/
