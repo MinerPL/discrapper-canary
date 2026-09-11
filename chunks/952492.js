@@ -757,49 +757,50 @@ var y = new WeakMap(),
                 d = em.findPath(s, n),
                 f = [],
                 h = c.Hg.isElement(n) && !s.isInline(n) && c.KE.hasInlines(s, n),
-                p = 0;
-            p < n.children.length;
-            p++
+                p = c.Hg.isElement(n) && null != s.rendersTrailingNewline && s.rendersTrailingNewline(n),
+                m = 0;
+            m < n.children.length;
+            m++
         ) {
-            var m = d.concat(p),
-                v = n.children[p],
-                _ = em.findKey(s, v),
-                g = c.KE.range(s, m),
-                D = o && c.Q6.intersection(g, o),
-                w = u([v, m]);
-            for (var E of t) {
-                var C = c.Q6.intersection(E, g);
-                C && w.push(C);
+            var v = d.concat(m),
+                _ = n.children[m],
+                g = em.findKey(s, _),
+                D = c.KE.range(s, v),
+                w = o && c.Q6.intersection(D, o),
+                E = u([_, v]);
+            for (var C of t) {
+                var A = c.Q6.intersection(C, D);
+                A && E.push(A);
             }
-            (c.Hg.isElement(v)
+            (c.Hg.isElement(_)
                 ? f.push(
                       l.createElement(
                           eP.Provider,
-                          { key: "provider-".concat(_.id), value: !!D },
+                          { key: "provider-".concat(g.id), value: !!w },
                           l.createElement(eT, {
-                              decorations: w,
-                              element: v,
-                              key: _.id,
+                              decorations: E,
+                              element: _,
+                              key: g.id,
                               renderElement: r,
                               renderPlaceholder: i,
                               renderLeaf: a,
-                              selection: D,
+                              selection: w,
                           }),
                       ),
                   )
                 : f.push(
                       l.createElement(eF, {
-                          decorations: w,
-                          key: _.id,
-                          isLast: h && p === n.children.length - 1,
+                          decorations: E,
+                          key: g.id,
+                          isLast: (h || p) && m === n.children.length - 1,
                           parent: n,
                           renderPlaceholder: i,
                           renderLeaf: a,
-                          text: v,
+                          text: _,
                       }),
                   ),
-                y.set(v, p),
-                b.set(v, n));
+                y.set(_, m),
+                b.set(_, n));
         }
         return f;
     },
@@ -1622,15 +1623,21 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                             var i = w.get(J),
                                 a = !1;
                             if ((i.contains(n.anchorNode) && i.contains(n.focusNode) && (a = !0), r && a && t && !e)) {
-                                var o = em.toSlateRange(J, n, { exactMatch: !0, suppressThrow: !0 });
-                                if (o && c.Q6.equals(o, t)) {
+                                var o = em.toSlateRange(J, n, { exactMatch: !0, suppressThrow: !0 }),
+                                    u =
+                                        (null == n.anchorNode ||
+                                            3 !== n.anchorNode.nodeType ||
+                                            null == n.focusNode ||
+                                            3 !== n.focusNode.nodeType) &&
+                                        !em.isComposing(J);
+                                if (o && c.Q6.equals(o, t) && !u) {
                                     if (!ev.hasMarkPlaceholder) return;
-                                    var u,
-                                        { anchorNode: s } = n;
+                                    var s,
+                                        { anchorNode: l } = n;
                                     if (
-                                        null != s &&
-                                        null != (u = s.parentElement) &&
-                                        u.hasAttribute("data-slate-mark-placeholder")
+                                        null != l &&
+                                        null != (s = l.parentElement) &&
+                                        s.hasAttribute("data-slate-mark-placeholder")
                                     )
                                         return;
                                 }
@@ -1640,25 +1647,25 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
                                 return;
                             }
                             ev.isUpdatingSelection = !0;
-                            var l = t && em.toDOMRange(J, t);
+                            var d = t && em.toDOMRange(J, t);
                             return (
-                                l
+                                d
                                     ? (c.Q6.isBackward(t)
                                           ? n.setBaseAndExtent(
-                                                l.endContainer,
-                                                l.endOffset,
-                                                l.startContainer,
-                                                l.startOffset,
+                                                d.endContainer,
+                                                d.endOffset,
+                                                d.startContainer,
+                                                d.startOffset,
                                             )
                                           : n.setBaseAndExtent(
-                                                l.startContainer,
-                                                l.startOffset,
-                                                l.endContainer,
-                                                l.endOffset,
+                                                d.startContainer,
+                                                d.startOffset,
+                                                d.endContainer,
+                                                d.endOffset,
                                             ),
-                                      P(J, l))
+                                      P(J, d))
                                     : n.removeAllRanges(),
-                                l
+                                d
                             );
                         }
                     },
@@ -2321,8 +2328,21 @@ var e8 = (e) => l.createElement(l.Fragment, null, eS(e)),
     tt = () => [],
     tn = (e, t) => {
         if (t.getBoundingClientRect && (!e.selection || (e.selection && c.Q6.isCollapsed(e.selection)))) {
-            var n = t.startContainer.parentElement;
-            ((n.getBoundingClientRect = t.getBoundingClientRect.bind(t)),
+            var n = t.startContainer.parentElement,
+                r = function (e) {
+                    var n = t.startContainer,
+                        r = t.startOffset + e;
+                    if (3 !== n.nodeType || r < 0 || r + 1 > n.length) return null;
+                    var i = n.ownerDocument.createRange();
+                    return (i.setStart(n, r), i.setEnd(n, r + 1), i.getClientRects().length > 0 ? i : null);
+                },
+                i = t;
+            if (0 === t.getClientRects().length) {
+                var a = r(0) || r(-1);
+                if (null === a) return;
+                i = a;
+            }
+            ((n.getBoundingClientRect = i.getBoundingClientRect.bind(i)),
                 (0, d.A)(n, { scrollMode: "if-needed" }),
                 delete n.getBoundingClientRect);
         }

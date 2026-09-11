@@ -272,7 +272,7 @@ var V = n(95561),
     J = n(683167),
     $ = n(284009),
     X = n.n($),
-    Q = n(530795),
+    Q = n(952492),
     ee = n(407315),
     et = n(2368),
     en = n(551483);
@@ -319,10 +319,8 @@ let ep = (e) => {
             [n, s.optionName],
         ),
         g = (0, ed.bG)([A.A], () => A.A.getUpload(n, s.optionName, eh.C.SlashCommand), [n, s.optionName]),
-        x = s.children[s.children.length - 1],
-        C = null != x && Z.l5.isText(x) && x.text.endsWith("\n"),
-        E = r()(ef.S0, ef.xP, { [ef.t$]: c && u, [ef.$2]: (!c || !u) && f }),
-        I = i.useCallback(() => {
+        x = r()(ef.S0, ef.xP, { [ef.t$]: c && u, [ef.$2]: (!c || !u) && f }),
+        C = i.useCallback(() => {
             Z.VW.isVoid(d, s) || z.b.selectCommandOption(d, s.optionName, !0);
         }, [d, s]);
     return (
@@ -339,18 +337,15 @@ let ep = (e) => {
                           contentEditable: !1,
                           children: [em.intl.string(em.t.GRdFni), o],
                       })
-                : (0, l.jsxs)("span", {
-                      className: ef._K,
-                      children: [o, C ? (0, l.jsx)("span", { className: ef.Nx, contentEditable: !1 }) : null],
-                  })),
+                : (0, l.jsx)("span", { className: ef._K, children: o })),
         (0, l.jsxs)("span", {
             ...a,
-            className: E,
+            className: x,
             children: [
                 (0, l.jsxs)("span", {
                     className: ef.gA,
                     contentEditable: !1,
-                    onClick: I,
+                    onClick: C,
                     children: [s.optionDisplayName, "\u200B"],
                 }),
                 t,
