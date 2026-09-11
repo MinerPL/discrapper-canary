@@ -97,7 +97,7 @@ function e_(e) {
         i,
         r,
         { targetElementRef: a } = e,
-        o = (0, eN.J9)({ location: "BadgeCustomizationProfileCoachmark" }),
+        o = (0, eN.J)({ location: "BadgeCustomizationProfileCoachmark" }),
         d = (0, eE.d)({ location: "BadgeCustomizationProfileCoachmark" }),
         u = (0, eP.A)(),
         c =

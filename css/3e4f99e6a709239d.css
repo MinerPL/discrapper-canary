@@ -435,18 +435,6 @@
     padding: var(--space-16)
 }
 
-.badgeOwnership__6db38 {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-4);
-    justify-content: center
-}
-
-.badgeOwnershipText__6db38 {
-    line-height: 1
-}
-
 .tierTimelineDescription_bf9073 {
     align-items: center;
     display: flex;
@@ -606,4 +594,4 @@
     display: block
 }
 
-/*# sourceMappingURL=a8062974c4beb95c.css.map*/
+/*# sourceMappingURL=3e4f99e6a709239d.css.map*/

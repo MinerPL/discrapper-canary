@@ -15682,7 +15682,7 @@ var p0 = n(318785),
     p1 = n(992526),
     p2 = n(470739);
 let p3 = function () {
-    return (0, p1.J9)({ location: "UserSettingsProfileCustomization" })
+    return (0, p1.J)({ location: "UserSettingsProfileCustomization" })
         ? (0, A.jsx)(r1.A, {
               title: R.intl.string(R.t.l6w3Vj),
               description: R.intl.string(R.t.joHqdj),

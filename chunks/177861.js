@@ -51,6 +51,4 @@ e.exports = {
     cJ: "descriptionCardExtras__6db38",
     Z6: "descriptionNotice__6db38",
     HO: "directoryFooter__6db38",
-    bn: "badgeOwnership__6db38",
-    CT: "badgeOwnershipText__6db38",
 };
