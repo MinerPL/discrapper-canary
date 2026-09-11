@@ -63,10 +63,14 @@ class o {
     _promises = new Set();
     _pending = new Set();
     _flushHandler;
+    _activeInvocationCount = 0;
+    _flushReady = !1;
     constructor(e, t = {}) {
         ((this.invoke = e),
             (this.options = t),
-            (this._flushHandler = new r(this.options.delay ?? 32, () => this._flush())));
+            (this._flushHandler = new r(this.options.delay ?? 32, () => {
+                ((this._flushReady = !0), this._flush());
+            })));
     }
     queue(e) {
         let t = Array.isArray(e) ? e : [e],
@@ -76,7 +80,7 @@ class o {
         return (n.length > 0 && this.options.onQueued?.(n), 0 === this._pending.size)
             ? Promise.resolve()
             : new Promise((e, t) => {
-                  (this._promises.add({ resolve: e, reject: t }), this._flushHandler.delay(!1));
+                  (this._promises.add({ resolve: e, reject: t }), this._flushReady || this._flushHandler.delay(!1));
               });
     }
     reset() {
@@ -85,19 +89,32 @@ class o {
             n = new l("BatchInvocationManager was reset");
         (this._pending.clear(),
             this._promises.clear(),
+            (this._flushReady = !1),
             this._flushHandler.cancel(),
             e.length > 0 && this.options.onCancelled?.(e),
             t.forEach((e) => e.reject(n)));
     }
+    isPending() {
+        return this._pending.size > 0;
+    }
+    isInvoking() {
+        return this._activeInvocationCount > 0;
+    }
     async _flush() {
-        let e = [...this._pending];
+        let e = this.options.maxConcurrentInvocations ?? 1 / 0;
+        if (!this._flushReady || this._activeInvocationCount >= e) return;
+        let t = [...this._pending];
         this._pending.clear();
-        let t = [...this._promises];
-        if ((this._promises.clear(), 0 === e.length)) return void t.forEach((e) => e.resolve());
+        let n = [...this._promises];
+        if ((this._promises.clear(), (this._flushReady = !1), 0 === t.length))
+            return void n.forEach((e) => e.resolve());
+        this._activeInvocationCount += 1;
         try {
-            (await this.invoke(e), t.forEach((e) => e.resolve()));
+            (await this.invoke(t), n.forEach((e) => e.resolve()));
         } catch (e) {
-            t.forEach((t) => t.reject(e));
+            n.forEach((t) => t.reject(e));
+        } finally {
+            ((this._activeInvocationCount -= 1), this._flush());
         }
     }
 }
