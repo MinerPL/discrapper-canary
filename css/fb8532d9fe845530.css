@@ -1,29 +1,3 @@
-.options_e2762c {
-    display: flex;
-    flex-direction: column;
-    gap: 12px
-}
-
-.option_e0a1ce {
-    align-items: center;
-    background: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    justify-content: center;
-    min-height: 96px;
-    padding: var(--space-16);
-    text-align: center;
-    width: 100%
-}
-
-.option_e0a1ce:hover {
-    background: var(--background-mod-subtle)
-}
-
 .container__09e56 {
     display: flex;
     flex-direction: column
@@ -53,7 +27,7 @@
     text-align: center
 }
 
-.body_b6c448 {
+.body_c4e5d7 {
     border-top: 1px solid var(--border-subtle);
     display: flex;
     flex: 1 1 auto;
@@ -63,13 +37,13 @@
     min-height: 0
 }
 
-.nav_b6c448 {
+.nav_c4e5d7 {
     border-inline-end: 1px solid var(--border-subtle);
     flex: 0 0 180px;
     padding: var(--space-24) var(--space-16)
 }
 
-.nav_b6c448 .navItem_b6c448[role=tab] {
+.nav_c4e5d7 .navItem_c4e5d7[role=tab] {
     align-items: center;
     border-radius: var(--radius-sm);
     display: flex;
@@ -81,44 +55,44 @@
     padding-inline-start: var(--space-8)
 }
 
-.navItem_b6c448[aria-selected=true] {
+.navItem_c4e5d7[aria-selected=true] {
     background-color: var(--background-mod-normal) !important
 }
 
-.navItem_b6c448[aria-selected=true]:hover {
+.navItem_c4e5d7[aria-selected=true]:hover {
     background-color: var(--background-mod-strong) !important
 }
 
-.navItem_b6c448:not([aria-selected=true]):hover {
+.navItem_c4e5d7:not([aria-selected=true]):hover {
     background-color: var(--interactive-background-hover) !important
 }
 
-.content_b6c448 {
+.content_c4e5d7 {
     display: flex
 }
 
-.content_b6c448,
-.scroller_b6c448 {
+.content_c4e5d7,
+.scroller_c4e5d7 {
     flex: 1 1 auto;
     min-height: 0
 }
 
-.paneInner_b6c448 {
+.paneInner_c4e5d7 {
     padding-block: var(--space-24);
     padding-inline: var(--space-24) var(--space-8)
 }
 
-.categoryEmptyState_b6c448 {
+.categoryEmptyState_c4e5d7 {
     padding-bottom: 0;
     padding-top: var(--space-64);
     padding-inline: var(--space-48);
     text-align: center
 }
 
-.interestsList_b6c448 {
+.interestsList_c4e5d7 {
     display: flex;
     flex-direction: column;
     gap: var(--space-12)
 }
 
-/*# sourceMappingURL=731c90c366024af9.css.map*/
+/*# sourceMappingURL=fb8532d9fe845530.css.map*/

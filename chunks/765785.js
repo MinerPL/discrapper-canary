@@ -854,13 +854,13 @@ var eK = n(702841),
     e$ = n(384377),
     e0 = n(554146),
     e1 = n(43105),
-    e2 = n(131607),
-    e8 = n(518477),
+    e8 = n(131607),
+    e2 = n(518477),
     e7 = n(49999);
 function e5() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = eQ.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
-        [n, i] = (0, e2.kn)(e && t ? [e0.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
+        [n, i] = (0, e8.kn)(e && t ? [e0.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [n === e0.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, i];
 }
 function e3(e) {
@@ -890,7 +890,7 @@ function e3(e) {
                           let e = (0, I.g0)();
                           ((0, F.Y5)(e),
                               s({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                              (0, e$.XA)(e8.jM.WIDGET_ADDED));
+                              (0, e$.XA)(e2.jM.WIDGET_ADDED));
                       },
                   },
               ],
@@ -906,7 +906,7 @@ function e4(e) {
             let e = (0, I.g0)();
             ((0, F.Y5)(e),
                 r({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, e$.XA)(e8.jM.WIDGET_ADDED));
+                (0, e$.XA)(e2.jM.WIDGET_ADDED));
         }, [r, n, s]);
     return (0, i.jsx)(eY.$, {
         icon: eX.t,
@@ -938,7 +938,9 @@ function e9(e) {
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("962982"), n.e("264707")]).then(n.bind(n, 480142));
+                        let { default: e } = await Promise.all([n.e("376053"), n.e("487697"), n.e("56438")]).then(
+                            n.bind(n, 709013),
+                        );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
@@ -1444,7 +1446,7 @@ var tZ = n(558285),
     t$ = n(409067),
     t0 = n(696016),
     t1 = n(716112);
-function t2(e) {
+function t8(e) {
     let { onClick: t } = e,
         n = V.intl.string(V.t.rI0i0a);
     return (0, i.jsx)(q.m, {
@@ -1454,7 +1456,7 @@ function t2(e) {
         children: (0, i.jsx)(tn.K, { variant: "secondary", size: "sm", icon: ti.T, "aria-label": n, onClick: t }),
     });
 }
-function t8() {
+function t2() {
     return (0, i.jsx)("div", {
         className: t1.p$,
         children: (0, i.jsx)(d.E, {
@@ -1598,7 +1600,7 @@ function t7(e) {
         allowEditing: c,
         disableInteraction: u,
         headerTitle: (0, F.L)(o),
-        headerActionButtons: O && _ ? [(0, i.jsx)(t2, { onClick: et }, "clips-gallery-add-clip")] : void 0,
+        headerActionButtons: O && _ ? [(0, i.jsx)(t8, { onClick: et }, "clips-gallery-add-clip")] : void 0,
         trailingContent:
             B && (0, i.jsx)("div", { className: t1.$k, children: (0, i.jsx)(tK, { clips: N, onDismiss: z }) }),
         ...g,
@@ -1679,7 +1681,7 @@ function t7(e) {
                               }),
                       ],
                   })
-                : (0, i.jsx)(t8, {}),
+                : (0, i.jsx)(t2, {}),
     });
 }
 var t5 = n(704824),
@@ -1696,7 +1698,7 @@ function nt(e) {
             null != a &&
                 ((0, F.Y5)(a),
                 r({ action: "WIDGET_ADDED", ...a.getProfileEditAnalyticsOptions() }),
-                (0, e$.XA)(e8.jM.WIDGET_ADDED));
+                (0, e$.XA)(e2.jM.WIDGET_ADDED));
         }, [a, r]);
     return (0, i.jsx)(L.A, {
         user: t,
@@ -2374,12 +2376,12 @@ function n1(e) {
         ),
     });
 }
-function n2(e) {
+function n8(e) {
     let { trackUserProfileEditAction: t, personalWidgetOptionRef: n } = e,
         l = (0, nZ.A)();
     return (0, i.jsx)(n1, { widgets: l, personalWidgetOptionRef: n, trackUserProfileEditAction: t });
 }
-function n8(e) {
+function n2(e) {
     let {
             maxWidgetOptions: t,
             shouldPromotePersonalWidget: s,
@@ -2483,7 +2485,9 @@ function n8(e) {
             (r({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("962982"), n.e("264707")]).then(n.bind(n, 480142));
+                        let { default: e } = await Promise.all([n.e("376053"), n.e("487697"), n.e("56438")]).then(
+                            n.bind(n, 709013),
+                        );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: r });
                     },
                     { stackingBehavior: "stack" },
@@ -2534,13 +2538,13 @@ function n7(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             x
-                                ? (0, i.jsx)(n8, {
+                                ? (0, i.jsx)(n2, {
                                       maxWidgetOptions: f,
                                       personalWidgetOptionRef: o,
                                       shouldPromotePersonalWidget: m,
                                       trackUserProfileEditAction: s,
                                   })
-                                : (0, i.jsx)(n2, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
+                                : (0, i.jsx)(n8, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
                             (0, i.jsx)(e3, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
                         ],
                     }),
