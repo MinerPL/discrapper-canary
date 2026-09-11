@@ -2758,7 +2758,7 @@ function lT() {
         [n],
     );
 }
-var lN = n(611881),
+var lN = n(38423),
     lb = n(492275),
     lj = n(871181),
     lR = n(318007),
@@ -2843,14 +2843,15 @@ let lG = {
                             nextTier: n3.Ay.getNextTier(n4.$.GIFTING),
                             giftsToNextTier: n3.Ay.getRemainingToNextTier(n4.$.GIFTING),
                         })),
-                        P = I && null != g;
-                    async function v(e, t) {
+                        P = I && null != g,
+                        v = (0, lN.b9)(`CollectiblesPaymentModalGiftCustomizationStep${P ? "" : "-DISABLED"}`);
+                    async function _(e, t) {
                         (m(!0),
                             null != s && o(),
                             (await (0, n7.JJ)(e.id, t)) || o(H.intl.string(H.t["4kgVqQ"])),
                             m(!1));
                     }
-                    function _() {
+                    function x() {
                         return (0, r.jsx)(lj.A, {
                             onTextChange: (e) => i?.(e),
                             pendingText: l,
@@ -2866,7 +2867,7 @@ let lG = {
                                 null != c &&
                                 (d !== eG.vQ.DM_CHANNEL_WISHLIST &&
                                     eN.default.track(eB.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: p }),
-                                v(c, p));
+                                _(c, p));
                         }),
                         {
                             renderLeftColumn: function () {
@@ -2881,7 +2882,7 @@ let lG = {
                                     ? (0, r.jsxs)("div", {
                                           children: [
                                               (0, r.jsx)(lM.Z, { giftRecipient: c }),
-                                              _(),
+                                              x(),
                                               null != e &&
                                                   null != p &&
                                                   (0, r.jsx)(lm, {
@@ -2904,9 +2905,9 @@ let lG = {
                                                   selectedSkuId: p,
                                                   recipients: E,
                                                   className: lL.uh,
-                                                  validateSelectedGift: v,
+                                                  validateSelectedGift: _,
                                               }),
-                                              _(),
+                                              x(),
                                               null != e &&
                                                   null != p &&
                                                   (0, r.jsx)(lm, {
@@ -2923,7 +2924,7 @@ let lG = {
                                     ? (0, r.jsx)(lb.A, {
                                           giftsToNextTier: A,
                                           nextTierName: g.name ?? "",
-                                          nextTierIcon: g.simple_icon_url,
+                                          nextTierIcon: (0, lN.Se)(g, v),
                                           analyticsLocations: y,
                                           className: lL.qr,
                                       })
@@ -4318,92 +4319,93 @@ function i6(e) {
             giftsToNextTier: n3.Ay.getRemainingToNextTier(n4.$.GIFTING),
         })),
         w = P && O && null != L,
-        { isHidden: D } = iT.A.useConfig({ location: `PremiumPaymentPlanSelectStep${P ? "" : " - DO NOT USE"}` }),
-        G = !(0, ia.tA)({ isGift: P, giftRecipient: _ }) && !D,
-        F = null;
+        D = (0, lN.b9)(`PremiumPaymentPlanSelectStep${w ? "" : "-DISABLED"}`),
+        { isHidden: G } = iT.A.useConfig({ location: `PremiumPaymentPlanSelectStep${P ? "" : " - DO NOT USE"}` }),
+        F = !(0, ia.tA)({ isGift: P, giftRecipient: _ }) && !G,
+        B = null;
     M
-        ? (F = b
+        ? (B = b
               ? (0, r.jsx)("div", {
-                    className: e4()(i7.RC, i7.oq, G ? i7.ek : i7.lz),
+                    className: e4()(i7.RC, i7.oq, F ? i7.ek : i7.lz),
                     children: (0, r.jsx)(iO, { className: i7.j2 }),
                 })
               : (0, r.jsx)(iO, {}))
         : w &&
-          (F = (0, r.jsx)("div", {
-              className: e4()(i7.RC, G ? i7.ek : i7.lz),
+          (B = (0, r.jsx)("div", {
+              className: e4()(i7.RC, F ? i7.ek : i7.lz),
               children: (0, r.jsx)(lb.A, {
                   giftsToNextTier: k,
                   nextTierName: L.name ?? "",
-                  nextTierIcon: L.simple_icon_url,
+                  nextTierIcon: (0, lN.Se)(L, D),
               }),
           }));
-    let B = (p || C) ?? !1,
-        W = (0, ii.Wi)(eG.ZC),
-        Y = B || W,
-        V = C && null != I && m.includes(I) ? I : m[0],
-        K = (0, nY.bG)([eU.A], () => eU.A.get(V)),
-        Z = [{ planId: K?.id, quantity: 1 }],
-        [q, z] = c.useState(B),
-        [Q, $] = (0, tc.YV)({
-            items: Z,
+    let W = (p || C) ?? !1,
+        Y = (0, ii.Wi)(eG.ZC),
+        V = W || Y,
+        K = C && null != I && m.includes(I) ? I : m[0],
+        Z = (0, nY.bG)([eU.A], () => eU.A.get(K)),
+        q = [{ planId: Z?.id, quantity: 1 }],
+        [z, Q] = c.useState(W),
+        [$, J] = (0, tc.YV)({
+            items: q,
             renewal: !1,
-            preventFetch: !Y,
+            preventFetch: !V,
             applyEntitlements: !0,
             trialId: a,
             paymentSourceId: u.paymentSourceId,
             currency: u.currency,
         });
     (c.useEffect(() => {
-        B && z(Q?.subscriptionPeriodEnd == null);
-    }, [Q, B]),
+        W && Q($?.subscriptionPeriodEnd == null);
+    }, [$, W]),
         (0, iv.A)(
             "Payment Modal Plan Select Step",
-            q,
+            z,
             5,
-            { proratedInvoicePreview: Q, proratedInvoiceError: $, isEligibleForOffer: B },
+            { proratedInvoicePreview: $, proratedInvoiceError: J, isEligibleForOffer: W },
             { tags: { app_context: "billing" } },
         ));
-    let J = $?.message ?? H.intl.string(H.t.R0RpRX),
-        X = B && null == $,
-        ee = B && null != $,
-        et = X && null == d && Q?.subscriptionPeriodEnd == null;
-    (0, ix.W)({ priceOptions: u, trialId: a, discountInvoicePreview: Q });
-    let en = (0, i3.i)({ planSkuId: K?.skuId, invoice: Q }),
-        { ref: el, onTransitionEnd: ei } = (0, i_.A)({ isExpanded: null != en, minHeightOverride: 0 }),
-        er = c.useMemo(
-            () =>
-                P || K?.skuId !== eG.pe.TIER_2 || f?.referrerId == null
-                    ? (0, r.jsx)("div", { ref: el, onTransitionEnd: ei, style: { overflow: "hidden" }, children: en })
-                    : (0, r.jsx)(iY, { className: i7.ZB }),
-            [en, P, K?.skuId, f?.referrerId, el, ei],
-        ),
+    let X = J?.message ?? H.intl.string(H.t.R0RpRX),
+        ee = W && null == J,
+        et = W && null != J,
+        en = ee && null == d && $?.subscriptionPeriodEnd == null;
+    (0, ix.W)({ priceOptions: u, trialId: a, discountInvoicePreview: $ });
+    let el = (0, i3.i)({ planSkuId: Z?.skuId, invoice: $ }),
+        { ref: ei, onTransitionEnd: er } = (0, i_.A)({ isExpanded: null != el, minHeightOverride: 0 }),
         es = c.useMemo(
+            () =>
+                P || Z?.skuId !== eG.pe.TIER_2 || f?.referrerId == null
+                    ? (0, r.jsx)("div", { ref: ei, onTransitionEnd: er, style: { overflow: "hidden" }, children: el })
+                    : (0, r.jsx)(iY, { className: i7.ZB }),
+            [el, P, Z?.skuId, f?.referrerId, ei, er],
+        ),
+        eo = c.useMemo(
             () => ({
                 planOptions: m,
                 selectedPlanId: g?.id,
                 planGroup: l,
-                subscriptionPeriodEnd: Q?.subscriptionPeriodEnd,
+                subscriptionPeriodEnd: $?.subscriptionPeriodEnd,
                 useCompactGiftComponents: M,
                 handleClose: s,
             }),
-            [m, g?.id, l, Q?.subscriptionPeriodEnd, M, s],
+            [m, g?.id, l, $?.subscriptionPeriodEnd, M, s],
         );
-    if (et) return (0, r.jsx)(v.Ed, { className: i7.QW });
+    if (en) return (0, r.jsx)(v.Ed, { className: i7.QW });
     (ez()(null != A, "Step should be set"), ez()(m.length > 0, "Premium plan options should be set"));
-    let eo = P
-        ? (0, r.jsx)(iV.$p, { ...es })
-        : (0, r.jsx)(iZ.X, { ...es, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
+    let eu = P
+        ? (0, r.jsx)(iV.$p, { ...eo })
+        : (0, r.jsx)(iZ.X, { ...eo, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i4, { giftMessage: x }),
             !(P && (0, l4.Ik)(_)) && (0, r.jsx)(iK.A, { isEligibleForTrial: p }),
             (0, r.jsxs)(eV.dZ, {
                 children: [
-                    !b && er,
+                    !b && es,
                     (0, r.jsx)(n0.A, { className: i7.tg }),
-                    ee ? (0, r.jsx)(eQ.w, { type: "critical", children: J }) : eo,
+                    et ? (0, r.jsx)(eQ.w, { type: "critical", children: X }) : eu,
                     !b &&
-                        X &&
+                        ee &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("hr", { className: e4()(i7.IM, i7.Go) }),
@@ -4419,13 +4421,13 @@ function i6(e) {
             }),
             (0, r.jsxs)(eV.UX, {
                 children: [
-                    F,
+                    B,
                     (0, r.jsx)(iy, {
                         onStepChange: t,
                         onBackClick: () => t(o.pn.SKU_SELECT),
                         showBackButton: null == n && null == i,
                         planOptions: m,
-                        shouldRenderUpdatedPaymentModal: X,
+                        shouldRenderUpdatedPaymentModal: ee,
                         isTrial: p,
                         useFullWidthActions: b,
                     }),

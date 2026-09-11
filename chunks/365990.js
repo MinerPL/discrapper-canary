@@ -44,7 +44,7 @@ var m = n(604121),
     y = n(70283),
     S = n(682618),
     v = n(982240),
-    N = n(611881),
+    N = n(38423),
     _ = n(788833),
     j = n(40493),
     b = n(43105),
@@ -58,7 +58,9 @@ var m = n(604121),
 function P(e) {
     let { currentTier: t, giftCount: n, onComplete: s, markAsDismissed: r, children: a } = e,
         u = i.useRef(null),
-        c = (0, o.bG)([R.default], () => R.default.getCurrentUser());
+        c = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
+        d = (0, N.b9)("GiftingBadgesCoachmarkPopout"),
+        h = (0, N.Se)(t, d);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)("div", { ref: u, children: a }),
@@ -68,7 +70,7 @@ function P(e) {
                 position: "top",
                 title: w.intl.format(k.default["a+jfuy"], { tierName: t.name ?? "" }),
                 body: w.intl.formatToPlainString(k.default.QxRA6w, { giftCount: n ?? 0 }),
-                graphic: null != t.simple_icon_url ? { type: "image", src: t.simple_icon_url } : void 0,
+                graphic: null != h ? { type: "image", src: h } : void 0,
                 actions: [
                     {
                         text: w.intl.string(w.t.RzWDqY),

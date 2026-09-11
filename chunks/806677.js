@@ -14,8 +14,8 @@ var n = e(477900),
     g = e(17928),
     m = e(192308),
     p = e(364522),
-    _ = e(444927),
-    S = e(775602),
+    S = e(444927),
+    _ = e(775602),
     x = e(793574),
     T = e(688810),
     j = e(982240),
@@ -34,9 +34,9 @@ var n = e(477900),
     M = e(309010),
     R = e(174459),
     W = e(427262),
-    P = e(672525),
-    D = e(226830),
-    F = e(611881),
+    D = e(672525),
+    P = e(226830),
+    F = e(38423),
     H = e(56815),
     B = e(492275),
     U = e(202541),
@@ -54,15 +54,15 @@ function J(i) {
         children: (0, n.jsxs)("div", {
             className: K.u6,
             children: [
-                (0, n.jsx)(P.D3, {
+                (0, n.jsx)(D.D3, {
                     onClick: () => t(U.pe.TIER_2),
                     isGift: !0,
                     priceOptions: e,
                     showPromotionalGiftBanner: s,
-                    wumpusPosition: D.Rf.GIFT_SELECTION_MODAL,
+                    wumpusPosition: P.Rf.GIFT_SELECTION_MODAL,
                     className: $.giftSelectionModalContext,
                 }),
-                (0, n.jsx)(P.Ls, {
+                (0, n.jsx)(D.Ls, {
                     onClick: () => t(U.pe.TIER_0),
                     isGift: !0,
                     priceOptions: e,
@@ -78,12 +78,14 @@ function z(i) {
         { nextTier: s, giftsToNextTier: l } = (0, g.cf)([j.Ay], () => ({
             nextTier: j.Ay.getNextTier(r.$.GIFTING),
             giftsToNextTier: j.Ay.getRemainingToNextTier(r.$.GIFTING),
-        }));
-    return e && null != s
+        })),
+        a = e && null != s,
+        c = (0, F.b9)(`GiftSelectionModal${a ? "" : "-DISABLED"}`);
+    return a
         ? (0, n.jsx)(B.A, {
               giftsToNextTier: l,
               nextTierName: s.name ?? "",
-              nextTierIcon: s.simple_icon_url,
+              nextTierIcon: (0, F.Se)(s, c),
               analyticsLocations: t,
           })
         : null;
@@ -172,8 +174,8 @@ function ii(i) {
                   ? Z.intl.formatToPlainString(Z.t.Y2RFOQ, { username: f })
                   : Z.intl.formatToPlainString(Z.t.dIDKgi, { username: f }),
         { analyticsLocations: m } = (0, T.Ay)(...(h ?? []), x.A.GIFT_SELECTION_MODAL_WISHLIST),
-        p = (0, _.A)(() => (0, c.A)()),
-        [S, j] = s.useState(!1),
+        p = (0, S.A)(() => (0, c.A)()),
+        [_, j] = s.useState(!1),
         N = s.useCallback(
             (i) => {
                 i &&
@@ -199,7 +201,7 @@ function ii(i) {
             },
             [d, a, t.id, m],
         ),
-        L = (0, o.K)(N, void 0, !d && !S);
+        L = (0, o.K)(N, void 0, !d && !_);
     return (0, n.jsxs)("div", {
         ref: L,
         className: K.jf,
@@ -253,14 +255,14 @@ function it(i) {
         u = (0, O.tA)({ isGift: !0, giftRecipient: t }),
         h = (d ? o : 0) > 0 ? Z.intl.string(Z.t["7lZ31J"]) : Z.intl.string(Z.t.BCi1gT),
         [f, m] = s.useState("Nitro"),
-        _ = s.useRef(null),
+        S = s.useRef(null),
         x = s.useRef(null),
-        T = (0, g.bG)([S.Ay], () => S.Ay.useReducedMotion),
+        T = (0, g.bG)([_.Ay], () => _.Ay.useReducedMotion),
         j = s.useRef(!1),
         N = s.useCallback(
             (i) => {
                 (m(i), (j.current = !0));
-                let e = _.current;
+                let e = S.current;
                 (null != e &&
                     e.addEventListener(
                         "scrollend",
@@ -292,7 +294,7 @@ function it(i) {
     return (
         s.useEffect(() => {
             let i = x.current,
-                t = _.current;
+                t = S.current;
             if (null == i || null == t) return;
             let e = new IntersectionObserver(
                 (i) => {
@@ -324,7 +326,7 @@ function it(i) {
                         }),
                     }),
                 (0, n.jsx)(p.Ip, {
-                    ref: _,
+                    ref: S,
                     className: K.XG,
                     children: (0, n.jsxs)("div", {
                         className: K.Qs,
@@ -423,13 +425,13 @@ function is(i) {
             },
             [t, d, a, c, o, r, e],
         ),
-        _ = s.useRef(!1);
+        S = s.useRef(!1);
     s.useEffect(() => {
-        _.current ||
-            ((_.current = !0),
+        S.current ||
+            ((S.current = !0),
             R.default.track(Q.HAw.GIFT_SELECTION_MODAL_OPENED, { gift_recipient_id: t?.id, location_stack: a }));
     }, [t, a]);
-    let S = (0, n.jsx)(J, { onSelectSku: m, priceOptions: u, showPromotionalGiftBanner: g });
+    let _ = (0, n.jsx)(J, { onSelectSku: m, priceOptions: u, showPromotionalGiftBanner: g });
     return (0, n.jsx)(h.d, {
         transitionState: l,
         size: "lg",
@@ -440,13 +442,13 @@ function is(i) {
             children: [
                 (0, n.jsx)(f.rQ, { title: Z.intl.string(Z.t["wg/30i"]) }),
                 null != t
-                    ? (0, n.jsx)(ie, { giftRecipient: t, onClose: e, nitroSection: S, analyticsLocations: a })
+                    ? (0, n.jsx)(ie, { giftRecipient: t, onClose: e, nitroSection: _, analyticsLocations: a })
                     : (0, n.jsx)(p.Ip, {
                           className: K.XG,
                           children: (0, n.jsxs)("div", {
                               className: `${K.Qs} ${K.GP}`,
                               children: [
-                                  (0, n.jsx)("div", { className: K.XP, children: S }),
+                                  (0, n.jsx)("div", { className: K.XP, children: _ }),
                                   (0, n.jsx)(z, { analyticsLocations: a }),
                               ],
                           }),
