@@ -1,3 +1,8 @@
+.root__62663 {
+    flex-grow: 1;
+    min-width: 0
+}
+
 .container__62663 {
     --custom-editable-text-inline-padding: calc(var(--space-6) + 1px);
     --custom-editable-text-block-padding: calc(var(--space-4)/2 + 1px);
@@ -72,6 +77,7 @@
 }
 
 .hugContents__62663 {
+    flex-grow: 0;
     max-width: 100%;
     width: -moz-fit-content;
     width: fit-content
@@ -216,4 +222,4 @@
     outline-color: GrayText
 }
 
-/*# sourceMappingURL=3f7b6ac96693a511.css.map*/
+/*# sourceMappingURL=8f9f394707dfbeed.css.map*/

@@ -2189,6 +2189,7 @@
 .emojiRow_e7d73e .emojiAliasInputContainer_e7d73e {
     display: flex;
     max-width: 100%;
+    position: relative;
     width: -moz-fit-content;
     width: fit-content
 }
@@ -2199,13 +2200,19 @@
     color: var(--text-muted);
     content: ":";
     display: flex;
-    margin: 0 -5px;
+    height: var(--control-input-height-md);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
     z-index: 1
 }
 
-.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:has(input[aria-invalid=true]):after,
-.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:has(input[aria-invalid=true]):before {
-    visibility: hidden
+.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:before {
+    inset-inline-start: calc(var(--space-4)/2)
+}
+
+.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:after {
+    inset-inline-end: calc(var(--space-4)/2)
 }
 
 .emojiRow_e7d73e .emojiRowTools_e7d73e {
@@ -2302,4 +2309,4 @@
     border-bottom: none
 }
 
-/*# sourceMappingURL=76306186411b1ad8.css.map*/
+/*# sourceMappingURL=8cb14f78847a61bf.css.map*/
