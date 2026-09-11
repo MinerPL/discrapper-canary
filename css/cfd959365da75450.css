@@ -2215,6 +2215,11 @@
     inset-inline-end: calc(var(--space-4)/2)
 }
 
+.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:has(input[aria-invalid=true]):after,
+.emojiRow_e7d73e .emojiAliasInputContainer_e7d73e:has(input[aria-invalid=true]):before {
+    visibility: hidden
+}
+
 .emojiRow_e7d73e .emojiRowTools_e7d73e {
     display: flex;
     gap: var(--space-xs);
@@ -2309,4 +2314,4 @@
     border-bottom: none
 }
 
-/*# sourceMappingURL=8cb14f78847a61bf.css.map*/
+/*# sourceMappingURL=cfd959365da75450.css.map*/
