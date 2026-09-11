@@ -249,7 +249,8 @@ function eI(e) {
     });
 }
 function ey(e, t) {
-    let { tag: n, attrs: l, children: r } = e;
+    let { tag: n, attrs: l, children: r } = e,
+        o = a()(ep.p_, { [ep.J2]: !0 === e.loose });
     switch (n) {
         case "a": {
             let e = (0, er.W1)(l.href ?? "");
@@ -265,9 +266,17 @@ function ey(e, t) {
                 },
                 t,
             );
+        case "ul":
+            return (0, i.jsx)("ul", { className: o, children: r }, t);
         case "ol": {
-            let e = null != l.start ? parseInt(l.start) : NaN;
-            return (0, i.jsx)("ol", { start: Number.isNaN(e) ? void 0 : e, children: r }, t);
+            let e = null != l.start ? parseInt(l.start) : NaN,
+                n = Number.isNaN(e) ? 1 : e,
+                s = String(n + Math.max(r.length - 1, 0)).length;
+            return (0, i.jsx)(
+                "ol",
+                { className: o, start: 1 === n ? void 0 : n, style: { "--totalCharacters": s }, children: r },
+                t,
+            );
         }
         case "th":
         case "td":
@@ -293,17 +302,22 @@ function ev(e) {
                         let r = t[s],
                             a = l[l.length - 1];
                         if (1 === r.nesting) {
-                            l.push({
-                                tag: r.tag,
-                                attrs: Object.fromEntries(
-                                    (r.attrs ?? []).map((e) => {
-                                        let [t, n] = e;
-                                        return [t, String(n)];
-                                    }),
-                                ),
-                                children: [],
-                                hidden: r.hidden,
-                            });
+                            ("p" === r.tag &&
+                                !r.hidden &&
+                                "li" === a.tag &&
+                                l.length >= 2 &&
+                                (l[l.length - 2].loose = !0),
+                                l.push({
+                                    tag: r.tag,
+                                    attrs: Object.fromEntries(
+                                        (r.attrs ?? []).map((e) => {
+                                            let [t, n] = e;
+                                            return [t, String(n)];
+                                        }),
+                                    ),
+                                    children: [],
+                                    hidden: r.hidden,
+                                }));
                             continue;
                         }
                         if (-1 === r.nesting) {
