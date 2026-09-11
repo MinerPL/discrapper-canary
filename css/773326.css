@@ -3496,7 +3496,7 @@
 }
 
 .headerText_aa8da2 {
-    overflow-x: hidden
+    overflow-x: clip
 }
 
 .header_aa8da2 {
@@ -4603,4 +4603,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=773326.83b3ded035c88ae3.css.map*/
+/*# sourceMappingURL=773326.05b329fb45b5c36e.css.map*/
