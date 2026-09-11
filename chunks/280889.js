@@ -154,8 +154,7 @@ class w extends O.Ay {
         );
     }
     constructor(e, t, n, i) {
-        if (
-            (super(e),
+        (super(e),
             (this.channelId = t),
             (this.preCompressionSize = e.file?.size ?? 0),
             (this.currentSize = e.file?.size ?? 0),
@@ -166,14 +165,8 @@ class w extends O.Ay {
                 ((this.mimeType = e.compressionMetadata.originalContentType),
                 (this.preCompressionSize = e.compressionMetadata.preCompressionSize)),
             e.platform === O.xz.WEB && null != e.originalMd5 && (this._originalMd5 = e.originalMd5),
-            e.platform === O.xz.WEB && null != e.imageConversionAnalytics)
-        ) {
-            const { convertedMimeType: t, conversionFailureReason: n, compressTimeMs: i } = e.imageConversionAnalytics;
-            (null != t && (this.uploadAnalytics.convertedMimeType = t),
-                null != n && (this.uploadAnalytics.conversionFailureReason = n),
-                (this.uploadAnalytics.timing.compressTimeMs = i));
-        }
-        ((this._abortController = new AbortController()),
+            this.applyItemConversionAnalytics(),
+            (this._abortController = new AbortController()),
             null != this.origin &&
                 (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : O.Cj[this.origin]),
             (this._uploadHttpClient = new L.nd()),
@@ -373,7 +366,10 @@ class w extends O.Ay {
                     null != i.convertedMimeType && (this.uploadAnalytics.convertedMimeType = i.convertedMimeType),
                     null != i.conversionFailureReason &&
                         (this.uploadAnalytics.conversionFailureReason = i.conversionFailureReason),
-                    (this.uploadAnalytics.timing.compressTimeMs = i.compressTimeMs));
+                    (this.uploadAnalytics.timing.compressTimeMs = i.compressTimeMs),
+                    null != i.imageCompressionQuality &&
+                        (this.uploadAnalytics.imageCompressionQuality = i.imageCompressionQuality),
+                    null != i.imageEncoderType && (this.uploadAnalytics.imageEncoderType = i.imageEncoderType));
             }
         }
         if (this.isCancelled()) return void this.handleComplete(this.id);
@@ -581,6 +577,8 @@ class w extends O.Ay {
                         convertedMimeType: "image/jpeg",
                         conversionFailureReason: null,
                         compressTimeMs: o.compressTimeMs,
+                        imageCompressionQuality: o.imageCompressionQuality,
+                        imageEncoderType: o.imageEncoderType,
                     }
                 );
             return (
@@ -636,6 +634,22 @@ class w extends O.Ay {
     isCancelled() {
         return "CANCELED" === this.status || "REMOVED_FROM_MSG_DRAFT" === this.status;
     }
+    applyItemConversionAnalytics() {
+        let e = this.item;
+        if (e.platform !== O.xz.WEB || null == e.imageConversionAnalytics) return;
+        let {
+            convertedMimeType: t,
+            conversionFailureReason: n,
+            compressTimeMs: i,
+            imageCompressionQuality: r,
+            imageEncoderType: a,
+        } = e.imageConversionAnalytics;
+        (null != t && (this.uploadAnalytics.convertedMimeType = t),
+            null != n && (this.uploadAnalytics.conversionFailureReason = n),
+            (this.uploadAnalytics.timing.compressTimeMs = i),
+            null != r && (this.uploadAnalytics.imageCompressionQuality = r),
+            null != a && (this.uploadAnalytics.imageEncoderType = a));
+    }
     resetState() {
         return (
             (this.status = "NOT_STARTED"),
@@ -645,6 +659,7 @@ class w extends O.Ay {
             (this.error = void 0),
             (this.startTime = void 0),
             (this.uploadAnalytics = new U()),
+            this.applyItemConversionAnalytics(),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),

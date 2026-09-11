@@ -71,7 +71,12 @@ async function l(e) {
             compressionMetadata: h,
             originalMd5: T,
             imageConversionEvaluated: !0,
-            imageConversionAnalytics: { convertedMimeType: "image/jpeg", compressTimeMs: f.compressTimeMs },
+            imageConversionAnalytics: {
+                convertedMimeType: "image/jpeg",
+                compressTimeMs: f.compressTimeMs,
+                imageCompressionQuality: f.imageCompressionQuality,
+                imageEncoderType: f.imageEncoderType,
+            },
         };
     } catch {
         return e;
