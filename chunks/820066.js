@@ -340,7 +340,7 @@ function K(e, t, n, l) {
     return n;
 }
 var z = n(551483);
-if ((n(654821), !s.KE._addedDiscordOverrides)) {
+if ((n(827669), n(654821), !s.KE._addedDiscordOverrides)) {
     let e = s.KE.positions;
     s.KE.positions = function* (t) {
         let n,
@@ -510,7 +510,8 @@ let Z = {
             return (
                 1 === t.length &&
                 1 === n.children.length &&
-                ((!0 === i.sedReplace && s.startsWith("s/")) || (i.autocomplete?.reactions === !0 && s.startsWith("+")))
+                ((!0 === i.sedReplace && s.startsWith("s/")) ||
+                    (i.autocomplete?.reactions === !0 && ("+" === s || s.startsWith("+:"))))
             );
         },
         focus(e) {
