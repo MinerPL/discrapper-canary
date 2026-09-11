@@ -18,8 +18,8 @@ function p(e) {
             isVisible: n,
             labelId: r,
             noticeText: p,
-            primaryAction: b,
-            secondaryAction: h,
+            primaryAction: h,
+            secondaryAction: b,
             isEmphasized: x = !1,
             a11yAnnounceOnShow: _,
             a11yAnnounceOnHide: A,
@@ -66,8 +66,8 @@ function p(e) {
                               (0, a.jsxs)("div", {
                                   className: g.o1,
                                   children: [
-                                      (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...h }),
-                                      (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...b }),
+                                      (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...b }),
+                                      (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...h }),
                                   ],
                               }),
                           ],

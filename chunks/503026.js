@@ -22,8 +22,8 @@ function x(e) {
         j = (0, i.yK)([a.A], () => a.A.getManyRoles(l, b ?? []).sort(u.m), [b, l]),
         [I] = (0, i.yK)([o.A], () => [o.A.can(f.xBc.MANAGE_ROLES, v), o.A.getGuildVersion(l)]);
     if (null == v) return null;
-    let y = I && null != A;
-    return 0 !== j.length || y
+    let C = I && null != A;
+    return 0 !== j.length || C
         ? (0, t.jsx)(g.A, {
               heading: p.intl.string(p.t["LPJmL/"]),
               scrollTargetId: m.bk.ROLES,

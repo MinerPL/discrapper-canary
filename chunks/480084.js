@@ -35,8 +35,8 @@ var v = n(112107),
     T = n(696451),
     R = n(317525),
     O = n(71393),
-    L = n(957565),
-    M = n(143145),
+    M = n(957565),
+    L = n(143145),
     k = n(785562),
     w = n(192308),
     P = n(588975),
@@ -75,7 +75,7 @@ var z = n(380610),
 function ef(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, L.C)(t, () =>
+            (0, M.C)(t, () =>
                 (0, X.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: Q.Ck.SUCCESS }),
             );
         }, [t]);
@@ -201,12 +201,12 @@ function eO(e) {
         react: (t, n, i) => (0, l.jsx)("span", { style: eT, onClick: eR, children: e.react(t, n, i) }, i.key),
     };
 }
-function eL(e) {
+function eM(e) {
     let { text: t } = e,
         [n, s] = i.useState(!1);
     return (0, l.jsx)(o.D, {
         onClick: function () {
-            (0, L.C)(
+            (0, M.C)(
                 t,
                 () => s(!0),
                 () => s(!1),
@@ -217,7 +217,7 @@ function eL(e) {
             : (0, l.jsx)(c.CopyIcon, { size: "xs", color: "currentColor" }),
     });
 }
-let eM = {
+let eL = {
     blockQuote: {
         react: (e, t, n) =>
             (0, l.jsxs)(
@@ -235,11 +235,11 @@ let eM = {
     s: { react: (e, t, n) => (0, l.jsx)("s", { children: t(e.content, n) }, n.key) },
     highlight: { react: (e, t, n) => (0, l.jsx)("span", { className: "highlight", children: e.content }, n.key) },
     paragraph: { react: (e, t, n) => (0, l.jsx)("p", { children: t(e.content, n) }, n.key) },
-    inlineCode: { react: (e, t, n) => (0, l.jsx)("code", { className: "inline", children: (0, M.t)(e, t, n) }, n.key) },
+    inlineCode: { react: (e, t, n) => (0, l.jsx)("code", { className: "inline", children: (0, L.t)(e, t, n) }, n.key) },
     codeBlock: {
         react(e, t, i) {
             function s() {
-                return (0, l.jsx)("code", { className: r()(eb.kw, "hljs"), children: (0, M.t)(e, t, i) });
+                return (0, l.jsx)("code", { className: r()(eb.kw, "hljs"), children: (0, L.t)(e, t, i) });
             }
             return (0, l.jsx)(
                 "pre",
@@ -247,8 +247,8 @@ let eM = {
                     children: (0, l.jsxs)("div", {
                         className: ej.Hy,
                         children: [
-                            L.p5
-                                ? (0, l.jsx)("div", { className: ej.lB, children: (0, l.jsx)(eL, { text: e.content }) })
+                            M.p5
+                                ? (0, l.jsx)("div", { className: ej.lB, children: (0, l.jsx)(eM, { text: e.content }) })
                                 : null,
                             (0, l.jsx)(b.l, {
                                 location: "MarkupReactRules",
@@ -314,7 +314,7 @@ let eM = {
     },
     staticRouteLink: {
         react: (e, t, n) =>
-            (0, M.d)(e.id)
+            (0, L.d)(e.id)
                 ? (0, l.jsxs)(
                       A.A,
                       {
@@ -405,10 +405,10 @@ let eM = {
     guild: {
         react: (e, t, n) => {
             let i = O.A.getGuild(e.guildId);
-            return (0, l.jsx)(x.A, { guild: i, children: (0, M.t)(e, t, n) }, n.key);
+            return (0, l.jsx)(x.A, { guild: i, children: (0, L.t)(e, t, n) }, n.key);
         },
     },
-    channel: { react: (e, t, n) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, M.t)(e, t, n) }, n.key) },
+    channel: { react: (e, t, n) => (0, l.jsx)(g.A, { iconType: e.iconType, children: (0, L.t)(e, t, n) }, n.key) },
     message: { react: (e, t, n) => (0, l.jsx)(S, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
@@ -432,7 +432,7 @@ function ek(e) {
         return !0 === t ? eO(e) : e;
     }
     return {
-        ...eM,
+        ...eL,
         link: (0, ev.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eC.exec(e) : null),
@@ -557,14 +557,14 @@ function ek(e) {
                         className: "attachmentLink",
                         children: [
                             (0, l.jsx)(P.P, { size: "xs", className: r()(B.Kk, H.K), color: "currentColor" }),
-                            (0, M.t)(t, i, s),
+                            (0, L.t)(t, i, s),
                         ],
                     },
                     s.key,
                 );
             },
         },
-        soundboard: s(eM.soundboard),
+        soundboard: s(eL.soundboard),
         gameMention: {
             react(e, t, n) {
                 let { gameId: i } = e;

@@ -1,19 +1,19 @@
-n.d(t, { Od: () => c, Xz: () => r, eX: () => h, pu: () => o });
-var a = n(636537),
-    l = n(228366),
-    s = n(913122),
-    i = n(652215);
+a.d(t, { Od: () => c, Xz: () => r, eX: () => h, pu: () => o });
+var n = a(636537),
+    l = a(228366),
+    s = a(913122),
+    i = a(652215);
 async function r(e) {
     l.h.wait(() => {
         l.h.dispatch({ type: "ORB_CHALLENGE_CLAIM", achievementIdentifier: e });
     });
     try {
-        let t = await a.Bo.post({ url: i.Rsh.ORB_USER_CHALLENGE_CLAIM(e), rejectWithError: !1 });
+        let t = await n.Bo.post({ url: i.Rsh.ORB_USER_CHALLENGE_CLAIM(e), rejectWithError: !1 });
         return (
             l.h.dispatch({ type: "ORB_CHALLENGE_CLAIM_SUCCESS", achievementIdentifier: e, response: t.body }), t.body
         );
-    } catch (n) {
-        let t = n instanceof s.LG ? n : new s.LG(n);
+    } catch (a) {
+        let t = a instanceof s.LG ? a : new s.LG(a);
         l.h.dispatch({ type: "ORB_CHALLENGE_CLAIM_FAIL", achievementIdentifier: e, error: t });
     }
 }
@@ -22,7 +22,7 @@ async function c(e) {
         l.h.dispatch({ type: "ORB_CHALLENGES_LIST_FETCH" });
     });
     try {
-        let t = await a.Bo.get({ url: i.Rsh.ORB_USER_CHALLENGES_LIST, rejectWithError: !1 });
+        let t = await n.Bo.get({ url: i.Rsh.ORB_USER_CHALLENGES_LIST, rejectWithError: !1 });
         return (
             l.h.dispatch({ type: "ORB_CHALLENGES_LIST_FETCH_SUCCESS", response: t.body }),
             null != e && e(t.body),
@@ -35,7 +35,7 @@ async function c(e) {
 }
 async function o() {
     try {
-        let e = await a.Bo.get({ url: i.Rsh.ORB_USER_CHALLENGES_UNREAD_STATE, rejectWithError: !1 });
+        let e = await n.Bo.get({ url: i.Rsh.ORB_USER_CHALLENGES_UNREAD_STATE, rejectWithError: !1 });
         return (l.h.dispatch({ type: "ORB_CHALLENGES_UNREAD_UPDATE", achievementUnreadState: e.body }), e.body);
     } catch (e) {
         return;
@@ -44,7 +44,7 @@ async function o() {
 async function h() {
     l.h.dispatch({ type: "ORB_CHALLENGES_UNREAD_ACK" });
     try {
-        let e = await a.Bo.post({ url: i.Rsh.ORB_USER_CHALLENGES_UNREAD_STATE_ACK, rejectWithError: !1 });
+        let e = await n.Bo.post({ url: i.Rsh.ORB_USER_CHALLENGES_UNREAD_STATE_ACK, rejectWithError: !1 });
         return (l.h.dispatch({ type: "ORB_CHALLENGES_UNREAD_UPDATE", achievementUnreadState: e.body }), e.body);
     } catch (e) {
         return;

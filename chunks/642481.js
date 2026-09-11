@@ -1,4 +1,4 @@
-n.d(t, { A: () => h, j: () => b });
+n.d(t, { A: () => b, j: () => h });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -30,7 +30,7 @@ function p(e) {
         ],
     });
 }
-function b(e) {
+function h(e) {
     let {
             title: t,
             body: n,
@@ -38,8 +38,8 @@ function b(e) {
             size: u = "md",
             actions: m,
             gradientColor: g,
-            onRequestClose: b,
-            position: h,
+            onRequestClose: h,
+            position: b,
             caretConfig: x,
             scrollBehavior: _,
             showCloseButton: A = !0,
@@ -49,22 +49,22 @@ function b(e) {
             onNudgeChange: I,
             ...j
         } = e,
-        [y, C] = l.useState(h ?? "top");
+        [y, T] = l.useState(b ?? "top");
     l.useEffect(() => {
-        null != h && C(h);
-    }, [h]);
-    let T = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
+        null != b && T(b);
+    }, [b]);
+    let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
-            b?.();
-        }, [b]),
+            h?.();
+        }, [h]),
         D = l.useCallback(
             (e) => {
-                b?.(e);
+                h?.(e);
             },
-            [b],
+            [h],
         ),
         P = l.useCallback((e) => {
-            C(e);
+            T(e);
         }, []),
         O = N ? E.caretHoverable : void 0,
         M = {
@@ -72,7 +72,7 @@ function b(e) {
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
             position: y,
-            caretConfig: T,
+            caretConfig: C,
             onRequestClose: S,
             gradientColor: g,
             onPositionChange: P,
@@ -102,9 +102,9 @@ function b(e) {
                     }),
                 (0, a.jsx)(p, { title: t, body: n }),
                 null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: E.actionBar }) : null,
-                null != T && (0, a.jsx)(d.F, { className: O }),
+                null != C && (0, a.jsx)(d.F, { className: O }),
             ],
         }),
     });
 }
-let h = b;
+let b = h;

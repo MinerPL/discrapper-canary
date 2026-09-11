@@ -1,4 +1,4 @@
-n.d(t, { J: () => V });
+n.d(t, { J: () => T });
 var r,
     i = [],
     a = "ResizeObserver loop completed with undelivered notifications.",
@@ -16,8 +16,8 @@ var r,
         for (var t = 0, n = e.parentNode; n;) ((t += 1), (n = n.parentNode));
         return t;
     },
-    d = n(623577),
-    c = function () {
+    c = n(623577),
+    d = function () {
         var e = 1 / 0,
             t = [];
         i.forEach(function (n) {
@@ -26,7 +26,7 @@ var r,
                 (n.activeTargets.forEach(function (t) {
                     var n = new u.Z(t.target),
                         i = l(t.target);
-                    (r.push(n), (t.lastReportedSize = (0, d.P)(t.target, t.observedBox)), i < e && (e = i));
+                    (r.push(n), (t.lastReportedSize = (0, c.P)(t.target, t.observedBox)), i < e && (e = i));
                 }),
                     t.push(function () {
                         n.callback.call(n.observer, r, n.observer);
@@ -54,7 +54,7 @@ var r,
                 return e.activeTargets.length > 0;
             });
         )
-            f((e = c()));
+            f((e = d()));
         return (
             i.some(function (e) {
                 return e.skippedTargets.length > 0;
@@ -64,7 +64,7 @@ var r,
     },
     p = n(717205),
     m = [],
-    v = function (e) {
+    _ = function (e) {
         if (!r) {
             var t = 0,
                 n = document.createTextNode("");
@@ -79,12 +79,12 @@ var r,
         }
         (m.push(e), r());
     },
-    _ = function (e) {
-        v(function () {
+    g = function (e) {
+        _(function () {
             requestAnimationFrame(e);
         });
     },
-    g = 0,
+    v = 0,
     y = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
     b = [
         "resize",
@@ -106,7 +106,7 @@ var r,
         return (void 0 === e && (e = 0), Date.now() + e);
     },
     w = !1,
-    E = new ((function () {
+    C = new ((function () {
         function e() {
             var e = this;
             ((this.stopped = !0),
@@ -120,12 +120,12 @@ var r,
                 if ((void 0 === e && (e = 250), !w)) {
                     w = !0;
                     var n = D(e);
-                    _(function () {
+                    g(function () {
                         var r = !1;
                         try {
                             r = h();
                         } finally {
-                            if (((w = !1), (e = n - D()), !g)) return;
+                            if (((w = !1), (e = n - D()), !v)) return;
                             r ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
@@ -163,11 +163,11 @@ var r,
             e
         );
     })())(),
-    C = function (e) {
-        (!g && e > 0 && E.start(), (g += e) || E.stop());
+    E = function (e) {
+        (!v && e > 0 && C.start(), (v += e) || C.stop());
     },
     A = n(838259),
-    B = (function () {
+    k = (function () {
         function e(e, t) {
             ((this.target = e),
                 (this.observedBox = t || A.U.CONTENT_BOX),
@@ -176,7 +176,7 @@ var r,
         return (
             (e.prototype.isActive = function () {
                 var e,
-                    t = (0, d.P)(this.target, this.observedBox, !0);
+                    t = (0, c.P)(this.target, this.observedBox, !0);
                 return (
                     (e = this.target),
                     (0, s.XJ)(e) ||
@@ -189,7 +189,7 @@ var r,
             e
         );
     })(),
-    k = function (e, t) {
+    B = function (e, t) {
         ((this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
@@ -197,28 +197,28 @@ var r,
             (this.callback = t));
     },
     F = new WeakMap(),
-    T = function (e, t) {
+    x = function (e, t) {
         for (var n = 0; n < e.length; n += 1) if (e[n].target === t) return n;
         return -1;
     },
-    V = (function () {
+    T = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
-                var n = new k(e, t);
+                var n = new B(e, t);
                 F.set(e, n);
             }),
             (e.observe = function (e, t, n) {
                 var r = F.get(e),
                     a = 0 === r.observationTargets.length;
-                0 > T(r.observationTargets, t) &&
-                    (a && i.push(r), r.observationTargets.push(new B(t, n && n.box)), C(1), E.schedule());
+                0 > x(r.observationTargets, t) &&
+                    (a && i.push(r), r.observationTargets.push(new k(t, n && n.box)), E(1), C.schedule());
             }),
             (e.unobserve = function (e, t) {
                 var n = F.get(e),
-                    r = T(n.observationTargets, t),
+                    r = x(n.observationTargets, t),
                     a = 1 === n.observationTargets.length;
-                r >= 0 && (a && i.splice(i.indexOf(n), 1), n.observationTargets.splice(r, 1), C(-1));
+                r >= 0 && (a && i.splice(i.indexOf(n), 1), n.observationTargets.splice(r, 1), E(-1));
             }),
             (e.disconnect = function (e) {
                 var t = this,

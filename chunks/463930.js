@@ -42,8 +42,8 @@ function p(e) {
             gradientClassname: R,
             gradientGlowClassname: O,
         } = (0, h.v5)({ colorStrings: u, roleStyle: "username", animateGradient: x || y || I?.animate }),
-        L = (0, h.CR)(n),
-        M = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: b }), children: L },
+        M = (0, h.CR)(n),
+        L = { className: r()(f.UU, g, C, { [f.Xh]: _, [R]: b }), children: M },
         k = { className: r()(f.lD, O, C), children: n },
         w =
             "dot" === t
@@ -66,8 +66,8 @@ function p(e) {
                 style: { color: _ && !j && null != s ? s : void 0, ...(b ? T : {}) },
                 children: [
                     null != A
-                        ? (0, l.jsx)(a.E, { tag: "span", color: "currentColor", variant: A, ...M })
-                        : (0, l.jsx)("span", { ...M }),
+                        ? (0, l.jsx)(a.E, { tag: "span", color: "currentColor", variant: A, ...L })
+                        : (0, l.jsx)("span", { ...L }),
                     b &&
                         (null != A
                             ? (0, l.jsx)(a.E, {

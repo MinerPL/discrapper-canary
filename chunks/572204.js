@@ -1,10 +1,10 @@
-a.d(t, { A: () => s });
-var l = a(477900);
-a(582128);
-var n = a(866665),
-    r = a(801966);
-let s = function (e) {
-    let { text: t, ...a } = e,
-        s = (0, r.W)(String(t));
-    return (0, l.jsx)(n.m, { text: s, ...a, asContainer: !0 });
+n.d(r, { A: () => c });
+var e = n(477900);
+n(582128);
+var i = n(866665),
+    a = n(801966);
+let c = function (t) {
+    let { text: r, ...n } = t,
+        c = (0, a.W)(String(r));
+    return (0, e.jsx)(i.m, { text: c, ...n, asContainer: !0 });
 };

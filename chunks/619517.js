@@ -313,8 +313,8 @@ class v extends i.Component {
                 useFullWidth: T,
                 placeholder: R,
                 placeholderVersion: O,
-                dataSafeSrc: L,
-                srcIsAnimated: M,
+                dataSafeSrc: M,
+                srcIsAnimated: L,
             } = this.props,
             { readyState: k, hasMouseOver: w, hasFocus: P } = this.state,
             D = null != n,
@@ -340,8 +340,8 @@ class v extends i.Component {
                 src: "",
                 placeholder: R,
                 placeholderVersion: O,
-                dataSafeSrc: L,
-                srcIsAnimated: M,
+                dataSafeSrc: M,
+                srcIsAnimated: L,
                 children:
                     null != h
                         ? (e) => {

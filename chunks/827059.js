@@ -29,8 +29,8 @@ var g = n(562708),
     T = n(212245),
     R = n(139286),
     O = n(915089),
-    L = n(724511),
-    M = n(850992),
+    M = n(724511),
+    L = n(850992),
     k = n(887695),
     w = n(435558),
     P = n(962125),
@@ -204,7 +204,7 @@ let z = i.forwardRef(function (e, t) {
         [g, x] = n.useStore((e) => [e.inspectedExpressionPosition, e.hasInteracted], H.x),
         A = i.useCallback(
             (e) => {
-                (n.setActiveCategoryIndex("" === e ? 0 : M.Uk),
+                (n.setActiveCategoryIndex("" === e ? 0 : L.Uk),
                     n.setInspectedExpressionPosition(0, 0),
                     n.setSearchPlaceholder(null),
                     (0, d.Ri)(e),
@@ -272,8 +272,8 @@ function Y(e) {
             listPadding: T,
             gridNavigatorId: R,
             gridNotice: O,
-            renderHeader: L,
-            renderUpsell: M,
+            renderHeader: M,
+            renderUpsell: L,
         } = e,
         w = i.useRef(null),
         P = i.useRef(null),
@@ -357,7 +357,7 @@ function Y(e) {
     });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != L ? L(es) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", es, " "] }),
+            null != M ? M(es) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", es, " "] }),
             U && null != f
                 ? f(Z.p$)
                 : (0, l.jsxs)(l.Fragment, {
@@ -388,7 +388,7 @@ function Y(e) {
                                             rowHeight: S,
                                             sectionHeaderHeight: v,
                                             sectionFooterHeight: N,
-                                            renderUpsell: M,
+                                            renderUpsell: L,
                                             onScroll: u,
                                         })
                                       : null,
@@ -475,8 +475,8 @@ function eO(e, t) {
     let n = t.get("0") ?? e_.pD;
     e.push({ key: ea.Cx.DEFAULTS, categoryInfo: { type: ea.Cx.DEFAULTS }, items: eb(n, eN.U) });
 }
-var eL = n(837381),
-    eM = n(866665),
+var eM = n(837381),
+    eL = n(866665),
     ek = n(88218),
     ew = n(407698),
     eP = n(698279),
@@ -507,7 +507,7 @@ function eB(e, t, n, i, s) {
                     ...i,
                     className: eU.L1,
                     onClick: t,
-                    children: (0, l.jsx)(L.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: s }),
+                    children: (0, l.jsx)(M.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: s }),
                 },
                 e.key,
             );
@@ -521,10 +521,10 @@ function eB(e, t, n, i, s) {
 }
 function eW(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: s, isNitroLocked: r } = e,
-        a = (0, eL.rm)(eF(n));
+        a = (0, eM.rm)(eF(n));
     return t.categoryInfo.type === ea.Cx.GUILD
         ? (0, l.jsx)(ew.Q, { guild: t.categoryInfo.guild, children: eB(t, i, s, a, r) })
-        : (0, l.jsx)(eM.m, {
+        : (0, l.jsx)(eL.m, {
               text: (function (e) {
                   switch (e.categoryInfo.type) {
                       case ea.Cx.FAVORITES:
@@ -583,7 +583,7 @@ function eK(e) {
         className: r()(u ? eU.HZ : eU.jv),
         categoryListRef: c,
         expressionsListRef: t,
-        store: M.LW,
+        store: L.LW,
         categories: n,
         listPadding: a,
         renderCategoryListItem: m,
@@ -623,7 +623,7 @@ function e4(e) {
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(eQ.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: e7.Zg })
                     : (0, l.jsx)(eZ.ImageIcon, { size: "md", color: "currentColor", className: e7.Zg }),
-            graphicSecondary: null != a ? (0, l.jsx)(L.A, { guild: a, shouldAnimate: !o && u }) : null,
+            graphicSecondary: null != a ? (0, l.jsx)(M.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
             isFavorite: r,
@@ -698,7 +698,7 @@ var ti = n(948611),
 function tr(e) {
     let { guild: t, focused: n, onSelectItem: i, ...s } = e,
         { canCreateExpressions: a } = (0, ed.nr)(t);
-    return (0, l.jsx)(eM.m, {
+    return (0, l.jsx)(eL.m, {
         text: eD.intl.string(eD.t["fHo+z1"]),
         shouldShow: !a,
         children: (0, l.jsx)("li", {
@@ -736,7 +736,7 @@ function ta(e) {
             showLockForDisabledSound: m,
             inExpressionPicker: f,
         } = e,
-        p = M.LW.useStore((e) => e.inspectedExpressionPosition),
+        p = L.LW.useStore((e) => e.inspectedExpressionPosition),
         g = `${l}-${s}`,
         x = r && p.rowIndex === l && p.columnIndex === s;
     switch (t.item.type) {
@@ -809,7 +809,7 @@ function th(e) {
                                             className: to.nr,
                                         });
                                     case ea.Cx.GUILD:
-                                        return (0, l.jsx)(L.A, { guild: t.guild, height: 16, width: 16 });
+                                        return (0, l.jsx)(M.A, { guild: t.guild, height: 16, width: 16 });
                                     case ea.Cx.DEFAULTS:
                                         return (0, l.jsx)(E.p, {
                                             size: "custom",
@@ -892,7 +892,7 @@ function tp(e) {
             inExpressionPicker: N,
             analyticsSource: b,
         } = e,
-        { analyticsLocations: L } = (0, c.Ay)(),
+        { analyticsLocations: M } = (0, c.Ay)(),
         { analyticsLocations: k } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
         { location: w } = (0, T.p)(),
         P = i.useMemo(() => ({ ...w, section: eS.JJy.SOUNDBOARD_SOUND_PICKER }), [w]),
@@ -1084,13 +1084,13 @@ function tp(e) {
                       });
             }, [d, r, a, !0, f, g, t, m, h, n, u, s, c, A, C, S, E, I]);
         })(s, void 0, v),
-        [eI, eL] = i.useState([]),
-        eM = i.useMemo(
+        [eI, eM] = i.useState([]),
+        eL = i.useMemo(
             () => (W.length > 0 ? [{ key: ea.Cx.SEARCH, categoryInfo: { type: ea.Cx.SEARCH }, items: eb(eI) }] : Z),
             [Z, W.length, eI],
         ),
         ek = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
-        ew = i.useMemo(() => eM.filter((e) => e.items.length > 0), [eM]),
+        ew = i.useMemo(() => eL.filter((e) => e.items.length > 0), [eL]),
         eU = i.useMemo(
             () => ew.findLastIndex((e) => !!(0, D.Em)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [ew],
@@ -1134,12 +1134,12 @@ function tp(e) {
                     case ea.uq.SOUND:
                         let n = tc[e?.category] ?? null,
                             l = e?.item.index;
-                        return eZ(e.item.sound, null == n ? L : [...L, n], t?.shiftKey !== !0, l);
+                        return eZ(e.item.sound, null == n ? M : [...M, n], t?.shiftKey !== !0, l);
                     case ea.uq.ADD_SOUND:
                         return (o(), tl(e.item.guild.id));
                 }
             },
-            [L, eZ, o],
+            [M, eZ, o],
         ),
         eq = i.useCallback(
             (e, n, i, a, o) => {
@@ -1159,7 +1159,7 @@ function tp(e) {
                                         channel: s,
                                         interactive: eB ? eW : !B,
                                         forceSecondaryActions: !0,
-                                        analyticsLocations: L,
+                                        analyticsLocations: M,
                                     },
                                     rowIndex: i.rowIndex,
                                     columnIndex: t,
@@ -1180,7 +1180,7 @@ function tp(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [ew, A, F, t, f, eY, s, eB, eW, B, L, E, eG, N],
+            [ew, A, F, t, f, eY, s, eB, eW, B, M, E, eG, N],
         ),
         eJ = i.useCallback(
             (e, t) => {
@@ -1252,15 +1252,15 @@ function tp(e) {
             },
             [eU, eG, eV, ew.length],
         ),
-        e8 = i.useCallback((e) => eL((0, eu.lG)(e, X, V, s, L)), [s, V, X, L]),
+        e8 = i.useCallback((e) => eM((0, eu.lG)(e, X, V, s, M)), [s, V, X, M]),
         e6 = i.useCallback(
             (e) => {
                 (0, j.L3)(e, async () => {
                     let { default: e } = await n.e("811562").then(n.bind(n, 666801));
-                    return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: L, ...t });
+                    return (t) => (0, l.jsx)(e, { sourceAnalyticsLocations: M, ...t });
                 });
             },
-            [L],
+            [M],
         ),
         e5 = i.useCallback(
             () =>
@@ -1359,7 +1359,7 @@ function tp(e) {
                     categories: ew,
                     collapsedCategories: eH,
                     containerWidth: a,
-                    store: M.LW,
+                    store: L.LW,
                     onSelectItem: eY,
                     onSearchExpressions: e8,
                     hasSearchResults: eI.length > 0,

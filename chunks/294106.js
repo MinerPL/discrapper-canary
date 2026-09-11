@@ -83,31 +83,31 @@ t.isKeyHotkey = function (e, t) {
                     o = (e = e.replace("++", "+add")).split("+"),
                     s = o.length;
                 for (var l in r) i[r[l]] = !1;
-                var d = !0,
-                    c = !1,
+                var c = !0,
+                    d = !1,
                     f = void 0;
                 try {
-                    for (var h, p = o[Symbol.iterator](); !(d = (h = p.next()).done); d = !0) {
+                    for (var h, p = o[Symbol.iterator](); !(c = (h = p.next()).done); c = !0) {
                         var m = h.value,
-                            v = m.endsWith("?") && m.length > 1;
-                        v && (m = m.slice(0, -1));
-                        var _ = u(m),
-                            g = r[_];
-                        ((1 !== s && g) ||
+                            _ = m.endsWith("?") && m.length > 1;
+                        _ && (m = m.slice(0, -1));
+                        var g = u(m),
+                            v = r[g];
+                        ((1 !== s && v) ||
                             (n
-                                ? (i.key = _)
+                                ? (i.key = g)
                                 : (i.which = (function (e) {
                                       return a[(e = u(e))] || e.toUpperCase().charCodeAt(0);
                                   })(m))),
-                            g && (i[g] = !v || null));
+                            v && (i[v] = !_ || null));
                     }
                 } catch (e) {
-                    ((c = !0), (f = e));
+                    ((d = !0), (f = e));
                 } finally {
                     try {
-                        !d && p.return && p.return();
+                        !c && p.return && p.return();
                     } finally {
-                        if (c) throw f;
+                        if (d) throw f;
                     }
                 }
                 return i;

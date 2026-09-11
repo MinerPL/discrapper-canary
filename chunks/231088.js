@@ -1,4 +1,4 @@
-(n.d(t, { RY: () => A, Ww: () => I, ZL: () => v, Zf: () => E, n4: () => j }), n(321073));
+(n.d(t, { RY: () => A, Ww: () => I, ZL: () => E, Zf: () => v, n4: () => j }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -29,14 +29,14 @@ function I(e) {
         A = l.useCallback(() => {
             ((I.current = !1), c(t), r("editing"));
         }, [t]),
-        E = l.useRef(o);
+        v = l.useRef(o);
     l.useLayoutEffect(() => {
-        E.current = o;
+        v.current = o;
     });
-    let v = l.useCallback(() => {
-            I.current || ((I.current = !0), n(E.current), r("done"));
+    let E = l.useCallback(() => {
+            I.current || ((I.current = !0), n(v.current), r("done"));
         }, [n]),
-        S = l.useCallback(() => {
+        C = l.useCallback(() => {
             I.current || ((I.current = !0), r("done"));
         }, []);
     (l.useEffect(() => {
@@ -49,24 +49,24 @@ function I(e) {
                     (x.current?.scrollIntoView({ block: "nearest", behavior: g ? "auto" : "smooth" }),
                     e || h.current?.focus({ preventScroll: !0 })));
         }, [u, g]));
-    let C = l.useCallback(
+    let S = l.useCallback(
             (e) => {
-                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || v();
+                !u || (null != x.current && (0, a.vq)(e.relatedTarget) && x.current.contains(e.relatedTarget)) || E();
             },
-            [u, v],
+            [u, E],
         ),
         b = l.useCallback(
             (e) => {
-                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), S());
+                u && "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (p.current = !0), C());
             },
-            [u, S],
+            [u, C],
         ),
         k = l.useCallback(() => {
-            ((p.current = !0), v(), h.current?.blur());
-        }, [v]),
+            ((p.current = !0), E(), h.current?.blur());
+        }, [E]),
         T = l.useCallback(() => {
-            ((p.current = !0), S(), h.current?.blur());
-        }, [S]),
+            ((p.current = !0), C(), h.current?.blur());
+        }, [C]),
         N = l.useCallback(() => {
             u || ((j.current = !0), A());
         }, [u, A]),
@@ -88,13 +88,13 @@ function I(e) {
         wrapperRef: x,
         inputRef: h,
         handleStartEditing: A,
-        handleCommit: v,
-        handleCancel: S,
+        handleCommit: E,
+        handleCancel: C,
         handleInputCommit: k,
         handleInputCancel: T,
         onInputFocus: N,
         onInputKeyDown: y,
-        onBlur: C,
+        onBlur: S,
         onContainerKeyDown: b,
     };
 }
@@ -109,7 +109,7 @@ function A(e) {
         });
     return null == t ? l : (0, i.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
 }
-function E(e) {
+function v(e) {
     let { id: t, message: n, type: l } = e,
         s = "error" === l,
         r = s ? u.E : g.WarningIcon;
@@ -122,7 +122,7 @@ function E(e) {
         children: [(0, i.jsx)(r, { size: "xs", color: "currentColor", className: s ? p.ik : p.QW }), n],
     });
 }
-function v(e) {
+function E(e) {
     let {
             isEditing: t,
             preview: n,
@@ -136,9 +136,9 @@ function v(e) {
             previewErrorMessage: h,
             previewWarningMessage: I,
             className: j,
-            wrapperRef: v,
-            onBlur: S,
-            onKeyDown: C,
+            wrapperRef: E,
+            onBlur: C,
+            onKeyDown: S,
             textVariant: b,
             textColor: k,
             disabled: T = !1,
@@ -159,8 +159,8 @@ function v(e) {
     F || t === U || W(!0);
     let H = [];
     (L && H.push(R), G && "compact" !== g && H.push(_));
-    let B = H.length > 0 ? H.join(" ") : void 0;
-    function V() {
+    let V = H.length > 0 ? H.join(" ") : void 0;
+    function B() {
         let { activeElement: e } = w.current?.ownerDocument ?? document;
         ((0, a.vq)(e, HTMLElement) && e.blur(), u());
     }
@@ -172,7 +172,7 @@ function v(e) {
             : function (e) {
                   e.preventDefault();
               },
-        onClick: T ? void 0 : V,
+        onClick: T ? void 0 : B,
         children: [
             L
                 ? (0, i.jsx)(m.E, {
@@ -187,10 +187,10 @@ function v(e) {
                 (0, i.jsx)(x.D, {
                     innerRef: d,
                     "aria-label": c,
-                    "aria-describedby": B,
+                    "aria-describedby": V,
                     "aria-expanded": !1,
                     onClick: (e) => {
-                        (e.stopPropagation(), V());
+                        (e.stopPropagation(), B());
                     },
                     focusProps: { ringTarget: w },
                 }),
@@ -198,14 +198,14 @@ function v(e) {
         ],
     });
     return (0, i.jsx)("div", {
-        ref: v,
+        ref: E,
         className: r()(
             p.kL,
             { [p.oE]: "compact" === g, [p.c1]: "multiline" === g, [p.CP]: N, [p.WK]: y, [p.Dy]: t },
             j,
         ),
-        onBlur: S,
-        onKeyDown: C,
+        onBlur: C,
+        onKeyDown: S,
         children: (0, i.jsx)(
             "div",
             {
@@ -215,7 +215,7 @@ function v(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: p.VH, children: z }),
-                              G && "compact" !== g && (0, i.jsx)(E, { id: _, message: M, type: D }),
+                              G && "compact" !== g && (0, i.jsx)(v, { id: _, message: M, type: D }),
                           ],
                       }),
             },

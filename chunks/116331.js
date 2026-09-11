@@ -1,4 +1,4 @@
-l.d(e, { A: () => g });
+l.d(e, { A: () => c });
 var i = l(17928),
     n = l(107563),
     r = l(561794),
@@ -9,10 +9,10 @@ var i = l(17928),
     A = l(695904),
     f = l(419341);
 let o = { hasNewWishlistItems: !1, newWishlistItemCount: 0, shouldLogExposure: !1 };
-function g(t) {
+function c(t) {
     let e = (0, A.bq)(),
         l = (0, f.A)(t),
-        g = (0, i.bG)(
+        c = (0, i.bG)(
             [a.A, u.A, s.default],
             () => {
                 if (null == e || t.id === s.default.getCurrentUser()?.id) return null;
@@ -24,7 +24,7 @@ function g(t) {
             [t, e],
         );
     return (
-        (0, r.fw)({ wishlistId: g, userId: t.id }),
+        (0, r.fw)({ wishlistId: c, userId: t.id }),
         (0, i.cf)(
             [a.A, u.A, s.default, n.A],
             () => {

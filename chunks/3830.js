@@ -1,16 +1,16 @@
-a.d(t, { A: () => o });
-var l = a(477900),
-    n = a(821609),
-    r = a(976860),
-    s = a(801966);
-let o = function (e) {
-    let { href: t, ctaText: a, variant: o = "secondary" } = e,
-        i = (0, s.W)(a);
-    return (0, l.jsx)(n.$, {
-        variant: o,
-        text: i,
+n.d(r, { A: () => s });
+var e = n(477900),
+    i = n(821609),
+    a = n(976860),
+    c = n(801966);
+let s = function (t) {
+    let { href: r, ctaText: n, variant: s = "secondary" } = t,
+        u = (0, c.W)(n);
+    return (0, e.jsx)(i.$, {
+        variant: s,
+        text: u,
         onClick: () => {
-            (0, r.pX)(t);
+            (0, a.pX)(r);
         },
     });
 };

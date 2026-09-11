@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => nj,
-    Sk: () => nM,
+    Sk: () => nL,
     Zx: () => nv,
     v7: () => nR,
     L0: () => nO,
@@ -9,7 +9,7 @@ n.d(t, {
     Ay: () => nP,
     uW: () => nw,
     NO: () => n_,
-    ck: () => nL,
+    ck: () => nM,
     ml: () => nT,
     Vu: () => nN,
 });
@@ -96,8 +96,8 @@ let R = { width: 500, height: j.$V },
         webpackId: 854379,
         renderLoader: () => (0, l.jsx)("div", { className: T.R4, style: R, children: (0, l.jsx)(v.y, {}) }),
     }),
-    L = { height: j.$V },
-    M = i.memo(function (e) {
+    M = { height: j.$V },
+    L = i.memo(function (e) {
         let { positionTargetRef: t, align: n, ...i } = e;
         return (0, l.jsx)("span", {
             style: j.sK,
@@ -115,7 +115,7 @@ let R = { width: 500, height: j.$V },
                     return (0, l.jsx)("section", {
                         className: T.V6,
                         role: "dialog",
-                        style: L,
+                        style: M,
                         "aria-label": b.intl.string(b.t["3CNGLK"]),
                         children: t && (0, l.jsx)(O, { ...i }),
                     });
@@ -347,7 +347,7 @@ let eu = [8, 8, 0, 8],
                 },
                 [n, g],
             ),
-            L = i.useCallback(
+            M = i.useCallback(
                 (e, t) => {
                     let n = e === g.length - 1,
                         i = g[e],
@@ -372,7 +372,7 @@ let eu = [8, 8, 0, 8],
                 },
                 [g, x],
             ),
-            M = i.useCallback(
+            L = i.useCallback(
                 (e, t) => {
                     let i = x[t.sectionIndex],
                         s = i.data[t.sectionRowIndex],
@@ -433,8 +433,8 @@ let eu = [8, 8, 0, 8],
                         className: eo.p_,
                         listPadding: eu,
                         onScroll: v,
-                        renderRow: M,
-                        renderSection: L,
+                        renderRow: L,
+                        renderSection: M,
                         renderSectionHeader: O,
                         rowCount: g.length,
                         rowCountBySection: j,
@@ -488,8 +488,8 @@ function eR(e) {
 function eO(e) {
     return (0, l.jsx)(e_.A, { confettiLocation: eb.k.CHAT_INPUT, children: (0, l.jsx)(eR, { ...e }) });
 }
-var eL = n(931664),
-    eM = n(631576),
+var eM = n(931664),
+    eL = n(631576),
     ek = n(68935),
     ew = n(406704),
     eP = n(885386),
@@ -726,7 +726,7 @@ var tu = n(749314),
 let th = i.memo(function (e) {
     let { channelId: t, chatInputType: n } = e,
         [s, r] = i.useState(null),
-        a = (0, m.bG)([eL.A], () => eL.A.getStickerPreview(t, n.drafts.type));
+        a = (0, m.bG)([eM.A], () => eM.A.getStickerPreview(t, n.drafts.type));
     return n.stickers?.allowSending && null != a && 0 !== a.length
         ? (0, l.jsxs)(l.Fragment, {
               children: [
@@ -743,7 +743,7 @@ let th = i.memo(function (e) {
                                           onBlur: () => r(null),
                                           className: td.b,
                                           "aria-label": b.intl.formatToPlainString(b.t.BGAQRd, { name: e.name }),
-                                          onClick: () => (0, eM.x5)(t, n.drafts.type),
+                                          onClick: () => (0, eL.x5)(t, n.drafts.type),
                                           children: (0, l.jsx)("div", {
                                               className: td.Nk,
                                               children: (0, l.jsx)(tn.a, {
@@ -856,8 +856,8 @@ var tj = n(874546),
     tT = n(857250),
     tR = n(97483),
     tO = n(821609),
-    tL = n(308368),
-    tM = n(968522),
+    tM = n(308368),
+    tL = n(968522),
     tk = n(643747),
     tw = n(426120);
 let tP = "rich_presence_invite";
@@ -871,7 +871,7 @@ function tD(e, t) {
 }
 function tU(e) {
     let { channel: t, activity: n } = e,
-        s = (0, tM.Ay)(tM.P8.CHANNEL_TEXT_AREA_BARS),
+        s = (0, tL.Ay)(tL.P8.CHANNEL_TEXT_AREA_BARS),
         [a, o] = i.useState(!1),
         u = (0, tC.N)(n);
     return (i.useEffect(() => {
@@ -902,7 +902,7 @@ function tU(e) {
                               onClick: function () {
                                   (tD(t, "send_invite"),
                                       o(!0),
-                                      tL.A.sendActivityInvite({
+                                      tM.A.sendActivityInvite({
                                           channelId: t.id,
                                           type: ea.xL.JOIN,
                                           activity: n,
@@ -1281,7 +1281,7 @@ function nv(e, t, s, r, a) {
             (i, d, h, m, p, g) => {
                 if (o) return;
                 u(!0);
-                let A = eL.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
+                let A = eM.A.getStickerPreview(a, t.drafts.type)?.map((e) => e.id) ?? [],
                     C = eH.A.getUploads(a, t.drafts.type) ?? [];
                 if (null == d && !m && !p && (0, eC.xz)(C, a)) {
                     (u(!1),
@@ -1418,10 +1418,10 @@ function nj(e) {
                     ? ((0, tm.fh)({
                           sticker: e,
                           stickerSelectLocation: i,
-                          isReplacement: null != eL.A.getStickerPreview(s, r.drafts.type),
+                          isReplacement: null != eM.A.getStickerPreview(s, r.drafts.type),
                           analyticsLocations: o,
                       }),
-                      (0, eM.$x)(s, e, r.drafts.type))
+                      (0, eL.$x)(s, e, r.drafts.type))
                     : (a({ value: "", uploads: void 0, stickers: [e.id] }), t.current?.clearValue()),
                 (0, ex.v8)(),
                 t.current?.focus());
@@ -1472,7 +1472,7 @@ function nO(e) {
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function nL(e) {
+function nM(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -1484,7 +1484,7 @@ function nL(e) {
         ),
     };
 }
-function nM(e, t, n, l) {
+function nL(e, t, n, l) {
     let i = e.getGuildId(),
         s = (0, m.bG)([eI.A], () => null != i && eI.A.isLurking(i), [i]),
         r = (0, m.bG)([eU.Ay, eB.default], () => {
@@ -1558,7 +1558,7 @@ let nP = i.memo(
                 type: T,
                 focused: R,
                 error: O,
-                renderAttachButton: L,
+                renderAttachButton: M,
                 renderApplicationCommandIcon: w,
                 renderButtons: P,
                 pendingReply: D,
@@ -1605,12 +1605,12 @@ let nP = i.memo(
             })),
             eb = e_ ? ej.expressionPickerFormat : C.IG.FLEXIBLE,
             eT = !e_ || ej.condensePickerWhenNarrow,
-            [eR, eL] = i.useState(!eN);
+            [eR, eM] = i.useState(!eN);
         (0, A.i4)(ec, (e) => {
             let { width: t } = e;
-            return eL(!eN && (null == t || t > 450));
+            return eM(!eN && (null == t || t > 450));
         });
-        let eM = eb === C.IG.HIDDEN,
+        let eL = eb === C.IG.HIDDEN,
             ek = eb === C.IG.CONDENSED || (eb === C.IG.FLEXIBLE && eT && !eR),
             { activeCommand: ew, activeCommandSection: eV } = (0, m.cf)([k.A], () => ({
                 activeCommand: T.commands?.enabled ? k.A.getActiveCommand(b.id) : null,
@@ -1623,7 +1623,7 @@ let nP = i.memo(
                 canAttachFiles: eY,
                 canCreateThreads: eQ,
                 canEveryoneSendMessages: e0,
-            } = nM(b, T, ew, N),
+            } = nL(b, T, ew, N),
             e1 = T.toolbarType === e$.O1.STATIC,
             e2 = !eP.D_.useSetting() && !(0, eq.isAndroidWeb)() && null != window.ResizeObserver,
             e3 = !e2 || !T.commands?.enabled || !R || "/" !== a,
@@ -1665,7 +1665,7 @@ let nP = i.memo(
                 [eE, b.id, b.guild_id],
             ),
             tA = i.useCallback(() => eS?.current?.hide(), []),
-            { editorHeight: tE, handleResize: tI } = nL(G),
+            { editorHeight: tE, handleResize: tI } = nM(G),
             {
                 handleTab: ty,
                 handleEnter: tS,
@@ -1689,7 +1689,7 @@ let nP = i.memo(
                 ),
             }),
             { expressionPickerView: tb, shouldHideExpressionPicker: tT, handleOuterClick: tR } = nk(T, eE, b.id),
-            { selectedAutocompleteInputType: tO, selectedAutocompleteInputError: tL } = (function (e, t) {
+            { selectedAutocompleteInputType: tO, selectedAutocompleteInputError: tM } = (function (e, t) {
                 let [n, l] = i.useState({ selectedAutocompleteInputType: null, selectedAutocompleteInputError: !1 }),
                     s = i.useCallback(() => {
                         let e,
@@ -1715,7 +1715,7 @@ let nP = i.memo(
                     n
                 );
             })(e7, eE),
-            { handleAutocompleteVisibilityChange: tM } = nw(T, b.id),
+            { handleAutocompleteVisibilityChange: tL } = nw(T, b.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
                 return (0, em.bG)(
@@ -1734,7 +1734,7 @@ let nP = i.memo(
         let tP = null != D,
             tD = (ez && !((eH || eW) && e0)) || (tt && T.submit?.useDisabledStylesOnSubmit),
             tG = null;
-        null != ew ? (tG = w?.(ew, eV, t4.g$)) : (!ez || eQ) && (tG = L?.(tP, t4.g$));
+        null != ew ? (tG = w?.(ew, eV, t4.g$)) : (!ez || eQ) && (tG = M?.(tP, t4.g$));
         let { isVisible: tV, showsUpsell: tH } = (0, ny.A)({
                 type: T,
                 textValue: a,
@@ -1821,14 +1821,14 @@ let nP = i.memo(
                 pendingReply: D,
                 scheduledMessageDraft: er,
                 selectedAutocompleteInputType: tO,
-                selectedAutocompleteInputError: tL,
+                selectedAutocompleteInputError: tM,
             }),
             t$ = 0 === a.trim().length,
             tX = null != D ? [X, tr].filter(Boolean).join(" ") : X,
             t1 = T.layout === e$.wt.INLINE,
             t2 = T.layout === e$.wt.FLUSH,
             t3 = (0, l.jsx)("div", { ref: eC, className: t4.BW }),
-            t8 = tk ? (0, l.jsx)(M, { align: "right", positionTargetRef: eC, channel: b }) : null,
+            t8 = tk ? (0, l.jsx)(L, { align: "right", positionTargetRef: eC, channel: b }) : null,
             t6 =
                 null != P
                     ? P()
@@ -1838,8 +1838,8 @@ let nP = i.memo(
                           channel: b,
                           handleSubmit: tl,
                           isEmpty: t$,
-                          showAllButtons: !ek && !eM,
-                          expressionButtonsHidden: eM,
+                          showAllButtons: !ek && !eL,
+                          expressionButtonsHidden: eL,
                       }),
             t5 = tW
                 ? (0, l.jsx)(nm.A, {
@@ -1978,7 +1978,7 @@ let nP = i.memo(
                                     editorRef: eE,
                                     onSendMessage: tn,
                                     onSendSticker: td,
-                                    onVisibilityChange: tM,
+                                    onVisibilityChange: tL,
                                     editorScrollerRef: eI,
                                     editorHeight: tE,
                                     barsHeight: 40 * tY.floating.length,

@@ -13,8 +13,8 @@ var a = n(477900),
     g = n(885386),
     E = n(531685),
     p = n(486020),
-    b = n(837529),
-    h = n(686189),
+    h = n(837529),
+    b = n(686189),
     x = n(714719),
     _ = n(859161),
     A = n(207634),
@@ -30,8 +30,8 @@ function v(e) {
             avatarSize: I,
             avatarOffsetX: j,
             avatarOffsetY: y,
-            bannerWidth: C,
-            bannerHeight: T,
+            bannerWidth: T,
+            bannerHeight: C,
             themePadding: S,
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: P = !1,
@@ -39,11 +39,11 @@ function v(e) {
         [O, M] = l.useState(!1),
         U = (0, o.bG)([E.A], () => E.A.isFocused()),
         B = g.kt.getSetting(),
-        k = (0, b.Nx)(),
-        { bannerSrc: G, status: w } = (0, h.A)({
+        k = (0, h.Nx)(),
+        { bannerSrc: G, status: w } = (0, b.A)({
             displayProfile: n,
             pendingBanner: A,
-            size: C,
+            size: T,
             canAnimate: P || !B ? O : U,
         }),
         L = k ? null : (G ?? null),
@@ -57,7 +57,7 @@ function v(e) {
         bannerSrc: L,
         backgroundColor: "COMPLETE" === w || k ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, p.o4)(L),
-        height: T,
+        height: C,
         cutout: z,
         overlay: v,
         onInteractionStart: () => M(!0),
@@ -75,6 +75,6 @@ function R(e) {
         } = e,
         o = A.T[t],
         d = null != s ? { ...o, ...s } : o,
-        c = !(0, b.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
+        c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
     return (0, a.jsx)(v, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

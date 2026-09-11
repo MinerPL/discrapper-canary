@@ -60,8 +60,8 @@ class T extends s.Component {
 }
 var R = n(268218),
     O = n(193663),
-    L = n(490427),
-    M = n(609425),
+    M = n(490427),
+    L = n(609425),
     k = n(922301),
     w = n(660184),
     P = n(73392),
@@ -198,7 +198,7 @@ let el = s.memo(function (e) {
                 guildId: o,
                 isHovering: u,
             } = e,
-            c = (0, M.A)({ userId: a?.id, guildId: o }),
+            c = (0, L.A)({ userId: a?.id, guildId: o }),
             d = (0, P.a)({ displayNameStyles: c }),
             h = null == o && null != c;
         return (0, i.jsxs)(i.Fragment, {
@@ -295,7 +295,7 @@ let el = s.memo(function (e) {
             ),
             f = s.useMemo(
                 () =>
-                    !(0, L.A)({
+                    !(0, M.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === X.$pd.CUSTOM_STATUS;
@@ -341,8 +341,8 @@ let el = s.memo(function (e) {
                 channel: j,
                 guildId: b,
                 className: R,
-                nameplate: L,
-                hideClanTag: M = !1,
+                nameplate: M,
+                hideClanTag: L = !1,
                 hideSubtext: k = !1,
                 hideTooltip: w = !1,
                 onMouseDown: P,
@@ -383,8 +383,8 @@ let el = s.memo(function (e) {
             eT = null != eb,
             eR = eT ? eb : ej,
             eO = (0, Y.Yl)(ej, E, ei),
-            eL = (eT || eO) && t && !eN,
-            eM = s.useCallback(() => {
+            eM = (eT || eO) && t && !eN,
+            eL = s.useCallback(() => {
                 em(!0);
             }, []),
             ek = s.useCallback(() => {
@@ -419,7 +419,7 @@ let el = s.memo(function (e) {
                   targetElementRef: ed,
                   renderPopout: eU,
                   position: "bottom",
-                  shouldShow: eL,
+                  shouldShow: eM,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: A.Y.Animation.NONE,
@@ -428,13 +428,13 @@ let el = s.memo(function (e) {
                       (0, i.jsx)(O.A, {
                           ref: ed,
                           selected: t,
-                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eL }),
+                          className: a()(et.Dc, R, { [et.WK]: y === X.clD.OFFLINE && !t, [et.PJ]: eM }),
                           innerClassName: et.Hz,
                           onClick: U,
                           onKeyDown: D,
                           onMouseDown: P,
                           onContextMenu: G,
-                          onMouseEnter: eM,
+                          onMouseEnter: eL,
                           onMouseLeave: ek,
                           onBlur: eP,
                           hovered: eh,
@@ -447,7 +447,7 @@ let el = s.memo(function (e) {
                                             colorString: n ?? null,
                                             name: f ?? es,
                                             colorStrings: ev,
-                                            hideClanTag: M,
+                                            hideClanTag: L,
                                             user: p,
                                             guildId: b,
                                             isHovering: eh,
@@ -462,7 +462,7 @@ let el = s.memo(function (e) {
                                                 colorString: n ?? null,
                                                 name: f ?? es,
                                                 colorStrings: ev,
-                                                hideClanTag: M,
+                                                hideClanTag: L,
                                                 user: p,
                                                 guildId: b,
                                                 isHovering: eh,
@@ -484,7 +484,7 @@ let el = s.memo(function (e) {
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: L,
+                          nameplate: M,
                           subText: (0, i.jsx)(eu, {
                               hideSubtext: k,
                               activities: C,

@@ -1,31 +1,31 @@
-n.d(t, { Gy: () => R, k7: () => u.k });
-var a = n(477900),
-    l = n(582128),
-    s = n(503698),
-    r = n.n(s),
-    i = n(939249);
-n(14115);
-var u = n(305003),
-    c = n(626031),
-    o = n(744682);
+a.d(t, { Gy: () => E, k7: () => u.k });
+var n = a(477900),
+    l = a(582128),
+    s = a(503698),
+    r = a.n(s),
+    i = a(939249);
+a(14115);
+var u = a(305003),
+    c = a(626031),
+    o = a(744682);
 let d = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } },
     m = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend", start: 240, duration: 180 } };
-var f = n(462887),
-    x = n(736653),
-    h = n(802814);
+var f = a(462887),
+    x = a(736653),
+    h = a(802814);
 let j = { width: 60, height: 60 };
-function k(e) {
-    let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: s, getDuration: r } = e,
+function A(e) {
+    let { currentAnimationType: t, animationTypeRef: a, onSetAnimationDurationMS: n, play: s, getDuration: r } = e,
         i = r(),
         u = null != i ? 1e3 * i : 3e3;
     ((0, l.useEffect)(() => {
-        null !== t && t !== n.current && ((n.current = t), s());
-    }, [t, s, n]),
+        null !== t && t !== a.current && ((a.current = t), s());
+    }, [t, s, a]),
         (0, l.useEffect)(() => {
-            a(u);
-        }, [a, u]));
+            n(u);
+        }, [n, u]));
 }
-function v(e) {
+function k(e) {
     var t;
     let s,
         r,
@@ -44,9 +44,9 @@ function v(e) {
             )),
             (u = l.useCallback(
                 (e) =>
-                    (0, a.jsx)(o.P, {
+                    (0, n.jsx)(o.P, {
                         ...e,
-                        src: () => n.e("278611").then(n.t.bind(n, 433886, 19)),
+                        src: () => a.e("278611").then(a.t.bind(a, 433886, 19)),
                         ref: s,
                         initialAnimation: r.current,
                         markers: m,
@@ -61,11 +61,11 @@ function v(e) {
                 Component: u,
             });
     return (
-        k({ currentAnimationType: c, ...d, ...x }),
-        (0, a.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
+        A({ currentAnimationType: c, ...d, ...x }),
+        (0, n.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-function g(e) {
+function v(e) {
     var t;
     let s,
         r,
@@ -84,9 +84,9 @@ function g(e) {
             )),
             (u = l.useCallback(
                 (e) =>
-                    (0, a.jsx)(o.P, {
+                    (0, n.jsx)(o.P, {
                         ...e,
-                        src: () => n.e("245492").then(n.t.bind(n, 653727, 19)),
+                        src: () => a.e("245492").then(a.t.bind(a, 653727, 19)),
                         ref: s,
                         initialAnimation: r.current,
                         markers: d,
@@ -101,21 +101,21 @@ function g(e) {
                 Component: u,
             });
     return (
-        k({ currentAnimationType: c, ...m, ...x }),
-        (0, a.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
+        A({ currentAnimationType: c, ...m, ...x }),
+        (0, n.jsx)(f, { ...j, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-let A = function (e) {
+let R = function (e) {
     let t = (0, x.Ay)();
-    return (0, f.q)(t) ? (0, a.jsx)(g, { ...e }) : (0, a.jsx)(v, { ...e });
+    return (0, f.q)(t) ? (0, n.jsx)(v, { ...e }) : (0, n.jsx)(k, { ...e });
 };
-var C = n(375708);
-function N() {
-    return (0, a.jsx)("div", { className: h.V8 });
+var g = a(375708);
+function C() {
+    return (0, n.jsx)("div", { className: h.V8 });
 }
-let R = (0, l.forwardRef)(function (e, t) {
+let E = (0, l.forwardRef)(function (e, t) {
     let {
-            id: n,
+            id: a,
             balance: s,
             balanceWidgetMode: o = u.k.DEFAULT,
             showNotificationBadge: d,
@@ -123,27 +123,27 @@ let R = (0, l.forwardRef)(function (e, t) {
             onMouseDown: f,
             disabled: x,
             isInModalOverlay: j,
-            className: k,
+            className: A,
         } = e,
-        [v, g] = (0, l.useState)(!1),
-        R = (0, l.useMemo)(() => (o === u.k.SELECTED ? h.wH : v ? h.mr : h.Ay), [o, v]),
-        [b, E] = (0, l.useState)(!1),
-        [p, y] = (0, l.useState)(!1),
-        [O, S] = (0, l.useState)(2700),
-        T = null === s;
+        [k, v] = (0, l.useState)(!1),
+        E = (0, l.useMemo)(() => (o === u.k.SELECTED ? h.wH : k ? h.mr : h.Ay), [o, k]),
+        [N, b] = (0, l.useState)(!1),
+        [p, O] = (0, l.useState)(!1),
+        [L, _] = (0, l.useState)(2700),
+        y = null === s;
     ((0, l.useEffect)(() => {
-        T &&
-            !b &&
-            (E(!0),
+        y &&
+            !N &&
+            (b(!0),
             setTimeout(() => {
-                y(!0);
+                O(!0);
             }, 500));
-    }, [T, E, b]),
+    }, [y, b, N]),
         (0, l.useEffect)(() => {
-            p && !T && E(!1);
-        }, [T, p]));
-    let _ = T || b,
-        L = b ? null : s,
+            p && !y && b(!1);
+        }, [y, p]));
+    let T = y || N,
+        S = N ? null : s,
         [M, D] = (0, l.useState)(null),
         w = (0, l.useRef)(null),
         B = (0, l.useCallback)(() => {
@@ -156,35 +156,35 @@ let R = (0, l.forwardRef)(function (e, t) {
             },
             [D, M],
         );
-    return (0, a.jsx)(i.D, {
-        onClick: _ ? void 0 : m,
-        "aria-label": _ ? C.intl.string(C.t.y0WGqP) : C.intl.formatToPlainString(C.t.zPaLL9, { balance: L ?? 0 }),
-        "aria-busy": _,
+    return (0, n.jsx)(i.D, {
+        onClick: T ? void 0 : m,
+        "aria-label": T ? g.intl.string(g.t.y0WGqP) : g.intl.formatToPlainString(g.t.zPaLL9, { balance: S ?? 0 }),
+        "aria-busy": T,
         className: r()(h.vk, { [h.r9]: x }),
-        id: n ?? "balance-widget-pill",
-        children: (0, a.jsxs)("span", {
+        id: a ?? "balance-widget-pill",
+        children: (0, n.jsxs)("span", {
             onMouseDown: f,
-            onMouseEnter: x ? void 0 : () => g(!0),
-            onMouseLeave: x ? void 0 : () => g(!1),
+            onMouseEnter: x ? void 0 : () => v(!0),
+            onMouseLeave: x ? void 0 : () => v(!1),
             ref: t,
-            className: r()(h.kL, R, k, { [h.En]: _, [h.dA]: j, [h.r9]: x }),
+            className: r()(h.kL, E, A, { [h.En]: T, [h.dA]: j, [h.r9]: x }),
             children: [
-                (0, a.jsx)("div", {
-                    className: r()(h.hr, _ ? h.nr : void 0),
-                    children: (0, a.jsx)(A, {
+                (0, n.jsx)("div", {
+                    className: r()(h.hr, T ? h.nr : void 0),
+                    children: (0, n.jsx)(R, {
                         currentAnimationType: M,
                         animationTypeRef: w,
-                        onSetAnimationDurationMS: S,
+                        onSetAnimationDurationMS: _,
                     }),
                 }),
-                (0, a.jsx)(c.A, {
-                    value: L,
+                (0, n.jsx)(c.A, {
+                    value: S,
                     onValueChange: P,
                     onValueReached: B,
-                    targetTotalCounterTime: O,
-                    className: _ ? h.F : void 0,
+                    targetTotalCounterTime: L,
+                    className: T ? h.F : void 0,
                 }),
-                d && (0, a.jsx)(N, {}),
+                d && (0, n.jsx)(C, {}),
             ],
         }),
     });

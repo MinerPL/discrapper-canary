@@ -17,8 +17,8 @@ function c(e) {
             body: g,
             graphic: E,
             size: p = "md",
-            actions: b,
-            gradientColor: h,
+            actions: h,
+            gradientColor: b,
         } = e,
         x = l.useContext(r.C),
         [_, A] = l.useState("closed"),
@@ -27,8 +27,8 @@ function c(e) {
         R = "opening-mouse" === _ || "open-mouse" === _,
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
-        y = (x.keyboardModeEnabled || I) && null != b,
-        [C, T] = l.useState(0),
+        y = (x.keyboardModeEnabled || I) && null != h,
+        [T, C] = l.useState(0),
         S = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
                 n = arguments.length > 2 ? arguments[2] : void 0,
@@ -114,18 +114,18 @@ function c(e) {
         }, [j, P]));
     let k = l.useMemo(
             () =>
-                null == b
-                    ? b
-                    : b.map((e) => ({
+                null == h
+                    ? h
+                    : h.map((e) => ({
                           ...e,
                           onClick: (t) => {
                               (e.onClick?.(t), P(!1));
                           },
                       })),
-            [b, P],
+            [h, P],
         ),
         G = l.useCallback((e) => {
-            T(e);
+            C(e);
         }, []);
     return (0, a.jsxs)("div", {
         onMouseEnter: O,
@@ -144,12 +144,12 @@ function c(e) {
                 graphic: E,
                 size: p,
                 actions: k,
-                gradientColor: h,
+                gradientColor: b,
                 showCloseButton: y,
                 shouldTrapFocus: y,
                 returnRef: y ? n : void 0,
                 isCaretHoverable: !0,
-                caretConfig: { align: "custom", customOffset: C },
+                caretConfig: { align: "custom", customOffset: T },
                 onNudgeChange: G,
                 onRequestClose: (e) => {
                     P(null != e && (0, i.sg)(e));

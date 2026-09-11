@@ -100,7 +100,7 @@ function f(e) {
             [f, p],
         ),
         A = l.useRef(null),
-        E = l.useCallback(() => {
+        v = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
             A.current = { x: e.left, y: e.top };
@@ -111,14 +111,14 @@ function f(e) {
                 A.current = null;
                 return;
             }
-            null == A.current && E();
-        }, [n, E]),
+            null == A.current && v();
+        }, [n, v]),
         !0 !== n || null == h || null == j)
     )
         return null;
-    null == A.current && E();
-    let { x: v, y: S } = A.current ?? { x: 0, y: 0 },
-        C = h.x - v - 60 * !!I,
-        b = h.y - S;
-    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${C}px, ${b}px, 0)` }, children: j });
+    null == A.current && v();
+    let { x: E, y: C } = A.current ?? { x: 0, y: 0 },
+        S = h.x - E - 60 * !!I,
+        b = h.y - C;
+    return (0, i.jsx)("div", { className: x.kL, style: { transform: `translate3d(${S}px, ${b}px, 0)` }, children: j });
 }
