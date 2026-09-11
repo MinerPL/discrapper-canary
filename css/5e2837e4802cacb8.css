@@ -158,7 +158,7 @@
     align-items: center;
     display: flex;
     flex-shrink: 0;
-    margin-inline-end: var(--custom-editable-text-inline-padding, var(--space-6));
+    margin-inline-end: var(--space-4);
     opacity: 0;
     position: relative;
     transition: opacity 50ms ease-in;
@@ -171,4 +171,4 @@
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=082cf7e3bdf3568a.css.map*/
+/*# sourceMappingURL=5e2837e4802cacb8.css.map*/
