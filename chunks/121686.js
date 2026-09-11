@@ -371,8 +371,8 @@ var eJ = n(734066),
     e2 = n(475358),
     e3 = n(866665),
     e5 = n(408278),
-    e8 = n(625903),
-    e7 = n(404778),
+    e7 = n(625903),
+    e8 = n(404778),
     e6 = n(689175),
     e4 = n(821609),
     e9 = n(532624),
@@ -512,7 +512,7 @@ function t_(e) {
                                     text: V.intl.string(V.t["3D5yo/"]),
                                     children: (0, i.jsx)(e5.K, {
                                         onClick: () => n(),
-                                        icon: e8.SettingsIcon,
+                                        icon: e7.SettingsIcon,
                                         size: "sm",
                                         variant: "icon-only",
                                         "aria-label": V.intl.string(V.t["3D5yo/"]),
@@ -563,7 +563,7 @@ function t_(e) {
                             }),
                     ],
                 }),
-                (0, i.jsx)(e7.c, {}),
+                (0, i.jsx)(e8.c, {}),
                 A.length > 0
                     ? (0, i.jsxs)(e6.Ch, {
                           className: tT.Vg,
@@ -804,8 +804,8 @@ var tY = n(397562),
     t2 = n(977059),
     t3 = n(915614),
     t5 = n(744753),
-    t8 = n(559506),
-    t7 = n(646986),
+    t7 = n(559506),
+    t8 = n(646986),
     t6 = n(657538),
     t4 = n(946356),
     t9 = n(465829),
@@ -1399,8 +1399,8 @@ function n3(e) {
         : V.intl.formatToPlainString(V.t["9OFjSe"], { dateString: n, timeString: i });
 }
 var n5 = n(996988),
-    n8 = n(207634),
-    n7 = n(47453);
+    n7 = n(207634),
+    n8 = n(47453);
 function n6(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: r, openedAt: o, className: d } = e,
         h = __OVERLAY__,
@@ -1675,13 +1675,13 @@ function n6(e) {
                                 themeType: n5.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: n7.wx,
+                                        className: n8.wx,
                                         children: [
                                             (0, i.jsx)(t3.A, { user: t, displayProfile: f, themeType: n5.d.POPOUT }),
                                             (0, i.jsx)(t1.A, {
                                                 user: t,
                                                 displayProfile: f,
-                                                avatarSize: n8.T[n5.d.POPOUT].avatarSize,
+                                                avatarSize: n7.T[n5.d.POPOUT].avatarSize,
                                                 onOpenProfile: h ? void 0 : q,
                                             }),
                                             (0, i.jsx)(ns.A, {
@@ -1697,7 +1697,7 @@ function n6(e) {
                                         className: eq.rf,
                                         style: { pointerEvents: Z ? "none" : void 0 },
                                         children: [
-                                            (0, i.jsx)(t8.A, { userId: t.id }),
+                                            (0, i.jsx)(t7.A, { userId: t.id }),
                                             (0, i.jsx)(t9.Ay, {
                                                 className: eq.eF,
                                                 user: t,
@@ -1726,7 +1726,7 @@ function n6(e) {
                                                     widgets: f?.widgets,
                                                     onOpenUserProfileModal: q,
                                                 }),
-                                            (0, i.jsx)(t7.A, {
+                                            (0, i.jsx)(t8.A, {
                                                 user: t,
                                                 currentUser: t,
                                                 onOpenUserProfileModal: q,
@@ -2190,7 +2190,7 @@ function i5(e) {
         actions: m,
     });
 }
-function i8(e) {
+function i7(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, n4.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, s] = (function (e) {
@@ -2286,7 +2286,7 @@ function i8(e) {
                 })
         : e.children;
 }
-var i7 = n(615675),
+var i8 = n(615675),
     i6 = n(900797),
     i4 = n(847374),
     i9 = n(348858),
@@ -2312,7 +2312,7 @@ function la(e) {
             play: p,
             events: { onMouseEnter: g, onMouseLeave: A },
         } = (0, i9.I)(h ? "undeafen" : "deafen"),
-        x = n ? i7.T : m,
+        x = n ? i8.T : m,
         { name: v } = (0, ey.x5)(iu.oh.AUDIO_OUTPUT),
         E = (0, le.A)(t, n, a),
         { analyticsLocations: C } = (0, k.Ay)(w.A.AUDIO_OUTPUT_BUTTON),
@@ -2674,13 +2674,13 @@ function ly(e) {
         (p(!1), s());
     }, [s]);
     if (null != a) {
-        let e = (0, lN.A)("1789148179858", !0);
+        let e = (0, lN.A)("1789148741970", !0);
         t =
             null != e
                 ? V.intl.formatToPlainString(V.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
                 : V.intl.formatToPlainString(V.t.Gzh6ZP, { webBuildOverride: a.id });
     } else t = V.intl.string(V.t.cduTBL);
-    let g = e8.SettingsIcon,
+    let g = e7.SettingsIcon,
         A = (0, lv.w)();
     return (
         (g = null != a ? lE.H : A.Component),
@@ -3838,7 +3838,7 @@ class lD extends l.PureComponent {
         let { badgeDirectoryNuxPopoverVariant: t, currentUser: n, dismissibleContents: l } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i8, {
+            : (0, i.jsx)(i7, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,
