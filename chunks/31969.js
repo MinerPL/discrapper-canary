@@ -68,12 +68,11 @@ function _(e, l) {
                 };
             }
             case "storefront_badge": {
-                let e = p.storefront?.headerText;
-                if ((0, s.uJ)(e)) return null;
+                let e = p.vcStream?.tooltip;
                 return {
                     Icon: g("TAG"),
                     text: m.intl.string(d.default.hriMCc),
-                    tooltip: e,
+                    tooltip: (0, s.uJ)(e) ? null : e,
                     endsAt: l,
                     flavor: p.flavor,
                     reward: null,
