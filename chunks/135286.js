@@ -3,7 +3,7 @@ var i = n(636537),
     r = n(306173),
     a = n(913122),
     s = n(626584),
-    l = n(543838),
+    l = n(544576),
     o = n(453771),
     d = n(77729),
     c = n(652215);
@@ -305,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "611968", versionHash: "62deb51863cdd98673a81e907889525b8d8e9c18" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "611974", versionHash: "38e855595bffd053ef7c5384d186c44a6af08739" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}

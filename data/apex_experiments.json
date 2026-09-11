@@ -5493,6 +5493,25 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-agc2-mobile",
+    "defaultConfig": {
+      "agc2Enabled": false,
+      "noiseCancellationDuringProcessing": false,
+      "vadKrispActivationThreshold": 0.5
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null
+    }
+  },
+  {
     "name": "2026-09-collectibles-navigation-menu",
     "kind": "user",
     "defaultConfig": {
