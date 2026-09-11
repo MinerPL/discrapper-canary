@@ -183,9 +183,7 @@
 }
 
 .trailingAccessoryButton__9c314 {
-    --control-icon-only-background-hover: var(--control-secondary-background-default);
-    --control-icon-only-border-hover: var(--control-secondary-border-default);
-    margin-block: 2px
+    margin-block: calc(var(--space-4)/2)
 }
 
-/*# sourceMappingURL=2db771da115d5aa8.css.map*/
+/*# sourceMappingURL=fb002a97deebf91e.css.map*/

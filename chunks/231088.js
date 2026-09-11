@@ -1,12 +1,12 @@
-(n.d(t, { RY: () => A, Ww: () => I, ZL: () => v, Zf: () => E, n4: () => j }), n(321073));
+(n.d(t, { Ww: () => I, ZL: () => v, n4: () => j }), n(321073));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
     r = n.n(s),
     a = n(621466),
-    o = n(219869),
-    d = n(17928),
-    c = n(866665),
+    o = n(17928),
+    d = n(866665),
+    c = n(408278),
     u = n(695366),
     g = n(738188),
     m = n(834730),
@@ -17,9 +17,9 @@ var i = n(477900),
 function I(e) {
     let { value: t, onCommit: n, disabled: i = !1 } = e,
         [s, r] = l.useState("idle"),
-        [o, c] = l.useState(t),
+        [d, c] = l.useState(t),
         u = "editing" === s && !i,
-        g = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        g = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
         m = l.useRef(null),
         x = l.useRef(null),
         h = l.useRef(null),
@@ -29,9 +29,9 @@ function I(e) {
         A = l.useCallback(() => {
             ((I.current = !1), c(t), r("editing"));
         }, [t]),
-        E = l.useRef(o);
+        E = l.useRef(d);
     l.useLayoutEffect(() => {
-        E.current = o;
+        E.current = d;
     });
     let v = l.useCallback(() => {
             I.current || ((I.current = !0), n(E.current), r("done"));
@@ -81,7 +81,7 @@ function I(e) {
     return {
         isEditing: u,
         committedValue: t,
-        editedValue: o,
+        editedValue: d,
         setEditedValue: c,
         onCommit: n,
         editButtonRef: m,
@@ -102,12 +102,24 @@ function j(e, t) {
     return null != t && e.length > t ? h.intl.formatToPlainString(h.t.ICT5S6, { maxLength: t }) : void 0;
 }
 function A(e) {
-    let { tooltip: t, ...n } = e,
-        l = (0, i.jsx)("div", {
-            className: p.L7,
-            children: (0, i.jsx)(o.T, { ...n, size: "sm", variant: "input-accessory" }),
-        });
-    return null == t ? l : (0, i.jsx)(c.m, { text: t, ariaHidden: !0, children: l });
+    let { label: t, tooltip: n, hasPopup: l, ...s } = e;
+    return (0, i.jsx)("div", {
+        className: p.L7,
+        children: (0, i.jsx)(d.m, {
+            asContainer: !0,
+            text: n ?? t,
+            ariaHidden: !0,
+            shouldShow: !s.disabled,
+            children: (0, i.jsx)(c.K, {
+                ...s,
+                type: "button",
+                size: "sm",
+                variant: "icon-only",
+                "aria-label": t,
+                "aria-haspopup": l,
+            }),
+        }),
+    });
 }
 function E(e) {
     let { id: t, message: n, type: l } = e,

@@ -63,7 +63,6 @@
 
 .contentContainer__70feb {
     --custom-cover-gap: calc(var(--space-4)*2 + 1px);
-    --custom-inline-field-ring-padding: var(--space-4);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -162,7 +161,6 @@
 }
 
 .entryContent_fca8d7 {
-    --custom-inline-field-ring-padding: var(--space-4);
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -285,4 +283,4 @@
     margin-inline-end: auto
 }
 
-/*# sourceMappingURL=ae217bd920a99087.css.map*/
+/*# sourceMappingURL=836e3d50d9647d6a.css.map*/

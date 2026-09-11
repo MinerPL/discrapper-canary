@@ -1,11 +1,26 @@
 .container__62663 {
+    --custom-editable-text-inline-padding: calc(var(--space-6) + 1px);
+    --custom-editable-text-block-padding: calc(var(--space-4)/2 + 1px);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     display: flex;
     gap: var(--space-6);
-    margin-block: calc(var(--custom-editable-text-block-padding, 2px)*-1);
-    padding-block: var(--custom-editable-text-block-padding, 2px);
+    margin-block: calc(var(--custom-editable-text-block-padding)*-1);
+    min-width: 0;
+    padding-block: var(--custom-editable-text-block-padding);
     position: relative
+}
+
+.container__62663[data-padding-inline=sm] {
+    --custom-editable-text-inline-padding: calc(var(--space-4) + 1px)
+}
+
+.container__62663[data-padding-block=none] {
+    --custom-editable-text-block-padding: 1px
+}
+
+.container__62663[data-padding-block=md] {
+    --custom-editable-text-block-padding: calc(var(--space-4) + 1px)
 }
 
 .full-motion .container__62663 {
@@ -24,16 +39,15 @@
 }
 
 .container__62663.hasError__62663,
-.container__62663.hasWarning__62663,
 .container__62663:has(.field__62663:focus),
-.container__62663:hover {
+.container__62663:not([data-disabled=true], [data-read-only=true]):hover {
     background-color: var(--custom-editable-text-feedback-background, var(--input-background-default));
     outline: 1px solid var(--custom-editable-text-feedback-border, var(--input-border-hover));
     outline-offset: -1px
 }
 
-.container__62663:has(.field__62663:focus),
-.container__62663:is(.hasError__62663, .hasWarning__62663):hover {
+.container__62663.hasError__62663:not([data-disabled=true], [data-read-only=true]):hover,
+.container__62663:has(.field__62663:focus) {
     outline: 2px solid var(--custom-editable-text-feedback-border, var(--input-border-active));
     outline-offset: -2px
 }
@@ -47,9 +61,20 @@
     color: var(--input-text-error-default)
 }
 
-.container__62663.hasWarning__62663 {
-    --custom-editable-text-feedback-background: var(--background-feedback-warning);
-    --custom-editable-text-feedback-border: var(--border-feedback-warning)
+.container__62663[data-disabled=true] {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.container__62663[data-read-only=true] {
+    outline: 1px solid var(--input-border-readonly);
+    outline-offset: -1px
+}
+
+.hugContents__62663 {
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .input__62663 {
@@ -63,7 +88,7 @@
     line-height: inherit;
     outline: none;
     overflow: hidden;
-    padding: 0 var(--custom-editable-text-inline-padding, var(--space-6));
+    padding: 0 var(--custom-editable-text-inline-padding);
     text-overflow: ellipsis;
     white-space: pre;
     -webkit-app-region: no-drag;
@@ -89,28 +114,27 @@
 }
 
 .input__62663.field__62663 {
-    inset-block: calc(var(--custom-editable-text-block-padding, 2px) - 1px);
+    inset-block: calc(var(--custom-editable-text-block-padding) - 1px);
     inset-inline-start: 0;
     padding-block: 1px;
     position: absolute;
     width: 100%
 }
 
-.input__62663.field__62663:not(:focus, :disabled) {
+.hasTrailing__62663 .input__62663.field__62663 {
+    width: calc(100% - var(--space-32) - var(--space-6) - var(--space-4))
+}
+
+.input__62663.field__62663:not(:focus, :disabled, :-moz-read-only) {
+    cursor: pointer
+}
+
+.input__62663.field__62663:not(:focus, :disabled, :read-only) {
     cursor: pointer
 }
 
 .clamped__62663 .input__62663.field__62663 {
     overflow-y: auto
-}
-
-.input__62663.field__62663.multiline__62663::-webkit-scrollbar-thumb {
-    border-inline-end-width: 3px;
-    border-inline-start-width: 1px
-}
-
-.input__62663.field__62663.multiline__62663::-webkit-scrollbar-track {
-    margin-block: 4px
 }
 
 .hasPreview__62663 .field__62663:not(:focus) {
@@ -124,11 +148,11 @@
 }
 
 .hasPreview__62663 .field__62663:focus::-moz-selection {
-    background-color: color-mix(in oklab, var(--brand-500) 40%, transparent)
+    background-color: var(--background-mod-strong)
 }
 
 .hasPreview__62663 .field__62663:focus::selection {
-    background-color: color-mix(in oklab, var(--brand-500) 40%, transparent)
+    background-color: var(--background-mod-strong)
 }
 
 .sizer__62663 {
@@ -161,14 +185,35 @@
     margin-inline-end: var(--space-4);
     opacity: 0;
     position: relative;
-    transition: opacity 50ms ease-in;
     z-index: 1
+}
+
+.full-motion .trailing__62663 {
+    transition: opacity 50ms ease-in
 }
 
 .container__62663:focus-within .trailing__62663,
 .container__62663:hover .trailing__62663 {
-    opacity: 1;
+    opacity: 1
+}
+
+.full-motion .container__62663:focus-within .trailing__62663,
+.full-motion .container__62663:hover .trailing__62663 {
     transition: opacity .15s ease-out
 }
 
-/*# sourceMappingURL=5e2837e4802cacb8.css.map*/
+.enable-forced-colors .container__62663 {
+    outline: 1px solid ButtonText;
+    outline-offset: -1px
+}
+
+.enable-forced-colors .container__62663:focus-within {
+    outline-color: Highlight
+}
+
+.enable-forced-colors .container__62663[data-disabled=true] {
+    opacity: 1;
+    outline-color: GrayText
+}
+
+/*# sourceMappingURL=3f7b6ac96693a511.css.map*/

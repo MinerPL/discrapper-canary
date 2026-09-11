@@ -13,7 +13,6 @@ e.exports = {
     mp: "emojiImage_e7d73e",
     Yf: "emojiAliasInputContainer_e7d73e",
     AU: "emojiRowTools_e7d73e",
-    XH: "emojiAliasInputDisabled_e7d73e",
     Zw: "emojiDisabled_e7d73e",
     xp: "uploader_e7d73e",
     Fg: "fileInput_e7d73e",

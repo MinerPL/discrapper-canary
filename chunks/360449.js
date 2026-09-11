@@ -7530,14 +7530,15 @@ function os(e) {
                 children: (0, p.jsx)("div", {
                     className: on.Yf,
                     children: (0, p.jsx)(aV.A, {
-                        className: k()({ [on.XH]: l }),
-                        variant: "text-md/normal",
-                        matchControlHeight: "sm",
+                        textVariant: "text-md/normal",
+                        size: "sm",
+                        fullWidth: !1,
                         disabled: l,
                         minLength: 1,
                         maxLength: rw.EMOJI_MAX_LENGTH,
                         name: el.intl.string(el.t.qUpzYO),
-                        "aria-label": el.intl.string(el.t.qUpzYO),
+                        label: el.intl.string(el.t.qUpzYO),
+                        hideLabel: !0,
                         autoComplete: "off",
                         value: r ?? "",
                         onCommit: function () {
