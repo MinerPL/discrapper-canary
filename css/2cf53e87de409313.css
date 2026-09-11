@@ -101,6 +101,10 @@
     opacity: .3
 }
 
+.mana-type-consolidation .newPostCount__599fa {
+    text-transform: uppercase
+}
+
 .liveIndicator__46869 {
     background-color: var(--green-360);
     border-radius: 8px;
@@ -417,4 +421,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=8caafc52cb306aa0.css.map*/
+/*# sourceMappingURL=2cf53e87de409313.css.map*/

@@ -29,14 +29,17 @@
     align-items: center;
     border-radius: 3px;
     display: flex;
-    font-size: 11px;
-    font-weight: var(--font-weight-bold);
     height: 14px;
-    letter-spacing: .4px;
     line-height: 14px;
     margin-inline-start: 8px;
     padding: 0 4px;
-    text-align: center;
+    text-align: center
+}
+
+.legacyIndicatorTypography__43963 {
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: .4px;
     text-transform: uppercase
 }
 
@@ -84,4 +87,4 @@
     margin-inline-end: 5px
 }
 
-/*# sourceMappingURL=959922.5672cfa1b205338e.css.map*/
+/*# sourceMappingURL=959922.5d7a7359568d800f.css.map*/
