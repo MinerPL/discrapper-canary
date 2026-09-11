@@ -1463,7 +1463,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e2 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eV.A().log(
-    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611900, Version Hash: 1b7979a042ca32e5f9bab7c4dbf1aef449df0a56`,
+    `[BUILD INFO] Release Channel: ${e2}, Build Number: 611904, Version Hash: e29ff3c96186c26e89a171c93e9c8db5b09a29a1`,
 ),
     D.A.setTags({ appContext: G.QCW }),
     eh.A.initBasic(),
@@ -21377,7 +21377,7 @@ let ND = "isHideDevBanner",
                     className: ta()(Ny.Wz, Ny.mr),
                     children: [
                         (0, O.jsx)(NL, { className: Ny.Kk }),
-                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611900" }),
+                        tT.intl.format(tT.t.uyrfYF, { buildNumber: "611904" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -48001,8 +48001,8 @@ var kf = n(670735),
     km = n(162802),
     kg = n(256693),
     kS = n(51250),
-    kN = n(649248),
-    kC = n(580015);
+    kN = n(908700),
+    kC = n(649248);
 function kO(e) {
     let [t] = ec.useState(() => {
             let t = document.createElement("div");
@@ -48012,8 +48012,8 @@ function kO(e) {
         r = ec.useCallback(
             (n) => {
                 null != n
-                    ? (kN.A.registerPoolEntry(e, { container: t, overlay: n }), i(!0))
-                    : (kN.A.removePoolEntry(e), i(!1));
+                    ? (kC.A.registerPoolEntry(e, { container: t, overlay: n }), i(!0))
+                    : (kC.A.removePoolEntry(e), i(!1));
             },
             [t, e],
         );
@@ -48038,7 +48038,7 @@ function kL() {
             return e?.renderInFramePool === !0 ? e : null;
         }),
         s = ec.useCallback((e) => {
-            (null != e && kN.A.setPool(e), t(null != e));
+            (null != e && kC.A.setPool(e), t(null != e));
         }, []);
     return (0, O.jsxs)("div", {
         ref: s,
@@ -48062,7 +48062,7 @@ function ky(e) {
         o = null;
     if (null != a) {
         let { url: e, proxyTicketRefreshing: n } = t.data,
-            i = (0, kC.A)(t);
+            i = (0, kN.A)(t, bs.vu.DESKTOP);
         o = n
             ? (0, O.jsx)("div", { className: kR.p, children: (0, O.jsx)(nz.y, {}) })
             : (0, O.jsx)(km.o, {

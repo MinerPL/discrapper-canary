@@ -1,19 +1,20 @@
-r.d(e, { A: () => s });
+r.d(e, { A: () => i });
 var n = r(477900);
 r(582128);
-var t = r(833147),
-    u = r(625180),
-    o = r(580015);
-function s(a) {
-    let { frame: e, application: r, className: s } = a,
-        i = e.id,
-        c = (0, n.jsx)(t.A, {
+var u = r(833147),
+    t = r(625180),
+    o = r(908700),
+    s = r(360469);
+function i(a) {
+    let { frame: e, application: r, className: i } = a,
+        c = e.id,
+        l = (0, n.jsx)(u.A, {
             application: r,
-            queryParams: (0, o.A)(e),
+            queryParams: (0, o.A)(e, s.vu.DESKTOP),
             url: e.data.url,
-            onIframeMount: (a) => u.A.attachFrameIframe(i, a),
-            onIframeUnmount: (a) => u.A.detachFrameIframe(i, a),
-            onGuestReload: () => u.A.setFramePrefersPictureInPictureOnNavigateAway(i, !1),
+            onIframeMount: (a) => t.A.attachFrameIframe(c, a),
+            onIframeUnmount: (a) => t.A.detachFrameIframe(c, a),
+            onGuestReload: () => t.A.setFramePrefersPictureInPictureOnNavigateAway(c, !1),
         });
-    return null != s ? (0, n.jsx)("div", { className: s, children: c }) : c;
+    return null != i ? (0, n.jsx)("div", { className: i, children: l }) : l;
 }
