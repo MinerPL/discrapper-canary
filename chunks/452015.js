@@ -315,25 +315,30 @@ let eT = (0, n(240921).Ay)({
     kind: "user",
     name: "2026-02-longer-group-dm-invites",
     defaultConfig: { inviteMaxAgeSeconds: 86400 },
-    variations: { 0: { inviteMaxAgeSeconds: 86400 }, 1: { inviteMaxAgeSeconds: 604800 } },
+    variations: { 0: { inviteMaxAgeSeconds: 86400 }, 1: { inviteMaxAgeSeconds: 2419200 } },
 });
-function ev(e) {
-    let { location: t } = e,
-        { inviteMaxAgeSeconds: n } = eT.getConfig({ location: t });
-    return n;
-}
-var eM = n(287809),
-    ey = n(427262);
-async function eD(e, t) {
+var ev = n(287809),
+    eM = n(427262);
+async function ey(e, t) {
     if (0 === t.length) return;
     let n = [];
     for (let e of t) {
-        let t = eM.default.getUser(e);
+        let t = ev.default.getUser(e);
         null == t || t.bot || n.push(t);
     }
     if (0 !== n.length)
         try {
-            let t = await G.Ay.createInvite(e, { max_age: ev({ location: "5326c5_1" }) }, el.PE1.GROUP_DM),
+            let t = await G.Ay.createInvite(
+                    e,
+                    {
+                        max_age: (function (e) {
+                            let { location: t } = e,
+                                { inviteMaxAgeSeconds: n } = eT.getConfig({ location: t });
+                            return n;
+                        })({ location: "5326c5_1" }),
+                    },
+                    el.PE1.GROUP_DM,
+                ),
                 i = await Promise.all(
                     n.map(async (e) => {
                         var n;
@@ -363,7 +368,7 @@ async function eD(e, t) {
             if (r.length > 0) {
                 let e, t;
                 ((t =
-                    (e = r.map((e) => ey.Ay.getName(e))).length > 0
+                    (e = r.map((e) => eM.Ay.getName(e))).length > 0
                         ? ea.intl.formatToPlainString(ea.t["wWp/+6"], {
                               inviteCount: e.length,
                               username1: e[0],
@@ -375,7 +380,7 @@ async function eD(e, t) {
             } else
                 l.length > 0 &&
                     (function (e) {
-                        let t = e.map((e) => ey.Ay.getName(e));
+                        let t = e.map((e) => eM.Ay.getName(e));
                         if (0 === t.length) return;
                         let n = ea.intl.formatToPlainString(ea.t.gztrTs, {
                             inviteCount: t.length,
@@ -389,22 +394,23 @@ async function eD(e, t) {
             (0, h.P0)((0, g.o)(ea.intl.string(ea.t.iRntUl), f.Ck.FAILURE));
         }
 }
-var eR = n(279208),
-    ex = n(267102),
-    eO = n(976860),
-    eU = n(219271),
-    ew = n(427358),
-    eP = n(95701),
-    eL = n(734057),
-    eb = n(71393),
-    eG = n(958590),
-    eF = n(584777),
-    ej = n(763827),
-    eV = n(573163),
-    ek = n(994500),
-    eH = n(351906),
-    eB = n(957565),
-    eY = n(625494),
+var eD = n(279208),
+    eR = n(267102),
+    ex = n(976860),
+    eO = n(219271),
+    eU = n(427358),
+    ew = n(95701),
+    eP = n(734057),
+    eL = n(71393),
+    eb = n(958590),
+    eG = n(584777),
+    eF = n(763827),
+    ej = n(573163),
+    eV = n(994500),
+    ek = n(351906),
+    eH = n(957565),
+    eB = n(625494),
+    eY = n(927813),
     eW = n(403362),
     ez = n(935208),
     eJ = n(58736),
@@ -465,10 +471,10 @@ function e5(e) {
                             variant: "text-md/medium",
                             children:
                                 null != r && r === t.tag
-                                    ? ey.Ay.getName(t)
+                                    ? eM.Ay.getName(t)
                                     : null != r && "" !== r
                                       ? r
-                                      : ey.Ay.getName(t),
+                                      : eM.Ay.getName(t),
                         }),
                         (0, i.jsxs)(m.E, {
                             variant: "text-xs/normal",
@@ -516,7 +522,7 @@ function e5(e) {
     });
 }
 if (221552 != n.j) var X = n(43105);
-function e3(e) {
+function e7(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         r = l.useCallback(() => {
             n(er.i.USER_DISMISS);
@@ -533,15 +539,15 @@ function e3(e) {
         onRequestClose: r,
     });
 }
-var e7 = n(650583),
+var e3 = n(650583),
     e8 = n(872330);
 let e4 = (0, J.Ld)(),
     e6 = "PrivateChannelRecipientsInvite",
     te = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function tt(e) {
-    if (ek.A.isFriend(e)) return !0;
-    let t = eM.default.getCurrentUser(),
-        n = eM.default.getUser(e);
+    if (eV.A.isFriend(e)) return !0;
+    let t = ev.default.getCurrentUser(),
+        n = ev.default.getUser(e);
     return !!(t?.isStaff() && n?.isStaff());
 }
 function tn(e) {
@@ -562,10 +568,10 @@ function tl() {
 function tr(e) {
     let { channel: t, onClose: n } = e,
         l = (0, z.Ay)(t) ?? "",
-        r = (0, u.bG)([eV.Ay], () => eV.Ay.lastMessageId(t.id) ?? t.id);
+        r = (0, u.bG)([ej.Ay], () => ej.Ay.lastMessageId(t.id) ?? t.id);
     return (0, i.jsx)(A.D, {
         onClick: () => {
-            ((0, eO.uh)(el.ME, t.id), n());
+            ((0, ex.uh)(el.ME, t.id), n());
         },
         children: (0, i.jsxs)("div", {
             className: e8.us,
@@ -585,7 +591,7 @@ function tr(e) {
 }
 function ts(e) {
     let { onConfirm: t, channelIds: n, ...l } = e,
-        r = (0, u.yK)([eL.A], () => Array.from(n).map(eL.A.getChannel), [n]);
+        r = (0, u.yK)([eP.A], () => Array.from(n).map(eP.A.getChannel), [n]);
     return (0, i.jsx)(o.Modal, {
         title: ea.intl.string(ea.t.uFHxNd),
         subtitle: ea.intl.string(ea.t.rIsSqE),
@@ -616,11 +622,11 @@ function ta(e) {
         [n, l] = (0, Z.kn)([d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);
     return n !== d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK
         ? null
-        : (0, i.jsx)(e3, { targetElementRef: t, markAsDismissed: l });
+        : (0, i.jsx)(e7, { targetElementRef: t, markAsDismissed: l });
 }
 class to extends l.PureComponent {
     state = { separator: !1, copied: !1, newChannelName: "", previewIcon: void 0, collapsedSections: new Set() };
-    static contextType = ex.Ay;
+    static contextType = eR.Ay;
     copyTimeout;
     nitroUpsellBannerRef = l.createRef();
     scrollerRef = l.createRef();
@@ -653,8 +659,8 @@ class to extends l.PureComponent {
             source: this._getAnalyticsEntryPoint().entryPointSource,
             is_friend: !this.isNotFriends(),
         }),
-            eY._.subscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
-            eY._.subscribe(el.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            eB._.subscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
+            eB._.subscribe(el.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             this.createInvite(),
             setTimeout(() => {
                 this.forceFocus();
@@ -662,7 +668,7 @@ class to extends l.PureComponent {
     }
     trackModalOpened = () => {
         let { channel: e } = this.props,
-            t = eF.A.getResults(),
+            t = eG.A.getResults(),
             { friendCount: n, nonFriendCount: i } = (0, B.g4)(t.map((e) => e.user.id)),
             l = this._getAnalyticsEntryPoint();
         en.default.track(el.HAw.PRIVATE_CHANNEL_INVITE_MODAL_OPENED, {
@@ -675,8 +681,8 @@ class to extends l.PureComponent {
         });
     };
     componentWillUnmount() {
-        (eY._.unsubscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
-            eY._.unsubscribe(el.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        (eB._.unsubscribe(el.jej.SCROLL_PAGE_UP, this.scrollPageUp),
+            eB._.unsubscribe(el.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
             w.h.wait(() => F.close()));
     }
@@ -691,7 +697,7 @@ class to extends l.PureComponent {
         if (null == e || !e.isDM()) return !1;
         let n = e.getRecipientId();
         if (null == n) throw Error("no recipient in DM");
-        return !ek.A.isFriend(n) && !t;
+        return !eV.A.isFriend(n) && !t;
     }
     allowNonFriendRecipientPicker() {
         return this.props.hasGuilds;
@@ -701,7 +707,7 @@ class to extends l.PureComponent {
         if (!this.allowNonFriendRecipientPicker() || "" === t) return null;
         let i = [],
             l = [];
-        for (let t of e) ek.A.isFriend(t.user.id) ? i.push(t) : l.push(t);
+        for (let t of e) eV.A.isFriend(t.user.id) ? i.push(t) : l.push(t);
         let r = [];
         return (
             i.length > 0 && r.push({ type: "friends", results: i, showSpinner: !1 }),
@@ -719,9 +725,10 @@ class to extends l.PureComponent {
     }
     createInvite() {
         let { channel: e } = this.props;
-        if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-        let t = ev({ location: "5326c5_1" });
-        G.Ay.createInvite(e.id, { max_age: t }, el.PE1.GROUP_DM);
+        null == e ||
+            !e.isMultiUserDM() ||
+            this.isPartyFull() ||
+            G.Ay.createInvite(e.id, { max_age: this.props.inviteMaxAgeSeconds }, el.PE1.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -787,7 +794,7 @@ class to extends l.PureComponent {
             if (null != e && e.isDM()) {
                 let t = e.getRecipientId();
                 if (null != t) {
-                    let e = eM.default.getUser(t),
+                    let e = ev.default.getUser(t),
                         n = null != e ? e.username : "";
                     return ea.intl.format(ea.t["eg+R9x"], { username: n });
                 }
@@ -798,7 +805,7 @@ class to extends l.PureComponent {
         if (this.isNotFriends() && !this.allowNonFriendRecipientPicker()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = eM.default.getUser(t),
+            let n = ev.default.getUser(t),
                 i = null != n ? n.username : "";
             return ea.intl.format(ea.t["eg+R9x"], { username: i });
         }
@@ -815,18 +822,18 @@ class to extends l.PureComponent {
         let r = this.getDisplayedResults(),
             s = t;
         switch (e.key) {
-            case e7.dh.BACKSPACE:
+            case e3.dh.BACKSPACE:
                 (null == i || 0 === i.length) &&
                     n.size > 0 &&
                     (e.preventDefault(), e.stopPropagation(), this.handleRemoveTag(n.size - 1));
                 break;
-            case e7.dh.ARROW_DOWN:
+            case e3.dh.ARROW_DOWN:
                 (e.preventDefault(), e.stopPropagation(), ++s >= r.length && (s = 0), this.handleSelectionChange(s));
                 break;
-            case e7.dh.ARROW_UP:
+            case e3.dh.ARROW_UP:
                 (e.preventDefault(), e.stopPropagation(), --s < 0 && (s = r.length - 1), this.handleSelectionChange(s));
                 break;
-            case e7.dh.ENTER:
+            case e3.dh.ENTER:
                 (e.preventDefault(), e.stopPropagation(), r.length > s && this.handleSelect(s));
         }
     }
@@ -835,16 +842,16 @@ class to extends l.PureComponent {
         if (((!t || this.isNotFriends()) && !this.allowNonFriendRecipientPicker()) || this.isPartyFull()) return null;
         let l = [];
         n.forEach((e) => {
-            let t = eM.default.getUser(e);
+            let t = ev.default.getUser(e);
             null != t &&
-                l.push({ id: e, label: ey.Ay.getName(t), icon: { type: "avatar", src: t.getAvatarURL(void 0, 32) } });
+                l.push({ id: e, label: eM.Ay.getName(t), icon: { type: "avatar", src: t.getAvatarURL(void 0, 32) } });
         });
         let { results: r, selectedRow: s, isLoading: a } = this.props,
             o = r.length > 0 || a,
             u = !1;
         for (let e of n) {
-            if (ek.A.isFriend(e)) continue;
-            let t = eM.default.getUser(e);
+            if (eV.A.isFriend(e)) continue;
+            let t = ev.default.getUser(e);
             if (null != t && !t.bot) {
                 u = !0;
                 break;
@@ -1096,23 +1103,29 @@ class to extends l.PureComponent {
         return null;
     }
     getInviteLinkFooter() {
-        let { channel: e, invite: t, hideInstantInvites: n } = this.props,
-            { copied: l } = this.state;
-        if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let r = null != t ? (0, eR.A)(t.code) : "",
-            s = r.length > 0;
+        var e;
+        let t,
+            { channel: n, invite: l, hideInstantInvites: r } = this.props,
+            { copied: s } = this.state;
+        if (null == n || !n.isMultiUserDM() || this.isPartyFull()) return null;
+        let a = null != l ? (0, eD.A)(l.code) : "",
+            o = a.length > 0;
         return (0, i.jsx)(M.D, {
             label: ea.intl.string(ea.t.dTqtcN),
-            helperText: r.length > 0 ? ea.intl.format(ea.t.ZVdJMy, { numHours: "24" }) : void 0,
+            helperText: o
+                ? (t = Math.floor((e = this.props.inviteMaxAgeSeconds) / eY.A.Seconds.DAY)) <= 1
+                    ? ea.intl.formatToPlainString(ea.t.ZVdJMy, { numHours: Math.round(e / eY.A.Seconds.HOUR) })
+                    : ea.intl.formatToPlainString(ea.t.T96qss, { numDays: t })
+                : void 0,
             children: (0, i.jsx)(y.e, {
-                supportsCopy: eB.p5,
-                placeholder: (0, eR.A)(ea.intl.string(ea.t.lPVBqP)),
-                value: s ? (n ? ea.intl.string(ea.t["6HzNgZ"]) : r) : "",
+                supportsCopy: eH.p5,
+                placeholder: (0, eD.A)(ea.intl.string(ea.t.lPVBqP)),
+                value: o ? (r ? ea.intl.string(ea.t["6HzNgZ"]) : a) : "",
                 buttonColor: c.$n.Colors.BRAND,
-                text: s ? (l ? ea.intl.string(ea.t.q30c5i) : ea.intl.string(ea.t.OpuAlK)) : ea.intl.string(ea.t.qzxqUf),
-                mode: l ? y.q.SUCCESS : y.q.DEFAULT,
+                text: o ? (s ? ea.intl.string(ea.t.q30c5i) : ea.intl.string(ea.t.OpuAlK)) : ea.intl.string(ea.t.qzxqUf),
+                mode: s ? y.q.SUCCESS : y.q.DEFAULT,
                 onCopy: () => {
-                    s ? this.handleCopyInvite(r) : this.createInvite();
+                    o ? this.handleCopyInvite(a) : this.createInvite();
                 },
             }),
         });
@@ -1122,8 +1135,8 @@ class to extends l.PureComponent {
         if (this.isNotFriends() && !this.allowNonFriendRecipientPicker()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = eM.default.getUser(e),
-                i = null != n && ek.A.getRelationshipType(n.id) === el.eA$.PENDING_OUTGOING;
+            let n = ev.default.getUser(e),
+                i = null != n && eV.A.getRelationshipType(n.id) === el.eA$.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -1198,7 +1211,7 @@ class to extends l.PureComponent {
     handleAddFriend(e) {
         (this.props.onClose(),
             j.A.sendRequest({
-                discordTag: ey.Ay.getUserTag(e, { identifiable: "always" }),
+                discordTag: eM.Ay.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
             }));
     }
@@ -1250,9 +1263,9 @@ class to extends l.PureComponent {
     };
     handleRemoveUser = (e) => {
         (e.forEach((e) => {
-            let t = eM.default.getUser(e);
+            let t = ev.default.getUser(e);
             (null != t &&
-                R.O.announce(ea.intl.formatToPlainString(ea.t.JL1QSg, { username: ey.Ay.getName(t) }), "polite"),
+                R.O.announce(ea.intl.formatToPlainString(ea.t.JL1QSg, { username: eM.Ay.getName(t) }), "polite"),
                 F.removeUser(e));
         }),
             this.forceFocus());
@@ -1268,7 +1281,7 @@ class to extends l.PureComponent {
                 o = 0,
                 u = n;
             if (null != a) {
-                let i = ek.A.isFriend(t);
+                let i = eV.A.isFriend(t);
                 o = i ? 1 : 2;
                 let { collapsedSections: l } = e.state,
                     r = i ? "friends" : "serverMembers",
@@ -1279,7 +1292,7 @@ class to extends l.PureComponent {
                 }
                 u = n - s;
             }
-            let d = eM.default.getUser(t);
+            let d = ev.default.getUser(t);
             if (s) {
                 if (0 >= e.getRemaining()) {
                     e.shouldShowNitroCapRoadblock() &&
@@ -1292,12 +1305,12 @@ class to extends l.PureComponent {
                         section: o,
                         row: u,
                         interaction_type: "select",
-                        affinity_score: ew.A.getUserAffinity(t)?.communicationProbability ?? -1,
+                        affinity_score: eU.A.getUserAffinity(t)?.communicationProbability ?? -1,
                     }),
                     F.addUser(t),
                     null != d &&
                         R.O.announce(
-                            ea.intl.formatToPlainString(ea.t.iyKU50, { username: ey.Ay.getName(d) }),
+                            ea.intl.formatToPlainString(ea.t.iyKU50, { username: eM.Ay.getName(d) }),
                             "polite",
                         ),
                     l.length > 0 && (F.clear(r?.id), e.forceFocus()));
@@ -1307,12 +1320,12 @@ class to extends l.PureComponent {
                     section: o,
                     row: u,
                     interaction_type: "deselect",
-                    affinity_score: ew.A.getUserAffinity(t)?.communicationProbability ?? -1,
+                    affinity_score: eU.A.getUserAffinity(t)?.communicationProbability ?? -1,
                 }),
                     F.removeUser(t),
                     null != d &&
                         R.O.announce(
-                            ea.intl.formatToPlainString(ea.t.JL1QSg, { username: ey.Ay.getName(d) }),
+                            ea.intl.formatToPlainString(ea.t.JL1QSg, { username: eM.Ay.getName(d) }),
                             "polite",
                         ));
         };
@@ -1327,7 +1340,7 @@ class to extends l.PureComponent {
     _getUserAffinities(e) {
         return {
             affinities: e.map((e) => {
-                let t = ew.A.getUserAffinity(e);
+                let t = eU.A.getUserAffinity(e);
                 return t?.communicationProbability ?? -1;
             }),
         };
@@ -1379,7 +1392,7 @@ class to extends l.PureComponent {
             e.length > 1 ? tn(e) : { channelRecipientIds: e, inviteLinkOnlyUserIds: [] };
         ti({ recipientIds: s, location: "New Group DM", useGroupDmShell: a.length > 0 })
             .then((e) => {
-                (this.props.onComplete?.(e), this.updateGDM(e, H.A.NEW_GROUP_DM_INVITE_MODAL), eD(e, a));
+                (this.props.onComplete?.(e), this.updateGDM(e, H.A.NEW_GROUP_DM_INVITE_MODAL), ey(e, a));
             })
             .catch(tl);
     };
@@ -1403,15 +1416,15 @@ class to extends l.PureComponent {
         });
     };
     _addRecipientsToExistingGroupDM = (e, t, n) => {
-        let i = ej.A.getChannelId() === e;
+        let i = eF.A.getChannelId() === e;
         (t.length > 0 ? L.A.addRecipients(e, t, el.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
             .then((e) => {
-                (this.props.onComplete?.(e), eD(e, n), i && t.length > 0 && P.A.ring(e, t, "dm_invite"));
+                (this.props.onComplete?.(e), ey(e, n), i && t.length > 0 && P.A.ring(e, t, "dm_invite"));
             })
             .catch(tl);
     };
     _promoteDMToGroupDM = (e, t, n, i) => {
-        let l = ej.A.getChannelId() === e,
+        let l = eF.A.getChannelId() === e,
             r = tt(t),
             s = r ? [...n, t] : n,
             a = r ? i : [...i, t];
@@ -1422,7 +1435,7 @@ class to extends l.PureComponent {
               : Promise.resolve(e)
         )
             .then((t) => {
-                if ((this.props.onComplete?.(t), eD(t, a), l)) {
+                if ((this.props.onComplete?.(t), ey(t, a), l)) {
                     if (t !== e) return void P.A.call(t, !1, !0);
                     n.length > 0 && P.A.ring(t, n, "dm_invite");
                 }
@@ -1455,7 +1468,7 @@ class to extends l.PureComponent {
     };
     handleCopyInvite = (e) => {
         let { channel: t, invite: n } = this.props;
-        (null != n && (0, eB.C)(e),
+        (null != n && (0, eH.C)(e),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
             this.setState({ copied: !0 }),
             (this.copyTimeout = setTimeout(() => {
@@ -1477,7 +1490,7 @@ class to extends l.PureComponent {
 function tu(e) {
     let { selectedUsers: t, channelName: n, previewIcon: l, onIconChange: r, onIconRemove: s, onChange: a } = e,
         { analyticsLocations: o } = (0, Y.Ay)(H.A.NEW_GROUP_DM_INVITE_MODAL),
-        u = (0, z.Jo)(Array.from(t), eM.default, ek.A);
+        u = (0, z.Jo)(Array.from(t), ev.default, eV.A);
     return (0, i.jsxs)("div", {
         className: e8.zj,
         children: [
@@ -1509,31 +1522,36 @@ function tu(e) {
 }
 function td(e) {
     let { channel: t, onComplete: n, entryPointType: l, ...r } = e,
-        s = (0, u.cf)([eH.A, eF.A, eG.A, eb.A, ek.A], () => {
+        s = (0, u.cf)([ek.A, eG.A, eb.A, eL.A, eV.A], () => {
             let e;
             return (
-                null != t && null != (e = eG.A.getInvite(t.id)) && e.isExpired() && (e = null),
+                null != t && null != (e = eb.A.getInvite(t.id)) && e.isExpired() && (e = null),
                 {
-                    ...eF.A.getState(),
-                    hasFriends: ek.A.getFriendCount() > 0,
+                    ...eG.A.getState(),
+                    hasFriends: eV.A.getFriendCount() > 0,
                     invite: e,
-                    hideDiscriminator: eH.A.hidePersonalInformation,
-                    hideInstantInvites: eH.A.hideInstantInvites,
-                    hasGuilds: eb.A.getGuildCount() > 0,
+                    hideDiscriminator: ek.A.hidePersonalInformation,
+                    hideInstantInvites: ek.A.hideInstantInvites,
+                    hasGuilds: eL.A.getGuildCount() > 0,
                 }
             );
         }),
         a = (0, u.bG)(
-            [eM.default],
+            [ev.default],
             () =>
-                !!eM.default.getCurrentUser()?.isStaff() &&
+                !!ev.default.getCurrentUser()?.isStaff() &&
                 null != t &&
                 !!t.isDM() &&
-                t.recipients.every((e) => eM.default.getUser(e)?.isStaff()),
+                t.recipients.every((e) => ev.default.getUser(e)?.isStaff()),
             [t],
         ),
         o = (0, ei.qH)(),
-        { enabled: d } = $.A.useConfig({ location: e6 });
+        { enabled: d } = $.A.useConfig({ location: e6 }),
+        c = (function (e) {
+            let { location: t } = e,
+                { inviteMaxAgeSeconds: n } = eT.useConfig({ location: t });
+            return n;
+        })({ location: "5326c5_1" });
     return (0, i.jsx)(to, {
         channel: t,
         isStaffOnlyDM: a,
@@ -1541,6 +1559,7 @@ function td(e) {
         entryPointType: l,
         isInNitroCapTreatment: d,
         nitroAudience: o,
+        inviteMaxAgeSeconds: c,
         ...r,
         ...s,
     });
@@ -1561,15 +1580,15 @@ function tc(e) {
     return (
         l.useEffect(
             () => (
-                n && eY._.subscribe(el.jej.TOGGLE_DM_CREATE, u),
+                n && eB._.subscribe(el.jej.TOGGLE_DM_CREATE, u),
                 () => {
-                    eY._.unsubscribe(el.jej.TOGGLE_DM_CREATE, u);
+                    eB._.unsubscribe(el.jej.TOGGLE_DM_CREATE, u);
                 }
             ),
             [n, u],
         ),
         (0, k.Ay)(() => {
-            (0, eU.u)();
+            (0, eO.u)();
         }),
         { showModal: o, toggleVisible: u }
     );
@@ -1594,7 +1613,7 @@ function tg(e) {
         c = l.useRef(null),
         h = s ?? (null == t ? O.g : U.D),
         { showModal: g } = tc({ channel: t, subscribeToGlobalHotkey: d }),
-        f = (0, u.bG)([eM.default], () => eM.default.getUser(t?.getRecipientId()));
+        f = (0, u.bG)([ev.default], () => ev.default.getUser(t?.getRecipientId()));
     return f?.bot || f?.isProvisional
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -1644,16 +1663,16 @@ function tf(e) {
                 icon: s,
                 fullWidth: n,
             }),
-            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e3, { targetElementRef: h, markAsDismissed: E }),
+            A === d.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK && (0, i.jsx)(e7, { targetElementRef: h, markAsDismissed: E }),
         ],
     });
 }
 function tA(e) {
     let t = tE(e);
     return new Set(
-        (0, r.chain)(eL.A.getMutablePrivateChannels())
+        (0, r.chain)(eP.A.getMutablePrivateChannels())
             .values()
-            .filter((e) => (0, eP.MK)(e.type))
+            .filter((e) => (0, ew.MK)(e.type))
             .filter((e) => tE(e.recipients) === t)
             .map((e) => e.id)
             .value(),

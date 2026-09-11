@@ -1163,7 +1163,7 @@
         "variant": 0
       },
       "1": {
-        "inviteMaxAgeSeconds": 604800
+        "inviteMaxAgeSeconds": 2419200
       }
     }
   },
