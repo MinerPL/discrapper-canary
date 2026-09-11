@@ -224,6 +224,7 @@ function V(e) {
                 : void 0,
         shelfImage: (0, B.Zf)(i.shelf_image),
         shelfVideo: (0, B.Zf)(i.shelf_video),
+        features: i.features ?? [],
         startsAt: e.starts_at,
         endsAt: e.ends_at,
     };
