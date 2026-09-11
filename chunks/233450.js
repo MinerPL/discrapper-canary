@@ -707,9 +707,9 @@ let e4 = a.memo(function (e) {
 });
 var e5 = n(541830),
     e2 = n(240248),
-    e6 = n(505779),
-    e3 = n(808380);
-let e7 = [e3.Y.DESKTOP, e3.Y.XBOX, e3.Y.PLAYSTATION, e3.Y.NINTENDO];
+    e3 = n(505779),
+    e6 = n(808380);
+let e7 = [e6.Y.DESKTOP, e6.Y.XBOX, e6.Y.PLAYSTATION, e6.Y.NINTENDO];
 var e9 = n(28863),
     te = n(975807),
     tt = n(194362);
@@ -749,49 +749,49 @@ function th(e) {
             title: c,
         } = (function (e, t) {
             switch (e.category) {
-                case e6.V.OFFICIAL:
+                case e3.V.OFFICIAL:
                     return {
                         icon: (0, i.jsx)(tl.GlobeEarthIcon, { ...t }),
                         action: _.GameProfileTrackActionActions.WebsiteLink,
                         title: ex.intl.string(ex.t.fOUKvg),
                     };
-                case e6.V.TWITTER:
+                case e3.V.TWITTER:
                     return {
                         icon: (0, i.jsx)(ti.p, { ...t }),
                         action: _.GameProfileTrackActionActions.XLink,
                         title: ex.intl.string(ex.t.INic4y),
                     };
-                case e6.V.YOUTUBE:
+                case e3.V.YOUTUBE:
                     return {
                         action: _.GameProfileTrackActionActions.YouTubeLink,
                         icon: (0, i.jsx)(ta.C, { ...t }),
                         title: ex.intl.string(ex.t.lNmxbE),
                     };
-                case e6.V.FACEBOOK:
+                case e3.V.FACEBOOK:
                     return {
                         icon: (0, i.jsx)(ts.Z, { ...t }),
                         action: _.GameProfileTrackActionActions.FacebookLink,
                         title: ex.intl.string(ex.t.FjyREK),
                     };
-                case e6.V.INSTAGRAM:
+                case e3.V.INSTAGRAM:
                     return {
                         icon: (0, i.jsx)(tr.L, { ...t }),
                         action: _.GameProfileTrackActionActions.InstagramLink,
                         title: ex.intl.string(ex.t["cgR+IK"]),
                     };
-                case e6.V.BLUESKY:
+                case e3.V.BLUESKY:
                     return {
                         icon: (0, i.jsx)(tc.a, { ...t }),
                         action: _.GameProfileTrackActionActions.BlueskyLink,
                         title: ex.intl.string(ex.t["D/PHq5"]),
                     };
-                case e6.V.REDDIT:
+                case e3.V.REDDIT:
                     return {
                         icon: (0, i.jsx)(to.T, { ...t }),
                         action: _.GameProfileTrackActionActions.RedditLink,
                         title: ex.intl.string(ex.t["Hgb+fc"]),
                     };
-                case e6.V.TWITCH:
+                case e3.V.TWITCH:
                     return {
                         icon: (0, i.jsx)(td.a, { ...t }),
                         action: _.GameProfileTrackActionActions.TwitchLink,
@@ -817,13 +817,13 @@ var tg = n(31300),
 function tv(e) {
     let { platform: t, ...n } = e;
     switch (t) {
-        case e3.Y.DESKTOP:
+        case e6.Y.DESKTOP:
             return (0, i.jsx)(tg.k, { size: "xs", ...n });
-        case e3.Y.XBOX:
+        case e6.Y.XBOX:
             return (0, i.jsx)(tf.Y, { size: "xs", ...n });
-        case e3.Y.PLAYSTATION:
+        case e6.Y.PLAYSTATION:
             return (0, i.jsx)(tj.X, { size: "xs", ...n });
-        case e3.Y.NINTENDO:
+        case e6.Y.NINTENDO:
             return (0, i.jsx)(tA.M, { size: "xs", ...n });
         default:
             return null;
@@ -836,13 +836,13 @@ function tE(e) {
         {
             text: (function (e) {
                 switch (e) {
-                    case e3.Y.DESKTOP:
+                    case e6.Y.DESKTOP:
                         return ex.intl.string(ex.t.KT6uCJ);
-                    case e3.Y.XBOX:
+                    case e6.Y.XBOX:
                         return ex.intl.string(ex.t.DDWUJp);
-                    case e3.Y.PLAYSTATION:
+                    case e6.Y.PLAYSTATION:
                         return ex.intl.string(ex.t.fzMz2s);
-                    case e3.Y.NINTENDO:
+                    case e6.Y.NINTENDO:
                         return ex.intl.string(ex.t.AMW8je);
                     default:
                         return null;
@@ -870,16 +870,16 @@ let tb = function (e) {
             let e = new Set(t.platforms),
                 n = [...e];
             return (
-                !e.has(e3.Y.DESKTOP) && (e.has(e3.Y.MACOS) || e.has(e3.Y.LINUX)) && n.push(e3.Y.DESKTOP),
+                !e.has(e6.Y.DESKTOP) && (e.has(e6.Y.MACOS) || e.has(e6.Y.LINUX)) && n.push(e6.Y.DESKTOP),
                 n.filter((e) => e7.includes(e)).sort((e, t) => e7.indexOf(e) - e7.indexOf(t))
             );
         }, [t.platforms]),
         m = (t?.websites ?? [])
             .filter((e) => {
                 let { category: t } = e;
-                return e6.p.includes(t);
+                return e3.p.includes(t);
             })
-            .sort((e, t) => e6.p.indexOf(e.category) - e6.p.indexOf(t.category)),
+            .sort((e, t) => e3.p.indexOf(e.category) - e3.p.indexOf(t.category)),
         x = !(0, e2.uJ)(l),
         h = !(0, e2.uJ)(c),
         g = !(0, e2.uJ)(o),
@@ -1217,15 +1217,15 @@ var tG = n(369606),
     t4 = n(47675),
     t5 = n(633075),
     t2 = n(289173),
-    t6 = n(321191),
-    t3 = n(958805),
+    t3 = n(321191),
+    t6 = n(958805),
     t7 = n(735321),
     t9 = n(96173),
     ne = n(280450),
     nt = n(403362);
 async function nn(e) {
     let t = e((0, t7.BF)());
-    await t3.A.savePendingWidgets(t.filter((e) => !e.isDiscardable()));
+    await t6.A.savePendingWidgets(t.filter((e) => !e.isDiscardable()));
 }
 function nl(e) {
     var t;
@@ -1299,7 +1299,7 @@ function nl(e) {
                     ],
                     [],
                 ),
-                r = (0, u.yK)([t6.A], () => (null == l ? [] : (t6.A.getUserProfile(l)?.widgets ?? [])), [l]),
+                r = (0, u.yK)([t3.A], () => (null == l ? [] : (t3.A.getUserProfile(l)?.widgets ?? [])), [l]),
                 c = (0, t9.A)(),
                 o = a.useMemo(() => {
                     if (null == e) return null;
@@ -1744,7 +1744,7 @@ var nj = n(80687),
     np = n(534573),
     nv = n(248643),
     nE = n(256905),
-    nN = n(966245),
+    nN = n(85935),
     nI = n(191096),
     nk = n(90721),
     nb = n(258924);
@@ -2428,8 +2428,8 @@ function n5(e) {
             });
 }
 var n2 = n(921138),
-    n6 = n(311043);
-let n3 = [],
+    n3 = n(311043);
+let n6 = [],
     n7 = [];
 var n9 = n(607346);
 let le = { "--custom-similar-games-per-page": 8, "--custom-cover-min-width": "60px" };
@@ -2478,19 +2478,19 @@ function ll(e) {
         { isFetching: l, similarGames: a } = (function (e) {
             let t = !eI.has(e),
                 { data: n, isLoading: l, error: i } = eS(e, t),
-                a = t && null != n ? n : n3;
+                a = t && null != n ? n : n6;
             (0, L.x)(a);
             let s = (0, u.bG)(
-                    [n6.A],
-                    () => a.some((e) => null == n6.A.getGame(e) && !n6.A.hasNoData(e) && !n6.A.didFetchingFail(e)),
+                    [n3.A],
+                    () => a.some((e) => null == n3.A.getGame(e) && !n3.A.hasNoData(e) && !n3.A.didFetchingFail(e)),
                     [a],
                 ),
                 r = (0, u.yK)(
-                    [n6.A, B.default],
+                    [n3.A, B.default],
                     () => {
                         let e = B.default.getCurrentUser()?.nsfwAllowed;
                         return a
-                            .map((e) => n6.A.getGame(e))
+                            .map((e) => n3.A.getGame(e))
                             .filter((e) => null != e)
                             .filter((t) => (0, n2.T_)(t) && !(0, V.b)(t, e));
                     },
@@ -2620,7 +2620,7 @@ function lm(e) {
 n(667532);
 var lx = n(853022);
 let lh = new Set(["1402418703554842694", "356877880938070016"]),
-    lg = [e6.V.EPICGAMES, e6.V.STEAM, e6.V.ROBLOX, e6.V.BATTLENET, e6.V.RIOT, e6.V.MINECRAFT];
+    lg = [e3.V.EPICGAMES, e3.V.STEAM, e3.V.ROBLOX, e3.V.BATTLENET, e3.V.RIOT, e3.V.MINECRAFT];
 var lf = n(349361),
     lj = n(924895),
     lA = n(422688),
@@ -2628,7 +2628,7 @@ var lf = n(349361),
     lv = n(695250);
 let lE = function (e) {
     switch (e.category) {
-        case e6.V.STEAM:
+        case e3.V.STEAM:
             return {
                 icon: ny.N,
                 text: ex.intl.string(ex.t.FsANs4),
@@ -2636,7 +2636,7 @@ let lE = function (e) {
                 action: _.GameProfileTrackActionActions.SteamStoreLink,
                 url: e.url,
             };
-        case e6.V.EPICGAMES:
+        case e3.V.EPICGAMES:
             return {
                 icon: lf.r,
                 text: ex.intl.string(ex.t.ZbBMHa),
@@ -2644,7 +2644,7 @@ let lE = function (e) {
                 action: _.GameProfileTrackActionActions.EpicStoreLink,
                 url: e.url,
             };
-        case e6.V.ROBLOX:
+        case e3.V.ROBLOX:
             return {
                 icon: lj.H,
                 text: ex.intl.string(ex.t["pJ+P+h"]),
@@ -2652,7 +2652,7 @@ let lE = function (e) {
                 action: _.GameProfileTrackActionActions.RobloxStoreLink,
                 url: e.url,
             };
-        case e6.V.BATTLENET:
+        case e3.V.BATTLENET:
             return {
                 icon: lA.a,
                 text: ex.intl.string(ex.t["A7grp+"]),
@@ -2660,7 +2660,7 @@ let lE = function (e) {
                 action: _.GameProfileTrackActionActions.BattlenetStoreLink,
                 url: e.url,
             };
-        case e6.V.RIOT:
+        case e3.V.RIOT:
             return {
                 icon: lp.A,
                 text: ex.intl.string(ex.t.h6MapL),
@@ -2668,7 +2668,7 @@ let lE = function (e) {
                 action: _.GameProfileTrackActionActions.RiotStoreLink,
                 url: e.url,
             };
-        case e6.V.MINECRAFT:
+        case e3.V.MINECRAFT:
             return {
                 icon: lv.m,
                 text: ex.intl.string(ex.t["HZbmO+"]),
@@ -2712,15 +2712,15 @@ function lk(e) {
                 let e =
                     i?.filter(
                         (e) =>
-                            (e.category !== e6.V.EPICGAMES || !!lh.has(l)) &&
-                            (e.category !== e6.V.STEAM || s !== d.Y.RETIRED_ABANDONED) &&
+                            (e.category !== e3.V.EPICGAMES || !!lh.has(l)) &&
+                            (e.category !== e3.V.STEAM || s !== d.Y.RETIRED_ABANDONED) &&
                             lg.includes(e.category),
                     ) ?? [];
                 null == t ||
                     s === d.Y.RETIRED_ABANDONED ||
-                    e.some((e) => e.category === e6.V.STEAM) ||
-                    e.push({ category: e6.V.STEAM, url: t });
-                let a = e.sort((e, t) => (e.category === e6.V.STEAM ? -1 : +(t.category === e6.V.STEAM)));
+                    e.some((e) => e.category === e3.V.STEAM) ||
+                    e.push({ category: e3.V.STEAM, url: t });
+                let a = e.sort((e, t) => (e.category === e3.V.STEAM ? -1 : +(t.category === e3.V.STEAM)));
                 return (null != n && a.unshift({ category: "XBOX_GAME_PASS", url: n }), a);
             }, [t, i, l, s, n]));
     return { storeWebsites: r, showsStoreLinks: r.length > 0 && null != e };

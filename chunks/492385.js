@@ -84,7 +84,7 @@ var l,
     eM = n(863439),
     eR = n(521981),
     ew = n(467073),
-    eL = n(966245),
+    eL = n(85935),
     eP = n(831688),
     eD = n(308334),
     eO = n(302031),
@@ -326,7 +326,7 @@ function e5(e) {
                         ? (0, i.jsxs)("div", {
                               className: e0.IW,
                               children: [
-                                  (0, i.jsx)(e9, { channel: t, userIds: r, facepileRef: n }),
+                                  (0, i.jsx)(e6, { channel: t, userIds: r, facepileRef: n }),
                                   (0, i.jsx)("div", {
                                       className: e0.r$,
                                       children: (0, i.jsx)(er.n, { themed: !0, dotRadius: 2 }),
@@ -334,7 +334,7 @@ function e5(e) {
                                   (0, i.jsx)(ed.Ay, { channel: t, className: e0.mD, renderDots: !1 }),
                               ],
                           })
-                        : (0, i.jsx)(e6, { channel: t }),
+                        : (0, i.jsx)(e9, { channel: t }),
                 ],
             }),
         ],
@@ -389,7 +389,7 @@ function e7(e) {
               emojiSizeTooltip: "reaction",
           });
 }
-function e6(e) {
+function e9(e) {
     let { channel: t } = e,
         { sortOrder: n } = (0, ej.R)(t.parent_id),
         l = (0, ev.Mw)(t, n),
@@ -405,7 +405,7 @@ function e6(e) {
         }),
     });
 }
-function e9(e) {
+function e6(e) {
     let { channel: t, userIds: n, facepileRef: l } = e,
         s = (0, ev.$I)(t, n);
     return (0, i.jsx)("div", {
@@ -727,7 +727,7 @@ function t7(e) {
         ],
     });
 }
-let t6 = (e) => {
+let t9 = (e) => {
     let { channel: t } = e,
         n = (0, tX.Ay)(),
         l = (0, tY.M)(n),
@@ -990,7 +990,7 @@ let t6 = (e) => {
         ),
     });
 };
-var t9 = n(331322),
+var t6 = n(331322),
     ne = n(111159),
     nt = n(517461),
     nn = n(350527),
@@ -1002,15 +1002,15 @@ let nr = { mass: 1, tension: 250, friction: 18, clamp: !0 };
 function no(e) {
     let { guild: t } = e,
         n = (0, g.bG)([eH.A], () => eH.A.can(eQ.xBc.MANAGE_GUILD, t));
-    return (0, i.jsxs)(t9.B, {
+    return (0, i.jsxs)(t6.B, {
         direction: "horizontal",
         gap: 8,
         children: [
-            (0, i.jsxs)(t9.B, {
+            (0, i.jsxs)(t6.B, {
                 direction: "vertical",
                 gap: 16,
                 children: [
-                    (0, i.jsx)(t9.B, {
+                    (0, i.jsx)(t6.B, {
                         direction: "vertical",
                         gap: 4,
                         children: (0, i.jsx)(b.E, {
@@ -1019,7 +1019,7 @@ function no(e) {
                             children: eJ.intl.string(ni.default.fP8DVx),
                         }),
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1109,7 +1109,7 @@ function no(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1143,7 +1143,7 @@ function no(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsxs)(t9.B, {
+                    (0, i.jsxs)(t6.B, {
                         direction: "vertical",
                         gap: 8,
                         children: [
@@ -1346,7 +1346,7 @@ function nN(e) {
 }
 function nb() {
     let e = s.useRef(null);
-    return (0, i.jsxs)(t9.B, {
+    return (0, i.jsxs)(t6.B, {
         className: nA.kL,
         direction: "vertical",
         align: "center",
@@ -1355,7 +1355,7 @@ function nb() {
         ref: e,
         children: [
             (0, i.jsx)(nd._, { size: "custom", width: 48, height: 48 }),
-            (0, i.jsxs)(t9.B, {
+            (0, i.jsxs)(t6.B, {
                 direction: "vertical",
                 align: "center",
                 justify: "center",
@@ -1777,7 +1777,7 @@ let nH = (e) => {
             ? R
                 ? l
                     ? null
-                    : (0, i.jsx)(t6, { channel: o })
+                    : (0, i.jsx)(t9, { channel: o })
                 : (0, i.jsx)(i.Fragment, {
                       children: f((e, t) =>
                           t
@@ -2053,8 +2053,8 @@ var nY = n(621466),
     n5 = n(355622),
     n8 = n(530134),
     n7 = n(273754),
-    n6 = n(625928),
-    n9 = n(960850),
+    n9 = n(625928),
+    n6 = n(960850),
     le = n(702841),
     lt = n(364522),
     ln = n(215497),
@@ -2670,13 +2670,13 @@ var l4 = n(774812),
     l5 = n(91871),
     l8 = n.n(l5),
     l7 = n(190199),
-    l6 = n(914427),
-    l9 = n(236285),
+    l9 = n(914427),
+    l6 = n(236285),
     ie = n(287683);
 function it(e) {
     let { tag: t } = e,
         { id: n, name: l, emojiId: s, emojiName: a } = t,
-        r = (0, g.bG)([l9.Ay], () => (null != s ? l9.Ay.getUsableCustomEmojiById(s) : null)),
+        r = (0, g.bG)([l6.Ay], () => (null != s ? l6.Ay.getUsableCustomEmojiById(s) : null)),
         o = null != s || null != a;
     return (0, i.jsx)(
         l7.x4,
@@ -2709,7 +2709,7 @@ function it(e) {
 function il(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: l, onSelectTag: s, onClose: a } = e,
         r = (0, l3.OT)(t);
-    return (0, i.jsx)(l6.p, {
+    return (0, i.jsx)(l9.p, {
         value: n,
         onChange: function (e) {
             (!l || n.has(e)) && (s(e), a());
@@ -2725,8 +2725,8 @@ var ii = n(376310),
     ia = n(999703);
 let ir = function (e) {
     let { rateLimitPerUser: t, slowmodeCooldownGuess: n, isBypassSlowmode: l, leadingIcon: s = !1 } = e,
-        a = (0, n9.VI)(t, !0),
-        o = (0, n9.pS)(n, l),
+        a = (0, n6.VI)(t, !0),
+        o = (0, n6.pS)(n, l),
         c = (0, i.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: o }),
         d = (0, i.jsx)(is.x, { size: "xs", color: "currentColor", className: r()(ia.Eq, { [ia.iE]: s }) });
     return (0, i.jsx)(M.m, {
@@ -3077,7 +3077,7 @@ let ig = s.memo(function (e) {
             children: [
                 c && x
                     ? (0, i.jsx)(j.D, { variant: "heading-md/semibold", className: im.DD, children: m })
-                    : (0, i.jsxs)(t9.B, {
+                    : (0, i.jsxs)(t6.B, {
                           gap: 4,
                           children: [
                               (0, i.jsx)(nQ.d, {
@@ -3154,7 +3154,7 @@ let ig = s.memo(function (e) {
                       }),
                 c
                     ? null
-                    : (0, i.jsxs)(t9.B, {
+                    : (0, i.jsxs)(t6.B, {
                           direction: "horizontal",
                           gap: 8,
                           justify: "end",
@@ -3340,7 +3340,7 @@ let iS = s.memo(function (e) {
         { rateLimitPerUser: o } = t,
         c = o > 0,
         u = (0, g.bG)([lX.A], () => lX.A.getSlowmodeCooldownGuess(t.id, lX.R.CreateThread)),
-        m = (0, n9._i)(t),
+        m = (0, n6._i)(t),
         h = ib(t),
         x = (0, eb.ST)(),
         f = s.useCallback(() => {
@@ -3365,7 +3365,7 @@ let iS = s.memo(function (e) {
                                 (0, i.jsxs)("div", {
                                     className: im.Kk,
                                     children: [
-                                        (0, i.jsx)(n6.A, { type: ih, textValue: a.textValue, className: im.Dq }),
+                                        (0, i.jsx)(n9.A, { type: ih, textValue: a.textValue, className: im.Dq }),
                                         c &&
                                             (0, i.jsx)(ir, {
                                                 rateLimitPerUser: o,
@@ -3683,14 +3683,14 @@ function i8(e) {
           });
 }
 var i7 = n(227483);
-function i6(e) {
+function i9(e) {
     let { message: t, channel: n, containerWidth: l } = e,
         s = sc({ message: t, channel: n, containerWidth: l - 32, hideTags: !0 }),
         { hasUnreads: a } = (0, ev.X5)(n),
         { content: r } = (0, ev.gk)({ firstMessage: t, formatInline: !1, noStyleAndInteraction: !0, hasUnreads: a });
     return null != s ? s : (0, i.jsx)(iK.Ay, { message: t, content: r, className: i7.BK, compact: !1 });
 }
-function i9(e) {
+function i6(e) {
     let {
             id: t,
             channel: n,
@@ -3752,7 +3752,7 @@ function i9(e) {
                             color: "text-muted",
                             children: eJ.intl.string(eJ.t.mE3KJN),
                         }),
-                    null != f ? (0, i.jsx)(i6, { message: f, channel: n, containerWidth: a.width }) : null,
+                    null != f ? (0, i.jsx)(i9, { message: f, channel: n, containerWidth: a.width }) : null,
                     I ? (0, i.jsx)(eE.Ay, { channel: n, className: i7.GA }) : null,
                     (0, i.jsx)("div", { className: i7.oO, children: (0, i.jsx)(i2, { channel: n, firstMessage: f }) }),
                 ],
@@ -3804,7 +3804,7 @@ let sr = s.memo(function (e) {
     return null == u
         ? null
         : m
-          ? (0, i.jsx)(i9, {
+          ? (0, i.jsx)(i6, {
                 id: t,
                 channel: u,
                 goToThread: l,

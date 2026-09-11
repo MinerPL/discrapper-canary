@@ -1,4 +1,4 @@
-(l.d(n, { ix: () => e5, Ay: () => nn, tO: () => e9 }), l(321073), l(938796));
+(l.d(n, { ix: () => e9, Ay: () => nn, tO: () => e5 }), l(321073), l(938796));
 var t = l(477900),
     i = l(582128),
     a = l(503698),
@@ -321,7 +321,7 @@ var eu = l(870136),
     ex = l(297264),
     eA = l(821609),
     ej = l(964486),
-    ep = l(966245),
+    ep = l(85935),
     ev = l(448290),
     ef = l(309010),
     eN = l(933884);
@@ -506,8 +506,8 @@ var eD = l(854627),
     eZ = l(98318),
     eQ = l(976860),
     e0 = l(746080),
-    e1 = l(829136);
-let e8 = function (e) {
+    e8 = l(829136);
+let e1 = function (e) {
     let { roleIcon: n, guild: l } = e,
         { name: i } = n;
     (0, ej.Ay)(() => {
@@ -533,26 +533,26 @@ let e8 = function (e) {
     return (0, t.jsx)(eq.l, {
         children: (0, t.jsx)(ep.Uq, {
             children: (0, t.jsxs)("div", {
-                className: e1.jC,
+                className: e8.jC,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: e1.rb,
+                        className: e8.rb,
                         children: [
                             (0, t.jsx)("div", {
-                                className: e1.Xq,
+                                className: e8.Xq,
                                 children: (0, t.jsx)(eM.A, {
                                     ...o,
                                     enableTooltip: !1,
-                                    className: e1.__invalid_roleIcon,
+                                    className: e8.__invalid_roleIcon,
                                     enableHeight: !1,
                                 }),
                             }),
                             (0, t.jsxs)("div", {
-                                className: e1.bM,
+                                className: e8.bM,
                                 children: [
                                     (0, t.jsx)(ex.D, {
                                         variant: "heading-md/semibold",
-                                        className: e1.S3,
+                                        className: e8.S3,
                                         children: (0, t.jsx)(eK.A, { children: i }),
                                     }),
                                     (0, t.jsx)(_.E, { variant: "text-sm/normal", children: r }),
@@ -574,9 +574,9 @@ let e8 = function (e) {
         }),
     });
 };
-var e2 = l(812299),
-    e6 = l(109054),
-    e7 = l(318626);
+var e7 = l(812299),
+    e2 = l(109054),
+    e6 = l(318626);
 function e3(e) {
     let {
         avatarSrc: n,
@@ -604,10 +604,10 @@ function e3(e) {
                 onMouseLeave: d,
                 src: n,
                 "aria-hidden": !0,
-                className: s()(h, e7.my, { [e7.oE]: i, [e7.vk]: null != a, [e7.uU]: m }),
+                className: s()(h, e6.my, { [e6.oE]: i, [e6.vk]: null != a, [e6.uU]: m }),
                 alt: " ",
             }),
-            null == l || i ? null : (0, t.jsx)("img", { className: e7.M, src: l, alt: " ", "aria-hidden": !0 }),
+            null == l || i ? null : (0, t.jsx)("img", { className: e6.M, src: l, alt: " ", "aria-hidden": !0 }),
         ],
     });
 }
@@ -632,7 +632,7 @@ let e4 = i.memo(function (e) {
         } = e,
         b = (0, ez.Ay)(n, l),
         C = i.useMemo(
-            () => (0, e2.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e7.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         y = i.useRef(null),
@@ -652,17 +652,17 @@ let e4 = i.memo(function (e) {
                                 autoInvert: !0,
                                 nudgeAlignIntoViewport: !0,
                                 position: "right",
-                                renderPopout: () => (0, t.jsx)(e8, { roleIcon: o, guild: E }),
+                                renderPopout: () => (0, t.jsx)(e1, { roleIcon: o, guild: E }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
-                                    return (0, t.jsx)(eM.A, { ref: y, ...o, className: e7.UT, onClick: n });
+                                    return (0, t.jsx)(eM.A, { ref: y, ...o, className: e6.UT, onClick: n });
                                 },
                             },
                             "role-icon-children",
                         )
                       : 2 === M
-                        ? (0, t.jsx)(eM.A, { ...o, className: e7.UT }, "role-icon-children")
+                        ? (0, t.jsx)(eM.A, { ...o, className: e6.UT }, "role-icon-children")
                         : null,
             [M, o, E],
         ),
@@ -714,12 +714,12 @@ let e4 = i.memo(function (e) {
                   }),
                   r &&
                       (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)("i", { className: e7.me, children: ":" }), " "],
+                          children: [(0, t.jsx)("i", { className: e6.me, children: ":" }), " "],
                       }),
               ],
           });
 });
-function e9(e, n, l) {
+function e5(e, n, l) {
     let {
         message: i,
         channel: a,
@@ -747,11 +747,11 @@ function e9(e, n, l) {
                 decorations: l,
                 preview: !0,
             }),
-            r && (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("i", { className: e7.me, children: ":" }), " "] }),
+            r && (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("i", { className: e6.me, children: ":" }), " "] }),
         ],
     });
 }
-function e5(e) {
+function e9(e) {
     let {
             message: n,
             avatar: l,
@@ -773,7 +773,7 @@ function e5(e) {
         children: [
             !c && l,
             (0, t.jsxs)(u.H, {
-                className: s()(e7.wx, x),
+                className: s()(e6.wx, x),
                 "aria-describedby": g,
                 "aria-labelledby": h,
                 children: [
@@ -793,7 +793,7 @@ function e5(e) {
                     d &&
                         !c &&
                         (0, t.jsx)(eY.A, { id: (0, eF.xl)(n), timestamp: n.timestamp, className: A, application: f }),
-                    null != p && p.length > 0 ? (0, t.jsx)("div", { className: e7.cV, children: p }) : null,
+                    null != p && p.length > 0 ? (0, t.jsx)("div", { className: e6.cV, children: p }) : null,
                 ],
             }),
         ],
@@ -852,7 +852,7 @@ let nn = i.memo(function (e) {
                 [I, b] = i.useState(!1),
                 { analyticsLocations: C } = (0, A.Ay)(x.A.AVATAR),
                 y = (0, c.bG)([eU.Ay], () => n.displayCompactAvatars ?? eU.Ay.displayCompactAvatars),
-                E = (0, e6.A)(d),
+                E = (0, e2.A)(d),
                 M = m ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -965,7 +965,7 @@ let nn = i.memo(function (e) {
         })({ props: e, guildId: e.guildId, handleRenderPopout: y, showCommunicationDisabledStyles: _ }),
         R = (0, c.bG)([eU.Ay], () => e.displayCompactAvatars ?? eU.Ay.displayCompactAvatars),
         T = i.useMemo(
-            () => (0, e2.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e7.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         w = (0, c.bG)([eV.A], () => ne(a, R, j, eV.A.getGuild(e.guildId)), [a, R, j, e.guildId]),
@@ -988,7 +988,7 @@ let nn = i.memo(function (e) {
         D = (0, eF.xl)(n),
         L = v ? `${P}` : `${P} ${D}`,
         V = l?.state === eE.a.LOADED ? (0, eF.nS)(n) : void 0;
-    return (0, t.jsx)(e5, {
+    return (0, t.jsx)(e9, {
         message: n,
         avatar: S,
         username: (0, t.jsxs)(t.Fragment, {
@@ -998,7 +998,7 @@ let nn = i.memo(function (e) {
                         text: en.intl.string(en.t["AeYyL+"]),
                         children: (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(h.g, { size: "xxs", color: "currentColor", className: a ? e7.EI : e7.bu }),
+                                (0, t.jsx)(h.g, { size: "xxs", color: "currentColor", className: a ? e6.EI : e6.bu }),
                                 (0, t.jsx)(g.A, { children: en.intl.string(en.t.AmHag5) }),
                             ],
                         }),
@@ -1017,7 +1017,7 @@ let nn = i.memo(function (e) {
             ],
         }),
         usernameSpanId: (0, eF.d$)(n, p),
-        usernameClassName: s()(e7.TK, { [e7.yF]: 0 !== w || O, [e7.hB]: null != T || k.length > 0 }),
+        usernameClassName: s()(e6.TK, { [e6.yF]: 0 !== w || O, [e6.hB]: null != T || k.length > 0 }),
         compact: a,
         showTimestamp: !0 !== v,
         showTimestampOnHover: u,

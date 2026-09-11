@@ -19,4 +19,6 @@ d.exports = {
     jE: "modalContent__4d95d",
     Hx: "modalFooter__4d95d",
     ot: "modalTextContainer__4d95d",
+    l_: "markdownView__4d95d",
+    VX: "markdownEllipsis__4d95d",
 };

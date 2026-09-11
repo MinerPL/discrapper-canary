@@ -715,15 +715,15 @@ class eZ extends i.PureComponent {
 }
 var e$ = l(619517),
     eQ = l(248643),
-    eq = l(966245),
+    eq = l(85935),
     eJ = l(615300),
     e0 = l(456412),
     e1 = l(133296),
     e7 = l(689175),
     e8 = l(532197),
-    e2 = l(837344);
-let e9 = { CENTER: e2.Hu, LEFT: e2.Vl };
-class e3 extends i.PureComponent {
+    e3 = l(837344);
+let e9 = { CENTER: e3.Hu, LEFT: e3.Vl };
+class e2 extends i.PureComponent {
     static Align = e9;
     static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e9.CENTER };
     _scrollerRef = null;
@@ -747,7 +747,7 @@ class e3 extends i.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: a, align: r } = this.props,
-            o = l ? e2.XA : e2.BU;
+            o = l ? e3.XA : e3.BU;
         return (0, s.jsx)(e7.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: n()(o, a, r),
@@ -773,9 +773,9 @@ class e6 extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(eO.D, {
-            className: n()(e2.t1, e),
+            className: n()(e3.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e8.A, { className: e2.UE, direction: e8.A.Directions.LEFT }),
+            children: (0, s.jsx)(e8.A, { className: e3.UE, direction: e8.A.Directions.LEFT }),
         });
     }
 }
@@ -788,9 +788,9 @@ class e4 extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(eO.D, {
-            className: n()(e2.XS, e),
+            className: n()(e3.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e8.A, { className: e2.UE, direction: e8.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e8.A, { className: e3.UE, direction: e8.A.Directions.RIGHT }),
         });
     }
 }
@@ -1044,14 +1044,14 @@ class tu extends i.PureComponent {
                 this.renderCarousel(),
                 (0, s.jsx)("div", {
                     className: tt.X$,
-                    children: (0, s.jsx)(e3, {
+                    children: (0, s.jsx)(e2, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: a,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: tt.XG,
-                        align: e.length < 6 ? e3.Align.LEFT : e3.Align.CENTER,
+                        align: e.length < 6 ? e2.Align.LEFT : e2.Align.CENTER,
                     }),
                 }),
             ],
@@ -1602,9 +1602,9 @@ function t7(e) {
     });
 }
 var t8 = l(449054),
-    t2 = l(900002),
+    t3 = l(900002),
     t9 = l(950305),
-    t3 = l(573435),
+    t2 = l(573435),
     t6 = l(714991),
     t4 = l(776231),
     t5 = l(149790),
@@ -1639,8 +1639,8 @@ function ls(e) {
                     (0, s.jsx)("img", { src: c, alt: "", className: le.j0 }),
                     (0, s.jsx)("div", {
                         className: le.$f,
-                        children: (0, s.jsx)(t3.Ay, {
-                            mask: t3.Ay.Masks.AVATAR_DEFAULT,
+                        children: (0, s.jsx)(t2.Ay, {
+                            mask: t2.Ay.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, s.jsx)("div", {
@@ -1662,7 +1662,7 @@ function ls(e) {
                     (0, s.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, s.jsx)(t6.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
+                            (0, s.jsx)(t6.A, { className: le.n2, guild: t, tooltipColor: t3.ST.Colors.PRIMARY }),
                             (0, s.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -2048,9 +2048,9 @@ var lM = l(607399),
     l1 = l(928658),
     l7 = l(395671),
     l8 = l(957565),
-    l2 = l(692848),
+    l3 = l(692848),
     l9 = l(108861);
-let l3 = "start_application_install",
+let l2 = "start_application_install",
     l6 = "launch_activity";
 function l4(e) {
     let { renderDropdown: t, size: l } = e,
@@ -2085,7 +2085,7 @@ function l5(e) {
             (l = k()),
             (a = i.useCallback(() => {
                 let e = L.h.getField("guildId") ?? void 0;
-                (0, l2.o)({
+                (0, l3.o)({
                     applicationId: t.id,
                     customInstallUrl: t.custom_install_url,
                     installParams: t.install_params,
@@ -2096,8 +2096,8 @@ function l5(e) {
             }, [t])),
             i.useEffect(() => {
                 let e = new URL(location.href);
-                if (l && "true" === e.searchParams.get(l3)) {
-                    e.searchParams.delete(l3);
+                if (l && "true" === e.searchParams.get(l2)) {
+                    e.searchParams.delete(l2);
                     let t = e.pathname + e.search;
                     ((0, _.bG)(t), a());
                 }
@@ -2108,7 +2108,7 @@ function l5(e) {
                         (O(D.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
                         (lM.Fr || lM.v1) && null == t.custom_install_url)
                     ) {
-                        let e = (0, l2.Z)({
+                        let e = (0, l3.Z)({
                             applicationId: t.id,
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
@@ -2126,7 +2126,7 @@ function l5(e) {
                             source: "product_page",
                             device_platform: lM.Fr ? "mobile_web" : "desktop_web",
                         }),
-                            G({ [l3]: "true" }));
+                            G({ [l2]: "true" }));
                     }
                 }, [t, a, l]),
                 canInstall: i.useMemo(
