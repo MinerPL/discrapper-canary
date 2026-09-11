@@ -43,7 +43,6 @@ let u = {
     [r.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
     [r.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
     [r.M.NITRO_DROP_REWARD]: 0,
-    [r.M.BOUNTIES_SWIPE_UP_NUX]: 0,
 };
 function _(e) {
     let t = d.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs,

@@ -80,7 +80,6 @@ let S = {
     [c.uF.QUEST_BAR_MOBILE]: c.p9.MOBILE_HOME_DOCK_AREA,
     [c.uF.QUEST_HOME_HERO]: c.p9.QUEST_HOME_BANNER_DESKTOP,
     [c.uF.QUEST_HOME_HERO_SHELF]: c.p9.QUEST_HOME_BANNER_DESKTOP,
-    [c.uF.QUEST_HOME_MOBILE_CAROUSEL]: c.p9.QUEST_HOME_MOBILE_CAROUSEL,
     [c.uF.VIDEO_MODAL_MOBILE]: c.p9.VIDEO_MODAL_MOBILE,
 };
 function N(e) {
@@ -102,7 +101,7 @@ function O(e) {
         provenanceMetadataSealed: e.provenanceMetadataSealed,
     };
 }
-let R = new Set([c.p9.QUEST_HOME_MOBILE_CAROUSEL, c.p9.VIDEO_MODAL_MOBILE]);
+let R = new Set([c.p9.VIDEO_MODAL_MOBILE]);
 function L(e, t) {
     let n = (function (e, t) {
         if (!R.has(e) || null == t) return null;
