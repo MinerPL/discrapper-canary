@@ -750,7 +750,7 @@
     border-radius: var(--radius-lg);
     clip-path: none;
     height: 392px;
-    width: 291px;
+    width: var(--custom-featured-tile-width);
     --custom-foil-frame: var(--brand-500);
     opacity: .9;
     transform: scale(var(--custom-quest-tile-v2-scale, .945));
@@ -910,4 +910,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=876d08b3f6f84909.css.map*/
+/*# sourceMappingURL=6c3077306b5ded60.css.map*/

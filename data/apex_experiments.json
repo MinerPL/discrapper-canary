@@ -3068,7 +3068,7 @@
     "defaultConfig": {
       "useNewLayoutWithSearch": false,
       "useNewTile": false,
-      "useLargeFeaturedTiles": false,
+      "useNewFeaturedTiles": false,
       "ctaOnHover": false
     },
     "variations": {
@@ -3079,25 +3079,25 @@
       "1": {
         "useNewLayoutWithSearch": true,
         "useNewTile": false,
-        "useLargeFeaturedTiles": false,
+        "useNewFeaturedTiles": false,
         "ctaOnHover": false
       },
       "2": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
-        "useLargeFeaturedTiles": true,
+        "useNewFeaturedTiles": true,
         "ctaOnHover": true
       },
       "3": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
-        "useLargeFeaturedTiles": false,
+        "useNewFeaturedTiles": false,
         "ctaOnHover": true
       },
       "4": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
-        "useLargeFeaturedTiles": true,
+        "useNewFeaturedTiles": true,
         "ctaOnHover": false
       }
     }
