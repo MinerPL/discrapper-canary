@@ -1,9 +1,9 @@
-n.d(t, { $: () => p, m: () => E });
+n.d(t, { $: () => E, m: () => p });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    s = n.n(r),
-    i = n(207119),
+    i = n.n(r),
+    s = n(479669),
     o = n(17928),
     d = n(866323),
     c = n(765178),
@@ -11,15 +11,15 @@ var a = n(477900),
     m = n(821609),
     f = n(775602),
     g = n(485038);
-let E = "data-prevents-popout-dismiss";
-function p(e) {
+let p = "data-prevents-popout-dismiss";
+function E(e) {
     let {
             preventsPopoutDismiss: t,
             isVisible: n,
             labelId: r,
-            noticeText: p,
-            primaryAction: h,
-            secondaryAction: b,
+            noticeText: E,
+            primaryAction: b,
+            secondaryAction: h,
             isEmphasized: x = !1,
             a11yAnnounceOnShow: _,
             a11yAnnounceOnHide: A,
@@ -49,11 +49,11 @@ function p(e) {
             },
         })((e, n) =>
             n
-                ? (0, a.jsx)(i.animated.div, {
+                ? (0, a.jsx)(s.animated.div, {
                       style: e,
                       children: (0, a.jsxs)("footer", {
-                          ...(!0 === t ? { [E]: "" } : null),
-                          className: s()(g.Qs, { [g.hO]: x }),
+                          ...(!0 === t ? { [p]: "" } : null),
+                          className: i()(g.Qs, { [g.hO]: x }),
                           "aria-labelledby": r,
                           children: [
                               (0, a.jsx)(u.E, {
@@ -61,13 +61,13 @@ function p(e) {
                                   color: "none",
                                   id: r,
                                   className: g.ut,
-                                  children: p,
+                                  children: E,
                               }),
                               (0, a.jsxs)("div", {
                                   className: g.o1,
                                   children: [
-                                      (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...b }),
-                                      (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...h }),
+                                      (0, a.jsx)(m.$, { variant: "secondary", size: "sm", ...h }),
+                                      (0, a.jsx)(m.$, { variant: "primary", size: "sm", ...b }),
                                   ],
                               }),
                           ],
