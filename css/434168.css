@@ -265,6 +265,28 @@
     opacity: 1
 }
 
+.controlBtnIconWithOverlay_b824c5 {
+    display: inline-flex;
+    position: relative
+}
+
+.playbackSpeedBadge_b824c5 {
+    background-color: var(--opacity-black-68);
+    border-radius: 4px;
+    color: var(--white);
+    font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+    inset-block-end: 12.5%;
+    left: 50%;
+    padding: 1px 4px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap
+}
+
 .durationTimeWrapper_b824c5 {
     cursor: pointer;
     flex: 0 0 auto;
@@ -1119,4 +1141,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=434168.4173c98904e6eb01.css.map*/
+/*# sourceMappingURL=434168.94f3b861b8627b26.css.map*/

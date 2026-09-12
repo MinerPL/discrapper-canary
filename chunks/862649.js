@@ -28,6 +28,8 @@ e.exports = {
     RD: "volumeControlGroup_b824c5",
     jk: "controlsBarItem_b824c5",
     x2: "controlsBarItemActive_b824c5",
+    bT: "controlBtnIconWithOverlay_b824c5",
+    IG: "playbackSpeedBadge_b824c5",
     d$: "durationTimeWrapper_b824c5",
     Ue: "durationTimeDisplay_b824c5",
     zO: "durationTimeSeparator_b824c5",
