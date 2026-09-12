@@ -231,7 +231,7 @@ async function I(e, t) {
     }
 }
 var T = n(120426),
-    y = n(940107),
+    y = n(320510),
     S = n(985451),
     E = n(171936);
 (n(321073), n(667532));
@@ -427,43 +427,21 @@ async function z(e, t, n, i) {
     try {
         let r = await (0, E.ZW)(e, 6e3);
         if (null == r) return { status: "unavailable" };
-        let a = await i?.();
-        if (!1 === a) return { status: "unavailable" };
+        let l = await i?.();
+        if (!1 === l) return { status: "unavailable" };
         if (null != n.viewport) {
             let t = await $(e, n.viewport);
             if (!t.ok) return { status: "failed", message: t.message ?? "the preview lens did not change" };
         }
-        let u = V(r, n.native);
+        let s = V(r, n.native);
         try {
-            var l, s, o;
-            let i,
-                a = await ((l = r),
-                (s = t),
-                (o = n),
-                (0, y.W)(l, "control", o, {
-                    id: s,
-                    timeoutMs:
-                        ((i = o.timeoutMs),
-                        ("number" == typeof i && isFinite(i) && i > 0 ? Math.min(Math.floor(i), 2e4) : 5e3) + 4e3),
-                    retryMs: 400,
-                    sourceMatch: "origin",
-                    label: "control",
-                }).then(
-                    (e) =>
-                        "boolean" == typeof e?.ok && Array.isArray(e.results)
-                            ? { status: "completed", response: e }
-                            : { status: "failed", message: "the preview frame returned a malformed control result" },
-                    (e) =>
-                        e instanceof y.f
-                            ? { status: "failed", message: "the preview frame did not answer the control batch" }
-                            : { status: "unavailable" },
-                ));
-            if ("completed" !== a.status) return a;
-            let d = [...(J.get(e)?.drain() ?? []), ...u.drain()];
-            if (0 === d.length) return a;
-            return { ...a, response: { ...a.response, native: d } };
+            let i = await (0, y.S)(r, t, n);
+            if ("completed" !== i.status) return i;
+            let l = [...(J.get(e)?.drain() ?? []), ...s.drain()];
+            if (0 === l.length) return i;
+            return { ...i, response: { ...i.response, native: l } };
         } finally {
-            u.end();
+            s.end();
         }
     } finally {
         r();

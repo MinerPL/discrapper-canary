@@ -6,4 +6,5 @@ e.exports = {
     N$: "chatLog_f35ad6",
     B5: "clarificationSlot_f35ad6",
     Jx: "composerSlot_f35ad6",
+    g0: "designFeedbackBanner_f35ad6",
 };

@@ -20,8 +20,6 @@ e.exports = {
     QY: "vibegrations-cap-wipe-b_ffba0c",
     Sz: "composerActions_ffba0c",
     lN: "composerAttachments_ffba0c",
-    Rk: "attachmentSpinner_ffba0c",
-    o1: "attachmentRemoveButton_ffba0c",
     nY: "composerFileInput_ffba0c",
     $E: "composerTrailingSlotButton_ffba0c",
     nu: "composerPlusButton_ffba0c",

@@ -86,6 +86,29 @@
     width: var(--space-20)
 }
 
+.attachmentSpinner__73bbb {
+    flex: 0 0 auto;
+    height: var(--space-16);
+    width: var(--space-16)
+}
+
+.attachmentRemoveButton__73bbb {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-round);
+    color: var(--icon-muted);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.attachmentRemoveButton__73bbb:hover {
+    background: var(--interactive-background-hover);
+    color: var(--icon-default)
+}
+
 .chatLogList__2b71e {
     box-sizing: border-box;
     justify-content: flex-end;
@@ -1213,4 +1236,4 @@
     transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
 }
 
-/*# sourceMappingURL=84727e43b4e6a17e.css.map*/
+/*# sourceMappingURL=b4064473e9e426a7.css.map*/

@@ -1089,6 +1089,23 @@
     pointer-events: auto
 }
 
+.designFeedbackBanner_f35ad6 {
+    align-items: center;
+    background: var(--background-brand-subtle);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    margin-block-end: calc(var(--space-8)*-1);
+    padding: var(--space-8) var(--space-12) var(--space-16)
+}
+
+.designFeedbackBanner_f35ad6>:nth-child(2) {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
 .sidebar_a6fe8a {
     background: var(--background-gradient-app-frame, var(--background-base-lowest));
     display: flex;
@@ -1233,4 +1250,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=70d9603be3e4db7a.css.map*/
+/*# sourceMappingURL=cde549941ac2ea36.css.map*/

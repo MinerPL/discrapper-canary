@@ -320,7 +320,7 @@
 }
 
 .composerRow_ffba0c {
-    align-items: center;
+    align-items: flex-start;
     box-sizing: border-box;
     display: flex;
     gap: var(--space-4);
@@ -543,31 +543,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xs);
-    padding-block: var(--space-xs) 0;
+    padding-block: var(--space-16) 0;
     padding-inline: calc(var(--space-md) - 1px)
-}
-
-.attachmentSpinner_ffba0c {
-    flex: 0 0 auto;
-    height: var(--space-16);
-    width: var(--space-16)
-}
-
-.attachmentRemoveButton_ffba0c {
-    align-items: center;
-    background: transparent;
-    border: none;
-    border-radius: var(--radius-round);
-    color: var(--icon-muted);
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    padding: var(--space-4)
-}
-
-.attachmentRemoveButton_ffba0c:hover {
-    background: var(--interactive-background-hover);
-    color: var(--icon-default)
 }
 
 .composerFileInput_ffba0c {
@@ -602,6 +579,7 @@
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
+    margin-block-start: calc((var(--custom-channel-textarea-text-area-height, 44px) - var(--space-32))/2);
     min-height: var(--space-32);
     min-width: var(--space-32);
     padding: var(--space-4);
@@ -789,6 +767,34 @@
     content: none
 }
 
+.selectedMention__72ffd {
+    background: var(--mention-background);
+    border-radius: 3px;
+    color: var(--mention-foreground);
+    display: inline;
+    font-weight: var(--font-weight-medium);
+    margin-inline-end: 4px;
+    padding: 0 2px;
+    unicode-bidi: plaintext
+}
+
+.selectedMentionIcon__72ffd {
+    color: currentcolor;
+    height: .875em;
+    margin-inline-end: .25em;
+    vertical-align: -.08em;
+    width: .875em
+}
+
+.selectedMessage__72ffd {
+    display: block
+}
+
+.selectedBody__72ffd,
+.selectedBody__72ffd>* {
+    display: inline
+}
+
 .trigger__3dec4 {
     align-items: center;
     color: var(--icon-muted);
@@ -804,4 +810,4 @@
     color: var(--icon-default)
 }
 
-/*# sourceMappingURL=0690efbe7eac7186.css.map*/
+/*# sourceMappingURL=4f6d52e28e9e52bb.css.map*/

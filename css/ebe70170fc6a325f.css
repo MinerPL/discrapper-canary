@@ -6,6 +6,11 @@
     padding: var(--space-4) var(--space-12)
 }
 
+.trigger_e86f97 {
+    align-items: center;
+    display: inline-flex
+}
+
 .header__90588 {
     flex: 0 0 auto;
     padding-inline-end: var(--space-xs);
@@ -153,7 +158,8 @@
 .projectHeaderIconActions_f8194a {
     align-items: center;
     display: flex;
-    gap: var(--space-4)
+    gap: var(--space-xs);
+    padding-inline-start: var(--space-xs)
 }
 
 .projectHeaderDivider_f8194a {
@@ -470,4 +476,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=eca98d92cf30baed.css.map*/
+/*# sourceMappingURL=ebe70170fc6a325f.css.map*/
