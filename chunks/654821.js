@@ -1,5 +1,5 @@
 (n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => s, normalizeDOMPoint: () => r }));
-var l = n(952492);
+var l = n(235599);
 {
     l.rL.toSlateRange = (e, t, n) => {
         var i;

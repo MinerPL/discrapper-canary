@@ -509,7 +509,18 @@ var y = new WeakMap(),
         return (
             ey(() => {
                 var e = i();
-                r.current && r.current.textContent !== e && (r.current.textContent = e);
+                if (r.current && r.current.textContent !== e) {
+                    var t = r.current.firstChild;
+                    if (
+                        t &&
+                        t === r.current.lastChild &&
+                        3 === t.nodeType &&
+                        (t.data.startsWith(e) || e.startsWith(t.data))
+                    ) {
+                        var n = Math.min(t.length, e.length);
+                        t.replaceData(n, t.length - n, e.slice(n));
+                    } else r.current.textContent = e;
+                }
             }),
             l.createElement(ew, { ref: r }, a)
         );
