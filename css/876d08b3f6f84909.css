@@ -226,7 +226,10 @@
 }
 
 .lift__72b14 {
-    --custom-quest-tile-lift: 8px
+    --custom-quest-tile-lift: 8px;
+    --custom-quest-tile-v2-scale: 0.945;
+    --custom-quest-tile-v2-timing-enter: 520ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    --custom-quest-tile-v2-timing-exit: 380ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .full-motion .lift__72b14 {
@@ -544,6 +547,154 @@
     opacity: .8
 }
 
+.scrim__3847c {
+    background-image: radial-gradient(120% 42% at 50% 100%, color-mix(in srgb, var(--custom-quest-featured-glow, var(--brand-500)) 27.2%, transparent) 0, transparent 72%), linear-gradient(180deg, rgb(from var(--background-base-low) r g b/0) 30.428%, rgb(from var(--background-base-low) r g b/.003) 44.3%, rgb(from var(--background-base-low) r g b/.018) 58.2%, rgb(from var(--background-base-low) r g b/.048) 65.2%, rgb(from var(--background-base-low) r g b/.096) 72.1%, rgb(from var(--background-base-low) r g b/.164) 79%, rgb(from var(--background-base-low) r g b/.226) 86%, rgb(from var(--background-base-low) r g b/.24) 99.922%), linear-gradient(180deg, rgb(from var(--background-base-low) r g b/0) 3.445%, rgb(from var(--background-base-low) r g b/.009) 9.72%, rgb(from var(--background-base-low) r g b/.058) 16%, rgb(from var(--background-base-low) r g b/.163) 22.28%, rgb(from var(--background-base-low) r g b/.317) 28.56%, rgb(from var(--background-base-low) r g b/.5) 34.83%, rgb(from var(--background-base-low) r g b/.683) 41.11%, rgb(from var(--background-base-low) r g b/.837) 47.39%, rgb(from var(--background-base-low) r g b/.942) 53.67%, rgb(from var(--background-base-low) r g b/.991) 59.95%, var(--background-base-low) 66.22%);
+    background-position: 50%, bottom, bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 60%, 100% 60%
+}
+
+.hoverBackdrop__3847c,
+.scrim__3847c {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 0
+}
+
+.hoverBackdrop__3847c {
+    background: radial-gradient(130% 65% at 50% 100%, color-mix(in srgb, var(--custom-quest-featured-glow, var(--brand-500)) 45%, transparent) 0, transparent 78%), linear-gradient(180deg, transparent 18%, rgba(0, 0, 0, .8) 52%, #000 100%);
+    opacity: 0;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1)
+}
+
+.glowTier2__3847c {
+    --custom-quest-featured-glow: #4ca695
+}
+
+.glowTier3__3847c {
+    --custom-quest-featured-glow: #7134d6
+}
+
+.glowTier4__3847c {
+    --custom-quest-featured-glow: #ce64ca
+}
+
+.unhoveredBottom__3847c.hidden__3847c {
+    opacity: 0;
+    pointer-events: none
+}
+
+.actions__3847c.shown__3847c,
+.hoverBackdrop__3847c.shown__3847c,
+.hoverContent__3847c.shown__3847c {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.badgeWrapper__3847c {
+    inset-inline-start: var(--space-16);
+    z-index: 2
+}
+
+.actions__3847c,
+.badgeWrapper__3847c {
+    position: absolute;
+    top: var(--space-16)
+}
+
+.actions__3847c {
+    display: flex;
+    gap: var(--space-8);
+    inset-inline-end: var(--space-16);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1);
+    z-index: 3
+}
+
+.actionButton__3847c {
+    align-items: center;
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    box-sizing: border-box;
+    color: var(--control-overlay-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.actionButton__3847c:hover {
+    background-color: var(--control-overlay-secondary-background-hover);
+    color: var(--control-overlay-secondary-text-hover)
+}
+
+.unhoveredBottom__3847c {
+    inset-inline: var(--space-16);
+    bottom: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    position: absolute;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1);
+    z-index: 1
+}
+
+.brandLogoContainer__3847c {
+    box-sizing: border-box;
+    padding-inline: var(--space-24);
+    width: 100%
+}
+
+.brandLogo__3847c {
+    display: block;
+    height: auto;
+    max-height: 80px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    pointer-events: none;
+    width: 100%
+}
+
+.progressRow__3847c {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.progressPercent__3847c {
+    flex-shrink: 0
+}
+
+.progressBarWrapper__3847c {
+    flex: 1 0 0;
+    min-width: 0
+}
+
+.hoverContent__3847c {
+    inset-inline: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1);
+    z-index: 2
+}
+
+.full-motion .hoverContent__3847c {
+    transform: translateY(14px);
+    transition: opacity .3s cubic-bezier(.22, 1, .36, 1), transform .52s cubic-bezier(.34, 1.5, .64, 1)
+}
+
+.full-motion .hoverContent__3847c.shown__3847c {
+    transform: translateY(0)
+}
+
 .hoverArea__6d3d8 {
     flex-shrink: 0;
     position: relative
@@ -595,16 +746,68 @@
     z-index: 1
 }
 
-.featuredSection__6d3d8 {
-    aspect-ratio: auto;
+.container__6d3d8.featuredSectionV2__6d3d8 {
     border-radius: var(--radius-lg);
-    clip-path: inset(0 round var(--radius-lg));
-    height: 335px;
-    --custom-quest-reward-zoom: 1.1;
-    --quest-reward-gap: calc(var(--space-8) - 2px)
+    clip-path: none;
+    height: 392px;
+    width: 291px;
+    --custom-foil-frame: var(--brand-500);
+    opacity: .9;
+    transform: scale(var(--custom-quest-tile-v2-scale, .945));
+    transform-origin: center center;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1)
 }
 
-.container__6d3d8.featuredSection__6d3d8:after {
+.container__6d3d8.featuredSectionV2__6d3d8.containerHovered__6d3d8 {
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--custom-foil-frame) 55%, transparent), 0 0 15px color-mix(in srgb, var(--custom-foil-frame) 28%, transparent);
+    opacity: 1;
+    transform: scale(1)
+}
+
+@keyframes questTileV2GlowPulse__6d3d8 {
+
+    0%,
+    to {
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--custom-foil-frame) 45%, transparent), 0 0 11px color-mix(in srgb, var(--custom-foil-frame) 18%, transparent)
+    }
+
+    50% {
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--custom-foil-frame) 80%, transparent), 0 0 17px color-mix(in srgb, var(--custom-foil-frame) 40%, transparent)
+    }
+}
+
+.full-motion .container__6d3d8.featuredSectionV2__6d3d8.containerHovered__6d3d8 {
+    animation: questTileV2GlowPulse__6d3d8 2.4s ease-in-out infinite;
+    transition: transform var(--custom-quest-tile-v2-timing-enter), opacity .3s cubic-bezier(.22, 1, .36, 1)
+}
+
+.full-motion .container__6d3d8.featuredSectionV2__6d3d8 {
+    transition: transform var(--custom-quest-tile-v2-timing-exit), opacity .34s cubic-bezier(.16, 1, .3, 1)
+}
+
+.featuredSectionV2__6d3d8:before {
+    background-color: #000;
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    opacity: .1;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .34s cubic-bezier(.16, 1, .3, 1);
+    z-index: 3
+}
+
+.featuredSectionV2__6d3d8.containerHovered__6d3d8:before {
+    opacity: 0
+}
+
+.container__6d3d8.featuredSectionV2__6d3d8:after {
+    z-index: 4
+}
+
+.container__6d3d8.featuredSectionV2__6d3d8.containerHovered__6d3d8:after {
+    background: linear-gradient(to bottom, color-mix(in srgb, #fff 55%, var(--custom-foil-frame)) 0, var(--custom-foil-frame) 55%, color-mix(in srgb, var(--custom-foil-frame) 10%, transparent) 100%);
+    opacity: .7;
     padding: 1px
 }
 
@@ -707,4 +910,4 @@
     color: var(--control-overlay-secondary-text-active)
 }
 
-/*# sourceMappingURL=1214febd9353ea4a.css.map*/
+/*# sourceMappingURL=876d08b3f6f84909.css.map*/
