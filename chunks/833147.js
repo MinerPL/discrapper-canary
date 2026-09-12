@@ -1,12 +1,12 @@
 r.d(e, { A: () => s });
 var n = r(477900),
-    t = r(536246),
-    u = r(162802),
+    u = r(536246),
+    t = r(162802),
     o = r(355361);
 function s(a) {
     let { application: e, queryParams: r, url: s, onIframeMount: i, onIframeUnmount: c, onGuestReload: l } = a;
-    return (0, n.jsx)(u.o, {
-        allowPopups: (0, t.b)(e),
+    return (0, n.jsx)(t.o, {
+        allowPopups: (0, u.b)(e),
         referrerPolicy: "origin",
         url: s,
         onIframeMount: i,

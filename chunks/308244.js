@@ -2,8 +2,8 @@ n.d(t, { E: () => N, A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    s = n.n(r),
-    i = n(834730),
+    i = n.n(r),
+    s = n(834730),
     o = n(28863),
     d = n(174459),
     c = n(559868),
@@ -31,10 +31,10 @@ function g() {
         ],
     });
 }
-var E = n(311016),
-    p = n(692051),
-    h = n(713804),
-    b = n(900179),
+var p = n(311016),
+    E = n(692051),
+    b = n(713804),
+    h = n(900179),
     x = n(165668),
     _ = n(165648);
 function A(e) {
@@ -49,19 +49,19 @@ function A(e) {
             userId: m,
         } = e,
         f = l.useMemo(
-            () => ((0, E.A)(m) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
+            () => ((0, p.A)(m) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, b.parseBioReact)(t)),
             [m, t],
         );
     return null == f
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, _.PT, x.z),
-              children: (0, a.jsx)(i.E, {
+              className: i()(n, _.PT, x.z),
+              children: (0, a.jsx)(s.E, {
                   variant: "text-sm/normal",
                   lineClamp: c ? d : void 0,
                   color: void 0 !== u ? u : void 0,
                   className: x.w,
-                  children: (0, a.jsx)(p.Y.Provider, {
+                  children: (0, a.jsx)(E.Y.Provider, {
                       value: { disableAnimations: r && !o, disableInteractions: !1 },
                       children: f,
                   }),
@@ -70,7 +70,7 @@ function A(e) {
 }
 function N(e) {
     let { userBio: t, userId: n } = e;
-    return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(b.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
+    return (0, p.A)(n) || (null != t && "" !== t)
+        ? (0, a.jsx)(h.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
         : null;
 }

@@ -1,9 +1,9 @@
-n.d(t, { A: () => b, j: () => h });
+n.d(t, { A: () => h, j: () => b });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    s = n.n(r),
-    i = n(273875),
+    i = n.n(r),
+    s = n(273875),
     o = n(208756),
     d = n(798618),
     c = n(916845),
@@ -11,26 +11,26 @@ var a = n(477900),
     m = n(834730),
     f = n(353795),
     g = n(37537),
-    E = n(239027);
-function p(e) {
+    p = n(239027);
+function E(e) {
     let { title: t, body: n } = e,
         l = (0, g.c)("PremiumPopoverHeader");
     return (0, a.jsxs)("div", {
-        className: E.header,
+        className: p.header,
         children: [
             (0, a.jsx)(u.D, {
                 variant: l ? "nitro-sm" : "heading-md/semibold",
-                className: l ? E.titleRefresh : E.title,
+                className: l ? p.titleRefresh : p.title,
                 children: t,
             }),
             (0, a.jsx)("div", {
-                className: E.headerBody,
+                className: p.headerBody,
                 children: (0, a.jsx)(m.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
     });
 }
-function h(e) {
+function b(e) {
     let {
             title: t,
             body: n,
@@ -38,73 +38,73 @@ function h(e) {
             size: u = "md",
             actions: m,
             gradientColor: g,
-            onRequestClose: h,
-            position: b,
+            onRequestClose: b,
+            position: h,
             caretConfig: x,
             scrollBehavior: _,
             showCloseButton: A = !0,
             isCaretHoverable: N = !1,
             shouldTrapFocus: v = !1,
-            returnRef: R,
-            onNudgeChange: I,
+            returnRef: I,
+            onNudgeChange: R,
             ...j
         } = e,
-        [y, T] = l.useState(b ?? "top");
+        [T, y] = l.useState(h ?? "top");
     l.useEffect(() => {
-        null != b && T(b);
-    }, [b]);
+        null != h && y(h);
+    }, [h]);
     let C = l.useMemo(() => ({ align: x?.align ?? "center", customOffset: x?.customOffset }), [x]),
         S = l.useCallback(() => {
-            h?.();
-        }, [h]),
+            b?.();
+        }, [b]),
         D = l.useCallback(
             (e) => {
-                h?.(e);
+                b?.(e);
             },
-            [h],
+            [b],
         ),
-        P = l.useCallback((e) => {
-            T(e);
+        M = l.useCallback((e) => {
+            y(e);
         }, []),
-        O = N ? E.caretHoverable : void 0,
-        M = {
+        P = N ? p.caretHoverable : void 0,
+        U = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
-            position: y,
+            position: T,
             caretConfig: C,
             onRequestClose: S,
             gradientColor: g,
-            onPositionChange: P,
-            onNudgeChange: I,
+            onPositionChange: M,
+            onNudgeChange: R,
             scrollBehavior: _,
             modal: v,
-            returnRef: R,
+            returnRef: I,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
             ...("edge" === j.alignmentStrategy
                 ? { alignmentStrategy: "edge", align: j.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(i.x, {
-        ...M,
+    return (0, a.jsx)(s.x, {
+        ...U,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
                 A && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: s()(E.graphic, { [E[`graphic--${u}`]]: null != u }),
+                        className: i()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(f.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(p, { title: t, body: n }),
-                null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: E.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: O }),
+                (0, a.jsx)(E, { title: t, body: n }),
+                null != m && m.length > 0 ? (0, a.jsx)(o.Z, { actions: m, className: p.actionBar }) : null,
+                null != C && (0, a.jsx)(d.F, { className: P }),
             ],
         }),
     });
 }
-let b = h;
+let h = b;
